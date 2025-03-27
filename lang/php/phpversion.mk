@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.459 2025/03/14 15:27:16 taca Exp $
+# $NetBSD: phpversion.mk,v 1.460 2025/03/27 12:40:55 gdt Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -217,8 +217,6 @@ PHP_EGDIR=		share/examples/php/${PHP_API_VERS}
 PHP_SHAREDIR=		share/php/${PHP_API_VERS}
 
 PHP_EXTENSION_DIR=	${PHP_LIBDIR}/${MACHINE_GNU_ARCH}
-
-PKG_SYSCONFSUBDIR?=	php/${PHP_API_VERS}
 
 MAKE_ENV+=		PHP_VERSION_REQD="${PHP_VER}" \
 			PHP_VER="${PHP_VER}" PHP_API_VERS="${PHP_API_VERS}" \
