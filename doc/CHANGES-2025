@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2346 2025/03/27 14:09:51 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2347 2025/03/27 14:14:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3030,3 +3030,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed x11/gtk-sharp successor x11/gtk-sharp3 [wiz 2025-03-26]
 	Updated chat/matrix-synapse to 1.127.1 [js 2025-03-26]
 	Updated lang/ruby31-base to 3.1.7 [taca 2025-03-27]
+	Updated lang/ruby31 to 3.1.7 [taca 2025-03-27]
+	Updated lang/ruby32-base to 3.2.8 [taca 2025-03-27]
+	Updated devel/ruby-readline to 3.2.8 [taca 2025-03-27]
+	Updated lang/ruby32 to 3.2.8 [taca 2025-03-27]
