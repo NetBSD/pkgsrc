@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2345 2025/03/26 23:19:04 js Exp $
+$NetBSD: CHANGES-2025,v 1.2346 2025/03/27 14:09:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3029,3 +3029,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/sather [wiz 2025-03-26]
 	Removed x11/gtk-sharp successor x11/gtk-sharp3 [wiz 2025-03-26]
 	Updated chat/matrix-synapse to 1.127.1 [js 2025-03-26]
+	Updated lang/ruby31-base to 3.1.7 [taca 2025-03-27]
