@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/09/18 16:58:33 hauke Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/27 19:35:55 wiz Exp $
 
 DISTNAME=	tsm-${PKGVER}
 PKGVER=		8.1.23.0
@@ -80,8 +80,6 @@ SUBST_SED.paths+=	-e "s,%VARBASE%,${VARBASE},g"
 MESSAGE_SUBST+=		EMULDIR=${EMULDIR}
 
 INSTALLATION_DIRS+=	bin emul/linux/etc/ld.so.conf.d ${DOC_DIR} ${EG_DIR}
-
-.include "options.mk"
 
 post-configure:
 	${CP} ${FILESDIR}/tsm_daily.sh ${WRKSRC}

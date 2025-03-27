@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/26 14:17:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/27 19:35:54 wiz Exp $
 
 DISTNAME=	snappy-java-${SNAPVER}${SNAPJVER}
 CATEGORIES=	devel
@@ -36,7 +36,7 @@ MAVEN_FLAGS+=	-Duser.home=${FAKEHOMEDIR}
 MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
 MAVEN_FLAGS+=	--offline
 # Java 11 doesn't support Java 1.5 compatibility.
-.if ${PKG_JVM} == "oracle-jdk8" || ${PKG_JVM} == "openjdk8"
+.if ${PKG_JVM} == "openjdk8"
 MAVEN_FLAGS+=	-Dmaven.compiler.source=1.5
 MAVEN_FLAGS+=	-Dmaven.compiler.target=1.5
 .else

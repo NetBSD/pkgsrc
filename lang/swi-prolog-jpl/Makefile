@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/03/26 14:17:32 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/27 19:35:55 wiz Exp $
 
 .include "../../lang/swi-prolog-lite/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=		JPL package for SWI Prolog
 USE_TOOLS+=		pkg-config
 
 # does not find JNI for java>=11
-PKG_JVMS_ACCEPTED=	kaffe openjdk8 oracle-jdk8
+PKG_JVMS_ACCEPTED=	kaffe openjdk8
 
 CMAKE_CONFIGURE_ARGS+=		-DSWIPL_PACKAGES_JAVA=ON
 CMAKE_CONFIGURE_ARGS+=		-DINSTALL_PACKAGES=OFF
