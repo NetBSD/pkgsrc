@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/13 13:34:37 pin Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/27 10:06:48 pin Exp $
 
 DISTNAME=	termscp-0.16.1
+# 0.17.0 requires Rust >= 1.85
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
