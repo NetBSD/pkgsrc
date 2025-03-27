@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2025/03/27 13:46:01 wiz Exp $
+$NetBSD: distinfo,v 1.15 2025/03/27 13:49:25 wiz Exp $
 
 BLAKE2s (pound-4.16.tar.gz) = f8a947212009b00ce84b999d8db6a0a4c1270822f8e47650b2e8172a8e25824a
 SHA512 (pound-4.16.tar.gz) = ec6e1b54341ed0e06c99828b1f90900a4af5882cf0dbf0aed9b22e8410a4ae5f84251a3be791e0f3d5ed728638e454940b98561d7c546b13aca0de74ee711400
 Size (pound-4.16.tar.gz) = 361514 bytes
-SHA1 (patch-src_mem.h) = de6d45c858f16f948d315aa8e062734a807c1b08
+SHA1 (patch-src_mem.h) = 0dd402338ed7aec8d34ff0178a549cd394438b4a
