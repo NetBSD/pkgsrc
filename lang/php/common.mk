@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.13 2025/02/08 02:56:24 taca Exp $
+# $NetBSD: common.mk,v 1.14 2025/03/27 12:40:55 gdt Exp $
 # used by lang/php56/Makefile.common
 # used by lang/php74/Makefile.common
 # used by lang/php81/Makefile.common
@@ -18,4 +18,7 @@ EXTRACT_SUFX?=		.tar.xz
 HOMEPAGE?=		https://www.php.net/
 
 .include "../../lang/php/phpversion.mk"
+
+PKG_SYSCONFSUBDIR?=	php/${PHP_API_VERS}
+
 .endif	# PHPCOMMON_MK
