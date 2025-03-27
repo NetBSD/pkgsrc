@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: php_fpm.sh,v 1.4 2025/02/08 03:22:19 taca Exp $
+# $NetBSD: php_fpm.sh,v 1.5 2025/03/27 15:51:04 gdt Exp $
 #
 # PROVIDE: php_fpm
 # REQUIRE: DAEMON
@@ -9,7 +9,7 @@
 #
 # You will need to set some variables in @SYSCONFBASE@/rc.conf to start php-fpm:
 #
-# php_fpm=YES
+# php_fpm@PHP_VER@=YES
 
 $_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
