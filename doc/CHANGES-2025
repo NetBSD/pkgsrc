@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2348 2025/03/27 14:17:01 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2349 2025/03/27 19:30:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3035,3 +3035,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-readline to 3.2.8 [taca 2025-03-27]
 	Updated lang/ruby32 to 3.2.8 [taca 2025-03-27]
 	Updated www/php-contao-manager to 1.9.4 [taca 2025-03-27]
+	Removed lang/oracle-jdk8 [wiz 2025-03-27]
+	Removed lang/oracle-jre8 [wiz 2025-03-27]
