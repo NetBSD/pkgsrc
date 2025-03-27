@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/03/26 14:17:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/03/27 19:35:54 wiz Exp $
 
 DISTNAME=	netbeans-8.2-201609300101
 PKGNAME=	netbeans-ide-8.2
@@ -13,7 +13,7 @@ COMMENT=	NetBeans Java IDE
 
 USE_TOOLS+=		pax
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	oracle-jdk8 openjdk8
+PKG_JVMS_ACCEPTED=	openjdk8
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/netbeans
 
