@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2025/01/08 15:58:20 tnn Exp $
+# $NetBSD: Makefile,v 1.86 2025/03/28 09:26:23 wiz Exp $
 
 DISTNAME=		tint2-v17.0.2
 PKGNAME=		${DISTNAME:S/-v/-/}
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITLAB:=o9000/}
 GITLAB_PROJECT=		tint2
@@ -16,7 +16,6 @@ LICENSE=		gnu-gpl-v2
 
 # XXX CMake. pkg does not really need c++
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt msgmerge pkg-config
 
@@ -37,11 +36,18 @@ CFLAGS.SunOS+=		-Du_int8_t=uint8_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 # For sqrt(3). Needed on at least Linux and should be harmless elsewhere.
 LDFLAGS+=		-lm
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	src/launcher/apps-common.c
+SUBST_FILES.path+=	src/launcher/icon-theme-common.c
+SUBST_VARS.path+=	PREFIX
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/themes/tint2rc \
 		${DESTDIR}${PREFIX}/share/examples/tint2
 
-.include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
