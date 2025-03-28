@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2351 2025/03/28 01:00:07 wen Exp $
+$NetBSD: CHANGES-2025,v 1.2352 2025/03/28 09:26:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/oracle-jre8 [wiz 2025-03-27]
 	Updated devel/p5-Date-Manip to 6.97 [wen 2025-03-28]
 	Updated devel/p5-PPI to 1.281 [wen 2025-03-28]
+	Updated x11/tint2 to 17.0.2nb20 [wiz 2025-03-28]
