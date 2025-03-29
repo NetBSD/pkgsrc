@@ -1,12 +1,9 @@
-$NetBSD: README.Haiku,v 1.3 2013/03/17 15:19:11 obache Exp $
+$NetBSD: README.Haiku,v 1.4 2025/03/29 15:44:07 nia Exp $
 
-Please read the general README file as well.
+As of 2025, Haiku R1/beta5 with GCC 13 has been tested and works.
 
-bootstrap-pkgsrc has been tested on Haiku R1 alpha1 and alpha2 (i386) with
-both gcc2 and gcc4.
+Due to restrictions on the root file system, the default PREFIX of
+/usr/pkg is unsuitable. Either bootstrap with --unprivileged,
+or use a different PREFIX:
 
-Known problems:
- * Only tested with --unprivileged.
- * With gcc2, need to patch for system header files
-   http://dev.haiku-os.org/ticket/5784
-   (It was fixed in r38711, so R1 alpha3 or later does not require the patch)
+	./bootstrap --prefix /boot/pkg
