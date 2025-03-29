@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/09/22 10:35:16 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/03/29 09:39:59 nonaka Exp $
 
-BLAKE2s (lldpd-1.0.18.tar.gz) = 02f178d9112957b3a77c6b0482c29bb07f2f508d1a3ead3ff918b1c47c30e24d
-SHA512 (lldpd-1.0.18.tar.gz) = d071364ad1950ebb6b1236665f2900a882fe66c0e05d2c3fc53367112b6d679386d10e8117962ec5c90691370ce7a52d5e15a60a32cc306bd37f5ad3d10cee09
-Size (lldpd-1.0.18.tar.gz) = 1988753 bytes
+BLAKE2s (lldpd-1.0.19.tar.gz) = 534c32dfd8d7e30bed53f43fdd81f66007435f4d65bd59f21fea633c40569a45
+SHA512 (lldpd-1.0.19.tar.gz) = eab4b53ba072679926c3206f88848affcb5148d8cfbed038a0d4f63f48227f99d15865e27255105ee0dbed7c5685450cc98cf904ba29bd7bf5acdf3e17d25df3
+Size (lldpd-1.0.19.tar.gz) = 2013573 bytes
