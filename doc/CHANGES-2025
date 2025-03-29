@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2353 2025/03/29 09:46:41 nonaka Exp $
+$NetBSD: CHANGES-2025,v 1.2354 2025/03/29 10:27:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-PPI to 1.281 [wen 2025-03-28]
 	Updated x11/tint2 to 17.0.2nb20 [wiz 2025-03-28]
 	Updated net/lldpd to 1.0.19 [nonaka 2025-03-29]
+	Updated www/firefox128 to 128.8.1 [bsiegert 2025-03-29]
