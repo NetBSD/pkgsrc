@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: configure,v 1.2 2022/04/03 22:22:55 tnn Exp $
+# $NetBSD: configure,v 1.3 2025/03/30 09:55:11 nia Exp $
 
 # Copyright (c) 2013 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -56,6 +56,9 @@ echo "#endif /* USE_ARG */" >> config.h
 echo "" >> config.h
 
 if [ "`uname -s`" = "OSF1" ]; then
+	echo "#define strtoull(nptr, endptr, base) strtoul(nptr, endptr, base)" >> config.h
+elif [ "`uname -s`" = "SCO_SV" ]; then
+	echo "#include <stdlib.h>" >> config.h
 	echo "#define strtoull(nptr, endptr, base) strtoul(nptr, endptr, base)" >> config.h
 elif [ "`uname -s`" = "HP-UX" ]; then
 	echo "#define strtoull(nptr, endptr, base) __strtoull(nptr, endptr, base)" >> config.h
