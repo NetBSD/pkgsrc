@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/30 09:32:57 nia Exp $
+bin/openal-info
+include/AL/al.h
+include/AL/alc.h
+include/AL/alext.h
+include/AL/efx-creative.h
+include/AL/efx-presets.h
+include/AL/efx.h
+lib/cmake/OpenAL/OpenALConfig.cmake
+lib/cmake/OpenAL/OpenALTargets-relwithdebinfo.cmake
+lib/cmake/OpenAL/OpenALTargets.cmake
+lib/libopenal.so
+lib/libopenal.so.1
+lib/libopenal.so.${PKGVERSION}
+lib/pkgconfig/openal.pc
+share/openal/alsoftrc.sample
+share/openal/hrtf/Default HRTF.mhr
+share/openal/presets/3D7.1.ambdec
+share/openal/presets/hex-quad.ambdec
+share/openal/presets/hexagon.ambdec
+share/openal/presets/itu5.1-nocenter.ambdec
+share/openal/presets/itu5.1.ambdec
+share/openal/presets/presets.txt
+share/openal/presets/rectangle.ambdec
+share/openal/presets/square.ambdec
