@@ -1,6 +1,6 @@
-$NetBSD: patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h,v 1.2 2018/07/31 21:10:29 jperkin Exp $
+$NetBSD: patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h,v 1.3 2025/03/30 15:39:27 wiz Exp $
 
-Define endianness for {Free,Open,Net}BSD and Bitrig.
+Define endianness for {Free,Open,Net}BSD.
 
 --- lib-src/libnyquist/nyquist/xlisp/xlisp.h.orig	2016-01-13 14:31:18.000000000 +0000
 +++ lib-src/libnyquist/nyquist/xlisp/xlisp.h
@@ -15,7 +15,7 @@ Define endianness for {Free,Open,Net}BSD and Bitrig.
 + #else
 +  #define XL_BIG_ENDIAN
 + #endif
-+#elif defined(__OpenBSD__) || defined(__Bitrig__)
++#elif defined(__OpenBSD__)
 + #include <endian.h>
 + #if BYTE_ORDER == _LITTLE_ENDIAN
 +  #define XL_LITTLE_ENDIAN
