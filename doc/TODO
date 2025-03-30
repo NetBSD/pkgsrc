@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25577 2025/03/30 08:54:22 wiz Exp $
+$NetBSD: TODO,v 1.25578 2025/03/30 09:57:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -532,6 +532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o colord-1.4.5
 	o colortail-0.3.3
 	o commit-patch-2.6
+	o compiledb-go-1.5.2
 	o compiz-0.9.14.2
 	o cone-0.92
 	o conserver8-8.2.6
@@ -730,13 +731,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.9.2
 	o gossip-0.31
 	o gotosocial-0.18.3
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.5.2
+	o grafana-11.6.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -762,6 +764,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hamster-applet-2.32.1
 	o handbrake-1.9.0
 	o hanzim-3.5
+	o harfbuzz-11.0.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -792,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
+	o inih-59
 	o input-pad-1.4.2
 	o ipe-7.2.24
 	o ipopt-3.12.12
@@ -811,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
+	o jansson-2.14.1
 	o java-db3-3.87
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
@@ -1012,6 +1017,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.3.3
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1124,7 +1130,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o prometheus-3.2.1
-	o protobuf-30.1
+	o protobuf-30.2
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1137,20 +1143,29 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-aiohttp-3.11.14
 	o py-anyio-4.9.0
+	o py-asn1-modules-0.4.2
 	o py-cassa-1.11.0
+	o py-cattrs-24.1.3
+	o py-codestyle-2.13.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
 	o py-cryptodome-3.22.0
+	o py-docstring-to-markdown-0.16
+	o py-dotenv-1.1.0
 	o py-ephem3-3.7.6.0
+	o py-expandvars-1.0.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flake8-7.2.0
+	o py-flakes-3.3.0
+	o py-flit_core-3.12.0
 	o py-gammu-3.1
 	o py-google-api-core-2.24.2
-	o py-google-api-python-client-2.165.0
+	o py-google-api-python-client-2.166.0
 	o py-googleapis-common-protos-1.69.2
 	o py-grpcio-1.71.0
 	o py-hgview-1.9.0
-	o py-icalendar-6.1.2
+	o py-icalendar-6.1.3
 	o py-input-pad-1.4.2
 	o py-josepy-2.0.0 [2.0.0 is incompatible to 1.x: check py-acme and py-certbot work]
 	o py-multidict-6.2.0
@@ -1161,24 +1176,32 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pdf-5.4.0
 	o py-pdf-parser-0.7.4
 	o py-platformdirs-4.3.7
+	o py-poetry-core-2.1.2
 	o py-postgresql-5.1.2
 	o py-posting-2.5.2 [wip]
-	o py-posting-2.5.4
-	o py-protobuf-6.30.1
-	o py-pydantic-core-2.32.0
+	o py-posting-2.6.0
+	o py-propcache-0.3.1
+	o py-protobuf-6.30.2
+	o py-pydantic-2.11.1
+	o py-pydantic-core-2.33.0
 	o py-pylint-3.3.6
+	o py-pyparsing-3.2.3
+	o py-pytz-2025.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-ruff-0.11.2
 	o py-sbws-1.1.0
-	o py-setuptools-77.0.3
+	o py-setuptools-78.1.0
 	o py-setuptools-rust-1.11.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
-	o py-textual-autocomplete-4.0.3
+	o py-textual-3.0.0
+	o py-textual-autocomplete-4.0.4
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
 	o py-trove-classifiers-2025.3.19.19
+	o py-typing-extensions-4.13.0
+	o py-tzdata-2025.2
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1202,6 +1225,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restic-0.18.0
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
@@ -1229,7 +1253,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o scilab-5.5.2
 	o scm-5f3 [dholland has a partial update]
 	o scm-blackbox-2.0.0
-	o scons4-4.9.0
+	o scons4-4.9.1
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
@@ -1260,6 +1284,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o smlnj-110.99.7.1
 	o smproxy-1.0.3
 	o snapcast-0.31.0
+	o snappy-1.2.2
 	o snd-21.3
 	o snobol-2.1.5
 	o snoopy-2.4.14
@@ -1268,6 +1293,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
+	o spdlog-1.15.2
 	o speech-dispatcher-0.12.0
 	o spiped-1.6.1b
 	o spl-1.0pre6
@@ -1341,7 +1367,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o transmission-4.0.4
 	o tree-sitter-lua-0.3.0
-	o tree-sitter-markdown-0.4.1
+	o tree-sitter-markdown-0.7.1.0.4.1
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1361,7 +1387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
-	o uv-0.6.9
+	o uv-0.6.10
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
@@ -1445,6 +1471,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
+	o yt-dlp-2025.3.27
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
