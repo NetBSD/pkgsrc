@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25579 2025/03/30 10:33:55 adam Exp $
+$NetBSD: TODO,v 1.25580 2025/03/30 10:41:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pydantic-core-2.33.0
 	o py-pylint-3.3.6
 	o py-pyparsing-3.2.3
-	o py-pytz-2025.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-ruff-0.11.2
 	o py-sbws-1.1.0
@@ -1200,7 +1199,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-torch-2.6
 	o py-trove-classifiers-2025.3.19.19
 	o py-typing-extensions-4.13.0
-	o py-tzdata-2025.2
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
