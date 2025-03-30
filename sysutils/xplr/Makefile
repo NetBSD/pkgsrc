@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.62 2025/01/30 10:57:52 pin Exp $
+# $NetBSD: Makefile,v 1.63 2025/03/30 16:58:38 pin Exp $
 
-DISTNAME=	xplr-0.21.10
+DISTNAME=	xplr-1.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xplr.dev/
 COMMENT=	Hackable, minimal, fast TUI file explorer
 LICENSE=	mit
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.14.2+wasi-0.2.4.crate=		https://static.crates.io/crates/wasi/
 
 .include "cargo-depends.mk"
 
