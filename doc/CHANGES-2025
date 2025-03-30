@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2394 2025/03/30 16:24:03 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2395 2025/03/30 16:49:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3095,3 +3095,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mob to 5.4.0 [schmonz 2025-03-30]
 	Updated databases/p5-App-Sqitch to 1.5.1 [schmonz 2025-03-30]
 	Updated sysutils/sandboxctl to 1.1nb3 [schmonz 2025-03-30]
+	Updated devel/ast-grep to 0.36.2 [pin 2025-03-30]
