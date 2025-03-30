@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/11/14 22:21:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/30 15:00:21 wiz Exp $
 
 DISTNAME=	bystand-1.2.0
 PKGREVISION=	10
@@ -15,7 +15,7 @@ USE_LANGUAGES+=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
+.if ${OPSYS} == "Linux"
 # Makefile for GNU userland
 BYSTAND_MAKEFILE=	Makefile
 .else
