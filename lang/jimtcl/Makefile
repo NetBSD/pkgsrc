@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/10 08:20:10 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/30 06:07:30 adam Exp $
 
-DISTNAME=	jimtcl-0.82
-PKGREVISION=	3
+DISTNAME=	jimtcl-0.83
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msteveb/}
 
@@ -20,6 +19,9 @@ CONFIGURE_ARGS+=	--full # Enable optional features
 CONFIGURE_ARGS+=	--shared
 CONFIGURE_ARGS+=	--disable-jim-regexp
 CONFIGURE_ARGS+=	--compat # Support older expr syntax for openocd
+
+# Disable ccache; see autosetup/cc.tcl
+CONFIGURE_ENV+=		CCACHE=none
 
 REPLACE_INTERPRETER+=	jimsh
 REPLACE.jimsh.old=	/usr/bin/env jimsh
