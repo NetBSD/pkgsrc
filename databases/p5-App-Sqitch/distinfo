@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2025/01/08 18:03:23 schmonz Exp $
+$NetBSD: distinfo,v 1.25 2025/03/30 16:14:56 schmonz Exp $
 
-BLAKE2s (App-Sqitch-v1.5.0.tar.gz) = eec5008832f6110acb53915ce423f69e90c2efc94ec3f400fba8b3f319858643
-SHA512 (App-Sqitch-v1.5.0.tar.gz) = f8f258ef6b23713a151d712329275dbe22780c36d11a9e9f011153a47efa6de89d208de2c6226895c3e70dc80c21fa9acf87fa2198a91eebe3256b00dc56cad0
-Size (App-Sqitch-v1.5.0.tar.gz) = 645973 bytes
+BLAKE2s (App-Sqitch-v1.5.1.tar.gz) = db08720f7d2dd30398c34008838802d3d25b45384117bbeb61ae9117398506c1
+SHA512 (App-Sqitch-v1.5.1.tar.gz) = 727d4d03742ae837bededc996c7d2d73373c0e73358ac07fcb7cc2b5427ba3575b58af5961a6988c07e806122240123acbf66f6e6ce39ddbe7f50a96793bf748
+Size (App-Sqitch-v1.5.1.tar.gz) = 642695 bytes
