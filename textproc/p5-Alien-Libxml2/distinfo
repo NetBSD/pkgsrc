@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/01/04 10:44:19 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/03/30 08:53:01 wiz Exp $
 
-BLAKE2s (Alien-Libxml2-0.19.tar.gz) = a9488354b54d9487f2e5e5c457087f45badd96d1866b07839ff42595a0f7bef3
-SHA512 (Alien-Libxml2-0.19.tar.gz) = 02e4fab4fa4beacec3a6c932d11a3a8ea6648c084d5cb12a332b0e0e2f06eed595783d7673285bdf5e804a5a09bae1beb94261d6cfb4677decc7f1cfee3a3a76
-Size (Alien-Libxml2-0.19.tar.gz) = 21574 bytes
+BLAKE2s (Alien-Libxml2-0.20.tar.gz) = 517c0f270666449a8e1a1a7ef12564f6d4b1f29821781ed5a4eac9e8b6afa082
+SHA512 (Alien-Libxml2-0.20.tar.gz) = 151184c3e9234d00120bf64e0da27a63f5628f01b6bb61576c05fa1a567c193e08f906394e3849262936c3fa9ea8849d0eb1cab8bf46bd1ce6c941002871ee9d
+Size (Alien-Libxml2-0.20.tar.gz) = 22129 bytes
