@@ -1,8 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.9 2024/11/14 22:13:26 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.10 2025/03/30 21:10:47 wiz Exp $
 
 * Detect NetBSD libatomic
 * test(1) portability fix
-* Add support for Bitrig
 
 --- configure.ac.orig	2024-10-24 18:24:00.000000000 +0000
 +++ configure.ac
@@ -25,15 +24,6 @@ $NetBSD: patch-configure.ac,v 1.9 2024/11/14 22:13:26 wiz Exp $
  U_ENABLE_DYLOAD=1
  enable=yes
  AC_MSG_CHECKING([whether to enable dynamic loading of plugins. Ignored if plugins disabled.])
-@@ -1174,7 +1186,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
- case "${host}" in
- 	*-*-solaris*) 	platform=U_SOLARIS ;;
- 	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
--	*-*-*bsd*|*-*-dragonfly*) 	platform=U_BSD ;;
-+	*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	platform=U_BSD ;;
- 	*-*-aix*) 	platform=U_AIX ;;
- 	*-*-hpux*) 	platform=U_HPUX ;;
- 	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
 @@ -1194,6 +1206,7 @@ case "${host}" in
  	*-*-haiku)	platform=U_HAIKU ;;
  	*-*-irix*)		platform=U_IRIX ;;

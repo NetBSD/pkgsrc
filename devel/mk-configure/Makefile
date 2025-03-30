@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/03/23 18:41:05 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.50 2025/03/30 21:10:42 wiz Exp $
 
 DISTNAME=	mk-configure-0.40.0
 CATEGORIES=	devel
@@ -53,7 +52,7 @@ post-install:
 
 CHECK_PERMS_SKIP=	*/foobar.in */hello_world3.in */prog1.awk.in
 
-.if ${OPSYS} != NetBSD && ${OPSYS} != FreeBSD && ${OPSYS} != OpenBSD && ${OPSYS} != DragonFly && ${OPSYS} != MirBSD
+.if ${OPSYS} != NetBSD && ${OPSYS} != FreeBSD && ${OPSYS} != OpenBSD && ${OPSYS} != DragonFly
 # non-BSD system
 DEPENDS+=	bmkdep-[0-9]*:../../devel/bmkdep
 .endif

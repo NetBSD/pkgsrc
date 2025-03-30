@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.14 2025/01/02 06:44:20 taca Exp $
+# $NetBSD: platform.mk,v 1.15 2025/03/30 21:10:44 wiz Exp $
 #
 
 #
@@ -127,13 +127,6 @@ LIBS.SunOS+=	-lm
 .endif
 
 CONFIGURE_ENV.SunOS+=	OBJCOPY=:
-
-#
-# MirBSD
-#
-# if present, an unsupported sysconf call is used
-#
-CONFIGURE_ENV.MirBSD+=	ac_cv_func_getgrnam_r=no
 
 # On platforms where DTrace is available, we need to invoke dtrace(1)
 # with the original PATH. Otherwise it gets confused in the presence

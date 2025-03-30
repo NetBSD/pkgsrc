@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.285 2025/03/30 15:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.286 2025/03/30 21:10:44 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -134,7 +134,6 @@ SUBST_VARS.policysh+=	FALSE
 # dependencies.  If this isn't defined, then use the perl defaults for the
 # particular operating system.
 #
-LIBSWANTED.Bitrig=	m crypt
 LIBSWANTED.Cygwin=	m crypt dl
 LIBSWANTED.Darwin=	m c
 LIBSWANTED.DragonFly=	m crypt
@@ -145,7 +144,6 @@ LIBSWANTED.IRIX=	m crypt
 LIBSWANTED.Interix=	m dl
 LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.Minix=	m crypt c
-LIBSWANTED.MirBSD=	m crypt
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
@@ -159,14 +157,12 @@ SUBST_VARS.policysh+=	LIBSWANTED
 # If this isn't defined, then use the perl defaults for the particular
 # operating system.
 #
-SYSLIBPATH.Bitrig=	/usr/lib
 SYSLIBPATH.Cygwin=	/usr/lib
 SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.DragonFly=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
 SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.Minix=	/usr/lib
-SYSLIBPATH.MirBSD=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
@@ -177,14 +173,6 @@ SUBST_VARS.policysh+=	SYSLIBPATH
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "options.mk"
-
-.if ${OPSYS} == "MirBSD"
-SUBST_CLASSES+=			mirbsd-paths
-SUBST_STAGE.mirbsd-paths=	pre-configure
-SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
-SUBST_SED.mirbsd-paths=		-e 's,/usr/mpkg,${PREFIX},g'
-SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
-.endif
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		cpan/Getopt-Long/lib/Getopt/Long.pm

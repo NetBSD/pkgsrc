@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2025/01/15 09:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.106 2025/03/30 21:10:46 wiz Exp $
 
 DISTNAME=	libvpx-1.15.0
 CATEGORIES=	multimedia
@@ -107,13 +107,6 @@ CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 CONFIGURE_ARGS+=	--disable-multithread
 .  endif
 .endif
-
-BUILDLINK_TRANSFORM.MirBSD+=	rm:-lrt
-# Compiler is too old for these newfangled features
-CONFIGURE_ENV.MirBSD+=		sse2=no sse3=no ssse3=no sse4_1=no
-# runtime_cpu_detect=no
-CONFIGURE_ENV.MirBSD+=		RTCD_OPTIONS='--disable-sse2 --disable-sse3 --disable-ssse3 --disable-sse4_1'
-CONFIGURE_ARGS.MirBSD+=		--disable-runtime-cpu-detect
 
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
 .if ${MACHINE_PLATFORM:MSunOS-5.10-*}
