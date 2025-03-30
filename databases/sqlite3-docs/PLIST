@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.139 2025/01/15 15:23:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.140 2025/03/30 06:18:07 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -348,9 +348,7 @@ share/doc/sqlite3/images/btreemodule_overview.svg
 share/doc/sqlite3/images/chart.wiki
 share/doc/sqlite3/images/chw.jpg
 share/doc/sqlite3/images/cpu-usage.jpg
-share/doc/sqlite3/images/dan1.jpg
 share/doc/sqlite3/images/direct1b.gif
-share/doc/sqlite3/images/drh1.jpg
 share/doc/sqlite3/images/faster-read-blobapi.jpg
 share/doc/sqlite3/images/faster-read-mmap.jpg
 share/doc/sqlite3/images/faster-read-sql.jpg
@@ -433,7 +431,6 @@ share/doc/sqlite3/images/fullscanb.gif
 share/doc/sqlite3/images/harmony.gif
 share/doc/sqlite3/images/index-ex1-x-b.gif
 share/doc/sqlite3/images/indirect1b1.gif
-share/doc/sqlite3/images/joe1.jpg
 share/doc/sqlite3/images/loc.jpg
 share/doc/sqlite3/images/ne.gif
 share/doc/sqlite3/images/ne.png
@@ -704,6 +701,8 @@ share/doc/sqlite3/releaselog/3_47_0.html
 share/doc/sqlite3/releaselog/3_47_1.html
 share/doc/sqlite3/releaselog/3_47_2.html
 share/doc/sqlite3/releaselog/3_48_0.html
+share/doc/sqlite3/releaselog/3_49_0.html
+share/doc/sqlite3/releaselog/3_49_1.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html

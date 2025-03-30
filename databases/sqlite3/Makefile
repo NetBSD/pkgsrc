@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2025/02/12 21:41:18 rillig Exp $
+# $NetBSD: Makefile,v 1.164 2025/03/30 06:18:06 adam Exp $
 
 .include "Makefile.common"
 
@@ -11,14 +11,19 @@ COMMENT=	SQL Database Engine in a C Library
 
 .include "options.mk"
 
+# For autosetup use jimsh instead of tclsh, as tcl requires sqlite3.
+TOOL_DEPENDS+=	jimtcl>0:../../lang/jimtcl
+CONFIGURE_ENV+=	autosetup_tclsh=${PREFIX}/bin/jimsh
+
+# Disable ccache; see autosetup/cc.tcl
+CONFIGURE_ENV+=	CCACHE=none
+
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-static-shell
-
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
-
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,8 +59,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-CFLAGS+=		-DSQLITE_ENABLE_LOCKING_STYLE=0
-CFLAGS+=		-DSQLITE_WITHOUT_ZONEMALLOC
+CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0
+CFLAGS+=	-DSQLITE_WITHOUT_ZONEMALLOC
 .endif
 
 ### Performance optimizations
@@ -82,7 +87,7 @@ CONFIGURE_ARGS+=	--enable-threadsafe
 #
 # https://www.sqlite.org/c3ref/column_database_name.html
 # https://www.sqlite.org/compile.html#enable_column_metadata
-CFLAGS+=		-DSQLITE_ENABLE_COLUMN_METADATA
+CFLAGS+=	-DSQLITE_ENABLE_COLUMN_METADATA
 
 # The DBSTAT virtual table provides information about disk space
 # utilization, is required by lang/tcl's bin/sqlite3_analyzer, and is
@@ -90,7 +95,7 @@ CFLAGS+=		-DSQLITE_ENABLE_COLUMN_METADATA
 #
 # https://www.sqlite.org/dbstat.html
 # https://www.sqlite.org/compile.html#enable_dbstat_vtab
-CFLAGS+=		-DSQLITE_ENABLE_DBSTAT_VTAB
+CFLAGS+=	-DSQLITE_ENABLE_DBSTAT_VTAB
 
 # Full-text search engines.  There are two full-text search engines,
 # fts3/4 and fts5.  The options SQLITE_ENABLE_FTS3 and
@@ -110,15 +115,15 @@ CFLAGS+=		-DSQLITE_ENABLE_DBSTAT_VTAB
 # https://www.sqlite.org/compile.html#enable_fts3
 # https://www.sqlite.org/compile.html#enable_fts4
 # https://www.sqlite.org/compile.html#enable_fts5
-CONFIGURE_ARGS+=	--enable-fts3 # -DSQLITE_ENABLE_FTS3
-CONFIGURE_ARGS+=	--enable-fts4 # -DSQLITE_ENABLE_FTS4
-CONFIGURE_ARGS+=	--enable-fts5 # -DSQLITE_ENABLE_FTS5
+CONFIGURE_ARGS+=	--fts3 # -DSQLITE_ENABLE_FTS3
+CONFIGURE_ARGS+=	--fts4 # -DSQLITE_ENABLE_FTS4
+CONFIGURE_ARGS+=	--fts5 # -DSQLITE_ENABLE_FTS5
 
 # Nested queries and AND/OR operators for fts3/4.
 #
 # https://www.sqlite.org/fts3.html#_set_operations_using_the_enhanced_query_syntax
 # https://www.sqlite.org/compile.html#enable_fts3_parenthesis
-CFLAGS+=		-DSQLITE_ENABLE_FTS3_PARENTHESIS
+CFLAGS+=	-DSQLITE_ENABLE_FTS3_PARENTHESIS
 
 # SQLITE_ENABLE_GEOPOLY, SQLITE_ENABLE_RTREE -- R*Tree and Geopoly
 # interface for geospatial queries.  Enabled by default since 2018.  We
@@ -129,7 +134,8 @@ CFLAGS+=		-DSQLITE_ENABLE_FTS3_PARENTHESIS
 # https://www.sqlite.org/rtree.html
 # https://www.sqlite.org/compile.html#enable_geopoly
 # https://www.sqlite.org/compile.html#enable_rtree
-CONFIGURE_ARGS+=	--enable-rtree
+CONFIGURE_ARGS+=	--geopoly
+CONFIGURE_ARGS+=	--rtree
 
 # SQLITE_ENABLE_ICU -- unwieldy dependency, relegated to options.mk.
 # https://www.sqlite.org/compile.html#enable_icu
@@ -144,7 +150,7 @@ CONFIGURE_ARGS+=	--enable-rtree
 #
 # https://www.sqlite.org/vtab.html#hiddencol
 # https://www.sqlite.org/compile.html#enable_hidden_columns
-CFLAGS+=		-DSQLITE_ENABLE_HIDDEN_COLUMNS
+CFLAGS+=	-DSQLITE_ENABLE_HIDDEN_COLUMNS
 
 # SQLITE_ENABLE_JSON1 -- JSON1 support, built-in functions for
 # manipulating JSON.  Enabled by default since 2022, configure option
@@ -292,7 +298,7 @@ CONFIGURE_ARGS+=	--enable-math
 # https://www.sqlite.org/sessionintro.html
 # https://www.sqlite.org/compile.html#enable_preupdate_hook
 # https://www.sqlite.org/compile.html#enable_session
-CONFIGURE_ARGS+=	--enable-session
+CONFIGURE_ARGS+=	--session
 
 # SQLITE_ENABLE_QPSG -- query planner stability guarantee.  Off by
 # default.  This option turns it on by default.  Applications can
@@ -340,7 +346,7 @@ CONFIGURE_ARGS+=	--enable-session
 #
 # https://www.sqlite.org/stmt.html
 # https://www.sqlite.org/compile.html#enable_stmtvtab
-CFLAGS+=		-DSQLITE_ENABLE_STMTVTAB
+CFLAGS+=	-DSQLITE_ENABLE_STMTVTAB
 
 # SQLITE_RTREE_INT_ONLY
 #
@@ -415,7 +421,7 @@ CFLAGS+=		-DSQLITE_ENABLE_STMTVTAB
 #
 # https://www.sqlite.org/unlock_notify.html
 # https://www.sqlite.org/compile.html#enable_unlock_notify
-CFLAGS+=		-DSQLITE_ENABLE_UNLOCK_NOTIFY
+CFLAGS+=	-DSQLITE_ENABLE_UNLOCK_NOTIFY
 
 # SQLITE_INTROSPECTION_PRAGMAS
 #
@@ -504,20 +510,26 @@ CFLAGS+=		-DSQLITE_ENABLE_UNLOCK_NOTIFY
 # on those platforms.)
 #
 # https://www.sqlite.org/compile.html#omit_load_extension
-CONFIGURE_ARGS+=	--enable-dynamic-extensions
+CONFIGURE_ARGS+=	--enable-load-extension
 
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
-LIBS+=			${BUILDLINK_LDADD.dl}
+LIBS+=		${BUILDLINK_LDADD.dl}
 
 # Solaris needs -lrt for nanosleep, PR pkg/58714
-LIBS.SunOS+=		-lrt
+LIBS.SunOS+=	-lrt
 
 .if ${OS_VARIANT} == "SCOOSR5"
 LDFLAGS.SCO_SV+=	-lpthread
 .endif
 
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id ${PREFIX}/lib/libsqlite3.dylib \
+		${DESTDIR}${PREFIX}/lib/libsqlite3.dylib
+.endif
+
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
-.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
