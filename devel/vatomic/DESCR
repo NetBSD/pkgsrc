@@ -1,0 +1,12 @@
+vatomic is a header library of *atomics operations*, supporting
+mainstream architectures: ARMv7, ARMv8 (AArch32 and AArch64),
+RISC-V, and x86_64. The memory ordering guarantees provided by the
+atomic interface are formally described in the VSync Memory Model
+(VMM) file (vmm.cat).
+
+Users can use the vmm.cat file to verify the correctness of their
+algorithms with a model checker that supports .cat files.
+
+The atomics implementations are being gradually verified to comply
+with VMM. At the moment, we have completed the verification of
+ARMv8 64-bits with and without LSE instructions.
