@@ -1,6 +1,6 @@
-$NetBSD: patch-lib-src_libnyquist_nyquist_sys_unix_switches.h,v 1.1 2015/04/21 01:33:39 rodent Exp $
+$NetBSD: patch-lib-src_libnyquist_nyquist_sys_unix_switches.h,v 1.2 2025/03/30 15:39:27 wiz Exp $
 
-Define endianness for {Free,Open,Net}BSD and Bitrig.
+Define endianness for {Free,Open,Net}BSD.
 
 --- lib-src/libnyquist/nyquist/sys/unix/switches.h.orig	2015-03-02 01:07:23.000000000 +0000
 +++ lib-src/libnyquist/nyquist/sys/unix/switches.h
@@ -21,7 +21,7 @@ Define endianness for {Free,Open,Net}BSD and Bitrig.
 +   /* Target processor is big endian. */
 +   #define CPU_IS_BIG_ENDIAN 1
 +  #endif
-+ #elif defined(__OpenBSD__) || defined(__Bitrig__)
++ #elif defined(__OpenBSD__)
 +  #include <endian.h>
 +  #if BYTE_ORDER == _LITTLE_ENDIAN
 +   /* Target processor is little endian. */
