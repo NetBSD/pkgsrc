@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25568 2025/03/30 06:13:42 adam Exp $
+$NetBSD: TODO,v 1.25569 2025/03/30 06:31:53 adam Exp $
 
 Suggested new packages
 ======================
@@ -670,7 +670,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
-	o ghostscript-agpl-10.05.0
 	o gifsicle-1.96
 	o gimp-3.0.2
 	o gimp-docs-de-2.10.0
