@@ -1,0 +1,17 @@
+$NetBSD: patch-src_libjasper_include_jasper_jas__config.h.in,v 1.3 2025/03/30 07:50:23 wiz Exp $
+
+Fix jasper header for c++.
+https://github.com/jasper-software/jasper/issues/393
+
+--- src/libjasper/include/jasper/jas_config.h.in.orig	2025-03-21 09:19:31.082742002 +0000
++++ src/libjasper/include/jasper/jas_config.h.in
+@@ -113,7 +113,8 @@ The version of the C standard against wh
+ #define JAS_DEFAULT_MAX_MEM_USAGE (1024ULL * 1024ULL * 1024ULL)
+ #endif
+ 
+-#if (__STDC_VERSION__ - 0 < JAS_STDC_VERSION)
++#if (!defined(__cplusplus) && (__STDC_VERSION__ - 0 < JAS_STDC_VERSION)) || \
++  (defined(__cplusplus) && (__cplusplus - 0 < JAS_STDC_VERSION))
+ #warning "Your code is being built against an older version of the C standard than JasPer was.  Although this is supported, this may require some extra preprocessor defines when building."
+ #endif
+ 
