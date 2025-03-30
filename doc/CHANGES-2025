@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2396 2025/03/30 16:49:25 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2397 2025/03/30 16:50:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3097,3 +3097,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/sandboxctl to 1.1nb3 [schmonz 2025-03-30]
 	Updated devel/ast-grep to 0.36.2 [pin 2025-03-30]
 	Updated www/ikiwiki to 3.20250221nb1 [schmonz 2025-03-30]
+	Updated sysutils/broot to 1.45.1 [pin 2025-03-30]
