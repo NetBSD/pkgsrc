@@ -1,26 +1,21 @@
-# $NetBSD: Makefile,v 1.34 2024/11/14 22:19:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/03/30 07:52:33 wiz Exp $
 
-DISTNAME=	kyua-0.13
-PKGREVISION=	21
+DISTNAME=	kyua-0.14.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/kyua/releases/download/${DISTNAME}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=freebsd/}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jmmv/kyua/
+HOMEPAGE=	https://github.com/freebsd/kyua/
 COMMENT=	Testing framework for infrastructure software
 LICENSE=	modified-bsd
 
 CONFLICTS=	kyua-atf-compat-[0-9]* kyua-cli-[0-9]* kyua-testers-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.kyua
-PKG_SUPPORTED_OPTIONS=	tests
-PKG_SUGGESTED_OPTIONS=	tests
+USE_CXX_FEATURES+=	c++11
+USE_TOOLS=		gmake pkg-config
 
 CONFIGURE_ARGS+=	KYUA_CONFSUBDIR=
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -28,25 +23,7 @@ CONFIGURE_ARGS+=	--without-doxygen
 
 PKG_SYSCONFSUBDIR=	kyua
 
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mtests)
-.  include "../../devel/atf/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-atf
-PLIST_SUBST+=		TESTS=
-
-post-install: post-install-tests
-.else
-CONFIGURE_ARGS+=	--without-atf
-PLIST_SUBST+=		TESTS="@comment "
-.endif
-PRINT_PLIST_AWK+=	{ sub("^tests/", "$${TESTS}tests/"); }
-
-.PHONY: post-install-tests
-post-install-tests:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/tests
-	${INSTALL_DATA} ${WRKSRC}/examples/Kyuafile.top \
-	    ${DESTDIR}${PREFIX}/tests/Kyuafile
+.include "options.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/lutok/buildlink3.mk"
