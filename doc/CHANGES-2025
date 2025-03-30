@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2386 2025/03/30 15:07:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2387 2025/03/30 15:09:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3085,3 +3085,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libcbor to 0.12.0 [adam 2025-03-30]
 	Updated textproc/py-yamllint to 1.37.0 [adam 2025-03-30]
 	mk: remove support for MirBSD [wiz 2025-03-30]
+	Removed www/py-django3 [adam 2025-03-30]
+	Updated www/py-djangorestframework to 3.16.0 [adam 2025-03-30]
