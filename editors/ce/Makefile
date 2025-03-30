@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/11/03 14:41:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2025/03/30 10:01:05 nia Exp $
 
 DISTNAME=		ce-${VERSION}
 VERSION=		4.8
@@ -27,6 +27,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	teach-ce.in
 SUBST_VARS.paths=	LN
 SUBST_SED.paths+=	-e '1s,/bin/bash,'${SH:Q}','
+
+CFLAGS.SCO_SV+=		-DS_IFSOCK=1337
 
 .include "options.mk"
 
