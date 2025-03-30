@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/09 12:27:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/30 15:01:47 adam Exp $
 bin/yamllint-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -20,6 +20,9 @@ ${PYSITELIB}/yamllint/conf/relaxed.yaml
 ${PYSITELIB}/yamllint/config.py
 ${PYSITELIB}/yamllint/config.pyc
 ${PYSITELIB}/yamllint/config.pyo
+${PYSITELIB}/yamllint/decoder.py
+${PYSITELIB}/yamllint/decoder.pyc
+${PYSITELIB}/yamllint/decoder.pyo
 ${PYSITELIB}/yamllint/linter.py
 ${PYSITELIB}/yamllint/linter.pyc
 ${PYSITELIB}/yamllint/linter.pyo
