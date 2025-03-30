@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.112 2025/02/13 11:21:34 pin Exp $
+# $NetBSD: Makefile,v 1.113 2025/03/30 16:49:56 pin Exp $
 
-DISTNAME=	broot-1.44.7
+DISTNAME=	broot-1.45.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dystroy.org/broot/
 COMMENT=	New way to see and navigate directory trees
 LICENSE=	mit
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.14.2+wasi-0.2.4.crate=		https://static.crates.io/crates/wasi/
 
 .include "cargo-depends.mk"
 
