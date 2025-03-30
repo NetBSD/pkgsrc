@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2019/11/04 22:10:15 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2025/03/30 10:02:53 nia Exp $
 
 DISTNAME=	thttpd-2.29
 CATEGORIES=	www
@@ -37,6 +37,8 @@ SUBST_VARS.paths=	PREFIX
 SUBST_STAGE.paths=	pre-configure
 
 MAKE_JOBS_SAFE=	no
+
+CFLAGS.SCO_SV+=	-DMAXPATHLEN=255 -DS_IFSOCK=0
 
 post-extract:
 	${CP} ${FILESDIR}/thttpd.conf ${WRKSRC}
