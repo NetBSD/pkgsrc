@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2357 2025/03/30 06:13:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2358 2025/03/30 06:18:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3046,3 +3046,7 @@ Changes to the packages collection and infrastructure in 2025:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q1 branch [maya 2025-03-30]
 	Updated lang/jimtcl to 0.83 [adam 2025-03-30]
 	Updated archivers/xz to 5.8.0 [adam 2025-03-30]
+	Updated databases/sqlite3 to 3.49.1 [adam 2025-03-30]
+	Updated databases/sqlite3-docs to 3.49.1 [adam 2025-03-30]
+	Updated databases/sqlite3-tcl to 3.49.1 [adam 2025-03-30]
+	Updated devel/lemon to 1.0.3.49.1 [adam 2025-03-30]
