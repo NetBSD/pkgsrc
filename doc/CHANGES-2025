@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2398 2025/03/30 16:51:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2399 2025/03/30 16:52:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3099,3 +3099,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ikiwiki to 3.20250221nb1 [schmonz 2025-03-30]
 	Updated sysutils/broot to 1.45.1 [pin 2025-03-30]
 	Updated devel/cocogitto to 6.3.0 [pin 2025-03-30]
+	Updated www/monolith to 2.10.1 [pin 2025-03-30]
