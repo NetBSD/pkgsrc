@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2402 2025/03/30 16:55:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2403 2025/03/30 16:56:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3103,3 +3103,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.103.0 [pin 2025-03-30]
 	Updated shells/oh-my-posh to 25.7.1 [pin 2025-03-30]
 	Updated time/rsclock to 0.1.12 [pin 2025-03-30]
+	Updated editors/tp-note to 1.25.6 [pin 2025-03-30]
