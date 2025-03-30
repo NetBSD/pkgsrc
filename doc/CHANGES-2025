@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2360 2025/03/30 07:35:13 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2361 2025/03/30 07:48:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3054,3 +3054,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/ghostscript-agpl to 10.05.0 [adam 2025-03-30]
 	Updated fonts/ghostscript-cidfonts-ryumin to 10.05.0 [adam 2025-03-30]
 	Updated devel/got to 0.110 [vins 2025-03-30]
+	Updated textproc/expat to 2.7.1 [wiz 2025-03-30]
