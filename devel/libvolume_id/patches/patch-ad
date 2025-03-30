@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2014/05/05 21:13:16 ryoon Exp $
+$NetBSD: patch-ad,v 1.7 2025/03/30 21:10:48 wiz Exp $
 
 --- util.h.orig	2007-12-27 00:51:05.000000000 +0000
 +++ util.h
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.6 2014/05/05 21:13:16 ryoon Exp $
  #endif
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__MirBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
  #include <sys/endian.h>
  
  #define __BYTE_ORDER            _BYTE_ORDER

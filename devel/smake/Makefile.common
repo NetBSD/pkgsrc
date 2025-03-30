@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/04/21 14:08:01 micha Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/03/30 21:10:42 wiz Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
@@ -60,7 +60,6 @@ PLIST.bsd=	yes
 	${OPSYS} == "IRIX" ||		\
 	${OPSYS} == "Linux" ||		\
 	${OPSYS} == "Minix" ||		\
-	${OPSYS} == "MirBSD" ||		\
 	${OPSYS} == "OSF1" ||		\
 	${OPSYS} == "QNX" ||		\
 	${OPSYS} == "SunOS"

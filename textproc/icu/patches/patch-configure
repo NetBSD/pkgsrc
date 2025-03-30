@@ -1,20 +1,10 @@
-$NetBSD: patch-configure,v 1.14 2024/11/14 22:13:26 wiz Exp $
+$NetBSD: patch-configure,v 1.15 2025/03/30 21:10:47 wiz Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it.
-Add support for Bitrig.
 
 --- configure.orig	2024-10-24 18:24:00.000000000 +0000
 +++ configure
-@@ -5858,7 +5858,7 @@ rm -f core conftest.err conftest.$ac_obj
- 		*-*-cygwin) icu_cv_host_frag=mh-cygwin-msvc ;;
- 		esac
- 	fi ;;
--*-*-*bsd*|*-*-dragonfly*) 	icu_cv_host_frag=mh-bsd-gcc ;;
-+*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	icu_cv_host_frag=mh-bsd-gcc ;;
- *-*-aix*)
- 	if test "$GCC" = yes; then
- 		icu_cv_host_frag=mh-aix-gcc
 @@ -5884,6 +5884,7 @@ powerpc*-apple-darwin*)	icu_cv_host_frag
  *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
  *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
@@ -53,12 +43,3 @@ Add support for Bitrig.
  U_ENABLE_DYLOAD=1
  enable=yes
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins. Ignored if plugins disabled." >&5
-@@ -8415,7 +8439,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
- case "${host}" in
- 	*-*-solaris*) 	platform=U_SOLARIS ;;
- 	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
--	*-*-*bsd*|*-*-dragonfly*) 	platform=U_BSD ;;
-+	*-*-*bsd*|*-*-dragonfly*|*-*-bitrig*) 	platform=U_BSD ;;
- 	*-*-aix*) 	platform=U_AIX ;;
- 	*-*-hpux*) 	platform=U_HPUX ;;
- 	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;

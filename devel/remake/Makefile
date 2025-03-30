@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/03/25 15:16:32 nikita Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/30 21:10:42 wiz Exp $
 
 DISTNAME=	remake-4.3+dbg-1.6
 # upstream titles it 4.3.1
@@ -21,8 +21,6 @@ INFO_FILES=	yes
 
 TEST_TARGET=	check
 
-# workaround for broken strndup
-CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 CONFIGURE_ARGS=		--without-guile
 # XXX: Do not install gmake setgid and do not override the owner group
 # XXX: based on possible /dev/kmem permissions.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/12/30 20:35:41 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/30 21:10:44 wiz Exp $
 
 DISTNAME=	pcc-1.0.0
 PKGREVISION=	1
@@ -15,7 +15,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm* NetBSD-*-i386 NetBSD-*-mips* \
 			NetBSD-*-x86_64 \
 			OpenBSD-*-i386 OpenBSD-*-vax \
 			OpenBSD-*-powerpc OpenBSD-*-sparc64 \
-			MirBSD-*-i386 \
 			Darwin-*-i386 Darwin-*-powerpc \
 			FreeBSD-*-i386 \
 			Linux-*-i386 Linux-*-powerpc

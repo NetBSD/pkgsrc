@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/05/01 20:02:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.81 2025/03/30 21:10:43 wiz Exp $
 
 DISTNAME=	gawk-5.3.0
 CATEGORIES=	lang
@@ -33,11 +33,6 @@ CHECK_PORTABILITY_SKIP+=	doc/it/gawktexi.in
 
 .if ${MACHINE_PLATFORM:MDarwin-*-x86_64}
 CFLAGS+=	-Dvm_region=vm_region_64
-.endif
-
-PLIST_VARS+=		extension
-.if "${OPSYS}" != "MirBSD"
-PLIST.extension=	yes
 .endif
 
 INSTALLATION_DIRS+=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1

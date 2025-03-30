@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2025/02/25 19:14:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2025/03/30 21:10:48 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -111,7 +111,7 @@ INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${TOOLBASE}/bin/tradcpp -Uunix"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CONFIGURE_ARGS+=	--with-sha1=libc
 .else
 .include "../../security/nettle/buildlink3.mk"

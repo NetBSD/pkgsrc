@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2024/08/20 08:28:47 mrg Exp $
+# $NetBSD: Makefile,v 1.125 2025/03/30 21:10:41 wiz Exp $
 
 DISTNAME=	make-4.4.1
 PKGNAME=	g${DISTNAME}
@@ -20,9 +20,6 @@ TEST_TARGET=		check
 USE_TOOLS+=		perl:test
 
 CONFIGURE_ARGS+=	--program-prefix=g
-
-# workaround for broken strndup
-CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 
 # XXX: Do not install gmake setgid and do not override the owner group
 # XXX: based on possible /dev/kmem permissions.

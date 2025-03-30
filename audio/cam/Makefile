@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/04/20 12:10:25 nros Exp $
-#
+# $NetBSD: Makefile,v 1.29 2025/03/30 21:10:39 wiz Exp $
 
 DISTNAME=	cam-1.02
 PKGREVISION=	2
@@ -20,7 +19,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../mk/bsd.prefs.mk"
 
 CAMLIBS=	-lcurses
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "MirBSD"
+.if ${OPSYS} == "NetBSD"
 CAMLIBS+=	-lossaudio
 .endif
 

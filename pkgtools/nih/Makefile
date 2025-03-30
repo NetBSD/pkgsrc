@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/05/27 21:23:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.32 2025/03/30 21:10:46 wiz Exp $
 
 DISTNAME=	pkgnih-0.16.0
 PKGNAME=	${DISTNAME:S/pkgnih/nih/}
@@ -46,7 +46,7 @@ MAKE_ENV+=		PKGSRCDIR=${PKGSRCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD || ${OPSYS} == OpenBSD || \
-    ${OPSYS} == DragonFly || ${OPSYS} == MirBSD
+    ${OPSYS} == DragonFly
 FTP_CMD=	/usr/bin/ftp
 .else
 FTP_CMD=	${PREFIX}/bin/ftp
