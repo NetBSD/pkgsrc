@@ -1,20 +1,23 @@
-# $NetBSD: Makefile,v 1.95 2025/03/14 10:14:59 pin Exp $
+# $NetBSD: Makefile,v 1.96 2025/03/30 16:56:16 pin Exp $
 
-DISTNAME=	tp-note-1.25.4
+DISTNAME=	tp-note-1.25.6
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://blog.getreu.net/projects/tp-note/
 COMMENT=	Minimalistic note taking and template system
 LICENSE=	mit OR apache-2.0
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.14.2+wasi-0.2.4.crate=		https://static.crates.io/crates/wasi/
 
 .include "cargo-depends.mk"
 
 RUST_REQ=	1.81.0
 
-WRKSRC=		${WRKDIR}/tp-note-v1.25.4-ac6f8524056d5bcb0f1fc85f3cd4f6c965cb1d4f
+WRKSRC=		${WRKDIR}/tp-note-v1.25.6-ae9f43f1c0c819fe1372e2ee2f08a7d9c8999f7a
 
 USE_TOOLS+=	pkg-config
 
