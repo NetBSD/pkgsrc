@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/09/08 06:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/30 15:40:26 wiz Exp $
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
 CATEGORIES=	benchmarks
@@ -32,7 +32,6 @@ SUBST_SED.fix-arch=	-e 's|@@MACHINE_ARCH@@|${MACHINE_ARCH}|'
 
 post-patch:
 	cd ${WRKSRC} && ${LN} -s Makefile.NetBSD Makefile.OpenBSD
-	cd ${WRKSRC} && ${LN} -s Makefile.NetBSD Makefile.Bitrig
 	cd ${WRKSRC} && ${LN} -s Makefile.DragonFly Makefile.FreeBSD
 
 post-build:
