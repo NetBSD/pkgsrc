@@ -1,0 +1,76 @@
+$NetBSD: README.OpenServer,v 1.1 2025/03/30 09:53:32 nia Exp $
+
+Supported platforms
+===================
+- SCO OpenServer 5 Definitive 2018
+- SCO OpenServer 6 Definitive 2018
+
+Interested developers can download evaluation ISOs from xinuos.com
+after registering an account.  SCO operating systems appear to run
+best in VirtualBox with multiple cores enabled and SATA disks.
+
+All System V derived versions of OpenServer lack a modern toolchain,
+so it's necessary to install GCC first (see below).
+
+OpenServer 5
+============
+
+First install XDEV as described here:
+
+https://download.xinuos.com/openserver5D/D2M1/packages/5D_Xinuos_Extended_Development_System.pdf
+
+# patchck -o dev
+
+This gives you the GCC compiler, among other important tools.
+
+Ensure XDEV is in the PATH:
+
+# PATH=$PATH:/usr/xdev/bin
+# export PATH
+
+Currently there are issues with the elderly GNU and XDEV versions
+of pwd (they do not support -P), so they must be last in the
+$PATH to ensure that /bin/pwd is used.
+
+Remove /usr/lib/libz.la and other libtool archives from the system
+(or better yet move them out of the way while using pkgsrc),
+so that libtool does not get confused.
+
+Bootstrap with --compiler gcc.
+
+OpenServer 6
+============
+
+OpenServer 6 has greater similarity to UnixWare.
+
+- There appears to be a bug in 6D2M2a where /usr/include/sys/mkdev.h
+  incorrectly declares functions such as major() as non-static, fix them.
+
+- The rm binary is flawed and most autoconf scripts do not accept
+  it. Replace it with the one from /usr/gnu/bin.
+
+First, download the following packages:
+
+- https://download.xinuos.com/openserver6D/D2M1/security/Xinuosreadline-7.0p3a-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/security/Xinuoslibxml2-2.9.4b-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/security/Xinuosgettext-0.19.8.1a-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/security/Xinuoslibiconv-1.15b-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosgmp-6.1.2-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosmpfr-4.0.2-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosmpc-1.1.0-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosisl-0.18-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosbinutils-2.30a-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosgcc-rtlibs-7.3.0d-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1/packages/Xinuosgcc-7.3.0d-UnixWare-i386.pkg.gz
+- https://download.xinuos.com/openserver6D/D2M1MP/packages/Xinuosflex-2.6.4-UnixWare-i386.pkg.xz
+
+Extract them with gunzip/unxz, then install them in order:
+
+# /usr/sbin/pkgadd -d /full/path/name.pkg all
+
+Note that the pkgadd tool does _not_ support relative paths!
+
+Add /usr/sysv5/bin to your $PATH before bootstrap:
+
+# PATH=/usr/sysv5/bin:$PATH
+# export PATH
