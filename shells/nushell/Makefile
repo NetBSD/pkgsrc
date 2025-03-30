@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.70 2025/02/12 15:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2025/03/30 16:53:08 pin Exp $
 
-DISTNAME=	nushell-0.102.0
+DISTNAME=	nushell-0.103.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
@@ -15,7 +15,7 @@ SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.82.0
+RUST_REQ=	1.83.0
 USE_TOOLS+=	pkg-config
 
 PKG_SHELL=	bin/nu
