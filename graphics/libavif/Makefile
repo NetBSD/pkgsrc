@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/02/26 08:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/30 15:33:20 adam Exp $
 
-DISTNAME=	libavif-1.2.0
+DISTNAME=	libavif-1.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AOMediaCodec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
