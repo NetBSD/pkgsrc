@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/02/24 08:59:37 adam Exp $
+# $NetBSD: options.mk,v 1.3 2025/03/30 12:56:13 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vaultwarden
 PKG_SUPPORTED_OPTIONS=		web-vault
@@ -12,16 +12,19 @@ PLIST_VARS+=		web-vault
 
 .if !empty(PKG_OPTIONS:Msqlite)
 CARGO_FEATURES+=	sqlite
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
 .  include "../../databases/sqlite3/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
 CARGO_FEATURES+=	postgresql
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${PGSQL_TYPE}}/lib
 .  include "../../mk/pgsql.buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 CARGO_FEATURES+=	mysql
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-client}/lib
 .  include "../../mk/mysql.buildlink3.mk"
 .endif
 
