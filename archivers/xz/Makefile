@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2025/01/24 06:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.53 2025/03/30 06:13:16 adam Exp $
 
-DISTNAME=	xz-5.6.4
+DISTNAME=	xz-5.8.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tukaani-project/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
