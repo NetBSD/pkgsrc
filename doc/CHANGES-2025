@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2391 2025/03/30 16:09:39 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2392 2025/03/30 16:12:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3092,3 +3092,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mkvtoolnix to 91.0 [adam 2025-03-30]
 	Added textproc/p5-Text-HTML-Turndown version 0.04 [schmonz 2025-03-30]
 	Updated devel/asdf to 0.16.7 [schmonz 2025-03-30]
+	Updated devel/mob to 5.4.0 [schmonz 2025-03-30]
