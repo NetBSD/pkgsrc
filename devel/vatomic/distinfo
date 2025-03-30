@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/30 07:57:10 wiz Exp $
+
+BLAKE2s (vatomic-2.3.1.tar.gz) = 66f2feeb15aecde9d615f500c3aced54c31823a5919e077da472c33aa9d4fc97
+SHA512 (vatomic-2.3.1.tar.gz) = 4ba325634c7f83941216735ff039aed52b4a2b8c34322715a5b390d91893d5ed7ffe83b5608c6514efe26fc026d50efa7acbb0bf49ffb482eb6fd46a3ffa6fce
+Size (vatomic-2.3.1.tar.gz) = 175309 bytes
