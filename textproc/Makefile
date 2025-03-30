@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1508 2025/03/07 17:55:44 pho Exp $
+# $NetBSD: Makefile,v 1.1509 2025/03/30 07:54:41 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1014,6 +1014,7 @@ SUBDIR+=	po-mode
 SUBDIR+=	po4a
 SUBDIR+=	pod2mdoc
 SUBDIR+=	postgresql-autodoc
+SUBDIR+=	presenterm
 SUBDIR+=	prose
 SUBDIR+=	psgml-mode
 SUBDIR+=	pugixml
