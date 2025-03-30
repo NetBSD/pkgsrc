@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2019/01/08 18:29:29 schmonz Exp $
+# $NetBSD: options.mk,v 1.5 2025/03/30 17:34:18 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns-run
 PKG_SUPPORTED_OPTIONS+=	inet6
@@ -16,8 +16,6 @@ DNSROOTS_GLOBAL=	share/examples/djbdnscurve6/dnsroots.global
 TINYDNS_LISTENIP=	::
 DNSCACHE_LISTENIP=	::1
 DNSCACHE_SENDIP=	::
-CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/dnscache-ip \
-			${PKG_SYSCONFDIR}/dnscache/ip/::1
 .else
 DEPENDS_DJBDNS=		djbdns>=1.05nb5:../../net/djbdns
 DEPENDS+=		{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp
@@ -25,6 +23,6 @@ DNSROOTS_GLOBAL=	share/examples/djbdns/dnsroots.global
 TINYDNS_LISTENIP=	0.0.0.0
 DNSCACHE_LISTENIP=	127.0.0.1
 DNSCACHE_SENDIP=	0.0.0.0
-CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/dnscache-ip \
-			${PKG_SYSCONFDIR}/dnscache/ip/127.0.0.1
 .endif
+CONF_FILES+=		${PREFIX}/share/examples/${PKGBASE}/dnscache-ip \
+			${PKG_SYSCONFDIR}/dnscache/ip/${DNSCACHE_LISTENIP}
