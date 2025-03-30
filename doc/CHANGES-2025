@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2381 2025/03/30 11:17:00 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.2382 2025/03/30 11:43:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3079,3 +3079,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-apsw to 3.49.1.0 [adam 2025-03-30]
 	Updated time/py-pytz to 2025.2 [adam 2025-03-30]
 	Updated time/py-tzdata to 2025.2 [adam 2025-03-30]
+	Updated devel/regal to 0.32.0 [leot 2025-03-30]
