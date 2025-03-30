@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2025/02/07 21:58:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2025/03/30 07:53:02 wiz Exp $
 bin/cleanup_digikamdb
 bin/digikam
 bin/digitaglinktree
@@ -152,6 +152,7 @@ qt5/plugins/digikam/bqm/Bqm_ColorFX_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_Convert16To8_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_Convert8To16_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToAVIF_Plugin.so
+qt5/plugins/digikam/bqm/Bqm_ConvertToDNG_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToHEIF_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToJP2lugin_Plugin.so
 qt5/plugins/digikam/bqm/Bqm_ConvertToJPEG_Plugin.so
@@ -239,6 +240,7 @@ qt5/plugins/digikam/editor/Editor_TextureTool_Plugin.so
 qt5/plugins/digikam/editor/Editor_WhiteBalanceTool_Plugin.so
 qt5/plugins/digikam/generic/Generic_Box_Plugin.so
 qt5/plugins/digikam/generic/Generic_Calendar_Plugin.so
+qt5/plugins/digikam/generic/Generic_DNGConverter_Plugin.so
 qt5/plugins/digikam/generic/Generic_DigitalScanner_Plugin.so
 qt5/plugins/digikam/generic/Generic_DropBox_Plugin.so
 qt5/plugins/digikam/generic/Generic_ExpoBlending_Plugin.so
