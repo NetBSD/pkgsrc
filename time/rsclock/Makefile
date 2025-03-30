@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/01/13 19:26:12 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/30 16:55:10 pin Exp $
 
-DISTNAME=	rsclock-0.1.11
+DISTNAME=	rsclock-0.1.12
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=valebes/}
 GITHUB_PROJECT=	rsClock
