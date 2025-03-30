@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2370 2025/03/30 07:53:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2371 2025/03/30 07:54:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3064,3 +3064,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/kyua to 0.14.1 [wiz 2025-03-30]
 	Updated graphics/digikam to 8.6.0 [wiz 2025-03-30]
 	Updated graphics/digikam-gmic-qt to 3.2.2.20250308 [wiz 2025-03-30]
+	Added textproc/presenterm version 0.12.0 [wiz 2025-03-30]
