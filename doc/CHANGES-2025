@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2372 2025/03/30 07:57:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2373 2025/03/30 08:15:46 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/digikam-gmic-qt to 3.2.2.20250308 [wiz 2025-03-30]
 	Added textproc/presenterm version 0.12.0 [wiz 2025-03-30]
 	Added devel/vatomic version 2.3.1 [wiz 2025-03-30]
+	Updated sysutils/fastfetch to 2.39.1 [vins 2025-03-30]
