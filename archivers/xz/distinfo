@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.39 2025/01/24 06:24:35 adam Exp $
+$NetBSD: distinfo,v 1.40 2025/03/30 06:13:16 adam Exp $
 
-BLAKE2s (xz-5.6.4.tar.bz2) = fd71102c1725eb33e5e1829151002325e90ef5139252c4a81fe9e2e076c14331
-SHA512 (xz-5.6.4.tar.bz2) = 277f0aa795ea204198d680589e652a35642106290afecfc3fbf3e67e3f66c232fe3ecdb5ef7c53c835aaee7fd7df130102e1050a23b0bb1f4d4635de89dfe406
-Size (xz-5.6.4.tar.bz2) = 1679393 bytes
+BLAKE2s (xz-5.8.0.tar.bz2) = 1caac3f5b3f8eb7ba2d40b3f014f664fca2d4fa5b9fe3b96c42372753b1be63c
+SHA512 (xz-5.8.0.tar.bz2) = 3c63f6b5733c5e162d778ebc079e26ab4653f04dab1b0ebf413022ab440fada2cc191349109e2f97f75b8072aa4720964340373a0d20fbec6aef4822af90c64e
+Size (xz-5.8.0.tar.bz2) = 1894017 bytes
 SHA1 (patch-src_xz_Makefile.in) = b9360c7b2b34159028fb8b84339aa2faf3922287
