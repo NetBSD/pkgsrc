@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/07/25 05:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/30 16:23:57 schmonz Exp $
 
 DISTNAME=	sandboxctl-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}sandboxctl/releases/download/sandboxctl-1.1/
 
