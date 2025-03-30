@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/03/30 07:34:28 vins Exp $
+# $NetBSD: Makefile,v 1.21 2025/03/30 08:19:47 vins Exp $
 
 DISTNAME=	got-portable-0.110
 PKGNAME=	${DISTNAME:S/-portable//}
@@ -52,6 +52,7 @@ PKG_SHELL=	bin/gotsh
 
 # Tests for HTTP protocol support rely on the HTTP::Daemon Perl module.
 TEST_DEPENDS+=		p5-HTTP-Daemon-[0-9]*:../../www/p5-HTTP-Daemon
+TEST_DEPENDS+=		p5-Net-Daemon-[0-9]*:../../net/p5-Net-Daemon
 TEST_DEPENDS+=		git-[0-9]*:../../devel/git
 INTERACTIVE_STAGE+=	test
 TEST_TARGET=		tests
