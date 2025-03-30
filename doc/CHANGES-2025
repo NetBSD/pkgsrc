@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2355 2025/03/29 16:04:56 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.2356 2025/03/30 02:22:43 maya Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3043,3 +3043,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/lldpd to 1.0.19 [nonaka 2025-03-29]
 	Updated www/firefox128 to 128.8.1 [bsiegert 2025-03-29]
 	Updated devel/cargo-c to 0.9.32nb1 [jakllsch 2025-03-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q1 branch [maya 2025-03-30]
