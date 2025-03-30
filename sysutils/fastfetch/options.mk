@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.12 2025/02/11 17:45:26 vins Exp $
+# $NetBSD: options.mk,v 1.13 2025/03/30 08:14:50 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
 PKG_OPTIONS_GROUP.server=	wayland x11
 PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
-PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl osmesa \
+PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl \
 			python sqlite3 threads xfce4-wm
-PKG_SUGGESTED_OPTIONS=	glib2 libdrm osmesa x11
+PKG_SUGGESTED_OPTIONS=	glib2 libdrm x11
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
@@ -20,6 +20,12 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .if ${OPSYS} != "SunOS"
 # parallel/ocl-icd is currently broken on SunOS
 PKG_SUGGESTED_OPTIONS+=	opencl
+.endif
+
+.include "../../graphics/MesaLib/features.mk"
+.if ${MESALIB_SUPPORTS_EGL:tl} == "yes"
+PKG_SUPPORTED_OPTIONS+= opengl
+PKG_SUGGESTED_OPTIONS+= opengl
 .endif
 
 PKG_SUGGESTED_OPTIONS.SunOS+=		pulseaudio
@@ -110,11 +116,10 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_ZLIB=OFF
 ## MesaLib
 ## Needed by the OpenGL module for gl context creation.
 ##
-.if !empty(PKG_OPTIONS:Mosmesa)
+.if !empty(PKG_OPTIONS:Mopengl)
 .  include "../../graphics/MesaLib/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=  -DENABLE_EGL=OFF
-CMAKE_CONFIGURE_ARGS+=  -DENABLE_OSMESA=OFF
 .endif
 
 ##
