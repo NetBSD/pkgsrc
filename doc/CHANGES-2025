@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2366 2025/03/30 07:51:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2367 2025/03/30 07:52:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3060,3 +3060,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nss to 3.110 [wiz 2025-03-30]
 	Updated graphics/jasper to 4.2.4nb1 [wiz 2025-03-30]
 	Updated devel/lutok to 0.6.1 [wiz 2025-03-30]
+	Updated devel/atf to 0.23 [wiz 2025-03-30]
