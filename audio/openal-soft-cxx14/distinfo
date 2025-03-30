@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2025/03/30 09:32:57 nia Exp $
+
+BLAKE2s (openal-soft-1.23.1.tar.bz2) = da179b66de6bfa924ab61e4f05b9f7153ab078b850929b4a5b5f16119e3708f7
+SHA512 (openal-soft-1.23.1.tar.bz2) = 0d40577cd27040dc8814c15bacc310a0ce1c98e084f0a37db9f66899265df42ea61ac672efba7445e495849c25b9ba5b086f43320a38965f6ee74081b2896819
+Size (openal-soft-1.23.1.tar.bz2) = 699330 bytes
+SHA1 (patch-CMakeLists.txt) = 8f3c8c750c22d6c66652ee22a1dda7965c9c469b
+SHA1 (patch-alc_alconfig.cpp) = 3d91d567bb20ce296fd7a6a50f2ec6b11f9bc18c
+SHA1 (patch-include_AL_al.h) = d331039f47f05c1ee523b884711af5d11baec653
