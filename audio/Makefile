@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.706 2025/02/05 08:07:46 adam Exp $
+# $NetBSD: Makefile,v 1.707 2025/03/30 09:32:07 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -340,6 +340,7 @@ SUBDIR+=	open_jtalk
 SUBDIR+=	open_jtalk-HTS_voice
 SUBDIR+=	open_jtalk-MMDAgent_voice
 SUBDIR+=	openal-soft
+SUBDIR+=	openal-soft-c
 SUBDIR+=	opencore-amr
 SUBDIR+=	opus-tools
 SUBDIR+=	opusfile

@@ -1,0 +1,9 @@
+OpenAL Soft is an LGPL-licensed, cross-platform, software implementation
+of the OpenAL 3D audio API.
+
+OpenAL provides capabilities for playing audio in a virtual 3D environment.
+Distance attenuation, doppler shift, and directional sound emitters are
+among the features handled by the API.
+
+This is the last version written primarily in C, kept around for
+systems with older compiler versions.
