@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.329 2025/03/05 11:44:42 nia Exp $
+# $NetBSD: bootstrap,v 1.330 2025/03/30 09:53:04 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -828,9 +828,7 @@ QNX)
 	;;
 SCO_SV)
 	root_group=root
-	need_awk=yes
 	need_bsd_install=yes
-	need_sed=yes
 	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
@@ -838,8 +836,20 @@ SCO_SV)
 	else
 		need_mksh=yes
 	fi
+	if [ -e "/usr/lib/libpthread.so" ]; then
+		# Currently libarchive tries to use pthread_mutex_lock
+		# unconditionally if it finds the header.  We could also
+		# hide the header somehow.
+		LDFLAGS="${LDFLAGS} -lpthread -lsocket"
+		export LDFLAGS
+	fi
+	# For some reason, the uname command shipped with xdev has
+	# a broken -p option.
+	machine_arch=`uname -m`
 	whoamiprog='id -u'
 	groupsprog='id -g'
+	opsys=SCO_SV
+	set_opsys=yes
 	# /bin/sh under OpenServer 5.0.7/3.2 breaks bmake tests.
 	#bmakexargs="$bmakexargs --with-defshell=/bin/ksh"
 	;;

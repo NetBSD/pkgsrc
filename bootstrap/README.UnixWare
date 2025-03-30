@@ -1,11 +1,26 @@
-$NetBSD: README.UnixWare,v 1.3 2025/03/05 11:44:42 nia Exp $
+$NetBSD: README.UnixWare,v 1.4 2025/03/30 09:53:04 nia Exp $
 
-See https://en.wikipedia.org/wiki/UnixWare
+Supported platforms
+===================
+- SCO UnixWare 7 Definitive 2018
 
-As of 2022-04, "SCO UnixWare 7 Definitive 2018" works.
+Interested developers can download evaluation ISOs from xinuos.com
+after registering an account.  SCO operating systems appear to run
+best in VirtualBox with multiple cores enabled and SATA disks.
+For UnixWare, QEMU with acceleration disabled also seems to work.
 
-UnixWare has a limit of 1000 files per directory.  When transferring
-the tree to UnixWare, you should delete unwanted packages to reduce
+Guidelines
+==========
+
+By default, UnixWare has a limit of 1000 files per directory.
+This should be increased before transferring the package tree:
+
+# /etc/conf/bin/idtune -m FLCKREC 16000
+# /etc/conf/bin/idtune -m MAXLINK 32767
+# /etc/conf/bin/idbuild
+# reboot
+
+Alternatively, you can delete unwanted packages to reduce
 the size of categories such as "devel".
 
 The default install of UnixWare 7 lacks a modern toolchain
@@ -33,4 +48,7 @@ Extract them with gunzip/unxz, then install them in order:
 Note that the pkgadd tool does _not_ support relative
 paths!
 
-Add /usr/sysv5/bin to your $PATH before bootstrap.
+Add /usr/sysv5/bin to your $PATH before bootstrap:
+
+# PATH=/usr/sysv5/bin:$PATH
+# export PATH
