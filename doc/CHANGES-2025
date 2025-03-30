@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2358 2025/03/30 06:18:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2359 2025/03/30 06:31:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3050,3 +3050,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3-docs to 3.49.1 [adam 2025-03-30]
 	Updated databases/sqlite3-tcl to 3.49.1 [adam 2025-03-30]
 	Updated devel/lemon to 1.0.3.49.1 [adam 2025-03-30]
+	Updated net/haproxy to 3.1.6 [adam 2025-03-30]
+	Updated print/ghostscript-agpl to 10.05.0 [adam 2025-03-30]
+	Updated fonts/ghostscript-cidfonts-ryumin to 10.05.0 [adam 2025-03-30]
