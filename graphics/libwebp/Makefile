@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/12/25 10:57:30 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/03/30 21:10:43 wiz Exp $
 
 DISTNAME=	libwebp-1.5.0
 CATEGORIES=	graphics
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-libwebpmux
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
-.if (!empty(MACHINE_PLATFORM:MSunOS-*-i386) || !empty(MACHINE_PLATFORM:MMirBSD-*-i386)) && !empty(CC_VERSION:Mgcc-[23]*)
+.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
 CPPFLAGS+=	-D__pic__
 .endif
 

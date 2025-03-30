@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2025/03/09 14:04:48 jakllsch Exp $
+# $NetBSD: Makefile,v 1.170 2025/03/30 21:10:47 wiz Exp $
 
 DISTNAME=	heimdal-7.8.0
 PKGREVISION=	12
@@ -94,12 +94,6 @@ pre-configure:
 PLIST.vis=		yes
 PLIST.glob=		yes
 # Without this I get undefined references to pthread_getspecific
-PTHREAD_AUTO_VARS=	yes
-.endif
-
-.if ${OPSYS} == "MirBSD"
-PLIST.vis=		yes
-# all of the tools need to link against pthread, force it.
 PTHREAD_AUTO_VARS=	yes
 .endif
 

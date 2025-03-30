@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.7 2023/01/20 13:10:09 wiz Exp $
+$NetBSD: patch-configure,v 1.8 2025/03/30 21:10:42 wiz Exp $
 
 Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
 
 --- configure.orig	2018-08-30 08:24:28.000000000 +0000
 +++ configure
-@@ -15236,8 +15240,7 @@ extern
+@@ -15236,8 +15236,7 @@ extern
  #ifdef __cplusplus
  "C"
  #endif
@@ -14,7 +14,7 @@ Patch "GNU" gettext support to not depend unnecessary on "GNU" gettext.
  #else
  #define __GNU_GETTEXT_SYMBOL_EXPRESSION 0
  #endif
-@@ -15273,8 +15276,7 @@ extern
+@@ -15273,8 +15272,7 @@ extern
  #ifdef __cplusplus
  "C"
  #endif

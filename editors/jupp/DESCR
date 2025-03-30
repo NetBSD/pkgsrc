@@ -10,6 +10,5 @@ Basic differences between joe and jupp are:
 * bug and security fixes
 * tab completion fixes
 * code cleanup
-* compiles with -Wall -Werror (on MirBSD)
 * improved options menu
 * visibled spaces

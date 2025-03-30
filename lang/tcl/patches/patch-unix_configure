@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure,v 1.16 2025/01/25 21:29:26 adam Exp $
+$NetBSD: patch-unix_configure,v 1.17 2025/03/30 21:10:45 wiz Exp $
 
 --- unix/configure.orig	2024-12-02 12:57:40.000000000 +0000
 +++ unix/configure
@@ -17,15 +17,6 @@ $NetBSD: patch-unix_configure,v 1.16 2025/01/25 21:29:26 adam Exp $
  	    CC_SEARCH_FLAGS=""
  	    LD_SEARCH_FLAGS=""
  	    ;;
-@@ -7459,7 +7459,7 @@ fi
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
--	OpenBSD-*)
-+	OpenBSD-*|MirBSD-*)
- 	    arch=`arch -s`
- 	    case "$arch" in
- 	    alpha|sparc64)
 @@ -7480,7 +7480,7 @@ fi
  
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}

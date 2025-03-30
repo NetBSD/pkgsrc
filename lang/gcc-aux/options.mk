@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2023/06/06 12:41:42 riastradh Exp $
+# $NetBSD: options.mk,v 1.10 2025/03/30 21:10:43 wiz Exp $
 
 # NLS is failing, might be linking with wrong iconv lib.
 # Disable option until further notice
@@ -116,7 +116,7 @@ EXTRA_CONFARGS+=	--with-stage1-ldflags=-static
 # a different compiler (the base) so perhaps that's the problem.  Building
 # gmp&co in the tree allows the configure step to succeed on OpenBSD.
 
-.if ${OPSYS} == OpenBSD || ${OPSYS} == MirBSD || \
+.if ${OPSYS} == OpenBSD || \
    (${OPSYS} == SunOS && !empty(PKG_OPTIONS:Mbootstrap))
 .include "../../devel/gmp/inplace.mk"
 .include "../../math/mpcomplex/inplace.mk"

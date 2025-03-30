@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/02 16:25:19 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.38 2025/03/30 21:10:45 wiz Exp $
 
 DISTNAME=	cucipop-1.31
 PKGREVISION=	3
@@ -39,9 +38,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-.if ${OPSYS} != "MirBSD"
 LIBS+=		-lcrypt
-.endif
 
 .if !empty(PKG_OPTIONS:Mdb)
 BDB_ACCEPTED=	db2

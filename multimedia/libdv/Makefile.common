@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2022/05/24 09:43:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.20 2025/03/30 21:10:45 wiz Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -18,16 +18,15 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libdv.pc.in
+PKGCONFIG_OVERRIDE=	libdv.pc.in
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
 # Avoid text relocations.
-.if (${OPSYS} == "Darwin") || empty(MACHINE_PLATFORM:M*-*-i386) || \
+.if (${OPSYS} == "Darwin") || !${MACHINE_PLATFORM:M*-*-i386} || \
     (${OPSYS} == "Interix") || (${OPSYS} == "SunOS") || \
-    (${OPSYS} == "MirBSD") || \
-    !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+    ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 

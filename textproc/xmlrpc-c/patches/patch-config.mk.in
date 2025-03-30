@@ -1,9 +1,9 @@
-$NetBSD: patch-config.mk.in,v 1.5 2019/10/13 21:48:58 he Exp $
+$NetBSD: patch-config.mk.in,v 1.6 2025/03/30 21:10:48 wiz Exp $
 
 Do not use -Bdynamic -G when using GCC on Solaris, it creates non-PIC
 libraries.
 
-Support for shared libraries on OpenBSD and MirBSD.
+Support for shared libraries on OpenBSD.
 
 --- config.mk.in.orig	2019-10-13 08:16:50.256467031 +0000
 +++ config.mk.in
@@ -27,23 +27,11 @@ Support for shared libraries on OpenBSD and MirBSD.
    NEED_RPATH=yes
  endif
  
-@@ -256,6 +261,30 @@ ifeq ($(patsubst netbsd%,netbsd,$(HOST_O
+@@ -256,6 +261,18 @@ ifeq ($(patsubst netbsd%,netbsd,$(HOST_O
    NEED_WL_RPATH=yes
  endif
  
 +ifeq ($(patsubst openbsd%,openbsd,$(HOST_OS)),openbsd)
-+  SHARED_LIB_TYPE = unix
-+  SHLIB_SUFFIX = so
-+  MUST_BUILD_SHLIB = Y
-+  MUST_BUILD_SHLIBLE = Y
-+  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
-+  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
-+  CFLAGS_SHLIB = -fpic
-+  LDFLAGS_SHLIB = -shared -Wl,-soname,$(SONAME) $(SHLIB_CLIB)
-+  NEED_WL_RPATH=yes
-+endif
-+
-+ifeq ($(patsubst mirbsd%,mirbsd,$(HOST_OS)),mirbsd)
 +  SHARED_LIB_TYPE = unix
 +  SHLIB_SUFFIX = so
 +  MUST_BUILD_SHLIB = Y

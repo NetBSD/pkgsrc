@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2024/11/27 07:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.226 2025/03/30 21:10:41 wiz Exp $
 
 .include "Makefile.common"
 
@@ -70,7 +70,6 @@ pre-configure:
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_cend.cxx ${WRKSRC}/Source/Checks/cm_cxx_cend.cxx
 	${CP} ${FILESDIR}/Source_Checks_cm_cxx_size_t.cxx ${WRKSRC}/Source/Checks/cm_cxx_size_t.cxx
 	${FIND} ${WRKSRC}/Modules -type f -a -name "*.orig" -print | ${XARGS} ${RM}
-	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
 .for lang in C CXX Fortran
 	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
 	    ${WRKSRC}/Modules/Platform/SunOS-Clang-${lang}.cmake

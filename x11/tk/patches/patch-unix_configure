@@ -1,6 +1,5 @@
-$NetBSD: patch-unix_configure,v 1.18 2025/01/25 21:32:12 adam Exp $
+$NetBSD: patch-unix_configure,v 1.19 2025/03/30 21:10:48 wiz Exp $
 
-Support MirBSD.
 Honor LDFLAGS.
 Standardize file names.
 
@@ -19,15 +18,6 @@ Standardize file names.
      CFLAGS_DEBUG=-g
      if test "$GCC" = yes; then
  
-@@ -5355,7 +5355,7 @@ fi
- 	    CC_SEARCH_FLAGS=""
- 	    LD_SEARCH_FLAGS=""
- 	    ;;
--	OpenBSD-*)
-+	OpenBSD-*|MirBSD-*)
- 	    arch=`arch -s`
- 	    case "$arch" in
- 	    alpha|sparc64)
 @@ -5376,7 +5376,7 @@ fi
  
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}

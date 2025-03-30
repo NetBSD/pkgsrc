@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/12/30 01:58:37 zafer Exp $
+# $NetBSD: Makefile,v 1.8 2025/03/30 21:10:40 wiz Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (6.n -> 6.(n+1))
@@ -39,14 +39,6 @@ CHECK_PORTABILITY_SKIP=	test/xa/*/*.sh
 # threads.
 PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
-
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	shlib
-
-.if ${OPSYS} != "MirBSD"
-PLIST.shlib=		yes
-.endif
 
 post-install:
 	chown -R ${DOCOWN}:${DOCGRP} ${DESTDIR}${PREFIX}/share/doc/db6

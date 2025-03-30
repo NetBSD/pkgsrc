@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2024/11/16 12:06:34 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2025/03/30 21:10:47 wiz Exp $
 
 DISTNAME=	IO-Socket-SSL-2.089
 PKGNAME=	p5-${DISTNAME}
@@ -18,12 +18,6 @@ DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IO/Socket/SSL/.packlist
-
-SUBST_CLASSES.MirBSD+=	openssl
-SUBST_STAGE.openssl=	pre-configure
-SUBST_MESSAGE.openssl=	Adapting minimum OpenSSL version.
-SUBST_FILES.openssl=	Makefile.PL
-SUBST_SED.openssl=	-e 's/openssl < 0x00908000/openssl < 0x00907000/'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2025/03/02 20:11:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.56 2025/03/30 21:10:43 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-10.4.0
@@ -54,9 +54,6 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 LDFLAGS.OpenBSD+=	-lz
 
 .include "../../fonts/harfbuzz/options.mk"
-
-# gcc too old
-BUILDLINK_TRANSFORM.MirBSD+=	rm:-fvisibility-inlines-hidden
 
 PRINT_PLIST_AWK+=	{ if (/^include\/harfbuzz\/hb-coretext.h/) $$0 = "$${PLIST.coretext}" $$0 }
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2022/11/25 23:29:47 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2025/03/30 21:16:22 wiz Exp $
 
-This patch fixes the build on MirBSD and OpenBSD, where LIBINTL and
+This patch fixes the build on OpenBSD, where LIBINTL and
 LIBICONV are incorrectly set.
 
 --- Makefile.in.orig	2014-01-25 21:27:30.000000000 +0000

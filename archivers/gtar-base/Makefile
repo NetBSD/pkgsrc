@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/05/01 21:20:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.100 2025/03/30 21:10:39 wiz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
@@ -52,8 +52,6 @@ PLIST.rmt=		yes
 .if ${OPSYS} != "Linux"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
-
-CPPFLAGS.MirBSD+=	-Dstrtoimax=strtoll -Dstrtoumax=strtoull
 
 # From sigwait(3):
 CFLAGS.OpenBSD+=	-pthread

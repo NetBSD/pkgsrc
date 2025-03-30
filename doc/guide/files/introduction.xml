@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.49 2025/03/30 15:00:21 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.50 2025/03/30 21:16:22 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -204,6 +204,7 @@ minutes!</para>
       <row>
         <entry><ulink url="https://www.mirbsd.org/">MirBSD</ulink></entry>
         <entry align="center">Jan 2011</entry>
+        <entry align="center">Removed from pkgsrc Mar 2025</entry>
       </row>
       <row>
         <entry><ulink url="https://www.minix3.org/">Minix3</ulink></entry>

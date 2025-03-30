@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.2 2021/06/23 18:30:24 schmonz Exp $
+$NetBSD: patch-configure,v 1.3 2025/03/30 21:10:44 wiz Exp $
 
-- recognize MirBSD, Interix
+- recognize Interix
 - remove special-case library version hack for FreeBSD
 - don't set Mac OS X target version: stick to the current one
 - honor pkgsrc LDFLAGS
@@ -9,15 +9,6 @@ $NetBSD: patch-configure,v 1.2 2021/06/23 18:30:24 schmonz Exp $
 
 --- configure.orig	2021-06-22 19:20:43.000000000 +0000
 +++ configure
-@@ -3356,7 +3356,7 @@ case $ac_sys_system/$ac_sys_release in
-   # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
-   # In addition, Stefan Krah confirms that issue #1244610 exists through
-   # OpenBSD 4.6, but is fixed in 4.7.
--  OpenBSD/2.* | OpenBSD/3.* | OpenBSD/4.[0123456])
-+  OpenBSD/2.* | OpenBSD/3.* | OpenBSD/4.[0123456] | MirBSD/*)
-     define_xopen_source=no
-     # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
-     # also defined. This can be overridden by defining _BSD_SOURCE
 @@ -3407,7 +3407,7 @@ $as_echo "#define _BSD_SOURCE 1" >>confd
    # has no effect, don't bother defining them
    Darwin/[6789].*)
@@ -32,7 +23,7 @@ $NetBSD: patch-configure,v 1.2 2021/06/23 18:30:24 schmonz Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*|Interix*|MirBSD*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*|OpenBSD*|Interix*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
@@ -112,22 +103,12 @@ $NetBSD: patch-configure,v 1.2 2021/06/23 18:30:24 schmonz Exp $
  	BSD/OS*/4*)
  		LDSHARED="gcc -shared"
  		LDCXXSHARED="g++ -shared";;
-@@ -8690,6 +8691,9 @@ then
- 				   ;;
- 				esac
- 		fi;;
-+	MirBSD*)
-+		LDSHARED='$(CC) -shared $(CCSHARED)'
-+		LDCXXSHARED='$(CXX) -shared $(CCSHARED)';;
- 	NetBSD*|DragonFly*)
- 		LDSHARED='$(CC) -shared'
- 		LDCXXSHARED='$(CXX) -shared';;
 @@ -8736,7 +8740,8 @@ then
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
 -	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
-+	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*) CCSHARED="-fPIC";;
++	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
@@ -137,7 +118,7 @@ $NetBSD: patch-configure,v 1.2 2021/06/23 18:30:24 schmonz Exp $
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
 -	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
-+	FreeBSD*|NetBSD*|OpenBSD*|MirBSD*|DragonFly*)
++	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"

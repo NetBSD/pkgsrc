@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2023/11/12 13:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/03/30 21:10:43 wiz Exp $
 
 COMMENT=	Enlightened Canvas Library
 PKGREVISION=	4
@@ -21,8 +21,8 @@ PLIST_SRC+=	PLIST
 # /var/shm was added together with shm_open, so use this as test.
 PLIST_SRC+=	PLIST.cserve
 .  endif
-.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD" || ${OPSYS} == "Linux"
-# No shm_open on OpenBSD/MirBSD
+.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "Linux"
+# No shm_open on OpenBSD
 .else
 # Assume shm_open exists as sane default.
 PLIST_SRC+=	PLIST.cserve

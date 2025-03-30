@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.3 2022/06/19 14:43:28 gdt Exp $
+$NetBSD: patch-configure,v 1.4 2025/03/30 21:10:45 wiz Exp $
 
-Add support for MirBSD as OpenBSD and DragonFly as FreeBSD.
+Add support for DragonFly as FreeBSD.
 
 Upstream has support to use the version with or without dots as the
 shlib suffix, conditioned on TCL_LIB_VERSIONS_OK.  This patch forces
@@ -18,15 +18,6 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
 
 --- configure.orig	2010-09-16 20:46:47.000000000 +0000
 +++ configure
-@@ -8007,7 +8007,7 @@ fi
- fi
- 
- 	    ;;
--	OpenBSD-*)
-+	OpenBSD-*|MirBSD-*)
- 	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD='${CC} -shared ${SHLIB_CFLAGS}'
- 	    SHLIB_SUFFIX=".so"
 @@ -8099,11 +8099,11 @@ fi
  		;;
  	    esac
@@ -46,7 +37,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
  	    CYGWIN_*) ;;
  	    IRIX*) ;;
 -	    NetBSD-*|FreeBSD-*|OpenBSD-*) ;;
-+	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*|MirBSD-*) ;;
++	    NetBSD-*|FreeBSD-*|OpenBSD-*|DragonFly-*) ;;
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    windows) ;;
@@ -88,7 +79,7 @@ Substitute the already-computed SHLIB_VERSION, for use in Makefile.in.
      if test "${TEA_PLATFORM}" = "windows" ; then
  	if test "${SHARED_BUILD}" = "1" ; then
  	    # We force the unresolved linking of symbols that are really in
-@@ -17176,6 +17170,7 @@ s,@VC_MANIFEST_EMBED_EXE@,$VC_MANIFEST_E
+@@ -17176,6 +17168,7 @@ s,@VC_MANIFEST_EMBED_EXE@,$VC_MANIFEST_E
  s,@TCLSH_PROG@,$TCLSH_PROG,;t t
  s,@LIBOBJS@,$LIBOBJS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t

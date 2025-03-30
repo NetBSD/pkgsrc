@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/11/16 10:13:49 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/30 21:10:40 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/15-client-/}
 COMMENT=	PostgreSQL database client programs
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	bin
 # NetBSD earlier than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
 .if (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 040000) || \
-    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
 .endif
 PGSQL_THREAD_SAFETY?=	yes

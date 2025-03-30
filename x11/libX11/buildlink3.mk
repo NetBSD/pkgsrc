@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2018/03/07 11:57:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/03/30 21:10:48 wiz Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -20,7 +20,7 @@ BUILDLINK_PKGSRCDIR.libX11?=	../../x11/libX11
 X11_LDFLAGS+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 X11_LDFLAGS+=	-L${BUILDLINK_PREFIX.libX11}/lib
 
-.  if ${OPSYS} == "OSF1" || ${OPSYS} == "MirBSD" || ${OPSYS} == "OpenBSD"
+.  if ${OPSYS} == "OSF1" || ${OPSYS} == "OpenBSD"
 .include "../../mk/pthread.buildlink3.mk"
 .  endif
 

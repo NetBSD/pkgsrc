@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2021/04/21 15:37:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/30 21:10:46 wiz Exp $
 
 DISTNAME=		ppp-${PPPD_VERSION}
 PKGNAME=		${DISTNAME:S/ppp/&d/}
@@ -15,7 +15,7 @@ HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
 ONLY_FOR_PLATFORM+=	SunOS-*-* Linux-*-* NetBSD-*-* OpenBSD-*-* \
-			MirBSD-*-* Bitrig-*-* FreeBSD-*-* DragonFly-*-*
+			FreeBSD-*-* DragonFly-*-*
 
 PKG_SYSCONFSUBDIR=	ppp
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} PKGSYSCONFDIR=${PKG_SYSCONFDIR:Q}
