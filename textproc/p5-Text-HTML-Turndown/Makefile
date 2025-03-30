@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/30 16:00:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/30 16:05:29 schmonz Exp $
 
 DISTNAME=	Text-HTML-Turndown-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -17,9 +17,7 @@ DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moo>=2:../../devel/p5-Moo
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 
-#    TEST_REQUIRES => {
-#        'JSON::Tiny'   => 0,
-#    },
+#TEST_DEPENDS+=	p5-JSON-Tiny-[0-9]*
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
