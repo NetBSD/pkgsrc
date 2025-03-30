@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.65 2025/02/25 08:32:38 wiz Exp $
+$NetBSD: distinfo,v 1.66 2025/03/30 07:53:02 wiz Exp $
 
-BLAKE2s (digiKam-8.5.0.tar.xz) = 356a19d55d5c56017907d0a28f5bd52bb80b7bb589867803aa60391cf290c08b
-SHA512 (digiKam-8.5.0.tar.xz) = 5610f0173043e29a2b5ff62b2ed2c2bea79e10cd20a0c2416ebb425457cee55aa8b8d575ba57e8e188a899cc909516ea05e6c80e73e3316742cc9e8119855509
-Size (digiKam-8.5.0.tar.xz) = 62028432 bytes
-SHA1 (patch-core_libs_threadimageio_video_videothumbdecoder.cpp) = 1bf7c4e32055bb9765b56d43f874b7d070cd5217
+BLAKE2s (digiKam-8.6.0.tar.xz) = 66b1a67dca002e9ebcda778052a39b2484e11ce4b994160a51c5eab77fdc28d2
+SHA512 (digiKam-8.6.0.tar.xz) = fc9899eb9a291c2d88b5104c3b6fa86f8db67b26fdbb1328c714eb30407c9dbf13267433c5070f18451e4fb99d3530dba83bf404b26095ed336b348737d7cae2
+Size (digiKam-8.6.0.tar.xz) = 58958608 bytes
+SHA1 (patch-core_libs_video_QtAVPlayer_qavstream.cpp) = 529af7d24da3667fc50febdc604ac9e1935cf9ec
