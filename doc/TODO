@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25575 2025/03/30 07:53:12 wiz Exp $
+$NetBSD: TODO,v 1.25576 2025/03/30 08:53:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1026,7 +1026,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ortp-0.27.0
 	o owncloudclient-2.10.1
 	o p0f-3.09b
-	o p5-Alien-Libxml2-0.20
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clipboard-0.28
