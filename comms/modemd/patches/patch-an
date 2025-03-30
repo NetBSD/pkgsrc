@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.2 2015/11/07 23:26:34 dholland Exp $
+$NetBSD: patch-an,v 1.3 2025/03/30 15:41:17 wiz Exp $
 
 - add configuration for various OSes
 
@@ -9,7 +9,7 @@ $NetBSD: patch-an,v 1.2 2015/11/07 23:26:34 dholland Exp $
  #endif
  
 -#ifdef __NetBSD__
-+#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__Bitrig__)
++#if defined(__NetBSD__) || defined(__OpenBSD__)
  #include "cf/netbsd.h"
  #endif
  
