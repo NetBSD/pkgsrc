@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2376 2025/03/30 08:53:37 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2377 2025/03/30 08:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3069,4 +3069,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fastfetch to 2.39.1 [vins 2025-03-30]
 	Updated sysutils/nnn to 5.1 [vins 2025-03-30]
 	Updated textproc/p5-Alien-Libxml2 to 0.20 [wiz 2025-03-30]
+	Updated time/p5-DateTime-TimeZone to 2.65 [wiz 2025-03-30]
 	Updated www/redlib to 0.36.0 [vins 2025-03-30]
+	Updated filesystems/p5-Path-Tiny to 0.148 [wiz 2025-03-30]
