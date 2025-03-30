@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/02/22 11:46:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/03/30 07:51:54 wiz Exp $
 bin/atf-sh
 include/atf-c++.hpp
 include/atf-c++/build.hpp
@@ -25,11 +25,8 @@ libexec/atf-check
 man/man1/atf-check.1
 man/man1/atf-sh.1
 man/man1/atf-test-program.1
-man/man3/atf-c++-api.3
 man/man3/atf-c++.3
-man/man3/atf-c-api.3
 man/man3/atf-c.3
-man/man3/atf-sh-api.3
 man/man3/atf-sh.3
 man/man4/atf-test-case.4
 man/man7/atf.7
@@ -41,7 +38,7 @@ share/atf/libatf-sh.subr
 share/doc/atf/AUTHORS
 share/doc/atf/COPYING
 share/doc/atf/NEWS
-share/doc/atf/README
+share/doc/atf/README.md
 tests/atf/Kyuafile
 tests/atf/atf-c++/Kyuafile
 tests/atf/atf-c++/atf_c++_test
@@ -49,7 +46,6 @@ tests/atf/atf-c++/build_test
 tests/atf/atf-c++/check_test
 tests/atf/atf-c++/detail/Kyuafile
 tests/atf/atf-c++/detail/application_test
-tests/atf/atf-c++/detail/auto_array_test
 tests/atf/atf-c++/detail/env_test
 tests/atf/atf-c++/detail/exceptions_test
 tests/atf/atf-c++/detail/fs_test
