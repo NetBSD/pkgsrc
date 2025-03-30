@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/01/18 23:32:42 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/30 02:31:35 dholland Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		${DISTNAME:S/gcc/gcc2/}
@@ -18,6 +18,7 @@ COMMENT=		GNU Compiler Collection, version 2
 
 NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* *-*-x86_64 DragonFly-*-*
 NOT_FOR_PLATFORM+=	NetBSD-[6789]*-*
+NOT_FOR_PLATFORM+=	NetBSD-1[0-9]*-*
 
 USE_TOOLS+=		gmake bison
 MAKEFLAGS+=		GMAKE_LOCALE=no
