@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/05/06 08:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.58 2025/03/30 15:44:16 wiz Exp $
 
 DISTNAME=	xawtv-3.95
 PKGREVISION=	30
@@ -56,7 +56,7 @@ PLIST_VARS+=		bsd v4l linux
 .if ${OPSYS} == "Linux"
 PLIST.v4l=		yes
 PLIST.linux=		yes
-.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig" ||\
+.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || \
       ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 PLIST.bsd=		yes
 #PLIST.v4l=		yes	# XXX: should teach it to probe this
