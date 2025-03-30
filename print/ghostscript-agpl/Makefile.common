@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.35 2024/09/22 15:22:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2025/03/30 06:31:12 adam Exp $
 # used by print/ghostscript-agpl/Makefile
 # used by fonts/ghostscript-cidfonts-ryumin/Makefile
 
-GS_VERSION=	10.04.0
+GS_VERSION=	10.05.0

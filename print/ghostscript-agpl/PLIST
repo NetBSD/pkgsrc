@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/09/22 15:22:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/03/30 06:31:12 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -11,7 +11,6 @@ bin/gslp
 bin/gsnd
 bin/gsx
 bin/lprsetup.sh
-bin/pdf2dsc
 bin/pdf2ps
 bin/pf2afm
 bin/pfbtopfa
@@ -33,7 +32,7 @@ include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.10
-lib/libgs.so.10.04
+lib/libgs.so.10.05
 man/man1/dvipdf.1
 man/man1/eps2eps.1
 man/man1/gs.1
@@ -43,7 +42,6 @@ man/man1/gsdj500.1
 man/man1/gslj.1
 man/man1/gslp.1
 man/man1/gsnd.1
-man/man1/pdf2dsc.1
 man/man1/pdf2ps.1
 man/man1/pf2afm.1
 man/man1/pfbtopfa.1
@@ -460,7 +458,6 @@ share/ghostscript/${PKGVERSION}/lib/lines.ps
 share/ghostscript/${PKGVERSION}/lib/mkcidfm.ps
 share/ghostscript/${PKGVERSION}/lib/necp2x.upp
 share/ghostscript/${PKGVERSION}/lib/necp2x6.upp
-share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_info.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
@@ -525,3 +522,4 @@ share/ghostscript/${PKGVERSION}/lib/viewpcx.ps
 share/ghostscript/${PKGVERSION}/lib/viewps2a.ps
 share/ghostscript/${PKGVERSION}/lib/winmaps.ps
 share/ghostscript/${PKGVERSION}/lib/zeroline.ps
+share/ghostscript/10.05.0/lib/zugferd.ps
