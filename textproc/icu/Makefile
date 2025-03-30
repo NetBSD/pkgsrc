@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2025/01/28 16:02:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.162 2025/03/30 15:00:21 wiz Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -111,7 +111,7 @@ PLIST_SUBST+=		MH_NAME=mh-linux
 .  else
 PLIST_SUBST+=		MH_NAME=mh-linux-va
 .  endif
-.elif ${OPSYS} == "Linux" || ${OPSYS} == "GNUkFreeBSD"
+.elif ${OPSYS} == "Linux"
 PLIST_SUBST+=		MH_NAME=mh-linux
 .elif ${OPSYS} == "Cygwin"
 PLIST_SUBST+=		MH_NAME=mh-cygwin
