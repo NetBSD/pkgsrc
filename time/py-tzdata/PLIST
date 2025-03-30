@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/12/31 08:59:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/03/30 10:40:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -113,6 +113,7 @@ ${PYSITELIB}/tzdata/zoneinfo/America/Ciudad_Juarez
 ${PYSITELIB}/tzdata/zoneinfo/America/Coral_Harbour
 ${PYSITELIB}/tzdata/zoneinfo/America/Cordoba
 ${PYSITELIB}/tzdata/zoneinfo/America/Costa_Rica
+${PYSITELIB}/tzdata/zoneinfo/America/Coyhaique
 ${PYSITELIB}/tzdata/zoneinfo/America/Creston
 ${PYSITELIB}/tzdata/zoneinfo/America/Cuiaba
 ${PYSITELIB}/tzdata/zoneinfo/America/Curacao
