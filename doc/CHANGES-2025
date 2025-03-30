@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2383 2025/03/30 12:20:31 leot Exp $
+$NetBSD: CHANGES-2025,v 1.2384 2025/03/30 14:51:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-tzdata to 2025.2 [adam 2025-03-30]
 	Updated devel/regal to 0.32.0 [leot 2025-03-30]
 	Updated net/yt-dlp to 2025.3.27 [leot 2025-03-30]
+	mk: remove support for GNU/kFreeBSD [wiz 2025-03-30]
