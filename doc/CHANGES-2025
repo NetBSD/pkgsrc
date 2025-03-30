@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2405 2025/03/30 16:58:57 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2406 2025/03/30 17:47:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3106,3 +3106,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/tp-note to 1.25.6 [pin 2025-03-30]
 	Updated graphics/wallust to 3.3.0 [pin 2025-03-30]
 	Updated sysutils/xplr to 1.0.0 [pin 2025-03-30]
+	Updated devel/libusb1 to 1.0.28 [adam 2025-03-30]
+	Updated security/pcsc-lite to 2.3.2 [adam 2025-03-30]
