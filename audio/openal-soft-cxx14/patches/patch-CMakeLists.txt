@@ -1,0 +1,73 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/03/30 09:32:57 nia Exp $
+
+Only build openal-info as far as utilties go.
+
+--- CMakeLists.txt.orig	2025-03-30 09:18:09.678315912 +0000
++++ CMakeLists.txt
+@@ -1574,66 +1574,6 @@ if(ALSOFT_UTILS)
+         set(EXTRA_INSTALLS ${EXTRA_INSTALLS} openal-info)
+     endif()
+ 
+-    if(SNDFILE_FOUND)
+-        add_executable(uhjdecoder utils/uhjdecoder.cpp)
+-        target_compile_definitions(uhjdecoder PRIVATE ${CPP_DEFS})
+-        target_include_directories(uhjdecoder
+-            PRIVATE ${OpenAL_BINARY_DIR} ${OpenAL_SOURCE_DIR}/common)
+-        target_compile_options(uhjdecoder PRIVATE ${C_FLAGS})
+-        target_link_libraries(uhjdecoder PUBLIC common
+-            PRIVATE ${LINKER_FLAGS} SndFile::SndFile ${UNICODE_FLAG})
+-        set_target_properties(uhjdecoder PROPERTIES ${DEFAULT_TARGET_PROPS})
+-
+-        add_executable(uhjencoder utils/uhjencoder.cpp)
+-        target_compile_definitions(uhjencoder PRIVATE ${CPP_DEFS})
+-        target_include_directories(uhjencoder
+-            PRIVATE ${OpenAL_BINARY_DIR} ${OpenAL_SOURCE_DIR}/common)
+-        target_compile_options(uhjencoder PRIVATE ${C_FLAGS})
+-        target_link_libraries(uhjencoder PUBLIC common
+-            PRIVATE ${LINKER_FLAGS} SndFile::SndFile ${UNICODE_FLAG})
+-        set_target_properties(uhjencoder PROPERTIES ${DEFAULT_TARGET_PROPS})
+-    endif()
+-
+-    if(MYSOFA_FOUND)
+-        set(SOFA_SUPPORT_SRCS
+-            utils/sofa-support.cpp
+-            utils/sofa-support.h)
+-        add_library(sofa-support STATIC EXCLUDE_FROM_ALL ${SOFA_SUPPORT_SRCS})
+-        target_compile_definitions(sofa-support PRIVATE ${CPP_DEFS})
+-        target_include_directories(sofa-support PUBLIC ${OpenAL_SOURCE_DIR}/common)
+-        target_compile_options(sofa-support PRIVATE ${C_FLAGS})
+-        target_link_libraries(sofa-support PUBLIC common MySOFA::MySOFA PRIVATE ${LINKER_FLAGS})
+-        set_target_properties(sofa-support PROPERTIES ${DEFAULT_TARGET_PROPS})
+-
+-        set(MAKEMHR_SRCS
+-            utils/makemhr/loaddef.cpp
+-            utils/makemhr/loaddef.h
+-            utils/makemhr/loadsofa.cpp
+-            utils/makemhr/loadsofa.h
+-            utils/makemhr/makemhr.cpp
+-            utils/makemhr/makemhr.h)
+-        if(NOT HAVE_GETOPT)
+-            set(MAKEMHR_SRCS  ${MAKEMHR_SRCS} utils/getopt.c utils/getopt.h)
+-        endif()
+-        add_executable(makemhr ${MAKEMHR_SRCS})
+-        target_compile_definitions(makemhr PRIVATE ${CPP_DEFS})
+-        target_include_directories(makemhr
+-            PRIVATE ${OpenAL_BINARY_DIR} ${OpenAL_SOURCE_DIR}/utils)
+-        target_compile_options(makemhr PRIVATE ${C_FLAGS})
+-        target_link_libraries(makemhr PRIVATE ${LINKER_FLAGS} sofa-support ${UNICODE_FLAG})
+-        set_target_properties(makemhr PROPERTIES ${DEFAULT_TARGET_PROPS})
+-        if(ALSOFT_INSTALL_EXAMPLES)
+-            set(EXTRA_INSTALLS ${EXTRA_INSTALLS} makemhr)
+-        endif()
+-
+-        set(SOFAINFO_SRCS  utils/sofa-info.cpp)
+-        add_executable(sofa-info ${SOFAINFO_SRCS})
+-        target_compile_definitions(sofa-info PRIVATE ${CPP_DEFS})
+-        target_include_directories(sofa-info PRIVATE ${OpenAL_SOURCE_DIR}/utils)
+-        target_compile_options(sofa-info PRIVATE ${C_FLAGS})
+-        target_link_libraries(sofa-info PRIVATE ${LINKER_FLAGS} sofa-support ${UNICODE_FLAG})
+-        set_target_properties(sofa-info PROPERTIES ${DEFAULT_TARGET_PROPS})
+-    endif()
+     message(STATUS "Building utility programs")
+ 
+     if(NOT ALSOFT_NO_CONFIG_UTIL)
