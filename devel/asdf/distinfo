@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2025/03/22 01:00:24 schmonz Exp $
+$NetBSD: distinfo,v 1.17 2025/03/30 16:09:34 schmonz Exp $
 
-BLAKE2s (asdf-0.16.6.tar.gz) = 886cae089f0308109a7c7ca1893a6bd659a3550851dac0506b0ab6daf2f2cef2
-SHA512 (asdf-0.16.6.tar.gz) = 991f6d41a012cddc3a85e6ccff544569b993aa2fa2dbe78e8d60f8f3e318c9c98786479a06a298490fdb682231c24be969ec1c2d2e9bfe821cc6d71593330871
-Size (asdf-0.16.6.tar.gz) = 326205 bytes
+BLAKE2s (asdf-0.16.7.tar.gz) = c1a8dd97560fc534de4af566ff65c620104b1e254096fa2851cdc530a7ecc905
+SHA512 (asdf-0.16.7.tar.gz) = 03bbeebaa1e5becfc0684923d800d78a92ca10095096ccd74934d6eecc1fac5f2c9ec9bbce1b9450135718b167f36fd0203f5803245e86e0ddcb68e1ab2e191b
+Size (asdf-0.16.7.tar.gz) = 326268 bytes
 BLAKE2s (dario.cat_mergo_@v_v1.0.0.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.0.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
 Size (dario.cat_mergo_@v_v1.0.0.mod) = 65 bytes
