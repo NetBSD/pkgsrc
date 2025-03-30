@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2400 2025/03/30 16:53:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2401 2025/03/30 16:54:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3101,3 +3101,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cocogitto to 6.3.0 [pin 2025-03-30]
 	Updated www/monolith to 2.10.1 [pin 2025-03-30]
 	Updated shells/nushell to 0.103.0 [pin 2025-03-30]
+	Updated shells/oh-my-posh to 25.7.1 [pin 2025-03-30]
