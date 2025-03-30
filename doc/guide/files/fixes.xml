@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.202 2025/03/20 14:41:07 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.203 2025/03/30 21:16:22 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1720,7 +1720,6 @@ Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
 Linux       __linux
 Mac OS X    __APPLE__
-MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
 Minix3      __minix
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__

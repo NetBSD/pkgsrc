@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2025/02/22 09:08:01 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2025/03/30 21:10:40 wiz Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -44,7 +44,6 @@ PKG_SYSCONFSUBDIR=	postgresql
 
 PG_TEMPLATE.SunOS=	solaris
 PG_TEMPLATE.IRIX=	irix5
-PG_TEMPLATE.MirBSD=	openbsd
 PG_TEMPLATE.DragonFly=	freebsd
 .if !defined(PG_TEMPLATE.${OPSYS})
 PG_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
@@ -104,8 +103,7 @@ MAKE_JOBS_SAFE=		no
 CFLAGS.NetBSD+=		-D__sparc_v8__
 .endif
 
-# configure fails on OpenBSD and MirBSD if thread safety is enabled.
-CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
+# configure fails on OpenBSD if thread safety is enabled.
 CONFIGURE_ARGS.OpenBSD+=	--disable-thread-safety
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.

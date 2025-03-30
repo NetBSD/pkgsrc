@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/10/06 14:29:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/03/30 21:10:39 wiz Exp $
 bin/db5_archive
 bin/db5_checkpoint
 bin/db5_deadlock
@@ -17,9 +17,9 @@ include/db5/db.h
 include/db5/db_185.h
 include/db5/db_cxx.h
 lib/libdb5-5.3.la
-${PLIST.shlib}lib/libdb5-5.so
+lib/libdb5-5.so
 lib/libdb5.a
-${PLIST.shlib}lib/libdb5.so
+lib/libdb5.so
 lib/libdb5_cxx-5.3.la
 lib/libdb5_cxx-5.so
 lib/libdb5_cxx.a

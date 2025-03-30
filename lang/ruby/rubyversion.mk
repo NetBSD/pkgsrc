@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.292 2025/03/27 14:12:02 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.293 2025/03/30 21:10:44 wiz Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -745,7 +745,7 @@ RUBY_SHLIBVER=		${_RUBY_SHLIB_MAJOR}.${_RUBY_SHLIB_MINOR}
 _RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${RUBY_SLEXT}.${_RUBY_SHLIB_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 RUBY_SHLIBVER=		${_RUBY_SHLIB_MAJOR}${_RUBY_SHLIB_MINOR}
-.elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
+.elif ${OPSYS} == "OpenBSD"
 .  if ${_RUBY_VER_MINOR} == 0
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_SHLIB_MINOR}
 .  else
