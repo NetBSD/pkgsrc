@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1855 2025/03/12 10:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.1856 2025/03/30 15:04:36 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -764,7 +764,6 @@ SUBDIR+=	py-django-taggit
 SUBDIR+=	py-django-tastypie
 SUBDIR+=	py-django-timezone-field
 SUBDIR+=	py-django-treebeard
-SUBDIR+=	py-django3
 SUBDIR+=	py-django4
 SUBDIR+=	py-djangocms-admin-style
 SUBDIR+=	py-djangocms-attributes-field
