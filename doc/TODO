@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25576 2025/03/30 08:53:10 wiz Exp $
+$NetBSD: TODO,v 1.25577 2025/03/30 08:54:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1045,7 +1045,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-MooseX-Types-DateTime-0.16
 	o p5-Net-INET6Glue-0.604
 	o p5-Net-Jabber-2.1.7
-	o p5-Path-Tiny-0.148
 	o p5-Publican-4.3.2
 	o p5-RT-Authen-ExternalAuth-0.27
 	o p5-Rose-DB-0.819
