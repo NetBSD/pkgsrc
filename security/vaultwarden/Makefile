@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/02/24 08:59:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/30 12:56:13 hauke Exp $
 
 DISTNAME=	vaultwarden-1.33.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 
@@ -17,7 +18,7 @@ SITES.yubico-${YUBICO_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=BlackDex/}yubico-rs/ar
 
 .include "cargo-depends.mk"
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	pkg-config perl
 
 DEPENDS+=	daemonize>=1.7.8:../../sysutils/daemonize
 
