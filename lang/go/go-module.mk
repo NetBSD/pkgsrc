@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.23 2025/02/06 00:24:36 riastradh Exp $
+# $NetBSD: go-module.mk,v 1.24 2025/03/30 14:56:44 riastradh Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -72,6 +72,8 @@ GOPATH_BIN=	bin/${GO_PLATFORM}
 GOPATH_BIN=	bin
 
 .endif
+
+ALL_ENV+=	GOMAXPROCS=${MAKE_JOBS:U1}
 
 post-extract: ${GO_CACHE_DIR}
 ${GO_CACHE_DIR}:
