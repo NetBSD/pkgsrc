@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4456 2025/03/18 10:10:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4457 2025/03/30 07:57:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3707,6 +3707,7 @@ SUBDIR+=	valgrind
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
+SUBDIR+=	vatomic
 SUBDIR+=	vera++
 SUBDIR+=	visualvm
 SUBDIR+=	vtcl
