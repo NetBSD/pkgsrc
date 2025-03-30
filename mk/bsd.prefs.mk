@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.456 2025/02/22 21:27:07 nia Exp $
+# $NetBSD: bsd.prefs.mk,v 1.457 2025/03/30 15:07:06 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -232,11 +232,6 @@ NATIVE_OS_VERSION=		3.1
 NATIVE_OS_VERSION=		3.0
 .    endif
 .  endif
-
-.elif ${NATIVE_OPSYS} == "MirBSD"
-NATIVE_LOWER_OPSYS?=		mirbsd
-NATIVE_LOWER_OPSYS_VERSUFFIX=	${NATIVE_OS_VERSION}
-NATIVE_LOWER_VENDOR?=		unknown
 
 .elif !empty(NATIVE_OPSYS:MIRIX*)
 NATIVE_LOWER_OPSYS?=		irix
@@ -522,9 +517,6 @@ OBJECT_FMT?=	ELF
 OBJECT_FMT=	ELF
 .elif ${OPSYS} == "Minix"
 OBJECT_FMT=	ELF
-.elif ${OPSYS} == "MirBSD"
-OBJECT_FMT=	ELF
-MKPROFILE=	no
 .elif ${OPSYS} == "Linux"
 OBJECT_FMT=	ELF
 .elif ${OPSYS} == "AIX"

@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.33 2024/10/04 19:27:15 rillig Exp $
+# $NetBSD: gnu-configure.mk,v 1.34 2025/03/30 15:07:06 wiz Exp $
 #
 # Package-settable variables:
 #
@@ -61,10 +61,6 @@ CONFIGURE_ENV+=	ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}
     defined(_OPSYS_MAX_CMDLEN_CMD) && \
     ${USE_CROSS_COMPILE:tl} != "yes"
 CONFIGURE_ENV+=	lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
-.endif
-
-.if ${OPSYS} == "MirBSD"
-CONFIGURE_ENV+=	lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|\.so|_pic\.a)$$'
 .endif
 
 .if ${MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc}
@@ -191,23 +187,6 @@ configure-scripts-override:
 ### in for example libtool.
 ###
 do-configure-pre-hook: configure-scripts-osdep
-
-.if ${OPSYS} == "MirBSD"
-# awk script by Benny Siegert <bsiegert@mirbsd.de>
-_SCRIPT.configure-scripts-osdep=					\
-	${AWK} 'BEGIN { found = 0 }					\
-		/dynamic linker characteristics.../ { found = 1 }	\
-		/^netbsd/ {						\
-			if (found) {					\
-				sub("netbsd","mirbsd*|netbsd");		\
-				found = 0;				\
-			}						\
-		}							\
-		{ print $$0 }' $$file >$$file.override;			\
-	${CHMOD} +x $$file.override;					\
-	${TOUCH} -r $$file $$file.override;				\
-	${MV} -f $$file.override $$file
-.endif
 
 .PHONY: configure-scripts-osdep
 configure-scripts-osdep:

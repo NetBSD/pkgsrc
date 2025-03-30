@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.331 2025/03/30 14:50:39 wiz Exp $
+# $NetBSD: bootstrap,v 1.332 2025/03/30 15:07:06 wiz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -766,28 +766,6 @@ Minix)
 	root_group=wheel
 	machine_arch=`uname -p`
 	check_compiler=yes
-	;;
-MirBSD)
-	root_group=wheel
-	need_pax=yes
-	machine_arch=`arch -s`
-	# there is no /usr/bin/cc, so use mgcc if unset
-	test -n "$CC" || { CC=mgcc; export CC; }
-	# get some variables from the native make if unset
-	for var in CFLAGS CPPFLAGS LDFLAGS; do
-		# check if variable is already set
-		eval _tmp=\"\$$var\"
-		[ "x$_tmp" != x ] && continue
-		# ask the native make (EXPERIMENTAL = don't add -Werror)
-		# the -I${.CURDIR} dance is to prevent junk in CPPFLAGS
-		_tmp=`printf '%s\nall:\n\t@%s %%s %s=${%s:M*:Q:Q}\n%s\n%s\n' \
-		    $var'+=-I${.CURDIR}' printf $var $var':S/-I${.CURDIR}//' \
-		    EXPERIMENTAL=yes '.include <bsd.prog.mk>' | \
-		    (unset MAKECONF; /usr/bin/make -f - all 2>/dev/null) | \
-		    sed 's/^x//'`
-		eval $_tmp
-		eval export $var
-	done
 	;;
 NetBSD)
 	root_group=wheel

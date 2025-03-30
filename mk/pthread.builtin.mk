@@ -1,4 +1,4 @@
-# $NetBSD: pthread.builtin.mk,v 1.17 2024/01/13 20:26:47 riastradh Exp $
+# $NetBSD: pthread.builtin.mk,v 1.18 2025/03/30 15:07:06 wiz Exp $
 
 BUILTIN_PKG:=	pthread
 
@@ -62,7 +62,7 @@ BUILDLINK_LDFLAGS.pthread=	# empty
 # XXX This should really be a check for GCC!
 # XXX
 BUILDLINK_OPSYS_SUPPORT_PTHREAD=	\
-	DragonFly FreeBSD Linux MirBSD NetBSD OpenBSD SunOS
+	DragonFly FreeBSD Linux NetBSD OpenBSD SunOS
 .    if !empty(BUILDLINK_OPSYS_SUPPORT_PTHREAD:M${OPSYS})
 BUILDLINK_CFLAGS.pthread+=	-pthread
 BUILDLINK_LDFLAGS.pthread+=	-pthread

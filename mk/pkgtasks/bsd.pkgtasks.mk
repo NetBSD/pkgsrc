@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.9 2018/11/30 18:38:20 rillig Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.10 2025/03/30 15:07:06 wiz Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -201,5 +201,5 @@ FILES_SUBST+=	UNAME=${UNAME:Q}
 # Variables for addgroup/adduser programs used by pkgtasks.
 FILES_SUBST+=	GROUPADD=${GROUPADD:Q}
 FILES_SUBST+=	PW=${PW:Q}		# DragonFly, FreeBSD
-FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}	# MirBSD
+FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 FILES_SUBST+=	USERADD=${USERADD:Q}
