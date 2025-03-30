@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/03/03 11:29:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/03/30 09:58:40 nia Exp $
 
 DISTNAME=	lzip-1.24.1
 CATEGORIES=	archivers
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
 TEST_TARGET=		check
+
+CPPFLAGS.SCO_SV+=	-Dstrtoull=strtoul -DS_ISSOCK=S_ISBLK
 
 MAKE_FLAGS+=		CXX=${CXX:Q}
 MAKE_FLAGS+=		CPPFLAGS=${CPPFLAGS:Q}
