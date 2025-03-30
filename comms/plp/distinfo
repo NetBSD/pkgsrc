@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:06:04 nia Exp $
+$NetBSD: distinfo,v 1.21 2025/03/30 15:41:37 wiz Exp $
 
 BLAKE2s (plp_1_8.tar.gz) = c0d9c61c1d242326b5778ddde3f331feb5f305769279de35126b1f8e6ad1866f
 SHA512 (plp_1_8.tar.gz) = bbeb2440698d48fd9e5e3363e3b76094c4fa466a8870770f78e0d494a8019bce79c882d8ccf1b25e28443d0790fd9ca125f0069a778741a6bcff9da20a529348
 Size (plp_1_8.tar.gz) = 58424 bytes
 SHA1 (patch-aa) = de823cbd6f27bfc4245af8d9de100a3a48ac258c
-SHA1 (patch-ab) = 36796ec55c775883d4ea367a66d42b78004d5411
+SHA1 (patch-ab) = b2ecda0c31cd463ddfdeabbcf086cdc55e9b5994
 SHA1 (patch-ac) = 9f196ba3c236629c6ed1b59842fb6de2716917a6
 SHA1 (patch-ad) = 4a6421d7256498df6293011bafc76e75cc5512e6
 SHA1 (patch-ae) = 29b0cde6353c257a01a1630981f229c6673bbe73

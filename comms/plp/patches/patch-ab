@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2015/11/07 23:43:56 dholland Exp $
+$NetBSD: patch-ab,v 1.7 2025/03/30 15:41:37 wiz Exp $
 
 - Use standard headers.
 - Use termios, not termio.
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.6 2015/11/07 23:43:56 dholland Exp $
  #include <string.h>	/* for bzero() */
  #include <termios.h>
 -#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__)
-+#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__Bitrig__)
++#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__) || defined(__OpenBSD__)
  # include <sys/ioctl.h>	/* for ioctl() */
  #endif
 -#include <sys/errno.h>
