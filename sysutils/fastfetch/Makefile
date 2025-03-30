@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/03/09 20:25:23 vins Exp $
+# $NetBSD: Makefile,v 1.23 2025/03/30 08:14:50 vins Exp $
 
-DISTNAME=	fastfetch-2.38.0
+DISTNAME=	fastfetch-2.39.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/fastfetch-cli/fastfetch/
 COMMENT=	Fast and feature-rich tool displaying system information
-LICENSE=	mit AND gnu-gpl-v3 # patch-src_logo_ascii_netbsd2.txt
+LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
