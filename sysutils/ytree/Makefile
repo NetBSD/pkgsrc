@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/09/19 09:17:12 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/30 10:02:22 nia Exp $
 
 DISTNAME=	ytree-2.09
 CATEGORIES=	sysutils
@@ -21,6 +21,8 @@ LDFLAGS+=	${BUILDLINK_LDADD.curses} -lcompat -lreadline
 .else
 LDFLAGS+=	${BUILDLINK_LDADD.curses} -lreadline
 .endif
+
+CFLAGS.SCO_SV+=	-DSVR4
 
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
