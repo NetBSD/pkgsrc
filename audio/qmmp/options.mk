@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:25 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/03/31 16:50:45 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmmp
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
@@ -35,7 +35,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_JACK=OFF
 PLIST_VARS+=	ffmpeg
 .if !empty(PKG_OPTIONS:Mffmpeg)
 PLIST.ffmpeg=	yes
-.  include "../../multimedia/ffmpeg4/buildlink3.mk"
+.  include "../../multimedia/ffmpeg7/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 .endif
