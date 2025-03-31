@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.332 2025/03/30 15:07:06 wiz Exp $
+# $NetBSD: bootstrap,v 1.333 2025/03/31 14:16:38 wiz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -82,7 +82,7 @@ usage="Usage: $0 "'
     [ --workdir <workdir> ]
 '
 
-# strip / for BSD/OS, strip - for HP-UX
+# strip / for OSF/1, strip - for HP-UX
 opsys=`uname -s | tr -d /-`
 
 mkbinarykit_tar()
