@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2419 2025/03/31 13:30:34 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.2420 2025/03/31 13:31:48 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-protobuf to 5.29.4 [adam 2025-03-31]
 	Updated finance/gnucash to 5.11 [wiz 2025-03-31]
 	Updated lang/python311 to 3.11.11nb2 [jakllsch 2025-03-31]
+	Updated lang/python312 to 3.12.9nb1 [jakllsch 2025-03-31]
