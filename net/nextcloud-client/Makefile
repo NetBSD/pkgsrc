@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/02/12 06:45:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/31 06:20:58 plunky Exp $
 #
 
-DISTNAME=	nextcloud-client-3.13.2
-PKGREVISION=	4
+DISTNAME=	nextcloud-client-3.16.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop
@@ -14,7 +13,7 @@ COMMENT=	Nextcloud Desktop Client
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	cmake pkg-config
+USE_TOOLS+=	pkg-config
 
 USE_CXX_FEATURES+=	c++17 filesystem
 
@@ -28,6 +27,9 @@ CMAKE_CONFIGURE_ARGS+=	-DSYSCONF_INSTALL_DIR:PATH=${PKG_SYSCONFDIR}
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
 
+# QtWebEngine is not in pkgsrc
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_WEBENGINE:BOOL=OFF
+
 # used as tool during configure
 CMAKE_CONFIGURE_ARGS+=	-DSVG_CONVERTER:FILEPATH=${BUILDLINK_DIR}/bin/rsvg-convert
 
@@ -36,29 +38,24 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PdfLatex:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Sphinx:BOOL=TRUE
 
-# ignore warns about xdr functions in a library
-LDFLAGS+=	-Wl,--no-fatal-warnings
-
 AUTO_MKDIRS=	yes
 
-.include "../../archivers/karchive/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+
+.include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
+#.include "../../devel/kf6-kio/buildlink3.mk"			# optional
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
-.include "../../devel/kio/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/tool.mk"
+.include "../../net/qt6-qtwebsockets/buildlink3.mk"
+.include "../../security/libp11/buildlink3.mk"
+.include "../../security/qt6-qtkeychain/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/qt5-qtkeychain/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
-.include "../../x11/qt5-qtlocation/buildlink3.mk"
-.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
-.include "../../x11/qt5-qtwebsockets/buildlink3.mk"
+#.include "../../x11/kf6-kguiaddons/buildlink3.mk"		# optional
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
