@@ -1,19 +1,47 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 17:31:55 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/31 13:59:11 wiz Exp $
 #
 
-DISTNAME=	scamper-cvs-20141211d
+DISTNAME=	scamper-cvs-20250227
 PKGNAME=	${DISTNAME:S/-cvs//}
 CATEGORIES=	net
-MASTER_SITES=	http://www.caida.org/tools/measurement/scamper/code/
+MASTER_SITES=	http://www.caida.org/catalog/software/scamper/code/
 
 MAINTAINER=	mjl@luckie.org.nz
-HOMEPAGE=	https://www.caida.org/tools/measurement/scamper/
+HOMEPAGE=	https://www.caida.org/catalog/software/scamper/
 COMMENT=	Tool for parallelised IPv4 and IPv6 measurement
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-
 USE_FEATURES+=	inet6
 
+BUILD_DEFS+=	VARBASE
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-privsep-dir=${VARBASE}/chroot/scamper
+CONFIGURE_ARGS+=	--with-privsep-user=_scamper
+CONFIGURE_ARGS+=	--with-bz2
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--with-lzma
+CONFIGURE_ARGS+=	--with-pcre2
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--enable-sc_hoiho
+CONFIGURE_ARGS+=	--enable-sc_minrtt
+CONFIGURE_ARGS+=	--enable-sc_uptime
+USE_LIBTOOL=		yes
+
+PKG_GROUPS=		_scamper
+PKG_USERS=		_scamper:_scamper
+PKG_HOME._scamper=	${VARBASE}/chroot/scamper
+
+OWN_DIRS=		${VARBASE}/chroot/scamper
+AUTO_MKDIRS=		yes
+
+SPECIAL_PERMS=		bin/scamper ${SETUID_ROOT_PERMS}
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
