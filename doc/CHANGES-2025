@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2433 2025/03/31 17:31:04 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.2434 2025/03/31 17:54:08 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3177,3 +3177,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/blosc2 to 2.17.1 [adam 2025-03-31]
 	Updated audio/qmmp to 1.7.4 [nia 2025-03-31]
 	Updated x11/kitty to 0.41.0 [ktnb 2025-03-31]
+	Updated editors/qemacs to 6.4.1 [ktnb 2025-03-31]
