@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2429 2025/03/31 16:46:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2430 2025/03/31 16:49:53 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3172,3 +3172,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/qt6 to 6.8.3 [adam 2025-03-31]
 	Updated security/pcsc-tools to 1.7.3 [adam 2025-03-31]
 	Updated security/ccid to 1.6.2 [adam 2025-03-31]
+	Updated net/qrcp to 0.11.6 [ktnb 2025-03-31]
