@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2428 2025/03/31 16:40:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2429 2025/03/31 16:46:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3170,3 +3170,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6-qttranslations to 6.8.3 [adam 2025-03-31]
 	Updated devel/qt6-qtwayland to 6.8.3 [adam 2025-03-31]
 	Updated meta-pkgs/qt6 to 6.8.3 [adam 2025-03-31]
+	Updated security/pcsc-tools to 1.7.3 [adam 2025-03-31]
+	Updated security/ccid to 1.6.2 [adam 2025-03-31]
