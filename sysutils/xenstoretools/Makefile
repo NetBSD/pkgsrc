@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/08/24 10:27:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.29 2025/03/31 11:33:15 sborrill Exp $
 #
 
 # VERSION is set in xentool415/version.mk
@@ -46,6 +46,7 @@ BUILD_DEFS+=		VARBASE
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[15-9]*-x86_64 NetBSD-[15-9]*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-1*-x86_64
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
