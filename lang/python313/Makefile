@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/02/04 22:21:19 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/31 13:32:07 jakllsch Exp $
 
+PKGREVISION=	1
 .include "dist.mk"
 
 PKGNAME=	python313-${PY_DISTVERSION}
@@ -213,6 +214,7 @@ ALLOW_NETWORK_ACCESS=	yes
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
