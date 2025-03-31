@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/31 15:56:46 nia Exp $
 
 DISTNAME=	soxr-0.1.3-Source
 PKGNAME=	lib${DISTNAME:S/-Source//}
@@ -11,12 +11,18 @@ HOMEPAGE=	https://sourceforge.net/p/soxr/wiki/Home/
 COMMENT=	SoX Resample library
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=NO
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64*}
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CR32S=NO
+.endif
+
 PKGCONFIG_OVERRIDE+=	src/soxr.pc.in
 PKGCONFIG_OVERRIDE+=	src/soxr-lsr.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
