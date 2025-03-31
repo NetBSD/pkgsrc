@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2025/03/27 19:30:28 wiz Exp $
+# $NetBSD: Makefile,v 1.753 2025/03/31 09:33:32 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -220,6 +220,7 @@ SUBDIR+=	openjdk21
 SUBDIR+=	openjdk8
 SUBDIR+=	opensource-cobol
 SUBDIR+=	oracle-jdk17
+SUBDIR+=	oracle-jdk21
 SUBDIR+=	ossp-js
 SUBDIR+=	owl-lisp
 SUBDIR+=	p2c
