@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.50 2025/03/30 21:16:22 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.51 2025/03/31 14:13:22 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -168,6 +168,7 @@ minutes!</para>
       <row>
         <entry>BSD/OS</entry>
         <entry align="center">Dec 2003</entry>
+        <entry align="center">Removed from pkgsrc Mar 2025</entry>
       </row>
       <row>
         <entry><ulink url="https://www-1.ibm.com/servers/aix/">AIX</ulink></entry>

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.457 2025/03/30 15:07:06 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.458 2025/03/31 14:13:21 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -179,9 +179,6 @@ NATIVE_OS_VERSION=		${_NATIVE_OS_VERSION:C/([0-9]*\.[0-9]*).*/\1/}
 NATIVE_LOWER_OPSYS_VERSUFFIX=	${_NATIVE_OS_VERSION}
 NATIVE_LOWER_OPSYS?=		aix
 NATIVE_LOWER_VENDOR?=		ibm
-
-.elif ${NATIVE_OPSYS} == "BSDOS"
-NATIVE_LOWER_OPSYS?=	bsdi
 
 .elif ${NATIVE_OPSYS} == "Cygwin"
 NATIVE_LOWER_OPSYS?=	cygwin
