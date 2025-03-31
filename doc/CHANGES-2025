@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2408 2025/03/31 06:06:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2409 2025/03/31 06:19:31 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/nono to 1.4.0 [jun 2025-03-31]
 	Updated graphics/libansilove to 1.4.2 [adam 2025-03-31]
 	Updated graphics/ansilove to 4.2.1 [adam 2025-03-31]
+	Added security/qt6-qtkeychain version 0.15.0 [plunky 2025-03-31]
