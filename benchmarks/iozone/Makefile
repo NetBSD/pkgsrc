@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2022/06/28 11:30:59 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/03/31 14:13:21 wiz Exp $
 
 DISTNAME=	iozone3_493
 PKGNAME=	${DISTNAME:S/3_/-3./}
@@ -36,8 +36,6 @@ BUILD_TARGET=		Solaris
 BUILD_TARGET=		macosx
 .elif (${OPSYS} == "IRIX")
 BUILD_TARGET=		${OPSYS}${ABI:M64}
-.elif (${OPSYS} == "BSDOS")
-BUILD_TARGET=		bsdi
 .elif (${OPSYS} == "AIX")
 BUILD_TARGET=		${OPSYS}
 .else
