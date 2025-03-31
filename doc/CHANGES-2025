@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2411 2025/03/31 07:28:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2412 2025/03/31 08:43:41 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3115,3 +3115,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nextcloud-client to 3.16.2 [plunky 2025-03-31]
 	Updated sysutils/ansible-core to 2.18.4 [adam 2025-03-31]
 	Updated sysutils/ansible to 11.4.0 [adam 2025-03-31]
+	Updated editors/xnedit to 1.6.3 [micha 2025-03-31]
