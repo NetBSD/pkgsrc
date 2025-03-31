@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xenguest.sh,v 1.5 2015/04/20 08:05:30 sborrill Exp $
+# $NetBSD: xenguest.sh,v 1.6 2025/03/31 12:26:19 sborrill Exp $
 #
 # PROVIDE: xenguest
 # REQUIRE: DAEMON
@@ -10,7 +10,7 @@
 $_rc_subr_loaded . /etc/rc.subr
 
 name="xenguest"
-rcvar=$name
+rcvar="${name}@RCVARSUFFIX@"
 command="@PREFIX@/sbin/xe-daemon"
 start_cmd="xenguest_start"
 start_precmd="xenguest_precmd"
@@ -23,7 +23,7 @@ xenguest_precmd()
 {
 	XE_LINUX_DISTRIBUTION_CACHE=@VARBASE@/cache/xe-linux-distribution
 	
-	if [ ! -f ${xenbus_path} ]; then
+	if [ -d "/kern" -a ! -f ${xenbus_path} ]; then
 		echo "${name}: Cannot find ${xenbus_path}!"
 		exit 1
 	fi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/06/01 08:03:05 sborrill Exp $
+# $NetBSD: Makefile,v 1.18 2025/03/31 12:26:19 sborrill Exp $
 #
 
 # Values from XenServer 7.0 = 7, 0, 0, 125243
@@ -15,17 +15,18 @@ VERSION=	${XENMAJOR}.${XENMINOR}.${XENTEENY}
 DISTNAME=	xe-guest-utilities_5.6.0-595
 CATEGORIES=	sysutils
 PKGNAME=	xe-guest-utilities-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	http://updates.vmd.citrix.com/XenServer/5.6.0/debian/pool/main/x/xe-guest-utilities/
 
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://www.xenserver.com/
-COMMENT=	NetBSD VM tools for Citrix XenServer
+COMMENT=	VM tools for Citrix XenServer
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	xenstoretools-[0-9]*:../../sysutils/xenstoretools
 
 ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64 NetBSD-*-i386
+ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/-[0-9]+$$//:C/_/-/}
 
@@ -33,6 +34,15 @@ SRCFILES=	xe-daemon xe-update-guest-attrs
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+RCVARSUFFIX=	""
+.if ${OPSYS} == "FreeBSD"
+RCVARSUFFIX=	"_enable"
+.endif
+
+FILES_SUBST+=	RCVARSUFFIX=${RCVARSUFFIX}
 
 RCD_SCRIPTS=		xenguest
 SUBST_CLASSES+=		paths
