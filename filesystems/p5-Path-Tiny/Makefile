@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/03/30 08:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/03/31 14:18:56 pgoyette Exp $
+
+EXTRACT_USING=  gtar	# XXX avoid extended attributes in distfile
+			# https://rt.cpan.org/Ticket/Display.html?id=156823
 
 DISTNAME=	Path-Tiny-0.148
 PKGNAME=	p5-${DISTNAME}
