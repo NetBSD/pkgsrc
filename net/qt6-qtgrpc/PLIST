@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/01 18:13:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/03/31 16:38:06 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -61,6 +61,7 @@ qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobuffieldpresenceche
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobufscalarjsonserializers_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobufscalarserializers_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufdeserializerbase_p.h
+qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufjsonserializer_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufmessage_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufpropertyorderingbuilder_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufregistration_p.h
@@ -125,6 +126,7 @@ qt6/include/QtProtobufQuick/QtProtobufQuickDepends
 qt6/include/QtProtobufQuick/QtProtobufQuickVersion
 qt6/include/QtProtobufQuick/qtprotobufquickexports.h
 qt6/include/QtProtobufQuick/qtprotobufquickversion.h
+qt6/include/QtProtobufWellKnownTypes/${PKGVERSION}/QtProtobufWellKnownTypes/private/qprotobufwellknowntypesjsonserializers_p.h
 qt6/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypes
 qt6/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypesDepends
 qt6/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypesVersion
