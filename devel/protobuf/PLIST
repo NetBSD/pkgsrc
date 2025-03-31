@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/03/31 11:57:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/03/31 13:29:39 adam Exp $
 bin/protoc
 bin/protoc-${PKGVERSION}.0
 include/google/protobuf/any.h
@@ -284,9 +284,7 @@ lib/libprotobuf.so.${PKGVERSION}.0
 lib/libprotoc.so
 lib/libprotoc.so.${PKGVERSION}.0
 lib/libutf8_range.so
-lib/libutf8_range.so.${PKGVERSION}.0
 lib/libutf8_validity.so
-lib/libutf8_validity.so.${PKGVERSION}.0
 lib/pkgconfig/protobuf-lite.pc
 lib/pkgconfig/protobuf.pc
 lib/pkgconfig/utf8_range.pc
