@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.271 2025/01/25 13:39:36 pin Exp $
+# $NetBSD: Makefile,v 1.272 2025/03/31 11:36:44 adam Exp $
 
-DISTNAME=	pango-1.56.1
+DISTNAME=	pango-1.56.3
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +10,8 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/pango
 COMMENT=	Library for layout and rendering of text
 LICENSE=	gnu-lgpl-v2
 
+USE_CC_FEATURES=	c11
 USE_LANGUAGES=		c c++
-USE_CC_FEATURES+=	c11
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
