@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.12 2025/03/31 13:48:05 jakllsch Exp $
+# $NetBSD: rust.mk,v 1.13 2025/03/31 16:10:19 ryoon Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -54,7 +54,6 @@ BUILDLINK_DEPMETHOD.rust?=		build
 BUILDLINK_API_DEPENDS.rust+=		rust>=${RUST_REQ}
 .  include "${RUST_DIR}/buildlink3.mk"
    pkgbase:= rust
-.  include "../../mk/pkg-build-options.mk"
 .  if empty(PKG_BUILD_OPTIONS.rust:Mrust-internal-llvm)
 .    include "../../lang/libunwind/buildlink3.mk"
 .  endif
