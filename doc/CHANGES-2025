@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2412 2025/03/31 08:43:41 micha Exp $
+$NetBSD: CHANGES-2025,v 1.2413 2025/03/31 09:35:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3116,3 +3116,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-core to 2.18.4 [adam 2025-03-31]
 	Updated sysutils/ansible to 11.4.0 [adam 2025-03-31]
 	Updated editors/xnedit to 1.6.3 [micha 2025-03-31]
+	Added lang/oracle-jdk21 version 21.0.6 [adam 2025-03-31]
+	Updated lang/nodejs to 23.10.0 [adam 2025-03-31]
