@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/08/11 07:22:11 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/03/31 16:44:42 adam Exp $
 
-BLAKE2s (pcsc-tools-1.7.2.tar.bz2) = b8234e34e31d198163fb3da351e3062738efe844bda6fe369348f3cf1b06986b
-SHA512 (pcsc-tools-1.7.2.tar.bz2) = 24fcdbc51de370194f31ef7a74bdc03bc37f8531db44af316c52e4ed1fa76b7ec995bbdaf08063bfe6e8b2f129f2f2fd0fe6c738d867ac10b746d4550ab2cf90
-Size (pcsc-tools-1.7.2.tar.bz2) = 387207 bytes
+BLAKE2s (pcsc-tools-1.7.3.tar.bz2) = 28ce631b8b91512bc1e0842dc712ad1dd978f70b711bbc2004caab63220daaef
+SHA512 (pcsc-tools-1.7.3.tar.bz2) = 2659d5d3d1de147fc5373aaf1bea27692d57ace1f9cd19b2181c0ef43d94c77ecff78f4c784238b9ee05f154550535eb966814f1bd9143ad7ae6842f8b92d5c0
+Size (pcsc-tools-1.7.3.tar.bz2) = 401255 bytes
