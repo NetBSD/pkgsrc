@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2426 2025/03/31 14:16:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2427 2025/03/31 14:40:56 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/gnucash-docs to 5.11 [wiz 2025-03-31]
 	Updated net/scamper to 20250227 [wiz 2025-03-31]
 	mk: remove support for BSD/OS [wiz 2025-03-31]
+	Updated audio/kew to 3.1.2 [ktnb 2025-03-31]
