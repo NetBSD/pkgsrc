@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/02/09 14:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/03/31 11:57:30 adam Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -8,8 +8,7 @@
 # likely that any upstream release, even if apparently minor, will
 # require a recursive revbump.
 
-DISTNAME=	protobuf-29.3
-PKGREVISION=	1
+DISTNAME=	protobuf-29.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf
@@ -22,7 +21,6 @@ LICENSE=	modified-bsd
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
-
 # Fails with C++14 default language
 FORCE_CXX_STD=		c++14
 
