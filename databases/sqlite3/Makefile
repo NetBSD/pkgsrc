@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.164 2025/03/30 06:18:06 adam Exp $
+# $NetBSD: Makefile,v 1.165 2025/03/31 16:02:03 riastradh Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-${SQLITE3_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -491,6 +492,17 @@ CFLAGS+=	-DSQLITE_ENABLE_UNLOCK_NOTIFY
 #	support in the command-line shell.
 #
 # https://www.sqlite.org/compile.html#have_zlib
+#
+# XXX sqlite3 appears to automatically pull zlib in if it's available
+# in the system, even if buildlink3 hasn't authorized it.  And on some
+# platforms with pkgsrc zlib and system zlib, this may confuse the
+# REQUIRES processing, making pkg_add choke on the sqlite3 package.
+# Let's forcibly disable it for now (can't find a --disable-zlib
+# option, so we'll have to use a big buildlink3 hammer) until we
+# discuss whether sqlite3 should have zlib linked in, as a conscious
+# decision rather than an accident.
+BUILDLINK_TRANSFORM+=	rm:-lz
+BUILDLINK_TRANSFORM+=	rm:-DSQLITE_HAVE_ZLIB=1
 
 # XXX Consider YYTRACKMAXSTACKDEPTH:
 #
