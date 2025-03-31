@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2024/12/28 14:52:57 ktnb Exp $
+$NetBSD: distinfo,v 1.5 2025/03/31 16:49:36 ktnb Exp $
 
-BLAKE2s (qrcp/0.11.4.tar.gz) = e8b4a00b3bbacda801f6b98f8d9636d9aa8f70305801aa85be07f3edb1beb342
-SHA512 (qrcp/0.11.4.tar.gz) = d9e0be9ccbc68c203870d7de7b989cd939753307a1a844b0115dec860a63cc65afa6c99c48861cebb943ec8140025b22c37edf3eb0eb7360913e1db146b92ffd
-Size (qrcp/0.11.4.tar.gz) = 13296410 bytes
+BLAKE2s (qrcp/0.11.6.tar.gz) = 773ed6e4d68e82658b77c75d14482875d029e84962706d4156a093f2d3304279
+SHA512 (qrcp/0.11.6.tar.gz) = 3e69cac8a69b4df0e271ad154858889cfcf6b09673386622a66bbadee4f85d4909410596883b87820b90c97e02719a1dbab7074b6364ed53fe3907722611e7ca
+Size (qrcp/0.11.6.tar.gz) = 13297138 bytes
 BLAKE2s (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = d6562994850ff49646864144f83c4ce6db7f136692b1d986787ee15b68e4d496
 SHA512 (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = 392cf3f009a48dab138d1e2b3d1d2563e616a43ae7c2e0bb00f0029073b758706ebb882e96a3400dc4b6a25fef07370c960fdd197d366bc9757d29f20c89cbe3
 Size (qrcp/github.com_adrg_xdg_@v_v0.5.3.mod) = 258 bytes
@@ -27,9 +27,9 @@ Size (qrcp/github.com_chzyer_readline_@v_v0.0.0-20180603132655-2972be24d48e.zip)
 BLAKE2s (qrcp/github.com_chzyer_test_@v_v0.0.0-20180213035817-a1ea475d72b1.mod) = 9fa0da82779dc375ce43b977bf568bf235feaec6a174d8bb5f37e80f065da85f
 SHA512 (qrcp/github.com_chzyer_test_@v_v0.0.0-20180213035817-a1ea475d72b1.mod) = 528f23910ca94ddf6f811331dc7ed615b2949b2cb04c630e4e2b0ba4a6dadac1396268c4c3251a77af25db3e94dc8b0a0a66d365a8d3feaa78f31192a40e2556
 Size (qrcp/github.com_chzyer_test_@v_v0.0.0-20180213035817-a1ea475d72b1.mod) = 30 bytes
-BLAKE2s (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 5d28aa7bd4d3be65c094ff1eff00044ed7a895928d188f7a279b5bd9a596d393
-SHA512 (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = d39412bb14c058291d07276337f802547bfb1a682cc65199cb04334f8089b6ea5d4d73587c2765c518f9e27fa3421c276eaea616d7cfbe36a2a244326edf1cb5
-Size (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.4.mod) = 100 bytes
+BLAKE2s (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.6.mod) = 656c75bef03c9a4b9314f464f28c04d1ac746f9143178c8a06c438cdd42ad71b
+SHA512 (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.6.mod) = f9b30c02a38265c3a782c0b6ed7836fc983d37dc0d52debf106f8b36f17723ede65922afb4b8fe02434db4d03ab84385d500d002938f6e6c4655e99c68a2a5bc
+Size (qrcp/github.com_cpuguy83_go-md2man_v2_@v_v2.0.6.mod) = 100 bytes
 BLAKE2s (qrcp/github.com_davecgh_go-spew_@v_v1.1.0.mod) = eee11d0ec5d2260dc11d9bfe8f9d523e54530b71cc8357f43c0214b3b74bef5c
 SHA512 (qrcp/github.com_davecgh_go-spew_@v_v1.1.0.mod) = 5e079462f7e0dff0efda71f580aa185700cfa936b718a19d0e2a8c63212e47a07022dca0c282832d48e5165aae8e82aeeeb2ac3664268f1148fc772010fb860e
 Size (qrcp/github.com_davecgh_go-spew_@v_v1.1.0.mod) = 34 bytes
@@ -144,18 +144,18 @@ Size (qrcp/github.com_spf13_cast_@v_v1.6.0.mod) = 275 bytes
 BLAKE2s (qrcp/github.com_spf13_cast_@v_v1.6.0.zip) = a942903f9f41a139753f33e2a81118f93af67c48fdf6fe8276ed6e9c8e4c35d3
 SHA512 (qrcp/github.com_spf13_cast_@v_v1.6.0.zip) = b871eb9f5d72500da082381055be92362dc95f40d31a432250c3f1a09d43af8256a0aa060de4e63bb87cef1abccf86180db594ba7586de2ec3322000c0c448ab
 Size (qrcp/github.com_spf13_cast_@v_v1.6.0.zip) = 18029 bytes
-BLAKE2s (qrcp/github.com_spf13_cobra_@v_v1.8.1.mod) = 96bd527547931b753f6ce6512893ddcfc62b88e00e6b8036b8bfdc50f9525050
-SHA512 (qrcp/github.com_spf13_cobra_@v_v1.8.1.mod) = b1883380508c782682d0f773e936aa92cc27236e304ad4c923fbecc123b3398fe76d92bfb54e24aaa1112d6bf664263dbed48a257685a26f069edbe0ff68977f
-Size (qrcp/github.com_spf13_cobra_@v_v1.8.1.mod) = 194 bytes
-BLAKE2s (qrcp/github.com_spf13_cobra_@v_v1.8.1.zip) = bf6d4a4f476322c6e2afbc3fed6b5a83582a0900480a05f947bf39dda440d387
-SHA512 (qrcp/github.com_spf13_cobra_@v_v1.8.1.zip) = 2321dc70e0d9478be997692bd31fb071c63dfac9d641f1eaf66d44b0bb11eb51fe6f0a8b596e2eaa31af876ff6470e10631975440ba44026b46ca3f771f32249
-Size (qrcp/github.com_spf13_cobra_@v_v1.8.1.zip) = 231907 bytes
-BLAKE2s (qrcp/github.com_spf13_pflag_@v_v1.0.5.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
-SHA512 (qrcp/github.com_spf13_pflag_@v_v1.0.5.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
-Size (qrcp/github.com_spf13_pflag_@v_v1.0.5.mod) = 39 bytes
-BLAKE2s (qrcp/github.com_spf13_pflag_@v_v1.0.5.zip) = 4b3cdadae11a8d2432c380818c116751885b01f307e8c59fb626cc10f07dfc44
-SHA512 (qrcp/github.com_spf13_pflag_@v_v1.0.5.zip) = 9a81f0635ca8ac059c48a15cbf625a7c91513f95a9b402ba166d48ab72d5d38cbd941d5309446f5637bd7c23eef35b60fef2f06e8b557f415dd8409a6ddf43e9
-Size (qrcp/github.com_spf13_pflag_@v_v1.0.5.zip) = 88931 bytes
+BLAKE2s (qrcp/github.com_spf13_cobra_@v_v1.9.1.mod) = 1a9b6527e15f7b6b627275330c6d9919ab6a927f5618c6293c5a9f19f30ca499
+SHA512 (qrcp/github.com_spf13_cobra_@v_v1.9.1.mod) = 7592442e86d55c3f66e517297f48664ca4bbd28db882c4e9529cb8a2717f44dbdb3020d116029360dc1cf85055171a225bbeaf201c3d9913796dc9fd76b38780
+Size (qrcp/github.com_spf13_cobra_@v_v1.9.1.mod) = 194 bytes
+BLAKE2s (qrcp/github.com_spf13_cobra_@v_v1.9.1.zip) = 32be2d672df8d752739f4d17645a1c212358859f66414254c5e4f4ba5daa9921
+SHA512 (qrcp/github.com_spf13_cobra_@v_v1.9.1.zip) = 8ce4867d6fcc2a667929ffc6b2932ebf6ecc1e9056bcee1708f9158e1e563dd3ecc077913fded8194654b4f9870193f40f844bdd93996d6995b8b40f5973e1dd
+Size (qrcp/github.com_spf13_cobra_@v_v1.9.1.zip) = 237545 bytes
+BLAKE2s (qrcp/github.com_spf13_pflag_@v_v1.0.6.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
+SHA512 (qrcp/github.com_spf13_pflag_@v_v1.0.6.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
+Size (qrcp/github.com_spf13_pflag_@v_v1.0.6.mod) = 39 bytes
+BLAKE2s (qrcp/github.com_spf13_pflag_@v_v1.0.6.zip) = 9b9fed448b5670ac79b33c17f56a47e17ce490be129405434616f37cd22a66c6
+SHA512 (qrcp/github.com_spf13_pflag_@v_v1.0.6.zip) = 5b953fac0f17a29a299829784b549aa9c0a556dbd12c60e3ae98c206341f8ba2c5e981ab64d68cb89113798d795f01b85e89e2ae9d2409d9266e5f24fe652ae7
+Size (qrcp/github.com_spf13_pflag_@v_v1.0.6.zip) = 94062 bytes
 BLAKE2s (qrcp/github.com_spf13_viper_@v_v1.19.0.mod) = fa1287f263d8989811754b68f2fa1147d3c32daecf97ceb00e2fa5c0a18f9682
 SHA512 (qrcp/github.com_spf13_viper_@v_v1.19.0.mod) = 2d41bd626afcf7aacf6435934aa20eb637591cb68b68a02e439cb881f000e991b57811652af2abe3b3339669ca2837973d0989a273a1b0750c9094e0c81773c7
 Size (qrcp/github.com_spf13_viper_@v_v1.19.0.mod) = 4210 bytes
