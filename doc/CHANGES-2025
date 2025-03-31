@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2435 2025/03/31 20:05:20 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2436 2025/03/31 21:23:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3179,3 +3179,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kitty to 0.41.0 [ktnb 2025-03-31]
 	Updated editors/qemacs to 6.4.1 [ktnb 2025-03-31]
 	Updated shells/oh-my-posh to 25.10.1 [pin 2025-03-31]
+	Updated misc/omm to 0.5.1 [ktnb 2025-03-31]
