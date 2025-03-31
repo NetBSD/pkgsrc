@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/02/01 18:13:32 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/03/31 16:38:08 adam Exp $
 
-BLAKE2s (qtpositioning-everywhere-src-6.8.2.tar.xz) = 88ebe3979fa4e7941a6a198a9207276fd79a08b102a17087e6afb7d8d7631ef8
-SHA512 (qtpositioning-everywhere-src-6.8.2.tar.xz) = 9f1a6486f9d466e780b8cde469ccc8c51fd62d60201730841ad526a15e5eb6f28b58e24254c2c1384a4a0d5f5ee08a6e9e3348082d4d764fae7014aa21c50429
-Size (qtpositioning-everywhere-src-6.8.2.tar.xz) = 661464 bytes
+BLAKE2s (qtpositioning-everywhere-src-6.8.3.tar.xz) = c0075042b5015a721e0e8f6a30dd14a714974982f6a4f46469059c089696a8ae
+SHA512 (qtpositioning-everywhere-src-6.8.3.tar.xz) = 8899b4bf8096211fca37f7a7855ae2c6f79d770602105d76a98b580ad8e2f2f55096095bd7f935f6f9ac36e23135e7594cf3c2e5b760c979560a108d43d57784
+Size (qtpositioning-everywhere-src-6.8.3.tar.xz) = 663612 bytes
 SHA1 (patch-src_plugins_position_CMakeLists.txt) = 12c07c437811f31d675c5e0898984e0928bea990
