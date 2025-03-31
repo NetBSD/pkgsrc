@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/02 20:49:27 plunky Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/31 06:20:58 plunky Exp $
 bin/nextcloud
 bin/nextcloudcmd
 include/nextcloudsync/creds/abstractcredentials.h
@@ -13,13 +13,10 @@ include/nextcloudsync/mirall/syncresult.h
 lib/libnextcloud_csync.so
 lib/libnextcloud_csync.so.0
 lib/libnextcloud_csync.so.${PKGVERSION}
-lib/libnextclouddolphinpluginhelper.so
 lib/libnextcloudsync.so
 lib/libnextcloudsync.so.0
 lib/libnextcloudsync.so.${PKGVERSION}
 lib/nextcloudsync_vfs_suffix.so
-qt5/plugins/kf5/kfileitemaction/nextclouddolphinactionplugin.so
-qt5/plugins/kf5/overlayicon/nextclouddolphinoverlayplugin.so
 share/applications/com.nextcloud.desktopclient.nextcloud.desktop
 share/caja-python/extensions/syncstate-Nextcloud.py
 share/examples/Nextcloud/sync-exclude.lst
@@ -120,6 +117,7 @@ share/nextcloud/i18n/client_eu.qm
 share/nextcloud/i18n/client_fa.qm
 share/nextcloud/i18n/client_fi.qm
 share/nextcloud/i18n/client_fr.qm
+share/nextcloud/i18n/client_ga.qm
 share/nextcloud/i18n/client_gl.qm
 share/nextcloud/i18n/client_he.qm
 share/nextcloud/i18n/client_hr.qm
@@ -147,7 +145,10 @@ share/nextcloud/i18n/client_sr.qm
 share/nextcloud/i18n/client_sv.qm
 share/nextcloud/i18n/client_th.qm
 share/nextcloud/i18n/client_tr.qm
+share/nextcloud/i18n/client_ug.qm
 share/nextcloud/i18n/client_uk.qm
 share/nextcloud/i18n/client_zh_CN.qm
 share/nextcloud/i18n/client_zh_HK.qm
 share/nextcloud/i18n/client_zh_TW.qm
+@pkgdir qt5/plugins/kf5/overlayicon
+@pkgdir qt5/plugins/kf5/kfileitemaction
