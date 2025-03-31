@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.5 2025/02/25 16:59:18 tsutsui Exp $
+# $NetBSD: options.mk,v 1.6 2025/03/31 16:38:07 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.qt6-qtmultimedia
-PKG_SUPPORTED_OPTIONS=		gstreamer pulseaudio
+PKG_OPTIONS_VAR=	PKG_OPTIONS.qt6-qtmultimedia
+PKG_SUPPORTED_OPTIONS=	gstreamer pulseaudio
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-PLIST_VARS+=			ffmpeg gstreamer pulseaudio
+PLIST_VARS+=		ffmpeg gstreamer pulseaudio x11
 
 .if ${OPSYS} != "Darwin"
-PKG_SUGGESTED_OPTIONS+=		gstreamer pulseaudio
+PKG_SUGGESTED_OPTIONS+=	gstreamer pulseaudio
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -36,4 +36,7 @@ CONFIGURE_ARGS+=	-no-pulseaudio
 .if !empty(PKG_OPTIONS:Mpulseaudio) || ${OPSYS} == "Darwin"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 PLIST.ffmpeg=		yes
+.  if ${OPSYS} != "Darwin"
+PLIST.x11=			yes
+.  endif
 .endif

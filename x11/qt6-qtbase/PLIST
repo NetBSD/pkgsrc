@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/02/01 18:13:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/03/31 16:38:06 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -126,8 +126,6 @@ qt6/doc/global/template/images/feedbackground.png
 qt6/doc/global/template/images/header_bg.png
 qt6/doc/global/template/images/home.png
 qt6/doc/global/template/images/horBar.png
-qt6/doc/global/template/images/ico_note.png
-qt6/doc/global/template/images/ico_note_attention.png
 qt6/doc/global/template/images/ico_out.png
 qt6/doc/global/template/images/logo.png
 qt6/doc/global/template/images/page.png
@@ -743,6 +741,7 @@ qt6/include/QtCore/QtPreprocessorSupport
 qt6/include/QtCore/QtProcessorDetection
 qt6/include/QtCore/QtResource
 qt6/include/QtCore/QtStartUpFunction
+qt6/include/QtCore/QtStdLibDetection
 qt6/include/QtCore/QtSwap
 qt6/include/QtCore/QtSystemDetection
 qt6/include/QtCore/QtTranslation
@@ -757,6 +756,7 @@ qt6/include/QtCore/q20iterator.h
 qt6/include/QtCore/q20map.h
 qt6/include/QtCore/q20memory.h
 qt6/include/QtCore/q20type_traits.h
+qt6/include/QtCore/q20utility.h
 qt6/include/QtCore/q20vector.h
 qt6/include/QtCore/q23functional.h
 qt6/include/QtCore/q23utility.h
@@ -941,6 +941,7 @@ qt6/include/QtCore/qspan.h
 qt6/include/QtCore/qstack.h
 qt6/include/QtCore/qstandardpaths.h
 qt6/include/QtCore/qstaticlatin1stringmatcher.h
+qt6/include/QtCore/qstdlibdetection.h
 qt6/include/QtCore/qstorageinfo.h
 qt6/include/QtCore/qstring.h
 qt6/include/QtCore/qstringalgorithms.h
@@ -2821,6 +2822,7 @@ qt6/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTargetHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTestHelpers.cmake
@@ -3230,6 +3232,14 @@ qt6/lib/cmake/Qt6Test/Qt6TestTargets-release.cmake
 qt6/lib/cmake/Qt6Test/Qt6TestTargets.cmake
 qt6/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Test/Qt6TestVersionlessTargets.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/3rdparty/cmake/QtRunCMakeTestHelpers.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/3rdparty/cmake/RunCMake.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateConfig.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateTargets.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake
 qt6/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake
@@ -3573,7 +3583,6 @@ qt6/mkspecs/features/ctest_testcase_installed.prf
 qt6/mkspecs/features/data/configure.json
 qt6/mkspecs/features/data/dummy.cpp
 qt6/mkspecs/features/data/dumpvcvars.bat
-qt6/mkspecs/features/data/mac/objc_namespace.sh
 qt6/mkspecs/features/data/macros.cpp
 qt6/mkspecs/features/data/testserver/Dockerfile
 qt6/mkspecs/features/data/testserver/docker-compose-common.yml
@@ -3805,6 +3814,7 @@ qt6/mkspecs/modules/qt_lib_printsupport.pri
 qt6/mkspecs/modules/qt_lib_printsupport_private.pri
 qt6/mkspecs/modules/qt_lib_sql.pri
 qt6/mkspecs/modules/qt_lib_sql_private.pri
+qt6/mkspecs/modules/qt_lib_testinternals_private.pri
 qt6/mkspecs/modules/qt_lib_testlib.pri
 qt6/mkspecs/modules/qt_lib_testlib_private.pri
 qt6/mkspecs/modules/qt_lib_widgets.pri
@@ -3900,6 +3910,7 @@ qt6/modules/OpenGLWidgets.json
 qt6/modules/PrintSupport.json
 qt6/modules/Sql.json
 qt6/modules/Test.json
+qt6/modules/TestInternalsPrivate.json
 qt6/modules/Widgets.json
 ${PLIST.x11}qt6/modules/XcbQpaPrivate.json
 qt6/modules/Xml.json
