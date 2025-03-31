@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/02/04 22:11:15 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/03/31 13:31:40 jakllsch Exp $
 
+PKGREVISION=	1
 .include "dist.mk"
 
 PKGNAME=	python312-${PY_DISTVERSION}
@@ -241,6 +242,7 @@ setuptools-preinstall:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .if ${USE_BUILTIN.gettext:U:tl} == no
 CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .endif
