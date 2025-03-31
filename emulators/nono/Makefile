@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/03/03 12:25:03 jun Exp $
+# $NetBSD: Makefile,v 1.51 2025/03/31 05:13:47 jun Exp $
 
-DISTNAME=	nono-1.3.0
-PKGREVISION=	1
-
+DISTNAME=	nono-1.4.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pastel-flower.jp/~isaki/nono/archive/
 
@@ -15,12 +13,10 @@ LICENSE=	nono-license AND fsharp-license	# nono uses X68030 IPLROM image
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q} -DRELEASE
 MAKE_FLAGS+=	CXXFLAGS=${CXXFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS="${LDFLAGS} -pthread"
-
 MAKE_FLAGS+=	BINOWN=${BINOWN}
 MAKE_FLAGS+=	BINGRP=${BINGRP}
 
-RESTRICTED=	License disallows binary redistribution
-
+RESTRICTED=		License disallows binary redistribution
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
