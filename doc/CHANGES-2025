@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2422 2025/03/31 13:48:55 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.2423 2025/03/31 13:52:31 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3131,3 +3131,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/python312 to 3.12.9nb1 [jakllsch 2025-03-31]
 	Updated lang/python313 to 3.13.2nb1 [jakllsch 2025-03-31]
 	Updated devel/cargo-c to 0.9.32nb2 [jakllsch 2025-03-31]
+	Updated news/newsraft to 0.29 [ktnb 2025-03-31]
