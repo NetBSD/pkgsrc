@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2024/12/28 14:52:57 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.4 2025/03/31 16:49:36 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.mod
 GO_MODULE_FILES+=	github.com/adrg/xdg/@v/v0.5.3.zip
@@ -8,7 +8,7 @@ GO_MODULE_FILES+=	github.com/chzyer/logex/@v/v1.1.10.mod
 GO_MODULE_FILES+=	github.com/chzyer/readline/@v/v0.0.0-20180603132655-2972be24d48e.mod
 GO_MODULE_FILES+=	github.com/chzyer/readline/@v/v0.0.0-20180603132655-2972be24d48e.zip
 GO_MODULE_FILES+=	github.com/chzyer/test/@v/v0.0.0-20180213035817-a1ea475d72b1.mod
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.6.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/eiannone/keyboard/@v/v0.0.0-20200508000154-caf4b762e807.mod
@@ -47,10 +47,10 @@ GO_MODULE_FILES+=	github.com/spf13/afero/@v/v1.11.0.mod
 GO_MODULE_FILES+=	github.com/spf13/afero/@v/v1.11.0.zip
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.mod
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.zip
-GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.mod
-GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.zip
 GO_MODULE_FILES+=	github.com/spf13/viper/@v/v1.19.0.mod
 GO_MODULE_FILES+=	github.com/spf13/viper/@v/v1.19.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
