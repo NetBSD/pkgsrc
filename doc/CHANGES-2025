@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2431 2025/03/31 16:50:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2432 2025/03/31 16:51:01 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/qrcp to 0.11.6 [ktnb 2025-03-31]
 	Updated benchmarks/google-benchmark to 1.9.2 [adam 2025-03-31]
 	Updated devel/blosc2 to 2.17.1 [adam 2025-03-31]
+	Updated audio/qmmp to 1.7.4 [nia 2025-03-31]
