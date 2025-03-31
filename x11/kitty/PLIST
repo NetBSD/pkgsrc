@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/03/08 14:11:34 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/03/31 17:30:46 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -271,6 +271,7 @@ lib/kitty/kitty/graphics_vertex.glsl
 lib/kitty/kitty/guess_mime_type.py
 lib/kitty/kitty/guess_mime_type.pyc
 lib/kitty/kitty/guess_mime_type.pyo
+lib/kitty/kitty/hsluv.glsl
 lib/kitty/kitty/key_encoding.py
 lib/kitty/kitty/key_encoding.pyc
 lib/kitty/kitty/key_encoding.pyo
