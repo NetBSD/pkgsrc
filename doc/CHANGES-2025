@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2417 2025/03/31 11:58:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2418 2025/03/31 12:37:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/pango to 1.56.3 [adam 2025-03-31]
 	Updated devel/protobuf to 29.4 [adam 2025-03-31]
 	Updated devel/py-protobuf to 5.29.4 [adam 2025-03-31]
+	Updated finance/gnucash to 5.11 [wiz 2025-03-31]
