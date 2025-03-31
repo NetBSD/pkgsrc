@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.43 2025/03/30 15:07:06 wiz Exp $
+$NetBSD: README,v 1.44 2025/03/31 14:13:21 wiz Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -143,7 +143,6 @@ Platforms believed to have no users
 -----------------------------------
 
   * AIX (no cwrappers)
-  BSDOS (no README)
   Haiku
   Interix
   IRIX
