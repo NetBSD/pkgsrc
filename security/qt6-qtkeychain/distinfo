@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/31 06:17:52 plunky Exp $
+
+BLAKE2s (qtkeychain-0.15.0.tar.gz) = 9da4d90e0f63af4f8930a05344e7b04d24d14341487addd5fd45c8aa2ca2e766
+SHA512 (qtkeychain-0.15.0.tar.gz) = b1068ae513d5eab8f300186497ddcce4075e11a2a569deddbc949177efaa27970ed7bdce0b1aff61a021144540e942f60c9259b975601a92c60b8a742754624a
+Size (qtkeychain-0.15.0.tar.gz) = 55584 bytes

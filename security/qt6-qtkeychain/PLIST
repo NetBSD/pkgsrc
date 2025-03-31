@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/31 06:17:52 plunky Exp $
+include/qt6keychain/keychain.h
+include/qt6keychain/qkeychain_export.h
+lib/cmake/Qt6Keychain/Qt6KeychainConfig.cmake
+lib/cmake/Qt6Keychain/Qt6KeychainConfigVersion.cmake
+lib/cmake/Qt6Keychain/Qt6KeychainLibraryDepends-noconfig.cmake
+lib/cmake/Qt6Keychain/Qt6KeychainLibraryDepends.cmake
+lib/libqt6keychain.so
+lib/libqt6keychain.so.${PKGVERSION}
+lib/libqt6keychain.so.1
+mkspecs/modules/qt_Qt6Keychain.pri
+share/qt6keychain/translations/qtkeychain_de.qm
+share/qt6keychain/translations/qtkeychain_fr.qm
+share/qt6keychain/translations/qtkeychain_ro.qm
+share/qt6keychain/translations/qtkeychain_ru.qm
+share/qt6keychain/translations/qtkeychain_zh.qm
