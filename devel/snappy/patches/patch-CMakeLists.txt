@@ -1,11 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2024/04/05 13:40:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2025/03/31 09:42:35 adam Exp $
 
 Avoid -Werror.
-Check a different intrinsic to fix build on armv7.
 
---- CMakeLists.txt.orig	2024-04-04 19:04:38.000000000 +0000
+--- CMakeLists.txt.orig	2025-03-26 15:19:22.000000000 +0000
 +++ CMakeLists.txt
-@@ -66,12 +66,6 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSV
+@@ -66,12 +66,6 @@ else(MSVC)
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
    endif(NOT CMAKE_CXX_FLAGS MATCHES "-Wextra")
  
@@ -18,15 +17,3 @@ Check a different intrinsic to fix build on armv7.
  
    # Disable sign comparison warnings. Matches upcoming Bazel setup.
    if(NOT CMAKE_CXX_FLAGS MATCHES "-Wno-sign-compare")
-@@ -207,9 +201,9 @@ int main() {
- check_cxx_source_compiles("
- #include <arm_neon.h>
- int main() {
--  uint8_t val = 3, dup[8];
-+  uint8_t val = 3;
-   uint8x16_t v = vld1q_dup_u8(&val);
--  vst1q_u8(dup, v);
-+  val = vmaxvq_u8(v);
-   return 0;
- }" SNAPPY_HAVE_NEON)
- 
