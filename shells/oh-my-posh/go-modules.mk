@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.92 2025/03/21 10:49:58 pin Exp $
+# $NetBSD: go-modules.mk,v 1.93 2025/03/31 20:04:52 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -58,8 +58,8 @@ GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.5.mod
 GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.5.zip
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.16.0.mod
-GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.16.0.zip
+GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.17.1.mod
+GO_MODULE_FILES+=	github.com/goccy/go-yaml/@v/v1.17.1.zip
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.mod
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.mod
