@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2025/03/21 16:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/04/01 09:37:54 adam Exp $
 
-DISTNAME=	rtorrent-0.15.1
-PKGREVISION=	1
+DISTNAME=	rtorrent-0.15.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/rakshasa/rtorrent
 COMMENT=	Ncurses based torrent client with support for sessions
 LICENSE=	gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
