@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/03/04 08:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/01 08:28:54 adam Exp $
 
-DISTNAME=	libjwt-3.2.0
+DISTNAME=	libjwt-3.2.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benmcollins/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benmcollins/libjwt
 COMMENT=	JWT C library
 LICENSE=	mpl-2.0
-
-#EXTRACT_USING=	gtar # Cannot restore extended attributes
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:test pkg-config
