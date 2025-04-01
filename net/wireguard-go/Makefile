@@ -1,4 +1,4 @@
-<# $NetBSD: Makefile,v 1.12 2025/04/01 17:34:08 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/01 21:28:00 abs Exp $
 
 DISTNAME=	wireguard-go-0.0.20230223
 PKGREVISION=	10
