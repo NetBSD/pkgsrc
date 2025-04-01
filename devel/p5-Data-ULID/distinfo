@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/01 17:03:03 abs Exp $
+
+BLAKE2s (Data-ULID-1.3.tar.gz) = 8a86a913ed7de4ef46b6ccf3bebcf9dcd4d20a0111d5b86c94cf7752fc6917b4
+SHA512 (Data-ULID-1.3.tar.gz) = 5da85a04cbb135fc4b20f438583298f853b2474814dabec948e6bad7c36ea2d983712d9cd406b41e657b3f25dc69a0d7904c0596c36073db3fac26468e8c3e28
+Size (Data-ULID-1.3.tar.gz) = 13614 bytes
