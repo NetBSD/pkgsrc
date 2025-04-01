@@ -1,0 +1,15 @@
+This is an implementation in Perl of the ULID identifier type
+introduced by Alizain Feerasta. The original implementation (in
+Javascript) can be found at https://github.com/alizain/ulid.
+
+ULIDs have several advantages over UUIDs in many contexts. The
+advantages include:
+
+- Lexicographically sortable
+- The canonical representation is shorter than UUID (26 vs 36
+  characters)
+- Case insensitve and safely chunkable.
+- URL-safe
+- Timestamp can always be easily extracted if so desired.
+- Limited compatibility with UUIDs, since both are 128-bit formats.
+  Some conversion back and forth is possible.

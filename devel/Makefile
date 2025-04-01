@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4457 2025/03/30 07:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4458 2025/04/01 17:03:03 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -1571,6 +1571,7 @@ SUBDIR+=	p5-Data-Stag
 SUBDIR+=	p5-Data-Structure-Util
 SUBDIR+=	p5-Data-Taxi
 SUBDIR+=	p5-Data-TemporaryBag
+SUBDIR+=	p5-Data-ULID
 SUBDIR+=	p5-Data-UUID
 SUBDIR+=	p5-Data-UUID-Base64URLSafe
 SUBDIR+=	p5-Data-Uniqid
