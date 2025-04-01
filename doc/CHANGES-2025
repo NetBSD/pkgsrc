@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2449 2025/04/01 17:51:17 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.2450 2025/04/01 20:30:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go124 to 1.24.2 [bsiegert 2025-04-01]
 	Removed lang/go119 [bsiegert 2025-04-01]
 	Removed lang/go121 [bsiegert 2025-04-01]
+	Updated sysutils/node_exporter to 1.9.1 [bsiegert 2025-04-01]
