@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2024/09/18 08:46:53 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/01 10:45:12 adam Exp $
 
-DISTNAME=	platformdirs-4.3.6
+DISTNAME=	platformdirs-4.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
@@ -11,10 +11,10 @@ COMMENT=	Python module for determining appropriate platform-specific dirs
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.25:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.4:../../devel/py-appdirs
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
