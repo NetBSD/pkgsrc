@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/09/23 08:10:07 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/01 09:53:33 adam Exp $
 
-DISTNAME=	cattrs-24.1.2
+DISTNAME=	cattrs-24.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/python-attrs/cattrs
 COMMENT=	Composable complex class support for attrs and dataclasses
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-attrs>=23.1.0:../../devel/py-attrs
 # optional dependency
 # https://github.com/py-bson/bson/issues/122
