@@ -1,4 +1,4 @@
-$NetBSD: patch-arch_arm_lib_interrupts__64.c,v 1.1 2022/02/11 21:46:14 mrg Exp $
+$NetBSD: patch-arch_arm_lib_interrupts__64.c,v 1.2 2025/04/01 00:06:34 gutteridge Exp $
 
 u-boot-rockpro64: fix broken PCI config space handling:
 
@@ -19,7 +19,7 @@ devices other than 0:0:0 and 1:0:0.
  	panic("Resetting CPU ...\n");
  }
  
-+#ifdef CONFIG_ROCKCHIP_RK3399
++#if defined(CONFIG_ROCKCHIP_RK3399) && defined(CONFIG_PCI)
 +extern volatile int rockchip_pcie_expect_data_abort;
 +extern volatile int rockchip_pcie_got_data_abort;
 +#endif
@@ -28,7 +28,7 @@ devices other than 0:0:0 and 1:0:0.
   */
  void do_sync(struct pt_regs *pt_regs, unsigned int esr)
  {
-+#ifdef CONFIG_ROCKCHIP_RK3399
++#if defined(CONFIG_ROCKCHIP_RK3399) && defined(CONFIG_PCI)
 +	if ((esr >> 26) == 0x25 && rockchip_pcie_expect_data_abort) {
 +		/*
 +		 * Data Abort taken without a change in Exception level.
