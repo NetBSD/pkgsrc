@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2436 2025/03/31 21:23:40 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.2437 2025/04/01 05:25:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3180,3 +3180,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/qemacs to 6.4.1 [ktnb 2025-03-31]
 	Updated shells/oh-my-posh to 25.10.1 [pin 2025-03-31]
 	Updated misc/omm to 0.5.1 [ktnb 2025-03-31]
+	Updated graphics/cairo to 1.18.4 [adam 2025-04-01]
+	Updated devel/wabt to 1.0.37 [adam 2025-04-01]
+	Updated net/yt-dlp to 2025.3.31 [adam 2025-04-01]
