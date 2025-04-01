@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2442 2025/04/01 09:38:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2443 2025/04/01 09:53:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3193,3 +3193,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-examples to 0.0.17 [adam 2025-04-01]
 	Updated net/libtorrent to 0.15.2 [adam 2025-04-01]
 	Updated net/rtorrent to 0.15.2 [adam 2025-04-01]
+	Updated textproc/py-orjson to 3.10.16 [adam 2025-04-01]
+	Updated devel/py-cattrs to 24.1.3 [adam 2025-04-01]
