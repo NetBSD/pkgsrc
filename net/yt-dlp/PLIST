@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2025/03/25 04:50:25 mrg Exp $
+@comment $NetBSD: PLIST,v 1.41 2025/04/01 05:24:37 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -954,6 +954,9 @@ ${PYSITELIB}/yt_dlp/extractor/foxsports.pyo
 ${PYSITELIB}/yt_dlp/extractor/fptplay.py
 ${PYSITELIB}/yt_dlp/extractor/fptplay.pyc
 ${PYSITELIB}/yt_dlp/extractor/fptplay.pyo
+${PYSITELIB}/yt_dlp/extractor/francaisfacile.py
+${PYSITELIB}/yt_dlp/extractor/francaisfacile.pyc
+${PYSITELIB}/yt_dlp/extractor/francaisfacile.pyo
 ${PYSITELIB}/yt_dlp/extractor/franceinter.py
 ${PYSITELIB}/yt_dlp/extractor/franceinter.pyc
 ${PYSITELIB}/yt_dlp/extractor/franceinter.pyo
