@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2439 2025/04/01 07:44:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2440 2025/04/01 08:29:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3187,3 +3187,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/qemu-guest-agent to 9.2.3 [adam 2025-04-01]
 	Updated comms/srtp to 2.7.0 [adam 2025-04-01]
 	Updated archivers/unshield to 1.6.0 [adam 2025-04-01]
+	Updated sysutils/restic to 0.18.0 [adam 2025-04-01]
+	Updated security/libjwt to 3.2.1 [adam 2025-04-01]
