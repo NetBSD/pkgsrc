@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2025/01/02 19:54:36 adam Exp $
+# $NetBSD: Makefile,v 1.67 2025/04/01 09:37:04 adam Exp $
 
-DISTNAME=	libtorrent-0.15.1
+DISTNAME=	libtorrent-0.15.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/rakshasa/libtorrent
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
