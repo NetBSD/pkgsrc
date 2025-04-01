@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2446 2025/04/01 11:39:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2447 2025/04/01 12:12:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3201,3 +3201,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-platformdirs to 4.3.7 [adam 2025-04-01]
 	Updated devel/SDL2 to 2.32.4 [adam 2025-04-01]
 	Updated audio/fluidsynth to 2.4.4 [adam 2025-04-01]
+	Updated security/cargo-audit to 0.21.2 [adam 2025-04-01]
+	Updated devel/protobuf-language-server to 0.1.1 [adam 2025-04-01]
