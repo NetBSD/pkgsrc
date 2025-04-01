@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/03/03 08:43:53 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/01 09:02:49 adam Exp $
 
-DISTNAME=	scikit_build_core-0.11.0
+DISTNAME=	scikit_build_core-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -12,16 +12,17 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.10.1:../../devel/py-pathspec
 TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.8:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs>=22.2.0:../../devel/py-cattrs
-TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=22:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=24.1:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.11:../../devel/py-pybind11
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess>=1.5:../../devel/py-test-subprocess
-TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.0.28:../../devel/py-virtualenv
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.20:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 
 # only needed for tests
