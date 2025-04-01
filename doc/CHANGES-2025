@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2441 2025/04/01 09:04:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2442 2025/04/01 09:38:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3191,3 +3191,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libjwt to 3.2.1 [adam 2025-04-01]
 	Updated devel/py-scikit-build-core to 0.11.1 [adam 2025-04-01]
 	Updated devel/py-test-examples to 0.0.17 [adam 2025-04-01]
+	Updated net/libtorrent to 0.15.2 [adam 2025-04-01]
+	Updated net/rtorrent to 0.15.2 [adam 2025-04-01]
