@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/20 03:12:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/01 08:26:48 adam Exp $
 bin/restic
 man/man1/restic-backup.1
 man/man1/restic-cache.1
@@ -7,18 +7,25 @@ man/man1/restic-check.1
 man/man1/restic-copy.1
 man/man1/restic-diff.1
 man/man1/restic-dump.1
+man/man1/restic-features.1
 man/man1/restic-find.1
 man/man1/restic-forget.1
 man/man1/restic-generate.1
 man/man1/restic-init.1
+man/man1/restic-key-add.1
+man/man1/restic-key-list.1
+man/man1/restic-key-passwd.1
+man/man1/restic-key-remove.1
 man/man1/restic-key.1
 man/man1/restic-list.1
 man/man1/restic-ls.1
 man/man1/restic-migrate.1
 man/man1/restic-mount.1
+man/man1/restic-options.1
 man/man1/restic-prune.1
 man/man1/restic-recover.1
 man/man1/restic-repair-index.1
+man/man1/restic-repair-packs.1
 man/man1/restic-repair-snapshots.1
 man/man1/restic-repair.1
 man/man1/restic-restore.1
