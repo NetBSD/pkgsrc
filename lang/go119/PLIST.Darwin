@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.2 2022/08/22 09:44:48 tnn Exp $
-go119/pkg/${GO_PLATFORM}/crypto/x509/internal/macos.a
