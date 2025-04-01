@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/02/08 04:11:32 taca Exp $
+# $NetBSD: options.mk,v 1.5 2025/04/01 22:08:48 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hiawatha
 PKG_SUPPORTED_OPTIONS=		cache letsencrypt monitor rproxy tomahawk
@@ -58,7 +58,7 @@ CONF_FILES+=	${EGDIR}/letsencrypt.conf ${PKG_SYSCONFDIR}/letsencrypt.conf
 # Should the enclosed mbedtls be replaced by an update?
 HIAWATHA_REPLACE_MBEDTLS=	yes
 .if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
-MTVER=		3.6.2
+MTVER=		3.6.3
 DISTFILES+=	mbedtls-${MTVER}.tar.bz2
 SITES.mbedtls-${MTVER}.tar.bz2= \
 		${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${MTVER}/}
