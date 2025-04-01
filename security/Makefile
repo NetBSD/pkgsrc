@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.975 2025/03/31 06:18:48 plunky Exp $
+# $NetBSD: Makefile,v 1.976 2025/04/01 16:59:51 abs Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -298,6 +298,7 @@ SUBDIR+=	p5-Authen-Simple
 SUBDIR+=	p5-Authen-TacacsPlus
 SUBDIR+=	p5-BSD-arc4random
 SUBDIR+=	p5-Bytes-Random-Secure
+SUBDIR+=	p5-Bytes-Random-Secure-Tiny
 SUBDIR+=	p5-ClamAV-Client
 SUBDIR+=	p5-Crypt-Blowfish
 SUBDIR+=	p5-Crypt-Blowfish_PP
