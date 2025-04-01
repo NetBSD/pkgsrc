@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/08/25 06:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/01 07:43:46 adam Exp $
 
-DISTNAME=	unshield-1.5.1
-PKGREVISION=	1
+DISTNAME=	unshield-1.6.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=twogood/}
 
@@ -10,14 +9,14 @@ HOMEPAGE=	https://github.com/twogood/unshield
 COMMENT=	Extract InstallShield .CAB files
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED=ON
 
 LDFLAGS+=	-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
