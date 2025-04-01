@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/03/25 09:01:20 kim Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/01 07:27:14 adam Exp $
 
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -13,6 +12,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.qemu.org/
 COMMENT=	QEMU guest agent
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
+
+# meson.build: unsupported OS for QEMU guest agent
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build

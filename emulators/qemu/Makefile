@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.374 2025/03/16 21:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.375 2025/04/01 07:27:14 adam Exp $
 
-.include	"../../emulators/qemu/version.mk"
+.include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
-PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
