@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2457 2025/04/02 18:34:17 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2458 2025/04/02 22:41:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3216,3 +3216,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-argcomplete to 3.6.1 [adam 2025-04-02]
 	Updated www/firefox128 to 128.9.0 [gutteridge 2025-04-02]
 	Updated www/firefox128-l10n to 128.9.0 [gutteridge 2025-04-02]
+	Updated pkgtools/pkglint to 23.16.0 [rillig 2025-04-02]
