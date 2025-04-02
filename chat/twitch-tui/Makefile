@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/01/06 20:35:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/02 10:48:16 pin Exp $
 
 DISTNAME=	twitch-tui-2.6.18
 CATEGORIES=	chat
@@ -9,6 +9,9 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://xithrius.github.io/twitch-tui/
 COMMENT=	Twitch chat in the terminal
 LICENSE=	apache-2.0 AND mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 RUST_REQ=	1.75.0
 
