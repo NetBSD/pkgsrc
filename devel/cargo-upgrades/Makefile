@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/01/24 21:22:30 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/02 10:51:50 pin Exp $
 
 DISTNAME=	cargo-upgrades-2.1.3
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/kornelski/cargo-upgrades/
 COMMENT=	Check for outdated dependencies in Rust/Cargo projects
 LICENSE=	gnu-gpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
