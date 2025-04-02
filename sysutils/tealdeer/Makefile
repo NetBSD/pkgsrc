@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/11/24 20:04:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/02 11:11:49 pin Exp $
 
 DISTNAME=	tealdeer-1.7.1
 CATEGORIES=	sysutils
@@ -9,6 +9,9 @@ MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://github.com/tealdeer-rs/tealdeer/
 COMMENT=	Simplified, example based and community-driven man pages
 LICENSE=	mit OR apache-2.0
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 RUST_REQ=		1.75.0
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
