@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/21 19:58:28 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/02 11:08:48 pin Exp $
 
 DISTNAME=	rbw-1.10.0
 CATEGORIES=	security
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/doy/rbw/
 COMMENT=	Unofficial bitwarden cli
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
