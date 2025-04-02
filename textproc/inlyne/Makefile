@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2025/04/02 11:13:17 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/02 17:55:36 pin Exp $
 
 DISTNAME=	inlyne-0.5.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Inlyne-Project/inlyne
 COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
