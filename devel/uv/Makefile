@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/16 12:00:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/02 10:53:40 pin Exp $
 
 DISTNAME=	uv-0.6.6
 CATEGORIES=	devel
@@ -8,6 +8,9 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://docs.astral.sh/uv/
 COMMENT=	Extremely fast Python package and project manager
 LICENSE=	apache-2.0 OR mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 # for included jemalloc
 USE_TOOLS+=	gmake
