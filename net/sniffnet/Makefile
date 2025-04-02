@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/01/07 14:51:57 pin Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/02 11:03:22 pin Exp $
 
 DISTNAME=	sniffnet-1.3.2
 CATEGORIES=	net
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://www.sniffnet.net/
 COMMENT=	Application to comfortably monitor your network traffic
 LICENSE=	mit OR apache-2.0
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
