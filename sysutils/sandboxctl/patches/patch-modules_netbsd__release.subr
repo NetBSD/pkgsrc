@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_netbsd__release.subr,v 1.1 2024/06/23 17:16:41 schmonz Exp $
+$NetBSD: patch-modules_netbsd__release.subr,v 1.1.8.1 2025/04/02 02:25:43 maya Exp $
 
 For "netbsd-release" sandboxes, run certctl if available.
 
@@ -8,7 +8,7 @@ For "netbsd-release" sandboxes, run certctl if available.
  
      shtk_cli_debug "Creating device nodes"
      chroot "${root}" /bin/sh -c "cd /dev && ./MAKEDEV all"
-+    chroot "${root}" /bin/sh -c "[ -x /usr/sbin/certctl ] && /usr/sbin/certctl rehash"
++    chroot "${root}" /bin/sh -c "[ ! -x /usr/sbin/certctl ] || /usr/sbin/certctl rehash"
  }
  
  
