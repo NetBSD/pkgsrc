@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2024/12/27 21:25:14 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/02 17:47:55 pin Exp $
 
 DISTNAME=	hexyl-0.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sharkdp/hexyl/
 COMMENT=	Command-line hex viewer
 LICENSE=	apache-2.0
