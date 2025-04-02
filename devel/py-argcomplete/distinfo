@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2025/03/06 08:13:37 adam Exp $
+$NetBSD: distinfo,v 1.40 2025/04/02 15:15:12 adam Exp $
 
-BLAKE2s (argcomplete-3.6.0.tar.gz) = afbd944e72fb6805670da6715be035f7e0e3542fabde4c03d71da4a0cd23efa7
-SHA512 (argcomplete-3.6.0.tar.gz) = cccc7f8b760cee5e43b03d97a4bb8f1569e82dd8761a540bb6abb54f8ed2fff09c8b8491c4e175360c00b0e75a5e1b7b4b53734db969e250aff5fbb74dcd0514
-Size (argcomplete-3.6.0.tar.gz) = 73135 bytes
+BLAKE2s (argcomplete-3.6.1.tar.gz) = 0f445948860ef84605933135036852f0579c0091e34b07b7a44739706422c594
+SHA512 (argcomplete-3.6.1.tar.gz) = 948f83f42e8fcb7c8a5aac614413d1d33ec6aedb5ef578cb3a88a148fc334d5072ac269c03fbbfec4f845f4492a5918bbf55fd6c765448bbd56edf24704b3616
+Size (argcomplete-3.6.1.tar.gz) = 73474 bytes
