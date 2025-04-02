@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2025/03/15 15:58:39 pin Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/02 17:32:24 pin Exp $
 
 DISTNAME=	bacon-3.12.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dystroy.org/bacon/
 COMMENT=	Background rust code check
 LICENSE=	gnu-agpl-v3
