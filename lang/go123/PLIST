@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/07 20:41:31 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2025/04/02 02:19:08 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go123/CONTRIBUTING.md
@@ -9000,6 +9000,7 @@ go123/src/runtime/testdata/testprogcgo/bigstack_windows.go
 go123/src/runtime/testdata/testprogcgo/bindm.c
 go123/src/runtime/testdata/testprogcgo/bindm.go
 go123/src/runtime/testdata/testprogcgo/callback.go
+go123/src/runtime/testdata/testprogcgo/callback_pprof.go
 go123/src/runtime/testdata/testprogcgo/catchpanic.go
 go123/src/runtime/testdata/testprogcgo/cgo.go
 go123/src/runtime/testdata/testprogcgo/cgonocallback.c
