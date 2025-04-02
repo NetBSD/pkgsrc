@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/02 10:49:47 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/02 17:33:16 pin Exp $
 
 DISTNAME=	cargo-edit-0.13.1
 # v0.13.2 requires Rust >= 1.85
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=killercup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/killercup/cargo-edit/
 COMMENT=	Utility for managing cargo dependencies from the command line
 LICENSE=	mit
