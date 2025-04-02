@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/09/25 10:54:10 pin Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/02 11:15:26 pin Exp $
 
 DISTNAME=	zola-0.19.2
 CATEGORIES=	www
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.getzola.org/
 COMMENT=	Static website generator
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
 
