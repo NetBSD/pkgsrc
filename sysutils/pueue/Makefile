@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/09/22 13:29:38 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/02 11:11:05 pin Exp $
 
 DISTNAME=	pueue-3.4.1
 CATEGORIES=	sysutils
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Nukesor/pueue/
 COMMENT=	Manage your shell commands
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
