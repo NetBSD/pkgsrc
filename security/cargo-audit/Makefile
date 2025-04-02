@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/01 12:10:15 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/02 11:07:26 pin Exp $
 
 DISTNAME=	cargo-audit-0.21.2
 CATEGORIES=	security
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rustsec/rustsec
 COMMENT=	Audit Cargo.lock files for crates with security vulnerabilities
 LICENSE=	apache-2.0 # or MIT
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 WRKSRC=		${WRKDIR}/rustsec-cargo-audit-v${PKGVERSION_NOREV}/cargo-audit
 USE_LANGUAGES=	c
