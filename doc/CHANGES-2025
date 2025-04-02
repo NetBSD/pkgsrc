@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2455 2025/04/02 15:15:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2456 2025/04/02 18:33:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3214,3 +3214,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/woof to 15.2.0 [micha 2025-04-02]
 	Updated devel/py-ninja to 1.11.1.4 [adam 2025-04-02]
 	Updated devel/py-argcomplete to 3.6.1 [adam 2025-04-02]
+	Updated www/firefox128 to 128.9.0 [gutteridge 2025-04-02]
