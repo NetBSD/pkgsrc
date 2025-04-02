@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/04/02 10:50:24 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/02 17:34:08 pin Exp $
 
 DISTNAME=	cargo-licenses-0.2.0
 CATEGORIES=	devel
 MASTER_SITES=	https://static.crates.io/crates/cargo-licenses/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jhenrique04/cargo-licenses/
 COMMENT=	Tool to audit license information for Rust projects
 LICENSE=	apache-2.0 OR mit
