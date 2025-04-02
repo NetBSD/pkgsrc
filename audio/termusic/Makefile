@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/03/12 13:27:41 pin Exp $
+# $NetBSD: Makefile,v 1.63 2025/04/02 09:59:40 pin Exp $
 
 DISTNAME=	termusic-0.10.0
 CATEGORIES=	audio
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tramhao/termusic/
 COMMENT=	Music Player TUI written in Rust
 LICENSE=	mit AND gnu-gpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
