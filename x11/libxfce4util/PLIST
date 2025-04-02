@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/12/26 18:30:26 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/04/02 23:29:45 gutteridge Exp $
 include/xfce4/libxfce4util/libxfce4util-config.h
 include/xfce4/libxfce4util/libxfce4util.h
 include/xfce4/libxfce4util/xfce-consolekit.h
@@ -24,12 +24,8 @@ share/gir-1.0/Libxfce4util-1.0.gir
 share/gtk-doc/html/libxfce4util/XfceConsolekit.html
 share/gtk-doc/html/libxfce4util/XfceSystemd.html
 share/gtk-doc/html/libxfce4util/annotation-glossary.html
-share/gtk-doc/html/libxfce4util/api-index-4-18.html
-share/gtk-doc/html/libxfce4util/api-index-4-2.html
-share/gtk-doc/html/libxfce4util/api-index-4-20.html
-share/gtk-doc/html/libxfce4util/api-index-4-4.html
-share/gtk-doc/html/libxfce4util/api-index-deprecated.html
 share/gtk-doc/html/libxfce4util/api-index-full.html
+share/gtk-doc/html/libxfce4util/ch01.html
 share/gtk-doc/html/libxfce4util/home.png
 share/gtk-doc/html/libxfce4util/index.html
 share/gtk-doc/html/libxfce4util/left-insensitive.png
@@ -47,13 +43,8 @@ share/gtk-doc/html/libxfce4util/libxfce4util-Version-Information.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-Generics.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-Kiosk-functions.html
 share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-String-Functions.html
-share/gtk-doc/html/libxfce4util/libxfce4util-core.html
-share/gtk-doc/html/libxfce4util/libxfce4util-datatypes.html
-share/gtk-doc/html/libxfce4util/libxfce4util-fundamentals.html
-share/gtk-doc/html/libxfce4util/libxfce4util-session-management.html
-share/gtk-doc/html/libxfce4util/libxfce4util-utilities.html
 share/gtk-doc/html/libxfce4util/libxfce4util.devhelp2
-share/gtk-doc/html/libxfce4util/reference.html
+share/gtk-doc/html/libxfce4util/object-tree.html
 share/gtk-doc/html/libxfce4util/right-insensitive.png
 share/gtk-doc/html/libxfce4util/right.png
 share/gtk-doc/html/libxfce4util/style.css
