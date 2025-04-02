@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/02/06 11:26:29 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/02 11:13:17 pin Exp $
 
 DISTNAME=	inlyne-0.5.0
 CATEGORIES=	textproc
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Inlyne-Project/inlyne
 COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
