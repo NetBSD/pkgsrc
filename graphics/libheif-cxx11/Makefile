@@ -1,0 +1,34 @@
+# $NetBSD: Makefile,v 1.1 2025/04/02 13:03:14 nia Exp $
+
+DISTNAME=	libheif-1.18.2
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/strukturag/libheif
+COMMENT=	HEIF and AVIF file format decoder and encoder library
+LICENSE=	gnu-lgpl-v3
+
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DWITH_GDK_PIXBUF=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_DAV1D=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SvtEnc=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_RAV1E=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OpenJPEG_ENCODER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OpenJPEG_DECODER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENJPH_ENCODER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
+
+PKGCONFIG_OVERRIDE+=	libheif.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
+
+.include "options.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
