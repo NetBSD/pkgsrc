@@ -1,7 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.2 2025/04/02 02:19:53 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.3 2025/04/02 03:01:42 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
 Pullup ticket #6952 - requested by bsiegert
 lang/go123: Security fix
 lang/go124: Security fix
+
+Pullup ticket #6950 - requested by schmonz
+sysutils/sandboxctl: Runtime fix for older NetBSD
+
+Pullup ticket #6951 - requested by schmonz
+www/ikiwiki: Runtime fix
