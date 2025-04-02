@@ -1,33 +1,28 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2024/11/24 07:21:16 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/04/02 15:12:07 adam Exp $
 
 Avoid downloading and building ninja.
 We'll just install a link to the pkgsrc copy in the package Makefile
 instead.
 
---- CMakeLists.txt.orig	2022-11-09 12:37:21.000000000 +0000
+--- CMakeLists.txt.orig	2025-04-02 15:03:02.617445005 +0000
 +++ CMakeLists.txt
-@@ -24,7 +24,6 @@ set(src_archive "unix_source")
- if(WIN32)
-   set(src_archive "windows_source")
- endif()
--check_archive_var("${src_archive}")
- 
- message(STATUS "*********************************************")
- message(STATUS "Ninja Python Distribution")
-@@ -46,15 +45,5 @@ if(NOT BUILD_VERBOSE)
-     )
- endif()
+@@ -13,12 +13,6 @@ message(STATUS "")
+ message(STATUS "  RUN_NINJA_TEST : ${RUN_NINJA_TEST}")
+ message(STATUS "************************************")
  
 -include(FetchContent)
 -FetchContent_Declare(
 -  ninja
--  URL ${${src_archive}_url}
--  URL_HASH SHA256=${${src_archive}_sha256}
--  DOWNLOAD_DIR ${ARCHIVE_DOWNLOAD_DIR}
--  ${ep_download_no_progress_args}
+-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ninja-upstream
 -)
 -FetchContent_MakeAvailable(ninja)
--
+ 
+ if(RUN_NINJA_TEST)
+   add_custom_target(
+@@ -28,5 +22,5 @@ if(RUN_NINJA_TEST)
+   )
+ endif()
+ 
 -install(TARGETS ninja COMPONENT python DESTINATION "${SKBUILD_SCRIPTS_DIR}")
 +set(ninja_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Ninja-src")
  install(FILES "${ninja_SOURCE_DIR}/misc/ninja_syntax.py" COMPONENT python DESTINATION ninja)
