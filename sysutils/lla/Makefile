@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/07 14:49:39 pin Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/02 11:10:19 pin Exp $
 
 DISTNAME=	lla-0.3.10
 CATEGORIES=	sysutils
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/triyanox/lla/
 COMMENT=	The Elegant ls Alternative
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
