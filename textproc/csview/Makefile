@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2024/12/28 21:58:06 pin Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/02 17:37:26 pin Exp $
 
 DISTNAME=	csview-1.3.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wfxr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wfxr/csview/
 COMMENT=	High performance csv viewer with cjk/emoji support
 LICENSE=	apache-2.0 OR mit
