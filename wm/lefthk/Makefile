@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2024/10/17 10:10:58 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/02 18:01:59 pin Exp $
 
 DISTNAME=	lefthk-0.2.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/leftwm/lefthk/
 COMMENT=	Hotkey daemon written in Rust
 LICENSE=	modified-bsd
