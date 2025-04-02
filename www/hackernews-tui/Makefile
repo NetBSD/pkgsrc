@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/10/22 03:40:12 pin Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/02 11:14:09 pin Exp $
 
 DISTNAME=	hackernews-TUI-0.13.5
 PKGNAME=	${DISTNAME:tl}
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/aome510/hackernews-TUI/
 COMMENT=	Terminal UI to browse Hacker News
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
