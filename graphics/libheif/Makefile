@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/02 22:19:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/02 22:21:04 riastradh Exp $
 
 DISTNAME=	libheif-1.19.7
 PKGREVISION=	1
@@ -25,6 +25,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 
 TEST_TARGET=	test
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/libheif
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/libheif
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/png/buildlink3.mk"
