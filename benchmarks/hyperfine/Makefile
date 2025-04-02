@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2024/11/13 08:41:46 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/02 17:49:44 pin Exp $
 
 DISTNAME=	hyperfine-1.19.0
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sharkdp/hyperfine/
 COMMENT=	Command-line benchmarking tool
 LICENSE=	apache-2.0
