@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2025/04/02 11:08:11 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/02 17:42:43 pin Exp $
 
 DISTNAME=	flawz-0.3.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/orhun/flawz/
 COMMENT=	TUI for browsing security vulnerabilities
 LICENSE=	mit OR apache-2.0
