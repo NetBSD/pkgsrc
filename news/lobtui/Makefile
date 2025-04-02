@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/09/05 10:46:11 pin Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/02 11:06:02 pin Exp $
 
 DISTNAME=	lobtui-0.3
 CATEGORIES=	news
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pythops/lobtui/
 COMMENT=	TUI for lobste.rs
 LICENSE=	gnu-gpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
