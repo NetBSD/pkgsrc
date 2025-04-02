@@ -1,10 +1,16 @@
-$NetBSD: patch-data_CMakeLists.txt,v 1.6 2024/04/17 16:58:25 micha Exp $
+$NetBSD: patch-data_CMakeLists.txt,v 1.7 2025/04/02 12:21:58 micha Exp $
 
+Use release date for reproducible build.
 Treat macOS as Unix.
 
---- data/CMakeLists.txt.orig	2024-03-15 07:15:40.000000000 +0000
+--- data/CMakeLists.txt.orig	2025-01-31 07:30:37.000000000 +0000
 +++ data/CMakeLists.txt
-@@ -4,7 +4,7 @@ configure_file(io.github.fabiangreffrath
+@@ -1,10 +1,11 @@
+-string(TIMESTAMP PROJECT_DATE "%Y-%m-%d" UTC)
++#string(TIMESTAMP PROJECT_DATE "%Y-%m-%d" UTC)
++set(PROJECT_DATE $ENV{BUILD_DATE})
+ 
+ configure_file(io.github.fabiangreffrath.woof.metainfo.in
                 io.github.fabiangreffrath.woof.metainfo.xml
                 ESCAPE_QUOTES @ONLY)
  
