@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/12/16 05:45:04 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/02 15:12:07 adam Exp $
 
-DISTNAME=	ninja-1.11.1.3
+DISTNAME=	ninja-1.11.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ninja/}
