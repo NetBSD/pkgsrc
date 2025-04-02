@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/11/14 22:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/02 10:54:21 pin Exp $
 
 DISTNAME=	rex-0.1.18
 PKGREVISION=	3
@@ -11,6 +11,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/TheRustyPickle/Rex/
 COMMENT=	TUI for keeping track of incomes and expenses
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
