@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/03/10 15:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/02 22:19:11 riastradh Exp $
 
 DISTNAME=	libheif-1.19.7
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,12 +11,10 @@ HOMEPAGE=	https://github.com/strukturag/libheif
 COMMENT=	HEIF and AVIF file format decoder and encoder library
 LICENSE=	gnu-lgpl-v3
 
-#TEST_DEPENDS+=	catch2-[0-9]*:../../devel/catch2
-
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++20
+USE_CXX_FEATURES+=	c++17
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_RAV1E=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
@@ -23,6 +22,9 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+
+TEST_TARGET=	test
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/libheif
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/png/buildlink3.mk"

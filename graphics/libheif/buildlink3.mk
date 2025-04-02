@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/04/02 13:06:29 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/04/02 22:19:11 riastradh Exp $
 
 BUILDLINK_TREE+=	libheif
 
@@ -13,7 +13,7 @@ BUILDLINK_TREE+=	libheif
 .if !defined(LIBHEIF_BUILDLINK3_MK)
 LIBHEIF_BUILDLINK3_MK:=
 
-USE_CXX_FEATURES+=		c++20
+USE_CXX_FEATURES+=		c++17
 
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.8.0
 BUILDLINK_ABI_DEPENDS.libheif+=	libheif>=1.19.5nb1
