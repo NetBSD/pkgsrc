@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/03/17 20:59:45 pin Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/02 11:04:37 pin Exp $
 
 DISTNAME=	tlrc-1.11.0
 CATEGORIES=	net
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://tldr.sh/
 COMMENT=	Tldr client written in Rust
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
 
