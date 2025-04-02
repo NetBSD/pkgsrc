@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2459 2025/04/02 23:21:21 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2460 2025/04/02 23:30:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3218,3 +3218,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128-l10n to 128.9.0 [gutteridge 2025-04-02]
 	Updated pkgtools/pkglint to 23.16.0 [rillig 2025-04-02]
 	Updated time/xfce4-orage to 4.20.1 [gutteridge 2025-04-02]
+	Updated x11/libxfce4util to 4.20.1 [gutteridge 2025-04-02]
