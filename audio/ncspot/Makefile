@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/02/12 06:44:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.77 2025/04/02 09:57:31 pin Exp $
 
 DISTNAME=	ncspot-1.2.2
 PKGREVISION=	1
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/hrkfdn/ncspot/
 COMMENT=	Cross-platform ncurses Spotify client written in Rust
 LICENSE=	2-clause-bsd
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
