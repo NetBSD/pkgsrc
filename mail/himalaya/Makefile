@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/01/13 20:30:50 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/02 10:56:26 pin Exp $
 
 DISTNAME=	himalaya-1.1.0
 CATEGORIES=	mail
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pimalaya.org/himalaya/
 COMMENT=	Command-line interface for email management
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 USE_LANGUAGES+=	c c++
 
