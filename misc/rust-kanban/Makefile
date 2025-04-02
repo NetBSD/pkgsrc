@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/11/08 10:11:13 pin Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/02 10:57:47 pin Exp $
 
 DISTNAME=	rust-kanban-0.10.5
 CATEGORIES=	misc
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/yashs662/rust_kanban/
 COMMENT=	Kanban board for the terminal
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
