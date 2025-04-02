@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/02/06 11:20:22 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/02 10:51:05 pin Exp $
 
 DISTNAME=	cargo-release-0.25.17
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/crate-ci/cargo-release/
 COMMENT=	Cargo release subcommand
 LICENSE=	apache-2.0 AND mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 SITES.curl-sys-0.4.74+curl-8.9.0.crate=	https://static.crates.io/crates/curl-sys/
 
