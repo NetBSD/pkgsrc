@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/11/14 22:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/02 11:00:17 pin Exp $
 
 DISTNAME=	ncgopher-0.7.0
 PKGREVISION=	1
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jansc/ncgopher/
 COMMENT=	Gopher and gemini client for the modern internet
 LICENSE=	2-clause-bsd
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
