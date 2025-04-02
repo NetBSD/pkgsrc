@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/17 20:58:48 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/02 10:49:47 pin Exp $
 
 DISTNAME=	cargo-edit-0.13.1
 # v0.13.2 requires Rust >= 1.85
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/killercup/cargo-edit/
 COMMENT=	Utility for managing cargo dependencies from the command line
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
 
