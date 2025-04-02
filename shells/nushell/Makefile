@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2025/03/30 16:53:08 pin Exp $
+# $NetBSD: Makefile,v 1.72 2025/04/02 11:09:34 pin Exp $
 
 DISTNAME=	nushell-0.103.0
 CATEGORIES=	shells
@@ -8,6 +8,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
 SITES.lz4-sys-1.11.1+lz4-1.10.0.crate=		https://static.crates.io/crates/lz4-sys/
