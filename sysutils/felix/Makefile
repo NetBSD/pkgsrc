@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.65 2025/01/13 20:28:18 pin Exp $
+# $NetBSD: Makefile,v 1.66 2025/04/02 17:41:43 pin Exp $
 
 DISTNAME=	felix-2.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kyoheiu.dev/felix/
 COMMENT=	TUI file manager with vim-like key mapping
 LICENSE=	mit
