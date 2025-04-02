@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/02 11:14:09 pin Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/02 17:47:06 pin Exp $
 
 DISTNAME=	hackernews-TUI-0.13.5
 PKGNAME=	${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aome510/hackernews-TUI/
 COMMENT=	Terminal UI to browse Hacker News
 LICENSE=	mit
