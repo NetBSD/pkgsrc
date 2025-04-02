@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/11/14 10:24:44 pin Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/02 10:55:04 pin Exp $
 
 DISTNAME=	matugen-2.4.1
 CATEGORIES=	graphics
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/InioX/matugen/
 COMMENT=	Material you color generation tool
 LICENSE=	gnu-gpl-v2
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
