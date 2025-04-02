@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/02 13:03:14 nia Exp $
+bin/heif-convert
+bin/heif-dec
+bin/heif-enc
+bin/heif-info
+bin/heif-thumbnailer
+include/libheif/heif.h
+include/libheif/heif_cxx.h
+include/libheif/heif_items.h
+include/libheif/heif_plugin.h
+include/libheif/heif_properties.h
+include/libheif/heif_regions.h
+include/libheif/heif_version.h
+lib/cmake/libheif/libheif-config-noconfig.cmake
+lib/cmake/libheif/libheif-config-version.cmake
+lib/cmake/libheif/libheif-config.cmake
+lib/libheif.so
+lib/libheif.so.1
+lib/libheif.so.${PKGVERSION}
+lib/pkgconfig/libheif.pc
+man/man1/heif-dec.1
+man/man1/heif-enc.1
+man/man1/heif-info.1
+man/man1/heif-thumbnailer.1
+share/thumbnailers/heif.thumbnailer
+@pkgdir lib/libheif
