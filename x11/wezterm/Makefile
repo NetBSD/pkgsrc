@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/03/08 10:05:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/02 11:16:05 pin Exp $
 
 # VERSION must match the output of:
 # git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
@@ -12,6 +12,9 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://wezterm.org/
 COMMENT=	Powerful cross-platform terminal emulator and multiplexer
 LICENSE=	mit AND ofl-v1.1
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 DEPENDS+=	JetBrainsMono-ttf-[0-9]*:../../fonts/JetBrainsMono-ttf
 DEPENDS+=	nerd-fonts-Symbols-[0-9]*:../../fonts/nerd-fonts-Symbols
