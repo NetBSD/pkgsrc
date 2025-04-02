@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2025/01/18 16:59:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.86 2025/04/02 23:20:58 gutteridge Exp $
 
-VERSION=	4.20.0
+VERSION=	4.20.1
 DISTNAME=	orage-${VERSION}
 PKGNAME=	xfce4-orage-${VERSION}
 CATEGORIES=	time
