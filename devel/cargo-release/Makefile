@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2025/04/02 10:51:05 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/02 17:35:36 pin Exp $
 
 DISTNAME=	cargo-release-0.25.17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crate-ci/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/crate-ci/cargo-release/
 COMMENT=	Cargo release subcommand
 LICENSE=	apache-2.0 AND mit
