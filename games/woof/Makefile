@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2025/02/12 06:45:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2025/04/02 12:21:58 micha Exp $
 
-DISTNAME=	woof_14.3.0
+DISTNAME=	woof_15.2.0
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fabiangreffrath/}
 GITHUB_TAG=	${DISTNAME}
@@ -14,15 +13,17 @@ COMMENT=	Continuation of Lee Killough's Doom source port MBF
 LICENSE=	gnu-gpl-v2
 
 USE_CC_FEATURES=	c99
+USE_TOOLS+=		pkg-config
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-CMAKE_CONFIGURE_ARGS+=	-G "Unix Makefiles" ..
-CONFIGURE_DIRS=	build
-WRKSRC=		${WRKDIR}/woof-${DISTNAME}
+# Use release date for reproducible build
+WOOF_BUILD_DATE=	2025-03-31
+CONFIGURE_ENV+=		BUILD_DATE=${WOOF_BUILD_DATE}
+CFLAGS+=		-DBUILD_DATE=\"${WOOF_BUILD_DATE}\"
+
+REPLACE_PYTHON+=	man/docgen
 
 # DOOMWADDIR is intentionally shared with other Doom packages
-DOOMWADDIR=	share/doom
+DOOMWADDIR=		share/doom
 
 # Add DOOMWADDIR to search path
 SUBST_CLASSES+=		waddir
@@ -40,7 +41,6 @@ SUBST_FILES.install=	${WRKDIR}/INSTALL.pkgsrc
 SUBST_SED.install=	-e 's,DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 pre-configure:
-	cd ${WRKSRC}; mkdir build
 	${CP} ${FILESDIR}/INSTALL.pkgsrc ${WRKDIR}
 
 post-install:
@@ -53,15 +53,22 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/metainfo/io.github.fabiangreffrath.woof.metainfo.xml \
 		${DESTDIR}${PREFIX}/share/metainfo/woof.metainfo.xml
 
+.include "../../devel/cmake/build.mk"
+
 BUILDLINK_API_DEPENDS.fluidsynth+=	fluidsynth>=2.2.0
 .include "../../audio/fluidsynth/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libebur128+=	libebur128>=1.2.0
+.include "../../audio/libebur128/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.1.0
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libxmp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openal-soft+=	openal-soft>=1.22.0
 .include "../../audio/openal-soft/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL2+=		SDL2>=2.0.18
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/yyjson/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
