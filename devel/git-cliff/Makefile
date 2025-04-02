@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/02/24 08:37:44 pin Exp $
+# $NetBSD: Makefile,v 1.49 2025/04/02 10:52:57 pin Exp $
 
 DISTNAME=	git-cliff-2.8.0
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/orhun/git-cliff/
 COMMENT=	Highly customizable Changelog Generator
 LICENSE=	gnu-gpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
