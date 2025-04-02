@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2025/03/30 21:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.126 2025/04/02 11:29:27 nia Exp $
 
 DISTNAME=	make-4.4.1
 PKGNAME=	g${DISTNAME}
@@ -44,6 +44,14 @@ CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"/usr/bin/bash\""
 # kernel bug, fixed in NetBSD 9.99.82
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
 CONFIGURE_ARGS.NetBSD+=	--disable-posix-spawn
+.endif
+
+.if ${OPSYS} == "UnixWare"
+# avoid colliding with libc functions
+SUBST_CLASSES+=		strlist
+SUBST_STAGE.strlist=	pre-configure
+SUBST_FILES.strlist=	src/main.c
+SUBST_SED.strlist=	-e 's/strlist/strlist_make/g'
 .endif
 
 .include "options.mk"
