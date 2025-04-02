@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/01/23 13:40:20 pin Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/02 11:05:14 pin Exp $
 
 DISTNAME=	yaydl-ea40110aa4d27f6d
 PKGNAME=	yaydl-0.17.2
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.rosaelefanten.org/yaydl/home
 COMMENT=	Yet another youtube down loader
 LICENSE=	cddl-1.0
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
