@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2024/12/25 11:05:57 bsiegert Exp $
+$NetBSD: distinfo,v 1.36 2025/04/02 23:29:45 gutteridge Exp $
 
-BLAKE2s (libxfce4util-4.20.0.tar.bz2) = f046303d5b2a5d9f404bdb16bb242b0292c9e00bb3d890a9fe31ad2dfd60ef62
-SHA512 (libxfce4util-4.20.0.tar.bz2) = 07edc4c8645b3418a659ebb688a48cd1de00d12d06521d30ccfa10b16c4525ce5a869f4b890c9da9b297c44c249a8a091ea1143c72c5f74702cd90337a124ca5
-Size (libxfce4util-4.20.0.tar.bz2) = 616303 bytes
+BLAKE2s (libxfce4util-4.20.1.tar.bz2) = 9d4440851ea2b550e5cb61163d0e43876d9e2bd6c50f72ad77e7cd4787a93ed9
+SHA512 (libxfce4util-4.20.1.tar.bz2) = b9eecac47245c37a46f8e381ed5c672233aae3a78cae8ac0b25a79598847210267172cd03d64d5f4d0405640608f4885092fd62431914b58a930c7b401067268
+Size (libxfce4util-4.20.1.tar.bz2) = 636675 bytes
