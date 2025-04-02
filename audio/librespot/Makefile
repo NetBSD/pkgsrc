@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/02/12 06:44:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/02 09:56:39 pin Exp $
 
 DISTNAME=	librespot-0.6.0
 PKGREVISION=	5
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/librespot-org/librespot/
 COMMENT=	Open Source Spotify client library
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
