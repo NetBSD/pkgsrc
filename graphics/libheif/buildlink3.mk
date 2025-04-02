@@ -1,14 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/04/02 22:19:11 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/04/02 22:29:49 dholland Exp $
 
 BUILDLINK_TREE+=	libheif
 
 .include "../../mk/compiler.mk"
-
-.if ${CC_VERSION:Mgcc-[3456789].*} || \
-    ${CC_VERSION:Mgcc-10.*} || ${CC_VERSION:Mgcc-11.*}
-# this defines LIBHEIF_BUILDLINK3_MK so the next sections aren't used
-.  include "../../graphics/libheif-cxx11/buildlink3.mk"
-.endif
 
 .if !defined(LIBHEIF_BUILDLINK3_MK)
 LIBHEIF_BUILDLINK3_MK:=
