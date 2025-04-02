@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/02 22:19:11 riastradh Exp $
+
+--- CMakeLists.txt.orig	2025-03-03 11:00:24.000000000 +0000
++++ CMakeLists.txt
+@@ -48,7 +48,7 @@ if(NOT MSVC)
+   endif ()
+ endif()
+ 
+-set(CMAKE_CXX_STANDARD 20)
++set(CMAKE_CXX_STANDARD 17)
+ set(CMAKE_CXX_STANDARD_REQUIRED ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ 
