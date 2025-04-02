@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/08 08:59:24 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/02 11:08:11 pin Exp $
 
 DISTNAME=	flawz-0.3.0
 CATEGORIES=	security
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/orhun/flawz/
 COMMENT=	TUI for browsing security vulnerabilities
 LICENSE=	mit OR apache-2.0
+
+# See, https://github.com/briansmith/ring/issues/1999
+NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
