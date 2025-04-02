@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2025/03/30 21:10:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/04/02 12:27:42 prlw1 Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -30,7 +30,7 @@ CONFLICTS+=	postgresql[2-9][0-9]-[0-9]*
 
 .if !empty(PKGNAME:M*-*-*)
 module=		${PKGNAME:C/-[0-9].*$//:C/^.*-//}
-CONFLICTS+=	postgresql[1-9][0-9]-${module}-[0-9]*
+CONFLICTS+=	postgresql[2-9][0-9]-${module}-[0-9]*
 .endif
 
 DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql17/distinfo
