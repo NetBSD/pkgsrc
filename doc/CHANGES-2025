@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2467 2025/04/03 13:05:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2468 2025/04/03 15:07:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3228,3 +3228,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openvpn to 2.6.14 [adam 2025-04-03]
 	Updated security/pcsc-lite to 2.3.3 [adam 2025-04-03]
 	Updated x11/qt5-qtdeclarative to 5.15.16nb1 [wiz 2025-04-03]
+	Updated graphics/py-OpenGL to 3.1.9 [adam 2025-04-03]
+	Updated graphics/py-OpenGL-accelerate to 3.1.9 [adam 2025-04-03]
