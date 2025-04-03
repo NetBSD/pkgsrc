@@ -1,17 +1,17 @@
-# $NetBSD: options.mk,v 1.25 2024/09/22 21:40:32 tsutsui Exp $
+# $NetBSD: options.mk,v 1.26 2025/04/03 16:33:06 tsutsui Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 gtk ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
-PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 gtk m17nlib otl xft2
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mlterm
+PKG_SUPPORTED_OPTIONS=		cairo canna fribidi gdk_pixbuf2 gtk ibus libind libssh2 m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
+PKG_SUGGESTED_OPTIONS=		cairo fribidi gdk_pixbuf2 gtk m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	mlterm-fb
+PKG_SUGGESTED_OPTIONS+=		mlterm-fb
 .endif
 PKG_OPTIONS_OPTIONAL_GROUPS=	fcitx
 PKG_OPTIONS_GROUP.fcitx=	fcitx fcitx5
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb fbfiles fcitx gdk_pixbuf2 gtk ibus ind m17nlib otl scim skk uim wscons wnn x68kgrf xft2
+PLIST_VARS+=		bidi cairo canna fb fbfiles fcitx gdk_pixbuf2 gtk ibus ind m17nlib otl scim skk ssh2 uim wscons wnn x68kgrf xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
 .  if ${OPSYS} == "NetBSD"
@@ -102,6 +102,14 @@ PLIST.ind=		yes
 LICENSE+=		AND gnu-lgpl-v2
 .else
 CONFIGURE_ARGS+=	--disable-ind
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibssh2)
+.include "../../security/libssh2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-ssh2
+PLIST.ssh2=		yes
+.else
+CONFIGURE_ARGS+=	--disable-ssh2
 .endif
 
 .if !empty(PKG_OPTIONS:Mm17nlib)
