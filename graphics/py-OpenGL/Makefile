@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.45 2024/10/14 06:45:45 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/03 15:07:14 adam Exp $
 
-DISTNAME=	PyOpenGL-3.1.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
+DISTNAME=	pyopengl-3.1.9
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopengl/OpenGL/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pyopengl.sourceforge.net/
+HOMEPAGE=	https://pyopengl.sourceforge.net/
 COMMENT=	Python bindings for OpenGL
 # There are many similar licenses, see license.txt
 LICENSE=	modified-bsd AND mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenGL-accelerate-[0-9]*:../../graphics/py-OpenGL-accelerate
 TEST_DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	313
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} tests/test_core.py
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
@@ -31,6 +28,6 @@ do-test:
 .include "../../graphics/glu/buildlink3.mk"
 .endif
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
