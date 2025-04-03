@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/04/02 22:21:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.45 2025/04/03 07:03:48 wiz Exp $
 
 DISTNAME=	libheif-1.19.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -29,7 +29,6 @@ TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}/libhe
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
 .include "../../multimedia/openh264/buildlink3.mk"
