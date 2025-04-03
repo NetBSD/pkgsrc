@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/12/27 08:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/03 21:05:30 pin Exp $
 
 DISTNAME=	oatbar-0.1.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igor-petruk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://oatbar.app/
 COMMENT=	Standalone desktop bar
 LICENSE=	apache-2.0
