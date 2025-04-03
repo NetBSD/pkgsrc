@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/03/13 12:18:41 gdt Exp $
+# $NetBSD: Makefile,v 1.59 2025/04/03 13:37:08 gdt Exp $
 
 DISTNAME=	osm2pgsql-1.11.0
 CATEGORIES=	geography
@@ -9,6 +9,14 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/openstreetmap/osm2pgsql/
 COMMENT=	OpenStreetMap data to PostgreSQL converter
 LICENSE=	gnu-gpl-v2
+
+# Upstream checks for 64-bit:
+# Make Error at CMakeLists.txt:20 (message):
+#    osm2pgsql needs a 64 bit architecture
+# Surely this is because the primary use of this package is loading
+# the entire OpenStreetMap database, which can't fit in 4 GB, but it
+# needlessly prevents use on 32-bit machines with smaller extracts.
+BROKEN_ON_PLATFORM=	${LP32PLATFORMS}
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
