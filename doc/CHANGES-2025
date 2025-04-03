@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2466 2025/04/03 07:21:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2467 2025/04/03 13:05:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/unshield to 1.6.1 [adam 2025-04-03]
 	Updated net/openvpn to 2.6.14 [adam 2025-04-03]
 	Updated security/pcsc-lite to 2.3.3 [adam 2025-04-03]
+	Updated x11/qt5-qtdeclarative to 5.15.16nb1 [wiz 2025-04-03]
