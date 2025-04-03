@@ -1,4 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/02 22:19:11 riastradh Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/04/03 07:10:26 wiz Exp $
+
+Only c++17 is needed.
+https://github.com/strukturag/libheif/issues/1500
 
 --- CMakeLists.txt.orig	2025-03-03 11:00:24.000000000 +0000
 +++ CMakeLists.txt
