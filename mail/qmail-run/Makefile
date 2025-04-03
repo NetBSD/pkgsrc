@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2024/02/07 04:55:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/03 01:06:37 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20240206
+DISTNAME=		qmail-run-20250402
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -30,7 +30,6 @@ FILES_SUBST+=		QMAIL_SEND_USER=${QMAIL_SEND_USER:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 FILES_SUBST+=		UCSPI_SSL_USER=${UCSPI_SSL_USER:Q}
 FILES_SUBST+=		UCSPI_SSL_GROUP=${UCSPI_SSL_GROUP:Q}
-MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
 RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
 PKG_SYSCONFSUBDIR=	qmail
