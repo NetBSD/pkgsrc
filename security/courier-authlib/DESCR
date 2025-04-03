@@ -16,3 +16,6 @@ refers to the following functions:
 
     3. Change the password associated with a loginid.
     4. Obtain a complete list of all loginids.
+
+This package can change the system password via a Courier
+authentication module if tcl-expect is installed.
