@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2022/04/18 11:18:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/04/03 13:05:29 wiz Exp $
 lib/pkgconfig/Qt5Qml.pc
+lib/pkgconfig/Qt5QmlModels.pc
 lib/pkgconfig/Qt5Quick.pc
 lib/pkgconfig/Qt5QuickTest.pc
 lib/pkgconfig/Qt5QuickWidgets.pc
