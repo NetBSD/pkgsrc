@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/01 07:43:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/03 16:22:13 adam Exp $
 bin/unshield
 include/libunshield.h
 lib/cmake/unshield/unshieldConfig-noconfig.cmake
 lib/cmake/unshield/unshieldConfig.cmake
 lib/libunshield.so
+lib/libunshield.so.${PKGVERSION}
 lib/libunshield.so.1
-lib/libunshield.so.1.5.1
 lib/pkgconfig/libunshield.pc
 man/man1/unshield.1
