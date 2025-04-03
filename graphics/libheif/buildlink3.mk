@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/04/02 22:29:49 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2025/04/03 07:03:48 wiz Exp $
 
 BUILDLINK_TREE+=	libheif
 
@@ -14,7 +14,6 @@ BUILDLINK_ABI_DEPENDS.libheif+=	libheif>=1.19.5nb1
 BUILDLINK_PKGSRCDIR.libheif?=	../../graphics/libheif
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
 .include "../../multimedia/openh264/buildlink3.mk"
