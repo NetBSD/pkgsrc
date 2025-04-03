@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2022/07/26 02:25:15 rin Exp $
+@comment $NetBSD: PLIST,v 1.48 2025/04/03 16:33:06 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -50,6 +50,7 @@ lib/mlterm/libmozmodern.la
 lib/mlterm/libnext.la
 ${PLIST.otl}lib/mlterm/libotl.la
 ${PLIST.gdk_pixbuf2}lib/mlterm/libpixmap_engine.la
+${PLIST.ssh2}lib/mlterm/libptyssh.la
 lib/mlterm/libsample.la
 ${PLIST.cairo}lib/mlterm/libtype_cairo.la
 ${PLIST.xft2}lib/mlterm/libtype_xft.la
