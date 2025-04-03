@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.202 2024/12/27 08:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.203 2025/04/03 16:33:06 tsutsui Exp $
 
-DISTNAME=	mlterm-3.9.3
-PKGREVISION=	19
+DISTNAME=	mlterm-3.9.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arakiken/}
 GITHUB_PROJECT=	${PKGBASE}
@@ -30,16 +29,6 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-# Work around the fact this package tests whether posix_openpt(3) works at
-# runtime. This fails in typical sandboxed build environments (including
-# TNF's used for official binary builds), which causes a fallback to use
-# "old-style" BSD ptys. (If a user was running a kernel with non-standard
-# settings that don't support the expectations here, they'd need to disable
-# this override.) See PR pkg/56936.
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		bl_cv_pty=streams
-.endif
 
 SUBST_CLASSES+=		link
 SUBST_MESSAGE.link=	Fixing hardcoded paths and link options in Makefiles.
