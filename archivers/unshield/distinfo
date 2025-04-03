@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/04/01 07:43:46 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/04/03 07:14:13 adam Exp $
 
-BLAKE2s (unshield-1.6.0.tar.gz) = 49c61ca9b9b03e0088baf36756cc66ac223e5403122519b420e291090ef220a8
-SHA512 (unshield-1.6.0.tar.gz) = 066e557a0304917b2ea069220a8c7369d4821753d6ed5e954ad1cf93c134c9a74a313f46e73b1ef56177a20d9030a998c3d824195b24943d19cfe860f70c0801
-Size (unshield-1.6.0.tar.gz) = 49439248 bytes
+BLAKE2s (unshield-1.6.1.tar.gz) = d082b36335dfa6846db5c5d8aa11da1c837612659a73f5d88bb081658dae89f8
+SHA512 (unshield-1.6.1.tar.gz) = dd4960dfdf9edbe39b12765c6983663b0237f8755f25ff42c9dac91c7f88c2d2a3f680fa5b9e9bd845a72f385ab0144b76d4ad9864f5b734a12692cb1af1bd13
+Size (unshield-1.6.1.tar.gz) = 42835 bytes
