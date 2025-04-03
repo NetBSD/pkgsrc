@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/04/03 07:14:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/03 16:22:13 adam Exp $
 
-DISTNAME=	unshield-1.6.1
+DISTNAME=	unshield-1.6.2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=twogood/}
 
