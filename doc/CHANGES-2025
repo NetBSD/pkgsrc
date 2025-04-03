@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2463 2025/04/03 01:11:16 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2464 2025/04/03 07:03:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3222,3 +3222,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/djbdns-run to 20250402 [schmonz 2025-04-03]
 	Updated mail/qmail-run to 20250402 [schmonz 2025-04-03]
 	Updated mail/fastforward to 0.51nb3 [schmonz 2025-04-03]
+	Updated graphics/libheif to 1.19.7nb2 [wiz 2025-04-03]
