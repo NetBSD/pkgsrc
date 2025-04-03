@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2469 2025/04/03 16:23:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2470 2025/04/03 16:33:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3232,3 +3232,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-OpenGL-accelerate to 3.1.9 [adam 2025-04-03]
 	Updated archivers/xz to 5.8.1 [adam 2025-04-03]
 	Updated archivers/unshield to 1.6.2 [adam 2025-04-03]
+	Updated x11/mlterm to 3.9.4 [tsutsui 2025-04-03]
