@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/11/19 09:35:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/03 01:11:10 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		http://cr.yp.to/software/
 
