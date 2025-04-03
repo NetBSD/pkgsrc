@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/03/30 17:34:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/03 01:03:25 schmonz Exp $
 #
 
-DISTNAME=		djbdns-run-20201016
+DISTNAME=		djbdns-run-20250402
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
