@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2468 2025/04/03 15:07:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2469 2025/04/03 16:23:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3230,3 +3230,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt5-qtdeclarative to 5.15.16nb1 [wiz 2025-04-03]
 	Updated graphics/py-OpenGL to 3.1.9 [adam 2025-04-03]
 	Updated graphics/py-OpenGL-accelerate to 3.1.9 [adam 2025-04-03]
+	Updated archivers/xz to 5.8.1 [adam 2025-04-03]
+	Updated archivers/unshield to 1.6.2 [adam 2025-04-03]
