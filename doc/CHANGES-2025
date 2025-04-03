@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2461 2025/04/03 01:05:11 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2462 2025/04/03 01:06:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3220,3 +3220,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/xfce4-orage to 4.20.1 [gutteridge 2025-04-02]
 	Updated x11/libxfce4util to 4.20.1 [gutteridge 2025-04-02]
 	Updated net/djbdns-run to 20250402 [schmonz 2025-04-03]
+	Updated mail/qmail-run to 20250402 [schmonz 2025-04-03]
