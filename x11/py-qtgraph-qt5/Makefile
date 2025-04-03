@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/03/08 13:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/03 15:19:04 adam Exp $
 
 DISTNAME=	pyqtgraph-0.13.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 313
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
