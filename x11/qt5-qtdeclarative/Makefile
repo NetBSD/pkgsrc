@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2024/11/19 22:46:11 adam Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/03 13:05:29 wiz Exp $
 
 DISTNAME=	qtdeclarative-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtdeclarative-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt5 module for declarative framework
 
 BUILD_TARGET=		sub-tools
@@ -12,7 +13,7 @@ PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 post-install:
-.for i in Qt5Qml.pc Qt5Quick.pc Qt5QuickTest.pc Qt5QuickWidgets.pc
+.for i in Qt5Qml.pc Qt5QmlModels.pc Qt5Quick.pc Qt5QuickTest.pc Qt5QuickWidgets.pc
 	cd ${DESTDIR}${PREFIX}/lib/pkgconfig && \
 	${LN} -f -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
