@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2024/07/18 09:59:34 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/04 20:10:34 pin Exp $
 
 DISTNAME=	scriptisto-2.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igor-petruk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/igor-petruk/scriptisto/
 COMMENT=	Language-agnostic interpreter to write scripts in compiled languages
 LICENSE=	apache-2.0
