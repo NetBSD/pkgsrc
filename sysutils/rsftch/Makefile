@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2024/10/24 07:52:41 pin Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/04 20:07:17 pin Exp $
 
 DISTNAME=	rsftch-0.7.7
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/charklie/rsftch/
 COMMENT=	Lightning fast hardware fetch
 LICENSE=	gnu-gpl-v3
