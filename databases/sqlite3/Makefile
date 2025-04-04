@@ -1,20 +1,16 @@
-# $NetBSD: Makefile,v 1.165 2025/03/31 16:02:03 riastradh Exp $
+# $NetBSD: Makefile,v 1.166 2025/04/04 14:05:07 jperkin Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-${SQLITE3_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	SQL Database Engine in a C Library
 
 .include "options.mk"
-
-# For autosetup use jimsh instead of tclsh, as tcl requires sqlite3.
-TOOL_DEPENDS+=	jimtcl>0:../../lang/jimtcl
-CONFIGURE_ENV+=	autosetup_tclsh=${PREFIX}/bin/jimsh
 
 # Disable ccache; see autosetup/cc.tcl
 CONFIGURE_ENV+=	CCACHE=none
@@ -59,7 +55,7 @@ PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator
-.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+.if ${MACHINE_PLATFORM:MDarwin-[0-8].*-*}
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0
 CFLAGS+=	-DSQLITE_WITHOUT_ZONEMALLOC
 .endif

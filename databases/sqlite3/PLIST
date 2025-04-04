@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/30 06:18:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/04 14:05:07 jperkin Exp $
 bin/sqlite3
 include/sqlite3.h
 include/sqlite3ext.h
 lib/libsqlite3.a
+lib/libsqlite3.so
 lib/libsqlite3.so.0
 lib/libsqlite3.so.${PKGVERSION}
-lib/libsqlite3.so
 lib/pkgconfig/sqlite3.pc
 man/man1/sqlite3.1
