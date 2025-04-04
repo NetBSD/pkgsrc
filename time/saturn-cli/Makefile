@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/03/09 21:54:02 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/04 20:09:16 pin Exp $
 
 DISTNAME=	saturn-0.4.5
 PKGNAME=	saturn-cli-0.4.5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=erikh/}
 GITHUB_PROJECT=	saturn
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/erikh/saturn/
 COMMENT=	Calendar for CLI nerds
 LICENSE=	mit
