@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2470 2025/04/03 16:33:24 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.2471 2025/04/04 00:21:50 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/xz to 5.8.1 [adam 2025-04-03]
 	Updated archivers/unshield to 1.6.2 [adam 2025-04-03]
 	Updated x11/mlterm to 3.9.4 [tsutsui 2025-04-03]
+	Updated www/firefox115 to 115.22.0 [gutteridge 2025-04-04]
