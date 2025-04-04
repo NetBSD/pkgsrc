@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/24 08:39:47 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/04 20:27:29 pin Exp $
 
 DISTNAME=	xt-0.19.4
 PKGNAME=	xt-rs-0.19.4
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	https://static.crates.io/crates/xt/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ahamlinman/xt/
 COMMENT=	Translate between serialized data formats
 LICENSE=	mit
