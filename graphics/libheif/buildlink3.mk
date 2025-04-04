@@ -1,8 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/04/03 07:03:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2025/04/04 01:00:52 dholland Exp $
 
 BUILDLINK_TREE+=	libheif
 
 .include "../../mk/compiler.mk"
+
+# Intercept gcc versions that accept c++11 but not c++17.
+#
+# XXX: This version logic should not be pasted into bl3 files all over
+# XXX: the place; if we're going to do this, there should be
+# XXX: infrastructure for it.
+.if ${CC_VERSION:Mgcc-4.[89].*} || ${CC_VERSION:Mgcc-[56].*}
+# this defines LIBHEIF_BUILDLINK3_MK so the next sections aren't used
+.  include "../../graphics/libheif-cxx11/buildlink3.mk"
+.endif
 
 .if !defined(LIBHEIF_BUILDLINK3_MK)
 LIBHEIF_BUILDLINK3_MK:=
