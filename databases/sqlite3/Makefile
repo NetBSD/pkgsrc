@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2025/04/04 14:05:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.167 2025/04/04 21:29:14 riastradh Exp $
 
 .include "Makefile.common"
 
@@ -23,6 +23,12 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ENV+=		CC_FOR_BUILD=${TOOLS_CMD.native-cc:Q}
+TOOLS_CREATE+=		native-cc
+TOOLS_SCRIPT.native-cc=	exec ${NATIVE_CC} "$$@"
+.endif
 
 # sqlite3 compile options are documented at:
 #
