@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2025/01/25 10:15:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.212 2025/04/04 20:25:08 wiz Exp $
 
 DISTNAME=	gtk+-3.24.43
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -97,18 +97,22 @@ PRINT_PLIST_AWK+=	/gtk-doc/	{ $$0 = "$${PLIST.doc}"$$0 }
 _BUILDING_GTK3=	yes
 .include "modules.mk"
 
+.include "options.mk"
+
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
 .include "../../devel/at-spi2-core/buildlink3.mk"
+
+.if !empty(PKG_OPTIONS:Mgtk3-atk-bridge) && empty(PKG_BUILD_OPTIONS.at-spi2-core:Mdbus)
+BROKEN=		"gtk3 with the gtk3-atk-bridge enabled needs at-spi2-core built with the dbus option."
+.endif
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.57.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.30.0
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-
-.include "options.mk"
-
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/meson/build.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.41
