@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/02 10:54:21 pin Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/04 20:04:33 pin Exp $
 
 DISTNAME=	rex-0.1.18
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=TheRustyPickle/}
 GITHUB_PROJECT=	Rex
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/TheRustyPickle/Rex/
 COMMENT=	TUI for keeping track of incomes and expenses
 LICENSE=	mit
