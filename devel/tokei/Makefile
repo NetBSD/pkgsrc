@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/15 21:20:23 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/04 20:19:32 pin Exp $
 
 DISTNAME=	v13.0.0-alpha.8
 PKGNAME=	${GITHUB_PROJECT}-13.0.0.alpha8
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
 GITHUB_PROJECT=	tokei
 GITHUB_TAG=	v13.0.0-alpha.8
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/XAMPPRocky/tokei/
 COMMENT=	Displays statistics about code
 LICENSE=	apache-2.0 AND mit
