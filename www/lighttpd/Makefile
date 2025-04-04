@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.136 2025/03/23 00:28:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.137 2025/04/04 13:30:17 schmonz Exp $
 
-DISTNAME=	lighttpd-1.4.78
+DISTNAME=	lighttpd-1.4.79
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://www.lighttpd.net/
 COMMENT=	Fast, light-footprint HTTP server
 LICENSE=	modified-bsd
@@ -66,7 +66,7 @@ SUBST_VARS.path=	LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR LIGHTTPD_USER \
 			LIGHTTPD_GROUP PKG_SYSCONFDIR VARBASE
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} ./autogen.sh
+	cd ${WRKSRC} && ${CONFIG_SHELL} ./autogen.sh
 
 post-install:
 	set -e; cd ${WRKSRC}/doc;				\
