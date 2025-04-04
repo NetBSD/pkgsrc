@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2024/10/31 10:49:33 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/04 20:01:39 pin Exp $
 
 DISTNAME=	qcalc-0.15.2
 CATEGORIES=	math
 MASTER_SITES=	https://static.crates.io/crates/qcalc/
 EXTRACT_SUFX=	.crate
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OchirErkhembayar/qcalc/
 COMMENT=	Terminal GUI calculator
 LICENSE=	mit
