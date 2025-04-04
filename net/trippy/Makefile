@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2025/01/03 17:05:55 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/04 20:22:43 pin Exp $
 
 DISTNAME=	trippy-0.12.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fujiapple852/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fujiapple852/trippy/
 COMMENT=	Network diagnostic tool
 LICENSE=	apache-2.0
