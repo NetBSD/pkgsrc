@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2024/08/16 03:35:04 pin Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/04 20:02:37 pin Exp $
 
 DISTNAME=	qrrs-0.1.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Lenivaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Lenivaya/qrrs/
 COMMENT=	CLI tool for working with qr-codes
 LICENSE=	mit
