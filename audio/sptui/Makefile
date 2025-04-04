@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/03/07 20:54:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/04 20:14:52 pin Exp $
 
 DISTNAME=	sptui-0.1.2
 PKGREVISION=	8
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=szktkfm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/szktkfm/sptui/
 COMMENT=	Spotify TUI player
 LICENSE=	mit
