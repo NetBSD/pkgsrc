@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/06/28 09:32:10 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/04 20:21:44 pin Exp $
 
 DISTNAME=	tre-command-0.4.0
 CATEGORIES=	sysutils
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dduan/}
 GITHUB_PROJECT=	tre
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dduan/tre/
 COMMENT=	Tree command, improved
 LICENSE=	mit
