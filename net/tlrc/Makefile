@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2025/04/02 11:04:37 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/04 20:18:30 pin Exp $
 
 DISTNAME=	tlrc-1.11.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tldr-pages/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tldr.sh/
 COMMENT=	Tldr client written in Rust
 LICENSE=	mit
