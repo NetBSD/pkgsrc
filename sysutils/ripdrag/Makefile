@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/12/27 08:20:40 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/04 20:05:33 pin Exp $
 
 DISTNAME=	ripdrag-0.4.10
 PKGREVISION=	3
@@ -6,8 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/ripdrag/
 EXTRACT_SUFX=	.crate
 
-
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nik012003/ripdrag/
 COMMENT=	Drag and Drop utilty written in Rust and GTK4
 LICENSE=	gnu-gpl-v3
