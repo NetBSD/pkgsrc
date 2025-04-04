@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2474 2025/04/04 14:05:15 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.2475 2025/04/04 19:41:07 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox115-l10n to 115.22.0 [gutteridge 2025-04-04]
 	Updated www/lighttpd to 1.4.79 [schmonz 2025-04-04]
 	Updated databases/sqlite3 to 3.49.1nb2 [jperkin 2025-04-04]
+	Updated games/openrct2 to 0.4.20 [ffaubert 2025-04-04]
