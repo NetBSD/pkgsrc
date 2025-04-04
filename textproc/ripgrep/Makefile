@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2025/02/24 21:52:08 kim Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/04 20:06:25 pin Exp $
 
 DISTNAME=	ripgrep-14.1.1
 PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/BurntSushi/ripgrep/
 COMMENT=	Line-oriented search tool
 LICENSE=	unlicense
