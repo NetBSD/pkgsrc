@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2473 2025/04/04 13:30:23 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2474 2025/04/04 14:05:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox115 to 115.22.0 [gutteridge 2025-04-04]
 	Updated www/firefox115-l10n to 115.22.0 [gutteridge 2025-04-04]
 	Updated www/lighttpd to 1.4.79 [schmonz 2025-04-04]
+	Updated databases/sqlite3 to 3.49.1nb2 [jperkin 2025-04-04]
