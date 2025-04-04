@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2025/04/02 11:03:22 pin Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/04 20:13:06 pin Exp $
 
 DISTNAME=	sniffnet-1.3.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GyulyVGC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.sniffnet.net/
 COMMENT=	Application to comfortably monitor your network traffic
 LICENSE=	mit OR apache-2.0
