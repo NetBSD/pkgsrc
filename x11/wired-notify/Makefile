@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2024/12/27 08:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/04 20:25:36 pin Exp $
 
 DISTNAME=	wired-notify-0.10.6
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Toqozz/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Toqozz/wired-notify/
 COMMENT=	Lightweight notification daemon with customizable layout blocks
 LICENSE=	mit
