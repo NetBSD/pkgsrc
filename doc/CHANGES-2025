@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2472 2025/04/04 00:26:06 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2473 2025/04/04 13:30:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/mlterm to 3.9.4 [tsutsui 2025-04-03]
 	Updated www/firefox115 to 115.22.0 [gutteridge 2025-04-04]
 	Updated www/firefox115-l10n to 115.22.0 [gutteridge 2025-04-04]
+	Updated www/lighttpd to 1.4.79 [schmonz 2025-04-04]
