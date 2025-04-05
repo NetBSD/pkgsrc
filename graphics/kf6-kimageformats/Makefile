@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/05 00:30:09 markd Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/05 03:33:40 markd Exp $
 
 DISTNAME=	kimageformats-${KF6VER}
 PKGREVISION=	1
@@ -11,9 +11,6 @@ LICENSE=	gnu-lgpl-v2.1
 .include "../../meta-pkgs/kde/kf6.mk"
 
 USE_TOOLS+=	pkg-config
-
-# C++14 (openexr)
-GCC_REQD+=	6
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
