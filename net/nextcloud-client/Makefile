@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/03/31 06:20:58 plunky Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/05 17:42:24 plunky Exp $
 #
 
 DISTNAME=	nextcloud-client-3.16.2
@@ -30,8 +30,8 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING:BOOL=OFF
 # QtWebEngine is not in pkgsrc
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_WEBENGINE:BOOL=OFF
 
-# used as tool during configure
-CMAKE_CONFIGURE_ARGS+=	-DSVG_CONVERTER:FILEPATH=${BUILDLINK_DIR}/bin/rsvg-convert
+# force cmake to use rsvg-convert
+CMAKE_CONFIGURE_ARGS+=	-DSVG_CONVERTER:FILEPATH=rsvg-convert
 
 # cmake finds these even when we have not depended on them
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen:BOOL=TRUE
