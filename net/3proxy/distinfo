@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2025/03/30 15:44:42 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/04/05 07:30:49 wiz Exp $
 
 BLAKE2s (3proxy-0.9.4.tar.gz) = e207319dbc7b88cac0779ab51f177bfa098392c261ab6594417e03fced40c657
 SHA512 (3proxy-0.9.4.tar.gz) = d3316f6ee1217e580ce593a7bfd9d76672487a89862f247373b0acf3ea207887c758168e33b25db9fc974063deab0826c20d455cab2536d03eee49d8bddda6b5
@@ -7,7 +7,7 @@ SHA1 (patch-Makefile.unix) = aabfa5ad7985ddf8b1240e65bc00c86837d844b0
 SHA1 (patch-ab) = 097103e06e576d6e4ad1830122ab6f4d9ed32a3b
 SHA1 (patch-ac) = a68b7949b22a250b7ed223c7790d420fa7ab624c
 SHA1 (patch-ad) = 625c35af17d4d23203e550f8f7e293175b11813f
-SHA1 (patch-ae) = 581707926efe1c1607acb18a56cda0a5e5330feb
+SHA1 (patch-ae) = bd409f5b7d0ddf25fa7a7c644945157c23463ba1
 SHA1 (patch-cfg_3proxy.cfg.sample) = 7b113b9494ca80d613fb53bde02df0b9e3a40584
 SHA1 (patch-man_3proxy.8) = 69a64574e4b1f543ccd4e90bead39740a638b0f4
 SHA1 (patch-man_3proxy.cfg.3) = 3b650436821b1c0cab72a94c1ca245295c5bfba6
