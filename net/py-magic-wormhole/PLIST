@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/05 00:07:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/05 20:02:29 gdt Exp $
 bin/wormhole-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -87,9 +87,6 @@ ${PYSITELIB}/wormhole/_rlcompleter.pyo
 ${PYSITELIB}/wormhole/_send.py
 ${PYSITELIB}/wormhole/_send.pyc
 ${PYSITELIB}/wormhole/_send.pyo
-${PYSITELIB}/wormhole/_status.py
-${PYSITELIB}/wormhole/_status.pyc
-${PYSITELIB}/wormhole/_status.pyo
 ${PYSITELIB}/wormhole/_terminator.py
 ${PYSITELIB}/wormhole/_terminator.pyc
 ${PYSITELIB}/wormhole/_terminator.pyo
