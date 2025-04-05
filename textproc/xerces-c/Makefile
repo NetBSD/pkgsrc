@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/03/05 06:14:11 adam Exp $
+# $NetBSD: Makefile,v 1.57 2025/04/05 04:41:52 markd Exp $
 
 DISTNAME=	xerces-c-3.3.0
 CATEGORIES=	textproc
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_ICU=true
 PKGCONFIG_OVERRIDE=	xerces-c.pc.in
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
