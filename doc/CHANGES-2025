@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2479 2025/04/05 19:44:58 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2480 2025/04/05 20:02:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3242,3 +3242,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/neomutt to 20250404 [wiz 2025-04-05]
 	Updated net/py-magic-wormhole-mailbox-server to 0.5.1 [gdt 2025-04-05]
 	Updated net/py-magic-wormhole-transit-relay to 0.4.0 [gdt 2025-04-05]
+	Updated net/py-magic-wormhole to 0.18.0 [gdt 2025-04-05]
