@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/03/30 16:09:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/05 18:51:12 bsiegert Exp $
 
 DISTNAME=		asdf-0.16.7
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
