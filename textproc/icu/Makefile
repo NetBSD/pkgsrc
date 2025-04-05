@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2025/03/30 15:00:21 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2025/04/05 09:38:10 nia Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -74,9 +74,6 @@ ${ICU_CROSS_COOKIE}:
 	${RUN}${ECHO} > ${.TARGET}
 
 .endif
-
-# error: 'max_align_t' in namespace 'std' does not name a type
-GCC_REQD+=		4.9
 
 CHECK_SSP_SKIP=		lib/libicudata.so*
 
