@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2476 2025/04/04 23:45:36 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.2477 2025/04/05 08:16:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3 to 3.49.1nb2 [jperkin 2025-04-04]
 	Updated games/openrct2 to 0.4.20 [ffaubert 2025-04-04]
 	Updated textproc/ruby-nokogiri to 1.18.7 [tsutsui 2025-04-04]
+	Updated mail/neomutt to 20250404 [wiz 2025-04-05]
