@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2477 2025/04/05 08:16:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2478 2025/04/05 19:44:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3240,3 +3240,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/openrct2 to 0.4.20 [ffaubert 2025-04-04]
 	Updated textproc/ruby-nokogiri to 1.18.7 [tsutsui 2025-04-04]
 	Updated mail/neomutt to 20250404 [wiz 2025-04-05]
+	Updated net/py-magic-wormhole-mailbox-server to 0.5.1 [gdt 2025-04-05]
