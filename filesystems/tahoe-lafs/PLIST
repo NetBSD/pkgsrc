@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/08/11 23:16:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/04/05 20:14:37 gdt Exp $
 bin/grid-manager
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
@@ -407,6 +407,9 @@ ${PYSITELIB}/allmydata/test/data/lease_checker.history.txt
 ${PYSITELIB}/allmydata/test/data/lease_checker.state.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.pub.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.txt
+${PYSITELIB}/allmydata/test/data/openssl-rsa-2048-2.txt
+${PYSITELIB}/allmydata/test/data/openssl-rsa-2048-3.txt
+${PYSITELIB}/allmydata/test/data/openssl-rsa-2048-4.txt
 ${PYSITELIB}/allmydata/test/data/openssl-rsa-2048.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-1024-priv.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-priv.txt
@@ -618,9 +621,6 @@ ${PYSITELIB}/allmydata/test/test_openmetrics.pyo
 ${PYSITELIB}/allmydata/test/test_protocol_switch.py
 ${PYSITELIB}/allmydata/test/test_protocol_switch.pyc
 ${PYSITELIB}/allmydata/test/test_protocol_switch.pyo
-${PYSITELIB}/allmydata/test/test_python2_regressions.py
-${PYSITELIB}/allmydata/test/test_python2_regressions.pyc
-${PYSITELIB}/allmydata/test/test_python2_regressions.pyo
 ${PYSITELIB}/allmydata/test/test_repairer.py
 ${PYSITELIB}/allmydata/test/test_repairer.pyc
 ${PYSITELIB}/allmydata/test/test_repairer.pyo
@@ -744,6 +744,9 @@ ${PYSITELIB}/allmydata/util/base32.pyo
 ${PYSITELIB}/allmydata/util/base62.py
 ${PYSITELIB}/allmydata/util/base62.pyc
 ${PYSITELIB}/allmydata/util/base62.pyo
+${PYSITELIB}/allmydata/util/cbor.py
+${PYSITELIB}/allmydata/util/cbor.pyc
+${PYSITELIB}/allmydata/util/cbor.pyo
 ${PYSITELIB}/allmydata/util/configutil.py
 ${PYSITELIB}/allmydata/util/configutil.pyc
 ${PYSITELIB}/allmydata/util/configutil.pyo
@@ -926,9 +929,9 @@ ${PYSITELIB}/allmydata/windows/fixups.pyo
 ${PYSITELIB}/allmydata/windows/registry.py
 ${PYSITELIB}/allmydata/windows/registry.pyc
 ${PYSITELIB}/allmydata/windows/registry.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.GPL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.TGPPL.rst

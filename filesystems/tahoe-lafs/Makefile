@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2025/02/18 15:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/04/05 20:14:37 gdt Exp $
 
-VERSION_BASE=	1.19.0
+VERSION_BASE=	1.20.0
 VERSION_RC=
-DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+DISTNAME=	tahoe_lafs-${VERSION_BASE}${VERSION_RC}
+PKGNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -12,9 +12,9 @@ HOMEPAGE=	https://tahoe-lafs.org/trac/tahoe-lafs
 COMMENT=	Distributed fault-tolerant least-authority filesystem
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS=	gmake
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_PKG_RESOURCES=	yes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
 
 ## Dependencies are from tahoe's setup.py, in order, and try to follow
 ## setup.py's version requirements.
@@ -89,6 +89,6 @@ PKG_GECOS.tahoes=	tahoe server
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
