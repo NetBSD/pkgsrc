@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2025/03/07 20:54:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.69.2.1 2025/04/05 20:45:04 maya Exp $
 
 DISTNAME=		go-dnstap-0.4.0
-PKGREVISION=		42
+PKGREVISION=		43
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=dnstap/}
 GITHUB_PROJECT=		golang-dnstap

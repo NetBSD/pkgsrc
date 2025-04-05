@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/03/07 20:54:23 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45.2.1 2025/04/05 20:45:04 maya Exp $
 
 DISTNAME=	gvproxy-0.7.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=containers/}
 GITHUB_PROJECT=	gvisor-tap-vsock
