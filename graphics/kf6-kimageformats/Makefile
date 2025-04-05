@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/12/05 09:43:23 markd Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/05 00:30:09 markd Exp $
 
 DISTNAME=	kimageformats-${KF6VER}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -15,7 +16,9 @@ USE_TOOLS+=	pkg-config
 GCC_REQD+=	6
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
