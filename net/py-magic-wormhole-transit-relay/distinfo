@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/11/05 22:43:07 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/04/05 19:41:49 gdt Exp $
 
-BLAKE2s (magic-wormhole-transit-relay-0.2.1.tar.gz) = a5f39eb301552ae98fe462c5d7fb4d6384c42e46abeae1bc800aa7c05ac070a0
-SHA512 (magic-wormhole-transit-relay-0.2.1.tar.gz) = 07eccfe4b5224d66cf31990adabf92e7057b186c509d454896073b3939508f7a3959979f9f1fe6d7423c95612e3bc472ff87995caf6df73b533bbeabc4313955
-Size (magic-wormhole-transit-relay-0.2.1.tar.gz) = 39621 bytes
-SHA1 (patch-versioneer.py) = de9fbb5b1ca5340ec119f130e9de9f1713f62aa1
+BLAKE2s (magic-wormhole-transit-relay-0.4.0.tar.gz) = b9a68d6e886700561f7dc667cd9026be1530f3d06ec5c14647d2c1219f69a2cf
+SHA512 (magic-wormhole-transit-relay-0.4.0.tar.gz) = a20771772b2ffc75abd6a5ef1712460b758c71ad5a59d2acd10f78cba5a2a5796d8ca2ccf30826b3c0543c5b5dc08625b57efb133a6db7506c504b22b9fb855e
+Size (magic-wormhole-transit-relay-0.4.0.tar.gz) = 51921 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/05 22:43:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/05 19:41:49 gdt Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,6 +20,9 @@ ${PYSITELIB}/wormhole_transit_relay/db-schemas/v1.sql
 ${PYSITELIB}/wormhole_transit_relay/increase_rlimits.py
 ${PYSITELIB}/wormhole_transit_relay/increase_rlimits.pyc
 ${PYSITELIB}/wormhole_transit_relay/increase_rlimits.pyo
+${PYSITELIB}/wormhole_transit_relay/server_state.py
+${PYSITELIB}/wormhole_transit_relay/server_state.pyc
+${PYSITELIB}/wormhole_transit_relay/server_state.pyo
 ${PYSITELIB}/wormhole_transit_relay/server_tap.py
 ${PYSITELIB}/wormhole_transit_relay/server_tap.pyc
 ${PYSITELIB}/wormhole_transit_relay/server_tap.pyo
@@ -29,6 +32,9 @@ ${PYSITELIB}/wormhole_transit_relay/test/__init__.pyo
 ${PYSITELIB}/wormhole_transit_relay/test/common.py
 ${PYSITELIB}/wormhole_transit_relay/test/common.pyc
 ${PYSITELIB}/wormhole_transit_relay/test/common.pyo
+${PYSITELIB}/wormhole_transit_relay/test/test_backpressure.py
+${PYSITELIB}/wormhole_transit_relay/test/test_backpressure.pyc
+${PYSITELIB}/wormhole_transit_relay/test/test_backpressure.pyo
 ${PYSITELIB}/wormhole_transit_relay/test/test_config.py
 ${PYSITELIB}/wormhole_transit_relay/test/test_config.pyc
 ${PYSITELIB}/wormhole_transit_relay/test/test_config.pyo
@@ -50,3 +56,6 @@ ${PYSITELIB}/wormhole_transit_relay/test/test_transit_server.pyo
 ${PYSITELIB}/wormhole_transit_relay/transit_server.py
 ${PYSITELIB}/wormhole_transit_relay/transit_server.pyc
 ${PYSITELIB}/wormhole_transit_relay/transit_server.pyo
+${PYSITELIB}/wormhole_transit_relay/usage.py
+${PYSITELIB}/wormhole_transit_relay/usage.pyc
+${PYSITELIB}/wormhole_transit_relay/usage.pyo
