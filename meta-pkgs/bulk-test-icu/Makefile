@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/03 08:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/05 07:05:59 wiz Exp $
 
 DISTNAME=	bulk-test-icu-20250125
 CATEGORIES=	meta-pkgs
@@ -70,7 +70,7 @@ DEPENDS+=	darktable-[0-9]*:../../graphics/darktable
 DEPENDS+=	imv-[0-9]*:../../graphics/imv
 DEPENDS+=	tesseract-[0-9]*:../../graphics/tesseract
 DEPENDS+=	vtk-[0-9]*:../../graphics/vtk
-PYTHON_VERSIONS_INCOMPATIBLE=	39 313 # py-qtgraph-qt5 via gnuradio-core
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-qtgraph-qt5 via gnuradio-core
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt
 DEPENDS+=	mono-[0-9]*:../../lang/mono
