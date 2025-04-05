@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2480 2025/04/05 20:02:36 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2481 2025/04/05 20:04:44 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3243,3 +3243,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-magic-wormhole-mailbox-server to 0.5.1 [gdt 2025-04-05]
 	Updated net/py-magic-wormhole-transit-relay to 0.4.0 [gdt 2025-04-05]
 	Updated net/py-magic-wormhole to 0.18.0 [gdt 2025-04-05]
+	Added devel/py-iterable-io version 1.0.0 [gdt 2025-04-05]
