@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/03/31 16:50:45 nia Exp $
+# $NetBSD: Makefile,v 1.65 2025/04/05 09:17:23 nia Exp $
 
 DISTNAME=	qmmp-1.7.4
 CATEGORIES=	audio
@@ -78,6 +78,7 @@ PRINT_PLIST_AWK+=	/libffmpeg./ { print "$${PLIST.ffmpeg}" $$0; next }
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .if ${OPSYS} == "Darwin"
 .  include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .else
