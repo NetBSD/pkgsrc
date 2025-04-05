@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/03/07 20:54:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2025/04/05 20:45:04 maya Exp $
 
 DISTNAME=	grpcurl-1.9.1
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fullstorydev/}
 
