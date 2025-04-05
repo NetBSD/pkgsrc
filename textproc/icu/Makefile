@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2025/04/05 09:38:10 nia Exp $
+# $NetBSD: Makefile,v 1.164 2025/04/05 10:03:08 nia Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -155,15 +155,6 @@ REPLACE_SH=	config/icu-config-top
 post-configure:
 	${MKDIR} ${WRKSRC}/data/out
 
-# expect builtin gcc atomic functions for gcc>=4.1
-# (source/common/putilimp.h)
-.if ${CC_VERSION:Mgcc-*} &&	\
-	(!${CC_VERSION:Mgcc-4.0*} && !${CC_VERSION:Mgcc-[0-3].*})
-.  if ${MACHINE_ARCH} == "i386"
-CFLAGS+=	-march=i486
-.  endif
-.endif
-
 .if ${OPSYS} == "Cygwin"
 INSTALL_UNSTRIPPED=	yes
 SO_MAJOR=		${PKGVERSION_NOREV:R}
@@ -186,4 +177,5 @@ SUBST_SED.icu-config+=	-e 's/l$${LIBICU}/l$${ICUPREFIX}/g'
 SUBST_SED.icu-config+=	-e '/l$${ICUPREFIX}/ s/$${ICULIBSUFFIX_VERSION}//g'
 .endif
 
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
