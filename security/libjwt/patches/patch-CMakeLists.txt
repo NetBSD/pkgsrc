@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/05 09:19:55 nia Exp $
+
+Disable -Werror.
+
+--- CMakeLists.txt.orig	2025-04-05 09:19:05.461840572 +0000
++++ CMakeLists.txt
+@@ -21,7 +21,7 @@ project(${LIBJWT_PROJECT}
+ set(MEMORYCHECK_COMMAND_OPTIONS "-q --tool=memcheck --leak-check=yes --num-callers=50 --trace-children=yes --leak-check=full --track-origins=yes --gen-suppressions=all")
+ 
+ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+-add_compile_options(-Wall -Werror -Wextra -Wunused)
++add_compile_options(-Wall -Wextra -Wunused)
+ 
+ # Must be set after the above
+ include(GNUInstallDirs)
