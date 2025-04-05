@@ -6,3 +6,6 @@ English language, including Ispell and Microsoft Word. It also has many other
 technical enhancements over Ispell such as using shared memory for dictionaries
 and intelligently handling personal dictionaries when more than one Aspell
 process is open at once.
+
+This package contains the spell checker itself, which expects one or
+more dictionaries to also be present.
