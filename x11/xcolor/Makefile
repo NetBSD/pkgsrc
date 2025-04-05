@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/02 12:27:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/05 10:50:16 riastradh Exp $
 
 DISTNAME=	xcolor-0.5.1
 PKGREVISION=	2
@@ -21,8 +21,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 
-do-install: do-install-man
-do-install-man: .PHONY
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/xcolor ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/xcolor.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xcolor.1
 
 .include "../../lang/rust/cargo.mk"
