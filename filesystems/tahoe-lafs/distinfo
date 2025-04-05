@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/08/11 23:16:41 gdt Exp $
+$NetBSD: distinfo,v 1.24 2025/04/05 20:14:37 gdt Exp $
 
-BLAKE2s (tahoe-lafs-1.19.0.tar.gz) = e5a2442a4ed313d5efd61ea289f10524148f37b8540665662c1d0794b36fbb33
-SHA512 (tahoe-lafs-1.19.0.tar.gz) = 6afa64e4845b2013f8cc7b5c93e6f57e975302abe85dc52370f9888868a8cb17e0f1dd1b9431e92747abcfb403d8de7bbcc41bdcb03e6c9cc7249ce02c397eb3
-Size (tahoe-lafs-1.19.0.tar.gz) = 2281905 bytes
+BLAKE2s (tahoe_lafs-1.20.0.tar.gz) = 9b6a651f8592ee211de1afd5f703c967ba71d46aef8bc56b10d2f94b6fc54a96
+SHA512 (tahoe_lafs-1.20.0.tar.gz) = 973a928d5cd5805b645ddfd90750ec526a0ee587246eda8e48202ced4eb20d4c15d361149a4dec359fa5b2badc79a515da32c3abe04cbd85cf80dab49e9ecf25
+Size (tahoe_lafs-1.20.0.tar.gz) = 2237761 bytes
