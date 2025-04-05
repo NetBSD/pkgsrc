@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/04/05 20:43:02 gdt Exp $
+# $NetBSD: Makefile,v 1.69 2025/04/05 23:23:58 gdt Exp $
 
 VERSION_BASE=	1.20.0
 VERSION_RC=
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.0:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-foolscap>=23.3.0:../../net/py-foolscap
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography # >= 2.6
-DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=23.2.0:../../security/py-OpenSSL
+PYTHON_VERSIONED_DEPENDENCIES+= OpenSSL # >=23.2.0
 
 # twisted needs tls, conch options.  pkgsrc has tls.  \todo conch
 DEPENDS+=	${PYPKGPREFIX}-twisted>=22.8.0:../../net/py-twisted
