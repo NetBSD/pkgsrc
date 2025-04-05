@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4458 2025/04/01 17:03:03 abs Exp $
+# $NetBSD: Makefile,v 1.4459 2025/04/05 20:06:05 gdt Exp $
 #
 
 COMMENT=	Development utilities
@@ -2726,6 +2726,7 @@ SUBDIR+=	py-iso-639
 SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
 SUBDIR+=	py-itanium_demangler
+SUBDIR+=	py-iterable-io
 SUBDIR+=	py-jaraco.classes
 SUBDIR+=	py-jaraco.collections
 SUBDIR+=	py-jaraco.context
