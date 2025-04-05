@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/04/02 12:21:58 micha Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/05 09:31:12 nia Exp $
 
 DISTNAME=	woof_15.2.0
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -62,7 +62,6 @@ BUILDLINK_API_DEPENDS.libebur128+=	libebur128>=1.2.0
 BUILDLINK_API_DEPENDS.libsndfile+=	libsndfile>=1.1.0
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libxmp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.openal-soft+=	openal-soft>=1.22.0
 .include "../../audio/openal-soft/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL2+=		SDL2>=2.0.18
 .include "../../devel/SDL2/buildlink3.mk"
