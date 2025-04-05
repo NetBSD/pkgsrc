@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/05 20:04:13 gdt Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/iterableio.py
+${PYSITELIB}/iterableio.pyc
+${PYSITELIB}/iterableio.pyo

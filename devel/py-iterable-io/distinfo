@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/05 20:04:13 gdt Exp $
+
+BLAKE2s (iterable-io-1.0.0.tar.gz) = 79f9cdfd0df93d216ba8f8f337c0aae4585482eaea6ff8efbd28f0f661852b7a
+SHA512 (iterable-io-1.0.0.tar.gz) = 671f61d25645af027bffe07972f263073097baba83c68e64daa2fff4d66b6a537da91ff5039a4d45e1d6ad6e4f49cba84c6c0e61c3c5a32c9f327698653beefe
+Size (iterable-io-1.0.0.tar.gz) = 6050 bytes
