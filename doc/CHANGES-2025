@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2488 2025/04/06 10:16:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2489 2025/04/06 10:17:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3250,3 +3250,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fzf to 0.61.0 [iquiw 2025-04-06]
 	Updated time/p5-DateTime-Locale to 1.45 [wiz 2025-04-06]
 	Updated devel/p5-Scalar-List-Utils to 1.69 [wiz 2025-04-06]
+	Updated devel/p5-Test-Deep to 1.205 [wiz 2025-04-06]
