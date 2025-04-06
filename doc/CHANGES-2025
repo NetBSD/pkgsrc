@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2484 2025/04/06 04:22:41 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.2485 2025/04/06 04:58:50 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3247,3 +3247,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated filesystems/tahoe-lafs to 1.20.0 [gdt 2025-04-05]
 	Added sysutils/u-boot-marsboard version 2021.01 [rxg 2025-04-06]
 	Updated devel/task to 3.42.1 [iquiw 2025-04-06]
+	Updated sysutils/fzf to 0.61.0 [iquiw 2025-04-06]
