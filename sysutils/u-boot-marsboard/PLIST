@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/06 02:58:00 rxg Exp $
+share/u-boot/marsboard/installboot.plist
+share/u-boot/marsboard/u-boot.bin
+share/u-boot/marsboard/u-boot.imx
