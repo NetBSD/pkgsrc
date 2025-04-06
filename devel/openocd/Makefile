@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/05/17 15:29:13 nikita Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/06 10:07:06 adam Exp $
 
 DISTNAME=	openocd-0.12.0
 CATEGORIES=	devel
@@ -16,7 +16,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 INFO_FILES=	yes
 
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--disable-internal-jimtcl
 BUILDLINK_TRANSFORM+=	rm:-Werror
 OVERRIDE_DIRDEPTH?=	5
