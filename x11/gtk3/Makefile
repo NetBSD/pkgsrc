@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2025/04/04 20:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.213 2025/04/06 11:11:14 wiz Exp $
 
 DISTNAME=	gtk+-3.24.43
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -105,7 +105,7 @@ BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
 .include "../../devel/at-spi2-core/buildlink3.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk3-atk-bridge) && empty(PKG_BUILD_OPTIONS.at-spi2-core:Mdbus)
-BROKEN=		"gtk3 with the gtk3-atk-bridge enabled needs at-spi2-core built with the dbus option."
+PKG_FAIL_REASON=	"gtk3 with the gtk3-atk-bridge enabled needs at-spi2-core built with the dbus option."
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
