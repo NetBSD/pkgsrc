@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2025/04/01 20:30:09 bsiegert Exp $
+$NetBSD: distinfo,v 1.18 2025/04/06 08:01:00 bsiegert Exp $
 
 BLAKE2s (github.com_alecthomas_kingpin_v2_@v_v2.4.0.mod) = 20c554bf73adc1d4faea9cf1eba7f569d362037f364d643d7176e790eed60759
 SHA512 (github.com_alecthomas_kingpin_v2_@v_v2.4.0.mod) = 27b647208aec705c995e523035f278c6b81102ba59f5a95e6e7adf1e8cba2e166d73f0d1115946acfcb736918b5b0db66d2f2aeba084a3581a7a29d342f511b2
@@ -358,4 +358,4 @@ BLAKE2s (node_exporter-1.9.1.tar.gz) = 4d54a18f1741eee40bd0bf2c5f5274da0409031e5
 SHA512 (node_exporter-1.9.1.tar.gz) = 233d1d856d9e2598818f7487357a51b94a39207810d9f35e0cb44c4703583be07ebde6eb658c25560d9345d0c43651a880be5fc42fe3cbe1975d6f6c348eeddf
 Size (node_exporter-1.9.1.tar.gz) = 353747 bytes
 SHA1 (patch-collector_netdev__common.go) = e09435c33bab26ac85a6affa280605caeb3b2b7f
-SHA1 (patch-collector_netdev__netbsd.go) = 59d5409ea5ab267c48c9a5d299e66c7c283f8680
+SHA1 (patch-collector_netdev__netbsd.go) = 890ad5d2a3532284102a2c7dbc110531a249aad5

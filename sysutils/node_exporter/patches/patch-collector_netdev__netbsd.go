@@ -1,10 +1,10 @@
-$NetBSD: patch-collector_netdev__netbsd.go,v 1.1 2024/07/28 01:14:24 tnn Exp $
+$NetBSD: patch-collector_netdev__netbsd.go,v 1.2 2025/04/06 08:01:00 bsiegert Exp $
 
 https://github.com/prometheus/node_exporter/pull/3078
 
---- collector/netdev_netbsd.go.orig	2024-07-28 01:10:15.812170143 +0000
+--- collector/netdev_netbsd.go.orig	2025-04-06 07:33:45.669286845 +0000
 +++ collector/netdev_netbsd.go
-@@ -0,0 +1,91 @@
+@@ -0,0 +1,95 @@
 +// Copyright 2024 The Prometheus Authors
 +// Licensed under the Apache License, Version 2.0 (the "License");
 +// you may not use this file except in compliance with the License.
@@ -27,8 +27,7 @@ https://github.com/prometheus/node_exporter/pull/3078
 +	"errors"
 +
 +	"fmt"
-+	"github.com/go-kit/log"
-+	"github.com/go-kit/log/level"
++	"log/slog"
 +	"unsafe"
 +)
 +
@@ -43,7 +42,7 @@ https://github.com/prometheus/node_exporter/pull/3078
 +*/
 +import "C"
 +
-+func getNetDevStats(filter *deviceFilter, logger log.Logger) (netDevStats, error) {
++func getNetDevStats(filter *deviceFilter, logger *slog.Logger) (netDevStats, error) {
 +	netDev := netDevStats{}
 +
 +	var ifap, ifa *C.struct_ifaddrs
@@ -59,7 +58,7 @@ https://github.com/prometheus/node_exporter/pull/3078
 +
 +		dev := C.GoString(ifa.ifa_name)
 +		if filter.ignored(dev) {
-+			level.Debug(logger).Log("msg", "Ignoring device", "device", dev)
++			logger.Debug("Ignoring device", "device", dev)
 +			continue
 +		}
 +
@@ -95,4 +94,9 @@ https://github.com/prometheus/node_exporter/pull/3078
 +	}
 +
 +	return netDev, nil
++}
++
++func getNetDevLabels() (map[string]map[string]string, error) {
++	// to be implemented if needed
++	return nil, nil
 +}
