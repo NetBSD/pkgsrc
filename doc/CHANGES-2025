@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2485 2025/04/06 04:58:50 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.2486 2025/04/06 10:12:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1682,7 +1682,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4-extras to 4.20.0nb28 [gutteridge 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3 [pho 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3.1 [pho 2025-02-10]
-	Added textproc/jnv version 5.0 [nonaka 2025-02-10]
+	Added textproc/jnv version 0.5.0 [nonaka 2025-02-10]
 	Added devel/ade version 0.1.2e [adam 2025-02-10]
 	Updated devel/py-pip to 25.0.1 [adam 2025-02-10]
 	Updated devel/tig to 2.5.12 [nonaka 2025-02-10]
