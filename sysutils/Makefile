@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1153 2025/03/16 20:07:38 riastradh Exp $
+# $NetBSD: Makefile,v 1.1154 2025/04/06 03:05:43 rxg Exp $
 #
 
 COMMENT=	System utilities
@@ -828,6 +828,7 @@ SUBDIR+=	u-boot-libretech-all-h3-cc-h3
 SUBDIR+=	u-boot-libretech-all-h3-cc-h5
 SUBDIR+=	u-boot-libretech-cc
 SUBDIR+=	u-boot-licheepi-zero
+SUBDIR+=	u-boot-marsboard
 SUBDIR+=	u-boot-nanopi-duo2
 SUBDIR+=	u-boot-nanopi-m1
 SUBDIR+=	u-boot-nanopi-neo
