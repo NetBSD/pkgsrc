@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2492 2025/04/06 14:51:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2493 2025/04/06 14:52:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3254,3 +3254,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Type-Tiny to 2.008000 [wiz 2025-04-06]
 	Updated emulators/PC6001VX to 4.2.12 [tsutsui 2025-04-06]
 	Updated shells/oh-my-posh to 25.12.0 [pin 2025-04-06]
+	Updated graphics/scrot to 1.12.1 [pin 2025-04-06]
