@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/11/28 19:45:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/06 17:55:15 schmonz Exp $
 
 DISTNAME=	jdk21u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk21-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -41,6 +41,7 @@ BUILDLINK_TRANSFORM+=	opt:-Wl,--hash-style=gnu:-Wl,--hash-style=sysv
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # generates the configure script during the build
+GNU_CONFIGURE_ICONV=	no
 USE_GNU_CONFIGURE_HOST=	no
 CONFIGURE_SCRIPT=	configure
 CONFIG_SHELL=		bash
