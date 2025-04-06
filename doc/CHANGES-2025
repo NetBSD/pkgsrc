@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2486 2025/04/06 10:12:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2487 2025/04/06 10:15:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/u-boot-marsboard version 2021.01 [rxg 2025-04-06]
 	Updated devel/task to 3.42.1 [iquiw 2025-04-06]
 	Updated sysutils/fzf to 0.61.0 [iquiw 2025-04-06]
+	Updated time/p5-DateTime-Locale to 1.45 [wiz 2025-04-06]
