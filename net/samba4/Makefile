@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.196 2025/01/07 11:33:06 adam Exp $
+# $NetBSD: Makefile,v 1.197 2025/04/06 16:15:43 tsutsui Exp $
 
 DISTNAME=	samba-4.21.3
 CATEGORIES=	net
@@ -122,6 +122,14 @@ PLIST_SUBST+=	SOEXT=dylib
 .else
 PLIST_SUBST+=	SOEXT=so
 .endif
+
+# mdb is built only on LP64 hosts (PR pkg/58947)
+PLIST_VARS+=	mdb
+.for platform in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${platform}}
+PLIST.mdb=	yes
+.  endif
+.endfor
 
 .if !defined(PWD_MKDB)
 PWD_MKDB!=	${TYPE} pwd_mkdb 2>&1 | \

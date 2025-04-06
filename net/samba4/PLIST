@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2024/11/26 11:38:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.60 2025/04/06 16:15:43 tsutsui Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -780,7 +780,7 @@ ${PLIST.ads}lib/samba/ldb/ldap.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/ldb.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/ldbsamba_extensions.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/linked_attributes.${SOEXT}
-${PLIST.ads}lib/samba/ldb/mdb.${SOEXT}
+${PLIST.ads}${PLIST.mdb}lib/samba/ldb/mdb.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/new_partition.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/objectclass.${SOEXT}
 ${PLIST.ads}lib/samba/ldb/objectclass_attrs.${SOEXT}
@@ -886,7 +886,7 @@ lib/samba/private/libkrb5-private-samba.so
 lib/samba/private/libkrb5samba-private-samba.so
 lib/samba/private/libldb-cmdline-private-samba.so
 lib/samba/private/libldb-key-value-private-samba.so
-lib/samba/private/libldb-mdb-int-private-samba.so
+${PLIST.mdb}lib/samba/private/libldb-mdb-int-private-samba.so
 lib/samba/private/libldb-private-samba.so
 lib/samba/private/libldb-tdb-err-map-private-samba.so
 lib/samba/private/libldb-tdb-int-private-samba.so
