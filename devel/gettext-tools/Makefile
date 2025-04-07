@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/01/03 16:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/04/07 15:26:08 nia Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -37,9 +37,20 @@ BUILDLINK_TRANSFORM.Cygwin+=	rm:-Wl,--disable-auto-import
 #bug 20453 in bug-gzip list, passed onto gnulib
 CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
 
-PLIST_VARS+=	glibc
-
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "UnixWare"
+# atomics
+CFLAGS+=		-march=i486
+# cannot handle stat functions defined as macros by uw7 libc
+SUBST_CLASSES+=         offset
+SUBST_STAGE.offset=     pre-configure
+SUBST_FILES.offset=     */configure
+SUBST_SED.offset=       -e 's/FILE_OFFSET_BITS 64/FILE_OFFSET_BITS 32/g'
+SUBST_SED.offset+=	-e 's/FILE_OFFSET_BITS=64/FILE_OFFSET_BITS=32/g'
+.endif
+
+PLIST_VARS+=	glibc
 
 .if !empty(GLIBC_VERSION)
 PLIST.glibc=	yes
