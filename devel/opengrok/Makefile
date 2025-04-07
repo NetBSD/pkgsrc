@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/11/14 22:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/04/07 10:05:58 wiz Exp $
 
 DISTNAME=	OpenGrok-0.12.1.5
 PKGNAME=	${DISTNAME:tl:S/-rc/rc/}
@@ -16,6 +16,10 @@ EXTRACT_USING=	bsdtar
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
 DEPENDS+=	jflex-[0-9]*:../../devel/jflex
 DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
+
+# TODO:
+# This downloads files during build
+# download-jflex: Error getting https://repo1.maven.org/maven2/de/jflex/jflex/1.5.1/jflex-1.5.1.jar to /pbulk/work/devel/opengrok/work/OpenGrok-0.12.1.5/lib/jflex-1.5.1.jar
 
 # XXX PREFIX should not be used here, but I would like to reduce dependencies.
 SUBST_CLASSES+=		vcs
