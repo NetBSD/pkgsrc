@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.39 2025/03/12 09:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/04/07 12:25:38 adam Exp $
 
-DISTNAME=	prettytable-3.15.1
+DISTNAME=	prettytable-3.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prettytable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/jazzband/prettytable
+HOMEPAGE=	https://github.com/prettytable/prettytable
 COMMENT=	Display tabular data in a visually appealing ASCII table format
 LICENSE=	modified-bsd
 
