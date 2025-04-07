@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/03/14 11:53:40 micha Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/07 12:00:32 micha Exp $
 
 DISTNAME=		0.4.0
 PKGNAME=		muon-${DISTNAME}
@@ -22,6 +22,10 @@ DEPENDS+=		samurai>=1.2:../../devel/samurai
 
 # Required for clock_gettime() from GNU libc <2.17
 LDFLAGS.Linux+=		-lrt
+
+# [On SmartOS] ld: fatal: unrecognized option '--as-needed'
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--no-as-needed:-Wl,-zrecord
 
 MUON_ARGS+=		-Dlibcurl=disabled
 MUON_ARGS+=		-Dlibarchive=disabled
