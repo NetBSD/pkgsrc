@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2025/01/21 00:09:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/07 18:40:02 gutteridge Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
@@ -51,6 +51,7 @@ DEPENDS+=	u-boot-lamobo-r1-[0-9]*:../../sysutils/u-boot-lamobo-r1
 .if !empty(PKG_OPTIONS:Mamlogic-meson)
 DEPENDS+=	u-boot-libretech-cc-[0-9]*:../../sysutils/u-boot-libretech-cc
 .endif
+DEPENDS+=	u-boot-marsboard-[0-9]*:../../sysutils/u-boot-marsboard
 DEPENDS+=	u-boot-nanopi-duo2-[0-9]*:../../sysutils/u-boot-nanopi-duo2
 DEPENDS+=	u-boot-nanopi-m1-[0-9]*:../../sysutils/u-boot-nanopi-m1
 DEPENDS+=	u-boot-nanopi-neo-plus2-[0-9]*:../../sysutils/u-boot-nanopi-neo-plus2
