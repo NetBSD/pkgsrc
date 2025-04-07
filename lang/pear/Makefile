@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2025/02/08 03:24:29 taca Exp $
+# $NetBSD: Makefile,v 1.66 2025/04/07 17:12:27 taca Exp $
 #
 
 DISTNAME=	PEAR-1.10.16
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 EXTRACT_ONLY=	# none
 USE_TOOLS+=	gzcat tar
 
-.include "../../lang/php/phpversion.mk"
+.include "../../lang/php/common.mk"
 
 CONFLICTS+=	php<5.2.1nb2
 
