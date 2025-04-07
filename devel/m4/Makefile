@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/03/29 00:37:19 js Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/07 15:25:50 nia Exp $
 
 DISTNAME=	m4-1.4.19
 PKGREVISION=	1
@@ -17,12 +17,24 @@ CONFIGURE_ARGS.Cygwin+=	ac_cv_func___fpending=yes
 INFO_FILES=		yes
 TEST_TARGET=		check
 
+.include "../../mk/bsd.prefs.mk"
+
 CFLAGS.AIX+=	-D_LINUX_SOURCE_COMPAT
+
 .if ${MACHINE_ARCH} == "i386"
-CFLAGS.QNX+=	-march=i486  # Defaults to i386 otherwise, which lacks atomics
+CFLAGS.QNX+=		-march=i486  # Defaults to i386 otherwise, which lacks atomics
+CFLAGS.UnixWare+=	-march=i486  # Defaults to i386 otherwise, which lacks atomics
 .endif
 
 AUTO_MKDIRS=		yes
+
+.if ${OPSYS} == "UnixWare"
+# cannot handle stat functions defined as macros by uw7 libc
+SUBST_CLASSES+=		offset
+SUBST_STAGE.offset=	pre-configure
+SUBST_FILES.offset=	configure
+SUBST_SED.offset=	-e 's/FILE_OFFSET_BITS 64/FILE_OFFSET_BITS 32/g'
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.m4 ${DESTDIR}${PREFIX}/share/examples/m4
