@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.342 2025/04/04 20:29:41 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.343 2025/04/07 14:15:37 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26157,3 +26157,5 @@ redlib<0.36.0	denial-of-service	https://github.com/redlib-org/redlib/security/ad
 py{39,310,311,312,313}-django>=5<5.1.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27556
 openvpn>=2.6.1<2.6.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-2704
 yelp-[0-9]*	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2025-3155
+powerdns-recursor<5.2.0	illegal-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2025-30195
+webkit-gtk<2.48.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54551
