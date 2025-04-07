@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2021/03/29 06:28:43 nia Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/04/07 10:08:39 wiz Exp $
 
 DISTNAME=	jrep-1.1.0
 CATEGORIES=	textproc
@@ -22,6 +21,9 @@ USE_TOOLS+=	pod2man
 TEST_TARGET=	test
 
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR} MAVEN_OPTS=${MAVEN_OPTS:Q}
+
+# TODO: this downloads files during the build
+# [ERROR] Plugin org.apache.maven.plugins:maven-resources-plugin:2.6 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.6: Could not transfer artifact org.apache.maven.plugins:maven-resources-plugin:pom:2.6 from/to central (https://repo.maven.apache.org/maven2): transfer failed for https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom: Network is unreachable (connect failed) -> [Help 1]
 
 MAVEN_OPTS+=	-Duser.home=${FAKEHOMEDIR}
 #MAVEN_OPTS+=	-Dmaven.repo.local=${WRKDIR}/deps
