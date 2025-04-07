@@ -1,4 +1,5 @@
-# $NetBSD: common.mk,v 1.14 2025/03/27 12:40:55 gdt Exp $
+# $NetBSD: common.mk,v 1.15 2025/04/07 17:13:59 taca Exp $
+# used by lang/pear/Makefile
 # used by lang/php56/Makefile.common
 # used by lang/php74/Makefile.common
 # used by lang/php81/Makefile.common
