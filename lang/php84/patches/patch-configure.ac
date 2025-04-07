@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.1 2025/02/22 15:27:56 taca Exp $
+$NetBSD: patch-configure.ac,v 1.2 2025/04/07 17:33:37 taca Exp $
 
 * libphp.so => libphp${PHP_VER}.so.
 * add ${PHP_VER} to lib/php.
 
---- configure.ac.orig	2025-01-15 01:03:17.000000000 +0000
+--- configure.ac.orig	2025-03-12 01:55:56.000000000 +0000
 +++ configure.ac
 @@ -259,7 +259,7 @@ dnl SAPI configuration.
  dnl ----------------------------------------------------------------------------
@@ -14,6 +14,15 @@ $NetBSD: patch-configure.ac,v 1.1 2025/02/22 15:27:56 taca Exp $
  SAPI_LIBNAME_SHARED=$SAPI_LIBNAME.[]$SHLIB_DL_SUFFIX_NAME
  SAPI_LIBNAME_STATIC=$SAPI_LIBNAME.a
  SAPI_SHARED=libs/$SAPI_LIBNAME_SHARED
+@@ -1148,7 +1148,7 @@ AS_VAR_IF([PHP_PEAR], [no],, [
+   AS_VAR_IF([PHP_PEAR], [yes],
+     [AS_CASE([$PHP_LAYOUT],
+       [GNU], [PEAR_INSTALLDIR=$datadir/pear],
+-      [PEAR_INSTALLDIR=$libdir/php])],
++      [PEAR_INSTALLDIR=$libdir/php/${PHP_API_VERS}])],
+     [PEAR_INSTALLDIR=$PHP_PEAR])
+ 
+   PHP_SUBST([PEAR_INSTALLDIR])
 @@ -1306,10 +1306,10 @@ AS_VAR_IF([program_suffix], [NONE], [pro
  
  orig_libdir=$libdir

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2025/03/13 15:16:17 taca Exp $
+$NetBSD: distinfo,v 1.21 2025/04/07 17:33:36 taca Exp $
 
 BLAKE2s (php-8.3.19.tar.xz) = c5119f2fa7692da110db99b803c46d67c004a29cc67a1b0b4ad3a7ae46c7b932
 SHA512 (php-8.3.19.tar.xz) = 2872639f6a6de1680540da5a2df43db7ceeb7e25690b6f66d73373779ee3f9b0c2fe74aeeb7181749c9738b64f8d41b8a6f496751778c1df10b7f9aab43f21f7
@@ -7,7 +7,7 @@ SHA1 (patch-TSRM_TSRM.c) = 278007810b74fa7a9cd971dac051d6a2ea0ad90d
 SHA1 (patch-TSRM_TSRM.h) = 70ebc03a611124d76d6813f619ff18b3a8fbf1e8
 SHA1 (patch-build_Makefile.global) = 87c533087a536649b5f51108ef4f4b72c8efc5b2
 SHA1 (patch-build_php.m4) = 4a99c91785e7de3095cab08ed2fad6053b4a94e0
-SHA1 (patch-configure.ac) = d3bb35c423250d1124e2ada0974fc93448634abb
+SHA1 (patch-configure.ac) = 11600400f69e0db2b429f4d37d70477550b0cd6a
 SHA1 (patch-ext_enchant_enchant.c) = 7d999de1b2fde2ea11e4a6e16e7b59c085924b9b
 SHA1 (patch-ext_opcache_jit_zend__jit__x86.dasc) = 4d0d368aa1fb8ec076b392b6b64d2cf5d742133a
 SHA1 (patch-ext_phar_Makefile.frag) = 53ea5c58b0bc27d236118d5750a74b1cba43e5dd
