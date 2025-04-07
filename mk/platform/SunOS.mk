@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.94 2025/02/18 11:58:53 wiz Exp $
+# $NetBSD: SunOS.mk,v 1.95 2025/04/07 12:12:46 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -23,10 +23,14 @@ ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `${SETENV} LC_MESSAGES=C ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
 ULIMIT_CMD_cputime?=	ulimit -t `${SETENV} LC_MESSAGES=C ulimit -H -t`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
+
+# stack_getbounds(3C) with a stacksize of "unlimited" will return the top of
+# stack as the address and a size of zero.  This can confuse stack guards such
+# as the one used by lang/rust, so instead just set it to a very large value.
+ULIMIT_CMD_stacksize?=	ulimit -s 131072
 
 .if ${OS_VARIANT:U} == "OmniOS"
 # The native tar(1) is a pre-POSIX one which truncates paths longer than
