@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/11/04 23:59:29 gutteridge Exp $
+# $NetBSD: Makefile,v 1.100 2025/04/07 15:26:36 nia Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -31,6 +31,7 @@ CPPFLAGS+=	-DBSD
      ${OPSYS} == "AIX"  || \
      ${OPSYS} == "OpenBSD"  || \
      ${OPSYS} == "Cygwin"  || \
+     ${OPSYS} == "UnixWare"  || \
     (${OPSYS} == "Darwin" && !empty(OS_VERSION:M[01234678].*))) || \
      ${OS_VARIANT} == "SCOOSR5" || \
      ${OPSYS} == "Linux"
