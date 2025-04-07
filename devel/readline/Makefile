@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/06/20 18:12:00 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/04/07 17:20:16 nia Exp $
 
 READLINE_VERSION=	8.2
 PKGREVISION=		2
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	readline.pc.in
 CONFIGURE_ENV.NetBSD+=	bash_cv_wcwidth_broken=no
 .endif
 
-BUILD_TARGET=		everything-libtool
+BUILD_TARGET=		all-libtool
 INSTALL_TARGET=		install-libtool install-pc
 
 .include "../../mk/termcap.buildlink3.mk"
