@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.3 2025/02/08 02:58:55 taca Exp $
+$NetBSD: patch-configure.ac,v 1.4 2025/04/07 17:33:36 taca Exp $
 
 * Adjust PHP directories.
 * Adjust PHP library name.
@@ -43,6 +43,15 @@ $NetBSD: patch-configure.ac,v 1.3 2025/02/08 02:58:55 taca Exp $
 +SAPI_LIBTOOL=libphp[]$PHP_VERS[.la]
  
  PHP_CONFIGURE_PART(Configuring SAPI modules)
+ 
+@@ -1157,7 +1156,7 @@ if test "$PHP_PEAR" != "no"; then
+   if test "$PHP_PEAR" = "yes"; then
+     case $PHP_LAYOUT in
+       GNU) PEAR_INSTALLDIR=$datadir/pear;;
+-      *)   PEAR_INSTALLDIR=$libdir/php;;
++      *)   PEAR_INSTALLDIR=$libdir/php/${PHP_API_VERS};;
+     esac
+   fi
  
 @@ -1212,12 +1211,12 @@ test "$program_suffix" = "NONE" && progr
  
