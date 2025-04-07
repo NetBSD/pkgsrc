@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2025/02/08 02:59:45 taca Exp $
+$NetBSD: patch-configure.ac,v 1.2 2025/04/07 17:33:36 taca Exp $
 
 * Adjust PHP directories.
 * Adjust PHP library name.
 * Do not create extra "include" sub directory.
 
---- configure.ac.orig	2024-12-17 11:39:23.000000000 +0000
+--- configure.ac.orig	2025-03-11 17:58:12.000000000 +0000
 +++ configure.ac
 @@ -294,9 +294,9 @@ dnl SAPI configuration.
  dnl ----------------------------------------------------------------------------
@@ -18,6 +18,15 @@ $NetBSD: patch-configure.ac,v 1.1 2025/02/08 02:59:45 taca Exp $
 +SAPI_LIBTOOL=libphp${PHP_VER}.la
  
  PHP_CONFIGURE_PART(Configuring SAPI modules)
+ 
+@@ -1239,7 +1239,7 @@ if test "$PHP_PEAR" != "no"; then
+   if test "$PHP_PEAR" = "yes"; then
+     case $PHP_LAYOUT in
+       GNU) PEAR_INSTALLDIR=$datadir/pear;;
+-      *)   PEAR_INSTALLDIR=$libdir/php;;
++      *)   PEAR_INSTALLDIR=$libdir/php/${PHP_API_VERS};;
+     esac
+   fi
  
 @@ -1364,12 +1364,12 @@ test "$program_suffix" = "NONE" && progr
  
@@ -43,7 +52,7 @@ $NetBSD: patch-configure.ac,v 1.1 2025/02/08 02:59:45 taca Exp $
      ;;
  esac
  
-@@ -1673,7 +1674,7 @@ PHP_SUBST(all_targets)
+@@ -1673,7 +1673,7 @@ PHP_SUBST(all_targets)
  PHP_SUBST(install_targets)
  PHP_SUBST(install_binary_targets)
  
