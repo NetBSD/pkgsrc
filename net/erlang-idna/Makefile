@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 12:42:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/07 10:07:28 wiz Exp $
 
 DISTNAME=	idna-6.1.1
 PKGREVISION=	5
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/erlang-idna/
 COMMENT=	Pure Erlang IDNA implementation following the RFC5891
 LICENSE=	mit
+
+# TODO: this downloads files during build
 
 REBAR3_BUILD=	yes
 TOOL_DEPENDS+=	rebar3-[0-9]*:../../devel/rebar3
