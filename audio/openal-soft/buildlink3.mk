@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/03/31 15:39:27 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/04/07 10:29:52 wiz Exp $
 
 BUILDLINK_TREE+=	openal-soft
 
@@ -23,7 +23,7 @@ OPENAL_USE_CXX?=	yes
 .if !defined(OPENAL_SOFT_BUILDLINK3_MK)
 OPENAL_SOFT_BUILDLINK3_MK:=
 
-USE_CXX_FEATURES+=	c++20
+USE_CXX_FEATURES+=	c++17
 
 BUILDLINK_API_DEPENDS.openal-soft+=	openal-soft>=1.5.304
 BUILDLINK_PKGSRCDIR.openal-soft?=	../../audio/openal-soft
