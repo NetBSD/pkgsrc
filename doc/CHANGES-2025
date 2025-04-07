@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2495 2025/04/07 11:49:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2496 2025/04/07 12:25:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3258,3 +3258,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openrsync to 0.20250127 [wiz 2025-04-07]
 	Updated audio/openal-soft to 1.24.3 [adam 2025-04-07]
 	Updated archivers/minizip-ng to 4.0.9 [adam 2025-04-07]
+	Updated textproc/py-rdflib to 7.1.4 [adam 2025-04-07]
+	Updated textproc/py-prettytable to 3.16.0 [adam 2025-04-07]
