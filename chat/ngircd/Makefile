@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/14 22:18:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/07 15:44:35 nia Exp $
 
 DISTNAME=	ngircd-27
 PKGREVISION=	3
@@ -18,6 +18,8 @@ CONF_FILES+=	${PREFIX}/share/examples/ngircd/sample-ngircd.conf \
 		${PKG_SYSCONFDIR}/ngircd.conf
 
 BUILD_DEFS+=	VARBASE
+
+LDFLAGS.UnixWare+=	-lsocket -lresolv -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
