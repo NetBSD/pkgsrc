@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_internal.h,v 1.5 2025/02/28 23:21:14 pin Exp $
+$NetBSD: patch-lib_internal.h,v 1.6 2025/04/07 11:22:49 jperkin Exp $
 
 No symbol versioning available on SunOS.
 
@@ -12,7 +12,7 @@ No symbol versioning available on SunOS.
 +#define STATIC_ALIAS(_decl, _for)
 +#define DEFINE_ALIAS(_decl, _for)
 +#define SYMBOL_VERSION(_int, _ext)
-+#define pci_fill_info_v35 pci_fill_info
++#define pci_fill_info_v313 pci_fill_info
 +#define pci_filter_init_v38 pci_filter_init
 +#define pci_fill_info_v38 pci_fill_info
 +#define pci_init_v35 pci_init
