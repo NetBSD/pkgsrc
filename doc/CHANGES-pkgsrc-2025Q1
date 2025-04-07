@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.3 2025/04/02 03:01:42 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.4 2025/04/07 16:34:49 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -11,3 +11,7 @@ sysutils/sandboxctl: Runtime fix for older NetBSD
 
 Pullup ticket #6951 - requested by schmonz
 www/ikiwiki: Runtime fix
+
+Pullup ticket #6953 - requested by wiz
+textproc/expat: security fix
+
