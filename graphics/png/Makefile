@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2025/02/19 00:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2025/04/07 15:27:27 nia Exp $
 
 DISTNAME=	libpng-1.6.47
 PKGNAME=	${DISTNAME:S/lib//}
@@ -23,6 +23,8 @@ PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in libpng.pc.in
 TEST_TARGET=		check
 
 CPPFLAGS+=	-DPNG_USER_CHUNK_CACHE_MAX=128 -DPNG_USER_CHUNK_MALLOC_MAX=8000000
+
+CPPFLAGS.UnixWare+=	-D_XOPEN_SOURCE=500 -D_POSIX_C_SOURCE=199506
 
 .include "../../mk/bsd.prefs.mk"
 # keep this in sync with the same code in buildlink3.mk
