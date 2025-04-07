@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/01/18 09:26:27 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/07 12:24:08 adam Exp $
 
-DISTNAME=	rdflib-7.1.3
+DISTNAME=	rdflib-7.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
