@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2019/08/07 12:58:49 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/07 15:41:55 nia Exp $
 
 DISTNAME=	${GITHUB_PROJECT}
 PKGNAME=	${DISTNAME:S/phc-winner-//}-${GITHUB_TAG}
@@ -24,6 +24,10 @@ OPSYSVARS+=		SO_SUFFIX
 SO_SUFFIX.Darwin=	dylib
 SO_SUFFIX.*=		so
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
+
+# These are close enough to Solaris for the build to work.
+MAKE_FLAGS.SCO_SV+=	KERNEL_NAME=SunOS
+MAKE_FLAGS.UnixWare+=	KERNEL_NAME=SunOS
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/argon2 ${DESTDIR}${PREFIX}/bin
