@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/11/08 13:43:36 adam Exp $
+# $NetBSD: options.mk,v 1.2 2025/04/08 07:28:06 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql17
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam lz4
@@ -65,7 +65,7 @@ CONFIGURE_ARGS+=	--with-ldap
 .if !empty(PKG_OPTIONS:Mllvm)
 .  include "../../lang/llvm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-llvm
-CONFIGURE_ENV+=		CLANG=${CC}	# XXX: make it be better
+CONFIGURE_ENV+=		CLANG=${CC:Q}	# XXX: make it be better
 PLIST.llvm=		yes
 .endif
 
@@ -83,7 +83,7 @@ CONFIGURE_ARGS+=	--enable-nls
 PLIST.nls=		yes
 BROKEN_GETTEXT_DETECTION=	yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
-.  if !empty(USE_BUILTIN.gettext:M[nN][oO])
+.  if ${USE_BUILTIN.gettext:tl} == no
 CPPFLAGS+=		-I${PREFIX}/include/gettext
 .  endif
 .else
