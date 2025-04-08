@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2508 2025/04/08 14:44:12 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2509 2025/04/08 15:01:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3277,3 +3277,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/libcares to 1.34.5 [wiz 2025-04-08]
 	Updated shells/oh-my-posh to 25.13.0 [pin 2025-04-08]
 	Updated editors/nano to 8.4 [nia 2025-04-08]
+	Updated graphics/gifsicle to 1.96 [nia 2025-04-08]
