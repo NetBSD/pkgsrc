@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2021/04/24 08:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/08 02:26:46 maya Exp $
 
 DISTNAME=	udns-0.4
 PKGREVISION=	1
@@ -34,6 +34,13 @@ do-install:
 
 CFLAGS.SunOS+=	-DHAVE_INET_PTON_NTOP
 LDFLAGS.SunOS+=	-lsocket -lnsl
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=implicit-function-declaration
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+CFLAGS+=	-Wno-error=int-conversion
+.endif
 
 .include "../../mk/bsd.pkg.mk"
 
