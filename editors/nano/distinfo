@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.82 2024/12/21 15:30:31 schwarz Exp $
+$NetBSD: distinfo,v 1.83 2025/04/08 14:44:02 nia Exp $
 
-BLAKE2s (nano-8.3.tar.xz) = 0a548295129686d9368a1a3bc5261afac7aabc9f3493a5c23463ad24fa514f64
-SHA512 (nano-8.3.tar.xz) = 9f57bb16a30240fdfc8fc31f5a55f681b80dd72de66fa143ef36c59ab696cc672d8fa054f5a4a547324db3deb2fe2f777cd7c1c023b571e2bb36c86a783ff1d6
-Size (nano-8.3.tar.xz) = 1681216 bytes
+BLAKE2s (nano-8.4.tar.xz) = 583a41b0f3976baba73c3643e898795edbd715d77ea53e36575beb91f74b6b46
+SHA512 (nano-8.4.tar.xz) = 1b8258e341a8722114b24af9d4676fbd8a91dc3639786a81bcd192a7b4fbca87581ab8ebe49493dfb3599ae90b59f4df8ae2a4ee0c0c7ccec9a49b563c82f44a
+Size (nano-8.4.tar.xz) = 1691256 bytes
 SHA1 (patch-configure) = 119b755cae4bdd5ad6b0f9774044f0a2b89a05b5
-SHA1 (patch-doc_nano.1) = 4e999b4abe802c885c2df615fb721af3eee81be9
-SHA1 (patch-doc_nanorc.5) = 9f456d7262f0f7d7d59526060341d9117ddef2e3
+SHA1 (patch-doc_nano.1) = 5a6e2ba689a30d194fd8858313dead4274bb8857
+SHA1 (patch-doc_nanorc.5) = 1209f4aad5bc7ea3ae12e285c40a44c735091ae5
 SHA1 (patch-src_winio.c) = 4fb568c8a2a7bff5687923c9ca1e2bd6f8485d1f
