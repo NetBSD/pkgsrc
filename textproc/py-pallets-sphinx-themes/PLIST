@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/23 21:07:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/08 15:37:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,8 +13,6 @@ ${PYSITELIB}/pallets_sphinx_themes/theme_check.pyo
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/__init__.pyo
-${PYSITELIB}/pallets_sphinx_themes/themes/babel/static/babel.css
-${PYSITELIB}/pallets_sphinx_themes/themes/babel/theme.conf
 ${PYSITELIB}/pallets_sphinx_themes/themes/click/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/click/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/click/__init__.pyo
@@ -33,9 +31,6 @@ ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/domain.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/domain.pyo
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/static/jinja.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/jinja/theme.conf
-${PYSITELIB}/pallets_sphinx_themes/themes/platter/static/platter.css
-${PYSITELIB}/pallets_sphinx_themes/themes/platter/theme.conf
-${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/404.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/__init__.py
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/__init__.pyc
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/__init__.pyo
@@ -44,12 +39,8 @@ ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/layout.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/localtoc.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/project.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/relations.html
+${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/describe_version.js
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/pocoo.css
-${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/static/version_warning_offset.js
 ${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/theme.conf
-${PYSITELIB}/pallets_sphinx_themes/themes/pocoo/versions.html
 ${PYSITELIB}/pallets_sphinx_themes/themes/werkzeug/static/werkzeug.css
 ${PYSITELIB}/pallets_sphinx_themes/themes/werkzeug/theme.conf
-${PYSITELIB}/pallets_sphinx_themes/versions.py
-${PYSITELIB}/pallets_sphinx_themes/versions.pyc
-${PYSITELIB}/pallets_sphinx_themes/versions.pyo
