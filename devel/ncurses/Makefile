@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/05/06 08:24:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.118 2025/04/08 16:43:09 nia Exp $
 
 DISTNAME=	ncurses-6.5
 CATEGORIES=	devel
@@ -42,6 +42,8 @@ CONFIGURE_ARGS+=	--with-panel-libname=gnupanel
 
 CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 CONFIGURE_ARGS.SunOS+=	--disable-const
+
+CONFIGURE_ARGS.UnixWare+=	--disable-libtool-version
 
 TERMINFODIR=		share/terminfo
 
