@@ -1,10 +1,10 @@
-$NetBSD: patch-src_argparse.c,v 1.1 2024/01/13 04:16:24 riastradh Exp $
+$NetBSD: patch-src_argparse.c,v 1.2 2025/04/08 15:42:49 adam Exp $
 
 Fix ctype(3) abuse.
 
---- src/argparse.c.orig	2023-01-17 08:46:53.000000000 +0000
+--- src/argparse.c.orig	2025-04-08 07:06:47.000000000 +0000
 +++ src/argparse.c
-@@ -826,8 +826,8 @@ substitute_vars (gpgrt_argparse_t *arg, 
+@@ -820,8 +820,8 @@ substitute_vars (gpgrt_argparse_t *arg,
          }
        else
          {
@@ -15,7 +15,7 @@ Fix ctype(3) abuse.
              ;
          }
  
-@@ -1050,20 +1050,20 @@ handle_meta_if (gpgrt_argparse_t *arg, u
+@@ -1044,20 +1044,20 @@ handle_meta_if (gpgrt_argparse_t *arg, u
        return 0;
      }
  
@@ -40,7 +40,7 @@ Fix ctype(3) abuse.
              ;
            if (*p)
              str2 = p;
-@@ -1207,7 +1207,7 @@ handle_meta_let (gpgrt_argparse_t *arg, 
+@@ -1201,7 +1201,7 @@ handle_meta_let (gpgrt_argparse_t *arg,
    int rc;
    variable_t v;
  
@@ -49,8 +49,8 @@ Fix ctype(3) abuse.
      ;
    if (*value)
      {
-@@ -1215,7 +1215,7 @@ handle_meta_let (gpgrt_argparse_t *arg, 
-       trim_spaces (value);
+@@ -1209,7 +1209,7 @@ handle_meta_let (gpgrt_argparse_t *arg,
+       _gpgrt_trim_spaces (value);
      }
  
 -  if (!isascii (*name) || !isalpha (*name))
@@ -58,8 +58,8 @@ Fix ctype(3) abuse.
      return 0; /* Ignore setting a system or invalid variable.  */
  
    if (alternate)
-@@ -1259,7 +1259,7 @@ handle_meta_getenv (gpgrt_argparse_t *ar
- #endif
+@@ -1327,7 +1327,7 @@ handle_meta_getenv (gpgrt_argparse_t *ar
+   char *helpbuf = NULL;
  
    for (varname = name;
 -       *varname && !(isascii (*varname) && isspace (*varname));
@@ -67,8 +67,8 @@ Fix ctype(3) abuse.
         varname++)
      ;
    if (*varname)
-@@ -1268,7 +1268,7 @@ handle_meta_getenv (gpgrt_argparse_t *ar
-       trim_spaces (varname);
+@@ -1336,7 +1336,7 @@ handle_meta_getenv (gpgrt_argparse_t *ar
+       _gpgrt_trim_spaces (varname);
      }
  
 -  if (!isascii (*name) || !isalpha (*name))
@@ -76,7 +76,7 @@ Fix ctype(3) abuse.
      return 0; /* Ignore setting a system or invalid variable.  */
  
    if (!*varname)
-@@ -1430,7 +1430,7 @@ handle_metacmd (gpgrt_argparse_t *arg, c
+@@ -1521,7 +1521,7 @@ handle_metacmd (gpgrt_argparse_t *arg, c
    char *rest;
    int i;
  
@@ -85,7 +85,7 @@ Fix ctype(3) abuse.
      ;
    if (*rest)
      {
-@@ -2867,7 +2867,7 @@ set_opt_arg (gpgrt_argparse_t *arg, unsi
+@@ -3019,7 +3019,7 @@ set_opt_arg (gpgrt_argparse_t *arg, unsi
        return 0;
  
      case ARGPARSE_TYPE_ULONG:
