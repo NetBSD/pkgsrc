@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_memchr-2.7.4_src_memmem_searcher.rs,v 1.1 2024/11/24 16:13:43 he Exp $
+$NetBSD: patch-vendor_memchr-2.7.4_src_memmem_searcher.rs,v 1.2 2025/04/08 09:31:07 wiz Exp $
 
 Don't try to use neon / SIMD on big-endian aarch64.
 
