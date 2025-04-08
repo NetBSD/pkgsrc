@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2025/02/26 16:25:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2025/04/08 12:22:11 adam Exp $
 
-DISTNAME=	gimp-3.0.0-RC3
-PKGNAME=	${DISTNAME:S/gimp/gimp-devel/:S/-RC/rc/}
-PKGREVISION=	2
+DISTNAME=	gimp-3.0.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,8 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 CONFLICTS+=	gimp-[0-9]*
 
-USE_LANGUAGES+=		c c++
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
 USE_TOOLS+=		pkg-config perl realpath
@@ -50,6 +48,8 @@ REPLACE_PYTHON+=	plug-ins/python/*/*.py
 REPLACE_PYTHON+=	tools/*.py
 REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
 
+REPLACE_SH=		tools/in-build-gimp.sh
+
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
 EGDIR=			${PREFIX}/share/examples/gimp
 .for f in controllerrc gimp.css gimprc sessionrc templaterc toolrc unitrc
@@ -58,18 +58,39 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/3.0/${f}
 
 INSTALLATION_DIRS=	share/examples
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# libgimpwidgets/gimppickbutton-quartz.c: error: 'CGWindowListCreateImage' is unavailable: obsoleted in macOS 15.0
+.  if ${OPSYS_VERSION} >= 150000
+MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET=14.0
+.  endif
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/libgimp
+
+.PHONY: fix-modules-id
+post-install: fix-modules-id
+fix-modules-id:
+	cd ${DESTDIR}; \
+	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do \
+          install_name_tool -id /$$i $$i; \
+        done
+.endif
+
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/examples/gimp
 	${MV} ${DESTDIR}${PREFIX}/etc/gimp/3.0 ${DESTDIR}${PREFIX}/share/examples/gimp
 
 .include "options.mk"
+
+PLIST_VARS+=	xmc
+
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/appstream-glib/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -97,16 +118,22 @@ BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 BUILDLINK_API_DEPENDS.tiff+=	tiff>=4.0
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../lang/vala/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.gtk3:Mx11}
 .include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+PRINT_PLIST_AWK+=       { if (/file-xmc/) $$0 = "$${PLIST.xmc}" $$0 }
+PLIST.xmc=		yes
 .include "../../x11/libXmu/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
