@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/02/17 11:49:03 nia Exp $
+$NetBSD: distinfo,v 1.16 2025/04/08 15:01:08 nia Exp $
 
-BLAKE2s (gifsicle-1.95.tar.gz) = 80f9958d46df22400de86cfcfbc725dd33ab27425d4e6bfd0f4f93bb03f51a88
-SHA512 (gifsicle-1.95.tar.gz) = 888bb3f4501ce3f12e810045bb432c9e56952df1def565e4a8983529856b00be8e79d9df148858fe2a327d1dd751eb71280e17c8e0426e68290b0dfe02247891
-Size (gifsicle-1.95.tar.gz) = 579636 bytes
+BLAKE2s (gifsicle-1.96.tar.gz) = af61732451120d84e5a7ac6e6e72d571ea05150701f183f9e79e7467b67998d8
+SHA512 (gifsicle-1.96.tar.gz) = 2ca9d24b23aaaaa5af10a34c6eb71549a5376952a98913da1c1139a274a5c57767bdfd937649d833f26f3ed1b838a056a2448babb398dadad7ab7ffbb660077b
+Size (gifsicle-1.96.tar.gz) = 587298 bytes
