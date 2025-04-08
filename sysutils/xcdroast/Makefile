@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/12/27 08:20:41 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/04/08 16:16:13 nia Exp $
 
 DISTNAME=	xcdroast-1.18
 PKGREVISION=	18
@@ -20,7 +20,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_OPSYS_HAS_OSSAUDIO} == "yes"
+.include "../../mk/oss.buildlink3.mk"
+.if ${OSS_TYPE} != "none"
 CFLAGS+=	-DHAVE_OSS
 CONFIGURE_ENV+=	AUDIO_LIBS=${LIBOSSAUDIO}
 .endif
