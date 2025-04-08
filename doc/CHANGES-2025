@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2504 2025/04/08 11:43:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2505 2025/04/08 12:27:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3272,3 +3272,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust-bin to 1.85.1 [wiz 2025-04-08]
 	Updated graphics/babl to 0.1.112 [adam 2025-04-08]
 	Updated graphics/gegl to 0.4.58 [adam 2025-04-08]
+	Updated graphics/gimp-devel to 3.0.2 [adam 2025-04-08]
+	Updated net/gupnp to 1.6.8 [adam 2025-04-08]
