@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2025/04/08 09:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.328 2025/04/08 13:31:01 jperkin Exp $
 
 DISTNAME=	rustc-1.85.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -69,10 +69,6 @@ CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
-
-# MacOS X 10.7 is the oldest supported version. See
-# ${WRKSRC}/src/bootstrap/lib.rs
-MAKE_ENV.Darwin+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 MAKE_ENV.SunOS+=	AR=gar
