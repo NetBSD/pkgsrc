@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2025/02/23 09:14:09 he Exp $
+# $NetBSD: Makefile,v 1.75 2025/04/08 09:33:47 wiz Exp $
 
-DISTNAME=	rust-1.83.0
+DISTNAME=	rust-1.85.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -183,7 +183,7 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 
 # Illumos:
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-unknown-illumos
 DN:=		${DISTNAME}
 EXTRACT_SUFX=	.tar.gz
@@ -299,6 +299,10 @@ fix-relative-rpath:
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${PREFIX}/lib $$f;	\
 	done
 .  endfor
+# wrong architecture binary distributed, unused except on macOS
+# https://github.com/rust-lang/rust/issues/139195
+# https://github.com/rust-lang/rust/issues/138943
+	${RM} -f ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/rust-objcopy
 .endif
 
 .include "../../mk/bsd.pkg.mk"
