@@ -1,4 +1,4 @@
-$NetBSD: patch-library_stdarch_crates_std__detect_tests_cpu-detection.rs,v 1.1 2025/02/02 13:34:47 he Exp $
+$NetBSD: patch-library_stdarch_crates_std__detect_tests_cpu-detection.rs,v 1.2 2025/04/08 09:31:06 wiz Exp $
 
 On NetBSD/aarch64, do the same as FreeBSD and OpenBSD.
 

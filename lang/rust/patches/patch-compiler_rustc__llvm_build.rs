@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.18 2025/02/23 08:53:54 he Exp $
+$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.19 2025/04/08 09:31:06 wiz Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 

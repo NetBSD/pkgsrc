@@ -1,4 +1,4 @@
-$NetBSD: patch-library_backtrace_src_symbolize_gimli.rs,v 1.7 2024/10/13 19:04:39 he Exp $
+$NetBSD: patch-library_backtrace_src_symbolize_gimli.rs,v 1.8 2025/04/08 09:31:06 wiz Exp $
 
 Add NetBSD to the family who is in the unix class.
 
