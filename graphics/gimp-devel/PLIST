@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2025/02/11 13:24:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/08 12:22:11 adam Exp $
 bin/gimp
 bin/gimp-3
 bin/gimp-3.0
 bin/gimp-console
 bin/gimp-console-3
 bin/gimp-console-3.0
+bin/gimp-debug-tool
+bin/gimp-debug-tool-3
+bin/gimp-debug-tool-3.0
 bin/gimp-script-fu-interpreter-3.0
 bin/gimp-test-clipboard
 bin/gimp-test-clipboard-3
@@ -12,6 +15,7 @@ bin/gimp-test-clipboard-3.0
 bin/gimptool
 bin/gimptool-3
 bin/gimptool-3.0
+@pkgdir etc/gimp
 include/gimp-3.0/libgimp/gimp.h
 include/gimp-3.0/libgimp/gimp_pdb.h
 include/gimp-3.0/libgimp/gimp_pdb_headers.h
@@ -406,7 +410,7 @@ lib/gimp/3.0/plug-ins/file-wbmp/file-wbmp
 lib/gimp/3.0/plug-ins/file-webp/file-webp
 lib/gimp/3.0/plug-ins/file-wmf/file-wmf
 lib/gimp/3.0/plug-ins/file-xbm/file-xbm
-lib/gimp/3.0/plug-ins/file-xmc/file-xmc
+${PLIST.xmc}lib/gimp/3.0/plug-ins/file-xmc/file-xmc
 ${PLIST.xpm}lib/gimp/3.0/plug-ins/file-xpm/file-xpm
 lib/gimp/3.0/plug-ins/file-xwd/file-xwd
 lib/gimp/3.0/plug-ins/film/film
@@ -464,40 +468,37 @@ lib/girepository-1.0/Gimp-3.0.typelib
 lib/girepository-1.0/GimpUi-3.0.typelib
 lib/libgimp-3.0.so
 lib/libgimp-3.0.so.0
-lib/libgimp-3.0.so.0.0.0
+lib/libgimp-3.0.so.0.0.2
 lib/libgimp-scriptfu-3.0.so
 lib/libgimp-scriptfu-3.0.so.0
-lib/libgimp-scriptfu-3.0.so.0.0.0
+lib/libgimp-scriptfu-3.0.so.0.0.2
 lib/libgimpbase-3.0.so
 lib/libgimpbase-3.0.so.0
-lib/libgimpbase-3.0.so.0.0.0
+lib/libgimpbase-3.0.so.0.0.2
 lib/libgimpcolor-3.0.so
 lib/libgimpcolor-3.0.so.0
-lib/libgimpcolor-3.0.so.0.0.0
+lib/libgimpcolor-3.0.so.0.0.2
 lib/libgimpconfig-3.0.so
 lib/libgimpconfig-3.0.so.0
-lib/libgimpconfig-3.0.so.0.0.0
+lib/libgimpconfig-3.0.so.0.0.2
 lib/libgimpmath-3.0.so
 lib/libgimpmath-3.0.so.0
-lib/libgimpmath-3.0.so.0.0.0
+lib/libgimpmath-3.0.so.0.0.2
 lib/libgimpmodule-3.0.so
 lib/libgimpmodule-3.0.so.0
-lib/libgimpmodule-3.0.so.0.0.0
+lib/libgimpmodule-3.0.so.0.0.2
 lib/libgimpthumb-3.0.so
 lib/libgimpthumb-3.0.so.0
-lib/libgimpthumb-3.0.so.0.0.0
+lib/libgimpthumb-3.0.so.0.0.2
 lib/libgimpui-3.0.so
 lib/libgimpui-3.0.so.0
-lib/libgimpui-3.0.so.0.0.0
+lib/libgimpui-3.0.so.0.0.2
 lib/libgimpwidgets-3.0.so
 lib/libgimpwidgets-3.0.so.0
-lib/libgimpwidgets-3.0.so.0.0.0
+lib/libgimpwidgets-3.0.so.0.0.2
 lib/pkgconfig/gimp-3.0.pc
 lib/pkgconfig/gimpthumb-3.0.pc
 lib/pkgconfig/gimpui-3.0.pc
-libexec/gimp-debug-tool
-libexec/gimp-debug-tool-3
-libexec/gimp-debug-tool-3.0
 man/man1/gimp-3.0.1
 man/man1/gimp-3.1
 man/man1/gimp-console-3.0.1
@@ -594,6 +595,7 @@ share/gimp/3.0/dynamics/Track-Direction.gdyn
 share/gimp/3.0/dynamics/Velocity-Tapering.gdyn
 share/gimp/3.0/file-raw/file-darktable-export-on-exit.lua
 share/gimp/3.0/file-raw/file-darktable-get-size.lua
+@pkgdir share/gimp/3.0/fonts
 share/gimp/3.0/fractalexplorer/Asteroid_Field
 share/gimp/3.0/fractalexplorer/Bar_Code_Label
 share/gimp/3.0/fractalexplorer/Beauty_of_Nature
@@ -1291,6 +1293,10 @@ share/gimp/3.0/icons/Default/scalable/apps/gimp-text-dir-ttb-rtl-upright.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-text-dir-ttb-rtl.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-text-layer-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-text-layer.svg
+share/gimp/3.0/icons/Default/scalable/apps/gimp-toggle-off-symbolic.svg
+share/gimp/3.0/icons/Default/scalable/apps/gimp-toggle-off.svg
+share/gimp/3.0/icons/Default/scalable/apps/gimp-toggle-on-symbolic.svg
+share/gimp/3.0/icons/Default/scalable/apps/gimp-toggle-on.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-toilet-paper-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-toilet-paper.svg
 share/gimp/3.0/icons/Default/scalable/apps/gimp-tool-airbrush-symbolic.svg
@@ -1921,6 +1927,10 @@ share/gimp/3.0/icons/Legacy/scalable/apps/gimp-prefs-playground.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-shred.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-smartphone.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-symmetry.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-toggle-off-symbolic.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-toggle-off.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-toggle-on-symbolic.svg
+share/gimp/3.0/icons/Legacy/scalable/apps/gimp-toggle-on.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-tool-airbrush.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-tool-align.svg
 share/gimp/3.0/icons/Legacy/scalable/apps/gimp-tool-blur.svg
@@ -2612,5 +2622,3 @@ share/vala/vapi/gimp-3.0.deps
 share/vala/vapi/gimp-3.0.vapi
 share/vala/vapi/gimp-ui-3.0.deps
 share/vala/vapi/gimp-ui-3.0.vapi
-@pkgdir share/gimp/3.0/fonts
-@pkgdir etc/gimp
