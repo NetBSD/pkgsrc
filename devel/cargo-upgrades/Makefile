@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/04/02 10:51:50 pin Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/08 00:25:02 gdt Exp $
 
 DISTNAME=	cargo-upgrades-2.1.3
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Check for outdated dependencies in Rust/Cargo projects
 LICENSE=	gnu-gpl-v3
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
