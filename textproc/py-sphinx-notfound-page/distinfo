@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/08 15:36:21 adam Exp $
+
+BLAKE2s (sphinx_notfound_page-1.1.0.tar.gz) = 94f156bd408c14cd7819c842525d5bba15e706e6884bbdd39c854891e8943dc0
+SHA512 (sphinx_notfound_page-1.1.0.tar.gz) = b11eb954204dc80710a2b0ff8e6cac4827b1c5bdc1f020e47288bc8df127d8701f3a9d6538ba6a95abba8a09e528397e209b16dd6083fbb545bf51079c85e749
+Size (sphinx_notfound_page-1.1.0.tar.gz) = 7392 bytes
