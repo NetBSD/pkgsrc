@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2025/02/12 05:07:23 rillig Exp $
+# $NetBSD: Makefile,v 1.352 2025/04/08 02:17:45 maya Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -95,6 +95,11 @@ post-install:
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk2-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons"
 INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=incompatible-pointer-types
+.endif
 
 _BUILDING_GTK2=	yes
 .include "modules.mk"
