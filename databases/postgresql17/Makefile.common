@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2025/04/02 12:27:42 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.9 2025/04/08 07:28:06 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -90,6 +90,9 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		pgac_cv_prog_cc_ldflags__Wl___as_needed=no
 .endif
+
+# Don't be to strict. Fixes build at least on macOS 15.4.
+CONFIGURE_ENV+=		pgac_cv_prog_CC_cflags__Werror_unguarded_availability_new=no
 
 # Postgres on Alpha has no spinlock or memory barrier implementation
 # and is "unlikely to work correctly".
