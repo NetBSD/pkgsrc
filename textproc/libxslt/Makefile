@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2025/02/09 00:28:20 rillig Exp $
+# $NetBSD: Makefile,v 1.138 2025/04/08 16:25:39 ryoon Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--without-python
 PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 TEST_TARGET=		check
+
+CPPFLAGS+=		-DGPGRT_ENABLE_ES_MACROS
 
 .include "../../mk/bsd.prefs.mk"
 
