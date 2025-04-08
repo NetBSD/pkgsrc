@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.1 2024/10/13 19:04:40 he Exp $
+$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.2 2025/04/08 09:31:07 wiz Exp $
 
 --- vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs.orig	2024-08-29 18:09:29.494697634 +0000
 +++ vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs
