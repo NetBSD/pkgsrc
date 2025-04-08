@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/04/03 16:20:32 adam Exp $
+# $NetBSD: Makefile,v 1.55 2025/04/08 14:17:55 nia Exp $
 
 DISTNAME=	xz-5.8.1
 CATEGORIES=	archivers
@@ -26,6 +26,11 @@ CONFIGURE_ARGS+=	--disable-assembler
 
 CONFIGURE_ENV.SunOS+=	ac_cv_have_decl_optreset=no
 CONFIGURE_ENV.SunOS+=	gl_cv_cc_visibility=no
+
+PRINT_PLIST_AWK+=	/\.mo/ { $$0 = "$${PLIST.nls}" $$0 }
+.for lang in de fr it ko pt_BR ro sr uk
+PRINT_PLIST_AWK+=	/^man\/${lang}\// { $$0 = "$${PLIST.nls}" $$0 }
+.endfor
 
 .include "options.mk"
 
