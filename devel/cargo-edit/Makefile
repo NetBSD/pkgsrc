@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/02 17:33:16 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/08 00:25:02 gdt Exp $
 
 DISTNAME=	cargo-edit-0.13.1
 # v0.13.2 requires Rust >= 1.85
@@ -12,7 +12,7 @@ COMMENT=	Utility for managing cargo dependencies from the command line
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
 
