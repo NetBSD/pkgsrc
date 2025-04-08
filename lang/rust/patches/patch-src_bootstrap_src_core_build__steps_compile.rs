@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_src_core_build__steps_compile.rs,v 1.3 2024/11/24 16:13:43 he Exp $
+$NetBSD: patch-src_bootstrap_src_core_build__steps_compile.rs,v 1.4 2025/04/08 09:31:07 wiz Exp $
 
 On Darwin, do not use @rpath for internal libraries.
 
