@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2502 2025/04/08 09:31:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2503 2025/04/08 09:33:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3269,3 +3269,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 23.11.0 [adam 2025-04-08]
 	Updated net/dnsmasq to 2.91 [adam 2025-04-08]
 	Updated lang/rust to 1.85.1 [wiz 2025-04-08]
+	Updated lang/rust-bin to 1.85.1 [wiz 2025-04-08]
