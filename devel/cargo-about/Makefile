@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/02 10:49:04 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/08 00:25:02 gdt Exp $
 
 DISTNAME=	cargo-about-0.6.6
 #cargo-about-0.7.0 requires Rust >= 1.85
@@ -11,7 +11,7 @@ COMMENT=	Cargo plugin to generate list of all licenses for a crate
 LICENSE=	apache-2.0 OR mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
