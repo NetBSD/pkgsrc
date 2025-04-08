@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2025/04/04 21:29:14 riastradh Exp $
+# $NetBSD: Makefile,v 1.168 2025/04/08 17:35:11 nia Exp $
 
 .include "Makefile.common"
 
@@ -533,9 +533,10 @@ LIBS+=		${BUILDLINK_LDADD.dl}
 # Solaris needs -lrt for nanosleep, PR pkg/58714
 LIBS.SunOS+=	-lrt
 
-.if ${OS_VARIANT} == "SCOOSR5"
+CFLAGS.UnixWare+=	-DHAVE_NANOSLEEP=0 -DHAVE_USLEEP=1
+LDFLAGS.UnixWare+=	-lthread
+
 LDFLAGS.SCO_SV+=	-lpthread
-.endif
 
 .if ${OPSYS} == "Darwin"
 post-install:
