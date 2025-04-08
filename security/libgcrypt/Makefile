@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2025/03/03 21:32:27 nia Exp $
+# $NetBSD: Makefile,v 1.117 2025/04/08 16:15:42 ryoon Exp $
 
 DISTNAME=	libgcrypt-1.11.0
 PKGREVISION=	2
@@ -18,6 +18,8 @@ TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
 
 .include "../../mk/compiler.mk"
+
+CPPFLAGS+=	-DGPGRT_ENABLE_ES_MACROS
 
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-fheinous-gnu-extensions
