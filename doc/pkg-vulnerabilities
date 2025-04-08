@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.344 2025/04/07 15:05:25 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.345 2025/04/08 14:02:00 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26160,3 +26160,4 @@ yelp-[0-9]*	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2025-3155
 powerdns-recursor<5.2.0	illegal-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2025-30195
 webkit-gtk<2.48.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54551
 giflib-[0-9]*	heap-buffer-overflow	https://www.openwall.com/lists/oss-security/2025/04/07/3
+libcares<1.34.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-31498
