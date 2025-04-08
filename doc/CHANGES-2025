@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2510 2025/04/08 15:37:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2511 2025/04/08 15:48:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3280,3 +3280,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gifsicle to 1.96 [nia 2025-04-08]
 	Added textproc/py-sphinx-notfound-page version 1.1.0 [adam 2025-04-08]
 	Updated textproc/py-pallets-sphinx-themes to 2.3.0 [adam 2025-04-08]
+	Updated security/libgpg-error to 1.52 [adam 2025-04-08]
+	Updated textproc/py-rapidfuzz to 3.13.0 [adam 2025-04-08]
