@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2024/12/21 15:30:31 schwarz Exp $
+# $NetBSD: Makefile,v 1.114 2025/04/08 14:44:02 nia Exp $
 
-DISTNAME=	nano-8.3
+DISTNAME=	nano-8.4
 CATEGORIES=	editors
 MASTER_SITES=	https://www.nano-editor.org/dist/v${PKGVERSION_NOREV:C/\..*$//}/
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +25,7 @@ INFO_FILES=		yes
 # which are required to make this work, so glib2 is used instead.
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MIRIX-5*)
+.if ${MACHINE_PLATFORM:MIRIX-5.*}
 .  include "../../devel/glib2/buildlink3.mk"
 .endif
 
