@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/03/03 21:32:27 nia Exp $
+# $NetBSD: Makefile,v 1.45 2025/04/08 17:08:59 ryoon Exp $
 
 DISTNAME=	libksba-1.6.7
 CATEGORIES=	security
@@ -16,6 +16,8 @@ PKGCONFIG_OVERRIDE=	src/ksba.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
 TEXINFO_REQD=		4.0
+
+CPPFLAGS+=		-DGPGRT_ENABLE_ES_MACROS
 
 .include "../../mk/bsd.prefs.mk"
 
