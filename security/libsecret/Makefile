@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/04/09 09:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/09 10:40:13 wiz Exp $
 
 DISTNAME=	libsecret-0.20.5
 CATEGORIES=	security gnome
@@ -33,7 +33,6 @@ SUBST_FILES.python=	libsecret/mock-service.c
 SUBST_SED.python=	-e 's,python3,${PYTHONBIN},'
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
-CPPFLAGS+=			-DGPGRT_ENABLE_ES_MACROS
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/meson/build.mk"

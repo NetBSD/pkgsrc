@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2025/04/08 17:17:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.125 2025/04/09 10:40:13 wiz Exp $
 
 DISTNAME=	gpgme-1.24.2
 CATEGORIES=	security
@@ -26,7 +26,6 @@ SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
 SUBST_VARS.pthread=	PTHREAD_CFLAGS
 SUBST_STAGE.pthread=	pre-configure
 
-CPPFLAGS+=		-DGPGRT_ENABLE_ES_MACROS
 CPPFLAGS.Darwin=	-D_POSIX_C_SOURCE=200809L
 LIBS.SunOS+=		-lnsl -lsocket
 
