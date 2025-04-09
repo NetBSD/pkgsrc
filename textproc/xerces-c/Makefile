@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/04/05 04:41:52 markd Exp $
+# $NetBSD: Makefile,v 1.58 2025/04/09 08:12:40 wiz Exp $
 
 DISTNAME=	xerces-c-3.3.0
 CATEGORIES=	textproc
@@ -28,7 +28,8 @@ PLIST_VARS+=		iconv gnuiconv macunicode
 PLIST.macunicode=	yes
 .elif ${OPSYS} == "SunOS"
 PLIST.iconv=		yes
-CONFIGURE_ARGS+=	--enable-transcoder-iconv
+CMAKE_CONFIGURE_ARGS+=	-DXERCES_USE_TRANSCODER_GNUICONV=false
+CMAKE_CONFIGURE_ARGS+=	-DXERCES_USE_TRANSCODER_ICONV=true
 .else
 PLIST.gnuiconv=		yes
 .include "../../converters/libiconv/buildlink3.mk"
