@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2513 2025/04/09 00:26:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2514 2025/04/09 07:32:25 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3284,3 +3284,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-rapidfuzz to 3.13.0 [adam 2025-04-08]
 	Updated pkgtools/pbulk-base to 0.59 [wiz 2025-04-09]
 	Updated pkgtools/pbulk to 0.76 [wiz 2025-04-09]
+	Updated games/openrct2 to 0.4.21 [triaxx 2025-04-09]
