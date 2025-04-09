@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.45 2024/03/27 11:33:00 schmonz Exp $
+# $NetBSD: clang.mk,v 1.46 2025/04/09 11:53:18 adam Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -73,12 +73,6 @@ PKGSRC_FORTRAN?=gfortran
 .if !empty(PKGSRC_FORTRAN) && (!empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77))
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
 .endif
-
-_WRAP_EXTRA_ARGS.CC+=	-Qunused-arguments
-CWRAPPERS_APPEND.cc+=	-Qunused-arguments
-CWRAPPERS_PREPEND.cc+=	-Qunused-arguments
-_WRAP_EXTRA_ARGS.CXX+=	-Qunused-arguments
-CWRAPPERS_APPEND.cxx+=	-Qunused-arguments
 
 .if defined(_PKGSRC_BARRIER)
 # Xcode 12 (Apple clang-1200.0.32.2) and upstream Clang 16 have a
