@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/04/08 17:20:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/09 10:40:12 wiz Exp $
 
 DISTNAME=	gmime-3.2.15
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
@@ -20,8 +20,6 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 PKGCONFIG_OVERRIDE+=	gmime.pc.in
-
-CPPFLAGS+=		-DGPGRT_ENABLE_ES_MACROS
 
 # one test failure as of 3.2.6
 # test-filters:
