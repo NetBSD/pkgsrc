@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.pre.in,v 1.1 2024/10/09 19:53:20 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.2 2025/04/09 14:51:00 adam Exp $
 
 Use only one optimisation level; needed for PLIST and setuptools compatibility.
 Do not build/install libpython3.so.
 Simplify _sysconfigdata to include only platform name.
 Swap targets libinstall and libainstall, to byte-compile python-config.py.
 
---- Makefile.pre.in.orig	2024-10-07 05:02:14.000000000 +0000
+--- Makefile.pre.in.orig	2025-04-08 13:54:08.000000000 +0000
 +++ Makefile.pre.in
 @@ -270,7 +270,7 @@ DIST=		$(DISTFILES) $(DISTDIRS)
  LIBRARY=	@LIBRARY@
@@ -20,8 +20,8 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  # an include guard, so we can't use a pipeline to transform its output.
  Include/pydtrace_probes.h: $(srcdir)/Include/pydtrace.d
  	$(MKDIR_P) Include
--	$(DTRACE) $(DFLAGS) -o $@ -h -s $<
-+	$(DTRACE) $(DFLAGS) -o $@ -h -s $(srcdir)/Include/pydtrace.d
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" $(DTRACE) $(DFLAGS) -o $@ -h -s $<
++	CC="$(CC)" CFLAGS="$(CFLAGS)" $(DTRACE) $(DFLAGS) -o $@ -h -s $(srcdir)/Include/pydtrace.d
  	: sed in-place edit with POSIX-only tools
  	sed 's/PYTHON_/PyDTrace_/' $@ > $@.tmp
  	mv $@.tmp $@
@@ -29,12 +29,12 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  Python/import.o: $(srcdir)/Include/pydtrace.h
  
  Python/pydtrace.o: $(srcdir)/Include/pydtrace.d $(DTRACE_DEPS)
--	$(DTRACE) $(DFLAGS) -o $@ -G -s $< $(DTRACE_DEPS)
-+	$(DTRACE) $(DFLAGS) -o $@ -G -s $(srcdir)/Include/pydtrace.d $(DTRACE_DEPS)
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" $(DTRACE) $(DFLAGS) -o $@ -G -s $< $(DTRACE_DEPS)
++	CC="$(CC)" CFLAGS="$(CFLAGS)" $(DTRACE) $(DFLAGS) -o $@ -G -s $(srcdir)/Include/pydtrace.d $(DTRACE_DEPS)
  
  Objects/typeobject.o: Objects/typeslots.inc
  
-@@ -2166,7 +2166,7 @@ altinstall: commoninstall
+@@ -2148,7 +2148,7 @@ altinstall: commoninstall
  
  .PHONY: commoninstall
  commoninstall:  check-clean-src @FRAMEWORKALTINSTALLFIRST@ \
@@ -43,7 +43,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		sharedinstall altmaninstall @FRAMEWORKALTINSTALLLAST@
  
  # Install shared libraries enabled by Setup
-@@ -2229,7 +2229,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -2211,7 +2211,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  			if test -n "$(PY3LIBRARY)"; then \
  				$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  			fi; \
@@ -53,7 +53,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		fi; \
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
-@@ -2564,7 +2565,7 @@ libinstall:	all $(srcdir)/Modules/xxmodu
+@@ -2552,7 +2553,7 @@ libinstall:	all $(srcdir)/Modules/xxmodu
  			esac; \
  		done; \
  	done
@@ -62,7 +62,7 @@ Swap targets libinstall and libainstall, to byte-compile python-config.py.
  		$(DESTDIR)$(LIBDEST); \
  	$(INSTALL_DATA) $(srcdir)/LICENSE $(DESTDIR)$(LIBDEST)/LICENSE.txt
  	@ # If app store compliance has been configured, apply the patch to the
-@@ -2578,12 +2579,12 @@ libinstall:	all $(srcdir)/Modules/xxmodu
+@@ -2566,12 +2567,12 @@ libinstall:	all $(srcdir)/Modules/xxmodu
  	@ # Build PYC files for the 3 optimization levels (0, 1, 2)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
