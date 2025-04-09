@@ -1,7 +1,8 @@
 #!/bin/sh
 
 PYTHONBIN=`@PKG_INFO_CMD@ -Q PYTHONBIN libreoffice`
-UNO_PATH=`@PKG_INFO_CMD@ -Q UNO_PATH libreoffice`
+VERS=`@PKG_INFO_CMD@ -e libreoffice | sed 's/nb[0-9]\{1,\}$//'`
+UNO_PATH=/usr/pkg/${VERS}/lib/libreoffice/program
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${UNO_PATH}
 
 export UNO_PATH
