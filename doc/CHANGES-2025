@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2516 2025/04/09 10:43:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2517 2025/04/09 13:18:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/openrct2 to 0.4.21 [triaxx 2025-04-09]
 	Updated security/libgpg-error to 1.53 [wiz 2025-04-09]
 	Updated devel/gperf to 3.2nb1 [wiz 2025-04-09]
+	Updated net/unbound to 1.22.0nb7 [he 2025-04-09]
