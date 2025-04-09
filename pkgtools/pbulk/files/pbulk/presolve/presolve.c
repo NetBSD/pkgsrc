@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.5 2025/01/13 11:03:03 wiz Exp $ */
+/* $NetBSD: presolve.c,v 1.6 2025/04/09 00:26:32 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,13 +46,14 @@
 
 #include "pbulk.h"
 
-static int verbosity;
 static FILE *incremental = NULL;
+static int strict;
+static int verbosity;
 
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "usage: pbulk-resolve [-v] [-i missing] <pscan output> [ ... ]\n");
+	(void)fprintf(stderr, "usage: pbulk-resolve [-sv] [-i missing] <pscan output> [ ... ]\n");
 	exit(1);
 }
 
@@ -87,7 +88,7 @@ main(int argc, char **argv)
 
 	setprogname("pbulk-resolve");
 
-	while ((ch = getopt(argc, argv, "i:pv")) != -1) {
+	while ((ch = getopt(argc, argv, "i:sv")) != -1) {
 		switch (ch) {
 		case 'i':
 			if (incremental != NULL)
@@ -95,6 +96,9 @@ main(int argc, char **argv)
 			if ((incremental = fopen(optarg, "w")) == NULL)
 				err(1, "Cannot open output file");
 			break;
+                case 's':
+			++strict;
+                        break;
 		case 'v':
 			++verbosity;
 			break;
@@ -305,7 +309,9 @@ resolve_entry(struct pkg_entry *pkg)
 	free(depends_list);
 	if (ret == 1) {
 		free(pkg->depends);
-		pkg->depends = NULL;
+                pkg->depends = NULL;
+                if (strict)
+			return 1;
 	}
 	return 0;
 }
@@ -403,7 +409,7 @@ write_entries(void)
 		if (pkgs[i].active == 0)
 			continue;
 		/* if package is ok, just print existing entry */
-		if (pkgs[i].broken == NULL) {
+		if (pkgs[i].broken == NULL || strict) {
 			(void)fwrite(pkgs[i].begin, 1, pkgs[i].end - pkgs[i].begin, stdout);
 		} else {
 			/* otherwise, replace PKG_FAIL_REASON line with reason for brokenness */

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2025/01/23 15:05:41 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2025/04/09 00:26:32 wiz Exp $
 
-PKGNAME=	pbulk-0.75
+PKGNAME=	pbulk-0.76
 COMMENT=	Modular bulk build framework
 
 .include "../../pkgtools/pbulk/Makefile.common"
