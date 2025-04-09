@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25608 2025/04/08 15:01:19 nia Exp $
+$NetBSD: TODO,v 1.25609 2025/04/09 10:00:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1014,6 +1014,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmortal-0.7.1
 	o openmpi-5.0.5
 	o openslp-2.0.0
+	o openssh-10.0
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1233,7 +1234,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
-	o rust-1.86
+	o rust-1.86 [wip]
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
