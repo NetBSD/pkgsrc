@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25609 2025/04/09 10:00:29 wiz Exp $
+$NetBSD: TODO,v 1.25610 2025/04/09 10:37:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -543,6 +543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o csound6-6.18.1
 	o csvkit-1.4.0
 	o ctemplate-2.4
+	o cups-2.4.12
 	o cups-filters-2.0.0
 	o cvs2svn-2.5.0
 	o cvs-fast-export-1.56
@@ -1015,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmpi-5.0.5
 	o openslp-2.0.0
 	o openssh-10.0
+	o openssl-3.5
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
@@ -1398,6 +1400,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
+	o wayland-protocols-1.43
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.46.6 [wip]
