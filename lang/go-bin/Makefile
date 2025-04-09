@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/01/17 10:19:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/09 11:54:39 jperkin Exp $
 
 PKGNAME=	go-bin-1.22.10
 CATEGORIES=	lang
@@ -109,8 +109,7 @@ EXTRACT_ONLY+=			${DIST.netbsd-arm64}
 .endif
 
 ONLY_FOR_PLATFORM+=		SunOS-*-x86_64
-DIST.illumos-amd64=		go1.21.8.illumos-amd64.tar.gz
-SITES.${DIST.illumos-amd64}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+DIST.illumos-amd64=		go${PKGVERSION_NOREV}.illumos-amd64.tar.gz
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.illumos-amd64}
 EXTRACT_ONLY+=			${DIST.illumos-amd64}
