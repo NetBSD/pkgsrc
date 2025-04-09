@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.4 2025/04/07 16:34:49 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.5 2025/04/09 20:20:02 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -14,4 +14,15 @@ www/ikiwiki: Runtime fix
 
 Pullup ticket #6953 - requested by wiz
 textproc/expat: security fix
+
+Pullup ticket #6956 - requested by taca
+lang/pear: configuration file location fix
+
+Pullup ticket #6954 - requested by gutteridge
+www/firefox128: security fix
+www/firefox128-l10n: dependent update
+
+Pullup ticket #6955 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
