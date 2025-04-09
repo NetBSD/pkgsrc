@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.354 2025/02/09 14:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.355 2025/04/09 14:31:57 manu Exp $
 
 VERREL=		25.2.0
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -408,6 +408,7 @@ BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../net/libcmis/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libcmis+=       libcmis>=0.6.1
 .include "../../net/mDNSResponder/buildlink3.mk"
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 #.include "../../print/poppler-cpp/buildlink3.mk"
