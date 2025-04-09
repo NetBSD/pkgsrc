@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2025/04/02 11:29:27 nia Exp $
+# $NetBSD: Makefile,v 1.127 2025/04/09 07:55:55 nia Exp $
 
 DISTNAME=	make-4.4.1
 PKGNAME=	g${DISTNAME}
@@ -37,7 +37,8 @@ CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"${PREFIX}/bin/mksh\""
 .elif ${TOOLS_PLATFORM.sh:M?*/bin/pdksh}
 DEPENDS+=	pdksh-[0-9]*:../../shells/pdksh
 CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"${PREFIX}/bin/pdksh\""
-.elif ${OPSYS} == "SunOS" && exists(/usr/bin/bash)
+.elif (${OPSYS} == "SunOS" || ${OPSYS} == "UnixWare" || \
+	${OPSYS} == "SCO_SV") && exists(/usr/bin/bash)
 CPPFLAGS+=	-DPKGSRC_DEFAULT_SHELL="\"/usr/bin/bash\""
 .endif
 
