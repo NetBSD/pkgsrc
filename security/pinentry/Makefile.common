@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2024/07/06 06:57:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2025/04/09 09:31:35 wiz Exp $
 #
 # used by security/pinentry/Makefile
 # used by security/pinentry-fltk/Makefile
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 INFO_FILES=		yes
 
 .include "../../security/libassuan2/buildlink3.mk"
+CPPFLAGS+=	-DGPGRT_ENABLE_ES_MACROS
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
