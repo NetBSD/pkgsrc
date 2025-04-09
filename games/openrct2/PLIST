@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/02/08 09:43:19 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/04/09 07:32:01 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -342,6 +342,10 @@ share/openrct2/object/rct2/audio/rct2.audio.base.rct2.json
 share/openrct2/object/rct2/audio/rct2.audio.base.rctc.json
 share/openrct2/object/rct2/audio/rct2.audio.circus.json
 share/openrct2/object/rct2/audio/rct2.audio.title.json
+share/openrct2/object/rct2/climate/rct2.climate.cold.json
+share/openrct2/object/rct2/climate/rct2.climate.cool_and_wet.json
+share/openrct2/object/rct2/climate/rct2.climate.hot_and_dry.json
+share/openrct2/object/rct2/climate/rct2.climate.warm.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn1.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn2.json
 share/openrct2/object/rct2/footpath_banner/rct2.footpath_banner.bn3.json
@@ -1168,10 +1172,10 @@ share/openrct2/object/rct2/station/rct2.station.plain.json
 share/openrct2/object/rct2/station/rct2.station.snow.json
 share/openrct2/object/rct2/station/rct2.station.space.json
 share/openrct2/object/rct2/station/rct2.station.wooden.json
-share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.ice.json
-share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.rock.json
-share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.wood_black.json
-share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.wood_red.json
+share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.ice.parkobj
+share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.rock.parkobj
+share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.wood_black.parkobj
+share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.wood_red.parkobj
 share/openrct2/object/rct2/terrain_surface/rct2.terrain_surface.chequerboard.json
 share/openrct2/object/rct2/terrain_surface/rct2.terrain_surface.dirt.json
 share/openrct2/object/rct2/terrain_surface/rct2.terrain_surface.grass.json
