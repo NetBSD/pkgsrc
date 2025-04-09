@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2517 2025/04/09 13:18:25 he Exp $
+$NetBSD: CHANGES-2025,v 1.2518 2025/04/09 14:52:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3288,3 +3288,13 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libgpg-error to 1.53 [wiz 2025-04-09]
 	Updated devel/gperf to 3.2nb1 [wiz 2025-04-09]
 	Updated net/unbound to 1.22.0nb7 [he 2025-04-09]
+	Updated lang/python39 to 3.9.22 [adam 2025-04-09]
+	Updated lang/py39-html-docs to 3.9.22 [adam 2025-04-09]
+	Updated lang/python310 to 3.10.17 [adam 2025-04-09]
+	Updated lang/py310-html-docs to 3.10.17 [adam 2025-04-09]
+	Updated lang/python311 to 3.11.12 [adam 2025-04-09]
+	Updated lang/py311-html-docs to 3.11.12 [adam 2025-04-09]
+	Updated lang/python312 to 3.12.10 [adam 2025-04-09]
+	Updated lang/py312-html-docs to 3.12.10 [adam 2025-04-09]
+	Updated lang/python313 to 3.13.3 [adam 2025-04-09]
+	Updated lang/py313-html-docs to 3.13.3 [adam 2025-04-09]
