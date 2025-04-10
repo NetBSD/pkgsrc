@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/02 17:54:54 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/10 13:11:03 pin Exp $
 
 DISTNAME=	iamb-0.0.10
 CATEGORIES=	chat
@@ -11,7 +11,7 @@ COMMENT=	Matrix client for Vim addicts
 LICENSE=	apache-2.0
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
