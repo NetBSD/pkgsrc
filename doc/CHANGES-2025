@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2519 2025/04/09 15:38:08 manu Exp $
+$NetBSD: CHANGES-2025,v 1.2520 2025/04/10 09:51:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3299,3 +3299,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/python313 to 3.13.3 [adam 2025-04-09]
 	Updated lang/py313-html-docs to 3.13.3 [adam 2025-04-09]
 	Updated converters/unoconv to 0.8.2 [manu 2025-04-09]
+	Updated devel/libffi to 3.4.8 [adam 2025-04-10]
+	Updated devel/catch2 to 3.8.1 [adam 2025-04-10]
