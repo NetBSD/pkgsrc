@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2024/11/14 22:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/10 20:45:02 wiz Exp $
 
-GITHUB_PROJECT=	wasi-libc
-GITHUB_TAG=	4db5398e65c7dd343315db7e13f3dcae056466ba
 DISTNAME=	wasi-libc-0.0.0pre20231007
 PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
+GITHUB_PROJECT=	wasi-libc
+GITHUB_TAG=	4db5398e65c7dd343315db7e13f3dcae056466ba
 
 GITHUB_SUBMODULES+=	WebAssembly WASI 59cbe140561db52fc505555e859de884e0ee7f00 wasi/tools/wasi-headers/WASI
 EXTRACT_USING=		bsdtar
@@ -31,6 +31,7 @@ USE_TOOLS+=	gmake
 
 # Do not crush clang-13
 BUILDLINK_TRANSFORM+=	rm:-fcommon
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 MAKE_FLAGS+=	CC=clang
 MAKE_FLAGS+=	AR=${PREFIX}/bin/llvm-ar
