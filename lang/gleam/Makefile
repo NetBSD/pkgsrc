@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/01/30 08:30:36 pin Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/10 13:18:26 pin Exp $
 
 GITHUB_PROJECT=	gleam
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gleam.run/
 COMMENT=	ML-flavoured type-safe language using the BEAM runtime
 LICENSE=	apache-2.0
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 # Requires at least Rust-1.82 for is_none_or feature.
 
