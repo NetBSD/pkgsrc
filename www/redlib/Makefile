@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/30 08:53:00 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/10 19:32:52 pin Exp $
 
 DISTNAME=	redlib-0.36.0
 CATEGORIES=	www
@@ -9,6 +9,9 @@ MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/redlib/redlib/
 COMMENT=	Private front-end for Reddit
 LICENSE=	gnu-agpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 CONFLICTS+=	libreddit-[0-9]*
 SUPERSEDES+=	libreddit-[0-9]*
