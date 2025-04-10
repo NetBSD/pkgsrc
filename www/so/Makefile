@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/04/04 20:13:57 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/10 19:30:16 pin Exp $
 
 DISTNAME=	so-0.4.10
 CATEGORIES=	www
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/samtay/so/
 COMMENT=	Terminal interface for Stack Overflow
 LICENSE=	mit
-
-# See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
