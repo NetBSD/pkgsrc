@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/04/02 11:06:37 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/10 11:49:13 pin Exp $
 
-DISTNAME=	tuifeed-0.3.2
-# 0.4.1 requires Rust >= 1.85
+DISTNAME=	tuifeed-0.4.2
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,10 +10,9 @@ HOMEPAGE=	https://github.com/veeso/tuifeed/
 COMMENT=	Terminal feed reader with a fancy ui
 LICENSE=	mit
 
-# See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
-
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.85.0
 
 INSTALLATION_DIRS=	bin
 
