@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25610 2025/04/09 10:37:02 wiz Exp $
+$NetBSD: TODO,v 1.25611 2025/04/10 20:08:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
-	o SDL-3.2.2
 	o SQLiteCpp-2.5.0
 	o Sigil-2.4.2
 	o TiffIO-140a
