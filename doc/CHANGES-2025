@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2523 2025/04/10 11:48:21 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2524 2025/04/10 11:50:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-about to 0.7.1 [pin 2025-04-10]
 	Updated devel/cargo-edit to 0.13.2 [pin 2025-04-10]
 	Updated devel/feluda to 1.5.3 [pin 2025-04-10]
+	Updated news/tuifeed to 0.4.2 [pin 2025-04-10]
