@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/04/02 10:57:04 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/10 13:22:25 pin Exp $
 
 DISTNAME=	katbin-cli-1.3.15
 CATEGORIES=	misc
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sphericalkat/katbin-cli/
 COMMENT=	CLI for katbin
 LICENSE=	mit OR apache-2.0
-
-# See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
