@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/02 11:11:05 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/10 19:40:52 pin Exp $
 
 DISTNAME=	pueue-3.4.1
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ COMMENT=	Manage your shell commands
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
