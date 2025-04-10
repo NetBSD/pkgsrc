@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/04/08 18:59:57 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/10 11:47:13 pin Exp $
 
-DISTNAME=	feluda-1.5.2
+DISTNAME=	feluda-1.5.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anistark/}
 
@@ -11,9 +11,6 @@ LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
-
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
-SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
 
 .include "cargo-depends.mk"
 
