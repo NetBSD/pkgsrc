@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/03/30 16:05:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/10 23:45:43 schmonz Exp $
 
-DISTNAME=	Text-HTML-Turndown-0.04
+DISTNAME=	Text-HTML-Turndown-0.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CO/CORION/}
