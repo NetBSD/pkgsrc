@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2527 2025/04/10 20:50:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2528 2025/04/10 23:45:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3308,3 +3308,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/SDL3 version 3.2.10 [nia 2025-04-10]
 	Updated www/chromium to 131.0.6778.204nb5 [wiz 2025-04-10]
 	Updated net/dnsdist to 1.9.8 [wiz 2025-04-10]
+	Updated textproc/p5-Text-HTML-Turndown to 0.05 [schmonz 2025-04-10]
