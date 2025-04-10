@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/02/06 09:57:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/04/10 20:07:52 wiz Exp $
 
 BLAKE2s (chromium-131.0.6778.204-testdata.tar.xz) = c8e99fa924e08b74fe4913b13ee1030ffe96b5dfb5da0f5afc0a8e0adcf22d29
 SHA512 (chromium-131.0.6778.204-testdata.tar.xz) = f6b71812815d0988f054d998a67ee95b9190cbdc4269ffb3fd99fa088ad6ce77b652a5f569f8078274c0aaaba1a8eecb4de84bf8d7dd360def152787640961ba
@@ -1068,6 +1068,7 @@ SHA1 (patch-third__party_blink_public_common_renderer__preferences_renderer__pre
 SHA1 (patch-third__party_blink_public_platform_platform.h) = e048996eb704dadec1ef2ab8b524659610e9b8d1
 SHA1 (patch-third__party_blink_public_platform_web__vector.h) = 2153b41cca994cb9232fccbca3d3e21d51240652
 SHA1 (patch-third__party_blink_renderer_bindings_scripts_bind__gen_style__format.py) = 2a14e70b3abf70caba7f10e89b125223d9a11465
+SHA1 (patch-third__party_blink_renderer_build_scripts_gperf.py) = 48eb40f6767acca98a55edbc2aea48c9d2f0d62c
 SHA1 (patch-third__party_blink_renderer_build_scripts_run__with__pythonpath.py) = 94a55da4e044728eb857917c28109fddef1e8bd6
 SHA1 (patch-third__party_blink_renderer_controller_blink__initializer.cc) = e075b8c26ffba4ec9ade861e969597f16628e206
 SHA1 (patch-third__party_blink_renderer_controller_memory__usage__monitor__posix.cc) = a51d6f2acff5c5a85d8bb7f58c45ffa91e9d1125
