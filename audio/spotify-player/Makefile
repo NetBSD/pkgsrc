@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2025/04/02 09:58:15 pin Exp $
+# $NetBSD: Makefile,v 1.61 2025/04/10 13:06:27 pin Exp $
 
 DISTNAME=	spotify-player-0.20.4
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Command driven spotify player
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
