@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/02 17:34:08 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/10 13:00:08 pin Exp $
 
 DISTNAME=	cargo-licenses-0.2.0
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	Tool to audit license information for Rust projects
 LICENSE=	apache-2.0 OR mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
