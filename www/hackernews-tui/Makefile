@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/04/02 17:47:06 pin Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/10 19:31:59 pin Exp $
 
 DISTNAME=	hackernews-TUI-0.13.5
 PKGNAME=	${DISTNAME:tl}
@@ -12,7 +12,7 @@ COMMENT=	Terminal UI to browse Hacker News
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
