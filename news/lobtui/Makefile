@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/04/02 11:06:02 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/10 19:37:07 pin Exp $
 
 DISTNAME=	lobtui-0.3
 CATEGORIES=	news
@@ -11,7 +11,7 @@ COMMENT=	TUI for lobste.rs
 LICENSE=	gnu-gpl-v3
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
