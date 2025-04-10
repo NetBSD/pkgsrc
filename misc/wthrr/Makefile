@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/02 10:58:27 pin Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/10 13:24:01 pin Exp $
 
 DISTNAME=	wthrr-the-weathercrab-1.2.1
 PKGNAME=	wthrr-1.2.1
@@ -11,9 +11,6 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/ttytm/wthrr-the-weathercrab/
 COMMENT=	Little helper for your terminal who knows about the weather
 LICENSE=	mit
-
-# See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
 
 .include "cargo-depends.mk"
 
