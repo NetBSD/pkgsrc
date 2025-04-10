@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.29 2025/02/09 14:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/10 20:50:08 wiz Exp $
 
-DISTNAME=	dnsdist-1.8.0
-PKGREVISION=	8
+DISTNAME=	dnsdist-1.9.8
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++11
-USE_TOOLS+=	gmake pkg-config
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,8 +26,6 @@ PKG_GECOS.${DNSDIST_USER}=	dnsdist daemon user
 
 FILES_SUBST+=	DNSDIST_USER=${DNSDIST_USER}
 FILES_SUBST+=	DNSDIST_GROUP=${DNSDIST_GROUP}
-CONF_FILES+=	share/examples/dnsdist/dnsdist.conf \
-		${PKG_SYSCONFDIR}/dnsdist.conf
 
 CONFIGURE_ARGS+=	--enable-dns-over-tls
 CONFIGURE_ARGS+=	--enable-dnscrypt
@@ -38,16 +36,21 @@ CONFIGURE_ARGS+=	--with-lua
 CONFIGURE_ARGS+=	--with-nghttp2
 CONFIGURE_ARGS+=	--with-re2
 CONFIGURE_ARGS+=	--without-net-snmp
+CONFIGURE_ARGS+=	--enable-dns-over-https
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
 
+EGDIR=			${PREFIX}/share/examples/dnsdist
+CONF_FILES=		${EGDIR}/dnsdist.conf-dist ${PKG_SYSCONFDIR}/dnsdist.conf
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+
 RCD_SCRIPTS+=		dnsdist
 
-post-install:
-	cd ${DESTDIR}${PREFIX} && \
-	${MV} share/examples/dnsdist/dnsdist.conf-dist share/examples/dnsdist/dnsdist.conf || ${TRUE}
-
+.include "../../databases/lmdb/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
