@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/03/31 13:52:18 ktnb Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/10 22:21:34 nia Exp $
 
 DISTNAME=	newsraft-0.29
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	https://codeberg.org/newsraft/newsraft/archive/
 
@@ -11,11 +12,13 @@ LICENSE=	isc
 
 WRKSRC=	${WRKDIR}/newsraft
 
-USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config pax
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
 
 MAKE_FILE=	makefile
+
+MAKE_FLAGS+=	CURSES_CFLAGS=-I${BUILDLINK_PREFIX.curses:Q}/include
+MAKE_FLAGS+=	CURSES_LIBS=${BUILDLINK_LDADD.curses:Q}
 
 EGDIR=			${PREFIX}/share/examples/newsraft
 
@@ -29,7 +32,8 @@ do-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/gumbo-parser/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
