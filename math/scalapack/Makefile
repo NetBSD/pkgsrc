@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/08/25 06:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/10 16:40:34 thor Exp $
 
 DISTNAME=	scalapack-2.2.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.netlib.org/scalapack/
 EXTRACT_SUFX=	.tgz
@@ -10,10 +11,10 @@ HOMEPAGE=	http://www.netlib.org/scalapack/
 COMMENT=	Scalable Linear Algebra PACKage
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c fortran
 
+.include "../../devel/cmake/build.mk"
 CMAKE_CONFIGURE_ARGS=	-DBLA_PREFER_PKGCONFIG=on \
 		-DBLA_PKGCONFIG_LAPACK=${LAPACK_PC:Q} \
 		-DBLA_PKGCONFIG_BLAS=${BLAS_PC:Q} \
