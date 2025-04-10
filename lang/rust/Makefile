@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.328 2025/04/08 13:31:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.329 2025/04/10 20:29:29 he Exp $
 
 DISTNAME=	rustc-1.85.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -57,11 +57,15 @@ CONFIGURE_ARGS+=	--set dist.vendor=false
 # optional from do-cross.mk
 CONFIGURE_ARGS+=	${ADD_CONFIGURE_ARGS}
 
-# Getting RPATH with $ORIGIN into bootstrap may be troublesome, so
-# uncommenting the LD_LIBRARY_PATH setting may be required to run
-# the bootstrap
-#PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
-#MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+# Getting RPATH with $ORIGIN into the bootstrap binaries is
+# problematic, since pkgsrc refuses to put $ORIGIN into RPATHs
+# of executables. So instead we need these so that the bootstrap
+# compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
+# part of the initial part of the rust compiler build.
+# This problem is not present with the amd64 bootstrap bits,
+# which are built by our upstream and uses $ORIGIN/../lib in RPATH.
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 
 # This should allow us to perform "offline" builds (so cargo doesn't fetch
 # dependencies during the build stage) but this isn't hooked up yet.
