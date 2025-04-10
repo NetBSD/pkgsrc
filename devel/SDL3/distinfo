@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/04/10 16:47:52 nia Exp $
+
+BLAKE2s (SDL3-3.2.10.tar.gz) = e8b9a18da7ac3d7766e89e50a9fbd90783d38184ab8b9dff9a875c191866593b
+SHA512 (SDL3-3.2.10.tar.gz) = e919749ded768ed15c2014efcacfb8ee6614d47727ceb45bbfd4248b36c3790640b4dcbd66de46e4f6870182e13d0d4ceb35da4eb064f9feabdde30ca6eae30d
+Size (SDL3-3.2.10.tar.gz) = 15876292 bytes
+SHA1 (patch-CMakeLists.txt) = 6187ae70c2c2fa8c5e36c93d9132ddd4c96657f6
