@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2521 2025/04/10 11:44:13 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2522 2025/04/10 11:46:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libffi to 3.4.8 [adam 2025-04-10]
 	Updated devel/catch2 to 3.8.1 [adam 2025-04-10]
 	Updated devel/cargo-about to 0.7.1 [pin 2025-04-10]
+	Updated devel/cargo-edit to 0.13.2 [pin 2025-04-10]
