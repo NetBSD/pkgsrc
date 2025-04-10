@@ -1,0 +1,45 @@
+$NetBSD: patch-002-CMakeLists.txt,v 1.1 2025/04/10 16:40:34 thor Exp $
+
+Avoid installation of CMake configuration files that only cause confusion.
+At least with use of MPI::MPI_C in there, users have trouble and builds
+fail. Pkg-config is good enough for us and simpler, anyway.
+
+--- CMakeLists.txt.orig	2025-04-10 18:26:50.487877833 +0200
++++ CMakeLists.txt	2025-04-10 18:27:49.833227261 +0200
+@@ -281,7 +281,9 @@
+ # --------------------------------------------------
+ 
+ 
+-export(TARGETS scalapack FILE scalapack-targets.cmake)
++# These cmake files do not help. They even prevent builds because of unresolved
++# MPI::MPI_C in there. We are fine with pkg-config files, anyway, here.
++#export(TARGETS scalapack FILE scalapack-targets.cmake)
+ 
+ if( NOT LAPACK_FOUND )
+  install(FILES
+@@ -290,10 +292,12 @@
+    )
+ endif( NOT LAPACK_FOUND )
+ 
++if ( FALSE )
+ configure_file(${SCALAPACK_SOURCE_DIR}/CMAKE/scalapack-config-version.cmake.in
+   ${SCALAPACK_BINARY_DIR}/scalapack-config-version.cmake @ONLY)
+ configure_file(${SCALAPACK_SOURCE_DIR}/CMAKE/scalapack-config-build.cmake.in
+   ${SCALAPACK_BINARY_DIR}/scalapack-config.cmake @ONLY)
++endif()
+ 
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/scalapack.pc.in ${CMAKE_CURRENT_BINARY_DIR}/scalapack.pc)
+  install(FILES
+@@ -301,6 +305,7 @@
+   DESTINATION ${PKG_CONFIG_DIR}
+    )
+ 
++if ( FALSE )
+ configure_file(${SCALAPACK_SOURCE_DIR}/CMAKE/scalapack-config-install.cmake.in
+   ${SCALAPACK_BINARY_DIR}/CMakeFiles/scalapack-config.cmake @ONLY)
+ install(FILES
+@@ -311,3 +316,4 @@
+ 
+ install(EXPORT scalapack-targets
+   DESTINATION lib/cmake/scalapack-${SCALAPACK_VERSION})
++endif()
