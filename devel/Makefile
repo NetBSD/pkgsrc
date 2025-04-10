@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4459 2025/04/05 20:06:05 gdt Exp $
+# $NetBSD: Makefile,v 1.4460 2025/04/10 16:47:52 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -112,6 +112,7 @@ SUBDIR+=	SDL
 SUBDIR+=	SDL2
 SUBDIR+=	SDL2-legacy-darwin
 SUBDIR+=	SDL2_Pango
+SUBDIR+=	SDL3
 SUBDIR+=	SDL_Pango
 SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf

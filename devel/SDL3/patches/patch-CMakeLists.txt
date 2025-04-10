@@ -1,0 +1,34 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/10 16:47:53 nia Exp $
+
+- Disable precompiled headers with GCC, incompatible with -fPIC.
+- Treat FreeBSD like any other pkgsrc platform.
+
+--- CMakeLists.txt.orig	2025-03-31 20:12:19.000000000 +0000
++++ CMakeLists.txt
+@@ -3460,7 +3460,7 @@ if(SDL_SHARED)
+   set_property(TARGET SDL3-shared PROPERTY INTERFACE_SDL3_SHARED TRUE)
+   set_property(TARGET SDL3-shared APPEND PROPERTY COMPATIBLE_INTERFACE_STRING "SDL_VERSION")
+   set_property(TARGET SDL3-shared PROPERTY INTERFACE_SDL_VERSION "SDL${SDL3_VERSION_MAJOR}")
+-  if(NOT CMAKE_VERSION VERSION_LESS "3.16")
++  if(NOT CMAKE_VERSION VERSION_LESS "3.16" AND NOT USE_GCC)
+     target_precompile_headers(SDL3-shared PRIVATE "$<$<OR:$<COMPILE_LANGUAGE:C>,$<COMPILE_LANGUAGE:CXX>>:${PROJECT_SOURCE_DIR}/src/SDL_internal.h>")
+   endif()
+ endif()
+@@ -3484,7 +3484,7 @@ if(SDL_STATIC)
+   set_property(TARGET SDL3-static PROPERTY INTERFACE_SDL3_SHARED FALSE)
+   set_property(TARGET SDL3-static APPEND PROPERTY COMPATIBLE_INTERFACE_STRING "SDL_VERSION")
+   set_property(TARGET SDL3-static PROPERTY INTERFACE_SDL_VERSION "SDL${SDL3_VERSION_MAJOR}")
+-  if(NOT CMAKE_VERSION VERSION_LESS "3.16")
++  if(NOT CMAKE_VERSION VERSION_LESS "3.16" AND NOT USE_GCC)
+     target_precompile_headers(SDL3-static PRIVATE "$<$<OR:$<COMPILE_LANGUAGE:C>,$<COMPILE_LANGUAGE:CXX>>:${PROJECT_SOURCE_DIR}/src/SDL_internal.h>")
+   endif()
+ endif()
+@@ -3529,7 +3529,7 @@ else()
+ endif()
+ set(SDL_INSTALL_CMAKEDIR_ROOT "${SDL_INSTALL_CMAKEDIR_ROOT_DEFAULT}" CACHE STRING "Root folder where to install SDL3Config.cmake related files (SDL3 subfolder for MSVC projects)")
+ 
+-if(FREEBSD)
++if(FALSE)
+   # FreeBSD uses ${PREFIX}/libdata/pkgconfig
+   set(SDL_PKGCONFIG_INSTALLDIR "libdata/pkgconfig")
+ else()
