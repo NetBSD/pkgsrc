@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/04/08 00:25:02 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/10 11:43:07 pin Exp $
 
-DISTNAME=	cargo-about-0.6.6
-#cargo-about-0.7.0 requires Rust >= 1.85
+DISTNAME=	cargo-about-0.7.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
@@ -15,7 +14,7 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.81.0
+RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
