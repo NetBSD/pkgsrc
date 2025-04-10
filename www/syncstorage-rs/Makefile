@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/12/11 13:05:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/10 19:34:02 pin Exp $
 
 DISTNAME=	syncstorage-rs-0.18.2
 CATEGORIES=	www
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla-services/syncstorage-rs/
 COMMENT=	Firefox Sync Storage server in Rust
 LICENSE=	mpl-2.0
-
-SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys/
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
@@ -28,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 #DEPENDS+=	${PYPKGPREFIX}-BrowserID>=0.14.0:../../www/py-BrowserID
 
 #CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --features=syncstorage-db/mysql,tokenserver-auth/py
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 RUST_REQ+=	1.80
 
