@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/02 17:55:36 pin Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/10 19:36:03 pin Exp $
 
 DISTNAME=	inlyne-0.5.0
 CATEGORIES=	textproc
@@ -11,7 +11,7 @@ COMMENT=	GPU powered, browserless, markdown and html viewer
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
