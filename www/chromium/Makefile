@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/02/18 10:33:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/10 20:07:52 wiz Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			131.0.6778.204
-PKGREVISION=			4
+PKGREVISION=			5
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -42,7 +42,7 @@ CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 
-TOOL_DEPENDS+=			gperf>=3.0.1:../../devel/gperf
+TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
