@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/08 13:49:56 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/11 22:11:30 gdt Exp $
 
 DISTNAME=	magic-wormhole-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -45,8 +45,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-flakes>=1.2.3:../../devel/py-flakes
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server>=0.3.1:../../net/py-magic-wormhole-mailbox-server # XXX setup.py says ==0.3.1 but 0.4.0 seems OK
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay>=0.3.1:../../net/py-magic-wormhole-transit-relay # XXX setup.py says ==0.3.1 but 0.4.0 seems OK
-# setup.py not listed, but experimentally determined to be needed
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
