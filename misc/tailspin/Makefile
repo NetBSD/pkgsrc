@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/04/04 20:16:29 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/11 12:18:15 pin Exp $
 
-DISTNAME=	tailspin-4.0.0
-# 5.0.0 requires Rust >= 1.85
+DISTNAME=	tailspin-5.1.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bensadeh/}
 
@@ -12,7 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.70.0
+RUST_REQ=	1.85.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
