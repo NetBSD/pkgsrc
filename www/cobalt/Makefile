@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/03/06 06:39:12 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/11 12:13:09 pin Exp $
 
-DISTNAME=	cobalt-0.19.6
-# cobalt >= v0.19.8 requires Rust >= 1.85 to build
+DISTNAME=	cobalt-0.20.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cobalt-org/}
 GITHUB_PROJECT=	cobalt.rs
@@ -12,19 +11,13 @@ HOMEPAGE=	https://github.com/cobalt-org/cobalt.rs/
 COMMENT=	Static website generator
 LICENSE=	mit
 
-RUST_REQ=	1.76.0
+RUST_REQ=	1.85.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
-
-# Switch off sass feature by default due to libsass and sass-rs deprecation
-# See, https://github.com/cobalt-org/cobalt.rs/issues/1050
-# and https://github.com/cobalt-org/cobalt.rs/pull/1090
-CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		syntax-highlight serve html-minifier
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
