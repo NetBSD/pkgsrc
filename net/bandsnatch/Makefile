@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/02 10:59:41 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/11 09:02:20 pin Exp $
 
 DISTNAME=	bandsnatch-0.3.3
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	CLI batch downloader for your Bandcamp collection
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
