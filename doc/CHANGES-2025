@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2535 2025/04/11 07:53:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2536 2025/04/11 08:01:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3316,3 +3316,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-markdown to 0.7.1.0.4.1 [wiz 2025-04-11]
 	Updated textproc/tree-sitter-rust to 0.24.0 [wiz 2025-04-11]
 	Updated devel/scons4 to 4.9.1 [wiz 2025-04-11]
+	Updated devel/jj to 0.28.1 [wiz 2025-04-11]
