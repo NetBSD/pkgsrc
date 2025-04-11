@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25612 2025/04/11 07:02:48 wiz Exp $
+$NetBSD: TODO,v 1.25613 2025/04/11 07:26:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -727,6 +727,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o goocanvas-2.0.2
 	o gossip-0.31
 	o gotosocial-0.18.3
+	o gpac-2.4
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
