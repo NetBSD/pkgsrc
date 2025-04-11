@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2025/03/30 21:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/04/11 06:54:29 wiz Exp $
 
 DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
@@ -44,6 +44,13 @@ SUBST_SED.pthread=	-e 's/-lpthread/${PTHREAD_LINKFLAGS:Q}/'
 SUBST_SED.pthread+=	-e 's/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/'
 
 LDFLAGS.OpenBSD+=	${PTHREAD_LINKFLAGS}
+
+# TODO: really use pkgsrc expat
+# this builds against the included libexpat, not the pkgsrc version
+# see https://www.openwall.com/lists/oss-security/2025/04/09/4 for details
+# and a possible patch
+#post-extract:
+#	${RM} -rf ${WRKSRC}/lib/expat
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
