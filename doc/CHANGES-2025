@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2528 2025/04/10 23:45:49 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2529 2025/04/11 01:49:25 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3309,3 +3309,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 131.0.6778.204nb5 [wiz 2025-04-10]
 	Updated net/dnsdist to 1.9.8 [wiz 2025-04-10]
 	Updated textproc/p5-Text-HTML-Turndown to 0.05 [schmonz 2025-04-10]
+	Added sysutils/moxfm version 1.0.1 [nia 2025-04-11]
