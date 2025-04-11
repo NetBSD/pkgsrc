@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.20 2025/02/02 15:26:12 gdt Exp $
+# $NetBSD: wheel.mk,v 1.21 2025/04/11 22:07:54 gdt Exp $
 #
 # Build and install Python wheels
 #
@@ -24,6 +24,8 @@
 #			Only needs to be set if do-build is redefined.
 #
 # USE_PYTEST:		If set to yes, depend on py-test and use it for testing.
+#			(This is strongly the standard approach; often upstreams
+#			will not even document it.)
 #			Default: yes
 #
 # WHEEL_ARGS:		Additional arguments to pass during build of the wheel.
