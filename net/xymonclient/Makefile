@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/10/18 23:59:32 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/11 01:40:17 maya Exp $
 
 DISTNAME=		xymon-4.3.30
 PKGNAME=		${DISTNAME:S/xymon/xymonclient/}
@@ -140,4 +140,7 @@ post-patch:
 	      ${WRKSRC}/client/xymonclient-freebsd.sh > \
 	      ${WRKSRC}/client/xymonclient-dragonfly.sh
 
+.if ${OPSYS} == "Linux"
+.include "../../devel/libtirpc/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
