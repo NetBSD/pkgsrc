@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2024/01/10 06:23:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/04/11 16:58:04 prlw1 Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -3777,6 +3777,7 @@ share/locale/is/LC_MESSAGES/evince.mo
 share/locale/it/LC_MESSAGES/evince.mo
 share/locale/ja/LC_MESSAGES/evince.mo
 share/locale/ka/LC_MESSAGES/evince.mo
+share/locale/kab/LC_MESSAGES/evince.mo
 share/locale/kk/LC_MESSAGES/evince.mo
 share/locale/km/LC_MESSAGES/evince.mo
 share/locale/kn/LC_MESSAGES/evince.mo
