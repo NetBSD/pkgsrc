@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/03/03 06:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/11 07:53:40 wiz Exp $
 
-DISTNAME=	scons-4.8.1
+DISTNAME=	scons-4.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 EXTRACT_USING=	bsdtar
@@ -19,10 +18,6 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	script/scons
 REPLACE_PYTHON+=	script/scons-configure-cache
 REPLACE_PYTHON+=	script/sconsign
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/sc/SC/}
 
 # XXX: not sure why this is needed exactly
 # but -Wl,-rpath is filtered out by buildlink from the c++ command line
