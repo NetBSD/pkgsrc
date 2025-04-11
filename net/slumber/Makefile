@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/04/04 20:12:19 pin Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/11 09:10:13 pin Exp $
 
 DISTNAME=	slumber-3.0.1
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Terminal-based REST client
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
