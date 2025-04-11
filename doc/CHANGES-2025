@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2531 2025/04/11 07:26:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2532 2025/04/11 07:48:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3312,3 +3312,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/moxfm version 1.0.1 [nia 2025-04-11]
 	Updated ham/fldigi to 4.1.01nb38 [wiz 2025-04-11]
 	Updated multimedia/gpac to 1.0.1nb26 [wiz 2025-04-11]
+	Updated textproc/tree-sitter-lua to 0.3.0 [wiz 2025-04-11]
