@@ -1,0 +1,36 @@
+$NetBSD: patch-lib_magic,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+Add support for more file types.
+
+--- lib/magic.orig	2001-09-03 04:45:01.000000000 +0000
++++ lib/magic
+@@ -7,12 +7,15 @@
+ >0	lmode&0xF000	0xA000			LNK
+ 0	short		0x1F9D			COMPRESS
+ 0	short		0x1F8B			GZIP
++0	long		0xFD377A58		XZ
+ 0	string		<MakerFile		FRAME
+ 0	string		<MIFFile		FRAME
+ 0	string		<MML			FRAME
+ 0	string		.snd			SND
+ 0	string		RIFF			RIFF
+ >8	string		WAVE			WAVE
++0	string		ID3			ID3
++0	string		fLaC			FLAC
+ 0	long		0x59A66A95		RAS
+ 0	string		P1			PBM
+ 0	string		P2			PGM
+@@ -24,9 +27,13 @@
+ 0	short		0x4949			TIFF
+ 0	string		GIF87a			GIF
+ 0	string		GIF89a			GIF
++0	long		0x89504E47		PNG
++0	long		0xFFD8FFDB		JPG
+ 0	long		0xFFD8FFE0		JPG
++0	long		0xFFD8FFE1		JPG
+ 0	long		0xFFD8FFEE		JPG
+ 0	long		0x01666370		PCF
++0	string		%PDF-			PDF
+ 0	string		STARTFONT\ 2.1		BDF
+ 0	string		From			MAIL
+ 0	string		#FIG			FIG

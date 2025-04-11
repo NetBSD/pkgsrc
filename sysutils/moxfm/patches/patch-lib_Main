@@ -1,0 +1,27 @@
+$NetBSD: patch-lib_Main,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+Modernize (in the loosest sense) defaults.
+
+--- lib/Main.orig	2001-09-03 08:14:53.000000000 +0000
++++ lib/Main
+@@ -4,12 +4,14 @@
+ #
+ ##########################################
+ 
+-Floppy:/:floppy:floppy.xpm:OPEN:COPY
+-CD-ROM:/:cdrom:cdrom.xpm:OPEN:
+-Trash:/root/.trash::trash_empty.xpm:OPEN:mv -f --backup=numbered $* ~/.trash
+-Printer:::printer.xpm:exec /usr/bin/lpq | /usr/bin/X11/xless:exec lpr -#%Number of copies\:--1% $*
+-Xterm:::xterm.xpm:exec xterm -sb -sl 500 -j:exec xterm -sb -j -e $1 %Arguments\:%
++#Floppy:/:floppy:floppy.xpm:OPEN:COPY
++#CD-ROM:/:cdrom:cdrom.xpm:OPEN:
++Trash:~/.trash::trash_empty.xpm:OPEN:mv -f --backup=numbered $* ~/.trash
++Printer:::printer.xpm:exec lpq | xless:exec lpr -#%Number of copies\:--1% $*
++Xterm:::xterm.xpm:exec xterm:exec xterm -e $1 %Arguments\:%
++Xcalc:::calc2.xpm:exec xcalc:exec xcalc $*
++Xedit:::text.xpm:exec xedit:exec xedit $*
+ Emacs:::emacs.xpm:exec emacs:exec emacs $*
+-Netscape:::netscape.xpm:exec netscape:exec netscape $*
++Firefox:::mozilla.xpm:exec firefox:exec firefox $*
+ Gimp:::paint.xpm:exec gimp:exec gimp $*
+ XV:/usr/X11/bin::xv.xpm:exec xv:exec xv $*

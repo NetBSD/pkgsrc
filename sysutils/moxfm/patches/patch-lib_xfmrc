@@ -1,0 +1,44 @@
+$NetBSD: patch-lib_xfmrc,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+Add support for more file types.
+
+--- lib/xfmrc.orig	2001-09-03 06:15:56.000000000 +0000
++++ lib/xfmrc
+@@ -67,6 +67,7 @@
+ 
+ <PS>:ps.xpm:exec ghostview $1:
+ <GIF>:gif.xpm:exec xv $1:
++<PNG>:paint.xpm:exec xv $1:
+ <JPG>:jpeg.xpm:exec xv $1:
+ <TIFF>:tiff.xpm:exec xv $1:
+ <FIG>:fig.xpm:exec xfig $1:
+@@ -79,8 +80,10 @@
+ 
+ # audio files, assumes the sox/play program (still rather preliminary)
+ 
+-<SND>:sound.xpm:exec play -t .auto $1:
+-<RIFF WAVE>:sound.xpm:exec play -t .auto $1:
++<SND>:sound.xpm:exec audioplay $1:
++<RIFF WAVE>:sound.xpm:exec audioplay $1:
++<ID3>:sound.xpm:exec mpg123 $1:
++<FLAC>:sound.xpm:exec flac123 $1:
+ 
+ # common file types
+ 
+@@ -90,6 +93,8 @@
+ <MAN>:manpage.xpm:groff -TX100 -man -mX -P-geometry -P655x860 $1:
+ <HTML>:html.xpm:netscape $1:
+ 
++<PDF>:pdf.xpm:exec mupdf $1:
++
+ <data>*.a:dot_a.xpm:EDIT:
+ <ascii>*.c:dot_c.xpm:EDIT:
+ <ascii>*.cc:dot_cc.xpm:EDIT:
+@@ -122,6 +127,7 @@
+ <GZIP>*.tgz:tar.xpm:tar xfvz $1; echo "*** tar done ***":tar cfvz $*; echo "*** tar done ***"
+ <GZIP>*.tar.z:tar.xpm:tar xfvz $1; echo "*** tar done ***":tar cfvz $*; echo "*** tar done ***"
+ <GZIP>:compressed.xpm:exec gunzip $1:
++<XZ>:compressed.xpm:exec unxz $1:
+ 
+ <UUENC>:uu.xpm:exec uudecode $1:
+ 

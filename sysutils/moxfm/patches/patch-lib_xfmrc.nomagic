@@ -1,0 +1,34 @@
+$NetBSD: patch-lib_xfmrc.nomagic,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+Add support for more file types.
+
+--- lib/xfmrc.nomagic.orig	1996-03-16 21:22:15.000000000 +0000
++++ lib/xfmrc.nomagic
+@@ -18,15 +18,25 @@
+ *.ez:wordprocess.xpm:exec ez $1:
+ *.gif:gif.xpm:exec xv $1:
+ *.html:html.xpm:exec Mosaic $1:
+-*.jpg:gif.xpm:exec xv $1:
++*.jpg:jpeg.xpm:exec xv $1:
++*.jpeg:jpeg.xpm:exec xv $1:
++*.png:paint.xpm:exec xv $1:
+ *.man:manpage.xpm:exec groff -Tps -mandoc -X $1:
+ *.mov:mpg.xpm:exec xanim $1:
+ *.mpg:mpg.xpm:exec mpeg_play $1 >/dev/console:
++*.wav:sound.xpm:exec audioplay $1 >/dev/console:
++*.flac:sound.xpm:exec flac123 $1 >/dev/console:
++*.mp3:sound.xpm:exec mpg123 $1 >/dev/console:
++*.mp4:video.xpm:exec mpv $1 >/dev/console:
++*.mkv:video.xpm:exec mpv $1 >/dev/console:
++*.webm:video.xpm:exec mpv $1 >/dev/console:
+ *.tga:gif.xpm:exec xli $1:
+ *.tiff:tiff.xpm:execxv $1:
+-*.tar.gz:tar_z.xpm:exec tar tfz $1| xless:
++*.tar.gz:tar_z.xpm:exec tar tzf $1| xless:
+ *.fig:fig.xpm:exec xfig -me -P $1:
+ *.gz:compressed.xpm:exec gunzip -c $1 | xless:
++*.xz:compressed.xpm:exec unxz -c $1| xless:
++*.pdf:pdf.xpm:exec mupdf $1:
+ *.h:dot_h.xpm:EDIT:
+ *.H:dot_h.xpm:EDIT:
+ *.o:dot_o.xpm:exec nm $1 | xless:

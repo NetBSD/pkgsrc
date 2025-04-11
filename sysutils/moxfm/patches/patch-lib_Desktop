@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_Desktop,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+Modernize (in the loosest sense) defaults.
+
+--- lib/Desktop.orig	2025-04-11 01:28:14.915856415 +0000
++++ lib/Desktop
+@@ -4,6 +4,6 @@
+ #
+ ##########################################
+ 
+-Floppy:/:floppy:floppy.xpm:OPEN:COPY:10:120
+-CD-ROM:/:cdrom:cdrom.xpm:OPEN::2:180
++#Floppy:/:floppy:floppy.xpm:OPEN:COPY:10:120
++#CD-ROM:/:cdrom:cdrom.xpm:OPEN::2:180
+ Trash:~/.trash::trash_empty.xpm:OPEN:mv -f --backup=numbered $* ~/.trash:8:240
