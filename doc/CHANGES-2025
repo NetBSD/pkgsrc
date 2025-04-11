@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2545 2025/04/11 14:03:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2546 2025/04/11 14:30:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3327,3 +3327,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tui-journal to 0.15.0 [pin 2025-04-11]
 	Updated devel/cmake to 3.31.7 [adam 2025-04-11]
 	Updated devel/cmake-gui to 3.31.7 [adam 2025-04-11]
+	Updated pkgtools/pkglint to 23.17.0 [rillig 2025-04-11]
