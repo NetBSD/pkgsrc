@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.70 2025/04/11 05:25:38 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2025/04/11 11:20:28 gdt Exp $
 
 VERSION_BASE=	1.20.0
 VERSION_RC=
 DISTNAME=	tahoe_lafs-${VERSION_BASE}${VERSION_RC}
 PKGNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -15,23 +15,27 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
+## pyproject.toml build:
+# TOOL_DEPENDS+=	${PYPKGPREFIX}-dulwich>=0:../../devel/py-dulwich # not apparently used
+# GnupG (unclear)
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
 
-# pyproject.toml dependencies:
+## pyproject.toml dependencies:
 DEPENDS+=			${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
 DEPENDS+=			${PYPKGPREFIX}-zope.interface>=3.6.0:../../devel/py-zope.interface
 DEPENDS+=			${PYPKGPREFIX}-foolscap>=23.3.0:../../net/py-foolscap
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography # >= 2.6
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL # >=23.2.0
 
-# twisted needs tls, conch options.  pkgsrc has tls.  \todo conch
+# tahoe requires "Twisted[tls,conch]".  pkgsrc py-twisted appears to
+# have both, but cautions that ssh client/server needs
+# security/py-amkCrypto.
 DEPENDS+=	${PYPKGPREFIX}-twisted>=22.8.0:../../net/py-twisted
-# bcrypt and appdirs are required as twisted deps at runtime
-DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
-PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt
+# \todo DEPENDS+= security/py-amkCrypto
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-magic-wormhole>=0.10.2:../../net/py-magic-wormhole
 DEPENDS+=	${PYPKGPREFIX}-eliot>=1.14.0:../../sysutils/py-eliot
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent-[0-9]*:../../devel/py-pyrsistent
@@ -43,38 +47,34 @@ DEPENDS+=	${PYPKGPREFIX}-pyutil>=3.3.0:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-collections-extended>=2.0.2:../../devel/py-collections-extended
 DEPENDS+=	${PYPKGPREFIX}-klein>=23.5.0:../../www/py-klein
-# werkzeug>2.2.0
-# treq
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.2.0:../../www/py-werkzeug
+DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-cbor2>5.6.0:../../devel/py-cbor2
 DEPENDS+=	${PYPKGPREFIX}-cddl>=0.6.1:../../devel/py-cddl
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
-
-
-# tor_requires
+# optional tor:
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
-# txi2p-requires
+# optional i2p:
+# Needs a tahoe-specific fork because txi2p is unhealthy.  Therefore,
+# omit i2p support.
 # DEPENDS+=	${PYPKGPREFIX}-txi2p-tahoe>=0.3.5:../../net/py-txi2p-tahoe
 
-# test_requires
-# pyflakes
-# coverage
-# mock
-# tox
-# pytest
+# test:
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=  ${PYPKGPREFIX}-tox>= 4.0.0:../../devel/py-tox
+# py-test (included automatically via wheel.mk)
 # pytest-twisted
-# hypothesis
-# treq
+# hypothesis >= 3.6.1
 # towncrier
 # testtools
 # fixtures
 # beautifulsoup4
 # html5lib
-# junitxml
-# tenacity
-# paramiko
+# paramiko < 2.9
 # pytest-timeout
+# prometheus-client == 0.11.0
 
 # Note that there is an upstream (inherited from setuptools) bug
 #   https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1258#comment:29 that
