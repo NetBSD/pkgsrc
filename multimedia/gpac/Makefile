@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2025/02/12 06:45:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2025/04/11 07:25:59 wiz Exp $
 
 DISTNAME=	gpac-1.0.1
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -57,7 +57,6 @@ PLIST_SUBST+=		LIBEXT=so
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
