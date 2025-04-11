@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.152 2025/02/26 03:12:25 mef Exp $
+# $NetBSD: Makefile,v 1.153 2025/04/11 07:02:38 wiz Exp $
 
 DISTNAME=	fldigi-4.1.01
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
@@ -50,7 +50,7 @@ FLDIGI_VERSION=	${PKGVERSION_NOREV}
 FLARQ_VERSION=	4.3.7
 
 post-build:
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} appbundle
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} appbundle
 	for f in ${WRKSRC}/src/${DISTNAME}/*.app; do \
 		/usr/libexec/PlistBuddy \
 			-c 'Add :NSMicrophoneUsageDescription string "Allow for using Sound input devices"' \
@@ -63,11 +63,11 @@ post-install:
 	cd ${WRKSRC}/src/${DISTNAME} && \
 		pax -rw -pp -pm *.app ${DESTDIR}${PREFIX}/Applications
 
-PLIST_SUBST+=	FLDIGI_VERSION=${FLDIGI_VERSION}
-PLIST_SUBST+=	FLARQ_VERSION=${FLARQ_VERSION}
-GENERATE_PLIST+= (cd ${DESTDIR}${PREFIX} && ${LS} \
-		Applications/flarq-${FLARQ_VERSION}.app/Contents/Frameworks/lib*.dylib \
-		Applications/fldigi-${FLDIGI_VERSION}.app/Contents/Frameworks/lib*.dylib);
+PLIST_SUBST+=		FLDIGI_VERSION=${FLDIGI_VERSION}
+PLIST_SUBST+=		FLARQ_VERSION=${FLARQ_VERSION}
+GENERATE_PLIST+=	(cd ${DESTDIR}${PREFIX} && ${LS} \
+			Applications/flarq-${FLARQ_VERSION}.app/Contents/Frameworks/lib*.dylib \
+			Applications/fldigi-${FLDIGI_VERSION}.app/Contents/Frameworks/lib*.dylib);
 
 CHECK_SHLIBS_SKIP+=	Applications/flarq-${FLARQ_VERSION}.app/Contents/Frameworks/lib*.dylib
 CHECK_SHLIBS_SKIP+=	Applications/fldigi-${FLDIGI_VERSION}.app/Contents/Frameworks/lib*.dylib
@@ -83,7 +83,6 @@ CHECK_WRKREF_SKIP+=	Applications/fldigi-${FLDIGI_VERSION}.app/Contents/MacOS/fld
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../ham/flxmlrpc/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../textproc/xmlrpc-c/buildlink3.mk"
 #include "../../textproc/json-c/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 
