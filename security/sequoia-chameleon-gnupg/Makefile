@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/06 22:56:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/11 08:59:51 pin Exp $
 
 DISTNAME=	sequoia-chameleon-gnupg-0.12.0
 CATEGORIES=	security
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg
 COMMENT=	Sequoia's reimplementation of the GnuPG interface
 LICENSE=	gnu-gpl-v3
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 #TOOL_DEPENDS+=	capnproto-[0-9]*:../../devel/capnproto
 
