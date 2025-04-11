@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.76 2025/03/30 16:56:16 pin Exp $
+$NetBSD: distinfo,v 1.77 2025/04/11 12:20:17 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -753,9 +753,9 @@ Size (notify-8.0.0.crate) = 35590 bytes
 BLAKE2s (notify-debouncer-mini-0.6.0.crate) = 75d0ecbeef4d33a920d69e3625c199c9f188601c5578c603a39a80e346df13af
 SHA512 (notify-debouncer-mini-0.6.0.crate) = f54f8e97bad11f2b278eb384dad75ac9c3dab3e7c8c9518a660e4c2b0ad12ccaf58895fda493b41862c75d14a2fca422d4036c04fc1bb657c4bba55ba7b98faf
 Size (notify-debouncer-mini-0.6.0.crate) = 9951 bytes
-BLAKE2s (notify-rust-4.11.5.crate) = d495b5166ecf0cd1d0bf7e0609e60c6d0d18a1529c27934a9ba8164843f5a2ac
-SHA512 (notify-rust-4.11.5.crate) = ccd14e1c5b689c1cf0b6b3e272015ec001b7d3c7ecf5f09109fc5c0934e9e2236320fb1f86266a034cef4b51b7d008ff8fed52e38f1d1c4050b7c111ae03a38a
-Size (notify-rust-4.11.5.crate) = 58461 bytes
+BLAKE2s (notify-rust-4.11.6.crate) = 95cb63a42ad82c10b76ca28d99a52ba4d8c05c39dc8220ea7d584d846876bcc2
+SHA512 (notify-rust-4.11.6.crate) = 5968ce04af72c42ee8777802ca9b5049f7af6e2078796f096c632ce34f878e81fb74cbd0722314c4b65b8256d6480c6491d249bebfd7cce6b1a79115753ef1c3
+Size (notify-rust-4.11.6.crate) = 58563 bytes
 BLAKE2s (notify-types-2.0.0.crate) = 1a86a152e210a6d4f0a5f37e0c8d38917d5139341edfc788524bad92021e889d
 SHA512 (notify-types-2.0.0.crate) = 2364311cb22104a661ee4f0b687777f5887c988a3760162a0b51cece66ce99838bc2224f346994687057fda1e19c01e6b1cf812eb1de8e3aad9667b229f9e5ec
 Size (notify-types-2.0.0.crate) = 14495 bytes
@@ -1161,15 +1161,15 @@ Size (toml_datetime-0.6.8.crate) = 12028 bytes
 BLAKE2s (toml_edit-0.22.24.crate) = db2d670588115c1102d1d4c23217651cc6b8457349eb88a205ef517617b64d36
 SHA512 (toml_edit-0.22.24.crate) = 67798e7ec7b2cdbe895b0edbb50f5fcb86a11acc674605a42795e15ee5ceb8d1a3cc1249c6a914b397574ee4bcb7ffd7417598f766c6f36215ab5f5761134319
 Size (toml_edit-0.22.24.crate) = 106399 bytes
-BLAKE2s (tp-note-1.25.6.tar.gz) = bd84f0cc619435264a0576a8c7332f536f76dbdedb44fafe455d5ef05840520d
-SHA512 (tp-note-1.25.6.tar.gz) = 49d3a8e86896bef080753a952dc809be4182a04e6fb2214e2aab3a3d1a99bf6bceb8841d79ea0fbee8527fe6707e653a63ce0e15f5bf96387d90339ffa2b486a
-Size (tp-note-1.25.6.tar.gz) = 3402140 bytes
+BLAKE2s (tp-note-1.25.7.tar.gz) = e661bb0687470df35757d4f52c83d563c368811e02646d6e61b4c17abda81ddb
+SHA512 (tp-note-1.25.7.tar.gz) = 52cf3546bbb92e58e1fb0826d6816706bf614183da47f8da1f6d803280859b5d7b31dc7462594dfc0dd9d065a3821e66b6678bd59e763d606cd2e8a135152135
+Size (tp-note-1.25.7.tar.gz) = 3407031 bytes
 BLAKE2s (tpnote-html2md-0.2.17.crate) = 36edb7561be3985b27c8923a07ca70df2d4e1dc2fc315b459b09a69b7889d87c
 SHA512 (tpnote-html2md-0.2.17.crate) = ea180dbe5207d46e860d07659ce9282f76e1f8a20e0e5890b1083d4df6e6826698561ca1de0bfb7c32e7c8f11351baac85b30fa0932885a1e0f95cf4ebea646d
 Size (tpnote-html2md-0.2.17.crate) = 35712 bytes
-BLAKE2s (tpnote-lib-0.41.1.crate) = ea1069dd9df74b5703a6ea3517f590fd3cdda0788c65aeb58918820a27228329
-SHA512 (tpnote-lib-0.41.1.crate) = 41574bf710ed9d1cc51b5f870842f74d88740d51ad9870813978a816a456a4baaf15cdab8367dacb672bfebb177e83063f08b0006e1ea8b7416670f577455f77
-Size (tpnote-lib-0.41.1.crate) = 95093 bytes
+BLAKE2s (tpnote-lib-0.41.2.crate) = ce1ff4a4e26aca4353d7eee220552e96ab9b27afc5a78683cf043c5a5b0a607d
+SHA512 (tpnote-lib-0.41.2.crate) = 7f1dd70317a335b2affdf7446ab44d39a709e84dff27f5768ad1c6080a14f586d234c9e2e4a848d62065091a986ea7378b723c6f40acdabae3c609b0460c26ea
+Size (tpnote-lib-0.41.2.crate) = 98801 bytes
 BLAKE2s (tracing-0.1.41.crate) = 6e13ecc7da8c2186890c243e207328fd98b23cd8493c233ab70d58a24f96f0e4
 SHA512 (tracing-0.1.41.crate) = dffb8d3a1375f1b9d5418550a46cb7b1d92b2cc8ffbccb430a38f7731547960775bb42798074186711847d256eee30fb3e74078b69cb36f28c07d9f231dbf96c
 Size (tracing-0.1.41.crate) = 82448 bytes
