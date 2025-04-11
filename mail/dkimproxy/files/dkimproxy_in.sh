@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dkimproxy_in.sh,v 1.1 2024/04/07 18:22:08 ryoon Exp $
+# $NetBSD: dkimproxy_in.sh,v 1.2 2025/04/11 14:49:02 schmonz Exp $
 #
 # PROVIDE: dkimproxy_in
 # REQUIRE: DAEMON
@@ -33,7 +33,7 @@ dkimproxy_precmd()
 }
 
 if [ -f /etc/rc.subr ]; then
-        load_rc_config $name
+	load_rc_config $name
 	run_rc_command "$1"
 else
 	echo -n " ${name}"
