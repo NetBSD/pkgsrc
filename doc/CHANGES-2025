@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2539 2025/04/11 12:15:27 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2540 2025/04/11 12:16:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3320,3 +3320,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/cobalt to 0.20.0 [pin 2025-04-11]
 	Updated sysutils/dust to 1.2.0 [pin 2025-04-11]
 	Updated devel/hexpatch to 1.11.1 [pin 2025-04-11]
+	Updated devel/mise to 2025.4.1 [pin 2025-04-11]
