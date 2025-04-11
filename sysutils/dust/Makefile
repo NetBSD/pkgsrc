@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/04/02 17:30:25 pin Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/11 12:14:08 pin Exp $
 
-DISTNAME=	dust-1.1.2
-# dust-1.2.0 requires Rust >= 1.85
+DISTNAME=	dust-1.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bootandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,9 +12,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.85.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.85.0 on amd64
+RUST_REQ=	1.85.0
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	share/examples/dust
