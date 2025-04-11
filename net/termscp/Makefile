@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/04/11 09:08:14 pin Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/11 12:19:16 pin Exp $
 
-DISTNAME=	termscp-0.16.1
-# 0.17.0 requires Rust >= 1.85
+DISTNAME=	termscp-0.17.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
@@ -16,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.82.0
+RUST_REQ=	1.85.0
 #Upstream does not state the required MSRV.
 #This package is confirmed to build with Rust 1.82.0 on amd64
 USE_LANGUAGES+=	c c++
