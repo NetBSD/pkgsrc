@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2543 2025/04/11 12:20:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2544 2025/04/11 12:21:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3324,3 +3324,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tailspin to 5.1.0 [pin 2025-04-11]
 	Updated net/termscp to 0.17.0 [pin 2025-04-11]
 	Updated editors/tp-note to 1.25.7 [pin 2025-04-11]
+	Updated misc/tui-journal to 0.15.0 [pin 2025-04-11]
