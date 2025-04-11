@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2540 2025/04/11 12:16:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2541 2025/04/11 12:18:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3321,3 +3321,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/dust to 1.2.0 [pin 2025-04-11]
 	Updated devel/hexpatch to 1.11.1 [pin 2025-04-11]
 	Updated devel/mise to 2025.4.1 [pin 2025-04-11]
+	Updated misc/tailspin to 5.1.0 [pin 2025-04-11]
