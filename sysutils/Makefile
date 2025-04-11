@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1154 2025/04/06 03:05:43 rxg Exp $
+# $NetBSD: Makefile,v 1.1155 2025/04/11 01:49:10 nia Exp $
 #
 
 COMMENT=	System utilities
@@ -479,6 +479,7 @@ SUBDIR+=	mktemp
 SUBDIR+=	mlog
 SUBDIR+=	monit
 SUBDIR+=	monitoring
+SUBDIR+=	moxfm
 SUBDIR+=	mrsync
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm

@@ -1,0 +1,19 @@
+$NetBSD: distinfo,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+BLAKE2s (moxfm-1.0.1.tar.gz) = 7fd8e94f75a836ef084a20e7c518c249b3ace61baba9b621873f1932ec94d691
+SHA512 (moxfm-1.0.1.tar.gz) = a1291f46c7c8385d49cadb7581219ecc56ee16127536412152af40618facfa2aa9f3154901c2ac7bbe46a0e6e99f4721ba31db39a5f3d2aba29763ef9c56ae45
+Size (moxfm-1.0.1.tar.gz) = 338405 bytes
+SHA1 (patch-Imakefile) = 5e4ae1bd03315712bebaa361e2de49ad34f74f10
+SHA1 (patch-lib_Desktop) = 95c78751b30f05fa82e0f6684e247651d2d85e00
+SHA1 (patch-lib_Main) = b1b678db22eb30f190ed42b700ba2442669c2edc
+SHA1 (patch-lib_magic) = 665e62c24fc61f44a9deaa7b36a5bb2727ead43a
+SHA1 (patch-lib_xfmrc) = 8334237fe4dee90b610e6c2a4d0f1c400dd41507
+SHA1 (patch-lib_xfmrc.nomagic) = 8c65b6ed202de346867f4fbc74ca4d186c4c04b0
+SHA1 (patch-regexp_regexp.c) = 3040e6b09d48bbb5d24ff74b7eae81696e3d740f
+SHA1 (patch-src_Common.h) = 23fef5666fb44690cd71429fc71229f882f0dea3
+SHA1 (patch-src_FmChmod.c) = b63428100226a7ecf65c9292efaa27e5aec46f6f
+SHA1 (patch-src_FmDialogs.c) = 754175718bc56398af0c76da1200c2e88241e25a
+SHA1 (patch-src_FmFwActions.c) = b444fd28d59b5f4c2eb8845a8cbca8d2c4d32396
+SHA1 (patch-src_FmFwCb.c) = 335e52e65cf72f5b844fb83752131b2117713100
+SHA1 (patch-src_FmIcons.c) = ea5815abeaa7ffe1551b6e1288a88bdc0f6fdfc4
+SHA1 (patch-usermount_usermount.c) = 20ead3d49117c87c931c8f0cdeecbb7532941c55
