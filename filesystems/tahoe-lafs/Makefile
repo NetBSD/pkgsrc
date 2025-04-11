@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/04/05 23:23:58 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2025/04/11 05:25:38 wiz Exp $
 
 VERSION_BASE=	1.20.0
 VERSION_RC=
@@ -15,14 +15,15 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0:../../devel/py-hatch-vcs
 
 # pyproject.toml dependencies:
-DEPENDS+=	${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
-DEPENDS+=	${PYPKGPREFIX}-zope.interface>=3.6.0:../../devel/py-zope.interface
-DEPENDS+=	${PYPKGPREFIX}-foolscap>=23.3.0:../../net/py-foolscap
+DEPENDS+=			${PYPKGPREFIX}-zfec>=1.1.0:../../converters/py-zfec
+DEPENDS+=			${PYPKGPREFIX}-zope.interface>=3.6.0:../../devel/py-zope.interface
+DEPENDS+=			${PYPKGPREFIX}-foolscap>=23.3.0:../../net/py-foolscap
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography # >= 2.6
-PYTHON_VERSIONED_DEPENDENCIES+= OpenSSL # >=23.2.0
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL # >=23.2.0
 
 # twisted needs tls, conch options.  pkgsrc has tls.  \todo conch
 DEPENDS+=	${PYPKGPREFIX}-twisted>=22.8.0:../../net/py-twisted
