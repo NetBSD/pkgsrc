@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/04/04 20:24:36 pin Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/11 12:21:25 pin Exp $
 
-DISTNAME=	tui-journal-0.14.0
-# 0.15.0 requires Rust >= 1.85
+DISTNAME=	tui-journal-0.15.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ammarabouzor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.81.0
+RUST_REQ=	1.85.0
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
