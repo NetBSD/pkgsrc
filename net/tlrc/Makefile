@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/04/04 20:18:30 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/11 09:09:35 pin Exp $
 
 DISTNAME=	tlrc-1.11.0
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Tldr client written in Rust
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
 
