@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2023/12/31 13:58:15 prlw1 Exp $
+$NetBSD: distinfo,v 1.40 2025/04/11 16:58:04 prlw1 Exp $
 
-BLAKE2s (evince-45.0.tar.xz) = 9ba7353acca8d98782b8709e2321af4b320d1f878afbbb4dc56b90a8c301d08c
-SHA512 (evince-45.0.tar.xz) = 3c2f796fda6c6e4d570748b6f8fcda2fada239df4cb392c164d7f91041cda6337373ea521146e7f7a1d572692a5e894938117d092fa033ddeb81fa72f8591086
-Size (evince-45.0.tar.xz) = 2925768 bytes
+BLAKE2s (evince-48.0.tar.xz) = e077437251f4376f5a860861f71bcb24391e73b1029c46299989c6770c397379
+SHA512 (evince-48.0.tar.xz) = bae616989f339e4d4204e8bb3eafd2d05d5a16a4fe3e658fbdbb2d92c541b75edc1afe89d624f9d0345ffe181598b6b9315f1902d5c5cc34419fd714eb65dfdf
+Size (evince-48.0.tar.xz) = 2942540 bytes
