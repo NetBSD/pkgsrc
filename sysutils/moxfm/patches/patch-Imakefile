@@ -1,0 +1,41 @@
+$NetBSD: patch-Imakefile,v 1.1 2025/04/11 01:49:11 nia Exp $
+
+DESTDIR support for installation.
+
+--- Imakefile.orig	2025-04-10 23:44:11.987906617 +0000
++++ Imakefile
+@@ -50,21 +50,21 @@ CppFileTarget(Moxfm.ad,lib/Moxfm.cpp,-DP
+ InstallAppDefaults(Moxfm)
+ 
+ install::
+-	MakeDir($(XFMLIBDIR))
+-	$(INSTALL) -c $(INSTBINFLAGS) lib/checkmail $(XFMLIBDIR)/checkmail
+-	MakeDir($(XFMLIBDIR)/dot.moxfm)
++	MakeDir($(DESTDIR)$(XFMLIBDIR))
++	$(INSTALL) -c $(INSTBINFLAGS) lib/checkmail $(DESTDIR)$(XFMLIBDIR)/checkmail
++	MakeDir($(DESTDIR)$(XFMLIBDIR)/dot.moxfm)
+ #ifdef MAGIC_HEADERS
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmrc $(XFMLIBDIR)/dot.moxfm/xfmrc
++	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmrc $(DESTDIR)$(XFMLIBDIR)/dot.moxfm/xfmrc
+ #endif
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmrc.nomagic $(XFMLIBDIR)/dot.moxfm/xfmrc.nomagic
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmmon $(XFMLIBDIR)/dot.moxfm
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/moxfmdev $(XFMLIBDIR)/dot.moxfm
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/magic $(XFMLIBDIR)/dot.moxfm
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/targets $(XFMLIBDIR)/dot.moxfm
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/Desktop $(XFMLIBDIR)/dot.moxfm
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/Main $(XFMLIBDIR)/dot.moxfm
+-	MakeDir($(PIXMAPDIR))
+-	$(INSTALL) -c $(INSTDATFLAGS) lib/pixmaps/?* $(PIXMAPDIR)
++	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmrc.nomagic $(DESTDIR)$(XFMLIBDIR)/dot.moxfm/xfmrc.nomagic
++	$(INSTALL) -c $(INSTDATFLAGS) lib/xfmmon $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	$(INSTALL) -c $(INSTDATFLAGS) lib/moxfmdev $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	$(INSTALL) -c $(INSTDATFLAGS) lib/magic $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	$(INSTALL) -c $(INSTDATFLAGS) lib/targets $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	$(INSTALL) -c $(INSTDATFLAGS) lib/Desktop $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	$(INSTALL) -c $(INSTDATFLAGS) lib/Main $(DESTDIR)$(XFMLIBDIR)/dot.moxfm
++	MakeDir($(DESTDIR)$(PIXMAPDIR))
++	$(INSTALL) -c $(INSTDATFLAGS) lib/pixmaps/?* $(DESTDIR)$(PIXMAPDIR)
+ 
+ XCOMM  Use the following before installing over an existing
+ XCOMM  version of moxfm. (You might wish to back up
