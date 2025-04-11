@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/04/04 20:17:31 pin Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/11 09:08:14 pin Exp $
 
 DISTNAME=	termscp-0.16.1
 # 0.17.0 requires Rust >= 1.85
@@ -12,7 +12,7 @@ COMMENT=	Feature rich TUI file transfer and explorer
 LICENSE=	mit
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
