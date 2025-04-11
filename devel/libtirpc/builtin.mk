@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2023/08/29 11:28:40 vins Exp $
+# $NetBSD: builtin.mk,v 1.2 2025/04/11 22:19:49 maya Exp $
 
 BUILTIN_PKG:=	libtirpc
 
 BUILTIN_FIND_HEADERS_VAR:=		H_LIBTIRPC
-BUILTIN_FIND_HEADERS.H_LIBTIRPC=	rpc/rpc.h
+BUILTIN_FIND_HEADERS.H_LIBTIRPC=	rpc/rpc.h tirpc/rpc/rpc.h
 BUILTIN_FIND_GREP.H_LIBTIRPC=		\#define[ 	]*_TIRPC_RPC_H
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
