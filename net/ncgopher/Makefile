@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/03 21:02:07 pin Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/11 09:03:10 pin Exp $
 
 DISTNAME=	ncgopher-0.7.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Gopher and gemini client for the modern internet
 LICENSE=	2-clause-bsd
 
 # See, https://github.com/briansmith/ring/issues/1999
-NOT_FOR_PLATFORM+=	*-*-i386
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
