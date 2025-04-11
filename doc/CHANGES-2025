@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2546 2025/04/11 14:30:58 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.2547 2025/04/11 16:58:29 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake to 3.31.7 [adam 2025-04-11]
 	Updated devel/cmake-gui to 3.31.7 [adam 2025-04-11]
 	Updated pkgtools/pkglint to 23.17.0 [rillig 2025-04-11]
+	Updated print/evince to 48.0 [prlw1 2025-04-11]
