@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2025/02/23 16:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/12 10:24:31 adam Exp $
 
 DISTNAME=	pbr-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pbr/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://docs.openstack.org/pbr/
 COMMENT=	Python Build Reasonableness
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures>=3.0.0:../../devel/py-fixtures
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=2.6.0:../../wip/py-pre-commit

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/02/23 16:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/12 10:24:31 adam Exp $
 
 DISTNAME=	dictdiffer-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dictdiffer/}
 

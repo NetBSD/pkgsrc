@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/02/26 09:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/12 10:24:32 adam Exp $
 
 DISTNAME=	stevedore-5.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stevedore/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/dreamhost/stevedore
 COMMENT=	Manage dynamic plugins for Python applications
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 TEST_DEPENDS+=	${PYPKGPREFIX}-bandit>=1.6.0:../../security/py-bandit
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
