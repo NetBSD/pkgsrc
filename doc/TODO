@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25618 2025/04/12 06:42:05 wiz Exp $
+$NetBSD: TODO,v 1.25619 2025/04/12 06:44:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -789,7 +789,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o influxdb-2.0.4
 	o inform-6.34
 	o ingo-3.2.8
-	o inih-59
 	o input-pad-1.4.2
 	o ipe-7.2.29
 	o ipopt-3.12.12
