@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/01/19 18:46:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/04/12 13:36:49 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -52,6 +52,7 @@ ${PYSITELIB}/icalendar/tests/calendars/alarm_thunderbird_closed.ics
 ${PYSITELIB}/icalendar/tests/calendars/alarm_thunderbird_future.ics
 ${PYSITELIB}/icalendar/tests/calendars/alarm_thunderbird_snoozed_until_1457.ics
 ${PYSITELIB}/icalendar/tests/calendars/america_new_york.ics
+${PYSITELIB}/icalendar/tests/calendars/america_new_york_forward_reference.ics
 ${PYSITELIB}/icalendar/tests/calendars/big_bad_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/bom_calendar.ics
 ${PYSITELIB}/icalendar/tests/calendars/broken_ical.ics
@@ -148,6 +149,9 @@ ${PYSITELIB}/icalendar/tests/prop/test_alarm.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_component.py
 ${PYSITELIB}/icalendar/tests/prop/test_component.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_component.pyo
+${PYSITELIB}/icalendar/tests/prop/test_constructors.py
+${PYSITELIB}/icalendar/tests/prop/test_constructors.pyc
+${PYSITELIB}/icalendar/tests/prop/test_constructors.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.py
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_identity_and_equality.pyo
@@ -293,6 +297,9 @@ ${PYSITELIB}/icalendar/tests/test_unit_tools.pyo
 ${PYSITELIB}/icalendar/tests/test_with_doctest.py
 ${PYSITELIB}/icalendar/tests/test_with_doctest.pyc
 ${PYSITELIB}/icalendar/tests/test_with_doctest.pyo
+${PYSITELIB}/icalendar/tests/timezone_ids.py
+${PYSITELIB}/icalendar/tests/timezone_ids.pyc
+${PYSITELIB}/icalendar/tests/timezone_ids.pyo
 ${PYSITELIB}/icalendar/tests/timezones/issue_237_brazilia_standard.ics
 ${PYSITELIB}/icalendar/tests/timezones/issue_53_tzid_parsed_properly.ics
 ${PYSITELIB}/icalendar/tests/timezones/issue_55_parse_error_on_utc_offset_with_seconds.ics
