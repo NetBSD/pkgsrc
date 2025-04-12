@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2025/02/23 18:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/12 11:44:18 adam Exp $
 
-DISTNAME=	pyparsing-3.2.1
+DISTNAME=	pyparsing-3.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyparsing/}
 
