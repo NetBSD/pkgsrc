@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2024/11/11 07:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/12 21:37:07 adam Exp $
 
 DISTNAME=	uvloop-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvloop/}
 
@@ -11,7 +12,7 @@ COMMENT=	Fast implementation of asyncio event loop on top of libuv
 LICENSE=	mit AND apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	libuv>=1.48.0:../../devel/libuv
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10.5:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil

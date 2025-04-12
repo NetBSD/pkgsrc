@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/12 21:37:07 adam Exp $
 
 DISTNAME=	wasm-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=athre0z/}
 GITHUB_PROJECT=	wasm
@@ -13,11 +13,9 @@ HOMEPAGE=	https://github.com/athre0z/wasm
 COMMENT=	WebAssembly decoder & disassembler
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c++
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/wasmdump \

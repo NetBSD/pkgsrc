@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/12 21:37:07 adam Exp $
 
 DISTNAME=	urwidgets-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwidgets/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/AnonymouX47/urwidgets
 COMMENT=	Collection of widgets for urwid
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1:../../devel/py-urwid
 
 USE_LANGUAGES=	# none

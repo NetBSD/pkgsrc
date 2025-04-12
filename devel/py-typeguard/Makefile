@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/02/18 10:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/12 21:37:06 adam Exp $
 
 DISTNAME=	typeguard-4.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/agronholm/typeguard
 COMMENT=	Python run-time type checking library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy

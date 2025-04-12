@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/26 08:11:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/12 21:37:07 adam Exp $
 bin/vulture
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/vulture/__init__.py
 ${PYSITELIB}/vulture/__init__.pyc
