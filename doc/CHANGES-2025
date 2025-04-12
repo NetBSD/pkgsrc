@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2557 2025/04/12 07:08:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2558 2025/04/12 07:09:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3339,3 +3339,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 11.0.1 [wiz 2025-04-12]
 	Updated fonts/harfbuzz-icu to 11.0.1 [wiz 2025-04-12]
 	Updated games/lgogdownloader to 3.17 [wiz 2025-04-12]
+	Updated www/http_load to 20160309 [adam 2025-04-12]
+	Updated www/py-flask-security to 5.6.1 [adam 2025-04-12]
