@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.6 2009/08/22 09:30:38 obache Exp $
+$NetBSD: patch-Makefile,v 1.1 2025/04/12 07:04:18 adam Exp $
 
---- Makefile.orig	2002-01-03 21:54:43.000000000 -0800
+Enable SSL.
+Fix installation.
+
+--- Makefile.orig	2014-08-11 19:13:29.000000000 +0000
 +++ Makefile
-@@ -9,14 +9,14 @@
+@@ -9,16 +9,16 @@
  # http://www.openssl.org/  Make sure the SSL_TREE definition points to the
  # tree with your OpenSSL installation - depending on how you installed it,
  # it may be in /usr/local instead of /usr/local/ssl.
@@ -18,12 +21,16 @@ $NetBSD: patch-aa,v 1.6 2009/08/22 09:30:38 obache Exp $
  
 -BINDIR =	/usr/local/bin
 -MANDIR =	/usr/local/man/man1
+-CC =		cc
+-CFLAGS =	-O $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC) -ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
 +BINDIR =	$(PREFIX)/bin
 +MANDIR =	$(PREFIX)/$(PKGMANDIR)/man1
- CC =		gcc -Wall
- CFLAGS =	-O $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
- #CFLAGS =	-g $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
-@@ -35,10 +35,10 @@ timers.o:	timers.c timers.h
++CC?=		cc
++CFLAGS+=	$(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC) -ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
+ LDFLAGS =	-s $(SSL_LIBS) $(SYSV_LIBS)
+ 
+ all:		http_load
+@@ -30,10 +30,10 @@ timers.o:	timers.c timers.h
  	$(CC) $(CFLAGS) -c timers.c
  
  install:	all
