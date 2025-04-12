@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/03/08 13:09:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/12 11:18:40 adam Exp $
 
 DISTNAME=	jaraco_develop-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.develop/}
 
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.develop
 COMMENT=	Development utilities by jaraco
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
@@ -27,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-path-[0-9]*:../../devel/py-path
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-file-[0-9]*:../../devel/py-requests-file
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt-[0-9]*:../../devel/py-requests-toolbelt
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-subprocess-tee-[0-9]*:../../sysutils/py-subprocess-tee
 # TODO: not yet imported
 #DEPENDS+=	${PYPKGPREFIX}-jaraco.ui-[0-9]*
