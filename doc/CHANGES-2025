@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2588 2025/04/12 20:38:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2589 2025/04/12 20:56:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3397,3 +3397,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-pystache to 0.6.8 [adam 2025-04-12]
 	Updated devel/py-sentry-sdk to 2.25.1 [adam 2025-04-12]
 	Updated devel/py-queuelib to 1.8.0 [adam 2025-04-12]
+	Updated archivers/py-cramjam to 2.10.0 [adam 2025-04-12]
+	Updated devel/py-tenacity to 9.1.2 [adam 2025-04-12]
