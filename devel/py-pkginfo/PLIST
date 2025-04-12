@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/08 07:24:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/12 19:43:14 adam Exp $
 bin/pkginfo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pkginfo/__init__.py
 ${PYSITELIB}/pkginfo/__init__.pyc
