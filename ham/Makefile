@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/03/09 11:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/04/12 18:37:38 jmcneill Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -7,6 +7,7 @@ SUBDIR+=	7plus
 SUBDIR+=	chirp
 SUBDIR+=	codec2
 SUBDIR+=	cwtext
+SUBDIR+=	direwolf
 SUBDIR+=	dpbox
 SUBDIR+=	fl_logbook
 SUBDIR+=	fldigi
