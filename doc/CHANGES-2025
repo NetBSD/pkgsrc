@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2561 2025/04/12 07:17:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2562 2025/04/12 07:21:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3344,3 +3344,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/cpp-httplib to 0.20.0 [wiz 2025-04-12]
 	Updated graphics/openexr to 3.3.3 [wiz 2025-04-12]
 	Updated devel/wayland-protocols to 1.43 [wiz 2025-04-12]
+	Updated devel/py-setuptools to 78.1.0 [adam 2025-04-12]
+	Updated devel/py-types-setuptools to 78.1.0.20250329 [adam 2025-04-12]
