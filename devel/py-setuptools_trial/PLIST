@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/10 15:14:37 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.SPL.txt
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 20:54:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.SPL.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools_trial/__init__.py
 ${PYSITELIB}/setuptools_trial/__init__.pyc
