@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/04/12 16:02:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/12 19:43:14 adam Exp $
 
 DISTNAME=	pluggy-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_sc
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

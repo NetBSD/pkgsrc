@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/24 17:51:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 19:43:14 adam Exp $
 bin/progressbar-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/progressbar/__about__.py
 ${PYSITELIB}/progressbar/__about__.pyc
