@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/10/17 09:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/12 10:14:28 adam Exp $
 
 DISTNAME=	curtsies-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/bpython/curtsies
 COMMENT=	Curses-like terminal wrapper, with colored strings
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-blessed>=1.5:../../devel/py-blessed
 DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
