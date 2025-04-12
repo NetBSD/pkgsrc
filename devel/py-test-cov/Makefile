@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 22:44:51 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/12 11:51:10 adam Exp $
 
-DISTNAME=	pytest-cov-6.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+DISTNAME=	pytest_cov-6.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-cov/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pytest-dev/pytest-cov
 COMMENT=	Pytest plugin for measuring coverage
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-coverage>=7.5:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-fields-[0-9]*:../../devel/py-fields
