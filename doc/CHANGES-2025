@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2552 2025/04/12 06:52:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2553 2025/04/12 06:52:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/jnv to 0.6.0 [wiz 2025-04-12]
 	Updated textproc/jansson to 2.14.1 [wiz 2025-04-12]
 	Updated multimedia/libtheora to 1.2.0 [wiz 2025-04-12]
+	Updated multimedia/libtheora-docs to 1.2.0 [wiz 2025-04-12]
