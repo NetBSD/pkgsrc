@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/03/02 21:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/12 17:05:46 pgoyette Exp $
 
 DISTNAME=	markupsafe-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.palletsprojects.com/p/markupsafe/
 COMMENT=	Implements a unicode subclass that supports HTML strings
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
