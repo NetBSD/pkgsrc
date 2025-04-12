@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/02/21 08:49:09 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/12 19:45:04 adam Exp $
 
-DISTNAME=	propcache-0.3.0
+DISTNAME=	propcache-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/propcache/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults-[0-9]*:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.0.0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
