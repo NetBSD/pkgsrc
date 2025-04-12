@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/12 19:31:49 adam Exp $
 
-DISTNAME=	pip_run-13.0.0
+DISTNAME=	pip_run-15.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-run/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jaraco/pip-run
 COMMENT=	Install packages and run Python with them
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-jaraco.context-[0-9]*:../../devel/py-jaraco.context
