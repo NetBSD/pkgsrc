@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/02/23 18:05:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/12 11:44:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -31,6 +31,12 @@ ${PYSITELIB}/pyparsing/results.pyo
 ${PYSITELIB}/pyparsing/testing.py
 ${PYSITELIB}/pyparsing/testing.pyc
 ${PYSITELIB}/pyparsing/testing.pyo
+${PYSITELIB}/pyparsing/tools/__init__.py
+${PYSITELIB}/pyparsing/tools/__init__.pyc
+${PYSITELIB}/pyparsing/tools/__init__.pyo
+${PYSITELIB}/pyparsing/tools/cvt_pyparsing_pep8_names.py
+${PYSITELIB}/pyparsing/tools/cvt_pyparsing_pep8_names.pyc
+${PYSITELIB}/pyparsing/tools/cvt_pyparsing_pep8_names.pyo
 ${PYSITELIB}/pyparsing/unicode.py
 ${PYSITELIB}/pyparsing/unicode.pyc
 ${PYSITELIB}/pyparsing/unicode.pyo
