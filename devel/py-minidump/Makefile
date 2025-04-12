@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/12 12:08:13 adam Exp $
 
 DISTNAME=	minidump-0.0.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minidump/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/skelsec/minidump
 COMMENT=	Python library to parse and read Microsoft minidump file format
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
