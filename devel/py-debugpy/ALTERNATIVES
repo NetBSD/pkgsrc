@@ -1,1 +1,2 @@
 bin/debugpy @PREFIX@/bin/debugpy-@PYVERSSUFFIX@
+bin/debugpy-adapter @PREFIX@/bin/debugpy-adapter-@PYVERSSUFFIX@
