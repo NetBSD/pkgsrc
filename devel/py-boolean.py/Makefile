@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/03/03 06:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/12 09:39:48 adam Exp $
 
 DISTNAME=	boolean.py-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boolean.py/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/bastikr/boolean.py
 COMMENT=	Define boolean algebras, create and parse boolean expressions and create custom boolean DSL
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
