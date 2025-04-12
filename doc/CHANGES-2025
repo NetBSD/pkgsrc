@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2574 2025/04/12 11:39:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2575 2025/04/12 11:44:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3372,3 +3372,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zmq to 26.4.0 [adam 2025-04-12]
 	Updated textproc/py-validate-pyproject to 0.24.1 [adam 2025-04-12]
 	Updated textproc/py-xmlschema to 4.0.0 [adam 2025-04-12]
+	Updated devel/py-pylint to 3.3.6 [adam 2025-04-12]
+	Updated devel/py-pyparsing to 3.2.3 [adam 2025-04-12]
