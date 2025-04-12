@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2025/02/24 22:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/12 17:54:10 pgoyette Exp $
 
 DISTNAME=	zstandard-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zstandard/}
 
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	cpp
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
