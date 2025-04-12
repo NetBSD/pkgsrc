@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.82 2025/03/02 20:11:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.83 2025/04/12 07:06:55 wiz Exp $
 ${PLIST.introspection}bin/hb-info
-${PLIST.introspection}bin/hb-ot-shape-closure
 ${PLIST.introspection}bin/hb-shape
 ${PLIST.introspection}bin/hb-subset
 include/harfbuzz/hb-aat-layout.h
@@ -106,6 +105,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-2-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-4-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
@@ -168,6 +168,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-draw.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-face.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-features.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-font.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-fontations.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-ft.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-gdi.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/harfbuzz-hb-glib.html
