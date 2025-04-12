@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.165 2025/02/12 06:45:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.166 2025/04/12 06:54:26 wiz Exp $
 
 DISTNAME=	k3b-${KAPPSVER}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://userbase.kde.org/K3b

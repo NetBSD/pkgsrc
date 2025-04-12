@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2025/02/26 11:15:39 markd Exp $
+# $NetBSD: Makefile,v 1.60 2025/04/12 06:54:24 wiz Exp $
 #
 
 DISTNAME=	ssr-0.4.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MaartenBaert/}
 

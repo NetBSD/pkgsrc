@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/04/07 17:50:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/04/12 06:54:20 wiz Exp $
 
 BUILDLINK_TREE+=	ffmpeg7
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ffmpeg7
 FFMPEG7_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffmpeg7+=	ffmpeg7>=7.0
+BUILDLINK_ABI_DEPENDS.ffmpeg7?=	ffmpeg7>=7.1.1nb1
 BUILDLINK_PKGSRCDIR.ffmpeg7?=	../../multimedia/ffmpeg7
 
 pkgbase := ffmpeg7

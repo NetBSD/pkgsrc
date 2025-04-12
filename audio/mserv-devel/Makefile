@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2023/10/24 22:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/12 06:54:13 wiz Exp $
 
 DISTNAME=	mserv-0.39a
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mserv/}
 
