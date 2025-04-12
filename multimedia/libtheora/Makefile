@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/10/08 09:21:07 asau Exp $
-#
+# $NetBSD: Makefile,v 1.32 2025/04/12 06:52:22 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		2
 PKGCONFIG_OVERRIDE=	theora.pc.in theoradec.pc.in theoraenc.pc.in
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
@@ -19,7 +17,7 @@ CONFIGURE_ENV+=		HAVE_PDFLATEX=no
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro) || \
-    !empty(MACHINE_PLATFORM:MDarwin-9.*-i386) || \
+    ${MACHINE_PLATFORM:MDarwin-9.*-i386} || \
     !empty(MACHINE_PLATFORM:MDarwin-??.*-*)
 CONFIGURE_ARGS+=	--disable-asm
 .endif
