@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:57:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 07:43:08 adam Exp $
 bin/asciinema-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/asciinema/__init__.py
 ${PYSITELIB}/asciinema/__init__.pyc

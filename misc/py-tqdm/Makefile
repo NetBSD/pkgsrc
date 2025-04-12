@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2024/11/25 10:59:37 adam Exp $
+# $NetBSD: Makefile,v 1.53 2025/04/12 07:43:09 adam Exp $
 
 DISTNAME=	tqdm-4.67.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/tqdm/tqdm
 COMMENT=	Fast, extensible progress bar for Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
