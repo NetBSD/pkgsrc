@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2586 2025/04/12 19:35:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2587 2025/04/12 19:47:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3393,3 +3393,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-lxml-html-clean to 0.4.2 [adam 2025-04-12]
 	Updated devel/py-pip-run to 15.0.0 [adam 2025-04-12]
 	Updated lang/py-libcst to 1.7.0 [adam 2025-04-12]
+	Updated devel/py-propcache to 0.3.1 [adam 2025-04-12]
+	Updated www/py-pystache to 0.6.8 [adam 2025-04-12]
