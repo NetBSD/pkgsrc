@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2576 2025/04/12 11:47:31 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2577 2025/04/12 11:55:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3376,3 +3376,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pyparsing to 3.2.3 [adam 2025-04-12]
 	Updated emulators/mgba-qt to 0.10.5 [nia 2025-04-12]
 	Updated emulators/mgba to 0.10.5 [nia 2025-04-12]
+	Updated devel/py-test-cov to 6.1.1 [adam 2025-04-12]
+	Updated devel/py-setuptools-rust to 1.11.1 [adam 2025-04-12]
