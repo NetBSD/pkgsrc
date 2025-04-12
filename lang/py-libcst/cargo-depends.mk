@@ -1,16 +1,15 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2025/01/14 08:40:57 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2025/04/12 19:34:56 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.4
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
-CARGO_CRATE_DEPENDS+=	annotate-snippets-0.6.1
-CARGO_CRATE_DEPENDS+=	anstyle-1.0.2
+CARGO_CRATE_DEPENDS+=	annotate-snippets-0.11.5
+CARGO_CRATE_DEPENDS+=	anstyle-1.0.10
 CARGO_CRATE_DEPENDS+=	autocfg-1.1.0
 CARGO_CRATE_DEPENDS+=	bitflags-2.4.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.12.0
 CARGO_CRATE_DEPENDS+=	cast-0.3.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.83
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	chic-1.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.0
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.0
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.0
@@ -58,11 +57,11 @@ CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.2
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.1
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.4.3
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
-CARGO_CRATE_DEPENDS+=	pyo3-0.22.2
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.22.2
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.22.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.22.2
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.22.2
+CARGO_CRATE_DEPENDS+=	pyo3-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.5
 CARGO_CRATE_DEPENDS+=	quote-1.0.37
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
@@ -89,6 +88,7 @@ CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.8
 CARGO_CRATE_DEPENDS+=	toml_edit-0.22.20
 CARGO_CRATE_DEPENDS+=	trybuild-1.0.99
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.1
+CARGO_CRATE_DEPENDS+=	unicode-width-0.2.0
 CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	walkdir-2.3.2
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.81
