@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2568 2025/04/12 09:57:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2569 2025/04/12 10:06:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3360,3 +3360,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-capstone to 5.0.6 [adam 2025-04-12]
 	Updated devel/py-coverage to 7.8.0 [adam 2025-04-12]
 	Updated devel/py-hypothesis to 6.131.0 [adam 2025-04-12]
+	Updated devel/py-cpplint to 2.0.2 [adam 2025-04-12]
+	Updated devel/py-dotenv to 1.1.0 [adam 2025-04-12]
