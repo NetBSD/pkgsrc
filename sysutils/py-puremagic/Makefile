@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/12 18:03:06 pgoyette Exp $
 
 DISTNAME=	puremagic-1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/puremagic/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/cdgriffith/puremagic
 COMMENT=	Pure python implementation of magic file detection
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
