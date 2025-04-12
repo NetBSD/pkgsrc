@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/09/12 06:48:47 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/12 06:49:07 wiz Exp $
 
-DISTNAME=	jansson-2.14
+DISTNAME=	jansson-2.14.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akheron/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
