@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/02/23 16:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/12 18:28:42 pgoyette Exp $
 
 DISTNAME=	sphinx_rtd_theme-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_rtd_theme/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/rtfd/sphinx_rtd_theme
 COMMENT=	Sphinx readthedocs.org theme
 LICENSE=	mit AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=6:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery>=4:../../textproc/py-sphinxcontrib-jquery
