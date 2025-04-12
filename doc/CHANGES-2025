@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2582 2025/04/12 16:30:04 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2583 2025/04/12 18:38:39 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3385,3 +3385,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-icalendar to 6.1.3 [wiz 2025-04-12]
 	Updated x11/xterm to 398 [pin 2025-04-12]
 	Updated x11/sakura to 3.8.9 [pin 2025-04-12]
+	Added ham/direwolf version 1.7 [jmcneill 2025-04-12]
