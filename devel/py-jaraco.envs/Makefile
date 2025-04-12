@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/03/16 21:33:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/12 11:33:32 adam Exp $
 
 DISTNAME=	jaraco.envs-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.envs/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.envs
 COMMENT=	Classes for orchestrating Python (virtual) environments
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-path-[0-9]*:../../devel/py-path
 DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
