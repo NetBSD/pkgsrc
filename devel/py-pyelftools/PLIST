@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/20 08:49:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/12 20:03:45 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/elftools/__init__.py
 ${PYSITELIB}/elftools/__init__.pyc

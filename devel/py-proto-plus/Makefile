@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/03/12 09:30:07 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/12 20:03:44 adam Exp $
 
 DISTNAME=	proto_plus-1.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/proto-plus/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/googleapis/proto-plus-python
 COMMENT=	Beautiful, Pythonic protocol buffers
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=3.19.0:../../devel/py-protobuf
 # this depends on py-proto-plus:
 TEST_DEPENDS+=	${PYPKGPREFIX}-google-api-core>=1.31.5:../../devel/py-google-api-core

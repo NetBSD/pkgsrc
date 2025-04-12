@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/12/29 16:58:48 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/12 20:03:46 adam Exp $
 
 DISTNAME=	pytype-2024.10.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytype/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://google.github.io/pytype
 COMMENT=	Static type analyzer for Python code
 LICENSE=	mit AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.4.2:../../graphics/py-dot
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=4.1.0:../../devel/py-immutabledict
