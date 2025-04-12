@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/12 21:10:56 adam Exp $
 
 DISTNAME=	pytest_home-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-home/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/pytest-home
 COMMENT=	Home directory fixtures
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs>=2.4:../../devel/py-test-checkdocs
