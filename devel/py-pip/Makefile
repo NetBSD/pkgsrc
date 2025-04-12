@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2025/02/10 10:50:58 adam Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/12 12:18:01 adam Exp $
 
 DISTNAME=	pip-25.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pip.pypa.io/
 COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.6.1:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 

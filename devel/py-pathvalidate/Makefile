@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/01/04 06:38:28 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/12 12:18:00 adam Exp $
 
 DISTNAME=	pathvalidate-3.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathvalidate/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/thombashi/pathvalidate
 COMMENT=	Python library to sanitize/validate a string such as filenames
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-allpairspy>=2:../../devel/py-allpairspy
 TEST_DEPENDS+=	${PYPKGPREFIX}-click>=6.2:../../devel/py-click

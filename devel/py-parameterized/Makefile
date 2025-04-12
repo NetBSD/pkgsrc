@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/12 12:18:00 adam Exp $
 
 DISTNAME=	parameterized-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parameterized/}
 
@@ -11,13 +11,11 @@ HOMEPAGE=	https://github.com/wolever/parameterized
 COMMENT=	Parameterized testing with any Python test framework
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} parameterized/test.py
