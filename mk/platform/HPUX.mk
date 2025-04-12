@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.28 2025/04/12 08:36:35 nia Exp $
+# $NetBSD: HPUX.mk,v 1.29 2025/04/12 08:41:11 nia Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -58,9 +58,6 @@ _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 
 # sysutils/fam is not usable on HP-UX.
 FAM_DEFAULT?=		gamin
-
-# mit-krb5 is builtin, and heimdal doesn't build.
-KRB5_DEFAULT?=		mit-krb5
 
 # Builtin openssl and zlib have issues. Prefer pkgsrc's until we know which
 # versions work.

@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.42 2025/04/12 08:36:35 nia Exp $
+# $NetBSD: FreeBSD.mk,v 1.43 2025/04/12 08:41:11 nia Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -90,3 +90,6 @@ _OPSYS_CAN_CHECK_SSP=		no  # only supports libssp at this time
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
 _OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
+
+# Comes with a native heimdal implementation
+KRB5_DEFAULT?=		heimdal
