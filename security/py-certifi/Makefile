@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/01/31 08:37:56 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/04/12 17:08:09 pgoyette Exp $
 
 DISTNAME=	certifi-2025.1.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://certifi.io/
 COMMENT=	Python package for providing Mozilla's CA Bundle
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
