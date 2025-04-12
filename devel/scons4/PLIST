@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/11 07:53:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 19:11:02 nonaka Exp $
 bin/scons-${PYVERSSUFFIX}
 bin/scons-configure-cache-${PYVERSSUFFIX}
 bin/sconsign-${PYVERSSUFFIX}
@@ -2011,7 +2011,7 @@ ${PYSITELIB}/SCons/dblite.pyo
 ${PYSITELIB}/SCons/exitfuncs.py
 ${PYSITELIB}/SCons/exitfuncs.pyc
 ${PYSITELIB}/SCons/exitfuncs.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL

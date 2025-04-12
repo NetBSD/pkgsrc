@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/11 07:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/12 19:11:02 nonaka Exp $
 
 DISTNAME=	scons-4.9.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
@@ -11,7 +12,7 @@ HOMEPAGE=	https://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
