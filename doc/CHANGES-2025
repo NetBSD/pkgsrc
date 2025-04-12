@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2589 2025/04/12 20:56:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2590 2025/04/12 21:18:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3399,3 +3399,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-queuelib to 1.8.0 [adam 2025-04-12]
 	Updated archivers/py-cramjam to 2.10.0 [adam 2025-04-12]
 	Updated devel/py-tenacity to 9.1.2 [adam 2025-04-12]
+	Updated devel/py-test-asyncio to 0.26.0 [adam 2025-04-12]
+	Updated security/py-asn1-modules to 0.4.2 [adam 2025-04-12]
