@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/11/22 12:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/12 07:26:16 adam Exp $
 
-DISTNAME=	expandvars-0.12.0
+DISTNAME=	expandvars-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/expandvars/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
