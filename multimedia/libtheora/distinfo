@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:01:10 nia Exp $
+$NetBSD: distinfo,v 1.21 2025/04/12 06:52:22 wiz Exp $
 
-BLAKE2s (libtheora-1.1.1.tar.bz2) = 1734110887d75ce799d17e5a3635c8be949b600353efe2580a97b818159998c2
-SHA512 (libtheora-1.1.1.tar.bz2) = 9ab9b3af1c35d16a7d6d84f61f59ef3180132e30c27bdd7c0fa2683e0d00e2c791accbc7fd2c90718cc947d8bd10ee4a5940fb55f90f1fd7b0ed30583a47dbbd
-Size (libtheora-1.1.1.tar.bz2) = 1903175 bytes
-SHA1 (patch-aa) = ae5fe2d8798fa8db59b023ad8c67d4d83763a56f
-SHA1 (patch-ab) = 07e93bf47039ec589ce3fbdb26d5d8dbcc0c4f65
-SHA1 (patch-configure.ac) = 62c74c43f4958f23bbca809e9de5abd8e36921d6
+BLAKE2s (libtheora-1.2.0.tar.xz) = d140e685d54cf169a6eda8eb845f50b2a05f1964f5c7cf5cab143071fff878f0
+SHA512 (libtheora-1.2.0.tar.xz) = 849db0c916f0f0b1237a4893594ff4b9e72d4ad1dca42f3f2979af5971f42c3fe77a75b181dfdd1c1353bbca4c832d6ab43f6d509c0650901c692e96ceab5f26
+Size (libtheora-1.2.0.tar.xz) = 1803124 bytes

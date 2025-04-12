@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.7 2018/01/14 10:16:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/04/12 06:52:22 wiz Exp $
 #
 # used by multimedia/libtheora-docs/Makefile
 
-DISTNAME=	libtheora-1.1.1
+DISTNAME=	libtheora-1.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xiph.org/releases/theora/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.theora.org/
