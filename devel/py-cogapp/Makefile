@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/12 09:50:45 adam Exp $
 
 DISTNAME=	cogapp-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cogapp/}
 
@@ -10,11 +11,9 @@ HOMEPAGE=	http://nedbatchelder.com/code/cog
 COMMENT=	Code generator for executing Python snippets in source files
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cog cog-${PYVERSSUFFIX} || ${TRUE}
