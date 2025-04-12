@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2570 2025/04/12 10:41:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2571 2025/04/12 11:03:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3364,3 +3364,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dotenv to 1.1.0 [adam 2025-04-12]
 	Updated devel/py-faker to 37.1.0 [adam 2025-04-12]
 	Updated devel/py-debugpy to 1.8.14 [adam 2025-04-12]
+	Updated devel/py-googleapis-common-protos to 1.69.2 [adam 2025-04-12]
+	Updated devel/py-google-api-core to 2.24.2 [adam 2025-04-12]
