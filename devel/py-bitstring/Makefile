@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/02/04 06:35:41 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/12 09:31:51 adam Exp $
 
-DISTNAME=	bitstring-4.3.0
+DISTNAME=	bitstring-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitstring/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/scott-griffiths/bitstring
 COMMENT=	Simple construction, analysis and modification of binary data
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-bitarray>=3.0.0:../../devel/py-bitarray
 
 USE_LANGUAGES=	# none
