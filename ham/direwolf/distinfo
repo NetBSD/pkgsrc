@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/04/12 18:37:15 jmcneill Exp $
+
+BLAKE2s (direwolf/1.7.tar.gz) = 73c8f13681fa32683e7ca939effed4c4fc5fb302d4263c0e5176f21ca519b948
+SHA512 (direwolf/1.7.tar.gz) = e09b14d7a036546e042da8b536b70d07f485d6a7224b19f5626b33e43a21c48200591fd6680ca1ee4b3c9fb5909d6f1c54ae8160877d51e06278fe19516abe1e
+Size (direwolf/1.7.tar.gz) = 20587417 bytes
+SHA1 (patch-CMakeLists.txt) = 9a455c6bcb163b34d2904a08a4d0c1ce05de3df1
+SHA1 (patch-src_audio.h) = 35f0683d1fd5ff16833e518ce2df8544cc3327be
+SHA1 (patch-src_decode__aprs.c) = 0a897894080d9921f3fe52a5bd971e90602d8b2b
+SHA1 (patch-src_symbols.c) = 510c0f1d98a3cd5710b7b05b362367483fb2f6c1
