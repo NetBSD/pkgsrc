@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/03/14 15:27:19 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/12 11:36:28 adam Exp $
 
-DISTNAME=	validate_pyproject-0.24
+DISTNAME=	validate_pyproject-0.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validate-pyproject/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/abravalheri/validate-pyproject
 COMMENT=	Validation library and CLI tool for checking on pyproject.toml files
 LICENSE=	mpl-2.0 AND mit AND modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.16.2:../../textproc/py-fastjsonschema
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
