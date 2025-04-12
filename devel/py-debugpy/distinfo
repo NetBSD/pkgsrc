@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/03/05 15:08:20 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/04/12 10:41:08 adam Exp $
 
-BLAKE2s (debugpy-1.8.13.tar.gz) = 8a2e81ef589aa277b1fec38cfff555ae3228994aa5ca75793e7bbde43f060364
-SHA512 (debugpy-1.8.13.tar.gz) = 8dd986c3e66ba91d4fd31a7db986ea47674fcd6293aa8a0a2fbc803191e0a65c4a5297d42b41578c827200577a0212973fbd956cca017681e85f8ae15ee76a58
-Size (debugpy-1.8.13.tar.gz) = 1641193 bytes
+BLAKE2s (debugpy-1.8.14.tar.gz) = 988b8477c8e87c70da4955da1ac8e5995a1472b653b44607412e0155b43493b5
+SHA512 (debugpy-1.8.14.tar.gz) = 848257f214d00ec0416adaa318dc9182d6e33d4f4b520da500f1c4e2bdf3e95b6750f616646f1ce6083aae67bc8afa7b26c629c60fd3e7b6ef4d974a9c0e7594
+Size (debugpy-1.8.14.tar.gz) = 1641444 bytes
