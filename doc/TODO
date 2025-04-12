@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25639 2025/04/12 19:47:34 adam Exp $
+$NetBSD: TODO,v 1.25640 2025/04/12 20:56:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -1130,7 +1130,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-calver-2025.4.2
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cramjam-2.9.0
 	o py-cryptodome-3.22.0
 	o py-django-5.2
 	o py-docstring-to-markdown-0.16
