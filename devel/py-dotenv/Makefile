@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/12 10:06:39 adam Exp $
 
-DISTNAME=	python-dotenv-1.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
+DISTNAME=	python_dotenv-1.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-dotenv/}
 
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sh>=2:../../sysutils/py-sh
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} dotenv dotenv-${PYVERSSUFFIX} || ${TRUE}
