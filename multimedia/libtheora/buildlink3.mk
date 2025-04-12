@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/01/07 13:04:25 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/04/12 06:54:11 wiz Exp $
 
 BUILDLINK_TREE+=	libtheora
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtheora
 LIBTHEORA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtheora+=	libtheora>=1.0alpha3
-BUILDLINK_ABI_DEPENDS.libtheora+=	libtheora>=1.0alpha3nb1
+BUILDLINK_ABI_DEPENDS.libtheora+=	libtheora>=1.2.0
 BUILDLINK_PKGSRCDIR.libtheora?=		../../multimedia/libtheora
 
 .include "../../audio/libvorbis/buildlink3.mk"
