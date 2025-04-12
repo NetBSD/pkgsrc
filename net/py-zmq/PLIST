@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/02/03 08:29:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/04/12 11:28:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -199,7 +199,6 @@ ${PYSITELIB}/zmq/tests/__init__.pyo
 ${PYSITELIB}/zmq/utils/__init__.py
 ${PYSITELIB}/zmq/utils/__init__.pyc
 ${PYSITELIB}/zmq/utils/__init__.pyo
-${PYSITELIB}/zmq/utils/buffers.pxd
 ${PYSITELIB}/zmq/utils/garbage.py
 ${PYSITELIB}/zmq/utils/garbage.pyc
 ${PYSITELIB}/zmq/utils/garbage.pyo
