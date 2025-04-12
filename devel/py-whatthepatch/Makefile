@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/17 09:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/12 21:37:05 adam Exp $
 
 DISTNAME=	whatthepatch-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whatthepatch/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/cscorley/whatthepatch
 COMMENT=	Patch parsing and application library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
