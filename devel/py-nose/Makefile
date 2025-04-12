@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/12 12:08:14 adam Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://nose.readthedocs.io/
 COMMENT=	Unittest-based testing framework for python
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # only needed for a plugin
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 

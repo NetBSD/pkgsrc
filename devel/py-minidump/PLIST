@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/20 14:25:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 12:08:13 adam Exp $
 bin/minidump-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/minidump/__amain__.py
 ${PYSITELIB}/minidump/__amain__.pyc

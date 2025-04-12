@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/12/24 10:51:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/12 12:08:14 adam Exp $
 
 DISTNAME=	nihtest-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/nih-at/nihtest
 COMMENT=	Testing tool for command line utilities
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 USE_TOOLS+=	cmake:test
