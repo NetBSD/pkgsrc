@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2584 2025/04/12 19:06:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2585 2025/04/12 19:17:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3388,3 +3388,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added ham/direwolf version 1.7 [jmcneill 2025-04-12]
 	Updated devel/py-ipython to 9.1.0 [adam 2025-04-12]
 	Updated textproc/py-humanize to 4.12.2 [adam 2025-04-12]
+	Updated devel/py-logilab-common to 2.1.0 [adam 2025-04-12]
+	Updated textproc/py-lxml to 5.3.2 [adam 2025-04-12]
+	Updated textproc/py-lxml-html-clean to 0.4.2 [adam 2025-04-12]
