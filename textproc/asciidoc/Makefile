@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2024/11/14 22:21:49 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/12 19:01:11 nonaka Exp $
 
 DISTNAME=	asciidoc-10.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciidoc/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=	https://asciidoc.org/
 COMMENT=	ASCII to formatted document converter
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
