@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/12/26 08:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/12 21:10:57 adam Exp $
 
 DISTNAME=	pytest_mypy_plugins-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-mypy-plugins/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/TypedDjango/pytest-mypy-plugins
 COMMENT=	Pytest plugin for writing cmd for mypy plugins
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/02/07 21:55:22 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/12 21:10:56 adam Exp $
 
 DISTNAME=	pytest_datadir-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-datadir/}
 
@@ -12,7 +13,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 

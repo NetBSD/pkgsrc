@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/29 09:19:24 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/12 21:10:56 adam Exp $
 
 DISTNAME=	pytest-instafail-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-instafail/}
 
