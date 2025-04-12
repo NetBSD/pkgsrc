@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2025/02/04 06:34:22 adam Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/12 09:30:24 adam Exp $
 
-DISTNAME=	bitarray-3.0.0
+DISTNAME=	bitarray-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitarray/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ilanschnell/bitarray
 COMMENT=	Efficient arrays of booleans
 LICENSE=	python-software-foundation
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
