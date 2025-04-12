@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2024/08/06 12:33:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/04/12 09:56:23 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/coverage/__init__.py
 ${PYSITELIB}/coverage/__init__.pyc
