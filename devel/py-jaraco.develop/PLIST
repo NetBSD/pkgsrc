@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/27 09:06:06 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.4 2025/04/12 11:18:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jaraco/develop/__init__.py
 ${PYSITELIB}/jaraco/develop/__init__.pyc

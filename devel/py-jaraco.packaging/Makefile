@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/03/05 09:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/12 11:18:40 adam Exp $
 
 DISTNAME=	jaraco_packaging-10.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.packaging/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.packaging
 COMMENT=	Tools to supplement packaging Python releases
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
 DEPENDS+=	${PYPKGPREFIX}-jaraco.context-[0-9]*:../../devel/py-jaraco.context

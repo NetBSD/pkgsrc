@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.47 2025/03/21 20:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/12 11:18:38 adam Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
 DISTNAME=	hg_evolve-11.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -13,7 +14,7 @@ HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
 TEST_DEPENDS+=	curl-[0-9]*:../../www/curl
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/12 11:18:38 adam Exp $
 
 DISTNAME=	hypothesmith-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesmith/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Zac-HD/hypothesmith
 COMMENT=	Hypothesis strategies for generating Python programs, like CSmith
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.93.0:../../devel/py-hypothesis
 DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../lang/py-lark-parser
 DEPENDS+=	${PYPKGPREFIX}-libcst>=1.0.1:../../lang/py-libcst
@@ -19,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-parso-[0-9]*:../../lang/py-parso
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 0.2.0
 # 1 failed, 170 passed, 2 skipped, 3 xfailed
