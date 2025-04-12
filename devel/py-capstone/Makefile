@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/12 09:44:00 adam Exp $
 
 .include "../../devel/capstone/Makefile.common"
 
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/capstone-${GITHUB_TAG}
 PYSETUPSUBDIR=	bindings/python
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
