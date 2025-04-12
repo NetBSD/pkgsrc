@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2025/01/15 08:43:35 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/12 20:15:14 adam Exp $
 
 DISTNAME=	pyscard-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyscard/}
 
@@ -11,7 +12,7 @@ COMMENT=	Python library for smart cards
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	swig3>=0:../../devel/swig3
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
 
