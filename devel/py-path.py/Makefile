@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2025/03/05 09:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/12 12:18:00 adam Exp $
 
 DISTNAME=	path.py-12.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/path.py/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/path.py
 COMMENT=	Module wrapper for os.path
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.15:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-path-[0-9]*:../../devel/py-path
 TEST_DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
