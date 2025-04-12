@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2024/09/14 19:16:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/12 08:28:30 adam Exp $
 bin/automat-visualize-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/automat/__init__.py
 ${PYSITELIB}/automat/__init__.pyc
