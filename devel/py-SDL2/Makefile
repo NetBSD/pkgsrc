@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/03/05 09:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/12 20:15:14 adam Exp $
 
 DISTNAME=	pysdl2-0.9.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySDL2/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/py-sdl/py-sdl2
 COMMENT=	Python SDL2 bindings
 LICENSE=	cc0-1.0-universal OR zlib
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 USE_LANGUAGES=	# none
