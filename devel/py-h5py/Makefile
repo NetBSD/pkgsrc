@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/12 11:08:23 adam Exp $
 
 DISTNAME=	h5py-3.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h5py/}
 
@@ -11,7 +12,7 @@ COMMENT=	Python interface to the HDF5 library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 #TEST_DEPENDS+=	py-test-mpi
 
 MAKE_ENV=	HDF5_DIR=${PREFIX}
