@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/03/05 09:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/12 11:33:33 adam Exp $
 
 DISTNAME=	Kivy%20Garden-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/%20/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy-garden/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/kivy-garden/garden
 COMMENT=	Garden tool for kivy flowers
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/%20/\ /}
