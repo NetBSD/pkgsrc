@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/12 08:02:08 adam Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	ailment-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ailment/}
 
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/angr/ailment
 COMMENT=	The angr intermediate language
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # Circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 TEST_DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo

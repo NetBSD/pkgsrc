@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/11/11 07:28:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/12 08:02:09 adam Exp $
 
 DISTNAME=	astor-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astor/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/berkerpeksag/astor
 COMMENT=	Read/rewrite/write Python ASTs
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
