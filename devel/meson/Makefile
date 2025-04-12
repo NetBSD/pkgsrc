@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2025/04/12 07:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/04/12 10:40:26 wiz Exp $
 
 DISTNAME=	meson-1.7.2
+PKGREVISION=	1
 CATEGORIES=	devel python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mesonbuild/}
@@ -10,7 +11,7 @@ HOMEPAGE=	https://mesonbuild.com/
 COMMENT=	Open source build system meant to be fast and user friendly
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
 CONFLICTS+=	py[0-9]*-meson-[0-9]*
