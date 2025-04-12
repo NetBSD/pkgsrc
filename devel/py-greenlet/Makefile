@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2025/02/02 10:38:03 he Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/12 11:08:22 adam Exp $
 
 DISTNAME=	greenlet-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-greenlet/greenlet
 COMMENT=	Lightweight in-process concurrent programming
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
