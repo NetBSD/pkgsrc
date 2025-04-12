@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:18:39 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/04/12 19:14:59 adam Exp $
 
-BLAKE2s (logilab-common-1.8.1.tar.gz) = 29391b8a5a5da19e9ab3c00ac34f53a7352706575121e7539590fce188832a4b
-SHA512 (logilab-common-1.8.1.tar.gz) = 417bf503a3baf34753e78a0d69eb0fd59eaa04e4c7237e54b856da6bb4f46efc3bb0e241789b3d4bfb41cda2b1dc94d6cabf1bd2a4cbb66b98eb66f9a9a3322a
-Size (logilab-common-1.8.1.tar.gz) = 199196 bytes
+BLAKE2s (logilab_common-2.1.0.tar.gz) = 3e70f55a7da86b293708141d172aa408b5991c16d59b41fa0a3aa02bbea5c4d5
+SHA512 (logilab_common-2.1.0.tar.gz) = fd8c9a4e3cdc9016b173619d8e901a694877c7c9a355611749bc348c63d671531972c77de73f9dc62afd7fa388ca8d663d3298047f1dd60c130321daedb3f63a
+Size (logilab_common-2.1.0.tar.gz) = 187464 bytes
