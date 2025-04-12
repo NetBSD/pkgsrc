@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/02/02 15:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/12 11:03:06 adam Exp $
 
-DISTNAME=	google_api_core-2.24.1
+DISTNAME=	google_api_core-2.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/python-api-core
 COMMENT=	Python support library for multiple Google libraries
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.14.1:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-googleapis-common-protos>=1.56.2:../../devel/py-googleapis-common-protos
 DEPENDS+=	${PYPKGPREFIX}-proto-plus>=1.22.3:../../devel/py-proto-plus
