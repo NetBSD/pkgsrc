@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/01/09 10:13:10 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/12 08:05:04 adam Exp $
 
-DISTNAME=	anyio-4.8.0
+DISTNAME=	anyio-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.1:../../misc/py-sniffio
+#TODO:
+#TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster>=1.5.23
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.2.0:../../devel/py-exceptiongroup
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=4.0:../../devel/py-hypothesis
