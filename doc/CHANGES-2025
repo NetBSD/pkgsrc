@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2579 2025/04/12 12:12:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2580 2025/04/12 13:36:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-lz4 to 4.4.4 [adam 2025-04-12]
 	Updated devel/py-orderly-set to 5.4.0 [adam 2025-04-12]
 	Updated www/py-pylsqpack to 0.3.20 [adam 2025-04-12]
+	Updated time/py-icalendar to 6.1.3 [wiz 2025-04-12]
