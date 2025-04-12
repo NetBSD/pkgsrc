@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/12 18:28:42 pgoyette Exp $
 
 DISTNAME=	glad2-2.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glad2/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Dav1dde/glad
 COMMENT=	Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
 
 post-install:
