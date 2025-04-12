@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2563 2025/04/12 07:26:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2564 2025/04/12 08:09:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3348,3 +3348,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-setuptools to 78.1.0.20250329 [adam 2025-04-12]
 	Updated misc/py-trove-classifiers to 2025.4.11.15 [adam 2025-04-12]
 	Updated misc/py-expandvars to 1.0.0 [adam 2025-04-12]
+	Updated devel/py-anyio to 4.9.0 [adam 2025-04-12]
+	Updated devel/py-anytree to 2.13.0 [adam 2025-04-12]
