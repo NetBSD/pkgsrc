@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2583 2025/04/12 18:38:39 jmcneill Exp $
+$NetBSD: CHANGES-2025,v 1.2584 2025/04/12 19:06:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3386,3 +3386,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xterm to 398 [pin 2025-04-12]
 	Updated x11/sakura to 3.8.9 [pin 2025-04-12]
 	Added ham/direwolf version 1.7 [jmcneill 2025-04-12]
+	Updated devel/py-ipython to 9.1.0 [adam 2025-04-12]
+	Updated textproc/py-humanize to 4.12.2 [adam 2025-04-12]
