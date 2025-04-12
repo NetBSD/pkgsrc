@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/03/08 12:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/12 11:33:33 adam Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 # For share/kivy-examples
 PYTHON_SELF_CONFLICT=	yes
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 

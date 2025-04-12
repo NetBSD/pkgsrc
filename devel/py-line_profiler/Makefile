@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/01/06 11:49:37 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/12 11:33:33 adam Exp $
 
 DISTNAME=	line_profiler-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/line_profiler/}
 
@@ -11,7 +12,7 @@ COMMENT=	Python line-by-line profiler
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.3:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 # avoid scikit-build
