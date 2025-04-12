@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.143 2025/04/12 08:36:35 nia Exp $
+# $NetBSD: Darwin.mk,v 1.144 2025/04/12 08:41:11 nia Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -167,9 +167,6 @@ _OPSYS_SHLIB_TYPE=	dylib	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
-
-# Comes with a native mit-krb5 implementation
-KRB5_DEFAULT?=		mit-krb5
 
 #
 # Builtin overrides.
