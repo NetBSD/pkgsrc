@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/18 10:53:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/12 07:17:46 wiz Exp $
 include/wayland-protocols/alpha-modifier-v1-enum.h
 include/wayland-protocols/color-management-v1-enum.h
 include/wayland-protocols/commit-timing-v1-enum.h
@@ -50,6 +50,7 @@ include/wayland-protocols/xdg-shell-unstable-v6-enum.h
 include/wayland-protocols/xdg-system-bell-v1-enum.h
 include/wayland-protocols/xdg-toplevel-drag-v1-enum.h
 include/wayland-protocols/xdg-toplevel-icon-v1-enum.h
+include/wayland-protocols/xdg-toplevel-tag-v1-enum.h
 include/wayland-protocols/xwayland-keyboard-grab-unstable-v1-enum.h
 include/wayland-protocols/xwayland-shell-v1-enum.h
 share/pkgconfig/wayland-protocols.pc
@@ -83,6 +84,7 @@ share/wayland-protocols/staging/xdg-dialog/xdg-dialog-v1.xml
 share/wayland-protocols/staging/xdg-system-bell/xdg-system-bell-v1.xml
 share/wayland-protocols/staging/xdg-toplevel-drag/xdg-toplevel-drag-v1.xml
 share/wayland-protocols/staging/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml
+share/wayland-protocols/staging/xdg-toplevel-tag/xdg-toplevel-tag-v1.xml
 share/wayland-protocols/staging/xwayland-shell/xwayland-shell-v1.xml
 share/wayland-protocols/unstable/fullscreen-shell/fullscreen-shell-unstable-v1.xml
 share/wayland-protocols/unstable/idle-inhibit/idle-inhibit-unstable-v1.xml
