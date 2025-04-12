@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/03/04 09:09:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/12 10:24:32 adam Exp $
 
 DISTNAME=	doc8-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/doc8/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/pycqa/doc8
 COMMENT=	Opinionated style checker for rst styles of documentation
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
