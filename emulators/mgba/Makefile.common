@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2024/12/18 11:35:42 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/04/12 11:46:58 nia Exp $
 
 # used by emulators/libretro-mgba/Makefile
 # used by emulators/mgba/Makefile
 # used by emulators/mgba-qt/Makefile
 
-DISTNAME=	mgba-0.10.3
+DISTNAME=	mgba-0.10.5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
 GITHUB_PROJECT=	mgba
@@ -14,8 +14,10 @@ HOMEPAGE?=	https://mgba.io/
 LICENSE=	mpl-2.0
 
 USE_TOOLS+=	pkg-config
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+TOOL_DEPENDS+=	dos2unix-[0-9]*:../../converters/dos2unix
+TOOL_DEPENDS+=	discount-[0-9]*:../../textproc/discount
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
@@ -26,4 +28,5 @@ CMAKE_CONFIGURE_ARGS+=	-DSKIP_GIT=ON
 DISTINFO_FILE=	${.CURDIR}/../../emulators/mgba/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/mgba/patches
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libelf/buildlink3.mk"
