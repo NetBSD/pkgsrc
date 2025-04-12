@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/12 11:33:33 adam Exp $
 
 DISTNAME=	kaitaistruct-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kaitaistruct/}
 
@@ -11,9 +11,7 @@ HOMEPAGE=	https://kaitai.io/
 COMMENT=	Kaitai Struct declarative parser generator for binary data
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
