@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2549 2025/04/12 06:44:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2550 2025/04/12 06:47:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/evince to 48.0 [prlw1 2025-04-11]
 	Updated devel/compiledb-go to 1.5.2 [wiz 2025-04-12]
 	Updated textproc/inih to 60 [wiz 2025-04-12]
+	Updated textproc/jnv to 0.6.0 [wiz 2025-04-12]
