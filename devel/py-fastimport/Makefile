@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/12 10:59:18 adam Exp $
 
 DISTNAME=	fastimport-0.9.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastimport/}
 
@@ -11,11 +11,9 @@ HOMEPAGE=	https://github.com/jelmer/python-fastimport
 COMMENT=	Fastimport parser and generator in Python
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in fast-import-filter fast-import-info fast-import-query

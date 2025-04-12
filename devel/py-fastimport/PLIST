@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/30 05:44:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/12 10:59:18 adam Exp $
 bin/fast-import-filter-${PYVERSSUFFIX}
 bin/fast-import-info-${PYVERSSUFFIX}
 bin/fast-import-query-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fastimport/__init__.py
 ${PYSITELIB}/fastimport/__init__.pyc

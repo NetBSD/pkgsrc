@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/12 10:59:19 adam Exp $
 
 DISTNAME=	fx2-0.13
 PKGREVISION=	2
@@ -14,13 +14,11 @@ HOMEPAGE=	https://pypi.org/project/fx2/
 COMMENT=	Library for interacting with Cypress EZ-USB FX2 series microcontrollers
 LICENSE=	0-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-libusb1-[0-9]*:../../devel/py-libusb1
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 MAKE_ENV+=	SETUPTOOLS_SCM_PRETEND_VERSION=${PKGVERSION_NOREV}
 

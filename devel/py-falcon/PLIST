@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2024/12/09 21:11:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/12 10:59:18 adam Exp $
 bin/falcon-bench-${PYVERSSUFFIX}
 bin/falcon-inspect-app-${PYVERSSUFFIX}
 bin/falcon-print-routes-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/falcon/__init__.py
 ${PYSITELIB}/falcon/__init__.pyc
