@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/02/24 17:24:52 adam Exp $
+$NetBSD: distinfo,v 1.30 2025/04/12 19:05:38 adam Exp $
 
-BLAKE2s (humanize-4.12.1.tar.gz) = 43258c6773c38244b48a70b30be1f0545df41c0831baefae6513faacbb8f4e1b
-SHA512 (humanize-4.12.1.tar.gz) = 373f9fde324924089019934e712aab94dc50b72da9b2932461dec6700a01a49a132693a29a37f6a65fe60636c9b300aab8053a21afe3f496b3f24dd10ada7fe7
-Size (humanize-4.12.1.tar.gz) = 80827 bytes
+BLAKE2s (humanize-4.12.2.tar.gz) = 04d8e114b7b84d5249f35f9af1a114feced3c52432b3cd8620015f60536ef305
+SHA512 (humanize-4.12.2.tar.gz) = 33b7c54acf0aa6e4170016baf8c0b512533546551f6b64bccca251d59a9a997e5f4379b1e038401d6fbff4aaec99606afb24df0428202dd8d82ff7b9595463b7
+Size (humanize-4.12.2.tar.gz) = 80871 bytes
