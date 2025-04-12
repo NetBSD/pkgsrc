@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25637 2025/04/12 13:36:59 wiz Exp $
+$NetBSD: TODO,v 1.25638 2025/04/12 19:17:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -1146,7 +1146,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-josepy-2.0.0 [2.0.0 is incompatible to 1.x: check py-acme and py-certbot work]
-	o py-lxml-5.3.2
 	o py-multidict-6.3.2
 	o py-newt-0.52.21
 	o py-numpy-2.2.4
