@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2025/02/02 10:38:01 he Exp $
+# $NetBSD: Makefile,v 1.61 2025/04/12 09:50:45 adam Exp $
 
 DISTNAME=	cffi-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://cffi.readthedocs.io/
 COMMENT=	Foreign Function Interface for Python calling C code
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 USE_LANGUAGES=	c c++ # c++ for testing only
