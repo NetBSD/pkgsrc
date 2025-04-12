@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/12/26 08:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/12 21:37:07 adam Exp $
 
 DISTNAME=	vulture-2.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vulture/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jendrikseipp/vulture
 COMMENT=	Find dead code
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

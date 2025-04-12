@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/02/15 16:10:56 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/12 21:37:06 adam Exp $
 
 DISTNAME=	trio-0.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-trio/trio
 COMMENT=	Friendly Python library for async concurrency and I/O
 LICENSE=	mit OR apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=23.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-outcome-[0-9]*:../../devel/py-outcome
