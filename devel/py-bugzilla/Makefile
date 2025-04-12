@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/01/17 19:29:03 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/12 09:39:48 adam Exp $
 
 DISTNAME=	python_bugzilla-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bugzilla/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-bugzilla/python-bugzilla
 COMMENT=	Bugzilla XMLRPC access module
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
 

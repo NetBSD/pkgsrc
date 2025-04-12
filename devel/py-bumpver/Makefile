@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/17 09:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/12 09:39:48 adam Exp $
 
 DISTNAME=	bumpver-2024.1130
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bumpver/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/mbarkhau/bumpver
 COMMENT=	Bump version numbers in project files
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-lib3to6>=0:../../devel/py-lib3to6
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4:../../comms/py-colorama

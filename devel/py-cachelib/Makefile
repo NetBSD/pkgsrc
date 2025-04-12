@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/12 09:39:49 adam Exp $
 
 DISTNAME=	cachelib-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cachelib/}
 
@@ -10,15 +11,13 @@ HOMEPAGE=	https://github.com/pallets/cachelib
 COMMENT=	Collection of cache libraries in the same API interface
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	redis-[0-9]*:../../databases/redis
 TEST_DEPENDS+=	${PYPKGPREFIX}-redis>=3.5.3:../../databases/py-redis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess>=0.22.2:../../devel/py-test-xprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-uwsgi>=2.0.21:../../www/py-uwsgi
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
