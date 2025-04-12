@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/03/04 07:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/12 17:54:10 pgoyette Exp $
 
 DISTNAME=	gi_docgen-2025.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi_docgen/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://gitlab.gnome.org/GNOME/gi-docgen
 COMMENT=	Documentation tool for GObject-based libraries
 LICENSE=	gnu-gpl-v3 AND apache-2.0 AND cc0-1.0-universal
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-markdown>=3.2:../../textproc/py-markdown
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=1:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
