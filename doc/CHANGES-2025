@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2555 2025/04/12 07:07:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2556 2025/04/12 07:07:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3337,3 +3337,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/libtheora-docs to 1.2.0 [wiz 2025-04-12]
 	Updated devel/meson to 1.7.2 [wiz 2025-04-12]
 	Updated fonts/harfbuzz to 11.0.1 [wiz 2025-04-12]
+	Updated fonts/harfbuzz-icu to 11.0.1 [wiz 2025-04-12]
