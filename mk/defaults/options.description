@@ -317,6 +317,7 @@ gnutls			Enable GNU TLS support.
 go			Enable Go language support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
+gpsd			Enable GPS service daemon support.
 gpgme			Enable gpg support, by using the gpgme library.
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
