@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2025/03/31 11:57:30 adam Exp $
+# $NetBSD: Makefile,v 1.85 2025/04/12 20:03:45 adam Exp $
 
 DISTNAME=	protobuf-5.29.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/protobuf/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://developers.google.com/protocol-buffers/
 COMMENT=	Python bindings for protobuf
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES+=		c c++
