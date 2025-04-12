@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2572 2025/04/12 11:20:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2573 2025/04/12 11:29:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3368,3 +3368,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-google-api-core to 2.24.2 [adam 2025-04-12]
 	Updated devel/py-jaraco.itertools to 6.4.2 [adam 2025-04-12]
 	Updated devel/py-jaraco.vcs to 2.4.1 [adam 2025-04-12]
+	Updated devel/py-libusb1 to 3.3.1 [adam 2025-04-12]
+	Updated net/py-zmq to 26.4.0 [adam 2025-04-12]
