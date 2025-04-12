@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:56:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/04/12 08:02:09 adam Exp $
 bin/argparse-manpage-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/argparse_manpage/__init__.py
 ${PYSITELIB}/argparse_manpage/__init__.pyc

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/12 08:02:08 adam Exp $
 
 DISTNAME=	agate-1.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/agate/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://agate.readthedocs.io/
 COMMENT=	Python data analysis library that is optimized for humans
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
