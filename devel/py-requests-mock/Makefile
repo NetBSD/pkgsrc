@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/02/23 16:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/12 20:13:33 adam Exp $
 
 DISTNAME=	requests-mock-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-mock/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://requests-mock.readthedocs.org/
 COMMENT=	Mock out responses from the requests package
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures

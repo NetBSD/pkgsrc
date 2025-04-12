@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:22 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/12 20:13:34 adam Exp $
 
 DISTNAME=	ruamel.yaml.clib-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1:S/./-/1}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruamel.yaml.clib/}
 
@@ -10,7 +11,9 @@ HOMEPAGE=	https://yaml.readthedocs.io/
 COMMENT=	C version of reader, parser and emitter for ruamel.yaml
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+WHEEL_NAME=	ruamel_yaml_clib-${PKGVERSION_NOREV}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CFLAGS+=	-Wno-error=incompatible-pointer-types
 
