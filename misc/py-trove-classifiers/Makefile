@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/03/13 15:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/12 07:24:13 adam Exp $
 
-DISTNAME=	trove_classifiers-2025.3.13.13
+DISTNAME=	trove_classifiers-2025.4.11.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trove-classifiers/}
@@ -11,7 +11,7 @@ COMMENT=	Canonical source for classifiers on PyPI (pypi.org)
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-calver-[0-9]*:../../devel/py-calver
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
