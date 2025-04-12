@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 23:32:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/12 19:47:14 adam Exp $
 bin/pystache-${PYVERSSUFFIX}
 bin/pystache-test-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pystache/__init__.py
 ${PYSITELIB}/pystache/__init__.pyc
