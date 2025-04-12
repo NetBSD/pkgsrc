@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/22 12:25:29 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/04/12 07:26:16 adam Exp $
 
-BLAKE2s (expandvars-0.12.0.tar.gz) = 506ae0896483ec7504d5a19d56a3d2868e8e07a8c739e8600e859317dc067016
-SHA512 (expandvars-0.12.0.tar.gz) = b6eeb4693800737aef6367f4fb6080963882c59de2276f187565a764f6b800c747c1d98a1dc2e5107a62ccab420e3528064a1b67ccff8494f8ca2ebf96f05cc6
-Size (expandvars-0.12.0.tar.gz) = 10909 bytes
+BLAKE2s (expandvars-1.0.0.tar.gz) = df5e5ff67800db77c7783ffb29420fa7e3e463eb1b38479cc1d27a54e0ba0b22
+SHA512 (expandvars-1.0.0.tar.gz) = 06aacf831973386fe4a366477eefa93f9118ed0cb66822b7bca719eb688850e9803cf34a109ee51daa6147352a3b86da87667ba5d6018615778feabbcfaf3c6b
+Size (expandvars-1.0.0.tar.gz) = 11388 bytes
