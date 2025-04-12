@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2025/02/23 11:49:51 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/12 15:53:26 wiz Exp $
 
 DISTNAME=	setuptools_scm-8.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
@@ -11,7 +12,7 @@ COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
