@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/01/19 18:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/12 17:02:26 pgoyette Exp $
 
 DISTNAME=	roman-5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/roman
 COMMENT=	Integer to Roman numerals converter for Python
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
