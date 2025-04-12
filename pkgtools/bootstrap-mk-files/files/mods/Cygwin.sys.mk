@@ -1,4 +1,4 @@
-#	$NetBSD: Cygwin.sys.mk,v 1.2 2024/04/22 07:33:05 jperkin Exp $
+#	$NetBSD: Cygwin.sys.mk,v 1.3 2025/04/12 08:46:05 nia Exp $
 
 unix?=		We run Unix
 
@@ -50,7 +50,7 @@ LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
 COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
 LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-INSTALL?=	${LOCALBASE}/bin/install-sh
+INSTALL?=	${PREFIX}/bin/bsdinstall
 
 LEX?=		lex
 LFLAGS?=

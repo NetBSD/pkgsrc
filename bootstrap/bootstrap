@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.333 2025/03/31 14:16:38 wiz Exp $
+# $NetBSD: bootstrap,v 1.334 2025/04/12 08:46:05 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -584,6 +584,8 @@ CYGWIN_*)
 	root_group=Administrators
 	opsys=`uname -o`
 	machine_arch=`uname -m`
+	need_bsd_install=yes
+	use_bsdinstall=yes
 	# only used for unprivileged builds.
 	whoamiprog='id -u'
 	groupsprog='id -g'
