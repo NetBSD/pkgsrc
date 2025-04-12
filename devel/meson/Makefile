@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.74 2025/02/02 16:03:37 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/04/12 07:02:36 wiz Exp $
 
-DISTNAME=	meson-1.7.0
+DISTNAME=	meson-1.7.2
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
+#MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mesonbuild/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mesonbuild.com/
@@ -35,8 +36,9 @@ REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
-# Total passed tests:  476
-# Total failed tests:  38
+# as of 1.7.2
+# Total passed tests:  463
+# Total failed tests:  51
 # Total skipped tests: 105
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
