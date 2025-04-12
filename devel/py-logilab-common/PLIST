@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2021/05/12 06:55:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/12 19:14:59 adam Exp $
 bin/logilab-pytest-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.LESSER
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/logilab/common/__init__.py
 ${PYSITELIB}/logilab/common/__init__.pyc
 ${PYSITELIB}/logilab/common/__init__.pyo
@@ -58,16 +58,10 @@ ${PYSITELIB}/logilab/common/modutils.pyo
 ${PYSITELIB}/logilab/common/optik_ext.py
 ${PYSITELIB}/logilab/common/optik_ext.pyc
 ${PYSITELIB}/logilab/common/optik_ext.pyo
-${PYSITELIB}/logilab/common/optparser.py
-${PYSITELIB}/logilab/common/optparser.pyc
-${PYSITELIB}/logilab/common/optparser.pyo
 ${PYSITELIB}/logilab/common/proc.py
 ${PYSITELIB}/logilab/common/proc.pyc
 ${PYSITELIB}/logilab/common/proc.pyo
 ${PYSITELIB}/logilab/common/py.typed
-${PYSITELIB}/logilab/common/pytest.py
-${PYSITELIB}/logilab/common/pytest.pyc
-${PYSITELIB}/logilab/common/pytest.pyo
 ${PYSITELIB}/logilab/common/registry.py
 ${PYSITELIB}/logilab/common/registry.pyc
 ${PYSITELIB}/logilab/common/registry.pyo
@@ -128,4 +122,5 @@ ${PYSITELIB}/logilab/common/visitor.pyo
 ${PYSITELIB}/logilab/common/xmlutils.py
 ${PYSITELIB}/logilab/common/xmlutils.pyc
 ${PYSITELIB}/logilab/common/xmlutils.pyo
+${PYSITELIB}/logilab_common-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 man/man1/logilab-pytest-${PYVERSSUFFIX}.1
