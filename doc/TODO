@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25635 2025/04/12 11:44:38 adam Exp $
+$NetBSD: TODO,v 1.25636 2025/04/12 11:55:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -1166,7 +1166,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-rich-14.0.0
 	o py-ruff-0.11.4
 	o py-sbws-1.1.0
-	o py-setuptools-rust-1.11.1
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
