@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.45 2025/01/26 11:42:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2025/04/12 09:57:42 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_hypothesis_ftz_detector.py
 ${PYSITELIB}/_hypothesis_ftz_detector.pyc
@@ -180,6 +180,9 @@ ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/string.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.py
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyo
+${PYSITELIB}/hypothesis/internal/constants_ast.py
+${PYSITELIB}/hypothesis/internal/constants_ast.pyc
+${PYSITELIB}/hypothesis/internal/constants_ast.pyo
 ${PYSITELIB}/hypothesis/internal/coverage.py
 ${PYSITELIB}/hypothesis/internal/coverage.pyc
 ${PYSITELIB}/hypothesis/internal/coverage.pyo
