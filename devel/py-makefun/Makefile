@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/12 11:55:01 adam Exp $
 
 DISTNAME=	makefun-1.15.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/makefun/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/smarie/python-makefun
 COMMENT=	Small library to dynamically create Python functions
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 
 .include "../../lang/python/wheel.mk"

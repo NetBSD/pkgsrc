@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2025/01/24 08:30:01 riastradh Exp $
+# $NetBSD: Makefile,v 1.33 2025/04/12 11:55:00 adam Exp $
 
 DISTNAME=	llvmlite-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://llvmlite.readthedocs.io/
 COMMENT=	Lightweight LLVM Python binding for writing JIT compilers
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # Statically linking in a purpose-built LLVM as upstream urges to do.
 # They support only a certain version of LLVM per release, and that
