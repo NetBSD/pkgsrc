@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.10 2025/02/18 11:58:53 wiz Exp $
+# $NetBSD: Minix.mk,v 1.11 2025/04/12 08:36:35 nia Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -33,7 +33,6 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
-_OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# ELF shared libraries on Minix
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
