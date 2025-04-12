@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/30 05:41:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/12 20:03:46 adam Exp $
 bin/lines
 bin/passphrase
 bin/randcookie
@@ -7,13 +7,13 @@ bin/tailx
 bin/try_decoding
 bin/unsort
 bin/verinfo
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.GPL
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.SPL.txt
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.TGPPL.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.GPL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.SPL.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.TGPPL.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyutil/PickleSaver.py
 ${PYSITELIB}/pyutil/PickleSaver.pyc
