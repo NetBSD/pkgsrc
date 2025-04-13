@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/13 11:08:59 wiz Exp $
 
 DISTNAME=	objgraph-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/objgraph/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://mg.pov.lt/objgraph/
 COMMENT=	Draws Python object reference graphs with graphviz
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 
 USE_LANGUAGES=	# none
