@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.27 2024/07/28 21:13:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/04/13 06:51:58 adam Exp $
 bin/thg
-${PYSITELIB}/hgext3rd/thg.py
-${PYSITELIB}/hgext3rd/thg.pyc
-${PYSITELIB}/hgext3rd/thg.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/hgext3rd/thg.py
+${PYSITELIB}/hgext3rd/thg.pyc
+${PYSITELIB}/hgext3rd/thg.pyo
 ${PYSITELIB}/tortoisehg/__init__.py
 ${PYSITELIB}/tortoisehg/__init__.pyc
 ${PYSITELIB}/tortoisehg/__init__.pyo
