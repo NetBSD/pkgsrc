@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/12/03 15:35:19 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/13 12:39:14 wiz Exp $
 
 DISTNAME=	prometheus_client-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prometheus_client/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/prometheus/client_python
 COMMENT=	Prometheus instrumentation library for Python applications
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
