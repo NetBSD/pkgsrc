@@ -1,0 +1,4 @@
+A multi-platform, open-source PlayStation Portable emulator written in C++
+with the aim of speed and portability. Most games are already playable.
+
+This package is the version with the Qt frontend.
