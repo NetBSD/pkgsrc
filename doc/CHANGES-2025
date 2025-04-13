@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2600 2025/04/13 08:16:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2601 2025/04/13 08:20:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3414,3 +3414,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-CPAN-Requirements-Dynamic to 0.002 [wiz 2025-04-13]
 	Updated devel/p5-Module-Runtime to 0.017 [wiz 2025-04-13]
 	Updated devel/p5-PkgConfig to 0.26026 [wiz 2025-04-13]
+	Updated fonts/py-fonttools to 4.57.0 [adam 2025-04-13]
+	Updated www/py-jupyterlab-widgets to 3.0.14 [adam 2025-04-13]
