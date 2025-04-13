@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/11/11 07:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/13 11:09:38 wiz Exp $
 
-DISTNAME=	multidict-6.1.0
+DISTNAME=	multidict-6.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/aio-libs/multidict
 COMMENT=	Multidict implementation
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed-[0-9]*:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../lang/python/pyversion.mk"
