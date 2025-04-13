@@ -1,10 +1,10 @@
-$NetBSD: patch-setup.py,v 1.26 2024/10/20 20:05:35 adam Exp $
+$NetBSD: patch-setup.py,v 1.27 2025/04/13 08:51:00 wiz Exp $
 
 Do not look for xcb.
 
---- setup.py.orig	2024-10-15 05:58:32.000000000 +0000
+--- setup.py.orig	2025-04-12 17:02:40.000000000 +0000
 +++ setup.py
-@@ -833,11 +833,6 @@ class pil_build_ext(build_ext):
+@@ -844,11 +844,6 @@ class pil_build_ext(build_ext):
                          feature.set("webp", prefix + "webp")
                          break
  
@@ -14,5 +14,5 @@ Do not look for xcb.
 -                if _find_library_file(self, "xcb"):
 -                    feature.set("xcb", "xcb")
  
-         for f in feature:
-             if not feature.get(f) and feature.require(f):
+         if feature.want("avif"):
+             _dbg("Looking for avif")
