@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/04/13 16:19:29 nia Exp $
+
+BLAKE2s (ppsspp-1.18.1.tar.xz) = 06fcd3c7a003a27b5ec4136e9d2005cf2c9a799d71e88c714bbfd3f9b643841b
+SHA512 (ppsspp-1.18.1.tar.xz) = 00531109d67a35fe252b1af7d41a41ec85950f5d7c818bcdfb713d74b2b94f81f5af12e3e68d49ab0f7c7d29ccc42ca3ae7956f438964a205004293bb7e07510
+Size (ppsspp-1.18.1.tar.xz) = 54239412 bytes
+SHA1 (patch-Core_HW_SimpleAudioDec.cpp) = 8771db9dd8cbc7e615acfb9711e4462b344b1e49
+SHA1 (patch-Core_Util_PortManager.h) = 0825fe68de2f7d81e45cb7e4aa619d60833c73a4
