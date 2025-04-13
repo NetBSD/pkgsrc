@@ -1,16 +1,21 @@
-$NetBSD: patch-build_Makefile.global,v 1.1 2025/02/08 02:59:57 taca Exp $
+$NetBSD: patch-build_Makefile.global,v 1.2 2025/04/13 15:56:19 taca Exp $
 
 * Adjust PHP library name.
 
---- build/Makefile.global.orig	2024-12-17 11:39:23.000000000 +0000
+--- build/Makefile.global.orig	2025-04-08 20:21:18.000000000 +0000
 +++ build/Makefile.global
-@@ -15,22 +15,22 @@ build-modules: $(PHP_MODULES) $(PHP_ZEND
+@@ -15,26 +15,26 @@ build-modules: $(PHP_MODULES) $(PHP_ZEND
  
  build-binaries: $(PHP_BINARIES)
  
 -libphp.la: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
 +libphp$(PHP_VER).la: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
  	$(LIBTOOL) --tag=CC --mode=link $(CC) $(LIBPHP_CFLAGS) $(CFLAGS) $(EXTRA_CFLAGS) -rpath $(phptempdir) $(EXTRA_LDFLAGS) $(LDFLAGS) $(PHP_RPATHS) $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@
+ 	-@$(LIBTOOL) --silent --tag=CC --mode=install cp $@ $(phptempdir)/$@ >/dev/null 2>&1
+ 
+-libphp.dylib: libphp.la
++libphp$(PHP_VER).dylib: libphp$(PHP_VER).la
+ 	$(LIBTOOL) --tag=CC --mode=link $(CC) -dynamiclib $(LIBPHP_CFLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -rpath $(phptempdir) -install_name @rpath/$@ $(EXTRA_LDFLAGS) $(LDFLAGS) $(PHP_RPATHS) $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS) $(EXTRA_LIBS) $(ZEND_EXTRA_LIBS) -o $@
  	-@$(LIBTOOL) --silent --tag=CC --mode=install cp $@ $(phptempdir)/$@ >/dev/null 2>&1
  
 -libs/libphp.bundle: $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
@@ -33,7 +38,7 @@ $NetBSD: patch-build_Makefile.global,v 1.1 2025/02/08 02:59:57 taca Exp $
  				break; \
  			fi; \
  		done; \
-@@ -118,7 +118,7 @@ clean:
+@@ -122,7 +122,7 @@ clean:
  	find . -name \*.la -o -name \*.a | xargs rm -f
  	find . -name \*.so | xargs rm -f
  	find . -name .libs -a -type d|xargs rm -rf
@@ -42,7 +47,7 @@ $NetBSD: patch-build_Makefile.global,v 1.1 2025/02/08 02:59:57 taca Exp $
  	rm -f ext/opcache/jit/zend_jit_x86.c
  	rm -f ext/opcache/jit/zend_jit_arm64.c
  	rm -f ext/opcache/minilua
-@@ -143,7 +143,7 @@ prof-clean:
+@@ -147,7 +147,7 @@ prof-clean:
  	find . -name \*.lo -o -name \*.o | xargs rm -f
  	find . -name \*.la -o -name \*.a | xargs rm -f
  	find . -name \*.so | xargs rm -f
