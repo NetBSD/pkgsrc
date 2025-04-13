@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2593 2025/04/13 07:10:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2594 2025/04/13 07:12:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3405,3 +3405,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fsspec to 2025.3.2 [adam 2025-04-13]
 	Updated lang/py-pyformlang to 1.0.11 [adam 2025-04-13]
 	Updated devel/py-stem to 1.8.2nb2 [wiz 2025-04-13]
+	Updated devel/py-rich-click to 1.8.8 [adam 2025-04-13]
+	Updated devel/py-types-ujson to 5.10.0.20250326 [adam 2025-04-13]
