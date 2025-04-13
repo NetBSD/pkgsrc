@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/01/31 18:32:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/13 19:04:22 wiz Exp $
 
 DISTNAME=	twine-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://twine.readthedocs.io/
 COMMENT=	Collection of utilities for publishing packages on PyPI
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-id>=0:../../devel/py-id
