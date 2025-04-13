@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.91 2025/03/14 15:57:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.92 2025/04/13 16:11:44 wiz Exp $
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 # used by security/py-certbot-apache/Makefile
@@ -26,6 +26,6 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/certbot/certbot
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=41.6.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
