@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/03/30 10:40:44 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/13 12:23:19 wiz Exp $
 
 DISTNAME=	tzdata-2025.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzdata/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python/tzdata
 COMMENT=	Provider of IANA time zone data
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
