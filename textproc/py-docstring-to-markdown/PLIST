@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2024/02/20 04:41:15 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.4 2025/04/13 12:37:08 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/docstring_to_markdown/__init__.py
 ${PYSITELIB}/docstring_to_markdown/__init__.pyc
@@ -23,3 +24,6 @@ ${PYSITELIB}/docstring_to_markdown/py.typed
 ${PYSITELIB}/docstring_to_markdown/rst.py
 ${PYSITELIB}/docstring_to_markdown/rst.pyc
 ${PYSITELIB}/docstring_to_markdown/rst.pyo
+${PYSITELIB}/docstring_to_markdown/types.py
+${PYSITELIB}/docstring_to_markdown/types.pyc
+${PYSITELIB}/docstring_to_markdown/types.pyo
