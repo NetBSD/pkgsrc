@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/05 23:44:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/13 07:22:37 adam Exp $
 bin/confusable_homoglyphs-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/confusable_homoglyphs/__init__.py
 ${PYSITELIB}/confusable_homoglyphs/__init__.pyc
