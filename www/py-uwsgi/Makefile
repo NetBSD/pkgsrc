@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2024/11/14 22:22:10 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/04/13 12:46:08 wiz Exp $
 
-DISTNAME=	uwsgi-2.0.28
+DISTNAME=	uwsgi-2.0.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgi/}
 
@@ -11,13 +10,12 @@ HOMEPAGE=	https://uwsgi-docs.readthedocs.io/
 COMMENT=	Feature-rich WSGI server
 LICENSE=	gnu-gpl-v2 # with linking exception
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_TOOLS+=	pkg-config
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-WHEEL_NAME=	${DISTNAME:S/uwsgi/uWSGI/}
 
 .include "options.mk"
 
