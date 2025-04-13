@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/02/07 21:41:22 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/13 08:33:26 adam Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build ok.  The 6.8.0 release of
@@ -6,6 +6,7 @@
 # extreme caution and probably skipped.
 DISTNAME=	sip-6.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 # Upstream NEWS is not in NEWS, but instead at:
@@ -19,7 +20,7 @@ LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 
