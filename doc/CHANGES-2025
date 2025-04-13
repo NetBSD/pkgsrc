@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2594 2025/04/13 07:12:22 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2595 2025/04/13 07:42:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3407,3 +3407,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-stem to 1.8.2nb2 [wiz 2025-04-13]
 	Updated devel/py-rich-click to 1.8.8 [adam 2025-04-13]
 	Updated devel/py-types-ujson to 5.10.0.20250326 [adam 2025-04-13]
+	Updated converters/py-bidi to 0.6.6 [adam 2025-04-13]
+	Updated textproc/py-markdown to 3.8 [adam 2025-04-13]
