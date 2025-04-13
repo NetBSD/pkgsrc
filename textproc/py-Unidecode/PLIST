@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/11 13:06:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/13 12:38:10 wiz Exp $
 bin/unidecode-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/unidecode/__init__.py
 ${PYSITELIB}/unidecode/__init__.pyc
