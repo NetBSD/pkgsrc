@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2595 2025/04/13 07:42:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2596 2025/04/13 08:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3409,3 +3409,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-ujson to 5.10.0.20250326 [adam 2025-04-13]
 	Updated converters/py-bidi to 0.6.6 [adam 2025-04-13]
 	Updated textproc/py-markdown to 3.8 [adam 2025-04-13]
+	Updated net/py-onionbalance to 0.2.3 [wiz 2025-04-13]
