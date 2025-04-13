@@ -1,19 +1,34 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/04/04 01:00:52 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/04/13 23:02:54 nia Exp $
 
 BUILDLINK_TREE+=	libheif
 
-.include "../../mk/compiler.mk"
-
-# Intercept gcc versions that accept c++11 but not c++17.
+# Make a best effort attempt to bring in an older version of libheif
+# on systems with older compilers.  This is done to avoid requiring a
+# compiler newer than what the majority of our packages will be built
+# with, in order to avoid ABI issues and conflicts with the C++ standard
+# library.
 #
+# On NetBSD, avoid including compiler.mk, in case a mixture of
+# GCC versions are being used to build the pkgsrc tree.
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS_VERSION} < 090000
+.    include "../../graphics/libheif-cxx11/buildlink3.mk"
+.  endif
+.else
+.  include "../../mk/compiler.mk"
 # XXX: This version logic should not be pasted into bl3 files all over
 # XXX: the place; if we're going to do this, there should be
 # XXX: infrastructure for it.
-.if ${CC_VERSION:Mgcc-4.[89].*} || ${CC_VERSION:Mgcc-[56].*}
-# this defines LIBHEIF_BUILDLINK3_MK so the next sections aren't used
-.  include "../../graphics/libheif-cxx11/buildlink3.mk"
+.  if ${CC_VERSION:Mgcc-4.*} || ${CC_VERSION:Mgcc-[56].*}
+.    include "../../graphics/libheif-cxx11/buildlink3.mk"
+.  endif
 .endif
 
+# If libheif-cxx11's buildlink3 file has already been included,
+# the following section will be ignored.
 .if !defined(LIBHEIF_BUILDLINK3_MK)
 LIBHEIF_BUILDLINK3_MK:=
 
