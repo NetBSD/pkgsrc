@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/11/06 13:31:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/13 16:05:55 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1569,6 +1569,8 @@ ${GEM_HOME}/gems/net-ftp-${RUBY_NET_FTP_VER}/LICENSE.txt
 ${GEM_HOME}/gems/net-ftp-${RUBY_NET_FTP_VER}/README.md
 ${GEM_HOME}/gems/net-ftp-${RUBY_NET_FTP_VER}/Rakefile
 ${GEM_HOME}/gems/net-ftp-${RUBY_NET_FTP_VER}/lib/net/ftp.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/BSDL
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/COPYING
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/Gemfile
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/LICENSE.txt
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/README.md
@@ -1577,6 +1579,10 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/docs/styles.css
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/authenticators.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/command_data.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_accessors.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_inheritance.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/config/attr_type_coercion.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/data_encoding.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/deprecated_client_options.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/errors.rb
@@ -1611,11 +1617,13 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/saslprep.
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/saslprep_tables.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/tables.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/trace.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/uidplus_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/benchmarks.rake
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/rdoc.rake
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/rfcs.rake
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/saslprep.rake
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/string_prep_tables_generator.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/sample/net-imap.rb
 ${GEM_HOME}/gems/net-pop-${RUBY_NET_POP_VER}/Gemfile
 ${GEM_HOME}/gems/net-pop-${RUBY_NET_POP_VER}/LICENSE.txt
 ${GEM_HOME}/gems/net-pop-${RUBY_NET_POP_VER}/README.md
@@ -1628,6 +1636,7 @@ ${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp.rb
 ${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp/auth_cram_md5.rb
 ${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp/auth_login.rb
 ${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp/auth_plain.rb
+${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp/auth_xoauth2.rb
 ${GEM_HOME}/gems/net-smtp-${RUBY_NET_SMTP_VER}/lib/net/smtp/authenticator.rb
 ${GEM_HOME}/gems/power_assert-${RUBY_POWER_ASSERT_VER}/BSDL
 ${GEM_HOME}/gems/power_assert-${RUBY_POWER_ASSERT_VER}/COPYING
