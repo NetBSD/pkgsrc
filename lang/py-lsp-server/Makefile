@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/02/23 16:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/13 19:05:17 wiz Exp $
 
 DISTNAME=	python_lsp_server-1.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-lsp/python-lsp-server
 COMMENT=	Implementation of the Language Server Protocol for Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-docstring-to-markdown-[0-9]*:../../textproc/py-docstring-to-markdown
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17.2:../../editors/py-jedi

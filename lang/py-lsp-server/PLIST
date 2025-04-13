@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/05 10:50:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/13 19:05:17 wiz Exp $
 bin/pylsp-${PYVERSSUFFIX}
 ${PYSITELIB}/pylsp/__init__.py
 ${PYSITELIB}/pylsp/__init__.pyc
@@ -114,9 +114,9 @@ ${PYSITELIB}/pylsp/uris.pyo
 ${PYSITELIB}/pylsp/workspace.py
 ${PYSITELIB}/pylsp/workspace.pyc
 ${PYSITELIB}/pylsp/workspace.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
