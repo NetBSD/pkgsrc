@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2615 2025/04/13 15:28:27 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2616 2025/04/13 15:52:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3430,3 +3430,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/senpai to 0.4.0 [pin 2025-04-13]
 	Updated devel/serie to 0.4.5 [pin 2025-04-13]
 	Updated audio/spotifyd to 0.4.1 [pin 2025-04-13]
+	Updated net/bind918 to 9.18.35 [taca 2025-04-13]
