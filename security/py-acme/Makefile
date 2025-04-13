@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2025/02/14 16:25:08 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/13 16:11:15 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	acme-${CERTBOT_VERSION}
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acme/}
 
 COMMENT=	ACME protocol implementation in Python
