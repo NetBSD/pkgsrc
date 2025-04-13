@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2607 2025/04/13 15:19:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2608 2025/04/13 15:21:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3422,3 +3422,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-docstring-to-markdown to 0.16 [wiz 2025-04-13]
 	Updated www/py-uwsgi to 2.0.29 [wiz 2025-04-13]
 	Updated devel/cargo-modules to 0.23.1 [pin 2025-04-13]
+	Updated devel/cargo-release to 0.25.18 [pin 2025-04-13]
