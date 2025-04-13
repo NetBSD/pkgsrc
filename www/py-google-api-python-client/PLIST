@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.39 2025/01/07 12:46:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2025/04/13 20:38:29 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
@@ -353,6 +353,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/looker.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/managedidentities.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/managedkafka.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/manufacturers.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/marketingplatformadmin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/meet.v2.json
@@ -401,6 +402,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkservices.v1beta1.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/notebooks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/notebooks.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oauth2.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/observability.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oracledatabase.v1.json
