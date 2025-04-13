@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2025/02/23 16:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/13 18:36:18 wiz Exp $
 
-DISTNAME=	khal-0.11.3
-PKGREVISION=	1
+DISTNAME=	khal-0.11.4
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -10,8 +9,8 @@ HOMEPAGE=	https://github.com/geier/khal
 COMMENT=	CLI calendar application built around CalDAV
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=3.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.2.0:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
@@ -19,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-icalendar>=6.0.0:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2018.7:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=1.0:../../time/py-tzlocal
-DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.0:../../devel/py-urwid
+DEPENDS+=	${PYPKGPREFIX}-urwid>=2.6.15:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # not needed, but recommended, so let's just depend on it
 DEPENDS+=	${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
