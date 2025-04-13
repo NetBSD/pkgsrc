@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/03/03 06:59:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/13 21:20:55 wiz Exp $
 
 DISTNAME=	webob-1.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webob/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://webob.org/
 COMMENT=	Python module providing WSGI request and response objects
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
