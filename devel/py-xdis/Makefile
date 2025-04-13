@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2024/12/25 21:59:39 adam Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/13 06:51:58 adam Exp $
 
 DISTNAME=	xdis-6.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/rocky/python-xdis
 COMMENT=	Python cross-version byte-code disassembler and marshal routines
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
