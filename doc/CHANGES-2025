@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2598 2025/04/13 08:14:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2599 2025/04/13 08:15:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3412,3 +3412,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-onionbalance to 0.2.3 [wiz 2025-04-13]
 	Updated security/py-cryptodome to 3.22.0 [wiz 2025-04-13]
 	Updated devel/p5-CPAN-Requirements-Dynamic to 0.002 [wiz 2025-04-13]
+	Updated devel/p5-Module-Runtime to 0.017 [wiz 2025-04-13]
