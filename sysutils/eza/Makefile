@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2025/03/14 20:59:36 pin Exp $
+# $NetBSD: Makefile,v 1.59 2025/04/13 15:21:44 pin Exp $
 
-DISTNAME=	eza-0.20.24
+DISTNAME=	eza-0.21.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eza-community/}
 DIST_SUBDIR=	${PKGBASE}
@@ -11,14 +11,11 @@ HOMEPAGE=	https://eza.rocks/
 COMMENT=	Modern, maintained replacement for ls
 LICENSE=	mit
 
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
-SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
-
-RUST_REQ=	1.78.0
+RUST_REQ=	1.81.0
 SUPERSEDES=	exa-[0-9]*
 
 DISTFILES=	${DEFAULT_DISTFILES} man-${PKGVERSION_NOREV}.tar.gz
-SITES.man-0.20.24.tar.gz=	https://github.com/eza-community/eza/releases/download/v${PKGVERSION_NOREV}/
+SITES.man-0.21.0.tar.gz=	https://github.com/eza-community/eza/releases/download/v${PKGVERSION_NOREV}/
 
 .include "cargo-depends.mk"
 
