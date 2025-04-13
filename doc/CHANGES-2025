@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2612 2025/04/13 15:25:01 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2613 2025/04/13 15:26:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3427,3 +3427,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/felix to 2.16.1 [pin 2025-04-13]
 	Updated sysutils/onefetch to 2.24.0 [pin 2025-04-13]
 	Updated sysutils/pueue to 4.0.0 [pin 2025-04-13]
+	Updated chat/senpai to 0.4.0 [pin 2025-04-13]
