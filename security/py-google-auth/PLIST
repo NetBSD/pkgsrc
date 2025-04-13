@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/09/22 16:12:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/04/13 16:08:12 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -214,8 +214,8 @@ ${PYSITELIB}/google/oauth2/webauthn_handler_factory.pyo
 ${PYSITELIB}/google/oauth2/webauthn_types.py
 ${PYSITELIB}/google/oauth2/webauthn_types.pyc
 ${PYSITELIB}/google/oauth2/webauthn_types.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

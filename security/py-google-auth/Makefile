@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2025/01/31 18:41:23 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/13 16:08:12 wiz Exp $
 
 DISTNAME=	google_auth-2.38.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/googleapis/google-auth-library-python
 COMMENT=	Google Authentication Library
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.2.1:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=2.0.0:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.4:../../security/py-rsa
