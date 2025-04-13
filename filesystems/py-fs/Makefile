@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/13 11:55:50 wiz Exp $
 
 DISTNAME=	fs-2.4.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	filesystems python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fs/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/PyFilesystem/pyfilesystem2
 COMMENT=	Python's filesystem abstraction layer
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.3:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyftpdlib-[0-9]*:../../net/py-pyftpdlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 # 24 failed, 2377 passed, 26 skipped, 43 warnings
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
