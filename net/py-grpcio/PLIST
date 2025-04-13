@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/11/02 12:46:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/13 12:25:15 wiz Exp $
 ${PYSITELIB}/grpc/__init__.py
 ${PYSITELIB}/grpc/__init__.pyc
 ${PYSITELIB}/grpc/__init__.pyo
@@ -169,8 +169,8 @@ ${PYSITELIB}/grpc/framework/interfaces/face/face.pyo
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.py
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyc
 ${PYSITELIB}/grpc/framework/interfaces/face/utilities.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
