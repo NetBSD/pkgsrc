@@ -1,0 +1,15 @@
+$NetBSD: patch-util_meson.build,v 1.1 2025/04/13 07:15:55 adam Exp $
+
+Disable help2man as it makes the build crash.
+
+--- util/meson.build.orig	2025-04-13 07:13:29.815506976 +0000
++++ util/meson.build
+@@ -18,7 +18,7 @@ hb_subset_cli_sources = [
+ # If found, invoke it on our four binaries to build man pages
+ # If not found, just skip this step
+ if not get_option('docs').disabled()
+-  help2man = find_program('help2man', required: false)
++  help2man = disabler()
+ else
+   help2man = disabler()
+ endif
