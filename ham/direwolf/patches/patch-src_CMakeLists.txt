@@ -1,0 +1,36 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/04/13 16:07:16 jmcneill Exp $
+
+Build and install cm108 utility on NetBSD.
+
+--- src/CMakeLists.txt.orig	2023-10-28 15:03:04.000000000 +0000
++++ src/CMakeLists.txt
+@@ -140,6 +140,12 @@ if(LINUX)
+     endif()
+ endif()
+ 
++if(NETBSD)
++  list(APPEND direwolf_SOURCES
++    cm108.c
++    )
++endif()
++
+ add_executable(direwolf
+   ${direwolf_SOURCES}
+   )
+@@ -472,7 +478,7 @@ endif()
+ # Version 1.7 adds it for Windows.  Needs hidapi library.
+ 
+ # cm108
+-if(UDEV_FOUND OR WIN32 OR CYGWIN)
++if(UDEV_FOUND OR WIN32 OR CYGWIN OR NETBSD)
+   list(APPEND cm108_SOURCES
+     cm108.c
+     textcolor.c
+@@ -568,6 +574,6 @@ install(TARGETS ttcalc DESTINATION ${INS
+ install(TARGETS kissutil DESTINATION ${INSTALL_BIN_DIR})
+ install(TARGETS tnctest DESTINATION ${INSTALL_BIN_DIR})
+ install(TARGETS appserver DESTINATION ${INSTALL_BIN_DIR})
+-if(UDEV_FOUND OR WIN32 OR CYGWIN)
++if(UDEV_FOUND OR WIN32 OR CYGWIN OR NETBSD)
+   install(TARGETS cm108 DESTINATION ${INSTALL_BIN_DIR})
+ endif()

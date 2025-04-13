@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/12 18:37:15 jmcneill Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/04/13 16:07:15 jmcneill Exp $
 
 Allow pkgsrc to override INSTALL_MAN_DIR.
 
@@ -23,17 +23,21 @@ Allow pkgsrc to override INSTALL_MAN_DIR.
  
  find_package(Git)
  if(GIT_FOUND AND EXISTS "${CMAKE_SOURCE_DIR}/.git/")
-@@ -177,6 +182,9 @@ elseif (WIN32)
+@@ -177,6 +182,13 @@ elseif (WIN32)
        set(CUSTOM_SHELL_BIN "")
      endif()
    endif()
 +elseif (PKGSRC)
 +  configure_file("${CMAKE_SOURCE_DIR}/cmake/cpack/${CMAKE_PROJECT_NAME}.desktop.in"
 +    "${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.desktop" @ONLY)
++endif()
++
++if(${CMAKE_SYSTEM_NAME} STREQUAL "NetBSD")
++  set(NETBSD TRUE)
  endif()
  
  if (C_CLANG OR C_GCC)
-@@ -254,7 +262,7 @@ else()
+@@ -254,7 +266,7 @@ else()
    set(INSTALL_DOC_DIR "share/doc/${CMAKE_PROJECT_NAME}")
    set(INSTALL_CONF_DIR "${INSTALL_DOC_DIR}/conf")
    set(INSTALL_SCRIPTS_DIR "${INSTALL_DOC_DIR}/scripts")
@@ -42,7 +46,18 @@ Allow pkgsrc to override INSTALL_MAN_DIR.
      set(INSTALL_MAN_DIR "man/man1")
    else()
      set(INSTALL_MAN_DIR "share/man/man1")
-@@ -395,7 +403,7 @@ add_subdirectory(doc)
+@@ -361,6 +373,10 @@ else()
+   set(SNDIO_LIBRARIES "")
+ endif()
+ 
++if(NETBSD)
++  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DUSE_CM108")
++endif()
++
+ # manage and fetch new data
+ add_subdirectory(data)
+ 
+@@ -395,7 +411,7 @@ add_subdirectory(doc)
  add_subdirectory(man)
  
  # install desktop link

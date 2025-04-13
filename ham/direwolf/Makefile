@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/04/12 18:37:15 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/13 16:07:15 jmcneill Exp $
 
 DISTNAME=	1.7
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wb2osz/}
 GITHUB_PROJECT=	direwolf
@@ -22,7 +23,13 @@ CMAKE_CONFIGURE_ARGS+=	-DPORTAUDIO_LIBRARIES=${BUILDLINK_DIR}/lib/portaudio2/lib
 WRKSRC=		${WRKDIR}/direwolf-1.7
 USE_LANGUAGES=	c c++
 
+.include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN} == "big"
+BROKEN=		"Software does not function correctly on big-endian hosts"
+.endif
+
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../ham/hamlib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
