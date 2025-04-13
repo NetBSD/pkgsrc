@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2024/12/29 21:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/13 12:41:01 wiz Exp $
 
 DISTNAME=	keyring-25.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/keyring
 COMMENT=	Store and access your passwords safely
 LICENSE=	python-software-foundation
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jaraco.classes>=0:../../devel/py-jaraco.classes
 DEPENDS+=	${PYPKGPREFIX}-jaraco.context>=0:../../devel/py-jaraco.context
