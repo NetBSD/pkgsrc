@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/03/06 08:04:13 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/13 12:41:53 wiz Exp $
 
 DISTNAME=	tzlocal-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzlocal/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/regebro/tzlocal
 COMMENT=	Python tzinfo object for the local timezone
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.3:../../devel/py-test-mock
 
