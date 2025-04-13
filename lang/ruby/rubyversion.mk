@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.293 2025/03/30 21:10:44 wiz Exp $
+# $NetBSD: rubyversion.mk,v 1.294 2025/04/13 16:05:55 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -215,7 +215,7 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 # current supported Ruby's version
 RUBY31_VERSION=		3.1.7
 RUBY32_VERSION=		3.2.8
-RUBY33_VERSION=		3.3.7
+RUBY33_VERSION=		3.3.8
 RUBY34_VERSION=		3.4.2
 
 # current API compatible version; used for version of shared library
@@ -472,7 +472,7 @@ RUBY_BASE64_VER=		0.2.0
 RUBY_BENCHMARK_VER=		0.3.0
 RUBY_BIGDECIMAL_VER=		3.1.5
 RUBY_BUNDLER_VER=		2.5.22
-RUBY_CGI_VER=			0.4.1
+RUBY_CGI_VER=			0.4.2
 RUBY_CSV_VER=			3.2.8
 RUBY_DATE_VER=			3.3.4
 RUBY_DELEGATE_VER=		0.3.1
@@ -533,7 +533,7 @@ RUBY_TIMEOUT_VER=		0.4.1
 RUBY_TMPDIR_VER=		0.2.0
 RUBY_TSORT_VER=			0.2.0
 RUBY_UN_VER=			0.3.0
-RUBY_URI_VER=			0.13.1
+RUBY_URI_VER=			0.13.2
 RUBY_WEAKREF_VER=		0.1.3
 RUBY_YAML_VER=			0.3.0
 RUBY_ZLIB_VER=			3.1.1
@@ -543,9 +543,9 @@ RUBY_DEBUG_VER=			1.9.2
 RUBY_MATRIX_VER=		0.4.2
 RUBY_MINITEST_VER=		5.20.0
 RUBY_NET_FTP_VER=		0.3.4
-RUBY_NET_IMAP_VER=		0.4.9.1
+RUBY_NET_IMAP_VER=		0.4.19
 RUBY_NET_POP_VER=		0.1.2
-RUBY_NET_SMTP_VER=		0.4.0.1
+RUBY_NET_SMTP_VER=		0.5.1
 RUBY_POWER_ASSERT_VER=		2.0.3
 RUBY_PRIME_VER=			0.1.2
 RUBY_RACC_VER=			1.7.3
