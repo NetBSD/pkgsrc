@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/05 07:22:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/04/13 08:14:24 wiz Exp $
 
-BLAKE2s (CPAN-Requirements-Dynamic-0.001.tar.gz) = 7ff87f031e1929b08ea7536be66267fbca7cfd59cc59c1111ef486186d55f3b2
-SHA512 (CPAN-Requirements-Dynamic-0.001.tar.gz) = d4aba77f52f47c7399164762285e5c42e5eb4ffc5e7c13cf993e8c45975e9e96ac5d6db25817ab88dfa7ba0acdd69109b47dcf193c7cffe890044cfc660a951a
-Size (CPAN-Requirements-Dynamic-0.001.tar.gz) = 13616 bytes
+BLAKE2s (CPAN-Requirements-Dynamic-0.002.tar.gz) = 564247a36e09c45a6c611fd1f847d84b68bfc91696773b7d92bc1e708dd4c9a6
+SHA512 (CPAN-Requirements-Dynamic-0.002.tar.gz) = 595b1e367eeeca94fd611f23f37217b8b46d50b829a6c4083c1350ecfb82d1adaf492e63dc5582feab310d67cfaf3f736b17b2eecafeb6c1d9bddeebe7205205
+Size (CPAN-Requirements-Dynamic-0.002.tar.gz) = 13070 bytes
