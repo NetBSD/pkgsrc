@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/04/13 22:54:49 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/04/13 23:01:07 nia Exp $
 
 BUILDLINK_TREE+=	openal-soft
 
@@ -26,8 +26,6 @@ OPENAL_USE_CXX?=	yes
 # GCC versions are being used to build the pkgsrc tree.
 .if ${OPSYS} == "NetBSD"
 .  if ${OPSYS_VERSION} < 090000
-OPENAL_USE_CXX?=	no
-.  elif ${OPSYS_VERSION} < 109911
 .    include "../../audio/openal-soft-cxx14/buildlink3.mk"
 .  endif
 .else
