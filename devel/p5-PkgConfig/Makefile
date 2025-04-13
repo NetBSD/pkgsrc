@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/04/13 08:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/13 09:18:02 pgoyette Exp $
+
+EXTRACT_USING=	gtar	# XXX Avoid extended attributes in dist file
 
 DISTNAME=		PkgConfig-0.26026
 PKGNAME=		p5-${DISTNAME}
