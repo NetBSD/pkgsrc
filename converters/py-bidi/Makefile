@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/01/05 15:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/13 07:38:16 adam Exp $
 
-DISTNAME=	python-bidi-0.4.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
-PKGREVISION=	2
+DISTNAME=	python_bidi-0.6.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-bidi/}
 
@@ -11,15 +10,14 @@ HOMEPAGE=	https://github.com/MeirKriheli/python-bidi
 COMMENT=	Pure Python implementation of the BiDi layout algorithm
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pybidi pybidi-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "cargo-depends.mk"
+
+.include "../../lang/python/wheel.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
