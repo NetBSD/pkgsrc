@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2024/10/30 14:45:20 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.10 2025/04/13 16:13:29 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/yarl/__init__.py
 ${PYSITELIB}/yarl/__init__.pyc
@@ -23,7 +23,6 @@ ${PYSITELIB}/yarl/_quoters.pyo
 ${PYSITELIB}/yarl/_quoting.py
 ${PYSITELIB}/yarl/_quoting.pyc
 ${PYSITELIB}/yarl/_quoting.pyo
-${PYSITELIB}/yarl/_quoting_c.pyi
 ${PYSITELIB}/yarl/_quoting_c.pyx
 ${PYSITELIB}/yarl/_quoting_c.so
 ${PYSITELIB}/yarl/_quoting_py.py
