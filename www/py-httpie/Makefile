@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2024/11/04 17:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/13 19:03:00 wiz Exp $
 
 DISTNAME=	httpie-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jakubroztocil/httpie
 COMMENT=	Human-friendly command line HTTP client
 LICENSE=	original-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2.0.0:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.6.0:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.7.0:../../databases/py-multidict
