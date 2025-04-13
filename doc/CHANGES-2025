@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2590 2025/04/12 21:18:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2591 2025/04/13 00:28:55 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3401,3 +3401,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tenacity to 9.1.2 [adam 2025-04-12]
 	Updated devel/py-test-asyncio to 0.26.0 [adam 2025-04-12]
 	Updated security/py-asn1-modules to 0.4.2 [adam 2025-04-12]
+	Updated textproc/py-markdown-math to 0.9 [gutteridge 2025-04-13]
