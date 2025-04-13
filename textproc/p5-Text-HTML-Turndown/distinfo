@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/04/10 23:45:43 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2025/04/13 21:05:33 schmonz Exp $
 
-BLAKE2s (Text-HTML-Turndown-0.05.tar.gz) = f3c457222dd3314f3984a28de78034e0bb1f521382e9c85c0c77eecab0f686b6
-SHA512 (Text-HTML-Turndown-0.05.tar.gz) = 8f68d30af19cd6fa88ffdc5afce9443859df44968421aac74621030d68faddac9e49b80eb2b2679c3416f1dbc9b1426465dd0899f3d8c397eed6456bf09d7a27
-Size (Text-HTML-Turndown-0.05.tar.gz) = 32536 bytes
+BLAKE2s (Text-HTML-Turndown-0.06.tar.gz) = 2d47e2bf708654dc2098a034e9daae4cfed8d82e1819b2c3a7eaa42f2a2462a1
+SHA512 (Text-HTML-Turndown-0.06.tar.gz) = 2019462ce3ef851200a0b0e443dc25b7c66b6df5aa0e86e094f25e2624c5aef404b80d8f37e3a5c36b5d35c982edaf8e8d7841c6ed31fdb1f03864ca441271e7
+Size (Text-HTML-Turndown-0.06.tar.gz) = 32741 bytes
