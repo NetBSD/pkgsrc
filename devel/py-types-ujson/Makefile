@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/13 07:11:30 adam Exp $
 
-DISTNAME=	types-ujson-5.10.0.20240515
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	types_ujson-5.10.0.20250326
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-ujson/}
 
@@ -10,11 +10,9 @@ HOMEPAGE=	https://github.com/python/typeshed
 COMMENT=	Typing stubs for ujson
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
