@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.12 2024/05/05 20:49:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/13 06:51:59 adam Exp $
 bin/zconfig-${PYVERSSUFFIX}
 bin/zconfig_schema2html-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ZConfig/__init__.py
 ${PYSITELIB}/ZConfig/__init__.pyc

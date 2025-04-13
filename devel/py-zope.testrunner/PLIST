@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/13 12:12:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/13 06:52:00 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/zope.testrunner-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth

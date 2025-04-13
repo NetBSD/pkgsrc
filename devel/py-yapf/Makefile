@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/11/14 18:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/13 06:51:59 adam Exp $
 
 DISTNAME=	yapf-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yapf/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/google/yapf
 COMMENT=	Python files formatter
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=58.5.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.1:../../misc/py-platformdirs
 
 USE_LANGUAGES=	# none
