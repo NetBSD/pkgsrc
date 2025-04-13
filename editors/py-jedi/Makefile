@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/11/11 17:00:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/13 08:39:31 adam Exp $
 
 DISTNAME=	jedi-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jedi/}
 
@@ -12,7 +13,7 @@ LICENSE=	mit
 
 EXTRACT_USING=	bsdtar
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-parso>=0.8.4:../../lang/py-parso
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
