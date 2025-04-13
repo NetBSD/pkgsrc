@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2025/02/25 13:06:50 adam Exp $
+# $NetBSD: Makefile,v 1.85 2025/04/13 18:59:47 wiz Exp $
 
-DISTNAME=	aiohttp-3.11.13
+DISTNAME=	aiohttp-3.11.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -11,7 +11,7 @@ COMMENT=	Async http client/server framework
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.3.0:../../net/py-aiohappyeyeballs
 DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.1.2:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
@@ -34,8 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.0:../../devel/py-async-timeout
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)
-# leads to, as of 3.10.9:
-# 4 failed, 3204 passed, 30 skipped, 6 deselected, 25 xfailed, 37 errors
+# leads to, as of 3.11.16
+# 3 failed, 3152 passed, 29 skipped, 22 xfailed, 48 errors
 pre-test:
 	cd ${WRKSRC} && ${RM} -f tests/test_proxy_functional.py tests/autobahn/test_autobahn.py
 
