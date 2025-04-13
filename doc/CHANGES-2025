@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2623 2025/04/13 18:59:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2624 2025/04/13 20:38:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3439,3 +3439,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added emulators/ppsspp version 1.18.1 [nia 2025-04-13]
 	Updated time/khal to 0.11.4 [wiz 2025-04-13]
 	Updated www/py-aiohttp to 3.11.16 [wiz 2025-04-13]
+	Updated www/py-google-api-python-client to 2.166.0 [wiz 2025-04-13]
