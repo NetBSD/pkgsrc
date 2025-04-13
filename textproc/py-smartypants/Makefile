@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/05/03 20:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/13 10:58:34 wiz Exp $
 
 DISTNAME=	smartypants-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 # source tarball missing on pypi
 #MASTER_SITES=	${MASTER_SITE_PYPI:=s/smartypants/}
@@ -15,11 +15,17 @@ HOMEPAGE=	https://github.com/leohemsted/smartypants.py
 COMMENT=	Python with the SmartyPants
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
+
 USE_LANGUAGES=	# none
+
+# as of 2.0.1
+# 4 failed, 1 passed
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} smartypants smartypants-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
