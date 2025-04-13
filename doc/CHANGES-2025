@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2618 2025/04/13 16:06:10 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2619 2025/04/13 16:13:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3433,3 +3433,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/bind918 to 9.18.35 [taca 2025-04-13]
 	Updated lang/php83 to 8.3.20 [taca 2025-04-13]
 	Updated lang/ruby33 to 3.3.8 [taca 2025-04-13]
+	Updated www/py-yarl to 1.19.0 [wiz 2025-04-13]
