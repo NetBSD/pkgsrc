@@ -1,4 +1,4 @@
-$NetBSD: patch-khal_icalendar.py,v 1.1 2024/10/31 13:35:05 leot Exp $
+$NetBSD: patch-khal_icalendar.py,v 1.2 2025/04/13 18:36:18 wiz Exp $
 
 Make it compatible with icalendar>=6.0.0.
 
@@ -6,7 +6,7 @@ Shared upstream via:
 
  <https://github.com/pimutils/khal/pull/1364>
 
---- khal/icalendar.py.orig	2024-10-31 13:32:32.407885997 +0000
+--- khal/icalendar.py.orig	2025-04-10 21:43:33.000000000 +0000
 +++ khal/icalendar.py
 @@ -37,6 +37,10 @@ from .utils import generate_random_uid, 
  
@@ -17,9 +17,9 @@ Shared upstream via:
 +icalendar.use_pytz()
 +
  
- def split_ics(ics: str, random_uid: bool=False, default_timezone=None):
+ def split_ics(ics: str, random_uid: bool=False, default_timezone=None) -> List:
      """split an ics string into several according to VEVENT's UIDs
-@@ -56,8 +60,8 @@ def split_ics(ics: str, random_uid: bool
+@@ -55,8 +59,8 @@ def split_ics(ics: str, random_uid: bool
          # Standard Time' for 'Pacific/Auckland' in Olson format), we convert any
          # Windows format timezones to Olson.
          if item.name == 'VTIMEZONE':
