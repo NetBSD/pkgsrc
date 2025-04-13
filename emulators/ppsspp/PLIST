@@ -1,5 +1,16 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/13 16:19:30 nia Exp $
-lib/libretro/ppsspp_libretro.${SOEXT}
+@comment $NetBSD: PLIST,v 1.1 2025/04/13 16:19:29 nia Exp $
+bin/PPSSPPSDL
+share/applications/PPSSPPSDL.desktop
+share/icons/hicolor/128x128/apps/ppsspp.png
+share/icons/hicolor/16x16/apps/ppsspp.png
+share/icons/hicolor/24x24/apps/ppsspp.png
+share/icons/hicolor/256x256/apps/ppsspp.png
+share/icons/hicolor/32x32/apps/ppsspp.png
+share/icons/hicolor/48x48/apps/ppsspp.png
+share/icons/hicolor/512x512/apps/ppsspp.png
+share/icons/hicolor/64x64/apps/ppsspp.png
+share/icons/hicolor/96x96/apps/ppsspp.png
+share/icons/hicolor/scalable/apps/ppsspp.svg
 share/mime/packages/ppsspp.xml
 share/ppsspp/assets/7z.png
 share/ppsspp/assets/Roboto-Condensed.ttf
