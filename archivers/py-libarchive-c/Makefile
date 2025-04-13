@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/03/14 15:23:33 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/13 08:06:23 adam Exp $
 
 DISTNAME=	libarchive_c-5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Changaco/python-libarchive-c
 COMMENT=	Python interface to libarchive
 LICENSE=	cc0-1.0-universal
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
