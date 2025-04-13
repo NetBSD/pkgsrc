@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 07:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/13 18:29:16 wiz Exp $
 
 DISTNAME=	watchdog-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchdog/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/gorakhargosh/watchdog
 COMMENT=	Filesystem events monitoring
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # watchmedo
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
