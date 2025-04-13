@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2024/11/11 07:29:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/13 08:33:26 adam Exp $
 
 DISTNAME=	terminator-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnome-terminator/}
 GITHUB_PROJECT=	terminator
@@ -12,7 +13,7 @@ HOMEPAGE=	https://github.com/gnome-terminator/terminator
 COMMENT=	Terminator, multiple terminals in one window
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
@@ -33,8 +34,6 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 2.1.4
 # 6 warnings, 46 errors
