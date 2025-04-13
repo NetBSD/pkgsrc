@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.24 2024/10/20 20:05:35 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.25 2025/04/13 08:51:00 wiz Exp $
+${PYSITELIB}/PIL/AvifImagePlugin.py
+${PYSITELIB}/PIL/AvifImagePlugin.pyc
+${PYSITELIB}/PIL/AvifImagePlugin.pyo
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -266,6 +263,7 @@ ${PYSITELIB}/PIL/__init__.pyo
 ${PYSITELIB}/PIL/__main__.py
 ${PYSITELIB}/PIL/__main__.pyc
 ${PYSITELIB}/PIL/__main__.pyo
+${PYSITELIB}/PIL/_avif.pyi
 ${PYSITELIB}/PIL/_binary.py
 ${PYSITELIB}/PIL/_binary.pyc
 ${PYSITELIB}/PIL/_binary.pyo
@@ -305,3 +303,9 @@ ${PYSITELIB}/PIL/py.typed
 ${PYSITELIB}/PIL/report.py
 ${PYSITELIB}/PIL/report.pyc
 ${PYSITELIB}/PIL/report.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
