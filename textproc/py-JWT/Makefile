@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2025/03/03 06:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/13 12:20:51 wiz Exp $
 
 DISTNAME=	pyjwt-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyjwt/JWT/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/jpadilla/pyjwt
 COMMENT=	JSON Web Token implementation in Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
