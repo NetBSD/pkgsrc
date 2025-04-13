@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2591 2025/04/13 00:28:55 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2592 2025/04/13 06:38:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3402,3 +3402,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-asyncio to 0.26.0 [adam 2025-04-12]
 	Updated security/py-asn1-modules to 0.4.2 [adam 2025-04-12]
 	Updated textproc/py-markdown-math to 0.9 [gutteridge 2025-04-13]
+	Updated sysutils/py-fsspec to 2025.3.2 [adam 2025-04-13]
+	Updated lang/py-pyformlang to 1.0.11 [adam 2025-04-13]
