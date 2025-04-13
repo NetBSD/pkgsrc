@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2025/03/02 20:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2025/04/13 20:38:29 wiz Exp $
 
-DISTNAME=	google_api_python_client-2.162.0
+DISTNAME=	google_api_python_client-2.166.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/googleapis/google-api-python-client
 COMMENT=	Python client library for Google's discovery based APIs
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-api-core>=2.3.1:../../devel/py-google-api-core
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.19.0:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2>=0.1.0:../../security/py-google-auth-httplib2
