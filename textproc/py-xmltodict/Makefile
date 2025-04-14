@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 13:00:59 adam Exp $
 
 DISTNAME=	xmltodict-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmltodict/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/martinblech/xmltodict
 COMMENT=	Simplified XML parser library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
