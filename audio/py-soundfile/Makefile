@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/02/12 06:44:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/14 06:04:54 adam Exp $
 
 DISTNAME=	soundfile-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soundfile/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/bastibe/python-soundfile
 COMMENT=	Audio library based on libsndfile, CFFI and NumPy
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 

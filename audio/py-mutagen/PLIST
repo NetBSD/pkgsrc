@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.17 2024/10/20 08:17:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/04/14 06:04:54 adam Exp $
 bin/mid3cp
 bin/mid3iconv
 bin/mid3v2
 bin/moggsplit
 bin/mutagen-inspect
 bin/mutagen-pony
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
