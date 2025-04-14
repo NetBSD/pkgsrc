@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2025/01/29 12:14:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/14 13:00:59 adam Exp $
 bin/vba_extract.py
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xlsxwriter/__init__.py
 ${PYSITELIB}/xlsxwriter/__init__.pyc

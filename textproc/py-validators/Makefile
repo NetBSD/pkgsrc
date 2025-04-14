@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/11/11 07:29:10 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/04/14 13:00:58 adam Exp $
 
 DISTNAME=	validators-0.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/validators/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/kvesteri/validators
 COMMENT=	Python data validation for humans
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-eth-hash>=0.7.0:../../finance/py-eth-hash
 
 USE_LANGUAGES=	# none
