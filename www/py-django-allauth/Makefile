@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/02/07 15:07:59 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/14 18:37:05 adam Exp $
 
-DISTNAME=	django_allauth-65.4.1
+DISTNAME=	django_allauth-65.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-allauth/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pennersr/django-allauth
 COMMENT=	Authentication, registration, account mgmt and 3rd party account auth
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.8.1:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2.16:../../www/py-django
 # openid
