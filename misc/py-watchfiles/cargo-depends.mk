@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2025/01/12 07:44:49 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2025/04/14 08:18:58 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
@@ -26,17 +26,17 @@ CARGO_CRATE_DEPENDS+=	notify-types-1.0.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.81
-CARGO_CRATE_DEPENDS+=	pyo3-0.23.3
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.3
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.3
-CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.11
+CARGO_CRATE_DEPENDS+=	pyo3-0.24.1
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.24.1
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.24.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.24.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.24.1
+CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.13
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.3
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	syn-2.0.60
-CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.14
+CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
