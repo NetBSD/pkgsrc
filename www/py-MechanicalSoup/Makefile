@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/03/05 10:36:41 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/14 19:31:54 adam Exp $
 
 DISTNAME=	MechanicalSoup-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/hickford/MechanicalSoup
 COMMENT=	Library for automating interaction with websites
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.7:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests

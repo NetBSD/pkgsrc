@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/14 19:31:53 adam Exp $
 
 DISTNAME=	klein-24.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/klein/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://klein.readthedocs.io/en/latest/
 COMMENT=	Micro-framework for developing web services
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-hyperlink-[0-9]*:../../www/py-hyperlink
 DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
