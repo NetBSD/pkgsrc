@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.20 2025/04/02 11:37:12 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.21 2025/04/14 13:55:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	anstream-0.6.18
@@ -13,16 +13,16 @@ CARGO_CRATE_DEPENDS+=	blocking-threadpool-1.0.1
 CARGO_CRATE_DEPENDS+=	bstr-1.10.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.17.0
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-4.5.34
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.34
+CARGO_CRATE_DEPENDS+=	clap-4.5.35
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.35
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.32
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.3
 CARGO_CRATE_DEPENDS+=	console-0.15.11
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.14
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
-CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.20
+CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.21
 CARGO_CRATE_DEPENDS+=	deranged-0.3.11
 CARGO_CRATE_DEPENDS+=	encode_unicode-1.0.0
 CARGO_CRATE_DEPENDS+=	errno-0.3.10
@@ -42,7 +42,7 @@ CARGO_CRATE_DEPENDS+=	js-sys-0.3.72
 CARGO_CRATE_DEPENDS+=	lazy_static-0.2.11
 CARGO_CRATE_DEPENDS+=	libc-0.2.171
 CARGO_CRATE_DEPENDS+=	libm-0.2.11
-CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.9.3
+CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.9.4
 CARGO_CRATE_DEPENDS+=	log-0.4.27
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
 CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
@@ -65,7 +65,7 @@ CARGO_CRATE_DEPENDS+=	rand_xorshift-0.4.0
 CARGO_CRATE_DEPENDS+=	regex-1.11.1
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.8
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
-CARGO_CRATE_DEPENDS+=	rustix-1.0.3
+CARGO_CRATE_DEPENDS+=	rustix-1.0.5
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.20
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
