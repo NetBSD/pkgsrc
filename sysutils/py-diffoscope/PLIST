@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2024/04/12 19:28:40 nikita Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/14 07:57:34 adam Exp $
 bin/diffoscope-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/diffoscope/__init__.py
 ${PYSITELIB}/diffoscope/__init__.pyc
@@ -12,9 +12,6 @@ ${PYSITELIB}/diffoscope/__init__.pyo
 ${PYSITELIB}/diffoscope/changes.py
 ${PYSITELIB}/diffoscope/changes.pyc
 ${PYSITELIB}/diffoscope/changes.pyo
-${PYSITELIB}/diffoscope/comparators/sevenz.py
-${PYSITELIB}/diffoscope/comparators/sevenz.pyc
-${PYSITELIB}/diffoscope/comparators/sevenz.pyo
 ${PYSITELIB}/diffoscope/comparators/__init__.py
 ${PYSITELIB}/diffoscope/comparators/__init__.pyc
 ${PYSITELIB}/diffoscope/comparators/__init__.pyo
@@ -30,6 +27,9 @@ ${PYSITELIB}/diffoscope/comparators/ar.pyo
 ${PYSITELIB}/diffoscope/comparators/arsc.py
 ${PYSITELIB}/diffoscope/comparators/arsc.pyc
 ${PYSITELIB}/diffoscope/comparators/arsc.pyo
+${PYSITELIB}/diffoscope/comparators/asar.py
+${PYSITELIB}/diffoscope/comparators/asar.pyc
+${PYSITELIB}/diffoscope/comparators/asar.pyo
 ${PYSITELIB}/diffoscope/comparators/berkeley_db.py
 ${PYSITELIB}/diffoscope/comparators/berkeley_db.pyc
 ${PYSITELIB}/diffoscope/comparators/berkeley_db.pyo
@@ -210,6 +210,9 @@ ${PYSITELIB}/diffoscope/comparators/rpm_fallback.pyo
 ${PYSITELIB}/diffoscope/comparators/rust.py
 ${PYSITELIB}/diffoscope/comparators/rust.pyc
 ${PYSITELIB}/diffoscope/comparators/rust.pyo
+${PYSITELIB}/diffoscope/comparators/sevenz.py
+${PYSITELIB}/diffoscope/comparators/sevenz.pyc
+${PYSITELIB}/diffoscope/comparators/sevenz.pyo
 ${PYSITELIB}/diffoscope/comparators/socket_or_fifo.py
 ${PYSITELIB}/diffoscope/comparators/socket_or_fifo.pyc
 ${PYSITELIB}/diffoscope/comparators/socket_or_fifo.pyo
@@ -234,6 +237,9 @@ ${PYSITELIB}/diffoscope/comparators/text.pyo
 ${PYSITELIB}/diffoscope/comparators/uimage.py
 ${PYSITELIB}/diffoscope/comparators/uimage.pyc
 ${PYSITELIB}/diffoscope/comparators/uimage.pyo
+${PYSITELIB}/diffoscope/comparators/uki.py
+${PYSITELIB}/diffoscope/comparators/uki.pyc
+${PYSITELIB}/diffoscope/comparators/uki.pyo
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.py
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.pyc
 ${PYSITELIB}/diffoscope/comparators/utils/__init__.pyo
