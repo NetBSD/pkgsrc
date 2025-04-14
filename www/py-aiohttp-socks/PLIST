@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2024/12/25 10:02:36 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+@comment $NetBSD: PLIST,v 1.8 2025/04/14 13:14:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/aiohttp_socks/__init__.py
 ${PYSITELIB}/aiohttp_socks/__init__.pyc
