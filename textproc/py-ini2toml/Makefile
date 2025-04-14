@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 12:14:59 adam Exp $
 
 DISTNAME=	ini2toml-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ini2toml/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/abravalheri/ini2toml
 COMMENT=	Automatically conversion of .ini/.cfg files to TOML equivalents
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=59.6:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.7:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-configupdater>=3.0.1:../../devel/py-configupdater
@@ -23,8 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.0:../../textproc/py-tomlkit
 TEST_DEPENDS+=	${PYPKGPREFIX}-validate-pyproject>=0.6:../../textproc/py-validate-pyproject
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
