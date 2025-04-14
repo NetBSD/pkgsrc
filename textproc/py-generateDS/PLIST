@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/06 09:40:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/14 12:06:25 adam Exp $
 bin/collect_namespace_mappings
 bin/gds_collect_namespace_mappings.py
 bin/gends_extract_simple_types
@@ -13,11 +13,11 @@ bin/generateds_gui
 bin/generateds_gui.py
 bin/process_includes
 bin/process_includes.py
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/libgenerateDS/__init__.py
 ${PYSITELIB}/libgenerateDS/__init__.pyc

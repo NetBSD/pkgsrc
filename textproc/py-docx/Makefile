@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:02 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/14 12:06:24 adam Exp $
 
 DISTNAME=	python_docx-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-docx/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-openxml/python-docx
 COMMENT=	Python library for Microsoft Word (.docx) files
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.1.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-behave>=1.2.3:../../devel/py-behave
@@ -19,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-ruff-[0-9]*:../../devel/py-ruff
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
