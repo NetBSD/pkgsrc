@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 11:33:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/14 20:41:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -31,9 +31,21 @@ ${PYSITELIB}/limits/aio/storage/memory.pyo
 ${PYSITELIB}/limits/aio/storage/mongodb.py
 ${PYSITELIB}/limits/aio/storage/mongodb.pyc
 ${PYSITELIB}/limits/aio/storage/mongodb.pyo
-${PYSITELIB}/limits/aio/storage/redis.py
-${PYSITELIB}/limits/aio/storage/redis.pyc
-${PYSITELIB}/limits/aio/storage/redis.pyo
+${PYSITELIB}/limits/aio/storage/redis/__init__.py
+${PYSITELIB}/limits/aio/storage/redis/__init__.pyc
+${PYSITELIB}/limits/aio/storage/redis/__init__.pyo
+${PYSITELIB}/limits/aio/storage/redis/bridge.py
+${PYSITELIB}/limits/aio/storage/redis/bridge.pyc
+${PYSITELIB}/limits/aio/storage/redis/bridge.pyo
+${PYSITELIB}/limits/aio/storage/redis/coredis.py
+${PYSITELIB}/limits/aio/storage/redis/coredis.pyc
+${PYSITELIB}/limits/aio/storage/redis/coredis.pyo
+${PYSITELIB}/limits/aio/storage/redis/redispy.py
+${PYSITELIB}/limits/aio/storage/redis/redispy.pyc
+${PYSITELIB}/limits/aio/storage/redis/redispy.pyo
+${PYSITELIB}/limits/aio/storage/redis/valkey.py
+${PYSITELIB}/limits/aio/storage/redis/valkey.pyc
+${PYSITELIB}/limits/aio/storage/redis/valkey.pyo
 ${PYSITELIB}/limits/aio/strategies.py
 ${PYSITELIB}/limits/aio/strategies.pyc
 ${PYSITELIB}/limits/aio/strategies.pyo
@@ -45,9 +57,11 @@ ${PYSITELIB}/limits/limits.pyc
 ${PYSITELIB}/limits/limits.pyo
 ${PYSITELIB}/limits/py.typed
 ${PYSITELIB}/limits/resources/redis/lua_scripts/acquire_moving_window.lua
+${PYSITELIB}/limits/resources/redis/lua_scripts/acquire_sliding_window.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/clear_keys.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/incr_expire.lua
 ${PYSITELIB}/limits/resources/redis/lua_scripts/moving_window.lua
+${PYSITELIB}/limits/resources/redis/lua_scripts/sliding_window.lua
 ${PYSITELIB}/limits/storage/__init__.py
 ${PYSITELIB}/limits/storage/__init__.pyc
 ${PYSITELIB}/limits/storage/__init__.pyo
