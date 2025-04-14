@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2024/11/24 20:00:42 adam Exp $
+$NetBSD: distinfo,v 1.25 2025/04/14 13:16:13 adam Exp $
 
-BLAKE2s (channels-4.2.0.tar.gz) = a54de7b79328a441e8f44364f1a43e47655dce3a94c34131d7f7b9b7b2b40bb1
-SHA512 (channels-4.2.0.tar.gz) = 800a0c0330e87770e1277661be8071a674d4fa04f10663c91cbfefaab58725be73ce045ea5523d09a72e1bfd9356d061c1e27bc5d081d58649130798b89b4c80
-Size (channels-4.2.0.tar.gz) = 26554 bytes
+BLAKE2s (channels-4.2.2.tar.gz) = 72084755a9b80eae02c91e9a06a97dabeacd9d8a45ab35a143ebc4d00c60b680
+SHA512 (channels-4.2.2.tar.gz) = 6c33dca60060c5e61f95c9d4579eb444739d534e59589a0d7ee1f1ccdf2b71c950337b77345fd741f04a0e91af175be6bb21c80c9ce1b1a845c4559289435641
+Size (channels-4.2.2.tar.gz) = 26647 bytes
