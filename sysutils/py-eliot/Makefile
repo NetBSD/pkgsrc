@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2024/12/10 12:06:14 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/14 08:00:36 adam Exp $
 
-DISTNAME=	eliot-1.16.0
+DISTNAME=	eliot-1.17.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
-#MASTER_SITES+=	${MASTER_SITE_PYPI:=e/eliot/}
-MASTER_SITES+=	${MASTER_SITE_GITHUB:=itamarst/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
-GITHUB_PROJECT=	eliot
+MASTER_SITES+=	${MASTER_SITE_PYPI:=e/eliot/}
+#MASTER_SITES+=	${MASTER_SITE_GITHUB:=itamarst/}
+#GITHUB_TAG=	${PKGVERSION_NOREV}
+#GITHUB_PROJECT=	eliot
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/itamarst/eliot
 COMMENT=	Logging library that tells you why it happened
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-boltons>=19.0.1:../../devel/py-boltons
 DEPENDS+=	${PYPKGPREFIX}-orjson-[0-9]*:../../textproc/py-orjson
 DEPENDS+=	${PYPKGPREFIX}-pyrsistent>=0.11.8:../../devel/py-pyrsistent
