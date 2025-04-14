@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/03/05 10:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 20:28:04 adam Exp $
 
 DISTNAME=	WSGIProxy2-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WSGIProxy2/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/gawel/WSGIProxy2
 COMMENT=	WSGI Proxy with various http client backends
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 # circular dependency

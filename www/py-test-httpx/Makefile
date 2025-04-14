@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2024/11/28 19:52:45 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/14 20:28:03 adam Exp $
 
 DISTNAME=	pytest_httpx-0.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpx/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://colin-b.github.io/pytest_httpx/
 COMMENT=	Send responses to httpx
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.28:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-test>=8.0:../../devel/py-test
