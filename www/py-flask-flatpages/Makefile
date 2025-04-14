@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/03/05 10:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/14 18:56:06 adam Exp $
 
 DISTNAME=	flask_flatpages-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-FlatPages/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/SimonSapin/Flask-FlatPages
 COMMENT=	Provides flat static pages to a Flask application
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flask>1.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=2.5:../../textproc/py-markdown

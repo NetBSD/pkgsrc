@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/20 10:24:33 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.6 2025/04/14 18:56:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_flatpages/__init__.py
 ${PYSITELIB}/flask_flatpages/__init__.pyc

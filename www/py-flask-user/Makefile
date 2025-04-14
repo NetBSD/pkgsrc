@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/03/08 13:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/14 18:56:07 adam Exp $
 
 DISTNAME=	Flask-User-1.0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-User/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/lingthio/Flask-User
 COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.9:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2:../../www/py-flask-login
 DEPENDS+=	${PYPKGPREFIX}-flask-mail>=0.9:../../www/py-flask-mail
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-flask-sqlalchemy>=1.0:../../www/py-flask-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=0.9:../../www/py-flask-wtf
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7:../../security/py-passlib
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=	# none
 
 WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 
