@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/14 13:00:59 adam Exp $
 
 DISTNAME=	xmldiff-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmldiff/}
 
@@ -10,12 +11,10 @@ HOMEPAGE=	https://github.com/Shoobx/xmldiff
 COMMENT=	Creates diffs of XML files
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.1.0:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in xmldiff xmlpatch
