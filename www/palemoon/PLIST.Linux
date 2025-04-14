@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2025/02/21 12:29:11 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2025/04/14 18:12:49 nia Exp $
 lib/${PKGNAME}/libfreeblpriv3.so
