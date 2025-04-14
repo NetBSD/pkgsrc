@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/03 17:11:34 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/04/14 12:30:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jsonpickle/__init__.py
 ${PYSITELIB}/jsonpickle/__init__.pyc
@@ -37,6 +37,9 @@ ${PYSITELIB}/jsonpickle/pickler.pyo
 ${PYSITELIB}/jsonpickle/tags.py
 ${PYSITELIB}/jsonpickle/tags.pyc
 ${PYSITELIB}/jsonpickle/tags.pyo
+${PYSITELIB}/jsonpickle/tags_pd.py
+${PYSITELIB}/jsonpickle/tags_pd.pyc
+${PYSITELIB}/jsonpickle/tags_pd.pyo
 ${PYSITELIB}/jsonpickle/unpickler.py
 ${PYSITELIB}/jsonpickle/unpickler.pyc
 ${PYSITELIB}/jsonpickle/unpickler.pyo
