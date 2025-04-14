@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/03/15 19:33:33 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/04/14 12:02:36 adam Exp $
 
-BLAKE2s (deepdiff-8.3.0.tar.gz) = a48a0d817aa296bf798968f7b82bbef31c8679050649cdc6e81977778adabe81
-SHA512 (deepdiff-8.3.0.tar.gz) = 5327a738d182a9e546d5a827d3a5d1e04323e7765d49f9f7d51dc20c8fc13869bb16b84ee193c478f43bb47901e16cc6ec45c890967de061a839a33d636040eb
-Size (deepdiff-8.3.0.tar.gz) = 509468 bytes
+BLAKE2s (deepdiff-8.4.2.tar.gz) = c2e926ccc991da4997eba466fda9aefce6ce78f1836c81b320ce798e9f263ebe
+SHA512 (deepdiff-8.4.2.tar.gz) = ec0b495afb57bbaf7b4785dda5367a1f87e5940afb801e2e71aa478562cda597005780bf2733b2e913dce5932996fdb548203922b4b6613e3daed751aa89d885
+Size (deepdiff-8.4.2.tar.gz) = 515380 bytes
