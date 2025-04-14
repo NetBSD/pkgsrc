@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2636 2025/04/14 11:25:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2637 2025/04/14 11:48:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3460,3 +3460,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.40 [adam 2025-04-14]
 	Updated databases/py-dbf to 0.99.10 [adam 2025-04-14]
 	Updated databases/py-alembic to 1.15.2 [adam 2025-04-14]
+	Updated textproc/py-Tempita to 0.6.0 [adam 2025-04-14]
+	Updated databases/py-elastic-transport to 8.17.1 [adam 2025-04-14]
