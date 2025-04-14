@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2632 2025/04/14 08:00:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2633 2025/04/14 08:19:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3452,3 +3452,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-lint to 25.2.1 [adam 2025-04-14]
 	Updated sysutils/py-diffoscope to 294 [adam 2025-04-14]
 	Updated sysutils/py-eliot to 1.17.5 [adam 2025-04-14]
+	Updated sysutils/py-Glances to 4.3.1 [adam 2025-04-14]
+	Updated misc/py-watchfiles to 1.0.5 [adam 2025-04-14]
