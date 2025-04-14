@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/14 19:12:54 adam Exp $
 
 DISTNAME=	http_ece-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,9 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
