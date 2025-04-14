@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/04/19 04:29:08 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/04/14 12:30:38 adam Exp $
 
-BLAKE2s (jsonpickle-3.0.4.tar.gz) = 2e0e4d7bda6d5a46640848e9d93fd5031040d32ab90b424cfa555ccdb0e9784b
-SHA512 (jsonpickle-3.0.4.tar.gz) = d4696faa12e6653a9d6dd4447f6c3d0a0f9d1fde05824f52589ce6fb8a0cdfeecfbb748f69d56f84105e56f912cc8d5e4e432f33c1a0ad6681b11e0f0df1bf63
-Size (jsonpickle-3.0.4.tar.gz) = 265054 bytes
+BLAKE2s (jsonpickle-4.0.5.tar.gz) = 75ad7b2605c5852c7c3c2aeb9be6e3246b3f77d490b1bcad5b757acf7d65eb63
+SHA512 (jsonpickle-4.0.5.tar.gz) = 407bf10221fcd1128625bd9c275b7ce4668176ac6b37fb9c11df3135fe504712bfb2616f7f6530d3f1bbe9c691ac731c7ab15704fc95100351254c3d5d768c3c
+Size (jsonpickle-4.0.5.tar.gz) = 315661 bytes
