@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2024/05/04 23:52:06 jym Exp $
+$NetBSD: distinfo,v 1.5 2025/04/14 09:32:31 adam Exp $
 
-BLAKE2s (dkimpy-1.1.6.tar.gz) = 70fa5797b71ca5f5c421bbeb8ce0703302b267b77a155c1e1d692977cb52b6e3
-SHA512 (dkimpy-1.1.6.tar.gz) = d61331cc7baa3bd5156d919a4a88ad792ac3c3077381585f8b5aa1a35dc50761b86286312e13f3514496ab50bdc6f2dac469f4b5419b49053c1c9204d569d317
-Size (dkimpy-1.1.6.tar.gz) = 66557 bytes
+BLAKE2s (dkimpy-1.1.8.tar.gz) = ad6420bf9025dc2b1210d69ede99bf3536c8b067b180b7a5334496d0b032621b
+SHA512 (dkimpy-1.1.8.tar.gz) = c8a53c01ab329e40ac66c1c77e40f104871fb9f52058a530d08b26599c20cd960f0f4b6a1e4be8e173332634ed0b10e0bf0711285a8eefa40ec5cfdbed74e12e
+Size (dkimpy-1.1.8.tar.gz) = 66979 bytes
 SHA1 (patch-setup.py) = 9515270a101c71e9adce4ced196b32f3cf8a23dc
