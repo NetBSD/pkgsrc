@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/14 11:31:11 adam Exp $
 
 DISTNAME=	dsinternals-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dsinternals/}
 
@@ -10,13 +11,11 @@ HOMEPAGE=	https://github.com/p0dalirius/pydsinternals
 COMMENT=	Directory Services Internals Library
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		crypto
 SUBST_STAGE.crypto=	pre-configure
