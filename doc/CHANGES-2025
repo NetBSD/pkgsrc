@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2654 2025/04/14 16:40:56 he Exp $
+$NetBSD: CHANGES-2025,v 1.2655 2025/04/14 17:37:27 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3486,3 +3486,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/seamonkey-l10n to 2.53.20 [nia 2025-04-14]
 	Updated www/seamonkey to 2.53.20 [nia 2025-04-14]
 	Updated lang/tcl to 8.6.16nb1 [he 2025-04-14]
+	Updated net/py-aiodns to 3.2.0nb1 [kim 2025-04-14]
+	Updated net/py-cares to 4.5.0nb1 [kim 2025-04-14]
+	Updated sysutils/ansible-core to 2.18.4nb1 [kim 2025-04-14]
+	Updated sysutils/ansible to 11.4.0nb1 [kim 2025-04-14]
