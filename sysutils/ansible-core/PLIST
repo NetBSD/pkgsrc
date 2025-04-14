@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/11/12 08:02:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/14 17:06:31 kim Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -10,15 +10,15 @@ bin/ansible-pull
 bin/ansible-test
 bin/ansible-vault
 @pkgdir etc/ansible
-${PYSITELIB}/${WHEEL_INFODIR}/Apache-License.txt
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/MIT-license.txt
-${PYSITELIB}/${WHEEL_INFODIR}/PSF-license.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/simplified_bsd.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/Apache-License.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/MIT-license.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/PSF-license.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/simplified_bsd.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ansible/__init__.py
 ${PYSITELIB}/ansible/__init__.pyc
