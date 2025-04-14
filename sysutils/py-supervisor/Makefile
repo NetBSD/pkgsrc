@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2023/07/19 12:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/14 07:33:49 adam Exp $
 
 DISTNAME=	supervisor-4.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/supervisor/}
 
@@ -11,14 +11,10 @@ HOMEPAGE=	http://supervisord.org/
 COMMENT=	System for controlling process state under UNIX
 LICENSE=	original-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 REPLACE_PYTHON+=	supervisor/scripts/*.py
 PYTHON_SELF_CONFLICT=	yes
-
-USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-build
@@ -49,5 +45,5 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/supervisor/supervisord.conf
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
