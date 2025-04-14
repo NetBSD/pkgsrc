@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/01/25 11:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/14 20:28:02 adam Exp $
 
 DISTNAME=	pytest_aiohttp-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-aiohttp/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/aio-libs/pytest-aiohttp
 COMMENT=	Pytest plugin for aiohttp support
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=51.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.11.0:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-test>=6.1.0:../../devel/py-test

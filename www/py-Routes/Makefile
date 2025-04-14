@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 10:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/14 20:28:02 adam Exp $
 
 DISTNAME=	Routes-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Routes/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/Routes
 COMMENT=	Python re-implementation of the Rails routes system for mapping URLs
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-repoze.lru>=0.3:../../devel/py-repoze.lru
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # middleware
