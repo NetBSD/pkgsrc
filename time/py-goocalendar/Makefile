@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/03/05 10:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/14 08:49:20 adam Exp $
 
 DISTNAME=	GooCalendar-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=G/GooCalendar/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://goocalendar.readthedocs.io/
 COMMENT=	Calendar widget using GooCanvas
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.20:../../devel/py-gobject3
 
 USE_LANGUAGES=	# none

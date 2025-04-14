@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/11/11 07:29:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/14 08:49:19 adam Exp $
 
 DISTNAME=	cftime-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cftime/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Unidata/cftime
 COMMENT=	Time-handling functionality
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=41.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../devel/py-cython/buildlink3.mk"
