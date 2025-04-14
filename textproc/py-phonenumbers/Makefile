@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/02/12 09:49:24 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/04/14 13:06:40 adam Exp $
 
-DISTNAME=	phonenumbers-8.13.54
+DISTNAME=	phonenumbers-9.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/phonenumbers/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/daviddrysdale/python-phonenumbers
 COMMENT=	Library for formatting, storing and validating phone numbers
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
