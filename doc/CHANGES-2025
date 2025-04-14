@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2645 2025/04/14 13:55:15 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2646 2025/04/14 13:57:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.36.3 [pin 2025-04-14]
 	Updated devel/mise to 2025.4.2 [pin 2025-04-14]
 	Updated sysutils/tealdeer to 1.7.2 [pin 2025-04-14]
+	Updated sysutils/xcp to 0.24.1 [pin 2025-04-14]
