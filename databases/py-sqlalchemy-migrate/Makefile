@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/03/04 09:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/14 11:50:23 adam Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlalchemy-migrate/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://opendev.org/x/sqlalchemy-migrate
 COMMENT=	Schema migration tool for SQLAlchemy
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.8:../../databases/py-sqlalchemy
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.7.0:../../lang/py-six
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 313 # py-pbr; 313: py-Tempita
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-pbr
 
 REPLACE_PYTHON+=	migrate/tests/changeset/databases/test_ibmdb2.py
 REPLACE_PYTHON+=	migrate/tests/changeset/test_changeset.py

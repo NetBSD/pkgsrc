@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/14 11:52:37 adam Exp $
 
 DISTNAME=	billiard-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/celery/billiard
 COMMENT=	Python multiprocessing fork with improvements and bugfixes
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 

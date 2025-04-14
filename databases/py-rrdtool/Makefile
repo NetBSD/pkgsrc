@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.30 2024/12/27 08:19:29 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/14 11:50:23 adam Exp $
 
-PKGREVISION= 4
+PKGREVISION=	5
 .include "../../databases/rrdtool/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 WHEEL_NAME=	rrdtool-0.1.10
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 EXTRACT_ELEMENTS=	${DISTNAME}/bindings/python ${DISTNAME}/src
 WRKSRC=			${WRKDIR}/${DISTNAME}/bindings/python
