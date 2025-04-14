@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2025/02/19 10:52:27 adam Exp $
+# $NetBSD: Makefile,v 1.68 2025/04/14 07:29:03 adam Exp $
 
-DISTNAME=	ansible_lint-25.1.3
+DISTNAME=	ansible_lint-25.2.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://ansible-lint.readthedocs.io/
 COMMENT=	Checks playbooks for practices and behaviour that could be improved
 LICENSE=	gnu-gpl-v3 AND mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.3.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
-DEPENDS+=	ansible-core>=2.16.0:../../sysutils/ansible-core
-DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=25.1.3:../../sysutils/py-ansible-compat
+DEPENDS+=	ansible-core>=2.16.11:../../sysutils/ansible-core
+DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=25.1.5:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-black>=24.3.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.8.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
