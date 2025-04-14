@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2025/02/20 07:45:46 adam Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/14 06:04:53 adam Exp $
 
 DISTNAME=	picard-2.13.3
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/picard/}
 
@@ -9,7 +10,7 @@ HOMEPAGE=	https://picard.musicbrainz.org/
 COMMENT=	Audio file tagger
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=62.4.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=3.3:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7:../../time/py-dateutil
