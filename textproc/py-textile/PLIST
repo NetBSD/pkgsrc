@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2024/10/21 09:27:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/14 12:56:30 adam Exp $
 bin/pytextile-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/textile/__init__.py
 ${PYSITELIB}/textile/__init__.pyc

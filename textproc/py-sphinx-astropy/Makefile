@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/02/23 16:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 12:56:29 adam Exp $
 
 DISTNAME=	sphinx-astropy-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-astropy/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/astropy/sphinx-astropy
 COMMENT=	Sphinx extensions and configuration specific to the Astropy project
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-astropy-sphinx-theme-[0-9]*:../../textproc/py-astropy-sphinx-theme

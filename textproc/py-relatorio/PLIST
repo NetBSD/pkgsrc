@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/23 16:55:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/14 12:50:21 adam Exp $
 bin/relatorio-render-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/relatorio/__init__.py
 ${PYSITELIB}/relatorio/__init__.pyc

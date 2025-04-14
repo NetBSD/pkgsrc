@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/01/02 20:18:44 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/14 12:50:20 adam Exp $
 
 DISTNAME=	pyaml-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyaml/}
 
@@ -11,7 +12,7 @@ COMMENT=	YAML pretty printer for human readable output
 # Strictly speaking, WTFPL
 LICENSE=	public-domain
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # anchors
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode

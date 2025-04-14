@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/02/23 16:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/14 12:56:29 adam Exp $
 
 DISTNAME=	sphinx_automodapi-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-automodapi/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/astropy/sphinx-automodapi
 COMMENT=	Sphinx extension for auto-generating API documentation for modules
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
