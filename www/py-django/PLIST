@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.51 2024/10/08 17:42:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2025/04/14 14:20:53 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.python
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.python
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -4268,6 +4268,9 @@ ${PYSITELIB}/django/core/checks/async_checks.pyo
 ${PYSITELIB}/django/core/checks/caches.py
 ${PYSITELIB}/django/core/checks/caches.pyc
 ${PYSITELIB}/django/core/checks/caches.pyo
+${PYSITELIB}/django/core/checks/commands.py
+${PYSITELIB}/django/core/checks/commands.pyc
+${PYSITELIB}/django/core/checks/commands.pyo
 ${PYSITELIB}/django/core/checks/compatibility/__init__.py
 ${PYSITELIB}/django/core/checks/compatibility/__init__.pyc
 ${PYSITELIB}/django/core/checks/compatibility/__init__.pyo
@@ -4661,6 +4664,9 @@ ${PYSITELIB}/django/db/backends/postgresql/base.pyo
 ${PYSITELIB}/django/db/backends/postgresql/client.py
 ${PYSITELIB}/django/db/backends/postgresql/client.pyc
 ${PYSITELIB}/django/db/backends/postgresql/client.pyo
+${PYSITELIB}/django/db/backends/postgresql/compiler.py
+${PYSITELIB}/django/db/backends/postgresql/compiler.pyc
+${PYSITELIB}/django/db/backends/postgresql/compiler.pyo
 ${PYSITELIB}/django/db/backends/postgresql/creation.py
 ${PYSITELIB}/django/db/backends/postgresql/creation.pyc
 ${PYSITELIB}/django/db/backends/postgresql/creation.pyo
@@ -4796,6 +4802,9 @@ ${PYSITELIB}/django/db/models/expressions.pyo
 ${PYSITELIB}/django/db/models/fields/__init__.py
 ${PYSITELIB}/django/db/models/fields/__init__.pyc
 ${PYSITELIB}/django/db/models/fields/__init__.pyo
+${PYSITELIB}/django/db/models/fields/composite.py
+${PYSITELIB}/django/db/models/fields/composite.pyc
+${PYSITELIB}/django/db/models/fields/composite.pyo
 ${PYSITELIB}/django/db/models/fields/files.py
 ${PYSITELIB}/django/db/models/fields/files.pyc
 ${PYSITELIB}/django/db/models/fields/files.pyo
@@ -4823,6 +4832,9 @@ ${PYSITELIB}/django/db/models/fields/related_lookups.pyo
 ${PYSITELIB}/django/db/models/fields/reverse_related.py
 ${PYSITELIB}/django/db/models/fields/reverse_related.pyc
 ${PYSITELIB}/django/db/models/fields/reverse_related.pyo
+${PYSITELIB}/django/db/models/fields/tuple_lookups.py
+${PYSITELIB}/django/db/models/fields/tuple_lookups.pyc
+${PYSITELIB}/django/db/models/fields/tuple_lookups.pyo
 ${PYSITELIB}/django/db/models/functions/__init__.py
 ${PYSITELIB}/django/db/models/functions/__init__.pyc
 ${PYSITELIB}/django/db/models/functions/__init__.pyo
@@ -4832,6 +4844,9 @@ ${PYSITELIB}/django/db/models/functions/comparison.pyo
 ${PYSITELIB}/django/db/models/functions/datetime.py
 ${PYSITELIB}/django/db/models/functions/datetime.pyc
 ${PYSITELIB}/django/db/models/functions/datetime.pyo
+${PYSITELIB}/django/db/models/functions/json.py
+${PYSITELIB}/django/db/models/functions/json.pyc
+${PYSITELIB}/django/db/models/functions/json.pyo
 ${PYSITELIB}/django/db/models/functions/math.py
 ${PYSITELIB}/django/db/models/functions/math.pyc
 ${PYSITELIB}/django/db/models/functions/math.pyo
@@ -4939,6 +4954,7 @@ ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/checkbox.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/checkbox_option.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/checkbox_select.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/clearable_file_input.html
+${PYSITELIB}/django/forms/jinja2/django/forms/widgets/color.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/date.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/datetime.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/email.html
@@ -4953,11 +4969,13 @@ ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/number.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/password.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/radio.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/radio_option.html
+${PYSITELIB}/django/forms/jinja2/django/forms/widgets/search.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/select.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/select_date.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/select_option.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/splitdatetime.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/splithiddendatetime.html
+${PYSITELIB}/django/forms/jinja2/django/forms/widgets/tel.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/text.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/textarea.html
 ${PYSITELIB}/django/forms/jinja2/django/forms/widgets/time.html
@@ -4990,6 +5008,7 @@ ${PYSITELIB}/django/forms/templates/django/forms/widgets/checkbox.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/checkbox_option.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/checkbox_select.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/clearable_file_input.html
+${PYSITELIB}/django/forms/templates/django/forms/widgets/color.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/date.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/datetime.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/email.html
@@ -5004,11 +5023,13 @@ ${PYSITELIB}/django/forms/templates/django/forms/widgets/number.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/password.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/radio.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/radio_option.html
+${PYSITELIB}/django/forms/templates/django/forms/widgets/search.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/select.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/select_date.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/select_option.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/splitdatetime.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/splithiddendatetime.html
+${PYSITELIB}/django/forms/templates/django/forms/widgets/tel.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/text.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/textarea.html
 ${PYSITELIB}/django/forms/templates/django/forms/widgets/time.html
@@ -5289,9 +5310,6 @@ ${PYSITELIB}/django/utils/ipv6.pyo
 ${PYSITELIB}/django/utils/itercompat.py
 ${PYSITELIB}/django/utils/itercompat.pyc
 ${PYSITELIB}/django/utils/itercompat.pyo
-${PYSITELIB}/django/utils/jslex.py
-${PYSITELIB}/django/utils/jslex.pyc
-${PYSITELIB}/django/utils/jslex.pyo
 ${PYSITELIB}/django/utils/log.py
 ${PYSITELIB}/django/utils/log.pyc
 ${PYSITELIB}/django/utils/log.pyo
