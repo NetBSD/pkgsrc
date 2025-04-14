@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/02/07 07:16:25 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/14 13:03:51 adam Exp $
 
-DISTNAME=	xml2rfc-3.27.0
+DISTNAME=	xml2rfc-3.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.3.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.6.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=24.2.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.2.5:../../devel/py-wcwidth
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
@@ -31,9 +31,6 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} xml2rfc xml2rfc-${PYVERSSUFFIX} || ${TRUE}
-
-do-test:
-	${RUN} cd ${WRKSRC} && ${PYTHONBIN} -m unittest
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
