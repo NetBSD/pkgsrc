@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/30 11:09:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/14 06:04:53 adam Exp $
 bin/playitslowly
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/playitslowly-py${PYVERSSUFFIX}.install-info
 ${PYSITELIB}/playitslowly/__init__.py
