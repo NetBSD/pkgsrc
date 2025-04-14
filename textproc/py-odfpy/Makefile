@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/14 12:39:21 adam Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 # 115 passed, 1 skipped
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
