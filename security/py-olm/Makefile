@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/14 05:17:11 adam Exp $
 
 DISTNAME=	python-olm-3.2.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	cmake
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../security/olm/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

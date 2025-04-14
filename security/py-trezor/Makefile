@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/10/13 09:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/14 05:21:21 adam Exp $
 
 DISTNAME=	trezor-0.13.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trezor/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/trezor/trezor-firmware
 COMMENT=	Python library for communicating with Trezor hardware wallets
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.9:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-mnemonic>=0.20:../../devel/py-mnemonic
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.0:../../devel/py-requests
@@ -21,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.7.1:../../devel/py-typing-extensio
 DEPENDS+=	${PYPKGPREFIX}-construct-classes>=0.1.2:../../devel/py-construct-classes
 
 USE_LANGUAGES=	# none
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
