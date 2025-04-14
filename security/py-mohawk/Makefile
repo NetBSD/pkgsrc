@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/14 05:08:08 adam Exp $
 
 DISTNAME=	mohawk-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
