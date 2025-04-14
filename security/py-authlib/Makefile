@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/03/03 09:03:17 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/14 04:59:14 adam Exp $
 
-DISTNAME=	authlib-1.5.1
+DISTNAME=	authlib-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Authlib/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://authlib.org/
 COMMENT=	Ultimate Python library in building OAuth and OpenID Connect servers
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
