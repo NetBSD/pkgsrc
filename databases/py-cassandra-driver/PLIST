@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/15 09:24:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/14 11:31:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cassandra/__init__.py
 ${PYSITELIB}/cassandra/__init__.pyc
 ${PYSITELIB}/cassandra/__init__.pyo
@@ -227,8 +232,3 @@ ${PYSITELIB}/cassandra/util.py
 ${PYSITELIB}/cassandra/util.pyc
 ${PYSITELIB}/cassandra/util.pyo
 ${PYSITELIB}/cassandra/util.so
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
