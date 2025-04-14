@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/01/27 09:31:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/14 11:09:15 adam Exp $
 bin/barman
 bin/barman-cloud-backup
 bin/barman-cloud-backup-delete
@@ -11,12 +11,12 @@ bin/barman-cloud-wal-archive
 bin/barman-cloud-wal-restore
 bin/barman-wal-archive
 bin/barman-wal-restore
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/barman/__init__.py
 ${PYSITELIB}/barman/__init__.pyc
