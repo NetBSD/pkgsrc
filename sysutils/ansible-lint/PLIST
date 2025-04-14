@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.25 2024/12/27 08:20:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/04/14 07:29:03 adam Exp $
 bin/ansible-lint
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ansiblelint/__init__.py
 ${PYSITELIB}/ansiblelint/__init__.pyc
@@ -313,6 +313,9 @@ ${PYSITELIB}/ansiblelint/text.pyo
 ${PYSITELIB}/ansiblelint/transformer.py
 ${PYSITELIB}/ansiblelint/transformer.pyc
 ${PYSITELIB}/ansiblelint/transformer.pyo
+${PYSITELIB}/ansiblelint/types.py
+${PYSITELIB}/ansiblelint/types.pyc
+${PYSITELIB}/ansiblelint/types.pyo
 ${PYSITELIB}/ansiblelint/utils.py
 ${PYSITELIB}/ansiblelint/utils.pyc
 ${PYSITELIB}/ansiblelint/utils.pyo
