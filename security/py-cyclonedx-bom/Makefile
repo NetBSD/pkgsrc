@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/02/13 11:01:28 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 05:11:12 adam Exp $
 
-DISTNAME=	cyclonedx_bom-5.1.2
+DISTNAME=	cyclonedx_bom-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-bom/}
