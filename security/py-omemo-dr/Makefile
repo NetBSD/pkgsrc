@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/02/07 21:45:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/14 05:17:11 adam Exp $
 
 DISTNAME=	omemo-dr-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/omemo-dr/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://dev.gajim.org/gajim/omemo-dr
 COMMENT=	OMEMO Double Ratchet
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.0:../../devel/py-protobuf
 
