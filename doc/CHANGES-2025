@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2626 2025/04/14 05:00:52 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2627 2025/04/14 05:06:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3442,3 +3442,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.166.0 [wiz 2025-04-13]
 	Updated textproc/p5-Text-HTML-Turndown to 0.06 [schmonz 2025-04-13]
 	Updated mail/mailutils to 3.19 [vins 2025-04-14]
+	Updated security/py-authlib to 1.5.2 [adam 2025-04-14]
+	Updated devel/py-typing-extensions to 4.13.2 [adam 2025-04-14]
