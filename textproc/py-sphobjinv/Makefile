@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/02/23 16:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/14 12:56:30 adam Exp $
 
 DISTNAME=	sphobjinv-2.3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphobjinv/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/bskinn/sphobjinv
 COMMENT=	Toolkit for manipulation and inspection of Sphinx objects.inv files
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=3.0:../../textproc/py-jsonschema

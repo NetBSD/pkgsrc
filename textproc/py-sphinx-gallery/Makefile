@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/02/25 15:33:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/14 12:56:29 adam Exp $
 
 DISTNAME=	sphinx_gallery-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-gallery/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://sphinx-gallery.github.io/
 COMMENT=	Sphinx extension that builds an HTML version of any Python script
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=5:../../textproc/py-sphinx

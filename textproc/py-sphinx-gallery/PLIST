@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2025/02/25 15:33:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/14 12:56:29 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sphinx_gallery/__init__.py
 ${PYSITELIB}/sphinx_gallery/__init__.pyc

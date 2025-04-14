@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/02/23 16:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 12:56:30 adam Exp $
 
 DISTNAME=	sphinxcontrib_spelling-8.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-spelling/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/sphinx-contrib/spelling
 COMMENT=	Sphinx spelling extension
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-enchant>=3.2.2nb1:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.32.3:../../devel/py-requests
