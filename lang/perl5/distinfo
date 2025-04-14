@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.188 2025/02/18 11:49:55 wiz Exp $
+$NetBSD: distinfo,v 1.188.2.1 2025/04/14 13:06:38 maya Exp $
 
-BLAKE2s (perl-5.40.1.tar.xz) = 8991d9896844fcdedf79c1c001785605f1e17969dc942f4c248fb1403a0a3556
-SHA512 (perl-5.40.1.tar.xz) = 3ff16b3462ce43ff38dab21b3dfc20f81772b8c9eac19ab96ba2d5e6cbb390e2302fa76c4879f915249357cd11c7ec0d548bcbf3ab2c156df1b9fca95da3f545
-Size (perl-5.40.1.tar.xz) = 13930924 bytes
+BLAKE2s (perl-5.40.2.tar.xz) = 0d924b3c48afb28b02dee7e250ee79f6c1993333e34d4cee5de16476f81fd224
+SHA512 (perl-5.40.2.tar.xz) = 1324b119e4370bbeb47a343d152f46c637addb0373ff07f0e214aa9d5912c03cd2bd23987a6e86d43453166412d3a03a52e780201941f679ef4186df16590e41
+Size (perl-5.40.2.tar.xz) = 13923524 bytes
 SHA1 (patch-Configure) = f3bd324a90254405b3ce8e29846b4ddc9ebf7d73
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-builtin.c) = 7ac5821ab3f4c9ae29d2cbe9db0407560aee2328
