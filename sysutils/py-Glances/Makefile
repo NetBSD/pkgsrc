@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/03/05 10:26:24 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/14 08:14:44 adam Exp $
 
-DISTNAME=	glances-4.3.0.8
+DISTNAME=	glances-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
 
@@ -11,10 +10,11 @@ HOMEPAGE=	https://nicolargo.github.io/glances/
 COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
+# optional
 DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
