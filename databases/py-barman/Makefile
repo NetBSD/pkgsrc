@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/03/14 12:36:01 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/14 11:09:15 adam Exp $
 
-DISTNAME=	barman-3.13.0
+DISTNAME=	barman-3.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pgbarman.org/
 COMMENT=	Backup and Recovery Manager for PostgreSQL
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.4.2:../../databases/py-psycopg2
