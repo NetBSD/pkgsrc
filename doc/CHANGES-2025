@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2641 2025/04/14 13:06:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2642 2025/04/14 13:17:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3470,3 +3470,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xmlschema to 4.0.1 [adam 2025-04-14]
 	Updated textproc/py-xml2rfc to 3.28.1 [adam 2025-04-14]
 	Updated textproc/py-phonenumbers to 9.0.3 [adam 2025-04-14]
+	Updated www/py-channels to 4.2.2 [adam 2025-04-14]
+	Updated www/py-django-admin-sortable2 to 2.2.6 [adam 2025-04-14]
