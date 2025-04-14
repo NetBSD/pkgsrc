@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/03/15 19:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/14 12:02:36 adam Exp $
 
-DISTNAME=	deepdiff-8.3.0
+DISTNAME=	deepdiff-8.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deepdiff/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/seperman/deepdiff
 COMMENT=	Deep Difference and Search of any Python object/data
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-orderly-set>=5.3.0:../../devel/py-orderly-set
 # cli
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.8:../../devel/py-click
