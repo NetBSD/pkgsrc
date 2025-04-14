@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.37 2025/02/07 07:31:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2025/04/14 10:04:42 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
 bin/stubgen-${PYVERSSUFFIX}
 bin/stubtest-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mypy/__init__.py
 ${PYSITELIB}/mypy/__init__.pyc

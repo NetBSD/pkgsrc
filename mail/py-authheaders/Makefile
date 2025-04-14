@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/14 09:56:26 adam Exp $
 
 DISTNAME=	authheaders-0.16.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/authheaders/}
 
@@ -10,15 +11,13 @@ HOMEPAGE=	https://github.com/ValiMail/authentication-headers
 COMMENT=	Library for email authentication header verification and generation
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-dkim>=0.7.1:../../mail/py-dkim
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-publicsuffix2-[0-9]*:../../www/py-publicsuffix2
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
