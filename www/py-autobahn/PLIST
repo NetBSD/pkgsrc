@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.20 2023/11/13 07:57:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/04/14 13:14:03 adam Exp $
 bin/wamp-${PYVERSSUFFIX}
 bin/xbrnetwork-${PYVERSSUFFIX}
 bin/xbrnetwork-ui-${PYVERSSUFFIX}
 ${PYSITELIB}/_nvx_utf8validator.abi3.so
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/autobahn/__init__.py
 ${PYSITELIB}/autobahn/__init__.pyc
