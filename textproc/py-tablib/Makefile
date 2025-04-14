@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/01/25 11:45:49 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/14 12:56:30 adam Exp $
 
 DISTNAME=	tablib-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tablib/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://tablib.readthedocs.io/
 COMMENT=	Format agnostic tabular data library (XLS, JSON, YAML, CSV)
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=58:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 # all without pandas
 DEPENDS+=	${PYPKGPREFIX}-odfpy-[0-9]*:../../textproc/py-odfpy

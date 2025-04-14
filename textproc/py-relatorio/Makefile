@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2025/01/14 16:52:18 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/14 12:50:21 adam Exp $
 
 DISTNAME=	relatorio-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/relatorio/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://relatorio.tryton.org/
 COMMENT=	Templating library able to output odt and pdf files
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
