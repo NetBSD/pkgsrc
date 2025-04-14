@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2630 2025/04/14 05:26:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2631 2025/04/14 07:29:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3448,3 +3448,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-bom to 5.3.0 [adam 2025-04-14]
 	Updated sysutils/fastfetch to 2.40.4 [vins 2025-04-14]
 	Updated lang/perl5 to 5.40.2 [wiz 2025-04-14]
+	Updated sysutils/py-ansible-compat to 25.1.5 [adam 2025-04-14]
+	Updated sysutils/ansible-lint to 25.2.1 [adam 2025-04-14]
