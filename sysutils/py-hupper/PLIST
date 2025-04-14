@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/28 17:38:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/14 08:31:29 adam Exp $
 bin/hupper-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/hupper/__init__.py
 ${PYSITELIB}/hupper/__init__.pyc

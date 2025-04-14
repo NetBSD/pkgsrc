@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/14 08:31:30 adam Exp $
 
 DISTNAME=	pefile-2024.8.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pefile/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/erocarrera/pefile
 COMMENT=	Python module to read and work with PE files
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
