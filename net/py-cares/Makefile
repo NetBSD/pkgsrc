@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/12/30 14:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/14 17:05:53 kim Exp $
 
 DISTNAME=	pycares-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
 
@@ -18,7 +19,7 @@ LICENSE=	mit
 #    Pull up 1.112 of src/sys/netinet/in.h to netbsd-9.
 #    Fix py-cares or cffi to work with a packed definition.
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
 
 .include "../../lang/python/wheel.mk"
