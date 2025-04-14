@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/05 16:22:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/14 08:49:19 adam Exp $
 bin/dateparser-download-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dateparser/__init__.py
 ${PYSITELIB}/dateparser/__init__.pyc
