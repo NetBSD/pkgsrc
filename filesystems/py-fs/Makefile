@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/13 11:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/14 11:54:31 adam Exp $
 
 DISTNAME=	fs-2.4.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,8 @@ HOMEPAGE=	https://github.com/PyFilesystem/pyfilesystem2
 COMMENT=	Python's filesystem abstraction layer
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.3:../../devel/py-appdirs
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
