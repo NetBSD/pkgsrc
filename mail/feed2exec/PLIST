@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/18 12:09:35 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/14 09:27:05 adam Exp $
 bin/feed2exec-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/feed2exec/__init__.py
 ${PYSITELIB}/feed2exec/__init__.pyc
@@ -12,9 +12,6 @@ ${PYSITELIB}/feed2exec/__init__.pyo
 ${PYSITELIB}/feed2exec/__main__.py
 ${PYSITELIB}/feed2exec/__main__.pyc
 ${PYSITELIB}/feed2exec/__main__.pyo
-${PYSITELIB}/feed2exec/_version.py
-${PYSITELIB}/feed2exec/_version.pyc
-${PYSITELIB}/feed2exec/_version.pyo
 ${PYSITELIB}/feed2exec/controller.py
 ${PYSITELIB}/feed2exec/controller.pyc
 ${PYSITELIB}/feed2exec/controller.pyo
