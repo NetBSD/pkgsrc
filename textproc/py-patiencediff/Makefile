@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/14 12:39:21 adam Exp $
 
 DISTNAME=	patiencediff-0.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/patiencediff/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://github.com/breezy-team/patiencediff
 COMMENT=	Python implementation of the patiencediff algorithm
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # or later
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

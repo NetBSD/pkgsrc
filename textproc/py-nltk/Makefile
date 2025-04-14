@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/01/14 17:19:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/14 12:39:21 adam Exp $
 
 DISTNAME=	nltk-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://www.nltk.org/
 COMMENT=	Natural Language Toolkit (NLTK)
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
 DEPENDS+=	${PYPKGPREFIX}-regex>=2021.8.3:../../textproc/py-regex
