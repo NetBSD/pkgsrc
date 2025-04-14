@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2625 2025/04/13 21:05:38 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2626 2025/04/14 05:00:52 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3441,3 +3441,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.11.16 [wiz 2025-04-13]
 	Updated www/py-google-api-python-client to 2.166.0 [wiz 2025-04-13]
 	Updated textproc/p5-Text-HTML-Turndown to 0.06 [schmonz 2025-04-13]
+	Updated mail/mailutils to 3.19 [vins 2025-04-14]
