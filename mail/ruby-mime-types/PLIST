@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.15 2023/08/11 11:02:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/04/14 14:28:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.standard.yml
-${GEM_LIBDIR}/Code-of-Conduct.md
-${GEM_LIBDIR}/Contributing.md
-${GEM_LIBDIR}/History.md
-${GEM_LIBDIR}/Licence.md
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/CONTRIBUTORS.md
+${GEM_LIBDIR}/LICENCE.md
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/mime-types.rb
 ${GEM_LIBDIR}/lib/mime/type.rb
 ${GEM_LIBDIR}/lib/mime/type/columnar.rb
@@ -21,6 +22,7 @@ ${GEM_LIBDIR}/lib/mime/types/full.rb
 ${GEM_LIBDIR}/lib/mime/types/loader.rb
 ${GEM_LIBDIR}/lib/mime/types/logger.rb
 ${GEM_LIBDIR}/lib/mime/types/registry.rb
+${GEM_LIBDIR}/lib/mime/types/version.rb
 ${GEM_LIBDIR}/test/bad-fixtures/malformed
 ${GEM_LIBDIR}/test/fixture/json.json
 ${GEM_LIBDIR}/test/fixture/old-data

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/10/13 16:15:08 taca Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/14 14:28:26 taca Exp $
 
-DISTNAME=	mime-types-3.6.0
+DISTNAME=	mime-types-3.6.2
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
