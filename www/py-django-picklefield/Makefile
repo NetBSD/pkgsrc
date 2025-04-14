@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/03/13 15:15:54 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/14 14:16:21 adam Exp $
 
 DISTNAME=	django-picklefield-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-picklefield/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/gintas/django-picklefield
 COMMENT=	Pickled object field for Django
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
