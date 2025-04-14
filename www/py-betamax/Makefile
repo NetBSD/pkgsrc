@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/14 13:14:03 adam Exp $
 
 DISTNAME=	betamax-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/betamax/}
 
@@ -10,12 +11,10 @@ HOMEPAGE=	https://github.com/sigmavirus24/betamax
 COMMENT=	VCR imitation for python-requests
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
