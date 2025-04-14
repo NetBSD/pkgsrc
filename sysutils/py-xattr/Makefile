@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/01/07 11:46:18 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/14 08:31:30 adam Exp $
 
 DISTNAME=	xattr-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xattr/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/xattr/xattr
 COMMENT=	Python wrapper for extended filesystem attributes
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.16.0:../../devel/py-cffi
 
 post-install:
