@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_configure,v 1.17 2025/03/30 21:10:45 wiz Exp $
+$NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
 
 --- unix/configure.orig	2024-12-02 12:57:40.000000000 +0000
 +++ unix/configure
@@ -102,7 +102,7 @@ $NetBSD: patch-unix_configure,v 1.17 2025/03/30 21:10:45 wiz Exp $
 -    test -z "$TCL_PACKAGE_PATH" && TCL_PACKAGE_PATH="${libdir}:${prefix}/lib"
  else
 -    test -z "$TCL_PACKAGE_PATH" && TCL_PACKAGE_PATH="${prefix}/lib"
-+    test -z "$TCL_PACKAGE_PATH" && TCL_PACKAGE_PATH="${prefix}/lib/tcl ${prefix}/lib"
++    test -z "$TCL_PACKAGE_PATH" && TCL_PACKAGE_PATH="${prefix}/lib/tcl:${prefix}/lib"
  fi
  
  #--------------------------------------------------------------------
