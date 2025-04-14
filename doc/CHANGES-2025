@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2647 2025/04/14 13:59:28 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2648 2025/04/14 14:01:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3477,3 +3477,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/tealdeer to 1.7.2 [pin 2025-04-14]
 	Updated sysutils/xcp to 0.24.1 [pin 2025-04-14]
 	Updated sysutils/yazi to 25.4.8 [pin 2025-04-14]
+	Updated www/zola to 0.20.0 [pin 2025-04-14]
