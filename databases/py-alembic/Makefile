@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2025/03/14 15:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/14 11:04:59 adam Exp $
 
 DISTNAME=	alembic-1.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alembic/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://alembic.sqlalchemy.org/
 COMMENT=	Database migration tool for SQLAlchemy
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12:../../devel/py-typing-extensions
