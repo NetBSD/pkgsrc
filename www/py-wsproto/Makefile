@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/14 20:28:04 adam Exp $
 
 DISTNAME=	wsproto-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wsproto/}
 
@@ -11,12 +11,10 @@ HOMEPAGE=	https://wsproto.readthedocs.io/
 COMMENT=	Pure Python, pure state-machine WebSocket implementation
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.9.0:../../www/py-h11
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

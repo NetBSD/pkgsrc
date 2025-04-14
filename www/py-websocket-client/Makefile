@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2024/11/11 07:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/14 20:28:04 adam Exp $
 
 DISTNAME=	websocket_client-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/websocket-client/}
 
@@ -10,12 +11,10 @@ HOMEPAGE=	https://github.com/websocket-client/websocket-client
 COMMENT=	WebSocket client module
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-websockets-[0-9]*:../../www/py-websockets
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2025/02/02 10:38:03 he Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/14 20:28:03 adam Exp $
 
 DISTNAME=	tornado-6.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tornado/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://www.tornadoweb.org/
 COMMENT=	Fast and non-blocking web framework
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

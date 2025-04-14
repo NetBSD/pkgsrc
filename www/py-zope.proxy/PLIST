@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2025/03/05 11:01:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/14 20:28:04 adam Exp $
 ${PYINC}/zope_proxy/proxy.h
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/zope.proxy-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth

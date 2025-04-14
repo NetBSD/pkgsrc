@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2024/11/12 09:56:49 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/14 20:28:03 adam Exp $
 
 DISTNAME=	twill-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/twill-tools/twill
 COMMENT=	Simple scripting language for web browsing
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.1:../../devel/py-pyparsing
