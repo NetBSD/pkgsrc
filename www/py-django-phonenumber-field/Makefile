@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/11/26 10:25:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/14 18:45:20 adam Exp $
 
-DISTNAME=	django_phonenumber_field-8.0.0
+DISTNAME=	django_phonenumber_field-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-phonenumber-field/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/stefanfoulis/django-phonenumber-field
 COMMENT=	Django library for managing phone numbers
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 # phonenumbers
