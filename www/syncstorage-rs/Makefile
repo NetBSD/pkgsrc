@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/10 19:34:02 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/14 05:34:00 wiz Exp $
 
 DISTNAME=	syncstorage-rs-0.18.2
 CATEGORIES=	www
@@ -27,13 +27,13 @@ DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 
 #CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --features=syncstorage-db/mysql,tokenserver-auth/py
 
+# https://github.com/mozilla-services/syncstorage-rs/issues/1617
+PYTHON_VERSIONS_INCOMPATIBLE=	313
+
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
 RUST_REQ+=	1.80
-
-# https://github.com/mozilla-services/syncstorage-rs/issues/1617
-PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
 
