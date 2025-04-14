@@ -1,8 +1,10 @@
-$NetBSD: patch-mozilla_old-configure.in,v 1.9 2021/09/16 14:59:32 nia Exp $
+$NetBSD: patch-old-configure.in,v 1.1 2025/04/14 15:33:04 nia Exp $
 
---- old-configure.in.orig	2021-08-08 13:02:00.000000000 +0000
+Add Sun Audio support.
+
+--- old-configure.in.orig	2025-03-07 15:40:17.054989818 +0000
 +++ old-configure.in
-@@ -2425,6 +2425,19 @@ MOZ_WEBM_ENCODER=1
+@@ -1936,6 +1936,19 @@ MOZ_WEBM_ENCODER=1
  AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
