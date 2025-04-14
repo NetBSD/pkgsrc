@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/11/11 07:29:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/14 12:30:38 adam Exp $
 
-DISTNAME=	jsonpickle-3.0.4
+DISTNAME=	jsonpickle-4.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonpickle/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://jsonpickle.github.io/
 COMMENT=	Python library for serializing any arbitrary object graph into JSON
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-gmpy2-[0-9]*:../../math/py-gmpy2
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
