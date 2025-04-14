@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/01/12 07:45:49 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/14 08:18:58 adam Exp $
 
-DISTNAME=	watchfiles-1.0.4
+DISTNAME=	watchfiles-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchfiles/}
