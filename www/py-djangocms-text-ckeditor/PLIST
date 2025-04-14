@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2024/10/01 20:20:34 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.14 2025/04/14 18:48:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/djangocms_text_ckeditor/__init__.py
 ${PYSITELIB}/djangocms_text_ckeditor/__init__.pyc
@@ -591,7 +591,7 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/css/cms.ckeditor.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/css/cms.inline-ckeditor.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/cms.ckeditor.js
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-a9032984d4.cms.ckeditor.min.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-b7d2d69903.cms.ckeditor.min.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/post.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/pre.js
 ${PYSITELIB}/djangocms_text_ckeditor/templates/cms/plugins/inline.html
