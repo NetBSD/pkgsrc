@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2652 2025/04/14 14:30:45 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2653 2025/04/14 15:33:26 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3483,3 +3483,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-mime-types-data to 3.2025.0408 [taca 2025-04-14]
 	Updated mail/ruby-mime-types to 3.6.2 [taca 2025-04-14]
 	Updated time/ruby-tzinfo-data to 1.2025.2 [taca 2025-04-14]
+	Updated www/seamonkey-l10n to 2.53.20 [nia 2025-04-14]
+	Updated www/seamonkey to 2.53.20 [nia 2025-04-14]
