@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/14 05:17:12 adam Exp $
 
 DISTNAME=	tokenlib-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	mpl-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
