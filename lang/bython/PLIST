@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/20 04:05:47 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/14 10:04:41 adam Exp $
 bin/by2py
 bin/bython
 bin/py2by
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bython/__init__.py
 ${PYSITELIB}/bython/__init__.pyc

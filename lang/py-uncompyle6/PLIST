@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2024/07/22 05:28:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/04/14 10:04:42 adam Exp $
 bin/uncompyle6-${PYVERSSUFFIX}
 bin/uncompyle6-tokenize-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/uncompyle6/__init__.py
 ${PYSITELIB}/uncompyle6/__init__.pyc
