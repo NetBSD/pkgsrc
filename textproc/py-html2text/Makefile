@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2024/11/11 07:29:03 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/04/14 12:06:25 adam Exp $
 
 DISTNAME=	html2text-2024.2.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/html2text/}
 
@@ -10,10 +11,9 @@ HOMEPAGE=	https://alir3z4.github.io/html2text/
 COMMENT=	Convert HTML into easy-to-read plain ASCII text
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} html2text html2text-${PYVERSSUFFIX} || ${TRUE}
