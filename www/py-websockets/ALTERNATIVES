@@ -1,0 +1,1 @@
+bin/websockets @PREFIX@/bin/websockets-@PYVERSSUFFIX@
