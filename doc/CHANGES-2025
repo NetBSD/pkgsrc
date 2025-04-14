@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2643 2025/04/14 13:51:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2644 2025/04/14 13:53:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-channels to 4.2.2 [adam 2025-04-14]
 	Updated www/py-django-admin-sortable2 to 2.2.6 [adam 2025-04-14]
 	Updated devel/ast-grep to 0.36.3 [pin 2025-04-14]
+	Updated devel/mise to 2025.4.2 [pin 2025-04-14]
