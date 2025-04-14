@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2635 2025/04/14 11:11:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2636 2025/04/14 11:25:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3458,3 +3458,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-dkim to 1.1.8 [adam 2025-04-14]
 	Updated databases/py-barman to 3.13.2 [adam 2025-04-14]
 	Updated databases/py-sqlalchemy to 2.0.40 [adam 2025-04-14]
+	Updated databases/py-dbf to 0.99.10 [adam 2025-04-14]
+	Updated databases/py-alembic to 1.15.2 [adam 2025-04-14]
