@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/16 10:29:57 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/14 05:17:11 adam Exp $
 
 DISTNAME=	pyspnego-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyspnego/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jborean93/pyspnego
 COMMENT=	Windows Negotiate Authentication Client and Server
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # kerberos
 DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.6.0:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-krb5>=0.3.0:../../security/py-krb5
