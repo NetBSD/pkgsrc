@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/12/06 14:56:43 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/04/14 11:46:26 adam Exp $
 
-BLAKE2s (Tempita-0.5.2.tar.gz) = 7bc4afeab743339a5598eb8dc6272b0e85ceaf3cae10f1bcca0d15c23170d021
-SHA512 (Tempita-0.5.2.tar.gz) = 582d3ca35dfb2ad44491cf9e526db9f9c34c419f2b03a5ce86a7e5183f7760b380262367c062161d577c3fb3e69e39ee99bbf8e493873e1da1a350ef2f63630d
-Size (Tempita-0.5.2.tar.gz) = 12648 bytes
-SHA1 (patch-setup.py) = de30cdc0c08711f6b34e3be006bfd38110516b5b
+BLAKE2s (tempita-0.6.0.tar.gz) = 642aba05a015639ee35b17679faa7d3b79080b7d5ba4916b0b33a318f01a0029
+SHA512 (tempita-0.6.0.tar.gz) = 2a9b504d333db36c483df9484b00b424aeba2955dba5c05a2e8186a02f1dd339e4019e3b32a6e9766ce00717aa44acecfee902dfd76b9caf061bcba3a314789b
+Size (tempita-0.6.0.tar.gz) = 19205 bytes
