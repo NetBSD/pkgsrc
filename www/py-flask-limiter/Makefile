@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/03/08 13:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/14 20:43:54 adam Exp $
 
-DISTNAME=	flask_limiter-3.10.1
+DISTNAME=	flask_limiter-3.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Limiter/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://flask-limiter.readthedocs.org/
 COMMENT=	Rate limiting for flask applications
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-flask>=2:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-limits>=3.13:../../devel/py-limits
 DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4:../../devel/py-ordered-set
@@ -21,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flask-restful>=0:../../www/py-flask-restful
 # also needs unpackaged 'hiro' for testing
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
