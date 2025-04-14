@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/03/11 10:51:11 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/14 05:08:08 adam Exp $
 
 DISTNAME=	krb5-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/krb5/}
 
@@ -11,7 +12,7 @@ COMMENT=	Kerberos API bindings for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.29:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PLIST_VARS+=	mitkrb heimdal
 
