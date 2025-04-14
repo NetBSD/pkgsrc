@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/14 13:30:02 adam Exp $
 
 DISTNAME=	django_celery_beat-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_celery_beat/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/celery/django-celery-beat
 COMMENT=	Database-backed Periodic Tasks
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-celery>=5.2.3:../../net/py-celery
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-timezone-field>=5.0:../../www/py-django-timezone-field

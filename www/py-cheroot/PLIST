@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2024/02/07 06:25:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/04/14 13:30:01 adam Exp $
 bin/cheroot-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cheroot/__init__.py
 ${PYSITELIB}/cheroot/__init__.pyc

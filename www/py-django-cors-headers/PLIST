@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:57:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/14 13:30:02 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/corsheaders/__init__.py
 ${PYSITELIB}/corsheaders/__init__.pyc
 ${PYSITELIB}/corsheaders/__init__.pyo
@@ -21,8 +26,3 @@ ${PYSITELIB}/corsheaders/py.typed
 ${PYSITELIB}/corsheaders/signals.py
 ${PYSITELIB}/corsheaders/signals.pyc
 ${PYSITELIB}/corsheaders/signals.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

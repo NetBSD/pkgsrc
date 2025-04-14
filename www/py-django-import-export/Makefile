@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2025/02/27 08:28:24 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/04/14 13:30:02 adam Exp $
 
 DISTNAME=	django_import_export-4.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/django-import-export/django-import-export
 COMMENT=	Django application and library for importing and exporting data
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.1.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-diff-match-patch>=20241021:../../textproc/py-diff-match-patch
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
