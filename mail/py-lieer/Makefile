@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/03/04 09:14:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/14 09:56:26 adam Exp $
 
 DISTNAME=	lieer-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lieer/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/gauteh/lieer
 COMMENT=	Email synchronization between notmuch and GMail
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-notmuch2-[0-9]*:../../mail/py-notmuch2
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client-[0-9]*:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib-[0-9]*:../../security/py-google-auth-oauthlib

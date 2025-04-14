@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/01/23 16:29:25 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/14 10:04:42 adam Exp $
 
 DISTNAME=	executing-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/executing/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/alexmojaki/executing
 COMMENT=	Get the currently executing AST node of a frame, and other information
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.1.0:../../lang/py-asttokens
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython

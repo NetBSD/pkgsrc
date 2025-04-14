@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/12/29 09:07:53 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/14 10:04:42 adam Exp $
 
 DISTNAME=	inflect-7.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inflect/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jazzband/inflect
 COMMENT=	Correctly generate plurals, ordinals, indefinite articles for English
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=8.5.0:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-typeguard>=4.0.1:../../devel/py-typeguard
