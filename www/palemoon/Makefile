@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/04/12 06:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/14 18:12:49 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PKGNAME=	palemoon-33.6.1
-PKGREVISION=	1
+PKGNAME=	palemoon-33.7.0
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -14,8 +13,9 @@ DISTFILES+=	psutil.tar.gz
 SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PKGVERSION_NOREV}_Release.tar.gz
 
+# the tag for 33.7.0 contains a typo, it should be RB_20250408
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20250310.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20240408.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
@@ -156,7 +156,7 @@ post-install:
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
