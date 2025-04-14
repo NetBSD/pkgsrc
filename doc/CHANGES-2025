@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2628 2025/04/14 05:11:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2629 2025/04/14 05:14:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3446,3 +3446,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-typing-extensions to 4.13.2 [adam 2025-04-14]
 	Updated security/py-nvdlib to 0.8.0 [adam 2025-04-14]
 	Updated security/py-cyclonedx-bom to 5.3.0 [adam 2025-04-14]
+	Updated sysutils/fastfetch to 2.40.4 [vins 2025-04-14]
