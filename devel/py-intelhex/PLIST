@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/04 23:30:30 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/15 15:39:03 adam Exp $
 bin/bin2hex.py
 bin/hex2bin.py
 bin/hex2dump.py
 bin/hexdiff.py
 bin/hexinfo.py
 bin/hexmerge.py
-${PYSITELIB}/intelhex-${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/intelhex-${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/intelhex-${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/intelhex-${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/intelhex/__init__.py
 ${PYSITELIB}/intelhex/__init__.pyc
 ${PYSITELIB}/intelhex/__init__.pyo
