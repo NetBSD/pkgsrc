@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/03/05 10:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/15 05:04:21 adam Exp $
 
 DISTNAME=	OctoPrint-FirmwareCheck-2021.10.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint-FirmwareCheck/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-FirmwareCheck
 COMMENT=	Checks for unsafe or broken printer firmwares
 LICENSE=	gnu-agpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
