@@ -1,0 +1,3 @@
+A set of primitives for easily encrypting data in Django, wrapping the Python
+Cryptography library. Also provided is a drop in replacement for Django's own
+cryptographic primitives, using Cryptography as the backend provider.
