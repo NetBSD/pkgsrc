@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/02/07 22:07:53 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 09:28:17 adam Exp $
 
-DISTNAME=	moto-5.0.28
+DISTNAME=	moto-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/moto/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/spulec/moto
 COMMENT=	Mock-up of the boto library
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.201:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.35.47:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
