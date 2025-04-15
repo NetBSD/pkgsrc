@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/15 15:17:49 adam Exp $
 
 DISTNAME=	pypng-0.20220715.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypng/}
 
@@ -10,11 +11,9 @@ HOMEPAGE=	https://gitlab.com/drj11/pypng
 COMMENT=	Pure Python library for saving and loading PNG images
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in prichunkpng pricolpng priditherpng priforgepng prigreypng \

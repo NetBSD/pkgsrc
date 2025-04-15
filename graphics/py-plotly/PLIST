@@ -1,5 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/22 21:07:08 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/15 15:17:48 adam Exp $
 etc/jupyter/nbconfig/notebook.d/jupyterlab-plotly.json
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_plotly_future_/__init__.py
 ${PYSITELIB}/_plotly_future_/__init__.pyc
 ${PYSITELIB}/_plotly_future_/__init__.pyo
@@ -105,11 +110,6 @@ ${PYSITELIB}/jupyterlab_plotly/labextension/static/third-party-licenses.json
 ${PYSITELIB}/jupyterlab_plotly/nbextension/extension.js
 ${PYSITELIB}/jupyterlab_plotly/nbextension/index.js
 ${PYSITELIB}/jupyterlab_plotly/nbextension/index.js.LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/plotly/__init__.py
 ${PYSITELIB}/plotly/__init__.pyc
 ${PYSITELIB}/plotly/__init__.pyo
