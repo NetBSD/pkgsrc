@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/12/15 19:00:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/15 05:38:03 adam Exp $
 bin/fritzcall-${PYVERSSUFFIX}
 bin/fritzconnection-${PYVERSSUFFIX}
 bin/fritzhomeauto-${PYVERSSUFFIX}
@@ -7,11 +7,11 @@ bin/fritzmonitor-${PYVERSSUFFIX}
 bin/fritzphonebook-${PYVERSSUFFIX}
 bin/fritzstatus-${PYVERSSUFFIX}
 bin/fritzwlan-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fritzconnection/__init__.py
 ${PYSITELIB}/fritzconnection/__init__.pyc

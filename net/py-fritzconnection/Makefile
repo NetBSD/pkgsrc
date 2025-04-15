@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/15 05:38:03 adam Exp $
 
 DISTNAME=	fritzconnection-1.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fritzconnection/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/kbr/fritzconnection
 COMMENT=	Communicate with the AVM FRITZ!Box
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
 
 USE_LANGUAGES=	# none

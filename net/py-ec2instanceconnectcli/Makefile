@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/02/13 09:20:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/15 05:38:03 adam Exp $
 
 DISTNAME=	ec2instanceconnectcli-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/ec2instanceconnectcli/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/aws/aws-ec2-instance-connect-cli
 COMMENT=	AWS EC2 Instance Connect Client
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.12.179:../../net/py-botocore
 
 USE_LANGUAGES=	# none

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/01/08 14:32:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/15 05:38:03 adam Exp $
 
 DISTNAME=	geventhttpclient-2.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geventhttpclient/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/gwik/geventhttpclient
 COMMENT=	HTTP client library for gevent
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13:../../net/py-gevent
