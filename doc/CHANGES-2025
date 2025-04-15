@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2673 2025/04/15 16:47:26 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2674 2025/04/15 19:22:39 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3526,3 +3526,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-arviz to 0.21.0 [adam 2025-04-15]
 	Updated chat/twitch-tui to 2.6.19 [schmonz 2025-04-15]
 	Updated textproc/py-html2text to 2025.4.15 [schmonz 2025-04-15]
+	Updated math/suitesparse to 7.10.2 [ktnb 2025-04-15]
