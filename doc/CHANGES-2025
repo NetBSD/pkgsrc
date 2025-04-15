@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2670 2025/04/15 15:47:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2671 2025/04/15 16:11:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3521,3 +3521,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.3.30 [adam 2025-04-15]
 	Updated comms/py-esptool to 4.8.1 [adam 2025-04-15]
 	Updated graphics/py-qrcode to 8.1 [adam 2025-04-15]
+	Updated devel/py-dm-tree to 0.1.9 [adam 2025-04-15]
+	Updated math/py-xarray to 2025.3.1 [adam 2025-04-15]
+	Updated math/py-arviz to 0.21.0 [adam 2025-04-15]
