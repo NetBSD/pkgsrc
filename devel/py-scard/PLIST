@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 20:15:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/15 05:26:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -76,9 +76,6 @@ ${PYSITELIB}/smartcard/pcsc/PCSCCardConnection.pyo
 ${PYSITELIB}/smartcard/pcsc/PCSCCardRequest.py
 ${PYSITELIB}/smartcard/pcsc/PCSCCardRequest.pyc
 ${PYSITELIB}/smartcard/pcsc/PCSCCardRequest.pyo
-${PYSITELIB}/smartcard/pcsc/PCSCContext.py
-${PYSITELIB}/smartcard/pcsc/PCSCContext.pyc
-${PYSITELIB}/smartcard/pcsc/PCSCContext.pyo
 ${PYSITELIB}/smartcard/pcsc/PCSCExceptions.py
 ${PYSITELIB}/smartcard/pcsc/PCSCExceptions.pyc
 ${PYSITELIB}/smartcard/pcsc/PCSCExceptions.pyo
