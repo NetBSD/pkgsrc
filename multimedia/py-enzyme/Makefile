@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/15 15:49:09 adam Exp $
 
 DISTNAME=	enzyme-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/enzyme/}
 
