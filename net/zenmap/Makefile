@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2025/04/15 20:37:16 kim Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 20:54:46 kim Exp $
 
 .include "../../net/nmap/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/nmap/zenmap/}
+PKGREVISION=	1
 
 COMMENT=	Nmap Security Scanner GUI
 
