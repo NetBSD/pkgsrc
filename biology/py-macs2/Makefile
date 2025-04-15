@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 09:19:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/15 13:03:39 adam Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macs2-2.2.9.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taoliu/}
 GITHUB_PROJECT=	MACS
@@ -14,7 +14,7 @@ COMMENT=	Algorithm for identifying transcription factor binding sites
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 

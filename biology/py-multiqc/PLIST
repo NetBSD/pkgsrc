@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/22 21:41:42 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/15 13:03:39 adam Exp $
 bin/multiqc
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/multiqc/__init__.py
 ${PYSITELIB}/multiqc/__init__.pyc

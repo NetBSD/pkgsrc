@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/03/06 01:19:04 bacon Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/15 13:03:39 adam Exp $
 
 DISTNAME=	multiqc-1.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multiqc/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/multiqc
 COMMENT=	Aggregate bioinformatics analysis reports across samples and tools
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # Use either py-kaleido (not in ports yet) or py-orca + py-psutil
 # kaleido dep choreographer only works with chrome as of 2024-11-24
 DEPENDS+=	${PYPKGPREFIX}-humanize-[0-9]*:../../textproc/py-humanize
@@ -33,6 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../graphics/py-spectra
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-natsort-[0-9]*:../../textproc/py-natsort
+
+PYTHON_SELF_CONFLICT=	yes
 
 # test status as of 1.25.2
 # 44 failed, 46 passed, 357 errors
