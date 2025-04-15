@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2025/03/08 13:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/15 04:48:16 adam Exp $
 
-DISTNAME=	Mezzanine-6.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	mezzanine-6.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://mezzanine.jupo.org/
+HOMEPAGE=	https://github.com/stephenmcd/mezzanine
 COMMENT=	Open source content management platform on Django
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=7:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.5.3:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-bleach>=5:../../www/py-bleach
@@ -31,8 +30,6 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	mezzanine/bin/mezzanine_project.py
 REPLACE_PYTHON+=	mezzanine/project_template/manage.py
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
