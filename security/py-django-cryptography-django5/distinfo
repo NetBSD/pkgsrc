@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/04/15 12:52:00 adam Exp $
+
+BLAKE2s (django_cryptography_django5-2.2.tar.gz) = 9ca9a1386718f1b4fe37de7d2bd238e7ebaacd11fe90f0f13956fbb1dde60d8d
+SHA512 (django_cryptography_django5-2.2.tar.gz) = fcb48b48b6c3a7144ecea7a7637608b4194632e15a342932f3f0341371c5334d0062b547a4a38f670be25bbb50ad15a6b95b0563f2815b835a96c22e72892689
+Size (django_cryptography_django5-2.2.tar.gz) = 33400 bytes
+SHA1 (patch-setup.cfg) = de439d69100488712ed6263c7b105292125c7380
