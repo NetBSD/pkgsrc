@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/15 15:43:15 adam Exp $
 
 DISTNAME=	term-background-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	comms python
 # No source distfile on PyPI
 #MASTER_SITES=	${MASTER_SITE_PYPI:=t/term-background/}
@@ -15,11 +16,9 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/shell-${DISTNAME}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

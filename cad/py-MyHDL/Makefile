@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.35 2024/11/11 07:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/15 15:45:37 adam Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 post-install:
 	${FIND} ${DESTDIR} -name '*.orig' -exec rm -rf '{}' ';'
