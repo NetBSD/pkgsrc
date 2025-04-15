@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/11/11 07:28:39 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 16:10:42 adam Exp $
 
-DISTNAME=	arviz-0.19.0
+DISTNAME=	arviz-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.5.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=60.0.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-xarray>=2022.6.0:../../math/py-xarray
 DEPENDS+=	${PYPKGPREFIX}-xarray-einstats>=0.3:../../math/py-xarray-einstats
