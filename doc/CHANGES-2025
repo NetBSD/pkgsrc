@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2671 2025/04/15 16:11:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2672 2025/04/15 16:25:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3524,3 +3524,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dm-tree to 0.1.9 [adam 2025-04-15]
 	Updated math/py-xarray to 2025.3.1 [adam 2025-04-15]
 	Updated math/py-arviz to 0.21.0 [adam 2025-04-15]
+	Updated chat/twitch-tui to 2.6.19 [schmonz 2025-04-15]
