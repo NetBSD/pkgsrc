@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/15 20:37:16 kim Exp $
 
 .include "../../net/nmap/Makefile.common"
 
@@ -12,7 +12,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/zenmap
 
 WHEEL_NAME=	zenmap-${PKGVERSION_NOREV}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
