@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/05 19:32:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/15 16:31:40 adam Exp $
 bin/theano-cache-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bin/__init__.py
 ${PYSITELIB}/bin/__init__.pyc

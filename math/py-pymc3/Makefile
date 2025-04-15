@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/15 16:31:39 adam Exp $
 
 DISTNAME=	pymc3-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymc3/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/pymc-devs/pymc3
 COMMENT=	Bayesian modeling and probabilistic machine learning
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-arviz>=0.11.0:../../math/py-arviz
 DEPENDS+=	${PYPKGPREFIX}-cachetools>=4.2.1:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-deprecat>0:../../devel/py-deprecat

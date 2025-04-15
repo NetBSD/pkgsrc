@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/01/30 13:47:41 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/15 16:31:38 adam Exp $
 
 DISTNAME=	hmmlearn-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hmmlearn/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/hmmlearn/hmmlearn
 COMMENT=	Algorithms for inference of Hidden Markov Models
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=62:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.16:../../math/py-scikit-learn
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.19:../../math/py-scipy

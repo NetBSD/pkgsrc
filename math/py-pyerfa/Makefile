@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/11/28 13:23:45 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/15 16:31:39 adam Exp $
 
 DISTNAME=	pyerfa-2.0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyerfa/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/liberfa/pyerfa
 COMMENT=	Python wrapper for ERFA library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.19:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.3:../../textproc/py-jinja2

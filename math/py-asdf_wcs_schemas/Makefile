@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/15 16:31:37 adam Exp $
 
 DISTNAME=	asdf_wcs_schemas-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_wcs_schemas/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://asdf-wcs-schemas.readthedocs.io/en/stable
 COMMENT=	ASDF schemas for validating WCS tags
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-asdf>=2.8.0:../../math/py-asdf
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3:../../devel/py-importlib-resources

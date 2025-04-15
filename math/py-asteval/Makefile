@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/01/20 06:08:34 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/15 16:31:37 adam Exp $
 
 DISTNAME=	asteval-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asteval/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/lmfit/asteval
 COMMENT=	Safe, minimalistic expression evaluator using ast module
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

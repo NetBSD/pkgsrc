@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2025/01/06 11:46:08 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/15 16:31:38 adam Exp $
 
 DISTNAME=	numexpr-2.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numexpr/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/pydata/numexpr
 COMMENT=	Numerical expression evaluator for NumPy
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 REPLACE_PYTHON=	numexpr/cpuinfo.py

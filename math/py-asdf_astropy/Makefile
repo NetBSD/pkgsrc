@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/02/13 06:34:08 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/15 16:31:37 adam Exp $
 
 DISTNAME=	asdf_astropy-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_astropy/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://asdf-astropy.readthedocs.io/en/latest/
 COMMENT=	ASDF serialization support for astropy objects
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-asdf>=2.14.4:../../math/py-asdf
 DEPENDS+=	${PYPKGPREFIX}-asdf_coordinates_schemas>=0.3:../../math/py-asdf_coordinates_schemas

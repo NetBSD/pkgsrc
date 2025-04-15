@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2024/11/11 07:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/15 16:31:39 adam Exp $
 
 DISTNAME=	sympy-1.13.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sympy/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://www.sympy.org/
 COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mpmath>=1.1.0:../../math/py-mpmath
 
 USE_LANGUAGES=	# none
