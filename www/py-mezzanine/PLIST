@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/21 19:44:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/15 04:48:16 adam Exp $
 bin/mezzanine-project-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mezzanine/__init__.py
 ${PYSITELIB}/mezzanine/__init__.pyc
