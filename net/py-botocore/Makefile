@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2025/02/04 08:05:08 adam Exp $
+# $NetBSD: Makefile,v 1.74 2025/04/15 07:48:38 adam Exp $
 
-DISTNAME=	botocore-1.36.12
+DISTNAME=	botocore-1.37.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/boto/botocore
 COMMENT=	Low-level interface to a growing number of Amazon Web Services
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.2.1:../../www/py-urllib3
