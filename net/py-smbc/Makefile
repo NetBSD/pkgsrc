@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/01/14 16:46:15 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/15 09:51:04 adam Exp $
 
 DISTNAME=	pysmbc-1.0.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmbc/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/hamano/pysmbc
 COMMENT=	Python bindings for libsmbclient
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 #TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_TOOLS+=	pkg-config
