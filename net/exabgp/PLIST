@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/09/28 11:53:52 he Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/15 07:20:37 adam Exp $
 bin/exabgp
 bin/exabgp-cli
 bin/exabgp-healthcheck
@@ -37,11 +37,11 @@ etc/exabgp/examples/syslog-1.py
 etc/exabgp/examples/watchdog-1.pl
 etc/exabgp/examples/watchdog-1.sh
 etc/exabgp/examples/watchdog.run
-${PYSITELIB}/${WHEEL_INFODIR}/LICENCE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/exabgp/__init__.py
 ${PYSITELIB}/exabgp/__init__.pyc
@@ -907,12 +907,6 @@ ${PYSITELIB}/exabgp/vendoring/__init__.pyo
 ${PYSITELIB}/exabgp/vendoring/bitstring.py
 ${PYSITELIB}/exabgp/vendoring/bitstring.pyc
 ${PYSITELIB}/exabgp/vendoring/bitstring.pyo
-${PYSITELIB}/exabgp/vendoring/cmd2.py
-${PYSITELIB}/exabgp/vendoring/cmd2.pyc
-${PYSITELIB}/exabgp/vendoring/cmd2.pyo
-${PYSITELIB}/exabgp/vendoring/counter.py
-${PYSITELIB}/exabgp/vendoring/counter.pyc
-${PYSITELIB}/exabgp/vendoring/counter.pyo
 ${PYSITELIB}/exabgp/vendoring/docopt.py
 ${PYSITELIB}/exabgp/vendoring/docopt.pyc
 ${PYSITELIB}/exabgp/vendoring/docopt.pyo
@@ -934,9 +928,6 @@ ${PYSITELIB}/exabgp/vendoring/ordereddict.pyo
 ${PYSITELIB}/exabgp/vendoring/profiler.py
 ${PYSITELIB}/exabgp/vendoring/profiler.pyc
 ${PYSITELIB}/exabgp/vendoring/profiler.pyo
-${PYSITELIB}/exabgp/vendoring/pyparsing.py
-${PYSITELIB}/exabgp/vendoring/pyparsing.pyc
-${PYSITELIB}/exabgp/vendoring/pyparsing.pyo
 ${PYSITELIB}/exabgp/vendoring/six.py
 ${PYSITELIB}/exabgp/vendoring/six.pyc
 ${PYSITELIB}/exabgp/vendoring/six.pyo
