@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/02/07 07:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 16:31:38 adam Exp $
 
 DISTNAME=	jplephem-2.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jplephem/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/brandon-rhodes/python-jplephem
 COMMENT=	Python module to load a JPL ephemeris for dynamical calculations
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
 
 USE_LANGUAGES=	# none

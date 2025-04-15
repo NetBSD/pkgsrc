@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 10:12:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/15 16:31:38 adam Exp $
 
 DISTNAME=	astroML-1.0.2.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroML/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.astroml.org/
 COMMENT=	Astropy affiliated module for machine learning and data mining
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-astropy>=3.0:../../math/py-astropy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=2.1.1:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.13:../../math/py-numpy

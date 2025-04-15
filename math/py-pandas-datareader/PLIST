@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/05 23:25:31 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+@comment $NetBSD: PLIST,v 1.8 2025/04/15 16:31:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pandas_datareader/__init__.py
 ${PYSITELIB}/pandas_datareader/__init__.pyc

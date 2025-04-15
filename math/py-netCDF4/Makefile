@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2025/03/05 10:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/15 16:31:38 adam Exp $
 
 DISTNAME=	netcdf4-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cdf/CDF/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/Unidata/netcdf4-python
 COMMENT=	Object-oriented python interface to netCDF version 4
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cftime-[0-9]*:../../time/py-cftime
 
