@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/03/14 08:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/15 15:27:29 adam Exp $
 
-DISTNAME=	tifffile-2025.3.13
+DISTNAME=	tifffile-2025.3.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tifffile/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.lfd.uci.edu/~gohlke/
 COMMENT=	Read and write TIFF(r) files
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec-[0-9]*:../../sysutils/py-fsspec
 
