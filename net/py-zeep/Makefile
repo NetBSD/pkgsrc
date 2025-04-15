@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/15 09:51:04 adam Exp $
 
 DISTNAME=	zeep-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://docs.python-zeep.org/
 COMMENT=	Fast and modern Python SOAP client
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-isodate>=0.5.4:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.0:../../textproc/py-lxml
