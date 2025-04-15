@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2669 2025/04/15 15:27:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2670 2025/04/15 15:47:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3519,3 +3519,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-sql-explorer to 5.3 [adam 2025-04-15]
 	Updated math/py-numpy to 2.2.4 [adam 2025-04-15]
 	Updated graphics/py-tifffile to 2025.3.30 [adam 2025-04-15]
+	Updated comms/py-esptool to 4.8.1 [adam 2025-04-15]
+	Updated graphics/py-qrcode to 8.1 [adam 2025-04-15]
