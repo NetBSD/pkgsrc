@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/15 08:15:58 adam Exp $
 
 DISTNAME=	irc-20.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/irc/irclib/}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/irc/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://python-irclib.sourceforge.net/
 COMMENT=	Internet Relay Chat (IRC) protocol client library
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-jaraco.collections>0:../../devel/py-jaraco.collections
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=1.20:../../devel/py-jaraco.functools
