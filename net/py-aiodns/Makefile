@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/14 17:05:26 kim Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/15 05:38:02 adam Exp $
 
 DISTNAME=	aiodns-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cares>=4:../../net/py-cares
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
