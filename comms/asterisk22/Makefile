@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/01/17 22:39:53 gavan Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/15 15:35:01 manu Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -6,7 +6,7 @@
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
 DISTNAME=	asterisk-22.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -148,6 +148,12 @@ SITES.pjproject-${PJPROJ_VERSION}.md5= \
 DISTFILES+=	pjproject-${PJPROJ_VERSION}.tar.bz2 pjproject-${PJPROJ_VERSION}.md5
 ALL_ENV+=	EXTERNALS_CACHE_DIR=${DISTDIR}/${DIST_SUBDIR}
 
+# Plain old chan_sip
+CHAN_SIP_TAG=		86d62097332337da942fa4dd6405f136ae245be3
+DISTFILES+=		${CHAN_SIP_TAG}
+SITES.${CHAN_SIP_TAG}=	${MASTER_SITE_GITHUB:=InterLinked1}/chan_sip/tarball/
+CHAN_SIP_DIR=		${WRKDIR}/InterLinked1-chan_sip-86d6209
+
 # Override default paths in config files
 SUBST_CLASSES+=		configs
 SUBST_STAGE.configs=	pre-configure
@@ -239,6 +245,12 @@ CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_
 .endif
 
 PTHREAD_OPTS+=	require native
+
+post-extract:
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/${CHAN_SIP_TAG} -C ${WRKDIR}
+	${CP} -r ${CHAN_SIP_DIR}/channels/sip ${WRKSRC}/channels
+	${CP} ${CHAN_SIP_DIR}/channels/chan_sip.c ${WRKSRC}/channels
+	${CP} ${CHAN_SIP_DIR}/configs/samples/*.sample ${WRKSRC}/configs/samples
 
 .if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
 post-patch:
