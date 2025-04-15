@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2024/09/21 13:19:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/15 15:42:11 adam Exp $
 bin/esp_rfc2217_server.py
 bin/espefuse.py
 bin/espsecure.py
 bin/esptool.py
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/esp_rfc2217_server/__init__.py
 ${PYSITELIB}/esp_rfc2217_server/__init__.pyc
 ${PYSITELIB}/esp_rfc2217_server/__init__.pyo
@@ -260,11 +265,6 @@ ${PYSITELIB}/espsecure/esp_hsm_sign/__init__.pyo
 ${PYSITELIB}/espsecure/esp_hsm_sign/exceptions.py
 ${PYSITELIB}/espsecure/esp_hsm_sign/exceptions.pyc
 ${PYSITELIB}/espsecure/esp_hsm_sign/exceptions.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/esptool/__init__.py
 ${PYSITELIB}/esptool/__init__.pyc
 ${PYSITELIB}/esptool/__init__.pyo
