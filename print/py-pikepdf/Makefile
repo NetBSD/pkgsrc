@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/02/07 13:29:49 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/15 05:25:24 adam Exp $
 
-DISTNAME=	pikepdf-9.5.2
+DISTNAME=	pikepdf-9.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pikepdf/pikepdf
 COMMENT=	Read and write PDFs with Python, powered by qpdf
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-deprecated-[0-9]*:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml
