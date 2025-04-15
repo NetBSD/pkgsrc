@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2024/11/11 07:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/15 05:38:02 adam Exp $
 
 DISTNAME=	celery-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://docs.celeryproject.org/
 COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-billiard>=4.2.0:../../parallel/py-billiard
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.3.0:../../devel/py-click-didyoumean
@@ -32,8 +33,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 TEST_DEPENDS+=	${PYPKGPREFIX}-mongo-[0-9]*:../../databases/py-mongo
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
