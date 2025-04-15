@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/06/04 10:43:20 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/04/15 12:53:01 adam Exp $
 
-BLAKE2s (django_sql_explorer-4.3.tar.gz) = 09758c7c51438d98d3114d13f4f7658f08dc24472962ccfc78b44a125dc3dffc
-SHA512 (django_sql_explorer-4.3.tar.gz) = 16d599bbd0de71963de5d69077c1bebc35e8dcc8ac555c820aba1b4c3d81fee773a596be2f1ddf9dbbccc0ad75b24791f2730f1b2ec065e7476d024e5724d07a
-Size (django_sql_explorer-4.3.tar.gz) = 681672 bytes
+BLAKE2s (django_sql_explorer-5.3.tar.gz) = 1ae16a40e77341f3de0949a87b049e77974848b7aaee10ccc03e40fdd66d3580
+SHA512 (django_sql_explorer-5.3.tar.gz) = 60c22412f346c3198ce77ac8a2f8eed856bea89a54690600e68c77913784358fbf3eab60dc42cf8cab2897855f1147a13f00babc506ab42916b71b9a2498e3ec
+Size (django_sql_explorer-5.3.tar.gz) = 910011 bytes
