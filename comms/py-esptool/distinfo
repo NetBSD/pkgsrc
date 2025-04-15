@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/09/21 13:19:49 gdt Exp $
+$NetBSD: distinfo,v 1.13 2025/04/15 15:42:11 adam Exp $
 
-BLAKE2s (esptool-4.8.0.tar.gz) = 120a360cd699ebf85b51d44eda8858a85e475edc1dfce97d370b7f5d891696ab
-SHA512 (esptool-4.8.0.tar.gz) = d4c34c73a2d942f29f3ac7072afd4f2f2d4c0e5c42d898f32f753090d6c8f899e282c2e807767e484669d39ea859aedf56d063d6e639b67d4b3b1c39cf87103d
-Size (esptool-4.8.0.tar.gz) = 409538 bytes
+BLAKE2s (esptool-4.8.1.tar.gz) = 202045bc330c4cd76c2d4e26fcb1fb9211cc2ece7899f9598bb8bcfe4dabe307
+SHA512 (esptool-4.8.1.tar.gz) = 584d73d2ca501194db782cdb1bc3655e8f7655c4dcbf461877900dc5e0f85934b97712ce9be908d8ee44d8bcca233c6cfc91e63e54305bc9bc08d565eb515b5a
+Size (esptool-4.8.1.tar.gz) = 409512 bytes
