@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:36 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/15 15:17:48 adam Exp $
 
 DISTNAME=	pygal-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygal/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://www.pygal.org/
 COMMENT=	Python SVG graph plotting library
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 # png
 DEPENDS+=	${PYPKGPREFIX}-cairosvg-[0-9]*:../../converters/py-cairosvg
@@ -23,8 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 3.0.4
 # 4414 passed, 8710 warnings

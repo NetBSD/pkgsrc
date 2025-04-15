@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2024/08/19 09:20:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/15 15:17:48 adam Exp $
 bin/imageio_download_bin-${PYVERSSUFFIX}
 bin/imageio_remove_bin-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/imageio/__init__.py
 ${PYSITELIB}/imageio/__init__.pyc
