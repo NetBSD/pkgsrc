@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/15 05:38:03 adam Exp $
 
 DISTNAME=	cymruwhois-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} cymruwhois cymruwhois${PYVERSSUFFIX} || ${TRUE}
