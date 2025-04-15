@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2023/12/31 21:20:57 wiz Exp $
+$NetBSD: distinfo,v 1.36 2025/04/15 12:31:30 tnn Exp $
 
 BLAKE2s (aspell-0.60.8.1.tar.gz) = f1adcb82ff9069159ba4347a385d550875e63cce02fcb4ab32be8477f1501a1c
 SHA512 (aspell-0.60.8.1.tar.gz) = 80fa9d7f5f4b8bf66388825ae28403713a2e3eda81fc31f2f452c3e2fe8349cd0fa8f0e4d0d3f8cffe215817229af25aa7be2dba358cb9cdc97e9d2834ba5ca7
@@ -13,5 +13,6 @@ SHA1 (patch-ai) = 4fbb25e3f09aa97bdcb12f325ef615e5a6f9f626
 SHA1 (patch-an) = 687cf83ad9be083da0a53e7a7b5cbaefe88f63a5
 SHA1 (patch-interfaces_cc_aspell.h) = f824d0bb1e3c55faaf6ecae10b44169d91b41517
 SHA1 (patch-modules_filter_modes_perl.amf) = b41aec9fcd8f9d4aef3e69622425c243279687eb
+SHA1 (patch-modules_speller_default_vector__hash-t.hpp) = ce1c3829b683a38ba912ee5fde489790fa51aac4
 SHA1 (patch-prog_aspell.cpp) = 9bc6537cd0b9040fef56be202f0c5f6ab64fdf85
 SHA1 (patch-prog_checker__string.hpp) = b070e776a0998f17e4ff30cd004179585f70f3df
