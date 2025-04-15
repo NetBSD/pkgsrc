@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2660 2025/04/15 04:37:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2661 2025/04/15 04:41:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3499,3 +3499,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-ipywidgets to 8.1.6 [adam 2025-04-14]
 	Updated devel/py-limits to 4.7.3 [adam 2025-04-14]
 	Updated www/py-flask-limiter to 3.12 [adam 2025-04-14]
+	Updated www/py-publicsuffixlist to 1.0.2.20250412 [adam 2025-04-15]
+	Updated www/py-uvicorn to 0.34.1 [adam 2025-04-15]
