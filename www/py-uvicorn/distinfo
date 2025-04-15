@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2024/12/31 09:56:42 adam Exp $
+$NetBSD: distinfo,v 1.43 2025/04/15 04:41:26 adam Exp $
 
-BLAKE2s (uvicorn-0.34.0.tar.gz) = 33e2cf174f597efd747706789954768dbc57ac2a1a1bfa8a8adccbf85933d6e9
-SHA512 (uvicorn-0.34.0.tar.gz) = 9d6998bb8f8a9ed623dca1ea7849826a979d185496cfda1dd3fa61493c5cfc5411e42692d4f6463ab0fd9db9bf3475fe1e21694013c1d66f408760b0983cf001
-Size (uvicorn-0.34.0.tar.gz) = 76568 bytes
+BLAKE2s (uvicorn-0.34.1.tar.gz) = 53f8763f62ef8cfa8d90924dc80d2c20d7238bc0f1bd75d1338075757219079c
+SHA512 (uvicorn-0.34.1.tar.gz) = 457dffbc0400672f607332ad83a2e38b3b8f9d5474c806d54158bbba423beca5ae896b54018730ff1405de66cae8b9e68f7d5b78857a0c59de12bb11c7d71b87
+Size (uvicorn-0.34.1.tar.gz) = 76755 bytes
