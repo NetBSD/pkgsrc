@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/15 16:31:39 adam Exp $
 
 DISTNAME=	sklearn-pandas-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sklearn-pandas/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/paulgb/sklearn-pandas
 COMMENT=	Pandas integration with sklearn
 LICENSE=	zlib AND 2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.1:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.4:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.23.0:../../math/py-scikit-learn
