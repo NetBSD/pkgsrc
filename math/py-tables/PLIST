@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2024/10/23 22:55:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/15 16:31:40 adam Exp $
 bin/pt2to3-${PYVERSSUFFIX}
 bin/ptdump-${PYVERSSUFFIX}
 bin/ptrepack-${PYVERSSUFFIX}
 bin/pttree-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc

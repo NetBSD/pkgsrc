@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/01/05 11:10:48 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/15 16:31:39 adam Exp $
 
 DISTNAME=	statsmodels-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/statsmodels/}
 
@@ -11,7 +12,7 @@ COMMENT=	Statistical computations and models for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.33:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.0.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1.1:../../math/py-pandas
