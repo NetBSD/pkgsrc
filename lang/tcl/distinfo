@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.87 2025/01/25 21:29:25 adam Exp $
+$NetBSD: distinfo,v 1.87.2.1 2025/04/15 18:19:07 bsiegert Exp $
 
 BLAKE2s (tcl8.6.16-src.tar.gz) = ccc62d3aa48e249864864b5d89061575bca88257cc30b3916d02cb7e455b65af
 SHA512 (tcl8.6.16-src.tar.gz) = 434c92f8181fb8dca6bc065b0f1f5078779086f19adf008818c90a3108596c63465ef43e9f3c1cfb3d4151a9de244d0bf0e6ee5b40e714b1ddca4a78eb43050b
@@ -18,7 +18,7 @@ SHA1 (patch-pkgs_thread2.8.11_configure) = 8a286b6400493a6dc3e33c3905390ab80d552
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 70d1042c1f4743052c5fa191fa7c4732a08e28a2
 SHA1 (patch-unix_Makefile.in) = e6ecbc7db3934ef4d7f0f24dd52c88ca0873289e
-SHA1 (patch-unix_configure) = 085be79d73fa74e70838516bd646d3e1151e652c
+SHA1 (patch-unix_configure) = b7af46a7870b6acad4ba79a5bc75fbd45edef949
 SHA1 (patch-unix_tclConfig.sh.in) = 341ac4f1bbfb29551dea87ade98b3b7b59652a31
 SHA1 (patch-unix_tclUnixCompat.c) = c5c124b5ccd240cbd34a83fd165c3dea208381cd
 SHA1 (patch-unix_tclUnixFCmd.c) = e715d9419a36a8414355252bb3da0ef48b07fe4f
