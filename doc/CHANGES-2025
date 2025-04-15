@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2659 2025/04/14 19:24:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2660 2025/04/15 04:37:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3497,3 +3497,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-djangocms-text-ckeditor to 5.1.7 [adam 2025-04-14]
 	Updated www/py-widgetsnbextension to 4.0.14 [adam 2025-04-14]
 	Updated www/py-ipywidgets to 8.1.6 [adam 2025-04-14]
+	Updated devel/py-limits to 4.7.3 [adam 2025-04-14]
+	Updated www/py-flask-limiter to 3.12 [adam 2025-04-14]
