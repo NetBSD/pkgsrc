@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/11/16 10:24:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/15 09:25:24 adam Exp $
 
-DISTNAME=	junos-eznc-2.7.2
+DISTNAME=	junos-eznc-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Juniper/py-junos-eznc
 COMMENT=	Python library to manage JunOS devices
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-ncclient>=0.6.15:../../net/py-ncclient
