@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/17 16:00:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/15 15:27:29 adam Exp $
 bin/lsm2bin-${PYVERSSUFFIX}
 bin/tiff2fsspec-${PYVERSSUFFIX}
 bin/tiffcomment-${PYVERSSUFFIX}
 bin/tifffile-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/tifffile/__init__.py
 ${PYSITELIB}/tifffile/__init__.pyc
