@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2025/02/15 20:59:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.54 2025/04/15 15:25:12 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -30,9 +30,11 @@ ${PYSITELIB}/numpy/_core/__init__.pyi
 ${PYSITELIB}/numpy/_core/__init__.pyo
 ${PYSITELIB}/numpy/_core/_add_newdocs.py
 ${PYSITELIB}/numpy/_core/_add_newdocs.pyc
+${PYSITELIB}/numpy/_core/_add_newdocs.pyi
 ${PYSITELIB}/numpy/_core/_add_newdocs.pyo
 ${PYSITELIB}/numpy/_core/_add_newdocs_scalars.py
 ${PYSITELIB}/numpy/_core/_add_newdocs_scalars.pyc
+${PYSITELIB}/numpy/_core/_add_newdocs_scalars.pyi
 ${PYSITELIB}/numpy/_core/_add_newdocs_scalars.pyo
 ${PYSITELIB}/numpy/_core/_asarray.py
 ${PYSITELIB}/numpy/_core/_asarray.pyc
@@ -40,12 +42,15 @@ ${PYSITELIB}/numpy/_core/_asarray.pyi
 ${PYSITELIB}/numpy/_core/_asarray.pyo
 ${PYSITELIB}/numpy/_core/_dtype.py
 ${PYSITELIB}/numpy/_core/_dtype.pyc
+${PYSITELIB}/numpy/_core/_dtype.pyi
 ${PYSITELIB}/numpy/_core/_dtype.pyo
 ${PYSITELIB}/numpy/_core/_dtype_ctypes.py
 ${PYSITELIB}/numpy/_core/_dtype_ctypes.pyc
+${PYSITELIB}/numpy/_core/_dtype_ctypes.pyi
 ${PYSITELIB}/numpy/_core/_dtype_ctypes.pyo
 ${PYSITELIB}/numpy/_core/_exceptions.py
 ${PYSITELIB}/numpy/_core/_exceptions.pyc
+${PYSITELIB}/numpy/_core/_exceptions.pyi
 ${PYSITELIB}/numpy/_core/_exceptions.pyo
 ${PYSITELIB}/numpy/_core/_internal.py
 ${PYSITELIB}/numpy/_core/_internal.pyc
@@ -53,17 +58,21 @@ ${PYSITELIB}/numpy/_core/_internal.pyi
 ${PYSITELIB}/numpy/_core/_internal.pyo
 ${PYSITELIB}/numpy/_core/_machar.py
 ${PYSITELIB}/numpy/_core/_machar.pyc
+${PYSITELIB}/numpy/_core/_machar.pyi
 ${PYSITELIB}/numpy/_core/_machar.pyo
 ${PYSITELIB}/numpy/_core/_methods.py
 ${PYSITELIB}/numpy/_core/_methods.pyc
+${PYSITELIB}/numpy/_core/_methods.pyi
 ${PYSITELIB}/numpy/_core/_methods.pyo
 ${PYSITELIB}/numpy/_core/_multiarray_tests.so
 ${PYSITELIB}/numpy/_core/_multiarray_umath.so
 ${PYSITELIB}/numpy/_core/_operand_flag_tests.so
 ${PYSITELIB}/numpy/_core/_rational_tests.so
+${PYSITELIB}/numpy/_core/_simd.pyi
 ${PYSITELIB}/numpy/_core/_simd.so
 ${PYSITELIB}/numpy/_core/_string_helpers.py
 ${PYSITELIB}/numpy/_core/_string_helpers.pyc
+${PYSITELIB}/numpy/_core/_string_helpers.pyi
 ${PYSITELIB}/numpy/_core/_string_helpers.pyo
 ${PYSITELIB}/numpy/_core/_struct_ufunc_tests.so
 ${PYSITELIB}/numpy/_core/_type_aliases.py
@@ -154,9 +163,11 @@ ${PYSITELIB}/numpy/_core/numerictypes.pyi
 ${PYSITELIB}/numpy/_core/numerictypes.pyo
 ${PYSITELIB}/numpy/_core/overrides.py
 ${PYSITELIB}/numpy/_core/overrides.pyc
+${PYSITELIB}/numpy/_core/overrides.pyi
 ${PYSITELIB}/numpy/_core/overrides.pyo
 ${PYSITELIB}/numpy/_core/printoptions.py
 ${PYSITELIB}/numpy/_core/printoptions.pyc
+${PYSITELIB}/numpy/_core/printoptions.pyi
 ${PYSITELIB}/numpy/_core/printoptions.pyo
 ${PYSITELIB}/numpy/_core/records.py
 ${PYSITELIB}/numpy/_core/records.pyc
@@ -409,6 +420,7 @@ ${PYSITELIB}/numpy/_core/tests/test_unicode.pyc
 ${PYSITELIB}/numpy/_core/tests/test_unicode.pyo
 ${PYSITELIB}/numpy/_core/umath.py
 ${PYSITELIB}/numpy/_core/umath.pyc
+${PYSITELIB}/numpy/_core/umath.pyi
 ${PYSITELIB}/numpy/_core/umath.pyo
 ${PYSITELIB}/numpy/_distributor_init.py
 ${PYSITELIB}/numpy/_distributor_init.pyc
@@ -424,9 +436,11 @@ ${PYSITELIB}/numpy/_globals.pyi
 ${PYSITELIB}/numpy/_globals.pyo
 ${PYSITELIB}/numpy/_pyinstaller/__init__.py
 ${PYSITELIB}/numpy/_pyinstaller/__init__.pyc
+${PYSITELIB}/numpy/_pyinstaller/__init__.pyi
 ${PYSITELIB}/numpy/_pyinstaller/__init__.pyo
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.py
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.pyc
+${PYSITELIB}/numpy/_pyinstaller/hook-numpy.pyi
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.pyo
 ${PYSITELIB}/numpy/_pyinstaller/tests/__init__.py
 ${PYSITELIB}/numpy/_pyinstaller/tests/__init__.pyc
@@ -481,15 +495,19 @@ ${PYSITELIB}/numpy/_typing/_ufunc.pyi
 ${PYSITELIB}/numpy/_typing/_ufunc.pyo
 ${PYSITELIB}/numpy/_utils/__init__.py
 ${PYSITELIB}/numpy/_utils/__init__.pyc
+${PYSITELIB}/numpy/_utils/__init__.pyi
 ${PYSITELIB}/numpy/_utils/__init__.pyo
 ${PYSITELIB}/numpy/_utils/_convertions.py
 ${PYSITELIB}/numpy/_utils/_convertions.pyc
+${PYSITELIB}/numpy/_utils/_convertions.pyi
 ${PYSITELIB}/numpy/_utils/_convertions.pyo
 ${PYSITELIB}/numpy/_utils/_inspect.py
 ${PYSITELIB}/numpy/_utils/_inspect.pyc
+${PYSITELIB}/numpy/_utils/_inspect.pyi
 ${PYSITELIB}/numpy/_utils/_inspect.pyo
 ${PYSITELIB}/numpy/_utils/_pep440.py
 ${PYSITELIB}/numpy/_utils/_pep440.pyc
+${PYSITELIB}/numpy/_utils/_pep440.pyi
 ${PYSITELIB}/numpy/_utils/_pep440.pyo
 ${PYSITELIB}/numpy/char/__init__.py
 ${PYSITELIB}/numpy/char/__init__.pyc
@@ -513,9 +531,11 @@ ${PYSITELIB}/numpy/core/__init__.pyi
 ${PYSITELIB}/numpy/core/__init__.pyo
 ${PYSITELIB}/numpy/core/_dtype.py
 ${PYSITELIB}/numpy/core/_dtype.pyc
+${PYSITELIB}/numpy/core/_dtype.pyi
 ${PYSITELIB}/numpy/core/_dtype.pyo
 ${PYSITELIB}/numpy/core/_dtype_ctypes.py
 ${PYSITELIB}/numpy/core/_dtype_ctypes.pyc
+${PYSITELIB}/numpy/core/_dtype_ctypes.pyi
 ${PYSITELIB}/numpy/core/_dtype_ctypes.pyo
 ${PYSITELIB}/numpy/core/_internal.py
 ${PYSITELIB}/numpy/core/_internal.pyc
@@ -555,6 +575,7 @@ ${PYSITELIB}/numpy/core/numerictypes.pyc
 ${PYSITELIB}/numpy/core/numerictypes.pyo
 ${PYSITELIB}/numpy/core/overrides.py
 ${PYSITELIB}/numpy/core/overrides.pyc
+${PYSITELIB}/numpy/core/overrides.pyi
 ${PYSITELIB}/numpy/core/overrides.pyo
 ${PYSITELIB}/numpy/core/records.py
 ${PYSITELIB}/numpy/core/records.pyc
@@ -1147,6 +1168,7 @@ ${PYSITELIB}/numpy/fft/_pocketfft.pyo
 ${PYSITELIB}/numpy/fft/_pocketfft_umath.so
 ${PYSITELIB}/numpy/fft/helper.py
 ${PYSITELIB}/numpy/fft/helper.pyc
+${PYSITELIB}/numpy/fft/helper.pyi
 ${PYSITELIB}/numpy/fft/helper.pyo
 ${PYSITELIB}/numpy/fft/tests/__init__.py
 ${PYSITELIB}/numpy/fft/tests/__init__.pyc
@@ -1374,10 +1396,13 @@ ${PYSITELIB}/numpy/linalg/_linalg.py
 ${PYSITELIB}/numpy/linalg/_linalg.pyc
 ${PYSITELIB}/numpy/linalg/_linalg.pyi
 ${PYSITELIB}/numpy/linalg/_linalg.pyo
+${PYSITELIB}/numpy/linalg/_umath_linalg.pyi
 ${PYSITELIB}/numpy/linalg/_umath_linalg.so
+${PYSITELIB}/numpy/linalg/lapack_lite.pyi
 ${PYSITELIB}/numpy/linalg/lapack_lite.so
 ${PYSITELIB}/numpy/linalg/linalg.py
 ${PYSITELIB}/numpy/linalg/linalg.pyc
+${PYSITELIB}/numpy/linalg/linalg.pyi
 ${PYSITELIB}/numpy/linalg/linalg.pyo
 ${PYSITELIB}/numpy/linalg/tests/__init__.py
 ${PYSITELIB}/numpy/linalg/tests/__init__.pyc
@@ -1585,6 +1610,7 @@ ${PYSITELIB}/numpy/random/_philox.pyi
 ${PYSITELIB}/numpy/random/_philox.so
 ${PYSITELIB}/numpy/random/_pickle.py
 ${PYSITELIB}/numpy/random/_pickle.pyc
+${PYSITELIB}/numpy/random/_pickle.pyi
 ${PYSITELIB}/numpy/random/_pickle.pyo
 ${PYSITELIB}/numpy/random/_sfc64.pyi
 ${PYSITELIB}/numpy/random/_sfc64.so
