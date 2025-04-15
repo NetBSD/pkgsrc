@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/22 13:07:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/15 04:39:41 adam Exp $
 bin/publicsuffixlist-download-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/publicsuffixlist/__init__.py
 ${PYSITELIB}/publicsuffixlist/__init__.pyc
