@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/01/20 06:12:16 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/15 15:17:48 adam Exp $
 
 DISTNAME=	imageio-2.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imageio/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://imageio.readthedocs.io/
 COMMENT=	Python library to read and write images
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.3.2:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec-[0-9]*:../../sysutils/py-fsspec

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/02/26 08:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 15:17:48 adam Exp $
 
 DISTNAME=	matplotlib-venn-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib-venn/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/konstantint/matplotlib-venn
 COMMENT=	Routines for plotting area-weighted venn diagrams
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy

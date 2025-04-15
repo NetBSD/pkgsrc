@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/03/05 10:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/15 15:17:49 adam Exp $
 
 DISTNAME=	Wand-0.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Wand/}
 
@@ -11,10 +11,8 @@ HOMEPAGE=	https://docs.wand-py.org/
 COMMENT=	Ctypes-based simple ImageMagick binding for Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
-
-USE_LANGUAGES=	c
 
 WHEEL_NAME=	${DISTNAME:tl}
 
