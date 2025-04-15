@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/04/11 22:11:30 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/15 08:15:58 adam Exp $
 
 DISTNAME=	magic-wormhole-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
@@ -12,7 +12,7 @@ COMMENT=	Securely transfer data between computers
 LICENSE=	mit
 
 # pyproject.toml
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64.0.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # setup.py extras_requires.build
 # twine: for PyPi

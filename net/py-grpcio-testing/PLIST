@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/02 12:46:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/15 08:15:58 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/grpc_testing/__init__.py
 ${PYSITELIB}/grpc_testing/__init__.pyc
 ${PYSITELIB}/grpc_testing/__init__.pyo
@@ -50,8 +55,3 @@ ${PYSITELIB}/grpc_testing/_server/_servicer_context.pyo
 ${PYSITELIB}/grpc_testing/_time.py
 ${PYSITELIB}/grpc_testing/_time.pyc
 ${PYSITELIB}/grpc_testing/_time.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/09/18 09:13:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/15 08:15:58 adam Exp $
 bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
 bin/GetADComputers-${PYVERSSUFFIX}.py
@@ -61,10 +61,10 @@ bin/tstool-${PYVERSSUFFIX}.py
 bin/wmiexec-${PYVERSSUFFIX}.py
 bin/wmipersist-${PYVERSSUFFIX}.py
 bin/wmiquery-${PYVERSSUFFIX}.py
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/impacket/Dot11Crypto.py
 ${PYSITELIB}/impacket/Dot11Crypto.pyc

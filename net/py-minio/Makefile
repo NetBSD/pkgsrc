@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/01/20 16:00:09 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/15 08:15:59 adam Exp $
 
 DISTNAME=	minio-7.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minio/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/minio/minio-py
 COMMENT=	MinIO Python SDK for Amazon S3 Compatible Cloud Storage
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-argon2-cffi-[0-9]*:../../security/py-argon2-cffi
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome

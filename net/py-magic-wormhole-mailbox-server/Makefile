@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/04/11 22:21:06 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/15 08:15:59 adam Exp $
 
 DISTNAME=	magic-wormhole-mailbox-server-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole-mailbox-server/}
 
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-twisted>=17.5.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=0.14.1:../../www/py-autobahn
 # Uses pkg_resources (which is deprecated).  wheel.mk lacks support
 # for declaring this with a variable, because it's now rare.
-DEPENDS+=       ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=       ${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # setup.py extras_requires dev
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
