@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.6 2025/04/14 13:07:13 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.7 2025/04/15 18:21:06 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -28,3 +28,7 @@ www/firefox115-l10n: dependent update
 
 Pullup ticket #6958 - requested by wiz
 lang/perl5: Security fix
+
+Pullup ticket #6959 - requested by he
+lang/tcl: build fix
+
