@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/25 06:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/16 20:43:41 adam Exp $
 
-DISTNAME=	freecell-solver-5.14.0
-PKGREVISION=	6
+DISTNAME=	freecell-solver-6.12.0
 CATEGORIES=	games
 MASTER_SITES=	https://fc-solve.shlomifish.org/downloads/fc-solve/
 EXTRACT_SUFX=	.tar.xz
@@ -11,20 +10,18 @@ HOMEPAGE=	https://fc-solve.shlomifish.org/
 COMMENT=	Solves layouts of Freecell and similar variants of Card Solitaire
 LICENSE=	mit
 
-USE_TOOLS+=	gmake perl
-USE_CMAKE=	yes
+TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
+DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
+DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
+DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
+
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake perl
 
 CMAKE_CONFIGURE_ARGS+=	-DFCS_WITH_TEST_SUITE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_STATIC_LIBRARY=OFF
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
-DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
-DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
-DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
-DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 
 PKGCONFIG_OVERRIDE+=	libfreecell-solver.pc.in
 
@@ -45,6 +42,7 @@ SUBST_SED.man=		-e 's:share/man:man:'
 .include "../../devel/gmp/buildlink3.mk"
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
