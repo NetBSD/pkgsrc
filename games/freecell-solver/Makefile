@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/04/16 20:43:41 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/16 20:54:20 adam Exp $
 
 DISTNAME=	freecell-solver-6.12.0
 CATEGORIES=	games
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
 DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
