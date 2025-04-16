@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/04/13 08:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/04/16 08:54:14 abs Exp $
 
 DISTNAME=	pillow-11.2.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
@@ -26,6 +27,7 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 # 2 failed, 4738 passed, 211 skipped, 3 xfailed
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/libavif/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libimagequant/buildlink3.mk"
