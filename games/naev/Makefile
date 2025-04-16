@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/02/12 06:45:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/16 01:47:30 ktnb Exp $
 
-DISTNAME=		naev-0.12.3
-PKGREVISION=		1
+DISTNAME=		naev-0.12.4
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GITHUB:=naev/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -51,7 +50,7 @@ SUBST_MESSAGE.alloca=	Avoid symbol conflict with SDL2.
 # source is found in the subprojects.
 post-extract:
 	mkdir ${WRKSRC}/subprojects/packagecache/
-	${CP} ${DISTDIR}/lyaml-${LYAML_VERSION}.tar.gz ${WRKSRC}/subprojects/packagecache/
+	${CP} ${DISTDIR}/${DIST_SUBDIR}/lyaml-${LYAML_VERSION}.tar.gz ${WRKSRC}/subprojects/packagecache/
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
