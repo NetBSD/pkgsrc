@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2025/01/22 15:57:26 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/16 10:24:38 prlw1 Exp $
 bin/radicale
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/radicale/__init__.py
 ${PYSITELIB}/radicale/__init__.pyc
