@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/04/16 08:54:14 abs Exp $
+# $NetBSD: Makefile,v 1.91 2025/04/16 16:59:58 wiz Exp $
 
 DISTNAME=	pillow-11.2.1
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	https://python-pillow.org/
 COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.8:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 TEST_DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
