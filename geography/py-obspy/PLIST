@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/07/31 18:29:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/04/16 14:38:57 adam Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -11,11 +11,11 @@ bin/obspy-runtests
 bin/obspy-scan
 bin/obspy-sds-report
 bin/obspy-xseed2dataless
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/obspy/.coveragerc

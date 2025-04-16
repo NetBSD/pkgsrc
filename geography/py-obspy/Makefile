@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2024/11/11 07:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/16 14:38:57 adam Exp $
 
 DISTNAME=	obspy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/obspy/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.obspy.org/
 COMMENT=	Python framework for seismological observatories
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.20:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=1.7:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.3:../../graphics/py-matplotlib
