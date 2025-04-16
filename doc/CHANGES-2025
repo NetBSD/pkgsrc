@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2685 2025/04/16 20:48:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2686 2025/04/16 21:08:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3545,3 +3545,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/py-pysol_cards to 0.18.1 [adam 2025-04-16]
 	Updated games/freecell-solver to 6.12.0 [adam 2025-04-16]
 	Updated games/pysolfc to 3.2.0 [adam 2025-04-16]
+	Updated www/py-django-mptt to 0.17.0 [adam 2025-04-16]
+	Updated devel/py-test-mypy to 1.0.1 [adam 2025-04-16]
