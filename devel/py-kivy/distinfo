@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/11/20 06:36:47 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/04/16 20:40:46 adam Exp $
 
-BLAKE2s (Kivy-2.2.1.tar.gz) = cc86df8a3d8f972cbb05c570be1492a6a48235deff0bc85dc22e15c44051b60f
-SHA512 (Kivy-2.2.1.tar.gz) = 64f517a10c5681a556954057f1ae35bfab9a71fb3808e395ae9a59a8fbe505260c554851f2a89db0cb1fee1bf0c8d8ae14d3cb72877b60b0d9ba7c9f9aacb227
-Size (Kivy-2.2.1.tar.gz) = 23972000 bytes
-SHA1 (patch-kivy_core_image___img__sdl2.pyx) = f6844b3f490278a41d4e5f763c279cca7715aaa8
-SHA1 (patch-kivy_core_window___window__sdl2.pyx) = 61648494f37db9c481bf38a8fc5efe0a69c55bdb
-SHA1 (patch-kivy_lib_gstplayer___gstplayer.pyx) = 80f62b6492b4d0128b24108af2ed0438ed8762a7
-SHA1 (patch-setup.py) = 38743d28429d2bac8d496ae016f1e51d9d5d5a5e
+BLAKE2s (Kivy-2.3.1.tar.gz) = bc67e1d62d706dfe5c8f168960bf6b352db08539eb009993069dd7bf20b4de87
+SHA512 (Kivy-2.3.1.tar.gz) = f26983a6ccdc173d7d69f0c17a36dc8a4dfd31e4777363253b6bcbf549c44ff2d281e8529ff3ea6683fbfb1c16102bd436bb0433b00c23eb4084be30b3b487ad
+Size (Kivy-2.3.1.tar.gz) = 23967306 bytes
