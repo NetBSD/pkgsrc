@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/04/13 08:51:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/04/16 08:54:14 abs Exp $
 ${PYSITELIB}/PIL/AvifImagePlugin.py
 ${PYSITELIB}/PIL/AvifImagePlugin.pyc
 ${PYSITELIB}/PIL/AvifImagePlugin.pyo
@@ -264,6 +264,7 @@ ${PYSITELIB}/PIL/__main__.py
 ${PYSITELIB}/PIL/__main__.pyc
 ${PYSITELIB}/PIL/__main__.pyo
 ${PYSITELIB}/PIL/_avif.pyi
+${PYSITELIB}/PIL/_avif.so
 ${PYSITELIB}/PIL/_binary.py
 ${PYSITELIB}/PIL/_binary.pyc
 ${PYSITELIB}/PIL/_binary.pyo
