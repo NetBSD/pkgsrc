@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/02/07 17:40:33 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/04/16 11:25:09 adam Exp $
 
-BLAKE2s (huggingface_hub-0.28.1.tar.gz) = 9ae97b78157928a89e441d81896ca7301ebb72582729592d272f1ee46ff52847
-SHA512 (huggingface_hub-0.28.1.tar.gz) = 6c0233735fc6d96442ded40199d8980f2d74097df9d638d0b61438550f3c0bcb3a626e1c2b0a48b0f461989d2d40db17ed401b406fa5eeb5cdf2c01325545033
-Size (huggingface_hub-0.28.1.tar.gz) = 387074 bytes
+BLAKE2s (huggingface_hub-0.30.2.tar.gz) = 6cb857dbc679381535b87972dad42ec5ae4addf54538a727ca9601e027334d50
+SHA512 (huggingface_hub-0.30.2.tar.gz) = c71eacffa2943f47d8fb3ac0017962146fe61408d062c101108d7b7a8705914ad397ec831b01c2fcefa50ef990a4e3b7fc5a8a750f424a56fa1710dfd44f3871
+Size (huggingface_hub-0.30.2.tar.gz) = 400868 bytes
