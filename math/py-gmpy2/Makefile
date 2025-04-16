@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/02/02 10:38:04 he Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/16 11:28:29 adam Exp $
 
 DISTNAME=	gmpy2-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/a/alpha/}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gmpy2/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/aleaxit/gmpy
 COMMENT=	Interface to GMP/MPIR, MPFR, and MPC for Python
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpmath-[0-9]*:../../math/py-mpmath
