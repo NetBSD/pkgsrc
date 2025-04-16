@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/16 14:38:57 adam Exp $
 
-DISTNAME=		pyproj-3.7.0
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=		3
-CATEGORIES=		geography
-MASTER_SITES=		${MASTER_SITE_PYPI:=p/pyproj/}
+DISTNAME=	pyproj-3.7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	4
+CATEGORIES=	geography
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproj/}
 
-MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		https://github.com/pyproj4/pyproj
-COMMENT=		Python interface to PROJ.4 library
-LICENSE=		mit
+MAINTAINER=	gdt@NetBSD.org
+HOMEPAGE=	https://github.com/pyproj4/pyproj
+COMMENT=	Python interface to PROJ.4 library
+LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 # tests fail
 # https://github.com/pyproj4/pyproj/issues/1447
