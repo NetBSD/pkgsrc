@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/06 07:55:24 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+@comment $NetBSD: PLIST,v 1.2 2025/04/16 11:08:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/astropy_iers_data/__init__.py
 ${PYSITELIB}/astropy_iers_data/__init__.pyc
