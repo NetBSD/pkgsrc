@@ -1,4 +1,4 @@
-<!-- $NetBSD: help-user.xml,v 1.3 2019/11/22 19:48:58 rillig Exp $ -->
+<!-- $NetBSD: help-user.xml,v 1.4 2025/04/16 23:14:05 dholland Exp $ -->
 
 <chapter id="help-user">
 <title>Getting help</title>
@@ -46,7 +46,7 @@
 </listitem>
 
 <listitem><para>The #pkgsrc IRC channel, which is accessible
-	<ulink url="https://webchat.freenode.net/">via a web browser</ulink>
+	<ulink url="https://web.libera.chat/">via a web browser</ulink>
 	or by using a specialized chat program such as
 	<ulink url="http://xchat.org/">XChat</ulink>.
 	Pick any user name and join the channel #pkgsrc.</para>
