@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/13 22:52:56 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2025/04/16 20:43:41 adam Exp $
 
-BLAKE2s (freecell-solver-5.14.0.tar.xz) = a9c1fdb0a2ae9a82efb40d880266bcd707492d800a0fdacc15255f7f0ef9a6d9
-SHA512 (freecell-solver-5.14.0.tar.xz) = 21c8898673e402514c6d40ae0045d6e9077b1606430465bfb146507fbe098be6ca4f88d976e2dafadbc8e84b5aeb9325b58ce8a384ea4ed6de4f5fec485d51ea
-Size (freecell-solver-5.14.0.tar.xz) = 407912 bytes
-SHA1 (patch-sys_tree.h) = ef88247d0d9fa49a122d9595bd50ca90376484cb
+BLAKE2s (freecell-solver-6.12.0.tar.xz) = 479a1397d12ea228a26ad6f9ab7744935a437e8d531529caf291d9237415baa0
+SHA512 (freecell-solver-6.12.0.tar.xz) = 10d34fd038ea04cf4003ff5c97370b3c337c1f3bf2da0c0fc8fe0acc4cb7f691ea814ab122dd75498bdb34b2d7ad839f4b7ca4b146fe4b8d11324b57b427c5a5
+Size (freecell-solver-6.12.0.tar.xz) = 440312 bytes

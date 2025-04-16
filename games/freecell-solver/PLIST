@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/11/27 21:17:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/16 20:43:41 adam Exp $
 bin/dbm-fc-solver
 bin/depth-dbm-fc-solver
 bin/fc-solve
@@ -23,7 +23,7 @@ include/freecell-solver/fcs_pats_xy_param.h
 include/freecell-solver/fcs_user.h
 lib/libfreecell-solver.so
 lib/libfreecell-solver.so.0
-lib/libfreecell-solver.so.0.6.0
+lib/libfreecell-solver.so.0.7.0
 lib/pkgconfig/libfreecell-solver.pc
 man/man6/dbm-fc-solver.6
 man/man6/fc-solve-board_gen.6
@@ -33,7 +33,14 @@ man/man6/gen-multiple-pysol-layouts.6
 man/man6/make_pysol_freecell_board.py.6
 man/man6/pi-make-microsoft-freecell-board.6
 man/man6/transpose-freecell-board.py.6
-share/doc/freecell-solver/README.win32.txt
+share/doc/freecell-solver/AUTHORS
+share/doc/freecell-solver/COPYING
+share/doc/freecell-solver/HACKING
+share/doc/freecell-solver/INSTALL
+share/doc/freecell-solver/NEWS
+share/doc/freecell-solver/README
+share/doc/freecell-solver/TODO
+share/doc/freecell-solver/USAGE
 share/freecell-solver/presetrc
 share/freecell-solver/presets/abra-kadabra.sh
 share/freecell-solver/presets/amateur-star.sh
