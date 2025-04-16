@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2676 2025/04/16 11:19:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2677 2025/04/16 11:26:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3530,3 +3530,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/naev to 0.12.4 [ktnb 2025-04-15]
 	Updated math/py-astropy-iers-data to 0.2025.4.14.0.37.22 [adam 2025-04-16]
 	Updated math/py-photutils to 2.2.0 [adam 2025-04-16]
+	Updated math/py-huggingface-hub to 0.30.2 [adam 2025-04-16]
+	Updated www/py-httpcore to 1.0.8 [adam 2025-04-16]
