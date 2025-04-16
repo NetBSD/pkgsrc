@@ -1,4 +1,4 @@
-$NetBSD: patch-bridges_source_cpp_uno_shared_vtablefactory.cxx,v 1.1 2025/04/09 14:31:57 manu Exp $
+$NetBSD: patch-bridges_source_cpp_uno_shared_vtablefactory.cxx,v 1.2 2025/04/16 14:55:39 manu Exp $
 
 posix_fallocate() may be available but unimplemented for a 
 given filesystem. Detect that situation once and use ftruncate()
@@ -8,6 +8,11 @@ Here LibreOffice need to mmap() a memory block RWX. At least on NetBSD,
 PAX mprofect will prevent this. LibreOffice has an alternative
 implementation that double mmap() a mkstemp() file, one time RW and
 the second tume RX. Make sure the mmap() RWX is only tried once.
+
+A stripped down version was committed upstream, it will make this
+patch obsolete starting with LibreOffice 25.8.0
+https://git.libreoffice.org/core/+/9fb26786b75e30df593378954044af4e4753a192%5E%2
+1/
 
 --- ./bridges/source/cpp_uno/shared/vtablefactory.cxx.orig
 +++ ./bridges/source/cpp_uno/shared/vtablefactory.cxx
