@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2022/07/24 10:48:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/16 14:31:31 adam Exp $
 bin/pyrsa-decrypt-${PYVERSSUFFIX}
 bin/pyrsa-encrypt-${PYVERSSUFFIX}
 bin/pyrsa-keygen-${PYVERSSUFFIX}
 bin/pyrsa-priv2pub-${PYVERSSUFFIX}
 bin/pyrsa-sign-${PYVERSSUFFIX}
 bin/pyrsa-verify-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/rsa/__init__.py
 ${PYSITELIB}/rsa/__init__.pyc
 ${PYSITELIB}/rsa/__init__.pyo

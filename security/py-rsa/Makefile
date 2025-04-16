@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/07/24 10:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/16 14:31:31 adam Exp $
 
-DISTNAME=	rsa-4.9
+DISTNAME=	rsa-4.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
@@ -10,11 +10,8 @@ HOMEPAGE=	https://github.com/sybrenstuvel/python-rsa
 COMMENT=	Pure-Python RSA implementation
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.3:../../security/py-asn1
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 USE_LANGUAGES=	# none
 
@@ -24,5 +21,5 @@ post-install:
 	${MV} pyrsa-${bin} pyrsa-${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
