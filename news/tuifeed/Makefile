@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/10 11:49:13 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/16 20:14:55 pin Exp $
 
 DISTNAME=	tuifeed-0.4.2
 CATEGORIES=	news
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/veeso/tuifeed/
 COMMENT=	Terminal feed reader with a fancy ui
 LICENSE=	mit
+
+# See, https://github.com/briansmith/ring/issues/1999
+.include "../../mk/compiler/i386-sse2.mk"
 
 .include "cargo-depends.mk"
 
