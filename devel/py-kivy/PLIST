@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 11:33:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/16 20:40:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -229,6 +229,7 @@ ${PYSITELIB}/kivy/data/keyboards/azerty.json
 ${PYSITELIB}/kivy/data/keyboards/de.json
 ${PYSITELIB}/kivy/data/keyboards/de_CH.json
 ${PYSITELIB}/kivy/data/keyboards/en_US.json
+${PYSITELIB}/kivy/data/keyboards/es_ES.json
 ${PYSITELIB}/kivy/data/keyboards/fr_CH.json
 ${PYSITELIB}/kivy/data/keyboards/qwerty.json
 ${PYSITELIB}/kivy/data/keyboards/qwertz.json
@@ -631,6 +632,9 @@ ${PYSITELIB}/kivy/tests/test_filechooser_unicode.pyo
 ${PYSITELIB}/kivy/tests/test_fonts.py
 ${PYSITELIB}/kivy/tests/test_fonts.pyc
 ${PYSITELIB}/kivy/tests/test_fonts.pyo
+${PYSITELIB}/kivy/tests/test_garden.py
+${PYSITELIB}/kivy/tests/test_garden.pyc
+${PYSITELIB}/kivy/tests/test_garden.pyo
 ${PYSITELIB}/kivy/tests/test_graphics.py
 ${PYSITELIB}/kivy/tests/test_graphics.pyc
 ${PYSITELIB}/kivy/tests/test_graphics.pyo
@@ -736,6 +740,9 @@ ${PYSITELIB}/kivy/tests/test_uix_bubble.pyo
 ${PYSITELIB}/kivy/tests/test_uix_carousel.py
 ${PYSITELIB}/kivy/tests/test_uix_carousel.pyc
 ${PYSITELIB}/kivy/tests/test_uix_carousel.pyo
+${PYSITELIB}/kivy/tests/test_uix_colorpicker.py
+${PYSITELIB}/kivy/tests/test_uix_colorpicker.pyc
+${PYSITELIB}/kivy/tests/test_uix_colorpicker.pyo
 ${PYSITELIB}/kivy/tests/test_uix_dropdown.py
 ${PYSITELIB}/kivy/tests/test_uix_dropdown.pyc
 ${PYSITELIB}/kivy/tests/test_uix_dropdown.pyo
@@ -757,6 +764,9 @@ ${PYSITELIB}/kivy/tests/test_uix_relativelayout.pyo
 ${PYSITELIB}/kivy/tests/test_uix_scrollview.py
 ${PYSITELIB}/kivy/tests/test_uix_scrollview.pyc
 ${PYSITELIB}/kivy/tests/test_uix_scrollview.pyo
+${PYSITELIB}/kivy/tests/test_uix_settings.py
+${PYSITELIB}/kivy/tests/test_uix_settings.pyc
+${PYSITELIB}/kivy/tests/test_uix_settings.pyo
 ${PYSITELIB}/kivy/tests/test_uix_slider.py
 ${PYSITELIB}/kivy/tests/test_uix_slider.pyc
 ${PYSITELIB}/kivy/tests/test_uix_slider.pyo
@@ -1376,6 +1386,7 @@ share/kivy-examples/miscellaneous/imagesave.py
 share/kivy-examples/miscellaneous/joystick.py
 share/kivy-examples/miscellaneous/multiple_dropfile.py
 share/kivy-examples/miscellaneous/on_textedit_event.py
+share/kivy-examples/miscellaneous/opacitywindow.py
 share/kivy-examples/miscellaneous/shapecollisions.py
 share/kivy-examples/miscellaneous/shapedwindow.py
 share/kivy-examples/miscellaneous/two_panes.py
