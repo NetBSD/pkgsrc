@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2025/02/05 08:51:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.104 2025/04/16 21:27:24 adam Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -404,6 +404,7 @@ man/man3/CURLOPT_UNRESTRICTED_AUTH.3
 man/man3/CURLOPT_UPKEEP_INTERVAL_MS.3
 man/man3/CURLOPT_UPLOAD.3
 man/man3/CURLOPT_UPLOAD_BUFFERSIZE.3
+man/man3/CURLOPT_UPLOAD_FLAGS.3
 man/man3/CURLOPT_URL.3
 man/man3/CURLOPT_USERAGENT.3
 man/man3/CURLOPT_USERNAME.3
