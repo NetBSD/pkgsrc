@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/12 11:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/16 20:40:46 adam Exp $
 
-DISTNAME=	Kivy-2.2.1
+DISTNAME=	Kivy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	8
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
@@ -11,14 +10,23 @@ HOMEPAGE=	https://kivy.org/
 COMMENT=	Library for rapid development of multitouch applications
 LICENSE=	mit
 
-USE_TOOLS+=	pkg-config
-
-# For share/kivy-examples
-PYTHON_SELF_CONFLICT=	yes
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-filetype-[0-9]*:../../sysutils/py-filetype
+DEPENDS+=	${PYPKGPREFIX}-kivy-garden>=0.1.4:../../devel/py-kivy-garden
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+# base
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.5.0:../../graphics/py-Pillow
+# \todo File upstream bug that dependency on enchant and pygame is undocumented.
+DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
+DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 # \todo Understand upstream's dependency rules and add/fix.
 # (Upstream's docs are very confusing as they are not listed in a
@@ -27,14 +35,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 # dependencies are needed.)
 # \todo Consider options as audio/video may be too heavy.
 
-DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-# \todo File upstream bug that dependency on enchant is undocumented.
-DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
-DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
+USE_TOOLS+=	pkg-config
 
 WHEEL_NAME=	${DISTNAME:tl}
 
@@ -44,6 +45,9 @@ WHEEL_NAME=	${DISTNAME:tl}
 # and can be selectively re-enabled with an explanation.
 #pre-configure:
 #	${CHMOD} -R go-w ${WRKSRC}
+
+# For share/kivy-examples
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
