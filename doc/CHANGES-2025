@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2686 2025/04/16 21:08:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2687 2025/04/16 21:27:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3547,3 +3547,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/pysolfc to 3.2.0 [adam 2025-04-16]
 	Updated www/py-django-mptt to 0.17.0 [adam 2025-04-16]
 	Updated devel/py-test-mypy to 1.0.1 [adam 2025-04-16]
+	Updated www/curl to 8.13.0 [adam 2025-04-16]
+	Updated www/libcurl-gnutls to 8.13.0 [adam 2025-04-16]
