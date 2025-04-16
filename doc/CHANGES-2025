@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2683 2025/04/16 15:25:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2684 2025/04/16 15:28:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3540,3 +3540,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/squirrelmail to 1.4.23pre15037 [taca 2025-04-16]
 	Updated lang/ruby34 to 3.4.3 [taca 2025-04-16]
 	Updated devel/ruby-minitest to 5.25.5 [taca 2025-04-16]
+	Updated textproc/ruby-csv to 3.3.4 [taca 2025-04-16]
