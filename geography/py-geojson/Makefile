@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/01/15 15:14:59 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/16 14:38:57 adam Exp $
 
 DISTNAME=	geojson-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geojson/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/jazzband/geojson
 COMMENT=	Python bindings and utlities for GeoJSON
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
