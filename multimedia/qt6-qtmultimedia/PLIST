@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/03/31 16:38:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/04/16 21:13:13 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -331,7 +331,7 @@ qt6/include/QtSpatialAudio/qtspatialaudioversion.h
 qt6/lib/cmake/Qt6/FindAVFoundation.cmake
 qt6/lib/cmake/Qt6/FindFFmpeg.cmake
 qt6/lib/cmake/Qt6/FindGObject.cmake
-${PLIST.gstreamer}qt6/lib/cmake/Qt6/FindGStreamer.cmake
+qt6/lib/cmake/Qt6/FindGStreamer.cmake
 qt6/lib/cmake/Qt6/FindMMRenderer.cmake
 qt6/lib/cmake/Qt6/FindMMRendererCore.cmake
 qt6/lib/cmake/Qt6/FindPipeWire.cmake
