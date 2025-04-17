@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/03/05 03:38:59 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/04/17 21:50:02 wiz Exp $
 
 BUILDLINK_TREE+=	hs-sqlite-simple
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-sqlite-simple
 HS_SQLITE_SIMPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-sqlite-simple+=	hs-sqlite-simple>=0.4.19
-BUILDLINK_ABI_DEPENDS.hs-sqlite-simple+=	hs-sqlite-simple>=0.4.19.0nb7
+BUILDLINK_ABI_DEPENDS.hs-sqlite-simple+=	hs-sqlite-simple>=0.4.19.0nb8
 BUILDLINK_PKGSRCDIR.hs-sqlite-simple?=		../../databases/hs-sqlite-simple
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

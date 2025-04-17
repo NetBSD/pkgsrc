@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/02/12 06:45:16 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2025/04/17 21:51:27 wiz Exp $
 
 BUILDLINK_TREE+=	ktnef
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ktnef
 KTNEF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ktnef+=	ktnef>=20.04.1
-BUILDLINK_ABI_DEPENDS.ktnef?=	ktnef>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.ktnef?=	ktnef>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.ktnef?=	../../mail/ktnef
 
 .include "../../misc/kcontacts/buildlink3.mk"

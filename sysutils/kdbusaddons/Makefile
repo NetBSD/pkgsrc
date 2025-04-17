@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2025/02/12 06:45:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2025/04/17 21:52:26 wiz Exp $
 
 DISTNAME=	kdbusaddons-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks

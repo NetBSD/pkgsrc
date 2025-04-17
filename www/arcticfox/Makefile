@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2025/03/18 09:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/04/17 21:52:45 wiz Exp $
 
 DISTNAME=	arcticfox-45.3
 # remove on next update
 DIST_SUBDIR=	arcticfox-45.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox

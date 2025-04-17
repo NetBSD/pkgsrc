@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2024/12/27 08:19:23 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2025/04/17 21:49:48 wiz Exp $
 
 DISTNAME=	sound-juicer-3.24.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/sound-juicer/3.24/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/01/25 09:24:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/17 21:50:34 wiz Exp $
 
 DISTNAME=	codebrowser-2.1.20250126
 PKGNAME=	woboq_${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KDAB/}
 GITHUB_TAG=	6f78f5ffa6439dae4e5a26ca09841df07d93ab57

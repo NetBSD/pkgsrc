@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2024/12/27 08:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2025/04/17 21:50:19 wiz Exp $
 
 DISTNAME=		glade-3.40.0
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glade/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=		.tar.xz

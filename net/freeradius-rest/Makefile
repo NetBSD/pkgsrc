@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/11/14 22:21:05 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/17 21:51:53 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../net/freeradius/Makefile.module"
 
 PKGNAME=	${DISTNAME:S/-server/-rest/}

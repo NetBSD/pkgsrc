@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/12 06:45:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/17 21:52:40 wiz Exp $
 
 DISTNAME=	akonadi-calendar-tools-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org/

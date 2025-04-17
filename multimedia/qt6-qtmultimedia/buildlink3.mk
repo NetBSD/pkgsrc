@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/02/12 06:45:28 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/04/17 21:51:49 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtmultimedia
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtmultimedia
 QT6_QTMULTIMEDIA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtmultimedia+=	qt6-qtmultimedia>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtmultimedia+=	qt6-qtmultimedia>=6.8.2nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtmultimedia+=	qt6-qtmultimedia>=6.8.3nb2
 BUILDLINK_PKGSRCDIR.qt6-qtmultimedia?=		../../multimedia/qt6-qtmultimedia
 
 pkgbase := qt6-qtmultimedia
