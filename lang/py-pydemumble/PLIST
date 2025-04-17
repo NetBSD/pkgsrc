@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/17 15:49:47 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pydemumble/__init__.py
+${PYSITELIB}/pydemumble/__init__.pyc
+${PYSITELIB}/pydemumble/__init__.pyo
+${PYSITELIB}/pydemumble/pydemumble.abi3.so
