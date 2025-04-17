@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2693 2025/04/17 15:25:35 osa Exp $
+$NetBSD: CHANGES-2025,v 1.2694 2025/04/17 15:50:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3561,3 +3561,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.26.3nb1 [osa 2025-04-17]
 	Updated www/nginx-devel to 1.27.4nb2 [osa 2025-04-17]
 	Updated www/nginx-devel to 1.27.5 [osa 2025-04-17]
+	Added lang/py-cxxheaderparser version 1.5.0 [adam 2025-04-17]
+	Added lang/py-pydemumble version 0.0.1 [adam 2025-04-17]
