@@ -31,7 +31,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2025 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.44 2025/01/01 01:39:11 jnemeth Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.45 2025/04/17 22:00:11 wiz Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -396,42 +396,50 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#renaming-package">23.7. Renaming a package in pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#moving-package">23.8. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="#devfaq">24. Frequently Asked Questions</a></span></dt>
+<dt><span class="chapter"><a href="#policies">24. pkgsrc Policies</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#stability">24.1. Packages for which updating is restricted</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#stability.abi">24.1.1. Limited Updates - ABI</a></span></dt>
+<dt><span class="sect2"><a href="#stability.bootstrap">24.1.2. Limited Updates - Bootstrap</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#devfaq">25. Frequently Asked Questions</a></span></dt>
 </dl></dd>
 <dt><span class="part"><a href="#infrastructure">III. The pkgsrc infrastructure internals</a></span></dt>
 <dd><dl>
-<dt><span class="chapter"><a href="#infr.design">25. Design of the pkgsrc infrastructure</a></span></dt>
+<dt><span class="chapter"><a href="#infr.design">26. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.vardef">25.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">25.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">25.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">26.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">26.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">26.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">25.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">25.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">26.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">26.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">25.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">25.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">26.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">26.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">25.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">25.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">26.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">26.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">25.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">26.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">25.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">25.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
-</dl></dd>
-</dl></dd>
-<dt><span class="chapter"><a href="#regression">26. Regression tests</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#regression.run">26.1. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">26.2. Adding a new regression test</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">26.2.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">26.2.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">26.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">26.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">27. Porting pkgsrc</a></span></dt>
-<dd><dl><dt><span class="sect1"><a href="#porting.opsys">27.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
+<dt><span class="chapter"><a href="#regression">27. Regression tests</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#regression.run">27.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">27.2. Adding a new regression test</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#regression.fun.override">27.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">27.2.2. Helper functions</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#porting">28. Porting pkgsrc</a></span></dt>
+<dd><dl><dt><span class="sect1"><a href="#porting.opsys">28.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="appendix"><a href="#examples">A. A simple example package: bison</a></span></dt>
 <dd><dl>
@@ -3445,7 +3453,15 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#renaming-package">23.7. Renaming a package in pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#moving-package">23.8. Moving a package in pkgsrc</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="#devfaq">24. Frequently Asked Questions</a></span></dt>
+<dt><span class="chapter"><a href="#policies">24. pkgsrc Policies</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#stability">24.1. Packages for which updating is restricted</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#stability.abi">24.1.1. Limited Updates - ABI</a></span></dt>
+<dt><span class="sect2"><a href="#stability.bootstrap">24.1.2. Limited Updates - Bootstrap</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#devfaq">25. Frequently Asked Questions</a></span></dt>
 </dl>
 </div>
 </div>
@@ -10242,7 +10258,67 @@ place.</p></li>
 </div>
 <div class="chapter">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="devfaq"></a>Chapter 24. Frequently Asked Questions</h2></div></div></div>
+<a name="policies"></a>Chapter 24. pkgsrc Policies</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="sect1"><a href="#stability">24.1. Packages for which updating is restricted</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#stability.abi">24.1.1. Limited Updates - ABI</a></span></dt>
+<dt><span class="sect2"><a href="#stability.bootstrap">24.1.2. Limited Updates - Bootstrap</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="stability"></a>24.1. Packages for which updating is restricted</h2></div></div></div>
+<p>In the past, some packages have caused more package failures than others, and we'd like to reduce this in the future.</p>
+<p>For this reason, pkgsrc-pmc marks some packages with <code class="varname">POLICY_UPDATE_LIMITED</code>. The possible values currently are:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p><code class="literal">abi</code> for packages where ABI/API changes often broke the packages depending on them</p></li>
+<li class="listitem"><p><code class="literal">bootstrap</code> for packages that are used during the pkgsrc bootstrap</p></li>
+</ul></div>
+<p>
+<code class="filename">pkglint</code> will warn when committing updates to these packages.</p>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="stability.abi"></a>24.1.1. Limited Updates - ABI</h3></div></div></div>
+<p>Before committing non-micro version updates to packages marked
+  with <code class="varname">POLICY_UPDATE_LIMITED=abi</code>, a limited bulk
+  build of <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/bulk-test-${PACKAGE}/index.html" target="_top"><code class="filename">meta-pkgs/bulk-test-${PACKAGE}</code></a> needs to be run
+  and the result posted to the tech-pkg mailing list, highlighting
+  what packages would stop building (if any).</p>
+<p>Depending on the result, pkgsrc-pmc then decides:
+  </p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>go ahead with the update</p></li>
+<li class="listitem"><p>wait for packages X, Y, Z to be fixed (upstream or
+    locally) with the updated version, which is put in wip in the
+    meantime</p></li>
+<li class="listitem"><p>In the second case, all pkgsrc developers are
+    encouraged to work on fixing this - it is not only the updater's
+    task to fix them.</p></li>
+</ul></div>
+<p>
+  </p>
+<p>The decision to wait for packages can be revisited.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="stability.bootstrap"></a>24.1.2. Limited Updates - Bootstrap</h3></div></div></div>
+<p>When updating packages used in the bootstrap, i.e. marked with
+  <code class="varname">POLICY_UPDATE_LIMITED=bootstrap</code>, test the
+  bootstrap process and preferably some basic packages and send the
+  patch to the tech-pkg mailing list so it can be tested on other
+  platforms as well. Give at least two weeks for feedback and testing
+  by others.</p>
+</div>
+</div>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="devfaq"></a>Chapter 25. Frequently Asked Questions</h2></div></div></div>
 <p>This section contains the answers to questions that may
 	arise when you are writing a package. If you don't find your
 	question answered here, first have a look in the other chapters,
@@ -10250,34 +10326,34 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <a name="devfaq.qandaset"></a><dl>
-<dt>24.1. <a href="#devfaq.makeflags">What is the difference between
+<dt>25.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>24.2. <a href="#devfaq.make">What is the difference between
+<dt>25.2. <a href="#devfaq.make">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>24.3. <a href="#devfaq.cc">What is the difference between
+<dt>25.3. <a href="#devfaq.cc">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>24.4. <a href="#devfaq.bl3prefix">Why does make show-var
+<dt>25.4. <a href="#devfaq.bl3prefix">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>24.5. <a href="#devfaq.master_sites">What does
+<dt>25.5. <a href="#devfaq.master_sites">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>24.6. <a href="#devfaq.mailinglists">Which mailing lists are there for package
+<dt>25.6. <a href="#devfaq.mailinglists">Which mailing lists are there for package
 	developers?</a>
 </dt>
-<dt>24.7. <a href="#devfaq.documentation">Where is the pkgsrc
+<dt>25.7. <a href="#devfaq.documentation">Where is the pkgsrc
 	documentation?</a>
 </dt>
-<dt>24.8. <a href="#devfaq.too-much-time">I have a little time to kill.
+<dt>25.8. <a href="#devfaq.too-much-time">I have a little time to kill.
 What shall I do?</a>
 </dt>
 </dl>
@@ -10289,7 +10365,7 @@ What shall I do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="devfaq.makeflags.q"></a><p><b>24.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="devfaq.makeflags.q"></a><p><b>25.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -10310,7 +10386,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="devfaq.make.q"></a><p><b>24.2.</b></p>
+<a name="devfaq.make"></a><a name="devfaq.make.q"></a><p><b>25.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -10331,7 +10407,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="devfaq.cc.q"></a><p><b>24.3.</b></p>
+<a name="devfaq.cc"></a><a name="devfaq.cc.q"></a><p><b>25.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -10353,7 +10429,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="devfaq.bl3prefix.q"></a><p><b>24.4.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="devfaq.bl3prefix.q"></a><p><b>25.4.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -10369,7 +10445,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="devfaq.master_sites.q"></a><p><b>24.5.</b></p>
+<a name="devfaq.master_sites"></a><a name="devfaq.master_sites.q"></a><p><b>25.5.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -10393,7 +10469,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="devfaq.mailinglists.q"></a><p><b>24.6.</b></p>
+<a name="devfaq.mailinglists"></a><a name="devfaq.mailinglists.q"></a><p><b>25.6.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -10418,7 +10494,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="devfaq.documentation.q"></a><p><b>24.7.</b></p>
+<a name="devfaq.documentation"></a><a name="devfaq.documentation.q"></a><p><b>25.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -10466,7 +10542,7 @@ What shall I do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="devfaq.too-much-time.q"></a><p><b>24.8.</b></p>
+<a name="devfaq.too-much-time"></a><a name="devfaq.too-much-time.q"></a><p><b>25.8.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.
 What shall I do?</p></td>
@@ -10508,64 +10584,64 @@ anyway.</p>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl class="toc">
-<dt><span class="chapter"><a href="#infr.design">25. Design of the pkgsrc infrastructure</a></span></dt>
+<dt><span class="chapter"><a href="#infr.design">26. Design of the pkgsrc infrastructure</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#infr.vardef">25.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">25.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">25.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">26.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">26.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">26.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">25.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">25.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">26.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">26.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">25.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">25.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">26.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">26.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">25.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">25.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">26.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">26.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">25.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">26.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">25.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">25.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
-</dl></dd>
-</dl></dd>
-<dt><span class="chapter"><a href="#regression">26. Regression tests</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#regression.run">26.1. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">26.2. Adding a new regression test</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">26.2.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">26.2.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">26.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">26.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">27. Porting pkgsrc</a></span></dt>
-<dd><dl><dt><span class="sect1"><a href="#porting.opsys">27.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
+<dt><span class="chapter"><a href="#regression">27. Regression tests</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="#regression.run">27.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">27.2. Adding a new regression test</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#regression.fun.override">27.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">27.2.2. Helper functions</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="#porting">28. Porting pkgsrc</a></span></dt>
+<dd><dl><dt><span class="sect1"><a href="#porting.opsys">28.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
 </dl>
 </div>
 </div>
 <div class="chapter">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="infr.design"></a>Chapter 25. Design of the pkgsrc infrastructure</h2></div></div></div>
+<a name="infr.design"></a>Chapter 26. Design of the pkgsrc infrastructure</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl class="toc">
-<dt><span class="sect1"><a href="#infr.vardef">25.1. The meaning of variable definitions</a></span></dt>
-<dt><span class="sect1"><a href="#infr.vardef.problems">25.2. Avoiding problems before they arise</a></span></dt>
-<dt><span class="sect1"><a href="#infr.var">25.3. Variable evaluation</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef">26.1. The meaning of variable definitions</a></span></dt>
+<dt><span class="sect1"><a href="#infr.vardef.problems">26.2. Avoiding problems before they arise</a></span></dt>
+<dt><span class="sect1"><a href="#infr.var">26.3. Variable evaluation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.var.load">25.3.1. At load time</a></span></dt>
-<dt><span class="sect2"><a href="#infr.var.run">25.3.2. At runtime</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.load">26.3.1. At load time</a></span></dt>
+<dt><span class="sect2"><a href="#infr.var.run">26.3.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.varspec">25.4. How can variables be specified?</a></span></dt>
-<dt><span class="sect1"><a href="#infr.design.intf">25.5. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">26.4. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">26.5. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">25.5.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">25.5.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">26.5.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">26.5.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.order">25.6. The order in which files are loaded</a></span></dt>
+<dt><span class="sect1"><a href="#infr.order">26.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">25.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">25.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">26.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">26.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -10575,7 +10651,7 @@ anyway.</p>
 	like.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.vardef"></a>25.1. The meaning of variable definitions</h2></div></div></div>
+<a name="infr.vardef"></a>26.1. The meaning of variable definitions</h2></div></div></div>
 <p>Whenever a variable is defined in the pkgsrc
 	infrastructure, the location and the way of definition provide
 	much information about the intended use of that variable.
@@ -10606,7 +10682,7 @@ anyway.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.vardef.problems"></a>25.2. Avoiding problems before they arise</h2></div></div></div>
+<a name="infr.vardef.problems"></a>26.2. Avoiding problems before they arise</h2></div></div></div>
 <p>All variables that contain lists of things should default
 	to being empty. Two examples that do not follow this rule are
 	<code class="varname">USE_LANGUAGES</code> and
@@ -10630,10 +10706,10 @@ DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.var"></a>25.3. Variable evaluation</h2></div></div></div>
+<a name="infr.var"></a>26.3. Variable evaluation</h2></div></div></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.load"></a>25.3.1. At load time</h3></div></div></div>
+<a name="infr.var.load"></a>26.3.1. At load time</h3></div></div></div>
 <p>Variable evaluation takes place either at load time or at
 	runtime, depending on the context in which they occur. The
 	contexts where variables are evaluated at load time are:</p>
@@ -10675,7 +10751,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.var.run"></a>25.3.2. At runtime</h3></div></div></div>
+<a name="infr.var.run"></a>26.3.2. At runtime</h3></div></div></div>
 <p>After all the files have been loaded, the values of the
 	variables cannot be changed anymore. Variables that are used in
 	the shell commands are expanded at this point.</p>
@@ -10683,7 +10759,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.varspec"></a>25.4. How can variables be specified?</h2></div></div></div>
+<a name="infr.varspec"></a>26.4. How can variables be specified?</h2></div></div></div>
 <p>There are many ways in which the definition and use of a
 	variable can be restricted in order to detect bugs and violations
 	of the (mostly unwritten) policies. A package can be checked with
@@ -10692,14 +10768,14 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.design.intf"></a>25.5. Designing interfaces for Makefile fragments</h2></div></div></div>
+<a name="infr.design.intf"></a>26.5. Designing interfaces for Makefile fragments</h2></div></div></div>
 <p>Most of the <code class="filename">.mk</code> files fall into one
 	of the following classes. Cases where a file falls into more
 	than one class should be avoided as it often leads to subtle
 	bugs.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.proc"></a>25.5.1. Procedures with parameters</h3></div></div></div>
+<a name="infr.design.intf.proc"></a>26.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
 	procedures. They take some input parameters and&mdash;after
@@ -10733,7 +10809,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.action"></a>25.5.2. Actions taken on behalf of parameters</h3></div></div></div>
+<a name="infr.design.intf.action"></a>26.5.2. Actions taken on behalf of parameters</h3></div></div></div>
 <p>Action files take some input parameters and may define
 	runtime variables. They shall not define loadtime variables.
 	There are action files that are included implicitly by the
@@ -10745,7 +10821,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.order"></a>25.6. The order in which files are loaded</h2></div></div></div>
+<a name="infr.order"></a>26.6. The order in which files are loaded</h2></div></div></div>
 <p>Package <code class="filename">Makefile</code>s usually consist of
 	a set of variable definitions, and include the file
 	<code class="filename">../../mk/bsd.pkg.mk</code> in the very last line.
@@ -10760,7 +10836,7 @@ CFLAGS+=                -Wall
 	are loaded and gives reasons for that order.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.order.prefs"></a>25.6.1. The order in <code class="filename">bsd.prefs.mk</code>
+<a name="infr.order.prefs"></a>26.6.1. The order in <code class="filename">bsd.prefs.mk</code>
 </h3></div></div></div>
 <p>The very first action in <code class="filename">bsd.prefs.mk</code>
 	is to define some essential variables like
@@ -10785,7 +10861,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.order.pkg"></a>25.6.2. The order in <code class="filename">bsd.pkg.mk</code>
+<a name="infr.order.pkg"></a>26.6.2. The order in <code class="filename">bsd.pkg.mk</code>
 </h3></div></div></div>
 <p>First, <code class="filename">bsd.prefs.mk</code> is loaded.</p>
 <p>Then, the various <code class="filename">*-vars.mk</code> files are
@@ -10818,15 +10894,15 @@ CFLAGS+=                -Wall
 </div>
 <div class="chapter">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="regression"></a>Chapter 26. Regression tests</h2></div></div></div>
+<a name="regression"></a>Chapter 27. Regression tests</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl class="toc">
-<dt><span class="sect1"><a href="#regression.run">26.1. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">26.2. Adding a new regression test</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">27.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">27.2. Adding a new regression test</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">26.2.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">26.2.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.override">27.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">27.2.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -10840,7 +10916,7 @@ CFLAGS+=                -Wall
 	how you can add new tests.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.run"></a>26.1. Running the regression tests</h2></div></div></div>
+<a name="regression.run"></a>27.1. Running the regression tests</h2></div></div></div>
 <p>You first need to install the <a href="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_regress/index.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
 	provides the <span class="command"><strong>pkg_regress</strong></span> command. Then you
 	can simply run that command, which will run all tests in the
@@ -10848,7 +10924,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.new"></a>26.2. Adding a new regression test</h2></div></div></div>
+<a name="regression.new"></a>27.2. Adding a new regression test</h2></div></div></div>
 <p>Every directory in the <code class="filename">regress/</code>
 	directory that contains a file called <code class="filename">spec</code>
 	is considered a regression test. This file is a shell program
@@ -10857,7 +10933,7 @@ CFLAGS+=                -Wall
 	needs.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.override"></a>26.2.1. Overridable functions</h3></div></div></div>
+<a name="regression.fun.override"></a>27.2.1. Overridable functions</h3></div></div></div>
 <p>These functions do not take any parameters. Although they
 	are called in <span class="quote">&#8220;<span class="quote">set -e</span>&#8221;</span> mode, they don't stop at the
 	first failing command. See <a class="ulink" href="https://stackoverflow.com/q/4072984" target="_top">this Stack Overflow
@@ -10905,7 +10981,7 @@ check_result() {
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.helper"></a>26.2.2. Helper functions</h3></div></div></div>
+<a name="regression.fun.helper"></a>27.2.2. Helper functions</h3></div></div></div>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">regress_fail <em class="replaceable"><code>message...</code></em></code></span></dt>
 <dd><p>This function makes the test fail with the given error message.</p></dd>
@@ -10936,10 +11012,10 @@ output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 </div>
 <div class="chapter">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="porting"></a>Chapter 27. Porting pkgsrc</h2></div></div></div>
+<a name="porting"></a>Chapter 28. Porting pkgsrc</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
-<dl class="toc"><dt><span class="sect1"><a href="#porting.opsys">27.1. Porting pkgsrc to a new operating system</a></span></dt></dl>
+<dl class="toc"><dt><span class="sect1"><a href="#porting.opsys">28.1. Porting pkgsrc to a new operating system</a></span></dt></dl>
 </div>
 <p>The pkgsrc system has already been ported to many
 	operating systems, hardware architectures and compilers. This
@@ -10947,7 +11023,7 @@ output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 	portable.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.opsys"></a>27.1. Porting pkgsrc to a new operating system</h2></div></div></div>
+<a name="porting.opsys"></a>28.1. Porting pkgsrc to a new operating system</h2></div></div></div>
 <p>To port pkgsrc to a new operating system (called
 	<code class="literal">MyOS</code> in this example), you need to touch the
 	following files:</p>
@@ -12007,119 +12083,123 @@ source packages</h2></div></div></div>
 <td>ALL_ENV</td>
 </tr>
 <tr>
+<td>ALSA_PC</td>
 <td>ALTERNATIVES_SRC</td>
+</tr>
+<tr>
 <td>AMANDA_TMP</td>
-</tr>
-<tr>
 <td>AMANDA_USER</td>
+</tr>
+<tr>
 <td>AMANDA_VAR</td>
-</tr>
-<tr>
 <td>APACHE_GROUP</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_NAME</td>
-</tr>
-<tr>
 <td>APACHE_MODULE_SRC</td>
+</tr>
+<tr>
 <td>APACHE_MODULE_SRCDIR</td>
-</tr>
-<tr>
 <td>APACHE_PKG_PREFIX</td>
+</tr>
+<tr>
 <td>APACHE_SUEXEC_CONFIGURE_ARGS</td>
-</tr>
-<tr>
 <td>APACHE_SUEXEC_DOCROOT</td>
+</tr>
+<tr>
 <td>APACHE_USER</td>
-</tr>
-<tr>
 <td>ARGMAX_REQ</td>
+</tr>
+<tr>
 <td>ARG_MAX</td>
-</tr>
-<tr>
 <td>ARLA_CACHE</td>
+</tr>
+<tr>
 <td>AUDIT_PACKAGES_FLAGS</td>
-</tr>
-<tr>
 <td>AUTOCONF_REQD</td>
+</tr>
+<tr>
 <td>AUTOMAKE_OVERRIDE</td>
-</tr>
-<tr>
 <td>AUTOMAKE_REQD</td>
+</tr>
+<tr>
 <td>AUTO_MKDIRS</td>
-</tr>
-<tr>
 <td>AUX</td>
+</tr>
+<tr>
 <td>BDB185_DEFAULT</td>
-</tr>
-<tr>
 <td>BDBBASE</td>
+</tr>
+<tr>
 <td>BDB_ACCEPTED</td>
-</tr>
-<tr>
 <td>BDB_DEFAULT</td>
+</tr>
+<tr>
 <td>BDB_LIBS</td>
-</tr>
-<tr>
 <td>BDB_TYPE</td>
+</tr>
+<tr>
 <td>BINCIMAP_GROUP</td>
-</tr>
-<tr>
 <td>BINCIMAP_LOG_USER</td>
+</tr>
+<tr>
 <td>BINCIMAP_USER</td>
-</tr>
-<tr>
 <td>BIND_DIR</td>
+</tr>
+<tr>
 <td>BIND_GROUP</td>
-</tr>
-<tr>
 <td>BIND_USER</td>
+</tr>
+<tr>
 <td>BINOWN</td>
-</tr>
-<tr>
 <td>BINPKG_SITES</td>
+</tr>
+<tr>
 <td>BIN_INSTALL_FLAGS</td>
-</tr>
-<tr>
 <td>BISON_PKGDATADIR</td>
+</tr>
+<tr>
 <td>BLAS</td>
-</tr>
-<tr>
 <td>BLAS_ACCEPTED</td>
+</tr>
+<tr>
 <td>BLAS_C_INTERFACE</td>
-</tr>
-<tr>
 <td>BLAS_INCLUDES</td>
+</tr>
+<tr>
 <td>BLAS_INDEX64</td>
-</tr>
-<tr>
 <td>BLAS_LIBS</td>
+</tr>
+<tr>
 <td>BLAS_PC</td>
-</tr>
-<tr>
 <td>BLAS_TYPE</td>
+</tr>
+<tr>
 <td>BOOTSTRAP_DEPENDS</td>
-</tr>
-<tr>
 <td>BROKEN</td>
+</tr>
+<tr>
 <td>BROKEN_EXCEPT_ON_PLATFORM</td>
-</tr>
-<tr>
 <td>BROKEN_ON_PLATFORM</td>
+</tr>
+<tr>
 <td>BSDSRCDIR</td>
-</tr>
-<tr>
 <td>BSDXSRCDIR</td>
+</tr>
+<tr>
 <td>BSD_MAKE_ENV</td>
-</tr>
-<tr>
 <td>BUILDLINK_AUTO_DIRS</td>
+</tr>
+<tr>
 <td>BUILDLINK_AUTO_VARS</td>
-</tr>
-<tr>
 <td>BUILDLINK_CFLAGS</td>
-<td>BUILDLINK_CONTENTS_FILTER</td>
 </tr>
 <tr>
+<td>BUILDLINK_CONTENTS_FILTER</td>
 <td>BUILDLINK_CPPFLAGS</td>
+</tr>
+<tr>
+<td>BUILDLINK_DEPMETHOD</td>
 <td>BUILDLINK_FILES</td>
 </tr>
 <tr>
@@ -12216,99 +12296,111 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>CHANGES</td>
+<td>CHECKOUT_DATE</td>
+</tr>
+<tr>
 <td>CHECK_COMPILER</td>
-</tr>
-<tr>
 <td>CHECK_FAKEHOME</td>
+</tr>
+<tr>
 <td>CHECK_FILES</td>
-</tr>
-<tr>
 <td>CHECK_FILES_ONLY_PREFIX</td>
+</tr>
+<tr>
 <td>CHECK_FILES_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_FILES_STRICT</td>
+</tr>
+<tr>
 <td>CHECK_HEADERS</td>
-</tr>
-<tr>
 <td>CHECK_HEADERS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_INTERPRETER</td>
-</tr>
-<tr>
 <td>CHECK_INTERPRETER_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_PERMS</td>
-</tr>
-<tr>
 <td>CHECK_PERMS_AUTOFIX</td>
+</tr>
+<tr>
 <td>CHECK_PERMS_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PIE</td>
+</tr>
+<tr>
 <td>CHECK_PIE_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_PIE_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY</td>
-</tr>
-<tr>
 <td>CHECK_PORTABILITY_EXPERIMENTAL</td>
+</tr>
+<tr>
 <td>CHECK_PORTABILITY_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_RELRO</td>
+</tr>
+<tr>
 <td>CHECK_RELRO_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_RELRO_SUPPORTED</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_SHLIBS_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_SHLIBS_TOXIC</td>
+</tr>
+<tr>
 <td>CHECK_SSP</td>
-</tr>
-<tr>
 <td>CHECK_SSP_SKIP</td>
+</tr>
+<tr>
 <td>CHECK_SSP_SUPPORTED</td>
-</tr>
-<tr>
 <td>CHECK_STRIPPED</td>
+</tr>
+<tr>
 <td>CHECK_STRIPPED_SKIP</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF</td>
+</tr>
+<tr>
 <td>CHECK_WRKREF_EXTRA_DIRS</td>
-</tr>
-<tr>
 <td>CHECK_WRKREF_SKIP</td>
+</tr>
+<tr>
 <td>CLAMAV_DBDIR</td>
-</tr>
-<tr>
 <td>CLAMAV_GROUP</td>
+</tr>
+<tr>
 <td>CLAMAV_USER</td>
-</tr>
-<tr>
 <td>CLANGBASE</td>
+</tr>
+<tr>
 <td>CLEANDEPENDS</td>
-</tr>
-<tr>
 <td>CLT</td>
+</tr>
+<tr>
 <td>CMAKE_DEPENDENCIES_REWRITE</td>
-</tr>
-<tr>
 <td>CMAKE_INSTALL_NAME_DIR</td>
+</tr>
+<tr>
 <td>CMAKE_INSTALL_PREFIX</td>
-</tr>
-<tr>
 <td>CMAKE_MODULE_PATH_OVERRIDE</td>
-<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 </tr>
 <tr>
+<td>CMAKE_PKGSRC_BUILD_FLAGS</td>
 <td>CMAKE_PREFIX_PATH</td>
+</tr>
+<tr>
 <td>CMAKE_USE_GNU_INSTALL_DIRS</td>
+<td>COMMON_LISP_DOCFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_EXAMPLES</td>
+<td>COMMON_LISP_EXTRAFILES</td>
+</tr>
+<tr>
+<td>COMMON_LISP_PACKAGES</td>
+<td>COMMON_LISP_SYSTEM</td>
 </tr>
 <tr>
 <td>COMPILER_RPATH_FLAG</td>
@@ -12396,7 +12488,23 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>CURSES_TYPE</td>
-<td>CXX</td>
+<td>CVS_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>CVS_MODULE</td>
+<td>CVS_PROJECT</td>
+</tr>
+<tr>
+<td>CVS_REPOSITORIES</td>
+<td>CVS_ROOT</td>
+</tr>
+<tr>
+<td>CVS_ROOT_GNU</td>
+<td>CVS_ROOT_NONGNU</td>
+</tr>
+<tr>
+<td>CVS_ROOT_SOURCEFORGE</td>
+<td>CVS_TAG</td>
 </tr>
 <tr>
 <td>CYRUS_GROUP</td>
@@ -12615,100 +12723,124 @@ source packages</h2></div></div></div>
 <td>FIX_SYSTEM_HEADERS</td>
 </tr>
 <tr>
+<td>FONTDIR</td>
 <td>FONTS_DIRS</td>
+</tr>
+<tr>
 <td>FONTS_VERBOSE</td>
-</tr>
-<tr>
 <td>FOO_HACKS_MK</td>
+</tr>
+<tr>
 <td>FORCE_CXX_STD</td>
-</tr>
-<tr>
 <td>FORCE_C_STD</td>
+</tr>
+<tr>
+<td>FOSSIL_EXTRACTDIR</td>
+<td>FOSSIL_REPO</td>
+</tr>
+<tr>
+<td>FOSSIL_REPOSITORIES</td>
+<td>FOSSIL_VERSION</td>
+</tr>
+<tr>
 <td>FOX_USE_XUNICODE</td>
-</tr>
-<tr>
 <td>FREEWNN_GROUP</td>
+</tr>
+<tr>
 <td>FREEWNN_USER</td>
-</tr>
-<tr>
 <td>FTP_PKG_URL_DIR</td>
+</tr>
+<tr>
 <td>FTP_PKG_URL_HOST</td>
-</tr>
-<tr>
 <td>GAMEDATAMODE</td>
+</tr>
+<tr>
 <td>GAMEDATA_PERMS</td>
-</tr>
-<tr>
 <td>GAMEDIRMODE</td>
+</tr>
+<tr>
 <td>GAMEDIR_PERMS</td>
-</tr>
-<tr>
 <td>GAMEGRP</td>
+</tr>
+<tr>
 <td>GAMEMODE</td>
-</tr>
-<tr>
 <td>GAMEOWN</td>
+</tr>
+<tr>
 <td>GAMES_GROUP</td>
-</tr>
-<tr>
 <td>GAMES_USER</td>
+</tr>
+<tr>
 <td>GCC</td>
-</tr>
-<tr>
 <td>GCCBASE</td>
+</tr>
+<tr>
 <td>GCC_REQD</td>
-</tr>
-<tr>
 <td>GCC_VERSION_SUFFIX</td>
+</tr>
+<tr>
 <td>GEM_BUILD</td>
-</tr>
-<tr>
 <td>GEM_CLEANBUILD</td>
+</tr>
+<tr>
 <td>GEM_CLEANBUILD_EXTENSIONS</td>
-</tr>
-<tr>
 <td>GEM_DOCDIR</td>
+</tr>
+<tr>
 <td>GEM_EXTSDIR</td>
-</tr>
-<tr>
 <td>GEM_HOME</td>
+</tr>
+<tr>
 <td>GEM_KEEPBUILD</td>
-</tr>
-<tr>
 <td>GEM_LIBDIR</td>
+</tr>
+<tr>
 <td>GEM_NAME</td>
-</tr>
-<tr>
 <td>GEM_PATH</td>
+</tr>
+<tr>
 <td>GEM_PLUGINSDIR</td>
-</tr>
-<tr>
 <td>GEM_SPECFILE</td>
+</tr>
+<tr>
 <td>GENERATE_PLIST</td>
-</tr>
-<tr>
 <td>GHC</td>
+</tr>
+<tr>
 <td>GHOSTSCRIPT_REQD</td>
-</tr>
-<tr>
 <td>GITHUB_PROJECT</td>
+</tr>
+<tr>
 <td>GITHUB_RELEASE</td>
-</tr>
-<tr>
 <td>GITHUB_SUBMODULES</td>
+</tr>
+<tr>
 <td>GITHUB_TAG</td>
-</tr>
-<tr>
 <td>GITHUB_TYPE</td>
+</tr>
+<tr>
 <td>GITLAB_PROJECT</td>
-</tr>
-<tr>
 <td>GITLAB_RELEASE</td>
-<td>GITLAB_SUBMODULES</td>
 </tr>
 <tr>
+<td>GITLAB_SUBMODULES</td>
 <td>GITLAB_TAG</td>
+</tr>
+<tr>
 <td>GITLAB_TYPE</td>
+<td>GIT_BRANCH</td>
+</tr>
+<tr>
+<td>GIT_ENV</td>
+<td>GIT_EXTRACTDIR</td>
+</tr>
+<tr>
+<td>GIT_REPO</td>
+<td>GIT_REPOSITORIES</td>
+</tr>
+<tr>
+<td>GIT_REVISION</td>
+<td>GIT_TAG</td>
 </tr>
 <tr>
 <td>GNU</td>
@@ -12751,27 +12883,35 @@ source packages</h2></div></div></div>
 <td>GZIP</td>
 </tr>
 <tr>
+<td>HASKELL_COMPILER</td>
 <td>HASKELL_DISABLE_EXECUTABLES</td>
+</tr>
+<tr>
 <td>HASKELL_DISABLE_LIBRARIES</td>
-</tr>
-<tr>
 <td>HASKELL_ENABLE_DYNAMIC_EXECUTABLE</td>
+</tr>
+<tr>
 <td>HASKELL_ENABLE_HADDOCK_DOCUMENTATION</td>
-</tr>
-<tr>
 <td>HASKELL_ENABLE_LIBRARY_PROFILING</td>
+</tr>
+<tr>
 <td>HASKELL_ENABLE_SHARED_LIBRARY</td>
-</tr>
-<tr>
 <td>HASKELL_ENABLE_TESTS</td>
+</tr>
+<tr>
 <td>HASKELL_OPTIMIZATION_LEVEL</td>
-</tr>
-<tr>
 <td>HASKELL_PKG_NAME</td>
-<td>HASKELL_UNRESTRICT_DEPENDENCIES</td>
 </tr>
 <tr>
+<td>HASKELL_UNRESTRICT_DEPENDENCIES</td>
 <td>HEADER_TEMPLATES</td>
+</tr>
+<tr>
+<td>HG_REPO</td>
+<td>HG_REPOSITORIES</td>
+</tr>
+<tr>
+<td>HG_TAG</td>
 <td>HOMEPAGE</td>
 </tr>
 <tr>
@@ -12868,6 +13008,10 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>JABBERD_USER</td>
+<td>JAVA_APP_PATH</td>
+</tr>
+<tr>
+<td>JAVA_APP_TARGETS</td>
 <td>JAVA_BINPREFIX</td>
 </tr>
 <tr>
@@ -12947,76 +13091,84 @@ source packages</h2></div></div></div>
 <td>LINK_RPATH_FLAG</td>
 </tr>
 <tr>
+<td>LINUX_BASE_NODEPS</td>
+<td>LINUX_BASE_PREFERRED</td>
+</tr>
+<tr>
+<td>LINUX_BASE_REQUIRED</td>
 <td>LINUX_LOCALES</td>
+</tr>
+<tr>
 <td>LOCALBASE</td>
-</tr>
-<tr>
 <td>LOCALBASE_LOCKTYPE</td>
+</tr>
+<tr>
 <td>LOCALPATCHES</td>
-</tr>
-<tr>
 <td>LOVE_DATA</td>
+</tr>
+<tr>
 <td>LOVE_GAME</td>
-</tr>
-<tr>
 <td>LOVE_VERSION</td>
+</tr>
+<tr>
 <td>LOWER_OPSYS</td>
-</tr>
-<tr>
 <td>LOWER_OPSYS_VERSUFFIX</td>
+</tr>
+<tr>
 <td>LOWER_VARIANT_VERSION</td>
-</tr>
-<tr>
 <td>LOWER_VENDOR</td>
+</tr>
+<tr>
 <td>LP32PLATFORMS</td>
-</tr>
-<tr>
 <td>LP64PLATFORMS</td>
+</tr>
+<tr>
 <td>LUA_BUSTED_ARGS</td>
-</tr>
-<tr>
 <td>LUA_CDIR</td>
+</tr>
+<tr>
 <td>LUA_COMPILER</td>
-</tr>
-<tr>
 <td>LUA_DOCDIR</td>
+</tr>
+<tr>
 <td>LUA_EXAMPLESDIR</td>
-</tr>
-<tr>
 <td>LUA_INCDIR</td>
+</tr>
+<tr>
 <td>LUA_INTERPRETER</td>
-</tr>
-<tr>
 <td>LUA_LDIR</td>
+</tr>
+<tr>
 <td>LUA_LINKER_MAGIC</td>
-</tr>
-<tr>
 <td>LUA_PKGPREFIX</td>
+</tr>
+<tr>
 <td>LUA_SELF_CONFLICT</td>
-</tr>
-<tr>
 <td>LUA_USE_BUSTED</td>
+</tr>
+<tr>
 <td>LUA_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>LUA_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>LUA_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>LUA_VERSION_REQD</td>
+</tr>
+<tr>
 <td>Lua</td>
-</tr>
-<tr>
 <td>MACHINE_PLATFORM</td>
+</tr>
+<tr>
 <td>MAILAGENT_DOMAIN</td>
-</tr>
-<tr>
 <td>MAILAGENT_EMAIL</td>
-<td>MAILAGENT_FQDN</td>
 </tr>
 <tr>
+<td>MAILAGENT_FQDN</td>
 <td>MAILAGENT_ORGANIZATION</td>
+</tr>
+<tr>
 <td>MAJORDOMO_HOMEDIR</td>
+<td>MAJOR_OS_VERSION</td>
 </tr>
 <tr>
 <td>MAKEINFO_ARGS</td>
@@ -13104,150 +13256,158 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>MTOOLS_ENABLE_FLOPPYD</td>
+<td>MUST</td>
+</tr>
+<tr>
 <td>MV</td>
-</tr>
-<tr>
 <td>MYSQL_CHARSET</td>
+</tr>
+<tr>
 <td>MYSQL_DATADIR</td>
-</tr>
-<tr>
 <td>MYSQL_EXTRA_CHARSET</td>
+</tr>
+<tr>
 <td>MYSQL_GROUP</td>
-</tr>
-<tr>
 <td>MYSQL_USER</td>
+</tr>
+<tr>
 <td>MYSQL_VERSION</td>
-</tr>
-<tr>
 <td>MYSQL_VERSIONS_ACCEPTED</td>
+</tr>
+<tr>
 <td>MYSQL_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>NAGIOSCMD_GROUP</td>
+</tr>
+<tr>
 <td>NAGIOSDIR</td>
-</tr>
-<tr>
 <td>NAGIOS_GROUP</td>
+</tr>
+<tr>
 <td>NAGIOS_USER</td>
-</tr>
-<tr>
 <td>NATIVE_EXEC_FMT</td>
+</tr>
+<tr>
 <td>NATIVE_LOWER_OPSYS</td>
-</tr>
-<tr>
 <td>NATIVE_LOWER_VENDOR</td>
+</tr>
+<tr>
 <td>NATIVE_MACHINE_PLATFORM</td>
-</tr>
-<tr>
 <td>NATIVE_OBJECT_FMT</td>
+</tr>
+<tr>
 <td>NATIVE_OPSYS_VERSION</td>
-</tr>
-<tr>
 <td>NATIVE_OS_VARIANT</td>
+</tr>
+<tr>
 <td>NATIVE_OS_VERSION</td>
-</tr>
-<tr>
 <td>NBPAX_PROGRAM_PREFIX</td>
+</tr>
+<tr>
 <td>NETBSD_LOGIN_NAME</td>
-</tr>
-<tr>
 <td>NMH_EDITOR</td>
+</tr>
+<tr>
 <td>NMH_MTA</td>
-</tr>
-<tr>
 <td>NMH_PAGER</td>
+</tr>
+<tr>
 <td>NODE_VERSIONS_ACCEPTED</td>
-</tr>
-<tr>
 <td>NODE_VERSIONS_INCOMPATIBLE</td>
+</tr>
+<tr>
 <td>NODE_VERSION_DEFAULT</td>
-</tr>
-<tr>
 <td>NODE_VERSION_REQD</td>
+</tr>
+<tr>
 <td>NOLOGIN</td>
-</tr>
-<tr>
 <td>NOTE</td>
+</tr>
+<tr>
 <td>NOT_FOR_PLATFORM</td>
-</tr>
-<tr>
 <td>NOT_PAX_ASLR_SAFE</td>
+</tr>
+<tr>
 <td>NOT_PAX_MPROTECT_SAFE</td>
-</tr>
-<tr>
 <td>NO_BUILD</td>
+</tr>
+<tr>
 <td>NO_CHECKSUM</td>
-</tr>
-<tr>
 <td>NO_CONFIGURE</td>
+</tr>
+<tr>
 <td>NO_SKIP</td>
-</tr>
-<tr>
 <td>NSD_GROUP</td>
+</tr>
+<tr>
 <td>NSD_LOG_FACILITY</td>
-</tr>
-<tr>
 <td>NSD_USER</td>
+</tr>
+<tr>
 <td>NS_PREFERRED</td>
-</tr>
-<tr>
 <td>NULLMAILER_GROUP</td>
+</tr>
+<tr>
 <td>NULLMAILER_USER</td>
-</tr>
-<tr>
 <td>OBJECT_FMT</td>
+</tr>
+<tr>
 <td>OBJHOSTNAME</td>
-</tr>
-<tr>
 <td>OBJMACHINE</td>
+</tr>
+<tr>
 <td>OCAML_FINDLIB_DIRS</td>
-</tr>
-<tr>
 <td>OCAML_FINDLIB_REGISTER</td>
+</tr>
+<tr>
 <td>OCAML_FINDLIB_REGISTER_VERBOSE</td>
-</tr>
-<tr>
 <td>OCAML_SITELIBDIR</td>
+</tr>
+<tr>
 <td>OMF</td>
-</tr>
-<tr>
 <td>ONLY_FOR_COMPILER</td>
+</tr>
+<tr>
 <td>ONLY_FOR_PLATFORM</td>
-</tr>
-<tr>
 <td>OPENSSH_CHROOT</td>
+</tr>
+<tr>
 <td>OPENSSH_GROUP</td>
-</tr>
-<tr>
 <td>OPENSSH_USER</td>
+</tr>
+<tr>
 <td>OPSYS</td>
-</tr>
-<tr>
 <td>OPSYS_EMULDIR</td>
+</tr>
+<tr>
 <td>OPSYS_VERSION</td>
-</tr>
-<tr>
 <td>OS</td>
+</tr>
+<tr>
 <td>OSS_TYPE</td>
-</tr>
-<tr>
 <td>OSX</td>
+</tr>
+<tr>
 <td>OSX_PATH_TO_M4</td>
-</tr>
-<tr>
 <td>OSX_PATH_TO_YACC</td>
+</tr>
+<tr>
+<td>OS_HAVE_ALSA</td>
+<td>OS_HAVE_RCD</td>
+</tr>
+<tr>
 <td>OS_VARIANT</td>
-</tr>
-<tr>
 <td>OS_VERSION</td>
+</tr>
+<tr>
 <td>OTF_FONTS_DIR</td>
-</tr>
-<tr>
 <td>OVERRIDE_DIRDEPTH</td>
-<td>OVERRIDE_GEMSPEC</td>
 </tr>
 <tr>
+<td>OVERRIDE_GEMSPEC</td>
 <td>OVERRIDE_GNU_CONFIG_SCRIPTS</td>
+</tr>
+<tr>
+<td>OVERRIDE_ROCKSPEC</td>
 <td>OWN_DIRS</td>
 </tr>
 <tr>
@@ -13293,6 +13453,14 @@ source packages</h2></div></div></div>
 <tr>
 <td>PATH</td>
 <td>PCCBASE</td>
+</tr>
+<tr>
+<td>PEAR</td>
+<td>PEAR_CHANNEL</td>
+</tr>
+<tr>
+<td>PEAR_CHANNEL_ALIAS</td>
+<td>PEAR_CHANNEL_VERSION</td>
 </tr>
 <tr>
 <td>PEAR_CMD</td>
@@ -13703,6 +13871,10 @@ source packages</h2></div></div></div>
 <td>RASMOL_DEPTH</td>
 </tr>
 <tr>
+<td>RCD_DIR</td>
+<td>RCD_ORDER</td>
+</tr>
+<tr>
 <td>RCD_SCRIPTS</td>
 <td>RCD_SCRIPTS_DIR</td>
 </tr>
@@ -13715,8 +13887,8 @@ source packages</h2></div></div></div>
 <td>RCD_SCRIPT_SRC</td>
 </tr>
 <tr>
+<td>RCD_SUBR</td>
 <td>RDOC</td>
-<td>READLINE_ACCEPTED</td>
 </tr>
 <tr>
 <td>READLINE_DEFAULT</td>
@@ -13789,6 +13961,10 @@ source packages</h2></div></div></div>
 <tr>
 <td>RESOLV_LIBS</td>
 <td>RM</td>
+</tr>
+<tr>
+<td>ROCKSPEC_NAME</td>
+<td>ROCKSPEC_SPECFILE</td>
 </tr>
 <tr>
 <td>ROOT_CMD</td>
@@ -13996,187 +14172,199 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>SHLIB</td>
+<td>SHORTNAME</td>
+</tr>
+<tr>
 <td>SIGN_PACKAGES</td>
-</tr>
-<tr>
 <td>SILC_CLIENT_WITH_PERL</td>
+</tr>
+<tr>
 <td>SITE_SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>SKIP_DEPENDS</td>
+</tr>
+<tr>
 <td>SMF_INSTANCES</td>
-</tr>
-<tr>
 <td>SMF_MANIFEST</td>
+</tr>
+<tr>
 <td>SMF_METHODS</td>
-</tr>
-<tr>
 <td>SMF_METHOD_SHELL</td>
+</tr>
+<tr>
 <td>SMF_METHOD_SRC</td>
-</tr>
-<tr>
 <td>SMF_NAME</td>
+</tr>
+<tr>
 <td>SMF_PREFIX</td>
-</tr>
-<tr>
 <td>SMF_SRCDIR</td>
+</tr>
+<tr>
 <td>SNIPROXY_GROUP</td>
-</tr>
-<tr>
 <td>SNIPROXY_USER</td>
+</tr>
+<tr>
 <td>SOURCE_BUFFSIZE</td>
-</tr>
-<tr>
 <td>SPECIAL_PERMS</td>
+</tr>
+<tr>
 <td>SPECIFIC_PKGS</td>
-</tr>
-<tr>
 <td>SSH_SUID</td>
+</tr>
+<tr>
 <td>SSLCERTBUNDLE</td>
-</tr>
-<tr>
 <td>SSLCERTS</td>
+</tr>
+<tr>
 <td>SSLDIR</td>
-</tr>
-<tr>
 <td>SSLKEYS</td>
+</tr>
+<tr>
 <td>SSP_SUPPORTED</td>
-</tr>
-<tr>
 <td>SSYNC_PAWD</td>
+</tr>
+<tr>
 <td>STEP_MSG</td>
-</tr>
-<tr>
 <td>STRIP</td>
+</tr>
+<tr>
 <td>STRIP_DBG</td>
-</tr>
-<tr>
 <td>STRIP_DEBUG</td>
+</tr>
+<tr>
 <td>STRIP_DEBUG_SUPPORTED</td>
-</tr>
-<tr>
 <td>STRIP_FILES_SKIP</td>
+</tr>
+<tr>
 <td>SU</td>
-</tr>
-<tr>
 <td>SUBDIR</td>
+</tr>
+<tr>
 <td>SUBST</td>
-</tr>
-<tr>
 <td>SUBST_CLASSES</td>
+</tr>
+<tr>
 <td>SUBST_FILES</td>
-</tr>
-<tr>
 <td>SUBST_FILTER_CMD</td>
+</tr>
+<tr>
 <td>SUBST_MESSAGE</td>
-</tr>
-<tr>
 <td>SUBST_NOOP_OK</td>
+</tr>
+<tr>
 <td>SUBST_SED</td>
-</tr>
-<tr>
 <td>SUBST_SHOW_DIFF</td>
+</tr>
+<tr>
 <td>SUBST_SKIP_TEXT_CHECK</td>
-</tr>
-<tr>
 <td>SUBST_STAGE</td>
+</tr>
+<tr>
 <td>SUBST_VARS</td>
-</tr>
-<tr>
 <td>SUNWSPROBASE</td>
+</tr>
+<tr>
 <td>SUSE_PREFER</td>
-</tr>
-<tr>
 <td>SU_CMD</td>
+</tr>
+<tr>
+<td>SVN_EXTRACTDIR</td>
+<td>SVN_REPO</td>
+</tr>
+<tr>
+<td>SVN_REPOSITORIES</td>
+<td>SVN_REVISION</td>
+</tr>
+<tr>
 <td>SYSCONFBASE</td>
-</tr>
-<tr>
 <td>TARGET_MACHINE_ARCH</td>
+</tr>
+<tr>
 <td>TBL</td>
-</tr>
-<tr>
 <td>TERMCAP_TYPE</td>
+</tr>
+<tr>
 <td>TERMINFO_DEFAULT</td>
-</tr>
-<tr>
 <td>TERMINFO_TYPE</td>
+</tr>
+<tr>
 <td>TEST</td>
-</tr>
-<tr>
 <td>TEST_DEPENDS</td>
+</tr>
+<tr>
 <td>TEST_DIRS</td>
-</tr>
-<tr>
 <td>TEST_ENV</td>
+</tr>
+<tr>
 <td>TEST_ENV_SHELL</td>
-</tr>
-<tr>
 <td>TEST_MAKE_CMD</td>
+</tr>
+<tr>
 <td>TEST_MAKE_FLAGS</td>
-</tr>
-<tr>
 <td>TEST_TARGET</td>
+</tr>
+<tr>
 <td>TEXLIVE_IGNORE_PATTERNS</td>
-</tr>
-<tr>
 <td>TEXLIVE_REV</td>
+</tr>
+<tr>
 <td>TEXLIVE_UNVERSIONED</td>
-</tr>
-<tr>
 <td>TEXMFSITE</td>
+</tr>
+<tr>
 <td>TEX_FORMATS</td>
-</tr>
-<tr>
 <td>TEX_HYPHEN_DAT</td>
+</tr>
+<tr>
 <td>TEX_HYPHEN_DEF</td>
-</tr>
-<tr>
 <td>TEX_TEXMF_DIRS</td>
+</tr>
+<tr>
 <td>THTTPD_LOG_FACILITY</td>
-</tr>
-<tr>
 <td>TINYDYN_USER</td>
+</tr>
+<tr>
 <td>TLS</td>
-</tr>
-<tr>
 <td>TLSWRAPPER_CHROOT</td>
+</tr>
+<tr>
 <td>TO</td>
-</tr>
-<tr>
 <td>TOOLDIR</td>
+</tr>
+<tr>
 <td>TOOLS_ALIASES</td>
-</tr>
-<tr>
 <td>TOOLS_ALWAYS_WRAP</td>
+</tr>
+<tr>
 <td>TOOLS_ARGS</td>
-</tr>
-<tr>
 <td>TOOLS_BROKEN</td>
+</tr>
+<tr>
 <td>TOOLS_CMD</td>
-</tr>
-<tr>
 <td>TOOLS_CMDLINE_SED</td>
+</tr>
+<tr>
 <td>TOOLS_CREATE</td>
-</tr>
-<tr>
 <td>TOOLS_CROSS_DESTDIR</td>
+</tr>
+<tr>
 <td>TOOLS_DIR</td>
-</tr>
-<tr>
 <td>TOOLS_FAIL</td>
+</tr>
+<tr>
 <td>TOOLS_GNU_MISSING</td>
-</tr>
-<tr>
 <td>TOOLS_LDCONFIG</td>
+</tr>
+<tr>
 <td>TOOLS_NOOP</td>
-</tr>
-<tr>
 <td>TOOLS_PATH</td>
-<td>TOOLS_SCRIPT</td>
 </tr>
 <tr>
+<td>TOOLS_SCRIPT</td>
 <td>TOOLS_USE_CROSS_COMPILE</td>
+</tr>
+<tr>
 <td>TOOL_DEPENDS</td>
+<td>TTF_FONTDIR</td>
 </tr>
 <tr>
 <td>TTF_FONTS_DIR</td>
@@ -14344,155 +14532,159 @@ source packages</h2></div></div></div>
 </tr>
 <tr>
 <td>XXX</td>
+<td>XXXX</td>
+</tr>
+<tr>
 <td>YES</td>
-</tr>
-<tr>
 <td>ZSH_STATIC</td>
+</tr>
+<tr>
 <td>__stdc__</td>
-</tr>
-<tr>
 <td>_vargroups</td>
+</tr>
+<tr>
 <td>accept</td>
-</tr>
-<tr>
 <td>acquire-localbase-lock</td>
+</tr>
+<tr>
 <td>acquire-lock</td>
-</tr>
-<tr>
 <td>add</td>
+</tr>
+<tr>
 <td>added</td>
-</tr>
-<tr>
 <td>administrator</td>
+</tr>
+<tr>
 <td>alloca</td>
-</tr>
-<tr>
 <td>alternatives</td>
+</tr>
+<tr>
 <td>aslr</td>
-</tr>
-<tr>
 <td>asprintf</td>
+</tr>
+<tr>
 <td>atlas</td>
-</tr>
-<tr>
 <td>autoconf</td>
+</tr>
+<tr>
 <td>automake</td>
-</tr>
-<tr>
 <td>autoreconf</td>
+</tr>
+<tr>
 <td>awk</td>
-</tr>
-<tr>
 <td>bash</td>
+</tr>
+<tr>
 <td>big-endian</td>
-</tr>
-<tr>
 <td>bin-install</td>
+</tr>
+<tr>
 <td>bind</td>
-</tr>
-<tr>
 <td>binpkg-list</td>
+</tr>
+<tr>
 <td>blas</td>
-</tr>
-<tr>
 <td>bootstrap-depends</td>
+</tr>
+<tr>
 <td>broken</td>
-</tr>
-<tr>
 <td>broken_on_platform</td>
+</tr>
+<tr>
 <td>bsd</td>
-</tr>
-<tr>
 <td>bsd.prog.mk</td>
+</tr>
+<tr>
 <td>build</td>
-</tr>
-<tr>
 <td>build-env</td>
+</tr>
+<tr>
 <td>buildlink-directories</td>
-</tr>
-<tr>
 <td>buildlink-oss-soundcard-h</td>
+</tr>
+<tr>
 <td>built-in</td>
-</tr>
-<tr>
 <td>builtin</td>
+</tr>
+<tr>
 <td>c</td>
-</tr>
-<tr>
 <td>c++</td>
+</tr>
+<tr>
 <td>ccache</td>
-</tr>
-<tr>
 <td>cce</td>
+</tr>
+<tr>
 <td>cdefs</td>
-</tr>
-<tr>
 <td>ceil</td>
+</tr>
+<tr>
 <td>changes</td>
-</tr>
-<tr>
 <td>changes-entry</td>
+</tr>
+<tr>
 <td>changes-entry-noupdate</td>
-</tr>
-<tr>
 <td>check</td>
+</tr>
+<tr>
 <td>check-clean</td>
-</tr>
-<tr>
 <td>check-files</td>
+</tr>
+<tr>
 <td>check-files-clean</td>
-</tr>
-<tr>
 <td>check-hackage</td>
+</tr>
+<tr>
 <td>check-vulnerable</td>
-</tr>
-<tr>
 <td>checksum</td>
+</tr>
+<tr>
 <td>checksum-phase</td>
-</tr>
-<tr>
 <td>clean</td>
+</tr>
+<tr>
 <td>clean-depends</td>
-</tr>
-<tr>
 <td>cleandir</td>
+</tr>
+<tr>
 <td>commit</td>
-</tr>
-<tr>
 <td>commit-changes-entry</td>
+</tr>
+<tr>
 <td>compact</td>
-</tr>
-<tr>
 <td>compiler</td>
+</tr>
+<tr>
 <td>conf</td>
-</tr>
-<tr>
 <td>config.guess</td>
+</tr>
+<tr>
 <td>config.sub</td>
-</tr>
-<tr>
 <td>configuration</td>
+</tr>
+<tr>
 <td>configure</td>
-</tr>
-<tr>
 <td>configure-env</td>
+</tr>
+<tr>
 <td>configure-help</td>
-</tr>
-<tr>
 <td>configure_args</td>
+</tr>
+<tr>
 <td>connect</td>
-</tr>
-<tr>
 <td>cos</td>
+</tr>
+<tr>
 <td>cpe</td>
-</tr>
-<tr>
 <td>cputime</td>
-<td>create-usergroup</td>
 </tr>
 <tr>
+<td>create-usergroup</td>
 <td>csh</td>
+</tr>
+<tr>
 <td>ctf</td>
+<td>cvs</td>
 </tr>
 <tr>
 <td>debug</td>
@@ -14543,20 +14735,24 @@ source packages</h2></div></div></div>
 <td>do-fetch</td>
 </tr>
 <tr>
+<td>do-install</td>
 <td>download</td>
+</tr>
+<tr>
 <td>emul</td>
-</tr>
-<tr>
 <td>emul-distinfo</td>
+</tr>
+<tr>
 <td>emul-fetch</td>
-</tr>
-<tr>
 <td>emulation</td>
-<td>emulator</td>
 </tr>
 <tr>
+<td>emulator</td>
 <td>enable</td>
+</tr>
+<tr>
 <td>endian</td>
+<td>endif</td>
 </tr>
 <tr>
 <td>enomem</td>
@@ -14595,36 +14791,40 @@ source packages</h2></div></div></div>
 <td>fortify_source</td>
 </tr>
 <tr>
+<td>fossil</td>
 <td>friend</td>
+</tr>
+<tr>
 <td>fts</td>
-</tr>
-<tr>
 <td>fts_close</td>
+</tr>
+<tr>
 <td>fts_open</td>
-</tr>
-<tr>
 <td>fts_read</td>
+</tr>
+<tr>
 <td>fts_set</td>
-</tr>
-<tr>
 <td>gcc</td>
+</tr>
+<tr>
 <td>gethostbyaddr</td>
-</tr>
-<tr>
 <td>gethostbyname</td>
+</tr>
+<tr>
 <td>gethostbyname2</td>
-</tr>
-<tr>
 <td>getopt_long</td>
+</tr>
+<tr>
 <td>getprogname</td>
-</tr>
-<tr>
 <td>getservbyname</td>
-<td>getservbyport</td>
 </tr>
 <tr>
+<td>getservbyport</td>
 <td>getservent</td>
+</tr>
+<tr>
 <td>gettext</td>
+<td>git</td>
 </tr>
 <tr>
 <td>github</td>
@@ -14651,91 +14851,95 @@ source packages</h2></div></div></div>
 <td>help</td>
 </tr>
 <tr>
+<td>hg</td>
 <td>imake</td>
+</tr>
+<tr>
 <td>in-tree</td>
-</tr>
-<tr>
 <td>increment</td>
+</tr>
+<tr>
 <td>indirect</td>
-</tr>
-<tr>
 <td>inet_aton</td>
+</tr>
+<tr>
 <td>install</td>
-</tr>
-<tr>
 <td>install-env</td>
+</tr>
+<tr>
 <td>interp</td>
-</tr>
-<tr>
 <td>interpreter</td>
+</tr>
+<tr>
 <td>intl</td>
-</tr>
-<tr>
 <td>ip4</td>
+</tr>
+<tr>
 <td>ip6</td>
-</tr>
-<tr>
 <td>ipv4</td>
+</tr>
+<tr>
 <td>ipv6</td>
-</tr>
-<tr>
 <td>iso</td>
+</tr>
+<tr>
 <td>kerberos</td>
-</tr>
-<tr>
 <td>krb</td>
+</tr>
+<tr>
 <td>krb5</td>
-</tr>
-<tr>
 <td>ksh</td>
+</tr>
+<tr>
 <td>lapack</td>
-</tr>
-<tr>
 <td>latex</td>
+</tr>
+<tr>
 <td>libiconv</td>
-</tr>
-<tr>
 <td>libintl_bindtextdomain</td>
+</tr>
+<tr>
 <td>libintl_gettext</td>
-</tr>
-<tr>
 <td>libintl_textdomain</td>
+</tr>
+<tr>
 <td>libnbcompat</td>
-</tr>
-<tr>
 <td>libs</td>
+</tr>
+<tr>
 <td>libtool</td>
-</tr>
-<tr>
 <td>licence</td>
+</tr>
+<tr>
 <td>license</td>
-</tr>
-<tr>
 <td>lintl</td>
+</tr>
+<tr>
 <td>little-endian</td>
-</tr>
-<tr>
 <td>lock</td>
+</tr>
+<tr>
 <td>locking</td>
-</tr>
-<tr>
 <td>lua</td>
+</tr>
+<tr>
 <td>lvalue</td>
-</tr>
-<tr>
 <td>machine_endian</td>
+</tr>
+<tr>
 <td>make</td>
-</tr>
-<tr>
 <td>makedistinfo</td>
+</tr>
+<tr>
 <td>makepatchsum</td>
-</tr>
-<tr>
 <td>makesum</td>
-<td>mdi</td>
 </tr>
 <tr>
+<td>mdi</td>
 <td>memory</td>
+</tr>
+<tr>
+<td>mercurial</td>
 <td>meta</td>
 </tr>
 <tr>
@@ -14971,11 +15175,15 @@ source packages</h2></div></div></div>
 <td>substitutions</td>
 </tr>
 <tr>
+<td>subversion</td>
 <td>sun</td>
-<td>sunpro</td>
 </tr>
 <tr>
+<td>sunpro</td>
 <td>sunwspro</td>
+</tr>
+<tr>
+<td>svn</td>
 <td>symlink</td>
 </tr>
 <tr>
