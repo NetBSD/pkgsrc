@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2024/08/16 09:56:14 adam Exp $
+# $NetBSD: Makefile,v 1.125 2025/04/17 22:03:47 wiz Exp $
 
 DISTNAME=	erlang-${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/OTP-/erlang-/}
@@ -18,6 +18,8 @@ WRKSRC=		${WRKDIR}/otp-${GITHUB_TAG}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	awk gmake perl flex
 USE_LANGUAGES+=	c c++
+
+POLICY_UPDATE_LIMITED=	abi
 
 # "This run-time was supposed be compiled with all code below 2Gb,
 # but the instruction 'allocate_tt' is located at 00000001c586f34c."
