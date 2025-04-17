@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/04/14 07:36:11 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/17 21:52:28 wiz Exp $
 
 DISTNAME=	python-augeas-1.1.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-augeas/}
 

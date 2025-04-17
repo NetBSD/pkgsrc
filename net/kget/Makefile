@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2025/02/12 06:45:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2025/04/17 21:51:56 wiz Exp $
 
 DISTNAME=	kget-${KAPPSVER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/kget/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/02/12 06:45:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/04/17 21:51:42 wiz Exp $
 
 BUILDLINK_TREE+=	pimcommon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pimcommon
 PIMCOMMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pimcommon+=	pimcommon>=17.12.1
-BUILDLINK_ABI_DEPENDS.pimcommon?=		pimcommon>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.pimcommon?=		pimcommon>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.pimcommon?=		../../misc/pimcommon
 
 .include "../../mail/kimap/buildlink3.mk"

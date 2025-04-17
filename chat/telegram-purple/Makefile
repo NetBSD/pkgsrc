@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2024/11/14 22:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/17 21:49:56 wiz Exp $
 
 DISTNAME=	telegram-purple_1.3.1.orig
 PKGNAME=	telegram-purple-1.3.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=majn/}
 GITHUB_PROJECT=	telegram-purple

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/02 12:27:42 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/17 21:50:10 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/17-client-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	PostgreSQL database client programs
 
 .include "../../databases/postgresql17/Makefile.common"

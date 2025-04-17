@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2025/02/18 10:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2025/04/17 21:51:01 wiz Exp $
 
 DISTNAME=	geeqie-2.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz

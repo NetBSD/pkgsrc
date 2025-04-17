@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/02/12 06:45:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2025/04/17 21:52:54 wiz Exp $
 
 DISTNAME=		xaos-4.2.1
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=xaos-project/}
 GITHUB_PROJECT=		XaoS

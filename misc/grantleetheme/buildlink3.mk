@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/02/12 06:45:19 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/04/17 21:51:36 wiz Exp $
 
 BUILDLINK_TREE+=	grantleetheme
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	grantleetheme
 GRANTLEETHEME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.grantleetheme+=	grantleetheme>=20.04.1
-BUILDLINK_ABI_DEPENDS.grantleetheme?=	grantleetheme>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.grantleetheme?=	grantleetheme>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.grantleetheme?=	../../misc/grantleetheme
 
 .include "../../devel/grantlee-qt5/buildlink3.mk"
