@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2688 2025/04/17 04:59:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2689 2025/04/17 10:41:58 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3551,3 +3551,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libcurl-gnutls to 8.13.0 [adam 2025-04-16]
 	Updated net/wireshark to 4.4.6 [adam 2025-04-17]
 	Updated databases/postgresql-timescaledb to 2.19.3 [adam 2025-04-17]
+	Updated sysutils/smartmontools to 7.4 [nonaka 2025-04-17]
