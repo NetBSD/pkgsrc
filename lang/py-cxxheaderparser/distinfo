@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/17 15:45:50 adam Exp $
+
+BLAKE2s (cxxheaderparser-1.5.0.tar.gz) = c1bf3d7dc56df2d9a5caec92f7ca6a10b3c9a530fca6d2a072bf95da2bc3e11a
+SHA512 (cxxheaderparser-1.5.0.tar.gz) = 2629dc4da86735bae5e5b818e99cbd2d67fad115aca0658a7e1bca4f5cb5a24b732b3833566ee71de723198d265d93de91addaa5597f22aea55e80b61a2a1525
+Size (cxxheaderparser-1.5.0.tar.gz) = 93022 bytes
