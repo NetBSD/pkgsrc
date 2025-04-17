@@ -1,0 +1,56 @@
+<!-- $NetBSD: policies.xml,v 1.1 2025/04/17 22:00:11 wiz Exp $ -->
+
+<chapter id="policies"> <?dbhtml filename="policies.html"?>
+<title>pkgsrc Policies</title>
+
+<sect1 id="stability">
+<title>Packages for which updating is restricted</title>
+
+<para>In the past, some packages have caused more package failures than others, and we'd like to reduce this in the future.</para>
+
+<para>For this reason, pkgsrc-pmc marks some packages with <varname>POLICY_UPDATE_LIMITED</varname>. The possible values currently are:
+<itemizedlist>
+  <listitem><para><literal>abi</literal> for packages where ABI/API changes often broke the packages depending on them</para></listitem>
+  <listitem><para><literal>bootstrap</literal> for packages that are used during the pkgsrc bootstrap</para></listitem>
+</itemizedlist>
+<filename>pkglint</filename> will warn when committing updates to these packages.</para>
+
+<sect2 id="stability.abi">
+  <title>Limited Updates - ABI</title>
+
+  <para>Before committing non-micro version updates to packages marked
+  with <varname>POLICY_UPDATE_LIMITED=abi</varname>, a limited bulk
+  build of <filename
+  role="pkg">meta-pkgs/bulk-test-${PACKAGE}</filename> needs to be run
+  and the result posted to the tech-pkg mailing list, highlighting
+  what packages would stop building (if any).</para>
+
+  <para>Depending on the result, pkgsrc-pmc then decides:
+  <itemizedlist>
+    <listitem><para>go ahead with the update</para></listitem>
+    <listitem><para>wait for packages X, Y, Z to be fixed (upstream or
+    locally) with the updated version, which is put in wip in the
+    meantime</para></listitem>
+    <listitem><para>In the second case, all pkgsrc developers are
+    encouraged to work on fixing this - it is not only the updater's
+    task to fix them.</para></listitem>
+  </itemizedlist>
+  </para>
+
+  <para>The decision to wait for packages can be revisited.</para>
+</sect2>
+
+<sect2 id="stability.bootstrap">
+  <title>Limited Updates - Bootstrap</title>
+
+  <para>When updating packages used in the bootstrap, i.e. marked with
+  <varname>POLICY_UPDATE_LIMITED=bootstrap</varname>, test the
+  bootstrap process and preferably some basic packages and send the
+  patch to the tech-pkg mailing list so it can be tested on other
+  platforms as well. Give at least two weeks for feedback and testing
+  by others.</para>
+</sect2>
+
+</sect1>
+
+</chapter>
