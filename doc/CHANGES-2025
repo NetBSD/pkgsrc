@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2690 2025/04/17 12:28:28 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2691 2025/04/17 12:29:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-timescaledb to 2.19.3 [adam 2025-04-17]
 	Updated sysutils/smartmontools to 7.4 [nonaka 2025-04-17]
 	Updated devel/ast-grep to 0.37.0 [pin 2025-04-17]
+	Updated devel/mise to 2025.4.4 [pin 2025-04-17]
