@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.160 2025/03/12 09:35:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.161 2025/04/17 22:03:48 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -16,6 +16,8 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://poppler.freedesktop.org/
 LICENSE=	gnu-gpl-v2
+
+POLICY_UPDATE_LIMITED=	abi
 
 DISTINFO_FILE=	${.CURDIR}/../../print/poppler/distinfo
 PATCHDIR=	${.CURDIR}/../../print/poppler/patches

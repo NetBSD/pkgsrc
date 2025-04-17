@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2025/04/17 21:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2025/04/17 22:03:48 wiz Exp $
 
 DISTNAME=	icu4c-77_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://icu.unicode.org/
 COMMENT=	Robust and full-featured Unicode services
 LICENSE=	unicode-v3 AND modified-bsd AND mit
+
+POLICY_UPDATE_LIMITED=	abi
 
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c c++
