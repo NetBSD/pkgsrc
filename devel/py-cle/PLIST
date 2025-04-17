@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/10 16:49:10 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.9 2025/04/17 16:06:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cle/__init__.py
 ${PYSITELIB}/cle/__init__.pyc
@@ -22,6 +22,9 @@ ${PYSITELIB}/cle/backends/binja.pyo
 ${PYSITELIB}/cle/backends/blob.py
 ${PYSITELIB}/cle/backends/blob.pyc
 ${PYSITELIB}/cle/backends/blob.pyo
+${PYSITELIB}/cle/backends/cartfile.py
+${PYSITELIB}/cle/backends/cartfile.pyc
+${PYSITELIB}/cle/backends/cartfile.pyo
 ${PYSITELIB}/cle/backends/cgc/__init__.py
 ${PYSITELIB}/cle/backends/cgc/__init__.pyc
 ${PYSITELIB}/cle/backends/cgc/__init__.pyo
@@ -70,15 +73,6 @@ ${PYSITELIB}/cle/backends/elf/relocation/arm.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/arm64.py
 ${PYSITELIB}/cle/backends/elf/relocation/arm64.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/arm64.pyo
-${PYSITELIB}/cle/backends/elf/relocation/arm_cortex_m.py
-${PYSITELIB}/cle/backends/elf/relocation/arm_cortex_m.pyc
-${PYSITELIB}/cle/backends/elf/relocation/arm_cortex_m.pyo
-${PYSITELIB}/cle/backends/elf/relocation/armel.py
-${PYSITELIB}/cle/backends/elf/relocation/armel.pyc
-${PYSITELIB}/cle/backends/elf/relocation/armel.pyo
-${PYSITELIB}/cle/backends/elf/relocation/armhf.py
-${PYSITELIB}/cle/backends/elf/relocation/armhf.pyc
-${PYSITELIB}/cle/backends/elf/relocation/armhf.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/elfreloc.py
 ${PYSITELIB}/cle/backends/elf/relocation/elfreloc.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/elfreloc.pyo
@@ -91,15 +85,12 @@ ${PYSITELIB}/cle/backends/elf/relocation/i386.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/mips.py
 ${PYSITELIB}/cle/backends/elf/relocation/mips.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/mips.pyo
-${PYSITELIB}/cle/backends/elf/relocation/mips64.py
-${PYSITELIB}/cle/backends/elf/relocation/mips64.pyc
-${PYSITELIB}/cle/backends/elf/relocation/mips64.pyo
-${PYSITELIB}/cle/backends/elf/relocation/pcc64.py
-${PYSITELIB}/cle/backends/elf/relocation/pcc64.pyc
-${PYSITELIB}/cle/backends/elf/relocation/pcc64.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/ppc.py
 ${PYSITELIB}/cle/backends/elf/relocation/ppc.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/ppc.pyo
+${PYSITELIB}/cle/backends/elf/relocation/ppc64.py
+${PYSITELIB}/cle/backends/elf/relocation/ppc64.pyc
+${PYSITELIB}/cle/backends/elf/relocation/ppc64.pyo
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.py
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.pyc
 ${PYSITELIB}/cle/backends/elf/relocation/s390x.pyo
@@ -163,6 +154,9 @@ ${PYSITELIB}/cle/backends/macho/__init__.pyo
 ${PYSITELIB}/cle/backends/macho/binding.py
 ${PYSITELIB}/cle/backends/macho/binding.pyc
 ${PYSITELIB}/cle/backends/macho/binding.pyo
+${PYSITELIB}/cle/backends/macho/encrypted_sentinel_backer.py
+${PYSITELIB}/cle/backends/macho/encrypted_sentinel_backer.pyc
+${PYSITELIB}/cle/backends/macho/encrypted_sentinel_backer.pyo
 ${PYSITELIB}/cle/backends/macho/macho.py
 ${PYSITELIB}/cle/backends/macho/macho.pyc
 ${PYSITELIB}/cle/backends/macho/macho.pyo
@@ -199,18 +193,12 @@ ${PYSITELIB}/cle/backends/pe/regions.pyo
 ${PYSITELIB}/cle/backends/pe/relocation/__init__.py
 ${PYSITELIB}/cle/backends/pe/relocation/__init__.pyc
 ${PYSITELIB}/cle/backends/pe/relocation/__init__.pyo
-${PYSITELIB}/cle/backends/pe/relocation/amd64.py
-${PYSITELIB}/cle/backends/pe/relocation/amd64.pyc
-${PYSITELIB}/cle/backends/pe/relocation/amd64.pyo
 ${PYSITELIB}/cle/backends/pe/relocation/arm.py
 ${PYSITELIB}/cle/backends/pe/relocation/arm.pyc
 ${PYSITELIB}/cle/backends/pe/relocation/arm.pyo
 ${PYSITELIB}/cle/backends/pe/relocation/generic.py
 ${PYSITELIB}/cle/backends/pe/relocation/generic.pyc
 ${PYSITELIB}/cle/backends/pe/relocation/generic.pyo
-${PYSITELIB}/cle/backends/pe/relocation/i386.py
-${PYSITELIB}/cle/backends/pe/relocation/i386.pyc
-${PYSITELIB}/cle/backends/pe/relocation/i386.pyo
 ${PYSITELIB}/cle/backends/pe/relocation/mips.py
 ${PYSITELIB}/cle/backends/pe/relocation/mips.pyc
 ${PYSITELIB}/cle/backends/pe/relocation/mips.pyo

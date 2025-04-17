@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/30 19:24:35 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.6 2025/04/17 16:06:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/pyvex_c/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pyvex/__init__.py
 ${PYSITELIB}/pyvex/__init__.pyc
@@ -19,6 +20,9 @@ ${PYSITELIB}/pyvex/block.pyo
 ${PYSITELIB}/pyvex/const.py
 ${PYSITELIB}/pyvex/const.pyc
 ${PYSITELIB}/pyvex/const.pyo
+${PYSITELIB}/pyvex/const_val.py
+${PYSITELIB}/pyvex/const_val.pyc
+${PYSITELIB}/pyvex/const_val.pyo
 ${PYSITELIB}/pyvex/data_ref.py
 ${PYSITELIB}/pyvex/data_ref.pyc
 ${PYSITELIB}/pyvex/data_ref.pyo

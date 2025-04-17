@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/17 16:06:22 adam Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -12,11 +12,9 @@ HOMEPAGE=	https://github.com/angr/archinfo
 COMMENT=	Classes with architecture-specific information
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
