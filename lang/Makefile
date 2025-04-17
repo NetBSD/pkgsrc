@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.754 2025/04/01 17:47:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.755 2025/04/17 15:49:47 adam Exp $
 #
 
 COMMENT=	Programming languages
@@ -249,6 +249,7 @@ SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
 SUBDIR+=	py-cmake-language-server
 SUBDIR+=	py-cxfreeze
+SUBDIR+=	py-cxxheaderparser
 SUBDIR+=	py-execjs
 SUBDIR+=	py-executing
 SUBDIR+=	py-findpython
@@ -266,6 +267,7 @@ SUBDIR+=	py-parso
 SUBDIR+=	py-paver
 SUBDIR+=	py-pure-eval
 SUBDIR+=	py-py3c
+SUBDIR+=	py-pydemumble
 SUBDIR+=	py-pyformlang
 SUBDIR+=	py-pygls
 SUBDIR+=	py-pyrex
