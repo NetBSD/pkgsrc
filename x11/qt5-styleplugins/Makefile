@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/12/27 08:21:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/17 21:53:09 wiz Exp $
 
 DISTNAME=	qt5-styleplugins-5.0.0.20170112
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qt/}
 GITHUB_PROJECT=	qtstyleplugins

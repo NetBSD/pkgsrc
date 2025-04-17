@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2024/11/14 22:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/04/17 21:50:31 wiz Exp $
 
 DISTNAME=	poxml-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2025/02/12 06:44:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2025/04/17 21:50:47 wiz Exp $
 
 DISTNAME=	kapman-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kapman/

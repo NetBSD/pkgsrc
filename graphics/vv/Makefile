@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/02/18 10:50:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/17 21:51:12 wiz Exp $
 
 DISTNAME=	vv-3.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

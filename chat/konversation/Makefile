@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2025/02/12 06:44:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.141 2025/04/17 21:49:53 wiz Exp $
 
 DISTNAME=	konversation-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 
 HOMEPAGE=	https://konversation.kde.org/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2024/11/14 22:21:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2025/04/17 21:52:39 wiz Exp $
 
 BUILDLINK_TREE+=	syntax-highlighting
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	syntax-highlighting
 SYNTAX_HIGHLIGHTING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.syntax-highlighting+=	syntax-highlighting>=5.41.0
-BUILDLINK_ABI_DEPENDS.syntax-highlighting?=	syntax-highlighting>=5.116.0nb3
+BUILDLINK_ABI_DEPENDS.syntax-highlighting?=	syntax-highlighting>=5.116.0nb5
 BUILDLINK_PKGSRCDIR.syntax-highlighting?=	../../textproc/syntax-highlighting
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

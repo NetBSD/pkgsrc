@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/04/17 15:14:32 osa Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/17 21:50:29 wiz Exp $
 
 DISTNAME=	njs-0.8.10
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_PROJECT=	njs

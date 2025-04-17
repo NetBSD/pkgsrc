@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/03/05 03:39:16 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/17 21:50:20 wiz Exp $
 
 DISTNAME=	hls-test-utils-2.9.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

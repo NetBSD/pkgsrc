@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/17 21:51:38 wiz Exp $
 
 DISTNAME=	kemoticons-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

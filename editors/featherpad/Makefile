@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2025/03/05 04:27:30 pin Exp $
+# $NetBSD: Makefile,v 1.58 2025/04/17 21:50:35 wiz Exp $
 
 VERSION=	1.6.1
 DISTNAME=	FeatherPad-V${VERSION}
 PKGNAME=	featherpad-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}

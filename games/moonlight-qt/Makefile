@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/04/12 06:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/17 21:50:52 wiz Exp $
 
 DISTNAME=	MoonlightSrc-4.3.1
 PKGNAME=	moonlight-qt-4.3.1
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=moonlight-stream/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

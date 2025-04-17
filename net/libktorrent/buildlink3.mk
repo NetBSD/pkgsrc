@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.69 2025/02/12 06:45:31 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.70 2025/04/17 21:51:58 wiz Exp $
 
 BUILDLINK_TREE+=	libktorrent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libktorrent
 LIBKTORRENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libktorrent+=	libktorrent>=23.04.3
-BUILDLINK_ABI_DEPENDS.libktorrent?=	libktorrent>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.libktorrent?=	libktorrent>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.libktorrent?=	../../net/libktorrent
 
 .include "../../devel/boost-headers/buildlink3.mk"
