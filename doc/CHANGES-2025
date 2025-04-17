@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2697 2025/04/17 21:29:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2698 2025/04/17 21:32:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-CppHeaderParser [adam 2025-04-17]
 	Removed devel/py-nampa [adam 2025-04-17]
 	Updated pkgtools/pkg_install to 20250417 [wiz 2025-04-17]
+	Updated textproc/icu to 77.1 [wiz 2025-04-17]
