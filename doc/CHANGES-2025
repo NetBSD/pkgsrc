@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2687 2025/04/16 21:27:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2688 2025/04/17 04:59:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3549,3 +3549,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-mypy to 1.0.1 [adam 2025-04-16]
 	Updated www/curl to 8.13.0 [adam 2025-04-16]
 	Updated www/libcurl-gnutls to 8.13.0 [adam 2025-04-16]
+	Updated net/wireshark to 4.4.6 [adam 2025-04-17]
+	Updated databases/postgresql-timescaledb to 2.19.3 [adam 2025-04-17]
