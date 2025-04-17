@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.346 2025/04/14 05:28:00 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.347 2025/04/17 17:01:21 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26162,3 +26162,4 @@ webkit-gtk<2.48.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-54
 giflib-[0-9]*	heap-buffer-overflow	https://www.openwall.com/lists/oss-security/2025/04/07/3
 libcares<1.34.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-31498
 perl<5.40.2	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-56406
+libxml2<2.14.2	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-32414
