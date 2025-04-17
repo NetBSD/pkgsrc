@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2023/05/17 16:44:51 osa Exp $
+# $NetBSD: options.mk,v 1.2 2025/04/17 15:14:32 osa Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libnjs
-PKG_SUPPORTED_OPTIONS=	ssl pcre2 xml
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUPPORTED_OPTIONS=	pcre2 ssl xml
+PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 .include "../../mk/bsd.options.mk"
 
