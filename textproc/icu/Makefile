@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.164 2025/04/05 10:03:08 nia Exp $
+# $NetBSD: Makefile,v 1.165 2025/04/17 21:32:21 wiz Exp $
 
-DISTNAME=	icu4c-76_1-src
+DISTNAME=	icu4c-77_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 GITHUB_PROJECT=	icu
-GITHUB_RELEASE=	release-76-1
+GITHUB_RELEASE=	release-77-1
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
