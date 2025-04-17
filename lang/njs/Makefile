@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/01/14 17:45:00 osa Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/17 15:14:32 osa Exp $
 
-DISTNAME=	njs-0.8.9
+DISTNAME=	njs-0.8.10
 CATEGORIES=	lang www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -15,8 +15,8 @@ USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 # lang/quickjs needs to be update to a recent snapshot, so
 # disable it for now
-#CONFIGURE_ARGS+=	--cc-opt="-I${LOCALBASE}/include/quickjs"
-#CONFIGURE_ARGS+=	--ld-opt="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS+=	--cc-opt="-I${LOCALBASE}/include"
+CONFIGURE_ARGS+=	--ld-opt="-L${LOCALBASE}/lib"
 #CONFIGURE_ARGS+=	--with-quickjs
 CONFIGURE_ARGS+=	--no-quickjs
 
