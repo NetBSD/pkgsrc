@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:56:56 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.8 2025/04/17 16:06:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/archinfo/__init__.py
 ${PYSITELIB}/archinfo/__init__.pyc
@@ -52,9 +52,6 @@ ${PYSITELIB}/archinfo/arch_x86.pyo
 ${PYSITELIB}/archinfo/archerror.py
 ${PYSITELIB}/archinfo/archerror.pyc
 ${PYSITELIB}/archinfo/archerror.pyo
-${PYSITELIB}/archinfo/defines.py
-${PYSITELIB}/archinfo/defines.pyc
-${PYSITELIB}/archinfo/defines.pyo
 ${PYSITELIB}/archinfo/py.typed
 ${PYSITELIB}/archinfo/tls.py
 ${PYSITELIB}/archinfo/tls.pyc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/12 08:02:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/17 16:06:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,6 +13,9 @@ ${PYSITELIB}/ailment/block.pyo
 ${PYSITELIB}/ailment/block_walker.py
 ${PYSITELIB}/ailment/block_walker.pyc
 ${PYSITELIB}/ailment/block_walker.pyo
+${PYSITELIB}/ailment/constant.py
+${PYSITELIB}/ailment/constant.pyc
+${PYSITELIB}/ailment/constant.pyo
 ${PYSITELIB}/ailment/converter_common.py
 ${PYSITELIB}/ailment/converter_common.pyc
 ${PYSITELIB}/ailment/converter_common.pyo
@@ -28,6 +31,7 @@ ${PYSITELIB}/ailment/expression.pyo
 ${PYSITELIB}/ailment/manager.py
 ${PYSITELIB}/ailment/manager.pyc
 ${PYSITELIB}/ailment/manager.pyo
+${PYSITELIB}/ailment/py.typed
 ${PYSITELIB}/ailment/statement.py
 ${PYSITELIB}/ailment/statement.pyc
 ${PYSITELIB}/ailment/statement.pyo

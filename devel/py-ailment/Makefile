@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2025/04/12 08:02:08 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/17 16:06:22 adam Exp $
 
 .include "../../devel/py-angr/version.mk"
 
 DISTNAME=	ailment-${ANGR_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ailment/}
 
