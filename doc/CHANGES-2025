@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2694 2025/04/17 15:50:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2695 2025/04/17 16:07:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3563,3 +3563,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx-devel to 1.27.5 [osa 2025-04-17]
 	Added lang/py-cxxheaderparser version 1.5.0 [adam 2025-04-17]
 	Added lang/py-pydemumble version 0.0.1 [adam 2025-04-17]
+	Updated devel/py-ailment to 9.2.150 [adam 2025-04-17]
+	Updated devel/py-angr to 9.2.150 [adam 2025-04-17]
+	Updated devel/py-archinfo to 9.2.150 [adam 2025-04-17]
+	Updated devel/py-cle to 9.2.150 [adam 2025-04-17]
+	Updated devel/py-pyvex to 9.2.150 [adam 2025-04-17]
+	Updated math/py-claripy to 9.2.150 [adam 2025-04-17]
