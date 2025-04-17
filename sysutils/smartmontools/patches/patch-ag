@@ -1,23 +1,15 @@
-$NetBSD: patch-ag,v 1.9 2025/04/17 10:39:30 nonaka Exp $
+$NetBSD: patch-ag,v 1.10 2025/04/17 14:12:43 nonaka Exp $
 
 Remove os_solaris=yes to avoid special man page section handling (PR 38199).
 
 --- configure.orig	2023-08-01 11:00:34.000000000 +0000
-+++ configure	2025-04-14 03:26:27.054675496 +0000
-@@ -3646,7 +3646,7 @@ fi
- 
- smartmontools_cvs_tag=`echo '$Id: patch-ag,v 1.9 2025/04/17 10:39:30 nonaka Exp $'`
++++ configure
+@@ -3648,3 +3648,3 @@ smartmontools_cvs_tag=`echo '$Id: config
  
 -printf "%s\n" "#define SMARTMONTOOLS_CONFIGURE_ARGS \"$ac_configure_args\"" >>confdefs.h
 +printf "%s\n" "#define SMARTMONTOOLS_CONFIGURE_ARGS \"$(echo $ac_configure_args | sed -e "s/ 'PKG_CONFIG[_A-Z]*=[^']*'//g")\"" >>confdefs.h
  
- 
- printf "%s\n" "#define CONFIG_H_CVSID \"$smartmontools_cvs_tag\"" >>confdefs.h
-@@ -7757,7 +7757,6 @@ fi
-   *-*-solaris*)
-     os_deps='os_solaris.o'
+@@ -7759,3 +7759,2 @@ fi
      os_mailer='mailx'
 -    os_solaris=yes
      os_man_filter=Solaris
-     ;;
-   *-*-netbsd*)
