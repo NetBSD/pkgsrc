@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2025/02/12 06:44:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/17 21:49:49 wiz Exp $
 
 DISTNAME=	traverso-0.49.6
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	audio
 MASTER_SITES=	#
 

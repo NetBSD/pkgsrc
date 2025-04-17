@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2024/11/14 22:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/04/17 21:50:32 wiz Exp $
 #
 
 DISTNAME=		qconf-2.4
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=psi-im/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}

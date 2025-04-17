@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2024/11/14 22:19:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2025/04/17 21:50:14 wiz Exp $
 
 BUILDLINK_TREE+=	vsqlite++
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vsqlite++
 VSQLITE++_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vsqlite+++=	vsqlite++>=0.3.13
-BUILDLINK_ABI_DEPENDS.vsqlite++?=	vsqlite++>=0.3.13nb24
+BUILDLINK_ABI_DEPENDS.vsqlite++?=	vsqlite++>=0.3.13nb25
 BUILDLINK_PKGSRCDIR.vsqlite++?=		../../databases/vsqlite++
 
 .include "../../databases/sqlite3/buildlink3.mk"

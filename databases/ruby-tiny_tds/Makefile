@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2025/02/23 13:53:09 taca Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/17 21:50:13 wiz Exp $
 
 DISTNAME=	tiny_tds-3.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

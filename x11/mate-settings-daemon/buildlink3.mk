@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2024/11/14 22:22:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/04/17 21:53:03 wiz Exp $
 #
 
 BUILDLINK_TREE+=	mate-settings-daemon
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	mate-settings-daemon
 MATE_SETTINGS_DAEMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mate-settings-daemon+=	mate-settings-daemon>=1.24
-BUILDLINK_ABI_DEPENDS.mate-settings-daemon+=	mate-settings-daemon>=1.26.1nb12
+BUILDLINK_ABI_DEPENDS.mate-settings-daemon+=	mate-settings-daemon>=1.26.1nb16
 BUILDLINK_PKGSRCDIR.mate-settings-daemon?=	../../x11/mate-settings-daemon
 
 .include "../../x11/libmatekbd/buildlink3.mk"

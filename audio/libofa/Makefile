@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2024/11/14 22:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/17 21:49:46 wiz Exp $
 #
 
 DISTNAME=		libofa-0.9.3
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		audio
 MASTER_SITES=		https://www.aydogan.net/distfiles/audio/
 

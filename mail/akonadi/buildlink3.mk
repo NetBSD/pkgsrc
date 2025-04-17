@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2025/02/12 06:45:15 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2025/04/17 21:51:25 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi
 AKONADI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi+=	akonadi>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi?=	akonadi>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.akonadi?=	akonadi>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.akonadi?=	../../mail/akonadi
 
 BUILDLINK_FILES.akonadi+=	share/dbus-1/interfaces/org.freedesktop.Akonadi.*.xml

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/04/09 08:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/04/17 21:52:39 wiz Exp $
 
 DISTNAME=	xerces-c-3.3.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/3/sources/}
 EXTRACT_SUFX=	.tar.xz

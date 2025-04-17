@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2024/11/14 22:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/04/17 21:52:35 wiz Exp $
 
 DISTNAME=	libcroco-0.6.13
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.6/}
 EXTRACT_SUFX=	.tar.xz

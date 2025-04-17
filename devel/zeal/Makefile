@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/01/23 23:27:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/17 21:50:34 wiz Exp $
 
 DISTNAME=	zeal-0.7.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zealdocs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

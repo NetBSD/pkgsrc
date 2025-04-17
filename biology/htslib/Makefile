@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2025/03/06 01:19:04 bacon Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/17 21:49:50 wiz Exp $
 
 # CAUTION: htslib should always be upgraded in conjunction with
 # samtools, bcftools, bio-mocha, and bcf-score
 DISTNAME=	htslib-1.21
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/02/09 14:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/17 21:49:53 wiz Exp $
 
 DISTNAME=	libgadu-1.12.2
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wojtekka/}
 

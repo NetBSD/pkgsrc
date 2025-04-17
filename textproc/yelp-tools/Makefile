@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2024/11/14 22:21:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/17 21:52:40 wiz Exp $
 
 DISTNAME=	yelp-tools-42.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 

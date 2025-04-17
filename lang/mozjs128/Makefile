@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2024/11/14 22:20:28 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/17 21:51:20 wiz Exp $
 
 MOZVER=		128.1.0esr
 DISTNAME=	firefox-${MOZVER}.source
 PKGNAME=	mozjs128-${MOZVER:S/esr//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${MOZVER}/source/}
 EXTRACT_SUFX=	.tar.xz

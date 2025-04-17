@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2024/12/31 15:57:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.156 2025/04/17 21:49:57 wiz Exp $
 
 DISTNAME=	weechat-4.5.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz

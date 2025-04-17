@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/11/14 22:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/17 21:52:17 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/crudesaml-/pam-saml-/}
-PKGREVISION=	16
+PKGREVISION=	17
 COMMENT=	Crude SAML assertion validator for bridging WebSSO and PAM
 
 INSTALLATION_DIRS=	lib/security ${PKGMANDIR}/man5

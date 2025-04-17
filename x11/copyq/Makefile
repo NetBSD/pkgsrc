@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/13 22:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/17 21:52:54 wiz Exp $
 
 DISTNAME=	copyq-9.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hluk/}
 GH_PROJECT=	CopyQ

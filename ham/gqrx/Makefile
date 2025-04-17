@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/03/01 17:22:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/17 21:51:14 wiz Exp $
 
 DISTNAME=	gqrx-2.17.6
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gqrx-sdr/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}

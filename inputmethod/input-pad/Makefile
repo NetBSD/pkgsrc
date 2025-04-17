@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2024/12/27 08:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/04/17 21:51:17 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	38
+PKGREVISION=	39
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	On-screen Input Pad to Send Characters with Mouse
 

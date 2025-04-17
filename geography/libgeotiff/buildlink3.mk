@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2024/11/14 22:20:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2025/04/17 21:50:56 wiz Exp $
 
 BUILDLINK_TREE+=	libgeotiff
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgeotiff
 LIBGEOTIFF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgeotiff+=	libgeotiff>=1.5.1
-BUILDLINK_ABI_DEPENDS.libgeotiff?=	libgeotiff>=1.7.3nb5
+BUILDLINK_ABI_DEPENDS.libgeotiff?=	libgeotiff>=1.7.4nb1
 BUILDLINK_PKGSRCDIR.libgeotiff?=	../../geography/libgeotiff
 
 .include "../../geography/proj/buildlink3.mk"

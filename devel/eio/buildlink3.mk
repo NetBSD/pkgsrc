@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2024/11/14 22:19:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2025/04/17 21:50:18 wiz Exp $
 
 BUILDLINK_TREE+=	eio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	eio
 EIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eio+=	eio>=1.7.10
-BUILDLINK_ABI_DEPENDS.eio?=	eio>=1.7.10nb17
+BUILDLINK_ABI_DEPENDS.eio?=	eio>=1.7.10nb18
 BUILDLINK_PKGSRCDIR.eio?=	../../devel/eio
 
 .include "../../converters/libiconv/buildlink3.mk"

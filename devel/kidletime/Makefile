@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/11/14 22:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/17 21:50:25 wiz Exp $
 
 DISTNAME=	kidletime-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

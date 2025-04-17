@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/11/14 22:21:03 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/17 21:51:51 wiz Exp $
 
 DISTNAME=	ccrtp-2.1.2
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=ccrtp/}
 

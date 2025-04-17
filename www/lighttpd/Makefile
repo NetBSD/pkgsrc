@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2025/04/04 13:30:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.138 2025/04/17 21:52:49 wiz Exp $
 
 DISTNAME=	lighttpd-1.4.79
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz

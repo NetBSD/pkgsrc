@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2025/04/12 06:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/17 21:49:44 wiz Exp $
 #
 
 DISTNAME=		ezstream-1.0.2
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		audio
 MASTER_SITES=		https://downloads.xiph.org/releases/ezstream/
 MASTER_SITES+=		https://ezstream.mrsserver.net/releases/

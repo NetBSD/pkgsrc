@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2024/12/27 08:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/04/17 21:51:23 wiz Exp $
 
 DISTNAME=		racket-8.15-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://www-old.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/

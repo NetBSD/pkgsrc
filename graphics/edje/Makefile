@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/17 21:51:00 wiz Exp $
 
 DISTNAME=	edje-1.7.10
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

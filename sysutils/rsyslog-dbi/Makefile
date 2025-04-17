@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2024/11/14 22:21:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/17 21:52:29 wiz Exp $
 #
 
 RSYSLOG_MOD=	dbi
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
-PKGREVISION=	22
+PKGREVISION=	23
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 

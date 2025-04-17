@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2024/11/14 22:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/17 21:53:06 wiz Exp $
 
-PKGREVISION= 5
+PKGREVISION= 6
 .include "../../x11/qt5-qscintilla/Makefile.common"
 
 PKGNAME=	qt5-${DISTNAME:S/_src//:tl}

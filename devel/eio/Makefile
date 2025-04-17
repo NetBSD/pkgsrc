@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2024/11/14 22:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/17 21:50:18 wiz Exp $
 
 DISTNAME=	eio-1.7.10
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

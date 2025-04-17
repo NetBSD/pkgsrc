@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/01 02:31:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/17 21:52:31 wiz Exp $
 
 UBOOT_TARGET=		visionfive2
 UBOOT_VERSION=		2024.10
@@ -10,6 +10,7 @@ post-extract:
 
 MAKE_ENV+=	OPENSBI=${WRKSRC}/fw_dynamic.bin
 
+PKGREVISION= 1
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/opensbi-visionfive2/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/03/21 08:30:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/17 21:53:10 wiz Exp $
 
 DISTNAME=	qt6ct-0.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVERSION_NOREV}/
 # remove on next update

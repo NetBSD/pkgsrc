@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/02/27 13:49:53 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/17 21:51:13 wiz Exp $
 
 PKGNAME=	gnuradio-pdu-${VERSION}
+PKGREVISION=	1
 COMMENT=	Protocol Data Units for GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

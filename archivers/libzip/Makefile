@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/01/20 11:07:32 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/04/17 21:49:42 wiz Exp $
 
 DISTNAME=		libzip-1.11.3
+PKGREVISION=		1
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://libzip.org/download/
 MASTER_SITES+=		${MASTER_SITE_GITHUB:=nih-at/}

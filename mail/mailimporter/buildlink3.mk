@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/02/12 06:45:16 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/04/17 21:51:28 wiz Exp $
 
 BUILDLINK_TREE+=	mailimporter
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mailimporter
 MAILIMPORTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mailimporter+=	mailimporter>=20.04.1
-BUILDLINK_ABI_DEPENDS.mailimporter?=	mailimporter>=23.08.4nb7
+BUILDLINK_ABI_DEPENDS.mailimporter?=	mailimporter>=23.08.4nb8
 BUILDLINK_PKGSRCDIR.mailimporter?=	../../mail/mailimporter
 
 .include "../../misc/pimcommon/buildlink3.mk"

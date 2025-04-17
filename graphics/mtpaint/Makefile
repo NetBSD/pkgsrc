@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/01/26 15:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/17 21:51:08 wiz Exp $
 
 # mtpaint's maintainer uses commits as releases.
 DISTNAME=	mtpaint-3.50.11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wjaguar/}
 GITHUB_TAG=	f37cf09c02b0ebd81d29c67be9741f54d76a9171
 WRKSRC=		${WRKDIR}/mtPaint-${GITHUB_TAG}
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

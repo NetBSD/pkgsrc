@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2024/11/14 22:22:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2025/04/17 21:52:48 wiz Exp $
 
 BUILDLINK_TREE+=	libmicrohttpd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmicrohttpd
 LIBMICROHTTPD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmicrohttpd+=	libmicrohttpd>=0.9.9
-BUILDLINK_ABI_DEPENDS.libmicrohttpd+=	libmicrohttpd>=1.0.1nb5
+BUILDLINK_ABI_DEPENDS.libmicrohttpd+=	libmicrohttpd>=1.0.1nb6
 BUILDLINK_PKGSRCDIR.libmicrohttpd?=	../../www/libmicrohttpd
 
 .include "../../security/gnutls/buildlink3.mk"

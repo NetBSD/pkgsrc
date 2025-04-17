@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/11/14 22:21:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/17 21:52:02 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../net/proftpd/Makefile.module"
 
 PROFTPD_MOD=	sqlite

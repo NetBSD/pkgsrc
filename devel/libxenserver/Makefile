@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2024/11/14 22:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/17 21:50:29 wiz Exp $
 #
 
 VERSION=	6.2.0
 DISTNAME=	XenServer-${VERSION}-SDK
 PKGNAME=	libxenserver-${VERSION}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	devel
 MASTER_SITES=	http://downloadns.citrix.com.edgesuite.net/7289/
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2025/04/09 10:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2025/04/17 21:52:36 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 TOOL_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml

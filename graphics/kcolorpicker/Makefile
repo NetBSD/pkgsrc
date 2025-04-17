@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:20:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/17 21:51:04 wiz Exp $
 
 DISTNAME=	kcolorpicker-0.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksnip/}
 GITHUB_PROJECT=	kColorPicker

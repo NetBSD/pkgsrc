@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2024/11/14 22:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/04/17 21:51:24 wiz Exp $
 
 DISTNAME=	Pantomime-1.4.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/gnustep-nonfsf/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2025/03/05 03:38:58 pho Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/17 21:50:01 wiz Exp $
 
 # When updating this package, be sure to also update the version constraint
 # on sqlite3 in this file and buildlink3.mk.
 DISTNAME=	direct-sqlite-2.3.29
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

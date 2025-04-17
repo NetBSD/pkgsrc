@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2024/11/14 22:21:40 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/04/17 21:52:25 wiz Exp $
 #
 
 DISTNAME=	gworkspace-0.9.1
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	sysutils gnustep
 MASTER_SITES=	http://www.gnustep.it/enrico/gworkspace/
 

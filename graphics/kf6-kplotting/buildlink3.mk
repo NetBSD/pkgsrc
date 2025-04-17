@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:20:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/04/17 21:51:05 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kplotting
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kplotting
 KF6_KPLOTTING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kplotting+=	kf6-kplotting>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kplotting?=	kf6-kplotting>=6.2.0nb4
+BUILDLINK_ABI_DEPENDS.kf6-kplotting?=	kf6-kplotting>=6.8.0nb1
 BUILDLINK_PKGSRCDIR.kf6-kplotting?=	../../graphics/kf6-kplotting
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
