@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2692 2025/04/17 12:30:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2693 2025/04/17 15:25:35 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3555,3 +3555,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.37.0 [pin 2025-04-17]
 	Updated devel/mise to 2025.4.4 [pin 2025-04-17]
 	Updated sysutils/broot to 1.46.0 [pin 2025-04-17]
+	Updated www/nginx-devel to 1.27.4nb1 [osa 2025-04-17]
+	Updated devel/libnjs to 0.8.10 [osa 2025-04-17]
+	Updated lang/njs to 0.8.10 [osa 2025-04-17]
+	Updated www/nginx to 1.26.3nb1 [osa 2025-04-17]
+	Updated www/nginx-devel to 1.27.4nb2 [osa 2025-04-17]
+	Updated www/nginx-devel to 1.27.5 [osa 2025-04-17]
