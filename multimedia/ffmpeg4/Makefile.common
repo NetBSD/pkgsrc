@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2024/09/17 07:56:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.36 2025/04/17 14:21:38 nia Exp $
 # used by multimedia/ffmpeg4/Makefile
 # used by multimedia/ffplay4/Makefile
 
@@ -57,6 +57,11 @@ CONFIGURE_ENV+=		bigendian=yes
 .if ${MACHINE_ARCH:Mpowerpc*}
 BUILDLINK_TRANSFORM+=	rm:-maltivec
 BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
+.endif
+
+# fails otherwise due to movz/movn in assembler code
+.if ${MACHINE_ARCH:Mmips64*}
+CFLAGS.NetBSD+=		-march=mips4
 .endif
 
 .if ${MACHINE_PLATFORM:MDarwin-1[2-9].*-*} || ${MACHINE_PLATFORM:MDarwin-2*}

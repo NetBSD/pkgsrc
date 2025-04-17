@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2024/09/17 07:34:31 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/04/17 14:21:38 nia Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
@@ -43,6 +43,11 @@ CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
 .  if ${MACHINE_ENDIAN} == "big"
 CONFIGURE_ENV+=		bigendian=yes
 .  endif
+.endif
+
+# fails otherwise due to movz/movn in assembler code
+.if ${MACHINE_ARCH:Mmips64*}
+CFLAGS.NetBSD+=		-march=mips4
 .endif
 
 # altivec support is detected at runtime, and only code that is gated
