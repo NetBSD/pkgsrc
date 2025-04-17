@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.133 2025/03/04 16:00:18 schmonz Exp $	*/
+/*	$NetBSD: perform.c,v 1.134 2025/04/17 21:29:34 wiz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.133 2025/03/04 16:00:18 schmonz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.134 2025/04/17 21:29:34 wiz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1078,7 +1078,7 @@ check_explicit_conflict(struct pkg_task *pkg)
 
 	if (some_installed_package_conflicts_with(pkg->pkgname,
 	    pkg->other_version, &installed, &installed_pattern)) {
-		warnx("%s: Installed package `%s' conflicts with `%s' when trying to install `%s'.",
+		warnx("%s: Installed package `%s' conflicts with `%s'.",
 		    pkg->pkgname, installed, installed_pattern);
 		free(installed);
 		free(installed_pattern);
