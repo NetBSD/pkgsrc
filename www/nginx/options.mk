@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.115 2025/02/07 09:00:23 adam Exp $
+# $NetBSD: options.mk,v 1.116 2025/04/17 15:14:32 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -193,7 +193,7 @@ LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.LuaJIT2+=	LuaJIT2>=2.1
 .include "../../lang/LuaJIT2/buildlink3.mk"
 DEPENDS+=		lua-resty-core>=0.1.27nb1:../../www/lua-resty-core
@@ -360,7 +360,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.8.9
+NJS_VERSION=		0.8.10
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz
