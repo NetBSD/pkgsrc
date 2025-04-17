@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/17 21:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/17 23:07:10 gdt Exp $
 #
 
 DISTNAME=	nextcloud-client-3.16.2
@@ -13,10 +13,11 @@ HOMEPAGE=	https://nextcloud.com/clients
 COMMENT=	Nextcloud Desktop Client
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
-
+USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17 filesystem
+
+USE_TOOLS+=		pkg-config
+TOOL_DEPENDS+=		qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 PKG_SYSCONFSUBDIR=	Nextcloud
 
@@ -50,6 +51,7 @@ AUTO_MKDIRS=	yes
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
+# In theory, qt6-qttools should be TOOL_DEPENDS only.
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
