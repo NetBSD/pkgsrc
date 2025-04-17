@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4461 2025/04/17 16:16:48 adam Exp $
+# $NetBSD: Makefile,v 1.4462 2025/04/17 16:19:32 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2805,7 +2805,6 @@ SUBDIR+=	py-msgpack
 SUBDIR+=	py-msgspec
 SUBDIR+=	py-mulpyplexer
 SUBDIR+=	py-multipledispatch
-SUBDIR+=	py-nampa
 SUBDIR+=	py-nest-asyncio
 SUBDIR+=	py-newt
 SUBDIR+=	py-nihtest
