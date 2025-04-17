@@ -1,0 +1,8 @@
+A pure python C++ header parser that parses C++ headers in a mildly naive
+manner that allows it to handle many C++ constructs, including many modern
+(C++11 and beyond) features.
+
+This is a complete rewrite of the CppHeaderParser library. CppHeaderParser is
+really useful for some tasks, but it's implementation is a truly terrible ugly
+hack built on top of other terrible hacks. This rewrite tries to learn from
+CppHeaderParser and leave its ugly baggage behind.
