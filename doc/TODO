@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25663 2025/04/17 21:32:31 wiz Exp $
+$NetBSD: TODO,v 1.25664 2025/04/18 08:46:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -902,6 +902,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lua-sql-postgres-2.4.0
 	o lua-sql-sqlite3-2.4.0
 	o lumina-1.6.2
+	o lxqt-2.2
 	o lynis-3.1.1
 	o mDNSResponder-nss-1310.80.1
 	o maelstrom-sdl-3.0.7
