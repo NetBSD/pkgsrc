@@ -1,4 +1,6 @@
-$NetBSD: patch-src_xml__pyx.c,v 1.2 2025/04/18 06:41:43 wiz Exp $
+$NetBSD: patch-src_xml__pyx.c,v 1.3 2025/04/18 15:39:44 wiz Exp $
+
+Symbol was removed from libxml2 2.14.
 
 --- src/xml_pyx.c.orig	2013-07-01 02:58:36.000000000 +0000
 +++ src/xml_pyx.c
