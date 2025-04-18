@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2712 2025/04/18 19:14:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2713 2025/04/18 22:23:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3597,3 +3597,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-trytond to 6.2.2nb4 [wiz 2025-04-18]
 	Updated textproc/py-jmespath to 1.0.1nb1 [wiz 2025-04-18]
 	Updated net/libsoup3 to 3.6.5 [wiz 2025-04-18]
+	Updated security/xhash to 3.6.0 [wiz 2025-04-18]
