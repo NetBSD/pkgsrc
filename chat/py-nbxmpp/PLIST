@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2025/02/07 21:43:29 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+@comment $NetBSD: PLIST,v 1.7 2025/04/18 10:38:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/nbxmpp/__init__.py
 ${PYSITELIB}/nbxmpp/__init__.pyc
@@ -31,9 +31,6 @@ ${PYSITELIB}/nbxmpp/exceptions.pyo
 ${PYSITELIB}/nbxmpp/http.py
 ${PYSITELIB}/nbxmpp/http.pyc
 ${PYSITELIB}/nbxmpp/http.pyo
-${PYSITELIB}/nbxmpp/idlequeue.py
-${PYSITELIB}/nbxmpp/idlequeue.pyc
-${PYSITELIB}/nbxmpp/idlequeue.pyo
 ${PYSITELIB}/nbxmpp/language.py
 ${PYSITELIB}/nbxmpp/language.pyc
 ${PYSITELIB}/nbxmpp/language.pyo
