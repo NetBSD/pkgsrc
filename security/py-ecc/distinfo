@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/18 12:46:57 adam Exp $
+
+BLAKE2s (py_ecc-8.0.0.tar.gz) = e3b2cc6b269dccb149979da1a6678ee34d5b5a6cdeaa10ec2466d6b88979c254
+SHA512 (py_ecc-8.0.0.tar.gz) = 2be946690472d4643d88ab0f931cb8c80559ceaf19c26e2e43c2dd5da5e616f48f00e4ad263ce696d5f455d3331a430e93fcff16eca336bd874aa7094a2a47fd
+Size (py_ecc-8.0.0.tar.gz) = 51193 bytes
