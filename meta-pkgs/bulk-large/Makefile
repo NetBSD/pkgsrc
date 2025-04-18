@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2024/10/24 13:05:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2025/04/18 19:06:17 wiz Exp $
 
 DISTNAME=	bulk-large-20240227
 CATEGORIES=	meta-pkgs
@@ -121,7 +121,6 @@ DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg
 .else
 DEPENDS+=	librsvg-[0-9]*:../../graphics/librsvg-c
 .endif
-DEPENDS+=	libsoup-[0-9]*:../../net/libsoup
 
 #
 # 4. TeX
