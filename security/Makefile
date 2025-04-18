@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.977 2025/04/15 12:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.978 2025/04/18 12:46:56 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -489,6 +489,7 @@ SUBDIR+=	py-cyclonedx-bom
 SUBDIR+=	py-cyclonedx-python-lib
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-django-cryptography-django5
+SUBDIR+=	py-ecc
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-fido2
 SUBDIR+=	py-gnupg
