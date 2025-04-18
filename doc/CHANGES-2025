@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2705 2025/04/18 10:45:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2706 2025/04/18 11:32:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3584,3 +3584,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-logbook to 1.8.1 [adam 2025-04-18]
 	Updated chat/py-nbxmpp to 6.1.1 [adam 2025-04-18]
 	Updated chat/py-telethon to 1.39.0 [adam 2025-04-18]
+	Updated chat/toot to 0.48.1 [adam 2025-04-18]
+	Updated www/py-beautifulsoup4 to 4.13.4 [adam 2025-04-18]
