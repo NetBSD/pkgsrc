@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2021/12/22 22:55:48 wiz Exp $
-bin/trytond${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.10 2025/04/18 15:24:20 wiz Exp $
 bin/trytond-admin${PYVERSSUFFIX}
 bin/trytond-console${PYVERSSUFFIX}
 bin/trytond-cron${PYVERSSUFFIX}
 bin/trytond-stat${PYVERSSUFFIX}
 bin/trytond-worker${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+bin/trytond${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/trytond/__init__.py
 ${PYSITELIB}/trytond/__init__.pyc
 ${PYSITELIB}/trytond/__init__.pyo
