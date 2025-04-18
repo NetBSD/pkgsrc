@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/01/08 20:35:32 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/04/18 10:01:18 adam Exp $
 
-BLAKE2s (logbook-1.8.0.tar.gz) = 1679e335ba149fb99789efebe5d2ba12a75273c325bffb2ed23be1122dbba348
-SHA512 (logbook-1.8.0.tar.gz) = bdd983e4d4d1159826ad398492e24b7aed58b143441c64090bf185191e12969356f6a6b0be2c4d0c562a6ea977b73c043a71b382af8f95c5f395020c8c0ee3ac
-Size (logbook-1.8.0.tar.gz) = 368000 bytes
+BLAKE2s (logbook-1.8.1.tar.gz) = 52ba7527166e6a1c057bec8caa7f2d556c934770584915dda3983253c8dcdfa3
+SHA512 (logbook-1.8.1.tar.gz) = 8e2d768e7c89836e82b46d6dbf166bdb5b992a7418fa2f62682380e99e6b37900229a2d276a2131c5e4d2932dddeda9734e5d7b8cc7fe9fa10a7fb2080886f7a
+Size (logbook-1.8.1.tar.gz) = 368031 bytes
