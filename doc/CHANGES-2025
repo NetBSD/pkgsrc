@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2699 2025/04/17 21:38:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2700 2025/04/18 07:08:29 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3574,3 +3574,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkg_install to 20250417 [wiz 2025-04-17]
 	Updated textproc/icu to 77.1 [wiz 2025-04-17]
 	Updated textproc/libxml2 to 2.14.2 [wiz 2025-04-17]
+	Updated comms/asterisk22 to 22.0.0nb7 [kim 2025-04-18]
