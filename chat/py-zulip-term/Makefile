@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/03/04 09:08:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/18 11:28:07 adam Exp $
 
 DISTNAME=	zulip-term-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zulip-term/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/zulip/zulip-terminal
 COMMENT=	Zulip's official terminal client
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.10.0:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.7.1:../../textproc/py-lxml
