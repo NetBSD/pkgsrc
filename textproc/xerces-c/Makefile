@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/04/17 21:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/04/18 15:34:16 wiz Exp $
 
 DISTNAME=	xerces-c-3.3.0
 PKGREVISION=	1
@@ -27,10 +27,6 @@ PLIST_VARS+=		iconv gnuiconv macunicode
 
 .if ${OPSYS} == "Darwin"
 PLIST.macunicode=	yes
-.elif ${OPSYS} == "SunOS"
-PLIST.iconv=		yes
-CMAKE_CONFIGURE_ARGS+=	-DXERCES_USE_TRANSCODER_GNUICONV=false
-CMAKE_CONFIGURE_ARGS+=	-DXERCES_USE_TRANSCODER_ICONV=true
 .else
 PLIST.gnuiconv=		yes
 .include "../../converters/libiconv/buildlink3.mk"
