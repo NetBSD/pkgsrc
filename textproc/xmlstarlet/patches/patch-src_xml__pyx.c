@@ -1,15 +1,13 @@
-$NetBSD: patch-src_xml__pyx.c,v 1.1 2025/04/18 06:15:32 wiz Exp $
+$NetBSD: patch-src_xml__pyx.c,v 1.2 2025/04/18 06:41:43 wiz Exp $
 
-libxml2 defines ATTRIBUTE_UNUSED.
-
---- src/xml_pyx.c.orig	2025-04-18 06:14:09.644457134 +0000
+--- src/xml_pyx.c.orig	2013-07-01 02:58:36.000000000 +0000
 +++ src/xml_pyx.c
 @@ -200,7 +200,7 @@ pyxExternalEntityReferenceHandler(void* 
  }
  
  static void
 -pyxExternalSubsetHandler(void *ctx ATTRIBUTE_UNUSED, const xmlChar *name,
-+pyxExternalSubsetHandler(void *ctx XS_ATTRIBUTE_UNUSED, const xmlChar *name,
++pyxExternalSubsetHandler(void *ctx, const xmlChar *name,
                           const xmlChar *ExternalID, const xmlChar *SystemID)
  {
      fprintf(stdout, "D %s PUBLIC", name); /* TODO: re-check */
@@ -18,7 +16,7 @@ libxml2 defines ATTRIBUTE_UNUSED.
  
  static void
 -pyxCommentHandler(void *ctx ATTRIBUTE_UNUSED, const xmlChar *value)
-+pyxCommentHandler(void *ctx XS_ATTRIBUTE_UNUSED, const xmlChar *value)
++pyxCommentHandler(void *ctx, const xmlChar *value)
  {
      fprintf(stdout,"C");
      SanitizeData(value, xmlStrlen(value));
@@ -27,7 +25,7 @@ libxml2 defines ATTRIBUTE_UNUSED.
  
  static void
 -pyxCdataBlockHandler(void *ctx ATTRIBUTE_UNUSED, const xmlChar *value, int len)
-+pyxCdataBlockHandler(void *ctx XS_ATTRIBUTE_UNUSED, const xmlChar *value, int len)
++pyxCdataBlockHandler(void *ctx, const xmlChar *value, int len)
  {
      fprintf(stdout,"[");
      SanitizeData(value, len);
