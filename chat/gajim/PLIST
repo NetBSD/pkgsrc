@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2025/02/07 21:47:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/18 11:28:07 adam Exp $
 bin/gajim
 bin/gajim-remote
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gajim/__init__.py
 ${PYSITELIB}/gajim/__init__.pyc

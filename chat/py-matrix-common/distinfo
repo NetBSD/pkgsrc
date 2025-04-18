@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/10/06 13:43:34 gdt Exp $
+$NetBSD: distinfo,v 1.5 2025/04/18 11:28:07 adam Exp $
 
-BLAKE2s (matrix-python-common-1.3.0.tar.gz) = e0649efb2e065c3c42b08e427a0184c441bc7dc87092db9823ff51f52bc940fd
-SHA512 (matrix-python-common-1.3.0.tar.gz) = d08fa11a4156a7c4596ea20709e0fddd1563ef1f4ba763e21a073ba53e1baf58d8de1b60cf0f69c846128cdd6f04788df49765704c8adfde187e8de1dc5ded4e
-Size (matrix-python-common-1.3.0.tar.gz) = 14143 bytes
+BLAKE2s (matrix_common-1.3.0.tar.gz) = ca617168e738f16b4ed7e713eb4f74b630c3981315d9724ea25e46c883ac749e
+SHA512 (matrix_common-1.3.0.tar.gz) = 5c61c11baede3726060c804c4088117f692a6c36941f29cb9c04d99a228047c8010b53a0056c874ce137ebc936d020d62612b10533d7115a9ba359e12df6793c
+Size (matrix_common-1.3.0.tar.gz) = 12157 bytes

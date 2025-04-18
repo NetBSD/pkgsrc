@@ -1,25 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/18 11:28:07 adam Exp $
 
-DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-matrix-common-1.3.0
-PKGREVISION=	1
-CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
-GITHUB_PROJECT=	matrix-python-common
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	matrix_common-1.3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	2
+CATEGORIES=	chat python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-common/}
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://github.com/matrix-org/matrix-python-common
 COMMENT=	Common utilities for Synapse, Sydent and Sygnal
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-WHEEL_NAME=	matrix_common-${PKGVERSION_NOREV}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

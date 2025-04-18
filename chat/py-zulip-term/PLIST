@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/13 09:50:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/18 11:28:07 adam Exp $
 bin/zulip-term
 bin/zulip-term-check-symbols
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/zulipterminal/__init__.py

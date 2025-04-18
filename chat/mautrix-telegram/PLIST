@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/10 06:26:23 wiz Exp $
-${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/LICENSE
+@comment $NetBSD: PLIST,v 1.6 2025/04/18 11:28:07 adam Exp $
 ${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/METADATA
 ${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/RECORD
 ${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/WHEEL
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/licenses/LICENSE
 ${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/top_level.txt
 ${PYSITELIB}/mautrix_telegram/__init__.py
 ${PYSITELIB}/mautrix_telegram/__init__.pyc
