@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/17 21:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/18 19:14:32 wiz Exp $
 
-DISTNAME=	libsoup-3.6.4
+DISTNAME=	libsoup-3.6.5
 PKGNAME=	${DISTNAME:S/soup/soup3/}
-PKGREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +14,8 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 # not found by meson
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
+
+# 2 test failures as of 3.6.5
 
 USE_CC_FEATURES=	c99
 USE_LANGUAGES=		c
