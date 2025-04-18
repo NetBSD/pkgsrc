@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/30 13:47:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/18 04:39:49 wiz Exp $
 bin/speedtest
 bin/speedtest-cli
 ${PYSITELIB}/speedtest.py
 ${PYSITELIB}/speedtest.pyc
 ${PYSITELIB}/speedtest.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/speedtest-cli.1
 man/man1/speedtest.1
