@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.82 2025/04/17 21:49:53 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/18 11:28:07 adam Exp $
 
 DISTNAME=	gajim-1.9.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://www.gajim.org/downloads/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gajim.org/
+HOMEPAGE=	https://gajim.org/
 COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.16.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser

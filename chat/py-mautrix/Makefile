@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/11/11 07:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/18 11:28:07 adam Exp $
 
 DISTNAME=	mautrix-0.20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mautrix/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/tulir/mautrix-python
 COMMENT=	Python 3 asyncio Matrix framework
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.5:../../www/py-yarl
