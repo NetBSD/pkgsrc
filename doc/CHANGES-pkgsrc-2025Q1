@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.7 2025/04/15 18:21:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.8 2025/04/18 07:17:42 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -31,4 +31,7 @@ lang/perl5: Security fix
 
 Pullup ticket #6959 - requested by he
 lang/tcl: build fix
+
+Pullup ticket #6960 - requested by taca
+mail/squirrelmail: security fix
 
