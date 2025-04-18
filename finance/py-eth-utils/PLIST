@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/10 19:01:33 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/04/18 11:38:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/eth_utils/__init__.py
 ${PYSITELIB}/eth_utils/__init__.pyc
@@ -66,6 +66,9 @@ ${PYSITELIB}/eth_utils/numeric.py
 ${PYSITELIB}/eth_utils/numeric.pyc
 ${PYSITELIB}/eth_utils/numeric.pyo
 ${PYSITELIB}/eth_utils/py.typed
+${PYSITELIB}/eth_utils/pydantic.py
+${PYSITELIB}/eth_utils/pydantic.pyc
+${PYSITELIB}/eth_utils/pydantic.pyo
 ${PYSITELIB}/eth_utils/toolz.py
 ${PYSITELIB}/eth_utils/toolz.pyc
 ${PYSITELIB}/eth_utils/toolz.pyo
