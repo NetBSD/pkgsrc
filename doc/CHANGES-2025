@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2710 2025/04/18 15:24:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2711 2025/04/18 15:26:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3595,3 +3595,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/py-ecc version 8.0.0 [adam 2025-04-18]
 	Updated finance/py-eth-keyfile to 0.9.1 [adam 2025-04-18]
 	Updated devel/py-trytond to 6.2.2nb4 [wiz 2025-04-18]
+	Updated textproc/py-jmespath to 1.0.1nb1 [wiz 2025-04-18]
