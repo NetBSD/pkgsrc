@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/18 12:26:47 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/typing_inspection/__init__.py
+${PYSITELIB}/typing_inspection/__init__.pyc
+${PYSITELIB}/typing_inspection/__init__.pyo
+${PYSITELIB}/typing_inspection/introspection.py
+${PYSITELIB}/typing_inspection/introspection.pyc
+${PYSITELIB}/typing_inspection/introspection.pyo
+${PYSITELIB}/typing_inspection/py.typed
+${PYSITELIB}/typing_inspection/typing_objects.py
+${PYSITELIB}/typing_inspection/typing_objects.pyc
+${PYSITELIB}/typing_inspection/typing_objects.pyi
+${PYSITELIB}/typing_inspection/typing_objects.pyo

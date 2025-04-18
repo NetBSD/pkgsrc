@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4462 2025/04/17 16:19:32 adam Exp $
+# $NetBSD: Makefile,v 1.4463 2025/04/18 12:26:47 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3198,6 +3198,7 @@ SUBDIR+=	py-types-ujson
 SUBDIR+=	py-typing
 SUBDIR+=	py-typing-extensions
 SUBDIR+=	py-typing-inspect
+SUBDIR+=	py-typing-inspection
 SUBDIR+=	py-u-msgpack
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
