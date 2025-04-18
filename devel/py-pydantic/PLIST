@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/11/21 06:04:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/18 12:29:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -69,6 +69,9 @@ ${PYSITELIB}/pydantic/_internal/_namespace_utils.pyo
 ${PYSITELIB}/pydantic/_internal/_repr.py
 ${PYSITELIB}/pydantic/_internal/_repr.pyc
 ${PYSITELIB}/pydantic/_internal/_repr.pyo
+${PYSITELIB}/pydantic/_internal/_schema_gather.py
+${PYSITELIB}/pydantic/_internal/_schema_gather.pyc
+${PYSITELIB}/pydantic/_internal/_schema_gather.pyo
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.py
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.pyc
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.pyo
@@ -78,9 +81,6 @@ ${PYSITELIB}/pydantic/_internal/_serializers.pyo
 ${PYSITELIB}/pydantic/_internal/_signature.py
 ${PYSITELIB}/pydantic/_internal/_signature.pyc
 ${PYSITELIB}/pydantic/_internal/_signature.pyo
-${PYSITELIB}/pydantic/_internal/_std_types_schema.py
-${PYSITELIB}/pydantic/_internal/_std_types_schema.pyc
-${PYSITELIB}/pydantic/_internal/_std_types_schema.pyo
 ${PYSITELIB}/pydantic/_internal/_typing_extra.py
 ${PYSITELIB}/pydantic/_internal/_typing_extra.pyc
 ${PYSITELIB}/pydantic/_internal/_typing_extra.pyo
@@ -159,6 +159,9 @@ ${PYSITELIB}/pydantic/errors.pyo
 ${PYSITELIB}/pydantic/experimental/__init__.py
 ${PYSITELIB}/pydantic/experimental/__init__.pyc
 ${PYSITELIB}/pydantic/experimental/__init__.pyo
+${PYSITELIB}/pydantic/experimental/arguments_schema.py
+${PYSITELIB}/pydantic/experimental/arguments_schema.pyc
+${PYSITELIB}/pydantic/experimental/arguments_schema.pyo
 ${PYSITELIB}/pydantic/experimental/pipeline.py
 ${PYSITELIB}/pydantic/experimental/pipeline.pyc
 ${PYSITELIB}/pydantic/experimental/pipeline.pyo
