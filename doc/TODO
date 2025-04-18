@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25664 2025/04/18 08:46:20 wiz Exp $
+$NetBSD: TODO,v 1.25665 2025/04/18 12:29:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -1156,8 +1156,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-posting-2.5.2 [wip]
 	o py-posting-2.6.0
 	o py-protobuf-6.30.2
-	o py-pydantic-2.11.3
-	o py-pydantic-core-2.33.1
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qt6-6.9.0
 	o py-rich-14.0.0
