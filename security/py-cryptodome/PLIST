@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/04/13 08:13:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/04/18 04:38:54 wiz Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyi
@@ -313,8 +313,8 @@ ${PYSITELIB}/Crypto/Protocol/DH.pyc
 ${PYSITELIB}/Crypto/Protocol/DH.pyi
 ${PYSITELIB}/Crypto/Protocol/DH.pyo
 ${PYSITELIB}/Crypto/Protocol/HPKE.py
-${PYSITELIB}/Crypto/Protocol/HPKE.pyc
-${PYSITELIB}/Crypto/Protocol/HPKE.pyo
+${PLIST.py3x}${PYSITELIB}/Crypto/Protocol/HPKE.pyc
+${PLIST.py3x}${PYSITELIB}/Crypto/Protocol/HPKE.pyo
 ${PYSITELIB}/Crypto/Protocol/KDF.py
 ${PYSITELIB}/Crypto/Protocol/KDF.pyc
 ${PYSITELIB}/Crypto/Protocol/KDF.pyi
@@ -559,8 +559,8 @@ ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.py
-${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyc
-${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyo
+${PLIST.py3x}${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyc
+${PLIST.py3x}${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.pyo
