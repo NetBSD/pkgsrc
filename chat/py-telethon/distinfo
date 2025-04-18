@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/08/08 05:31:00 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/04/18 10:44:55 adam Exp $
 
-BLAKE2s (Telethon-1.36.0.tar.gz) = 83dd6bb2a06a7d81ec893ed8b82c5b8076851669bff232b3ca383e3ac9819d61
-SHA512 (Telethon-1.36.0.tar.gz) = e47074fd0df47db09848629fd753721a8f8783ffba9dc2ecc3c16eb8a4ae29497db98d482ff413c83b9e5a683543ef569e787b533f60c94e6a0e0a84a6de090c
-Size (Telethon-1.36.0.tar.gz) = 606300 bytes
+BLAKE2s (telethon-1.39.0.tar.gz) = c1e0dc3ad0533a01325b0eabdc2c6022d8ada237154e11d447247b2d182dda73
+SHA512 (telethon-1.39.0.tar.gz) = 921d2b95aa4a181a8f3c66550a869dbf1e269940cf8d006aa69c9876a415aa13cf2fb1886305eaeef5cff9e6bf0e95bfef6b2d6af22e9b20b18f196e1236e281
+Size (telethon-1.39.0.tar.gz) = 640634 bytes
