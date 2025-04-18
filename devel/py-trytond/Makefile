@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/10/23 06:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/18 15:24:20 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=     devel python
 
@@ -9,6 +9,7 @@ HOMEPAGE=	https://www.tryton.org/
 COMMENT=	Tryton server
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-relatorio>=0.7.0:../../textproc/py-relatorio
 DEPENDS+=	${PYPKGPREFIX}-genshi-[0-9]*:../../www/py-genshi
@@ -21,10 +22,10 @@ DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-USE_PKG_RESOURCES=	yes
+REPLACE_PYTHON+=	trytond
+REPLACE_PYTHON+=	trytond-*
 
 post-install:
 .for f in trytond trytond-admin trytond-console trytond-cron trytond-stat trytond-worker
@@ -34,7 +35,8 @@ post-install:
 
 .include "options.mk"
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
