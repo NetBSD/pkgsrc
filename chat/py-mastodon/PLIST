@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/14 08:08:36 nia Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.4 2025/04/18 09:06:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mastodon/Mastodon.py
 ${PYSITELIB}/mastodon/Mastodon.pyc
@@ -67,12 +67,16 @@ ${PYSITELIB}/mastodon/preferences.pyo
 ${PYSITELIB}/mastodon/push.py
 ${PYSITELIB}/mastodon/push.pyc
 ${PYSITELIB}/mastodon/push.pyo
+${PYSITELIB}/mastodon/py.typed
 ${PYSITELIB}/mastodon/relationships.py
 ${PYSITELIB}/mastodon/relationships.pyc
 ${PYSITELIB}/mastodon/relationships.pyo
 ${PYSITELIB}/mastodon/reports.py
 ${PYSITELIB}/mastodon/reports.pyc
 ${PYSITELIB}/mastodon/reports.pyo
+${PYSITELIB}/mastodon/return_types.py
+${PYSITELIB}/mastodon/return_types.pyc
+${PYSITELIB}/mastodon/return_types.pyo
 ${PYSITELIB}/mastodon/search.py
 ${PYSITELIB}/mastodon/search.pyc
 ${PYSITELIB}/mastodon/search.pyo
@@ -94,6 +98,9 @@ ${PYSITELIB}/mastodon/timeline.pyo
 ${PYSITELIB}/mastodon/trends.py
 ${PYSITELIB}/mastodon/trends.pyc
 ${PYSITELIB}/mastodon/trends.pyo
+${PYSITELIB}/mastodon/types_base.py
+${PYSITELIB}/mastodon/types_base.pyc
+${PYSITELIB}/mastodon/types_base.pyo
 ${PYSITELIB}/mastodon/utility.py
 ${PYSITELIB}/mastodon/utility.pyc
 ${PYSITELIB}/mastodon/utility.pyo
