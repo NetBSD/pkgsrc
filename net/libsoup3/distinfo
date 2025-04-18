@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/02/07 21:38:45 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/04/18 19:14:32 wiz Exp $
 
-BLAKE2s (libsoup-3.6.4.tar.xz) = bf76138ced93eda21bef821aaeee86972dd64a351fdb780839b1ef36b4ec1817
-SHA512 (libsoup-3.6.4.tar.xz) = 4b3fa45041edcb5af981fb2b9fa2ed063c3bf15fcfc2c9399a9aede593038cf571d6d66d46c8add5a0341776b19cfe38d0b106b0a2a299b79e09f6f4fbe4a4c3
-Size (libsoup-3.6.4.tar.xz) = 1566584 bytes
+BLAKE2s (libsoup-3.6.5.tar.xz) = 6ada22d29f92b4e96be467872c2b4cd26df0b8b436f3147c3205edbee4227ab5
+SHA512 (libsoup-3.6.5.tar.xz) = cb44d93b16048d31ae04a8c2416bbe233e0e9bdaf2d9bfe2879260fd3da27e90a0bb05cddbd82cdf81a4a778bd451ad172a14dd31e2fd113c3bbbe13c0029b03
+Size (libsoup-3.6.5.tar.xz) = 1568404 bytes
