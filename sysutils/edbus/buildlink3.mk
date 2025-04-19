@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2025/04/17 21:52:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2025/04/19 07:58:24 wiz Exp $
 
 BUILDLINK_TREE+=	edbus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	edbus
 EDBUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.edbus+=	edbus>=1.7.10
-BUILDLINK_ABI_DEPENDS.edbus?=	edbus>=1.7.10nb18
+BUILDLINK_ABI_DEPENDS.edbus?=	edbus>=1.7.10nb19
 BUILDLINK_PKGSRCDIR.edbus?=	../../sysutils/edbus
 
 .include "../../devel/ecore/buildlink3.mk"

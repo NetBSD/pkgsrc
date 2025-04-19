@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/04/14 05:08:08 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/19 07:58:23 wiz Exp $
 
 DISTNAME=	krb5-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/krb5/}
 

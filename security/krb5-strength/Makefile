@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/17 21:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/19 07:58:21 wiz Exp $
 
 DISTNAME=	krb5-strength-3.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
