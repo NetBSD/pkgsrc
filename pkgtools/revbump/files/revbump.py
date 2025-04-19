@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.8 2024/11/11 12:59:31 wiz Exp $
+# $NetBSD: revbump.py,v 1.9 2025/04/19 07:58:05 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,7 @@ import subprocess
 import sys
 
 # only accept includes with ../../ or in the current directory
-bl3_include_re = re.compile(r'\s*\.\s*include\s+"(\.\./\.\./[^/]*/[^/]*/|)([^/]*)"')
+bl3_include_re = re.compile(r'\s*\.\s*include\s+"(\.\./\.\./[^/]*/[^/]*/?|)([^/]*)"')
 abi_depends_re = re.compile(r'^(BUILDLINK_ABI_DEPENDS.+=[ \t]+)')
 bldir_re = re.compile(r'^BUILDLINK_PKGSRCDIR(.*=[ \t]+)')
 pkgrevision_re = re.compile(r'PKGREVISION=([ \t]+)([0-9]+)$')
@@ -163,7 +163,8 @@ def extract_includes(path):
             if m := bl3_include_re.match(entry):
                 file_path = m.group(1)
                 file_name = m.group(2)
-                if file_path.find('/mk/') != -1:
+                if file_path.find('/mk/') != -1 and file_path.find('/mk/krb5.buildlink3.mk') == -1:
+                    print(f'skipping {file_path}')
                     continue
                 if len(file_path) == 0:
                     file_path = '../../' + relative[:relative.rfind('/')+1]
@@ -209,6 +210,8 @@ if not args.recursive:
 
 if args.package == 'lang/go':
     searchlist = ['lang/go/version.mk']
+elif args.package == 'mk/krb5.buildlink3.mk':
+    searchlist = ['mk/krb5.buildlink3.mk']
 else:
     if not pathlib.Path(args.pkgsrcdir + '/' + args.package.rstrip('/')).exists():
         print(f'directory {args.package} does not exist or is not a pkgsrc directory')

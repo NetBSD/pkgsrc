@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/11/11 12:59:31 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/04/19 07:58:05 wiz Exp $
 
-PKGNAME=		revbump-3.6
+PKGNAME=		revbump-3.7
 CATEGORIES=		pkgtools
 
 MAINTAINER=		wiz@NetBSD.org
@@ -12,8 +12,6 @@ WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	revbump.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
 	${CP} ${FILESDIR}/revbump.py ${WRKSRC}
