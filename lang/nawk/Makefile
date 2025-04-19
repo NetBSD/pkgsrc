@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/09/17 10:32:05 vins Exp $
+# $NetBSD: Makefile,v 1.47 2025/04/19 08:07:27 wiz Exp $
 
 DISTNAME=	nawk-20230909
 CATEGORIES=	lang
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cs.princeton.edu/~bwk/btl.mirror/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 LICENSE=	mit
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 
