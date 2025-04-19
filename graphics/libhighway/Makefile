@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/02 15:48:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/19 20:03:52 js Exp $
 
 DISTNAME=	highway-1.2.0
 PKGNAME=	lib${DISTNAME}
@@ -31,5 +31,7 @@ TEST_TARGET=	test
 
 .include "../../devel/cmake/build.mk"
 .include "options.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../devel/libatomic/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
