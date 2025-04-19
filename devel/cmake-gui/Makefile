@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2025/04/17 21:50:17 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/04/19 07:57:40 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/cmake/Makefile.common"
 
 PKGNAME=	cmake-gui-${CMAKE_VERSION}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/02/11 19:18:09 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/19 07:57:42 wiz Exp $
 
 DISTNAME=	libtirpc-1.3.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libtirpc/}
 EXTRACT_SUFX=	.tar.bz2

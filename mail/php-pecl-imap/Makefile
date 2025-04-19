@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/22 15:36:23 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/19 07:58:02 wiz Exp $
 
 MODNAME=		imap
 PECL_VERSION=		1.0.3
@@ -6,6 +6,7 @@ CATEGORIES+=		mail
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		PHP extension for IMAP, including NNTP, POP3
+PKGREVISION=		1
 LICENSE=		php
 
 PHP_VERSIONS_ACCEPTED=	84
