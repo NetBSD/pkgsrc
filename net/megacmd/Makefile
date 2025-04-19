@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/17 21:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/19 07:58:12 wiz Exp $
 
 DISTNAME=	megacmd-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
 GITHUB_PROJECT=	MEGAcmd

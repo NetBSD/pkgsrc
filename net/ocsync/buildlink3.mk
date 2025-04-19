@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2025/04/17 21:52:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2025/04/19 07:58:13 wiz Exp $
 
 BUILDLINK_TREE+=	ocsync
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocsync
 OCSYNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocsync+=	ocsync>=0.90.4
-BUILDLINK_ABI_DEPENDS.ocsync?=	ocsync>=0.90.4nb36
+BUILDLINK_ABI_DEPENDS.ocsync?=	ocsync>=0.90.4nb37
 BUILDLINK_PKGSRCDIR.ocsync?=	../../net/ocsync
 
 .include "../../databases/sqlite3/buildlink3.mk"

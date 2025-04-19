@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2025/04/17 21:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/04/19 07:58:12 wiz Exp $
 
 DISTNAME=	megatools-1.11.0-git-20200404
 PKGNAME=	megatools-1.11.0.20200404
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net
 MASTER_SITES=	https://megatools.megous.com/builds/experimental/
 
