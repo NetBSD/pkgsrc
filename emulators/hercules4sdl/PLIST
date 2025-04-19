@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2023/07/12 17:17:15 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/19 13:09:24 rhialto Exp $
+bin/card2txt
 bin/cckd2ckd
 bin/cckd642ckd
 bin/cckdcdsk
@@ -64,6 +65,7 @@ lib/hercules/hdtdummy.la
 lib/hercules/hdteq.la
 lib/hercules/hdtptp.la
 lib/hercules/hdtqeth.la
+lib/hercules/hdttcph.la
 lib/hercules/hdttcpnje.la
 lib/hercules/hdtzfcp.la
 lib/libhdt3420_not_mod.la
@@ -77,12 +79,12 @@ man/man1/dasdseq.1
 man/man1/vmfplc2.1
 man/man4/cckd.4
 share/examples/hercules/hercules.cnf
+share/hercules/CCKD.JCL.Jan2025.XMI.Updated.zip
 share/hercules/CMPSC.txt
 share/hercules/TMOUNT.txt
 share/hercules/awssl-v19g
 share/hercules/awswrite.jcl
 share/hercules/cckddasd.html
-share/hercules/cckddump-cckdload.zip
 share/hercules/fishgui.html
 share/hercules/hercconf.html
 share/hercules/hercfaq.html
@@ -144,6 +146,9 @@ share/hercules/images/dial4.gif
 share/hercules/images/favicon.ico
 share/hercules/images/greend.gif
 share/hercules/images/greenu.gif
+share/hercules/images/herc-panel.jpg
+share/hercules/images/herc-panel2.jpg
+share/hercules/images/herclin.jpg
 share/hercules/images/hercpic-rblk-256.gif
 share/hercules/images/hercpic-rblk-80.gif
 share/hercules/images/interruptd.gif
