@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/17 21:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/19 07:57:59 wiz Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	inputmethod editors
 
 EMACS_MODULES=	base leim

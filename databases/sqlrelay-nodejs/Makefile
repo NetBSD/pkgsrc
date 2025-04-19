@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2025/04/17 21:50:14 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/19 07:57:39 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/sqlrelay/sqlrelay-nodejs/}
-PKGREVISION=	10
+PKGREVISION=	11
 COMMENT=	node.js API for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"

@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/02/25 12:09:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/19 07:58:02 wiz Exp $
 
+PKGREVISION= 1
 .include "../../mail/vmailmgr/Makefile.common"
 
 PKGNAME=		vmailmgr-base-${VERSION}
