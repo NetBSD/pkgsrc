@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2024/11/16 12:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/19 12:35:23 wen Exp $
 
-DISTNAME=	App-perlbrew-1.00
+DISTNAME=	App-perlbrew-1.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
