@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2025/04/17 21:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/04/19 07:58:29 wiz Exp $
 
 DISTNAME=	redland-1.0.17
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.librdf.org/source/
 

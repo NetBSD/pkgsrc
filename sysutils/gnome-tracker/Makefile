@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/04/17 21:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/19 07:58:25 wiz Exp $
 
 DISTNAME=	tracker-3.0.1
 PKGNAME=	gnome-${DISTNAME}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/3.0/}
 EXTRACT_SUFX=	.tar.xz

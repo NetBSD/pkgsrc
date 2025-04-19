@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2025/04/17 21:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/19 07:58:27 wiz Exp $
 
 SYSLOG_MOD=		http
 COMMENT=		Syslog-ng curl module
-PKGREVISION=		9
+PKGREVISION=		10
 
 .include "../../sysutils/syslog-ng/module.mk"
 

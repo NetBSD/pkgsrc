@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.163 2025/04/17 21:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2025/04/19 07:58:33 wiz Exp $
 
 DISTNAME=	midori-v9.0
 PKGNAME=	${DISTNAME:S/v//}
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=midori-browser/}
 GITHUB_PROJECT=	core

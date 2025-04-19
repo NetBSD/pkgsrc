@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2022/07/17 08:24:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/04/19 07:58:21 wiz Exp $
 
 BUILDLINK_TREE+=	gsasl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gsasl
 GSASL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gsasl+=	gsasl>=0.2.15
-BUILDLINK_ABI_DEPENDS.gsasl+=	gsasl>=2.0
+BUILDLINK_ABI_DEPENDS.gsasl+=	gsasl>=2.2.1nb2
 BUILDLINK_PKGSRCDIR.gsasl?=	../../security/gsasl
 
 .include "../../devel/gettext-lib/buildlink3.mk"

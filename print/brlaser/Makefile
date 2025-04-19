@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/04/17 21:52:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/19 07:58:16 wiz Exp $
 
 DISTNAME=		brlaser-6.2.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GITHUB:=Owl-Maintain/}
 GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}

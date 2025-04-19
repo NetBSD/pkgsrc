@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/04/17 21:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/04/19 07:58:29 wiz Exp $
 
 DISTNAME=	pdfgrep-2.1.2
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	textproc
 MASTER_SITES=	https://pdfgrep.org/download/
 

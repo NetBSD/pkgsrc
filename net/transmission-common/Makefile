@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/17 21:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/19 07:58:14 wiz Exp $
 
 PKGNAME=	transmission-common-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Free, lightweight BitTorrent client (shared files)
 
 # do not add nb* to this - 4.0.0nb1 does not conflict
