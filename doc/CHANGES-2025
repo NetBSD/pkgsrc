@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2718 2025/04/19 12:36:46 wen Exp $
+$NetBSD: CHANGES-2025,v 1.2719 2025/04/19 12:45:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-acme-tiny to 5.0.1nb4 [schmonz 2025-04-19]
 	Updated devel/p5-Perl-Tidy to 20250311 [wen 2025-04-19]
 	Updated devel/p5-App-perlbrew to 1.01 [wen 2025-04-19]
+	Updated textproc/p5-PDF-Table to 1.007 [wen 2025-04-19]
