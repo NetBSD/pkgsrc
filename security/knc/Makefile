@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2021/10/21 07:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/19 07:58:21 wiz Exp $
 
 DISTNAME=		knc-1.7.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		http://oskt.secure-endpoints.com/downloads/
 

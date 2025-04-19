@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2021/10/21 07:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/19 07:58:30 wiz Exp $
 
 DISTNAME=	mod_auth_kerb-5.4
 PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modauthkerb/}
 
