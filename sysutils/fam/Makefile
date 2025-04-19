@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2025/01/28 12:43:43 vins Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/19 07:58:25 wiz Exp $
 
 DISTNAME=		fam-2.7.0
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		sysutils devel
 #MASTER_SITES=		ftp://oss.sgi.com/projects/fam/download/stable/
 MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}

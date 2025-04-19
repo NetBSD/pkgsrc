@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2025/04/17 21:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/19 07:58:23 wiz Exp $
 
 VERSION=	1.36.33
-PKGREVISION=	4
+PKGREVISION=	5
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
