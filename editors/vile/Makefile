@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2025/02/09 17:42:35 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/04/19 00:29:37 agc Exp $
 
 DISTNAME=		vile-9.8za
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		https://invisible-island.net/archives/vile/current/
 MASTER_SITES+=		ftp://ftp.invisible-island.net/vile/current/
