@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2024/05/28 00:46:29 dholland Exp $
+# $NetBSD: Makefile,v 1.60 2025/04/19 07:58:00 wiz Exp $
 
 DISTNAME=	alpine-2.26
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 # repo at https://repo.or.cz/alpine.git
 MASTER_SITES=	https://alpineapp.email/alpine/release/src/
