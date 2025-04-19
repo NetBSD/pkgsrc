@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/03/13 19:32:52 rhialto Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/19 13:09:24 rhialto Exp $
 
-PKGNAME=	hercules4sdl-4.7
+PKGNAME=	hercules4sdl-4.8
 DISTNAME=	hyperion-Release_${PKGVERSION_NOREV}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SDL-Hercules-390/}
@@ -43,6 +43,9 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
+
+# The nb version is important, the API was extended.
+BUILD_DEPENDS+=	hercules4sdl-softfloat>=3.5.0nb20250325:../../math/hercules4sdl-softfloat
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
