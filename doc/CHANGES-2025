@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2713 2025/04/18 22:23:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2714 2025/04/19 00:32:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-jmespath to 1.0.1nb1 [wiz 2025-04-18]
 	Updated net/libsoup3 to 3.6.5 [wiz 2025-04-18]
 	Updated security/xhash to 3.6.0 [wiz 2025-04-18]
+	Updated editors/vile to 9.8zanb1 [agc 2025-04-18]
