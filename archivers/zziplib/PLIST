@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/08/11 07:18:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/04/19 16:00:38 adam Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzip-big
@@ -41,6 +41,7 @@ lib/libzzip-0.${SOEXT}.12
 lib/libzzip-0.so
 lib/libzzip-0.so.13
 lib/libzzip-0.so.13.0.78
+lib/libzzip-0.so.13.0.79
 lib/libzzip.so
 lib/libzzipfseeko-0.${SOEXT}.10
 lib/libzzipfseeko-0.${SOEXT}.11
@@ -48,6 +49,7 @@ lib/libzzipfseeko-0.${SOEXT}.12
 lib/libzzipfseeko-0.so
 lib/libzzipfseeko-0.so.13
 lib/libzzipfseeko-0.so.13.0.78
+lib/libzzipfseeko-0.so.13.0.79
 lib/libzzipfseeko.so
 lib/libzzipmmapped-0.${SOEXT}.10
 lib/libzzipmmapped-0.${SOEXT}.11
@@ -55,14 +57,13 @@ lib/libzzipmmapped-0.${SOEXT}.12
 lib/libzzipmmapped-0.so
 lib/libzzipmmapped-0.so.13
 lib/libzzipmmapped-0.so.13.0.78
+lib/libzzipmmapped-0.so.13.0.79
 lib/libzzipmmapped.so
 lib/libzzipwrap-0.so
 lib/libzzipwrap-0.so.13
 lib/libzzipwrap-0.so.13.0.78
+lib/libzzipwrap-0.so.13.0.79
 lib/libzzipwrap.so
-lib/pkgconfig/zzipfseeko.pc
-lib/pkgconfig/zziplib.pc
-lib/pkgconfig/zzipmmapped.pc
 lib/pkgconfig/zzipwrap.pc
 man/man3/__zzip_fetch_disk_trailer.3
 man/man3/__zzip_parse_root_directory.3
@@ -105,6 +106,7 @@ man/man3/zzip_file_read.3
 man/man3/zzip_file_real.3
 man/man3/zzip_file_stat.3
 man/man3/zzip_filesize.3
+man/man3/zzip_filesize32.3
 man/man3/zzip_fopen.3
 man/man3/zzip_fread.3
 man/man3/zzip_freopen.3
@@ -112,6 +114,7 @@ man/man3/zzip_fstat.3
 man/man3/zzip_get_default_io.3
 man/man3/zzip_inflate_init.3
 man/man3/zzip_init_io.3
+man/man3/zzip_io_size_off_t.3
 man/man3/zzip_open.3
 man/man3/zzip_open_ext_io.3
 man/man3/zzip_open_shared_io.3
@@ -135,3 +138,6 @@ man/man3/zzip_tell32.3
 man/man3/zzip_telldir.3
 man/man3/zzip_telldir32.3
 share/aclocal/zziplib.m4
+share/pkgconfig/zzipfseeko.pc
+share/pkgconfig/zziplib.pc
+share/pkgconfig/zzipmmapped.pc
