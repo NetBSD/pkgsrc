@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2722 2025/04/19 13:34:36 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.2723 2025/04/19 16:10:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3607,3 +3607,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-podlators to 6.0.2 [wen 2025-04-19]
 	Updated math/hercules4sdl-softfloat to 3.5.0nb20250325 [rhialto 2025-04-19]
 	Updated emulators/hercules4sdl to 4.8 [rhialto 2025-04-19]
+	Updated archivers/zziplib to 0.13.79 [adam 2025-04-19]
+	Updated devel/py-pydantic-settings to 2.9.1 [adam 2025-04-19]
+	Updated time/py-aniso8601 to 10.0.1 [adam 2025-04-19]
+	Updated time/py-relativetimebuilder to 3.0.2 [adam 2025-04-19]
