@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/11/09 13:14:07 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2025/04/19 08:07:26 wiz Exp $
 
 DISTNAME=		pax-20210219
 CATEGORIES=		archivers
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		POSIX standard archiver with many extensions
 LICENSE=		2-clause-bsd AND modified-bsd AND public-domain
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 CHECK_PERMS=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/03/30 09:54:07 nia Exp $
+# $NetBSD: Makefile,v 1.86 2025/04/19 08:07:26 wiz Exp $
 
 PKGNAME=	bmake-20240909
 CATEGORIES=	devel
@@ -10,6 +10,8 @@ COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	modified-bsd
 
 DEPENDS+=	bootstrap-mk-files-[0-9]*:../../pkgtools/bootstrap-mk-files
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 

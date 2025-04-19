@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/03/20 20:37:27 gutteridge Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/19 08:07:27 wiz Exp $
 
 DISTNAME=		nbsed-20240312
 PKGREVISION=		2
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
 LICENSE=		original-bsd AND modified-bsd
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 

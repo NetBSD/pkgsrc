@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/01/04 18:35:56 vins Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/19 08:07:27 wiz Exp $
 
 DISTNAME=	bsdinstall-20160108
 PKGREVISION=	1
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Portable version of the BSD install(1) program
 LICENSE=	modified-bsd
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 

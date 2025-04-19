@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2014/03/03 03:30:52 obache Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/19 08:07:27 wiz Exp $
 
 PKGNAME=	bootstrap-extra-files-20070702
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extra bootstrap files and scripts for ${OPSYS}
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=	yes
 
