@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/01/10 08:49:06 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/04/19 16:08:12 adam Exp $
 
-BLAKE2s (aniso8601-10.0.0.tar.gz) = 2ee6d71afbf132b92c623d6346a6ea7890c387e0d6201326559d57d1a6ed22cd
-SHA512 (aniso8601-10.0.0.tar.gz) = 62cb81308f8445d05d81d97928a1c5d93434ba59364b471cf4adb074aab6e465921a283c2403880b16771b7e8c1e2d6b91bdc9e1e6fcbcf6c83c88b8bb842a6c
-Size (aniso8601-10.0.0.tar.gz) = 47008 bytes
+BLAKE2s (aniso8601-10.0.1.tar.gz) = ed33625f3d222450ad8e73cb86e53ed996326b0c7823f3a49a415ebabf3a3686
+SHA512 (aniso8601-10.0.1.tar.gz) = fa041e11318ec59dfdafbc667c82d9dbc6db8f12225adc0ba36200dadb7350bd92b2fb7ecac516a22ff0ce57d9fd22317a096f97a40afe91f0fc3d06d4e52d80
+Size (aniso8601-10.0.1.tar.gz) = 47190 bytes
