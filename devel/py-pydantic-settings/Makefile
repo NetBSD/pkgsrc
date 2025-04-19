@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/02/27 14:14:36 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/19 16:06:30 adam Exp $
 
-DISTNAME=	pydantic_settings-2.8.1
+DISTNAME=	pydantic_settings-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic_settings/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.21.0:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.7.0:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-typing-inspection>=0.4.0:../../devel/py-typing-inspection
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-examples>=0:../../devel/py-test-examples
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
 #TEST_DEPENDS+=	${PYPKGPREFIX}-azure-core>=0:../../wip/py-azure-core
