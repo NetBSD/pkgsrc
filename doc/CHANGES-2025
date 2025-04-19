@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2723 2025/04/19 16:10:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2724 2025/04/19 20:09:00 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3611,3 +3611,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic-settings to 2.9.1 [adam 2025-04-19]
 	Updated time/py-aniso8601 to 10.0.1 [adam 2025-04-19]
 	Updated time/py-relativetimebuilder to 3.0.2 [adam 2025-04-19]
+	Added graphics/SDL3_image version 3.2.4 [js 2025-04-19]
