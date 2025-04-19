@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/01/13 11:24:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/19 08:07:27 wiz Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@pkgsrc.org
 HOMEPAGE=		http://mirbsd.de/mksh
 COMMENT=		MirBSD Korn Shell
 LICENSE=		miros
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=		yes
 NO_CHECKSUM=		yes
