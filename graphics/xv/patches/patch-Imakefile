@@ -1,4 +1,4 @@
-$NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
+$NetBSD: patch-Imakefile,v 1.5 2025/04/19 23:14:24 tsutsui Exp $
 
 - use jpeg, png, tiff, and zlib from pkgsrc
 - make ghostscript support optional
@@ -6,8 +6,10 @@ $NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
   https://gitlab.com/DavidGriffith/xv/-/commit/5682a07e
   and use libwebp from pkgsrc
 - fix build errors on NetBSD/vax
+- pull XRandR support from forked upstream
+  https://gitlab.com/DavidGriffith/xv/-/commit/a84406cb
 
---- Imakefile.orig	2024-03-23 18:02:14.701404322 +0000
+--- Imakefile.orig	2025-04-19 21:39:43.875821441 +0000
 +++ Imakefile
 @@ -6,13 +6,20 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
@@ -52,7 +54,18 @@ $NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
  VPRINTF=	-DNEED_VPRINTF -DINTSPRINTF -DLONGINT -DNOVOID
  #else 
  #  if defined(RtArchitecture) && !defined(AIXArchitecture)
-@@ -116,28 +127,84 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
+@@ -109,6 +120,10 @@ MGCSFXDIR = $(LIBDIR)
+ /* Directory of default configuration file. */
+ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
+ 
++#if BuildRandRLibrary
++XRANDR    = -DDOXRANDR
++XRANDRLIB = -lXrandr
++#endif
+ 
+ 
+ 
+@@ -116,28 +131,84 @@ MGCSFX = -DMGCSFXDIR=\"$(MGCSFXDIR)\"
  
  /* This marks the end of the configuration parameters */
  
@@ -139,17 +152,19 @@ $NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
  
  #if defined(SCOArchitecture)
  SCO= -Dsco -DPOSIX -DNO_RANDOM 
-@@ -149,14 +216,15 @@ SYS_LIBRARIES=        -lm
+@@ -149,14 +220,16 @@ SYS_LIBRARIES=        -lm
  #endif
  
  
 -DEPLIBS = $(LIBJPEG) $(LIBTIFF)
 -LOCAL_LIBRARIES = $(XLIB) $(DEPLIBS)
 +DEPLIBS = $(DEPLIBJPEG) $(DEPLIBTIFF) $(DEPLIBPNG) $(DEPLIBWEBP) $(DEPLIBZLIB)
-+LOCAL_LIBRARIES = $(XLIB) $(LIBJPEG) $(LIBTIFF) $(LIBPNG) $(LIBWEBP) $(LIBZLIB)
++LOCAL_LIBRARIES = $(XRANDRLIB) $(XLIB) $(LIBJPEG) $(LIBTIFF) $(LIBPNG) \
++	$(LIBWEBP) $(LIBZLIB)
  
- DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
+-DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) \
 -	$(HPUX7) $(JPEG) $(TIFF) $(PDS) $(DXWM) $(RAND) \
++DEFINES= $(SCO) $(UNIX) $(NODIRENT) $(VPRINTF) $(TIMERS) $(XRANDR) \
 +	$(HPUX7) $(JPEG) $(TIFF) $(GS) $(PNG) $(WEBP) $(PDS) $(DXWM) $(RAND) \
  	$(BACKING_STORE) $(BSDTYPES) $(SGI) $(MGCSFX)
  
@@ -159,7 +174,7 @@ $NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
  
  SRCS1 =	xv.c xvevent.c xvroot.c xvmisc.c xvimage.c xvcolor.c xvsmooth.c \
  	xv24to8.c xvgif.c xvpm.c xvinfo.c xvctrl.c xvscrl.c xvalg.c \
-@@ -166,7 +234,7 @@ SRCS1 =	xv.c xvevent.c xvroot.c xvmisc.c
+@@ -166,7 +239,7 @@ SRCS1 =	xv.c xvevent.c xvroot.c xvmisc.c
  	xvbrowse.c xvtext.c xvpcx.c xviff.c xvtarga.c xvxpm.c xvcut.c \
  	xvxwd.c xvfits.c xvpng.c xvzx.c xvwbmp.c xvpcd.c \
  	xvmag.c xvpic.c xvmaki.c xvpi.c xvpic2.c xvvd.c xvmgcsfx.c \
@@ -168,7 +183,7 @@ $NetBSD: patch-Imakefile,v 1.4 2024/03/23 18:07:38 tsutsui Exp $
  
  OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o xvimage.o xvcolor.o xvsmooth.o \
  	xv24to8.o xvgif.o xvpm.o xvinfo.o xvctrl.o xvscrl.o xvalg.o \
-@@ -176,7 +244,7 @@ OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o
+@@ -176,7 +249,7 @@ OBJS1 =	xv.o xvevent.o xvroot.o xvmisc.o
  	xvbrowse.o xvtext.o xvpcx.o xviff.o xvtarga.o xvxpm.o xvcut.o \
  	xvxwd.o xvfits.o xvpng.o xvzx.o xvwbmp.o xvpcd.o \
  	xvmag.o xvpic.o xvmaki.o xvpi.o xvpic2.o xvvd.o xvmgcsfx.o \
