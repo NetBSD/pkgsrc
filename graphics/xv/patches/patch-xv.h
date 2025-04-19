@@ -1,12 +1,14 @@
-$NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
+$NetBSD: patch-xv.h,v 1.3 2025/04/19 23:14:24 tsutsui Exp $
 
 - don't declare errno and sys_errlist
 - use strerror
 - use getcwd, not getwd
 - add webp support from forked upstream
   https://gitlab.com/DavidGriffith/xv/-/commit/5682a07e
+- pull XRandR support from forked upstream
+  https://gitlab.com/DavidGriffith/xv/-/commit/a84406cb
 
---- xv.h.orig	2023-07-30 04:38:20.907901851 +0000
+--- xv.h.orig	2025-04-19 21:39:44.640689781 +0000
 +++ xv.h
 @@ -139,9 +139,7 @@
  #endif
@@ -48,7 +50,19 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  #  endif
  #endif
  
-@@ -392,7 +392,7 @@
+@@ -222,6 +222,11 @@
+ #include <X11/Xatom.h>
+ #include <X11/Xmd.h>
+ 
++#ifdef HAVE_XRR
++#include <X11/Xproto.h>
++#include <X11/extensions/Xrandr.h>
++#endif
++
+ #ifdef TV_L10N
+ #  include <X11/Xlocale.h>
+ #endif
+@@ -392,7 +397,7 @@
  #  endif
  #endif
  
@@ -57,7 +71,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  #  define USE_GETCWD
  #endif
  
-@@ -411,6 +411,9 @@
+@@ -411,6 +416,9 @@
  /* END OF CONFIGURATION INFO */
  /*****************************/
  
@@ -67,7 +81,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  
  #ifdef DOJPEG
  #  define HAVE_JPEG
-@@ -568,6 +571,12 @@
+@@ -568,6 +576,12 @@
  #  define F_TIFINC  0
  #endif
  
@@ -80,7 +94,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  #ifdef HAVE_PNG
  #  define F_PNGINC  1
  #else
-@@ -621,7 +630,8 @@
+@@ -621,7 +635,8 @@
  #define F_JPC       ( 0 + F_PNGINC + F_JPGINC)
  #define F_JP2       ( 0 + F_PNGINC + F_JPGINC + F_JP2INC)
  #define F_GIF       ( 0 + F_PNGINC + F_JPGINC + F_JP2INC + F_JP2INC)  /* always avail; index varies */
@@ -90,7 +104,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  #define F_PS        ( 1 + F_TIFF)
  #define F_PBMRAW    ( 2 + F_TIFF)
  #define F_PBMASCII  ( 3 + F_TIFF)
-@@ -691,6 +701,7 @@
+@@ -691,6 +706,7 @@
  #define RFT_PI       (JP_EXT_RFT + 4)
  #define RFT_PIC2     (JP_EXT_RFT + 5)
  #define RFT_MGCSFX   (JP_EXT_RFT + 6)
@@ -98,7 +112,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  
  /* definitions for page up/down, arrow up/down list control */
  #define LS_PAGEUP   0
-@@ -1404,6 +1415,11 @@ WHERE Window        pngW;
+@@ -1404,6 +1420,11 @@ WHERE Window        pngW;
  WHERE int           pngUp;        /* is pngW mapped, or what? */
  #endif
  
@@ -110,7 +124,7 @@ $NetBSD: patch-xv.h,v 1.2 2023/07/30 07:55:45 tsutsui Exp $
  
  #ifdef ENABLE_FIXPIX_SMOOTH
  WHERE int           do_fixpix_smooth;  /* GRR 19980607: runtime FS dithering */
-@@ -2094,6 +2110,14 @@ int LoadSunRas             PARM((char *,
+@@ -2094,6 +2115,14 @@ int LoadSunRas             PARM((char *,
  int WriteSunRas            PARM((FILE *, byte *, int, int, int, byte *,
  				 byte *, byte*, int, int, int));
  
