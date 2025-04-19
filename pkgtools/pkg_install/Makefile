@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2025/02/18 11:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.244 2025/04/19 08:07:27 wiz Exp $
 
 # Notes to package maintainers:
 #
@@ -13,6 +13,8 @@ MAINTAINER=		agc@NetBSD.org
 HOMEPAGE=		https://www.pkgsrc.org/
 COMMENT=		Package management and administration tools for pkgsrc
 LICENSE=		modified-bsd
+
+POLICY_UPDATE_LIMITED=	bootstrap
 
 BOOTSTRAP_PKG=		yes
 SKIP_LICENSE_CHECK=	yes
