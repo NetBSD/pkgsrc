@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2721 2025/04/19 13:33:55 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.2722 2025/04/19 13:34:36 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-PDF-Table to 1.007 [wen 2025-04-19]
 	Updated textproc/p5-podlators to 6.0.2 [wen 2025-04-19]
 	Updated math/hercules4sdl-softfloat to 3.5.0nb20250325 [rhialto 2025-04-19]
+	Updated emulators/hercules4sdl to 4.8 [rhialto 2025-04-19]
