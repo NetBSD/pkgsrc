@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2025/04/18 08:50:44 wiz Exp $
+# $NetBSD: Makefile,v 1.157 2025/04/19 12:43:35 schmonz Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
@@ -13,6 +13,8 @@ MAINTAINER=	rares.aioanei@gmail.com
 HOMEPAGE=	http://mojolicio.us/
 COMMENT=	Perl web framework: The Web In A Box!
 LICENSE=	artistic-2.0
+
+EXTRACT_USING=	gtar	# avoid extended attributes in distfile
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Mojolicious/.packlist
