@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2024/07/15 11:39:54 hauke Exp $
+# $NetBSD: Makefile,v 1.67 2025/04/19 07:58:13 wiz Exp $
 
 DISTNAME=	netatalk-3.1.19
 PKGNAME=	${DISTNAME:C/-/3-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/${DISTNAME:S/./-/g}/
 EXTRACT_SUFX=	.tar.xz
