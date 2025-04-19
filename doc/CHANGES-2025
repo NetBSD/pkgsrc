@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2714 2025/04/19 00:32:28 agc Exp $
+$NetBSD: CHANGES-2025,v 1.2715 2025/04/19 07:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3599,3 +3599,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/libsoup3 to 3.6.5 [wiz 2025-04-18]
 	Updated security/xhash to 3.6.0 [wiz 2025-04-18]
 	Updated editors/vile to 9.8zanb1 [agc 2025-04-18]
+	Updated pkgtools/revbump to 3.7 [wiz 2025-04-19]
