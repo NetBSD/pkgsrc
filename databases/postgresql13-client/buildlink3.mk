@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/04/19 07:57:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/04/19 20:13:54 wiz Exp $
 
 BUILDLINK_TREE+=	postgresql13-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	postgresql13-client
 POSTGRESQL13_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.postgresql13-client+=	postgresql13-client>=13.0
-BUILDLINK_ABI_DEPENDS.postgresql13-client+=	postgresql${PGSQL_VERSION}-client>=13.20nb2
+BUILDLINK_ABI_DEPENDS.postgresql13-client+=	postgresql13-client>=13.20nb2
 BUILDLINK_PKGSRCDIR.postgresql13-client?=	../../databases/postgresql13-client
 
 # This variable contains the libraries need to link most clients.
