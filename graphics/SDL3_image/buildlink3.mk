@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1 2025/04/19 20:08:23 js Exp $
+
+BUILDLINK_TREE+=	SDL3_image
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${MACHINE_PLATFORM:MDarwin-*-powerpc*}
+# This defines SDL3_IMAGE_BUILDLINK3_MK.
+.  include "../../graphics/SDL3_image-legacy/buildlink3.mk"
+.endif
+
+.if !defined(SDL3_IMAGE_BUILDLINK3_MK)
+SDL3_IMAGE_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.SDL3_image+=	SDL3_image>=3.2.0
+BUILDLINK_ABI_DEPENDS.SDL3_image?=	SDL3_image>=3.2.0
+BUILDLINK_PKGSRCDIR.SDL3_image?=	../../graphics/SDL3_image
+BUILDLINK_INCDIRS.SDL3_image?=		include/SDL3
+
+.include "../../devel/SDL3/buildlink3.mk"
+.endif # SDL3_IMAGE_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-SDL3_image
