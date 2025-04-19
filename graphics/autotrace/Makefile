@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2025/04/17 21:50:59 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2025/04/19 07:57:55 wiz Exp $
 
 DISTNAME=	autotrace-0.31.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=autotrace/}
 GITHUB_PROJECT=	autotrace

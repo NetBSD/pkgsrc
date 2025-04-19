@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2025/04/17 21:49:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2025/04/19 07:57:27 wiz Exp $
 
 BUILDLINK_TREE+=	libcomprex
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libcomprex
 LIBCOMPREX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libcomprex+=	libcomprex>=0.3.2
-BUILDLINK_ABI_DEPENDS.libcomprex+=	libcomprex>=0.3.3nb38
+BUILDLINK_ABI_DEPENDS.libcomprex+=	libcomprex>=0.3.3nb39
 BUILDLINK_PKGSRCDIR.libcomprex?=	../../archivers/libcomprex
 
 .include "../../www/curl/buildlink3.mk"

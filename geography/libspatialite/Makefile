@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2025/04/17 21:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/19 07:57:53 wiz Exp $
 
 DISTNAME=	libspatialite-5.1.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	geography
 MASTER_SITES=	https://www.gaia-gis.it/gaia-sins/libspatialite-sources/
 
