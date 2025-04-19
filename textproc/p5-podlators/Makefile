@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/11/16 12:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/19 12:51:02 wen Exp $
 
-DISTNAME=	podlators-5.01
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	podlators-v6.0.2
+PKGNAME=	p5-${DISTNAME:S/-v/-/}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
