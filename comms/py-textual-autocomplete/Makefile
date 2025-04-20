@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/03/02 20:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/20 21:59:33 wiz Exp $
 
-DISTNAME=	textual_autocomplete-4.0.0a0
+DISTNAME=	textual_autocomplete-4.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual_autocomplete/}
@@ -13,8 +13,12 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-textual>=2.0.0:../../comms/py-textual
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
+
+# as of 4.0.4
+# 2 skipped, 4 warnings, 24 errors
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
