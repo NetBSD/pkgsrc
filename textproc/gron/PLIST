@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/20 05:56:52 kim Exp $
+bin/gron
+man/man1/gron.1
