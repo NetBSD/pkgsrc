@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25678 2025/04/20 20:17:20 wiz Exp $
+$NetBSD: TODO,v 1.25679 2025/04/20 20:18:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1144,11 +1144,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-certbot-4.0.0
 	o py-certbot-nginx-4.0.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-dotenv-1.1.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
-	o py-flit_core-3.12.0
 	o py-frozenlist-1.6.0
 	o py-gammu-3.1
 	o py-google-api-python-client-2.167.0
