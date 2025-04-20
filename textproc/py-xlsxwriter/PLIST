@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/14 13:00:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/20 12:13:17 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -68,6 +68,9 @@ ${PYSITELIB}/xlsxwriter/feature_property_bag.pyo
 ${PYSITELIB}/xlsxwriter/format.py
 ${PYSITELIB}/xlsxwriter/format.pyc
 ${PYSITELIB}/xlsxwriter/format.pyo
+${PYSITELIB}/xlsxwriter/image.py
+${PYSITELIB}/xlsxwriter/image.pyc
+${PYSITELIB}/xlsxwriter/image.pyo
 ${PYSITELIB}/xlsxwriter/metadata.py
 ${PYSITELIB}/xlsxwriter/metadata.pyc
 ${PYSITELIB}/xlsxwriter/metadata.pyo
@@ -104,6 +107,9 @@ ${PYSITELIB}/xlsxwriter/table.pyo
 ${PYSITELIB}/xlsxwriter/theme.py
 ${PYSITELIB}/xlsxwriter/theme.pyc
 ${PYSITELIB}/xlsxwriter/theme.pyo
+${PYSITELIB}/xlsxwriter/url.py
+${PYSITELIB}/xlsxwriter/url.pyc
+${PYSITELIB}/xlsxwriter/url.pyo
 ${PYSITELIB}/xlsxwriter/utility.py
 ${PYSITELIB}/xlsxwriter/utility.pyc
 ${PYSITELIB}/xlsxwriter/utility.pyo
