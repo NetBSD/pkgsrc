@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/06/17 09:32:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/20 19:26:10 wiz Exp $
 
-DISTNAME=	nlohmann-json-3.11.3
+DISTNAME=	nlohmann-json-3.12.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nlohmann/}
 GITHUB_PROJECT=	json
