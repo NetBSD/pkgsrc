@@ -1,4 +1,4 @@
-$NetBSD: patch-xvbmp.c,v 1.1 2025/04/19 23:14:24 tsutsui Exp $
+$NetBSD: patch-xvbmp.c,v 1.2 2025/04/20 02:43:21 tsutsui Exp $
 
 - Pull fixes from https://gitlab.com/DavidGriffith/xv
  - https://gitlab.com/DavidGriffith/xv/-/commit/60a25db1
@@ -39,7 +39,7 @@ $NetBSD: patch-xvbmp.c,v 1.1 2025/04/19 23:14:24 tsutsui Exp $
 +	   (biSize==OS2_NEW)     ? "OS/2 2.x " :
 +	   (biSize==WIN_3X)      ? "Windows 3.x "  :
 +	   (biSize==WIN_95_NT4)  ? "Windows 95/NT4 " :
-+	   (biSize==WIN_98_2K)   ? "Windows 98/2000" :
++	   (biSize==WIN_98_2K)   ? "Windows 98/2000 " :
 +	   (biSize==WIN_NT_2K)   ? "Windows NT/2000 " : ""),
  	  biBitCount,  (biBitCount == 1) ? "" : "s",
  	  cmpstr, filesize);
