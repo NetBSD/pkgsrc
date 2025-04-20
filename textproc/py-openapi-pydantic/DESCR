@@ -1,0 +1,4 @@
+OpenAPI schema implemented in Pydantic. Both Pydantic 1.8+ and 2.x
+are supported.
+
+The naming of the classes follows the schema in OpenAPI specification.

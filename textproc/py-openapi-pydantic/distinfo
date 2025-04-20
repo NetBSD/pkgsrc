@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/20 22:04:54 wiz Exp $
+
+BLAKE2s (openapi_pydantic-0.5.1.tar.gz) = af762c2739c5f740d90d866977ca0d6b63c4390fb4271228e2d29f5e4ec35a99
+SHA512 (openapi_pydantic-0.5.1.tar.gz) = bd9ade44e50c294f101d26629bd005757919a99b683e7209644b123d82265f2e29b78c1e16d3c721ecad1ac0b86e7fede27bf5b011ac49887545778fe46257c8
+Size (openapi_pydantic-0.5.1.tar.gz) = 60892 bytes
