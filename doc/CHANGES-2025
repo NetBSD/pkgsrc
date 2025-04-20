@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2745 2025/04/20 20:17:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2746 2025/04/20 20:18:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-contourpy to 1.3.2 [wiz 2025-04-20]
 	Updated www/snac to 2.75 [schmonz 2025-04-20]
 	Updated textproc/py-dill to 0.4.0 [wiz 2025-04-20]
+	Updated devel/py-flit_core to 3.12.0 [wiz 2025-04-20]
