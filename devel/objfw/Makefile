@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/04/17 21:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/20 19:42:25 js Exp $
 
 DISTNAME=	objfw-1.3
 PKGREVISION=	1
@@ -20,11 +20,25 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	OBJC=clang	# Clang has much better ObjC support
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
-PKGSRC_COMPILER=	clang
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
+.if ${MACHINE_ARCH} == "alpha" || \
+	${MACHINE_ARCH} == "coldfire" || \
+	${MACHINE_ARCH} == "hppa" || \
+	${MACHINE_ARCH} == "ia64" || \
+	${MACHINE_ARCH} == "m68k" || \
+	${MACHINE_ARCH} == "or1k" || \
+	${MACHINE_ARCH} == "sh3eb" || \
+	${MACHINE_ARCH} == "sh3el" || \
+	${MACHINE_ARCH} == "vax"
+# Clang does not support these architectures, so build with GCC, with the
+# caveat that GCC doesn't support all features.
+.elif ${OPSYS} == "Darwin"
+# Darwin always has good Objective-C support with the system compiler.
+.else
+PKGSRC_COMPILER=	clang
+
 TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
 .endif
 
