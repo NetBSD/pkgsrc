@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/06/17 09:32:13 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/04/20 19:26:10 wiz Exp $
 
-BLAKE2s (nlohmann-json-3.11.3.tar.gz) = b42276535bbf87e54a1af8ab4ff18316b56bf25d8ab4cbaf97d4ac363ab0e78c
-SHA512 (nlohmann-json-3.11.3.tar.gz) = 7df19b621de34f08d5d5c0a25e8225975980841ef2e48536abcf22526ed7fb99f88ad954a2cb823115db59ccc88d1dbe74fe6c281b5644b976b33fb78db9d717
-Size (nlohmann-json-3.11.3.tar.gz) = 8053705 bytes
+BLAKE2s (nlohmann-json-3.12.0.tar.gz) = 4a8f71416d89ed4e5442197e5705db4d3c1c5658e753400b2a65996623dbd0bc
+SHA512 (nlohmann-json-3.12.0.tar.gz) = 6cc1e86261f8fac21cc17a33da3b6b3c3cd5c116755651642af3c9e99bb3538fd42c1bd50397a77c8fb6821bc62d90e6b91bcdde77a78f58f2416c62fc53b97d
+Size (nlohmann-json-3.12.0.tar.gz) = 9678593 bytes
