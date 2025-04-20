@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/24 10:37:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/20 21:59:33 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,10 +9,10 @@ ${PYSITELIB}/textual_autocomplete/__init__.pyo
 ${PYSITELIB}/textual_autocomplete/_autocomplete.py
 ${PYSITELIB}/textual_autocomplete/_autocomplete.pyc
 ${PYSITELIB}/textual_autocomplete/_autocomplete.pyo
-${PYSITELIB}/textual_autocomplete/_autocomplete2.py
-${PYSITELIB}/textual_autocomplete/_autocomplete2.pyc
-${PYSITELIB}/textual_autocomplete/_autocomplete2.pyo
-${PYSITELIB}/textual_autocomplete/matcher.py
-${PYSITELIB}/textual_autocomplete/matcher.pyc
-${PYSITELIB}/textual_autocomplete/matcher.pyo
+${PYSITELIB}/textual_autocomplete/_path_autocomplete.py
+${PYSITELIB}/textual_autocomplete/_path_autocomplete.pyc
+${PYSITELIB}/textual_autocomplete/_path_autocomplete.pyo
+${PYSITELIB}/textual_autocomplete/fuzzy_search.py
+${PYSITELIB}/textual_autocomplete/fuzzy_search.pyc
+${PYSITELIB}/textual_autocomplete/fuzzy_search.pyo
 ${PYSITELIB}/textual_autocomplete/py.typed
