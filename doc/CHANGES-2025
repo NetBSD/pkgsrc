@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2731 2025/04/20 16:56:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2732 2025/04/20 16:58:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3624,3 +3624,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gtexinfo to 7.2 [js 2025-04-20]
 	Updated security/xhash to 3.6.3 [wiz 2025-04-20]
 	Updated mail/p5-MIME-Types to 2.28 [wiz 2025-04-20]
+	Updated math/p5-Math-Pari to 2.030524 [wiz 2025-04-20]
