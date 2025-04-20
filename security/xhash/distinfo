@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/04/18 22:23:08 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/04/20 16:54:03 wiz Exp $
 
 BLAKE2s (github.com_klauspost_cpuid_v2_@v_v2.0.12.mod) = c8dbb87bd6708c91aeccc02a0d92aed495bbda06306462a24b178484a216efbd
 SHA512 (github.com_klauspost_cpuid_v2_@v_v2.0.12.mod) = ea6ebb6052f7fad38d19d3e149a40aeeb52f804388b0086ba22f83e5fcfcb8ea3af154f7fa35b667b38e9a0f95cbdf387a38ce04a82fc34025d72bbad68b2b8f
@@ -36,6 +36,6 @@ Size (golang.org_x_sys_@v_v0.32.0.mod) = 35 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.32.0.zip) = 91aa2748807a93fbf9a6dae90f72323419341a67bb52ccd5f7d416a469221c39
 SHA512 (golang.org_x_sys_@v_v0.32.0.zip) = 9246a906c6f34f5ba117664e4bb8574b4e785903e8a32c62e272c08682f4df86da860eb4a519170eb509b8f0e72e4aebcf8ec5257410771b8ad74636accedf3f
 Size (golang.org_x_sys_@v_v0.32.0.zip) = 1991164 bytes
-BLAKE2s (xhash-3.6.0.tar.gz) = d4b1343e246d5a07ac4be057b884456cb119693c08afbea9d7a9e51d845bde8f
-SHA512 (xhash-3.6.0.tar.gz) = 54d5faa20449e28834dc64a858344d1230c06bfd1064029df83f76d809d1f2a8ca71105f77e235c2e020fd685989b1821991b99fb4a178b5781c5d2a1dcf57bd
-Size (xhash-3.6.0.tar.gz) = 15156 bytes
+BLAKE2s (xhash-3.6.3.tar.gz) = 5da717e5ed457963adf36394173419da63e1bc6955486d3262ed0aa01ba40368
+SHA512 (xhash-3.6.3.tar.gz) = 63f44d1a6ce23eaf2a82e041254f01958db41860939ea3ed59785fa205e3777b368070e9a2803e43191f273b934994a791ac1abe5e8ff395d738d834117945ae
+Size (xhash-3.6.3.tar.gz) = 16157 bytes
