@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/02/23 21:08:49 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/20 21:12:57 wiz Exp $
 
-DISTNAME=	pip_audit-2.8.0
+DISTNAME=	pip_audit-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
 
