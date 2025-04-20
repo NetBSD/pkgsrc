@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 10:59:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/20 20:33:52 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,7 @@ ${PYSITELIB}/frozenlist/__init__.py
 ${PYSITELIB}/frozenlist/__init__.pyc
 ${PYSITELIB}/frozenlist/__init__.pyi
 ${PYSITELIB}/frozenlist/__init__.pyo
+${PYSITELIB}/frozenlist/_frozenlist.cpp
 ${PYSITELIB}/frozenlist/_frozenlist.pyx
 ${PYSITELIB}/frozenlist/_frozenlist.so
 ${PYSITELIB}/frozenlist/py.typed
