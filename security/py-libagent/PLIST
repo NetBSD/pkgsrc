@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2024/09/21 12:40:17 js Exp $
-${PYSITELIB}/libagent-${PKGVERSION}.dist-info/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2025/04/20 04:40:50 js Exp $
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/libagent-${PKGVERSION}.dist-info/licenses/LICENSE
 ${PYSITELIB}/libagent-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/libagent/__init__.py
 ${PYSITELIB}/libagent/__init__.pyc
