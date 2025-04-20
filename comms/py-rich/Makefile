@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2024/11/04 10:29:43 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/04/20 21:14:25 wiz Exp $
 
-DISTNAME=	rich-13.9.4
+DISTNAME=	rich-14.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich/}
