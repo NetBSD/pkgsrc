@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/03/03 13:06:43 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/20 21:11:53 wiz Exp $
 
-DISTNAME=	pypdf-5.3.1
+DISTNAME=	pypdf-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -22,8 +22,8 @@ USE_LANGUAGES=	# none
 
 # for testing
 ALLOW_NETWORK_ACCESS=	yes
-# as of 5.1.0
-# 70 failed, 818 passed, 9 skipped, 3 xfailed
+# as of 5.4.0
+# 70 failed, 862 passed, 19 skipped, 3 xfailed
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
