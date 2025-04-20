@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/04/17 21:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/20 21:08:32 wiz Exp $
 
-DISTNAME=	copyq-9.1.0
-PKGREVISION=	3
+DISTNAME=	copyq-10.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hluk/}
 GH_PROJECT=	CopyQ
@@ -15,10 +14,12 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++
 WRKSRC=			${WRKDIR}/${GH_PROJECT}-${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_QT6=ON
+USE_TOOLS+=		pkg-config
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/kf6-knotifications/buildlink3.mk"
+.include "../../devel/qt6-qtwayland/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

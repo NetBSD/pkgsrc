@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/22 12:10:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/20 21:08:32 wiz Exp $
 bin/copyq
 lib/copyq/plugins/libitemencrypted.so
 lib/copyq/plugins/libitemfakevim.so
@@ -26,6 +26,7 @@ share/copyq/themes/solarized-light.ini
 share/copyq/themes/tooltip.css
 share/copyq/themes/wine.ini
 share/copyq/translations/copyq_ar.qm
+share/copyq/translations/copyq_ca.qm
 share/copyq/translations/copyq_cs.qm
 share/copyq/translations/copyq_da.qm
 share/copyq/translations/copyq_de.qm
