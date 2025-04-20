@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2025/04/17 21:51:08 wiz Exp $
+# $NetBSD: Makefile,v 1.252 2025/04/20 20:30:27 js Exp $
 
 DISTNAME=	netpbm-11.02.09
 PKGREVISION=	5
@@ -23,6 +23,10 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake gdate flex pax perl
 USE_FEATURES=	snprintf
+
+# error: 'bool' cannot be defined via 'typedef'
+# note: 'bool' is a keyword with '-std=c23' onwards
+FORCE_C_STD=	gnu99
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
