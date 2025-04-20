@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2753 2025/04/20 20:35:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2754 2025/04/20 20:36:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/khal to 0.13.0 [wiz 2025-04-20]
 	Updated devel/py-frozenlist to 1.6.0 [wiz 2025-04-20]
 	Updated www/py-google-api-python-client to 2.167.0 [wiz 2025-04-20]
+	Updated security/py-google-auth to 2.39.0 [wiz 2025-04-20]
