@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.31 2025/04/13 18:36:18 wiz Exp $
+$NetBSD: distinfo,v 1.32 2025/04/20 20:30:39 wiz Exp $
 
-BLAKE2s (khal-0.11.4.tar.gz) = aa549c119d518301b2f456e1bc8ab43849e81a25118f28f87a55426d849275ac
-SHA512 (khal-0.11.4.tar.gz) = b9a1fa97d4cc8108835ab23318c4d9d2735ac5b8976d42d0ee07c7e1501c76ad6b23248ff235b06b9746b2e61ceee419f2eff791189c79f06499feb98c9d2d75
-Size (khal-0.11.4.tar.gz) = 208895 bytes
-SHA1 (patch-khal_icalendar.py) = 8aeda09e17ef5f548311f471b16ec955aa5ac8ef
+BLAKE2s (khal-0.13.0.tar.gz) = 3b4a53d1a3833b6c417e19f56dec0b16e9aafb4acb8e7b2739bd6c40a3c17717
+SHA512 (khal-0.13.0.tar.gz) = 728240af85a16a37b462457e22b0f19dc980ba700d89c64a1ce3d34eae04adaaf941a080a10fc78fb2da4d514a067cef24860af9a215a1ffc54aaf9c06e57649
+Size (khal-0.13.0.tar.gz) = 209200 bytes
