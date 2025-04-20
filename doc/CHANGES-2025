@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2725 2025/04/19 23:14:53 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.2726 2025/04/20 05:57:08 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3613,3 +3613,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-relativetimebuilder to 3.0.2 [adam 2025-04-19]
 	Added graphics/SDL3_image version 3.2.4 [js 2025-04-19]
 	Updated graphics/xv to 3.10anb31 [tsutsui 2025-04-19]
+	Added textproc/gron version 0.7.1 [kim 2025-04-20]
