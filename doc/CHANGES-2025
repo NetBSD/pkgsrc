@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2748 2025/04/20 20:23:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2749 2025/04/20 20:23:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flit_core to 3.12.0 [wiz 2025-04-20]
 	Updated devel/fq to 0.15.0 [wiz 2025-04-20]
 	Updated fonts/harfbuzz to 11.1.0 [wiz 2025-04-20]
+	Updated fonts/harfbuzz-icu to 11.1.0 [wiz 2025-04-20]
