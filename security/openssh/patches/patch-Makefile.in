@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile.in,v 1.9 2025/02/18 09:33:07 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.10 2025/04/20 19:15:42 wiz Exp $
 
 Use askpass provided by pkgsrc.
 
 Removed install-sysconf as we handle that phase through post-install
 
---- Makefile.in.orig	2024-07-01 04:36:28.000000000 +0000
+--- Makefile.in.orig	2025-04-09 07:02:43.000000000 +0000
 +++ Makefile.in
-@@ -21,7 +21,7 @@ abs_top_builddir=@abs_top_builddir@
- DESTDIR=
+@@ -20,7 +20,7 @@ abs_top_builddir=@abs_top_builddir@
+ 
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
 -ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
@@ -15,7 +15,7 @@ Removed install-sysconf as we handle that phase through post-install
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
  SSHD_SESSION=$(libexecdir)/sshd-session
-@@ -389,7 +389,7 @@ distprep: catman-do depend-check
+@@ -421,7 +421,7 @@ distprep: catman-do depend-check
  	-rm -rf autom4te.cache .depend.bak
  
  install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
