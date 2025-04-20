@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2756 2025/04/20 20:40:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2757 2025/04/20 20:44:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3649,3 +3649,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.39.0 [wiz 2025-04-20]
 	Updated devel/py-googleapis-common-protos to 1.70.0 [wiz 2025-04-20]
 	Updated devel/py-packaging to 25.0 [wiz 2025-04-20]
+	Updated audio/fluidsynth to 2.4.5 [wiz 2025-04-20]
