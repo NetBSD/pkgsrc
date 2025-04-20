@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2742 2025/04/20 20:03:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2743 2025/04/20 20:09:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-cairo to 1.28.0 [wiz 2025-04-20]
 	Updated graphics/py-cairo-shared to 1.28.0 [wiz 2025-04-20]
 	Updated devel/py-calver to 2025.4.17 [wiz 2025-04-20]
+	Updated graphics/py-contourpy to 1.3.2 [wiz 2025-04-20]
