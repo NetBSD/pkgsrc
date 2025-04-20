@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2734 2025/04/20 16:59:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2735 2025/04/20 17:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3627,3 +3627,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/p5-Math-Pari to 2.030524 [wiz 2025-04-20]
 	Updated devel/p5-Test-Manifest to 2.026 [wiz 2025-04-20]
 	Updated devel/p5-Test-Output to 1.036 [wiz 2025-04-20]
+	Updated devel/p5-Type-Tiny to 2.008001 [wiz 2025-04-20]
