@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4463 2025/04/18 12:26:47 adam Exp $
+# $NetBSD: Makefile,v 1.4464 2025/04/20 12:28:32 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2869,6 +2869,8 @@ SUBDIR+=	py-proto-plus
 SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
 SUBDIR+=	py-py2app
+SUBDIR+=	py-pyasynchat
+SUBDIR+=	py-pyasyncore
 SUBDIR+=	py-pybind11
 SUBDIR+=	py-pycnite
 SUBDIR+=	py-pycotap
