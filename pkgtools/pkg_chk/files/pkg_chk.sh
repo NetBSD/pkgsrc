@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.77 2023/11/17 17:40:48 abs Exp $
+# $Id: pkg_chk.sh,v 1.78 2025/04/20 22:33:33 js Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -710,7 +710,7 @@ run_cmd()
 	if [ -n "$FAIL" ] ; then
 	    msg "** '$1' failed"
 	    if [ -n "$opt_L" ] ; then
-		tail -100 "$opt_L" | egrep -v '^(\*\*\* Error code 1|Stop\.)' |\
+		tail -100 "$opt_L" | grep -E -v '^(\*\*\* Error code 1|Stop\.)' |\
 			tail -40
 	    fi
 	    if [ "$FAILOK" != 1 ]; then
