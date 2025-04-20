@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/04/12 11:01:56 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/04/20 20:38:43 wiz Exp $
 
-BLAKE2s (googleapis_common_protos-1.69.2.tar.gz) = f675d1a7cfc16dd6fa7f96604fb07b80ea3fd602c116e355d63786d6c4c45e07
-SHA512 (googleapis_common_protos-1.69.2.tar.gz) = a8f6f6ab551813e05db06af9ec404e4e87dcf2ebdeeecc6976b11a7cf0ccf0e6ca500ba0c263dcb6b71290b3919c84e5af8c2705ae3f4a5b630831aea8ddb668
-Size (googleapis_common_protos-1.69.2.tar.gz) = 144496 bytes
+BLAKE2s (googleapis_common_protos-1.70.0.tar.gz) = d0e6b929f4c99dfeef628b69007e04fc105f6ad3d03436f3a9f75b004448cc23
+SHA512 (googleapis_common_protos-1.70.0.tar.gz) = 02f5883a94ee59876d800b479e711f48367698f885cb3965f542af5f108f4858b7fd20b01c95a76c1cc792b7a3e883e68f8f0c04ef132da388c67576bce89ece
+Size (googleapis_common_protos-1.70.0.tar.gz) = 145903 bytes
