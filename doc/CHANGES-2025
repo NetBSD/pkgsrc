@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2728 2025/04/20 12:33:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2729 2025/04/20 13:40:45 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3621,3 +3621,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-pyasyncore version 1.0.4 [adam 2025-04-20]
 	Added devel/py-pyasynchat version 1.0.4 [adam 2025-04-20]
 	Updated net/py-pyftpdlib to 2.0.1 [adam 2025-04-20]
+	Updated devel/gtexinfo to 7.2 [js 2025-04-20]
