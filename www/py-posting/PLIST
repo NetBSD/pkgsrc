@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/11/24 10:44:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/20 22:19:11 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,9 +12,15 @@ ${PYSITELIB}/posting/__init__.pyo
 ${PYSITELIB}/posting/__main__.py
 ${PYSITELIB}/posting/__main__.pyc
 ${PYSITELIB}/posting/__main__.pyo
+${PYSITELIB}/posting/_start_time.py
+${PYSITELIB}/posting/_start_time.pyc
+${PYSITELIB}/posting/_start_time.pyo
 ${PYSITELIB}/posting/app.py
 ${PYSITELIB}/posting/app.pyc
 ${PYSITELIB}/posting/app.pyo
+${PYSITELIB}/posting/auth.py
+${PYSITELIB}/posting/auth.pyc
+${PYSITELIB}/posting/auth.pyo
 ${PYSITELIB}/posting/collection.py
 ${PYSITELIB}/posting/collection.pyc
 ${PYSITELIB}/posting/collection.pyo
@@ -30,6 +36,9 @@ ${PYSITELIB}/posting/exit_codes.pyo
 ${PYSITELIB}/posting/files.py
 ${PYSITELIB}/posting/files.pyc
 ${PYSITELIB}/posting/files.pyo
+${PYSITELIB}/posting/help_data.py
+${PYSITELIB}/posting/help_data.pyc
+${PYSITELIB}/posting/help_data.pyo
 ${PYSITELIB}/posting/help_screen.py
 ${PYSITELIB}/posting/help_screen.pyc
 ${PYSITELIB}/posting/help_screen.pyo
@@ -45,6 +54,9 @@ ${PYSITELIB}/posting/importing/curl.pyo
 ${PYSITELIB}/posting/importing/open_api.py
 ${PYSITELIB}/posting/importing/open_api.pyc
 ${PYSITELIB}/posting/importing/open_api.pyo
+${PYSITELIB}/posting/importing/postman.py
+${PYSITELIB}/posting/importing/postman.pyc
+${PYSITELIB}/posting/importing/postman.pyo
 ${PYSITELIB}/posting/jump_overlay.py
 ${PYSITELIB}/posting/jump_overlay.pyc
 ${PYSITELIB}/posting/jump_overlay.pyo
@@ -79,6 +91,9 @@ ${PYSITELIB}/posting/tuple_to_multidict.pyo
 ${PYSITELIB}/posting/types.py
 ${PYSITELIB}/posting/types.pyc
 ${PYSITELIB}/posting/types.pyo
+${PYSITELIB}/posting/urls.py
+${PYSITELIB}/posting/urls.pyc
+${PYSITELIB}/posting/urls.pyo
 ${PYSITELIB}/posting/user_host.py
 ${PYSITELIB}/posting/user_host.pyc
 ${PYSITELIB}/posting/user_host.pyo
@@ -190,3 +205,6 @@ ${PYSITELIB}/posting/widgets/variable_input.pyo
 ${PYSITELIB}/posting/xresources.py
 ${PYSITELIB}/posting/xresources.pyc
 ${PYSITELIB}/posting/xresources.pyo
+${PYSITELIB}/posting/yaml.py
+${PYSITELIB}/posting/yaml.pyc
+${PYSITELIB}/posting/yaml.pyo

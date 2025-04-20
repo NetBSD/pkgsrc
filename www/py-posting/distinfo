@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/11/24 10:44:23 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/04/20 22:19:11 wiz Exp $
 
-BLAKE2s (posting-2.3.0.tar.gz) = d1820e95bf37355bf871d37a9c7971adbe59ab4359a329545de53fcce24caf9b
-SHA512 (posting-2.3.0.tar.gz) = d9f643944f17ec3b7b65493c3328bb39dfb3e71b48ed0ea0e93db724a88283eabe4cac796c2ef9fbed5f7c2fbefdfcd060e31094adeec687d2662f48f62935c8
-Size (posting-2.3.0.tar.gz) = 3380719 bytes
+BLAKE2s (posting-2.7.0.tar.gz) = e92d33c1be05cde0a2abcd60290a633663c462b93f8cd9936643bda3769b4708
+SHA512 (posting-2.7.0.tar.gz) = 9be87f29703643b58b9ee56ea614cbbcb974977bb320e99d0926454ca45de12fa406b81f68feccd4f7c53745ae03ee16905b193612162aa8a767f1ee995892fb
+Size (posting-2.7.0.tar.gz) = 5991104 bytes
