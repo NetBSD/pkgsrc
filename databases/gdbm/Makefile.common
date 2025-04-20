@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2025/01/11 13:57:43 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.15 2025/04/20 20:32:46 js Exp $
 #
 # used by databases/gdbm/Makefile
 # used by databases/gdbm_compat/Makefile
@@ -18,5 +18,8 @@ PATCHDIR=	${.CURDIR}/../../databases/gdbm/patches
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+# error: 'bool' cannot be used here
+FORCE_C_STD=		gnu99
 
 TEST_TARGET=		check
