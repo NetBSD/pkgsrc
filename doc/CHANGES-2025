@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2739 2025/04/20 19:58:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2740 2025/04/20 20:00:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3632,3 +3632,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-anita to 2.15nb1 [wiz 2025-04-20]
 	Updated textproc/nlohmann-json to 3.12.0 [wiz 2025-04-20]
 	Updated devel/py-boolean.py to 5.0 [wiz 2025-04-20]
+	Updated graphics/py-cairo to 1.28.0 [wiz 2025-04-20]
