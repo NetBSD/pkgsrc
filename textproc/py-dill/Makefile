@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/13 12:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/20 20:17:10 wiz Exp $
 
-DISTNAME=	dill-0.3.9
+DISTNAME=	dill-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dill/}
 
