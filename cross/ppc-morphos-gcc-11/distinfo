@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/03/27 23:26:29 js Exp $
+$NetBSD: distinfo,v 1.5 2025/04/20 20:26:08 js Exp $
 
 BLAKE2s (sdk-source-20230510.tar.xz) = 777febe845ddbf50cbaec55c2d198085996a5064bc3c4128f44dfe79355d765e
 SHA512 (sdk-source-20230510.tar.xz) = badf3e678d514713ece14779dcce5fe78f3a849c73718e05b3317c1c766fb9879368c8fd58f9441c905023a660e893cf0eec405d2c133e4c6d11fe39acc50418
@@ -13,3 +13,4 @@ SHA1 (patch-libiberty_simple-object-mach-o.c) = 04b20b3a90b49aa51587dfe592448b4b
 SHA1 (patch-libstdc++-v3_configure.ac) = d436423f31b5b9b977bfa27078d160ced4f3ed94
 SHA1 (patch-libstdc++-v3_crossconfig.m4) = 0d0d20f9a1444bd77520decd275ac22d2a6e4890
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 0234e780171554bf60858b884ab1181cad36f8b2
+SHA1 (patch-zlib_zutil.c) = 33a75b615f4d43c628450f8f3743a00a1a050c3e
