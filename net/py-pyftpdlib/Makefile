@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/20 12:32:50 adam Exp $
 
-DISTNAME=	pyftpdlib-1.5.10
+DISTNAME=	pyftpdlib-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyftpdlib/}
@@ -10,14 +10,18 @@ HOMEPAGE=	https://github.com/giampaolo/pyftpdlib
 COMMENT=	Very fast asynchronous FTP server library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-pysendfile-[0-9]*:../../net/py-pysendfile
 
-USE_LANGUAGES=	# none
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} >= 312
+DEPENDS+=	${PYPKGPREFIX}-pyasyncore-[0-9]*:../../devel/py-pyasyncore
+DEPENDS+=	${PYPKGPREFIX}-pyasynchat-[0-9]*:../../devel/py-pyasynchat
+.endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
