@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/20 12:28:32 adam Exp $
+
+BLAKE2s (pyasynchat-1.0.4.tar.gz) = 2debf7b276af59750cd9802564724858f2004f70a19348135ce7d31fb4c4cb8d
+SHA512 (pyasynchat-1.0.4.tar.gz) = d36eb16770637a311d56fe22229de5a3cdfa699ae64fbafcdd5ce9acd43270b90813fe56db14528083ee1803a43d958d0b3b6616e0bbf907a4dd4a563981a278
+Size (pyasynchat-1.0.4.tar.gz) = 9747 bytes
