@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2750 2025/04/20 20:28:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2751 2025/04/20 20:30:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3643,3 +3643,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 11.1.0 [wiz 2025-04-20]
 	Updated fonts/harfbuzz-icu to 11.1.0 [wiz 2025-04-20]
 	Updated devel/jj to 0.28.2 [wiz 2025-04-20]
+	Updated time/khal to 0.13.0 [wiz 2025-04-20]
