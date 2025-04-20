@@ -1,0 +1,9 @@
+This package contains the asyncore module as found in Python versions prior to
+3.12. It is provided so that existing code relying on import asyncore is able
+to continue being used without significant refactoring.
+
+The module's source code is taken directly from the Python standard library.
+The specific version of asyncore that is provided is the last update before the
+addition of deprecation/removal warnings at import time, and is essentially
+equivalent to the version bundled with Python 3.9 (which was the last time the
+module was meaningfully updated).
