@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2023/11/17 17:40:47 abs Exp $
+# $NetBSD: Makefile,v 1.92 2025/04/20 22:33:33 js Exp $
 
-PKGNAME=	pkg_chk-2.0.12
+PKGNAME=	pkg_chk-2.0.13
 CATEGORIES=	pkgtools
 
 OWNER=		abs@NetBSD.org
