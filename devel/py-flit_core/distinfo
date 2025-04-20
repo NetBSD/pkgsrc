@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/02/23 11:37:55 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/04/20 20:18:23 wiz Exp $
 
-BLAKE2s (flit_core-3.11.0.tar.gz) = 38090b36aa32b195a8f1f06c1d49c00535280a2a78490a5a05a87ca773853d0e
-SHA512 (flit_core-3.11.0.tar.gz) = 628ffd0950da88f1775c1b193ee5c6f1af06046877ca0ad66d7ae5af7df4b49759f19a4494cf15d7a1480d34c19925ce11205e7359df9fc223bca6595f94525d
-Size (flit_core-3.11.0.tar.gz) = 52038 bytes
+BLAKE2s (flit_core-3.12.0.tar.gz) = 7b386ed1058eb98c105aedf1f5365de26d1e6782fbd25a03cbf1689f8e4c52b4
+SHA512 (flit_core-3.12.0.tar.gz) = 189dcd674722164b165e18b11c4dc72b8309fa2e3c82fc1ed6a9160bb5c6c1f86e2b2cfa111603cf73dca0dba74a496a664d5cbb6242587b47f139c42f7ae8bd
+Size (flit_core-3.12.0.tar.gz) = 53690 bytes
