@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2024/07/06 15:45:05 adam Exp $
+$NetBSD: distinfo,v 1.46 2025/04/20 22:05:34 js Exp $
 
 BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
 SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
@@ -13,7 +13,10 @@ SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
+SHA1 (patch-include_llvm_ADT_SmallVector.h) = 83c18299bd49dc6953e7a79561d4932eef06f8e9
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
+SHA1 (patch-lib_Target_AMDGPU_MCTargetDesc_AMDGPUMCTargetDesc.h) = fe765edea960a134586930c82589831bacc238c3
 SHA1 (patch-lib_Target_CSKY_MCTargetDesc_CSKYMCCodeEmitter.cpp) = a769f1533a136f9c50630e3219cafbf005e4e4e1
+SHA1 (patch-lib_Target_X86_MCTargetDesc_X86MCTargetDesc.h) = 8f46d9341741de0c99e307e6fd6c6ad5b7ee9610
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 4f3d0f527735126293519b42d7fd33dc41a910c2
 SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = 8b18659fe7189c9077b0409e123d41c01e8c8610
