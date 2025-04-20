@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25683 2025/04/20 20:30:50 wiz Exp $
+$NetBSD: TODO,v 1.25684 2025/04/20 20:34:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -936,7 +936,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
-	o meson-6.4.3
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -1143,7 +1142,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
-	o py-frozenlist-1.6.0
 	o py-gammu-3.1
 	o py-google-api-python-client-2.167.0
 	o py-google-auth-2.39.0
