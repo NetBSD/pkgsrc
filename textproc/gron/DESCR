@@ -1,0 +1,9 @@
+gron is a tool that transforms JSON (JavaScript Object Notation) into
+discrete assignments. This flattened format makes it easier to grep for
+specific values within the JSON structure and clearly shows the path to
+each value.
+
+It can be useful for exploring JSON APIs, debugging, and extracting
+specific pieces of data from complex JSON documents using standard Unix
+tools like grep, sed, and awk. gron can also convert its flattened
+format back into JSON.
