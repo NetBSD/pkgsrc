@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.47 2024/01/03 12:35:22 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.48 2025/04/20 22:35:47 js Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -154,13 +154,13 @@ check_packages_mismatched()
 {
     warned_once=""
 
-    ${PKG_CHK} -u -q $opt_B | egrep -v missing | while read line; do
+    ${PKG_CHK} -u -q $opt_B | grep -E -v missing | while read line; do
         # duplicate output of pkg_chk to stderr (bypass $(...) or `...`)
         echo "${OPC} $line" 1>&2
 	# Look for the first thing that looks like pkg-version rather
 	# than category/pkg and remove the version.
         for word in $line; do
-            if [ "$(echo $word | egrep '^[^/]+-[0-9][^-/]*$')" ]; then
+            if [ "$(echo $word | grep -E '^[^/]+-[0-9][^-/]*$')" ]; then
 		if [ -z "$opt_F" ]; then
 		    ${PKG_ADMIN} set mismatch=YES "$word" >/dev/null 2>&1 || {
 			if [ -z "$warned_once" ]; then
@@ -184,7 +184,7 @@ check_packages_w_flag()
     _flag=$1; shift
     for pkgver in $(${PKG_INFO} -e '*'); do
         if ${PKG_INFO} -Bq $pkgver \
-                | egrep "^$_flag=[Yy][Ee][Ss]" > /dev/null; then
+                | grep -E "^$_flag=[Yy][Ee][Ss]" > /dev/null; then
             echo $pkgver | sed 's/-[0-9][^-]*$//'
         fi
     done
