@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2736 2025/04/20 19:15:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2737 2025/04/20 19:18:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Output to 1.036 [wiz 2025-04-20]
 	Updated devel/p5-Type-Tiny to 2.008001 [wiz 2025-04-20]
 	Updated security/openssh to 10.0p1 [wiz 2025-04-20]
+	Updated misc/py-anita to 2.15nb1 [wiz 2025-04-20]
