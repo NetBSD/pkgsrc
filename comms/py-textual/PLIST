@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/02/23 17:23:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/20 21:52:04 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -66,6 +66,9 @@ ${PYSITELIB}/textual/_easing.pyo
 ${PYSITELIB}/textual/_event_broker.py
 ${PYSITELIB}/textual/_event_broker.pyc
 ${PYSITELIB}/textual/_event_broker.pyo
+${PYSITELIB}/textual/_extrema.py
+${PYSITELIB}/textual/_extrema.pyc
+${PYSITELIB}/textual/_extrema.pyo
 ${PYSITELIB}/textual/_files.py
 ${PYSITELIB}/textual/_files.pyc
 ${PYSITELIB}/textual/_files.pyo
