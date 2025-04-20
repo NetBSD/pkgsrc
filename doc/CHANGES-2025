@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2764 2025/04/20 21:22:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2765 2025/04/20 21:23:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3657,3 +3657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-rich to 14.0.0 [wiz 2025-04-20]
 	Updated devel/py-ruff to 0.11.6 [wiz 2025-04-20]
 	Updated www/py-urllib3 to 2.4.0 [wiz 2025-04-20]
+	Updated www/py-yarl to 1.20.0 [wiz 2025-04-20]
