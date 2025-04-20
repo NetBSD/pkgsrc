@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1512 2025/04/20 05:58:22 kim Exp $
+# $NetBSD: Makefile,v 1.1513 2025/04/20 22:05:41 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1143,6 +1143,7 @@ SUBDIR+=	py-ntc_templates
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-odfpy
 SUBDIR+=	py-openapi-core
+SUBDIR+=	py-openapi-pydantic
 SUBDIR+=	py-openapi-schema-validator
 SUBDIR+=	py-openapi-spec-validator
 SUBDIR+=	py-openapi3
