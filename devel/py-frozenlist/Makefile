@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/04/12 10:59:19 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/20 20:33:52 wiz Exp $
 
-DISTNAME=	frozenlist-1.5.0
+DISTNAME=	frozenlist-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frozenlist/}
 
@@ -15,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+
+USE_LANGUAGES+=	c++
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
