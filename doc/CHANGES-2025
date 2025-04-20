@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2735 2025/04/20 17:01:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2736 2025/04/20 19:15:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3628,3 +3628,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Manifest to 2.026 [wiz 2025-04-20]
 	Updated devel/p5-Test-Output to 1.036 [wiz 2025-04-20]
 	Updated devel/p5-Type-Tiny to 2.008001 [wiz 2025-04-20]
+	Updated security/openssh to 10.0p1 [wiz 2025-04-20]
