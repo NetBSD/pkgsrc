@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/07/03 11:29:04 vins Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/20 19:19:01 wiz Exp $
 
 DISTNAME=	pkg-1.10.99.7
 PKGREVISION=	1
@@ -11,7 +11,6 @@ HOMEPAGE=	https://wiki.freebsd.org/pkgng
 COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
 
-BOOTSTRAP_PKG=	yes
 GNU_CONFIGURE=	yes
 USE_CWRAPPERS=	no
 USE_LANGUAGES=	c
