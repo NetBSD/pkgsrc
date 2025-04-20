@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/03/27 23:26:29 js Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/20 20:26:08 js Exp $
 
 DISTNAME=	sdk-source-20230510
 PKGNAME=	ppc-morphos-gcc-11-11.3.0
@@ -18,7 +18,6 @@ WRKSRC=			${WRKDIR}/sdk-source/gcc11/gcc-${PKGVERSION_NOREV}
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		xzcat gtar patch autoconf gsed gmake perl makeinfo
-TOOL_DEPENDS+=		patch-[0-9]*:../../devel/patch
 
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
@@ -50,22 +49,25 @@ post-extract:
 		${XZCAT} gcc-${PKGVERSION_NOREV}.tar.xz | ${GTAR} xf -
 
 pre-patch:
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gpatch -p1 <../gcc-11-morphos.diff
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gpatch -p0 <../fpic.diff
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gpatch -p1 <../fix-genericize_if_stmt-ice.diff
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gpatch -p1 <../morphos-std-filesystem-path.diff
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gpatch -p1 <../fix-fenv-for-crossbuild.diff
 	# The diff for libstdc++-v3/configure is strangely large for the
 	# minimal changes that are there to the .ac file *and* is broken (it
 	# contains misordered hunks). Better to throw it away and regenerate it
 	# (regenerated in post-patch).
-	${RUN} rm ${WRKSRC}/libstdc++-v3/configure
+	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gsed -i '5471,22839d' ../gcc-11-morphos.diff
+	# Out of memory with gpatch on Darwin, so use nbpatch (which works
+	# after dropping the broken part above).
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../gcc-11-morphos.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p0 <../fpic.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../fix-genericize_if_stmt-ice.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../morphos-std-filesystem-path.diff
+	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../fix-fenv-for-crossbuild.diff
 
 post-patch:
 	# Change /gg to ${PREFIX}/gg
 	${RUN} cd ${WRKSRC} && \
-		gsed -i 's,/gg/,${PREFIX}/gg/,g' gcc/config/rs6000/morphos.h && \
-		gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
+		${PREFIX}/bin/gsed -i 's,/gg/,${PREFIX}/gg/,g' \
+			gcc/config/rs6000/morphos.h && \
+		${PREFIX}/bin/gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
 	${RUN} cd ${WRKSRC}/libcc1 && autoreconf
 	${RUN} cd ${WRKSRC}/libstdc++-v3 && autoreconf
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
