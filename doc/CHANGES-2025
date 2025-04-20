@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2730 2025/04/20 16:54:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2731 2025/04/20 16:56:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3623,3 +3623,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-pyftpdlib to 2.0.1 [adam 2025-04-20]
 	Updated devel/gtexinfo to 7.2 [js 2025-04-20]
 	Updated security/xhash to 3.6.3 [wiz 2025-04-20]
+	Updated mail/p5-MIME-Types to 2.28 [wiz 2025-04-20]
