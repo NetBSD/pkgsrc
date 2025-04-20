@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/02/23 21:08:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/20 21:12:57 wiz Exp $
 bin/pip-audit-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -29,6 +29,9 @@ ${PYSITELIB}/pip_audit/_dependency_source/interface.pyo
 ${PYSITELIB}/pip_audit/_dependency_source/pip.py
 ${PYSITELIB}/pip_audit/_dependency_source/pip.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/pip.pyo
+${PYSITELIB}/pip_audit/_dependency_source/pylock.py
+${PYSITELIB}/pip_audit/_dependency_source/pylock.pyc
+${PYSITELIB}/pip_audit/_dependency_source/pylock.pyo
 ${PYSITELIB}/pip_audit/_dependency_source/pyproject.py
 ${PYSITELIB}/pip_audit/_dependency_source/pyproject.pyc
 ${PYSITELIB}/pip_audit/_dependency_source/pyproject.pyo
