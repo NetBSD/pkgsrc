@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2780 2025/04/21 14:11:07 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2781 2025/04/21 15:59:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/meson to 1.7.2nb2 [wiz 2025-04-21]
 	Updated x11/libXft to 2.3.9 [wiz 2025-04-21]
 	Updated mail/rss2email to 3.14nb3 [schmonz 2025-04-21]
+	Updated pkgtools/bootstrap-extras to 20250308 [wiz 2025-04-21]
