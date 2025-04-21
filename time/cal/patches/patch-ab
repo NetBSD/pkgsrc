@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2005/01/25 03:37:29 tv Exp $
+$NetBSD: patch-ab,v 1.6 2025/04/21 21:27:26 wiz Exp $
 
 --- cal.c.orig	1996-07-11 15:36:33.000000000 -0400
 +++ cal.c
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.5 2005/01/25 03:37:29 tv Exp $
  /* Note: Other unix systems may require this next re-define to work. */
  /* I believe that SCO is one such system.  Please send in any fixes  */
  /* needed to get your system running.                                */
-+#if (defined(BSD) && BSD >= 199306) || defined (sun) || defined(__sgi) || defined(__INTERIX)
++#if (defined(BSD) && BSD >= 199306) || defined (sun) || defined(__sgi)
 +#define stricmp(a,b) strcasecmp(a,b) /* case-insensitive string comparison */
 +#endif
 + 
