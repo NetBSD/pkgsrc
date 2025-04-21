@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 11:05:47 nia Exp $
+$NetBSD: distinfo,v 1.23 2025/04/21 21:04:43 wiz Exp $
 
 BLAKE2s (icsi-finger-1.0.29.tar.Z) = 4fb41d23fd9bb7ad0be594266caafa7b30b6230b9ffb1be5bc9e942ebc475c67
 SHA512 (icsi-finger-1.0.29.tar.Z) = 0073c3524fbba5624f7fbc54d0c087519425c31d92d22cdc1219fd3002e52dec05d6c8c62c7322130cdf139c7021f9fe233ffbf71343e6dd96d4f4bb7beb6326
 Size (icsi-finger-1.0.29.tar.Z) = 302729 bytes
-SHA1 (patch-aa) = d68de6daa5a9ebaeb57cd5afd723f502a72d7dc5
+SHA1 (patch-aa) = f84c6ff03e8ac0a60d96a218c0efc87ef8991455
 SHA1 (patch-ab) = d8a719d78288aad8ab3a7159f332afdd59231ebb
 SHA1 (patch-ac) = ad13f2c4bb781fbeab4399cc0812f43f6052a74f
 SHA1 (patch-ad) = de1489cf9860bd412a43a875a43eae69dd559606
