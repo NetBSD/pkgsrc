@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/21 21:28:18 wiz Exp $
 
 PKGNAME=	heirloom-date-${HEIRLOOM_VER}
 CATEGORIES=	textproc
 
 MAKE_FLAGS+=	SUBDIRS="build date"
-
-NOT_FOR_PLATFORM+=	Interix-*-*
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 

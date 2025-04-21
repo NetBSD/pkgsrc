@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2020/01/26 17:32:19 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/04/21 21:28:18 wiz Exp $
 
 DISTNAME=	phoon_29jun2005
 PKGNAME=	phoon-20050629
@@ -15,7 +14,7 @@ WRKSRC=		${WRKDIR}/phoon
 .include "../../mk/bsd.prefs.mk"
 
 # doesn't have tm_gmtoff
-.if ${OPSYS} == "Interix" || ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
 MAKE_FLAGS+=	DEFINES=-DOS_SYSV
 .endif
 
