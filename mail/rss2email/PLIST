@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/21 14:11:02 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/21 14:14:46 wiz Exp $
 bin/r2e
-${PYSITELIB}/rss2email-3.12.2.dist-info/AUTHORS
-${PYSITELIB}/rss2email-3.12.2.dist-info/COPYING
-${PYSITELIB}/rss2email-3.12.2.dist-info/METADATA
-${PYSITELIB}/rss2email-3.12.2.dist-info/RECORD
-${PYSITELIB}/rss2email-3.12.2.dist-info/WHEEL
-${PYSITELIB}/rss2email-3.12.2.dist-info/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/rss2email/__init__.py
 ${PYSITELIB}/rss2email/__init__.pyc
 ${PYSITELIB}/rss2email/__init__.pyo

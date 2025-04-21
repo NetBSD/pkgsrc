@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.41 2025/04/21 14:11:02 schmonz Exp $
+$NetBSD: distinfo,v 1.42 2025/04/21 14:14:46 wiz Exp $
 
 BLAKE2s (rss2email-3.14.tar.gz) = 56d9235341f936e616988ba877dba4878214f24b6bbcfdd7ae9ed81f14e07f31
 SHA512 (rss2email-3.14.tar.gz) = 42308a3ae2bfe3adaf4b904983c2270a162d268ce5f4357d853a7ba74814d97dc5dc66d7d94ef6b3fbe510e8368361f63a99de814d3388f37b190fa63594a727
 Size (rss2email-3.14.tar.gz) = 175600 bytes
-SHA1 (patch-pyproject.toml) = 9fabf2c4e7966cefa63585713777818db351dbf0
+SHA1 (patch-pyproject.toml) = 2610a451244e9bdaa70edf8d480c994f89b7d134
