@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/16 14:49:13 perseant Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/21 21:10:48 perseant Exp $
 bin/samlsign
 include/saml/Assertion.h
 include/saml/RootObject.h
@@ -47,8 +47,8 @@ include/saml/version.h
 lib/libsaml.a
 lib/libsaml.la
 lib/libsaml.so
-lib/libsaml.so.11
-lib/libsaml.so.11.0.0
+lib/libsaml.so.13
+lib/libsaml.so.13.0.1
 lib/pkgconfig/opensaml.pc
 share/doc/${PKGNAME}/LICENSE.txt
 share/doc/${PKGNAME}/LOG4CPP.LICENSE

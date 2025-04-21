@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:31:07 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/04/21 21:10:48 perseant Exp $
 
-BLAKE2s (shibboleth-sp-3.1.0.tar.gz) = c78487777a045821dd851cf7ebd04e2fdaaff5480f0b9b590671f43ccb0ceb84
-SHA512 (shibboleth-sp-3.1.0.tar.gz) = e67fbfc0183544ed580c59e541eed3f69055a5cafce248d20ab0c6a5df9bfc0dba1190a03e4cd8ff6ffacc6b7e67ed0fe6fd42b064cf025548baab68ac4df05b
-Size (shibboleth-sp-3.1.0.tar.gz) = 1099076 bytes
+BLAKE2s (shibboleth-sp-3.5.0.tar.gz) = d48d65da6d60780f85d5c37edfbb141d58579d3746ea412c1025a694029621a0
+SHA512 (shibboleth-sp-3.5.0.tar.gz) = 1631708d160a082213623e01a0d42ead2632883e62d9026a1c56ed11a01c83a16e5259d6b6b4dd96cc3d7225360dfd720b6cdf21aeae1523dad56278904c6b31
+Size (shibboleth-sp-3.5.0.tar.gz) = 1127872 bytes
 SHA1 (patch-configs_Makefile.in) = 452741659276be98e9c0b2531b69ad1fa5c421f8
 SHA1 (patch-configs_keygen.sh) = 414467335f80da97643863fb221c152fd7139a9e
 SHA1 (patch-shibsp_attribute_filtering_impl_XMLAttributeFilter.cpp) = 3de173b5680b71d964af7aaf50b351da7b58228a
