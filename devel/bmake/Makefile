@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2025/04/19 08:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2025/04/21 16:30:06 wiz Exp $
 
 PKGNAME=	bmake-20240909
 CATEGORIES=	devel
@@ -42,8 +42,6 @@ CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 	${OPSYS} == "SCO_SV") && exists(/usr/bin/bash)
 CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
 .endif
-
-MAKE_ENV.Interix+=	XDEFS=-DUSE_SELECT
 
 # Fix bmake not finding files (e.g. .include) on Illumos with 32 bit ABI
 CFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64
