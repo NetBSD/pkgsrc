@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.203 2025/03/30 21:16:22 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.204 2025/04/21 21:52:20 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1716,7 +1716,6 @@ Cygwin      __CYGWIN__
 DragonFly   __DragonFly__
 FreeBSD     __FreeBSD__
 Haiku       __HAIKU__
-Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
 Linux       __linux
 Mac OS X    __APPLE__
