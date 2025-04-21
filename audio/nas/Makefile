@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2022/08/19 12:17:46 tnn Exp $
+# $NetBSD: Makefile,v 1.105 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	nas-1.9.4.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -53,7 +53,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.clients
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "Darwin" && ${OPSYS} != "Interix"
+.if ${OPSYS} != "Darwin"
 RCD_SCRIPTS=	nasd
 PLIST_SRC+=	${PKGDIR}/PLIST.server
 EGDIR=		${PREFIX}/share/examples/nas

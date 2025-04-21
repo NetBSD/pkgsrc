@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2019/12/15 23:15:01 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/21 16:21:39 wiz Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGREVISION=	1
 
 COMMENT+=	(OSS plugin)
 
-NOT_FOR_PLATFORM+=	Darwin-*-* Interix-*-* SunOS-5.[0-9]-* SunOS-5.10-*
+NOT_FOR_PLATFORM+=	Darwin-*-* SunOS-5.[0-9]-* SunOS-5.10-*
 
 CONFIGURE_ENV:=	${CONFIGURE_ENV:S/ac_cv_header_sys_soundcard_h=no//1}
 CONFIGURE_ENV:=	${CONFIGURE_ENV:S/ac_cv_header_machine_soundcard_h=no//1}

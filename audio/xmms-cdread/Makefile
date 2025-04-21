@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/27 20:21:14 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/21 16:21:41 wiz Exp $
 
 DISTNAME=		xmms-cdread-0.14a
 PKGREVISION=		4
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v2
 #   - CDIOREADTOCENTRY ioctl, which NetBSD and OpenBSD don't have
 #   - CDIOCREADAUDIO ioctl, which only Dragonfly has
 BROKEN_ON_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
-# no cdrom access code
-NOT_FOR_PLATFORM=	Interix-*-*
 ONLY_FOR_COMPILER=	gcc clang
 
 GNU_CONFIGURE=		yes

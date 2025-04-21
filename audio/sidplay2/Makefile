@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2020/01/26 05:26:13 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.7 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	sidplay-2.0.9
 PKGNAME=	sidplay2-2.0.9
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sidplay2.sourceforge.net/
 COMMENT=	Tool for playing sidtunes
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

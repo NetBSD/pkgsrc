@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/02/12 06:44:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2025/04/21 16:21:39 wiz Exp $
 
 DISTNAME=	lame-3.100
 CATEGORIES=	audio
@@ -31,7 +31,7 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double -DFLOAT_MAX=DBL_MAX
 .endif
 
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin" && ${OPSYS} != "Interix"
+.if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 TOOL_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-nasm
 .endif

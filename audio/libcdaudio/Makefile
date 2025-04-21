@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2022/07/25 11:12:19 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	libcdaudio-0.99.12
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libcdaudio.sourceforge.net/
 COMMENT=	Multi-platform CD player development library
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

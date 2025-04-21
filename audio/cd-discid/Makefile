@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/01/27 20:21:13 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/21 16:21:39 wiz Exp $
 
 DISTNAME=	cd-discid-1.4
 CATEGORIES=	audio
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linukz.org/cd-discid.shtml
 COMMENT=	Read CD to obtain CDDB discid information
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
