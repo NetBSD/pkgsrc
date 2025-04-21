@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/06/13 05:17:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/21 05:48:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -45,6 +45,9 @@ ${PYSITELIB}/openapi_core/contrib/aiohttp/responses.pyo
 ${PYSITELIB}/openapi_core/contrib/django/__init__.py
 ${PYSITELIB}/openapi_core/contrib/django/__init__.pyc
 ${PYSITELIB}/openapi_core/contrib/django/__init__.pyo
+${PYSITELIB}/openapi_core/contrib/django/decorators.py
+${PYSITELIB}/openapi_core/contrib/django/decorators.pyc
+${PYSITELIB}/openapi_core/contrib/django/decorators.pyo
 ${PYSITELIB}/openapi_core/contrib/django/handlers.py
 ${PYSITELIB}/openapi_core/contrib/django/handlers.pyc
 ${PYSITELIB}/openapi_core/contrib/django/handlers.pyo
@@ -54,6 +57,9 @@ ${PYSITELIB}/openapi_core/contrib/django/integrations.pyo
 ${PYSITELIB}/openapi_core/contrib/django/middlewares.py
 ${PYSITELIB}/openapi_core/contrib/django/middlewares.pyc
 ${PYSITELIB}/openapi_core/contrib/django/middlewares.pyo
+${PYSITELIB}/openapi_core/contrib/django/providers.py
+${PYSITELIB}/openapi_core/contrib/django/providers.pyc
+${PYSITELIB}/openapi_core/contrib/django/providers.pyo
 ${PYSITELIB}/openapi_core/contrib/django/requests.py
 ${PYSITELIB}/openapi_core/contrib/django/requests.pyc
 ${PYSITELIB}/openapi_core/contrib/django/requests.pyo
