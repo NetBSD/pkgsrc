@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2783 2025/04/21 16:27:23 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2784 2025/04/21 17:45:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/bootstrap-extras to 20250308 [wiz 2025-04-21]
 	Removed sysutils/user_interix [wiz 2025-04-21]
 	Updated sysutils/broot to 1.46.2 [pin 2025-04-21]
+	Updated net/py-awscli-plugin-logs-tail to 0.2nb1 [schmonz 2025-04-21]
