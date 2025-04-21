@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/04/19 07:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/21 21:48:47 wiz Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -69,13 +69,7 @@ PLIST_VARS+=	egl egldevice x11
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=		-platform interix-g++
-CFLAGS+=			-I/usr/local/include/bind
-LDFLAGS+=			-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=			-lbind -ldb -ldl
-.elif ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=		-platform freebsd-g++
 LDFLAGS+=			-lexecinfo
 .elif ${OPSYS} == "Darwin"
