@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/04/21 09:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	maplay1_2
 PKGNAME=	maplay-1.2
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}
 
 USE_LANGUAGES=		c++
-NOT_FOR_PLATFORM=	Interix-*-*
 
 INSTALLATION_DIRS=	bin
 

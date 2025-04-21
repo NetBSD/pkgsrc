@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2021/01/23 12:11:12 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/04/21 16:21:39 wiz Exp $
 
 BUILDLINK_TREE+=	libao
 
@@ -17,8 +17,6 @@ DEPENDS+=	libao-sun-[0-9]*:../../audio/libao-sun
 DEPENDS+=	libao-alsa-[0-9]*:../../audio/libao-alsa
 .  elif ${OPSYS} == "Darwin"
 DEPENDS+=	libao-macosx-[0-9]*:../../audio/libao-macosx
-.  elif ${OPSYS} != "Interix"
-DEPENDS+=	libao-oss-[0-9]*:../../audio/libao-oss
 .  endif
 .endif
 
