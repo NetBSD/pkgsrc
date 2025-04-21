@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2025/04/21 16:11:22 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/04/21 16:16:57 wiz Exp $
 
 BLAKE2s (afio-2.5.2.tar.gz) = 8842ba95d7e0c33302b1eaf75d6c952d812ce3cebed5694d7ae6d56d078d31de
 SHA512 (afio-2.5.2.tar.gz) = e0fb9b2d31bb912d7f30d8dd992cffcc99a84424c7386082abb8da82a1911b852c5a80e8135f0b6266113519f582dba45dc3c87c8f3b822a2daa14a1ae1d9944
 Size (afio-2.5.2.tar.gz) = 194030 bytes
 SHA1 (patch-aa) = e7f79bd551a733d59fd3902bbadaccac28a1de79
 SHA1 (patch-ab) = e1f8e5b489f844c85d9024d713f07e223b106db3
-SHA1 (patch-ac) = ba97bfd7d682f4d2a0c84b5053f4160e1018af7b
+SHA1 (patch-ac) = f33430a6b64ddac9f38825cf4b003bc9f478b0c7
