@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2020/01/18 23:30:36 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2025/04/21 16:32:26 wiz Exp $
 
 DISTNAME=	patch-2.7.6
 PKGREVISION=	1
@@ -17,7 +17,6 @@ USE_TOOLS+=		awk
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--program-prefix=g
-CONFIGURE_ENV+=		ac_cv_func_setmode_dos=no	# Fix for Interix (and old bsd?)
 
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 
