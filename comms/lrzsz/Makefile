@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/08/05 10:06:59 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/21 16:25:09 wiz Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -18,7 +18,7 @@ CFLAGS+=	-Wno-error=implicit-int
 CFLAGS+=	-Wno-error=implicit-function-declaration
 CFLAGS+=	-Wno-error=incompatible-pointer-types
 
-.if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix" \
+.if (${OPSYS} == "SunOS" || ${OPSYS} == "Darwin" \
 	|| ${OPSYS} == "Linux" || ${OPSYS} == "Haiku")
 BROKEN_GETTEXT_DETECTION=yes
 .  include "../../devel/gettext-lib/buildlink3.mk"
