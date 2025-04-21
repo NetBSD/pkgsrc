@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2020/01/26 17:30:41 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/21 16:19:37 wiz Exp $
 
 DISTNAME=	rzip-2.1
 CATEGORIES=	archivers
@@ -16,12 +16,6 @@ post-install:
 	${LN} -f ${DESTDIR}${PREFIX}/bin/rzip ${DESTDIR}${PREFIX}/bin/runzip
 	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/runzip.1
 	${LN} -s rzip.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/runzip.1
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-.  include "../../devel/libiberty/application.mk" # need asprintf(3)
-.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
