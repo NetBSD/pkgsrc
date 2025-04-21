@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2025/03/30 21:10:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2025/04/21 16:35:28 wiz Exp $
 # used by archivers/star/Makefile
 # used by archivers/tartest/Makefile
 # used by devel/smake/Makefile
@@ -37,7 +37,6 @@ MAKE_FLAGS+=	LINKMODE=static
 PLIST_VARS+=	bsd sysv
 .if ${OPSYS} == "AIX" ||					\
 	${OPSYS} == "HPUX" ||					\
-	${OPSYS} == "Interix" ||				\
 	${OPSYS} == "SCO_SV" ||					\
 	(${OPSYS} == "SunOS" &&					\
 		!exists(/usr/share/man/man8/Intro.8)) ||	\
