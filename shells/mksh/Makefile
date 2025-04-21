@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/04/19 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/04/21 21:18:41 wiz Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
@@ -18,8 +18,6 @@ BOOTSTRAP_PKG=		yes
 NO_CHECKSUM=		yes
 
 WRKSRC=			${WRKDIR}/mksh
-
-LIBS.Interix+=		-lcrypt
 
 MAKE_ENV+=		USE_PRINTF_BUILTIN=1
 
