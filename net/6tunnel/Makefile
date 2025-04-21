@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/01/09 20:09:34 nia Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/21 21:01:38 wiz Exp $
 
 DISTNAME=	6tunnel-0.13
 CATEGORIES=	net
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wojtekka/6tunnel
 COMMENT=	Tunnelling for applications that don't speak IPv6
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
