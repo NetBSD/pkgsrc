@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/02/14 00:06:16 reed Exp $
+$NetBSD: patch-ab,v 1.2 2025/04/21 16:31:19 wiz Exp $
 
 --- page.c.orig	2001-04-11 17:44:04.000000000 +0300
 +++ page.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/02/14 00:06:16 reed Exp $
  static caddr_t	startAddr = (caddr_t) 0;
  
 -#if ( !defined(sgi) && !defined(_AIX) )
-+#if ( !defined(sgi) && !defined(_AIX) && !(defined(BSD) && BSD >= 199306) && !defined(linux) && !defined(__INTERIX) )
++#if ( !defined(sgi) && !defined(_AIX) && !(defined(BSD) && BSD >= 199306) && !defined(linux) )
  extern int	sys_nerr;
  /*extern char *	sys_errlist[];*/
  #endif
