@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/03/31 14:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/04/21 16:22:09 wiz Exp $
 
 DISTNAME=	iozone3_493
 PKGNAME=	${DISTNAME:S/3_/-3./}
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.iozone.org/
 COMMENT=	Benchmark for file read and write speed
 # No derivative works
 LICENSE=	iozone-license
-
-NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKE_FILE=		makefile
