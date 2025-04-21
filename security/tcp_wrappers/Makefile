@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/08/13 16:44:39 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2025/04/21 21:15:27 wiz Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -21,7 +21,6 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 BUILD_TARGET.${OPSYS}?=	generic		# good luck!
 BUILD_TARGET.Darwin=	netbsd
-BUILD_TARGET.Interix=	netbsd
 BUILD_TARGET.Haiku=	netbsd
 BUILD_TARGET.Linux=	${LOWER_OPSYS}
 .if ${OPSYS:M*BSD}
@@ -38,7 +37,7 @@ BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 .if !empty(PKG_OPTIONS:Minet6)
 .  if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 MAKE_ENV+=	IPV6="-DHAVE_IPV6 -DUSE_GETHOSTBYNAME2 -DUSE_STRERROR"
-.  elif ${OPSYS} != "Linux" && ${OPSYS} != "Interix"
+.  elif ${OPSYS} != "Linux"
 MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .  endif
 .endif
