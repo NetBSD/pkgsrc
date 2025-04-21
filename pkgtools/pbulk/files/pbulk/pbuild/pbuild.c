@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.c,v 1.7 2015/11/03 19:06:47 joerg Exp $ */
+/* $NetBSD: pbuild.c,v 1.8 2025/04/21 16:00:09 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -121,9 +121,7 @@ main(int argc, char **argv)
 		usage();
 	}
 
-#if !defined(__INTERIX)
 	sa.sa_sigaction = NULL;
-#endif
 	sa.sa_handler = SIG_IGN;
 	sa.sa_flags = 0;
 	(void)sigemptyset(&sa.sa_mask);
@@ -215,9 +213,7 @@ build_package(const char *build_info, size_t len)
 	}
 
 	/* Reset SIGPIPE handling for child */
-#if !defined(__INTERIX)
 	sa.sa_sigaction = NULL;
-#endif
 	sa.sa_handler = SIG_DFL;
 	sa.sa_flags = 0;
 	(void)sigemptyset(&sa.sa_mask);
