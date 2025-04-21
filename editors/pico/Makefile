@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2021/11/29 16:17:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/21 20:16:11 wiz Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -32,7 +32,6 @@ BUILDNAME.IRIX=		sg6
 BUILDNAME.IRIX=		sgi
 .  endif
 .endif
-BUILDNAME.Interix=	sfu
 BUILDNAME.Linux=	lnx
 BUILDNAME.SunOS=	so5
 BUILDNAME.NetBSD=	neb
@@ -44,14 +43,6 @@ LIBS+=			${BUILDLINK_LDADD.termcap}
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
 
 INSTALLATION_DIRS=	bin include/pico lib ${PKGMANDIR}/man1
-
-# Create the OS-dependent files for Interix from the Solaris ones.
-post-extract:
-	${CP} -f ${WRKSRC}/pico/osdep/os-sol.h ${WRKSRC}/pico/osdep/os-sfu.h
-	${SED} -e 's,read.pol,read.sel,' \
-		${WRKSRC}/pico/osdep/os-sv4.ic >${WRKSRC}/pico/osdep/os-sfu.ic
-	${SED} -e 's,sv4,sfu,g' \
-		${WRKSRC}/pico/makefile.sv4 >${WRKSRC}/pico/makefile.sfu
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build ${BUILDNAME} \
