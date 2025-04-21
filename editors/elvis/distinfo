@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:21:27 nia Exp $
+$NetBSD: distinfo,v 1.16 2025/04/21 16:37:06 wiz Exp $
 
 BLAKE2s (elvis-2.2_0.tar.gz) = 8f1eb62707164435b9959f55fede7226dd13e801125b88e7a0e9f612ca3a020d
 SHA512 (elvis-2.2_0.tar.gz) = 847cc9ac0af170798abd4725f7dc2ec74d4931fb761b58836d4016d36da5657176bd8cdcdae02bc08438b18e8ce2433eb3340ec2503630fd2992e83ba06adf42
 Size (elvis-2.2_0.tar.gz) = 1439293 bytes
 SHA1 (patch-ab) = 9733e9000cb5313aacb68c62f27ed2dc542edf26
 SHA1 (patch-ac) = 11f8bea5683ee4d5dcfb618278aa7c381ebb4d9d
-SHA1 (patch-ad) = c0491fdc5da090f3aef956af4d2888014b3aee58
 SHA1 (patch-ae) = 6abf29e010d624fa074181c178878ff6c7fb580d
 SHA1 (patch-ref.c) = 324c6bd068bfaf44b278868f8e41895a0f91fe43
