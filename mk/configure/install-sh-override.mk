@@ -1,11 +1,10 @@
-# $NetBSD: install-sh-override.mk,v 1.2 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: install-sh-override.mk,v 1.3 2025/04/21 15:57:34 wiz Exp $
 
 ######################################################################
 ### install-sh-override (PRIVATE)
 ######################################################################
 ### install-sh-override replace any existing install-sh under
-### ${WRKSRC} with the version from sysutils/install-sh, which works
-### on all pkgsrc platforms, in particular Interix.
+### ${WRKSRC} with the version from sysutils/install-sh
 ###
 do-configure-pre-hook: install-sh-override
 

@@ -1,4 +1,4 @@
-# $NetBSD: features-vars.mk,v 1.28 2023/11/09 18:56:45 nia Exp $
+# $NetBSD: features-vars.mk,v 1.29 2025/04/21 15:57:34 wiz Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
@@ -180,14 +180,6 @@ MISSING_FEATURES+=	${_feature_}
 .  if !empty(USE_FEATURES:M${_feature_})
 .    if ${OPSYS} == "IRIX" || !empty(MACHINE_PLATFORM:MHPUX-11.11-hppa) \
 	|| ${OS_VARIANT} == "SCOOSR5"
-MISSING_FEATURES+=	${_feature_}
-.    endif
-.  endif
-.endfor
-
-.for _feature_ in utimes
-.  if !empty(USE_FEATURES:M${_feature_})
-.    if ${OPSYS} == "Interix"
 MISSING_FEATURES+=	${_feature_}
 .    endif
 .  endif

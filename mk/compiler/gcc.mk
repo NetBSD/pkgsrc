@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.288 2025/02/18 11:58:03 wiz Exp $
+# $NetBSD: gcc.mk,v 1.289 2025/04/21 15:57:33 wiz Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1297,11 +1297,6 @@ _GCC_NEEDS_A_FORTRAN=	yes
 .endif
 .if !empty(_GCC_NEEDS_A_FORTRAN:M[yY][eE][sS])
 .  include "../../mk/compiler/${PKGSRC_FORTRAN}.mk"
-.endif
-
-.if ${OPSYS} == "Interix" && !empty(_GCCBINDIR:M/opt/gcc.*)
-COMPILER_INCLUDE_DIRS=	${_GCCBINDIR:H}/include ${_OPSYS_INCLUDE_DIRS}
-COMPILER_LIB_DIRS=	${_GCCBINDIR:H}/lib ${_OPSYS_LIB_DIRS}
 .endif
 
 #.READONLY: GCC_REQD

@@ -1,4 +1,4 @@
-# $NetBSD: usergroup.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: usergroup.mk,v 1.2 2025/04/21 15:57:34 wiz Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,14 +139,6 @@ USE_GAMESGROUP?=	${SETGIDGAME}
 PKG_GROUPS+=	${GAMES_GROUP}
 PKG_USERS+=	${GAMES_USER}:${GAMES_GROUP}
 _BUILD_DEFS+=	GAMES_GROUP GAMES_USER GAMEDATAMODE GAMEDIRMODE GAMEMODE
-.endif
-
-.if !defined(OPSYS) && !empty(OPSYS:MInterix)
-.  for _user_ in ${PKG_USERS:C/\\\\//g:C/:.*//}
-.    if !empty(PKG_GROUPS:M${_user_})
-PKG_FAIL_REASON+=	"User and group '${_user_}' cannot be the same name on Interix".
-.    endif
-.  endfor
 .endif
 
 # Trigger dependency on pkgtasks if needed.

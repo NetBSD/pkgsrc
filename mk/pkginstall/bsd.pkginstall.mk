@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.80 2024/05/14 20:28:32 bacon Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.81 2025/04/21 15:57:34 wiz Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -217,20 +217,6 @@ SETGIDGAME?=            ${USE_GAMESGROUP}
 PKG_GROUPS+=	${GAMES_GROUP}
 PKG_USERS+=	${GAMES_USER}:${GAMES_GROUP}
 _BUILD_DEFS+=	GAMES_GROUP GAMES_USER GAMEDATAMODE GAMEDIRMODE GAMEMODE
-.endif
-
-# Interix is very special in that users and groups cannot have the
-# same name.  Interix.mk tries to work around this by overriding
-# some specific package defaults.  If we get here and there's still a
-# conflict, add a breakage indicator to make sure the package won't
-# compile without changing something.
-#
-.if !empty(OPSYS:MInterix)
-.  for user in ${PKG_USERS:C/\\\\//g:C/:.*//}
-.    if !empty(PKG_GROUPS:M${user})
-PKG_FAIL_REASON+=	"User and group '${user}' cannot have the same name on Interix"
-.    endif
-.  endfor
 .endif
 
 .if !empty(PKG_USERS) || !empty(PKG_GROUPS)
