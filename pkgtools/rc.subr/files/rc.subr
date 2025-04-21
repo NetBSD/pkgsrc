@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.18 2021/08/30 21:45:02 khorben Exp $
+# $NetBSD: rc.subr,v 1.19 2025/04/21 21:12:57 wiz Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -85,21 +85,6 @@ case $_osname in
 			_RCCMD_echo="/usr/ucb/echo"	# not in Solaris 11
 			_RCCMD_whoami="/usr/ucb/whoami"	# not in Solaris 11
 		fi
-		;;
-	Interix)
-		bsd_echo () {
-			if [ "$1" = "-n" ]; then
-				shift; echo "$@\c"
-			else
-				echo "$@"
-			fi
-		}
-		_RCCMD_chown="/usr/bin/chown"
-		_RCCMD_ci="/usr/contrib/bin/ci"
-		_RCCMD_co="/usr/contrib/bin/co"
-		_RCCMD_echo="bsd_echo"
-		_RCCMD_rcs="/usr/contrib/bin/rcs"
-		_RCARG_psformat="-wwo pid,comm"
 		;;
 	IRIX*)
 		_RCCMD_chown="/sbin/chown"
