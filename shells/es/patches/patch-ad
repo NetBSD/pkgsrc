@@ -1,7 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2023/01/16 01:44:21 dholland Exp $
+$NetBSD: patch-ad,v 1.8 2025/04/21 21:17:01 wiz Exp $
 
 - Use standard headers.
-- Handle setpgrp on Interix.
 - Don't bust portability to avoid union wait, it's no longer an issue.
 - Don't redeclare standard functions from stdlib.h, especiall since
   the qsort prototype is wrong.
@@ -18,15 +17,6 @@ $NetBSD: patch-ad,v 1.7 2023/01/16 01:44:21 dholland Exp $
  
  #if REQUIRE_IOCTL
  #include <sys/ioctl.h>
-@@ -239,7 +237,7 @@ extern int getgroups(int, int *);
-  * hacks to present a standard system call interface
-  */
- 
--#ifdef linux
-+#if defined(linux) || defined(__INTERIX)
- #include "unistd.h"
- #define setpgrp(a, b)	setpgid(a, b)
- #endif
 @@ -268,14 +266,24 @@ extern int getgroups(int, int *);
   *	others an integer.  we just renamed the first letter to s and
   *	let things be.  on some systems these could just be defined in
