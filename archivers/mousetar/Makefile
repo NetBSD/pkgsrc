@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/05/24 13:02:34 nia Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/21 16:19:15 wiz Exp $
 
 DISTNAME=	mousetar-20021217
 PKGREVISION=	1
@@ -9,8 +9,6 @@ DISTFILES=	tar.c tar.man
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	none
 COMMENT=	Version of tar program from der Mouse
-
-NOT_FOR_PLATFORM+=	Interix-*-* # no sys/mtio.h tape support
 
 WRKSRC=		${WRKDIR}
 
