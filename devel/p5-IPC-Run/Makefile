@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/16 12:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/21 16:32:07 wiz Exp $
 
 DISTNAME=	IPC-Run-20231003.0
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,6 @@ HOMEPAGE=	https://metacpan.org/release/IPC-Run
 COMMENT=	Perl module for interacting with child processes
 LICENSE=	gnu-gpl-v2 OR artistic
 
-# XXX Win32 will need Win32::Process while all others IO::Pty
-#     How about Interix?
 DEPENDS+=	p5-IO-tty>=1.08:../../devel/p5-IO-Tty
 
 USE_TOOLS+=		perl # for self-tests (!?)
