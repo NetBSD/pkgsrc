@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/09/06 10:40:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	tfmxplay-0.6
 CATEGORIES=	audio
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://darkstar.tabu.uni-bonn.de/~neo/audio.html
 COMMENT=	Console TFMX (amiga games sound file format) player
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 INSTALLATION_DIRS=	bin
 

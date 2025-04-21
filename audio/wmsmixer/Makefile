@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2019/11/02 21:09:18 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.23 2025/04/21 16:21:41 wiz Exp $
 
 DISTNAME=	wmsmixer-0.5.1
 PKGREVISION=	2
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.hibernaculum.net/wmsmixer/
 COMMENT=	Another mixer designed for WindowMaker (dockapp)
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_IMAKE=		YES
 USE_LANGUAGES=		c++
