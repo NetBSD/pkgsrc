@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2025/04/17 05:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.371 2025/04/21 20:17:38 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -52,7 +52,6 @@ SUBDIR+=	compat61
 SUBDIR+=	compat61-x11
 SUBDIR+=	compat80
 SUBDIR+=	compat90
-SUBDIR+=	cygwin_lib
 SUBDIR+=	darwin_lib
 SUBDIR+=	dega
 SUBDIR+=	dgen
