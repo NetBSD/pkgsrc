@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.5 2025/04/21 16:11:22 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2025/04/21 16:16:57 wiz Exp $
 
 - Use standard headers.
 - Use strerror, not sys_errlist and sys_nerr.
 - Use POSIX utime() interface, not half-baked version.
 - Use W* macros from sys/wait.h instead of hard-coding the historic
   bit patterns.
-- Build fix for makedev() on Solaris and Interix.
+- Build fix for makedev() on Solaris.
 - Fix bad calls to execlp() that break on 64-bit platforms.
 
 --- afio.c.orig	2018-11-30 14:25:04.000000000 +0000
