@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/09/01 09:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.72 2025/04/21 21:06:36 wiz Exp $
 
 DISTNAME=	libpcap-1.10.5
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tcpdump.org/
 COMMENT=	System-independent interface for user-level packet capture
 LICENSE=	modified-bsd
-
-NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gm4
