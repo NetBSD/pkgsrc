@@ -1,6 +1,6 @@
-#	$NetBSD: platname.mk,v 1.1 2023/06/27 10:35:29 riastradh Exp $
+#	$NetBSD: platname.mk,v 1.2 2025/04/21 20:51:32 wiz Exp $
 
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin"
 PY_PLATNAME=	${LOWER_OPSYS}
 .elif ${OPSYS} == "IRIX"
 PY_PLATNAME=	${LOWER_OPSYS:C/\..*//}
