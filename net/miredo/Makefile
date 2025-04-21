@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/05/15 07:01:31 nia Exp $
+# $NetBSD: Makefile,v 1.28 2025/04/21 21:06:36 wiz Exp $
 
 DISTNAME=		miredo-1.2.6
 PKGREVISION=		1
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.remlab.net/miredo/
 COMMENT=		Teredo IPv6 tunneling
 LICENSE=		gnu-gpl-v2
 
-NOT_FOR_PLATFORM=	Interix-*-* NetBSD-[0-3].*-* SunOS-*-*
+NOT_FOR_PLATFORM=	NetBSD-[0-3].*-* SunOS-*-*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
