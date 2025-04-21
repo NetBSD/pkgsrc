@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_Makefile.in,v 1.1 2025/04/21 20:21:43 schmonz Exp $
+
+Fix examples build with imlib2 -x11.
+
+--- examples/Makefile.in.orig	2025-04-21 20:12:47.925151734 +0000
++++ examples/Makefile.in
+@@ -508,7 +508,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/caca -I$(top_builddir)/caca
++AM_CPPFLAGS = -I$(top_srcdir) -I$(top_srcdir)/caca -I$(top_builddir)/caca -DX_DISPLAY_MISSING=1
+ @USE_CXX_TRUE@conio_snake = conio-snake
+ trifiller_SOURCES = trifiller.c
+ trifiller_CFLAGS = $(IMLIB2_CFLAGS)

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2025/02/17 22:00:48 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/04/21 20:21:43 schmonz Exp $
 
 BLAKE2s (libcaca-0.99.beta20.tar.gz) = a876fb9691d30c2aea3ecff525205feb8ff612e05ecd71532f9884a3d0ce24cc
 SHA512 (libcaca-0.99.beta20.tar.gz) = ab03e6c7d17fd152b2d5e9161799531f5e87322e174cb9d25874700f5bc1acfaf8bc2736e733998dad906f793c5a0304740dd39eec04a5e4c3d181bb109b4f23
@@ -6,4 +6,6 @@ Size (libcaca-0.99.beta20.tar.gz) = 1099916 bytes
 SHA1 (patch-CVE-2022-0856) = 466b2e6abf21cd28d0195a72f382be57aaee1d4d
 SHA1 (patch-caca_dither.c) = d2285e75eaec09840c38c2c54ce5e942d0a2e820
 SHA1 (patch-configure) = 12b3f5c5835876e9e26df7ce677182548bf36572
+SHA1 (patch-examples_Makefile.am) = f9d5df8893a84489a358fa5c0bbff6ae51ad53f7
+SHA1 (patch-examples_Makefile.in) = f6ca05f1f8b324ec9514a09ccbd9e96fc6eb1d9b
 SHA1 (patch-examples_font.c) = cc3e32a41c941e2c11a380e4e811ac4ba8b14f1d

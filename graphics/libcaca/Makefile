@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/02/17 22:00:48 nia Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/21 20:21:43 schmonz Exp $
 
 DISTNAME=	libcaca-0.99.beta20
 PKGNAME=	${DISTNAME:S/beta//}
@@ -30,5 +30,6 @@ CONFIGURE_ARGS+=	--disable-doc
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
