@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2011/11/23 16:25:07 is Exp $
+$NetBSD: patch-aa,v 1.7 2025/04/21 21:04:43 wiz Exp $
 
 --- lib/error.c.orig	1998-04-04 22:38:04.000000000 +0000
 +++ lib/error.c
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.6 2011/11/23 16:25:07 is Exp $
 -  char *error_text;
 +  const char *error_text;
  
-+#if 1 /* was defined( __INTERIX) */
++#if 1
 +  error_text = strerror(errno);
 +#else
    if (errno) {
