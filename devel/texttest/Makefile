@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/03/05 10:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/21 18:56:30 schmonz Exp $
 
 DISTNAME=		texttest-4.4.3.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 
@@ -10,7 +10,7 @@ HOMEPAGE=		http://texttest.sourceforge.net/
 COMMENT=		Tool for text-based Approval Testing
 LICENSE=		gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=		${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 
