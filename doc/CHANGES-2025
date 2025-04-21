@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2787 2025/04/21 20:21:51 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2788 2025/04/21 21:13:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3695,3 +3695,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/texttest to 4.4.3.1nb2 [schmonz 2025-04-21]
 	Removed emulators/cygwin_lib [wiz 2025-04-21]
 	Updated graphics/libcaca to 0.99.20 [schmonz 2025-04-21]
+	Updated pkgtools/rc.subr to 20250421 [wiz 2025-04-21]
