@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2025/04/13 16:05:55 taca Exp $
+$NetBSD: distinfo,v 1.12 2025/04/21 20:54:56 wiz Exp $
 
 BLAKE2s (ruby-3.3.8.tar.xz) = f7d0fed309c307262b8d5c30781add4d363c2bbf19db7ffc5a5567c414553976
 SHA512 (ruby-3.3.8.tar.xz) = 71c2f3ac9955e088fa885fd2ff695e67362a770a5d33e5160081eda3dd298ca2c692e299b03d757caecfbc94043fedc4ad093de84c505585d480cb36bbf978b9
 Size (ruby-3.3.8.tar.xz) = 16435924 bytes
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
-SHA1 (patch-configure) = 668341ef5ad8b510a3057d979402e66dfa66f9d3
+SHA1 (patch-configure) = aa01d9346a5d1610ba47ad16831b5774d2998c2b
 SHA1 (patch-ext_openssl_openssl__missing.h) = 3f8d79736fd14806dfaf76e333eec63ff3ff5890
 SHA1 (patch-include_ruby_internal_static__assert.h) = 7d5c3ae7ff674b9b34639924fcf08237164de9f8
 SHA1 (patch-lib_mkmf.rb) = 4a3cd18548dbdf43a13695d4e76f817c0347e335
