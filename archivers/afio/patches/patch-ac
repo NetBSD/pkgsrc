@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2020/11/25 14:59:24 ryoon Exp $
+$NetBSD: patch-ac,v 1.5 2025/04/21 16:11:22 wiz Exp $
 
 - Use standard headers.
 - Use strerror, not sys_errlist and sys_nerr.
@@ -47,8 +47,7 @@ $NetBSD: patch-ac,v 1.4 2020/11/25 14:59:24 ryoon Exp $
  #endif
  
  #ifndef	major
--#ifdef sun
-+#if defined(sun) || defined(__INTERIX)
+ #ifdef sun
  #include <sys/mkdev.h>
 +# if !defined(makedev) && defined(mkdev)
 +#  define makedev(a,b) mkdev((a),(b))
