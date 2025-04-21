@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/04/08 09:09:16 adam Exp $
+# $NetBSD: Makefile,v 1.53 2025/04/21 21:01:39 wiz Exp $
 
 DISTNAME=	dnsmasq-2.91
 CATEGORIES=	net
@@ -17,11 +17,7 @@ CONF_FILES=	${EGDIR}/dnsmasq.conf.example ${PKG_SYSCONFDIR}/dnsmasq.conf
 .include "../../mk/bsd.prefs.mk"
 
 DNSMASQ_USER?=		dnsmasq
-.if ${OPSYS} == "Interix"
-DNSMASQ_GROUP?=		nogroup
-.else
 DNSMASQ_GROUP?=		dnsmasq
-.endif
 
 PKG_GROUPS=		${DNSMASQ_GROUP}
 PKG_USERS=		${DNSMASQ_USER}:${DNSMASQ_GROUP}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2019/11/03 11:45:30 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/21 21:01:39 wiz Exp $
 
 DISTNAME=	batchftp102
 PKGNAME=	batchftp-1.02
@@ -11,7 +11,6 @@ COMMENT=	Automatically download files via the FTP protocol
 
 WRKSRC=		${WRKDIR}
 
-CPPFLAGS.Interix+=	-Dsetpgrp=setpgid
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 
 INSTALLATION_DIRS=	bin share/doc/batchftp
