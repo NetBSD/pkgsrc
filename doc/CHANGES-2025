@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2786 2025/04/21 20:17:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2787 2025/04/21 20:21:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3694,3 +3694,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-awscli-plugin-logs-tail to 0.2nb1 [schmonz 2025-04-21]
 	Updated devel/texttest to 4.4.3.1nb2 [schmonz 2025-04-21]
 	Removed emulators/cygwin_lib [wiz 2025-04-21]
+	Updated graphics/libcaca to 0.99.20 [schmonz 2025-04-21]
