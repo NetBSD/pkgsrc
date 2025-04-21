@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:18:02 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/04/21 21:14:55 wiz Exp $
 
 BLAKE2s (srm-1.2.15.tar.gz) = ab3cbe822be0bf7aed92aed9fc7072fdd18fafe0335d9d30564eaa18879928e1
 SHA512 (srm-1.2.15.tar.gz) = a8ec78473c55b70557fca88f525998ed51df3be58618b9da220e1bb73df013163f4e1563cbe2062b9cf1512152afeb9004b5be0be69cc1278c0d28597310dfd2
 Size (srm-1.2.15.tar.gz) = 132031 bytes
-SHA1 (patch-aa) = e73c6bc1fb3fcbd019accf417aec530694386a97
 SHA1 (patch-src_sunlink.c) = 3c6437534b62191a05a96761e54c1252bd43d0ed
 SHA1 (patch-test.sh) = 8383932967730cb55c9b530d73c374122adea197
