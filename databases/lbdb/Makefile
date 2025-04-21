@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2022/06/28 11:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/21 16:28:27 wiz Exp $
 
 DISTNAME=		lbdb_0.48.1
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -42,7 +42,7 @@ PLIST.finger=		yes
 .endif
 
 PLIST_VARS+=		yp
-.if ${OPSYS} != "Interix" && exists(/usr/bin/yppasswd)
+.if exists(/usr/bin/yppasswd)
 PLIST.yp=		yes
 .endif
 
