@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/04/19 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/21 15:58:55 wiz Exp $
 
-PKGNAME=	bootstrap-extra-files-20070702
+PKGNAME=	bootstrap-extra-files-20250308
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +15,7 @@ NO_BUILD=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-EXTRA_FILES=	fakeldd mkdir strip xargs
+EXTRA_FILES=	fakeldd mkdir strip
 PLIST_VARS+=	${EXTRA_FILES}
 
 .PHONY: ${EXTRA_FILES:S/^/do-install-/}
@@ -36,12 +36,6 @@ NEED_STRIP=		AIX
 .if !empty(NEED_STRIP:M${OPSYS})
 PLIST.strip=		yes
 do-install:		do-install-strip
-.endif
-
-NEED_XARGS=		Interix
-.if !empty(NEED_XARGS:M${OPSYS})
-PLIST.xargs=		yes
-do-install:		do-install-xargs
 .endif
 
 do-extract:
@@ -65,9 +59,5 @@ do-install-mkdir:
 do-install-strip:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/strip-sh ${DESTDIR}${PREFIX}/bin/strip
-
-do-install-xargs:
-	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh ${DESTDIR}${PREFIX}/bin/xargs
 
 .include "../../mk/bsd.pkg.mk"
