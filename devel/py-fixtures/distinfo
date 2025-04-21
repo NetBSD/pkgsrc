@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/02/26 10:08:49 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/04/21 05:56:52 adam Exp $
 
-BLAKE2s (fixtures-4.2.4.post1.tar.gz) = 9279fb0b1fa494f1ede853e32f4ec3bc4503940a1e4be71df11be2161565d35b
-SHA512 (fixtures-4.2.4.post1.tar.gz) = a68842ff8730fe6fa5df642c4943f4618aa4617ad42fd7dfc6876732cb28a0d5652ae02cc7fa2b9d3933392862fd5ce43bc35c702054d192701bfdc62c9058c2
-Size (fixtures-4.2.4.post1.tar.gz) = 35345 bytes
+BLAKE2s (fixtures-4.2.5.tar.gz) = c6892261af856e14bbbb498551012a487c52eaff6193d70db0d8f871a9c6d175
+SHA512 (fixtures-4.2.5.tar.gz) = 43b1d6216e7feff925d4906d1247c7c6a95cf9221be2323d0b9898a94c44095f657d6adeceeebcccea0b65caee96569127905effb07ac04712d780714512c57c
+Size (fixtures-4.2.5.tar.gz) = 48191 bytes
