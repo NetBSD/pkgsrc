@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/04/20 20:26:08 js Exp $
+$NetBSD: distinfo,v 1.6 2025/04/21 22:43:57 js Exp $
 
 BLAKE2s (sdk-source-20230510.tar.xz) = 777febe845ddbf50cbaec55c2d198085996a5064bc3c4128f44dfe79355d765e
 SHA512 (sdk-source-20230510.tar.xz) = badf3e678d514713ece14779dcce5fe78f3a849c73718e05b3317c1c766fb9879368c8fd58f9441c905023a660e893cf0eec405d2c133e4c6d11fe39acc50418
@@ -8,6 +8,7 @@ SHA1 (patch-gcc_config_host-darwin.c) = 62d75a4ce61a0ae42a756c9fd1476a329bb44600
 SHA1 (patch-gcc_config_rs6000_morphos.h) = c788e480f3f510b61292f5b1ec5b84646b33ab93
 SHA1 (patch-gcc_doc_extend.texi) = 34b21725886883ad3ad974dbc80d877425fa1220
 SHA1 (patch-gcc_plugin.c) = a690fc8cf595c6746832673ba77c472bdfc717bd
+SHA1 (patch-include_safe-ctype.h) = 1bc66b5e78d928fab522b7b6875cf7709aaeb808
 SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
 SHA1 (patch-libiberty_simple-object-mach-o.c) = 04b20b3a90b49aa51587dfe592448b4bd0324ae7
 SHA1 (patch-libstdc++-v3_configure.ac) = d436423f31b5b9b977bfa27078d160ced4f3ed94
