@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2025/03/30 21:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2025/04/21 16:17:51 wiz Exp $
 
 .include "../../archivers/gtar/Makefile.common"
 
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--disable-year2038
 PLIST_VARS+=		rmt
 
 # don't include rmt if gtar won't build it
-.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5" && ${OPSYS} != "AIX"
+.if ${OPSYS} != "Darwin" && ${OS_VARIANT} != "SCOOSR5" && ${OPSYS} != "AIX"
 PLIST.rmt=		yes
 .endif
 
