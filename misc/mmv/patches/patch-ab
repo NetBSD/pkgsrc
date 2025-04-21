@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2006/07/21 16:16:40 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2025/04/21 20:58:42 wiz Exp $
 
 --- mmv.c.orig	1993-10-25 10:29:39.000000000 +0000
 +++ mmv.c
@@ -21,15 +21,6 @@ $NetBSD: patch-ab,v 1.5 2006/07/21 16:16:40 minskim Exp $
  
  #ifdef HAS_DIRENT
  #include <dirent.h>
-@@ -188,7 +192,7 @@ extern char *strcpy(), *strchr();
- #include <fcntl.h>
- #endif
- 
--#ifdef IS_SYSV
-+#if defined(IS_SYSV) || defined(__INTERIX)
- 
- /* for System V and Version 7*/
- struct utimbuf {
 @@ -197,6 +201,9 @@ struct utimbuf {
  };
  #define utimes(f, t) utime((f), &(t))
@@ -68,21 +59,3 @@ $NetBSD: patch-ab,v 1.5 2006/07/21 16:16:40 minskim Exp $
  #else
  		(*s == '.' && (s[1] == '\0' || strcmp(s, "..") == 0)) ||
  		strlen(s) > MAXNAMLEN
-@@ -2631,7 +2643,7 @@ static int copy(ff, len)
- #ifdef IS_MSDOS
- 	struct ftime tim;
- #else
--#ifdef IS_SYSV
-+#if defined(IS_SYSV) || defined(__INTERIX)
- 	struct utimbuf tim;
- #else
- 	struct timeval tim[2];
-@@ -2706,7 +2718,7 @@ static int copy(ff, len)
- #else
- 			stat(pathbuf, &fstat) ||
- 			(
--#ifdef IS_SYSV
-+#if defined(IS_SYSV) || defined(__INTERIX)
- 				tim.actime = fstat.st_atime,
- 				tim.modtime = fstat.st_mtime,
- #else
