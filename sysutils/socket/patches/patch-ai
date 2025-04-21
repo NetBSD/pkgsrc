@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2006/11/28 16:48:31 tv Exp $
+$NetBSD: patch-ai,v 1.5 2025/04/21 21:25:18 wiz Exp $
 
 --- utils.c.orig	1992-09-09 10:31:16.000000000 -0400
 +++ utils.c
@@ -43,18 +43,3 @@ $NetBSD: patch-ai,v 1.4 2006/11/28 16:48:31 tv Exp $
  	    sigvec(i, &svec, NULL) ;
  #else
  	    signal(i, exitsig) ;
-@@ -173,12 +176,12 @@ char *prog ;
- void wait_for_children()
- {
-     int wret, status ;
--#ifndef ISC
-+#if !defined(ISC) && !defined(__INTERIX)
-     struct rusage rusage ;
- #endif
- 
-     /* Just do a wait, forget result */
--#ifndef ISC
-+#if !defined(ISC) && !defined(__INTERIX)
-     while ((wret = wait3(&status, WNOHANG, &rusage)) > 0) ;
- #else
-     while ((wret = waitpid(-1, &status, WNOHANG)) > 0) ;
