@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/04/09 00:30:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.90 2025/04/21 16:24:41 wiz Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -44,8 +44,6 @@ CONFIGURE_ENV+=		${IRCII_CONFIGURE_ENV}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 LDFLAGS+=	${BUILDLINK_LDADD.iconv}
-
-CONFIGURE_ARGS.Interix+=	--with-non-blocking=none
 
 # Optionally install compressed help files if MANZ is defined.
 .if defined(MANZ)

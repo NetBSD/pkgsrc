@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2021/10/17 18:14:04 tm Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/21 16:24:41 wiz Exp $
 
 DISTNAME=	icbirc-2.1
 CATEGORIES=	chat
@@ -16,7 +16,6 @@ MAKE_ENV+=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man"
 
 SRCS=		icb.c irc.c icbirc.c
 
-CPPFLAGS.Interix+=	-Dsocklen_t=int
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 CFLAGS.SunOS+=		-DNEED_PROGNAME
 
