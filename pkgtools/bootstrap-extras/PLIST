@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2018/01/01 22:29:51 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/21 15:58:55 wiz Exp $
 ${PLIST.mkdir}bin/mkdir-sh
 ${PLIST.strip}bin/strip
-${PLIST.xargs}bin/xargs
 ${PLIST.fakeldd}sbin/fakeldd
