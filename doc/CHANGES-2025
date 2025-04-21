@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2784 2025/04/21 17:45:10 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2785 2025/04/21 18:56:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed sysutils/user_interix [wiz 2025-04-21]
 	Updated sysutils/broot to 1.46.2 [pin 2025-04-21]
 	Updated net/py-awscli-plugin-logs-tail to 0.2nb1 [schmonz 2025-04-21]
+	Updated devel/texttest to 4.4.3.1nb2 [schmonz 2025-04-21]
