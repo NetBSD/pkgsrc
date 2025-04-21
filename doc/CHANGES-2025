@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2772 2025/04/20 22:19:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2773 2025/04/21 05:40:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3665,3 +3665,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual-autocomplete to 4.0.4 [wiz 2025-04-20]
 	Added textproc/py-openapi-pydantic version 0.5.1 [wiz 2025-04-20]
 	Updated www/py-posting to 2.7.0 [wiz 2025-04-20]
+	Updated textproc/py-ICU to 2.15.1 [adam 2025-04-21]
+	Updated www/py-soupsieve to 2.7 [adam 2025-04-21]
+	Updated lang/py-solc-select to 1.1.0 [adam 2025-04-21]
+	Updated textproc/py-sphinx-issues to 5.0.1 [adam 2025-04-21]
