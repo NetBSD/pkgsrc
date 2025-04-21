@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/02/06 19:31:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/21 21:09:45 wiz Exp $
 
 DISTNAME=	tcpd-tools-0.8
 PKGNAME=	tcpdstat-0.8
@@ -8,8 +8,6 @@ MASTER_SITES=	# ftp://tracer.csl.sony.co.jp/pub/mawi/tools/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Analyze tcpdump output
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 CFLAGS.SunOS+=	-Du_int64_t=uint64_t -Du_int32_t=uint32_t
 CFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int8_t=uint8_t

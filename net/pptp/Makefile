@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/20 11:58:10 nia Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/21 21:09:44 wiz Exp $
 
 DISTNAME=	pptp-1.7.1
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	PPTP client package for Microsoft VPN servers
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 MAKE_FLAGS+=	BINDIR=${PREFIX}/sbin
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR:Q}/man8

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/09/04 18:08:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2025/04/21 21:09:45 wiz Exp $
 
 DISTNAME=	Sharity-Light.1.3
 PKGNAME=	sharity-light-1.3
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	https://www.obdev.at/products/sharity-light/
 COMMENT=	Userland smbfs -- SMB to NFS protocol converter
 LICENSE=	gnu-gpl-v2
-
-NOT_FOR_PLATFORM=	Interix-*-* # SMB is all native
 
 # avoid picking up a bad value from a users environment
 MAKE_ENV+=	"ARCH=	"
