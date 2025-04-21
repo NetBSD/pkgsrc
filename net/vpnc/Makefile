@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2023/10/24 22:10:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.52 2025/04/21 21:09:45 wiz Exp $
 
 DISTNAME=		vpnc-0.5.3
 PKGREVISION=		21
@@ -9,9 +8,6 @@ MASTER_SITES=		https://www.unix-ag.uni-kl.de/~massar/vpnc/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.unix-ag.uni-kl.de/~massar/vpnc/
 COMMENT=		Client for Cisco3000 VPN Concentrator
-
-NOT_FOR_PLATFORM=	Interix-*-*
-
 
 USE_TOOLS+=		gmake
 USE_TOOLS+=		perl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/09/06 10:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/21 21:09:45 wiz Exp $
 
 DISTNAME=	wistumbler-20020816
 PKGNAME=	wistumbler-20020816.0
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}/wistumbler
 
 NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[01234]*-* NetBSD-1.5-*
 NOT_FOR_PLATFORM+=	NetBSD-1.5.*-* NetBSD-1.5[A-V]-*
-NOT_FOR_PLATFORM+=	Interix-*-*
 
 USE_FEATURES+=		cdefs
 
