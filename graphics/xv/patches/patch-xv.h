@@ -1,4 +1,4 @@
-$NetBSD: patch-xv.h,v 1.3 2025/04/19 23:14:24 tsutsui Exp $
+$NetBSD: patch-xv.h,v 1.4 2025/04/21 20:23:27 wiz Exp $
 
 - don't declare errno and sys_errlist
 - use strerror
@@ -35,7 +35,7 @@ $NetBSD: patch-xv.h,v 1.3 2025/04/19 23:14:24 tsutsui Exp $
  #  define ERRSTR(x) strerror(x, vaxc$errno)
  #else
 -#  if defined(__BEOS__) || defined(__linux__) /* or all modern/glibc systems? */
-+#  if defined(__BEOS__) || defined(__linux__) || defined(__INTERIX) || defined(__sun) /* or all modern/glibc systems? */
++#  if defined(__BEOS__) || defined(__linux__) || defined(__sun) /* or all modern/glibc systems? */
  #    define ERRSTR(x) strerror(x)
  #  else
  #    define ERRSTR(x) sys_errlist[x]
