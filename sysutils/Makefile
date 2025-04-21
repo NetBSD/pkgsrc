@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1155 2025/04/11 01:49:10 nia Exp $
+# $NetBSD: Makefile,v 1.1156 2025/04/21 15:59:40 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -878,7 +878,6 @@ SUBDIR+=	usbhid-dump
 SUBDIR+=	usbutil
 SUBDIR+=	user_cygwin
 SUBDIR+=	user_darwin
-SUBDIR+=	user_interix
 SUBDIR+=	user_irix
 SUBDIR+=	vbetool
 SUBDIR+=	vcdimager
