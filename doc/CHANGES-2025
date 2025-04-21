@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2782 2025/04/21 15:59:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2783 2025/04/21 16:27:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3690,3 +3690,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/rss2email to 3.14nb3 [schmonz 2025-04-21]
 	Updated pkgtools/bootstrap-extras to 20250308 [wiz 2025-04-21]
 	Removed sysutils/user_interix [wiz 2025-04-21]
+	Updated sysutils/broot to 1.46.2 [pin 2025-04-21]
