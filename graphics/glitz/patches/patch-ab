@@ -1,18 +1,14 @@
-$NetBSD: patch-ab,v 1.7 2008/05/19 13:47:45 tnn Exp $
+$NetBSD: patch-ab,v 1.8 2025/04/21 20:21:04 wiz Exp $
 
 --- src/glitzint.h.orig	2006-03-13 14:43:57.000000000 +0100
 +++ src/glitzint.h
-@@ -49,14 +49,18 @@
+@@ -49,14 +49,14 @@
    typedef __int64 int64_t;
    typedef unsigned __int64 uint64_t;
  #else
 -#  if defined(__OpenBSD__)
 +#  if defined(__OpenBSD__) || defined(__sgi)
  #    include <inttypes.h>
-+#  elif defined(__INTERIX)
-+#    include <sys/types.h>
-+#    undef uint64_t
-+#    define uint64_t u_int64_t /* not typedef in case it does exist already */
  #  else
  #    include <stdint.h>
  #  endif
@@ -23,7 +19,7 @@ $NetBSD: patch-ab,v 1.7 2008/05/19 13:47:45 tnn Exp $
  # define floorf(a)    floor (a)
  # define ceilf(a)     ceil (a)
  # define sinf(a)      sin (a)
-@@ -69,7 +73,7 @@
+@@ -69,7 +69,7 @@
  # define sqrtf(a)     sqrt (a)
  #endif
  
@@ -32,7 +28,7 @@ $NetBSD: patch-ab,v 1.7 2008/05/19 13:47:45 tnn Exp $
  # define slim_hidden_proto(name)	slim_hidden_proto1(name, INT_##name)
  # define slim_hidden_def(name)		slim_hidden_def1(name, INT_##name)
  # define slim_hidden_proto1(name, internal)				\
-@@ -89,7 +93,7 @@
+@@ -89,7 +89,7 @@
  # define slim_hidden_def(name)
  #endif
  
