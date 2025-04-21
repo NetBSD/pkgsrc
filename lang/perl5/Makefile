@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2025/03/30 21:10:44 wiz Exp $
+# $NetBSD: Makefile,v 1.287 2025/04/21 20:55:34 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -141,7 +141,6 @@ LIBSWANTED.FreeBSD=	m crypt
 LIBSWANTED.Haiku=	network
 LIBSWANTED.HPUX=	cl pthread $$libswanted # see Perl's README.hpux
 LIBSWANTED.IRIX=	m crypt
-LIBSWANTED.Interix=	m dl
 LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.Minix=	m crypt c
 LIBSWANTED.NetBSD=	m crypt
@@ -161,7 +160,6 @@ SYSLIBPATH.Cygwin=	/usr/lib
 SYSLIBPATH.Darwin=	/usr/lib
 SYSLIBPATH.DragonFly=	/usr/lib
 SYSLIBPATH.FreeBSD=	/usr/lib
-SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.Minix=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.OpenBSD=	/usr/lib
