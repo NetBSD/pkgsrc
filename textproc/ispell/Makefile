@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2021/06/10 23:43:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/21 21:26:46 wiz Exp $
 
 .include	"Makefile.common"
 
@@ -47,11 +47,6 @@ do-configure:
 .if ${OPSYS} == "SunOS"
 	cd ${WRKSRC};							\
 	${ECHO} "#define USG" >> local.h;
-.endif
-.if ${OPSYS} == "Interix"
-	cd ${WRKSRC};							\
-	${ECHO} "#define SORTTMP \"\"" >> local.h;			\
-	${ECHO} "#define MAKE_SORTTMP \"\"" >> local.h;
 .endif
 
 .include "../../mk/termcap.buildlink3.mk"
