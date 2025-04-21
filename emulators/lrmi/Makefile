@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/08/16 20:21:09 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/04/21 20:18:02 wiz Exp $
 
 DISTNAME=		lrmi-0.8
 PKGREVISION=		1
@@ -14,7 +13,6 @@ COMMENT=		Wrapper to the i386 vm86 mode
 # (XXX: should this be enabled on amd64 and ia64? it won't currently
 # work, but it probably ought to.)
 ONLY_FOR_PLATFORM=	*-*-i386
-NOT_FOR_PLATFORM+=	Interix-*-* # cannot call real mode from Windows
 
 MAKE_FILE=		Makefile.bsd
 INSTALLATION_DIRS=	bin include lib
