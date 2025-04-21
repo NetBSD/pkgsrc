@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2023/12/23 01:40:26 zafer Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/21 16:22:09 wiz Exp $
 
 DISTNAME=	bonnie
 PKGNAME=	bonnie-2.06
@@ -9,8 +9,6 @@ MASTER_SITES=	https://www.textuality.com/bonnie/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.textuality.com/bonnie/index.html
 COMMENT=	Performance Test of Sequential Filesystem I/O and STDIO
-
-NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
