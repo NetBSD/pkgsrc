@@ -1,12 +1,22 @@
-$NetBSD: patch-pyproject.toml,v 1.1 2025/04/21 14:11:02 schmonz Exp $
+$NetBSD: patch-pyproject.toml,v 1.2 2025/04/21 14:14:46 wiz Exp $
 
-Apply upstream patches:
+1. Fix version number.
+
+2. Apply upstream patches:
 
 183a17a for lighter TOOL_DEPENDS
 eda99a9 to fix a deprecation warning
 
 --- pyproject.toml.orig	2022-08-26 14:54:21.000000000 +0000
 +++ pyproject.toml
+@@ -1,6 +1,6 @@
+ [tool.poetry]
+ name = "rss2email"
+-version = "3.12.2"
++version = "3.14"
+ description = "Forward RSS feeds to your email address"
+ authors = ["Your Name <you@example.com>"]
+ license = "GPL-2.0-only"
 @@ -10,12 +10,12 @@ python = "^3.6"
  feedparser = ">=6.0.5"
  html2text = ">=2020.1.16"
