@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/22 08:28:33 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/04/21 05:40:27 adam Exp $
 
-BLAKE2s (sphinx_issues-5.0.0.tar.gz) = 821dc710a34e97fcfa1447b55b29c26dfa3272df5329b4a137ca34a613691f95
-SHA512 (sphinx_issues-5.0.0.tar.gz) = 359080293f08e7a66f2534459cd27ba3f51de30da411bcdf0cfa744cdc7ce7c114d14333c21619ffa16e9258ddb8523187e3635e30c3ecbb07b276c890263dd7
-Size (sphinx_issues-5.0.0.tar.gz) = 14021 bytes
+BLAKE2s (sphinx_issues-5.0.1.tar.gz) = 15909cc13c51f4befb230182d85b9163d46631b18cb68652635f12584f6fa590
+SHA512 (sphinx_issues-5.0.1.tar.gz) = 2fa1dac59f368291052cc00ebf71f9e7de980c7269661552ccd198c4d94af79f924a4f1729870039917ed60fca0b1782ac8419dc1ab53a12a0967dc528ac5b0e
+Size (sphinx_issues-5.0.1.tar.gz) = 14370 bytes
