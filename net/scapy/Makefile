@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2025/03/17 13:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.55 2025/04/21 09:24:51 leot Exp $
 
 DISTNAME=	scapy-2.6.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,7 +11,7 @@ HOMEPAGE=	https://scapy.net/
 COMMENT=	Interactive packet manipulation program
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
