@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.52 2024/05/07 10:06:11 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.53 2025/04/21 16:01:13 wiz Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -82,15 +82,6 @@ MAKEVARS+=		USE_BUILTIN.ncurses
 .if ${BUILTIN_LIB_FOUND.ncurses:U:tl} == yes
 BUILTIN_LIBNAME.ncurses=	ncurses
 .elif ${BUILTIN_LIB_FOUND.curses:U:tl} == yes
-BUILTIN_LIBNAME.ncurses=	curses
-.endif
-#
-# On Interix, there is a libncurses.a and a libcurses.so but strangely,
-# no libncurses.so.  We want to link against the shared library, so
-# turn "-lncurses" into "-lcurses".
-#
-.if (${OPSYS} == "Interix") && \
-    ${BUILTIN_LIB_FOUND.curses:U:tl} == yes
 BUILTIN_LIBNAME.ncurses=	curses
 .endif
 
