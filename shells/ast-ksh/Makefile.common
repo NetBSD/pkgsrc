@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2020/04/17 21:28:01 ad Exp $
+# $NetBSD: Makefile.common,v 1.37 2025/04/21 21:18:08 wiz Exp $
 #
 # used by shells/ast-ksh/Makefile
 # used by shells/static-ast-ksh/Makefile
@@ -17,8 +17,6 @@ COMMENT=	Official AT&T release of KornShell 93
 LICENSE=	epl-v1.0
 
 USE_TOOLS=	bash
-
-NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
 
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
