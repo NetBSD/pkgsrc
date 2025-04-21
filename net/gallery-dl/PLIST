@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.68 2025/01/19 16:29:06 leot Exp $
+@comment $NetBSD: PLIST,v 1.69 2025/04/21 09:21:48 leot Exp $
 bin/gallery-dl
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gallery_dl/__init__.py
 ${PYSITELIB}/gallery_dl/__init__.pyc
