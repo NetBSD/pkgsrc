@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/03/30 13:38:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/21 21:26:46 wiz Exp $
 
 .include "../../textproc/dict-server/Makefile.common"
 
@@ -22,11 +22,7 @@ MESSAGE_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 FILES_SUBST+=		PATH_TO_M4="${TOOLS_PATH.m4}"
 
 DICTD_USER?=		dictd
-.if ${OPSYS} == "Interix"
-DICTD_GROUP?=		nogroup
-.else
 DICTD_GROUP?=		dictd
-.endif
 
 PKG_GROUPS=			${DICTD_GROUP}
 PKG_USERS=			${DICTD_USER}:${DICTD_GROUP}
