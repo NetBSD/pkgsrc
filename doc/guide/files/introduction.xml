@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.51 2025/03/31 14:13:22 wiz Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.52 2025/04/21 21:52:20 wiz Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -181,7 +181,7 @@ minutes!</para>
           (Microsoft Windows Services for Unix)
         </entry>
         <entry align="center">Mar 2004</entry>
-	<entry><ulink url="https://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Interix">README.Interix</ulink></entry>
+        <entry align="center">Removed from pkgsrc Apr 2025</entry>
       </row>
       <row>
         <entry><ulink url="https://www.dragonflybsd.org/">DragonFlyBSD</ulink></entry>
