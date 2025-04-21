@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2016/03/30 09:46:37 jperkin Exp $
+$NetBSD: patch-aa,v 1.6 2025/04/21 21:29:16 wiz Exp $
 
 Use pkgsrc flags/layout.
 
 --- Makefile.orig	2005-01-24 22:41:08.000000000 -0500
 +++ Makefile
-@@ -3,12 +3,27 @@ SRCS= Dclock.c dclock.c
+@@ -3,12 +3,25 @@ SRCS= Dclock.c dclock.c
  OBJS= Dclock.o dclock.o
  HFILES= Dclock.h DclockP.h patchlevel.h
  
@@ -19,8 +19,6 @@ Use pkgsrc flags/layout.
 +
 +.if ${OPSYS} == "SunOS"
 +LIBS+= -lSM -lICE -lsocket -lnsl
-+.elif ${OPSYS} == "Interix"
-+LIBS+= -lSM -lICE
 +.endif
 +
 +all: dclock
