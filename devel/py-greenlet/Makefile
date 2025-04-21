@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/04/12 11:08:22 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/21 05:51:41 adam Exp $
 
-DISTNAME=	greenlet-3.1.1
+DISTNAME=	greenlet-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
 
@@ -21,7 +20,7 @@ USE_LANGUAGES=	c c++
 # When compiling with gcc 4.8, this causes an error due to not having
 # explicitly enabled C++11 support.
 #FORCE_CXX_STD=		c++11
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	c++11
 
 # sorry, unimplemented: non-trivial designated initializers not supported
 GCC_REQD+=		8
