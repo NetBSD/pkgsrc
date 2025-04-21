@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.295 2025/04/16 15:12:17 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.296 2025/04/21 20:54:55 wiz Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -740,7 +740,7 @@ RUBY_SHLIB?=		${RUBY_SUFFIX}.${RUBY_SLEXT}.${RUBY_SHLIBVER}
 RUBY_SHLIBALIAS?=	@comment
 RUBY_STATICLIB?=	${RUBY_SUFFIX}-static.a
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "NetBSD"
 RUBY_SHLIBVER=		${_RUBY_SHLIB_MAJOR}.${_RUBY_SHLIB_MINOR}
 _RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${RUBY_SLEXT}.${_RUBY_SHLIB_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
