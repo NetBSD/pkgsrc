@@ -1,4 +1,4 @@
-$NetBSD: patch-environ.c,v 1.2 2015/04/12 15:54:02 tnn Exp $
+$NetBSD: patch-environ.c,v 1.3 2025/04/21 16:15:46 wiz Exp $
 
 Add support for various OSes.
 Fix CVE-2015-0557. Via Debian security-traversal-dir.patch.
@@ -13,8 +13,7 @@ Fix CVE-2015-0557. Via Debian security-traversal-dir.patch.
 + #elif defined(__FreeBSD__)||defined(__NetBSD__)||defined(__APPLE__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__OpenBSD__)
    #include <sys/param.h>
    #include <sys/mount.h>
-- #elif defined(__QNXNTO__)
-+ #elif defined(__QNXNTO__)||defined(__INTERIX)
+  #elif defined(__QNXNTO__)
    #include <sys/statvfs.h>
   #else
    #include <sys/statfs.h>
@@ -40,7 +39,7 @@ Fix CVE-2015-0557. Via Debian security-traversal-dir.patch.
     return((LONG_MAX/(spclu*bps)<fclu)?LONG_MAX:spclu*bps*fclu);
   #elif TARGET==UNIX
 -  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)
-+  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)||defined(__INTERIX)||(defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
++  #if defined(__QNXNTO__)||defined(__sco__)||defined(SUNOS)||(defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
     struct statvfs vfs;
  
     if(statvfs(name, &vfs)==-1)
@@ -62,13 +61,3 @@ Fix CVE-2015-0557. Via Debian security-traversal-dir.patch.
   #else
    dest[0]='\0';
   #endif
-@@ -3802,7 +3805,9 @@ int reset_drive(char *name)
-  #elif TARGET==WIN32
-   return(0);
-  #elif TARGET==UNIX
-+  #ifndef __INTERIX
-   sync();
-+  #endif
-   return(0);
-  #endif
- }

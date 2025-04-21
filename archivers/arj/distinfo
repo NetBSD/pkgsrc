@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2022/01/08 14:43:09 tnn Exp $
+$NetBSD: distinfo,v 1.27 2025/04/21 16:15:46 wiz Exp $
 
 BLAKE2s (arj-3.10.22.tar.gz) = 3693d1767527e7f1cdc813d838728389c4ec6fb7910ed272eb1aa1d9645f77eb
 SHA512 (arj-3.10.22.tar.gz) = 4730dfdbab4f8095396c337578ed69bdaae52955ad468db50b52af8ad2846ecd6cfc05eb3ac0d03838c1c32ea60126f14a22b93e8181c06b9546456f3937ff76
@@ -12,7 +12,7 @@ SHA1 (patch-arjdisp.c) = d843d4dd1006ea30e8bb3a2acddbc2f0ac221abd
 SHA1 (patch-arjsfx.c) = c9e2314d0933cdc12f8e01ca16bc9222ac4e10b9
 SHA1 (patch-arjtypes.c) = 3f4f83472fa70c55908fe6d89fa0a3d009e68e8a
 SHA1 (patch-decode.c) = d6a2a4f60cb326aabb6bd25973d0aa7901c8595f
-SHA1 (patch-environ.c) = e306005a88825b2bfd5b3bb35b18710d26a4c885
+SHA1 (patch-environ.c) = 7925d9864cb326cc3847d23775521ea2a06654f3
 SHA1 (patch-exe__sear.c) = 6d8db5a2cdb8f2452b96cf4d09687ae9d45d3e17
 SHA1 (patch-fardata.c) = b76ac5a168b9a8e288a610dce093280d31520af6
 SHA1 (patch-gnu_config.h.in) = 2cf609a6c7cb4e32441a433db3dc9cc04c23ae2a
