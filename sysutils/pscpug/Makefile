@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/10/10 17:36:10 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/21 21:23:07 wiz Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
@@ -13,8 +13,6 @@ COMMENT=		Graph a given process's CPU usage
 LICENSE=		modified-bsd
 
 GNU_CONFIGURE=		yes
-
-NOT_FOR_PLATFORM=	Interix-*-* # no rusage or procfs stats
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

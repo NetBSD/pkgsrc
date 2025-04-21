@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/21 21:23:06 wiz Exp $
 
 PKGNAME=	heirloom-tapecntl-${HEIRLOOM_VER}
 CATEGORIES=	sysutils
 
 MAKE_FLAGS+=	SUBDIRS="build tapecntl"
-
-NOT_FOR_PLATFORM+=	Interix-*-*
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 
