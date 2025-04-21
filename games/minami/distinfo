@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:44:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/04/21 20:18:44 wiz Exp $
 
 BLAKE2s (minami-1.0.2.tgz) = ba414cac1f1b8fd3fe4373f9d03a809937e1fa3a7fa826824c738e42bed7f29a
 SHA512 (minami-1.0.2.tgz) = 7a3b44471f7d1ea2a19c023dbfdbf3a537b1cc4fb935d2f1868270deef76c2bf6b9c34bc74b5cdf147fec542235178a5071cce758cc8741f6080b8869ab0dea6
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = ac24fa9e79fbb800dc3c676bcda5018c688f274d
 SHA1 (patch-ac) = e94288b6bf92d00eed3b315c2b5e18940e1e96eb
 SHA1 (patch-ad) = 090f186b5292ca99dbdef267a82faa2ab21586a4
 SHA1 (patch-ae) = 51da678696ac130c184f35811d833f4ab214a08a
-SHA1 (patch-af) = 49293d7c478dcef2dc4c1693ea50e1beba511dfd
+SHA1 (patch-af) = 331c0e2a01b757c8a903aa65dde928d60b6ebf34
