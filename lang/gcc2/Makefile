@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/03/30 02:31:35 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/21 20:26:51 wiz Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		${DISTNAME:S/gcc/gcc2/}
@@ -16,7 +16,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection, version 2
 
-NOT_FOR_PLATFORM=	Darwin-*-* Interix-*-* *-*-x86_64 DragonFly-*-*
+NOT_FOR_PLATFORM=	Darwin-*-* *-*-x86_64 DragonFly-*-*
 NOT_FOR_PLATFORM+=	NetBSD-[6789]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1[0-9]*-*
 

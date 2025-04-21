@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/03/04 09:37:38 nia Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/21 20:26:51 wiz Exp $
 
 GCC_PKGNAME=		gcc8
 .include		"version.mk"
@@ -25,7 +25,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 MKPIE_SUPPORTED=	no
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
 
-NOT_FOR_PLATFORM=	Interix-*-* Darwin-*-aarch64
+NOT_FOR_PLATFORM=	Darwin-*-aarch64
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo sed tar:build
