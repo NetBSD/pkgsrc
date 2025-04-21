@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:09 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.20 2025/04/21 21:03:59 wiz Exp $
 
 DISTNAME=		hf6to4-1.3
 PKGREVISION=		1
@@ -12,8 +11,6 @@ HOMEPAGE=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/net/hf6to4/files/hf6t
 COMMENT=		Enables 6to4 IPv6 automatic tunnels
 
 WRKSRC=			${WRKDIR}
-
-NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 
 # This package does not set or evaluate IPV6_READY, but it should still
 # be listed in README-IPv6.html.
