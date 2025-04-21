@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/10/24 22:10:31 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/04/21 21:09:44 wiz Exp $
 
 DISTNAME=	pure-ftpd-1.0.49
 PKGREVISION=	2
@@ -17,8 +17,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 BUILD_DEFS+=		VARBASE
-
-CONFIGURE_ARGS.Interix+=	--without-privsep
 
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
 
