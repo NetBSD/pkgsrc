@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2002/01/09 11:24:37 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2025/04/21 16:23:10 wiz Exp $
 
---- Run.orig	Wed Jul 28 15:04:47 1999
+--- Run.orig	1999-07-28 22:04:47.000000000 +0000
 +++ Run
-@@ -87,51 +87,50 @@
+@@ -87,51 +87,50 @@ else
  	UNAME="uname -a"
  fi
  
@@ -68,12 +68,11 @@ $NetBSD: patch-aa,v 1.6 2002/01/09 11:24:37 jlam Exp $
  #
  cat ${BINDIR}/unixbench.logo # display banner
  rm -f ${TIMEACCUM}      # clean out old time accumulation file
-@@ -531,6 +530,8 @@
- 	echo "=============================================================="
+@@ -532,5 +531,7 @@ if [ "$runoption" != Q ]; then
  	cat $REPORTLOG
  fi
-+
-+rm -rf $TESTDIR
  
++rm -rf $TESTDIR
++
  exit 0
  ########################### Amen ######################
