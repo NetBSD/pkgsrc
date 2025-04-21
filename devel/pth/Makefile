@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2020/01/18 23:30:37 rillig Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/21 16:07:29 wiz Exp $
 
 DISTNAME=		pth-2.0.7
 PKGREVISION=		5
@@ -14,18 +14,14 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--enable-debug
 
 TEST_TARGET=		test
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--enable-syscall-hard
-.elif ${OPSYS} == "Interix" || ${OPSYS} == "Darwin"
-CONFIGURE_ENV+=		ac_cv_check_nfdstype='unsigned int'
-CONFIGURE_ENV+=		ac_cv_typedef_nfds_t=no # in <poll.h>, but that's unused
-.endif
+CONFIGURE_ARGS.NetBSD+=	--enable-syscall-hard
+CONFIGURE_ENV.Darwin+=	ac_cv_check_nfdstype='unsigned int'
+CONFIGURE_ENV.Darwin+=	ac_cv_typedef_nfds_t=no
 
 PLIST_VARS+=		pthread
 
