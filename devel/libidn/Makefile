@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2024/05/01 22:32:15 cheusov Exp $
+# $NetBSD: Makefile,v 1.114 2025/04/21 16:31:34 wiz Exp $
 
 DISTNAME=	libidn-1.42
 CATEGORIES=	devel
@@ -20,8 +20,6 @@ CONFIGURE_ENV+=		EMACS=${FALSE:Q}
 CONFIGURE_ARGS+=	--disable-csharp --disable-java
 CONFIGURE_ARGS+=	--with-packager=pkgsrc
 CONFIGURE_ARGS+=	--with-packager-bug-reports=http://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd
-
-CONFIGURE_ARGS.Interix+=	--disable-ld-version-script
 
 PKGCONFIG_OVERRIDE+=	lib/libidn.pc.in
 TEST_TARGET=		check
