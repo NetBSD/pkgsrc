@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2025/02/23 17:58:45 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/04/21 06:53:53 adam Exp $
 
-BLAKE2s (flit-3.11.0.tar.gz) = b5930af641cfc9df55dccea493ee1c715b03a83ddbfaa65e384abcb2d38d541a
-SHA512 (flit-3.11.0.tar.gz) = 704774ab9b8154056a82f59814c2589ad4b3c8593a8e0de75eae99b1517211790604988efaf4f32e5f49fd472ec00efe8269b72524f285a647f4b8126699a4b7
-Size (flit-3.11.0.tar.gz) = 153236 bytes
+BLAKE2s (flit-3.12.0.tar.gz) = 720884d00f17e574675373afdc16825510f3c8c3e3756683b23285381178d3be
+SHA512 (flit-3.12.0.tar.gz) = f8ed1f0e53452def182453db91a44c9ded5413fe74e2678bb7d56b3640d6ba6f43cccb55ad73e939cc5ca236fa2bf7b3e0f6d77fe4a4f12f90a9e437b561edb2
+Size (flit-3.12.0.tar.gz) = 155038 bytes
 SHA1 (patch-tests_test__find__python__executable.py) = 2b7c61dca228c54db79ce9a78608c4b5c03800bb
