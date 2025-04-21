@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/14 18:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/21 05:44:43 adam Exp $
 
-DISTNAME=	draftjs_exporter-5.0.0
+DISTNAME=	draftjs_exporter-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/draftjs-exporter/}
 
