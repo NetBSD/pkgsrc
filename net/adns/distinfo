@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:05:22 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/04/21 21:02:36 wiz Exp $
 
 BLAKE2s (adns-1.6.0.tar.gz) = acdf6dc6d01160ddbaa1d72f6e850da34950e4baf172210ccd88c6b13f627b4c
 SHA512 (adns-1.6.0.tar.gz) = d28d27123a2c9f873a60f9f1fd76ba60c795dc703ff52a6649f8f7ead12a5c74eb71b0a158168dfe9bb1eaf9b7d21f96ef303eb07fd9ad37fd73c38ed853d8de
 Size (adns-1.6.0.tar.gz) = 323474 bytes
 SHA1 (patch-aa) = 047eaeec04126c74a36f04f69d54ffedde0a2002
 SHA1 (patch-ab) = 551451955e92fac6962b405908adc2afb603082d
-SHA1 (patch-ac) = 6660ff4248eea59bb54e88aebf87c7430fbae102
-SHA1 (patch-ad) = 0a2632c7984ac30dff61cafc51631449e41399f2
-SHA1 (patch-ag) = 916492f0b7ffa5508a8c8531c0daab24f6004136
