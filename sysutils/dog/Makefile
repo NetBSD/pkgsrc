@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/08/01 16:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/21 21:23:05 wiz Exp $
 
 DISTNAME=	dog-1.7
 PKGREVISION=	1
@@ -18,7 +18,7 @@ BUILD_TARGET=	dog
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "SunOS"
 MAKE_ENV+=	OBJS="getopt.o getopt1.o"
 .endif
 

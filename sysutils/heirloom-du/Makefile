@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/28 10:15:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/21 21:23:05 wiz Exp $
 
 PKGNAME=	heirloom-du-${HEIRLOOM_VER}
 CATEGORIES=	sysutils
 
 MAKE_FLAGS+=	SUBDIRS="build du"
-
-NOT_FOR_PLATFORM+=	Interix-*-*
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
 

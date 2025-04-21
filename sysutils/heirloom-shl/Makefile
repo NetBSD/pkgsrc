@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/05/22 16:41:57 marino Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/21 21:23:06 wiz Exp $
 
 PKGNAME=	heirloom-shl-${HEIRLOOM_VER}
 CATEGORIES=	sysutils
 
 MAKE_FLAGS+=	SUBDIRS="build shl"
 
-NOT_FOR_PLATFORM+=	Interix-*-* NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
+NOT_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
 NOT_FOR_PLATFORM+=	DragonFly-*-*
 
 .include "../../sysutils/heirloom-doc/Makefile.common"
