@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.120 2021/10/26 11:34:21 nia Exp $
+$NetBSD: distinfo,v 1.121 2025/04/21 21:31:30 wiz Exp $
 
 BLAKE2s (qt-everywhere-opensource-src-4.8.7.tar.gz) = 82e475ae93861f06c988ade96add9a080acf5abe4d7cc6c63d07c1fd5460d371
 SHA512 (qt-everywhere-opensource-src-4.8.7.tar.gz) = f9f81a2e7205e1fd05c8d923dc73244f29aa33f951fa6b7c5c8193449328b37084796b9b71ad0c317e4e6fd00017c10ea5d67b1b2032551cde00548522218125
@@ -6,11 +6,9 @@ Size (qt-everywhere-opensource-src-4.8.7.tar.gz) = 241075567 bytes
 SHA1 (patch-aa) = 9b5f8bd980d8c3f38fd3c541380fd42d2a93a609
 SHA1 (patch-ab) = 447a888cbc784a54935f23d1005d6977374a484d
 SHA1 (patch-ac) = 078ddafefc719f248740f40e2063dae07cd601e5
-SHA1 (patch-ad) = ca1dfb801ea16ba4b10797e4121fa05f585fd87b
 SHA1 (patch-ae) = 132e25722f2d78249e76c6d748cd671105e329de
 SHA1 (patch-af) = 86bab4c9090a346d44f378a00f4f434da9ded714
 SHA1 (patch-ag) = 8ba8839a110375c7343c42225945138c5a378e8b
-SHA1 (patch-ah) = 62c50fe48b9ff1ce9fb757b432c8b1db7693e112
 SHA1 (patch-ai) = 5ae8d5516b577e017ea61bce8faa774da8c96f47
 SHA1 (patch-aj) = c5510b6f6044f17855f2840fabb8ed94fddbd525
 SHA1 (patch-ak) = a16e2ae20e0568f2a50eb390c4fbd480c0223ad4

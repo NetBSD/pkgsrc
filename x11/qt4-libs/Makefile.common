@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2023/09/14 19:23:16 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.57 2025/04/21 21:31:30 wiz Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -97,12 +97,6 @@ CONFIGURE_ARGS+=		-platform solaris-cc
 .    endif
 .  endif
 SYS_LIBS=			-lresolv -lsocket -lnsl -lrt
-.elif ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=		-platform interix-g++
-CFLAGS+=			-I/usr/local/include/bind
-LDFLAGS+=			-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=			-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=		-platform freebsd-g++
 .elif ${OPSYS} == "Darwin"
