@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2778 2025/04/21 09:23:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2779 2025/04/21 12:03:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3686,3 +3686,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-lazy-object-proxy to 1.11.0 [adam 2025-04-21]
 	Updated textproc/py-sphinx-automodapi to 0.19.0 [adam 2025-04-21]
 	Updated devel/meson to 1.7.2nb2 [wiz 2025-04-21]
+	Updated x11/libXft to 2.3.9 [wiz 2025-04-21]
