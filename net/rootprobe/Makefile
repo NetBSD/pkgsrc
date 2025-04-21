@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2013/12/10 12:37:32 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/04/21 21:09:45 wiz Exp $
 
 DISTNAME=	rootprobe-20030115
 PKGNAME=	rootprobe-200301
@@ -9,8 +8,6 @@ MASTER_SITES=	http://mawi.wide.ad.jp/mawi/dnsprobe/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mawi.wide.ad.jp/mawi/dnsprobe/
 COMMENT=	Root DNS server performance analysis
-
-NOT_FOR_PLATFORM=	Interix-*-* # no <net/if.h> support
 
 WRKSRC=		${WRKDIR}/rootprobe
 
