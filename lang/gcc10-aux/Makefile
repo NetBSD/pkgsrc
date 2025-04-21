@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/07 19:54:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/21 20:26:50 wiz Exp $
 
 GCC_PKGNAME=		gcc10-aux
 PKGREVISION=		2
@@ -28,8 +28,6 @@ MKPIE_SUPPORTED=	no
 PKGSRC_USE_STACK_CHECK=	no
 
 CHECK_RELRO_SKIP+=	${GCC_PKGNAME}/lib/*
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake makeinfo sed:run tar:build
 USE_TOOLS.NetBSD+=	gsed

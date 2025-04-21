@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 14:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/21 20:26:50 wiz Exp $
 
 GCC_PKGNAME=		gcc13
 GCC_DIST_VERSION=	13.3.0
@@ -18,8 +18,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_TOOLS+=		gmake makeinfo sed:run tar perl
 USE_TOOLS.NetBSD+=	gsed
