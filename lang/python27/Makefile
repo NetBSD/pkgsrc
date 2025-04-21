@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2025/04/17 21:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2025/04/21 20:51:32 wiz Exp $
 
 .include "dist.mk"
 
@@ -82,7 +82,7 @@ PY_VER_SUFFIX=		2.7
 CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin"
 USE_TOOLS+=	gmake
 .endif
 
