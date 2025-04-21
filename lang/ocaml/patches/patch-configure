@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.44 2022/05/24 18:25:38 jaapb Exp $
+$NetBSD: patch-configure,v 1.45 2025/04/21 20:48:39 wiz Exp $
 
 All kinds of OS-specific changes to configure
 Honor LDFLAGS.
@@ -53,15 +53,6 @@ Recognise SunOS as having shared libraries
    aarch64-*-openbsd*) :
      natdynlink=true ;; #(
    riscv*-*-linux*) :
-@@ -14315,6 +14323,8 @@ case $host in #(
-     arch=i386; system=beos ;; #(
-   i[3456]86-*-cygwin) :
-     arch=i386; system=cygwin ;; #(
-+  i[3456]86-*-interix3) :
-+    arch=i386; system=interix3 ;; #(
-   i[3456]86-*-gnu*) :
-     arch=i386; system=gnu ;; #(
-   i[3456]86-*-mingw32) :
 @@ -14331,6 +14341,8 @@ case $host in #(
  else
    model=ppc
