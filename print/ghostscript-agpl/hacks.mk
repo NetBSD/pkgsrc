@@ -1,14 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2024/09/22 15:22:57 wiz Exp $
-
-### [Tue Jan  9 15:57:05 EST 2007 : tv]
-### Interix has u_int64_t, but not uint64_t
-### (gdevpdfe.c doesn't use the autoconf test based int64 type,
-### but absolutely requires a 64-bit unsigned int)
-###
-.if ${OPSYS} == "Interix"
-PKG_HACKS+=		interix-uint64_t
-CPPFLAGS.Interix+=	-Duint64_t=u_int64_t
-.endif
+# $NetBSD: hacks.mk,v 1.5 2025/04/21 21:14:14 wiz Exp $
 
 ### [ Thu Nov 13 12:30:45 EST 2008 : chuck]
 ### gs has hand-rolled shared lib handling that doesn't do the right
