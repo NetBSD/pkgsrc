@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2025/04/12 07:02:36 wiz Exp $
+$NetBSD: distinfo,v 1.66 2025/04/21 09:23:45 wiz Exp $
 
 BLAKE2s (meson-1.7.2.tar.gz) = 78f41f30e60e45e8f31f2ff8712e725a96606d890d0d68459fcea304860cd7a5
 SHA512 (meson-1.7.2.tar.gz) = 91ddf5421f2808f9f011c2d7f5f2cf9767cf26128821251bae454fc9f36b986ec19d7713b0a938abaaa6300b7f9f06491a91da42080e3811f5271076669da400
@@ -6,6 +6,6 @@ Size (meson-1.7.2.tar.gz) = 4857152 bytes
 SHA1 (patch-mesonbuild_compilers_detect.py) = e0d29a213c558a3f753366233c1db627f1637ed1
 SHA1 (patch-mesonbuild_compilers_mixins_gnu.py) = 34c2f6f215d5aed1d6c422187f733d0d488ebb4f
 SHA1 (patch-mesonbuild_dependencies_dev.py) = 2165f1ee4ad5d9689eb2fb7e94841503336070b9
-SHA1 (patch-mesonbuild_linkers_linkers.py) = 4ca793f71aac2119f94464bb2beb83ed3da3e9a0
+SHA1 (patch-mesonbuild_linkers_linkers.py) = 2f0880543dbd51604e5ec152478d05517221657b
 SHA1 (patch-mesonbuild_modules_pkgconfig.py) = b0c1adc0c4f30d06a8e9854fd0e93ebde126e8ff
 SHA1 (patch-mesonbuild_scripts_depfixer.py) = 0abd3326f7872e4d53006ff3de5716007c8f22b7
