@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2025/04/17 21:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/04/21 20:57:58 wiz Exp $
 
 DISTNAME=	rpm-4.20.0
 PKGREVISION=	2
@@ -12,8 +12,6 @@ COMMENT=	The Red Hat Package Manager
 LICENSE=	gnu-lgpl-v2 OR gnu-gpl-v2
 
 CONFLICTS+=		rpm2cpio<1.0nb1
-
-NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bash:run msgfmt perl:run pkg-config gsed

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/08 12:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/21 20:56:54 wiz Exp $
 
 DISTNAME=		coolmail-1.3
 PKGREVISION=		3
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Xbiff replacement with 3D animation and sound
 
 OPSYSVARS+=		EXTRA_LIBS
-EXTRA_LIBS.Interix=	-lSM
 MAKE_ENV+=		EXTRA_LIBS=${EXTRA_LIBS:Q}
 
 MAKE_ENV+=		X11BASE=${PREFIX:Q}
