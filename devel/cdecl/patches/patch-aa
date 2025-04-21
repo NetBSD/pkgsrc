@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2014/03/17 07:07:40 dholland Exp $
+$NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
 
  - Don't issue own declarations of malloc, free, exit, perror, errno, getopt.
  - Use standard headers.
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.11 2014/03/17 07:07:40 dholland Exp $
  # ifndef NOVARARGS
  #  include <varargs.h>
  # endif /* ndef NOVARARGS */
-+#if !(defined(__sun__) && defined(__svr4__)) && !(defined(BSD) && (BSD >= 199306)) && !defined(__INTERIX)
++#if !(defined(__sun__) && defined(__svr4__)) && !(defined(BSD) && (BSD >= 199306))
  char *malloc();
  void free(), exit(), perror();
 +#endif
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.11 2014/03/17 07:07:40 dholland Exp $
    char *ds(char *), *cat(char *, ...), *visible(int);
 +#if !(defined(BSD) && BSD >= 199306) && \
 +	!(defined(__sun__) && defined(__svr4__)) && \
-+	!(defined(__linux__)) && !(defined(__INTERIX))
++	!(defined(__linux__))
    int getopt(int,char **,char *);
 +#endif
    int main(int, char **);
