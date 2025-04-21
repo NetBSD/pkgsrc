@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2020/01/26 05:26:25 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/21 21:06:36 wiz Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -18,7 +18,6 @@ MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
 
 NC_TARGET.${OPSYS}?=	${LOWER_OPSYS}
 NC_TARGET.IRIX=		irix
-NC_TARGET.Interix=	netbsd
 NC_TARGET.OpenBSD=	netbsd
 NC_TARGET.DragonFly=	freebsd
 NC_TARGET.Darwin=	generic

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:44 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/04/21 21:06:36 wiz Exp $
 
 DISTNAME=	netgroup-0.0
 CATEGORIES=	net
@@ -9,8 +8,6 @@ MAINTAINER=	christos@NetBSD.org
 COMMENT=	Netgroup membership listing and testing functions
 
 USE_FEATURES+=		cdefs
-
-NOT_FOR_PLATFORM=	Interix-*-* # no netgroups
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALL_TARGET=		inst-all
