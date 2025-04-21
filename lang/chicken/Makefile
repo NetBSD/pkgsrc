@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2025/04/21 20:26:51 wiz Exp $
 
 DISTNAME=	chicken-4.13.0
 CATEGORIES=	lang
@@ -35,7 +35,6 @@ PLATFORM=		solaris
 .elif ${OPSYS} == "Haiku"
 PLATFORM=		haiku
 .else
-#PLATFORM+=		${OPSYS} == "Interix"
 # possible choices left: mingw-msys mingw cygwin cross-linux-mingw
 PKG_SKIP_REASON+=	"${OPSYS} is not supported"
 .endif
