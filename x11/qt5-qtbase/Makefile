@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2025/04/19 07:58:37 wiz Exp $
+# $NetBSD: Makefile,v 1.157 2025/04/21 21:48:47 wiz Exp $
 
 DISTNAME=	qtbase-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -95,12 +95,6 @@ CONFIGURE_ARGS+=		-platform solaris-cc
 .    endif
 .  endif
 NETWORK_LIBS=			-lsocket -lnsl
-.elif ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=		-platform interix-g++
-CFLAGS+=			-I/usr/local/include/bind
-LDFLAGS+=			-L/usr/local/lib/bind -lbind
-BUILDLINK_PASSTHRU_DIRS+=	/usr/local/include/bind /usr/local/lib/bind
-SYS_LIBS=			-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=		-platform freebsd-g++
 LDFLAGS+=			-lexecinfo

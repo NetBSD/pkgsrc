@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2020/03/18 21:55:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.38 2025/04/21 21:48:47 wiz Exp $
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
 lib/pkgconfig/QtDesignerComponents.pc
@@ -371,8 +371,6 @@ qt4/mkspecs/hpuxi-g++-64/qmake.conf
 qt4/mkspecs/hpuxi-g++-64/qplatformdefs.h
 qt4/mkspecs/hurd-g++/qmake.conf
 qt4/mkspecs/hurd-g++/qplatformdefs.h
-qt4/mkspecs/interix-g++/qmake.conf
-qt4/mkspecs/interix-g++/qplatformdefs.h
 qt4/mkspecs/irix-cc-64/qmake.conf
 qt4/mkspecs/irix-cc-64/qplatformdefs.h
 qt4/mkspecs/irix-cc/qmake.conf
