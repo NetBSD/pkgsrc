@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2020/03/13 12:01:22 nia Exp $
+# $NetBSD: Makefile.common,v 1.9 2025/04/21 21:23:05 wiz Exp $
 # used by archivers/heirloom-tar/Makefile
 # used by devel/heirloom-common/Makefile
 # used by devel/heirloom-getopt/Makefile
@@ -133,8 +133,6 @@ PLIST_SUBST+=	HLROOT=${HLROOT}
 .include "../../mk/bsd.prefs.mk"
 
 CFLAGS.Linux+=		-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64L
-CFLAGS.Interix+=	-Dstrtoll=strtol -Dstrtoull=strtoul
-CFLAGS.Interix+=	-Dintptr_t=int -Datoll=atol -Dinitgroups="(0)"
 
 .if ${NEED_LIBKVM:U0}
 LDFLAGS.NetBSD+=	-lkvm
