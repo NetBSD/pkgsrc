@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/04/17 21:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/04/21 07:29:13 nia Exp $
 
 DISTNAME=	arcticfox-45.3
 # remove on next update
@@ -38,7 +38,15 @@ CONFIG_SUB_OVERRIDE+=	./modules/freetype2/builds/unix/config.sub
 CONFIG_SUB_OVERRIDE+=	./nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=	./toolkit/crashreporter/google-breakpad/autotools/config.sub
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+.if !empty(NATIVE_MACHINE_GNU_PLATFORM)
+CONFIGURE_ARGS+=	--host=${NATIVE_MACHINE_GNU_PLATFORM}
+.else
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
+.endif
+CONFIGURE_ARGS+=	--target=${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-tests
@@ -55,6 +63,7 @@ CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--enable-install-strip
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--enable-strip
+CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--with-branding=browser/branding/arcticfox
 
@@ -85,8 +94,6 @@ PLIST.icu=		yes
 # Without this NetBSD/sparc64 starts, but crashes on some sites
 SSP_SUPPORTED=		no
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 # it thinks yasm is required on arm
 .if !${MACHINE_PLATFORM:MNetBSD-*-powerpc*}
@@ -153,6 +160,7 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
