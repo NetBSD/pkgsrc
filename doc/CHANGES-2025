@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2774 2025/04/21 05:52:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2775 2025/04/21 06:02:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3673,3 +3673,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-draftjs_exporter to 5.1.0 [adam 2025-04-21]
 	Updated textproc/py-openapi-core to 0.19.5 [adam 2025-04-21]
 	Updated devel/py-greenlet to 3.2.0 [adam 2025-04-21]
+	Updated devel/py-fixtures to 4.2.5 [adam 2025-04-21]
+	Updated www/py-starlette to 0.46.2 [adam 2025-04-21]
+	Updated databases/py-tortoise-orm to 0.25.0 [adam 2025-04-21]
+	Updated devel/py-prompt_toolkit to 3.0.51 [adam 2025-04-21]
