@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/22 04:26:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/21 17:45:05 schmonz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-awscli-plugin-logs-tail-0.2
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Corymbia/}
 GITHUB_PROJECT=	logs-tail-awscli-plugin
@@ -12,6 +13,7 @@ HOMEPAGE=	https://pypi.org/project/awscli-plugin-logs-tail/
 COMMENT=	CloudWatch Logs tail command plugin for AWS CLI
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-awscli>=1.14.0:../../net/py-awscli
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.8.35:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
