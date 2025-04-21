@@ -1,24 +1,8 @@
-$NetBSD: patch-af,v 1.2 2008/09/19 20:02:23 joerg Exp $
+$NetBSD: patch-af,v 1.3 2025/04/21 21:17:01 wiz Exp $
 
 --- config.h.orig	1995-05-30 13:13:53.000000000 +0200
 +++ config.h
-@@ -378,6 +378,15 @@
- #endif
- #endif
- 
-+#ifdef __INTERIX
-+#ifndef USE_WAIT3
-+#define USE_WAIT3		0
-+#endif
-+#ifndef	USE_SIGACTION
-+#define USE_SIGACTION		1
-+#endif
-+#endif
-+
- 
- /*
-  * default defaults -- don't change this section
-@@ -533,3 +542,5 @@
+@@ -533,3 +533,5 @@
  #undef	SYSV_SIGNALS
  #define	SYSV_SIGNALS		0
  #endif
