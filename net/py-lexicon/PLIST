@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2024/12/10 06:34:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2025/04/21 07:40:08 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -56,6 +56,9 @@ ${PYSITELIB}/lexicon/_private/providers/constellix.pyo
 ${PYSITELIB}/lexicon/_private/providers/ddns.py
 ${PYSITELIB}/lexicon/_private/providers/ddns.pyc
 ${PYSITELIB}/lexicon/_private/providers/ddns.pyo
+${PYSITELIB}/lexicon/_private/providers/devnomads.py
+${PYSITELIB}/lexicon/_private/providers/devnomads.pyc
+${PYSITELIB}/lexicon/_private/providers/devnomads.pyo
 ${PYSITELIB}/lexicon/_private/providers/digitalocean.py
 ${PYSITELIB}/lexicon/_private/providers/digitalocean.pyc
 ${PYSITELIB}/lexicon/_private/providers/digitalocean.pyo
@@ -245,6 +248,9 @@ ${PYSITELIB}/lexicon/_private/providers/safedns.pyo
 ${PYSITELIB}/lexicon/_private/providers/sakuracloud.py
 ${PYSITELIB}/lexicon/_private/providers/sakuracloud.pyc
 ${PYSITELIB}/lexicon/_private/providers/sakuracloud.pyo
+${PYSITELIB}/lexicon/_private/providers/scaleway.py
+${PYSITELIB}/lexicon/_private/providers/scaleway.pyc
+${PYSITELIB}/lexicon/_private/providers/scaleway.pyo
 ${PYSITELIB}/lexicon/_private/providers/softlayer.py
 ${PYSITELIB}/lexicon/_private/providers/softlayer.pyc
 ${PYSITELIB}/lexicon/_private/providers/softlayer.pyo
@@ -266,9 +272,6 @@ ${PYSITELIB}/lexicon/_private/providers/vercel.pyo
 ${PYSITELIB}/lexicon/_private/providers/vultr.py
 ${PYSITELIB}/lexicon/_private/providers/vultr.pyc
 ${PYSITELIB}/lexicon/_private/providers/vultr.pyo
-${PYSITELIB}/lexicon/_private/providers/webgo.py
-${PYSITELIB}/lexicon/_private/providers/webgo.pyc
-${PYSITELIB}/lexicon/_private/providers/webgo.pyo
 ${PYSITELIB}/lexicon/_private/providers/wedos.py
 ${PYSITELIB}/lexicon/_private/providers/wedos.pyc
 ${PYSITELIB}/lexicon/_private/providers/wedos.pyo
