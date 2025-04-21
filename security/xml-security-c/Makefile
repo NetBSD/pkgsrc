@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/10/24 22:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/21 21:10:48 perseant Exp $
 
-DISTNAME=	xml-security-c-2.0.4
+DISTNAME=	xml-security-c-3.0.0
 PKGREVISION=	1
 CATEGORIES=	security devel
-MASTER_SITES=	${MASTER_SITE_APACHE:=/santuario/c-library/}
+MASTER_SITES=	http://shibboleth.net/downloads/xml-security-c/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://santuario.apache.org/
