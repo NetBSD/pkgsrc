@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2024/05/01 22:11:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.56 2025/04/21 16:17:30 wiz Exp $
 
 DISTNAME=	cpio-2.13
 PKGNAME=	g${DISTNAME}
@@ -33,7 +33,7 @@ PLIST_VARS+=	rmt
 
 # don't include rmt if gtar won't build it
 # macOS does not support rmt driver, so it won't be built
-.if ${OPSYS} != "Interix" && ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin"
 PLIST.rmt=	yes
 .endif
 
