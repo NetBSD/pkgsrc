@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/08/25 06:18:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/04/21 16:29:29 wiz Exp $
 #
 
 DISTNAME=	mysql-cluster-gpl-7.5.25
@@ -80,10 +80,8 @@ CMAKE_CONFIGURE_ARGS+=		-DDTRACE_FLAGS="-${ABI}"
 CPPFLAGS+=		-Dunix
 CFLAGS+=		-D__STDC_FORMAT_MACROS=1 # always defined too late
 
-.if ${OPSYS} != "Interix"
 CFLAGS+=		-fPIC -DPIC
 CXXFLAGS+=		-fPIC -DPIC
-.endif
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.  Also
