@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 17:14:24 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/21 16:26:35 wiz Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -8,7 +8,6 @@ MAINTAINER=	rxg@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Turns a tty session between Big5/GB/HZ/Unicode
 
-BUILD_TARGET.Interix=	svr4
 BUILD_TARGET.Linux=	linux
 BUILD_TARGET.*=		bsd
 

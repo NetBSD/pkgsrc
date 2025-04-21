@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2013/07/18 12:07:24 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2025/04/21 16:26:35 wiz Exp $
 
 --- tty.c.orig	1995-01-29 20:24:55.000000000 +0000
 +++ tty.c
@@ -19,56 +19,3 @@ $NetBSD: patch-ab,v 1.4 2013/07/18 12:07:24 joerg Exp $
  # define	PTYDEV		"/dev/ptyxx"
  # define	TTYDEV		"/dev/ttyxx"
  #endif  /* !hpux */
-@@ -39,6 +40,10 @@ extern char *ptsname();
- # include <sys/utsname.h>
- #endif
- 
-+#ifdef __INTERIX
-+# define setpgrp() setpgid(0, 0)
-+#endif
-+
- static char ptydev[32];
- static char ttydev[32];
- static int pty_search();
-@@ -61,7 +66,7 @@ int get_pty (pty)
- 	    return 0;
- #endif /* SYSV && SYSV386 */
- 
--#if (defined(att) || defined(ATT)) && (!defined(_SEQUENT_))
-+#if (defined(att) || defined(ATT) || defined(__INTERIX)) && (!defined(_SEQUENT_))
- 	{
- 	    if ((*pty = open ("/dev/ptmx", O_RDWR)) < 0)
- 		return 1;
-@@ -414,7 +419,10 @@ void make_raw(oldtermptr, newtermptr)
- 
- /******************************* UTMP stuffs *******************************/
- 
-+#ifndef __INTERIX
- #include <utmp.h>
-+#endif
-+
- #ifdef	HAS_UTMPX
- 
- # include <utmpx.h>
-@@ -428,6 +436,10 @@ void make_raw(oldtermptr, newtermptr)
- # define getutid	getutxid
- # define pututline	pututxline
- 
-+# ifdef __INTERIX
-+#  define ut_xtime	ut_tv.tv_sec
-+# endif
-+
- #endif
- 
- #ifdef USE_SYSV_UTMP
-@@ -507,8 +519,10 @@ void addutmp()
- 	utmp.ut_pid = getpid();
- 
- # ifdef	HAS_UTMPX
-+#  ifndef __INTERIX
- 	utmpx.ut_syslen = 1;
- 	utmpx.ut_session = getsid(0);
-+#  endif
- 	utmpx.ut_tv.tv_usec = 0;
- # endif
- 
