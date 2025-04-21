@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2020/05/03 16:01:27 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2025/04/21 16:30:06 wiz Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		3
@@ -12,7 +12,6 @@ LICENSE=		gnu-gpl-v2
 CONFLICTS=		bin86-[0-9]*
 CONFLICTS+=		dev86-[0-9]*
 
-NOT_FOR_PLATFORM=	Interix-*-*		# no <a.out.h>
 # These platforms cannot build 32-on-64 binaries.
 NOT_FOR_PLATFORM+=	*-*-alpha
 NOT_FOR_PLATFORM+=	DragonFly-*-x86_64
