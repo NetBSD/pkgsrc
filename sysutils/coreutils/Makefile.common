@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2025/02/19 14:03:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2025/04/21 21:23:07 wiz Exp $
 #
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
@@ -27,8 +27,6 @@ TEST_TARGET=		check
 
 # Otherwise configure aborts when ran by root
 CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=yes
-
-CONFIGURE_ENV.Interix+=	ac_list_mounted_fs=found
 
 CONFIGURE_ENV.DragonFly+=	gl_cv_search_pthread_join=-lpthread
 

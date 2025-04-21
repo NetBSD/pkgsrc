@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2023/11/15 15:21:18 tnn Exp $
+# $NetBSD: Makefile,v 1.86 2025/04/21 21:23:07 wiz Exp $
 
 .include "../../sysutils/coreutils/Makefile.common"
 
@@ -15,9 +15,7 @@ INFO_FILES=		yes
 
 # Exclude programs from PLIST which aren't built on a platform.
 PLIST_VARS+=		hostid stdbuf
-.if ${OPSYS} != "Interix"
 PLIST.hostid=		yes
-.endif
 
 # This should really only be defined if building stdbuf, however we cannot
 # set this variable after including compiler.mk, so we take the hit of
