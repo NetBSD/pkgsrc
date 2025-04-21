@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2024/03/31 22:08:42 js Exp $
+# $NetBSD: Makefile,v 1.107 2025/04/21 21:18:08 wiz Exp $
 
 DISTNAME=	zsh-5.9
 PKGREVISION=	2
@@ -29,11 +29,7 @@ CONFIGURE_ARGS+=	--with-term-lib="${BUILDLINK_LIBNAME.curses} ${BUILDLINK_LIBNAM
 
 # This cannot be detected automatically without a controlling tty, for example
 # when bulk building.
-.if ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	--without-tcsetpgrp
-.else
 CONFIGURE_ARGS+=	--with-tcsetpgrp
-.endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
 # These can't be detected automagically in cross-builds.
