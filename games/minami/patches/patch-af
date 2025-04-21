@@ -1,18 +1,14 @@
-$NetBSD: patch-af,v 1.4 2005/02/09 20:37:08 tv Exp $
+$NetBSD: patch-af,v 1.5 2025/04/21 20:18:45 wiz Exp $
 
 --- minflag.orig	2001-03-08 12:02:47.000000000 -0500
 +++ minflag
-@@ -16,6 +16,14 @@ elsif(/SunOS/){
+@@ -16,6 +16,10 @@ elsif(/SunOS/){
    $CFLAGS .= " -DM_HAVE_CURSES_H -DM_HAVE_TERM_H";
    $LFLAGS .= " -ltermcap";
  }
 +elsif(/NetBSD/){
 +  $CFLAGS .= " -DM_HAVE_CURSES_H -DM_HAVE_TERMCAP_H";
 +  $LFLAGS .= " -ltermcap";
-+}
-+elsif(/Interix/){
-+  $CFLAGS .= " -DM_HAVE_CURSES_H ";
-+  $LFLAGS .= " -lcurses";
 +}
  else{
    $CFLAGS .= " -DM_HAVE_TERMCAP_H -DM_HAVE_READLINE";
