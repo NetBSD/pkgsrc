@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/04/17 21:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/21 05:33:40 adam Exp $
 
-DISTNAME=	PyICU-2.15
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyICU/ICU/}
-PKGREVISION=	1
+DISTNAME=	pyicu-2.15.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyicu/ICU/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
 
@@ -17,10 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-
-WRKSRC=		${WRKDIR}/${DISTNAME:tl}
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../textproc/icu/buildlink3.mk"
