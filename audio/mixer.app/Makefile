@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/01/27 20:21:13 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.22 2025/04/21 16:21:40 wiz Exp $
 
 DISTNAME=	Mixer.app-1.8.0
 PKGNAME=	mixer.app-1.8.0
@@ -10,8 +9,6 @@ CATEGORIES=	audio windowmaker
 MAINTAINER=	ptiJo@noos.fr
 #HOMEPAGE=	http://www.fukt.bth.se/~per/mixer/
 COMMENT=	Another mixer intended for the windowmaker dockapp
-
-NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=	c++
 
