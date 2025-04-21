@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2025/03/30 21:10:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2025/04/21 20:59:58 wiz Exp $
 #
 # used by multimedia/libdv-tools/Makefile
 
@@ -25,7 +25,7 @@ PTHREAD_AUTO_VARS=	yes
 
 # Avoid text relocations.
 .if (${OPSYS} == "Darwin") || !${MACHINE_PLATFORM:M*-*-i386} || \
-    (${OPSYS} == "Interix") || (${OPSYS} == "SunOS") || \
+    (${OPSYS} == "SunOS") || \
     ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--disable-asm
 .endif
