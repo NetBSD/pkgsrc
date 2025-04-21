@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2021/04/25 06:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/21 21:01:39 wiz Exp $
 
 DISTNAME=	arpd
 PKGNAME=	arpd-1.0
@@ -8,8 +8,6 @@ CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	ARP daemon
-
-NOT_FOR_PLATFORM=	Interix-*-* # does not have bpf(4) device
 
 MAKE_ENV+=	BINDIR=${PREFIX}/sbin
 MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}

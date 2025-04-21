@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2019/11/03 11:45:31 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/21 21:01:39 wiz Exp $
 
 DISTNAME=	bsddip-1.02
 CATEGORIES=	net
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Dialup IP program
-
-NOT_FOR_PLATFORM=	Interix-*-* # no sl(4) device
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
