@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/11/12 13:24:13 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/04/21 12:03:13 wiz Exp $
 
-DISTNAME=	libXft-2.3.8
-PKGREVISION=	1
+DISTNAME=	libXft-2.3.9
 CATEGORIES=	x11 fonts
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.xz
