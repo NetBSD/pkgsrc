@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2773 2025/04/21 05:40:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2774 2025/04/21 05:52:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3669,3 +3669,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-soupsieve to 2.7 [adam 2025-04-21]
 	Updated lang/py-solc-select to 1.1.0 [adam 2025-04-21]
 	Updated textproc/py-sphinx-issues to 5.0.1 [adam 2025-04-21]
+	Updated finance/py-crytic-compile to 0.3.9 [adam 2025-04-21]
+	Updated www/py-draftjs_exporter to 5.1.0 [adam 2025-04-21]
+	Updated textproc/py-openapi-core to 0.19.5 [adam 2025-04-21]
+	Updated devel/py-greenlet to 3.2.0 [adam 2025-04-21]
