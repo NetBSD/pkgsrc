@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.19 2023/12/05 20:45:27 agc Exp $
+# $NetBSD: mksandbox,v 1.20 2025/04/21 21:11:41 wiz Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -114,11 +114,6 @@ FreeBSD)
 	mountprog=/sbin/mount
 	paxprog=/bin/pax
 	sedprog=/usr/bin/sed
-	;;
-Interix)
-	echo >&2 "This script cannot be used on Interix; a different procedure is required."
-	echo >&2 "(To be documented.)"
-	exit 1
 	;;
 Linux)
 	bmakeprog=bmake
