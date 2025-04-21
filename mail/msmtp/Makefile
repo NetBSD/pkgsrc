@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2025/04/19 07:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/04/21 20:56:54 wiz Exp $
 
 DISTNAME=		msmtp-1.8.28
 PKGREVISION=		2
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS.Darwin+=	--with-macosx-keyring
 
-CPPFLAGS.Interix+=	-D__WINSOCK
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/07 03:15:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/21 20:57:58 wiz Exp $
 
 DISTNAME=	screen-4.9.1
 CATEGORIES=	misc shells
@@ -17,8 +17,6 @@ EXTRACT_USING=	bsdtar
 #MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
-
-NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 

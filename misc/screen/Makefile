@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2025/02/13 19:43:02 rillig Exp $
+# $NetBSD: Makefile,v 1.127 2025/04/21 20:57:58 wiz Exp $
 
 DISTNAME=	screen-5.0.0
 PKGREVISION=	1
@@ -20,8 +20,6 @@ EXTRACT_USING=	bsdtar
 USE_CC_FEATURES=	c17
 
 .include "options.mk"
-
-NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
