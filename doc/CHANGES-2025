@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2822 2025/04/22 20:35:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2823 2025/04/22 20:36:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3735,3 +3735,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-oauthlib to 3.2.2nb1 [wiz 2025-04-22]
 	Updated security/py-secretstorage to 3.3.3nb1 [wiz 2025-04-22]
 	Updated textproc/py-defusedxml to 0.7.1nb2 [wiz 2025-04-22]
+	Updated textproc/py-iniparse to 0.5nb2 [wiz 2025-04-22]
