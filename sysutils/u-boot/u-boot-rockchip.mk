@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-rockchip.mk,v 1.18 2023/08/27 23:12:52 gutteridge Exp $
+# $NetBSD: u-boot-rockchip.mk,v 1.19 2025/04/22 23:30:38 gutteridge Exp $
 #
 # used by sysutils/u-boot-nanopi-r2s/Makefile
 # used by sysutils/u-boot-rock64/Makefile
@@ -14,7 +14,7 @@
 
 UBOOT_VERSION?=		2022.01
 
-TFA=			trusted-firmware-a
+TFA?=			trusted-firmware-a
 
 # Earlier SPIs were at sector 1024, but newer u-boot has a DT that
 # loads them from 768.  Until all are converted, leave the default
