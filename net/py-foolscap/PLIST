@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.12 2023/11/05 22:50:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/22 16:00:40 adam Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/foolscap/__init__.py
 ${PYSITELIB}/foolscap/__init__.pyc
@@ -309,15 +309,3 @@ ${PYSITELIB}/foolscap/util.pyo
 ${PYSITELIB}/foolscap/vocab.py
 ${PYSITELIB}/foolscap/vocab.pyc
 ${PYSITELIB}/foolscap/vocab.pyo
-share/doc/py-foolscap/connection-handlers.rst
-share/doc/py-foolscap/copyable.rst
-share/doc/py-foolscap/failures.rst
-share/doc/py-foolscap/flappserver.rst
-share/doc/py-foolscap/jobs.txt
-share/doc/py-foolscap/logging.rst
-share/doc/py-foolscap/py2-3-porting.rst
-share/doc/py-foolscap/schema.rst
-share/doc/py-foolscap/serializing.rst
-share/doc/py-foolscap/todo.txt
-share/doc/py-foolscap/use-cases.txt
-share/doc/py-foolscap/using-foolscap.rst
