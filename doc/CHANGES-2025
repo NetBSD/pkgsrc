@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2829 2025/04/22 20:46:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2830 2025/04/22 20:47:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3742,3 +3742,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinxcontrib-newsfeed to 0.1.4nb2 [wiz 2025-04-22]
 	Updated textproc/py-uritemplate to 4.1.1nb2 [wiz 2025-04-22]
 	Updated time/py-parsedatetime to 2.6nb2 [wiz 2025-04-22]
+	Updated www/py-BrowserID to 0.14.0nb1 [wiz 2025-04-22]
