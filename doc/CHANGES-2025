@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2800 2025/04/22 19:55:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2801 2025/04/22 19:56:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3713,3 +3713,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-setuptools_scm to 8.3.0 [adam 2025-04-22]
 	Updated archivers/py-zopfli to 0.2.3nb1 [wiz 2025-04-22]
 	Updated devel/py-appdirs to 1.4.4nb2 [wiz 2025-04-22]
+	Updated devel/py-click-log to 0.4.0nb1 [wiz 2025-04-22]
