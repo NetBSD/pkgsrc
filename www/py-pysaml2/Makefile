@@ -1,26 +1,34 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/22 16:17:38 adam Exp $
 
-DISTNAME=	pysaml2-7.1.2
+DISTNAME=	pysaml2-7.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysaml2/}
 
 MAINTAINER=	kethzer.dr@gmail.com
-HOMEPAGE=	https://github.com/rohe/pysaml2
+HOMEPAGE=	https://github.com/IdentityPython/pysaml2
 COMMENT=	Python implementation of SAML Version 2
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
-DEPENDS+=	${PYPKGPREFIX}-paste-[0-9]*:../../www/py-paste
-DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+REPLACE_PYTHON+=	src/saml2/authn_context/timesync.py
+
+post-install:
+.for bin in make_metadata mdexport merge_metadata parse_xsd2
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
+.endfor
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
