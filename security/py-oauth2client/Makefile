@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/07/12 09:08:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/22 20:30:05 wiz Exp $
 
 DISTNAME=	oauth2client-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/oauth2client/}
 
@@ -11,15 +11,23 @@ HOMEPAGE=	https://github.com/google/oauth2client
 COMMENT=	Python library for accessing resources protected by OAuth 2.0
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-[0-9]*:../../databases/py-sqlalchemy
+TEST_DEPENDS+=	${PYPKGPREFIX}-fasteners-[0-9]*:../../devel/py-fasteners
+TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+TEST_DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+# as of 4.1.3
+# 2 warnings, 6 errors
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
