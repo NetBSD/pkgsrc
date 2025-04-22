@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2022/09/14 10:03:03 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/22 20:17:27 wiz Exp $
 
 DISTNAME=	imagesize-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/imagesize/}
 
@@ -10,7 +11,12 @@ HOMEPAGE=	https://github.com/shibukawa/imagesize_py
 COMMENT=	Parses image files' header and returns image size
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+# as of 1.4.1
+# 1 failed, 44 passed
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
