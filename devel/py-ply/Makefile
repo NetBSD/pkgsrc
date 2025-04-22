@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:53:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/22 20:09:48 wiz Exp $
 
 DISTNAME=	ply-3.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/ply/}
 
@@ -11,13 +11,9 @@ HOMEPAGE=	http://www.dabeaz.com/ply/
 COMMENT=	Lex an yacc parsing tools for Python
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC}/test && \
-	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} testlex.py
-	cd ${WRKSRC}/test && \
-	${SETENV} PYTHONPATH=${WRKSRC} ${PYTHONBIN} testyacc.py
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
