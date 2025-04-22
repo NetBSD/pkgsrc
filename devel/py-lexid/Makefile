@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/11 08:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/22 20:03:02 wiz Exp $
 
 DISTNAME=	lexid-2021.1006
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lexid/}
 
@@ -10,14 +11,10 @@ HOMEPAGE=	https://github.com/mbarkhau/lexid
 COMMENT=	Variable width build numbers with lexical ordering
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-lib3to6-[0-9]*:../../devel/py-lib3to6
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
