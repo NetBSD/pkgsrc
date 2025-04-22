@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2025/04/12 15:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/22 16:26:11 adam Exp $
 
-DISTNAME=	setuptools_scm-8.2.0
+DISTNAME=	setuptools_scm-8.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_scm/}
 
@@ -13,7 +12,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
@@ -22,7 +20,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
-
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif
