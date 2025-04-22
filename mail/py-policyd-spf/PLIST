@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/02 22:14:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/22 15:45:47 adam Exp $
 bin/policyd-spf
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/policydspfsupp.py
 ${PYSITELIB}/policydspfsupp.pyc
 ${PYSITELIB}/policydspfsupp.pyo
 ${PYSITELIB}/policydspfuser.py
 ${PYSITELIB}/policydspfuser.pyc
 ${PYSITELIB}/policydspfuser.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 man/man1/policyd-spf.1
 man/man5/policyd-spf.conf.5
 man/man5/policyd-spf.peruser.5
