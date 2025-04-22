@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2812 2025/04/22 20:14:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2813 2025/04/22 20:17:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3725,3 +3725,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-requests-toolbelt to 1.0.0nb1 [wiz 2025-04-22]
 	Updated devel/py-semantic_version to 2.10.0nb1 [wiz 2025-04-22]
 	Updated devel/py-xdg to 0.28nb1 [wiz 2025-04-22]
+	Updated graphics/py-imagesize to 1.4.1nb1 [wiz 2025-04-22]
