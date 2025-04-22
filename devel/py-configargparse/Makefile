@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/08/04 05:24:49 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/22 19:57:40 wiz Exp $
 
 DISTNAME=	ConfigArgParse-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ConfigArgParse/}
 
@@ -10,13 +11,16 @@ HOMEPAGE=	https://github.com/bw2/ConfigArgParse
 COMMENT=	Argparse-like with config files or environment variables support
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:tl}
 
-.include "../../lang/python/egg.mk"
+# as of 1.7
+# 6 failed, 1887 passed, 1 skipped, 1 warning
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
