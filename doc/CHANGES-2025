@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2814 2025/04/22 20:19:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2815 2025/04/22 20:20:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-xdg to 0.28nb1 [wiz 2025-04-22]
 	Updated graphics/py-imagesize to 1.4.1nb1 [wiz 2025-04-22]
 	Updated graphics/py-mcomix to 2.1.0nb6 [wiz 2025-04-22]
+	Updated graphics/py-scour to 0.38.2nb4 [wiz 2025-04-22]
