@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2824 2025/04/22 20:38:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2825 2025/04/22 20:39:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3737,3 +3737,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-defusedxml to 0.7.1nb2 [wiz 2025-04-22]
 	Updated textproc/py-iniparse to 0.5nb2 [wiz 2025-04-22]
 	Updated textproc/py-natsort to 8.4.0nb1 [wiz 2025-04-22]
+	Updated textproc/py-snowballstemmer to 2.2.0nb2 [wiz 2025-04-22]
