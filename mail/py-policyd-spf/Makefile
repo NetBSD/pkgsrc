@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/22 15:45:47 adam Exp $
 
 DISTNAME=	pypolicyd-spf-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypolicyd-spf/}
 
@@ -11,10 +11,11 @@ HOMEPAGE=	https://pypi.python.org/pypi/pypolicyd-spf
 COMMENT=	Python based policy daemon for Postfix SPF checking
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-authres-[0-9]*:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-spf>=2.0.9:../../mail/py-spf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_SELF_CONFLICT=	yes
 
 DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -39,5 +40,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.per_user_whitelisting ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/policyd-spf.conf.commented ${DESTDIR}${EGDIR}/policyd-spf.conf
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
