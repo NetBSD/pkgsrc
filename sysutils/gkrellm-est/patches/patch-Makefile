@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2025/04/22 16:04:42 nia Exp $
+
+Remove -Werror. Unsuitable for newer toolchains.
+
+--- Makefile.orig	2025-04-22 16:02:29.678727024 +0000
++++ Makefile
+@@ -11,12 +11,12 @@ DEBUG_FLAGS=	-g
+ all: gkrellm-est.so
+ 
+ gkrellm-est.so: gkrellm-est.o
+-	${CC} ${LDFLAGS} -Wall -Werror -o ${.TARGET} -shared ${GKRELLM_LDFLAGS} ${.ALLSRC}
++	${CC} ${LDFLAGS} -Wall -o ${.TARGET} -shared ${GKRELLM_LDFLAGS} ${.ALLSRC}
+ 
+ .SUFFIXES: .c.o
+ 
+ .c.o:
+-	${CC} ${CFLAGS} -c -Wall -Werror -o ${.TARGET} ${GKRELLM_CPPFLAGS} ${.ALLSRC}
++	${CC} ${CFLAGS} -c -Wall -o ${.TARGET} ${GKRELLM_CPPFLAGS} ${.ALLSRC}
+ 
+ clean:
+ 	rm -f *.o *.so *.core
