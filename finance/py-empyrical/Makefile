@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/10/17 08:10:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/22 15:38:35 adam Exp $
 
 DISTNAME=	empyrical-0.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/empyrical/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/quantopian/empyrical
 COMMENT=	Common financial risk and performance metrics
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-bottleneck>=1.0.0:../../math/py-bottleneck
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.2:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.16.1:../../math/py-pandas
