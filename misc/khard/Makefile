@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/02/23 16:47:14 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/22 20:22:18 wiz Exp $
 
 DISTNAME=	khard-0.19.1
+PKGREVISION=	1
 CATEGORIES=	misc net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khard/}
 
@@ -9,6 +10,7 @@ HOMEPAGE=	https://github.com/lucc/khard
 COMMENT=	CLI contacts application built around CardDAV
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
@@ -21,8 +23,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10:../../textproc/py-s
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
-USE_PKG_RESOURCES=	yes
-
 INSTALLATION_DIRS=	share/examples/khard ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	*/*.py
 
@@ -34,5 +34,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/build/man/khard.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
