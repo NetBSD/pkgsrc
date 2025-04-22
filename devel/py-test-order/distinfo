@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/22 11:25:38 adam Exp $
+
+BLAKE2s (pytest_order-1.3.0.tar.gz) = e87fac902863e581ebecb1dc8b14da791a5b81af19a4d83b97ccad534c4f6080
+SHA512 (pytest_order-1.3.0.tar.gz) = e6accdf49fee88b4911eca991a404e00071a58291bdd564a361640ede68e4c3f80ad79522075258f9e7451dd704627c2950922015f66068dd4969e9da20caef9
+Size (pytest_order-1.3.0.tar.gz) = 47544 bytes
