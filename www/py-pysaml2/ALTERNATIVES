@@ -1,0 +1,4 @@
+bin/make_metadata @PREFIX@/bin/make_metadata-@PYVERSSUFFIX@
+bin/mdexport @PREFIX@/bin/mdexport-@PYVERSSUFFIX@
+bin/merge_metadata @PREFIX@/bin/merge_metadata-@PYVERSSUFFIX@
+bin/parse_xsd2 @PREFIX@/bin/parse_xsd2-@PYVERSSUFFIX@
