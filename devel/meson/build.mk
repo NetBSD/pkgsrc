@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.31 2025/01/25 10:15:23 riastradh Exp $
+# $NetBSD: build.mk,v 1.32 2025/04/22 15:57:17 nia Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -144,6 +144,10 @@ ${MESON_CROSS_FILE}:
 	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 .endif				# ${USE_CROSS_COMPILE:U:tl} == yes
+
+.if defined(USE_PKGLOCALEDIR) && ${USE_PKGLOCALEDIR:tl} != "no"
+MESON_ARGS+=	--localedir=${PKGLOCALEDIR}/locale
+.endif
 
 do-configure: meson-configure
 meson-configure:
