@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/02/07 07:06:23 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/22 12:40:28 wiz Exp $
 
 DISTNAME=	xgboost-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,10 @@ USE_TOOLS+=	cmake ninja
 GCC_REQD+=	8.1
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
+
+# as of 2.1.4:
+# NotImplementedError: System SunOS not supported
+BROKEN_ON_PLATFORM+=	SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
