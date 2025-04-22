@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2019/03/21 21:49:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/22 15:01:57 adam Exp $
 bin/extratools-flatten-${PYVERSSUFFIX}
 bin/extratools-remap-${PYVERSSUFFIX}
 bin/extratools-teststats-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/extratools/__common.py
 ${PYSITELIB}/extratools/__common.pyc
 ${PYSITELIB}/extratools/__common.pyo
