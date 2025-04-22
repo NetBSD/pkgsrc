@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2805 2025/04/22 20:03:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2806 2025/04/22 20:05:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3718,3 +3718,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-docstyle to 6.3.0nb1 [wiz 2025-04-22]
 	Updated devel/py-hg-fastimport to 0.1.1nb5 [wiz 2025-04-22]
 	Updated devel/py-lexid to 2021.1006nb1 [wiz 2025-04-22]
+	Updated devel/py-mccabe to 0.7.0nb1 [wiz 2025-04-22]
