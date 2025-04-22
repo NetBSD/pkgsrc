@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/08/05 07:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/22 20:14:38 wiz Exp $
 
 DISTNAME=	pyxdg-0.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyxdg/}
 
@@ -10,7 +11,9 @@ HOMEPAGE=	https://freedesktop.org/wiki/Software/pyxdg
 COMMENT=	Python library for XDG
 LICENSE=	gnu-lgpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
