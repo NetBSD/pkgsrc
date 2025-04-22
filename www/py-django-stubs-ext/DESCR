@@ -1,0 +1,6 @@
+This package contains extensions and monkey-patching functions for the
+django-stubs package. Certain features of django-stubs (i.e. generic django
+classes that don't define the __class_getitem__ method) require runtime
+monkey-patching, which can't be done with type stubs. These extensions were
+split into a separate package so library consumers don't need mypy as a runtime
+dependency.
