@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2820 2025/04/22 20:31:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2821 2025/04/22 20:33:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3733,3 +3733,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-hawkauthlib to 2.0.0nb1 [wiz 2025-04-22]
 	Updated security/py-oauth2client to 4.1.3nb2 [wiz 2025-04-22]
 	Updated security/py-oauthlib to 3.2.2nb1 [wiz 2025-04-22]
+	Updated security/py-secretstorage to 3.3.3nb1 [wiz 2025-04-22]
