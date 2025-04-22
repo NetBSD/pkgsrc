@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/22 20:45:04 wiz Exp $
 
 DISTNAME=	uritemplate-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritemplate/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/uritemplate/
 COMMENT=	Python implementation of RFC6570, URI Template
 LICENSE=	apache-2.0 OR modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
