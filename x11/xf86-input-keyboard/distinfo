@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.20 2024/11/14 22:17:13 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/04/22 15:45:04 nia Exp $
 
 BLAKE2s (xf86-input-keyboard-2.1.0.tar.xz) = 06aa9eabce2b1d22ad3bafc34643bffd44f1c560a2fa95dca503194980b53219
 SHA512 (xf86-input-keyboard-2.1.0.tar.xz) = 635eac7514675370fa383d462676147442b42492c9ecc8d26bfebfb54dc9d7dc21ebeb98035d342aedc600406e26badf131432b2a845812eda9da6d1abcd4278
 Size (xf86-input-keyboard-2.1.0.tar.xz) = 298088 bytes
+SHA1 (patch-src_sun__kbd.c) = 616d90bb40aedb37c89fafd2f01ea7070c22bbc4
