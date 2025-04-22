@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2021/04/15 06:44:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/22 16:07:08 adam Exp $
 bin/runxlrd-${PYVERSSUFFIX}.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.pyc
 ${PYSITELIB}/xlrd/__init__.pyo
