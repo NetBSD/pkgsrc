@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/11 07:58:21 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2025/04/22 20:47:45 wiz Exp $
 ${PYSITELIB}/browserid/__init__.py
 ${PYSITELIB}/browserid/__init__.pyc
 ${PYSITELIB}/browserid/__init__.pyo
@@ -68,3 +62,7 @@ ${PYSITELIB}/browserid/verifiers/remote.pyo
 ${PYSITELIB}/browserid/verifiers/workerpool.py
 ${PYSITELIB}/browserid/verifiers/workerpool.pyc
 ${PYSITELIB}/browserid/verifiers/workerpool.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
