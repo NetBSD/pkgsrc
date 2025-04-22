@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/02/05 19:54:35 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/22 08:15:13 adam Exp $
 
 DISTNAME=	eth_rlp-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/eth-rlp/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/ethereum/eth-rlp
 COMMENT=	RLP definitions for common Ethereum objects in Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 DEPENDS+=	${PYPKGPREFIX}-hexbytes>=1.2.0:../../devel/py-hexbytes
 DEPENDS+=	${PYPKGPREFIX}-rlp>=0.6.0:../../devel/py-rlp
