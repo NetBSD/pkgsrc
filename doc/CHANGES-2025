@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2793 2025/04/22 13:12:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2794 2025/04/22 13:13:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3702,3 +3702,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-test-run-parallel version 0.4.0 [adam 2025-04-22]
 	Updated devel/py-setuptools to 79.0.0 [wiz 2025-04-22]
 	Updated archivers/py-brotli to 1.1.0nb1 [wiz 2025-04-22]
+	Updated archivers/py-brotlicffi to 1.1.0.0nb1 [wiz 2025-04-22]
