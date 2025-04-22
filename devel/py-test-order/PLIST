@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/22 11:25:38 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_order/__init__.py
+${PYSITELIB}/pytest_order/__init__.pyc
+${PYSITELIB}/pytest_order/__init__.pyo
+${PYSITELIB}/pytest_order/item.py
+${PYSITELIB}/pytest_order/item.pyc
+${PYSITELIB}/pytest_order/item.pyo
+${PYSITELIB}/pytest_order/plugin.py
+${PYSITELIB}/pytest_order/plugin.pyc
+${PYSITELIB}/pytest_order/plugin.pyo
+${PYSITELIB}/pytest_order/settings.py
+${PYSITELIB}/pytest_order/settings.pyc
+${PYSITELIB}/pytest_order/settings.pyo
+${PYSITELIB}/pytest_order/sorter.py
+${PYSITELIB}/pytest_order/sorter.pyc
+${PYSITELIB}/pytest_order/sorter.pyo
