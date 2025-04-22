@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/22 20:39:50 wiz Exp $
 
 DISTNAME=	snowballstemmer-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/snowballstemmer/}
 
@@ -11,7 +11,9 @@ HOMEPAGE=	https://github.com/snowballstem/snowball
 COMMENT=	Python module with stemmer algorithms for multiple natural languages
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
