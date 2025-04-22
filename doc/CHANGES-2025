@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2827 2025/04/22 20:44:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2828 2025/04/22 20:45:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3740,3 +3740,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-snowballstemmer to 2.2.0nb2 [wiz 2025-04-22]
 	Updated textproc/py-sphinxcontrib-jsmath to 1.0.1nb2 [wiz 2025-04-22]
 	Updated textproc/py-sphinxcontrib-newsfeed to 0.1.4nb2 [wiz 2025-04-22]
+	Updated textproc/py-uritemplate to 4.1.1nb2 [wiz 2025-04-22]
