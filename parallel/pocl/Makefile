@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/17 21:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/22 16:07:26 nia Exp $
 
 DISTNAME=	pocl-6.0
 PKGREVISION=	4
@@ -15,6 +15,9 @@ USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 TEST_TARGET=		check
+
+# error: _Float16 is not supported on this target
+NOT_FOR_PLATFORM+=	*-*-i386
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 #CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
