@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2797 2025/04/22 16:01:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2798 2025/04/22 16:26:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3709,3 +3709,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-wagtailmenus to 4.0.2 [adam 2025-04-22]
 	Updated net/py-foolscap to 24.9.0 [adam 2025-04-22]
 	Updated devel/py-types-setuptools to 79.0.0.20250422 [adam 2025-04-22]
+	Updated www/py-pysaml2 to 7.5.2 [adam 2025-04-22]
+	Updated devel/py-setuptools_scm to 8.3.0 [adam 2025-04-22]
