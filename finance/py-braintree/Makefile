@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2025/03/03 13:05:40 adam Exp $
+# $NetBSD: Makefile,v 1.64 2025/04/22 15:33:29 adam Exp $
 
 DISTNAME=	braintree-4.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/braintree/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/braintree/braintree_python
 COMMENT=	Braintree Python Library
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-requests>=0.11.1:../../devel/py-requests
 
 USE_LANGUAGES=	# none
