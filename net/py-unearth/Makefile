@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/04/01 10:00:14 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/23 15:12:37 adam Exp $
 
-DISTNAME=	unearth-0.17.3
+DISTNAME=	unearth-0.17.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unearth/}
