@@ -1,0 +1,9 @@
+pydiffx is a Python implementation of the DiffX specification.
+
+DiffX is a proposed specification for a structured version of
+Unified Diffs that contains metadata, standardized parsing,
+multi-commit diffs, and binary diffs, in a format compatible with
+existing diff parsers.
+
+This module is a reference implementation designed to make it easy
+to read and write DiffX files in any Python application.
