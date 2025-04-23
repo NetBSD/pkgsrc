@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2025/02/05 08:05:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2025/04/23 12:45:09 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -152,14 +152,17 @@
 
 PYOBJC_VERS=	11.0
 
-DISTNAME=	${WHEEL_NAME:tl}
-PKGNAME=	${PYPKGPREFIX}-${WHEEL_NAME:S/_/-/g}
+DISTNAME?=	pyobjc_framework_${PYOBJC_FRAMEWORK:tl}-${PYOBJC_VERS}
+PKGNAME?=	${PYPKGPREFIX}-pyobjc-framework-${PYOBJC_FRAMEWORK}-${PYOBJC_VERS}
+CATEGORIES=     devel python
+MASTER_SITES=   ${MASTER_SITE_PYPI:=p/pyobjc-framework-${PYOBJC_FRAMEWORK}/}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
+COMMENT?=	Wrappers for the framework ${PYOBJC_FRAMEWORK} on macOS
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 ONLY_FOR_PLATFORM=	Darwin-*-* # only for macOS
 

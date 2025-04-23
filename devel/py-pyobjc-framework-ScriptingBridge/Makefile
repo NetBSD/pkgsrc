@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2024/06/06 14:48:42 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/23 12:45:22 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	ScriptingBridge
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_ScriptingBridge-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-ScriptingBridge/}
-
-COMMENT=	Wrappers for the framework ScriptingBridge on macOS
 
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-core>=${PYOBJC_VERS}:../../devel/py-pyobjc-core
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Cocoa

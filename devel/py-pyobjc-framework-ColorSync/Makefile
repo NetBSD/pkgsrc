@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:12 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	ColorSync
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_ColorSync-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-ColorSync/}
-
-COMMENT=	Wrappers for the framework ColorSync on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-6].*-* Darwin-[0-9].*-* # 10.13+
 

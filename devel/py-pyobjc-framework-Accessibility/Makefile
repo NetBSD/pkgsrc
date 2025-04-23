@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:29 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:09 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	Accessibility
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_Accessibility-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Accessibility/}
-
-COMMENT=	Wrappers for the framework Accessibility on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-9].*-* Darwin-[0-9].*-* # 11.0+
 

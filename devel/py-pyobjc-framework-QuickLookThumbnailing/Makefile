@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:41 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:21 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	QuickLookThumbnailing
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_QuickLookThumbnailing-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-QuickLookThumbnailing/}
-
-COMMENT=	Wrappers for the framework QuickLookThumbnailing on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-8].*-* Darwin-[0-9].*-* # 10.15+
 

@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2024/06/06 14:48:28 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/23 12:45:09 adam Exp $
 
-.include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_core-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
+DISTNAME=	pyobjc_core-${PYOBJC_VERS}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-core/}
 
 COMMENT=	Bridge between Python and Objective-C
+
+.include "../../devel/py-pyobjc/Makefile.common"
 
 # pyobjc_setup.py does not exist here
 SUBST_NOOP_OK.pysetup=	yes
