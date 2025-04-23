@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2025/04/01 22:08:48 hauke Exp $
+# $NetBSD: options.mk,v 1.6 2025/04/23 09:13:34 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hiawatha
 PKG_SUPPORTED_OPTIONS=		cache letsencrypt monitor rproxy tomahawk
@@ -24,7 +24,7 @@ PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PLIST.letsencrypt=		yes
 REPLACE_PHP+=			extra/letsencrypt/lefh.in
 
-DEPENDS+=	php-[0-9]*:${PHPPKGSRCDIR}
+DEPENDS+=	${PHP_PKG_PREFIX}-[0-9]*:${PHPPKGSRCDIR}
 .include "../../lang/php/phpversion.mk"
 .endif
 
@@ -56,7 +56,7 @@ CONF_FILES+=	${EGDIR}/letsencrypt.conf ${PKG_SYSCONFDIR}/letsencrypt.conf
 .endif
 .if !empty(PKG_OPTIONS:Mmbedtls-private)
 # Should the enclosed mbedtls be replaced by an update?
-HIAWATHA_REPLACE_MBEDTLS=	yes
+HIAWATHA_REPLACE_MBEDTLS=	no
 .if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
 MTVER=		3.6.3
 DISTFILES+=	mbedtls-${MTVER}.tar.bz2
