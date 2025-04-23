@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:18 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	MediaPlayer
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_MediaPlayer-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-MediaPlayer/}
-
-COMMENT=	Wrappers for the framework MediaPlayer on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-5].*-* Darwin-[0-9].*-* # 10.12+
 

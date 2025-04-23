@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:38 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:19 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	MetalFX
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_MetalFX-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-MetalFX/}
-
-COMMENT=	Wrappers for the framework MetalFX on macOS
 
 NOT_FOR_PLATFORM=	Darwin-2[0-1].*-* Darwin-1[0-9].*-* Darwin-[0-9].*-* # 13+
 

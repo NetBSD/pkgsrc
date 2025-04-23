@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:16 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	ImageCaptureCore
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_ImageCaptureCore-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-ImageCaptureCore/}
-
-COMMENT=	Wrappers for the framework ImageCaptureCore on macOS
 
 NOT_FOR_PLATFORM=	Darwin-[0-9].*-* # 10.6+
 

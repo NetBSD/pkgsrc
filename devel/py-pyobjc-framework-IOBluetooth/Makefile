@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:17 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	IOBluetooth
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_IOBluetooth-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-IOBluetooth/}
-
-COMMENT=	Wrappers for the framework IOBluetooth on macOS
 
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-core>=${PYOBJC_VERS}:../../devel/py-pyobjc-core
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Cocoa

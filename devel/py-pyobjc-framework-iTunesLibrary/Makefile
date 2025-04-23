@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:45 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:17 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	iTunesLibrary
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_iTunesLibrary-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-iTunesLibrary/}
-
-COMMENT=	Wrappers for the framework iTunesLibrary on macOS
 
 NOT_FOR_PLATFORM=	Darwin-[0-9].*-* # 10.6+
 

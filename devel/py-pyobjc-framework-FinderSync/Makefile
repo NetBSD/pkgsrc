@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:15 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	FinderSync
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_FinderSync-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-FinderSync/}
-
-COMMENT=	Wrappers for the framework FinderSync on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-3].*-* Darwin-[0-9].*-* # 10.10+
 

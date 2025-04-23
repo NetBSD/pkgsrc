@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:24 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	SpriteKit
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_SpriteKit-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-SpriteKit/}
-
-COMMENT=	Wrappers for the framework SpriteKit on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-2].*-* Darwin-[0-9].*-* # 10.9+
 

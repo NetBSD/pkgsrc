@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:42 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:23 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	SecurityInterface
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_SecurityInterface-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-SecurityInterface/}
-
-COMMENT=	Wrappers for the framework SecurityInterface on macOS
 
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-core>=${PYOBJC_VERS}:../../devel/py-pyobjc-core
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=${PYOBJC_VERS}:../../devel/py-pyobjc-framework-Cocoa

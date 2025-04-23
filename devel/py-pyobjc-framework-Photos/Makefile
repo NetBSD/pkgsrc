@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:21 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	Photos
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_Photos-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-Photos/}
-
-COMMENT=	Wrappers for the framework Photos on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-4].*-* Darwin-[0-9].*-* # 10.11+
 

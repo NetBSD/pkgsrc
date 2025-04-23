@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:19 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	MLCompute
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_MLCompute-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-MLCompute/}
-
-COMMENT=	Wrappers for the framework MLCompute on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-9].*-* Darwin-[0-9].*-* # 11.0+
 
