@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.42 2025/04/17 15:14:32 osa Exp $
+# $NetBSD: options.mk,v 1.43 2025/04/23 18:17:41 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -309,7 +309,7 @@ PLIST.imagefilter=	yes
 CONFIGURE_ARGS+=	--with-http_slice_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mstatus)
+.if !empty(PKG_OPTIONS:Mnginx-status)
 CONFIGURE_ARGS+=	--with-http_stub_status_module
 .endif
 
