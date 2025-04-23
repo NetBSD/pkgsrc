@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2841 2025/04/23 14:56:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2842 2025/04/23 14:58:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3758,3 +3758,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-kgb version 7.2 [wiz 2025-04-23]
 	Added devel/py-pydiffx version 1.1 [wiz 2025-04-23]
 	Added textproc/py-texttable version 1.7.0 [wiz 2025-04-23]
+	Updated devel/RBTools to 5.2 [wiz 2025-04-23]
