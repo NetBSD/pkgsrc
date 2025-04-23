@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/07/16 03:44:37 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/04/23 15:11:31 adam Exp $
 
-BLAKE2s (uncertainties-3.2.2.tar.gz) = 3a0aa0db3046970327aa1f3b22af418f6e806cbcc187955c21bd73ba4996ce71
-SHA512 (uncertainties-3.2.2.tar.gz) = b78efc09cc572ecd24ead89db4136741429ab9032295c9e9050a79e14662b41c7537580f698e38d4ee1a36ae460ee22a463eeb473806a1f72246ab6868d950a3
-Size (uncertainties-3.2.2.tar.gz) = 143865 bytes
+BLAKE2s (uncertainties-3.2.3.tar.gz) = 20e7bb6837138281acbaa267d9402ce7054334fbddd760970f39c488d7d86208
+SHA512 (uncertainties-3.2.3.tar.gz) = 4b2c45f2955a6c3e4009f47521f2dbe725a71c2e417653445b180ea4661e96002b864e364f212af7c4acb333ec31228c24f74cfc4197435d2ca56ba74502bce2
+Size (uncertainties-3.2.3.tar.gz) = 160492 bytes

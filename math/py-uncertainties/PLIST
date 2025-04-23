@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 16:31:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/23 15:11:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,15 @@ ${PYSITELIB}/uncertainties/__init__.pyo
 ${PYSITELIB}/uncertainties/core.py
 ${PYSITELIB}/uncertainties/core.pyc
 ${PYSITELIB}/uncertainties/core.pyo
+${PYSITELIB}/uncertainties/formatting.py
+${PYSITELIB}/uncertainties/formatting.pyc
+${PYSITELIB}/uncertainties/formatting.pyo
+${PYSITELIB}/uncertainties/ops.py
+${PYSITELIB}/uncertainties/ops.pyc
+${PYSITELIB}/uncertainties/ops.pyo
+${PYSITELIB}/uncertainties/parsing.py
+${PYSITELIB}/uncertainties/parsing.pyc
+${PYSITELIB}/uncertainties/parsing.pyo
 ${PYSITELIB}/uncertainties/umath.py
 ${PYSITELIB}/uncertainties/umath.pyc
 ${PYSITELIB}/uncertainties/umath.pyo
