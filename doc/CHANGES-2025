@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2836 2025/04/23 07:45:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2837 2025/04/23 09:13:47 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-Willow to 1.10.0 [adam 2025-04-23]
 	Updated security/py-google-auth-oauthlib to 1.2.2 [adam 2025-04-23]
 	Updated devel/py-greenlet to 3.2.1 [adam 2025-04-23]
+	Updated www/hiawatha to 11.7 [hauke 2025-04-23]
