@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2025/02/17 13:34:43 adam Exp $
+$NetBSD: distinfo,v 1.28 2025/04/23 15:05:44 adam Exp $
 
-BLAKE2s (re2c-4.1.tar.xz) = 2d2d681e63e49c853dc8fe86cf0f00c33b52a50eb410547e8ed525c58208b1cb
-SHA512 (re2c-4.1.tar.xz) = 161cb10d2fe3bf0e1dbb9496644b77bdf0b4869458e1c8340a7593447a026f067facc4c752c7cbc4007107a0bf33dc6b6aa598bbfd4e1dd6edd4c9f9ad4a5832
-Size (re2c-4.1.tar.xz) = 1812048 bytes
+BLAKE2s (re2c-4.2.tar.xz) = d1cd6ba18f1efd7ca62702270317dab15b105a0edcf3733d94ab6f8299daf0fd
+SHA512 (re2c-4.2.tar.xz) = c3e32c8c7b283a795784196e3163640eef86eecc6118611bc241384e262c2df106799df230b4fa3240b8be21163d7a0f97e32b6d725354a4fdbacf7b1fe793fb
+Size (re2c-4.2.tar.xz) = 1838068 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/02/17 13:34:42 adam Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/23 15:05:44 adam Exp $
 
-DISTNAME=	re2c-4.1
+DISTNAME=	re2c-4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skvadrik/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
