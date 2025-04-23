@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/22 20:42:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/23 06:16:42 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/jsmath/__init__.py
 ${PYSITELIB}/sphinxcontrib/jsmath/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/jsmath/__init__.pyo
 ${PYSITELIB}/sphinxcontrib/jsmath/version.py
 ${PYSITELIB}/sphinxcontrib/jsmath/version.pyc
 ${PYSITELIB}/sphinxcontrib/jsmath/version.pyo
-${PYSITELIB}/sphinxcontrib_jsmath-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_jsmath-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
