@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/23 14:53:30 wiz Exp $
+
+BLAKE2s (kgb-7.2.tar.gz) = 9712003306549849023bba7055e7669bec1a9522a7ffe1e6ca250dd4f9c3a992
+SHA512 (kgb-7.2.tar.gz) = 2311a524d4e5266399fddbf8c12644dd6d265b4a0538cd820421a7fb4f8d291f662209b6642daf3777bfca16b8eb976ead12e063dad1242f897619070e5cfd27
+Size (kgb-7.2.tar.gz) = 61228 bytes
