@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/01/15 07:59:03 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/23 15:17:44 adam Exp $
 
-DISTNAME=	legacy_cgi-2.6.2
+DISTNAME=	legacy_cgi-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/legacy_cgi/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/jackrosenthal/legacy-cgi
 COMMENT=	Fork of the standard cgi and cgitb modules, deprecated in PEP-594
 LICENSE=	python-software-foundation
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 
