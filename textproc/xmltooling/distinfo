@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:23:41 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/04/23 18:54:19 perseant Exp $
 
-BLAKE2s (xmltooling-3.1.0.tar.gz) = 1746abdbd88a99c075c4494d63e0374aae8e1d6ad9c730d362c7d3d38460424f
-SHA512 (xmltooling-3.1.0.tar.gz) = 64381b549f4a57e37af2c9e4358448bb432c77da4f3b370fe2524d94603223f633ce6811b2c055ca13be203ebff5c7a155e3f1ec06e2c5759fd9d485a66f609e
-Size (xmltooling-3.1.0.tar.gz) = 751711 bytes
+BLAKE2s (xmltooling-3.3.0.tar.gz) = 756be79a7a63c72d01a18b6056b9ec9aaef0d4d91ccbfe45a6a488d0581417d5
+SHA512 (xmltooling-3.3.0.tar.gz) = b472f4634ebb876be504bfe217d77683dce133adcc9cbd6488b43000fb7fddd20c05380c95e10296491b6fb8e1cb8d675ed23c96a5bcf39e04cbc8e77c1939b9
+Size (xmltooling-3.3.0.tar.gz) = 766227 bytes
