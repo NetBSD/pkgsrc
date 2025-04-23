@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/31 14:56:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/23 15:05:44 adam Exp $
 bin/re2c
 bin/re2d
 bin/re2go
@@ -8,6 +8,7 @@ bin/re2js
 bin/re2ocaml
 bin/re2py
 bin/re2rust
+bin/re2swift
 bin/re2v
 bin/re2zig
 man/man1/re2c.1
@@ -19,6 +20,7 @@ man/man1/re2js.1
 man/man1/re2ocaml.1
 man/man1/re2py.1
 man/man1/re2rust.1
+man/man1/re2swift.1
 man/man1/re2v.1
 man/man1/re2zig.1
 share/re2c/stdlib/c
@@ -30,6 +32,7 @@ share/re2c/stdlib/js
 share/re2c/stdlib/ocaml
 share/re2c/stdlib/python
 share/re2c/stdlib/rust
+share/re2c/stdlib/swift
 share/re2c/stdlib/unicode_categories.re
 share/re2c/stdlib/v
 share/re2c/stdlib/zig
