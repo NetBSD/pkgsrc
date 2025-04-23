@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2025/04/23 17:45:48 osa Exp $
+# $NetBSD: Makefile,v 1.151 2025/04/23 17:55:18 osa Exp $
 
 DISTNAME=	nginx-1.28.0
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
@@ -70,7 +70,7 @@ EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 
 .for file in ${EGFILES}
 CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
-.  if !empty(PKG_OPTIONS:Mnaxsi)
+.  if !empty(PKG_OPTIONS:Mnginx-naxsi)
 CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules ${PKG_SYSCONFDIR}/naxsi_core.rules
 .  endif
 .endfor
