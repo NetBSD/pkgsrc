@@ -1,0 +1,25 @@
+$NetBSD: patch-gr-blocks_CMakeLists.txt,v 1.1 2025/04/23 18:44:57 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-blocks/CMakeLists.txt.orig	2025-04-23 15:24:36.618780244 +0000
++++ gr-blocks/CMakeLists.txt
+@@ -24,7 +24,7 @@ endif()
+ # Register component
+ ########################################################################
+ include(GrComponent)
+-gr_register_component("gr-blocks" ENABLE_GR_BLOCKS Boost_FOUND ENABLE_GNURADIO_RUNTIME)
++gr_register_component("gr-blocks" ENABLE_GR_BLOCKS Boost_FOUND)
+ 
+ ########################################################################
+ # Begin conditional configuration
+@@ -46,9 +46,7 @@ if(ENABLE_GR_BLOCKS)
+             add_subdirectory(examples)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+ 
+     ########################################################################
+     # Create Pkg Config File
