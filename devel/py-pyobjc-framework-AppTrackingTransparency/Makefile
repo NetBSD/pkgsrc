@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/06 14:48:30 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:10 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	AppTrackingTransparency
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_AppTrackingTransparency-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-AppTrackingTransparency/}
-
-COMMENT=	Wrappers for the framework AppTrackingTransparency on macOS
 
 NOT_FOR_PLATFORM=	Darwin-1[0-9].*-* Darwin-[0-9].*-* # 11.0+
 
