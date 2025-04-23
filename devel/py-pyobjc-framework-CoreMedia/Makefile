@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/06/06 14:48:33 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/23 12:45:13 adam Exp $
+
+PKGREVISION=	1
+
+PYOBJC_FRAMEWORK=	CoreMedia
 
 .include "../../devel/py-pyobjc/Makefile.common"
-
-WHEEL_NAME=	pyobjc_framework_CoreMedia-${PYOBJC_VERS}
-
-CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-CoreMedia/}
-
-COMMENT=	Wrappers for the framework CoreMedia on macOS
 
 NOT_FOR_PLATFORM=	Darwin-10.*-* Darwin-[0-9].*-* # 10.7+
 
