@@ -1,0 +1,17 @@
+Ever deal with a large test suite before, monkey patching functions
+to figure out whether it was called as expected? It's a dirty job.
+If you're not careful, you can make a mess of things. Leave behind
+evidence.
+
+kgb's spies will take care of that little problem for you.
+
+What are spies?
+
+Spies intercept and record calls to functions. They can report on
+how many times a function was called and with what arguments. They
+can allow the function call to go through as normal, to block it,
+or to reroute it to another function.
+
+Spies are like mocks, but better. You're not mocking the world.
+You're replacing very specific function logic, or listening to
+functions without altering them.
