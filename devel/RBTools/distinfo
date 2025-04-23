@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:14:10 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/04/23 14:57:52 wiz Exp $
 
-BLAKE2s (RBTools-0.7.6.tar.gz) = ceb46dcc0bcf7c60c8ff381f87fbf255247f00d2c6c607fdb371536e78218bcc
-SHA512 (RBTools-0.7.6.tar.gz) = 46a141370f79f4a9bcf417a2fca0fae6f1cc3d0ce2de9fd5f06df7162ecf051b418d12795adce9b12ed8244800da17f87df8b3f04c79c269b3b292a2033bc958
-Size (RBTools-0.7.6.tar.gz) = 162080 bytes
+BLAKE2s (RBTools-5.2.tar.gz) = 660d3ddd50d8fe6c9dea10e4020d195cf3a72483691c1d820c6d20a8936425b9
+SHA512 (RBTools-5.2.tar.gz) = 3039717633cd90cc565633cd679d69f02afb38cd817ce71ca7c418be2f43bc7f6a39635ee01d341209d919b0f9c930b1fe6d35f4b953909328f9033f8be83713
+Size (RBTools-5.2.tar.gz) = 682271 bytes
