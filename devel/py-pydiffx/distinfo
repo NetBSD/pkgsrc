@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/23 14:54:31 wiz Exp $
+
+BLAKE2s (pydiffx-1.1.tar.gz) = b7cdafe5edf0b33b7dec39df0c817affb29b4dfd9701d47a0b2064110b8cd861
+SHA512 (pydiffx-1.1.tar.gz) = 9eb0565fb4e68f1a2e9a4e810a1132f9fa542a3c4d0a7431b9a9bedbdc5f630521bfa2da71c711a9f9be8d4dc7d900e765a9491281376b0b7e1bb40776a8ddda
+Size (pydiffx-1.1.tar.gz) = 49193 bytes
