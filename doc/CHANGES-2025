@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2845 2025/04/23 15:18:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2846 2025/04/23 18:34:34 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3765,3 +3765,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-unearth to 0.17.5 [adam 2025-04-23]
 	Updated textproc/ugrep to 7.4.0 [adam 2025-04-23]
 	Updated www/py-legacy-cgi to 2.6.3 [adam 2025-04-23]
+	Updated www/nginx to 1.28.0 [osa 2025-04-23]
+	Updated www/nginx-devel to 1.28.0 [osa 2025-04-23]
