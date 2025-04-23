@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.149 2025/04/17 21:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2025/04/23 17:45:48 osa Exp $
 
-DISTNAME=	nginx-1.27.5
+DISTNAME=	nginx-1.28.0
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -124,17 +123,17 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 	${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-.if !empty(PKG_OPTIONS:Mnaxsi)
+.if !empty(PKG_OPTIONS:Mnginx-naxsi)
 	${INSTALL_DATA} ${WRKDIR}/naxsi_rules/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
 .endif
-.if !empty(PKG_OPTIONS:Mperl)
+.if !empty(PKG_OPTIONS:Mnginx-perl)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_LIB} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.${SOEXT} \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
 .endif
-.if !empty(PKG_OPTIONS:Mdso)
+.if !empty(PKG_OPTIONS:Mnginx-dso)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec/nginx
 	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
 		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
