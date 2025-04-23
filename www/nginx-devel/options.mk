@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.43 2025/04/23 18:17:41 osa Exp $
+# $NetBSD: options.mk,v 1.44 2025/04/23 18:19:57 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -369,7 +369,7 @@ DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
 NJS_SUBDIR=		/nginx
 PLIST.njs=		yes
-.  if !empty(PKG_OPTIONS:Mnjs-xml)
+.  if !empty(PKG_OPTIONS:Mnginx-njs-xml)
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .  else
