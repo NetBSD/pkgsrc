@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/23 14:51:01 wiz Exp $
+
+BLAKE2s (housekeeping-1.1.tar.gz) = 5704c6785e0f0ca4868733cc1e80b03836a23d9a4537aefdefece6ea06235954
+SHA512 (housekeeping-1.1.tar.gz) = de1dba70a28c50c88cf36de56f400fea4737f42d4497f0c3359a70a2e7e9884b13aab8094abb684be37caaff20aaa21894d3909d2454b473edef594534057644
+Size (housekeeping-1.1.tar.gz) = 19346 bytes
