@@ -1,0 +1,25 @@
+$NetBSD: patch-gr-audio_CMakeLists.txt,v 1.1 2025/04/23 18:44:57 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-audio/CMakeLists.txt.orig	2025-04-23 15:26:43.072086242 +0000
++++ gr-audio/CMakeLists.txt
+@@ -13,7 +13,7 @@
+ # Register component
+ ########################################################################
+ include(GrComponent)
+-gr_register_component("gr-audio" ENABLE_GR_AUDIO ENABLE_GNURADIO_RUNTIME)
++gr_register_component("gr-audio" ENABLE_GR_AUDIO)
+ 
+ set(GR_PKG_AUDIO_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/audio)
+ 
+@@ -35,9 +35,7 @@ if(ENABLE_GR_AUDIO)
+             add_subdirectory(examples/grc)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+     if((ENABLE_GR_ANALOG) AND (ENABLE_EXAMPLES))
+         add_subdirectory(examples/c++)
+     endif((ENABLE_GR_ANALOG) AND (ENABLE_EXAMPLES))
