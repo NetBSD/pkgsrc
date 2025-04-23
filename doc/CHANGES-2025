@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2843 2025/04/23 15:08:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2844 2025/04/23 15:12:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3761,3 +3761,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/RBTools to 5.2 [wiz 2025-04-23]
 	Updated devel/re2c to 4.2 [adam 2025-04-23]
 	Updated devel/py-test-run-parallel to 0.4.2 [adam 2025-04-23]
+	Updated math/py-uncertainties to 3.2.3 [adam 2025-04-23]
+	Updated net/py-unearth to 0.17.5 [adam 2025-04-23]
