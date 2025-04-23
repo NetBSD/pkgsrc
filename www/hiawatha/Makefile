@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2025/04/17 21:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/04/23 09:13:34 hauke Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
-PKGVER=		11.6
-PKGREVISION=	10
+PKGVER=		11.7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=hsleisink/hiawatha/-/archive/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.gz
@@ -80,20 +79,6 @@ SUBST_STAGE.uid=	pre-configure
 SUBST_MESSAGE.uid=	Configuring Hiawatha user and group.
 SUBST_FILES.uid=	config/hiawatha.conf.in
 SUBST_VARS.uid=		HIAWATHA_USER HIAWATHA_GROUP
-
-SUBST_CLASSES+=		url
-SUBST_STAGE.url=	pre-configure
-SUBST_MESSAGE.url=	Updating upstream web URL.
-SUBST_FILES.url=	config/index.xslt
-SUBST_FILES.url+=	extra/index.html
-SUBST_FILES.url+=	man/cgi-wrapper.1.in
-SUBST_FILES.url+=	man/hiawatha.1.in
-SUBST_FILES.url+=	man/lefh.1
-SUBST_FILES.url+=	man/newroot.1
-SUBST_FILES.url+=	man/ssi-cgi.1
-SUBST_FILES.url+=	man/wigwam.1
-SUBST_SED.url=		-e 's/www.hiawatha-webserver.org/hiawatha.leisink.net/g'
-SUBST_SED.url+=		-e 's/@hiawatha-webserver.org/@leisink.net/g'
 
 .if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
 SUBST_CLASSES+=		mbopt
