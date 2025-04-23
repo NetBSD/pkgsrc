@@ -1,0 +1,11 @@
+Housekeeping is a Python package designed to make it easy for
+projects to mark consumed code as deprecated or pending deprecation,
+with helpful instructions for consumers using deprecated functionality.
+
+With Housekeeping, you can easily manage deprecations in your code,
+helping you and any consumers of your code transition to the latest
+and greatest.
+
+It offers decorators, mixins, and functions to help with deprecating
+functions, methods, classes, modules, attributes, parameters, and
+dictionary keys.
