@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4465 2025/04/22 11:26:52 adam Exp $
+# $NetBSD: Makefile,v 1.4466 2025/04/23 14:55:34 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2699,6 +2699,7 @@ SUBDIR+=	py-hg-evolve
 SUBDIR+=	py-hg-fastimport
 SUBDIR+=	py-hg-git
 SUBDIR+=	py-hglib
+SUBDIR+=	py-housekeeping
 SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-hypothesis4
@@ -2750,6 +2751,7 @@ SUBDIR+=	py-jupyter_events
 SUBDIR+=	py-jupyter_packaging
 SUBDIR+=	py-kafka-python
 SUBDIR+=	py-kaitaistruct
+SUBDIR+=	py-kgb
 SUBDIR+=	py-kitchen
 SUBDIR+=	py-kivy
 SUBDIR+=	py-kivy-garden
@@ -2877,6 +2879,7 @@ SUBDIR+=	py-pycotap
 SUBDIR+=	py-pydantic
 SUBDIR+=	py-pydantic-core
 SUBDIR+=	py-pydantic-settings
+SUBDIR+=	py-pydiffx
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
