@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/30 13:59:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/24 07:12:19 wiz Exp $
 ${PYSITELIB}/Xlib/X.py
 ${PYSITELIB}/Xlib/X.pyc
 ${PYSITELIB}/Xlib/X.pyo
@@ -194,8 +194,8 @@ ${PYSITELIB}/Xlib/xobject/icccm.pyo
 ${PYSITELIB}/Xlib/xobject/resource.py
 ${PYSITELIB}/Xlib/xobject/resource.pyc
 ${PYSITELIB}/Xlib/xobject/resource.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
