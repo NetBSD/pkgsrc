@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2856 2025/04/24 14:20:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2857 2025/04/24 16:26:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3778,3 +3778,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/ejabberd to 23.01 [gdt 2025-04-24]
 	Updated pkgtools/revbump to 3.9 [wiz 2025-04-24]
 	mk: changed default jpeg implementation to libjpeg-turbo [wiz 2025-04-24]
+	Updated sysutils/ansible-core to 2.18.5 [adam 2025-04-24]
+	Updated sysutils/ansible to 11.5.0 [adam 2025-04-24]
