@@ -1,9 +1,10 @@
-$NetBSD: patch-unix_unxcfg.h,v 1.2 2014/05/03 11:24:19 ryoon Exp $
+$NetBSD: patch-unix_unxcfg.h,v 1.3 2025/04/24 14:10:55 tnn Exp $
 
 * Fix build on Debian GNU/kFreeBSD.
 * Fix build under OpenBSD 5.5
   Patch from OpenBSD Ports
   "timeb was already well deprecated on 4.4BSD"
+* Remove K&R prototype for gmtime()
 
 --- unix/unxcfg.h.orig	2009-04-16 18:36:12.000000000 +0000
 +++ unix/unxcfg.h
@@ -15,7 +16,7 @@ $NetBSD: patch-unix_unxcfg.h,v 1.2 2014/05/03 11:24:19 ryoon Exp $
  
  #ifdef NO_OFF_T
    typedef long zoff_t;
-@@ -111,7 +112,9 @@ typedef struct stat z_stat;
+@@ -111,13 +112,14 @@ typedef struct stat z_stat;
  
  #ifdef BSD
  #  include <sys/time.h>
@@ -26,3 +27,9 @@ $NetBSD: patch-unix_unxcfg.h,v 1.2 2014/05/03 11:24:19 ryoon Exp $
  #  if (defined(_AIX) || defined(__GLIBC__) || defined(__GNU__))
  #    include <time.h>
  #  endif
+ #else
+ #  include <time.h>
+-   struct tm *gmtime(), *localtime();
+ #endif
+ 
+ #if (defined(BSD4_4) || (defined(SYSV) && defined(MODERN)))
