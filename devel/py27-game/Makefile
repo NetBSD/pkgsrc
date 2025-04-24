@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/01/06 21:49:04 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/24 14:13:40 wiz Exp $
 
 DISTNAME=	pygame-1.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygame/}
 

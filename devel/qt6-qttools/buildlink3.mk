@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/04/17 21:50:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2025/04/24 14:13:41 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qttools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qttools
 QT6_QTTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qttools+=	qt6-qttools>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qttools+=	qt6-qttools>=6.8.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qttools+=	qt6-qttools>=6.8.3nb2
 BUILDLINK_PKGSRCDIR.qt6-qttools?=	../../devel/qt6-qttools
 
 BUILDLINK_FILES.qt6-qttools+=		qt6/bin/lconvert
