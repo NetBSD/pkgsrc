@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2851 2025/04/24 10:13:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2852 2025/04/24 10:26:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3773,3 +3773,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-typing [adam 2025-04-24]
 	Updated security/py-tlslite to 0.4.9nb2 [wiz 2025-04-24]
 	Updated www/fcgi to 2.4.5 [wiz 2025-04-24]
+	Updated multimedia/mpv to 0.40.0 [leot 2025-04-24]
