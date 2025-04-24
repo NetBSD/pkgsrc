@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2855 2025/04/24 14:13:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2856 2025/04/24 14:20:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3777,3 +3777,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/neovim to 0.11.0 [leot 2025-04-24]
 	Updated chat/ejabberd to 23.01 [gdt 2025-04-24]
 	Updated pkgtools/revbump to 3.9 [wiz 2025-04-24]
+	mk: changed default jpeg implementation to libjpeg-turbo [wiz 2025-04-24]
