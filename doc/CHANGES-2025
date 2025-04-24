@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2849 2025/04/24 08:05:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2850 2025/04/24 08:16:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3771,3 +3771,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-setuptools to 79.0.1 [adam 2025-04-24]
 	Updated devel/py-setuptools_scm to 8.3.1 [adam 2025-04-24]
 	Removed devel/py-typing [adam 2025-04-24]
+	Updated security/py-tlslite to 0.4.9nb2 [wiz 2025-04-24]
