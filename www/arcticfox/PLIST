@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/03/13 23:08:22 nia Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/04/24 09:30:25 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -22,7 +22,7 @@ lib/${PKGNAME}/dependentlibs.list
 lib/${PKGNAME}/dictionaries/en-US.aff
 lib/${PKGNAME}/dictionaries/en-US.dic
 lib/${PKGNAME}/fonts/TwemojiMozilla.ttf
-${PLIST.icu}lib/${PKGNAME}/icudt58l.dat
+lib/${PKGNAME}/icudt58l.dat
 lib/${PKGNAME}/liblgpllibs.so
 lib/${PKGNAME}/libmozavcodec.so
 lib/${PKGNAME}/libmozavutil.so
