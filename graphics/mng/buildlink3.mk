@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2018/01/07 13:04:15 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/04/24 14:14:32 wiz Exp $
 
 BUILDLINK_TREE+=	mng
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mng
 MNG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mng+=	mng>=1.0.0
-BUILDLINK_ABI_DEPENDS.mng+=	mng>=2.0.2
+BUILDLINK_ABI_DEPENDS.mng+=	mng>=2.0.3nb1
 BUILDLINK_PKGSRCDIR.mng?=	../../graphics/mng
 
 .include "../../devel/zlib/buildlink3.mk"

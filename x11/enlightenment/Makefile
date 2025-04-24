@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/04/19 07:58:36 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/04/24 14:16:09 wiz Exp $
 
 DISTNAME=	enlightenment-0.17.6
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	x11
 MASTER_SITES=	https://download.enlightenment.org/att/releases/
 EXTRACT_SUFX=	.tar.bz2

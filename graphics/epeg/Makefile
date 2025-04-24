@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/05/14 14:13:22 nia Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/24 14:14:16 wiz Exp $
 #
 
 DISTNAME=		epeg-0.9.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 

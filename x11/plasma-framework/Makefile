@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2025/04/17 21:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/04/24 14:16:24 wiz Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

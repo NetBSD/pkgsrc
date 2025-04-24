@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2024/12/27 08:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/04/24 14:14:51 wiz Exp $
 #
 
 DISTNAME=		nabi-0.99.9
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		korean inputmethod
 MASTER_SITES=		http://kldp.net/frs/download.php/5926/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2020/05/16 17:24:05 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/24 14:16:06 wiz Exp $
 
 DISTNAME=	swiggle-0.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www graphics
 MASTER_SITES=	http://homepage.univie.ac.at/l.ertl/swiggle/files/
 

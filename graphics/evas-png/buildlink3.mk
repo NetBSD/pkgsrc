@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2023/11/12 13:21:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/04/24 14:14:17 wiz Exp $
 
 BUILDLINK_TREE+=	evas-png
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	evas-png
 EVAS_PNG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.evas-png+=	evas-png>=1.7.7
-BUILDLINK_ABI_DEPENDS.evas-png?=	evas-png>=1.7.10nb4
+BUILDLINK_ABI_DEPENDS.evas-png?=	evas-png>=1.7.10nb5
 BUILDLINK_PKGSRCDIR.evas-png?=		../../graphics/evas-png
 
 .include "../../fonts/fontconfig/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/08/02 19:21:54 nia Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/24 14:14:30 wiz Exp $
 #
 
 DISTNAME=	libvideogfx-1.0.3
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	graphics
 MASTER_SITES=	http://rachmaninoff.informatik.uni-mannheim.de/libvideogfx/data/
 

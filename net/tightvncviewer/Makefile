@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2020/01/26 17:31:56 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2025/04/24 14:15:29 wiz Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2

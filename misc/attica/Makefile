@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2024/08/25 06:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/04/24 14:15:03 wiz Exp $
 
 DISTNAME=	attica-0.4.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_KDE:=attica/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2025/04/17 21:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/04/24 14:16:05 wiz Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
 PKGNAME=	palemoon-33.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2025/04/19 07:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2025/04/24 14:15:35 wiz Exp $
 
 DISTNAME=	pdf2djvu-0.9.19
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
 GITHUB_PROJECT=	pdf2djvu
