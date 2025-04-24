@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:24:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/24 15:14:57 adam Exp $
 
 DISTNAME=	termtosvg-1.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nbedos/}
 
@@ -10,11 +10,12 @@ HOMEPAGE=	https://nbedos.github.io/termtosvg/
 COMMENT=	Record terminal sessions as SVG animations
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
-DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-pyte
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/10 15:20:06 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/24 15:14:57 adam Exp $
 bin/termtosvg
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/termtosvg/__init__.py
 ${PYSITELIB}/termtosvg/__init__.pyc
 ${PYSITELIB}/termtosvg/__init__.pyo
