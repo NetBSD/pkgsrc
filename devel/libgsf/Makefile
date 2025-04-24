@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2025/04/17 21:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2025/04/24 14:13:37 wiz Exp $
 
 DISTNAME=	libgsf-1.14.53
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgsf/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
