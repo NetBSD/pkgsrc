@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2025/02/26 11:44:54 wiz Exp $
+# $NetBSD: options.mk,v 1.38 2025/04/24 10:26:30 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -161,6 +161,7 @@ MESON_ARGS+=	-Dvdpau=disabled
 ###
 .if !empty(PKG_OPTIONS:Mlibdrm)
 MESON_ARGS+=	-Ddrm=enabled
+.include "../../x11/libdisplay-info/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .else
 MESON_ARGS+=	-Ddrm=disabled
