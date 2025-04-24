@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2853 2025/04/24 12:50:23 leot Exp $
+$NetBSD: CHANGES-2025,v 1.2854 2025/04/24 13:35:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3775,3 +3775,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/fcgi to 2.4.5 [wiz 2025-04-24]
 	Updated multimedia/mpv to 0.40.0 [leot 2025-04-24]
 	Updated editors/neovim to 0.11.0 [leot 2025-04-24]
+	Updated chat/ejabberd to 23.01 [gdt 2025-04-24]
