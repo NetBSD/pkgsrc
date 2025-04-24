@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/06/15 10:49:00 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/24 14:14:11 wiz Exp $
 
 R_PKGNAME=	jpeg
 R_PKGVER=	0.1-10
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

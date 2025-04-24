@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2013/04/06 15:46:37 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2025/04/24 14:15:15 wiz Exp $
 #
 
 .include "../../multimedia/libflash/Makefile.common"
 
 PKGNAME=	${DISTNAME:C/-/player-/}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	Standalone open source Flash(tm) player
 
 BUILD_DIRS=	Player

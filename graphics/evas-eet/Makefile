@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/11/12 13:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/24 14:14:16 wiz Exp $
 
 PKGNAME=	evas-eet-${EVAS_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 COMMENT=	Evas EET image loader
 
 EVAS_IMAGE_LOADERS=	eet

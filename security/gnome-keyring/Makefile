@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.111 2024/12/27 08:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/04/24 14:15:37 wiz Exp $
 
 DISTNAME=	gnome-keyring-3.36.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security gnome
 EXTRACT_SUFX=	.tar.xz
 

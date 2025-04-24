@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2025/01/06 21:49:21 ktnb Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/24 14:14:22 wiz Exp $
 
 DISTNAME=	grafx2-2.8.3132-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	https://gitlab.com/GrafX2/grafX2/-/jobs/2792657789/artifacts/raw/
 EXTRACT_SUFX=	.tgz

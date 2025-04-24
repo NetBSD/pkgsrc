@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/05/05 09:31:37 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/24 14:14:06 wiz Exp $
 
+PKGREVISION= 1
 .include "../../games/xonotic/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/xonotic-/xonotic-dedicated-/1}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.91 2025/04/19 07:58:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.92 2025/04/24 14:16:14 wiz Exp $
 
 BUILDLINK_TREE+=	kdelibs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdelibs
 KDELIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.0.0
-BUILDLINK_ABI_DEPENDS.kdelibs+=	kdelibs4>=4.14.38nb46
+BUILDLINK_ABI_DEPENDS.kdelibs+=	kdelibs4>=4.14.38nb47
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs4
 
 .include "../../archivers/bzip2/buildlink3.mk"

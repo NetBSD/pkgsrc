@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/02/12 06:45:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/24 14:14:05 wiz Exp $
 #
 
 DISTNAME=	wordwarvi-1.0.2
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=smcameron/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2025/04/17 21:53:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2025/04/24 14:16:17 wiz Exp $
 
 BUILDLINK_TREE+=	kitemviews
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kitemviews
 KITEMVIEWS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kitemviews+=	kitemviews>=5.18.0
-BUILDLINK_ABI_DEPENDS.kitemviews?=	kitemviews>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.kitemviews?=	kitemviews>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.kitemviews?=	../../x11/kitemviews
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

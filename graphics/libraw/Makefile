@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2023/04/11 06:10:54 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/24 14:14:30 wiz Exp $
 
 DISTNAME=	LibRaw-0.21.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.libraw.org/data/
 

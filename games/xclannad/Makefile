@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2025/01/06 21:49:19 ktnb Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/24 14:14:06 wiz Exp $
 #
 
 DISTNAME=	xclannad-7hc
 PKGNAME=	xclannad-0.07hc
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 #MASTER_SITES=	http://www.creator.club.ne.jp/~jagarl/
 MASTER_SITES=	http://teokurebsd.org/netbsd/packages/distfiles/xclannad/

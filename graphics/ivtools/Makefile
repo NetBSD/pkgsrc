@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2023/10/21 17:10:32 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2025/04/24 14:14:24 wiz Exp $
 
 DISTNAME=	ivtools-2.0.4a1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vectaport/}
 GITHUB_PROJECT=	ivtools

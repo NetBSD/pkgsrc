@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2024/08/25 06:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/04/24 14:15:59 wiz Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://ctwm.org/dist/
 EXTRACT_SUFX=	.tar.xz

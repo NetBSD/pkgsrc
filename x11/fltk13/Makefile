@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2025/03/14 16:00:40 micha Exp $
+# $NetBSD: Makefile,v 1.52 2025/04/24 14:16:09 wiz Exp $
 
 DISTNAME=	fltk-1.3.11-source
 PKGNAME=	${DISTNAME:S/-source//:S/fltk/fltk13/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
 GITHUB_PROJECT=	fltk

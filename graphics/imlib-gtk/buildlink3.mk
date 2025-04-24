@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/10/21 17:10:32 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/04/24 14:14:24 wiz Exp $
 
 BUILDLINK_TREE+=	imlib-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	imlib-gtk
 IMLIB_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.imlib-gtk+=	imlib-gtk>=1.9.15
-BUILDLINK_ABI_DEPENDS.imlib-gtk+=	imlib-gtk>=1.9.15nb11
+BUILDLINK_ABI_DEPENDS.imlib-gtk+=	imlib-gtk>=1.9.15nb12
 BUILDLINK_PKGSRCDIR.imlib-gtk?=		../../graphics/imlib-gtk
 
 .include "../../graphics/imlib/buildlink3.mk"

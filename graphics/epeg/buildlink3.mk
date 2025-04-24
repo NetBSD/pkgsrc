@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2013/01/26 21:36:26 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/04/24 14:14:16 wiz Exp $
 
 BUILDLINK_TREE+=	epeg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	epeg
 EPEG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.epeg+=	epeg>=0.9.0
-BUILDLINK_ABI_DEPENDS.epeg+=	epeg>=0.9.0nb4
+BUILDLINK_ABI_DEPENDS.epeg+=	epeg>=0.9.0nb5
 BUILDLINK_PKGSRCDIR.epeg?=	../../graphics/epeg
 
 .include "../../devel/libltdl/buildlink3.mk"

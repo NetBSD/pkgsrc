@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/12/28 09:09:47 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/24 14:14:25 wiz Exp $
 
 DISTNAME=	jbig2enc-0.30
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

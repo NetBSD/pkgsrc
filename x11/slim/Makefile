@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/11/12 13:24:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/24 14:16:32 wiz Exp $
 
 DISTNAME=	slim-1.4.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim-fork/}
 

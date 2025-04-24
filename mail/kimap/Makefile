@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/04/17 21:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/04/24 14:14:56 wiz Exp $
 
 DISTNAME=	kimap-${KAPPSVER}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

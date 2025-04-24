@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.229 2025/04/17 21:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.230 2025/04/24 14:16:10 wiz Exp $
 
 DISTNAME=		gnome-session-40.1.1
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R:R}/}
 EXTRACT_SUFX=		.tar.xz

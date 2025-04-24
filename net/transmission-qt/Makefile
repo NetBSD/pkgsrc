@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2025/04/19 07:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2025/04/24 14:15:29 wiz Exp $
 
 PKGNAME=	transmission-qt-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 COMMENT=	Free, lightweight BitTorrent client (QT version)
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common

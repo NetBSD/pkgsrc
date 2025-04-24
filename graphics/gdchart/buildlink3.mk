@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2024/07/11 19:53:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2025/04/24 14:14:18 wiz Exp $
 
 BUILDLINK_TREE+=	gdchart
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gdchart
 GDCHART_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gdchart+=	gdchart>=0.11.4nb1
-BUILDLINK_ABI_DEPENDS.gdchart+=	gdchart>=0.11.5nb26
+BUILDLINK_ABI_DEPENDS.gdchart+=	gdchart>=0.11.5nb27
 BUILDLINK_PKGSRCDIR.gdchart?=	../../graphics/gdchart
 
 .include "../../graphics/gd/buildlink3.mk"

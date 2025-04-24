@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2025/04/17 21:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/04/24 14:15:23 wiz Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
-PKGREVISION=	63
+PKGREVISION=	64
 CATEGORIES=	net
 #MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 EXTRACT_SUFX=	.tgz

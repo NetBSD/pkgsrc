@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2025/04/17 21:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/04/24 14:16:17 wiz Exp $
 
 DISTNAME=	kirigami2-${KF5VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

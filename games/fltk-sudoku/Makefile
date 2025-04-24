@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2023/11/12 13:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/24 14:13:55 wiz Exp $
 
 DISTNAME=	fltk-1.3.5-source
 PKGNAME=	${DISTNAME:S/fltk-/fltk-sudoku-/:S/-source//}
-PKGREVISION=	3
+PKGREVISION=	4
 VERS=		{DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	games x11
 MASTER_SITES=	https://fltk.org/pub/fltk/${VERS}/

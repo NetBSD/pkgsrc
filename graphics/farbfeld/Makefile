@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/14 11:32:47 leot Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/24 14:14:17 wiz Exp $
 
 DISTNAME=	farbfeld-4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://dl.suckless.org/farbfeld/
 

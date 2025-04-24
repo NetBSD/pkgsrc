@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/04/17 21:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/24 14:15:28 wiz Exp $
 
 DISTNAME=	qtwebsockets-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtwebsockets-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt6 module for websockets communication
 CATEGORIES=	net
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

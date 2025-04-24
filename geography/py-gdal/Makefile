@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2025/04/19 07:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/24 14:14:09 wiz Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 

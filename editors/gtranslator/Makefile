@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2025/04/17 21:50:35 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/04/24 14:13:44 wiz Exp $
 
 DISTNAME=	gtranslator-3.32.1
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtranslator/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

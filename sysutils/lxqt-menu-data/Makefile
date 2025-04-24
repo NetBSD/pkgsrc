@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/04/17 21:52:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/24 14:15:48 wiz Exp $
 
 DISTNAME=	lxqt-menu-data-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

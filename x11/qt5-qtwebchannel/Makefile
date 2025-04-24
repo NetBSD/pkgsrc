@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2025/04/17 21:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/04/24 14:16:30 wiz Exp $
 
 DISTNAME=	qtwebchannel-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebchannel-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Qt5 WebChannel module
 
 MAKE_ENV+=		QTDIR=${QTDIR}

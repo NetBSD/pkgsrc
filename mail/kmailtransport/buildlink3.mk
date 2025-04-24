@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/04/17 21:51:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/04/24 14:14:57 wiz Exp $
 
 BUILDLINK_TREE+=	kmailtransport
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kmailtransport
 KMAILTRANSPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kmailtransport+=	kmailtransport>=17.12.1
-BUILDLINK_ABI_DEPENDS.kmailtransport?=	kmailtransport>=23.08.4nb8
+BUILDLINK_ABI_DEPENDS.kmailtransport?=	kmailtransport>=23.08.4nb9
 BUILDLINK_PKGSRCDIR.kmailtransport?=	../../mail/kmailtransport
 
 .include "../../devel/kcmutils/buildlink3.mk"

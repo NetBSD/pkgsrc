@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2024/12/27 08:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/24 14:14:31 wiz Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-icon-theme-${VERSION:R}.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 
 COMMENT=	Collection of icons used as the basis for MATE themes

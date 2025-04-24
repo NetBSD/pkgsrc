@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2025/04/19 07:57:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2025/04/24 14:14:09 wiz Exp $
 
 BUILDLINK_TREE+=	proj
 
@@ -7,7 +7,7 @@ PROJ_BUILDLINK3_MK:=
 
 # Proj withdrew the old API with 8.0.0.
 BUILDLINK_API_DEPENDS.proj+=	proj>=8.0.0
-BUILDLINK_ABI_DEPENDS.proj+=	proj>=9.5.1nb2
+BUILDLINK_ABI_DEPENDS.proj+=	proj>=9.5.1nb3
 BUILDLINK_PKGSRCDIR.proj?=	../../geography/proj
 
 .include "../../databases/sqlite3/buildlink3.mk"

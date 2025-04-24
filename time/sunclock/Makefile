@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/08/01 18:50:45 vins Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/24 14:15:58 wiz Exp $
 #
 
 DISTNAME=	sunclock-3.57
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	https://raw.githubusercontent.com/nongiach/Sunclock/f4106eb0a81f7594726d6b2859efd8fc64cc1225/
 EXTRACT_SUFX=	.tar.bz2

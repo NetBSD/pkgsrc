@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2025/04/17 21:51:18 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/04/24 14:14:51 wiz Exp $
 
 .include "../../inputmethod/input-pad/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	39
+PKGREVISION=	40
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python wrapper for Input Pad

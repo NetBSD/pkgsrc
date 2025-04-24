@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.39 2025/04/17 21:52:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2025/04/24 14:16:14 wiz Exp $
 
 BUILDLINK_TREE+=	kconfigwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kconfigwidgets
 KCONFIGWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kconfigwidgets+=	kconfigwidgets>=5.19.0
-BUILDLINK_ABI_DEPENDS.kconfigwidgets?=	kconfigwidgets>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.kconfigwidgets?=	kconfigwidgets>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.kconfigwidgets?=	../../x11/kconfigwidgets
 
 .include "../../devel/kconfig/buildlink3.mk"
