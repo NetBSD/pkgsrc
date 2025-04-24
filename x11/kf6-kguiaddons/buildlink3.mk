@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/04/17 21:52:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/04/24 14:16:15 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kguiaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kguiaddons
 KF6_KGUIADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kguiaddons+=	kf6-kguiaddons>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kguiaddons?=	kf6-kguiaddons>=6.8.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-kguiaddons?=	kf6-kguiaddons>=6.8.0nb2
 BUILDLINK_PKGSRCDIR.kf6-kguiaddons?=	../../x11/kf6-kguiaddons
 
 .include "../../devel/wayland/platform.mk"

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.185 2025/04/19 07:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2025/04/24 14:14:07 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 #PKGREVISION=	0

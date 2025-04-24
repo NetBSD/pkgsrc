@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.72 2024/12/30 21:50:52 pin Exp $
+# $NetBSD: Makefile,v 1.73 2025/04/24 14:16:01 wiz Exp $
 
 DISTNAME=	release-0.3.2
 GITHUB_PROJECT=	pekwm
 GITHUB_TAG=	refs/tags/release-0.3.2
 PKGNAME=	${GITHUB_PROJECT}-0.3.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pekdon/}
 

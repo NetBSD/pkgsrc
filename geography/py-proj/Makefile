@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2025/04/19 07:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/04/24 14:14:09 wiz Exp $
 
 DISTNAME=	pyproj-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproj/}
 

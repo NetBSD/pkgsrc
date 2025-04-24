@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/10/21 17:10:23 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/24 14:14:13 wiz Exp $
 
 DISTNAME=	cnxtutil-0.00-alpha
 PKGNAME=	cnxtview-0.00a
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://home.384.jp/takam/bsd/
 

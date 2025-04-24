@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/04/17 21:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/04/24 14:15:54 wiz Exp $
 
 DISTNAME=	dikt-2v
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc x11
 MASTER_SITES=	${MASTER_SITE_GITLAB:=-/project/46530021/uploads/755d2ad7b4979d3206a3a5a49de78141/}
 EXTRACT_SUFX=	.txz

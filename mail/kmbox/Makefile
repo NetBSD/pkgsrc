@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2025/04/17 21:51:27 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/24 14:14:57 wiz Exp $
 
 DISTNAME=	kmbox-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

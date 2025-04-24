@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/04/17 21:51:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2025/04/24 14:14:27 wiz Exp $
 
 BUILDLINK_TREE+=	kiconthemes
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kiconthemes
 KICONTHEMES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kiconthemes+=	kiconthemes>=5.19.0
-BUILDLINK_ABI_DEPENDS.kiconthemes?=	kiconthemes>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.kiconthemes?=	kiconthemes>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.kiconthemes?=	../../graphics/kiconthemes
 
 .include "../../x11/kconfigwidgets/buildlink3.mk"

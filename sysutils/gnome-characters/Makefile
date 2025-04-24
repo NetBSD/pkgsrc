@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/04/17 21:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/24 14:15:45 wiz Exp $
 
 DISTNAME=	gnome-characters-3.34.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	sysutils gnome
 EXTRACT_SUFX=	.tar.xz
 
