@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2025/04/17 21:50:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2025/04/24 14:13:35 wiz Exp $
 
 BUILDLINK_TREE+=	kpackage
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kpackage
 KPACKAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kpackage+=	kpackage>=5.19.0
-BUILDLINK_ABI_DEPENDS.kpackage?=	kpackage>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.kpackage?=	kpackage>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.kpackage?=		../../devel/kpackage
 
 .include "../../archivers/karchive/buildlink3.mk"
