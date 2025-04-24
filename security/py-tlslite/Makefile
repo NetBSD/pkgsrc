@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2022/01/10 19:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/24 08:16:33 wiz Exp $
 
 DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=trevp/}
-
 GITHUB_PROJECT=		tlslite
 GITHUB_TAG=		cd82fadb6bb958522b7457c5ed95890283437a4f
 
@@ -13,6 +12,9 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://web.archive.org/web/20190101103952/http://trevp.net/tlslite/
 COMMENT=		SSL 3.0, TLS 1.0, and TLS 1.1 in Python
 LICENSE=		public-domain
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=		${PYPKGPREFIX}-pyasyncore>=0:../../devel/py-pyasyncore
 
 USE_LANGUAGES=		# none
 
@@ -28,6 +30,6 @@ SUBST_FILES.pyclash=	setup.py tests/tlstest.py tests/httpsserver.sh
 SUBST_VARS.pyclash=	PYTHONBIN
 SUBST_VARS.pyclash+=	PYVERSSUFFIX
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
