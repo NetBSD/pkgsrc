@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/24 16:32:18 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/04/24 17:03:42 nia Exp $
 
 BUILDLINK_TREE+=	openal-soft
 
@@ -32,7 +32,7 @@ OPENAL_USE_CXX?=	yes
 .  include "../../mk/compiler.mk"
 .  if ${CC_VERSION:Mgcc-4.*}
 OPENAL_USE_CXX?=	no
-.  elif ${CC_VERSION:Mgcc-[56].*}
+.  elif ${CC_VERSION:Mgcc-[567].*}
 .    include "../../audio/openal-soft-cxx14/buildlink3.mk"
 .  endif
 .endif
