@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2022/10/15 18:20:40 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.60 2025/04/24 13:35:29 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -80,6 +80,7 @@ lib/${PKGNAME}/ebin/ejabberd_update.beam
 lib/${PKGNAME}/ebin/ejabberd_web.beam
 lib/${PKGNAME}/ebin/ejabberd_web_admin.beam
 lib/${PKGNAME}/ebin/ejabberd_websocket.beam
+lib/${PKGNAME}/ebin/ejabberd_websocket_codec.beam
 lib/${PKGNAME}/ebin/ejabberd_xmlrpc.beam
 lib/${PKGNAME}/ebin/ejd2sql.beam
 lib/${PKGNAME}/ebin/eldap.beam
@@ -163,6 +164,9 @@ lib/${PKGNAME}/ebin/mod_mix_pam_opt.beam
 lib/${PKGNAME}/ebin/mod_mix_pam_sql.beam
 lib/${PKGNAME}/ebin/mod_mix_sql.beam
 lib/${PKGNAME}/ebin/mod_mqtt.beam
+lib/${PKGNAME}/ebin/mod_mqtt_bridge.beam
+lib/${PKGNAME}/ebin/mod_mqtt_bridge_opt.beam
+lib/${PKGNAME}/ebin/mod_mqtt_bridge_session.beam
 lib/${PKGNAME}/ebin/mod_mqtt_mnesia.beam
 lib/${PKGNAME}/ebin/mod_mqtt_opt.beam
 lib/${PKGNAME}/ebin/mod_mqtt_session.beam
@@ -276,11 +280,9 @@ lib/${PKGNAME}/ebin/translate.beam
 lib/${PKGNAME}/ebin/win32_dns.beam
 lib/${PKGNAME}/ebin/xml_compress.beam
 lib/${PKGNAME}/include/ELDAPv3.hrl
-lib/${PKGNAME}/include/adhoc.hrl
 lib/${PKGNAME}/include/bosh.hrl
 lib/${PKGNAME}/include/ejabberd_auth.hrl
 lib/${PKGNAME}/include/ejabberd_commands.hrl
-lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/${PKGNAME}/include/ejabberd_http.hrl
 lib/${PKGNAME}/include/ejabberd_oauth.hrl
@@ -307,7 +309,6 @@ lib/${PKGNAME}/include/mod_push.hrl
 lib/${PKGNAME}/include/mod_roster.hrl
 lib/${PKGNAME}/include/mod_shared_roster.hrl
 lib/${PKGNAME}/include/mod_vcard.hrl
-lib/${PKGNAME}/include/mod_vcard_xupdate.hrl
 lib/${PKGNAME}/include/mqtt.hrl
 lib/${PKGNAME}/include/pubsub.hrl
 lib/${PKGNAME}/include/translate.hrl
@@ -373,6 +374,4 @@ share/doc/ejabberd/COPYING
 share/examples/ejabberd/ejabberd.yml
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
-@pkgdir var/spool/ejabberd
-@pkgdir var/log/ejabberd
 @pkgdir bin
