@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2848 2025/04/24 06:56:22 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2849 2025/04/24 08:05:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3770,3 +3770,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cross/ppc-morphos-gcc-10 to 10.4.0 [js 2025-04-24]
 	Updated devel/py-setuptools to 79.0.1 [adam 2025-04-24]
 	Updated devel/py-setuptools_scm to 8.3.1 [adam 2025-04-24]
+	Removed devel/py-typing [adam 2025-04-24]
