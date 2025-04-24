@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/12/13 14:20:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/24 14:14:24 wiz Exp $
 
 DISTNAME=	irrlicht-1.8.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=irrlicht/}
 EXTRACT_SUFX=	.zip

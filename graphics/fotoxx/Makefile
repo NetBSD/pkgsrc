@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2024/12/27 08:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/04/24 14:14:18 wiz Exp $
 #
 
 DISTNAME=	fotoxx-16.02.1
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kornelix.com/downloads/tarballs/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/03/14 15:36:44 micha Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/24 14:13:55 wiz Exp $
 
 DISTNAME=	eureka-2.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ioan-chera/}
 GITHUB_PROJECT=	eureka-editor

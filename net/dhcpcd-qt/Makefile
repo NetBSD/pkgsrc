@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2025/04/17 21:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/24 14:15:22 wiz Exp $
 #
 
 PKGNAME=		dhcpcd-qt-${DHCPCD_UI_VERSION}
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		net
 
 COMMENT=		Qt system tray monitor for dhcpcd

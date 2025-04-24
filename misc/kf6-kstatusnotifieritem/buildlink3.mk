@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/04/17 21:51:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/04/24 14:15:07 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kstatusnotifieritem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kstatusnotifieritem
 KF6_KSTATUSNOTIFIERITEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kstatusnotifieritem+=	kf6-kstatusnotifieritem>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kstatusnotifieritem?=	kf6-kstatusnotifieritem>=6.8.0nb1
+BUILDLINK_ABI_DEPENDS.kf6-kstatusnotifieritem?=	kf6-kstatusnotifieritem>=6.8.0nb2
 BUILDLINK_PKGSRCDIR.kf6-kstatusnotifieritem?=	../../misc/kf6-kstatusnotifieritem
 
 .include "../../x11/kf6-kwindowsystem/buildlink3.mk"

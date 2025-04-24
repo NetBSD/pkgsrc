@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/08/14 06:14:56 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/24 14:14:15 wiz Exp $
 
+PKGREVISION= 1
 .include "../../graphics/djvulibre-lib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-lib-/}

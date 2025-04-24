@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2025/04/17 21:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/04/24 14:15:56 wiz Exp $
 #
 
 DISTNAME=	xml2doc-20030510
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml2doc.sourceforge.net/src/
 EXTRACT_SUFX=	.tgz

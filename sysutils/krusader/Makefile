@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2025/04/17 21:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/04/24 14:15:47 wiz Exp $
 
 DISTNAME=	krusader-2.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_KDE:=krusader/${PKGVERSION_NOREV}/}
 LICENSE=	gnu-gpl-v2

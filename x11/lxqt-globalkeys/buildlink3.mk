@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2025/04/17 21:53:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2025/04/24 14:16:20 wiz Exp $
 
 BUILDLINK_TREE+=	lxqt-globalkeys
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lxqt-globalkeys
 LXQT_GLOBALKEYS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lxqt-globalkeys+=	lxqt-globalkeys>=2.0.0
-BUILDLINK_ABI_DEPENDS.lxqt-globalkeys?=	lxqt-globalkeys>=2.1.0nb1
+BUILDLINK_ABI_DEPENDS.lxqt-globalkeys?=	lxqt-globalkeys>=2.1.0nb2
 BUILDLINK_PKGSRCDIR.lxqt-globalkeys?=	../../x11/lxqt-globalkeys
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

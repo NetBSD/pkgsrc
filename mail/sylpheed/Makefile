@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.194 2024/12/27 08:20:16 wiz Exp $
+# $NetBSD: Makefile,v 1.195 2025/04/24 14:14:58 wiz Exp $
 
 DISTNAME=	sylpheed-3.7.0
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v3.7/
 EXTRACT_SUFX=	.tar.bz2

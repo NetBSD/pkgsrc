@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2024/12/27 08:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2025/04/24 14:16:10 wiz Exp $
 
 DISTNAME=	gnome-terminal-3.36.2
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-terminal/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	x11 gnome
 EXTRACT_SUFX=	.tar.xz
 

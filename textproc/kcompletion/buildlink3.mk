@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2025/04/17 21:52:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2025/04/24 14:15:55 wiz Exp $
 
 BUILDLINK_TREE+=	kcompletion
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcompletion
 KCOMPLETION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcompletion+=	kcompletion>=5.18.0
-BUILDLINK_ABI_DEPENDS.kcompletion?=	kcompletion>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.kcompletion?=	kcompletion>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.kcompletion?=	../../textproc/kcompletion
 
 .include "../../devel/kconfig/buildlink3.mk"

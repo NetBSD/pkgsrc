@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2024/01/26 15:58:44 gdt Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/24 14:14:14 wiz Exp $
 #
 # Changes can be found in the RCS file at
 # http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
 
 DISTNAME=	dcraw-9.28.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.dechifro.org/dcraw/archive/
 

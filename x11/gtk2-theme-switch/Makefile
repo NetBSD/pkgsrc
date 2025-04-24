@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2024/12/27 08:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/04/24 14:16:12 wiz Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		48
+PKGREVISION=		49
 CATEGORIES=		x11
 MASTER_SITES=		http://www.muhri.net/
 

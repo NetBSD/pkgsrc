@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/17 21:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/24 14:15:38 wiz Exp $
 
 DISTNAME=	kauth-${KF6VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks

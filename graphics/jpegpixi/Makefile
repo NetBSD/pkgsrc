@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2022/09/20 07:00:55 nia Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/24 14:14:25 wiz Exp $
 
 DISTNAME=		jpegpixi-1.1.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 # upstream is nonfunctional
 MASTER_SITES=		${MASTER_SITE_BACKUP}
