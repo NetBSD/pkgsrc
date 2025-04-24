@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/13 15:28:08 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/24 17:11:54 pin Exp $
 
 DISTNAME=	spotifyd-0.4.1
 CATEGORIES=	audio
@@ -11,6 +11,9 @@ COMMENT=	Open source Spotify client running as a UNIX daemon
 LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 RUST_REQ=	1.82.0
 
