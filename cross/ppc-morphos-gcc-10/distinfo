@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.4 2022/04/15 16:56:08 tnn Exp $
+$NetBSD: distinfo,v 1.5 2025/04/24 02:48:56 js Exp $
 
-BLAKE2s (sdk-source-20210211.tar.xz) = 2beb02bed78ad24be545f436bcfe0af2cfec716c3c7a8b4c2a5a6f98c20f597b
-SHA512 (sdk-source-20210211.tar.xz) = 7f4fcd370c2b57765ae81807ef66a54de4f44ef2bcc5659902e3097f7f834bfd29bc608e72c738c82b446d903c578f49f2fe7c0c22d62ef60a5cef8911944a33
-Size (sdk-source-20210211.tar.xz) = 565963672 bytes
+BLAKE2s (sdk-source-20230510.tar.xz) = 777febe845ddbf50cbaec55c2d198085996a5064bc3c4128f44dfe79355d765e
+SHA512 (sdk-source-20230510.tar.xz) = badf3e678d514713ece14779dcce5fe78f3a849c73718e05b3317c1c766fb9879368c8fd58f9441c905023a660e893cf0eec405d2c133e4c6d11fe39acc50418
+Size (sdk-source-20230510.tar.xz) = 588551012 bytes
 SHA1 (patch-config_override.m4) = 1ee0186b006a987dc57151a9d112654eabd24db9
 SHA1 (patch-gcc_config_host-darwin.c) = 62d75a4ce61a0ae42a756c9fd1476a329bb44600
-SHA1 (patch-gcc_config_rs6000_morphos.h) = c3702354f0dea476ba1516896e67b857dbfe7700
+SHA1 (patch-gcc_config_rs6000_morphos.h) = c788e480f3f510b61292f5b1ec5b84646b33ab93
+SHA1 (patch-include_safe-ctype.h) = 1bc66b5e78d928fab522b7b6875cf7709aaeb808
 SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
 SHA1 (patch-libstdc++-v3_configure.ac) = 4db5bf349ca5ca8315eb1b9baf3cadd5f463e8b4
 SHA1 (patch-libstdc++-v3_crossconfig.m4) = 0d0d20f9a1444bd77520decd275ac22d2a6e4890
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 0234e780171554bf60858b884ab1181cad36f8b2
+SHA1 (patch-zlib_zutil.c) = 33a75b615f4d43c628450f8f3743a00a1a050c3e

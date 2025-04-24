@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/07/25 15:06:25 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/24 02:48:56 js Exp $
 gg/bin/ppc-morphos-c++-10
 gg/bin/ppc-morphos-cpp-10
 gg/bin/ppc-morphos-g++-10
@@ -83,7 +83,6 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/hash_bytes.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/hashtable.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/hashtable_policy.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/indirect_array.h
-gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/int_limits.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/invoke.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/ios_base.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/include/c++/bits/istream.tcc
@@ -1130,6 +1129,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/gimple.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/gimplify-me.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/gimplify.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/glimits.h
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/gomp-constants.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/graph.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/graphds.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/graphite.h
@@ -1164,6 +1164,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-addr.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-attr-common.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-attr.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-codes.h
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-config.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-constants.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-flags.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/insn-modes-inline.h
