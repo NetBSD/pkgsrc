@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/08/30 21:46:33 js Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/24 02:48:56 js Exp $
 
-DISTNAME=	sdk-source-20210211
-PKGNAME=	ppc-morphos-gcc-10-10.2.0
-PKGREVISION=	1
+DISTNAME=	sdk-source-20230510
+PKGNAME=	ppc-morphos-gcc-10-10.4.0
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
 EXTRACT_SUFX=	.tar.xz
@@ -61,8 +60,9 @@ pre-patch:
 post-patch:
 	# Change /gg to ${PREFIX}/gg
 	${RUN} cd ${WRKSRC} && \
-		gsed -i 's,/gg/,${PREFIX}/gg/,g' gcc/config/rs6000/morphos.h && \
-		gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
+		${PREFIX}/bin/gsed -i 's,/gg/,${PREFIX}/gg/,g' \
+			gcc/config/rs6000/morphos.h && \
+		${PREFIX}/bin/gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
 	${RUN} cd ${WRKSRC}/libcc1 && autoreconf
 	${RUN} cd ${WRKSRC}/libstdc++-v3 && autoreconf
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
