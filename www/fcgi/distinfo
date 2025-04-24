@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:29:26 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/04/24 10:13:19 wiz Exp $
 
-BLAKE2s (fcgi-2.4.0.tar.gz) = b7ad23adc8b6fda0a6c09d0dece60bb9a5cb60eada5565212424757d1dbd2024
-SHA512 (fcgi-2.4.0.tar.gz) = 38164d11112e834b30c6f809da4e184021e8d22ec8db2c49ad827895a75b99dc1824b94831304aa0ae1174176fe64d02a12882b1a00b780119600bdc39a90927
-Size (fcgi-2.4.0.tar.gz) = 468682 bytes
-SHA1 (patch-aa) = 13577b77ae3d124a5f27be0e456b470180c99550
-SHA1 (patch-libfcgi_fcgio.cpp) = 542e620fd252d80696d6b53e34a65998c6545ad5
-SHA1 (patch-libfcgi_os_unix.c) = c9c8245cadeddf7de75f2b7fceb5e85d53921f9c
+BLAKE2s (fcgi2-2.4.5.tar.gz) = b061aeab648182827966d7c9a1ff2d8fcf80a4769957b655cfa63d2db11425f1
+SHA512 (fcgi2-2.4.5.tar.gz) = 64fc91a3681f635b416d0b4578bb3bc83a7ec98099e97c1b6971210ae2419038bf0f667c7efda1f3290df77f557002fe521052150b749679f9b874dd37ca8ef4
+Size (fcgi2-2.4.5.tar.gz) = 263973 bytes
+SHA1 (patch-configure.ac) = 8752fe826746f3d5b1cfad827e608fd90afb35e5
