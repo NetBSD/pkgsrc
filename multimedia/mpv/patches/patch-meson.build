@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.4 2024/10/20 09:28:29 leot Exp $
+$NetBSD: patch-meson.build,v 1.5 2025/04/24 10:26:30 leot Exp $
 
 - Instruct about NetBSD pthread_setname_np(3).
   Maybe pthread_setname_np(3) should be checked in order to distinguish
@@ -7,9 +7,9 @@ $NetBSD: patch-meson.build,v 1.4 2024/10/20 09:28:29 leot Exp $
 - Enable support for DRM on NetBSD.
 - Install configuration files to examples, per pkgsrc conventions.
 
---- meson.build.orig	2024-09-23 17:36:41.000000000 +0000
+--- meson.build.orig	2025-03-25 17:33:27.000000000 +0000
 +++ meson.build
-@@ -300,6 +300,7 @@ if cc.has_multi_arguments('-Wformat', '-
+@@ -312,6 +312,7 @@ if cc.get_id() == 'gcc'
  endif
  
  darwin = host_machine.system() == 'darwin'
@@ -17,7 +17,7 @@ $NetBSD: patch-meson.build,v 1.4 2024/10/20 09:28:29 leot Exp $
  win32 = host_machine.system() == 'cygwin' or host_machine.system() == 'windows'
  posix = not win32
  
-@@ -552,14 +553,17 @@ features += {'wsdisplay-usl-io.h': cc.ha
+@@ -555,14 +556,17 @@ features += {'wsdisplay-usl-io.h': cc.ha
  # macOS's pthread_setname_np is a special snowflake and differs from literally every other platform.
  features += {'mac-thread-name': darwin}
  
@@ -37,8 +37,8 @@ $NetBSD: patch-meson.build,v 1.4 2024/10/20 09:28:29 leot Exp $
      features += {'bsd-thread-name': posix and cc.has_function('pthread_set_name_np', dependencies: pthreads,
                                                                prefix: '#include <pthread.h>\n#include <pthread_np.h>')}
  endif
-@@ -1798,7 +1802,7 @@ if get_option('cplayer')
-     install_data('etc/_mpv.zsh', install_dir: zsh_install_dir, rename: '_mpv')
+@@ -1803,7 +1807,7 @@ if get_option('cplayer')
+     install_data('etc/mpv.fish', install_dir: fish_install_dir, rename: 'mpv.fish')
  
      install_data('etc/mpv.metainfo.xml', install_dir: join_paths(datadir, 'metainfo'))
 -    install_data('etc/encoding-profiles.conf', install_dir: join_paths(confdir, 'mpv'))
