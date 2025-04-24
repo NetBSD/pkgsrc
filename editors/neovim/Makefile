@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/02/07 07:50:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/24 12:50:18 leot Exp $
 
-DISTNAME=	neovim-0.10.4
+DISTNAME=	neovim-0.11.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,17 +16,15 @@ USE_TOOLS+=	pkg-config gettext
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	desktop
-.if ${SHLIB_TYPE} == "dylib"
-SHLIB_EXT=	dylib
-.else
-SHLIB_EXT=	so
+.if ${OPSYS} != "Darwin"
 PLIST.desktop=	yes
 .endif
 
+PRINT_PLIST_AWK+=	{ gsub(/^share\/applications\/nvim\.desktop$$/, "$${PLIST.desktop}&"); }
+
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TRANSLATIONS=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_BUNDLED=OFF
-CMAKE_CONFIGURE_ARGS+=	-DLIBVTERM_LIBRARY=${BUILDLINK_PREFIX.libvterm03}/lib/libvterm03/libvterm.${SHLIB_EXT}
-CMAKE_CONFIGURE_ARGS+=	-DLIBVTERM_INCLUDE_DIR=${BUILDLINK_PREFIX.libvterm03}/include/libvterm03
 
 LDFLAGS.SunOS+=		-lrt
 
@@ -54,17 +52,15 @@ post-install:
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../converters/utf8proc/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .if ${OPSYS} == "SunOS"
 .  include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../devel/libuv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libvterm03+=	libvterm03>=0.3.3
-.include "../../devel/libvterm03/buildlink3.mk"
 .include "../../devel/lua-lpeg/buildlink3.mk"
 .include "../../devel/lua-luv/buildlink3.mk"
-.include "../../devel/msgpack/buildlink3.mk"
 .include "../../devel/unibilium/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/lua/luaversion.mk"
