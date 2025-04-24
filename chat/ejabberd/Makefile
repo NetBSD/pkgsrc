@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2025/04/24 13:35:29 gdt Exp $
+# $NetBSD: Makefile,v 1.104 2025/04/24 13:49:39 gdt Exp $
 
 DISTNAME=	ejabberd-23.01
 # later releases:
@@ -38,16 +38,6 @@ CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-# rebar crashes; probably this is just objecting to the proxy value
-# being malformed, rather than trying to use the network.  Avoid the
-# issue until pkgsrc fixes the disable method to block access without
-# triggering errors when not used.
-# Uncaught error: {error,{bad_option,https_proxy,
-#                                    {{"downloads-forbidden-except-during-fetch",
-#                                      []},
-#                                     []}}}
-ALLOW_NETWORK_ACCESS=	yes
-
 DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
 DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
@@ -79,7 +69,7 @@ DEPENDS+=	erlang-yconf>=1.0.13:../../textproc/erlang-yconf
 RCD_SCRIPTS=		ejabberd
 
 BUILD_DEFS+=		EJABBERD_USER EJABBERD_GROUP EJABBERD_LOGDIR
-BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB EJABBERD_TRANSDIR
+BUILD_DEFS+=		EJABBERD_PIDDIR EJABBERD_DB
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
 
