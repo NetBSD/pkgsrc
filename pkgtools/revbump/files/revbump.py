@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.10 2025/04/22 10:38:18 wiz Exp $
+# $NetBSD: revbump.py,v 1.11 2025/04/24 14:13:31 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -160,8 +160,7 @@ def extract_includes(path):
             if m := bl3_include_re.match(entry):
                 file_path = m.group(1)
                 file_name = m.group(2)
-                if file_path.find('/mk/') != -1 and file_path.find('/mk/krb5.buildlink3.mk') == -1:
-                    print(f'skipping {file_path}')
+                if file_path.find('/mk/') != -1 and file_path.find('/mk/krb5.buildlink3.mk') == -1 and file_path.find('/mk/jpeg.buildlink3.mk') == -1:
                     continue
                 if len(file_path) == 0:
                     file_path = '../../' + relative[:relative.rfind('/')+1]
@@ -207,6 +206,8 @@ if not args.recursive:
 
 if args.package == 'lang/go':
     searchlist = ['lang/go/version.mk']
+elif args.package == 'mk/jpeg.buildlink3.mk':
+    searchlist = ['mk/jpeg.buildlink3.mk']
 elif args.package == 'mk/krb5.buildlink3.mk':
     searchlist = ['mk/krb5.buildlink3.mk']
 else:
