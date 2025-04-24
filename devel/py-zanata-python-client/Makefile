@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/07/20 22:08:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/24 07:17:19 wiz Exp $
 
 DISTNAME=	zanata-python-client-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zanata/}
 GITHUB_PROJECT=	zanata-python-client
@@ -12,22 +13,18 @@ HOMEPAGE=	http://zanata.org/
 COMMENT=	Zanata translation service client written in Python
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-minimock-[0-9]*:../../devel/py-minimock
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 
-PYTHON_VERSIONS_INCOMPATIBLE= 27
 USE_LANGUAGES=	# none
 
 # as of 1.5.3
-# 21 failed, 18 passed
-# probably because it would need a proper zanata server for testing
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} py.test-${PYVERSSUFFIX}
+# 1 error
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
