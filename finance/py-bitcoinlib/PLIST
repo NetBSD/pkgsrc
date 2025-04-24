@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/06 16:27:44 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2025/04/24 07:03:57 wiz Exp $
 ${PYSITELIB}/bitcoin/__init__.py
 ${PYSITELIB}/bitcoin/__init__.pyc
 ${PYSITELIB}/bitcoin/__init__.pyo
@@ -121,3 +116,8 @@ ${PYSITELIB}/bitcoin/tests/test_wallet.pyo
 ${PYSITELIB}/bitcoin/wallet.py
 ${PYSITELIB}/bitcoin/wallet.pyc
 ${PYSITELIB}/bitcoin/wallet.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
