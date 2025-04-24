@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.22 2020/12/19 10:48:13 nia Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/24 10:13:19 wiz Exp $
 
-DISTNAME=		fcgi-2.4.0
-PKGREVISION=		3
+DISTNAME=		fcgi2-2.4.5
+PKGNAME=		${DISTNAME:S/fcgi2/fcgi/}
 CATEGORIES=		www devel
-#MASTER_SITES=		http://fastcgi.com/dist/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=FastCGI-Archives/}
+GITHUB_PROJECT=		fcgi2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://fastcgi-archives.github.io/
+HOMEPAGE=		https://github.com/FastCGI-Archives/fcgi2
 COMMENT=		FastCGI application development kit
 
-MAKE_JOBS_SAFE=		no
-
 USE_LANGUAGES=		c c++
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
-PTHREAD_OPTS+=		require
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake autoreconf
 
-LIBS.NetBSD+=		-lm # frexp()
+PKGCONFIG_OVERRIDE+=	*.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
