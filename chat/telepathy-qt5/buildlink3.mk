@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2025/04/17 21:49:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2025/04/24 14:13:23 wiz Exp $
 
 BUILDLINK_TREE+=	telepathy-qt5
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	telepathy-qt5
 TELEPATHY_QT5_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.telepathy-qt5+=	telepathy-qt5>=0.9.8
-BUILDLINK_ABI_DEPENDS.telepathy-qt5+=	telepathy-qt5>=0.9.8nb26
+BUILDLINK_ABI_DEPENDS.telepathy-qt5+=	telepathy-qt5>=0.9.8nb27
 BUILDLINK_PKGSRCDIR.telepathy-qt5?=	../../chat/telepathy-qt5
 
 .include "../../chat/telepathy-farstream/buildlink3.mk"

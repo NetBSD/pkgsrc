@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2025/03/17 13:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.63 2025/04/24 14:13:26 wiz Exp $
 
 DISTNAME=	accerciser-3.38.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
