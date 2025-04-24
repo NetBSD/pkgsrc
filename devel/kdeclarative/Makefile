@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2025/04/17 21:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/04/24 14:13:31 wiz Exp $
 
 DISTNAME=	kdeclarative-${KF5VER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

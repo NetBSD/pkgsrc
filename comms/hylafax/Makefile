@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/01/23 23:41:20 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2025/04/24 14:13:24 wiz Exp $
 
 # This package used to have a complicated upstream situation.  One
 # upstream is "hylafax.org"; the last release was 6.0.7 on 2018-09-18.
@@ -10,7 +10,7 @@
 # \todo Switch to the sourceforge (Lee Howard <faxguy>) upstream.
 DISTNAME=	hylafax-6.0.7
 #DISTNAME=	hylafax-7.0.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hylafax/}

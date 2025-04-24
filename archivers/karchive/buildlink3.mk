@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2025/04/17 21:49:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2025/04/24 14:13:08 wiz Exp $
 
 BUILDLINK_TREE+=	karchive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	karchive
 KARCHIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.karchive+=	karchive>=5.18.0
-BUILDLINK_ABI_DEPENDS.karchive?=	karchive>=5.116.0nb5
+BUILDLINK_ABI_DEPENDS.karchive?=	karchive>=5.116.0nb6
 BUILDLINK_PKGSRCDIR.karchive?=		../../archivers/karchive
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

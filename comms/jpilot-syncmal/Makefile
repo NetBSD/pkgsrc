@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2024/12/27 08:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/04/24 14:13:24 wiz Exp $
 
 DISTNAME=		jpilot-syncmal-0.80
-PKGREVISION=		44
+PKGREVISION=		45
 CATEGORIES=		comms
 MASTER_SITES=		https://www.jlogday.com/code/syncmal/archive/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/05/20 13:03:49 gdt Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/24 14:13:24 wiz Exp $
 
 DISTNAME=	xtel-3.3.0
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	comms x11
 MASTER_SITES=	http://pficheux.free.fr/xtel/download/ # https times out
 

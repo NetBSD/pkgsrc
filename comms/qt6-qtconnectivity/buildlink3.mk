@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/17 21:49:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/04/24 14:13:24 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtconnectivity
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtconnectivity
 QT6_QTCONNECTIVITY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtconnectivity+=	qt6-qtconnectivity>=6.5.2
-BUILDLINK_ABI_DEPENDS.qt6-qtconnectivity+=	qt6-qtconnectivity>=6.8.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtconnectivity+=	qt6-qtconnectivity>=6.8.3nb2
 BUILDLINK_PKGSRCDIR.qt6-qtconnectivity?=	../../comms/qt6-qtconnectivity
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
