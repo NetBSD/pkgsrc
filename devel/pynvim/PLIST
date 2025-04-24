@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/10 15:32:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/24 07:57:43 wiz Exp $
 ${PYSITELIB}/neovim/__init__.py
 ${PYSITELIB}/neovim/__init__.pyc
 ${PYSITELIB}/neovim/__init__.pyo
 ${PYSITELIB}/neovim/api/__init__.py
 ${PYSITELIB}/neovim/api/__init__.pyc
 ${PYSITELIB}/neovim/api/__init__.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pynvim/__init__.py
 ${PYSITELIB}/pynvim/__init__.pyc
