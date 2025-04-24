@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2025/04/17 21:49:43 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/04/24 14:13:10 wiz Exp $
 
 DISTNAME=	buzztrax-0.10.2
-PKGREVISION=	39
+PKGREVISION=	40
 CATEGORIES=	audio
 MASTER_SITES=	https://files.buzztrax.org/releases/
 

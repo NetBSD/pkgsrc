@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/04/17 21:49:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/04/24 14:13:16 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtspeech
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtspeech
 QT6_QTSPEECH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtspeech+=	qt6-qtspeech>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtspeech+=	qt6-qtspeech>=6.8.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtspeech+=	qt6-qtspeech>=6.8.3nb2
 BUILDLINK_PKGSRCDIR.qt6-qtspeech?=	../../audio/qt6-qtspeech
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"

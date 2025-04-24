@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2022/04/24 21:50:48 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/24 14:13:30 wiz Exp $
 
 DISTNAME=	hdf-4.2.15
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF/releases/HDF${PKGVERSION_NOREV}/src/
 EXTRACT_SUFX=	.tar.bz2
