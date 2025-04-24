@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2846 2025/04/23 18:34:34 osa Exp $
+$NetBSD: CHANGES-2025,v 1.2847 2025/04/24 02:49:09 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3767,3 +3767,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-legacy-cgi to 2.6.3 [adam 2025-04-23]
 	Updated www/nginx to 1.28.0 [osa 2025-04-23]
 	Updated www/nginx-devel to 1.28.0 [osa 2025-04-23]
+	Updated cross/ppc-morphos-gcc-10 to 10.4.0 [js 2025-04-24]
