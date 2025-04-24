@@ -1,19 +1,14 @@
-$NetBSD: patch-ae,v 1.23 2024/08/23 12:59:05 gdt Exp $
+$NetBSD: patch-ae,v 1.24 2025/04/24 13:35:29 gdt Exp $
 
-- Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
   and AIX where Erlang relies on $HOME set correctly. Use a portable
   su arg order while at it.
-- At least SunOS has not wheel group.
-  + \todo wheel is not patched out - explain/fix
-- Portable grep calls.
-- Fix spool directory.
 
 \todo File upstream.
 
---- ejabberdctl.template.orig	2022-05-06 13:12:22.000000000 +0000
+--- ejabberdctl.template.orig	2023-01-17 10:35:52.000000000 +0000
 +++ ejabberdctl.template
-@@ -112,7 +112,7 @@ export SCRIPT_DIR
+@@ -121,7 +121,7 @@ set_dist_client()
  exec_cmd()
  {
      case $EXEC_CMD in
@@ -22,20 +17,3 @@ $NetBSD: patch-ae,v 1.23 2024/08/23 12:59:05 gdt Exp $
          as_current_user) "$@" ;;
      esac
  }
-@@ -218,14 +218,14 @@ uid()
- # stop epmd if there is no other running node
- stop_epmd()
- {
--    "$EPMD" -names 2>/dev/null | grep -q name || "$EPMD" -kill >/dev/null
-+    "$EPMD" -names 2>/dev/null | grep name >/dev/null || "$EPMD" -kill >/dev/null
- }
- 
- # make sure node not already running and node name unregistered
- # if all ok, ensure runtime directory exists and make it current directory
- check_start()
- {
--    "$EPMD" -names 2>/dev/null | grep -q " ${ERLANG_NODE%@*} " && {
-+    "$EPMD" -names 2>/dev/null | grep " ${ERLANG_NODE%@*} " >/dev/null && {
-         pgrep -f "$ERLANG_NODE" >/dev/null && {
-             echo "ERROR: The ejabberd node '$ERLANG_NODE' is already running."
-             exit 4

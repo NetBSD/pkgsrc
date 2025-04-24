@@ -1,47 +1,38 @@
-$NetBSD: patch-aa,v 1.19 2024/08/23 12:59:05 gdt Exp $
+$NetBSD: patch-aa,v 1.20 2025/04/24 13:35:29 gdt Exp $
 
-Fix locations; don't mess with ownership.
+  - Split etcdir into where the config is installed and where it is
+    used from, to align with pkgsrc CONF_FILES.
+    \todo Consider patching installation instead of here, or at least
+    leaving ETCDIR correct.
 
-\todo File parts of this upstream.  At least including DESTDIR in
-EJABBERDDIR seem like a bug, and in general DESTDIR is tangled more
-than it should be.
+  - Point SPOOL and LOG at pkgsrc-chosen locations.
 
---- Makefile.in.orig	2022-05-06 15:12:22.000000000 +0200
-+++ Makefile.in	2023-08-11 09:08:52.337637204 +0200
-@@ -9,9 +9,10 @@
- 
+  - Don't set user/group on installed files; just because we are
+    running the daemon as ejabberd doesn't mean that the files in
+    e.g. /usr/pkg/bin should be installed as ejabberd.
+
+--- Makefile.in.orig	2023-01-17 10:35:52.000000000 +0000
++++ Makefile.in
+@@ -10,7 +10,8 @@ exec_prefix = @exec_prefix@
  DESTDIR =
  
  # /etc/ejabberd/
--ETCDIR = $(DESTDIR)@sysconfdir@/ejabberd
-+ETCDIR = $(DESTDIR)@prefix@/share/examples/ejabberd
+-ETCDIR = @sysconfdir@/ejabberd
++ETCDIR = @prefix@/share/examples/ejabberd
 +SYSCONFDIR_ETCDIR = $(DESTDIR)@sysconfdir@/ejabberd
  
  # /bin/
- BINDIR = $(DESTDIR)@bindir@
- 
-@@ -21,9 +22,9 @@
- # /lib/
- LIBDIR =  $(DESTDIR)@libdir@
- 
- # /lib/ejabberd/
--EJABBERDDIR = $(DESTDIR)@libdir@/ejabberd
-+EJABBERDDIR = $(LIBDIR)/ejabberd
- 
- # /share/doc/ejabberd
- PACKAGE_TARNAME = @PACKAGE_TARNAME@
- datarootdir = @datarootdir@
-@@ -65,33 +66,20 @@
- # /usr/lib/ejabberd/priv/lua
+ BINDIR = @bindir@
+@@ -66,31 +67,18 @@ SQLDIR = $(PRIVDIR)/sql
  LUADIR = $(PRIVDIR)/lua
  
  # /var/lib/ejabberd/
--SPOOLDIR = $(DESTDIR)@localstatedir@/lib/ejabberd
-+SPOOLDIR = $(DESTDIR)@EJABBERD_DB@
+-SPOOLDIR = @localstatedir@/lib/ejabberd
++SPOOLDIR = @EJABBERD_DB@
  
  # /var/log/ejabberd/
--LOGDIR = $(DESTDIR)@localstatedir@/log/ejabberd
-+LOGDIR = $(DESTDIR)@EJABBERD_LOGDIR@
+-LOGDIR = @localstatedir@/log/ejabberd
++LOGDIR = @EJABBERD_LOGDIR@
  
  INSTALLUSER=@INSTALLUSER@
 -# if no user was enabled, don't set privileges or ownership
@@ -66,16 +57,7 @@ than it should be.
  
  ifeq "$(MIX)" "mix"
  REBAR_VER:=6
- REBAR_VER_318:=0
-@@ -293,21 +281,21 @@
- 		-e "s*{{bindir}}/iex*$(iexpath)*g" \
- 		-e "s*{{bindir}}*@bindir@*g" \
- 		-e "s*{{libdir}}*${relivelibdir}*g" \
- 		-e "s*{{erl}}*@ERL@*g" \
--		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template \
--		> ejabberdctl.relive
-+		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template | \
-+	$(SED)  -e "s*\${DESTDIR}**g" > ejabberdctl.relive
+@@ -318,7 +306,7 @@ ejabberd.service:
  
  ejabberdctl.example: vars.config
  	$(SED)  -e "s*{{installuser}}*@INSTALLUSER@*g" \
@@ -84,13 +66,3 @@ than it should be.
  		-e "s*{{logs_dir}}*${LOGDIR}*g" \
  		-e "s*{{spool_dir}}*${SPOOLDIR}*g" \
  		-e "s*{{bindir}}*@bindir@*g" \
- 		-e "s*{{libdir}}*@libdir@*g" \
- 		-e "s*{{erl}}*@ERL@*g" \
--		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template \
--		> ejabberdctl.example
-+		-e "s*{{epmd}}*@EPMD@*g" ejabberdctl.template | \
-+	$(SED)  -e "s*\${DESTDIR}**g" > ejabberdctl.example
- 
- install: copy-files ejabberdctl.example
- 	#
- 	# Configuration files

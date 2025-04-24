@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.102 2024/09/21 17:55:47 gdt Exp $
+# $NetBSD: Makefile,v 1.103 2025/04/24 13:35:29 gdt Exp $
 
-DISTNAME=	ejabberd-22.05
-PKGREVISION=	3
+DISTNAME=	ejabberd-23.01
+# later releases:
+# 23.04 23.10 24.02 24.06 24.07 24.10 24.12 25.03 25.04
 CATEGORIES=	chat
-MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
-# later releases include
-# 22.10 23.01 23.04 23.10 24.02 24.06 24.07
+MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
