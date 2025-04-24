@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/04/17 15:49:47 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/24 08:06:16 wiz Exp $
 
 DISTNAME=	pydemumble-0.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10:../../devel/py-scikit-buil
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cmake
+#  for #if __has_builtin(__builtin_expect)
+GCC_REQD+=		10
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
