@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/04/19 07:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/04/25 07:38:10 wiz Exp $
 
 DISTNAME=	appstream-1.0.4
 PKGREVISION=	2
@@ -20,7 +20,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool msgfmt pkg-config
 
 MESON_ARGS+=	-Dapidocs=false
-MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=	-Dsystemd=false
 # for running a tool during the build
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
