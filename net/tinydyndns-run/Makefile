@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:25:04 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/04/25 20:41:11 schmonz Exp $
 
-DISTNAME=		tinydyndns-run-20201030
-PKGREVISION=		3
+DISTNAME=		tinydyndns-run-20250425
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,6 +9,7 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures tinydyndns to serve and update records
 LICENSE=		2-clause-bsd
 
+DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=		nopop3d-[0-9]*:../../mail/nopop3d
 DEPENDS+=		qmail-[0-9]*:../../mail/qmail
 DEPENDS+=		tinydyndns-[0-9]*:../../net/tinydyndns
