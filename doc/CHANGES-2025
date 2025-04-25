@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2887 2025/04/25 21:25:21 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2888 2025/04/25 23:01:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3812,3 +3812,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/gcc14-gnat-libs version 14.2.0nb1 [dkazankov 2025-04-25]
 	Updated net/tinydyndns-run to 20250425 [schmonz 2025-04-25]
 	Added www/basilisk version 2025.04.23 [nia 2025-04-25]
+	Updated devel/kdiff3 to 1.12.2 [gutteridge 2025-04-25]
