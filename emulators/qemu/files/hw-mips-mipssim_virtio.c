@@ -38,7 +38,7 @@
 #include "hw/char/serial.h"
 #include "hw/isa/isa.h"
 #include "net/net.h"
-#include "sysemu/sysemu.h"
+#include "system/system.h"
 #include "hw/boards.h"
 #include "hw/loader.h"
 #include "hw/or-irq.h"
@@ -47,8 +47,8 @@
 #include "hw/qdev-properties.h"
 #include "exec/address-spaces.h"
 #include "qemu/error-report.h"
-#include "sysemu/qtest.h"
-#include "sysemu/reset.h"
+#include "system/qtest.h"
+#include "system/reset.h"
 #include "hw/virtio/virtio-mmio.h"
 
 #define NUM_VIRTIO_TRANSPORTS   32

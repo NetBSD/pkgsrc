@@ -1,19 +1,19 @@
-$NetBSD: patch-hw-mips-mipssim.c,v 1.6 2025/03/02 12:44:19 nia Exp $
+$NetBSD: patch-hw-mips-mipssim.c,v 1.7 2025/04/25 11:24:29 adam Exp $
 
 Adding support for VirtIO extensions to the MIPSSIM machine,
 which NetBSD has special extensions to support.
 
---- hw/mips/mipssim.c.orig	2024-04-10 17:43:25.000000000 +0000
+--- hw/mips/mipssim.c.orig	2025-04-22 20:26:11.000000000 +0000
 +++ hw/mips/mipssim.c
 @@ -36,6 +36,7 @@
- #include "sysemu/sysemu.h"
+ #include "system/system.h"
  #include "hw/boards.h"
  #include "hw/loader.h"
 +#include "hw/or-irq.h"
  #include "elf.h"
  #include "hw/sysbus.h"
  #include "hw/qdev-properties.h"
-@@ -136,7 +137,7 @@ static void mipsnet_init(int base, qemu_
+@@ -137,7 +138,7 @@ static void mipsnet_init(int base, qemu_
                                  sysbus_mmio_get_region(s, 0));
  }
  
@@ -22,7 +22,7 @@ which NetBSD has special extensions to support.
  mips_mipssim_init(MachineState *machine)
  {
      const char *kernel_filename = machine->kernel_filename;
-@@ -147,6 +148,7 @@ mips_mipssim_init(MachineState *machine)
+@@ -148,6 +149,7 @@ mips_mipssim_init(MachineState *machine)
      MemoryRegion *isa = g_new(MemoryRegion, 1);
      MemoryRegion *bios = g_new(MemoryRegion, 1);
      Clock *cpuclk;
@@ -30,7 +30,7 @@ which NetBSD has special extensions to support.
      MIPSCPU *cpu;
      CPUMIPSState *env;
      ResetData *reset_info;
-@@ -233,6 +235,23 @@ mips_mipssim_init(MachineState *machine)
+@@ -235,6 +237,23 @@ mips_mipssim_init(MachineState *machine)
  
      /* MIPSnet uses the MIPS CPU INT0, which is interrupt 2. */
      mipsnet_init(0x4200, env->irq[2]);
