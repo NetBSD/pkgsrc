@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/03/17 13:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/25 10:55:17 wiz Exp $
 
 DISTNAME=	nbclassic-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclassic/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/jupyter/nbclassic
 COMMENT=	Jupyter Notebook as a Jupyter Server extension
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_packaging>=0.9:../../devel/py-jupyter_packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.17.0:../../www/py-jupyter_server
