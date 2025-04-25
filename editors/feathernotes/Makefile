@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/04/24 14:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/25 12:26:19 pin Exp $
 
 VERSION=	1.3.1
 DISTNAME=	FeatherNotes-V${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/tsujan/FeatherNotes/
 COMMENT=	Lightweight Qt6 hierarchical notes-manager
 LICENSE=	gnu-gpl-v3
