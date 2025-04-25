@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2022/10/15 17:49:34 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/25 11:13:52 gdt Exp $
 
 DISTNAME=	eredis-1.2.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wooga/}
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=Nordix/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wooga/eredis/
+#HOMEPAGE=	https://github.com/Nordix/eredis/
 COMMENT=	Erlang Redis client
 LICENSE=	mit
 
