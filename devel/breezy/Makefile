@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/11/11 07:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/04/25 07:41:39 wiz Exp $
 
 DISTNAME=	breezy-3.3.8
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -9,7 +10,7 @@ HOMEPAGE=	https://breezy-vcs.org/
 COMMENT=	Friendly distributed version control system
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
