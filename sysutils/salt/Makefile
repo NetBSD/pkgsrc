@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.87 2024/12/26 22:16:45 adam Exp $
+# $NetBSD: Makefile,v 1.88 2025/04/25 11:00:15 wiz Exp $
+
+PKGREVISION=	1
 
 .include "Makefile.common"
 
 COMMENT=	Remote execution and configuration management system
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 BUILD_DEFS+=	VARBASE
