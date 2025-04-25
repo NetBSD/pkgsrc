@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/13 10:10:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/04/25 10:58:24 wiz Exp $
 bin/coccigrep
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/coccigrep/__init__.py
 ${PYSITELIB}/coccigrep/__init__.pyc
