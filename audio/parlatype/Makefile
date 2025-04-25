@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/24 14:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/25 07:30:21 wiz Exp $
 
 DISTNAME=	parlatype-4.0
 PKGREVISION=	3
@@ -15,8 +15,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool gawk msgfmt pkg-config
 
 FORCE_C_STD=		c99
-
-MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/locale
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/libparlatype/src/libparlatype.map
