@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.232 2025/04/01 07:27:14 adam Exp $
+$NetBSD: distinfo,v 1.233 2025/04/25 11:24:28 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-9.2.3.tar.xz) = e64968e15deadcda068ab9e569a2261c52e42f7816c657493a0b1cda57f80c91
-SHA512 (qemu-9.2.3.tar.xz) = 941a4337a115c65de2fca042932efb31886114f4300226fcf55f04c2c5471bd2b5ce220c4b17e01c3679bd55ba08a1aa7ce399de15e3e5f28c17da52030b139e
-Size (qemu-9.2.3.tar.xz) = 134755248 bytes
+BLAKE2s (qemu-10.0.0.tar.xz) = ab3a3b3fb4db99d8711eac8d5b3948fd2b8feca78b5dabb2ada6b70aeb322e97
+SHA512 (qemu-10.0.0.tar.xz) = 2215458ed8be3ab0b0032fe2a96e79183f5fc2da323d927018412ea3d980b022a07ba87d4f446229eaaa7d1b19a577d438dbcaa3af3bd537c7720b56734a2d8b
+Size (qemu-10.0.0.tar.xz) = 135618260 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
 SHA1 (patch-fsdev_file-op-9p.h) = d951ea05ec31977e720f6ee02f53f1cd3d7c356e
 SHA1 (patch-fsdev_meson.build) = 918a361056b9808caecf4fbd85f44cfc405a1606
 SHA1 (patch-hw-mips-Kconfig) = c74efac1b5d3a49d141387eb9316617039be737b
-SHA1 (patch-hw-mips-mipssim.c) = c72129c6ad961a62d3f1b443bbf373ee3c900dc0
+SHA1 (patch-hw-mips-mipssim.c) = dcb363d2c27f963394b8ae00a64b33c263d30900
 SHA1 (patch-hw_9pfs_9p-synth.c) = f6af717a11d1cc7851f6dd388c7030264e1ee772
 SHA1 (patch-hw_9pfs_9p-util.h) = c286ea007f0ca3250442afe45c22dbeac640a077
 SHA1 (patch-hw_9pfs_9p.c) = 05c418eebf501dfbfff686d66d32953a1a41f9ca
@@ -25,8 +25,8 @@ SHA1 (patch-hw_usb_dev-mtp.c) = f148a3ad6d72eb29f85684316af5fb219ddaeb71
 SHA1 (patch-meson.build) = 8a76d92303efa054b37d46b27d76d0fb75c15133
 SHA1 (patch-qemu-options.hx) = 6cf811ae421db1e8d45f7098bd36733c6dc7d9cf
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
-SHA1 (patch-target_arm_tcg_translate-sve.c) = b5eeb08331e61a16b2cf4b7ab9b668755aa9a04e
-SHA1 (patch-target_i386_cpu.c) = f55795305c385784caee00c2a767a1cafa42ed91
+SHA1 (patch-target_arm_tcg_translate-sve.c) = f5e5ef33107d696cdc9ef99dee4a9ca0b5d23ea6
+SHA1 (patch-target_i386_cpu.c) = 73571b7602ab9387d6cb8603c1790b7948e767d4
 SHA1 (patch-target_i386_meson.build) = b8f413866ac1079d3ddeb21aacf226509e25ae9c
 SHA1 (patch-target_i386_nvmm_nvmm-all.c) = a25d957fd9ff7c35b8370604bff379c494220bd3
 SHA1 (patch-util_coroutine-ucontext.c) = 02cdf634e64f7e71029047b93747f192df715e6a
