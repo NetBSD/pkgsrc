@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/22 06:04:44 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/25 11:37:24 gdt Exp $
 
-DISTNAME=	yconf-1.0.16
+DISTNAME=	yconf-1.0.18
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	yconf
