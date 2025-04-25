@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2870 2025/04/25 11:27:52 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2871 2025/04/25 11:28:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3793,3 +3793,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/erlang-fast_xml to 1.1.55 [gdt 2025-04-25]
 	Updated security/erlang-p1_acme to 1.0.25 [gdt 2025-04-25]
 	Updated databases/erlang-p1_mysql to 1.0.26 [gdt 2025-04-25]
+	Updated security/libgpg-error to 1.55 [adam 2025-04-25]
+	Updated emulators/qemu to 10.0.0 [adam 2025-04-25]
