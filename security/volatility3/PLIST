@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2024/06/11 10:39:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/25 11:06:53 wiz Exp $
 bin/vol
 bin/volshell
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/volatility3/__init__.py
 ${PYSITELIB}/volatility3/__init__.pyc
