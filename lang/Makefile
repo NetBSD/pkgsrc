@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.755 2025/04/17 15:49:47 adam Exp $
+# $NetBSD: Makefile,v 1.756 2025/04/25 19:35:10 dkazankov Exp $
 #
 
 COMMENT=	Programming languages
@@ -84,6 +84,8 @@ SUBDIR+=	gcc13-gnat-libs
 SUBDIR+=	gcc13-libjit
 SUBDIR+=	gcc13-libs
 SUBDIR+=	gcc14
+SUBDIR+=	gcc14-gnat
+SUBDIR+=	gcc14-gnat-libs
 SUBDIR+=	gcc14-libjit
 SUBDIR+=	gcc14-libs
 SUBDIR+=	gcc2

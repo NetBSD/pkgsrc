@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.289 2025/04/21 15:57:33 wiz Exp $
+# $NetBSD: gcc.mk,v 1.290 2025/04/25 19:35:10 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -97,7 +97,7 @@ _DEF_VARS.gcc=	\
 	_NEED_GCC6 _NEED_GCC7 _NEED_GCC8 _NEED_GCC9 \
 	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 _NEED_GCC14 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
-	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT \
+	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT _NEED_GCC14_GNAT \
 	_PKGSRC_GCC_VERSION \
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
 	_WRAP_EXTRA_ARGS.CC \
@@ -613,6 +613,7 @@ _NEED_GCC14=	yes
 _NEED_GCC6_AUX?=no
 _NEED_GCC10_AUX?=no
 _NEED_GCC13_GNAT?=no
+_NEED_GCC14_GNAT?=	no
 .if ${_NEED_GCC_AUX:tl} == "yes"
 USE_PKGSRC_GCC=yes
 USE_PKGSRC_GCC_RUNTIME=no
@@ -620,6 +621,7 @@ USE_PKGSRC_GCC_RUNTIME=no
 PKG_FAIL_REASON+=	"Package requires at least gnat 13 to build"
 .  endif
 _NEED_GCC13_GNAT=yes
+_NEED_GCC14_GNAT=	yes
 .  if empty(USE_ADA_FEATURES:Mada2022)
 _NEED_GCC10_AUX=yes
 _NEED_GCC6_AUX=yes
@@ -628,6 +630,7 @@ _NEED_GCC6_AUX=yes
 .     if ${_NEED_GCC10_AUX:tl} == "yes"
 _NEED_GCC6_AUX=no
 _NEED_GCC13_GNAT=no
+_NEED_GCC14_GNAT=	no
 .     else
 PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .     endif
@@ -641,28 +644,35 @@ _NEED_GCC10_AUX=no
 .  if ${_NEED_GCC13_GNAT:tl} == "yes" && ${_NEED_GCC13:tl} != "yes"
 _NEED_GCC13_GNAT=no
 .  endif
+.  if ${_NEED_GCC14_GNAT:tl} == "yes" && ${_NEED_GCC14:tl} != "yes"
+_NEED_GCC14_GNAT=	no
+.  endif
 .  if !empty(USE_LANGUAGES:Mobjc)
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 _NEED_GCC13_GNAT=no
+_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires objc compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mobj-c++)
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 _NEED_GCC13_GNAT=no
+_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires obj-c++ compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mgo)
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 _NEED_GCC13_GNAT=no
+_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires go compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mjava)
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 _NEED_GCC13_GNAT=no
+_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires java compiler"
 .  endif
 _NEED_GCC6=no
@@ -672,7 +682,12 @@ _NEED_GCC9=no
 _NEED_GCC10=no
 _NEED_GCC12=no
 _NEED_GCC13=no
-.  if ${_NEED_GCC13_GNAT:tl} == "yes"
+_NEED_GCC14=	no
+.  if ${_NEED_GCC14_GNAT:tl} == "yes"
+_NEED_GCC6_AUX=		no
+_NEED_GCC10_AUX=	no
+_NEED_GCC13_GNAT=	no
+.  elif ${_NEED_GCC13_GNAT:tl} == "yes"
 _NEED_GCC6_AUX=no
 _NEED_GCC10_AUX=no
 .  elif ${_NEED_GCC10_AUX:tl} == "yes"
@@ -707,6 +722,8 @@ LANGUAGES.gcc=	c c++ ada
 LANGUAGES.gcc=	c c++ fortran fortran77 ada
 .elif !empty(_NEED_GCC13_GNAT:M[yY][eE][sS])
 LANGUAGES.gcc=c c++ ada
+.elif !empty(_NEED_GCC14_GNAT:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ ada
 .endif
 _LANGUAGES.gcc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
@@ -957,6 +974,20 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc13-gnat
 _GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
+_USE_GCC_SHLIB?=	no
+.  endif
+.elif !empty(_NEED_GCC14_GNAT:M[yY][eE][sS])
+#
+# We require Ada-capable compiler in the lang/gcc14-gnat directory.
+#
+_GCC_PKGBASE=		gcc14-gnat
+.  if ${PKGPATH} == lang/gcc14-gnat
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
+_GCC_PKGSRCDIR=		../../lang/gcc14-gnat
+_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
 _USE_GCC_SHLIB?=	no
 .  endif
 .endif
