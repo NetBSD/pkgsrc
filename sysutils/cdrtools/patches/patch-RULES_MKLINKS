@@ -1,0 +1,19 @@
+$NetBSD: patch-RULES_MKLINKS,v 1.1 2025/04/25 20:33:29 nia Exp $
+
+Add support for NetBSD/sparc64.
+
+--- RULES/MKLINKS.orig	2025-04-25 20:32:12.189055236 +0000
++++ RULES/MKLINKS
+@@ -268,6 +268,12 @@ $symlink	i386-netbsd-cc.rul	sparc-netbsd
+ $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc.rul
+ $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc32.rul
+ $symlink	i386-netbsd-gcc.rul	sparc-netbsd-gcc64.rul
++$symlink	i386-netbsd-cc.rul	sparc64-netbsd-cc.rul
++$symlink	i386-netbsd-cc.rul	sparc64-netbsd-cc32.rul
++$symlink	i386-netbsd-cc.rul	sparc64-netbsd-cc64.rul
++$symlink	i386-netbsd-gcc.rul	sparc64-netbsd-gcc.rul
++$symlink	i386-netbsd-gcc.rul	sparc64-netbsd-gcc32.rul
++$symlink	i386-netbsd-gcc.rul	sparc64-netbsd-gcc64.rul
+ $symlink	i386-netbsd-cc.rul	mac68k-netbsd-cc.rul
+ $symlink	i386-netbsd-gcc.rul	mac68k-netbsd-gcc.rul
+ $symlink	i386-netbsd-cc.rul	amiga-netbsd-cc.rul
