@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2883 2025/04/25 14:13:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2884 2025/04/25 19:41:44 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/erlang-p1_utils to 1.0.27 [gdt 2025-04-25]
 	Updated lang/nodejs22 to 22.15.0 [adam 2025-04-25]
 	Updated textproc/ugrep to 7.4.1 [adam 2025-04-25]
+	Added lang/gcc14-gnat version 14.2.0 [dkazankov 2025-04-25]
