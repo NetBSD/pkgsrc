@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/08/22 05:50:41 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/25 11:19:24 gdt Exp $
 
-DISTNAME=	esip-1.0.54
+DISTNAME=	esip-1.0.57
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	esip
