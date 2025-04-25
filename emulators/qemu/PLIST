@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2025/03/15 20:20:33 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.97 2025/04/25 11:24:28 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -100,9 +100,11 @@ ${PLIST.doc}share/doc/qemu/dbus-dbusindex.html
 ${PLIST.doc}share/doc/qemu/devel/atomics.html
 ${PLIST.doc}share/doc/qemu/devel/bitops.html
 ${PLIST.doc}share/doc/qemu/devel/block-coroutine-wrapper.html
+${PLIST.doc}share/doc/qemu/devel/build-environment.html
 ${PLIST.doc}share/doc/qemu/devel/build-system.html
 ${PLIST.doc}share/doc/qemu/devel/clocks.html
 ${PLIST.doc}share/doc/qemu/devel/code-of-conduct.html
+${PLIST.doc}share/doc/qemu/devel/codebase.html
 ${PLIST.doc}share/doc/qemu/devel/conflict-resolution.html
 ${PLIST.doc}share/doc/qemu/devel/control-flow-integrity.html
 ${PLIST.doc}share/doc/qemu/devel/crypto.html
@@ -141,12 +143,14 @@ ${PLIST.doc}share/doc/qemu/devel/multi-thread-tcg.html
 ${PLIST.doc}share/doc/qemu/devel/multiple-iothreads.html
 ${PLIST.doc}share/doc/qemu/devel/pci.html
 ${PLIST.doc}share/doc/qemu/devel/qapi-code-gen.html
+${PLIST.doc}share/doc/qemu/devel/qapi-domain.html
 ${PLIST.doc}share/doc/qemu/devel/qdev-api.html
 ${PLIST.doc}share/doc/qemu/devel/qom-api.html
 ${PLIST.doc}share/doc/qemu/devel/qom.html
 ${PLIST.doc}share/doc/qemu/devel/rcu.html
 ${PLIST.doc}share/doc/qemu/devel/replay.html
 ${PLIST.doc}share/doc/qemu/devel/reset.html
+${PLIST.doc}share/doc/qemu/devel/rust.html
 ${PLIST.doc}share/doc/qemu/devel/s390-cpu-topology.html
 ${PLIST.doc}share/doc/qemu/devel/s390-dasd-ipl.html
 ${PLIST.doc}share/doc/qemu/devel/secure-coding-practices.html
@@ -171,12 +175,14 @@ ${PLIST.doc}share/doc/qemu/devel/testing/qgraph.html
 ${PLIST.doc}share/doc/qemu/devel/testing/qtest.html
 ${PLIST.doc}share/doc/qemu/devel/tracing.html
 ${PLIST.doc}share/doc/qemu/devel/trivial-patches.html
+${PLIST.doc}share/doc/qemu/devel/uefi-vars.html
 ${PLIST.doc}share/doc/qemu/devel/ui.html
 ${PLIST.doc}share/doc/qemu/devel/vfio-iommufd.html
 ${PLIST.doc}share/doc/qemu/devel/virtio-backends.html
 ${PLIST.doc}share/doc/qemu/devel/writing-monitor-commands.html
 ${PLIST.doc}share/doc/qemu/devel/zoned-storage.html
 ${PLIST.doc}share/doc/qemu/genindex.html
+${PLIST.doc}share/doc/qemu/glossary.html
 ${PLIST.doc}share/doc/qemu/index.html
 ${PLIST.doc}share/doc/qemu/interop/barrier.html
 ${PLIST.doc}share/doc/qemu/interop/bitmaps.html
@@ -200,6 +206,9 @@ ${PLIST.doc}share/doc/qemu/interop/vhost-vdpa.html
 ${PLIST.doc}share/doc/qemu/interop/virtio-balloon-stats.html
 ${PLIST.doc}share/doc/qemu/interop/vnc-ledstate-pseudo-encoding.html
 ${PLIST.doc}share/doc/qemu/objects.inv
+${PLIST.doc}share/doc/qemu/qapi-qga-index.html
+${PLIST.doc}share/doc/qemu/qapi-qmp-index.html
+${PLIST.doc}share/doc/qemu/qapi-qsd-index.html
 ${PLIST.doc}share/doc/qemu/search.html
 ${PLIST.doc}share/doc/qemu/searchindex.js
 ${PLIST.doc}share/doc/qemu/specs/acpi_cpu_hotplug.html
@@ -209,6 +218,7 @@ ${PLIST.doc}share/doc/qemu/specs/acpi_hw_reduced_hotplug.html
 ${PLIST.doc}share/doc/qemu/specs/acpi_mem_hotplug.html
 ${PLIST.doc}share/doc/qemu/specs/acpi_nvdimm.html
 ${PLIST.doc}share/doc/qemu/specs/acpi_pci_hotplug.html
+${PLIST.doc}share/doc/qemu/specs/aspeed-intc.html
 ${PLIST.doc}share/doc/qemu/specs/edu.html
 ${PLIST.doc}share/doc/qemu/specs/fsi.html
 ${PLIST.doc}share/doc/qemu/specs/fw_cfg.html
@@ -225,6 +235,7 @@ ${PLIST.doc}share/doc/qemu/specs/ppc-spapr-xive.html
 ${PLIST.doc}share/doc/qemu/specs/ppc-xive.html
 ${PLIST.doc}share/doc/qemu/specs/pvpanic.html
 ${PLIST.doc}share/doc/qemu/specs/rapl-msr.html
+${PLIST.doc}share/doc/qemu/specs/riscv-aia.html
 ${PLIST.doc}share/doc/qemu/specs/riscv-iommu.html
 ${PLIST.doc}share/doc/qemu/specs/rocker.html
 ${PLIST.doc}share/doc/qemu/specs/sev-guest-firmware.html
@@ -248,6 +259,7 @@ ${PLIST.doc}share/doc/qemu/system/arm/exynos.html
 ${PLIST.doc}share/doc/qemu/system/arm/fby35.html
 ${PLIST.doc}share/doc/qemu/system/arm/highbank.html
 ${PLIST.doc}share/doc/qemu/system/arm/imx25-pdk.html
+${PLIST.doc}share/doc/qemu/system/arm/imx8mp-evk.html
 ${PLIST.doc}share/doc/qemu/system/arm/integratorcp.html
 ${PLIST.doc}share/doc/qemu/system/arm/kzm.html
 ${PLIST.doc}share/doc/qemu/system/arm/mcimx6ul-evk.html
@@ -268,6 +280,7 @@ ${PLIST.doc}share/doc/qemu/system/arm/sx1.html
 ${PLIST.doc}share/doc/qemu/system/arm/versatile.html
 ${PLIST.doc}share/doc/qemu/system/arm/vexpress.html
 ${PLIST.doc}share/doc/qemu/system/arm/virt.html
+${PLIST.doc}share/doc/qemu/system/arm/vmapple.html
 ${PLIST.doc}share/doc/qemu/system/arm/xenpvh.html
 ${PLIST.doc}share/doc/qemu/system/arm/xlnx-versal-virt.html
 ${PLIST.doc}share/doc/qemu/system/arm/xlnx-zcu102.html
@@ -283,6 +296,7 @@ ${PLIST.doc}share/doc/qemu/system/devices/canokey.html
 ${PLIST.doc}share/doc/qemu/system/devices/ccid.html
 ${PLIST.doc}share/doc/qemu/system/devices/cxl.html
 ${PLIST.doc}share/doc/qemu/system/devices/igb.html
+${PLIST.doc}share/doc/qemu/system/devices/ivshmem-flat.html
 ${PLIST.doc}share/doc/qemu/system/devices/ivshmem.html
 ${PLIST.doc}share/doc/qemu/system/devices/keyboard.html
 ${PLIST.doc}share/doc/qemu/system/devices/net.html
@@ -335,6 +349,7 @@ ${PLIST.doc}share/doc/qemu/system/qemu-block-drivers.html
 ${PLIST.doc}share/doc/qemu/system/qemu-cpu-models.html
 ${PLIST.doc}share/doc/qemu/system/qemu-manpage.html
 ${PLIST.doc}share/doc/qemu/system/replay.html
+${PLIST.doc}share/doc/qemu/system/riscv/microblaze-v-generic.html
 ${PLIST.doc}share/doc/qemu/system/riscv/microchip-icicle-kit.html
 ${PLIST.doc}share/doc/qemu/system/riscv/shakti-c.html
 ${PLIST.doc}share/doc/qemu/system/riscv/sifive_u.html
@@ -352,6 +367,7 @@ ${PLIST.doc}share/doc/qemu/system/security.html
 ${PLIST.doc}share/doc/qemu/system/target-arm.html
 ${PLIST.doc}share/doc/qemu/system/target-avr.html
 ${PLIST.doc}share/doc/qemu/system/target-i386.html
+${PLIST.doc}share/doc/qemu/system/target-loongarch.html
 ${PLIST.doc}share/doc/qemu/system/target-m68k.html
 ${PLIST.doc}share/doc/qemu/system/target-mips.html
 ${PLIST.doc}share/doc/qemu/system/target-openrisc.html
@@ -473,6 +489,7 @@ share/qemu/linuxboot_dma.bin
 share/qemu/multiboot.bin
 share/qemu/multiboot_dma.bin
 share/qemu/npcm7xx_bootrom.bin
+share/qemu/npcm8xx_bootrom.bin
 share/qemu/openbios-ppc
 share/qemu/openbios-sparc32
 share/qemu/openbios-sparc64
@@ -481,6 +498,7 @@ share/qemu/opensbi-riscv64-generic-fw_dynamic.bin
 share/qemu/palcode-clipper
 share/qemu/petalogix-ml605.dtb
 share/qemu/petalogix-s3adsp1800.dtb
+share/qemu/pnv-pnor.bin
 share/qemu/pvh.bin
 share/qemu/pxe-e1000.rom
 share/qemu/pxe-eepro100.rom
