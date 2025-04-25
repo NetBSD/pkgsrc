@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/08/22 05:48:48 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/04/25 11:33:00 gdt Exp $
 
-DISTNAME=	stun-1.2.14
+DISTNAME=	stun-1.2.17
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	stun
