@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2859 2025/04/24 21:29:42 he Exp $
+$NetBSD: CHANGES-2025,v 1.2860 2025/04/25 00:53:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3782,3 +3782,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible to 11.5.0 [adam 2025-04-24]
 	Updated security/mbedtls3 to 3.6.3 [hauke 2025-04-24]
 	Updated net/unbound to 1.23.0 [he 2025-04-24]
+	Updated lang/erlang-luerl to 1.2.3 [gdt 2025-04-25]
