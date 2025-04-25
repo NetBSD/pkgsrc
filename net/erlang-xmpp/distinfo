@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/08/22 07:24:48 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/04/25 11:35:56 gdt Exp $
 
-BLAKE2s (xmpp-1.8.3.tar.gz) = 039efe658852409dd63a7f57b485f4cb243ec24eb3b0ab97fc031e80835df77b
-SHA512 (xmpp-1.8.3.tar.gz) = 4f925a611258617c8a49feb90b174dc8889e91beb1b3bf091527e1fb32d6a8ed5b167a8fd51778745d71de67efec1615dbbd6a539b49f0af216c6822472c9b54
-Size (xmpp-1.8.3.tar.gz) = 629078 bytes
+BLAKE2s (xmpp-1.10.0.tar.gz) = 014d31672b39415c35db6b18d4df523e73ddd6aec24cbf84ec06db787104609a
+SHA512 (xmpp-1.10.0.tar.gz) = 3f7b3e3aceca52af691ccc57c54672837df823f2a48cfd04998912b186a73db2e2a852310e324bd1fb014d608042b4fb69122565249b463b960e11dac0617bfb
+Size (xmpp-1.10.0.tar.gz) = 636436 bytes
