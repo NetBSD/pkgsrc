@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2860 2025/04/25 00:53:03 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2861 2025/04/25 01:03:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/mbedtls3 to 3.6.3 [hauke 2025-04-24]
 	Updated net/unbound to 1.23.0 [he 2025-04-24]
 	Updated lang/erlang-luerl to 1.2.3 [gdt 2025-04-25]
+	Updated security/zoneminder to 1.36.35 [gdt 2025-04-25]
