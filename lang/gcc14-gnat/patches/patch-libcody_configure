@@ -1,0 +1,33 @@
+$NetBSD: patch-libcody_configure,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+
+Fix c++ version test
+
+--- libcody/configure.orig	2024-05-07 09:51:41.000000000 +0300
++++ libcody/configure	2024-07-29 18:21:31.801520751 +0300
+@@ -2501,7 +2501,7 @@
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#if __cplusplus != 201103
++#if __cplusplus < 201103L
+ #error "C++11 is required"
+ #endif
+ 
+@@ -2522,7 +2522,7 @@
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#if __cplusplus != 201103
++#if __cplusplus < 201103L
+ #error "C++11 is required"
+ #endif
+ 
+@@ -2542,7 +2542,7 @@
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#if __cplusplus > 201103
++#if __cplusplus < 201103L
+ #error "C++11 is required"
+ #endif
+ 
