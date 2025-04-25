@@ -1,0 +1,34 @@
+$NetBSD: distinfo,v 1.1 2025/04/25 21:25:03 nia Exp $
+
+BLAKE2s (basilisk-2025.04.23/basilisk.tar.gz) = 8049ef38576e0b083f55e2a1b4472483213a804eaed4a539aebc29e59faf5578
+SHA512 (basilisk-2025.04.23/basilisk.tar.gz) = c850e0178b89816d4ab2ea02323c563e5a62c0f60d6251598f9b6334be14ff9c54f524f4ca0d370807ab638e660c4d6456e468112dc3b25c2e50ffb9bd97317b
+Size (basilisk-2025.04.23/basilisk.tar.gz) = 12923056 bytes
+BLAKE2s (basilisk-2025.04.23/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
+SHA512 (basilisk-2025.04.23/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
+Size (basilisk-2025.04.23/psutil.tar.gz) = 274361 bytes
+BLAKE2s (basilisk-2025.04.23/uxp.tar.gz) = 1e7878775dec45e36d53b64904d4aa4642847b114436307cfe99c840880d7306
+SHA512 (basilisk-2025.04.23/uxp.tar.gz) = 804122497f184505e1bc1c6b86695788b6dcfefbdd0dc9903bfc244e82dc66d9b8de6569f2dd5331f64b20979936f764c560bd3ee39875f0708d840f28aa749c
+Size (basilisk-2025.04.23/uxp.tar.gz) = 264519296 bytes
+SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
+SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
+SHA1 (patch-platform_intl_icu_source_configure) = 87d19e9212b4340d9b052b5a89be84432ad1cff2
+SHA1 (patch-platform_ipc_chromium_src_base_atomicops.h) = ab4b489e9f9c22a861a275924ef34a909d210828
+SHA1 (patch-platform_ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = f33b6c391689c52d0a6855e29ff25d863a7f15e5
+SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
+SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
+SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
+SHA1 (patch-platform_media_libvpx_config_linux_arm_vpx__config.h) = a580208cd342d7dc27985118e1707772e0cccf02
+SHA1 (patch-platform_media_webrtc_trunk_webrtc_modules_audio__device_audio__device.gypi) = b673eeaf3c2e08428870e5a2d06dfae3f6e7752e
+SHA1 (patch-platform_netwerk_srtp_src_crypto_hash_hmac.c) = 59f8b8756f5486b59c88fac8901b80c0fbc1485f
+SHA1 (patch-platform_netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = b486d5d0e2b9878d32c655f1f86a5d6535b7da85
+SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.cfg) = 1dc06ad2dc49eb3297dc0651dce546cff6882f7b
+SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf41776e53af613a0c4f19
+SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55
+SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptsynch.c) = f99271490a983d0a1d101cb0d2b593a3987549d7
+SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptthread.c) = a04b06e39c289ac32dfbb6cbd79b1d7ecf0b560d
+SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
+SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
+SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
+SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
+SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 5b6a5c6eea2668cc5eaaf775400c382114876d86
+SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = de7188f7ac09fd3d4a65968a12ae324b3a0415c4
