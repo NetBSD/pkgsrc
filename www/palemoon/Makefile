@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/04/24 14:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/04/25 12:00:52 wiz Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -33,6 +33,7 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17
+GCC_REQD+=		9.1
 
 WRKSRC=		${WRKDIR}/pale-moon
 
