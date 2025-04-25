@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2024/10/13 08:50:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/25 07:41:39 wiz Exp $
 bin/brz
 bin/bzr-receive-pack
 bin/bzr-upload-pack
 bin/git-remote-bzr
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/breezy/__init__.py
 ${PYSITELIB}/breezy/__init__.pyc
