@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2866 2025/04/25 11:19:34 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2867 2025/04/25 11:21:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/xmlsec1 to 1.2.41 [wiz 2025-04-25]
 	Updated graphics/erlang-eimp to 1.0.24 [gdt 2025-04-25]
 	Updated net/erlang-esip to 1.0.57 [gdt 2025-04-25]
+	Updated security/erlang-fast_tls to 1.1.22 [gdt 2025-04-25]
