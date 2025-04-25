@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1857 2025/04/22 15:15:01 adam Exp $
+# $NetBSD: Makefile,v 1.1858 2025/04/25 21:25:03 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -73,6 +73,7 @@ SUBDIR+=	august
 SUBDIR+=	awstats
 SUBDIR+=	badwolf
 SUBDIR+=	bannerfilter
+SUBDIR+=	basilisk
 SUBDIR+=	bins
 SUBDIR+=	bkedit
 SUBDIR+=	bluefish
