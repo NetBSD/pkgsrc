@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.25 2024/12/13 13:38:59 gdt Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/04/25 11:39:31 wiz Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/chirp/__init__.py
 ${PYSITELIB}/chirp/__init__.pyc
