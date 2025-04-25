@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2023/12/25 17:04:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/04/25 11:32:23 wiz Exp $
 bin/streamlink
-${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/LICENSE
 ${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/METADATA
 ${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/RECORD
 ${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/WHEEL
 ${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/entry_points.txt
+${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/licenses/LICENSE
 ${PYSITELIB}/streamlink-0.0.0+unknown.dist-info/top_level.txt
 ${PYSITELIB}/streamlink/__init__.py
 ${PYSITELIB}/streamlink/__init__.pyc
