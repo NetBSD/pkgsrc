@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2024/12/13 13:38:59 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2025/04/25 11:39:31 wiz Exp $
 
 VERSION=	20241213
 DISTNAME=	chirp-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
 # Chirp does not have what would normally called releasees.  They have
@@ -26,10 +27,9 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../lang/python/pyversion.mk"
 
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # setup.py:install_requires
 DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
@@ -42,8 +42,6 @@ DEPENDS+=	${PYPKGPREFIX}-yattag>=1.15.1:../../textproc/py-yattag
 
 # setup.py:extras_require
 DEPENDS+=	${PYPKGPREFIX}-wxPython>=4:../../x11/py-wxPython
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
