@@ -1,6 +1,7 @@
-$NetBSD: patch-src_gcrypt_symkeys.c,v 1.1 2025/04/25 07:18:10 wiz Exp $
+$NetBSD: patch-src_gcrypt_symkeys.c,v 1.2 2025/04/25 07:23:35 wiz Exp $
 
 libxml2 2.14 compatibility.
+https://github.com/lsh123/xmlsec/issues/904
 
 --- src/gcrypt/symkeys.c.orig	2025-04-25 07:15:55.924534537 +0000
 +++ src/gcrypt/symkeys.c

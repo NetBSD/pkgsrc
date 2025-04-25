@@ -1,6 +1,7 @@
-$NetBSD: patch-src_gcrypt_app.c,v 1.2 2025/04/25 07:20:42 wiz Exp $
+$NetBSD: patch-src_gcrypt_app.c,v 1.3 2025/04/25 07:23:35 wiz Exp $
 
 libxml2 2.14 compatibility.
+https://github.com/lsh123/xmlsec/issues/904
 
 --- src/gcrypt/app.c.orig	2024-07-18 19:46:42.000000000 +0000
 +++ src/gcrypt/app.c
