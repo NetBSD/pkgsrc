@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/08/21 12:30:59 gdt Exp $
+$NetBSD: distinfo,v 1.8 2025/04/25 00:51:13 gdt Exp $
 
-BLAKE2s (luerl-1.2.0.tar.gz) = 5c55b3dfcf19780ac3a1c024016fdf7c12107f8d2c3c615bbd0751d373762bf2
-SHA512 (luerl-1.2.0.tar.gz) = bdf7b33fdefad510cce09edd8a6991fd6dd12b27de5b9a6aeb2d2b8ff281afda89beaf18c5d61fd7f1697b4e619199dd02ca0a02d23847b0b58c6418b7815a41
-Size (luerl-1.2.0.tar.gz) = 544778 bytes
+BLAKE2s (luerl-1.2.3.tar.gz) = ef3bf1a0f4a49a4b671e7e90908b8addbf5c3a641b14f066062d70068682b36f
+SHA512 (luerl-1.2.3.tar.gz) = 495e7425cf18ce670fb66269f7351630b2fb20173078558306abf476fe538986f6cf3669514ab6ca725d65a4d460c663faab6b892483d0c50221edb543eb4276
+Size (luerl-1.2.3.tar.gz) = 546128 bytes
