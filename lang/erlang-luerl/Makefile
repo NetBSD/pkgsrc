@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/08/21 12:30:59 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/25 00:51:13 gdt Exp $
 
-DISTNAME=	luerl-1.2.0
+DISTNAME=	luerl-1.2.3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvirding/}
 # Upstream does not publish NEWS:
