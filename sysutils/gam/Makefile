@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/03/10 09:07:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/25 11:01:06 wiz Exp $
 
 DISTNAME=	gam-7.05.08
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -13,7 +14,7 @@ HOMEPAGE=	https://github.com/GAM-team/GAM
 COMMENT=	Command line tool for Google Workspace admins
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.0:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.11.2:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2-[0-9]*:../../security/py-google-auth-httplib2
