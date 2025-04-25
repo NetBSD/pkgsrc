@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 #
-# $NetBSD: tinydyndns-pwhash.py,v 1.2 2020/10/19 07:15:55 schmonz Exp $
+# $NetBSD: tinydyndns-pwhash.py,v 1.3 2025/04/25 20:41:11 schmonz Exp $
 #
-# @PKGNAME@ program to crypt() a password.
+# @PKGNAME@ program to bcrypt a password.
 
-import crypt, sys
+from passlib.context import CryptContext
+import sys
 
-print(crypt.crypt(sys.stdin.read().rstrip()))
+print(CryptContext(schemes=["bcrypt"]).hash(sys.stdin.read().rstrip()))
