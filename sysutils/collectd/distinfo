@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2022/11/15 12:37:41 wiz Exp $
+$NetBSD: distinfo,v 1.51 2025/04/25 11:05:53 wiz Exp $
 
 BLAKE2s (collectd-5.12.0.tar.bz2) = bf8597bde2bb46fe5f3546d18944dbc40df9b64b3fd1ee43a5882203d4803e0a
 SHA512 (collectd-5.12.0.tar.bz2) = 7a15e4c0ae587db4987d673a790a4f3bea1cab29ce24a506fb21fa7bd2f60bfec70867eaa1c1395cb5b0e0ae81a024fb6109b064da0ef50e7c146d2198871c70
@@ -14,3 +14,4 @@ SHA1 (patch-src_statsd.c) = 35f4349d2d2c9bddc0f4770344f969157cd012f6
 SHA1 (patch-src_tcpconns.c) = dc6c1d361561f16623933b53ec127d88052236b2
 SHA1 (patch-src_utils_dns_dns.c) = aebb564540a51088fbd8ed56c031e7e0acc1b2e3
 SHA1 (patch-src_utils_format__kairosdb_format__kairosdb.c) = 9d6a1567645a5beafb22e3704866b0fcaa6b6c35
+SHA1 (patch-src_virt.c) = f9dad0bb1272613a0f8612b9bdc1db729c61f4fe
