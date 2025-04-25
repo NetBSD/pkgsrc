@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/08/22 05:48:48 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/04/25 11:33:00 gdt Exp $
 
-BLAKE2s (stun-1.2.14.tar.gz) = af38d2bbfa1173c3550f73a87880573a4e4bf963e8c806165fed310c5c536b04
-SHA512 (stun-1.2.14.tar.gz) = aaac2922543f4e52d7de7bf17ed1ffc1581b41e365ab231f78423123240f21eb23eeca713929edcc4ebeecb6cb868016be3304ddbb770dd6d9b3fedc3cdb8207
-Size (stun-1.2.14.tar.gz) = 42566 bytes
+BLAKE2s (stun-1.2.17.tar.gz) = 6848a578e1e45a1fb99d7b4060ec476020a385dfa7275178375b4284709293bf
+SHA512 (stun-1.2.17.tar.gz) = 7c5074452771910107a638ea31c6fcf92726aee4c95a23cc0b3b273e34897c9384d4b0137fd9ba55ccdd64d09d46ed523e06268b9828e702ce5a51d5b78ee8f1
+Size (stun-1.2.17.tar.gz) = 42586 bytes
