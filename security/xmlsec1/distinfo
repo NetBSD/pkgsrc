@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.21 2022/03/04 13:55:13 ryoon Exp $
+$NetBSD: distinfo,v 1.22 2025/04/25 07:18:10 wiz Exp $
 
 BLAKE2s (xmlsec1-1.2.33.tar.gz) = 1257ba28b777cd23b4e30dab85739ffb0e1e221169526ad82f3eae8a1c0c1043
 SHA512 (xmlsec1-1.2.33.tar.gz) = 6354554b5cdc0a1389f6991efeac919bea912330b36d3be3d3496d61331e9edd2771786d50d2571a439f62ccfc3bd32be0a50bb5a037c4993aac076ad94b46e8
 Size (xmlsec1-1.2.33.tar.gz) = 1991955 bytes
 SHA1 (patch-ab) = bf40dafa893b5d6d73bdd2af5c8c4d1d1143e061
 SHA1 (patch-ac) = db0e4e2f38358fc2e347f0117899f127c94861a7
+SHA1 (patch-src_gcrypt_app.c) = 2f24890fbf401f86d1d73550f50bfb9ba660e360
+SHA1 (patch-src_gcrypt_asymkeys.c) = 418cd5a07049ab91e6b2577acf01d02cc496056a
+SHA1 (patch-src_gcrypt_signatures.c) = 668204f79bd303d0dbbdb3b5faa41c9640ac2f9c
+SHA1 (patch-src_gcrypt_symkeys.c) = 7a6b99269267fb46eb2bf4c437f57259796ab37c
