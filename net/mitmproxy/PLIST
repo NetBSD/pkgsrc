@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.23 2025/02/06 13:22:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/04/25 11:12:32 wiz Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mitmproxy/__init__.py
 ${PYSITELIB}/mitmproxy/__init__.pyc

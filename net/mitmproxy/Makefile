@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2025/02/06 13:22:10 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/04/25 11:12:32 wiz Exp $
 
 DISTNAME=	mitmproxy-11.1.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
@@ -9,7 +10,7 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive TLS-capable intercepting HTTP proxy
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aioquic>=1.1.0:../../www/py-aioquic
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0:../../archivers/py-brotli
