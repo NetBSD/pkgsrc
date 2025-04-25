@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:43:46 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/04/25 11:50:40 wiz Exp $
 
 BLAKE2s (armagetronad-0.2.9.0.1.tbz) = 286bd2df948f7082e0fe486dfa4ecc558487bedeb7e66ec91c0ad07df887356c
 SHA512 (armagetronad-0.2.9.0.1.tbz) = d0bf8a973aafc6dd41f2dd41e29d34cebae1829d9e050948045c68a2a408595dda7cc94eb3169ed5c470770a01eb93744760a2b83146ab7813dc513bb5b26279
 Size (armagetronad-0.2.9.0.1.tbz) = 1907392 bytes
+SHA1 (patch-src_tron_gParser.cpp) = 6cc79c80a56cb5fdc3ca18d3f0358a6417c75ce3

@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/04/24 14:13:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2025/04/25 11:50:40 wiz Exp $
 
 PKGREVISION= 14
 .include "Makefile.common"
 
-PKGNAME=	${DISTNAME:S/.src//}
 COMMENT=	Tron clone in 3D with advanced gameplay and multiplayer
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
