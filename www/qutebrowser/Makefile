@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2025/04/24 14:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/25 10:55:48 wiz Exp $
 
 DISTNAME=	qutebrowser-1.13.1
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qutebrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ COMMENT=	Keyboard-driven, vim-like browser based on PyQt5
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-cssutils-[0-9]*:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
