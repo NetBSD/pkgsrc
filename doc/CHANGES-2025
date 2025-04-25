@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2869 2025/04/25 11:26:09 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2870 2025/04/25 11:27:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3792,3 +3792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/erlang-fast_tls to 1.1.22 [gdt 2025-04-25]
 	Updated textproc/erlang-fast_xml to 1.1.55 [gdt 2025-04-25]
 	Updated security/erlang-p1_acme to 1.0.25 [gdt 2025-04-25]
+	Updated databases/erlang-p1_mysql to 1.0.26 [gdt 2025-04-25]
