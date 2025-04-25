@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/16 20:13:33 pin Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/25 11:08:34 wiz Exp $
 
 DISTNAME=	termscp-0.17.0
 CATEGORIES=	net
@@ -11,6 +11,7 @@ COMMENT=	Feature rich TUI file transfer and explorer
 LICENSE=	mit
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
