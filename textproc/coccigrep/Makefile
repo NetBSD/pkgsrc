@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2024/10/13 16:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/25 10:58:24 wiz Exp $
 
 DISTNAME=	coccigrep-1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://home.regit.org/software/coccigrep/
 COMMENT=	Semantic grep for the C language
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	coccinelle-[0-9]*:../../devel/coccinelle
 
