@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.23 2025/04/25 07:20:42 wiz Exp $
+$NetBSD: distinfo,v 1.24 2025/04/25 07:23:35 wiz Exp $
 
 BLAKE2s (xmlsec1-1.2.41.tar.gz) = 9a70497d7b726d20f934c861aac3502738509eb6f36d46da67b3bfba5af2b7a5
 SHA512 (xmlsec1-1.2.41.tar.gz) = ee8bb7ff94a768aee349bb23571d5b1263e0747602c9fd2ba93017174fc8c863d625882114c626b9a4c15b14deef19dc4251cef834a9347571d3b0f97d8b9117
 Size (xmlsec1-1.2.41.tar.gz) = 2070905 bytes
 SHA1 (patch-ab) = bf40dafa893b5d6d73bdd2af5c8c4d1d1143e061
 SHA1 (patch-ac) = db0e4e2f38358fc2e347f0117899f127c94861a7
-SHA1 (patch-src_gcrypt_app.c) = 33ae1cab5baa35ad417e5d07bcacd3d8e0db1660
-SHA1 (patch-src_gcrypt_asymkeys.c) = 418cd5a07049ab91e6b2577acf01d02cc496056a
-SHA1 (patch-src_gcrypt_signatures.c) = 668204f79bd303d0dbbdb3b5faa41c9640ac2f9c
-SHA1 (patch-src_gcrypt_symkeys.c) = 7a6b99269267fb46eb2bf4c437f57259796ab37c
+SHA1 (patch-src_gcrypt_app.c) = c389f00ac01408e14e6d01f39e3b67d29f74cf5b
+SHA1 (patch-src_gcrypt_asymkeys.c) = 3c1044a262a7068d1c72333b66bf817adeb7bc50
+SHA1 (patch-src_gcrypt_signatures.c) = a0bd4f18a5d509394d0423f67eb21776a57aadf1
+SHA1 (patch-src_gcrypt_symkeys.c) = c37275b4920e202c56c165e1ad67fe5a1fb429cb
