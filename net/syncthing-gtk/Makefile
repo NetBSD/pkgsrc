@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2025/04/24 14:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/04/25 11:09:36 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing-gtk/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -11,15 +11,13 @@ HOMEPAGE=	https://github.com/syncthing-gtk/syncthing-gtk
 COMMENT=	GTK3 & Python based GUI for Syncthing
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc
 PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=		*.py scripts/*.py syncthing_gtk/*.py
 
