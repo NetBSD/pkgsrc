@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2875 2025/04/25 11:33:09 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2876 2025/04/25 11:36:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3799,3 +3799,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-cairosvg to 2.7.1nb2 [wiz 2025-04-25]
 	Updated textproc/erlang-stringprep to 1.0.31 [gdt 2025-04-25]
 	Updated net/erlang-stun to 1.2.17 [gdt 2025-04-25]
+	Updated net/erlang-xmpp to 1.10.0 [gdt 2025-04-25]
