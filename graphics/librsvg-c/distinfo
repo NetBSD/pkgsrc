@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/04/25 11:44:25 wiz Exp $
 
 BLAKE2s (librsvg-2.40.21.tar.xz) = b336f6065efdcd29d347fb866e987b46a6f7b2205b7b8ba3ac0a525ac8cfd234
 SHA512 (librsvg-2.40.21.tar.xz) = db0563d8e0edaae642a6b2bcd239cf54191495058ac8c7ff614ebaf88c0e30bd58dbcd41f58d82a9d5ed200ced45fc5bae22f2ed3cf3826e9348a497009e1280
 Size (librsvg-2.40.21.tar.xz) = 1655860 bytes
+SHA1 (patch-rsvg-mask.h) = 8b123ca2672a838f4263a26787e7cd5813efb759
+SHA1 (patch-rsvg-private.h) = d93d9d4a1315713828e38f1a5f067a25342d67af
+SHA1 (patch-rsvg-styles.h) = 2207194d5c6f392c0408ca81b05ad6846f69b8e2
