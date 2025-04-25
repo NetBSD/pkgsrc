@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2879 2025/04/25 12:25:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2880 2025/04/25 12:36:47 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3803,3 +3803,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/erlang-yconf to 1.0.18 [gdt 2025-04-25]
 	Updated sysutils/broot to 1.46.3 [pin 2025-04-25]
 	Updated sysutils/eza to 0.21.2 [pin 2025-04-25]
+	Updated lang/gcc13-gnat to 13.3.0nb3 [dkazankov 2025-04-25]
