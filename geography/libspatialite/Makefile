@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2025/04/24 14:14:08 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/04/25 07:09:42 wiz Exp $
 
 DISTNAME=	libspatialite-5.1.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	geography
 MASTER_SITES=	https://www.gaia-gis.it/gaia-sins/libspatialite-sources/
 
@@ -26,5 +26,6 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.33.0
 .include "../../geography/librttopo/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/freexl/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.libxml2+=	libxml2-2.14.2nb2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
