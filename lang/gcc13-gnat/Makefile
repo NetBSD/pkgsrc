@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2025/04/21 20:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/25 12:33:45 dkazankov Exp $
 
 GCC_PKGNAME=		gcc13
 GCC_DIST_VERSION=	13.3.0
 
 PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	GNAT Compiler and Ada tools
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
