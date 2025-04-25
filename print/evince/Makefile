@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2025/04/24 14:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2025/04/25 11:07:24 wiz Exp $
 
 DISTNAME=	evince-48.0
 PKGREVISION=	3
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS=		itstool msgfmt pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../mk/bsd.prefs.mk"
 
 # msgfmt: unknown option -- xml
@@ -28,7 +26,6 @@ TOOLS_PLATFORM.msgfmt=
 MESON_ARGS+=	-Dcomics=disabled
 MESON_ARGS+=	-Dgspell=disabled
 MESON_ARGS+=	-Dintrospection=true
-MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=	-Dnautilus=false
 MESON_ARGS+=	-Dthumbnail_cache=disabled
 
