@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2885 2025/04/25 19:42:31 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.2886 2025/04/25 20:41:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ugrep to 7.4.1 [adam 2025-04-25]
 	Added lang/gcc14-gnat version 14.2.0 [dkazankov 2025-04-25]
 	Added lang/gcc14-gnat-libs version 14.2.0nb1 [dkazankov 2025-04-25]
+	Updated net/tinydyndns-run to 20250425 [schmonz 2025-04-25]
