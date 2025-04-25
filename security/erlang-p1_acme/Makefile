@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/22 06:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/25 11:25:59 gdt Exp $
 
-DISTNAME=	p1_acme-1.0.23
+DISTNAME=	p1_acme-1.0.25
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	p1_acme
