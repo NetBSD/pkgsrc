@@ -1,10 +1,10 @@
-$NetBSD: patch-src_gcrypt_app.c,v 1.1 2025/04/25 07:18:10 wiz Exp $
+$NetBSD: patch-src_gcrypt_app.c,v 1.2 2025/04/25 07:20:42 wiz Exp $
 
 libxml2 2.14 compatibility.
 
---- src/gcrypt/app.c.orig	2025-04-25 07:16:07.004790752 +0000
+--- src/gcrypt/app.c.orig	2024-07-18 19:46:42.000000000 +0000
 +++ src/gcrypt/app.c
-@@ -40,7 +40,7 @@
+@@ -41,7 +41,7 @@
   * Returns: 0 on success or a negative value otherwise.
   */
  int
@@ -13,7 +13,7 @@ libxml2 2.14 compatibility.
      gcry_error_t err;
      /* Secure memory initialisation based on documentation from:
           http://www.gnupg.org/documentation/manuals/gcrypt/Initializing-the-library.html
-@@ -212,9 +212,9 @@ xmlSecGCryptAppKeyLoad(const char *filen
+@@ -214,9 +214,9 @@ xmlSecGCryptAppKeyLoad(const char *filen
  xmlSecKeyPtr
  xmlSecGCryptAppKeyLoadMemory(const xmlSecByte* data, xmlSecSize dataSize,
                          xmlSecKeyDataFormat format,
@@ -26,7 +26,7 @@ libxml2 2.14 compatibility.
  {
      xmlSecKeyPtr key = NULL;
      xmlSecKeyDataPtr key_data = NULL;
-@@ -335,9 +335,9 @@ xmlSecGCryptAppKeyCertLoadMemory(xmlSecK
+@@ -337,9 +337,9 @@ xmlSecGCryptAppKeyCertLoadMemory(xmlSecK
   */
  xmlSecKeyPtr
  xmlSecGCryptAppPkcs12Load(const char *filename,
@@ -39,7 +39,7 @@ libxml2 2.14 compatibility.
      xmlSecAssert2(filename != NULL, NULL);
  
      /* TODO */
-@@ -361,9 +361,9 @@ xmlSecGCryptAppPkcs12Load(const char *fi
+@@ -363,9 +363,9 @@ xmlSecGCryptAppPkcs12Load(const char *fi
   */
  xmlSecKeyPtr
  xmlSecGCryptAppPkcs12LoadMemory(const xmlSecByte* data, xmlSecSize dataSize,
@@ -52,8 +52,8 @@ libxml2 2.14 compatibility.
      xmlSecAssert2(data != NULL, NULL);
      xmlSecAssert2(dataSize > 0, NULL);
  
-@@ -389,7 +389,7 @@ int
- xmlSecGCryptAppKeysMngrCertLoad(xmlSecKeysMngrPtr mngr, 
+@@ -391,7 +391,7 @@ int
+ xmlSecGCryptAppKeysMngrCertLoad(xmlSecKeysMngrPtr mngr,
                                  const char *filename,
                                  xmlSecKeyDataFormat format,
 -                                xmlSecKeyDataType type ATTRIBUTE_UNUSED) {
@@ -61,7 +61,7 @@ libxml2 2.14 compatibility.
      xmlSecAssert2(mngr != NULL, -1);
      xmlSecAssert2(filename != NULL, -1);
      xmlSecAssert2(format != xmlSecKeyDataFormatUnknown, -1);
-@@ -417,7 +417,7 @@ xmlSecGCryptAppKeysMngrCertLoadMemory(xm
+@@ -419,7 +419,7 @@ xmlSecGCryptAppKeysMngrCertLoadMemory(xm
                                        const xmlSecByte* data,
                                        xmlSecSize dataSize,
                                        xmlSecKeyDataFormat format,
