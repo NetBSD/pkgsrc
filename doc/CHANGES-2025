@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2863 2025/04/25 07:10:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2864 2025/04/25 07:21:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3786,3 +3786,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/zoneminder to 1.36.35 [gdt 2025-04-25]
 	Updated textproc/libxml2 to 2.14.2nb2 [wiz 2025-04-25]
 	Updated geography/libspatialite to 5.1.0nb11 [wiz 2025-04-25]
+	Updated security/xmlsec1 to 1.2.41 [wiz 2025-04-25]
