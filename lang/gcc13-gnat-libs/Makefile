@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/08 14:05:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/25 12:33:45 dkazankov Exp $
 
 GCC_PKGNAME=		gcc13
 GCC13_DIST_VERSION=	13.3.0
@@ -8,12 +8,12 @@ PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GCC13_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc13 package so that with the dependence pattern
 ## '{gcc13,gcc13-libs}>=13.1.*' pkg_add will choose gcc13-libs over gcc13.
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	The GNU Compiler Collection (GCC) support shared libraries
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
