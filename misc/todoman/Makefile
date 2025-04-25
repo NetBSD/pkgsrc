@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/11/11 07:28:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/25 11:33:10 wiz Exp $
 
 DISTNAME=		todoman-4.0.0
 PKGREVISION=		4
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/pimutils/todoman
 COMMENT=	Simple CalDav-based todo manager
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
