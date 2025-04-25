@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.18 2024/06/12 07:25:58 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/04/25 11:30:23 wiz Exp $
 
 BLAKE2s (CairoSVG-2.7.1.tar.gz) = bdac5c5a1de647d332ebf12b92e2655e4f0f9a69339f9726057330bf8ea7e48b
 SHA512 (CairoSVG-2.7.1.tar.gz) = fd2cdf38b6ee7860ded728694de8cb413d9442939e60501f7657e2dc43a16b6c6c863faa88a15ea001b7ee7949b2d441bcf609b1d64a49f3091573e14e8b1d92
 Size (CairoSVG-2.7.1.tar.gz) = 8399085 bytes
+SHA1 (patch-setup.cfg) = 563b9c156b6ef72be37ea5836e8bcdf6a09c8792
