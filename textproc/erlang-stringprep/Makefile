@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/08/22 06:13:28 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/25 11:31:38 gdt Exp $
 
-DISTNAME=	stringprep-1.0.30
+DISTNAME=	stringprep-1.0.31
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 GITHUB_PROJECT=	stringprep
