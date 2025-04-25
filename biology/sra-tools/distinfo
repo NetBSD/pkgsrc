@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/02/02 14:25:34 bacon Exp $
+$NetBSD: distinfo,v 1.4 2025/04/25 07:37:15 wiz Exp $
 
 BLAKE2s (ncbi-ncbi-vdb-3.2.0.tar.gz) = eb3a98cb754ea78869adfc3651afce3f8e961e1f512e1f77427e9de85924ace2
 SHA512 (ncbi-ncbi-vdb-3.2.0.tar.gz) = badd63525eaaaeedb4de8bb0ab88b40cbeb388e0a0f93ac934c1af716da6f0fb2425eb2e1e95c198496a32fd9c04dfb8badf43b9b6f686b970411b18afec9ea2
@@ -7,6 +7,7 @@ BLAKE2s (sra-tools-3.2.0.tar.gz) = 6afccc13740b972d483303db5040b0475484ebc6e62fb
 SHA512 (sra-tools-3.2.0.tar.gz) = ceddc5a2fd97c16ad56d130dc4469c6c8dd0f550825718b4fdd4c50d19e182bc42bc4c1681790ab3ea8912812fddb11dff03aca254999fc5b9e2c3fd39d42402
 Size (sra-tools-3.2.0.tar.gz) = 60313243 bytes
 SHA1 (patch-build_env.cmake) = 7c95dbe65c818ac638754ba6165eab1e613fe0eb
+SHA1 (patch-libs_kxml_xml.c) = f9360408a6da8430c9cef628df82335c6d5b16ca
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
 SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
 SHA1 (patch-ngs_ngs-python_examples_CMakeLists.txt) = a8a01d17a27c060c08311ab8571ae10af265781d
