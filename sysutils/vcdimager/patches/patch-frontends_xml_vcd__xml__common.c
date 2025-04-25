@@ -1,0 +1,25 @@
+$NetBSD: patch-frontends_xml_vcd__xml__common.c,v 1.1 2025/04/25 10:42:29 wiz Exp $
+
+Fix build with libxml2 2.14.
+https://savannah.gnu.org/support/index.php?111233
+
+--- frontends/xml/vcd_xml_common.c.orig	2025-04-25 10:37:59.722970842 +0000
++++ frontends/xml/vcd_xml_common.c
+@@ -242,13 +242,13 @@ _convert (const char in[], const char en
+ 
+   temp = size - 1;
+   if (from) {
+-    if (NULL != handler->output)
+-      ret = handler->output (out, &out_size, (const unsigned char *) in, &temp);
++    if (NULL != handler->output.legacyFunc)
++      ret = handler->output.legacyFunc (out, &out_size, (const unsigned char *) in, &temp);
+     else
+       return strdup(in);
+   } else {
+-    if (NULL != handler->input)
+-      ret = handler->input (out, &out_size, (const unsigned char *) in, &temp);
++    if (NULL != handler->input.legacyFunc)
++      ret = handler->input.legacyFunc (out, &out_size, (const unsigned char *) in, &temp);
+     else
+       return strdup(in);
+   }
