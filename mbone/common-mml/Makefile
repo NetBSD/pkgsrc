@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/12/22 18:34:26 zafer Exp $
+# $NetBSD: Makefile,v 1.22 2025/04/26 21:33:21 wiz Exp $
 
 DISTNAME=	common-1.2.16
 PKGNAME=	common-mml-1.2.16
@@ -13,6 +13,8 @@ COMMENT=	Common multimedia library required by mbone tools
 WRKSRC=		${WRKDIR}/common
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+CONFIGURE_ARGS+=	GTKDOC=no
 
 INSTALLATION_DIRS=	include/common-mml lib share/doc/common-mml
 
