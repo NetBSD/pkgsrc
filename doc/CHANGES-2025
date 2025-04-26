@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2889 2025/04/26 06:59:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2890 2025/04/26 10:21:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3815,3 +3815,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/kdiff3 to 1.12.2 [gutteridge 2025-04-25]
 	Updated graphics/oxipng to 9.1.5 [adam 2025-04-26]
 	Updated devel/py-ipython to 9.2.0 [adam 2025-04-26]
+	Updated textproc/go-md2man to 2.0.7 [pin 2025-04-26]
