@@ -1,14 +1,15 @@
-$NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
+$NetBSD: patch-configure,v 1.3 2025/04/26 18:25:14 he Exp $
 
 - Portability fixes
 - pkgsrc ffmpeg includes path
 - pkgsrc common-mml includes path
 - NetBSD v4l2 support
 - ov511 support on NetBSD
+- Support new style for TCL_PACKAGE_PATH (:-separated and not space-separated)
 
 --- configure.orig	2008-12-10 19:28:01.000000000 +0000
-+++ configure	2008-12-14 11:05:24.000000000 +0000
-@@ -4538,7 +4538,7 @@
++++ configure
+@@ -4538,7 +4538,7 @@ echo "${ECHO_T}Tcl ${TCL_VERSION}${TCL_P
          V_DEFINE="$V_DEFINE -DMAC_OSX_TCL"
      fi
  
@@ -17,7 +18,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
      if test -f "${TCL_SRC_DIR}/generic/tcl2c.c" ; then
          { echo "$as_me:$LINENO: result: UCL Tcl ${TCL_VERSION}${TCL_PATCH_LEVEL}" >&5
  echo "${ECHO_T}UCL Tcl ${TCL_VERSION}${TCL_PATCH_LEVEL}" >&6; }
-@@ -4752,7 +4752,7 @@
+@@ -4752,7 +4752,7 @@ echo "${ECHO_T}could not find ${TK_BIN_D
  
  { echo "$as_me:$LINENO: checking for a compatible version of Tk" >&5
  echo $ECHO_N "checking for a compatible version of Tk... $ECHO_C" >&6; }
@@ -26,7 +27,27 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
      { echo "$as_me:$LINENO: result: Tk ${TK_VERSION}${TK_PATCH_LEVEL}" >&5
  echo "${ECHO_T}Tk ${TK_VERSION}${TK_PATCH_LEVEL}" >&6; }
  
-@@ -5012,14 +5012,14 @@
+@@ -4793,7 +4793,7 @@ else
+         V_INCLUDE_TCL=$TCL_INCLUDE_SPEC
+ 
+         V_LIBRARY_TCL=FAIL
+-        for dir in $TCL_PACKAGE_PATH; do
++        for dir in $(echo $TCL_PACKAGE_PATH | sed -e 's/:/ /g'); do
+             if test -r "${dir}/init.tcl" ; then
+                 V_LIBRARY_TCL=$dir
+                 break
+@@ -4845,8 +4845,8 @@ which comes with the PrivateHeaders fold
+ 
+         V_LIBRARY_TK=FAIL
+         TK_PACKAGE_PATH=`echo $TCL_PACKAGE_PATH | sed 's/tcl/tk/g'`
+-        TK_PACKAGE_PATH="$TK_PACKAGE_PATH $TCL_PACKAGE_PATH"
+-        for dir in $TK_PACKAGE_PATH; do
++        TK_PACKAGE_PATH="$TK_PACKAGE_PATH:$TCL_PACKAGE_PATH"
++        for dir in $(echo $TK_PACKAGE_PATH | sed -e 's/:/ /g'); do
+             if test -r "${dir}/tk.tcl" ; then
+                 V_LIBRARY_TK=$dir
+                 break
+@@ -5012,14 +5012,14 @@ if test "$gpl" = "yes" ; then
    if test "$ffmpegco" != "yes"; then
  
  	if test "$ffmpeginc" != "" ; then
@@ -47,7 +68,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  	        exit 1
  	   fi
  	   echo "checking for FFmpeg headers...yes"
-@@ -5028,8 +5028,8 @@
+@@ -5028,8 +5028,8 @@ if test "$gpl" = "yes" ; then
  	else
  
  	   if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
@@ -58,7 +79,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  fi
-@@ -5037,8 +5037,8 @@
+@@ -5037,8 +5037,8 @@ fi
  echo "${ECHO_T}$ac_cv_header_ffmpeg_avcodec_h" >&6; }
  else
    # Is the header compilable?
@@ -69,7 +90,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -5046,7 +5046,7 @@
+@@ -5046,7 +5046,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -78,7 +99,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -5078,15 +5078,15 @@
+@@ -5078,15 +5078,15 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$ac_header_compiler" >&6; }
  
  # Is the header present?
@@ -97,7 +118,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -5119,30 +5119,30 @@
+@@ -5119,30 +5119,30 @@ echo "${ECHO_T}$ac_header_preproc" >&6; 
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -146,7 +167,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5163,8 +5163,8 @@
+@@ -5163,8 +5163,8 @@ fi
  
  
  	   if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
@@ -157,7 +178,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  fi
-@@ -5172,8 +5172,8 @@
+@@ -5172,8 +5172,8 @@ fi
  echo "${ECHO_T}$ac_cv_header_ffmpeg_avutil_h" >&6; }
  else
    # Is the header compilable?
@@ -168,7 +189,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -5181,7 +5181,7 @@
+@@ -5181,7 +5181,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -177,7 +198,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -5213,15 +5213,15 @@
+@@ -5213,15 +5213,15 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$ac_header_compiler" >&6; }
  
  # Is the header present?
@@ -196,7 +217,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -5254,30 +5254,30 @@
+@@ -5254,30 +5254,30 @@ echo "${ECHO_T}$ac_header_preproc" >&6; 
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -245,7 +266,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5298,8 +5298,8 @@
+@@ -5298,8 +5298,8 @@ fi
  
  
  	   if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
@@ -256,7 +277,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  fi
-@@ -5307,8 +5307,8 @@
+@@ -5307,8 +5307,8 @@ fi
  echo "${ECHO_T}$ac_cv_header_ffmpeg_swscale_h" >&6; }
  else
    # Is the header compilable?
@@ -267,7 +288,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -5316,7 +5316,7 @@
+@@ -5316,7 +5316,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -276,7 +297,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -5348,15 +5348,15 @@
+@@ -5348,15 +5348,15 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$ac_header_compiler" >&6; }
  
  # Is the header present?
@@ -295,7 +316,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -5389,30 +5389,30 @@
+@@ -5389,30 +5389,30 @@ echo "${ECHO_T}$ac_header_preproc" >&6; 
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -344,7 +365,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -6425,7 +6425,7 @@
+@@ -6425,7 +6425,7 @@ fi
  if test "$v4l2old" = "yes" ; then
                  V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-v4l2-old.o"
  		echo "Using old Linux grabber-v4l2"
@@ -353,7 +374,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
          if test "${ac_cv_header_libv4lconvert_h+set}" = set; then
    { echo "$as_me:$LINENO: checking for libv4lconvert.h" >&5
  echo $ECHO_N "checking for libv4lconvert.h... $ECHO_C" >&6; }
-@@ -6553,7 +6553,11 @@
+@@ -6553,7 +6553,11 @@ echo "${ECHO_T}$ac_cv_header_libv4lconve
  fi
  if test $ac_cv_header_libv4lconvert_h = yes; then
    V_DEFINE="$V_DEFINE -DHAVE_LIBV4L"
@@ -366,7 +387,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
  else
    V_OBJ_GRABBER="$V_OBJ_GRABBER  video/tinyjpeg.o video/jidctflt.o"
  fi
-@@ -6562,6 +6566,9 @@
+@@ -6562,6 +6566,9 @@ fi
          if test -r /usr/include/linux/videodev2.h  ; then
                  V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-v4l2.o video/grabber-video4linux.o"
  		echo "Using Linux Grabbers: Video4Linux2 and Video4Linux1"
@@ -376,7 +397,7 @@ $NetBSD: patch-configure,v 1.2 2015/03/31 15:49:57 joerg Exp $
          else
                  V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-video4linux.o"
  		echo "Using Linux Grabber: Video4Linux1"
-@@ -6790,8 +6797,9 @@
+@@ -6790,8 +6797,9 @@ sparc-sun-sunos*)
  	V_LIB="$V_LIB -lipc"
  	;;
  *-*-netbsd*)
