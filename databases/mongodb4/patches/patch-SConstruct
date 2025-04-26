@@ -1,14 +1,15 @@
-$NetBSD: patch-SConstruct,v 1.1 2023/07/29 11:51:15 adam Exp $
+$NetBSD: patch-SConstruct,v 1.2 2025/04/26 13:53:10 tnn Exp $
 
 Add support for NetBSD and Dragonfly.
 Fix locations.
 Don't compile with debug info.
 Don't mess with the linker.
 Respect LDFLAGS and CXXFLAGS.
+Fix compatibility issue with scons 4.9's CheckLibWithHeader
 
---- SConstruct.orig	2023-06-29 02:35:52.000000000 +0000
+--- SConstruct.orig	2024-02-13 08:46:45.000000000 +0000
 +++ SConstruct
-@@ -1196,6 +1196,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -1189,6 +1189,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 CONFIGURELOG='$BUILD_ROOT/scons/config.log',
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -16,7 +17,7 @@ Respect LDFLAGS and CXXFLAGS.
                 )
  
  # TODO: Remove these when hygienic builds are default.
-@@ -1367,7 +1368,9 @@ def CheckForProcessor(context, which_arc
+@@ -1360,7 +1361,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "defined(_WIN32)",
      "solaris": "defined(__sun)",
@@ -26,7 +27,7 @@ Respect LDFLAGS and CXXFLAGS.
      "openbsd": "defined(__OpenBSD__)",
      "iOS": "defined(__APPLE__) && TARGET_OS_IOS && !TARGET_OS_SIMULATOR",
      "iOS-sim": "defined(__APPLE__) && TARGET_OS_IOS && TARGET_OS_SIMULATOR",
-@@ -1859,7 +1862,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
+@@ -1852,7 +1855,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_LIBS':
      if not env.TargetOSIs('solaris', 'darwin', 'windows', 'openbsd'):
          env.Tool('thin_archive')
  
@@ -35,7 +36,7 @@ Respect LDFLAGS and CXXFLAGS.
      # NOTE: The leading and trailing spaces here are important. Do not remove them.
      env['LINK_WHOLE_ARCHIVE_LIB_START'] = '-Wl,--whole-archive '
      env['LINK_WHOLE_ARCHIVE_LIB_END'] = ' -Wl,--no-whole-archive'
-@@ -1899,14 +1902,14 @@ if env.TargetOSIs('linux'):
+@@ -1892,14 +1895,14 @@ if env.TargetOSIs('linux'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -52,7 +53,7 @@ Respect LDFLAGS and CXXFLAGS.
      env.Append( LIBS=[ "kvm" ] )
  
  elif env.TargetOSIs('windows'):
-@@ -2204,7 +2207,6 @@ if env.TargetOSIs('posix'):
+@@ -2197,7 +2200,6 @@ if env.TargetOSIs('posix'):
      env.Append( CCFLAGS=["-fno-omit-frame-pointer",
                           "-fno-strict-aliasing",
                           "-fasynchronous-unwind-tables",
@@ -60,7 +61,7 @@ Respect LDFLAGS and CXXFLAGS.
                           "-pthread",
                           "-Wall",
                           "-Wsign-compare",
-@@ -2869,9 +2871,9 @@ def doConfigure(myenv):
+@@ -2860,9 +2862,9 @@ def doConfigure(myenv):
      if usingLibStdCxx:
          def CheckModernLibStdCxx(context):
              test_body = """
@@ -73,7 +74,7 @@ Respect LDFLAGS and CXXFLAGS.
              """
  
              context.Message('Checking for libstdc++ 5.3.0 or better... ')
-@@ -3226,7 +3228,7 @@ def doConfigure(myenv):
+@@ -3217,7 +3219,7 @@ def doConfigure(myenv):
          #
          myenv.Append( CCFLAGS=["/Zc:inline"])
  
@@ -82,7 +83,7 @@ Respect LDFLAGS and CXXFLAGS.
          # This tells clang/gcc to use the gold linker if it is available - we prefer the gold linker
          # because it is much faster. Don't use it if the user has already configured another linker
          # selection manually.
-@@ -3458,8 +3460,9 @@ def doConfigure(myenv):
+@@ -3449,8 +3451,9 @@ def doConfigure(myenv):
      def checkOpenSSL(conf):
          sslLibName = "ssl"
          cryptoLibName = "crypto"
@@ -94,7 +95,31 @@ Respect LDFLAGS and CXXFLAGS.
              sslLinkDependencies = ["crypto"]
  
          if conf.env.TargetOSIs('windows'):
-@@ -3796,7 +3799,7 @@ def doConfigure(myenv):
+@@ -3499,7 +3502,7 @@ def doConfigure(myenv):
+                 cryptoLibName,
+                 ["openssl/crypto.h"],
+                 "C",
+-                "SSLeay_version(0);",
++                call="SSLeay_version(0);",
+                 autoadd=True):
+             maybeIssueDarwinSSLAdvice(conf.env)
+             conf.env.ConfError("Couldn't find OpenSSL crypto.h header and library")
+@@ -3656,7 +3659,7 @@ def doConfigure(myenv):
+         if conf.CheckLibWithHeader(
+             "curl",
+             ["curl/curl.h"], "C",
+-            "curl_global_init(0);",
++            call="curl_global_init(0);",
+             autoadd=False):
+             return True
+ 
+@@ -3782,12 +3785,12 @@ def doConfigure(myenv):
+             "sasl2",
+             ["stddef.h","sasl/sasl.h"],
+             "C",
+-            "sasl_version_info(0, 0, 0, 0, 0, 0);",
++            call="sasl_version_info(0, 0, 0, 0, 0, 0);",
+             autoadd=False ):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed
@@ -103,3 +128,12 @@ Respect LDFLAGS and CXXFLAGS.
          if not conf.CheckLib("execinfo"):
              myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
  
+@@ -3947,7 +3950,7 @@ def doConfigure(myenv):
+                 ["mongoc-1.0"],
+                 ["mongoc/mongoc.h"],
+                 "C",
+-                "mongoc_get_major_version();",
++                call="mongoc_get_major_version();",
+                 autoadd=False ):
+             conf.env['MONGO_HAVE_LIBMONGOC'] = "library"
+         if not conf.env['MONGO_HAVE_LIBMONGOC'] and env.TargetOSIs('darwin') and conf.CheckMongoCFramework():
