@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2895 2025/04/26 10:27:45 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2896 2025/04/26 18:25:57 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3821,3 +3821,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.19.0 [pin 2025-04-26]
 	Updated security/rbw to 1.13.2 [pin 2025-04-26]
 	Updated editors/tp-note to 1.25.8 [pin 2025-04-26]
+	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb22 [he 2025-04-26]
