@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2025/01/27 16:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/04/26 18:25:14 he Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	mbone tk
 MASTER_SITES=	http://www.NetBSD.org/~sborrill/snapshots/
+LICENSE=	modified-bsd
 
 MAKE_JOBS_SAFE=	no
 
