@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/04/11 08:56:39 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/04/26 10:26:00 pin Exp $
 
-DISTNAME=	rbw-1.10.0
+DISTNAME=	rbw-1.13.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=doy/}
 
