@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2888 2025/04/25 23:01:04 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2889 2025/04/26 06:59:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3813,3 +3813,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/tinydyndns-run to 20250425 [schmonz 2025-04-25]
 	Added www/basilisk version 2025.04.23 [nia 2025-04-25]
 	Updated devel/kdiff3 to 1.12.2 [gutteridge 2025-04-25]
+	Updated graphics/oxipng to 9.1.5 [adam 2025-04-26]
+	Updated devel/py-ipython to 9.2.0 [adam 2025-04-26]
