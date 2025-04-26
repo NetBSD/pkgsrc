@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2893 2025/04/26 10:25:12 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2894 2025/04/26 10:26:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3819,3 +3819,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/jgenesis to 0.9.0 [pin 2025-04-26]
 	Updated net/lagrange to 1.18.5 [pin 2025-04-26]
 	Updated shells/oh-my-posh to 25.19.0 [pin 2025-04-26]
+	Updated security/rbw to 1.13.2 [pin 2025-04-26]
