@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.42 2025/02/22 03:41:16 gutteridge Exp $
+$NetBSD: distinfo,v 1.43 2025/04/27 21:44:56 gutteridge Exp $
 
 BLAKE2s (xfdesktop-4.20.1.tar.bz2) = 449e27b4cd1f4c7916d037b8c811b148f2c00cfcc5a6596d5c21c37f94510683
 SHA512 (xfdesktop-4.20.1.tar.bz2) = 11f422e31fb5b4f789ac61252a79ef9b139fd0a3e29f1346d5e3c06779567f1809fd78d751df5595cdb5510d0349e908276e85f6325b8ac90dfd00c79ca5d0e2
 Size (xfdesktop-4.20.1.tar.bz2) = 2527982 bytes
+SHA1 (patch-common_xfdesktop-common.c) = 3321e3c31ac899bca1c05c754e5012cd3799d416
