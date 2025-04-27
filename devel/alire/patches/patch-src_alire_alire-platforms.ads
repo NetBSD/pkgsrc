@@ -1,14 +1,14 @@
-$NetBSD: patch-src_alire_alire-platforms.ads,v 1.2 2025/02/09 13:34:24 wiz Exp $
+$NetBSD: patch-src_alire_alire-platforms.ads,v 1.3 2025/04/27 10:43:42 dkazankov Exp $
 
 Add NetBSD support
 
---- src/alire/alire-platforms.ads.orig	2024-03-21 00:22:58.000000000 +0200
-+++ src/alire/alire-platforms.ads	2024-04-09 16:21:29.009936835 +0300
-@@ -24,6 +24,7 @@
+--- src/alire/alire-platforms.ads.orig	2025-03-04 10:02:00.000000000 +0000
++++ src/alire/alire-platforms.ads
+@@ -22,6 +22,7 @@
+ 
+    type Operating_Systems is (FreeBSD,
+                               OpenBSD,
++                              NetBSD,
                                Linux,
                                MacOS,
                                Windows,
-+                              NetBSD,
-                               OS_Unknown);
-    subtype Known_Operating_Systems is
-      Operating_Systems range

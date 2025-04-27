@@ -1,14 +1,14 @@
-$NetBSD: patch-alire.toml,v 1.1 2025/02/09 13:34:24 wiz Exp $
+$NetBSD: patch-alire.toml,v 1.2 2025/04/27 10:43:42 dkazankov Exp $
 
 Add NetBSD support
 
---- alire.toml.orig	2024-03-12 23:27:05.000000000 +0200
-+++ alire.toml	2024-03-20 13:02:32.616680360 +0200
-@@ -40,6 +40,7 @@
- # Building alr requires the explicit setting of this variable
+--- alire.toml.orig	2025-03-04 10:02:00.000000000 +0000
++++ alire.toml
+@@ -44,6 +44,7 @@
  [gpr-set-externals."case(os)"]
  freebsd = { ALIRE_OS = "freebsd" }
-+netbsd  = { ALIRE_OS = "netbsd" }
+ openbsd = { ALIRE_OS = "openbsd" }
++netbsd = { ALIRE_OS = "netbsd" }
  linux   = { ALIRE_OS = "linux" }
  macos   = { ALIRE_OS = "macos" }
  windows = { ALIRE_OS = "windows" }
