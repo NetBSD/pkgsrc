@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2913 2025/04/27 17:47:12 thorpej Exp $
+$NetBSD: CHANGES-2025,v 1.2914 2025/04/27 20:07:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3838,3 +3838,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/alire to 2.1.0 [dkazankov 2025-04-27]
 	Updated geography/proj-data to 1.21 [gdt 2025-04-27]
 	Updated sysutils/minipro to 0.7.3 [thorpej 2025-04-27]
+	Updated textproc/nlohmann-json to 3.12.0nb1 [wiz 2025-04-27]
