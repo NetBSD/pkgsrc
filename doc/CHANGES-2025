@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2907 2025/04/27 08:07:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2908 2025/04/27 08:08:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3833,3 +3833,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed security/py-xmlsec [wiz 2025-04-27]
 	Updated graphics/rawtherapee to 5.11 [wiz 2025-04-27]
 	Updated print/html2ps to 1.0b7nb14 [wiz 2025-04-27]
+	Updated print/apsfilter to 7.2.8nb4 [wiz 2025-04-27]
