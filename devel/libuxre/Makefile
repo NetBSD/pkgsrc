@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:02:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2025/04/27 08:14:40 wiz Exp $
 
 PKGNAME=	libuxre-${HEIRLOOM_VER}
 CATEGORIES=	devel
@@ -15,8 +15,8 @@ INSTALLATION_DIRS+=	include/uxre share/doc/${PKGBASE} lib
 DOC_FILES=	NOTES COPYING.LGPL
 DOC_DIR=	${PREFIX}/share/doc/${PKGBASE}
 
-SRCFILES=	onefile    regfree    regerror    btowc
-LOFILES=	onefile.lo regfree.lo regerror.lo btowc.lo
+SRCFILES=	onefile    regfree    regerror
+LOFILES=	onefile.lo regfree.lo regerror.lo
 
 NEED_PRE_BUILD=	0
 
