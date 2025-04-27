@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2908 2025/04/27 08:08:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2909 2025/04/27 09:37:42 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3834,3 +3834,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/rawtherapee to 5.11 [wiz 2025-04-27]
 	Updated print/html2ps to 1.0b7nb14 [wiz 2025-04-27]
 	Updated print/apsfilter to 7.2.8nb4 [wiz 2025-04-27]
+	Updated lang/gcc14-gnat-libs to 14.2.0nb1 [dkazankov 2025-04-27]
