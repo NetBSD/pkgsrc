@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/24 14:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/04/27 16:32:05 gutteridge Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -8,6 +8,8 @@ CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/libxfce4windowing/${PKGVERSION_NOREV:R}/
 
 COMMENT=	Xfce window management library
+
+MAKE_JOBS_SAFE=	no  # https://gitlab.xfce.org/xfce/libxfce4windowing/-/issues/45
 
 USE_TOOLS+=		pkg-config
 
