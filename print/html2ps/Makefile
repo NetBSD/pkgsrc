@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2022/06/28 11:35:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.46 2025/04/27 08:07:20 wiz Exp $
 
 DISTNAME=	html2ps-1.0b7
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	print
 MASTER_SITES=	#http://user.it.uu.se/~jan/
 
@@ -12,7 +11,7 @@ COMMENT=	HTML to PostScript converter
 
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
-DEPENDS+=	jpeg>=6b:../../graphics/jpeg
+DEPENDS+=	libjpeg-turbo>=0:../../graphics/libjpeg-turbo
 DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	tex-tex-[0-9]*:../../print/tex-tex
