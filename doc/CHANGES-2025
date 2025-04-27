@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2901 2025/04/27 05:19:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2902 2025/04/27 05:19:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3827,3 +3827,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-IO-Async to 0.804 [wiz 2025-04-27]
 	Updated math/p5-Math-Pari to 2.030525 [wiz 2025-04-27]
 	Updated devel/p5-Module-Runtime to 0.018 [wiz 2025-04-27]
+	Updated devel/p5-meta to 0.013 [wiz 2025-04-27]
