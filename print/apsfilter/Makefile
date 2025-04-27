@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2024/10/14 06:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/04/27 08:06:25 wiz Exp $
 
 DISTNAME=	apsfilter-7.2.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 #MASTER_SITES=	http://www.apsfilter.org/download/
 
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	recode-[0-9]*:../../converters/recode
 #DEPENDS+=	html2ps-[0-9]*:../../print/html2ps
 DEPENDS+=	fig2dev-[0-9]*:../../print/fig2dev
-DEPENDS+=	jpeg>=6b:../../graphics/jpeg
+DEPENDS+=	libjpeg-turbo>=0:../../graphics/libjpeg-turbo
 DEPENDS+=	netpbm>=9.7nb1:../../graphics/netpbm
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
