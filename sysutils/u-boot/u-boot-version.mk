@@ -1,4 +1,4 @@
-# $NetBSD: u-boot-version.mk,v 1.6 2025/04/24 02:14:48 gutteridge Exp $
+# $NetBSD: u-boot-version.mk,v 1.7 2025/04/27 21:15:40 gutteridge Exp $
 
 UBOOT_DEFAULT_VERSION=	2018.11
 
@@ -11,7 +11,8 @@ DISTINFO_FILE?=	${.CURDIR}/../../sysutils/u-boot/distinfo-${UBOOT_VERSION}
 # bsd.prefs.mk (as, for example, gnutls does), then packagers must ensure
 # whatever pulls this in is listed before those other dependencies, or
 # PATCHDIR will not be set as expected here (and the package will silently
-# not apply whatever patches may be intended).
+# not apply whatever patches may be intended). Or, alternately, explicitly
+# set PATCHDIR to what's intended.
 PATCHDIR?=	${.CURDIR}/../../sysutils/u-boot/patches-${UBOOT_VERSION}
 .else
 PATCHDIR?=	${.CURDIR}/../../sysutils/u-boot/patches
