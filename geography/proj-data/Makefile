@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/12/01 23:41:18 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/27 12:27:20 gdt Exp $
 
-VERSION_BASE=	1.20
+VERSION_BASE=	1.21
 #VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	proj-data-${VERSION}
