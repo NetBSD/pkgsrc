@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2022/01/22 14:24:21 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}
-${PYSITELIB}/xmlsec.py
-${PYSITELIB}/xmlsec.pyc
-${PYSITELIB}/xmlsec.pyo
-${PYSITELIB}/xmlsec_strings.py
-${PYSITELIB}/xmlsec_strings.pyc
-${PYSITELIB}/xmlsec_strings.pyo
-${PYSITELIB}/xmlsecmod.so

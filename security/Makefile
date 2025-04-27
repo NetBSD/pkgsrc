@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.978 2025/04/18 12:46:56 adam Exp $
+# $NetBSD: Makefile,v 1.979 2025/04/27 07:39:30 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -550,7 +550,6 @@ SUBDIR+=	py-trustme
 SUBDIR+=	py-truststore
 SUBDIR+=	py-trytond-authentication-sms
 SUBDIR+=	py-u2f
-SUBDIR+=	py-xmlsec
 SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
 SUBDIR+=	py-yubikey-manager
