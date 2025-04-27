@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/22 20:44:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/04/27 07:32:16 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/newsfeed.py
 ${PYSITELIB}/sphinxcontrib/newsfeed.pyc
 ${PYSITELIB}/sphinxcontrib/newsfeed.pyo
-${PYSITELIB}/sphinxcontrib_newsfeed-${PKGVERSION}-py3.13-nspkg.pth
+${PYSITELIB}/sphinxcontrib_newsfeed-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
