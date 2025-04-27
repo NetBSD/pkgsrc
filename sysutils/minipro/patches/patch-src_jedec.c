@@ -1,10 +1,10 @@
-$NetBSD: patch-jedec.c,v 1.2 2024/04/21 20:37:52 thorpej Exp $
+$NetBSD: patch-src_jedec.c,v 1.1 2025/04/27 17:46:01 thorpej Exp $
 
 Use ctype(3) functions safely.
 
---- jedec.c.orig	2024-04-21 20:28:47.620230367 +0000
-+++ jedec.c	2024-04-21 20:30:15.920088540 +0000
-@@ -146,7 +146,7 @@ static int parse_tokens(char *buffer, si
+--- src/jedec.c.orig	2025-04-27 16:29:38
++++ src/jedec.c	2025-04-27 16:30:03
+@@ -146,7 +146,7 @@ static int parse_tokens(char *buffer, size_t buffer_si
  			continue;
  
  		/* Skip non printable characters but ETX */
@@ -13,7 +13,7 @@ Use ctype(3) functions safely.
  			p_token++;
  
  		/* Exit the loop if the ETX character is found */
-@@ -274,7 +274,7 @@ static int parse_tokens(char *buffer, si
+@@ -274,7 +274,7 @@ static int parse_tokens(char *buffer, size_t buffer_si
  			 * 120 bits row.
  			 */
  			while (*p_next != DELIMITER) {
