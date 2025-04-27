@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.4 2025/04/20 19:26:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/04/27 20:07:25 wiz Exp $
 
 BLAKE2s (nlohmann-json-3.12.0.tar.gz) = 4a8f71416d89ed4e5442197e5705db4d3c1c5658e753400b2a65996623dbd0bc
 SHA512 (nlohmann-json-3.12.0.tar.gz) = 6cc1e86261f8fac21cc17a33da3b6b3c3cd5c116755651642af3c9e99bb3538fd42c1bd50397a77c8fb6821bc62d90e6b91bcdde77a78f58f2416c62fc53b97d
 Size (nlohmann-json-3.12.0.tar.gz) = 9678593 bytes
+SHA1 (patch-include_nlohmann_detail_conversions_from__json.hpp) = 3193edc36ab326a1de3bac7215dd530f2b867182
+SHA1 (patch-include_nlohmann_detail_conversions_to__json.hpp) = b5d141e11b3f92c29ca70cd087cf376df166bb92
+SHA1 (patch-single__include_nlohmann_json.hpp) = cf15a296dc9ddb85608ba1644721ec30143096e9
+SHA1 (patch-tests_src_unit-deserialization.cpp) = 2fbec98b3b13b5a135bea5659f7fff78b8b0bcb3
+SHA1 (patch-tests_src_unit-regression2.cpp) = 973156a2b09d3df8a2696272f532e1b66680ec37
+SHA1 (patch-tests_src_unit-user__defined__input.cpp) = be8fed57b7c87507064f9b2d4f2d568ad79cfb00
