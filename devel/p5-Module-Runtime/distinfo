@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/04/13 08:15:11 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/04/27 05:18:52 wiz Exp $
 
-BLAKE2s (Module-Runtime-0.017.tar.gz) = f6eb6dbbcdd22b16895646c7ada1a0b3515156ff8f49016d98c9f2a429f11a5c
-SHA512 (Module-Runtime-0.017.tar.gz) = a33d26f2546af903263ac2046244d0774a3254495717a4d97b545b5b242f438bd2692d6ec0f899190411fb8b50ed84e630443ea61a8f69a61472a2bef3712aeb
-Size (Module-Runtime-0.017.tar.gz) = 32188 bytes
+BLAKE2s (Module-Runtime-0.018.tar.gz) = 298df0ff4189d4720ab06a4ccb56f4c1f8485a96a80e496b7808d736b949ffc8
+SHA512 (Module-Runtime-0.018.tar.gz) = 67dcf637576570c7ab92d0d0a54f61918b9102e7e53b077dfbfdd907e9377ecdb124ac62224372eb5dbf1c02fb07086c6d8458b73fe0a01dd23926c91b11898d
+Size (Module-Runtime-0.018.tar.gz) = 27428 bytes
