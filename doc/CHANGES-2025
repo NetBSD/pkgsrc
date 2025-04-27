@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2898 2025/04/27 05:04:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2899 2025/04/27 05:07:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3824,3 +3824,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb22 [he 2025-04-26]
 	Updated geography/proj to 9.6.0nb3 [gdt 2025-04-27]
 	Updated security/p5-Authen-SASL to 2.1800 [wiz 2025-04-27]
+	Updated devel/p5-IO-Async to 0.804 [wiz 2025-04-27]
