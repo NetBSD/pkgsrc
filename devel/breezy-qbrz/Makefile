@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/27 07:31:04 wiz Exp $
 
-WHEEL_NAME=	qbrz-0.5.0
 DISTNAME=	breezy-qbrz-0.5.0.0.${VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 VER=		1667	# 0.5.0+
 SITES.${DISTNAME}.tar.gz= \
@@ -12,8 +12,7 @@ HOMEPAGE=	https://launchpad.net/qbrz
 COMMENT=	GUI front end for Breezy
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-fastbencode>0:../../converters/py-fastbencode
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.15:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6:../../x11/py-sip6
@@ -22,12 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 #DEPENDS+=	${PYPKGPREFIX}-enchant>=0:../../textproc/py-enchant
 #DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_TOOLS+=	msgfmt
 WRKSRC=		${WRKDIR}/~qbrz/qbrz/trunk
 
 REPLACE_PYTHON=		lib/uifactory.py
+WHEEL_NAME=		qbrz-0.5.0
 
 .include "../../devel/breezy/plugin.mk"
 .include "../../lang/python/wheel.mk"
