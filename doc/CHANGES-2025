@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2905 2025/04/27 07:39:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2906 2025/04/27 07:55:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3831,3 +3831,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Module-Signature to 0.89nb2 [wiz 2025-04-27]
 	Updated www/py-h11 to 0.16.0 [wiz 2025-04-27]
 	Removed security/py-xmlsec [wiz 2025-04-27]
+	Updated graphics/rawtherapee to 5.11 [wiz 2025-04-27]
