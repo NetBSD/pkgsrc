@@ -1,14 +1,14 @@
-$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb,v 1.1 2024/03/12 17:53:16 wiz Exp $
+$NetBSD: patch-src_alire_os__netbsd_alire-platforms-current__netbsd.adb,v 1.2 2025/04/27 10:43:42 dkazankov Exp $
 
 Add NetBSD support
 
---- /dev/null	2024-03-04 23:32:58.950570486 +0200
-+++ src/alire/os_netbsd/alire-platforms-current__netbsd.adb	2024-03-04 23:47:58.197854852 +0200
+--- /dev/null
++++ src/alire/os_netbsd/alire-platforms-current__netbsd.adb
 @@ -0,0 +1,40 @@
 +
 +package body Alire.Platforms.Current is
 +
-+   --  NetBSD implementation (identical to FreeBSD)
++   --  NetBSD implementation (very close to Linux/FreeBSD/OpenBSD)
 +
 +   ---------------------------
 +   -- Detected_Distribution --
