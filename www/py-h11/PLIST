@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/22 21:18:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/27 06:20:39 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -38,37 +38,3 @@ ${PYSITELIB}/h11/_writers.py
 ${PYSITELIB}/h11/_writers.pyc
 ${PYSITELIB}/h11/_writers.pyo
 ${PYSITELIB}/h11/py.typed
-${PYSITELIB}/h11/tests/__init__.py
-${PYSITELIB}/h11/tests/__init__.pyc
-${PYSITELIB}/h11/tests/__init__.pyo
-${PYSITELIB}/h11/tests/data/test-file
-${PYSITELIB}/h11/tests/helpers.py
-${PYSITELIB}/h11/tests/helpers.pyc
-${PYSITELIB}/h11/tests/helpers.pyo
-${PYSITELIB}/h11/tests/test_against_stdlib_http.py
-${PYSITELIB}/h11/tests/test_against_stdlib_http.pyc
-${PYSITELIB}/h11/tests/test_against_stdlib_http.pyo
-${PYSITELIB}/h11/tests/test_connection.py
-${PYSITELIB}/h11/tests/test_connection.pyc
-${PYSITELIB}/h11/tests/test_connection.pyo
-${PYSITELIB}/h11/tests/test_events.py
-${PYSITELIB}/h11/tests/test_events.pyc
-${PYSITELIB}/h11/tests/test_events.pyo
-${PYSITELIB}/h11/tests/test_headers.py
-${PYSITELIB}/h11/tests/test_headers.pyc
-${PYSITELIB}/h11/tests/test_headers.pyo
-${PYSITELIB}/h11/tests/test_helpers.py
-${PYSITELIB}/h11/tests/test_helpers.pyc
-${PYSITELIB}/h11/tests/test_helpers.pyo
-${PYSITELIB}/h11/tests/test_io.py
-${PYSITELIB}/h11/tests/test_io.pyc
-${PYSITELIB}/h11/tests/test_io.pyo
-${PYSITELIB}/h11/tests/test_receivebuffer.py
-${PYSITELIB}/h11/tests/test_receivebuffer.pyc
-${PYSITELIB}/h11/tests/test_receivebuffer.pyo
-${PYSITELIB}/h11/tests/test_state.py
-${PYSITELIB}/h11/tests/test_state.pyc
-${PYSITELIB}/h11/tests/test_state.pyo
-${PYSITELIB}/h11/tests/test_util.py
-${PYSITELIB}/h11/tests/test_util.pyc
-${PYSITELIB}/h11/tests/test_util.pyo

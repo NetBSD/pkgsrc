@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/22 21:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/04/27 06:20:39 wiz Exp $
 
-DISTNAME=	h11-0.14.0
+DISTNAME=	h11-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h11/}
 
@@ -15,10 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-# as of 0.14.0
-# 1 failed, 77 passed
-# with:
-#ALLOW_NETWORK_ACCESS=	yes
+# for testing
+ALLOW_NETWORK_ACCESS=	yes
+# as of 0.16.0
 # 78 passed
 
 .include "../../lang/python/wheel.mk"
