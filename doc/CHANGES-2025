@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2912 2025/04/27 12:27:25 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2913 2025/04/27 17:47:12 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-gnat-libs to 14.2.0nb1 [dkazankov 2025-04-27]
 	Updated devel/alire to 2.1.0 [dkazankov 2025-04-27]
 	Updated geography/proj-data to 1.21 [gdt 2025-04-27]
+	Updated sysutils/minipro to 0.7.3 [thorpej 2025-04-27]
