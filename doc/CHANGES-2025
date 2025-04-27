@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2911 2025/04/27 11:50:54 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2912 2025/04/27 12:27:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3836,3 +3836,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/apsfilter to 7.2.8nb4 [wiz 2025-04-27]
 	Updated lang/gcc14-gnat-libs to 14.2.0nb1 [dkazankov 2025-04-27]
 	Updated devel/alire to 2.1.0 [dkazankov 2025-04-27]
+	Updated geography/proj-data to 1.21 [gdt 2025-04-27]
