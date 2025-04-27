@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/01 23:41:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/27 12:27:20 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -133,6 +133,9 @@ share/proj/eur_nkg_README.txt
 share/proj/eur_nkg_nkgrf03vel_realigned.tif
 share/proj/eur_nkg_nkgrf17vel.tif
 share/proj/fi_nls_README.txt
+share/proj/fi_nls_fin2000.tif
+share/proj/fi_nls_fin2005n00.tif
+share/proj/fi_nls_fin2023n2000.tif
 share/proj/fi_nls_n43_n60.json
 share/proj/fi_nls_n60_n2000.json
 share/proj/fi_nls_ykj_etrs35fin.json
@@ -152,6 +155,7 @@ share/proj/fr_ign_RAMG2016.tif
 share/proj/fr_ign_RAR07_bl.tif
 share/proj/fr_ign_RASPM2018.tif
 share/proj/fr_ign_README.txt
+share/proj/fr_ign_RGM04versRGM23.tif
 share/proj/fr_ign_gg10_sbv2.tif
 share/proj/fr_ign_gg10_smv2.tif
 share/proj/fr_ign_ggg00_lsv2.tif
@@ -198,6 +202,8 @@ share/proj/is_lmi_Icegeoid_ISN93.tif
 share/proj/is_lmi_README.txt
 share/proj/jp_gsi_README.txt
 share/proj/jp_gsi_gsigeo2011.tif
+share/proj/lv_lgia_README.txt
+share/proj/lv_lgia_lv14.tif
 share/proj/mx_inegi_README.txt
 share/proj/mx_inegi_ggm10.tif
 share/proj/nc_dittt_RANC15.tif
