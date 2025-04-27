@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile.PL,v 1.2 2022/08/02 08:01:47 ast Exp $
+$NetBSD: patch-Makefile.PL,v 1.3 2025/04/27 05:17:59 wiz Exp $
 
 Take Makefile.PL from version Math-Pari-2.01080900 to avoid
 Math::PariBuild and other conflicting build rules
 
 --- Makefile.PL.orig	2022-04-12 09:52:37.000000000 +0200
 +++ Makefile.PL	2022-08-02 08:57:35.009435144 +0200
-@@ 0,40 +2,10 @@
+@@ -0,39 +0,9 @@
 -use strict;
 -use Config '%Config';
 -
