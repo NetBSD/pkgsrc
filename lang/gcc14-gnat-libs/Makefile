@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/27 09:37:07 dkazankov Exp $
 
 GCC_PKGNAME=		gcc14
 GCC14_DIST_VERSION=	14.2.0
@@ -25,7 +25,7 @@ USE_TOOLS+=	pax
 CHECK_RELRO_SUPPORTED=	no
 
 ## Depend on exactly ${GCC14_DIST_VERSION}.
-TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC14_DIST_VERSION}{,nb[0-9]*}:../../wip/gcc14-gnat
+TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC14_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc14-gnat
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 .include "../../mk/bsd.prefs.mk"
