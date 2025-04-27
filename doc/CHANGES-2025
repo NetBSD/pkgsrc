@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2910 2025/04/27 10:44:42 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.2911 2025/04/27 11:50:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3822,7 +3822,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/rbw to 1.13.2 [pin 2025-04-26]
 	Updated editors/tp-note to 1.25.8 [pin 2025-04-26]
 	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb22 [he 2025-04-26]
-	Updated geography/proj to 9.6.0nb3 [gdt 2025-04-27]
+	Updated geography/proj to 9.6.0 [gdt 2025-04-27]
 	Updated security/p5-Authen-SASL to 2.1800 [wiz 2025-04-27]
 	Updated devel/p5-IO-Async to 0.804 [wiz 2025-04-27]
 	Updated math/p5-Math-Pari to 2.030525 [wiz 2025-04-27]
