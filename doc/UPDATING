@@ -1,0 +1,12 @@
+$NetBSD: UPDATING,v 1.1 2025/04/27 07:21:27 wiz Exp $
+
+This file is for mentioning breaking changes that might affect
+administrators when updating from one branch to the next.
+
+2025-04-24:
+
+The default jpeg implementation has changed from 'jpeg' to
+'libjpeg-turbo'. There is no automatic support to switch from one to
+the other. Check the affected packages by 'pkg_info jpeg', make sure
+you have replacement packages available that depend on
+'libjpeg-turbo', then 'pkg_delete -f jpeg' and updated all packages.
