@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2906 2025/04/27 07:55:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2907 2025/04/27 08:07:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3832,3 +3832,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-h11 to 0.16.0 [wiz 2025-04-27]
 	Removed security/py-xmlsec [wiz 2025-04-27]
 	Updated graphics/rawtherapee to 5.11 [wiz 2025-04-27]
+	Updated print/html2ps to 1.0b7nb14 [wiz 2025-04-27]
