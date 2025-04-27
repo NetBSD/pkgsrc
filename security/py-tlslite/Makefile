@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/04/24 08:16:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/04/27 08:08:43 wiz Exp $
 
 DISTNAME=		tlslite-0.4.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,12 @@ COMMENT=		SSL 3.0, TLS 1.0, and TLS 1.1 in Python
 LICENSE=		public-domain
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
 DEPENDS+=		${PYPKGPREFIX}-pyasyncore>=0:../../devel/py-pyasyncore
+.endif
 
 USE_LANGUAGES=		# none
 
