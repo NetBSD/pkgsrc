@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25731 2025/04/28 11:10:59 wiz Exp $
+$NetBSD: TODO,v 1.25732 2025/04/28 11:15:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1366,7 +1366,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
-	o wxGTK32-3.2.8
 	o wxRemind-101
 	o x2vnc-1.31
 	o xcoral-3.14
