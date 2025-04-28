@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.65 2025/03/14 15:57:52 adam Exp $
+$NetBSD: distinfo,v 1.66 2025/04/28 09:02:35 adam Exp $
 
-BLAKE2s (certbot_dns_sakuracloud-3.3.0.tar.gz) = 50ed48ca0711eb865357d145a9ed23978357e6bfc57a9be230af7b120c20fa4f
-SHA512 (certbot_dns_sakuracloud-3.3.0.tar.gz) = 5963ff1830d243ef9a905f9dcbed2819f6c89315a8f0af042b982a7355acdb54265798b31ee07fdfb8e94acd5e1357716707568a0f66cac64dfbfa5c53591163
-Size (certbot_dns_sakuracloud-3.3.0.tar.gz) = 11988 bytes
+BLAKE2s (certbot_dns_sakuracloud-4.0.0.tar.gz) = 3598009ca1ed7407900d81312c0c580e4a94203c23256ef1dc2d125a48849bd7
+SHA512 (certbot_dns_sakuracloud-4.0.0.tar.gz) = a6fdf10dfeb5859085c7cd8293fe37b2c07a52583424cb592f1528048fa636716723976cf36a4cb3b5e7a2733195d2bbc0fb0bbe77ec204d5a6dd6dd19326460
+Size (certbot_dns_sakuracloud-4.0.0.tar.gz) = 11967 bytes
