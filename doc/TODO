@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25715 2025/04/28 01:57:53 gutteridge Exp $
+$NetBSD: TODO,v 1.25716 2025/04/28 07:36:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-Unidecode-1.4.0
 	o py-acme-4.0.0
-	o py-aiohttp-3.11.18
 	o py-cassa-1.11.0
 	o py-certbot-4.0.0
 	o py-certifi-2025.4.26
@@ -1150,7 +1149,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-google-api-python-client-2.168.0
 	o py-grpcio-1.71.0
 	o py-hgview-1.9.0
-	o py-httpcore-1.0.9
 	o py-input-pad-1.4.2
 	o py-josepy-2.0.0 [when updating this, also update the py-certbot packages to >=4.0]
 	o py-newt-0.52.21
@@ -1170,7 +1168,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-textual-3.1.1
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
-	o py-trio-0.30.0
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
