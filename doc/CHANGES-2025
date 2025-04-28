@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2949 2025/04/28 07:19:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2950 2025/04/28 07:36:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3876,3 +3876,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.147.0 [ffaubert 2025-04-28]
 	Updated audio/eyeD3 to 0.9.8 [adam 2025-04-28]
 	Updated devel/py-dogpile-cache to 1.4.0 [adam 2025-04-28]
+	Updated www/py-aiohttp to 3.11.18 [adam 2025-04-28]
+	Updated devel/py-test-check to 2.5.3 [adam 2025-04-28]
+	Updated www/py-httpcore to 1.0.9 [adam 2025-04-28]
+	Updated devel/py-trio to 0.30.0 [adam 2025-04-28]
