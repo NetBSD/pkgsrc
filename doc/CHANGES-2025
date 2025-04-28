@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2970 2025/04/28 11:38:50 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.2971 2025/04/28 12:17:34 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3922,3 +3922,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-bottle to 0.13.3 [adam 2025-04-28]
 	Updated x11/wxGTK32 to 3.2.8 [wiz 2025-04-28]
 	Updated misc/mbuffer to 20241007 [hauke 2025-04-28]
+	Added sysutils/qtl866 version 0.3.0.53 [hauke 2025-04-28]
