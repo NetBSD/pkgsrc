@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.56 2023/08/23 15:37:39 adam Exp $
+$NetBSD: distinfo,v 1.57 2025/04/28 16:26:05 tnn Exp $
 
 BLAKE2s (libsndfile-1.2.2.tar.xz) = c8008ba1286ccbc30bdef26ab0776c7382ffdbbdf0c6866d95648a46e3483179
 SHA512 (libsndfile-1.2.2.tar.xz) = a6e3ea3ac5d91befaa99f6a31a3fac44e7b7c11f1de4698167317a461d5a19a2651d47486a920b34400f18367b4f6173bf0c1c9ba80eb682cece1b5beee352a0
 Size (libsndfile-1.2.2.tar.xz) = 730760 bytes
+SHA1 (patch-src_ALAC_alac__decoder.c) = a90a21bc3f4a50343a9e4f9e4cabedeb1db4f438
+SHA1 (patch-src_ALAC_alac__encoder.c) = e3a956c06f7e6ebd4b743bb4a8a8ea4b998681d7
