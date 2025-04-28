@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/04/21 16:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/04/28 16:58:51 tnn Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -8,9 +8,11 @@ MASTER_SITES=	https://www.ohse.de/uwe/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ohse.de/uwe/software/lrzsz.html
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+#FORCE_C_STD=		gnu99
 
 .include "../../mk/bsd.prefs.mk"
 
