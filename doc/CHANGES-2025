@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2946 2025/04/28 05:24:55 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.2947 2025/04/28 05:54:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3871,3 +3871,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-runner to 2.2.0 [gutteridge 2025-04-28]
 	Updated meta-pkgs/lxqt to 2.2.0 [gutteridge 2025-04-28]
 	Updated lang/gcc14-gnat to 14.2.0 [dkazankov 2025-04-28]
+	Updated devel/libuv to 1.51.0 [adam 2025-04-28]
+	Updated devel/mold to 2.38.0 [adam 2025-04-28]
