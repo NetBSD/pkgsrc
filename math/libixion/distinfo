@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2024/02/10 00:43:50 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2025/04/28 21:04:38 tnn Exp $
 
 BLAKE2s (libixion-0.19.0.tar.xz) = e12f3af6943c8aac55401dc4d336cf17b83293c2e2fbb49856a2811ea6ebb905
 SHA512 (libixion-0.19.0.tar.xz) = f06edbcf5ae7459a46e01273952ce6fbc4e8f2b7782c7e07645dc30e102f20f542e449acafc26484765207b10656e0b350f4108cbf1e03947ee7267254cf6f97
 Size (libixion-0.19.0.tar.xz) = 536540 bytes
 SHA1 (patch-configure.ac) = f5a27ed314e69ecf1ed94d400abd2262a0fce7be
+SHA1 (patch-include_ixion_compute__engine.hpp) = 48384df00576632498c8fabda929a71e44b437d3
 SHA1 (patch-src_python_Makefile.am) = c4811646fbe288f85070994234502f20d4cafc56
