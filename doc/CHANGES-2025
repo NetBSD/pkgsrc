@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2939 2025/04/28 01:47:01 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2940 2025/04/28 01:48:32 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-notificationd to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/libfm-qt to 2.2.0 [gutteridge 2025-04-28]
 	Updated graphics/lximage-qt to 2.2.0 [gutteridge 2025-04-28]
+	Updated x11/lxqt-qtplugin to 2.2.0 [gutteridge 2025-04-28]
