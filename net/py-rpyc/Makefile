@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/16 10:21:32 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/04/28 19:36:22 adam Exp $
 
-DISTNAME=	rpyc-6.0.1
+DISTNAME=	rpyc-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpyc/}
