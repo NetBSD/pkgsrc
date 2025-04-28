@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2025/04/24 14:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2025/04/28 18:42:40 tnn Exp $
 
 DISTNAME=	sylpheed-3.7.0
 PKGREVISION=	21
@@ -21,6 +21,9 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-compface
+
+# For GCC>=15 (mainwindow.c GtkItemFactoryEntry callbacks)
+CFLAGS+=		-Wno-error=incompatible-pointer-types
 
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
