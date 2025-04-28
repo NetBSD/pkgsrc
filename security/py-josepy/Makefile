@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/03/21 18:04:13 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2025/04/28 09:00:05 adam Exp $
 
-DISTNAME=	josepy-1.15.0
+DISTNAME=	josepy-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
@@ -11,11 +11,7 @@ COMMENT=	JOSE protocol implementation in Python using cryptography
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.0:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0.5:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
@@ -23,8 +19,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} jws jws-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
