@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2025/04/12 12:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.83 2025/04/28 10:46:04 wiz Exp $
 
-DISTNAME=	pip-25.0.1
+DISTNAME=	pip-25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
 
@@ -18,9 +17,6 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON+=	src/pip/_vendor/appdirs.py
 REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
-
-.include "../../lang/python/pyversion.mk"
-FILES_SUBST+=  PYMAJORVERSION=${PYTHON_VERSION:C/^([0-9]).*/\1/}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip3 && ${MV} pip pip-${PYVERSSUFFIX} || ${TRUE}
