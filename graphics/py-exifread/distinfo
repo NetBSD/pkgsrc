@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/12/02 08:57:40 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/04/28 21:11:51 adam Exp $
 
-BLAKE2s (ExifRead-3.0.0.tar.gz) = 58ff55d1aa2514e9c18389f2b3ebd79587144493d35cc5c01c8decd3b42f330c
-SHA512 (ExifRead-3.0.0.tar.gz) = a10e63f8f21d10c539861316f7041448801335bc5c3269cd7f778f5981791dd382998211946339e5d6b3d13e4add53c880422b544ef9939995b825028393e11f
-Size (ExifRead-3.0.0.tar.gz) = 39895 bytes
+BLAKE2s (exifread-3.2.0.tar.gz) = 44e2cc2ccfb7d1f2631ca584718c3a69657a4dd7e562c37928f14605861db93f
+SHA512 (exifread-3.2.0.tar.gz) = 8e349ef1737f1d31db3e0632d2bdedc09aad60c34f4a30941fae3d65af45acc64c0ca3c149d641ae2a279d3aed5099fd39dac7a53140bf7d856ee746a3647698
+Size (exifread-3.2.0.tar.gz) = 49741 bytes
+SHA1 (patch-pyproject.toml) = 48be11c81ec4f47acf134c27e6fae8e5042bb53a
