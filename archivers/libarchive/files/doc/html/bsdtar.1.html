@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Sun Oct 13 08:12:11 2024 -->
+<!-- CreationDate: Sun Mar 30 20:07:39 2025 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -49,20 +49,21 @@ tar</b> {<b>-t&nbsp;</b>|&nbsp;<b>-x</b>} [<i>options</i>]
 
 <p style="margin-left:9%;"><b>tar</b> creates and
 manipulates streaming archive files. This implementation can
-extract from tar, pax, cpio, zip, jar, ar, xar, rpm, 7-zip,
-and ISO 9660 cdrom images and can create tar, pax, cpio, ar,
-zip, 7-zip, and shar archives.</p>
+extract from tar, pax, cpio, zip, jar, ar, xar, rar, rpm,
+7-zip, and ISO 9660 cdrom images and can create tar, pax,
+cpio, ar, zip, 7-zip, and shar archives.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The first
 synopsis form shows a &ldquo;bundled&rdquo; option word.
 This usage is provided for compatibility with historical
-implementations. See COMPATIBILITY below for details.</p>
+implementations. See &ldquo;COMPATIBILITY&rdquo; below for
+details.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The other
 synopsis forms show the preferred usage. The first option to
 <b>tar</b> is a mode indicator from the following list:</p>
 
-<p><b>-c</b></p>
+<p style="margin-top: 1em"><b>-c</b></p>
 
 <p style="margin-left:19%; margin-top: 1em">Create a new
 archive containing the specified items. The long option form
@@ -124,27 +125,28 @@ modes.</p>
 specified archive is opened and the entries in it will be
 appended to the current archive. As a simple example,</p>
 
-<p style="margin-left:27%;"><b>tar -c -f</b> <i>-
-newfile</i> <b>@</b><i>original.tar</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -c
+-f</b> <i>- newfile</i> <b>@</b><i>original.tar</i></p>
 
-<p style="margin-left:19%;">writes a new archive to
-standard output containing a file <i>newfile</i> and all of
-the entries from <i>original.tar</i>. In contrast,</p>
+<p style="margin-left:19%; margin-top: 1em">writes a new
+archive to standard output containing a file <i>newfile</i>
+and all of the entries from <i>original.tar</i>. In
+contrast,</p>
 
-<p style="margin-left:27%;"><b>tar -c -f</b> <i>- newfile
-original.tar</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -c
+-f</b> <i>- newfile original.tar</i></p>
 
-<p style="margin-left:19%;">creates a new archive with only
-two entries. Similarly,</p>
+<p style="margin-left:19%; margin-top: 1em">creates a new
+archive with only two entries. Similarly,</p>
 
-<p style="margin-left:27%;"><b>tar -czf</b> <i>-</i>
-<b>--format pax @</b><i>-</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -czf</b>
+<i>-</i> <b>--format pax @</b><i>-</i></p>
 
-<p style="margin-left:19%;">reads an archive from standard
-input (whose format will be determined automatically) and
-converts it into a gzip-compressed pax-format archive on
-stdout. In this way, <b>tar</b> can be used to convert
-archives from one format to another.</p>
+<p style="margin-left:19%; margin-top: 1em">reads an
+archive from standard input (whose format will be determined
+automatically) and converts it into a gzip-compressed
+pax-format archive on stdout. In this way, <b>tar</b> can be
+used to convert archives from one format to another.</p>
 
 <p style="margin-top: 1em"><b>-a</b>,
 <b>--auto-compress</b></p>
@@ -153,38 +155,38 @@ archives from one format to another.</p>
 suffix to decide a set of the format and the compressions.
 As a simple example,</p>
 
-<p style="margin-left:27%;"><b>tar -a -cf</b>
-<i>archive.tgz source.c source.h</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -a
+-cf</b> <i>archive.tgz source.c source.h</i></p>
 
-<p style="margin-left:19%;">creates a new archive with
+<p style="margin-left:19%; margin-top: 1em">creates a new
+archive with restricted pax format and gzip compression,</p>
+
+<p style="margin-left:27%; margin-top: 1em"><b>tar -a
+-cf</b> <i>archive.tar.bz2.uu source.c source.h</i></p>
+
+<p style="margin-left:19%; margin-top: 1em">creates a new
+archive with restricted pax format and bzip2 compression and
+uuencode compression,</p>
+
+<p style="margin-left:27%; margin-top: 1em"><b>tar -a
+-cf</b> <i>archive.zip source.c source.h</i></p>
+
+<p style="margin-left:19%; margin-top: 1em">creates a new
+archive with zip format,</p>
+
+<p style="margin-left:27%; margin-top: 1em"><b>tar -a
+-jcf</b> <i>archive.tgz source.c source.h</i></p>
+
+<p style="margin-left:19%; margin-top: 1em">ignores the
+&ldquo;-j&rdquo; option, and creates a new archive with
 restricted pax format and gzip compression,</p>
 
-<p style="margin-left:27%;"><b>tar -a -cf</b>
-<i>archive.tar.bz2.uu source.c source.h</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -a
+-jcf</b> <i>archive.xxx source.c source.h</i></p>
 
-<p style="margin-left:19%;">creates a new archive with
-restricted pax format and bzip2 compression and uuencode
-compression,</p>
-
-<p style="margin-left:27%;"><b>tar -a -cf</b>
-<i>archive.zip source.c source.h</i></p>
-
-<p style="margin-left:19%;">creates a new archive with zip
-format,</p>
-
-<p style="margin-left:27%;"><b>tar -a -jcf</b>
-<i>archive.tgz source.c source.h</i></p>
-
-<p style="margin-left:19%;">ignores the &ldquo;-j&rdquo;
-option, and creates a new archive with restricted pax format
-and gzip compression,</p>
-
-<p style="margin-left:27%;"><b>tar -a -jcf</b>
-<i>archive.xxx source.c source.h</i></p>
-
-<p style="margin-left:19%;">if it is unknown suffix or no
-suffix, creates a new archive with restricted pax format and
-bzip2 compression.</p>
+<p style="margin-left:19%; margin-top: 1em">if it is
+unknown suffix or no suffix, creates a new archive with
+restricted pax format and bzip2 compression.</p>
 
 <p style="margin-top: 1em"><b>--acls</b></p>
 
@@ -353,11 +355,12 @@ all entries are processed by default. The <b>--include</b>
 option is especially useful when filtering archives. For
 example, the command</p>
 
-<p style="margin-left:27%;"><b>tar -c -f</b> <i>new.tar</i>
-<b>--include=&rsquo;*foo*&rsquo; @</b><i>old.tgz</i></p>
+<p style="margin-left:27%; margin-top: 1em"><b>tar -c
+-f</b> <i>new.tar</i> <b>--include=&rsquo;*foo*&rsquo;
+@</b><i>old.tgz</i></p>
 
-<p style="margin-left:19%;">creates a new archive
-<i>new.tar</i> containing only the entries from
+<p style="margin-left:19%; margin-top: 1em">creates a new
+archive <i>new.tar</i> containing only the entries from
 <i>old.tgz</i> containing the string &lsquo;foo&rsquo;.</p>
 
 <p style="margin-top: 1em"><b>-J</b>, <b>--xz</b></p>
@@ -463,8 +466,10 @@ file attributes using <i>copyfile</i>(3) in AppleDouble
 format. This is the reverse of <b>--no-mac-metadata</b>. and
 the default behavior in c, r, and u modes or if <b>tar</b>
 is run in x mode as root. Currently supported only for pax
-formats (including &quot;pax restricted&quot;, the default
-tar format for bsdtar.)</p>
+formats (</p>
+
+<p>including pax restricted, the default tar format for
+<b>bsdtar</b> )</p>
 
 <p style="margin-top: 1em"><b>-n</b>, <b>--norecurse</b>,
 <b>--no-recursion</b></p>
@@ -655,7 +660,7 @@ modules that handle particular formats to control how those
 formats will behave. Each option has one of the following
 forms:</p>
 
-<p><i>key=value</i></p>
+<p style="margin-top: 1em"><i>key=value</i></p>
 
 <p style="margin-left:29%;">The key will be set to the
 specified value in every module that supports it. Modules
@@ -688,7 +693,7 @@ extract and list modes in
 <p style="margin-left:19%; margin-top: 1em">Examples of
 supported options:</p>
 
-<p><b>iso9660:joliet</b></p>
+<p style="margin-top: 1em"><b>iso9660:joliet</b></p>
 
 <p style="margin-left:29%;">Support Joliet extensions. This
 is enabled by default, use <b>!joliet</b> or
@@ -878,8 +883,9 @@ contents of the first concatenated archive would be read.
 This option is comparable to the <b>-i</b>,
 <b>--ignore-zeros</b> option of GNU tar.</p>
 
-<p style="margin-left:19%;">If a provided option is not
-supported by any module, that is a fatal error.</p>
+<p style="margin-left:19%; margin-top: 1em">If a provided
+option is not supported by any module, that is a fatal
+error.</p>
 
 <p style="margin-top: 1em"><b>-P</b>,
 <b>--absolute-paths</b></p>
@@ -1033,8 +1039,8 @@ before creating them. This can be a minor performance
 optimization if most files already exist, but can make
 things slower if most files do not already exist. This flag
 also causes <b>tar</b> to remove intervening directory
-symlinks instead of reporting an error. See the SECURITY
-section below for more details.</p>
+symlinks instead of reporting an error. See the
+&ldquo;SECURITY&rdquo; section below for more details.</p>
 
 <p style="margin-top: 1em"><b>--uid</b> <i>id</i></p>
 
@@ -1175,37 +1181,40 @@ occurs.</p>
 archive called <i>file.tar.gz</i> that contains two files
 <i>source.c</i> and <i>source.h</i>:</p>
 
-<p style="margin-left:17%;"><b>tar -czf</b> <i>file.tar.gz
-source.c source.h</i></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -czf</b>
+<i>file.tar.gz source.c source.h</i></p>
 
 <p style="margin-left:9%; margin-top: 1em">To view a
 detailed table of contents for this archive:</p>
 
-<p style="margin-left:17%;"><b>tar -tvf</b>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -tvf</b>
 <i>file.tar.gz</i></p>
 
 <p style="margin-left:9%; margin-top: 1em">To extract all
 entries from the archive on the default tape drive:</p>
 
-<p style="margin-left:17%;"><b>tar -x</b></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar
+-x</b></p>
 
 <p style="margin-left:9%; margin-top: 1em">To examine the
 contents of an ISO 9660 cdrom image:</p>
 
-<p style="margin-left:17%;"><b>tar -tf</b>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -tf</b>
 <i>image.iso</i></p>
 
 <p style="margin-left:9%; margin-top: 1em">To move file
 hierarchies, invoke <b>tar</b> as</p>
 
-<p style="margin-left:17%;"><b>tar -cf</b> <i>-</i>
-<b>-C</b> <i>srcdir .</i> | <b>tar -xpf</b> <i>-</i>
-<b>-C</b> <i>destdir</i></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -cf</b>
+<i>-</i> <b>-C</b> <i>srcdir .</i> | <b>tar -xpf</b>
+<i>-</i> <b>-C</b> <i>destdir</i></p>
 
-<p style="margin-left:9%;">or more traditionally</p>
+<p style="margin-left:9%; margin-top: 1em">or more
+traditionally</p>
 
-<p style="margin-left:17%;"><b>cd srcdir ; tar -cf</b> <i>-
-.</i> | (<i>cd destdir ;</i> <b>tar -xpf</b> <i>-</i>)</p>
+<p style="margin-left:17%; margin-top: 1em"><b>cd srcdir ;
+tar -cf</b> <i>- .</i> | (<i>cd destdir ;</i> <b>tar
+-xpf</b> <i>-</i>)</p>
 
 <p style="margin-left:9%; margin-top: 1em">In create mode,
 the list of files and directories to be archived can also
@@ -1214,17 +1223,17 @@ include directory change instructions of the form
 <b>@</b><i>archive-file</i>. For example, the command
 line</p>
 
-<p style="margin-left:17%;"><b>tar -c -f</b> <i>new.tar
-foo1</i> <b>@</b><i>old.tgz</i> <b>-C</b><i>/tmp
-foo2</i></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -c
+-f</b> <i>new.tar foo1</i> <b>@</b><i>old.tgz</i>
+<b>-C</b><i>/tmp foo2</i></p>
 
-<p style="margin-left:9%;">will create a new archive
-<i>new.tar</i>. <b>tar</b> will read the file <i>foo1</i>
-from the current directory and add it to the output archive.
-It will then read each entry from <i>old.tgz</i> and add
-those entries to the output archive. Finally, it will switch
-to the <i>/tmp</i> directory and add <i>foo2</i> to the
-output archive.</p>
+<p style="margin-left:9%; margin-top: 1em">will create a
+new archive <i>new.tar</i>. <b>tar</b> will read the file
+<i>foo1</i> from the current directory and add it to the
+output archive. It will then read each entry from
+<i>old.tgz</i> and add those entries to the output archive.
+Finally, it will switch to the <i>/tmp</i> directory and add
+<i>foo2</i> to the output archive.</p>
 
 <p style="margin-left:9%; margin-top: 1em">An input file in
 <i>mtree</i>(5) format can be used to create an output
@@ -1251,19 +1260,21 @@ details of archive generation or reading. For example, you
 can generate mtree output which only contains <b>type</b>,
 <b>time</b>, and <b>uid</b> keywords:</p>
 
-<p style="margin-left:17%;"><b>tar -cf</b> <i>file.tar</i>
-<b>--format=mtree
+<p style="margin-left:17%; margin-top: 1em"><b>tar -cf</b>
+<i>file.tar</i> <b>--format=mtree
 --options=&rsquo;!all,type,time,uid&rsquo;</b>
 <i>dir</i></p>
 
-<p style="margin-left:9%;">or you can set the compression
-level used by gzip or xz compression:</p>
+<p style="margin-left:9%; margin-top: 1em">or you can set
+the compression level used by gzip or xz compression:</p>
 
-<p style="margin-left:17%;"><b>tar -czf</b> <i>file.tar</i>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -czf</b>
+<i>file.tar</i>
 <b>--options=&rsquo;compression-level=9&rsquo;</b>.</p>
 
-<p style="margin-left:9%;">For more details, see the
-explanation of the <b>archive_read_set_options</b>() and
+<p style="margin-left:9%; margin-top: 1em">For more
+details, see the explanation of the
+<b>archive_read_set_options</b>() and
 <b>archive_write_set_options</b>() API calls that are
 described in <i>archive_read</i>(3) and
 <i>archive_write</i>(3).</p>
@@ -1278,15 +1289,15 @@ follow as separate words. The order of the arguments must
 match the order of the corresponding characters in the
 bundled command word. For example,</p>
 
-<p style="margin-left:17%;"><b>tar tbf 32</b>
-<i>file.tar</i></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar tbf
+32</b> <i>file.tar</i></p>
 
-<p style="margin-left:9%;">specifies three flags <b>t</b>,
-<b>b</b>, and <b>f</b>. The <b>b</b> and <b>f</b> flags both
-require arguments, so there must be two additional items on
-the command line. The <i>32</i> is the argument to the
-<b>b</b> flag, and <i>file.tar</i> is the argument to the
-<b>f</b> flag.</p>
+<p style="margin-left:9%; margin-top: 1em">specifies three
+flags <b>t</b>, <b>b</b>, and <b>f</b>. The <b>b</b> and
+<b>f</b> flags both require arguments, so there must be two
+additional items on the command line. The <i>32</i> is the
+argument to the <b>b</b> flag, and <i>file.tar</i> is the
+argument to the <b>f</b> flag.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The mode options
 c, r, t, u, and x and the options b, f, l, m, o, v, and w
@@ -1345,22 +1356,24 @@ be unconditionally removed. If neither <b>-U</b> nor
 <b>-P</b> is specified, <b>tar</b> will refuse to extract
 the entry.</p>
 
-<p style="margin-left:9%;">To protect yourself, you should
-be wary of any archives that come from untrusted sources.
-You should examine the contents of an archive with</p>
+<p style="margin-left:9%; margin-top: 1em">To protect
+yourself, you should be wary of any archives that come from
+untrusted sources. You should examine the contents of an
+archive with</p>
 
-<p style="margin-left:17%;"><b>tar -tf</b>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -tf</b>
 <i>filename</i></p>
 
-<p style="margin-left:9%;">before extraction. You should
-use the <b>-k</b> option to ensure that <b>tar</b> will not
-overwrite any existing files or the <b>-U</b> option to
-remove any pre-existing files. You should generally not
-extract archives while running with super-user privileges.
-Note that the <b>-P</b> option to <b>tar</b> disables the
-security checks above and allows you to extract an archive
-while preserving any absolute pathnames, <i>..</i>
-components, or symlinks to other directories.</p>
+<p style="margin-left:9%; margin-top: 1em">before
+extraction. You should use the <b>-k</b> option to ensure
+that <b>tar</b> will not overwrite any existing files or the
+<b>-U</b> option to remove any pre-existing files. You
+should generally not extract archives while running with
+super-user privileges. Note that the <b>-P</b> option to
+<b>tar</b> disables the security checks above and allows you
+to extract an archive while preserving any absolute
+pathnames, <i>..</i> components, or symlinks to other
+directories.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
@@ -1432,13 +1445,14 @@ and decompression is implemented internally, so there may be
 insignificant differences between the compressed output
 generated by</p>
 
-<p style="margin-left:17%;"><b>tar -czf</b> <i>-
-file</i></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -czf</b>
+<i>- file</i></p>
 
-<p style="margin-left:9%;">and that generated by</p>
+<p style="margin-left:9%; margin-top: 1em">and that
+generated by</p>
 
-<p style="margin-left:17%;"><b>tar -cf</b> <i>- file</i> |
-<b>gzip</b></p>
+<p style="margin-left:17%; margin-top: 1em"><b>tar -cf</b>
+<i>- file</i> | <b>gzip</b></p>
 
 <p style="margin-left:9%; margin-top: 1em">The default
 should be to read and write archives to the standard I/O
@@ -1468,9 +1482,9 @@ any support for multi-volume archives.</p>
 <p style="margin-left:9%; margin-top: 1em">Converting
 between dissimilar archive formats (such as tar and cpio)
 using the <b>@</b><i>-</i> convention can cause hard link
-information to be lost. (This is a consequence of the
+information to be lost. This is a consequence of the
 incompatible ways that different archive formats store
-hardlink information.) Debian April 23, 2024
+hardlink information. Debian April 23, 2024
 <i>TAR</i>(1)</p>
 <hr>
 </body>

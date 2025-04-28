@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.7.7])
-m4_define([LIBARCHIVE_VERSION_N],[3007007])
+m4_define([LIBARCHIVE_VERSION_S],[3.7.9])
+m4_define([LIBARCHIVE_VERSION_N],[3007009])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -489,8 +489,16 @@ AC_ARG_WITH([lzma],
   AS_HELP_STRING([--without-lzma], [Don't build support for xz through lzma]))
 
 if test "x$with_lzma" != "xno"; then
+  PKG_PROG_PKG_CONFIG
+  PKG_CHECK_MODULES(LZMA_PC, [liblzma], [
+    CPPFLAGS="${CPPFLAGS} ${LZMA_PC_CFLAGS}"
+    LIBS="${LIBS} ${LZMA_PC_LIBS}"
+    AC_DEFINE(HAVE_LIBLZMA, [1], [Define to 1 if you have the `lzma' library.])
+  ], [
+    AC_CHECK_LIB(lzma,lzma_stream_decoder)
+  ])
   AC_CHECK_HEADERS([lzma.h])
-  AC_CHECK_LIB(lzma,lzma_stream_decoder)
+
   # Some pre-release (but widely distributed) versions of liblzma
   # included a disabled version of lzma_stream_encoder_mt that
   # fools a naive AC_CHECK_LIB or AC_CHECK_FUNC, so we need
@@ -507,19 +515,6 @@ if test "x$with_lzma" != "xno"; then
       [ac_cv_lzma_has_mt=yes], [ac_cv_lzma_has_mt=no])])
   if test "x$ac_cv_lzma_has_mt" != xno; then
 	  AC_DEFINE([HAVE_LZMA_STREAM_ENCODER_MT], [1], [Define to 1 if you have the `lzma_stream_encoder_mt' function.])
-  fi
-
-  AC_CACHE_CHECK(
-    [whether we have ARM64 filter support in lzma],
-    ac_cv_lzma_has_arm64,
-    [AC_LINK_IFELSE([
-      AC_LANG_PROGRAM([[#include <lzma.h>]
-                       [#ifndef LZMA_FILTER_ARM64]
-                       [#error unsupported]
-                       [#endif]])],
-      [ac_cv_lzma_has_arm64=yes], [ac_cv_lzma_has_arm64=no])])
-  if test "x$ac_cv_lzma_has_arm64" != xno; then
-	  AC_DEFINE([HAVE_LZMA_FILTER_ARM64], [1], [Define to 1 if you have the `LZMA_FILTER_ARM64' macro.])
   fi
 fi
 
@@ -825,6 +820,7 @@ AC_CHECK_FUNCS([readpassphrase])
 AC_CHECK_FUNCS([select setenv setlocale sigaction statfs statvfs])
 AC_CHECK_FUNCS([strchr strdup strerror strncpy_s strnlen strrchr symlink])
 AC_CHECK_FUNCS([sysconf])
+AC_CHECK_FUNCS([tcgetattr tcsetattr])
 AC_CHECK_FUNCS([timegm tzset unlinkat unsetenv utime utimensat utimes vfork])
 AC_CHECK_FUNCS([wcrtomb wcscmp wcscpy wcslen wctomb wmemcmp wmemcpy wmemmove])
 AC_CHECK_FUNCS([_fseeki64 _get_timezone])
