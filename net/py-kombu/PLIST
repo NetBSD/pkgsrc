@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/15 08:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/04/28 20:37:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -46,9 +46,9 @@ ${PYSITELIB}/kombu/asynchronous/http/__init__.pyo
 ${PYSITELIB}/kombu/asynchronous/http/base.py
 ${PYSITELIB}/kombu/asynchronous/http/base.pyc
 ${PYSITELIB}/kombu/asynchronous/http/base.pyo
-${PYSITELIB}/kombu/asynchronous/http/curl.py
-${PYSITELIB}/kombu/asynchronous/http/curl.pyc
-${PYSITELIB}/kombu/asynchronous/http/curl.pyo
+${PYSITELIB}/kombu/asynchronous/http/urllib3_client.py
+${PYSITELIB}/kombu/asynchronous/http/urllib3_client.pyc
+${PYSITELIB}/kombu/asynchronous/http/urllib3_client.pyo
 ${PYSITELIB}/kombu/asynchronous/hub.py
 ${PYSITELIB}/kombu/asynchronous/hub.pyc
 ${PYSITELIB}/kombu/asynchronous/hub.pyo
@@ -139,6 +139,9 @@ ${PYSITELIB}/kombu/transport/etcd.pyo
 ${PYSITELIB}/kombu/transport/filesystem.py
 ${PYSITELIB}/kombu/transport/filesystem.pyc
 ${PYSITELIB}/kombu/transport/filesystem.pyo
+${PYSITELIB}/kombu/transport/gcpubsub.py
+${PYSITELIB}/kombu/transport/gcpubsub.pyc
+${PYSITELIB}/kombu/transport/gcpubsub.pyo
 ${PYSITELIB}/kombu/transport/librabbitmq.py
 ${PYSITELIB}/kombu/transport/librabbitmq.pyc
 ${PYSITELIB}/kombu/transport/librabbitmq.pyo
@@ -148,6 +151,9 @@ ${PYSITELIB}/kombu/transport/memory.pyo
 ${PYSITELIB}/kombu/transport/mongodb.py
 ${PYSITELIB}/kombu/transport/mongodb.pyc
 ${PYSITELIB}/kombu/transport/mongodb.pyo
+${PYSITELIB}/kombu/transport/native_delayed_delivery.py
+${PYSITELIB}/kombu/transport/native_delayed_delivery.pyc
+${PYSITELIB}/kombu/transport/native_delayed_delivery.pyo
 ${PYSITELIB}/kombu/transport/pyamqp.py
 ${PYSITELIB}/kombu/transport/pyamqp.pyc
 ${PYSITELIB}/kombu/transport/pyamqp.pyo

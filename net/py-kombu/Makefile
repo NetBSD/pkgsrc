@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/04/15 08:15:58 adam Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/28 20:37:36 adam Exp $
 
-DISTNAME=	kombu-5.3.7
+DISTNAME=	kombu-5.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
 
@@ -13,7 +12,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-amqp>=5.1.1:../../net/py-amqp
-DEPENDS+=	${PYPKGPREFIX}-vine-[0-9]*:../../devel/py-vine
+DEPENDS+=	${PYPKGPREFIX}-tzdata>=2025.2:../../time/py-tzdata
+DEPENDS+=	${PYPKGPREFIX}-vine>=5.1.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-Pyro4-[0-9]*:../../devel/py-Pyro
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
