@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2024/10/09 15:51:32 micha Exp $
+@comment $NetBSD: PLIST,v 1.65 2025/04/28 13:19:49 adam Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -9,6 +9,7 @@ bin/dijkstra
 bin/dot
 bin/dot2gxl
 bin/dot_builtins
+bin/dot_sandbox
 bin/edgepaint
 bin/fdp
 bin/gc
@@ -97,6 +98,7 @@ ${PLIST.gd}man/man1/diffimg.1
 man/man1/dijkstra.1
 man/man1/dot.1
 man/man1/dot2gxl.1
+man/man1/dot_sandbox.1
 man/man1/edgepaint.1
 man/man1/fdp.1
 man/man1/gc.1
