@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/02/13 16:20:34 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/28 07:32:15 adam Exp $
 
-DISTNAME=	pytest_check-2.5.0
+DISTNAME=	pytest_check-2.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-check/}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
