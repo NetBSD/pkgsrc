@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/02/13 11:25:58 pin Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/04/28 01:29:50 gutteridge Exp $
 bin/lxqt-config
 bin/lxqt-config-appearance
 bin/lxqt-config-brightness
@@ -116,6 +116,7 @@ share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_sl.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_tr.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_uk.qm
 share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_zh_CN.qm
+share/lxqt/translations/lxqt-config-brightness/lxqt-config-brightness_zh_TW.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_ar.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_arn.qm
 share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_ast.qm
@@ -207,6 +208,7 @@ share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associati
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_tr.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_uk.qm
 share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_zh_CN.qm
+share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_zh_TW.qm
 share/lxqt/translations/lxqt-config-input/lxqt-config-input_af.qm
 share/lxqt/translations/lxqt-config-input/lxqt-config-input_ar.qm
 share/lxqt/translations/lxqt-config-input/lxqt-config-input_arn.qm
@@ -300,6 +302,7 @@ share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_sv.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_tr.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_uk.qm
 share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_zh_CN.qm
+share/lxqt/translations/lxqt-config-locale/lxqt-config-locale_zh_TW.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_ar.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_arn.qm
 share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_ast.qm
