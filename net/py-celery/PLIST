@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/15 05:38:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/04/28 20:44:05 adam Exp $
 bin/celery-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -354,6 +354,9 @@ ${PYSITELIB}/celery/utils/__init__.pyo
 ${PYSITELIB}/celery/utils/abstract.py
 ${PYSITELIB}/celery/utils/abstract.pyc
 ${PYSITELIB}/celery/utils/abstract.pyo
+${PYSITELIB}/celery/utils/annotations.py
+${PYSITELIB}/celery/utils/annotations.pyc
+${PYSITELIB}/celery/utils/annotations.pyo
 ${PYSITELIB}/celery/utils/collections.py
 ${PYSITELIB}/celery/utils/collections.pyc
 ${PYSITELIB}/celery/utils/collections.pyo
@@ -390,6 +393,9 @@ ${PYSITELIB}/celery/utils/nodenames.pyo
 ${PYSITELIB}/celery/utils/objects.py
 ${PYSITELIB}/celery/utils/objects.pyc
 ${PYSITELIB}/celery/utils/objects.pyo
+${PYSITELIB}/celery/utils/quorum_queues.py
+${PYSITELIB}/celery/utils/quorum_queues.pyc
+${PYSITELIB}/celery/utils/quorum_queues.pyo
 ${PYSITELIB}/celery/utils/saferepr.py
 ${PYSITELIB}/celery/utils/saferepr.pyc
 ${PYSITELIB}/celery/utils/saferepr.pyo
@@ -442,6 +448,9 @@ ${PYSITELIB}/celery/worker/consumer/consumer.pyo
 ${PYSITELIB}/celery/worker/consumer/control.py
 ${PYSITELIB}/celery/worker/consumer/control.pyc
 ${PYSITELIB}/celery/worker/consumer/control.pyo
+${PYSITELIB}/celery/worker/consumer/delayed_delivery.py
+${PYSITELIB}/celery/worker/consumer/delayed_delivery.pyc
+${PYSITELIB}/celery/worker/consumer/delayed_delivery.pyo
 ${PYSITELIB}/celery/worker/consumer/events.py
 ${PYSITELIB}/celery/worker/consumer/events.pyc
 ${PYSITELIB}/celery/worker/consumer/events.pyo

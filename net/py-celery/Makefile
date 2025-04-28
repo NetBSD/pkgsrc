@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/04/15 05:38:02 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/04/28 20:44:05 adam Exp $
 
-DISTNAME=	celery-5.4.0
+DISTNAME=	celery-5.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
 
@@ -12,18 +11,19 @@ COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-billiard>=4.2.0:../../parallel/py-billiard
+DEPENDS+=	${PYPKGPREFIX}-billiard>=4.2.1:../../parallel/py-billiard
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.3.0:../../devel/py-click-didyoumean
 DEPENDS+=	${PYPKGPREFIX}-click-plugins>=1.1.1:../../devel/py-click-plugins
 DEPENDS+=	${PYPKGPREFIX}-click-repl>=0.2.0:../../devel/py-click-repl
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.2:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-kombu>=5.3.4:../../net/py-kombu
+DEPENDS+=	${PYPKGPREFIX}-kombu>=5.5.2:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-tzdata>=2022.7:../../time/py-tzdata
 DEPENDS+=	${PYPKGPREFIX}-vine>=5.1.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-boto3>=1.26.143:../../net/py-boto3
 TEST_DEPENDS+=	${PYPKGPREFIX}-moto>=4.1.11:../../net/py-moto
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-celery-[0-9]*:../../devel/py-test-celery
+# circular dependency
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-celery-[0-9]*:../../devel/py-test-celery
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-click-[0-9]*:../../
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-order-[0-9]*:../../
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-subtests>=0.11.0:../../devel/py-test-subtests
