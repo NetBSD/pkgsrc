@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/12/26 05:27:30 pin Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/04/28 01:52:26 gutteridge Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -44,6 +44,7 @@ share/lxqt/translations/lxqt-config-session/lxqt-config-session_ia.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_id.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_it.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ja.qm
+share/lxqt/translations/lxqt-config-session/lxqt-config-session_ka.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_ko.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_lg.qm
 share/lxqt/translations/lxqt-config-session/lxqt-config-session_lt.qm
@@ -88,6 +89,7 @@ share/lxqt/translations/lxqt-leave/lxqt-leave_hu.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_id.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_it.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ja.qm
+share/lxqt/translations/lxqt-leave/lxqt-leave_ka.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_kab.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_kk.qm
 share/lxqt/translations/lxqt-leave/lxqt-leave_ko.qm
@@ -136,6 +138,7 @@ share/lxqt/translations/lxqt-session/lxqt-session_ia.qm
 share/lxqt/translations/lxqt-session/lxqt-session_id.qm
 share/lxqt/translations/lxqt-session/lxqt-session_it.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ja.qm
+share/lxqt/translations/lxqt-session/lxqt-session_ka.qm
 share/lxqt/translations/lxqt-session/lxqt-session_kab.qm
 share/lxqt/translations/lxqt-session/lxqt-session_kk.qm
 share/lxqt/translations/lxqt-session/lxqt-session_ko.qm
