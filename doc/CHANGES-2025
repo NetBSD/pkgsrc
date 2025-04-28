@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2951 2025/04/28 07:45:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2952 2025/04/28 07:50:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3882,3 +3882,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-trio to 0.30.0 [adam 2025-04-28]
 	Updated security/py-certifi to 2025.4.26 [adam 2025-04-28]
 	Updated devel/py-testresources to 2.0.2 [adam 2025-04-28]
+	Updated www/py-hishel to 0.1.2 [adam 2025-04-28]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.2.0 [adam 2025-04-28]
