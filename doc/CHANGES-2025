@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2961 2025/04/28 10:54:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2962 2025/04/28 11:01:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3912,3 +3912,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.168.0 [wiz 2025-04-28]
 	Updated devel/py-pip to 25.1 [wiz 2025-04-28]
 	Updated devel/py-ruff to 0.11.7 [wiz 2025-04-28]
+	Updated comms/py-textual to 3.1.1 [wiz 2025-04-28]
