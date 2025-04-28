@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/02 17:13:33 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/28 01:24:13 gutteridge Exp $
 bin/lxqt-admin-user
 bin/lxqt-admin-user-helper
 share/applications/lxqt-admin-user.desktop
@@ -25,6 +25,8 @@ share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_hu.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_id.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_it.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ja.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ka.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_kab.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_ko.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_lg.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_lt.qm
@@ -42,4 +44,5 @@ share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_tr.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_uk.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_vi.qm
 share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_zh_CN.qm
+share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_zh_TW.qm
 share/polkit-1/actions/org.lxqt.lxqt-admin-user.policy

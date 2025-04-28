@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2023/07/22 08:51:42 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2025/04/28 01:24:13 gutteridge Exp $
 bin/lxqt-admin-time
 bin/lxqt-admin-time-helper
 share/applications/lxqt-admin-time.desktop
@@ -23,6 +23,7 @@ share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_hu.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_id.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_it.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_ja.qm
+share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_ka.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_kk.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_ko.qm
 share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_lt.qm
