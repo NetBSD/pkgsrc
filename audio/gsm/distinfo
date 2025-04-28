@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 09:59:00 nia Exp $
+$NetBSD: distinfo,v 1.16 2025/04/28 16:16:16 tnn Exp $
 
-BLAKE2s (gsm-1.0.19.tar.gz) = 76f2d5cd78c23af6983982edaca4f8c383e93c8e9c6341b1394c5796b935062d
-SHA512 (gsm-1.0.19.tar.gz) = f69b4bf2d918b118b5de90b8ab88fd026008ac7432f07b872b81fe52cdc781f605dca8eedcdaebc8beb974cef388496c618f92a41961c62057009964159f8392
-Size (gsm-1.0.19.tar.gz) = 64665 bytes
-SHA1 (patch-Makefile) = 4e989df8ea5b9eded47fb8a6cd2f8bb4a1dca30f
+BLAKE2s (gsm-1.0.22.tar.gz) = 4af72a479341e85539c2844cefde727fd4993a636e0c19b0fcfb2a7602aaae76
+SHA512 (gsm-1.0.22.tar.gz) = f4284f096ed4d606ddece5c1b28edb63feacc26a0b664f1350c040dbf50113d27bedfd9896bf1620cb4fc3a6c8f6a5244955a6c625ded833dcee607c63c97dd2
+Size (gsm-1.0.22.tar.gz) = 66583 bytes
+SHA1 (patch-Makefile) = 2464498f4084410c73c1671aaa3e6416ab1dbd17
+SHA1 (patch-src_toast.c) = acdbc4a3bd15acfd468f1a9d82dbb14b7b9ed5f7

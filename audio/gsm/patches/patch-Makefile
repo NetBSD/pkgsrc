@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile,v 1.1 2019/06/15 08:41:30 adam Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/04/28 16:16:16 tnn Exp $
 
 Do not overwrite compiler flags.
 Use proper installation tools and paths.
 
---- Makefile.orig	2018-05-06 02:07:28.000000000 +0000
+--- Makefile.orig	2022-08-04 18:46:46.107815841 +0000
 +++ Makefile
 @@ -43,7 +43,6 @@ WAV49	= -DWAV49
  # CC		= /usr/lang/acc
@@ -48,7 +48,7 @@ Use proper installation tools and paths.
 +DIRNAME		= dirname
  AR		= ar
  ARFLAGS		= cr
- RMFLAGS		=
+ RMFLAGS		= -f
 @@ -114,7 +113,6 @@ RANLIB	 	= ranlib
  
  # Local Directories
@@ -140,68 +140,68 @@ Use proper installation tools and paths.
  		fi
  
  gsmuninstall:
-@@ -351,52 +358,34 @@ toastuninstall:
+@@ -351,53 +358,34 @@ toastuninstall:
  		fi
  
  $(TOAST_INSTALL_BIN)/toast:	$(TOAST)
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $(TOAST) $@
 -		chmod 755 $@
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $? $(TOAST_INSTALL_BIN)
  
  $(TOAST_INSTALL_BIN)/untoast:	$(TOAST_INSTALL_BIN)/toast
--		-rm $@
--		ln $? $@
+-		-rm $(RMFLAGS) $@
+-		$(LN) $? $@
 +		${LN} -f toast $@
  
  $(TOAST_INSTALL_BIN)/tcat:	$(TOAST_INSTALL_BIN)/toast
--		-rm $@
--		ln $? $@
+-		-rm $(RMFLAGS) $@
+-		$(LN) $? $@
 +		${LN} -f toast $@
  
  $(TOAST_INSTALL_MAN)/toast.1:	$(MAN)/toast.1
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_MAN} $? $(TOAST_INSTALL_MAN)
  
  $(GSM_INSTALL_MAN)/gsm.3:	$(MAN)/gsm.3
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_MAN} $? $(GSM_INSTALL_MAN)
  
  $(GSM_INSTALL_MAN)/gsm_option.3:	$(MAN)/gsm_option.3
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_MAN} $? $(GSM_INSTALL_MAN)
  
  $(GSM_INSTALL_MAN)/gsm_explode.3:	$(MAN)/gsm_explode.3
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_MAN} $? $(GSM_INSTALL_MAN)
  
  $(GSM_INSTALL_MAN)/gsm_print.3:	$(MAN)/gsm_print.3
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_MAN} $? $(GSM_INSTALL_MAN)
  
  $(GSM_INSTALL_INC)/gsm.h:	$(INC)/gsm.h
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 -
 -$(GSM_INSTALL_LIB)/libgsm.a:	$(LIBGSM)
--		-rm $@
+-		-rm $(RMFLAGS) $@
 -		cp $? $@
 -		chmod 444 $@
 +		${BSD_INSTALL_DATA} $? $(GSM_INSTALL_INC)
-+
+ 
 +$(GSM_INSTALL_LIB)/libgsm.la:	$(LIBGSM)
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $? $(GSM_INSTALL_LIB)
  
- 
  # Distribution
+ 
