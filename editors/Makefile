@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2025/02/11 08:01:45 wiz Exp $
+# $NetBSD: Makefile,v 1.259 2025/04/28 08:29:21 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -44,6 +44,8 @@ SUBDIR+=	emacs28
 SUBDIR+=	emacs28-nox11
 SUBDIR+=	emacs29
 SUBDIR+=	emacs29-nox11
+SUBDIR+=	emacs30
+SUBDIR+=	emacs30-nox11
 SUBDIR+=	ex
 SUBDIR+=	fe
 SUBDIR+=	feathernotes
