@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2972 2025/04/28 12:38:24 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2973 2025/04/28 13:20:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3924,3 +3924,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/mbuffer to 20241007 [hauke 2025-04-28]
 	Added sysutils/qtl866 version 0.3.0.53 [hauke 2025-04-28]
 	Updated chat/ejabberd to 25.04 [gdt 2025-04-28]
+	Updated multimedia/mkvtoolnix to 92.0 [adam 2025-04-28]
+	Updated graphics/graphviz to 12.2.1 [adam 2025-04-28]
