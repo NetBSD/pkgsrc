@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 11:19:28 nia Exp $
+$NetBSD: distinfo,v 1.26 2025/04/28 21:14:59 tnn Exp $
 
-BLAKE2s (dbus-glib-0.112.tar.gz) = 8d87c5ec8528d3a1024ae358c2e675e4055682510f04c661bff5d0c4babb670d
-SHA512 (dbus-glib-0.112.tar.gz) = 7c9f393f065dfb3d698f35e6554caf15fe539f5dd52d2b2bb6ed1770e130f5dab8e45379232520301455bae9bb77e25a109faf175153fcd4b9dd11d7de4a546e
-Size (dbus-glib-0.112.tar.gz) = 715340 bytes
+BLAKE2s (dbus-glib-0.114.tar.gz) = e59d26a75529dd71058efd1c063e31970fa904bbc96dec65bbd6f5b406f3bf07
+SHA512 (dbus-glib-0.114.tar.gz) = c341cc0778edbf776d3e1a6d3cd9c136766544cb4b7239d6affa2fa246fa9c5716fe4d674c9bb56b36ee140344663bf967f70841ad132f978a662a22cc9a3a0d
+Size (dbus-glib-0.114.tar.gz) = 737791 bytes
 SHA1 (patch-aa) = 68759b69c6da2015fdbb4d5d6033682ba8b8f961
