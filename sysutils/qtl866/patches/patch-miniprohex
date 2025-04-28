@@ -1,0 +1,75 @@
+$NetBSD: patch-miniprohex,v 1.1 2025/04/28 12:16:35 hauke Exp $
+
+Un-bashify
+
+--- miniprohex.orig	2017-04-05 04:34:13.000000000 +0000
++++ miniprohex
+@@ -1,6 +1,6 @@
+ #!/bin/bash
+ 
+-if [ $# == 0 ]
++if [ $# = 0 ]
+ then
+    cat << EOF
+ miniprohex by Al Williams http://www.awce.com
+@@ -38,7 +38,7 @@ SRECOPTS=
+ while [ $# != 0 ]
+ do
+ # note --obs x becomes --obs=x
+-  if [ "$1" == "--obs" ]
++  if [ "$1" = "--obs" ]
+   then
+       SRECOPTS="$SRECOPTS $1=$2"
+       shift
+@@ -46,11 +46,11 @@ do
+       continue
+   fi
+ # note --line-length x becomes --line-length=x
+-  if [ "$1" == "--line-length" ]
++  if [ "$1" = "--line-length" ]
+   then
+       SRECOPTS="$SRECOPTS $1=$2"
+   fi
+-  if [ "$1" == "--unfill" ]
++  if [ "$1" = "--unfill" ]
+   then
+       SRECOPTS="$SRECOPTS $1 $2 $3"
+       shift
+@@ -58,24 +58,24 @@ do
+       shift
+       continue
+   fi
+-  if [ "$1" == "--offset" ] 
++  if [ "$1" = "--offset" ] 
+   then
+       SRECOPTS="$SRECOPTS $1 $2"
+       shift
+       shift
+       continue
+   fi
+-  if [ "$1" == "-r" ] 
++  if [ "$1" = "-r" ] 
+   then
+     RWOPT=-r
+     shift
+     FN=$1
+-  elif [ "$1" == "-w" ]
++  elif [ "$1" = "-w" ]
+   then
+     RWOPT=-w
+     shift
+     FN=$1
+-  elif [ "$1" == "-p" ]
++  elif [ "$1" = "-p" ]
+   then
+       DEV=$2
+       shift
+@@ -124,7 +124,7 @@ PRECVT=
+ POSTCVT=
+ esac
+ # If we write, do PRECMD and execute
+-if [ "$RWOPT" == -w ]
++if [ "$RWOPT" = -w ]
+ then
+ $PRECVT
+ minipro $OPTS -p "$DEV" $RWOPT $RFILE

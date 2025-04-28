@@ -1,0 +1,5 @@
+Qtl866 provides a GUI for the MiniPRO TL866, MiniPRO TL866CS and
+MiniPRO TL866A programmers.
+
+It utilizes the command-line based minipro tool and supports more than
+13000 target devices, including AVRs, PICs, various BIOSes and EEPROMs.
