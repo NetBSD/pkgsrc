@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/02 17:36:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/28 01:37:44 gutteridge Exp $
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
@@ -14,6 +14,7 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_da.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_de.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_el.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_en_GB.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_es.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_et.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_fi.qm
@@ -25,6 +26,7 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_id.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_it.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ja.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ka.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ko.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lg.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lt.qm
@@ -52,6 +54,7 @@ share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_cy.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_da.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_de.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_el.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_en_GB.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_es.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_et.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_fi.qm
@@ -63,6 +66,8 @@ share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_hu.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_id.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_it.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ja.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ka.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_kab.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ko.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lg.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lt.qm
@@ -80,3 +85,4 @@ share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_tr.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_uk.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_vi.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_zh_CN.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_zh_TW.qm
