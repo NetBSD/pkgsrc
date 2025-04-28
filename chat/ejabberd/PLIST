@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2025/04/24 13:35:29 gdt Exp $
+@comment $NetBSD: PLIST,v 1.61 2025/04/28 12:38:17 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -70,6 +70,7 @@ lib/${PKGNAME}/ebin/ejabberd_sm_redis.beam
 lib/${PKGNAME}/ebin/ejabberd_sm_sql.beam
 lib/${PKGNAME}/ebin/ejabberd_sql.beam
 lib/${PKGNAME}/ebin/ejabberd_sql_pt.beam
+lib/${PKGNAME}/ebin/ejabberd_sql_schema.beam
 lib/${PKGNAME}/ebin/ejabberd_sql_sup.beam
 lib/${PKGNAME}/ebin/ejabberd_stun.beam
 lib/${PKGNAME}/ebin/ejabberd_sup.beam
@@ -99,6 +100,8 @@ lib/${PKGNAME}/ebin/gen_pubsub_nodetree.beam
 lib/${PKGNAME}/ebin/jd2ejd.beam
 lib/${PKGNAME}/ebin/misc.beam
 lib/${PKGNAME}/ebin/mod_adhoc.beam
+lib/${PKGNAME}/ebin/mod_adhoc_api.beam
+lib/${PKGNAME}/ebin/mod_adhoc_api_opt.beam
 lib/${PKGNAME}/ebin/mod_adhoc_opt.beam
 lib/${PKGNAME}/ebin/mod_admin_extra.beam
 lib/${PKGNAME}/ebin/mod_admin_update_sql.beam
@@ -106,6 +109,9 @@ lib/${PKGNAME}/ebin/mod_announce.beam
 lib/${PKGNAME}/ebin/mod_announce_mnesia.beam
 lib/${PKGNAME}/ebin/mod_announce_opt.beam
 lib/${PKGNAME}/ebin/mod_announce_sql.beam
+lib/${PKGNAME}/ebin/mod_auth_fast.beam
+lib/${PKGNAME}/ebin/mod_auth_fast_mnesia.beam
+lib/${PKGNAME}/ebin/mod_auth_fast_opt.beam
 lib/${PKGNAME}/ebin/mod_avatar.beam
 lib/${PKGNAME}/ebin/mod_avatar_opt.beam
 lib/${PKGNAME}/ebin/mod_block_strangers.beam
@@ -124,6 +130,7 @@ lib/${PKGNAME}/ebin/mod_carboncopy.beam
 lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/${PKGNAME}/ebin/mod_client_state_opt.beam
 lib/${PKGNAME}/ebin/mod_configure.beam
+lib/${PKGNAME}/ebin/mod_configure_opt.beam
 lib/${PKGNAME}/ebin/mod_conversejs.beam
 lib/${PKGNAME}/ebin/mod_conversejs_opt.beam
 lib/${PKGNAME}/ebin/mod_delegation.beam
@@ -153,6 +160,11 @@ lib/${PKGNAME}/ebin/mod_mam.beam
 lib/${PKGNAME}/ebin/mod_mam_mnesia.beam
 lib/${PKGNAME}/ebin/mod_mam_opt.beam
 lib/${PKGNAME}/ebin/mod_mam_sql.beam
+lib/${PKGNAME}/ebin/mod_matrix_gw.beam
+lib/${PKGNAME}/ebin/mod_matrix_gw_opt.beam
+lib/${PKGNAME}/ebin/mod_matrix_gw_room.beam
+lib/${PKGNAME}/ebin/mod_matrix_gw_s2s.beam
+lib/${PKGNAME}/ebin/mod_matrix_gw_sup.beam
 lib/${PKGNAME}/ebin/mod_metrics.beam
 lib/${PKGNAME}/ebin/mod_metrics_opt.beam
 lib/${PKGNAME}/ebin/mod_mix.beam
@@ -178,8 +190,11 @@ lib/${PKGNAME}/ebin/mod_muc_admin_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_log.beam
 lib/${PKGNAME}/ebin/mod_muc_log_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_mnesia.beam
+lib/${PKGNAME}/ebin/mod_muc_occupantid.beam
 lib/${PKGNAME}/ebin/mod_muc_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_room.beam
+lib/${PKGNAME}/ebin/mod_muc_rtbl.beam
+lib/${PKGNAME}/ebin/mod_muc_rtbl_opt.beam
 lib/${PKGNAME}/ebin/mod_muc_sql.beam
 lib/${PKGNAME}/ebin/mod_muc_sup.beam
 lib/${PKGNAME}/ebin/mod_multicast.beam
@@ -227,8 +242,11 @@ lib/${PKGNAME}/ebin/mod_roster.beam
 lib/${PKGNAME}/ebin/mod_roster_mnesia.beam
 lib/${PKGNAME}/ebin/mod_roster_opt.beam
 lib/${PKGNAME}/ebin/mod_roster_sql.beam
+lib/${PKGNAME}/ebin/mod_s2s_bidi.beam
 lib/${PKGNAME}/ebin/mod_s2s_dialback.beam
 lib/${PKGNAME}/ebin/mod_s2s_dialback_opt.beam
+lib/${PKGNAME}/ebin/mod_scram_upgrade.beam
+lib/${PKGNAME}/ebin/mod_scram_upgrade_opt.beam
 lib/${PKGNAME}/ebin/mod_service_log.beam
 lib/${PKGNAME}/ebin/mod_service_log_opt.beam
 lib/${PKGNAME}/ebin/mod_shared_roster.beam
@@ -299,6 +317,7 @@ lib/${PKGNAME}/include/mod_announce.hrl
 lib/${PKGNAME}/include/mod_caps.hrl
 lib/${PKGNAME}/include/mod_last.hrl
 lib/${PKGNAME}/include/mod_mam.hrl
+lib/${PKGNAME}/include/mod_matrix_gw.hrl
 lib/${PKGNAME}/include/mod_muc.hrl
 lib/${PKGNAME}/include/mod_muc_room.hrl
 lib/${PKGNAME}/include/mod_offline.hrl
@@ -318,7 +337,7 @@ lib/${PKGNAME}/priv/css/bosh.css
 lib/${PKGNAME}/priv/css/muc.css
 lib/${PKGNAME}/priv/css/oauth.css
 lib/${PKGNAME}/priv/css/register.css
-lib/${PKGNAME}/priv/img/admin-logo-fill.png
+lib/${PKGNAME}/priv/css/sortable.min.css
 lib/${PKGNAME}/priv/img/admin-logo.png
 lib/${PKGNAME}/priv/img/bosh-logo.png
 lib/${PKGNAME}/priv/img/favicon.png
@@ -329,8 +348,9 @@ lib/${PKGNAME}/priv/img/valid-xhtml10.png
 lib/${PKGNAME}/priv/img/vcss.png
 lib/${PKGNAME}/priv/js/admin.js
 lib/${PKGNAME}/priv/js/muc.js
-lib/${PKGNAME}/priv/lua/redis_sm.lua
+lib/${PKGNAME}/priv/js/sortable.min.js
 lib/${PKGNAME}/priv/msgs/ar.msg
+lib/${PKGNAME}/priv/msgs/bg.msg
 lib/${PKGNAME}/priv/msgs/ca.msg
 lib/${PKGNAME}/priv/msgs/cs.msg
 lib/${PKGNAME}/priv/msgs/de.msg
@@ -353,6 +373,7 @@ lib/${PKGNAME}/priv/msgs/ru.msg
 lib/${PKGNAME}/priv/msgs/sk.msg
 lib/${PKGNAME}/priv/msgs/sq.msg
 lib/${PKGNAME}/priv/msgs/sv.msg
+lib/${PKGNAME}/priv/msgs/ta.msg
 lib/${PKGNAME}/priv/msgs/th.msg
 lib/${PKGNAME}/priv/msgs/tr.msg
 lib/${PKGNAME}/priv/msgs/uk.msg
@@ -361,6 +382,7 @@ lib/${PKGNAME}/priv/msgs/wa.msg
 lib/${PKGNAME}/priv/msgs/zh.msg
 lib/${PKGNAME}/priv/sql/lite.new.sql
 lib/${PKGNAME}/priv/sql/lite.sql
+lib/${PKGNAME}/priv/sql/mssql.new.sql
 lib/${PKGNAME}/priv/sql/mssql.sql
 lib/${PKGNAME}/priv/sql/mysql.new.sql
 lib/${PKGNAME}/priv/sql/mysql.old-to-new.sql
