@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2981 2025/04/28 20:23:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2982 2025/04/28 20:44:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3947,3 +3947,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/editline to 3.1.20250104 [tnn 2025-04-28]
 	Updated devel/py-virtualenv to 20.30.0 [adam 2025-04-28]
 	Updated devel/py-tox to 4.25.0 [adam 2025-04-28]
+	Updated net/py-kombu to 5.5.3 [adam 2025-04-28]
+	Updated net/py-celery to 5.5.2 [adam 2025-04-28]
