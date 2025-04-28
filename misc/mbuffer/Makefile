@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/28 11:38:37 hauke Exp $
 
-DISTNAME=	mbuffer-20180625
-PKGREVISION=	2
+DISTNAME=	mbuffer-20241007
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz
@@ -11,11 +10,12 @@ HOMEPAGE=	https://www.maier-komor.de/mbuffer.html
 COMMENT=	Tool for buffering data streams
 LICENSE=	gnu-gpl-v3
 
-BROKEN_ON_PLATFORM=	NetBSD-*-*	# Needs sysctl bits
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
+USE_TOOLS+=		gmake
 
-GNU_CONFIGURE=	yes
-
-USE_LANGUAGES=	c c99
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-configure
@@ -29,6 +29,8 @@ CONF_FILES+=		share/examples/mbuffer/mbuffer.rc \
 			${PKG_SYSCONFDIR}/mbuffer.rc
 
 CHECK_PORTABILITY_SKIP+=	configure.in
+
+TEST_TARGET=		test0 test1 test2 test3 test4 test5 test6 test7
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
