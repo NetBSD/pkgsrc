@@ -1,0 +1,85 @@
+$NetBSD: patch-binhexedit,v 1.1 2025/04/28 12:16:35 hauke Exp $
+
+Un-bashify
+
+Make hex editor configurable - upstream's choice bless has not been
+packaged, yet
+
+--- binhexedit.orig	2017-04-05 04:34:13.000000000 +0000
++++ binhexedit
+@@ -1,5 +1,5 @@
+ #!/bin/bash
+-if [ $# == 0 ]
++if [ $# = 0 ]
+ then
+    cat << EOF
+ binedit by Al Williams http://www.awce.com
+@@ -25,8 +25,8 @@ all will work! See https://bugs.launchpa
+ EOF
+ fi
+ 
+-BEDITOR=bless
+-# Options for bless
++BEDITOR=@HEXEDIT@
++# Options for @HEXEDIT@
+ OPTS=
+ # The -r or -w
+ RWOPT=
+@@ -43,7 +43,7 @@ TMPDIR=/tmp
+ while [ $# != 0 ]
+ do
+ # note --obs x becomes --obs=x
+-  if [ "$1" == "--obs" ]
++  if [ "$1" = "--obs" ]
+   then
+       SRECOPTS="$SRECOPTS $1=$2"
+       shift
+@@ -51,11 +51,11 @@ do
+       continue
+   fi
+ # note --line-length x becomes --line-length=x
+-  if [ "$1" == "--line-length" ]
++  if [ "$1" = "--line-length" ]
+   then
+       SRECOPTS="$SRECOPTS $1=$2"
+   fi
+-  if [ "$1" == "--unfill" ]
++  if [ "$1" = "--unfill" ]
+   then
+       SRECOPTS="$SRECOPTS $1 $2 $3"
+       shift
+@@ -63,14 +63,14 @@ do
+       shift
+       continue
+   fi
+-  if [ "$1" == "--offset" ] 
++  if [ "$1" = "--offset" ] 
+   then
+       SRECOPTS="$SRECOPTS $1 $2"
+       shift
+       shift
+       continue
+   fi
+-  if [ "$1" == "-r" ] 
++  if [ "$1" = "-r" ] 
+   then
+     RWOPT=-r
+     shift
+@@ -106,7 +106,7 @@ PRECVT="srec_cat $FN --motorola -o $SREC
+ POSTCVT="srec_cat $RFILE --binary $SRECOPTS -o $FN --motorola"
+ ;;
+ txt)  # special case
+-exec ${EDITOR:-nano} "$FN"
++exec ${EDITOR:-vi} "$FN"
+ ;;
+ *) 
+ # Who knows?
+@@ -115,7 +115,7 @@ PRECVT=
+ POSTCVT=
+ esac
+ $PRECVT
+-bless $OPTS $RFILE
++${BEDITOR} $OPTS $RFILE
+ $POSTCVT
+ 
+ 

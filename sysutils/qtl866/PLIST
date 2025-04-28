@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/28 12:16:35 hauke Exp $
+bin/binhexedit
+bin/miniprohex
+bin/qtl866
+share/applications/qtl866.desktop
+share/doc/qtl866/LICENSE
+share/doc/qtl866/README.md
+share/doc/qtl866/screenshot.png
+share/icons/hicolor/scalable/apps/qtl866.svg
