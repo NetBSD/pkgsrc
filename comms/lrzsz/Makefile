@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/04/28 16:58:51 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2025/04/28 17:00:09 tnn Exp $
 
 DISTNAME=	lrzsz-0.12.20
 PKGREVISION=	1
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-#FORCE_C_STD=		gnu99
 
 .include "../../mk/bsd.prefs.mk"
 
