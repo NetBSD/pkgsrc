@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/07/25 11:12:22 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/04/28 19:54:18 tnn Exp $
 
-DISTNAME=	libconfig-1.7.2
+DISTNAME=	libconfig-1.7.3
 CATEGORIES=	devel
 MASTER_SITES=	http://hyperrealm.github.io/libconfig/dist/
 
@@ -14,6 +14,7 @@ INFO_FILES=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison
 USE_LANGUAGES=	c c++
+TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	lib/libconfig++.pc.in
 PKGCONFIG_OVERRIDE+=	lib/libconfig.pc.in
