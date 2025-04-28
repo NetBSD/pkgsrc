@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/04/24 14:15:48 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/04/28 01:12:44 gutteridge Exp $
 
-DISTNAME=	lxqt-menu-data-2.1.0
-PKGREVISION=	2
+DISTNAME=	lxqt-menu-data-2.2.0
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -28,7 +27,7 @@ CONF_FILES+=	${MENU_CONF}/lxqt-applications-fm.menu \
 CONF_FILES+=	${MENU_CONF}/lxqt-config.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt6-qtbase>=6.6.0
