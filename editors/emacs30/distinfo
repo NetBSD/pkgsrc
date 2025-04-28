@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/28 08:28:54 wiz Exp $
+
+BLAKE2s (emacs-30.1.tar.xz) = cdb0dd99ae93a67bf1a19a006c4296c10509f466bef6a2531ceef4d1d00c49db
+SHA512 (emacs-30.1.tar.xz) = 511a6a1d2a170a207913692e1349344b70a0b5202b8d1ae27dc7256e589c77ae9e35da16fc2a098bf9f1b8d0f60233f452ed8d6744b70b907f3484c42f2d7d7f
+Size (emacs-30.1.tar.xz) = 54978160 bytes
