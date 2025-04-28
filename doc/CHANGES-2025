@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2943 2025/04/28 01:54:20 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2944 2025/04/28 01:55:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/pcmanfm-qt to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/lxqt-session to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/lxqt-panel to 2.2.0 [gutteridge 2025-04-28]
+	Updated x11/lxqt-runner to 2.2.0 [gutteridge 2025-04-28]
