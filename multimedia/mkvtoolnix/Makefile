@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.250 2025/04/24 14:15:18 wiz Exp $
+# $NetBSD: Makefile,v 1.251 2025/04/28 12:47:13 adam Exp $
 
-DISTNAME=	mkvtoolnix-91.0
-PKGREVISION=	2
+DISTNAME=	mkvtoolnix-92.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -18,7 +17,7 @@ TOOL_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 #  * file system library (C++17)
 # If you are using the GNU C compiler collection (gcc), you need
 # at least v8; for clang v7 and newer should work.'
-USE_CXX_FEATURES+=	c++17 filesystem
+USE_CXX_FEATURES=	c++17 filesystem
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
