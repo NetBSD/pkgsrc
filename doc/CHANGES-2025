@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2974 2025/04/28 13:25:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2975 2025/04/28 14:06:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3927,3 +3927,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mkvtoolnix to 92.0 [adam 2025-04-28]
 	Updated graphics/graphviz to 12.2.1 [adam 2025-04-28]
 	Added chat/epic5 version 3.0.3 [wiz 2025-04-28]
+	Updated www/fcgi to 2.4.6 [wiz 2025-04-28]
