@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2025/04/21 07:40:08 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/04/28 19:22:02 adam Exp $
 
-DISTNAME=	dns_lexicon-3.21.0
+DISTNAME=	dns_lexicon-3.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dns-lexicon/}
