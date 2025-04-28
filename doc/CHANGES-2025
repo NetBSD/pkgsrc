@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2945 2025/04/28 01:57:53 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2946 2025/04/28 05:24:55 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3870,3 +3870,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-panel to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/lxqt-runner to 2.2.0 [gutteridge 2025-04-28]
 	Updated meta-pkgs/lxqt to 2.2.0 [gutteridge 2025-04-28]
+	Updated lang/gcc14-gnat to 14.2.0 [dkazankov 2025-04-28]
