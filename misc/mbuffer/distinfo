@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:59:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/04/28 11:38:37 hauke Exp $
 
-BLAKE2s (mbuffer-20180625.tgz) = cf66c1297ff1bfacdd4ac93bbbb6112991c9e4b7da2e9e360fc29423be72e019
-SHA512 (mbuffer-20180625.tgz) = 01d712f51ac0b206d6ee91fbbd4cea4873784aaca02daa9b3d72cfcc0a63696b20c15ca4b6e834924f02f2878ac90192110df584c55fb1a65620ae8b0f7ec87e
-Size (mbuffer-20180625.tgz) = 140946 bytes
+BLAKE2s (mbuffer-20241007.tgz) = 776f4f0b32d8e4cc7069c5e67a968a49afdc371d0062657dab24851bb09bf488
+SHA512 (mbuffer-20241007.tgz) = cb8f9e962510030f8e1500dcd21a556b73144c445bc12ece3915df201fa5e8849c183546c7ce700e06d1c734c0fdf36e31046ac984e232b64f9b019b54e1ddd2
+Size (mbuffer-20241007.tgz) = 152029 bytes
 SHA1 (patch-Makefile.in) = 0aea9d6e1bc836f671846bf29d006c56f14d3514
 SHA1 (patch-configure) = e3f9fe62c308369f89511dc31f781a92fd7b4405
-SHA1 (patch-mbuffer.c) = ca1b0fee1a11529f787b2a2b0d6ee03ed9fcfd14
+SHA1 (patch-idev.c) = dbc5f3764933b42cb194d6d0c148f27682bcfba3
+SHA1 (patch-mbuffer.c) = a614b756ff7e7ed88a20335d8f36f7f16afae5c4
 SHA1 (patch-mbuffer.rc) = f6639110e0a30f62a8a61e725a5403c88703d671
-SHA1 (patch-network.c) = 496fa35d88a9cdec4f7a6121c8b31a64f0ee8f57
