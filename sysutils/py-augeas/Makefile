@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/04/17 21:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/28 19:32:29 adam Exp $
 
-DISTNAME=	python-augeas-1.1.0
+DISTNAME=	python-augeas-1.2.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	16
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-augeas/}
 
@@ -13,9 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
-
-do-test:
-	cd ${WRKSRC}/test && ${PYTHONBIN} test_augeas.py
 
 .include "../../sysutils/augeas/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
