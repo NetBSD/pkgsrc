@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2982 2025/04/28 20:44:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2983 2025/04/28 20:58:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3949,3 +3949,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tox to 4.25.0 [adam 2025-04-28]
 	Updated net/py-kombu to 5.5.3 [adam 2025-04-28]
 	Updated net/py-celery to 5.5.2 [adam 2025-04-28]
+	Updated math/py-sympy to 1.14.0 [adam 2025-04-28]
+	Updated net/py-tldextract to 5.3.0 [adam 2025-04-28]
+	Updated textproc/py-phonenumbers to 9.0.4 [adam 2025-04-28]
