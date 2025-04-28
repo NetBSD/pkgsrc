@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2919 2025/04/28 01:10:58 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2920 2025/04/28 01:12:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3844,3 +3844,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4 to 4.20.0nb6 [gutteridge 2025-04-27]
 	Updated x11/qtermwidget to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/qterminal to 2.2.0 [gutteridge 2025-04-28]
+	Updated devel/lxqt-build-tools to 2.2.0 [gutteridge 2025-04-28]
