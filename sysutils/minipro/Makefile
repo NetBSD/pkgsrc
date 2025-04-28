@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/28 12:03:31 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/28 12:33:21 hauke Exp $
 
 MINIPRO_VERS=	0.7.3
 
@@ -15,7 +15,7 @@ HOMEPAGE=	https://gitlab.com/DavidGriffith/minipro/
 COMMENT=	Control the MiniPRO TL866xx / Xgecu family of chip programmers
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake pkg-config bash
+USE_TOOLS+=	gmake pkg-config bash:run
 
 REPLACE_BASH+=	dump-alg-minipro.bash
 
