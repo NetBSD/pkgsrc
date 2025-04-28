@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2980 2025/04/28 20:16:32 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.2981 2025/04/28 20:23:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3945,3 +3945,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/gsm to 1.0.22 [tnn 2025-04-28]
 	Updated devel/libconfig to 1.7.3 [tnn 2025-04-28]
 	Updated devel/editline to 3.1.20250104 [tnn 2025-04-28]
+	Updated devel/py-virtualenv to 20.30.0 [adam 2025-04-28]
+	Updated devel/py-tox to 4.25.0 [adam 2025-04-28]
