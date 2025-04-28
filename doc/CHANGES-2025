@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2977 2025/04/28 19:36:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2978 2025/04/28 19:47:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3936,3 +3936,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-augeas to 1.2.0 [adam 2025-04-28]
 	Updated sysutils/py-borgbackup to 1.4.1 [adam 2025-04-28]
 	Updated net/py-rpyc to 6.0.2 [adam 2025-04-28]
+	Updated databases/hiredis to 1.3.0 [adam 2025-04-28]
+	Updated devel/py-absl-py to 2.2.2 [adam 2025-04-28]
+	Updated lang/py-mypy_extensions to 1.1.0 [adam 2025-04-28]
+	Updated devel/py-importlib-metadata to 8.7.0 [adam 2025-04-28]
