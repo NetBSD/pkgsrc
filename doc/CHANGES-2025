@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2956 2025/04/28 10:32:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2957 2025/04/28 10:39:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3907,3 +3907,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-nginx to 4.0.0 [adam 2025-04-28]
 	Updated archivers/libarchive to 3.7.9 [adam 2025-04-28]
 	Updated archivers/bsdtar to 3.7.9 [adam 2025-04-28]
+	Updated textproc/py-Unidecode to 1.4.0 [wiz 2025-04-28]
