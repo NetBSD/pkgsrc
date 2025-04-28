@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2025/04/20 20:34:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/04/28 10:42:30 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -509,6 +509,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/speech.v2beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sqladmin.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sqladmin.v1beta4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/storage.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/storagebatchoperations.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/storagetransfer.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/streetviewpublish.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/sts.v1.json
