@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/11/16 10:21:32 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/04/28 19:36:22 adam Exp $
 
-BLAKE2s (rpyc-6.0.1.tar.gz) = 64ca07e12a3b2e3c419ae904bc943e3c35cf068349a7052c85d6d3823f279a24
-SHA512 (rpyc-6.0.1.tar.gz) = d508d5b95c02ff7823c1f11b38b789edeeeb78d37e10adabb73274b292391d7ea6c2f0ca82317c5193cbb4f75f3b2610f8af57a8e87a8f11d4d33cba6a342c32
-Size (rpyc-6.0.1.tar.gz) = 62144 bytes
+BLAKE2s (rpyc-6.0.2.tar.gz) = 7aedd12ded9984e3f0b043b0eeb67af0abe0504a7f0affe3545386efd33850fb
+SHA512 (rpyc-6.0.2.tar.gz) = cf23df739c83b1603bae7e734c0f53feba8556d8aa464ad6621375ae845246e859065b0c597f285bb06104e381028807e3bdf75d607c28a61b28cee7697bf500
+Size (rpyc-6.0.2.tar.gz) = 62321 bytes
