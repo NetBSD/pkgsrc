@@ -1,19 +1,42 @@
-$NetBSD: patch-ae,v 1.24 2025/04/24 13:35:29 gdt Exp $
+$NetBSD: patch-ae,v 1.25 2025/04/28 12:38:17 gdt Exp $
 
-- Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
-  and AIX where Erlang relies on $HOME set correctly. Use a portable
-  su arg order while at it.
+- Don't use 'su -s /bin/sh' because that is a Linux
+  extension.  It instructs to use the specified shell instead of the
+  user's shell, but pkgsrc uses /bin/sh for ejabberd.
 
-\todo File upstream.
+- In su, place the user before the command, as at least NetBSD and
+  Linux su document.  Resolves:
+    su: Unknown class exec "$0" "$@"
+  on NetBSD.
+  (This was "Use a portable su arg order while at it.")
+  (Introduced in 1.17, 2017-07-07)
 
---- ejabberdctl.template.orig	2023-01-17 10:35:52.000000000 +0000
+- A previous version had:
+    Use 'su -' instead of just 'su'.  Fixes priv delegation on SunOS
+    and AIX where Erlang relies on $HOME set correctly.
+  However that broke ejabberdctl as root on NetBSD and is thus
+  reverted in 1.25.
+  (Introduced in 1.14, 2016-04-25.  Reverted in 1.25, 2025-04-27.)
+
+- Previous versions accomodated grep not having -q but:
+  + POSIX says grep supports -q
+    https://pubs.opengroup.org/onlinepubs/9799919799/utilities/grep.html
+  + This change was not filed upstream.
+  + It was a long time ago and thus one would expect that by now
+    systems would have been fixed to comply with POSIX.
+  (Introduced in 1.17, 2017-07-07)
+
+su woes are upstream at:
+  https://github.com/processone/ejabberd/pull/4320
+
+--- ejabberdctl.template.orig	2023-10-17 13:57:50.000000000 +0000
 +++ ejabberdctl.template
 @@ -121,7 +121,7 @@ set_dist_client()
  exec_cmd()
  {
      case $EXEC_CMD in
--        as_install_user) su -s /bin/sh -c '"$0" "$@"' "$INSTALLUSER" -- "$@" ;;
-+        as_install_user) su - "$INSTALLUSER" -c '"$@"' -- "$@" ;;
+-        as_install_user) su -s /bin/sh -c 'exec "$0" "$@"' "$INSTALLUSER" -- "$@" ;;
++        as_install_user) su "$INSTALLUSER" -c 'exec "$0" "$@"' "$@" ;;
          as_current_user) "$@" ;;
      esac
  }

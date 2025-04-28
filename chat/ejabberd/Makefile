@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2025/04/24 13:49:39 gdt Exp $
+# $NetBSD: Makefile,v 1.105 2025/04/28 12:38:17 gdt Exp $
 
-DISTNAME=	ejabberd-23.01
-# later releases:
-# 23.04 23.10 24.02 24.06 24.07 24.10 24.12 25.03 25.04
+DISTNAME=	ejabberd-25.04
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -18,18 +16,33 @@ USE_TOOLS+=		aclocal autoconf automake bash:run gmake patch perl
 # Upstream allows building with mix, rebar(2), and rebar3.  As of
 # 22.05, the mix build fails, and both rebar versions work.  Disabling
 # bundled deps seems cleaner with rebar(2).
-TOOL_DEPENDS+=		rebar-[0-9]*:../../devel/rebar
+
+#Tries to download, objecting to p1_utils
+#TOOL_DEPENDS+=		elixir-[0-9]*:../../lang/elixir
+
+# Works.
+TOOL_DEPENDS+=		rebar>=2:../../devel/rebar
 CONFIGURE_ARGS+=	--with-rebar=rebar
 
-CONFIGURE_ARGS+=	--disable-debug
-# We intend to use the erlang packages DEPENDed on above, rather than having
-# ejabberd's build system build them.  This is a bit messy and fragile.
+# Fetches dependencies even though they are present.
+#TOOL_DEPENDS+=		rebar3>=3:../../devel/rebar3
+#CONFIGURE_ARGS+=	--with-rebar=rebar3
+# Throws an error on the forced bad proxy, but with
+# https://127.0.0.1:65535/ errors on not being able to update
+# rebar3_hexpm.
+#ALLOW_NETWORK_ACCESS=	yes
+
+# We intend to use the erlang packages DEPENDed on below, rather than
+# having ejabberd's build system download and build them.  The
+# configure option seems to work for rebar(2), but not for mix or
+# rebar3.
 CONFIGURE_ARGS+=	--enable-system-deps
+
+CONFIGURE_ARGS+=	--disable-debug			# debug is default on (a clue?)
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
 CONFIGURE_ARGS+=	--enable-pgsql
-CONFIGURE_ARGS+=	--enable-redis
 CONFIGURE_ARGS+=	--enable-sip
 CONFIGURE_ARGS+=	--enable-stun
 CONFIGURE_ARGS+=	--enable-zlib
@@ -38,33 +51,41 @@ CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
-DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
-DEPENDS+=	erlang-eredis>=1.2.0:../../databases/erlang-eredis
-DEPENDS+=	erlang-eimp>=1.0.22:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.47:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.1.15:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.49:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.33:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
-DEPENDS+=	erlang-jiffy>=1.1.1:../../textproc/erlang-jiffy
-DEPENDS+=	erlang-jose>=1.11.1:../../security/erlang-jose
-DEPENDS+=	erlang-lager>=3.9.1.:../../sysutils/erlang-lager
-DEPENDS+=	erlang-luerl>=1.0:../../lang/erlang-luerl
-DEPENDS+=	erlang-mqtree>=1.0.15:../../devel/erlang-mqtree
-DEPENDS+=	erlang-p1_acme>=1.0.19:../../security/erlang-p1_acme
-DEPENDS+=	erlang-p1_mysql>=1.0.19:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_oauth2>=0.6.11:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.18:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-pkix>=1.0.9:../../security/erlang-pkix
-DEPENDS+=	erlang-sqlite3>=1.1.13:../../databases/erlang-sqlite3
-DEPENDS+=	erlang-stringprep>=1.0.28:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.2.2:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.5.8:../../net/erlang-xmpp
-DEPENDS+=	erlang-yconf>=1.0.13:../../textproc/erlang-yconf
+# from rebar.config, less deps for options and pseudo-options
+# (tuned for erlange >= 27 as it is too painful for no point to support
+# using outdated erlang)
+BUILDLINK_ABI_DEPENDS.erlang+=	erlang>=27.0
+
+DEPENDS+=	erlang-cache_tab>=1.0.31:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-epam>=1.0.14:../../security/erlang-epam
+DEPENDS+=	erlang-eimp>=1.0.24:../../graphics/erlang-eimp
+DEPENDS+=	erlang-esip>=1.0.57:../../net/erlang-esip
+DEPENDS+=	erlang-ezlib>=1.0.13:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.1.22:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.55:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.37:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-idna>=6.1.1:../../net/erlang-idna
+DEPENDS+=	erlang-jose>=1.11.10:../../security/erlang-jose
+DEPENDS+=	erlang-mqtree>=1.0.17:../../devel/erlang-mqtree
+DEPENDS+=	erlang-p1_acme>=1.0.25:../../security/erlang-p1_acme
+DEPENDS+=	erlang-p1_mysql>=1.0.26:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_oauth2>=0.6.14:../../security/erlang-p1_oauth2
+DEPENDS+=	erlang-p1_pgsql>=1.1.32:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.27:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-pkix>=1.0.10:../../security/erlang-pkix
+DEPENDS+=	erlang-stringprep>=1.0.31:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.2.17:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.10.0:../../net/erlang-xmpp
+DEPENDS+=	erlang-yconf>=1.0.18:../../textproc/erlang-yconf
+
+# PSEUDO-OPTIONS (off, but could be options if someone cares)
+
+#CONFIGURE_ARGS+=	--disable-redis
+# pkgsrc eredis is too old, so no redis for now
+#DEPENDS+=	erlang-eredis>=1.7.1:../../databases/erlang-eredis
+
+# --enable-lua, default off (used for importing from prosody)
+#DEPENDS+=	erlang-luerl>=1.2.0:../../lang/erlang-luerl
 
 RCD_SCRIPTS=		ejabberd
 
@@ -120,9 +141,11 @@ SUBST_VARS.paths=	DISTNAME EJABBERD_DB EJABBERD_LOGDIR EJABBERD_PIDDIR
 SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX LOCALBASE
 
 post-extract:
-	# Upstream includes rebar(2) and rebar3 built with an old OTP.
-	# Remove both and symlink in the one we are using -- built
-	# with the current OTP.
+	# Upstream includes rebar(2) and rebar3 built with a
+	# particular OTP.  Remove both and symlink in the one we are
+	# using -- built with the current OTP.  (This appears not to
+	# be necessary with ejabberd 25.04 and erlang 27, but has been
+	# needed in the past.)
 	cd ${WRKSRC} && ${RM} rebar rebar3 && ${LN} -s ${LOCALBASE}/bin/rebar .
 	# Building deps is disabled above; this is leftover code to
 	# disable them differently.  It is intentionally left
