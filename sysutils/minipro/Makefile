@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/27 17:46:01 thorpej Exp $
+# $NetBSD: Makefile,v 1.8 2025/04/28 12:03:31 hauke Exp $
 
 MINIPRO_VERS=	0.7.3
 
@@ -15,7 +15,9 @@ HOMEPAGE=	https://gitlab.com/DavidGriffith/minipro/
 COMMENT=	Control the MiniPRO TL866xx / Xgecu family of chip programmers
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config bash
+
+REPLACE_BASH+=	dump-alg-minipro.bash
 
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_FLAGS+=	MAN_INSTDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
