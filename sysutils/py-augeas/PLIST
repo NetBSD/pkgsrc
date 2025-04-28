@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 07:36:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/04/28 19:32:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/augeas.py
-${PYSITELIB}/augeas.pyc
-${PYSITELIB}/augeas.pyo
+${PYSITELIB}/_augeas.abi3.so
 ${PYSITELIB}/augeas/__init__.py
 ${PYSITELIB}/augeas/__init__.pyc
 ${PYSITELIB}/augeas/__init__.pyo
