@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/12 11:18:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/04/28 19:46:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,6 +28,9 @@ ${PYSITELIB}/importlib_metadata/_meta.pyo
 ${PYSITELIB}/importlib_metadata/_text.py
 ${PYSITELIB}/importlib_metadata/_text.pyc
 ${PYSITELIB}/importlib_metadata/_text.pyo
+${PYSITELIB}/importlib_metadata/_typing.py
+${PYSITELIB}/importlib_metadata/_typing.pyc
+${PYSITELIB}/importlib_metadata/_typing.pyo
 ${PYSITELIB}/importlib_metadata/compat/__init__.py
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyc
 ${PYSITELIB}/importlib_metadata/compat/__init__.pyo
