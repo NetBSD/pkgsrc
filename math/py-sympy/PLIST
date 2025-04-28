@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/04/15 16:31:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/04/28 20:52:47 adam Exp $
 bin/isympy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2015,6 +2015,9 @@ ${PYSITELIB}/sympy/physics/biomechanics/tests/test_musculotendon.pyo
 ${PYSITELIB}/sympy/physics/continuum_mechanics/__init__.py
 ${PYSITELIB}/sympy/physics/continuum_mechanics/__init__.pyc
 ${PYSITELIB}/sympy/physics/continuum_mechanics/__init__.pyo
+${PYSITELIB}/sympy/physics/continuum_mechanics/arch.py
+${PYSITELIB}/sympy/physics/continuum_mechanics/arch.pyc
+${PYSITELIB}/sympy/physics/continuum_mechanics/arch.pyo
 ${PYSITELIB}/sympy/physics/continuum_mechanics/beam.py
 ${PYSITELIB}/sympy/physics/continuum_mechanics/beam.pyc
 ${PYSITELIB}/sympy/physics/continuum_mechanics/beam.pyo
@@ -2024,6 +2027,9 @@ ${PYSITELIB}/sympy/physics/continuum_mechanics/cable.pyo
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/__init__.py
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/__init__.pyc
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/__init__.pyo
+${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_arch.py
+${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_arch.pyc
+${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_arch.pyo
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_beam.py
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_beam.pyc
 ${PYSITELIB}/sympy/physics/continuum_mechanics/tests/test_beam.pyo
@@ -2168,6 +2174,9 @@ ${PYSITELIB}/sympy/physics/mechanics/tests/test_lagrange.pyo
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_lagrange2.py
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_lagrange2.pyc
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_lagrange2.pyo
+${PYSITELIB}/sympy/physics/mechanics/tests/test_linearity_of_velocity_constraints.py
+${PYSITELIB}/sympy/physics/mechanics/tests/test_linearity_of_velocity_constraints.pyc
+${PYSITELIB}/sympy/physics/mechanics/tests/test_linearity_of_velocity_constraints.pyo
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_linearize.py
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_linearize.pyc
 ${PYSITELIB}/sympy/physics/mechanics/tests/test_linearize.pyo
@@ -2297,6 +2306,9 @@ ${PYSITELIB}/sympy/physics/quantum/identitysearch.pyo
 ${PYSITELIB}/sympy/physics/quantum/innerproduct.py
 ${PYSITELIB}/sympy/physics/quantum/innerproduct.pyc
 ${PYSITELIB}/sympy/physics/quantum/innerproduct.pyo
+${PYSITELIB}/sympy/physics/quantum/kind.py
+${PYSITELIB}/sympy/physics/quantum/kind.pyc
+${PYSITELIB}/sympy/physics/quantum/kind.pyo
 ${PYSITELIB}/sympy/physics/quantum/matrixcache.py
 ${PYSITELIB}/sympy/physics/quantum/matrixcache.pyc
 ${PYSITELIB}/sympy/physics/quantum/matrixcache.pyo
@@ -2402,6 +2414,9 @@ ${PYSITELIB}/sympy/physics/quantum/tests/test_identitysearch.pyo
 ${PYSITELIB}/sympy/physics/quantum/tests/test_innerproduct.py
 ${PYSITELIB}/sympy/physics/quantum/tests/test_innerproduct.pyc
 ${PYSITELIB}/sympy/physics/quantum/tests/test_innerproduct.pyo
+${PYSITELIB}/sympy/physics/quantum/tests/test_kind.py
+${PYSITELIB}/sympy/physics/quantum/tests/test_kind.pyc
+${PYSITELIB}/sympy/physics/quantum/tests/test_kind.pyo
 ${PYSITELIB}/sympy/physics/quantum/tests/test_matrixutils.py
 ${PYSITELIB}/sympy/physics/quantum/tests/test_matrixutils.pyc
 ${PYSITELIB}/sympy/physics/quantum/tests/test_matrixutils.pyo
@@ -2459,9 +2474,15 @@ ${PYSITELIB}/sympy/physics/quantum/tests/test_tensorproduct.pyo
 ${PYSITELIB}/sympy/physics/quantum/tests/test_trace.py
 ${PYSITELIB}/sympy/physics/quantum/tests/test_trace.pyc
 ${PYSITELIB}/sympy/physics/quantum/tests/test_trace.pyo
+${PYSITELIB}/sympy/physics/quantum/tests/test_transforms.py
+${PYSITELIB}/sympy/physics/quantum/tests/test_transforms.pyc
+${PYSITELIB}/sympy/physics/quantum/tests/test_transforms.pyo
 ${PYSITELIB}/sympy/physics/quantum/trace.py
 ${PYSITELIB}/sympy/physics/quantum/trace.pyc
 ${PYSITELIB}/sympy/physics/quantum/trace.pyo
+${PYSITELIB}/sympy/physics/quantum/transforms.py
+${PYSITELIB}/sympy/physics/quantum/transforms.pyc
+${PYSITELIB}/sympy/physics/quantum/transforms.pyo
 ${PYSITELIB}/sympy/physics/secondquant.py
 ${PYSITELIB}/sympy/physics/secondquant.pyc
 ${PYSITELIB}/sympy/physics/secondquant.pyo
@@ -3033,6 +3054,9 @@ ${PYSITELIB}/sympy/polys/matrices/tests/test_domainscalar.pyo
 ${PYSITELIB}/sympy/polys/matrices/tests/test_eigen.py
 ${PYSITELIB}/sympy/polys/matrices/tests/test_eigen.pyc
 ${PYSITELIB}/sympy/polys/matrices/tests/test_eigen.pyo
+${PYSITELIB}/sympy/polys/matrices/tests/test_fflu.py
+${PYSITELIB}/sympy/polys/matrices/tests/test_fflu.pyc
+${PYSITELIB}/sympy/polys/matrices/tests/test_fflu.pyo
 ${PYSITELIB}/sympy/polys/matrices/tests/test_inverse.py
 ${PYSITELIB}/sympy/polys/matrices/tests/test_inverse.pyc
 ${PYSITELIB}/sympy/polys/matrices/tests/test_inverse.pyo
@@ -3165,6 +3189,9 @@ ${PYSITELIB}/sympy/polys/polytools.pyo
 ${PYSITELIB}/sympy/polys/polyutils.py
 ${PYSITELIB}/sympy/polys/polyutils.pyc
 ${PYSITELIB}/sympy/polys/polyutils.pyo
+${PYSITELIB}/sympy/polys/puiseux.py
+${PYSITELIB}/sympy/polys/puiseux.pyc
+${PYSITELIB}/sympy/polys/puiseux.pyo
 ${PYSITELIB}/sympy/polys/rationaltools.py
 ${PYSITELIB}/sympy/polys/rationaltools.pyc
 ${PYSITELIB}/sympy/polys/rationaltools.pyo
@@ -3279,6 +3306,9 @@ ${PYSITELIB}/sympy/polys/tests/test_polytools.pyo
 ${PYSITELIB}/sympy/polys/tests/test_polyutils.py
 ${PYSITELIB}/sympy/polys/tests/test_polyutils.pyc
 ${PYSITELIB}/sympy/polys/tests/test_polyutils.pyo
+${PYSITELIB}/sympy/polys/tests/test_puiseux.py
+${PYSITELIB}/sympy/polys/tests/test_puiseux.pyc
+${PYSITELIB}/sympy/polys/tests/test_puiseux.pyo
 ${PYSITELIB}/sympy/polys/tests/test_pythonrational.py
 ${PYSITELIB}/sympy/polys/tests/test_pythonrational.pyc
 ${PYSITELIB}/sympy/polys/tests/test_pythonrational.pyo
@@ -3405,6 +3435,9 @@ ${PYSITELIB}/sympy/printing/pycode.pyo
 ${PYSITELIB}/sympy/printing/python.py
 ${PYSITELIB}/sympy/printing/python.pyc
 ${PYSITELIB}/sympy/printing/python.pyo
+${PYSITELIB}/sympy/printing/pytorch.py
+${PYSITELIB}/sympy/printing/pytorch.pyc
+${PYSITELIB}/sympy/printing/pytorch.pyo
 ${PYSITELIB}/sympy/printing/rcode.py
 ${PYSITELIB}/sympy/printing/rcode.pyc
 ${PYSITELIB}/sympy/printing/rcode.pyo
@@ -3528,6 +3561,9 @@ ${PYSITELIB}/sympy/printing/tests/test_tensorflow.pyo
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.py
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.pyc
 ${PYSITELIB}/sympy/printing/tests/test_theanocode.pyo
+${PYSITELIB}/sympy/printing/tests/test_torch.py
+${PYSITELIB}/sympy/printing/tests/test_torch.pyc
+${PYSITELIB}/sympy/printing/tests/test_torch.pyo
 ${PYSITELIB}/sympy/printing/tests/test_tree.py
 ${PYSITELIB}/sympy/printing/tests/test_tree.pyc
 ${PYSITELIB}/sympy/printing/tests/test_tree.pyo
@@ -3732,6 +3768,9 @@ ${PYSITELIB}/sympy/sets/tests/test_sets.pyo
 ${PYSITELIB}/sympy/simplify/__init__.py
 ${PYSITELIB}/sympy/simplify/__init__.pyc
 ${PYSITELIB}/sympy/simplify/__init__.pyo
+${PYSITELIB}/sympy/simplify/_cse_diff.py
+${PYSITELIB}/sympy/simplify/_cse_diff.pyc
+${PYSITELIB}/sympy/simplify/_cse_diff.pyo
 ${PYSITELIB}/sympy/simplify/combsimp.py
 ${PYSITELIB}/sympy/simplify/combsimp.pyc
 ${PYSITELIB}/sympy/simplify/combsimp.pyo
@@ -3780,6 +3819,9 @@ ${PYSITELIB}/sympy/simplify/tests/test_combsimp.pyo
 ${PYSITELIB}/sympy/simplify/tests/test_cse.py
 ${PYSITELIB}/sympy/simplify/tests/test_cse.pyc
 ${PYSITELIB}/sympy/simplify/tests/test_cse.pyo
+${PYSITELIB}/sympy/simplify/tests/test_cse_diff.py
+${PYSITELIB}/sympy/simplify/tests/test_cse_diff.pyc
+${PYSITELIB}/sympy/simplify/tests/test_cse_diff.pyo
 ${PYSITELIB}/sympy/simplify/tests/test_epathtools.py
 ${PYSITELIB}/sympy/simplify/tests/test_epathtools.pyc
 ${PYSITELIB}/sympy/simplify/tests/test_epathtools.pyo
@@ -4539,6 +4581,9 @@ ${PYSITELIB}/sympy/vector/implicitregion.pyo
 ${PYSITELIB}/sympy/vector/integrals.py
 ${PYSITELIB}/sympy/vector/integrals.pyc
 ${PYSITELIB}/sympy/vector/integrals.pyo
+${PYSITELIB}/sympy/vector/kind.py
+${PYSITELIB}/sympy/vector/kind.pyc
+${PYSITELIB}/sympy/vector/kind.pyo
 ${PYSITELIB}/sympy/vector/operators.py
 ${PYSITELIB}/sympy/vector/operators.pyc
 ${PYSITELIB}/sympy/vector/operators.pyo
