@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:40 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/04/28 19:19:39 tnn Exp $
 
 BLAKE2s (woff2-1.0.2.tar.gz) = 418e398554aa8afe6df60b9dffd47105f52d4159f30dce50cb672f41e3ab81e1
 SHA512 (woff2-1.0.2.tar.gz) = c788bba1530aec463e755e901f9342f4b599e3a07f54645fef1dc388ab5d5c30625535e5dd38e9e792e04a640574baa50eeefb6b7338ab403755f4a4e0c3044d
 Size (woff2-1.0.2.tar.gz) = 38934 bytes
 SHA1 (patch-CMakeLists.txt) = 1ec110379f53ff0716b3938a1c16de10e6f30398
+SHA1 (patch-include_woff2_output.h) = af9a1e476c12f83a5ab100f39f3b994504d74546
