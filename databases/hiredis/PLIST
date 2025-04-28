@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/07/17 19:37:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/04/28 19:39:17 adam Exp $
 build/native/hiredis.targets
 include/hiredis/adapters/ae.h
 include/hiredis/adapters/glib.h
@@ -23,5 +23,5 @@ lib/cmake/hiredis/hiredis-config.cmake
 lib/cmake/hiredis/hiredis-targets-noconfig.cmake
 lib/cmake/hiredis/hiredis-targets.cmake
 lib/libhiredis.so
-lib/libhiredis.so.1.1.0
+lib/libhiredis.so.${PKGVERSION}
 lib/pkgconfig/hiredis.pc
