@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2948 2025/04/28 06:20:48 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.2949 2025/04/28 07:19:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3874,3 +3874,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libuv to 1.51.0 [adam 2025-04-28]
 	Updated devel/mold to 2.38.0 [adam 2025-04-28]
 	Updated www/hugo to 0.147.0 [ffaubert 2025-04-28]
+	Updated audio/eyeD3 to 0.9.8 [adam 2025-04-28]
+	Updated devel/py-dogpile-cache to 1.4.0 [adam 2025-04-28]
