@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1156 2025/04/21 15:59:40 wiz Exp $
+# $NetBSD: Makefile,v 1.1157 2025/04/28 12:16:35 hauke Exp $
 #
 
 COMMENT=	System utilities
@@ -640,6 +640,7 @@ SUBDIR+=	qlogtools
 SUBDIR+=	qmail-dovecot-checkpassword
 SUBDIR+=	qmediamanager
 SUBDIR+=	qpasswd
+SUBDIR+=	qtl866
 SUBDIR+=	radeontool
 SUBDIR+=	radmind
 SUBDIR+=	rcm
