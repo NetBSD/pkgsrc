@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/11/15 12:33:14 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/28 01:27:22 gutteridge Exp $
 bin/lxqt-about
 share/applications/lxqt-about.desktop
 share/icons/hicolor/scalable/apps/lxqt-about.svg
@@ -33,6 +33,8 @@ share/lxqt/translations/lxqt-about/lxqt-about_id.qm
 share/lxqt/translations/lxqt-about/lxqt-about_is.qm
 share/lxqt/translations/lxqt-about/lxqt-about_it.qm
 share/lxqt/translations/lxqt-about/lxqt-about_ja.qm
+share/lxqt/translations/lxqt-about/lxqt-about_ka.qm
+share/lxqt/translations/lxqt-about/lxqt-about_kab.qm
 share/lxqt/translations/lxqt-about/lxqt-about_ko.qm
 share/lxqt/translations/lxqt-about/lxqt-about_lg.qm
 share/lxqt/translations/lxqt-about/lxqt-about_lt.qm
