@@ -1,13 +1,21 @@
-$NetBSD: patch-ad,v 1.9 2024/02/21 08:58:00 wiz Exp $
+$NetBSD: patch-ad,v 1.10 2025/04/28 11:05:35 wiz Exp $
 
 SunOS needs alloca.h.
 
---- include/global.h.orig	2024-01-29 16:16:07.000000000 +0000
+--- include/global.h.orig	2025-04-14 16:42:04.000000000 +0000
 +++ include/global.h
-@@ -30,6 +30,13 @@
+@@ -30,7 +30,6 @@
+ #warning "use #include <alsa/asoundlib.h>, <alsa/global.h> should not be used directly"
+ #include <alsa/asoundlib.h>
+ #endif
+-
+ #ifndef __ALSA_GLOBAL_H_
+ #define __ALSA_GLOBAL_H_
  
- /* for timeval and timespec */
- #include <time.h>
+@@ -38,6 +37,14 @@
+ extern "C" {
+ #endif
+ 
 +#if defined(__FreeBSD__)
 +#include <sys/timespec.h>
 +#endif
@@ -15,6 +23,7 @@ SunOS needs alloca.h.
 +#ifdef __sun
 +#include <alloca.h>
 +#endif
- 
- #ifdef __cplusplus
- extern "C" {
++
+ /**
+  *  \defgroup Global Global defines and functions
+  *  Global defines and functions.
