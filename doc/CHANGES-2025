@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2978 2025/04/28 19:47:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2979 2025/04/28 20:05:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3940,3 +3940,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-absl-py to 2.2.2 [adam 2025-04-28]
 	Updated lang/py-mypy_extensions to 1.1.0 [adam 2025-04-28]
 	Updated devel/py-importlib-metadata to 8.7.0 [adam 2025-04-28]
+	Updated net/qbittorrent to 5.1.0 [adam 2025-04-28]
+	Updated textproc/translate-toolkit to 3.15.2 [adam 2025-04-28]
