@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2025/02/12 16:33:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.73 2025/04/28 20:21:46 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -130,6 +130,9 @@ ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/cpython3.pyo
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/mac_os.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/mac_os.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/cpython/mac_os.pyo
+${PYSITELIB}/virtualenv/create/via_global_ref/builtin/graalpy/__init__.py
+${PYSITELIB}/virtualenv/create/via_global_ref/builtin/graalpy/__init__.pyc
+${PYSITELIB}/virtualenv/create/via_global_ref/builtin/graalpy/__init__.pyo
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/__init__.py
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/__init__.pyc
 ${PYSITELIB}/virtualenv/create/via_global_ref/builtin/pypy/__init__.pyo
@@ -251,8 +254,8 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-25.0.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-75.3.0-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-75.8.0-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-75.3.2-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-78.1.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.45.1-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.py
 ${PYSITELIB}/virtualenv/seed/wheels/periodic_update.pyc
