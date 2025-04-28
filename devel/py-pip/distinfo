@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.68 2025/02/10 10:50:58 adam Exp $
+$NetBSD: distinfo,v 1.69 2025/04/28 10:46:04 wiz Exp $
 
-BLAKE2s (pip-25.0.1.tar.gz) = dcb36cef24796bd83912f205fdb69ace9797ca1ae23b906159e251fc5b32aa9e
-SHA512 (pip-25.0.1.tar.gz) = 3fef96aa0662236b9226f345e1c3a49293697d6d0ad277c5cb047f5c0332294dff0a28c128603547fc2dde20f938f4117314599056e93a2f3e1f78d9bf70dec3
-Size (pip-25.0.1.tar.gz) = 1950850 bytes
+BLAKE2s (pip-25.1.tar.gz) = ff340174e5cda2129c3d45c0449e8871a0195c9f952406ad972f4e6c8010700a
+SHA512 (pip-25.1.tar.gz) = f3576b5e0ef57e3470791074052723acfef8ea3e9a042fa330a236ded418e00adc9b889c394c082c6a8abd785cb435ff4be81d535edb0d84bc64ae005512ca46
+Size (pip-25.1.tar.gz) = 1939624 bytes
 SHA1 (patch-src_pip___internal_build__env.py) = 19c6feb4b56cbdb70f9150c452dac73ca3949911
 SHA1 (patch-src_pip___internal_commands_install.py) = 2f78c5af7c677d052a2275488dcda2f7b86c6e51
 SHA1 (patch-src_pip___internal_operations_install_wheel.py) = 0f590d2a11a2373f50abbc9377044f728625b13d
