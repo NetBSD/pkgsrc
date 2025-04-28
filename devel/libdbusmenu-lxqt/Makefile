@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:13:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/04/28 01:39:15 gutteridge Exp $
 
-DISTNAME=	libdbusmenu-lxqt-0.2.0
-PKGREVISION=	2
+DISTNAME=	libdbusmenu-lxqt-0.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
