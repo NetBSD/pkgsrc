@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/04/24 10:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/04/28 14:06:19 wiz Exp $
 
-DISTNAME=		fcgi2-2.4.5
+DISTNAME=		fcgi2-2.4.6
 PKGNAME=		${DISTNAME:S/fcgi2/fcgi/}
 CATEGORIES=		www devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=FastCGI-Archives/}
