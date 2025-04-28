@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2928 2025/04/28 01:27:34 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2929 2025/04/28 01:28:59 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3853,3 +3853,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-admin to 2.2.0 [gutteridge 2025-04-28]
 	Updated audio/pavucontrol-qt to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/lxqt-about to 2.2.0 [gutteridge 2025-04-28]
+	Updated security/lxqt-policykit to 2.2.0 [gutteridge 2025-04-28]
