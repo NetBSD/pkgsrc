@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2959 2025/04/28 10:42:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2960 2025/04/28 10:46:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3910,3 +3910,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-Unidecode to 1.4.0 [wiz 2025-04-28]
 	Updated security/py-cyclonedx-python-lib to 10.0.0 [wiz 2025-04-28]
 	Updated www/py-google-api-python-client to 2.168.0 [wiz 2025-04-28]
+	Updated devel/py-pip to 25.1 [wiz 2025-04-28]
