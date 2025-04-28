@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/15 05:38:03 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/04/28 09:01:48 adam Exp $
 
-DISTNAME=	cloudflare-2.18.1
+DISTNAME=	cloudflare-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudflare/}
 
@@ -11,19 +10,18 @@ HOMEPAGE=	https://github.com/cloudflare/python-cloudflare
 COMMENT=	Python wrapper for the Cloudflare v4 API
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-jsonlines-[0-9]*:../../textproc/py-jsonlines
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>0:../../devel/py-hatch-fancy-pypi-readme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26.3:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-anyio>=3.5.0:../../devel/py-anyio
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.7.0:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.23.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=1.9.0:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-sniffio>0:../../misc/py-sniffio
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-respx>0:../../www/py-respx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>0:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
-
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} cli4 cli4-${PYVERSSUFFIX} || ${TRUE}
-	${INSTALL_MAN} ${WRKSRC}/cli4/cli4.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/cli4-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
