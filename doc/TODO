@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25727 2025/04/28 11:01:21 wiz Exp $
+$NetBSD: TODO,v 1.25728 2025/04/28 11:02:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1234,7 +1234,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o smproxy-1.0.3
 	o snapcast-0.31.0
 	o snd-21.3
-	o snmp_exporter-0.29.0
 	o snobol-2.1.5
 	o snoopy-2.4.14
 	o snort-2.9.17.1
