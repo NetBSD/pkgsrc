@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/01/16 13:38:40 pin Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/04/28 01:54:04 gutteridge Exp $
 bin/lxqt-panel
 include/lxqt/ilxqtpanel.h
 include/lxqt/ilxqtpanelplugin.h
@@ -106,6 +106,7 @@ share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sk.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sr.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_tr.qm
 share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_CN.qm
+share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_TW.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_ar.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_bg.qm
 share/lxqt/translations/lxqt-panel/customcommand/customcommand_ca.qm
@@ -239,6 +240,7 @@ share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_sv.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_tr.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_uk.qm
 share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_zh_CN.qm
+share/lxqt/translations/lxqt-panel/directorymenu/directorymenu_zh_TW.qm
 share/lxqt/translations/lxqt-panel/dom/dom_ar.qm
 share/lxqt/translations/lxqt-panel/dom/dom_arn.qm
 share/lxqt/translations/lxqt-panel/dom/dom_ast.qm
@@ -896,3 +898,4 @@ share/lxqt/translations/lxqt-panel/worldclock/worldclock_sr.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_tr.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_uk.qm
 share/lxqt/translations/lxqt-panel/worldclock/worldclock_zh_CN.qm
+share/lxqt/translations/lxqt-panel/worldclock/worldclock_zh_TW.qm
