@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2965 2025/04/28 11:10:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2966 2025/04/28 11:10:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3916,3 +3916,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/snmp_exporter to 0.29.0 [wiz 2025-04-28]
 	Updated audio/alsa-lib to 1.2.14 [wiz 2025-04-28]
 	Updated print/libcups to 2.4.12 [wiz 2025-04-28]
+	Updated print/cups-base to 2.4.12 [wiz 2025-04-28]
