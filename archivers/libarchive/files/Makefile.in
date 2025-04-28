@@ -611,13 +611,14 @@ am_bsdtar_test_OBJECTS = $(am__objects_12) \
 	tar/test/bsdtar_test-test_format_newc.$(OBJEXT) \
 	tar/test/bsdtar_test-test_help.$(OBJEXT) \
 	tar/test/bsdtar_test-test_leading_slash.$(OBJEXT) \
+	tar/test/bsdtar_test-test_list_item.$(OBJEXT) \
 	tar/test/bsdtar_test-test_missing_file.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_C_mtree.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_C_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_H_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_L_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_O_upper.$(OBJEXT) \
-	tar/test/bsdtar_test-test_option_P.$(OBJEXT) \
+	tar/test/bsdtar_test-test_option_P_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_T_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_U_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_X_upper.$(OBJEXT) \
@@ -892,6 +893,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_compat_bzip2.c \
 	libarchive/test/test_compat_cpio.c \
 	libarchive/test/test_compat_gtar.c \
+	libarchive/test/test_compat_gtar_large.c \
 	libarchive/test/test_compat_gzip.c \
 	libarchive/test/test_compat_lz4.c \
 	libarchive/test/test_compat_lzip.c \
@@ -970,6 +972,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_gtar_gz.c \
 	libarchive/test/test_read_format_gtar_lzma.c \
 	libarchive/test/test_read_format_gtar_sparse.c \
+	libarchive/test/test_read_format_gtar_sparse_length.c \
 	libarchive/test/test_read_format_gtar_sparse_skip_entry.c \
 	libarchive/test/test_read_format_huge_rpm.c \
 	libarchive/test/test_read_format_iso_Z.c \
@@ -1321,6 +1324,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_compat_bzip2.$(OBJEXT) \
 	libarchive/test/test-test_compat_cpio.$(OBJEXT) \
 	libarchive/test/test-test_compat_gtar.$(OBJEXT) \
+	libarchive/test/test-test_compat_gtar_large.$(OBJEXT) \
 	libarchive/test/test-test_compat_gzip.$(OBJEXT) \
 	libarchive/test/test-test_compat_lz4.$(OBJEXT) \
 	libarchive/test/test-test_compat_lzip.$(OBJEXT) \
@@ -1399,6 +1403,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_gtar_gz.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_lzma.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_sparse.$(OBJEXT) \
+	libarchive/test/test-test_read_format_gtar_sparse_length.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_sparse_skip_entry.$(OBJEXT) \
 	libarchive/test/test-test_read_format_huge_rpm.$(OBJEXT) \
 	libarchive/test/test-test_read_format_iso_Z.$(OBJEXT) \
@@ -1966,6 +1971,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_bzip2.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_cpio.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_gtar.Po \
+	libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_gzip.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_lz4.Po \
 	libarchive/test/$(DEPDIR)/test-test_compat_lzip.Po \
@@ -2044,6 +2050,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_huge_rpm.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_iso_Z.Po \
@@ -2239,13 +2246,14 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_format_newc.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_help.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_leading_slash.Po \
+	tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_C_mtree.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_C_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po \
-	tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po \
+	tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po \
@@ -2655,6 +2663,8 @@ LN_S = @LN_S@
 LTLIBICONV = @LTLIBICONV@
 LTLIBOBJS = @LTLIBOBJS@
 LT_SYS_LIBRARY_PATH = @LT_SYS_LIBRARY_PATH@
+LZMA_PC_CFLAGS = @LZMA_PC_CFLAGS@
+LZMA_PC_LIBS = @LZMA_PC_LIBS@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
@@ -3064,6 +3074,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_compat_bzip2.c \
 	libarchive/test/test_compat_cpio.c \
 	libarchive/test/test_compat_gtar.c \
+	libarchive/test/test_compat_gtar_large.c \
 	libarchive/test/test_compat_gzip.c \
 	libarchive/test/test_compat_lz4.c \
 	libarchive/test/test_compat_lzip.c \
@@ -3142,6 +3153,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_gtar_gz.c \
 	libarchive/test/test_read_format_gtar_lzma.c \
 	libarchive/test/test_read_format_gtar_sparse.c \
+	libarchive/test/test_read_format_gtar_sparse_length.c \
 	libarchive/test/test_read_format_gtar_sparse_skip_entry.c \
 	libarchive/test/test_read_format_huge_rpm.c \
 	libarchive/test/test_read_format_iso_Z.c \
@@ -3431,6 +3443,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_7zip_copy_2.7z.uu \
 	libarchive/test/test_read_format_7zip_deflate.7z.uu \
 	libarchive/test/test_read_format_7zip_deflate_arm64.7z.uu \
+	libarchive/test/test_read_format_7zip_deflate_powerpc.7z.uu \
 	libarchive/test/test_read_format_7zip_delta_lzma1.7z.uu \
 	libarchive/test/test_read_format_7zip_delta4_lzma1.7z.uu \
 	libarchive/test/test_read_format_7zip_delta_lzma2.7z.uu \
@@ -3447,6 +3460,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_7zip_lzma2.7z.uu \
 	libarchive/test/test_read_format_7zip_lzma2_arm64.7z.uu \
 	libarchive/test/test_read_format_7zip_lzma2_arm.7z.uu \
+	libarchive/test/test_read_format_7zip_lzma2_sparc.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed2.7z.uu \
 	libarchive/test/test_read_format_7zip_packinfo_digests.7z.uu \
@@ -3457,6 +3471,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_7zip_zstd_arm.7z.uu \
 	libarchive/test/test_read_format_7zip_zstd_bcj.7z.uu \
 	libarchive/test/test_read_format_7zip_zstd_nobcj.7z.uu \
+	libarchive/test/test_read_format_7zip_zstd_sparc.7z.uu \
 	libarchive/test/test_read_format_7zip_zstd.7z.uu \
 	libarchive/test/test_read_format_ar.ar.uu \
 	libarchive/test/test_read_format_cab_1.cab.uu \
@@ -3481,6 +3496,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tar.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tar.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu \
+	libarchive/test/test_read_format_gtar_sparse_length.tar.Z.uu \
 	libarchive/test/test_read_format_gtar_sparse_skip_entry.tar.Z.uu \
 	libarchive/test/test_read_format_huge_rpm.rpm.uu \
 	libarchive/test/test_read_format_iso.iso.Z.uu \
@@ -3742,13 +3758,14 @@ bsdtar_test_SOURCES = \
 	tar/test/test_format_newc.c \
 	tar/test/test_help.c \
 	tar/test/test_leading_slash.c \
+	tar/test/test_list_item.c \
 	tar/test/test_missing_file.c \
 	tar/test/test_option_C_mtree.c \
 	tar/test/test_option_C_upper.c \
 	tar/test/test_option_H_upper.c \
 	tar/test/test_option_L_upper.c \
 	tar/test/test_option_O_upper.c \
-	tar/test/test_option_P.c \
+	tar/test/test_option_P_upper.c \
 	tar/test/test_option_T_upper.c \
 	tar/test/test_option_U_upper.c \
 	tar/test/test_option_X_upper.c \
@@ -3819,6 +3836,7 @@ bsdtar_test_EXTRA_DIST = \
 	tar/test/test_extract.tar.lzo.uu \
 	tar/test/test_extract.tar.xz.uu \
 	tar/test/test_leading_slash.tar.uu \
+	tar/test/test_list_item.tar.uu \
 	tar/test/test_option_keep_newer_files.tar.Z.uu \
 	tar/test/test_option_passphrase.zip.uu \
 	tar/test/test_option_s.tar.Z.uu \
@@ -4043,7 +4061,7 @@ bsdcat_test_EXTRA_DIST = \
 #
 bsdunzip_SOURCES = unzip/bsdunzip.c unzip/bsdunzip.h \
 	unzip/bsdunzip_platform.h unzip/cmdline.c unzip/la_getline.c \
-	unzip/la_queue.h $(am__append_10)
+	unzip/la_getline.h unzip/la_queue.h $(am__append_10)
 bsdunzip_DEPENDENCIES = libarchive.la libarchive_fe.la
 @STATIC_BSDUNZIP_FALSE@bsdunzip_ldstatic = 
 @STATIC_BSDUNZIP_TRUE@bsdunzip_ldstatic = -static
@@ -4902,6 +4920,8 @@ tar/test/bsdtar_test-test_help.$(OBJEXT): tar/test/$(am__dirstamp) \
 	tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_leading_slash.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_list_item.$(OBJEXT):  \
+	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_missing_file.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_C_mtree.$(OBJEXT):  \
@@ -4914,7 +4934,7 @@ tar/test/bsdtar_test-test_option_L_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_O_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
-tar/test/bsdtar_test-test_option_P.$(OBJEXT):  \
+tar/test/bsdtar_test-test_option_P_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_T_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
@@ -5617,6 +5637,9 @@ libarchive/test/test-test_compat_cpio.$(OBJEXT):  \
 libarchive/test/test-test_compat_gtar.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_compat_gtar_large.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_compat_gzip.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5849,6 +5872,9 @@ libarchive/test/test-test_read_format_gtar_lzma.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_gtar_sparse.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_gtar_sparse_length.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_gtar_sparse_skip_entry.$(OBJEXT):  \
@@ -6762,6 +6788,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_bzip2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_cpio.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_gtar.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_gzip.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_lz4.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_compat_lzip.Po@am__quote@ # am--include-marker
@@ -6840,6 +6867,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_huge_rpm.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_iso_Z.Po@am__quote@ # am--include-marker
@@ -7037,13 +7065,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_format_newc.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_help.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_leading_slash.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_C_mtree.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_C_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po@am__quote@ # am--include-marker
@@ -8644,6 +8673,20 @@ tar/test/bsdtar_test-test_leading_slash.obj: tar/test/test_leading_slash.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_leading_slash.obj `if test -f 'tar/test/test_leading_slash.c'; then $(CYGPATH_W) 'tar/test/test_leading_slash.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_leading_slash.c'; fi`
 
+tar/test/bsdtar_test-test_list_item.o: tar/test/test_list_item.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_list_item.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Tpo -c -o tar/test/bsdtar_test-test_list_item.o `test -f 'tar/test/test_list_item.c' || echo '$(srcdir)/'`tar/test/test_list_item.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_list_item.c' object='tar/test/bsdtar_test-test_list_item.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_list_item.o `test -f 'tar/test/test_list_item.c' || echo '$(srcdir)/'`tar/test/test_list_item.c
+
+tar/test/bsdtar_test-test_list_item.obj: tar/test/test_list_item.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_list_item.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Tpo -c -o tar/test/bsdtar_test-test_list_item.obj `if test -f 'tar/test/test_list_item.c'; then $(CYGPATH_W) 'tar/test/test_list_item.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_list_item.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_list_item.c' object='tar/test/bsdtar_test-test_list_item.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_list_item.obj `if test -f 'tar/test/test_list_item.c'; then $(CYGPATH_W) 'tar/test/test_list_item.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_list_item.c'; fi`
+
 tar/test/bsdtar_test-test_missing_file.o: tar/test/test_missing_file.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_missing_file.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Tpo -c -o tar/test/bsdtar_test-test_missing_file.o `test -f 'tar/test/test_missing_file.c' || echo '$(srcdir)/'`tar/test/test_missing_file.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Po
@@ -8728,19 +8771,19 @@ tar/test/bsdtar_test-test_option_O_upper.obj: tar/test/test_option_O_upper.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_O_upper.obj `if test -f 'tar/test/test_option_O_upper.c'; then $(CYGPATH_W) 'tar/test/test_option_O_upper.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_O_upper.c'; fi`
 
-tar/test/bsdtar_test-test_option_P.o: tar/test/test_option_P.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo -c -o tar/test/bsdtar_test-test_option_P.o `test -f 'tar/test/test_option_P.c' || echo '$(srcdir)/'`tar/test/test_option_P.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P.c' object='tar/test/bsdtar_test-test_option_P.o' libtool=no @AMDEPBACKSLASH@
+tar/test/bsdtar_test-test_option_P_upper.o: tar/test/test_option_P_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P_upper.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Tpo -c -o tar/test/bsdtar_test-test_option_P_upper.o `test -f 'tar/test/test_option_P_upper.c' || echo '$(srcdir)/'`tar/test/test_option_P_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P_upper.c' object='tar/test/bsdtar_test-test_option_P_upper.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P.o `test -f 'tar/test/test_option_P.c' || echo '$(srcdir)/'`tar/test/test_option_P.c
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P_upper.o `test -f 'tar/test/test_option_P_upper.c' || echo '$(srcdir)/'`tar/test/test_option_P_upper.c
 
-tar/test/bsdtar_test-test_option_P.obj: tar/test/test_option_P.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo -c -o tar/test/bsdtar_test-test_option_P.obj `if test -f 'tar/test/test_option_P.c'; then $(CYGPATH_W) 'tar/test/test_option_P.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P.c' object='tar/test/bsdtar_test-test_option_P.obj' libtool=no @AMDEPBACKSLASH@
+tar/test/bsdtar_test-test_option_P_upper.obj: tar/test/test_option_P_upper.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P_upper.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Tpo -c -o tar/test/bsdtar_test-test_option_P_upper.obj `if test -f 'tar/test/test_option_P_upper.c'; then $(CYGPATH_W) 'tar/test/test_option_P_upper.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P_upper.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P_upper.c' object='tar/test/bsdtar_test-test_option_P_upper.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P.obj `if test -f 'tar/test/test_option_P.c'; then $(CYGPATH_W) 'tar/test/test_option_P.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P.c'; fi`
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P_upper.obj `if test -f 'tar/test/test_option_P_upper.c'; then $(CYGPATH_W) 'tar/test/test_option_P_upper.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P_upper.c'; fi`
 
 tar/test/bsdtar_test-test_option_T_upper.o: tar/test/test_option_T_upper.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_T_upper.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Tpo -c -o tar/test/bsdtar_test-test_option_T_upper.o `test -f 'tar/test/test_option_T_upper.c' || echo '$(srcdir)/'`tar/test/test_option_T_upper.c
@@ -12242,6 +12285,20 @@ libarchive/test/test-test_compat_gtar.obj: libarchive/test/test_compat_gtar.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_compat_gtar.obj `if test -f 'libarchive/test/test_compat_gtar.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_gtar.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_gtar.c'; fi`
 
+libarchive/test/test-test_compat_gtar_large.o: libarchive/test/test_compat_gtar_large.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_compat_gtar_large.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Tpo -c -o libarchive/test/test-test_compat_gtar_large.o `test -f 'libarchive/test/test_compat_gtar_large.c' || echo '$(srcdir)/'`libarchive/test/test_compat_gtar_large.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Tpo libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_compat_gtar_large.c' object='libarchive/test/test-test_compat_gtar_large.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_compat_gtar_large.o `test -f 'libarchive/test/test_compat_gtar_large.c' || echo '$(srcdir)/'`libarchive/test/test_compat_gtar_large.c
+
+libarchive/test/test-test_compat_gtar_large.obj: libarchive/test/test_compat_gtar_large.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_compat_gtar_large.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Tpo -c -o libarchive/test/test-test_compat_gtar_large.obj `if test -f 'libarchive/test/test_compat_gtar_large.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_gtar_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_gtar_large.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Tpo libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_compat_gtar_large.c' object='libarchive/test/test-test_compat_gtar_large.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_compat_gtar_large.obj `if test -f 'libarchive/test/test_compat_gtar_large.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_gtar_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_gtar_large.c'; fi`
+
 libarchive/test/test-test_compat_gzip.o: libarchive/test/test_compat_gzip.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_compat_gzip.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_compat_gzip.Tpo -c -o libarchive/test/test-test_compat_gzip.o `test -f 'libarchive/test/test_compat_gzip.c' || echo '$(srcdir)/'`libarchive/test/test_compat_gzip.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_compat_gzip.Tpo libarchive/test/$(DEPDIR)/test-test_compat_gzip.Po
@@ -13333,6 +13390,20 @@ libarchive/test/test-test_read_format_gtar_sparse.obj: libarchive/test/test_read
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_gtar_sparse.c' object='libarchive/test/test-test_read_format_gtar_sparse.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_sparse.obj `if test -f 'libarchive/test/test_read_format_gtar_sparse.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_sparse.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_sparse.c'; fi`
+
+libarchive/test/test-test_read_format_gtar_sparse_length.o: libarchive/test/test_read_format_gtar_sparse_length.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_sparse_length.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Tpo -c -o libarchive/test/test-test_read_format_gtar_sparse_length.o `test -f 'libarchive/test/test_read_format_gtar_sparse_length.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_sparse_length.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_gtar_sparse_length.c' object='libarchive/test/test-test_read_format_gtar_sparse_length.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_sparse_length.o `test -f 'libarchive/test/test_read_format_gtar_sparse_length.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_sparse_length.c
+
+libarchive/test/test-test_read_format_gtar_sparse_length.obj: libarchive/test/test_read_format_gtar_sparse_length.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_sparse_length.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Tpo -c -o libarchive/test/test-test_read_format_gtar_sparse_length.obj `if test -f 'libarchive/test/test_read_format_gtar_sparse_length.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_sparse_length.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_sparse_length.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_gtar_sparse_length.c' object='libarchive/test/test-test_read_format_gtar_sparse_length.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_sparse_length.obj `if test -f 'libarchive/test/test_read_format_gtar_sparse_length.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_sparse_length.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_sparse_length.c'; fi`
 
 libarchive/test/test-test_read_format_gtar_sparse_skip_entry.o: libarchive/test/test_read_format_gtar_sparse_skip_entry.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_sparse_skip_entry.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Tpo -c -o libarchive/test/test-test_read_format_gtar_sparse_skip_entry.o `test -f 'libarchive/test/test_read_format_gtar_sparse_skip_entry.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_sparse_skip_entry.c
@@ -16756,6 +16827,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_bzip2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_cpio.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gtar.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gzip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_lz4.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_lzip.Po
@@ -16834,6 +16906,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_huge_rpm.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_iso_Z.Po
@@ -17031,13 +17104,14 @@ distclean: distclean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_format_newc.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_help.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_leading_slash.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_C_mtree.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_C_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po
-	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po
@@ -17546,6 +17620,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_bzip2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_cpio.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gtar.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gtar_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_gzip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_lz4.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_compat_lzip.Po
@@ -17624,6 +17699,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_huge_rpm.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_iso_Z.Po
@@ -17821,13 +17897,14 @@ maintainer-clean: maintainer-clean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_format_newc.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_help.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_leading_slash.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_list_item.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_missing_file.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_C_mtree.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_C_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po
-	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po

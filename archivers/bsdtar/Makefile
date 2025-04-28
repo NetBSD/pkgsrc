@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2025/02/18 15:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/04/28 10:31:32 adam Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 
 PKGNAME=	${DISTNAME:S/libarchive/bsdtar/}
-PKGREVISION=	1
 COMMENT=	Fast multi-format tape archiver
 
 # Explicitly do not depend on libtool as this can be used

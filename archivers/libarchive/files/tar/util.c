@@ -202,7 +202,8 @@ bsdtar_expand_char(char *buff, size_t buffsize, size_t offset, char c)
 		case '\v': buff[i++] = 'v'; break;
 		case '\\': buff[i++] = '\\'; break;
 		default:
-			snprintf(buff + i, buffsize - i, "%03o", 0xFF & (int)c);
+			snprintf(buff + i, buffsize - i, "%03o",
+			    0xFF & (unsigned int)c);
 			i += 3;
 		}
 	}
@@ -328,7 +329,7 @@ do_chdir(struct bsdtar *bsdtar)
 		return;
 
 	if (chdir(bsdtar->pending_chdir) != 0) {
-		lafe_errc(1, 0, "could not chdir to '%s'\n",
+		lafe_errc(1, 0, "could not chdir to '%s'",
 		    bsdtar->pending_chdir);
 	}
 	free(bsdtar->pending_chdir);
@@ -684,7 +685,7 @@ list_item_verbose(struct bsdtar *bsdtar, FILE *out, struct archive_entry *entry)
 	}
 	if (!now)
 		time(&now);
-	fprintf(out, "%s %d ",
+	fprintf(out, "%s %u ",
 	    archive_entry_strmode(entry),
 	    archive_entry_nlink(entry));
 
@@ -748,7 +749,10 @@ list_item_verbose(struct bsdtar *bsdtar, FILE *out, struct archive_entry *entry)
 #else
 	ltime = localtime(&tim);
 #endif
-	strftime(tmp, sizeof(tmp), fmt, ltime);
+	if (ltime)
+		strftime(tmp, sizeof(tmp), fmt, ltime);
+	else
+		sprintf(tmp, "-- -- ----");
 	fprintf(out, " %s ", tmp);
 	safe_fprintf(out, "%s", archive_entry_pathname(entry));
 
