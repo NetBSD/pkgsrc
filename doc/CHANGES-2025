@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2975 2025/04/28 14:06:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2976 2025/04/28 19:29:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3928,3 +3928,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/graphviz to 12.2.1 [adam 2025-04-28]
 	Added chat/epic5 version 3.0.3 [wiz 2025-04-28]
 	Updated www/fcgi to 2.4.6 [wiz 2025-04-28]
+	Updated net/py-lexicon to 3.21.1 [adam 2025-04-28]
+	Updated devel/mold to 2.38.1 [adam 2025-04-28]
+	Updated textproc/ugrep to 7.4.2 [adam 2025-04-28]
+	Updated sysutils/ansible-lint to 25.4.0 [adam 2025-04-28]
