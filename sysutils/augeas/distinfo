@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:19:20 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/04/28 19:31:33 adam Exp $
 
-BLAKE2s (augeas-1.12.0.tar.gz) = f4c5980a68c460a48d4a98705185fa02d0a1ddc589b6d5c0b7ccce0ff157d074
-SHA512 (augeas-1.12.0.tar.gz) = 4f61d4abbf338e915dfae212560d39792674bc757f05f500afa80c6170abc214ffb99cab2cf5bbd1c2338d11a6909e5fc3ff7112a2246fca69f7b39ac283da40
-Size (augeas-1.12.0.tar.gz) = 2429279 bytes
+BLAKE2s (augeas-1.14.1.tar.gz) = c16626c6d440ab43be0b705f4aef01ebbb109544a23478a780fd563ec27c1004
+SHA512 (augeas-1.14.1.tar.gz) = fddb2e243f979e71fc09f9d45d569d6307b35485b2d885bf7bcbc032ba5617fe7ab2071a041422c3efe2dd62eda74aba41016d248c0636e947d4f1c9144375aa
+Size (augeas-1.14.1.tar.gz) = 2653776 bytes

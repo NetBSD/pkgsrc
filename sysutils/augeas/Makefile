@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2025/04/17 21:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/04/28 19:31:33 adam Exp $
 
-DISTNAME=	augeas-1.12.0
-PKGREVISION=	13
+DISTNAME=	augeas-1.14.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://download.augeas.net/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hercules-team/}
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	bsiegert@NetBSD.org
-HOMEPAGE=	http://augeas.net/
+HOMEPAGE=	https://augeas.net/
 COMMENT=	Tool for editing configuration programmatically
 LICENSE=	gnu-lgpl-v2.1
 
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	augeas.pc.in
 TEST_TARGET=		check
 
+# rl_char_is_quoted_p
+.include "../../devel/readline/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
