@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2936 2025/04/28 01:40:31 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2937 2025/04/28 01:42:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lxqt-powermanagement to 2.2.0 [gutteridge 2025-04-28]
 	Updated devel/libdbusmenu-lxqt to 0.3.0 [gutteridge 2025-04-28]
 	Updated archivers/lxqt-archiver to 1.2.0 [gutteridge 2025-04-28]
+	Updated x11/lxqt-notificationd to 2.2.0 [gutteridge 2025-04-28]
