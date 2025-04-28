@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/04/24 14:15:39 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/04/28 01:34:39 gutteridge Exp $
 
-DISTNAME=	lxqt-openssh-askpass-2.1.0
-PKGREVISION=	2
+DISTNAME=	lxqt-openssh-askpass-2.2.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
