@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.86 2025/01/16 06:29:39 adam Exp $
+# $NetBSD: Makefile,v 1.87 2025/04/28 05:53:02 adam Exp $
 
-DISTNAME=	libuv-1.50.0
+DISTNAME=	libuv-1.51.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
