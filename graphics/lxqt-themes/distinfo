@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/11/15 12:30:08 pin Exp $
+$NetBSD: distinfo,v 1.13 2025/04/28 01:22:41 gutteridge Exp $
 
-BLAKE2s (lxqt-themes-2.1.0.tar.xz) = 37e22cc548619f1c7f3d512eca4c38cb07d4fd1cb84fd29728dc4d750458e45d
-SHA512 (lxqt-themes-2.1.0.tar.xz) = dd5205af02bb55d1be6a9247119595e867746673690a515ffb9e2f2c8f0084fae706780ce87d9e4d58ad3faaf007006a6392a7a2470db07aaa9fa0413dbb2ca6
-Size (lxqt-themes-2.1.0.tar.xz) = 26649944 bytes
+BLAKE2s (lxqt-themes-2.2.0.tar.xz) = 6935402b6f3b00870ba5a75afd7ccf07392599a9147c0a29ae2df39e58ffc373
+SHA512 (lxqt-themes-2.2.0.tar.xz) = 3306d0ef1fc842d1901dc6c73842fbccc845aad6c631d516af1b337d88e062b474a84a8d9a7532ddfead411f82bf6f0f723e484fea4ed3cba62460a636d04cd1
+Size (lxqt-themes-2.2.0.tar.xz) = 27203192 bytes
