@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/04/28 01:29:50 gutteridge Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/28 01:30:55 gutteridge Exp $
 
 DISTNAME=	lxqt-config-2.2.0
 CATEGORIES=	x11
@@ -37,7 +37,7 @@ SUBST_VARS.prefix=	X11BASE
 SUBST_VARS.prefix+=	XKBSUB
 
 DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
-TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"
