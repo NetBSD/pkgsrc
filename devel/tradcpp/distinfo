@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:20:05 nia Exp $
+$NetBSD: distinfo,v 1.18 2025/04/28 17:47:53 tnn Exp $
 
 BLAKE2s (tradcpp-0.5.3.tar.gz) = 008511518778bd255b867611ff40faa862b087a670b8cc90fec3d1d9ea18a9ba
 SHA512 (tradcpp-0.5.3.tar.gz) = 31ef1fc9db5e1fdb88c3decab981de9e5341620302195e3ae6883bb5eb3e3937a5d6543f7127c7a242edbe4c0864b3d1bc16ad6fce17e8662af337ffa2a60296
 Size (tradcpp-0.5.3.tar.gz) = 38683 bytes
+SHA1 (patch-bool.h) = d8b7b0bb7db8b781d8320167a3946e00a579e0dd
