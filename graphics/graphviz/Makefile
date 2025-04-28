@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.299 2025/04/24 14:14:22 wiz Exp $
+# $NetBSD: Makefile,v 1.300 2025/04/28 13:19:49 adam Exp $
 
-DISTNAME=	graphviz-12.2.0
-PKGREVISION=	4
+DISTNAME=	graphviz-12.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
-#EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.graphviz.org/
@@ -15,8 +14,8 @@ CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
 USE_LANGUAGES=		c c++
-USE_CC_FEATURES+=	c11
-USE_CXX_FEATURES+=	c++17 unique_ptr
+USE_CC_FEATURES=	c11
+USE_CXX_FEATURES=	c++17 unique_ptr
 
 USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 USE_LIBTOOL=		yes
@@ -89,6 +88,7 @@ PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
 LUA_VERSIONS_INCOMPATIBLE=	51
 
 REPLACE_PERL+=		contrib/dotmcl.pl contrib/dirgraph/dirgraph.pl
+REPLACE_PYTHON+=	cmd/dot/dot_sandbox
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -133,7 +133,7 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.22.0
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gts/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/expat/buildlink3.mk"
-
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
