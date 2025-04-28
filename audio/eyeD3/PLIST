@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2022/12/18 13:48:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/28 07:17:13 adam Exp $
 bin/eyeD3
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/eyed3/__about__.py
 ${PYSITELIB}/eyed3/__about__.pyc
 ${PYSITELIB}/eyed3/__about__.pyo
@@ -45,7 +46,6 @@ ${PYSITELIB}/eyed3/mp3/__init__.pyo
 ${PYSITELIB}/eyed3/mp3/headers.py
 ${PYSITELIB}/eyed3/mp3/headers.pyc
 ${PYSITELIB}/eyed3/mp3/headers.pyo
-${PYSITELIB}/eyed3/plugins/DisplayPattern.ebnf
 ${PYSITELIB}/eyed3/plugins/__init__.py
 ${PYSITELIB}/eyed3/plugins/__init__.pyc
 ${PYSITELIB}/eyed3/plugins/__init__.pyo
