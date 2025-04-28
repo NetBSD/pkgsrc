@@ -1,8 +1,9 @@
-$NetBSD: patch-makefile,v 1.1 2024/02/11 21:45:44 ryoon Exp $
+$NetBSD: patch-makefile,v 1.2 2025/04/28 20:44:38 tnn Exp $
 
 * Add install target.
+* https://github.com/tsyrogit/zxcvbn-c/commit/2c454989547390c944d02823b751e8ff4a3963e5
 
---- makefile.orig	2024-02-11 21:40:14.792287908 +0000
+--- makefile.orig	2022-04-07 17:19:00.000000000 +0000
 +++ makefile
 @@ -17,6 +17,14 @@ WORDS = words-eng_wiki.txt words-female.
  
@@ -19,3 +20,22 @@ $NetBSD: patch-makefile,v 1.1 2024/02/11 21:45:44 ryoon Exp $
  test-shlib: test.c $(TARGET_LIB)
  	if [ ! -e libzxcvbn.so ]; then ln -s $(TARGET_LIB) libzxcvbn.so; fi
  	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $< -L. $(LDFLAGS) -lzxcvbn -lm
+@@ -79,8 +87,7 @@ test-c++file: test.c zxcvbn-c++file.o
+ 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) \
+ 		-DUSE_DICT_FILE -o test-c++file test.cpp zxcvbn-c++file.o $(LDFLAGS) -lm
+ 
+-zxcvbn-c++file.o: zxcvbn.c dict-crc.h zxcvbn.h 
+-	if [ ! -e zxcvbn.cpp ]; then ln -s zxcvbn.c zxcvbn.cpp; fi
++zxcvbn-c++file.o: zxcvbn.c dict-crc.h zxcvbn.h zxcvbn-c++inline.o
+ 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) \
+ 		-DUSE_DICT_FILE -c -o zxcvbn-c++file.o zxcvbn.cpp
+ 
+@@ -102,7 +109,7 @@ test: test-internals test-file test-inli
+ 	@echo Finished
+ 
+ clean:
+-	rm -f test-file zxcvbn-file.o test-c++file zxcvbn-c++file.o 
++	rm -f test-file zxcvbn-file.o test-c++file zxcvbn-c++file.o
+ 	rm -f test-inline test-internals zxcvbn-inline.o zxcvbn-inline-pic.o test-c++inline zxcvbn-c++inline.o
+ 	rm -f dict-*.h zxcvbn.dict zxcvbn.cpp test.cpp
+ 	rm -f dictgen
