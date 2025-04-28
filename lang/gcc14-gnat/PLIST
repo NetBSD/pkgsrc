@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/28 05:24:24 dkazankov Exp $
 gcc14-gnat/bin/ada
 gcc14-gnat/bin/c++
 gcc14-gnat/bin/cpp
@@ -4060,22 +4060,3 @@ gcc14-gnat/share/gcc-${PKGVERSION}/python/libstdcxx/__init__.py
 gcc14-gnat/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 gcc14-gnat/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 gcc14-gnat/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
-gcc14-gnat/share/locale/be/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/da/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/de/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/el/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/es/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/fi/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/fr/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/hr/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/id/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/ja/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/nl/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/ru/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/sr/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/sv/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/tr/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/uk/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/vi/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/zh_CN/LC_MESSAGES/gcc.mo
-gcc14-gnat/share/locale/zh_TW/LC_MESSAGES/gcc.mo
