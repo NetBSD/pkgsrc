@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:06:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/04/28 16:58:51 tnn Exp $
 
 BLAKE2s (lrzsz-0.12.20.tar.gz) = 766a15967280bec3cb46771c17a12a00e844376f15a89ce02dcb778ae55fde4c
 SHA512 (lrzsz-0.12.20.tar.gz) = 9bce64036f1f1c65f5910f19802aecaf3dc5ffeab0feeca10fa8d2fe1b83e212391cce23056d22fd0eda52df89e12ede68eb5d22ffcf22f935910d2af7399f12
@@ -6,4 +6,9 @@ Size (lrzsz-0.12.20.tar.gz) = 280938 bytes
 SHA1 (patch-aa) = aaf33281da19658906eee6a922397968a200f186
 SHA1 (patch-ab) = 273f343a3e4ca8190ae4ab52483600f7bcf8e404
 SHA1 (patch-ac) = a224a77a6d9581c601a50ebe9153e6ad25c8601b
+SHA1 (patch-lib_error.c) = 19318de414b9fd3bc350aca66943ac6b23db79ba
+SHA1 (patch-lib_long-options.c) = aa6f8059bcd8b66f78de40587a8e4c58ca01692d
+SHA1 (patch-lib_xstrtol.c) = 0074e2b9dbf029f018f14abcd1497dcce82745a7
 SHA1 (patch-src_Makefile.in) = 8f95cfdf1525f27b1e860f2691559277dce62b32
+SHA1 (patch-src_lrz.c) = 249eaf57c2ccefb38292ed5ebceaddf04a1a488d
+SHA1 (patch-src_lsz.c) = dd92ba45ed2c9c865bf40b64be2cff224bebb497
