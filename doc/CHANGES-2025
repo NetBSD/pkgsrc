@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2917 2025/04/27 21:48:20 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2918 2025/04/28 01:09:29 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3842,3 +3842,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/screengrab to 2.10.0 [gutteridge 2025-04-27]
 	Updated x11/xfce4-desktop to 4.20.1nb2 [gutteridge 2025-04-27]
 	Updated meta-pkgs/xfce4 to 4.20.0nb6 [gutteridge 2025-04-27]
+	Updated x11/qtermwidget to 2.2.0 [gutteridge 2025-04-28]
