@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 08:02:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/28 19:41:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -52,6 +52,7 @@ ${PYSITELIB}/absl/logging/__init__.pyo
 ${PYSITELIB}/absl/logging/converter.py
 ${PYSITELIB}/absl/logging/converter.pyc
 ${PYSITELIB}/absl/logging/converter.pyo
+${PYSITELIB}/absl/py.typed
 ${PYSITELIB}/absl/testing/__init__.py
 ${PYSITELIB}/absl/testing/__init__.pyc
 ${PYSITELIB}/absl/testing/__init__.pyo
