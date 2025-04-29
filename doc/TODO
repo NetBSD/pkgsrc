@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25734 2025/04/28 19:47:19 adam Exp $
+$NetBSD: TODO,v 1.25735 2025/04/29 09:30:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -827,7 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kcron-21.04.0
 	o kdenetwork-filesharing-20.12.3
-	o kdenlive-24.02
+	o kdenlive-25.04
 	o kdesdk-kioslaves-20.08.0
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
@@ -930,6 +930,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
+	o meson-1.8
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -1348,6 +1349,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
+	o wayland-protocols-1.44
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
 	o webkit-gtk-2.46.6 [wip]
