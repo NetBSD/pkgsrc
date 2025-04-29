@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/04/28 19:54:18 tnn Exp $
+$NetBSD: distinfo,v 1.11 2025/04/29 19:42:50 tnn Exp $
 
-BLAKE2s (libconfig-1.7.3.tar.gz) = 77e9d9ae6405239d796c19e61533141bc2a38bd39087ba3e5d9e42dbd56fc3d8
-SHA512 (libconfig-1.7.3.tar.gz) = 5c4dd6e85242760c666d00edb031c66ed5c9c402ce191ae691639f9c48e546f4ed2242bcd035d8c430d838cae2b2feb636c4661dded21948e0ed1c8c5990ce4b
-Size (libconfig-1.7.3.tar.gz) = 730800 bytes
-SHA1 (patch-lib_grammar.y) = 8e564a1285634e88a058ba1b3ce73676e68cf732
+BLAKE2s (libconfig-1.8.tar.gz) = 6863c302aa8e53aceeb183653522038ad5c01c38799bbaf066d5c604a33f359c
+SHA512 (libconfig-1.8.tar.gz) = bc89c2b49dd643f20893e55687819ffe006985af55648f3bf2a6746951701f62411a65a1175f63762da890d31eb58398c88fe059445f65d3c2ac870d924177c3
+Size (libconfig-1.8.tar.gz) = 799135 bytes
