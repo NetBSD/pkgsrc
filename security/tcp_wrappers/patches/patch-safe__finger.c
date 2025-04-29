@@ -1,8 +1,8 @@
-$NetBSD: patch-safe__finger.c,v 1.1 2024/08/05 12:48:18 tnn Exp $
+$NetBSD: patch-safe__finger.c,v 1.2 2025/04/29 14:18:00 tnn Exp $
 
 --- safe_finger.c.orig	1994-12-28 16:42:42.000000000 +0000
 +++ safe_finger.c
-@@ -22,11 +22,16 @@ static char sccsid[] = "@(#) safe_finger
+@@ -22,12 +22,16 @@ static char sccsid[] = "@(#) safe_finger
  
  #include <sys/types.h>
  #include <sys/stat.h>
@@ -15,11 +15,12 @@ $NetBSD: patch-safe__finger.c,v 1.1 2024/08/05 12:48:18 tnn Exp $
 +#include <fcntl.h>
 +#include <stdlib.h>
  
+-extern void exit();
 +int pipe_stdin(char**);
- extern void exit();
  
  /* Local stuff */
-@@ -49,6 +54,7 @@ int     sig;
+ 
+@@ -49,6 +53,7 @@ int     sig;
      exit(0);
  }
  

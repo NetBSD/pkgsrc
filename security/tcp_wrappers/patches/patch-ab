@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2024/08/05 14:15:10 tnn Exp $
+$NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
 
 --- tcpd.h.orig	2003-04-16 14:27:11.000000000 +0000
 +++ tcpd.h
@@ -10,7 +10,29 @@ $NetBSD: patch-ab,v 1.5 2024/08/05 14:15:10 tnn Exp $
  
  typedef struct sockaddr_gen {
      union {
-@@ -137,7 +138,13 @@ extern void fromhost();			/* get/validat
+@@ -29,7 +30,7 @@ typedef union gen_addr {
+ #endif
+ } gen_addr;
+ 
+-extern void sockgen_simplify();
++extern void sockgen_simplify(sockaddr_gen *);
+ 
+ #define sg_sa		sg_addr._sg_sa
+ #define sg_sin		sg_addr._sg_sin
+@@ -92,9 +93,9 @@ struct request_info {
+     char    pid[10];			/* access via eval_pid(request) */
+     struct host_info client[1];		/* client endpoint info */
+     struct host_info server[1];		/* server endpoint info */
+-    void  (*sink) ();			/* datagram sink function or 0 */
+-    void  (*hostname) ();		/* address to printable hostname */
+-    void  (*hostaddr) ();		/* address to printable address */
++    void  (*sink) (int);			/* datagram sink function or 0 */
++    void  (*hostname) (struct host_info *);		/* address to printable hostname */
++    void  (*hostaddr) (struct host_info *);		/* address to printable address */
+     void  (*cleanup) ();		/* cleanup function or 0 */
+     struct netconfig *config;		/* netdir handle */
+ };
+@@ -137,17 +138,23 @@ extern void fromhost();			/* get/validat
  #define fromhost sock_host		/* no TLI support needed */
  #endif
  
@@ -19,11 +41,31 @@ $NetBSD: patch-ab,v 1.5 2024/08/05 14:15:10 tnn Exp $
 +extern int hosts_ctl(char *daemon, char *name, char *addr, char *user);
 +#else
  extern int hosts_access();		/* access control */
+-extern void shell_cmd();		/* execute shell command */
+-extern char *percent_x();		/* do %<char> expansion */
+-extern void rfc931();			/* client name from RFC 931 daemon */
+-extern void clean_exit();		/* clean up and exit */
+-extern void refuse();			/* clean up and exit */
+-extern char *xgets();			/* fgets() on steroids */
+-extern char *split_at();		/* strchr() and split */
+-extern unsigned long dot_quad_addr();	/* restricted inet_addr() */
+-extern int numeric_addr();		/* IP4/IP6 inet_addr (restricted) */
+-extern struct hostent *tcpd_gethostbyname();
 +extern int hosts_ctl();
 +#endif
- extern void shell_cmd();		/* execute shell command */
- extern char *percent_x();		/* do %<char> expansion */
- extern void rfc931();			/* client name from RFC 931 daemon */
++extern void shell_cmd(char *);		/* execute shell command */
++extern char *percent_x(char *, int, char *, struct request_info *);		/* do %<char> expansion */
++extern void rfc931(struct sockaddr_gen *, struct sockaddr_gen *, char *);			/* client name from RFC 931 daemon */
++extern void clean_exit(struct request_info *);		/* clean up and exit */
++extern void refuse(struct request_info *);			/* clean up and exit */
++extern char *xgets(char *, int, FILE *);			/* fgets() on steroids */
++extern char *split_at(char *, int);		/* strchr() and split */
++extern unsigned long dot_quad_addr(char *);	/* restricted inet_addr() */
++extern int numeric_addr(char *, union gen_addr *, int *, int *);		/* IP4/IP6 inet_addr (restricted) */
++extern struct hostent *tcpd_gethostbyname(char *, int);
+ 					/* IP4/IP6 gethostbyname */
+ #ifdef HAVE_IPV6
+ extern char *skip_ipv6_addrs();		/* skip over colons in IPv6 addrs */
 @@ -196,20 +203,35 @@ extern struct request_info *request_set(
    * host_info structures serve as caches for the lookup results.
    */
@@ -60,3 +102,37 @@ $NetBSD: patch-ab,v 1.5 2024/08/05 14:15:10 tnn Exp $
  #define sock_methods(r) \
  	{ (r)->hostname = sock_hostname; (r)->hostaddr = sock_hostaddr; }
  
+@@ -257,7 +279,7 @@ extern struct tcpd_context tcpd_context;
+   * behavior.
+   */
+ 
+-extern void process_options();		/* execute options */
++extern void process_options(char *, struct request_info *);		/* execute options */
+ extern int dry_run;			/* verification flag */
+ 
+ /* Bug workarounds. */
+@@ -269,7 +291,7 @@ extern long fix_inet_addr();
+ 
+ #ifdef BROKEN_FGETS			/* partial reads from sockets */
+ #define fgets fix_fgets
+-extern char *fix_fgets();
++extern char *fix_fgets(char *, int, FILE *);
+ #endif
+ 
+ #ifdef RECVFROM_BUG			/* no address family info */
+@@ -279,7 +301,7 @@ extern int fix_recvfrom();
+ 
+ #ifdef GETPEERNAME_BUG			/* claims success with UDP */
+ #define getpeername fix_getpeername
+-extern int fix_getpeername();
++extern int fix_getpeername(int, struct sockaddr *sa, int *);
+ #endif
+ 
+ #ifdef SOLARIS_24_GETHOSTBYNAME_BUG	/* lists addresses as aliases */
+@@ -294,5 +316,5 @@ extern char *fix_strtok();
+ 
+ #ifdef LIBC_CALLS_STRTOK		/* libc calls strtok() */
+ #define strtok	my_strtok
+-extern char *my_strtok();
++extern char *my_strtok(char *, char *);
+ #endif
