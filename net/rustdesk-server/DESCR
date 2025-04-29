@@ -1,0 +1,9 @@
+RustDesk is an opensource remote desktop solution, with clients
+for Windows, MacOS, various Linuxfloavors, Android, iOS, and even
+a web-based client.
+
+This package contains the server-side of RustDesk
+- The RustDesk signaling server hbbs, is used by clients to publish
+  their presence.
+- The RustDesk relay server hbbr, is used for client-to-client
+  communications when direct connexion is not possible

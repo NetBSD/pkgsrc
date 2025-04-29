@@ -1,0 +1,39 @@
+$NetBSD: patch-Cargo.lock,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Always use git version of tokio-socks, otherwise there is a version
+selection glitch during the build
+
+--- Cargo.lock.orig	2025-03-31 08:19:19.878306708 +0200
++++ Cargo.lock	2025-03-31 08:19:54.098962405 +0200
+@@ -2225,9 +2225,9 @@
+  "system-configuration",
+  "tokio",
+  "tokio-native-tls",
+  "tokio-rustls 0.24.1",
+- "tokio-socks 0.5.2",
++ "tokio-socks 0.5.2-1",
+  "tokio-util",
+  "tower-service",
+  "url",
+  "wasm-bindgen",
+@@ -3045,20 +3045,8 @@
+  "tokio-util",
+ ]
+ 
+ [[package]]
+-name = "tokio-socks"
+-version = "0.5.2"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "0d4770b8024672c1101b3f6733eab95b18007dbe0847a8afe341fcf79e06043f"
+-dependencies = [
+- "either",
+- "futures-util",
+- "thiserror",
+- "tokio",
+-]
+-
+-[[package]]
+ name = "tokio-stream"
+ version = "0.1.8"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "50145484efff8818b5ccd256697f36863f587da82cf8b409c53adf1e840798e3"

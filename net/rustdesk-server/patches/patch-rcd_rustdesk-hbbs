@@ -1,0 +1,58 @@
+$NetBSD: patch-rcd_rustdesk-hbbs,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Adjust paths and default values for pkgsrc
+
+--- rcd/rustdesk-hbbs.orig	2025-03-31 14:42:07.341407520 +0200
++++ rcd/rustdesk-hbbs	2025-03-31 15:43:13.341005346 +0200
+@@ -21,23 +21,23 @@
+ . /etc/rc.subr
+ 
+ name=rustdesk_hbbs
+ desc="Rustdesk ID/Rendezvous Server"
+-rcvar=rustdesk_hbbs_enable
++rcvar=${name}
+ 
+ load_rc_config $name
+ 
+ : ${rustdesk_hbbs_enable:=NO}
+ : ${rustdesk_hbbs_ip:=127.0.0.1}
+ : ${rustdesk_hbbs_args="-r ${rustdesk_hbbs_ip} -k _"}
+-: ${rustdesk_hbbs_user:=rustdesk}
+-: ${rustdesk_hbbs_group:=rustdesk}
++: ${rustdesk_hbbs_user:=@RUSTDESK_USER@}
++: ${rustdesk_hbbs_group:=@RUSTDESK_GROUP@}
+ 
+-pidfile=/var/run/rustdesk_hbbs.pid
+-command=/usr/sbin/daemon
+-procname=/usr/local/sbin/hbbs
+-rustdesk_hbbs_chdir=/var/db/rustdesk-server
+-command_args="-p ${pidfile} -o /var/log/rustdesk-hbbs.log ${procname} ${rustdesk_hbbs_args}"
++pidfile=@VARBASE@/run/rustdesk_hbbs.pid
++command=@PREFIX@/sbin/daemonize
++procname=@PREFIX@/bin/hbbs
++rustdesk_hbbs_chdir=@VARBASE@/db/rustdesk-server
++command_args="-p ${pidfile} -o @VARBASE@/log/rustdesk-hbbs.log ${procname} ${rustdesk_hbbs_args}"
+ ## If you want the daemon to do its log over syslog, comment out the above line and remove the comment from the below replacement
+ #command_args="-p ${pidfile} -T ${name} ${procname} ${rustdesk_hbbs_args}"
+ 
+ start_precmd=rustdesk_hbbs_startprecmd
+@@ -55,14 +55,14 @@
+     else
+         mkdir -m 770 ${rustdesk_hbbs_chdir};
+         chown ${rustdesk_hbbs_user}:${rustdesk_hbbs_group} ${rustdesk_hbbs_chdir};
+     fi
+-    if [ -e /var/log/rustdesk-hbbs.log ]; then
+-        chown -R ${rustdesk_hbbs_user}:${rustdesk_hbbs_group} /var/log/rustdesk-hbbs.log;
+-        chmod 660 /var/log/rustdesk-hbbs.log;
++    if [ -e @VARBASE@/log/rustdesk-hbbs.log ]; then
++        chown -R ${rustdesk_hbbs_user}:${rustdesk_hbbs_group} @VARBASE@/log/rustdesk-hbbs.log;
++        chmod 660 @VARBASE@/log/rustdesk-hbbs.log;
+     else
+-        install -o ${rustdesk_hbbs_user} -g ${rustdesk_hbbs_group} /dev/null /var/log/rustdesk-hbbs.log;
+-        chmod 660 /var/log/rustdesk-hbbs.log;
++        install -o ${rustdesk_hbbs_user} -g ${rustdesk_hbbs_group} /dev/null @VARBASE@/log/rustdesk-hbbs.log;
++        chmod 660 @VARBASE@/log/rustdesk-hbbs.log;
+     fi
+ }
+ 
+ run_rc_command "$1"

@@ -1,0 +1,32 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Substitute git crates to what pkgsrc has fetched on its own
+
+--- Cargo.toml.orig	2025-03-30 01:54:19.325426841 +0100
++++ Cargo.toml	2025-03-30 01:55:21.647575302 +0100
+@@ -32,9 +32,9 @@
+ axum = { version = "0.5", features = ["headers"] }
+ sqlx = { version = "0.6", features = [ "runtime-tokio-rustls", "sqlite", "macros", "chrono", "json" ] }
+ deadpool = "0.8"
+ async-trait = "0.1"
+-async-speed-limit = { git = "https://github.com/open-trade/async-speed-limit" }
++async-speed-limit = "0.3.1-1"
+ uuid = { version = "1.0", features = ["v4"] }
+ bcrypt = "0.13"
+ chrono = "0.4"
+ jsonwebtoken = "8"
+@@ -53,12 +53,12 @@
+ ping = "0.4.0"
+ 
+ [target.'cfg(any(target_os = "macos", target_os = "windows"))'.dependencies]
+ # https://github.com/rustdesk/rustdesk-server-pro/issues/189, using native-tls for better tls support
+-reqwest = { git = "https://github.com/rustdesk-org/reqwest", features = ["blocking", "socks", "json", "native-tls", "gzip"], default-features=false }
++reqwest = { version="0.11.23", features = ["blocking", "socks", "json", "native-tls", "gzip"], default-features=false }
+ 
+ [target.'cfg(not(any(target_os = "macos", target_os = "windows")))'.dependencies]
+-reqwest = { git = "https://github.com/rustdesk-org/reqwest", features = ["blocking", "socks", "json", "rustls-tls", "rustls-tls-native-roots", "gzip"], default-features=false }
++reqwest = { version="0.11.23", features = ["blocking", "socks", "json", "rustls-tls", "rustls-tls-native-roots", "gzip"], default-features=false }
+ 
+ [build-dependencies]
+ hbb_common = { path = "libs/hbb_common" }
+ 

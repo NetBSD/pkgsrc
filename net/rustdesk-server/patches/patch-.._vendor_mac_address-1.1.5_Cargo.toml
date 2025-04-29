@@ -1,0 +1,18 @@
+$NetBSD: patch-.._vendor_mac_address-1.1.5_Cargo.toml,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Add NetBSD support, copied from pkgsrc/devel/jj
+https://github.com/repnop/mac_address/pull/50
+
+--- ../vendor/mac_address-1.1.5/Cargo.toml.orig	2025-03-31 01:55:21.685052770 +0200
++++ ../vendor/mac_address-1.1.5/Cargo.toml	2025-03-31 01:55:53.082305890 +0200
+@@ -36,9 +36,9 @@
+ 
+ [dev-dependencies.serde_test]
+ version = "1.0.117"
+ 
+-[target."cfg(any(target_os = \"linux\", target_os = \"macos\", target_os = \"freebsd\", target_os = \"openbsd\"))".dependencies.nix]
++[target."cfg(any(target_os = \"linux\", target_os = \"macos\", target_os = \"freebsd\", target_os = \"netbsd\", target_os = \"openbsd\"))".dependencies.nix]
+ version = "0.23.1"
+ 
+ [target."cfg(windows)".dependencies.winapi]
+ version = "0.3"

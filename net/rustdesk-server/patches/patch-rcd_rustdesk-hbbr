@@ -1,0 +1,58 @@
+$NetBSD: patch-rcd_rustdesk-hbbr,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Adjust paths and default values for pkgsrc
+
+--- rcd/rustdesk-hbbr.orig	2025-03-31 14:42:01.941197441 +0200
++++ rcd/rustdesk-hbbr	2025-03-31 15:43:02.796758706 +0200
+@@ -19,22 +19,22 @@
+ . /etc/rc.subr
+ 
+ name=rustdesk_hbbr
+ desc="Rustdesk Relay Server"
+-rcvar=rustdesk_hbbr_enable
++rcvar=${name}
+ 
+ load_rc_config $name
+ 
+-: ${rustdesk_hbbr_enable:=NO}
++: ${rustdesk_hbbr:=NO}
+ : ${rustdesk_hbbr_args="-k _"}
+-: ${rustdesk_hbbr_user:=rustdesk}
+-: ${rustdesk_hbbr_group:=rustdesk}
++: ${rustdesk_hbbr_user:=@RUSTDESK_USER@}
++: ${rustdesk_hbbr_group:=@RUSTDESK_GROUP@}
+ 
+-pidfile=/var/run/rustdesk_hbbr.pid
+-command=/usr/sbin/daemon
+-procname=/usr/local/sbin/hbbr
+-rustdesk_hbbr_chdir=/var/db/rustdesk-server
+-command_args="-p ${pidfile} -o /var/log/rustdesk-hbbr.log ${procname} ${rustdesk_hbbr_args}"
++pidfile=@VARBASE@/run/rustdesk_hbbr.pid
++command=@PREFIX@/sbin/daemonize
++procname=@PREFIX@/bin/hbbr
++rustdesk_hbbr_chdir=@VARBASE@/db/rustdesk-server
++command_args="-p ${pidfile} -o @VARBASE@/log/rustdesk-hbbr.log ${procname} ${rustdesk_hbbr_args}"
+ ## If you want the daemon do its log over syslog comment out the above line and remove the comment from the below replacement
+ #command_args="-p ${pidfile} -T ${name} ${procname} ${rustdesk_hbbr_args}"
+ 
+ start_precmd=rustdesk_hbbr_startprecmd
+@@ -52,14 +52,14 @@
+     else
+         mkdir -m 770 ${rustdesk_hbbr_chdir};
+         chown ${rustdesk_hbbr_user}:${rustdesk_hbbr_group} ${rustdesk_hbbr_chdir};
+     fi
+-    if [ -e /var/log/rustdesk-hbbr.log ]; then
+-        chown -R ${rustdesk_hbbr_user}:${rustdesk_hbbr_group} /var/log/rustdesk-hbbr.log;
+-        chmod 660 /var/log/rustdesk-hbbr.log;
++    if [ -e @VARBASE@/log/rustdesk-hbbr.log ]; then
++        chown -R ${rustdesk_hbbr_user}:${rustdesk_hbbr_group} @VARBASE@/log/rustdesk-hbbr.log;
++        chmod 660 @VARBASE@/log/rustdesk-hbbr.log;
+     else
+-        install -o ${rustdesk_hbbr_user} -g ${rustdesk_hbbr_group} /dev/null /var/log/rustdesk-hbbr.log;
+-        chmod 660 /var/log/rustdesk-hbbr.log;
++        install -o ${rustdesk_hbbr_user} -g ${rustdesk_hbbr_group} /dev/null @VARBASE@/log/rustdesk-hbbr.log;
++        chmod 660 @VARBASE@/log/rustdesk-hbbr.log;
+     fi
+ }
+ 
+ run_rc_command "$1"
