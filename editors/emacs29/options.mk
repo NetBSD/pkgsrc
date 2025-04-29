@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2024/08/07 15:20:07 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2025/04/29 11:31:36 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -23,7 +23,7 @@ PKG_OPTIONS_GROUP.toolkit=		gtk gtk2 gtk3 xaw
 # xaw3d is omitted because it is only valid with xaw
 PKG_SUGGESTED_OPTIONS=	dbus gnutls gtk3 jansson libotf libwebp tree-sitter xml x11
 
-.if !${MACHINE_PLATFORM:MDarwin-*} && !${MACHINE_PLATFORM:MSunOS-*}
+.if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	libgccjit
 .endif
 
