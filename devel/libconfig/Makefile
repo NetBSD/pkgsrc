@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/04/28 19:54:18 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/29 19:42:50 tnn Exp $
 
-DISTNAME=	libconfig-1.7.3
+DISTNAME=	libconfig-1.8
 CATEGORIES=	devel
 MASTER_SITES=	http://hyperrealm.github.io/libconfig/dist/
 
