@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/04/12 10:40:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/04/29 10:46:11 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -566,6 +566,9 @@ ${PYSITELIB}/mesonbuild/scripts/coverage.pyo
 ${PYSITELIB}/mesonbuild/scripts/delwithsuffix.py
 ${PYSITELIB}/mesonbuild/scripts/delwithsuffix.pyc
 ${PYSITELIB}/mesonbuild/scripts/delwithsuffix.pyo
+${PYSITELIB}/mesonbuild/scripts/depaccumulate.py
+${PYSITELIB}/mesonbuild/scripts/depaccumulate.pyc
+${PYSITELIB}/mesonbuild/scripts/depaccumulate.pyo
 ${PYSITELIB}/mesonbuild/scripts/depfixer.py
 ${PYSITELIB}/mesonbuild/scripts/depfixer.pyc
 ${PYSITELIB}/mesonbuild/scripts/depfixer.pyo
@@ -614,6 +617,9 @@ ${PYSITELIB}/mesonbuild/scripts/reprotest.pyo
 ${PYSITELIB}/mesonbuild/scripts/run_tool.py
 ${PYSITELIB}/mesonbuild/scripts/run_tool.pyc
 ${PYSITELIB}/mesonbuild/scripts/run_tool.pyo
+${PYSITELIB}/mesonbuild/scripts/rustdoc.py
+${PYSITELIB}/mesonbuild/scripts/rustdoc.pyc
+${PYSITELIB}/mesonbuild/scripts/rustdoc.pyo
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.py
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.pyc
 ${PYSITELIB}/mesonbuild/scripts/scanbuild.pyo
