@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 11:01:20 nia Exp $
+$NetBSD: distinfo,v 1.32 2025/04/29 09:40:43 tnn Exp $
 
 BLAKE2s (xvidcore-1.3.7.tar.bz2) = 3fcf8a45f46da8c8fc1d37a792cc245af873b82443518c1023d24e6a5a3dcbfa
 SHA512 (xvidcore-1.3.7.tar.bz2) = e2b22e7a7e103af7adcc999d95484f991a0a33df02b912fe042b2e23d2af07381c737d23158dbf0fad770ee680572f86fbe04ab2ef33c81e2e0180ead2acc8ed
 Size (xvidcore-1.3.7.tar.bz2) = 698615 bytes
 SHA1 (patch-aa) = 301aa9c2c668fca1a74fdb4d3b1a7e5f8eca1c2a
 SHA1 (patch-ab) = 7917694cf3c2c10f76be511f0ad05fa3023a40ce
+SHA1 (patch-src_encoder.h) = 7fc7b2c719e586e2bcf7e8f88a8ba5381c64e50e
