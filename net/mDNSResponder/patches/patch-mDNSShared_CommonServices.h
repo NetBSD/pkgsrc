@@ -1,6 +1,7 @@
-$NetBSD: patch-mDNSShared_CommonServices.h,v 1.1 2024/11/20 17:56:21 hauke Exp $
+$NetBSD: patch-mDNSShared_CommonServices.h,v 1.2 2025/04/29 09:46:17 tnn Exp $
 
 Cater to various *BSDs
+* use C23 bool
 
 --- mDNSShared/CommonServices.h.orig	2024-09-24 20:38:46.000000000 +0000
 +++ mDNSShared/CommonServices.h
@@ -118,4 +119,16 @@ Cater to various *BSDs
 +#if ( !defined(_SSIZE_T) && ( TARGET_OS_WIN32 || !defined( _BSD_SSIZE_T_DEFINED_ ) ) && !TARGET_OS_NETBSD && !TARGET_OS_FREEBSD && !TARGET_OS_DRAGONFLY && !TARGET_OS_LINUX && !TARGET_OS_OPENBSD && !TARGET_OS_MAC)
  typedef int ssize_t;
  #endif
+ 
+@@ -853,7 +917,11 @@ typedef unsigned long int uintptr_t;
+ 
+ #if ( COMMON_SERVICES_NEEDS_BOOL )
+ 
++#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L
++#include <stdbool.h>
++#else
+ typedef int bool;
++#endif
+ 
+     #define bool bool
  
