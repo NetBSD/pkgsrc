@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/04/24 15:05:07 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2025/04/29 21:32:03 tnn Exp $
 
 DISTNAME=	unixODBC-2.3.12
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -25,13 +25,8 @@ PKGCONFIG_OVERRIDE+=	DriverManager/odbc.pc.in
 PKGCONFIG_OVERRIDE+=	cur/odbccr.pc.in
 PKGCONFIG_OVERRIDE+=	odbcinst/odbcinst.pc.in
 PTHREAD_OPTS+=		require
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-15)
-# This should be FORCE_C_STD, but we already included compiler.mk.
-CFLAGS+=		-std=gnu17 # reduced from gnu23
-.endif
+USE_CC_FEATURES+=	gnu99	# intptr_t, strdup
+FORCE_C_STD=		gnu99	# fails with gnu23
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
