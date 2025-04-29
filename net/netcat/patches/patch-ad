@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2024/08/05 10:24:32 tnn Exp $
+$NetBSD: patch-ad,v 1.7 2025/04/29 09:50:22 tnn Exp $
 
 --- netcat.c.orig	1996-03-21 00:38:04.000000000 +0000
 +++ netcat.c
@@ -49,21 +49,33 @@ $NetBSD: patch-ad,v 1.6 2024/08/05 10:24:32 tnn Exp $
  
  /* support routines -- the bulk of this thing.  Placed in such an order that
     we don't have to forward-declare anything: */
-@@ -225,6 +225,14 @@ void catch ()
+@@ -217,7 +217,7 @@ void bail (str, p1, p2, p3, p4, p5, p6)
+ 
+ /* catch :
+    no-brainer interrupt handler */
+-void catch ()
++void catch (int signum)
+ {
+   errno = 0;
+   if (o_verbose > 1)		/* normally we don't care */
+@@ -225,8 +225,16 @@ void catch ()
    bail (" punt!");
  }
  
 +/* quit :
 +   handler for a "-q" timeout (exit 0 instead of 1) */
-+void quit()
++void quit(int signum)
 +{
 +  close(netfd);
 +  exit(0);
 +}
 +
  /* timeout and other signal handling cruft */
- void tmtravel ()
+-void tmtravel ()
++void tmtravel (int signum)
  {
+   signal (SIGALRM, SIG_IGN);
+   alarm (0);
 @@ -333,6 +341,7 @@ HINF * gethostpoop (name, numeric)
    struct in_addr iaddr;
    register HINF * poop = NULL;
