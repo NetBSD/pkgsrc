@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/04/24 14:16:02 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/04/29 22:18:48 nia Exp $
 
 DISTNAME=	arcticfox-45.3
 # remove on next update
@@ -103,6 +103,12 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-earm*}
 LDFLAGS+=		-Wl,--no-keep-memory
+.endif
+
+PLIST_VARS+=		ffvpx
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST.ffvpx=		yes	# platform/old-configure.in
 .endif
 
 CWRAPPERS_APPEND.cc+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
