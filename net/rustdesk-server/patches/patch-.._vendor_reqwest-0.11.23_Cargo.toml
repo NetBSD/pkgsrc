@@ -1,0 +1,18 @@
+$NetBSD: patch-.._vendor_reqwest-0.11.23_Cargo.toml,v 1.1 2025/04/29 01:53:59 manu Exp $
+
+Always use git version of tokio-socks, otherwise there is a version
+selection glitch during the build
+
+--- ../vendor/reqwest-0.11.23/Cargo.toml.orig	2025-03-31 08:30:34.965431775 +0200
++++ ../vendor/reqwest-0.11.23/Cargo.toml	2025-03-31 08:30:53.776346210 +0200
+@@ -134,9 +134,9 @@
+ async-compression = { version = "0.4.0", default-features = false, features = ["tokio"], optional = true }
+ tokio-util = { version = "0.7.1", default-features = false, features = ["codec", "io"], optional = true }
+ 
+ ## socks
+-tokio-socks = { version = "0.5.1", optional = true }
++tokio-socks = { version = "0.5.2-1", optional = true }
+ 
+ ## trust-dns
+ trust-dns-resolver = { version = "0.23", optional = true, features = ["tokio-runtime"] }
+ 

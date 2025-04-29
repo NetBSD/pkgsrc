@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/29 01:53:59 manu Exp $
+bin/hbbr
+bin/hbbs
+bin/rustdesk-utils
