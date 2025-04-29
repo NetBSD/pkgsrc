@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/12/09 15:49:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.122 2025/04/29 12:51:48 tnn Exp $
 
 BRANCHNAME=	1.21
 DISTNAME=	krb5-${BRANCHNAME}.3
@@ -79,6 +79,13 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 			lib/krb5/plugins/kdb lib/krb5/plugins/preauth	\
 			lib/krb5/plugins/tls include/krb5 include/kadm5 \
 			lib/pkgconfig
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-15)
+# mit-krb5 is not C23 compliant & needs too many patches to make it compile.
+CFLAGS+=		-std=gnu17 # reduced from gnu23
+.endif
 
 .include "options.mk"
 
