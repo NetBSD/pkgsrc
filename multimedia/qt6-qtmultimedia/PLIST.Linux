@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2025/04/29 20:19:15 tnn Exp $
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qv4l2cameradevices_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qv4l2camera_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qv4l2filedescriptor_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qv4l2memorytransfer_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_linux_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsymbolsresolveutils_p.h
