@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/01/28 09:52:34 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/04/29 20:07:35 adam Exp $
 
-DISTNAME=	mocket-3.13.2
+DISTNAME=	mocket-3.13.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mocket/}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.22.2:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-h11>0:../../www/py-h11
 DEPENDS+=	${PYPKGPREFIX}-puremagic>0:../../sysutils/py-puremagic
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.3:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp>0:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-asgiref>0:../../www/py-asgiref
