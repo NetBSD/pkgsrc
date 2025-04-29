@@ -1,29 +1,33 @@
-$NetBSD: distinfo,v 1.24 2024/09/19 16:46:44 tnn Exp $
+$NetBSD: distinfo,v 1.25 2025/04/29 14:18:00 tnn Exp $
 
 BLAKE2s (tcp_wrappers_7.6-ipv6.4.tar.gz) = d05aa438c87a74553812522d91d4dc3c078ed3d176512fde8fe1094f11915ee7
 SHA512 (tcp_wrappers_7.6-ipv6.4.tar.gz) = b753b2e54fe243fbcb403470b19fa1b08a912a6a65981dc1bf20288379b903701d4b5a477350cb3470cb6d908cf51ef653f44dc17daff17f34e59b6aa1b41c95
 Size (tcp_wrappers_7.6-ipv6.4.tar.gz) = 138700 bytes
 SHA1 (patch-aa) = 6bc6f0523b4e8c31a4b02af948f285e800d5c59b
-SHA1 (patch-ab) = 1d1f4cc9ba21e4599a622b69587732527a1a5166
+SHA1 (patch-ab) = 9efde2313af9719872badc73a89f3191a1f28ab3
 SHA1 (patch-ac) = a9cd493a470782e8f6bdd38fde6c746fb1e371c0
-SHA1 (patch-af) = 1bf946174b027880014e64aa9b84dcfa5ca951a0
-SHA1 (patch-ag) = 425af6288053a89215e94f2dbe720d36496c16de
+SHA1 (patch-af) = a0222173c06bd5cfc16d7b0bb702d379f5204b1b
+SHA1 (patch-ag) = 873ca7a9b1ce3fb46b6d533a20577d3a43b3e7bc
 SHA1 (patch-ah) = fa829052d466a4597c1cec528ab02c9d2ea98a60
-SHA1 (patch-ai) = 8e27da22c3e52d755749968d07c1e9227c48f417
-SHA1 (patch-aj) = 07f1d068d8e0173fe16ebef5430c0b5d257eac3f
-SHA1 (patch-clean__exit.c) = 6a61c97251c37c2f67d47cc31cd01b31de1a0d32
+SHA1 (patch-ai) = 67ce4f7aa01ea70baf3c6971c06016006b3800af
+SHA1 (patch-aj) = 254934c262358107ba808707c41c16998ccdff17
+SHA1 (patch-clean__exit.c) = eb8b4d005b3c3aec55dcde4f2cde2fe08733decb
 SHA1 (patch-diag.c) = 370d7473e3d3bb29308903c1ee530cdd15978708
 SHA1 (patch-fakelog.c) = 29c34feb951df20a105b24bf6025ae4d68a5f587
 SHA1 (patch-fix_options.c) = ce49ff5b4b1e26eb7634e61fa33ad4697917fbcb
+SHA1 (patch-inetcf.h) = 08d8ff18fcd97e9362e4e6de3facd7497a3bf458
+SHA1 (patch-misc.c) = ec1788518aac239fbc46ea60986fcd986e56b442
+SHA1 (patch-mystdarg.h) = 698aa99a5fe228a4cedc96a1981a63346e5418b4
 SHA1 (patch-myvsyslog.c) = bda66de72825eadbf175ebe4ba47107317d7f820
-SHA1 (patch-options.c) = 3e33dc27a5b3e17889536124e4d5c5262758f2a0
-SHA1 (patch-percent__x.c) = 5bab0ee0afdab1b3e3dbbc4195015be7281875e7
+SHA1 (patch-options.c) = 99153e2f6fa7e3c5190498782c8112d0797d9dc4
+SHA1 (patch-percent__x.c) = 6563352ad90f656acbff2daca7970aa0e00f7b40
 SHA1 (patch-rfc931.c) = 27bbe7fdbff981dbb6ad50816bd5a23c9d86a2c0
-SHA1 (patch-safe__finger.c) = bb8af8c4919cc016b58a18510c941aea99eb56e1
+SHA1 (patch-safe__finger.c) = e7086ea8a84b62b34f0a8ced7b4af10feb98dfa3
+SHA1 (patch-scaffold.h) = da788e252d7129f4eabeb389c1fee8148b7c5ee6
 SHA1 (patch-setenv.c) = d6b126f99fc2c01eb120b8835c2a2c17469c20a2
-SHA1 (patch-shell__cmd.c) = a003824c8865dd170f7279e561d437fdcc2d4416
-SHA1 (patch-socket.c) = 72b66611e705fd29260557d8a3845b426d4076f0
+SHA1 (patch-shell__cmd.c) = c5808df925c474bd6165b13c4ccf9936f186fab8
+SHA1 (patch-socket.c) = 8ecdb3022d3cfae139a3fa12b08441938c2df29b
 SHA1 (patch-tcpd.c) = 6cca01afc932c71d01af8fd4869053395217ee67
-SHA1 (patch-tcpdmatch.c) = 97517e55d41e1004f7c4622aebd010a9d9558f32
+SHA1 (patch-tcpdmatch.c) = abac672e3cd7f35209b5a7d849273502cc06d0a5
 SHA1 (patch-try-from.c) = 7c573da758f2709c9f1be332adffd284b1d64c98
 SHA1 (patch-update.c) = 2d77db15431878666cc37aa06e32bd3eb296f807
