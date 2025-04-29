@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2996 2025/04/29 20:08:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2997 2025/04/29 20:42:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3970,3 +3970,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/liblqr to 0.4.3 [tnn 2025-04-29]
 	Updated databases/py-barman to 3.13.3 [adam 2025-04-29]
 	Updated devel/py-mocket to 3.13.4 [adam 2025-04-29]
+	Updated devel/uv to 0.6.17 [wiz 2025-04-29]
