@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/12 07:17:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/04/29 10:46:49 wiz Exp $
 include/wayland-protocols/alpha-modifier-v1-enum.h
 include/wayland-protocols/color-management-v1-enum.h
+include/wayland-protocols/color-representation-v1-enum.h
 include/wayland-protocols/commit-timing-v1-enum.h
 include/wayland-protocols/content-type-v1-enum.h
 include/wayland-protocols/cursor-shape-v1-enum.h
@@ -61,6 +62,7 @@ share/wayland-protocols/stable/viewporter/viewporter.xml
 share/wayland-protocols/stable/xdg-shell/xdg-shell.xml
 share/wayland-protocols/staging/alpha-modifier/alpha-modifier-v1.xml
 share/wayland-protocols/staging/color-management/color-management-v1.xml
+share/wayland-protocols/staging/color-representation/color-representation-v1.xml
 share/wayland-protocols/staging/commit-timing/commit-timing-v1.xml
 share/wayland-protocols/staging/content-type/content-type-v1.xml
 share/wayland-protocols/staging/cursor-shape/cursor-shape-v1.xml
