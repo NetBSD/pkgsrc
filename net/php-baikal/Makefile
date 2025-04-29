@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/03/03 10:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/04/29 20:45:11 wiz Exp $
 
-DISTNAME=	baikal-0.9.5
+DISTNAME=	baikal-0.10.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}
@@ -18,7 +18,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}:../../databases/php-pdo
 
 REPLACE_SH+=	vendor/bin/sabredav
 
-PHP_VERSIONS_INCOMPATIBLE=	56 # as of 0.6.0
+# see require -> php line in
+# https://github.com/sabre-io/Baikal/blob/master/composer.json
+PHP_VERSIONS_INCOMPATIBLE=	56 74
 
 WRKSRC=		${WRKDIR}/baikal
 
