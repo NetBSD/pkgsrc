@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2025/02/26 22:05:41 adam Exp $
+$NetBSD: distinfo,v 1.43 2025/04/29 09:17:25 tnn Exp $
 
 BLAKE2s (uhd-4.8.0.0.tar.gz) = 8855f7a555f6e8e2138c2699577b3e18ad4591a311914f8f4dfab64add665a65
 SHA512 (uhd-4.8.0.0.tar.gz) = 61e92209e69994b1c5d3a2a88f749ddca612a3fa3c1580c00a9577e25fab5055d7c80571f2843cca3951fc941d1a81566bafc21070fb93cb3e566228c46331e7
@@ -6,6 +6,8 @@ Size (uhd-4.8.0.0.tar.gz) = 41358938 bytes
 SHA1 (patch-CMakeLists.txt) = 97613e3acf75f4cedf26a0ead98c80c110194a94
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
+SHA1 (patch-include_uhd_features_ref__clk__calibration__iface.hpp) = 08b79958742f3d72e4ac2bc68e8f04540fdf242d
+SHA1 (patch-lib_include_uhdlib_usrp_dboard_fbx_fbx__constants.hpp) = 69b2c7c741681be3298359b04ec2fa889f4fd14c
 SHA1 (patch-lib_rfnoc_vector__iir__block__control.cpp) = d0bc32f888a6cfc30f1eb57d7f2d71bb86cdc284
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 5117c7593c4e92ed6bfb86388cc366c41a1dead7
 SHA1 (patch-lib_usrp_common_lmx2592.cpp) = 2828dcf989f1fc43c70e10b8de1e34485066842d
