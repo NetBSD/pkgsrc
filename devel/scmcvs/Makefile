@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/19 07:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/29 09:10:51 tnn Exp $
 
 DISTNAME=	cvs-1.12.13
 PKGREVISION=	9
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--with-external-zlib
 CONFIGURE_ARGS+=	--with-rsh=ssh
 CONFIGURE_ENV+=		PERL=${TOOLS_PERL5}
 CONFIGURE_ENV+=		gl_cv_func_getcwd_null=yes
+CPPFLAGS.Linux+=	-D_GNU_SOURCE	# fputs_unlocked(3)
 
 CHECK_INTERPRETER_SKIP=	share/cvs/contrib/*
 INFO_FILES=		yes
