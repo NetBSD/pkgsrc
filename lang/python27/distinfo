@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2025/04/21 20:51:32 wiz Exp $
+$NetBSD: distinfo,v 1.97 2025/04/29 09:33:55 tnn Exp $
 
 BLAKE2s (Python-2.7.18.tar.xz) = 1b673ec8c9362a178e044691392bc4f67ad13457d7fddd84a88de346f23f9812
 SHA512 (Python-2.7.18.tar.xz) = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
@@ -6,6 +6,7 @@ Size (Python-2.7.18.tar.xz) = 12854736 bytes
 SHA1 (patch-Doc_library_cgi.rst) = ed9ac101b0857dc573e9a648694d1ee5fabe61fb
 SHA1 (patch-Doc_library_mailcap.rst) = 020cf493c4e83bc9f21040f90ccb99a2d9aeef24
 SHA1 (patch-Doc_library_urlparse.rst) = ceaea3a4577ba7d3055ffb3b3c8ffbbdda7e1d32
+SHA1 (patch-Include_asdl.h) = 96eb37fdd55b4cf320160d87eccb9de78f583dbe
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib___osx__support.py) = 4389472565616b3875c699f6e3e74850d5fde712
