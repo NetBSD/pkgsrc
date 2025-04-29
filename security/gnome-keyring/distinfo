@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2021/10/26 11:17:06 nia Exp $
+$NetBSD: distinfo,v 1.48 2025/04/29 21:05:30 tnn Exp $
 
 BLAKE2s (gnome-keyring-3.36.0.tar.xz) = ac03c4142986776794e97e8ce24adfff6a9f50fa6fd3bd706bf20f26a70f463d
 SHA512 (gnome-keyring-3.36.0.tar.xz) = e5aed36ad109cbd2dcb534843f8565829366acc955cadc6e9bbe87ebbb6a8a907211aa3a42f7f26148ac69726af2f9238965707d1259319435bd20aa8c4859ed
@@ -7,4 +7,6 @@ SHA1 (patch-Makefile.in) = 0bb5c9ff7de52fb932741fdc2246048a2392e6bb
 SHA1 (patch-egg_egg-armor.c) = 4e57b2f8d4434ad4f0e28230af0ba7e3a79d9851
 SHA1 (patch-egg_egg-unix-credentials.c) = a3d45837ec5257b6397cf839d2ac6aac890b9796
 SHA1 (patch-pam_gkr-pam-module.c) = 98d0af74ea7ba87cb1376aba4cefcaf77bfbc4f5
+SHA1 (patch-pkcs11_gkm_gkm-attributes.c) = 2683a4e1cae23c0c5a315280276f457b40c90ae2
 SHA1 (patch-pkcs11_rpc-layer_gkm-rpc-module.c) = 0ac1939645f01eb52b7a532359555b7139aaa39e
+SHA1 (patch-pkcs11_xdg-store_mock-xdg-module.c) = e9b12398b219f28fef25e0d1bbd5dd98aae1fd02
