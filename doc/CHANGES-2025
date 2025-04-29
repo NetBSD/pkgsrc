@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2995 2025/04/29 20:06:02 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.2996 2025/04/29 20:08:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3968,3 +3968,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-markups to 4.1.1 [adam 2025-04-29]
 	Updated devel/libconfig to 1.8 [tnn 2025-04-29]
 	Updated graphics/liblqr to 0.4.3 [tnn 2025-04-29]
+	Updated databases/py-barman to 3.13.3 [adam 2025-04-29]
+	Updated devel/py-mocket to 3.13.4 [adam 2025-04-29]
