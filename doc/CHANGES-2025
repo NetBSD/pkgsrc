@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2985 2025/04/28 21:15:35 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.2986 2025/04/29 01:53:59 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3955,3 +3955,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-syrupy to 4.9.1 [adam 2025-04-28]
 	Updated graphics/py-exifread to 3.2.0 [adam 2025-04-28]
 	Updated sysutils/dbus-glib to 0.114 [tnn 2025-04-28]
+	Added net/rustdesk-server version 1.1.14 [manu 2025-04-29]

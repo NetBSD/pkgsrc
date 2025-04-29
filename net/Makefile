@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1595 2025/03/09 08:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.1596 2025/04/29 01:53:59 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -902,6 +902,7 @@ SUBDIR+=	ruby-winrm
 SUBDIR+=	ruby-winrm-elevated
 SUBDIR+=	ruby-winrm-fs
 SUBDIR+=	ruby-xdr
+SUBDIR+=	rustdesk-server
 SUBDIR+=	s6-dns
 SUBDIR+=	s6-networking
 SUBDIR+=	sacc
