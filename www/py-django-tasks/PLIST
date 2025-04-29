@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/22 15:15:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/04/29 08:54:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -76,6 +76,9 @@ ${PYSITELIB}/django_tasks/backends/database/migrations/0013_separate_exception_f
 ${PYSITELIB}/django_tasks/backends/database/migrations/0014_remove_dbtaskresult_exception_data.py
 ${PYSITELIB}/django_tasks/backends/database/migrations/0014_remove_dbtaskresult_exception_data.pyc
 ${PYSITELIB}/django_tasks/backends/database/migrations/0014_remove_dbtaskresult_exception_data.pyo
+${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.py
+${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.pyc
+${PYSITELIB}/django_tasks/backends/database/migrations/0015_correctly_order_run_after.pyo
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.py
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.pyc
 ${PYSITELIB}/django_tasks/backends/database/migrations/__init__.pyo
@@ -91,6 +94,9 @@ ${PYSITELIB}/django_tasks/backends/dummy.pyo
 ${PYSITELIB}/django_tasks/backends/immediate.py
 ${PYSITELIB}/django_tasks/backends/immediate.pyc
 ${PYSITELIB}/django_tasks/backends/immediate.pyo
+${PYSITELIB}/django_tasks/backends/rq.py
+${PYSITELIB}/django_tasks/backends/rq.pyc
+${PYSITELIB}/django_tasks/backends/rq.pyo
 ${PYSITELIB}/django_tasks/checks.py
 ${PYSITELIB}/django_tasks/checks.pyc
 ${PYSITELIB}/django_tasks/checks.pyo
