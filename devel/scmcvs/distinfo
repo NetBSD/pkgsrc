@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.27 2025/04/21 16:35:05 wiz Exp $
+$NetBSD: distinfo,v 1.28 2025/04/29 09:10:51 tnn Exp $
 
 BLAKE2s (cvs-1.12.13.tar.bz2) = 9942455b8517b9b3bafdca6f9368f420897b555546ab45c28d42f5d54811e291
 SHA512 (cvs-1.12.13.tar.bz2) = 7d10f808de62190b18d4f706d2d03ab218a508bfb52047ff3e830e293ec40c5e8bf6cc743ef72a5c24be5aa867c9e4892d7d475a026a98b296a3764b4bd0f4d8
 Size (cvs-1.12.13.tar.bz2) = 3911104 bytes
 SHA1 (patch-ab) = bc26fcb899d6316298c97779016aab4edb5cd124
-SHA1 (patch-ad) = 12847d39cece34b310e4bc88c47fa8769233dff5
+SHA1 (patch-ad) = d2e1a26d646b03331ad81748c5384a3d06238092
 SHA1 (patch-ae) = be535ece7dc9b62c940f500e67c454bf1a86feed
 SHA1 (patch-af) = 4299a901206aef3accb428579deb8774411992c7
 SHA1 (patch-ag) = 53d072ba6bdbe0f988829616a232bb154cab2be3
@@ -25,6 +25,8 @@ SHA1 (patch-ay) = 6ce1c3c21dbc478248068f8b8850c21b0cb48c42
 SHA1 (patch-az) = 9dfd460ae6617f1492e0e6861387ff80080a7d5d
 SHA1 (patch-ba) = 7153e12e5da86effd4285e147f9f534011982e07
 SHA1 (patch-bb) = 153dc447751f3d52bca5033f33a95f408c5775db
+SHA1 (patch-diff_system.h) = e8b921f2ac34ef621d6daf1d11a15669f4ea2582
+SHA1 (patch-diff_util.c) = efd36058d541e6b952c831e37022155288daf73c
 SHA1 (patch-lib_mktime.c) = 526a0e24c6399d527ae6a463ea91e993f9f7e920
 SHA1 (patch-lib_vasnprintf.c) = fbba4d923d3c61ebcf79e82779919dc1f8a570c0
 SHA1 (patch-m4_fpending.m4) = 6b7c96d8f092e179d2cfdf036bcbfd3855292e0f
