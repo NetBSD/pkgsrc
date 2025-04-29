@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/04/14 13:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/04/29 12:00:22 adam Exp $
 
-DISTNAME=	django_celery_beat-2.7.0
+DISTNAME=	django_celery_beat-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_celery_beat/}
 

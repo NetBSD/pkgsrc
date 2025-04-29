@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 13:30:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/04/29 12:00:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -22,6 +22,8 @@ ${PYSITELIB}/django_celery_beat/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_celery_beat/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/django_celery_beat/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_celery_beat/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/django_celery_beat/locale/fa/LC_MESSAGES/django.mo
+${PYSITELIB}/django_celery_beat/locale/fa/LC_MESSAGES/django.po
 ${PYSITELIB}/django_celery_beat/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_celery_beat/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_celery_beat/locale/ko/LC_MESSAGES/django.mo
