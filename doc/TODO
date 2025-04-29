@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25739 2025/04/29 20:42:22 wiz Exp $
+$NetBSD: TODO,v 1.25740 2025/04/29 20:45:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1068,7 +1068,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgpdump-0.33
 	o phoronix-9.2.1
 	o phoronix-test-suite-10.8
-	o php-baikal-0.10.1
 	o php-basercms-5.1.5
 	o php-composer-2.8.5
 	o php-dotclear-2.33
