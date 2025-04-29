@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/04/29 07:57:35 nia Exp $
+
+BLAKE2s (pkgconf-2.3.0.tar.gz) = 1db050c48f9458afeb2361c16876e4ebba7b8333b94972271952e958940c18a1
+SHA512 (pkgconf-2.3.0.tar.gz) = 03af45564a82740e6aa55d701b13e11c4e1d5ae0b4ec9329fbc07165406c5770ec5f8efb6ce23f947c23b407ba9e47b84dd91b24e9c015969185dc2120d36df2
+Size (pkgconf-2.3.0.tar.gz) = 459191 bytes
