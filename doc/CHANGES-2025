@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2994 2025/04/29 19:43:22 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.2995 2025/04/29 20:06:02 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-peewee to 3.18.0 [adam 2025-04-29]
 	Updated textproc/py-markups to 4.1.1 [adam 2025-04-29]
 	Updated devel/libconfig to 1.8 [tnn 2025-04-29]
+	Updated graphics/liblqr to 0.4.3 [tnn 2025-04-29]
