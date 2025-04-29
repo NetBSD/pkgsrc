@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/04/20 21:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/04/29 20:42:10 wiz Exp $
 
-DISTNAME=	uv-0.6.14
+DISTNAME=	uv-0.6.17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astral-sh/}
 
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake
 
 # Depends on unpublished crates. Can't use cargo.mk to fetch them.
 ASYNC_ZIP_REV=		c909fda63fcafe4af496a07bfda28a5aae97e58d
-PUBGRUB_REV=		b70cf707aa43f21b32f3a61b8a0889b15032d5c4
+PUBGRUB_REV=		a3b4db3abb1829ce889fb89fa6d157fef529ef7e
 TL_REV=			6e25b2ee2513d75385101a8ff9f591ef51f314ec
 DISTFILES=		${DEFAULT_DISTFILES}
 DISTFILES+=		async_zip-${ASYNC_ZIP_REV}.tar.gz
