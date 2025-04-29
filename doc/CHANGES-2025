@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2993 2025/04/29 15:46:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2994 2025/04/29 19:43:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-celery-beat to 2.8.0 [adam 2025-04-29]
 	Updated databases/py-peewee to 3.18.0 [adam 2025-04-29]
 	Updated textproc/py-markups to 4.1.1 [adam 2025-04-29]
+	Updated devel/libconfig to 1.8 [tnn 2025-04-29]
