@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.84 2025/04/12 08:41:11 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.85 2025/04/29 22:23:20 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -189,7 +189,7 @@ OPSYS_HAS_STATIC_PIE=	# defined
     (${MACHINE_ARCH} == "x86_64") || \
     (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "aarch64eb") || \
-    (${MACHINE_ARCH} == "powerpc")
+    (${MACHINE_ARCH:Mmips64*) || (${MACHINE_ARCH:Mmipsn64*)
 _OPSYS_SUPPORTS_RELRO=	yes
 .endif
 
@@ -199,8 +199,7 @@ _OPSYS_SUPPORTS_MKREPRO=	yes
 # Register support for SSP on most architectures (with GCC)
 .if (${MACHINE_ARCH} != "alpha") && \
     (${MACHINE_ARCH} != "hppa") && \
-    (${MACHINE_ARCH} != "ia64") && \
-    (${MACHINE_ARCH} != "mips")
+    (${MACHINE_ARCH} != "ia64")
 _OPSYS_SUPPORTS_SSP=	yes
 .endif
 
