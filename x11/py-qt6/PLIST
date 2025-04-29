@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/29 07:04:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/04/29 11:20:39 wiz Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -117,6 +117,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qitemselectionmodel.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qjsonarray.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qjsondocument.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qjsonobject.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qjsonparseerror.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qjsonvalue.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qlibrary.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qlibraryinfo.sip
@@ -151,6 +152,7 @@ ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qhash.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qmap.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_qset.sip
+${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_chrono_duration.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_optional.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_std_pair.sip
 ${PYSITELIB}/PyQt6/bindings/QtCore/qpycore_virtual_error_handler.sip
@@ -271,6 +273,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qfont.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qfontdatabase.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qfontinfo.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qfontmetrics.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qfontvariableaxis.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qgenericmatrix.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qglyphrun.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qguiapplication.sip
@@ -296,6 +299,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qpaintdevicewindow.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpaintengine.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpainter.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpainterpath.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qpainterstateguard.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpalette.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpdfoutputintent.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpdfwriter.sip
