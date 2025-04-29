@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2025/02/12 11:41:44 micha Exp $
+$NetBSD: distinfo,v 1.45 2025/04/29 09:46:17 tnn Exp $
 
 BLAKE2s (mDNSResponder-2559.1.1.tar.gz) = e72fbea9df78d0cf811e1af6d08483973487210594e165b7b075f0b32f595d97
 SHA512 (mDNSResponder-2559.1.1.tar.gz) = 1112d78e3a46115ffdae4849d847a6cfe1052d6e4a6af3afa6058eb900ac7f7c8fee20874b479ff3d40af2da95a371241f2c821a193f148f844bf9efc06fcc79
@@ -8,7 +8,7 @@ SHA1 (patch-DSO_dso.c) = 12139edda92d9cab01e4acaf707812a1d337124d
 SHA1 (patch-mDNSPosix_Makefile) = 3e91025e5e878d0f2552d3f82839db31c67b31d7
 SHA1 (patch-mDNSPosix_mDNSPosix.c) = 1e98da5ca488eb07afe51809309d62da587340eb
 SHA1 (patch-mDNSPosix_mDNSUNP.c) = a900ad9991aaee21fbe9094a65900b1d172c2abc
-SHA1 (patch-mDNSShared_CommonServices.h) = b67ab3e9821cb30406ff5cfb1a394c5b18bb0009
+SHA1 (patch-mDNSShared_CommonServices.h) = afcb24b5e52886a9060b6a923691d752ccdd9ce8
 SHA1 (patch-mDNSShared_dnsextd__parser.y) = dde7eca76c2b5158c2ac96764f91ce773464094a
 SHA1 (patch-mDNSShared_dnssd__clientstub.c) = 1c9a7d39101feebdac80f4982f1003da343c60e7
 SHA1 (patch-mDNSShared_uds__daemon.c) = c647c27f82cc80a5576d1c934d978260489311e7
