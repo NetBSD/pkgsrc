@@ -1,8 +1,8 @@
-$NetBSD: patch-Cargo.toml,v 1.2 2025/04/20 21:44:06 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.3 2025/04/29 20:42:10 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch them.
 
---- Cargo.toml.orig	2025-04-09 21:29:25.000000000 +0000
+--- Cargo.toml.orig	2025-04-25 17:57:07.000000000 +0000
 +++ Cargo.toml
 @@ -79,7 +79,7 @@ async-channel = { version = "2.3.1" }
  async-compression = { version = "0.4.12", features = ["bzip2", "gzip", "xz", "zstd"] }
@@ -17,8 +17,8 @@ Depends on unpublished crates. Can't use cargo.mk to fetch them.
  petgraph = { version = "0.7.1" }
  proc-macro2 = { version = "1.0.86" }
  procfs = { version = "0.17.0", default-features = false, features = ["flate2"] }
--pubgrub = { git = "https://github.com/astral-sh/pubgrub", rev = "b70cf707aa43f21b32f3a61b8a0889b15032d5c4" }
-+pubgrub = { path = "../pubgrub-b70cf707aa43f21b32f3a61b8a0889b15032d5c4" }
+-pubgrub = { git = "https://github.com/astral-sh/pubgrub", rev = "a3b4db3abb1829ce889fb89fa6d157fef529ef7e" }
++pubgrub = { path = "../pubgrub-a3b4db3abb1829ce889fb89fa6d157fef529ef7e" }
  quote = { version = "1.0.37" }
  rayon = { version = "1.10.0" }
  reflink-copy = { version = "0.1.19" }
@@ -31,12 +31,12 @@ Depends on unpublished crates. Can't use cargo.mk to fetch them.
  tokio = { version = "1.40.0", features = ["fs", "io-util", "macros", "process", "rt", "signal", "sync"] }
  tokio-stream = { version = "0.1.16" }
  tokio-util = { version = "0.7.12", features = ["compat", "io"] }
-@@ -177,7 +177,7 @@ tracing-tree = { version = "0.4.0" }
+@@ -178,7 +178,7 @@ tracing-tree = { version = "0.4.0" }
  unicode-width = { version = "0.2.0" }
  unscanny = { version = "0.1.0" }
  url = { version = "2.5.2", features = ["serde"] }
--version-ranges = { git = "https://github.com/astral-sh/pubgrub", rev = "b70cf707aa43f21b32f3a61b8a0889b15032d5c4" }
-+version-ranges = { path = "../pubgrub-b70cf707aa43f21b32f3a61b8a0889b15032d5c4/version-ranges" }
+-version-ranges = { git = "https://github.com/astral-sh/pubgrub", rev = "a3b4db3abb1829ce889fb89fa6d157fef529ef7e" }
++version-ranges = { path = "../pubgrub-a3b4db3abb1829ce889fb89fa6d157fef529ef7e/version-ranges" }
  walkdir = { version = "2.5.0" }
  which = { version = "7.0.0", features = ["regex"] }
  windows-registry = { version = "0.5.0" }
