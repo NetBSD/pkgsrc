@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/22 05:37:43 kim Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/04/30 18:29:53 kim Exp $
 man/man8/update-ca-certificates.8
 sbin/update-ca-certificates
 share/ca-certificates/mozilla/ACCVRAIZ1.crt
@@ -42,7 +42,9 @@ share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-01.crt
 share/ca-certificates/mozilla/CommScope_Public_Trust_RSA_Root-02.crt
 share/ca-certificates/mozilla/Comodo_AAA_Services_root.crt
 share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_1_2020.crt
+share/ca-certificates/mozilla/D-TRUST_BR_Root_CA_2_2023.crt
 share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_1_2020.crt
+share/ca-certificates/mozilla/D-TRUST_EV_Root_CA_2_2023.crt
 share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt
 share/ca-certificates/mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt
 share/ca-certificates/mozilla/DigiCert_Assured_ID_Root_CA.crt
@@ -59,7 +61,7 @@ share/ca-certificates/mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt
 share/ca-certificates/mozilla/Entrust_Root_Certification_Authority.crt
 share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_EC1.crt
 share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_G2.crt
-share/ca-certificates/mozilla/Entrust_Root_Certification_Authority_-_G4.crt
+share/ca-certificates/mozilla/FIRMAPROFESIONAL_CA_ROOT-A_WEB.crt
 share/ca-certificates/mozilla/GDCA_TrustAUTH_R5_ROOT.crt
 share/ca-certificates/mozilla/GLOBALTRUST_2020.crt
 share/ca-certificates/mozilla/GTS_Root_R1.crt
@@ -107,23 +109,25 @@ share/ca-certificates/mozilla/SSL.com_TLS_RSA_Root_CA_2022.crt
 share/ca-certificates/mozilla/SZAFIR_ROOT_CA2.crt
 share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_E46.crt
 share/ca-certificates/mozilla/Sectigo_Public_Server_Authentication_Root_R46.crt
-share/ca-certificates/mozilla/SecureSign_RootCA11.crt
+share/ca-certificates/mozilla/SecureSign_Root_CA12.crt
+share/ca-certificates/mozilla/SecureSign_Root_CA14.crt
+share/ca-certificates/mozilla/SecureSign_Root_CA15.crt
 share/ca-certificates/mozilla/SecureTrust_CA.crt
 share/ca-certificates/mozilla/Secure_Global_CA.crt
 share/ca-certificates/mozilla/Security_Communication_ECC_RootCA1.crt
 share/ca-certificates/mozilla/Security_Communication_RootCA2.crt
-share/ca-certificates/mozilla/Security_Communication_RootCA3.crt
-share/ca-certificates/mozilla/Security_Communication_Root_CA.crt
 share/ca-certificates/mozilla/Starfield_Class_2_CA.crt
 share/ca-certificates/mozilla/Starfield_Root_Certificate_Authority_-_G2.crt
 share/ca-certificates/mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt
 share/ca-certificates/mozilla/SwissSign_Gold_CA_-_G2.crt
-share/ca-certificates/mozilla/SwissSign_Silver_CA_-_G2.crt
 share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_2.crt
 share/ca-certificates/mozilla/T-TeleSec_GlobalRoot_Class_3.crt
 share/ca-certificates/mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt
+share/ca-certificates/mozilla/TWCA_CYBER_Root_CA.crt
 share/ca-certificates/mozilla/TWCA_Global_Root_CA.crt
 share/ca-certificates/mozilla/TWCA_Root_Certification_Authority.crt
+share/ca-certificates/mozilla/Telekom_Security_TLS_ECC_Root_2020.crt
+share/ca-certificates/mozilla/Telekom_Security_TLS_RSA_Root_2023.crt
 share/ca-certificates/mozilla/TeliaSonera_Root_CA_v1.crt
 share/ca-certificates/mozilla/Telia_Root_CA_v2.crt
 share/ca-certificates/mozilla/TrustAsia_Global_Root_CA_G3.crt
