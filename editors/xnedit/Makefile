@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/03/31 08:42:29 micha Exp $
+# $NetBSD: Makefile,v 1.18 2025/04/30 11:43:47 micha Exp $
 
 DISTNAME=	xnedit-1.6.3
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -23,7 +24,7 @@ CFLAGS.IRIX+=		-DNO_XMIM
 # Workaround for bugs in Solaris Motif library
 CFLAGS.SunOS+=		-DROWCOLPATCH
 
-LDFLAGS.Darwin+=	-liconv
+LDFLAGS.Darwin+=	-liconv -framework CoreFoundation
 
 # Honor external CFLAGS
 SUBST_CLASSES+=			fix-cflags
@@ -54,10 +55,12 @@ do-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
