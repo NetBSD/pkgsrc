@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2023/06/26 11:37:07 wiz Exp $
+# $NetBSD: builtin.mk,v 1.11 2025/04/30 11:38:49 wiz Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -48,6 +48,37 @@ BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 .  endif
 
 .  if ${USE_BUILTIN.editline:tl} == yes
+BUILDLINK_TARGETS+=	ensure-libedit-pc
+# TODO: version number is fixed when creating pkg-config file, should
+# get this from the editline installation somehow
+.PHONY: ensure-libedit-pc
+ensure-libedit-pc:
+	${RUN}								\
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/libedit.pc;			\
+	src=${BUILDLINK_PREFIX.editline}/lib${LIBABISUFFIX}/pkgconfig/libedit.pc; \
+	if [ ! -f $${dst} ]; then					\
+		if [ -f $${src} ]; then					\
+			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
+			${LN} -sf $${src} $${dst};			\
+		else							\
+			${ECHO_BUILDLINK_MSG} "Creating $${dst}";	\
+			${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
+			{						\
+			${ECHO} "prefix=${BUILDLINK_PREFIX.editline}";	\
+			${ECHO} "exec_prefix=\$${prefix}";		\
+			${ECHO} "libdir=\$${exec_prefix}/lib";		\
+			${ECHO} "includedir=\$${prefix}/include";	\
+			${ECHO} "";					\
+			${ECHO} "Name: libedit";			\
+			${ECHO} "Description: command line editor library providing generic line editing, history, and tokenization functions.";	\
+			${ECHO} "Version: 3.1";				\
+			${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -ledit";	\
+			${ECHO} "Libs.private: -ltermcap";		\
+			${ECHO} "Cflags: -I\$${includedir} -I${includedir}/readline";		\
+			} > $${dst};					\
+		fi;							\
+	fi
+
 .    if !empty(H_EDITLINE:M*/editline/readline.h)
 BUILDLINK_TARGETS+=	buildlink-readline-readline-h
 BUILDLINK_TARGETS+=	buildlink-readline-history-h
