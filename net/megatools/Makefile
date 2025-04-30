@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2025/04/19 07:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/04/30 16:13:19 wiz Exp $
 
-DISTNAME=	megatools-1.11.0-git-20200404
-PKGNAME=	megatools-1.11.0.20200404
-PKGREVISION=	17
+DISTNAME=	megatools-1.11.4.20250411
 CATEGORIES=	net
-MASTER_SITES=	https://megatools.megous.com/builds/experimental/
+MASTER_SITES=	https://xff.cz/megatools/builds/
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	https://megatools.megous.com/
-COMMENT=	Command line client for Mega.co.nz
+HOMEPAGE=	https://xff.cz/megatools/
+COMMENT=	Command line client for Mega.nz
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
