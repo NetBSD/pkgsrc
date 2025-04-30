@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/30 14:06:13 roy Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+@comment $NetBSD: PLIST,v 1.7 2025/04/30 14:08:20 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/hgext3rd/fastimport/__init__.py
 ${PYSITELIB}/hgext3rd/fastimport/__init__.pyc
