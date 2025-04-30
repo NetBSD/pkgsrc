@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2025/04/30 11:38:49 wiz Exp $
+# $NetBSD: builtin.mk,v 1.12 2025/04/30 12:22:43 wiz Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -74,7 +74,7 @@ ensure-libedit-pc:
 			${ECHO} "Version: 3.1";				\
 			${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -ledit";	\
 			${ECHO} "Libs.private: -ltermcap";		\
-			${ECHO} "Cflags: -I\$${includedir} -I${includedir}/readline";		\
+			${ECHO} "Cflags: -I\$${includedir} -I\$${includedir}/readline";		\
 			} > $${dst};					\
 		fi;							\
 	fi
