@@ -1,4 +1,4 @@
-# $NetBSD: jpeg.buildlink3.mk,v 1.10 2025/04/30 10:50:43 wiz Exp $
+# $NetBSD: jpeg.buildlink3.mk,v 1.11 2025/04/30 10:51:32 wiz Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a libjpeg implementation.  jpeg.buildlink3.mk will:
@@ -28,7 +28,7 @@ MK_JPEG_BUILDLINK3_MK:=	${MK_JPEG_BUILDLINK3_MK}+
 #
 _JPEG_PKGS?=	jpeg libjpeg-turbo
 
-JPEG_DEFAULT?=	jpeg
+JPEG_DEFAULT?=	libjpeg-turbo
 JPEG_ACCEPTED?=	${_JPEG_PKGS}
 
 _JPEG_DEFAULT=	${JPEG_DEFAULT}
