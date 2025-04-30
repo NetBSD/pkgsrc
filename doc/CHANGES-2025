@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3009 2025/04/30 07:44:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3010 2025/04/30 10:00:50 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/pixman to 0.46.0 [wiz 2025-04-30]
 	Updated print/ghostscript-agpl to 10.05.1 [adam 2025-04-30]
 	Updated fonts/ghostscript-cidfonts-ryumin to 10.05.1 [adam 2025-04-30]
+	Updated x11/fltk to 1.4.3 [micha 2025-04-30]
