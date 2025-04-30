@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2025/04/22 20:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/04/30 14:06:13 roy Exp $
 
 DISTNAME=	hg-fastimport-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	https://roy.marples.name/downloads/hg-fastimport/
+# Temporary home until I can host it somewhere
+MASTER_SITES=	https://www.netbsd.org/~roy
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	roy@NetBSD.org
