@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/03/30 06:31:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/04/30 07:43:33 adam Exp $
 bin/dvipdf
 bin/eps2eps
 bin/gs
@@ -11,6 +11,7 @@ bin/gslp
 bin/gsnd
 bin/gsx
 bin/lprsetup.sh
+bin/pdf2dsc
 bin/pdf2ps
 bin/pf2afm
 bin/pfbtopfa
@@ -458,6 +459,7 @@ share/ghostscript/${PKGVERSION}/lib/lines.ps
 share/ghostscript/${PKGVERSION}/lib/mkcidfm.ps
 share/ghostscript/${PKGVERSION}/lib/necp2x.upp
 share/ghostscript/${PKGVERSION}/lib/necp2x6.upp
+share/ghostscript/${PKGVERSION}/lib/pdf2dsc.ps
 share/ghostscript/${PKGVERSION}/lib/pdf_info.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
@@ -522,4 +524,4 @@ share/ghostscript/${PKGVERSION}/lib/viewpcx.ps
 share/ghostscript/${PKGVERSION}/lib/viewps2a.ps
 share/ghostscript/${PKGVERSION}/lib/winmaps.ps
 share/ghostscript/${PKGVERSION}/lib/zeroline.ps
-share/ghostscript/10.05.0/lib/zugferd.ps
+share/ghostscript/${PKGVERSION}/lib/zugferd.ps
