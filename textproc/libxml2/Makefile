@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2025/04/25 07:08:47 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2025/04/30 21:48:06 schmonz Exp $
 
 PKGREVISION= 2
 .include "../../textproc/libxml2/Makefile.common"
@@ -47,6 +47,12 @@ SUBST_CLASSES+=		rpath
 SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath=	configure
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+BUILDLINK_TRANSFORM+=	rm:-Wno-array-bounds
+.endif
 
 .include "options.mk"
 
