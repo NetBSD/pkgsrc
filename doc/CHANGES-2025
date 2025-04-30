@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3013 2025/04/30 13:19:29 jun Exp $
+$NetBSD: CHANGES-2025,v 1.3014 2025/04/30 15:34:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3988,3 +3988,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/alex to 3.5.3.0 [wiz 2025-04-30]
 	Updated math/nickle to 2.103 [wiz 2025-04-30]
 	Updated emulators/nono to 1.4.1 [jun 2025-04-30]
+	Updated databases/p5-App-Sqitch to 1.5.2 [schmonz 2025-04-30]
