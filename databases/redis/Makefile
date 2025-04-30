@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.91 2024/05/20 04:21:44 adam Exp $
+# $NetBSD: Makefile,v 1.92 2025/04/30 10:16:39 wiz Exp $
 
 DISTNAME=	redis-7.2.5
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
-# NB: upsteram has changed to a proprietary license.  Probably (absent
-# discussion), this should not be updated until a license-ok version
-# is in pkgsrc.  Existing forks are:
+# NB: upstream has changed to a proprietary license:
+# https://github.com/redis/redis/blob/unstable/LICENSE.txt
+# Probably (absent discussion), this should not be updated until
+# a license-ok version is in pkgsrc.  Existing forks are:
 # 1. Redict https://codeberg.org/redict/redict
 # 2. KeyDB, an older redis fork (in terms of features) BSD3 licensed
 # version maintained by Snapchat.
