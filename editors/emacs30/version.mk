@@ -1,0 +1,7 @@
+# $NetBSD: version.mk,v 1.1 2025/04/30 12:36:36 ryoon Exp $
+
+_EMACS_FLAVOR=	emacs
+_EMACS_REQD=	emacs30>=30.1<31
+
+_EMACS_VERSION_MAJOR=	30
+_EMACS_VERSION_MINOR=	1
