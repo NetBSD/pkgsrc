@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3006 2025/04/30 03:47:26 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3007 2025/04/30 03:48:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3980,3 +3980,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 137.0.2 [ryoon 2025-04-30]
 	Updated www/firefox-l10n to 137.0.2 [ryoon 2025-04-30]
 	Updated mail/thunderbird to 137.0.2 [ryoon 2025-04-30]
+	Updated mail/thunderbird-l10n to 137.0.2 [ryoon 2025-04-30]
