@@ -1,12 +1,18 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.22 2025/02/09 00:00:26 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.23 2025/04/30 20:35:28 rillig Exp $
 #
 # Public targets:
 #
 # debug:
-#	outputs the values of some commonly used variables and the
+#	Outputs the values of some commonly used variables and the
 #	contents of some files which are useful for tracking bugs,
 #	especially for packages that use the GNU autotools.
 #
+# debug-barrier:
+#	Like "debug", but after the pkgsrc barrier.
+#
+#	See bsd.pkg.barrier.mk.
+#
+# Keywords: barrier
 
 PRINTF?=	printf
 
@@ -20,6 +26,7 @@ PRINTF?=	printf
 # character has to be quoted.
 
 .PHONY: \
+	debug-barrier \
 	debug \
 	_show-dbginfo-file-versions \
 	_show-dbginfo-tools \
@@ -29,6 +36,9 @@ PRINTF?=	printf
 	_show-dbginfo-build \
 	_show-dbginfo-install \
 	_show-dbginfo-plist-subst
+
+debug-barrier:
+	${RUN} _PKGSRC_BARRIER=yes ${MAKE} -f ${MAKEFILE} debug
 
 debug: \
 	_show-dbginfo-file-versions \
