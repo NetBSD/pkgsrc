@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc,v 1.2 2024/10/01 15:01:29 ryoon Exp $
+$NetBSD: patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc,v 1.3 2025/04/30 03:47:13 ryoon Exp $
 
 --- third_party/wasm2c/src/prebuilt/wasm2c_source_includes.cc.orig	2023-05-25 21:19:41.000000000 +0000
 +++ third_party/wasm2c/src/prebuilt/wasm2c_source_includes.cc

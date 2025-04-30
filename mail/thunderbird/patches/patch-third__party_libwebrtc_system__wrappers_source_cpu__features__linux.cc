@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc,v 1.1 2024/10/01 15:01:29 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc,v 1.2 2025/04/30 03:47:13 ryoon Exp $
 
 * Fix build under NetBSD at least.
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.1 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-gfx_wr_swgl_build.rs,v 1.2 2025/04/30 03:47:13 ryoon Exp $
 
 Work around an internal compiler error on i386 when optimization is enabled:
 
@@ -9,19 +9,19 @@ Work around an internal compiler error on i386 when optimization is enabled:
   cargo:warning=                    ^~~~~~~~~~~~~~~
 
 
---- gfx/wr/swgl/build.rs.orig	2021-08-23 14:57:16.000000000 +0000
+--- gfx/wr/swgl/build.rs.orig	2025-03-18 04:01:06.000000000 +0000
 +++ gfx/wr/swgl/build.rs
-@@ -196,6 +196,13 @@ fn main() {
+@@ -228,6 +228,13 @@ fn main() {
          }
      }
  
 +    // Work around a compiler bug
 +    let target_triple = std::env::var("TARGET").expect("The TARGET environment variable must be set");
 +    let target_name = target_triple.split('-').next().unwrap();
-+    if ["i386", "i586", "i686"].contains(&target_name) { 
++    if ["i386", "i586", "i686"].contains(&target_name) {
 +        build.flag("-O0");
 +    }
 +
-     build.file("src/gl.cc")
+     build
+         .file("src/gl.cc")
          .define("_GLIBCXX_USE_CXX11_ABI", Some("0"))
-         .include(shader_dir)
