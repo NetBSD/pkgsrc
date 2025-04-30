@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_sqlite3_src_moz.build,v 1.1 2024/08/01 15:27:50 ryoon Exp $
+$NetBSD: patch-third__party_sqlite3_src_moz.build,v 1.2 2025/04/30 03:47:13 ryoon Exp $
 
 * Fix segfault under NetBSD/i386 9 and pkgsrc/lang/gcc8-8.5.0
   For NetBSD/i386 9, @SQLITE3OPTFLAG@ will be replaced with "'-O0',".

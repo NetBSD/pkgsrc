@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.96 2024/10/01 15:01:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.97 2025/04/30 03:47:13 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
+lib/thunderbird/chrome/icons/default/TB-symbolic.svg
 lib/thunderbird/chrome/icons/default/calendar-alarm-dialog.png
 lib/thunderbird/chrome/icons/default/calendar-general-dialog.png
 lib/thunderbird/chrome/icons/default/default128.png

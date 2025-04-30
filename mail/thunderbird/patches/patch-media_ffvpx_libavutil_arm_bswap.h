@@ -1,8 +1,8 @@
-$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.2 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.3 2025/04/30 03:47:13 ryoon Exp $
 
 Fix NetBSD aarch64 build.
 
---- media/ffvpx/libavutil/arm/bswap.h.orig	2019-10-30 17:35:56.000000000 +0000
+--- media/ffvpx/libavutil/arm/bswap.h.orig	2025-02-21 13:24:25.000000000 +0000
 +++ media/ffvpx/libavutil/arm/bswap.h
 @@ -23,6 +23,8 @@
  #include "config.h"
@@ -13,8 +13,8 @@ Fix NetBSD aarch64 build.
  #ifdef __ARMCC_VERSION
  
  #if HAVE_ARMV6
-@@ -64,4 +66,6 @@ static av_always_inline av_const uint32_
- 
+@@ -47,4 +49,6 @@ static av_always_inline av_const unsigne
+ #endif
  #endif /* __ARMCC_VERSION */
  
 +#endif /* __aarch64__ */

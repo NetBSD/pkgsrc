@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h,v 1.4 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-gfx_angle_checkout_src_compiler_translator_InfoSink.h,v 1.5 2025/04/30 03:47:13 ryoon Exp $
 
 * isinf/isnan in make.h is defined as macro. Use non-macro version
   to fix build.

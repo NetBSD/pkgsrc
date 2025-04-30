@@ -1,4 +1,4 @@
-$NetBSD: patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp,v 1.2 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp,v 1.3 2025/04/30 03:47:13 ryoon Exp $
 
 --- dom/webtransport/api/WebTransportDatagramDuplexStream.cpp.orig	2023-04-23 21:17:18.000000000 +0000
 +++ dom/webtransport/api/WebTransportDatagramDuplexStream.cpp

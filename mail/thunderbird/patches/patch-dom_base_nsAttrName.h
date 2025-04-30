@@ -1,4 +1,4 @@
-$NetBSD: patch-dom_base_nsAttrName.h,v 1.3 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-dom_base_nsAttrName.h,v 1.4 2025/04/30 03:47:13 ryoon Exp $
 
 cbindgen gets confused by NetBSD's types being macros too
 https://mail-index.netbsd.org/tech-pkg/2018/10/25/msg020395.html
