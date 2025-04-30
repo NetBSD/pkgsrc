@@ -1,0 +1,14 @@
+$NetBSD: patch-meson.build,v 1.1 2025/04/30 11:43:13 wiz Exp $
+
+Do not hardcode C++23, it's not really needed.
+
+--- meson.build.orig	2025-04-29 07:13:33.386241589 +0000
++++ meson.build
+@@ -7,7 +7,6 @@
+ project('nickle', 'c',
+ 	default_options: [
+ 	  'buildtype=debugoptimized',
+-	  'c_std=gnu23',
+ 	  'warning_level=2',
+ 	],
+ 	license : 'BSD',
