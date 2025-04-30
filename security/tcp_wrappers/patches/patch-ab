@@ -1,16 +1,17 @@
-$NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
+$NetBSD: patch-ab,v 1.7 2025/04/30 11:58:04 tnn Exp $
 
 --- tcpd.h.orig	2003-04-16 14:27:11.000000000 +0000
 +++ tcpd.h
-@@ -11,6 +11,7 @@
+@@ -11,6 +11,8 @@
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
 +#include <strings.h>
++#include <stdio.h>
  
  typedef struct sockaddr_gen {
      union {
-@@ -29,7 +30,7 @@ typedef union gen_addr {
+@@ -29,7 +31,7 @@ typedef union gen_addr {
  #endif
  } gen_addr;
  
@@ -19,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  
  #define sg_sa		sg_addr._sg_sa
  #define sg_sin		sg_addr._sg_sin
-@@ -92,9 +93,9 @@ struct request_info {
+@@ -92,9 +94,9 @@ struct request_info {
      char    pid[10];			/* access via eval_pid(request) */
      struct host_info client[1];		/* client endpoint info */
      struct host_info server[1];		/* server endpoint info */
@@ -32,7 +33,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
      void  (*cleanup) ();		/* cleanup function or 0 */
      struct netconfig *config;		/* netdir handle */
  };
-@@ -137,17 +138,23 @@ extern void fromhost();			/* get/validat
+@@ -137,17 +139,23 @@ extern void fromhost();			/* get/validat
  #define fromhost sock_host		/* no TLI support needed */
  #endif
  
@@ -66,7 +67,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  					/* IP4/IP6 gethostbyname */
  #ifdef HAVE_IPV6
  extern char *skip_ipv6_addrs();		/* skip over colons in IPv6 addrs */
-@@ -196,20 +203,35 @@ extern struct request_info *request_set(
+@@ -196,20 +204,35 @@ extern struct request_info *request_set(
    * host_info structures serve as caches for the lookup results.
    */
  
@@ -102,7 +103,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  #define sock_methods(r) \
  	{ (r)->hostname = sock_hostname; (r)->hostaddr = sock_hostaddr; }
  
-@@ -257,7 +279,7 @@ extern struct tcpd_context tcpd_context;
+@@ -257,7 +280,7 @@ extern struct tcpd_context tcpd_context;
    * behavior.
    */
  
@@ -111,7 +112,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  extern int dry_run;			/* verification flag */
  
  /* Bug workarounds. */
-@@ -269,7 +291,7 @@ extern long fix_inet_addr();
+@@ -269,7 +292,7 @@ extern long fix_inet_addr();
  
  #ifdef BROKEN_FGETS			/* partial reads from sockets */
  #define fgets fix_fgets
@@ -120,7 +121,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  #endif
  
  #ifdef RECVFROM_BUG			/* no address family info */
-@@ -279,7 +301,7 @@ extern int fix_recvfrom();
+@@ -279,7 +302,7 @@ extern int fix_recvfrom();
  
  #ifdef GETPEERNAME_BUG			/* claims success with UDP */
  #define getpeername fix_getpeername
@@ -129,7 +130,7 @@ $NetBSD: patch-ab,v 1.6 2025/04/29 14:18:00 tnn Exp $
  #endif
  
  #ifdef SOLARIS_24_GETHOSTBYNAME_BUG	/* lists addresses as aliases */
-@@ -294,5 +316,5 @@ extern char *fix_strtok();
+@@ -294,5 +317,5 @@ extern char *fix_strtok();
  
  #ifdef LIBC_CALLS_STRTOK		/* libc calls strtok() */
  #define strtok	my_strtok
