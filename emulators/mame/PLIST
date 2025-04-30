@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2025/02/26 10:36:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.95 2025/04/30 15:50:53 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -534,6 +534,7 @@ share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc98.xml
 share/mame/hash/pc98_cd.xml
+share/mame/hash/pc98_hdd.xml
 share/mame/hash/pcd_flop.xml
 share/mame/hash/pce.xml
 share/mame/hash/pce_tourvision.xml
