@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/04/30 21:46:25 hauke Exp $
+bin/xace
+share/doc/xace/COPYING
+share/doc/xace/README.md
+share/doc/xace/boldcomp.email.txt
+share/doc/xace/forth.txt
+share/doc/xace/xAce.png
+share/xace/ace.rom

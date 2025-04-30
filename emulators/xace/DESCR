@@ -1,0 +1,9 @@
+xAce is an emulator for the Jupiter ACE computer.
+
+The Jupiter ACE is the real outsider micro from the 1980s.
+
+Instead of BASIC as the programming language, it had FORTH. It was
+designed by two guys who had worked at Sinclair Research Ltd and were
+responsible for the famous Sinclair ZX81 and ZX Spectrum.
+
+See also <http://www.jupiter-ace.co.uk/emulators_unix.html>
