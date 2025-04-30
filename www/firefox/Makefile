@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.630 2025/04/24 14:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.631 2025/04/30 03:10:40 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		135.0
-MOZ_BRANCH_MINOR=	.1
+MOZ_BRANCH=		136.0
+MOZ_BRANCH_MINOR=	.4
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-135.0.tgz
+NODEJSKIT=		nodejs-output-136.0.2.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
@@ -159,6 +158,10 @@ maintainer-files:
 
 pre-patch:
 	for f in $$(find ${WRKSRC}/third_party/libwebrtc -name moz.build -type f) ; \
+	do \
+		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
+	done
+	for f in $$(find ${WRKSRC}/third_party/abseil-cpp -name moz.build -type f) ; \
 	do \
 		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
 	done
