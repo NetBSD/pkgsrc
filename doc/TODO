@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25742 2025/04/30 03:47:26 ryoon Exp $
+$NetBSD: TODO,v 1.25743 2025/04/30 03:56:01 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -26,10 +26,6 @@ Suggested new packages
 	SquirrelMail plugins
 	SquirrelMail has a plugin feature and several plugins exist.
 	http://www.squirrelmail.org/plugins.php
-
-	moji
-	http://moji.mozdev.org/
-	Mozilla Firefox extension which helps you learn Japanese
 
 	joyce
 	http://www.seasip.demon.co.uk/Unix/Joyce/index.html
