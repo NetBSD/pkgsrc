@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2025/04/30 12:22:43 wiz Exp $
+# $NetBSD: builtin.mk,v 1.13 2025/04/30 21:09:49 tnn Exp $
 
 BUILTIN_PKG:=	editline
 
@@ -57,12 +57,12 @@ ensure-libedit-pc:
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/libedit.pc;			\
 	src=${BUILDLINK_PREFIX.editline}/lib${LIBABISUFFIX}/pkgconfig/libedit.pc; \
 	if [ ! -f $${dst} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;		\
 		if [ -f $${src} ]; then					\
 			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
 			${LN} -sf $${src} $${dst};			\
 		else							\
 			${ECHO_BUILDLINK_MSG} "Creating $${dst}";	\
-			${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\
 			{						\
 			${ECHO} "prefix=${BUILDLINK_PREFIX.editline}";	\
 			${ECHO} "exec_prefix=\$${prefix}";		\
