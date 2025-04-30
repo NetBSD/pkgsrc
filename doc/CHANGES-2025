@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3016 2025/04/30 16:13:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3017 2025/04/30 17:37:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/p5-App-Sqitch to 1.5.2 [schmonz 2025-04-30]
 	Updated emulators/mame to 0.277 [wiz 2025-04-30]
 	Updated net/megatools to 1.11.4.20250411 [wiz 2025-04-30]
+	Updated net/dnsdist to 1.9.9 [wiz 2025-04-30]
