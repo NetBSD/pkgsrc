@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.102 2024/11/04 10:10:57 jperkin Exp $
+$NetBSD: distinfo,v 1.103 2025/04/30 19:45:31 tnn Exp $
 
 BLAKE2s (inkscape-1.4.tar.xz) = 4ff593a28645a46cf060fbcbe6c1275dd1ff331220ef99634588e46471deffd2
 SHA512 (inkscape-1.4.tar.xz) = 3b81306b81416597073e7eda2a103112cee63493bcf96fa737bb1edfbd682ebb329e415bbbbfda877aef2a78dc376460040ebc5c0cc2c90c0fe60db5d7d12368
@@ -10,3 +10,4 @@ SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9a8c7daff94c368249ec
 SHA1 (patch-src_path_splinefit_splinefit.c) = 6c4482891567215a9b2cb5b2a4fb63ca54b24f9f
 SHA1 (patch-src_path_splinefit_splinefont.c) = 43f67ea3c25d64d323899718d6adf26225f24da0
 SHA1 (patch-src_path_splinefit_splinefont.h) = 170bec433cfbf98f54717e09433f6def5a7a9afe
+SHA1 (patch-src_util_gobjectptr.h) = 8842a58c554c73d61049d14cd5c3c3036c6408e8
