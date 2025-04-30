@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3018 2025/04/30 18:30:04 kim Exp $
+$NetBSD: CHANGES-2025,v 1.3019 2025/04/30 21:47:09 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3993,3 +3993,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/megatools to 1.11.4.20250411 [wiz 2025-04-30]
 	Updated net/dnsdist to 1.9.9 [wiz 2025-04-30]
 	Updated security/ca-certificates to 20250419 [kim 2025-04-30]
+	Added emulators/xace version 30 [hauke 2025-04-30]
