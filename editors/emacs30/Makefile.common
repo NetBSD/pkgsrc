@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2025/04/28 08:28:54 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/04/30 12:36:36 ryoon Exp $
 #
 # used by editors/emacs30/Makefile
 # used by editors/emacs30-nox11/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=	emacs-30.1
+DISTNAME=	emacs-${EMACS_VERSION}
 PKGNAME?=	${DISTNAME:S/emacs/emacs30/}
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
@@ -15,6 +15,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/emacs/
 COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
+
+.include "../../editors/emacs30/version.mk"
+EMACS_VERSION=	${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
 
