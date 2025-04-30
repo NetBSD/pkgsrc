@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libpng_pngpriv.h,v 1.3 2024/10/01 15:01:28 ryoon Exp $
+$NetBSD: patch-media_libpng_pngpriv.h,v 1.4 2025/04/30 03:47:13 ryoon Exp $
 
 Fix _POSIX_SOURCE on SunOS.
 
