@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3008 2025/04/30 07:23:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3009 2025/04/30 07:44:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3982,3 +3982,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/thunderbird to 137.0.2 [ryoon 2025-04-30]
 	Updated mail/thunderbird-l10n to 137.0.2 [ryoon 2025-04-30]
 	Updated x11/pixman to 0.46.0 [wiz 2025-04-30]
+	Updated print/ghostscript-agpl to 10.05.1 [adam 2025-04-30]
+	Updated fonts/ghostscript-cidfonts-ryumin to 10.05.1 [adam 2025-04-30]
