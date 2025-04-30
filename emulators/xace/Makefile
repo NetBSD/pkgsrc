@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/04/30 21:46:25 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2025/04/30 23:02:50 hauke Exp $
 
 DISTNAME=	xAce-${PKGVER}
-PKGNAME=	xace-${PKGVER}_2025-04-30
+PKGNAME=	xace-${PKGVER}.20250430
 PKGVER=		0.5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lawrencewoodman/}
