@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/04/30 21:46:25 hauke Exp $
+
+We do not use c++, so keep cmake from looking for a compiler;
+apparently, it does not have a switch for that.
+
+--- CMakeLists.txt.orig	2025-04-30 17:53:40.057133724 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.6) 
+-project(xAce) 
++project("xAce" C) 
+ 
+ enable_testing()
+ 
