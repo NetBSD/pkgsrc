@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.371 2025/04/21 20:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.372 2025/04/30 21:46:25 hauke Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -442,6 +442,7 @@ SUBDIR+=	wine
 SUBDIR+=	x16-emulator
 SUBDIR+=	x16-rom
 SUBDIR+=	x48
+SUBDIR+=	xace
 SUBDIR+=	xbeeb
 SUBDIR+=	xcopilot
 SUBDIR+=	xcpc
