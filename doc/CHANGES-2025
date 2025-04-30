@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3002 2025/04/30 02:42:28 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3003 2025/04/30 03:11:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3976,3 +3976,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128-l10n to 128.10.0 [gutteridge 2025-04-30]
 	Updated www/firefox115 to 115.23.0 [gutteridge 2025-04-30]
 	Updated www/firefox115-l10n to 115.23.0 [gutteridge 2025-04-30]
+	Updated www/firefox to 136.0.4 [ryoon 2025-04-30]
