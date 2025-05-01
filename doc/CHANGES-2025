@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3024 2025/05/01 07:47:35 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3025 2025/05/01 12:19:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3998,3 +3998,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfile to 20250430 [vins 2025-05-01]
 	Updated sysutils/fastfetch to 2.42.0 [vins 2025-05-01]
 	Updated devel/got to 0.111 [vins 2025-05-01]
+	Updated net/yt-dlp to 2025.4.30 [ryoon 2025-05-01]
