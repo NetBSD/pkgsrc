@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2025/01/05 21:38:21 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/01 07:33:20 vins Exp $
 
 DISTNAME=	xfile-src-1.0-beta
-PKGNAME=	${DISTNAME:S/-src//:S/-beta/beta/}
+PKGNAME=	${DISTNAME:S/-src//:S/1.0-beta/20250430/}
 CATEGORIES=	sysutils x11
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.xz
-DISTFILES+=	${DEFAULT_DISTFILES} xfile-xdgsvc-src.tar.xz	\
-		xfile-slanted-icons.tar.xz
+DISTFILES+=	${DEFAULT_DISTFILES} xfile-slanted-icons.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/xfile.html
@@ -23,9 +22,11 @@ SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
-SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc src/mkicons.sh src/xfile.service
+SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc src/mkicons.sh
 SUBST_VARS.pkgsrc+=	PKGBASE PREFIX PKGMANDIR SED SHAREDIR
 SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
+
+.include "options.mk"
 
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
@@ -37,16 +38,12 @@ WRKSRC=	${WRKDIR}/xfile-beta
 
 post-extract:
 	${RUN}${MV} ${WRKDIR}/slanted-icons/*.xpm	\
-		${WRKSRC}/addon/icons/
-.for f in xfile-xdg.c xfile.service
-	${RUN}${MV} ${WRKDIR}/xfile-xdgsvc/${f} ${WRKSRC}/src
-.endfor
+	${WRKSRC}/addon/icons/
 
 INSTALLATION_DIRS+=	share/applications
 
 post-install:
-	${RUN}${LN} -s ${DESTDIR}${PREFIX}/bin/xfile	\
-		${DESTDIR}${PREFIX}/bin/xfile-open
+	${RUN}${LN} -s ${PREFIX}/bin/xfile ${DESTDIR}${PREFIX}/bin/xfile-open
 	${INSTALL_DATA} ${WRKSRC}/addon/icons/*.xpm	\
 		${DESTDIR}${SHAREDIR}/icons
 	${INSTALL_DATA} ${WRKSRC}/addon/types/*.db	\
@@ -58,6 +55,5 @@ post-install:
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

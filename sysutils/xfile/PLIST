@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/05 21:38:21 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/01 07:33:20 vins Exp $
 bin/xfile
 bin/xfile-open
-bin/xfile-xdgsvc
+${PLIST.dbus}bin/xfile-xdgsvc
 lib/X11/app-defaults/XFile
 man/man1/xfile.1
 share/applications/xfile.desktop
-share/dbus-1/services/xfile.service
+${PLIST.dbus}share/dbus-1/services/xfile.service
 share/doc/xfile/README
 share/doc/xfile/README.icons
 share/pixmaps/xfile_48x48.xpm
@@ -82,6 +82,10 @@ share/xfile/icons/kra.l.xpm
 share/xfile/icons/kra.m.xpm
 share/xfile/icons/kra.s.xpm
 share/xfile/icons/kra.t.xpm
+share/xfile/icons/lib.l.xpm
+share/xfile/icons/lib.m.xpm
+share/xfile/icons/lib.s.xpm
+share/xfile/icons/lib.t.xpm
 share/xfile/icons/makefile.l.xpm
 share/xfile/icons/makefile.m.xpm
 share/xfile/icons/makefile.s.xpm
@@ -117,6 +121,10 @@ share/xfile/icons/ofwp.l.xpm
 share/xfile/icons/ofwp.m.xpm
 share/xfile/icons/ofwp.s.xpm
 share/xfile/icons/ofwp.t.xpm
+share/xfile/icons/package.l.xpm
+share/xfile/icons/package.m.xpm
+share/xfile/icons/package.s.xpm
+share/xfile/icons/package.t.xpm
 share/xfile/icons/paint.l.xpm
 share/xfile/icons/paint.m.xpm
 share/xfile/icons/paint.s.xpm
@@ -125,6 +133,10 @@ share/xfile/icons/pdf.l.xpm
 share/xfile/icons/pdf.m.xpm
 share/xfile/icons/pdf.s.xpm
 share/xfile/icons/pdf.t.xpm
+share/xfile/icons/picture.l.xpm
+share/xfile/icons/picture.m.xpm
+share/xfile/icons/picture.s.xpm
+share/xfile/icons/picture.t.xpm
 share/xfile/icons/pixmap.l.xpm
 share/xfile/icons/pixmap.m.xpm
 share/xfile/icons/pixmap.s.xpm
