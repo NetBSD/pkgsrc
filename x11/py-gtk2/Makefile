@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2025/04/24 14:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.155 2025/05/01 14:29:34 tnn Exp $
 
 DISTNAME=	pygtk-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
@@ -22,6 +22,11 @@ PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		gmake pkg-config
+
+# clang complains:
+# error: incompatible integer to pointer conversion passing 'unsigned long' to parameter of type 'GdkNativeWindow' (aka 'void *') [-Wint-conversion]
+# ret = gtk_plug_new_for_display(GDK_DISPLAY(display->obj), socket_id);
+CFLAGS+=	-Wno-error=int-conversion
 
 PY_PATCHPLIST=	YES
 PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.24.0
