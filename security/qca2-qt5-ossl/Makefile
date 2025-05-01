@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.38 2025/04/24 14:15:41 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/05/01 12:00:38 gdt Exp $
 
 PKGNAME=	qca2-qt5-ossl-${DISTNAME:C/.*-//}
 PKGREVISION=	6
 
 COMMENT=	Cross-platform crypto API for Qt5 - OpenSSL plugin
 
-BUILD_DIRS=	plugins/qca-ossl
+BUILD_DIRS=		plugins/qca-ossl
+# ninja does not handle subdir builds.  Abuse user-settable variable
+# following cmake/build.mk guidance.
+CMAKE_GENERATOR=	make
 
 .include "../../security/qca2-qt5/Makefile.common"
 
