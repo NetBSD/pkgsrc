@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2025/04/25 12:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/05/01 14:43:56 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
 PKGNAME=	palemoon-33.7.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -88,6 +88,11 @@ CWRAPPERS_APPEND.ld+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 
+# The default bundled copy of ICU does not contain big-endian
+# data files, so this one is generated manually.
+DISTFILES+=		icudt63b.dat.gz
+SITES.icudt63b.dat.gz=	${MASTER_SITE_LOCAL}
+
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
@@ -145,6 +150,8 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/palemoon.png
 	${INSTALL_DATA} ${WRKSRC}/palemoon/branding/unofficial/newmoon.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/palemoon.desktop
+	${INSTALL_DATA} ${WRKDIR}/icudt63b.dat \
+	    ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/
 
 .include "options.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
