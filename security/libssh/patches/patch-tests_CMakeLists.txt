@@ -1,11 +1,23 @@
-$NetBSD: patch-tests_CMakeLists.txt,v 1.1 2020/09/13 18:45:36 otis Exp $
+$NetBSD: patch-tests_CMakeLists.txt,v 1.2 2025/05/01 18:19:22 tnn Exp $
 
-Search for sshd also in /usr/lib/ssh where it is located
-in SunOS/SmartOS.
+* OpenSSH 10 support
+* Search for sshd also in /usr/lib/ssh where it is located
+  in SunOS/SmartOS.
 
---- tests/CMakeLists.txt.orig	2020-09-10 12:43:04.000000000 +0000
+--- tests/CMakeLists.txt.orig	2024-08-29 13:01:56.000000000 +0000
 +++ tests/CMakeLists.txt
-@@ -117,7 +117,8 @@ find_program(SSHD_EXECUTABLE
+@@ -100,8 +100,8 @@ add_subdirectory(unittests)
+ find_program(SSH_EXECUTABLE NAMES ssh)
+ if (SSH_EXECUTABLE)
+     execute_process(COMMAND ${SSH_EXECUTABLE} -V ERROR_VARIABLE OPENSSH_VERSION_STR)
+-    string(REGEX REPLACE "^.*OpenSSH_([0-9]).[0-9].*$" "\\1" OPENSSH_VERSION_MAJOR "${OPENSSH_VERSION_STR}")
+-    string(REGEX REPLACE "^.*OpenSSH_[0-9].([0-9]).*$" "\\1" OPENSSH_VERSION_MINOR "${OPENSSH_VERSION_STR}")
++    string(REGEX REPLACE "^.*OpenSSH_([0-9]+)[.]([0-9]+).*$" "\\1" OPENSSH_VERSION_MAJOR "${OPENSSH_VERSION_STR}")
++    string(REGEX REPLACE "^.*OpenSSH_([0-9]+)[.]([0-9]+).*$" "\\2" OPENSSH_VERSION_MINOR "${OPENSSH_VERSION_STR}")
+     set(OPENSSH_VERSION "${OPENSSH_VERSION_MAJOR}.${OPENSSH_VERSION_MINOR}")
+     if("${OPENSSH_VERSION}" VERSION_LESS "6.3")
+         # ssh - Q was introduced in 6.3
+@@ -168,7 +168,8 @@ find_program(SSHD_EXECUTABLE
               PATHS
                  /sbin
                  /usr/sbin
@@ -15,3 +27,14 @@ in SunOS/SmartOS.
  
  if (CLIENT_TESTING OR SERVER_TESTING)
      find_package(socket_wrapper 1.1.5 REQUIRED)
+@@ -212,8 +213,8 @@ if (CLIENT_TESTING OR SERVER_TESTING)
+     find_program(SSH_EXECUTABLE NAMES ssh)
+     if (SSH_EXECUTABLE)
+         execute_process(COMMAND ${SSH_EXECUTABLE} -V ERROR_VARIABLE OPENSSH_VERSION_STR)
+-        string(REGEX REPLACE "^.*OpenSSH_([0-9]).[0-9].*$" "\\1" OPENSSH_VERSION_MAJOR "${OPENSSH_VERSION_STR}")
+-        string(REGEX REPLACE "^.*OpenSSH_[0-9].([0-9]).*$" "\\1" OPENSSH_VERSION_MINOR "${OPENSSH_VERSION_STR}")
++        string(REGEX REPLACE "^.*OpenSSH_([0-9]+)[.]([0-9]+).*$" "\\1" OPENSSH_VERSION_MAJOR "${OPENSSH_VERSION_STR}")
++        string(REGEX REPLACE "^.*OpenSSH_([0-9]+)[.]([0-9]+).*$" "\\2" OPENSSH_VERSION_MINOR "${OPENSSH_VERSION_STR}")
+         add_definitions(-DOPENSSH_VERSION_MAJOR=${OPENSSH_VERSION_MAJOR} -DOPENSSH_VERSION_MINOR=${OPENSSH_VERSION_MINOR})
+     endif()
+ 
