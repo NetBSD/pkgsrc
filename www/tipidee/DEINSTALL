@@ -1,0 +1,10 @@
+# $NetBSD: DEINSTALL,v 1.1 2025/05/01 16:12:13 schmonz Exp $
+
+case "${STAGE}" in
+
+POST-DEINSTALL)
+	s="${PKG_SYSCONFDIR}/tipidee.conf"
+	[ -f "${s}.cdb" ] && ! [ -f "${s}" ] && ${RM} -f "${s}.cdb"
+	;;
+
+esac
