@@ -1,0 +1,34 @@
+$NetBSD: patch-libxfce4windowing_meson.build,v 1.1 2025/05/01 00:57:26 gutteridge Exp $
+
+Fix issue with job dependency ordering.
+https://gitlab.xfce.org/xfce/libxfce4windowing/-/issues/45
+https://gitlab.xfce.org/xfce/libxfce4windowing/-/merge_requests/77
+
+--- libxfce4windowing/meson.build.orig	2025-02-02 15:53:57.000000000 +0000
++++ libxfce4windowing/meson.build
+@@ -98,15 +98,12 @@ windowing_config_h = configure_file(
+ windowing_public_sources += windowing_config_h
+ windowing_sources += windowing_config_h
+ 
+-windowing_link_depends = []
+-windowing_link_depends += custom_target(
+-  'libxfce4windowing-visibility.h',
++windowing_sources += configure_file(
+   input: 'libxfce4windowing.symbols',
+   output: 'libxfce4windowing-visibility.h',
+   command: [xdt_gen_visibility, '--kind=header', '@INPUT@', '@OUTPUT@'],
+ )
+-windowing_link_depends += custom_target(
+-  'libxfce4windowing-visibility.c',
++windowing_sources += configure_file(
+   input: 'libxfce4windowing.symbols',
+   output: 'libxfce4windowing-visibility.c',
+   command: [xdt_gen_visibility, '--kind=source', '@INPUT@', '@OUTPUT@'],
+@@ -133,7 +130,6 @@ libxfce4windowing = library(
+   ],
+   gnu_symbol_visibility: gnu_symbol_visibility,
+   dependencies: windowing_deps,
+-  link_depends: windowing_link_depends,
+   install: true,
+ )
+ 
