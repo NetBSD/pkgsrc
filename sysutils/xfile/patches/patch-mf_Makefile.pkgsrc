@@ -1,10 +1,10 @@
-$NetBSD: patch-mf_Makefile.pkgsrc,v 1.1 2025/01/05 21:38:22 vins Exp $
+$NetBSD: patch-mf_Makefile.pkgsrc,v 1.2 2025/05/01 07:33:20 vins Exp $
 
 Add custom Makefile for pkgsrc.
 
---- mf/Makefile.pkgsrc.orig	2025-01-05 16:52:21.386683075 +0000
+--- mf/Makefile.pkgsrc.orig	2025-05-01 05:08:16.645311130 +0000
 +++ mf/Makefile.pkgsrc
-@@ -0,0 +1,24 @@
+@@ -0,0 +1,29 @@
 +# XFile pkgsrc Makefile
 +
 +PREFIX = @PREFIX@
@@ -16,9 +16,14 @@ Add custom Makefile for pkgsrc.
 +PIXMAPDIR = @PREFIX@/share/pixmaps
 +DOCDIR = @PREFIX@/share/doc/@PKGBASE@
 +
-+DBUS_INCDIRS = -I@PREFIX@/include/dbus-1.0 -I@PREFIX@/lib/dbus-1.0/include
-+
 +.include "common.mf"
++
++# DBus support
++.if !empty(DBUS:M1)
++DBUS_INCDIRS = -I@PREFIX@/include/dbus-1.0 -I@PREFIX@/lib/dbus-1.0/include
++DBUS_LIBS = -ldbus-1
++.include "xdgsvc.mf"
++.endif
 +
 +# Set to APPDEFS_CORE for core fonts
 +APPDEFS = $(APPDEFS_XFT)
