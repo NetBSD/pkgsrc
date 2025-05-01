@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.106 2024/12/03 10:20:25 jperkin Exp $
+$NetBSD: distinfo,v 1.107 2025/05/01 10:12:43 jperkin Exp $
 
 BLAKE2s (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 8745b980e290e509c0dd09706398b89afce85fee1405b9367b6684c83d56b96a
 SHA512 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 6ed928cc68503c27edd6f3a90f94e1e762192d41997b12903e37071f4fcd34f5579fa970e59c240928eaae60729300fbfdb02a5ec1136bc757ee24f1ee554af4
@@ -27,6 +27,9 @@ Size (openjdk7/bootstrap-jdk7u60-bin-dragonfly-3.8-amd64-20140719.tar.bz2) = 378
 BLAKE2s (openjdk7/jdk8u-jdk8u432-b06.1.tar.gz) = a4f38db9f7658e30aa98fd67c63be3a2a0eb0cd08dcc5cff918a6595ccb9a666
 SHA512 (openjdk7/jdk8u-jdk8u432-b06.1.tar.gz) = b468bc92cd84ab0cdc73fc6e64115a554c43b462a547093eb21f19df0115fb5653266c129225cdce917b2d360c5f18f90b731df5a6292d23c6c1972f427f50e8
 Size (openjdk7/jdk8u-jdk8u432-b06.1.tar.gz) = 93361779 bytes
+BLAKE2s (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = 4158705dc497273828cfe695afe0563bec279769777868f0017198991eccb314
+SHA512 (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = ec8a7be040804d330c54316c268b4f68702f92a0c314132f5b6e541d901a9175666d85ecbc506af9d4328b15433c9648fa0c0812a62f4142d2775c26c3db4077
+Size (openjdk7/openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz) = 110776752 bytes
 SHA1 (patch-aa) = 8810cfed600ee3bf36a408cc77e497ac7b3e6838
 SHA1 (patch-al) = f65f739805c2ef471a4de10d6da42e86c5561b8c
 SHA1 (patch-an) = fce4da00762770c1c0592bd225bf73e875252178
