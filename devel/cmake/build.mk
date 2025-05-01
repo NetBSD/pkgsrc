@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.23 2025/05/01 11:52:26 gdt Exp $
+# $NetBSD: build.mk,v 1.24 2025/05/01 12:31:45 wiz Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -7,13 +7,6 @@
 # a variable (BUILD_USES_CMAKE) that can alter bl3 behavior.  The
 # variable CMAKE_GENERATOR must be defined before inclusion (as it is
 # a user-settable variable that should happen automatically).
-#
-# Note that CMAKE_GENERATOR is a user-settable variable, but there is
-# no package-settable CMAKE_GENERATORS_ACCEPTED.  Therefore, when a
-# package fails to build with one of the choices of generators,
-# typically ninja, packages will, as a workaround, set CMAKE_GENERATOR
-# to the one that works, typically make.  (The typical cause is ninja
-# failing with BUILD_DIRS set to a subdirectory.
 #
 # User-settable variables:
 #
@@ -33,6 +26,10 @@
 #
 # CMAKE_INSTALL_ARGS
 #	Arguments to pass to CMake during installation: Default: empty
+#
+# CMAKE_GENERATORS_INCOMPATIBLE
+#	CMAKE_GENERATORS that will not work with this package. (A typical
+#	case is ninja failing with BUILD_DIRS set to a subdirectory.)
 #
 # CONFIGURE_DIR
 #	Directory relative to WRKSRC in which to run CMake. Usually
@@ -80,16 +77,26 @@ CMAKE_LIBRARY_PATH+=	${COMPILER_LIB_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
 CMAKE_BUILD_DIR?=	cmake-pkgsrc-build
-CMAKE_GENERATOR?=	make
 CMAKE_BUILD_ARGS?=	-j ${_MAKE_JOBS_N:U1}
 CMAKE_INSTALL_ARGS?=	-j ${_MAKE_JOBS_N:U1}
-.if ${CMAKE_GENERATOR} == "ninja"
+
+CMAKE_GENERATORS_INCOMPATIBLE?=	# empty
+
+.for cg in ${CMAKE_GENERATOR} make ninja
+.  if empty(CMAKE_GENERATORS_INCOMPATIBLE:M${cg})
+_CMAKE_GENERATOR?=	${cg}
+.  endif
+.endfor
+_CMAKE_GENERATOR?=	none
+.if ${_CMAKE_GENERATOR} == "ninja"
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 _CMAKE_BUILD_SYSTEM?=	Ninja
 _CMAKE_BUILD_TOOL?=	ninja
-.else
+.elif ${_CMAKE_GENERATOR} == "make"
 _CMAKE_BUILD_SYSTEM?=	Unix Makefiles
 _CMAKE_BUILD_TOOL?=	${MAKE_PROGRAM}
+.else
+PKG_FAIL_REASON+=	"No valid cmake generator found."
 .endif
 
 CONFIGURE_DIR?=		.
@@ -149,8 +156,8 @@ _PKG_VARS.cmake+=	CMAKE_CONFIGURE_ARGS CONFIGURE_DIR
 _PKG_VARS.cmake+=	CMAKE_BUILD_ARGS BUILD_DIRS BUILD_TARGET
 _PKG_VARS.cmake+=	TEST_DIRS TEST_TARGET
 _PKG_VARS.cmake+=	CMAKE_INSTALL_ARGS INSTALL_DIRS INSTALL_TARGET
+_PKG_VARS.cmake+=	CMAKE_GENERATORS_INCOMPATIBLE _CMAKE_GENERATOR
 _SYS_VARS.cmake+=	CMAKE_BUILD_DIR
-_USE_VARS.cmake+=	CMAKE_CONFIGURE_ARGS
 _USE_VARS.cmake+=	CONFIGURE_ENV MAKE_ENV TEST_ENV INSTALL_ENV
 _IGN_VARS.cmake+=	BUILDLINK_DIR WRKSRC PREFIX
 _IGN_VARS.cmake+=	BUILD_USES_CMAKE SETENV TOOL_DEPENDS
