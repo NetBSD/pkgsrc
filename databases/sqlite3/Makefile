@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2025/04/17 21:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/05/01 18:03:42 schmonz Exp $
 
 .include "Makefile.common"
 
@@ -62,9 +62,12 @@ TOOLS_SCRIPT.native-cc=	exec ${NATIVE_CC} "$$@"
 # Darwin < 9 (Mac OS X < 10.5 "Leopard") doesn't have gethostuuid(2)
 # and lacks the zone memory allocator
 .if ${MACHINE_PLATFORM:MDarwin-[0-8].*-*}
-CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0
-CFLAGS+=	-DSQLITE_WITHOUT_ZONEMALLOC
+CFLAGS+=			-DSQLITE_ENABLE_LOCKING_STYLE=0
+CFLAGS+=			-DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+# Sufficiently old ld(1) only has -dylib_*_version; newer ld(1) still has them
+BUILDLINK_TRANSFORM.Darwin+=	opt:-Wl,-compatibility_version:-Wl,-dylib_compatibility_version
+BUILDLINK_TRANSFORM.Darwin+=	opt:-Wl,-current_version:-Wl,-dylib_current_version
 
 ### Performance optimizations
 
