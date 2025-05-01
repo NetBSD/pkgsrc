@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.355 2025/04/24 14:16:11 wiz Exp $
+# $NetBSD: Makefile,v 1.356 2025/05/01 13:47:16 tnn Exp $
 
 DISTNAME=	gtk+-2.24.33
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -70,6 +70,11 @@ CONFIGURE_ARGS+=	GLIB_MKENUMS=${TOOLBASE:Q}/bin/glib-mkenums
 # graphics stack dependencies at build-time for this single program.
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 CONFIGURE_ARGS+=	GTK_UPDATE_ICON_CACHE=${TOOLBASE:Q}/bin/gtk2-update-icon-cache
+.endif
+
+# https://github.com/macports/macports-ports/pull/25847
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} >= 150000
+MACOSX_DEPLOYMENT_TARGET=	14.0
 .endif
 
 #SUBST_CLASSES+=	pthread
