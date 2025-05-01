@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2025/04/17 21:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2025/05/01 12:37:08 wiz Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
@@ -113,7 +113,7 @@ post-install:
 # wiz 20231103:
 # as of rspamd-3.7.1, the ninja generator has problems in some environments:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
