@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/12/06 22:33:56 vins Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2025/05/01 19:26:33 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	abnf-core-0.6.0
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
