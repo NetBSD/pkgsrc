@@ -1,0 +1,62 @@
+$NetBSD: patch-libxfce4windowingui_meson.build,v 1.1 2025/05/01 00:57:26 gutteridge Exp $
+
+Fix issue with job dependency ordering.
+https://gitlab.xfce.org/xfce/libxfce4windowing/-/issues/45
+https://gitlab.xfce.org/xfce/libxfce4windowing/-/merge_requests/77
+
+--- libxfce4windowingui/meson.build.orig	2025-01-20 10:52:51.000000000 +0000
++++ libxfce4windowingui/meson.build
+@@ -7,7 +7,7 @@ windowingui_headers = [
+   'xfw-window-list-menu.h',
+ ]
+ 
+-windowingui_sources = [
++windowingui_public_sources = [
+   'libxfce4windowingui-config.c',
+   'xfw-window-action-menu.c',
+   'xfw-window-list-menu.c',
+@@ -19,7 +19,7 @@ windowingui_config_data = configuration_
+   'LIBXFCE4WINDOWINGUI_VERSION_MICRO': version_parts[2],
+ })
+ 
+-windowingui_sources += configure_file(
++windowingui_public_sources += configure_file(
+   configuration: windowingui_config_data,
+   input: 'libxfce4windowingui-config.h.in',
+   output: 'libxfce4windowingui-config.h',
+@@ -27,15 +27,13 @@ windowingui_sources += configure_file(
+   install_dir: get_option('prefix') / get_option('includedir') / 'xfce4' / libxfce4windowing_pkgname / 'libxfce4windowingui',
+ )
+ 
+-windowingui_link_depends = []
+-windowingui_link_depends += custom_target(
+-  'libxfce4windowingui-visibility.h',
++windowingui_sources = windowingui_public_sources
++windowingui_sources += configure_file(
+   input: 'libxfce4windowingui.symbols',
+   output: 'libxfce4windowingui-visibility.h',
+   command: [xdt_gen_visibility, '--kind=header', '@INPUT@', '@OUTPUT@'],
+ )
+-windowingui_link_depends += custom_target(
+-  'libxfce4windowingui-visibility.c',
++windowingui_sources += configure_file(
+   input: 'libxfce4windowingui.symbols',
+   output: 'libxfce4windowingui-visibility.c',
+   command: [xdt_gen_visibility, '--kind=source', '@INPUT@', '@OUTPUT@'],
+@@ -61,7 +59,6 @@ libxfce4windowingui = library(
+   link_with: [
+     libxfce4windowing,
+   ],
+-  link_depends: windowingui_link_depends,
+   install: true,
+ )
+ 
+@@ -81,7 +78,7 @@ pkgconfig.generate(
+ )
+ 
+ if get_option('introspection')
+-  windowingui_gir_sources = windowingui_sources + windowingui_headers
++  windowingui_gir_sources = windowingui_public_sources + windowingui_headers
+ 
+   gnome.generate_gir(
+     libxfce4windowingui,
