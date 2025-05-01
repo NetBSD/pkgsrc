@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.290 2025/04/25 19:35:10 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.291 2025/05/01 15:40:41 tnn Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -376,6 +376,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=sign-conversion
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=incompatible-pointer-types
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-int
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=int-conversion
 .endif
 
 .if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[01234].*)
