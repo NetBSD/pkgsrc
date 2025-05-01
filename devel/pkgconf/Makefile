@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/03/09 06:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/05/01 19:34:59 schmonz Exp $
 
 DISTNAME=	pkgconf-2.4.3
 CATEGORIES=	devel
@@ -40,6 +40,12 @@ CONFIGURE_ARGS+=	--with-pkg-config-dir=${PKGCONFIG_PATHS:ts::Q}
 
 # configure script incorrectly sets only _FILE_OFFSET_BITS=64
 CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+
+# readlinkat() arrived in Mac OS X 10.10 Yosemite
+.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 101000
+LDFLAGS+=		-lMacportsLegacySupport
+.  include "../../devel/macports-legacy-support/buildlink3.mk"
+.endif
 
 post-install:
 	${LN} -s pkgconf ${DESTDIR}${PREFIX}/bin/pkg-config
