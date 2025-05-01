@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3026 2025/05/01 13:06:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3027 2025/05/01 13:07:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4000,3 +4000,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/got to 0.111 [vins 2025-05-01]
 	Updated net/yt-dlp to 2025.4.30 [ryoon 2025-05-01]
 	Updated devel/cargo-edit to 0.13.3 [pin 2025-05-01]
+	Updated devel/diffsitter to 0.9.0 [pin 2025-05-01]
