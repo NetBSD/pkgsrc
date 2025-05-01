@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.113 2025/04/28 18:19:26 tnn Exp $
+$NetBSD: distinfo,v 1.114 2025/05/01 16:50:44 tnn Exp $
 
 BLAKE2s (netpbm-11.02.09.tar.gz) = de06ee95562612ba6ddcf098e344451c8b0597e12b52d54fdbe06dcfcf9ee6c3
 SHA512 (netpbm-11.02.09.tar.gz) = c3378d895a6cbaf32f3c4d4bb5d90d876ea33997879bb4fb40baf93591cea113ea3c603bd8a9b0e0cd7a64c48607d3f780805a3d791dde5816a46039f79ae4f4
@@ -9,4 +9,5 @@ Size (netpbm-docs-r4908.tar.gz) = 529814 bytes
 SHA1 (patch-buildtools_libopt.c) = 0e361618eba1bf23c324d047461885471e8f3645
 SHA1 (patch-common.mk) = f37a95014c04ad50fab09da61608590a63a06386
 SHA1 (patch-lib_Makefile) = dc9d14d911773b282d1f0169f665baccb5247337
+SHA1 (patch-lib_util_nstring.c) = 9b18383f498d2c78a577553cfbbe97f18ce7ec1e
 SHA1 (patch-pm__config.in.h) = dfe51691507a2c7be2946013b1f1b6bdd9b39f49
