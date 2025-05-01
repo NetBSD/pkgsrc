@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/08/25 06:19:14 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/05/01 12:37:08 wiz Exp $
 
 DISTNAME=		fish-3.7.1
 CATEGORIES=		shells
@@ -52,7 +52,7 @@ post-extract:
 # wiz 20231109:
 # as of fish-3.6.2, the ninja generator has problems in some environments:
 # ninja: error: manifest 'build.ninja' still dirty after 100 tries, perhaps system time is not set
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../devel/cmake/build.mk"
