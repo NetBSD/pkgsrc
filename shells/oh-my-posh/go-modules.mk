@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.95 2025/04/26 10:24:53 pin Exp $
+# $NetBSD: go-modules.mk,v 1.96 2025/05/01 13:09:15 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -28,8 +28,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.4.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.4.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.5.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.5.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.2.3-0.20250311203215-f60798e515dc.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.2.3-0.20250311203215-f60798e515dc.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/harmonica/@v/v0.2.0.mod
@@ -51,8 +51,8 @@ GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/golib/@v/v0.0.0-20171103203638-1ea166775780.mod
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.mod
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.zip
-GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.0.mod
-GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/fogleman/gg/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/fogleman/gg/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.2.6.mod
