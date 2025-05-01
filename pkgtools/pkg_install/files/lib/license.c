@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.66 2024/10/25 07:04:09 ryoon Exp $	*/
+/*	$NetBSD: license.c,v 1.67 2025/05/01 12:56:44 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -95,6 +95,7 @@ const char *default_acceptable_licenses =
     "postgresql-license "
     "public-domain "
     "python-software-foundation "
+    "qhull "
     "qpl-v1.0 "
     "sgi-free-software-b-v2.0 "
     "sissl-1.1 "
