@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/10/13 15:57:59 thorpej Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/01 00:55:34 thorpej Exp $
 
-DISTNAME=	JTTB-0.5.1
+DISTNAME=	JTTB-0.6
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thorpej/}
 GITHUB_PROJECT=	JTTB
