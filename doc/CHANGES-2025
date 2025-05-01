@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3021 2025/05/01 00:56:37 thorpej Exp $
+$NetBSD: CHANGES-2025,v 1.3022 2025/05/01 07:35:21 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3995,3 +3995,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ca-certificates to 20250419 [kim 2025-04-30]
 	Added emulators/xace version 0.5 [hauke 2025-04-30]
 	Updated lang/jttb to 0.6 [thorpej 2025-04-30]
+	Updated sysutils/xfile to 20250430 [vins 2025-05-01]
