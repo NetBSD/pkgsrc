@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/11/14 14:13:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/01 16:12:13 schmonz Exp $
 bin/tipidee-config
 bin/tipideed
 include/tipidee/conf.h
@@ -17,6 +17,8 @@ libexec/ls.cgi
 libexec/tipidee-config-preprocess
 man/man1/ls.cgi.1
 man/man5/tipidee.conf.5
+man/man7/tipidee-quickstart.7
 man/man8/tipidee-config-preprocess.8
 man/man8/tipidee-config.8
 man/man8/tipideed.8
+share/examples/tipidee/tipidee.conf
