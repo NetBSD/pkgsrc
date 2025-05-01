@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.22 2025/01/27 08:49:08 adam Exp $
+# $NetBSD: build.mk,v 1.23 2025/05/01 11:52:26 gdt Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -7,6 +7,13 @@
 # a variable (BUILD_USES_CMAKE) that can alter bl3 behavior.  The
 # variable CMAKE_GENERATOR must be defined before inclusion (as it is
 # a user-settable variable that should happen automatically).
+#
+# Note that CMAKE_GENERATOR is a user-settable variable, but there is
+# no package-settable CMAKE_GENERATORS_ACCEPTED.  Therefore, when a
+# package fails to build with one of the choices of generators,
+# typically ninja, packages will, as a workaround, set CMAKE_GENERATOR
+# to the one that works, typically make.  (The typical cause is ninja
+# failing with BUILD_DIRS set to a subdirectory.
 #
 # User-settable variables:
 #
