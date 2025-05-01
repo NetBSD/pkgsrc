@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.161 2025/04/17 22:03:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.162 2025/05/01 12:37:08 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -35,7 +35,7 @@ BUILDLINK_TRANSFORM+=   rm:-fno-check-new
 
 # poppler's build infrastructure and our split packages
 # do not work with ninja
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

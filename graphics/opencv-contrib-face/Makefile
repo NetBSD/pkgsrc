@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2025/04/24 14:14:33 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/05/01 12:37:07 wiz Exp $
 
 # can't use ninja because we only want to install parts of it
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 INSTALL_DIRS=		modules/face modules/plot modules/tracking
 
 PKGREVISION= 2

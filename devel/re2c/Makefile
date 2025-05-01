@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/04/23 15:05:44 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/05/01 12:37:07 wiz Exp $
 
 DISTNAME=	re2c-4.2
 CATEGORIES=	devel
@@ -27,7 +27,7 @@ SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page path.
 
 # can't use ninja, since ninja tool-depends on this
-CMAKE_GENERATOR=	make
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/tool.mk"
