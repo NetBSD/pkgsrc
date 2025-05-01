@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.16 2025/03/26 14:17:32 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.17 2025/05/01 10:12:43 jperkin Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -35,6 +35,7 @@ BOOT.nb7-sparc64=	bootstrap-jdk-1.7.76-netbsd-7-sparc64-20150301.tar.xz
 BOOT.nb7-earmv6hf=	bootstrap-jdk-1.7.76-netbsd-7-earmv6hf-20150306.tar.xz
 BOOT.nb8-aarch64=	bootstrap-jdk-1.8.181-netbsd-8-aarch64-20180917.tar.xz
 BOOT.fbsd10-amd64=	bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz
+BOOT.sunos-amd64=	openjdk8-1.8.432-x86_64-unknown-illumos.tar.gz
 
 #XXX should be regenerated
 BOOT.dfly3.6-amd64=	bootstrap-jdk7u60-bin-dragonfly-3.6-amd64-20140719.tar.bz2
@@ -78,6 +79,12 @@ EXTRACT_ONLY+=		${BOOT.dfly3.8-amd64}
 .if !empty(MACHINE_PLATFORM:MFreeBSD-10.*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.fbsd10-amd64}
 EXTRACT_ONLY+=		${BOOT.fbsd10-amd64}
+.endif
+
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo)
+DISTFILES+=			${BOOT.sunos-amd64}
+SITES.${BOOT.sunos-amd64}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+EXTRACT_ONLY+=			${BOOT.sunos-amd64}
 .endif
 
 .if ${OPSYS} == "Linux"
