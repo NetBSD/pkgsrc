@@ -1,0 +1,23 @@
+$NetBSD: patch-src_xdgsvc.mf,v 1.1 2025/05/01 07:33:20 vins Exp $
+
+Add DBus support.
+
+--- src/xdgsvc.mf.orig	2025-05-01 05:08:16.708736625 +0000
++++ src/xdgsvc.mf
+@@ -0,0 +1,16 @@
++# XDG shim common target 
++# Provides DBus support to XFile
++
++all:: xfile-xdgsvc
++
++# Build
++ xfile-xdg.o: xfile-xdg.c
++	$(CC) $(CFLAGS) $(DBUS_INCDIRS) -c $< -o $@
++ xfile-xdgsvc: xfile-xdg.o
++	$(CC) $(LDFLAGS) -o $@ xfile-xdg.o $(DBUS_LIBS)
++
++# Install
++common_install:: xfile-xdgsvc
++	$(BSD_INSTALL_PROGRAM) xfile-xdgsvc $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/dbus-1/services
++	$(BSD_INSTALL_DATA) xfile.service $(DESTDIR)$(PREFIX)/share/dbus-1/services
