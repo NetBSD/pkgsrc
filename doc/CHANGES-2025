@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3023 2025/05/01 07:43:01 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3024 2025/05/01 07:47:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3997,3 +3997,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/jttb to 0.6 [thorpej 2025-04-30]
 	Updated sysutils/xfile to 20250430 [vins 2025-05-01]
 	Updated sysutils/fastfetch to 2.42.0 [vins 2025-05-01]
+	Updated devel/got to 0.111 [vins 2025-05-01]
