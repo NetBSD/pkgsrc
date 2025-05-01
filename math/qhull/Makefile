@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/05/01 12:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/01 12:40:02 wiz Exp $
 
 DISTNAME=	qhull-2020-src-${LIBVERSION}
 PKGNAME=	qhull-2020.2
@@ -13,6 +13,8 @@ COMMENT=	Computing the convex hull
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+# libqhull is deprecated
+BUILD_TARGET=	all libqhull
 USE_LANGUAGES=	c c++
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
@@ -30,13 +32,4 @@ post-extract:
 	rm -f ${WRKSRC}/eg/q_benchmark ${WRKSRC}/eg/qhull-zip.sh
 
 .include "../../devel/cmake/build.mk"
-
-# libqhull is deprecated
-post-build:
-.if ${_CMAKE_GENERATOR} == "make"
-	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && make libqhull
-.else
-	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ninja libqhull
-.endif
-
 .include "../../mk/bsd.pkg.mk"
