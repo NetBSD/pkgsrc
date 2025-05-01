@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.122 2025/04/29 12:51:48 tnn Exp $
+# $NetBSD: Makefile,v 1.123 2025/05/01 11:32:44 gdt Exp $
 
 BRANCHNAME=	1.21
 DISTNAME=	krb5-${BRANCHNAME}.3
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${BRANCHNAME}/
@@ -34,7 +34,15 @@ BUILD_TARGET=	generate-files-mac all
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
+# Upstream does not document the language variant.  It appears to be
+# c99, and configure checks for that.  The code uses strdup(3):
+# https://pubs.opengroup.org/onlinepubs/9799919799/functions/strdup.html
+# and that's hidden by default on Linux, with gnu99 making it visible.
+USE_CC_FEATURES+=	gnu99
+# Further, the build fails in c23 mode, 
+FORCE_C_STD=		gnu99
+
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf bison gzip m4 msgfmt perl
@@ -81,11 +89,6 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 			lib/pkgconfig
 
 .include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-15)
-# mit-krb5 is not C23 compliant & needs too many patches to make it compile.
-CFLAGS+=		-std=gnu17 # reduced from gnu23
-.endif
 
 .include "options.mk"
 
