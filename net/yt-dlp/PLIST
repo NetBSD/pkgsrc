@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2025/04/01 05:24:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/05/01 12:19:26 ryoon Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1257,6 +1257,9 @@ ${PYSITELIB}/yt_dlp/extractor/ivi.pyo
 ${PYSITELIB}/yt_dlp/extractor/ivideon.py
 ${PYSITELIB}/yt_dlp/extractor/ivideon.pyc
 ${PYSITELIB}/yt_dlp/extractor/ivideon.pyo
+${PYSITELIB}/yt_dlp/extractor/ivoox.py
+${PYSITELIB}/yt_dlp/extractor/ivoox.pyc
+${PYSITELIB}/yt_dlp/extractor/ivoox.pyo
 ${PYSITELIB}/yt_dlp/extractor/iwara.py
 ${PYSITELIB}/yt_dlp/extractor/iwara.pyc
 ${PYSITELIB}/yt_dlp/extractor/iwara.pyo
@@ -1932,6 +1935,9 @@ ${PYSITELIB}/yt_dlp/extractor/parler.pyo
 ${PYSITELIB}/yt_dlp/extractor/parlview.py
 ${PYSITELIB}/yt_dlp/extractor/parlview.pyc
 ${PYSITELIB}/yt_dlp/extractor/parlview.pyo
+${PYSITELIB}/yt_dlp/extractor/parti.py
+${PYSITELIB}/yt_dlp/extractor/parti.pyc
+${PYSITELIB}/yt_dlp/extractor/parti.pyo
 ${PYSITELIB}/yt_dlp/extractor/patreon.py
 ${PYSITELIB}/yt_dlp/extractor/patreon.pyc
 ${PYSITELIB}/yt_dlp/extractor/patreon.pyo
@@ -2211,6 +2217,9 @@ ${PYSITELIB}/yt_dlp/extractor/roosterteeth.pyo
 ${PYSITELIB}/yt_dlp/extractor/rottentomatoes.py
 ${PYSITELIB}/yt_dlp/extractor/rottentomatoes.pyc
 ${PYSITELIB}/yt_dlp/extractor/rottentomatoes.pyo
+${PYSITELIB}/yt_dlp/extractor/roya.py
+${PYSITELIB}/yt_dlp/extractor/roya.pyc
+${PYSITELIB}/yt_dlp/extractor/roya.pyo
 ${PYSITELIB}/yt_dlp/extractor/rozhlas.py
 ${PYSITELIB}/yt_dlp/extractor/rozhlas.pyc
 ${PYSITELIB}/yt_dlp/extractor/rozhlas.pyo
