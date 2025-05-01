@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3030 2025/05/01 13:10:35 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3031 2025/05/01 14:54:48 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4004,3 +4004,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.4.12 [pin 2025-05-01]
 	Updated shells/oh-my-posh to 25.20.0 [pin 2025-05-01]
 	Updated shells/starship to 1.23.0 [pin 2025-05-01]
+	Updated security/wolfssl to 5.8.0 [fox 2025-05-01]
