@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/05/01 12:40:02 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/01 12:57:01 wiz Exp $
 
 DISTNAME=	qhull-2020-src-${LIBVERSION}
 PKGNAME=	qhull-2020.2
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.qhull.org/
 COMMENT=	Computing the convex hull
+LICENSE=	qhull
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
