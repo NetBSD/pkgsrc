@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/24 14:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/05/01 18:50:47 tnn Exp $
 
 DISTNAME=	gimp-3.0.2
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
@@ -44,6 +44,8 @@ MESON_ARGS+=	-Djavascript=disabled
 CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/extensions/org.gimp.extension.goat-exercises/*
 CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/test-sphere-v3/test-sphere-v3.scm
 CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/ts-helloworld/ts-helloworld.scm
+CHECK_PORTABILITY_SKIP+=	build/linux/appimage/*
+CHECK_PORTABILITY_SKIP+=	build/windows/*
 
 REPLACE_PYTHON+=	plug-ins/python/*.py
 REPLACE_PYTHON+=	plug-ins/python/*/*.py
