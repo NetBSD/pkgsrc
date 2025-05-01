@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.122 2024/10/25 07:04:52 ryoon Exp $
+# $NetBSD: license.mk,v 1.123 2025/05/01 12:56:45 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -170,6 +170,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	postgresql-license \
 	public-domain \
 	python-software-foundation \
+	qhull \
 	qpl-v1.0 \
 	sgi-free-software-b-v2.0 \
 	sissl-1.1 \
