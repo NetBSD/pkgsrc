@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/12/13 13:45:25 mef Exp $
+$NetBSD: distinfo,v 1.22 2025/05/02 01:31:19 wen Exp $
 
-BLAKE2s (CPAN-Reporter-1.2019.tar.gz) = a08a246b6919010c7731de98d9e35e3008b23b3e9d1ccaf75ee49bb96dc07992
-SHA512 (CPAN-Reporter-1.2019.tar.gz) = 9f1b64caa95fe7a7d003edf1bc7a36c73b3db192ee93abbc4adaa461896bc91906f170b0e150d1338d8bad15a798ef7cc73bccdc408e46c915f7b0692fcff03d
-Size (CPAN-Reporter-1.2019.tar.gz) = 116985 bytes
+BLAKE2s (CPAN-Reporter-1.2020.tar.gz) = 498eb0ef9f600091d775cc28952c09271c8f15eae3e0ecf983a0f23f8c8c21b6
+SHA512 (CPAN-Reporter-1.2020.tar.gz) = 62415be5f7008198ca3228531d2a18cd5da2b618807c1e46dfadce7c04bd9981c5675d2053a876abdc421334021335bb256d842d155e0c84a6042a06bb5be701
+Size (CPAN-Reporter-1.2020.tar.gz) = 117253 bytes
