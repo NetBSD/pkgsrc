@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/08/16 09:58:57 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/02 07:04:22 adam Exp $
 
 DISTNAME=	bulk-test-python27-20240816
 CATEGORIES=	meta-pkgs
@@ -21,7 +21,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # We intentionally exclude "someone might have a private python 2.7 codebase that
 # wants to use this as a dependency".
 
-
 DEPENDS+=	python27-[0-9]*:../../lang/python27
 
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
@@ -31,7 +30,6 @@ DEPENDS+=	mailman<3:../../mail/mailman
 DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
 DEPENDS+=	palemoon-[0-9]*:../../www/palemoon
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
-DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
 # does not support Python 3 yet
 DEPENDS+=	py27-moin-[0-9]*:../../www/py-moin
