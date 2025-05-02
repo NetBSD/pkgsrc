@@ -1,4 +1,4 @@
-$NetBSD: patch-pyproject.toml,v 1.1 2025/04/22 11:28:13 adam Exp $
+$NetBSD: patch-pyproject.toml,v 1.2 2025/05/02 07:11:51 adam Exp $
 
 Relax pydantic-core version requirement.
 
@@ -8,8 +8,8 @@ Relax pydantic-core version requirement.
      'typing-extensions>=4.12.2',
      'annotated-types>=0.6.0',
      # Keep this in sync with the version in the `check_pydantic_core_version()` function:
--    'pydantic-core==2.33.1',
-+    'pydantic-core>=2.33.1',
+-    'pydantic-core==2.33.2',
++    'pydantic-core>=2.33.2',
      'typing-inspection>=0.4.0',
  ]
  dynamic = ['version', 'readme']
