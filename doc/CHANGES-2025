@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3039 2025/05/02 00:20:32 wen Exp $
+$NetBSD: CHANGES-2025,v 1.3040 2025/05/02 01:19:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4011,3 +4011,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Config-General to 2.67 [wen 2025-05-02]
 	Updated devel/p5-Convert-Binary-C to 0.85 [wen 2025-05-02]
 	Updated devel/p5-CPAN-Changes to 0.500005 [wen 2025-05-02]
+	Updated devel/p5-CPAN-Perl-Releases to 5.20250422 [wen 2025-05-02]
