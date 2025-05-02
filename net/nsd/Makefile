@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2025/03/13 09:44:37 hauke Exp $
+# $NetBSD: Makefile,v 1.132 2025/05/02 15:11:33 ryoon Exp $
 
-DISTNAME=	nsd-4.11.1
-PKGREVISION=	1
+DISTNAME=	nsd-4.12.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -21,6 +20,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 
 .if ${OPSYS} == "NetBSD"
 # Some _NETBSD_SOURCE definitions are required to build.
