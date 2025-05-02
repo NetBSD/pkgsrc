@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/01/22 18:16:58 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/02 11:18:43 jperkin Exp $
 
 DISTNAME=	lpeg-1.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/lpeg/${LUA_PKGPREFIX}-lpeg/}
 CATEGORIES=	devel lua
 MASTER_SITES=	https://www.inf.puc-rio.br/~roberto/lpeg/
@@ -32,11 +32,7 @@ INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR} ${LUA_DOCDIR}
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-.if ${OPSYS} == "Darwin"
-	${INSTALL_LIB} ${WRKSRC}/lpeg.dylib \
-		${DESTDIR}${PREFIX}/${LUA_CDIR}
-.endif
-	${INSTALL_LIB} ${WRKSRC}/lpeg.so \
+	${INSTALL_LIB} ${WRKSRC}/lpeg.${SHLIB_EXT} \
 		${DESTDIR}${PREFIX}/${LUA_CDIR}
 	${INSTALL_DATA} ${WRKSRC}/re.lua \
 		${DESTDIR}${PREFIX}/${LUA_LDIR}
