@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.22 2025/04/14 18:12:49 nia Exp $
+$NetBSD: distinfo,v 1.23 2025/05/02 09:03:18 nia Exp $
 
+BLAKE2s (palemoon-33.7.0/icudt63b.dat.gz) = 609cc504b54df324a891aa9531ab069b3699591bf49b989e792479df33262a92
+SHA512 (palemoon-33.7.0/icudt63b.dat.gz) = 514b8bfe28fb54e1e26b9140d4b3065504a0b0284fded121f26c4e0f13697154a54da4a7c85a0fa0b9dae2e5b452aff4df138228c28ed80969ec0ac33b0ad0b2
+Size (palemoon-33.7.0/icudt63b.dat.gz) = 11145931 bytes
 BLAKE2s (palemoon-33.7.0/palemoon.tar.gz) = f9bcf5b0653e83dcda5c9ddadc8fdcaa08781ea1fa74f35f349db5deabf22651
 SHA512 (palemoon-33.7.0/palemoon.tar.gz) = 00e5315b8e4ac4bb437e99724b5b275419ebd3b72bf6ec1e8f0e2539014f36f5adad9689945749ed12240cda2ac3b43147fcc5b7b04a2cd262172ea07820122e
 Size (palemoon-33.7.0/palemoon.tar.gz) = 5607495 bytes
