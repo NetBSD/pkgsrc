@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.459 2025/04/21 15:57:33 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.460 2025/05/02 11:05:59 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -555,6 +555,12 @@ PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 
 # Set default SHLIB_TYPE to the ${OPSYS}-specific shared library type.
 SHLIB_TYPE?=		${_OPSYS_SHLIB_TYPE}
+
+# Set SHLIB_EXT to the most common shared library extension for this
+# OPSYS, though sometimes ".so" will be used regardless.
+#
+SHLIB_EXT.Darwin=	dylib
+SHLIB_EXT=		${SHLIB_EXT.${OPSYS}:Uso}
 
 PKGDIRMODE?=		755
 
