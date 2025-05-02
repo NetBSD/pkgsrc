@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/04/09 16:35:54 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2025/05/02 16:10:11 gdt Exp $
 #
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
-PKGREVISION=		1
+PKGREVISION=		2
 DISTNAME=		asterisk-x9rita-soundfiles-ger-v4
 CATEGORIES=		comms
 MASTER_SITES=		http://www.x9media.com/downloads/
@@ -12,6 +12,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 # HOMEPAGE broken.  Followon might be at https://www.asterisksounds.org/en
 #HOMEPAGE=		https://www.x9media.com/
 COMMENT=		German voice prompt files for asterisk
+LICENSE=		generic-nonlicense
+
+RESTRICTED=		No evidence of a license to distribute.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=		tar
 
