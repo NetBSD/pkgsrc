@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/04/29 11:31:36 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/05/02 13:02:46 jperkin Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -181,7 +181,9 @@ CONFIGURE_ARGS+=	--disable-ns-self-contained
 INSTALLATION_DIRS+=	${APPLICATIONS_DIR}
 USE_TOOLS+=		pax
 
-post-install:
+.PHONY: install-emacs-app
+post-install: install-emacs-app
+install-emacs-app:
 	cd ${WRKSRC}/nextstep && \
 		pax -rw -pp -pm Emacs.app ${DESTDIR}${PREFIX}/${APPLICATIONS_DIR}
 
