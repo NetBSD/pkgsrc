@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3048 2025/05/02 11:05:16 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3049 2025/05/02 11:18:58 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/featherpad to 1.6.2 [pin 2025-05-02]
 	Updated devel/serie to 0.4.6 [pin 2025-05-02]
 	Updated audio/spotify-qt to 4.0.0 [pin 2025-05-02]
+	Updated devel/lua-lpeg to 1.1.0nb2 [jperkin 2025-05-02]
