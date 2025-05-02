@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3035 2025/05/01 19:40:31 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3036 2025/05/02 00:11:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/wolfssl to 5.8.0 [fox 2025-05-01]
 	Updated www/tipidee to 0.0.5.1nb1 [schmonz 2025-05-01]
 	Updated mail/meli to 0.8.11 [vins 2025-05-01]
+	Updated devel/p5-Class-MethodMaker to 2.25 [wen 2025-05-02]
