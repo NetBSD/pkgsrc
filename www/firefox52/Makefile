@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/04/24 14:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/05/02 09:03:49 nia Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		52.9
@@ -6,7 +6,7 @@ MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox${MOZ_BRANCH:C/\..*$//}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	75
+PKGREVISION=	76
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -45,6 +45,13 @@ SUBST_MESSAGE.dfly_malloc_h=	Dont include malloc.h on dragonflybsd
 SUBST_SED.dfly_malloc_h=	-e 's,HAVE_MALLOC_H,HAVE_MALLOC_H \&\& !defined(__DragonFly__),g'
 SUBST_FILES.dfly_malloc_h=	media/libav/libavutil/mem.c
 SUBST_FILES.dfly_malloc_h+=	media/ffvpx/libavutil/mem.c
+
+DISTFILES?=		${DEFAULT_DISTFILES}
+
+# The default bundled copy of ICU does not contain big-endian
+# data files, so this one is generated manually.
+DISTFILES+=		icudt58b.dat.gz
+SITES.icudt58b.dat.gz=	${MASTER_SITE_LOCAL}
 
 .if ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 gets "Bus error (core dumped)"
@@ -92,6 +99,8 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${MOZILLA_ICON}					\
 	  ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
+	${INSTALL_DATA} ${WRKDIR}/icudt58b.dat \
+	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}/icudt58b.dat
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
