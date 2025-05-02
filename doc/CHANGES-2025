@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3051 2025/05/02 15:11:42 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3052 2025/05/02 16:57:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/lua-lpeg to 1.1.0nb2 [jperkin 2025-05-02]
 	Updated shells/oh-my-posh to 25.20.1 [pin 2025-05-02]
 	Updated net/nsd to 4.12.0 [ryoon 2025-05-02]
+	Updated www/ikiwiki to 3.20250501 [schmonz 2025-05-02]
