@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:18 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/05/02 00:17:00 wen Exp $
 
-BLAKE2s (Convert-Binary-C-0.84.tar.gz) = d4379edccc37ac4aad5ca8bd362174e73c04f537e922d5d5ae2c66e284bb3cfb
-SHA512 (Convert-Binary-C-0.84.tar.gz) = 1c5160b39e5b64dc61c5e6bfeb163728352721ebfdc8c5096557e19293136e0aea613bf166e9b539a3980c39bc98466c99691be7d4f7325dac0c05fdd324440d
-Size (Convert-Binary-C-0.84.tar.gz) = 1348549 bytes
+BLAKE2s (Convert-Binary-C-0.85.tar.gz) = 1be79b3464ad5db1742b7792cd3782fd7de862cbcbc687909c51f51c5ca2c434
+SHA512 (Convert-Binary-C-0.85.tar.gz) = 892287e313a5d13656c6ffed2eb5dbbabe8db2f3628404d05223130fb2396d8d6cd4365d134c37f17793b9168a926f3df1b00ca29fa5e56d5da343c18250633e
+Size (Convert-Binary-C-0.85.tar.gz) = 1365702 bytes
