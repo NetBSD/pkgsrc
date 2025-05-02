@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/11/16 12:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/02 00:17:00 wen Exp $
 
-DISTNAME=	Convert-Binary-C-0.84
+DISTNAME=	Convert-Binary-C-0.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
