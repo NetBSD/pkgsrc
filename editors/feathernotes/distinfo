@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/03/05 20:48:49 pin Exp $
+$NetBSD: distinfo,v 1.15 2025/05/02 11:01:35 pin Exp $
 
-BLAKE2s (FeatherNotes-V1.3.1.tar.gz) = 573b966e03301838390bebebb8385a84854f10154c12776293399f3f825882ab
-SHA512 (FeatherNotes-V1.3.1.tar.gz) = d632306f6700b67d4985eebb3d54ed2f813a70ebf9dfaba39dfc8635338ac5fcc1733c77b07cc2262259559dea8b4a510c35431675f67c8155a57cb78aca4159
-Size (FeatherNotes-V1.3.1.tar.gz) = 954363 bytes
+BLAKE2s (FeatherNotes-V1.3.2.tar.gz) = d60efec2830d259a5f77a23df04ee6aff51b70f1756b28457e847466cd8edad2
+SHA512 (FeatherNotes-V1.3.2.tar.gz) = d8541a4a8c3b5c7fb2c2b516c1722f545cc4f521b9c1981e64e5bf194727286c8b6f9a34087fc4339f06902cbf12a8a2a9a9e8e07984164cbbcd2b6573a22514
+Size (FeatherNotes-V1.3.2.tar.gz) = 955252 bytes
