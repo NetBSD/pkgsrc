@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3047 2025/05/02 11:03:55 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3048 2025/05/02 11:05:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4021,3 +4021,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/feathernotes to 1.3.2 [pin 2025-05-02]
 	Updated editors/featherpad to 1.6.2 [pin 2025-05-02]
 	Updated devel/serie to 0.4.6 [pin 2025-05-02]
+	Updated audio/spotify-qt to 4.0.0 [pin 2025-05-02]
