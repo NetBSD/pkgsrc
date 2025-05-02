@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.239 2025/04/24 14:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.240 2025/05/02 17:05:07 gdt Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions, or to only track one LTR branch.
 DISTNAME=	qgis-3.34.15
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -62,6 +62,10 @@ SUBST_FILES.pyqt=	cmake/PyQtMacros.cmake cmake/FindPyQt5.cmake
 SUBST_SED.pyqt+=	-e '/^ *SET/s,pyuic5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/^ *SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
+
+# Optimize for understandability when the build output is examined,
+# because it is only examined when there are failures.
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
 CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
