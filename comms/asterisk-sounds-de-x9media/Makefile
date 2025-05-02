@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.12 2025/05/02 16:10:11 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/02 17:01:16 gdt Exp $
 #
+
+# MASTER_SITES and HOMEPAGE have non-working nameservers.
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
 PKGREVISION=		2
 DISTNAME=		asterisk-x9rita-soundfiles-ger-v4
 CATEGORIES=		comms
-MASTER_SITES=		http://www.x9media.com/downloads/
+#MASTER_SITES=		http://www.x9media.com/downloads/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-# HOMEPAGE broken.  Followon might be at https://www.asterisksounds.org/en
 #HOMEPAGE=		https://www.x9media.com/
 COMMENT=		German voice prompt files for asterisk
 LICENSE=		generic-nonlicense
