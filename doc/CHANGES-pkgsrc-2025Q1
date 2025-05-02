@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.8 2025/04/18 07:17:42 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.9 2025/05/02 12:47:34 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -35,3 +35,6 @@ lang/tcl: build fix
 Pullup ticket #6960 - requested by taca
 mail/squirrelmail: security fix
 
+Pullup ticket #6961 - requested by bsiegert
+www/firefox128: Security fix
+www/firefox128-l10n: Security fix
