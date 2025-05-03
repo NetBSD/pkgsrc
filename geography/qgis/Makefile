@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2025/05/02 17:05:07 gdt Exp $
+# $NetBSD: Makefile,v 1.241 2025/05/03 11:51:34 gdt Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -95,10 +95,6 @@ DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_CONFIGURE_ARGS+=	-DQWT_DIR=${QWT_DIR}
-# uncomment to tell cmake not to hide build commands (i.e., to show them)
-#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
-# \todo Hoist this to become a general facility where a variable controls
-# actually showing build output.
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
