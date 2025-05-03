@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2025/04/27 00:23:07 gdt Exp $
+$NetBSD: distinfo,v 1.27 2025/05/03 13:16:21 gdt Exp $
 
 BLAKE2s (proj-9.6.0.tar.gz) = 525865aa36ebcf758875ec37b27f5b6a053eef4f0c189eed2e9ae67d0993efa4
 SHA512 (proj-9.6.0.tar.gz) = c152fc0400f073fe6c980aca00905421f65e8b515adea173c56103279c1af232968781479010e1609ad826f087a5448f7a7b37de8a7a2c7ea671b04c63578988
 Size (proj-9.6.0.tar.gz) = 5830688 bytes
+SHA1 (patch-CMakeLists.txt) = 98c2653487aba3e86bebbba9c5fef7348c4eb543
 SHA1 (patch-src_projections_robin.cpp) = 42e91b7ae6e5ce3ba83d7f135c64135ef97df76d
