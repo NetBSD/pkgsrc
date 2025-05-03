@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/04 12:10:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/03 10:43:39 leot Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -24,11 +24,13 @@ ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.py
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyc
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyo
 ${PYSITELIB}/mitmproxy_rs/certs.pyi
+${PYSITELIB}/mitmproxy_rs/contentviews.pyi
 ${PYSITELIB}/mitmproxy_rs/dns.pyi
 ${PYSITELIB}/mitmproxy_rs/local.pyi
 ${PYSITELIB}/mitmproxy_rs/mitmproxy_rs.abi3.so
 ${PYSITELIB}/mitmproxy_rs/process_info.pyi
 ${PYSITELIB}/mitmproxy_rs/py.typed
+${PYSITELIB}/mitmproxy_rs/syntax_highlight.pyi
 ${PYSITELIB}/mitmproxy_rs/tun.pyi
 ${PYSITELIB}/mitmproxy_rs/udp.pyi
 ${PYSITELIB}/mitmproxy_rs/wireguard.pyi
