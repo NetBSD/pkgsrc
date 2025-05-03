@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/04/04 20:26:32 pin Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/03 12:34:57 pin Exp $
 
-DISTNAME=	xh-0.24.0
+DISTNAME=	xh-0.24.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ducaale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
