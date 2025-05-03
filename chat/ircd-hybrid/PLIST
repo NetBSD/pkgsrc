@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/01/23 11:22:24 fox Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/05/03 08:21:46 fox Exp $
 bin/ircd
 bin/ircd-hybrid-mkpasswd
 lib/ircd-hybrid/modules/cap_account_notify.la
@@ -124,7 +124,6 @@ man/man8/ircd.8
 share/doc/ircd-hybrid/INSTALL.md
 share/doc/ircd-hybrid/README.ircd-hybrid-mkpasswd
 share/doc/ircd-hybrid/README.md
-share/doc/ircd-hybrid/doc/CIDR.txt
 share/doc/ircd-hybrid/doc/index.txt
 share/doc/ircd-hybrid/doc/kline.txt
 share/doc/ircd-hybrid/doc/modeg.txt
