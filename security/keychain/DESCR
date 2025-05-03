@@ -1,6 +1,7 @@
-Keychain is a shell script which acts as user-friendly front-end to
-ssh-agent(1), allowing you to have one long-running ssh-agent process per
-system rather than per login session.
-
-Please study the documentation on the keychain website carefully since
-incorrect usage of this script may have certain security implications.
+Keychain helps you to manage SSH and GPG keys in a convenient and secure
+manner. It acts as a frontend to ssh-agent and ssh-add, but allows you
+to easily have one long running ssh-agent process per system, rather
+than the norm of one ssh-agent per login session. Keychain also makes
+it easy for remote cron jobs to securely "hook in" to a long-running
+ssh-agent process, allowing your scripts to take advantage of key-based
+logins.
