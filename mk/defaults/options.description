@@ -826,6 +826,7 @@ scim			Enable Smart Common Input Method support.
 scsi-crypto		support LTO4+ hardware cryto key management
 sdl			Use SDL as the audio/display library.
 sdl2			Use SDL2 as the audio/display library.
+sdl3			Use SDL3 as the audio/display library.
 seamonkey		Use seamonkey as gecko rendering engine.
 secret			Enable libsecret support.
 sendmail-ffr-badrcptshutdown	Enable FFR_BAD_RCPTSHUTDOWN option.  FFR = For Future Release.
