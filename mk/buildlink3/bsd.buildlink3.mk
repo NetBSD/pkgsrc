@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.265 2024/10/11 12:18:07 jperkin Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.266 2025/05/03 16:02:45 tnn Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -424,8 +424,10 @@ USE_BUILTIN.${_pkg_}?=		no
 _BLNK_PKG_DBDIR.${_pkg_}?=	_BLNK_PKG_DBDIR.${_pkg_}_not_found
 _BLNK_PKG_INFO.${_pkg_}?=	${TRUE}
 BUILDLINK_PKGNAME.${_pkg_}?=	${_pkg_}
+.    if defined(OSX_SDK_PATH)
+BUILDLINK_PREFIX.${_pkg_}?=	${OSX_SDK_PATH}/usr
 # Usual systems has builtin packages in /usr
-.    if exists(${TOOLS_CROSS_DESTDIR}/usr)
+.    elif exists(${TOOLS_CROSS_DESTDIR}/usr)
 BUILDLINK_PREFIX.${_pkg_}?=	/usr
 # Haiku OS has posix packages in /boot/sytem/develop (or /boot/common)
 .    elif exists(${TOOLS_CROSS_DESTDIR}/boot/system/develop)
