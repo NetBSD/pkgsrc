@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/03/11 13:24:57 nia Exp $
+# $NetBSD: options.mk,v 1.5 2025/05/03 16:55:04 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.htop
 
