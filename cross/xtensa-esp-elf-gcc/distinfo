@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/07/22 20:01:50 tnn Exp $
+$NetBSD: distinfo,v 1.2 2025/05/03 16:19:25 tnn Exp $
 
 BLAKE2s (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 7cd662eceee9bd5ae1216fde1ddf3a7ea67a2607b727075ee65d9fe1429478a6
 SHA512 (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 2d8235e9743d95804278d964887f48f1935e932f48b2a6467ee3e81028b2909c05ad825ee14bffeadbbfaab2d54badea78d986192000a1126b2ccb1d75bd9649
@@ -14,3 +14,4 @@ SHA1 (patch-gcc_system.h) = 9ef5369990b02063aa7d8bd6ad977259ba80a105
 SHA1 (patch-libgcc_libgcov.h) = ed9fd122c5b9786c8a3476b13892a1c0c803509d
 SHA1 (patch-newlib_libc_posix_collate.c) = 105aa07ba8de71eb1b3c4459303ceba26ed9dadc
 SHA1 (patch-newlib_libc_posix_regcomp.c) = 8f2e669b338f638c041992fc051d119f0ae21445
+SHA1 (patch-zlib_zutil.c) = ac4f09acca50d86637da7ff95f337ea78a5999ea
