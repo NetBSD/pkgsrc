@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/04/27 11:49:17 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2025/05/03 13:16:21 gdt Exp $
 
 VERSION_BASE=	9.6.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
@@ -7,6 +7,7 @@ VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
+PKGREVISION=	1
 #PKGREVISION=	0
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
@@ -31,6 +32,9 @@ USE_TOOLS+=		gmake pkg-config
 TOOL_DEPENDS+=		sqlite3>=3.10.0:../../databases/sqlite3
 
 CMAKE_CONFIGURE_ARGS+=	-DRUN_NETWORK_DEPENDENT_TESTS=OFF
+# Probably default, but hang back until everyone else deals with the
+# difficulties.
+CMAKE_CONFIGURE_ARGS+=	-DEMBED_RESOURCE_FILES=OFF
 
 .include "../../devel/cmake/build.mk"
 
