@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3060 2025/05/03 16:08:55 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3061 2025/05/03 16:51:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4034,3 +4034,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.21.0 [pin 2025-05-03]
 	Updated www/xh to 0.24.1 [pin 2025-05-03]
 	Updated security/keychain to 2.9.2 [vins 2025-05-03]
+	Updated x11/x11vnc to 0.9.17 [nia 2025-05-03]
