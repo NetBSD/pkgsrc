@@ -1,14 +1,27 @@
-# $NetBSD: options.mk,v 1.37 2025/05/03 16:52:35 leot Exp $
+# $NetBSD: options.mk,v 1.38 2025/05/03 17:26:03 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
-PKG_SUPPORTED_OPTIONS=		http2 http3 ilbc lua spandsp
+PKG_SUPPORTED_OPTIONS=		doc http2 http3 ilbc lua spandsp
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		qt5 qt6
 PKG_SUGGESTED_OPTIONS=		http2 http3 lua qt6
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	icons ilbc qt spandsp
+PLIST_VARS+=	doc icons ilbc qt spandsp
+
+.if !empty(PKG_OPTIONS:Mdoc)
+.  include "../../lang/ruby/rubyversion.mk"
+# XXX: Undo inopportune RUBY_DLEXT PLIST var replacement
+PRINT_PLIST_AWK+=	/\$${RUBY_DLEXT}$$/ { gsub(/\$${RUBY_DLEXT}$$/, "${RUBY_DLEXT}") }
+PLIST.doc=              yes
+PRINT_PLIST_AWK+=	/^man\// { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/doc\/.*\.html$$/ { $$0 = "$${PLIST.doc}" $$0 }
+TOOL_DEPENDS+=          libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=          ${RUBY_PKGPREFIX}-asciidoctor>=1.5:../../textproc/ruby-asciidoctor
+.else
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_DISABLE_FIND_PACKAGE_Asciidoctor=TRUE
+.endif
 
 .if !empty(PKG_OPTIONS:Mhttp2)
 .  include "../../www/nghttp2/buildlink3.mk"
