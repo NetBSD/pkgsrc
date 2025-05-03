@@ -1,9 +1,15 @@
-# $NetBSD: options.mk,v 1.6 2018/12/18 15:53:46 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2025/05/03 16:51:15 nia Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x11vnc
-PKG_SUPPORTED_OPTIONS=	avahi x11
+PKG_SUPPORTED_OPTIONS=	avahi libdrm x11
 PKG_SUGGESTED_OPTIONS=	x11
+
+.include "../../graphics/MesaLib/features.mk"
+
+.if ${MESALIB_SUPPORTS_DRI:tl} != "no"
+PKG_SUGGESTED_OPTIONS+=	libdrm
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -12,6 +18,13 @@ PKG_SUGGESTED_OPTIONS=	x11
 CONFIGURE_ARGS+=	--with-avahi=${BUILDLINK_PREFIX.avahi}
 .else
 CONFIGURE_ARGS+=	--without-avahi
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibdrm)
+.include "../../x11/libdrm/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-drm
+.else
+CONFIGURE_ARGS+=	--without-drm
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
