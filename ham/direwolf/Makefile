@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/04/29 03:52:49 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/03 07:15:34 wiz Exp $
 
 DISTNAME=	1.7
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wb2osz/}
 GITHUB_PROJECT=	direwolf
@@ -26,6 +26,8 @@ REPLACE_PYTHON+=	scripts/telemetry-toolkit/telem-volts.py
 
 WRKSRC=		${WRKDIR}/direwolf-1.7
 USE_LANGUAGES=	c c++
+# installs a couple perl scripts
+USE_TOOLS+=	perl:run
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"
