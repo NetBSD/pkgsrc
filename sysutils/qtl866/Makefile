@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/04/28 12:16:35 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/03 07:38:18 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVER}
 PKGVER=		0.3.0.53
-CATEGORIES=	x11
+CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wd5gnr/}
 GITHUB_PROJECT=	qtl866
 GITHUB_TAG=	1173c3e048c9b777611b379892f397dd5c64a261
@@ -47,10 +47,9 @@ do-configure:
 	cd ${WRKSRC} && qmake
 
 do-install:
-.for ff in qtl866 binhexedit miniprohex
-	${INSTALL_PROGRAM} ${WRKSRC}/${ff} \
-		${DESTDIR}${PREFIX}/bin/${ff}
-.endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/qtl866 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/miniprohex ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/binhexedit ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/qtl866.svg \
 		${DESTDIR}${PREFIX}/${ICONDIR}/qtl866.svg
 	${INSTALL_DATA} ${WRKSRC}/qtl866.desktop \
