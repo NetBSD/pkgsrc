@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3057 2025/05/03 10:44:20 leot Exp $
+$NetBSD: CHANGES-2025,v 1.3058 2025/05/03 12:34:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4031,3 +4031,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/jira-cli to 1.6.0 [fox 2025-05-03]
 	Updated net/py-mitmproxy_rs to 0.12.3 [leot 2025-05-03]
 	Updated net/mitmproxy to 12.0.0 [leot 2025-05-03]
+	Updated shells/oh-my-posh to 25.21.0 [pin 2025-05-03]
