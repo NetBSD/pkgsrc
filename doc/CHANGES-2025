@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3059 2025/05/03 12:35:18 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3060 2025/05/03 16:08:55 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/mitmproxy to 12.0.0 [leot 2025-05-03]
 	Updated shells/oh-my-posh to 25.21.0 [pin 2025-05-03]
 	Updated www/xh to 0.24.1 [pin 2025-05-03]
+	Updated security/keychain to 2.9.2 [vins 2025-05-03]
