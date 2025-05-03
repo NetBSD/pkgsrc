@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/28 21:11:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/03 07:11:40 wiz Exp $
 bin/exifread-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -85,3 +85,9 @@ ${PYSITELIB}/exifread/tags/str_utils.pyo
 ${PYSITELIB}/exifread/utils.py
 ${PYSITELIB}/exifread/utils.pyc
 ${PYSITELIB}/exifread/utils.pyo
+${PYSITELIB}/tests/__init__.py
+${PYSITELIB}/tests/__init__.pyc
+${PYSITELIB}/tests/__init__.pyo
+${PYSITELIB}/tests/test_process_file.py
+${PYSITELIB}/tests/test_process_file.pyc
+${PYSITELIB}/tests/test_process_file.pyo
