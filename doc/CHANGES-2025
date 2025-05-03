@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3061 2025/05/03 16:51:27 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3062 2025/05/03 16:55:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4035,3 +4035,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/xh to 0.24.1 [pin 2025-05-03]
 	Updated security/keychain to 2.9.2 [vins 2025-05-03]
 	Updated x11/x11vnc to 0.9.17 [nia 2025-05-03]
+	Updated sysutils/htop to 3.4.1 [nia 2025-05-03]
