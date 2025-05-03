@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3055 2025/05/03 08:35:13 fox Exp $
+$NetBSD: CHANGES-2025,v 1.3056 2025/05/03 10:44:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/direwolf to 1.7nb2 [wiz 2025-05-03]
 	Updated chat/ircd-hybrid to 8.2.47 [fox 2025-05-03]
 	Updated www/jira-cli to 1.6.0 [fox 2025-05-03]
+	Updated net/py-mitmproxy_rs to 0.12.3 [leot 2025-05-03]
