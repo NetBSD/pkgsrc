@@ -354,6 +354,7 @@ hping-suid		Install hping executable setuid root.
 hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
 http			Add support for HTTP.
 http2			Add support for HTTP/2.
+http3			Add support for HTTP/3.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 ibus			Enable Intelligent Input Bus support.
