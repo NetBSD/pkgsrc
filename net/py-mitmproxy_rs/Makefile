@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2025/04/11 09:11:02 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/03 10:43:39 leot Exp $
 #
 # When updating this, make sure that net/mitmproxy still
 # works - usually it also needs to be updated.
 
-DISTNAME=	mitmproxy_rs-0.11.4
+DISTNAME=	mitmproxy_rs-0.12.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
@@ -18,7 +18,7 @@ LICENSE=	mit
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 311
 
 BORINGTUN_REV=	e3252d9c4f4c8fc628995330f45369effd4660a1
 DISTFILES=	${DEFAULT_DISTFILES}
