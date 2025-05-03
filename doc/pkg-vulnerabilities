@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.354 2025/04/30 17:36:48 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.355 2025/05/03 20:18:12 jschauma Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26173,3 +26173,4 @@ mailman<2.1.39	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-
 fcgi<2.4.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-23016
 py{39,310,311,312,313}-h11<0.16.0	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-43859
 dnsdist<1.9.9	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-30194
+liboqs<0.13.0	information-disclosure	https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/Wiu4ZQo3fP8
