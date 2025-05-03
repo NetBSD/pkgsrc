@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2024/08/31 08:39:32 adam Exp $
+# $NetBSD: options.mk,v 1.37 2025/05/03 16:52:35 leot Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		http2 http3 ilbc lua spandsp
@@ -25,6 +25,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_NGHTTP3=OFF
 .if !empty(PKG_OPTIONS:Milbc)
 .  include "../../audio/libilbc/buildlink3.mk"
 PLIST.ilbc=		yes
+PRINT_PLIST_AWK+=	/codecs\/ilbc/ { $$0 = "$${PLIST.ilbc}" $$0 }
 .else
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_ILBC=OFF
 .endif
@@ -54,8 +55,13 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_qt6=ON
 .    include "../../devel/qt6-qt5compat/buildlink3.mk"
 .  endif
 PLIST.qt=		yes
+PRINT_PLIST_AWK+=	/^bin\/wireshark/ { $$0 = "$${PLIST.qt}" $$0 }
 .  if ${OPSYS} != "Darwin"
 PLIST.icons=		yes
+PRINT_PLIST_AWK+=	/^share\/applications\// { $$0 = "$${PLIST.icons}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/icons\// { $$0 = "$${PLIST.icons}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/metainfo\// { $$0 = "$${PLIST.icons}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/mime\// { $$0 = "$${PLIST.icons}" $$0 }
 POST_INSTALL_TARGETS+=	install-icons
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
@@ -89,6 +95,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_wireshark=OFF
 .if !empty(PKG_OPTIONS:Mspandsp)
 .include "../../comms/spandsp/buildlink3.mk"
 PLIST.spandsp=		yes
+PRINT_PLIST_AWK+=	/codecs\/g72/ { $$0 = "$${PLIST.spandsp}" $$0 }
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SPANDSP=ON
 .else
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SPANDSP=OFF
