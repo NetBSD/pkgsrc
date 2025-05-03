@@ -1,4 +1,4 @@
-$NetBSD: patch-common.c,v 1.1 2024/09/13 18:02:45 jschauma Exp $
+$NetBSD: patch-common.c,v 1.2 2025/05/03 19:50:19 jschauma Exp $
 
 From https://github.com/open-quantum-safe/liboqs/pull/1876
 
