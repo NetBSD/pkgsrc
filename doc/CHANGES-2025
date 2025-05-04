@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3076 2025/05/04 13:24:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3077 2025/05/04 14:39:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4061,3 +4061,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-charset-normalizer to 3.4.2 [adam 2025-05-04]
 	Updated textproc/py-orjson to 3.10.18 [adam 2025-05-04]
 	Updated sysutils/py-setproctitle to 1.3.6 [adam 2025-05-04]
+	Updated textproc/enchant2 to 2.8.4 [wiz 2025-05-04]
