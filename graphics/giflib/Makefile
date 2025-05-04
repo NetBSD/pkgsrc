@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2024/09/18 23:02:59 nia Exp $
+# $NetBSD: Makefile,v 1.60 2025/05/04 11:19:19 nia Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	GIF image format library
 
