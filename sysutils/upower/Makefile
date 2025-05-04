@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/05/04 06:30:39 vins Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/04 11:44:32 vins Exp $
 
 DISTNAME=	upower-v1.90.9
 PKGNAME=	${DISTNAME:S/v//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,8 +33,7 @@ PKGCONFIG_OVERRIDE+=	upower-glib.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 # Free/OpenBSD and Linux are officially supported.
-# However, the Linux backend requires gudev, which we lack in pkgsrc.
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} =="Linux"
 MESON_ARGS+=	-Dos_backend=${LOWER_OPSYS}
 .else
 MESON_ARGS+=	-Dos_backend=dummy
@@ -44,12 +44,26 @@ MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR} \
 		-Dstatedir=${VARBASE} \
 		-Dhistorydir=${VARBASE}/db/upower \
 		-Degdir=${EGDIR} \
+		-Dzshcompletiondir=${PREFIX}/share/zsh/site-functions \
 		-Dman=true \
 		-Dgtk-doc=false \
-		-Dudevrulesdir=disabled \
-		-Dudevhwdbdir=disabled \
-		-Dsystemdsystemunitdir=no \
 		-Didevice=disabled
+
+.if ${OPSYS} =="Linux"
+.  include "../../lang/python/pyversion.mk"
+.  include "../../lang/python/application.mk"
+
+REPLACE_PYTHON=	integration-test.py unittest_inspector.py
+
+.  include "../../devel/libgudev/buildlink3.mk"
+MESON_ARGS+=	-Dudevrulesdir=${PREFIX}/lib/udev/rules.d \
+		-Dudevhwdbdir=${PKG_SYSCONFBASEDIR}/udev/hwdb.d \
+		-Dsystemdsystemunitdir=${EGDIR}
+.else
+MESON_ARGS+=    -Dudevrulesdir=disabled \
+               	-Dudevhwdbdir=disabled \
+               	-Dsystemdsystemunitdir=no
+.endif
 
 .include "options.mk"
 
