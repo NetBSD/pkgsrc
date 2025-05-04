@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3067 2025/05/04 08:09:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3068 2025/05/04 08:12:57 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4041,3 +4041,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/libudev to 3.2.14 [vins 2025-05-04]
 	Updated security/p5-CryptX to 0.086 [wiz 2025-05-04]
 	Updated devel/p5-Type-Tiny to 2.008002 [wiz 2025-05-04]
+	Updated wm/icewm to 3.7.4 [nia 2025-05-04]
