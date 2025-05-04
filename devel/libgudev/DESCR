@@ -1,0 +1,3 @@
+This is libgudev, a library providing GObject bindings for libudev. It
+used to be part of udev, then merged into systemd. It's now a project
+on its own.
