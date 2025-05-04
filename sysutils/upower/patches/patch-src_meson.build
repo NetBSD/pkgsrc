@@ -1,0 +1,15 @@
+$NetBSD: patch-src_meson.build,v 1.1 2025/05/04 05:55:49 vins Exp $
+
+Install to EGDIR.
+
+--- src/meson.build.orig	2025-05-03 17:09:05.336647531 +0000
++++ src/meson.build
+@@ -100,7 +100,7 @@ configure_file(
+ configure_file(
+     input: 'org.freedesktop.UPower.conf.in',
+     output: 'org.freedesktop.UPower.conf',
+-    install_dir: dbusdir / 'system.d',
++    install_dir: get_option('egdir'),
+     configuration: cdata,
+ )
+ 

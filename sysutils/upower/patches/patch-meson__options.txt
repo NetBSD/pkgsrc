@@ -1,0 +1,16 @@
+$NetBSD: patch-meson__options.txt,v 1.1 2025/05/04 05:55:49 vins Exp $
+
+Support EGDIR.
+
+--- meson_options.txt.orig	2025-05-03 17:11:16.376958008 +0000
++++ meson_options.txt
+@@ -27,6 +27,9 @@ option('statedir',
+ option('systemdsystemunitdir',
+        type : 'string',
+        description : 'Directory for systemd service files ("no" to disable)')
++option('egdir',
++       type : 'string',
++       description : 'Directory for upower sample configuration files')
+ option('os_backend',
+        type : 'combo',
+        choices : [ 'auto', 'linux', 'freebsd', 'openbsd', 'dummy'],

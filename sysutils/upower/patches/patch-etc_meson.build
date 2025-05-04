@@ -1,0 +1,9 @@
+$NetBSD: patch-etc_meson.build,v 1.1 2025/05/04 05:55:49 vins Exp $
+
+Install to EGDIR.
+
+--- etc/meson.build.orig	2025-05-03 17:01:48.903892228 +0000
++++ etc/meson.build
+@@ -1 +1 @@
+-install_data('UPower.conf', install_dir: get_option('sysconfdir') / 'UPower')
++install_data('UPower.conf', install_dir: get_option('egdir'))
