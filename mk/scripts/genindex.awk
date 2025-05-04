@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.9 2018/08/22 20:48:37 maya Exp $
+# $NetBSD: genindex.awk,v 1.10 2025/05/04 20:08:16 wiz Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -272,7 +272,7 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 # if we find the package already has been fully depended
 # then return the depends list
 	if (pkg in alldepends){
-		if (debug) printf("\t%s is allready depended.  Returning %s\n",
+		if (debug) printf("\t%s is already depended.  Returning %s\n",
 				  pkg, alldepends[pkg]);
 		return(alldepends[pkg]);
 	}
