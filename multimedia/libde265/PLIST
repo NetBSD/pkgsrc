@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/21 21:00:00 adam Exp $
-bin/acceleration_speed
+@comment $NetBSD: PLIST,v 1.3 2025/05/04 09:04:43 adam Exp $
 bin/bjoentegaard
 bin/block-rate-estim
 bin/dec265
