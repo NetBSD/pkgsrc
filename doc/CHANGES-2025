@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3081 2025/05/04 14:56:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3082 2025/05/04 14:58:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4066,3 +4066,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 11.2.0 [wiz 2025-05-04]
 	Updated graphics/libheif to 1.19.8 [wiz 2025-05-04]
 	Updated textproc/py-docstring-to-markdown to 0.17 [wiz 2025-05-04]
+	Updated www/py-google-api-python-client to 2.169.0 [wiz 2025-05-04]
