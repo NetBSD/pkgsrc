@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3065 2025/05/04 07:19:36 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3066 2025/05/04 08:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4039,3 +4039,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/liboqs to 0.13.0 [jschauma 2025-05-03]
 	Updated sysutils/upower to 1.90.9 [vins 2025-05-04]
 	Updated sysutils/libudev to 3.2.14 [vins 2025-05-04]
+	Updated security/p5-CryptX to 0.086 [wiz 2025-05-04]
