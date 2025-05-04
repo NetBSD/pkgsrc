@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4469 2025/05/04 10:13:13 vins Exp $
+# $NetBSD: Makefile,v 1.4470 2025/05/04 15:28:44 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -220,6 +220,7 @@ SUBDIR+=	capstone
 SUBDIR+=	cargo-about
 SUBDIR+=	cargo-binutils
 SUBDIR+=	cargo-bloat
+SUBDIR+=	cargo-bundle-licenses
 SUBDIR+=	cargo-c
 SUBDIR+=	cargo-edit
 SUBDIR+=	cargo-licenses
