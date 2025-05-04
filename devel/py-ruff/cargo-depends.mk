@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.56 2025/04/28 10:54:04 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.57 2025/05/04 15:04:28 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -53,7 +53,6 @@ CARGO_CRATE_DEPENDS+=	codspeed-criterion-compat-walltime-2.9.1
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.3
 CARGO_CRATE_DEPENDS+=	colored-2.2.0
 CARGO_CRATE_DEPENDS+=	colored-3.0.0
-CARGO_CRATE_DEPENDS+=	compact_str-0.8.1
 CARGO_CRATE_DEPENDS+=	compact_str-0.9.0
 CARGO_CRATE_DEPENDS+=	console-0.15.11
 CARGO_CRATE_DEPENDS+=	console_error_panic_hook-0.1.7
@@ -160,8 +159,8 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itertools-0.13.0
 CARGO_CRATE_DEPENDS+=	itertools-0.14.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.15
-CARGO_CRATE_DEPENDS+=	jiff-0.2.9
-CARGO_CRATE_DEPENDS+=	jiff-static-0.2.9
+CARGO_CRATE_DEPENDS+=	jiff-0.2.10
+CARGO_CRATE_DEPENDS+=	jiff-static-0.2.10
 CARGO_CRATE_DEPENDS+=	jiff-tzdb-0.1.4
 CARGO_CRATE_DEPENDS+=	jiff-tzdb-platform-0.1.3
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.32
@@ -276,9 +275,9 @@ CARGO_CRATE_DEPENDS+=	rustix-0.38.44
 CARGO_CRATE_DEPENDS+=	rustix-1.0.2
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.20
 CARGO_CRATE_DEPENDS+=	ryu-1.0.20
-#CARGO_CRATE_DEPENDS+=	salsa-0.19.0
-#CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.19.0
-#CARGO_CRATE_DEPENDS+=	salsa-macros-0.19.0
+#CARGO_CRATE_DEPENDS+=	salsa-0.21.0
+#CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.21.0
+#CARGO_CRATE_DEPENDS+=	salsa-macros-0.21.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schemars-0.8.22
 CARGO_CRATE_DEPENDS+=	schemars_derive-0.8.22
@@ -311,7 +310,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	strum-0.27.1
 CARGO_CRATE_DEPENDS+=	strum_macros-0.27.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
-CARGO_CRATE_DEPENDS+=	syn-2.0.100
+CARGO_CRATE_DEPENDS+=	syn-2.0.101
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.1
 CARGO_CRATE_DEPENDS+=	tempfile-3.19.1
 CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
