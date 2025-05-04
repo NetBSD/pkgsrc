@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/04 16:30:38 vins Exp $
+share/fonts/X11/TTF/CozetteCrossedSevenVector.ttf
+share/fonts/X11/TTF/CozetteCrossedSevenVectorBold.ttf
+share/fonts/X11/TTF/CozetteVector.ttf
+share/fonts/X11/TTF/CozetteVectorBold.ttf
+share/fonts/X11/misc/cozette.otb
+share/fonts/X11/misc/cozette_hidpi.otb
+share/fonts/X11/misc/cozettecrossedseven.otb
+share/fonts/X11/misc/cozettecrossedseven_hidpi.otb
