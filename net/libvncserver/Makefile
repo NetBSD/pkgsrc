@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2025/04/24 14:15:26 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/05/04 09:47:18 nia Exp $
 
-DISTNAME=		libvncserver-LibVNCServer-0.9.13
-PKGNAME=		libVNCServer-0.9.13
-PKGREVISION=		15
+DISTNAME=		LibVNCServer-0.9.15
+PKGNAME=		libVNCServer-0.9.15
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=LibVNC/}
 GITHUB_PROJECT=		libvncserver
@@ -16,16 +15,16 @@ LICENSE=		gnu-gpl-v2
 # XXX doesn't really use c++ but cmake is being uncooperative
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-USE_CMAKE=		yes
 
-PKGCONFIG_OVERRIDE+=	libvncserver.pc.cmakein
-PKGCONFIG_OVERRIDE+=	libvncclient.pc.cmakein
+PKGCONFIG_OVERRIDE+=	src/libvncserver/libvncserver.pc.cmakein
+PKGCONFIG_OVERRIDE+=	src/libvncserver/libvncclient.pc.cmakein
 
 CMAKE_CONFIGURE_ARGS+=		-DWITH_FFMPEG=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_GTK=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWITH_QT=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SDL=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SYSTEMD=OFF
-
+CMAKE_CONFIGURE_ARGS+=		-DWITH_EXAMPLES=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_THREADS=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITH_TIGHTVNC_FILETRANSFER=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITH_WEBSOCKETS=ON
@@ -38,7 +37,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_PNG=ON
 LDFLAGS.SunOS+=		-lsocket
 
 .include "options.mk"
-
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

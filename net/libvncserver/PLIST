@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/12/18 23:25:59 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/05/04 09:47:18 nia Exp $
 include/rfb/keysym.h
 include/rfb/rfb.h
 include/rfb/rfbclient.h
@@ -6,6 +6,10 @@ include/rfb/rfbconfig.h
 include/rfb/rfbproto.h
 include/rfb/rfbregion.h
 include/rfb/threading.h
+lib/cmake/LibVNCServer/LibVNCServerConfig.cmake
+lib/cmake/LibVNCServer/LibVNCServerConfigVersion.cmake
+lib/cmake/LibVNCServer/LibVNCServerTargets-noconfig.cmake
+lib/cmake/LibVNCServer/LibVNCServerTargets.cmake
 lib/libvncclient.so
 lib/libvncclient.so.${PKGVERSION}
 lib/libvncclient.so.1
