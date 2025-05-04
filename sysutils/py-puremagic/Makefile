@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/12 18:03:06 pgoyette Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/04 14:58:57 wiz Exp $
 
-DISTNAME=	puremagic-1.28
+DISTNAME=	puremagic-1.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/puremagic/}
 
