@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2025/05/04 11:44:32 vins Exp $
+etc/udev/hwdb.d/60-upower-battery.hwdb
+etc/udev/hwdb.d/95-upower-hid.hwdb
+lib/udev/rules.d/60-upower-battery.rules
+lib/udev/rules.d/95-upower-hid.rules
+lib/udev/rules.d/95-upower-wup.rules
+libexec/upower/integration-test.py
+libexec/upower/output_checker.py
+libexec/upower/tests/logitech-g903.device
+libexec/upower/tests/steelseries-headset.device
+libexec/upower/tests/usb-headset.device
+libexec/upower/tests/wacom-bluetooth-active.device
+libexec/upower/tests/wacom-dongle-active.device
+libexec/upower/tests/wacom-dongle-waiting.device
+libexec/upower/tests/wacom-pen-digitiser.device
+share/examples/upower/upower.service
+share/installed-tests/upower/upower-integration.test
