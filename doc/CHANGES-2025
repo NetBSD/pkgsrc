@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3086 2025/05/04 15:24:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3087 2025/05/04 15:25:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.11.8 [wiz 2025-05-04]
 	Updated comms/py-textual to 3.2.0 [wiz 2025-05-04]
 	Updated devel/mise to 2025.5.0 [pin 2025-05-04]
+	Updated devel/hexpatch to 1.11.2 [pin 2025-05-04]
