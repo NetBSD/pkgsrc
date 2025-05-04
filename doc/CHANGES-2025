@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3069 2025/05/04 09:05:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3070 2025/05/04 09:37:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/icewm to 3.7.4 [nia 2025-05-04]
 	Updated devel/ccache to 4.11.3 [adam 2025-05-04]
 	Updated multimedia/libde265 to 1.0.16 [adam 2025-05-04]
+	Updated www/gotosocial to 0.19.0 [wiz 2025-05-04]
