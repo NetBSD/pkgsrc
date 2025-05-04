@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/04/05 18:51:31 bsiegert Exp $
+# $NetBSD: Makefile,v 1.47 2025/05/04 09:37:41 wiz Exp $
 
-DISTNAME=	gotosocial-0.17.0
-PKGREVISION=	2
+DISTNAME=	gotosocial-0.19.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,6 +20,8 @@ SITES.${ASSETS}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_TA
 
 MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
+
+.include "go-modules.mk"
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -62,11 +63,7 @@ SUBST_FILES.systemdpaths=	example/gotosocial.service
 SUBST_SED.systemdpaths=		-e 's,/gotosocial/gotosocial,${PREFIX}/bin/gotosocial,g'
 SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} scripts/build.sh
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gotosocial ${DESTDIR}/${PREFIX}/bin/
+post-install:
 	${MKDIR} ${DESTDIR}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
@@ -74,9 +71,9 @@ do-install:
 	# Installs the assets source, may not be necessary
 	cd ${WRKSRC} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
 	cd ${WRKDIR} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
-
-do-test:
-	cd ${WRKSRC} && ./gotosocial --version
+	# do not install extra binaries
+	# TOOD: check if they are wanted
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} gen gen-ulid process-emoji process-media
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
