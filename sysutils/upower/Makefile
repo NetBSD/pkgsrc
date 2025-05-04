@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/05/04 05:55:49 vins Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/04 06:30:39 vins Exp $
 
 DISTNAME=	upower-v1.90.9
 PKGNAME=	${DISTNAME:S/v//}
@@ -12,7 +12,8 @@ COMMENT=	Power management system message bus service
 LICENSE=	gnu-gpl-v2
 
 USE_CC_FEATURES=	c11
-USE_TOOLS+=		pkg-config intltool xgettext msgmerge msgfmt
+USE_TOOLS+=		pkg-config intltool gdbus-codegen \
+			xgettext msgmerge msgfmt
 
 USE_PKGLOCALEDIR=	yes
 
