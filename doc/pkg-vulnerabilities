@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.355 2025/05/03 20:18:12 jschauma Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.356 2025/05/04 11:02:59 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20255,7 +20255,7 @@ slurm-wlm<19.05.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/det
 php{56,72,73,74}-typo3<10.4.10	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2020-26227
 php{56,72,73,74}-typo3<10.4.10	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-26228
 php{56,72,73,74}-typo3<10.4.10	xml-external-entity			https://nvd.nist.gov/vuln/detail/CVE-2020-26229
-x11vnc-[0-9]*			improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2020-29074
+x11vnc<0.9.17			improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2020-29074
 xenkernel411-[0-9]*		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2020-29040
 ImageMagick6<6.9.11.40	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-29599
 ImageMagick<7.0.10.40	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2020-29599
