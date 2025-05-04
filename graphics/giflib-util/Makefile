@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2024/09/18 23:02:59 nia Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/04 11:19:20 nia Exp $
 
 .include "../../graphics/giflib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-util-/}
+PKGREVISION=	1
 
 COMMENT=	GIF image format utility
 
