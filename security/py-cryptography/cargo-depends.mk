@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2025/03/02 20:17:43 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2025/05/04 12:56:22 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	asn1-0.20.0
 CARGO_CRATE_DEPENDS+=	asn1_derive-0.20.0
@@ -17,7 +17,7 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.20.2
 CARGO_CRATE_DEPENDS+=	openssl-0.10.68
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
-CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.104
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.108
 CARGO_CRATE_DEPENDS+=	pem-3.0.4
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.31
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.10.0
