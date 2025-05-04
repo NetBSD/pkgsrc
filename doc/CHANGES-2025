@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3074 2025/05/04 13:01:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3075 2025/05/04 13:13:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4054,3 +4054,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-bitarray to 3.3.2 [adam 2025-05-04]
 	Updated textproc/py-yamllint to 1.37.1 [adam 2025-05-04]
 	Updated devel/py-mocket to 3.13.5 [adam 2025-05-04]
+	Updated graphics/png to 1.6.48 [adam 2025-05-04]
+	Updated net/libtorrent to 0.15.3 [adam 2025-05-04]
+	Updated net/rtorrent to 0.15.3 [adam 2025-05-04]
