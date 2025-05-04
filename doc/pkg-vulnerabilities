@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.356 2025/05/04 11:02:59 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.357 2025/05/04 11:05:29 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23144,7 +23144,7 @@ gerbv-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-40400
 openexr<3.1.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3941
 openexr<3.1.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3933
 py{27,34,35,36,37,38,39,310}-tryton<6.2.6	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-26661
-wavpack-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-44269
+wavpack<5.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-44269
 grub2-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-3981
 horde<2.2.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-26874
 fish<3.4.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-20001
@@ -23808,7 +23808,7 @@ grub2<2.12	buffer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3697
 grub2<2.12	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-3696
 grub2<2.12	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-3695
 vault<1.11.1	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2022-36129
-wavpack-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-2476
+wavpack<5.5.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-2476
 tor>=0.4.7<0.4.7.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-33903
 moodle<4.0.2	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-35650
 moodle<4.0.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-35653
