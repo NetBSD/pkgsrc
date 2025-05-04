@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/02/24 18:05:08 gutteridge Exp $
+# $NetBSD: Makefile,v 1.61 2025/05/04 08:12:46 nia Exp $
 
-DISTNAME=	icewm-3.7.0
+DISTNAME=	icewm-3.7.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/}
 
@@ -13,12 +13,12 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
-CONFIGURE_ENV+=		MARKDOWN=multimarkdown
+CONFIGURE_ENV+=		MARKDOWN=markdown
 
 CONFIGURE_ARGS+=	--enable-corefonts
 CONFIGURE_ARGS+=	--enable-i18n
 
-TOOL_DEPENDS+=	multimarkdown-[0-9]*:../../textproc/multimarkdown
+TOOL_DEPENDS+=	discount-[0-9]*:../../textproc/discount
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake perl autoreconf autoconf automake autopoint
