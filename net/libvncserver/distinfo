@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.22 2022/12/25 18:29:50 wiz Exp $
+$NetBSD: distinfo,v 1.23 2025/05/04 09:47:18 nia Exp $
 
-BLAKE2s (libvncserver-LibVNCServer-0.9.13.tar.gz) = cf0fe16cb1f7f3b453bb7fc45b063e6004dbe36cf0c51293fafb36c759a8edf8
-SHA512 (libvncserver-LibVNCServer-0.9.13.tar.gz) = 18b0a1698d32bbdbfe6f65f76130b2a95860e3cc76e8adb904269663698c7c0ae982f451fda1f25e5461f096045d40a89d9014258f439366d5b4feaa4999d643
-Size (libvncserver-LibVNCServer-0.9.13.tar.gz) = 567491 bytes
-SHA1 (patch-libvncserver_websockets.c) = eb4e50f8fcb8442dae54d1360e6950e2ebd4778b
-SHA1 (patch-rfb_rfbproto.h) = 114310232ec7a8abe8dadf3e7d2ba4a1afbcd9ef
+BLAKE2s (LibVNCServer-0.9.15.tar.gz) = a9e2b934cc203b94528eba8750bcafbabb2db53d1f684b3610f493af65ad71da
+SHA512 (LibVNCServer-0.9.15.tar.gz) = 3ad7e14eef3b591574714e320257ac465778e05bd157ddff09e48b990f35890bfa6883ce4ac027fcb08dccd96f721117d56aaee681482f7643cfee9adc59804b
+Size (LibVNCServer-0.9.15.tar.gz) = 600387 bytes
+SHA1 (patch-include_rfb_rfbproto.h) = 90334c854be6aa8239bee531b64d9fcb6f9c57f3
+SHA1 (patch-src_common_sockets.c) = bc391e43055f7f8d894cc307a10855a5e15b58bf
+SHA1 (patch-src_libvncclient_listen.c) = 541bf5a6ff3e29544c5257501922397698af2792
+SHA1 (patch-src_libvncclient_rfbclient.c) = c0f75e2fbd7d8efd087c84c57665e4c86a00415e
+SHA1 (patch-src_libvncclient_sockets.c) = 64dfb2ee1cc41cbe22780c9f248b2ff4b765c17b
+SHA1 (patch-src_libvncclient_tls__openssl.c) = 39cd79bae84a1bea4247320d60613c128bb6d294
+SHA1 (patch-src_libvncserver_main.c) = f63f395ec7e252be95f5f6900e119ff513327312
+SHA1 (patch-src_libvncserver_ws__decode.h) = 2b93554867c0e735ecff393a8977b8856ee26ce1
