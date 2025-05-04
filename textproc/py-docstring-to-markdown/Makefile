@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/04/13 12:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/04 14:56:47 wiz Exp $
 
-DISTNAME=	docstring_to_markdown-0.16
+DISTNAME=	docstring_to_markdown-0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docstring-to-markdown/}
@@ -18,8 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
-# as of 0.16
-# 5 failed, 103 passed
+# as of 0.17
+# 5 failed, 106 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
