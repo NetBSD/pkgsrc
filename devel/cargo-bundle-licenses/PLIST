@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/04 15:27:52 pin Exp $
+bin/cargo-bundle-licenses

@@ -1,0 +1,6 @@
+Bundle all third-party licenses into a single file.
+
+This tools is not a lawyer and no guarantee of correctness can be made regarding
+the licenses that it selects. This tool relies on the information supplied in
+package metadata to be correct, this is not guaranteed so for real scenarios it
+is recommended that all licenses be reviewed and verified manually as well.
