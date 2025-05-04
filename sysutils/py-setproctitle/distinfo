@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/02/23 11:47:13 wiz Exp $
+$NetBSD: distinfo,v 1.17 2025/05/04 13:23:54 adam Exp $
 
-BLAKE2s (setproctitle-1.3.5.tar.gz) = cf634382fdfca6f5f133cd32890d9dbedc11639b7a2c7f290ab37cec2838e91d
-SHA512 (setproctitle-1.3.5.tar.gz) = ab1dc0c22506d8c43b626e39fbad754aa0115faf592d011f84ae28dee31a3797fff61c236c80864eb2749a2e585c46678beb87c63334c55a53c31540e76eea3b
-Size (setproctitle-1.3.5.tar.gz) = 26737 bytes
+BLAKE2s (setproctitle-1.3.6.tar.gz) = 743e54b2f7dfd9f4913395273b757b487b2f6b8a9800c358050b93de0ad0eb48
+SHA512 (setproctitle-1.3.6.tar.gz) = cf14e5ffcdbb22c2dcce284d3cca214597dbec1125bbe46411a92e46a02c5f5f0e9089d1c950f6fff9c879a2bc8ff2006eb9d1b3bef023c91b36d20ad12c1306
+Size (setproctitle-1.3.6.tar.gz) = 26889 bytes
