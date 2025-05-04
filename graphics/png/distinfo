@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.154 2025/02/19 00:04:02 wiz Exp $
+$NetBSD: distinfo,v 1.155 2025/05/04 13:05:36 adam Exp $
 
-BLAKE2s (libpng-1.6.47.tar.xz) = 8479ae48f90a933ff2fd2837b1f6c2eb3a9f08ccafc86b1beb3943b9617aa745
-SHA512 (libpng-1.6.47.tar.xz) = 932578dedd7916e2c502d8d11eef845e15733e84062510ba246b027d5467efe786725ff3dd22b9a33ff6a052c8dab3da3b45cb737a00caed43b6598c2bd8122b
-Size (libpng-1.6.47.tar.xz) = 1054664 bytes
+BLAKE2s (libpng-1.6.48.tar.xz) = 60f72713d7b4169842b358d535b4d2f6487cef9be2ab194b529531ab2b8bd437
+SHA512 (libpng-1.6.48.tar.xz) = aae6cdd7d55d78aea820165493e31ea7c0de8b2272b709d334dfe7bac96e24099330f0e9049062fde34b6ea926af50987c390dab1b91bdfe3586b2ee4aed8b33
+Size (libpng-1.6.48.tar.xz) = 1054968 bytes
 SHA1 (patch-libpng-config.in) = 04f8d6af31114017ce9d1280e62f1768c35c289d
 SHA1 (patch-pngpriv.h) = 16f80df18a2f58eec784e2d821e8bb93c3e81747
