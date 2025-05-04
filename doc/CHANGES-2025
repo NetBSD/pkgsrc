@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3072 2025/05/04 10:10:12 fox Exp $
+$NetBSD: CHANGES-2025,v 1.3073 2025/05/04 10:14:17 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4047,3 +4047,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/gotosocial to 0.19.0 [wiz 2025-05-04]
 	Updated net/libvncserver to 0.9.15 [nia 2025-05-04]
 	Updated sysutils/eza to 0.21.3 [fox 2025-05-04]
+	Added devel/libgudev version 238 [vins 2025-05-04]
