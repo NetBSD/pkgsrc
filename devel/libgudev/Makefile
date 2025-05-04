@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/04 10:11:28 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/04 10:16:24 vins Exp $
 
 DISTNAME=	libgudev-238
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	cirnatdan@NetBSD.org
 HOMEPAGE=	https://wiki.gnome.org/Projects/libgudev
 COMMENT=	GObject bindings to libudev
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2
 
 ONLY_FOR_PLATFORM=	Linux-*-*	# sysutils/libudev
 
