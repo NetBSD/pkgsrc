@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3083 2025/05/04 14:59:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3084 2025/05/04 15:04:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4068,3 +4068,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-docstring-to-markdown to 0.17 [wiz 2025-05-04]
 	Updated www/py-google-api-python-client to 2.169.0 [wiz 2025-05-04]
 	Updated sysutils/py-puremagic to 1.29 [wiz 2025-05-04]
+	Updated devel/py-ruff to 0.11.8 [wiz 2025-05-04]
