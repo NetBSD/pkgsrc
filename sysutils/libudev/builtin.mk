@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2023/05/10 17:39:09 nikita Exp $
+# $NetBSD: builtin.mk,v 1.2 2025/05/04 07:18:03 vins Exp $
 
 BUILTIN_PKG:=	libudev
 
@@ -19,6 +19,9 @@ MAKEVARS+=		IS_BUILTIN.libudev
 USE_BUILTIN.libudev=	${IS_BUILTIN.libudev}
 .endif
 
+.PHONY: link-libudev-pkgconfig link-message-libudev-pkgconfig \
+	do-configure-pre-hook
+
 .if ${USE_BUILTIN.libudev:tl} == yes
 .  if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
 do-configure-pre-hook: link-libudev-pkgconfig
@@ -26,7 +29,6 @@ do-configure-pre-hook: link-libudev-pkgconfig
 BLKDIR_PKGCFG=		${BUILDLINK_DIR}/lib/pkgconfig
 LIBUDEV_PKGCFGF=	${BUILTIN_FIND_PKGCONFIG_FILES.LIBUDEV_PC}
 
-.PHONY: link-libudev-pkgconfig link-message-libudev-pkgconfig
 link-libudev-pkgconfig: link-message-libudev-pkgconfig
 link-message-libudev-pkgconfig:
 	@${STEP_MSG} "Linking ${LIBUDEV_PC} file into ${BUILDLINK_DIR}."
