@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3107 2025/05/05 16:54:00 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3108 2025/05/05 20:03:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4100,3 +4100,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/confuse to 3.3nb1 [wiz 2025-05-05]
 	Updated pkgtools/pkg_notify to 0.4.9 [schmonz 2025-05-05]
 	Added fonts/dina version 2.93 [vins 2025-05-05]
+	Updated wm/marswm to 0.6.1 [pin 2025-05-05]
