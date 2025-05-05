@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3101 2025/05/05 10:04:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3102 2025/05/05 13:20:52 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4092,3 +4092,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/flameshot version 12.1.0 [tnn 2025-05-05]
 	Updated x11/libei to 1.4.1 [tnn 2025-05-05]
 	Updated mail/neomutt to 20250404nb2 [wiz 2025-05-05]
+	Removed net/netatalk22 [hauke 2025-05-05]
+	Removed net/netatalk3 [hauke 2025-05-05]
