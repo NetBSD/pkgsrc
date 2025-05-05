@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/05 14:08:24 adam Exp $
 
-DISTNAME=	wxPython-4.2.1
+DISTNAME=	wxPython-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	9
-CATEGORIES=	x11
+CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wxPython/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,32 +11,45 @@ COMMENT=	GUI Toolkit for Python
 # LGPLv2 with additional permission; http://opensource.org/licenses/wxwindows
 LICENSE=	gnu-lgpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.10:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.10.0:../../x11/py-sip6
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
-USE_LANGUAGES+=			c c++
-USE_TOOLS+=			pkg-config
-MAKE_ENV+=			WX_CONFIG=wx-config-3.2
-PYDISTUTILSPKG=			no
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config
+MAKE_ENV+=	WX_CONFIG=wx-config-3.2
+PYDISTUTILSPKG=	no
 
-TOOL_DEPENDS+=			${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+PYTHON_SELF_CONFLICT=	yes
 
-BUILD_ARGS+=			--use_syswx
-BUILD_ARGS+=			--prefix=${PREFIX}
-BUILD_ARGS+=			--destdir=${DESTDIR}
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_ARGS+=	--destdir=${DESTDIR}
+BUILD_ARGS+=	--prefix=${PREFIX}
+BUILD_ARGS+=	--release
+BUILD_ARGS+=	--use_syswx
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
+BUILD_ARGS+=	--jobs=${MAKE_JOBS}
+.endif
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 
 post-patch:
 	# upstream (incorrectly) installs patch .orig files
 	${RM} -f ${WRKSRC}/wx/svg/_nanosvg.pyx.orig
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} build.py ${BUILD_ARGS} build_py
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} build.py ${BUILD_ARGS} build_py
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} build.py ${BUILD_ARGS} install_py
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${TOOL_PYTHONBIN} build.py ${BUILD_ARGS} install_py
 
-.include "../../x11/wxGTK32/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.include "../../x11/wxGTK32/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

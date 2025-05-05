@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/26 20:53:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/05 14:08:24 adam Exp $
 bin/helpviewer
 bin/img2png
 bin/img2py
@@ -11,6 +11,13 @@ bin/pywxrc
 bin/wxdemo
 bin/wxdocs
 bin/wxget
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/wx/__init__.py
 ${PYSITELIB}/wx/__init__.pyc
 ${PYSITELIB}/wx/__version__.py
@@ -548,8 +555,6 @@ ${PYSITELIB}/wx/lib/pubsub/policies.py
 ${PYSITELIB}/wx/lib/pubsub/policies.pyc
 ${PYSITELIB}/wx/lib/pubsub/pub.py
 ${PYSITELIB}/wx/lib/pubsub/pub.pyc
-${PYSITELIB}/wx/lib/pubsub/py2and3.py
-${PYSITELIB}/wx/lib/pubsub/py2and3.pyc
 ${PYSITELIB}/wx/lib/pubsub/setuparg1.py
 ${PYSITELIB}/wx/lib/pubsub/setuparg1.pyc
 ${PYSITELIB}/wx/lib/pubsub/setupkwargs.py
@@ -777,10 +782,3 @@ ${PYSITELIB}/wx/xml.pyi
 ${PYSITELIB}/wx/xrc.py
 ${PYSITELIB}/wx/xrc.pyc
 ${PYSITELIB}/wx/xrc.pyi
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
