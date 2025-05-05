@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.122 2024/07/15 06:12:17 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.123 2025/05/05 07:50:45 triaxx Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -180,6 +180,7 @@ share/examples/ImageMagick/thresholds.xml
 share/examples/ImageMagick/type-apple.xml
 share/examples/ImageMagick/type-dejavu.xml
 share/examples/ImageMagick/type-ghostscript.xml
+share/examples/ImageMagick/type-urw-base35-type1.xml
 share/examples/ImageMagick/type-urw-base35.xml
 share/examples/ImageMagick/type-windows.xml
 share/examples/ImageMagick/type.xml
