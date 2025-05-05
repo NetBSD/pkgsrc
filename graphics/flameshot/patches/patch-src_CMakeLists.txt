@@ -1,0 +1,23 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/05/05 08:59:03 tnn Exp $
+
+Honour PKGMANDIR.
+
+--- src/CMakeLists.txt.orig	2022-07-03 13:42:21.000000000 +0000
++++ src/CMakeLists.txt
+@@ -325,7 +325,7 @@ if (UNIX)
+ 
+     # Install man pages
+     configure_file(${CMAKE_SOURCE_DIR}/data/man/man1/flameshot.1
+-            ${CMAKE_CURRENT_BINARY_DIR}/share/man/man1/flameshot.1 COPYONLY)
++	    ${CMAKE_CURRENT_BINARY_DIR}/@PKGMANDIR@/man1/flameshot.1 COPYONLY)
+ 
+     # Install Icons
+     configure_file(${CMAKE_SOURCE_DIR}/data/img/hicolor/48x48/apps/org.flameshot.Flameshot.png
+@@ -349,6 +349,7 @@ if (UNIX)
+ 
+     # Install assets
+     install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/share/ DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
++    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/@PKGMANDIR@/ DESTINATION ${CMAKE_INSTALL_MANDIR})
+ 
+     # Install Translations
+     install(FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/flameshot/translations)
