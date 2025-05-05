@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/15 15:35:01 manu Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/05 12:40:30 manu Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -100,7 +100,6 @@ lib/asterisk/modules/chan_iax2.so
 ${PLIST.jabber}lib/asterisk/modules/chan_motif.so
 lib/asterisk/modules/chan_pjsip.so
 lib/asterisk/modules/chan_rtp.so
-lib/asterisk/modules/chan_sip.so
 lib/asterisk/modules/chan_unistim.so
 lib/asterisk/modules/codec_a_mu.so
 lib/asterisk/modules/codec_adpcm.so
@@ -2413,8 +2412,6 @@ share/examples/asterisk/res_stun_monitor.conf
 share/examples/asterisk/resolver_unbound.conf
 share/examples/asterisk/rtp.conf
 share/examples/asterisk/say.conf
-share/examples/asterisk/sip.conf
-share/examples/asterisk/sip_notify.conf
 share/examples/asterisk/sla.conf
 share/examples/asterisk/smdi.conf
 share/examples/asterisk/sorcery.conf
