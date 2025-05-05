@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/02/09 14:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/05/05 14:07:05 adam Exp $
 
-DISTNAME=	googletest-1.16.0
+DISTNAME=	googletest-1.17.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
