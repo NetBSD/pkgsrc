@@ -1,0 +1,3 @@
+libportal provides GIO-style async APIs for most Flatpak portals.
+Flatpak portals are the secure interfaces through which Flatpak
+applications, which run in a sandbox, interact with the host system.
