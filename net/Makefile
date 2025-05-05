@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1597 2025/05/02 05:48:43 adam Exp $
+# $NetBSD: Makefile,v 1.1598 2025/05/05 08:53:52 tnn Exp $
 #
 
 COMMENT=	Networking tools
@@ -99,6 +99,7 @@ SUBDIR+=	ddclient
 SUBDIR+=	ddns-route53
 SUBDIR+=	deforaos-vncviewer
 SUBDIR+=	delegate
+SUBDIR+=	deskflow
 SUBDIR+=	dgd
 SUBDIR+=	dhcpcd
 SUBDIR+=	dhcpcd-dbus
@@ -955,7 +956,6 @@ SUBDIR+=	sup
 SUBDIR+=	syncffsd
 SUBDIR+=	syncthing
 SUBDIR+=	syncthing-gtk
-SUBDIR+=	synergy
 SUBDIR+=	sysmon
 SUBDIR+=	tacacs
 SUBDIR+=	tacacs-shrubbery
