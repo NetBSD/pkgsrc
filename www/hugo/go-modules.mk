@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.18 2025/04/28 06:20:33 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.19 2025/05/05 06:49:40 triaxx Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.116.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.116.0.zip
@@ -68,8 +68,8 @@ GO_MODULE_FILES+=	github.com/!burnt!sushi/locker/@v/v0.0.0-20171006230638-a6e239
 GO_MODULE_FILES+=	github.com/!burnt!sushi/locker/@v/v0.0.0-20171006230638-a6e239ea1c69.zip
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v0.3.1.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/xgb/@v/v0.0.0-20160522181843-27f122750802.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.17.0.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.17.0.zip
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.17.2.mod
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.17.2.zip
 GO_MODULE_FILES+=	github.com/armon/go-radix/@v/v1.0.1-0.20221118154546-54df44f2176c.mod
 GO_MODULE_FILES+=	github.com/armon/go-radix/@v/v1.0.1-0.20221118154546-54df44f2176c.zip
 GO_MODULE_FILES+=	github.com/aws/aws-sdk-go-v2/@v/v1.36.1.mod
@@ -192,8 +192,8 @@ GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.4.1.mod
 GO_MODULE_FILES+=	github.com/frankban/quicktest/@v/v1.7.2.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.9.0.zip
-GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.131.0.mod
-GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.131.0.zip
+GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.132.0.mod
+GO_MODULE_FILES+=	github.com/getkin/kin-openapi/@v/v0.132.0.zip
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/ghodss/yaml/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/go-gl/glfw/@v/v0.0.0-20190409004039-e6da0acd62b1.mod
@@ -432,8 +432,8 @@ GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.1.32.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.3.5.mod
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.4.13.mod
-GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.10.mod
-GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.10.zip
+GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.11.mod
+GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.7.11.zip
 GO_MODULE_FILES+=	go.opencensus.io/@v/v0.21.0.mod
 GO_MODULE_FILES+=	go.opencensus.io/@v/v0.22.0.mod
 GO_MODULE_FILES+=	go.opencensus.io/@v/v0.22.2.mod
