@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/02 19:03:58 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/05/05 08:56:26 wiz Exp $
 
-BLAKE2s (twm-1.0.12.tar.xz) = ce4ab945e419d0aebd52bb5dca129b7109d610988e11aea2e42d3510fb1da504
-SHA512 (twm-1.0.12.tar.xz) = f3d68df7e06516f6b74f19181efcfd9db2479c8ea0c72c3a6ed0dc1b222405b40d81a2dea17b662955e0c1783e87d0d3eb067c3b6e7c6eed8c0d38d03d362260
-Size (twm-1.0.12.tar.xz) = 262624 bytes
+BLAKE2s (twm-1.0.13.tar.xz) = 6f60234734f84da944e521e4e473a49495c0e384e6b69e7240ee1af22ca9f19b
+SHA512 (twm-1.0.13.tar.xz) = bab61865b798869d64fdf6e65ac9affee7ae0acf5523e4dc36e5fc65664ed83fb6ba8f1f7f495c29340e9e3dd00a386a81dcccfa11fc7adf3edda505db2f52b9
+Size (twm-1.0.13.tar.xz) = 271244 bytes
