@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3103 2025/05/05 13:57:16 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.3104 2025/05/05 14:08:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4095,3 +4095,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed net/netatalk22 [hauke 2025-05-05]
 	Removed net/netatalk3 [hauke 2025-05-05]
 	Updated net/netatalk4 to 4.2.2 [hauke 2025-05-05]
+	Updated devel/googletest to 1.17.0 [adam 2025-05-05]
+	Updated x11/py-wxPython to 4.2.3 [adam 2025-05-05]
