@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.11 2025/05/04 22:32:07 wiz Exp $
+# $NetBSD: genindex.awk,v 1.12 2025/05/05 06:19:55 wiz Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -199,7 +199,7 @@ BEGIN {
 
 END {
     if( SORT == "" ) { SORT = "sort"; }
-    indexf = SORT " > INDEX";
+    indexf = SORT " > " INDEX;
     if ( dependsfile == "" ) dependsfile = "/dev/null";
     if ( builddependsfile == "" ) builddependsfile = "/dev/null";
 
@@ -232,7 +232,7 @@ END {
     }
     close(builddependsfile);
 
-    printf("Generating INDEX file\n");
+    printf("Generated INDEX file\n");
 
 # Output format:
 #  package-name|package-path|installation-prefix|comment| \
