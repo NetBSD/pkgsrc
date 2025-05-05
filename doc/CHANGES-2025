@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3104 2025/05/05 14:08:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3105 2025/05/05 14:52:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4097,3 +4097,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/netatalk4 to 4.2.2 [hauke 2025-05-05]
 	Updated devel/googletest to 1.17.0 [adam 2025-05-05]
 	Updated x11/py-wxPython to 4.2.3 [adam 2025-05-05]
+	Updated devel/confuse to 3.3nb1 [wiz 2025-05-05]
