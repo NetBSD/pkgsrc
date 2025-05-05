@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3109 2025/05/05 22:11:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3110 2025/05/05 22:47:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4102,3 +4102,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added fonts/dina version 2.93 [vins 2025-05-05]
 	Updated wm/marswm to 0.6.1 [pin 2025-05-05]
 	Updated textproc/discount to 2.2.7dnb1 [wiz 2025-05-05]
+	Updated multimedia/ffmpeg2 to 2.8.22nb8 [wiz 2025-05-05]
