@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/06/28 11:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/05/05 14:59:23 schmonz Exp $
 
-PKGNAME=	pkg_notify-0.4.8
-PKGREVISION=	2
+PKGNAME=	pkg_notify-0.4.9
 CATEGORIES=	pkgtools
 
 MAINTAINER=	imil@gcu.info
@@ -12,7 +11,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 NO_BUILD=		yes
-NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 WRKSRC=			${WRKDIR}
 
@@ -23,7 +21,7 @@ CONF_FILES=		${EGDIR}/${PKGBASE}.list \
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=			pkg_notify
-SUBST_STAGE.pkg_notify=		build
+SUBST_STAGE.pkg_notify=		do-configure
 SUBST_FILES.pkg_notify=		pkg_notify
 SUBST_FILES.pkg_notify+=	pkg_notify.1
 SUBST_VARS.pkg_notify=		PKGSRCDIR

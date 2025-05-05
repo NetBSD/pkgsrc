@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.7 2020/09/20 11:25:41 wiz Exp $
+# $Id: pkg_notify,v 1.8 2025/05/05 14:59:24 schmonz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -124,8 +124,9 @@ sub find_version {
 	my $line = $_;
 	my $wasbad = 0;
 
-	if ($line =~ /([^0-9a-z]$dist|^$dist)([^\/\"<>\@]+)$extract_sufx/) {
+	if ($line =~ /([^0-9a-z]$dist|^$dist)([^\/\"<>\@]+)$extract_sufx/ && $line !~ /\.debian$extract_sufx/) {
 	    $realdist = $dist.$2.$extract_sufx;
+
 	    my $lsvers = $2;
 
 	    # replace alpha|beta|... with .0[num]0.
@@ -162,9 +163,13 @@ sub find_version {
 	    $lsvers =~ s/[\-\_]/./g;
 	    $version =~ s/[\-\_]/./g;
 
+	    # if file extension is .c, strip it
+	    $lsvers =~ s/\.c//g;
+
 	    # replace remaining chars
 	    # ex: 3.14a -> 3.14.1, i -> 9
 	    $lsvers = lc $lsvers;
+
 	    $lsvers =~ s/([a-z])/.$alnum{$1}/g;
 	    # numberify official version
 	    $version = lc $version;
