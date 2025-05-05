@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/05 16:51:58 vins Exp $
+share/fonts/X11/PCF/Dina_i400-10.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_i400-8.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_i400-9.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_i700-10.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_i700-8.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_i700-9.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r400-10.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r400-6.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r400-8.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r400-9.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r700-10.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r700-8.bdf.pcf.gz
+share/fonts/X11/PCF/Dina_r700-9.bdf.pcf.gz

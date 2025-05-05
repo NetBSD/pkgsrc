@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/05 16:51:58 vins Exp $
+
+BLAKE2s (dina-2.93.zip) = 981f66bbde3a3eaf467d5ffabfe92fd263a4fffbf1e61bc7ce89d53bbe342be1
+SHA512 (dina-2.93.zip) = cccf05b32d401ba77861e39471d9f6489a85b839dd8d49ec008eabd107189bb0a95bdd36805bc7907ab96fa65792910408192a136340f62c34a61b1d5c6f6307
+Size (dina-2.93.zip) = 78625 bytes
