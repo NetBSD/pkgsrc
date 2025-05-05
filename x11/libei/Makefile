@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/05/05 08:05:10 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/05 09:28:04 tnn Exp $
 
-DISTNAME=		libei-1.4.0
+DISTNAME=		libei-1.4.1
 CATEGORIES=		x11 devel
 MASTER_SITES=		https://gitlab.freedesktop.org/libinput/libei/-/archive/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.tar.bz2
