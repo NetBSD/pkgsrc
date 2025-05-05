@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.435 2025/05/04 16:32:30 vins Exp $
+# $NetBSD: Makefile,v 1.436 2025/05/05 16:53:07 vins Exp $
 #
 
 COMMENT=	Fonts
@@ -73,6 +73,7 @@ SUBDIR+=	cyr-rfx-mac-cyrillic
 SUBDIR+=	cyr-rfx-windows_1251
 SUBDIR+=	cyr-rfx-winlatin_1
 SUBDIR+=	dbz-ttf
+SUBDIR+=	dina
 SUBDIR+=	dejavu-ttf
 SUBDIR+=	droid-ttf
 SUBDIR+=	efont-unicode
