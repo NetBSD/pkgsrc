@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/17 17:42:44 hauke Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/05 13:57:00 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/addump
 ${PLIST.appletalk}bin/aecho
@@ -7,6 +7,7 @@ bin/afppasswd
 bin/afpstats
 bin/asip-status
 bin/dbd
+bin/fce_listen
 ${PLIST.appletalk}bin/getzones
 bin/macusers
 ${PLIST.appletalk}bin/nbplkup
@@ -23,11 +24,9 @@ include/atalk/atp.h
 include/atalk/bstrlib.h
 include/atalk/cnid.h
 include/atalk/ddp.h
-include/atalk/dictionary.h
 include/atalk/ea.h
 include/atalk/globals.h
 include/atalk/hash.h
-include/atalk/iniparser.h
 include/atalk/list.h
 include/atalk/logger.h
 include/atalk/nbp.h
@@ -36,7 +35,6 @@ include/atalk/netddp.h
 include/atalk/pap.h
 include/atalk/queue.h
 include/atalk/rtmp.h
-include/atalk/standards.h
 include/atalk/uam.h
 include/atalk/unicode.h
 include/atalk/unix.h
@@ -80,6 +78,7 @@ man/man1/afpstats.1
 man/man1/afptest.1
 man/man1/asip-status.1
 man/man1/dbd.1
+man/man1/fce_listen.1
 ${PLIST.appletalk}man/man1/getzones.1
 man/man1/macusers.1
 ${PLIST.appletalk}man/man1/nbp.1
@@ -116,12 +115,13 @@ ${PLIST.appletalk}sbin/macipgw
 sbin/netatalk
 ${PLIST.appletalk}sbin/papd
 ${PLIST.appletalk}sbin/timelord
-share/doc/netatalk/CONTRIBUTORS
-share/doc/netatalk/DEVELOPER
+share/doc/netatalk/APPLETALK.txt
+share/doc/netatalk/COMPILATION.txt
+share/doc/netatalk/CONTRIBUTORS.txt
+share/doc/netatalk/DEVELOPER.txt
 share/doc/netatalk/DOCKER.txt
 share/doc/netatalk/INSTALL.txt
-share/doc/netatalk/NEWS
-${PLIST.appletalk}share/doc/netatalk/README.AppleTalk
+share/doc/netatalk/NEWS.txt
 share/doc/netatalk/README.txt
 share/doc/netatalk/SECURITY.txt
 share/examples/netatalk/afp.conf

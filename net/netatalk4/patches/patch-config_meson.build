@@ -1,10 +1,10 @@
-$NetBSD: patch-config_meson.build,v 1.2 2025/03/12 09:54:41 hauke Exp $
+$NetBSD: patch-config_meson.build,v 1.3 2025/05/05 13:57:00 hauke Exp $
 
 Leave installation of config files to pkgsrc framework
 
---- config/meson.build.orig	2025-02-10 20:41:20.000000000 +0000
+--- config/meson.build.orig	2025-04-27 20:58:10.000000000 +0000
 +++ config/meson.build
-@@ -4,75 +4,14 @@ afp_conf = configure_file(
+@@ -4,47 +4,12 @@ afp_conf = configure_file(
      configuration: cdata,
  )
  
@@ -32,8 +32,8 @@ Leave installation of config files to pkgsrc framework
 -    else
 -        install_data(dbus_session_conf, install_dir: pkgconfdir)
 -    endif
- endif
- 
+-endif
+-
 -if have_afpstats
 -    if (
 -        fs.exists(dbus_sysconfpath / 'netatalk-dbus.conf')
@@ -49,13 +49,23 @@ Leave installation of config files to pkgsrc framework
 -
 -if have_appletalk
 -    static_conf_files += ['atalkd.conf', 'macipgw.conf', 'papd.conf']
+ endif
+ 
+ cups_libdir = ''
+@@ -62,37 +27,7 @@ if have_appletalk and have_cups and get_
+         input: 'pap.in',
+         output: 'pap',
+         configuration: cdata,
+-        install: true,
+-        install_dir: cups_libdir / 'cups/backend',
+-    )
 -endif
 -
 -foreach file : static_conf_files
 -    if (
 -        fs.exists(pkgconfdir / file)
 -        and not get_option('with-overwrite')
--    )
+     )
 -        message('will not replace existing', pkgconfdir / file)
 -    else
 -        install_data(file, install_dir: pkgconfdir)
@@ -75,8 +85,8 @@ Leave installation of config files to pkgsrc framework
 -    )
 -endif
 -
--install_data('README', install_dir: localstatedir / 'netatalk/CNID')
--
- if have_pam
-     subdir('pam')
+-if get_option('with-statedir-creation')
+-    install_data('README', install_dir: localstatedir / 'netatalk/CNID')
  endif
+ 
+ if have_pam

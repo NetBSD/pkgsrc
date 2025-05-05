@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/04/24 14:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/05 13:57:00 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
-DISTNAME=	netatalk-4-1-2
-PKGREVISION=	4
+DISTNAME=	netatalk-4-2-2
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
@@ -165,6 +164,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/iniparser/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=        libevent>=2
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/cracklib/buildlink3.mk"
