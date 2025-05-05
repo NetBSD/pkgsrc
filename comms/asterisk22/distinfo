@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/04/15 15:35:01 manu Exp $
+$NetBSD: distinfo,v 1.4 2025/05/05 12:40:30 manu Exp $
 
-BLAKE2s (asterisk-22.0.0/86d62097332337da942fa4dd6405f136ae245be3) = 1f5ff77bc7a80732d66c791d455fcc1a82b643c2e1e23fcec0a4b9398228d8d0
-SHA512 (asterisk-22.0.0/86d62097332337da942fa4dd6405f136ae245be3) = 461765a5be8c386d254571e71d909afe1381c864407bdc16dfce4645c730815de4dfdd6a45caedc593f1903b65ddb4e3934bfdde655f2b8531122bb3d0c72dc2
-Size (asterisk-22.0.0/86d62097332337da942fa4dd6405f136ae245be3) = 960527 bytes
 BLAKE2s (asterisk-22.0.0/asterisk-22.0.0.tar.gz) = 2447fca0966c8d19d71c11a9271c6a4aa28fbba36aaff0afacc0fa778fc643ee
 SHA512 (asterisk-22.0.0/asterisk-22.0.0.tar.gz) = fa2c530a81f7351369229b2a36ac229a75d7a1ce8c3cdae0340be331979246ecee1e4f90c31fb6bc645cc2066280d40e2385027aedc6bd2c205426b2164e1fc5
 Size (asterisk-22.0.0/asterisk-22.0.0.tar.gz) = 26196468 bytes
@@ -30,9 +27,7 @@ SHA1 (patch-build__tools_make__xml__documentation) = 2c617cfdc96b1ddf51736205b83
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-cdr_cdr__pgsql.c) = 82b002a1f5ed3b7361a98e2bffb5cea8833949b8
 SHA1 (patch-cel_cel__pgsql.c) = b280efab2b035ce60be268bac9bc8824910b2b8f
-SHA1 (patch-channels_Makefile) = 938120075aa97ac62951b670b36a463b1fcbf540
 SHA1 (patch-channels_chan__pjsip.c) = efd4cbb82133fc5ddf7de70d01c99e185c585211
-SHA1 (patch-channels_chan__sip.c) = b97f1a805e076c0772e2aae1112b71d57aa31da8
 SHA1 (patch-channels_pjsip_cli__commands.c) = 01baa9d242e3af02a1f3540cfb3064ad68c71d67
 SHA1 (patch-channels_pjsip_dialplan__functions.c) = 2cf8199c4ec9d4894eb922c2703d49ecc06188ef
 SHA1 (patch-configure) = 7bb72c26abe5c362bf8e415821534b83f6241473
