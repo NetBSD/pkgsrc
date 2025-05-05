@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/08/05 01:23:58 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2025/05/05 22:22:11 wiz Exp $
 
 BLAKE2s (boost_1_77_0.tar.bz2) = 11f9651d7078e67a69a97f46dce3131af1f1b3ba5976c26435cd17a66161cbf1
 SHA512 (boost_1_77_0.tar.bz2) = 39b45c9b60bc5a2a4c669a4463d1272c1e093376b2fb374d7f20a84ea10a3e23bb04b335a735a83a04575731f874d9bff77e89acd947524b3fbbae1b26ae1f2f
@@ -34,4 +34,5 @@ SHA1 (patch-sql_join__optimizer_bit__utils.h) = f37604945c39383448c50d1b57ec1461
 SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = ff155def0b522b3c84ef06438d5e6d59336e6cbe
 SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-linux.h) = 195469587bfc24bc71ffc6814ccbd973170a3946
 SHA1 (patch-storage_ndb_src_common_portlib_NdbHW.cpp) = 6ac23cfd535fa2cf14703cca84a865f93d574263
+SHA1 (patch-storage_ndb_src_ndbapi_NdbEventOperationImpl.cpp) = f254045b12424fed85bfe7d9dc4989c04bf78092
 SHA1 (patch-vio_viosocket.cc) = 6aab7e41f0a34a212c91a61ffe1eb2e74090745e
