@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.8 2025/05/05 06:19:55 wiz Exp $
+# $NetBSD: toplevel.mk,v 1.9 2025/05/05 06:24:57 wiz Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -68,14 +68,12 @@ ${.CURDIR}/PKGDB:
 
 .PHONY: index
 index:
-	@${RM} -f ${.CURDIR}/INDEX
-	@${MAKE} ${.CURDIR}/INDEX
+	@${MAKE} ${.CURDIR}/PKGDB
+	@${AWK} -f ./mk/scripts/genindex.awk -v SORT=${SORT} -v INDEX=${.CURDIR}/INDEX.new ${.CURDIR}/PKGDB && ${MV} ${.CURDIR}/INDEX.new ${.CURDIR}/INDEX
+	@${RM} -f ${.CURDIR}/PKGDB
 
 ${.CURDIR}/INDEX:
-	@${MAKE} ${.CURDIR}/PKGDB
-	@${RM} -f ${.CURDIR}/INDEX
-	@${AWK} -f ./mk/scripts/genindex.awk -v SORT=${SORT} -v INDEX=${.CURDIR}/INDEX ${.CURDIR}/PKGDB
-	@${RM} -f ${.CURDIR}/PKGDB
+	@${MAKE} index
 
 print-index: ${.CURDIR}/INDEX
 	@${AWK} -F\| '{ printf("Pkg:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
