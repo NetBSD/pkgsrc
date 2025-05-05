@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3096 2025/05/05 08:26:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3097 2025/05/05 08:33:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4082,3 +4082,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.1.47 [triaxx 2025-05-05]
 	Updated net/rclone to 1.69.2 [adam 2025-05-05]
 	Updated archivers/minizip-ng to 4.0.10 [adam 2025-05-05]
+	Updated devel/py-termcolor to 3.1.0 [adam 2025-05-05]
+	Updated devel/py-scikit-build-core to 0.11.2 [adam 2025-05-05]
