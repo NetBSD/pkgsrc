@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2025/04/06 04:58:30 iquiw Exp $
+# $NetBSD: Makefile,v 1.109 2025/05/05 01:33:56 iquiw Exp $
 
-DISTNAME=	fzf-0.61.0
+DISTNAME=	fzf-0.62.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
