@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.9 2025/05/05 06:24:57 wiz Exp $
+# $NetBSD: toplevel.mk,v 1.10 2025/05/05 06:31:58 wiz Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -65,6 +65,7 @@ ${.CURDIR}/PKGDB:
 		npkg=`${EXPR} $$npkg + 1` ; \
 		cd $$PKGSRCDIR  ; \
 	done
+	@${ECHO_MSG}
 
 .PHONY: index
 index:
