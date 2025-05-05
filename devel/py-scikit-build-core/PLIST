@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/03/03 08:43:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/05 08:33:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -67,6 +67,9 @@ ${PYSITELIB}/scikit_build_core/ast/tokenizer.pyo
 ${PYSITELIB}/scikit_build_core/build/__init__.py
 ${PYSITELIB}/scikit_build_core/build/__init__.pyc
 ${PYSITELIB}/scikit_build_core/build/__init__.pyo
+${PYSITELIB}/scikit_build_core/build/__main__.py
+${PYSITELIB}/scikit_build_core/build/__main__.pyc
+${PYSITELIB}/scikit_build_core/build/__main__.pyo
 ${PYSITELIB}/scikit_build_core/build/_editable.py
 ${PYSITELIB}/scikit_build_core/build/_editable.pyc
 ${PYSITELIB}/scikit_build_core/build/_editable.pyo
@@ -103,6 +106,9 @@ ${PYSITELIB}/scikit_build_core/builder/__init__.pyo
 ${PYSITELIB}/scikit_build_core/builder/__main__.py
 ${PYSITELIB}/scikit_build_core/builder/__main__.pyc
 ${PYSITELIB}/scikit_build_core/builder/__main__.pyo
+${PYSITELIB}/scikit_build_core/builder/_load_provider.py
+${PYSITELIB}/scikit_build_core/builder/_load_provider.pyc
+${PYSITELIB}/scikit_build_core/builder/_load_provider.pyo
 ${PYSITELIB}/scikit_build_core/builder/builder.py
 ${PYSITELIB}/scikit_build_core/builder/builder.pyc
 ${PYSITELIB}/scikit_build_core/builder/builder.pyo
@@ -187,6 +193,9 @@ ${PYSITELIB}/scikit_build_core/metadata/regex.pyo
 ${PYSITELIB}/scikit_build_core/metadata/setuptools_scm.py
 ${PYSITELIB}/scikit_build_core/metadata/setuptools_scm.pyc
 ${PYSITELIB}/scikit_build_core/metadata/setuptools_scm.pyo
+${PYSITELIB}/scikit_build_core/metadata/template.py
+${PYSITELIB}/scikit_build_core/metadata/template.pyc
+${PYSITELIB}/scikit_build_core/metadata/template.pyo
 ${PYSITELIB}/scikit_build_core/program_search.py
 ${PYSITELIB}/scikit_build_core/program_search.pyc
 ${PYSITELIB}/scikit_build_core/program_search.pyo
@@ -211,9 +220,6 @@ ${PYSITELIB}/scikit_build_core/resources/scikit-build.schema.json
 ${PYSITELIB}/scikit_build_core/settings/__init__.py
 ${PYSITELIB}/scikit_build_core/settings/__init__.pyc
 ${PYSITELIB}/scikit_build_core/settings/__init__.pyo
-${PYSITELIB}/scikit_build_core/settings/_load_provider.py
-${PYSITELIB}/scikit_build_core/settings/_load_provider.pyc
-${PYSITELIB}/scikit_build_core/settings/_load_provider.pyo
 ${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.py
 ${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.pyc
 ${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.pyo
