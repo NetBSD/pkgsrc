@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/05 08:05:10 tnn Exp $
+bin/ei-debug-events
+include/libei-1.0/libei.h
+lib/libei.so
+lib/libei.so.1
+lib/libei.so.${PKGVERSION}
+lib/pkgconfig/libei-1.0.pc

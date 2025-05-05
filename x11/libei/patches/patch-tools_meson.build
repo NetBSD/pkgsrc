@@ -1,0 +1,18 @@
+$NetBSD: patch-tools_meson.build,v 1.1 2025/05/05 08:05:10 tnn Exp $
+
+Disable Linux-only code.
+
+--- tools/meson.build.orig	2025-03-10 09:26:30.313921995 +0000
++++ tools/meson.build
+@@ -21,11 +21,6 @@ if build_libeis
+ endif
+ 
+ if build_libei
+-    executable('ei-demo-client',
+-               'ei-demo-client.c',
+-               dependencies: [dep_libutil, dep_libei, dep_libxkbcommon],
+-               include_directories: [inc_builddir],
+-    )
+ 
+     executable('ei-debug-events',
+                'ei-debug-events.c',
