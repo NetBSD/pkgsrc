@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3105 2025/05/05 14:52:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3106 2025/05/05 14:59:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4098,3 +4098,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/googletest to 1.17.0 [adam 2025-05-05]
 	Updated x11/py-wxPython to 4.2.3 [adam 2025-05-05]
 	Updated devel/confuse to 3.3nb1 [wiz 2025-05-05]
+	Updated pkgtools/pkg_notify to 0.4.9 [schmonz 2025-05-05]
