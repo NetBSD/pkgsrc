@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3090 2025/05/04 18:34:27 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3091 2025/05/05 01:34:41 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/cargo-bundle-licenses version 4.0.0 [pin 2025-05-04]
 	Added fonts/cozette version 1.28.0 [vins 2025-05-04]
 	Updated mail/meli to 0.8.12 [vins 2025-05-04]
+	Updated sysutils/fzf to 0.62.0 [iquiw 2025-05-05]
