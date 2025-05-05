@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.21 2024/04/12 09:09:03 hauke Exp $
-
-BLAKE2s (netatalk-2.3.2.tar.xz) = 9f9e376bb1e53677c3588272c4d2469cd643913634ee52ad8593f96d793ac021
-SHA512 (netatalk-2.3.2.tar.xz) = 3c9e3e894ecd049dbbd9367a002337709c51cda036e2da5219e281642c4820ae535843612ea56102f8364970580371603b350c3c16af3825386d7a0a85e572e4
-Size (netatalk-2.3.2.tar.xz) = 1031144 bytes
-SHA1 (patch-config_Makefile.in) = c50f69262dacf559265d615cea798830eaa3b0e6
-SHA1 (patch-configure) = 6b9d73ac0c8ba4913834402a587b734d342c3830
