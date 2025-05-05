@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3098 2025/05/05 08:56:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3099 2025/05/05 09:01:44 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4085,3 +4085,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-termcolor to 3.1.0 [adam 2025-05-05]
 	Updated devel/py-scikit-build-core to 0.11.2 [adam 2025-05-05]
 	Updated wm/twm to 1.0.13 [wiz 2025-05-05]
+	Added devel/libportal version 0.9.1 [tnn 2025-05-05]
+	Added x11/libei version 1.4.0 [tnn 2025-05-05]
+	Added net/deskflow version 1.21.2 [tnn 2025-05-05]
+	Removed net/synergy successor net/deskflow [tnn 2025-05-05]
+	Added graphics/flameshot version 12.1.0 [tnn 2025-05-05]
