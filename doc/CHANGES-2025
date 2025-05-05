@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3094 2025/05/05 07:02:38 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3095 2025/05/05 07:50:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4079,3 +4079,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/task to 3.43.3 [iquiw 2025-05-05]
 	Updated www/hugo to 0.147.1 [ffaubert 2025-05-05]
 	Updated games/openrct2 to 0.4.22 [triaxx 2025-05-05]
+	Updated graphics/ImageMagick to 7.1.1.47 [triaxx 2025-05-05]
