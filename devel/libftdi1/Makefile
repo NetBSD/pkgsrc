@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/12/29 15:09:44 adam Exp $
+# $NetBSD: Makefile,v 1.54 2025/05/05 22:14:13 gdt Exp $
 
 DISTNAME=	libftdi1-1.5
 PKGREVISION=	10
@@ -11,6 +11,9 @@ HOMEPAGE=	https://www.intra2net.com/en/developer/libftdi/
 COMMENT=	Userland driver library for FTDI USB chips
 LICENSE=	gnu-lgpl-v2.1
 
+# \todo Build fails if swig4 is installed.  Apparently swig4 is
+# (incorrectly) used and the signature of SWIG_Python_AppendOutput has
+# changed.
 TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 
 USE_CMAKE=	yes
