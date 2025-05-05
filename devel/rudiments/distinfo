@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2022/12/03 15:50:50 adam Exp $
+$NetBSD: distinfo,v 1.28 2025/05/05 22:00:49 wiz Exp $
 
 BLAKE2s (rudiments-1.4.2.tar.gz) = 1ade98c58ac4235f7622a2c71ebe4b19ea16024593269a223c774f562e303113
 SHA512 (rudiments-1.4.2.tar.gz) = 41603c8dd8c7ccfa96b8e0f83249c989a8ce0323fd218a954617907446fddfd98828507c6c57b3fce5171c2c0c2a5ab2d1ff8b8ba44ae4762240f8a4819067f0
@@ -7,3 +7,4 @@ SHA1 (patch-configure) = ce847ba4528576f63a7c0dbfb4934c112c28895b
 SHA1 (patch-include_rudiments_private_socketclient.h) = f1ac8fc292f092c9082b41806fc380af0e7930e9
 SHA1 (patch-src_Makefile.in) = f844ef8ad096104885849d1e8df056ab4ab9087d
 SHA1 (patch-src_listener.cpp) = ad4fb17dfdbe325a73236bc9b37c84d7bf7f90c7
+SHA1 (patch-src_semaphoreset.cpp) = a8f606dcb7151738a919d4aa78e6e9598b4298e8
