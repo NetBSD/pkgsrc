@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1062 2025/03/26 22:52:07 wiz Exp $
+# $NetBSD: Makefile,v 1.1063 2025/05/05 08:53:52 tnn Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -191,6 +191,7 @@ SUBDIR+=	libXxf86dga
 SUBDIR+=	libXxf86vm
 SUBDIR+=	libdisplay-info
 SUBDIR+=	libdrm
+SUBDIR+=	libei
 SUBDIR+=	libfakekey
 SUBDIR+=	libfm-qt
 SUBDIR+=	libgdm

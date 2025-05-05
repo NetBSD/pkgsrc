@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4470 2025/05/04 15:28:44 pin Exp $
+# $NetBSD: Makefile,v 1.4471 2025/05/05 08:53:52 tnn Exp $
 #
 
 COMMENT=	Development utilities
@@ -1046,6 +1046,7 @@ SUBDIR+=	libowfat
 SUBDIR+=	libpeas
 SUBDIR+=	libpgm
 SUBDIR+=	libphutil
+SUBDIR+=	libportal
 SUBDIR+=	libportlib
 SUBDIR+=	libproplist
 SUBDIR+=	librdkafka
