@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3092 2025/05/05 01:58:23 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.3093 2025/05/05 06:49:53 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/meli to 0.8.12 [vins 2025-05-04]
 	Updated sysutils/fzf to 0.62.0 [iquiw 2025-05-05]
 	Updated devel/task to 3.43.3 [iquiw 2025-05-05]
+	Updated www/hugo to 0.147.1 [ffaubert 2025-05-05]
