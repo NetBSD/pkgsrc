@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/05 08:59:03 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/05 09:45:19 tnn Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	flameshot-12.1.0
@@ -20,6 +20,8 @@ SUBST_CLASSES+=		mandir
 SUBST_STAGE.mandir=	pre-configure
 SUBST_FILES.mandir=	src/CMakeLists.txt
 SUBST_VARS.mandir=	PKGMANDIR
+
+BROKEN_ON_PLATFORM+=		Darwin-*-*
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
