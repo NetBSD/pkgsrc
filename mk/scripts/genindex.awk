@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genindex.awk,v 1.12 2025/05/05 06:19:55 wiz Exp $
+# $NetBSD: genindex.awk,v 1.13 2025/05/05 06:31:28 wiz Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -232,7 +232,7 @@ END {
     }
     close(builddependsfile);
 
-    printf("Generated INDEX file\n");
+    printf("Generating INDEX file\n");
 
 # Output format:
 #  package-name|package-path|installation-prefix|comment| \
@@ -241,6 +241,10 @@ END {
 
     pkgcnt = 0;
     for (toppkg in topdepends){
+	if (length(pkgdir2name[toppkg]) < 1) {
+	    printf("\twarning: package %s not found\n", toppkg);
+	    continue;
+	}
 	pkgcnt++;
 	printf("%s|", pkgdir2name[toppkg]) | indexf;
 	printf("%s|", toppkg) | indexf;
