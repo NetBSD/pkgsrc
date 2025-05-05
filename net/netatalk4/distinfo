@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2025/03/17 17:42:44 hauke Exp $
+$NetBSD: distinfo,v 1.8 2025/05/05 13:57:00 hauke Exp $
 
-BLAKE2s (netatalk-4-1-2.tar.gz) = a0b33a04528152322b84f2e10345871f96e343d88079610cefcf1b4aef819665
-SHA512 (netatalk-4-1-2.tar.gz) = b1fde5a0b27e6e67751caf40759e8648e48f3daeb8d43041761023147dc3edac33d07f8c40ec853dffd57ec7b69ebc94c99a0d7ded72ea0ff803865e937b8aba
-Size (netatalk-4-1-2.tar.gz) = 1327961 bytes
-SHA1 (patch-config_meson.build) = 5a746388b89d094ca6847e487e6ef18d98dac0ca
+BLAKE2s (netatalk-4-2-2.tar.gz) = 7b90146ab9590e2b9ce975338cb669ac77eb3165980b395b50e5159fad464b74
+SHA512 (netatalk-4-2-2.tar.gz) = b303decb79061ef093b71715c29de18513bfa8665a931a4b331dfdb1c5d7243bc2ea6df6a59fdb84b81d3c5b1eb7f61fff691a04db6f6326fdf566091957223a
+Size (netatalk-4-2-2.tar.gz) = 1389697 bytes
+SHA1 (patch-config_meson.build) = 2bae343245bcd33869ccb2f47f802fb8e2290050
 SHA1 (patch-config_pam_meson.build) = f321c7bd246f1d82c287e745ea75c9561bc528a9
-SHA1 (patch-meson.build) = 6f407838065addb4807dc46a43440d4a97a35129
+SHA1 (patch-meson.build) = 39ed212aee8af8e7dde2ddea33f976c8ff86cbb1
