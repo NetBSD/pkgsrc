@@ -1,93 +1,59 @@
-$NetBSD: patch-meson.build,v 1.5 2025/03/17 17:42:45 hauke Exp $
+$NetBSD: patch-meson.build,v 1.6 2025/05/05 13:57:00 hauke Exp $
 
 Add PREFIXed paths (include, lib) for all OSes.
 
 Make PREFIX path configurable.
 
-Quota support on NetBSD is currently broken, pull up an upstream
-change to disable it explicitly.
-
-While NetBSD has libwrap, the meson code doesn't find it. The test
-cond still succeeds, so add a branch that does not require the
-library.
-
 Install at.h on Linux, we do it on NetBSD, too.
 
---- meson.build.orig	2025-02-10 20:41:20.000000000 +0000
+--- meson.build.orig	2025-04-27 20:58:10.000000000 +0000
 +++ meson.build
-@@ -162,7 +162,7 @@ if host_os in ['dragonfly', 'freebsd', '
-         'include',
-         'sys',
-         'etc/afpd',
--        '/usr/local/include',
-+        get_option('prefix') / 'include',
-     )
- elif host_os == 'netbsd'
-     root_includes = include_directories(
-@@ -170,7 +170,7 @@ elif host_os == 'netbsd'
-         'include',
-         'sys',
-         'etc/afpd',
--        '/usr/pkg/include',
-+        get_option('prefix') / 'include',
-     )
- elif host_os == 'omnios'
-     root_includes = include_directories(
-@@ -178,7 +178,7 @@ elif host_os == 'omnios'
-         'include',
-         'sys',
-         'etc/afpd',
--        '/opt/local/include',
-+        get_option('prefix') / 'include',
-     )
- else
-     root_includes = include_directories(
-@@ -186,6 +186,7 @@ else
-         'include',
-         'sys',
-         'etc/afpd',
-+        get_option('prefix') / 'include',
-     )
- endif
+@@ -152,16 +152,9 @@ include_dirs = [
+     'include',
+     'sys',
+     'etc/afpd',
++    get_option('prefix') / 'include',
+ ]
  
-@@ -201,7 +202,7 @@ cmarkgfm = find_program('cmark-gfm', req
- if host_os == 'darwin'
-     bison = find_program(brew_prefix / 'opt/bison/bin/bison', required: false)
-     if not bison.found()
--        bison = find_program('/opt/local/bin/bison', required: false)
-+        bison = find_program( get_option('prefix') / 'bison', required: false)
-     endif
- else
-     bison = find_program('bison', required: false)
-@@ -215,15 +216,15 @@ uname_stdout = run_command(uname, '-a',
+-if host_os in ['dragonfly', 'freebsd', 'openbsd']
+-    include_dirs += ['/usr/local/include']
+-elif host_os == 'netbsd'
+-    include_dirs += ['/usr/pkg/include']
+-elif uname.found() and uname_stdout.to_lower().contains('omnios')
+-    include_dirs += ['/opt/local/include']
+-endif
+-
+ # note: the brew app is not visible from within the brew build wrapper iteslf,
+ # so rather than checking for brew we apply a blanket prefix
+ brew_prefix = ''
+@@ -183,13 +176,7 @@ endif
+ 
  libsearch_dirs = []
  
- if host_os in ['dragonfly', 'freebsd', 'openbsd']
+-if host_os in ['dragonfly', 'freebsd', 'openbsd']
 -    libsearch_dirs += '/usr/local/lib'
-+    libsearch_dirs += get_option('prefix') / 'lib'
- endif
- 
- if host_os == 'netbsd'
+-elif host_os == 'netbsd'
 -    libsearch_dirs += '/usr/pkg/lib'
-+    libsearch_dirs += get_option('prefix') / 'lib'
- endif
- 
- if uname.found() and uname_stdout.to_lower().contains('omnios')
+-elif uname.found() and uname_stdout.to_lower().contains('omnios')
 -    libsearch_dirs += '/opt/local/lib'
-+    libsearch_dirs += get_option('prefix') / 'lib'
- endif
+-endif
++libsearch_dirs += get_option('prefix') / 'lib'
  
- socket = cc.find_library('socket', required: false)
-@@ -260,7 +261,7 @@ add_global_link_arguments(netatalk_commo
+ if brew_prefix != ''
+     libsearch_dirs += brew_prefix + '/lib'
+@@ -227,9 +214,8 @@ add_global_link_arguments(netatalk_commo
+ #################
  
  header_dir = []
- if host_os in ['dragonfly', 'freebsd', 'openbsd']
+-if host_os in ['dragonfly', 'freebsd', 'openbsd']
 -    header_dir += '/usr/local/include'
-+    header_dir += get_option('prefix') / 'include'
- endif
+-endif
++
++header_dir += get_option('prefix') / 'include'
  
  check_headers = [
-@@ -456,9 +457,7 @@ else
+     'acl/libacl.h',
+@@ -386,9 +372,7 @@ else
      endif
  
      bdb_dirs += [
@@ -98,41 +64,16 @@ Install at.h on Linux, we do it on NetBSD, too.
          '/usr',
      ]
  endif
-@@ -610,8 +609,7 @@ unicode_dirs = [
-     meson.current_source_dir(),
-     '/usr/share/unicode',
-     '/usr/share/unicode/ucd',
--    '/usr/pkg/share/texmf-dist/tex/generic/unicode-data',
--    '/usr/local/share/texmf-dist/tex/generic/unicode-data/',
-+    get_option('prefix') / 'share/texmf-dist/tex/generic/unicode-data',
- ]
- 
- unicode_data_path = get_option('with-unicode-data-path')
-@@ -1025,6 +1023,12 @@ endif
- 
- enable_quota = get_option('with-quota')
- 
-+if host_os == 'netbsd'
-+    enable_quota = false
-+    cdata.set('NO_QUOTA_SUPPORT', 1)
-+    warning('quota is broken on NetBSD, see https://github.com/Netatalk/netatalk/issues/1225')
-+endif
-+
- prop = cc.find_library('prop', required: false)
- quota = cc.find_library('quota', required: false)
- rpcsvc = cc.find_library('rpcsvc', required: false)
-@@ -1644,9 +1648,7 @@ else
-         '/usr/share/xml/docbook/stylesheet/docbook-xsl',
-         '/usr/share/xml/docbook/xsl-stylesheets-nons',
-         '/usr/share/xml/docbook/xsl-stylesheets',
--        '/opt/local/share/xsl/docbook',
--        '/usr/local/share/xsl/docbook',
--        '/usr/pkg/share/xsl/docbook',
-+        get_option('prefix') / 'share/xsl/docbook',
-     ]
- endif
- 
-@@ -1714,7 +1716,7 @@ else
+@@ -824,7 +808,7 @@ endif
+ if host_os == 'darwin'
+     bison = find_program(brew_prefix / 'opt/bison/bin/bison', required: false)
+     if not bison.found()
+-        bison = find_program('/opt/local/bin/bison', required: false)
++        bison = find_program( get_option('prefix') / 'bison', required: false)
+     endif
+ else
+     bison = find_program('bison', required: false)
+@@ -1540,7 +1524,7 @@ else
          pam_paths = [
              '/',
              '/usr',
@@ -141,8 +82,12 @@ Install at.h on Linux, we do it on NetBSD, too.
          ]
  
          foreach path : pam_paths
-@@ -2066,12 +2068,8 @@ if fs.is_dir('/usr/share/cracklib')
+@@ -1870,16 +1854,10 @@ cracklib_dict = ''
+ 
+ if fs.is_dir('/usr/share/cracklib')
      cracklib_dict += '/usr/share/cracklib/pw_dict'
++elif fs.is_dir(get_option('prefix') / 'share/cracklib')
++    cracklib_dict += get_option('prefix') / 'share/cracklib/cracklib-small'
  elif fs.is_dir('/var/cache/cracklib')
      cracklib_dict += '/var/cache/cracklib/cracklib_dict'
 -elif fs.is_dir('/usr/local/libdata/cracklib')
@@ -151,12 +96,12 @@ Install at.h on Linux, we do it on NetBSD, too.
 -    cracklib_dict += '/usr/pkg/share/cracklib/pw_dict'
 -elif fs.is_dir('/usr/local/share/cracklib')
 -    cracklib_dict += '/usr/local/share/cracklib/cracklib-small'
-+elif fs.is_dir(get_option('prefix') / 'share/cracklib')
-+    cracklib_dict += get_option('prefix') / 'share/cracklib/cracklib-small'
+-elif fs.is_dir('/opt/homebrew/share/cracklib')
+-    cracklib_dict += '/opt/homebrew/share/cracklib/cracklib-small'
  endif
  
  if not enable_cracklib
-@@ -2193,7 +2191,6 @@ if host_os.contains('freebsd')
+@@ -2001,7 +1979,6 @@ if host_os.contains('freebsd')
      cdata.set('FREEBSD', 1)
      cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
  elif host_os.contains('linux')
