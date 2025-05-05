@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/05/05 08:05:10 tnn Exp $
+
+BLAKE2s (libei-1.4.0.tar.bz2) = 8f399b2be71ba23abee1df26e69a6bdea644711b24ab27d06ce68a0b33a25fa7
+SHA512 (libei-1.4.0.tar.bz2) = c5ac78687b8cbc174406d9b176968416496cd354a20b5861e2959be0cb361edc9437acad46de0013f78b204ec28594d044f79b00a6442e7bda513e283968270b
+Size (libei-1.4.0.tar.bz2) = 182498 bytes
+SHA1 (patch-tools_meson.build) = a3b3d8c34d43c5199a3c459a6fb4155ece5fbbd1
