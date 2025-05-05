@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/11/20 00:07:41 gdt Exp $
+$NetBSD: distinfo,v 1.3 2025/05/05 14:08:24 adam Exp $
 
-BLAKE2s (wxPython-4.2.1.tar.gz) = 12a049858c1d3c9764c31dad1476d8b9685ebebb9b708b4eb363129e02667fb9
-SHA512 (wxPython-4.2.1.tar.gz) = ee9ab8effb3c71de004c3d61ec583b9980c6b75fe9bb04cf2c76025ea70afc206bc3073c44d1c83c7ba604afed9fd38c01b9ef506617ba279a4ac58e3cf34438
-Size (wxPython-4.2.1.tar.gz) = 73724359 bytes
-SHA1 (patch-wx_svg___nanosvg.pyx) = f87fbd2d96a0f26b95524d0fd83bca4f1eed287d
+BLAKE2s (wxPython-4.2.3.tar.gz) = 374bb98927a4e0c048e50bd0ed1ddd341fbe7e443c01648841a8663f07d725fa
+SHA512 (wxPython-4.2.3.tar.gz) = c7b9f0758b9d77dbeab436e8069c024796b6f252af5043615e14083b3f62fb44386c5f325a118f9e2d99c15eeb7687bb1cc1a13a00263114689b32e2126364a7
+Size (wxPython-4.2.3.tar.gz) = 58861286 bytes
