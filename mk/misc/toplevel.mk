@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.7 2016/07/11 22:53:48 wiz Exp $
+# $NetBSD: toplevel.mk,v 1.8 2025/05/05 06:19:55 wiz Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -74,7 +74,7 @@ index:
 ${.CURDIR}/INDEX:
 	@${MAKE} ${.CURDIR}/PKGDB
 	@${RM} -f ${.CURDIR}/INDEX
-	@${AWK} -f ./mk/scripts/genindex.awk PKGSRCDIR=${.CURDIR} SORT=${SORT} ${.CURDIR}/PKGDB
+	@${AWK} -f ./mk/scripts/genindex.awk -v SORT=${SORT} -v INDEX=${.CURDIR}/INDEX ${.CURDIR}/PKGDB
 	@${RM} -f ${.CURDIR}/PKGDB
 
 print-index: ${.CURDIR}/INDEX
