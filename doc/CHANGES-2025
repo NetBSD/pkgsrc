@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3112 2025/05/06 07:28:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3113 2025/05/06 10:31:35 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4106,3 +4106,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hypothesis to 6.131.10 [adam 2025-05-06]
 	Updated devel/py-test-timeout to 2.4.0 [adam 2025-05-06]
 	Updated net/scamper to 20250505 [wiz 2025-05-06]
+	Updated net/nextcloud-client to 3.16.4 [hauke 2025-05-06]
