@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/05/06 11:57:41 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/06 12:10:56 wiz Exp $
 bin/arandr
 bin/unxrandr
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,6 +34,8 @@ ${PYSITELIB}/screenlayout/widget.pyo
 ${PYSITELIB}/screenlayout/xrandr.py
 ${PYSITELIB}/screenlayout/xrandr.pyc
 ${PYSITELIB}/screenlayout/xrandr.pyo
+man/man1/arandr.1
+man/man1/unxrandr.1
 share/applications/arandr.desktop
 share/locale/ar/LC_MESSAGES/arandr.mo
 share/locale/br/LC_MESSAGES/arandr.mo
@@ -73,5 +75,3 @@ share/locale/tr/LC_MESSAGES/arandr.mo
 share/locale/uk/LC_MESSAGES/arandr.mo
 share/locale/zh_CN/LC_MESSAGES/arandr.mo
 share/locale/zh_Hant/LC_MESSAGES/arandr.mo
-share/man/man1/arandr.1.gz
-share/man/man1/unxrandr.1.gz
