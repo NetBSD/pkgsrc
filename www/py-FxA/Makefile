@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/10/13 08:17:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/06 12:43:22 wiz Exp $
 
-DISTNAME=	pyfxa-0.7.9
+DISTNAME=	pyfxa-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyfxa/FxA/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfxa/}
@@ -24,8 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-otp>=0:../../security/py-otp
 
 USE_LANGUAGES=	# none
 
-# test status as of 0.7.9
-# 126 passed, 14 skipped, 2 warnings
+# test status as of 0.8.1
+# 117 passed, 4 skipped, 1 warning
 ALLOW_NETWORK_ACCESS=	yes
 
 .include "../../lang/python/wheel.mk"
