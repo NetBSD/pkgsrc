@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/04/30 12:22:57 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/05/06 10:09:35 jperkin Exp $
 bin/help2man
 ${PLIST.nls}info/help2man-de.info
 ${PLIST.nls}info/help2man-es.info
@@ -11,7 +11,7 @@ ${PLIST.nls}info/help2man-sv.info
 ${PLIST.nls}info/help2man-uk.info
 ${PLIST.nls}info/help2man-zh_CN.info
 info/help2man.info
-${PLIST.nls}lib/bindtextdomain.${SOEXT}
+${PLIST.nls}lib/bindtextdomain.${SHLIB_EXT}
 ${PLIST.nls}man/da/man1/help2man.1
 ${PLIST.nls}man/de/man1/help2man.1
 ${PLIST.nls}man/el/man1/help2man.1
