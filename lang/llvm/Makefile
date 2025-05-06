@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/04/17 22:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/05/06 12:07:33 wiz Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -96,19 +96,15 @@ SUBST_SED.python=	-e '1s,\#!.*python.*,\#!${PYTHONBIN},'
 .endif
 
 PLIST_VARS+=	notdylib
-.if ${SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
-.else
-SOEXT=		so
+.if ${SHLIB_TYPE} != "dylib"
 PLIST.notdylib=	yes
 .endif
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 NOTDYLIBS=		LTO Remarks
 .for libname in ${NOTDYLIBS}
-PRINT_PLIST_AWK+=	/lib${libname}.${SOEXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SOEXT}\.${LLVM_MAJOR_VERSION}/, ".$${SOEXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
+PRINT_PLIST_AWK+=	/lib${libname}.${SHLIB_EXT}.${LLVM_MAJOR_VERSION}/ { gsub(/\.${SHLIB_EXT}\.${LLVM_MAJOR_VERSION}/, ".$${SHLIB_EXT}.$${LLVM_MAJOR_VERSION}"); print "$${PLIST.notdylib}" $$0; next }
 .endfor
-PRINT_PLIST_AWK+=	{ gsub(/\.${SOEXT}/, ".$${SOEXT}") }
+PRINT_PLIST_AWK+=	{ gsub(/\.${SHLIB_EXT}/, ".$${SHLIB_EXT}") }
 
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"

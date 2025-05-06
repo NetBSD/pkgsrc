@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/27 07:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/06 12:07:26 wiz Exp $
 
 .include "version.mk"
 
@@ -45,11 +45,6 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 311
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../mk/bsd.prefs.mk"
 

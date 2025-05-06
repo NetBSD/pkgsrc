@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2025/03/11 18:11:58 nia Exp $
+# $NetBSD: Makefile.common,v 1.55 2025/05/06 12:07:33 wiz Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -54,10 +54,10 @@ CCARGS+=	-DNO_NIS
 
 .if ${OPSYS} == "OpenBSD"
 PLIST_SUBST+=		SO_EXT="so.1.0"
-PRINT_PLIST_AWK+=	{ gsub(/\.so.1.0/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	{ gsub(/\.so.1.0/, ".$${SHLIB_EXT}"); }
 .else
 PLIST_SUBST+=		SO_EXT="so"
-PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SHLIB_EXT}"); }
 .endif
 
 # Disable modules by default

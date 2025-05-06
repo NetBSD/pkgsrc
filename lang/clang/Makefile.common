@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2024/08/25 06:18:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.64 2025/05/06 12:07:32 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -135,13 +135,9 @@ PKGVERSION_MAJOR=	18
 PLIST_SUBST+=		PKGVERSION_MAJOR=${PKGVERSION_MAJOR}
 
 PLIST_VARS+=	notdylib
-.if ${SHLIB_TYPE} == "dylib"
-SOEXT=		dylib
-.else
-SOEXT=		so
+.if ${SHLIB_TYPE} != "dylib"
 PLIST.notdylib=	yes
 .endif
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
 PKG_SUPPORTED_OPTIONS=	tests z3

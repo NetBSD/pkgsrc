@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2023/08/14 16:08:32 manu Exp $
+# $NetBSD: options.mk,v 1.8 2025/05/06 12:07:36 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opensc
 
@@ -15,12 +15,6 @@ PKG_SUGGESTED_OPTIONS=		pcsc-lite
 
 .include "../../mk/bsd.options.mk"
 
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
-
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
 .include "../../security/pcsc-lite/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pcsc
@@ -29,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-pcsc
 .  else
 # While one might expect the libtool .la, ltdl support has been
 # removed from opensc.
-CONFIGURE_ARGS+=	--with-pcsc-provider=${BUILDLINK_PREFIX.pcsc-lite}/lib/libpcsclite.${SOEXT}
+CONFIGURE_ARGS+=	--with-pcsc-provider=${BUILDLINK_PREFIX.pcsc-lite}/lib/libpcsclite.${SHLIB_EXT}
 .  endif
 # This is perhaps an upstream bug.
 CONFIGURE_ENV+=		PCSC_CFLAGS=-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
