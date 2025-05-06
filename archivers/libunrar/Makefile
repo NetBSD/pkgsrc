@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/24 23:44:38 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/06 07:46:32 wiz Exp $
 
 .include "../../archivers/unrar/Makefile.common"
 PKGNAME=	${DISTNAME:S/^/lib/:S/src//}
@@ -9,20 +9,14 @@ CXXFLAGS+=		-DRARDLL
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${SHLIB_TYPE} == "dylib"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
-
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/dll.hpp ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/os.hpp ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/raros.hpp ${DESTDIR}${PREFIX}/include
-	${INSTALL_LIB} ${WRKSRC}/libunrar.so ${DESTDIR}${PREFIX}/lib/libunrar.${SOEXT}
+	${INSTALL_LIB} ${WRKSRC}/libunrar.so ${DESTDIR}${PREFIX}/lib/libunrar.${SHLIB_EXT}
 .if ${OPSYS} == "Darwin"
-	install_name_tool -id ${PREFIX}/lib/libunrar.${SOEXT} \
-		${DESTDIR}${PREFIX}/lib/libunrar.${SOEXT}
+	install_name_tool -id ${PREFIX}/lib/libunrar.${SHLIB_EXT} \
+		${DESTDIR}${PREFIX}/lib/libunrar.${SHLIB_EXT}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
