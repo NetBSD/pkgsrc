@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/12/26 08:07:09 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/06 09:42:44 wiz Exp $
 
 DISTNAME=	pg_repack-1.5.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -15,14 +15,6 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 USE_TOOLS+=	gmake
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=	SOEXT=dylib
-.else
-PLIST_SUBST+=	SOEXT=so
-.endif
 
 PLIST_VARS+=	llvm
 .include "../../mk/pgsql.buildlink3.mk"
