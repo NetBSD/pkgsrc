@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/06 13:00:25 wiz Exp $
+include/QuaZip-Qt5-${PKGVERSION}/quazip/JlCompress.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/ioapi.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/minizip_crypt.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quaadler32.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quachecksum32.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quacrc32.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quagzipfile.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quaziodevice.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazip.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazip_global.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazip_qt_compat.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazipdir.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazipfile.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazipfileinfo.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/quazipnewinfo.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/unzip.h
+include/QuaZip-Qt5-${PKGVERSION}/quazip/zip.h
+lib/cmake/QuaZip-Qt5-${PKGVERSION}/QuaZip-Qt5Config.cmake
+lib/cmake/QuaZip-Qt5-${PKGVERSION}/QuaZip-Qt5ConfigVersion.cmake
+lib/cmake/QuaZip-Qt5-${PKGVERSION}/QuaZip-Qt5_SharedTargets-release.cmake
+lib/cmake/QuaZip-Qt5-${PKGVERSION}/QuaZip-Qt5_SharedTargets.cmake
+lib/libquazip1-qt5.so
+lib/libquazip1-qt5.so.1.5.0
+lib/libquazip1-qt5.so.${PKGVERSION}
+lib/pkgconfig/quazip1-qt5.pc
