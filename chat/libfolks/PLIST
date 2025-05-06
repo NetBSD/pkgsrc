@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/03 14:52:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/06 07:54:48 wiz Exp $
 bin/folks-import
 bin/folks-inspect
 include/folks/folks-dummy.h
 include/folks/folks-telepathy.h
 include/folks/folks.h
-lib/folks/26/backends/dummy/dummy.${SOEXT}
-lib/folks/26/backends/key-file/key-file.${SOEXT}
-lib/folks/26/backends/telepathy/telepathy.${SOEXT}
+lib/folks/26/backends/dummy/dummy.${SHLIB_EXT}
+lib/folks/26/backends/key-file/key-file.${SHLIB_EXT}
+lib/folks/26/backends/telepathy/telepathy.${SHLIB_EXT}
 lib/girepository-1.0/Folks-0.7.typelib
 lib/girepository-1.0/FolksDummy-0.7.typelib
 lib/girepository-1.0/FolksTelepathy-0.7.typelib
