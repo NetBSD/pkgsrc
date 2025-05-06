@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2025/02/12 06:44:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.186 2025/05/06 07:52:26 wiz Exp $
 
 DISTNAME=	pulseaudio-17.0
 PKGREVISION=	2
@@ -73,12 +73,7 @@ MAKE_FLAGS+=		bashcompletiondir=${PREFIX}/share/bash-completion/completions
 
 PLIST_VARS+=		alsa evdev oss
 
-.if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=		SOEXT=dylib
-.else
-PLIST_SUBST+=		SOEXT=so
-.endif
-PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SHLIB_EXT}"); }
 
 # Build module-mmkbd-evdev.so under Linux
 .if ${OPSYS} == "Linux"
