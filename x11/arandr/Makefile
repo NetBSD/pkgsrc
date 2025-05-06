@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/06 11:57:41 abs Exp $
 
 DISTNAME=	arandr-0.1.11
 PKGREVISION=	1
@@ -28,6 +28,6 @@ SUBST_MESSAGE.setup=	Fixing ${PYSETUP}
 SUBST_FILES.setup=	${PYSETUP}
 SUBST_SED.setup+=	-e 's,share/man/,${PKGMANDIR}/,g'
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
