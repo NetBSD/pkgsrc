@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2024/03/14 20:02:57 markd Exp $
+$NetBSD: distinfo,v 1.18 2025/05/06 13:32:34 wiz Exp $
 
-BLAKE2s (krita-5.2.2.tar.xz) = c7ea3a51fb0be7753881318692f5c53090125495eb793d72f4b7632715e7bc1e
-SHA512 (krita-5.2.2.tar.xz) = d2e55d9a6c7be79f5b6661a1bd605cdf1ce20ec78cdaab1ba19a4acca5397afa0c0e8bc1cbf60120993b156aef65ed35fde2de756841342d18221c82ea81a1eb
-Size (krita-5.2.2.tar.xz) = 189146788 bytes
+BLAKE2s (krita-5.2.9.tar.xz) = f1fc1d1342f07bb3049b3474ddd8966463fce8e896bf079a5796b8e27d7ab42b
+SHA512 (krita-5.2.9.tar.xz) = fc4af177371afad307a77047ceff3fb793c76e6e8b64382acd950bd89d6fc12fb2c83d76d8e8d0482860add178b8fe70ac05b1db4bc0e17520be53b9190e4bfe
+Size (krita-5.2.9.tar.xz) = 186574780 bytes
 SHA1 (patch-cmake_modules_FindLibMyPaint.cmake) = 4d2273db42e4427f1ec2f4f2e1c86d976c0e24f3
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
-SHA1 (patch-plugins_dockers_CMakeLists.txt) = b341645cde8bdfc3499c5766adb5cee01fb74af6
+SHA1 (patch-plugins_dockers_CMakeLists.txt) = 67623184a85eea82727e67eb076cc7b7c772d348
