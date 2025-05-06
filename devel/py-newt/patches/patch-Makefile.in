@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2025/05/06 20:35:02 vins Exp $
 
 * Libtoolized
-* Use configure.ac's Python version
+* Use pkgsrc-defined python version
 
---- Makefile.in.orig	2013-08-06 15:46:42.000000000 +0000
+--- Makefile.in.orig	2025-03-10 13:29:06.000000000 +0000
 +++ Makefile.in
 @@ -2,7 +2,6 @@ LIBS = -lslang @LIBS@
  LIBTCL = @TCL_LIB_FLAG@
@@ -12,7 +12,7 @@ $NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
 -CPP = @CPP@
  CFLAGS = @CFLAGS@
  LDFLAGS = @LDFLAGS@
- CPPFLAGS = -D_GNU_SOURCE -I/usr/include/slang @CPPFLAGS@ 
+ CPPFLAGS = -D_GNU_SOURCE @CPPFLAGS@
 @@ -16,7 +15,7 @@ SOEXT = so
  PYTHONVERS = @PYTHONVERS@
  WHIPTCLLIB = @WHIPTCLLIB@
@@ -54,36 +54,38 @@ $NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
  SHAREDDIR = shared
  SHAREDOBJS = $(patsubst %,$(SHAREDDIR)/%, $(LIBOBJS))
  
-@@ -65,76 +62,76 @@ else
+@@ -65,82 +62,83 @@ else
  TARGET=depend $(PROGS)
  endif
  
--all:	$(TARGET) _snackmodule.$(SOEXT)
-+all:	$(TARGET) _snackmodule.la
+-all:	$(TARGET) _snack.$(SOEXT)
++all:   $(TARGET) _snack.la
  
  test:	test.o $(LIBNEWT)
 -	$(CC) -g -o test test.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -g -o test test.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o test test.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++
  
  testgrid:	testgrid.o $(LIBNEWT)
 -	$(CC) -g -o testgrid testgrid.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -g -o testgrid testgrid.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o testgrid testgrid.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
  
  testtree:	testtree.o $(LIBNEWT)
 -	$(CC) -g -o testtree testtree.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -g -o testtree testtree.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o testtree testtree.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
  
  showchars:	showchars.o $(LIBNEWT)
 -	$(CC) -g -o showchars showchars.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -g -o showchars showchars.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o showchars showchars.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
  
  showkey:	showkey.o $(LIBNEWT)
 -	$(CC) -g -o showkey showkey.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -g -o showkey showkey.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o showkey showkey.o $(LIBNEWT) $(LDFLAGS) $(LIBS)
  
--_snackmodule.$(SOEXT):   snackmodule.c $(LIBNEWTSH)
-+_snackmodule.la:   snackmodule.c $(LIBNEWT)
- 	@[ -n "$(PYTHONVERS)" ] && for ver in $(PYTHONVERS); do \
+-_snack.$(SOEXT):   snack.c $(LIBNEWTSH)
++_snack.la:   snack.c $(LIBNEWT)
+ ifneq ($(PYTHONVERS),)
+ 	@for ver in $(PYTHONVERS); do \
 -		pyconfig=$$ver-config; \
 +		pyconfig=python$$ver-config; \
  		if ! $$pyconfig --cflags > /dev/null 2>&1 && \
@@ -94,32 +96,31 @@ $NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
 -		mkdir -p $$ver; \
 +		mkdir -p python$$ver; \
  		PCFLAGS=`$$pyconfig --cflags`; \
- 		PIFLAGS=`$$pyconfig --includes`; \
- 		PLDFLAGS=`$$pyconfig --ldflags`; \
- 		PLFLAGS=`$$pyconfig --libs`; \
--		echo $(CC) $(SHCFLAGS) $(CPPFLAGS) $$PIFLAGS $$PCFLAGS -c -o $$ver/snackmodule.o snackmodule.c; \
--		$(CC) $(SHCFLAGS) $(CPPFLAGS) $$PIFLAGS $$PCFLAGS -c -o $$ver/snackmodule.o snackmodule.c; \
--		echo $(CC) --shared $$PLDFLAGS $$PLFLAGS $(LDFLAGS) -o $$ver/_snackmodule.$(SOEXT) $$ver/snackmodule.o -L.  -lnewt $(LIBS); \
--		$(CC) --shared $$PLDFLAGS $$PLFLAGS $(LDFLAGS) -o $$ver/_snackmodule.$(SOEXT) $$ver/snackmodule.o -L.  -lnewt $(LIBS); \
-+		${LIBTOOL} --mode=compile $(CC) $(SHCFLAGS) $(CPPFLAGS) $$PIFLAGS $$PCFLAGS -c -o python$$ver/snackmodule.lo snackmodule.c; \
-+		${LIBTOOL} --mode=link $(CC) -module -shared $$PLDFLAGS $$PLFLAGS $(LDFLAGS) -o python$$ver/_snackmodule.la python$$ver/snackmodule.lo libnewt.la $(LIBS) -rpath ${PREFIX}/lib/python$$ver/site-packages ; \
- 	done || :
+ 		PLDFLAGS=`$$pyconfig --ldflags --embed || $$pyconfig --ldflags`; \
+-		echo $(CC) $(SHCFLAGS) $(CFLAGS) $(CPPFLAGS) $$PCFLAGS -c -o $$ver/snack.o snack.c; \
+-		$(CC) $(SHCFLAGS) $(CFLAGS) $(CPPFLAGS) $$PCFLAGS -c -o $$ver/snack.o snack.c; \
+-		echo $(CC) --shared $(LDFLAGS) $$PLDFLAGS -o $$ver/_snack.$(SOEXT) $$ver/snack.o -L. -lnewt $(LIBS); \
+-		$(CC) --shared $(LDFLAGS) $$PLDFLAGS -o $$ver/_snack.$(SOEXT) $$ver/snack.o -L. -lnewt $(LIBS); \
++		${LIBTOOL} --mode=compile --tag=CC $(CC) $(SHCFLAGS) $(CPPFLAGS) $$PIFLAGS $$PCFLAGS -c -o python$$ver/snack.lo snack.c; \
++		${LIBTOOL} --mode=link --tag=CC $(CC) -module -shared $$PLDFLAGS $$PLFLAGS $(LDFLAGS) -o python$$ver/_snack.la python$$ver/snack.lo libnewt.la $(LIBS) -rpath ${PREFIX}/lib/python$$ver/site-packages ; \
+ 	done
+ endif
  	touch $@
  
 -whiptail: $(NDIALOGOBJS) $(LIBNEWTSH)
 -	$(CC) -g -o whiptail $(NDIALOGOBJS) -L. $(LDFLAGS) -lnewt $(LIBS) -lpopt
 +whiptail: $(NDIALOGLOBJS) $(LIBNEWT)
-+	${LIBTOOL} --mode=link $(CC) -g -o whiptail $(NDIALOGLOBJS) $(LDFLAGS) libnewt.la $(LIBS) -lpopt
++	${LIBTOOL} --mode=link --tag=CC $(CC) -g -o whiptail $(NDIALOGLOBJS) $(LDFLAGS) libnewt.la $(LIBS) -lpopt
  
 -whiptcl.$(SOEXT): $(WHIPTCLOBJS) $(LIBNEWTSH)
 -	$(CC) -shared $(SHCFLAGS) $(LDFLAGS) -o whiptcl.$(SOEXT) $(WHIPTCLOBJS) -L. -lnewt  $(LIBTCL) -lpopt $(LIBS)
 +whiptcl.la: $(WHIPTCLLOBJS) $(LIBNEWT)
-+	${LIBTOOL} --mode=link $(CC) -module -shared $(SHCFLAGS) $(LDFLAGS) -o whiptcl.la $(WHIPTCLLOBJS) libnewt.la  $(LIBTCL) -lpopt $(LIBS) -rpath ${PREFIX}/lib
++	${LIBTOOL} --mode=link --tag=CC $(CC) -module -shared $(SHCFLAGS) $(LDFLAGS) -o whiptcl.la $(WHIPTCLLOBJS) libnewt.la $(LIBTCL) -lpopt $(LIBS) -rpath ${PREFIX}/lib
  
 -$(LIBNEWT): $(LIBOBJS)
 -	ar rv $@ $^
 +$(LIBNEWT): $(LIBLOBJS)
-+	${LIBTOOL} --mode=link \
++	${LIBTOOL} --mode=link --tag=CC \
 +	${CC} -o $@ \
 +	${LIBLOBJS} \
 +	-rpath ${PREFIX}/lib \
@@ -137,57 +138,70 @@ $NetBSD: patch-Makefile.in,v 1.2 2022/01/27 08:10:07 wiz Exp $
  		$(SHAREDDIR)/*.o *.$(SOEXT)*
  
  depend:
--	$(CPP) $(CFLAGS) $(CPPFLAGS) -M $(SOURCES) > .depend
-+	$(CC) $(CFLAGS) $(CPPFLAGS) -M $(SOURCES) > .depend
- 
- $(SHAREDDIR):
- 	mkdir -p $(SHAREDDIR)
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) -M $(SOURCES) > .depend
  
 -sharedlib: $(LIBNEWTSH)
 +sharedlib: $(LIBNEWT)
  
--$(LIBNEWTSH): $(SHAREDDIR) $(SHAREDOBJS)
+-$(LIBNEWTSH): $(SHAREDOBJS)
 -	$(CC) -shared -o $(LIBNEWTSH) $(SHLIBFLAGS) $(SHAREDOBJS) $(LDFLAGS) $(LIBS)
 -	ln -fs $(LIBNEWTSONAME) libnewt.$(SOEXT)
 -	ln -fs $(LIBNEWTSH) $(LIBNEWTSONAME)
 +%.lo : %.c
-+	${LIBTOOL} --mode=compile $(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=CC $(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
  
 -$(SHAREDDIR)/%.o : %.c
--	$(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 +$(SHAREDDIR)/%.lo : %.c
-+	${LIBTOOL} --mode=compile $(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+ 	@mkdir -p $(SHAREDDIR)
+-	$(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=CC $(CC) $(SHCFLAGS) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
++
  
  install: $(LIBNEWT) install-sh whiptail
  	[ -d $(instroot)/$(bindir) ] || install -m 755 -d $(instroot)/$(bindir)
-@@ -143,22 +140,19 @@ install: $(LIBNEWT) install-sh whiptail
+ 	[ -d $(instroot)/$(libdir) ] || install -m 755 -d $(instroot)/$(libdir)
  	[ -d $(instroot)/$(man1dir) ] || install -m 755 -d $(instroot)/$(man1dir)
- 	[ -d $(instroot)/$(pkgconfigdir) ] || install -m 755 -d $(instroot)/$(pkgconfigdir)
- 	install -m 644 newt.h $(instroot)/$(includedir)
 -	install -m 644 $(LIBNEWT) $(instroot)/$(libdir)
 -	install -m 755 whiptail $(instroot)/$(bindir)
 -	install -m 644 whiptail.1 $(instroot)/$(man1dir)
 +	${LIBTOOL} --mode=install install -m 755 whiptail $(instroot)/$(bindir)
 +	${LIBTOOL} --mode=install install -m 644 whiptail.1 $(instroot)/$(man1dir)
  	make -C po datadir=$(instroot)/$(datadir) install
- 	install -m 644 libnewt.pc $(instroot)/$(pkgconfigdir)
  
--install-sh: sharedlib $(WHIPTCLSO) _snackmodule.$(SOEXT)
-+install-sh: sharedlib $(WHIPTCLSO) _snackmodule.la
- 	[ -d $(instroot)/$(libdir) ] || install -m 755 -d $(instroot)/$(libdir)
+ install-sh: sharedlib install-tcl install-py
+@@ -148,28 +146,21 @@ install-sh: sharedlib install-tcl instal
+ 	[ -d $(instroot)/$(includedir) ] || install -m 755 -d $(instroot)/$(includedir)
+ 	[ -d $(instroot)/$(pkgconfigdir) ] || install -m 755 -d $(instroot)/$(pkgconfigdir)
+ 	install -m 644 newt.h $(instroot)/$(includedir)
 -	install -m 755 $(LIBNEWTSH) $(instroot)/$(libdir)
 -	ln -sf $(LIBNEWTSONAME) $(instroot)/$(libdir)/libnewt.$(SOEXT)
 -	ln -sf $(LIBNEWTSH) $(instroot)/$(libdir)/$(LIBNEWTSONAME)
--	[ -n "$(WHIPTCLSO)" ] && install -m 755 whiptcl.$(SOEXT) $(instroot)/$(libdir) || :
 +	${LIBTOOL} --mode=install install -m 755 $(LIBNEWT) $(instroot)/$(libdir)
-+	[ -n "$(WHIPTCLSO)" ] && ${LIBTOOL} --mode=install install -m 755 whiptcl.la $(instroot)/$(libdir) || :
- 	[ -n "$(PYTHONVERS)" ] && for ver in $(PYTHONVERS) ; do \
--	   [ -d $(instroot)/$(libdir)/$$ver/site-packages ] || install -m 755 -d $(instroot)/$(libdir)/$$ver/site-packages ;\
--	   install -m 755 $$ver/_snackmodule.$(SOEXT) $(instroot)/$(libdir)/$$ver/site-packages ;\
--	   install -m 644 snack.py $(instroot)/$(libdir)/$$ver/site-packages ;\
-+	   [ -d $(instroot)/$(libdir)/python$$ver/site-packages ] || install -m 755 -d $(instroot)/$(libdir)/python$$ver/site-packages ;\
-+	   ${LIBTOOL} --mode=install install -m 755 python$$ver/_snackmodule.la $(instroot)/$(libdir)/python$$ver/site-packages ;\
-+	   install -m 644 snack.py $(instroot)/$(libdir)/python$$ver/site-packages ;\
- 	done || :
+ 	install -m 644 libnewt.pc $(instroot)/$(pkgconfigdir)
  
- Makefile: newt.spec
+ install-tcl: $(WHIPTCLSO)
+ ifneq ($(WHIPTCLSO),)
+ 	[ -d $(instroot)/$(libdir) ] || install -m 755 -d $(instroot)/$(libdir)
+-	install -m 755 $(WHIPTCLSO) $(instroot)/$(libdir)
++	${LIBTOOL} --mode=install install -m 755 whiptcl.la $(instroot)/$(libdir)
+ endif
+ 
+-install-py: _snack.$(SOEXT)
+-ifneq ($(PYTHONVERS),)
+-	@for ver in $(PYTHONVERS); do \
+-		PLATLIB=`$$ver -c "import sysconfig; print(sysconfig.get_path('platlib'))"`; \
+-		[ -d $(instroot)/$$PLATLIB ] || install -m 755 -d $(instroot)/$$PLATLIB ;\
+-		echo install -m 755 $$ver/_snack.$(SOEXT) $(instroot)/$$PLATLIB;\
+-		install -m 755 $$ver/_snack.$(SOEXT) $(instroot)/$$PLATLIB;\
+-		echo install -m 644 snack.py $(instroot)/$$PLATLIB;\
+-		install -m 644 snack.py $(instroot)/$$PLATLIB;\
++install-py: _snack.la
++	[ -n "$(PYTHONVERS)" ] && for ver in $(PYTHONVERS) ; do \
++		[ -d $(instroot)/$(libdir)/python$$ver/site-packages ] || install -m 755 -d $(instroot)/$(libdir)/python$$ver/site-packages ;\
++		${LIBTOOL} --mode=install install -m 755 python$$ver/_snack.la $(instroot)/$(libdir)/python$$ver/site-packages ;\
++		install -m 644 snack.py $(instroot)/$(libdir)/python$$ver/site-packages ;\
+ 	done
+-endif
+ 
+ Makefile: configure.ac
+ 	@echo "You need to rerun ./autogen.sh and ./configure before continuing"
