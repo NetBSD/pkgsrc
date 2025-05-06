@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/24 14:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/06 13:00:51 wiz Exp $
 
 DISTNAME=	quazip-0.9
 PKGREVISION=	21
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://stachenov.github.io/quazip/
-COMMENT=	Qt/C++ wrapper for Minizip
+COMMENT=	Qt/C++ wrapper for Minizip (v0)
 LICENSE=	gnu-lgpl-v2.1 # with static linking exception
 
 USE_CMAKE=	yes
