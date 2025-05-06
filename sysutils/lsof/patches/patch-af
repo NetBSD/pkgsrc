@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
+$NetBSD: patch-af,v 1.24 2025/05/06 23:46:45 gutteridge Exp $
+
+Various build fixes for NetBSD.
 
 --- dialects/n+obsd/dlsof.h.orig	2006-03-28 21:54:15.000000000 +0000
 +++ dialects/n+obsd/dlsof.h
@@ -70,24 +72,36 @@ $NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
  
  # if	defined(HASNFSPROTO)
  #include <nfs/rpcv2.h>
-@@ -360,6 +369,16 @@ struct sockproto {
+@@ -360,6 +369,28 @@ struct sockproto {
  #  if	defined(HASPROCFS_PFSROOT)
  #define	_KERNEL
  #  endif	/* defined(HASPROCFS_PFSROOT) */
-+#if (defined(NETBSDV) && __NetBSD_Version__>=900000000)
++#  if defined(NETBSDV)
++#    if __NetBSD_Version__>=900000000
 +#include <sys/ptrace.h>
-+#endif
++#    endif
 +/* 
 + * Needed for definition of curlwp, which isn't used by this code base,
 + * but is exposed in procfs.h in an inline function declaration.
 + */
-+#if (defined(NETBSDV) && __NetBSD_Version__>=999009300)
++#    if __NetBSD_Version__>=999009300
 +extern struct lwp	*curlwp;
-+#endif
++#    endif
++/* Work around an issue with i386 where __HAVE_PROCFS_MACHDEP is universally
++ * defined, but PROCFS_MACHDEP_NODE_TYPES is guarded by _KERNEL. The enum
++ * value isn't used by this code base, this just fixes the build. This is a
++ * result of the mess with the (apparently necessary) tricks played with the
++ * inclusion of sys/ptrace.h above.
++ */
++#    if defined(__HAVE_PROCFS_MACHDEP) && !defined(PROCFS_MACHDEP_NODE_TYPES)
++#define PROCFS_MACHDEP_NODE_TYPES					\
++		Pmachdep_xmmregs,	/* extended FP register set */
++#    endif
++#  endif	/* defined(NETBSDV) */
  #include <miscfs/procfs/procfs.h>
  #  if	defined(HASPROCFS_PFSROOT)
  #undef	_KERNEL
-@@ -370,7 +389,6 @@ struct sockproto {
+@@ -370,7 +401,6 @@ struct sockproto {
  #define	Pregs		PFSregs
  #define	Pfile		PFSfile
  #define	Pfpregs		PFSfpregs
@@ -95,7 +109,7 @@ $NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
  #define	Pstatus		PFSstatus
  #define	Pnote		PFSnote
  #define	Pnotepg		PFSnotepg
-@@ -382,6 +400,9 @@ struct sockproto {
+@@ -382,6 +412,9 @@ struct sockproto {
  #define	Pmap		PFSmap
  #define	Pmaps		PFSmaps
  #    endif	/* NETBSDV>=1006000 */
@@ -105,7 +119,7 @@ $NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
  #   endif	/* defined(NetBSDV) */
  #  endif	/* defined(HASPROCFS_PFSROOT) */
  #include <machine/reg.h>
-@@ -489,7 +510,12 @@ extern KA_T Kpa;
+@@ -489,7 +522,12 @@ extern KA_T Kpa;
  struct l_vfs {
  	KA_T addr;			/* kernel address */
  	fsid_t	fsid;			/* file system ID */
@@ -118,7 +132,7 @@ $NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
  	char *dir;			/* mounted directory */
  	char *fsname;			/* file system name */
  	struct l_vfs *next;		/* forward link */
-@@ -565,7 +591,7 @@ struct sfile {
+@@ -565,7 +603,7 @@ struct sfile {
  #define	NCACHE_NODEADDR	nc_vp		/* node address in NCACHE */
  #define	NCACHE_PARADDR	nc_dvp		/* parent node address in NCACHE */
  
@@ -127,7 +141,7 @@ $NetBSD: patch-af,v 1.23 2022/02/27 02:13:44 gutteridge Exp $
  #define	NCACHE_NXT	nc_hash.le_next	/* link in NCACHE */
  #  else	/* (defined(OPENBSDV) && OPENBSDV>=2010) || (defined(NETBSDV) && NETBSDV>=1002000) */
  #   if	defined(NetBSD1_0) && NetBSD<1994101
-@@ -581,4 +607,12 @@ struct sfile {
+@@ -581,4 +619,12 @@ struct sfile {
  #  endif	/* defined(HASNCVPID) */
  # endif  /* defined(HASNCACHE) */
  
