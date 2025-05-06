@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/04/24 14:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/06 10:31:11 hauke Exp $
 #
 
-DISTNAME=	nextcloud-client-3.16.2
-PKGREVISION=	2
+DISTNAME=	nextcloud-client-3.16.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nextcloud/}
 GITHUB_PROJECT=	desktop
