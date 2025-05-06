@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/08 11:32:18 adam Exp $
+# $NetBSD: Makefile,v 1.64 2025/05/06 12:07:32 wiz Exp $
 
 DISTNAME=	babl-0.1.112
 CATEGORIES=	graphics
@@ -24,10 +24,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PLIST_VARS+=		Darwin not_Darwin
 .if ${OPSYS} == "Darwin"
 PLIST.Darwin=		yes
-PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST.not_Darwin=	yes
-PLIST_SUBST+=		SOEXT="so"
 .endif
 
 PLIST_VARS+=		x86_64

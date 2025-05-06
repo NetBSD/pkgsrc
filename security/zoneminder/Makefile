@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/04/25 01:03:10 gdt Exp $
+# $NetBSD: Makefile,v 1.85 2025/05/06 12:07:36 wiz Exp $
 
 VERSION=	1.36.35
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -132,14 +132,9 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
 .for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg6}/include/ffmpeg6
-CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg6/lib${lib:tl}.${SHLIB_EXT}
 .endfor
 
 # \todo Revisit this and see if there is a better way.

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2019/02/11 08:22:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/05/06 12:07:26 wiz Exp $
 bin/rrdcached
 bin/rrdcgi
 bin/rrdcreate
@@ -14,7 +14,7 @@ ${PLIST.lua}${LUA_CDIR}/rrd.la
 lib/pkgconfig/librrd.pc
 ${PLIST.tcl}lib/rrdtool/ifOctets.tcl
 ${PLIST.tcl}lib/rrdtool/pkgIndex.tcl
-${PLIST.tcl}lib/tclrrd${PKGVERSION}.${SOEXT}
+${PLIST.tcl}lib/tclrrd${PKGVERSION}.${SHLIB_EXT}
 man/man1/bin_dec_hex.1
 man/man1/cdeftutorial.1
 man/man1/rpntutorial.1

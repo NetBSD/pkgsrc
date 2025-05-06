@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/17 00:52:27 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/06 12:07:32 wiz Exp $
 bin/q2ded
 bin/quake2
 libexec/yquake2/q2ded
 libexec/yquake2/quake2
-libexec/yquake2/ref_gl1.${SOEXT}
-libexec/yquake2/ref_gl3.${SOEXT}
-libexec/yquake2/ref_gles3.${SOEXT}
-libexec/yquake2/ref_soft.${SOEXT}
+libexec/yquake2/ref_gl1.${SHLIB_EXT}
+libexec/yquake2/ref_gl3.${SHLIB_EXT}
+libexec/yquake2/ref_gles3.${SHLIB_EXT}
+libexec/yquake2/ref_soft.${SHLIB_EXT}
 share/applications/yquake2.desktop
 share/pixmaps/quake2.png
-share/yquake2/baseq2/game.${SOEXT}
+share/yquake2/baseq2/game.${SHLIB_EXT}

@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:16 nia Exp $
-lib/libretro/snes9x2005_libretro.${SOEXT}
+@comment $NetBSD: PLIST,v 1.3 2025/05/06 12:07:30 wiz Exp $
+lib/libretro/snes9x2005_libretro.${SHLIB_EXT}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/04/19 07:57:48 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/05/06 12:07:31 wiz Exp $
 
 DISTNAME=	corsix-th-0.68.0
 PKGREVISION=	4
@@ -24,17 +24,9 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	unique_ptr
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
-
 .for module in AVCODEC AVFORMAT AVDEVICE AVUTIL SWSCALE POSTPROC SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-D${module}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg7}/include/ffmpeg7
-CMAKE_CONFIGURE_ARGS+=	-D${module}_LIBRARIES=${PREFIX}/lib/ffmpeg7/lib${module:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-D${module}_LIBRARIES=${PREFIX}/lib/ffmpeg7/lib${module:tl}.${SHLIB_EXT}
 .endfor
 
 .include "../../devel/cmake/build.mk"

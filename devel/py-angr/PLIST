@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/17 16:06:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/05/06 12:07:26 wiz Exp $
 bin/angr-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1683,7 +1683,7 @@ ${PYSITELIB}/angr/knowledge_plugins/xrefs/xref_manager.pyo
 ${PYSITELIB}/angr/knowledge_plugins/xrefs/xref_types.py
 ${PYSITELIB}/angr/knowledge_plugins/xrefs/xref_types.pyc
 ${PYSITELIB}/angr/knowledge_plugins/xrefs/xref_types.pyo
-${PYSITELIB}/angr/lib/angr_native.${SOEXT}
+${PYSITELIB}/angr/lib/angr_native.${SHLIB_EXT}
 ${PYSITELIB}/angr/misc/__init__.py
 ${PYSITELIB}/angr/misc/__init__.pyc
 ${PYSITELIB}/angr/misc/__init__.pyo

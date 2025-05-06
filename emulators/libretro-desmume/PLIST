@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2020/05/26 09:45:14 nia Exp $
-lib/libretro/desmume_libretro.${SOEXT}
+@comment $NetBSD: PLIST,v 1.3 2025/05/06 12:07:28 wiz Exp $
+lib/libretro/desmume_libretro.${SHLIB_EXT}

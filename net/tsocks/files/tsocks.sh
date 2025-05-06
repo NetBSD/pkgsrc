@@ -1,6 +1,6 @@
 #!@SH@
 
-libtsocks="@PREFIX@/lib/libtsocks.@SOEXT@"
+libtsocks="@PREFIX@/lib/libtsocks.@SHLIB_EXT@"
 
 usage() {
 	echo "usage:"

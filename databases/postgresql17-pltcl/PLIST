@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/08 13:43:38 adam Exp $
-lib/postgresql/pltcl.${SOEXT}
+@comment $NetBSD: PLIST,v 1.2 2025/05/06 12:07:26 wiz Exp $
+lib/postgresql/pltcl.${SHLIB_EXT}
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/pltcl-17.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/pltcl-17.mo
 ${PLIST.nls}share/locale/el/LC_MESSAGES/pltcl-17.mo

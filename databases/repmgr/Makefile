@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/04/19 07:57:38 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/05/06 12:07:26 wiz Exp $
 
 DISTNAME=	repmgr-5.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -42,13 +42,6 @@ PLIST_VARS+=	llvm
 .if !empty(PKG_OPTIONS.postgresql${PGSQL_VERSION}:Mllvm)
 PLIST.llvm=	yes
 .endif
-
-OPSYSVARS+=	SOEXT
-.if ${PGSQL_VERSION} == 16
-SOEXT.Darwin=	dylib
-.endif
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"

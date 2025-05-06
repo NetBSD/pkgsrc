@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2025/04/24 14:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2025/05/06 12:07:32 wiz Exp $
 
 DISTNAME=	gegl-0.4.58
 PKGREVISION=	2
@@ -35,13 +35,11 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PLIST_VARS+=		darwin notdarwin
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=		SOEXT="dylib"
 PLIST.darwin=		yes
-PRINT_PLIST_AWK+=	{ gsub(/\.dylib$$/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	{ gsub(/\.dylib$$/, ".$${SHLIB_EXT}"); }
 .else
-PLIST_SUBST+=		SOEXT="so"
 PLIST.notdarwin=	yes
-PRINT_PLIST_AWK+=	{ gsub(/\.so$$/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	{ gsub(/\.so$$/, ".$${SHLIB_EXT}"); }
 .endif
 
 PLIST_SRC+=		${PLIST_SRC_DFLT}

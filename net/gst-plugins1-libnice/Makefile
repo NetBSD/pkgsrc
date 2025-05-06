@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/04/19 07:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/05/06 12:07:35 wiz Exp $
 
 PKGNAME=	gst-plugins1-${DISTNAME}
 PKGREVISION=	2
@@ -14,16 +14,11 @@ MESON_ARGS+=	-Dintrospection=disabled
 MESON_ARGS+=	-Dtests=disabled
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
 
 INSTALLATION_DIRS+=	lib/gstreamer-1.0
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/output/gst/libgstnice.${SOEXT} \
+	${INSTALL_LIB} ${WRKSRC}/output/gst/libgstnice.${SHLIB_EXT} \
 		${DESTDIR}${PREFIX}/lib/gstreamer-1.0
 .if ${OPSYS} == "Darwin"
 	cd ${DESTDIR}${PREFIX}/lib/gstreamer-1.0 && \

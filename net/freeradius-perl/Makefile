@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/11/16 12:06:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/06 12:07:34 wiz Exp $
 
 PKGREVISION= 1
 .include "../../net/freeradius/Makefile.module"
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--without-rlm_ldap
 CONFIGURE_ARGS+=	--without-rlm_yubikey
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_perl.${SOEXT} \
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_perl.${SHLIB_EXT} \
 		${DESTDIR}${PREFIX}/lib
 
 .include "../../lang/perl5/buildlink3.mk"

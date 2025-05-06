@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/12/07 17:51:20 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/06 12:07:32 wiz Exp $
 bin/build-jim-ext
 bin/jimdb
 bin/jimsh
@@ -10,7 +10,7 @@ include/jim-win32compat.h
 include/jim.h
 lib/jim/README.extensions
 lib/jim/tcltest.tcl
-lib/libjim.${SOEXT}
+lib/libjim.${SHLIB_EXT}
 lib/${SONAME}
 lib/pkgconfig/jimtcl.pc
 share/doc/jimtcl/Tcl.html

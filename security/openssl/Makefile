@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2025/02/11 21:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.306 2025/05/06 12:07:36 wiz Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -144,12 +144,7 @@ INSTALLATION_DIRS+=	share/examples/openssl
 # work the other way around.  The lib/engines-1.1 plugins also need special
 # handling.
 #
-OPSYSVARS+=		SOEXT
-SOEXT.Darwin=		dylib
-SOEXT.*=		so
-PLIST_SUBST+=		SOEXT=${SOEXT}
-
-PRINT_PLIST_AWK+=	/^lib\/engines/ { gsub(/\.${SOEXT}$$/, ".$${SOEXT}"); }
+PRINT_PLIST_AWK+=	/^lib\/engines/ { gsub(/\.${SHLIB_EXT}$$/, ".$${SHLIB_EXT}"); }
 
 # Remove CC from the environment, to fix GCC version handling on HP-UX,
 # SunOS and Linux/sparc.

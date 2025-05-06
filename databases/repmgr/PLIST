@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2024/11/25 13:00:00 nros Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/05/06 12:07:26 wiz Exp $
 bin/repmgr
 bin/repmgrd
 ${PLIST.llvm}lib/postgresql/bitcode/repmgr.index.bc
 ${PLIST.llvm}lib/postgresql/bitcode/repmgr/repmgr.bc
-lib/postgresql/repmgr.${SOEXT}
+lib/postgresql/repmgr.${SHLIB_EXT}
 share/doc/repmgr/README.md
 share/examples/repmgr/repmgr.conf.sample
 share/postgresql/extension/repmgr--4.0--4.1.sql
