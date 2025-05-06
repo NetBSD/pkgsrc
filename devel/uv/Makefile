@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/04/29 20:42:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/06 13:14:19 wiz Exp $
 
-DISTNAME=	uv-0.6.17
+DISTNAME=	uv-0.7.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astral-sh/}
 
