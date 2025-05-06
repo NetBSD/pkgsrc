@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/12/24 10:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/06 16:01:19 wiz Exp $
 
-DISTNAME=	mpdecimal-4.0.0
+DISTNAME=	mpdecimal-4.0.1
 CATEGORIES=	math
 MASTER_SITES=	https://www.bytereef.org/software/mpdecimal/releases/
 
