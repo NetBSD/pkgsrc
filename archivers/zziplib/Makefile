@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/04/20 06:14:03 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/05/06 07:47:38 wiz Exp $
 
 DISTNAME=	zziplib-0.13.79
 CATEGORIES=	archivers
@@ -21,14 +21,6 @@ CHECK_PORTABILITY_SKIP+=	old.configure
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/zzip/*.pc
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/zzipwrap/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=	SOEXT=dylib
-.else
-PLIST_SUBST+=	SOEXT=so
-.endif
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
