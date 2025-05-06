@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/01/07 16:26:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/06 12:45:09 wiz Exp $
 
-DISTNAME=	hatch_fancy_pypi_readme-24.1.0
+DISTNAME=	hatch_fancy_pypi_readme-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hatch-fancy-pypi-readme/}
@@ -16,7 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 25.1.0
+# 2 failed, 46 passed
 
 .include "../../lang/python/pyversion.mk"
 
