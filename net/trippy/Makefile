@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/04/04 20:22:43 pin Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/06 20:09:56 pin Exp $
 
-DISTNAME=	trippy-0.12.2
+DISTNAME=	trippy-0.13.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fujiapple852/}
 
@@ -11,13 +11,15 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.76.0
+RUST_REQ=	1.78.0
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/trippy
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/trip \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/trippy-config-sample.toml \
+		${DESTDIR}${PREFIX}/share/examples/trippy
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
