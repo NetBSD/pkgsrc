@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_slow__client__test,v 1.1 2025/05/06 15:49:16 schmonz Exp $
+
+Allocate enough buffer for header sizes seen in common webservers.
+https://github.com/renaudallard/sniproxy/commit/1a504817462209ecaa2f62ff925b58852e22f564
+
+--- tests/slow_client_test.orig	2024-07-02 15:36:27.000000000 +0000
++++ tests/slow_client_test
+@@ -46,7 +46,7 @@ sub slow_client($$) {
+     }
+ 
+     my $buffer;
+-    $socket->recv($buffer, 4096);
++    $socket->recv($buffer, 16384);
+ 
+     $socket->close();
+ 

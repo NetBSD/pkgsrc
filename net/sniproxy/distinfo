@@ -1,9 +1,16 @@
-$NetBSD: distinfo,v 1.11 2023/05/11 05:14:00 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2025/05/06 15:49:16 schmonz Exp $
 
-BLAKE2s (sniproxy-0.6.1.tar.gz) = 8e1f6529c9d1d86a94f06cbcc9c40d9374f54e2fcb499198422997796c53c7af
-SHA512 (sniproxy-0.6.1.tar.gz) = 4a20830ee6dfeb33a363c480c4698c263a8deccfcac2071198248147ef40d951a1b551c373b0e1e29f6b6bfcdac350390f8f4c3653ed9d1f1940ed50c96af785
-Size (sniproxy-0.6.1.tar.gz) = 78939 bytes
+BLAKE2s (sniproxy-2d9965388712faa6ef74f7229f38e3a177904bae-2d9965388712faa6ef74f7229f38e3a177904bae.tar.gz) = efe6a54e6a42951e201b0c1e439809fcbac3f9fe53d9160943f98f8fdc146e61
+SHA512 (sniproxy-2d9965388712faa6ef74f7229f38e3a177904bae-2d9965388712faa6ef74f7229f38e3a177904bae.tar.gz) = b37815107d53def95dca2938fee7874cba2d91b0b4fc774fb073b180d7a46588f8bef882f025b40118b85fc29e021bd098fe0f3b61cd27e3c502e60c1e2ceef5
+Size (sniproxy-2d9965388712faa6ef74f7229f38e3a177904bae-2d9965388712faa6ef74f7229f38e3a177904bae.tar.gz) = 79449 bytes
 SHA1 (patch-man_sniproxy.8) = 6c23fd3a826cfdd37b656e235392263995f0bad0
 SHA1 (patch-man_sniproxy.conf.5) = d18a997fe2d3bf570c3c3e8530ec2c6487e35ba0
 SHA1 (patch-sniproxy.conf) = 7a7c596ec2947cc94271dbd7298dd3e9896260f7
+SHA1 (patch-src_connection.c) = 3a1ceff5ec5c81dfb3158694a85d536328a38c86
 SHA1 (patch-src_sniproxy.c) = d3aa00bd393ceaeba81ce9d15cdafd24ab63eaf1
+SHA1 (patch-tests_bad__dns__request__test) = 1a9c0330122d141c43f4260aa6134a5a48a1362e
+SHA1 (patch-tests_bad__request__test) = 5fc17c8e1a5f574c6cbb4161689daaba8f087fd5
+SHA1 (patch-tests_buffer__test.c) = c4c46acdeac241e777a48ce51ce432b908847154
+SHA1 (patch-tests_connection__reset__test) = 027fe2e026fcb4fd3cfc191d60890617beb28b92
+SHA1 (patch-tests_fallback__test) = d8873bfe8629096a1cc4152438167c4f15559153
+SHA1 (patch-tests_slow__client__test) = 1ee5a0683ef6b8f8dbf43072492ab7bc46e9f92f
