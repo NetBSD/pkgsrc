@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3115 2025/05/06 12:12:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3116 2025/05/06 12:43:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4109,3 +4109,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nextcloud-client to 3.16.4 [hauke 2025-05-06]
 	Updated emulators/free42 to 3.3.4 [gdt 2025-05-06]
 	Updated www/cpp-httplib to 0.20.1 [wiz 2025-05-06]
+	Updated www/py-FxA to 0.8.1 [wiz 2025-05-06]
