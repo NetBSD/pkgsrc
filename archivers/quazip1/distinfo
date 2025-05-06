@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/05/06 13:00:25 wiz Exp $
+
+BLAKE2s (quazip-1.5.tar.gz) = 46b3edcd4722475e56d430fa826ce00d09014bb4621a1ff19ff5116e4f60229a
+SHA512 (quazip-1.5.tar.gz) = c88850f1672d20c375798c58d1cb77744ca63e93b379cf3035a528b57e83a52c1908023870152ce5fc49ad0ccf93d723dbc730b8c1d2abe18cf0b13fba3be1e1
+Size (quazip-1.5.tar.gz) = 171006 bytes
+SHA1 (patch-quazip_quazip.pc.cmakein) = 83d27c48ac0982441a31210b88be60d77fd2bede
