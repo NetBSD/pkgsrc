@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/12 06:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/05/06 07:48:40 wiz Exp $
 
 DISTNAME=	chromaprint-1.5.1
 PKGREVISION=	9
@@ -18,17 +18,9 @@ CMAKE_CONFIGURE_ARGS+=	-DFFT_LIB=fftw3
 
 USE_CXX_FEATURES+=	c++11
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
-
 .for lib in AVCODEC AVFORMAT AVUTIL SWRESAMPLE
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg7}/include/ffmpeg7
-CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg7}/lib/ffmpeg7/lib${lib:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg7}/lib/ffmpeg7/lib${lib:tl}.${SHLIB_EXT}
 .endfor
 
 PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
