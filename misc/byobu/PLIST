@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/17 18:58:05 maya Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/06 20:53:38 vins Exp $
 bin/byobu
 bin/byobu-config
 bin/byobu-ctrl-a
@@ -46,7 +46,6 @@ lib/byobu/date
 lib/byobu/disk
 lib/byobu/disk_io
 lib/byobu/distro
-lib/byobu/ec2_cost
 lib/byobu/entropy
 lib/byobu/fan_speed
 lib/byobu/hostname
@@ -56,7 +55,6 @@ lib/byobu/include/config.py
 lib/byobu/include/constants
 lib/byobu/include/cycle-status
 lib/byobu/include/dirs
-lib/byobu/include/ec2instancespricing.py
 lib/byobu/include/icons
 lib/byobu/include/mondrian
 lib/byobu/include/notify_osd
@@ -75,7 +73,6 @@ lib/byobu/menu
 lib/byobu/network
 lib/byobu/processes
 lib/byobu/raid
-lib/byobu/rcs_cost
 lib/byobu/reboot_required
 lib/byobu/release
 lib/byobu/services
@@ -126,6 +123,7 @@ man/man1/purge-old-kernels.1
 man/man1/vigpg.1
 man/man1/wifi-status.1
 share/byobu/desktop/byobu.desktop
+share/byobu/desktop/byobu.desktop.old
 share/byobu/keybindings/common
 share/byobu/keybindings/f-keys
 share/byobu/keybindings/f-keys.screen
