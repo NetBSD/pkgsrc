@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3133 2025/05/06 20:37:24 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3134 2025/05/06 20:54:33 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4128,3 +4128,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.6.2 [pin 2025-05-06]
 	Updated net/trippy to 0.13.0 [pin 2025-05-06]
 	Updated devel/py-newt to 0.52.25 [vins 2025-05-06]
+	Updated misc/byobu to 5.133 [vins 2025-05-06]
