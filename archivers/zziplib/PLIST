@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/04/19 23:46:49 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/05/06 07:47:38 wiz Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzip-big
@@ -35,23 +35,23 @@ include/zziplib.h
 lib/cmake/zziplib/zziplib-config.cmake
 lib/cmake/zziplib/zziplibTargets-release.cmake
 lib/cmake/zziplib/zziplibTargets.cmake
-lib/libzzip-0.${SOEXT}.10
-lib/libzzip-0.${SOEXT}.11
-lib/libzzip-0.${SOEXT}.12
+lib/libzzip-0.${SHLIB_EXT}.10
+lib/libzzip-0.${SHLIB_EXT}.11
+lib/libzzip-0.${SHLIB_EXT}.12
 lib/libzzip-0.so
 lib/libzzip-0.so.13
 lib/libzzip-0.so.13.0.79
 lib/libzzip.so
-lib/libzzipfseeko-0.${SOEXT}.10
-lib/libzzipfseeko-0.${SOEXT}.11
-lib/libzzipfseeko-0.${SOEXT}.12
+lib/libzzipfseeko-0.${SHLIB_EXT}.10
+lib/libzzipfseeko-0.${SHLIB_EXT}.11
+lib/libzzipfseeko-0.${SHLIB_EXT}.12
 lib/libzzipfseeko-0.so
 lib/libzzipfseeko-0.so.13
 lib/libzzipfseeko-0.so.13.0.79
 lib/libzzipfseeko.so
-lib/libzzipmmapped-0.${SOEXT}.10
-lib/libzzipmmapped-0.${SOEXT}.11
-lib/libzzipmmapped-0.${SOEXT}.12
+lib/libzzipmmapped-0.${SHLIB_EXT}.10
+lib/libzzipmmapped-0.${SHLIB_EXT}.11
+lib/libzzipmmapped-0.${SHLIB_EXT}.12
 lib/libzzipmmapped-0.so
 lib/libzzipmmapped-0.so.13
 lib/libzzipmmapped-0.so.13.0.79
