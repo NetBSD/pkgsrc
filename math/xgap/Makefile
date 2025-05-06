@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.25 2021/04/24 00:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/06 18:22:11 bsiegert Exp $
 
-DISTNAME=	xgap4r16
-PKGNAME=	xgap-4.16
-PKGREVISION=	3
+DISTNAME=	xgap-4.32
 CATEGORIES=	math x11
-#MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
-EXTRACT_SUFX=	.zoo
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gap-packages/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gap-system.org/Packages/xgap.html
 COMMENT=	GUI for GAP
 
-WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
+#WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	default
 
 USE_TOOLS+=	pax
 
-CONFIGURE_ENV+=	GAP_DIRECTORY=${GAP_DIRECTORY:Q}
+CONFIGURE_ARGS+=	--with-gaproot=${GAP_DIRECTORY:Q}
 
 GAP_PKG_NAME=	xgap
 
+REPLACE_PERL+=		doc/buildman.pe
 INSTALLATION_DIRS=	bin
 
 pre-configure:
