@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/01/06 21:49:04 ktnb Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/06 20:35:02 vins Exp $
 
-DISTNAME=	newt-0.52.16
+DISTNAME=	newt-0.52.25
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://releases.pagure.org/newt/
 
@@ -12,23 +11,23 @@ COMMENT=	Windowing toolkit based on libslang2
 LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		automake gmake pkg-config
+USE_TOOLS+=		automake aclocal autoconf \
+			gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	libnewt.pc.in
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED= 27
+
+CONFIGURE_ENV+=		ac_cv_c_tclconfig=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-python=${PYVERSSUFFIX:Q}
+
+MAKE_ENV=		PCFLAGS=${CFLAGS:Q}
 
 pre-configure:
 	cd ${WRKSRC}; \
 	aclocal && autoconf
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	configure.ac
-SUBST_VARS.prefix=	PREFIX
 
 SUBST_CLASSES+=		inst-po
 SUBST_STAGE.inst-po=	pre-build
