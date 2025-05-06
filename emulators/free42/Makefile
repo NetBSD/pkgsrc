@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/04/24 14:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/05/06 10:54:19 gdt Exp $
 
-DISTNAME=	free42-nologo-3.0.16
+DISTNAME=	free42-nologo-3.3.4
 PKGNAME=	${DISTNAME:S/-nologo//}
-PKGREVISION=	12
 CATEGORIES=	emulators
 MASTER_SITES=	https://thomasokken.com/free42/upstream/
 EXTRACT_SUFX=	.tgz
@@ -33,7 +32,7 @@ do-install:
 		${DESTDIR}/${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}/${PREFIX}/share/doc/free42/
-	${INSTALL_DATA} ${WRKSRC}/gtk/README \
+	${INSTALL_DATA} ${WRKSRC}/gtk/README.txt \
 		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
 	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.xpm \
 		${DESTDIR}/${PREFIX}/share/doc/free42/free42icon-128x128.xpm
