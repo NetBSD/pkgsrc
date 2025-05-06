@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2025/05/06 11:57:41 abs Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/06 12:10:56 wiz Exp $
 
 DISTNAME=	arandr-0.1.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://christian.amsuess.com/tools/arandr/files/
 
@@ -23,9 +23,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Adjust setup.py
 SUBST_CLASSES+=		setup
-SUBST_STAGE.setup=	pre-configure
-SUBST_MESSAGE.setup=	Fixing ${PYSETUP}
-SUBST_FILES.setup=	${PYSETUP}
+SUBST_STAGE.setup=	pre-build
+SUBST_MESSAGE.setup=	Fixing setup.py
+SUBST_FILES.setup=	setup.py
 SUBST_SED.setup+=	-e 's,share/man/,${PKGMANDIR}/,g'
 
 .include "../../lang/python/wheel.mk"
