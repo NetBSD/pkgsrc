@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3129 2025/05/06 18:22:39 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3130 2025/05/06 19:32:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4124,3 +4124,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/mpdecimal to 4.0.1 [wiz 2025-05-06]
 	Updated mail/mu to 1.12.10 [ktnb 2025-05-06]
 	Updated math/xgap to 4.32 [bsiegert 2025-05-06]
+	Updated net/tlrc to 1.11.1 [pin 2025-05-06]
