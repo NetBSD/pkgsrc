@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3120 2025/05/06 13:01:17 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3121 2025/05/06 13:14:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4115,3 +4115,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-humanize to 4.12.3 [adam 2025-05-06]
 	Updated misc/py-trove-classifiers to 2025.5.1.12 [wiz 2025-05-06]
 	Added archivers/quazip1 version 1.5 [wiz 2025-05-06]
+	Updated devel/uv to 0.7.2 [wiz 2025-05-06]
