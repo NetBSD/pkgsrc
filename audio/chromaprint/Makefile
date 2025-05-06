@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/05/06 07:48:40 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/05/06 07:48:56 wiz Exp $
 
 DISTNAME=	chromaprint-1.5.1
 PKGREVISION=	9
@@ -11,7 +11,7 @@ HOMEPAGE=	https://acoustid.org/chromaprint
 COMMENT=	Audio fingerprinting
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 # build and install "fpcalc"
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS=ON
 CMAKE_CONFIGURE_ARGS+=	-DFFT_LIB=fftw3
