@@ -1,13 +1,8 @@
-# $NetBSD: core.mk,v 1.5 2020/06/28 13:30:29 nia Exp $
+# $NetBSD: core.mk,v 1.6 2025/05/06 12:07:31 wiz Exp $
 
 MASTER_SITES?=	${MASTER_SITE_GITHUB:=libretro/}
 
 USE_TOOLS+=	gmake
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 MAKE_FLAGS+=	GIT_VERSION="-pkgsrc"
 MAKE_FLAGS+=	CC=${CC}
@@ -40,7 +35,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-undefined
 INSTALLATION_DIRS+=	lib/libretro
 
 do-install:
-	${FIND} ${WRKSRC} -name ${LIBRETRO_CORE}_libretro.${SOEXT} -exec \
+	${FIND} ${WRKSRC} -name ${LIBRETRO_CORE}_libretro.${SHLIB_EXT} -exec \
 	    ${INSTALL_LIB} '{}' ${DESTDIR}${PREFIX}/lib/libretro ';'
 
 .include "../../mk/dlopen.buildlink3.mk"

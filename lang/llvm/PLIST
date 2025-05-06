@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/07/06 15:45:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/05/06 12:07:33 wiz Exp $
 bin/FileCheck
 bin/UnicodeNameMappingGenerator
 bin/bugpoint
@@ -2062,9 +2062,9 @@ lib/cmake/llvm/TensorFlowCompile.cmake
 lib/cmake/llvm/UseLibtool.cmake
 lib/cmake/llvm/VersionFromVCS.cmake
 lib/cmake/llvm/llvm-driver-template.cpp.in
-lib/libLLVM-18.${SOEXT}
-lib/libLLVM.${SOEXT}
-${PLIST.notdylib}lib/libLLVM.${SOEXT}.18.1
+lib/libLLVM-18.${SHLIB_EXT}
+lib/libLLVM.${SHLIB_EXT}
+${PLIST.notdylib}lib/libLLVM.${SHLIB_EXT}.18.1
 ${PLIST.AArch64}lib/libLLVMAArch64AsmParser.a
 ${PLIST.AArch64}lib/libLLVMAArch64CodeGen.a
 ${PLIST.AArch64}lib/libLLVMAArch64Desc.a
@@ -2285,10 +2285,10 @@ ${PLIST.Xtensa}lib/libLLVMXtensaDesc.a
 ${PLIST.Xtensa}lib/libLLVMXtensaDisassembler.a
 ${PLIST.Xtensa}lib/libLLVMXtensaInfo.a
 lib/libLLVMipo.a
-lib/libLTO.${SOEXT}
-${PLIST.notdylib}lib/libLTO.${SOEXT}.18.1
-lib/libRemarks.${SOEXT}
-${PLIST.notdylib}lib/libRemarks.${SOEXT}.18.1
+lib/libLTO.${SHLIB_EXT}
+${PLIST.notdylib}lib/libLTO.${SHLIB_EXT}.18.1
+lib/libRemarks.${SHLIB_EXT}
+${PLIST.notdylib}lib/libRemarks.${SHLIB_EXT}.18.1
 share/opt-viewer/opt-diff.py
 share/opt-viewer/opt-stats.py
 share/opt-viewer/opt-viewer.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/17 21:50:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/06 12:07:30 wiz Exp $
 
 PKGREVISION= 1
 .include "../../emulators/ppsspp/Makefile.common"
@@ -10,11 +10,6 @@ COMMENT=	Libretro core based on the PPSSPP PlayStation Portable emulator
 
 CONFLICTS+=	ppsspp-[0-9]*
 CONFLICTS+=	ppsspp-qt-[0-9]*
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 CMAKE_CONFIGURE_ARGS+=	-DLIBRETRO=ON
 

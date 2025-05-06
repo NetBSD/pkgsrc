@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2023/06/27 10:33:41 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/05/06 12:07:32 wiz Exp $
 include/libLLVM/llvm-c/Analysis.h
 include/libLLVM/llvm-c/BitReader.h
 include/libLLVM/llvm-c/BitWriter.h
@@ -1662,9 +1662,9 @@ include/libLLVM/llvm/XRay/Trace.h
 include/libLLVM/llvm/XRay/XRayRecord.h
 include/libLLVM/llvm/XRay/YAMLXRayRecord.h
 lib/libLLVM/cmake/llvm/LLVMConfigExtensions.cmake
-${PLIST.notdylib}lib/libLLVM/libLLVM-${LLVM_MAJOR_MINOR}.${SOEXT}
-${PLIST.notdylib}lib/libLLVM/libLLVM-${PKGVERSION}.${SOEXT}
-lib/libLLVM/libLLVM.${SOEXT}
+${PLIST.notdylib}lib/libLLVM/libLLVM-${LLVM_MAJOR_MINOR}.${SHLIB_EXT}
+${PLIST.notdylib}lib/libLLVM/libLLVM-${PKGVERSION}.${SHLIB_EXT}
+lib/libLLVM/libLLVM.${SHLIB_EXT}
 libexec/libLLVM/llvm-config
 libexec/libLLVM/llvm-tblgen
 share/libLLVM/cmake/AddLLVM.cmake
