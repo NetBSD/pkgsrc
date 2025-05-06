@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2025/03/30 21:10:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/05/06 09:51:14 wiz Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -140,11 +140,6 @@ BUILDLINK_TRANSFORM+=	rm:-ffast-math
 .if ${READLINE_TYPE} == "editline"
 CONFIGURE_ARGS+=	--with-libedit-preferred
 .endif
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .if !defined(META_PACKAGE)
 post-extract:
