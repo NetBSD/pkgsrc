@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/04/12 21:10:59 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/06 07:25:58 adam Exp $
 
-DISTNAME=	pytest-timeout-2.3.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+DISTNAME=	pytest_timeout-2.4.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-timeout/}
 
@@ -13,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect>0:../../devel/py-pexpect
 
 USE_LANGUAGES=	# none
 
