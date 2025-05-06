@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2022/05/01 16:01:01 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/06 20:09:56 pin Exp $
 bin/trip
+share/examples/trippy/trippy-config-sample.toml
