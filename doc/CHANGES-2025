@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3113 2025/05/06 10:31:35 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.3114 2025/05/06 10:54:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4107,3 +4107,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-timeout to 2.4.0 [adam 2025-05-06]
 	Updated net/scamper to 20250505 [wiz 2025-05-06]
 	Updated net/nextcloud-client to 3.16.4 [hauke 2025-05-06]
+	Updated emulators/free42 to 3.3.4 [gdt 2025-05-06]
