@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3114 2025/05/06 10:54:25 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3115 2025/05/06 12:12:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4108,3 +4108,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/scamper to 20250505 [wiz 2025-05-06]
 	Updated net/nextcloud-client to 3.16.4 [hauke 2025-05-06]
 	Updated emulators/free42 to 3.3.4 [gdt 2025-05-06]
+	Updated www/cpp-httplib to 0.20.1 [wiz 2025-05-06]
