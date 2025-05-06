@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2022/03/04 07:48:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/06 07:53:54 wiz Exp $
 ${PLIST.gtk2}bin/hexchat
 bin/hexchat-text
 include/hexchat-plugin.h
-lib/hexchat/plugins/checksum.${SOEXT}
-${PLIST.fishlim}lib/hexchat/plugins/fishlim.${SOEXT}
-${PLIST.lua}lib/hexchat/plugins/lua.${SOEXT}
-${PLIST.perl}lib/hexchat/plugins/perl.${SOEXT}
-${PLIST.python}lib/hexchat/plugins/python.${SOEXT}
-${PLIST.libpci}lib/hexchat/plugins/sysinfo.${SOEXT}
+lib/hexchat/plugins/checksum.${SHLIB_EXT}
+${PLIST.fishlim}lib/hexchat/plugins/fishlim.${SHLIB_EXT}
+${PLIST.lua}lib/hexchat/plugins/lua.${SHLIB_EXT}
+${PLIST.perl}lib/hexchat/plugins/perl.${SHLIB_EXT}
+${PLIST.python}lib/hexchat/plugins/python.${SHLIB_EXT}
+${PLIST.libpci}lib/hexchat/plugins/sysinfo.${SHLIB_EXT}
 lib/pkgconfig/hexchat-plugin.pc
 ${PLIST.gtk2}man/man1/hexchat.1
 ${PLIST.gtk2}share/applications/io.github.Hexchat.desktop
