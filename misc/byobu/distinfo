@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:58:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/05/06 20:53:38 vins Exp $
 
-BLAKE2s (byobu_5.111.orig.tar.gz) = db14a321a5be5a739d3fda13cfd942a6942efccab8939eb8659bc39013887173
-SHA512 (byobu_5.111.orig.tar.gz) = f4b20fd3ac01b4361a9ea02428326c3920a8bf728b03c309d491413daf603b3b2807ab1770274034f08299947d66a759777a1b2ddd087d7c9c19c67c7baec48a
-Size (byobu_5.111.orig.tar.gz) = 664384 bytes
+BLAKE2s (byobu_5.133.orig.tar.gz) = dd867f5017d57e0e2d1409af4a3fcc7fcc2d4a451c69ed8a1fd6015647fed65f
+SHA512 (byobu_5.133.orig.tar.gz) = 4c0ef7a3b483e48c57f3e97dae1c7c77084797016efb677b201f2b56c6b9f4b771739d9a6d9a4fb612203a22e9fa460db80fde30c837b102ad830b1b2919db6c
+Size (byobu_5.133.orig.tar.gz) = 761655 bytes
