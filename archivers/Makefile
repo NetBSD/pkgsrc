@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2025/03/08 02:47:59 pho Exp $
+# $NetBSD: Makefile,v 1.218 2025/05/06 13:01:06 wiz Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -129,6 +129,7 @@ SUBDIR+=	py-zlib-ng
 SUBDIR+=	py-zopfli
 SUBDIR+=	py-zstandard
 SUBDIR+=	quazip
+SUBDIR+=	quazip1
 SUBDIR+=	rar
 SUBDIR+=	rox-archive
 SUBDIR+=	ruby-bz2
