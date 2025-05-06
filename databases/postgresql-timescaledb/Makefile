@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/04/17 04:59:38 adam Exp $
+# $NetBSD: Makefile,v 1.41 2025/05/06 09:44:07 wiz Exp $
 
 DISTNAME=	timescaledb-2.19.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -15,14 +15,6 @@ DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL
 
 CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENSSL=ON
 CMAKE_CONFIGURE_ARGS+=	-DREGRESS_CHECKS=OFF
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=	SOEXT=dylib
-.else
-PLIST_SUBST+=	SOEXT=so
-.endif
 
 PGSQL_VERSIONS_ACCEPTED=	17 16 15 14
 
