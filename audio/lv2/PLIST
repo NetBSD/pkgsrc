@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/17 17:43:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/06 07:51:11 wiz Exp $
 bin/lv2_validate
 include/lv2.h
 include/lv2/atom/atom.h
@@ -78,24 +78,24 @@ lib/lv2/data-access.lv2/manifest.ttl
 lib/lv2/dynmanifest.lv2/dynmanifest.meta.ttl
 lib/lv2/dynmanifest.lv2/dynmanifest.ttl
 lib/lv2/dynmanifest.lv2/manifest.ttl
-lib/lv2/eg-amp.lv2/amp.${SOEXT}
+lib/lv2/eg-amp.lv2/amp.${SHLIB_EXT}
 lib/lv2/eg-amp.lv2/amp.ttl
 lib/lv2/eg-amp.lv2/manifest.ttl
-lib/lv2/eg-fifths.lv2/fifths.${SOEXT}
+lib/lv2/eg-fifths.lv2/fifths.${SHLIB_EXT}
 lib/lv2/eg-fifths.lv2/fifths.ttl
 lib/lv2/eg-fifths.lv2/manifest.ttl
 lib/lv2/eg-metro.lv2/manifest.ttl
-lib/lv2/eg-metro.lv2/metro.${SOEXT}
+lib/lv2/eg-metro.lv2/metro.${SHLIB_EXT}
 lib/lv2/eg-metro.lv2/metro.ttl
 lib/lv2/eg-midigate.lv2/manifest.ttl
-lib/lv2/eg-midigate.lv2/midigate.${SOEXT}
+lib/lv2/eg-midigate.lv2/midigate.${SHLIB_EXT}
 lib/lv2/eg-midigate.lv2/midigate.ttl
 lib/lv2/eg-params.lv2/manifest.ttl
-lib/lv2/eg-params.lv2/params.${SOEXT}
+lib/lv2/eg-params.lv2/params.${SHLIB_EXT}
 lib/lv2/eg-params.lv2/params.ttl
-lib/lv2/eg-scope.lv2/examploscope.${SOEXT}
+lib/lv2/eg-scope.lv2/examploscope.${SHLIB_EXT}
 lib/lv2/eg-scope.lv2/examploscope.ttl
-lib/lv2/eg-scope.lv2/examploscope_ui.${SOEXT}
+lib/lv2/eg-scope.lv2/examploscope_ui.${SHLIB_EXT}
 lib/lv2/eg-scope.lv2/manifest.ttl
 lib/lv2/event.lv2/event.meta.ttl
 lib/lv2/event.lv2/event.ttl

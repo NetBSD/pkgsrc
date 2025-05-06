@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2025/04/24 14:13:14 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/05/06 07:51:11 wiz Exp $
 
 DISTNAME=	lv2-1.18.10
 PKGREVISION=	11
@@ -21,11 +21,6 @@ USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
 REPLACE_PYTHON+=	scripts/lv2_build_index.py
-
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-PLIST_SUBST+=	SOEXT=${SOEXT}
 
 .include "options.mk"
 
