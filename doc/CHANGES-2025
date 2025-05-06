@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3118 2025/05/06 12:46:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3119 2025/05/06 12:48:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4113,3 +4113,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hatch-fancy-pypi-readme to 25.1.0 [wiz 2025-05-06]
 	Updated devel/SDL2 to 2.32.6 [adam 2025-05-06]
 	Updated textproc/py-humanize to 4.12.3 [adam 2025-05-06]
+	Updated misc/py-trove-classifiers to 2025.5.1.12 [wiz 2025-05-06]
