@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/20 18:49:33 sevan Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/06 09:08:21 wiz Exp $
 ${LUA_EXAMPLESDIR}/tcbtest.lua
 ${LUA_EXAMPLESDIR}/tcftest.lua
 ${LUA_EXAMPLESDIR}/tchtest.lua
 ${LUA_EXAMPLESDIR}/tcutest.lua
-${LUA_CDIR}/tokyocabinet.${SOEXT}
+${LUA_CDIR}/tokyocabinet.${SHLIB_EXT}
 ${LUA_DOCDIR}/index.html
 ${LUA_DOCDIR}/luadoc.css
 ${LUA_DOCDIR}/modules/tokyocabinet.html
