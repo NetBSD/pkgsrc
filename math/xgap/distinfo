@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:56:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/05/06 18:22:11 bsiegert Exp $
 
-BLAKE2s (xgap4r16.zoo) = d4598827f1d12c59f00d1221924676a8ad6db74112782ecd559351e55d16f183
-SHA512 (xgap4r16.zoo) = 4d089db195c8bf403423197f0d0eba8d1c7738c6d59aa89c25b1e680294ece97760c62db5168990298d5f3e4a1bf657fd2050fbce38bc3753c6fa0e1d9366355
-Size (xgap4r16.zoo) = 731219 bytes
-SHA1 (patch-aa) = 5c2e5d88ab6d3b6fae6a8341ca2eb7cac03cbc30
+BLAKE2s (xgap-4.32.tar.gz) = bf1d4c45e96390f02b9abb85517ca2ab088760463b0dc04b2847bc0eea056540
+SHA512 (xgap-4.32.tar.gz) = 91e09f5c8cdd37d73d0ff733a5c0873527185a29ac784eb7fd18de85118ef4a79a634eea88ac16808e54cc0e144b5c1c850c8a1ce0f4bec63ce134ee301eb997
+Size (xgap-4.32.tar.gz) = 886165 bytes
 SHA1 (patch-ab) = af306491d8c8a8d75384c47cfd4a6081169104de
-SHA1 (patch-ac) = 7aebedbae5dd21026d21153f4ecafd3d4bb524d4
+SHA1 (patch-ac) = 16364996fbda9d891768c69c3b9b0cf35dfb887a
