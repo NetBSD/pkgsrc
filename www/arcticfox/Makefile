@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/05/01 06:44:25 nia Exp $
+# $NetBSD: Makefile,v 1.71 2025/05/06 21:22:41 nia Exp $
 
 DISTNAME=	arcticfox-45.3
 # remove on next update
@@ -109,6 +109,9 @@ PLIST_VARS+=		ffvpx
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.ffvpx=		yes	# platform/old-configure.in
 .endif
+
+# Tries to include <sgidefs.h> which doesn't exist.
+CFLAGS.NetBSD+=	-DLIBYUV_DISABLE_MIPS=1
 
 CWRAPPERS_APPEND.cc+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 CWRAPPERS_APPEND.cxx+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
