@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2025/04/24 14:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.201 2025/05/06 12:07:35 wiz Exp $
 
 DISTNAME=	samba-4.21.3
 PKGREVISION=	3
@@ -117,12 +117,6 @@ LDFLAGS.SunOS+=		-lsocket -lsendfile
 CFLAGS.FreeBSD+=	-DENODATA=ENOATTR
 
 .include "options.mk"
-
-.if ${SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=	SOEXT=dylib
-.else
-PLIST_SUBST+=	SOEXT=so
-.endif
 
 # mdb is built only on LP64 hosts (PR pkg/58947)
 PLIST_VARS+=	mdb

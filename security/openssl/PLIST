@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/12/24 15:30:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/05/06 12:07:36 wiz Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -144,18 +144,18 @@ include/openssl/x509v3.h
 include/openssl/x509v3err.h
 lib/cmake/OpenSSL/OpenSSLConfig.cmake
 lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake
-${PLIST.afalg}lib/engines-3/afalg.${SOEXT}
-lib/engines-3/capi.${SOEXT}
-${PLIST.devcrypto}lib/engines-3/devcrypto.${SOEXT}
-lib/engines-3/loader_attic.${SOEXT}
-lib/engines-3/padlock.${SOEXT}
+${PLIST.afalg}lib/engines-3/afalg.${SHLIB_EXT}
+lib/engines-3/capi.${SHLIB_EXT}
+${PLIST.devcrypto}lib/engines-3/devcrypto.${SHLIB_EXT}
+lib/engines-3/loader_attic.${SHLIB_EXT}
+lib/engines-3/padlock.${SHLIB_EXT}
 lib/libcrypto.a
 lib/libcrypto.so
 lib/libcrypto.so.3
 lib/libssl.a
 lib/libssl.so
 lib/libssl.so.3
-lib/ossl-modules/legacy.${SOEXT}
+lib/ossl-modules/legacy.${SHLIB_EXT}
 lib/pkgconfig/libcrypto.pc
 lib/pkgconfig/libssl.pc
 lib/pkgconfig/openssl.pc

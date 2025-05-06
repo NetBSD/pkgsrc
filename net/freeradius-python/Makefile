@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/19 08:46:33 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/05/06 12:07:34 wiz Exp $
 
 .include "../../net/freeradius/Makefile.module"
 
@@ -13,7 +13,7 @@ pre-configure:
 	cd ${BUILDLINK_DIR}/bin && ${LN} -s ${PREFIX}/bin/python${PYVERSSUFFIX}-config python3-config
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_python3.${SOEXT} \
+	${INSTALL_LIB} ${WRKSRC}/build/lib/.libs/rlm_python3.${SHLIB_EXT} \
 		${DESTDIR}${PREFIX}/lib
 
 .include "../../lang/python/pyversion.mk"

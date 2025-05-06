@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2025/04/19 07:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.333 2025/05/06 12:07:33 wiz Exp $
 
 DISTNAME=	rustc-1.85.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -577,10 +577,6 @@ do-test:
 	${SETENV} ${MAKE_ENV}						\
 		${TOOL_PYTHONBIN} ./x.py test -j ${_MAKE_JOBS_N}
 
-OPSYSVARS+=	SOEXT
-SOEXT.Darwin=	dylib
-SOEXT.*=	so
-
 do-install:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} &&							\
@@ -588,7 +584,7 @@ do-install:
 		${TOOL_PYTHONBIN} ./x.py install -j ${_MAKE_JOBS_N}
 .if ${OPSYS} == "Darwin"
 	cd ${DESTDIR}${PREFIX}/lib && \
-	for lib in rustlib/*/lib/libstd-*.${SOEXT}; do \
+	for lib in rustlib/*/lib/libstd-*.${SHLIB_EXT}; do \
 		${LN} -f $${lib} $${lib##*/}; \
 	done
 .endif

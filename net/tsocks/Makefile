@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/06/26 09:28:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2025/05/06 12:07:35 wiz Exp $
 
 DISTNAME=	tsocks-1.8beta5
 PKGREVISION=	4
@@ -32,10 +32,10 @@ SUBST_FILES.tsocks=	tsocks
 SUBST_VARS.tsocks=	PREFIX SH
 .if ${OPSYS} == "Darwin"
 SUBST_SED.tsocks=	-e 's,@PRELOAD_VAR@,DYLD_INSERT_LIBRARIES,g'
-SUBST_SED.tsocks+=	-e 's,@SOEXT@,dylib,g'
+SUBST_SED.tsocks+=	-e 's,@SHLIB_EXT@,dylib,g'
 .else
 SUBST_SED.tsocks=	-e 's,@PRELOAD_VAR@,LD_PRELOAD,g'
-SUBST_SED.tsocks+=	-e 's,@SOEXT@,so,g'
+SUBST_SED.tsocks+=	-e 's,@SHLIB_EXT@,so,g'
 .endif
 
 INSTALLATION_DIRS+=	${EGDIR}

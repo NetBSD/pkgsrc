@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2020/05/31 17:01:08 nia Exp $
-lib/libretro/smsplus_libretro.${SOEXT}
+@comment $NetBSD: PLIST,v 1.2 2025/05/06 12:07:30 wiz Exp $
+lib/libretro/smsplus_libretro.${SHLIB_EXT}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/14 12:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/06 12:07:36 wiz Exp $
 
 DISTNAME=	pyenchant-3.2.2
 PKGREVISION=	1
@@ -16,16 +16,11 @@ DEPENDS+=	enchant2-[0-9]*:../../textproc/enchant2
 
 USE_LANGUAGES=	# none
 
-.include "../../mk/bsd.prefs.mk"
-
-SOEXT.dylib=	dylib
-SOEXT=		${SOEXT.${SHLIB_TYPE}:Uso}
-
 SUBST_CLASSES+=		libpath
 SUBST_STAGE.libpath=	pre-configure
 SUBST_MESSAGE.libpath=	Fixing libenchant2 path.
 SUBST_FILES.libpath=	enchant/_enchant.py
-SUBST_SED.libpath=	-e 's,@PYENCHANT_LIBRARY_PATH@,${PREFIX}/lib/libenchant-2.${SOEXT},g'
+SUBST_SED.libpath=	-e 's,@PYENCHANT_LIBRARY_PATH@,${PREFIX}/lib/libenchant-2.${SHLIB_EXT},g'
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

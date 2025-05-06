@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/03/30 06:07:30 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/05/06 12:07:32 wiz Exp $
 
 DISTNAME=	jimtcl-0.83
 CATEGORIES=	lang
@@ -30,16 +30,14 @@ REPLACE_FILES.jimsh=	build-jim-ext.in jimdb
 
 TEST_TARGET=	test
 
-OPSYSVARS+=	SOEXT SONAME
-SOEXT.Darwin=	dylib
-SONAME.Darwin=	libjim.${PKGVERSION_NOREV}.${SOEXT}
-SOEXT.*=	so
-SONAME.*=	libjim.${SOEXT}.${PKGVERSION_NOREV}
+OPSYSVARS+=	SHLIB_EXT SONAME
+SONAME.Darwin=	libjim.${PKGVERSION_NOREV}.${SHLIB_EXT}
+SONAME.*=	libjim.${SHLIB_EXT}.${PKGVERSION_NOREV}
 
-PLIST_SUBST+=	SOEXT=${SOEXT} SONAME=${SONAME}
+PLIST_SUBST+=	SONAME=${SONAME}
 
 post-install:
-	${LN} -sf ${SONAME} ${DESTDIR}${PREFIX}/lib/libjim.${SOEXT}
+	${LN} -sf ${SONAME} ${DESTDIR}${PREFIX}/lib/libjim.${SHLIB_EXT}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

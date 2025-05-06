@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/11/27 19:52:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/06 12:07:35 wiz Exp $
 
 DISTNAME=		bearssl-0.6
 PKGREVISION=		1
@@ -14,11 +14,6 @@ INSTALLATION_DIRS=	bin include lib
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
-OPSYSVARS+=		SOEXT
-SOEXT.Darwin=		dylib
-SOEXT.*=		so
-PLIST_SUBST+=		SOEXT=${SOEXT}
-
 pre-build:
 	${MKDIR} ${WRKSRC}/build/obj
 
@@ -29,7 +24,7 @@ do-install:
 		${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include
 	cd ${WRKSRC}/build && \
 		${INSTALL_DATA} libbearssl.a ${DESTDIR}${PREFIX}/lib && \
-		${INSTALL_LIB} libbearssl.${SOEXT} ${DESTDIR}${PREFIX}/lib
+		${INSTALL_LIB} libbearssl.${SHLIB_EXT} ${DESTDIR}${PREFIX}/lib
 
 do-test:
 	cd ${WRKSRC} && \

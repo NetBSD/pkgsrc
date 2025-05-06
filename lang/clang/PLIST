@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2024/08/05 23:50:20 tnn Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/05/06 12:07:32 wiz Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/c-index-test
@@ -1017,11 +1017,11 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangConfigVersion.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
-lib/libclang-cpp.${SOEXT}
+lib/libclang-cpp.${SHLIB_EXT}
 ${PLIST.notdylib}lib/libclang-cpp.so.18.1
-lib/libclang.${SOEXT}
-${PLIST.notdylib}lib/libclang.${SOEXT}.${PKGVERSION}
-${PLIST.notdylib}lib/libclang.${SOEXT}.18.1
+lib/libclang.${SHLIB_EXT}
+${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.${PKGVERSION}
+${PLIST.notdylib}lib/libclang.${SHLIB_EXT}.18.1
 lib/libclangAPINotes.a
 lib/libclangARCMigrate.a
 lib/libclangAST.a
