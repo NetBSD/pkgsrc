@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/12 06:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/05/06 07:50:13 wiz Exp $
 
 DISTNAME=	libgroove-4.3.0
 PKGREVISION=	23
@@ -16,15 +16,9 @@ USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-SOEXT=	dylib
-.else
-SOEXT=	so
-.endif
-
 .for lib in AVCODEC AVFILTER AVFORMAT AVUTIL
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg4}/include/ffmpeg4
-CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg4}/lib/ffmpeg4/lib${lib:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg4}/lib/ffmpeg4/lib${lib:tl}.${SHLIB_EXT}
 .endfor
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
