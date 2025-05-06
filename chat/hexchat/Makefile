@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/04/24 14:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/05/06 07:53:54 wiz Exp $
 
 DISTNAME=	hexchat-2.16.2
 PKGREVISION=	2
@@ -22,11 +22,6 @@ MESON_ARGS+=		-Dinstall-appdata=false
 
 REPLACE_PYTHON+=	plugins/perl/generate_header.py
 REPLACE_PYTHON+=	src/common/make-te.py
-
-OPSYSVARS+=		SOEXT
-SOEXT.Darwin=		dylib
-SOEXT.*=		so
-PLIST_SUBST+=		SOEXT=${SOEXT}
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
