@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3146 2025/05/07 14:57:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3147 2025/05/07 20:47:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4228,3 +4228,23 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-virtualenv to 20.31.1 [adam 2025-05-07]
 	Removed lang/rust176-bin [wiz 2025-05-07]
 	Removed lang/rust176 [wiz 2025-05-07]
+	Updated print/tex-glossaries to 4.6 [mark 2025-05-07]
+	Updated print/tex-glossaries-doc to 4.6 [mark 2025-05-07]
+	Updated print/tex-graphics to 1.4g [mark 2025-05-07]
+	Updated print/tex-graphics-doc to 1.4g [mark 2025-05-07]
+	Updated print/tex-graphics-def to 2024 [mark 2025-05-07]
+	Updated print/tex-graphics-def-doc to 2024 [mark 2025-05-07]
+	Updated graphics/tex-graphics-pln to 2024 [mark 2025-05-07]
+	Updated graphics/tex-graphics-pln-doc to 2024 [mark 2025-05-07]
+	Updated print/tex-amstex to 2.2.73848 [mark 2025-05-07]
+	Updated print/tex-amstex-doc to 2.2.73848 [mark 2025-05-07]
+	Updated print/tex-ctex to 2.5.10.71527 [mark 2025-05-07]
+	Updated print/tex-ctex-doc to 2.5.10.71527 [mark 2025-05-07]
+	Updated print/tex-eplain to 3.14 [mark 2025-05-07]
+	Updated print/tex-eplain-doc to 3.14 [mark 2025-05-07]
+	Updated print/tex-hitex to 2025 [mark 2025-05-07]
+	Updated print/tex-hitex-doc to 2025 [mark 2025-05-07]
+	Updated print/tex-jadetex to 3.13.71409 [mark 2025-05-07]
+	Updated print/tex-jadetex-doc to 3.13.71409 [mark 2025-05-07]
+	Updated print/tex-mltex to 2.2.71363 [mark 2025-05-07]
+	Updated print/tex-mltex-doc to 2.2.71363 [mark 2025-05-07]
