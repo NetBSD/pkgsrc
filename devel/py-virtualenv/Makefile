@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2025/04/28 20:21:46 adam Exp $
+# $NetBSD: Makefile,v 1.99 2025/05/07 13:57:03 adam Exp $
 
-DISTNAME=	virtualenv-20.30.0
+DISTNAME=	virtualenv-20.31.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
