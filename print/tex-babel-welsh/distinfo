@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/07 12:37:06 markd Exp $
 
-BLAKE2s (tex-babel-welsh-38372/babel-welsh.tar.xz) = c8ef0d879e0c3f5d601c1443fac202b41a87c1d98c3e1128f2d2af2ce74b605d
-SHA512 (tex-babel-welsh-38372/babel-welsh.tar.xz) = 6d9fa08e22d46641aa04e315cef6f02c145cc79aa6ddd4066e11de3fa8b02d189421fc2f3c09773785ebf65e4486b5c45b74b12ebb934176d77324bbba301a8e
-Size (tex-babel-welsh-38372/babel-welsh.tar.xz) = 1836 bytes
+BLAKE2s (babel-welsh.r73855.tar.xz) = cae02aaad17ccd30dea3921624a8cfee1a4a9a26209efb8c019bf96ce28b1593
+SHA512 (babel-welsh.r73855.tar.xz) = afac45ab8e483d08fd192559a58d642150bc402663b528d8235515f7086ce0f9420d44b061580509dc658cf46549b079345194eb4c7c772ec127e5df5018247c
+Size (babel-welsh.r73855.tar.xz) = 1804 bytes
