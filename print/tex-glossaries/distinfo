@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/02/04 00:03:31 markd Exp $
+$NetBSD: distinfo,v 1.19 2025/05/07 20:17:46 markd Exp $
 
-BLAKE2s (glossaries.r68437.tar.xz) = aece52a5375828f9d12e0fa1842b6b54f1a5286e7a293b0b81029be1b8747827
-SHA512 (glossaries.r68437.tar.xz) = bb81a95a1e379ec87b569d94ebf08f83823f825a70138a3770a3d1236424b976a98cd1265e7d68771460e6e96827761d697ddf0dbe48872c802414236e0065ba
-Size (glossaries.r68437.tar.xz) = 93476 bytes
+BLAKE2s (glossaries.r74942.tar.xz) = 0a645926a0b78723f8474ccfcfa3ce36fd3257871b18847d87d616041536446c
+SHA512 (glossaries.r74942.tar.xz) = 3dad0f9b6b3ed6ec6e2defc7d776f1e5998335d75502e82f7c74a4e8d9f65b1a36635e16fe4af3fda9118136dba6bc3f296d0c203dd3e4502f20028f6f0dd7a8
+Size (glossaries.r74942.tar.xz) = 107168 bytes
