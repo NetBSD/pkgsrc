@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/02/25 19:56:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/05/07 12:41:54 markd Exp $
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.map
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/arabicdigits.tec
 share/texmf-dist/fonts/misc/xetex/fontmapping/polyglossia/bengalidigits.map
@@ -20,7 +20,7 @@ share/texmf-dist/tex/latex/polyglossia/bengalidigits.sty
 share/texmf-dist/tex/latex/polyglossia/cal-util.def
 share/texmf-dist/tex/latex/polyglossia/devanagaridigits.sty
 share/texmf-dist/tex/latex/polyglossia/farsical.sty
-share/texmf-dist/tex/latex/polyglossia/gloss-acadien.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-acadian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-aeb.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-af.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-afb.ldf
@@ -74,6 +74,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-chinese.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Arab.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb-Latn.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ckb.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-classiclatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-cop.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-coptic.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-croatian.ldf
@@ -106,6 +107,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-divehi.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dsb.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dutch.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-dv.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-ecclesiasticlatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-el-monoton.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-el-polyton.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-el.ldf
@@ -188,9 +190,6 @@ share/texmf-dist/tex/latex/polyglossia/gloss-la.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-lao.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-latin.ldf
-share/texmf-dist/tex/latex/polyglossia/gloss-latinclassic.ldf
-share/texmf-dist/tex/latex/polyglossia/gloss-latinecclesiastic.ldf
-share/texmf-dist/tex/latex/polyglossia/gloss-latinmedieval.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-latvian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-lithuanian.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-lo.ldf
@@ -203,6 +202,7 @@ share/texmf-dist/tex/latex/polyglossia/gloss-magyar.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-malay.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-malayalam.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-marathi.ldf
+share/texmf-dist/tex/latex/polyglossia/gloss-medievallatin.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-mk.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-ml.ldf
 share/texmf-dist/tex/latex/polyglossia/gloss-mn.ldf
@@ -267,8 +267,8 @@ share/texmf-dist/tex/latex/polyglossia/hebrewcal.sty
 share/texmf-dist/tex/latex/polyglossia/hijrical.sty
 share/texmf-dist/tex/latex/polyglossia/nkonumbers.sty
 share/texmf-dist/tex/latex/polyglossia/odiadigits.sty
+share/texmf-dist/tex/latex/polyglossia/polyglossia-cjk-spacing.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-french.lua
-share/texmf-dist/tex/latex/polyglossia/polyglossia-korean.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-latin.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-punct.lua
 share/texmf-dist/tex/latex/polyglossia/polyglossia-sanskrit.lua
