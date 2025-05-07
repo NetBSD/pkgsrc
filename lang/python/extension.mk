@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.66 2025/01/07 19:35:08 riastradh Exp $
+# $NetBSD: extension.mk,v 1.67 2025/05/07 10:28:03 tnn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -11,7 +11,6 @@
 # Do not included this file directly, use wheel.mk.
 
 .if !empty(PYDISTUTILSPKG:M[yY][eE][sS])
-.include "../../mk/bsd.prefs.mk"
 
 PYSETUP?=		setup.py
 PYSETUPBUILDTARGET?=	build
