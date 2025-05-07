@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2023/06/27 17:13:29 roy Exp $
+$NetBSD: distinfo,v 1.30 2025/05/07 10:31:24 roy Exp $
 
-BLAKE2s (openresolv-3.13.2.tar.xz) = ed213355d744b472ee80efcbead0965d572e43db216d1afba6ba8af404c5bf50
-SHA512 (openresolv-3.13.2.tar.xz) = 4f1bc3e2865bc233d12c29e75893b3e53db0b127a7167d9be4ddd0228ba4f689f62af93eab088fb4d4f66baa556ed402c7fc5ecb9c4af5509004125af60fa379
-Size (openresolv-3.13.2.tar.xz) = 21540 bytes
+BLAKE2s (openresolv-3.16.2.tar.xz) = 537e3a8247b0c978cea6e5655c3d429226663f0ab6f7c67370d59163fa63fd52
+SHA512 (openresolv-3.16.2.tar.xz) = 0dc888a44668bf701428abffc7940cca4d223c212b56f1a00d0989619284635db58d85ff3a413361366c62f93740ae37ba0ff933584acf09d3371881c6738d40
+Size (openresolv-3.16.2.tar.xz) = 23936 bytes
