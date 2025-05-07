@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:24 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/07 20:32:39 markd Exp $
 
-BLAKE2s (tex-amstex-49810/amstex.tar.xz) = 02021d21cae9ae8a7f5b8c1f36200c1c2e3e8b12ced5cc79f64344b2d6525421
-SHA512 (tex-amstex-49810/amstex.tar.xz) = 5ecce183d02198c1e5b3937124480a8e9592260aff35c5d3b7ec12b7a82fe9804e8af2e1fc50d017ba311f2fffc9c82544ce69769f5654fbca9af1449ddea8c3
-Size (tex-amstex-49810/amstex.tar.xz) = 38368 bytes
+BLAKE2s (amstex.r73848.tar.xz) = 53a8af361187346cf7d8bdcd087b01e0661f1cdd604b85ed562748be151480e2
+SHA512 (amstex.r73848.tar.xz) = cb349e81c36d37769619b7d38a850aab5effa33c9069c791026dd53c86870dd0285eaabc422974133bdc9c2b6d248a5a37083323df6c1e4ce226fe868d0f6650
+Size (amstex.r73848.tar.xz) = 38380 bytes
