@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/07 11:49:40 markd Exp $
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sq.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-sq.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-quote-sq.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-sq.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sq.pat.txt
