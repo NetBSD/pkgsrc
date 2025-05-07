@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:13:36 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/05/07 11:44:20 markd Exp $
 
-BLAKE2s (hyphen-ethiopic.r58652.tar.xz) = eb649b7ebbaf93d43f782545627b51774640f5108e3f307ecaef919a43ed0bad
-SHA512 (hyphen-ethiopic.r58652.tar.xz) = a1532603758e7f774acba7c13ee74f0046ff187598ca86b2e93b91da31317f03fdbab5d4d7c0814978fb2ac159bd6e5a48e6e734c19758da21ad0a031844f52b
-Size (hyphen-ethiopic.r58652.tar.xz) = 4448 bytes
+BLAKE2s (hyphen-ethiopic.r73410.tar.xz) = 017fccb59e6fbff4787ec8d1452974e3c653a564b50257dae2936910b63cb50b
+SHA512 (hyphen-ethiopic.r73410.tar.xz) = 328dcaf208026bfc034758d9d6cd1854ae3c1ea9391618adbb3610a87ae178de3c64702048e394a509239f95cc84d5569364bae047e9701beb9244033a4bf41b
+Size (hyphen-ethiopic.r73410.tar.xz) = 4448 bytes

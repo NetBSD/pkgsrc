@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:25 markd Exp $
 
-BLAKE2s (hyphen-swedish.r58652.tar.xz) = ce96f7ec9997a64453962364972af8a83065c352c615070a42441ff74e1aca40
-SHA512 (hyphen-swedish.r58652.tar.xz) = 5f993ae6b22eadb87b6a1839bfa7d78a0dccc1107c5afbec8c248ed001018da38bb179e29f2430cffa90283221b20c5475346a8d5566edf16152266257f2a37d
-Size (hyphen-swedish.r58652.tar.xz) = 18240 bytes
+BLAKE2s (hyphen-swedish.r73410.tar.xz) = c58b5302380e10a6aa47f221755b783c8cb923c5a87aefea0b550cda4c075f7c
+SHA512 (hyphen-swedish.r73410.tar.xz) = b4b7f2e4e17b155c9ff133b0854f920b5bf97557a8cd101d315446a5d773b6ef6ec51c0934e2e9ad27e1afdbda48a90cc56ad0186958f4e0bdec815a114243a6
+Size (hyphen-swedish.r73410.tar.xz) = 18232 bytes
