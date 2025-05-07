@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:33:40 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/07 12:37:06 markd Exp $
 
 DISTNAME=	babel-welsh
-PKGNAME=	tex-${DISTNAME}-1.1a
-TEXLIVE_REV=	38372
+PKGNAME=	tex-${DISTNAME}-1.1c
+TEXLIVE_REV=	73855
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/babel-welsh
@@ -11,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-babel>=3.9l:../../print/tex-babel
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
