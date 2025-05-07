@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/04/01 10:55:08 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/05/07 20:38:35 markd Exp $
 
-BLAKE2s (eplain.doc.r64721.tar.xz) = b47c9a93531e00d75acf75bca2fe524823ed2b00b8cb281130aeec6d7de84ee1
-SHA512 (eplain.doc.r64721.tar.xz) = 60902b2422d2f5d7570a19daf7f586df7882505d7c156539699a0aa47a0f3bde5688dcbdc92c8a6a9878f11392bc9b9f147626aad230eecd2740d56f104928ed
-Size (eplain.doc.r64721.tar.xz) = 1048452 bytes
+BLAKE2s (eplain.doc.r71409.tar.xz) = 11b819a6541cc18e9246e9dbcf49dc430ccdf4bb7c344b7d385a816ec451cb57
+SHA512 (eplain.doc.r71409.tar.xz) = d79698f41084d1608153947b8786dfef060cb84260d0151ac7a36cc6e86fdc85e259cc04092636b01312adecc0c18139affb9ff592d0a511b4055a8c3a7e4a1d
+Size (eplain.doc.r71409.tar.xz) = 1003736 bytes

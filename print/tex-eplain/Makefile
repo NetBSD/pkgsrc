@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.12 2023/04/01 10:55:08 markd Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/07 20:38:35 markd Exp $
 
 DISTNAME=	eplain
-PKGNAME=	tex-${DISTNAME}-3.13
-TEXLIVE_REV=	64721
+PKGNAME=	tex-${DISTNAME}-3.14
+TEXLIVE_REV=	71409
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/eplain
 COMMENT=	Extended plain TeX macros
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	tex-knuth-lib-[0-9]*:../../fonts/tex-knuth-lib
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-dehyph-[0-9]*:../../print/tex-dehyph
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
-DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
-DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
-DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
+DEPENDS+=	tex-knuth-lib-[0-9]*:../../fonts/tex-knuth-lib
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
-DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 
 INSTALLATION_DIRS+=	bin
 
