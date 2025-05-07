@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/04/12 12:10:15 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/05/07 07:32:21 adam Exp $
 
-BLAKE2s (orderly_set-5.4.0.tar.gz) = 927e6f92057abe332547d67c71b1341d999aea11b43338bc2a32139ad09543b9
-SHA512 (orderly_set-5.4.0.tar.gz) = 2de050ffd87919540952a54df8b0f28f1e1ed6b503c4e99b3737119287bf5d10e06d5c4d6a6efae953dd95c16429f277c01fdc08e9a1c4aa75a8939128d7bc50
-Size (orderly_set-5.4.0.tar.gz) = 20934 bytes
+BLAKE2s (orderly_set-5.4.1.tar.gz) = de65bedee0b95ee51cfadf079200a40fc40adb3aa8d4f9b8356099837162171c
+SHA512 (orderly_set-5.4.1.tar.gz) = 3806247f3893dcb7a532e95ba8ccca85b3d478e393868de126fefff83514725449c9ecffebc781815e70c0e94ee641dad1d10a1d13e548b28035d5b6c24de4e7
+Size (orderly_set-5.4.1.tar.gz) = 20943 bytes
