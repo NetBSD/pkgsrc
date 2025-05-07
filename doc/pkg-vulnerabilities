@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.358 2025/05/04 11:20:27 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.359 2025/05/07 15:30:10 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26174,3 +26174,5 @@ fcgi<2.4.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-23016
 py{39,310,311,312,313}-h11<0.16.0	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-43859
 dnsdist<1.9.9	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-30194
 liboqs<0.13.0	information-disclosure	https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/Wiu4ZQo3fP8
+py{39,310,311,312,313}-django<4.2.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-32873
+py{39,310,311,312,313}-django>=5<5.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-32873
