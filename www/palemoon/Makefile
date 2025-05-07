@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2025/05/01 14:43:56 nia Exp $
+# $NetBSD: Makefile,v 1.33 2025/05/07 14:46:17 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
 PKGNAME=	palemoon-33.7.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -101,7 +101,21 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 LDFLAGS+=		-Wl,--no-keep-memory
 .endif
 
+PLIST_VARS+=		be le
 PLIST_VARS+=		ffvpx
+
+PM_BIG_ENDIAN?=	no
+.for plat in ${BIGENDIANPLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${plat})
+PM_BIG_ENDIAN=	yes
+.  endif
+.endfor
+
+.if ${PM_BIG_ENDIAN:tl} != "no"
+PLIST.be=	yes
+.else
+PLIST.le=	yes
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.ffvpx=		yes	# see platform/old-configure.in
@@ -150,8 +164,10 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/palemoon.png
 	${INSTALL_DATA} ${WRKSRC}/palemoon/branding/unofficial/newmoon.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/palemoon.desktop
+.if ${PM_BIG_ENDIAN:tl} != "no"
 	${INSTALL_DATA} ${WRKDIR}/icudt63b.dat \
 	    ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/
+.endif
 
 .include "options.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
