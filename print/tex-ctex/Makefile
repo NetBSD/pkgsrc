@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/09/01 10:23:48 markd Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/07 20:35:30 markd Exp $
 
 DISTNAME=	ctex
-PKGNAME=	tex-${DISTNAME}-2.5.10
-TEXLIVE_REV=	63891
+PKGNAME=	tex-${DISTNAME}-2.5.10.71527
+TEXLIVE_REV=	71527
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ctex
@@ -28,7 +28,6 @@ DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-ltxcmds-[0-9]*:../../print/tex-ltxcmds
 DEPENDS+=	tex-luatexja-[0-9]*:../../print/tex-luatexja
 DEPENDS+=	tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
-DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-platex-tools-[0-9]*:../../print/tex-platex-tools
 DEPENDS+=	tex-svn-prov-[0-9]*:../../print/tex-svn-prov
