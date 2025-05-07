@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/20 14:53:50 gdt Exp $
-bin/benchmark_xl
+@comment $NetBSD: PLIST,v 1.5 2025/05/07 17:53:41 tnn Exp $
 bin/cjxl
 bin/djxl
 bin/jxlinfo
