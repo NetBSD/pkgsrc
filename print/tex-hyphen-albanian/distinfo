@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/07 11:49:40 markd Exp $
+
+BLAKE2s (hyphen-albanian.r73410.tar.xz) = b9f81b61b4c12a65fbc8a83a07e7f5b63d6a2a2f4ce16090e917076ed9e89329
+SHA512 (hyphen-albanian.r73410.tar.xz) = 07e14a47a57b0c685dcfdc84037d1984693c097d1dff2b1c24f79cc724c0c5b103e49b7a4977760cb71e43a42c4b1c4b5227bab6107106058bc868b80ca0af79
+Size (hyphen-albanian.r73410.tar.xz) = 3352 bytes
