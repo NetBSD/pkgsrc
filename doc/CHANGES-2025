@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3137 2025/05/07 07:35:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3138 2025/05/07 08:05:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4137,3 +4137,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-poetry to 2.1.3 [adam 2025-05-07]
 	Updated devel/py-orderly-set to 5.4.1 [adam 2025-05-07]
 	Updated databases/py-peewee to 3.18.1 [adam 2025-05-07]
+	Updated parallel/opencl-headers to 2024.10.24 [adam 2025-05-07]
+	Updated parallel/ocl-icd to 2.3.3 [adam 2025-05-07]
