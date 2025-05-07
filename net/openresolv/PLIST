@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/07/22 13:52:56 roy Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/07 10:31:24 roy Exp $
 libexec/resolvconf/dnsmasq
 libexec/resolvconf/libc
 libexec/resolvconf/libc.d/avahi-daemon
@@ -6,6 +6,7 @@ libexec/resolvconf/libc.d/mdnsd
 libexec/resolvconf/named
 libexec/resolvconf/pdns_recursor
 libexec/resolvconf/pdnsd
+libexec/resolvconf/systemd-resolved
 libexec/resolvconf/unbound
 man/man5/resolvconf.conf.5
 man/man8/resolvconf.8
