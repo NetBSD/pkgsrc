@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/02/18 09:47:18 markd Exp $
+$NetBSD: distinfo,v 1.29 2025/05/07 12:21:19 markd Exp $
 
-BLAKE2s (babel.doc.r69742.tar.xz) = fb0168b8355d0d69c5f2a0a35e6c493f7ddefb6a4eba993985bd012e4b2fee3a
-SHA512 (babel.doc.r69742.tar.xz) = fbe053f25e6db1df9856c03813070842dac62bb9e4e541a8ee29e990ea52017824cb260d8fac4f8a9002d8d07b3dc0726795659b73e7c58db3c9f6b8b84c8b05
-Size (babel.doc.r69742.tar.xz) = 1051364 bytes
+BLAKE2s (babel.doc.r75053.tar.xz) = 2da978195986f511102c9216c353368f0d52abe0d0b058e898c4c368fd91e4d3
+SHA512 (babel.doc.r75053.tar.xz) = 8f100ceafce3ab7123a1ea4221d40f79268a34eca6e9fb0b73c1302162250d2409a5f85d93abf6fa4a9e776b616c20a476bb010a9130022b359c0b63725fa7bc
+Size (babel.doc.r75053.tar.xz) = 1160588 bytes
