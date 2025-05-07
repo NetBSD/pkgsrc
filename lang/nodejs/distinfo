@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.285 2025/04/08 09:05:19 adam Exp $
+$NetBSD: distinfo,v 1.286 2025/05/07 05:56:47 adam Exp $
 
-BLAKE2s (node-v23.11.0.tar.xz) = c817b9eb260bef11df5e049a749ef479fe50bbec8d1034a02f7e393f455af431
-SHA512 (node-v23.11.0.tar.xz) = 6f332ec26e13b42c8f0c7cbca4e45034ded455dbc5cfa1776115439292698fc825a5f60a8a88dc43aa0561a3504267bfa4bd3fb9476fc9c81a0e739d8c35b637
-Size (node-v23.11.0.tar.xz) = 49211772 bytes
+BLAKE2s (node-v24.0.0.tar.xz) = 215efd87782a1e096673c1a27df50787cecfa293a9d7b4d880d03cffc569e0fc
+SHA512 (node-v24.0.0.tar.xz) = ae05699a0a36887b6b0eb4efa2230f8e027261a26fd8013626ca7712ee204fc8bc0ae0fe94720e124e1e87a5031ae0be9edf6f6cfef8a7b457fddd5951ea7751
+Size (node-v24.0.0.tar.xz) = 49770040 bytes
 SHA1 (patch-common.gypi) = a4dd4ba7e0dfd5838d7241e35447617bdc0f93df
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 29f0c382b68f77749a71ce39fa2ca37338ca18ec
 SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 32b85ef5824b96b35aba9280bbe7aa7899d9e5cf
-SHA1 (patch-deps_v8_src_base_platform_memory.h) = 9dad117067fc6b9d41baaff1d7c9e02d840a42dd
+SHA1 (patch-deps_v8_src_base_platform_memory.h) = 10603b12ccdb97df87de70a2b91b96739c2ab13b
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = b47025f33d2991275bbcd15dbabb28900afab0e1
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
 SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = bfe8972371ed0c4039bf3bf025d83b64ec508721
@@ -15,8 +15,6 @@ SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c6
 SHA1 (patch-deps_v8_src_base_strings.h) = 4d2b37491f2f74f1a573f8c1942790204e23a8bb
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
-SHA1 (patch-deps_v8_src_compiler_types.h) = 2a212282ab9d71e98ae56827fdb1d9778a6047a5
-SHA1 (patch-deps_v8_src_heap_code-range.cc) = b281f76f4e3d8e562f596235049a6be7c5ff4de2
 SHA1 (patch-deps_v8_tools_profiling_run-llprof.sh) = b19994d3195cc97424a3cc2ffd3ae02eacc6ffa8
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
 SHA1 (patch-src_compile__cache.cc) = 39a85bcb1ebe7c9bf7c431d6dc60dca5b9d63aaf
@@ -26,4 +24,4 @@ SHA1 (patch-src_node__postmortem__metadata.cc) = 9938482d724ad6636af5dc3fa719ec2
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = bf48cd3b928797d347b8ad8344e3965ad11e5ea7
 SHA1 (patch-tools_gyp_pylib_gyp_xcode__emulation.py) = 4ee24115f5e97ffbd23aaa6dc62f408d381d4e22
 SHA1 (patch-tools_install.py) = ac296123fa498c7edee3a5735f2e24c862037813
-SHA1 (patch-tools_v8_gypfiles_v8.gyp) = 8b1b0e2216f9e8025f8e623d5aa8af3f8d670804
+SHA1 (patch-tools_v8_gypfiles_v8.gyp) = 112aa21cb2c2c4609cba96f41ae306d6e60ae797
