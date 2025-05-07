@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/07 11:52:15 markd Exp $
+
+BLAKE2s (hyphen-hebrew.r74032.tar.xz) = 156722fd2c046c09bb0aeaa7477c0608e23b9e1af5efa591e8843f1c27260a3e
+SHA512 (hyphen-hebrew.r74032.tar.xz) = a43130d2b65c06f6f936c2f3fd2a684439da830fded0f7495c87f9e8948789c3d25831f080f49acb3cd69466ee043087ea485a47ec86773cf856ec311973a171
+Size (hyphen-hebrew.r74032.tar.xz) = 720 bytes
