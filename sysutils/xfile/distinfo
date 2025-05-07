@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2025/05/01 07:33:20 vins Exp $
+$NetBSD: distinfo,v 1.3 2025/05/07 15:56:43 vins Exp $
 
+BLAKE2s (xfile-20250430/xfile-20250430-ffdae16e124727f85b3ad3226d619a8d0ab4abe9.tar.gz) = c581367b791b313d820094e422a38198afd021b21caab2ef37741897abca8451
+SHA512 (xfile-20250430/xfile-20250430-ffdae16e124727f85b3ad3226d619a8d0ab4abe9.tar.gz) = b489d1a9ba0277032df90bff7669b7013333f9bfb26b1f3b6360b3390ab008f74367cca3998d9853ecbffa582edca3a3880d1c22985f315dd6fe838b47a2a8ed
+Size (xfile-20250430/xfile-20250430-ffdae16e124727f85b3ad3226d619a8d0ab4abe9.tar.gz) = 149039 bytes
 BLAKE2s (xfile-20250430/xfile-slanted-icons.tar.xz) = 05d15677163ae69cd7184af0f96006303129d70ab4bebecf5187399f4b6b2761
 SHA512 (xfile-20250430/xfile-slanted-icons.tar.xz) = 0598f553d8f45487ceedd0495a115d0f1618e2fb18657e3d9ce7ae3ef0040c9b06aa9bf7224eeb59856f9e9f1258a666a4c52f46ca5edd25f8e29e4105387d50
 Size (xfile-20250430/xfile-slanted-icons.tar.xz) = 1772 bytes
-BLAKE2s (xfile-20250430/xfile-src-1.0-beta.tar.xz) = 4783335e383acee1e7aeb666889a2137b424f06d85ec57895adb16c167d6a929
-SHA512 (xfile-20250430/xfile-src-1.0-beta.tar.xz) = d77f9838d2ddd70b0d2e32bd959f646dcbc91aca872db9883bdee74d4dae20fe1fd213fb0989efa425a0d5d1dd9b170112ee3cdb6042b53dbff703d24c5d1360
-Size (xfile-20250430/xfile-src-1.0-beta.tar.xz) = 115544 bytes
 BLAKE2s (xfile-20250430/xfile-xdgsvc-src.tar.xz) = 17134f7556d67f1d340733e106c2b17903306ec07ad760fcd418f09b8f35df93
 SHA512 (xfile-20250430/xfile-xdgsvc-src.tar.xz) = df53d6db5eef47d3c1252d2a9346f0c56ec474622c54ebe0f3cb39ce45cca876315fa9e2ac333295f0be46e812b21b8d2e14bc08f9dc5914cd3aee2cdfac87b4
 Size (xfile-20250430/xfile-xdgsvc-src.tar.xz) = 3616 bytes
