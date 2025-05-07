@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2024/08/03 14:43:46 pin Exp $
+# $NetBSD: Makefile,v 1.60 2025/05/07 09:13:54 jperkin Exp $
 
 DISTNAME=	jpegsrc.v9f
 PKGNAME=	${DISTNAME:S/src.v/-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ijg.org/files/
 
@@ -20,6 +21,14 @@ CONFIGURE_ARGS+=	--disable-ld-version-script
 INSTALLATION_DIRS=	bin include share/doc/jpeg
 
 PKGCONFIG_OVERRIDE=	libjpeg.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${JPEG_DEFAULT:U} == "jpeg"
+SUPERSEDES+=	libjpeg-turbo-[0-9]*
+.endif
+
+BUILD_DEFS+=		JPEG_DEFAULT
 
 TEST_TARGET=		test
 
