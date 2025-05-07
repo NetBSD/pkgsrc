@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/03/24 10:51:36 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/07 20:45:28 markd Exp $
 
 DISTNAME=	mltex
-PKGNAME=	tex-${DISTNAME}-2.2.70002
-TEXLIVE_REV=	70002
+PKGNAME=	tex-${DISTNAME}-2.2.71363
+TEXLIVE_REV=	71363
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mltex
