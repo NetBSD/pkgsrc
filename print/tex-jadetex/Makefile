@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/03/24 10:44:38 markd Exp $
+# $NetBSD: Makefile,v 1.38 2025/05/07 20:43:08 markd Exp $
 
 DISTNAME=	jadetex
-PKGNAME=	tex-${DISTNAME}-3.13.70002
-TEXLIVE_REV=	70002
+PKGNAME=	tex-${DISTNAME}-3.13.71409
+TEXLIVE_REV=	71409
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/jadetex

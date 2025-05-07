@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/03/24 10:44:39 markd Exp $
+$NetBSD: distinfo,v 1.7 2025/05/07 20:43:08 markd Exp $
 
-BLAKE2s (jadetex.doc.r70002.tar.xz) = 1648da62d138ebba38b9851cbf3973c0acf34449a03db2d93aea5c82a0820f0e
-SHA512 (jadetex.doc.r70002.tar.xz) = d3422a9e31485b2d280760ace278dfcf4bf1e8790daac8a8f84c62555b68d2d989ee1a128a9ae7a703d7298ce9af9b61d845c418c8bd1254265f204ff48279fd
-Size (jadetex.doc.r70002.tar.xz) = 31788 bytes
+BLAKE2s (jadetex.doc.r71409.tar.xz) = 0bdc8b0bf4efaade0b0c020d735826e6e8da3eab36deee37b701940cff29b53f
+SHA512 (jadetex.doc.r71409.tar.xz) = 434181697678495f2c7832affe5969f773b466e3f72f8de7b968312d661a1422072d061e8560ded215b0882ab9cc5d5c3933a1ede2a0df8716240010941b9c3b
+Size (jadetex.doc.r71409.tar.xz) = 31792 bytes
