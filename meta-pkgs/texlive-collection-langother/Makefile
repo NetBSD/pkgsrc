@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2024/03/21 20:00:54 markd Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/07 12:07:26 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	68719
+TEXLIVE_REV=	74620
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -47,12 +47,14 @@ DEPENDS+=	tex-hyphen-coptic-[0-9]*:../../print/tex-hyphen-coptic
 DEPENDS+=	tex-hyphen-esperanto-[0-9]*:../../print/tex-hyphen-esperanto
 DEPENDS+=	tex-hyphen-ethiopic-[0-9]*:../../print/tex-hyphen-ethiopic
 DEPENDS+=	tex-hyphen-georgian-[0-9]*:../../print/tex-hyphen-georgian
+DEPENDS+=	tex-hyphen-hebrew-[0-9]*:../../print/tex-hyphen-hebrew
 DEPENDS+=	tex-hyphen-indic-[0-9]*:../../print/tex-hyphen-indic
 DEPENDS+=	tex-hyphen-indonesian-[0-9]*:../../print/tex-hyphen-indonesian
 DEPENDS+=	tex-hyphen-interlingua-[0-9]*:../../print/tex-hyphen-interlingua
 DEPENDS+=	tex-hyphen-sanskrit-[0-9]*:../../print/tex-hyphen-sanskrit
 DEPENDS+=	tex-hyphen-thai-[0-9]*:../../print/tex-hyphen-thai
 DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
+DEPENDS+=	tex-hyphen-vietnamese-[0-9]*:../../print/tex-hyphen-vietnamese
 # latex-mr is documentation only
 # depend latexbangla
 # depend latino-sine-flexione
@@ -60,7 +62,6 @@ DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # lshort-vietnamese is documentation only
 # depend marathi
 # ntheorem-vn is documentation only
-# depend padauk
 # depend quran-bn
 # depend quran-id
 # depend quran-ur
@@ -68,6 +69,7 @@ DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
 # depend sanskrit-t1
 # depend thaienum
 # depend thaispec
+# depend tuzuk
 # depend unicode-alphabets
 # depend velthuis
 DEPENDS+=	tex-vntex-[0-9]*:../../print/tex-vntex
