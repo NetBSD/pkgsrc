@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/01/27 22:39:16 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/07 10:36:09 tnn Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/gdstk/__init__.py
 ${PYSITELIB}/gdstk/__init__.pyc
 ${PYSITELIB}/gdstk/__init__.pyo
-${PYSITELIB}/gdstk/_gdstk.cpython-${PYVERS}.so
+${PYSITELIB}/gdstk/_gdstk.${PYSOABISUFFIX}
 ${PYSITELIB}/gdstk/_gdstk.pyi
 ${PYSITELIB}/gdstk/py.typed
