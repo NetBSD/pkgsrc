@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/07 11:54:54 markd Exp $
+
+BLAKE2s (hyphen-vietnamese.r74032.tar.xz) = e137d72b250356728ef8f6cf11da8bc534cd9b66c278f29f7edbf1895f77c0b9
+SHA512 (hyphen-vietnamese.r74032.tar.xz) = 4eb2324899b72bf67676852c5f18359cd6a387c7a49b84f13bf1b8073395ef33b2d368f894d85cca0f73c32d0c9357ecf501b5447190cc218fb2d06846478390
+Size (hyphen-vietnamese.r74032.tar.xz) = 712 bytes
