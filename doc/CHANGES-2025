@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3145 2025/05/07 13:57:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3146 2025/05/07 14:57:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4226,3 +4226,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-maxminddb to 2.7.0 [adam 2025-05-07]
 	Updated security/py-asyncssh to 2.21.0 [adam 2025-05-07]
 	Updated devel/py-virtualenv to 20.31.1 [adam 2025-05-07]
+	Removed lang/rust176-bin [wiz 2025-05-07]
+	Removed lang/rust176 [wiz 2025-05-07]
