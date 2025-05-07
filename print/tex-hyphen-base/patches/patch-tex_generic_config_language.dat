@@ -1,10 +1,12 @@
-$NetBSD: patch-aa,v 1.18 2024/03/21 10:06:07 markd Exp $
+$NetBSD: patch-tex_generic_config_language.dat,v 1.1 2025/05/07 11:44:18 markd Exp $
 
---- tex/generic/config/language.dat.orig	2024-02-29 00:44:17.000000000 +0000
+Trim languages. They will be added automatically as each package is installed.
+
+--- tex/generic/config/language.dat.orig	2025-02-18 00:40:41.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -62,163 +62,3 @@ nohyphenation	zerohyph.tex    % a langua
- vietnamese zerohyph.tex
- hebrew zerohyph.tex
+@@ -58,169 +58,3 @@ dumylang	dumyhyph.tex    % for testing a
+ nohyphenation	zerohyph.tex    % a language with no patterns at all.
+ 
  % (end of static file language.us)
 -% from dehyph-exptl:
 -german-x-2024-02-28 dehypht-x-2024-02-28.tex
@@ -13,11 +15,13 @@ $NetBSD: patch-aa,v 1.18 2024/03/21 10:06:07 markd Exp $
 -=ngerman-x-latest
 -% from hyphen-afrikaans:
 -afrikaans loadhyph-af.tex
+-% from hyphen-albanian:
+-albanian loadhyph-sq.tex
 -% from hyphen-ancientgreek:
 -ancientgreek loadhyph-grc.tex
 -ibycus ibyhyph.tex
 -% from hyphen-arabic:
--arabic zerohyph.tex
+-arabic hyph-ar.tex
 -% from hyphen-armenian:
 -armenian loadhyph-hy.tex
 -% from hyphen-basque:
@@ -56,7 +60,7 @@ $NetBSD: patch-aa,v 1.18 2024/03/21 10:06:07 markd Exp $
 -=amharic
 -=geez
 -% from hyphen-farsi:
--farsi zerohyph.tex
+-farsi hyph-fa.tex
 -=persian
 -% from hyphen-finnish:
 -finnish loadhyph-fi.tex
@@ -79,6 +83,8 @@ $NetBSD: patch-aa,v 1.18 2024/03/21 10:06:07 markd Exp $
 -greek loadhyph-el-polyton.tex
 -=polygreek
 -monogreek loadhyph-el-monoton.tex
+-% from hyphen-hebrew:
+-hebrew hyph-he.tex
 -% from hyphen-hungarian:
 -hungarian loadhyph-hu.tex
 -% from hyphen-icelandic:
@@ -164,5 +170,7 @@ $NetBSD: patch-aa,v 1.18 2024/03/21 10:06:07 markd Exp $
 -ukrainian loadhyph-uk.tex
 -% from hyphen-uppersorbian:
 -uppersorbian loadhyph-hsb.tex
+-% from hyphen-vietnamese:
+-vietnamese hyph-vi.tex
 -% from hyphen-welsh:
 -welsh loadhyph-cy.tex

@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.18 2024/03/21 10:06:07 markd Exp $
+$NetBSD: patch-tex_generic_config_language.def,v 1.1 2025/05/07 11:44:18 markd Exp $
 
---- tex/generic/config/language.def.orig	2024-02-29 00:44:21.000000000 +0000
+Trim languages. They will be added automatically as each package is installed.
+
+--- tex/generic/config/language.def.orig	2025-02-17 00:40:22.000000000 +0000
 +++ tex/generic/config/language.def
-@@ -28,166 +28,6 @@
+@@ -28,172 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -13,11 +15,13 @@ $NetBSD: patch-ab,v 1.18 2024/03/21 10:06:07 markd Exp $
 -\addlanguage{ngerman-x-latest}{dehyphn-x-2024-02-28.tex}{}{2}{2}
 -% from hyphen-afrikaans:
 -\addlanguage{afrikaans}{loadhyph-af.tex}{}{1}{2}
+-% from hyphen-albanian:
+-\addlanguage{albanian}{loadhyph-sq.tex}{}{2}{2}
 -% from hyphen-ancientgreek:
 -\addlanguage{ancientgreek}{loadhyph-grc.tex}{}{1}{1}
 -\addlanguage{ibycus}{ibyhyph.tex}{}{2}{2}
 -% from hyphen-arabic:
--\addlanguage{arabic}{zerohyph.tex}{}{2}{3}
+-\addlanguage{arabic}{hyph-ar.tex}{}{0}{0}
 -% from hyphen-armenian:
 -\addlanguage{armenian}{loadhyph-hy.tex}{}{1}{2}
 -% from hyphen-basque:
@@ -56,8 +60,8 @@ $NetBSD: patch-ab,v 1.18 2024/03/21 10:06:07 markd Exp $
 -\addlanguage{amharic}{loadhyph-mul-ethi.tex}{}{1}{1}
 -\addlanguage{geez}{loadhyph-mul-ethi.tex}{}{1}{1}
 -% from hyphen-farsi:
--\addlanguage{farsi}{zerohyph.tex}{}{2}{3}
--\addlanguage{persian}{zerohyph.tex}{}{2}{3}
+-\addlanguage{farsi}{hyph-fa.tex}{}{0}{0}
+-\addlanguage{persian}{hyph-fa.tex}{}{0}{0}
 -% from hyphen-finnish:
 -\addlanguage{finnish}{loadhyph-fi.tex}{}{2}{2}
 -\addlanguage{schoolfinnish}{loadhyph-fi-x-school.tex}{}{1}{1}
@@ -79,6 +83,8 @@ $NetBSD: patch-ab,v 1.18 2024/03/21 10:06:07 markd Exp $
 -\addlanguage{greek}{loadhyph-el-polyton.tex}{}{1}{1}
 -\addlanguage{polygreek}{loadhyph-el-polyton.tex}{}{1}{1}
 -\addlanguage{monogreek}{loadhyph-el-monoton.tex}{}{1}{1}
+-% from hyphen-hebrew:
+-\addlanguage{hebrew}{hyph-he.tex}{}{0}{0}
 -% from hyphen-hungarian:
 -\addlanguage{hungarian}{loadhyph-hu.tex}{}{2}{2}
 -% from hyphen-icelandic:
@@ -164,6 +170,8 @@ $NetBSD: patch-ab,v 1.18 2024/03/21 10:06:07 markd Exp $
 -\addlanguage{ukrainian}{loadhyph-uk.tex}{}{2}{2}
 -% from hyphen-uppersorbian:
 -\addlanguage{uppersorbian}{loadhyph-hsb.tex}{}{2}{2}
+-% from hyphen-vietnamese:
+-\addlanguage{vietnamese}{hyph-vi.tex}{}{0}{0}
 -% from hyphen-welsh:
 -\addlanguage{welsh}{loadhyph-cy.tex}{}{2}{3}
  %%% No changes may be made beyond this point.

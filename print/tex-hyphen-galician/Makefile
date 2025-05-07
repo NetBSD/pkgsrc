@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/05/10 04:32:01 markd Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/07 11:44:21 markd Exp $
 
 DISTNAME=	hyphen-galician
-PKGNAME=	tex-${DISTNAME}-2019.51186
-PKGREVISION=	1
-TEXLIVE_REV=	51186
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73410
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Galician
@@ -23,6 +22,5 @@ TEX_HYPHEN_LUA+=	['galician']={ \
 			  hyphenation='', \
 			},
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

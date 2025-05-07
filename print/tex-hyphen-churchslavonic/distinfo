@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:13:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/07 11:44:19 markd Exp $
 
-BLAKE2s (hyphen-churchslavonic.r58609.tar.xz) = fd0917c5684213250571295a8d4938722616f44f5a871ef91ccf0eeb0df29c62
-SHA512 (hyphen-churchslavonic.r58609.tar.xz) = c44b3f5fec7b44958336dcfb1a43c5b71fd1715262278863f5fcd74d7ec0cc6f1d572b741256d791e6979f15e4b0fcda8058725e27f17e1deb6e5df5fdb007ab
-Size (hyphen-churchslavonic.r58609.tar.xz) = 31588 bytes
+BLAKE2s (hyphen-churchslavonic.r73410.tar.xz) = 33a3af71e06ba094eea6f722fef3bd12f30234f300f2f8cdd58ffd8bd19da9f4
+SHA512 (hyphen-churchslavonic.r73410.tar.xz) = c87f20a260968ff796815066648df181ffbac8063ae87d566c4e0858e0e0e51fb6a0386b1c4d2d03d0d3099a635f3ef3f828ab74f586d4b8e02b55917fefd685
+Size (hyphen-churchslavonic.r73410.tar.xz) = 31536 bytes

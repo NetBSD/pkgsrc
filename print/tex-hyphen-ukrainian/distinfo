@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:41 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:25 markd Exp $
 
-BLAKE2s (hyphen-ukrainian.r58652.tar.xz) = b7888ceb9cf2cb5eefa0189f5787e39f5295ad36d231b55a4de9e3afd96c48fd
-SHA512 (hyphen-ukrainian.r58652.tar.xz) = 05a9111b358c659159c6edfd38b9ce3d78febd794cc82968dc3e2acdc3612786304721fbd07f00f0a8278f4c2e46a1bfad821b5da45e60546d6acb5bf9068d08
-Size (hyphen-ukrainian.r58652.tar.xz) = 18692 bytes
+BLAKE2s (hyphen-ukrainian.r73410.tar.xz) = f5048104bc794df2bafdeddbcbd41b2d6284ae941da0d1958470319cda89dc27
+SHA512 (hyphen-ukrainian.r73410.tar.xz) = 8b30460264936390f7ee782213ed11c9fb99bdf09bb88a18e7815cf0054c4a80d4a64762dc3f1623aa2d71d0ef7734f86f4e9c696d5621dfb20003218c026b66
+Size (hyphen-ukrainian.r73410.tar.xz) = 18804 bytes
