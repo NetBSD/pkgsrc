@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/11 20:54:11 adam Exp $
+$NetBSD: PLIST,v 1.10 2025/05/07 10:36:10 tnn Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/PyQt5/Qwt.cpython-${PYTHON_VERSION}.so
+${PYSITELIB}/PyQt5/Qwt.${PYSOABISUFFIX}
 ${PYSITELIB}/PyQt5/bindings/Qwt/Qwt.toml
 ${PYSITELIB}/PyQt5/bindings/Qwt/Qwt_Qt5.sip
 ${PYSITELIB}/PyQt5/bindings/Qwt/conversions.sip
