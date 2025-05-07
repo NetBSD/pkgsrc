@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.31 2025/04/08 09:31:06 wiz Exp $
+# $NetBSD: platform.mk,v 1.32 2025/05/07 14:47:42 gdt Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -16,9 +16,12 @@ RUST_PLATFORMS+=	${rust_os}-*-${rust_arch}
 .  endfor
 .endfor
 
-.if ${MACHINE_PLATFORM:MNetBSD-*-earm*} && ${OPSYS_VERSION} < 100000
-RUST_DIR?=	../../lang/rust176
+# rust does not build in the VA space available on earm.
+# \todo Consider extension to other platforms.
+.if ${NATIVE_MACHINE_PLATFORM:M*-*-earm*}
+RUST_TYPE?=	bin
 .endif
+
 RUST_DIR?=	../../lang/rust
 
 .for rust_platform in ${RUST_PLATFORMS}
