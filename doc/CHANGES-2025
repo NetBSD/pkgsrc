@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3144 2025/05/07 13:51:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3145 2025/05/07 13:57:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4223,3 +4223,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-polyglossia-doc to 2.4 [mark 2025-05-07]
 	Updated benchmarks/google-benchmark to 1.9.3 [adam 2025-05-07]
 	Updated audio/fluidsynth to 2.4.6 [adam 2025-05-07]
+	Updated geography/py-maxminddb to 2.7.0 [adam 2025-05-07]
+	Updated security/py-asyncssh to 2.21.0 [adam 2025-05-07]
+	Updated devel/py-virtualenv to 20.31.1 [adam 2025-05-07]
