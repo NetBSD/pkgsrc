@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.936 2025/01/27 13:44:31 wiz Exp $
+# $NetBSD: Makefile,v 1.937 2025/05/07 11:57:50 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -867,6 +867,7 @@ SUBDIR+=	tex-hyperxmp-doc
 SUBDIR+=	tex-hyph-utf8
 SUBDIR+=	tex-hyph-utf8-doc
 SUBDIR+=	tex-hyphen-afrikaans
+SUBDIR+=	tex-hyphen-albanian
 SUBDIR+=	tex-hyphen-ancientgreek
 SUBDIR+=	tex-hyphen-arabic
 SUBDIR+=	tex-hyphen-armenian
@@ -895,6 +896,7 @@ SUBDIR+=	tex-hyphen-georgian
 SUBDIR+=	tex-hyphen-german
 SUBDIR+=	tex-hyphen-greek
 SUBDIR+=	tex-hyphen-greek-doc
+SUBDIR+=	tex-hyphen-hebrew
 SUBDIR+=	tex-hyphen-hungarian
 SUBDIR+=	tex-hyphen-hungarian-doc
 SUBDIR+=	tex-hyphen-icelandic
@@ -928,6 +930,7 @@ SUBDIR+=	tex-hyphen-turkish
 SUBDIR+=	tex-hyphen-turkmen
 SUBDIR+=	tex-hyphen-ukrainian
 SUBDIR+=	tex-hyphen-uppersorbian
+SUBDIR+=	tex-hyphen-vietnamese
 SUBDIR+=	tex-hyphen-welsh
 SUBDIR+=	tex-hyphenat
 SUBDIR+=	tex-hyphenat-doc
