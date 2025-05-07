@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2025/05/07 05:57:55 adam Exp $
+# $NetBSD: Makefile,v 1.758 2025/05/07 14:57:40 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -319,8 +319,6 @@ SUBDIR+=	ruby34
 SUBDIR+=	runawk
 SUBDIR+=	rust
 SUBDIR+=	rust-bin
-SUBDIR+=	rust176
-SUBDIR+=	rust176-bin
 SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
