@@ -1,8 +1,7 @@
-$NetBSD: patch-markdown.c,v 1.1 2025/05/05 22:11:18 wiz Exp $
+$NetBSD: patch-markdown.c,v 1.2 2025/05/07 08:31:03 wiz Exp $
 
 Fix isspace() argument.
-
-Mailed upstream 20250505.
+https://github.com/Orc/discount/pull/293
 
 --- markdown.c.orig	2025-05-05 22:01:49.993582379 +0000
 +++ markdown.c
