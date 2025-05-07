@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3134 2025/05/06 20:54:33 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3135 2025/05/07 03:15:07 nat Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/trippy to 0.13.0 [pin 2025-05-06]
 	Updated devel/py-newt to 0.52.25 [vins 2025-05-06]
 	Updated misc/byobu to 5.133 [vins 2025-05-06]
+	Updated x11/tinyx-wscons to 0.7 [nat 2025-05-07]
