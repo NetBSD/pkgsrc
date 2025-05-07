@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2024/07/12 11:13:13 micha Exp $
+$NetBSD: distinfo,v 1.10 2025/05/07 12:20:08 micha Exp $
 
 BLAKE2s (eureka-2.0.2.tar.gz) = b29ad046135dc58ef7d874448373832e9f8d738b1ef2ac5dc1e8327cfaa79033
 SHA512 (eureka-2.0.2.tar.gz) = dc45d5a94bca0bc6c892ea90473d6c66e67326cf49797493b41ce5524a38196a31639db3579d1b4138b8dfd1570057a237817c668e47007a72a5b1f2f8991257
 Size (eureka-2.0.2.tar.gz) = 2388549 bytes
-SHA1 (patch-CMakeLists.txt) = 0eda67e8a101d9299bc933f2f403b4e8b940a689
+SHA1 (patch-CMakeLists.txt) = a932309667817d72f5b57643c725c5adf0829dda
 SHA1 (patch-src_CMakeLists.txt) = ba927270b9d63035b84134c683c74f89d5362124
 SHA1 (patch-src_m__files.cc) = a547b17d578ada79e20d006f786b1a594ef34700
 SHA1 (patch-src_m__strings.h) = e8b793e0a8943f3371792e07ac552e8e22e2c248
