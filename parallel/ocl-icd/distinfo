@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2024/04/22 10:43:29 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/05/07 08:04:33 adam Exp $
 
-BLAKE2s (ocl-icd-2.3.2.tar.gz) = cd01c51dbc9f8cc795bde6d2bd97f4c0f0dfb2a877cef5d10273836b2000f8c2
-SHA512 (ocl-icd-2.3.2.tar.gz) = 5129975a10ffade76d20444345a59c82506914347391ad6c0b4c3826f51dcc641924b4a5abcc65c41766597af9cc7a76b9e5821f41898ff0251a05963e117796
-Size (ocl-icd-2.3.2.tar.gz) = 108988 bytes
+BLAKE2s (ocl-icd-2.3.3.tar.gz) = db7e8e6f7f5d84b9033e1d6b20df72893fa3ce5cbdde32499a6c6d5f02db3f22
+SHA512 (ocl-icd-2.3.3.tar.gz) = dd5d50a038c9ed87578de2250d81fc248d87d23aa16e13a3f3a74d7de10aedcc42cc4877edb9a01b697bdb8f4c01104a5c259962209cd2f99e4b8083465eccb9
+Size (ocl-icd-2.3.3.tar.gz) = 109854 bytes
 SHA1 (patch-OpenCL.pc.in) = 05579dc8147032d68ad9f95f6463bca61615025c
 SHA1 (patch-configure.ac) = d9f65968ef8b527108737856a43e1965a7ea0443
 SHA1 (patch-ocl-icd.pc.in) = 1db18536653335c095f34d34794dee9f82087e22
