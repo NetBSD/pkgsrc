@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/04/24 14:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/05/07 11:47:39 tnn Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
@@ -33,8 +33,8 @@ pre-configure:
 
 .if ${OPSYS} == "Darwin"
 post-install:
-	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.cpython-${PYTHON_VERSION}.so \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.cpython-${PYTHON_VERSION}.so
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/PyQt5/Qwt.${PYSOABISUFFIX} \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt5/Qwt.${PYSOABISUFFIX}
 .endif
 
 .include "../../lang/python/wheel.mk"
