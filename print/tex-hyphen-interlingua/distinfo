@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:38 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:22 markd Exp $
 
-BLAKE2s (hyphen-interlingua.r58609.tar.xz) = 83713a2308b674395a259d310ea5cc59ab2e350925a8303edaf24ff7b5d89030
-SHA512 (hyphen-interlingua.r58609.tar.xz) = dfed82ea70f25d452726b5cd03d8e060bddc23cbbc5deebab2ddad93ce6744c38d357327fbe570bf7a1444f62cee0cc422a6c7d066d6693a238d851b4fe46e32
-Size (hyphen-interlingua.r58609.tar.xz) = 2876 bytes
+BLAKE2s (hyphen-interlingua.r73410.tar.xz) = 3327564c1dca2915130f22371aad659d1208006467a2c2f1847d3f1ead83d085
+SHA512 (hyphen-interlingua.r73410.tar.xz) = c0b3c00aff822143deac9e54342590be8d6ce6880e927a66e64125140b043f1bd3be45a6c9de70d78797e8519b9854626468c2ebbd87cd9240c793930d3e4294
+Size (hyphen-interlingua.r73410.tar.xz) = 2880 bytes

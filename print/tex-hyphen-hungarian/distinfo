@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:13:37 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/05/07 11:44:21 markd Exp $
 
-BLAKE2s (hyphen-hungarian.r58652.tar.xz) = d6c747cf7a5f62b3d1aa40bfc6db2603893c1fcc4f72641eda086800750f2cd1
-SHA512 (hyphen-hungarian.r58652.tar.xz) = 868a4c3f4d0eda078054026bd1ec35e05c2f4013e093bf58147bfa2d861814242b55a900ce60384767558c9552ff9d41cf447e2a157bae83bd2877251012d96b
-Size (hyphen-hungarian.r58652.tar.xz) = 285188 bytes
+BLAKE2s (hyphen-hungarian.r73410.tar.xz) = 544ea3b563caa8a16aea379f901a2a8f585248a3315baa95d6679a42eaaa000e
+SHA512 (hyphen-hungarian.r73410.tar.xz) = b72890bb5f7e8e8f21c0ea1ec4d15b2644dd9cd486f37f6d9dc74cd24e01c1419168094a45835f3c9dff1abb67efa1f639b66b706c38dac1e9fc059299768ed9
+Size (hyphen-hungarian.r73410.tar.xz) = 285088 bytes

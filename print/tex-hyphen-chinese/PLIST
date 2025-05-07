@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2019/08/04 12:04:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/07 11:44:19 markd Exp $
 share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-zh-latn-pinyin.tex
-share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-zh-latn-pinyin.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex-8bit/hyph-zh-latn-pinyin.ec.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-zh-latn-pinyin.tex
 share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-zh-latn-pinyin.pat.txt

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2021/05/30 08:04:45 markd Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/07 11:44:21 markd Exp $
 
 DISTNAME=	hyphen-german
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58652
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	74203
 
 MAINTAINER=	minskim@NetBSD.org
-#HOMEPAGE=	https://ctan.org/pkg/hyphen-german
 COMMENT=	Hyphenation patterns for German
 LICENSE=	lppl-1.3c
 

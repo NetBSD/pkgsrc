@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:40 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:24 markd Exp $
 
-BLAKE2s (hyphen-serbian.r58609.tar.xz) = 565d7c1992455381bdadc60198193df03b0edf538b04d7015e036b06a7ced44e
-SHA512 (hyphen-serbian.r58609.tar.xz) = 390aa9c116b6db7b362fc57aa0758a4c489c5fe33c718fb37675b17a9772a463ce532a2ace3e1ef90275b4afef5ea8d6cff71a7abe625d84e3f461c115306452
-Size (hyphen-serbian.r58609.tar.xz) = 25340 bytes
+BLAKE2s (hyphen-serbian.r73410.tar.xz) = a3f6d0fd450ffe0f97d04aa2cd640810875a900d443fee7e60322bee3f0e7a48
+SHA512 (hyphen-serbian.r73410.tar.xz) = 5ae363b7db299e13577e7ad87fccecbba0c1b2525b97e068e4eeb71490f19d48b39ca3099a4d2aec08cc1b88f688676f7513450fe3d61b9f6d30df83fedd843a
+Size (hyphen-serbian.r73410.tar.xz) = 25136 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:36 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:21 markd Exp $
 
-BLAKE2s (hyphen-french.r58652.tar.xz) = dfd2bc2ba8257928f8019af46ba6c442fecf55767ba9221dc325db9750b7b7a1
-SHA512 (hyphen-french.r58652.tar.xz) = b9d2d05311a90f4caa6c4e8aa8a2e80e9c15fc3552f03f0ac6ec70d386610612715deb6e778247248355a3a209fb2413d6d2aee12f18bc35d5a334870b612507
-Size (hyphen-french.r58652.tar.xz) = 11420 bytes
+BLAKE2s (hyphen-french.r73410.tar.xz) = d196fe0156c07c52b3c2b37f7e1ad88e0ee4d00495384e8fa2d0b09e751f205b
+SHA512 (hyphen-french.r73410.tar.xz) = 97fdceaae53e1201b9562d870037e9bfe6d14df655f514505ba1361b540a9a23b35180727503883c90f5bb96276ee96faee0f35ed3d18850554fdade56747b98
+Size (hyphen-french.r73410.tar.xz) = 11420 bytes
