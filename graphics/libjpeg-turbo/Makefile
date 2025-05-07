@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2024/12/24 15:39:44 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/05/07 09:14:56 jperkin Exp $
 
 DISTNAME=	libjpeg-turbo-3.1.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libjpeg-turbo/}
 
@@ -20,6 +21,14 @@ TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${JPEG_DEFAULT:U} == "libjpeg-turbo"
+SUPERSEDES+=	jpeg-[0-9]*
+.endif
+
+BUILD_DEFS+=	JPEG_DEFAULT
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
