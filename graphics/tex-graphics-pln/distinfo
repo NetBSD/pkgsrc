@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/02/04 00:06:28 markd Exp $
+$NetBSD: distinfo,v 1.13 2025/05/07 20:28:40 markd Exp $
 
-BLAKE2s (graphics-pln.r68760.tar.xz) = 87352c25517710a0bce732b999252048ca97709a143ca7f858163d244c66e565
-SHA512 (graphics-pln.r68760.tar.xz) = 33c1b9a4db0c564df07360c17ea89a7cabd557b21e2703e68532388f7b977a2f99f12c6d7002e9297b8e35259a42fb713fa0d2c49e6c9a347845755186437c24
-Size (graphics-pln.r68760.tar.xz) = 9000 bytes
+BLAKE2s (graphics-pln.r71575.tar.xz) = 5ff6881b2b498596d7ee22e2d3722ceb0db46b32809452d0faabf736117e6764
+SHA512 (graphics-pln.r71575.tar.xz) = 9a163b6bb7376f1acf318c59e9076bbaef8ce1b63e296f7c693d4331d0a944ab8cb3d99b4d1dca360c9b589c72700ccdfc99476a93c6c07076ceb2f4058ef653
+Size (graphics-pln.r71575.tar.xz) = 9084 bytes
