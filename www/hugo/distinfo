@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2025/05/05 06:49:40 triaxx Exp $
+$NetBSD: distinfo,v 1.29 2025/05/07 17:22:11 triaxx Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.116.0.mod) = dc32a3f1b8888e0c9971e214d36e081b0804d131c9c2537dc3915b12dbe2884d
 SHA512 (cloud.google.com_go_@v_v0.116.0.mod) = 7c9addeaa38d43cd2070d7d28dda1c0ef348cc5d1d1b4f898ae8d615fb046a4c76acea43ffdf17adc218cac5f65b5223bda3f4215ee395cb8359e7364dacab6c
@@ -2523,9 +2523,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.147.1.tar.gz) = c2aaf18d27d2dbd955b9aa5d7424292e11f098b78adcb857efcfe8f2ecb3acbe
-SHA512 (hugo-0.147.1.tar.gz) = 57df355ee28f7ac2d4ad79898116af99604e6a34113ebb343c07c67e595590b36cbe79ed4d5817aa88d7988df7ca33493de62d8195134eade2ae35cd09a21f31
-Size (hugo-0.147.1.tar.gz) = 14599628 bytes
+BLAKE2s (hugo-0.147.2.tar.gz) = 19c75bdabcfb85ea2852ed114670eadb168444a8c7dcb5cda6a95fcf50a4b43e
+SHA512 (hugo-0.147.2.tar.gz) = 20eb35c48f2a35ff6fcbfc7f1ac4dae3253903535dfd7a4a8c92717de4b1e8fa7fd7d1ca97d2f03aa4ac266f78cb221a3fce0285f43f57d9b3be54c893f909ad
+Size (hugo-0.147.2.tar.gz) = 14598107 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
