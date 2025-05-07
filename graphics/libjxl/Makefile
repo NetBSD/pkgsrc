@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/05/01 18:43:10 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/07 17:53:41 tnn Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	JpegXL reference codec
 
@@ -21,6 +21,7 @@ CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_ENABLE_JPEGLI=OFF
 CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_ENABLE_SJPEG=OFF
 CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_ENABLE_SKCMS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_ENABLE_PLUGINS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DJPEGXL_ENABLE_BENCHMARK=OFF
 # test are run during the build stage
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
@@ -36,7 +37,6 @@ PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libhighway/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
