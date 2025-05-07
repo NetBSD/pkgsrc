@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:13:35 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/05/07 11:44:19 markd Exp $
 
-BLAKE2s (hyphen-bulgarian.r58685.tar.xz) = 9e4284775b1fb22d8f0ebf6a22f1b9da9c492e72d9939adc4cb76671796b2a45
-SHA512 (hyphen-bulgarian.r58685.tar.xz) = 9763e6ece053594b01cd9255a8a3551eb6b86ab082f6f9283664e256c55d43b9513b624774a650d83215d656334751f569496030187c1c78e2fe80f2d10f2f1f
-Size (hyphen-bulgarian.r58685.tar.xz) = 28184 bytes
+BLAKE2s (hyphen-bulgarian.r73410.tar.xz) = 3be6c671db0de5cc4fc676eff5e5bee2a6186c244c994351924de12de805c935
+SHA512 (hyphen-bulgarian.r73410.tar.xz) = 4103cbcab115deb99d24d22d190cb4153926e51f017f2ba86179ae855d209ebb0b57d60fc174d496b82e90d7322fbfd762f7ed9470fa4e972f6f930ffc100130
+Size (hyphen-bulgarian.r73410.tar.xz) = 28132 bytes

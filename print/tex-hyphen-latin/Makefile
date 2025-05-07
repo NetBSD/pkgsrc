@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/05/30 08:04:46 markd Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/07 11:44:22 markd Exp $
 
 DISTNAME=	hyphen-latin
-PKGNAME=	tex-${DISTNAME}-3.1.2021
-TEXLIVE_REV=	58652
+PKGNAME=	tex-${DISTNAME}-3.1.2025
+TEXLIVE_REV=	73410
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lahyph

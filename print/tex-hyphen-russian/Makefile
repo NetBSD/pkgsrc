@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/05/30 08:04:47 markd Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/07 11:44:24 markd Exp $
 
 DISTNAME=	hyphen-russian
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58609
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73410
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Russian

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2021/05/30 08:04:45 markd Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/07 11:44:22 markd Exp $
 
 DISTNAME=	hyphen-indic
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58652
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73410
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Indic hyphenation patterns

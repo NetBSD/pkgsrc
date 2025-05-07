@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:38 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:22 markd Exp $
 
-BLAKE2s (hyphen-irish.r58609.tar.xz) = 09efe965b0764b27735fd0a5822a6131cbbc04045ad8ca0e47fda928770e14cc
-SHA512 (hyphen-irish.r58609.tar.xz) = 478a77c4ab8231a3041c3427075f16c072f58a394eced8ff0cd5da6544f3f2fd65722f33fd8344e18060c96f09bd18b90af71f8508639fc9c59d29d704d9e348
-Size (hyphen-irish.r58609.tar.xz) = 30404 bytes
+BLAKE2s (hyphen-irish.r73410.tar.xz) = 018f669db2b93c49a5b37e58189d1e6bc331c1421d9a4d25f170e11c2184a26e
+SHA512 (hyphen-irish.r73410.tar.xz) = 022faa8d6c94652ac11fee257fcc2cb2063cd8a8e849d1ab5a583985ece324292b793970e0fb8ba6168b60d8408ab7cacad75dd76b408bdcf1c2a23a7438f641
+Size (hyphen-irish.r73410.tar.xz) = 30384 bytes

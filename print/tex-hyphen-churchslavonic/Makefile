@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2022/09/29 06:07:26 markd Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/07 11:44:19 markd Exp $
 
 DISTNAME=	hyphen-churchslavonic
-PKGNAME=	tex-${DISTNAME}-2021
-TEXLIVE_REV=	58609
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73410
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	https://ctan.org/pkg/hyphen-churchslavonic
 COMMENT=	Church Slavonic hyphenation patterns
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base

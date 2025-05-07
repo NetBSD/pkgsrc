@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:13:36 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/05/07 11:44:20 markd Exp $
 
-BLAKE2s (hyphen-estonian.r58652.tar.xz) = 994ea9b422e6a04a6b737f4eef5bbd56797da72867c231d55e1306f9b8b00d57
-SHA512 (hyphen-estonian.r58652.tar.xz) = 0eb91153214aaca8c3b5816f5315f9afdeb7c19521c87c79ea2b35e82217bfb23c8bb774baf810206f4413fc663e441ebe6b4962880ca0dbcda9209d2acce3b8
-Size (hyphen-estonian.r58652.tar.xz) = 14596 bytes
+BLAKE2s (hyphen-estonian.r73410.tar.xz) = 2178ec0ee7326391326ff3b4eeb584e305f9a2e4b39fb7ebe7a7f6a794c4cd7c
+SHA512 (hyphen-estonian.r73410.tar.xz) = d752f61400df32474bda0f146d08acb3a64cd7e3fee25b0a01a69155c9217537f0e58113884b4545b8cd6f92c522adba7d399249b2bd0012df0425da3eff98b6
+Size (hyphen-estonian.r73410.tar.xz) = 14584 bytes

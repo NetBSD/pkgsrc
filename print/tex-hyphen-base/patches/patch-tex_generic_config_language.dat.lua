@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
+$NetBSD: patch-tex_generic_config_language.dat.lua,v 1.1 2025/05/07 11:44:18 markd Exp $
 
---- tex/generic/config/language.dat.lua.orig	2024-02-29 00:44:25.000000000 +0000
+Trim languages. They will be added automatically as each package is installed.
+
+--- tex/generic/config/language.dat.lua.orig	2025-02-19 00:40:48.000000000 +0000
 +++ tex/generic/config/language.dat.lua
-@@ -33,733 +33,4 @@ return {
+@@ -33,754 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -32,6 +34,15 @@ $NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 -		patterns = 'hyph-af.pat.txt',
 -		hyphenation = 'hyph-af.hyp.txt',
 -	},
+--- from hyphen-albanian:
+-	['albanian'] = {
+-		loader = 'loadhyph-sq.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-sq.pat.txt',
+-		hyphenation = '',
+-	},
 --- from hyphen-ancientgreek:
 -	['ancientgreek'] = {
 -		loader = 'loadhyph-grc.tex',
@@ -50,11 +61,10 @@ $NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 -	},
 --- from hyphen-arabic:
 -	['arabic'] = {
--		loader = 'zerohyph.tex',
--		lefthyphenmin = 2,
--		righthyphenmin = 3,
+-		loader = 'hyph-ar.tex',
+-		lefthyphenmin = 0,
+-		righthyphenmin = 0,
 -		synonyms = {  },
--		patterns = '',
 -	},
 --- from hyphen-armenian:
 -	['armenian'] = {
@@ -210,11 +220,10 @@ $NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 -	},
 --- from hyphen-farsi:
 -	['farsi'] = {
--		loader = 'zerohyph.tex',
--		lefthyphenmin = 2,
--		righthyphenmin = 3,
+-		loader = 'hyph-fa.tex',
+-		lefthyphenmin = 0,
+-		righthyphenmin = 0,
 -		synonyms = { 'persian' },
--		patterns = '',
 -	},
 --- from hyphen-finnish:
 -	['finnish'] = {
@@ -310,6 +319,13 @@ $NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 -		synonyms = {  },
 -		patterns = 'hyph-el-monoton.pat.txt',
 -		hyphenation = '',
+-	},
+--- from hyphen-hebrew:
+-	['hebrew'] = {
+-		loader = 'hyph-he.tex',
+-		lefthyphenmin = 0,
+-		righthyphenmin = 0,
+-		synonyms = {  },
 -	},
 --- from hyphen-hungarian:
 -	['hungarian'] = {
@@ -725,6 +741,13 @@ $NetBSD: patch-ac,v 1.16 2024/03/21 10:06:07 markd Exp $
 -		synonyms = {  },
 -		patterns = 'hyph-hsb.pat.txt',
 -		hyphenation = 'hyph-hsb.hyp.txt',
+-	},
+--- from hyphen-vietnamese:
+-	['vietnamese'] = {
+-		loader = 'hyph-vi.tex',
+-		lefthyphenmin = 0,
+-		righthyphenmin = 0,
+-		synonyms = {  },
 -	},
 --- from hyphen-welsh:
 -	['welsh'] = {

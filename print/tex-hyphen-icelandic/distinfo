@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 11:13:37 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/07 11:44:21 markd Exp $
 
-BLAKE2s (hyphen-icelandic.r58652.tar.xz) = f0c7ae148f0afee73fa813821ddd0da96b0ec949a5b0e50bd411ca89bcdf246e
-SHA512 (hyphen-icelandic.r58652.tar.xz) = 69add7ccde189e86810e2a82692a260de9a9fcc0ba011352881d202d4f4c94c4dbd84fe36dff40ef9b9ad3e8e990947cc61022307790f13cad56744f3ef5e41f
-Size (hyphen-icelandic.r58652.tar.xz) = 19384 bytes
+BLAKE2s (hyphen-icelandic.r73410.tar.xz) = ebc3718d28f9d3f1eef6bfef1ea9f9c458a96a75666bfbd94d239436d51aa822
+SHA512 (hyphen-icelandic.r73410.tar.xz) = 8926931fb3e7577a0a65e3950d17f2d754e0c92a84ce9e0957120cea775bc6c42a7a20983606f5a11909bcf9c2b0a0cfe14e147d9dd69cec18afe7d1bf031ccc
+Size (hyphen-icelandic.r73410.tar.xz) = 19424 bytes
