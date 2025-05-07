@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.67 2025/05/07 10:28:03 tnn Exp $
+# $NetBSD: extension.mk,v 1.68 2025/05/07 10:36:09 tnn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -53,9 +53,20 @@ do-test:
 
 .endif
 
+# PYSOABISUFFIX should match the output of the following command
+# on the host, without the leading dot.
+# python -c "import importlib.machinery as m; print(m.EXTENSION_SUFFIXES[0])"
+.if !empty(MACHINE_PLATFORM:MLinux-*-*)
+PYSOABISUFFIX?=	cpython-${PYTHON_VERSION}-${MACHINE_ARCH}-linux-gnu.so
+.elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
+PYSOABISUFFIX?=	cpython-${PYTHON_VERSION}-darwin.so
+.else
+PYSOABISUFFIX?=	cpython-${PYTHON_VERSION}.so
+.endif
+
 .if defined(PY_PATCHPLIST)
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX} PYSOABISUFFIX=${PYSOABISUFFIX}
 .endif
 
 # mostly for ALTERNATIVES files
@@ -66,6 +77,7 @@ FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .if empty(_PYTHON_VERSION:M2?)
 PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
+EARLY_PRINT_PLIST_AWK+=	/lib\// { sub(/\.${PYSOABISUFFIX}$$/, ".$${PYSOABISUFFIX}") }
 EARLY_PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 EARLY_PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 EARLY_PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
