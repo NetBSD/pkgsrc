@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2022/09/01 10:23:48 markd Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/07 20:35:31 markd Exp $
 
 DISTNAME=	ctex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.5.10
-TEXLIVE_REV=	63891
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.5.10.71527
+TEXLIVE_REV=	71527
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/ctex
