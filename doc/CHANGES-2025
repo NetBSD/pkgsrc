@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3140 2025/05/07 09:15:04 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.3141 2025/05/07 10:32:09 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4141,3 +4141,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/ocl-icd to 2.3.3 [adam 2025-05-07]
 	Updated graphics/jpeg to 9fnb1 [jperkin 2025-05-07]
 	Updated graphics/libjpeg-turbo to 3.1.0nb1 [jperkin 2025-05-07]
+	Updated net/openresolv to 3.16.2 [roy 2025-05-07]
