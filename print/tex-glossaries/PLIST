@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/04 00:03:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/05/07 20:17:46 markd Exp $
 bin/makeglossaries
 share/texmf-dist/scripts/glossaries/glossaries.l2h
 share/texmf-dist/tex/latex/glossaries/base/glossaries-babel.sty
@@ -11,6 +11,8 @@ share/texmf-dist/tex/latex/glossaries/expl/glossaries-accsupp.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2022-11-03.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2024-04-03.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossaries-2025-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-accsupp-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-accsupp-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossaries-babel-2020-03-19.sty
@@ -38,12 +40,14 @@ share/texmf-dist/tex/latex/glossaries/rollback/glossary-longragged-2020-03-19.st
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-longragged-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-mcols-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-mcols-2021-11-01.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossary-mcols-2025-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-super-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-super-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-superragged-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-superragged-2021-11-01.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-tree-2020-03-19.sty
 share/texmf-dist/tex/latex/glossaries/rollback/glossary-tree-2021-11-01.sty
+share/texmf-dist/tex/latex/glossaries/rollback/glossary-tree-2025-03-19.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-inline.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
@@ -61,6 +65,7 @@ share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-brief.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-childmultipar.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-childnoname.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-cite.tex
+share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-constants.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-images.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-long.tex
 share/texmf-dist/tex/latex/glossaries/test-entries/example-glossaries-longchild.tex
