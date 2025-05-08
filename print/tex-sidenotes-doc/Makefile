@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/18 03:35:47 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 09:01:08 markd Exp $
 
 DISTNAME=	sidenotes.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.00a
-TEXLIVE_REV=	54524
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.20
+TEXLIVE_REV=	72264
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/sidenotes
