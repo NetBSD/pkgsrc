@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/02/25 19:34:52 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 08:21:52 markd Exp $
 
 DISTNAME=	xfrac.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2023
-TEXLIVE_REV=	69888
+PKGNAME=	tex-${DISTNAME:S/./-/}-2024
+TEXLIVE_REV=	71430
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xfrac
