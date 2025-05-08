@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/18 10:28:49 markd Exp $
+$NetBSD: distinfo,v 1.20 2025/05/08 09:54:41 markd Exp $
 
-BLAKE2s (musixtex.doc.r69742.tar.xz) = d4cdae4017c7510956db17794f52d63f4f3910fd23c5aab65ecca2cb30e1ccd7
-SHA512 (musixtex.doc.r69742.tar.xz) = 942fca6475fdff821fa847c06d6dd8f92cf786e8f0f79d8edeab6276dad177fe97b8c70adb86db424b99875952b93151db35007575744fbc1d814e28ea03b949
-Size (musixtex.doc.r69742.tar.xz) = 2165548 bytes
+BLAKE2s (musixtex.doc.r70804.tar.xz) = a59c4524102fda94f17b182c262853b70aed124e72e466eb1ee8fa6878c1f30b
+SHA512 (musixtex.doc.r70804.tar.xz) = d4562dc48b30538e56c04e14e0aeb507b72a997c60f2886bed6e6423f0e51bd83535768c30e1555d9a6735c00a347f72206b7828eb8bf341e559d6780c902ab8
+Size (musixtex.doc.r70804.tar.xz) = 2165648 bytes
