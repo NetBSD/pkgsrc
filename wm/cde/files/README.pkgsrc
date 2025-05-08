@@ -32,6 +32,14 @@ NB: Create the xorg.conf.d target directory if it doesn't exist already.
 
 -----------------------------------------------------------------------
 
+For ttsession  to work, your hostname needs to be aliased to the
+localhost and the loopback address inside /etc/hosts: 
+
+::1		hostname	localhost	localhost.*
+127.0.0.1	hostname	localhost	localhost.*
+
+-----------------------------------------------------------------------
+
 To better access CDE applications:
 
  * Add dt/bin to your shell PATH:
