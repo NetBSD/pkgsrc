@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_zerocopy-0.7.33_src_lib.rs,v 1.1 2025/02/15 16:10:05 he Exp $
+$NetBSD: patch-.._vendor_zerocopy-0.7.35_src_lib.rs,v 1.1 2025/05/08 06:30:27 pin Exp $
 
 Do not try to use neon on big-endian aarch64.
 
---- ../vendor/zerocopy-0.7.33/src/lib.rs.orig	2025-02-15 10:03:46.503394929 +0000
-+++ ../vendor/zerocopy-0.7.33/src/lib.rs
+--- ../vendor/zerocopy-0.7.35/src/lib.rs.orig	2025-02-15 10:03:46.503394929 +0000
++++ ../vendor/zerocopy-0.7.35/src/lib.rs
 @@ -3725,7 +3725,7 @@ mod simd {
              powerpc64, powerpc64, vector_bool_long, vector_double, vector_signed_long, vector_unsigned_long
          );
