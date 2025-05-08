@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.230 2025/04/01 17:47:18 bsiegert Exp $
+# $NetBSD: version.mk,v 1.231 2025/05/08 18:55:52 bsiegert Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -6,8 +6,8 @@
 #
 .include "go-vars.mk"
 
-GO124_VERSION=	1.24.2
-GO123_VERSION=	1.23.8
+GO124_VERSION=	1.24.3
+GO123_VERSION=	1.23.9
 GO122_VERSION=	1.22.12
 GO120_VERSION=	1.20.14
 GO118_VERSION=	1.18.10
