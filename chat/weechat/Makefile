@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.157 2025/04/19 07:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2025/05/08 13:18:24 jperkin Exp $
 
-DISTNAME=	weechat-4.5.1
-PKGREVISION=	2
+DISTNAME=	weechat-4.6.2
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -15,9 +14,9 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 
-USE_TOOLS+=	msgfmt pkg-config
-USE_LANGUAGES=	c99
-FAKE_NCURSES=	yes
+USE_CC_FEATURES=	c99
+USE_TOOLS+=		msgfmt pkg-config
+FAKE_NCURSES=		yes
 
 #CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 CMAKE_CONFIGURE_ARGS+=	-DASCIIDOCTOR_FOUND=ON
@@ -34,6 +33,7 @@ CMAKE_CONFIGURE_ARGS+=	-DMANDIR=${PREFIX}/${PKGMANDIR}
 
 USE_PKGLOCALEDIR=	yes
 
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS.Darwin+=	-lresolv
 LDFLAGS.SunOS+=		-lresolv
