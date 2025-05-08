@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/30 17:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/05/08 13:48:43 jperkin Exp $
 
 DISTNAME=	dnsdist-1.9.9
 #PKGREVISION=	1
@@ -40,8 +40,15 @@ CONFIGURE_ARGS+=	--without-net-snmp
 CONFIGURE_ARGS+=	--enable-dns-over-https
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+.include "../../mk/readline.buildlink3.mk"
+
+.if ${READLINE_TYPE} == "editline"
+CONFIGURE_ARGS+=	--with-libedit
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
+.else
+CONFIGURE_ARGS+=	--without-libedit
+.endif
 
 EGDIR=			${PREFIX}/share/examples/dnsdist
 CONF_FILES=		${EGDIR}/dnsdist.conf-dist ${PKG_SYSCONFDIR}/dnsdist.conf
@@ -60,5 +67,4 @@ RCD_SCRIPTS+=		dnsdist
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/nghttp2/buildlink3.mk"
 .include "../../mk/atomic64.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
