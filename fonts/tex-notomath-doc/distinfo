@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 23:20:43 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2025/05/08 09:45:54 markd Exp $
 
-BLAKE2s (notomath.doc.r68014.tar.xz) = 8433255074b70aa0b95f913e68d33ab7c96f10c8923ad44881063c591f780bbb
-SHA512 (notomath.doc.r68014.tar.xz) = 708eab7029720af202b7af3d45becbdcd8c8fe6def7327b70f3c67bdbbe6c17c53c1e42912f4dedde1f805f7d7009a75e7d8279f7e3a6faf091ca6990cd4f5ca
-Size (notomath.doc.r68014.tar.xz) = 427424 bytes
+BLAKE2s (notomath.doc.r71429.tar.xz) = 7d2f915e55c2710ffcedf98c1bf1558f72d792c7fcc27b722aba040c9da6d885
+SHA512 (notomath.doc.r71429.tar.xz) = 0b17156c119b4e95292ec95e548be4ad5935cf1221b5481fa101a5bae97fca4143497926009f29a38f2ea6fbdd790b59efc281a46b9ae0a6e27e7ab22c8c099e
+Size (notomath.doc.r71429.tar.xz) = 431804 bytes

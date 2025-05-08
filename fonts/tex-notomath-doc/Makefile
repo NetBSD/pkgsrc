@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 23:20:43 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 09:45:54 markd Exp $
 
 DISTNAME=	notomath.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.03
-TEXLIVE_REV=	68014
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.031
+TEXLIVE_REV=	71429
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/notomath
