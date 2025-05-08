@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/03 01:33:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/08 08:39:43 markd Exp $
 share/texmf-dist/doc/latex/supertabular/CATALOG
-share/texmf-dist/doc/latex/supertabular/ChangeLog
 share/texmf-dist/doc/latex/supertabular/MANIFEST
 share/texmf-dist/doc/latex/supertabular/README
+share/texmf-dist/doc/latex/supertabular/supertabular.bug
 share/texmf-dist/doc/latex/supertabular/supertabular.pdf
