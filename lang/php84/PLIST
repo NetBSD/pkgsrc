@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/22 15:27:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/08 14:19:50 jperkin Exp $
 bin/phar${PHP_VER}
 bin/phar${PHP_VER}.phar
 bin/php-config${PHP_VER}
@@ -39,7 +39,7 @@ ${PHP_INCDIR}/Zend/zend_constants.h
 ${PHP_INCDIR}/Zend/zend_constants_arginfo.h
 ${PHP_INCDIR}/Zend/zend_cpuinfo.h
 ${PHP_INCDIR}/Zend/zend_dtrace.h
-${PLIST.dtrace}include/php/Zend/zend_dtrace_gen.h
+${PLIST.dtrace}${PHP_INCDIR}/Zend/zend_dtrace_gen.h
 ${PHP_INCDIR}/Zend/zend_enum.h
 ${PHP_INCDIR}/Zend/zend_enum_arginfo.h
 ${PHP_INCDIR}/Zend/zend_errors.h
