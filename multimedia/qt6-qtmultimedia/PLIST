@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/04/16 21:13:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/05/08 14:02:38 jperkin Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -22,7 +22,7 @@ ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPl
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegencodinginitializer_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegframe_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_p.h
-${PLIST.ffmpeg}${PLIST.x11}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_vaapi_p.h
+${PLIST.ffmpeg}${PLIST.x11}${PLIST.vaapi}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_vaapi_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegimagecapture_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegioutils_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegmediacapturesession_p.h
