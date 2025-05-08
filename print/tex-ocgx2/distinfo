@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2023/04/01 21:44:22 markd Exp $
+$NetBSD: distinfo,v 1.13 2025/05/08 09:42:34 markd Exp $
 
-BLAKE2s (ocgx2.r65292.tar.xz) = fbb34daa80e8f0c3bce2f84f29c4183aff7bd07695364c6d63a9d973cae32a68
-SHA512 (ocgx2.r65292.tar.xz) = dfc6fb9f004ce6af6cf0af6f057ef3db0bb8957b52f2e1ecc262da1f2b2fd556626560062a712ba8b45adcda1ef0f1414b54d78f58b68f1b13cba913a9df71a4
-Size (ocgx2.r65292.tar.xz) = 17256 bytes
+BLAKE2s (ocgx2.r72300.tar.xz) = b3a92923f6f1a12a9eee9d687e042d0967ea1822bf9330d4be11bf2e791ab458
+SHA512 (ocgx2.r72300.tar.xz) = 4ec634173bf0e761c2b34a6cd916f45988e2b7f4b002c3d03adfa30f51cf1994530073bb7a104b65ed991771c1858b44b304737d4589eb77a9a4cf41511b5544
+Size (ocgx2.r72300.tar.xz) = 16672 bytes
