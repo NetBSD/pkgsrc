@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/02/04 00:36:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/08 10:46:58 markd Exp $
 share/texmf-dist/doc/fonts/junicode/About.tex
 share/texmf-dist/doc/fonts/junicode/EnlargeAxis.tex
 share/texmf-dist/doc/fonts/junicode/Feature_Reference.tex
@@ -17,3 +17,4 @@ share/texmf-dist/doc/fonts/junicode/in_tex.tex
 share/texmf-dist/doc/fonts/junicode/junicode-samples.pdf
 share/texmf-dist/doc/fonts/junicode/junicode-samples.tex
 share/texmf-dist/doc/fonts/junicode/tag_key_ins.tex
+share/texmf-dist/doc/fonts/junicode/upperpua.tex
