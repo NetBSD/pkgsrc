@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2025/04/28 01:57:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.37 2025/05/08 11:49:02 pin Exp $
 
 PKGNAME=	lxqt-2.2.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,7 +36,7 @@ DEPENDS+=	lxqt-qtplugin>=2.2.0:../../x11/lxqt-qtplugin
 DEPENDS+=	lxqt-session>=2.2.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.2.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.2.0:../../sysutils/pcmanfm-qt
-DEPENDS+=	qterminal>=2.2.0:../../x11/qterminal
+DEPENDS+=	qterminal>=2.2.1:../../x11/qterminal
 DEPENDS+=	lxqt-panel>=2.2.0:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.2.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.10.0:../../graphics/screengrab
