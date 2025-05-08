@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:04:31 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/08 09:20:24 markd Exp $
 
 DISTNAME=	pst-coil.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.07
-TEXLIVE_REV=	37377
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.08
+TEXLIVE_REV=	72030
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pst-coil
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
