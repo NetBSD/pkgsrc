@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.96 2025/05/01 13:09:15 pin Exp $
+# $NetBSD: go-modules.mk,v 1.97 2025/05/08 18:26:37 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -155,22 +155,22 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.36.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.36.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20241217172543-b2144cdd0a67.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.26.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.26.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.27.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.27.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.24.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.24.0.zip
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.13.0.mod
-GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.13.0.zip
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.14.0.mod
+GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.14.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190916202348-b4ddaad3f8a3.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201204225414-ed752295db88.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210616094352-59db8d763f22.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.32.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.32.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.33.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.33.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.24.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.24.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.25.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.25.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.5.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.31.0.mod
