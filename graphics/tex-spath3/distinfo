@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/29 13:58:55 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2025/05/08 08:52:14 markd Exp $
 
-BLAKE2s (spath3.r64818.tar.xz) = 9f41c3a3186b1b81e080d307c08c62948fadccb9cdce858c550fe7a77b714365
-SHA512 (spath3.r64818.tar.xz) = c066ebfc25685d450caeddced161ad5b4170453307cfd21fc2c85c113bab3271b001514481827149757e536863fc2bf9814e03720d9a934c4df02321d6c5bbd5
-Size (spath3.r64818.tar.xz) = 25528 bytes
+BLAKE2s (spath3.r71396.tar.xz) = 2aa77f199024bad3cbd96ada045ac1d31598a17d8c74eea37cba9744d23ab617
+SHA512 (spath3.r71396.tar.xz) = c3d28d96a5ec1c0d3b0f7e29a974f90a92add95de81655f5b5d4ad465e7bb9ba7874feec4dd8071715a25d2ee01f94c14a81a2fae68838dbe3321cea9a0c7f64
+Size (spath3.r71396.tar.xz) = 25664 bytes
