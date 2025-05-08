@@ -37,6 +37,7 @@ apache-managed-domain-handling	Enable managing domains and ACME support in Apach
 apache-mpm-event	Use multi-threaded workers in Apache web server.
 apache-mpm-prefork	Use pre-forked workers in Apache web server.
 apache-mpm-worker	Use multiple processes of multi-threaded workers in Apache web server.
+apng			Enable draft-standard support for animated PNG.
 apple-common-crypto	Use Apple's CommonCrypto.
 ares			Use the ares library for asynchronous name resolution.
 argon2			Enable support for Argon2 password-hashing function.
