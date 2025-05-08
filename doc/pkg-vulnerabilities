@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.359 2025/05/07 15:30:10 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.360 2025/05/08 08:56:37 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25103,7 +25103,7 @@ git-base<2.40.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2023-2
 git-base<2.40.1	arbitrary-messages	https://nvd.nist.gov/vuln/detail/CVE-2023-25815
 git-base<2.40.1	configuration-misinterpretation	https://nvd.nist.gov/vuln/detail/CVE-2023-29007
 perl<5.38.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31484
-p5-GitLab-API-v4-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31485
+p5-GitLab-API-v4<0.27	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31485
 perl<5.38.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31486
 py{36,37,38,39,310,311}-django>=3.2<3.2.19	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 py{36,37,38,39,310,311}-django>=4.1<4.1.9	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
