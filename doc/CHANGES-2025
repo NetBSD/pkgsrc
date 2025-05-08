@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3151 2025/05/08 11:45:47 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3152 2025/05/08 11:47:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-c to 0.10.12 [pin 2025-05-08]
 	Updated graphics/gradient to 0.4.1 [pin 2025-05-08]
 	Updated devel/mise to 2025.5.2 [pin 2025-05-08]
+	Updated x11/qterminal to 2.2.1 [pin 2025-05-08]
