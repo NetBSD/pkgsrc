@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/04/01 10:42:04 markd Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/08 12:10:08 markd Exp $
 
 DISTNAME=	csquotes.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.2n
-TEXLIVE_REV=	64389
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.2o
+TEXLIVE_REV=	71053
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/csquotes
