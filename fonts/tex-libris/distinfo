@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:11 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/08 10:21:55 markd Exp $
 
-BLAKE2s (tex-libris-19409/libris.tar.xz) = 220cdeecaaba94c0590555ba0550b6e6590897905289d3716fa030e003971421
-SHA512 (tex-libris-19409/libris.tar.xz) = 7a505f86ae40aa0e88ae84649ee0372defccea6cfa32dd9188faaada1f708de860039c56ef52539fae004bc08dcb4ad3421c4e1c13d657b71c921c516ad58091
-Size (tex-libris-19409/libris.tar.xz) = 239784 bytes
+BLAKE2s (libris.r72484.tar.xz) = cce77992f70876386bdc7cdc6a08d00ab3da6f9b64464ba38f2cee6f93853d7c
+SHA512 (libris.r72484.tar.xz) = e8f6c2df02d9eb9c3560c0098d13d7222887d97873c5e5264bfae15dd7bb238b8b2258c6a650863f7c8402799883f4ce9416732e0240625f2658a9d4d76c9270
+Size (libris.r72484.tar.xz) = 240580 bytes
