@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/24 00:10:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/08 10:00:23 markd Exp $
 share/texmf-dist/doc/metapost/mptrees/README.md
+share/texmf-dist/doc/metapost/mptrees/france-region.jpg
 share/texmf-dist/doc/metapost/mptrees/mptrees-doc.pdf
 share/texmf-dist/doc/metapost/mptrees/mptrees-doc.tex

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/03/20 10:56:30 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/08 10:00:23 markd Exp $
 
 DISTNAME=	mptrees.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-24.02
-TEXLIVE_REV=	70112
+PKGNAME=	tex-${DISTNAME:S/./-/}-24.04
+TEXLIVE_REV=	70887
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mptrees
