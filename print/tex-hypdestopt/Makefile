@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/13 05:05:47 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 11:10:21 markd Exp $
 
 DISTNAME=	hypdestopt
-PKGNAME=	tex-${DISTNAME}-2.7
-TEXLIVE_REV=	56253
+PKGNAME=	tex-${DISTNAME}-2.8
+TEXLIVE_REV=	71991
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hypdestopt
