@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:14:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/08 08:15:44 markd Exp $
 
-BLAKE2s (tex-texsis-31958/texsis.tar.xz) = 78dd1d9881ee53fed7a710a7ae9aa853c4247658e6183d71342add6042b2692e
-SHA512 (tex-texsis-31958/texsis.tar.xz) = b71da690b716a587703238f867c13f7e870657347d26b3f5ad120bf07c109535f00191239f10e4ddcb160b723641a49ada07d01b7161f69964644eaf32e8f0c6
-Size (tex-texsis-31958/texsis.tar.xz) = 111056 bytes
+BLAKE2s (texsis.r69742.tar.xz) = 67e0067bcbff540c656d900c15e812738516c986022a5bc7ebaddf19de5f522f
+SHA512 (texsis.r69742.tar.xz) = f6ad2f3d49377de738bf37bcfa1658a2977ea3d399aa4625e2482c5292e65596c67c8912ed1b2d23b1a4611ea2cc2281585b558ba2a5e7f65638899f714c267a
+Size (texsis.r69742.tar.xz) = 111108 bytes
