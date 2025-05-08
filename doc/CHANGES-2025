@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3147 2025/05/07 20:47:06 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3148 2025/05/08 04:59:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4248,3 +4248,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-jadetex-doc to 3.13.71409 [mark 2025-05-07]
 	Updated print/tex-mltex to 2.2.71363 [mark 2025-05-07]
 	Updated print/tex-mltex-doc to 2.2.71363 [mark 2025-05-07]
+	Updated databases/sqlite3 to 3.49.2 [adam 2025-05-08]
+	Updated databases/sqlite3-docs to 3.49.2 [adam 2025-05-08]
+	Updated databases/sqlite3-tcl to 3.49.2 [adam 2025-05-08]
+	Updated devel/lemon to 1.0.3.49.2 [adam 2025-05-08]
+	Updated databases/py-apsw to 3.49.2.0 [adam 2025-05-08]
