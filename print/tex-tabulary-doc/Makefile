@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/02/11 22:29:05 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 08:31:07 markd Exp $
 
 DISTNAME=	tabulary.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.10
-TEXLIVE_REV=	34368
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.11
+TEXLIVE_REV=	71463
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tabulary
