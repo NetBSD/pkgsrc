@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:13:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/05/08 11:10:21 markd Exp $
 
-BLAKE2s (hypdestopt.doc.r56253.tar.xz) = 908c14a365d4e36d80dab1a7fdb757a5fd2fb1e879ff44744b55ae2a4d2b610a
-SHA512 (hypdestopt.doc.r56253.tar.xz) = cde846c9c4da226d27bd15881577ad3f1c3f0639c3e37fc86486af40939b0efb2d22d522646136b1b2fe2ebbfd5f2338e347b7476be7289d2a3710d43c2fc8ac
-Size (hypdestopt.doc.r56253.tar.xz) = 329064 bytes
+BLAKE2s (hypdestopt.doc.r71991.tar.xz) = 8b0b3da292b48733264c9c66af604dfe66aaddbb5d963f4441b9ef37fd9e7afc
+SHA512 (hypdestopt.doc.r71991.tar.xz) = b7da33a7373995380d63fcd08ae40df387b4fa9b926f5ad85a178203ffe0b04385b20758474a47e74e5e87d5eb2f5ac8529bb535679f5b9936d789b864bc25aa
+Size (hypdestopt.doc.r71991.tar.xz) = 344992 bytes
