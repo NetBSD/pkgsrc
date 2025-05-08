@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/04/02 17:46:11 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/08 11:42:44 pin Exp $
 
-DISTNAME=	gradient-rs-0.4.0
-PKGNAME=	gradient-0.4.0
+DISTNAME=	gradient-rs-0.4.1
+PKGNAME=	gradient-0.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mazznoer/}
 GITHUB_PROJECT=	gradient-rs
