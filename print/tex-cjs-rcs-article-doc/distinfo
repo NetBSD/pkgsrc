@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/18 19:36:35 markd Exp $
+$NetBSD: distinfo,v 1.2 2025/05/08 12:17:11 markd Exp $
 
-BLAKE2s (cjs-rcs-article.doc.r69006.tar.xz) = 77908d9c6d9de20001e1b2caf50e568cc64d99f81bde3c3bd63e1379eeae735a
-SHA512 (cjs-rcs-article.doc.r69006.tar.xz) = 2932d797b3969a5e399c51d2c515c05cf7fccaa88d82d80b99f626dbf2ff7a6e5f7414963696842f1980755b72a06f9e9def3d282f8ff5ca5175ad1ec8d3f1c5
-Size (cjs-rcs-article.doc.r69006.tar.xz) = 375192 bytes
+BLAKE2s (cjs-rcs-article.doc.r71936.tar.xz) = a09b38b39687b4c6c47fd5a8065f5ca1459a9635e3e69644d43ff05b1ce2b78c
+SHA512 (cjs-rcs-article.doc.r71936.tar.xz) = c8575a01b4a4e4efeec5f1873e281bb7aa83a74d6884d020b2189324f903d61cd0993f5b8d9c70f229ff929b2240a58fb178654bae9b7a2bf8b75f950945aacf
+Size (cjs-rcs-article.doc.r71936.tar.xz) = 346032 bytes
