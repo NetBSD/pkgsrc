@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/02/15 19:33:25 markd Exp $
+$NetBSD: distinfo,v 1.14 2025/05/08 09:27:27 markd Exp $
 
-BLAKE2s (preview.r69470.tar.xz) = 64fdc7a358d1befad01ff9180bab06fad7217b1076f963a3acbff4bff46b8c4a
-SHA512 (preview.r69470.tar.xz) = b7ed05c49ee852d23da47c4dab53e5116b1dcafe4ae404220e10fb9622ee6a593346ed7474a2d13c64d6d3782b5894f01758cd267bfd269f54778d2af46e8bb2
-Size (preview.r69470.tar.xz) = 6848 bytes
+BLAKE2s (preview.r71662.tar.xz) = ac22c7e9fafb6e42351045f27198b39652c1c95150c09d3af7334c575375895c
+SHA512 (preview.r71662.tar.xz) = 4473785d21e7729fccc9b523b0d31572e2d437126ba585d8e74266af4a098a2b3f329331ccd188438edc573d540d31905a74fbbb723c472344e6e3e5c42ae1a9
+Size (preview.r71662.tar.xz) = 6864 bytes
