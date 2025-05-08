@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/01/18 19:36:35 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/08 12:17:10 markd Exp $
 
 DISTNAME=	cjs-rcs-article
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	69006
+PKGNAME=	tex-${DISTNAME}-1.1a
+TEXLIVE_REV=	71936
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cjs-rcs-article
