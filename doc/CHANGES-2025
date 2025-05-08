@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3150 2025/05/08 11:43:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3151 2025/05/08 11:45:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4255,3 +4255,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-apsw to 3.49.2.0 [adam 2025-05-08]
 	Updated devel/cargo-c to 0.10.12 [pin 2025-05-08]
 	Updated graphics/gradient to 0.4.1 [pin 2025-05-08]
+	Updated devel/mise to 2025.5.2 [pin 2025-05-08]
