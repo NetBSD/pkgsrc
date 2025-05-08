@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/02/04 00:09:08 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/08 11:22:42 markd Exp $
 
 DISTNAME=	haranoaji
-PKGNAME=	tex-${DISTNAME}-20231009
-TEXLIVE_REV=	68501
+PKGNAME=	tex-${DISTNAME}-20231009.2
+TEXLIVE_REV=	71053
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/haranoaji
