@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2024/03/24 12:46:23 adam Exp $
+# $NetBSD: options.mk,v 1.9 2025/05/08 05:48:57 dbj Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.octave
-PKG_SUPPORTED_OPTIONS=		glpk graphicsmagick hdf5 qhull
+PKG_SUPPORTED_OPTIONS=		glpk graphicsmagick hdf5 portaudio qhull
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		qt5 qt6
 PKG_SUGGESTED_OPTIONS=		hdf5 glpk qhull qt6
@@ -24,6 +24,13 @@ CONFIGURE_ENV+=		ac_cv_prog_MAGICK_CONFIG=no
 .include "../../devel/hdf5/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-hdf5
+.endif
+
+.if !empty(PKG_OPTIONS:Mportaudio)
+.include "../../audio/portaudio/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-portaudio
+.else
+CONFIGURE_ARGS+=	--without-portaudio
 .endif
 
 .if !empty(PKG_OPTIONS:Mqhull)
