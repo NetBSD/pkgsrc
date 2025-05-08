@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.216 2025/03/11 11:18:43 nia Exp $
+# $NetBSD: Makefile,v 1.217 2025/05/08 08:30:01 tnn Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mesa3d.org/
-COMMENT=	Open source OpenGL implementation
+COMMENT=	Open source OpenGL implementation (amber branch)
 LICENSE=	mit
 
 USE_TOOLS+=	bison flex pkg-config xgettext
