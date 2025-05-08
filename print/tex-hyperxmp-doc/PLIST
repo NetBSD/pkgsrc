@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2021/04/22 03:53:11 dholland Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/08 10:56:42 markd Exp $
 man/man1/hyperxmp-add-bytecount.1
 share/texmf-dist/doc/latex/hyperxmp/README
+share/texmf-dist/doc/latex/hyperxmp/einstein-xmp.tex
+share/texmf-dist/doc/latex/hyperxmp/einstein1.pdf
+share/texmf-dist/doc/latex/hyperxmp/einstein2.pdf
+share/texmf-dist/doc/latex/hyperxmp/gglo-hyxmp.ist
+share/texmf-dist/doc/latex/hyperxmp/gind-hyxmp.ist
+share/texmf-dist/doc/latex/hyperxmp/hyperxmp-stds.tex
 share/texmf-dist/doc/latex/hyperxmp/hyperxmp.pdf
