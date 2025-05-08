@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/05/04 11:44:32 vins Exp $
+# $NetBSD: Makefile,v 1.28 2025/05/08 16:01:47 vins Exp $
 
 DISTNAME=	upower-v1.90.9
 PKGNAME=	${DISTNAME:S/v//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -75,12 +75,7 @@ BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-Wl,-zignore
 # with --nonet, xsltproc needs a helping hand finding some dtds
 XSLTPROC_PATH=	${PREFIX}/share/doc/dbus
 
-# GNU msgfmt >=0.19.7 required to produce files of type: xml
-BUILDLINK_API_DEPENDS.gettext-tools+= gettext-tools>=0.19.7
-# Otherwise built-in msgfmt is used regardless of line above
-USE_BUILTIN.gettext=    no
-.include "../../devel/gettext-tools/buildlink3.mk"
-
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.66.0
 .include "../../devel/glib2/buildlink3.mk"
