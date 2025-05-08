@@ -1,3 +1,2 @@
 This package provides MetaPost tools for drawing simple
-probability trees. One command and several parameters to
-control the output are provided.
+probability trees and graphs (in discrete geometry).
