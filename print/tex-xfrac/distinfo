@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/02/25 19:34:52 markd Exp $
+$NetBSD: distinfo,v 1.2 2025/05/08 08:21:52 markd Exp $
 
-BLAKE2s (xfrac.r69888.tar.xz) = b68d66c470c14cd05d7e2ed19a7c8448ecf6c980227934022be69318cea4fa89
-SHA512 (xfrac.r69888.tar.xz) = 6a173abe1f5cd65db836157fa336be76bc9879e137f2542b3141bb096359c3bae771705a3b761730e1e3bbc7d623cc08ac46f87af7412be4fa4d7f42a70ba9b9
-Size (xfrac.r69888.tar.xz) = 3148 bytes
+BLAKE2s (xfrac.r71430.tar.xz) = df937a3cb784378275355e91340657cdda5c1e1b9ad0a9c532f44afaed275c6a
+SHA512 (xfrac.r71430.tar.xz) = bf1baf5132f29bc139f00cfe15ee7035894d57baa3fbc30978165ad2d1527d44262ffcdb3536cf3066cdd9fa1c02412f8948158cb6d603e8222e2385e5b19ce8
+Size (xfrac.r71430.tar.xz) = 3180 bytes
