@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/03/20 10:37:55 markd Exp $
+$NetBSD: distinfo,v 1.16 2025/05/08 10:17:32 markd Exp $
 
-BLAKE2s (listings.doc.r70624.tar.xz) = 47c5ff2bea9f6ba6e79c7e7ad98b1984ce862b1400403f6c9c1b4c7c81a79cf2
-SHA512 (listings.doc.r70624.tar.xz) = 5254197f9d815e10038cf62a93a43669764f0dd4af2fa2d4e2779fb05c296c3f0c494e70dd9faf0b44e7621dde5f8106bb8c27eba7ee69a1c41c5086c737244c
-Size (listings.doc.r70624.tar.xz) = 2745184 bytes
+BLAKE2s (listings.doc.r72368.tar.xz) = fe8601891e18ae7e198d45b768e6a0cde48bd4464b70927f4bf6e7221ec5aba3
+SHA512 (listings.doc.r72368.tar.xz) = 2baece2fb1cd944c87fc8ce95296b9407fe611f25a6198b94aadcc039ea168c1d854b7b2e74bf8a559a35c918684c9b0bd3504028eb1b1a33b6a0a7b8c62456a
+Size (listings.doc.r72368.tar.xz) = 2797684 bytes
