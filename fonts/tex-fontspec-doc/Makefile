@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/02/18 10:04:29 markd Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/08 11:41:54 markd Exp $
 
 DISTNAME=	fontspec.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.9a
-TEXLIVE_REV=	69880
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.9e
+TEXLIVE_REV=	71237
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fontspec
