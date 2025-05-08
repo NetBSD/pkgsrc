@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3155 2025/05/08 13:18:34 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.3156 2025/05/08 18:27:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4336,3 +4336,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-cjs-rcs-article to 1.1a [mark 2025-05-08]
 	Updated print/tex-cjs-rcs-article-doc to 1.1a [mark 2025-05-08]
 	Updated chat/weechat to 4.6.2 [jperkin 2025-05-08]
+	Updated shells/oh-my-posh to 25.21.1 [pin 2025-05-08]
