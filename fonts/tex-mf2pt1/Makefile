@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:33:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/08 10:05:28 markd Exp $
 
 DISTNAME=	mf2pt1
-PKGNAME=	tex-${DISTNAME}-2.7
-PKGREVISION=	1
-TEXLIVE_REV=	61217
+PKGNAME=	tex-${DISTNAME}-2.8
+TEXLIVE_REV=	71883
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mf2pt1
