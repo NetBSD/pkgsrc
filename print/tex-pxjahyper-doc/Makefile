@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/04/09 06:16:59 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/08 09:10:12 markd Exp $
 
 DISTNAME=	pxjahyper.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-TEXLIVE_REV=	66272
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.5
+TEXLIVE_REV=	72114
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pxjahyper
