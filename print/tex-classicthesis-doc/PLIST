@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:45:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/09 23:24:38 markd Exp $
 share/texmf-dist/doc/latex/classicthesis/AMiede_Publications.bib
 share/texmf-dist/doc/latex/classicthesis/Bibliography.bib
 share/texmf-dist/doc/latex/classicthesis/CHANGES
@@ -8,9 +8,7 @@ share/texmf-dist/doc/latex/classicthesis/Chapters/Chapter02.tex
 share/texmf-dist/doc/latex/classicthesis/Chapters/Chapter03.tex
 share/texmf-dist/doc/latex/classicthesis/Chapters/Chapter0A.tex
 share/texmf-dist/doc/latex/classicthesis/ClassicThesis.pdf
-share/texmf-dist/doc/latex/classicthesis/ClassicThesis.tcp
 share/texmf-dist/doc/latex/classicthesis/ClassicThesis.tex
-share/texmf-dist/doc/latex/classicthesis/ClassicThesis.tps
 share/texmf-dist/doc/latex/classicthesis/Examples/classicthesis-arsclassica-book.pdf
 share/texmf-dist/doc/latex/classicthesis/Examples/classicthesis-arsclassica-book.tex
 share/texmf-dist/doc/latex/classicthesis/Examples/classicthesis-article.pdf

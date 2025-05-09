@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/18 03:45:00 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/09 23:24:38 markd Exp $
 
 DISTNAME=	classicthesis.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.6
-TEXLIVE_REV=	48041
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.8
+TEXLIVE_REV=	73676
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/classicthesis
