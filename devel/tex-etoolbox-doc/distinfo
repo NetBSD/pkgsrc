@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:20:00 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/05/09 23:58:25 markd Exp $
 
-BLAKE2s (etoolbox.doc.r56554.tar.xz) = a9161ce3e0a327ebf5f07ad31d9a5c5b7ad49f1be78efe062d47e28a1b3e9738
-SHA512 (etoolbox.doc.r56554.tar.xz) = 15f5f37471b991c1363e7d34c419c4defe1920522d6f666c383ce31b25b412d40a1dd6ca1c0fdb0e56ef3c7e529215964957c5a2dc55522bec60e79bdd972947
-Size (etoolbox.doc.r56554.tar.xz) = 237928 bytes
+BLAKE2s (etoolbox.doc.r73881.tar.xz) = 2f5f5bbf7e73ea9a36b001cbaa0048cfadf257844ef892a8f92ca61eb882f3c6
+SHA512 (etoolbox.doc.r73881.tar.xz) = 0bd3fe0958b55e6fdacf9aaaacb7e893f4e10a07ab18e0236dc5be3771ca6faec8524983336c2157c369500d9175db31f0ae6c0b57f7bd9f054b8bcb0d010ad9
+Size (etoolbox.doc.r73881.tar.xz) = 245776 bytes
