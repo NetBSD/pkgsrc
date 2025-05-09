@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3157 2025/05/08 18:56:32 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3158 2025/05/09 04:45:51 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4228,6 +4228,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-virtualenv to 20.31.1 [adam 2025-05-07]
 	Removed lang/rust176-bin [wiz 2025-05-07]
 	Removed lang/rust176 [wiz 2025-05-07]
+	Updated www/hugo to 0.147.2 [triaxx 2025-05-07]
 	Updated print/tex-glossaries to 4.6 [mark 2025-05-07]
 	Updated print/tex-glossaries-doc to 4.6 [mark 2025-05-07]
 	Updated print/tex-graphics to 1.4g [mark 2025-05-07]
