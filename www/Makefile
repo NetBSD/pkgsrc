@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1858 2025/04/25 21:25:03 nia Exp $
+# $NetBSD: Makefile,v 1.1859 2025/05/09 19:16:39 bsiegert Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -34,6 +34,7 @@ SUBDIR+=	akregator
 SUBDIR+=	album
 SUBDIR+=	album_themes
 SUBDIR+=	analog
+SUBDIR+=	anubis
 SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-openidc
 SUBDIR+=	ap-authnz-crowd
