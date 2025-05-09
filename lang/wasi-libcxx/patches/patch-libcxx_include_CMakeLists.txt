@@ -1,22 +1,21 @@
-$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.3 2024/07/06 15:45:09 adam Exp $
+$NetBSD: patch-libcxx_include_CMakeLists.txt,v 1.4 2025/05/09 05:51:26 adam Exp $
 
 * Generate __config_site and __assertion_handler under source directory. This is wrong.
   This fixes non-pthreads wasi-libcxx-14.0.6 build.
 
---- libcxx/include/CMakeLists.txt.orig	2024-05-18 14:14:07.000000000 +0000
+--- libcxx/include/CMakeLists.txt.orig	2024-10-15 08:17:37.000000000 +0000
 +++ libcxx/include/CMakeLists.txt
-@@ -1019,10 +1019,14 @@ foreach(feature LIBCXX_ENABLE_FILESYSTEM
-   endif()
- endforeach()
+@@ -1018,9 +1018,13 @@ set(files
+   wctype.h
+   )
  
 +configure_file("__config_site.in" "${CMAKE_CURRENT_SOURCE_DIR}/__config_site" @ONLY)
  configure_file("__config_site.in" "${LIBCXX_GENERATED_INCLUDE_TARGET_DIR}/__config_site" @ONLY)
- configure_file("module.modulemap.in" "${LIBCXX_GENERATED_INCLUDE_DIR}/module.modulemap" @ONLY)
 +configure_file("${LIBCXX_ASSERTION_HANDLER_FILE}" "${CMAKE_CURRENT_SOURCE_DIR}/__assertion_handler" COPYONLY)
  configure_file("${LIBCXX_ASSERTION_HANDLER_FILE}" "${LIBCXX_GENERATED_INCLUDE_DIR}/__assertion_handler" COPYONLY)
  
 +set(_all_includes "${CMAKE_CURRENT_SOURCE_DIR}/__config_site"
-+                   ${CMAKE_CURRENT_SOURCE_DIR}/__assertion_handler)
++                  "${CMAKE_CURRENT_SOURCE_DIR}/__assertion_handler")
  set(_all_includes "${LIBCXX_GENERATED_INCLUDE_TARGET_DIR}/__config_site"
-                   "${LIBCXX_GENERATED_INCLUDE_DIR}/module.modulemap"
                    "${LIBCXX_GENERATED_INCLUDE_DIR}/__assertion_handler")
+ foreach(f ${files})

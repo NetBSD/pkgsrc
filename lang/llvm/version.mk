@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.17 2024/07/06 15:45:06 adam Exp $
+# $NetBSD: version.mk,v 1.18 2025/05/09 05:53:52 adam Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -14,7 +14,7 @@
 # used by lang/wasi-libcxx
 # used by parallel/openmp
 
-LLVM_VERSION=	18.1.8
+LLVM_VERSION=	19.1.7
 MASTER_SITES=	${MASTER_SITE_GITHUB:=llvm/}
 GITHUB_PROJECT=	llvm-project
 GITHUB_RELEASE=	llvmorg-${PKGVERSION_NOREV}
