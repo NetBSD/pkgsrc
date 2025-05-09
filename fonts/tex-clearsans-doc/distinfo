@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/10/12 22:21:22 markd Exp $
+$NetBSD: distinfo,v 1.7 2025/05/09 23:27:55 markd Exp $
 
-BLAKE2s (clearsans.doc.r64400.tar.xz) = d0528d12224cfea0075f34f00fc17d56a4c687e2186db5eb275bfb55b8767ad4
-SHA512 (clearsans.doc.r64400.tar.xz) = a2be117afd912bab15e5ef69cfd54dd66385699677dc357233efaa73e2bd2cfaa9a29c0cf492f48ecf152a9640c95a4ebdee9366f2c27bcead571b5177345ed1
-Size (clearsans.doc.r64400.tar.xz) = 198492 bytes
+BLAKE2s (clearsans.doc.r74767.tar.xz) = e84fa25b0c549651de5020c7a3f811add29fc81ce101225f980c6417be55d2f5
+SHA512 (clearsans.doc.r74767.tar.xz) = 6c0ae137c1e8aedf877b5d2aa792960a55806d4f44241cf94be869fdb9e0e6333f67c4a53e8a78db11875f4f1ffecbc5106d39bebd90b8e372fc1fa9bf8725bd
+Size (clearsans.doc.r74767.tar.xz) = 242936 bytes
