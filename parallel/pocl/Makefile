@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/04/22 16:07:26 nia Exp $
+# $NetBSD: Makefile,v 1.25 2025/05/09 06:05:18 adam Exp $
 
 DISTNAME=	pocl-6.0
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://portablecl.org/
+HOMEPAGE=	https://portablecl.org/
 COMMENT=	Portable implementation of the OpenCL standard
 LICENSE=	mit
 
