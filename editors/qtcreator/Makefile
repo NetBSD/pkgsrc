@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2025/05/09 05:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/05/09 19:37:11 wiz Exp $
 
 DISTNAME=	qt-creator-opensource-src-16.0.0
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://download.qt.io/archive/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/

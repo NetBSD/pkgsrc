@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.112 2025/04/24 14:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2025/05/09 19:37:16 wiz Exp $
 
 DISTNAME=	qttools-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qttools-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt5 tools
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
