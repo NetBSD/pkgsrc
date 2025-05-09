@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/12 22:25:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 22:25:44 markd Exp $
 share/texmf-dist/fonts/afm/arkandis/adfsymbols/ArrowsADF.afm
 share/texmf-dist/fonts/afm/arkandis/adfsymbols/BulletsADF.afm
 share/texmf-dist/fonts/enc/dvips/adfsymbols/SymbolsADF.enc
@@ -9,5 +9,6 @@ share/texmf-dist/fonts/type1/arkandis/adfsymbols/ArrowsADF.pfb
 share/texmf-dist/fonts/type1/arkandis/adfsymbols/BulletsADF.pfb
 share/texmf-dist/tex/latex/adfsymbols/adfarrows.sty
 share/texmf-dist/tex/latex/adfsymbols/adfbullets.sty
+share/texmf-dist/tex/latex/adfsymbols/adfsymbols-uni.tex
 share/texmf-dist/tex/latex/adfsymbols/uarrowsadf.fd
 share/texmf-dist/tex/latex/adfsymbols/ubulletsadf.fd
