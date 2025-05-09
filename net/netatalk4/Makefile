@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/05/09 18:16:21 hauke Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/09 18:18:21 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
-#DISTNAME=	netatalk-4-2-2
 DISTNAME=	netatalk-${PKGVER:C/\./-/g}
 
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
