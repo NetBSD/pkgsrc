@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:50 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/09 23:45:33 markd Exp $
 
-BLAKE2s (ebgaramond-maths.doc.r52168.tar.xz) = 7a1a9a7750f525fbd98d4647eb8159ed786f0402bf8d9fc5783d56656b99ef15
-SHA512 (ebgaramond-maths.doc.r52168.tar.xz) = d2207e0f6535be6ed1a53fc15717a60fab0d473da4f307cfc70c7271fbd93e7f6cbd92d1c0f0738da6d1b607832cbed95e5c87edd53cc5423f35f287289b4573
-Size (ebgaramond-maths.doc.r52168.tar.xz) = 372980 bytes
+BLAKE2s (ebgaramond-maths.doc.r74169.tar.xz) = fb3cf0d7df081efb04992095d21c0a9213600703da372ce24a65d71ad54e9c3f
+SHA512 (ebgaramond-maths.doc.r74169.tar.xz) = 494e30a8e5e1e68c23d68198543244e119abcc1878b70a5388ac6c7db4c92ec534632bad4ed54a60ff465b90c82b1260ccaaf45c4458c70db023aa321ebadf5e
+Size (ebgaramond-maths.doc.r74169.tar.xz) = 565540 bytes

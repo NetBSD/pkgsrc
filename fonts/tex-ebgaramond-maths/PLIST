@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/26 12:21:13 markd Exp $
-share/texmf-dist/fonts/enc/dvips/ebgaramond-maths/a_w5zv5t.enc
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 23:45:33 markd Exp $
+share/texmf-dist/fonts/enc/dvips/ebgaramond-maths/oml-ebgaramond-1.enc
 share/texmf-dist/fonts/map/dvips/ebgaramond-maths/EBGaramond-Maths.map
+share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond-BoldItalic--oml-ebgaramond.tfm
+share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond-ExtraBoldItalic--oml-ebgaramond.tfm
 share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond-Italic--oml-ebgaramond.tfm
+share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond-MediumItalic--oml-ebgaramond.tfm
+share/texmf-dist/fonts/tfm/public/ebgaramond-maths/EBGaramond-SemiBoldItalic--oml-ebgaramond.tfm
 share/texmf-dist/tex/latex/ebgaramond-maths/OMLEBGaramond-Maths.fd
 share/texmf-dist/tex/latex/ebgaramond-maths/ebgaramond-maths.sty
