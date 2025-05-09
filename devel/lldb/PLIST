@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/07/06 15:45:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/05/09 05:51:23 adam Exp $
 bin/lldb
 bin/lldb-argdumper
 bin/lldb-dap
@@ -6,6 +6,8 @@ bin/lldb-instr
 bin/lldb-server
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
+include/lldb/API/SBAddressRange.h
+include/lldb/API/SBAddressRangeList.h
 include/lldb/API/SBAttachInfo.h
 include/lldb/API/SBBlock.h
 include/lldb/API/SBBreakpoint.h
@@ -36,6 +38,7 @@ include/lldb/API/SBHostOS.h
 include/lldb/API/SBInstruction.h
 include/lldb/API/SBInstructionList.h
 include/lldb/API/SBLanguageRuntime.h
+include/lldb/API/SBLanguages.h
 include/lldb/API/SBLaunchInfo.h
 include/lldb/API/SBLineEntry.h
 include/lldb/API/SBListener.h
@@ -50,9 +53,11 @@ include/lldb/API/SBProcessInfoList.h
 include/lldb/API/SBQueue.h
 include/lldb/API/SBQueueItem.h
 include/lldb/API/SBReproducer.h
+include/lldb/API/SBSaveCoreOptions.h
 include/lldb/API/SBScriptObject.h
 include/lldb/API/SBSection.h
 include/lldb/API/SBSourceManager.h
+include/lldb/API/SBStatisticsOptions.h
 include/lldb/API/SBStream.h
 include/lldb/API/SBStringList.h
 include/lldb/API/SBStructuredData.h
@@ -102,12 +107,13 @@ include/lldb/Breakpoint/StoppointCallbackContext.h
 include/lldb/Breakpoint/StoppointHitCounter.h
 include/lldb/Breakpoint/StoppointSite.h
 include/lldb/Breakpoint/Watchpoint.h
+include/lldb/Breakpoint/WatchpointAlgorithms.h
 include/lldb/Breakpoint/WatchpointList.h
 include/lldb/Breakpoint/WatchpointOptions.h
 include/lldb/Breakpoint/WatchpointResource.h
-include/lldb/Breakpoint/WatchpointResourceList.h
 include/lldb/Core/Address.h
 include/lldb/Core/AddressRange.h
+include/lldb/Core/AddressRangeListImpl.h
 include/lldb/Core/AddressResolver.h
 include/lldb/Core/AddressResolverFileLine.h
 include/lldb/Core/Architecture.h
@@ -202,6 +208,7 @@ include/lldb/Expression/ObjectFileJIT.h
 include/lldb/Expression/REPL.h
 include/lldb/Expression/UserExpression.h
 include/lldb/Expression/UtilityFunction.h
+include/lldb/Host/Alarm.h
 include/lldb/Host/Config.h
 include/lldb/Host/ConnectionFileDescriptor.h
 include/lldb/Host/Debug.h
@@ -301,6 +308,7 @@ include/lldb/Interpreter/Interfaces/ScriptedInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedPlatformInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedProcessInterface.h
 include/lldb/Interpreter/Interfaces/ScriptedThreadInterface.h
+include/lldb/Interpreter/Interfaces/ScriptedThreadPlanInterface.h
 include/lldb/Interpreter/OptionArgParser.h
 include/lldb/Interpreter/OptionGroupArchitecture.h
 include/lldb/Interpreter/OptionGroupBoolean.h
@@ -361,12 +369,14 @@ include/lldb/Symbol/LocateSymbolFile.h
 include/lldb/Symbol/ObjectContainer.h
 include/lldb/Symbol/ObjectFile.h
 include/lldb/Symbol/PostfixExpression.h
+include/lldb/Symbol/SaveCoreOptions.h
 include/lldb/Symbol/SourceModule.h
 include/lldb/Symbol/Symbol.h
 include/lldb/Symbol/SymbolContext.h
 include/lldb/Symbol/SymbolContextScope.h
 include/lldb/Symbol/SymbolFile.h
 include/lldb/Symbol/SymbolFileOnDemand.h
+include/lldb/Symbol/SymbolLocation.h
 include/lldb/Symbol/SymbolLocator.h
 include/lldb/Symbol/SymbolVendor.h
 include/lldb/Symbol/Symtab.h
@@ -459,6 +469,7 @@ include/lldb/Target/UnixSignals.h
 include/lldb/Target/Unwind.h
 include/lldb/Target/UnwindAssembly.h
 include/lldb/Target/UnwindLLDB.h
+include/lldb/Target/VerboseTrapFrameRecognizer.h
 include/lldb/Utility/AddressableBits.h
 include/lldb/Utility/AnsiTerminal.h
 include/lldb/Utility/AppleUuidCompatibility.h
@@ -479,6 +490,7 @@ include/lldb/Utility/DataExtractor.h
 include/lldb/Utility/Diagnostics.h
 include/lldb/Utility/Endian.h
 include/lldb/Utility/Environment.h
+include/lldb/Utility/ErrorMessages.h
 include/lldb/Utility/Event.h
 include/lldb/Utility/FileSpec.h
 include/lldb/Utility/FileSpecList.h
@@ -542,5 +554,27 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.${LLVM_MAJOR_VERSION}
 lib/liblldb.so.${PKGVERSION}
+lib/lua/${LUA_VERSION}/lldb.so
+${PYSITELIB}/lldb/__init__.py
+${PYSITELIB}/lldb/_lldb.so
+${PYSITELIB}/lldb/embedded_interpreter.py
+${PYSITELIB}/lldb/formatters/Logger.py
+${PYSITELIB}/lldb/formatters/__init__.py
+${PYSITELIB}/lldb/formatters/attrib_fromdict.py
+${PYSITELIB}/lldb/formatters/cache.py
+${PYSITELIB}/lldb/formatters/cpp/__init__.py
+${PYSITELIB}/lldb/formatters/cpp/gnu_libstdcpp.py
+${PYSITELIB}/lldb/formatters/cpp/libcxx.py
+${PYSITELIB}/lldb/formatters/metrics.py
+${PYSITELIB}/lldb/formatters/synth.py
+${PYSITELIB}/lldb/lldb-argdumper
+${PYSITELIB}/lldb/plugins/__init__.py
+${PYSITELIB}/lldb/plugins/operating_system.py
+${PYSITELIB}/lldb/plugins/parsed_cmd.py
+${PYSITELIB}/lldb/plugins/scripted_platform.py
+${PYSITELIB}/lldb/plugins/scripted_process.py
+${PYSITELIB}/lldb/plugins/scripted_thread_plan.py
+${PYSITELIB}/lldb/utils/__init__.py
+${PYSITELIB}/lldb/utils/in_call_stack.py
+${PYSITELIB}/lldb/utils/symbolication.py

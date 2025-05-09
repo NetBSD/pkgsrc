@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/07/06 15:45:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/05/09 05:51:23 adam Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -44,6 +44,7 @@ include/polly/Support/GICHelper.h
 include/polly/Support/ISLOStream.h
 include/polly/Support/ISLOperators.h
 include/polly/Support/ISLTools.h
+include/polly/Support/PollyDebug.h
 include/polly/Support/SCEVAffinator.h
 include/polly/Support/SCEVValidator.h
 include/polly/Support/ScopHelper.h
