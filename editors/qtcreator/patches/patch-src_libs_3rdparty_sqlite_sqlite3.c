@@ -1,4 +1,4 @@
-$NetBSD: patch-src_libs_3rdparty_sqlite_sqlite3.c,v 1.1 2021/11/20 20:51:14 wiz Exp $
+$NetBSD: patch-src_libs_3rdparty_sqlite_sqlite3.c,v 1.2 2025/05/09 05:56:19 adam Exp $
 
 By default, the code tries to use localtime_s and fails.
 
@@ -10,7 +10,7 @@ By default, the code tries to use localtime_s and fails.
  */
 +#ifdef __NetBSD__
 +#undef HAVE_LOCALTIME_R
-+#define HAVE_LOCALTIME_R	1
++#define HAVE_LOCALTIME_R 1
 +#endif
  #if !HAVE_LOCALTIME_R && !HAVE_LOCALTIME_S \
      && defined(_MSC_VER) && defined(_CRT_INSECURE_DEPRECATE)
