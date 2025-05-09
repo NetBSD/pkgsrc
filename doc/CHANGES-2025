@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3162 2025/05/09 13:06:33 roy Exp $
+$NetBSD: CHANGES-2025,v 1.3163 2025/05/09 13:24:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/zig to 0.14.0 [adam 2025-05-09]
 	Updated meta-pkgs/bulk-test-llvm to 20250508 [adam 2025-05-09]
 	Updated net/openresolv to 3.16.3 [roy 2025-05-09]
+	Updated net/samba4 to 4.21.3nb4 [jperkin 2025-05-09]
