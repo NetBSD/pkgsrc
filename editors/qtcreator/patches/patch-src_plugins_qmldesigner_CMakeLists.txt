@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_qmldesigner_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+
+Disable application bundle.
+
+--- src/plugins/qmldesigner/CMakeLists.txt.orig	2025-04-04 11:12:13.658791198 +0000
++++ src/plugins/qmldesigner/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ #only if the plugin is requested by qtc_plugin_enabled continue if not stop as early as possible
+ 
+ set(QmlDesignerPluginInstallPrefix "${IDE_PLUGIN_PATH}/qmldesigner")
+-if (APPLE)
++if (FALSE)
+   set(QmlDesignerPluginInstallPrefix "${IDE_PLUGIN_PATH}/QmlDesigner")
+ endif()
+ 
