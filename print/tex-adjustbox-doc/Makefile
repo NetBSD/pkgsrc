@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/04/01 10:08:03 markd Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/09 22:28:19 markd Exp $
 
 DISTNAME=	adjustbox.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
-TEXLIVE_REV=	64967
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3c
+TEXLIVE_REV=	74309
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/adjustbox
