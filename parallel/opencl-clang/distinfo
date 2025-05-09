@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/07/09 06:21:16 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/05/09 05:59:56 adam Exp $
 
-BLAKE2s (opencl-clang-18.1.0.tar.gz) = a8724497c677da316d6048eb82cef13375dace99bed39c53bb94c7547e5f5cc2
-SHA512 (opencl-clang-18.1.0.tar.gz) = ce14b706b3624302008595e3104f299ef58d93a56ef95628f0f56c2e53a3a7ca1b1e5a989c41a33839fa5d4e126cca8537f2155113fd9781a43ac07f28b52ca4
-Size (opencl-clang-18.1.0.tar.gz) = 29006 bytes
+BLAKE2s (opencl-clang-19.1.0.tar.gz) = 1d83a05cc2d23ffa5ffe53ef85ecbcb2140259afb175ba5f299b24d3dd70ad85
+SHA512 (opencl-clang-19.1.0.tar.gz) = d6e42869f8db2bda7182d6ae18405c4ec51d9ea3f60c79a39d9dec9d79414a388e96419aa3c2e657d8c9ffc42de4b4f00d006ff747095e546a821c1956b86058
+Size (opencl-clang-19.1.0.tar.gz) = 34156 bytes
