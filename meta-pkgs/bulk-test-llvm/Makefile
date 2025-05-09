@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/01/24 12:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/05/09 07:44:13 adam Exp $
 
-DISTNAME=	bulk-test-llvm-20250124
+DISTNAME=	bulk-test-llvm-20250508
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,23 +21,28 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 
 .include "../../lang/python/pyversion.mk"
 
+# LLVM project
 DEPENDS+=	clang-[0-9]*:../../lang/clang
-DEPENDS+=	cvise-[0-9]*:../../devel/cvise
-DEPENDS+=	firefox-[0-9]*:../../www/firefox
-DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
-DEPENDS+=	include-what-you-use-[0-9]*:../../devel/include-what-you-use
-DEPENDS+=	polly-[0-9]*:../../devel/polly
-DEPENDS+=	qtcreator-[0-9]*:../../editors/qtcreator
+DEPENDS+=	clang-tools-extra-[0-9]*:../../lang/clang-tools-extra
+DEPENDS+=	compiler-rt-[0-9]*:../../lang/compiler-rt
 DEPENDS+=	libcxx-[0-9]*:../../lang/libcxx
 DEPENDS+=	libcxxabi-[0-9]*:../../lang/libcxxabi
 DEPENDS+=	libunwind-[0-9]*:../../lang/libunwind
 DEPENDS+=	lld-[0-9]*:../../devel/lld
 DEPENDS+=	lldb-[0-9]*:../../devel/lldb
+DEPENDS+=	mlir-[0-9]*:../../lang/mlir
+DEPENDS+=	openmp-[0-9]*:../../parallel/openmp
+DEPENDS+=	polly-[0-9]*:../../devel/polly
+
+DEPENDS+=	cvise-[0-9]*:../../devel/cvise
+DEPENDS+=	firefox-[0-9]*:../../www/firefox
+DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
+DEPENDS+=	include-what-you-use-[0-9]*:../../devel/include-what-you-use
 DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
 DEPENDS+=	opencl-clang-[0-9]*:../../parallel/opencl-clang
-DEPENDS+=	openmp-[0-9]*:../../parallel/openmp
 DEPENDS+=	pocl-[0-9]*:../../parallel/pocl
 DEPENDS+=	${PYPKGPREFIX}-llvmlite-[0-9]*:../../devel/py-llvmlite
+DEPENDS+=	qtcreator-[0-9]*:../../editors/qtcreator
 DEPENDS+=	rust-[0-9]*:../../lang/rust
 DEPENDS+=	seamonkey-[0-9]*:../../www/seamonkey
 DEPENDS+=	spirv-llvm-translator-[0-9]*:../../parallel/spirv-llvm-translator
