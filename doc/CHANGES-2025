@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3163 2025/05/09 13:24:00 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.3164 2025/05/09 13:47:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4366,3 +4366,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/bulk-test-llvm to 20250508 [adam 2025-05-09]
 	Updated net/openresolv to 3.16.3 [roy 2025-05-09]
 	Updated net/samba4 to 4.21.3nb4 [jperkin 2025-05-09]
+	Updated databases/postgresql13 to 13.21 [adam 2025-05-09]
+	Updated databases/postgresql14 to 14.18 [adam 2025-05-09]
+	Updated databases/postgresql15 to 15.13 [adam 2025-05-09]
+	Updated databases/postgresql16 to 16.9 [adam 2025-05-09]
+	Updated databases/postgresql17 to 17.5 [adam 2025-05-09]
