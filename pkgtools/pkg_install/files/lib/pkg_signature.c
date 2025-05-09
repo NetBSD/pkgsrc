@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.14 2025/02/18 11:53:49 wiz Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.15 2025/05/09 12:18:00 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.14 2025/02/18 11:53:49 wiz Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.15 2025/05/09 12:18:00 wiz Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -634,7 +634,7 @@ pkg_sign_gpg(const char *name, const char *output)
 	size = archive_entry_size(entry);
 
 	pkgname = extract_pkgname(fd);
-	hash_file = xasprintf(hash_template, pkgname, size);
+	hash_file = xasprintf(hash_template, pkgname, (long long)size);
 	free(pkgname);
 
 	for (i = 0; i < size; i += block_len) {
