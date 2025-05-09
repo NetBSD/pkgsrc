@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3165 2025/05/09 13:54:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3166 2025/05/09 14:08:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4373,3 +4373,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql17 to 17.5 [adam 2025-05-09]
 	Updated devel/py-maturin to 1.8.4 [adam 2025-05-09]
 	Updated devel/spdlog to 1.15.3 [adam 2025-05-09]
+	Updated security/libgcrypt to 1.11.1 [adam 2025-05-09]
+	Updated security/libfido2 to 1.16.0 [adam 2025-05-09]
