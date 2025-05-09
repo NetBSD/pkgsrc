@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/08/25 06:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/09 19:37:11 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lld-${LLVM_VERSION}.src
