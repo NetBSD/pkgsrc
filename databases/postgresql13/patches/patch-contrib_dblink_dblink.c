@@ -1,9 +1,9 @@
-$NetBSD: patch-contrib_dblink_dblink.c,v 1.1 2020/10/18 09:24:02 adam Exp $
+$NetBSD: patch-contrib_dblink_dblink.c,v 1.2 2025/05/09 13:46:30 adam Exp $
 
---- contrib/dblink/dblink.c.orig	2013-04-01 18:20:36.000000000 +0000
+--- contrib/dblink/dblink.c.orig	2025-05-05 20:34:49.000000000 +0000
 +++ contrib/dblink/dblink.c
-@@ -52,7 +52,7 @@
- #include "parser/scansup.h"
+@@ -56,7 +56,7 @@
+ #include "pgstat.h"
  #include "utils/acl.h"
  #include "utils/builtins.h"
 -#include "utils/fmgroids.h"
