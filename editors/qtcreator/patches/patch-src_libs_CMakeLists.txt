@@ -1,0 +1,14 @@
+$NetBSD: patch-src_libs_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+
+Use correct install name on Darwin.
+
+--- src/libs/CMakeLists.txt.orig	2025-04-04 09:19:35.077748562 +0000
++++ src/libs/CMakeLists.txt
+@@ -56,6 +56,7 @@ if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/ql
+     set_target_properties(qlitehtml PROPERTIES
+       BUILD_RPATH "${_LIB_RPATH};${CMAKE_BUILD_RPATH}"
+       INSTALL_RPATH "${_LIB_RPATH};${CMAKE_INSTALL_RPATH}"
++      INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${IDE_LIBRARY_PATH}"
+       RUNTIME_OUTPUT_DIRECTORY "${_output_binary_dir}/${IDE_BIN_PATH}"
+       LIBRARY_OUTPUT_DIRECTORY "${_output_binary_dir}/${IDE_LIBRARY_PATH}"
+       ARCHIVE_OUTPUT_DIRECTORY "${_output_binary_dir}/${IDE_LIBRARY_ARCHIVE_PATH}"

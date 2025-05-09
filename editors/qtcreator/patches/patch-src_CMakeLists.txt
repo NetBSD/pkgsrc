@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+
+Disable application bundle.
+
+--- src/CMakeLists.txt.orig	2022-11-15 19:13:54.000000000 +0000
++++ src/CMakeLists.txt
+@@ -41,7 +41,7 @@ list(APPEND CMAKE_MODULE_PATH \${CMAKE_C
+ 
+ \# force plugins to same path naming conventions as Qt Creator
+ \# otherwise plugins will not be found
+-if(UNIX AND NOT APPLE)
++if(UNIX)
+   include(GNUInstallDirs)
+   set(CMAKE_INSTALL_BINDIR ${CMAKE_INSTALL_BINDIR})
+   set(CMAKE_INSTALL_LIBDIR ${CMAKE_INSTALL_LIBDIR})

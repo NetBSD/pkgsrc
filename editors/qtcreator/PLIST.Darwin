@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2025/05/09 05:57:08 adam Exp $
+libexec/qtcreator/disclaim
+libexec/qtcreator/ios/iostool
+share/qtcreator/externaltools/vi_mac.xml

@@ -1,0 +1,15 @@
+$NetBSD: patch-src_libs_sqlite_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+
+Fix build on BSD.
+
+--- src/libs/sqlite/CMakeLists.txt.orig	2025-03-11 12:27:35.000000000 +0000
++++ src/libs/sqlite/CMakeLists.txt
+@@ -23,7 +23,7 @@ extend_qtc_library(SqliteInternal
+   PRIVATE_COMPILE_OPTIONS $<IF:$<CXX_COMPILER_ID:MSVC>,/FIsqlite_static_config.h,-includesqlite_static_config.h>
+ )
+ 
+-if (APPLE)
++if (APPLE OR BSD)
+   extend_qtc_library(SqliteInternal DEFINES _BSD_SOURCE)
+ elseif (UNIX)
+   extend_qtc_library(SqliteInternal DEFINES _POSIX_C_SOURCE=200809L _GNU_SOURCE _DEFAULT_SOURCE)

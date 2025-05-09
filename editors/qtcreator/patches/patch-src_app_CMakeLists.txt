@@ -1,0 +1,32 @@
+$NetBSD: patch-src_app_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+
+Disable application bundle.
+
+--- src/app/CMakeLists.txt.orig	2025-03-11 12:27:32.000000000 +0000
++++ src/app/CMakeLists.txt
+@@ -20,7 +20,6 @@ add_qtc_executable(qtcreator
+     ../tools/qtcreatorcrashhandler/crashhandlersetup.cpp ../tools/qtcreatorcrashhandler/crashhandlersetup.h
+   PROPERTIES
+     WIN32_EXECUTABLE ON
+-    MACOSX_BUNDLE ON
+     OUTPUT_NAME "${IDE_APP_TARGET}"
+   DESTINATION "${IDE_APP_PATH}"
+   QTC_RUNNABLE
+@@ -98,7 +97,7 @@ if (WIN32)
+   target_sources(qtcreator PRIVATE qtcreator.rc)
+ endif()
+ 
+-if (APPLE)
++if (FALSE)
+   if (CMAKE_OSX_DEPLOYMENT_TARGET)
+     set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
+   endif()
+@@ -157,7 +156,7 @@ if(BUILD_WITH_CRASHPAD)
+   )
+ endif()
+ 
+-if ((NOT WIN32) AND (NOT APPLE))
++if (NOT WIN32)
+   # install logo
+   foreach(size 16 24 32 48 64 128 256 512)
+     install(
