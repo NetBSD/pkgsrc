@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2019/01/26 01:41:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 22:50:00 markd Exp $
 share/texmf-dist/tex/latex/biblatex-ieee/ieee-alphabetic.bbx
 share/texmf-dist/tex/latex/biblatex-ieee/ieee-alphabetic.cbx
+share/texmf-dist/tex/latex/biblatex-ieee/ieee-comp.cbx
 share/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
 share/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx
 share/texmf-dist/tex/latex/biblatex-ieee/magyar-ieee.lbx
