@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2025/05/02 07:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.67 2025/05/09 06:10:37 wiz Exp $
 
 DISTNAME=	rdiff-backup-2.2.6
 CATEGORIES=	sysutils net python
@@ -10,6 +10,7 @@ COMMENT=	Remote incremental backup utility
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 SUBST_CLASSES+=		manpath
