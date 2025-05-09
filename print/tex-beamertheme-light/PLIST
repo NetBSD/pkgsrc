@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2020/07/16 01:03:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/09 22:44:53 markd Exp $
 share/texmf-dist/tex/latex/beamertheme-light/beamertheme-light.sty
+share/texmf-dist/tex/latex/beamertheme-light/beamerthemelight.sty

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2020/07/16 01:03:32 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/09 22:44:53 markd Exp $
 
 DISTNAME=	beamertheme-light
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	49867
+PKGNAME=	tex-${DISTNAME}-1.2
+TEXLIVE_REV=	73158
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/beamertheme-light
