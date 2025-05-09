@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/04/17 21:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/05/09 07:43:25 adam Exp $
 
-DISTNAME=	zig-0.13.0
-PKGREVISION=	4
+DISTNAME=	zig-0.14.0
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -18,8 +17,7 @@ USE_TOOLS+=		bash:run
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DZIG_SHARED_LLVM=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX}
-# avoid full-cu-features available to build host,
+# avoid full-cpu-features available to build host,
 # in other words ensure that we run everywhere
 CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
 #CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
@@ -50,5 +48,4 @@ do-test:
 .include "../../devel/cmake/build.mk"
 .include "../../devel/lld/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
-.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
