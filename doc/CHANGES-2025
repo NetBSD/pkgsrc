@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3167 2025/05/09 14:12:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3168 2025/05/09 15:08:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libfido2 to 1.16.0 [adam 2025-05-09]
 	Updated devel/py-test-rerunfailures to 15.1 [adam 2025-05-09]
 	Updated devel/py-test-examples to 0.0.18 [adam 2025-05-09]
+	Updated devel/codeberg-cli to 0.4.11 [schmonz 2025-05-09]
