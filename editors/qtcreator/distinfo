@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.9 2024/11/30 17:47:49 nros Exp $
+$NetBSD: distinfo,v 1.10 2025/05/09 05:56:19 adam Exp $
 
-BLAKE2s (qt-creator-opensource-src-5.0.3.zip) = 961dcaa2d6b6e2b739d774f4a7b0090730bad4b5cf5c93a80f28c39caafdd9a3
-SHA512 (qt-creator-opensource-src-5.0.3.zip) = 9ba7d7a1b506039460efedc9defe974c06905b5024f3e33de2328dcac335ba58d24c2c73ed2083f40305c4393507d6257ff755e2bfe3692cffd601f50bfce131
-Size (qt-creator-opensource-src-5.0.3.zip) = 72614121 bytes
-SHA1 (patch-share_share.pro) = e6f9448295a6eeb78b12979684b53ea29649da95
-SHA1 (patch-src_libs_3rdparty_sqlite_sqlite3.c) = fadde723c6e4fe758d9d66e00e95044755913b92
-SHA1 (patch-src_plugins_clangformat_clangformatbaseindenter.cpp) = b0fa0b07c4c0d0c8907429aa2080acbd676dccfb
-SHA1 (patch-src_plugins_clangformat_clangformatutils.cpp) = 15567af1013c227bf97b4b6ea5f834b785c0bd52
+BLAKE2s (qt-creator-opensource-src-16.0.0.tar.xz) = d38c7fa1c081f43fb396838188976de66f54f5f82cdf4bcb13e29a7232afd836
+SHA512 (qt-creator-opensource-src-16.0.0.tar.xz) = 7e1b2a621cb8840f3d8efdf6511104d1a80706764903ed71fdee7788d7b286022e0c7ca022226c9ac8951656b8d3b65a5d6fcb43d0695a9b363e27a0fcf5475f
+Size (qt-creator-opensource-src-16.0.0.tar.xz) = 53476596 bytes
+SHA1 (patch-bin_CMakeLists.txt) = 40c715ae76a1093f066fb86de9863cf7379d640e
+SHA1 (patch-cmake_QtCreatorAPI.cmake) = ea21f5bacce9834510f04de3797b3d1f034dfcaf
+SHA1 (patch-cmake_QtCreatorAPIInternal.cmake) = 07379adf7ad463b686e0c908d33a6bcdc9731372
+SHA1 (patch-src_CMakeLists.txt) = 78719a9bc7f89db90a4ddf4be7d06fcd2a38957f
+SHA1 (patch-src_app_CMakeLists.txt) = 781db6dfcfa6637118e8ea975fcb473d2b2f6139
+SHA1 (patch-src_libs_3rdparty_sqlite_sqlite3.c) = 2fb983074297c0a1494483bb51583dc28bc62128
+SHA1 (patch-src_libs_CMakeLists.txt) = 0689c0369f599260e640abf0ff45c848abeb6bf8
+SHA1 (patch-src_libs_sqlite_CMakeLists.txt) = 6d89eccef4d6f5626a9e7325abacf660515a8428
+SHA1 (patch-src_plugins_qmldesigner_CMakeLists.txt) = 4cd81867741f09d1a6b432ecfc9c1397e08c694c
+SHA1 (patch-src_shared_CMakeLists.txt) = 9f4eaf9c00fbae4fbadd1cb41c451f42e1cfda71
