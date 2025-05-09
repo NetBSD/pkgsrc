@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2021/02/14 21:55:12 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/09 23:13:31 markd Exp $
 
 DISTNAME=	chessboard.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.9
-TEXLIVE_REV=	56833
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
+TEXLIVE_REV=	72795
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/chessboard
