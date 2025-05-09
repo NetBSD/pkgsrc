@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/02/03 02:57:11 markd Exp $
+$NetBSD: distinfo,v 1.5 2025/05/09 22:57:28 markd Exp $
 
-BLAKE2s (bidi.r67798.tar.xz) = dea664a1e698e19bac52a9fbd7ceedd2cc8bda83c71ac823644f7796b6cb6ef3
-SHA512 (bidi.r67798.tar.xz) = e589f50dbd63df9d711540ad90b53384e52a5a0b353e2ba050657af3273f3dd7b65925101465d89831ea133504701c6d05d01ef959fcaa2570bb1188384c621d
-Size (bidi.r67798.tar.xz) = 133180 bytes
+BLAKE2s (bidi.r73698.tar.xz) = 93933354dad96951cf278f640c816f48309d48e9dbfc6fa4004af5366a66c08b
+SHA512 (bidi.r73698.tar.xz) = a63bab026e80d3e14624bb2db83bdab9d9d6d266f892b2f9ced48dc2c8761c675e2ff2e21a2ca4d8761e9d90b81103a816d9e8c9ab7c12265cc5876b5b3f726b
+Size (bidi.r73698.tar.xz) = 131100 bytes
