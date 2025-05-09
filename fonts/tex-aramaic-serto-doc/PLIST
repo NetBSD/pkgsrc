@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:20:00 markd Exp $
-share/texmf-dist/doc/latex/aramaic-serto/README
+@comment $NetBSD: PLIST,v 1.2 2025/05/09 22:36:29 markd Exp $
+share/texmf-dist/doc/latex/aramaic-serto/README.txt
 share/texmf-dist/doc/latex/aramaic-serto/assyr.font
 share/texmf-dist/doc/latex/aramaic-serto/example.ptex
 share/texmf-dist/doc/latex/aramaic-serto/serto.font
 share/texmf-dist/doc/latex/aramaic-serto/serto.py
 share/texmf-dist/doc/latex/aramaic-serto/sertodoc.pdf
 share/texmf-dist/doc/latex/aramaic-serto/sertodoc.ptex
+share/texmf-dist/doc/latex/aramaic-serto/test.mf
