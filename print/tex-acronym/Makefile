@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/12 22:13:02 markd Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/09 22:18:33 markd Exp $
 
 DISTNAME=	acronym
-PKGNAME=	tex-${DISTNAME}-1.49
-TEXLIVE_REV=	72324
+PKGNAME=	tex-${DISTNAME}-1.50
+TEXLIVE_REV=	73491
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/acronym
