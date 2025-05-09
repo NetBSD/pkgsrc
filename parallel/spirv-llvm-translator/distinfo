@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2024/11/29 16:26:06 triaxx Exp $
+$NetBSD: distinfo,v 1.12 2025/05/09 05:59:15 adam Exp $
 
-BLAKE2s (SPIRV-LLVM-Translator-18.1.6.tar.gz) = 86d3de980bf7a8790413e497fd7fd6b57d4af664210e5dc0a3c87c68bbf679a5
-SHA512 (SPIRV-LLVM-Translator-18.1.6.tar.gz) = 30d85fcd767cdae8b29f65dff50f2449e3421477634edcec67e88e92eeb77ec724c46eed4e90274d8697955c79fc26650c268839ed4612aee096b2d4707af728
-Size (SPIRV-LLVM-Translator-18.1.6.tar.gz) = 1714419 bytes
+BLAKE2s (SPIRV-LLVM-Translator-19.1.7.tar.gz) = 325dc1e50999801b1471d6b1abbbaa7a6d243051b7486394edb4ec8b3709680a
+SHA512 (SPIRV-LLVM-Translator-19.1.7.tar.gz) = 5ec21859792d884514ad49c83872fce9f280ccd9aa0844664d8a7d2298762bfd3d55a28bc96ff6b279a6c1740456227030f55dfc65565c6a8cd073dd4646acda
+Size (SPIRV-LLVM-Translator-19.1.7.tar.gz) = 1771026 bytes
 SHA1 (patch-CMakeLists.txt) = bd703c20c73313917129d9fdb0f8fa461a65e95f
