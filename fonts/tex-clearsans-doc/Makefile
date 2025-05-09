@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/10/12 22:21:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/09 23:27:55 markd Exp $
 
 DISTNAME=	clearsans.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-TEXLIVE_REV=	64400
+PKGNAME=	tex-${DISTNAME:S/./-/}-2025
+TEXLIVE_REV=	74767
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/clearsans
