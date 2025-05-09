@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:28 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/09 22:36:29 markd Exp $
 
-BLAKE2s (tex-aramaic-serto-30042/aramaic-serto.tar.xz) = e32391cf60e387650dbf1daf03b6ad71e04bb2f7b4422f3b3d465275674a9369
-SHA512 (tex-aramaic-serto-30042/aramaic-serto.tar.xz) = 90eaa664ebe9a447ec880fb3e92036d40a88fa033b27c0a0e93b075666c7edda977765f1ebb30bc68a31f5efc598d524fee86838d26560bb2c9e45c92a4ca584
-Size (tex-aramaic-serto-30042/aramaic-serto.tar.xz) = 97864 bytes
+BLAKE2s (aramaic-serto.r74548.tar.xz) = 8855320dc0eeb13933c5bcac5c728fc2ba0542ec2df3b54e8ebd69a00c0b93d3
+SHA512 (aramaic-serto.r74548.tar.xz) = a01ff01e32ed89553fc59e8a1d34da25c94e766b498d41ebe974a7683718bff38e12dc70489167c1b9fe14ff14c14bda0b000dd47c11d65c00b654822cf29d10
+Size (aramaic-serto.r74548.tar.xz) = 98020 bytes
