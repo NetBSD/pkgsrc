@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.201 2025/05/06 12:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.202 2025/05/09 13:23:51 jperkin Exp $
 
 DISTNAME=	samba-4.21.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -11,6 +11,7 @@ COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]* ldb-[0-9]*
+SUPERSEDES+=	ldb-[0-9]*
 
 GCC_REQD+=	4.4
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
