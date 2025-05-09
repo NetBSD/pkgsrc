@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mariadb.sh,v 1.1 2024/08/21 21:08:35 nia Exp $
+# $NetBSD: mariadb.sh,v 1.2 2025/05/09 14:56:57 nia Exp $
 #
 # PROVIDE: mariadb mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -27,7 +27,7 @@ command_args="--pid-file=@VARBASE@/run/mariadb/mariadb.pid"
 command_args="${command_args} --user=@MARIADB_USER@"
 command_args="${command_args} --datadir=$mariadb_datadir"
 command_args="${command_args} --log-error=@VARBASE@/log/mariadb/error.log"
-command_args="${command_args} ${mariadb_flags} &"
+command_args="${command_args} ${mariadb_flags} >/dev/null 2>&1 &"
 extra_commands="initdb"
 initdb_cmd="mariadb_initdb"
 start_precmd="mariadb_prestart"
@@ -35,10 +35,11 @@ pidfile="@VARBASE@/run/mariadb/mariadb.pid"
 
 mariadb_initdb() {
         if [ -f $mariadb_datadir/mysql/user.frm ]; then
+		test -t 1 || return 0		# avoid SIGPIPE
                 echo "The MariaDB database has already been initialized."
                 echo "Skipping database initialization."
         else
-		echo "Initializing MariaDB database system tables."
+		test -t 1 && echo "Initializing MariaDB database system tables."
 		sh @PREFIX@/bin/mariadb-install-db --force \
 			--user=@MARIADB_USER@ \
 			--datadir=$mariadb_datadir
