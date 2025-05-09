@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3159 2025/05/09 06:01:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3160 2025/05/09 06:27:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4360,3 +4360,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/spirv-headers to 1.4.309.0 [adam 2025-05-09]
 	Updated parallel/spirv-llvm-translator to 19.1.7 [adam 2025-05-09]
 	Updated parallel/opencl-clang to 19.1.0 [adam 2025-05-09]
+	Updated textproc/mandoc to 1.14.6nb2 [wiz 2025-05-09]
