@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/11/13 01:40:51 markd Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/09 23:48:29 markd Exp $
 
 DISTNAME=	elsarticle
-PKGNAME=	tex-${DISTNAME}-3.4
-TEXLIVE_REV=	70902
+PKGNAME=	tex-${DISTNAME}-3.4c
+TEXLIVE_REV=	73421
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/elsarticle
