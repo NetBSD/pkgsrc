@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/02/08 03:55:19 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/09 20:01:32 schmonz Exp $
 
 PKGNAME=		${PHP_PKG_PREFIX}-${PKGNAME_MODULE}
-PKGREVISION=		1
 COMMENT=		PHP bindings for Xapian search engine
 HOMEPAGE=		https://xapian.org/docs/bindings/php/
 
