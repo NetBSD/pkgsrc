@@ -1,0 +1,15 @@
+Anubis weighs the soul of your connection using a sha256 proof-of-work
+challenge in order to protect upstream resources from scraper bots.
+
+Installing and using this will likely result in your website not being
+indexed by some search engines. This is considered a feature of Anubis,
+not a bug.
+
+This is a bit of a nuclear response, but AI scraper bots scraping so
+aggressively have forced my hand. I hate that I have to do this, but
+this is what we get for the modern Internet because bots don't conform
+to standards like robots.txt, even when they claim to.
+
+In most cases, you should not need this and can probably get by using
+Cloudflare to protect a given origin. However, for circumstances where
+you can't or won't use Cloudflare, Anubis is there for you.
