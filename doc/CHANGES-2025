@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3160 2025/05/09 06:27:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3161 2025/05/09 07:45:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4361,3 +4361,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/spirv-llvm-translator to 19.1.7 [adam 2025-05-09]
 	Updated parallel/opencl-clang to 19.1.0 [adam 2025-05-09]
 	Updated textproc/mandoc to 1.14.6nb2 [wiz 2025-05-09]
+	Updated devel/woboq_codebrowser to 2.1.20250221 [adam 2025-05-09]
+	Updated lang/zig to 0.14.0 [adam 2025-05-09]
+	Updated meta-pkgs/bulk-test-llvm to 20250508 [adam 2025-05-09]
