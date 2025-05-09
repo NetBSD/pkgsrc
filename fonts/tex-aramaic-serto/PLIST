@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 12:20:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/09 22:36:29 markd Exp $
 share/texmf-dist/fonts/afm/public/aramaic-serto/assy.afm
 share/texmf-dist/fonts/afm/public/aramaic-serto/assyrb10.afm
 share/texmf-dist/fonts/afm/public/aramaic-serto/serto10.afm
@@ -14,7 +14,6 @@ share/texmf-dist/fonts/source/public/aramaic-serto/sertobase.mf
 share/texmf-dist/fonts/source/public/aramaic-serto/sertofont.mf
 share/texmf-dist/fonts/source/public/aramaic-serto/sertomacros.mf
 share/texmf-dist/fonts/source/public/aramaic-serto/syriacvowels.mf
-share/texmf-dist/fonts/source/public/aramaic-serto/test.mf
 share/texmf-dist/fonts/tfm/public/aramaic-serto/assy.tfm
 share/texmf-dist/fonts/tfm/public/aramaic-serto/assyrb10.tfm
 share/texmf-dist/fonts/tfm/public/aramaic-serto/serto10.tfm
