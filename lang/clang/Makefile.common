@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2025/05/06 12:07:32 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2025/05/09 05:51:24 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -12,12 +12,8 @@ HOMEPAGE=	https://clang.llvm.org/
 COMMENT=	C language family frontend for LLVM
 LICENSE=	apache-2.0
 
-CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH=		${WRKSRC}
-
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
 GCC_REQD+=		7
 
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
@@ -39,12 +35,14 @@ CXXFLAGS+=	-D_GLIBCXX_HAVE_ENOTRECOVERABLE=1
 CXXFLAGS+=	-DENOTRECOVERABLE=98
 .endif
 
+REPLACE_PERL+=		test/make_test_dirs.pl
 REPLACE_PERL+=		tools/scan-build/bin/scan-build
 REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
 REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
 REPLACE_PERL+=		utils/TestUtils/pch-test.pl
 REPLACE_PERL+=		utils/analyzer/reducer.pl
 REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
+REPLACE_PERL+=		www/demo/index.cgi
 
 REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
 REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
@@ -54,6 +52,7 @@ REPLACE_PYTHON+=	docs/tools/generate_formatted_state.py
 REPLACE_PYTHON+=	lib/Tooling/DumpTool/generate_cxx_src_locs.py
 REPLACE_PYTHON+=	test/AST/gen_ast_dump_json_test.py
 REPLACE_PYTHON+=	test/Analysis/check-analyzer-fixit.py
+REPLACE_PYTHON+=	test/Driver/check-time-trace-sections.py
 REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
 REPLACE_PYTHON+=	tools/clang-format/git-clang-format
 REPLACE_PYTHON+=	tools/scan-build-py/bin/analyze-build
@@ -127,13 +126,6 @@ SUBST_SED.sunos-gcc=	-e 's,@GCCBASEDIR@,${CCPATH:H:H},'
 BUILDLINK_DEPMETHOD.${_GCC_PKGBASE}=	full
 .endif
 
-# 3.8.0 -> 3.8
-LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
-PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
-
-PKGVERSION_MAJOR=	18
-PLIST_SUBST+=		PKGVERSION_MAJOR=${PKGVERSION_MAJOR}
-
 PLIST_VARS+=	notdylib
 .if ${SHLIB_TYPE} != "dylib"
 PLIST.notdylib=	yes
@@ -165,11 +157,9 @@ PKG_FAIL_REASON+=	"z3 PKG_OPTION must be enabled in lang/llvm"
 CMAKE_CONFIGURE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
 
-post-extract:
-	${MKDIR} ${WRKSRC}/build
-
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
+.include "../../textproc/libxml2/buildlink3.mk"

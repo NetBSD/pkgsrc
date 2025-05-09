@@ -1,16 +1,18 @@
-$NetBSD: distinfo,v 1.29 2025/02/14 13:45:09 wiz Exp $
+$NetBSD: distinfo,v 1.30 2025/05/09 05:51:24 adam Exp $
 
-BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
-SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
-Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
-BLAKE2s (compiler-rt-18.1.8.src.tar.xz) = 266de1c998f04997c17b032762f7ea2755fcc2df7a2dfc4e9733be835bb9754a
-SHA512 (compiler-rt-18.1.8.src.tar.xz) = fb8795bd51c9b005c2ad1975591e9e2715740d6407ccad41379f136ef2e8d24ded8b97b01165a3ae4bd377119a6a1049ca05d3220404fc12bee86114ff2bff0d
-Size (compiler-rt-18.1.8.src.tar.xz) = 2469712 bytes
-BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
-SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
-Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
+BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
+SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
+Size (cmake-19.1.7.src.tar.xz) = 9300 bytes
+BLAKE2s (compiler-rt-19.1.7.src.tar.xz) = 96d7d977bc339f30c542c30442b5ed22bdc748cd36676421e8ce086d8e5d2dee
+SHA512 (compiler-rt-19.1.7.src.tar.xz) = e2e8e6a094525b84184e9e4a4c1a727de518d4ef1a91370515f0c955719dc946fd60e7fabd10f52ab1905ef6d4a86084b8ddfb9b45de838aa1c5ddf3c042748b
+Size (compiler-rt-19.1.7.src.tar.xz) = 2530008 bytes
+BLAKE2s (llvm-19.1.7.src.tar.xz) = 5a3e1c1d0dfcff66dd537c0c18c05cd968c11541fa5613504102fde25de325fc
+SHA512 (llvm-19.1.7.src.tar.xz) = 140275e35d2046fcbfc38241fed7bae92d34b761c09a5209e298a4241958a91e069dab76454efa32325d2f1205f0f0f25d886518533df55948a78b14e88b41a8
+Size (llvm-19.1.7.src.tar.xz) = 67828200 bytes
+BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
+SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
+Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
-SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
-SHA1 (patch-lib_fuzzer_FuzzerUtilLinux.cpp) = 9de59ffcb31d511f67f10fa4ec55cfa7c7f64b31
+SHA1 (patch-cmake_config-ix.cmake) = 0ef687b2e8d67abd025e08869df17eaadc4dccd0
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cpp) = bc04e2d792c8eaffb26b60fdaceef261ffe03371
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = 47f5f33c016a429ac3b02dafcd015de072a9997b
