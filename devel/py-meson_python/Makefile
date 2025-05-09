@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/10/29 05:33:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/09 18:47:58 adam Exp $
 
-DISTNAME=	meson_python-0.17.1
+DISTNAME=	meson_python-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson_python/}
@@ -11,8 +11,8 @@ COMMENT=	Meson Python build backend (PEP 517)
 LICENSE=	mit
 
 DEPENDS+=	meson>=1.2.3:../../devel/meson
-DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-project-metadata>=0.7.1:../../devel/py-project-metadata
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-project-metadata>=0.9.0:../../devel/py-project-metadata
 TEST_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.3:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
