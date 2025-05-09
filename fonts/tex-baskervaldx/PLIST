@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/20 00:03:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 22:39:14 markd Exp $
 share/texmf-dist/fonts/afm/public/baskervaldx/Baskervaldx-Bol.afm
 share/texmf-dist/fonts/afm/public/baskervaldx/Baskervaldx-BolIta.afm
 share/texmf-dist/fonts/afm/public/baskervaldx/Baskervaldx-Ita.afm
@@ -564,3 +564,6 @@ share/texmf-dist/tex/latex/baskervaldx/TS1Baskervaldx-OsF.fd
 share/texmf-dist/tex/latex/baskervaldx/TS1Baskervaldx-TLF.fd
 share/texmf-dist/tex/latex/baskervaldx/TS1Baskervaldx-TOsF.fd
 share/texmf-dist/tex/latex/baskervaldx/baskervaldx.fontspec
+share/texmf-dist/tex/latex/baskervaldx/ly1minbaskervaldx.fd
+share/texmf-dist/tex/latex/baskervaldx/ot1minbaskervaldx.fd
+share/texmf-dist/tex/latex/baskervaldx/t1minbaskervaldx.fd
