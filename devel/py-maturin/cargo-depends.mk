@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.25 2025/03/15 20:30:11 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.26 2025/05/09 13:50:39 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -32,7 +32,7 @@ CARGO_CRATE_DEPENDS+=	cargo-config2-0.1.26
 CARGO_CRATE_DEPENDS+=	cargo-options-0.7.4
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.1.8
 CARGO_CRATE_DEPENDS+=	cargo-xwin-0.18.4
-CARGO_CRATE_DEPENDS+=	cargo-zigbuild-0.19.7
+CARGO_CRATE_DEPENDS+=	cargo-zigbuild-0.20.0
 CARGO_CRATE_DEPENDS+=	cargo_metadata-0.19.0
 CARGO_CRATE_DEPENDS+=	cbindgen-0.28.0
 CARGO_CRATE_DEPENDS+=	cc-1.2.16
@@ -58,7 +58,7 @@ CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.12
 CARGO_CRATE_DEPENDS+=	crc-3.2.1
 CARGO_CRATE_DEPENDS+=	crc-catalog-2.4.0
 CARGO_CRATE_DEPENDS+=	crc32fast-1.4.2
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.13
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.20
@@ -167,10 +167,10 @@ CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.46.0
 CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	number_prefix-0.4.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.20.2
-CARGO_CRATE_DEPENDS+=	openssl-0.10.70
+CARGO_CRATE_DEPENDS+=	openssl-0.10.72
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
-CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.105
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.107
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.2.0
 CARGO_CRATE_DEPENDS+=	overload-0.1.1
@@ -360,5 +360,5 @@ CARGO_CRATE_DEPENDS+=	zerofrom-derive-0.1.5
 CARGO_CRATE_DEPENDS+=	zeroize-1.8.1
 CARGO_CRATE_DEPENDS+=	zerovec-0.10.4
 CARGO_CRATE_DEPENDS+=	zerovec-derive-0.10.3
-CARGO_CRATE_DEPENDS+=	zip-2.2.3
+CARGO_CRATE_DEPENDS+=	zip-2.3.0
 CARGO_CRATE_DEPENDS+=	zopfli-0.8.1
