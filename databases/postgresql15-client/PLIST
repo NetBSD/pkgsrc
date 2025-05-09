@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/11/16 10:13:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/09 13:46:32 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -474,6 +474,7 @@ include/postgresql/server/libpq/be-gssapi-common.h
 include/postgresql/server/libpq/crypt.h
 include/postgresql/server/libpq/hba.h
 include/postgresql/server/libpq/ifaddr.h
+include/postgresql/server/libpq/libpq-be-fe-helpers.h
 include/postgresql/server/libpq/libpq-be.h
 include/postgresql/server/libpq/libpq-fs.h
 include/postgresql/server/libpq/libpq.h
