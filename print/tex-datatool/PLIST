@@ -1,12 +1,29 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:38:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 23:40:10 markd Exp $
 share/texmf-dist/bibtex/bst/datatool/databib.bst
+share/texmf-dist/tex/latex/datatool/databar-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/databar.sty
+share/texmf-dist/tex/latex/datatool/databib-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/databib.sty
+share/texmf-dist/tex/latex/datatool/datagidx-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/datagidx.sty
+share/texmf-dist/tex/latex/datatool/datapie-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/datapie.sty
+share/texmf-dist/tex/latex/datatool/dataplot-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/dataplot.sty
+share/texmf-dist/tex/latex/datatool/datatool-2019-09-27.sty
+share/texmf-dist/tex/latex/datatool/datatool-base-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/datatool-base.sty
+share/texmf-dist/tex/latex/datatool/datatool-fp-2019-09-27.sty
+share/texmf-dist/tex/latex/datatool/datatool-fp.def
 share/texmf-dist/tex/latex/datatool/datatool-fp.sty
+share/texmf-dist/tex/latex/datatool/datatool-l3fp.def
+share/texmf-dist/tex/latex/datatool/datatool-latin1.ldf
+share/texmf-dist/tex/latex/datatool/datatool-lua.def
+share/texmf-dist/tex/latex/datatool/datatool-pgfmath-2019-09-27.sty
+share/texmf-dist/tex/latex/datatool/datatool-pgfmath.def
 share/texmf-dist/tex/latex/datatool/datatool-pgfmath.sty
+share/texmf-dist/tex/latex/datatool/datatool-undetermined.ldf
+share/texmf-dist/tex/latex/datatool/datatool-utf8.ldf
 share/texmf-dist/tex/latex/datatool/datatool.sty
+share/texmf-dist/tex/latex/datatool/person-2019-09-27.sty
 share/texmf-dist/tex/latex/datatool/person.sty
