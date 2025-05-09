@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/08/19 20:04:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 22:57:28 markd Exp $
 share/texmf-dist/tex/xelatex/bidi/adjmulticol-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/algorithm2e-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/amsart-xetex-bidi.def
@@ -43,6 +43,7 @@ share/texmf-dist/tex/xelatex/bidi/beamerouterthemesplit-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/beamerouterthemetree-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/beamerthemeHannover-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/beamerthemeSingapore-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/bidi-bibitem.pdf
 share/texmf-dist/tex/xelatex/bidi/bidi-logo.pdf
 share/texmf-dist/tex/xelatex/bidi/bidi-media9.sty
 share/texmf-dist/tex/xelatex/bidi/bidi-perpage.sty
@@ -110,11 +111,11 @@ share/texmf-dist/tex/xelatex/bidi/letter-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/lettrine-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/lineno-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/listings-xetex-bidi.def
-share/texmf-dist/tex/xelatex/bidi/loadingorder-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/longtable-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/lscape-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/mathtools-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/mdframed-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/media9-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/memoir-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/midfloat-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/minitoc-xetex-bidi.def
@@ -130,7 +131,7 @@ share/texmf-dist/tex/xelatex/bidi/pdfbase-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pdflscape-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pdfpages-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pgfcorescopes.code-xetex-bidi.def
-share/texmf-dist/tex/xelatex/bidi/pgfsys.code-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/pgfsys-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/picinpar-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/plain-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/pstricks-xetex-bidi.def
@@ -151,7 +152,7 @@ share/texmf-dist/tex/xelatex/bidi/subfigure-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/tabls-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/tabularx-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/tabulary-xetex-bidi.def
-share/texmf-dist/tex/xelatex/bidi/tc-xetex-bidi.def
+share/texmf-dist/tex/xelatex/bidi/tc-xetex-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/tcolorbox-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/titlesec-xetex-bidi.def
 share/texmf-dist/tex/xelatex/bidi/titletoc-xetex-bidi.def

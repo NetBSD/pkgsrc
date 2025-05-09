@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/19 02:53:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/09 22:57:28 markd Exp $
 share/texmf-dist/doc/xelatex/bidi/README
-share/texmf-dist/doc/xelatex/bidi/bidi-bibitem.pdf
 share/texmf-dist/doc/xelatex/bidi/bidi-doc.pdf
 share/texmf-dist/doc/xelatex/bidi/bidi-logo.tex
 share/texmf-dist/doc/xelatex/bidi/bidi.pdf
