@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/04/01 10:08:03 markd Exp $
+$NetBSD: distinfo,v 1.9 2025/05/09 22:28:19 markd Exp $
 
-BLAKE2s (adjustbox.doc.r64967.tar.xz) = d176d8e06e8b92038c01802a96d502d9fb01ab0108eac512b795b9ce5562a041
-SHA512 (adjustbox.doc.r64967.tar.xz) = d48b405a472df491b3ac6db23b126a70acda26e4dc2baf8e60569f110af2c4c740708c84fad9b70f689022e8747013198c98ea0bb3c6798f1dd8065a431d1ba5
-Size (adjustbox.doc.r64967.tar.xz) = 739224 bytes
+BLAKE2s (adjustbox.doc.r74309.tar.xz) = 530f0b3adb0d5a25a4a4d0691fa367122e3560671d748fd4cf7cf640cb91309d
+SHA512 (adjustbox.doc.r74309.tar.xz) = 7bed759f4fd7deee643fd4c3efa55ff8c40b350343b8da49b99a20690f0dacfb6959201730f13684819cd8c5eac4046fbdd0e494e85894e8100cfffd1263093c
+Size (adjustbox.doc.r74309.tar.xz) = 739516 bytes
