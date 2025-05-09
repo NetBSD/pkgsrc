@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/12 22:19:48 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/09 22:23:08 markd Exp $
 
 DISTNAME=	adforn
-PKGNAME=	tex-${DISTNAME}-1.2
-TEXLIVE_REV=	72484
+PKGNAME=	tex-${DISTNAME}-1.3
+TEXLIVE_REV=	74834
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/adforn
