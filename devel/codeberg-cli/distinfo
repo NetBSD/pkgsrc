@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/02/26 00:49:17 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2025/05/09 15:08:49 schmonz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -102,9 +102,9 @@ Size (clap_derive-4.5.28.crate) = 33428 bytes
 BLAKE2s (clap_lex-0.7.4.crate) = 87179de8b09978be634962bb5bf3feebda3994e47c4e29fb88504349e07ad710
 SHA512 (clap_lex-0.7.4.crate) = a2566868f4619679d3b74b70592ffa6a04b13e38e3196c56bb1dae8bea0c711bddbccd778d2aba3cc0ee074c9b1cc0335222818f0d47fb3cc8109cbc35bb992e
 Size (clap_lex-0.7.4.crate) = 12858 bytes
-BLAKE2s (codeberg-cli-0.4.9.tar.gz) = 5a7d2678110112e518aaaa5ffee4a1fda51539c06f31362127b4c0c7874af2ff
-SHA512 (codeberg-cli-0.4.9.tar.gz) = ec8df4c197663bc763ba10c34fc0097863b07589199e026229d15b712324a74d553cc2d597553a1733f79aba108488e582edd9aaeffd4cc060a88a8dac56f86e
-Size (codeberg-cli-0.4.9.tar.gz) = 303996 bytes
+BLAKE2s (codeberg-cli-0.4.11.tar.gz) = 8d836f0e8067843ebc54caa4d503a78ed0bf7007154d765bd5ffe5ce77b2050d
+SHA512 (codeberg-cli-0.4.11.tar.gz) = c413debb7ee5d1b2e26bd8e1ee9477bcf0ea6e2418b616d4db91d20d9ad1a961982d32f7830ff54425880247725509fdc3553a9a7cb19c21c8030a23506d71f3
+Size (codeberg-cli-0.4.11.tar.gz) = 304442 bytes
 BLAKE2s (colorchoice-1.0.3.crate) = 4eca55dfc8d8e1bd1b2c937696ab45399ea4012cc858f7b654e8b181160eed5a
 SHA512 (colorchoice-1.0.3.crate) = fc26696189d3935d5510a1237504339c1f354d03ffd3b4e830b7080335aa778bc72787ac5fa9a67a731b9bde2788da778d497f2ef97ec68bdec5145fedf4cd14
 Size (colorchoice-1.0.3.crate) = 7923 bytes
@@ -960,4 +960,3 @@ Size (zerovec-0.10.4.crate) = 126398 bytes
 BLAKE2s (zerovec-derive-0.10.3.crate) = 39169b3f694a23e151216d25802a49f00889bfe0e5c6e744cc26792325703db2
 SHA512 (zerovec-derive-0.10.3.crate) = caefbffeb35265db9f74933bf07109d57f0da48156cafd4f330af78a5c7eb9ab0831a80789ad4fb119875ebc6cfd7e3de68c9984b77dca5151f9be41f1ae6e09
 Size (zerovec-derive-0.10.3.crate) = 19438 bytes
-SHA1 (patch-Cargo.toml) = 9c7a8b9f4cfc86969f07eaf20077533c18ef6765
