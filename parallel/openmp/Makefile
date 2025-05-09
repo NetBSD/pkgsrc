@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/05/09 05:51:26 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/05/09 19:37:14 wiz Exp $
 
+PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	openmp-${LLVM_VERSION}.src

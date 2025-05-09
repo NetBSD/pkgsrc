@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/05/09 05:59:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/09 19:37:15 wiz Exp $
 
 DISTNAME=	SPIRV-LLVM-Translator-19.1.7
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

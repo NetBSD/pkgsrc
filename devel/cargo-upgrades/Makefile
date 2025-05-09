@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/17 21:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/09 19:37:10 wiz Exp $
 
 DISTNAME=	cargo-upgrades-2.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kornelski/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
