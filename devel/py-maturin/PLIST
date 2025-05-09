@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/07/14 13:28:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/09 13:50:39 adam Exp $
 bin/maturin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,3 +10,6 @@ ${PYSITELIB}/maturin/__init__.pyo
 ${PYSITELIB}/maturin/__main__.py
 ${PYSITELIB}/maturin/__main__.pyc
 ${PYSITELIB}/maturin/__main__.pyo
+${PYSITELIB}/maturin/bootstrap.py
+${PYSITELIB}/maturin/bootstrap.pyc
+${PYSITELIB}/maturin/bootstrap.pyo
