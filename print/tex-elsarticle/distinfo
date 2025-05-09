@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/11/13 01:40:51 markd Exp $
+$NetBSD: distinfo,v 1.10 2025/05/09 23:48:29 markd Exp $
 
-BLAKE2s (elsarticle.r70902.tar.xz) = 14d5a983354fdd48e54a5575e9a5d84a5cde6a256810b24e83cc7ab66cce8cf4
-SHA512 (elsarticle.r70902.tar.xz) = 4c60c80b0f92c0df646ae36551eaff7f1716a2247d93d24fe1a7061acf8df617e87f548ab81953ab3660bf5a4fd92ba1663223955bec8f33eee206d435f9419d
-Size (elsarticle.r70902.tar.xz) = 18920 bytes
+BLAKE2s (elsarticle.r73421.tar.xz) = c14d46deb94041cadffd753d4bf4dcb1fe577b2016f453d10c09dec68c4b7647
+SHA512 (elsarticle.r73421.tar.xz) = 54a1c1e16420592b615d62e18e2ac992e903ff1d03003c1ad1b9a66fdd83d2b5499242a52f92732af2c174fce30817dacf9fe4681b53828b2888b5a68de7aadc
+Size (elsarticle.r73421.tar.xz) = 19024 bytes
