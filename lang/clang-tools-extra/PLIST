@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/07/06 15:45:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/05/09 05:51:24 adam Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
@@ -68,6 +68,7 @@ include/clang-tidy/android/CloexecPipe2Check.h
 include/clang-tidy/android/CloexecPipeCheck.h
 include/clang-tidy/android/CloexecSocketCheck.h
 include/clang-tidy/android/ComparisonInTempFailureRetryCheck.h
+include/clang-tidy/boost/UseRangesCheck.h
 include/clang-tidy/boost/UseToStringCheck.h
 include/clang-tidy/bugprone/ArgumentCommentCheck.h
 include/clang-tidy/bugprone/AssertSideEffectCheck.h
@@ -79,6 +80,7 @@ include/clang-tidy/bugprone/CastingThroughVoidCheck.h
 include/clang-tidy/bugprone/ChainedComparisonCheck.h
 include/clang-tidy/bugprone/ComparePointerToMemberVirtualFunctionCheck.h
 include/clang-tidy/bugprone/CopyConstructorInitCheck.h
+include/clang-tidy/bugprone/CrtpConstructorAccessibilityCheck.h
 include/clang-tidy/bugprone/DanglingHandleCheck.h
 include/clang-tidy/bugprone/DynamicStaticInitializersCheck.h
 include/clang-tidy/bugprone/EasilySwappableParametersCheck.h
@@ -109,9 +111,11 @@ include/clang-tidy/bugprone/NonZeroEnumToBoolConversionCheck.h
 include/clang-tidy/bugprone/NotNullTerminatedResultCheck.h
 include/clang-tidy/bugprone/OptionalValueConversionCheck.h
 include/clang-tidy/bugprone/ParentVirtualCallCheck.h
+include/clang-tidy/bugprone/PointerArithmeticOnPolymorphicObjectCheck.h
 include/clang-tidy/bugprone/PosixReturnCheck.h
 include/clang-tidy/bugprone/RedundantBranchConditionCheck.h
 include/clang-tidy/bugprone/ReservedIdentifierCheck.h
+include/clang-tidy/bugprone/ReturnConstRefFromParameterCheck.h
 include/clang-tidy/bugprone/SharedPtrArrayMismatchCheck.h
 include/clang-tidy/bugprone/SignalHandlerCheck.h
 include/clang-tidy/bugprone/SignedCharMisuseCheck.h
@@ -132,6 +136,7 @@ include/clang-tidy/bugprone/SuspiciousMissingCommaCheck.h
 include/clang-tidy/bugprone/SuspiciousReallocUsageCheck.h
 include/clang-tidy/bugprone/SuspiciousSemicolonCheck.h
 include/clang-tidy/bugprone/SuspiciousStringCompareCheck.h
+include/clang-tidy/bugprone/SuspiciousStringviewDataUsageCheck.h
 include/clang-tidy/bugprone/SwappedArgumentsCheck.h
 include/clang-tidy/bugprone/SwitchMissingDefaultCaseCheck.h
 include/clang-tidy/bugprone/TerminatingContinueCheck.h
@@ -156,7 +161,6 @@ include/clang-tidy/cert/FloatLoopCounter.h
 include/clang-tidy/cert/LimitedRandomnessCheck.h
 include/clang-tidy/cert/MutatingCopyCheck.h
 include/clang-tidy/cert/NonTrivialTypesLibcMemoryCallsCheck.h
-include/clang-tidy/cert/PostfixOperatorCheck.h
 include/clang-tidy/cert/ProperlySeededRandomGeneratorCheck.h
 include/clang-tidy/cert/SetLongJmpCheck.h
 include/clang-tidy/cert/StaticObjectExceptionCheck.h
@@ -258,6 +262,7 @@ include/clang-tidy/misc/UnusedAliasDeclsCheck.h
 include/clang-tidy/misc/UnusedParametersCheck.h
 include/clang-tidy/misc/UnusedUsingDeclsCheck.h
 include/clang-tidy/misc/UseAnonymousNamespaceCheck.h
+include/clang-tidy/misc/UseInternalLinkageCheck.h
 include/clang-tidy/modernize/AvoidBindCheck.h
 include/clang-tidy/modernize/AvoidCArraysCheck.h
 include/clang-tidy/modernize/ConcatNestedNamespacesCheck.h
@@ -270,6 +275,7 @@ include/clang-tidy/modernize/MacroToEnumCheck.h
 include/clang-tidy/modernize/MakeSharedCheck.h
 include/clang-tidy/modernize/MakeSmartPtrCheck.h
 include/clang-tidy/modernize/MakeUniqueCheck.h
+include/clang-tidy/modernize/MinMaxUseInitializerListCheck.h
 include/clang-tidy/modernize/PassByValueCheck.h
 include/clang-tidy/modernize/RawStringLiteralCheck.h
 include/clang-tidy/modernize/RedundantVoidArgCheck.h
@@ -284,6 +290,7 @@ include/clang-tidy/modernize/UseAutoCheck.h
 include/clang-tidy/modernize/UseBoolLiteralsCheck.h
 include/clang-tidy/modernize/UseConstraintsCheck.h
 include/clang-tidy/modernize/UseDefaultMemberInitCheck.h
+include/clang-tidy/modernize/UseDesignatedInitializersCheck.h
 include/clang-tidy/modernize/UseEmplaceCheck.h
 include/clang-tidy/modernize/UseEqualsDefaultCheck.h
 include/clang-tidy/modernize/UseEqualsDeleteCheck.h
@@ -291,7 +298,9 @@ include/clang-tidy/modernize/UseNodiscardCheck.h
 include/clang-tidy/modernize/UseNoexceptCheck.h
 include/clang-tidy/modernize/UseNullptrCheck.h
 include/clang-tidy/modernize/UseOverrideCheck.h
+include/clang-tidy/modernize/UseRangesCheck.h
 include/clang-tidy/modernize/UseStartsEndsWithCheck.h
+include/clang-tidy/modernize/UseStdFormatCheck.h
 include/clang-tidy/modernize/UseStdNumbersCheck.h
 include/clang-tidy/modernize/UseStdPrintCheck.h
 include/clang-tidy/modernize/UseTrailingReturnTypeCheck.h
@@ -348,6 +357,7 @@ include/clang-tidy/readability/ConvertMemberFunctionsToStatic.h
 include/clang-tidy/readability/DeleteNullPointerCheck.h
 include/clang-tidy/readability/DuplicateIncludeCheck.h
 include/clang-tidy/readability/ElseAfterReturnCheck.h
+include/clang-tidy/readability/EnumInitialValueCheck.h
 include/clang-tidy/readability/FunctionCognitiveComplexityCheck.h
 include/clang-tidy/readability/FunctionSizeCheck.h
 include/clang-tidy/readability/IdentifierLengthCheck.h
@@ -357,6 +367,7 @@ include/clang-tidy/readability/InconsistentDeclarationParameterNameCheck.h
 include/clang-tidy/readability/IsolateDeclarationCheck.h
 include/clang-tidy/readability/MagicNumbersCheck.h
 include/clang-tidy/readability/MakeMemberFunctionConstCheck.h
+include/clang-tidy/readability/MathMissingParenthesesCheck.h
 include/clang-tidy/readability/MisleadingIndentationCheck.h
 include/clang-tidy/readability/MisplacedArrayIndexCheck.h
 include/clang-tidy/readability/NamedParameterCheck.h
@@ -385,10 +396,13 @@ include/clang-tidy/readability/SuspiciousCallArgumentCheck.h
 include/clang-tidy/readability/UniqueptrDeleteReleaseCheck.h
 include/clang-tidy/readability/UppercaseLiteralSuffixCheck.h
 include/clang-tidy/readability/UseAnyOfAllOfCheck.h
+include/clang-tidy/readability/UseStdMinMaxCheck.h
 include/clang-tidy/tool/ClangTidyMain.h
 include/clang-tidy/utils/ASTUtils.h
 include/clang-tidy/utils/Aliasing.h
+include/clang-tidy/utils/BracesAroundStatement.h
 include/clang-tidy/utils/DeclRefExprUtils.h
+include/clang-tidy/utils/DesignatedInitializers.h
 include/clang-tidy/utils/ExceptionAnalyzer.h
 include/clang-tidy/utils/ExceptionSpecAnalyzer.h
 include/clang-tidy/utils/ExprSequence.h
@@ -405,6 +419,7 @@ include/clang-tidy/utils/OptionsUtils.h
 include/clang-tidy/utils/RenamerClangTidyCheck.h
 include/clang-tidy/utils/TransformerClangTidyCheck.h
 include/clang-tidy/utils/TypeTraits.h
+include/clang-tidy/utils/UseRangesCheck.h
 include/clang-tidy/utils/UsingInserter.h
 include/clang-tidy/zircon/TemporaryObjectsCheck.h
 lib/libclangApplyReplacements.a
@@ -454,9 +469,9 @@ lib/libclangdMain.a
 lib/libclangdRemoteIndex.a
 lib/libclangdSupport.a
 lib/libfindAllSymbols.a
-share/clang/clang-doc-default-stylesheet.css
+share/clang-doc/clang-doc-default-stylesheet.css
+share/clang-doc/index.js
 share/clang/clang-include-fixer.el
 share/clang/clang-include-fixer.py
 share/clang/clang-tidy-diff.py
-share/clang/index.js
 share/clang/run-find-all-symbols.py

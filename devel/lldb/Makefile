@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.58 2025/04/17 21:50:29 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/05/09 05:51:23 adam Exp $
 
-PKGREVISION= 4
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lldb-${LLVM_VERSION}.src
@@ -34,17 +33,19 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_HOME=${PREFIX}
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 LUA_VERSIONS_ACCEPTED=	53
+PLIST_SUBST+=		LUA_VERSION=${LUA_VERSION:R}
 
-REPLACE_PERL+=		*/*.pl
+REPLACE_PERL+=		scripts/disasm-gdb-remote.pl
 
-REPLACE_PYTHON+=	*.py
-REPLACE_PYTHON+=	*/*.py
-REPLACE_PYTHON+=	*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*/*/*.py
-REPLACE_PYTHON+=	*/*/*/*/*/*/*/*.py
+REPLACE_PYTHON+=	bindings/python/get-python-config.py
+REPLACE_PYTHON+=	bindings/python/lldb-python
+REPLACE_PYTHON+=	scripts/analyze-project-deps.py
+REPLACE_PYTHON+=	scripts/generate-sbapi-dwarf-enum.py
+REPLACE_PYTHON+=	scripts/reproducer-replay.py
+REPLACE_PYTHON+=	scripts/verify_api.py
+REPLACE_PYTHON+=	utils/lldb-repro/lldb-repro.py
+REPLACE_PYTHON+=	utils/lui/lui.py
+REPLACE_PYTHON+=	utils/lui/sandbox.py
 
 TEST_TARGET=		check-lldb
 #TEST_TARGET=		check-lldb-unit # doesn't work in standalone build
@@ -53,8 +54,6 @@ TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}.1
 
 .include "options.mk"
 
@@ -72,6 +71,7 @@ NOT_FOR_PLATFORM+=	NetBSD-*-aarch64 NetBSD-*-powerpc
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit
 .include "../../devel/editline/buildlink3.mk"
+.include "../../devel/swig4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/llvm/buildlink3.mk"
@@ -81,6 +81,4 @@ NOT_FOR_PLATFORM+=	NetBSD-*-aarch64 NetBSD-*-powerpc
 .include "../../lang/python/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/atomic64.mk"
-# TODO: sync the readline option with other llvm packages
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

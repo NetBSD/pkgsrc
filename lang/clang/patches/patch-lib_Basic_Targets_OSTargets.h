@@ -1,17 +1,12 @@
-$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.10 2024/07/07 14:00:21 wiz Exp $
+$NetBSD: patch-lib_Basic_Targets_OSTargets.h,v 1.11 2025/05/09 05:51:24 adam Exp $
 
-Add __illumos__ if the bootstrap compiler also defines it.
-Sync SunOS default defines with what GCC uses.
+Sync SunOS default defines with a working reality.
+NetBSD __float128, needed to build anything with base libstdc++
+which assumes __float128.
 
---- lib/Basic/Targets/OSTargets.h.orig	2023-11-28 08:52:28.000000000 +0000
+--- lib/Basic/Targets/OSTargets.h.orig	2023-10-03 06:37:35.000000000 +0000
 +++ lib/Basic/Targets/OSTargets.h
-@@ -639,25 +639,21 @@ protected:
-   void getOSDefines(const LangOptions &Opts, const llvm::Triple &Triple,
-                     MacroBuilder &Builder) const override {
-     DefineStd(Builder, "sun", Opts);
-+#if defined(__illumos__)
-+    DefineStd(Builder, "__illumos__", Opts);
-+#endif
+@@ -628,22 +638,15 @@ protected:
      DefineStd(Builder, "unix", Opts);
      Builder.defineMacro("__svr4__");
      Builder.defineMacro("__SVR4");

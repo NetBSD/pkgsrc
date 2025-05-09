@@ -1,3 +1,12 @@
-@comment $NetBSD: PLIST.Darwin,v 1.8 2024/07/06 15:45:08 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.9 2025/05/09 05:51:23 adam Exp $
 bin/darwin-debug
 bin/debugserver
+${PYSITELIB}/lldb/diagnose/__init__.py
+${PYSITELIB}/lldb/diagnose/diagnose_nsstring.py
+${PYSITELIB}/lldb/diagnose/diagnose_unwind.py
+${PYSITELIB}/lldb/macosx/__init__.py
+${PYSITELIB}/lldb/macosx/crashlog.py
+${PYSITELIB}/lldb/macosx/crashlog_scripted_process.py
+${PYSITELIB}/lldb/macosx/heap.py
+${PYSITELIB}/lldb/macosx/heap/Makefile
+${PYSITELIB}/lldb/macosx/heap/heap_find.cpp

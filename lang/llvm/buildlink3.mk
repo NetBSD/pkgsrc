@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.28 2024/07/06 15:45:05 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2025/05/09 05:53:52 adam Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=18.0.0
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=19.1.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -92,6 +92,7 @@ BUILDLINK_FILES.llvm+=		bin/llvm-xray
 BUILDLINK_FILES.llvm+=		bin/not
 BUILDLINK_FILES.llvm+=		bin/obj2yaml
 BUILDLINK_FILES.llvm+=		bin/opt
+BUILDLINK_FILES.llvm+=		bin/reduce-chunk-list
 BUILDLINK_FILES.llvm+=		bin/sancov
 BUILDLINK_FILES.llvm+=		bin/sanstats
 BUILDLINK_FILES.llvm+=		bin/split-file

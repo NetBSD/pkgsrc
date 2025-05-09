@@ -1,12 +1,12 @@
-$NetBSD: patch-source_API_CMakeLists.txt,v 1.6 2022/08/12 08:54:31 pin Exp $
+$NetBSD: patch-source_API_CMakeLists.txt,v 1.7 2025/05/09 05:51:23 adam Exp $
 
 Fix finding libxml2's includes.
 
---- source/API/CMakeLists.txt.orig	2022-06-22 16:46:24.000000000 +0000
+--- source/API/CMakeLists.txt.orig	2024-09-17 11:26:36.000000000 +0000
 +++ source/API/CMakeLists.txt
-@@ -15,6 +15,10 @@ if(LLDB_ENABLE_LUA)
-   set(lldb_lua_wrapper ${lua_bindings_dir}/LLDBWrapLua.cpp)
- endif()
+@@ -40,6 +40,10 @@ add_custom_target(lldb-sbapi-dwarf-enums
+   DEPENDS ${sb_languages_file})
+ set_target_properties(lldb-sbapi-dwarf-enums PROPERTIES FOLDER "LLDB/Tablegenning")
  
 +if(LIBXML2_FOUND)
 +  include_directories(SYSTEM ${LIBXML2_INCLUDE_DIR})
@@ -14,4 +14,4 @@ Fix finding libxml2's includes.
 +
  add_lldb_library(liblldb SHARED ${option_framework}
    SBAddress.cpp
-   SBAttachInfo.cpp
+   SBAddressRange.cpp

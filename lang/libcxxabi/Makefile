@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/25 06:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/09 05:51:25 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -21,10 +21,10 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		13	# must be in sync with libcxx
+GCC_REQD+=		14 # must be in sync with libcxx
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # "LIBCXXABI_USE_LLVM_UNWINDER is set to ON, but libunwind is not specified in LLVM_ENABLE_RUNTIMES."
@@ -41,8 +41,7 @@ CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1
 CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
-# IMPORTANT: copy __config_site from partial build of libcxx.
-post-extract:
+pre-configure:
 	${LN} -f -s ${WRKDIR}/${LIBCXX} ${WRKDIR}/libcxx
 	${CP} ${FILESDIR}/__assertion_handler ${FILESDIR}/__config_site \
 		${WRKDIR}/${LIBCXX}/include/

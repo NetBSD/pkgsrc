@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/25 06:18:56 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/09 05:51:24 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -24,7 +24,7 @@ SITES.${LIBCXXABI}${EXTRACT_SUFX}=	\
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		13
+GCC_REQD+=		14 # must be in sync with libcxxabi
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi
@@ -41,7 +41,7 @@ CXXFLAGS.SunOS+=	-D_LIBCPP_NO_ABI_TAG=1
 
 .if ${CC_VERSION:Mgcc-[0-9].*} || ${CC_VERSION:Mgcc-10.*}
 # Avoid GCC < 11 error https://github.com/llvm/llvm-project/issues/54018
-CXXFLAGS+=		-std=c++17 -D_LIBCPP_STD_VER=17
+CXXFLAGS+=	-std=c++17 -D_LIBCPP_STD_VER=17
 .endif
 
 post-extract:
@@ -50,4 +50,5 @@ post-extract:
 .include "../../devel/cmake/build.mk"
 .include "../../lang/libcxxabi/buildlink3.mk"
 .include "../../lang/libunwind/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
