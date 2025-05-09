@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3158 2025/05/09 04:45:51 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3159 2025/05/09 06:01:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4340,3 +4340,23 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.21.1 [pin 2025-05-08]
 	Updated lang/go123 to 1.23.9 [bsiegert 2025-05-08]
 	Updated lang/go124 to 1.24.3 [bsiegert 2025-05-08]
+	Updated lang/llvm to 19.1.7 [adam 2025-05-09]
+	Updated devel/lld to 19.1.7 [adam 2025-05-09]
+	Updated devel/lldb to 19.1.7 [adam 2025-05-09]
+	Updated devel/polly to 19.1.7 [adam 2025-05-09]
+	Updated lang/clang to 19.1.7 [adam 2025-05-09]
+	Updated lang/clang-tools-extra to 19.1.7 [adam 2025-05-09]
+	Updated lang/compiler-rt to 19.1.7 [adam 2025-05-09]
+	Updated lang/flang to 19.1.7 [adam 2025-05-09]
+	Updated lang/libcxx to 19.1.7 [adam 2025-05-09]
+	Updated lang/libcxxabi to 19.1.7 [adam 2025-05-09]
+	Updated lang/libunwind to 19.1.7 [adam 2025-05-09]
+	Updated lang/mlir to 19.1.7 [adam 2025-05-09]
+	Updated lang/wasi-compiler-rt to 19.1.7 [adam 2025-05-09]
+	Updated lang/wasi-libcxx to 19.1.7 [adam 2025-05-09]
+	Updated parallel/openmp to 19.1.7 [adam 2025-05-09]
+	Updated devel/include-what-you-use to 0.23 [adam 2025-05-09]
+	Updated editors/qtcreator to 16.0.0 [adam 2025-05-09]
+	Updated parallel/spirv-headers to 1.4.309.0 [adam 2025-05-09]
+	Updated parallel/spirv-llvm-translator to 19.1.7 [adam 2025-05-09]
+	Updated parallel/opencl-clang to 19.1.0 [adam 2025-05-09]
