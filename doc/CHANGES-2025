@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3169 2025/05/09 15:11:29 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3170 2025/05/09 18:16:33 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4379,3 +4379,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-examples to 0.0.18 [adam 2025-05-09]
 	Updated devel/codeberg-cli to 0.4.11 [schmonz 2025-05-09]
 	Updated www/snac to 2.76 [schmonz 2025-05-09]
+	Updated net/netatalk4 to 4.2.3 [hauke 2025-05-09]
