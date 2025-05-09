@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/11/12 22:13:02 markd Exp $
+$NetBSD: distinfo,v 1.8 2025/05/09 22:18:33 markd Exp $
 
-BLAKE2s (acronym.r72324.tar.xz) = 903a054def377010c9fb078ea5dbf6c0ade50226ad530954696f65bc88f0dc99
-SHA512 (acronym.r72324.tar.xz) = 79ae084ade2f85de2793bc057e7022130966a5e14e709aad2ed0514d6c775089d0af192c2651d3634235a17ddef9c44b63d2f5eb38d7433f9b8b6aa020fcc6b9
-Size (acronym.r72324.tar.xz) = 5096 bytes
+BLAKE2s (acronym.r73491.tar.xz) = a43d3e559fbf70fb0161b7cddb841eef2f882b6f29556246e92c52c21ef52e98
+SHA512 (acronym.r73491.tar.xz) = 98c527da3bdae829915562332f48b2a2e082d62bdce836dc0a7f379363eafb8e48fe1b09655969f126fa292f112f92e0c40f4547ee54869e48570c08524a0ea1
+Size (acronym.r73491.tar.xz) = 5208 bytes
