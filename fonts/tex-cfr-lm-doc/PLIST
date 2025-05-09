@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/12 22:48:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/09 23:02:30 markd Exp $
 share/texmf-dist/doc/fonts/cfr-lm/README.md
 share/texmf-dist/doc/fonts/cfr-lm/cfr-lm-build.pdf
 share/texmf-dist/doc/fonts/cfr-lm/cfr-lm-tables.pdf
-share/texmf-dist/doc/fonts/cfr-lm/cfr-lm-tables.tex
 share/texmf-dist/doc/fonts/cfr-lm/cfr-lm.pdf
 share/texmf-dist/doc/fonts/cfr-lm/clm-map.tex
 share/texmf-dist/doc/fonts/cfr-lm/clm-t1-drv.tex
