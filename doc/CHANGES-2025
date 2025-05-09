@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3174 2025/05/09 20:01:47 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3175 2025/05/09 22:20:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4088,7 +4088,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/libportal version 0.9.1 [tnn 2025-05-05]
 	Added x11/libei version 1.4.0 [tnn 2025-05-05]
 	Added net/deskflow version 1.21.2 [tnn 2025-05-05]
-	Removed net/synergy successor net/deskflow [tnn 2025-05-05]
 	Added graphics/flameshot version 12.1.0 [tnn 2025-05-05]
 	Updated x11/libei to 1.4.1 [tnn 2025-05-05]
 	Updated mail/neomutt to 20250404nb2 [wiz 2025-05-05]
