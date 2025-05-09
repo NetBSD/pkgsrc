@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/11/12 22:48:53 markd Exp $
+$NetBSD: distinfo,v 1.6 2025/05/09 23:02:30 markd Exp $
 
-BLAKE2s (cfr-lm.doc.r72484.tar.xz) = 50b7b3b9ccc99b8f1d5c5d84ef0c7a0e4f3da257290d36fb5cc7b18023adca18
-SHA512 (cfr-lm.doc.r72484.tar.xz) = cda452908a44e490f9d9ea419b8ed7543c1932744f9819625b3584439d60991d52a0c1683a2b865fce5ac637d841322fa482de976d49d1aac7a9e608fe1ff8e7
-Size (cfr-lm.doc.r72484.tar.xz) = 6150264 bytes
+BLAKE2s (cfr-lm.doc.r73888.tar.xz) = 315dd15be58cb4abff7b66aa1e58e3cd3bc59cdd37c178563d4c1f8a995b35cc
+SHA512 (cfr-lm.doc.r73888.tar.xz) = e0ed9d38b33bdfc4754158a5377204dc7b581970c06c1b948acc49aef4fd7e715698b1aacd374a70dd48343f99961c2d2bff0bfb1d805aefb5ef7ab9963707b0
+Size (cfr-lm.doc.r73888.tar.xz) = 6150152 bytes

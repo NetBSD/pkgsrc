@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/12 22:48:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/09 23:02:30 markd Exp $
 
 DISTNAME=	cfr-lm.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.7
-TEXLIVE_REV=	72484
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.8a
+TEXLIVE_REV=	73888
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cfr-lm
