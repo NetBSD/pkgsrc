@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/05/10 17:21:40 vins Exp $
+# $NetBSD: Makefile,v 1.40 2025/05/10 18:59:47 vins Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-power-manager-4.20.0
@@ -14,7 +14,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS:M*BSD} || ${OPSYS} == "Linux"
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--with-backend=${LOWER_OPSYS}
 .endif
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE} \
