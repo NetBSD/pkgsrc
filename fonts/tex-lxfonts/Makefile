@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:48 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/10 01:37:57 markd Exp $
 
 DISTNAME=	lxfonts
-PKGNAME=	tex-${DISTNAME}-2.0b
-PKGREVISION=	1
-TEXLIVE_REV=	32354
+PKGNAME=	tex-${DISTNAME}-3.0
+TEXLIVE_REV=	73728
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lxfonts
@@ -12,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 TEX_MIXEDMAP_FILES+=	lxfonts.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

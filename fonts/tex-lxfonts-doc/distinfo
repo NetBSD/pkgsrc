@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:12 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/10 01:37:57 markd Exp $
 
-BLAKE2s (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 4d566fc30c8a8f785492f0abec27513f1673096bd9b9cb122130201e2a6289e0
-SHA512 (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 4c66fbe35337f43dcae53cf26fe1564f8cdd5897038f676d862c54cc25f3633e146cda0afe2aca564960e2075bd337d463037db6e05201395ffa04b846870621
-Size (tex-lxfonts-32354/lxfonts.doc.tar.xz) = 530100 bytes
+BLAKE2s (lxfonts.doc.r73728.tar.xz) = ab4489ea93f86be94be06ff979dc63518d8a8d15b01ca0339698c4df3fc69f7a
+SHA512 (lxfonts.doc.r73728.tar.xz) = 6fd2d9c44914bff51dc3d745219d3361b3f681e1aa2e95eca36ce98de5e603cc63a029684f5961de01db90ed54c52214e13c9bc9c97f4e593f4954a376770632
+Size (lxfonts.doc.r73728.tar.xz) = 534160 bytes
