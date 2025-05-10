@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/09/26 21:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/10 13:45:20 rhialto Exp $
 
-DISTNAME=	64tass-1.59.3120-src
+DISTNAME=	64tass-1.60.3243-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tass64/}
