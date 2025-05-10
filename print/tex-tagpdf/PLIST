@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2023/06/17 10:53:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 23:34:35 markd Exp $
+share/texmf-dist/tex/latex/tagpdf/latex-align-css.html
+share/texmf-dist/tex/latex/tagpdf/latex-list-css.html
 share/texmf-dist/tex/latex/tagpdf/tagpdf-base.sty
 share/texmf-dist/tex/latex/tagpdf/tagpdf-debug-generic.sty
 share/texmf-dist/tex/latex/tagpdf/tagpdf-debug-lua.sty
@@ -17,3 +19,4 @@ share/texmf-dist/tex/latex/tagpdf/tagpdf-parent-child.csv
 share/texmf-dist/tex/latex/tagpdf/tagpdf.lua
 share/texmf-dist/tex/latex/tagpdf/tagpdf.sty
 share/texmf-dist/tex/latex/tagpdf/tagpdfdocu-patches.sty
+share/texmf-dist/tex/latex/tagpdf/verbatim-alt-latex-lab-testphase.ltx
