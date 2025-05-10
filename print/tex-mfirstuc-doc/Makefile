@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/04/01 12:04:11 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/10 01:51:40 markd Exp $
 
 DISTNAME=	mfirstuc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.08
-TEXLIVE_REV=	64743
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.09
+TEXLIVE_REV=	74838
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/mfirstuc
