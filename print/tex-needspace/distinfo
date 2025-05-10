@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:14:09 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/05/10 22:30:44 markd Exp $
 
-BLAKE2s (tex-needspace-29601/needspace.tar.xz) = a007e69c9f77b8dd53ff3821346c32f03fbce7a26ab793c75be7e9692c0ba3a9
-SHA512 (tex-needspace-29601/needspace.tar.xz) = 03cb12182f6da3539f0ace89ef75e9711a7ce322c72c395cf3dcf9b173bc7f7492cf9207fc8ae84a69e089a854d1a8f3cf8e45357c7422778bddca7fc2c91eab
-Size (tex-needspace-29601/needspace.tar.xz) = 820 bytes
+BLAKE2s (needspace.r74631.tar.xz) = 7d17cec9ec3b24d0bd7929c34e6f14797eed5c8b09e23c953397c2146a5fb439
+SHA512 (needspace.r74631.tar.xz) = 7278612bc6fe35f7e91caf0e78afd32511ad31f6f31cb90f102a1e4c4babfb7b77d3e1c324df5c8b14bc2daac058550e6cb9b1a4de0a2cd63368efbc05a68152
+Size (needspace.r74631.tar.xz) = 940 bytes
