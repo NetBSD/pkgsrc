@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/04/14 14:16:21 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/10 18:21:51 adam Exp $
 
-DISTNAME=	Django-4.2.20
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	django-4.2.21
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
 MASTER_SITES+=	${MASTER_SITE_PYPI:=D/Django/}
@@ -18,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.3.1:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
 
-WHEEL_NAME=		${DISTNAME:tl}
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
 
 post-install:
