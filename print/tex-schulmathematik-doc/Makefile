@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/02/17 01:11:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/10 23:16:03 markd Exp $
 
 DISTNAME=	schulmathematik.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
-TEXLIVE_REV=	69244
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.7
+TEXLIVE_REV=	74961
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/schulmathematik
