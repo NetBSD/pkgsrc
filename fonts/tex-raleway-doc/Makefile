@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2020/01/18 23:31:51 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/10 23:11:34 markd Exp $
 
 DISTNAME=	raleway.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
-TEXLIVE_REV=	42629
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.6
+TEXLIVE_REV=	74901
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/raleway
 COMMENT=	Documentation for tex-raleway
-LICENSE=	ofl-v1.1
+LICENSE=	ofl-v1.1 AND lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
