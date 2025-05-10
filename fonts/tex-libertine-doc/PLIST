@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/04 10:05:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/10 01:28:07 markd Exp $
 share/texmf-dist/doc/fonts/libertine/Bugs.txt
 share/texmf-dist/doc/fonts/libertine/ChangeLog.txt
 share/texmf-dist/doc/fonts/libertine/ChangeLogLaTeX.txt
 share/texmf-dist/doc/fonts/libertine/GPL.txt
 share/texmf-dist/doc/fonts/libertine/LICENCE.txt
+share/texmf-dist/doc/fonts/libertine/LinLibertine_R.Glyphs.pdf
 share/texmf-dist/doc/fonts/libertine/README
 share/texmf-dist/doc/fonts/libertine/ToDo.txt
 share/texmf-dist/doc/fonts/libertine/g2ntotex.c
