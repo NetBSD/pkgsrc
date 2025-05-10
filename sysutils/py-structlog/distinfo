@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/03/12 06:04:36 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/05/10 11:14:32 adam Exp $
 
-BLAKE2s (structlog-25.2.0.tar.gz) = d67b4213c0557adb2d9b3d446b5b57995ed57e61ba5d5e580c892438d4ea7cc2
-SHA512 (structlog-25.2.0.tar.gz) = d4b8c7f6328669f7f8384287fbda17d6994bc7647216bb58fe808eae899f108b6e5a5b0effeb65f8751577971a1a56e4717bbf88c4e1dfa31f86dee44237f10c
-Size (structlog-25.2.0.tar.gz) = 1367438 bytes
+BLAKE2s (structlog-25.3.0.tar.gz) = b589145c50997da5f7e7739b08ec8bd15423d9b9eb9ff5a53093c2065ed3f32e
+SHA512 (structlog-25.3.0.tar.gz) = 9bc31a0dea76a28f604880fb190343f2edbe91b1c64a298ef75de4930e994b388e56afe3d649ee77605657bbccbe6daad181e8e78829bd1a7ea96b3577f61add
+Size (structlog-25.3.0.tar.gz) = 1367514 bytes
