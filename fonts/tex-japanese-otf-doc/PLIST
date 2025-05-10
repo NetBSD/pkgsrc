@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/04 00:28:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/10 00:42:15 markd Exp $
 share/texmf-dist/doc/fonts/japanese-otf/COPYRIGHT
 share/texmf-dist/doc/fonts/japanese-otf/ChangeLog.md
 share/texmf-dist/doc/fonts/japanese-otf/README
@@ -26,9 +26,11 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-mltwght-h.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-mltwght-v.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-pxbabel-h.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/cjk-pxbabel-v.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/combined_kana_text.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/direction-utf8.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/era.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/exclam.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/ivd_jp_text.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/jotf-psfonts.map
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/otfscale.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/paren0.tex
@@ -39,9 +41,15 @@ share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_gb_utf.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_jp_text.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_jp_utf.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/sp_kr_utf.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_jpn.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_kor.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_min_jpn.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_sch.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/svs_list_tch.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-cid-h.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-cid-v.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-sp-utf8.tex
+share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotf-vs-utf8.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotftest-utf8.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/uotftest.tex
 share/texmf-dist/doc/fonts/japanese-otf/doc/test/uplatex/upbrsgtest.tex
