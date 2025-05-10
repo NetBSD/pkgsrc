@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3182 2025/05/10 11:38:52 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3183 2025/05/10 12:20:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4502,3 +4502,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-structlog to 25.3.0 [adam 2025-05-10]
 	Updated geography/gdal-lib to 3.11.0 [gdt 2025-05-10]
 	Updated geography/py-gdal to 3.11.0 [gdt 2025-05-10]
+	Updated security/p5-Crypt-Curve25519 to 0.08 [wen 2025-05-10]
