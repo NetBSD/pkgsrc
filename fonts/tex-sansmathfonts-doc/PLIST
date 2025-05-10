@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2022/04/09 02:52:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/10 23:13:56 markd Exp $
 share/texmf-dist/doc/fonts/sansmathfonts/README.txt
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfbx12.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfbx17.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfbx8.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfbx9.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfxi10.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfxi12.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfxi17.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfxi8.vpl
+share/texmf-dist/doc/fonts/sansmathfonts/cmsmfxi9.vpl
 share/texmf-dist/doc/fonts/sansmathfonts/sansmathfonts.pdf
 share/texmf-dist/doc/fonts/sansmathfonts/sansmathfonts.tex

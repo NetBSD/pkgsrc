@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 23:13:55 markd Exp $
 share/texmf-dist/fonts/map/dvips/sansmathfonts/sansmathfonts.map
 share/texmf-dist/fonts/source/public/sansmathfonts/cmsmfIPiXi10.mf
 share/texmf-dist/fonts/source/public/sansmathfonts/cmsmfIPiXi12.mf
@@ -228,6 +228,10 @@ share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbsy6.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbsy7.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbsy8.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbsy9.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbx12-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbx17-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbx8-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbx9-cmsmfcopy.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssbxcsc10.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmsscsc10.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmsscsc8.tfm
@@ -258,6 +262,11 @@ share/texmf-dist/fonts/tfm/public/sansmathfonts/cmsssy7.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmsssy8.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmsssy9.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssu10.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxi10-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxi12-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxi17-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxi8-cmsmfcopy.tfm
+share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxi9-cmsmfcopy.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/cmssxicsc10.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/eczi0500.tfm
 share/texmf-dist/fonts/tfm/public/sansmathfonts/eczi0600.tfm
