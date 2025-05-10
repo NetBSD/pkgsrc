@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.358 2025/04/24 14:15:10 wiz Exp $
+# $NetBSD: Makefile,v 1.359 2025/05/10 07:40:36 wiz Exp $
 
 VERREL=		25.2.0
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -355,7 +355,6 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/abseil/buildlink3.mk"
-.include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
@@ -433,8 +432,6 @@ BUILDLINK_API_DEPENDS.libodfgen+=       libodfgen>=0.1.4
 .include "../../textproc/raptor2/buildlink3.mk"
 .include "../../textproc/rasqal/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../www/neon/buildlink3.mk"
-.include "../../www/serf/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
