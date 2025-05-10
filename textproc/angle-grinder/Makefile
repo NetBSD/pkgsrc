@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/10 19:35:22 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/10 13:55:10 pin Exp $
 
-DISTNAME=	angle-grinder-0.19.4
+DISTNAME=	angle-grinder-0.19.6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rcoh/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
