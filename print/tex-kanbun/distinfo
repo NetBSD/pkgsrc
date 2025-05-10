@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/16 01:50:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2025/05/10 00:59:06 markd Exp $
 
-BLAKE2s (kanbun.r62026.tar.xz) = 9cb9a49daf372a669223cf0871dc9b24f6699d68f14f74b3eca4307f20a10758
-SHA512 (kanbun.r62026.tar.xz) = 2ca12d697ed80a1f3182ac2e28897f670f8d770d99ce6fb3d8cb692e8e40d45afb463959ac8668b60ac7d67c9d8dd8f88ff5ec9e83a96f656ea8cd59ac419187
-Size (kanbun.r62026.tar.xz) = 6080 bytes
+BLAKE2s (kanbun.r74674.tar.xz) = a3e8abd815bca8d62ca52e710ade30923be5eeed8d3543f70ac4d7db5272b231
+SHA512 (kanbun.r74674.tar.xz) = 3dfcc0ff8d56866a107dbf78c73263006ad0fab81efb9d4f126bea08b6e73b1b2465b328750a24b839ea3edd710820f65930490c672a7c0fbd2141b0283aefa4
+Size (kanbun.r74674.tar.xz) = 6184 bytes
