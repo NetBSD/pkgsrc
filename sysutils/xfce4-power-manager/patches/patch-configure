@@ -1,36 +1,41 @@
-$NetBSD: patch-configure,v 1.1 2025/05/10 17:21:40 vins Exp $
+$NetBSD: patch-configure,v 1.2 2025/05/10 18:59:47 vins Exp $
 
-Support NetBSD backend.
+Support NetBSD and SunOS backends.
 
 --- configure.orig	2024-12-15 09:22:31.000000000 +0000
 +++ configure
-@@ -1638,7 +1638,7 @@ Optional Packages:
+@@ -1638,7 +1638,8 @@ Optional Packages:
    --without-libiconv-prefix     don't search for libiconv in includedir and libdir
    --with-libintl-prefix[=DIR]  search for libintl in DIR/include and DIR/lib
    --without-libintl-prefix     don't search for libintl in includedir and libdir
 -  --with-backend=<option> Default backend to use linux, freebsd, openbsd
-+  --with-backend=<option> Default backend to use linux, freebsd, openbsd, netbsd
++  --with-backend=<option> Default backend to use linux, freebsd, openbsd,
++                          netbsd, solaris
  
  Some influential environment variables:
    CC          C compiler command
-@@ -23752,6 +23752,8 @@ if test x$with_backend = x; then
+@@ -23752,6 +23753,10 @@ if test x$with_backend = x; then
      with_backend=freebsd ;; #(
    *-openbsd*|*-bitrig*) :
      with_backend=openbsd ;; #(
 +  *-netbsd*) :
 +    with_backend=netbsd ;; #(
++  *-sun-solaris*) :
++    with_backend=solaris ;; #(
    *) :
       ;;
  esac
-@@ -23777,7 +23779,11 @@ if test x$with_backend = xopenbsd; then
+@@ -23777,8 +23782,14 @@ if test x$with_backend = xopenbsd; then
  printf "%s\n" "#define BACKEND_TYPE_OPENBSD 1" >>confdefs.h
  
  fi
 +if test x$with_backend = xnetbsd; then
  
 +printf "%s\n" "#define BACKEND_TYPE_NETBSD 1" >>confdefs.h
-+
+ 
 +fi
- 
- 
- 
++if test x$with_backend = xsolaris; then
+
++printf "%s\n" "#define BACKEND_TYPE_SOLARIS 1" >>confdefs.h
+
++fi
