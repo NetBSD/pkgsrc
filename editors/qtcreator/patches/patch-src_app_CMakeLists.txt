@@ -1,8 +1,8 @@
-$NetBSD: patch-src_app_CMakeLists.txt,v 1.1 2025/05/09 05:57:08 adam Exp $
+$NetBSD: patch-src_app_CMakeLists.txt,v 1.2 2025/05/10 10:53:21 adam Exp $
 
 Disable application bundle.
 
---- src/app/CMakeLists.txt.orig	2025-03-11 12:27:32.000000000 +0000
+--- src/app/CMakeLists.txt.orig	2025-04-10 08:57:18.000000000 +0000
 +++ src/app/CMakeLists.txt
 @@ -20,7 +20,6 @@ add_qtc_executable(qtcreator
      ../tools/qtcreatorcrashhandler/crashhandlersetup.cpp ../tools/qtcreatorcrashhandler/crashhandlersetup.h
@@ -21,9 +21,9 @@ Disable application bundle.
    if (CMAKE_OSX_DEPLOYMENT_TARGET)
      set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
    endif()
-@@ -157,7 +156,7 @@ if(BUILD_WITH_CRASHPAD)
-   )
- endif()
+@@ -171,7 +170,7 @@ extend_qtc_executable(qtcreator
+     SENTRY_CRASHPAD_PATH="${SENTRY_CRASHPAD_PATH}"
+ )
  
 -if ((NOT WIN32) AND (NOT APPLE))
 +if (NOT WIN32)
