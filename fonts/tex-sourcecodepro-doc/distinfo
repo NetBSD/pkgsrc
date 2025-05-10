@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:28:29 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/05/10 23:23:29 markd Exp $
 
-BLAKE2s (tex-sourcecodepro-51163/sourcecodepro.doc.tar.xz) = 5f8c6749613791b3bed94556296369cc39cceb1bcaafdeb76c76d27d6115c5d6
-SHA512 (tex-sourcecodepro-51163/sourcecodepro.doc.tar.xz) = 7f8ca211769e3b626ba98f8d7265b7e383630c2d22496f03f79bca629f164374de9bb8601e903fc094c1264fa8b4ab4bef1db3b9deafef65ab41c56c27e8d8cc
-Size (tex-sourcecodepro-51163/sourcecodepro.doc.tar.xz) = 569492 bytes
+BLAKE2s (sourcecodepro.doc.r74885.tar.xz) = 112564b44ee213e03dd8df79fdcdbdc6b016591c40b48c363134258b8084295f
+SHA512 (sourcecodepro.doc.r74885.tar.xz) = fb1249dfe011eed32b005c679f2851f5c1aba938114dc6af528d5b1b2afdd3ac8a0052ca6be955b739c6fbf82edb99388f890177fe968121f30f9ae793f19eba
+Size (sourcecodepro.doc.r74885.tar.xz) = 541648 bytes
