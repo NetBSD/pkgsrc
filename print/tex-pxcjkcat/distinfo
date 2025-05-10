@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/09/01 11:05:52 markd Exp $
+$NetBSD: distinfo,v 1.5 2025/05/10 23:01:07 markd Exp $
 
-BLAKE2s (pxcjkcat.r63967.tar.xz) = d03e0ff0b6b23309baceec5b501c2576ef053a1232add926229d5d93207cf87f
-SHA512 (pxcjkcat.r63967.tar.xz) = 81a71b6cfdd280f65f392ad602291d468a8ffeda440609f513166b88bc1af298d6be546e953e4f3a9abac3f0bae235c12b124e11258c53c1abf778f3f78f3559
-Size (pxcjkcat.r63967.tar.xz) = 10196 bytes
+BLAKE2s (pxcjkcat.r74144.tar.xz) = 84b1c13aa7a4463ff62292a19ca758a5f2fd0ee6355f7df5f86b68de5fbf65e1
+SHA512 (pxcjkcat.r74144.tar.xz) = 658da215d725fc6254515359f5b705c0f8361bcce4eef2a4119d243be1ce59f18c82068a7b9d5b6816cba7274d6ae85e72ca685384165debea68e45ed671620a
+Size (pxcjkcat.r74144.tar.xz) = 10756 bytes
