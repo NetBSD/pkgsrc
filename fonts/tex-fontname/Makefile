@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/04/26 12:21:14 markd Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/10 00:20:04 markd Exp $
 
 DISTNAME=	fontname
-PKGNAME=	tex-${DISTNAME}-2020
-TEXLIVE_REV=	53228
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	74435
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/fontname
