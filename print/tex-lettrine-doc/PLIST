@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/04 10:02:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/10 01:25:19 markd Exp $
 share/texmf-dist/doc/latex/lettrine/README.md
 share/texmf-dist/doc/latex/lettrine/W.pdf
 share/texmf-dist/doc/latex/lettrine/lettrine-demo-arabic.pdf
@@ -9,5 +9,4 @@ share/texmf-dist/doc/latex/lettrine/lettrine-demo-fr.pdf
 share/texmf-dist/doc/latex/lettrine/lettrine-demo-fr.tex
 share/texmf-dist/doc/latex/lettrine/lettrine-demo-lua.pdf
 share/texmf-dist/doc/latex/lettrine/lettrine-demo-lua.tex
-share/texmf-dist/doc/latex/lettrine/lettrine-xetex-bidi.def
 share/texmf-dist/doc/latex/lettrine/lettrine.pdf
