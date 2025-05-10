@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/04/08 23:23:17 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/10 00:36:22 markd Exp $
 
 DISTNAME=	iftex
-PKGNAME=	tex-${DISTNAME}-1.0f
-TEXLIVE_REV=	61910
+PKGNAME=	tex-${DISTNAME}-1.0g
+TEXLIVE_REV=	73115
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/iftex
