@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/02/23 16:59:26 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/05/10 16:33:07 wiz Exp $
 
 DISTNAME=	varnish-7.5.0
 CATEGORIES=	www
@@ -57,6 +57,12 @@ CONFIGURE_ARGS+=	--with-sphinx-build=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ARGS.SunOS+=	--disable-epoll
+
+SUBST_CLASSES+=		edit
+SUBST_SED.edit+=	-e s,editline/readline.h,readline.h,
+SUBST_FILES.edit+=	bin/varnishadm/varnishadm.c configure
+SUBST_MESSAGE.edit=	Fix path to libedit header for pkgsrc.
+SUBST_STAGE.edit=	pre-configure
 
 .include "../../mk/compiler.mk"
 
