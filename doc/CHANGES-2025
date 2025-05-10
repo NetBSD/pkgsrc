@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3191 2025/05/10 13:57:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3192 2025/05/10 13:58:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4511,3 +4511,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cross/64tass to 1.60.3243 [rhialto 2025-05-10]
 	Updated textproc/angle-grinder to 0.19.6 [pin 2025-05-10]
 	Updated devel/bacon to 3.13.0 [pin 2025-05-10]
+	Updated devel/mise to 2025.5.3 [pin 2025-05-10]
