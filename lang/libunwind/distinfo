@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2025/05/09 05:51:25 adam Exp $
+$NetBSD: distinfo,v 1.39 2025/05/10 17:37:07 tnn Exp $
 
 BLAKE2s (cmake-19.1.7.src.tar.xz) = 420fe22b00305abc7924fd6cb58bc1ba1c17c6e79a6b51ffb406163db7f1805c
 SHA512 (cmake-19.1.7.src.tar.xz) = 3ff56e1a61dbace35d8c168ad5c94c5a09d92eb683494bfe1deabcb3640cf79b7422d44903d049d2298d54c2874f9a60c4f13f6795a3949e7eaefd5d42e62621
@@ -12,4 +12,4 @@ Size (libunwind-19.1.7.src.tar.xz) = 120004 bytes
 BLAKE2s (runtimes-19.1.7.src.tar.xz) = 196d02c1a9acc62eb19e300df6e2213312b3522a518322dd7eab47559e0884e0
 SHA512 (runtimes-19.1.7.src.tar.xz) = 6b87dafe809b49560c72b9872f4e2795de70c66000af2272ad46fc044e5c88a3415aaa444f80d37946da14127cd4645b2a7420e3e184641215f415b709d801d8
 Size (runtimes-19.1.7.src.tar.xz) = 7224 bytes
-SHA1 (patch-src_CMakeLists.txt) = a9a226497831d5ed54e2b61956f143943d9aa3f4
+SHA1 (patch-src_CMakeLists.txt) = 77f3a681ee57897532754bcd8dc617d431a6121a
