@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3181 2025/05/10 11:14:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3182 2025/05/10 11:38:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4500,3 +4500,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tailspin to 5.4.2 [pin 2025-05-10]
 	Updated lang/nodejs to 24.0.1 [adam 2025-05-10]
 	Updated sysutils/py-structlog to 25.3.0 [adam 2025-05-10]
+	Updated geography/gdal-lib to 3.11.0 [gdt 2025-05-10]
+	Updated geography/py-gdal to 3.11.0 [gdt 2025-05-10]
