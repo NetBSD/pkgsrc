@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/04/08 21:32:04 markd Exp $
+$NetBSD: distinfo,v 1.6 2025/05/10 00:07:55 markd Exp $
 
-BLAKE2s (fdsymbol.r61719.tar.xz) = 2aa65a6078f34135cc33974c79d4cd69c5670e386d9e7d309da08c694b826c89
-SHA512 (fdsymbol.r61719.tar.xz) = e8b2d08c3e64def77a688dc9d96c0b9da9eaa4c942e571578fa0a7e6dff9eb3910ecc66a7be9334ecd41fdc0023f89d8c98facc2d42cd0095c75d6e1b4da69ac
-Size (fdsymbol.r61719.tar.xz) = 920200 bytes
+BLAKE2s (fdsymbol.r74247.tar.xz) = cc1bde3655a8bb0298906d8ae83c45059a4f07522032ee3c0e9726e867212d93
+SHA512 (fdsymbol.r74247.tar.xz) = bedc1dc7e597570dd6602ccc9aa6df3d97d7c079a6fb5aa23d85c7211c597410f24eca6ceff9b1238fadb54f6f214f025c58e58c977049dbc5f61ed121969ce3
+Size (fdsymbol.r74247.tar.xz) = 878624 bytes
