@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/15 08:15:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/10 12:07:32 gdt Exp $
 bin/wormhole-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -261,6 +261,3 @@ ${PYSITELIB}/wormhole/wormhole.pyo
 ${PYSITELIB}/wormhole/xfer_util.py
 ${PYSITELIB}/wormhole/xfer_util.pyc
 ${PYSITELIB}/wormhole/xfer_util.pyo
-wormhole_complete.bash
-wormhole_complete.fish
-wormhole_complete.zsh
