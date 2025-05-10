@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3192 2025/05/10 13:58:30 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3193 2025/05/10 13:59:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4512,3 +4512,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/angle-grinder to 0.19.6 [pin 2025-05-10]
 	Updated devel/bacon to 3.13.0 [pin 2025-05-10]
 	Updated devel/mise to 2025.5.3 [pin 2025-05-10]
+	Updated shells/nushell to 0.104.0 [pin 2025-05-10]
