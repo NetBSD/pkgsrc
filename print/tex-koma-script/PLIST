@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST,v 1.18 2024/03/20 10:17:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/05/10 01:02:13 markd Exp $
 share/texmf-dist/doc/latex/koma-script/MANIFEST.md
 share/texmf-dist/doc/latex/koma-script/README.md
+share/texmf-dist/doc/latex/koma-script/book-remarkbox-nopatch-de.pdf
+share/texmf-dist/doc/latex/koma-script/book-remarkbox-nopatch-en.pdf
+share/texmf-dist/doc/latex/koma-script/book-remarkbox-patch-de.pdf
+share/texmf-dist/doc/latex/koma-script/book-remarkbox-patch-en.pdf
+share/texmf-dist/doc/latex/koma-script/examples/book-remarkbox-nopatch-de.tex
+share/texmf-dist/doc/latex/koma-script/examples/book-remarkbox-nopatch-en.tex
+share/texmf-dist/doc/latex/koma-script/examples/book-remarkbox-patch-de.tex
+share/texmf-dist/doc/latex/koma-script/examples/book-remarkbox-patch-en.tex
 share/texmf-dist/doc/latex/koma-script/examples/ich.lco
 share/texmf-dist/doc/latex/koma-script/examples/letter-example-00-de.pdf
 share/texmf-dist/doc/latex/koma-script/examples/letter-example-00-de.tex
@@ -100,10 +108,6 @@ share/texmf-dist/doc/latex/koma-script/examples/letter-example-23-en.pdf
 share/texmf-dist/doc/latex/koma-script/examples/letter-example-23-en.tex
 share/texmf-dist/doc/latex/koma-script/examples/me.lco
 share/texmf-dist/doc/latex/koma-script/examples/musterlogo.eps
-share/texmf-dist/doc/latex/koma-script/examples/scrjura-example-de.pdf
-share/texmf-dist/doc/latex/koma-script/examples/scrjura-example-de.tex
-share/texmf-dist/doc/latex/koma-script/examples/scrjura-example-en.pdf
-share/texmf-dist/doc/latex/koma-script/examples/scrjura-example-en.tex
 share/texmf-dist/doc/latex/koma-script/examples/scrlayer-notecolumn-example-de.pdf
 share/texmf-dist/doc/latex/koma-script/examples/scrlayer-notecolumn-example-de.tex
 share/texmf-dist/doc/latex/koma-script/examples/scrlayer-notecolumn-example-en.pdf
@@ -119,7 +123,6 @@ share/texmf-dist/doc/latex/koma-script/scrdate.html
 share/texmf-dist/doc/latex/koma-script/scrextend.html
 share/texmf-dist/doc/latex/koma-script/scrguide-de.pdf
 share/texmf-dist/doc/latex/koma-script/scrguide-en.pdf
-share/texmf-dist/doc/latex/koma-script/scrhack.html
 share/texmf-dist/doc/latex/koma-script/scrjura.html
 share/texmf-dist/doc/latex/koma-script/scrkbase.html
 share/texmf-dist/doc/latex/koma-script/scrlayer-notecolumn.html
@@ -139,6 +142,10 @@ share/texmf-dist/doc/latex/koma-script/tocbasic.html
 share/texmf-dist/doc/latex/koma-script/typearea.html
 share/texmf-dist/source/latex/koma-script/doc/authorpart-de.tex
 share/texmf-dist/source/latex/koma-script/doc/authorpart-en.tex
+share/texmf-dist/source/latex/koma-script/doc/book-remarkbox-nopatch-de.tex
+share/texmf-dist/source/latex/koma-script/doc/book-remarkbox-nopatch-en.tex
+share/texmf-dist/source/latex/koma-script/doc/book-remarkbox-patch-de.tex
+share/texmf-dist/source/latex/koma-script/doc/book-remarkbox-patch-en.tex
 share/texmf-dist/source/latex/koma-script/doc/common-compatibility-de.tex
 share/texmf-dist/source/latex/koma-script/doc/common-compatibility-en.tex
 share/texmf-dist/source/latex/koma-script/doc/common-dictum-de.tex
@@ -202,12 +209,8 @@ share/texmf-dist/source/latex/koma-script/doc/scrguide.bib
 share/texmf-dist/source/latex/koma-script/doc/scrguide.cls
 share/texmf-dist/source/latex/koma-script/doc/scrguide.gst
 share/texmf-dist/source/latex/koma-script/doc/scrguide.ist
-share/texmf-dist/source/latex/koma-script/doc/scrhack-de.tex
-share/texmf-dist/source/latex/koma-script/doc/scrhack-en.tex
 share/texmf-dist/source/latex/koma-script/doc/scrjura-de.tex
 share/texmf-dist/source/latex/koma-script/doc/scrjura-en.tex
-share/texmf-dist/source/latex/koma-script/doc/scrjura-example-de.tex
-share/texmf-dist/source/latex/koma-script/doc/scrjura-example-en.tex
 share/texmf-dist/source/latex/koma-script/doc/scrlayer-de.tex
 share/texmf-dist/source/latex/koma-script/doc/scrlayer-en.tex
 share/texmf-dist/source/latex/koma-script/doc/scrlayer-notecolumn-de.tex
@@ -244,7 +247,6 @@ share/texmf-dist/source/latex/koma-script/japanlco.dtx
 share/texmf-dist/source/latex/koma-script/koma-script-source-doc.dtx
 share/texmf-dist/source/latex/koma-script/scraddr.dtx
 share/texmf-dist/source/latex/koma-script/scrextend.dtx
-share/texmf-dist/source/latex/koma-script/scrhack.dtx
 share/texmf-dist/source/latex/koma-script/scrjura.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-addressfiles.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-basics.dtx
@@ -297,23 +299,15 @@ share/texmf-dist/tex/latex/koma-script/SN.lco
 share/texmf-dist/tex/latex/koma-script/SNleft.lco
 share/texmf-dist/tex/latex/koma-script/UScommercial9.lco
 share/texmf-dist/tex/latex/koma-script/UScommercial9DW.lco
-share/texmf-dist/tex/latex/koma-script/float.hak
-share/texmf-dist/tex/latex/koma-script/floatrow.hak
-share/texmf-dist/tex/latex/koma-script/hyperref.hak
 share/texmf-dist/tex/latex/koma-script/koma-script-source-doc.cls
-share/texmf-dist/tex/latex/koma-script/listings.hak
-share/texmf-dist/tex/latex/koma-script/lscape.hak
-share/texmf-dist/tex/latex/koma-script/nomencl.hak
 share/texmf-dist/tex/latex/koma-script/scraddr.sty
 share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 share/texmf-dist/tex/latex/koma-script/scrarticle.cls
 share/texmf-dist/tex/latex/koma-script/scrbase.sty
 share/texmf-dist/tex/latex/koma-script/scrbook.cls
 share/texmf-dist/tex/latex/koma-script/scrdate.sty
-share/texmf-dist/tex/latex/koma-script/scrdoc.cls
 share/texmf-dist/tex/latex/koma-script/scrextend.sty
 share/texmf-dist/tex/latex/koma-script/scrfontsizes.sty
-share/texmf-dist/tex/latex/koma-script/scrhack.sty
 share/texmf-dist/tex/latex/koma-script/scrjura.sty
 share/texmf-dist/tex/latex/koma-script/scrkbase.sty
 share/texmf-dist/tex/latex/koma-script/scrlayer-notecolumn.sty
@@ -333,8 +327,6 @@ share/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
 share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
 share/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
 share/texmf-dist/tex/latex/koma-script/scrtime.sty
-share/texmf-dist/tex/latex/koma-script/setspace.hak
-share/texmf-dist/tex/latex/koma-script/standardsections.hak
 share/texmf-dist/tex/latex/koma-script/tocbasic.sty
 share/texmf-dist/tex/latex/koma-script/typearea.sty
 share/texmf-dist/tex/latex/koma-script/visualize.lco
