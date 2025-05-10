@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3179 2025/05/10 11:00:15 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3180 2025/05/10 11:02:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/qtcreator to 16.0.1 [adam 2025-05-10]
 	Updated devel/py-virtualenv to 20.31.2 [adam 2025-05-10]
 	Updated shells/oh-my-posh to 25.22.0 [pin 2025-05-10]
+	Updated misc/tailspin to 5.4.2 [pin 2025-05-10]
