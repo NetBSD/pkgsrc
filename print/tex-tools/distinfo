@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/02/17 01:37:23 markd Exp $
+$NetBSD: distinfo,v 1.23 2025/05/10 23:58:51 markd Exp $
 
-BLAKE2s (tools.r68941.tar.xz) = 81bee1362be36e2225cb82aadf2c660071fbe230fd4085ee54f5085a1db3702b
-SHA512 (tools.r68941.tar.xz) = 6da3f34edda1c3839737f6ce0db95a899af8c47fe9901a502dbc6a6c95ae9fbe317c7365d6cebe3a20bdce8af0e37b803480f8489de57ccc6daac8a758a5c9d9
-Size (tools.r68941.tar.xz) = 43420 bytes
+BLAKE2s (tools.r72739.tar.xz) = 541713f564f1c3d5aa782493a2556305433165cb81c1a4d9bcd5c655fa4db94d
+SHA512 (tools.r72739.tar.xz) = a6f9ea3cdb3639fb8d99ca452717ac3cd141a118461fa91a7b7389c5befb25d5a1d8cb7d91b792f3c5cf2f9e68a678a11e9f5a5983decca8c77916ba1ea3f27f
+Size (tools.r72739.tar.xz) = 46316 bytes

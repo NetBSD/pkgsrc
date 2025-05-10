@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/05/05 12:01:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/05/10 23:58:51 markd Exp $
 share/texmf-dist/doc/latex/tools/README.md
 share/texmf-dist/doc/latex/tools/afterpage.pdf
 share/texmf-dist/doc/latex/tools/array.pdf
@@ -13,6 +13,7 @@ share/texmf-dist/doc/latex/tools/fontsmpl.pdf
 share/texmf-dist/doc/latex/tools/ftnright.pdf
 share/texmf-dist/doc/latex/tools/hhline.pdf
 share/texmf-dist/doc/latex/tools/indentfirst.pdf
+share/texmf-dist/doc/latex/tools/l3sys-query.pdf
 share/texmf-dist/doc/latex/tools/layout.pdf
 share/texmf-dist/doc/latex/tools/longtable.pdf
 share/texmf-dist/doc/latex/tools/manifest.txt
