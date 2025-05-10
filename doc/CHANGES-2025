@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3184 2025/05/10 12:26:09 wen Exp $
+$NetBSD: CHANGES-2025,v 1.3185 2025/05/10 12:28:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4504,3 +4504,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gdal to 3.11.0 [gdt 2025-05-10]
 	Updated security/p5-Crypt-Curve25519 to 0.08 [wen 2025-05-10]
 	Updated security/p5-Crypt-JWT to 0.037 [wen 2025-05-10]
+	Updated security/p5-Crypt-SMIME to 0.31 [wen 2025-05-10]
