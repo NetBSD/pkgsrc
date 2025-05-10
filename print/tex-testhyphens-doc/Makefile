@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/18 03:38:28 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/10 23:40:30 markd Exp $
 
 DISTNAME=	testhyphens.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.7
-TEXLIVE_REV=	38928
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
+TEXLIVE_REV=	73486
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/testhyphens

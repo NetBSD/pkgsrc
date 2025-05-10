@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2022/04/18 03:38:28 markd Exp $
-share/texmf-dist/doc/latex/testhyphens/README
-share/texmf-dist/doc/latex/testhyphens/manifest.txt
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 23:40:30 markd Exp $
+share/texmf-dist/doc/latex/testhyphens/README.txt
 share/texmf-dist/doc/latex/testhyphens/testhyphens.pdf
