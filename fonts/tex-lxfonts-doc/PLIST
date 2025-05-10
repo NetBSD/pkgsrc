@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 01:37:57 markd Exp $
 share/texmf-dist/doc/fonts/lxfonts/LXfonts-demo.pdf
 share/texmf-dist/doc/fonts/lxfonts/LXfonts-demo.tex
-share/texmf-dist/doc/fonts/lxfonts/LXfonts.readme
-share/texmf-dist/doc/fonts/lxfonts/README
+share/texmf-dist/doc/fonts/lxfonts/README.txt
 share/texmf-dist/doc/fonts/lxfonts/lxfonts.pdf
 share/texmf-dist/doc/fonts/lxfonts/manifest.txt
