@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2025/04/24 14:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/05/10 11:38:35 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 
@@ -10,7 +9,7 @@ COMMENT=	Translator library for raster geospatial data formats, Python binding
 # hard-required must be present, separately from whether it is needed
 # for the python bindings.
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++17 charconv
 
 .include "../../mk/bsd.prefs.mk"
 

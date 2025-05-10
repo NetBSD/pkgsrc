@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.186 2025/04/24 14:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2025/05/10 11:38:35 gdt Exp $
 
-PKGREVISION= 3
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 #PKGREVISION=	0
@@ -47,7 +46,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_LZ4=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ODBC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_OPENEXR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PARQUET=OFF
-CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PCRE2=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_PODOFO=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_POPPLER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
@@ -88,10 +86,12 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 # \todo Enable zstd
 # .include "../../archivers/zstd/buildlink3.mk"
 
+.include "../../mk/atomic64.mk"
+
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"

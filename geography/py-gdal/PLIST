@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/23 13:45:11 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/05/10 11:38:35 gdt Exp $
 bin/gdal2tiles
 bin/gdal2tiles.py
 bin/gdal2xyz
@@ -55,6 +55,9 @@ ${PYSITELIB}/osgeo/gdal.pyo
 ${PYSITELIB}/osgeo/gdal_array.py
 ${PYSITELIB}/osgeo/gdal_array.pyc
 ${PYSITELIB}/osgeo/gdal_array.pyo
+${PYSITELIB}/osgeo/gdal_fsspec.py
+${PYSITELIB}/osgeo/gdal_fsspec.pyc
+${PYSITELIB}/osgeo/gdal_fsspec.pyo
 ${PYSITELIB}/osgeo/gdalconst.py
 ${PYSITELIB}/osgeo/gdalconst.pyc
 ${PYSITELIB}/osgeo/gdalconst.pyo
@@ -229,6 +232,9 @@ ${PYSITELIB}/osgeo_utils/samples/gdal_ls.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_lut.pyo
+${PYSITELIB}/osgeo_utils/samples/gdal_minmax_location.py
+${PYSITELIB}/osgeo_utils/samples/gdal_minmax_location.pyc
+${PYSITELIB}/osgeo_utils/samples/gdal_minmax_location.pyo
 ${PYSITELIB}/osgeo_utils/samples/gdal_mkdir.py
 ${PYSITELIB}/osgeo_utils/samples/gdal_mkdir.pyc
 ${PYSITELIB}/osgeo_utils/samples/gdal_mkdir.pyo
