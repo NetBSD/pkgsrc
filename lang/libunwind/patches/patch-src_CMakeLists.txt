@@ -1,9 +1,14 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.10 2025/05/09 05:51:25 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.11 2025/05/10 17:37:07 tnn Exp $
 
-Fix building assembler files.
-https://github.com/llvm/llvm-project/issues/59978
+- Fix building assembler files.
+  https://github.com/llvm/llvm-project/issues/59978
 
---- src/CMakeLists.txt.orig	2023-01-12 07:12:30.000000000 +0000
+- It checks for -nostdlib++ on the C++ compiler (g++) but then tries to
+  pass it to the C compiler (gcc). This does not work:
+  gcc: error: unrecognized command-line option '-nostdlib++'
+  So use the C++ compiler for linking.
+
+--- src/CMakeLists.txt.orig	2025-01-14 09:41:02.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -1,4 +1,5 @@
  # Get sources
@@ -11,3 +16,12 @@ https://github.com/llvm/llvm-project/issues/59978
  
  set(LIBUNWIND_CXX_SOURCES
      libunwind.cpp
+@@ -168,7 +169,7 @@ if (LIBUNWIND_ENABLE_SHARED)
+   set_target_properties(unwind_shared
+     PROPERTIES
+       LINK_FLAGS "${LIBUNWIND_LINK_FLAGS}"
+-      LINKER_LANGUAGE C
++      LINKER_LANGUAGE CXX
+       OUTPUT_NAME "${LIBUNWIND_SHARED_OUTPUT_NAME}"
+       VERSION "1.0"
+       SOVERSION "1"
