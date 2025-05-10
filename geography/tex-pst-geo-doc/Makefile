@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/04/10 06:21:01 markd Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/10 22:56:11 markd Exp $
 
 DISTNAME=	pst-geo.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.07
-TEXLIVE_REV=	60387
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.09
+TEXLIVE_REV=	74247
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/pst-geo
