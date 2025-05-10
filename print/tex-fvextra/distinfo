@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/02/03 23:56:21 markd Exp $
+$NetBSD: distinfo,v 1.7 2025/05/10 00:29:25 markd Exp $
 
-BLAKE2s (fvextra.r69001.tar.xz) = a7f707c3c323c295b9fa5f72de5e3838ac3a9f28af1c0db63f57c54c0661df79
-SHA512 (fvextra.r69001.tar.xz) = 42c77e74ff16a7aee9f79f8a6f08309742c1168138ccec2a085baad525422119bff6c10ee323e29aa45509789af188eead92379c5bd0d30c5e4a9ae557a0d991
-Size (fvextra.r69001.tar.xz) = 13720 bytes
+BLAKE2s (fvextra.r74460.tar.xz) = 3f11327afa066bfdbb03053eff8af31a3805a7f5b20e4668aef6e65e4d5e980c
+SHA512 (fvextra.r74460.tar.xz) = b12badd8977297a4a208ae53791b48dfcf496cb994cc92331db38fc2a583c201be44db7a83dcdf602371ceb730943b81c8e489da97032c221995a5e0ff66129b
+Size (fvextra.r74460.tar.xz) = 15816 bytes
