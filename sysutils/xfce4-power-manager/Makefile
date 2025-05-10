@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/05/04 06:10:59 vins Exp $
+# $NetBSD: Makefile,v 1.39 2025/05/10 17:21:40 vins Exp $
 
-PKGREVISION= 2
+PKGREVISION=	3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-power-manager-4.20.0
@@ -10,12 +10,24 @@ MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-power-manager/${PKGVERSION
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-power-manager
 COMMENT=	Xfce power manager
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+BUILD_DEFS+=	PKG_SYSCONFBASE
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS:M*BSD} || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-backend=${LOWER_OPSYS}
+.endif
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE} \
+			--enable-x11 \
+			--with-libintl-prefix=${BUILDLINK_PREFIX.gettext-lib}
+
+.include "options.mk"
 
 CONF_FILES=	share/examples/xfce4/autostart/xfce4-power-manager.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/xfce4-power-manager.desktop
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
