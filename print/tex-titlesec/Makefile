@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/02/17 01:30:38 markd Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/10 23:55:00 markd Exp $
 
 DISTNAME=	titlesec
-PKGNAME=	tex-${DISTNAME}-2.16
-TEXLIVE_REV=	68677
+PKGNAME=	tex-${DISTNAME}-2.17
+TEXLIVE_REV=	73302
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/titlesec
