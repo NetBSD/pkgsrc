@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/02/03 23:46:28 markd Exp $
+$NetBSD: distinfo,v 1.20 2025/05/10 00:22:45 markd Exp $
 
-BLAKE2s (fontools.doc.r69241.tar.xz) = ea53db21b88a584c8155832ba29dc1e3b3613fdb70c3d5d037f974d342705798
-SHA512 (fontools.doc.r69241.tar.xz) = bcb3ab7f49e817ef5b6f710bbc227309f28396c6f4233e39e94163663f10db3daaa41b6db93a9ae85a26599dfce352a0c132a36b0c047ecf8f5269f428af4f6c
-Size (fontools.doc.r69241.tar.xz) = 126912 bytes
+BLAKE2s (fontools.doc.r73362.tar.xz) = 14ac90175f54d1270ce2b740d58be0854b39cf9d3e65b0bc9f228f5550c8bac7
+SHA512 (fontools.doc.r73362.tar.xz) = c73793f2c4f636a01f5a293e439967bf4c7f4901c435f96e1bae92bf08544be98d03c5a677d4e4a13b75c99df5af4c592c99f010f2a04f0fe012f1b589c0b4a0
+Size (fontools.doc.r73362.tar.xz) = 133600 bytes
