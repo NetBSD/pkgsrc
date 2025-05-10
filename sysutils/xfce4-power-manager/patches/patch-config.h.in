@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2025/05/10 17:21:40 vins Exp $
+
+Support NetBSD backend.
+
+--- config.h.in.orig	2025-05-10 15:04:24.380772673 +0000
++++ config.h.in
+@@ -12,6 +12,9 @@
+ /* OpenBSD suspend/hibernate backend */
+ #undef BACKEND_TYPE_OPENBSD
+ 
++/* NetBSD suspend/hibernate backend */
++#undef BACKEND_TYPE_NETBSD
++
+ /* Define for debugging support */
+ #undef DEBUG
+ 
