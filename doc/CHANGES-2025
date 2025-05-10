@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3189 2025/05/10 13:45:31 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.3190 2025/05/10 13:55:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4509,3 +4509,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/p5-DateTime-Format-Natural to 1.20 [wen 2025-05-10]
 	Updated www/p5-LWP-ConsoleLogger to 1.000001 [wen 2025-05-10]
 	Updated cross/64tass to 1.60.3243 [rhialto 2025-05-10]
+	Updated textproc/angle-grinder to 0.19.6 [pin 2025-05-10]
