@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/12/26 18:17:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2025/05/10 22:38:02 markd Exp $
 
 DISTNAME=	newtx
-PKGNAME=	tex-${DISTNAME}-1.742
-PKGREVISION=	1
-TEXLIVE_REV=	70491
+PKGNAME=	tex-${DISTNAME}-1.756
+TEXLIVE_REV=	73393
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/newtx
