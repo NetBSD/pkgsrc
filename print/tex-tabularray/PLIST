@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/23 22:38:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 23:31:06 markd Exp $
 share/texmf-dist/tex/latex/tabularray/tabularray-2021.sty
+share/texmf-dist/tex/latex/tabularray/tabularray-2024.sty
 share/texmf-dist/tex/latex/tabularray/tabularray.sty
