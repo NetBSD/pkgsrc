@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/03 11:51:21 markd Exp $
+$NetBSD: distinfo,v 1.8 2025/05/10 23:25:35 markd Exp $
 
-BLAKE2s (standalone.r64677.tar.xz) = 24193fc2bfb855c67083f2710b8797c46c228591e2766c5be99f6e8508599e3a
-SHA512 (standalone.r64677.tar.xz) = 8e74a676232ffe9fbe93ee3a1095c0c29cd65bd23f8e4602308d8fc1abfde9025c01e8ba379782d4c79d3349b4298806419735c624436a7b0c93e2170c592efb
-Size (standalone.r64677.tar.xz) = 11904 bytes
+BLAKE2s (standalone.r74247.tar.xz) = f00d58119067f54372d98b08a133057d8372f9e6b8464de63ae5b5265e31aec9
+SHA512 (standalone.r74247.tar.xz) = 008eb29578af704a0a31cb5817cf14ab39fafc2dbaa7c2a8631e1664ea6b6975f586b9c5327770a5c2ea8b777d11f480e959bd102263a2cb4bc6978485f685d4
+Size (standalone.r74247.tar.xz) = 12452 bytes
