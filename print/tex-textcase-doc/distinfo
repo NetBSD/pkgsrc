@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/02/17 01:27:32 markd Exp $
+$NetBSD: distinfo,v 1.8 2025/05/10 23:53:04 markd Exp $
 
-BLAKE2s (textcase.doc.r67755.tar.xz) = f5742354023576ff260777ec8fb755aa8dbfa6096b8fce2cb520bbca56817d82
-SHA512 (textcase.doc.r67755.tar.xz) = c8b42e576dc6458441703344724bb1ee8f441e79da8d59b1ccb0b6280de878ae65ac48e628f3230ee2094ee285a58636a6e37c29e4458d5f164c36cf4ec93d6c
-Size (textcase.doc.r67755.tar.xz) = 225528 bytes
+BLAKE2s (textcase.doc.r74064.tar.xz) = 2e46ddb0fca23c6149df9492d6ad5272dd93faa985ecd2144014c8af29df188d
+SHA512 (textcase.doc.r74064.tar.xz) = 28dfbeb9663dec54463fb870b419c1c932eed684c3dcb5b2de4e9868858a5ebeb712f666d02f64e773ba7bc0d6c8a023f52fc5e12f9bd076ffa2ad62fde1c9a4
+Size (textcase.doc.r74064.tar.xz) = 226100 bytes
