@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/05 08:39:56 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/10 12:27:33 tnn Exp $
 
 DISTNAME=	deskflow-1.21.2
 CATEGORIES=	net x11
@@ -47,6 +47,7 @@ PLIST_SRC=		PLIST.App
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libportal/buildlink3.mk"
