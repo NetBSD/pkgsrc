@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3177 2025/05/10 07:40:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3178 2025/05/10 10:57:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4494,3 +4494,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-microtype to 3.2a [mark 2025-05-10]
 	Updated print/tex-microtype-doc to 3.2a [mark 2025-05-10]
 	Updated misc/libreoffice to 25.2.0.3nb6 [wiz 2025-05-10]
+	Updated editors/qtcreator to 16.0.1 [adam 2025-05-10]
+	Updated devel/py-virtualenv to 20.31.2 [adam 2025-05-10]
