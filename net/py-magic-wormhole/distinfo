@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2025/04/05 20:02:29 gdt Exp $
+$NetBSD: distinfo,v 1.8 2025/05/10 12:07:32 gdt Exp $
 
 BLAKE2s (magic-wormhole-0.18.0.tar.gz) = 324f9537135847eae873408038550c391c356264fe75e4fa36f4fcd850647470
 SHA512 (magic-wormhole-0.18.0.tar.gz) = 095be448fb654a32ea45808f03b1a0bffd74ee683448085f1e6f14f054c0d2f19f9048270be4ec7b6a0b46872d20613a36e984a0a137bd68ba3d0a237a83d1b2
 Size (magic-wormhole-0.18.0.tar.gz) = 289799 bytes
+SHA1 (patch-setup.py) = e627f004bf8be5943e52cddd7be690663b9da3ec
