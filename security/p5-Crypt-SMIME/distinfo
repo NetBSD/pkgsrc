@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/04/29 07:11:58 wen Exp $
+$NetBSD: distinfo,v 1.8 2025/05/10 12:27:54 wen Exp $
 
-BLAKE2s (Crypt-SMIME-0.30.tar.gz) = beebb450d4d41ae1adc9e68cb29b50b6767abae2c3026a1e559668a387b234e1
-SHA512 (Crypt-SMIME-0.30.tar.gz) = 6e8e3a16803f4381fb6513fb2f4f4fd866dbd11c92f40651dc44dbcb6b2b3d1be4caa9940109b3bb018b0188933477d7f567f403a0d1fe374c63c7b62d4adb82
-Size (Crypt-SMIME-0.30.tar.gz) = 28475 bytes
+BLAKE2s (Crypt-SMIME-0.31.tar.gz) = dd4b858553a8f98a580d480e52d68ae24c15d0acef00146a329c0b777d964d2e
+SHA512 (Crypt-SMIME-0.31.tar.gz) = 27b4d6c6b957aca50d72078532851b8ad98f59e223b503132462c53e67dae7fb8d7b416b649bc09ab0f3d4be0a96340eb43f153f0f670f436b0b4414ec25eccc
+Size (Crypt-SMIME-0.31.tar.gz) = 27085 bytes
