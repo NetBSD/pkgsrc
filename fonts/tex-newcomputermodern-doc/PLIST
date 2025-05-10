@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/14 19:48:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/10 22:34:06 markd Exp $
 share/texmf-dist/doc/fonts/newcomputermodern/README
 share/texmf-dist/doc/fonts/newcomputermodern/colored-diacritics.pdf
 share/texmf-dist/doc/fonts/newcomputermodern/colored-diacritics.tex
 share/texmf-dist/doc/fonts/newcomputermodern/integral.pdf
 share/texmf-dist/doc/fonts/newcomputermodern/integral.tex
+share/texmf-dist/doc/fonts/newcomputermodern/mathkern-example.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/mathkern-example.tex
+share/texmf-dist/doc/fonts/newcomputermodern/mathkern-example2.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/mathkern-example2.tex
 share/texmf-dist/doc/fonts/newcomputermodern/newcm-doc.pdf
 share/texmf-dist/doc/fonts/newcomputermodern/newcm-doc.tex
 share/texmf-dist/doc/fonts/newcomputermodern/newcm-unimath-symbols.ltx
@@ -14,3 +18,5 @@ share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm-cropped.pdf
 share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm.pdf
 share/texmf-dist/doc/fonts/newcomputermodern/opticalmathlm.tex
 share/texmf-dist/doc/fonts/newcomputermodern/source.txz
+share/texmf-dist/doc/fonts/newcomputermodern/testmath-newcm-sans.pdf
+share/texmf-dist/doc/fonts/newcomputermodern/testmath-newcm-sans.tex

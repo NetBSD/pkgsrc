@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/10/22 22:40:11 markd Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/10 22:34:06 markd Exp $
 
 DISTNAME=	newcomputermodern.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-6.0.0
-TEXLIVE_REV=	72225
+PKGNAME=	tex-${DISTNAME:S/./-/}-7.0.2
+TEXLIVE_REV=	74592
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/newcomputermodern
