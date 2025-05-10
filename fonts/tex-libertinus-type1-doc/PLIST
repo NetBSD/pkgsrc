@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/10 01:33:08 markd Exp $
 share/texmf-dist/doc/fonts/libertinus-type1/OFL.txt
 share/texmf-dist/doc/fonts/libertinus-type1/README
+share/texmf-dist/doc/fonts/libertinus-type1/autoinst.sh
 share/texmf-dist/doc/fonts/libertinus-type1/libertinus-samples.pdf
 share/texmf-dist/doc/fonts/libertinus-type1/libertinus-samples.tex
 share/texmf-dist/doc/fonts/libertinus-type1/libertinus-type1.pdf

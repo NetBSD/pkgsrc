@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/10/22 22:58:03 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/05/10 01:33:08 markd Exp $
 
-BLAKE2s (libertinus-type1.r72354.tar.xz) = a29127492082202eedf14e0709ddaf05ed9ccb85d65f9af7f03704c0bd3ece31
-SHA512 (libertinus-type1.r72354.tar.xz) = 99c0cdb0956a2ba108a0a5eecdb337f91b204b6b3e3e876cd73611dd395f57951f870a5539786c8b92ee38695989b1aba7c501c58d2f231939ac1ca8eedb8595
-Size (libertinus-type1.r72354.tar.xz) = 6489200 bytes
+BLAKE2s (libertinus-type1.r73445.tar.xz) = cddd9d7bf0c0e0f42bd19a65a39538f911aacd6097a2ccd757cb66fb0714834d
+SHA512 (libertinus-type1.r73445.tar.xz) = fd1aaf68c72da6d47cf5c2e545425139cd4bd2de193d99fb0c0ce7a3af220f2d9f5b019305500fc8af72f969d511ed84c8269c38bbe6b27f194a1f3538f5aaf9
+Size (libertinus-type1.r73445.tar.xz) = 7732984 bytes
