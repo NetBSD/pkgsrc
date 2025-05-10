@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/02/04 00:20:48 markd Exp $
+# $NetBSD: Makefile,v 1.33 2025/05/10 00:33:04 markd Exp $
 
 DISTNAME=	hyperref
-PKGNAME=	tex-${DISTNAME}-7.01h
-TEXLIVE_REV=	69523
+PKGNAME=	tex-${DISTNAME}-7.01l
+TEXLIVE_REV=	72773
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/hyperref
@@ -17,13 +17,17 @@ DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-gettitlestring-[0-9]*:../../print/tex-gettitlestring
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 DEPENDS+=	tex-hycolor-[0-9]*:../../print/tex-hycolor
+DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
+DEPENDS+=	tex-infwarerr-[0-9]*:../../print/tex-infwarerr
 DEPENDS+=	tex-intcalc-[0-9]*:../../print/tex-intcalc
 DEPENDS+=	tex-kvdefinekeys-[0-9]*:../../print/tex-kvdefinekeys
+DEPENDS+=	tex-kvoptions-[0-9]*:../../print/tex-kvoptions
 DEPENDS+=	tex-kvsetkeys-[0-9]*:../../print/tex-kvsetkeys
 DEPENDS+=	tex-latex-bin>=2009nb1:../../print/tex-latex-bin
 DEPENDS+=	tex-letltxmacro-[0-9]*:../../print/tex-letltxmacro
 DEPENDS+=	tex-ltxcmds-[0-9]*:../../print/tex-ltxcmds
 DEPENDS+=	tex-pdfescape-[0-9]*:../../print/tex-pdfescape
+DEPENDS+=	tex-pdftexcmds-[0-9]*:../../print/tex-pdftexcmds
 DEPENDS+=	tex-refcount-[0-9]*:../../print/tex-refcount
 DEPENDS+=	tex-rerunfilecheck-[0-9]*:../../print/tex-rerunfilecheck
 DEPENDS+=	tex-stringenc-[0-9]*:../../print/tex-stringenc
