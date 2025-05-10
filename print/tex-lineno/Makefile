@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/06/11 07:15:59 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/10 01:35:38 markd Exp $
 
 DISTNAME=	lineno
-PKGNAME=	tex-${DISTNAME}-5.3
-TEXLIVE_REV=	67171
+PKGNAME=	tex-${DISTNAME}-5.4
+TEXLIVE_REV=	73638
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/lineno
