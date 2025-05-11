@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2025/04/24 14:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/05/11 17:10:38 gdt Exp $
 
-DISTNAME=	gajim-1.9.5
-PKGREVISION=	3
+DISTNAME=	gajim-2.0.4
 CATEGORIES=	chat
 MASTER_SITES=	https://www.gajim.org/downloads/${PKGVERSION_NOREV:R}/
 
@@ -11,15 +10,17 @@ COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-cairo>=1.16.0:../../graphics/py-cairo
+
+# DEPENDS following README.md:
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-emoji>=2.6.0:../../converters/py-emoji
-DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.42.0:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-nbxmpp>=5.0.4:../../chat/py-nbxmpp
 DEPENDS+=	${PYPKGPREFIX}-omemo-dr>=1.0.0:../../security/py-omemo-dr
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.42.0:../../devel/py-gobject3
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-cairo>=1.16.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-precis-i18n>=1.0.0:../../textproc/py-precis-i18n
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=7.3.1:../../graphics/py-qrcode
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=2.0.0:../../databases/py-sqlalchemy
@@ -48,7 +49,19 @@ SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
+
+# bl3 following README.md
+# cairo
+# pango
+PYTHON_VERSIONED_DEPENDENCIES+=		cryptography
+# glib2
+# gtk4
+.include "../../x11/gtksourceview5/buildlink3.mk"
+# not documented
+PYTHON_VERSIONED_DEPENDENCIES+=		OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
-.include "../../x11/gtksourceview4/buildlink3.mk"
+
+# optional
+.include "../../security/libsecret/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
