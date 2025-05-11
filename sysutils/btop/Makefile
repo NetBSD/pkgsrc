@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/03/11 12:28:49 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/11 10:18:07 wiz Exp $
 
-DISTNAME=	btop-1.4.0
+DISTNAME=	btop-1.4.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/aristocratos/btop
 COMMENT=	Colorful TTY resource monitor
 LICENSE=	apache-2.0
+
+TOOL_DEPENDS+=	lowdown-[0-9]*:../../textproc/lowdown
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -19,15 +21,6 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 CXXFLAGS+=	-DNDEBUG
 MAKE_ENV+=	STRIP=true VERBOSE=true
-
-post-extract:
-	${CHMOD} -R g-w ${WRKSRC}
-
-post-build:
-	${CP} ${FILESDIR}/btop.1 ${WRKDIR}/btop.1
-
-post-install:
-	${INSTALL_MAN} ${WRKDIR}/btop.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/atomic64.mk"
