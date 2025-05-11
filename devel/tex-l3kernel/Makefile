@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2024/03/20 10:29:36 markd Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/11 11:02:53 markd Exp $
 
 DISTNAME=	l3kernel
-PKGNAME=	tex-${DISTNAME}-2024.70637
-TEXLIVE_REV=	70637
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	75045
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/l3kernel
