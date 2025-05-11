@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3206 2025/05/11 10:21:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3207 2025/05/11 10:24:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4662,3 +4662,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/xournalpp to 1.2.7 [wiz 2025-05-11]
 	Updated sysutils/btop to 1.4.3 [wiz 2025-05-11]
 	Updated fonts/py-fonttools to 4.58.0 [wiz 2025-05-11]
+	Updated security/py-google-auth to 2.40.1 [wiz 2025-05-11]
