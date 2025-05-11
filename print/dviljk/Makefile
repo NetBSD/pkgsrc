@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2024/03/21 08:15:43 markd Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/11 02:47:20 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dviljk-2.6.5
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/texlive/
