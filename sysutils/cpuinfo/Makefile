@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/23 21:54:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/11 08:25:29 wiz Exp $
 
 DISTNAME=	cpuinfo-0.0.20250219
 CATEGORIES=	sysutils
@@ -13,6 +13,9 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES+=		c
 
 PKGCONFIG_OVERRIDE=	libcpuinfo.pc.in
+
+# not supported by upstream, work started in wip/cpuinfo
+BROKEN_ON_PLATFORM+=	NetBSD-*-*
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
