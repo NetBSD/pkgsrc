@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2024/06/24 09:23:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/11 02:50:38 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	bibtex8-4.02
+PKGREVISION=	1
 CATEGORIES=	print
 
 HOMEPAGE=	https://ctan.org/pkg/bibtex8
