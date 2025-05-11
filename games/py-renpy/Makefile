@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/04/12 06:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/05/11 14:08:33 ryoon Exp $
 
-DISTNAME=	renpy-8.1.3-source
+DISTNAME=	renpy-8.3.7-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
-PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	https://www.renpy.org/dl/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,16 +11,21 @@ HOMEPAGE=	https://www.renpy.org/
 COMMENT=	Visual Novel Engine written in Python
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312 313
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES+=	gnu99
 
-DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+DEPENDS+=	${PYPKGPREFIX}-future>=1.0.0:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-pefile-[0-9]*:../../sysutils/py-pefile
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ecdsa-[0-9]*:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} > 312
+DEPENDS+=	${PYPKGPREFIX}-legacy-cgi-[0-9]*:../../www/py-legacy-cgi
+.endif
 
 USE_TOOLS+=	pax
 PYSETUPSUBDIR=	module
