@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2023/04/02 11:42:10 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/11 00:06:35 markd Exp $
 
 DISTNAME=	undolabl
-PKGNAME=	tex-${DISTNAME}-1.0m
-TEXLIVE_REV=	65846
+PKGNAME=	tex-${DISTNAME}-1.0o
+TEXLIVE_REV=	73633
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/undolabl
