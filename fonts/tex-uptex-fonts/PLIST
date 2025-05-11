@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 09:02:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/11 00:11:30 markd Exp $
 share/texmf-dist/fonts/cmap/uptex-fonts/UTF8-UTF16
 share/texmf-dist/fonts/cmap/uptex-fonts/UniJIS2004up-UTF16-H
 share/texmf-dist/fonts/cmap/uptex-fonts/UniJIS2004up-UTF16-V
@@ -8,8 +8,21 @@ share/texmf-dist/fonts/cmap/uptex-fonts/cid_mapping.md
 share/texmf-dist/fonts/source/uptex-fonts/Makefile
 share/texmf-dist/fonts/source/uptex-fonts/makejvf-upjis.cnf
 share/texmf-dist/fonts/source/uptex-fonts/makejvf-upjpn.cnf
+share/texmf-dist/fonts/source/uptex-fonts/makejvf-upkor.cnf
+share/texmf-dist/fonts/source/uptex-fonts/makejvf-upsch.cnf
+share/texmf-dist/fonts/source/uptex-fonts/makejvf-uptch.cnf
 share/texmf-dist/fonts/source/uptex-fonts/makepl.perl
+share/texmf-dist/fonts/source/uptex-fonts/mk_svs_entry.perl
+share/texmf-dist/fonts/source/uptex-fonts/mk_svs_tex.perl
 share/texmf-dist/fonts/source/uptex-fonts/punctuation.md
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_c.txt
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_j.txt
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_jpn.entry
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_k.txt
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_kor.entry
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_sch.entry
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_t.txt
+share/texmf-dist/fonts/source/uptex-fonts/svs_list_tch.entry
 share/texmf-dist/fonts/source/uptex-fonts/upjisr-h-hk.pl
 share/texmf-dist/fonts/source/uptex-fonts/upjisr-h.pl
 share/texmf-dist/fonts/source/uptex-fonts/upjisr-v.pl
