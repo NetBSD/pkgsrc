@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3221 2025/05/11 16:17:08 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3222 2025/05/11 17:10:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4696,3 +4696,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-tex4ht to 2025 [mark 2025-05-11]
 	Updated print/tex-tex4ht-doc to 2025 [mark 2025-05-11]
 	Updated www/ruby-aws-partitions to 1.1102.0 [taca 2025-05-11]
+	Updated chat/gajim to 2.0.4 [gdt 2025-05-11]
