@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/03/21 07:48:42 markd Exp $
+# $NetBSD: Makefile,v 1.38 2025/05/11 02:43:13 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	kpathsea-6.4.0
+PKGNAME=	kpathsea-6.4.1
 CATEGORIES=	print
 
 HOMEPAGE=	https://ctan.org/pkg/kpathsea
