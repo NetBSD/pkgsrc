@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2022/06/28 11:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/11 11:13:26 markd Exp $
 
 DISTNAME=	texlive-scripts-extra
-PKGNAME=	tex-${DISTNAME}-2020
-PKGREVISION=	3
-TEXLIVE_REV=	54744
+PKGNAME=	tex-${DISTNAME}-2024
+TEXLIVE_REV=	71746
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	More TeXLive scripts
