@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3204 2025/05/11 10:14:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3205 2025/05/11 10:18:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4660,3 +4660,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/geeqie to 2.6 [wiz 2025-05-11]
 	Updated graphics/libavif to 1.3.0 [wiz 2025-05-11]
 	Updated editors/xournalpp to 1.2.7 [wiz 2025-05-11]
+	Updated sysutils/btop to 1.4.3 [wiz 2025-05-11]
