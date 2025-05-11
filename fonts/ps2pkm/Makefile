@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2024/03/21 08:03:27 markd Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/11 02:52:38 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	ps2pkm-1.8
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/texlive/
