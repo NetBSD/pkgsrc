@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.56 2025/04/13 08:16:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2025/05/11 10:21:10 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
 bin/ttx-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fontTools/__init__.py
 ${PYSITELIB}/fontTools/__init__.pyc
 ${PYSITELIB}/fontTools/__init__.pyo
@@ -539,6 +533,9 @@ ${PYSITELIB}/fontTools/ttLib/tables/G_P_O_S_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/G_S_U_B_.py
 ${PYSITELIB}/fontTools/ttLib/tables/G_S_U_B_.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/G_S_U_B_.pyo
+${PYSITELIB}/fontTools/ttLib/tables/G_V_A_R_.py
+${PYSITELIB}/fontTools/ttLib/tables/G_V_A_R_.pyc
+${PYSITELIB}/fontTools/ttLib/tables/G_V_A_R_.pyo
 ${PYSITELIB}/fontTools/ttLib/tables/G__l_a_t.py
 ${PYSITELIB}/fontTools/ttLib/tables/G__l_a_t.pyc
 ${PYSITELIB}/fontTools/ttLib/tables/G__l_a_t.pyo
@@ -831,6 +828,9 @@ ${PYSITELIB}/fontTools/unicode.pyo
 ${PYSITELIB}/fontTools/unicodedata/Blocks.py
 ${PYSITELIB}/fontTools/unicodedata/Blocks.pyc
 ${PYSITELIB}/fontTools/unicodedata/Blocks.pyo
+${PYSITELIB}/fontTools/unicodedata/Mirrored.py
+${PYSITELIB}/fontTools/unicodedata/Mirrored.pyc
+${PYSITELIB}/fontTools/unicodedata/Mirrored.pyo
 ${PYSITELIB}/fontTools/unicodedata/OTTags.py
 ${PYSITELIB}/fontTools/unicodedata/OTTags.pyc
 ${PYSITELIB}/fontTools/unicodedata/OTTags.pyo
@@ -935,6 +935,9 @@ ${PYSITELIB}/fontTools/varLib/varStore.pyo
 ${PYSITELIB}/fontTools/voltLib/__init__.py
 ${PYSITELIB}/fontTools/voltLib/__init__.pyc
 ${PYSITELIB}/fontTools/voltLib/__init__.pyo
+${PYSITELIB}/fontTools/voltLib/__main__.py
+${PYSITELIB}/fontTools/voltLib/__main__.pyc
+${PYSITELIB}/fontTools/voltLib/__main__.pyo
 ${PYSITELIB}/fontTools/voltLib/ast.py
 ${PYSITELIB}/fontTools/voltLib/ast.pyc
 ${PYSITELIB}/fontTools/voltLib/ast.pyo
@@ -950,4 +953,11 @@ ${PYSITELIB}/fontTools/voltLib/parser.pyo
 ${PYSITELIB}/fontTools/voltLib/voltToFea.py
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyc
 ${PYSITELIB}/fontTools/voltLib/voltToFea.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.external
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ttx-${PYVERSSUFFIX}.1
