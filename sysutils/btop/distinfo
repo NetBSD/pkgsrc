@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/10/06 10:43:17 fox Exp $
+$NetBSD: distinfo,v 1.2 2025/05/11 10:18:07 wiz Exp $
 
-BLAKE2s (btop-1.4.0.tar.gz) = 88ac532097420f31d44f89afbfb18e9cbd1bf16686c32f736bb88e25b34687c1
-SHA512 (btop-1.4.0.tar.gz) = 7b7c63daf68192893ae4533c04ea70dcd6f253e188b1c842f2ebebac0b28e51431edef6ccfce5b25b3adbd5b2b637fc832bce7d5d64d664c2bf5c4672be75c8f
-Size (btop-1.4.0.tar.gz) = 1239400 bytes
+BLAKE2s (btop-1.4.3.tar.gz) = e6f7690c92dfe513275e0c0c8360596d24ba9be673bb31536496a3e9f3606ef1
+SHA512 (btop-1.4.3.tar.gz) = 4a63c57d9d12549528055d3e509816123966a2143ed8c8cbc76d4c417ac8729265ef1be3102f5a00bc36b1a15786a089eaef05e6ec43382d65fd52ebcea03a4c
+Size (btop-1.4.3.tar.gz) = 1245882 bytes
 SHA1 (patch-Makefile) = 87cd9333e786899109df3a931c6d0e99fbd017de
