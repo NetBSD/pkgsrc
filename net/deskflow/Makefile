@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/05/10 12:27:33 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/11 17:38:26 tnn Exp $
 
 DISTNAME=	deskflow-1.21.2
 CATEGORIES=	net x11
@@ -25,6 +25,8 @@ TOMLPP_VERSION=		3.4.0
 DISTFILES+=		toml-${TOMLPP_VERSION}.hpp
 SITES.toml-${TOMLPP_VERSION}.hpp=	\
 			-https://raw.githubusercontent.com/marzer/tomlplusplus/refs/tags/v${TOMLPP_VERSION}/toml.hpp
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
