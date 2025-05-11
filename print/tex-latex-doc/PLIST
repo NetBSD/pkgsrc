@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/01/09 09:51:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/05/11 01:03:45 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -139,6 +139,8 @@ share/texmf-dist/doc/latex/base/ltnews38.pdf
 share/texmf-dist/doc/latex/base/ltnews38.tex
 share/texmf-dist/doc/latex/base/ltnews39.pdf
 share/texmf-dist/doc/latex/base/ltnews39.tex
+share/texmf-dist/doc/latex/base/ltnews40.pdf
+share/texmf-dist/doc/latex/base/ltnews40.tex
 share/texmf-dist/doc/latex/base/ltpara-code.pdf
 share/texmf-dist/doc/latex/base/ltpara-code.tex
 share/texmf-dist/doc/latex/base/ltpara-doc.pdf
@@ -155,6 +157,10 @@ share/texmf-dist/doc/latex/base/ltsockets-code.pdf
 share/texmf-dist/doc/latex/base/ltsockets-code.tex
 share/texmf-dist/doc/latex/base/ltsockets-doc.pdf
 share/texmf-dist/doc/latex/base/ltsockets-doc.tex
+share/texmf-dist/doc/latex/base/lttemplates-code.pdf
+share/texmf-dist/doc/latex/base/lttemplates-code.tex
+share/texmf-dist/doc/latex/base/lttemplates-doc.pdf
+share/texmf-dist/doc/latex/base/lttemplates-doc.tex
 share/texmf-dist/doc/latex/base/ltx3info.pdf
 share/texmf-dist/doc/latex/base/ltx3info.tex
 share/texmf-dist/doc/latex/base/ltxdoc.pdf
