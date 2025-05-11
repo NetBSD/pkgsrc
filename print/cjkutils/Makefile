@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2024/03/21 08:12:41 markd Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/11 02:48:46 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	cjkutils-4.8.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
 HOMEPAGE=	https://cjk.ffii.org/
 COMMENT=	Utilities for CJK LaTeX
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-cjkutils>=4.8.3:../../print/tex-cjkutils
 
