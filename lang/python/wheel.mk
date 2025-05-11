@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.21 2025/04/11 22:07:54 gdt Exp $
+# $NetBSD: wheel.mk,v 1.22 2025/05/11 19:34:25 gdt Exp $
 #
 # Build and install Python wheels
 #
@@ -17,6 +17,10 @@
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
+#
+# wheel.mk does not implement USE_PKG_RESOURCES (which is deprecated);
+# packages that need that should DEPENDS (not just BUILD_DEPENDS) on
+# setuptools.
 
 # Variables:
 #
