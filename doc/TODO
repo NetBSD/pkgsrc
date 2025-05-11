@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25787 2025/05/11 10:18:19 wiz Exp $
+$NetBSD: TODO,v 1.25788 2025/05/11 10:21:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1130,7 +1130,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
-	o py-fonttools-4.58.0
 	o py-gammu-3.1
 	o py-google-auth-2.40.1
 	o py-grpcio-1.71.0
