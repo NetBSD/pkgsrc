@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2024/03/24 11:06:27 markd Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/11 04:02:21 markd Exp $
 
 DISTNAME=	xetex
-PKGNAME=	tex-${DISTNAME}-2024
-TEXLIVE_REV=	70088
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73850
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xetex
@@ -12,6 +12,7 @@ LICENSE=	x11
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-graphics-def-[0-9]*:../../print/tex-graphics-def
+DEPENDS+=	tex-knuth-lib-[0-9]*:../../fonts/tex-knuth-lib
 DEPENDS+=	tex-l3backend-[0-9]*:../../devel/tex-l3backend
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
