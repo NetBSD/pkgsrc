@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3216 2025/05/11 10:46:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3217 2025/05/11 10:51:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4672,3 +4672,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-urwid to 3.0.2 [wiz 2025-05-11]
 	Updated devel/py-click to 8.2.0 [wiz 2025-05-11]
 	Updated devel/uv to 0.7.3 [wiz 2025-05-11]
+	Updated graphics/py-matplotlib to 3.10.3 [wiz 2025-05-11]
