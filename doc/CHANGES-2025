@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3197 2025/05/11 03:06:31 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3198 2025/05/11 04:28:45 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4636,3 +4636,21 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/mendexk to 3.8 [markd 2025-05-11]
 	Updated textproc/upmendex to 1.11 [markd 2025-05-11]
 	Updated textproc/xindy to 2.5.1nb12 [markd 2024-03-21]
+	Updated print/tex-footmisc to 7.0b [mark 2025-05-11]
+	Updated print/tex-footmisc-doc to 7.0b [mark 2025-05-11]
+	Updated print/tex-latex-bin to 2025 [mark 2025-05-11]
+	Updated print/tex-latex-bin-doc to 2025 [mark 2025-05-11]
+	Updated print/tex-latex-base-dev to 20250601pre3 [mark 2025-05-11]
+	Updated print/tex-latex-base-dev-doc to 20250601pre3 [mark 2025-05-11]
+	Updated print/tex-latex-firstaid-dev to 1.1n [mark 2025-05-11]
+	Updated print/tex-latex-firstaid-dev-doc to 1.1n [mark 2025-05-11]
+	Updated print/tex-siunitx to 3.4.10 [mark 2025-05-11]
+	Updated print/tex-siunitx-doc to 3.4.10 [mark 2025-05-11]
+	Updated print/tex-xetex to 2025 [mark 2025-05-11]
+	Updated print/tex-xetex-doc to 2025 [mark 2025-05-11]
+	Updated textproc/tex-xmltex to 1.9.71362 [mark 2025-05-11]
+	Updated textproc/tex-xmltex-doc to 1.9.71362 [mark 2025-05-11]
+	Updated print/tex-luatex to 1.21.0 [mark 2025-05-11]
+	Updated print/tex-luatex-doc to 1.21.0 [mark 2025-05-11]
+	Updated print/tex-kpathsea to 2025 [mark 2025-05-11]
+	Updated print/tex-kpathsea-doc to 2025 [mark 2025-05-11]
