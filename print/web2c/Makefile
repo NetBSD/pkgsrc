@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.117 2024/04/07 07:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/05/11 02:33:00 markd Exp $
 
-PKGREVISION= 1
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	web2c-2024
+PKGNAME=	web2c-2025
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
+LICENSE=	public-domain
 
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
 DEPENDS+=	ptexenc>=1.4.0:../../print/ptexenc
