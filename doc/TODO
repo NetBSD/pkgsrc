@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25782 2025/05/10 19:23:47 wiz Exp $
+$NetBSD: TODO,v 1.25783 2025/05/11 08:49:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.38.0
 	o asymptote-3.01
 	o audacity-3.5
 	o authelia-4.28.0
@@ -493,6 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o botan-2.19.5
 	o bottlerocket-0.05b3
 	o box2d-3.1.0
+	o btop-1.4.3
 	o bugzilla3-3.6.13
 	o cacti-1.2.19
 	o cacti-spine-1.2.16
@@ -655,6 +657,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcombust-0.1.55
 	o gdb-16.1
 	o gdb7-7.12
+	o geeqie-2.6
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
@@ -730,7 +733,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.6.1
+	o grafana-12.0.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -812,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.29.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -844,6 +848,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
+	o libavif-1.3.0
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libburn-1.5.4
@@ -1121,27 +1126,38 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
+	o py-click-8.2.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-10.0.1
+	o py-cython-3.1.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.58.0
 	o py-gammu-3.1
+	o py-google-auth-2.40.1
 	o py-grpcio-1.71.0
 	o py-hgview-1.9.0
+	o py-icalendar-6.2.0
 	o py-input-pad-1.4.2
+	o py-matplotlib-3.10.3
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-platformdirs-4.3.8
 	o py-postgresql-5.1.2
 	o py-protobuf-6.30.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-sbws-1.1.0
-	o py-setuptools-80.3.0
+	o py-setuptools-80.4.0
 	o py-simpletal-5.1
+	o py-snowballstemmer-3.0.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
+	o py-trove-classifiers-2025.5.9.12
 	o py-uliweb-0.6
+	o py-urwid-3.0.2
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.3
@@ -1226,7 +1242,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
-	o speech-dispatcher-0.12.0
+	o speech-dispatcher-0.12.1
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.0
@@ -1315,6 +1331,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o uv-0.7.3
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
@@ -1376,6 +1393,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xorp-1.8.5
+	o xournalpp-1.2.7
 	o xpad-5.4.0
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
