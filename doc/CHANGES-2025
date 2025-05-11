@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3201 2025/05/11 07:32:37 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3202 2025/05/11 10:10:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4657,3 +4657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/p5-Math-Pari to 2.030528 [wiz 2025-05-11]
 	Updated www/p5-URI to 5.32 [wiz 2025-05-11]
 	Updated devel/yyjson to 0.11.0 [vins 2025-05-11]
+	Updated graphics/geeqie to 2.6 [wiz 2025-05-11]
