@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2025/02/27 21:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.106 2025/05/11 10:51:03 wiz Exp $
 
-DISTNAME=	matplotlib-3.10.1
+DISTNAME=	matplotlib-3.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -42,8 +42,8 @@ PYTHON_FOR_BUILD_ONLY=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39	# py-kiwisolver
 
-# as of 3.9.2
-# 929 failed, 6804 passed, 1786 skipped, 33 xfailed
+# as of 3.10.3
+# 906 failed, 7073 passed, 1599 skipped, 32 xfailed
 # possible additional test dependencies to pass more tests include
 # pandas, py-qt*, pikepdf, tex, qt, ghostscript, ...
 # py-test command line comes from https://github.com/matplotlib/matplotlib/issues/28260
