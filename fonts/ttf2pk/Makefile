@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.44 2024/03/21 08:05:22 markd Exp $
+# $NetBSD: Makefile,v 1.45 2025/05/11 02:52:00 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	ttf2pk-2.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	fonts print
 
 MAINTAINER=	bernhard@SDG.de
 HOMEPAGE=	https://www.freetype.org/
 COMMENT=	TrueType to TeX PK font converter
+LICENSE=	gnu-gpl-v2
 
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/ttf2pk2
 
