@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2025/05/09 05:51:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2025/05/11 00:20:55 tnn Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/c-index-test
@@ -876,16 +876,16 @@ lib/clang/19/include/amxfp16intrin.h
 lib/clang/19/include/amxintrin.h
 lib/clang/19/include/arm64intr.h
 lib/clang/19/include/arm_acle.h
-lib/clang/19/include/arm_bf16.h
-lib/clang/19/include/arm_cde.h
+${PLIST.ARM}lib/clang/19/include/arm_bf16.h
+${PLIST.ARM}lib/clang/19/include/arm_cde.h
 lib/clang/19/include/arm_cmse.h
-lib/clang/19/include/arm_fp16.h
-lib/clang/19/include/arm_mve.h
-lib/clang/19/include/arm_neon.h
+${PLIST.ARM}lib/clang/19/include/arm_fp16.h
+${PLIST.ARM}lib/clang/19/include/arm_mve.h
+${PLIST.ARM}lib/clang/19/include/arm_neon.h
 lib/clang/19/include/arm_neon_sve_bridge.h
-lib/clang/19/include/arm_sme.h
-lib/clang/19/include/arm_sve.h
-lib/clang/19/include/arm_vector_types.h
+${PLIST.ARM}lib/clang/19/include/arm_sme.h
+${PLIST.ARM}lib/clang/19/include/arm_sve.h
+${PLIST.ARM}lib/clang/19/include/arm_vector_types.h
 lib/clang/19/include/armintr.h
 lib/clang/19/include/avx2intrin.h
 lib/clang/19/include/avx512bf16intrin.h
@@ -1019,7 +1019,7 @@ lib/clang/19/include/rdseedintrin.h
 lib/clang/19/include/riscv_bitmanip.h
 lib/clang/19/include/riscv_crypto.h
 lib/clang/19/include/riscv_ntlh.h
-lib/clang/19/include/riscv_vector.h
+${PLIST.RISCV}lib/clang/19/include/riscv_vector.h
 lib/clang/19/include/rtmintrin.h
 lib/clang/19/include/s390intrin.h
 lib/clang/19/include/serializeintrin.h
