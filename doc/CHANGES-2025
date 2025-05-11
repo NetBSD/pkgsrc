@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3199 2025/05/11 06:41:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3200 2025/05/11 06:41:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4655,3 +4655,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-kpathsea to 2025 [mark 2025-05-11]
 	Updated print/tex-kpathsea-doc to 2025 [mark 2025-05-11]
 	Updated math/p5-Math-Pari to 2.030528 [wiz 2025-05-11]
+	Updated www/p5-URI to 5.32 [wiz 2025-05-11]
