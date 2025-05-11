@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/03/20 11:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/11 01:05:49 markd Exp $
 
 DISTNAME=	tex-ini-files
-PKGNAME=	tex-${DISTNAME}-2023
-TEXLIVE_REV=	68920
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	73863
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tex-ini-files
