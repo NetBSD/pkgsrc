@@ -1,8 +1,8 @@
-$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.8 2023/04/11 00:04:33 markd Exp $
+$NetBSD: patch-texmf-dist_web2c_texmfcnf.lua,v 1.9 2025/05/11 04:17:39 markd Exp $
 
 Set paths to texmf trees for pkgsrc.
 
---- texmf-dist/web2c/texmfcnf.lua.orig	2023-03-11 21:00:25.000000000 +0000
+--- texmf-dist/web2c/texmfcnf.lua.orig	2025-02-08 18:30:19.000000000 +0000
 +++ texmf-dist/web2c/texmfcnf.lua
 @@ -48,11 +48,13 @@ return {
  
@@ -27,4 +27,4 @@ Set paths to texmf trees for pkgsrc.
 +            TEXMFSYSCONFIG  = "@PKG_SYSCONFDIR@",
  
              -- The texmf-local path is only used for (maybe) some additional configuration file.
- 
+ 	    -- Changed texmf-local to use ../ per Bruno Voisin,
