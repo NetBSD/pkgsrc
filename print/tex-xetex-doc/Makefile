@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/03/24 11:06:27 markd Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/11 04:02:21 markd Exp $
 
 DISTNAME=	xetex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2024
-TEXLIVE_REV=	70088
+PKGNAME=	tex-${DISTNAME:S/./-/}-2025
+TEXLIVE_REV=	73850
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/xetex
