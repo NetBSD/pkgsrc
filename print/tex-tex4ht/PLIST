@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/03/20 11:19:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/05/11 12:05:18 markd Exp $
 share/texmf-dist/scripts/tex4ht/htcopy.pl
 share/texmf-dist/scripts/tex4ht/htmove.pl
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
@@ -68,6 +68,8 @@ share/texmf-dist/tex/generic/tex4ht/biblatex.4ht
 share/texmf-dist/tex/generic/tex4ht/bibtex.4ht
 share/texmf-dist/tex/generic/tex4ht/bibtex2.4ht
 share/texmf-dist/tex/generic/tex4ht/bibtopic.4ht
+share/texmf-dist/tex/generic/tex4ht/bigfoot-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/bigfoot.4ht
 share/texmf-dist/tex/generic/tex4ht/bm.4ht
 share/texmf-dist/tex/generic/tex4ht/book.4ht
 share/texmf-dist/tex/generic/tex4ht/bookmark-hooks.4ht
@@ -93,6 +95,7 @@ share/texmf-dist/tex/generic/tex4ht/citation-style-language.4ht
 share/texmf-dist/tex/generic/tex4ht/cleveref-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/cleveref.4ht
 share/texmf-dist/tex/generic/tex4ht/color.4ht
+share/texmf-dist/tex/generic/tex4ht/colortbl-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/colortbl.4ht
 share/texmf-dist/tex/generic/tex4ht/combine.4ht
 share/texmf-dist/tex/generic/tex4ht/cond4ht.4ht
@@ -146,6 +149,7 @@ share/texmf-dist/tex/generic/tex4ht/endnotes.4ht
 share/texmf-dist/tex/generic/tex4ht/english.4ht
 share/texmf-dist/tex/generic/tex4ht/enotez.4ht
 share/texmf-dist/tex/generic/tex4ht/enumerate.4ht
+share/texmf-dist/tex/generic/tex4ht/enumitem-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/enumitem.4ht
 share/texmf-dist/tex/generic/tex4ht/epigraph.4ht
 share/texmf-dist/tex/generic/tex4ht/eplain.4ht
@@ -156,6 +160,7 @@ share/texmf-dist/tex/generic/tex4ht/esopic-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/esperant.4ht
 share/texmf-dist/tex/generic/tex4ht/esperanto.4ht
 share/texmf-dist/tex/generic/tex4ht/estonian.4ht
+share/texmf-dist/tex/generic/tex4ht/esvect.4ht
 share/texmf-dist/tex/generic/tex4ht/eucal.4ht
 share/texmf-dist/tex/generic/tex4ht/euler.4ht
 share/texmf-dist/tex/generic/tex4ht/europecv.4ht
@@ -199,6 +204,7 @@ share/texmf-dist/tex/generic/tex4ht/framed.4ht
 share/texmf-dist/tex/generic/tex4ht/francais.4ht
 share/texmf-dist/tex/generic/tex4ht/french.4ht
 share/texmf-dist/tex/generic/tex4ht/frenchb.4ht
+share/texmf-dist/tex/generic/tex4ht/fvextra.4ht
 share/texmf-dist/tex/generic/tex4ht/g-brief.4ht
 share/texmf-dist/tex/generic/tex4ht/galician.4ht
 share/texmf-dist/tex/generic/tex4ht/gauss.4ht
@@ -262,6 +268,9 @@ share/texmf-dist/tex/generic/tex4ht/jsmath.4ht
 share/texmf-dist/tex/generic/tex4ht/jsml-math.4ht
 share/texmf-dist/tex/generic/tex4ht/jsml.4ht
 share/texmf-dist/tex/generic/tex4ht/jurabib.4ht
+share/texmf-dist/tex/generic/tex4ht/jurabook.4ht
+share/texmf-dist/tex/generic/tex4ht/juraovw.4ht
+share/texmf-dist/tex/generic/tex4ht/juraurtl.4ht
 share/texmf-dist/tex/generic/tex4ht/koi8-r.4ht
 share/texmf-dist/tex/generic/tex4ht/latex.4ht
 share/texmf-dist/tex/generic/tex4ht/latex209.4ht
@@ -286,13 +295,17 @@ share/texmf-dist/tex/generic/tex4ht/ltugboat.4ht
 share/texmf-dist/tex/generic/tex4ht/ltugproc-a.4ht
 share/texmf-dist/tex/generic/tex4ht/ltugproc.4ht
 share/texmf-dist/tex/generic/tex4ht/ltxguide.4ht
+share/texmf-dist/tex/generic/tex4ht/lua-ul.4ht
 share/texmf-dist/tex/generic/tex4ht/lua-widow-control-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/luatexja-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/m-tex4ht.tex
 share/texmf-dist/tex/generic/tex4ht/magyar.4ht
+share/texmf-dist/tex/generic/tex4ht/makecell.4ht
 share/texmf-dist/tex/generic/tex4ht/makeidx.4ht
 share/texmf-dist/tex/generic/tex4ht/manju.4ht
 share/texmf-dist/tex/generic/tex4ht/manmac.4ht
+share/texmf-dist/tex/generic/tex4ht/manyfoot-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/manyfoot.4ht
 share/texmf-dist/tex/generic/tex4ht/marginnote.4ht
 share/texmf-dist/tex/generic/tex4ht/mathjax-latex-4ht.4ht
 share/texmf-dist/tex/generic/tex4ht/mathltx.4ht
@@ -307,6 +320,7 @@ share/texmf-dist/tex/generic/tex4ht/memhfixc.4ht
 share/texmf-dist/tex/generic/tex4ht/memoir.4ht
 share/texmf-dist/tex/generic/tex4ht/mempatch.4ht
 share/texmf-dist/tex/generic/tex4ht/menukeys.4ht
+share/texmf-dist/tex/generic/tex4ht/metalogo.4ht
 share/texmf-dist/tex/generic/tex4ht/mex.4ht
 share/texmf-dist/tex/generic/tex4ht/mfpic.4ht
 share/texmf-dist/tex/generic/tex4ht/mhchem.4ht
@@ -318,6 +332,7 @@ share/texmf-dist/tex/generic/tex4ht/mkht-scripts.4ht
 share/texmf-dist/tex/generic/tex4ht/mkht.4ht
 share/texmf-dist/tex/generic/tex4ht/mla.4ht
 share/texmf-dist/tex/generic/tex4ht/mls.4ht
+share/texmf-dist/tex/generic/tex4ht/moderncv.4ht
 share/texmf-dist/tex/generic/tex4ht/moreverb.4ht
 share/texmf-dist/tex/generic/tex4ht/mozilla.4ht
 share/texmf-dist/tex/generic/tex4ht/multibib-hooks.4ht
@@ -335,6 +350,7 @@ share/texmf-dist/tex/generic/tex4ht/newcomputermodern-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/ngerman.4ht
 share/texmf-dist/tex/generic/tex4ht/ngermanb.4ht
 share/texmf-dist/tex/generic/tex4ht/nicefrac.4ht
+share/texmf-dist/tex/generic/tex4ht/nicematrix.4ht
 share/texmf-dist/tex/generic/tex4ht/nomencl.4ht
 share/texmf-dist/tex/generic/tex4ht/norsk.4ht
 share/texmf-dist/tex/generic/tex4ht/ntheorem.4ht
@@ -380,11 +396,14 @@ share/texmf-dist/tex/generic/tex4ht/pst-all.4ht
 share/texmf-dist/tex/generic/tex4ht/pst-jtree.4ht
 share/texmf-dist/tex/generic/tex4ht/pstricks.4ht
 share/texmf-dist/tex/generic/tex4ht/pythontex.4ht
+share/texmf-dist/tex/generic/tex4ht/qtree.4ht
 share/texmf-dist/tex/generic/tex4ht/quoting.4ht
 share/texmf-dist/tex/generic/tex4ht/reading.4ht
 share/texmf-dist/tex/generic/tex4ht/report.4ht
 share/texmf-dist/tex/generic/tex4ht/res-a.4ht
 share/texmf-dist/tex/generic/tex4ht/res.4ht
+share/texmf-dist/tex/generic/tex4ht/resizegather-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/resizegather.4ht
 share/texmf-dist/tex/generic/tex4ht/resume.4ht
 share/texmf-dist/tex/generic/tex4ht/revsymb.4ht
 share/texmf-dist/tex/generic/tex4ht/revtex4.4ht
@@ -418,6 +437,8 @@ share/texmf-dist/tex/generic/tex4ht/soul.4ht
 share/texmf-dist/tex/generic/tex4ht/spanish.4ht
 share/texmf-dist/tex/generic/tex4ht/splitidx.4ht
 share/texmf-dist/tex/generic/tex4ht/srcltx.4ht
+share/texmf-dist/tex/generic/tex4ht/standalone.4ht
+share/texmf-dist/tex/generic/tex4ht/stmaryrd.4ht
 share/texmf-dist/tex/generic/tex4ht/subcaption.4ht
 share/texmf-dist/tex/generic/tex4ht/subeqnarray.4ht
 share/texmf-dist/tex/generic/tex4ht/subfigure.4ht
@@ -438,6 +459,7 @@ share/texmf-dist/tex/generic/tex4ht/tabularray.4ht
 share/texmf-dist/tex/generic/tex4ht/tabularx.4ht
 share/texmf-dist/tex/generic/tex4ht/tabulary-a.4ht
 share/texmf-dist/tex/generic/tex4ht/tabulary.4ht
+share/texmf-dist/tex/generic/tex4ht/tagpdf-base-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/tagpdf-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/tasks.4ht
 share/texmf-dist/tex/generic/tex4ht/tcilatex.4ht
@@ -500,6 +522,8 @@ share/texmf-dist/tex/generic/tex4ht/xr.4ht
 share/texmf-dist/tex/generic/tex4ht/xrhyper-hooks.4ht
 share/texmf-dist/tex/generic/tex4ht/xskak.4ht
 share/texmf-dist/tex/generic/tex4ht/xy.4ht
+share/texmf-dist/tex/generic/tex4ht/xyling-hooks.4ht
+share/texmf-dist/tex/generic/tex4ht/xyling.4ht
 share/texmf-dist/tex4ht/base/unix/tex4ht.env
 share/texmf-dist/tex4ht/base/win32/tex4ht.env
 share/texmf-dist/tex4ht/bin/tex4ht.jar
@@ -8331,6 +8355,7 @@ share/texmf-dist/tex4ht/ht-fonts/iso8859/1/tibetan/ctib.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xyatip.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xybsql.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xybtip.htf
+share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xycirc.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xydash.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xyebut.htf
 share/texmf-dist/tex4ht/ht-fonts/iso8859/1/xypic/xymisc.htf
@@ -8626,6 +8651,8 @@ share/texmf-dist/tex4ht/ht-fonts/unicode/TeXGyreTermesX/ntx-Bold-lf-t1.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/TeXGyreTermesX/ntxdenoms-Regular-ly1.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/TeXGyreTermesX/ntxdenoms-Regular-ot1.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/TeXGyreTermesX/ntxdenoms-Regular-t1.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/TeXvect10/vect.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/TeXvect10/vect10.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/Tt-Kp-Exp/jkpttmn7t.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/Tt-Kp-Exp/jkpttosmn7t.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/Tt-Kp-Exp/jkpttosnmn7t.htf
@@ -8968,6 +8995,7 @@ share/texmf-dist/tex4ht/ht-fonts/unicode/arphic/gkaiu9e.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/arphic/gkaiu9f.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/arphic/gkaiufe.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/arphic/gkaiuff.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/bbm/bbm.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/bbold/bbold.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/bitstrea/charter/bchr8t.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/cbgreek/grmc.htf
