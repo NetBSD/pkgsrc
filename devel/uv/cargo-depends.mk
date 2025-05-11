@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2025/05/06 13:14:19 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2025/05/11 10:46:08 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -17,7 +17,7 @@ CARGO_CRATE_DEPENDS+=	arrayref-0.3.9
 CARGO_CRATE_DEPENDS+=	arrayvec-0.7.6
 CARGO_CRATE_DEPENDS+=	assert-json-diff-2.0.2
 CARGO_CRATE_DEPENDS+=	assert_cmd-2.0.17
-CARGO_CRATE_DEPENDS+=	assert_fs-1.1.2
+CARGO_CRATE_DEPENDS+=	assert_fs-1.1.3
 CARGO_CRATE_DEPENDS+=	astral-tokio-tar-0.5.2
 CARGO_CRATE_DEPENDS+=	async-channel-2.3.1
 CARGO_CRATE_DEPENDS+=	async-compression-0.4.18
@@ -156,7 +156,7 @@ CARGO_CRATE_DEPENDS+=	goblin-0.9.3
 CARGO_CRATE_DEPENDS+=	h2-0.4.7
 CARGO_CRATE_DEPENDS+=	half-2.4.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
-CARGO_CRATE_DEPENDS+=	hashbrown-0.15.2
+CARGO_CRATE_DEPENDS+=	hashbrown-0.15.3
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.9
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.4.0
@@ -191,7 +191,7 @@ CARGO_CRATE_DEPENDS+=	imagesize-0.11.0
 CARGO_CRATE_DEPENDS+=	indexmap-2.9.0
 CARGO_CRATE_DEPENDS+=	indicatif-0.17.11
 CARGO_CRATE_DEPENDS+=	indoc-2.0.6
-CARGO_CRATE_DEPENDS+=	insta-1.43.0
+CARGO_CRATE_DEPENDS+=	insta-1.43.1
 CARGO_CRATE_DEPENDS+=	instant-0.1.13
 CARGO_CRATE_DEPENDS+=	ipnet-2.11.0
 CARGO_CRATE_DEPENDS+=	is-terminal-0.4.15

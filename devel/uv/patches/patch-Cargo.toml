@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.4 2025/05/06 13:14:19 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.5 2025/05/11 10:46:09 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch them.
 
@@ -8,7 +8,7 @@ Depends on unpublished crates. Can't use cargo.mk to fetch them.
  async-compression = { version = "0.4.12", features = ["bzip2", "gzip", "xz", "zstd"] }
  async-trait = { version = "0.1.82" }
  async_http_range_reader = { version = "0.9.1" }
--async_zip = { git = "https://github.com/charliermarsh/rs-async-zip", rev = "c909fda63fcafe4af496a07bfda28a5aae97e58d", features = ["deflate", "tokio"] }
+-async_zip = { git = "https://github.com/charliermarsh/rs-async-zip", rev = "c909fda63fcafe4af496a07bfda28a5aae97e58d", features = ["bzip2", "deflate", "lzma", "tokio", "xz", "zstd"] }
 +async_zip = { path = "../rs-async-zip-c909fda63fcafe4af496a07bfda28a5aae97e58d", features = ["deflate", "tokio"] }
  axoupdater = { version = "0.9.0", default-features = false }
  backon = { version = "1.3.0" }
