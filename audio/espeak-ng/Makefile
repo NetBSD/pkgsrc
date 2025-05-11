@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/12 06:44:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/11 12:31:23 ryoon Exp $
 
 DISTNAME=	espeak-ng-1.52.0
 PKGREVISION=	1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3 AND apache-2.0 AND 2-clause-bsd AND unicode
 
 DEPENDS+=	mbrola-[0-9]*:../../audio/mbrola
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -28,8 +26,6 @@ TEST_TARGET=	check
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-D_NETBSD_SOURCE
 .endif
-
-CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 PKGCONFIG_OVERRIDE+=	espeak-ng.pc.in
 
