@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.16 2015/04/25 13:07:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/05/11 02:46:01 markd Exp $
 bin/dvipdfm
 bin/dvipdfmx
 bin/dvipdft
-bin/ebb
-bin/extractbb
 bin/xdvipdfmx
 man/man1/dvipdfm.1
 man/man1/dvipdfmx.1
 man/man1/dvipdft.1
-man/man1/ebb.1
 man/man1/extractbb.1
 man/man1/xdvipdfmx.1
 share/texmf-dist/dvipdfmx/dvipdfmx.cfg
