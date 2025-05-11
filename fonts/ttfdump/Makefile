@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2024/03/21 08:07:25 markd Exp $
+# $NetBSD: Makefile,v 1.15 2025/05/11 02:51:22 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	ttfdump-0.5.5
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	fonts
 
 HOMEPAGE=	https://www.freetype.org/
