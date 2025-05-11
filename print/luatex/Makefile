@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.120 2024/09/12 21:48:43 gutteridge Exp $
+# $NetBSD: Makefile,v 1.121 2025/05/11 02:41:21 markd Exp $
 
-PKGREVISION=	2
 .include "../../print/texlive/Makefile.common"
 
-PKGNAME=	luatex-1.18.0
+PKGNAME=	luatex-1.21.0
 CATEGORIES=	print
 
 HOMEPAGE=	https://www.tug.org/web2c/
