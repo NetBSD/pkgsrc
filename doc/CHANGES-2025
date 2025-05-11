@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3219 2025/05/11 11:25:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3220 2025/05/11 12:09:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4675,3 +4675,23 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-matplotlib to 3.10.3 [wiz 2025-05-11]
 	Updated devel/jj to 0.29.0 [wiz 2025-05-11]
 	Updated sysutils/dua-cli to 2.30.1 [pin 2025-05-11]
+	Updated devel/tex-l3backend to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3backend-doc to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3experimental to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3kernel to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3kernel-doc to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3packages to 2025 [mark 2025-05-11]
+	Updated devel/tex-l3packages-doc to 2025 [mark 2025-05-11]
+	Updated print/tex-texlive.infra to 2025 [mark 2025-05-11]
+	Updated print/tex-texlive-scripts-extra to 2024 [mark 2025-05-11]
+	Updated print/tex-texlive-scripts-extra-doc to 2024 [mark 2025-05-11]
+	Updated print/tex-texlive-scripts to 2025 [mark 2025-05-11]
+	Updated print/tex-texlive-scripts-doc to 2025 [mark 2025-05-11]
+	Updated print/tex-make4ht to 0.4d [mark 2025-05-11]
+	Updated print/tex-make4ht-doc to 0.4d [mark 2025-05-11]
+	Updated print/tex-moderncv to 2.4.1 [mark 2025-05-11]
+	Updated print/tex-moderncv-doc to 2.4.1 [mark 2025-05-11]
+	Updated print/tex-tex4ebook to 0.4b [mark 2025-05-11]
+	Updated print/tex-tex4ebook-doc to 0.4b [mark 2025-05-11]
+	Updated print/tex-tex4ht to 2025 [mark 2025-05-11]
+	Updated print/tex-tex4ht-doc to 2025 [mark 2025-05-11]
