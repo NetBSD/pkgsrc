@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2019/12/06 20:23:44 markd Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/11 00:14:04 markd Exp $
 
 DISTNAME=	xcomment
-PKGNAME=	tex-${DISTNAME}-1.3
-TEXLIVE_REV=	20031
+PKGNAME=	tex-${DISTNAME}-1.40
+TEXLIVE_REV=	72759
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Allows selected environments to be included/excluded
 LICENSE=	lppl-1.3c
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
