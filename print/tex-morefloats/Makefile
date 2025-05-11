@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2022/04/18 03:23:24 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/11 00:27:04 markd Exp $
 
 DISTNAME=	morefloats
-PKGNAME=	tex-${DISTNAME}-1.0h
-TEXLIVE_REV=	37927
+PKGNAME=	tex-${DISTNAME}-1.1a
+TEXLIVE_REV=	73637
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/morefloats
