@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3210 2025/05/11 10:30:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3211 2025/05/11 10:32:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4666,3 +4666,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 10.0.1 [wiz 2025-05-11]
 	Updated devel/py-cython to 3.1.0 [wiz 2025-05-11]
 	Updated time/py-icalendar to 6.2.0 [wiz 2025-05-11]
+	Updated misc/py-platformdirs to 4.3.8 [wiz 2025-05-11]
