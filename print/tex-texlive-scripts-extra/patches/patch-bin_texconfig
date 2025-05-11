@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_texconfig,v 1.1 2020/05/10 03:56:44 markd Exp $
+$NetBSD: patch-bin_texconfig,v 1.2 2025/05/11 11:13:26 markd Exp $
 
 use full path for commands
 
@@ -196,33 +196,6 @@ use full path for commands
            done
            ;;
        esac
-@@ -1250,7 +1250,7 @@ Valid PAPER settings:
-                 set x `getRes "$tcBatchPdftexMode"`; shift
-                 fmgrConfigReplace pdftexconfig.tex 'pdfpkresolution' "\\pdfpkresolution=$1"
-                 if $fmgrConfigReplaceChanged; then
--                  fmtutil --refresh
-+                  @FMTUTIL@ --refresh
-                 fi
-               else
-                 echo "$progname: unknown MODE \`$tcBatchPdftexMode' given as argument for \`$progname pdftex mode'" >&2
-@@ -1272,7 +1272,7 @@ Valid PAPER settings:
-             #  wChanged=$fmgrConfigReplaceChanged
-             #  fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
-             #  if $wChanged || $fmgrConfigReplaceChanged; then
--            #    fmtutil --refresh
-+            #    @FMTUTIL@ --refresh
-             #  fi
-             #  ;;
-             #a4)
-@@ -1281,7 +1281,7 @@ Valid PAPER settings:
-             #  wChanged=$fmgrConfigReplaceChanged
-             #  fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
-             #  if $wChanged || $fmgrConfigReplaceChanged; then
--            #    fmtutil --refresh
-+            #    @FMTUTIL@ --refresh
-             #  fi
-             #  ;;
-             "") echo "$help" >&2; rc=1;;
 @@ -1301,7 +1301,7 @@ Valid PAPER settings:
        ;;
  
