@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25796 2025/05/11 10:39:39 wiz Exp $
+$NetBSD: TODO,v 1.25797 2025/05/11 10:42:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1123,7 +1123,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
-	o py-click-8.2.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
@@ -1230,7 +1229,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
-	o speech-dispatcher-0.12.1
+	o speech-dispatcher-0.12.1 [wip]
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.0
