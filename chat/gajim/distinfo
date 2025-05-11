@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/02/07 21:47:41 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/05/11 17:10:38 gdt Exp $
 
-BLAKE2s (gajim-1.9.5.tar.gz) = 35563edbb850c9f47877d0af264769dccf98be3c2a6707d97af6589b8922f42b
-SHA512 (gajim-1.9.5.tar.gz) = 00adfffa255ecbd73227967f86be02549403e81801339dbd896c9c48c3717e7f99d7c1d70d3629b2b242e60ddba6037a9877f264af6f8b6b0d7d30666a54e5f5
-Size (gajim-1.9.5.tar.gz) = 4723544 bytes
+BLAKE2s (gajim-2.0.4.tar.gz) = 1871d5927b077f4f593b24bf7efb9c78fe4181c9be928586139981c2b7915129
+SHA512 (gajim-2.0.4.tar.gz) = 33a8aa77a834c604af5e619d22094f53cd612d3ae184b7588bafdbf64534d107b8d2749cca06b4266b8f8416b68faf312deafdf5f15e5b6dec5334c480c41289
+Size (gajim-2.0.4.tar.gz) = 4712404 bytes
