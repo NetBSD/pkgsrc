@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.87 2025/04/30 10:38:27 nia Exp $
+# $NetBSD: NetBSD.mk,v 1.88 2025/05/11 09:15:32 nia Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -190,6 +190,7 @@ OPSYS_HAS_STATIC_PIE=	# defined
     (${MACHINE_ARCH} == "aarch64") || \
     (${MACHINE_ARCH} == "aarch64eb") || \
     (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc64") || \
     (${MACHINE_ARCH:Mmips64*}) || (${MACHINE_ARCH:Mmipsn64*})
 _OPSYS_SUPPORTS_RELRO=	yes
 .endif
