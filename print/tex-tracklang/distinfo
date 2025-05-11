@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/01 22:35:09 markd Exp $
+$NetBSD: distinfo,v 1.8 2025/05/11 00:05:01 markd Exp $
 
-BLAKE2s (tracklang.r65263.tar.xz) = 53dcbbfa0285c8b454c3a5f1b200c45519d73e5f9fac92bcb6fb77f05a884013
-SHA512 (tracklang.r65263.tar.xz) = a8cb03ea2fd0063ad3e0784c1fb6085e623f08d2a8a8e1e5907a13b0d08c2a99c7e1f6d0e357dabdd4e655122b572dca2eee5855bb5fe9ca500715a4b8b4790f
-Size (tracklang.r65263.tar.xz) = 19268 bytes
+BLAKE2s (tracklang.r74576.tar.xz) = 2255ad6079cee285a5f259e8e444a4fac9a343eb3b523ebe58be48a80252ae90
+SHA512 (tracklang.r74576.tar.xz) = 3aece7850f88053d583d6163db549662fea03fa84410a5cd9f1e76f4e508bdfbae663f36bd87eef39059fe2bd4123c6b0bae804237029d8abcde9c02d3c873a9
+Size (tracklang.r74576.tar.xz) = 20424 bytes

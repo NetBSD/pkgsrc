@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/04/01 22:35:09 markd Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/11 00:05:01 markd Exp $
 
 DISTNAME=	tracklang
-PKGNAME=	tex-${DISTNAME}-1.6.1
-TEXLIVE_REV=	65263
+PKGNAME=	tex-${DISTNAME}-1.6.6
+TEXLIVE_REV=	74576
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/tracklang
