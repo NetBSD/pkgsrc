@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/05/10 00:26:34 markd Exp $
+$NetBSD: distinfo,v 1.12 2025/05/11 03:47:50 markd Exp $
 
-BLAKE2s (footmisc.r74557.tar.xz) = 0a94141037a27fe6348ddb03c42ba1a611345d1535b2dff4d4c4439c5c0e46d4
-SHA512 (footmisc.r74557.tar.xz) = ad2ee54b52fc69867351b6cb8a961cd5ab25ad3fc3d237eb894bf5a4e6e52f32ab32f13a24fd364a189e41c4df8714e1eaee6540e6661974ddb0be9096b11368
-Size (footmisc.r74557.tar.xz) = 8076 bytes
+BLAKE2s (footmisc.r75164.tar.xz) = 501504117db663a981ad5838f6e34e405eda1a32beb2e27f4bad69052769ef36
+SHA512 (footmisc.r75164.tar.xz) = f242c9ad088c5fdba7692efd967ab14f4799e1d76b920cb52641461ff08e83f874bca5ddaf906840e758c5ea45b85cf67c8e8ea7167a30226ea1f94cd594fea6
+Size (footmisc.r75164.tar.xz) = 8088 bytes
