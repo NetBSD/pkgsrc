@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/04/22 12:06:41 markd Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/11 03:50:57 markd Exp $
 
 DISTNAME=	latex-bin.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2024
-PKGREVISION=	1
-TEXLIVE_REV=	70501
+PKGNAME=	tex-${DISTNAME:S/./-/}-2025
+TEXLIVE_REV=	73848
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-latex-bin
