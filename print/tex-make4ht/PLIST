@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/03/21 10:24:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/05/11 11:56:09 markd Exp $
 bin/make4ht
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-aeneas.lua
 share/texmf-dist/scripts/make4ht/domfilters/make4ht-booktabs.lua
@@ -27,6 +27,7 @@ share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-join_colors.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-latexmk_build.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-mathjaxnode.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-mjcli.lua
+share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-nodynamicodt.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-odttemplate.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-preprocess_input.lua
 share/texmf-dist/scripts/make4ht/extensions/make4ht-ext-staticsite.lua
@@ -54,6 +55,7 @@ share/texmf-dist/scripts/make4ht/formats/make4ht-xhtml.lua
 share/texmf-dist/scripts/make4ht/lapp-mk4.lua
 share/texmf-dist/scripts/make4ht/make4ht
 share/texmf-dist/scripts/make4ht/make4ht-aeneas-config.lua
+share/texmf-dist/scripts/make4ht/make4ht-char-def.lua
 share/texmf-dist/scripts/make4ht/make4ht-config.lua
 share/texmf-dist/scripts/make4ht/make4ht-dvireader.lua
 share/texmf-dist/scripts/make4ht/make4ht-errorlogparser.lua
@@ -62,6 +64,7 @@ share/texmf-dist/scripts/make4ht/make4ht-htlatex.lua
 share/texmf-dist/scripts/make4ht/make4ht-indexing.lua
 share/texmf-dist/scripts/make4ht/make4ht-lib.lua
 share/texmf-dist/scripts/make4ht/make4ht-logging.lua
+share/texmf-dist/scripts/make4ht/make4ht-mathml-char-def.lua
 share/texmf-dist/scripts/make4ht/make4ht-xtpipes.lua
 share/texmf-dist/scripts/make4ht/mkparams.lua
 share/texmf-dist/scripts/make4ht/mkutils.lua
