@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3224 2025/05/11 19:30:51 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3225 2025/05/11 21:24:47 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4699,3 +4699,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/gajim to 2.0.4 [gdt 2025-05-11]
 	Updated chat/gajim to 2.1.1 [gdt 2025-05-11]
 	Removed comms/asterisk-sounds-de-x9media [gdt 2025-05-11]
+	Updated meta-pkgs/xfce4 to 4.20.0nb7 [gutteridge 2025-05-11]
