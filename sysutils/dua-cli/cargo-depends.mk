@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.29 2025/01/29 21:44:27 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.30 2025/05/11 11:24:44 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.22.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -33,7 +33,7 @@ CARGO_CRATE_DEPENDS+=	colorchoice-1.0.2
 CARGO_CRATE_DEPENDS+=	compact_str-0.7.1
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.4
-CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.13
+CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
 CARGO_CRATE_DEPENDS+=	crossbeam-queue-0.3.11

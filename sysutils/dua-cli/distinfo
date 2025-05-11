@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2025/01/29 21:44:27 pin Exp $
+$NetBSD: distinfo,v 1.41 2025/05/11 11:24:44 pin Exp $
 
 BLAKE2s (addr2line-0.22.0.crate) = 834589b7006b3b8d1e40e66abf813d18a5e9d6fac9433c24b0b18920c435a58e
 SHA512 (addr2line-0.22.0.crate) = b334f51bd369348b4446805b4f624ec9b4cc8eefcc53ceb57b523ff55bf018d1dfe23259daf48d1878170ad4fcb44181d4738456eb5e35ede6932ff29686268e
@@ -99,9 +99,9 @@ Size (core-foundation-sys-0.8.7.crate) = 37712 bytes
 BLAKE2s (crossbeam-0.8.4.crate) = f375337edabca37ea9bcf706ed8bc3721be18cb8a504f3f3519c9d985b344f09
 SHA512 (crossbeam-0.8.4.crate) = 63650fe2d46ff2e593342b398c153facd3cb7cd72dac9b057ee0aac5ef5e9dd9df0e71536d66879676c0edaa89787d1f365eea35c82604ca46090e527749f994
 Size (crossbeam-0.8.4.crate) = 10500 bytes
-BLAKE2s (crossbeam-channel-0.5.13.crate) = 90b3500a932f471bf74ae07515d863ac7d949fc2f7c7167074dace36d0c6d0b0
-SHA512 (crossbeam-channel-0.5.13.crate) = 0f31223a7099f84e39e6b76b19cf26736e0c3907fffc2ed3eb0012c7984b1993570bf6d155eba5bfb82897ef0e4fc93b89096071410bbac256ca6be9a9568ff8
-Size (crossbeam-channel-0.5.13.crate) = 91174 bytes
+BLAKE2s (crossbeam-channel-0.5.15.crate) = 3fd3c1657f5002717436a0e45e3a2053b12c27bf7beccd4391a476f975e084db
+SHA512 (crossbeam-channel-0.5.15.crate) = b5174329fbdb2a742992b3450a6b11e4330e1d542132acd22d0aebaf49332aad8ceb6eb4e52ccaf8617eb02f191f881b011e5521098082919672f06ac70a4e5b
+Size (crossbeam-channel-0.5.15.crate) = 92716 bytes
 BLAKE2s (crossbeam-deque-0.8.5.crate) = b7cdbff28b832e07a9d55043d30d145d09bbe2e0216369b37a8491e1005e9c98
 SHA512 (crossbeam-deque-0.8.5.crate) = 0f0c9745763ab156136227cf1415de514952a3f8282ffe413cc249f9f4b345b029940e6a6c87b3be8331a7c783655a35b89c7a2547360ea5ae10aa64ba7ae864
 Size (crossbeam-deque-0.8.5.crate) = 21726 bytes
@@ -129,9 +129,9 @@ Size (deranged-0.3.11.crate) = 18043 bytes
 BLAKE2s (diff-0.1.13.crate) = f7ceba7e29d20d30066c8df5dc67d5b8c87889cc6042a036bf53614de944dd64
 SHA512 (diff-0.1.13.crate) = 45e259c9fe7c23bd9e9454891b42d4aef6d681d35ee039d21fdb05ae9ed5856161a40f29889e7880ac2a2daf85f1b7d752d213b4a99a1a74ed2682c18a3ae7fb
 Size (diff-0.1.13.crate) = 46216 bytes
-BLAKE2s (dua-cli-2.30.0.tar.gz) = b093f7d0418969d8b938347f7039952060e860b0f1109dc7e77a1a2d37b4d38d
-SHA512 (dua-cli-2.30.0.tar.gz) = 7d285a110b6fcfea80619380a48ede4e42ee20985923914a23c89ea128510071a1f55057b335d3526a846df4b2409e16fd572291aff4493e539675a7e5d2016d
-Size (dua-cli-2.30.0.tar.gz) = 140514 bytes
+BLAKE2s (dua-cli-2.30.1.tar.gz) = 2ae6c73a099d19ee5391576e0c0fa62d4e7e42b9b940845fcde4231dcbb1a9f4
+SHA512 (dua-cli-2.30.1.tar.gz) = 7a429272551a1271452e1b08f6361ec34f112b593415346bd662ba38f0cfd63d16b0b6a24a14f27390b3da3c839cc86280f7ef9b0cd5ee3c569be6a530bd2f16
+Size (dua-cli-2.30.1.tar.gz) = 141198 bytes
 BLAKE2s (either-1.13.0.crate) = 39690a936f9bb5b6204ee0373b0763a091d8555824fe1bab2881a1544511818a
 SHA512 (either-1.13.0.crate) = 72e803079bae621d282136ab1e423ba71415bf12038b6f386f294cae68a67ad9ff16e4fdf4344eb3fee4418e853f9cac344c248f6befa3006d1c954668b36322
 Size (either-1.13.0.crate) = 19169 bytes
