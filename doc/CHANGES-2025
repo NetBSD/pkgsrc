@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3212 2025/05/11 10:33:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3213 2025/05/11 10:35:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4668,3 +4668,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-icalendar to 6.2.0 [wiz 2025-05-11]
 	Updated misc/py-platformdirs to 4.3.8 [wiz 2025-05-11]
 	Updated textproc/py-snowballstemmer to 3.0.1 [wiz 2025-05-11]
+	Updated misc/py-trove-classifiers to 2025.5.9.12 [wiz 2025-05-11]
