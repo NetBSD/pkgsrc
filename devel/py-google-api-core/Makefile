@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/04/12 11:03:06 adam Exp $
+# $NetBSD: Makefile,v 1.43 2025/05/12 12:03:09 wiz Exp $
 
 DISTNAME=	google_api_core-2.24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -22,9 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
 
-# test status as of 2.20.0
-# 24 failed, 912 passed, 42 skipped, 90 warnings
-# as of 2.24.0, python3.13 dumps core with grpc in the backtrace
+# test status as of 2.24.2
+# 714 passed, 23 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
