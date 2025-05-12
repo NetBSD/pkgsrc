@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2024/03/21 20:00:51 markd Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/12 11:48:01 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	59159
+TEXLIVE_REV=	72890
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -20,6 +20,7 @@ DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	tex-enctex>=2013:../../print/tex-enctex
 DEPENDS+=	tex-etex>=2.1.31600:../../print/tex-etex
 DEPENDS+=	tex-etex-pkg>=2.0:../../print/tex-etex-pkg
+DEPENDS+=	tex-extractbb-[0-9]*:../../print/tex-extractbb
 DEPENDS+=	tex-glyphlist>=2.95:../../fonts/tex-glyphlist
 DEPENDS+=	tex-graphics-def>=2016:../../print/tex-graphics-def
 DEPENDS+=	tex-hyph-utf8>=2013:../../print/tex-hyph-utf8
