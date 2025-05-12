@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25800 2025/05/11 10:53:00 wiz Exp $
+$NetBSD: TODO,v 1.25801 2025/05/12 10:38:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1227,7 +1227,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
-	o speech-dispatcher-0.12.1 [wip]
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.0
