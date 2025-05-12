@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/02/07 03:15:05 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2025/05/12 15:58:00 wiz Exp $
 
 BLAKE2s (screen-4.9.1.tar.gz) = 5632587a76908410b4b1af70c729e01521970c72693fa78ec9b62d907fefbc8c
 SHA512 (screen-4.9.1.tar.gz) = 1f278313528815f4246bb162ced611c5d77321d11055e8d853168dc804c75d5f78568056a23e46db0640e1605e5cad4a5ce05e95e50cf02bb322cb6f57e5a126
@@ -13,8 +13,9 @@ SHA1 (patch-am) = a721e311e7dde7938de0e9546a7892bfd104ebd1
 SHA1 (patch-an) = bda6c65148410a6c9a13afd8ad34f93e33731552
 SHA1 (patch-ao) = a45ae3186cd9bddeb915bad890f1be5abc315dd3
 SHA1 (patch-ap) = 4aab542045a0abe55e82d91851b94c3cb569139f
+SHA1 (patch-attacher.c) = ffb6d7b668e25d4b9b37e0081f9e599f74cb6076
 SHA1 (patch-doc_screen.texinfo) = 18d959580fd03731c7e7dbc683970f80b4245840
-SHA1 (patch-screen.c) = de5d8468100ab88cbdb842e21b04b00221e798b8
-SHA1 (patch-socket.c) = 290a6a1113a9100bea0748406374ec3d835f5ba7
+SHA1 (patch-screen.c) = 66ea42fd92fb03ee6d6f8bbb461431dcd73ef720
+SHA1 (patch-socket.c) = 32e689cbe1952812d526d99a1e00f59a291b0382
 SHA1 (patch-tty.sh) = 6a818b7a4d70e55878ee69605e53300eabcb525f
 SHA1 (patch-window.h) = 84dc5a2c24ff77147b416c05f897536c0cfddf31
