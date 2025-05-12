@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/12 11:39:48 markd Exp $
+man/man1/extractbb.1
+share/texmf-dist/doc/support/extractbb/README.md
+share/texmf-dist/doc/support/extractbb/extractbb.man1.pdf

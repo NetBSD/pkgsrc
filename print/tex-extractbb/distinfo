@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 11:39:48 markd Exp $
+
+BLAKE2s (extractbb.r73916.tar.xz) = 25fb190b1fed9bdd408262939c5b99100341b46c716ca764eb86caea789102af
+SHA512 (extractbb.r73916.tar.xz) = 316aeff9d1455426f486f297e8791d7f74ce0f0e3012b4ef098820fe8e6d78b37b8d174e9eb1e704e66b93815301c6d6ebd7340cd803b6dc04e655509279a454
+Size (extractbb.r73916.tar.xz) = 5964 bytes

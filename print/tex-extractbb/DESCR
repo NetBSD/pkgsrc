@@ -1,0 +1,7 @@
+extractbb is a program that exports the dimensions of an image
+or PDF file to a plain text format that is easily parsed by
+TeX. This tool is rarely run directly by users, but is
+frequently used by packages running on XeTeX or upTeX. This
+package specifically contains a Lua-based reimplementation
+extractbb that behaves identically to the original C-based
+version distributed with dvipdfmx.
