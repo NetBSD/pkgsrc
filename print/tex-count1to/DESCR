@@ -1,0 +1,6 @@
+A LaTeX package which sets count 1 (to 'absolute' page number),
+counts 2-8 to the numbers of the current \part, \chapter
+(always 0 in article class), ... \subparagraph, and count 9 to
+1 or 0, according to whether the page is odd or even. These
+values can be used to select pages with some drivers. The
+package uses the everyshi package.
