@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/12 08:42:24 markd Exp $
+share/texmf-dist/doc/latex/telprint/README.md
+share/texmf-dist/doc/latex/telprint/telprint.pdf
