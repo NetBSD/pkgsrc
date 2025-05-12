@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1514 2025/04/23 14:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1515 2025/05/12 09:51:14 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1423,7 +1423,6 @@ SUBDIR+=	tex-xindy
 SUBDIR+=	tex-xindy-doc
 SUBDIR+=	tex-xmltex
 SUBDIR+=	tex-xmltex-doc
-SUBDIR+=	tex-xmltexconfig
 SUBDIR+=	texi2html
 SUBDIR+=	texi2mdoc
 SUBDIR+=	texi2roff
