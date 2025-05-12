@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2024/10/16 04:28:42 markd Exp $
+# $NetBSD: Makefile,v 1.30 2025/05/12 10:29:48 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2024pre2
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	72266
+TEXLIVE_REV=	75100
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,6 +28,7 @@ DEPENDS+=	tex-algorithms-[0-9]*:../../print/tex-algorithms
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend annotate-equations
 # depend apxproof
+# depend atableau
 # depend autobreak
 # depend axodraw2
 # depend backnaur
@@ -40,6 +41,7 @@ DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
 # depend boldtensors
 # depend bosisio
 # depend bpchem
+# depend bracealign
 # depend bropd
 DEPENDS+=	tex-bussproofs-[0-9]*:../../print/tex-bussproofs
 # depend bussproofs-extra
@@ -71,10 +73,12 @@ DEPENDS+=	tex-clrscode-[0-9]*:../../print/tex-clrscode
 # depend commath
 # depend commutative-diagrams
 # depend complexity
+# depend complexpolylongdiv
 # depend computational-complexity
 DEPENDS+=	tex-concmath-[0-9]*:../../fonts/tex-concmath
 DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend conteq
+# depend cora-macs
 # depend correctmathalign
 # depend cryptocode
 # depend cs-techrep
@@ -103,7 +107,9 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend eolang
 # depend eqexpl
 # depend eqnarray
+# depend eqnlines
 # depend eqnnumwarn
+# depend euclidean-lattice
 # depend euclideangeometry
 # depend extarrows
 # depend extpfeil
@@ -150,11 +156,14 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend lie-hasse
 # depend linearregression
 # depend logicproof
+# depend logictools
 # depend longdivision
 # depend lpform
 # depend lplfitch
 # depend lstbayes
+# depend lua-regression
 # depend luanumint
+# depend math-operator
 # depend mathcommand
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathfixs
@@ -185,6 +194,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend nicematrix
 # depend nuc
 # depend nucleardata
+# depend numbersets
 # depend numerica
 # depend numerica-plus
 # depend numerica-tables
@@ -199,6 +209,7 @@ DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend pfdicons
 # depend physconst
 DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
+# depend physics-patch
 # depend physics2
 # depend physunits
 # depend pinoutikz
@@ -216,6 +227,7 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend qsharp
 # depend quickreaction
 # depend quiver
+# depend qworld
 # depend rank-2-roots
 # depend rbt-mathnotes
 # depend rec-thy
@@ -264,6 +276,7 @@ DEPENDS+=	tex-stmaryrd-[0-9]*:../../fonts/tex-stmaryrd
 # depend synproof
 # depend t-angles
 # depend tablor
+# depend temporal-logic
 DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend tensor
 # depend tex-ewd
@@ -271,7 +284,6 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend textopo
 # depend thermodynamics
 # depend thmbox
-# depend thmlist
 DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend tiscreen
 # depend turnstile
