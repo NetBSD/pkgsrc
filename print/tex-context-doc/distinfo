@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/03/21 11:29:44 markd Exp $
+$NetBSD: distinfo,v 1.21 2025/05/12 07:55:17 markd Exp $
 
-BLAKE2s (context.doc.r70360.tar.xz) = afa742df3c0fec66d80289c972d8fab233c65c843778b0c38bacbe37c03564f5
-SHA512 (context.doc.r70360.tar.xz) = 13c42ef56f667c66229c83610dc4cc2d9c68300e2cee7b22e9dd5aff3b8b76774f6badd511d56a618fd37ef629ddae72261876c48a93dc4634fd919eee46e3b5
-Size (context.doc.r70360.tar.xz) = 88499172 bytes
+BLAKE2s (context.doc.r74402.tar.xz) = 57b58b3008051063c007c5f2075cc95b3493452eeacde0354a4c0bac13f2a772
+SHA512 (context.doc.r74402.tar.xz) = 411739f073321b04b79921f83560c6e600c8b7479636377ed706d24ff1d749649aff9589e7ad5c5ab5ec15a4669d6e97e3327ec477cf7b9354d13c0c2cbbc6f9
+Size (context.doc.r74402.tar.xz) = 101944496 bytes
