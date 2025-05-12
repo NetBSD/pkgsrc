@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3228 2025/05/12 10:15:29 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3229 2025/05/12 10:38:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/py-renpy to 8.3.7 [ryoon 2025-05-12]
 	Updated devel/py-game_sdl2 to 2.1.0.8.3.7 [ryoon 2025-05-12]
 	Updated www/palemoon to 33.7.1 [nia 2025-05-12]
+	Updated audio/speech-dispatcher to 0.12.1 [wiz 2025-05-12]
