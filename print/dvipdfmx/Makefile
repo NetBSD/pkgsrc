@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2025/05/11 02:46:01 markd Exp $
+# $NetBSD: Makefile,v 1.60 2025/05/12 11:26:42 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	dvipdfmx-20250205
+PKGREVISION=	1
 CATEGORIES=	print converters
 
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
@@ -44,6 +45,10 @@ SUBST_SED.paths+=	-e 's,@RUNGS@,${PREFIX}/bin/rungs,'
 
 TEX_TEXMF_DIRS+=	${PKG_SYSCONFDIR}
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
+
+# tex-extractbb package installs extractbb.1
+post-install:
+	rm ${DESTDIR}${PREFIX}/man/man1/extractbb.1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
