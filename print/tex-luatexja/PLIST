@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/21 10:32:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/12 08:19:55 markd Exp $
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-adjust.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-ajmacros.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-27c.sty
+share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-29c.sty
+share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec-29e.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-fontspec.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-otf.sty
 share/texmf-dist/tex/luatex/luatexja/addons/luatexja-preset.sty
@@ -74,6 +76,7 @@ share/texmf-dist/tex/luatex/luatexja/luatexja-compat.sty
 share/texmf-dist/tex/luatex/luatexja/luatexja-core.sty
 share/texmf-dist/tex/luatex/luatexja/luatexja.lua
 share/texmf-dist/tex/luatex/luatexja/luatexja.sty
+share/texmf-dist/tex/luatex/luatexja/patches/lltjcore-241201.sty
 share/texmf-dist/tex/luatex/luatexja/patches/lltjcore.sty
 share/texmf-dist/tex/luatex/luatexja/patches/lltjdefs.sty
 share/texmf-dist/tex/luatex/luatexja/patches/lltjfont.sty
