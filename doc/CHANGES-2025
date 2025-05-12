@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3233 2025/05/12 13:07:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3234 2025/05/12 15:26:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4751,3 +4751,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-uplatex-doc to 2025 [mark 2025-05-12]
 	Updated www/py-django-allauth to 65.8.0 [adam 2025-05-12]
 	Updated www/py-django-debug-toolbar to 5.2.0 [adam 2025-05-12]
+	Updated www/ruby-aws-sdk-core to 3.223.0 [taca 2025-05-12]
