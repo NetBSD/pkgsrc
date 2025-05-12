@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/02/12 06:44:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2025/05/12 10:38:30 wiz Exp $
 
-DISTNAME=	speech-dispatcher-0.11.5
-PKGREVISION=	1
+DISTNAME=	speech-dispatcher-0.12.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=brailcom/}
 GITHUB_PROJECT=	speechd
@@ -28,6 +27,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 # fitting audio backend for the platform.
 CONFIGURE_ARGS+=	--with-libao
 CONFIGURE_ARGS+=	--without-alsa
+CONFIGURE_ARGS+=	--without-ltdl
 CONFIGURE_ARGS+=	--without-nas
 CONFIGURE_ARGS+=	--without-oss
 CONFIGURE_ARGS+=	--without-pulse
@@ -63,10 +63,18 @@ REPLACE_PYTHON+=	src/api/python/speechd_config/spd-conf
 PLIST_VARS+=	mods
 
 .if ${OPSYS} != "Darwin"
+PRINT_PLIST_AWK+=	{ if (/baratinoo/) $$0 = "$${PLIST.mods}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/kali/) $$0 = "$${PLIST.mods}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/voxin/) $$0 = "$${PLIST.mods}" $$0 }
 PLIST.mods=	yes
-post-install:
+post-install: copy-modules
+.PHONY: copy-modules
+copy-modules:
 	${INSTALL_LIB} ${WRKSRC}/src/modules/*so ${DESTDIR}${PREFIX}/lib
 .endif
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/speechd/*/*.opt-2.pyc
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/speechd_config/*/*.opt-2.pyc
 
 .include "../../audio/espeak-ng/buildlink3.mk"
 .include "../../audio/flite/buildlink3.mk"
@@ -76,7 +84,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/dlopen.buildlink3.mk"
