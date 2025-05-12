@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2024/10/16 04:13:37 markd Exp $
+# $NetBSD: Makefile,v 1.24 2025/05/12 10:11:35 markd Exp $
 
 DISTNAME=	collection-langenglish
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	71835
+TEXLIVE_REV=	74022
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -71,7 +71,6 @@ DEPENDS+=	tex-quran-en-[0-9]*:../../print/tex-quran-en
 # tex-font-errors-cheatsheet is documentation only
 # tex-nutshell is documentation only
 # tex-overview is documentation only
-# tex-refs is documentation only
 # tex-vpat is documentation only
 # texbytopic is documentation only
 # texonly is documentation only
