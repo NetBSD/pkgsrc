@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/03/24 10:28:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/12 10:38:30 wiz Exp $
 bin/spd-conf
 bin/spd-say
 bin/spdsend
@@ -6,6 +6,7 @@ bin/speech-dispatcher
 include/speech-dispatcher/libspeechd.h
 include/speech-dispatcher/libspeechd_version.h
 include/speech-dispatcher/spd_audio_plugin.h
+include/speech-dispatcher/spd_module_main.h
 include/speech-dispatcher/speechd_defines.h
 include/speech-dispatcher/speechd_types.h
 info/spd-say.info
@@ -17,9 +18,10 @@ lib/libKGlobal.so
 lib/libKParle.so
 lib/libKTrans.so
 lib/libKali.so
-lib/libbaratinoo.so
+${PLIST.mods}lib/libbaratinoo.so
 lib/libspeechd.la
-lib/libvoxin.so
+lib/libspeechd_module.la
+${PLIST.mods}lib/libvoxin.so
 lib/pkgconfig/speech-dispatcher.pc
 ${PYSITELIB}/speechd/__init__.py
 ${PYSITELIB}/speechd/__init__.pyc
@@ -52,6 +54,7 @@ libexec/speech-dispatcher-modules/sd_festival
 libexec/speech-dispatcher-modules/sd_flite
 libexec/speech-dispatcher-modules/sd_generic
 ${PLIST.mods}libexec/speech-dispatcher-modules/sd_kali
+libexec/speech-dispatcher-modules/sd_openjtalk
 ${PLIST.mods}libexec/speech-dispatcher-modules/sd_voxin
 man/man1/spd-conf.1
 man/man1/spd-say.1
@@ -72,6 +75,7 @@ ${PLIST.mods}share/examples/speech-dispatcher/modules/kali.conf
 share/examples/speech-dispatcher/modules/llia_phon-generic.conf
 share/examples/speech-dispatcher/modules/mary-generic.conf
 share/examples/speech-dispatcher/modules/mimic3-generic.conf
+share/examples/speech-dispatcher/modules/openjtalk.conf
 share/examples/speech-dispatcher/modules/swift-generic.conf
 ${PLIST.mods}share/examples/speech-dispatcher/modules/voxin.conf
 share/examples/speech-dispatcher/speechd.conf
@@ -80,10 +84,13 @@ share/locale/de/LC_MESSAGES/speech-dispatcher.mo
 share/locale/eo/LC_MESSAGES/speech-dispatcher.mo
 share/locale/fr/LC_MESSAGES/speech-dispatcher.mo
 share/locale/hu/LC_MESSAGES/speech-dispatcher.mo
+share/locale/ka/LC_MESSAGES/speech-dispatcher.mo
 share/locale/nb_NO/LC_MESSAGES/speech-dispatcher.mo
 share/locale/pt/LC_MESSAGES/speech-dispatcher.mo
 share/locale/pt_BR/LC_MESSAGES/speech-dispatcher.mo
 share/locale/ru/LC_MESSAGES/speech-dispatcher.mo
+share/locale/sv/LC_MESSAGES/speech-dispatcher.mo
+share/locale/tr/LC_MESSAGES/speech-dispatcher.mo
 share/sounds/speech-dispatcher/dummy-message.wav
 share/sounds/speech-dispatcher/test.wav
 share/speech-dispatcher/conf/clients/emacs.conf
@@ -119,6 +126,7 @@ share/speech-dispatcher/locale/base/symbols.dic
 share/speech-dispatcher/locale/be/emojis.dic
 share/speech-dispatcher/locale/be/orca-chars.dic
 share/speech-dispatcher/locale/be/orca.dic
+share/speech-dispatcher/locale/bew/emojis.dic
 share/speech-dispatcher/locale/bg/emojis.dic
 share/speech-dispatcher/locale/bg/orca-chars.dic
 share/speech-dispatcher/locale/bg/orca.dic
@@ -149,6 +157,7 @@ share/speech-dispatcher/locale/cs/emojis.dic
 share/speech-dispatcher/locale/cs/orca-chars.dic
 share/speech-dispatcher/locale/cs/orca.dic
 share/speech-dispatcher/locale/cs/symbols.dic
+share/speech-dispatcher/locale/cv/emojis.dic
 share/speech-dispatcher/locale/cy/emojis.dic
 share/speech-dispatcher/locale/da/emojis.dic
 share/speech-dispatcher/locale/da/orca-chars.dic
@@ -348,6 +357,7 @@ share/speech-dispatcher/locale/pt_PT/emojis.dic
 share/speech-dispatcher/locale/pt_PT/symbols.dic
 share/speech-dispatcher/locale/qu/emojis.dic
 share/speech-dispatcher/locale/quc/emojis.dic
+share/speech-dispatcher/locale/rhg/emojis.dic
 share/speech-dispatcher/locale/rm/emojis.dic
 share/speech-dispatcher/locale/ro/emojis.dic
 share/speech-dispatcher/locale/ro/orca-chars.dic
@@ -391,6 +401,7 @@ share/speech-dispatcher/locale/sw/emojis.dic
 share/speech-dispatcher/locale/sw_KE/emojis.dic
 share/speech-dispatcher/locale/ta/emojis.dic
 share/speech-dispatcher/locale/ta/orca-chars.dic
+share/speech-dispatcher/locale/ta/orca.dic
 share/speech-dispatcher/locale/ta/symbols.dic
 share/speech-dispatcher/locale/te/emojis.dic
 share/speech-dispatcher/locale/te/orca-chars.dic
