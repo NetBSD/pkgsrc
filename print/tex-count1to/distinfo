@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 08:32:49 markd Exp $
+
+BLAKE2s (count1to.r71526.tar.xz) = c687e9f245abb2f9ad9522da10381cec03ab3b0ea5fe9d4d1d86d40816e50f5e
+SHA512 (count1to.r71526.tar.xz) = a6ba894d0606f310a3a286189b1e8b6ca9126a9a67484ffbfc9cfd30c5a7d025657085a4dbe7345eee6b9ad71743df0c0b657fab161073dfc40b6171f9a37664
+Size (count1to.r71526.tar.xz) = 1700 bytes
