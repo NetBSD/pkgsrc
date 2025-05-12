@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/05/11 10:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/05/12 12:00:54 wiz Exp $
 
 DISTNAME=	google_auth-2.40.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -31,10 +31,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
 
-# as of 2.35.0
-# 4 failed, 1223 passed, 52 warnings
-# as of 2.37.0
-# core dump in Python 3.13
+# as of 2.40.1
+# 6 failed, 1283 passed, 17 skipped, 68 warnings
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography OpenSSL
