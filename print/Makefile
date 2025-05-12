@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.937 2025/05/07 11:57:50 markd Exp $
+# $NetBSD: Makefile,v 1.938 2025/05/12 08:46:05 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -554,6 +554,8 @@ SUBDIR+=	tex-convbkmk
 SUBDIR+=	tex-convbkmk-doc
 SUBDIR+=	tex-cooking
 SUBDIR+=	tex-cooking-doc
+SUBDIR+=	tex-count1to
+SUBDIR+=	tex-count1to-doc
 SUBDIR+=	tex-crop
 SUBDIR+=	tex-csbulletin
 SUBDIR+=	tex-csbulletin-doc
@@ -852,6 +854,8 @@ SUBDIR+=	tex-hvarabic
 SUBDIR+=	tex-hvarabic-doc
 SUBDIR+=	tex-hycolor
 SUBDIR+=	tex-hycolor-doc
+SUBDIR+=	tex-hypcap
+SUBDIR+=	tex-hypcap-doc
 SUBDIR+=	tex-hypdestopt
 SUBDIR+=	tex-hypdestopt-doc
 SUBDIR+=	tex-hypdoc
@@ -1189,6 +1193,8 @@ SUBDIR+=	tex-multibib
 SUBDIR+=	tex-multibib-doc
 SUBDIR+=	tex-multirow
 SUBDIR+=	tex-multirow-doc
+SUBDIR+=	tex-multitoc
+SUBDIR+=	tex-multitoc-doc
 SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-musixtex-doc
 SUBDIR+=	tex-mwcls
@@ -1579,6 +1585,8 @@ SUBDIR+=	tex-tap-doc
 SUBDIR+=	tex-tcolorbox
 SUBDIR+=	tex-tcolorbox-doc
 SUBDIR+=	tex-tds-doc
+SUBDIR+=	tex-telprint
+SUBDIR+=	tex-telprint-doc
 SUBDIR+=	tex-templates-fenn-doc
 SUBDIR+=	tex-templates-sommer-doc
 SUBDIR+=	tex-tensind
