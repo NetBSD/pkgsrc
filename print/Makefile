@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2025/05/12 08:46:05 markd Exp $
+# $NetBSD: Makefile,v 1.939 2025/05/12 09:48:45 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1187,8 +1187,6 @@ SUBDIR+=	tex-morewrites
 SUBDIR+=	tex-morewrites-doc
 SUBDIR+=	tex-mparhack
 SUBDIR+=	tex-mparhack-doc
-SUBDIR+=	tex-ms
-SUBDIR+=	tex-ms-doc
 SUBDIR+=	tex-multibib
 SUBDIR+=	tex-multibib-doc
 SUBDIR+=	tex-multirow

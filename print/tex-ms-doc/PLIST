@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2021/02/13 11:19:04 markd Exp $
-share/texmf-dist/doc/latex/ms/README.md
-share/texmf-dist/doc/latex/ms/count1to.pdf
-share/texmf-dist/doc/latex/ms/multitoc.asc
-share/texmf-dist/doc/latex/ms/multitoc.bug
-share/texmf-dist/doc/latex/ms/multitoc.pdf
