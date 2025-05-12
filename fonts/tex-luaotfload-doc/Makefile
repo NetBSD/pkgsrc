@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/03/20 10:48:04 markd Exp $
+# $NetBSD: Makefile,v 1.20 2025/05/12 08:11:23 markd Exp $
 
 DISTNAME=	luaotfload.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.28
-TEXLIVE_REV=	70232
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.29
+TEXLIVE_REV=	74324
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/luaotfload
