@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2025/04/13 12:25:15 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/05/12 12:00:32 wiz Exp $
 
 DISTNAME=	grpcio-1.70.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
@@ -18,6 +18,12 @@ USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
+MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_CARES=1
+MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_RE2=1
+MAKE_ENV+=	GRPC_PYTHON_BUILD_SYSTEM_ABSL=1
+
 pre-test:
 	${RM} -f ${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/googlemock/test/*py
 	${RM} -f ${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/googletest/test/*py
@@ -26,7 +32,6 @@ pre-test:
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../net/grpc/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
