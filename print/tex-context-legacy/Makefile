@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/03/21 11:38:01 markd Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/12 08:00:54 markd Exp $
 
 DISTNAME=	context-legacy
-PKGNAME=	tex-${DISTNAME}-2024
-TEXLIVE_REV=	70191
+PKGNAME=	tex-${DISTNAME}-2025
+TEXLIVE_REV=	74403
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-legacy
