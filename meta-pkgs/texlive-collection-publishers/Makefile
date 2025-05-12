@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2024/10/16 04:37:23 markd Exp $
+# $NetBSD: Makefile,v 1.39 2025/05/12 10:47:19 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	72464
+TEXLIVE_REV=	75150
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -20,7 +20,6 @@ DEPENDS+=	tex-abntex2-[0-9]*:../../print/tex-abntex2
 DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
 # depend active-conf
 # depend adfathesis
-# depend afparticle
 # depend afthesis
 # depend aguplus
 # depend aiaa
@@ -71,6 +70,7 @@ DEPENDS+=	tex-classicthesis-[0-9]*:../../print/tex-classicthesis
 # depend cquthesis
 # depend dccpaper
 # depend dithesis
+# depend dlrg-templates
 # depend ebook
 # depend ebsthesis
 # depend ecothesis
@@ -115,6 +115,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend hobete
 # depend hu-berlin-bundle
 # depend hustthesis
+# depend hustvisual
 # depend iaria
 # depend iaria-lite
 # depend icsv
@@ -178,14 +179,17 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend nostarch
 # depend novel
 # depend nrc
+# depend nstc-proposal
 # depend nwafuthesis
 # depend nwejm
 # depend nxuthesis
+# depend omgtudoc-asoiu
 # depend onrannual
 # depend opteng
-# depend osda
 # depend oststud
+# depend ou-tma
 # depend oup-authoring-template
+# depend pats-resume
 # depend philosophersimprint
 # depend pittetd
 # depend pkuthss
@@ -198,6 +202,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend ptptex
 # depend qrbill
 # depend quantumarticle
+# depend rebuttal
 # depend regulatory
 # depend resphilosophica
 # depend resumecls
@@ -228,6 +233,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend spie
 # depend sr-vorl
 # depend srdp-mathematik
+# depend sshrc-insight
 # depend stellenbosch
 # depend stellenbosch-2
 # depend suftesi
@@ -258,6 +264,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend turabian
 # depend uaclasses
 # depend uafthesis
+# depend ualberta
 # depend uantwerpendocs
 # depend ucalgmthesis
 # depend ucbthesis
