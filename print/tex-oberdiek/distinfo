@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2024/02/25 19:45:16 markd Exp $
+$NetBSD: distinfo,v 1.22 2025/05/12 09:27:48 markd Exp $
 
-BLAKE2s (oberdiek.r69038.tar.xz) = 9eece3b6ebc41162efecd469eb2fbe25a58b37b9029a139f734d6048152c3a06
-SHA512 (oberdiek.r69038.tar.xz) = d8c75685ac77c9b8f3259952cead1d5d46dc7bc556044daeecccbe1229da7566c0a31dda776356a6bddd0b710b8e8e3e84612c3ea9e9691bb486e154d9e121be
-Size (oberdiek.r69038.tar.xz) = 37060 bytes
+BLAKE2s (oberdiek.r71916.tar.xz) = a84b4697c41ec724ba6dff6522cf86df2f176c4e777a802f14b998bd94c869b3
+SHA512 (oberdiek.r71916.tar.xz) = aeb4e0a7cec967e08e29f40bd4033f6d35b6210660e11cfa75a226d132e9997a9ac681729c99c35bc460f0c6a812c7994e489c64ddcb07b12e2434ed56fc8a01
+Size (oberdiek.r71916.tar.xz) = 35540 bytes
