@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/06/17 12:29:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/12 08:04:06 markd Exp $
 
 DISTNAME=	context-pocketdiary
-PKGNAME=	tex-${DISTNAME}-2023
-TEXLIVE_REV=	66953
+PKGNAME=	tex-${DISTNAME}-2024
+TEXLIVE_REV=	73164
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/context-pocketdiary
