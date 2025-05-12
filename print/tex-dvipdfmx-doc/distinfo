@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/04/17 10:18:56 markd Exp $
+$NetBSD: distinfo,v 1.15 2025/05/12 11:44:57 markd Exp $
 
-BLAKE2s (dvipdfmx.doc.r61101.tar.xz) = ae25bfbf67a77b387cab029ef81f00a3e759369b5b44df4553a35780f9004ecb
-SHA512 (dvipdfmx.doc.r61101.tar.xz) = 00dce9b36eefd1788bbe455b2e5104efd9afc8bd891aeafb2cd9bdee406eeb25ab520e42e614e9d2363eb6a7273232bc3c4805bacd82a22099c5ffc438e852cb
-Size (dvipdfmx.doc.r61101.tar.xz) = 3129328 bytes
+BLAKE2s (dvipdfmx.doc.r74096.tar.xz) = 22eed219ea484a8890a9f183c0820421a0d98d56b1aa3f47c6d32f5b2af3383f
+SHA512 (dvipdfmx.doc.r74096.tar.xz) = 04a43a3837734603554f977ae02a372d87a20e2fc2442b9f046f3b4c56a22c2c3fbb21caf31d280200128fbb449da5c6ddb2694210752e39f22f47e7107fed00
+Size (dvipdfmx.doc.r74096.tar.xz) = 3125516 bytes
