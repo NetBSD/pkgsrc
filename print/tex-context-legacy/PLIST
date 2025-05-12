@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/03/21 11:38:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/12 08:00:54 markd Exp $
 bin/texexec
 bin/texmfstart
 share/texmf-dist/bibtex/bst/context/mkii/cont-ab.bst
@@ -523,22 +523,6 @@ share/texmf-dist/tex/context/fonts/mkii/type-msw.mkii
 share/texmf-dist/tex/context/fonts/mkii/type-pre.mkii
 share/texmf-dist/tex/context/fonts/mkii/type-win.mkii
 share/texmf-dist/tex/context/fonts/mkii/type-xtx.mkii
-share/texmf-dist/tex/context/interface/mkii/cont-cs.xml
-share/texmf-dist/tex/context/interface/mkii/cont-de.xml
-share/texmf-dist/tex/context/interface/mkii/cont-fr.xml
-share/texmf-dist/tex/context/interface/mkii/cont-it.xml
-share/texmf-dist/tex/context/interface/mkii/cont-nl.xml
-share/texmf-dist/tex/context/interface/mkii/cont-pe.xml
-share/texmf-dist/tex/context/interface/mkii/cont-ro.xml
-share/texmf-dist/tex/context/interface/mkii/keys-cs.xml
-share/texmf-dist/tex/context/interface/mkii/keys-cz.xml
-share/texmf-dist/tex/context/interface/mkii/keys-de.xml
-share/texmf-dist/tex/context/interface/mkii/keys-en.xml
-share/texmf-dist/tex/context/interface/mkii/keys-fr.xml
-share/texmf-dist/tex/context/interface/mkii/keys-it.xml
-share/texmf-dist/tex/context/interface/mkii/keys-nl.xml
-share/texmf-dist/tex/context/interface/mkii/keys-pe.xml
-share/texmf-dist/tex/context/interface/mkii/keys-ro.xml
 share/texmf-dist/tex/context/modules/mkii/m-arabtex.mkii
 share/texmf-dist/tex/context/modules/mkii/m-chart.mkii
 share/texmf-dist/tex/context/modules/mkii/m-chemic.mkii
