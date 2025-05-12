@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3232 2025/05/12 12:35:40 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3233 2025/05/12 13:07:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4749,3 +4749,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-platex-doc to 2025 [mark 2025-05-12]
 	Updated print/tex-uplatex to 2025 [mark 2025-05-12]
 	Updated print/tex-uplatex-doc to 2025 [mark 2025-05-12]
+	Updated www/py-django-allauth to 65.8.0 [adam 2025-05-12]
+	Updated www/py-django-debug-toolbar to 5.2.0 [adam 2025-05-12]
