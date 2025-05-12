@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:14:58 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/12 09:16:11 markd Exp $
 
-BLAKE2s (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = 6326cde04595a8a201cf9886ccb2fd77def09e6b115a2a0b7bc83533e1a64f6b
-SHA512 (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = b238f4293ae6880985a5ad8c5c973195cb4b6114af1bf7aa7f4f948b173821a0d496ab259b19bd9f645b0b31fe473a137fc564e1e612b6086facda40e55e1832
-Size (tex-tufte-latex-37649/tufte-latex.doc.tar.xz) = 453460 bytes
+BLAKE2s (tufte-latex.doc.r37649.tar.xz) = 2e5225f40744bb2b3b7e901d2519282e076f4f646f9ae50e38d2d66bc9b0b8b2
+SHA512 (tufte-latex.doc.r37649.tar.xz) = 11ac57e79a05db644235b6db851473c75d1538a1261d7022a63d9ab0cc54486cc13b7cc95c44d16912952e46bc9264c1bfb831a728b51a03495d01f1963410d3
+Size (tufte-latex.doc.r37649.tar.xz) = 453460 bytes
