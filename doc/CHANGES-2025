@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3235 2025/05/12 15:27:22 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3236 2025/05/12 15:46:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-debug-toolbar to 5.2.0 [adam 2025-05-12]
 	Updated www/ruby-aws-sdk-core to 3.223.0 [taca 2025-05-12]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.114.0 [taca 2025-05-12]
+	Updated misc/screen to 5.0.0nb2 [wiz 2025-05-12]
