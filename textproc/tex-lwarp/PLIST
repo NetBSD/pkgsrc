@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/03/21 10:32:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/05/12 08:23:56 markd Exp $
 bin/lwarpmk
 share/texmf-dist/tex/latex/lwarp/lwarp-2in1.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-2up.sty
@@ -414,6 +414,7 @@ share/texmf-dist/tex/latex/lwarp/lwarp-pxeveryshi.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pxfonts.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pxftnright.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-pxjahyper.sty
+share/texmf-dist/tex/latex/lwarp/lwarp-pythontex.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-quotchap.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-quoting.sty
 share/texmf-dist/tex/latex/lwarp/lwarp-ragged2e.sty
