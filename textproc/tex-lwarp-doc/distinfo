@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/03/21 10:32:20 markd Exp $
+$NetBSD: distinfo,v 1.18 2025/05/12 08:23:56 markd Exp $
 
-BLAKE2s (lwarp.doc.r70067.tar.xz) = 41cd671509693e9fac7ed08655b17a2310367f6f4e316f773fd01602bb7fbc9d
-SHA512 (lwarp.doc.r70067.tar.xz) = f52a445b50bfe27b9e2ea913b2f324272ddcb74c6da51fd762dc78098b69da86cbe9bed7e5b3e1fefdb52e53104ee348939bc23e93ef9005ed27dcceebb12d24
-Size (lwarp.doc.r70067.tar.xz) = 3324092 bytes
+BLAKE2s (lwarp.doc.r75010.tar.xz) = 1288b0b9bce69a9c50e41b8cd7d9c5f287e929b6fae42c21c9ae22fdc11910f2
+SHA512 (lwarp.doc.r75010.tar.xz) = 97ab3896155236c569099474aea051e225e7c9414032c99e316bc450eaa0c92c52d03bfbc6f1b95d90adf75e55025a0ce4389c8439e1f0e2e22dbcd463f705ba
+Size (lwarp.doc.r75010.tar.xz) = 3155708 bytes
