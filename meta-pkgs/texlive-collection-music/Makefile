@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2024/03/21 20:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/12 10:32:55 markd Exp $
 
 DISTNAME=	collection-music
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69613
+TEXLIVE_REV=	73288
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -28,6 +28,7 @@ DEPENDS+=	tex-bagpipe-[0-9]*:../../print/tex-bagpipe
 # depend harmony
 # depend latex4musicians
 # depend leadsheets
+# depend liederbuch
 # depend lilyglyphs
 # depend lyluatex
 # depend m-tx
