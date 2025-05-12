@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:13:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/12 05:18:50 ryoon Exp $
 
-DISTNAME=	pygame_sdl2-2.1.0+renpy8.1.3
-PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0.8.1.3
-PKGREVISION=	4
+DISTNAME=	pygame_sdl2-2.1.0+renpy8.3.7
+PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0.8.3.7
 CATEGORIES=	devel games python
-MASTER_SITES=	https://www.renpy.org/dl/8.1.3/
+MASTER_SITES=	https://www.renpy.org/dl/8.3.7/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/renpy/pygame_sdl2
@@ -27,6 +26,14 @@ SUBST_STAGE.cython=	pre-configure
 SUBST_MESSAGE.cython=	Use versioned cython_command
 SUBST_FILES.cython+=	setuplib.py
 SUBST_SED.cython=	-e 's,cython_command = ".*,cython_command = "cython-${PYVERSSUFFIX}",g'
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	pre-configure
+SUBST_MESSAGE.destdir=	Install header files under destdir
+SUBST_FILES.destdir+=	setup.py
+SUBST_VARS.destdir=	DESTDIR PREFIX PYINC
+
+.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.prefs.mk"
 PLIST_VARS+=		darwin unix
