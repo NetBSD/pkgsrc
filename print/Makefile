@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.939 2025/05/12 09:48:45 markd Exp $
+# $NetBSD: Makefile,v 1.940 2025/05/12 11:39:47 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -706,6 +706,8 @@ SUBDIR+=	tex-exam
 SUBDIR+=	tex-exam-doc
 SUBDIR+=	tex-excludeonly
 SUBDIR+=	tex-excludeonly-doc
+SUBDIR+=	tex-extractbb
+SUBDIR+=	tex-extractbb-doc
 SUBDIR+=	tex-extsizes
 SUBDIR+=	tex-extsizes-doc
 SUBDIR+=	tex-fancybox
