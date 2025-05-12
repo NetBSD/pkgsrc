@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2024/10/16 04:31:46 markd Exp $
+# $NetBSD: Makefile,v 1.48 2025/05/12 10:38:52 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	71947
+TEXLIVE_REV=	74988
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -33,6 +33,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend byrne
 # depend cachepic
 # depend callouts
+# depend callouts-box
 # depend celtic
 DEPENDS+=	tex-chemfig-[0-9]*:../../graphics/tex-chemfig
 # depend circuit-macros
@@ -103,6 +104,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend luasseq
 # depend maker
 # depend makeshape
+# depend maritime
 # depend mathspic
 # depend memoize
 # depend mercatormap
@@ -114,6 +116,7 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend nl-interval
 # depend nndraw
 # depend numericplots
+# depend open-everyday-symbols
 # depend outilsgeomtikz
 # depend papiergurvan
 DEPENDS+=	tex-pb-diagram-[0-9]*:../../print/tex-pb-diagram
@@ -150,6 +153,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend postage
 # depend postit
 # depend prerex
+# depend prisma-flow-diagram
 # depend productbox
 # depend ptolemaicastronomy
 # depend puyotikz
@@ -178,6 +182,7 @@ DEPENDS+=	tex-smartdiagram-[0-9]*:../../graphics/tex-smartdiagram
 DEPENDS+=	tex-spath3-[0-9]*:../../graphics/tex-spath3
 # depend spectralsequences
 # depend strands
+# depend sunpath
 # depend swimgraf
 # depend syntaxdi
 # depend table-fct
@@ -188,7 +193,9 @@ DEPENDS+=	tex-tikz-3dplot-[0-9]*:../../graphics/tex-tikz-3dplot
 # depend tikz-bagua
 # depend tikz-bayesnet
 # depend tikz-bbox
+# depend tikz-bpmn
 DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
+# depend tikz-decofonts
 # depend tikz-dependency
 # depend tikz-dimline
 # depend tikz-ext
@@ -221,10 +228,12 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz2d-fr
 # depend tikz3d-fr
 # depend tikzbricks
+# depend tikzcalendarnotes
 # depend tikzcodeblocks
 # depend tikzdotncross
 # depend tikzducks
 # depend tikzfill
+# depend tikzfxgraph
 DEPENDS+=	tex-tikzinclude-[0-9]*:../../graphics/tex-tikzinclude
 # depend tikzlings
 DEPENDS+=	tex-tikzmark-[0-9]*:../../graphics/tex-tikzmark
@@ -244,6 +253,7 @@ DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
 # depend tikzviolinplots
 # depend tile-graphic
 # depend tilings
+# depend timechart
 # depend tipfr
 DEPENDS+=	tex-tkz-base-[0-9]*:../../graphics/tex-tkz-base
 # depend tkz-berge
