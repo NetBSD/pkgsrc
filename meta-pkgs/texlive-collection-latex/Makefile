@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2024/03/21 20:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/12 09:38:01 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
-TEXLIVE_REV=	69131
+TEXLIVE_REV=	73720
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -28,6 +28,7 @@ DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl>=0.1nb1:../../print/tex-colortbl
 DEPENDS+=	tex-epstopdf-pkg-[0-9]*:../../print/tex-epstopdf-pkg
 DEPENDS+=	tex-etexcmds-[0-9]*:../../print/tex-etexcmds
+DEPENDS+=	tex-etoolbox-[0-9]*:../../devel/tex-etoolbox
 DEPENDS+=	tex-fancyhdr>=3.1nb1:../../print/tex-fancyhdr
 DEPENDS+=	tex-firstaid-[0-9]*:../../print/tex-firstaid
 DEPENDS+=	tex-fix2col>=2016:../../print/tex-fix2col
@@ -38,6 +39,7 @@ DEPENDS+=	tex-graphics-cfg>=2016:../../print/tex-graphics-cfg
 DEPENDS+=	tex-grfext-[0-9]*:../../print/tex-grfext
 DEPENDS+=	tex-hopatch-[0-9]*:../../print/tex-hopatch
 DEPENDS+=	tex-hycolor-[0-9]*:../../print/tex-hycolor
+DEPENDS+=	tex-hypcap-[0-9]*:../../print/tex-hypcap
 DEPENDS+=	tex-hyperref>=6.81pnb3:../../print/tex-hyperref
 DEPENDS+=	tex-intcalc-[0-9]*:../../print/tex-intcalc
 DEPENDS+=	tex-kvdefinekeys-[0-9]*:../../print/tex-kvdefinekeys
