@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/25 19:45:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/05/12 09:27:48 markd Exp $
 share/texmf-dist/doc/latex/oberdiek/README.md
 share/texmf-dist/doc/latex/oberdiek/aliascnt.pdf
 share/texmf-dist/doc/latex/oberdiek/bmpsize.pdf
@@ -18,7 +18,6 @@ share/texmf-dist/doc/latex/oberdiek/fibnum.pdf
 share/texmf-dist/doc/latex/oberdiek/flags.pdf
 share/texmf-dist/doc/latex/oberdiek/holtxdoc.pdf
 share/texmf-dist/doc/latex/oberdiek/hypbmsec.pdf
-share/texmf-dist/doc/latex/oberdiek/hypcap.pdf
 share/texmf-dist/doc/latex/oberdiek/hypgotoe-example.tex
 share/texmf-dist/doc/latex/oberdiek/hypgotoe.pdf
 share/texmf-dist/doc/latex/oberdiek/hyphsubst.pdf
@@ -45,6 +44,5 @@ share/texmf-dist/doc/latex/oberdiek/tabularht-example2.tex
 share/texmf-dist/doc/latex/oberdiek/tabularht.pdf
 share/texmf-dist/doc/latex/oberdiek/tabularkv-example.tex
 share/texmf-dist/doc/latex/oberdiek/tabularkv.pdf
-share/texmf-dist/doc/latex/oberdiek/telprint.pdf
 share/texmf-dist/doc/latex/oberdiek/thepdfnumber.pdf
 share/texmf-dist/doc/latex/oberdiek/twoopt.pdf
