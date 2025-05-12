@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/14 18:37:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/05/12 13:05:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -379,6 +379,9 @@ ${PYSITELIB}/allauth/headless/base/urls.pyo
 ${PYSITELIB}/allauth/headless/base/views.py
 ${PYSITELIB}/allauth/headless/base/views.pyc
 ${PYSITELIB}/allauth/headless/base/views.pyo
+${PYSITELIB}/allauth/headless/checks.py
+${PYSITELIB}/allauth/headless/checks.pyc
+${PYSITELIB}/allauth/headless/checks.pyo
 ${PYSITELIB}/allauth/headless/conftest.py
 ${PYSITELIB}/allauth/headless/conftest.pyc
 ${PYSITELIB}/allauth/headless/conftest.pyo
@@ -1943,6 +1946,21 @@ ${PYSITELIB}/allauth/socialaccount/providers/mailchimp/urls.pyo
 ${PYSITELIB}/allauth/socialaccount/providers/mailchimp/views.py
 ${PYSITELIB}/allauth/socialaccount/providers/mailchimp/views.pyc
 ${PYSITELIB}/allauth/socialaccount/providers/mailchimp/views.pyo
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/__init__.py
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/__init__.pyc
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/__init__.pyo
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/provider.py
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/provider.pyc
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/provider.pyo
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/tests.py
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/tests.pyc
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/tests.pyo
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/urls.py
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/urls.pyc
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/urls.pyo
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/views.py
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/views.pyc
+${PYSITELIB}/allauth/socialaccount/providers/mailcow/views.pyo
 ${PYSITELIB}/allauth/socialaccount/providers/mailru/__init__.py
 ${PYSITELIB}/allauth/socialaccount/providers/mailru/__init__.pyc
 ${PYSITELIB}/allauth/socialaccount/providers/mailru/__init__.pyo
@@ -3056,6 +3074,7 @@ ${PYSITELIB}/allauth/templates/account/messages/logged_out.txt
 ${PYSITELIB}/allauth/templates/account/messages/login_code_sent.txt
 ${PYSITELIB}/allauth/templates/account/messages/password_changed.txt
 ${PYSITELIB}/allauth/templates/account/messages/password_set.txt
+${PYSITELIB}/allauth/templates/account/messages/phone_verification_sent.txt
 ${PYSITELIB}/allauth/templates/account/messages/phone_verified.txt
 ${PYSITELIB}/allauth/templates/account/messages/primary_email_set.txt
 ${PYSITELIB}/allauth/templates/account/messages/unverified_primary_email.txt
@@ -3079,6 +3098,7 @@ ${PYSITELIB}/allauth/templates/allauth/elements/alert.html
 ${PYSITELIB}/allauth/templates/allauth/elements/badge.html
 ${PYSITELIB}/allauth/templates/allauth/elements/button.html
 ${PYSITELIB}/allauth/templates/allauth/elements/button_group.html
+${PYSITELIB}/allauth/templates/allauth/elements/details.html
 ${PYSITELIB}/allauth/templates/allauth/elements/field.html
 ${PYSITELIB}/allauth/templates/allauth/elements/fields.html
 ${PYSITELIB}/allauth/templates/allauth/elements/form.html
