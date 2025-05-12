@@ -1,0 +1,7 @@
+The package offers a solution to the problem that when you link
+to a float using hyperref, the link anchors to below the
+float's caption, rather than the beginning of the float. Hypcap
+defines a separate \capstart command, which you put where you
+want links to end; you should have a \capstart command for each
+\caption command. Package options can be used to auto-insert a
+\capstart at the start of a float environment.
