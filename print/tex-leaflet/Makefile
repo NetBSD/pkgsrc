@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/03/20 10:35:33 markd Exp $
+# $NetBSD: Makefile,v 1.11 2025/05/12 08:59:15 markd Exp $
 
 DISTNAME=	leaflet
 PKGNAME=	tex-${DISTNAME}-2.1c
+PKGREVISION=	1
 TEXLIVE_REV=	70652
 
 MAINTAINER=	leot1990@users.sourceforge.net
@@ -11,7 +12,6 @@ LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-etex-pkg-[0-9]*:../../print/tex-etex-pkg
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 
