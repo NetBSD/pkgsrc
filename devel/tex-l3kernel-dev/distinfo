@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 12:10:34 markd Exp $
+
+BLAKE2s (l3kernel-dev.r75056.tar.xz) = 425315aeb6c2df531fdf027c52bce9c847485c30569e9c67955d2543444e3844
+SHA512 (l3kernel-dev.r75056.tar.xz) = dce792a654bf68f2c348e519c3c5029e17d5098d15794d624504e9275bfcc767a3a6b1d71c1ab36181228c0e2060b8cc5c7a0d1eb81056ab7c7b8545bc77d0f9
+Size (l3kernel-dev.r75056.tar.xz) = 185392 bytes
