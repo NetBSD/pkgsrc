@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2024/03/21 20:00:52 markd Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/12 10:07:23 markd Exp $
 
 DISTNAME=	collection-langarabic
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69111
+TEXLIVE_REV=	74912
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -33,6 +33,7 @@ DEPENDS+=	tex-imsproc-[0-9]*:../../print/tex-imsproc
 DEPENDS+=	tex-kurdishlipsum-[0-9]*:../../print/tex-kurdishlipsum
 # lshort-persian is documentation only
 DEPENDS+=	tex-luabidi-[0-9]*:../../print/tex-luabidi
+# depend mohe-book
 DEPENDS+=	tex-na-box-[0-9]*:../../print/tex-na-box
 # depend parsimatn
 # depend parsinevis
