@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2024/10/16 04:33:29 markd Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/12 10:42:14 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	71220
+TEXLIVE_REV=	75140
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -70,6 +70,7 @@ DEPENDS+=	tex-letterspacing-[0-9]*:../../print/tex-letterspacing
 DEPENDS+=	tex-listofitems-[0-9]*:../../print/tex-listofitems
 DEPENDS+=	tex-localloc-[0-9]*:../../print/tex-localloc
 DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
+# depend measurebox
 # depend metatex
 # depend midnight
 DEPENDS+=	tex-mkpattern-[0-9]*:../../print/tex-mkpattern
@@ -86,6 +87,7 @@ DEPENDS+=	tex-outerhbox-[0-9]*:../../print/tex-outerhbox
 DEPENDS+=	tex-path>=3.05:../../print/tex-path
 # depend pdf-trans
 # depend pdfmsym
+# depend pdftoolbox
 DEPENDS+=	tex-pitex-[0-9]*:../../print/tex-pitex
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 # depend plainpkg
@@ -103,6 +105,7 @@ DEPENDS+=	tex-ruler-[0-9]*:../../print/tex-ruler
 # depend shade
 DEPENDS+=	tex-simplekv-[0-9]*:../../print/tex-simplekv
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
+# depend stretchy
 DEPENDS+=	tex-swrule-[0-9]*:../../print/tex-swrule
 # depend systeme
 # depend tabto-generic
@@ -118,6 +121,7 @@ DEPENDS+=	tex-tracklang-[0-9]*:../../print/tex-tracklang
 # depend transparent-io
 DEPENDS+=	tex-treetex-[0-9]*:../../print/tex-treetex
 # depend trigonometry
+# depend tuple
 DEPENDS+=	tex-ulem>=2013:../../print/tex-ulem
 # depend upca
 DEPENDS+=	tex-varisize-[0-9]*:../../print/tex-varisize
