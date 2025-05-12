@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 08:42:24 markd Exp $
+
+BLAKE2s (telprint.doc.r71914.tar.xz) = ee9a0e34cfd53282b6d8637c2963f2e08ae39c907e789021e011a987a2821022
+SHA512 (telprint.doc.r71914.tar.xz) = f0529a2aa31a7ddbc8d17225b8303a1a4e04438de1fa4ec61fcdaf29787dcb761ad5d4bca356f7bf3c39d40d64a766cc6733e037d18654795ef830dfce2be2fb
+Size (telprint.doc.r71914.tar.xz) = 320184 bytes
