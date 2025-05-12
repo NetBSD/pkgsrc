@@ -1,0 +1,4 @@
+The package automatically sets the table of contents, list of
+figures and list of tables in two or more columns (the number
+of columns may be configured). The package uses the multicol
+package.

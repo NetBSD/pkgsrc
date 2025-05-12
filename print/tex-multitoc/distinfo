@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 08:39:24 markd Exp $
+
+BLAKE2s (multitoc.r71520.tar.xz) = 722cb305bcab87d9f78cefb2f31ae2141efa39042bcde1d7601be2b2cf282a58
+SHA512 (multitoc.r71520.tar.xz) = 261e265bdd4528092168be95ad071bb379c4b8d5f98dfd7a277ffb87f0e6e30f68e0ba97cc9860e6efebfc0ed4a4a68602845f1e008b5405263a3449cc9e163a
+Size (multitoc.r71520.tar.xz) = 1512 bytes
