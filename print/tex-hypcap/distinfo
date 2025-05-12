@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/12 08:36:18 markd Exp $
+
+BLAKE2s (hypcap.r71912.tar.xz) = 8cd1a0abfbdaecebd62502ff0075a23f25d30218fc1a8317b1175099aa95f03e
+SHA512 (hypcap.r71912.tar.xz) = addf9ef94f61eb1516b6a3ef1bc7653b83133f2d4df5eb9d178f859a411d0dd8bc3c1b14b5657396860813069b32d78e78a6b26d88e546c011628e47a878ff5e
+Size (hypcap.r71912.tar.xz) = 2024 bytes
