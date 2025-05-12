@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2020/05/02 02:46:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/12 09:16:11 markd Exp $
 
 DISTNAME=	tufte-latex
 PKGNAME=	tex-${DISTNAME}-3.5.2
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	37649
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +19,6 @@ DEPENDS+=	tex-iftex>=1.0d:../../print/tex-iftex
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
-DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-paralist-[0-9]*:../../print/tex-paralist
@@ -35,6 +34,5 @@ DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
