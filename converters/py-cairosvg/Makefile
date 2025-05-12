@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2025/04/25 11:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/12 12:19:43 wiz Exp $
 
-DISTNAME=	CairoSVG-2.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
+DISTNAME=	cairosvg-2.8.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters graphics python
-MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairosvg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cairosvg.org/
@@ -23,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
 
-WHEEL_NAME=	${DISTNAME:tl}
+# tests need a copy of the directory test_non_regression/cairosvg_reference
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
