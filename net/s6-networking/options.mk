@@ -1,13 +1,15 @@
-# $NetBSD: options.mk,v 1.7 2021/04/26 15:05:30 schmonz Exp $
+# $NetBSD: options.mk,v 1.8 2025/05/13 03:50:51 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.s6-networking
 PKG_SUPPORTED_OPTIONS+=	execline tls
-PKG_SUGGESTED_OPTIONS+=	tls
+PKG_SUGGESTED_OPTIONS+=	execline tls
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mexecline)
+DEPENDS+=		execline-[0-9]*:../../lang/execline
 .  include "../../lang/execline/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-execline
 .else
 CONFIGURE_ARGS+=	--disable-execline
 .endif
