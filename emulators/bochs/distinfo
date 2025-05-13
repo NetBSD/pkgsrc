@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2025/02/20 22:42:14 nia Exp $
+$NetBSD: distinfo,v 1.39 2025/05/13 15:48:55 nia Exp $
 
 BLAKE2s (bochs-2.7.tar.gz) = f1681035d10c7f8f2d2b40c43c27b6af00ba6a3f0db3c29c38af7a6092673814
 SHA512 (bochs-2.7.tar.gz) = d43bd557316dc370ba1c317f5c3292f724460515db01316614b2d585b2760120cadd1d27a286083ac3e6f57466ed889959abd7fe960c219c149dab9a053c6967
@@ -8,6 +8,7 @@ SHA1 (patch-Makefile.in) = ca8d485a9f4901df15eb3e521105de2ae833cfcb
 SHA1 (patch-configure) = aff62a847311bf2afad27445813656ff081bb93b
 SHA1 (patch-gui_Makefile.in) = fb5e2ba02533c39169ea95101b9acaa6e33f6392
 SHA1 (patch-gui_textconfig.cc) = 8bbb1d4019d985bea8216175ad0d3dee6ff4e7e0
+SHA1 (patch-iodev_display_voodoo__func.h) = 157fe1bd40177054a76b2a8aff50c423e9847779
 SHA1 (patch-iodev_network_eth__socket.cc) = 4baa4cd0c7c004e6e48d57327ab2eff550efb924
 SHA1 (patch-iodev_network_slirp_compat_cc) = a48d112daac6049c0ee8076eb012ab2f44740889
 SHA1 (patch-iodev_sound_soundosx.cc) = 285cdfc87803082847e6492031df7e33a389c2fa
