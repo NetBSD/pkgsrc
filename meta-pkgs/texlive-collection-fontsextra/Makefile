@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2024/10/22 21:08:19 markd Exp $
+# $NetBSD: Makefile,v 1.37 2025/05/13 09:41:44 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2024pre2
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	72535
+TEXLIVE_REV=	75103
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -102,7 +102,6 @@ DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
 DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 # depend concmath-otf
-# depend context-companion-fonts
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
 # depend cooperhewitt
 # depend cormorantgaramond
@@ -166,6 +165,7 @@ DEPENDS+=	tex-foekfont-[0-9]*:../../fonts/tex-foekfont
 DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-fontawesome5-[0-9]*:../../fonts/tex-fontawesome5
+# depend fontawesome6
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
 # depend fontscripts
@@ -180,7 +180,8 @@ DEPENDS+=	tex-garamond-math-[0-9]*:../../fonts/tex-garamond-math
 # depend gelasio
 # depend gelasiomath
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
-DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
+DEPENDS+=	tex-gentium-otf-[0-9]*:../../fonts/tex-gentium-otf
+DEPENDS+=	tex-gentium-sil-[0-9]*:../../fonts/tex-gentium-sil
 DEPENDS+=	tex-gfsartemisia-[0-9]*:../../fonts/tex-gfsartemisia
 DEPENDS+=	tex-gfsbodoni-[0-9]*:../../fonts/tex-gfsbodoni
 DEPENDS+=	tex-gfscomplutum-[0-9]*:../../fonts/tex-gfscomplutum
@@ -219,6 +220,7 @@ DEPENDS+=	tex-ipaex-type1-[0-9]*:../../fonts/tex-ipaex-type1
 DEPENDS+=	tex-iwona-[0-9]*:../../fonts/tex-iwona
 DEPENDS+=	tex-jablantile-[0-9]*:../../fonts/tex-jablantile
 DEPENDS+=	tex-jamtimes-[0-9]*:../../fonts/tex-jamtimes
+# depend jetbrainsmono-otf
 # depend josefin
 DEPENDS+=	tex-junicode-[0-9]*:../../fonts/tex-junicode
 # depend junicodevf
@@ -246,6 +248,7 @@ DEPENDS+=	tex-lineara-[0-9]*:../../fonts/tex-linearA
 # depend linguisticspro
 DEPENDS+=	tex-lobster2-[0-9]*:../../fonts/tex-lobster2
 # depend logix
+# depend luciole
 # depend luwiantype
 DEPENDS+=	tex-lxfonts-[0-9]*:../../fonts/tex-lxfonts
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
