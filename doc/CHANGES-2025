@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3256 2025/05/13 10:48:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3257 2025/05/13 12:18:29 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4777,3 +4777,28 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.147.3 [triaxx 2025-05-13]
 	Updated devel/py-future to 1.0.0 [wiz 2025-05-13]
 	Updated textproc/py-commonmark to 0.9.1nb3 [wiz 2025-05-13]
+	Added devel/tex-latex2pydata version 0.6.0 [mark 2025-05-13]
+	Added devel/tex-latex2pydata-doc version 0.6.0 [mark 2025-05-13]
+	Updated print/tex-minted to 3.6.0 [mark 2025-05-13]
+	Updated print/tex-minted-doc to 3.6.0 [mark 2025-05-13]
+	Added fonts/tex-gentium-otf version 0.02 [mark 2025-05-13]
+	Added fonts/tex-gentium-otf-doc version 0.02 [mark 2025-05-13]
+	Added fonts/tex-gentium-sil version 6.200 [mark 2025-05-13]
+	Added fonts/tex-gentium-sil-doc version 6.200 [mark 2025-05-13]
+	Removed fonts/tex-gentium-tug [mark 2025-05-13]
+	Removed fonts/tex-gentium-tug-doc [mark 2025-05-13]
+	Added print/tex-context-chat version 2024.08.10 [mark 2025-05-13]
+	Added print/tex-context-chat-doc version 2024.08.10 [mark 2025-05-13]
+	Added fonts/tex-context-companion-fonts version 2024 [mark 2025-05-13]
+	Added fonts/tex-context-companion-fonts-doc version 2024 [mark 2025-05-13]
+	Updated meta-pkgs/texlive-collection-context to 2025 [mark 2025-05-13]
+	Added print/tex-fragoli version 1.1.1 [mark 2025-05-13]
+	Added print/tex-fragoli-doc version 1.1.1 [mark 2025-05-13]
+	Updated meta-pkgs/texlive-collection-langgerman to 2025 [mark 2025-05-13]
+	Added print/tex-tabularray-abnt version 2025 [mark 2025-05-13]
+	Added print/tex-tabularray-abnt-doc version 2025 [mark 2025-05-13]
+	Updated meta-pkgs/texlive-collection-langportuguese to 2025 [mark 2025-05-13]
+	Added print/tex-quran-es version 0.11 [mark 2025-05-13]
+	Added print/tex-quran-es-doc version 0.11 [mark 2025-05-13]
+	Updated meta-pkgs/texlive-collection-langspanish to 2025 [mark 2025-05-13]
+	Updated pkgtools/texlive2pkg to 1.14 [mark 2025-05-13]
