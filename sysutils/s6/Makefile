@@ -1,42 +1,33 @@
-# $NetBSD: Makefile,v 1.27 2024/11/14 14:12:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2025/05/13 03:43:21 schmonz Exp $
 
-DISTNAME=	s6-2.13.1.0
-CATEGORIES=	sysutils
-MASTER_SITES=	${HOMEPAGE}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
-
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://skarnet.org/software/s6/
-COMMENT=	The s6 supervision suite
-LICENSE=	isc
-
-# man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
+DISTNAME=		s6-2.13.2.0
 MANPAGES_VERSION=	2.13.1.0.1
+CATEGORIES=		sysutils
+MASTER_SITES=		${HOMEPAGE}
 MANPAGES_DIST=		s6-man-pages-${MANPAGES_VERSION}.tar.gz
-SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/s6-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
+SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
+
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://skarnet.org/software/s6/
+COMMENT=		The s6 supervision suite
+LICENSE=		isc
+
+TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
+# "for certain binaries that spawn scripts interpreted with execlineb"
+DEPENDS+=		execline-[0-9]*:../../lang/execline
+
+WRKMANSRC=		${WRKDIR}/${PKGBASE}-man-pages-v${MANPAGES_VERSION}
 
 USE_TOOLS+=		gmake
+TOOLS_PLATFORM.install=	${PREFIX}/bin/ginstall
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
-CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/execline
-CONFIGURE_ARGS+=	--with-lib=${PREFIX}/lib/skalibs
-CONFIGURE_ARGS+=	--with-include=${PREFIX}/include
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--enable-pkgconfig
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${PKGMANDIR}/man8
-
-.PHONY: do-install-manpages
-post-install: do-install-manpages
-do-install-manpages:
-	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 7 8; do \
-		for j in man$$i/*.$$i; do \
-			${INSTALL_MAN} $$j \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
-		done \
-	done
+INSTALL_DIRS+=		. ${WRKMANSRC}
+INSTALL_ENV+=		PREFIX=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../devel/skalibs/buildlink3.mk"
-# "for certain binaries that spawn scripts interpreted with execlineb"
-BUILDLINK_DEPMETHOD.execline+=		full
 .include "../../lang/execline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
