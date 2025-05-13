@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/13 09:52:45 markd Exp $
+
+BLAKE2s (context-chat.doc.r72010.tar.xz) = a9b11341a8c15e7f51a68574173b05f9428cec54538e6d4582aa32bfb7d745ce
+SHA512 (context-chat.doc.r72010.tar.xz) = 3e5f06fcb75babfba4f3537cc303f85df5e4b593ebc79b81784618072e372df17c72932e339d126eb9d2586468534904b18ca39473f2b858c7637494c373399b
+Size (context-chat.doc.r72010.tar.xz) = 12576 bytes
