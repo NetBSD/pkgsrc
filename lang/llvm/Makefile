@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/05/09 05:53:51 adam Exp $
+# $NetBSD: Makefile,v 1.109 2025/05/13 22:02:54 mef Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -36,7 +36,7 @@ LICENSE=	apache-2.0
 
 POLICY_UPDATE_LIMITED=	abi
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17 charconv
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
 PYTHON_FOR_BUILD_ONLY=	no
