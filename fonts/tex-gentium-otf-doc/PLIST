@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/13 09:28:33 markd Exp $
+share/texmf-dist/doc/fonts/gentium-otf/Changes
+share/texmf-dist/doc/fonts/gentium-otf/README.md
+share/texmf-dist/doc/fonts/gentium-otf/gentium-otf-doc.pdf
+share/texmf-dist/doc/fonts/gentium-otf/gentium-otf-doc.tex
