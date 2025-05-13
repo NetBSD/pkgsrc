@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2024/03/25 11:02:55 markd Exp $
+# $NetBSD: Makefile,v 1.25 2025/05/13 11:05:03 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2024.70738
+PKGNAME=	texlive-${DISTNAME}-2025pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70738
+TEXLIVE_REV=	74394
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -17,6 +17,7 @@ DEPENDS+=	tex-asternote-[0-9]*:../../print/tex-asternote
 DEPENDS+=	tex-babel-japanese-[0-9]*:../../print/tex-babel-japanese
 DEPENDS+=	tex-bxbase-[0-9]*:../../print/tex-bxbase
 DEPENDS+=	tex-bxcjkjatype-[0-9]*:../../print/tex-bxcjkjatype
+# depend bxcoloremoji
 DEPENDS+=	tex-bxghost-[0-9]*:../../print/tex-bxghost
 DEPENDS+=	tex-bxjaholiday-[0-9]*:../../time/tex-bxjaholiday
 DEPENDS+=	tex-bxjalipsum-[0-9]*:../../print/tex-bxjalipsum
@@ -25,7 +26,9 @@ DEPENDS+=	tex-bxjatoucs-[0-9]*:../../fonts/tex-bxjatoucs
 DEPENDS+=	tex-bxjscls-[0-9]*:../../print/tex-bxjscls
 DEPENDS+=	tex-bxorigcapt-[0-9]*:../../print/tex-bxorigcapt
 DEPENDS+=	tex-bxwareki-[0-9]*:../../time/tex-bxwareki
+# depend chuushaku
 DEPENDS+=	tex-convbkmk-[0-9]*:../../print/tex-convbkmk
+# depend convert-jpfonts
 DEPENDS+=	tex-endnotesj-[0-9]*:../../print/tex-endnotesj
 DEPENDS+=	tex-gckanbun-[0-9]*:../../print/tex-gckanbun
 DEPENDS+=	tex-gentombow-[0-9]*:../../print/tex-gentombow
@@ -48,6 +51,7 @@ DEPENDS+=	tex-kanbun-[0-9]*:../../print/tex-kanbun
 DEPENDS+=	tex-luatexja-[0-9]*:../../print/tex-luatexja
 # mendex-doc is documentation only
 DEPENDS+=	tex-morisawa-[0-9]*:../../fonts/tex-morisawa
+# depend outoruby
 DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
 # pbibtex-manual is documentation only
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
