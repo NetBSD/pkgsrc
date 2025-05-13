@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.438 2025/05/13 09:36:56 markd Exp $
+# $NetBSD: Makefile,v 1.439 2025/05/13 09:57:58 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -450,6 +450,8 @@ SUBDIR+=	tex-concmath-fonts
 SUBDIR+=	tex-concmath-fonts-doc
 SUBDIR+=	tex-concrete
 SUBDIR+=	tex-concrete-doc
+SUBDIR+=	tex-context-companion-fonts
+SUBDIR+=	tex-context-companion-fonts-doc
 SUBDIR+=	tex-cookingsymbols
 SUBDIR+=	tex-cookingsymbols-doc
 SUBDIR+=	tex-countriesofeurope
