@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.940 2025/05/12 11:39:47 markd Exp $
+# $NetBSD: Makefile,v 1.941 2025/05/13 09:52:44 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -513,6 +513,8 @@ SUBDIR+=	tex-concprog-doc
 SUBDIR+=	tex-context
 SUBDIR+=	tex-context-calendar-examples
 SUBDIR+=	tex-context-calendar-examples-doc
+SUBDIR+=	tex-context-chat
+SUBDIR+=	tex-context-chat-doc
 SUBDIR+=	tex-context-collating-marks
 SUBDIR+=	tex-context-collating-marks-doc
 SUBDIR+=	tex-context-cyrillicnumbers
