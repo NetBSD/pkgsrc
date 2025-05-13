@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2025/05/08 05:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.438 2025/05/13 09:36:56 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -589,8 +589,10 @@ SUBDIR+=	tex-garamond-math-doc
 SUBDIR+=	tex-garuda-c90
 SUBDIR+=	tex-genealogy
 SUBDIR+=	tex-genealogy-doc
-SUBDIR+=	tex-gentium-tug
-SUBDIR+=	tex-gentium-tug-doc
+SUBDIR+=	tex-gentium-otf
+SUBDIR+=	tex-gentium-otf-doc
+SUBDIR+=	tex-gentium-sil
+SUBDIR+=	tex-gentium-sil-doc
 SUBDIR+=	tex-gfsartemisia
 SUBDIR+=	tex-gfsartemisia-doc
 SUBDIR+=	tex-gfsbodoni
