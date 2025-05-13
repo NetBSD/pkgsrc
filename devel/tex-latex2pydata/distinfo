@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/13 09:17:41 markd Exp $
+
+BLAKE2s (latex2pydata.r74766.tar.xz) = 1aad85bc5f33d8aca82e22cf5005001112a55a0542a23b6ba07ed4d6797c7575
+SHA512 (latex2pydata.r74766.tar.xz) = 24133a63ade62244221a5456b6e56e648511e4a1f4c2aba1797a359c8bd5dff9a0880d8eed6ab9e6359c9195a932193de59cb30ce1b5883da980810f7c392941
+Size (latex2pydata.r74766.tar.xz) = 3952 bytes

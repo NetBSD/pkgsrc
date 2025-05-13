@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4472 2025/05/12 12:12:52 markd Exp $
+# $NetBSD: Makefile,v 1.4473 2025/05/13 09:17:41 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -3667,6 +3667,8 @@ SUBDIR+=	tex-l3kernel-dev-doc
 SUBDIR+=	tex-l3kernel-doc
 SUBDIR+=	tex-l3packages
 SUBDIR+=	tex-l3packages-doc
+SUBDIR+=	tex-latex2pydata
+SUBDIR+=	tex-latex2pydata-doc
 SUBDIR+=	tex-latexbug
 SUBDIR+=	tex-latexbug-doc
 SUBDIR+=	tex-lualibs
