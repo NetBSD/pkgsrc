@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3255 2025/05/13 10:41:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3256 2025/05/13 10:48:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4776,3 +4776,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 11.2.1 [adam 2025-05-13]
 	Updated www/hugo to 0.147.3 [triaxx 2025-05-13]
 	Updated devel/py-future to 1.0.0 [wiz 2025-05-13]
+	Updated textproc/py-commonmark to 0.9.1nb3 [wiz 2025-05-13]
