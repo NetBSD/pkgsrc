@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2024/11/14 14:12:48 schmonz Exp $
+$NetBSD: distinfo,v 1.21 2025/05/13 03:50:51 schmonz Exp $
 
-BLAKE2s (s6-networking-2.7.0.4.tar.gz) = 2491ebb9617bdb4891d0df69fad49981d70ea8180e9d3f833e11f40e38ca001e
-SHA512 (s6-networking-2.7.0.4.tar.gz) = 2a789cbc2f901e78fffb959fcbddf89c71de75c0d57d3fb1a927418fa8a43f71057c2b50b03e15aa45d5d7ee6521e76b697ae57eef2b7eea760ef9295314dc9b
-Size (s6-networking-2.7.0.4.tar.gz) = 116031 bytes
+BLAKE2s (s6-networking-2.7.1.0.tar.gz) = 1726783b56f393d17667242362e9c391799d058c3f3495a7b0bd7dd4b8d0cd3d
+SHA512 (s6-networking-2.7.1.0.tar.gz) = 33741efa5c1908f8e7396929df08c3591e25b7c58335b331a146db17a9b7e5c00b75dd3337aa46114723969b8490fb1b6754a25357003780bdfd0a2fd8e3283c
+Size (s6-networking-2.7.1.0.tar.gz) = 119190 bytes
 BLAKE2s (s6-networking-man-pages-2.7.0.4.1.tar.gz) = 752df51dc9a47ee6c6e566b78e4fad1b3d5880b73665fab3106dc449a42917fe
 SHA512 (s6-networking-man-pages-2.7.0.4.1.tar.gz) = c332f6298eff0d3de9a9805e56962f45e1f42e02c414ce9a19203a1c684c8744734cc03b9c68cf314ca4449f333aeaadde684f5eb9246a02e5db1c5d46cac630
 Size (s6-networking-man-pages-2.7.0.4.1.tar.gz) = 24065 bytes

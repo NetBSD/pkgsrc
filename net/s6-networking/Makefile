@@ -1,39 +1,32 @@
-# $NetBSD: Makefile,v 1.22 2024/11/14 14:12:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/13 03:50:51 schmonz Exp $
 
-DISTNAME=	s6-networking-2.7.0.4
-CATEGORIES=	net
-MASTER_SITES=	${HOMEPAGE}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
-
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://skarnet.org/software/s6-networking/
-COMMENT=	Suite of small networking utilities
-LICENSE=	isc
-
-# man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
+DISTNAME=		s6-networking-2.7.1.0
 MANPAGES_VERSION=	2.7.0.4.1
+CATEGORIES=		net
+MASTER_SITES=		${HOMEPAGE}
 MANPAGES_DIST=		s6-networking-man-pages-${MANPAGES_VERSION}.tar.gz
-SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/s6-networking-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
+SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
+
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		https://skarnet.org/software/s6-networking/
+COMMENT=		Suite of small networking utilities
+LICENSE=		isc
+
+TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
+
+WRKMANSRC=		${WRKDIR}/${PKGBASE}-man-pages-v${MANPAGES_VERSION}
 
 USE_TOOLS+=		gmake
+TOOLS_PLATFORM.install=	${PREFIX}/bin/ginstall
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
-CONFIGURE_ARGS+=	--enable-absolute-paths
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--enable-pkgconfig
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${PKGMANDIR}/man8
+INSTALL_DIRS+=		. ${WRKMANSRC}
+INSTALL_ENV+=		PREFIX=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "options.mk"
-
-.PHONY: do-install-manpages
-post-install: do-install-manpages
-do-install-manpages:
-	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 7 8; do \
-		for j in man$$i/*.$$i; do \
-			${INSTALL_MAN} $$j \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
-		done \
-	done
 
 .include "../../devel/skalibs/buildlink3.mk"
 .include "../../net/s6-dns/buildlink3.mk"
