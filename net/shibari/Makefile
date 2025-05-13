@@ -1,36 +1,30 @@
-# $NetBSD: Makefile,v 1.3 2024/11/14 14:13:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/13 03:50:20 schmonz Exp $
 
-DISTNAME=		shibari-0.0.1.2
+DISTNAME=		shibari-0.0.2.0
+MANPAGES_VERSION=	0.0.1.1.1
 CATEGORIES=		net
 MASTER_SITES=		${HOMEPAGE}
+MANPAGES_DIST=		shibari-man-pages-${MANPAGES_VERSION}.tar.gz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
+SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://skarnet.org/software/shibari/
 COMMENT=		Collection of DNS tools for Unix systems
 LICENSE=		isc
 
-# man-pages version is usually not exactly in-sync with PKGVERSION_NOREV
-MANPAGES_VERSION=	0.0.1.1.1
-MANPAGES_DIST=		shibari-man-pages-${MANPAGES_VERSION}.tar.gz
-SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/shibari-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
+TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
+
+WRKMANSRC=		${WRKDIR}/${PKGBASE}-man-pages-v${MANPAGES_VERSION}
 
 USE_TOOLS+=		gmake
+TOOLS_PLATFORM.install=	${PREFIX}/bin/ginstall
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-sysdeps=${PREFIX}/lib/skalibs/sysdeps
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--enable-pkgconfig
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man8
-
-.PHONY: do-install-manpages
-post-install: do-install-manpages
-do-install-manpages:
-	cd ${WRKDIR}/${PKGBASE}-man-pages-*; for i in 8; do \
-		for j in man$$i/*.$$i; do \
-			${INSTALL_MAN} $$j \
-			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
-		done \
-	done
+INSTALL_DIRS+=		. ${WRKMANSRC}
+INSTALL_ENV+=		PREFIX=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../devel/skalibs/buildlink3.mk"
 .include "../../net/s6-dns/buildlink3.mk"
