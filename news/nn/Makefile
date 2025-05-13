@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/08/18 05:19:23 mlelstv Exp $
+# $NetBSD: Makefile,v 1.55 2025/05/13 11:33:17 nia Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	5
@@ -53,6 +53,7 @@ post-patch:
 	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
 	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
 	@${CP} ${FILESDIR}/m-powerpc.h ${WRKSRC}/conf/m-powerpc.h
+	@${CP} ${FILESDIR}/m-sparc64.h ${WRKSRC}/conf/m-sparc64.h
 	@${CP} ${FILESDIR}/m-x86_64.h ${WRKSRC}/conf/m-x86_64.h
 	@${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
 
