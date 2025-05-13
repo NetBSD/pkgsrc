@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/13 09:17:41 markd Exp $
+share/texmf-dist/doc/latex/latex2pydata/CHANGELOG.md
+share/texmf-dist/doc/latex/latex2pydata/README
+share/texmf-dist/doc/latex/latex2pydata/latex2pydata.pdf
