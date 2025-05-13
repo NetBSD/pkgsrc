@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2024/03/21 20:00:51 markd Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/13 10:02:12 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	69108
+TEXLIVE_REV=	72727
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -14,7 +14,9 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
 DEPENDS+=	tex-context-calendar-examples-[0-9]*:../../print/tex-context-calendar-examples
+DEPENDS+=	tex-context-chat-[0-9]*:../../print/tex-context-chat
 DEPENDS+=	tex-context-collating-marks-[0-9]*:../../print/tex-context-collating-marks
+DEPENDS+=	tex-context-companion-fonts-[0-9]*:../../fonts/tex-context-companion-fonts
 DEPENDS+=	tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
 DEPENDS+=	tex-context-filter-[0-9]*:../../print/tex-context-filter
 DEPENDS+=	tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
