@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/04/14 13:00:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/05/13 17:14:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -71,6 +71,9 @@ ${PYSITELIB}/validators/i18n/fr.pyo
 ${PYSITELIB}/validators/i18n/ind.py
 ${PYSITELIB}/validators/i18n/ind.pyc
 ${PYSITELIB}/validators/i18n/ind.pyo
+${PYSITELIB}/validators/i18n/ru.py
+${PYSITELIB}/validators/i18n/ru.pyc
+${PYSITELIB}/validators/i18n/ru.pyo
 ${PYSITELIB}/validators/iban.py
 ${PYSITELIB}/validators/iban.pyc
 ${PYSITELIB}/validators/iban.pyo
