@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/11/14 14:12:09 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/05/13 03:43:21 schmonz Exp $
 bin/s6-accessrules-cdb-from-fs
 bin/s6-accessrules-fs-from-cdb
 bin/s6-applyuidgid
@@ -76,6 +76,8 @@ include/s6/servicedir.h
 include/s6/supervise.h
 lib/libs6.a
 lib/libs6auto.a
+lib/pkgconfig/libs6.pc
+lib/pkgconfig/libs6auto.pc
 man/man7/s6-accessrules.7
 man/man7/s6-fdholder-error-codes.7
 man/man7/s6-fdholder.7
