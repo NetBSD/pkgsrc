@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/11/14 14:11:34 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/05/13 03:42:25 schmonz Exp $
 include/skalibs/alarm.h
 include/skalibs/alloc.h
 include/skalibs/allreadwrite.h
@@ -85,6 +85,7 @@ include/skalibs/unixconnection.h
 include/skalibs/unixmessage.h
 include/skalibs/unixonacid.h
 lib/libskarnet.la
+lib/pkgconfig/libskarnet.pc
 lib/skalibs/sysdeps/pthread.lib
 lib/skalibs/sysdeps/socket.lib
 lib/skalibs/sysdeps/spawn.lib
