@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/13 03:54:02 schmonz Exp $
+
+BLAKE2s (apaste-0.0.3.0.tar.gz) = 284ea660633e3d6813f71f72349b4364abf8221c2167c0e5ef574ebdbcaec215
+SHA512 (apaste-0.0.3.0.tar.gz) = ac3031b5d43447cf33bb4300ce866716b650ed730d74e6d41fff83a7a3eff2233172d9962e13c6d624002537a7c13ac5d581715a9a49145f392139c21b921ea6
+Size (apaste-0.0.3.0.tar.gz) = 26698 bytes
