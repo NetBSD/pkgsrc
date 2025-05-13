@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3241 2025/05/12 17:22:10 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3242 2025/05/13 03:42:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/screen to 5.0.0nb3 [wiz 2025-05-12]
 	Updated www/snac to 2.77 [schmonz 2025-05-12]
 	Updated mail/mu to 1.12.11 [ktnb 2025-05-12]
+	Updated devel/skalibs to 2.14.4.0 [schmonz 2025-05-13]
