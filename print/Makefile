@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.943 2025/05/13 10:32:07 markd Exp $
+# $NetBSD: Makefile,v 1.944 2025/05/13 10:51:36 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1420,6 +1420,8 @@ SUBDIR+=	tex-quran-de-doc
 SUBDIR+=	tex-quran-doc
 SUBDIR+=	tex-quran-en
 SUBDIR+=	tex-quran-en-doc
+SUBDIR+=	tex-quran-es
+SUBDIR+=	tex-quran-es-doc
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
 SUBDIR+=	tex-ragged2e
