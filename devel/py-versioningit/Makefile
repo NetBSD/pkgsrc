@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/22 04:18:22 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/13 03:54:29 adam Exp $
 
-DISTNAME=	versioningit-3.1.2
+DISTNAME=	versioningit-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/versioningit/}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.0:../../devel/py-pydantic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
