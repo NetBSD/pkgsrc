@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.941 2025/05/13 09:52:44 markd Exp $
+# $NetBSD: Makefile,v 1.942 2025/05/13 10:09:33 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -777,6 +777,8 @@ SUBDIR+=	tex-footnpag
 SUBDIR+=	tex-footnpag-doc
 SUBDIR+=	tex-forloop
 SUBDIR+=	tex-forloop-doc
+SUBDIR+=	tex-fragoli
+SUBDIR+=	tex-fragoli-doc
 SUBDIR+=	tex-framed
 SUBDIR+=	tex-framed-doc
 SUBDIR+=	tex-ftcap

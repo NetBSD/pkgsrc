@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/13 10:09:34 markd Exp $
+
+BLAKE2s (fragoli.doc.r74788.tar.xz) = c6e4819421534bad489c46412670505dbcece7cca9a8c3b21bd1ecc5a1ff89b6
+SHA512 (fragoli.doc.r74788.tar.xz) = 73c378485cb539dd9f3ee3e03632d159a5eadb8356958fcde703604f22f9c4f2138fd2a84083e91fc674e825161244dc6959aeef00e22f2219d4bda9b611b3a2
+Size (fragoli.doc.r74788.tar.xz) = 606208 bytes
