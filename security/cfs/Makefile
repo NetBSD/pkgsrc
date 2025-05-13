@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.42 2023/03/11 01:54:01 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2025/05/13 13:47:41 gdt Exp $
 
 VERSION=		1.5.0
-VERSION_SUFFIX_DIST=	.beta
-VERSION_SUFFIX_PKG=	b
+VERSION_SUFFIX_DIST=
+VERSION_SUFFIX_PKG=
 DISTNAME=		cfs-${VERSION}${VERSION_SUFFIX_DIST}
 PKGNAME=		cfs-${VERSION}${VERSION_SUFFIX_PKG}
-PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		https://www.bayofrum.net/dist/cfs/
 #OLD_MASTER_SITES=	https://www.mattblaze.org/software/cfs-1.4.1.tar.gz
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		https://www.mattblaze.org/software/
-#HOMEPAGE+=		https://www.bayofrum.net/cgi-bin/fossil/cfs/index
+HOMEPAGE=		https://www.bayofrum.net/cgi-bin/fossil/cfs/index
+#HOMEPAGE+=		https://www.mattblaze.org/software/
 COMMENT=		Encrypting file system, using NFS as its interface
 # The LICENSE is clearly free, and like mit, with minor differences in
 # keeping the license in derived works.  \todo Resolve.
