@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/05/09 19:16:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/13 17:33:14 bsiegert Exp $
 
-DISTNAME=	anubis-1.16.0
+DISTNAME=	anubis-1.18.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TecharoHQ/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
