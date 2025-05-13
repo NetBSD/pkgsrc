@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.942 2025/05/13 10:09:33 markd Exp $
+# $NetBSD: Makefile,v 1.943 2025/05/13 10:32:07 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1578,6 +1578,8 @@ SUBDIR+=	tex-tabls-doc
 SUBDIR+=	tex-tabu
 SUBDIR+=	tex-tabu-doc
 SUBDIR+=	tex-tabularray
+SUBDIR+=	tex-tabularray-abnt
+SUBDIR+=	tex-tabularray-abnt-doc
 SUBDIR+=	tex-tabulars-e-doc
 SUBDIR+=	tex-tabulary
 SUBDIR+=	tex-tabulary-doc
