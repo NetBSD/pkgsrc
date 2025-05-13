@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3263 2025/05/13 17:33:32 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3264 2025/05/13 18:52:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4810,3 +4810,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-maturin to 1.8.6 [adam 2025-05-13]
 	Updated textproc/py-validators to 0.35.0 [adam 2025-05-13]
 	Updated www/anubis to 1.18.0 [bsiegert 2025-05-13]
+	Updated net/gh to 2.72.0 [bsiegert 2025-05-13]
