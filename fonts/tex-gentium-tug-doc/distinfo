@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2022/09/01 03:59:40 markd Exp $
-
-BLAKE2s (gentium-tug.doc.r63470.tar.xz) = bbeb7e6fb9c86d84ef2d7077173ddff43a5865fdc54d958f9673a8a5c90d7f6f
-SHA512 (gentium-tug.doc.r63470.tar.xz) = 7cef5c563fa13b5b8458e2932be450edd48168da9db9ac45ab16ba608323beb4ea79f8dabf2c38b13b479de9ff3065a0cfa84ff5c259aea95495248e9794ec18
-Size (gentium-tug.doc.r63470.tar.xz) = 1859064 bytes
