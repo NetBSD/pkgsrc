@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2025/02/23 19:53:03 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/05/13 17:07:55 adam Exp $
 
-DISTNAME=	flask-3.1.0
+DISTNAME=	flask-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask/}
 
@@ -12,11 +11,12 @@ COMMENT=	Python web microframework
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-blinker>=1.6.2:../../devel/py-blinker
-DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.1.2:../../security/py-itsdangerous
+DEPENDS+=	${PYPKGPREFIX}-blinker>=1.9.0:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.2.0:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-werkzeug>=3.0.0:../../www/py-werkzeug
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-werkzeug>=3.1.0:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
 
