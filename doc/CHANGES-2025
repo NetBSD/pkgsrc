@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3249 2025/05/13 03:51:45 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3250 2025/05/13 03:52:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4767,3 +4767,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/shibari to 0.0.2.0 [schmonz 2025-05-13]
 	Updated net/s6-networking to 2.7.1.0 [schmonz 2025-05-13]
 	Updated mail/smtpd-starttls-proxy to 0.0.2.0 [schmonz 2025-05-13]
+	Updated www/tipidee to 0.0.6.0 [schmonz 2025-05-13]
