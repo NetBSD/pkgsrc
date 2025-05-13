@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/13 10:51:36 markd Exp $
+share/texmf-dist/tex/xelatex/quran-es/quran-es.sty
+share/texmf-dist/tex/xelatex/quran-es/qurantext-esi.translation.def
+share/texmf-dist/tex/xelatex/quran-es/qurantext-esii.translation.def
+share/texmf-dist/tex/xelatex/quran-es/qurantext-esiii.translation.def
