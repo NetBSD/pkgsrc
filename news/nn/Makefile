@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.56 2025/05/13 11:57:42 nia Exp $
+# $NetBSD: Makefile,v 1.57 2025/05/13 11:59:37 nia Exp $
 
 DISTNAME=	nn-6.7.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.nndev.org/pub/nn-6.7/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nndev.org/
-COMMENT=	NN newsreader
+COMMENT=	Text-based newsreader
 
 PKG_SYSCONFSUBDIR=	nntp
 
@@ -42,7 +42,7 @@ MFILE=	m-${MACHINE_ARCH}.h
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 post-patch:
-	@${SED} -e ' \
+	${SED} -e ' \
 	    s#@PREFIX@#${PREFIX}#; \
 	    s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#; \
 	    s#@PKGMANDIR@#${PKGMANDIR}#; \
@@ -51,11 +51,11 @@ post-patch:
 	    s#@MFILE@#${MFILE}#; \
 	    s#@SFILE@#${SFILE}#' \
 	    <${WRKSRC}/config.h-dist >${WRKSRC}/config.h
-	@${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
-	@${CP} ${FILESDIR}/m-powerpc.h ${WRKSRC}/conf/m-powerpc.h
-	@${CP} ${FILESDIR}/m-sparc64.h ${WRKSRC}/conf/m-sparc64.h
-	@${CP} ${FILESDIR}/m-x86_64.h ${WRKSRC}/conf/m-x86_64.h
-	@${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
+	${CP} ${FILESDIR}/s-netbsd.h ${WRKSRC}/conf/s-netbsd.h
+	${CP} ${FILESDIR}/m-powerpc.h ${WRKSRC}/conf/m-powerpc.h
+	${CP} ${FILESDIR}/m-sparc64.h ${WRKSRC}/conf/m-sparc64.h
+	${CP} ${FILESDIR}/m-x86_64.h ${WRKSRC}/conf/m-x86_64.h
+	${CP} ${WRKSRC}/conf/m-m680x0.h ${WRKSRC}/conf/m-m68k.h
 
 SUBST_CLASSES+=		fix-dest
 SUBST_STAGE.fix-dest=	post-build
