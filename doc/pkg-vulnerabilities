@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.364 2025/05/12 17:22:41 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.365 2025/05/13 05:50:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26184,3 +26184,4 @@ postgresql-server>=17<17.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CV
 dropbear<2025.88	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-47203
 screen-[0-9]*	multiple-vulnerabilities	https://security.opensuse.org/2025/05/12/screen-security-issues.html
 open-vm-tools-[0-9]*	insecure-file-handling	https://nvd.nist.gov/vuln/detail/CVE-2025-22247
+varnish<7.7.1	request-smuggling	https://varnish-cache.org/security/VSV00016.html
