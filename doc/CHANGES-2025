@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3257 2025/05/13 12:18:29 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3258 2025/05/13 13:17:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added print/tex-quran-es-doc version 0.11 [mark 2025-05-13]
 	Updated meta-pkgs/texlive-collection-langspanish to 2025 [mark 2025-05-13]
 	Updated pkgtools/texlive2pkg to 1.14 [mark 2025-05-13]
+	Updated security/libressl to 4.1.0 [schmonz 2025-05-13]
