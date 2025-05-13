@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2023/03/11 01:54:01 gdt Exp $
+$NetBSD: distinfo,v 1.19 2025/05/13 13:47:41 gdt Exp $
 
-BLAKE2s (cfs-1.5.0.beta.tar.gz) = 92d58624292cecaa6c76d079914a7936d7847696e7a229876e2a17de5f35076d
-SHA512 (cfs-1.5.0.beta.tar.gz) = 2c4c91a357f845b9db0365c1f580dc1e267a51dc63690e7a389090fc9d937ee859025c680fa0fb490a7904c686c2fc05d10d81bae732478d4de869b0ec10fefe
-Size (cfs-1.5.0.beta.tar.gz) = 108992 bytes
+BLAKE2s (cfs-1.5.0.tar.gz) = 4ac7764984e910ad73adc16498d127c9a2cd1cede52252ddc425f26e10b260d5
+SHA512 (cfs-1.5.0.tar.gz) = ff776ce9a4837076651758dcaa67e2489cc75d8181d73b2aa7d5b41b66f2ff6c3b451703e8834ae64f52d7289f5dd927d8a514a45cc92f5c58d31a768d3cb539
+Size (cfs-1.5.0.tar.gz) = 110065 bytes
 SHA1 (patch-aa) = f160b243b6722d14d451eaf725a6ca707e4e95ba
 SHA1 (patch-ab) = dac917a40e5db080cb526b9d0ffe2dd63857c313
 SHA1 (patch-af) = 16dce5ba66737f2222526b3cd689e1381d75c663
