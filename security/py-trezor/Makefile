@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/14 05:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/13 10:43:39 wiz Exp $
 
 DISTNAME=	trezor-0.13.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.9:../../security/py-ecdsa
 DEPENDS+=	${PYPKGPREFIX}-mnemonic>=0.20:../../devel/py-mnemonic
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-click>=7<8.2:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click>=7:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-libusb1>=1.6.4:../../devel/py-libusb1
 DEPENDS+=	${PYPKGPREFIX}-construct>=2.9:../../devel/py-construct
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.7.1:../../devel/py-typing-extensions
