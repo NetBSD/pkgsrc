@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/13 10:32:07 markd Exp $
+share/texmf-dist/tex/latex/tabularray-abnt/tabularray-abnt-2025A.sty
+share/texmf-dist/tex/latex/tabularray-abnt/tabularray-abnt.sty

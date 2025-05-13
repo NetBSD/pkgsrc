@@ -1,0 +1,7 @@
+This is the abnt Brazilian standard style for tabularray. It
+provides the themes abnt (for tables with numerical data) and
+quadro (for tables with text information). Additional
+environments abnttblr, tallabnttblr, and longabnttblr are
+wrappers to tblr, talltblr, and longtblr that apply the abnt
+theme automatically and permit to set the table font using
+\SetAbntTblrFont{} provided here.

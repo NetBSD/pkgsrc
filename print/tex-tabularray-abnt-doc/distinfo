@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/13 10:32:07 markd Exp $
+
+BLAKE2s (tabularray-abnt.doc.r74629.tar.xz) = 13b4a00764aff7edb400eb4611dda5cd30a1861388288185c4370982ea762aff
+SHA512 (tabularray-abnt.doc.r74629.tar.xz) = f0ad22496ebf4e8eed6ed1be7fece8f0c9f3ff1abc4bfab659b7972bf76a0e69e81a09374a68cc374a8e36b83314807b9214f9b7d0476d229440c4da9f789483
+Size (tabularray-abnt.doc.r74629.tar.xz) = 91656 bytes
