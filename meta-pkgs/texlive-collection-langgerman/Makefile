@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2024/03/21 20:00:53 markd Exp $
+# $NetBSD: Makefile,v 1.20 2025/05/13 12:01:48 markd Exp $
 
 DISTNAME=	collection-langgerman
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	68711
+TEXLIVE_REV=	74675
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -25,6 +25,7 @@ DEPENDS+=	tex-dhua-[0-9]*:../../print/tex-dhua
 # etdipa is documentation only
 # etoolbox-de is documentation only
 # fifinddo-info is documentation only
+DEPENDS+=	tex-fragoli-[0-9]*:../../print/tex-fragoli
 DEPENDS+=	tex-german-[0-9]*:../../print/tex-german
 DEPENDS+=	tex-germbib-[0-9]*:../../print/tex-germbib
 DEPENDS+=	tex-germkorr-[0-9]*:../../print/tex-germkorr
