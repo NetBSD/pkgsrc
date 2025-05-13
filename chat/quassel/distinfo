@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/03/05 10:32:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/13 14:49:26 wiz Exp $
 
 BLAKE2s (quassel-0.14.0.tar.bz2) = 047dd940bdc2ba65ded12ae82572a748b95d61e79e9880e9dd64786ec10e67cb
 SHA512 (quassel-0.14.0.tar.bz2) = ea6b9723acab5ce73f760692770c1340c03bf277d2c99a2520345bfb6a7bb6fdc64a01dccfd7026341b46ee727821e1bcc2f487be72dfbc155f1de1ad264763f
 Size (quassel-0.14.0.tar.bz2) = 4774297 bytes
+SHA1 (patch-CMakeLists.txt) = d42753c94064d72c59077c520978fc2cfbeea2c2

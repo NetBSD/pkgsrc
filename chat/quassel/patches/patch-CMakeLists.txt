@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/05/13 14:49:26 wiz Exp $
+
+* Qt5 of pkgsrc has SSL support, but cmake can't detect
+
+--- CMakeLists.txt.orig	2022-01-01 17:11:21.000000000 +0000
++++ CMakeLists.txt
+@@ -223,7 +223,7 @@ check_cxx_source_compiles("
+ cmake_pop_check_state()
+ 
+ if (NOT HAVE_SSL)
+-    message(FATAL_ERROR "Quassel requires SSL support, but Qt is built with QT_NO_SSL")
++    message(WARNING "Quassel requires SSL support, but maybe Qt is built with QT_NO_SSL")
+ endif()
+ 
+ # Optional Qt components
