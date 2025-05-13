@@ -1,0 +1,19 @@
+The primary goal of this package is to provide a minimal and
+user-friendly syntax for constructing large and complex
+semantic derivations, following the specific notational style
+used at Goethe University Frankfurt. It includes a
+comprehensive set of commands for text formatting and various
+types of bracketing, ensuring a consistent style --
+particularly when distinguishing between meta-language and
+object-language within a single derivation or formula.
+Formula-Style is losely based on the accompanying material to
+an introductory course to linguistic semantics by Prof. Dr.
+Thomas Ede Zimmermann. The package brings together and refines
+a collection of LaTeX commands and concepts developed over the
+years within the Department of Linguistics at the
+Goethe-Universitat at Frankfurt am Main. In the process of
+preparing research papers, assignments, and examinations,
+numerous custom LaTeX headers and commands were shared within
+the department -- some mutually compatible, others not. Note:
+The package name is an abbreviation of "Frankfurt Goethe
+Linguistic".
