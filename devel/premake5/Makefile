@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/04/19 07:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/13 14:21:57 triaxx Exp $
 
-PREMAKE5_VERSION=	5.0.0-beta2
+PREMAKE5_VERSION=	5.0.0-beta6
 DISTNAME=		premake-${PREMAKE5_VERSION}-src
 PKGNAME=		premake5-${PREMAKE5_VERSION:S/-beta2/.b2/}
-PKGREVISION=		10
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=premake/}
 GITHUB_PROJECT=		premake-core
@@ -16,7 +15,7 @@ COMMENT=		Build script generator
 LICENSE=		modified-bsd
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES+=		c99
+USE_CC_FEATURES+=	c99
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
@@ -25,14 +24,7 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 DEPENDS+=		lua53-socket-[0-9]*:../../net/lua-socket
 
 .include "../../mk/bsd.prefs.mk"
-# maybe fix the build on Darwin.
-# if this doesn't work, we need to patch what's in build/gmake2.unix
-.if ${OPSYS} == "Darwin"
-BUILD_DIRS+=		build/gmake2.macosx
-.else
-#BUILD_DIRS+=		build/gmake2.unix
 BUILD_DIRS+=		build/bootstrap
-.endif
 
 INSTALLATION_DIRS=	bin
 
@@ -40,6 +32,11 @@ LDFLAGS+=		-lzip -L${BUILDLINK_PREFIX.libzip}/lib
 LDFLAGS+=		-lcurl -L${BUILDLINK_PREFIX.curl}/lib
 LDFLAGS+=		-lmbedtls -L${BUILDLINK_PREFIX.mbedtls3}/lib
 LDFLAGS+=		-lz -L${BUILDLINK_PREFIX.zlib}/lib
+LDFLAGS+=		-lm -ldl -luuid -llua
+LDFLAGS.Darwin+=	-framework CoreFoundation
+.if ${OPSYS} != "Darwin"
+LDFLAGS+=		-lrt
+.endif
 
 SUBST_CLASSES+=		mk
 SUBST_MESSAGE.mk=	Fixing build to link against system libs
@@ -91,23 +88,24 @@ do-configure:
 	${MKDIR} -p ${WRKSRC}/build/bootstrap
 	cd ${WRKSRC} && \
 		${MAKE_ENV} ${CC} -o build/bootstrap/premake_bootstrap \
+		${CFLAGS} \
 		-DPREMAKE_NO_BUILTIN_SCRIPTS \
 		${BUNDLED_LUA_DEFINES} \
 		-Icontrib/lua/src \
 		-Icontrib/luashim \
 		-I${BUILDLINK_PREFIX.libuuid}/include/uuid \
-		-L${PREFIX}/lib \
 		src/host/*.c ${BUNDLED_LUA_SRC} \
-		-lm -ldl -lrt -luuid ${LDFLAGS} ${CFLAGS}
+		-L${PREFIX}/lib \
+		${LDFLAGS}
 	cd ${WRKSRC} && \
 		./build/bootstrap/premake_bootstrap embed
 	cd ${WRKSRC} && \
 		./build/bootstrap/premake_bootstrap \
 		--to=build/bootstrap \
-		--no-zlib \
-		--no-curl \
+		--zlib-src=none \
+		--curl-src=none \
 		--no-luasocket \
-		gmake2
+		gmake
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/release/premake5 \
