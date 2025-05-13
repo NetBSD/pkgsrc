@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.2 2023/05/08 22:37:31 nikita Exp $
+$NetBSD: distinfo,v 1.3 2025/05/13 14:21:57 triaxx Exp $
 
-BLAKE2s (premake-5.0.0-beta2-src.zip) = 906465840c8d8c2b6705a5745963d0f1fe6efbeb4a0f67e765fac827e3082adf
-SHA512 (premake-5.0.0-beta2-src.zip) = 6913293aa29c2bfd2ac07ed40210da2f6b0ed853f3a24dcf66715748647a12502defb96ba3591a5e0515a808c5ea7013c41e29c3d18bb715d336c72a9bd151e3
-Size (premake-5.0.0-beta2-src.zip) = 8867376 bytes
-SHA1 (patch-aa) = 5623b2f798570ae1de00be6a86b8ef92857e8722
+BLAKE2s (premake-5.0.0-beta6-src.zip) = a56582ea0ac512a2fce010fa838b2c284c16ae13b9e71af9a35eb67da0281a6e
+SHA512 (premake-5.0.0-beta6-src.zip) = 55f560f90a0882e3bf07e498c3b43ce2e8424ba1c15f5085a26c63d94397dbe36cec91d71e88c9c74879d66c5343f91ee32af3ecb34f9dab02391561e8dda2fe
+Size (premake-5.0.0-beta6-src.zip) = 10622489 bytes
+SHA1 (patch-modules_gmake_tests_test__gmake__ldflags.lua) = 6c733297295b2d01ed7cd572a166d166bf9e16de
+SHA1 (patch-modules_gmakelegacy_tests_cpp_test__ldflags.lua) = c844137f75c3ca329c891301c526a820928d501f
+SHA1 (patch-src_host_premake.h) = 9d5da0ce882436d792543154550fa3ba6f8fb4bf
+SHA1 (patch-src_tools_gcc.lua) = 79f1c9c9c070d725532917b438ded2ee884bd590
