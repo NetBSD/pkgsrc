@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2024/03/21 20:00:54 markd Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/13 10:54:49 markd Exp $
 
 DISTNAME=	collection-langspanish
-PKGNAME=	texlive-${DISTNAME}-2024
+PKGNAME=	texlive-${DISTNAME}-2025
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	67307
+TEXLIVE_REV=	72203
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -24,6 +24,7 @@ DEPENDS+=	tex-hyphen-spanish-[0-9]*:../../print/tex-hyphen-spanish
 # latex2e-help-texinfo-spanish is documentation only
 # latexcheat-esmx is documentation only
 # lshort-spanish is documentation only
+DEPENDS+=	tex-quran-es-[0-9]*:../../print/tex-quran-es
 # texlive-es is documentation only
 
 META_PACKAGE=	yes
