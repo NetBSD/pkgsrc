@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3254 2025/05/13 09:19:15 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3255 2025/05/13 10:41:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libdeflate to 1.24 [adam 2025-05-13]
 	Updated fonts/harfbuzz to 11.2.1 [adam 2025-05-13]
 	Updated www/hugo to 0.147.3 [triaxx 2025-05-13]
+	Updated devel/py-future to 1.0.0 [wiz 2025-05-13]
