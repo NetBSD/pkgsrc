@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3259 2025/05/13 13:47:54 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3260 2025/05/13 14:22:23 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/texlive2pkg to 1.14 [mark 2025-05-13]
 	Updated security/libressl to 4.1.0 [schmonz 2025-05-13]
 	Updated security/cfs to 1.5.0 [gdt 2025-05-13]
+	Updated devel/premake5 to beta6 [triaxx 2025-05-13]
