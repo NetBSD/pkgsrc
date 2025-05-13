@@ -1,0 +1,6 @@
+This package writes data to file using Python literal syntax.
+The data may be loaded safely in Python using the
+ast.literal_eval() function or the latex2pydata Python package.
+The data can also be hashed within LaTeX (mdfivesum) so that it
+is possible to check for the existence of external cached
+content generated with the data.
