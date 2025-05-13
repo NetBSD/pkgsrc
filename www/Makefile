@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1859 2025/05/09 19:16:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1860 2025/05/13 03:54:06 schmonz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -67,6 +67,7 @@ SUBDIR+=	apache-tomcat85
 SUBDIR+=	apache-tomcat9
 SUBDIR+=	apache24
 SUBDIR+=	apachetop
+SUBDIR+=	apaste
 SUBDIR+=	apisprout
 SUBDIR+=	arcticfox
 SUBDIR+=	asp2php
