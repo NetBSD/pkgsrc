@@ -1,10 +1,11 @@
-$NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
+$NetBSD: patch-Makefile.gnu,v 1.3 2025/05/14 13:05:52 adam Exp $
 
 - Unbundle image libraries.
 - Link with CXX for libstdc++.
+- Link correctly on Darwin.
 - Fix installation.
 
---- Makefile.gnu.orig	2015-03-10 09:04:00.000000000 +0000
+--- Makefile.gnu.orig	2015-03-10 08:04:00.000000000 +0000
 +++ Makefile.gnu
 @@ -13,6 +13,9 @@ DOS2UNIX = dos2unix
  
@@ -16,7 +17,7 @@ $NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
  MODULES = $(SRCS:.c=.o)
  MODULES := $(MODULES:.cpp=.o)
  CFLAGS ?= -O3 -fPIC -fexceptions -fvisibility=hidden
-@@ -28,10 +31,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
+@@ -28,23 +31,28 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
  CXXFLAGS += -D__ANSI__
  CXXFLAGS += $(INCLUDE)
  
@@ -29,21 +30,35 @@ $NetBSD: patch-Makefile.gnu,v 1.2 2020/05/25 12:24:37 nia Exp $
  
  TARGET  = freeimage
  STATICLIB = lib$(TARGET).a
-@@ -40,8 +41,6 @@ LIBNAME	= lib$(TARGET).so
++ifeq ($(shell uname),Darwin)
++SHAREDLIB = lib$(TARGET)-$(VER_MAJOR).$(VER_MINOR).dylib
++LIBNAME	= lib$(TARGET).dylib
++VERLIBNAME = lib$(TARGET).$(VER_MAJOR).dylib
++LDFLAGS += -Wl,-install_name,${PREFIX}/lib/$(SHAREDLIB)
++else
++SHLIB_EXT = so
+ SHAREDLIB = lib$(TARGET)-$(VER_MAJOR).$(VER_MINOR).so
+ LIBNAME	= lib$(TARGET).so
  VERLIBNAME = $(LIBNAME).$(VER_MAJOR)
++LDFLAGS += -Wl,-soname,$(VERLIBNAME)
++endif
  HEADER = Source/FreeImage.h
  
 -
 -
  default: all
  
- all: dist
-@@ -67,13 +66,12 @@ $(STATICLIB): $(MODULES)
+-all: dist
++all: FreeImage
+ 
+ dist: FreeImage
+ 	mkdir -p Dist
+@@ -67,13 +75,12 @@ $(STATICLIB): $(MODULES)
  	$(AR) r $@ $(MODULES)
  
  $(SHAREDLIB): $(MODULES)
 -	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
-+	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES)
++	$(CXX) -s -shared $(LDFLAGS) -o $@ $(MODULES)
  
  install:
 -	install -d $(INCDIR) $(INSTALLDIR)
