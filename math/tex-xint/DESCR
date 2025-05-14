@@ -1,0 +1,22 @@
+The xint bundle main modules are: xinttools utilities of
+independent interest such as expandable and non-expandable
+loops, xintcore expandable macros implementing addition,
+subtraction, multiplication, division, and powers for
+arbitrarily long integers, xint extension of xintcore, xintfrac
+extends the scope of xint to decimal numbers, to numbers using
+scientific notation and also to (exact) fractions, xintexpr
+provides expandable parsers of numeric expressions using the
+standard infix notations, parentheses, built-in functions, user
+definable functions and variables (and more ...) which do
+either exact evaluations (also with fractions) or floating
+point evaluations under a user chosen precision. Further
+modules of the bundle are: xintkernel (support macros for all
+the bundle constituents), xintbinhex (conversion to and from
+hexadecimal and binary bases), xintgcd (provides gcd() and
+lcm() functions to xintexpr), xintseries (evaluates numerically
+partial sums of series and power series with fractional
+coefficients), and xintcfrac (dedicated to the computation and
+display of continued fractions). All computations are
+compatible with expansion-only context. The packages may be
+used with Plain TeX, LaTeX, or (a priori) any other macro
+format built upon TeX.

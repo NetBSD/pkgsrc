@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2025/05/14 12:08:27 markd Exp $
+# $NetBSD: Makefile,v 1.623 2025/05/14 12:14:32 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -521,6 +521,8 @@ SUBDIR+=	tex-poormanlog
 SUBDIR+=	tex-poormanlog-doc
 SUBDIR+=	tex-unicode-math
 SUBDIR+=	tex-unicode-math-doc
+SUBDIR+=	tex-xint
+SUBDIR+=	tex-xint-doc
 SUBDIR+=	tex-zhnumber
 SUBDIR+=	tex-zhnumber-doc
 SUBDIR+=	texdrive
