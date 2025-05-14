@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3267 2025/05/14 05:19:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3268 2025/05/14 05:25:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4814,3 +4814,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 138.0.3 [ryoon 2025-05-13]
 	Updated www/firefox-l10n to 138.0.3 [ryoon 2025-05-13]
 	Updated sysutils/stow to 2.4.1 [wiz 2025-05-14]
+	Updated misc/rhash to 1.4.6 [adam 2025-05-14]
+	Updated math/octave to 10.1.0 [adam 2025-05-14]
