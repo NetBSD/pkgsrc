@@ -1,0 +1,4 @@
+A package for determining classical regressions (linear,
+quadratic, cubic, exponential, etc.) with calculations
+performed by xint. Results (raw or rounded) can be stored in
+customizable macros.
