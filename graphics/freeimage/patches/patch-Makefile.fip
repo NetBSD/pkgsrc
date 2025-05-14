@@ -1,22 +1,25 @@
-$NetBSD: patch-Makefile.fip,v 1.5 2020/05/25 12:24:37 nia Exp $
+$NetBSD: patch-Makefile.fip,v 1.6 2025/05/14 13:05:52 adam Exp $
 
 - Unbundle image libraries.
 - Link with CXX for libstdc++.
+- Link correctly on Darwin.
 - Fix installation.
 
---- Makefile.fip.orig	2015-03-10 09:03:56.000000000 +0000
+--- Makefile.fip.orig	2015-03-10 08:03:56.000000000 +0000
 +++ Makefile.fip
-@@ -13,6 +13,9 @@ DOS2UNIX = dos2unix
+@@ -11,7 +11,10 @@ INSTALLDIR ?= $(DESTDIR)/usr/lib
+ # Converts cr/lf to just lf
+ DOS2UNIX = dos2unix
  
- LIBRARIES = -lstdc++
- 
+-LIBRARIES = -lstdc++
++LIBRARIES = -lfreeimage -lstdc++
++
 +INCLUDE += $(shell pkg-config --cflags libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
 +LDFLAGS += $(shell pkg-config --libs libjpeg OpenEXR libopenjp2 libraw libpng libtiff-4 libwebp libwebpmux zlib)
-+
+ 
  MODULES = $(SRCS:.c=.o)
  MODULES := $(MODULES:.cpp=.o)
- CFLAGS ?= -O3 -fPIC -fexceptions -fvisibility=hidden
-@@ -28,10 +31,8 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
+@@ -28,23 +31,29 @@ CXXFLAGS ?= -O3 -fPIC -fexceptions -fvis
  CXXFLAGS += -D__ANSI__
  CXXFLAGS += $(INCLUDE)
  
@@ -29,12 +32,34 @@ $NetBSD: patch-Makefile.fip,v 1.5 2020/05/25 12:24:37 nia Exp $
  
  TARGET  = freeimageplus
  STATICLIB = lib$(TARGET).a
-@@ -68,14 +69,12 @@ $(STATICLIB): $(MODULES)
++ifeq ($(shell uname),Darwin)
++SHAREDLIB = lib$(TARGET)-$(VER_MAJOR).$(VER_MINOR).dylib
++LIBNAME	= lib$(TARGET).dylib
++VERLIBNAME = lib$(TARGET).$(VER_MAJOR).dylib
++LDFLAGS += -Wl,-install_name,${PREFIX}/lib/$(SHAREDLIB)
++else
+ SHAREDLIB = lib$(TARGET)-$(VER_MAJOR).$(VER_MINOR).so
+ LIBNAME	= lib$(TARGET).so
+ VERLIBNAME = $(LIBNAME).$(VER_MAJOR)
++LDFLAGS += -Wl,-soname,$(VERLIBNAME)
++endif
+ HEADER = Source/FreeImage.h
+ HEADERFIP = Wrapper/FreeImagePlus/FreeImagePlus.h
+ 
+ 
+ default: all
+ 
+-all: dist
++all: FreeImage
+ 
+ dist: FreeImage
+ 	mkdir -p Dist
+@@ -68,14 +77,12 @@ $(STATICLIB): $(MODULES)
  	$(AR) r $@ $(MODULES)
  
  $(SHAREDLIB): $(MODULES)
 -	$(CC) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
-+	$(CXX) -s -shared -Wl,-soname,$(VERLIBNAME) $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
++	$(CXX) -s -shared $(LDFLAGS) -o $@ $(MODULES) $(LIBRARIES)
  
  install:
 -	install -d $(INCDIR) $(INSTALLDIR)

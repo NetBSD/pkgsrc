@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2023/02/12 12:17:12 tnn Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/05/14 13:05:52 adam Exp $
 # used by graphics/freeimage/Makefile
 # used by graphics/freeimageplus/Makefile
 
@@ -11,8 +11,9 @@ EXTRACT_SUFX=	.zip
 HOMEPAGE=	https://freeimage.sourceforge.io/
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR mpl-1.0
 
-USE_LANGUAGES+=	c c++11
-USE_TOOLS+=	gmake pkg-config
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake pkg-config
 
 WRKSRC=		${WRKDIR}/FreeImage
 
@@ -53,8 +54,6 @@ pre-configure:
 	${MV} ${WRKSRC}/Makefile.srcs.new ${WRKSRC}/Makefile.srcs
 
 PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
-
-NOT_FOR_PLATFORM=	Darwin-*-*
 
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"

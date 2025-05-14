@@ -1,8 +1,10 @@
-$NetBSD: patch-Source_FreeImage_PluginEXR.cpp,v 1.2 2021/07/08 21:26:12 markd Exp $
+$NetBSD: patch-Source_FreeImage_PluginEXR.cpp,v 1.3 2025/05/14 13:05:52 adam Exp $
 
 Unbundle image libraries.
 
---- Source/FreeImage/PluginEXR.cpp.orig	2015-03-04 00:07:08.000000000 +0000
+Imath::Int64 is deprecated, use uint64_t.
+
+--- Source/FreeImage/PluginEXR.cpp.orig	2015-03-03 23:07:08.000000000 +0000
 +++ Source/FreeImage/PluginEXR.cpp
 @@ -28,16 +28,17 @@
  #pragma warning (disable : 4800) // ImfVersion.h - 'const int' : forcing value to bool 'true' or 'false' (performance warning)
@@ -32,3 +34,31 @@ Unbundle image libraries.
  
  
  // ==========================================================
+@@ -66,11 +67,11 @@ public:
+ 		return ((unsigned)n != _io->read_proc(c, 1, n, _handle));
+ 	}
+ 
+-	virtual Imath::Int64 tellg() {
++	virtual uint64_t tellg() {
+ 		return _io->tell_proc(_handle);
+ 	}
+ 
+-	virtual void seekg(Imath::Int64 pos) {
++	virtual void seekg(uint64_t pos) {
+ 		_io->seek_proc(_handle, (unsigned)pos, SEEK_SET);
+ 	}
+ 
+@@ -100,11 +101,11 @@ public:
+ 		}
+ 	}
+ 
+-	virtual Imath::Int64 tellp() {
++	virtual uint64_t tellp() {
+ 		return _io->tell_proc(_handle);
+ 	}
+ 
+-	virtual void seekp(Imath::Int64 pos) {
++	virtual void seekp(uint64_t pos) {
+ 		_io->seek_proc(_handle, (unsigned)pos, SEEK_SET);
+ 	}
+ };
