@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/14 13:30:02 adam Exp $
+
+BLAKE2s (lap-0.5.12.tar.gz) = f601144e55ef83ba64ef6eaab7e22dedb634d8dcf0ba5ed43c83330b09118acb
+SHA512 (lap-0.5.12.tar.gz) = a8ba1883e06b04a41cebb53999bcc7321748036958fde1ab37a2194b43104a84d0315bea89b21aaae7556cc3f573d95bf30107dc4045af301134dd10319b7d53
+Size (lap-0.5.12.tar.gz) = 1520169 bytes
