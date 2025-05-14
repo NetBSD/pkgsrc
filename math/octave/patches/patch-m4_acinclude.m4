@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_acinclude.m4,v 1.7 2024/03/24 12:46:23 adam Exp $
+$NetBSD: patch-m4_acinclude.m4,v 1.8 2025/05/14 05:24:28 adam Exp $
 
 we pass and assume a given MACHINE_GNU_PLATFORM, but this package did not
 use this value due to an error.
@@ -10,7 +10,7 @@ Do not look for qcollectiongenerator; it is now part of qhelpgenerator.
 
 On Darwin, do not produce a mach-o bundle.
 
---- m4/acinclude.m4.orig	2024-03-12 18:00:23.000000000 +0000
+--- m4/acinclude.m4.orig	2025-03-25 20:40:27.000000000 +0000
 +++ m4/acinclude.m4
 @@ -36,7 +36,7 @@ AC_DEFUN([OCTAVE_CANONICAL_HOST], [
      host=unknown-unknown-unknown
@@ -21,7 +21,7 @@ On Darwin, do not produce a mach-o bundle.
    AC_SUBST(canonical_host_type)
    if test -z "$host_cpu"; then
      host_cpu=unknown
-@@ -2149,17 +2149,10 @@ AC_DEFUN([OCTAVE_CHECK_QT_VERSION], [AC_
+@@ -2271,17 +2271,10 @@ AC_DEFUN([OCTAVE_CHECK_QT_VERSION], [AC_
      OCTAVE_CHECK_QT_TOOL([rcc])
      OCTAVE_CHECK_QT_TOOL([lrelease])
      OCTAVE_CHECK_QT_TOOL([qhelpgenerator])
@@ -41,12 +41,12 @@ On Darwin, do not produce a mach-o bundle.
        build_qt_gui=no
        MOC_QTVER=
        UIC_QTVER=
-@@ -2749,8 +2742,6 @@ AC_DEFUN_ONCE([OCTAVE_DEFINE_MKOCTFILE_D
-       dnl Contains variables that are defined and undefined at this point,
-       dnl so use appropriate quoting to defer expansion of
-       dnl ${abs_top_builddir}, ${bindir}, and ${version}.
--      DL_LDFLAGS='-bundle -undefined dynamic_lookup -bind_at_load -bundle_loader ${abs_top_builddir}/src/octave'"${EXEEXT} ${LDFLAGS}"
--      MKOCTFILE_DL_LDFLAGS='-bundle -undefined dynamic_lookup -bind_at_load -bundle_loader ${bindir}/octave-${version}'"${EXEEXT}"
-       SH_LDFLAGS="-dynamiclib -single_module ${LDFLAGS}"
+@@ -2871,8 +2864,6 @@ AC_DEFUN_ONCE([OCTAVE_DEFINE_MKOCTFILE_D
+       SH_LDFLAGS="-shared -Wl,-expect_unresolved -Wl,'*'"
+     ;;
+     *-*-darwin*)
+-      DL_LDFLAGS="-bundle -undefined dynamic_lookup -bind_at_load"
+-      MKOCTFILE_DL_LDFLAGS="-bundle -undefined dynamic_lookup -bind_at_load"
+       SH_LDFLAGS="-dynamiclib -single_module"
        case $canonical_host_type in
          powerpc-*)
