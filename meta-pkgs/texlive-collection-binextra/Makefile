@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2025/05/12 09:59:34 markd Exp $
+# $NetBSD: Makefile,v 1.34 2025/05/14 13:01:44 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	73049
@@ -79,7 +79,7 @@ DEPENDS+=	tex-make4ht-[0-9]*:../../print/tex-make4ht
 # patgen entirely included in web2c
 # depend pdfbook2
 DEPENDS+=	tex-pdfcrop-[0-9]*:../../graphics/tex-pdfcrop
-DEPENDS+=	pdfjam-[0-9]*:../../print/pdfjam
+DEPENDS+=	tex-pdfjam-[0-9]*:../../print/tex-pdfjam
 # depend pdflatexpicscale
 # depend pdftex-quiet
 # pdftosrc entirely included in web2c
