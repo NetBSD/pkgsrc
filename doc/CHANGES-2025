@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3283 2025/05/14 14:25:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3284 2025/05/14 14:39:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4853,3 +4853,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-beets to 2.3.1 [adam 2025-05-14]
 	Updated converters/py-cairosvg to 2.8.1 [adam 2025-05-14]
 	Updated geography/py-obspy to 1.4.2 [adam 2025-05-14]
+	Updated www/php-contao-manager to 1.9.5 [taca 2025-05-14]
