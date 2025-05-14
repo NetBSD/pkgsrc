@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.944 2025/05/13 10:51:36 markd Exp $
+# $NetBSD: Makefile,v 1.945 2025/05/14 12:56:43 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1306,6 +1306,8 @@ SUBDIR+=	tex-pdfcomment
 SUBDIR+=	tex-pdfcomment-doc
 SUBDIR+=	tex-pdfescape
 SUBDIR+=	tex-pdfescape-doc
+SUBDIR+=	tex-pdfjam
+SUBDIR+=	tex-pdfjam-doc
 SUBDIR+=	tex-pdflscape
 SUBDIR+=	tex-pdflscape-doc
 SUBDIR+=	tex-pdfmanagement-testphase

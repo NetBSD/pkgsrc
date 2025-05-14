@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:56:44 markd Exp $
+man/man1/pdfjam.1
+share/texmf-dist/doc/support/pdfjam/COPYING
+share/texmf-dist/doc/support/pdfjam/README.md
+share/texmf-dist/doc/support/pdfjam/VERSION-4.2
+share/texmf-dist/doc/support/pdfjam/pdfjam.conf
+share/texmf-dist/doc/support/pdfjam/zsh/_pdfjam
