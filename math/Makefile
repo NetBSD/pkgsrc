@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2025/05/14 12:26:18 markd Exp $
+# $NetBSD: Makefile,v 1.626 2025/05/14 13:30:02 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -425,6 +425,7 @@ SUBDIR+=	py-infinity
 SUBDIR+=	py-intervals
 SUBDIR+=	py-jplephem
 SUBDIR+=	py-kiwisolver
+SUBDIR+=	py-lap
 SUBDIR+=	py-libixion
 SUBDIR+=	py-lmfit
 SUBDIR+=	py-mpmath
