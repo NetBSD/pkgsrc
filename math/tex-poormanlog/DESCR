@@ -1,0 +1,11 @@
+This small package (usable with Plain e-TeX, LaTeX, or others)
+with no dependencies provides two fast expandable macros
+computing logarithms in base 10 and fractional powers of 10.
+They handle arguments of 9 digit tokens which stand for either
+1 <= d.dddddddd < 10 (for the log) or 0.xxxxxxxxx (for powers
+of 10). They achieve a precision of 1ulp for the logarithm and
+2ulp for fractional powers of ten. Extension to other numerical
+ranges has to be done by user, via own macros or some math
+engine. The xintexpr package (at 1.3f) imports the poormanlog
+macros as core constituents of its log10(), pow10(), log(),
+exp() and pow() functions.
