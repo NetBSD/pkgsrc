@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/02/03 11:54:55 bsiegert Exp $
+$NetBSD: distinfo,v 1.13 2025/05/14 05:19:26 wiz Exp $
 
-BLAKE2s (stow-2.3.1.tar.gz) = 67f89dd2223807a08bfbe6b6ecda1d82215b5454704b1144e169db2dde6e496b
-SHA512 (stow-2.3.1.tar.gz) = e9a7de1a6f10eaf7cdbe6737e0a8be1498e2eac46b6c57e65b83759b061efd1c0db45f7cba123e35428307e3aebe5baef9ea8bd4b5eb6ec5e1b159117a760441
-Size (stow-2.3.1.tar.gz) = 654191 bytes
+BLAKE2s (stow-2.4.1.tar.gz) = f3f6807d3f565897ef5b0bae246559735976c4824f20bc13ddc93a7b7cc626ef
+SHA512 (stow-2.4.1.tar.gz) = fc05f95b95d6439a379fb1c5c5eed5f878e17ad2500d08f0e24798358afaf93116330086296d4233ac4bf32e4a6f4fe3d2feb03461876769074b50abdc586c2b
+Size (stow-2.4.1.tar.gz) = 726337 bytes
