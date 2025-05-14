@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.51 2025/05/14 06:58:58 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.52 2025/05/14 07:04:22 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -29,8 +29,8 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.37
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.37
+CARGO_CRATE_DEPENDS+=	clap-4.5.38
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.38
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.50
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.32
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
@@ -91,7 +91,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.15
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.77
 CARGO_CRATE_DEPENDS+=	libc-0.2.172
-CARGO_CRATE_DEPENDS+=	libloading-0.8.6
+CARGO_CRATE_DEPENDS+=	libloading-0.8.7
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.9.4
 CARGO_CRATE_DEPENDS+=	litrs-0.4.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.12
