@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/01/27 11:25:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/05/14 13:33:05 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -103,9 +103,9 @@ ${PYSITELIB}/beets/util/pipeline.pyo
 ${PYSITELIB}/beets/vfs.py
 ${PYSITELIB}/beets/vfs.pyc
 ${PYSITELIB}/beets/vfs.pyo
-${PYSITELIB}/beetsplug/__init__.py
-${PYSITELIB}/beetsplug/__init__.pyc
-${PYSITELIB}/beetsplug/__init__.pyo
+${PYSITELIB}/beetsplug/_typing.py
+${PYSITELIB}/beetsplug/_typing.pyc
+${PYSITELIB}/beetsplug/_typing.pyo
 ${PYSITELIB}/beetsplug/absubmit.py
 ${PYSITELIB}/beetsplug/absubmit.pyc
 ${PYSITELIB}/beetsplug/absubmit.pyo
