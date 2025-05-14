@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3285 2025/05/14 14:41:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3286 2025/05/14 15:54:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4856,3 +4856,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-contao-manager to 1.9.5 [taca 2025-05-14]
 	Updated math/py-astropy-iers-data to 0.2025.5.12.0.38.29 [adam 2025-05-14]
 	Updated math/py-astropy to 7.0.2 [adam 2025-05-14]
+	Updated lang/php56 to 5.6.40nb2 [jperkin 2025-05-14]
+	Updated lang/php74 to 7.4.33nb2 [jperkin 2025-05-14]
+	Updated lang/php81 to 8.1.32nb2 [jperkin 2025-05-14]
+	Updated lang/php82 to 8.2.28nb2 [jperkin 2025-05-14]
+	Updated lang/php83 to 8.3.20nb2 [jperkin 2025-05-14]
+	Updated lang/php84 to 8.4.6nb2 [jperkin 2025-05-14]
