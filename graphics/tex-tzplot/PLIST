@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:32:32 markd Exp $
+share/texmf-dist/tex/latex/tzplot/tzplot.sty

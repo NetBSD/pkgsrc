@@ -1,0 +1,7 @@
+This is a LaTeX package that provides TikZ-based macros to make
+it easy to draw graphs. The macros provided in this package are
+just abbreviations for TikZ codes, which can be complicated;
+but using the package will hopefully make drawing easier,
+especially when drawing repeatedly. The macros were chosen and
+developed with an emphasis on drawing graphs in economics. The
+package depends on TikZ, xparse, and expl3.
