@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/14 12:01:01 markd Exp $
+
+BLAKE2s (yhmath.doc.r54377.tar.xz) = 446d92336730c0b1576755b57e66cdf8f815e137ce5cf91abfcbf02ca20ecefd
+SHA512 (yhmath.doc.r54377.tar.xz) = 56fb12fcc4099f14c5746727b3c3051d84097cd8a715023545c3a2fafcc5a5abe55980a12e4384f674ef6cad2c7d6dab2beb8374e4cb3af81f711c2e8320d97b
+Size (yhmath.doc.r54377.tar.xz) = 285444 bytes
