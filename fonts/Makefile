@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2025/05/13 09:57:58 markd Exp $
+# $NetBSD: Makefile,v 1.440 2025/05/14 12:04:02 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -939,6 +939,8 @@ SUBDIR+=	tex-xits
 SUBDIR+=	tex-xits-doc
 SUBDIR+=	tex-yfonts-t1
 SUBDIR+=	tex-yfonts-t1-doc
+SUBDIR+=	tex-yhfonts
+SUBDIR+=	tex-yhfonts-doc
 SUBDIR+=	tex-zapfchan
 SUBDIR+=	tex-zapfding
 SUBDIR+=	tex-zhmetrics
