@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.17 2022/06/28 11:34:07 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/14 06:52:11 wiz Exp $
 
-DISTNAME=	ps2eps-1.68
-PKGREVISION=	10
+DISTNAME=	ps2eps-1.70
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.tm.uka.de/~bless/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=roland-bless/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tm.uka.de/~bless/ps2eps
+HOMEPAGE=	https://github.com/roland-bless/ps2eps
 COMMENT=	Tool for generating EPS Format files from one-page PS documents
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	perl:run
-WRKSRC=		${WRKDIR}/ps2eps
 
-REPLACE_PERL+=	bin/ps2eps
+REPLACE_PERL+=	src/perl/ps2eps
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
@@ -23,8 +21,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/C/bbox ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/ps2eps ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/man/man1/*.1 \
+	${INSTALL_SCRIPT} ${WRKSRC}/src/perl/ps2eps ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
