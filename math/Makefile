@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.621 2025/03/07 15:58:10 pho Exp $
+# $NetBSD: Makefile,v 1.622 2025/05/14 12:08:27 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -517,6 +517,8 @@ SUBDIR+=	tex-minifp
 SUBDIR+=	tex-minifp-doc
 SUBDIR+=	tex-physics
 SUBDIR+=	tex-physics-doc
+SUBDIR+=	tex-poormanlog
+SUBDIR+=	tex-poormanlog-doc
 SUBDIR+=	tex-unicode-math
 SUBDIR+=	tex-unicode-math-doc
 SUBDIR+=	tex-zhnumber
