@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/04/10 19:39:53 pin Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/14 10:26:31 pin Exp $
 
-DISTNAME=	lla-0.3.10
+DISTNAME=	lla-0.3.11
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lla/
 EXTRACT_SUFX=	.crate
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.83.0
+#RUST_REQ=	1.86.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.83.0 on amd64
+#This package is confirmed to build with Rust 1.86.0 on amd64
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
