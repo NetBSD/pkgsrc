@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2025/05/13 11:43:51 markd Exp $
+# $NetBSD: Makefile,v 1.97 2025/05/14 12:46:43 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	75036
@@ -1580,8 +1580,8 @@ DEPENDS+=	tex-xfor-[0-9]*:../../print/tex-xfor
 # depend xhfill
 DEPENDS+=	tex-xifthen-[0-9]*:../../devel/tex-xifthen
 # depend ximera
-# depend xint
-# depend xint-regression
+DEPENDS+=	tex-xint-[0-9]*:../../math/tex-xint
+DEPENDS+=	tex-xint-regression-[0-9]*:../../math/tex-xint-regression
 # depend xkcdcolors
 # depend xkeymask
 # depend xltabular
