@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:18:46 markd Exp $
+share/texmf-dist/doc/latex/xint-regression/README.md
+share/texmf-dist/doc/latex/xint-regression/xint-regression-doc.pdf
+share/texmf-dist/doc/latex/xint-regression/xint-regression-doc.tex
