@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/05/12 10:42:14 markd Exp $
+# $NetBSD: Makefile,v 1.28 2025/05/14 12:48:12 markd Exp $
 
 DISTNAME=	collection-plaingeneric
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	75140
@@ -94,7 +94,7 @@ DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
 DEPENDS+=	tex-plipsum-[0-9]*:../../print/tex-plipsum
 DEPENDS+=	tex-plnfss-[0-9]*:../../print/tex-plnfss
 DEPENDS+=	tex-plstmary-[0-9]*:../../print/tex-plstmary
-# depend poormanlog
+DEPENDS+=	tex-poormanlog-[0-9]*:../../math/tex-poormanlog
 DEPENDS+=	tex-present-[0-9]*:../../print/tex-present
 # depend pwebmac
 DEPENDS+=	tex-random-[0-9]*:../../print/tex-random
