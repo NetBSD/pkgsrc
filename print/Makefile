@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.945 2025/05/14 12:56:43 markd Exp $
+# $NetBSD: Makefile,v 1.946 2025/05/14 12:59:42 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -112,7 +112,6 @@ SUBDIR+=	paps
 SUBDIR+=	pcps
 SUBDIR+=	pdf-redact-tools
 SUBDIR+=	pdf2djvu
-SUBDIR+=	pdfjam
 SUBDIR+=	pdflib
 SUBDIR+=	pdflib-lite
 SUBDIR+=	pdvipsk
