@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:14:32 markd Exp $
+share/texmf-dist/tex/generic/xint/xint.sty
+share/texmf-dist/tex/generic/xint/xintbinhex.sty
+share/texmf-dist/tex/generic/xint/xintcfrac.sty
+share/texmf-dist/tex/generic/xint/xintcore.sty
+share/texmf-dist/tex/generic/xint/xintexpr.sty
+share/texmf-dist/tex/generic/xint/xintfrac.sty
+share/texmf-dist/tex/generic/xint/xintgcd.sty
+share/texmf-dist/tex/generic/xint/xintkernel.sty
+share/texmf-dist/tex/generic/xint/xintlog.sty
+share/texmf-dist/tex/generic/xint/xintseries.sty
+share/texmf-dist/tex/generic/xint/xinttools.sty
+share/texmf-dist/tex/generic/xint/xinttrig.sty
