@@ -1,0 +1,6 @@
+This package provides some commands to help French mathematics
+teachers for 15-18 years olds, with graphs of functions: define
+and draw functions and interpolations curves work with
+integrals, tangents, intersersections get coordinates of points
+... The syntax is rather explicit, like \DefinirCourbe,
+\RecupererCoordonnees,\TrouverIntersections, etc.
