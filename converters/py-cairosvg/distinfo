@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/05/12 12:19:43 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/05/14 14:23:08 adam Exp $
 
-BLAKE2s (cairosvg-2.8.0.tar.gz) = 4cbf77196f15c2a2b39b4b2f8db04648f5b2397af27a3b455230e7eafb195683
-SHA512 (cairosvg-2.8.0.tar.gz) = aa9e6888ca9e25b71d7beef198d4c958f69e295e5b4451577a05ab9173a2086dbac7336bb4f6ca2aa55cfcb26c9d5ac517fb8f4eab2908c6e5566fcf45920339
-Size (cairosvg-2.8.0.tar.gz) = 8398397 bytes
+BLAKE2s (cairosvg-2.8.1.tar.gz) = ef001a345e014d4ea54013d81dcc71911f0505ef2de73b742aee8a860603a05b
+SHA512 (cairosvg-2.8.1.tar.gz) = 5e8c7c0e4410778b6983fc323864c4fca7d4f40af0aac3b6cb981e974572b4d7ba2ad71eeb9bc1bad7f08a33d7c245bff964e8dc7bf4fdfc0cf8940787a99b98
+Size (cairosvg-2.8.1.tar.gz) = 8398517 bytes
