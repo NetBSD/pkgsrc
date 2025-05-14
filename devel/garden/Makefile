@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.22 2025/04/02 17:45:18 pin Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/14 10:25:24 pin Exp $
 
-DISTNAME=	garden-2.1.0
+DISTNAME=	garden-2.2.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v2.1.0/}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v2.2.0/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://garden-rs.gitlab.io/
 COMMENT=	Grows and cultivates collections of Git trees
 LICENSE=	mit
 
-SITES.spirv-0.3.0+sdk-1.3.268.0.crate=	https://static.crates.io/crates/spirv/
-
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.74.0
+RUST_REQ=	1.81.0
 
-WRKSRC=		${WRKDIR}/garden-v2.1.0-61076c0d702d459883b40d95de959ca499d94757
+WRKSRC=		${WRKDIR}/garden-v2.2.0-bfdd61920e737916003b1549f7b666a236ae9efe
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
