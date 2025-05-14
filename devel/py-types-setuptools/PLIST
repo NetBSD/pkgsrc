@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/04/12 07:20:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/05/14 10:58:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -114,9 +114,7 @@ ${PYSITELIB}/setuptools-stubs/modified.pyi
 ${PYSITELIB}/setuptools-stubs/monkey.pyi
 ${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
-${PYSITELIB}/setuptools-stubs/package_index.pyi
 ${PYSITELIB}/setuptools-stubs/py.typed
-${PYSITELIB}/setuptools-stubs/sandbox.pyi
 ${PYSITELIB}/setuptools-stubs/unicode_utils.pyi
 ${PYSITELIB}/setuptools-stubs/version.pyi
 ${PYSITELIB}/setuptools-stubs/warnings.pyi
