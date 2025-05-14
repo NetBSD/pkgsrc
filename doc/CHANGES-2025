@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3279 2025/05/14 11:18:09 roy Exp $
+$NetBSD: CHANGES-2025,v 1.3280 2025/05/14 11:21:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4830,3 +4830,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-setuptools to 80.4.0 [adam 2025-05-14]
 	Updated devel/py-types-setuptools to 80.4.0.20250511 [adam 2025-05-14]
 	Updated net/openresolv to 3.16.4 [roy 2025-05-14]
+	Updated math/py-scipy to 1.15.3 [adam 2025-05-14]
+	Updated devel/py-jaraco.itertools to 6.4.3 [adam 2025-05-14]
