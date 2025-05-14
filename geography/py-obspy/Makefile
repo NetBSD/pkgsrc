@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/04/16 14:38:57 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/05/14 14:25:38 adam Exp $
 
-DISTNAME=	obspy-1.4.1
+DISTNAME=	obspy-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/obspy/}
 
