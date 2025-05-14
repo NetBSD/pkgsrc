@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.624 2025/05/14 12:18:45 markd Exp $
+# $NetBSD: Makefile,v 1.625 2025/05/14 12:26:18 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -519,6 +519,8 @@ SUBDIR+=	tex-physics
 SUBDIR+=	tex-physics-doc
 SUBDIR+=	tex-poormanlog
 SUBDIR+=	tex-poormanlog-doc
+SUBDIR+=	tex-tkz-grapheur
+SUBDIR+=	tex-tkz-grapheur-doc
 SUBDIR+=	tex-unicode-math
 SUBDIR+=	tex-unicode-math-doc
 SUBDIR+=	tex-xint
