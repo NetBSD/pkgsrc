@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3282 2025/05/14 13:33:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3283 2025/05/14 14:25:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4851,3 +4851,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed print/pdfjam successor print/tex-pdfjam [mark 2025-05-14]
 	Added math/py-lap version 0.5.12 [adam 2025-05-14]
 	Updated audio/py-beets to 2.3.1 [adam 2025-05-14]
+	Updated converters/py-cairosvg to 2.8.1 [adam 2025-05-14]
+	Updated geography/py-obspy to 1.4.2 [adam 2025-05-14]
