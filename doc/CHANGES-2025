@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3280 2025/05/14 11:21:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3281 2025/05/14 13:05:06 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4832,3 +4832,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openresolv to 3.16.4 [roy 2025-05-14]
 	Updated math/py-scipy to 1.15.3 [adam 2025-05-14]
 	Updated devel/py-jaraco.itertools to 6.4.3 [adam 2025-05-14]
+	Added fonts/tex-yhmath version 1.6 [mark 2025-05-14]
+	Added fonts/tex-yhmath-doc version 1.6 [mark 2025-05-14]
+	Added math/tex-poormanlog version 0.07 [mark 2025-05-14]
+	Added math/tex-poormanlog-doc version 0.07 [mark 2025-05-14]
+	Added math/tex-xint version 1.4m [mark 2025-05-14]
+	Added math/tex-xint-doc version 1.4m [mark 2025-05-14]
+	Added math/tex-xint-regression version 0.1.1 [mark 2025-05-14]
+	Added math/tex-xint-regression-doc version 0.1.1 [mark 2025-05-14]
+	Added math/tex-tkz-grapheur version 0.2.2 [mark 2025-05-14]
+	Added math/tex-tkz-grapheur-doc version 0.2.2 [mark 2025-05-14]
+	Added graphics/tex-tzplot version 2.1 [mark 2025-05-14]
+	Added graphics/tex-tzplot-doc version 2.1 [mark 2025-05-14]
+	Added graphics/tex-commutative-diagrams version 1.1.2 [mark 2025-05-14]
+	Added graphics/tex-commutative-diagrams-doc version 1.1.2 [mark 2025-05-14]
+	Added print/tex-pdfjam version 4.2 [mark 2025-05-14]
+	Added print/tex-pdfjam-doc version 4.2 [mark 2025-05-14]
+	Removed print/pdfjam successor print/tex-pdfjam [mark 2025-05-14]
