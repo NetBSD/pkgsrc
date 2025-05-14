@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/14 12:08:28 markd Exp $
+
+BLAKE2s (poormanlog.doc.r63400.tar.xz) = ede8f0242576ddfae71de6ec47aedcc2b5cf46c17519796da13d204f7201ba67
+SHA512 (poormanlog.doc.r63400.tar.xz) = 7d99c4036411bd892bc0a520a42c5e2a1c1077c89e58e1be8a9fc991b87da3d22871e75669c814358701d17add447a7e6546a33a8ada55f55ce0814296273f91
+Size (poormanlog.doc.r63400.tar.xz) = 2092 bytes
