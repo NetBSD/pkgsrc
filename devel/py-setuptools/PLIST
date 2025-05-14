@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.101 2025/04/12 07:19:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.102 2025/05/14 10:56:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
@@ -376,6 +375,9 @@ ${PYSITELIB}/setuptools/_path.pyo
 ${PYSITELIB}/setuptools/_reqs.py
 ${PYSITELIB}/setuptools/_reqs.pyc
 ${PYSITELIB}/setuptools/_reqs.pyo
+${PYSITELIB}/setuptools/_scripts.py
+${PYSITELIB}/setuptools/_scripts.pyc
+${PYSITELIB}/setuptools/_scripts.pyo
 ${PYSITELIB}/setuptools/_shutil.py
 ${PYSITELIB}/setuptools/_shutil.pyc
 ${PYSITELIB}/setuptools/_shutil.pyo
@@ -1018,12 +1020,6 @@ ${PYSITELIB}/setuptools/msvc.pyo
 ${PYSITELIB}/setuptools/namespaces.py
 ${PYSITELIB}/setuptools/namespaces.pyc
 ${PYSITELIB}/setuptools/namespaces.pyo
-${PYSITELIB}/setuptools/package_index.py
-${PYSITELIB}/setuptools/package_index.pyc
-${PYSITELIB}/setuptools/package_index.pyo
-${PYSITELIB}/setuptools/sandbox.py
-${PYSITELIB}/setuptools/sandbox.pyc
-${PYSITELIB}/setuptools/sandbox.pyo
 ${PYSITELIB}/setuptools/script (dev).tmpl
 ${PYSITELIB}/setuptools/script.tmpl
 ${PYSITELIB}/setuptools/tests/__init__.py
@@ -1077,6 +1073,9 @@ ${PYSITELIB}/setuptools/tests/integration/__init__.pyo
 ${PYSITELIB}/setuptools/tests/integration/helpers.py
 ${PYSITELIB}/setuptools/tests/integration/helpers.pyc
 ${PYSITELIB}/setuptools/tests/integration/helpers.pyo
+${PYSITELIB}/setuptools/tests/integration/test_pbr.py
+${PYSITELIB}/setuptools/tests/integration/test_pbr.pyc
+${PYSITELIB}/setuptools/tests/integration/test_pbr.pyo
 ${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.py
 ${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.pyc
 ${PYSITELIB}/setuptools/tests/integration/test_pip_install_sdist.pyo
@@ -1089,9 +1088,6 @@ ${PYSITELIB}/setuptools/tests/namespaces.pyo
 ${PYSITELIB}/setuptools/tests/script-with-bom.py
 ${PYSITELIB}/setuptools/tests/script-with-bom.pyc
 ${PYSITELIB}/setuptools/tests/script-with-bom.pyo
-${PYSITELIB}/setuptools/tests/server.py
-${PYSITELIB}/setuptools/tests/server.pyc
-${PYSITELIB}/setuptools/tests/server.pyo
 ${PYSITELIB}/setuptools/tests/test_archive_util.py
 ${PYSITELIB}/setuptools/tests/test_archive_util.pyc
 ${PYSITELIB}/setuptools/tests/test_archive_util.pyo
@@ -1140,9 +1136,6 @@ ${PYSITELIB}/setuptools/tests/test_dist_info.pyo
 ${PYSITELIB}/setuptools/tests/test_distutils_adoption.py
 ${PYSITELIB}/setuptools/tests/test_distutils_adoption.pyc
 ${PYSITELIB}/setuptools/tests/test_distutils_adoption.pyo
-${PYSITELIB}/setuptools/tests/test_easy_install.py
-${PYSITELIB}/setuptools/tests/test_easy_install.pyc
-${PYSITELIB}/setuptools/tests/test_easy_install.pyo
 ${PYSITELIB}/setuptools/tests/test_editable_install.py
 ${PYSITELIB}/setuptools/tests/test_editable_install.pyc
 ${PYSITELIB}/setuptools/tests/test_editable_install.pyo
@@ -1173,12 +1166,9 @@ ${PYSITELIB}/setuptools/tests/test_manifest.pyo
 ${PYSITELIB}/setuptools/tests/test_namespaces.py
 ${PYSITELIB}/setuptools/tests/test_namespaces.pyc
 ${PYSITELIB}/setuptools/tests/test_namespaces.pyo
-${PYSITELIB}/setuptools/tests/test_packageindex.py
-${PYSITELIB}/setuptools/tests/test_packageindex.pyc
-${PYSITELIB}/setuptools/tests/test_packageindex.pyo
-${PYSITELIB}/setuptools/tests/test_sandbox.py
-${PYSITELIB}/setuptools/tests/test_sandbox.pyc
-${PYSITELIB}/setuptools/tests/test_sandbox.pyo
+${PYSITELIB}/setuptools/tests/test_scripts.py
+${PYSITELIB}/setuptools/tests/test_scripts.pyc
+${PYSITELIB}/setuptools/tests/test_scripts.pyo
 ${PYSITELIB}/setuptools/tests/test_sdist.py
 ${PYSITELIB}/setuptools/tests/test_sdist.pyc
 ${PYSITELIB}/setuptools/tests/test_sdist.pyo
