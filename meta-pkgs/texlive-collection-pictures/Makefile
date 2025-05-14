@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2025/05/12 10:38:52 markd Exp $
+# $NetBSD: Makefile,v 1.49 2025/05/14 12:44:52 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	74988
@@ -262,7 +262,7 @@ DEPENDS+=	tex-tkz-base-[0-9]*:../../graphics/tex-tkz-base
 # depend tkz-euclide
 DEPENDS+=	tex-tkz-fct-[0-9]*:../../graphics/tex-tkz-fct
 # depend tkz-graph
-# depend tkz-grapheur
+DEPENDS+=	tex-tkz-grapheur-[0-9]*:../../math/tex-tkz-grapheur
 # depend tkz-orm
 # depend tkz-tab
 # depend tkzexample
@@ -271,7 +271,7 @@ DEPENDS+=	tex-tkz-fct-[0-9]*:../../graphics/tex-tkz-fct
 # depend tsemlines
 DEPENDS+=	tex-tufte-latex-[0-9]*:../../print/tex-tufte-latex
 # depend twemojis
-# depend tzplot
+DEPENDS+=	tex-tzplot-[0-9]*:../../graphics/tex-tzplot
 # depend utfsym
 # depend vectorlogos
 DEPENDS+=	tex-venndiagram-[0-9]*:../../graphics/tex-venndiagram
