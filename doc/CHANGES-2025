@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3277 2025/05/14 10:29:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3278 2025/05/14 11:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4827,3 +4827,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lla to 0.3.11 [pin 2025-05-14]
 	Updated shells/oh-my-posh to 25.23.0 [pin 2025-05-14]
 	Updated audio/spotify-player to 0.20.5 [pin 2025-05-14]
+	Updated devel/py-setuptools to 80.4.0 [adam 2025-05-14]
+	Updated devel/py-types-setuptools to 80.4.0.20250511 [adam 2025-05-14]
