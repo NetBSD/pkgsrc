@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3286 2025/05/14 15:54:50 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.3287 2025/05/14 19:50:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php82 to 8.2.28nb2 [jperkin 2025-05-14]
 	Updated lang/php83 to 8.3.20nb2 [jperkin 2025-05-14]
 	Updated lang/php84 to 8.4.6nb2 [jperkin 2025-05-14]
+	Updated devel/mise to 2025.5.4 [pin 2025-05-14]
