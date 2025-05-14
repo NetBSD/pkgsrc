@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/05/12 10:29:48 markd Exp $
+# $NetBSD: Makefile,v 1.31 2025/05/14 12:42:45 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2025pre1
+PKGNAME=	texlive-${DISTNAME}-2025pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	75100
@@ -71,7 +71,7 @@ DEPENDS+=	tex-clrscode-[0-9]*:../../print/tex-clrscode
 # depend codeanatomy
 # depend coloredtheorem
 # depend commath
-# depend commutative-diagrams
+DEPENDS+=	tex-commutative-diagrams-[0-9]*:../../graphics/tex-commutative-diagrams
 # depend complexity
 # depend complexpolylongdiv
 # depend computational-complexity
@@ -292,7 +292,7 @@ DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend venn
 # depend witharrows
 # depend xymtex
-# depend yhmath
+DEPENDS+=	tex-yhmath-[0-9]*:../../print/tex-yhmath
 # depend youngtab
 # depend yquant
 # depend ytableau
