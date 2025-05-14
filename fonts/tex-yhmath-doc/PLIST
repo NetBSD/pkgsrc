@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:01:01 markd Exp $
+share/texmf-dist/doc/fonts/yhmath/LICENSE
+share/texmf-dist/doc/fonts/yhmath/README
+share/texmf-dist/doc/fonts/yhmath/yhcmex10.vpl
+share/texmf-dist/doc/fonts/yhmath/yhmath.pdf

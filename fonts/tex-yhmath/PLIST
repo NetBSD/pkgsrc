@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:01:01 markd Exp $
+share/texmf-dist/fonts/map/dvips/yhmath/yhmath.map
+share/texmf-dist/fonts/source/public/yhmath/yhbigacc.mf
+share/texmf-dist/fonts/source/public/yhmath/yhbigdel.mf
+share/texmf-dist/fonts/source/public/yhmath/yhmathex.mf
+share/texmf-dist/fonts/source/public/yhmath/yrcmex10.mf
+share/texmf-dist/fonts/tfm/public/yhmath/yhcmex10.tfm
+share/texmf-dist/fonts/tfm/public/yhmath/yrcmex10.tfm
+share/texmf-dist/fonts/type1/public/yhmath/yhcmex.pfb
+share/texmf-dist/fonts/vf/public/yhmath/yhcmex10.vf
+share/texmf-dist/tex/latex/yhmath/OMXyhex.fd
+share/texmf-dist/tex/latex/yhmath/yhcmex10.cmap
+share/texmf-dist/tex/latex/yhmath/yhmath.sty
