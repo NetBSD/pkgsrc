@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:38:50 markd Exp $
+share/texmf-dist/tex/context/third/commutative-diagrams/t-commutative-diagrams.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.bapto.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.diorthono.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.ektropi.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.katharizo.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.koinos.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.mandyas.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.mitra.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.ozos.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.ramma.code.tex
+share/texmf-dist/tex/generic/commutative-diagrams/tikzlibrarycommutative-diagrams.velos.code.tex
+share/texmf-dist/tex/latex/commutative-diagrams/commutative-diagrams.sty
+share/texmf-dist/tex/latex/commutative-diagrams/kodi.sty
+share/texmf-dist/tex/plain/commutative-diagrams/commutative-diagrams.tex

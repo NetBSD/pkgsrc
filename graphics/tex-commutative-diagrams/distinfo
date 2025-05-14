@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/14 12:38:50 markd Exp $
+
+BLAKE2s (commutative-diagrams.r71053.tar.xz) = 35ffc0064fb52dd00076ea2a5a2058dbb0ced5a506d79e6d510d21c8bd253709
+SHA512 (commutative-diagrams.r71053.tar.xz) = 4dcf8817e796f646c7ac881f0711e2d56353484b090189bc32ea7b1a9590b6c7d47f8b8841458a62002983da18ea95d586519cc78dc3858d08b97c899d8dee54
+Size (commutative-diagrams.r71053.tar.xz) = 12748 bytes
