@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1080 2025/05/05 08:59:50 tnn Exp $
+# $NetBSD: Makefile,v 1.1081 2025/05/14 12:32:31 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -848,6 +848,8 @@ SUBDIR+=	tex-tkz-base
 SUBDIR+=	tex-tkz-base-doc
 SUBDIR+=	tex-tkz-fct
 SUBDIR+=	tex-tkz-fct-doc
+SUBDIR+=	tex-tzplot
+SUBDIR+=	tex-tzplot-doc
 SUBDIR+=	tex-venndiagram
 SUBDIR+=	tex-venndiagram-doc
 SUBDIR+=	tex-worldflags
