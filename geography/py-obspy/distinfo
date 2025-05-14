@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/07/31 18:29:21 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/05/14 14:25:38 adam Exp $
 
-BLAKE2s (obspy-1.4.1.tar.gz) = 238615abb180b6b9c2b44d1652e77d7296bb62fcf0defa442a6e4c6af8bc9beb
-SHA512 (obspy-1.4.1.tar.gz) = df630e953c459431a95e7cb5f5f3ee1d22c5d35062b0ab23781e455a690b51d20ee584547f1c18b4f2ef1604c1bc763c2970025bc9aa87bd7169193fd445b80b
-Size (obspy-1.4.1.tar.gz) = 17035765 bytes
+BLAKE2s (obspy-1.4.2.tar.gz) = f5bd5a6fdc13b995c67b16a556091fa3d1168c63bc2aa0740d4aad9166969367
+SHA512 (obspy-1.4.2.tar.gz) = b97b9360ad1f2fba03f4024b3674a27ecf1a8acb4e714bf5a45df50ed3812edaf62a6a0bc447f92075498191ea79bd8e042f6faa7e2852bf375d9f74831f6b91
+Size (obspy-1.4.2.tar.gz) = 17036293 bytes
