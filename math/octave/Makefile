@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.267 2025/04/24 14:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2025/05/14 05:24:28 adam Exp $
 
-DISTNAME=	octave-9.4.0
-PKGREVISION=	4
+DISTNAME=	octave-10.1.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,10 +20,11 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gsed gmake:run perl pkg-config bison bsdtar:run
-USE_TOOLS+=		makeinfo:test
+USE_TOOLS+=		autoconf automake gsed gmake:run perl pkg-config bison
+USE_TOOLS+=		bsdtar:run makeinfo:test
 GNU_CONFIGURE=		yes
 
 # needed for loading of shared objects such as those in the
