@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3284 2025/05/14 14:39:21 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3285 2025/05/14 14:41:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4854,3 +4854,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-cairosvg to 2.8.1 [adam 2025-05-14]
 	Updated geography/py-obspy to 1.4.2 [adam 2025-05-14]
 	Updated www/php-contao-manager to 1.9.5 [taca 2025-05-14]
+	Updated math/py-astropy-iers-data to 0.2025.5.12.0.38.29 [adam 2025-05-14]
+	Updated math/py-astropy to 7.0.2 [adam 2025-05-14]
