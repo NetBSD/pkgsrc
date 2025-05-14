@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2025/01/27 11:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/05/14 13:33:05 adam Exp $
 
-DISTNAME=	beets-2.2.0
+DISTNAME=	beets-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -16,9 +15,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-confuse>=1.5.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
+DEPENDS+=	${PYPKGPREFIX}-lap>=0.5.12:../../math/py-lap
 DEPENDS+=	${PYPKGPREFIX}-mediafile>=0.12.0:../../audio/py-mediafile
-DEPENDS+=	${PYPKGPREFIX}-munkres>=1.0.0:../../math/py-munkres
 DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs>=0.4:../../audio/py-musicbrainz-ngs
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24.4:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # update
@@ -28,6 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-last-[0-9]*:../../audio/py-last
 # scrub
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.33:../../audio/py-mutagen
 TEST_DEPENDS+=	${PYPKGPREFIX}-discogs-client-[0-9]*:../../audio/py-discogs-client
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-mpd2-[0-9]*:../../audio/py-mpd2
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0.3.0:../../net/py-responses
