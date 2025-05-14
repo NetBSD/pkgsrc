@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/04/15 16:31:37 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/14 14:40:55 adam Exp $
 
-DISTNAME=	astropy-7.0.1
+DISTNAME=	astropy-7.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
 
