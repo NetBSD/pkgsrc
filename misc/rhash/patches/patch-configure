@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.5 2024/10/14 13:04:00 adam Exp $
+$NetBSD: patch-configure,v 1.6 2025/05/14 05:22:59 adam Exp $
 
 Skip compiler detection magic.
 
 Avoid choosing aligned_alloc() when it's not present, such as CentOS 6
 with lang/gcc7 and older Solaris releases.
 
---- configure.orig	2024-10-13 23:43:50.000000000 +0000
+--- configure.orig	2025-05-13 20:58:34.000000000 +0000
 +++ configure
-@@ -647,8 +647,6 @@ else
+@@ -655,8 +655,6 @@ else
      fi
    done
  fi # icc
@@ -16,8 +16,8 @@ with lang/gcc7 and older Solaris releases.
  
  log_start "compiler working with default options"
  if ! cc_check_cflag; then
-@@ -758,6 +756,16 @@ elif test "$OPT_OPENSSL" = "auto" || tes
-   finish_check "$ALLOW_RUNTIME_LINKING"
+@@ -788,6 +786,16 @@ if test "$OPT_SHANI" = "auto"; then
+   finish_check "$HAS_X86_SSE4_SHANI"
  fi
  
 +start_check "libc provides aligned_alloc"
