@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/14 12:38:50 markd Exp $
+share/texmf-dist/doc/generic/commutative-diagrams/README
+share/texmf-dist/doc/generic/commutative-diagrams/commutative-diagrams-doc.pdf
+share/texmf-dist/doc/generic/commutative-diagrams/commutative-diagrams-doc.tex
