@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3290 2025/05/15 06:48:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3291 2025/05/15 09:24:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4885,3 +4885,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/nerd-fonts-SourceCodePro to 3.4.0 [wiz 2025-05-15]
 	Updated fonts/nerd-fonts-Symbols to 3.4.0 [wiz 2025-05-15]
 	Updated fonts/nerd-fonts-iA-Writer to 3.4.0 [wiz 2025-05-15]
+	Updated www/py-scrapy to 2.13.0 [adam 2025-05-15]
+	Updated devel/py-hexbytes to 1.3.1 [adam 2025-05-15]
