@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2025/05/15 18:13:52 schmonz Exp $
+
+Don't build or install catpages.
+
+--- Makefile.orig	2025-05-15 18:02:23.019642424 +0000
++++ Makefile
+@@ -16,7 +16,7 @@ NROFF	?= nroff
+ # CFLAGS+= -Wno-unused-parameter -Wsign-compare
+ # CFLAGS+= -Werror
+ 
+-all: prefork prefork.0
++all: prefork
+ 
+ clean:
+ 	rm -f prefork prefork.o prefork.0
+@@ -24,10 +24,8 @@ clean:
+ install:
+ 	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/libexec
+ 	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/man/man8
+-	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/man/cat8
+ 	install -c -m755 prefork	$(DESTDIR)/$(PREFIX)/libexec
+ 	install -c -m644 prefork.8	$(DESTDIR)/$(PREFIX)/man/man8/
+-	install -c -m644 prefork.0	$(DESTDIR)/$(PREFIX)/man/cat8/
+ 
+ prefork.0: prefork.8
+ 	$(NROFF) -mandoc prefork.8 > $@
