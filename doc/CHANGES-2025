@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3293 2025/05/15 15:46:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3294 2025/05/15 18:14:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4892,3 +4892,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ndiff to 7.97 [adam 2025-05-15]
 	Updated net/zenmap to 7.97 [adam 2025-05-15]
 	Updated converters/py-cairosvg to 2.8.2 [adam 2025-05-15]
+	Added sysutils/prefork version 0.3.0.0.20241029 [schmonz 2025-05-15]
