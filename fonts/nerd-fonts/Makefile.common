@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2025/02/16 22:18:03 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2025/05/15 06:47:11 wiz Exp $
 # used by fonts/nerd-fonts-3270/Makefile
 # used by fonts/nerd-fonts-Agave/Makefile
 # used by fonts/nerd-fonts-AnonymousPro/Makefile
@@ -23,7 +23,7 @@
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
 GITHUB_PROJECT=	nerd-fonts
-GITHUB_RELEASE=	v3.3.0
+GITHUB_RELEASE=	v3.4.0
 DIST_SUBDIR=	${GITHUB_PROJECT}/${GITHUB_RELEASE:S/v//}
 EXTRACT_SUFX=	.tar.xz
 
