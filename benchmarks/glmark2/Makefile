@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2025/04/24 14:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/05/15 11:57:39 rjs Exp $
 
 DISTNAME=	glmark2-2023.01
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glmark2/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://github.com/glmark2/glmark2
@@ -13,9 +13,6 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd
 USE_LANGUAGES=	c c++14
 
 USE_TOOLS+=	pkg-config
-
-# https://github.com/glmark2/glmark2/issues/234
-PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "../../mk/dlopen.buildlink3.mk"
 .if ${BUILTIN_LIB_FOUND.dl:U:tl} != yes
@@ -29,26 +26,13 @@ SUBST_SED.rmdl=		-e "s/, 'dl'//"
 LDFLAGS+=	${PTHREAD_LDFLAGS}
 LIBS+=		${PTHREAD_LIBS}
 
-#./waf configure --with-flavors=<drm-gl,drm-glesv2,mir-gl,mir-glesv2,wayland-gl,wayland-glesv2,x11-gl,x11-glesv2> [--data-path=DATA_PATH --prefix=PREFIX]
-# drm-gl requires libdrm and "gbm"
-do-configure:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf configure \
-			--with-flavors=x11-gl \
-			--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
+MESON_ARGS+=	-Dflavors=x11-gl
 
-do-build:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf build
-
-do-install:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${PYTHONBIN} ./waf install \
-			--destdir=${DESTDIR}
+.include "../../devel/meson/build.mk"
+.include "../../devel/cmake/build.mk"
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
