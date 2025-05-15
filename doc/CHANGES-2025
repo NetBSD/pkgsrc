@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3289 2025/05/15 03:37:11 msaitoh Exp $
+$NetBSD: CHANGES-2025,v 1.3290 2025/05/15 06:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4865,3 +4865,23 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.5.4 [pin 2025-05-14]
 	Updated sysutils/broot to 1.46.4 [pin 2025-05-14]
 	Updated sysutils/intel-microcode-netbsd to 20250512 [msaitoh 2025-05-15]
+	Updated fonts/nerd-fonts-3270 to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Agave to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-AnonymousPro to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Arimo to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-AurulentSansMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-BigBlueTerminal to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-BitstreamVeraSansMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-CascadiaCode to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-CodeNewRoman to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Cousine to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-DaddyTimeMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-FantasqueSansMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Hack to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-IBMPlexMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-JetBrainsMono to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Meslo to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-NerdFontsSymbolsOnly to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-SourceCodePro to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-Symbols to 3.4.0 [wiz 2025-05-15]
+	Updated fonts/nerd-fonts-iA-Writer to 3.4.0 [wiz 2025-05-15]
