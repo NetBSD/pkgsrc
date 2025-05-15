@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/05/14 12:42:45 markd Exp $
+# $NetBSD: Makefile,v 1.32 2025/05/15 20:30:43 wiz Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2025pre2
@@ -292,7 +292,7 @@ DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend venn
 # depend witharrows
 # depend xymtex
-DEPENDS+=	tex-yhmath-[0-9]*:../../print/tex-yhmath
+DEPENDS+=	tex-yhmath-[0-9]*:../../fonts/tex-yhmath
 # depend youngtab
 # depend yquant
 # depend ytableau
