@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2024/11/19 14:58:04 nia Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/05/15 06:37:18 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
@@ -20,6 +20,12 @@ USE_LANGUAGES=	c c++
 # error with GCC 7...
 # core/hw/sh4/sh4_interrupts.cpp:250:1: internal compiler error: in gen_reg_rtx, at emit-rtl.c:1058
 GCC_REQD+=	10
+
+# See shell/cmake/DetectArchitecture.cmake
+ONLY_FOR_PLATFORM+=	*-*-aarch64
+ONLY_FOR_PLATFORM+=	*-*-earm*
+ONLY_FOR_PLATFORM+=	*-*-i386
+ONLY_FOR_PLATFORM+=	*-*-x86_64
 
 CMAKE_CONFIGURE_ARGS+=	-DUSE_HOST_LIBZIP=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_HOST_SDL=ON
