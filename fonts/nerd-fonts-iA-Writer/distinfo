@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/25 21:31:49 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/05/15 06:47:13 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.3.0/iA-Writer.tar.xz) = 9ca7f3da94662163a514b3abb954eca66c2cab78983e423fa8de3607225f3213
-SHA512 (nerd-fonts/3.3.0/iA-Writer.tar.xz) = 129c82bcc2aa7fda97931c7ae934dd3d7eea6314fe88229372eecea3f185f96ff125354fc078dc88b95b35834eec26824b4eb6577a14dfa692a29f151096e3f7
-Size (nerd-fonts/3.3.0/iA-Writer.tar.xz) = 3915124 bytes
+BLAKE2s (nerd-fonts/3.4.0/iA-Writer.tar.xz) = b74b39d56e81ae87e31d0201ef32bb42d41acb46c1b8e379fb4e6b04a357f608
+SHA512 (nerd-fonts/3.4.0/iA-Writer.tar.xz) = 50665542a3883d47c3b2533cb58aacfb1e589c648b9efcedc3d8e5ceb5d62d7f855f245d161c70891305aba2373ece72c29beb0442f5e71fd284e4015ebfec3d
+Size (nerd-fonts/3.4.0/iA-Writer.tar.xz) = 4259284 bytes

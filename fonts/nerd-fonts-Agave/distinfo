@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/25 21:15:33 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/05/15 06:47:11 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.3.0/Agave.tar.xz) = ef9826d2c408a9ec719b1be9c4a5d190b33e715096ac19594ec5aa9292fb8f5d
-SHA512 (nerd-fonts/3.3.0/Agave.tar.xz) = 50c05c4b2ad57d8c5ae9acd43fcbd510dc41219b2a402e3bf624cc37e8c57ce3eec97ab7a652ad931ebbd898ece0ee29400422be21abc7809a0d455821cafd9a
-Size (nerd-fonts/3.3.0/Agave.tar.xz) = 2151100 bytes
+BLAKE2s (nerd-fonts/3.4.0/Agave.tar.xz) = cc4cf89245055a3cf4bed3020f3ff207b031e80471f51fa1747df1efe9941b44
+SHA512 (nerd-fonts/3.4.0/Agave.tar.xz) = 4c48d98c51bbf68c740d289772cfc4be08c19aa31bbd5fe16d5a8f85aa40e13cda320c1fe07dc861ff4a4cd22a3ade6a2abc6aaaa55e0fea76bb196a31e29fe1
+Size (nerd-fonts/3.4.0/Agave.tar.xz) = 2331100 bytes
