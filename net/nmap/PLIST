@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/04/25 07:15:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2025/05/15 15:44:40 adam Exp $
 bin/ncat
 bin/nmap
 bin/nping
@@ -565,6 +565,8 @@ ${PLIST.lua}share/nmap/scripts/metasploit-info.nse
 ${PLIST.lua}share/nmap/scripts/metasploit-msgrpc-brute.nse
 ${PLIST.lua}share/nmap/scripts/metasploit-xmlrpc-brute.nse
 ${PLIST.lua}share/nmap/scripts/mikrotik-routeros-brute.nse
+${PLIST.lua}share/nmap/scripts/mikrotik-routeros-username-brute.nse
+${PLIST.lua}share/nmap/scripts/mikrotik-routeros-version.nse
 ${PLIST.lua}share/nmap/scripts/mmouse-brute.nse
 ${PLIST.lua}share/nmap/scripts/mmouse-exec.nse
 ${PLIST.lua}share/nmap/scripts/modbus-discover.nse
@@ -775,6 +777,7 @@ ${PLIST.lua}share/nmap/scripts/stuxnet-detect.nse
 ${PLIST.lua}share/nmap/scripts/supermicro-ipmi-conf.nse
 ${PLIST.lua}share/nmap/scripts/svn-brute.nse
 ${PLIST.lua}share/nmap/scripts/targets-asn.nse
+${PLIST.lua}share/nmap/scripts/targets-ipv6-eui64.nse
 ${PLIST.lua}share/nmap/scripts/targets-ipv6-map4to6.nse
 ${PLIST.lua}share/nmap/scripts/targets-ipv6-multicast-echo.nse
 ${PLIST.lua}share/nmap/scripts/targets-ipv6-multicast-invalid-dst.nse

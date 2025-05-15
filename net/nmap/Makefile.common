@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2025/03/03 20:29:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/05/15 15:44:40 adam Exp $
 # used by net/ndiff/Makefile
 # used by net/nmap/Makefile
 # used by net/zenmap/Makefile
 
-DISTNAME=	nmap-7.95
+DISTNAME=	nmap-7.97
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,3 +15,4 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS=	nmap<=7.70
 
 CHECK_PORTABILITY_SKIP+=	libssh2/Makefile.in
+CHECK_PORTABILITY_SKIP+=	macosx/make-app.sh
