@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.367 2025/05/13 20:47:39 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.368 2025/05/15 06:31:18 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26187,3 +26187,6 @@ screen>=5<5.0.0nb3	multiple-vulnerabilities	https://security.opensuse.org/2025/0
 open-vm-tools<12.5.2	insecure-file-handling	https://nvd.nist.gov/vuln/detail/CVE-2025-22247
 varnish<7.7.1	request-smuggling	https://varnish-cache.org/security/VSV00016.html
 py{39,310,311,312,313}-flask>=3.1.0<3.1.1	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2025-47278
+nodejs>=20<20.19.2	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-23166
+nodejs>=22<22.15.1	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-23166
+nodejs>=24<24.0.2	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-23166
