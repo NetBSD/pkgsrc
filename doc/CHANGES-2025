@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3296 2025/05/15 18:56:47 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3297 2025/05/15 19:29:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/prefork version 0.3.0.0.20241029 [schmonz 2025-05-15]
 	Added sysutils/lnetd version 0.2 [schmonz 2025-05-15]
 	Updated audio/kew to 3.3.2 [ktnb 2025-05-15]
+	Updated security/go-mkcert to 1.4.4nb21 [schmonz 2025-05-15]
