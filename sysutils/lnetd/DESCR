@@ -1,0 +1,2 @@
+Lnetd is a small program which will bind to a UNIX domain socket and
+spawn children in the same way as inetd(8).

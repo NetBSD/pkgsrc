@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2025/05/15 18:14:12 schmonz Exp $
+
+Don't build or install catpages.
+
+--- Makefile.orig	2025-05-15 18:09:50.927289302 +0000
++++ Makefile
+@@ -16,7 +16,7 @@ NROFF	?= nroff
+ #CFLAGS+= -Wno-unused-parameter -Wsign-compare
+ #CFLAGS+= -Werror
+ 
+-all: lnetd lnetd.0
++all: lnetd
+ 
+ clean:
+ 	rm -f lnetd lnetd.o lnetd.0
+@@ -24,10 +24,8 @@ clean:
+ install:
+ 	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/sbin
+ 	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/man/man8
+-	umask 022 && mkdir -p		$(DESTDIR)/$(PREFIX)/man/cat8
+ 	install -c -m755 lnetd		$(DESTDIR)/$(PREFIX)/sbin
+ 	install -c -m644 lnetd.8	$(DESTDIR)/$(PREFIX)/man/man8/
+-	install -c -m644 lnetd.0	$(DESTDIR)/$(PREFIX)/man/cat8/
+ 
+ lnetd.0: lnetd.8
+ 	$(NROFF) -mandoc lnetd.8 > $@
