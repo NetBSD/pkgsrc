@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2018/04/14 13:04:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/15 15:44:41 adam Exp $
 bin/ndiff
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ndiff.py
 ${PYSITELIB}/ndiff.pyc
 ${PYSITELIB}/ndiff.pyo
-man/man1/ndiff.1

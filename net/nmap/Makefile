@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2024/04/25 07:15:03 adam Exp $
+# $NetBSD: Makefile,v 1.150 2025/05/15 15:44:40 adam Exp $
 
 .include "Makefile.common"
 
@@ -59,7 +59,7 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/uninstall_*
 
 .include "../../devel/pcre2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.0.0
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=1.1.0
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"

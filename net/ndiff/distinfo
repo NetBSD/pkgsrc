@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/25 07:15:03 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/05/15 15:44:41 adam Exp $
 
-BLAKE2s (nmap-7.95.tar.bz2) = 07bd501519952dae05b65ad465ef1417bd3aeb22e36ff0dde875e78194d82af8
-SHA512 (nmap-7.95.tar.bz2) = fd95a8bc627a2b8b507353f761dc9fdc8e880a0dd2d75a51b9cb3ec664318796af9bb16a6ff9a1358bd77ad669c2a54e333be630f201f69287692a7d2d41c17e
-Size (nmap-7.95.tar.bz2) = 11717069 bytes
+BLAKE2s (nmap-7.97.tar.bz2) = 61f88fc575e9c6bd934dbefbe8bc0ecf3211894d11173e7a9005c7c075e42000
+SHA512 (nmap-7.97.tar.bz2) = 050241744c311f5fc16297e1698aded2a9fdc78eb7a0954d1c70f7713ef6e1b07f3fcbf28a6a53f43785b1ae710aadf10237d1d0bd8855c6b3c423da4d35961c
+Size (nmap-7.97.tar.bz2) = 12142624 bytes
