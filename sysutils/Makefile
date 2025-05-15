@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1158 2025/05/15 18:13:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.1159 2025/05/15 18:14:15 schmonz Exp $
 #
 
 COMMENT=	System utilities
@@ -436,6 +436,7 @@ SUBDIR+=	libvirt
 SUBDIR+=	lilo
 SUBDIR+=	lla
 SUBDIR+=	lnav
+SUBDIR+=	lnetd
 SUBDIR+=	lockf
 SUBDIR+=	logfinder
 SUBDIR+=	logrider
