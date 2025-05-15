@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2023/03/15 18:20:51 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2025/05/15 19:29:16 schmonz Exp $
 
 BLAKE2s (github.com_jessevdk_go-flags_@v_v1.4.0.mod) = d0fd3bc9afc8ecdc658c6f85b995efee97fce9f6c594fc55f6340dc8a76119dc
 SHA512 (github.com_jessevdk_go-flags_@v_v1.4.0.mod) = 5db9838fe6a00be9849cb79ad148813a573b652d6f6cf220c55b68bd23636016e6bddd6733f6b29d63e5f02d2750a86c2dcea6b964ceb87d4048d5c5f3cc989b
@@ -63,3 +63,4 @@ Size (software.sslmate.com_src_go-pkcs12_@v_v0.2.0.mod) = 127 bytes
 BLAKE2s (software.sslmate.com_src_go-pkcs12_@v_v0.2.0.zip) = fb5062e7f881c739308b5f38e4de286f6ba55bee2d27291f827a61876a6e6766
 SHA512 (software.sslmate.com_src_go-pkcs12_@v_v0.2.0.zip) = dbeaed719249c3a8a394da7670a3bbfa79733b454b76e7605646f4b9032c7fe60da9b75080d22bb670988c059628d1214f6c2668eeddd4bccc5824c1391c8e9e
 Size (software.sslmate.com_src_go-pkcs12_@v_v0.2.0.zip) = 36374 bytes
+SHA1 (patch-truststore__linux.go) = 365617050260f0362201ac783e8e4148a9011ea9
