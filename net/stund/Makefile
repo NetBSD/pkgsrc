@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/08/02 19:30:57 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/15 11:40:32 nia Exp $
 
 DISTNAME=	stund-0.97
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stun/}
 EXTRACT_SUFX=	.tgz
@@ -16,6 +17,10 @@ USE_TOOLS+=	gmake
 
 # Fails with C++14 default language
 FORCE_CXX_STD=		c++03
+
+# Necessary to get ioctl definitions.
+CPPFLAGS.SunOS+=	-DBSD_COMP
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin sbin share/doc/stund
 
