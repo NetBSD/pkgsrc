@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/05/15 11:52:15 rjs Exp $
 
 BUILDLINK_TREE+=	spirv-llvm-translator
 
@@ -12,6 +12,8 @@ BUILDLINK_ABI_DEPENDS.spirv-llvm-translator?=	spirv-llvm-translator>=19.1.7nb1
 BUILDLINK_PKGSRCDIR.spirv-llvm-translator?=	../../parallel/spirv-llvm-translator
 
 .include "../../lang/llvm/buildlink3.mk"
+
+BUILDLINK_FILES.spirv-llvm-translator+=	bin/llvm-spirv
 
 .endif	# SPIRV_LLVM_TRANSLATOR_BUILDLINK3_MK
 
