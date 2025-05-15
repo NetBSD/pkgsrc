@@ -1,0 +1,30 @@
+$NetBSD: patch-nping_configure,v 1.1 2025/05/15 15:47:08 adam Exp $
+
+pcap_version is not portable.
+
+--- nping/configure.orig	2025-05-15 09:53:51.037421707 +0000
++++ nping/configure
+@@ -6057,9 +6057,10 @@ else $as_nop
+ /* end confdefs.h.  */
+ 
+ #include <stdio.h>
+-extern char pcap_version[];
++#include <pcap/pcap.h>
+ int main() {
+   int major, minor1, minor2;
++  const char *pcap_version = pcap_lib_version();
+   sscanf(pcap_version,"%d.%d.%d", &major, &minor1, &minor2);
+   if (major > 0)
+     return 0;
+@@ -6095,9 +6096,10 @@ else $as_nop
+ #ifdef HAVE_NET_BPF_H
+ #include <net/bpf.h>
+ #endif
+-extern char pcap_version[];
++#include <pcap/pcap.h>
+ int main() {
+   int major, minor;
++  const char *pcap_version = pcap_lib_version();
+   sscanf(pcap_version,"%d.%d", &major, &minor);
+   if ((major == 1 && minor >= 1) || major > 1)
+     return 0;
