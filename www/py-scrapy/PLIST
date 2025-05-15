@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/04/14 20:28:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/05/15 09:21:59 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,7 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/scrapy/VERSION
 ${PYSITELIB}/scrapy/__init__.py
 ${PYSITELIB}/scrapy/__init__.pyc
@@ -361,6 +360,9 @@ ${PYSITELIB}/scrapy/spiderloader.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/__init__.py
 ${PYSITELIB}/scrapy/spidermiddlewares/__init__.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/__init__.pyo
+${PYSITELIB}/scrapy/spidermiddlewares/base.py
+${PYSITELIB}/scrapy/spidermiddlewares/base.pyc
+${PYSITELIB}/scrapy/spidermiddlewares/base.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/depth.py
 ${PYSITELIB}/scrapy/spidermiddlewares/depth.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/depth.pyo
@@ -373,6 +375,9 @@ ${PYSITELIB}/scrapy/spidermiddlewares/offsite.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.py
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/referer.pyo
+${PYSITELIB}/scrapy/spidermiddlewares/start.py
+${PYSITELIB}/scrapy/spidermiddlewares/start.pyc
+${PYSITELIB}/scrapy/spidermiddlewares/start.pyo
 ${PYSITELIB}/scrapy/spidermiddlewares/urllength.py
 ${PYSITELIB}/scrapy/spidermiddlewares/urllength.pyc
 ${PYSITELIB}/scrapy/spidermiddlewares/urllength.pyo

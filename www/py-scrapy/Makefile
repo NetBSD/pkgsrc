@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2025/04/14 20:28:02 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/15 09:21:59 adam Exp $
 
-DISTNAME=	scrapy-2.12.0
+DISTNAME=	scrapy-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Scrapy/}
 
@@ -11,13 +10,12 @@ HOMEPAGE=	https://scrapy.org/
 COMMENT=	High-level Web Crawling and Web Scraping framework
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-itemadapter>=0.1.0:../../textproc/py-itemadapter
 DEPENDS+=	${PYPKGPREFIX}-itemloaders>=1.0.1:../../textproc/py-itemloaders
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.0:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-protego>=0.1.15:../../www/py-protego
@@ -28,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-tldextract-[0-9]*:../../net/py-tldextract
 DEPENDS+=	${PYPKGPREFIX}-twisted>=21.7.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.1.0:../../devel/py-zope.interface
+TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
+TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
 
 USE_LANGUAGES=	# none
 
@@ -36,7 +37,6 @@ post-install:
 	${MV} scrapy scrapy-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
+PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL cryptography
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
