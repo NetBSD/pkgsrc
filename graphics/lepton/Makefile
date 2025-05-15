@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/09/24 22:42:29 nros Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/15 09:04:12 nia Exp $
 
 DISTNAME=	lepton-1.2.1
 PKGREVISION=	1
@@ -13,10 +13,15 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++11
+USE_LANGUAGES+=	c c++
 USE_TOOLS+=	autoconf autoreconf automake gmake makeinfo
 
 AUTO_MKDIRS=	yes
+
+USE_CXX_FEATURES+=	c++11
+
+# Has a hard requirement on SSE.
+ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
 CONFIGURE_ARGS+=	--enable-system-dependencies
 
