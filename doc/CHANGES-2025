@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3295 2025/05/15 18:14:20 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3296 2025/05/15 18:56:47 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4894,3 +4894,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-cairosvg to 2.8.2 [adam 2025-05-15]
 	Added sysutils/prefork version 0.3.0.0.20241029 [schmonz 2025-05-15]
 	Added sysutils/lnetd version 0.2 [schmonz 2025-05-15]
+	Updated audio/kew to 3.3.2 [ktnb 2025-05-15]
