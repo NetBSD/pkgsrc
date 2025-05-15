@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/01/25 21:30:47 pin Exp $
+$NetBSD: distinfo,v 1.3 2025/05/15 06:47:13 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.3.0/Hack.tar.xz) = 38a886aab598362a561930ad1d75ca7a87f3db2460b918a708a0aeca0d58ce21
-SHA512 (nerd-fonts/3.3.0/Hack.tar.xz) = 7b7551dd54272c9d821c617b30717bff1f73fd1888e02d6ec87a41bfab4526046411d43d02b72966aabf9ba94117c290f27fa6757c323a46ddef9502315ac774
-Size (nerd-fonts/3.3.0/Hack.tar.xz) = 2497984 bytes
+BLAKE2s (nerd-fonts/3.4.0/Hack.tar.xz) = 91e2936dcb8ca2528ab40f5d09999f4c16cf0438b91e6bdd20156729882c206e
+SHA512 (nerd-fonts/3.4.0/Hack.tar.xz) = bfc3368584b7007ddfcd40e14f0586f76e52af7cab4d5e2915e2e969ac24b1e3cd3717b5eef6e234d4d6cf2f8a814665a403f443b13e07e1e9410dfc2a4f50ec
+Size (nerd-fonts/3.4.0/Hack.tar.xz) = 2679328 bytes

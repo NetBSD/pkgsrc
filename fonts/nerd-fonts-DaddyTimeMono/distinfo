@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/25 21:29:35 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/05/15 06:47:12 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.3.0/DaddyTimeMono.tar.xz) = c3699267817d228d717739c262626e5d701232bb949730ddf0ab24fe9011f3cf
-SHA512 (nerd-fonts/3.3.0/DaddyTimeMono.tar.xz) = 34dac474205f7f50d53badb654ea4e72be8e561719f5151893a912a88267c763ba343cbf2720198b947515b8c48d114e689aca77a62519f4c8514e7887494b41
-Size (nerd-fonts/3.3.0/DaddyTimeMono.tar.xz) = 1939872 bytes
+BLAKE2s (nerd-fonts/3.4.0/DaddyTimeMono.tar.xz) = 24c37ffd5592bc9bf199c327c6981e8a44d120daa40f77d6ec3c076d2d429d84
+SHA512 (nerd-fonts/3.4.0/DaddyTimeMono.tar.xz) = 79908da4699c633290d1a41b15500f3c3456bcb68d7682520a476f8c2f5451b4e967c909ab1fff333ad603194730b594107dc13f28f937fc2ad7646c0e08b741
+Size (nerd-fonts/3.4.0/DaddyTimeMono.tar.xz) = 2120492 bytes

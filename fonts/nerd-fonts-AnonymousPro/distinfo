@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/25 21:48:03 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/05/15 06:47:11 wiz Exp $
 
-BLAKE2s (nerd-fonts/3.3.0/AnonymousPro.tar.xz) = d897bfff9cf370e79212164d547261eb08214085081f2dbfde94825658287c74
-SHA512 (nerd-fonts/3.3.0/AnonymousPro.tar.xz) = 128185bc3aa9554d8355976db7d2e3c98225bd1b1d14cdc49a35818104b6c47fc95193ab72e58942f3dbbd9bf6f4b492bff4dc0c0cad4b7c5d68a495ef87599d
-Size (nerd-fonts/3.3.0/AnonymousPro.tar.xz) = 2239824 bytes
+BLAKE2s (nerd-fonts/3.4.0/AnonymousPro.tar.xz) = 370cb024273e71df479fe082593ea30aa71d716bd66802c3d9c3a8fc9830f605
+SHA512 (nerd-fonts/3.4.0/AnonymousPro.tar.xz) = 1df0a476af13ca167cb8272c07f1fc1fc76294863fcbd07ed588e1822797e736fff47d7d14e1e59927309081d895a7c5cd5656257b6a40adbbe9110eb864aa04
+Size (nerd-fonts/3.4.0/AnonymousPro.tar.xz) = 2416332 bytes
