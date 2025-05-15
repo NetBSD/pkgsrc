@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/19 07:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/15 18:56:16 ktnb Exp $
 
-DISTNAME=	kew-3.1.2
-PKGREVISION=	2
+DISTNAME=	kew-3.3.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ravachol/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -32,5 +31,4 @@ MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
 .include "../../graphics/chafa/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
