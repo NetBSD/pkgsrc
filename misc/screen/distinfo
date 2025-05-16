@@ -1,13 +1,21 @@
-$NetBSD: distinfo,v 1.66 2025/02/13 19:43:02 rillig Exp $
+$NetBSD: distinfo,v 1.66.2.1 2025/05/16 14:14:44 maya Exp $
 
 BLAKE2s (screen-5.0.0.tar.gz) = b2d41befdfd7b641bddef5d1eb4a919bcb76f971e79a145ea4a2e3ba55db28d1
 SHA512 (screen-5.0.0.tar.gz) = 18a163313025c58950ec65fa83037ba1df0fa8e2346925593217fb0a6596f2f51914a4f0aec7f0e1c280d3d3ef964e7a886521f41f4b96f4ff08935be7f62117
 Size (screen-5.0.0.tar.gz) = 895882 bytes
 SHA1 (patch-Makefile.in) = 9a536678040bb6a47e5c7fbeedfecc0aa5c870e2
+SHA1 (patch-attacher.c) = 6d9b76c55e16dd02d9633012013b3b0d5978751b
+SHA1 (patch-configure) = 4f3261342dd9620d2d62c18a33cf9cc15b2f0d78
+SHA1 (patch-configure.ac) = 1535033179bf7dc4a2a0137c8344963b6ca22404
 SHA1 (patch-doc_screen.1) = 858df8ed65c8fa8044075f4066832f79ba77b3a2
 SHA1 (patch-doc_screen.texinfo) = e35f936f307fc6162824c3090221745ba38f6aba
 SHA1 (patch-etc_etcscreenrc) = a45ae3186cd9bddeb915bad890f1be5abc315dd3
-SHA1 (patch-socket.c) = 51a7cbc2053925132f890a8585489529c5d6da99
+SHA1 (patch-logfile.c) = 2ae1f8684b34b260047046eca6023b74ae069eac
+SHA1 (patch-logfile.h) = d0f2d70bd1ae4beaffafecc0ff9cacbfe82b4db3
+SHA1 (patch-process.c) = d661f47c3c44563853447c20bacdf5d0400f478d
+SHA1 (patch-screen.c) = c1a43ce774ff651085602c41e33b704229a92944
+SHA1 (patch-screen.h) = b544433f3a4b500e2650fa59413fa928cc671fa9
+SHA1 (patch-socket.c) = 04abb03864baab4cfcc053cfab4657d003660648
 SHA1 (patch-termcap.c) = f06432d06405daac0064296d2cfa3246a2621e4f
 SHA1 (patch-utmp-netbsd.c) = a721e311e7dde7938de0e9546a7892bfd104ebd1
 SHA1 (patch-window.h) = b0fe8f7105a906c6d9a8908ade8d34e5f7da0dd1
