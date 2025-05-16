@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2016/01/06 10:46:51 adam Exp $
+# $NetBSD: Makefile,v 1.43 2025/05/16 22:06:59 zafer Exp $
 
 DISTNAME=	psiconv-0.9.9
 PKGREVISION=	1
 CATEGORIES=	converters
-MASTER_SITES=	http://www.frodo.looijaard.name/system/files/software/psiconv/
+MASTER_SITES=	https://www.frodo.looijaard.name/system/files/software/psiconv/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://software.frodo.looijaard.name/psiconv/
+HOMEPAGE=	https://software.frodo.looijaard.name/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
 
 USE_LIBTOOL=		yes
