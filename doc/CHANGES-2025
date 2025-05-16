@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3306 2025/05/16 15:22:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3307 2025/05/16 16:09:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4907,3 +4907,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated news/newsraft to 0.30 [ktnb 2025-05-16]
 	Added devel/py-click-option-group version 0.5.7 [adam 2025-05-16]
 	Added chat/synadm version 0.48 [adam 2025-05-16]
+	Updated www/chromium to 136.0.7103.113 [wiz 2025-05-16]
