@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/02/12 12:55:46 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/05/16 12:55:41 adam Exp $
 
-BLAKE2s (geoip2-5.0.1.tar.gz) = abf2f57b0da3ac98c0e3be91aefbbba457b7a7047fbfdcde6e6ad3933dd46d93
-SHA512 (geoip2-5.0.1.tar.gz) = c36213ce4905bca07637e29b05205a57533fe61b351120bdfc266276dc4830db0c438e7a1ca17b30dfd09e4d4350b4564a99c604ffe5e16c32cc5da4c7ffa49b
-Size (geoip2-5.0.1.tar.gz) = 175854 bytes
+BLAKE2s (geoip2-5.1.0.tar.gz) = f2542d1c23403e2aaab8b6e656be3e0a4b32514e5c98e455e5429a0b3e4185e6
+SHA512 (geoip2-5.1.0.tar.gz) = 269e95e4658640d1be8b74bc1c9cc09c70db1c1e4e8a634339126825044d3935f99c4ccac6bdaa2a892fc73aa18e82bb0dc317d39009b7539459f4e747ee511f
+Size (geoip2-5.1.0.tar.gz) = 268166 bytes
