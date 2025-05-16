@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui.cc,v 1.1 2025/02/06 09:57:55 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui.cc,v 1.2 2025/05/16 16:08:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui.cc
-@@ -185,11 +185,11 @@ void ManagementUI::GetLocalizedStrings(
+@@ -175,11 +175,11 @@ void ManagementUI::GetLocalizedStrings(
         IDS_MANAGEMENT_FILE_TRANSFER_VISIBLE_DATA},
        {kManagementReportFileEvents, IDS_MANAGEMENT_REPORT_FILE_EVENTS},
  #endif  // BUILDFLAG(IS_CHROMEOS)

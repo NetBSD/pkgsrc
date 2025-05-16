@@ -1,12 +1,12 @@
-$NetBSD: patch-base_message__loop_message__pump__epoll.cc,v 1.1 2025/02/06 09:57:40 wiz Exp $
+$NetBSD: patch-base_message__loop_message__pump__epoll.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_epoll.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/message_loop/message_pump_epoll.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/message_loop/message_pump_epoll.cc
-@@ -42,7 +42,7 @@ std::atomic_bool g_use_batched_version =
+@@ -47,7 +47,7 @@ std::atomic_bool g_use_batched_version =
  std::atomic_bool g_use_poll = false;
  
  constexpr std::pair<uint32_t, short int> kEpollToPollEvents[] = {

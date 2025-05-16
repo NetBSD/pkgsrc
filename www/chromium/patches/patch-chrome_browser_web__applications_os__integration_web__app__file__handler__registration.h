@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_os__integration_web__app__file__handler__registration.h,v 1.1 2025/02/06 09:57:56 wiz Exp $
+$NetBSD: patch-chrome_browser_web__applications_os__integration_web__app__file__handler__registration.h,v 1.2 2025/05/16 16:08:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/web_applications/os_integration/web_app_file_handler_registration.h
 @@ -43,7 +43,7 @@ void UnregisterFileHandlersWithOs(const 
                                    const base::FilePath& profile_path,

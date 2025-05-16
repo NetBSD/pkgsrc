@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.1 2025/02/06 09:58:20 wiz Exp $
+$NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_freebsd.cc.orig	2024-12-21 10:25:10.583221765 +0000
+--- services/device/hid/hid_service_freebsd.cc.orig	2025-05-08 12:01:57.803625652 +0000
 +++ services/device/hid/hid_service_freebsd.cc
 @@ -0,0 +1,395 @@
 +// Copyright 2014 The Chromium Authors. All rights reserved.
@@ -112,7 +112,7 @@ $NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.1 2025/02/06 09:
 +
 +  bool HaveReadWritePermissions(std::string device_id) {
 +    std::string device_node = "/dev/" + device_id;
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -136,7 +136,7 @@ $NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.1 2025/02/06 09:
 +
 +    std::vector<uint8_t> report_descriptor;
 +
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    base::FilePath device_path(device_node);
 +    base::File device_file;
@@ -202,7 +202,7 @@ $NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.1 2025/02/06 09:
 + private:
 +
 +  void CheckPendingPermissionChange() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +    std::map<std::string, int>::iterator it;
 +    for (it = permissions_checks_attempts_.begin(); it != permissions_checks_attempts_.end();) {
 +      std::string device_name = it->first;
@@ -228,7 +228,7 @@ $NetBSD: patch-services_device_hid_hid__service__freebsd.cc,v 1.1 2025/02/06 09:
 +  }
 +
 +  void SetupDevdMonitor() {
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    int devd_fd = socket(AF_UNIX, SOCK_SEQPACKET, 0);
 +    if (devd_fd < 0)

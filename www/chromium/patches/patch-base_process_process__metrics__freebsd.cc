@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/process_metrics_freebsd.cc
-@@ -3,19 +3,37 @@
+@@ -3,18 +3,37 @@
  // found in the LICENSE file.
  
  #include "base/process/process_metrics.h"
@@ -41,44 +41,77 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.1 2025/02/06 09:57:
 +}
  
 -ProcessMetrics::ProcessMetrics(ProcessHandle process)
--    : process_(process),
--      last_cpu_(0) {}
+-    : process_(process), last_cpu_(0) {}
 +ProcessMetrics::ProcessMetrics(ProcessHandle process) : process_(process) {}
  
  // static
  std::unique_ptr<ProcessMetrics> ProcessMetrics::CreateProcessMetrics(
-@@ -23,21 +41,18 @@ std::unique_ptr<ProcessMetrics> ProcessM
+@@ -22,22 +41,54 @@ std::unique_ptr<ProcessMetrics> ProcessM
    return WrapUnique(new ProcessMetrics(process));
  }
  
 -base::expected<double, ProcessCPUUsageError>
 -ProcessMetrics::GetPlatformIndependentCPUUsage() {
-+base::expected<TimeDelta, ProcessCPUUsageError>
-+ProcessMetrics::GetCumulativeCPUUsage() {
-   struct kinfo_proc info;
+-  struct kinfo_proc info;
 -  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_PID, process_};
 -  size_t length = sizeof(info);
++base::expected<ProcessMemoryInfo, ProcessUsageError>
++ProcessMetrics::GetMemoryInfo() const {
++  ProcessMemoryInfo memory_info;
++  kvm_t *kd = kvm_open(nullptr, "/dev/null", nullptr, O_RDONLY, "kvm_open");
++  struct kinfo_proc *pp;
++  int nproc;
+ 
+-  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
+-    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  if (kd == nullptr) {
++    return base::unexpected(ProcessUsageError::kSystemError);
++  }
++
++  if ((pp = kvm_getprocs(kd, KERN_PROC_PID, process_, &nproc)) == nullptr) {
++    kvm_close(kd);
++    return base::unexpected(ProcessUsageError::kProcessNotFound);
++  }
++
++  if (nproc > 0) {
++    memory_info.resident_set_bytes = pp->ki_rssize << GetPageShift();
++  } else {
++    kvm_close(kd);
++    return base::unexpected(ProcessUsageError::kProcessNotFound);
+   }
+ 
+-  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
++  kvm_close(kd);
++  return memory_info;
+ }
+ 
+ base::expected<TimeDelta, ProcessCPUUsageError>
+ ProcessMetrics::GetCumulativeCPUUsage() {
+-  NOTREACHED();
++  struct kinfo_proc info;
 +  size_t length = sizeof(struct kinfo_proc);
 +  struct timeval tv;
 +
 +  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process_ };
- 
-   if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
--    return base::unexpected(ProcessCPUUsageError::kSystemError);
-+    return base::ok(TimeDelta());
- 
--  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
--}
--
--base::expected<TimeDelta, ProcessCPUUsageError>
--ProcessMetrics::GetCumulativeCPUUsage() {
--  NOTREACHED();
++
++  if (process_ == 0) {
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
++  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
++    return base::unexpected(ProcessCPUUsageError::kSystemError);
++  }
++
++  if (length == 0) {
++    return base::unexpected(ProcessCPUUsageError::kProcessNotFound);
++  }
++
 +  return base::ok(Microseconds(info.ki_runtime));
  }
  
  size_t GetSystemCommitCharge() {
-@@ -63,4 +78,228 @@ size_t GetSystemCommitCharge() {
-   return mem_total - (mem_free*pagesize) - (mem_inactive*pagesize);
+@@ -66,4 +117,174 @@ size_t GetSystemCommitCharge() {
+   return mem_total - (mem_free * pagesize) - (mem_inactive * pagesize);
  }
  
 +int64_t GetNumberOfThreads(ProcessHandle process) {
@@ -159,60 +192,6 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.1 2025/02/06 09:57:
 +  }
 +
 +  return total_count;
-+}
-+
-+size_t ProcessMetrics::GetResidentSetSize() const {
-+  kvm_t *kd = kvm_open(nullptr, "/dev/null", nullptr, O_RDONLY, "kvm_open");
-+
-+  if (kd == nullptr)
-+    return 0;
-+
-+  struct kinfo_proc *pp;
-+  int nproc;
-+
-+  if ((pp = kvm_getprocs(kd, KERN_PROC_PID, process_, &nproc)) == nullptr) {
-+    kvm_close(kd);
-+    return 0;
-+  }
-+
-+  size_t rss;
-+
-+  if (nproc > 0) {
-+    rss = pp->ki_rssize << GetPageShift();
-+  } else {
-+    rss = 0;
-+  }
-+
-+  kvm_close(kd);
-+  return rss;
-+}
-+
-+uint64_t ProcessMetrics::GetVmSwapBytes() const {
-+  kvm_t *kd = kvm_open(nullptr, "/dev/null", nullptr, O_RDONLY, "kvm_open");
-+
-+  if (kd == nullptr)
-+    return 0;
-+
-+  struct kinfo_proc *pp;
-+  int nproc;
-+
-+  if ((pp = kvm_getprocs(kd, KERN_PROC_PID, process_, &nproc)) == nullptr) {
-+    kvm_close(kd);
-+    return 0;
-+  }
-+
-+  size_t swrss;
-+
-+  if (nproc > 0) {
-+    swrss = pp->ki_swrss > pp->ki_rssize
-+      ? (pp->ki_swrss - pp->ki_rssize) << GetPageShift()
-+      : 0;
-+  } else {
-+    swrss = 0;
-+  }
-+
-+  kvm_close(kd);
-+  return swrss;
 +}
 +
 +int ProcessMetrics::GetIdleWakeupsPerSecond() {

@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.1 2025/02/06 09:58:06 wiz Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
-@@ -174,7 +174,7 @@ class WebDragSourceAura : public content
+@@ -173,7 +173,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;
  };
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.1 
    // We set the file contents before the URL because the URL also sets file
    // contents (to a .URL shortcut).  We want to prefer file content data over
    // a shortcut so we add it first.
-@@ -1326,7 +1326,7 @@ void WebContentsViewAura::OnMouseEvent(u
+@@ -1327,7 +1327,7 @@ void WebContentsViewAura::OnMouseEvent(u
      // Linux window managers like to handle raise-on-click themselves.  If we
      // raise-on-click manually, this may override user settings that prevent
      // focus-stealing.

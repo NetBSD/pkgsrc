@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__iterator.h,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__iterator.h,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/process_iterator.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/process_iterator.h
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include <windows.h>
  
  #include <tlhelp32.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-base_process_process__iterator.h,v 1.1 2025/02/06 09:57:41 wiz Ex
  #include <sys/sysctl.h>
  #elif BUILDFLAG(IS_FREEBSD)
  #include <sys/user.h>
-@@ -116,7 +116,11 @@ class BASE_EXPORT ProcessIterator {
+@@ -117,7 +117,11 @@ class BASE_EXPORT ProcessIterator {
    HANDLE snapshot_;
    bool started_iteration_ = false;
  #elif BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_BSD)

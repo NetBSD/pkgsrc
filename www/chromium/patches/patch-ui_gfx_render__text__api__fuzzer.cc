@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_gfx_render__text__api__fuzzer.cc,v 1.1 2025/02/06 09:58:32 wiz Exp $
+$NetBSD: patch-ui_gfx_render__text__api__fuzzer.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/render_text_api_fuzzer.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/gfx/render_text_api_fuzzer.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/render_text_api_fuzzer.cc
-@@ -20,7 +20,7 @@
+@@ -19,7 +19,7 @@
  #include "ui/gfx/font_util.h"
  #include "ui/gfx/render_text.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_gfx_render__text__api__fuzzer.cc,v 1.1 2025/02/06 09:58:32 wiz
  #include "third_party/test_fonts/fontconfig/fontconfig_util_linux.h"
  #endif
  
-@@ -47,7 +47,7 @@ struct Environment {
+@@ -46,7 +46,7 @@ struct Environment {
  
      CHECK(base::i18n::InitializeICU());
  

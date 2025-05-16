@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.cc,v 1.1 2025/02/06 09:58:18 wiz Exp $
+$NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- remoting/host/webauthn/remote_webauthn_caller_security_utils.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/webauthn/remote_webauthn_caller_security_utils.cc
 @@ -10,7 +10,7 @@
  #include "base/strings/utf_string_conversions.h"
@@ -23,8 +23,8 @@ $NetBSD: patch-remoting_host_webauthn_remote__webauthn__caller__security__utils.
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
  constexpr auto kAllowedCallerPrograms =
-     base::MakeFixedFlatSet<base::FilePath::StringPieceType>({
-@@ -82,7 +82,7 @@ bool IsLaunchedByTrustedProcess() {
+     base::MakeFixedFlatSet<base::FilePath::StringViewType>({
+@@ -83,7 +83,7 @@ bool IsLaunchedByTrustedProcess() {
  #if !defined(NDEBUG)
    // Just return true on debug builds for the convenience of development.
    return true;

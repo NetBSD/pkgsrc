@@ -1,12 +1,21 @@
-$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
+$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
-@@ -387,7 +387,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -153,7 +153,7 @@ void InitializePlatformOverlaySettings(G
+ 
+ #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_CASTOS)
+ bool CanAccessDeviceFile(const GPUInfo& gpu_info) {
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   if (gpu_info.gpu.vendor_id != 0x10de ||  // NVIDIA
+       gpu_info.gpu.driver_vendor != "NVIDIA")
+     return true;
+@@ -389,7 +389,7 @@ bool GpuInit::InitializeAndStartSandbox(
    enable_watchdog = false;
  #endif
  
@@ -15,7 +24,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
    bool gpu_sandbox_start_early = gpu_preferences_.gpu_sandbox_start_early;
  #else   // !(BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS))
    // For some reasons MacOSX's VideoToolbox might crash when called after
-@@ -424,7 +424,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -427,7 +427,7 @@ bool GpuInit::InitializeAndStartSandbox(
    }
  
    bool attempted_startsandbox = false;
@@ -24,7 +33,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
    // On Chrome OS ARM Mali, GPU driver userspace creates threads when
    // initializing a GL context, so start the sandbox early.
    // TODO(zmo): Need to collect OS version before this.
-@@ -528,7 +528,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -524,7 +524,7 @@ bool GpuInit::InitializeAndStartSandbox(
      gpu_preferences_.gr_context_type = GrContextType::kGL;
    }
  
@@ -33,7 +42,7 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
    // The ContentSandboxHelper is currently the only one implementation of
    // GpuSandboxHelper and it has no dependency. Except on Linux where
    // VaapiWrapper checks the GL implementation to determine which display
-@@ -610,7 +610,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -586,7 +586,7 @@ bool GpuInit::InitializeAndStartSandbox(
            command_line, gpu_feature_info_,
            gpu_preferences_.disable_software_rasterizer, false);
        if (gl_use_swiftshader_) {
@@ -42,16 +51,16 @@ $NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
          VLOG(1) << "Quit GPU process launch to fallback to SwiftShader cleanly "
                  << "on Linux";
          return false;
-@@ -766,7 +766,7 @@ bool GpuInit::InitializeAndStartSandbox(
- 
-   InitializePlatformOverlaySettings(&gpu_info_, gpu_feature_info_);
+@@ -754,7 +754,7 @@ bool GpuInit::InitializeAndStartSandbox(
+               ->GetSupportedFormatsForGLNativePixmapImport();
+ #endif  // BUILDFLAG(IS_OZONE)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    // Driver may create a compatibility profile context when collect graphics
    // information on Linux platform. Try to collect graphics information
    // based on core profile context after disabling platform extensions.
-@@ -821,7 +821,7 @@ bool GpuInit::InitializeAndStartSandbox(
+@@ -806,7 +806,7 @@ bool GpuInit::InitializeAndStartSandbox(
        }
      }
    }

@@ -1,12 +1,12 @@
-$NetBSD: patch-base_files_file__util__unittest.cc,v 1.1 2025/02/06 09:57:40 wiz Exp $
+$NetBSD: patch-base_files_file__util__unittest.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_util_unittest.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/files/file_util_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/files/file_util_unittest.cc
-@@ -3928,7 +3928,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
+@@ -3920,7 +3920,7 @@ TEST_F(FileUtilTest, ReadFileToStringWit
  }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,27 @@ $NetBSD: patch-base_files_file__util__unittest.cc,v 1.1 2025/02/06 09:57:40 wiz 
  TEST_F(FileUtilTest, ReadFileToStringWithProcFileSystem) {
    FilePath file_path("/proc/cpuinfo");
    std::string data = "temp";
-@@ -4665,7 +4665,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
+@@ -4505,6 +4505,19 @@ TEST_F(FileUtilTest, CreateDirectoryOnly
+ 
+ #endif  // BUILDFLAG(IS_ANDROID)
+ 
++#if BUILDFLAG(IS_OPENBSD)
++TEST_F(FileUtilTest, CreateDirectoryInUnveiledPath) {
++  FilePath dir = PathService::CheckedGet(DIR_GEN_TEST_DATA_ROOT);
++  dir = dir.Append(FILE_PATH_LITERAL("base"));
++  dir = dir.Append(FILE_PATH_LITERAL("test"));
++  dir = dir.Append(FILE_PATH_LITERAL("unveil"));
++  unveil(dir.value().c_str(), "rwc");
++  EXPECT_TRUE(CreateDirectory(dir));
++  dir = dir.Append(FILE_PATH_LITERAL("test"));
++  EXPECT_FALSE(CreateDirectory(dir));
++}
++#endif
++
+ #if BUILDFLAG(IS_WIN) && BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
+     defined(ARCH_CPU_32_BITS)
+ // TODO(crbug.com/327582285): Re-enable these tests. They may be failing due to
+@@ -4671,7 +4684,7 @@ TEST(FileUtilMultiThreadedTest, MultiThr
                  NULL);
  #else
      size_t bytes_written =

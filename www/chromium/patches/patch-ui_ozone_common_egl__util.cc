@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_ozone_common_egl__util.cc,v 1.1 2025/02/06 09:58:33 wiz Exp $
+$NetBSD: patch-ui_ozone_common_egl__util.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/common/egl_util.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/ozone/common/egl_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/ozone/common/egl_util.cc
-@@ -26,9 +26,9 @@ const base::FilePath::CharType kDefaultG
+@@ -27,9 +27,9 @@ const base::FilePath::CharType kDefaultG
      FILE_PATH_LITERAL("libGLESv2.so");
  #else  // BUILDFLAG(IS_FUCHSIA)
  const base::FilePath::CharType kDefaultEglSoname[] =

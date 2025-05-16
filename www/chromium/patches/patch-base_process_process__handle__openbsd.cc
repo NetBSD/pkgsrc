@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_openbsd.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/process_handle_openbsd.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/process_handle_openbsd.cc
-@@ -3,48 +3,112 @@
+@@ -3,17 +3,25 @@
  // found in the LICENSE file.
  
  #include "base/process/process_handle.h"
@@ -30,27 +30,28 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.1 2025/02/06 09:57:4
 +  struct kinfo_proc *info;
    size_t length;
 +  pid_t ppid;
-   int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process,
-                 sizeof(struct kinfo_proc), 0 };
- 
-   if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0)
+   int mib[] = {
+       CTL_KERN, KERN_PROC, KERN_PROC_PID, process, sizeof(struct kinfo_proc),
+       0};
+@@ -22,37 +30,87 @@ ProcessId GetParentProcessId(ProcessHand
      return -1;
+   }
  
 -  mib[5] = (length / sizeof(struct kinfo_proc));
 +  info = (struct kinfo_proc *)malloc(length);
  
--  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0)
+-  if (sysctl(mib, std::size(mib), &info, &length, NULL, 0) < 0) {
 -    return -1;
 +  mib[5] = static_cast<int>((length / sizeof(struct kinfo_proc)));
 +
 +  if (sysctl(mib, std::size(mib), info, &length, NULL, 0) < 0) {
 +    ppid = -1;
 +    goto out;
-+  }
-+
-+  ppid = info->p_ppid;
+   }
  
 -  return info.p_ppid;
++  ppid = info->p_ppid;
++
 +out:
 +  free(info);
 +  return ppid;
@@ -64,17 +65,21 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.1 2025/02/06 09:57:4
 +  char **retvalargs, *cpath, retval[PATH_MAX];
 +  int cnt;
    size_t len;
--  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, process,
--                sizeof(struct kinfo_proc), 0 };
+-  int mib[] = {
+-      CTL_KERN, KERN_PROC, KERN_PROC_PID, process, sizeof(struct kinfo_proc),
+-      0};
 -
--  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) == -1)
+-  if (sysctl(mib, std::size(mib), NULL, &len, NULL, 0) == -1) {
 -    return FilePath();
+-  }
 -  mib[5] = (len / sizeof(struct kinfo_proc));
--  if (sysctl(mib, std::size(mib), &kp, &len, NULL, 0) < 0)
+-  if (sysctl(mib, std::size(mib), &kp, &len, NULL, 0) < 0) {
 -    return FilePath();
--  if ((kp.p_flag & P_SYSTEM) != 0)
+-  }
+-  if ((kp.p_flag & P_SYSTEM) != 0) {
 -    return FilePath();
--  if (strcmp(kp.p_comm, "chrome") == 0)
+-  }
+-  if (strcmp(kp.p_comm, "chrome") == 0) {
 -    return FilePath(kp.p_comm);
 +  char *tokens[2];
 +  struct stat sb;
@@ -131,7 +136,7 @@ $NetBSD: patch-base_process_process__handle__openbsd.cc,v 1.1 2025/02/06 09:57:4
 +            result = FilePath(retval);
 +      }
 +    }
-+  }
+   }
  
 -  return FilePath();
 +  return result;

@@ -1,12 +1,12 @@
-$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.1 2025/02/06 09:58:21 wiz Exp $
+$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/SkMemory_new_handler.cpp.orig	2024-12-17 17:58:49.000000000 +0000
+--- skia/ext/SkMemory_new_handler.cpp.orig	2025-05-05 19:21:24.000000000 +0000
 +++ skia/ext/SkMemory_new_handler.cpp
-@@ -19,7 +19,7 @@
+@@ -24,7 +24,7 @@
  #include <windows.h>
  #elif BUILDFLAG(IS_APPLE)
  #include <malloc/malloc.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.1 2025/02/06 09:58:21 wiz
  #include <malloc.h>
  #endif
  
-@@ -105,7 +105,7 @@ static void* malloc_nothrow(size_t size,
+@@ -110,7 +110,7 @@ static void* malloc_nothrow(size_t size,
    // TODO(b.kelemen): we should always use UncheckedMalloc but currently it
    // doesn't work as intended everywhere.
    void* result;

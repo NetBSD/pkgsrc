@@ -1,42 +1,39 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.1 2025/02/06 09:57:49 wiz Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metrics.cc,v 1.2 2025/05/16 16:08:17 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/metrics/chrome_browser_main_extra_parts_metrics.cc
-@@ -88,8 +88,10 @@
+@@ -85,7 +85,7 @@
+ #include "chrome/browser/flags/android/chrome_session_state.h"
+ #endif  // BUILDFLAG(IS_ANDROID)
  
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if defined(__GLIBC__) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+#if defined(__GLIBC__) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
-+#if !BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #if defined(__GLIBC__)
  #include <gnu/libc-version.h>
-+#endif
- 
- #include "base/linux_util.h"
- #include "base/strings/string_split.h"
-@@ -113,7 +115,7 @@
- #include "chromeos/crosapi/cpp/crosapi_constants.h"
- #endif  // BUILDFLAG(IS_CHROMEOS_LACROS)
+ #endif  // defined(__GLIBC__)
+@@ -110,7 +110,7 @@
+ #include "chrome/installer/util/taskbar_util.h"
+ #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "chrome/browser/metrics/pressure/pressure_metrics_reporter.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -122,7 +124,7 @@
+@@ -119,7 +119,7 @@
  #include "components/user_manager/user_manager.h"
- #endif  // BUILDFLAG(IS_CHROMEOS_ASH)
+ #endif  // BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "components/power_metrics/system_power_monitor.h"
  #endif
  
-@@ -870,7 +872,7 @@ void RecordStartupMetrics() {
+@@ -873,7 +873,7 @@ void RecordStartupMetrics() {
  
    // Record whether Chrome is the default browser or not.
    // Disabled on Linux due to hanging browser tests, see crbug.com/1216328.
@@ -45,8 +42,8 @@ $NetBSD: patch-chrome_browser_metrics_chrome__browser__main__extra__parts__metri
    shell_integration::DefaultWebClientState default_state =
        shell_integration::GetDefaultBrowser();
    base::UmaHistogramEnumeration("DefaultBrowser.State", default_state,
-@@ -1182,11 +1184,11 @@ void ChromeBrowserMainExtraPartsMetrics:
-   }
+@@ -1181,11 +1181,11 @@ void ChromeBrowserMainExtraPartsMetrics:
+       std::make_unique<web_app::SamplingMetricsProvider>();
  #endif  // !BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX)

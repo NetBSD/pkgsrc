@@ -1,10 +1,10 @@
-$NetBSD: patch-base_tracing_trace__time.h,v 1.1 2025/02/06 09:57:43 wiz Exp $
+$NetBSD: patch-base_tracing_trace__time.h,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/tracing/trace_time.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/tracing/trace_time.h
 @@ -12,7 +12,7 @@ namespace base {
  namespace tracing {

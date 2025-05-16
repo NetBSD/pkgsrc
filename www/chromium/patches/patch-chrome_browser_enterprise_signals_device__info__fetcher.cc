@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_device__info__fetcher.cc,v 1.1 2025/02/06 09:57:47 wiz Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_device__info__fetcher.cc,v 1.2 2025/05/16 16:08:17 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/enterprise/signals/device_info_fetcher.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/enterprise/signals/device_info_fetcher.cc
 @@ -10,7 +10,7 @@
  #include "chrome/browser/enterprise/signals/device_info_fetcher_mac.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_signals_device__info__fetcher.cc,v 1.1 
  #include "chrome/browser/enterprise/signals/device_info_fetcher_linux.h"
  #endif
  
-@@ -67,7 +67,7 @@ std::unique_ptr<DeviceInfoFetcher> Devic
+@@ -76,7 +76,7 @@ std::unique_ptr<DeviceInfoFetcher> Devic
    return CreateInstanceInternal();
  }
  

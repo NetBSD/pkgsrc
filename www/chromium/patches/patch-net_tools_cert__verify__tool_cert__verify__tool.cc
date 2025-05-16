@@ -1,10 +1,10 @@
-$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.1 2025/02/06 09:58:16 wiz Exp $
+$NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.2 2025/05/16 16:08:28 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- net/tools/cert_verify_tool/cert_verify_tool.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ net/tools/cert_verify_tool/cert_verify_tool.cc
 @@ -35,7 +35,7 @@
  #include "third_party/boringssl/src/pki/trust_store.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-net_tools_cert__verify__tool_cert__verify__tool.cc,v 1.1 2025/02/
    // On Linux, use a fixed ProxyConfigService, since the default one
    // depends on glib.
    //
-@@ -580,7 +580,7 @@ int main(int argc, char** argv) {
+@@ -582,7 +582,7 @@ int main(int argc, char** argv) {
    std::string impls_str = command_line.GetSwitchValueASCII("impls");
    if (impls_str.empty()) {
      // Default value.
