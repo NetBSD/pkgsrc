@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2020/01/26 17:30:58 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/16 22:16:45 zafer Exp $
 #
 
 DISTNAME=	libdshconfig-0.20.13
 CATEGORIES=	devel
-MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
+MASTER_SITES=	https://www.netfort.gr.jp/~dancer/software/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.netfort.gr.jp/~dancer/software/downloads/
