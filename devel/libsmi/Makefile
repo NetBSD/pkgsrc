@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2024/08/05 08:19:59 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/16 22:19:34 zafer Exp $
 
 DISTNAME=	libsmi-0.5.0
 PKGREVISION=	1
 CATEGORIES=	devel net
-MASTER_SITES=	http://www.ibr.cs.tu-bs.de/projects/libsmi/download/
+MASTER_SITES=	https://www.ibr.cs.tu-bs.de/projects/libsmi/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ibr.cs.tu-bs.de/projects/libsmi/
