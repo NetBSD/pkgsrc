@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3300 2025/05/16 10:38:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3301 2025/05/16 10:39:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4899,3 +4899,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/qemu to 10.0.0nb1 [schmonz 2025-05-16]
 	Updated converters/py-fastbencode to 0.3.2 [wiz 2025-05-16]
 	Updated net/py-zeroconf to 0.147.0 [wiz 2025-05-16]
+	Updated geography/py-proj to 3.7.1 [wiz 2025-05-16]
