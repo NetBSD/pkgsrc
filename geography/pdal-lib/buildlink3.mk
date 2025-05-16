@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2025/04/24 14:14:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2025/05/16 05:40:51 wiz Exp $
 
 BUILDLINK_TREE+=	pdal-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pdal-lib
 PDAL_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pdal-lib+=	pdal-lib>=2.1.0
-BUILDLINK_ABI_DEPENDS.pdal-lib+=	pdal-lib>=2.8.4nb3
+BUILDLINK_ABI_DEPENDS.pdal-lib+=	pdal-lib>=2.8.4nb4
 BUILDLINK_PKGSRCDIR.pdal-lib?=		../../geography/pdal-lib
 
 .include "../../geography/gdal-lib/buildlink3.mk"
