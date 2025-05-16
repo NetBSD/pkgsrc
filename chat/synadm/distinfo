@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/16 15:21:55 adam Exp $
+
+BLAKE2s (synadm-0.48.tar.gz) = 7943b6def87c13802a79074a256012d46fe0fb42d42a486e8d6b07a6019702b0
+SHA512 (synadm-0.48.tar.gz) = 88a0eefe233fb2b23c889e56ef2d6ebe57454fd903398c51d0ea7f46aeeb5edfa7bf6253422207a8796232e3131ce18ebc878090671eb9fbb6c0ff62d102f0cb
+Size (synadm-0.48.tar.gz) = 60486 bytes

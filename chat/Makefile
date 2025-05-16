@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2025/04/28 13:25:46 wiz Exp $
+# $NetBSD: Makefile,v 1.297 2025/05/16 15:21:55 adam Exp $
 #
 
 COMMENT=	Communication programs
@@ -129,6 +129,7 @@ SUBDIR+=	soju
 SUBDIR+=	srain
 SUBDIR+=	ssh-chat
 SUBDIR+=	swirc
+SUBDIR+=	synadm
 SUBDIR+=	telegram-purple
 SUBDIR+=	telepathy-farstream
 SUBDIR+=	telepathy-glib
