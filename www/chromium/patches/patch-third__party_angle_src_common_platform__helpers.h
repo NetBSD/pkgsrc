@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_common_platform__helpers.h,v 1.1 2025/02/06 09:58:22 wiz Exp $
+$NetBSD: patch-third__party_angle_src_common_platform__helpers.h,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/common/platform_helpers.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/angle/src/common/platform_helpers.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/angle/src/common/platform_helpers.h
 @@ -62,7 +62,7 @@ inline constexpr bool IsIOS()
  

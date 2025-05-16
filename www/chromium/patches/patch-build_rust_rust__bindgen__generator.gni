@@ -1,0 +1,25 @@
+$NetBSD: patch-build_rust_rust__bindgen__generator.gni,v 1.1 2025/05/16 16:08:16 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/rust/rust_bindgen_generator.gni.orig	2025-05-05 19:21:24.000000000 +0000
++++ build/rust/rust_bindgen_generator.gni
+@@ -11,14 +11,14 @@ if (is_win) {
+   import("//build/toolchain/win/win_toolchain_data.gni")
+ }
+ 
+-_bindgen_path = "${rust_bindgen_root}/bin/bindgen"
++_bindgen_path = "@PREFIX@/bin/bindgen"
+ if (host_os == "win") {
+   _bindgen_path = "${_bindgen_path}.exe"
+ }
+ 
+ # On Windows, the libclang.dll is beside the bindgen.exe, otherwise it is in
+ # ../lib.
+-_libclang_path = rust_bindgen_root
++_libclang_path = "@PREFIX@"
+ if (host_os == "win") {
+   _libclang_path += "/bin"
+ } else {

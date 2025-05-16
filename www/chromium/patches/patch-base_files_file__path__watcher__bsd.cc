@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_file__path__watcher__bsd.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
+$NetBSD: patch-base_files_file__path__watcher__bsd.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/file_path_watcher_bsd.cc.orig	2024-12-21 10:25:09.571560110 +0000
+--- base/files/file_path_watcher_bsd.cc.orig	2025-05-08 12:01:57.631260751 +0000
 +++ base/files/file_path_watcher_bsd.cc
 @@ -0,0 +1,54 @@
 +// Copyright 2021 The Chromium Authors. All rights reserved.

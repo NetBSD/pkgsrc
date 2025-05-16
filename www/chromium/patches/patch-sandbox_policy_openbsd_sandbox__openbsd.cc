@@ -1,10 +1,10 @@
-$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.1 2025/02/06 09:58:19 wiz Exp $
+$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2024-12-21 10:25:10.570415628 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-05-08 12:01:57.801035963 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
 @@ -0,0 +1,392 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -339,7 +339,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.1 2025/02/06 09:58
 +      break;
 +    case sandbox::mojom::Sandbox::kGpu:
 +    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
-+      SetPledge("stdio drm rpath flock cpath wpath prot_exec recvfd sendfd tmppath", NULL);
++      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
 +      break;
 +#if BUILDFLAG(ENABLE_PPAPI)
 +    case sandbox::mojom::Sandbox::kPpapi:

@@ -1,10 +1,10 @@
-$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.1 2025/02/06 09:58:11 wiz Exp $
+$NetBSD: patch-headless_lib_headless__content__main__delegate.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/headless_content_main_delegate.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- headless/lib/headless_content_main_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ headless/lib/headless_content_main_delegate.cc
 @@ -407,7 +407,7 @@ void HeadlessContentMainDelegate::InitCr
    if (process_type != ::switches::kZygoteProcess) {

@@ -1,21 +1,21 @@
-$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.1 2025/02/06 09:58:06 wiz Exp $
+$NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/browser/renderer_host/render_widget_host_view_aura.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/renderer_host/render_widget_host_view_aura.cc
 @@ -121,7 +121,7 @@
  #include "ui/gfx/gdi_util.h"
- #endif
+ #endif  // BUILDFLAG(IS_WIN)
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #include "ui/accessibility/platform/browser_accessibility_auralinux.h"
  #include "ui/base/ime/linux/text_edit_command_auralinux.h"
  #include "ui/base/ime/text_input_flags.h"
-@@ -484,7 +484,7 @@ gfx::NativeViewAccessible RenderWidgetHo
+@@ -478,7 +478,7 @@ gfx::NativeViewAccessible RenderWidgetHo
      return ToBrowserAccessibilityWin(manager->GetBrowserAccessibilityRoot())
          ->GetCOM();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
    ui::BrowserAccessibilityManager* manager =
        host()->GetOrCreateRootBrowserAccessibilityManager();
    if (manager && manager->GetBrowserAccessibilityRoot())
-@@ -1745,7 +1745,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
+@@ -1882,7 +1882,7 @@ bool RenderWidgetHostViewAura::ShouldDoL
    return host() && host()->delegate() && host()->delegate()->ShouldDoLearning();
  }
  
@@ -33,21 +33,21 @@ $NetBSD: patch-content_browser_renderer__host_render__widget__host__view__aura.c
  bool RenderWidgetHostViewAura::SetCompositionFromExistingText(
      const gfx::Range& range,
      const std::vector<ui::ImeTextSpan>& ui_ime_text_spans) {
-@@ -2654,7 +2654,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
+@@ -2858,7 +2858,7 @@ bool RenderWidgetHostViewAura::NeedsInpu
  }
  
  bool RenderWidgetHostViewAura::NeedsMouseCapture() {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return NeedsInputGrab();
  #else
    return false;
-@@ -2838,7 +2838,7 @@ void RenderWidgetHostViewAura::ForwardKe
+@@ -3042,7 +3042,7 @@ void RenderWidgetHostViewAura::ForwardKe
    if (!target_host)
      return;
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    auto* linux_ui = ui::LinuxUi::instance();
-   std::vector<ui::TextEditCommandAuraLinux> commands;
-   if (!event.skip_if_unhandled && linux_ui && event.os_event &&
+   if (!event.skip_if_unhandled && linux_ui && event.os_event) {
+     const auto command = linux_ui->GetTextEditCommandForEvent(

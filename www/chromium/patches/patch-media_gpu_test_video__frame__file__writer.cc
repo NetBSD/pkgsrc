@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_test_video__frame__file__writer.cc,v 1.1 2025/02/06 09:58:13 wiz Exp $
+$NetBSD: patch-media_gpu_test_video__frame__file__writer.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/video_frame_file_writer.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- media/gpu/test/video_frame_file_writer.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ media/gpu/test/video_frame_file_writer.cc
-@@ -26,7 +26,7 @@
+@@ -25,7 +25,7 @@
  #include "testing/gtest/include/gtest/gtest.h"
  #include "ui/gfx/codec/png_codec.h"
  

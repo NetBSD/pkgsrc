@@ -1,12 +1,12 @@
-$NetBSD: patch-components_device__signals_core_browser_signals__aggregator__impl.h,v 1.1 2025/02/06 09:57:59 wiz Exp $
+$NetBSD: patch-components_device__signals_core_browser_signals__aggregator__impl.h,v 1.2 2025/05/16 16:08:22 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/device_signals/core/browser/signals_aggregator_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/device_signals/core/browser/signals_aggregator_impl.h
-@@ -29,7 +29,7 @@ class SignalsAggregatorImpl : public Sig
+@@ -30,7 +30,7 @@ class SignalsAggregatorImpl : public Sig
    ~SignalsAggregatorImpl() override;
  
    // SignalsAggregator:

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support__impl.cc,v 1.1 2025/02/06 09:58:08 wiz Exp $
+$NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support__impl.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/utility/utility_blink_platform_with_sandbox_support_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/utility/utility_blink_platform_with_sandbox_support_impl.cc
 @@ -9,7 +9,7 @@
  
@@ -13,9 +13,9 @@ $NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support_
 -#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
  #include "content/child/child_process_sandbox_support_impl_linux.h"
- #endif
- 
-@@ -17,7 +17,7 @@ namespace content {
+ #elif BUILDFLAG(IS_WIN)
+ #include "content/child/child_process_sandbox_support_impl_win.h"
+@@ -19,7 +19,7 @@ namespace content {
  
  UtilityBlinkPlatformWithSandboxSupportImpl::
      UtilityBlinkPlatformWithSandboxSupportImpl() {
@@ -24,12 +24,12 @@ $NetBSD: patch-content_utility_utility__blink__platform__with__sandbox__support_
    mojo::PendingRemote<font_service::mojom::FontService> font_service;
    UtilityThread::Get()->BindHostReceiver(
        font_service.InitWithNewPipeAndPassReceiver());
-@@ -35,7 +35,7 @@ UtilityBlinkPlatformWithSandboxSupportIm
- 
+@@ -40,7 +40,7 @@ UtilityBlinkPlatformWithSandboxSupportIm
  blink::WebSandboxSupport*
  UtilityBlinkPlatformWithSandboxSupportImpl::GetSandboxSupport() {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-    BUILDFLAG(IS_WIN)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    return sandbox_support_.get();
  #else
    return nullptr;

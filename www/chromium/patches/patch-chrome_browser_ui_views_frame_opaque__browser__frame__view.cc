@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.cc,v 1.1 2025/02/06 09:57:53 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view.cc
 @@ -54,7 +54,7 @@
  #include "ui/views/window/vector_icons/vector_icons.h"
@@ -15,16 +15,16 @@ $NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.cc,v 1
  #include "ui/views/controls/menu/menu_runner.h"
  #endif
  
-@@ -559,7 +559,7 @@ OpaqueBrowserFrameView::FrameButtonStyle
+@@ -572,7 +572,7 @@ bool OpaqueBrowserFrameView::EverHasVisi
+ 
+ OpaqueBrowserFrameView::FrameButtonStyle
  OpaqueBrowserFrameView::GetFrameButtonStyle() const {
- // TODO(crbug.com/40118868): Revisit the macro expression once build flag switch
- // of lacros-chrome is complete.
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    return FrameButtonStyle::kMdButton;
  #else
    return FrameButtonStyle::kImageButton;
-@@ -578,7 +578,7 @@ bool OpaqueBrowserFrameView::ShouldDrawR
+@@ -591,7 +591,7 @@ bool OpaqueBrowserFrameView::ShouldDrawR
    return false;
  }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view.cc,v 1
  bool OpaqueBrowserFrameView::IsTiled() const {
    return frame()->tiled();
  }
-@@ -777,7 +777,7 @@ gfx::Rect OpaqueBrowserFrameView::GetIco
+@@ -794,7 +794,7 @@ gfx::Rect OpaqueBrowserFrameView::GetIco
  }
  
  void OpaqueBrowserFrameView::WindowIconPressed() {

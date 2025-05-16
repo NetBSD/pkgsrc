@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__non__client__frame__view__factory__views.cc,v 1.1 2025/02/06 09:57:53 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__non__client__frame__view__factory__views.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_non_client_frame_view_factory_views.cc
-@@ -16,7 +16,7 @@
+@@ -15,7 +15,7 @@
  #include "chrome/browser/ui/views/frame/browser_frame_view_win.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__non__client__frame__view__
  #include "chrome/browser/ui/views/frame/browser_frame_view_layout_linux.h"
  #include "chrome/browser/ui/views/frame/browser_frame_view_layout_linux_native.h"
  #include "chrome/browser/ui/views/frame/browser_frame_view_linux_native.h"
-@@ -33,7 +33,7 @@ namespace {
+@@ -32,7 +32,7 @@ namespace {
  std::unique_ptr<OpaqueBrowserFrameView> CreateOpaqueBrowserFrameView(
      BrowserFrame* frame,
      BrowserView* browser_view) {

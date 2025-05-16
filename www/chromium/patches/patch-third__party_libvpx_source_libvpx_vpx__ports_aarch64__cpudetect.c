@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_libvpx_source_libvpx_vpx__ports_aarch64__cpudetect.c,v 1.1 2025/02/06 09:58:26 wiz Exp $
+$NetBSD: patch-third__party_libvpx_source_libvpx_vpx__ports_aarch64__cpudetect.c,v 1.2 2025/05/16 16:08:32 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/libvpx/source/libvpx/vpx_ports/aarch64_cpudetect.c
 @@ -120,10 +120,24 @@ static int arm_get_cpu_caps(void) {
    return flags;

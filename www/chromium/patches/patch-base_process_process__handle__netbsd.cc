@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__handle__netbsd.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__handle__netbsd.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_netbsd.cc.orig	2024-12-21 10:25:09.614530232 +0000
+--- base/process/process_handle_netbsd.cc.orig	2025-05-08 12:01:57.636629943 +0000
 +++ base/process/process_handle_netbsd.cc
-@@ -0,0 +1,55 @@
+@@ -0,0 +1,56 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -35,8 +35,9 @@ $NetBSD: patch-base_process_process__handle__netbsd.cc,v 1.1 2025/02/06 09:57:41
 +  int mib[] = { CTL_KERN, KERN_PROC2, KERN_PROC_PID, process,
 +                sizeof(struct kinfo_proc2), 1 };
 +
-+  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0)
++  if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0) {
 +    return -1;
++  }
 +
 +  info = (struct kinfo_proc2 *)malloc(length);
 +

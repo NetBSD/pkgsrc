@@ -1,12 +1,12 @@
-$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.1 2025/02/06 09:57:40 wiz Exp $
+$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
-@@ -17,7 +17,7 @@
+@@ -18,7 +18,7 @@
  #include "base/unguessable_token.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.1 2025/02/06 0
  namespace content {
  class SandboxIPCHandler;
  }
-@@ -84,7 +84,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -85,7 +85,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
      kMaxValue = GET_SHMEM_TEMP_DIR_FAILURE
    };
  
@@ -24,7 +24,7 @@ $NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.1 2025/02/06 0
    // Structure to limit access to executable region creation.
    struct ExecutableRegion {
     private:
-@@ -216,7 +216,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -217,7 +217,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
                             CheckPlatformHandlePermissionsCorrespondToMode);
    static PlatformSharedMemoryRegion Create(Mode mode,
                                             size_t size

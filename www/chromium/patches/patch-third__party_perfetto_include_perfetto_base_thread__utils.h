@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_perfetto_include_perfetto_base_thread__utils.h,v 1.1 2025/02/06 09:58:27 wiz Exp $
+$NetBSD: patch-third__party_perfetto_include_perfetto_base_thread__utils.h,v 1.2 2025/05/16 16:08:32 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/thread_utils.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/thread_utils.h
-@@ -34,6 +34,7 @@ __declspec(dllimport) unsigned long __st
+@@ -37,6 +37,7 @@ __declspec(dllimport) unsigned long __st
  #include <sys/syscall.h>
  #include <sys/types.h>
  #include <unistd.h>
@@ -14,7 +14,7 @@ $NetBSD: patch-third__party_perfetto_include_perfetto_base_thread__utils.h,v 1.1
  #else
  #include <pthread.h>
  #endif
-@@ -46,6 +47,11 @@ using PlatformThreadId = pid_t;
+@@ -50,6 +51,11 @@ using PlatformThreadId = pid_t;
  inline PlatformThreadId GetThreadId() {
    return gettid();
  }
