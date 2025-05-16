@@ -1,24 +1,22 @@
-$NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.1 2025/02/06 09:58:27 wiz Exp $
+$NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.2 2025/05/16 16:08:32 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/utils.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/perfetto/src/base/utils.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/perfetto/src/base/utils.cc
-@@ -38,8 +38,9 @@
+@@ -38,7 +38,8 @@
  #include <mach/vm_page_size.h>
  #endif
  
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
--    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
-+#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)) || \
+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
  #include <sys/prctl.h>
  
- #ifndef PR_GET_TAGGED_ADDR_CTRL
-@@ -278,14 +279,22 @@ void Daemonize(std::function<int()> pare
+@@ -279,14 +280,22 @@ void Daemonize(std::function<int()> pare
  
  std::string GetCurExecutablePath() {
    std::string self_path;
@@ -43,15 +41,13 @@ $NetBSD: patch-third__party_perfetto_src_base_utils.cc,v 1.1 2025/02/06 09:58:27
  #elif PERFETTO_BUILDFLAG(PERFETTO_OS_APPLE)
    uint32_t size = 0;
    PERFETTO_CHECK(_NSGetExecutablePath(nullptr, &size));
-@@ -337,8 +346,9 @@ void AlignedFree(void* ptr) {
+@@ -338,7 +347,8 @@ void AlignedFree(void* ptr) {
  }
  
  bool IsSyncMemoryTaggingEnabled() {
--#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
--    PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
-+#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX) || \
-+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)) && \
-+    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)
+-#if PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \
++#if (PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) && \
++    !PERFETTO_BUILDFLAG(PERFETTO_OS_BSD)) || \
+     PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID)
    // Compute only once per lifetime of the process.
    static bool cached_value = [] {
-     const int res = prctl(PR_GET_TAGGED_ADDR_CTRL, 0, 0, 0, 0);

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_memory__linux.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_memory__linux.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/memory_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/memory_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/memory_linux.cc
 @@ -28,6 +28,7 @@ void __libc_free(void*);
  
@@ -14,7 +14,7 @@ $NetBSD: patch-base_process_memory__linux.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
  namespace {
  
  void ReleaseReservationOrTerminate() {
-@@ -37,12 +38,14 @@ void ReleaseReservationOrTerminate() {
+@@ -38,12 +39,14 @@ void ReleaseReservationOrTerminate() {
  }
  
  }  // namespace
@@ -29,7 +29,7 @@ $NetBSD: patch-base_process_memory__linux.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
    // Set the new-out of memory handler.
    std::set_new_handler(&ReleaseReservationOrTerminate);
    // If we're using glibc's allocator, the above functions will override
-@@ -51,8 +54,10 @@ void EnableTerminationOnOutOfMemory() {
+@@ -52,8 +55,10 @@ void EnableTerminationOnOutOfMemory() {
  #if PA_BUILDFLAG(USE_ALLOCATOR_SHIM)
    allocator_shim::SetCallNewHandlerOnMallocFailure(true);
  #endif
@@ -40,7 +40,7 @@ $NetBSD: patch-base_process_memory__linux.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
  // ScopedAllowBlocking() has private constructor and it can only be used in
  // friend classes/functions. Declaring a class is easier in this situation to
  // avoid adding more dependency to thread_restrictions.h because of the
-@@ -110,6 +115,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
+@@ -111,6 +116,7 @@ bool AdjustOOMScoreHelper::AdjustOOMScor
  bool AdjustOOMScore(ProcessId process, int score) {
    return AdjustOOMScoreHelper::AdjustOOMScore(process, score);
  }

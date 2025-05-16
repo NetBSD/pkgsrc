@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_setup_start__host__main.cc,v 1.1 2025/02/06 09:58:18 wiz Exp $
+$NetBSD: patch-remoting_host_setup_start__host__main.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/setup/start_host_main.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- remoting/host/setup/start_host_main.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/setup/start_host_main.cc
-@@ -38,7 +38,7 @@
+@@ -45,7 +45,7 @@
  #include <unistd.h>
  #endif  // BUILDFLAG(IS_POSIX)
  

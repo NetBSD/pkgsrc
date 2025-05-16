@@ -1,17 +1,17 @@
-$NetBSD: patch-base_process_process__iterator__freebsd.cc,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__iterator__freebsd.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_iterator_freebsd.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/process_iterator_freebsd.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/process_iterator_freebsd.cc
 @@ -18,7 +18,7 @@ namespace base {
  
  ProcessIterator::ProcessIterator(const ProcessFilter* filter)
      : filter_(filter) {
--  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_UID, getuid() };
-+  int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_UID, (int) getuid() };
+-  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_UID, getuid()};
++  int mib[] = {CTL_KERN, KERN_PROC, KERN_PROC_UID, (int) getuid()};
  
    bool done = false;
    int try_num = 1;
@@ -29,19 +29,20 @@ $NetBSD: patch-base_process_process__iterator__freebsd.cc,v 1.1 2025/02/06 09:57
        } else {
          // Got the list, just make sure we're sized exactly right
 -        size_t num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
-+	num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
++        num_of_kinfo_proc = len / sizeof(struct kinfo_proc);
          kinfo_procs_.resize(num_of_kinfo_proc);
          done = true;
        }
-@@ -68,18 +68,13 @@ bool ProcessIterator::CheckForNextProces
+@@ -68,19 +68,14 @@ bool ProcessIterator::CheckForNextProces
    for (; index_of_kinfo_proc_ < kinfo_procs_.size(); ++index_of_kinfo_proc_) {
      size_t length;
      struct kinfo_proc kinfo = kinfo_procs_[index_of_kinfo_proc_];
--    int mib[] = { CTL_KERN, KERN_PROC_ARGS, kinfo.ki_pid };
+-    int mib[] = {CTL_KERN, KERN_PROC_ARGS, kinfo.ki_pid};
 +    int mib[] = { CTL_KERN, KERN_PROC, KERN_PROC_ARGS, kinfo.ki_pid };
  
-     if ((kinfo.ki_pid > 0) && (kinfo.ki_stat == SZOMB))
+     if ((kinfo.ki_pid > 0) && (kinfo.ki_stat == SZOMB)) {
        continue;
+     }
  
 -    length = 0;
 -    if (sysctl(mib, std::size(mib), NULL, &length, NULL, 0) < 0) {

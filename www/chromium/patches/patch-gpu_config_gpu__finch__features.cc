@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
+$NetBSD: patch-gpu_config_gpu__finch__features.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/config/gpu_finch_features.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- gpu/config/gpu_finch_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ gpu/config/gpu_finch_features.cc
-@@ -147,7 +147,8 @@ const base::FeatureParam<std::string>
+@@ -155,7 +155,8 @@ BASE_FEATURE(kAllowHardwareBufferUsageFl
  BASE_FEATURE(kDefaultEnableGpuRasterization,
               "DefaultEnableGpuRasterization",
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \

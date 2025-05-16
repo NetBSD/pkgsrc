@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_platform__font__skia.cc,v 1.1 2025/02/06 09:58:32 wiz Exp $
+$NetBSD: patch-ui_gfx_platform__font__skia.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/platform_font_skia.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/gfx/platform_font_skia.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/platform_font_skia.cc
 @@ -29,7 +29,7 @@
  #include "ui/gfx/system_fonts_win.h"

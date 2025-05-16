@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_hid_hid__connection__freebsd.cc,v 1.1 2025/02/06 09:58:19 wiz Exp $
+$NetBSD: patch-services_device_hid_hid__connection__freebsd.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_connection_freebsd.cc.orig	2024-12-21 10:25:10.580356867 +0000
+--- services/device/hid/hid_connection_freebsd.cc.orig	2025-05-08 12:01:57.802888863 +0000
 +++ services/device/hid/hid_connection_freebsd.cc
 @@ -0,0 +1,240 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.
@@ -52,7 +52,7 @@ $NetBSD: patch-services_device_hid_hid__connection__freebsd.cc,v 1.1 2025/02/06 
 +  // Must be called on a thread that has a base::MessageLoopForIO.
 +  void Start() {
 +    DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);
-+    base::internal::AssertBlockingAllowed();
++    base::AssertBlockingAllowed();
 +
 +    file_watcher_ = base::FileDescriptorWatcher::WatchReadable(
 +        fd_.get(), base::BindRepeating(&BlockingTaskRunnerHelper::OnFileCanReadWithoutBlocking,

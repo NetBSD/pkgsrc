@@ -1,0 +1,17 @@
+$NetBSD: patch-build_config_linux_libdrm_BUILD.gn,v 1.1 2025/05/16 16:08:15 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/linux/libdrm/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
++++ build/config/linux/libdrm/BUILD.gn
+@@ -15,7 +15,7 @@ declare_args() {
+ }
+ 
+ if (use_system_libdrm) {
+-  assert(!is_linux, "System libdrm is not supported in linux")
++#  assert(!is_linux, "System libdrm is not supported in linux")
+   pkg_config("libdrm_config") {
+     packages = [ "libdrm" ]
+   }

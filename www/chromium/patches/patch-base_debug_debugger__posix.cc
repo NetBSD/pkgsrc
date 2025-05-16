@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_debugger__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
+$NetBSD: patch-base_debug_debugger__posix.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/debugger_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/debug/debugger_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/debug/debugger_posix.cc
 @@ -41,6 +41,10 @@
  #include <sys/sysctl.h>
@@ -22,21 +22,20 @@ $NetBSD: patch-base_debug_debugger__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
    // Initialize mib, which tells sysctl what info we want.  In this case,
    // we're looking for information about a specific process ID.
 +#if !BUILDFLAG(IS_NETBSD)
-   int mib[] = {
-     CTL_KERN,
-     KERN_PROC,
-@@ -97,36 +102,75 @@ bool BeingDebugged() {
-     0
+   int mib[] = {CTL_KERN,
+                KERN_PROC,
+                KERN_PROC_PID,
+@@ -96,37 +101,75 @@ bool BeingDebugged() {
+                0
  #endif
    };
 +#else
-+  int mib[] = {
-+    CTL_KERN,
-+    KERN_PROC2,
-+    KERN_PROC_PID,
-+    getpid(),
-+    sizeof(struct kinfo_proc2),
-+    1
++  int mib[] = {CTL_KERN,
++               KERN_PROC2,
++               KERN_PROC_PID,
++               getpid(),
++               sizeof(struct kinfo_proc2),
++               1
 +  };
 +#endif
  
@@ -54,8 +53,9 @@ $NetBSD: patch-base_debug_debugger__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
 +#endif
  
  #if BUILDFLAG(IS_OPENBSD)
-   if (sysctl(mib, std::size(mib), NULL, &info_size, NULL, 0) < 0)
+   if (sysctl(mib, std::size(mib), NULL, &info_size, NULL, 0) < 0) {
      return -1;
+   }
  
 -  mib[5] = (info_size / sizeof(struct kinfo_proc));
 +  mib[5] = static_cast<int>((info_size / sizeof(struct kinfo_proc)));

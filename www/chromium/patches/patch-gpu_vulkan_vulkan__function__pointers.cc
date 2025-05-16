@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_vulkan_vulkan__function__pointers.cc,v 1.1 2025/02/06 09:58:10 wiz Exp $
+$NetBSD: patch-gpu_vulkan_vulkan__function__pointers.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_function_pointers.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- gpu/vulkan/vulkan_function_pointers.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ gpu/vulkan/vulkan_function_pointers.cc
 @@ -1297,7 +1297,7 @@ bool VulkanFunctionPointers::BindDeviceF
      }

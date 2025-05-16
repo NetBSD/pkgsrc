@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_chromoting__host.h,v 1.1 2025/02/06 09:58:17 wiz Exp $
+$NetBSD: patch-remoting_host_chromoting__host.h,v 1.2 2025/05/16 16:08:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- remoting/host/chromoting_host.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/chromoting_host.h
-@@ -33,7 +33,7 @@
+@@ -36,7 +36,7 @@
  #include "remoting/protocol/session_manager.h"
  #include "remoting/protocol/transport_context.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.1 2025/02/06 09:58:17 wiz Ex
  #include "remoting/host/chromoting_host_services_server.h"
  #endif
  
-@@ -99,7 +99,7 @@ class ChromotingHost : public ClientSess
+@@ -112,7 +112,7 @@ class ChromotingHost : public ClientSess
    // This method can only be called once during the lifetime of this object.
    void Start(const std::string& host_owner);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_chromoting__host.h,v 1.1 2025/02/06 09:58:17 wiz Ex
    // Starts running the ChromotingHostServices server and listening for incoming
    // IPC binding requests.
    // Currently only Linux runs the ChromotingHostServices server on the host
-@@ -203,7 +203,7 @@ class ChromotingHost : public ClientSess
+@@ -222,7 +222,7 @@ class ChromotingHost : public ClientSess
    // List of host extensions.
    std::vector<std::unique_ptr<HostExtension>> extensions_;
  

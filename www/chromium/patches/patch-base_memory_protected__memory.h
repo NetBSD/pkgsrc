@@ -1,12 +1,12 @@
-$NetBSD: patch-base_memory_protected__memory.h,v 1.1 2025/02/06 09:57:40 wiz Exp $
+$NetBSD: patch-base_memory_protected__memory.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/protected_memory.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/memory/protected_memory.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/memory/protected_memory.h
-@@ -119,12 +119,12 @@ __declspec(selectany) char __stop_protec
+@@ -120,12 +120,12 @@ __declspec(selectany) char __stop_protec
  
  #define DECLARE_PROTECTED_DATA constinit
  #define DEFINE_PROTECTED_DATA constinit __declspec(allocate("prot$mem"))
@@ -21,7 +21,7 @@ $NetBSD: patch-base_memory_protected__memory.h,v 1.1 2025/02/06 09:57:40 wiz Exp
  // arm64 supports 4kb, 16kb, and 64kb pages. Set to the largest of 64kb as that
  // will guarantee the section is page aligned regardless of the choice.
  inline constexpr int kProtectedMemoryAlignment = 65536;
-@@ -339,7 +339,7 @@ class BASE_EXPORT AutoWritableMemoryBase
+@@ -340,7 +340,7 @@ class BASE_EXPORT AutoWritableMemoryBase
      // where an attacker could overwrite it with a large value and invoke code
      // that constructs and destructs an AutoWritableMemory. After such a call
      // protected memory would still be set writable because writers > 0.
@@ -30,7 +30,7 @@ $NetBSD: patch-base_memory_protected__memory.h,v 1.1 2025/02/06 09:57:40 wiz Exp
      // On Linux, the protected memory section is not automatically page aligned.
      // This means that attempts to reset the protected memory region to readonly
      // will set some of the preceding section that is on the same page readonly
-@@ -353,7 +353,7 @@ class BASE_EXPORT AutoWritableMemoryBase
+@@ -354,7 +354,7 @@ class BASE_EXPORT AutoWritableMemoryBase
  #endif
      static inline size_t writers GUARDED_BY(writers_lock()) = 0;
  
@@ -39,7 +39,7 @@ $NetBSD: patch-base_memory_protected__memory.h,v 1.1 2025/02/06 09:57:40 wiz Exp
      // On Linux, there is no guarantee the section following the protected
      // memory section is page aligned. This can result in attempts to change
      // the access permissions of the end of the protected memory section
-@@ -411,7 +411,7 @@ class BASE_EXPORT AutoWritableMemoryInit
+@@ -412,7 +412,7 @@ class BASE_EXPORT AutoWritableMemoryInit
      // the variable to something large before the section was read-only.
      WriterData::writers = 0;
      CHECK(SetProtectedSectionReadOnly());

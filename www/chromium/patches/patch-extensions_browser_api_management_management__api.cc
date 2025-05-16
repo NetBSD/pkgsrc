@@ -1,12 +1,12 @@
-$NetBSD: patch-extensions_browser_api_management_management__api.cc,v 1.1 2025/02/06 09:58:09 wiz Exp $
+$NetBSD: patch-extensions_browser_api_management_management__api.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/browser/api/management/management_api.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- extensions/browser/api/management/management_api.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ extensions/browser/api/management/management_api.cc
-@@ -285,7 +285,7 @@ bool PlatformSupportsApprovalFlowForExte
+@@ -286,7 +286,7 @@ bool PlatformSupportsApprovalFlowForExte
  #if BUILDFLAG(IS_CHROMEOS)
    // ChromeOS devices have this feature already shipped.
    return true;

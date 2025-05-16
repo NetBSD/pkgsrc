@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_updater_app_app__uninstall.cc,v 1.1 2025/02/06 09:57:58 wiz Exp $
+$NetBSD: patch-chrome_updater_app_app__uninstall.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/updater/app/app_uninstall.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/updater/app/app_uninstall.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/updater/app/app_uninstall.cc
-@@ -161,7 +161,7 @@ void UninstallInThreadPool(UpdaterScope 
+@@ -157,7 +157,7 @@ void UninstallInThreadPool(UpdaterScope 
              }
              if (int result = UninstallOtherVersions(scope);
                  result != kErrorOk) {

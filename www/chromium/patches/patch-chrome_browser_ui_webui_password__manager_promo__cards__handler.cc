@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.1 2025/02/06 09:57:55 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.cc,v 1.2 2025/05/16 16:08:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards_handler.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards_handler.cc
 @@ -28,7 +28,7 @@
  #include "chrome/browser/ui/webui/password_manager/promo_cards/web_password_manager_promo.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards__handler.c
  #include "chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.h"
  #endif
  
-@@ -81,7 +81,7 @@ std::vector<std::unique_ptr<PasswordProm
+@@ -71,7 +71,7 @@ std::vector<std::unique_ptr<PasswordProm
            .get()));
  #endif
  

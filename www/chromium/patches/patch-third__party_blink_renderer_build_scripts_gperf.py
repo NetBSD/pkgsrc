@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_build_scripts_gperf.py,v 1.1 2025/04/10 20:07:52 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_build_scripts_gperf.py,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
-Remove workarounds that are not needed any longer with gperf 3.2.
-https://bugs.gentoo.org/953436
-https://bugs.gentoo.org/attachment.cgi?id=924201&action=diff
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-04-10 10:26:39.919526849 +0000
+--- third_party/blink/renderer/build/scripts/gperf.py.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/build/scripts/gperf.py
 @@ -28,24 +28,6 @@ def generate_gperf(gperf_path, gperf_inp
              stdout=subprocess.PIPE,

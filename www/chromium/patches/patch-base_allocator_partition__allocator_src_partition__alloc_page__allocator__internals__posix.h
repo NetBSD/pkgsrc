@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__internals__posix.h,v 1.1 2025/02/06 09:57:38 wiz Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__internals__posix.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_internals_posix.h
-@@ -302,8 +302,12 @@ bool TryRecommitSystemPagesInternal(
+@@ -309,8 +309,12 @@ bool TryRecommitSystemPagesInternal(
  
  void DiscardSystemPagesInternal(uintptr_t address, size_t length) {
    void* ptr = reinterpret_cast<void*>(address);

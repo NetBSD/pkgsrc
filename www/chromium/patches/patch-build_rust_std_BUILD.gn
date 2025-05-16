@@ -1,12 +1,34 @@
-$NetBSD: patch-build_rust_std_BUILD.gn,v 1.1 2025/02/06 09:57:44 wiz Exp $
+$NetBSD: patch-build_rust_std_BUILD.gn,v 1.2 2025/05/16 16:08:16 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/std/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- build/rust/std/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/rust/std/BUILD.gn
-@@ -100,7 +100,6 @@ if (toolchain_has_rust) {
+@@ -89,13 +89,20 @@ if (toolchain_has_rust) {
+     # These are no longer present in the Windows toolchain.
+     stdlib_files += [
+       "addr2line",
+-      "adler2",
+       "gimli",
+       "libc",
+       "memchr",
+       "miniz_oxide",
+       "object",
+     ]
++
++    rust_revision_pieces = string_split(rustc_revision, " ")
++    rust_version_pieces = string_split(rust_revision_pieces[1], ".")
++    if (rust_version_pieces[1] == "85") {
++      stdlib_files += [ "adler" ]
++    } else {
++      stdlib_files += [ "adler2" ]
++    }
+   }
+ 
+   if (toolchain_for_rust_host_build_tools) {
+@@ -115,7 +122,6 @@ if (toolchain_has_rust) {
    # don't need to pass to the C++ linker because they're used for specialized
    # purposes.
    skip_stdlib_files = [

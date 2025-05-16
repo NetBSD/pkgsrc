@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_event__constants.cc,v 1.1 2025/02/06 09:57:59 wiz Exp $
+$NetBSD: patch-components_feature__engagement_public_event__constants.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/event_constants.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/feature_engagement/public/event_constants.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/feature_engagement/public/event_constants.cc
 @@ -11,7 +11,7 @@ namespace feature_engagement {
  namespace events {

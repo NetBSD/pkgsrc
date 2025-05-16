@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_gfx_canvas__skia.cc,v 1.1 2025/02/06 09:58:32 wiz Exp $
+$NetBSD: patch-ui_gfx_canvas__skia.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/canvas_skia.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/gfx/canvas_skia.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/canvas_skia.cc
-@@ -213,7 +213,7 @@ void Canvas::DrawStringRectWithFlags(con
+@@ -219,7 +219,7 @@ void Canvas::DrawStringRectWithFlags(std
      Range range = StripAcceleratorChars(flags, &adjusted_text);
      bool elide_text = ((flags & NO_ELLIPSIS) == 0);
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_html_canvas_canvas__async__blob__creator.cc,v 1.1 2025/02/06 09:58:23 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_core_html_canvas_canvas__async__blob__creator.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/core/html/canvas/canvas_async_blob_creator.cc
-@@ -55,7 +55,7 @@ constexpr base::TimeDelta kEncodeRowSlac
+@@ -51,7 +51,7 @@ constexpr base::TimeDelta kEncodeRowSlac
  
  /* The value is based on user statistics on Nov 2017. */
  #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

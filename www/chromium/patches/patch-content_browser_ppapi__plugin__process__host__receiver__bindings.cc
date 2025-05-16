@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_ppapi__plugin__process__host__receiver__bindings.cc,v 1.1 2025/02/06 09:58:05 wiz Exp $
+$NetBSD: patch-content_browser_ppapi__plugin__process__host__receiver__bindings.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/browser/ppapi_plugin_process_host_receiver_bindings.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/ppapi_plugin_process_host_receiver_bindings.cc
 @@ -8,7 +8,7 @@
  

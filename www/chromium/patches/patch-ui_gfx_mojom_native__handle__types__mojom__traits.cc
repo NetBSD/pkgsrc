@@ -1,14 +1,23 @@
-$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.1 2025/02/06 09:58:32 wiz Exp $
+$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
-@@ -8,11 +8,11 @@
+@@ -14,7 +14,7 @@
+ #include "ui/gfx/mac/io_surface.h"
+ #endif  // BUILDFLAG(IS_APPLE)
  
- namespace mojo {
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
+ #include "ui/gfx/native_pixmap_handle.h"
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
+ 
+@@ -80,11 +80,11 @@ bool StructTraits<gfx::mojom::AHardwareB
+ }
+ #endif  // BUILDFLAG(IS_ANDROID)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
@@ -20,7 +29,7 @@ $NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.1 2025/0
    return mojo::PlatformHandle(std::move(plane.fd));
  #elif BUILDFLAG(IS_FUCHSIA)
    return mojo::PlatformHandle(std::move(plane.vmo));
-@@ -28,7 +28,7 @@ bool StructTraits<
+@@ -100,7 +100,7 @@ bool StructTraits<
    out->size = data.size();
  
    mojo::PlatformHandle handle = data.TakeBufferHandle();
@@ -29,7 +38,7 @@ $NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.1 2025/0
    if (!handle.is_fd())
      return false;
    out->fd = handle.TakeFD();
-@@ -54,7 +54,7 @@ bool StructTraits<
+@@ -126,7 +126,7 @@ bool StructTraits<
      gfx::mojom::NativePixmapHandleDataView,
      gfx::NativePixmapHandle>::Read(gfx::mojom::NativePixmapHandleDataView data,
                                     gfx::NativePixmapHandle* out) {
@@ -38,3 +47,21 @@ $NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.1 2025/0
    out->modifier = data.modifier();
    out->supports_zero_copy_webgpu_import =
        data.supports_zero_copy_webgpu_import();
+@@ -187,7 +187,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
+     case gfx::IO_SURFACE_BUFFER:
+       return Tag::kMachPort;
+ #endif  // BUILDFLAG(IS_APPLE)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
+     case gfx::NATIVE_PIXMAP:
+       return Tag::kNativePixmapHandle;
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
+@@ -251,7 +251,7 @@ bool UnionTraits<gfx::mojom::GpuMemoryBu
+       }
+       return true;
+ #endif  // BUILDFLAG(IS_APPLE)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
+     case Tag::kNativePixmapHandle:
+       handle->type = gfx::NATIVE_PIXMAP;
+       return data.ReadNativePixmapHandle(&handle->native_pixmap_handle);

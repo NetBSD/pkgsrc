@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_core_paint_paint__layer.cc,v 1.1 2025/02/06 09:58:23 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_core_paint_paint__layer.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/blink/renderer/core/paint/paint_layer.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/core/paint/paint_layer.cc
-@@ -120,7 +120,7 @@ namespace blink {
+@@ -124,7 +124,7 @@ namespace blink {
  
  namespace {
  

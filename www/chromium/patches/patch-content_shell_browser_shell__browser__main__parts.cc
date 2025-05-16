@@ -1,39 +1,39 @@
-$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.1 2025/02/06 09:58:08 wiz Exp $
+$NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/browser/shell_browser_main_parts.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/shell/browser/shell_browser_main_parts.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/shell/browser/shell_browser_main_parts.cc
-@@ -51,7 +51,7 @@
+@@ -50,7 +50,7 @@
  #include "net/base/network_change_notifier.h"
  #endif
  
--#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+-#if BUILDFLAG(IS_LINUX) && defined(USE_AURA)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(USE_AURA)
  #include "ui/base/ime/init/input_method_initializer.h"
  #endif
  
-@@ -68,7 +68,7 @@
- #include "chromeos/lacros/dbus/lacros_dbus_thread_manager.h"
+@@ -61,7 +61,7 @@
+ #include "device/bluetooth/floss/floss_features.h"
  #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "device/bluetooth/dbus/dbus_bluez_manager_wrapper_linux.h"
  #include "ui/linux/linux_ui.h"          // nogncheck
  #include "ui/linux/linux_ui_factory.h"  // nogncheck
- #endif
-@@ -139,7 +139,7 @@ void ShellBrowserMainParts::PostCreateMa
+@@ -128,7 +128,7 @@ void ShellBrowserMainParts::PostCreateMa
  }
  
  int ShellBrowserMainParts::PreEarlyInitialization() {
--#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS))
-+#if defined(USE_AURA) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+-#if BUILDFLAG(IS_LINUX) && defined(USE_AURA)
++#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)) && defined(USE_AURA)
    ui::InitializeInputMethodForTesting();
- #endif
- #if BUILDFLAG(IS_ANDROID)
-@@ -168,7 +168,7 @@ void ShellBrowserMainParts::ToolkitIniti
+ #elif BUILDFLAG(IS_ANDROID)
+   net::NetworkChangeNotifier::SetFactory(
+@@ -156,7 +156,7 @@ void ShellBrowserMainParts::ToolkitIniti
    if (switches::IsRunWebTestsSwitchPresent())
      return;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-content_shell_browser_shell__browser__main__parts.cc,v 1.1 2025/0
    ui::LinuxUi::SetInstance(ui::GetDefaultLinuxUi());
  #endif
  }
-@@ -215,7 +215,7 @@ void ShellBrowserMainParts::PostMainMess
+@@ -203,7 +203,7 @@ void ShellBrowserMainParts::PostMainMess
    ShellDevToolsManagerDelegate::StopHttpHandler();
    browser_context_.reset();
    off_the_record_browser_context_.reset();

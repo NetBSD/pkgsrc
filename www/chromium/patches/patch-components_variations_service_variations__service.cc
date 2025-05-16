@@ -1,12 +1,12 @@
-$NetBSD: patch-components_variations_service_variations__service.cc,v 1.1 2025/02/06 09:58:04 wiz Exp $
+$NetBSD: patch-components_variations_service_variations__service.cc,v 1.2 2025/05/16 16:08:24 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/variations/service/variations_service.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/variations/service/variations_service.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/variations/service/variations_service.cc
-@@ -102,7 +102,7 @@ std::string GetPlatformString() {
+@@ -100,7 +100,7 @@ std::string GetPlatformString() {
    return "android";
  #elif BUILDFLAG(IS_FUCHSIA)
    return "fuchsia";

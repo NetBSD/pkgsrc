@@ -1,10 +1,10 @@
-$NetBSD: patch-build_linux_unbundle_icu.gn,v 1.1 2025/02/06 09:57:44 wiz Exp $
+$NetBSD: patch-build_linux_unbundle_icu.gn,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/linux/unbundle/icu.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- build/linux/unbundle/icu.gn.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/linux/unbundle/icu.gn
 @@ -17,6 +17,15 @@ config("icu_config") {
      "USING_SYSTEM_ICU=1",
@@ -22,26 +22,17 @@ $NetBSD: patch-build_linux_unbundle_icu.gn,v 1.1 2025/02/06 09:57:44 wiz Exp $
      # U_EXPORT (defined in unicode/platform.h) is used to set public visibility
      # on classes through the U_COMMON_API and U_I18N_API macros (among others).
      # When linking against the system ICU library, we want its symbols to have
-@@ -35,6 +44,18 @@ config("icu_config") {
+@@ -34,6 +43,9 @@ config("icu_config") {
+     # to define U_IMPORT to have the same value as U_EXPORT. For more details,
      # please see: https://crbug.com/822820
      "U_IMPORT=U_EXPORT",
++
++    # Unbreak with icu 76 where private symbols are picked up
++    "U_HIDE_DRAFT_API",
    ]
-+
-+  _icu_version = exec_script(pkg_config_script,
-+                              common_pkg_config_args + pkg_config_args + [
-+                                    "icu-i18n",
-+                                    "--version-as-components",
-+                                  ],
-+                              "value")
-+
-+  # Unbreak with icu 76 where private symbols are picked up
-+  if (_icu_version[0] >= 76) {
-+    defines += [ "U_HIDE_DRAFT_API" ]
-+  }
  }
  
- pkg_config("system_icui18n") {
-@@ -53,6 +74,14 @@ source_set("icui18n") {
+@@ -53,6 +65,14 @@ source_set("icui18n") {
    ]
  }
  

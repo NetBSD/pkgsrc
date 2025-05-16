@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.1 2025/02/06 09:58:31 wiz Exp $
+$NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_shm_image_pool.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/base/x/x11_shm_image_pool.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/base/x/x11_shm_image_pool.cc
 @@ -16,6 +16,7 @@
  #include "base/functional/callback.h"
@@ -12,9 +12,9 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.1 2025/02/06 09:58:31 wiz 
  #include "base/strings/string_util.h"
 +#include "base/system/sys_info.h"
  #include "build/build_config.h"
- #include "build/chromeos_buildflags.h"
  #include "net/base/url_util.h"
-@@ -45,10 +46,14 @@ constexpr float kShmResizeShrinkThreshol
+ #include "ui/events/platform/platform_event_dispatcher.h"
+@@ -44,10 +45,14 @@ constexpr float kShmResizeShrinkThreshol
      1.0f / (kShmResizeThreshold * kShmResizeThreshold);
  
  std::size_t MaxShmSegmentSizeImpl() {
@@ -29,10 +29,10 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.1 2025/02/06 09:58:31 wiz 
  }
  
  std::size_t MaxShmSegmentSize() {
-@@ -57,14 +62,19 @@ std::size_t MaxShmSegmentSize() {
+@@ -56,14 +61,19 @@ std::size_t MaxShmSegmentSize() {
  }
  
- #if !BUILDFLAG(IS_CHROMEOS_ASH)
+ #if !BUILDFLAG(IS_CHROMEOS)
 +#if !BUILDFLAG(IS_BSD)
  bool IsRemoteHost(const std::string& name) {
    if (name.empty())
@@ -49,15 +49,15 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.1 2025/02/06 09:58:31 wiz 
    // MIT-SHM may be available on remote connetions, but it will be unusable.  Do
    // a best-effort check to see if the host is remote to disable the SHM
    // codepath.  It may be possible in contrived cases for there to be a
-@@ -93,6 +103,7 @@ bool ShouldUseMitShm(x11::Connection* co
+@@ -92,6 +102,7 @@ bool ShouldUseMitShm(x11::Connection* co
      return false;
  
    return true;
 +#endif
  }
- #endif
+ #endif  // !BUILDFLAG(IS_CHROMEOS)
  
-@@ -183,7 +194,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -182,7 +193,7 @@ bool XShmImagePool::Resize(const gfx::Si
          shmctl(state.shmid, IPC_RMID, nullptr);
          return false;
        }
@@ -66,7 +66,7 @@ $NetBSD: patch-ui_base_x_x11__shm__image__pool.cc,v 1.1 2025/02/06 09:58:31 wiz 
        // On Linux, a shmid can still be attached after IPC_RMID if otherwise
        // kept alive.  Detach before XShmAttach to prevent a memory leak in case
        // the process dies.
-@@ -202,7 +213,7 @@ bool XShmImagePool::Resize(const gfx::Si
+@@ -201,7 +212,7 @@ bool XShmImagePool::Resize(const gfx::Si
          return false;
        state.shmseg = shmseg;
        state.shmem_attached_to_server = true;

@@ -1,12 +1,12 @@
-$NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
+$NetBSD: patch-base_BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/BUILD.gn
-@@ -940,7 +940,7 @@ component("base") {
+@@ -944,7 +944,7 @@ component("base") {
      #"system/sys_info_openbsd.cc",
    ]
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
      sources += [
        "posix/sysctl.cc",
        "posix/sysctl.h",
-@@ -1097,11 +1097,26 @@ component("base") {
+@@ -1104,11 +1104,26 @@ component("base") {
    # Needed for <atomic> if using newer C++ library than sysroot, except if
    # building inside the cros_sdk environment - use host_toolchain as a
    # more robust check for this.
@@ -43,7 +43,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
    if (use_allocator_shim) {
      if (is_apple) {
        sources += [ "allocator/early_zone_registration_apple.h" ]
-@@ -1121,7 +1136,7 @@ component("base") {
+@@ -1128,7 +1143,7 @@ component("base") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -52,7 +52,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -2113,6 +2128,29 @@ component("base") {
+@@ -2152,6 +2167,29 @@ component("base") {
      ]
    }
  
@@ -82,7 +82,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
    # iOS
    if (is_ios) {
      sources += [
-@@ -2257,6 +2295,33 @@ component("base") {
+@@ -2312,6 +2350,33 @@ component("base") {
      }
    }
  
@@ -116,7 +116,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
    if (use_blink) {
      sources += [
        "files/file_path_watcher.cc",
-@@ -2583,7 +2648,7 @@ buildflag_header("protected_memory_build
+@@ -2690,7 +2755,7 @@ buildflag_header("protected_memory_build
    header = "protected_memory_buildflags.h"
    header_dir = "base/memory"
  
@@ -125,7 +125,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
                               (is_win || is_linux || is_android || is_mac)
  
    flags = [ "PROTECTED_MEMORY_ENABLED=$protected_memory_enabled" ]
-@@ -3068,7 +3133,7 @@ if (is_apple) {
+@@ -3163,7 +3228,7 @@ if (is_apple) {
    }
  }
  
@@ -134,7 +134,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
    # This test must compile with -fstack-protector-all
    source_set("stack_canary_linux_unittests") {
      testonly = true
-@@ -3744,7 +3809,7 @@ test("base_unittests") {
+@@ -3851,7 +3916,7 @@ test("base_unittests") {
      ]
    }
  
@@ -143,7 +143,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
      sources += [
        "debug/proc_maps_linux_unittest.cc",
        "files/scoped_file_linux_unittest.cc",
-@@ -3771,7 +3836,7 @@ test("base_unittests") {
+@@ -3879,7 +3944,7 @@ test("base_unittests") {
        "posix/file_descriptor_shuffle_unittest.cc",
        "posix/unix_domain_socket_unittest.cc",
      ]
@@ -152,7 +152,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
        sources += [
          "profiler/stack_base_address_posix_unittest.cc",
          "profiler/stack_copier_signal_unittest.cc",
-@@ -3782,7 +3847,7 @@ test("base_unittests") {
+@@ -3890,7 +3955,7 @@ test("base_unittests") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -161,7 +161,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -3972,7 +4037,7 @@ test("base_unittests") {
+@@ -4080,7 +4145,7 @@ test("base_unittests") {
      deps += [ ":base_profiler_test_support_library" ]
    }
  

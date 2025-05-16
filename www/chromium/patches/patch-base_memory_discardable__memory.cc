@@ -1,10 +1,10 @@
-$NetBSD: patch-base_memory_discardable__memory.cc,v 1.1 2025/02/06 09:57:40 wiz Exp $
+$NetBSD: patch-base_memory_discardable__memory.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/memory/discardable_memory.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/memory/discardable_memory.cc
 @@ -26,7 +26,7 @@ BASE_FEATURE(kMadvFreeDiscardableMemory,
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -15,7 +15,7 @@ $NetBSD: patch-base_memory_discardable__memory.cc,v 1.1 2025/02/06 09:57:40 wiz 
  BASE_FEATURE(kDiscardableMemoryBackingTrial,
               "DiscardableMemoryBackingTrial",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -39,7 +39,7 @@ BASE_FEATURE(kDiscardableMemoryBackingTr
+@@ -44,7 +44,7 @@ BASE_FEATURE_ENUM_PARAM(DiscardableMemor
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-base_memory_discardable__memory.cc,v 1.1 2025/02/06 09:57:40 wiz 
  
  DiscardableMemoryBacking GetBackingForFieldTrial() {
    DiscardableMemoryTrialGroup trial_group =
-@@ -58,7 +58,7 @@ DiscardableMemoryBacking GetBackingForFi
+@@ -63,7 +63,7 @@ DiscardableMemoryBacking GetBackingForFi
  
  }  // namespace
  
@@ -33,7 +33,7 @@ $NetBSD: patch-base_memory_discardable__memory.cc,v 1.1 2025/02/06 09:57:40 wiz 
  
  // Probe capabilities of this device to determine whether we should participate
  // in the discardable memory backing trial.
-@@ -88,7 +88,7 @@ DiscardableMemory::DiscardableMemory() =
+@@ -95,7 +95,7 @@ DiscardableMemory::DiscardableMemory() =
  DiscardableMemory::~DiscardableMemory() = default;
  
  DiscardableMemoryBacking GetDiscardableMemoryBacking() {

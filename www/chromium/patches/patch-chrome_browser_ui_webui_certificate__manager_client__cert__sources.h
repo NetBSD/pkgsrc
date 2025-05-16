@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_client__cert__sources.h,v 1.1 2025/02/06 09:57:55 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_client__cert__sources.h,v 1.2 2025/05/16 16:08:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/client_cert_sources.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/client_cert_sources.h
 @@ -19,7 +19,7 @@ CreatePlatformClientCertSource(
          remote_client,
@@ -15,3 +15,12 @@ $NetBSD: patch-chrome_browser_ui_webui_certificate__manager_client__cert__source
  std::unique_ptr<CertificateManagerPageHandler::CertSource>
  CreateProvisionedClientCertSource(Profile* profile);
  #endif
+@@ -29,7 +29,7 @@ std::unique_ptr<CertificateManagerPageHa
+ CreateExtensionsClientCertSource(Profile* profile);
+ #endif
+ 
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ class ClientCertManagementAccessControls {
+  public:
+   enum KeyStorage {

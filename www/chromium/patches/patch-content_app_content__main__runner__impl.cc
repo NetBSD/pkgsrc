@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58:04 wiz Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08:24 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -147,18 +147,20 @@
+@@ -146,18 +146,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -29,7 +29,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -192,6 +194,10 @@
+@@ -186,6 +188,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -400,7 +406,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -384,7 +390,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -438,7 +444,10 @@ void PreloadLibraryCdms() {
+@@ -422,7 +428,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -450,9 +459,16 @@ void PreSandboxInit() {
+@@ -434,9 +443,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,7 +77,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -764,7 +780,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+@@ -750,7 +766,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
      bool start_hang_watcher_now;
@@ -86,7 +86,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -874,11 +890,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -863,11 +879,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -100,14 +100,16 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1059,6 +1074,18 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1048,10 +1063,22 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
 +#elif BUILDFLAG(IS_BSD)
 +  PreSandboxInit();
-+#endif
-+
+ #elif BUILDFLAG(IS_IOS)
+   ChildProcessEnterSandbox();
+ #endif
+ 
 +#if BUILDFLAG(IS_BSD)
 +  if (process_type.empty()) {
 +    sandbox::policy::SandboxLinux::Options sandbox_options;
@@ -116,10 +118,12 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.1 2025/02/06 09:58
 +            *base::CommandLine::ForCurrentProcess()),
 +        sandbox::policy::SandboxLinux::PreSandboxHook(), sandbox_options);
 +  }
- #endif
- 
++#endif
++
    delegate_->SandboxInitialized(process_type);
-@@ -1158,6 +1185,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+ 
+ #if BUILDFLAG(USE_ZYGOTE)
+@@ -1149,6 +1176,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

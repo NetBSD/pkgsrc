@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_shortcuts_icon__badging.cc,v 1.1 2025/02/06 09:57:51 wiz Exp $
+$NetBSD: patch-chrome_browser_shortcuts_icon__badging.cc,v 1.2 2025/05/16 16:08:18 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/shortcuts/icon_badging.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/shortcuts/icon_badging.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/shortcuts/icon_badging.cc
 @@ -59,7 +59,7 @@ enum class BadgeSize {
  constexpr ShortcutSize kSizesNeededForShortcutCreation[] = {

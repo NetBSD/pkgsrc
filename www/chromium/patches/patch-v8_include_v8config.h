@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_include_v8config.h,v 1.1 2025/02/06 09:58:36 wiz Exp $
+$NetBSD: patch-v8_include_v8config.h,v 1.2 2025/05/16 16:08:36 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/include/v8config.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- v8/include/v8config.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ v8/include/v8config.h
 @@ -201,6 +201,9 @@ path. Add it with -I<path> to the comman
    && !defined(V8_TARGET_OS_FUCHSIA) \
@@ -49,13 +49,11 @@ $NetBSD: patch-v8_include_v8config.h,v 1.1 2025/02/06 09:58:36 wiz Exp $
  #ifdef V8_OS_MACOS
  # define V8_TARGET_OS_MACOS
  #endif
-@@ -381,7 +403,8 @@ path. Add it with -I<path> to the comman
- // preserve_most in clang >= 17 (see https://reviews.llvm.org/D143425).
+@@ -383,6 +405,7 @@ path. Add it with -I<path> to the comman
  #if (defined(_M_X64) || defined(__x86_64__)            /* x64 (everywhere) */  \
       || ((defined(__AARCH64EL__) || defined(_M_ARM64)) /* arm64, but ... */    \
--         && !defined(_WIN32)))                         /* not on windows */    \
-+         && !defined(_WIN32)                           /* not on windows */    \
-+         && !defined(__OpenBSD__)))                    /* not on OpenBSD */    \
+          && !defined(_WIN32)))                         /* not on windows */    \
++     && !defined(__OpenBSD__)                          /* not on OpenBSD */    \
       && !defined(COMPONENT_BUILD)                      /* no component build */\
       && __clang_major__ >= 17                          /* clang >= 17 */
  # define V8_HAS_ATTRIBUTE_PRESERVE_MOST (__has_attribute(preserve_most))

@@ -1,33 +1,33 @@
-$NetBSD: patch-content_public_common_content__features.cc,v 1.1 2025/02/06 09:58:07 wiz Exp $
+$NetBSD: patch-content_public_common_content__features.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/public/common/content_features.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/public/common/content_features.cc
-@@ -65,7 +65,7 @@ BASE_FEATURE(kAudioServiceOutOfProcess,
- // TODO(crbug.com/40118868): Remove !IS_CHROMEOS_LACROS once lacros starts being
- // built with OS_CHROMEOS instead of OS_LINUX.
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || \
--    (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS))
-+    (BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS_LACROS) || BUILDFLAG(IS_BSD))
+@@ -75,7 +75,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
+ // Runs the audio service in a separate process.
+ BASE_FEATURE(kAudioServiceOutOfProcess,
+              "AudioServiceOutOfProcess",
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1218,9 +1218,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1271,9 +1271,9 @@ BASE_FEATURE(kWebAssemblyTiering,
  BASE_FEATURE(kWebAssemblyTrapHandler,
               "WebAssemblyTrapHandler",
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
 -      BUILDFLAG(IS_MAC)) &&                                                  \
-+      BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) &&                                                  \
++      BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) &&                             \
       defined(ARCH_CPU_X86_64)) ||                                            \
 -    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)) && \
 +    ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)) && \
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1257,7 +1257,11 @@ BASE_FEATURE(kWebUICodeCache,
+@@ -1330,7 +1330,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExten
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

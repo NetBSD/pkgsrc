@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 wiz Exp $
+$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
 @@ -27,6 +27,9 @@
      defined(__NetBSD__) || defined(__OpenBSD__)
@@ -16,7 +16,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 
  
  #if defined(ANDROID) && !defined(V8_ANDROID_LOG_STDOUT)
  #define LOG_TAG "v8"
-@@ -75,9 +78,11 @@
+@@ -76,9 +79,11 @@
  #include <sys/syscall.h>
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 
  
  #if defined(V8_OS_SOLARIS)
  #if (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE > 2) || defined(__EXTENSIONS__)
-@@ -314,6 +319,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
+@@ -315,6 +320,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
    }
  }
  
@@ -43,7 +43,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 
  // static
  void* OS::GetRandomMmapAddr() {
    uintptr_t raw_addr;
-@@ -412,6 +424,7 @@ void* OS::GetRandomMmapAddr() {
+@@ -413,6 +425,7 @@ void* OS::GetRandomMmapAddr() {
  #endif
    return reinterpret_cast<void*>(raw_addr);
  }
@@ -51,7 +51,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 
  
  // TODO(bbudge) Move Cygwin and Fuchsia stuff into platform-specific files.
  #if !V8_OS_CYGWIN && !V8_OS_FUCHSIA
-@@ -700,7 +713,7 @@ void OS::DestroySharedMemoryHandle(Platf
+@@ -701,7 +714,7 @@ void OS::DestroySharedMemoryHandle(Platf
  #if !V8_OS_ZOS
  // static
  bool OS::HasLazyCommits() {
@@ -60,7 +60,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.1 2025/02/06 09:58:36 
    return true;
  #else
    // TODO(bbudge) Return true for all POSIX platforms.
-@@ -855,6 +868,8 @@ int OS::GetCurrentThreadId() {
+@@ -855,6 +868,8 @@ int OS::GetCurrentThreadIdInternal() {
    return static_cast<int>(thread_self());
  #elif V8_OS_FUCHSIA
    return static_cast<int>(zx_thread_self());

@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp $
+$NetBSD: patch-base_process_process__metrics.h,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/process/process_metrics.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/process/process_metrics.h
-@@ -38,7 +38,7 @@
+@@ -39,7 +39,7 @@
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
  #include <string>
  #include <utility>
  #include <vector>
-@@ -48,7 +48,7 @@
+@@ -49,7 +49,7 @@
  
  namespace base {
  
@@ -24,16 +24,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
  // Minor and major page fault counts since the process creation.
  // Both counts are process-wide, and exclude child processes.
  //
-@@ -113,7 +113,7 @@ class BASE_EXPORT ProcessMetrics {
-   // convenience wrapper for CreateProcessMetrics().
-   static std::unique_ptr<ProcessMetrics> CreateCurrentProcessMetrics();
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
-   // Resident Set Size is a Linux/Android specific memory concept. Do not
-   // attempt to extend this to other platforms.
-   BASE_EXPORT size_t GetResidentSetSize() const;
-@@ -147,7 +147,7 @@ class BASE_EXPORT ProcessMetrics {
+@@ -179,7 +179,7 @@ class BASE_EXPORT ProcessMetrics {
    base::expected<TimeDelta, ProcessCPUUsageError> GetCumulativeCPUUsage();
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -42,16 +33,16 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
    // Emits the cumulative CPU usage for all currently active threads since they
    // were started into the output parameter (replacing its current contents).
    // Threads that have already terminated will not be reported. Thus, the sum of
-@@ -192,7 +192,7 @@ class BASE_EXPORT ProcessMetrics {
+@@ -224,7 +224,7 @@ class BASE_EXPORT ProcessMetrics {
    int GetOpenFdSoftLimit() const;
  #endif  // BUILDFLAG(IS_POSIX)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
-   // Bytes of swap as reported by /proc/[pid]/status.
-   uint64_t GetVmSwapBytes() const;
- 
-@@ -213,7 +213,7 @@ class BASE_EXPORT ProcessMetrics {
+   // Minor and major page fault count as reported by /proc/[pid]/stat.
+   // Returns true for success.
+   bool GetPageFaultCounts(PageFaultCounts* counts) const;
+@@ -242,7 +242,7 @@ class BASE_EXPORT ProcessMetrics {
  #endif  // !BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -60,7 +51,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
    int CalculateIdleWakeupsPerSecond(uint64_t absolute_idle_wakeups);
  #endif
  #if BUILDFLAG(IS_APPLE)
-@@ -235,12 +235,10 @@ class BASE_EXPORT ProcessMetrics {
+@@ -264,12 +264,10 @@ class BASE_EXPORT ProcessMetrics {
    // Used to store the previous times and CPU usage counts so we can
    // compute the CPU usage between calls.
    TimeTicks last_cpu_time_;
@@ -74,7 +65,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
    // Same thing for idle wakeups.
    TimeTicks last_idle_wakeups_time_;
    uint64_t last_absolute_idle_wakeups_;
-@@ -281,7 +279,7 @@ BASE_EXPORT void IncreaseFdLimitTo(unsig
+@@ -310,7 +308,7 @@ BASE_EXPORT void IncreaseFdLimitTo(unsig
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||      \
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_AIX) || \
@@ -83,7 +74,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
  // Data about system-wide memory consumption. Values are in KB. Available on
  // Windows, Mac, Linux, Android and Chrome OS.
  //
-@@ -316,7 +314,7 @@ struct BASE_EXPORT SystemMemoryInfoKB {
+@@ -345,7 +343,7 @@ struct BASE_EXPORT SystemMemoryInfoKB {
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -92,7 +83,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
    // This provides an estimate of available memory as described here:
    // https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=34e431b0ae398fc54ea69ff85ec700722c9da773
    // NOTE: this is ONLY valid in kernels 3.14 and up.  Its value will always
-@@ -331,7 +329,7 @@ struct BASE_EXPORT SystemMemoryInfoKB {
+@@ -360,7 +358,7 @@ struct BASE_EXPORT SystemMemoryInfoKB {
  #endif
  
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -101,7 +92,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
    int buffers = 0;
    int cached = 0;
    int active_anon = 0;
-@@ -368,7 +366,7 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
+@@ -397,7 +395,7 @@ BASE_EXPORT bool GetSystemMemoryInfo(Sys
          // BUILDFLAG(IS_FUCHSIA)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -110,7 +101,7 @@ $NetBSD: patch-base_process_process__metrics.h,v 1.1 2025/02/06 09:57:41 wiz Exp
  // Parse the data found in /proc/<pid>/stat and return the sum of the
  // CPU-related ticks.  Returns -1 on parse error.
  // Exposed for testing.
-@@ -563,7 +561,7 @@ class BASE_EXPORT SystemMetrics {
+@@ -591,7 +589,7 @@ class BASE_EXPORT SystemMetrics {
    FRIEND_TEST_ALL_PREFIXES(SystemMetricsTest, SystemMetrics);
  
    size_t committed_memory_;

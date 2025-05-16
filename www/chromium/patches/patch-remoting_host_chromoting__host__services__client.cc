@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_chromoting__host__services__client.cc,v 1.1 2025/02/06 09:58:17 wiz Exp $
+$NetBSD: patch-remoting_host_chromoting__host__services__client.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/chromoting_host_services_client.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- remoting/host/chromoting_host_services_client.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ remoting/host/chromoting_host_services_client.cc
 @@ -59,7 +59,7 @@ mojo::PendingRemote<mojom::ChromotingHos
  

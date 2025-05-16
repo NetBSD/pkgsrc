@@ -1,12 +1,12 @@
-$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
+$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/debug/stack_trace_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/debug/stack_trace_posix.cc
-@@ -45,8 +45,8 @@
+@@ -50,8 +50,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
  // execinfo.h and backtrace(3) are really only present in glibc and in macOS
  // libc.
@@ -17,7 +17,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
  #define HAVE_BACKTRACE
  #include <execinfo.h>
  #endif
-@@ -64,8 +64,10 @@
+@@ -69,8 +69,10 @@
  #include <AvailabilityMacros.h>
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
  
  #include "base/debug/proc_maps_linux.h"
  #endif
-@@ -322,7 +324,7 @@ void PrintToStderr(const char* output) {
+@@ -329,7 +331,7 @@ void PrintToStderr(const char* output) {
    std::ignore = HANDLE_EINTR(write(STDERR_FILENO, output, strlen(output)));
  }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
  void AlarmSignalHandler(int signal, siginfo_t* info, void* void_context) {
    // We have seen rare cases on AMD linux where the default signal handler
    // either does not run or a thread (Probably an AMD driver thread) prevents
-@@ -339,7 +341,11 @@ void AlarmSignalHandler(int signal, sigi
+@@ -346,7 +348,11 @@ void AlarmSignalHandler(int signal, sigi
        "Warning: Default signal handler failed to terminate process.\n");
    PrintToStderr("Calling exit_group() directly to prevent timeout.\n");
    // See: https://man7.org/linux/man-pages/man2/exit_group.2.html
@@ -50,7 +50,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -537,7 +543,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -552,7 +558,7 @@ void StackDumpSignalHandler(int signal, 
      _exit(EXIT_FAILURE);
    }
  
@@ -59,7 +59,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
    // Set an alarm to trigger in case the default handler does not terminate
    // the process. See 'AlarmSignalHandler' for more details.
    struct sigaction action;
-@@ -562,6 +568,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -577,6 +583,7 @@ void StackDumpSignalHandler(int signal, 
    // signals that do not re-raise autonomously), such as signals delivered via
    // kill() and asynchronous hardware faults such as SEGV_MTEAERR, which would
    // otherwise be lost when re-raising the signal via raise().
@@ -67,7 +67,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
    long retval = syscall(SYS_rt_tgsigqueueinfo, getpid(), syscall(SYS_gettid),
                          info->si_signo, info);
    if (retval == 0) {
-@@ -576,6 +583,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -591,6 +598,7 @@ void StackDumpSignalHandler(int signal, 
    if (errno != EPERM) {
      _exit(EXIT_FAILURE);
    }
@@ -75,7 +75,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
  
-@@ -772,6 +780,7 @@ class SandboxSymbolizeHelper {
+@@ -783,6 +791,7 @@ class SandboxSymbolizeHelper {
      return -1;
    }
  
@@ -83,7 +83,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
    // This class is copied from
    // third_party/crashpad/crashpad/util/linux/scoped_pr_set_dumpable.h.
    // It aims at ensuring the process is dumpable before opening /proc/self/mem.
-@@ -864,11 +873,15 @@ class SandboxSymbolizeHelper {
+@@ -875,11 +884,15 @@ class SandboxSymbolizeHelper {
        r.base = cur_base;
      }
    }
@@ -99,7 +99,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.1 2025/02/06 09:57:39 wiz E
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
-@@ -886,6 +899,7 @@ class SandboxSymbolizeHelper {
+@@ -897,6 +910,7 @@ class SandboxSymbolizeHelper {
  
      is_initialized_ = true;
      return true;

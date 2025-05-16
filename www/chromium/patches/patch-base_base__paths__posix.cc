@@ -1,10 +1,10 @@
-$NetBSD: patch-base_base__paths__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
+$NetBSD: patch-base_base__paths__posix.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/base_paths_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/base_paths_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/base_paths_posix.cc
 @@ -15,6 +15,7 @@
  #include <ostream>
@@ -33,7 +33,7 @@ $NetBSD: patch-base_base__paths__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
        *result = bin_dir;
        return true;
  #elif BUILDFLAG(IS_FREEBSD)
--      int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
+-      int name[] = {CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1};
 -      std::optional<std::string> bin_dir = StringSysctl(name, std::size(name));
 +      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 });
        if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
@@ -44,7 +44,7 @@ $NetBSD: patch-base_base__paths__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
 +#elif BUILDFLAG(IS_NETBSD)
 +      std::optional<std::string> bin_dir = StringSysctl({ CTL_KERN, KERN_PROC_ARGS, getpid(), KERN_PROC_PATHNAME });
 +      if (!bin_dir.has_value() || bin_dir.value().length() <= 1) {
-+        NOTREACHED_IN_MIGRATION() << "Unable to resolve path.";
++        NOTREACHED() << "Unable to resolve path.";
 +        return false;
 +      }
 +      *result = FilePath(bin_dir.value());
@@ -53,17 +53,16 @@ $NetBSD: patch-base_base__paths__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
  #elif BUILDFLAG(IS_SOLARIS)
        char bin_dir[PATH_MAX + 1];
        if (realpath(getexecname(), bin_dir) == NULL) {
-@@ -62,13 +75,65 @@ bool PathProviderPosix(int key, FilePath
+@@ -62,14 +75,65 @@ bool PathProviderPosix(int key, FilePath
        *result = FilePath(bin_dir);
        return true;
  #elif BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_AIX)
 -      // There is currently no way to get the executable path on OpenBSD
 -      char* cpath;
--      if ((cpath = getenv("CHROME_EXE_PATH")) != NULL)
+-      if ((cpath = getenv("CHROME_EXE_PATH")) != NULL) {
 -        *result = FilePath(cpath);
--      else
+-      } else {
 -        *result = FilePath("/usr/local/chrome/chrome");
--      return true;
 +      char *cpath;
 +#if !BUILDFLAG(IS_AIX)
 +      struct kinfo_file *files;
@@ -91,7 +90,8 @@ $NetBSD: patch-base_base__paths__posix.cc,v 1.1 2025/02/06 09:57:39 wiz Exp $
 +        *result = FilePath(retval);
 +        VLOG(1) << "PathProviderPosix (sandbox) result: " << retval;
 +        goto out;
-+      }
+       }
+-      return true;
 +
 +      if ((kd = kvm_openfiles(NULL, NULL, NULL, (int)KVM_NO_FILES, errbuf)) == NULL)
 +        goto out;

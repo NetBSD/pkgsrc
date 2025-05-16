@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__service__fake.cc,v 1.1 2025/02/06 09:58:20 wiz Exp $
+$NetBSD: patch-services_device_usb_usb__service__fake.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_service_fake.cc.orig	2024-12-21 10:25:10.592547281 +0000
+--- services/device/usb/usb_service_fake.cc.orig	2025-05-08 12:01:57.805774080 +0000
 +++ services/device/usb/usb_service_fake.cc
 @@ -0,0 +1,49 @@
 +// Copyright 2014 The Chromium Authors

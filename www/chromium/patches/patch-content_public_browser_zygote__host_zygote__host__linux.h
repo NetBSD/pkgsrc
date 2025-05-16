@@ -1,12 +1,12 @@
-$NetBSD: patch-content_public_browser_zygote__host_zygote__host__linux.h,v 1.1 2025/02/06 09:58:07 wiz Exp $
+$NetBSD: patch-content_public_browser_zygote__host_zygote__host__linux.h,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/browser/zygote_host/zygote_host_linux.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/public/browser/zygote_host/zygote_host_linux.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/public/browser/zygote_host/zygote_host_linux.h
-@@ -35,11 +35,13 @@ class ZygoteHost {
+@@ -34,11 +34,13 @@ class ZygoteHost {
    // after the first render has been forked.
    virtual int GetRendererSandboxStatus() = 0;
  

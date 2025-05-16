@@ -1,17 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/06 09:57:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/16 16:08:14 wiz Exp $
 bin/chromedriver
 bin/chromium
 lib/chromium/chrome
 lib/chromium/chrome_100_percent.pak
 lib/chromium/chrome_200_percent.pak
 lib/chromium/headless_command_resources.pak
-lib/chromium/headless_lib_data.pak
-lib/chromium/headless_lib_strings.pak
 lib/chromium/libEGL.so
 lib/chromium/libGLESv2.so
 lib/chromium/libVkICD_mock_icd.so
 ${PLIST.swiftshader}lib/chromium/libvk_swiftshader.so
-lib/chromium/libvulkan.so.1
+lib/chromium/libvulkan.so
 lib/chromium/locales/af.pak
 lib/chromium/locales/af.pak.info
 lib/chromium/locales/am.pak
@@ -133,6 +131,7 @@ lib/chromium/v8_context_snapshot.bin
 ${PLIST.swiftshader}lib/chromium/vk_swiftshader_icd.json
 man/man1/chromium.1
 share/applications/chromium-browser.desktop
+share/doc/chromium/README
 share/icons/hicolor/128x128/apps/chromium.png
 share/icons/hicolor/22_monox22_mono/apps/chromium.png
 share/icons/hicolor/24x24/apps/chromium.png

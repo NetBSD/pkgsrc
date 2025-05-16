@@ -1,10 +1,10 @@
-$NetBSD: patch-content_common_gpu__pre__sandbox__hook__bsd.cc,v 1.1 2025/02/06 09:58:07 wiz Exp $
+$NetBSD: patch-content_common_gpu__pre__sandbox__hook__bsd.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2024-12-21 10:25:10.309586963 +0000
+--- content/common/gpu_pre_sandbox_hook_bsd.cc.orig	2025-05-08 12:01:57.747693258 +0000
 +++ content/common/gpu_pre_sandbox_hook_bsd.cc
 @@ -0,0 +1,68 @@
 +// Copyright 2023 The Chromium Authors

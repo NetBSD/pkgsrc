@@ -1,0 +1,29 @@
+$NetBSD: README,v 1.1 2025/05/16 16:08:14 wiz Exp $
+
+Some notes on chromium:
+
+1) Wrapper flags support
+  The startup wrapper can read chromium flags
+  from ~/.config/chromium-flags.conf.
+  Example settings in chromium-flags.conf:
+    CHROMIUM_FLAGS="--disable-gpu"
+    CHROMIUM_FLAGS+=" --enable-logging=stderr --v=1"
+
+2) Disabling WebAssembly
+  WebAssembly is enabled by default, but it can be disabled by either:
+  - Setting CHROMIUM_ENABLE_WASM=0 in your environment, or
+  - Adding the following flags to ~/.config/chromium-flags.conf:
+    --disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming
+    --js-flags=--noexpose-wasm
+
+3) Tab hang workaround
+  If you experience tab hanging issues (e.g.,
+  https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212812),
+  increase the net.local.stream.recvspace value:
+    sysctl -w net.local.stream.recvspace=16384
+
+  To make it permanent, add this line to /etc/sysctl.conf:
+    net.local.stream.recvspace=16384
+
+4) HID support
+  HID is not yet supported on NetBSD, so FIDO devices do not work.

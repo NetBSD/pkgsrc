@@ -73,4 +73,8 @@ export LD_LIBRARY_PATH
 [ "${CHROMIUM_ENABLE_WASM:-1}" != "1" ] && \
 	_NOWASM="--disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming --js-flags=--noexpose-wasm"
 
-LANG=${_l} exec "@PREFIX@/lib/chromium/chrome" ${_NOWASM} "${@}"
+# User settings
+[ -f ~/.config/chromium-flags.conf ] || echo 'CHROMIUM_FLAGS=""' > ~/.config/chromium-flags.conf
+. ~/.config/chromium-flags.conf
+
+LANG=${_l} exec "@PREFIX@/lib/chromium/chrome" ${_NOWASM} ${CHROMIUM_FLAGS} "${@}"

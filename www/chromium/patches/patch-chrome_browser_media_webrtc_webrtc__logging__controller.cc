@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.1 2025/02/06 09:57:49 wiz Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.2 2025/05/16 16:08:17 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/media/webrtc/webrtc_logging_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/media/webrtc/webrtc_logging_controller.cc
 @@ -25,10 +25,10 @@
  #include "components/webrtc_logging/browser/text_log_list.h"
@@ -19,7 +19,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.1 
  
  using webrtc_event_logging::WebRtcEventLogManager;
  
-@@ -288,7 +288,7 @@ void WebRtcLoggingController::StartEvent
+@@ -304,7 +304,7 @@ void WebRtcLoggingController::StartEvent
        web_app_id, callback);
  }
  
@@ -28,7 +28,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_webrtc__logging__controller.cc,v 1.1 
  void WebRtcLoggingController::GetLogsDirectory(
      LogsDirectoryCallback callback,
      LogsDirectoryErrorCallback error_callback) {
-@@ -334,7 +334,7 @@ void WebRtcLoggingController::GrantLogsD
+@@ -350,7 +350,7 @@ void WebRtcLoggingController::GrantLogsD
        FROM_HERE,
        base::BindOnce(std::move(callback), file_system.id(), registered_name));
  }

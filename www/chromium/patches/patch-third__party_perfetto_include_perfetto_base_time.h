@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.1 2025/02/06 09:58:27 wiz Exp $
+$NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.2 2025/05/16 16:08:32 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/include/perfetto/base/time.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/perfetto/include/perfetto/base/time.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/perfetto/include/perfetto/base/time.h
-@@ -199,6 +199,9 @@ inline TimeNanos GetTimeInternalNs(clock
+@@ -227,6 +227,9 @@ inline TimeNanos GetTimeInternalNs(clock
  // Return ns from boot. Conversely to GetWallTimeNs, this clock counts also time
  // during suspend (when supported).
  inline TimeNanos GetBootTimeNs() {
@@ -16,7 +16,7 @@ $NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.1 2025/02/
    // Determine if CLOCK_BOOTTIME is available on the first call.
    static const clockid_t kBootTimeClockSource = [] {
      struct timespec ts = {};
-@@ -206,6 +209,7 @@ inline TimeNanos GetBootTimeNs() {
+@@ -234,6 +237,7 @@ inline TimeNanos GetBootTimeNs() {
      return res == 0 ? CLOCK_BOOTTIME : kWallTimeClockSource;
    }();
    return GetTimeInternalNs(kBootTimeClockSource);
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_perfetto_include_perfetto_base_time.h,v 1.1 2025/02/
  }
  
  inline TimeNanos GetWallTimeNs() {
-@@ -213,7 +217,13 @@ inline TimeNanos GetWallTimeNs() {
+@@ -241,7 +245,13 @@ inline TimeNanos GetWallTimeNs() {
  }
  
  inline TimeNanos GetWallTimeRawNs() {

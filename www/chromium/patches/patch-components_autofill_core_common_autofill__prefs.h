@@ -1,17 +1,35 @@
-$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.1 2025/02/06 09:57:58 wiz Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.2 2025/05/16 16:08:21 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
-@@ -73,7 +73,7 @@ inline constexpr char kAutofillPaymentCv
- inline constexpr char kAutofillPaymentCardBenefits[] =
-     "autofill.payment_card_benefits";
+@@ -32,7 +32,7 @@ inline constexpr std::string_view kAutof
+ inline constexpr char kAutofillAiOptInStatus[] =
+     "autofill.autofill_ai.opt_in_status";
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- // Boolean that controls improved autofill filling predictions. When enabled,
- // the autofill functionality is enhanced with adopting user data to
- // the form being filled in, which is triggered by the user via an extra
+ // Boolean that is true if BNPL on Autofill is enabled.
+ inline constexpr char kAutofillBnplEnabled[] = "autofill.bnpl_enabled";
+ // Boolean that is true if the user has ever seen a BNPL suggestion.
+@@ -208,7 +208,7 @@ void SetFacilitatedPaymentsEwallet(PrefS
+ bool IsFacilitatedPaymentsEwalletEnabled(const PrefService* prefs);
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ void SetAutofillBnplEnabled(PrefService* prefs, bool value);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+         // BUILDFLAG(IS_CHROMEOS)
+@@ -216,7 +216,7 @@ void SetAutofillBnplEnabled(PrefService*
+ bool IsAutofillBnplEnabled(const PrefService* prefs);
+ 
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ void SetAutofillHasSeenBnpl(PrefService* prefs);
+ 
+ bool HasSeenBnpl(const PrefService* prefs);

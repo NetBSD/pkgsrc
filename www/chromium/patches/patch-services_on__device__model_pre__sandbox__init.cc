@@ -1,10 +1,10 @@
-$NetBSD: patch-services_on__device__model_pre__sandbox__init.cc,v 1.1 2025/02/06 09:58:21 wiz Exp $
+$NetBSD: patch-services_on__device__model_pre__sandbox__init.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/on_device_model/pre_sandbox_init.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- services/on_device_model/pre_sandbox_init.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ services/on_device_model/pre_sandbox_init.cc
 @@ -14,7 +14,7 @@
  #include "services/on_device_model/ml/chrome_ml.h"  // nogncheck
@@ -33,7 +33,7 @@ $NetBSD: patch-services_on__device__model_pre__sandbox__init.cc,v 1.1 2025/02/06
    // Warm any relevant drivers before attempting to bring up the sandbox. For
    // good measure we initialize a device instance for any adapter with an
    // appropriate backend on top of any integrated or discrete GPU.
-@@ -101,7 +101,7 @@ bool OnDeviceModelService::PreSandboxIni
+@@ -102,7 +102,7 @@ bool OnDeviceModelService::PreSandboxIni
    return true;
  }
  

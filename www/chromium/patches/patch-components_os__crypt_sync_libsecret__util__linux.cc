@@ -1,10 +1,10 @@
-$NetBSD: patch-components_os__crypt_sync_libsecret__util__linux.cc,v 1.1 2025/02/06 09:58:01 wiz Exp $
+$NetBSD: patch-components_os__crypt_sync_libsecret__util__linux.cc,v 1.2 2025/05/16 16:08:23 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/libsecret_util_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/os_crypt/sync/libsecret_util_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/os_crypt/sync/libsecret_util_linux.cc
 @@ -185,16 +185,22 @@ bool LibsecretLoader::EnsureLibsecretLoa
  

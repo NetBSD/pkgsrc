@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_common_policy__loader__common.cc,v 1.1 2025/02/06 09:58:02 wiz Exp $
+$NetBSD: patch-components_policy_core_common_policy__loader__common.cc,v 1.2 2025/05/16 16:08:23 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/policy_loader_common.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/policy/core/common/policy_loader_common.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/policy/core/common/policy_loader_common.cc
 @@ -46,7 +46,7 @@ const char* kSensitivePolicies[] = {
      key::kDefaultSearchProviderEnabled,
@@ -13,9 +13,9 @@ $NetBSD: patch-components_policy_core_common_policy__loader__common.cc,v 1.1 202
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      key::kAutoOpenFileTypes,
+     key::kEnterpriseSearchAggregatorSettings,
      key::kHomepageIsNewTabPage,
-     key::kPasswordProtectionChangePasswordURL,
-@@ -56,7 +56,7 @@ const char* kSensitivePolicies[] = {
+@@ -57,7 +57,7 @@ const char* kSensitivePolicies[] = {
      key::kSafeBrowsingAllowlistDomains,
      key::kSiteSearchSettings,
  #endif

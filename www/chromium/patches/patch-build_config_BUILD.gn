@@ -1,12 +1,12 @@
-$NetBSD: patch-build_config_BUILD.gn,v 1.1 2025/02/06 09:57:43 wiz Exp $
+$NetBSD: patch-build_config_BUILD.gn,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- build/config/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
 +++ build/config/BUILD.gn
-@@ -213,6 +213,10 @@ config("default_libs") {
+@@ -215,6 +215,10 @@ config("default_libs") {
      # Targets should choose to explicitly link frameworks they require. Since
      # linking can have run-time side effects, nothing should be listed here.
      libs = []
