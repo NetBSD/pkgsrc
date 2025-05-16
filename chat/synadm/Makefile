@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/05/16 15:21:55 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/16 15:38:10 adam Exp $
 
 DISTNAME=	synadm-0.48
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/synadm/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/tulir/mautrix-python
+HOMEPAGE=	https://codeberg.org/synadm/synadm
 COMMENT=	Command line admin tool for Synapse
 LICENSE=	gnu-gpl-v3
 
