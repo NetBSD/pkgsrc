@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 12:41:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/16 22:58:54 zafer Exp $
 #
 
 DISTNAME=	fortunes-h2g2-0.1
 CATEGORIES=	games
-MASTER_SITES=	http://www.netmeister.org/apps/
+MASTER_SITES=	https://www.netmeister.org/apps/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
