@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3298 2025/05/16 02:11:16 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3299 2025/05/16 10:37:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4897,3 +4897,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/kew to 3.3.2 [ktnb 2025-05-15]
 	Updated security/go-mkcert to 1.4.4nb21 [schmonz 2025-05-15]
 	Updated emulators/qemu to 10.0.0nb1 [schmonz 2025-05-16]
+	Updated converters/py-fastbencode to 0.3.2 [wiz 2025-05-16]
