@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/15 07:40:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/16 19:43:58 wiz Exp $
 bin/mega-attr
 bin/mega-backup
 bin/mega-cancel
@@ -19,6 +19,12 @@ bin/mega-exec
 bin/mega-export
 bin/mega-find
 bin/mega-ftp
+bin/mega-fuse-add
+bin/mega-fuse-config
+bin/mega-fuse-disable
+bin/mega-fuse-enable
+bin/mega-fuse-remove
+bin/mega-fuse-show
 bin/mega-get
 bin/mega-graphics
 bin/mega-help
@@ -52,6 +58,7 @@ bin/mega-showpcr
 bin/mega-signup
 bin/mega-speedlimit
 bin/mega-sync
+bin/mega-sync-config
 bin/mega-sync-ignore
 bin/mega-sync-issues
 bin/mega-thumbnail
