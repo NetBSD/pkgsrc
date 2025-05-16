@@ -1,13 +1,13 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.1 2025/02/06 09:58:24 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_skia_font__cache__skia.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/skia/font_cache_skia.cc
 @@ -65,7 +65,7 @@ AtomicString ToAtomicString(const SkStri
-   return AtomicString::FromUTF8(str.c_str(), str.size());
+   return AtomicString::FromUTF8(std::string_view(str.begin(), str.end()));
  }
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)

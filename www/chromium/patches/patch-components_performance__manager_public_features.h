@@ -1,12 +1,12 @@
-$NetBSD: patch-components_performance__manager_public_features.h,v 1.1 2025/02/06 09:58:02 wiz Exp $
+$NetBSD: patch-components_performance__manager_public_features.h,v 1.2 2025/05/16 16:08:23 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/public/features.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/performance_manager/public/features.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/performance_manager/public/features.h
-@@ -21,7 +21,7 @@ BASE_DECLARE_FEATURE(kRunOnMainThreadSyn
+@@ -19,7 +19,7 @@ namespace performance_manager::features 
  
  #if !BUILDFLAG(IS_ANDROID)
  

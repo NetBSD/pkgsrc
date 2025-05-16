@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_views__delegate.cc,v 1.1 2025/02/06 09:58:35 wiz Exp $
+$NetBSD: patch-ui_views_views__delegate.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/views_delegate.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/views/views_delegate.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/views/views_delegate.cc
-@@ -97,7 +97,7 @@ bool ViewsDelegate::IsWindowInMetro(gfx:
+@@ -101,7 +101,7 @@ bool ViewsDelegate::IsWindowInMetro(gfx:
    return false;
  }
  #elif BUILDFLAG(ENABLE_DESKTOP_AURA) && \

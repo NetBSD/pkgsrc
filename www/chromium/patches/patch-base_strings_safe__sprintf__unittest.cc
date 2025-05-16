@@ -1,12 +1,12 @@
-$NetBSD: patch-base_strings_safe__sprintf__unittest.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
+$NetBSD: patch-base_strings_safe__sprintf__unittest.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/strings/safe_sprintf_unittest.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/strings/safe_sprintf_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/strings/safe_sprintf_unittest.cc
-@@ -740,6 +740,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
+@@ -743,6 +743,7 @@ TEST(SafeSPrintfTest, EmbeddedNul) {
  #endif
  }
  
@@ -14,7 +14,7 @@ $NetBSD: patch-base_strings_safe__sprintf__unittest.cc,v 1.1 2025/02/06 09:57:42
  TEST(SafeSPrintfTest, EmitNULL) {
    char buf[40];
  #if defined(__GNUC__)
-@@ -756,6 +757,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
+@@ -759,6 +760,7 @@ TEST(SafeSPrintfTest, EmitNULL) {
  #pragma GCC diagnostic pop
  #endif
  }

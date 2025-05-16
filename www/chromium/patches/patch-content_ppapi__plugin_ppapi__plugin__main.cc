@@ -1,10 +1,10 @@
-$NetBSD: patch-content_ppapi__plugin_ppapi__plugin__main.cc,v 1.1 2025/02/06 09:58:07 wiz Exp $
+$NetBSD: patch-content_ppapi__plugin_ppapi__plugin__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/ppapi_plugin/ppapi_plugin_main.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/ppapi_plugin/ppapi_plugin_main.cc
 @@ -52,6 +52,11 @@
  #include "gin/v8_initializer.h"
@@ -18,7 +18,7 @@ $NetBSD: patch-content_ppapi__plugin_ppapi__plugin__main.cc,v 1.1 2025/02/06 09:
  #if BUILDFLAG(IS_POSIX) && !BUILDFLAG(IS_ANDROID)
  #include <stdlib.h>
  #endif
-@@ -141,7 +146,7 @@ int PpapiPluginMain(MainFunctionParams p
+@@ -139,7 +144,7 @@ int PpapiPluginMain(MainFunctionParams p
    gin::V8Initializer::LoadV8Snapshot();
  #endif
  

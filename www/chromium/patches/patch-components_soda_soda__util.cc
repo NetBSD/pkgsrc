@@ -1,12 +1,12 @@
-$NetBSD: patch-components_soda_soda__util.cc,v 1.1 2025/02/06 09:58:03 wiz Exp $
+$NetBSD: patch-components_soda_soda__util.cc,v 1.2 2025/05/16 16:08:23 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/soda/soda_util.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- components/soda/soda_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ components/soda/soda_util.cc
-@@ -27,7 +27,7 @@
+@@ -23,7 +23,7 @@
  #include "base/win/windows_version.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-components_soda_soda__util.cc,v 1.1 2025/02/06 09:58:03 wiz Exp $
  #include "base/cpu.h"
  #endif
  
-@@ -52,7 +52,7 @@ bool IsSupportedChromeOS() {
+@@ -39,7 +39,7 @@ bool IsSupportedChromeOS() {
  }
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_soda_soda__util.cc,v 1.1 2025/02/06 09:58:03 wiz Exp $
  bool IsSupportedLinux() {
  #if defined(ARCH_CPU_X86_FAMILY)
    // Check if the CPU has the required instruction set to run the Speech
-@@ -83,7 +83,7 @@ bool IsSupportedWin() {
+@@ -70,7 +70,7 @@ bool IsSupportedWin() {
  bool IsOnDeviceSpeechRecognitionSupported() {
  #if BUILDFLAG(IS_CHROMEOS)
    return IsSupportedChromeOS();

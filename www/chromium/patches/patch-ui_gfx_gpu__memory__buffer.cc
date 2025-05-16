@@ -1,13 +1,13 @@
-$NetBSD: patch-ui_gfx_gpu__memory__buffer.cc,v 1.1 2025/02/06 09:58:32 wiz Exp $
+$NetBSD: patch-ui_gfx_gpu__memory__buffer.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_memory_buffer.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- ui/gfx/gpu_memory_buffer.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ ui/gfx/gpu_memory_buffer.cc
-@@ -63,7 +63,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
-   handle.region = region.Duplicate();
+@@ -108,7 +108,7 @@ GpuMemoryBufferHandle GpuMemoryBufferHan
+   handle.id = id;
    handle.offset = offset;
    handle.stride = stride;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)

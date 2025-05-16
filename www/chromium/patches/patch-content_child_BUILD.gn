@@ -1,12 +1,12 @@
-$NetBSD: patch-content_child_BUILD.gn,v 1.1 2025/02/06 09:58:07 wiz Exp $
+$NetBSD: patch-content_child_BUILD.gn,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/child/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/child/BUILD.gn
-@@ -130,6 +130,13 @@ target(link_target_type, "child") {
+@@ -135,6 +135,13 @@ target(link_target_type, "child") {
      ]
    }
  
@@ -19,4 +19,4 @@ $NetBSD: patch-content_child_BUILD.gn,v 1.1 2025/02/06 09:58:07 wiz Exp $
 +
    if (is_win) {
      sources += [
-       "dwrite_font_proxy/dwrite_font_proxy_init_impl_win.cc",
+       "child_process_sandbox_support_impl_win.cc",

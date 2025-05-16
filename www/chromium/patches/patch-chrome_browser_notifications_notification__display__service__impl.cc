@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_notifications_notification__display__service__impl.cc,v 1.1 2025/02/06 09:57:49 wiz Exp $
+$NetBSD: patch-chrome_browser_notifications_notification__display__service__impl.cc,v 1.2 2025/05/16 16:08:18 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/notifications/notification_display_service_impl.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/notifications/notification_display_service_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/notifications/notification_display_service_impl.cc
-@@ -32,7 +32,7 @@
+@@ -31,7 +31,7 @@
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_notifications_notification__display__service__impl
  #include "chrome/browser/send_tab_to_self/desktop_notification_handler.h"
  #include "chrome/browser/sharing/sharing_notification_handler.h"
  #endif
-@@ -65,7 +65,7 @@ NotificationDisplayServiceImpl* Notifica
+@@ -60,7 +60,7 @@ NotificationDisplayServiceImpl* Notifica
  // static
  void NotificationDisplayServiceImpl::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_notifications_notification__display__service__impl
    registry->RegisterBooleanPref(prefs::kAllowSystemNotifications, true);
  #endif
  }
-@@ -81,7 +81,7 @@ NotificationDisplayServiceImpl::Notifica
+@@ -76,7 +76,7 @@ NotificationDisplayServiceImpl::Notifica
                             std::make_unique<PersistentNotificationHandler>());
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -33,12 +33,12 @@ $NetBSD: patch-chrome_browser_notifications_notification__display__service__impl
      AddNotificationHandler(
          NotificationHandler::Type::SEND_TAB_TO_SELF,
          std::make_unique<send_tab_to_self::DesktopNotificationHandler>(
-@@ -89,7 +89,7 @@ NotificationDisplayServiceImpl::Notifica
+@@ -84,7 +84,7 @@ NotificationDisplayServiceImpl::Notifica
  #endif
  
- #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
--    BUILDFLAG(IS_WIN)
-+    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
+ #if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-     BUILDFLAG(IS_WIN)) &&                                                 \
++     BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)) &&                            \
+     BUILDFLAG(SAFE_BROWSING_AVAILABLE)
      AddNotificationHandler(
          NotificationHandler::Type::TAILORED_SECURITY,
-         std::make_unique<safe_browsing::TailoredSecurityNotificationHandler>());

@@ -1,12 +1,12 @@
-$NetBSD: patch-v8_src_api_api.cc,v 1.1 2025/02/06 09:58:36 wiz Exp $
+$NetBSD: patch-v8_src_api_api.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/api/api.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- v8/src/api/api.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ v8/src/api/api.cc
-@@ -151,7 +151,7 @@
+@@ -153,7 +153,7 @@
  #include "src/wasm/wasm-serialization.h"
  #endif  // V8_ENABLE_WEBASSEMBLY
  
@@ -15,7 +15,7 @@ $NetBSD: patch-v8_src_api_api.cc,v 1.1 2025/02/06 09:58:36 wiz Exp $
  #include <signal.h>
  #include <unistd.h>
  
-@@ -6559,7 +6559,7 @@ bool v8::V8::Initialize(const int build_
+@@ -6483,7 +6483,7 @@ bool v8::V8::Initialize(const int build_
    return true;
  }
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_gpu_gpu__memory__buffer__manager__singleton.cc,v 1.1 2025/02/06 09:58:05 wiz Exp $
+$NetBSD: patch-content_browser_gpu_gpu__memory__buffer__manager__singleton.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- content/browser/gpu/gpu_memory_buffer_manager_singleton.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ content/browser/gpu/gpu_memory_buffer_manager_singleton.cc
 @@ -46,7 +46,7 @@ scoped_refptr<base::SingleThreadTaskRunn
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_gpu_gpu__memory__buffer__manager__singleton.cc,v 
  bool IsGpuMemoryBufferNV12Supported() {
    static bool is_computed = false;
    static bool supported = false;
-@@ -98,7 +98,7 @@ GpuMemoryBufferManagerSingleton::GetInst
+@@ -111,7 +111,7 @@ void GpuMemoryBufferManagerSingleton::Re
  }
  
  void GpuMemoryBufferManagerSingleton::OnGpuExtraInfoUpdate() {

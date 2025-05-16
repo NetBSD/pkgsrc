@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_printing_print__backend__service__manager.cc,v 1.1 2025/02/06 09:57:50 wiz Exp $
+$NetBSD: patch-chrome_browser_printing_print__backend__service__manager.cc,v 1.2 2025/05/16 16:08:18 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/printing/print_backend_service_manager.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/printing/print_backend_service_manager.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/printing/print_backend_service_manager.cc
 @@ -36,7 +36,7 @@
  #include "printing/printing_context.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_printing_print__backend__service__manager.cc,v 1.1
  #include "content/public/common/content_switches.h"
  #endif
  
-@@ -884,7 +884,7 @@ PrintBackendServiceManager::GetServiceFr
+@@ -883,7 +883,7 @@ PrintBackendServiceManager::GetServiceFr
          host.BindNewPipeAndPassReceiver(),
          content::ServiceProcessHost::Options()
              .WithDisplayName(IDS_UTILITY_PROCESS_PRINT_BACKEND_SERVICE_NAME)
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_printing_print__backend__service__manager.cc,v 1.1
              .WithExtraCommandLineSwitches({switches::kMessageLoopTypeUi})
  #endif
              .Pass());
-@@ -1061,7 +1061,7 @@ PrintBackendServiceManager::DetermineIdl
+@@ -1060,7 +1060,7 @@ PrintBackendServiceManager::DetermineIdl
        return kNoClientsRegisteredResetOnIdleTimeout;
  
      case ClientType::kQueryWithUi:

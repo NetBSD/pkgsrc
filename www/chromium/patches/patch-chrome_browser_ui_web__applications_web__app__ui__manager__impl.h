@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.h,v 1.1 2025/02/06 09:57:54 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_web__applications_web__app__ui__manager__impl.h,v 1.2 2025/05/16 16:08:20 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/web_applications/web_app_ui_manager_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/web_applications/web_app_ui_manager_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/web_applications/web_app_ui_manager_impl.h
-@@ -227,7 +227,7 @@ class WebAppUiManagerImpl : public Brows
+@@ -225,7 +225,7 @@ class WebAppUiManagerImpl : public Brows
        UninstallCompleteCallback uninstall_complete_callback,
        webapps::UninstallResultCode uninstall_code);
  

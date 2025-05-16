@@ -1,10 +1,10 @@
-$NetBSD: patch-services_video__effects_video__effects__sandbox__hook__linux.cc,v 1.1 2025/02/06 09:58:21 wiz Exp $
+$NetBSD: patch-services_video__effects_video__effects__sandbox__hook__linux.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- services/video_effects/video_effects_sandbox_hook_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ services/video_effects/video_effects_sandbox_hook_linux.cc
 @@ -6,7 +6,13 @@
  
@@ -17,7 +17,7 @@ $NetBSD: patch-services_video__effects_video__effects__sandbox__hook__linux.cc,v
 +#else
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
- #include "services/on_device_model/ml/chrome_ml.h"
+ #include "services/on_device_model/ml/chrome_ml_holder.h"
  
  namespace video_effects {
 @@ -29,8 +35,10 @@ bool VideoEffectsPreSandboxHook(

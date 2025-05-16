@@ -1,12 +1,12 @@
-$NetBSD: patch-pdf_pdfium_pdfium__engine.cc,v 1.1 2025/02/06 09:58:16 wiz Exp $
+$NetBSD: patch-pdf_pdfium_pdfium__engine.cc,v 1.2 2025/05/16 16:08:28 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- pdf/pdfium/pdfium_engine.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- pdf/pdfium/pdfium_engine.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ pdf/pdfium/pdfium_engine.cc
-@@ -99,7 +99,7 @@
+@@ -111,7 +111,7 @@
  #include "ui/accessibility/ax_features.mojom-features.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-pdf_pdfium_pdfium__engine.cc,v 1.1 2025/02/06 09:58:16 wiz Exp $
  #include "pdf/pdfium/pdfium_font_linux.h"
  #endif
  
-@@ -528,7 +528,7 @@ void InitializeSDK(bool enable_v8,
+@@ -567,7 +567,7 @@ void InitializeSDK(bool enable_v8,
  
    FPDF_InitLibraryWithConfig(&config);
  

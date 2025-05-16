@@ -1,15 +1,15 @@
-$NetBSD: patch-chrome_browser_ui_actions_chrome__action__id.h,v 1.1 2025/02/06 09:57:52 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_actions_chrome__action__id.h,v 1.2 2025/05/16 16:08:19 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/actions/chrome_action_id.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- chrome/browser/ui/actions/chrome_action_id.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ chrome/browser/ui/actions/chrome_action_id.h
-@@ -513,7 +513,7 @@
-     IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_ANSWER) \
-   E(kActionContentContextQuickAnswersInlineQuery, \
-     IDC_CONTENT_CONTEXT_QUICK_ANSWERS_INLINE_QUERY)
+@@ -497,7 +497,7 @@
+ #if BUILDFLAG(IS_CHROMEOS)
+ #define CHROME_PLATFORM_SPECIFIC_ACTION_IDS \
+   E(kToggleMultitaskMenu, IDC_TOGGLE_MULTITASK_MENU)
 -#elif BUILDFLAG(IS_LINUX)
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  #define CHROME_PLATFORM_SPECIFIC_ACTION_IDS \

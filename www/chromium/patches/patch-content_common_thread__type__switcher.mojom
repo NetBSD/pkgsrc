@@ -1,0 +1,16 @@
+$NetBSD: patch-content_common_thread__type__switcher.mojom,v 1.1 2025/05/16 16:08:25 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/common/thread_type_switcher.mojom.orig	2025-05-05 19:21:24.000000000 +0000
++++ content/common/thread_type_switcher.mojom
+@@ -10,6 +10,6 @@ import "mojo/public/mojom/base/thread_ty
+ // occur in a child process due to its sandbox, e.g. on Linux and ChromeOS.
+ interface ThreadTypeSwitcher {
+   // Asks the browser to change the type of thread.
+-  SetThreadType(int32 platform_thread_id,
++  SetThreadType(uint64 platform_thread_id,
+                 mojo_base.mojom.ThreadType thread_type);
+ };

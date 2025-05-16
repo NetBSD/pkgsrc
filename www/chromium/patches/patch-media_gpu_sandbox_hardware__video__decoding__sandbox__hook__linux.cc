@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux.cc,v 1.1 2025/02/06 09:58:13 wiz Exp $
+$NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.cc
-@@ -16,7 +16,9 @@
+@@ -17,7 +17,9 @@
  #include "media/gpu/vaapi/vaapi_wrapper.h"
  #endif
  
@@ -16,7 +16,7 @@ $NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux
  
  // TODO(b/195769334): the hardware video decoding sandbox is really only useful
  // when building with VA-API or V4L2 (otherwise, we're not really doing hardware
-@@ -32,6 +34,7 @@ using sandbox::syscall_broker::BrokerFil
+@@ -33,6 +35,7 @@ using sandbox::syscall_broker::BrokerFil
  namespace media {
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux
  void AllowAccessToRenderNodes(std::vector<BrokerFilePermission>& permissions,
                                bool include_sys_dev_char,
                                bool read_write) {
-@@ -188,6 +191,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -189,6 +192,7 @@ bool HardwareVideoDecodingPreSandboxHook
    NOTREACHED();
  #endif  // BUILDFLAG(USE_V4L2_CODEC)
  }
@@ -32,7 +32,7 @@ $NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux
  
  }  // namespace
  
-@@ -203,6 +207,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -204,6 +208,7 @@ bool HardwareVideoDecodingPreSandboxHook
  //   (at least).
  bool HardwareVideoDecodingPreSandboxHook(
      sandbox::policy::SandboxLinux::Options options) {
@@ -40,7 +40,7 @@ $NetBSD: patch-media_gpu_sandbox_hardware__video__decoding__sandbox__hook__linux
    using HardwareVideoDecodingProcessPolicy =
        sandbox::policy::HardwareVideoDecodingProcessPolicy;
    using PolicyType =
-@@ -248,6 +253,7 @@ bool HardwareVideoDecodingPreSandboxHook
+@@ -249,6 +254,7 @@ bool HardwareVideoDecodingPreSandboxHook
    // |permissions| is empty?
    sandbox::policy::SandboxLinux::GetInstance()->StartBrokerProcess(
        command_set, permissions, options);

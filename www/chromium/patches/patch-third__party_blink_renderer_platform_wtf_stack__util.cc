@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.1 2025/02/06 09:58:24 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
 @@ -23,6 +23,13 @@
  extern "C" void* __libc_stack_end;  // NOLINT
@@ -66,7 +66,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.1 202
    pthread_attr_destroy(&attr);
  #endif
  #if defined(__GLIBC__)
-@@ -154,6 +164,13 @@ void* GetStackStart() {
+@@ -152,6 +162,13 @@ void* GetStackStart() {
    ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
    return reinterpret_cast<void*>(highLimit);
  #endif

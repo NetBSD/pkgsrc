@@ -1,15 +1,15 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_gpu_image__layer__bridge.cc,v 1.1 2025/02/06 09:58:24 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_gpu_image__layer__bridge.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/gpu/image_layer_bridge.cc
-@@ -49,7 +49,7 @@ scoped_refptr<StaticBitmapImage> MakeAcc
+@@ -47,7 +47,7 @@ scoped_refptr<StaticBitmapImage> MakeAcc
+ 
    const auto paint_image = source->PaintImageForCurrentFrame();
-   const auto image_info = paint_image.GetSkImageInfo().makeWH(
-       source->Size().width(), source->Size().height());
+   const auto image_info = paint_image.GetSkImageInfo();
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // TODO(b/330865436): On Linux, CanvasResourceProvider doesn't always check

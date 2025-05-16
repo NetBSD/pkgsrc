@@ -1,12 +1,12 @@
-$NetBSD: patch-base_synchronization_lock__impl.h,v 1.1 2025/02/06 09:57:42 wiz Exp $
+$NetBSD: patch-base_synchronization_lock__impl.h,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/synchronization/lock_impl.h.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/synchronization/lock_impl.h.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/synchronization/lock_impl.h
-@@ -109,6 +109,10 @@ void LockImpl::Unlock() {
+@@ -110,6 +110,10 @@ void LockImpl::Unlock() {
  }
  
  #elif BUILDFLAG(IS_POSIX) || BUILDFLAG(IS_FUCHSIA)
@@ -17,7 +17,7 @@ $NetBSD: patch-base_synchronization_lock__impl.h,v 1.1 2025/02/06 09:57:42 wiz E
  
  #if DCHECK_IS_ON()
  BASE_EXPORT void dcheck_trylock_result(int rv);
-@@ -129,6 +133,9 @@ void LockImpl::Unlock() {
+@@ -130,6 +134,9 @@ void LockImpl::Unlock() {
    dcheck_unlock_result(rv);
  #endif
  }

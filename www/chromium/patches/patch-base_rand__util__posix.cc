@@ -1,12 +1,12 @@
-$NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
+$NetBSD: patch-base_rand__util__posix.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/rand_util_posix.cc.orig	2024-12-17 17:58:49.000000000 +0000
+--- base/rand_util_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
 +++ base/rand_util_posix.cc
-@@ -28,7 +28,7 @@
+@@ -29,7 +29,7 @@
  #include "base/time/time.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
  #include "third_party/lss/linux_syscall_support.h"
  #elif BUILDFLAG(IS_MAC)
  // TODO(crbug.com/40641285): Waiting for this header to appear in the iOS SDK.
-@@ -44,6 +44,7 @@ namespace base {
+@@ -45,6 +45,7 @@ namespace base {
  
  namespace {
  
@@ -23,7 +23,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
  #if BUILDFLAG(IS_AIX)
  // AIX has no 64-bit support for O_CLOEXEC.
  static constexpr int kOpenFlags = O_RDONLY;
-@@ -68,10 +69,11 @@ class URandomFd {
+@@ -69,10 +70,11 @@ class URandomFd {
   private:
    const int fd_;
  };
@@ -33,10 +33,10 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
       BUILDFLAG(IS_ANDROID)) &&                        \
 -    !BUILDFLAG(IS_NACL)
 +    !BUILDFLAG(IS_NACL) && !BUILDFLAG(IS_BSD)
- // TODO(pasko): Unify reading kernel version numbers in:
- // mojo/core/channel_linux.cc
- // chrome/browser/android/seccomp_support_detector.cc
-@@ -177,6 +179,7 @@ bool UseBoringSSLForRandBytes() {
+ 
+ bool KernelSupportsGetRandom() {
+   return base::SysInfo::KernelVersionNumber::Current() >=
+@@ -129,6 +131,7 @@ bool UseBoringSSLForRandBytes() {
  namespace {
  
  void RandBytesInternal(span<uint8_t> output, bool avoid_allocation) {
@@ -44,7 +44,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
  #if !BUILDFLAG(IS_NACL)
    // The BoringSSL experiment takes priority over everything else.
    if (!avoid_allocation && internal::UseBoringSSLForRandBytes()) {
-@@ -213,6 +216,9 @@ void RandBytesInternal(span<uint8_t> out
+@@ -163,6 +166,9 @@ void RandBytesInternal(span<uint8_t> out
    const int urandom_fd = GetUrandomFD();
    const bool success = ReadFromFD(urandom_fd, as_writable_chars(output));
    CHECK(success);
@@ -54,7 +54,7 @@ $NetBSD: patch-base_rand__util__posix.cc,v 1.1 2025/02/06 09:57:42 wiz Exp $
  }
  
  }  // namespace
-@@ -232,9 +238,11 @@ void RandBytes(span<uint8_t> output) {
+@@ -182,9 +188,11 @@ void RandBytes(span<uint8_t> output) {
    RandBytesInternal(output, /*avoid_allocation=*/false);
  }
  
