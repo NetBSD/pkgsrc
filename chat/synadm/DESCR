@@ -1,0 +1,2 @@
+A CLI tool to help admins of Matrix-Synapse homeservers conveniently issue
+commands available via its Admin API.
