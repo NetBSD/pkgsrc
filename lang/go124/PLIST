@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2.2.1 2025/04/02 02:19:08 maya Exp $
+@comment $NetBSD: PLIST,v 1.2.2.2 2025/05/16 14:05:02 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go124/CONTRIBUTING.md
@@ -3501,6 +3501,7 @@ go124/src/cmd/link/testdata/linkname/fastrand.go
 go124/src/cmd/link/testdata/linkname/ok.go
 go124/src/cmd/link/testdata/linkname/p/p.go
 go124/src/cmd/link/testdata/linkname/push.go
+go124/src/cmd/link/testdata/linkname/sched.go
 go124/src/cmd/link/testdata/pe-binutils/main.go
 go124/src/cmd/link/testdata/pe-binutils/rsrc_386.syso
 go124/src/cmd/link/testdata/pe-binutils/rsrc_amd64.syso
