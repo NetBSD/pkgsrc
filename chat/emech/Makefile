@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2020/01/18 23:26:34 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/16 22:04:06 zafer Exp $
 
 DISTNAME=	emech-3.0.3
 CATEGORIES=	chat
-MASTER_SITES=	http://www.energymech.net/files/
+MASTER_SITES=	https://www.aydogan.net/distfiles/chat/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.energymech.net/
