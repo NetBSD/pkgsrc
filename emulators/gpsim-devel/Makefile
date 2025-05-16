@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2025/04/24 14:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/05/16 22:40:42 zafer Exp $
 #
 
 DISTNAME=	gpsim-20050905
 PKGREVISION=	50
 CATEGORIES=	emulators
-MASTER_SITES=	http://www-asim.lip6.fr/~bouyer/pic/
+MASTER_SITES=	https://largo.lip6.fr/~bouyer/pic/
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://gpsim.sourceforge.net/
