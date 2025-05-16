@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3308 2025/05/16 19:44:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3309 2025/05/16 23:05:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4909,3 +4909,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added chat/synadm version 0.48 [adam 2025-05-16]
 	Updated www/chromium to 136.0.7103.113 [wiz 2025-05-16]
 	Updated net/megacmd to 2.1.1 [wiz 2025-05-16]
+	Updated graphics/inkscape to 1.4.2 [ryoon 2025-05-16]
