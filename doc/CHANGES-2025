@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3307 2025/05/16 16:09:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3308 2025/05/16 19:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4908,3 +4908,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-click-option-group version 0.5.7 [adam 2025-05-16]
 	Added chat/synadm version 0.48 [adam 2025-05-16]
 	Updated www/chromium to 136.0.7103.113 [wiz 2025-05-16]
+	Updated net/megacmd to 2.1.1 [wiz 2025-05-16]
