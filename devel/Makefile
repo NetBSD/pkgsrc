@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4473 2025/05/13 09:17:41 markd Exp $
+# $NetBSD: Makefile,v 1.4474 2025/05/16 15:20:23 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2556,6 +2556,7 @@ SUBDIR+=	py-click-aliases
 SUBDIR+=	py-click-default-group
 SUBDIR+=	py-click-didyoumean
 SUBDIR+=	py-click-log
+SUBDIR+=	py-click-option-group
 SUBDIR+=	py-click-plugins
 SUBDIR+=	py-click-repl
 SUBDIR+=	py-click-threading
