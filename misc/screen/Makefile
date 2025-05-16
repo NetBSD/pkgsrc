@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.126 2025/02/13 19:43:02 rillig Exp $
+# $NetBSD: Makefile,v 1.126.2.1 2025/05/16 14:14:44 maya Exp $
 
 DISTNAME=	screen-5.0.0
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
@@ -60,9 +60,11 @@ post-install: screen-terminfo
 
 INSTALLATION_DIRS+=	share/examples/screen
 
-.if ${UNPRIVILEGED:U:tl} != yes
-SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
-.endif
+# multiple security problems
+# https://security.opensuse.org/2025/05/12/screen-security-issues.html
+#.if ${UNPRIVILEGED:U:tl} != yes
+#SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
+#.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
