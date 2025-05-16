@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2025/03/27 19:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/16 22:46:13 zafer Exp $
 
 DISTNAME=	abcl-src-1.9.2
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	lang
-MASTER_SITES=	http://abcl.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://abcl.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	https://abcl.org/
