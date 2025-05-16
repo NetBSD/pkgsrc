@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.369 2025/05/16 05:43:13 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.370 2025/05/16 16:09:13 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26191,3 +26191,4 @@ nodejs>=20<20.19.2	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-2
 nodejs>=22<22.15.1	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-23166
 nodejs>=24<24.0.2	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-23166
 webkit-gtk<2.48.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-31206
+chromium<136.0.7103.113	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-0291
