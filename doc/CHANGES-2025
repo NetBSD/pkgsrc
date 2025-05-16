@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3302 2025/05/16 12:36:41 roy Exp $
+$NetBSD: CHANGES-2025,v 1.3303 2025/05/16 12:56:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4901,3 +4901,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zeroconf to 0.147.0 [wiz 2025-05-16]
 	Updated geography/py-proj to 3.7.1 [wiz 2025-05-16]
 	Updated net/dhcpcd to 10.2.3 [roy 2025-05-16]
+	Updated databases/py-sqlalchemy to 2.0.41 [adam 2025-05-16]
+	Updated geography/py-geoip2 to 5.1.0 [adam 2025-05-16]
