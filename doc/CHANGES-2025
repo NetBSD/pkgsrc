@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3304 2025/05/16 13:16:28 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3305 2025/05/16 14:03:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4904,3 +4904,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.41 [adam 2025-05-16]
 	Updated geography/py-geoip2 to 5.1.0 [adam 2025-05-16]
 	Updated x11/kitty to 0.42.0 [ktnb 2025-05-16]
+	Updated news/newsraft to 0.30 [ktnb 2025-05-16]
