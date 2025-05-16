@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/04/14 11:11:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/05/16 12:54:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -141,6 +141,9 @@ ${PYSITELIB}/sqlalchemy/dialects/oracle/provision.pyo
 ${PYSITELIB}/sqlalchemy/dialects/oracle/types.py
 ${PYSITELIB}/sqlalchemy/dialects/oracle/types.pyc
 ${PYSITELIB}/sqlalchemy/dialects/oracle/types.pyo
+${PYSITELIB}/sqlalchemy/dialects/oracle/vector.py
+${PYSITELIB}/sqlalchemy/dialects/oracle/vector.pyc
+${PYSITELIB}/sqlalchemy/dialects/oracle/vector.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.pyo
