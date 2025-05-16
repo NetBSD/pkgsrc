@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.54 2025/04/15 07:31:07 adam Exp $
+$NetBSD: distinfo,v 1.55 2025/05/16 10:38:01 wiz Exp $
 
-BLAKE2s (zeroconf-0.146.5.tar.gz) = 57bfa39bc42e02c13fc1e42bd61138a38c1ce7f0082dbf7546fed80915b2c75a
-SHA512 (zeroconf-0.146.5.tar.gz) = 4e6d2ea48435c0889b610623dfd68793b3891797030f3919888cb1866938ae5157d4a837a6cb8cc808d4aca8298bb00ef92827f790f5d4489f59e1a05685ca27
-Size (zeroconf-0.146.5.tar.gz) = 163906 bytes
+BLAKE2s (zeroconf-0.147.0.tar.gz) = 0db8929c2d9be8d5e1334dcbb75f7970b245cd71061d6ddd19aab42ba3b97e37
+SHA512 (zeroconf-0.147.0.tar.gz) = 930902ea04f030bb557b9c2788c7c369d6f65c92b214bb094955e66868187ce8c8341b5a67382df2ddc42b769701b553bdb3b89871557bc9f2cc681fbe1ccc07
+Size (zeroconf-0.147.0.tar.gz) = 163958 bytes
 SHA1 (patch-build__ext.py) = ff556d0c880f6f11123e8737713db75c80c9a3ff
