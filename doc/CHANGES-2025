@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3301 2025/05/16 10:39:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3302 2025/05/16 12:36:41 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4900,3 +4900,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-fastbencode to 0.3.2 [wiz 2025-05-16]
 	Updated net/py-zeroconf to 0.147.0 [wiz 2025-05-16]
 	Updated geography/py-proj to 3.7.1 [wiz 2025-05-16]
+	Updated net/dhcpcd to 10.2.3 [roy 2025-05-16]
