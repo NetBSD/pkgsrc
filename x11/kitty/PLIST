@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/03/31 17:30:46 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/05/16 13:16:11 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -83,6 +83,12 @@ lib/kitty/kittens/query_terminal/__init__.pyo
 lib/kitty/kittens/query_terminal/main.py
 lib/kitty/kittens/query_terminal/main.pyc
 lib/kitty/kittens/query_terminal/main.pyo
+lib/kitty/kittens/quick_access_terminal/__init__.py
+lib/kitty/kittens/quick_access_terminal/__init__.pyc
+lib/kitty/kittens/quick_access_terminal/__init__.pyo
+lib/kitty/kittens/quick_access_terminal/main.py
+lib/kitty/kittens/quick_access_terminal/main.pyc
+lib/kitty/kittens/quick_access_terminal/main.pyo
 lib/kitty/kittens/remote_file/__init__.py
 lib/kitty/kittens/remote_file/__init__.pyc
 lib/kitty/kittens/remote_file/__init__.pyo
@@ -496,6 +502,9 @@ lib/kitty/kitty/shm.pyo
 lib/kitty/kitty/short_uuid.py
 lib/kitty/kitty/short_uuid.pyc
 lib/kitty/kitty/short_uuid.pyo
+lib/kitty/kitty/simple_cli_definitions.py
+lib/kitty/kitty/simple_cli_definitions.pyc
+lib/kitty/kitty/simple_cli_definitions.pyo
 lib/kitty/kitty/tab_bar.py
 lib/kitty/kitty/tab_bar.pyc
 lib/kitty/kitty/tab_bar.pyo
@@ -512,9 +521,9 @@ lib/kitty/kitty/trail_vertex.glsl
 lib/kitty/kitty/types.py
 lib/kitty/kitty/types.pyc
 lib/kitty/kitty/types.pyo
-lib/kitty/kitty/typing.py
-lib/kitty/kitty/typing.pyc
-lib/kitty/kitty/typing.pyo
+lib/kitty/kitty/typing_compat.py
+lib/kitty/kitty/typing_compat.pyc
+lib/kitty/kitty/typing_compat.pyo
 lib/kitty/kitty/update_check.py
 lib/kitty/kitty/update_check.pyc
 lib/kitty/kitty/update_check.pyo
@@ -605,6 +614,7 @@ man/man1/kitten-mouse-demo.1
 man/man1/kitten-notify.1
 man/man1/kitten-panel.1
 man/man1/kitten-query-terminal.1
+man/man1/kitten-quick-access-terminal.1
 man/man1/kitten-remote-file.1
 man/man1/kitten-run-shell.1
 man/man1/kitten-show-key.1
@@ -620,6 +630,7 @@ share/applications/kitty-open.desktop
 share/applications/kitty.desktop
 share/doc/kitty/html/.buildinfo
 share/doc/kitty/html/.nojekyll
+share/doc/kitty/html/_downloads/055e3591463099e42785a872ce39996a/quick_access_terminal.conf
 share/doc/kitty/html/_downloads/433dadebd0bf504f8b008985378086ce/kitty.conf
 share/doc/kitty/html/_downloads/a489ebbb52d84eeb19a12b2fda7debda/diff.conf
 share/doc/kitty/html/_downloads/f0a0de9ec8d9ff4456206db8e0814937/rowcolumn-diacritics.txt
@@ -628,12 +639,14 @@ share/doc/kitty/html/_images/family-selection.png
 share/doc/kitty/html/_images/font-fine-tune.png
 share/doc/kitty/html/_images/hints_mode.png
 share/doc/kitty/html/_images/panel.png
+share/doc/kitty/html/_images/quake-hypr.webp
+share/doc/kitty/html/_images/quake-macos.webp
 share/doc/kitty/html/_images/remote_file.png
 share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
 share/doc/kitty/html/_images/social_previews/summary_build_e554a463.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_28f2229d.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_bb1bec17.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png
@@ -664,8 +677,9 @@ share/doc/kitty/html/_images/social_previews/summary_kittens_hyperlinked_grep_bc
 share/doc/kitty/html/_images/social_previews/summary_kittens_icat_8f870112.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_intro_2aa247aa.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_notify_4b21ed12.png
-share/doc/kitty/html/_images/social_previews/summary_kittens_panel_acc427d1.png
+share/doc/kitty/html/_images/social_previews/summary_kittens_panel_f0055a23.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_query_terminal_bcf6bdb9.png
+share/doc/kitty/html/_images/social_previews/summary_kittens_quick-access-terminal_cdc578f3.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_remote_file_c5782e6e.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_ssh_d0cb65fa.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_themes_72ee7bcd.png
@@ -676,13 +690,14 @@ share/doc/kitty/html/_images/social_previews/summary_layouts_49b07683.png
 share/doc/kitty/html/_images/social_previews/summary_mapping_aea5afa6.png
 share/doc/kitty/html/_images/social_previews/summary_marks_66066db1.png
 share/doc/kitty/html/_images/social_previews/summary_misc-protocol_baba0cc2.png
-share/doc/kitty/html/_images/social_previews/summary_open_actions_c69b3759.png
+share/doc/kitty/html/_images/social_previews/summary_open_actions_b5f13270.png
 share/doc/kitty/html/_images/social_previews/summary_overview_249bd848.png
 share/doc/kitty/html/_images/social_previews/summary_performance_76c80d2e.png
 share/doc/kitty/html/_images/social_previews/summary_pipe_168d77ad.png
 share/doc/kitty/html/_images/social_previews/summary_pointer-shapes_96e448ee.png
 share/doc/kitty/html/_images/social_previews/summary_press-mentions_3ce20e22.png
 share/doc/kitty/html/_images/social_previews/summary_protocol-extensions_ea5204ed.png
+share/doc/kitty/html/_images/social_previews/summary_quake-screenshots_d232c5bb.png
 share/doc/kitty/html/_images/social_previews/summary_quickstart_9d1a56df.png
 share/doc/kitty/html/_images/social_previews/summary_rc_protocol_ea1138ef.png
 share/doc/kitty/html/_images/social_previews/summary_remote-control_7371e6b3.png
@@ -730,6 +745,7 @@ share/doc/kitty/html/_sources/kittens/icat.rst.txt
 share/doc/kitty/html/_sources/kittens/notify.rst.txt
 share/doc/kitty/html/_sources/kittens/panel.rst.txt
 share/doc/kitty/html/_sources/kittens/query_terminal.rst.txt
+share/doc/kitty/html/_sources/kittens/quick-access-terminal.rst.txt
 share/doc/kitty/html/_sources/kittens/remote_file.rst.txt
 share/doc/kitty/html/_sources/kittens/ssh.rst.txt
 share/doc/kitty/html/_sources/kittens/themes.rst.txt
@@ -748,6 +764,7 @@ share/doc/kitty/html/_sources/pipe.rst.txt
 share/doc/kitty/html/_sources/pointer-shapes.rst.txt
 share/doc/kitty/html/_sources/press-mentions.rst.txt
 share/doc/kitty/html/_sources/protocol-extensions.rst.txt
+share/doc/kitty/html/_sources/quake-screenshots.rst.txt
 share/doc/kitty/html/_sources/quickstart.rst.txt
 share/doc/kitty/html/_sources/rc_protocol.rst.txt
 share/doc/kitty/html/_sources/remote-control.rst.txt
@@ -824,6 +841,7 @@ share/doc/kitty/html/kittens/icat.html
 share/doc/kitty/html/kittens/notify.html
 share/doc/kitty/html/kittens/panel.html
 share/doc/kitty/html/kittens/query_terminal.html
+share/doc/kitty/html/kittens/quick-access-terminal.html
 share/doc/kitty/html/kittens/remote_file.html
 share/doc/kitty/html/kittens/ssh.html
 share/doc/kitty/html/kittens/themes.html
@@ -843,6 +861,7 @@ share/doc/kitty/html/pipe.html
 share/doc/kitty/html/pointer-shapes.html
 share/doc/kitty/html/press-mentions.html
 share/doc/kitty/html/protocol-extensions.html
+share/doc/kitty/html/quake-screenshots.html
 share/doc/kitty/html/quickstart.html
 share/doc/kitty/html/rc_protocol.html
 share/doc/kitty/html/remote-control.html
