@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/16 15:20:24 adam Exp $
+
+BLAKE2s (click_option_group-0.5.7.tar.gz) = b0e4f115f93069921b70a212f408a2c2ddb07d27deec163664323540b278d347
+SHA512 (click_option_group-0.5.7.tar.gz) = 0e6c82b2b6a4a790c767ad775def93c3487e97990bbc172c95b6d90ccc366c8fb9dfe0fff4eecb64538218213c65642732eb1a0d421d2826e1f13689e6d5621a
+Size (click_option_group-0.5.7.tar.gz) = 22110 bytes

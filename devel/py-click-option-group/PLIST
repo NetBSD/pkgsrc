@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/16 15:20:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/click_option_group/__init__.py
+${PYSITELIB}/click_option_group/__init__.pyc
+${PYSITELIB}/click_option_group/__init__.pyo
+${PYSITELIB}/click_option_group/_core.py
+${PYSITELIB}/click_option_group/_core.pyc
+${PYSITELIB}/click_option_group/_core.pyo
+${PYSITELIB}/click_option_group/_decorators.py
+${PYSITELIB}/click_option_group/_decorators.pyc
+${PYSITELIB}/click_option_group/_decorators.pyo
+${PYSITELIB}/click_option_group/_helpers.py
+${PYSITELIB}/click_option_group/_helpers.pyc
+${PYSITELIB}/click_option_group/_helpers.pyo
+${PYSITELIB}/click_option_group/_version.py
+${PYSITELIB}/click_option_group/_version.pyc
+${PYSITELIB}/click_option_group/_version.pyo
+${PYSITELIB}/click_option_group/py.typed
