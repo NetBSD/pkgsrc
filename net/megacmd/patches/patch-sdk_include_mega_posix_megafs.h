@@ -1,16 +1,36 @@
-$NetBSD: patch-sdk_include_mega_posix_megafs.h,v 1.2 2025/02/15 07:40:13 wiz Exp $
+$NetBSD: patch-sdk_include_mega_posix_megafs.h,v 1.3 2025/05/16 19:43:58 wiz Exp $
 
-* Use FSACCESS_CLASS of linux on BSDs
+* Add Fallback classes to avoid inotify
 
---- sdk/include/mega/posix/megafs.h.orig	2025-02-13 10:44:28.677854322 +0100
+--- sdk/include/mega/posix/megafs.h.orig	2025-04-02 09:16:59.000000000 +0200
 +++ sdk/include/mega/posix/megafs.h
-@@ -192,7 +192,8 @@ private:
+@@ -260,6 +260,29 @@ private:
  
- };
+ #endif // ENABLE_SYNC
  
--#ifdef __linux__
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
-+    defined(__NetBSD__) || defined(__DragonFly__)
++#elif defined(USE_PERIODIC)
++
++#define FSACCESS_CLASS FallbackFileSystemAccess
++
++class FallbackFileSystemAccess : public PosixFileSystemAccess
++{
++public:
++    DirNotify* newdirnotify(LocalNode& root,
++                            const LocalPath& rootPath,
++                            Waiter* waiter) override;
++
++    void addevents(Waiter*, int) override;
++
++    int checkevents(Waiter*) override;
++
++}; // class FallbackFileSystemAccess
++
++class FallbackDirNotify : public DirNotify
++{
++public:
++    FallbackDirNotify(const LocalPath& rootPath);
++};
++
+ #endif // __linux__
  
- #define FSACCESS_CLASS LinuxFileSystemAccess
- 
+ } // namespace

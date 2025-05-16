@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2025/04/19 07:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/16 19:43:58 wiz Exp $
 
-DISTNAME=	megacmd-2.0.0
-PKGREVISION=	2
+DISTNAME=	megacmd-2.1.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=meganz/}
 GITHUB_PROJECT=	MEGAcmd
 GITHUB_TAG=	${PKGVERSION_NOREV}_Linux
-SDK_VERSION=	v8.3.1
+SDK_VERSION=	v9.1.1
 
 GITHUB_SUBMODULES=	meganz sdk ${SDK_VERSION} sdk
 
@@ -32,6 +31,8 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_MEDIAINFO=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FREEIMAGE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_PDFIUM=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_FUSE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DVCPKG_ROOT=""
 
 CHECK_PORTABILITY_SKIP+=	sdk/bindings/ios/3rdparty/*.sh
 
@@ -45,7 +46,6 @@ post-install:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"

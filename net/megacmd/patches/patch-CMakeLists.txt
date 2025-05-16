@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/02/15 07:40:13 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/05/16 19:43:58 wiz Exp $
 
 * Use system dependencies instead of vcpkg
 * Fix install directories
@@ -6,17 +6,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2025/02/15 07:40:13 wiz Exp $
 
 --- CMakeLists.txt.orig	2025-01-30 14:04:12.000000000 +0100
 +++ CMakeLists.txt
-@@ -26,7 +26,8 @@ set(QT_CREATOR_SKIP_VCPKG_SETUP TRUE CAC
- list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/build/cmake/modules) # Modules from MEGAcmd
- list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/sdk/cmake/modules) # Modules from MEGAsdk
- 
--set(VCPKG_ROOT "${CMAKE_CURRENT_LIST_DIR}/../vcpkg" CACHE PATH "If set, it will build and use the VCPKG packages defined in the manifest file")
-+#set(VCPKG_ROOT "${CMAKE_CURRENT_LIST_DIR}/../vcpkg" CACHE PATH "If set, it will build and use the VCPKG packages defined in the manifest file")
-+set(VCPKG_ROOT "" CACHE PATH "If set, it will build and use the VCPKG packages defined in the manifest file")
- 
- include(detect_host_architecture)
- 
-@@ -39,7 +40,7 @@ execute_process(
+@@ -39,7 +39,7 @@ execute_process(
  )
  endif()
  
@@ -25,7 +15,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2025/02/15 07:40:13 wiz Exp $
      message(STATUS "vcpkg will be cloned into ${VCPKG_ROOT}")
      execute_process(
          #TODO: have the same for windows ... or at least check if bash is available
-@@ -134,8 +135,8 @@ if(UNIX AND NOT APPLE)
+@@ -134,8 +134,8 @@ if(UNIX AND NOT APPLE)
      # If CMAKE_INSTALL_PREFIX is not set, it will set rpath to /opt/....
      # Note: using cmake --install --prefix /some/prefix will not set rpath relative to that prefix
      # The above can be used for building packages: in which install dir is a path construction folder that will not be there in packages
@@ -36,7 +26,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.1 2025/02/15 07:40:13 wiz Exp $
  
      if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
          message(STATUS "Overriding default CMAKE_INSTALL_PREFIX to /")
-@@ -457,27 +458,31 @@ elseif(NOT WIN32)
+@@ -457,27 +457,31 @@ elseif(NOT WIN32)
          PATTERN "win" EXCLUDE)
  
      install(FILES "${CMAKE_CURRENT_LIST_DIR}/src/client/megacmd_completion.sh"
