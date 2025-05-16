@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.77 2025/02/13 19:18:36 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2025/05/16 16:55:21 martin Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
 COMMENT=		Network UPS Tools
+
+PLIST_VARS+=		python
 
 SUBST_CLASSES+=		man-so
 SUBST_MESSAGE.man-so=	Fixing manpage .so references.
@@ -31,10 +33,6 @@ CONFIGURE_ARGS+=	--without-nut_monitor	# not yet packaged
 # https://github.com/networkupstools/nut/issues/1792 which upstream
 # declines to fix.
 CONFIGURE_ARGS+=	--without-python2
-# Force only our chosen python3 (same reason as above).
-CONFIGURE_ARGS+=	--with-python3=${PYTHONBIN}
-CONFIGURE_ARGS+=	--with-python=${PYTHONBIN}
-# \todo Move to split package.
 
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
@@ -94,5 +92,7 @@ post-install:
 
 # nut-scanner needs libltdl, but this is not documented
 .include "../../devel/libltdl/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/extension.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
