@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3305 2025/05/16 14:03:12 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3306 2025/05/16 15:22:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4905,3 +4905,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-geoip2 to 5.1.0 [adam 2025-05-16]
 	Updated x11/kitty to 0.42.0 [ktnb 2025-05-16]
 	Updated news/newsraft to 0.30 [ktnb 2025-05-16]
+	Added devel/py-click-option-group version 0.5.7 [adam 2025-05-16]
+	Added chat/synadm version 0.48 [adam 2025-05-16]
