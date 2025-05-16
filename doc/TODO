@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25809 2025/05/16 10:37:42 wiz Exp $
+$NetBSD: TODO,v 1.25810 2025/05/16 16:09:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -674,7 +674,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o git-cinnabar-0.7.2
 	o gitea-1.22.1
 	o gjs-1.70.1
-	o gkrellm-2.3.11
+	o gkrellm-2.4.0
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.11
 	o gkrellm-share-2.3.11
@@ -1178,6 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.86 [wip]
+	o rust-1.87
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
