@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.11 2025/05/16 14:05:34 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.12 2025/05/16 14:18:27 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -46,3 +46,9 @@ www/firefox115-l10n: Security fix
 Pullup ticket #6963 - requested by bsiegert
 lang/go124: Security fix
 lang/go123: Not a security fix, but doesn't hurt
+
+Pullup ticket #6964 - requested by bsiegert
+misc/screen: Security fix (PR pkg/59417)
+
+Pullup ticket #6965 - requested by bsiegert
+misc/screen4: Security fix (PR pkg/59417)
