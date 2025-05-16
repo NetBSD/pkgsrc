@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.306 2025/04/24 14:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.307 2025/05/16 23:05:04 ryoon Exp $
 
-DISTNAME=	inkscape-1.4
-PKGREVISION=	9
+DISTNAME=	inkscape-1.4.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 
-WRKSRC=		${WRKDIR}/${DISTNAME}_2024-10-09_e7c3feb100
+WRKSRC=		${WRKDIR}/${DISTNAME}_2025-05-08_ebf0e940d0
 
 CPPFLAGS.NetBSD+=	-Urounddown
 CPPFLAGS.NetBSD+=	-Uroundup
