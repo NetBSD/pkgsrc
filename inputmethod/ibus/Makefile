@@ -1,7 +1,15 @@
-# $NetBSD: Makefile,v 1.111 2025/04/24 14:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/05/17 18:32:24 tsutsui Exp $
 
-PKGREVISION= 2
-.include "Makefile.common"
+DISTNAME=	ibus-1.5.32
+PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
+CATEGORIES=	inputmethod
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ibus/}
+GITHUB_PROJECT=	${PKGBASE}
+GITHUB_RELEASE=	${DISTNAME:S/${PKGBASE}-//}
+
+MAINTAINER=	tsutsui@NetBSD.org
+HOMEPAGE=	https://github.com/ibus/ibus/wiki
+LICENSE=	gnu-lgpl-v2.1
 
 COMMENT=	Intelligent Input Bus
 
@@ -15,10 +23,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 GNU_CONFIGURE=			yes
 USE_LIBTOOL=			yes
 USE_TOOLS+=			pkg-config intltool msgfmt gmake msgmerge
+# To regenarete portal/ibus-portal-dbus.[ch] to sync with system glib2 version
+USE_TOOLS+=			gdbus-codegen
 USE_LANGUAGES=			c c++
 USE_PKGLOCALEDIR=		yes
 
-GCONF_SCHEMAS+=		ibus.schemas
 PKGCONFIG_OVERRIDE+=	ibus-1.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
@@ -38,13 +47,21 @@ CONFIGURE_ARGS+=	--with-ucd-dir=${PREFIX}/share/unicode/ucd
 # XXX lack of dbusmenu-glib
 CONFIGURE_ARGS+=	--disable-appindicator
 
+# avoid generating "*.cpython3*.opt-2.pyc" by -OO on byte compiling
+# https://mail-index.netbsd.org/pkgsrc-users/2025/04/17/msg041482.html
+SUBST_CLASSES+=		pyopt
+SUBST_MESSAGE.pyopt=	Fixing Python byte compile optimization level.
+SUBST_STAGE.pyopt=	pre-configure
+SUBST_FILES.pyopt=	py-compile
+SUBST_SED.pyopt=	-e 's/ -OO / -O /g'
+
 SUBST_CLASSES+=		dbus
 SUBST_STAGE.dbus=	post-configure
 SUBST_FILES.dbus=	src/ibusshare.c
 SUBST_SED.dbus=		-e 's,/var/lib/dbus/machine-id,${VARBASE}/lib/dbus/machine-id,g'
 
-BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
-MANCOMPRESSED=	yes
+BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
+MANCOMPRESSED=		yes
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/ibus
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dconf/db/ibus.d
@@ -72,8 +89,11 @@ CONFIGURE_ARGS+=	--disable-wayland
 # Trigger .vala->.c regeneration of files that contain
 # "#if USE_GDK_WAYLAND" preprocessing directives since we
 # might be on a platform where gtk3 is not built with Wayland.
+# Also make sure to regenerate portal/ibus-portal-dbus.[ch] to
+# sync with system glib2 version.
 pre-build:
 	${TOUCH} ${WRKSRC}/ui/gtk3/*.vala
+	${TOUCH} ${WRKSRC}/portal/org.freedesktop.IBus.Portal.xml
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/dconf/database.mk"

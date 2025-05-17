@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/11/23 05:09:04 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/05/17 18:32:24 tsutsui Exp $
 bin/ibus
 bin/ibus-daemon
 bin/ibus-setup
@@ -322,6 +322,7 @@ share/locale/id/LC_MESSAGES/ibus10.mo
 share/locale/it/LC_MESSAGES/ibus10.mo
 share/locale/ja/LC_MESSAGES/ibus10.mo
 share/locale/ka/LC_MESSAGES/ibus10.mo
+share/locale/kab/LC_MESSAGES/ibus10.mo
 share/locale/kn/LC_MESSAGES/ibus10.mo
 share/locale/ko/LC_MESSAGES/ibus10.mo
 share/locale/lv/LC_MESSAGES/ibus10.mo
