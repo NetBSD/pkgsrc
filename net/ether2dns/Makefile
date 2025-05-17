@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2015/12/10 18:21:43 is Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/17 19:14:33 zafer Exp $
 #
 
 DISTNAME=		ether2dns-1.8
 CATEGORIES=		net
-MASTER_SITES=		http://theory.cs.uni-bonn.de/~ignatios/
+MASTER_SITES=		https://theory.cs.uni-bonn.de/ignatios/
 EXTRACT_SUFX=		.shar
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://theory.cs.uni-bonn.de/~ignatios/
+HOMEPAGE=		https://theory.cs.uni-bonn.de/ignatios/
 COMMENT=		Converter from /etc/ethers to IPv6 DNS records
 
 WRKSRC=			${WRKDIR}
