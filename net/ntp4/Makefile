@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.109 2023/10/24 22:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/05/17 19:20:44 zafer Exp $
 #
 
 DISTNAME=	ntp-4.2.8p15
 PKGREVISION=	4
 CATEGORIES=	net time
-MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
+MASTER_SITES=	https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ntp.org/
