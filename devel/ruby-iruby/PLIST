@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/09 09:25:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/17 06:38:09 taca Exp $
 bin/iruby${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGES.md
@@ -15,7 +14,6 @@ ${GEM_LIBDIR}/ci/requirements.txt
 ${GEM_LIBDIR}/docker/setup.sh
 ${GEM_LIBDIR}/docker/test.sh
 ${GEM_LIBDIR}/exe/iruby
-${GEM_LIBDIR}/ext/Rakefile
 ${GEM_LIBDIR}/iruby.gemspec
 ${GEM_LIBDIR}/lib/iruby.rb
 ${GEM_LIBDIR}/lib/iruby/application.rb
