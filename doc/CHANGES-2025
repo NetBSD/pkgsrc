@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3336 2025/05/17 07:30:12 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3337 2025/05/17 07:34:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4942,3 +4942,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-redmine60 to 6.0.5 [taca 2025-05-17]
 	Updated devel/ruby-rspec-support to 3.13.3 [taca 2025-05-17]
 	Updated devel/ruby-rspec-expectations to 3.13.4 [taca 2025-05-17]
+	Updated devel/ruby-rspec-mocks to 3.13.4 [taca 2025-05-17]
