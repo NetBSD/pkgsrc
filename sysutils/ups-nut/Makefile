@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.78 2025/05/16 16:55:21 martin Exp $
+# $NetBSD: Makefile,v 1.79 2025/05/17 23:34:12 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Network UPS Tools
 
 PLIST_VARS+=		python
@@ -18,8 +19,8 @@ SUBST_NOOP_OK.man-so=	yes
 TOOLS_SCRIPT.perl=	exit 1
 
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
-CONFIGURE_ARGS+=	--with-pidpath=${NUT_STATEDIR:Q}
-CONFIGURE_ARGS+=	--with-altpidpath=${NUT_STATEDIR:Q}
+CONFIGURE_ARGS+=	--with-pidpath=${NUT_RUNDIR:Q}
+CONFIGURE_ARGS+=	--with-altpidpath=${NUT_RUNDIR:Q}
 
 # nut, bizarrely, does not install headers by default
 CONFIGURE_ARGS+=	--with-dev
@@ -36,7 +37,7 @@ CONFIGURE_ARGS+=	--without-python2
 
 PKG_GROUPS_VARS+=	NUT_GROUP
 PKG_USERS_VARS+=	NUT_USER
-BUILD_DEFS+=		NUT_STATEDIR VARBASE
+BUILD_DEFS+=		NUT_RUNDIR NUT_STATEDIR VARBASE
 
 FILES_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR:Q}
 FILES_SUBST+=		NUT_STATEDIR=${NUT_STATEDIR:Q}
