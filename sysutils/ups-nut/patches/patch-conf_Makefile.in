@@ -1,14 +1,14 @@
-$NetBSD: patch-conf_Makefile.in,v 1.1 2023/11/09 16:41:15 gdt Exp $
+$NetBSD: patch-conf_Makefile.in,v 1.2 2025/05/17 23:56:37 gdt Exp $
 
 Place example configs in example directory, not etcdir.
 This is a pkgsrc norms adjustment and thus not reportable upstream.
 
---- conf/Makefile.in.orig	2023-10-31 22:03:30.000000000 +0000
+--- conf/Makefile.in.orig	2025-03-31 12:16:18.000000000 +0000
 +++ conf/Makefile.in
-@@ -218,7 +218,7 @@ CC = @CC@
- CCDEPMODE = @CCDEPMODE@
- CFLAGS = @CFLAGS@
+@@ -229,7 +229,7 @@ CONFIG_CPPFLAGS = @CONFIG_CPPFLAGS@
+ CONFIG_CXXFLAGS = @CONFIG_CXXFLAGS@
  CONFIG_FLAGS = @CONFIG_FLAGS@
+ CONFIG_LDFLAGS = @CONFIG_LDFLAGS@
 -CONFPATH = @CONFPATH@
 +CONFPATH = $(DESTDIR)@prefix@/share/examples/nut
  CPP = @CPP@

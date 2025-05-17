@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2025/05/16 16:55:21 martin Exp $
+@comment $NetBSD: PLIST,v 1.35 2025/05/17 23:56:37 gdt Exp $
 bin/nut-scanner
 bin/nutconf
 bin/upsc
@@ -36,6 +36,7 @@ libexec/nut/bestfcom
 libexec/nut/bestfortress
 libexec/nut/bestuferrups
 libexec/nut/bestups
+libexec/nut/bicker_ser
 libexec/nut/blazer_ser
 libexec/nut/clone
 libexec/nut/clone-outlet
@@ -48,6 +49,7 @@ libexec/nut/isbmex
 libexec/nut/ivtscd
 libexec/nut/liebert
 libexec/nut/liebert-esp2
+libexec/nut/liebert-gxe
 libexec/nut/masterguard
 libexec/nut/metasys
 libexec/nut/mge-shut
@@ -108,6 +110,7 @@ man/man3/nutclient_tcp_set_timeout.3
 man/man3/nutscan.3
 man/man3/nutscan_add_commented_option_to_device.3
 man/man3/nutscan_add_device_to_device.3
+man/man3/nutscan_add_ip_range.3
 man/man3/nutscan_add_option_to_device.3
 man/man3/nutscan_cidr_to_ip.3
 man/man3/nutscan_display_parsable.3
@@ -116,8 +119,12 @@ man/man3/nutscan_display_sanity_check_serial.3
 man/man3/nutscan_display_ups_conf.3
 man/man3/nutscan_display_ups_conf_with_sanity_check.3
 man/man3/nutscan_free_device.3
+man/man3/nutscan_free_ip_ranges.3
 man/man3/nutscan_get_serial_ports_list.3
 man/man3/nutscan_init.3
+man/man3/nutscan_init_ip_ranges.3
+man/man3/nutscan_ip_ranges_iter_inc.3
+man/man3/nutscan_ip_ranges_iter_init.3
 man/man3/nutscan_new_device.3
 man/man3/nutscan_scan_avahi.3
 man/man3/nutscan_scan_eaton_serial.3
@@ -127,23 +134,30 @@ man/man3/nutscan_scan_nut_simulation.3
 man/man3/nutscan_scan_snmp.3
 man/man3/nutscan_scan_usb.3
 man/man3/nutscan_scan_xml_http_range.3
+man/man3/nutscan_stringify_ip_ranges.3
 man/man3/upscli_add_host_cert.3
 man/man3/upscli_cleanup.3
 man/man3/upscli_connect.3
 man/man3/upscli_disconnect.3
 man/man3/upscli_fd.3
 man/man3/upscli_get.3
+man/man3/upscli_get_default_connect_timeout.3
 man/man3/upscli_init.3
+man/man3/upscli_init_default_connect_timeout.3
 man/man3/upscli_list_next.3
 man/man3/upscli_list_start.3
 man/man3/upscli_readline.3
 man/man3/upscli_readline_timeout.3
 man/man3/upscli_sendline.3
 man/man3/upscli_sendline_timeout.3
+man/man3/upscli_set_default_connect_timeout.3
 man/man3/upscli_splitaddr.3
 man/man3/upscli_splitname.3
 man/man3/upscli_ssl.3
+man/man3/upscli_str_add_unique_token.3
+man/man3/upscli_str_contains_token.3
 man/man3/upscli_strerror.3
+man/man3/upscli_tryconnect.3
 man/man3/upscli_upserror.3
 man/man3/upsclient.3
 man/man5/nut.conf.5
@@ -163,7 +177,9 @@ man/man8/bestfcom.8
 man/man8/bestfortress.8
 man/man8/bestuferrups.8
 man/man8/bestups.8
+man/man8/bicker_ser.8
 man/man8/blazer_ser.8
+man/man8/clone-outlet.8
 man/man8/clone.8
 man/man8/dummy-ups.8
 man/man8/etapro.8
@@ -173,6 +189,7 @@ man/man8/genericups.8
 man/man8/isbmex.8
 man/man8/ivtscd.8
 man/man8/liebert-esp2.8
+man/man8/liebert-gxe.8
 man/man8/liebert.8
 man/man8/masterguard.8
 man/man8/metasys.8
@@ -259,6 +276,7 @@ share/doc/nut/detailed/packager-guide.txt
 share/doc/nut/detailed/release-notes.txt
 share/doc/nut/detailed/scheduling.txt
 share/doc/nut/detailed/security.txt
+share/doc/nut/detailed/sms-brazil-protocol.txt
 share/doc/nut/detailed/snmp-subdrivers.txt
 share/doc/nut/detailed/snmp.txt
 share/doc/nut/detailed/sock-protocol.txt
@@ -273,5 +291,6 @@ share/examples/nut/upsmon.conf.sample
 share/examples/nut/upssched.conf.sample
 share/nut/cmdvartab
 share/nut/driver.list
+@pkgdir share/doc/nut/html-man
 @pkgdir share/doc/nut/drivers
 @pkgdir etc/nut
