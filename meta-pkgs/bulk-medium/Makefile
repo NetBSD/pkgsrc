@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2025/05/17 06:10:48 taca Exp $
+# $NetBSD: Makefile,v 1.119 2025/05/17 06:17:43 wiz Exp $
 
 DISTNAME=	bulk-medium-20250517
 CATEGORIES=	meta-pkgs
@@ -85,7 +85,7 @@ DEPENDS+=	php74>=7.4<7.5:../../lang/php74
 DEPENDS+=	php81>=8.1<8.2:../../lang/php81
 DEPENDS+=	php82>=8.2<8.3:../../lang/php82
 DEPENDS+=	php83>=8.3<8.4:../../lang/php83
-DEPENDS+=	php83>=8.3<8.4:../../lang/php84
+DEPENDS+=	php84>=8.4<8.5:../../lang/php84
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	ruby33-[0-9]*:../../lang/ruby33
 DEPENDS+=	ruby34-[0-9]*:../../lang/ruby34
