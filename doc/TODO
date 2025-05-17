@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25811 2025/05/17 02:14:49 gutteridge Exp $
+$NetBSD: TODO,v 1.25812 2025/05/17 05:40:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -395,8 +395,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
 	o Sigil-2.4.2
-	o SOGo-5.12.0
-	o SOPE-5.12.0
+	o SOGo-5.12.1
+	o SOPE-5.12.1
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
@@ -827,6 +827,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
+	o kea-2.6.2
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
