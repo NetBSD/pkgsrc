@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2018/10/07 22:26:42 maya Exp $
+# $NetBSD: Makefile,v 1.25 2025/05/17 19:17:45 zafer Exp $
 
 DISTNAME=	miniupnpd-2.1
 CATEGORIES=	net
-MASTER_SITES=	http://miniupnp.free.fr/files/download.php?file=
+MASTER_SITES=	http://miniupnp.free.fr/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://miniupnp.free.fr/
