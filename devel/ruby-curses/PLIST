@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/10/27 13:33:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/05/17 06:20:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/curses.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/sample/menu.rb
 ${GEM_LIBDIR}/sample/mouse.rb
 ${GEM_LIBDIR}/sample/mouse_move.rb
 ${GEM_LIBDIR}/sample/rain.rb
+${GEM_LIBDIR}/sample/screen.rb
 ${GEM_LIBDIR}/sample/view.rb
 ${GEM_LIBDIR}/sample/view2.rb
 ${GEM_LIBDIR}/vendor/PDCurses/.gitignore
