@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:51 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/17 19:18:38 zafer Exp $
 
 DISTNAME=	mping-2.01
 CATEGORIES=	net
-MASTER_SITES=	http://mping.uninett.no/
+MASTER_SITES=	https://mping.uninett.no/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mping.uninett.no/
