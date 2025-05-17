@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3326 2025/05/17 06:38:23 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3327 2025/05/17 06:40:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-hoe to 4.2.3 [taca 2025-05-17]
 	Updated devel/ruby-irb to 1.15.2 [taca 2025-05-17]
 	Updated devel/ruby-iruby to 0.8.2 [taca 2025-05-17]
+	Updated devel/ruby-mixlib-log to 3.2.3 [taca 2025-05-17]
