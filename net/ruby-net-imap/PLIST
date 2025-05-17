@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/11 16:15:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/05/17 07:57:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
@@ -14,6 +14,7 @@ ${GEM_LIBDIR}/lib/net/imap/config.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_accessors.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_inheritance.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_type_coercion.rb
+${GEM_LIBDIR}/lib/net/imap/connection_state.rb
 ${GEM_LIBDIR}/lib/net/imap/data_encoding.rb
 ${GEM_LIBDIR}/lib/net/imap/data_lite.rb
 ${GEM_LIBDIR}/lib/net/imap/deprecated_client_options.rb
@@ -24,6 +25,7 @@ ${GEM_LIBDIR}/lib/net/imap/flags.rb
 ${GEM_LIBDIR}/lib/net/imap/response_data.rb
 ${GEM_LIBDIR}/lib/net/imap/response_parser.rb
 ${GEM_LIBDIR}/lib/net/imap/response_parser/parser_utils.rb
+${GEM_LIBDIR}/lib/net/imap/response_reader.rb
 ${GEM_LIBDIR}/lib/net/imap/sasl.rb
 ${GEM_LIBDIR}/lib/net/imap/sasl/anonymous_authenticator.rb
 ${GEM_LIBDIR}/lib/net/imap/sasl/authentication_exchange.rb
