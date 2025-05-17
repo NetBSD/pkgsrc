@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/13 12:39:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/17 07:53:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -78,6 +78,9 @@ ${PYSITELIB}/prometheus_client/twisted/_exposition.pyo
 ${PYSITELIB}/prometheus_client/utils.py
 ${PYSITELIB}/prometheus_client/utils.pyc
 ${PYSITELIB}/prometheus_client/utils.pyo
+${PYSITELIB}/prometheus_client/validation.py
+${PYSITELIB}/prometheus_client/validation.pyc
+${PYSITELIB}/prometheus_client/validation.pyo
 ${PYSITELIB}/prometheus_client/values.py
 ${PYSITELIB}/prometheus_client/values.pyc
 ${PYSITELIB}/prometheus_client/values.pyo
