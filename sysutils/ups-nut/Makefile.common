@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2025/02/13 19:18:36 gdt Exp $
+# $NetBSD: Makefile.common,v 1.18 2025/05/17 23:34:12 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -45,7 +45,8 @@ NUT_DATADIR=		${PREFIX}/share/nut
 NUT_DOCDIR=		${PREFIX}/share/doc/nut
 NUT_DRVDIR=		${PREFIX}/libexec/nut
 NUT_EGDIR=		${PREFIX}/share/examples/nut
-# \todo STATEDIR is used for pidfiles and socckets, and thus should be /var/run.
-# Move creation from OWN_DIRS_PERMS into rc.d/upsd.
 NUT_STATEDIR?=		${VARBASE}/db/nut
+# \todo RUNDIR is used for pidfiles and socckets, and thus should be /var/run.
+# Move creation from OWN_DIRS_PERMS into rc.d/upsd.
+NUT_RUNDIR?=		${VARBASE}/db/nut
 NUT_CGIDIR=		${PREFIX}/libexec/cgi-bin
