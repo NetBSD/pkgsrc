@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/03/16 12:29:39 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/17 07:25:35 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	6.0.4
+RM_VERSION=	6.0.5
 
 NO_BUILD=	yes
 
@@ -49,7 +49,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 
 .include "../../lang/ruby/modules.mk"
 
-# not for ruby33
+# for older Ruby
 .if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.8<4:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.4.8:../../net/ruby-net-imap
