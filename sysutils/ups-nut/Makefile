@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2025/05/17 23:34:12 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2025/05/17 23:56:37 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
-PKGREVISION=		1
 COMMENT=		Network UPS Tools
 
 PLIST_VARS+=		python
