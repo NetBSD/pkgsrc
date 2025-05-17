@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/09 14:22:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/17 06:06:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/async.rb
 ${GEM_LIBDIR}/lib/async/barrier.md
@@ -19,12 +19,12 @@ ${GEM_LIBDIR}/lib/async/semaphore.md
 ${GEM_LIBDIR}/lib/async/semaphore.rb
 ${GEM_LIBDIR}/lib/async/task.md
 ${GEM_LIBDIR}/lib/async/task.rb
+${GEM_LIBDIR}/lib/async/timeout.rb
 ${GEM_LIBDIR}/lib/async/variable.rb
 ${GEM_LIBDIR}/lib/async/version.rb
 ${GEM_LIBDIR}/lib/async/waiter.md
 ${GEM_LIBDIR}/lib/async/waiter.rb
 ${GEM_LIBDIR}/lib/async/worker_pool.rb
-${GEM_LIBDIR}/lib/async/wrapper.rb
 ${GEM_LIBDIR}/lib/kernel/async.rb
 ${GEM_LIBDIR}/lib/kernel/sync.rb
 ${GEM_LIBDIR}/lib/metrics/provider/async.rb
