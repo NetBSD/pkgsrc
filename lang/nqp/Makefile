@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2025/03/02 02:15:46 mef Exp $
+# $NetBSD: Makefile,v 1.58 2025/05/17 11:49:16 mef Exp $
 
-DISTNAME=	nqp-2025.02
+DISTNAME=	nqp-2025.04
 CATEGORIES=	lang perl6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 
