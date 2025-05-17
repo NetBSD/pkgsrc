@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3343 2025/05/17 07:54:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3344 2025/05/17 07:57:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4952,3 +4952,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyterlab-widgets to 3.0.15 [adam 2025-05-17]
 	Updated www/py-jupyter_server to 2.16.0 [adam 2025-05-17]
 	Updated net/py-prometheus_client to 0.22.0 [adam 2025-05-17]
+	Updated net/ruby-net-imap to 0.5.8 [taca 2025-05-17]
