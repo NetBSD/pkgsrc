@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3337 2025/05/17 07:34:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3338 2025/05/17 07:36:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-rspec-support to 3.13.3 [taca 2025-05-17]
 	Updated devel/ruby-rspec-expectations to 3.13.4 [taca 2025-05-17]
 	Updated devel/ruby-rspec-mocks to 3.13.4 [taca 2025-05-17]
+	Updated devel/ruby-shoulda-matchers to 6.5.0 [taca 2025-05-17]
