@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/12/14 17:11:08 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/05/17 14:28:55 wiz Exp $
 
-BLAKE2s (monsterz-0.8.tar.gz) = 91bbd724c8a97f10142ad24a05fa7051ce4e16b9995b3ff51bd7954977a2468d
-SHA512 (monsterz-0.8.tar.gz) = 2518246aa97499922efe88529656dde84d8f925fb88895d6de977fe63b424a7fec62a06c2757c54b3a87595f3be02b4ef6a82442338b9db67e007fed2e6c00f0
-Size (monsterz-0.8.tar.gz) = 2316029 bytes
-SHA1 (patch-Makefile) = cc67e869e053e3a900f9ca9cdb2f8dbda727b5a5
+BLAKE2s (monsterz-0.9.tar.gz) = 6e96277c6f6b021d811dc5759d98d584f682add02b0d5cac596be30735a64ddf
+SHA512 (monsterz-0.9.tar.gz) = b0193e1f3fff42804895b8bd3dbfcc10785906f88b1c92a698c8fc4efa343b9a26af49bf3987438a5de1bb264012c82d87d284b4e8b1ff30d9c758616122e9a7
+Size (monsterz-0.9.tar.gz) = 1885376 bytes
+SHA1 (patch-Makefile) = 0742058f210065a69ea4790fd38484114a6ba514

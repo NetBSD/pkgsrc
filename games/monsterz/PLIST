@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/17 14:28:55 wiz Exp $
 bin/monsterz
+man/man6/monsterz.6
+share/applications/monsterz.desktop
 share/games/monsterz/graphics/background.png
 share/games/monsterz/graphics/bigtiles.png
 share/games/monsterz/graphics/board.png

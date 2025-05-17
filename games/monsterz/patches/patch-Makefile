@@ -1,44 +1,24 @@
-$NetBSD: patch-Makefile,v 1.1 2024/12/14 17:11:08 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/05/17 14:28:55 wiz Exp $
 
-Honor CFLAGS and LDFLAGS.
-Use pkgsrc installation tools.
+Let pkgsrc handle special permissions.
 
---- Makefile.orig	2024-12-14 16:55:09.000000000 +0000
+--- Makefile.orig	2025-05-17 13:56:56.000000000 +0000
 +++ Makefile
-@@ -22,7 +22,7 @@ INKSCAPE = inkscape
- all: monsterz
- 
- monsterz: monsterz.c
--	$(CC) -Wall monsterz.c -DDATADIR=\"$(pkgdatadir)\" -DSCOREFILE=\"$(scorefile)\" -o monsterz
-+	$(CC) $(LDFLAGS) $(CFLAGS) -Wall monsterz.c -DDATADIR=\"$(pkgdatadir)\" -DSCOREFILE=\"$(scorefile)\" -o monsterz
- 
- bitmap: $(BITMAP)
- 
-@@ -40,18 +40,15 @@ graphics/logo.png: graphics/graphics.svg
- 	$(INKSCAPE) --actions="export-area:810:125:1220:342;export-width:380;export-height:180;export-filename:graphics/logo.png;export-do;" graphics/graphics.svg
- 
- install: all
--	mkdir -p $(DESTDIR)$(gamesdir)
--	cp monsterz $(DESTDIR)$(gamesdir)/
+@@ -53,8 +53,6 @@ install: all
+ 	$(INSTALL_DIR) $(DESTDIR)$(applicationsdir)
+ 	$(INSTALL_DIR) $(DESTDIR)$(mandir)/man6
+ 	$(INSTALL_PROGRAM) monsterz $(DESTDIR)$(gamesdir)/
 -	chown root:games $(DESTDIR)$(gamesdir)/monsterz
 -	chmod g+s $(DESTDIR)$(gamesdir)/monsterz
--	mkdir -p $(DESTDIR)$(pkgdatadir)/graphics
--	mkdir -p $(DESTDIR)$(pkgdatadir)/sound
--	cp monsterz.py $(DESTDIR)$(pkgdatadir)/
--	cp $(BITMAP) $(DESTDIR)$(pkgdatadir)/graphics/
--	cp $(SOUND) $(MUSIC) $(DESTDIR)$(pkgdatadir)/sound/
--	mkdir -p $(DESTDIR)$(scoredir)
-+	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(gamesdir)
-+	${BSD_INSTALL_GAME} monsterz $(DESTDIR)$(gamesdir)/
-+	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(pkgdatadir)/graphics
-+	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(pkgdatadir)/sound
-+	${BSD_INSTALL_SCRIPT} monsterz.py $(DESTDIR)$(pkgdatadir)/
-+	${BSD_INSTALL_GAME_DATA} $(BITMAP) $(DESTDIR)$(pkgdatadir)/graphics/
-+	${BSD_INSTALL_GAME_DATA} $(SOUND) $(MUSIC) $(DESTDIR)$(pkgdatadir)/sound/
-+	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(scoredir)
-+	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(scoredir)
+ 	$(INSTALL_DIR) $(DESTDIR)$(pkgdatadir)/graphics
+ 	$(INSTALL_DIR) $(DESTDIR)$(pkgdatadir)/sound
+ 	$(INSTALL_SCRIPT) monsterz.py $(DESTDIR)$(pkgdatadir)/
+@@ -64,8 +62,6 @@ install: all
+ 	$(INSTALL_DATA) monsterz.6 $(DESTDIR)$(mandir)/man6
+ 	$(INSTALL_DIR) $(DESTDIR)$(scoredir)
  	test -f $(DESTDIR)$(scorefile) || echo "" > $(DESTDIR)$(scorefile)
 -	chown root:games $(DESTDIR)$(scorefile)
 -	chmod g+w $(DESTDIR)$(scorefile)
  
  uninstall:
+ 	rm -f $(DESTDIR)$(gamesdir)/monsterz
