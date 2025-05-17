@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3325 2025/05/17 06:36:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3326 2025/05/17 06:38:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4931,3 +4931,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/ruby-google-protobuf version 4.31.0 [taca 2025-05-17]
 	Updated devel/ruby-hoe to 4.2.3 [taca 2025-05-17]
 	Updated devel/ruby-irb to 1.15.2 [taca 2025-05-17]
+	Updated devel/ruby-iruby to 0.8.2 [taca 2025-05-17]
