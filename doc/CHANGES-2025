@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3309 2025/05/16 23:05:18 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3310 2025/05/17 05:39:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4910,3 +4910,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 136.0.7103.113 [wiz 2025-05-16]
 	Updated net/megacmd to 2.1.1 [wiz 2025-05-16]
 	Updated graphics/inkscape to 1.4.2 [ryoon 2025-05-16]
+	Updated lang/php56 to 5.6.40nb3 [taca 2025-05-17]
+	Updated lang/php74 to 7.4.33nb3 [taca 2025-05-17]
+	Updated lang/php81 to 8.1.32nb3 [taca 2025-05-17]
+	Updated lang/php82 to 8.2.28nb3 [taca 2025-05-17]
+	Updated lang/php83 to 8.3.20nb3 [taca 2025-05-17]
+	Updated lang/php84 to 8.4.6nb3 [taca 2025-05-17]
