@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2025/05/11 17:10:38 gdt Exp $
+# $NetBSD: Makefile,v 1.86 2025/05/17 23:24:00 gdt Exp $
 
-DISTNAME=	gajim-2.0.4
+DISTNAME=	gajim-2.1.1
 CATEGORIES=	chat
 MASTER_SITES=	https://www.gajim.org/downloads/${PKGVERSION_NOREV:R}/
 

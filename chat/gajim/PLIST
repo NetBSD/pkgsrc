@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/05/11 17:10:38 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/05/17 23:24:00 gdt Exp $
 bin/gajim
 bin/gajim-remote
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -28,9 +28,6 @@ ${PYSITELIB}/gajim/common/cert_store.pyo
 ${PYSITELIB}/gajim/common/client.py
 ${PYSITELIB}/gajim/common/client.pyc
 ${PYSITELIB}/gajim/common/client.pyo
-${PYSITELIB}/gajim/common/client_modules.py
-${PYSITELIB}/gajim/common/client_modules.pyc
-${PYSITELIB}/gajim/common/client_modules.pyo
 ${PYSITELIB}/gajim/common/commands.py
 ${PYSITELIB}/gajim/common/commands.pyc
 ${PYSITELIB}/gajim/common/commands.pyo
@@ -187,6 +184,9 @@ ${PYSITELIB}/gajim/common/modules/last_activity.pyo
 ${PYSITELIB}/gajim/common/modules/mam.py
 ${PYSITELIB}/gajim/common/modules/mam.pyc
 ${PYSITELIB}/gajim/common/modules/mam.pyo
+${PYSITELIB}/gajim/common/modules/mds.py
+${PYSITELIB}/gajim/common/modules/mds.pyc
+${PYSITELIB}/gajim/common/modules/mds.pyo
 ${PYSITELIB}/gajim/common/modules/message.py
 ${PYSITELIB}/gajim/common/modules/message.pyc
 ${PYSITELIB}/gajim/common/modules/message.pyo
@@ -403,9 +403,13 @@ ${PYSITELIB}/gajim/config.pyc
 ${PYSITELIB}/gajim/config.pyo
 ${PYSITELIB}/gajim/data/gui/account_page.ui
 ${PYSITELIB}/gajim/data/gui/account_wizard.ui
+${PYSITELIB}/gajim/data/gui/activity_default.ui
+${PYSITELIB}/gajim/data/gui/activity_gajim_update.ui
+${PYSITELIB}/gajim/data/gui/activity_list_row.ui
+${PYSITELIB}/gajim/data/gui/activity_muc_invitation.ui
+${PYSITELIB}/gajim/data/gui/activity_subscription.ui
 ${PYSITELIB}/gajim/data/gui/add_contact.ui
 ${PYSITELIB}/gajim/data/gui/advanced_configuration.ui
-${PYSITELIB}/gajim/data/gui/app_page.ui
 ${PYSITELIB}/gajim/data/gui/assistant.ui
 ${PYSITELIB}/gajim/data/gui/blocking_list.ui
 ${PYSITELIB}/gajim/data/gui/call_window.ui
@@ -564,6 +568,7 @@ ${PYSITELIB}/gajim/data/icons/hicolor/32x32/devices/feather-user-symbolic.symbol
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/devices/feather-users-symbolic.symbolic.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/devices/lucide-bot-symbolic.symbolic.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-event.png
+${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-group-chat-invitation.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-away.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-chat.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-connecting.png
@@ -575,6 +580,7 @@ ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-muc-inactive.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-offline.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-online.png
 ${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-status-xa.png
+${PYSITELIB}/gajim/data/icons/hicolor/32x32/status/gajim-subscription-request.png
 ${PYSITELIB}/gajim/data/icons/hicolor/48x48/devices/lucide-bot-symbolic.symbolic.png
 ${PYSITELIB}/gajim/data/icons/hicolor/48x48/status/gajim-chat-msg-recv.png
 ${PYSITELIB}/gajim/data/icons/hicolor/48x48/status/gajim-group-chat-invitation.png
@@ -584,6 +590,8 @@ ${PYSITELIB}/gajim/data/icons/hicolor/48x48/status/gajim-subscription-request.pn
 ${PYSITELIB}/gajim/data/icons/hicolor/48x48/status/gajim-unsubscribed.png
 ${PYSITELIB}/gajim/data/icons/hicolor/96x96/apps/gajim.png
 ${PYSITELIB}/gajim/data/icons/hicolor/96x96/categories/map.png
+${PYSITELIB}/gajim/data/icons/hicolor/96x96/status/gajim-group-chat-invitation.png
+${PYSITELIB}/gajim/data/icons/hicolor/96x96/status/gajim-subscription-request.png
 ${PYSITELIB}/gajim/data/icons/hicolor/index.theme
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/apps/gajim-devel.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/apps/gajim-source.svg
@@ -592,6 +600,8 @@ ${PYSITELIB}/gajim/data/icons/hicolor/scalable/apps/gajim.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/categories/map.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/categories/qr-code-scan-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/LICENSE
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feaher-share-2-symbolic.svg
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-bell-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-briefcase-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-camera-off-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-camera-symbolic.svg
@@ -627,6 +637,7 @@ ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-unlock-symbolic.s
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-user-check-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-user-plus-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-user-symbolic.svg
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-user.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-users-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/feather-zap-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-arrow-left-symbolic.svg
@@ -637,11 +648,13 @@ ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-calendar-search-sy
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-calendar-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-file-down-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-file-up-symbolic.svg
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-languages-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-megaphone-off-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-megaphone-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-notebook-tabs-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-reply-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-smile-plus-symbolic.svg
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-user-cog-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/devices/lucide-x-symbolic.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-agent-bytestreams.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-agent-conference.svg
@@ -678,6 +691,7 @@ ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-status-offline.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-status-online.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-status-xa.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-subscribe.svg
+${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-subscription-request.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gajim-unsubscribe.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gateway-discord.svg
 ${PYSITELIB}/gajim/data/icons/hicolor/scalable/status/gateway-facebook.svg
@@ -766,6 +780,15 @@ ${PYSITELIB}/gajim/gtk/account_wizard.pyo
 ${PYSITELIB}/gajim/gtk/accounts.py
 ${PYSITELIB}/gajim/gtk/accounts.pyc
 ${PYSITELIB}/gajim/gtk/accounts.pyo
+${PYSITELIB}/gajim/gtk/activity_list.py
+${PYSITELIB}/gajim/gtk/activity_list.pyc
+${PYSITELIB}/gajim/gtk/activity_list.pyo
+${PYSITELIB}/gajim/gtk/activity_page.py
+${PYSITELIB}/gajim/gtk/activity_page.pyc
+${PYSITELIB}/gajim/gtk/activity_page.pyo
+${PYSITELIB}/gajim/gtk/activity_side_bar.py
+${PYSITELIB}/gajim/gtk/activity_side_bar.pyc
+${PYSITELIB}/gajim/gtk/activity_side_bar.pyo
 ${PYSITELIB}/gajim/gtk/add_contact.py
 ${PYSITELIB}/gajim/gtk/add_contact.pyc
 ${PYSITELIB}/gajim/gtk/add_contact.pyo
@@ -775,12 +798,6 @@ ${PYSITELIB}/gajim/gtk/adhoc.pyo
 ${PYSITELIB}/gajim/gtk/advanced_config.py
 ${PYSITELIB}/gajim/gtk/advanced_config.pyc
 ${PYSITELIB}/gajim/gtk/advanced_config.pyo
-${PYSITELIB}/gajim/gtk/app_page.py
-${PYSITELIB}/gajim/gtk/app_page.pyc
-${PYSITELIB}/gajim/gtk/app_page.pyo
-${PYSITELIB}/gajim/gtk/app_side_bar.py
-${PYSITELIB}/gajim/gtk/app_side_bar.pyc
-${PYSITELIB}/gajim/gtk/app_side_bar.pyo
 ${PYSITELIB}/gajim/gtk/application.py
 ${PYSITELIB}/gajim/gtk/application.pyc
 ${PYSITELIB}/gajim/gtk/application.pyo
@@ -833,6 +850,9 @@ ${PYSITELIB}/gajim/gtk/chat_list_stack.pyo
 ${PYSITELIB}/gajim/gtk/chat_page.py
 ${PYSITELIB}/gajim/gtk/chat_page.pyc
 ${PYSITELIB}/gajim/gtk/chat_page.pyo
+${PYSITELIB}/gajim/gtk/chat_page_header.py
+${PYSITELIB}/gajim/gtk/chat_page_header.pyc
+${PYSITELIB}/gajim/gtk/chat_page_header.pyo
 ${PYSITELIB}/gajim/gtk/chat_stack.py
 ${PYSITELIB}/gajim/gtk/chat_stack.pyc
 ${PYSITELIB}/gajim/gtk/chat_stack.pyo
@@ -1076,9 +1096,6 @@ ${PYSITELIB}/gajim/gtk/message_input.pyo
 ${PYSITELIB}/gajim/gtk/notification.py
 ${PYSITELIB}/gajim/gtk/notification.pyc
 ${PYSITELIB}/gajim/gtk/notification.pyo
-${PYSITELIB}/gajim/gtk/notification_manager.py
-${PYSITELIB}/gajim/gtk/notification_manager.pyc
-${PYSITELIB}/gajim/gtk/notification_manager.pyo
 ${PYSITELIB}/gajim/gtk/omemo_trust_manager.py
 ${PYSITELIB}/gajim/gtk/omemo_trust_manager.pyc
 ${PYSITELIB}/gajim/gtk/omemo_trust_manager.pyo
