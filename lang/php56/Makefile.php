@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.10 2025/02/08 02:57:59 taca Exp $
+# $NetBSD: Makefile.php,v 1.11 2025/05/17 05:37:25 taca Exp $
 # used by lang/php56/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -24,9 +24,10 @@ PRINT_PLIST_AWK+=	/${PHP_VER}/ { sub(/${PHP_VER}/, "$${PHP_VER}") }
 CONFIGURE_ARGS+=	--program-suffix=${PHP_VER}
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR}/php.d
-CONFIGURE_ARGS+=	--with-pear=${PREFIX}/${PHP_LIBDIR}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/${PHP_LIBDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PHP_SHAREDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONFIGURE_ARGS+=	--with-regex=system
