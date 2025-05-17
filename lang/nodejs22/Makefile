@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2025/04/25 13:54:10 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/17 14:15:26 adam Exp $
 
-DISTNAME=	node-v22.15.0
+DISTNAME=	node-v22.15.1
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c c++
 
+USE_CXX_FEATURES=	c++20 charconv
 FORCE_CXX_STD=		gnu++20
-USE_CXX_FEATURES+=	c++20 charconv
 
 .include "../../mk/bsd.prefs.mk"
 
