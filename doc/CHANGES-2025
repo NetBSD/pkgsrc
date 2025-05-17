@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3317 2025/05/17 06:15:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3318 2025/05/17 06:18:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4923,3 +4923,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/bulk-medium to 20250517 [taca 2025-05-17]
 	Updated devel/ruby-backports to 3.25.1 [taca 2025-05-17]
 	Updated devel/ruby-bindata to 2.5.1 [taca 2025-05-17]
+	Updated devel/ruby-byebug to 12.0.0 [taca 2025-05-17]
