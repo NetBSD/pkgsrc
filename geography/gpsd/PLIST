@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/03/09 00:52:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/05/17 23:11:52 gdt Exp $
 bin/cgps
 bin/gegps
 bin/gps2udp
@@ -8,6 +8,7 @@ bin/gpsctl
 bin/gpsdebuginfo
 bin/gpsdecode
 bin/gpsfake
+bin/gpslogntp
 bin/gpsmon
 bin/gpspipe
 bin/gpsplot
@@ -25,14 +26,15 @@ bin/zerk
 include/gps.h
 include/libgpsmm.h
 lib/libgps${PLIST_SO}${PLIST_DYLIB}
-lib/libgps${PLIST_SO}.30${PLIST_DYLIB}
-lib/libgps${PLIST_SO}.30.0.0${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.31${PLIST_DYLIB}
+lib/libgps${PLIST_SO}.31.0.0${PLIST_DYLIB}
 lib/libgpsdpacket${PLIST_SO}${PLIST_DYLIB}
-lib/libgpsdpacket${PLIST_SO}.30${PLIST_DYLIB}
-lib/libgpsdpacket${PLIST_SO}.30.0.0${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.31${PLIST_DYLIB}
+lib/libgpsdpacket${PLIST_SO}.31.0.0${PLIST_DYLIB}
 lib/pkgconfig/libgps.pc
 ${PYSITELIB}/gps-${PKGVERSION}.egg-info
 ${PYSITELIB}/gps/__init__.py
+${PYSITELIB}/gps/__main__.py
 ${PYSITELIB}/gps/aiogps.py
 ${PYSITELIB}/gps/client.py
 ${PYSITELIB}/gps/clienthelpers.py
@@ -52,6 +54,7 @@ man/man1/gpsctl.1
 man/man1/gpsdebuginfo.1
 man/man1/gpsdecode.1
 man/man1/gpsfake.1
+man/man1/gpslogntp.1
 man/man1/gpsmon.1
 man/man1/gpspipe.1
 man/man1/gpsplot.1

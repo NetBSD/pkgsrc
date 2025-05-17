@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2025/04/24 14:14:07 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/05/17 23:11:52 gdt Exp $
 
-DISTNAME=	gpsd-3.25
-PKGREVISION=	12
+DISTNAME=	gpsd-3.26.1
 CATEGORIES=	geography
 MASTER_SITES=	http://download-mirror.savannah.gnu.org/releases/gpsd/
 
@@ -51,6 +50,8 @@ do-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
+# \todo Redo this with the new SHLIB_EXT, after someone answers
+# https://mail-index.netbsd.org/tech-pkg/2025/05/14/msg031158.html
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	PLIST_SO=
 PLIST_SUBST+=	PLIST_DYLIB=.dylib
