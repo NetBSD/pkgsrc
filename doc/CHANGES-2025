@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3353 2025/05/17 14:29:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3354 2025/05/17 18:32:40 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4964,3 +4964,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs22 to 22.15.1 [adam 2025-05-17]
 	Updated lang/nodejs to 24.0.2 [adam 2025-05-17]
 	Updated games/monsterz to 0.9 [wiz 2025-05-17]
+	Updated inputmethod/ibus to 1.5.32 [tsutsui 2025-05-17]
