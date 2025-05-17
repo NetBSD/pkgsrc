@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/03/16 12:29:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/17 07:25:35 taca Exp $
 bin/redmine60_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine60_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine60_migrate_db${RUBY_SUFFIX}.sh
@@ -40,6 +40,8 @@ share/${RUBY_NAME}-redmine60/app/assets/images/bullet_toggle_plus.png
 share/${RUBY_NAME}-redmine60/app/assets/images/calendar.png
 share/${RUBY_NAME}-redmine60/app/assets/images/cancel.png
 share/${RUBY_NAME}-redmine60/app/assets/images/changeset.png
+share/${RUBY_NAME}-redmine60/app/assets/images/chevron-down.svg
+share/${RUBY_NAME}-redmine60/app/assets/images/chevron-right-idnt.svg
 share/${RUBY_NAME}-redmine60/app/assets/images/close.png
 share/${RUBY_NAME}-redmine60/app/assets/images/close_hl.png
 share/${RUBY_NAME}-redmine60/app/assets/images/comment.png
@@ -63,6 +65,7 @@ share/${RUBY_NAME}-redmine60/app/assets/images/fav.png
 share/${RUBY_NAME}-redmine60/app/assets/images/fav_off.png
 share/${RUBY_NAME}-redmine60/app/assets/images/favicon.ico
 share/${RUBY_NAME}-redmine60/app/assets/images/feed.png
+share/${RUBY_NAME}-redmine60/app/assets/images/file-rss.svg
 share/${RUBY_NAME}-redmine60/app/assets/images/files/c.png
 share/${RUBY_NAME}-redmine60/app/assets/images/files/csharp.png
 share/${RUBY_NAME}-redmine60/app/assets/images/files/css.png
