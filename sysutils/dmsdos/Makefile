@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/05/27 22:16:46 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/17 19:33:48 zafer Exp $
 #
 
 DISTNAME=	dmsdos-0.9.2.3-pre2-alt2
 PKGNAME=	dmsdos-0.9.2.3pre2alt2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cmp.felk.cvut.cz/~pisa/dmsdos/sources/
+MASTER_SITES=	https://cmp.felk.cvut.cz/~pisa/dmsdos/sources/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://cmp.felk.cvut.cz/~pisa/dmsdos/
+HOMEPAGE=	https://cmp.felk.cvut.cz/~pisa/dmsdos/
 COMMENT=	Program to access DBLSPACE/DRVSPACE containers
 LICENSE=	gnu-gpl-v2
 
