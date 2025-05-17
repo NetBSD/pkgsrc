@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/06/08 15:46:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/05/17 06:25:19 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -76,7 +76,6 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/or1k-sim.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/powerpc-eabisim.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/site.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.ci/wine-sim.exp
-${GEM_LIBDIR}/ext/ffi_c/libffi/.circleci/config.yml
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.gitattributes
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.github/issue_template.md
 ${GEM_LIBDIR}/ext/ffi_c/libffi/.github/workflows/build.yml
@@ -211,9 +210,6 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/mips/o32.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/moxie/eabi.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/moxie/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/moxie/ffitarget.h
-${GEM_LIBDIR}/ext/ffi_c/libffi/src/nios2/ffi.c
-${GEM_LIBDIR}/ext/ffi_c/libffi/src/nios2/ffitarget.h
-${GEM_LIBDIR}/ext/ffi_c/libffi/src/nios2/sysv.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/or1k/ffi.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/or1k/ffitarget.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/or1k/sysv.S
@@ -234,6 +230,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ffi_linux64.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ffi_powerpc.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ffi_sysv.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ffitarget.h
+${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/internal.h
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/linux64.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/linux64_closure.S
 ${GEM_LIBDIR}/ext/ffi_c/libffi/src/powerpc/ppc_closure.S
@@ -327,6 +324,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/many_double.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/many_mixed.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/negint.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/offsets.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/overread.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/pr1172638.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/promotion.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/pyobjc_tc.c
@@ -366,6 +364,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_by_value_4.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_by_value_4f.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_by_value_big.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_by_value_small.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_int_float.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_return_2H.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/struct_return_8H.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/uninitialized.c
@@ -375,6 +374,7 @@ ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/va_3.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/va_struct1.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/va_struct2.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/va_struct3.c
+${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.call/x32.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.closures/closure.exp
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.closures/closure_fn0.c
 ${GEM_LIBDIR}/ext/ffi_c/libffi/testsuite/libffi.closures/closure_fn1.c
