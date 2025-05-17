@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3341 2025/05/17 07:45:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3342 2025/05/17 07:49:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4947,3 +4947,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-version_gem to 1.1.8 [taca 2025-05-17]
 	Updated finance/ruby-braintree to 4.27.0 [taca 2025-05-17]
 	Updated mail/ruby-mime-types-data to 3.2025.0514 [taca 2025-05-17]
+	Updated mail/ruby-mime-types to 3.7.0 [taca 2025-05-17]
