@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/05/09 05:53:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/05/17 06:56:25 wiz Exp $
 bin/FileCheck
 bin/UnicodeNameMappingGenerator
 bin/bugpoint
@@ -2295,7 +2295,7 @@ ${PLIST.RISCV}lib/libLLVMRISCVInfo.a
 ${PLIST.RISCV}lib/libLLVMRISCVTargetMCA.a
 lib/libLLVMRemarks.a
 lib/libLLVMRuntimeDyld.a
-lib/libLLVMSPIRVAnalysis.a
+${PLIST.SPIRV}lib/libLLVMSPIRVAnalysis.a
 ${PLIST.SPIRV}lib/libLLVMSPIRVCodeGen.a
 ${PLIST.SPIRV}lib/libLLVMSPIRVDesc.a
 ${PLIST.SPIRV}lib/libLLVMSPIRVInfo.a
