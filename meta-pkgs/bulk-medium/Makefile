@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.117 2025/02/08 04:10:27 taca Exp $
+# $NetBSD: Makefile,v 1.118 2025/05/17 06:10:48 taca Exp $
 
-DISTNAME=	bulk-medium-20250208
+DISTNAME=	bulk-medium-20250517
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -85,9 +85,10 @@ DEPENDS+=	php74>=7.4<7.5:../../lang/php74
 DEPENDS+=	php81>=8.1<8.2:../../lang/php81
 DEPENDS+=	php82>=8.2<8.3:../../lang/php82
 DEPENDS+=	php83>=8.3<8.4:../../lang/php83
-DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
+DEPENDS+=	php83>=8.3<8.4:../../lang/php84
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	ruby33-[0-9]*:../../lang/ruby33
+DEPENDS+=	ruby34-[0-9]*:../../lang/ruby34
 DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
 DEPENDS+=	openjdk11-[0-9]*:../../lang/openjdk11
 DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
