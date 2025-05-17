@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3311 2025/05/17 05:49:16 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3312 2025/05/17 05:50:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4917,3 +4917,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php83 to 8.3.20nb3 [taca 2025-05-17]
 	Updated lang/php84 to 8.4.6nb3 [taca 2025-05-17]
 	Updated databases/ruby-sequel to 5.92.0 [taca 2025-05-17]
+	Updated databases/ruby-tiny_tds to 3.2.1nb1 [taca 2025-05-17]
