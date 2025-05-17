@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/21 09:13:54 taca Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/17 06:18:00 taca Exp $
 
-DISTNAME=	byebug-11.1.3
+DISTNAME=	byebug-12.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,10 +10,7 @@ LICENSE=	2-clause-bsd
 
 RUBYGEM_OPTIONS+=	--format-executable
 
-.include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
-.endif
+RUBY_VERSIONS_ACCEPTED=	31 32 33
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
