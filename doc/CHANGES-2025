@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3351 2025/05/17 13:21:05 mef Exp $
+$NetBSD: CHANGES-2025,v 1.3352 2025/05/17 14:16:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4960,3 +4960,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/MoarVM to 2025.04 [mef 2025-05-17]
 	Updated lang/nqp to 2025.04 [mef 2025-05-17]
 	Updated lang/rakudo to 2025.04 [mef 2025-05-17]
+	Updated lang/nodejs20 to 20.19.2 [adam 2025-05-17]
+	Updated lang/nodejs22 to 22.15.1 [adam 2025-05-17]
+	Updated lang/nodejs to 24.0.2 [adam 2025-05-17]
