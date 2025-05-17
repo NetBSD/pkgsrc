@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/03/03 16:06:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/05/17 07:41:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -84,9 +84,6 @@ ${GEM_LIBDIR}/lib/braintree/local_payment_reversed.rb
 ${GEM_LIBDIR}/lib/braintree/merchant.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account/address_details.rb
-${GEM_LIBDIR}/lib/braintree/merchant_account/business_details.rb
-${GEM_LIBDIR}/lib/braintree/merchant_account/funding_details.rb
-${GEM_LIBDIR}/lib/braintree/merchant_account/individual_details.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_account_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/merchant_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/meta_checkout_card.rb
@@ -235,6 +232,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/subscription_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/test/transaction_amounts_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/test_transaction_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_line_item_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/transaction_payment_facilitator_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_us_bank_account_spec.rb
@@ -263,7 +261,6 @@ ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/customer_session_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/customer_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/digest_spec.rb
-${GEM_LIBDIR}/spec/unit/braintree/disbursement_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/dispute_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/dispute_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/document_upload_spec.rb
@@ -286,7 +283,6 @@ ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_funded_spec.rb
-${GEM_LIBDIR}/spec/unit/braintree/merchant_account_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/meta_checkout_token_details_spec.rb
