@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/03/18 13:27:40 taca Exp $
+# $NetBSD: Makefile,v 1.12 2025/05/17 07:23:36 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	5.1.7
+RM_VERSION=	5.1.8
 
 NO_BUILD=	yes
 
