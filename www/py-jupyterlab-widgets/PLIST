@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/13 08:19:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/17 07:47:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/jupyterlab_widgets/.gitignore
 ${PYSITELIB}/jupyterlab_widgets/__init__.py
 ${PYSITELIB}/jupyterlab_widgets/__init__.pyc
 ${PYSITELIB}/jupyterlab_widgets/__init__.pyo
@@ -18,7 +18,7 @@ share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/327.d242f
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/420.23ab95819c045f6c36bc.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/439.b350310d057b43cdd50f.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/439.b350310d057b43cdd50f.js.LICENSE.txt
-share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/446.d06879ef26ae24db8963.js
+share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/446.f8696ce72124c78273da.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/586.085510630436c2e4273f.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/647.8458d9c331000024a14a.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/651.fe40a967a60b543cf15c.js
@@ -26,7 +26,7 @@ share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/651.fe40a
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/701.043aefe0b66133629348.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/722.53e4a64671c3c48de007.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/727.b26a6f3871012a0fd66a.js
-share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/898.a6567d24f48d07508b4a.js
-share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/remoteEntry.4e1d614fd8228ac83ba6.js
+share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/898.db11fb1a7e18acb58b5b.js
+share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/remoteEntry.35b6c65bd99dab37b910.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/style.js
 share/jupyter/labextensions/@jupyter-widgets/jupyterlab-manager/static/third-party-licenses.json
