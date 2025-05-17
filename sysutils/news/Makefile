@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:10 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2025/05/17 19:38:39 zafer Exp $
 #
 
 DISTNAME=		news-0.2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.netmeister.org/apps/
+MASTER_SITES=		https://www.netmeister.org/apps/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.netmeister.org/

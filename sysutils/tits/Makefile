@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2020/01/26 17:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2025/05/17 19:42:28 zafer Exp $
 
 DISTNAME=	tits-1.3.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.mctavish.co.uk/tits/
+MASTER_SITES=	https://www.mctavish.co.uk/tits/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mctavish.co.uk/tits/

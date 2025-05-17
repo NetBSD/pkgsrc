@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2023/08/14 05:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/17 19:41:31 zafer Exp $
 
 DISTNAME=	spice-protocol-0.14.4
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://spice-space.org/download/releases/
+MASTER_SITES=	https://spice-space.org/download/releases/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

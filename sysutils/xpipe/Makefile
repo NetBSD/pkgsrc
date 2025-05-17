@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/07/03 11:29:04 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/17 19:43:38 zafer Exp $
 
 DISTNAME=	xpipe-2.2
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.netmeister.org/apps/
+MASTER_SITES=	https://www.netmeister.org/apps/
 
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	https://github.com/jschauma/xpipe
