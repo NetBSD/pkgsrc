@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/02/09 09:31:05 taca Exp $
+$NetBSD: distinfo,v 1.11 2025/05/17 06:40:20 taca Exp $
 
-BLAKE2s (mixlib-log-3.2.0.gem) = ec4a3266320ea6df3d28669118d3ed76ceacc4e1e94f622e201cf1c803c4e431
-SHA512 (mixlib-log-3.2.0.gem) = 2015177045818b32f6105e5b1e23a83b34d17164d65bd8988c9126e525fdcad9b72b86734102f1a13b360e3bb10431ca1de0c0bdee7d15fdd7da001bb116506f
-Size (mixlib-log-3.2.0.gem) = 12288 bytes
+BLAKE2s (mixlib-log-3.2.3.gem) = 46f91840c456b65effc3893d7d71d15377515a315934e0d8ccd4c6dbb9d3b95d
+SHA512 (mixlib-log-3.2.3.gem) = 2a4f4a85b2b2e0b59d1d9dede9675fbc118a4db9028d840440b9dbdff3b9ff18e3bb57c5f1006b16dad02f5d1fd1b06da6ac9d54508f25d528cdb4e6645ee848
+Size (mixlib-log-3.2.3.gem) = 12288 bytes
