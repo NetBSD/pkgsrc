@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3368 2025/05/18 01:40:31 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3369 2025/05/18 01:43:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4979,3 +4979,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-metasploit-concern to 5.0.5 [taca 2025-05-18]
 	Updated security/ruby-metasploit-model to 5.0.4 [taca 2025-05-18]
 	Updated security/ruby-metasploit-payloads to 2.0.217 [taca 2025-05-18]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.42 [taca 2025-05-18]
