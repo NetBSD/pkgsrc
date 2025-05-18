@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2025/04/30 03:47:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.98 2025/05/18 00:54:58 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/chrome/icons/default/TB-symbolic.svg
@@ -20,6 +20,7 @@ lib/thunderbird/defaults/messenger/mailViews.dat
 lib/thunderbird/defaults/pref/channel-prefs.js
 lib/thunderbird/dependentlibs.list
 lib/thunderbird/glxtest
+lib/thunderbird/interesting_serverknobs.json
 lib/thunderbird/isp/Bogofilter.sfd
 lib/thunderbird/isp/DSPAM.sfd
 lib/thunderbird/isp/POPFile.sfd
