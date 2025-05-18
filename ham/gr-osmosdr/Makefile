@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/05/18 19:18:32 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2025/05/18 19:18:52 gdt Exp $
 
 DISTNAME=	gr-osmosdr-0.2.6
 PKGREVISION=	5
@@ -20,7 +20,7 @@ USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11 filesystem
 # NB: If gnuradio-core and gr-osmosdr are built with gcc10/gc12 or
 # gcc12/gcc10, then "import osmosdr" in python will fail with
-# not-found symbol apparently due to c++ ABI issues.  No accomodations
+# not-found symbol apparently due to c++ ABI issues.  No accommodations
 # are in place for this, as "mixing gcc versions with c++ leads to UB"
 # is already well known.
 
