@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/05/18 02:10:49 markd Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/18 09:51:10 wiz Exp $
 # used by net/bird/Makefile
 # used by net/bird6/Makefile
 
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 # Has hardcoded BSD/Linux support.
 NOT_FOR_PLATFORM=	SunOS-*-*
+
+SUPERSEDES+=		bird6-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 
