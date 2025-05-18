@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/05/18 16:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/18 17:00:52 wiz Exp $
 
 DISTNAME=	sessreg-1.1.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,16 +11,7 @@ HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Manage utmp/wtmp entries for xdm
 
 USE_TOOLS+=	pkg-config
-GNU_CONFIGURE=	yes
 
-BUILD_DEFS+=		VARBASE
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mgcc)
-# required for filenames.sed on gcc5+
-CPPFLAGS+=	-P
-.endif
-
+.include "../../devel/meson/build.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
