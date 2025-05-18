@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/12/15 14:08:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/05/18 01:02:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/metasploit-framework_acceptance.yml
 ${GEM_LIBDIR}/.github/workflows/verify.yml
@@ -21,6 +21,7 @@ ${GEM_LIBDIR}/examples/dump_secrets_from_sid.rb
 ${GEM_LIBDIR}/examples/enum_domain_users.rb
 ${GEM_LIBDIR}/examples/enum_registry_key.rb
 ${GEM_LIBDIR}/examples/enum_registry_values.rb
+${GEM_LIBDIR}/examples/epm_client.rb
 ${GEM_LIBDIR}/examples/file_server.rb
 ${GEM_LIBDIR}/examples/get_computer_info.rb
 ${GEM_LIBDIR}/examples/list_directory.rb
@@ -91,6 +92,12 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_ept_map_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/epm/epm_twrt.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/error.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/fault.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi/gkdi_ffc_dh_key.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi/gkdi_ffc_dh_parameters.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi/gkdi_get_key_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi/gkdi_get_key_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/gkdi/gkdi_group_key_envelope.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/icpr/cert_server_request_response.rb
@@ -558,6 +565,7 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_request_s
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/user_properties_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/sec_trailer_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/srvsvc/net_share_enum_all_spec.rb
