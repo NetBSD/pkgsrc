@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/04/18 04:38:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/05/18 10:02:14 wiz Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyi
@@ -86,6 +86,12 @@ ${PYSITELIB}/Crypto/Cipher/_mode_gcm.py
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyo
+${PYSITELIB}/Crypto/Cipher/_mode_kw.py
+${PYSITELIB}/Crypto/Cipher/_mode_kw.pyc
+${PYSITELIB}/Crypto/Cipher/_mode_kw.pyo
+${PYSITELIB}/Crypto/Cipher/_mode_kwp.py
+${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyc
+${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.py
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.pyi
@@ -312,9 +318,9 @@ ${PYSITELIB}/Crypto/Protocol/DH.py
 ${PYSITELIB}/Crypto/Protocol/DH.pyc
 ${PYSITELIB}/Crypto/Protocol/DH.pyi
 ${PYSITELIB}/Crypto/Protocol/DH.pyo
-${PYSITELIB}/Crypto/Protocol/HPKE.py
 ${PLIST.py3x}${PYSITELIB}/Crypto/Protocol/HPKE.pyc
 ${PLIST.py3x}${PYSITELIB}/Crypto/Protocol/HPKE.pyo
+${PYSITELIB}/Crypto/Protocol/HPKE.py
 ${PYSITELIB}/Crypto/Protocol/KDF.py
 ${PYSITELIB}/Crypto/Protocol/KDF.pyc
 ${PYSITELIB}/Crypto/Protocol/KDF.pyi
@@ -432,6 +438,9 @@ ${PYSITELIB}/Crypto/SelfTest/Cipher/test_EAX.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_GCM.pyo
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.py
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.pyc
+${PYSITELIB}/Crypto/SelfTest/Cipher/test_KW.pyo
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_OCB.py
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_OCB.pyc
 ${PYSITELIB}/Crypto/SelfTest/Cipher/test_OCB.pyo
@@ -558,9 +567,9 @@ ${PYSITELIB}/Crypto/SelfTest/Math/test_modmult.pyo
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/__init__.pyo
-${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.py
 ${PLIST.py3x}${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyc
 ${PLIST.py3x}${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.pyo
+${PYSITELIB}/Crypto/SelfTest/Protocol/test_HPKE.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.py
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.pyc
 ${PYSITELIB}/Crypto/SelfTest/Protocol/test_KDF.pyo
