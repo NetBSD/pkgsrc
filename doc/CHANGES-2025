@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3376 2025/05/18 03:57:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3377 2025/05/18 03:59:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-libxml to 5.0.4 [taca 2025-05-18]
 	Updated textproc/ruby-rqrcode_core to 2.0.0 [taca 2025-05-18]
 	Updated textproc/ruby-rqrcode to 3.1.0 [taca 2025-05-18]
+	Updated sysutils/ruby-specinfra to 2.94.0 [taca 2025-05-18]
