@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3375 2025/05/18 03:54:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3376 2025/05/18 03:57:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4986,3 +4986,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.29 [taca 2025-05-18]
 	Updated textproc/ruby-libxml to 5.0.4 [taca 2025-05-18]
 	Updated textproc/ruby-rqrcode_core to 2.0.0 [taca 2025-05-18]
+	Updated textproc/ruby-rqrcode to 3.1.0 [taca 2025-05-18]
