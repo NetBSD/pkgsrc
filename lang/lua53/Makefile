@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2022/05/12 12:32:49 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/18 09:16:32 zafer Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua53-${LUA_VERSION}
 CATEGORIES=	lang lua
 MASTER_SITES=	https://www.lua.org/ftp/
-MASTER_SITES+=	http://www.tecgraf.puc-rio.br/lua/ftp/
+MASTER_SITES+=	https://www.tecgraf.puc-rio.br/lua/ftp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.lua.org/
