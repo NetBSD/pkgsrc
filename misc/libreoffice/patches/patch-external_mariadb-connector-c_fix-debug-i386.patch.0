@@ -1,23 +1,21 @@
-$NetBSD: patch-external_mariadb-connector-c_fix-debug-i386.patch.0,v 1.1 2025/01/11 14:06:28 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_fix-debug-i386.patch.0,v 1.2 2025/05/18 01:15:15 ryoon Exp $
 
 * Fix build under NetBSD/i386 9.
 
---- external/mariadb-connector-c/fix-debug-i386.patch.0.orig	2025-01-10 15:59:40.433414620 +0000
+--- external/mariadb-connector-c/fix-debug-i386.patch.0.orig	2025-05-10 22:31:22.257925514 +0000
 +++ external/mariadb-connector-c/fix-debug-i386.patch.0
-@@ -0,0 +1,36 @@
-+diff -urN mariadb-connector-c-3.3.13-src.orig/CMakeLists.txt mariadb-connector-c-3.3.13-src/CMakeLists.txt
-+diff -urN mariadb-connector-c-3.3.13-src.orig/libmariadb/ma_context.c mariadb-connector-c-3.3.13-src/libmariadb/ma_context.c
-+--- libmariadb/ma_context.c	2024-11-08 14:58:54.000000000 +0900
-++++ libmariadb/ma_context.c	2025-01-11 00:57:37.065684221 +0900
-+@@ -438,6 +438,7 @@
+@@ -0,0 +1,34 @@
++--- libmariadb/ma_context.c.orig	2025-02-27 12:50:01.000000000 +0000
+++++ libmariadb/ma_context.c
++@@ -439,6 +439,7 @@ my_context_spawn(struct my_context *c, v
 +   */
 +   __asm__ __volatile__
 +     (
 ++     ".cfi_startproc\n\t"
 +      "movl %%esp, (%[save])\n\t"
 +      "movl %[stack], %%esp\n\t"
-+ #if (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 4) || __clang__) && !defined(__INTEL_COMPILER)
-+@@ -478,6 +479,7 @@
++ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
++@@ -479,6 +480,7 @@ my_context_spawn(struct my_context *c, v
 +      "3:\n\t"
 +      "movl $1, %[ret]\n"
 +      "4:\n"
@@ -25,15 +23,15 @@ $NetBSD: patch-external_mariadb-connector-c_fix-debug-i386.patch.0,v 1.1 2025/01
 +      : [ret] "=a" (ret),
 +        [f] "+c" (f),
 +        [d] "+d" (d)
-+@@ -673,6 +675,7 @@
++@@ -674,6 +676,7 @@ my_context_spawn(struct my_context *c, v
 +   */
 +   __asm__ __volatile__
 +     (
 ++     ".cfi_startproc\n\t"
 +      "mov x10, sp\n\t"
 +      "mov sp, %[stack]\n\t"
-+ #if !defined(__INTEL_COMPILER)
-+@@ -718,6 +721,7 @@
++ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
++@@ -719,6 +722,7 @@ my_context_spawn(struct my_context *c, v
 +      "2:\n\t"
 +      "mov %w[ret], #1\n"
 +      "3:\n"
