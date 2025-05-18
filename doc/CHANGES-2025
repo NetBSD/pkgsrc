@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3363 2025/05/18 01:02:58 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3364 2025/05/18 01:15:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/thunderbird to 138.0.1 [ryoon 2025-05-18]
 	Updated mail/thunderbird-l10n to 138.0.1 [ryoon 2025-05-18]
 	Updated net/ruby-ruby_smb to 3.3.16 [taca 2025-05-18]
+	Updated misc/libreoffice to 25.2.3.2 [ryoon 2025-05-18]
