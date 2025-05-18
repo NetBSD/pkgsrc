@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.371 2025/05/16 16:13:45 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.372 2025/05/18 01:50:09 markd Exp $
 #
 #FORMAT 1.0.0
 #
@@ -18041,10 +18041,9 @@ libreoffice<6.3.1	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/C
 kilo-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16096
 imapfilter-[0-9]*	ssl-certificate-spoofing	https://nvd.nist.gov/vuln/detail/CVE-2016-10937
 xpdf-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-16115
-bird>=1.6.4	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
-bird6>=1.6.4	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
-bird>=2.0.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
-bird6>=2.0.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
+bird>=1.6.4<1.6.8	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
+bird6>=1.6.4<1.6.8	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
+bird>=2.0.0<2.0.6	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-16159
 oniguruma<6.9.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-16163
 cflow-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2019-16165
 cflow-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-16166
