@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3396 2025/05/18 09:53:45 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3397 2025/05/18 09:58:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5008,3 +5008,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-rex-text to 0.2.61 [taca 2025-05-18]
 	Updated www/ruby-faraday to 2.13.1 [taca 2025-05-18]
 	Updated www/ruby-faraday-rack to 2.1.2 [taca 2025-05-18]
+	Updated security/py-OpenSSL to 25.1.0 [wiz 2025-05-18]
