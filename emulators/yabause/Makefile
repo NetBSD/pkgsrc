@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.97 2025/04/24 14:13:52 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/05/18 10:35:36 zafer Exp $
 
 DISTNAME=	yabause-0.9.15
 PKGREVISION=	46
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.tuxfamily.org/yabause/releases/${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.aydogan.net/distfiles/emulators/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://yabause.sourceforge.net/
+HOMEPAGE=	http://yabause.org/
 COMMENT=	Sega Saturn system emulator
 LICENSE=	gnu-gpl-v2
 
