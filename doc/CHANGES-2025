@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3413 2025/05/18 14:29:38 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3414 2025/05/18 15:54:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5025,3 +5025,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-loofah to 2.24.1 [taca 2025-05-18]
 	Updated www/ruby-rack-session to 2.1.1 [taca 2025-05-18]
 	Updated www/ruby-rouge to 4.5.2 [taca 2025-05-18]
+	Updated net/sayaka to 3.8.2 [tsutsui 2025-05-18]
