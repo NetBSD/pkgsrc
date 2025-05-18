@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2025/05/18 17:24:52 gdt Exp $
+# $NetBSD: Makefile.common,v 1.61 2025/05/18 19:29:32 gdt Exp $
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
@@ -45,7 +45,13 @@ LICENSE=	gnu-gpl-v3
 # These are safely = rather than += because they are only included
 # by split package Makefiles, none of which set the variables.
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++20
+# Upstream does not document the needed C++ version.  Reported by
+# email on 20250518 because upstream's bugtracker is not accepting
+# account registrations.
+# Experimentally, FORCE_CXX_STD=c++11 fails and =c++17 succeeds, for
+# building gnuradio-core and gr-osmosdr (with gcc10).
+USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
 
 USE_TOOLS=	gmake perl pkg-config
 
