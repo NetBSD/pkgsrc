@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2025/04/17 21:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/05/18 10:27:33 zafer Exp $
 
 DISTNAME=	chrony-4.2
 PKGREVISION=	10
 CATEGORIES=	net
-MASTER_SITES=	https://download.tuxfamily.org/chrony/
+MASTER_SITES=	https://www.aydogan.net/distfiles/net/
 
 MAINTAINER=	hannken@NetBSD.org
 HOMEPAGE=	https://chrony.tuxfamily.org/
