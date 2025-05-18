@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.59 2025/04/03 15:18:08 adam Exp $
+# $NetBSD: Makefile.common,v 1.60 2025/05/18 17:24:52 gdt Exp $
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
 # used by ham/gnuradio-network/Makefile
-# used by ham/gnuradio-ctrlport/Makefile
 # used by ham/gnuradio-digital/Makefile
 # used by ham/gnuradio-doxygen/Makefile
 # used by ham/gnuradio-dtv/Makefile
@@ -43,8 +42,10 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnuradio.org/
 LICENSE=	gnu-gpl-v3
 
-USE_CXX_FEATURES=	c++20
+# These are safely = rather than += because they are only included
+# by split package Makefiles, none of which set the variables.
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++20
 
 USE_TOOLS=	gmake perl pkg-config
 
