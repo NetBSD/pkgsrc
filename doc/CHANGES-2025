@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3401 2025/05/18 10:09:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3402 2025/05/18 10:13:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5013,3 +5013,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-icalendar to 6.3.0 [wiz 2025-05-18]
 	Updated www/ruby-faraday-retry to 2.3.1 [taca 2025-05-18]
 	Updated math/py-numpy to 2.2.6 [wiz 2025-05-18]
+	Updated devel/py-pluggy to 1.6.0 [wiz 2025-05-18]
