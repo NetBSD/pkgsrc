@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/18 01:04:32 ryoon Exp $
 
-DISTNAME=	frozen-1.1.1
+DISTNAME=	frozen-1.2.0
 CATEGORIES=	devel
 MASTER_SITES=	https://dev-www.libreoffice.org/src/
 
