@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/02/23 14:43:38 taca Exp $
+# $NetBSD: Makefile,v 1.9 2025/05/18 09:41:53 taca Exp $
 
-DISTNAME=	rex-sslscan-0.1.11
+DISTNAME=	rex-sslscan-0.1.13
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
