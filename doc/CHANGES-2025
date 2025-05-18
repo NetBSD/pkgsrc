@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3357 2025/05/17 23:56:47 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3358 2025/05/18 00:35:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4968,3 +4968,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/gpsd to 3.26.1 [gdt 2025-05-17]
 	Updated chat/gajim to 2.1.1 [gdt 2025-05-17]
 	Updated sysutils/ups-nut to 2.8.3 [gdt 2025-05-17]
+	Updated net/ruby-amq-protocol to 2.3.4 [taca 2025-05-18]
