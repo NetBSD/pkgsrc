@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/05/11 10:30:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/05/18 10:04:38 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -251,12 +251,18 @@ ${PYSITELIB}/icalendar/tests/test_issue_218_parse_calendar.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_27_period.py
 ${PYSITELIB}/icalendar/tests/test_issue_27_period.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_27_period.pyo
+${PYSITELIB}/icalendar/tests/test_issue_301_add_rrule_as_string.py
+${PYSITELIB}/icalendar/tests/test_issue_301_add_rrule_as_string.pyc
+${PYSITELIB}/icalendar/tests/test_issue_301_add_rrule_as_string.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_318_skip_default_parameters.py
 ${PYSITELIB}/icalendar/tests/test_issue_318_skip_default_parameters.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_318_skip_default_parameters.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_322_single_strings_characters_split_into_multiple_categories.py
 ${PYSITELIB}/icalendar/tests/test_issue_322_single_strings_characters_split_into_multiple_categories.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_322_single_strings_characters_split_into_multiple_categories.pyo
+${PYSITELIB}/icalendar/tests/test_issue_336_dateutil_timezone.py
+${PYSITELIB}/icalendar/tests/test_issue_336_dateutil_timezone.pyc
+${PYSITELIB}/icalendar/tests/test_issue_336_dateutil_timezone.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.py
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_348_exception_parsing_value.pyo
@@ -275,6 +281,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_662_component_properties.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_716_alarm_time_computation.py
 ${PYSITELIB}/icalendar/tests/test_issue_716_alarm_time_computation.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_716_alarm_time_computation.pyo
+${PYSITELIB}/icalendar/tests/test_issue_720_uid_property.py
+${PYSITELIB}/icalendar/tests/test_issue_720_uid_property.pyc
+${PYSITELIB}/icalendar/tests/test_issue_720_uid_property.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_722_generate_vtimezone.py
 ${PYSITELIB}/icalendar/tests/test_issue_722_generate_vtimezone.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_722_generate_vtimezone.pyo
@@ -284,6 +293,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_798_property_parameters.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_802.py
 ${PYSITELIB}/icalendar/tests/test_issue_802.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_802.pyo
+${PYSITELIB}/icalendar/tests/test_issue_828.py
+${PYSITELIB}/icalendar/tests/test_issue_828.pyc
+${PYSITELIB}/icalendar/tests/test_issue_828.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
