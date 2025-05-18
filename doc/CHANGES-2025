@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3411 2025/05/18 14:25:25 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3412 2025/05/18 14:27:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5023,3 +5023,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/uv to 0.7.5 [wiz 2025-05-18]
 	Updated databases/postgresql-postgis2 to 3.5.3 [gdt 2025-05-18]
 	Updated www/ruby-loofah to 2.24.1 [taca 2025-05-18]
+	Updated www/ruby-rack-session to 2.1.1 [taca 2025-05-18]
