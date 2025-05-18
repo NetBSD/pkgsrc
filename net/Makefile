@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1600 2025/05/09 22:18:38 tnn Exp $
+# $NetBSD: Makefile,v 1.1601 2025/05/18 02:10:49 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -47,7 +47,6 @@ SUBDIR+=	beanstalkd
 SUBDIR+=	bftpd
 SUBDIR+=	bind918
 SUBDIR+=	bird
-SUBDIR+=	bird6
 SUBDIR+=	bmon
 SUBDIR+=	bombadillo
 SUBDIR+=	bounce

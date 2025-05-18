@@ -1,0 +1,26 @@
+$NetBSD: patch-doc_bird.conf.example,v 1.1 2025/05/18 02:10:50 markd Exp $
+
+Note how to write to kernel on NetBSD without getting errors for direct connect 
+networks
+https://bird.network.cz/pipermail/bird-users/2025-April/018178.html
+
+--- doc/bird.conf.example.orig	2022-03-02 09:29:17.000000000 +0000
++++ doc/bird.conf.example
+@@ -57,6 +57,8 @@ protocol kernel {
+ #	      table master4;	# Default IPv4 table is master4
+ #	      import all;	# Import to table, default is import all
+ 	      export all;	# Export to protocol. default is export none
++#	      export where source != RTS_DEVICE; # NetBSD complains about
++				# overwriting direct connect networks so don't
+ 	};
+ #	learn;			# Learn alien routes from the kernel
+ #	kernel table 10;	# Kernel table to synchronize with (default: main)
+@@ -65,6 +67,8 @@ protocol kernel {
+ # Another instance for IPv6, skipping default options
+ protocol kernel {
+ 	ipv6 { export all; };
++#	ipv6 { export where source != RTS_DEVICE; }; # NetBSD complains about
++				# overwriting direct connect networks so don't
+ }
+ 
+ # Static routes (Again, there can be multiple instances, for different address

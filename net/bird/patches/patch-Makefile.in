@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/05/18 02:10:50 markd Exp $
+
+install the example config files into the correct directory
+
+--- Makefile.in.orig	2025-04-03 18:50:57.000000000 +0000
++++ Makefile.in
+@@ -204,15 +204,11 @@ cscope:
+ # Install
+ 
+ install: all
+-	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(sysconfdir) $(DESTDIR)/$(runstatedir)
++	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(EGDIR) $(DESTDIR)/$(runstatedir)
+ 	for BIN in bird @CLIENT@ ; do								\
+ 		$(INSTALL_PROGRAM) $(exedir)/$$BIN $(DESTDIR)/$(sbindir)/$$BIN ;		\
+ 	done
+-	if ! test -f $(DESTDIR)/@CONFIG_FILE@ ; then						\
+-		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/@CONFIG_FILE@ ;	\
+-	else											\
+-		echo "Not overwriting old bird.conf" ;						\
+-	fi
++	$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(EGDIR)/bird.conf
+ 
+ install-docs:
+ 	$(INSTALL) -d $(DESTDIR)/$(docdir)
