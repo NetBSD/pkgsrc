@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25821 2025/05/18 10:16:57 wiz Exp $
+$NetBSD: TODO,v 1.25822 2025/05/18 10:21:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-postgresql-5.1.2
 	o py-protobuf-6.31.0
 	o py-pytz_deprecation_shim-0.1.0.post0
-	o py-ruff-0.11.10
 	o py-sbws-1.1.0
 	o py-setuptools-80.7.1
 	o py-simpletal-5.1
