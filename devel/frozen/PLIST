@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/15 19:26:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/18 01:04:32 ryoon Exp $
 include/frozen/algorithm.h
 include/frozen/bits/algorithms.h
 include/frozen/bits/basic_types.h
@@ -8,6 +8,7 @@ include/frozen/bits/elsa.h
 include/frozen/bits/elsa_std.h
 include/frozen/bits/exceptions.h
 include/frozen/bits/hash_string.h
+include/frozen/bits/mpl.h
 include/frozen/bits/pmh.h
 include/frozen/bits/version.h
 include/frozen/map.h
