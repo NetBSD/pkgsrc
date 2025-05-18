@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/05/18 09:51:10 wiz Exp $
-# used by net/bird/Makefile
-# used by net/bird6/Makefile
+# $NetBSD: Makefile,v 1.8 2025/05/18 10:07:34 markd Exp $
 
 DISTNAME=	bird-2.17.1
 CATEGORIES=	net
