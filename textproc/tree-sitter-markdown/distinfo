@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/04/11 07:50:02 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/05/18 10:33:36 wiz Exp $
 
-BLAKE2s (tree-sitter-markdown-0.4.1.tar.gz) = d43cce220db49a6f3c46b9fb0f0ad7a1662ef4d6b231e8e82d84b2de805b8f77
-SHA512 (tree-sitter-markdown-0.4.1.tar.gz) = 04064c3384e0a9f8f1336c4587d15b14cf6a01a4579034c64f99ee85cb0fe1bc217b2f802c53f542ca40db20e7ce3b0bfef0bfe398dd2731caed47360a09ac5b
-Size (tree-sitter-markdown-0.4.1.tar.gz) = 419764 bytes
+BLAKE2s (tree-sitter-markdown-0.5.0.tar.gz) = 4bb21195202496fee056960e9a88d6a4187cfa3ddf4d3a40577c0fecda32c789
+SHA512 (tree-sitter-markdown-0.5.0.tar.gz) = 82e3fc28a3b5e71a39780b174ee61a4218934e81fc6583400dc6b9a09eee2e44ced35fba1aff36af36d792e9d032654362e63f6e1d33ac2e63bcd19ba12da402
+Size (tree-sitter-markdown-0.5.0.tar.gz) = 419516 bytes
