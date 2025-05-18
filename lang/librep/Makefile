@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.67 2021/12/08 16:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.68 2025/05/18 10:37:30 zafer Exp $
 #
 
 DISTNAME=		librep_0.92.7
 PKGNAME=		${DISTNAME:S/_/-/}
 PKGREVISION=		2
 CATEGORIES=		lang devel
-MASTER_SITES=		http://download.tuxfamily.org/librep/
+MASTER_SITES=		https://www.aydogan.net/distfiles/lang/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
