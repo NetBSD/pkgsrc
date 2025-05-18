@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3398 2025/05/18 10:02:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3399 2025/05/18 10:04:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5010,3 +5010,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-faraday-rack to 2.1.2 [taca 2025-05-18]
 	Updated security/py-OpenSSL to 25.1.0 [wiz 2025-05-18]
 	Updated security/py-cryptodome to 3.23.0 [wiz 2025-05-18]
+	Updated time/py-icalendar to 6.3.0 [wiz 2025-05-18]
