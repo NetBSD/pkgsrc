@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/02/23 14:43:38 taca Exp $
+$NetBSD: distinfo,v 1.10 2025/05/18 09:41:53 taca Exp $
 
-BLAKE2s (rex-sslscan-0.1.11.gem) = 5cfc84e8cfb7e4ad5e4b9252e392c0a2134df4e92008c9e5899dffc565487892
-SHA512 (rex-sslscan-0.1.11.gem) = 15580da3b4c14d9f1d3c8ae1bfbdf4633448d3e2993a259a2449da78b25548b532d10343f13fb36b5033269dd02d31da1f14657e46b34a46e4f77057e2b766f8
-Size (rex-sslscan-0.1.11.gem) = 16384 bytes
+BLAKE2s (rex-sslscan-0.1.13.gem) = bf3e607b7fabc1d37ea22fd641f242a7ef86b2595b84f3428dbb7b8b84d9472e
+SHA512 (rex-sslscan-0.1.13.gem) = 397947433e0abf2ee0f38d2ca8b820b7febd4323431ac1e07f9d82215f3186473751121d0dcd7315dba30ef9b46078cd845bfc2129bf2ff4ae637b639e44fe8b
+Size (rex-sslscan-0.1.13.gem) = 12288 bytes
