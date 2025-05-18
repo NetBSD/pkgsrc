@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3384 2025/05/18 04:16:27 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3385 2025/05/18 04:19:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-kms to 1.101.0 [taca 2025-05-18]
 	Updated www/ruby-rack to 3.1.15 [taca 2025-05-18]
 	Updated www/ruby-rack2 to 2.2.15 [taca 2025-05-18]
+	Updated www/ruby-selenium-webdriver to 4.32.0 [taca 2025-05-18]
