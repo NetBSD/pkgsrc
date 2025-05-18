@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3366 2025/05/18 01:21:53 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3367 2025/05/18 01:25:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4977,3 +4977,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/libreoffice to 25.2.3.2 [ryoon 2025-05-18]
 	Updated print/ruby-rbpdf to 1.21.4 [taca 2025-05-18]
 	Updated security/ruby-metasploit-concern to 5.0.5 [taca 2025-05-18]
+	Updated security/ruby-metasploit-model to 5.0.4 [taca 2025-05-18]
