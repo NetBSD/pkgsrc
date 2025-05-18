@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3390 2025/05/18 09:29:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3391 2025/05/18 09:34:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5001,4 +5001,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cryptography_vectors to 45.0.2 [adam 2025-05-18]
 	Updated security/ruby-rex-core to 0.1.34 [taca 2025-05-18]
 	Updated security/ruby-rex-exploitation to 0.1.42 [taca 2025-05-18]
+	Updated security/ruby-rex-mime to 0.1.12 [taca 2025-05-18]
 	Updated security/ruby-rex-powershell to 0.1.102 [taca 2025-05-18]
