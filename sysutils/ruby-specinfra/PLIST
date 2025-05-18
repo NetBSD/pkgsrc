@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/10/27 14:05:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/05/18 03:59:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -400,6 +400,7 @@ ${GEM_LIBDIR}/lib/specinfra/host_inventory/memory.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/mount.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/ohai.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform.rb
+${GEM_LIBDIR}/lib/specinfra/host_inventory/platform_codename.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/platform_version.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/user.rb
 ${GEM_LIBDIR}/lib/specinfra/host_inventory/virtualization.rb
