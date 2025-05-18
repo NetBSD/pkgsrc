@@ -1,9 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: bird.sh,v 1.1.1.1 2012/01/22 02:53:01 agc Exp $
+#	$NetBSD: bird.sh,v 1.2 2025/05/18 02:10:50 markd Exp $
 #
 # PROVIDE: bird
-# REQUIRE: DAEMON NETWORKING
+# REQUIRE: network
+# BEFORE: NETWORKING
 
 if [ -f /etc/rc.subr ]
 then
