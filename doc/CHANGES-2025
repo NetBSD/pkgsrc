@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3385 2025/05/18 04:19:59 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3386 2025/05/18 06:03:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4996,3 +4996,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack to 3.1.15 [taca 2025-05-18]
 	Updated www/ruby-rack2 to 2.2.15 [taca 2025-05-18]
 	Updated www/ruby-selenium-webdriver to 4.32.0 [taca 2025-05-18]
+	Updated devel/p5-Module-Build-Tiny to 0.052 [wiz 2025-05-18]
