@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3373 2025/05/18 03:51:00 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3374 2025/05/18 03:53:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4984,3 +4984,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed net/bird6 successor net/bird [markd 2025-05-18]
 	Updated textproc/ruby-diff-lcs to 1.6.2 [taca 2025-05-18]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.29 [taca 2025-05-18]
+	Updated textproc/ruby-libxml to 5.0.4 [taca 2025-05-18]
