@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/05/26 15:44:04 taca Exp $
+$NetBSD: distinfo,v 1.14 2025/05/18 09:25:19 taca Exp $
 
-BLAKE2s (rex-core-0.1.32.gem) = 3b54c751080014d7057e14a54ab77cac2afad5ce81bc9b6c8d32ed8f6d0dfa12
-SHA512 (rex-core-0.1.32.gem) = 98816b4dd587ad210ab187c151caa31484bbf31e6ec6e5af791a8d0e5fd72fd684d8e24669c92875358d64c01411480414afaa2cf50d94d5756bb50a11b73cbe
-Size (rex-core-0.1.32.gem) = 30208 bytes
+BLAKE2s (rex-core-0.1.34.gem) = a81f7a3d81083cb5042fdfd424f5597456e64580d87236a65fb8028089c57bd1
+SHA512 (rex-core-0.1.34.gem) = 996cba1e3d9ff84e1ac9e9e97cb13ba8a45c693915f9d18e6598a0f220095cb4c44b93ca66ea9e986501a99a86b80722d20881058a0cc925cb7f4d957dbce3a6
+Size (rex-core-0.1.34.gem) = 26112 bytes
