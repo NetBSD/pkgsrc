@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3361 2025/05/18 00:55:11 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3362 2025/05/18 00:55:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4972,3 +4972,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-connection_pool to 2.5.3 [taca 2025-05-18]
 	Updated net/ruby-recog to 3.1.16 [taca 2025-05-18]
 	Updated mail/thunderbird to 138.0.1 [ryoon 2025-05-18]
+	Updated mail/thunderbird-l10n to 138.0.1 [ryoon 2025-05-18]
