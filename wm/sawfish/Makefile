@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.114 2025/04/24 14:16:01 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2025/05/18 10:25:08 zafer Exp $
 
 DISTNAME=	sawfish_1.13.0
 PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	11
 CATEGORIES=	wm x11
-MASTER_SITES=	https://download.tuxfamily.org/sawfish/
+MASTER_SITES=	https://www.aydogan.net/distfiles/wm/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
