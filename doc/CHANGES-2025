@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3414 2025/05/18 15:54:17 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.3415 2025/05/18 16:59:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5026,3 +5026,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack-session to 2.1.1 [taca 2025-05-18]
 	Updated www/ruby-rouge to 4.5.2 [taca 2025-05-18]
 	Updated net/sayaka to 3.8.2 [tsutsui 2025-05-18]
+	Updated x11/sessreg to 1.1.4 [wiz 2025-05-18]
