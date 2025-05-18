@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/11 13:05:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/18 01:25:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/group/base.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/group/intersection.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/group/union.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/integer.rb
+${GEM_LIBDIR}/app/models/metasploit/model/search/operation/jsonb.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/null.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/set.rb
 ${GEM_LIBDIR}/app/models/metasploit/model/search/operation/set/integer.rb
@@ -106,6 +107,7 @@ ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/group/base_spec.
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/group/intersection_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/group/union_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/integer_spec.rb
+${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/jsonb_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/null_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/set/integer_spec.rb
 ${GEM_LIBDIR}/spec/app/models/metasploit/model/search/operation/set/string_spec.rb
@@ -152,7 +154,6 @@ ${GEM_LIBDIR}/spec/dummy/config/initializers/cookies_serializer.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/filter_parameter_logging.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/inflections.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/mime_types.rb
-${GEM_LIBDIR}/spec/dummy/config/initializers/secret_token.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/session_store.rb
 ${GEM_LIBDIR}/spec/dummy/config/initializers/wrap_parameters.rb
 ${GEM_LIBDIR}/spec/dummy/config/locales/en.yml

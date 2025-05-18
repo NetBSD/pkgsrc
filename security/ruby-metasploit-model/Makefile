@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/11/11 13:05:57 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/05/18 01:25:07 taca Exp $
 
-DISTNAME=	metasploit-model-5.0.2
+DISTNAME=	metasploit-model-5.0.4
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
