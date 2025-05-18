@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/02/23 14:09:39 taca Exp $
+$NetBSD: distinfo,v 1.20 2025/05/18 00:35:21 taca Exp $
 
-BLAKE2s (amq-protocol-2.3.3.gem) = 9cbcb03b3447e630a443e0e53f7954f431c746dd409d08584664bedefc842715
-SHA512 (amq-protocol-2.3.3.gem) = 4c8377f65c35d58331c836d2b46548d928048f8e0c7a50438eaf48db4ede1a5610d90aaf45a2bff4992f82ef81381d254ecdfcd7b705e1a3d5d9badf45e441f1
-Size (amq-protocol-2.3.3.gem) = 46592 bytes
+BLAKE2s (amq-protocol-2.3.4.gem) = a29444fea11b77657b9472a8e4034372c932b583ed6258b93e4700e8717d2db8
+SHA512 (amq-protocol-2.3.4.gem) = 08f1364ff0d21538c47f44f567670e54fb6eedf40b3627547a2580c105f6b54799078e8d839e04a100b79382d98aa0ce77b8dffaf50a2a33c32bf0b6356b0c9e
+Size (amq-protocol-2.3.4.gem) = 46592 bytes
