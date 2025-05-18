@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/03/16 14:15:14 taca Exp $
+# $NetBSD: Makefile,v 1.29 2025/05/18 00:40:24 taca Exp $
 
-DISTNAME=	recog-3.1.14
+DISTNAME=	recog-3.1.16
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
