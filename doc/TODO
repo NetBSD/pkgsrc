@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25814 2025/05/18 06:03:09 wiz Exp $
+$NetBSD: TODO,v 1.25815 2025/05/18 08:54:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -504,6 +504,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o camlp4-4.12
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
+	o cargo-c-0.10.13
 	o cddbd-1.5.2
 	o cdrdao-1.2.5
 	o cdrkit-1.1.10
@@ -884,7 +885,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-20.1.4
+	o llvm-20.1.5
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -1050,7 +1051,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-u2f-1.3.1
-	o pandoc-cli-3.6.4
+	o pandoc-cli-3.7.0.1
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
 	o passenger-6.0.20
@@ -1110,7 +1111,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
-	o prometheus-3.3.1
+	o prometheus-3.4.0
 	o protobuf-30.2 [wait for v30 support in net/grpc]
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1121,22 +1122,32 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-OpenSSL-25.1.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptodome-3.23.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-grpcio-1.71.0
 	o py-hgview-1.9.0
+	o py-icalendar-6.3.0
 	o py-input-pad-1.4.2
+	o py-numpy-2.2.6
 	o py-omniORBpy-3.7
+	o py-pdf-5.5.0
 	o py-pdf-parser-0.7.4
+	o py-pluggy-1.6.0
 	o py-postgresql-5.1.2
-	o py-protobuf-6.30.2
+	o py-protobuf-6.31.0
+	o py-pspdfutils-3.3.10
 	o py-pytz_deprecation_shim-0.1.0.post0
+	o py-ruff-0.11.10
 	o py-sbws-1.1.0
+	o py-setuptools-80.7.1
 	o py-simpletal-5.1
+	o py-sip6-6.11.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
@@ -1158,7 +1169,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
-	o redis-8.0
+	o redis-8.0.1
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
@@ -1250,6 +1261,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
 	o sympa-6.2.72
+	o syncstorage-0.18.3
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1298,6 +1310,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.25.4
+	o tree-sitter-markdown-0.7.1.0.5.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1316,6 +1330,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o uv-0.7.5
 	o varnish-7.7.1
 	o vault-1.7.4
 	o vbetool-1.1
