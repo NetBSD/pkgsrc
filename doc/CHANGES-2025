@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3359 2025/05/18 00:37:47 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3360 2025/05/18 00:40:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4970,3 +4970,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ups-nut to 2.8.3 [gdt 2025-05-17]
 	Updated net/ruby-amq-protocol to 2.3.4 [taca 2025-05-18]
 	Updated net/ruby-connection_pool to 2.5.3 [taca 2025-05-18]
+	Updated net/ruby-recog to 3.1.16 [taca 2025-05-18]
