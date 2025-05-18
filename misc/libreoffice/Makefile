@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.359 2025/05/10 07:40:36 wiz Exp $
+# $NetBSD: Makefile,v 1.360 2025/05/18 01:15:14 ryoon Exp $
 
-VERREL=		25.2.0
-VERRC=		3
+VERREL=		25.2.3
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -111,11 +110,11 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.3.13-src.tar.gz \
+	mariadb-connector-c-3.3.15-src.tar.gz \
 	rhino-1.7.15.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-14.15.tar.bz2 \
+	postgresql-14.17.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -127,7 +126,7 @@ MORE_DISTFILES= \
 	noto-fonts-20171024.tar.gz \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
-	Amiri-1.000.zip \
+	Amiri-1.001.zip \
 	ReemKufi-1.7.zip \
 	pdfium-6764.tar.bz2 \
 	dtoa-20180411.tgz \
