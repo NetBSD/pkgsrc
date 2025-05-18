@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/03/16 14:26:24 taca Exp $
+# $NetBSD: Makefile,v 1.44 2025/05/18 03:50:47 taca Exp $
 
-DISTNAME=	kramdown-rfc2629-1.7.26
+DISTNAME=	kramdown-rfc2629-1.7.29
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
