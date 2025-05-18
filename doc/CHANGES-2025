@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3409 2025/05/18 11:17:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3410 2025/05/18 12:50:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5021,3 +5021,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 5.5.0 [wiz 2025-05-18]
 	Updated emulators/nono to 1.4.2 [jun 2025-05-18]
 	Updated devel/uv to 0.7.5 [wiz 2025-05-18]
+	Updated databases/postgresql-postgis2 to 3.5.3 [gdt 2025-05-18]
