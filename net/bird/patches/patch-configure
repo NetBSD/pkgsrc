@@ -1,20 +1,28 @@
-$NetBSD: patch-configure,v 1.4 2015/02/03 13:58:32 mef Exp $
+$NetBSD: patch-configure,v 1.5 2025/05/18 02:10:50 markd Exp $
 
-date: 2013-10-21 03:00:57 +0900;  author: joerg;  state: Exp;  lines: +12 -1;  commitid: 17vYRnrUrAvnK3ax;
-Prefix rpath options with -Wl.
+let pkgsrc figure out the correct paths
 
---- configure.orig	2013-07-28 18:57:59.000000000 +0000
+--- configure.orig	2025-04-03 18:50:57.000000000 +0000
 +++ configure
-@@ -4442,12 +4442,8 @@ else
- 				default_iproutedir="/etc/iproute2"
- 				;;
- 		ipv6:netbsd*)	sysdesc=bsd-v6
--				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
--				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
- 				;;
- 		ipv4:netbsd*)	sysdesc=bsd
--				CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
--				LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
- 				;;
- 		ipv6:freebsd*)	sysdesc=bsd-v6
- 				;;
+@@ -5596,21 +5596,15 @@ else
+       ;;
+     freebsd*)
+       sysdesc=bsd
+-      CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-      LDFLAGS="$LDFLAGS -L/usr/local/lib"
+       ;;
+     kfreebsd*)
+       sysdesc=bsd
+       ;;
+     netbsd*)
+       sysdesc=bsd
+-      CPPFLAGS="$CPPFLAGS -I/usr/pkg/include"
+-      LDFLAGS="$LDFLAGS -L/usr/pkg/lib -R/usr/pkg/lib"
+       ;;
+     openbsd*)
+       sysdesc=bsd
+-      CPPFLAGS="$CPPFLAGS -I/usr/local/include"
+-      LDFLAGS="$LDFLAGS -L/usr/local/lib"
+       ;;
+     dragonfly*)
+       sysdesc=bsd
