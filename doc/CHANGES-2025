@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3407 2025/05/18 10:34:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3408 2025/05/18 10:41:15 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5019,3 +5019,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter to 0.25.4 [wiz 2025-05-18]
 	Updated textproc/tree-sitter-markdown to 0.7.1.0.5.0 [wiz 2025-05-18]
 	Updated textproc/py-pdf to 5.5.0 [wiz 2025-05-18]
+	Updated emulators/nono to 1.4.2 [jun 2025-05-18]
