@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3379 2025/05/18 04:04:01 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3380 2025/05/18 04:05:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4990,3 +4990,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ruby-specinfra to 2.94.0 [taca 2025-05-18]
 	Updated sysutils/ruby-serverspec to 2.43.0 [taca 2025-05-18]
 	Updated www/ruby-aws-partitions to 1.1104.0 [taca 2025-05-18]
+	Updated www/ruby-aws-sdk-core to 3.224.0 [taca 2025-05-18]
