@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3382 2025/05/18 04:09:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3383 2025/05/18 04:15:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -4993,3 +4993,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-core to 3.224.0 [taca 2025-05-18]
 	Updated www/ruby-aws-sdk-secretsmanager to 1.115.0 [taca 2025-05-18]
 	Updated www/ruby-aws-sdk-kms to 1.101.0 [taca 2025-05-18]
+	Updated www/ruby-rack to 3.1.15 [taca 2025-05-18]
