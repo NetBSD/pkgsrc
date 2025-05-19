@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2025/04/24 14:14:21 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/05/19 11:24:34 wiz Exp $
 
 DISTNAME=	gmic_3.2.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	graphics
 MASTER_SITES=	https://gmic.eu/files/source/
 
@@ -32,8 +32,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} share/man/man1/* ${PKGMANDIR}/man1/
 	cd ${DESTDIR}${PREFIX} && ${MV} share/man/fr/man1/* ${PKGMANDIR}/fr/man1/
 
-#.include "../../graphics/gimp/buildlink3.mk"
-.include "../../graphics/gimp-devel/buildlink3.mk"
+.include "../../graphics/gimp/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
