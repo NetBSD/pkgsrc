@@ -1,0 +1,1 @@
+bin/sass @PREFIX@/bin/sass@RUBY_SUFFIX@

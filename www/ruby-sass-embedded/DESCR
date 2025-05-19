@@ -1,0 +1,7 @@
+Embedded Sass Host for Ruby
+
+This is a Ruby library that implements the host side of the Embedded Sass
+protocol.
+
+It exposes a Ruby API for Sass that's backed by a native Dart Sass
+executable.
