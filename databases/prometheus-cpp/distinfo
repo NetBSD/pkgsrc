@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/26 11:39:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/05/19 12:52:41 wiz Exp $
 
-BLAKE2s (prometheus-cpp-1.1.0/prometheus-cpp-with-submodules.tar.gz) = c44229c5487789f72461b9bf0a8f8efc94812b85dbe7690c63044d010e4a9bdc
-SHA512 (prometheus-cpp-1.1.0/prometheus-cpp-with-submodules.tar.gz) = 8a364364b6122e6543e5b4166973c0d5803d88673d348e307c8285b5c414788d2dcc242323ee71ec3c7bd2741db238965f6c6adf3c3d638d6ef497cf965287dd
-Size (prometheus-cpp-1.1.0/prometheus-cpp-with-submodules.tar.gz) = 13014032 bytes
+BLAKE2s (prometheus-cpp-1.3.0/prometheus-cpp-with-submodules.tar.gz) = 9ae145c335c8f14ea711e844c2d8eeba8d35fd4e2306fab71cda3ce4d6f293ce
+SHA512 (prometheus-cpp-1.3.0/prometheus-cpp-with-submodules.tar.gz) = 482468f07a804c0856a67d6ad8e23779eaba402845210a832ff34a565db4f8045a5c98404f1ca79a318e86d69fd988ab871ad449b28e9dca28b8be49ca443425
+Size (prometheus-cpp-1.3.0/prometheus-cpp-with-submodules.tar.gz) = 13054338 bytes
