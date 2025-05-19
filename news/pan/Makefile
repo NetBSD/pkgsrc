@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.157 2025/04/24 14:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2025/05/19 19:43:44 rhialto Exp $
 
-PKGNAME=		pan-0.160
-PKGREVISION=		8
+PKGNAME=		pan-0.162
 CATEGORIES=		news
 TAG=			${PKGNAME_NOREV:S/pan-/v/} # e.g. v0.151
 MASTER_SITES=		https://gitlab.gnome.org/GNOME/pan/-/archive/${TAG}/
@@ -31,16 +30,11 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_MANUAL=1
 CMAKE_CONFIGURE_ARGS+=	-DWANT_GKR=0
 CMAKE_CONFIGURE_ARGS+=	-DWANT_GMIME_CRYPTO=1
 CMAKE_CONFIGURE_ARGS+=	-DWANT_GNUTLS=1
-CMAKE_CONFIGURE_ARGS+=	-DWANT_GTKSPELL=1
+CMAKE_CONFIGURE_ARGS+=	-DWANT_GSPELL=1
 CMAKE_CONFIGURE_ARGS+=	-DWANT_NOTIFY=0
+CMAKE_CONFIGURE_ARGS+=	-DWANT_WEBKIT=0
 
 LDFLAGS.SunOS+=	-lsocket
-
-# "Build" these files out of thin air, since base msgfmt doesn't know
-# about --xml --desktop.
-pre-build:
-	${CP} ${FILESDIR}/pan.desktop ${WRKSRC}/org.gnome.pan.desktop
-	${CP} ${FILESDIR}/org.gnome.pan.metainfo.xml ${WRKSRC}
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
@@ -50,8 +44,8 @@ pre-build:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime3/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../textproc/gtkspell3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/enchant2/buildlink3.mk"
+.include "../../textproc/gspell/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
