@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/12/04 15:30:18 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/05/19 06:37:41 wiz Exp $
 
-BLAKE2s (xcursorgen-1.0.8.tar.xz) = e9fd3494ed01861bf1354984755cf3d85edc7c29db9e5b8eda0c393b1a31f5ff
-SHA512 (xcursorgen-1.0.8.tar.xz) = dede5b9e1e09f9253365bbb83fdab26c681641913f3586cef52d4802db9cecc7e252344911cd969a873c3a5c5ebbd4b862f786de263f92ea1bcb2df90236f9c4
-Size (xcursorgen-1.0.8.tar.xz) = 123208 bytes
+BLAKE2s (xcursorgen-1.0.9.tar.xz) = d4d535b1c811affe7e10e0e03912b6e8a0f37c2fb67b1c543fc83c7b4337509d
+SHA512 (xcursorgen-1.0.9.tar.xz) = d40b96d6f60ee3815ef8ed6217028b39b127f200415661e39cf23af89662aafc6783f9e311f8021fe1a5ccfbc47610909796e569991e6680b8c2133401af476e
+Size (xcursorgen-1.0.9.tar.xz) = 126956 bytes
