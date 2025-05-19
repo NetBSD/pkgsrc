@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3420 2025/05/19 06:45:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3421 2025/05/19 06:57:40 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xcursorgen to 1.0.9 [wiz 2025-05-19]
 	Updated textproc/ugrep to 7.4.3 [adam 2025-05-19]
 	Updated sysutils/py-ansible-compat to 25.5.0 [adam 2025-05-19]
+	Updated comms/asterisk21 to 21.9.0 [jnemeth 2025-05-19]
