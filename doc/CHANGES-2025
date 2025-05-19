@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3436 2025/05/19 10:53:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3437 2025/05/19 11:05:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5052,3 +5052,10 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-daphne to 4.2.0 [adam 2025-05-19]
 	Updated www/py-drf-nested-routers to 0.94.2 [adam 2025-05-19]
 	Updated graphics/xsane to 0.99.9nb42 [wiz 2025-05-19]
+	Removed graphics/gimp-fix-ca [wiz 2025-05-19]
+	Removed graphics/gimp-liquid-rescale [wiz 2025-05-19]
+	Removed graphics/gimp-rawphoto [wiz 2025-05-19]
+	Removed graphics/gimp-refocus-it [wiz 2025-05-19]
+	Removed graphics/gimp-exif-browser [wiz 2025-05-19]
+	Removed graphics/gimp-jxr [wiz 2025-05-19]
+	Removed graphics/gimp2-wideangle [wiz 2025-05-19]
