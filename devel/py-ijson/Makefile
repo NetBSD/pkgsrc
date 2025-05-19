@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/04/12 11:18:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/19 09:12:35 adam Exp $
 
-DISTNAME=	ijson-3.3.0
+DISTNAME=	ijson-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ijson/}
 
