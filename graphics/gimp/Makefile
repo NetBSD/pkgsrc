@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.412 2025/04/24 14:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.413 2025/05/19 11:20:01 wiz Exp $
 
-DISTNAME=	gimp-2.10.38
-PKGREVISION=	16
+DISTNAME=	gimp-3.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.gimp.org/
@@ -15,71 +14,102 @@ TOOL_DEPENDS+=	vera-ttf-[0-9]*:../../fonts/vera-ttf
 TOOL_DEPENDS+=	gettext-tools>=0.19:../../devel/gettext-tools
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	glib-networking>=2.36.2:../../net/glib-networking
+DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
+#DEPENDS+=	gjs-[0-9]*:../../lang/gjs
 
 CONFLICTS+=	gimp-devel-[0-9]*
 
-USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES=	c++14
-USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		gmake pkg-config perl
-USE_TOOLS+=		intltool msgfmt msgmerge xgettext
+USE_TOOLS+=		pkg-config perl realpath
+USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_TOOLS+=		gdbus-codegen
 
-GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-CONFIGURE_ARGS+=	--disable-alsatest
-CONFIGURE_ARGS+=	--disable-glibtest
-CONFIGURE_ARGS+=	--disable-gtktest
-CONFIGURE_ARGS+=	--enable-vector-icons
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--without-linux-input
-CONFIGURE_ARGS+=	--without-gs
-
-PKG_SYSCONFSUBDIR=	gimp/2.0
-PKGCONFIG_OVERRIDE=	gimp.pc.in
 UNLIMIT_RESOURCES+=	datasize
 
-USE_CXX_FEATURES+=	c++14
+# Disable documentation for developers explicitly.
+MESON_ARGS+=	-Dgi-docgen=disabled
+# Do not find bin/gjs
+MESON_ARGS+=	-Djavascript=disabled
+
+# example files
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/extensions/org.gimp.extension.goat-exercises/*
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/test-sphere-v3/test-sphere-v3.scm
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/ts-helloworld/ts-helloworld.scm
+CHECK_PORTABILITY_SKIP+=	build/linux/appimage/*
+CHECK_PORTABILITY_SKIP+=	build/windows/*
+
+REPLACE_PYTHON+=	plug-ins/python/*.py
+REPLACE_PYTHON+=	plug-ins/python/*/*.py
+REPLACE_PYTHON+=	tools/*.py
+REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
+
+REPLACE_SH=		tools/in-build-gimp.sh
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
+EGDIR=			${PREFIX}/share/examples/gimp
+.for f in controllerrc gimp.css gimprc sessionrc templaterc toolrc unitrc
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/3.0/${f}
+.endfor
+
+INSTALLATION_DIRS=	share/examples
 
 .include "../../mk/bsd.prefs.mk"
 
-EGDIR=			${PREFIX}/share/examples/gimp-2.0
-.for f in controllerrc gimprc gtkrc menurc sessionrc templaterc unitrc
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
-
-# checking for xgettext version (>= 0.19)... no
-_TOOLS_USE_PKGSRC.xgettext=	yes
-
-# Ensure we export symbols in the linked shared object.
-LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-PLIST_VARS+=	remote
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="bin"
-.else
-PLIST_SUBST+=	GIMP_DEBUG_TOOL_DIR="libexec"
+# libgimpwidgets/gimppickbutton-quartz.c: error: 'CGWindowListCreateImage' is unavailable: obsoleted in macOS 15.0
+.  if ${OPSYS_VERSION} >= 150000
+MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET=14.0
+.  endif
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/libgimp
+
+.PHONY: fix-modules-id
+post-install: fix-modules-id
+fix-modules-id:
+	cd ${DESTDIR}; \
+	for i in $$(${FIND} .${PREFIX}/lib -name '*.so' | ${SED} -e 's|^\./||'); do \
+          install_name_tool -id /$$i $$i; \
+        done
 .endif
 
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/examples/gimp
+	${MV} ${DESTDIR}${PREFIX}/etc/gimp/3.0 ${DESTDIR}${PREFIX}/share/examples/gimp
+
 .include "options.mk"
+
+PLIST_VARS+=	xmc
+
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../devel/appstream-glib/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.78
+BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.114
 .include "../../graphics/babl/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.38
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.62
 .include "../../graphics/gegl/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/exiv2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 .include "../../graphics/gexiv2/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/mypaint-brushes1/buildlink3.mk"
@@ -87,27 +117,26 @@ BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.38
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+BUILDLINK_API_DEPENDS.tiff+=	tiff>=4.0
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/vala/buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.if ${PKG_BUILD_OPTIONS.gtk2:Mx11}
-PLIST.remote=	yes
+.include "../../x11/gtk3/buildlink3.mk"
+.if ${PKG_BUILD_OPTIONS.gtk3:Mx11}
 .include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+PRINT_PLIST_AWK+=       { if (/file-xmc/) $$0 = "$${PLIST.xmc}" $$0 }
+PLIST.xmc=		yes
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-xmc
-CONFIGURE_ARGS+=	--without-libxpm
 .endif
-.if ${PKG_BUILD_OPTIONS.gtk2:Mquartz}
-.include "../../x11/gtk-mac-integration/buildlink3.mk"
-.endif
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
