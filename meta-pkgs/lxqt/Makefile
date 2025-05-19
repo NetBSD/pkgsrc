@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2025/05/08 11:49:02 pin Exp $
+# $NetBSD: Makefile,v 1.38 2025/05/19 09:13:28 pin Exp $
 
 PKGNAME=	lxqt-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,9 +37,9 @@ DEPENDS+=	lxqt-session>=2.2.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.2.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.2.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.2.1:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.2.0:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.2.1:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.2.0:../../x11/lxqt-runner
-DEPENDS+=	screengrab>=2.10.0:../../graphics/screengrab
+DEPENDS+=	screengrab>=3.0.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.2.0:../../archivers/lxqt-archiver
 # The Breeze icon set is the default that LXQt expects, and a compatible icon
 # theme must be present for the DE to be fully usable.
