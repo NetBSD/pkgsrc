@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3454 2025/05/19 15:17:18 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3455 2025/05/19 15:22:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5095,3 +5095,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php84 to 8.4.7 [taca 2025-05-19]
 	Updated meta-pkgs/php84-extensions to 8.4.7 [taca 2025-05-19]
 	Updated archivers/php-pecl-zip to 1.22.6 [taca 2025-05-19]
+	Updated databases/php-redis to 6.2.0 [taca 2025-05-19]
