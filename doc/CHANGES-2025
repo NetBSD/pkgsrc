@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3442 2025/05/19 11:24:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3443 2025/05/19 11:25:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5080,3 +5080,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed graphics/gimp-devel [wiz 2025-05-19]
 	Updated graphics/gimp to 3.0.4 [wiz 2025-05-19]
 	Updated graphics/gimp-create-spritesheet to 0.0.2019.11.27nb3 [wiz 2025-05-19]
+	Updated meta-pkgs/bulk-test-python27 to 20250519 [wiz 2025-05-19]
