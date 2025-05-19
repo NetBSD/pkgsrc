@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/14 18:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/19 10:47:55 adam Exp $
 
-DISTNAME=	drf-nested-routers-0.94.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	drf_nested_routers-0.94.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/drf-nested-routers/}
 
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.14.0:../../www/py-djangorestframework
+DEPENDS+=	${PYPKGPREFIX}-djangorestframework>=3.15.0:../../www/py-djangorestframework
 
 USE_LANGUAGES=	# none
 
