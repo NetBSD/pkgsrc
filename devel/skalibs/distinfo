@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.26 2025/05/13 03:42:25 schmonz Exp $
+$NetBSD: distinfo,v 1.27 2025/05/19 14:35:38 schmonz Exp $
 
 BLAKE2s (skalibs-2.14.4.0.tar.gz) = 4a25e66862fb9d16aec817c3436a6fbfbdf58483892054e79c81544ab1ebe5fe
 SHA512 (skalibs-2.14.4.0.tar.gz) = a97c9ecd62e4d751a6613c01831bff5856c5d23f8fd295d539c3280c6ffa2379e67789c728552cb4d85aa03b30af7e2499b80cb8025b52ca6d1c1746b48102b1
 Size (skalibs-2.14.4.0.tar.gz) = 248403 bytes
 SHA1 (patch-Makefile) = f76802c2f9721a67083128ff005772edf3461b02
 SHA1 (patch-configure) = 1a89adcec51a89a4fc587b24d23c371e04b6978f
+SHA1 (patch-src_libstddjb_alarm__deadline.c) = 310532ec82d0f08b1eeaf79b1dc400282a7f252a
+SHA1 (patch-src_libstddjb_alarm__milliseconds.c) = 5e710d1bc11fde816bda65e253d1cda91bb9012d
+SHA1 (patch-src_libstddjb_alarm__timeout.c) = 4d99353f1524a2474dcf49fb8c47364eee935b4c
