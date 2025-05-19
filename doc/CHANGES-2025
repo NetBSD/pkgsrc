@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3427 2025/05/19 09:05:23 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3428 2025/05/19 09:07:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5041,3 +5041,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.testrunner to 7.3 [adam 2025-05-19]
 	Updated pkgtools/pkgin to 25.5.0 [jperkin 2025-05-19]
 	Updated devel/ast-grep to 0.38.2 [pin 2025-05-19]
+	Updated devel/cargo-c to 0.10.13 [pin 2025-05-19]
