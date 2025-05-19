@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3450 2025/05/19 14:39:30 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3451 2025/05/19 14:55:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5089,3 +5089,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 37.3.0 [adam 2025-05-19]
 	Updated devel/skalibs to 2.14.4.0nb1 [schmonz 2025-05-19]
 	Updated lang/ruby34 to 3.4.4 [taca 2025-05-19]
+	Added www/ruby-sass-embedded version 1.89.0 [taca 2025-05-19]
