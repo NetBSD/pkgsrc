@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3432 2025/05/19 09:12:21 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3433 2025/05/19 09:13:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5046,3 +5046,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated news/lobtui to 0.3.1 [pin 2025-05-19]
 	Updated graphics/screengrab to 3.0.0 [pin 2025-05-19]
 	Updated x11/lxqt-panel to 2.2.1 [pin 2025-05-19]
+	Updated databases/postgresql-timescaledb to 2.20.0 [adam 2025-05-19]
+	Updated devel/py-ijson to 3.4.0 [adam 2025-05-19]
