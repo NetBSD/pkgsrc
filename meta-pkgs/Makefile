@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2025/02/22 15:31:13 taca Exp $
+# $NetBSD: Makefile,v 1.142 2025/05/19 11:08:53 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -21,7 +21,6 @@ SUBDIR+=	bulk-test-rust
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	deforaos-desktop
-SUBDIR+=	gimp-docs
 SUBDIR+=	gnome
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
