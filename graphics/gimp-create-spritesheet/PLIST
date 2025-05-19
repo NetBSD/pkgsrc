@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2021/05/12 09:03:12 wiz Exp $
-lib/gimp/2.0/plug-ins/create_spritesheet.py
+@comment $NetBSD: PLIST,v 1.2 2025/05/19 11:24:13 wiz Exp $
+lib/gimp/3.0/plug-ins/create_spritesheet.py
