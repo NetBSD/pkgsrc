@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3444 2025/05/19 12:23:00 micha Exp $
+$NetBSD: CHANGES-2025,v 1.3445 2025/05/19 12:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5082,3 +5082,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gimp-create-spritesheet to 0.0.2019.11.27nb3 [wiz 2025-05-19]
 	Updated meta-pkgs/bulk-test-python27 to 20250519 [wiz 2025-05-19]
 	Updated games/doomlegacy to 1.48.18 [micha 2025-05-19]
+	Updated databases/prometheus-cpp to 1.3.0 [wiz 2025-05-19]
