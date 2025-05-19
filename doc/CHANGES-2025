@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3425 2025/05/19 07:29:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3426 2025/05/19 09:00:20 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gimp-devel to 3.0.4 [wiz 2025-05-19]
 	Updated devel/py-mocket to 3.13.6 [adam 2025-05-19]
 	Updated devel/py-zope.testrunner to 7.3 [adam 2025-05-19]
+	Updated pkgtools/pkgin to 25.5.0 [jperkin 2025-05-19]
