@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2025/05/19 07:13:45 wiz Exp $
-
-BLAKE2s (gimp-3.0.4.tar.xz) = 288bc3e66c79c9a4adf81fc7074c557069d1ff59c2221d72fd66de72f8044174
-SHA512 (gimp-3.0.4.tar.xz) = 7a83768caae458b75883522c87d5297e9642b64b0516c482804034b8b9acc6af6afc89d1b4a549fd26de3e33816136c31d440f554f66669c8ccd43536260916a
-Size (gimp-3.0.4.tar.xz) = 27060240 bytes
-SHA1 (patch-app-tools_meson.build) = 490d76d6c9f51c1fffbb0710683e35ac9cf5a267

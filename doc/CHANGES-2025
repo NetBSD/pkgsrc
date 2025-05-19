@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3439 2025/05/19 11:17:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3440 2025/05/19 11:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5077,3 +5077,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed graphics/gimp-high-pass-filter [wiz 2025-05-19]
 	Removed graphics/gimp-warp-sharp [wiz 2025-05-19]
 	Updated graphics/sane-frontends to 1.0.14nb73 [wiz 2025-05-19]
+	Removed graphics/gimp-devel [wiz 2025-05-19]

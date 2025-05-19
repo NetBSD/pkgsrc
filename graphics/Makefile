@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1085 2025/05/19 11:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1086 2025/05/19 11:23:23 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -178,7 +178,6 @@ SUBDIR+=	gifski
 SUBDIR+=	giftrans
 SUBDIR+=	gimp
 SUBDIR+=	gimp-create-spritesheet
-SUBDIR+=	gimp-devel
 SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
 SUBDIR+=	giram
