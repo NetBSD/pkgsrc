@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3459 2025/05/19 15:38:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3460 2025/05/19 15:44:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5100,3 +5100,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/pear-Net_URL2 to 2.2.3 [taca 2025-05-19]
 	Updated net/pear-SOAP to 0.14.0 [taca 2025-05-19]
 	Updated security/pear-Crypt_GPG to 1.6.10 [taca 2025-05-19]
+	Updated security/php-gnupg to 1.5.2 [taca 2025-05-19]
