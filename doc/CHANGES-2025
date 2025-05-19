@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3434 2025/05/19 09:13:45 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3435 2025/05/19 10:48:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5049,3 +5049,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-timescaledb to 2.20.0 [adam 2025-05-19]
 	Updated devel/py-ijson to 3.4.0 [adam 2025-05-19]
 	Updated meta-pkgs/lxqt to 2.2.0nb2 [pin 2025-05-19]
+	Updated www/py-daphne to 4.2.0 [adam 2025-05-19]
+	Updated www/py-drf-nested-routers to 0.94.2 [adam 2025-05-19]
