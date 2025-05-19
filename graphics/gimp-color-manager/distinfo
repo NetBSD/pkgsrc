@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:46:10 nia Exp $
-
-BLAKE2s (gimp-color-manager-0.1.0.tar.gz) = 523f798e79d7a8e20297bc4772f5cbf450e635ce37e8e9c48f42cd5bc72c49b7
-SHA512 (gimp-color-manager-0.1.0.tar.gz) = cebb1b33e265d5bccda24e207d979d87b1dfc5127f32d3e2f1aded60d0714dbb31fd8ec3cf68e9f44633c3a54a6878a09ee0fc9c86a004ff1badf26f5065c2d0
-Size (gimp-color-manager-0.1.0.tar.gz) = 244006 bytes
-SHA1 (patch-aa) = ac4d55318ab2010909c7b7d954b89548ea31a7f8
-SHA1 (patch-ab) = 19012d13470493fea3e2a0d90ca75cf5f43e667a
