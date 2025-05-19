@@ -1,4 +1,0 @@
-The Iterative refocus GIMP 2.0 plug-in can be used to sharpen images acquired
-by a defocused camera, blurred with gaussian or motion blur or any combination
-of these degradations. In cases of severe blur it produces much better
-results than plug-ins such as sharpen or unsharp mask.
