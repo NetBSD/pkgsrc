@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2025/04/24 14:14:20 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/05/19 11:05:22 wiz Exp $
 
 DISTNAME=	resynthesizer-0.16
 PKGNAME=	gimp-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
+
+BROKEN=		"Does not support gimp3, but perhaps soon."
 
 INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
 INSTALLATION_DIRS+=	share/gimp/2.0/scripts

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1082 2025/05/14 12:38:49 markd Exp $
+# $NetBSD: Makefile,v 1.1083 2025/05/19 11:05:20 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -193,17 +193,10 @@ SUBDIR+=	gimp-docs-pl
 SUBDIR+=	gimp-docs-ru
 SUBDIR+=	gimp-docs-sv
 SUBDIR+=	gimp-docs-zh_CN
-SUBDIR+=	gimp-exif-browser
-SUBDIR+=	gimp-fix-ca
 SUBDIR+=	gimp-high-pass-filter
-SUBDIR+=	gimp-jxr
-SUBDIR+=	gimp-liquid-rescale
-SUBDIR+=	gimp-rawphoto
-SUBDIR+=	gimp-refocus-it
 SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
 SUBDIR+=	gimp-warp-sharp
-SUBDIR+=	gimp2-wideangle
 SUBDIR+=	giram
 SUBDIR+=	girara
 SUBDIR+=	gl2ps
