@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/05/02 07:04:22 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/19 11:25:04 wiz Exp $
 
-DISTNAME=	bulk-test-python27-20240816
+DISTNAME=	bulk-test-python27-20250519
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,7 +25,6 @@ DEPENDS+=	python27-[0-9]*:../../lang/python27
 
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	getmail<6:../../mail/getmail
-DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	mailman<3:../../mail/mailman
 DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
 DEPENDS+=	palemoon-[0-9]*:../../www/palemoon
