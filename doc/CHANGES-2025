@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3461 2025/05/19 15:46:24 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3462 2025/05/19 15:58:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5102,3 +5102,11 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/pear-Crypt_GPG to 1.6.10 [taca 2025-05-19]
 	Updated security/php-gnupg to 1.5.2 [taca 2025-05-19]
 	Updated www/pear-HTTP_Request2 to 2.7.0 [taca 2025-05-19]
+	Updated mail/postfix to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-cdb to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-ldap to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-lmdb to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-mysql to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-pcre to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-pgsql to 3.10.2 [taca 2025-05-19]
+	Updated mail/postfix-sqlite to 3.10.2 [taca 2025-05-19]
