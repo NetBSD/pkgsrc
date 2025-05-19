@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/11/04 15:25:50 taca Exp $
+$NetBSD: distinfo,v 1.9 2025/05/19 15:46:12 taca Exp $
 
-BLAKE2s (pear/HTTP_Request2-2.6.0.tgz) = e53c8e5ae976f584a578d9bb3754b46f6c2beda5e068bf8adee055c1bccecd69
-SHA512 (pear/HTTP_Request2-2.6.0.tgz) = 1291a3c5e69b9b324f959e056adae882b673452b05239734770ea780c1f75324cee7fcf61a84da61f990c20695a94f3d2854321369abd5e51fe26a7491d9bf13
-Size (pear/HTTP_Request2-2.6.0.tgz) = 127945 bytes
+BLAKE2s (pear/HTTP_Request2-2.7.0.tgz) = 951f4b34f01a1a4de2dae323d6b537a1d6cff87085da353dbb366cff4d6a1751
+SHA512 (pear/HTTP_Request2-2.7.0.tgz) = 33ab73f44f774c75e4a02a6f0a26ab4af7b5a7cb68392dba75359cd3eb811e9b56b8da55018b1968edb523ac88759d5d940e5348a6fc451280225c1a8a23f9f6
+Size (pear/HTTP_Request2-2.7.0.tgz) = 129262 bytes
