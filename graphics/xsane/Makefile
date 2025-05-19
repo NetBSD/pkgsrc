@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.155 2025/04/24 14:14:42 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2025/05/19 10:53:31 wiz Exp $
 
 DISTNAME=	xsane-0.999
 PKGNAME=	xsane-0.99.9
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	graphics
 #MASTER_SITES=	http://www.xsane.org/download/
 MASTER_SITES=	https://ftp.osuosl.org/pub/blfs/conglomeration/xsane/
@@ -16,14 +16,16 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
+CONFIGURE_ARGS+=	--disable-gimp
+CONFIGURE_ARGS+=	--disable-gimp2
+
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/gimp/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../mk/bsd.pkg.mk"
