@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3437 2025/05/19 11:05:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3438 2025/05/19 11:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5059,3 +5059,17 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed graphics/gimp-exif-browser [wiz 2025-05-19]
 	Removed graphics/gimp-jxr [wiz 2025-05-19]
 	Removed graphics/gimp2-wideangle [wiz 2025-05-19]
+	Removed graphics/gimp-docs-de [wiz 2025-05-19]
+	Removed graphics/gimp-docs-en [wiz 2025-05-19]
+	Removed graphics/gimp-docs-es [wiz 2025-05-19]
+	Removed graphics/gimp-docs-fr [wiz 2025-05-19]
+	Removed graphics/gimp-docs-it [wiz 2025-05-19]
+	Removed graphics/gimp-docs-ja [wiz 2025-05-19]
+	Removed graphics/gimp-docs-ko [wiz 2025-05-19]
+	Removed graphics/gimp-docs-nl [wiz 2025-05-19]
+	Removed graphics/gimp-docs-nn [wiz 2025-05-19]
+	Removed graphics/gimp-docs-pl [wiz 2025-05-19]
+	Removed graphics/gimp-docs-ru [wiz 2025-05-19]
+	Removed graphics/gimp-docs-sv [wiz 2025-05-19]
+	Removed graphics/gimp-docs-zh_CN [wiz 2025-05-19]
+	Removed meta-pkgs/gimp-docs [wiz 2025-05-19]
