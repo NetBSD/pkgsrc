@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/13 06:52:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/19 07:28:53 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -149,9 +149,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-37/stop_on_failure.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-6/cwdtests.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-6/cwdtests.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-6/cwdtests.pyo
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex-719369/sampletestsf.py
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex-719369/sampletestsf.pyc
-${PYSITELIB}/zope/testrunner/tests/testrunner-ex-719369/sampletestsf.pyo
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex-expectedFailure/sample_expected_failure_tests.py
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex-expectedFailure/sample_expected_failure_tests.pyc
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex-expectedFailure/sample_expected_failure_tests.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-pp-lib/sample4/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-pp-lib/sample4/__init__.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-pp-lib/sample4/__init__.pyo
@@ -412,6 +412,7 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/usecompiled/package/compiletest.pyo
+${PYSITELIB}/zope/testrunner/tests/testrunner-expected-failures.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-gc-after-test.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-gc.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-knit.rst
@@ -443,7 +444,6 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-subunit-v2.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-subunit.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-tb-format.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-test-selection.rst
-${PYSITELIB}/zope/testrunner/tests/testrunner-unexpected-success.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-verbose.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-wo-source.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner.rst
