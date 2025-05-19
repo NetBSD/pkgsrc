@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.85 2025/05/11 10:28:26 wiz Exp $
+$NetBSD: distinfo,v 1.86 2025/05/19 14:14:44 adam Exp $
 
-BLAKE2s (cython-3.1.0.tar.gz) = 90cbfcc66bf2d3c6c453855be942885c1451d87263a3310c27120eea942bd23c
-SHA512 (cython-3.1.0.tar.gz) = 94bbf2d020785a24828e9f5516515d11926bc3511074e5ea780db30d0b8dde332d52adb950dbdca4767ba86d5e7630549efc442e73269d2c4c91ac4844a69a14
-Size (cython-3.1.0.tar.gz) = 3181017 bytes
+BLAKE2s (cython-3.1.1.tar.gz) = 2c6415576244b55f00415c90300d7441d519816dbee0c0b23e4926cb490cfd4b
+SHA512 (cython-3.1.1.tar.gz) = 5c64b5d280b234d93d02e91ab22567342350671c605df30a3ac7b41b64e0605eb0aef7bc721f68d35d6048085eaa392cb0a803df32ca902e51e2009c987d962e
+Size (cython-3.1.1.tar.gz) = 3175446 bytes
 SHA1 (patch-Demos_embed_Makefile) = 67c4f662a8d79d39cbf8808d2e87d91a26ef28b9
 SHA1 (patch-runtests.py) = b955b089d284f638eb5de85878204c084c550ef5
