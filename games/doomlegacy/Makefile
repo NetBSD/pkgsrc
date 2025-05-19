@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/01/06 21:49:11 ktnb Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/19 12:21:27 micha Exp $
 
-VERS=			1.48.14
+VERS=			1.48.18
 PKGNAME=		doomlegacy-${VERS}
-PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=doomlegacy/}
 DISTNAME=		${PKGNAME_NOREV:S/-/_/}_source
@@ -14,12 +13,14 @@ HOMEPAGE=		http://doomlegacy.sourceforge.net/
 COMMENT=		The legacy of Doom
 LICENSE=		gnu-gpl-v2
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}/svn1749
+
 # Tested on Linux/ppc (32bit Big Endian) and NetBSD/amd64 (64bit Little Endian)
 # Untested: In general the source code has support for the other listed OS too
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* \
 			NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
-USE_LANGUAGES+=		c99
+USE_CC_FEATURES+=	c99
 USE_TOOLS+=		gmake
 # Dependency generation fails with parallel build
 MAKE_JOBS_SAFE=		no
