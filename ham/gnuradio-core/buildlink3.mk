@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2025/05/18 19:29:32 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2025/05/19 15:00:34 gdt Exp $
 
 BUILDLINK_TREE+=	gnuradio-core
 
@@ -8,7 +8,11 @@ GNURADIO_CORE_BUILDLINK3_MK:=
 # GNU Radio's header files do not compile in c++11 mode, but do in
 # c++17 mode.  See Makefile.common for status of reporting upstream.
 USE_LANGUAGES+=		c c++
+USE_CC_FEATURES=	c11
 USE_CXX_FEATURES+=	c++17
+# This is not really right, because perhaps GNU Radio is ok in c++20
+# mode, and some other package might build in that mode, but at least
+# gr-osmosdr might build in c++11, which will fail.
 FORCE_CXX_STD=		c++17
 
 BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=3.10.2
