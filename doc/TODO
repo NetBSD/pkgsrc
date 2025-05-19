@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25827 2025/05/19 09:07:29 pin Exp $
+$NetBSD: TODO,v 1.25828 2025/05/19 11:33:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -658,19 +658,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
-	o gimp-docs-de-2.10.0
-	o gimp-docs-en-2.10.0
-	o gimp-docs-es-2.10.0
-	o gimp-docs-fr-2.10.0
-	o gimp-docs-it-2.10.0
-	o gimp-docs-ja-2.10.0
-	o gimp-docs-ko-2.10.0
-	o gimp-docs-nl-2.10.0
-	o gimp-docs-nn-2.10.0
-	o gimp-docs-pl-2.10.0
-	o gimp-docs-ru-2.10.0
-	o gimp-docs-sv-2.10.0
-	o gimp-docs-zh_CN-2.10.0
 	o git-cinnabar-0.7.2
 	o gitea-1.22.1
 	o gjs-1.70.1
