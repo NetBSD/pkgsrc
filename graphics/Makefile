@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1083 2025/05/19 11:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1084 2025/05/19 11:08:53 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -180,19 +180,6 @@ SUBDIR+=	gimp
 SUBDIR+=	gimp-color-manager
 SUBDIR+=	gimp-create-spritesheet
 SUBDIR+=	gimp-devel
-SUBDIR+=	gimp-docs-de
-SUBDIR+=	gimp-docs-en
-SUBDIR+=	gimp-docs-es
-SUBDIR+=	gimp-docs-fr
-SUBDIR+=	gimp-docs-it
-SUBDIR+=	gimp-docs-ja
-SUBDIR+=	gimp-docs-ko
-SUBDIR+=	gimp-docs-nl
-SUBDIR+=	gimp-docs-nn
-SUBDIR+=	gimp-docs-pl
-SUBDIR+=	gimp-docs-ru
-SUBDIR+=	gimp-docs-sv
-SUBDIR+=	gimp-docs-zh_CN
 SUBDIR+=	gimp-high-pass-filter
 SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
