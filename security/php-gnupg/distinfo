@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/01/10 14:16:40 taca Exp $
+$NetBSD: distinfo,v 1.6 2025/05/19 15:43:51 taca Exp $
 
-BLAKE2s (php-gnupg/gnupg-1.5.1.tgz) = 84aa2623403081befc01f2da6ceeec73b201cea821f57a34b41905ffe5ed7c90
-SHA512 (php-gnupg/gnupg-1.5.1.tgz) = 93aa267e3ebf0307a700560c6ea170e6763e0a94c22730a27d39956c2d4472187018efd6393c2c9bd6c0518b92fade1b60323e3b3c24ada480f1c4d22d9e2072
-Size (php-gnupg/gnupg-1.5.1.tgz) = 37316 bytes
-SHA1 (patch-config.m4) = 0010a801d4ac264bcf29ece8c4d7affa3549da16
+BLAKE2s (php-gnupg/gnupg-1.5.2.tgz) = 3a332b1f4a0083c0d3bef3ced9dbabbc20a690160acb3b5d1097a95942a8d873
+SHA512 (php-gnupg/gnupg-1.5.2.tgz) = 9b501214954ee4805073c5b71388f461758c0669085582185f9ed261bf3ba681f8e14f67316b2fcc93fb238651c5c255bc86e2d7a7f030aa762a2efa71edd050
+Size (php-gnupg/gnupg-1.5.2.tgz) = 42108 bytes
+SHA1 (patch-config.m4) = 2f4acaf9737d1b959b1514fcce4044125abdb3f5
