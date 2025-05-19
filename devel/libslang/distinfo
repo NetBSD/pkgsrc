@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.15 2025/01/06 21:36:24 ktnb Exp $
+$NetBSD: distinfo,v 1.16 2025/05/19 15:45:40 ktnb Exp $
 
 BLAKE2s (slang-2.3.3.tar.bz2) = d8ba51ad216a71ec3da2ee5ea994f73223c632c8197a87b5cb1e53b8b9463e61
 SHA512 (slang-2.3.3.tar.bz2) = f882f09e3fcd53427de0f233c9fc3ab15497f2323007be9a084696c8cf810ffe2726cd003149e757df26198b390b9f8c1ff411dc6473513457bd0f94722f8490
 Size (slang-2.3.3.tar.bz2) = 1646311 bytes
 SHA1 (patch-autoconf_slangpc.in) = abfb7a4ce6df4b7c5bf7d319c4cc56f7bd03e209
-SHA1 (patch-configure) = 1f5743569c43bcfebb925b275d7032f853a34943
+SHA1 (patch-configure) = 45864832f0253bf9d16283866b71ce9dd0b3683e
 SHA1 (patch-demo_Makefile.in) = 9ab953b8d850832f49f8af9bdb397f474af209eb
 SHA1 (patch-modules_fork-module.c) = 25be7b526b2adb90d7b83645cc93fa67743fe86f
 SHA1 (patch-src_slang.h) = 1181b6ce5de5c7c149aa8692dbcded981bda688e
