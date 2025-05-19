@@ -1,6 +1,6 @@
-$NetBSD: patch-res_res__xmpp.c,v 1.1 2024/04/08 03:20:10 jnemeth Exp $
+$NetBSD: patch-res_res__xmpp.c,v 1.2 2025/05/19 06:57:35 jnemeth Exp $
 
---- res/res_xmpp.c.orig	2021-06-24 12:50:57.000000000 +0000
+--- res/res_xmpp.c.orig	2025-05-08 12:34:42.000000000 +0000
 +++ res/res_xmpp.c
 @@ -62,6 +62,13 @@
  #include "asterisk/config_options.h"
@@ -15,8 +15,8 @@ $NetBSD: patch-res_res__xmpp.c,v 1.1 2024/04/08 03:20:10 jnemeth Exp $
 +
  /*** DOCUMENTATION
  	<application name="JabberSend" language="en_US" module="res_xmpp">
- 		<synopsis>
-@@ -3527,7 +3534,7 @@ static int xmpp_action_hook(void *data, 
+ 		<since>
+@@ -3653,7 +3660,7 @@ static int xmpp_action_hook(void *data, 
  
  int ast_xmpp_client_disconnect(struct ast_xmpp_client *client)
  {
@@ -25,7 +25,7 @@ $NetBSD: patch-res_res__xmpp.c,v 1.1 2024/04/08 03:20:10 jnemeth Exp $
  		xmpp_client_change_state(client, XMPP_STATE_DISCONNECTING);
  		pthread_cancel(client->thread);
  		pthread_join(client->thread, NULL);
-@@ -3669,7 +3676,7 @@ static int xmpp_client_receive(struct as
+@@ -3795,7 +3802,7 @@ static int xmpp_client_receive(struct as
  			/* if we stumble on the ending tag character,
  			   we skip any whitespace that follows it*/
  			if (c == '>') {
