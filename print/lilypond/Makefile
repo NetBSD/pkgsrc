@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2024/12/27 08:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2025/05/19 17:02:34 nia Exp $
 
 DISTNAME=		lilypond-2.24.3
 PKGREVISION=		2
@@ -36,6 +36,8 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
+# defaults to c++14, but uses alloca, which is non-standard
+FORCE_CXX_STD=		gnu++14
 USE_TOOLS+=		bison gmake gs:run makeinfo perl pkg-config msgfmt
 USE_TOOLS+=		texi2html zip
 MAKE_FILE=		GNUmakefile
