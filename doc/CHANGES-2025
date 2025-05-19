@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3449 2025/05/19 14:35:44 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3450 2025/05/19 14:39:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5088,3 +5088,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cython to 3.1.1 [adam 2025-05-19]
 	Updated devel/py-faker to 37.3.0 [adam 2025-05-19]
 	Updated devel/skalibs to 2.14.4.0nb1 [schmonz 2025-05-19]
+	Updated lang/ruby34 to 3.4.4 [taca 2025-05-19]
