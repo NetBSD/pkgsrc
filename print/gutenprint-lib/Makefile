@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2025/04/24 14:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2025/05/19 11:19:31 wiz Exp $
 
 INSTALLVERSION=	5.3
 VERSION=	${INSTALLVERSION}.5
@@ -33,8 +33,6 @@ USE_LANGUAGES+=		c
 USE_CC_FEATURES+=	gnu11
 
 GNU_CONFIGURE=		YES
-
-.include "../../print/gutenprint-lib/options.mk"
 
 # gutenprint has many options, and really should be split into
 # multiple packages.  Splitting is difficult because of the structure
