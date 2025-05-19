@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3438 2025/05/19 11:08:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3439 2025/05/19 11:17:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5073,3 +5073,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed graphics/gimp-docs-sv [wiz 2025-05-19]
 	Removed graphics/gimp-docs-zh_CN [wiz 2025-05-19]
 	Removed meta-pkgs/gimp-docs [wiz 2025-05-19]
+	Removed graphics/gimp-color-manager [wiz 2025-05-19]
+	Removed graphics/gimp-high-pass-filter [wiz 2025-05-19]
+	Removed graphics/gimp-warp-sharp [wiz 2025-05-19]
+	Updated graphics/sane-frontends to 1.0.14nb73 [wiz 2025-05-19]
