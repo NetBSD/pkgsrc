@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3435 2025/05/19 10:48:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3436 2025/05/19 10:53:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5051,3 +5051,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/lxqt to 2.2.0nb2 [pin 2025-05-19]
 	Updated www/py-daphne to 4.2.0 [adam 2025-05-19]
 	Updated www/py-drf-nested-routers to 0.94.2 [adam 2025-05-19]
+	Updated graphics/xsane to 0.99.9nb42 [wiz 2025-05-19]
