@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/04/25 11:39:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/05/19 21:54:58 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -80,6 +80,9 @@ ${PYSITELIB}/chirp/drivers/ap510.pyo
 ${PYSITELIB}/chirp/drivers/baofeng_common.py
 ${PYSITELIB}/chirp/drivers/baofeng_common.pyc
 ${PYSITELIB}/chirp/drivers/baofeng_common.pyo
+${PYSITELIB}/chirp/drivers/baofeng_digital.py
+${PYSITELIB}/chirp/drivers/baofeng_digital.pyc
+${PYSITELIB}/chirp/drivers/baofeng_digital.pyo
 ${PYSITELIB}/chirp/drivers/baofeng_uv17.py
 ${PYSITELIB}/chirp/drivers/baofeng_uv17.pyc
 ${PYSITELIB}/chirp/drivers/baofeng_uv17.pyo
@@ -245,6 +248,9 @@ ${PYSITELIB}/chirp/drivers/ic9x_ll.pyo
 ${PYSITELIB}/chirp/drivers/icf.py
 ${PYSITELIB}/chirp/drivers/icf.pyc
 ${PYSITELIB}/chirp/drivers/icf.pyo
+${PYSITELIB}/chirp/drivers/icf520.py
+${PYSITELIB}/chirp/drivers/icf520.pyc
+${PYSITELIB}/chirp/drivers/icf520.pyo
 ${PYSITELIB}/chirp/drivers/icm710.py
 ${PYSITELIB}/chirp/drivers/icm710.pyc
 ${PYSITELIB}/chirp/drivers/icm710.pyo
@@ -257,6 +263,9 @@ ${PYSITELIB}/chirp/drivers/icp7.pyo
 ${PYSITELIB}/chirp/drivers/icq7.py
 ${PYSITELIB}/chirp/drivers/icq7.pyc
 ${PYSITELIB}/chirp/drivers/icq7.pyo
+${PYSITELIB}/chirp/drivers/ict10.py
+${PYSITELIB}/chirp/drivers/ict10.pyc
+${PYSITELIB}/chirp/drivers/ict10.pyo
 ${PYSITELIB}/chirp/drivers/ict70.py
 ${PYSITELIB}/chirp/drivers/ict70.pyc
 ${PYSITELIB}/chirp/drivers/ict70.pyo
@@ -470,9 +479,18 @@ ${PYSITELIB}/chirp/drivers/thuv1f.pyo
 ${PYSITELIB}/chirp/drivers/tk270.py
 ${PYSITELIB}/chirp/drivers/tk270.pyc
 ${PYSITELIB}/chirp/drivers/tk270.pyo
+${PYSITELIB}/chirp/drivers/tk280.py
+${PYSITELIB}/chirp/drivers/tk280.pyc
+${PYSITELIB}/chirp/drivers/tk280.pyo
 ${PYSITELIB}/chirp/drivers/tk3140.py
 ${PYSITELIB}/chirp/drivers/tk3140.pyc
 ${PYSITELIB}/chirp/drivers/tk3140.pyo
+${PYSITELIB}/chirp/drivers/tk481.py
+${PYSITELIB}/chirp/drivers/tk481.pyc
+${PYSITELIB}/chirp/drivers/tk481.pyo
+${PYSITELIB}/chirp/drivers/tk690.py
+${PYSITELIB}/chirp/drivers/tk690.pyc
+${PYSITELIB}/chirp/drivers/tk690.pyo
 ${PYSITELIB}/chirp/drivers/tk760.py
 ${PYSITELIB}/chirp/drivers/tk760.pyc
 ${PYSITELIB}/chirp/drivers/tk760.pyo
@@ -506,6 +524,9 @@ ${PYSITELIB}/chirp/drivers/ts480.pyo
 ${PYSITELIB}/chirp/drivers/ts590.py
 ${PYSITELIB}/chirp/drivers/ts590.pyc
 ${PYSITELIB}/chirp/drivers/ts590.pyo
+${PYSITELIB}/chirp/drivers/ts790e.py
+${PYSITELIB}/chirp/drivers/ts790e.pyc
+${PYSITELIB}/chirp/drivers/ts790e.pyo
 ${PYSITELIB}/chirp/drivers/ts850.py
 ${PYSITELIB}/chirp/drivers/ts850.pyc
 ${PYSITELIB}/chirp/drivers/ts850.pyo
@@ -584,6 +605,7 @@ ${PYSITELIB}/chirp/locale/ja_JP/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/nl/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/pl/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/pt_BR/LC_MESSAGES/CHIRP.mo
+${PYSITELIB}/chirp/locale/ro_RO/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/ru/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/tr_TR/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/uk_UA/LC_MESSAGES/CHIRP.mo
@@ -616,6 +638,7 @@ ${PYSITELIB}/chirp/share/welcome_screen_bg.png
 ${PYSITELIB}/chirp/share/welcome_screen_es.png
 ${PYSITELIB}/chirp/share/welcome_screen_fr.png
 ${PYSITELIB}/chirp/share/welcome_screen_it.png
+${PYSITELIB}/chirp/share/welcome_screen_ro_RO.png
 ${PYSITELIB}/chirp/share/welcome_screen_zh_CN.png
 ${PYSITELIB}/chirp/sources/__init__.py
 ${PYSITELIB}/chirp/sources/__init__.pyc
@@ -626,6 +649,9 @@ ${PYSITELIB}/chirp/sources/base.pyo
 ${PYSITELIB}/chirp/sources/dmrmarc.py
 ${PYSITELIB}/chirp/sources/dmrmarc.pyc
 ${PYSITELIB}/chirp/sources/dmrmarc.pyo
+${PYSITELIB}/chirp/sources/mapy73pl.py
+${PYSITELIB}/chirp/sources/mapy73pl.pyc
+${PYSITELIB}/chirp/sources/mapy73pl.pyo
 ${PYSITELIB}/chirp/sources/przemienniki_eu.py
 ${PYSITELIB}/chirp/sources/przemienniki_eu.pyc
 ${PYSITELIB}/chirp/sources/przemienniki_eu.pyo
