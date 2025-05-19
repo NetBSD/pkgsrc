@@ -1,2 +1,5 @@
 Thunderbird is a free email, news, and chat application with support for
 add-ons, derived from the Mozilla Firefox web browser.
+
+This package tracks the 115 ESR branch.  This branch is EOL; the final
+release was 115.18.0esr on December 11, 2024.
