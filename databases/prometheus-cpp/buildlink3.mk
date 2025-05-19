@@ -1,16 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/19 07:57:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/05/19 12:53:37 wiz Exp $
 
 BUILDLINK_TREE+=	prometheus-cpp
 
 .if !defined(PROMETHEUS_CPP_BUILDLINK3_MK)
 PROMETHEUS_CPP_BUILDLINK3_MK:=
 
-USE_CXX_FEATURES+=		c++14
-
 BUILDLINK_DEPMETHOD.prometheus-cpp?=	build
 
 BUILDLINK_API_DEPENDS.prometheus-cpp+=	prometheus-cpp>=1.1.0
-BUILDLINK_ABI_DEPENDS.prometheus-cpp?=	prometheus-cpp>=1.1.0nb10
+BUILDLINK_ABI_DEPENDS.prometheus-cpp?=	prometheus-cpp>=1.3.0
 BUILDLINK_PKGSRCDIR.prometheus-cpp?=	../../databases/prometheus-cpp
 
 .include "../../devel/zlib/buildlink3.mk"
