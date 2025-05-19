@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/08/14 05:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/19 11:24:13 wiz Exp $
 
 DISTNAME=		create_spritesheet
 PKGNAME=		gimp-create-spritesheet-0.0.2019.11.27
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		https://raw.githubusercontent.com/Spydarlee/scripts/master/GIMP/
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -17,16 +17,13 @@ DEPENDS+=		gimp-[0-9]*:../../graphics/gimp
 
 WRKSRC=			${WRKDIR}
 REPLACE_PYTHON=		${DISTNAME}.py
-INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
+INSTALLATION_DIRS=	lib/gimp/3.0/plug-ins
 USE_LANGUAGES=		# python
-
-# gimp python plugin support only targets python 2.7
-PYTHON_VERSIONS_ACCEPTED=	27
 
 do-build:
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.py ${DESTDIR}${PREFIX}/lib/gimp/2.0/plug-ins/
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.py ${DESTDIR}${PREFIX}/lib/gimp/3.0/plug-ins/
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
