@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3448 2025/05/19 14:17:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3449 2025/05/19 14:35:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5087,3 +5087,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/chafa to 1.16.0 [ktnb 2025-05-19]
 	Updated devel/py-cython to 3.1.1 [adam 2025-05-19]
 	Updated devel/py-faker to 37.3.0 [adam 2025-05-19]
+	Updated devel/skalibs to 2.14.4.0nb1 [schmonz 2025-05-19]
