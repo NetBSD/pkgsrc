@@ -1,35 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.100 2025/04/24 14:14:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.101 2025/05/19 11:20:01 wiz Exp $
 
 BUILDLINK_TREE+=	gimp
 
 .if !defined(GIMP_BUILDLINK3_MK)
 GIMP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.4.0<2.99
-BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.10.38nb16
+BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.99.10
+BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=3.0.2nb3
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
 
-pkgbase := gimp
-.include "../../mk/pkg-build-options.mk"
-
-.if ${PKG_BUILD_OPTIONS.gimp:Maalib}
-.include "../../graphics/aalib/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.gimp:Mmng}
-.include "../../graphics/mng/buildlink3.mk"
-.endif
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/gexiv2/buildlink3.mk"
-.include "../../graphics/lcms2/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/libwmf/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.endif # GIMP_BUILDLINK3_MK
+.include "../../x11/gtk3/buildlink3.mk"
+.endif	# GIMP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gimp
