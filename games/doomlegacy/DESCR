@@ -20,4 +20,4 @@ and the Marine's Best Friend (MBF) extensions. Legacy also has implemented
 among other things 3D floors, swimmable water and other special effects using
 extended linedef codes, and supports the FraggleScript scripting language.
 
-This package contains the SDL build of Doom Legacy.
+This package contains the SDL1 build of Doom Legacy.

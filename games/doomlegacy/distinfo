@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2024/01/17 12:22:59 micha Exp $
+$NetBSD: distinfo,v 1.15 2025/05/19 12:21:27 micha Exp $
 
-BLAKE2s (doomlegacy_1.48.14_common.zip) = 52260d049f503c89ca872e6934435fe8c52baf82bc07c78caf8e157f38099f7d
-SHA512 (doomlegacy_1.48.14_common.zip) = 69e7c4a004a507ec87c39d31595e11c5a764e470ee59cd231a61dfaad70b77ac8c8c4789cfb333bfa0343aed210d5986136a6fa5cb88bc066af50d8c8fac1ce6
-Size (doomlegacy_1.48.14_common.zip) = 1056545 bytes
-BLAKE2s (doomlegacy_1.48.14_source.tar.bz2) = 38e993f456c12a280662ae8959a346e60e8f8bf70abb2b44abc16a1dfa62c3b4
-SHA512 (doomlegacy_1.48.14_source.tar.bz2) = e2e327723d893fc7cee7c26bb102d6c8df05a254a564055ac48cc8367e69cd858a78b0824c1f9331cc25bb40397a73d20f45b3fd425d766ec24d51895247f35c
-Size (doomlegacy_1.48.14_source.tar.bz2) = 2624909 bytes
+BLAKE2s (doomlegacy_1.48.18_common.zip) = 621f0ad2f941ce1def6a964d61e38c02f76ebfe62fa21cc4670148c159799996
+SHA512 (doomlegacy_1.48.18_common.zip) = 36235e52ec553b7b280485c725fb5a25759e04b4ecef7be472323d770c500ac3c22c628dbb0bc1a87bcb89d40bb7c0a98ae2e3f288f64617a31acb3c98280362
+Size (doomlegacy_1.48.18_common.zip) = 1104556 bytes
+BLAKE2s (doomlegacy_1.48.18_source.tar.bz2) = f51d5912f62b089b3bdcd6704dfa79c9c3017c157b342f9069756de6985b2057
+SHA512 (doomlegacy_1.48.18_source.tar.bz2) = aa7945edacf094cdb50b5acf457b28a3c1701304fa9416df0152723d0ecc8d56169e4cdd31b92c0cbd643f94f9a6918532d5ada0aac96474cc848364562bcdd5
+Size (doomlegacy_1.48.18_source.tar.bz2) = 2803672 bytes
