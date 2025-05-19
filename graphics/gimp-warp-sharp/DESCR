@@ -1,9 +1,0 @@
-Sharpening images with traditional methods increases the amount of
-noise in the image.  This script implements a method to sharpen images
-described by Joern Loviscach in the german computer magazine c't,
-22/1999.
-
-Basically it "squeezes" unsharp edges. This method is a simplified
-Version of an algorithm by Nur Arad and Craig Gotsman: "Enhancement by
-Image-Dependent Warping", IEEE Transactions on Image Processing, 1999,
-Vol. 8, No. 8, S. 1063.
