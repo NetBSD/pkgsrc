@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2025/05/16 13:16:11 ktnb Exp $
+# $NetBSD: Makefile,v 1.67 2025/05/19 13:43:32 ktnb Exp $
 
-DISTNAME=	kitty-0.42.0
+DISTNAME=	kitty-0.42.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -17,8 +17,6 @@ GO_VERSION_REQD+=	123
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config
 
-# https://github.com/kovidgoyal/kitty/issues/8642
-FORCE_C_STD=	c11
 USE_CXX_FEATURES+=	has_include
 
 TOOL_DEPENDS+=	nerd-fonts-NerdFontsSymbolsOnly-[0-9]*:../../fonts/nerd-fonts-NerdFontsSymbolsOnly
