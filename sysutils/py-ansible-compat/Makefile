@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/04/14 07:26:49 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/05/19 06:44:33 adam Exp $
 
-DISTNAME=	ansible_compat-25.1.5
+DISTNAME=	ansible_compat-25.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-compat/}
@@ -25,10 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-plus-[0-9]*:../../devel/py-test-plus
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
