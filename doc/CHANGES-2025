@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3471 2025/05/20 10:33:24 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3472 2025/05/20 12:08:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5122,3 +5122,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkgin to 25.5.0nb1 [wiz 2025-05-20]
 	Updated pkgtools/pkgin to 25.5.1 [jperkin 2025-05-20]
 	Added graphics/vertex-theme version 20170128 [nia 2025-05-20]
+	Updated devel/py-atpublic to 6.0.1 [adam 2025-05-20]
+	Updated time/py-durationpy to 0.10 [adam 2025-05-20]
