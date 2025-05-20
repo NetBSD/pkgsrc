@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3479 2025/05/20 16:47:25 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3480 2025/05/20 16:48:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/anubis to 1.18.0nb1 [ryoon 2025-05-20]
 	Updated databases/duckdb to 1.2.2 [ryoon 2025-05-20]
 	Added databases/sqlite3-diff version 3.49.2 [schmonz 2025-05-20]
+	Added databases/git-sqlite version 0.1 [schmonz 2025-05-20]
