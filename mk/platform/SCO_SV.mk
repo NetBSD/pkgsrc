@@ -1,4 +1,4 @@
-# $NetBSD: SCO_SV.mk,v 1.4 2025/04/12 08:36:36 nia Exp $
+# $NetBSD: SCO_SV.mk,v 1.5 2025/05/20 09:49:24 nia Exp $
 #
 # Variable definitions for the OpenServer 5.0.7/3.2 and 6.0.0/5.
 
@@ -53,8 +53,6 @@ _OPSYS_CAN_CHECK_SHLIBS=	no # can't use readelf in check/bsd.check-vars.mk
 _OPSYS_PREFER.curses?=		native
 
 .if ${OS_VARIANT} == "SCOOSR5"
-# SCO OpenServer 5.0.7/3.2's /bin/rm cannot accepr "rm -f" (without arg).
-CONFIGURE_ENV+=		ACCEPT_INFERIOR_RM_PROGRAM=yes
 # pkgsrc does not support SCO OpenServer 5.0.7/3.2's native CC (yet).
 BUILDLINK_TRANSFORM+=	rm:-belf
 # SCO OpenServer 5.0.7/3.2's pthread is GNU pth and it requires -lsocket.
@@ -65,3 +63,6 @@ PTHREAD_TYPE=	pth
 _OPSYS_MISSING_FEATURES=	inet6
 PKG_DEFAULT_OPTIONS=		-inet6
 .endif
+
+# SCO OpenServer 5.0.7/3.2's /bin/rm cannot accepr "rm -f" (without arg).
+CONFIGURE_ENV+=		ACCEPT_INFERIOR_RM_PROGRAM=yes
