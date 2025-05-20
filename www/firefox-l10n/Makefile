@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.289 2025/05/13 20:57:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.290 2025/05/20 15:09:27 ryoon Exp $
 
-FIREFOX_VER=	138.0.3
+FIREFOX_VER=	138.0.4
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
