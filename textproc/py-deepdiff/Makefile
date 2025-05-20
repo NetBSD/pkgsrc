@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/04/14 12:02:36 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/20 05:44:15 adam Exp $
 
-DISTNAME=	deepdiff-8.4.2
+DISTNAME=	deepdiff-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deepdiff/}
@@ -11,17 +11,24 @@ COMMENT=	Deep Difference and Search of any Python object/data
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-orderly-set>=5.3.0:../../devel/py-orderly-set
+DEPENDS+=	${PYPKGPREFIX}-orderly-set>=5.4.1:../../devel/py-orderly-set
 # cli
-DEPENDS+=	${PYPKGPREFIX}-click>=8.1.8:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.2:../../textproc/py-yaml
-TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23.5:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.0:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.0:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=2.2.0:../../math/py-numpy
+TEST_DEPENDS+=	${PYPKGPREFIX}-pandas>=2.2.0:../../math/py-pandas
+TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>0:../../time/py-pytz
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=1.2.3:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+REPLACE_PYTHON+=	deepdiff/diff.py
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} deep deep-${PYVERSSUFFIX} || ${TRUE}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
