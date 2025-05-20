@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3467 2025/05/20 07:32:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3468 2025/05/20 07:41:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5117,3 +5117,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-multidict to 6.4.4 [adam 2025-05-20]
 	Updated devel/mold to 2.39.1 [adam 2025-05-20]
 	Updated security/gpgme to 1.24.3 [adam 2025-05-20]
+	Updated devel/py-amaranth to 0.5.6 [adam 2025-05-20]
+	Updated devel/py-scikit-build-core to 0.11.3 [adam 2025-05-20]
