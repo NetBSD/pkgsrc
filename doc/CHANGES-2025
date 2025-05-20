@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3472 2025/05/20 12:08:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3473 2025/05/20 13:14:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5124,3 +5124,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/vertex-theme version 20170128 [nia 2025-05-20]
 	Updated devel/py-atpublic to 6.0.1 [adam 2025-05-20]
 	Updated time/py-durationpy to 0.10 [adam 2025-05-20]
+	Updated benchmarks/google-benchmark to 1.9.4 [adam 2025-05-20]
+	Updated editors/neovim to 0.11.1 [adam 2025-05-20]
