@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/05/20 16:48:21 schmonz Exp $
+
+BLAKE2s (git-sqlite-0.1.tar.gz) = 3b2be30d732d1c43fd17295e3547eb023f02dd4e4b5b7be03fc2944a197058ac
+SHA512 (git-sqlite-0.1.tar.gz) = 38dbe48691ba68e815a6ea6eaf54ca72218b6bc5e845430d8c89e25c84772a88703b4ce1ab10416474b15c65b1a06e49272ff7f3fc86473a59c32747f8b64aa0
+Size (git-sqlite-0.1.tar.gz) = 7161 bytes
+SHA1 (patch-configure.ac) = 82e3d559e8e6ed03655b2ddc9eda45825ca2842d
