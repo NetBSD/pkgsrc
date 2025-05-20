@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/20 12:06:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/public/__init__.py
 ${PYSITELIB}/public/__init__.pyc
 ${PYSITELIB}/public/__init__.pyo
+${PYSITELIB}/public/modules.py
+${PYSITELIB}/public/modules.pyc
+${PYSITELIB}/public/modules.pyo
 ${PYSITELIB}/public/private.py
 ${PYSITELIB}/public/private.pyc
 ${PYSITELIB}/public/private.pyo
