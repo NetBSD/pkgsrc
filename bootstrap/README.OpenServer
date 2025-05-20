@@ -1,4 +1,4 @@
-$NetBSD: README.OpenServer,v 1.1 2025/03/30 09:53:32 nia Exp $
+$NetBSD: README.OpenServer,v 1.2 2025/05/20 09:49:24 nia Exp $
 
 Supported platforms
 ===================
@@ -45,9 +45,6 @@ OpenServer 6 has greater similarity to UnixWare.
 
 - There appears to be a bug in 6D2M2a where /usr/include/sys/mkdev.h
   incorrectly declares functions such as major() as non-static, fix them.
-
-- The rm binary is flawed and most autoconf scripts do not accept
-  it. Replace it with the one from /usr/gnu/bin.
 
 First, download the following packages:
 
