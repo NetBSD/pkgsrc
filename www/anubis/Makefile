@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/05/13 17:33:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/20 15:16:41 ryoon Exp $
 
 DISTNAME=	anubis-1.18.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TecharoHQ/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,6 +10,12 @@ MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://anubis.techaro.lol/
 COMMENT=	Proof-of-work check to stop AI bots
 LICENSE=	mit
+
+ASSETS=		anubis-1.18.0-assets.tar.bz2
+DISTFILES=	${DEFAULT_DISTFILES} ${ASSETS}
+SITES.${ASSETS}=	${MASTER_SITE_LOCAL}
+
+EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${ASSETS}
 
 USE_LANGUAGES=		c # Go
 GO_BUILD_PATTERN=	./cmd/anubis
