@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/05/05 08:33:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/20 07:40:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,9 @@ ${PYSITELIB}/scikit_build_core/__init__.pyo
 ${PYSITELIB}/scikit_build_core/_compat/__init__.py
 ${PYSITELIB}/scikit_build_core/_compat/__init__.pyc
 ${PYSITELIB}/scikit_build_core/_compat/__init__.pyo
+${PYSITELIB}/scikit_build_core/_compat/argparse.py
+${PYSITELIB}/scikit_build_core/_compat/argparse.pyc
+${PYSITELIB}/scikit_build_core/_compat/argparse.pyo
 ${PYSITELIB}/scikit_build_core/_compat/builtins.py
 ${PYSITELIB}/scikit_build_core/_compat/builtins.pyc
 ${PYSITELIB}/scikit_build_core/_compat/builtins.pyo
@@ -232,9 +235,12 @@ ${PYSITELIB}/scikit_build_core/settings/documentation.pyo
 ${PYSITELIB}/scikit_build_core/settings/json_schema.py
 ${PYSITELIB}/scikit_build_core/settings/json_schema.pyc
 ${PYSITELIB}/scikit_build_core/settings/json_schema.pyo
-${PYSITELIB}/scikit_build_core/settings/skbuild_docs.py
-${PYSITELIB}/scikit_build_core/settings/skbuild_docs.pyc
-${PYSITELIB}/scikit_build_core/settings/skbuild_docs.pyo
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_readme.py
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_readme.pyc
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_readme.pyo
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_sphinx.py
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_sphinx.pyc
+${PYSITELIB}/scikit_build_core/settings/skbuild_docs_sphinx.pyo
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.py
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.pyc
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.pyo
