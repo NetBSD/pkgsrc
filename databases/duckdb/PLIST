@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/26 15:42:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/20 16:03:33 ryoon Exp $
 bin/duckdb
 include/duckdb.h
 include/duckdb.hpp
@@ -51,6 +51,7 @@ include/duckdb/catalog/standard_entry.hpp
 include/duckdb/common/adbc/adbc-init.hpp
 include/duckdb/common/adbc/adbc.hpp
 include/duckdb/common/adbc/single_batch_array_stream.hpp
+include/duckdb/common/adbc/wrappers.hpp
 include/duckdb/common/algorithm.hpp
 include/duckdb/common/allocator.hpp
 include/duckdb/common/array.hpp
@@ -63,6 +64,7 @@ include/duckdb/common/arrow/appender/list.hpp
 include/duckdb/common/arrow/appender/list_data.hpp
 include/duckdb/common/arrow/appender/list_view_data.hpp
 include/duckdb/common/arrow/appender/map_data.hpp
+include/duckdb/common/arrow/appender/null_data.hpp
 include/duckdb/common/arrow/appender/scalar_data.hpp
 include/duckdb/common/arrow/appender/struct_data.hpp
 include/duckdb/common/arrow/appender/union_data.hpp
@@ -754,6 +756,7 @@ include/duckdb/parallel/pipeline_prepare_finish_event.hpp
 include/duckdb/parallel/task.hpp
 include/duckdb/parallel/task_counter.hpp
 include/duckdb/parallel/task_executor.hpp
+include/duckdb/parallel/task_notifier.hpp
 include/duckdb/parallel/task_scheduler.hpp
 include/duckdb/parallel/thread_context.hpp
 include/duckdb/parser/base_expression.hpp
@@ -1190,6 +1193,7 @@ lib/cmake/DuckDB/DuckDBConfig.cmake
 lib/cmake/DuckDB/DuckDBConfigVersion.cmake
 lib/cmake/DuckDB/DuckDBExports-release.cmake
 lib/cmake/DuckDB/DuckDBExports.cmake
+lib/libautocomplete_extension.a
 lib/libcore_functions_extension.a
 lib/libduckdb.so
 lib/libduckdb_fastpforlib.a
@@ -1205,9 +1209,8 @@ lib/libduckdb_static.a
 lib/libduckdb_utf8proc.a
 lib/libduckdb_yyjson.a
 lib/libduckdb_zstd.a
-lib/libjemalloc_extension.a
+lib/libicu_extension.a
+lib/libjson_extension.a
 lib/libparquet_extension.a
-@pkgdir include/duckdb/storage/serialization
-@pkgdir include/duckdb/main/capi/header_generation/functions
-@pkgdir include/duckdb/main/capi/header_generation/apis/v1/v1.2
-@pkgdir include/duckdb/main/capi/header_generation/apis/v1/unstable
+lib/libtpcds_extension.a
+lib/libtpch_extension.a
