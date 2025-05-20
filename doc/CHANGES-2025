@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3469 2025/05/20 07:59:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3470 2025/05/20 08:21:53 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5120,3 +5120,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-amaranth to 0.5.6 [adam 2025-05-20]
 	Updated devel/py-scikit-build-core to 0.11.3 [adam 2025-05-20]
 	Updated pkgtools/pkgin to 25.5.0nb1 [wiz 2025-05-20]
+	Updated pkgtools/pkgin to 25.5.1 [jperkin 2025-05-20]
