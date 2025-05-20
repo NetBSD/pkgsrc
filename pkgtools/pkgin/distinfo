@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.83 2025/05/20 07:59:20 wiz Exp $
+$NetBSD: distinfo,v 1.84 2025/05/20 08:21:45 jperkin Exp $
 
+BLAKE2s (pkgin-25.5.1.tar.gz) = 57f5752cbd0f97fd262e1a18aa69dab430bae795ba4f202227e75d16f2aebffe
+SHA512 (pkgin-25.5.1.tar.gz) = 520df74b5cbbb2b1f3b4d4f4784f789e81516f50a26c4b07b0fe24088ccb636c239af55216f08751e054378801e0ac3278d9acc7f60408b7b5e7c34fb653f8c4
+Size (pkgin-25.5.1.tar.gz) = 268201 bytes
 BLAKE2s (pkgin-25.5.0.tar.gz) = dc419ce5c99cf9a7e1bf89bc989c6f8fab75d4b0e8f08f6c2287ed8225f535e3
 SHA512 (pkgin-25.5.0.tar.gz) = 27deedc825ab1763217db9c37b6d790c73b50ec7cd700760fce267bd39d628da9b0e546e7e5acd901f47e652eb9c2d3d696f9122b2719801af88ae21e18a1297
 Size (pkgin-25.5.0.tar.gz) = 268186 bytes
-SHA1 (patch-actions.c) = 9dd682e588d2a8e7cc4dd5dfb13c7179bdd8c04b
