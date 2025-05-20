@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/02/12 12:00:39 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/05/20 12:08:39 adam Exp $
 
-BLAKE2s (durationpy-0.9.tar.gz) = da3c45459f49eb78dcb3d9e85f0321e7f0e05f319a5236cc5d3bc0867b04aa9b
-SHA512 (durationpy-0.9.tar.gz) = 031a5f848798157fd18d8fcf3bdfbc03babdf1b527e8f96d7b5a69801f943ea72024991fb207ed3a65870bb14e7f8adaa6a23d42adf67161b2bdc443adc9e332
-Size (durationpy-0.9.tar.gz) = 3186 bytes
+BLAKE2s (durationpy-0.10.tar.gz) = e0f83d3800e4646fb6c6f57ff7b2e54ea5035d360114fa1bfd5730bff30b4b5d
+SHA512 (durationpy-0.10.tar.gz) = 396cc51d39824056cd617f4fd1f5734badae39aadc75712a2294aea24af7e71ec4ed2f78a93bfae5ce13cb0f25538b85cb1937f7073d6555977433881dd952ee
+Size (durationpy-0.10.tar.gz) = 3335 bytes
