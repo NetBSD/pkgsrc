@@ -1,0 +1,30 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/05/20 16:48:21 schmonz Exp $
+
+Avoid bashisms.
+
+--- configure.ac.orig	2025-05-20 14:46:28.191866921 +0000
++++ configure.ac
+@@ -3,19 +3,19 @@ AM_INIT_AUTOMAKE([foreign])
+ 
+ # check for bash
+ AC_CHECK_PROG(bash,[bash],[bash],[no])
+-test "$bash" == "no" && AC_MSG_ERROR([Required program 'bash' not found.])
++test "$bash" = "no" && AC_MSG_ERROR([Required program 'bash' not found.])
+ 
+ # check for sqlite3
+ AC_CHECK_PROG(sqlite3,[sqlite3],[sqlite3],[no])
+-test "$sqlite3" == "no" && AC_MSG_ERROR([Required program 'sqlite3' not found.])
++test "$sqlite3" = "no" && AC_MSG_ERROR([Required program 'sqlite3' not found.])
+ 
+ # check for sqldiff
+ AC_CHECK_PROG(sqldiff,[sqldiff],[sqldiff],[no])
+-test "$sqldiff" == "no" && AC_MSG_ERROR([Required program 'sqldiff' not found.])
++test "$sqldiff" = "no" && AC_MSG_ERROR([Required program 'sqldiff' not found.])
+ 
+ # check for git
+ AC_CHECK_PROG(git,[git],[git],[no])
+-test "$git" == "no" && AC_MSG_ERROR([Required program 'git' not found.])
++test "$git" = "no" && AC_MSG_ERROR([Required program 'git' not found.])
+ 
+ # summary
+ summary="a diff & merge driver for sqlite"

@@ -1,0 +1,5 @@
+git-sqlite is a collection of shell scripts that allows a sqlite
+database to be tracked using the git version control system.
+
+It can be used on an existing database, however, UUIDs will make
+multi-master distribution substantially easier.
