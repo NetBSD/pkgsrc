@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/20 16:48:21 schmonz Exp $
+bin/git-sqlite
+bin/git-sqlite-diff
+bin/git-sqlite-merge
+share/doc/git-sqlite/README.md
+share/git-sqlite/schema.sql
+share/git-sqlite/util.sh
