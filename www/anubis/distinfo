@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2025/05/13 17:33:14 bsiegert Exp $
+$NetBSD: distinfo,v 1.3 2025/05/20 15:16:41 ryoon Exp $
 
+BLAKE2s (anubis-1.18.0-assets.tar.bz2) = c69604c1f1f442ef409347343c4adb58d02e76fb0c8ae964a547535706ab65c5
+SHA512 (anubis-1.18.0-assets.tar.bz2) = 065d67a109ee75b5d7ba62bc6b2bc4e09f85cc35104024f9b59463380f80e1d9f5c42348824cf6c1c959242431b439d1e5a269ad6ecdc12cdcc43bd8f6774dd3
+Size (anubis-1.18.0-assets.tar.bz2) = 178536 bytes
 BLAKE2s (anubis-1.18.0.tar.gz) = 26614def5fe972446bec1fd12bbadb15a697baf552460ac5b54da2befea5012e
 SHA512 (anubis-1.18.0.tar.gz) = 6b85f0fc5722b14f4d9ca519705a879eed5beb87e67411e741b5f5a7e909ee20c5aa8c4350764d1e6408484a4cbb3b544590bc2c45d6be972b559e3f13fe0c75
 Size (anubis-1.18.0.tar.gz) = 789232 bytes
