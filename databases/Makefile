@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.727 2025/05/20 16:47:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.728 2025/05/20 16:48:25 schmonz Exp $
 
 COMMENT=	Databases
 
@@ -43,6 +43,7 @@ SUBDIR+=	gdbm_compat
 SUBDIR+=	gdbm_primitive
 SUBDIR+=	geneweb
 SUBDIR+=	gigabase
+SUBDIR+=	git-sqlite
 SUBDIR+=	gnats
 SUBDIR+=	gom
 SUBDIR+=	gramps5
