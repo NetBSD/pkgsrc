@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/20 16:46:24 schmonz Exp $
+bin/sqldiff

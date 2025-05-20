@@ -1,0 +1,12 @@
+sqldiff is a command-line utility program that displays content
+differences between SQLite databases. The usual output is an SQL script
+that will transform the source database into the destination database.
+
+The sqldiff utility works by finding rows in the source and destination
+that are logical "pairs". The default behavior is to treat two rows as
+pairs if they are in tables with the same name and they have the same
+rowid, or in the case of a WITHOUT ROWID table if they have the same
+PRIMARY KEY. Any differences in the content of paired rows are output as
+UPDATEs. Rows in the source database that could not be paired are output
+as DELETEs. Rows in the destination database that could not be paired
+are output as INSERTs.
