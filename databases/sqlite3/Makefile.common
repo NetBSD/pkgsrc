@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.118 2025/05/08 04:57:14 adam Exp $
+# $NetBSD: Makefile.common,v 1.119 2025/05/20 16:47:52 schmonz Exp $
 #
 # used by databases/sqlite3/Makefile
+# used by databases/sqlite3-diff/Makefile
 # used by databases/sqlite3-docs/Makefile
 # used by databases/sqlite3-tcl/Makefile
 # used by devel/lemon/Makefile
