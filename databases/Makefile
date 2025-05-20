@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.726 2025/01/02 07:08:35 taca Exp $
+# $NetBSD: Makefile,v 1.727 2025/05/20 16:47:04 schmonz Exp $
 
 COMMENT=	Databases
 
@@ -509,6 +509,7 @@ SUBDIR+=	sql-workbench
 SUBDIR+=	sqlc
 SUBDIR+=	sqlite
 SUBDIR+=	sqlite3
+SUBDIR+=	sqlite3-diff
 SUBDIR+=	sqlite3-docs
 SUBDIR+=	sqlite3-tcl
 SUBDIR+=	sqlitebrowser
