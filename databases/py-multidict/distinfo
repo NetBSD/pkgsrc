@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/04/13 11:09:38 wiz Exp $
+$NetBSD: distinfo,v 1.34 2025/05/20 05:45:54 adam Exp $
 
-BLAKE2s (multidict-6.4.3.tar.gz) = d84d7b45df07108f3a664e7c0e669d97733355c798e7cd8b8a3ac526f217e4d7
-SHA512 (multidict-6.4.3.tar.gz) = 071e25558556ceeb936727dce7495811683207aa9829e01b4d3f09417f5cab7965ead7741ddb9f015d9a053d5ebba7f8082cf2908ceb95b8d542f26793946b8a
-Size (multidict-6.4.3.tar.gz) = 89372 bytes
+BLAKE2s (multidict-6.4.4.tar.gz) = b5ac434f8181d04893f1e778009da0f05d821290d8a9efdddd57bff7959cc260
+SHA512 (multidict-6.4.4.tar.gz) = 93b4975ff310c78526c116f6ccc800d310e3df4e8981120975642476d6354653451c4cfa6034f627a58736bb683978ef3e1c8ddb4df3308293011a0c1c1f2557
+Size (multidict-6.4.4.tar.gz) = 90183 bytes
