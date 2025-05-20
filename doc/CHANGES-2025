@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3466 2025/05/20 05:46:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3467 2025/05/20 07:32:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5115,3 +5115,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/chirp to 20250516 [gdt 2025-05-19]
 	Updated textproc/py-deepdiff to 8.5.0 [adam 2025-05-20]
 	Updated databases/py-multidict to 6.4.4 [adam 2025-05-20]
+	Updated devel/mold to 2.39.1 [adam 2025-05-20]
+	Updated security/gpgme to 1.24.3 [adam 2025-05-20]
