@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/05/19 15:45:40 ktnb Exp $
+# $NetBSD: Makefile,v 1.77 2025/05/21 14:12:54 ktnb Exp $
 
 DISTNAME=	slang-2.3.3
 PKGNAME=	lib${DISTNAME}
@@ -29,10 +29,7 @@ CONF_FILES+=	${EGDIR}/slsh.rc ${PKG_SYSCONFDIR}/slsh.rc
 
 INSTALL_MAKE_FLAGS+=	DEST_SLSH_CONF_DIR=${DESTDIR}/${EGDIR}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-LDFLAGS+=	-ltermcap
-.endif
+LDFLAGS.NetBSD+=	-ltermcap
 
 .include "../../mk/termcap.buildlink3.mk"
 
