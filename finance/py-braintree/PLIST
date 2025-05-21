@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.29 2025/04/22 15:33:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/05/21 19:14:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/braintree/__init__.py
 ${PYSITELIB}/braintree/__init__.pyc
@@ -325,15 +324,6 @@ ${PYSITELIB}/braintree/merchant_account/__init__.pyo
 ${PYSITELIB}/braintree/merchant_account/address_details.py
 ${PYSITELIB}/braintree/merchant_account/address_details.pyc
 ${PYSITELIB}/braintree/merchant_account/address_details.pyo
-${PYSITELIB}/braintree/merchant_account/business_details.py
-${PYSITELIB}/braintree/merchant_account/business_details.pyc
-${PYSITELIB}/braintree/merchant_account/business_details.pyo
-${PYSITELIB}/braintree/merchant_account/funding_details.py
-${PYSITELIB}/braintree/merchant_account/funding_details.pyc
-${PYSITELIB}/braintree/merchant_account/funding_details.pyo
-${PYSITELIB}/braintree/merchant_account/individual_details.py
-${PYSITELIB}/braintree/merchant_account/individual_details.pyc
-${PYSITELIB}/braintree/merchant_account/individual_details.pyo
 ${PYSITELIB}/braintree/merchant_account/merchant_account.py
 ${PYSITELIB}/braintree/merchant_account/merchant_account.pyc
 ${PYSITELIB}/braintree/merchant_account/merchant_account.pyo
@@ -376,6 +366,9 @@ ${PYSITELIB}/braintree/paginated_result.pyo
 ${PYSITELIB}/braintree/partner_merchant.py
 ${PYSITELIB}/braintree/partner_merchant.pyc
 ${PYSITELIB}/braintree/partner_merchant.pyo
+${PYSITELIB}/braintree/payment_facilitator.py
+${PYSITELIB}/braintree/payment_facilitator.pyc
+${PYSITELIB}/braintree/payment_facilitator.pyo
 ${PYSITELIB}/braintree/payment_instrument_type.py
 ${PYSITELIB}/braintree/payment_instrument_type.pyc
 ${PYSITELIB}/braintree/payment_instrument_type.pyo
@@ -458,6 +451,9 @@ ${PYSITELIB}/braintree/ssl/api_braintreegateway_com.ca.crt
 ${PYSITELIB}/braintree/status_event.py
 ${PYSITELIB}/braintree/status_event.pyc
 ${PYSITELIB}/braintree/status_event.pyo
+${PYSITELIB}/braintree/sub_merchant.py
+${PYSITELIB}/braintree/sub_merchant.pyc
+${PYSITELIB}/braintree/sub_merchant.pyo
 ${PYSITELIB}/braintree/subscription.py
 ${PYSITELIB}/braintree/subscription.pyc
 ${PYSITELIB}/braintree/subscription.pyo
