@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.74 2020/11/19 09:35:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.75 2025/05/21 22:32:47 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		net
 MASTER_SITES=		http://cr.yp.to/djbdns/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
+MANPAGES_DIST=		${DISTNAME}-man-20031023.tar.gz
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
+SITES.${MANPAGES_DIST}=	http://smarden.org/pape/djb/manpages/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://cr.yp.to/djbdns.html
 COMMENT=		Collection of secure and reliable DNS tools
 LICENSE=		public-domain
 
-MANPAGES=		${DISTNAME}-man-20031023.tar.gz
-SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
-
 CONFLICTS+=		djbdnscurve6-[0-9]*
+
+FORCE_C_STD=		c89
 
 SUBST_CLASSES+=		djberrno
 
