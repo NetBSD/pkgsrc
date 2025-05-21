@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3501 2025/05/21 15:29:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3502 2025/05/21 16:36:37 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5166,3 +5166,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/php-imagick to 3.8.0 [taca 2025-05-21]
 	Updated archivers/libarchive to 3.8.0 [adam 2025-05-21]
 	Updated archivers/bsdtar to 3.8.0 [adam 2025-05-21]
+	Updated www/hugo to 0.147.4 [triaxx 2025-05-21]
