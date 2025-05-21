@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3480 2025/05/20 16:48:30 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3481 2025/05/21 05:37:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5133,3 +5133,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/duckdb to 1.2.2 [ryoon 2025-05-20]
 	Added databases/sqlite3-diff version 3.49.2 [schmonz 2025-05-20]
 	Added databases/git-sqlite version 0.1 [schmonz 2025-05-20]
+	Updated sysutils/ansible-core to 2.18.6 [adam 2025-05-21]
+	Updated devel/py-click to 8.2.1 [adam 2025-05-21]
