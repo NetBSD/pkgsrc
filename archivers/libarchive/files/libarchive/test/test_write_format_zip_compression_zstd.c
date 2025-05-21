@@ -1,38 +1,16 @@
-/*-
- * Copyright (c) 2008 Anselm Strauss
+/*-SPDX-License-Identifier: BSD-2-Clause
+ * Copyright (c) 2024 ARJANEN Loïc Jean David
  * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR(S) ``AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- * IN NO EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY DIRECT, INDIRECT,
- * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
-/*
- * Development supported by Google Summer of Code 2008.
  */
 
 #include "test.h"
+#ifdef HAVE_ZSTD_H
+#include <zstd.h>
 
 /* File data */
 static const char file_name[] = "file";
-static const char file_data1[] = {'1', '2', '3', '4', '5'};
-static const char file_data2[] = {'6', '7', '8', '9', '0'};
+static const char file_data1[] = {'~', 'Z', '`', '^', 'Y', 'X', 'N', 'W', 'V', 'G', 'H', 'I', 'J'};
+static const char file_data2[] = {'U', 'T', 'S', 'M', 'R', 'Q', 'P', 'O', 'K', 'L'};
 static const int file_perm = 00644;
 static const short file_uid = 10;
 static const short file_gid = 20;
@@ -45,7 +23,7 @@ static const short folder_gid = 40;
 
 static time_t now;
 
-static void verify_write_uncompressed(struct archive *a)
+static void verify_write_zstd(struct archive *a)
 {
 	struct archive_entry *entry;
 
@@ -78,10 +56,12 @@ static void verify_write_uncompressed(struct archive *a)
 	archive_entry_free(entry);
 }
 
-static void verify_uncompressed_contents(const char *buff, size_t used)
+static void verify_zstd_contents(const char *buff, size_t used)
 {
 	const char *buffend;
-
+	struct archive* zip_archive;
+	struct archive_entry *ae;
+	char filedata[sizeof(file_data1) + sizeof(file_data2)];
 	/* Misc variables */
 	unsigned long crc;
 	struct tm *tm;
@@ -99,6 +79,13 @@ static void verify_uncompressed_contents(const char *buff, size_t used)
 #else
 	tm = localtime(&now);
 #endif
+
+	/* Open archive from memory, we'll need it for checking the file
+	 * value */
+	assert((zip_archive = archive_read_new()) != NULL);
+	assertEqualIntA(zip_archive, ARCHIVE_OK, archive_read_support_format_zip(zip_archive));
+	assertEqualIntA(zip_archive, ARCHIVE_OK, archive_read_support_filter_all(zip_archive));
+	assertEqualIntA(zip_archive, ARCHIVE_OK, archive_read_open_memory(zip_archive, buff, used));
 
 	/* Remember the end of the archive in memory. */
 	buffend = buff + used;
@@ -126,18 +113,17 @@ static void verify_uncompressed_contents(const char *buff, size_t used)
 	    " PK\\001\\002 signature",
 	    i4le(buffend - 10));
 
-	/* Verify file entry in central directory. */
+	/* Verify file entry in central directory, except compressed size (offset 20). */
 	assertEqualMem(p, "PK\001\002", 4); /* Signature */
-	assertEqualInt(i2le(p + 4), 3 * 256 + 10); /* Version made by */
-	assertEqualInt(i2le(p + 6), 10); /* Version needed to extract */
+	assertEqualInt(i2le(p + 4), 3 * 256 + 63); /* Version made by */
+	assertEqualInt(i2le(p + 6), 63); /* Version needed to extract */
 	assertEqualInt(i2le(p + 8), 8); /* Flags */
-	assertEqualInt(i2le(p + 10), 0); /* Compression method */
+	assertEqualInt(i2le(p + 10), 93); /* Compression method */
 	assertEqualInt(i2le(p + 12), (tm->tm_hour * 2048) + (tm->tm_min * 32) + (tm->tm_sec / 2)); /* File time */
 	assertEqualInt(i2le(p + 14), ((tm->tm_year - 80) * 512) + ((tm->tm_mon + 1) * 32) + tm->tm_mday); /* File date */
 	crc = bitcrc32(0, file_data1, sizeof(file_data1));
 	crc = bitcrc32(crc, file_data2, sizeof(file_data2));
 	assertEqualInt(i4le(p + 16), crc); /* CRC-32 */
-	assertEqualInt(i4le(p + 20), sizeof(file_data1) + sizeof(file_data2)); /* Compressed size */
 	assertEqualInt(i4le(p + 24), sizeof(file_data1) + sizeof(file_data2)); /* Uncompressed size */
 	assertEqualInt(i2le(p + 28), strlen(file_name)); /* Pathname length */
 	assertEqualInt(i2le(p + 30), 24); /* Extra field length */
@@ -163,9 +149,9 @@ static void verify_uncompressed_contents(const char *buff, size_t used)
 	/* Verify local header of file entry. */
 	local_header = q = buff;
 	assertEqualMem(q, "PK\003\004", 4); /* Signature */
-	assertEqualInt(i2le(q + 4), 10); /* Version needed to extract */
-	assertEqualInt(i2le(q + 6), 8); /* Flags: bit 3 = length-at-end.  Required because CRC32 is unknown */
-	assertEqualInt(i2le(q + 8), 0); /* Compression method */
+	assertEqualInt(i2le(q + 4), 63); /* Version needed to extract */
+	assertEqualInt(i2le(q + 6), 8); /* Flags: bit 3 = length-at-end (required because CRC32 is unknown) */
+	assertEqualInt(i2le(q + 8), 93); /* Compression method */
 	assertEqualInt(i2le(q + 10), (tm->tm_hour * 2048) + (tm->tm_min * 32) + (tm->tm_sec / 2)); /* File time */
 	assertEqualInt(i2le(q + 12), ((tm->tm_year - 80) * 512) + ((tm->tm_mon + 1) * 32) + tm->tm_mday); /* File date */
 	assertEqualInt(i4le(q + 14), 0); /* CRC-32 */
@@ -203,15 +189,25 @@ static void verify_uncompressed_contents(const char *buff, size_t used)
 	assert(q == extra_start + i2le(local_header + 28));
 	q = extra_start + i2le(local_header + 28);
 
-	/* Verify data of file entry. */
-	assertEqualMem(q, file_data1, sizeof(file_data1));
-	assertEqualMem(q + sizeof(file_data1), file_data2, sizeof(file_data2));
-	q = q + sizeof(file_data1) + sizeof(file_data2);
+	/* Verify data of file entry, using our own zip reader to test. */
+	assertEqualIntA(zip_archive, ARCHIVE_OK, archive_read_next_header(zip_archive, &ae));
+	assertEqualString("file", archive_entry_pathname(ae));
+	assertEqualIntA(zip_archive, sizeof(filedata), archive_read_data(zip_archive, filedata, sizeof(filedata)));
+	assertEqualMem(filedata, file_data1, sizeof(file_data1));
+	assertEqualMem(filedata + sizeof(file_data1), file_data2,
+		sizeof(file_data2));
 
-	/* Verify data descriptor of file entry. */
+	/* Skip data of file entry in q */
+	while (q < buffend - 3) {
+		if (memcmp(q, "PK\007\010", 4) == 0) {
+			break;
+		}
+		q++;
+	}
+
+	/* Verify data descriptor of file entry, except compressed size (offset 8). */
 	assertEqualMem(q, "PK\007\010", 4); /* Signature */
 	assertEqualInt(i4le(q + 4), crc); /* CRC-32 */
-	assertEqualInt(i4le(q + 8), sizeof(file_data1) + sizeof(file_data2)); /* Compressed size */
 	assertEqualInt(i4le(q + 12), sizeof(file_data1) + sizeof(file_data2)); /* Uncompressed size */
 	q = q + 16;
 
@@ -298,10 +294,17 @@ static void verify_uncompressed_contents(const char *buff, size_t used)
 	/* There should not be any data in the folder entry,
 	 * so the first central directory entry should be next: */
 	assertEqualMem(q, "PK\001\002", 4); /* Signature */
+
+	/* Close archive, in case. */
+	archive_read_free(zip_archive);
 }
 
-DEFINE_TEST(test_write_format_zip_compression_store)
+#endif /* HAVE_ZSTD_H */
+DEFINE_TEST(test_write_format_zip_compression_zstd)
 {
+#ifndef HAVE_ZSTD_H
+	skipping("zstd is not fully supported on this platform");
+#else /* HAVE_ZSTD_H */
 	/* Buffer data */
 	struct archive *a;
 	char buff[100000];
@@ -311,11 +314,10 @@ DEFINE_TEST(test_write_format_zip_compression_store)
 	now = time(NULL);
 
 	/* Create new ZIP archive in memory without padding. */
-	/* Use compression=store to disable compression. */
+	/* Use the setter function to use ZSTD compression. */
 	assert((a = archive_write_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_set_format_zip(a));
-	assertEqualIntA(a, ARCHIVE_OK,
-	    archive_write_set_options(a, "zip:compression=store"));
+	assertEqualIntA(a, ARCHIVE_OK, archive_write_zip_set_compression_zstd(a));
 	assertEqualIntA(a, ARCHIVE_OK,
 	    archive_write_set_options(a, "zip:experimental"));
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_add_filter_none(a));
@@ -323,21 +325,27 @@ DEFINE_TEST(test_write_format_zip_compression_store)
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_set_bytes_in_last_block(a, 1));
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_open_memory(a, buff, sizeof(buff), &used));
 
-	verify_write_uncompressed(a);
+	verify_write_zstd(a);
 
 	/* Close the archive . */
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_close(a));
 	assertEqualInt(ARCHIVE_OK, archive_write_free(a));
 	dumpfile("constructed.zip", buff, used);
 
-	verify_uncompressed_contents(buff, used);
+	verify_zstd_contents(buff, used);
 
 	/* Create new ZIP archive in memory without padding. */
-	/* Use compression-level=0 to disable compression. */
+	/* Use compression-level=1 to check that compression levels are
+	 * somewhat supported as well as threads=2 to check the multi-threaded
+	 * encoder, if available. */
 	assert((a = archive_write_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_set_format_zip(a));
 	assertEqualIntA(a, ARCHIVE_OK,
-	    archive_write_set_options(a, "zip:compression-level=0"));
+	    archive_write_set_options(a, "zip:compression=zstd"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_options(a, "zip:compression-level=1"));
+	assertEqualIntA(a, ARCHIVE_OK,
+	    archive_write_set_options(a, "zip:threads=2"));
 	assertEqualIntA(a, ARCHIVE_OK,
 	    archive_write_set_options(a, "zip:experimental"));
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_add_filter_none(a));
@@ -345,13 +353,14 @@ DEFINE_TEST(test_write_format_zip_compression_store)
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_set_bytes_in_last_block(a, 1));
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_open_memory(a, buff, sizeof(buff), &used));
 
-	verify_write_uncompressed(a);
+	verify_write_zstd(a);
 
-	/* Close the archive . */
+	/* Close the archive. */
 	assertEqualIntA(a, ARCHIVE_OK, archive_write_close(a));
 	assertEqualInt(ARCHIVE_OK, archive_write_free(a));
 	dumpfile("constructed.zip", buff, used);
 
-	verify_uncompressed_contents(buff, used);
-
+	verify_zstd_contents(buff, used);
+#endif /* HAVE_ZSTD_H */
 }
+
