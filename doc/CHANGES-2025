@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3498 2025/05/21 15:26:07 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3499 2025/05/21 15:26:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/gnupg2 to 2.4.8 [adam 2025-05-21]
 	Updated misc/dpkg to 1.22.19 [adam 2025-05-21]
 	Updated net/py-magic-wormhole to 0.18.0nb5 [schmonz 2025-05-21]
+	Updated devel/asdf to 0.17.0 [schmonz 2025-05-21]
