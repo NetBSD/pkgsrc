@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.7.9])
-m4_define([LIBARCHIVE_VERSION_N],[3007009])
+m4_define([LIBARCHIVE_VERSION_S],[3.8.0])
+m4_define([LIBARCHIVE_VERSION_N],[3008000])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -38,7 +38,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 ARCHIVE_MINOR=$(( (LIBARCHIVE_VERSION_N() / 1000) % 1000 ))
 # Libarchive 2.7 == libtool interface 9 = 2 + 7
 # Libarchive 2.8 == libtool interface 10 = 2 + 8
-# Libarchive 2.9 == libtool interface 11 = 2 + 8
+# Libarchive 2.9 == libtool interface 11 = 2 + 9
 # Libarchive 3.0 == libtool interface 12
 # Libarchive 3.1 == libtool interface 13
 ARCHIVE_INTERFACE=`echo $((13 + ${ARCHIVE_MINOR}))`
@@ -399,6 +399,7 @@ if test "x$with_zlib" != "xno"; then
       int main(int argc, char **argv) { inflate(NULL, 0); return 0; }
     ]])],
     [AC_DEFINE([HAVE_ZLIB_H], [1], [Define to 1 if you have zlib >= 1.2.1])
+      AC_DEFINE([HAVE_LIBZ], [1], [Define to 1 if you have zlib >= 1.2.1])
       AC_MSG_RESULT([found a suitable version of zlib (>= 1.2.1)])
     ],
     [AC_MSG_RESULT([could not find a suitable version of zlib (>= 1.2.1)])
@@ -441,6 +442,10 @@ AC_ARG_WITH([libb2],
 if test "x$with_libb2" != "xno"; then
   AC_CHECK_HEADERS([blake2.h])
   AC_CHECK_LIB(b2,blake2sp_init)
+  BLAKE2_PC_VER=`pkg-config --modversion libb2`
+  if test "x$BLAKE2_PC_VER" != "x"; then
+    AC_DEFINE_UNQUOTED([LIBB2_PKGCONFIG_VERSION], ["$BLAKE2_PC_VER"], [Libb2 version coming from pkg-config.])
+  fi
 fi
 
 AM_CONDITIONAL([INC_BLAKE2], [test "x$ac_cv_lib_b2_blake2sp_init" != "xyes"])
@@ -453,13 +458,17 @@ if test "x$with_iconv" != "xno"; then
   AC_CHECK_HEADERS([iconv.h],[],[],[#include <stdlib.h>])
   if test "x$am_cv_func_iconv" = "xyes"; then
     AC_CHECK_HEADERS([localcharset.h])
-    am_save_LIBS="$LIBS"
     LIBS="${LIBS} ${LIBICONV}"
     if test -n "$LIBICONV"; then
-      LIBSREQUIRED="$LIBSREQUIRED${LIBSREQUIRED:+ }iconv"
+      AC_DEFINE([HAVE_LIBICONV], [1], [Define to 1 if you have the `iconv' library (-liconv).])
+
+      # Most platforms do not provide iconv.pc, but MSYS2 MinGW does.
+      # We add it to our Requires.private only if it exists.
+      PKG_CHECK_MODULES(ICONV_PC, [iconv], [
+        LIBSREQUIRED="$LIBSREQUIRED${LIBSREQUIRED:+ }iconv"
+      ], [true])
     fi
     AC_CHECK_FUNCS([locale_charset])
-    LIBS="${am_save_LIBS}"
     if test "x$ac_cv_func_locale_charset" != "xyes"; then
       # If locale_charset() is not in libiconv, we have to find libcharset.
       AC_CHECK_LIB(charset,locale_charset)
@@ -483,6 +492,8 @@ if test "x$with_zstd" != "xno"; then
   AC_CHECK_LIB(zstd,ZSTD_decompressStream)
   AC_CHECK_LIB(zstd,ZSTD_compressStream,
     AC_DEFINE([HAVE_ZSTD_compressStream], [1], [Define to 1 if you have the `zstd' library (-lzstd) with compression support.]))
+  AC_CHECK_LIB(zstd,ZSTD_minCLevel,
+    AC_DEFINE([HAVE_ZSTD_minCLevel], [1], [Define to 1 if you have a `zstd' library version with ZSTD_minCLevel().]))
 fi
 
 AC_ARG_WITH([lzma],
@@ -553,7 +564,7 @@ if test "x$with_xml2" != "xno"; then
   ], [
     AC_CHECK_LIB(xml2,xmlInitParser)
   ])
-  AC_CHECK_HEADERS([libxml/xmlreader.h libxml/xmlwriter.h])
+  AC_CHECK_HEADERS([libxml/xmlreader.h libxml/xmlwriter.h libxml/xmlversion.h])
 fi
 if test "x$ac_cv_header_libxml_xmlreader_h" != "xyes"; then
   if test "x$with_expat" != "xno"; then
@@ -914,6 +925,10 @@ if test "x$enable_xattr" != "xno"; then
 ])
     AC_CHECK_DECLS([XATTR_NOFOLLOW], [], [], [#include <sys/xattr.h>
 ])
+    ATTR_PC_VER=`pkg-config --modversion libattr`
+    if test "x$ATTR_PC_VER" != "x"; then
+      AC_DEFINE_UNQUOTED([LIBATTR_PKGCONFIG_VERSION], ["$ATTR_PC_VER"], [Libattr version coming from pkg-config.])
+    fi
     if test "x$ac_cv_header_sys_xattr_h" = "xyes" \
 	 -a "x$ac_cv_have_decl_XATTR_NOFOLLOW" = "xyes"; then
 	# Darwin extended attributes support
@@ -1009,7 +1024,10 @@ AC_ARG_ENABLE([acl],
 if test "x$enable_acl" != "xno"; then
     # Libacl
     AC_CHECK_LIB([acl], [acl_get_file])
-
+    ACL_PC_VER=`pkg-config --modversion libacl`
+    if test "x$ACL_PC_VER" != "x"; then
+      AC_DEFINE_UNQUOTED([LIBACL_PKGCONFIG_VERSION], ["$ACL_PC_VER"], [Libacl version coming from pkg-config.])
+    fi
     AC_CHECK_TYPES([acl_t, acl_entry_t, acl_permset_t, acl_tag_t], [], [], [
       #if HAVE_SYS_TYPES_H
       #include <sys/types.h>
@@ -1020,7 +1038,10 @@ if test "x$enable_acl" != "xno"; then
     ])
 
     AC_CHECK_LIB([richacl], [richacl_get_file])
-
+    RICHACL_PC_VER=`pkg-config --modversion librichacl`
+    if test "x$RICHACL_PC_VER" != "x"; then
+      AC_DEFINE_UNQUOTED([LIBRICHACL_PKGCONFIG_VERSION], ["$RICHACL_PC_VER"], [Librichacl version coming from pkg-config.])
+    fi
     AC_CHECK_TYPES([[struct richace], [struct richacl]], [], [], [
       #if HAVE_SYS_RICHACL_H
       #include <sys/richacl.h>
@@ -1303,6 +1324,7 @@ fi
 
 if test "x$with_mbedtls" = "xyes"; then
     AC_CHECK_HEADERS([mbedtls/aes.h mbedtls/md.h mbedtls/pkcs5.h])
+    AC_CHECK_HEADERS([mbedtls/version.h])
     saved_LIBS=$LIBS
     AC_CHECK_LIB(mbedcrypto,mbedtls_sha1_init)
     CRYPTO_CHECK(MD5, MBEDTLS, md5)
@@ -1319,6 +1341,7 @@ fi
 if test "x$with_nettle" = "xyes"; then
     AC_CHECK_HEADERS([nettle/md5.h nettle/ripemd160.h nettle/sha.h])
     AC_CHECK_HEADERS([nettle/pbkdf2.h nettle/aes.h nettle/hmac.h])
+    AC_CHECK_HEADERS([nettle/version.h])
     saved_LIBS=$LIBS
     AC_CHECK_LIB(nettle,nettle_sha1_init)
     CRYPTO_CHECK(MD5, NETTLE, md5)
@@ -1333,7 +1356,7 @@ if test "x$with_nettle" = "xyes"; then
 fi
 
 if test "x$with_openssl" != "xno"; then
-    AC_CHECK_HEADERS([openssl/evp.h])
+    AC_CHECK_HEADERS([openssl/evp.h openssl/opensslv.h])
     saved_LIBS=$LIBS
     LIBSREQUIRED="$LIBSREQUIRED${LIBSREQUIRED:+ }libcrypto"
     AC_CHECK_LIB(crypto,OPENSSL_config)

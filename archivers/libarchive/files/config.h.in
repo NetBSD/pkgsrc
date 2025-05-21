@@ -652,6 +652,9 @@
 /* Define to 1 if you have the `expat' library (-lexpat). */
 #undef HAVE_LIBEXPAT
 
+/* Define to 1 if you have the `iconv' library (-liconv). */
+#undef HAVE_LIBICONV
+
 /* Define to 1 if you have the `lz4' library (-llz4). */
 #undef HAVE_LIBLZ4
 
@@ -694,8 +697,14 @@
 /* Define to 1 if you have the <libxml/xmlreader.h> header file. */
 #undef HAVE_LIBXML_XMLREADER_H
 
+/* Define to 1 if you have the <libxml/xmlversion.h> header file. */
+#undef HAVE_LIBXML_XMLVERSION_H
+
 /* Define to 1 if you have the <libxml/xmlwriter.h> header file. */
 #undef HAVE_LIBXML_XMLWRITER_H
+
+/* Define to 1 if you have zlib >= 1.2.1 */
+#undef HAVE_LIBZ
 
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #undef HAVE_LIBZSTD
@@ -794,6 +803,9 @@
 /* Define to 1 if you have the <mbedtls/pkcs5.h> header file. */
 #undef HAVE_MBEDTLS_PKCS5_H
 
+/* Define to 1 if you have the <mbedtls/version.h> header file. */
+#undef HAVE_MBEDTLS_VERSION_H
+
 /* Define to 1 if you have the `mbrtowc' function. */
 #undef HAVE_MBRTOWC
 
@@ -854,6 +866,9 @@
 /* Define to 1 if you have the <nettle/sha.h> header file. */
 #undef HAVE_NETTLE_SHA_H
 
+/* Define to 1 if you have the <nettle/version.h> header file. */
+#undef HAVE_NETTLE_VERSION_H
+
 /* Define to 1 if you have the `nl_langinfo' function. */
 #undef HAVE_NL_LANGINFO
 
@@ -862,6 +877,9 @@
 
 /* Define to 1 if you have the <openssl/evp.h> header file. */
 #undef HAVE_OPENSSL_EVP_H
+
+/* Define to 1 if you have the <openssl/opensslv.h> header file. */
+#undef HAVE_OPENSSL_OPENSSLV_H
 
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
@@ -1263,6 +1281,9 @@
    support. */
 #undef HAVE_ZSTD_compressStream
 
+/* Define to 1 if you have a `zstd' library version with ZSTD_minCLevel(). */
+#undef HAVE_ZSTD_minCLevel
+
 /* Define to 1 if you have the `_fseeki64' function. */
 #undef HAVE__FSEEKI64
 
@@ -1275,11 +1296,23 @@
 /* Define as const if the declaration of iconv() needs const. */
 #undef ICONV_CONST
 
+/* Libacl version coming from pkg-config. */
+#undef LIBACL_PKGCONFIG_VERSION
+
 /* Version number of libarchive as a single integer */
 #undef LIBARCHIVE_VERSION_NUMBER
 
 /* Version number of libarchive */
 #undef LIBARCHIVE_VERSION_STRING
+
+/* Libattr version coming from pkg-config. */
+#undef LIBATTR_PKGCONFIG_VERSION
+
+/* Libb2 version coming from pkg-config. */
+#undef LIBB2_PKGCONFIG_VERSION
+
+/* Librichacl version coming from pkg-config. */
+#undef LIBRICHACL_PKGCONFIG_VERSION
 
 /* Define to 1 if `lstat' dereferences a symlink specified with a trailing
    slash. */

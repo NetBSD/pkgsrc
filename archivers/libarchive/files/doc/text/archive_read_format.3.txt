@@ -6,9 +6,10 @@
        archive_read_support_format_cab,	     archive_read_support_format_cpio,
        archive_read_support_format_empty, archive_read_support_format_iso9660,
        archive_read_support_format_lha,	    archive_read_support_format_mtree,
-       archive_read_support_format_rar,	      archive_read_support_format_raw,
-       archive_read_support_format_tar,	      archive_read_support_format_xar,
-       archive_read_support_format_zip	 —  functions  for  reading  streaming
+       archive_read_support_format_rar,	     archive_read_support_format_rar5,
+       archive_read_support_format_raw,	      archive_read_support_format_tar,
+       archive_read_support_format_warc,      archive_read_support_format_xar,
+       archive_read_support_format_zip	—  functions  for  reading   streaming
        archives
 
 1mLIBRARY0m
@@ -51,10 +52,16 @@
        1marchive_read_support_format_rar22m(4mstruct24m 4marchive24m 4m*24m);
 
        4mint0m
+       1marchive_read_support_format_rar522m(4mstruct24m 4marchive24m 4m*24m);
+
+       4mint0m
        1marchive_read_support_format_raw22m(4mstruct24m 4marchive24m 4m*24m);
 
        4mint0m
        1marchive_read_support_format_tar22m(4mstruct24m 4marchive24m 4m*24m);
+
+       4mint0m
+       1marchive_read_support_format_warc22m(4mstruct24m 4marchive24m 4m*24m);
 
        4mint0m
        1marchive_read_support_format_xar22m(4mstruct24m 4marchive24m 4m*24m);
@@ -70,15 +77,22 @@
 	       1marchive_read_support_format_lha22m(),
 	       1marchive_read_support_format_mtree22m(),
 	       1marchive_read_support_format_rar22m(),
+	       1marchive_read_support_format_rar522m(),
 	       1marchive_read_support_format_raw22m(),
 	       1marchive_read_support_format_tar22m(),
+	       1marchive_read_support_format_warc22m(),
 	       1marchive_read_support_format_xar22m(),
 	       1marchive_read_support_format_zip22m()
 	       Enables support---including auto-detection code---for the spec‐
 	       ified	    archive	   format.	   For	      example,
 	       1marchive_read_support_format_tar22m() enables support for a variety
-	       of standard tar formats, old-style tar, ustar, pax  interchange
-	       format, and many common variants.
+	       of  standard tar formats, old-style tar, ustar, pax interchange
+	       format,	      and	 many	      common	     variants.
+	       1marchive_read_support_format_zip22m()  enables support for both the
+	       streaming and the seeking zip readers, which can separately  be
+	       enabled			   by			  respectively
+	       1marchive_read_support_format_zip_streamable22m()		and
+	       1marchive_read_support_format_zip_seekable22m()
        1marchive_read_support_format_all22m()
 	       Enables support for all available formats except the “raw” for‐
 	       mat (see below).

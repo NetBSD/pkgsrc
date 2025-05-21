@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Sun Mar 30 20:07:37 2025 -->
+<!-- CreationDate: Tue May 20 09:02:18 2025 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -37,8 +37,10 @@ archive_read_support_format_iso9660,
 archive_read_support_format_lha,
 archive_read_support_format_mtree,
 archive_read_support_format_rar,
+archive_read_support_format_rar5,
 archive_read_support_format_raw,
 archive_read_support_format_tar,
+archive_read_support_format_warc,
 archive_read_support_format_xar,
 archive_read_support_format_zip &mdash; functions for
 reading streaming archives</p>
@@ -112,12 +114,22 @@ reading streaming archives</p>
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:14%;"><b>archive_read_support_format_rar5</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:14%;"><b>archive_read_support_format_raw</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
 <p style="margin-left:14%;"><b>archive_read_support_format_tar</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:14%;"><b>archive_read_support_format_warc</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
@@ -138,8 +150,10 @@ archive_read_support_format_7zip</b>(),
 <b>archive_read_support_format_lha</b>(),
 <b>archive_read_support_format_mtree</b>(),
 <b>archive_read_support_format_rar</b>(),
+<b>archive_read_support_format_rar5</b>(),
 <b>archive_read_support_format_raw</b>(),
 <b>archive_read_support_format_tar</b>(),
+<b>archive_read_support_format_warc</b>(),
 <b>archive_read_support_format_xar</b>(),
 <b>archive_read_support_format_zip</b>()</p>
 
@@ -148,7 +162,11 @@ auto-detection code---for the specified archive format. For
 example, <b>archive_read_support_format_tar</b>() enables
 support for a variety of standard tar formats, old-style
 tar, ustar, pax interchange format, and many common
-variants.</p>
+variants. <b>archive_read_support_format_zip</b>() enables
+support for both the streaming and the seeking zip readers,
+which can separately be enabled by respectively
+<b>archive_read_support_format_zip_streamable</b>() and
+<b>archive_read_support_format_zip_seekable</b>()</p>
 
 <p><b>archive_read_support_format_all</b>()</p>
 
