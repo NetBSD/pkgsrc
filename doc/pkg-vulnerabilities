@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.372 2025/05/18 01:50:09 markd Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.373 2025/05/21 15:08:49 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26195,3 +26195,5 @@ python310-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
 python311-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
 python312-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
 python313-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
+ruby30-*	eol	https://www.ruby-lang.org/en/downloads/branches/
+ruby31-*	eol	https://www.ruby-lang.org/en/downloads/branches/
