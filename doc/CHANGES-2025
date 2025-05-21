@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3482 2025/05/21 06:51:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3483 2025/05/21 06:56:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5139,3 +5139,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-setuptools to 80.8.0.20250521 [adam 2025-05-21]
 	Updated textproc/py-types-yaml to 6.0.12.20250516 [adam 2025-05-21]
 	Updated time/py-types-python-dateutil to 2.9.0.20250516 [adam 2025-05-21]
+	Updated net/iperf3 to 3.19 [adam 2025-05-21]
+	Updated devel/cbindgen to 0.29.0 [adam 2025-05-21]
