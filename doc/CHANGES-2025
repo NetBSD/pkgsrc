@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3490 2025/05/21 13:24:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3491 2025/05/21 13:39:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5151,3 +5151,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/libdiscid to 0.6.5 [adam 2025-05-21]
 	Updated sysutils/py-fsspec to 2025.5.0 [adam 2025-05-21]
 	Updated net/bind918 to 9.18.37 [taca 2025-05-21]
+	Updated misc/py-pbs-installer to 2025.5.17 [adam 2025-05-21]
+	Updated textproc/py-jellyfish to 1.2.0 [adam 2025-05-21]
