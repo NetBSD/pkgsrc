@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2018/02/18 04:34:20 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/21 18:30:34 schmonz Exp $
 bin/astyle
-share/doc/astyle/astyle.html
-share/doc/astyle/install.html
-share/doc/astyle/news.html
-share/doc/astyle/notes.html
-share/doc/astyle/styles.css
+man/man1/astyle.1
+share/bash-completion/completions/astyle
+share/doc/astyle/html/astyle.html
+share/doc/astyle/html/install.html
+share/doc/astyle/html/news.html
+share/doc/astyle/html/notes.html
+share/doc/astyle/html/styles.css
+share/fish/vendor_completions.d/astyle.fish
+share/zsh/site-functions/_astyle
