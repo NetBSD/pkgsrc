@@ -210,16 +210,15 @@ am__libarchive_la_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/archive_entry_sparse.c \
 	libarchive/archive_entry_stat.c \
 	libarchive/archive_entry_strmode.c \
-	libarchive/archive_entry_xattr.c libarchive/archive_getdate.c \
-	libarchive/archive_getdate.h libarchive/archive_hmac.c \
+	libarchive/archive_entry_xattr.c libarchive/archive_hmac.c \
 	libarchive/archive_hmac_private.h libarchive/archive_match.c \
 	libarchive/archive_openssl_evp_private.h \
 	libarchive/archive_openssl_hmac_private.h \
 	libarchive/archive_options.c \
 	libarchive/archive_options_private.h \
 	libarchive/archive_pack_dev.h libarchive/archive_pack_dev.c \
-	libarchive/archive_pathmatch.c libarchive/archive_pathmatch.h \
-	libarchive/archive_platform.h \
+	libarchive/archive_parse_date.c libarchive/archive_pathmatch.c \
+	libarchive/archive_pathmatch.h libarchive/archive_platform.h \
 	libarchive/archive_platform_acl.h \
 	libarchive/archive_platform_xattr.h \
 	libarchive/archive_ppmd_private.h libarchive/archive_ppmd7.c \
@@ -278,7 +277,8 @@ am__libarchive_la_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/archive_read_support_format_zip.c \
 	libarchive/archive_string.c libarchive/archive_string.h \
 	libarchive/archive_string_composition.h \
-	libarchive/archive_string_sprintf.c libarchive/archive_util.c \
+	libarchive/archive_string_sprintf.c libarchive/archive_time.c \
+	libarchive/archive_time_private.h libarchive/archive_util.c \
 	libarchive/archive_version_details.c \
 	libarchive/archive_virtual.c libarchive/archive_write.c \
 	libarchive/archive_write_disk_posix.c \
@@ -364,13 +364,13 @@ am_libarchive_la_OBJECTS = libarchive/archive_acl.lo \
 	libarchive/archive_entry_sparse.lo \
 	libarchive/archive_entry_stat.lo \
 	libarchive/archive_entry_strmode.lo \
-	libarchive/archive_entry_xattr.lo \
-	libarchive/archive_getdate.lo libarchive/archive_hmac.lo \
+	libarchive/archive_entry_xattr.lo libarchive/archive_hmac.lo \
 	libarchive/archive_match.lo libarchive/archive_options.lo \
-	libarchive/archive_pack_dev.lo libarchive/archive_pathmatch.lo \
-	libarchive/archive_ppmd7.lo libarchive/archive_ppmd8.lo \
-	libarchive/archive_random.lo libarchive/archive_rb.lo \
-	libarchive/archive_read.lo \
+	libarchive/archive_pack_dev.lo \
+	libarchive/archive_parse_date.lo \
+	libarchive/archive_pathmatch.lo libarchive/archive_ppmd7.lo \
+	libarchive/archive_ppmd8.lo libarchive/archive_random.lo \
+	libarchive/archive_rb.lo libarchive/archive_read.lo \
 	libarchive/archive_read_add_passphrase.lo \
 	libarchive/archive_read_append_filter.lo \
 	libarchive/archive_read_data_into_fd.lo \
@@ -419,7 +419,7 @@ am_libarchive_la_OBJECTS = libarchive/archive_acl.lo \
 	libarchive/archive_read_support_format_zip.lo \
 	libarchive/archive_string.lo \
 	libarchive/archive_string_sprintf.lo \
-	libarchive/archive_util.lo \
+	libarchive/archive_time.lo libarchive/archive_util.lo \
 	libarchive/archive_version_details.lo \
 	libarchive/archive_virtual.lo libarchive/archive_write.lo \
 	libarchive/archive_write_disk_posix.lo \
@@ -640,6 +640,7 @@ am_bsdtar_test_OBJECTS = $(am__objects_12) \
 	tar/test/bsdtar_test-test_option_lz4.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_lzma.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_lzop.$(OBJEXT) \
+	tar/test/bsdtar_test-test_option_mtime.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_n.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_newer_than.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_nodump.$(OBJEXT) \
@@ -715,16 +716,15 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/archive_entry_sparse.c \
 	libarchive/archive_entry_stat.c \
 	libarchive/archive_entry_strmode.c \
-	libarchive/archive_entry_xattr.c libarchive/archive_getdate.c \
-	libarchive/archive_getdate.h libarchive/archive_hmac.c \
+	libarchive/archive_entry_xattr.c libarchive/archive_hmac.c \
 	libarchive/archive_hmac_private.h libarchive/archive_match.c \
 	libarchive/archive_openssl_evp_private.h \
 	libarchive/archive_openssl_hmac_private.h \
 	libarchive/archive_options.c \
 	libarchive/archive_options_private.h \
 	libarchive/archive_pack_dev.h libarchive/archive_pack_dev.c \
-	libarchive/archive_pathmatch.c libarchive/archive_pathmatch.h \
-	libarchive/archive_platform.h \
+	libarchive/archive_parse_date.c libarchive/archive_pathmatch.c \
+	libarchive/archive_pathmatch.h libarchive/archive_platform.h \
 	libarchive/archive_platform_acl.h \
 	libarchive/archive_platform_xattr.h \
 	libarchive/archive_ppmd_private.h libarchive/archive_ppmd7.c \
@@ -783,7 +783,8 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/archive_read_support_format_zip.c \
 	libarchive/archive_string.c libarchive/archive_string.h \
 	libarchive/archive_string_composition.h \
-	libarchive/archive_string_sprintf.c libarchive/archive_util.c \
+	libarchive/archive_string_sprintf.c libarchive/archive_time.c \
+	libarchive/archive_time_private.h libarchive/archive_util.c \
 	libarchive/archive_version_details.c \
 	libarchive/archive_virtual.c libarchive/archive_write.c \
 	libarchive/archive_write_disk_posix.c \
@@ -859,10 +860,10 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_archive_clear_error.c \
 	libarchive/test/test_archive_cmdline.c \
 	libarchive/test/test_archive_digest.c \
-	libarchive/test/test_archive_getdate.c \
 	libarchive/test/test_archive_match_owner.c \
 	libarchive/test/test_archive_match_path.c \
 	libarchive/test/test_archive_match_time.c \
+	libarchive/test/test_archive_parse_date.c \
 	libarchive/test/test_archive_pathmatch.c \
 	libarchive/test/test_archive_read.c \
 	libarchive/test/test_archive_read_add_passphrase.c \
@@ -971,6 +972,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_gtar_filename.c \
 	libarchive/test/test_read_format_gtar_gz.c \
 	libarchive/test/test_read_format_gtar_lzma.c \
+	libarchive/test/test_read_format_gtar_redundant_L.c \
 	libarchive/test/test_read_format_gtar_sparse.c \
 	libarchive/test/test_read_format_gtar_sparse_length.c \
 	libarchive/test/test_read_format_gtar_sparse_skip_entry.c \
@@ -1001,6 +1003,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_rar_encryption_header.c \
 	libarchive/test/test_read_format_rar_filter.c \
 	libarchive/test/test_read_format_rar_invalid1.c \
+	libarchive/test/test_read_format_rar_overflow.c \
 	libarchive/test/test_read_format_rar5.c \
 	libarchive/test/test_read_format_raw.c \
 	libarchive/test/test_read_format_tar.c \
@@ -1010,6 +1013,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_tar_empty_with_gnulabel.c \
 	libarchive/test/test_read_format_tar_filename.c \
 	libarchive/test/test_read_format_tar_invalid_pax_size.c \
+	libarchive/test/test_read_format_tar_pax_g_large.c \
 	libarchive/test/test_read_format_tar_pax_large_attr.c \
 	libarchive/test/test_read_format_tbz.c \
 	libarchive/test/test_read_format_tgz.c \
@@ -1111,6 +1115,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_write_format_mtree_classic_indent.c \
 	libarchive/test/test_write_format_mtree_fflags.c \
 	libarchive/test/test_write_format_mtree_no_separator.c \
+	libarchive/test/test_write_format_mtree_preset_digests.c \
 	libarchive/test/test_write_format_mtree_quoted_filename.c \
 	libarchive/test/test_write_format_pax.c \
 	libarchive/test/test_write_format_raw.c \
@@ -1128,6 +1133,9 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_write_format_zip.c \
 	libarchive/test/test_write_format_zip64_stream.c \
 	libarchive/test/test_write_format_zip_compression_store.c \
+	libarchive/test/test_write_format_zip_compression_zstd.c \
+	libarchive/test/test_write_format_zip_compression_bzip2.c \
+	libarchive/test/test_write_format_zip_compression_lzmaxz.c \
 	libarchive/test/test_write_format_zip_empty.c \
 	libarchive/test/test_write_format_zip_empty_zip64.c \
 	libarchive/test/test_write_format_zip_entry_size_unset.c \
@@ -1164,11 +1172,11 @@ am__objects_20 = libarchive/test-archive_acl.$(OBJEXT) \
 	libarchive/test-archive_entry_stat.$(OBJEXT) \
 	libarchive/test-archive_entry_strmode.$(OBJEXT) \
 	libarchive/test-archive_entry_xattr.$(OBJEXT) \
-	libarchive/test-archive_getdate.$(OBJEXT) \
 	libarchive/test-archive_hmac.$(OBJEXT) \
 	libarchive/test-archive_match.$(OBJEXT) \
 	libarchive/test-archive_options.$(OBJEXT) \
 	libarchive/test-archive_pack_dev.$(OBJEXT) \
+	libarchive/test-archive_parse_date.$(OBJEXT) \
 	libarchive/test-archive_pathmatch.$(OBJEXT) \
 	libarchive/test-archive_ppmd7.$(OBJEXT) \
 	libarchive/test-archive_ppmd8.$(OBJEXT) \
@@ -1223,6 +1231,7 @@ am__objects_20 = libarchive/test-archive_acl.$(OBJEXT) \
 	libarchive/test-archive_read_support_format_zip.$(OBJEXT) \
 	libarchive/test-archive_string.$(OBJEXT) \
 	libarchive/test-archive_string_sprintf.$(OBJEXT) \
+	libarchive/test-archive_time.$(OBJEXT) \
 	libarchive/test-archive_util.$(OBJEXT) \
 	libarchive/test-archive_version_details.$(OBJEXT) \
 	libarchive/test-archive_virtual.$(OBJEXT) \
@@ -1290,10 +1299,10 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_archive_clear_error.$(OBJEXT) \
 	libarchive/test/test-test_archive_cmdline.$(OBJEXT) \
 	libarchive/test/test-test_archive_digest.$(OBJEXT) \
-	libarchive/test/test-test_archive_getdate.$(OBJEXT) \
 	libarchive/test/test-test_archive_match_owner.$(OBJEXT) \
 	libarchive/test/test-test_archive_match_path.$(OBJEXT) \
 	libarchive/test/test-test_archive_match_time.$(OBJEXT) \
+	libarchive/test/test-test_archive_parse_date.$(OBJEXT) \
 	libarchive/test/test-test_archive_pathmatch.$(OBJEXT) \
 	libarchive/test/test-test_archive_read.$(OBJEXT) \
 	libarchive/test/test-test_archive_read_add_passphrase.$(OBJEXT) \
@@ -1402,6 +1411,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_gtar_filename.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_gz.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_lzma.$(OBJEXT) \
+	libarchive/test/test-test_read_format_gtar_redundant_L.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_sparse.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_sparse_length.$(OBJEXT) \
 	libarchive/test/test-test_read_format_gtar_sparse_skip_entry.$(OBJEXT) \
@@ -1432,6 +1442,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_rar_encryption_header.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_filter.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_invalid1.$(OBJEXT) \
+	libarchive/test/test-test_read_format_rar_overflow.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar5.$(OBJEXT) \
 	libarchive/test/test-test_read_format_raw.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar.$(OBJEXT) \
@@ -1441,6 +1452,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_tar_empty_with_gnulabel.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_filename.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_invalid_pax_size.$(OBJEXT) \
+	libarchive/test/test-test_read_format_tar_pax_g_large.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_pax_large_attr.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tbz.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tgz.$(OBJEXT) \
@@ -1542,6 +1554,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_write_format_mtree_classic_indent.$(OBJEXT) \
 	libarchive/test/test-test_write_format_mtree_fflags.$(OBJEXT) \
 	libarchive/test/test-test_write_format_mtree_no_separator.$(OBJEXT) \
+	libarchive/test/test-test_write_format_mtree_preset_digests.$(OBJEXT) \
 	libarchive/test/test-test_write_format_mtree_quoted_filename.$(OBJEXT) \
 	libarchive/test/test-test_write_format_pax.$(OBJEXT) \
 	libarchive/test/test-test_write_format_raw.$(OBJEXT) \
@@ -1559,6 +1572,9 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_write_format_zip.$(OBJEXT) \
 	libarchive/test/test-test_write_format_zip64_stream.$(OBJEXT) \
 	libarchive/test/test-test_write_format_zip_compression_store.$(OBJEXT) \
+	libarchive/test/test-test_write_format_zip_compression_zstd.$(OBJEXT) \
+	libarchive/test/test-test_write_format_zip_compression_bzip2.$(OBJEXT) \
+	libarchive/test/test-test_write_format_zip_compression_lzmaxz.$(OBJEXT) \
 	libarchive/test/test-test_write_format_zip_empty.$(OBJEXT) \
 	libarchive/test/test-test_write_format_zip_empty_zip64.$(OBJEXT) \
 	libarchive/test/test-test_write_format_zip_entry_size_unset.$(OBJEXT) \
@@ -1681,11 +1697,11 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/$(DEPDIR)/archive_entry_stat.Plo \
 	libarchive/$(DEPDIR)/archive_entry_strmode.Plo \
 	libarchive/$(DEPDIR)/archive_entry_xattr.Plo \
-	libarchive/$(DEPDIR)/archive_getdate.Plo \
 	libarchive/$(DEPDIR)/archive_hmac.Plo \
 	libarchive/$(DEPDIR)/archive_match.Plo \
 	libarchive/$(DEPDIR)/archive_options.Plo \
 	libarchive/$(DEPDIR)/archive_pack_dev.Plo \
+	libarchive/$(DEPDIR)/archive_parse_date.Plo \
 	libarchive/$(DEPDIR)/archive_pathmatch.Plo \
 	libarchive/$(DEPDIR)/archive_ppmd7.Plo \
 	libarchive/$(DEPDIR)/archive_ppmd8.Plo \
@@ -1741,6 +1757,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/$(DEPDIR)/archive_read_support_format_zip.Plo \
 	libarchive/$(DEPDIR)/archive_string.Plo \
 	libarchive/$(DEPDIR)/archive_string_sprintf.Plo \
+	libarchive/$(DEPDIR)/archive_time.Plo \
 	libarchive/$(DEPDIR)/archive_util.Plo \
 	libarchive/$(DEPDIR)/archive_version_details.Plo \
 	libarchive/$(DEPDIR)/archive_virtual.Plo \
@@ -1811,11 +1828,11 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/$(DEPDIR)/test-archive_entry_stat.Po \
 	libarchive/$(DEPDIR)/test-archive_entry_strmode.Po \
 	libarchive/$(DEPDIR)/test-archive_entry_xattr.Po \
-	libarchive/$(DEPDIR)/test-archive_getdate.Po \
 	libarchive/$(DEPDIR)/test-archive_hmac.Po \
 	libarchive/$(DEPDIR)/test-archive_match.Po \
 	libarchive/$(DEPDIR)/test-archive_options.Po \
 	libarchive/$(DEPDIR)/test-archive_pack_dev.Po \
+	libarchive/$(DEPDIR)/test-archive_parse_date.Po \
 	libarchive/$(DEPDIR)/test-archive_pathmatch.Po \
 	libarchive/$(DEPDIR)/test-archive_ppmd7.Po \
 	libarchive/$(DEPDIR)/test-archive_ppmd8.Po \
@@ -1871,6 +1888,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/$(DEPDIR)/test-archive_read_support_format_zip.Po \
 	libarchive/$(DEPDIR)/test-archive_string.Po \
 	libarchive/$(DEPDIR)/test-archive_string_sprintf.Po \
+	libarchive/$(DEPDIR)/test-archive_time.Po \
 	libarchive/$(DEPDIR)/test-archive_util.Po \
 	libarchive/$(DEPDIR)/test-archive_version_details.Po \
 	libarchive/$(DEPDIR)/test-archive_virtual.Po \
@@ -1937,10 +1955,10 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_clear_error.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_cmdline.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_digest.Po \
-	libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_match_path.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_match_time.Po \
+	libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_pathmatch.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_read.Po \
 	libarchive/test/$(DEPDIR)/test-test_archive_read_add_passphrase.Po \
@@ -2049,6 +2067,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po \
@@ -2080,6 +2099,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_filter.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_invalid1.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_raw.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_concatenated.Po \
@@ -2088,6 +2108,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po \
@@ -2189,6 +2210,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_mtree_classic_indent.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_mtree_fflags.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_mtree_no_separator.Po \
+	libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_pax.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_raw.Po \
@@ -2205,7 +2227,10 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_xar_empty.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip64_stream.Po \
+	libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po \
+	libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_store.Po \
+	libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty_zip64.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_format_zip_entry_size_unset.Po \
@@ -2275,6 +2300,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_lz4.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_lzma.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_lzop.Po \
+	tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_newer_than.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_nodump.Po \
@@ -2642,6 +2668,8 @@ EXEEXT = @EXEEXT@
 FGREP = @FGREP@
 FILECMD = @FILECMD@
 GREP = @GREP@
+ICONV_PC_CFLAGS = @ICONV_PC_CFLAGS@
+ICONV_PC_LIBS = @ICONV_PC_LIBS@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -2824,16 +2852,15 @@ libarchive_la_SOURCES = libarchive/archive_acl.c \
 	libarchive/archive_entry_sparse.c \
 	libarchive/archive_entry_stat.c \
 	libarchive/archive_entry_strmode.c \
-	libarchive/archive_entry_xattr.c libarchive/archive_getdate.c \
-	libarchive/archive_getdate.h libarchive/archive_hmac.c \
+	libarchive/archive_entry_xattr.c libarchive/archive_hmac.c \
 	libarchive/archive_hmac_private.h libarchive/archive_match.c \
 	libarchive/archive_openssl_evp_private.h \
 	libarchive/archive_openssl_hmac_private.h \
 	libarchive/archive_options.c \
 	libarchive/archive_options_private.h \
 	libarchive/archive_pack_dev.h libarchive/archive_pack_dev.c \
-	libarchive/archive_pathmatch.c libarchive/archive_pathmatch.h \
-	libarchive/archive_platform.h \
+	libarchive/archive_parse_date.c libarchive/archive_pathmatch.c \
+	libarchive/archive_pathmatch.h libarchive/archive_platform.h \
 	libarchive/archive_platform_acl.h \
 	libarchive/archive_platform_xattr.h \
 	libarchive/archive_ppmd_private.h libarchive/archive_ppmd7.c \
@@ -2892,7 +2919,8 @@ libarchive_la_SOURCES = libarchive/archive_acl.c \
 	libarchive/archive_read_support_format_zip.c \
 	libarchive/archive_string.c libarchive/archive_string.h \
 	libarchive/archive_string_composition.h \
-	libarchive/archive_string_sprintf.c libarchive/archive_util.c \
+	libarchive/archive_string_sprintf.c libarchive/archive_time.c \
+	libarchive/archive_time_private.h libarchive/archive_util.c \
 	libarchive/archive_version_details.c \
 	libarchive/archive_virtual.c libarchive/archive_write.c \
 	libarchive/archive_write_disk_posix.c \
@@ -3040,10 +3068,10 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_archive_clear_error.c \
 	libarchive/test/test_archive_cmdline.c \
 	libarchive/test/test_archive_digest.c \
-	libarchive/test/test_archive_getdate.c \
 	libarchive/test/test_archive_match_owner.c \
 	libarchive/test/test_archive_match_path.c \
 	libarchive/test/test_archive_match_time.c \
+	libarchive/test/test_archive_parse_date.c \
 	libarchive/test/test_archive_pathmatch.c \
 	libarchive/test/test_archive_read.c \
 	libarchive/test/test_archive_read_add_passphrase.c \
@@ -3152,6 +3180,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_gtar_filename.c \
 	libarchive/test/test_read_format_gtar_gz.c \
 	libarchive/test/test_read_format_gtar_lzma.c \
+	libarchive/test/test_read_format_gtar_redundant_L.c \
 	libarchive/test/test_read_format_gtar_sparse.c \
 	libarchive/test/test_read_format_gtar_sparse_length.c \
 	libarchive/test/test_read_format_gtar_sparse_skip_entry.c \
@@ -3182,6 +3211,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_rar_encryption_header.c \
 	libarchive/test/test_read_format_rar_filter.c \
 	libarchive/test/test_read_format_rar_invalid1.c \
+	libarchive/test/test_read_format_rar_overflow.c \
 	libarchive/test/test_read_format_rar5.c \
 	libarchive/test/test_read_format_raw.c \
 	libarchive/test/test_read_format_tar.c \
@@ -3191,6 +3221,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_tar_empty_with_gnulabel.c \
 	libarchive/test/test_read_format_tar_filename.c \
 	libarchive/test/test_read_format_tar_invalid_pax_size.c \
+	libarchive/test/test_read_format_tar_pax_g_large.c \
 	libarchive/test/test_read_format_tar_pax_large_attr.c \
 	libarchive/test/test_read_format_tbz.c \
 	libarchive/test/test_read_format_tgz.c \
@@ -3292,6 +3323,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_format_mtree_classic_indent.c\
 	libarchive/test/test_write_format_mtree_fflags.c \
 	libarchive/test/test_write_format_mtree_no_separator.c \
+	libarchive/test/test_write_format_mtree_preset_digests.c \
 	libarchive/test/test_write_format_mtree_quoted_filename.c\
 	libarchive/test/test_write_format_pax.c \
 	libarchive/test/test_write_format_raw.c \
@@ -3309,6 +3341,9 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_format_zip.c \
 	libarchive/test/test_write_format_zip64_stream.c \
 	libarchive/test/test_write_format_zip_compression_store.c \
+	libarchive/test/test_write_format_zip_compression_zstd.c \
+	libarchive/test/test_write_format_zip_compression_bzip2.c \
+	libarchive/test/test_write_format_zip_compression_lzmaxz.c \
 	libarchive/test/test_write_format_zip_empty.c \
 	libarchive/test/test_write_format_zip_empty_zip64.c \
 	libarchive/test/test_write_format_zip_entry_size_unset.c \
@@ -3460,11 +3495,16 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_7zip_lzma2.7z.uu \
 	libarchive/test/test_read_format_7zip_lzma2_arm64.7z.uu \
 	libarchive/test/test_read_format_7zip_lzma2_arm.7z.uu \
+	libarchive/test/test_read_format_7zip_lzma2_powerpc.7z.uu \
+	libarchive/test/test_read_format_7zip_lzma2_riscv.7z.uu \
 	libarchive/test/test_read_format_7zip_lzma2_sparc.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed.7z.uu \
 	libarchive/test/test_read_format_7zip_malformed2.7z.uu \
 	libarchive/test/test_read_format_7zip_packinfo_digests.7z.uu \
 	libarchive/test/test_read_format_7zip_ppmd.7z.uu \
+	libarchive/test/test_read_format_7zip_sfx_elf.elf.uu \
+	libarchive/test/test_read_format_7zip_sfx_modified_pe.exe.uu \
+	libarchive/test/test_read_format_7zip_sfx_pe.exe.uu \
 	libarchive/test/test_read_format_7zip_solid_zstd.7z.uu \
 	libarchive/test/test_read_format_7zip_symbolic_name.7z.uu \
 	libarchive/test/test_read_format_7zip_win_attrib.7z.uu \
@@ -3490,6 +3530,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_gtar_filename_cp866.tar.Z.uu \
 	libarchive/test/test_read_format_gtar_filename_eucjp.tar.Z.uu \
 	libarchive/test/test_read_format_gtar_filename_koi8r.tar.Z.uu \
+	libarchive/test/test_read_format_gtar_redundant_L.tar.Z.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_13.tar.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17.tar.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tar.uu \
@@ -3535,6 +3576,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_rar_encryption_data.rar.uu \
 	libarchive/test/test_read_format_rar_encryption_header.rar.uu \
 	libarchive/test/test_read_format_rar_encryption_partially.rar.uu \
+	libarchive/test/test_read_format_rar_endarc_huge.rar.uu \
 	libarchive/test/test_read_format_rar_filter.rar.uu \
 	libarchive/test/test_read_format_rar_invalid1.rar.uu \
 	libarchive/test/test_read_format_rar_multi_lzss_blocks.rar.uu \
@@ -3542,12 +3584,15 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_rar_multivolume.part0002.rar.uu \
 	libarchive/test/test_read_format_rar_multivolume.part0003.rar.uu \
 	libarchive/test/test_read_format_rar_multivolume.part0004.rar.uu \
+	libarchive/test/test_read_format_rar_newsub_huge.rar.uu \
 	libarchive/test/test_read_format_rar_noeof.rar.uu \
+	libarchive/test/test_read_format_rar_overflow.rar.uu \
 	libarchive/test/test_read_format_rar_ppmd_lzss_conversion.rar.uu \
 	libarchive/test/test_read_format_rar_ppmd_use_after_free.rar.uu \
 	libarchive/test/test_read_format_rar_ppmd_use_after_free2.rar.uu \
 	libarchive/test/test_read_format_rar_sfx.exe.uu \
 	libarchive/test/test_read_format_rar_subblock.rar.uu \
+	libarchive/test/test_read_format_rar_symlink_huge.rar.uu \
 	libarchive/test/test_read_format_rar_unicode.rar.uu \
 	libarchive/test/test_read_format_rar_windows.rar.uu \
 	libarchive/test/test_read_format_rar4_encrypted.rar.uu \
@@ -3611,11 +3656,13 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_tar_empty_pax.tar.Z.uu \
 	libarchive/test/test_read_format_tar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_tar_invalid_pax_size.tar.uu \
+	libarchive/test/test_read_format_tar_pax_g_large.tar.uu \
 	libarchive/test/test_read_format_tar_pax_large_attr.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_cp866.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_eucjp.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_warc.warc.uu \
+	libarchive/test/test_read_format_warc_incomplete.warc.uu \
 	libarchive/test/test_read_format_xar_doublelink.xar.uu \
 	libarchive/test/test_read_format_xar_duplicate_filename_node.xar.uu \
 	libarchive/test/test_read_format_zip.zip.uu \
@@ -3787,6 +3834,7 @@ bsdtar_test_SOURCES = \
 	tar/test/test_option_lz4.c \
 	tar/test/test_option_lzma.c \
 	tar/test/test_option_lzop.c \
+	tar/test/test_option_mtime.c \
 	tar/test/test_option_n.c \
 	tar/test/test_option_newer_than.c \
 	tar/test/test_option_nodump.c \
@@ -4319,8 +4367,6 @@ libarchive/archive_entry_strmode.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_entry_xattr.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
-libarchive/archive_getdate.lo: libarchive/$(am__dirstamp) \
-	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_hmac.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_match.lo: libarchive/$(am__dirstamp) \
@@ -4328,6 +4374,8 @@ libarchive/archive_match.lo: libarchive/$(am__dirstamp) \
 libarchive/archive_options.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_pack_dev.lo: libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/archive_parse_date.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_pathmatch.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -4470,6 +4518,8 @@ libarchive/archive_read_support_format_zip.lo:  \
 libarchive/archive_string.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_string_sprintf.lo: libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/archive_time.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/archive_util.lo: libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -4978,6 +5028,8 @@ tar/test/bsdtar_test-test_option_lzma.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_lzop.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_option_mtime.$(OBJEXT):  \
+	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_n.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_newer_than.$(OBJEXT):  \
@@ -5142,8 +5194,6 @@ libarchive/test-archive_entry_strmode.$(OBJEXT):  \
 libarchive/test-archive_entry_xattr.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
-libarchive/test-archive_getdate.$(OBJEXT): libarchive/$(am__dirstamp) \
-	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_hmac.$(OBJEXT): libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_match.$(OBJEXT): libarchive/$(am__dirstamp) \
@@ -5151,6 +5201,9 @@ libarchive/test-archive_match.$(OBJEXT): libarchive/$(am__dirstamp) \
 libarchive/test-archive_options.$(OBJEXT): libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_pack_dev.$(OBJEXT):  \
+	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/test-archive_parse_date.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_pathmatch.$(OBJEXT):  \
@@ -5308,6 +5361,8 @@ libarchive/test-archive_string.$(OBJEXT): libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_string_sprintf.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/test-archive_time.$(OBJEXT): libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/test-archive_util.$(OBJEXT): libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -5535,9 +5590,6 @@ libarchive/test/test-test_archive_cmdline.$(OBJEXT):  \
 libarchive/test/test-test_archive_digest.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
-libarchive/test/test-test_archive_getdate.$(OBJEXT):  \
-	libarchive/test/$(am__dirstamp) \
-	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_archive_match_owner.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5545,6 +5597,9 @@ libarchive/test/test-test_archive_match_path.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_archive_match_time.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_archive_parse_date.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_archive_pathmatch.$(OBJEXT):  \
@@ -5871,6 +5926,9 @@ libarchive/test/test-test_read_format_gtar_gz.$(OBJEXT):  \
 libarchive/test/test-test_read_format_gtar_lzma.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_gtar_redundant_L.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_gtar_sparse.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5961,6 +6019,9 @@ libarchive/test/test-test_read_format_rar_filter.$(OBJEXT):  \
 libarchive/test/test-test_read_format_rar_invalid1.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_rar_overflow.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_rar5.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5986,6 +6047,9 @@ libarchive/test/test-test_read_format_tar_filename.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_tar_invalid_pax_size.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_tar_pax_g_large.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_tar_pax_large_attr.$(OBJEXT):  \
@@ -6291,6 +6355,9 @@ libarchive/test/test-test_write_format_mtree_fflags.$(OBJEXT):  \
 libarchive/test/test-test_write_format_mtree_no_separator.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_write_format_mtree_preset_digests.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_write_format_mtree_quoted_filename.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -6340,6 +6407,15 @@ libarchive/test/test-test_write_format_zip64_stream.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_write_format_zip_compression_store.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_write_format_zip_compression_zstd.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_write_format_zip_compression_bzip2.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_write_format_zip_compression_lzmaxz.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_write_format_zip_empty.$(OBJEXT):  \
@@ -6498,11 +6574,11 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_entry_stat.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_entry_strmode.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_entry_xattr.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_getdate.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_hmac.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_match.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_options.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_pack_dev.Plo@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_parse_date.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_pathmatch.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_ppmd7.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_ppmd8.Plo@am__quote@ # am--include-marker
@@ -6558,6 +6634,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_read_support_format_zip.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_string.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_string_sprintf.Plo@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_time.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_util.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_version_details.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/archive_virtual.Plo@am__quote@ # am--include-marker
@@ -6628,11 +6705,11 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_entry_stat.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_entry_strmode.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_entry_xattr.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_getdate.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_hmac.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_match.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_options.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_pack_dev.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_parse_date.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_pathmatch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_ppmd7.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_ppmd8.Po@am__quote@ # am--include-marker
@@ -6688,6 +6765,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_read_support_format_zip.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_string.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_string_sprintf.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_time.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_util.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_version_details.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-archive_virtual.Po@am__quote@ # am--include-marker
@@ -6754,10 +6832,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_clear_error.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_cmdline.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_digest.Po@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_match_path.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_match_time.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_pathmatch.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_read.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_archive_read_add_passphrase.Po@am__quote@ # am--include-marker
@@ -6866,6 +6944,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po@am__quote@ # am--include-marker
@@ -6897,6 +6976,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_filter.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_invalid1.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_raw.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_concatenated.Po@am__quote@ # am--include-marker
@@ -6905,6 +6985,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po@am__quote@ # am--include-marker
@@ -7006,6 +7087,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_mtree_classic_indent.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_mtree_fflags.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_mtree_no_separator.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_pax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_raw.Po@am__quote@ # am--include-marker
@@ -7022,7 +7104,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_xar_empty.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip64_stream.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_store.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty_zip64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_format_zip_entry_size_unset.Po@am__quote@ # am--include-marker
@@ -7094,6 +7179,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_lz4.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_lzma.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_lzop.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_newer_than.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_nodump.Po@am__quote@ # am--include-marker
@@ -9079,6 +9165,20 @@ tar/test/bsdtar_test-test_option_lzop.obj: tar/test/test_option_lzop.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_lzop.obj `if test -f 'tar/test/test_option_lzop.c'; then $(CYGPATH_W) 'tar/test/test_option_lzop.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_lzop.c'; fi`
 
+tar/test/bsdtar_test-test_option_mtime.o: tar/test/test_option_mtime.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_mtime.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Tpo -c -o tar/test/bsdtar_test-test_option_mtime.o `test -f 'tar/test/test_option_mtime.c' || echo '$(srcdir)/'`tar/test/test_option_mtime.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_mtime.c' object='tar/test/bsdtar_test-test_option_mtime.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_mtime.o `test -f 'tar/test/test_option_mtime.c' || echo '$(srcdir)/'`tar/test/test_option_mtime.c
+
+tar/test/bsdtar_test-test_option_mtime.obj: tar/test/test_option_mtime.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_mtime.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Tpo -c -o tar/test/bsdtar_test-test_option_mtime.obj `if test -f 'tar/test/test_option_mtime.c'; then $(CYGPATH_W) 'tar/test/test_option_mtime.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_mtime.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_mtime.c' object='tar/test/bsdtar_test-test_option_mtime.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_mtime.obj `if test -f 'tar/test/test_option_mtime.c'; then $(CYGPATH_W) 'tar/test/test_option_mtime.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_mtime.c'; fi`
+
 tar/test/bsdtar_test-test_option_n.o: tar/test/test_option_n.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_n.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Tpo -c -o tar/test/bsdtar_test-test_option_n.o `test -f 'tar/test/test_option_n.c' || echo '$(srcdir)/'`tar/test/test_option_n.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Po
@@ -9933,20 +10033,6 @@ libarchive/test-archive_entry_xattr.obj: libarchive/archive_entry_xattr.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_entry_xattr.obj `if test -f 'libarchive/archive_entry_xattr.c'; then $(CYGPATH_W) 'libarchive/archive_entry_xattr.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_entry_xattr.c'; fi`
 
-libarchive/test-archive_getdate.o: libarchive/archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_getdate.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_getdate.Tpo -c -o libarchive/test-archive_getdate.o `test -f 'libarchive/archive_getdate.c' || echo '$(srcdir)/'`libarchive/archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_getdate.Tpo libarchive/$(DEPDIR)/test-archive_getdate.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_getdate.c' object='libarchive/test-archive_getdate.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_getdate.o `test -f 'libarchive/archive_getdate.c' || echo '$(srcdir)/'`libarchive/archive_getdate.c
-
-libarchive/test-archive_getdate.obj: libarchive/archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_getdate.obj -MD -MP -MF libarchive/$(DEPDIR)/test-archive_getdate.Tpo -c -o libarchive/test-archive_getdate.obj `if test -f 'libarchive/archive_getdate.c'; then $(CYGPATH_W) 'libarchive/archive_getdate.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_getdate.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_getdate.Tpo libarchive/$(DEPDIR)/test-archive_getdate.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_getdate.c' object='libarchive/test-archive_getdate.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_getdate.obj `if test -f 'libarchive/archive_getdate.c'; then $(CYGPATH_W) 'libarchive/archive_getdate.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_getdate.c'; fi`
-
 libarchive/test-archive_hmac.o: libarchive/archive_hmac.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_hmac.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_hmac.Tpo -c -o libarchive/test-archive_hmac.o `test -f 'libarchive/archive_hmac.c' || echo '$(srcdir)/'`libarchive/archive_hmac.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_hmac.Tpo libarchive/$(DEPDIR)/test-archive_hmac.Po
@@ -10002,6 +10088,20 @@ libarchive/test-archive_pack_dev.obj: libarchive/archive_pack_dev.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_pack_dev.c' object='libarchive/test-archive_pack_dev.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_pack_dev.obj `if test -f 'libarchive/archive_pack_dev.c'; then $(CYGPATH_W) 'libarchive/archive_pack_dev.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_pack_dev.c'; fi`
+
+libarchive/test-archive_parse_date.o: libarchive/archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_parse_date.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_parse_date.Tpo -c -o libarchive/test-archive_parse_date.o `test -f 'libarchive/archive_parse_date.c' || echo '$(srcdir)/'`libarchive/archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_parse_date.Tpo libarchive/$(DEPDIR)/test-archive_parse_date.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_parse_date.c' object='libarchive/test-archive_parse_date.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_parse_date.o `test -f 'libarchive/archive_parse_date.c' || echo '$(srcdir)/'`libarchive/archive_parse_date.c
+
+libarchive/test-archive_parse_date.obj: libarchive/archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_parse_date.obj -MD -MP -MF libarchive/$(DEPDIR)/test-archive_parse_date.Tpo -c -o libarchive/test-archive_parse_date.obj `if test -f 'libarchive/archive_parse_date.c'; then $(CYGPATH_W) 'libarchive/archive_parse_date.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_parse_date.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_parse_date.Tpo libarchive/$(DEPDIR)/test-archive_parse_date.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_parse_date.c' object='libarchive/test-archive_parse_date.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_parse_date.obj `if test -f 'libarchive/archive_parse_date.c'; then $(CYGPATH_W) 'libarchive/archive_parse_date.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_parse_date.c'; fi`
 
 libarchive/test-archive_pathmatch.o: libarchive/archive_pathmatch.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_pathmatch.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_pathmatch.Tpo -c -o libarchive/test-archive_pathmatch.o `test -f 'libarchive/archive_pathmatch.c' || echo '$(srcdir)/'`libarchive/archive_pathmatch.c
@@ -10758,6 +10858,20 @@ libarchive/test-archive_string_sprintf.obj: libarchive/archive_string_sprintf.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_string_sprintf.c' object='libarchive/test-archive_string_sprintf.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_string_sprintf.obj `if test -f 'libarchive/archive_string_sprintf.c'; then $(CYGPATH_W) 'libarchive/archive_string_sprintf.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_string_sprintf.c'; fi`
+
+libarchive/test-archive_time.o: libarchive/archive_time.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_time.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_time.Tpo -c -o libarchive/test-archive_time.o `test -f 'libarchive/archive_time.c' || echo '$(srcdir)/'`libarchive/archive_time.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_time.Tpo libarchive/$(DEPDIR)/test-archive_time.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_time.c' object='libarchive/test-archive_time.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_time.o `test -f 'libarchive/archive_time.c' || echo '$(srcdir)/'`libarchive/archive_time.c
+
+libarchive/test-archive_time.obj: libarchive/archive_time.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_time.obj -MD -MP -MF libarchive/$(DEPDIR)/test-archive_time.Tpo -c -o libarchive/test-archive_time.obj `if test -f 'libarchive/archive_time.c'; then $(CYGPATH_W) 'libarchive/archive_time.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_time.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/$(DEPDIR)/test-archive_time.Tpo libarchive/$(DEPDIR)/test-archive_time.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/archive_time.c' object='libarchive/test-archive_time.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test-archive_time.obj `if test -f 'libarchive/archive_time.c'; then $(CYGPATH_W) 'libarchive/archive_time.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_time.c'; fi`
 
 libarchive/test-archive_util.o: libarchive/archive_util.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test-archive_util.o -MD -MP -MF libarchive/$(DEPDIR)/test-archive_util.Tpo -c -o libarchive/test-archive_util.o `test -f 'libarchive/archive_util.c' || echo '$(srcdir)/'`libarchive/archive_util.c
@@ -11809,20 +11923,6 @@ libarchive/test/test-test_archive_digest.obj: libarchive/test/test_archive_diges
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_digest.obj `if test -f 'libarchive/test/test_archive_digest.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_digest.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_digest.c'; fi`
 
-libarchive/test/test-test_archive_getdate.o: libarchive/test/test_archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_getdate.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_getdate.Tpo -c -o libarchive/test/test-test_archive_getdate.o `test -f 'libarchive/test/test_archive_getdate.c' || echo '$(srcdir)/'`libarchive/test/test_archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_archive_getdate.Tpo libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_archive_getdate.c' object='libarchive/test/test-test_archive_getdate.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_getdate.o `test -f 'libarchive/test/test_archive_getdate.c' || echo '$(srcdir)/'`libarchive/test/test_archive_getdate.c
-
-libarchive/test/test-test_archive_getdate.obj: libarchive/test/test_archive_getdate.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_getdate.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_getdate.Tpo -c -o libarchive/test/test-test_archive_getdate.obj `if test -f 'libarchive/test/test_archive_getdate.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_getdate.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_getdate.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_archive_getdate.Tpo libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_archive_getdate.c' object='libarchive/test/test-test_archive_getdate.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_getdate.obj `if test -f 'libarchive/test/test_archive_getdate.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_getdate.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_getdate.c'; fi`
-
 libarchive/test/test-test_archive_match_owner.o: libarchive/test/test_archive_match_owner.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_match_owner.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Tpo -c -o libarchive/test/test-test_archive_match_owner.o `test -f 'libarchive/test/test_archive_match_owner.c' || echo '$(srcdir)/'`libarchive/test/test_archive_match_owner.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Tpo libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Po
@@ -11864,6 +11964,20 @@ libarchive/test/test-test_archive_match_time.obj: libarchive/test/test_archive_m
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_archive_match_time.c' object='libarchive/test/test-test_archive_match_time.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_match_time.obj `if test -f 'libarchive/test/test_archive_match_time.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_match_time.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_match_time.c'; fi`
+
+libarchive/test/test-test_archive_parse_date.o: libarchive/test/test_archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_parse_date.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Tpo -c -o libarchive/test/test-test_archive_parse_date.o `test -f 'libarchive/test/test_archive_parse_date.c' || echo '$(srcdir)/'`libarchive/test/test_archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Tpo libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_archive_parse_date.c' object='libarchive/test/test-test_archive_parse_date.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_parse_date.o `test -f 'libarchive/test/test_archive_parse_date.c' || echo '$(srcdir)/'`libarchive/test/test_archive_parse_date.c
+
+libarchive/test/test-test_archive_parse_date.obj: libarchive/test/test_archive_parse_date.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_parse_date.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Tpo -c -o libarchive/test/test-test_archive_parse_date.obj `if test -f 'libarchive/test/test_archive_parse_date.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_parse_date.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_parse_date.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Tpo libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_archive_parse_date.c' object='libarchive/test/test-test_archive_parse_date.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_archive_parse_date.obj `if test -f 'libarchive/test/test_archive_parse_date.c'; then $(CYGPATH_W) 'libarchive/test/test_archive_parse_date.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_archive_parse_date.c'; fi`
 
 libarchive/test/test-test_archive_pathmatch.o: libarchive/test/test_archive_pathmatch.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_archive_pathmatch.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_archive_pathmatch.Tpo -c -o libarchive/test/test-test_archive_pathmatch.o `test -f 'libarchive/test/test_archive_pathmatch.c' || echo '$(srcdir)/'`libarchive/test/test_archive_pathmatch.c
@@ -13377,6 +13491,20 @@ libarchive/test/test-test_read_format_gtar_lzma.obj: libarchive/test/test_read_f
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_lzma.obj `if test -f 'libarchive/test/test_read_format_gtar_lzma.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_lzma.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_lzma.c'; fi`
 
+libarchive/test/test-test_read_format_gtar_redundant_L.o: libarchive/test/test_read_format_gtar_redundant_L.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_redundant_L.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Tpo -c -o libarchive/test/test-test_read_format_gtar_redundant_L.o `test -f 'libarchive/test/test_read_format_gtar_redundant_L.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_redundant_L.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_gtar_redundant_L.c' object='libarchive/test/test-test_read_format_gtar_redundant_L.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_redundant_L.o `test -f 'libarchive/test/test_read_format_gtar_redundant_L.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_redundant_L.c
+
+libarchive/test/test-test_read_format_gtar_redundant_L.obj: libarchive/test/test_read_format_gtar_redundant_L.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_redundant_L.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Tpo -c -o libarchive/test/test-test_read_format_gtar_redundant_L.obj `if test -f 'libarchive/test/test_read_format_gtar_redundant_L.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_redundant_L.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_redundant_L.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_gtar_redundant_L.c' object='libarchive/test/test-test_read_format_gtar_redundant_L.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_gtar_redundant_L.obj `if test -f 'libarchive/test/test_read_format_gtar_redundant_L.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_gtar_redundant_L.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_gtar_redundant_L.c'; fi`
+
 libarchive/test/test-test_read_format_gtar_sparse.o: libarchive/test/test_read_format_gtar_sparse.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_gtar_sparse.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Tpo -c -o libarchive/test/test-test_read_format_gtar_sparse.o `test -f 'libarchive/test/test_read_format_gtar_sparse.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_gtar_sparse.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po
@@ -13797,6 +13925,20 @@ libarchive/test/test-test_read_format_rar_invalid1.obj: libarchive/test/test_rea
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar_invalid1.obj `if test -f 'libarchive/test/test_read_format_rar_invalid1.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar_invalid1.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar_invalid1.c'; fi`
 
+libarchive/test/test-test_read_format_rar_overflow.o: libarchive/test/test_read_format_rar_overflow.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar_overflow.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Tpo -c -o libarchive/test/test-test_read_format_rar_overflow.o `test -f 'libarchive/test/test_read_format_rar_overflow.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar_overflow.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar_overflow.c' object='libarchive/test/test-test_read_format_rar_overflow.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar_overflow.o `test -f 'libarchive/test/test_read_format_rar_overflow.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar_overflow.c
+
+libarchive/test/test-test_read_format_rar_overflow.obj: libarchive/test/test_read_format_rar_overflow.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar_overflow.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Tpo -c -o libarchive/test/test-test_read_format_rar_overflow.obj `if test -f 'libarchive/test/test_read_format_rar_overflow.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar_overflow.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar_overflow.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar_overflow.c' object='libarchive/test/test-test_read_format_rar_overflow.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar_overflow.obj `if test -f 'libarchive/test/test_read_format_rar_overflow.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar_overflow.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar_overflow.c'; fi`
+
 libarchive/test/test-test_read_format_rar5.o: libarchive/test/test_read_format_rar5.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar5.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Tpo -c -o libarchive/test/test-test_read_format_rar5.o `test -f 'libarchive/test/test_read_format_rar5.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar5.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po
@@ -13922,6 +14064,20 @@ libarchive/test/test-test_read_format_tar_invalid_pax_size.obj: libarchive/test/
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_invalid_pax_size.c' object='libarchive/test/test-test_read_format_tar_invalid_pax_size.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_invalid_pax_size.obj `if test -f 'libarchive/test/test_read_format_tar_invalid_pax_size.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_invalid_pax_size.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_invalid_pax_size.c'; fi`
+
+libarchive/test/test-test_read_format_tar_pax_g_large.o: libarchive/test/test_read_format_tar_pax_g_large.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_g_large.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_g_large.o `test -f 'libarchive/test/test_read_format_tar_pax_g_large.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_g_large.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_pax_g_large.c' object='libarchive/test/test-test_read_format_tar_pax_g_large.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_pax_g_large.o `test -f 'libarchive/test/test_read_format_tar_pax_g_large.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_g_large.c
+
+libarchive/test/test-test_read_format_tar_pax_g_large.obj: libarchive/test/test_read_format_tar_pax_g_large.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_g_large.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_g_large.obj `if test -f 'libarchive/test/test_read_format_tar_pax_g_large.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_pax_g_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_pax_g_large.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_pax_g_large.c' object='libarchive/test/test-test_read_format_tar_pax_g_large.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_pax_g_large.obj `if test -f 'libarchive/test/test_read_format_tar_pax_g_large.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_pax_g_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_pax_g_large.c'; fi`
 
 libarchive/test/test-test_read_format_tar_pax_large_attr.o: libarchive/test/test_read_format_tar_pax_large_attr.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_large_attr.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_large_attr.o `test -f 'libarchive/test/test_read_format_tar_pax_large_attr.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_large_attr.c
@@ -15337,6 +15493,20 @@ libarchive/test/test-test_write_format_mtree_no_separator.obj: libarchive/test/t
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_mtree_no_separator.obj `if test -f 'libarchive/test/test_write_format_mtree_no_separator.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_mtree_no_separator.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_mtree_no_separator.c'; fi`
 
+libarchive/test/test-test_write_format_mtree_preset_digests.o: libarchive/test/test_write_format_mtree_preset_digests.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_mtree_preset_digests.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Tpo -c -o libarchive/test/test-test_write_format_mtree_preset_digests.o `test -f 'libarchive/test/test_write_format_mtree_preset_digests.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_mtree_preset_digests.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_mtree_preset_digests.c' object='libarchive/test/test-test_write_format_mtree_preset_digests.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_mtree_preset_digests.o `test -f 'libarchive/test/test_write_format_mtree_preset_digests.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_mtree_preset_digests.c
+
+libarchive/test/test-test_write_format_mtree_preset_digests.obj: libarchive/test/test_write_format_mtree_preset_digests.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_mtree_preset_digests.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Tpo -c -o libarchive/test/test-test_write_format_mtree_preset_digests.obj `if test -f 'libarchive/test/test_write_format_mtree_preset_digests.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_mtree_preset_digests.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_mtree_preset_digests.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_mtree_preset_digests.c' object='libarchive/test/test-test_write_format_mtree_preset_digests.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_mtree_preset_digests.obj `if test -f 'libarchive/test/test_write_format_mtree_preset_digests.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_mtree_preset_digests.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_mtree_preset_digests.c'; fi`
+
 libarchive/test/test-test_write_format_mtree_quoted_filename.o: libarchive/test/test_write_format_mtree_quoted_filename.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_mtree_quoted_filename.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Tpo -c -o libarchive/test/test-test_write_format_mtree_quoted_filename.o `test -f 'libarchive/test/test_write_format_mtree_quoted_filename.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_mtree_quoted_filename.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Po
@@ -15574,6 +15744,48 @@ libarchive/test/test-test_write_format_zip_compression_store.obj: libarchive/tes
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_store.c' object='libarchive/test/test-test_write_format_zip_compression_store.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_store.obj `if test -f 'libarchive/test/test_write_format_zip_compression_store.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_store.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_store.c'; fi`
+
+libarchive/test/test-test_write_format_zip_compression_zstd.o: libarchive/test/test_write_format_zip_compression_zstd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_zstd.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_zstd.o `test -f 'libarchive/test/test_write_format_zip_compression_zstd.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_zstd.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_zstd.c' object='libarchive/test/test-test_write_format_zip_compression_zstd.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_zstd.o `test -f 'libarchive/test/test_write_format_zip_compression_zstd.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_zstd.c
+
+libarchive/test/test-test_write_format_zip_compression_zstd.obj: libarchive/test/test_write_format_zip_compression_zstd.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_zstd.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_zstd.obj `if test -f 'libarchive/test/test_write_format_zip_compression_zstd.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_zstd.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_zstd.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_zstd.c' object='libarchive/test/test-test_write_format_zip_compression_zstd.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_zstd.obj `if test -f 'libarchive/test/test_write_format_zip_compression_zstd.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_zstd.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_zstd.c'; fi`
+
+libarchive/test/test-test_write_format_zip_compression_bzip2.o: libarchive/test/test_write_format_zip_compression_bzip2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_bzip2.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_bzip2.o `test -f 'libarchive/test/test_write_format_zip_compression_bzip2.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_bzip2.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_bzip2.c' object='libarchive/test/test-test_write_format_zip_compression_bzip2.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_bzip2.o `test -f 'libarchive/test/test_write_format_zip_compression_bzip2.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_bzip2.c
+
+libarchive/test/test-test_write_format_zip_compression_bzip2.obj: libarchive/test/test_write_format_zip_compression_bzip2.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_bzip2.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_bzip2.obj `if test -f 'libarchive/test/test_write_format_zip_compression_bzip2.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_bzip2.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_bzip2.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_bzip2.c' object='libarchive/test/test-test_write_format_zip_compression_bzip2.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_bzip2.obj `if test -f 'libarchive/test/test_write_format_zip_compression_bzip2.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_bzip2.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_bzip2.c'; fi`
+
+libarchive/test/test-test_write_format_zip_compression_lzmaxz.o: libarchive/test/test_write_format_zip_compression_lzmaxz.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_lzmaxz.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_lzmaxz.o `test -f 'libarchive/test/test_write_format_zip_compression_lzmaxz.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_lzmaxz.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_lzmaxz.c' object='libarchive/test/test-test_write_format_zip_compression_lzmaxz.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_lzmaxz.o `test -f 'libarchive/test/test_write_format_zip_compression_lzmaxz.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_compression_lzmaxz.c
+
+libarchive/test/test-test_write_format_zip_compression_lzmaxz.obj: libarchive/test/test_write_format_zip_compression_lzmaxz.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_compression_lzmaxz.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Tpo -c -o libarchive/test/test-test_write_format_zip_compression_lzmaxz.obj `if test -f 'libarchive/test/test_write_format_zip_compression_lzmaxz.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_lzmaxz.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_lzmaxz.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Tpo libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_format_zip_compression_lzmaxz.c' object='libarchive/test/test-test_write_format_zip_compression_lzmaxz.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_format_zip_compression_lzmaxz.obj `if test -f 'libarchive/test/test_write_format_zip_compression_lzmaxz.c'; then $(CYGPATH_W) 'libarchive/test/test_write_format_zip_compression_lzmaxz.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_format_zip_compression_lzmaxz.c'; fi`
 
 libarchive/test/test-test_write_format_zip_empty.o: libarchive/test/test_write_format_zip_empty.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_format_zip_empty.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty.Tpo -c -o libarchive/test/test-test_write_format_zip_empty.o `test -f 'libarchive/test/test_write_format_zip_empty.c' || echo '$(srcdir)/'`libarchive/test/test_write_format_zip_empty.c
@@ -16537,11 +16749,11 @@ distclean: distclean-am
 	-rm -f libarchive/$(DEPDIR)/archive_entry_stat.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_entry_strmode.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_entry_xattr.Plo
-	-rm -f libarchive/$(DEPDIR)/archive_getdate.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_hmac.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_match.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_options.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_pack_dev.Plo
+	-rm -f libarchive/$(DEPDIR)/archive_parse_date.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_pathmatch.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_ppmd7.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_ppmd8.Plo
@@ -16597,6 +16809,7 @@ distclean: distclean-am
 	-rm -f libarchive/$(DEPDIR)/archive_read_support_format_zip.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_string.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_string_sprintf.Plo
+	-rm -f libarchive/$(DEPDIR)/archive_time.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_util.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_version_details.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_virtual.Plo
@@ -16667,11 +16880,11 @@ distclean: distclean-am
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_stat.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_strmode.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_xattr.Po
-	-rm -f libarchive/$(DEPDIR)/test-archive_getdate.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_hmac.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_match.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_options.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_pack_dev.Po
+	-rm -f libarchive/$(DEPDIR)/test-archive_parse_date.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_pathmatch.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_ppmd7.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_ppmd8.Po
@@ -16727,6 +16940,7 @@ distclean: distclean-am
 	-rm -f libarchive/$(DEPDIR)/test-archive_read_support_format_zip.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_string.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_string_sprintf.Po
+	-rm -f libarchive/$(DEPDIR)/test-archive_time.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_util.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_version_details.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_virtual.Po
@@ -16793,10 +17007,10 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_clear_error.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_cmdline.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_digest.Po
-	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_path.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_time.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_pathmatch.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_read.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_read_add_passphrase.Po
@@ -16905,6 +17119,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po
@@ -16936,6 +17151,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_filter.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_invalid1.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_raw.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_concatenated.Po
@@ -16944,6 +17160,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po
@@ -17045,6 +17262,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_classic_indent.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_fflags.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_no_separator.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_pax.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_raw.Po
@@ -17061,7 +17279,10 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_xar_empty.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip64_stream.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_store.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty_zip64.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_entry_size_unset.Po
@@ -17133,6 +17354,7 @@ distclean: distclean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lz4.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lzma.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lzop.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_newer_than.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_nodump.Po
@@ -17330,11 +17552,11 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/$(DEPDIR)/archive_entry_stat.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_entry_strmode.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_entry_xattr.Plo
-	-rm -f libarchive/$(DEPDIR)/archive_getdate.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_hmac.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_match.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_options.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_pack_dev.Plo
+	-rm -f libarchive/$(DEPDIR)/archive_parse_date.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_pathmatch.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_ppmd7.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_ppmd8.Plo
@@ -17390,6 +17612,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/$(DEPDIR)/archive_read_support_format_zip.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_string.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_string_sprintf.Plo
+	-rm -f libarchive/$(DEPDIR)/archive_time.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_util.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_version_details.Plo
 	-rm -f libarchive/$(DEPDIR)/archive_virtual.Plo
@@ -17460,11 +17683,11 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_stat.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_strmode.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_entry_xattr.Po
-	-rm -f libarchive/$(DEPDIR)/test-archive_getdate.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_hmac.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_match.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_options.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_pack_dev.Po
+	-rm -f libarchive/$(DEPDIR)/test-archive_parse_date.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_pathmatch.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_ppmd7.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_ppmd8.Po
@@ -17520,6 +17743,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/$(DEPDIR)/test-archive_read_support_format_zip.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_string.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_string_sprintf.Po
+	-rm -f libarchive/$(DEPDIR)/test-archive_time.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_util.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_version_details.Po
 	-rm -f libarchive/$(DEPDIR)/test-archive_virtual.Po
@@ -17586,10 +17810,10 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_clear_error.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_cmdline.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_digest.Po
-	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_getdate.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_owner.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_path.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_match_time.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_parse_date.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_pathmatch.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_read.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_archive_read_add_passphrase.Po
@@ -17698,6 +17922,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_gz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_lzma.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_redundant_L.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_length.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_gtar_sparse_skip_entry.Po
@@ -17729,6 +17954,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_filter.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_invalid1.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_overflow.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_raw.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_concatenated.Po
@@ -17737,6 +17963,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po
@@ -17838,6 +18065,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_classic_indent.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_fflags.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_no_separator.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_preset_digests.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_mtree_quoted_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_pax.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_raw.Po
@@ -17854,7 +18082,10 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_xar_empty.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip64_stream.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_bzip2.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_lzmaxz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_store.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_compression_zstd.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_empty_zip64.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_format_zip_entry_size_unset.Po
@@ -17926,6 +18157,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lz4.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lzma.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_lzop.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_mtime.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_n.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_newer_than.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_nodump.Po

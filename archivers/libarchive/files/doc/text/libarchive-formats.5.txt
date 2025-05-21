@@ -242,91 +242,97 @@
 
    1mZip format0m
        Libarchive can read and write zip  format  archives  that  have	uncom‐
-       pressed	entries	 and  entries compressed with the “deflate” algorithm.
-       Other zip compression algorithms are not supported.  It can extract jar
-       archives, archives that use Zip64 extensions  and  self-extracting  zip
-       archives.   Libarchive  can  use either of two different strategies for
-       reading Zip archives: a streaming strategy which is fast and can handle
-       extremely large archives, and a seeking strategy	 which	can  correctly
-       process	self-extracting Zip archives and archives with deleted members
-       or other in-place modifications.
+       pressed	entries	 and  entries compressed with the “deflate” , “LZMA” ,
+       “XZ” , “BZIP2” and “ZSTD” algorithms.  Libarchive can  also  read,  but
+       not  write,  zip	 format archives that have entries compressed with the
+       “PPMd” algorithm.  Other zip compression algorithms are not  supported.
+       The  extensions	supported by libarchive are Zip64, Libarchive's exten‐
+       sions to better support streaming, PKZIP's traditional ZIP  encryption,
+       Info-ZIP's  Unix extra fields, extra time, and Unicode path, as well as
+       WinZIP's AES encryption.	 It can extract	 jar  archives,	 __MACOSX  re‐
+       source  forks  extension	 for  OS  X, and self-extracting zip archives.
+       Libarchive can use either of two different strategies for  reading  Zip
+       archives:  a  streaming strategy which is fast and can handle extremely
+       large archives, and a seeking  strategy	which  can  correctly  process
+       self-extracting Zip archives and archives with deleted members or other
+       in-place modifications.
 
-       The streaming reader processes Zip archives as they are read.   It  can
-       read  archives  of arbitrary size from tape or network sockets, and can
-       decode Zip archives that have been separately  compressed  or  encoded.
-       However,	 self-extracting  Zip archives and archives with certain types
-       of modifications cannot be correctly handled.   Such  archives  require
-       that  the reader first process the Central Directory, which is ordinar‐
+       The  streaming  reader processes Zip archives as they are read.	It can
+       read archives of arbitrary size from tape or network sockets,  and  can
+       decode  Zip  archives  that have been separately compressed or encoded.
+       However, self-extracting Zip archives and archives with	certain	 types
+       of  modifications  cannot  be correctly handled.	 Such archives require
+       that the reader first process the Central Directory, which is  ordinar‐
        ily located at the end of a Zip archive and is thus inaccessible to the
-       streaming reader.  If the program using	libarchive  has	 enabled  seek
-       support,	 then libarchive will use this to processes the central direc‐
+       streaming  reader.   If	the  program using libarchive has enabled seek
+       support, then libarchive will use this to processes the central	direc‐
        tory first.
 
-       In particular, the seeking reader must  be  used	 to  correctly	handle
-       self-extracting	archives.  Such archives consist of a program followed
-       by a regular Zip archive.  The streaming reader cannot parse  the  ini‐
+       In  particular,	the  seeking  reader  must be used to correctly handle
+       self-extracting archives.  Such archives consist of a program  followed
+       by  a  regular Zip archive.  The streaming reader cannot parse the ini‐
        tial program portion, but the seeking reader starts by reading the Cen‐
-       tral  Directory	from  the end of the archive.  Similarly, Zip archives
-       that have been modified in-place can  have  deleted  entries  or	 other
-       garbage	data that can only be accurately detected by first reading the
+       tral Directory from the end of the archive.   Similarly,	 Zip  archives
+       that  have  been	 modified  in-place  can have deleted entries or other
+       garbage data that can only be accurately detected by first reading  the
        Central Directory.
 
    1mArchive (library) file format0m
-       The Unix archive format (commonly created by the 4mar24m(1) archiver)  is  a
-       general-purpose	format	which  is  used	 almost exclusively for object
-       files to be read by the link editor 4mld24m(1).	The  ar	 format	 has  never
-       been  standardised.   There are two common variants: the GNU format de‐
-       rived from SVR4, and the BSD format, which first	 appeared  in  4.4BSD.
-       The  two differ primarily in their handling of filenames longer than 15
-       characters: the GNU/SVR4 variant writes a filename table at the	begin‐
+       The  Unix  archive format (commonly created by the 4mar24m(1) archiver) is a
+       general-purpose format which is	used  almost  exclusively  for	object
+       files  to  be  read  by the link editor 4mld24m(1).  The ar format has never
+       been standardised.  There are two common variants: the GNU  format  de‐
+       rived  from  SVR4,  and the BSD format, which first appeared in 4.4BSD.
+       The two differ primarily in their handling of filenames longer than  15
+       characters:  the GNU/SVR4 variant writes a filename table at the begin‐
        ning of the archive; the BSD format stores each long filename in an ex‐
-       tension	area  adjacent	to the entry.  Libarchive can read both exten‐
-       sions, including archives that may include both	types  of  long	 file‐
-       names.	Programs  using	 libarchive  can write GNU/SVR4 format if they
-       provide an entry called 4m//24m containing a filename table  to	be  written
-       into  the  archive  before any of the entries.  Any entries whose names
-       are not in the filename table will  be  written	using  BSD-style  long
+       tension area adjacent to the entry.  Libarchive can  read  both	exten‐
+       sions,  including  archives  that  may include both types of long file‐
+       names.  Programs using libarchive can write  GNU/SVR4  format  if  they
+       provide	an  entry  called 4m//24m containing a filename table to be written
+       into the archive before any of the entries.  Any	 entries  whose	 names
+       are  not	 in  the  filename  table will be written using BSD-style long
        filenames.  This can cause problems for programs such as GNU ld that do
        not support the BSD-style long filenames.
 
    1mmtree0m
        Libarchive can read and write files in 4mmtree24m(5) format.  This format is
-       not  a  true archive format, but rather a textual description of a file
-       hierarchy in which each line specifies the name of a file and  provides
+       not a true archive format, but rather a textual description of  a  file
+       hierarchy  in which each line specifies the name of a file and provides
        specific metadata about that file.  Libarchive can read all of the key‐
-       words  supported	 by  both the NetBSD and FreeBSD versions of 4mmtree24m(8),
-       although many  of  the  keywords	 cannot	 currently  be	stored	in  an
-       archive_entry  object.	When  writing,	libarchive supports use of the
+       words supported by both the NetBSD and FreeBSD  versions	 of  4mmtree24m(8),
+       although	 many  of  the	keywords  cannot  currently  be	 stored	 in an
+       archive_entry object.  When writing, libarchive	supports  use  of  the
        4marchive_write_set_options24m(3) interface to specify which keywords should
-       be included in the output.  If libarchive was compiled with  access  to
-       suitable	 cryptographic	libraries  (such as the OpenSSL libraries), it
-       can compute hash entries such as 1msha512 22mor 1mmd5  22mfrom  file  data  being
+       be  included  in the output.  If libarchive was compiled with access to
+       suitable cryptographic libraries (such as the  OpenSSL  libraries),  it
+       can  compute  hash  entries  such as 1msha512 22mor 1mmd5 22mfrom file data being
        written to the mtree writer.
 
-       When  reading  an  mtree file, libarchive will locate the corresponding
-       files on disk using the 1mcontents 22mkeyword  if  present  or  the  regular
+       When reading an mtree file, libarchive will  locate  the	 corresponding
+       files  on  disk	using  the  1mcontents 22mkeyword if present or the regular
        filename.  If it can locate and open the file on disk, it will use that
-       to  fill	 in  any metadata that is missing from the mtree file and will
-       read  the  file	contents  and  return  those  to  the  program	 using
-       libarchive.   If it cannot locate and open the file on disk, libarchive
+       to fill in any metadata that is missing from the mtree  file  and  will
+       read   the  file	 contents  and	return	those  to  the	program	 using
+       libarchive.  If it cannot locate and open the file on disk,  libarchive
        will return an error for any attempt to read the entry body.
 
    1m7-Zip0m
-       Libarchive can read and write 7-Zip format archives.  TODO:  Need  more
+       Libarchive  can	read and write 7-Zip format archives.  TODO: Need more
        information
 
    1mCAB0m
-       Libarchive  can read Microsoft Cabinet ( “CAB”) format archives.	 TODO:
+       Libarchive can read Microsoft Cabinet ( “CAB”) format archives.	 TODO:
        Need more information.
 
    1mLHA0m
        TODO: Information about libarchive's LHA support
 
    1mRAR0m
-       Libarchive has limited support for reading RAR format  archives.	  Cur‐
-       rently,	libarchive  can read RARv3 format archives which have been ei‐
-       ther created uncompressed, or compressed using any of  the  compression
-       methods	supported by the RARv3 format.	Libarchive can also read self-
+       Libarchive  has	limited support for reading RAR format archives.  Cur‐
+       rently, libarchive can read RARv3 format archives which have  been  ei‐
+       ther  created  uncompressed, or compressed using any of the compression
+       methods supported by the RARv3 format.  Libarchive can also read	 self-
        extracting RAR archives.
 
    1mWarc0m
@@ -334,11 +340,11 @@
        tion
 
    1mXAR0m
-       Libarchive can read and write the XAR format used by many Apple	tools.
+       Libarchive  can read and write the XAR format used by many Apple tools.
        TODO: Need more information
 
 1mSEE ALSO0m
-       4mar24m(1),  4mcpio24m(1), 4mmkisofs24m(1), 4mshar24m(1), 4mtar24m(1), 4mzip24m(1), 4mzlib24m(3), 4mcpio24m(5),
+       4mar24m(1), 4mcpio24m(1), 4mmkisofs24m(1), 4mshar24m(1), 4mtar24m(1), 4mzip24m(1), 4mzlib24m(3),	 4mcpio24m(5),
        4mmtree24m(5), 4mtar24m(5)
 
 Debian			       December 27, 2016	 4mLIBARCHIVE-FORMATS24m(5)

@@ -21,10 +21,10 @@ IF(ENABLE_TEST)
     test_archive_clear_error.c
     test_archive_cmdline.c
     test_archive_digest.c
-    test_archive_getdate.c
     test_archive_match_owner.c
     test_archive_match_path.c
     test_archive_match_time.c
+    test_archive_parse_date.c
     test_archive_pathmatch.c
     test_archive_read.c
     test_archive_read_add_passphrase.c
@@ -133,6 +133,7 @@ IF(ENABLE_TEST)
     test_read_format_gtar_filename.c
     test_read_format_gtar_gz.c
     test_read_format_gtar_lzma.c
+    test_read_format_gtar_redundant_L.c
     test_read_format_gtar_sparse.c
     test_read_format_gtar_sparse_length.c
     test_read_format_gtar_sparse_skip_entry.c
@@ -163,6 +164,7 @@ IF(ENABLE_TEST)
     test_read_format_rar_encryption_partially.c
     test_read_format_rar_invalid1.c
     test_read_format_rar_filter.c
+    test_read_format_rar_overflow.c
     test_read_format_rar5.c
     test_read_format_raw.c
     test_read_format_tar.c
@@ -172,6 +174,7 @@ IF(ENABLE_TEST)
     test_read_format_tar_empty_pax.c
     test_read_format_tar_filename.c
     test_read_format_tar_invalid_pax_size.c
+    test_read_format_tar_pax_g_large.c
     test_read_format_tar_pax_large_attr.c
     test_read_format_tbz.c
     test_read_format_tgz.c
@@ -273,6 +276,7 @@ IF(ENABLE_TEST)
     test_write_format_mtree_classic_indent.c
     test_write_format_mtree_fflags.c
     test_write_format_mtree_no_separator.c
+    test_write_format_mtree_preset_digests.c
     test_write_format_mtree_quoted_filename.c
     test_write_format_pax.c
     test_write_format_raw.c
@@ -290,6 +294,9 @@ IF(ENABLE_TEST)
     test_write_format_zip.c
     test_write_format_zip64_stream.c
     test_write_format_zip_compression_store.c
+    test_write_format_zip_compression_bzip2.c
+    test_write_format_zip_compression_lzmaxz.c
+    test_write_format_zip_compression_zstd.c
     test_write_format_zip_empty.c
     test_write_format_zip_empty_zip64.c
     test_write_format_zip_entry_size_unset.c

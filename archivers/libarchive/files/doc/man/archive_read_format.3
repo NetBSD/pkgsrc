@@ -12,8 +12,10 @@
 \fB\%archive_read_support_format_lha\fP,
 \fB\%archive_read_support_format_mtree\fP,
 \fB\%archive_read_support_format_rar\fP,
+\fB\%archive_read_support_format_rar5\fP,
 \fB\%archive_read_support_format_raw\fP,
 \fB\%archive_read_support_format_tar\fP,
+\fB\%archive_read_support_format_warc\fP,
 \fB\%archive_read_support_format_xar\fP,
 \fB\%archive_read_support_format_zip\fP
 \- functions for reading streaming archives
@@ -70,11 +72,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_read_support_format_rar5\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_read_support_format_raw\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
 \fB\%archive_read_support_format_tar\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_format_warc\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -95,8 +105,10 @@ Streaming Archive Library (libarchive, -larchive)
 \fB\%archive_read_support_format_lha\fP(),
 \fB\%archive_read_support_format_mtree\fP(),
 \fB\%archive_read_support_format_rar\fP(),
+\fB\%archive_read_support_format_rar5\fP(),
 \fB\%archive_read_support_format_raw\fP(),
 \fB\%archive_read_support_format_tar\fP(),
+\fB\%archive_read_support_format_warc\fP(),
 \fB\%archive_read_support_format_xar\fP(),
 \fB\%archive_read_support_format_zip\fP()
 Enables support---including auto-detection code---for the
@@ -105,6 +117,12 @@ For example,
 \fB\%archive_read_support_format_tar\fP()
 enables support for a variety of standard tar formats, old-style tar,
 ustar, pax interchange format, and many common variants.
+\fB\%archive_read_support_format_zip\fP()
+enables support for both the streaming and the seeking zip readers,
+which can separately be enabled by respectively
+\fB\%archive_read_support_format_zip_streamable\fP()
+and
+\fB\%archive_read_support_format_zip_seekable\fP()
 .TP
 \fB\%archive_read_support_format_all\fP()
 Enables support for all available formats except the
