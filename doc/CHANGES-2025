@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3496 2025/05/21 15:02:10 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3497 2025/05/21 15:05:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5159,3 +5159,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-ncclient to 0.6.19 [adam 2025-05-21]
 	Updated time/php-framadate to 1.1.19nb3 [taca 2025-05-21]
 	Updated www/ruby-aws-partitions to 1.1106.0 [taca 2025-05-21]
+	Updated security/gnupg2 to 2.4.8 [adam 2025-05-21]
+	Updated misc/dpkg to 1.22.19 [adam 2025-05-21]
