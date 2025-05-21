@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2025/01/19 19:29:38 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2025/05/21 06:56:18 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.15
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
@@ -18,7 +18,7 @@ CARGO_CRATE_DEPENDS+=	equivalent-1.0.1
 CARGO_CRATE_DEPENDS+=	errno-0.3.9
 CARGO_CRATE_DEPENDS+=	fastrand-2.1.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
-CARGO_CRATE_DEPENDS+=	heck-0.4.1
+CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	indexmap-2.3.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11

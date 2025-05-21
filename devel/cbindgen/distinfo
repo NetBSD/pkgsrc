@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2025/01/19 19:29:38 wiz Exp $
+$NetBSD: distinfo,v 1.35 2025/05/21 06:56:18 adam Exp $
 
 BLAKE2s (anstream-0.6.15.crate) = 7c18a227eada44b9790c1377497268aef7354c3d7e6be2468b5e9d017f951f33
 SHA512 (anstream-0.6.15.crate) = 1cb01a0293b4c9bcc010909707e71c464416d3ec6fc9789060b7aa9fe4cc04424fefa8013cc8765ccdae6dfd9a1c50a11f7b30b39a32c4aeaf525f28167ddb92
@@ -21,9 +21,9 @@ Size (autocfg-1.3.0.crate) = 16524 bytes
 BLAKE2s (bitflags-2.6.0.crate) = 98cdd527fa35fc9bc6f4357adc0f645eeee21e4528adf03aab79eb6158070793
 SHA512 (bitflags-2.6.0.crate) = f9bb3c48931ed7e7e05ec6d13305af5da6b6c18861ff307d7dc17c658f63972c87b70b0527287b3625c8592befc207cfe15550654995faf3862bb12a6d95bacf
 Size (bitflags-2.6.0.crate) = 45357 bytes
-BLAKE2s (cbindgen-0.28.0.tar.gz) = 840326f92075a9b794f76e156083176509763552b3cfaee41e0b69cd389c9319
-SHA512 (cbindgen-0.28.0.tar.gz) = d53ed0b867309b703a077729963f077c3c5d0a88c994e358fb1cfad68342c8ea604735ba2e71f35164968a46411202da3cd7d432938f07a24bef31144b4c806e
-Size (cbindgen-0.28.0.tar.gz) = 237495 bytes
+BLAKE2s (cbindgen-0.29.0.tar.gz) = 93261068c3e5d91aff0b3dae7d99a2290efdea7ec3ba09d5e24e9b0414cdb309
+SHA512 (cbindgen-0.29.0.tar.gz) = db5bedd32d7f7a683996ab21b47c2bf4a2bc063da279e48fc7a22de970e38ee48afd49d6a1b1f02869cbc0ade06dca28d91c2ca7b7f746c6b76ecdf726b56595
+Size (cbindgen-0.29.0.tar.gz) = 241396 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
@@ -57,9 +57,9 @@ Size (fastrand-2.1.0.crate) = 14907 bytes
 BLAKE2s (hashbrown-0.14.5.crate) = df2dc611777412ee614bffffa4bfd1ffbdb023961c82ec606d14782febc01949
 SHA512 (hashbrown-0.14.5.crate) = 215ea860bd3de80e2dd2d4647c9dd31c0ac895ea7c08b87256dc11d36407e412ffefaebc6cdbec024057dd4f24b3762b4fe427be307e15d1e68ccfde89a99742
 Size (hashbrown-0.14.5.crate) = 141498 bytes
-BLAKE2s (heck-0.4.1.crate) = 2d8cd3bc30076ec6e8717de87da253e7d5e1aac22079242ff7d74fba5a4e1741
-SHA512 (heck-0.4.1.crate) = 8c80e959d2f10a2893f9a71994720f90747742bb5b61fc0a539eed3ea5679b140c48fd7f7690d7122cd6af5f7f20a19d412e3569fe741c6d31f6b2ce1e0b80e8
-Size (heck-0.4.1.crate) = 11567 bytes
+BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
+SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
+Size (heck-0.5.0.crate) = 11517 bytes
 BLAKE2s (indexmap-2.3.0.crate) = e176a9e0332a699bae296e7c6707f1b882e52b94628f75d9cccfbe7e3d31f9d0
 SHA512 (indexmap-2.3.0.crate) = 035f76873c8f94dc0ebf8e2cd29c157135a1a6b5fe042997bd30a928227f6257a19dfbc43ea9b50cee425fabdfbe0ef6704627126ae5cc937855d6c91fca0958
 Size (indexmap-2.3.0.crate) = 83027 bytes
