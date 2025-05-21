@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3491 2025/05/21 13:39:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3492 2025/05/21 14:32:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5153,3 +5153,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/bind918 to 9.18.37 [taca 2025-05-21]
 	Updated misc/py-pbs-installer to 2025.5.17 [adam 2025-05-21]
 	Updated textproc/py-jellyfish to 1.2.0 [adam 2025-05-21]
+	Updated mail/ruby-mime-types-data to 3.2025.0520 [taca 2025-05-21]
