@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/05/18 10:04:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/05/21 07:34:52 adam Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -116,6 +116,7 @@ ${PYSITELIB}/icalendar/tests/calendars/issue_722_missing_timezones.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_722_timezone_transition_ambiguity.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_798_freebusy.ics
 ${PYSITELIB}/icalendar/tests/calendars/issue_798_related_to.ics
+${PYSITELIB}/icalendar/tests/calendars/issue_836_do_not_quote_tzid.ics
 ${PYSITELIB}/icalendar/tests/calendars/multiple_calendar_components.ics
 ${PYSITELIB}/icalendar/tests/calendars/pacific_fiji.ics
 ${PYSITELIB}/icalendar/tests/calendars/parsing_error.ics
@@ -296,6 +297,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_802.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_828.py
 ${PYSITELIB}/icalendar/tests/test_issue_828.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_828.pyo
+${PYSITELIB}/icalendar/tests/test_issue_836_do_not_quote_tzid.py
+${PYSITELIB}/icalendar/tests/test_issue_836_do_not_quote_tzid.pyc
+${PYSITELIB}/icalendar/tests/test_issue_836_do_not_quote_tzid.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
