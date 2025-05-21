@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3481 2025/05/21 05:37:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3482 2025/05/21 06:51:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5135,3 +5135,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added databases/git-sqlite version 0.1 [schmonz 2025-05-20]
 	Updated sysutils/ansible-core to 2.18.6 [adam 2025-05-21]
 	Updated devel/py-click to 8.2.1 [adam 2025-05-21]
+	Updated devel/py-setuptools to 80.8.0 [adam 2025-05-21]
+	Updated devel/py-types-setuptools to 80.8.0.20250521 [adam 2025-05-21]
+	Updated textproc/py-types-yaml to 6.0.12.20250516 [adam 2025-05-21]
+	Updated time/py-types-python-dateutil to 2.9.0.20250516 [adam 2025-05-21]
