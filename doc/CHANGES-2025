@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3487 2025/05/21 12:16:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3488 2025/05/21 12:17:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5147,3 +5147,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-icalendar to 6.3.1 [adam 2025-05-21]
 	Removed mail/gmime24 [wiz 2025-05-21]
 	Updated mail/rspamd to 3.11.1nb2 [wiz 2025-05-21]
+	Removed mail/gmime [wiz 2025-05-21]
