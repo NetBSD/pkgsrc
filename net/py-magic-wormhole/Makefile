@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/05/10 12:07:32 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/21 15:26:02 schmonz Exp $
 
 DISTNAME=	magic-wormhole-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
@@ -48,9 +48,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay>=0.3.1:../../net/py-m
 
 USE_LANGUAGES=	# none
 
+AUTO_MKDIRS=	yes
+
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} wormhole wormhole-${PYVERSSUFFIX} || ${TRUE}
+	${INSTALL_DATA} ${WRKSRC}/wormhole_complete.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/wormhole
+	${INSTALL_DATA} ${WRKSRC}/wormhole_complete.fish \
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/wormhole.fish
+	${INSTALL_DATA} ${WRKSRC}/wormhole_complete.zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_wormhole
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
