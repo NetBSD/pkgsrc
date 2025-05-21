@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/03/11 16:25:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/05/21 15:04:01 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -167,6 +167,7 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Debian.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Default.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Devuan.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/PureOS.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Vendor/Ubuntu.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Version.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dselect/Method.pm
@@ -430,6 +431,7 @@ man/man3/Dpkg::Vendor.3perl
 man/man3/Dpkg::Vendor::Debian.3perl
 man/man3/Dpkg::Vendor::Default.3perl
 man/man3/Dpkg::Vendor::Devuan.3perl
+man/man3/Dpkg::Vendor::PureOS.3perl
 man/man3/Dpkg::Vendor::Ubuntu.3perl
 man/man3/Dpkg::Version.3perl
 man/man5/deb-buildinfo.5
