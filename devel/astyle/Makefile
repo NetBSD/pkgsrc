@@ -1,30 +1,37 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 05:26:22 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2025/05/21 18:30:34 schmonz Exp $
 
-DISTNAME=	astyle_3.1_linux
-PKGNAME=	${DISTNAME:S/_linux//:S/_/-/}
-CATEGORIES=	textproc devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astyle/}
+DISTNAME=		astyle-3.6.9
+CATEGORIES=		devel textproc
+MASTER_SITES=		http://www.andre-simon.de/zip/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://astyle.sourceforge.net/
-COMMENT=	Free, Fast and Small Automatic Formatter for C, C++, C++/CLI, C\#, and Java
-LICENSE=	gnu-lgpl-v3
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://astyle.sourceforge.net/
+COMMENT=		Automatic formatter for C, C++, C++/CLI, C\#, and Java
+LICENSE=		gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/astyle
-USE_TOOLS+=	gmake
-USE_LANGUAGES=	c++
-AUTO_MKDIRS=	yes
+USE_TOOLS+=		gmake
+USE_LANGUAGES=		c++
+AUTO_MKDIRS=		yes
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-BUILD_DIRS=	build/mac
-.else
-BUILD_DIRS=	build/gcc
-.endif
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_JAVA_LIBS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_STATIC_LIBS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_DOC=ON
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${BUILD_DIRS}/bin/astyle ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${DESTDIR}${PREFIX}/share/doc/astyle
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	CMakeLists.txt
+SUBST_VARS.paths=	PKGMANDIR
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/sh-completion/astyle.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/astyle
+	${INSTALL_DATA} ${WRKSRC}/sh-completion/astyle.fish \
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/
+	${INSTALL_DATA} ${WRKSRC}/sh-completion/astyle.zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_astyle
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
