@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2025/05/21 22:14:00 wiz Exp $
+$NetBSD: distinfo,v 1.23 2025/05/21 22:16:56 wiz Exp $
 
 BLAKE2s (iperf-3.19.tar.gz) = 87a0abd5cbd8e9771c28ec9cadae38c7f2a6892d4cfc29de5e10163f725e5444
 SHA512 (iperf-3.19.tar.gz) = 166498b5f9c80bc929abe3aadcb13008d207641602add2ba1d54705031fd0c153d253cb52dd50b1e3289b96805220fafefa3815ed5242d57560f6a565ce4230e
 Size (iperf-3.19.tar.gz) = 692569 bytes
-SHA1 (patch-src_iperf__api.h) = 96e0f6f5662b8afa1b70fb32adc447711223a4fb
+SHA1 (patch-src_iperf__api.h) = 22b37226f2887f46fa830d28c6754fec4be5e96b
