@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/26 18:02:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/21 15:00:55 taca Exp $
 share/doc/framadate/AUTHORS.md
 share/doc/framadate/CHANGELOG.md
 share/doc/framadate/INSTALL.md
@@ -1739,11 +1739,11 @@ share/framadate/vendor/phpdocumentor/type-resolver/src/Types/Static_.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/Types/String_.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/Types/This.php
 share/framadate/vendor/phpdocumentor/type-resolver/src/Types/Void_.php
-share/framadate/vendor/phpmailer/phpmailer/.editorconfig
 share/framadate/vendor/phpmailer/phpmailer/COMMITMENT
 share/framadate/vendor/phpmailer/phpmailer/LICENSE
 share/framadate/vendor/phpmailer/phpmailer/README.md
 share/framadate/vendor/phpmailer/phpmailer/SECURITY.md
+share/framadate/vendor/phpmailer/phpmailer/SMTPUTF8.md
 share/framadate/vendor/phpmailer/phpmailer/VERSION
 share/framadate/vendor/phpmailer/phpmailer/composer.json
 share/framadate/vendor/phpmailer/phpmailer/get_oauth_token.php
