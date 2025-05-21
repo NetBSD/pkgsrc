@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3504 2025/05/21 18:41:40 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3505 2025/05/21 19:21:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5169,3 +5169,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.147.4 [triaxx 2025-05-21]
 	Updated devel/astyle to 3.6.9 [schmonz 2025-05-21]
 	Updated textproc/libhighlight to 4.16 [schmonz 2025-05-21]
+	Updated games/rocksndiamonds to 4.4.0.4 [adam 2025-05-21]
+	Updated www/py-pylsqpack to 0.3.22 [adam 2025-05-21]
+	Updated finance/py-braintree to 4.35.0 [adam 2025-05-21]
+	Updated math/py-bottleneck to 1.5.0 [adam 2025-05-21]
