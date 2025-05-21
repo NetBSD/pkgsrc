@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2025/01/24 11:54:37 wiz Exp $
+$NetBSD: distinfo,v 1.37 2025/05/21 16:47:21 taca Exp $
 
 BLAKE2s (qtwebkit-5.212.0-alpha4.tar.xz) = 20858db08c7d297037d3ced34e441d4b657325c406b475e4e76dd367dc9c500c
 SHA512 (qtwebkit-5.212.0-alpha4.tar.xz) = 33f11270bd030599beff9c1983a6c5ff2d61f407cc8a6825f7f405d46f9184c720fc7f60c7359f08f828db96a2170092875066a0d5c0a21ff09bc48a2603fbf6
@@ -13,6 +13,7 @@ SHA1 (patch-Source_JavaScriptCore_generate-bytecode-files) = b58ca94781fcf7b9f6a
 SHA1 (patch-Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 2b7dba0d0e87ed96c4d7de6ddb5833209cfe51b5
 SHA1 (patch-Source_JavaScriptCore_jit_ThunkGenerators.cpp) = f0ca56e4b4060c0a8d756289d7c25d1ead6b07be
 SHA1 (patch-Source_JavaScriptCore_jsc.cpp) = 796ce0232f1a833757b2e7ca5c910fac75f783ad
+SHA1 (patch-Source_JavaScriptCore_offlineasm_parser.rb) = b8d51873ed5fa5196987257a44e4d21da090a908
 SHA1 (patch-Source_JavaScriptCore_tools_CodeProfiling.cpp) = 94c139413eecb875bba98c7749bba24cfcc16632
 SHA1 (patch-Source_Qt5WebKitConfig.cmake.in) = c8573e02a10064e709bea4dfe053d58d08d048a0
 SHA1 (patch-Source_ThirdParty_ANGLE_src_common_mathutil.h) = 4f7c36cf3770d35650666f9820240f88f25fe843
