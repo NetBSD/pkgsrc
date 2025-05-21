@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/05/21 15:26:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2025/05/21 15:28:17 adam Exp $
 
 DISTNAME=	magic-wormhole-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -49,6 +49,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay>=0.3.1:../../net/py-m
 USE_LANGUAGES=	# none
 
 AUTO_MKDIRS=	yes
+
+PYTHON_SELF_CONFLICT=	yes # completion files
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
