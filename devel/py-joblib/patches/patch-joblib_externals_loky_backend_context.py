@@ -1,10 +1,10 @@
-$NetBSD: patch-joblib_externals_loky_backend_context.py,v 1.1 2024/01/10 14:38:25 bacon Exp $
+$NetBSD: patch-joblib_externals_loky_backend_context.py,v 1.2 2025/05/21 07:05:30 adam Exp $
 
-# Add BSD support
+Add BSD support.
 
---- joblib/externals/loky/backend/context.py.orig	2023-06-29 15:14:21.000000000 +0000
+--- joblib/externals/loky/backend/context.py.orig	2025-05-03 21:09:12.000000000 +0000
 +++ joblib/externals/loky/backend/context.py
-@@ -245,6 +245,9 @@ def _count_physical_cores():
+@@ -240,6 +240,9 @@ def _count_physical_cores():
          return physical_cores_cache, exception
  
      # Not cached yet, find it
@@ -13,11 +13,11 @@ $NetBSD: patch-joblib_externals_loky_backend_context.py,v 1.1 2024/01/10 14:38:2
 +    # FIXME: Add OpenBSD, Dragonfly
      try:
          if sys.platform == "linux":
-             cpu_info = subprocess.run(
-@@ -274,6 +277,26 @@ def _count_physical_cores():
-             )
-             cpu_info = cpu_info.stdout
-             cpu_count_physical = int(cpu_info)
+             cpu_count_physical = _count_physical_cores_linux()
+@@ -247,6 +250,26 @@ def _count_physical_cores():
+             cpu_count_physical = _count_physical_cores_win32()
+         elif sys.platform == "darwin":
+             cpu_count_physical = _count_physical_cores_darwin()
 +        elif sys.platform.startswith('freebsd'):
 +            cpu_info = subprocess.run(
 +                "sysctl -n kern.smp.cores".split(),
