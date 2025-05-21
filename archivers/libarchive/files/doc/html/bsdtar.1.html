@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Sun Mar 30 20:07:39 2025 -->
+<!-- CreationDate: Tue May 20 09:02:20 2025 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -227,6 +227,12 @@ extracting entries from the archive.</p>
 <p style="margin-left:19%;">(x mode only) <b>chroot</b>()
 to the current directory after processing any <b>-C</b>
 options and before extracting any files.</p>
+
+<p style="margin-top: 1em"><b>--clamp-mtime</b></p>
+
+<p style="margin-left:19%;">(use with <b>--mtime</b>) Only
+set the modification time if the file is newer than the date
+specified in <b>--mtime</b>.</p>
 
 
 <p style="margin-top: 1em"><b>--clear-nochange-fflags</b></p>
@@ -471,6 +477,11 @@ formats (</p>
 <p>including pax restricted, the default tar format for
 <b>bsdtar</b> )</p>
 
+<p style="margin-top: 1em"><b>--mtime</b> <i>date</i></p>
+
+<p style="margin-left:19%;">(c, r, u modes only) Set the
+modification times of added files to the specified date.</p>
+
 <p style="margin-top: 1em"><b>-n</b>, <b>--norecurse</b>,
 <b>--no-recursion</b></p>
 
@@ -543,11 +554,11 @@ the reverse of <b>--fflags</b> and the default behavior if
 
 <p style="margin-top: 1em"><b>--no-mac-metadata</b></p>
 
-<p style="margin-left:19%;">(x mode only) Mac OS X
-specific. Do not archive or extract ACLs and extended file
-attributes using <i>copyfile</i>(3) in AppleDouble format.
-This is the reverse of <b>--mac-metadata</b>. and the
-default behavior if <b>tar</b> is run as non-root in x
+<p style="margin-left:19%;">(c, r, u and x mode only) Mac
+OS X specific. Do not archive or extract ACLs and extended
+file attributes using <i>copyfile</i>(3) in AppleDouble
+format. This is the reverse of <b>--mac-metadata</b>. and
+the default behavior if <b>tar</b> is run as non-root in x
 mode.</p>
 
 <p style="margin-top: 1em"><b>--no-read-sparse</b></p>

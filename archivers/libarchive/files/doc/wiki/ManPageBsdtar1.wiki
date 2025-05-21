@@ -207,6 +207,11 @@ but before extracting entries from the archive.
 to the current directory after processing any 
 -C 
 options and before extracting any files. 
+</dd><dt>--clamp-mtime</dt><dd> 
+(use with 
+--mtime) 
+Only set the modification time if the file is newer than the date specified in 
+--mtime. 
 </dd><dt>--clear-nochange-fflags</dt><dd> 
 (x mode only) 
 Before removing file system objects to replace them, clear platform-specific 
@@ -429,6 +434,9 @@ is run in x mode as root.
 Currently supported only for pax formats 
 Po including pax restricted, the default tar format for 
 '''bsdtar''' Pc 
+</dd><dt>--mtime ''date''</dt><dd> 
+(c, r, u modes only) 
+Set the modification times of added files to the specified date. 
 </dd><dt>-n, --norecurse, --no-recursion</dt><dd> 
 Do not operate recursively on the content of directories. 
 </dd><dt>--newer ''date''</dt><dd> 
@@ -485,7 +493,7 @@ and the default behavior if
 '''tar''' 
 is run as non-root in x mode. 
 </dd><dt>--no-mac-metadata</dt><dd> 
-(x mode only) 
+(c, r, u and x mode only) 
 Mac OS X specific. 
 Do not archive or extract ACLs and extended file attributes 
 using 

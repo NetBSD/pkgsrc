@@ -1,4 +1,4 @@
-/*	$NetBSD: archive_pack_dev.h,v 1.8 2024/01/18 18:00:17 adam Exp $	*/
+/*	$NetBSD: archive_pack_dev.h,v 1.9 2025/05/21 15:25:51 adam Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -46,4 +46,4 @@ pack_t	 pack_native;
 					 (((y) << 12) & 0xfff00000) | \
 					 (((y) <<  0) & 0x000000ff)))
 
-#endif	/* ARCHIVE_PACK_DEV_H */
+#endif	/* !ARCHIVE_PACK_DEV_H */

@@ -11,8 +11,10 @@ ARCHIVE_READ_FORMAT(3) manual page
 '''archive_read_support_format_lha''', 
 '''archive_read_support_format_mtree''', 
 '''archive_read_support_format_rar''', 
+'''archive_read_support_format_rar5''', 
 '''archive_read_support_format_raw''', 
 '''archive_read_support_format_tar''', 
+'''archive_read_support_format_warc''', 
 '''archive_read_support_format_xar''', 
 '''archive_read_support_format_zip''' 
 - functions for reading streaming archives 
@@ -67,11 +69,19 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''int'' 
 <br> 
+'''archive_read_support_format_rar5'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
 '''archive_read_support_format_raw'''(''struct archive *''); 
 <br> 
 ''int'' 
 <br> 
 '''archive_read_support_format_tar'''(''struct archive *''); 
+<br> 
+''int'' 
+<br> 
+'''archive_read_support_format_warc'''(''struct archive *''); 
 <br> 
 ''int'' 
 <br> 
@@ -91,8 +101,10 @@ Streaming Archive Library (libarchive, -larchive)
 '''archive_read_support_format_lha'''(), 
 '''archive_read_support_format_mtree'''(), 
 '''archive_read_support_format_rar'''(), 
+'''archive_read_support_format_rar5'''(), 
 '''archive_read_support_format_raw'''(), 
 '''archive_read_support_format_tar'''(), 
+'''archive_read_support_format_warc'''(), 
 '''archive_read_support_format_xar'''(), 
 '''archive_read_support_format_zip'''() 
 </dt> <dd> 
@@ -102,6 +114,12 @@ For example,
 '''archive_read_support_format_tar'''() 
 enables support for a variety of standard tar formats, old-style tar, 
 ustar, pax interchange format, and many common variants. 
+'''archive_read_support_format_zip'''() 
+enables support for both the streaming and the seeking zip readers, 
+which can separately be enabled by respectively 
+'''archive_read_support_format_zip_streamable'''() 
+and 
+'''archive_read_support_format_zip_seekable'''() 
 </dd><dt>'''archive_read_support_format_all'''()</dt><dd> 
 Enables support for all available formats except the 
 "raw" 
