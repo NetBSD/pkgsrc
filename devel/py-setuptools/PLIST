@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.102 2025/05/14 10:56:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.103 2025/05/21 06:47:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
@@ -54,6 +55,9 @@ ${PYSITELIB}/setuptools/__init__.pyo
 ${PYSITELIB}/setuptools/_core_metadata.py
 ${PYSITELIB}/setuptools/_core_metadata.pyc
 ${PYSITELIB}/setuptools/_core_metadata.pyo
+${PYSITELIB}/setuptools/_discovery.py
+${PYSITELIB}/setuptools/_discovery.pyc
+${PYSITELIB}/setuptools/_discovery.pyo
 ${PYSITELIB}/setuptools/_distutils/__init__.py
 ${PYSITELIB}/setuptools/_distutils/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/__init__.pyo
