@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2025/01/19 19:29:38 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/05/21 06:56:18 adam Exp $
 
-DISTNAME=	cbindgen-0.28.0
+DISTNAME=	cbindgen-0.29.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
