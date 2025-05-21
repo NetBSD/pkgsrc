@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.1 2025/03/31 09:33:32 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/05/21 07:33:30 adam Exp $
 
-BLAKE2s (jdk-21.0.6_linux-aarch64_bin.tar.gz) = 3e996c1660a2088a753d9bd8d2510737cac8051e3d9bb729ff455cddaaa256ec
-SHA512 (jdk-21.0.6_linux-aarch64_bin.tar.gz) = e3b6dd86d76b42d5a986c203975c8a4f3c3120752d80724fde9ee64542561e9698c8e78597d26d248834eabce55a6a24a6002fb0a038299fa7f8890292ac1f91
-Size (jdk-21.0.6_linux-aarch64_bin.tar.gz) = 195603314 bytes
-BLAKE2s (jdk-21.0.6_linux-x64_bin.tar.gz) = e24e2d76d7a7431f85226f4a2fe9acf61aa3502392839e51a40ea93f1cce9d2f
-SHA512 (jdk-21.0.6_linux-x64_bin.tar.gz) = af64eb5d98daedeadaa3ad6be1ab9e2b307c63e9ff7a03ac537a1725261ee7f823e61d8f994a0b4ffa9b3b6705a70f7098c099decdb0587e6230973410f68e82
-Size (jdk-21.0.6_linux-x64_bin.tar.gz) = 197405999 bytes
-BLAKE2s (jdk-21.0.6_macos-aarch64_bin.tar.gz) = 8294f51b939bc2051b14420c0b74f684a64c914ec13d2ed26f8b8883761cf1bc
-SHA512 (jdk-21.0.6_macos-aarch64_bin.tar.gz) = 7f75a45b9708cf13c1232a7acf3ee1af7ce56886aec64d998a404dcb93b0aad39a38a5cdb50279edb7f9e4894410adf18c4c94d28d11519353f007c820a69459
-Size (jdk-21.0.6_macos-aarch64_bin.tar.gz) = 190854257 bytes
-BLAKE2s (jdk-21.0.6_macos-x64_bin.tar.gz) = 9527ea269549a23c92f46480b3f1f0f8aba9922fd0847d865a832d6101366ada
-SHA512 (jdk-21.0.6_macos-x64_bin.tar.gz) = 11f87103c4b5b77e37799dc9a5e720832046004894faa48ede9068978b2e7334963c690647bc2660faff664141b5a3d604b4231bfb75e8e3cbd855e9e0e726de
-Size (jdk-21.0.6_macos-x64_bin.tar.gz) = 193200583 bytes
+BLAKE2s (jdk-21.0.7_linux-aarch64_bin.tar.gz) = 1f0f871f07045e7da7ffcc17708efbdb52bbe11f6cc2548a5165ccbd26a3edca
+SHA512 (jdk-21.0.7_linux-aarch64_bin.tar.gz) = 5da2deed7e52e27bb6f5d2ba5f30f202b5ddd690196f7f072c3aae915a7f56e1324c505457bb13d84e57d20194b42e9927a5d1a2440ffe1ab4414f8899cf1fbb
+Size (jdk-21.0.7_linux-aarch64_bin.tar.gz) = 195741808 bytes
+BLAKE2s (jdk-21.0.7_linux-x64_bin.tar.gz) = 8698270c546d160cd755e3ff0551a5f144e6588ccf7179f4628e5ca91c5e942c
+SHA512 (jdk-21.0.7_linux-x64_bin.tar.gz) = 01dbd73e8b7f91ac59255898f8542a4c245763d1e6aba1c506158249323f5655dc599384f660b0f1a7d1b8e58ea62702cfc282e4af10d7e8c7ed415b52d67b16
+Size (jdk-21.0.7_linux-x64_bin.tar.gz) = 197677861 bytes
+BLAKE2s (jdk-21.0.7_macos-aarch64_bin.tar.gz) = 41f4ec5595c6e22bc6d06667b5d3a9c2c181527f47057df6c07548e5c0a20fa4
+SHA512 (jdk-21.0.7_macos-aarch64_bin.tar.gz) = 70d9f9592a585ee0df15caf05d3aa0d447a3332b86ac2910c8e65a86d7760cd35a0dc6a033a6d63f9a4ba3e1042f7b3d619b38690e97f5fa73fdbee5a59c4cd8
+Size (jdk-21.0.7_macos-aarch64_bin.tar.gz) = 190915097 bytes
+BLAKE2s (jdk-21.0.7_macos-x64_bin.tar.gz) = fa775b580917494b9b476b622aab689c0f78fd39e2c2a9a25819a8ca1723a91f
+SHA512 (jdk-21.0.7_macos-x64_bin.tar.gz) = 35339164883b6090d0156ad55435d670aef98a3a2f41f483ea5bc698a3c7ccb9672a47f0e34953f865698d67bfadb2a0478f8c378bfe642db233a24b1642b68b
+Size (jdk-21.0.7_macos-x64_bin.tar.gz) = 193271275 bytes
