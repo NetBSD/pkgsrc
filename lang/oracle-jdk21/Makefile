@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/03/31 09:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/21 07:33:30 adam Exp $
 
-PKGNAME=	oracle-jdk21-21.0.6
+PKGNAME=	oracle-jdk21-21.0.7
 CATEGORIES=	lang java
 MASTER_SITES=	https://download.oracle.com/java/21/archive/
 
