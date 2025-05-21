@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/04/05 18:51:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/21 15:26:32 schmonz Exp $
 
-DISTNAME=		asdf-0.16.7
-PKGREVISION=		1
+DISTNAME=		asdf-0.17.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=asdf-vm/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -12,8 +11,6 @@ COMMENT=		Manage each of your project runtimes with a single tool
 LICENSE=		mit
 
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
-
-USE_LANGUAGES=		c
 
 AUTO_MKDIRS=		yes
 
