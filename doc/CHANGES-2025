@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3494 2025/05/21 14:48:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3495 2025/05/21 15:01:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5157,3 +5157,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-rails-dom-testing to 2.3.0 [taca 2025-05-21]
 	Updated misc/py-stdnum to 2.1 [adam 2025-05-21]
 	Updated net/py-ncclient to 0.6.19 [adam 2025-05-21]
+	Updated time/php-framadate to 1.1.19nb3 [taca 2025-05-21]
