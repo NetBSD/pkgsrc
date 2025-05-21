@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/12/28 21:56:22 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/21 12:11:51 adam Exp $
 
-DISTNAME=	libdiscid-0.6.4
+DISTNAME=	libdiscid-0.6.5
 CATEGORIES=	audio
 MASTER_SITES=	http://ftp.musicbrainz.org/pub/musicbrainz/libdiscid/
 
