@@ -111,7 +111,7 @@ static int noeol;
 static char *passphrase_buf;
 
 /* fatal error message + errno */
-static void
+static void __LA_NORETURN
 error(const char *fmt, ...)
 {
 	va_list ap;
@@ -128,7 +128,7 @@ error(const char *fmt, ...)
 }
 
 /* fatal error message, no errno */
-static void
+static void __LA_NORETURN
 errorx(const char *fmt, ...)
 {
 	va_list ap;
@@ -233,7 +233,7 @@ pathdup(const char *path)
 	}
 	if (L_opt) {
 		for (i = 0; i < len; ++i)
-			str[i] = tolower((unsigned char)path[i]);
+			str[i] = (char)tolower((unsigned char)path[i]);
 	} else {
 		memcpy(str, path, len);
 	}

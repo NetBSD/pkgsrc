@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Sun Mar 30 20:07:38 2025 -->
+<!-- CreationDate: Tue May 20 09:02:20 2025 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -277,7 +277,7 @@ to 30 for 32 bit, or 31 for 64 bit, are supported.</p>
 <p style="margin-left:29%;">The value is interpreted as a
 decimal integer specifying the number of threads for
 multi-threaded zstd compression. If set to 0, zstd will
-attempt to detect and use the number of physical CPU
+attempt to detect and use the number of active physical CPU
 cores.</p>
 
 <p>Format 7zip <b><br>
@@ -286,21 +286,31 @@ compression</b></p>
 <p style="margin-left:29%;">The value is one of
 &ldquo;store&rdquo;, &ldquo;copy&rdquo;,
 &ldquo;deflate&rdquo;, &ldquo;bzip2&rdquo;,
-&ldquo;lzma1&rdquo;, &ldquo;lzma2&rdquo; or
-&ldquo;ppmd&rdquo; to indicate how the following entries
-should be compressed. The values &ldquo;store&rdquo; and
-&ldquo;copy&rdquo; are synonyms. Note that this setting is
-ignored for directories, symbolic links, and other special
-entries.</p>
+&ldquo;lzma1&rdquo;, &ldquo;lzma2&rdquo;,
+&ldquo;ppmd&rdquo;, or &ldquo;zstd&rdquo; to indicate how
+the following entries should be compressed. The values
+&ldquo;store&rdquo; and &ldquo;copy&rdquo; are synonyms.
+Note that this setting is ignored for directories, symbolic
+links, and other special entries.</p>
 
 <p><b>compression-level</b></p>
 
 <p style="margin-left:29%;">The value is interpreted as a
 decimal integer specifying the compression level. Values
 between 0 and 9 are supported, with the exception of bzip2
-which only supports values between 1 and 9. The
-interpretation of the compression level depends on the
-chosen compression method.</p>
+which only supports values between 1 and 9, and zstd which
+may support negative values depending on the library version
+and commonly used values 1 through 22. The interpretation of
+the compression level depends on the chosen compression
+method.</p>
+
+<p><b>threads</b></p>
+
+<p style="margin-left:29%;">The value is interpreted as a
+decimal integer specifying the number of threads for
+multi-threaded compression (for compressors like zstd that
+support it). If set to 0, an attempt will be made to
+discover the number of CPU cores.</p>
 
 <p>Format bin <b><br>
 hdrcharset</b></p>
@@ -720,10 +730,11 @@ contents checksum method. Supported values are
 compression</b></p>
 
 <p style="margin-left:29%;">The value is either
-&ldquo;store&rdquo; or &ldquo;deflate&rdquo; to indicate how
-the following entries should be compressed. Note that this
-setting is ignored for directories, symbolic links, and
-other special entries.</p>
+&ldquo;store&rdquo;, &ldquo;deflate&rdquo;,
+&ldquo;bzip2&rdquo;, &ldquo;lzma&rdquo;, &ldquo;xz&rdquo;,
+or &ldquo;zstd&rdquo; to indicate how the following entries
+should be compressed. Note that this setting is ignored for
+directories, symbolic links, and other special entries.</p>
 
 <p><b>compression-level</b></p>
 
@@ -731,8 +742,21 @@ other special entries.</p>
 decimal integer specifying the compression level. Values
 between 0 and 9 are supported. A compression level of 0
 switches the compression method to &ldquo;store&rdquo;,
-other values will enable &ldquo;deflate&rdquo; compression
-with the given level.</p>
+other values will enable &ldquo;deflate&rdquo;,
+&ldquo;bzip2&rdquo;, &ldquo;lzma&rdquo;, or
+&ldquo;zstd&rdquo; compression (in order of priority,
+depending on what libraries are linked) with the given
+level.</p>
+
+<p><b>threads</b></p>
+
+<p style="margin-left:29%;">The value is interpreted as a
+decimal integer specifying the number of threads to use for
+compression. It is supported only for &ldquo;xz&rdquo; or
+&ldquo;zstd&rdquo; compression and ignored for any other. A
+threads value of 0 is a special one requesting to detect and
+use as many threads as the number of active physical CPU
+cores.</p>
 
 <p><b>encryption</b></p>
 

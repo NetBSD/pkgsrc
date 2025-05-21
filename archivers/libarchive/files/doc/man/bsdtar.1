@@ -224,6 +224,12 @@ to the current directory after processing any
 \fB\-C\fP
 options and before extracting any files.
 .TP
+\fB\-Fl\fP clamp-mtime
+(use with
+\fB\-Fl\fP mtime)
+Only set the modification time if the file is newer than the date specified in
+\fB\-Fl\fP mtime.
+.TP
 \fB\-Fl\fP clear-nochange-fflags
 (x mode only)
 Before removing file system objects to replace them, clear platform-specific
@@ -475,6 +481,10 @@ Currently supported only for pax formats
 Po including pax restricted, the default tar format for
 \fB\%bsdtar\fP Pc
 .TP
+\fB\-Fl\fP mtime \fIdate\fP
+(c, r, u modes only)
+Set the modification times of added files to the specified date.
+.TP
 \fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
 Do not operate recursively on the content of directories.
 .TP
@@ -541,7 +551,7 @@ and the default behavior if
 is run as non-root in x mode.
 .TP
 \fB\-Fl\fP no-mac-metadata
-(x mode only)
+(c, r, u and x mode only)
 Mac OS X specific.
 Do not archive or extract ACLs and extended file attributes
 using
