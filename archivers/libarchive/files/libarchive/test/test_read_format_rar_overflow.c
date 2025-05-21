@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Martin Matuska
+ * Copyright (c) 2003-2025 Tim Kientzle
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,29 +24,25 @@
  */
 #include "test.h"
 
-/*
- * Tar archives with with just a GNU label (or ending with one) should
- * be treated as valid (empty) archives
- */
-DEFINE_TEST(test_read_format_tar_empty_with_gnulabel)
+DEFINE_TEST(test_read_format_rar_overflow)
 {
-	char name[] = "test_read_format_tar_empty_with_gnulabel.tar";
-	struct archive_entry *ae;
-	struct archive *a;
+    struct archive *a;
+    struct archive_entry *ae;
+    const char reffile[] = "test_read_format_rar_overflow.rar";
+    const void *buff;
+    size_t size;
+    int64_t offset;
 
-	assert((a = archive_read_new()) != NULL);
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
-	extract_reference_file(name);
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, name, 10240));
+    extract_reference_file(reffile);
+    assert((a = archive_read_new()) != NULL);
+    assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
+    assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
+    assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, reffile, 1024));
+    assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
+    assertEqualInt(48, archive_entry_size(ae));
+    /* The next call should reproduce Issue #2565 */
+    assertEqualIntA(a, ARCHIVE_FATAL, archive_read_data_block(a, &buff, &size, &offset));
 
-	/* Read first entry. */
-	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
-
-	/* Verify that the format detection worked. */
-	assertEqualInt(archive_filter_code(a, 0), ARCHIVE_FILTER_NONE);
-	assertEqualInt(archive_format(a), ARCHIVE_FORMAT_TAR_GNUTAR);
-
-	assertEqualInt(ARCHIVE_OK, archive_read_close(a));
-	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
+    assertEqualIntA(a, ARCHIVE_OK, archive_read_close(a));
+    assertEqualInt(ARCHIVE_OK, archive_read_free(a));
 }

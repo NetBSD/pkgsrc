@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Martin Matuska
+ * Copyright (c) 2025 Tobias Stoeckmann
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,12 +25,13 @@
 #include "test.h"
 
 /*
- * Tar archives with with just a GNU label (or ending with one) should
- * be treated as valid (empty) archives
+ * Read a pax formatted tar archive that has an extremely large
+ * (4 GB) global header. The pax reader should correctly skip the header and
+ * jump to (or past) end of file without encountering any further entry.
  */
-DEFINE_TEST(test_read_format_tar_empty_with_gnulabel)
+DEFINE_TEST(test_read_format_tar_pax_g_large)
 {
-	char name[] = "test_read_format_tar_empty_with_gnulabel.tar";
+	char name[] = "test_read_format_tar_pax_g_large.tar";
 	struct archive_entry *ae;
 	struct archive *a;
 
@@ -40,12 +41,12 @@ DEFINE_TEST(test_read_format_tar_empty_with_gnulabel)
 	extract_reference_file(name);
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, name, 10240));
 
-	/* Read first entry. */
-	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
+	/* Verify that no data entry is found. */
+	assertA(archive_read_next_header(a, &ae) != ARCHIVE_OK);
 
 	/* Verify that the format detection worked. */
-	assertEqualInt(archive_filter_code(a, 0), ARCHIVE_FILTER_NONE);
-	assertEqualInt(archive_format(a), ARCHIVE_FORMAT_TAR_GNUTAR);
+	assertEqualInt(ARCHIVE_FILTER_NONE, archive_filter_code(a, 0));
+	assertEqualInt(ARCHIVE_FORMAT_TAR_PAX_INTERCHANGE, archive_format(a));
 
 	assertEqualInt(ARCHIVE_OK, archive_read_close(a));
 	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
