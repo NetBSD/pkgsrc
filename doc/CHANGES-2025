@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3493 2025/05/21 14:38:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3494 2025/05/21 14:48:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5155,3 +5155,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-jellyfish to 1.2.0 [adam 2025-05-21]
 	Updated mail/ruby-mime-types-data to 3.2025.0520 [taca 2025-05-21]
 	Updated textproc/ruby-rails-dom-testing to 2.3.0 [taca 2025-05-21]
+	Updated misc/py-stdnum to 2.1 [adam 2025-05-21]
+	Updated net/py-ncclient to 0.6.19 [adam 2025-05-21]
