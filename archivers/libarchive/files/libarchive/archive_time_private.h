@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 Martin Matuska
+ * Copyright © 2025 ARJANEN Loïc Jean David
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,31 +22,26 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#include "test.h"
+#ifndef ARCHIVE_TIME_PRIVATE_H_INCLUDED
+#define ARCHIVE_TIME_PRIVATE_H_INCLUDED
 
-/*
- * Tar archives with with just a GNU label (or ending with one) should
- * be treated as valid (empty) archives
- */
-DEFINE_TEST(test_read_format_tar_empty_with_gnulabel)
-{
-	char name[] = "test_read_format_tar_empty_with_gnulabel.tar";
-	struct archive_entry *ae;
-	struct archive *a;
+#ifndef __LIBARCHIVE_BUILD
+#error This header is only to be used internally to libarchive.
+#endif
+#include <stdint.h>
 
-	assert((a = archive_read_new()) != NULL);
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
-	extract_reference_file(name);
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, name, 10240));
-
-	/* Read first entry. */
-	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
-
-	/* Verify that the format detection worked. */
-	assertEqualInt(archive_filter_code(a, 0), ARCHIVE_FILTER_NONE);
-	assertEqualInt(archive_format(a), ARCHIVE_FORMAT_TAR_GNUTAR);
-
-	assertEqualInt(ARCHIVE_OK, archive_read_close(a));
-	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
-}
+/* NTFS time to Unix sec/nsec. */
+void ntfs_to_unix(uint64_t ntfs, int64_t* secs, uint32_t* nsecs);
+/* DOS time to Unix sec. */
+int64_t dos_to_unix(uint32_t dos);
+/* Unix sec/nsec to NTFS time. */
+uint64_t unix_to_ntfs(int64_t secs, uint32_t nsecs);
+/* Unix sec to DOS time. */
+uint32_t unix_to_dos(int64_t secs);
+#if defined(_WIN32) && !defined(__CYGWIN__)
+#include <windef.h>
+#include <winbase.h>
+/* Windows FILETIME to NTFS time. */
+uint64_t FILETIME_to_ntfs(const FILETIME* filetime);
+#endif
+#endif /* ARCHIVE_TIME_PRIVATE_H_INCLUDED */
