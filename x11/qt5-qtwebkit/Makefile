@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2025/04/27 07:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2025/05/21 16:47:21 taca Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -30,9 +30,6 @@ TEST_TARGET=		test
 CXXFLAGS+=		-DU_HIDE_DRAFT_API
 
 BROKEN=		"Does not support icu 77"
-
-# Source/JavaScriptCore/offlineasm/parser.rb:587:in `block in parseSequence': undefined method `=~'
-RUBY_VERSIONS_ACCEPTED=		31
 
 CMAKE_CONFIGURE_ARGS+=	-DPORT=Qt
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
