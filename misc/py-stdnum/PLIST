@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/04/12 07:43:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/05/21 14:36:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -70,12 +70,18 @@ ${PYSITELIB}/stdnum/be/banks.dat
 ${PYSITELIB}/stdnum/be/bis.py
 ${PYSITELIB}/stdnum/be/bis.pyc
 ${PYSITELIB}/stdnum/be/bis.pyo
+${PYSITELIB}/stdnum/be/eid.py
+${PYSITELIB}/stdnum/be/eid.pyc
+${PYSITELIB}/stdnum/be/eid.pyo
 ${PYSITELIB}/stdnum/be/iban.py
 ${PYSITELIB}/stdnum/be/iban.pyc
 ${PYSITELIB}/stdnum/be/iban.pyo
 ${PYSITELIB}/stdnum/be/nn.py
 ${PYSITELIB}/stdnum/be/nn.pyc
 ${PYSITELIB}/stdnum/be/nn.pyo
+${PYSITELIB}/stdnum/be/ssn.py
+${PYSITELIB}/stdnum/be/ssn.pyc
+${PYSITELIB}/stdnum/be/ssn.pyo
 ${PYSITELIB}/stdnum/be/vat.py
 ${PYSITELIB}/stdnum/be/vat.pyc
 ${PYSITELIB}/stdnum/be/vat.pyo
@@ -289,6 +295,9 @@ ${PYSITELIB}/stdnum/eg/tn.pyo
 ${PYSITELIB}/stdnum/es/__init__.py
 ${PYSITELIB}/stdnum/es/__init__.pyc
 ${PYSITELIB}/stdnum/es/__init__.pyo
+${PYSITELIB}/stdnum/es/cae.py
+${PYSITELIB}/stdnum/es/cae.pyc
+${PYSITELIB}/stdnum/es/cae.pyo
 ${PYSITELIB}/stdnum/es/ccc.py
 ${PYSITELIB}/stdnum/es/ccc.pyc
 ${PYSITELIB}/stdnum/es/ccc.pyo
@@ -460,6 +469,10 @@ ${PYSITELIB}/stdnum/iban.pyo
 ${PYSITELIB}/stdnum/id/__init__.py
 ${PYSITELIB}/stdnum/id/__init__.pyc
 ${PYSITELIB}/stdnum/id/__init__.pyo
+${PYSITELIB}/stdnum/id/loc.dat
+${PYSITELIB}/stdnum/id/nik.py
+${PYSITELIB}/stdnum/id/nik.pyc
+${PYSITELIB}/stdnum/id/nik.pyo
 ${PYSITELIB}/stdnum/id/npwp.py
 ${PYSITELIB}/stdnum/id/npwp.pyc
 ${PYSITELIB}/stdnum/id/npwp.pyo
@@ -535,6 +548,9 @@ ${PYSITELIB}/stdnum/isin.pyo
 ${PYSITELIB}/stdnum/ismn.py
 ${PYSITELIB}/stdnum/ismn.pyc
 ${PYSITELIB}/stdnum/ismn.pyo
+${PYSITELIB}/stdnum/isni.py
+${PYSITELIB}/stdnum/isni.pyc
+${PYSITELIB}/stdnum/isni.pyo
 ${PYSITELIB}/stdnum/iso11649.py
 ${PYSITELIB}/stdnum/iso11649.pyc
 ${PYSITELIB}/stdnum/iso11649.pyo
@@ -586,6 +602,9 @@ ${PYSITELIB}/stdnum/jp/__init__.pyo
 ${PYSITELIB}/stdnum/jp/cn.py
 ${PYSITELIB}/stdnum/jp/cn.pyc
 ${PYSITELIB}/stdnum/jp/cn.pyo
+${PYSITELIB}/stdnum/jp/in_.py
+${PYSITELIB}/stdnum/jp/in_.pyc
+${PYSITELIB}/stdnum/jp/in_.pyo
 ${PYSITELIB}/stdnum/ke/__init__.py
 ${PYSITELIB}/stdnum/ke/__init__.pyc
 ${PYSITELIB}/stdnum/ke/__init__.pyo
@@ -713,6 +732,9 @@ ${PYSITELIB}/stdnum/nl/bsn.pyo
 ${PYSITELIB}/stdnum/nl/btw.py
 ${PYSITELIB}/stdnum/nl/btw.pyc
 ${PYSITELIB}/stdnum/nl/btw.pyo
+${PYSITELIB}/stdnum/nl/identiteitskaartnummer.py
+${PYSITELIB}/stdnum/nl/identiteitskaartnummer.pyc
+${PYSITELIB}/stdnum/nl/identiteitskaartnummer.pyo
 ${PYSITELIB}/stdnum/nl/onderwijsnummer.py
 ${PYSITELIB}/stdnum/nl/onderwijsnummer.pyc
 ${PYSITELIB}/stdnum/nl/onderwijsnummer.pyo
@@ -787,6 +809,7 @@ ${PYSITELIB}/stdnum/pt/cc.pyo
 ${PYSITELIB}/stdnum/pt/nif.py
 ${PYSITELIB}/stdnum/pt/nif.pyc
 ${PYSITELIB}/stdnum/pt/nif.pyo
+${PYSITELIB}/stdnum/py.typed
 ${PYSITELIB}/stdnum/py/__init__.py
 ${PYSITELIB}/stdnum/py/__init__.pyc
 ${PYSITELIB}/stdnum/py/__init__.pyo
@@ -820,6 +843,9 @@ ${PYSITELIB}/stdnum/ru/__init__.pyo
 ${PYSITELIB}/stdnum/ru/inn.py
 ${PYSITELIB}/stdnum/ru/inn.pyc
 ${PYSITELIB}/stdnum/ru/inn.pyo
+${PYSITELIB}/stdnum/ru/ogrn.py
+${PYSITELIB}/stdnum/ru/ogrn.pyc
+${PYSITELIB}/stdnum/ru/ogrn.pyo
 ${PYSITELIB}/stdnum/se/__init__.py
 ${PYSITELIB}/stdnum/se/__init__.pyc
 ${PYSITELIB}/stdnum/se/__init__.pyo
