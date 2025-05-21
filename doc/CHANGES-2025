@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3485 2025/05/21 07:35:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3486 2025/05/21 12:11:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5145,3 +5145,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-joblib to 1.5.0 [adam 2025-05-21]
 	Updated lang/oracle-jdk21 to 21.0.7 [adam 2025-05-21]
 	Updated time/py-icalendar to 6.3.1 [adam 2025-05-21]
+	Removed mail/gmime24 [wiz 2025-05-21]
