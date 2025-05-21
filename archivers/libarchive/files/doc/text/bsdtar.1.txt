@@ -127,64 +127,68 @@
 	       (x  mode only) 1mchroot22m() to the current directory after process‐
 	       ing any 1m-C 22moptions and before extracting any files.
 
+       1m--clamp-mtime0m
+	       (use with 1m--mtime22m) Only set the modification time if  the  file
+	       is newer than the date specified in 1m--mtime22m.
+
        1m--clear-nochange-fflags0m
-	       (x mode only) Before removing file system  objects  to  replace
-	       them,  clear  platform-specific	file  attributes or file flags
+	       (x  mode	 only)	Before removing file system objects to replace
+	       them, clear platform-specific file  attributes  or  file	 flags
 	       that might prevent removal.
 
        1m--exclude 4m22mpattern0m
-	       Do not process files or directories that	 match	the  specified
+	       Do  not	process	 files or directories that match the specified
 	       pattern.	 Note that exclusions take precedence over patterns or
 	       filenames specified on the command line.
 
        1m--exclude-vcs0m
 	       Do not process files or directories internally used by the ver‐
-	       sion   control	systems	  ‘Arch’,  ‘Bazaar’,  ‘CVS’,  ‘Darcs’,
+	       sion  control  systems  ‘Arch’,	 ‘Bazaar’,   ‘CVS’,   ‘Darcs’,
 	       ‘Mercurial’, ‘RCS’, ‘SCCS’, ‘SVN’ and ‘git’.
 
        1m--fflags0m
-	       (c, r, u, x modes only) Archive	or  extract  platform-specific
+	       (c,  r,	u,  x modes only) Archive or extract platform-specific
 	       file  attributes	 or  file  flags.   This  is  the  reverse  of
 	       1m--no-fflags 22mand the default behavior in c, r, and u modes or if
 	       1mtar 22mis run in x mode as root.
 
        1m--format 4m22mformat0m
-	       (c, r, u mode only) Use the specified format  for  the  created
-	       archive.	  Supported formats include “cpio”, “pax”, “shar”, and
-	       “ustar”.	  Other	  formats   may	  also	 be   supported;   see
+	       (c,  r,	u  mode only) Use the specified format for the created
+	       archive.	 Supported formats include “cpio”, “pax”, “shar”,  and
+	       “ustar”.	   Other   formats   may   also	  be   supported;  see
 	       4mlibarchive-formats24m(5) for more information about currently-sup‐
-	       ported  formats.	  In r and u modes, when extending an existing
-	       archive, the format specified here must be compatible with  the
+	       ported formats.	In r and u modes, when extending  an  existing
+	       archive,	 the format specified here must be compatible with the
 	       format of the existing archive on disk.
 
        1m-f 4m22mfile24m, 1m--file 4m22mfile0m
-	       Read  the  archive  from	 or write the archive to the specified
-	       file.  The filename can be 4m-24m for  standard	input  or  standard
-	       output.	 The default varies by system; on FreeBSD, the default
+	       Read the archive from or write the  archive  to	the  specified
+	       file.   The  filename  can  be 4m-24m for standard input or standard
+	       output.	The default varies by system; on FreeBSD, the  default
 	       is 4m/dev/sa024m; on Linux, the default is 4m/dev/st024m.
 
        1m--gid 4m22mid0m
-	       Use the provided group id number.  On extract,  this  overrides
+	       Use  the	 provided group id number.  On extract, this overrides
 	       the group id in the archive; the group name in the archive will
-	       be  ignored.   On create, this overrides the group id read from
-	       disk; if 1m--gname 22mis not also specified, the group name will	 be
+	       be ignored.  On create, this overrides the group id  read  from
+	       disk;  if 1m--gname 22mis not also specified, the group name will be
 	       set to match the group id.
 
        1m--gname 4m22mname0m
-	       Use  the	 provided  group name.	On extract, this overrides the
-	       group name in the archive; if the provided group name does  not
+	       Use the provided group name.  On extract,  this	overrides  the
+	       group  name in the archive; if the provided group name does not
 	       exist on the system, the group id (from the archive or from the
-	       1m--gid	22moption)  will be used instead.  On create, this sets the
-	       group name that will be stored in the archive;  the  name  will
+	       1m--gid 22moption) will be used instead.	 On create, this  sets	the
+	       group  name  that  will be stored in the archive; the name will
 	       not be verified against the system group database.
 
        1m--group 4m22mname24m[:4mgid24m]
 	       Use the provided group, if 4mgid24m is not provided, 4mname24m can be ei‐
-	       ther  a	group  name or numeric id.  See the 1m--gname 22moption for
+	       ther a group name or numeric id.	 See the  1m--gname  22moption	for
 	       details.
 
-       1m-H	 22m(c and r modes only) Symbolic links named on the  command  line
-	       will  be followed; the target of the link will be archived, not
+       1m-H	 22m(c	and  r modes only) Symbolic links named on the command line
+	       will be followed; the target of the link will be archived,  not
 	       the link itself.
 
        1m-h	 22m(c and r modes only) Synonym for 1m-L22m.
@@ -194,96 +198,100 @@
        1m--help	 22mShow usage.
 
        1m--hfsCompression0m
-	       (x mode only) Mac OS X specific (v10.6 or later). Compress  ex‐
+	       (x  mode only) Mac OS X specific (v10.6 or later). Compress ex‐
 	       tracted regular files with HFS+ compression.
 
        1m--ignore-zeros0m
-	       An  alias  of 1m--options read_concatenated_archives 22mfor compati‐
+	       An alias of 1m--options read_concatenated_archives  22mfor  compati‐
 	       bility with GNU tar.
 
        1m--include 4m22mpattern0m
 	       Process only files or directories that match the specified pat‐
-	       tern.  Note  that  exclusions  specified	 with  1m--exclude  22mtake
-	       precedence  over	 inclusions.   If no inclusions are explicitly
+	       tern.   Note  that  exclusions  specified  with	1m--exclude 22mtake
+	       precedence over inclusions.  If no  inclusions  are  explicitly
 	       specified, all entries are processed by default.	 The 1m--include0m
 	       option is especially useful when filtering archives.  For exam‐
 	       ple, the command
 
 		     1mtar -c -f 4m22mnew.tar24m 1m--include='*foo*' @4m22mold.tgz0m
 
-	       creates a new archive 4mnew.tar24m containing only the entries  from
+	       creates	a new archive 4mnew.tar24m containing only the entries from
 	       4mold.tgz24m containing the string ‘foo’.
 
        1m-J22m, 1m--xz0m
-	       (c  mode	 only)	Compress the resulting archive with 4mxz24m(1).	 In
-	       extract or list modes, this option is ignored.  Note that  this
+	       (c mode only) Compress the resulting archive  with  4mxz24m(1).	 In
+	       extract	or list modes, this option is ignored.	Note that this
 	       1mtar 22mimplementation recognizes XZ compression automatically when
 	       reading archives.
 
        1m-j22m, 1m--bzip22m, 1m--bzip222m, 1m--bunzip20m
 	       (c mode only) Compress the resulting archive with 4mbzip224m(1).	 In
-	       extract	or list modes, this option is ignored.	Note that this
-	       1mtar 22mimplementation recognizes bzip2	 compression  automatically
+	       extract or list modes, this option is ignored.  Note that  this
+	       1mtar  22mimplementation	 recognizes bzip2 compression automatically
 	       when reading archives.
 
        1m-k22m, 1m--keep-old-files0m
-	       (x  mode only) Do not overwrite existing files.	In particular,
-	       if a file appears more than once in an  archive,	 later	copies
+	       (x mode only) Do not overwrite existing files.  In  particular,
+	       if  a  file  appears more than once in an archive, later copies
 	       will not overwrite earlier copies.
 
        1m--keep-newer-files0m
-	       (x  mode	 only)	Do not overwrite existing files that are newer
+	       (x mode only) Do not overwrite existing files  that  are	 newer
 	       than the versions appearing in the archive being extracted.
 
        1m-L22m, 1m--dereference0m
 	       (c and r modes only) All symbolic links will be followed.  Nor‐
-	       mally, symbolic links are archived as such.  With this  option,
+	       mally,  symbolic links are archived as such.  With this option,
 	       the target of the link will be archived instead.
 
        1m-l22m, 1m--check-links0m
-	       (c  and	r modes only) Issue a warning message unless all links
+	       (c and r modes only) Issue a warning message unless  all	 links
 	       to each file are archived.
 
        1m--lrzip0m
 	       (c mode only) Compress the resulting archive with 4mlrzip24m(1).	 In
-	       extract or list modes, this option is ignored.  Note that  this
-	       1mtar  22mimplementation	 recognizes lrzip compression automatically
+	       extract	or list modes, this option is ignored.	Note that this
+	       1mtar 22mimplementation recognizes lrzip	 compression  automatically
 	       when reading archives.
 
        1m--lz4	 22m(c mode only) Compress the archive with lz4-compatible compres‐
-	       sion before writing it.	In extract or list modes, this	option
-	       is  ignored.   Note that this 1mtar 22mimplementation recognizes lz4
+	       sion  before writing it.	 In extract or list modes, this option
+	       is ignored.  Note that this 1mtar 22mimplementation  recognizes	lz4
 	       compression automatically when reading archives.
 
-       1m--zstd	 22m(c mode only) Compress the archive	with  zstd-compatible  com‐
+       1m--zstd	 22m(c	mode  only)  Compress the archive with zstd-compatible com‐
 	       pression before writing it.  In extract or list modes, this op‐
-	       tion  is ignored.  Note that this 1mtar 22mimplementation recognizes
+	       tion is ignored.	 Note that this 1mtar 22mimplementation	 recognizes
 	       zstd compression automatically when reading archives.
 
-       1m--lzma	 22m(c mode only) Compress the resulting archive with the  original
-	       LZMA  algorithm.	  In extract or list modes, this option is ig‐
-	       nored.  Use of this option  is  discouraged  and	 new  archives
+       1m--lzma	 22m(c	mode only) Compress the resulting archive with the original
+	       LZMA algorithm.	In extract or list modes, this option  is  ig‐
+	       nored.	Use  of	 this  option  is discouraged and new archives
 	       should be created with 1m--xz 22minstead.  Note that this 1mtar 22mimple‐
-	       mentation  recognizes LZMA compression automatically when read‐
+	       mentation recognizes LZMA compression automatically when	 read‐
 	       ing archives.
 
-       1m--lzop	 22m(c mode only) Compress the resulting archive with 4mlzop24m(1).   In
-	       extract	or list modes, this option is ignored.	Note that this
-	       1mtar 22mimplementation	recognizes  LZO	 compression  automatically
+       1m--lzop	 22m(c	mode only) Compress the resulting archive with 4mlzop24m(1).  In
+	       extract or list modes, this option is ignored.  Note that  this
+	       1mtar  22mimplementation	 recognizes  LZO  compression automatically
 	       when reading archives.
 
        1m-m22m, 1m--modification-time0m
-	       (x  mode	 only)	Do not extract modification time.  By default,
+	       (x mode only) Do not extract modification  time.	  By  default,
 	       the modification time is set to the time stored in the archive.
 
        1m--mac-metadata0m
-	       (c, r, u and x mode only) Mac OS X specific.   Archive  or  ex‐
-	       tract   extended	  ACLs	and  extended  file  attributes	 using
-	       4mcopyfile24m(3) in AppleDouble format.	 This  is  the	reverse	 of
-	       1m--no-mac-metadata22m.	 and  the  default  behavior in c, r, and u
-	       modes or if 1mtar 22mis run in x mode as root.  Currently  supported
+	       (c,  r,	u  and x mode only) Mac OS X specific.	Archive or ex‐
+	       tract  extended	ACLs  and  extended  file   attributes	 using
+	       4mcopyfile24m(3)	 in  AppleDouble  format.   This  is the reverse of
+	       1m--no-mac-metadata22m.	and the default behavior in  c,	 r,  and  u
+	       modes  or if 1mtar 22mis run in x mode as root.	Currently supported
 	       only for pax formats (including pax restricted, the default tar
 	       format for 1mbsdtar22m)
+
+       1m--mtime 4m22mdate0m
+	       (c, r, u modes only) Set the modification times of added	 files
+	       to the specified date.
 
        1m-n22m, 1m--norecurse22m, 1m--no-recursion0m
 	       Do not operate recursively on the content of directories.
@@ -330,10 +338,10 @@
 	       default behavior if 1mtar 22mis run as non-root in x mode.
 
        1m--no-mac-metadata0m
-	       (x mode only) Mac OS X specific.	 Do  not  archive  or  extract
-	       ACLs  and  extended file attributes using 4mcopyfile24m(3) in Apple‐
-	       Double format.  This is the reverse of 1m--mac-metadata22m.  and the
-	       default behavior if 1mtar 22mis run as non-root in x mode.
+	       (c, r, u and x mode only) Mac OS X specific.  Do not archive or
+	       extract ACLs and extended file attributes using 4mcopyfile24m(3)	 in
+	       AppleDouble  format.   This  is	the reverse of 1m--mac-metadata22m.
+	       and the default behavior if 1mtar 22mis run as non-root in x mode.
 
        1m--no-read-sparse0m
 	       (c, r, u modes only) Do not read sparse file  information  from
