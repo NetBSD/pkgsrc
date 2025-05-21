@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3502 2025/05/21 16:36:37 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3503 2025/05/21 18:30:39 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5167,3 +5167,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/libarchive to 3.8.0 [adam 2025-05-21]
 	Updated archivers/bsdtar to 3.8.0 [adam 2025-05-21]
 	Updated www/hugo to 0.147.4 [triaxx 2025-05-21]
+	Updated devel/astyle to 3.6.9 [schmonz 2025-05-21]
