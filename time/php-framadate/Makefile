@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/02/08 03:56:22 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/21 15:00:55 taca Exp $
 
 DISTNAME=	framadate-1.1.19
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time www
 MASTER_SITES=	https://framagit.org/framasoft/framadate/framadate/-/archive/1.1.19/
 EXTRACT_SUFX=	.tar.bz2
