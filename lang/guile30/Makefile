@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/30 07:49:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/22 09:22:00 adam Exp $
 
 DISTNAME=	guile-3.0.10
 PKGNAME=	${DISTNAME:S/guile/guile30/}
@@ -16,11 +16,10 @@ LICENSE=	gnu-lgpl-v3
 
 # Currently, all versions are namespaced.
 GUILE_SUBDIR=	guile/3.0
-#GUILE_SUBDIR=	# empty
 
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
+CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL:Q}
 # Needed to work around broken configure check for accept4()
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
@@ -67,21 +66,20 @@ SUBST_MESSAGE.tools=	Fixing path to pkg-config in installed file.
 
 OPSYSVARS+=		GUILE_LIBNAME
 GUILE_LIBNAME.Darwin=	a
-GUILE_LIBNAME.*=	so.1.4.1
-
+GUILE_LIBNAME.*=	so.1.7.0
 PLIST_SUBST+=		GUILE_LIBNAME=${GUILE_LIBNAME}
 PRINT_PLIST_AWK+=	{gsub(/${GUILE_LIBNAME}/, "$${GUILE_LIBNAME}");}
 
-.include "../../mk/pax.mk"
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
-.include "../../textproc/libunistring/buildlink3.mk"
 # needs threaded boehm-gc
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=8.0.4nb1
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
+.include "../../mk/pax.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
