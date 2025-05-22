@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/05/22 11:27:52 wiz Exp $
 bin/h4fromh5
 bin/h5fromh4
 bin/h5fromtxt
@@ -12,6 +12,8 @@ man/man1/h5math.1
 man/man1/h5topng.1
 man/man1/h5totxt.1
 man/man1/h5tovtk.1
+share/h5utils/colormaps/BrBG
+share/h5utils/colormaps/RdBu
 share/h5utils/colormaps/autumn
 share/h5utils/colormaps/bluered
 share/h5utils/colormaps/bone
@@ -24,6 +26,7 @@ share/h5utils/colormaps/gray
 share/h5utils/colormaps/green
 share/h5utils/colormaps/hot
 share/h5utils/colormaps/hsv
+share/h5utils/colormaps/inferno
 share/h5utils/colormaps/jet
 share/h5utils/colormaps/lines
 share/h5utils/colormaps/pink
@@ -31,6 +34,7 @@ share/h5utils/colormaps/prism
 share/h5utils/colormaps/spring
 share/h5utils/colormaps/summer
 share/h5utils/colormaps/vga
+share/h5utils/colormaps/viridis
 share/h5utils/colormaps/winter
 share/h5utils/colormaps/yarg
 share/h5utils/colormaps/yellow

@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.25 2025/04/24 14:14:23 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2025/05/22 11:27:52 wiz Exp $
 
-DISTNAME=		h5utils-1.12.1
-PKGREVISION=		10
+DISTNAME=		h5utils-1.13.2
 CATEGORIES=		graphics
-MASTER_SITES=		http://ab-initio.mit.edu/h5utils/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=NanoComp/}
+GITHUB_RELEASE=		${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ab-initio.mit.edu/h5utils/
+HOMEPAGE=		https://github.com/NanoComp/h5utils
 COMMENT=		Utilities for conversion from/to HDF5
 LICENSE=		mit AND gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-octave
-
-pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/h5utils/colormaps
 
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/hdf/buildlink3.mk"
