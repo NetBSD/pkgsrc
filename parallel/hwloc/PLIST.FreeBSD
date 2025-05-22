@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2025/05/22 21:08:03 nia Exp $
+include/hwloc/glibc-sched.h
