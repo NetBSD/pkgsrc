@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/11/19 09:35:43 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/22 04:51:30 schmonz Exp $
 
 DISTNAME=		qpasswd-0.5
 CATEGORIES=		sysutils
@@ -10,7 +10,9 @@ HOMEPAGE=		https://mcmilk.de/projects/qpasswd/
 COMMENT=		Password-checking tools for many authentication schemes
 LICENSE=		gnu-gpl-v2
 
-SUBST_CLASSES+=		djberrno
+FORCE_C_STD=		c99
+
+DJB_ERRNO_FIXUP=	error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build

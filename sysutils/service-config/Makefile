@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/10/14 16:52:54 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2025/05/22 04:51:30 schmonz Exp $
 
 DISTNAME=		service-config-0.51
 CATEGORIES=		sysutils
@@ -12,7 +11,9 @@ LICENSE=		djb-nonlicense
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 
-SUBST_CLASSES+=		djberrno
+FORCE_C_STD=		c89
+
+DJB_ERRNO_FIXUP=	error.h
 
 INSTALLATION_DIRS=	bin
 

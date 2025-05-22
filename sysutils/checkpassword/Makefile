@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/11/19 09:35:43 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2025/05/22 04:51:30 schmonz Exp $
 
 DISTNAME=		checkpassword-0.90
 PKGREVISION=		2
@@ -11,9 +10,9 @@ HOMEPAGE=		https://cr.yp.to/checkpwd.html
 COMMENT=		Simple, uniform password-checking interface to all root applications
 LICENSE=		public-domain
 
-SUBST_CLASSES+=		djberrno
+FORCE_C_STD=		c89
 
-CHECKPASSWORD_BIN=	bin/checkpassword
+DJB_ERRNO_FIXUP=	error.h
 
 INSTALLATION_DIRS=	bin
 

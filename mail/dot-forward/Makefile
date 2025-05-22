@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2020/11/19 09:35:42 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.31 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		dot-forward-0.71
 PKGREVISION=		3
@@ -14,10 +13,9 @@ LICENSE=		public-domain
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 DJB_BUILD_TARGETS=	install instcheck
+DJB_ERRNO_FIXUP=	error.h
 
 INSTALLATION_DIRS=	${PKGMANDIR}
-
-SUBST_CLASSES+=		djberrno
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
