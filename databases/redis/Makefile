@@ -1,27 +1,19 @@
-# $NetBSD: Makefile,v 1.92 2025/04/30 10:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/05/22 18:44:41 adam Exp $
 
-DISTNAME=	redis-7.2.5
+DISTNAME=	redis-8.0.1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
-# NB: upstream has changed to a proprietary license:
-# https://github.com/redis/redis/blob/unstable/LICENSE.txt
-# Probably (absent discussion), this should not be updated until
-# a license-ok version is in pkgsrc.  Existing forks are:
-# 1. Redict https://codeberg.org/redict/redict
-# 2. KeyDB, an older redis fork (in terms of features) BSD3 licensed
-# version maintained by Snapchat.
-# 3. PlaceholderKV (name to be changed?) by former redis contributors
-# and AWS employees, BSD3 licensed.
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
-LICENSE=	modified-bsd
+LICENSE=	server-side-public-license OR gnu-agpl-v3 # OR redis-source-available-license-2.0
 
 TEST_DEPENDS+=	tcl>=8.5:../../lang/tcl
 
-USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 # Don't let LTO kick in as it is not supported on all platforms.
 MAKE_ENV+=		OPTIMIZATION=${DBG:U-O2:Q}
@@ -33,10 +25,8 @@ MAKE_ENV+=		OPTIMIZATION=${DBG:U-O2:Q}
 RCD_SCRIPTS+=		redis
 RCD_SCRIPT_SRC.redis=	${FILESDIR}/redis.sh
 
-DOCDIR=			share/doc/redis
-DOCFILES+=		00-RELEASENOTES BUGS COPYING README.md
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-INSTALLATION_DIRS+=	bin ${DOCDIR} ${EGDIR} ${EGDIR}/utils ${EGDIR}/tests
+INSTALLATION_DIRS+=	bin ${EGDIR} ${EGDIR}/utils ${EGDIR}/tests
 
 BUILD_DEFS+=		VARBASE REDIS_USER REDIS_GROUP REDIS_DATADIR
 BUILD_DEFS+=		REDIS_LOGDIR REDIS_PIDDIR PKG_SYSCONFDIR
@@ -75,13 +65,10 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/redis.conf ${DESTDIR}${EGDIR}/redis.conf.example
-.for file in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${DOCDIR}/${file}
-.endfor
 
 do-test:
 	cd ${WRKSRC} && ${SH} runtest
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
