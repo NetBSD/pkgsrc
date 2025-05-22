@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2025/05/21 22:32:47 schmonz Exp $
+# $NetBSD: options.mk,v 1.28 2025/05/22 03:42:34 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		djbdns-cachestats djbdns-ignoreip2 djbdns-listenmultiple
@@ -22,7 +22,6 @@ SITES.${IGNOREIP2_PATCH}=	${MASTER_SITE_LOCAL}
 
 .if !empty(PKG_OPTIONS:Mdjbdns-mergequeries)
 USE_TOOLS+=			patch
-PATCHFILES+=			patch-mergequeries patch-mergequeries-boundscheck
 post-patch: patch-mergequeries
 .PHONY: patch-mergequeries
 patch-mergequeries:
@@ -47,7 +46,6 @@ PATCH_DIST_CAT.${CACHEMULTI_PATCH}=	${SED} -e "s|'/'|'${DJBDNS_IP_SEPARATOR}'|g"
 
 .if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)
 USE_TOOLS+=			patch
-PATCHFILES+=			patch-tinydns64
 post-patch: patch-tinydns64
 .PHONY: patch-tinydns64
 patch-tinydns64:
