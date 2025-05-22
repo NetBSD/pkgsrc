@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3513 2025/05/22 11:51:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3514 2025/05/22 13:35:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5188,3 +5188,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.40.2 [adam 2025-05-22]
 	Updated graphics/h5utils to 1.13.2 [wiz 2025-05-22]
 	Updated graphics/gimp-resynthesizer to 3.0.0 [wiz 2025-05-22]
+	Added textproc/ruby-pp version 0.6.2 [taca 2025-05-22]
