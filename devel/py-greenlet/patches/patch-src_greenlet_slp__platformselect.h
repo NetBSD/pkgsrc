@@ -1,6 +1,8 @@
-$NetBSD: patch-src_greenlet_slp__platformselect.h,v 1.6 2025/05/22 09:24:30 nia Exp $
+$NetBSD: patch-src_greenlet_slp__platformselect.h,v 1.7 2025/05/22 09:57:47 nia Exp $
 
 Add support for NetBSD/sparc[64] (and other sparc operating systems).
+
+https://github.com/python-greenlet/greenlet/pull/447
 
 --- src/greenlet/slp_platformselect.h.orig	2025-04-11 18:34:32.000000000 +0000
 +++ src/greenlet/slp_platformselect.h
