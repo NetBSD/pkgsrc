@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:46:12 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/05/22 11:51:42 wiz Exp $
 
-BLAKE2s (resynthesizer-0.16.tar.gz) = 6a341ce2832740ddbd73c8e4f8bcbd1e5dd29de3aaa51e95d15cf9af1ac6e223
-SHA512 (resynthesizer-0.16.tar.gz) = 6838dfe919e45bd8e8eea570127a586dc5718ee57504748d1de192bd627e26670bd7d82a25b7cb56a4fe597f3eb2c9d0c922da318fec5b6bf8a52801a856b662
-Size (resynthesizer-0.16.tar.gz) = 18241 bytes
-SHA1 (patch-Makefile) = 5ddf6be3884aad811ec8f6687eb6f3fcfb408775
+BLAKE2s (resynthesizer-3.0.0.tar.gz) = 2039c25d73f50af9bc26d0dc84c58e4b889b911f513c96e33d5581103981b625
+SHA512 (resynthesizer-3.0.0.tar.gz) = 053b365bb4c1d8228a3fe1e67fb9758c67a4dc040801ab3179b2c973508137aa8995a6f3c51a270c61b9cd8019e755cb4e8e1650857e288c112a2948daf4fb66
+Size (resynthesizer-3.0.0.tar.gz) = 19968926 bytes
