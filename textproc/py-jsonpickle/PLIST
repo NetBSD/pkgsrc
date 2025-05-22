@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 12:30:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/22 05:41:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -28,6 +28,9 @@ ${PYSITELIB}/jsonpickle/ext/numpy.pyo
 ${PYSITELIB}/jsonpickle/ext/pandas.py
 ${PYSITELIB}/jsonpickle/ext/pandas.pyc
 ${PYSITELIB}/jsonpickle/ext/pandas.pyo
+${PYSITELIB}/jsonpickle/ext/yaml.py
+${PYSITELIB}/jsonpickle/ext/yaml.pyc
+${PYSITELIB}/jsonpickle/ext/yaml.pyo
 ${PYSITELIB}/jsonpickle/handlers.py
 ${PYSITELIB}/jsonpickle/handlers.pyc
 ${PYSITELIB}/jsonpickle/handlers.pyo
