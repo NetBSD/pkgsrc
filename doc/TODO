@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25833 2025/05/22 11:28:01 wiz Exp $
+$NetBSD: TODO,v 1.25834 2025/05/22 18:47:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -1145,7 +1145,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o razor-qt-0.5.2
 	o rcs-5.10.0
 	o rdp-1.6
-	o redis-8.0.1
 	o regionset-0.2
 	o remind-3.03.06
 	o rep-gtk-0.90.8.1
