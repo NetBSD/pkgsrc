@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2025/05/15 05:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.442 2025/05/22 17:15:41 vins Exp $
 #
 
 COMMENT=	Fonts
@@ -132,6 +132,7 @@ SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	ghostscript-cmaps
 SUBDIR+=	ghostscript-fonts
 SUBDIR+=	go-ttf
+SUBDIR+=	greybeard
 SUBDIR+=	gsftopkk
 SUBDIR+=	gucharmap
 SUBDIR+=	harfbuzz
