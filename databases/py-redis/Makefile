@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2025/04/14 11:50:22 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/05/22 18:45:57 adam Exp $
 
-DISTNAME=	redis-5.0.8
+DISTNAME=	redis-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/redis/}
 
@@ -11,7 +10,8 @@ HOMEPAGE=	https://github.com/redis/redis-py
 COMMENT=	Redis Python client
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
