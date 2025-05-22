@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/10/14 16:52:54 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/05/22 04:51:30 schmonz Exp $
 
 DISTNAME=		qlogtools-3.1
 CATEGORIES=		sysutils
@@ -9,10 +8,10 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://untroubled.org/qlogtools/
 COMMENT=		Tools useful in analyzing logs from qmail and other pkgs
 
-DJB_MAKE_TARGETS=	NO
+FORCE_C_STD=		c89
 
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	qfilelog.c
+DJB_MAKE_TARGETS=	NO
+DJB_ERRNO_FIXUP=	qfilelog.c
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
