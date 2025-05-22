@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.28 2023/12/16 10:39:48 mef Exp $
+$NetBSD: distinfo,v 1.29 2025/05/22 19:11:52 schmonz Exp $
 
 BLAKE2s (Devel-NYTProf-6.14.tar.gz) = f73088e0e6f32a40e4ddb50048baa55236637a0b5c516c786f02ccd7315a9d11
 SHA512 (Devel-NYTProf-6.14.tar.gz) = eb4cef819244d7e027c22714c328e80efcc364a02c1eae5ad4c7371ad072afb79ff15d88761c859523f5c8b8731940330526c2bad71f819da8edcd795cce0ca2
 Size (Devel-NYTProf-6.14.tar.gz) = 569967 bytes
+SHA1 (patch-Makefile.PL) = 6a068c35b35d570219f169be9b3ab073882a4f0a
