@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2023/12/01 19:18:28 jperkin Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2025/05/22 12:46:35 jperkin Exp $
 libexec/nut-driver-enumerator.sh
 sbin/upsdrvsvcctl
 share/nut/solaris-init/nut
 share/nut/solaris-init/reset-ups-usb-solaris.sh.sample
 share/nut/solaris-smf/manifest/nut-driver-enumerator.xml
 share/nut/solaris-smf/manifest/nut-driver.xml
+share/nut/solaris-smf/manifest/nut-logger.xml
 share/nut/solaris-smf/manifest/nut-monitor.xml
 share/nut/solaris-smf/manifest/nut-server.xml
 share/nut/solaris-smf/manifest/nut.xml
+share/nut/solaris-smf/method/svc-nut-logger
 share/nut/solaris-smf/method/svc-nut-monitor
 share/nut/solaris-smf/method/svc-nut-server
