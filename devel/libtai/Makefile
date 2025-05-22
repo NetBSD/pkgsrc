@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/11/19 09:35:38 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2025/05/22 04:51:27 schmonz Exp $
 
 DISTNAME=		libtai-0.60
 PKGREVISION=		8
@@ -15,8 +14,7 @@ CONFLICTS=		libowfat<0.32nb1
 
 EGDIR=			share/examples/${PKGBASE}
 
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	leapsecs_read.c
+DJB_ERRNO_FIXUP=	leapsecs_read.c
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

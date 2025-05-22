@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/11/30 13:42:04 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.22 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		qmailanalog-0.70
 PKGREVISION=		2
@@ -11,7 +10,7 @@ HOMEPAGE=		https://cr.yp.to/qmailanalog.html
 COMMENT=		Collection of tools to help analyze qmail's activity
 LICENSE=		djb-nonlicense
 
-SUBST_CLASSES+=		djberrno
+DJB_ERRNO_FIXUP=	error.h
 
 SUBST_CLASSES+=		pkgmandir
 SUBST_STAGE.pkgmandir=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/11/19 09:35:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=	djbfft-0.76
 CATEGORIES=	math
@@ -11,7 +11,9 @@ LICENSE=	public-domain
 
 NOT_FOR_PLATFORM=	IRIX-*-*
 
-SUBST_CLASSES+=		djberrno
+FORCE_C_STD=		c99
+
+DJB_ERRNO_FIXUP=	error.h
 
 INSTALLATION_DIRS=	include/djbfft lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/12/28 23:10:09 zafer Exp $
+# $NetBSD: Makefile,v 1.41 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		qmail-conf-0.60
 PKGREVISION=		6
@@ -16,10 +16,10 @@ DEPENDS+=		daemontools>=0.70:../../sysutils/daemontools
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 DEPENDS+=		{ucspi-tcp6-[0-9]*,ucspi-tcp-[0-9]*}:../../net/ucspi-tcp6
 
-DJB_CONFIG_CMDS=	${ECHO} ${PREFIX:Q} > ${WRKSRC}/conf-ucspi-tcp;
+FORCE_C_STD=		c89
 
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	../djbdns-1.05/error.h
+DJB_CONFIG_CMDS=	${ECHO} ${PREFIX:Q} > ${WRKSRC}/conf-ucspi-tcp;
+DJB_ERRNO_FIXUP=	../djbdns-1.05/error.h
 
 .include "options.mk"
 

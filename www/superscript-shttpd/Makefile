@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/12/19 10:02:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		shttpd-0.53
 PKGNAME=		superscript-${DISTNAME}
@@ -15,8 +15,9 @@ SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	leapsecs_read.c
 SUBST_VARS.paths=	PKG_SYSCONFDIR
 
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	error.h leapsecs_read.c
+FORCE_C_STD=		c89
+
+DJB_ERRNO_FIXUP=	error.h leapsecs_read.c
 
 LDFLAGS.SunOS+=		-lsocket
 

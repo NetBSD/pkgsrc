@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/11/15 18:57:18 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.16 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		serialmail-0.75
 PKGREVISION=		3
@@ -15,7 +14,7 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE}
 
-SUBST_CLASSES+=		djberrno
+DJB_ERRNO_FIXUP=	error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

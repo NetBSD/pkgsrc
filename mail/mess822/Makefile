@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/11/19 09:35:41 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.38 2025/05/22 04:51:28 schmonz Exp $
 
 DISTNAME=		mess822-0.58
 PKGREVISION=		8
@@ -15,11 +14,8 @@ DEPENDS+=		libtai>=0.60nb5:../../devel/libtai
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 DJB_BUILD_TARGETS=	install instcheck
-
+DJB_ERRNO_FIXUP=	cdb_seek.c error.h
 AUTO_MKDIRS=		yes
-
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	cdb_seek.c error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

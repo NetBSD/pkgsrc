@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/04/03 01:11:10 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		fastforward-0.51
 PKGREVISION=		3
@@ -16,9 +15,7 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 CONFLICTS+=		esmtp>=1.2 postfix-[0-9]* sendmail-[0-9]*
 
 DJB_BUILD_TARGETS=	install instcheck
-
-SUBST_CLASSES+=		djberrno
-SUBST_FILES.djberrno=	cdb_seek.c error.h
+DJB_ERRNO_FIXUP=	cdb_seek.c error.h
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2020/11/19 09:35:41 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.30 2025/05/22 04:51:29 schmonz Exp $
 
 DISTNAME=		ezmlm-0.53
 PKGREVISION=		2
@@ -15,11 +14,10 @@ CONFLICTS=		ezmlm-idx-[0-9]*
 
 DEPENDS+=		qmail>=1.03:../../mail/qmail
 
-DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir
+DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q} > conf-destdir;
+DJB_ERRNO_FIXUP=	error.h
 DJB_BUILD_TARGETS=	install
 INSTALL_TARGET=		setup
-
-SUBST_CLASSES+=		djberrno
 
 INSTALLATION_DIRS=	bin man ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/cat1 ${PKGMANDIR}/cat5
 
