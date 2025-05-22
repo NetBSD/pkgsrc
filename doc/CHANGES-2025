@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3508 2025/05/22 05:42:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3509 2025/05/22 06:01:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5179,3 +5179,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.5.21 [adam 2025-05-22]
 	Updated devel/py-typing-inspection to 0.4.1 [adam 2025-05-22]
 	Updated textproc/py-jsonpickle to 4.1.0 [adam 2025-05-22]
+	Updated devel/py-coverage to 7.8.1 [adam 2025-05-22]
+	Updated www/py-tornado to 6.5 [adam 2025-05-22]
+	Updated devel/py-rich-click to 1.8.9 [adam 2025-05-22]
