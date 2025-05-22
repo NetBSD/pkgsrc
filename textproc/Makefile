@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1515 2025/05/12 09:51:14 markd Exp $
+# $NetBSD: Makefile,v 1.1516 2025/05/22 13:35:08 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1328,6 +1328,7 @@ SUBDIR+=	ruby-nokogumbo
 SUBDIR+=	ruby-nori
 SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-plist
+SUBDIR+=	ruby-pp
 SUBDIR+=	ruby-pure-hyperestraier
 SUBDIR+=	ruby-rails-dom-testing
 SUBDIR+=	ruby-random-word
