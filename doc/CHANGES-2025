@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3519 2025/05/22 18:47:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3520 2025/05/22 19:16:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5197,3 +5197,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/redis to 8.0.1 [adam 2025-05-22]
 	Updated databases/py-redis to 6.1.0 [adam 2025-05-22]
 	Updated www/py-tornado to 6.5.1 [adam 2025-05-22]
+	Updated devel/p5-Devel-NYTProf to 6.14nb2 [schmonz 2025-05-22]
