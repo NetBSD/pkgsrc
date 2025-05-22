@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1087 2025/05/20 10:33:04 nia Exp $
+# $NetBSD: Makefile,v 1.1088 2025/05/22 20:54:15 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -86,6 +86,7 @@ SUBDIR+=	cheese
 SUBDIR+=	cinepaint
 SUBDIR+=	circos
 SUBDIR+=	claraocr
+SUBDIR+=	clearlooks-phenix-theme
 SUBDIR+=	cliris
 SUBDIR+=	clutter
 SUBDIR+=	clutter-box2d
