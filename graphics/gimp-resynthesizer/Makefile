@@ -1,34 +1,34 @@
-# $NetBSD: Makefile,v 1.67 2025/05/19 11:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/05/22 11:51:42 wiz Exp $
 
-DISTNAME=	resynthesizer-0.16
+DISTNAME=	resynthesizer-3.0.0
 PKGNAME=	gimp-${DISTNAME}
-PKGREVISION=	63
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.logarithmic.net/pfh-files/resynthesizer/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=bootchk/}
+GITHUB_PROJECT=	resynthesizer
+GITHUB_TAG=	v3.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.logarithmic.net/pfh/resynthesizer
-COMMENT=	Gimp plug-in for texture synthesis
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	https://github.com/bootchk/resynthesizer
+COMMENT=	Suite of gimp plug-ins for texture synthesis
+LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-BROKEN=		"Does not support gimp3, but perhaps soon."
+SUBST_CLASSES+=		scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-heal-selection.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-heal-transparency.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-map-style.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-render-texture.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-resynth-controls.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-resynth-enlarge.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-resynth-fill-pattern.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-resynth-sharpen.scm
+SUBST_FILES.scm+=	outerPlugins/plug-in-uncrop.scm
+SUBST_SED.scm+=		-e "s,\#!/usr/bin/env ,\#!${PREFIX}/bin/,"
+SUBST_STAGE.scm=	pre-configure
+SUBST_MESSAGE.scm=	Fixing path to gimp-script-fu-interpreter-3.0.
 
-INSTALLATION_DIRS=	lib/gimp/2.0/plug-ins
-INSTALLATION_DIRS+=	share/gimp/2.0/scripts
-INSTALLATION_DIRS+=	share/doc/gimp-resynthesizer
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/resynth \
-		${DESTDIR}${PREFIX}/lib/gimp/2.0/plug-ins/
-	${INSTALL_DATA} ${WRKSRC}/smart-enlarge.scm \
-		${DESTDIR}${PREFIX}/share/gimp/2.0/scripts/
-	${INSTALL_DATA} ${WRKSRC}/smart-remove.scm \
-		${DESTDIR}${PREFIX}/share/gimp/2.0/scripts/
-	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}${PREFIX}/share/doc/gimp-resynthesizer
-
+.include "../../devel/meson/build.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

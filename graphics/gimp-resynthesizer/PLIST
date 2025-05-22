@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/14 00:01:31 wiz Exp $
-lib/gimp/2.0/plug-ins/resynth
-share/doc/gimp-resynthesizer/README
-share/gimp/2.0/scripts/smart-enlarge.scm
-share/gimp/2.0/scripts/smart-remove.scm
+@comment $NetBSD: PLIST,v 1.2 2025/05/22 11:51:42 wiz Exp $
+lib/gimp/3.0/plug-ins/plug-in-heal-selection/plug-in-heal-selection.scm
+lib/gimp/3.0/plug-ins/plug-in-heal-transparency/plug-in-heal-transparency.scm
+lib/gimp/3.0/plug-ins/plug-in-map-style/plug-in-map-style.scm
+lib/gimp/3.0/plug-ins/plug-in-render-texture/plug-in-render-texture.scm
+lib/gimp/3.0/plug-ins/plug-in-resynth-controls/plug-in-resynth-controls.scm
+lib/gimp/3.0/plug-ins/plug-in-resynth-fill-pattern/plug-in-resynth-fill-pattern.scm
+lib/gimp/3.0/plug-ins/plug-in-uncrop/plug-in-uncrop.scm
+lib/gimp/3.0/plug-ins/resynthesizer/resynthesizer
