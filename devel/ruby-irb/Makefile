@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/05/17 06:36:25 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/22 13:36:41 taca Exp $
 
 DISTNAME=	irb-1.15.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,8 +24,12 @@ FILES_SUBST+=		PKGVERSION_NOREV=${PKGVERSION_NOREV}
 PLIST_SUBST+=		PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 .include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} < 33
+
+.if ${RUBY_VER} < 34
+DEPENDS+=	${RUBY_PKGPREFIX}-pp>=0.6.0:../../textproc/ruby-pp
+.  if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-reline>=0.4.2:../../devel/ruby-reline
+.  endif
 .endif
 
 pre-configure:
