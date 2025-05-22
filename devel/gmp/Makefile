@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2023/08/05 07:08:26 adam Exp $
+# $NetBSD: Makefile,v 1.93 2025/05/22 09:45:47 nia Exp $
 
 DISTNAME=	gmp-6.3.0
 CATEGORIES=	devel math
@@ -38,6 +38,10 @@ PLIST.cxx=		yes
 
 .if ${MACHINE_PLATFORM:MIRIX-5.*} && !empty(ABI)
 ABI=			o32
+.endif
+
+.if ${MACHINE_ARCH:Mmipsn64*}
+CONFIGURE_ENV+=		ABI=64
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
