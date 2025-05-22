@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/16 15:23:06 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/22 14:25:36 taca Exp $
 
 DISTNAME=	observer-0.1.2
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
 
-# Ruby 3.3.8 and Ruby 3.4.3 have observer 0.1.2 gem.
+# Ruby 3.3.8 and Ruby 3.4.4 have observer 0.1.2 gem.
 RUBY_VERSIONS_ACCEPTED=	31 32
 
 .include "../../lang/ruby/gem.mk"
