@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3509 2025/05/22 06:01:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3510 2025/05/22 07:39:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5182,3 +5182,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-coverage to 7.8.1 [adam 2025-05-22]
 	Updated www/py-tornado to 6.5 [adam 2025-05-22]
 	Updated devel/py-rich-click to 1.8.9 [adam 2025-05-22]
+	Updated lang/nodejs to 24.1.0 [adam 2025-05-22]
+	Updated lang/nodejs22 to 22.16.0 [adam 2025-05-22]
