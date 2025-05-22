@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2018/12/13 19:34:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/05/22 18:44:41 adam Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-rdb
 bin/redis-cli
 bin/redis-sentinel
 bin/redis-server
-share/doc/redis/00-RELEASENOTES
-share/doc/redis/BUGS
-share/doc/redis/COPYING
-share/doc/redis/README.md
 share/examples/redis/redis.conf.example
