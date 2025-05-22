@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/05/12 13:05:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/05/22 05:37:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -271,6 +271,9 @@ ${PYSITELIB}/allauth/core/internal/httpkit.pyo
 ${PYSITELIB}/allauth/core/internal/modelkit.py
 ${PYSITELIB}/allauth/core/internal/modelkit.pyc
 ${PYSITELIB}/allauth/core/internal/modelkit.pyo
+${PYSITELIB}/allauth/core/internal/ratelimit.py
+${PYSITELIB}/allauth/core/internal/ratelimit.pyc
+${PYSITELIB}/allauth/core/internal/ratelimit.pyo
 ${PYSITELIB}/allauth/core/internal/tests/__init__.py
 ${PYSITELIB}/allauth/core/internal/tests/__init__.pyc
 ${PYSITELIB}/allauth/core/internal/tests/__init__.pyo
@@ -280,15 +283,12 @@ ${PYSITELIB}/allauth/core/internal/tests/test_httpkit.pyo
 ${PYSITELIB}/allauth/core/internal/tests/test_modelkit.py
 ${PYSITELIB}/allauth/core/internal/tests/test_modelkit.pyc
 ${PYSITELIB}/allauth/core/internal/tests/test_modelkit.pyo
+${PYSITELIB}/allauth/core/internal/tests/test_ratelimit.py
+${PYSITELIB}/allauth/core/internal/tests/test_ratelimit.pyc
+${PYSITELIB}/allauth/core/internal/tests/test_ratelimit.pyo
 ${PYSITELIB}/allauth/core/ratelimit.py
 ${PYSITELIB}/allauth/core/ratelimit.pyc
 ${PYSITELIB}/allauth/core/ratelimit.pyo
-${PYSITELIB}/allauth/core/tests/__init__.py
-${PYSITELIB}/allauth/core/tests/__init__.pyc
-${PYSITELIB}/allauth/core/tests/__init__.pyo
-${PYSITELIB}/allauth/core/tests/test_ratelimit.py
-${PYSITELIB}/allauth/core/tests/test_ratelimit.pyc
-${PYSITELIB}/allauth/core/tests/test_ratelimit.pyo
 ${PYSITELIB}/allauth/decorators.py
 ${PYSITELIB}/allauth/decorators.pyc
 ${PYSITELIB}/allauth/decorators.pyo
