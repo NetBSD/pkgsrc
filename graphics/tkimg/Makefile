@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/03 02:35:31 scole Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/22 17:29:13 scole Exp $
 
 PKGVERSION=	2.0.1
 DISTNAME=	Img-${PKGVERSION_NOREV}
@@ -33,25 +33,6 @@ CONFIGURE_ARGS+=	--enable-64bit
 .  endfor
 .endif
 
-# tkimg has the source code of these graphic libraries embedded in the
-# its distribution and are heavily intertwined with its build.  To
-# separate them out and use the pkgsrc libraries instead would require
-# a large amount of work, as they appear dependent on the text of the
-# source code itself.  check vulnerabilities, may be better than nothing
-EMB_SRC=	jpeg-9.6.0 png-1.6.44 tiff-4.7.0 zlib-1.3.1
-VFILE=		${_EXTRACT_PKGVULNDIR:sh}/pkg-vulnerabilities
-pre-fetch:
-.if exists(${VFILE})
-.  if !empty(ALLOW_VULNERABLE_PACKAGES:tl:Mno)
-	for i in ${EMB_SRC}; do \
-		${PKG_ADMIN} audit-pkg $$i || \
-		 { ${FAIL_MSG} "embedded source $$i has vulnerabilities. "\
-			"Define ALLOW_VULNERABLE_PACKAGES if necessary"; \
-		 exit 1; } \
-	done
-.  endif
-.endif
-
 # xxx shared libs
 GENERATE_PLIST+=	(cd ${WRKSRC}/Img/exec_prefix && \
 			${LS} lib/Img/* | ${SED} -e 's/lib\/Img/lib\/Img${PKGVERSION_NOREV}/');
@@ -77,11 +58,6 @@ tests:
 	cd ${WRKSRC}/tests/demo && ${TCLSH} demo.tcl
 	cd ${WRKSRC}/tests/visualtests && ${TCLSH} RunTests --auto --verbose
 
-# xxx already in src distribution file, see note above
-#.include "../../devel/zlib/buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
-#.include "../../graphics/tiff/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
