@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/22 20:54:15 nia Exp $
+
+BLAKE2s (clearlooks-phenix-7.1.tar.gz) = 526b474dc4cd41548c72883a6dceea5ce2a06ad7526f68ee81acc769f7979acd
+SHA512 (clearlooks-phenix-7.1.tar.gz) = 86b25e8ea92142df0f71d4018b46f8b5c346c4e3f4b1d872e211978de3afd12db93b1162f4f56a2c07274754d1317e6906bd5fa43b2435f48004e3443dde7bd5
+Size (clearlooks-phenix-7.1.tar.gz) = 650597 bytes
