@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3516 2025/05/22 14:16:09 bouyer Exp $
+$NetBSD: CHANGES-2025,v 1.3517 2025/05/22 15:14:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5192,3 +5192,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-irb to 1.15.2nb1 [taca 2025-05-22]
 	Updated sysutils/xenkernel418 to 20250521 [bouyer 2025-05-22]
 	Updated sysutils/xentools418 to 20250521 [bouyer 2025-05-22]
+	Updated www/anubis to 1.18.0nb2 [ryoon 2025-05-22]
