@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2024/09/07 05:57:41 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/22 07:48:43 adam Exp $
 
-DISTNAME=	requirements_parser-0.11.0
+DISTNAME=	requirements_parser-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requirements-parser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/davidfischer/requirements-parser
+HOMEPAGE=	https://github.com/madpah/requirements-parser
 COMMENT=	Parses Pip requirement files
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-types-setuptools>=69.1.0:../../devel/py-types-setuptools
 
 USE_LANGUAGES=	# none
 
