@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3512 2025/05/22 11:28:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3513 2025/05/22 11:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-requirements-parser to 0.13.0 [adam 2025-05-22]
 	Updated security/py-google-auth to 2.40.2 [adam 2025-05-22]
 	Updated graphics/h5utils to 1.13.2 [wiz 2025-05-22]
+	Updated graphics/gimp-resynthesizer to 3.0.0 [wiz 2025-05-22]
