@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3521 2025/05/22 19:19:38 scole Exp $
+$NetBSD: CHANGES-2025,v 1.3522 2025/05/22 20:01:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3454,7 +3454,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-eliot to 1.17.5 [adam 2025-04-14]
 	Updated sysutils/py-Glances to 4.3.1 [adam 2025-04-14]
 	Updated misc/py-watchfiles to 1.0.5 [adam 2025-04-14]
-	Updated mail/feed2exec to 0.22.0 [adam 2025-04-14]
 	Updated mail/py-dkim to 1.1.8 [adam 2025-04-14]
 	Updated databases/py-barman to 3.13.2 [adam 2025-04-14]
 	Updated databases/py-sqlalchemy to 2.0.40 [adam 2025-04-14]
@@ -3694,7 +3693,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-awscli-plugin-logs-tail to 0.2nb1 [schmonz 2025-04-21]
 	Updated devel/texttest to 4.4.3.1nb2 [schmonz 2025-04-21]
 	Removed emulators/cygwin_lib [wiz 2025-04-21]
-	Updated graphics/libcaca to 0.99.20 [schmonz 2025-04-21]
 	Updated pkgtools/rc.subr to 20250421 [wiz 2025-04-21]
 	mk: remove support for Interix [wiz 2025-04-21]
 	Updated pkgtools/revbump to 3.8 [wiz 2025-04-22]
@@ -3834,7 +3832,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/rawtherapee to 5.11 [wiz 2025-04-27]
 	Updated print/html2ps to 1.0b7nb14 [wiz 2025-04-27]
 	Updated print/apsfilter to 7.2.8nb4 [wiz 2025-04-27]
-	Updated lang/gcc14-gnat-libs to 14.2.0nb1 [dkazankov 2025-04-27]
 	Updated devel/alire to 2.1.0 [dkazankov 2025-04-27]
 	Updated geography/proj-data to 1.21 [gdt 2025-04-27]
 	Updated sysutils/minipro to 0.7.3 [thorpej 2025-04-27]
@@ -3870,7 +3867,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-panel to 2.2.0 [gutteridge 2025-04-28]
 	Updated x11/lxqt-runner to 2.2.0 [gutteridge 2025-04-28]
 	Updated meta-pkgs/lxqt to 2.2.0 [gutteridge 2025-04-28]
-	Updated lang/gcc14-gnat to 14.2.0 [dkazankov 2025-04-28]
 	Updated devel/libuv to 1.51.0 [adam 2025-04-28]
 	Updated devel/mold to 2.38.0 [adam 2025-04-28]
 	Updated www/hugo to 0.147.0 [ffaubert 2025-04-28]
@@ -4635,7 +4631,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/makeindexk to 2.17nb2 [markd 2025-05-11]
 	Updated textproc/mendexk to 3.8 [markd 2025-05-11]
 	Updated textproc/upmendex to 1.11 [markd 2025-05-11]
-	Updated textproc/xindy to 2.5.1nb12 [markd 2024-03-21]
+	Updated textproc/xindy to 2.5.1nb12 [markd 2025-05-11]
 	Updated print/tex-footmisc to 7.0b [markd 2025-05-11]
 	Updated print/tex-footmisc-doc to 7.0b [markd 2025-05-11]
 	Updated print/tex-latex-bin to 2025 [markd 2025-05-11]
@@ -4697,7 +4693,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/tex-tex4ht-doc to 2025 [markd 2025-05-11]
 	Updated www/ruby-aws-partitions to 1.1102.0 [taca 2025-05-11]
 	Updated chat/gajim to 2.0.4 [gdt 2025-05-11]
-	Updated chat/gajim to 2.1.1 [gdt 2025-05-11]
 	Removed comms/asterisk-sounds-de-x9media [gdt 2025-05-11]
 	Updated meta-pkgs/xfce4 to 4.20.0nb7 [gutteridge 2025-05-11]
 	Updated games/py-renpy to 8.3.7 [ryoon 2025-05-12]
@@ -4804,7 +4799,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/texlive2pkg to 1.14 [markd 2025-05-13]
 	Updated security/libressl to 4.1.0 [schmonz 2025-05-13]
 	Updated security/cfs to 1.5.0 [gdt 2025-05-13]
-	Updated devel/premake5 to beta6 [triaxx 2025-05-13]
+	Updated devel/premake5 to 5.0.0-beta6 [triaxx 2025-05-13]
 	Updated chat/quassel to 0.14.0nb24 [wiz 2025-05-13]
 	Updated www/py-flask to 3.1.1 [adam 2025-05-13]
 	Updated devel/py-maturin to 1.8.6 [adam 2025-05-13]
