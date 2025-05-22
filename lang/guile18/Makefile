@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/07 18:51:56 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/22 11:05:46 gdt Exp $
 
 DISTNAME=		guile-1.8.8
 PKGNAME=		${DISTNAME:S/guile/guile18/}
@@ -6,7 +6,7 @@ PKGREVISION=		13
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
-MAINTAINER=		gdt@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnu.org/software/guile/
 COMMENT=		GNU's Ubiquitous Intelligent Language for Extension (1.8 branch)
 LICENSE=		gnu-lgpl-v2.1
