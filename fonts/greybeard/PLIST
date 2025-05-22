@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/22 17:14:14 vins Exp $
+share/fonts/X11/PCF/gb-11-uni.pcf.gz
+share/fonts/X11/PCF/gb-11b-uni.pcf.gz
+share/fonts/X11/PCF/gb-12-uni.pcf.gz
+share/fonts/X11/PCF/gb-12b-uni.pcf.gz
+share/fonts/X11/PCF/gb-13-uni.pcf.gz
+share/fonts/X11/PCF/gb-13b-uni.pcf.gz
+share/fonts/X11/PCF/gb-14-uni.pcf.gz
+share/fonts/X11/PCF/gb-14b-uni.pcf.gz
+share/fonts/X11/PCF/gb-15-uni.pcf.gz
+share/fonts/X11/PCF/gb-15b-uni.pcf.gz
+share/fonts/X11/PCF/gb-15i-uni.pcf.gz
+share/fonts/X11/PCF/gb-16-uni.pcf.gz
+share/fonts/X11/PCF/gb-16b-uni.pcf.gz
+share/fonts/X11/PCF/gb-16i-uni.pcf.gz
+share/fonts/X11/PCF/gb-17-uni.pcf.gz
+share/fonts/X11/PCF/gb-17b-uni.pcf.gz
+share/fonts/X11/PCF/gb-17i-uni.pcf.gz
+share/fonts/X11/PCF/gb-18-uni.pcf.gz
+share/fonts/X11/PCF/gb-18b-uni.pcf.gz
+share/fonts/X11/PCF/gb-18i-uni.pcf.gz
+share/fonts/X11/PCF/gb-22-uni.pcf.gz
+share/fonts/X11/PCF/gb-22b-uni.pcf.gz
