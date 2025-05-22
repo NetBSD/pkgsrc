@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2025/04/17 14:21:38 nia Exp $
+# $NetBSD: Makefile.common,v 1.46 2025/05/22 19:42:39 nia Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -47,7 +47,7 @@ CONFIGURE_ENV+=		bigendian=yes
 .endif
 
 # fails otherwise due to movz/movn in assembler code
-.if ${MACHINE_ARCH:Mmips64*}
+.if ${MACHINE_ARCH:Mmips64*} || ${MACHINE_ARCH:Mmipsn64*}
 CFLAGS.NetBSD+=		-march=mips4
 .endif
 
