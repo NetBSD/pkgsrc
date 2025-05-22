@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/05/22 09:45:47 nia Exp $
+
+Detect NetBSD/mipsn64 as being a MIPS architecture.
+
+--- configure.ac.orig	2025-05-22 09:41:23.909165803 +0000
++++ configure.ac
+@@ -1044,7 +1044,7 @@ case $host in
+     GMP_INCLUDE_MPN(mips32/mips-defs.m4)
+ 
+     case $host in
+-      [mips64*-*-* | mipsisa64*-*-* | mips*-*-irix[6789]*])
++      [mips64*-*-* | mipsn64*-*-* | mipsisa64*-*-* | mips*-*-irix[6789]*])
+         abilist="n32 64 o32"
+ 
+         cclist_n32="gcc cc"
