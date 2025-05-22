@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/22 13:34:24 taca Exp $
+
+BLAKE2s (pp-0.6.2.gem) = bb3c4aebe0143976c3148408fba2bff75de2efa354a79eab8cb76e358a0d8156
+SHA512 (pp-0.6.2.gem) = 62a1f383fcf2ff6e6da0f8f7b13a64b30f8ec9de4ec58a59ef9e753a347d44563178cb28d2aec541758541103ac30daae9976b1039d1fef4f85416f6873f57a8
+Size (pp-0.6.2.gem) = 11776 bytes
