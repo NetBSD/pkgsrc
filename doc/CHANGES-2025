@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3522 2025/05/22 20:01:09 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.3523 2025/05/22 20:54:31 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5194,3 +5194,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-tornado to 6.5.1 [adam 2025-05-22]
 	Updated devel/p5-Devel-NYTProf to 6.14nb2 [schmonz 2025-05-22]
 	Updated textproc/split-thai to 2.39 [scole 2025-05-22]
+	Added graphics/clearlooks-phenix-theme version 7.1 [nia 2025-05-22]
