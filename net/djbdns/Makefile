@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2025/05/21 22:32:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.76 2025/05/22 04:51:28 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		16
@@ -17,7 +17,7 @@ CONFLICTS+=		djbdnscurve6-[0-9]*
 
 FORCE_C_STD=		c89
 
-SUBST_CLASSES+=		djberrno
+DJB_ERRNO_FIXUP=	error.h
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/12/23 02:43:37 zafer Exp $
+# $NetBSD: Makefile,v 1.29 2025/05/22 04:51:28 schmonz Exp $
 
 DISTNAME=		cdb-0.75
 CATEGORIES=		databases
@@ -11,7 +11,9 @@ LICENSE=		public-domain
 
 CONFLICTS+=		tinycdb-[0-9]*
 
-SUBST_CLASSES+=		djberrno
+FORCE_C_STD=		c99
+
+DJB_ERRNO_FIXUP=	error.h
 
 INSTALLATION_DIRS=	bin include lib
 
