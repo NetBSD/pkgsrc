@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/05/20 15:16:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/22 15:14:14 ryoon Exp $
 
 DISTNAME=	anubis-1.18.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TecharoHQ/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,7 +18,8 @@ SITES.${ASSETS}=	${MASTER_SITE_LOCAL}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${ASSETS}
 
 USE_LANGUAGES=		c # Go
-GO_BUILD_PATTERN=	./cmd/anubis
+GO_BUILD_PATTERN+=	-ldflags="-X github.com/TecharoHQ/anubis.Version=v${PKGVERSION_NOREV}"
+GO_BUILD_PATTERN+=	./cmd/anubis
 
 EGDIR=			share/examples/anubis
 INSTALLATION_DIRS=	${EGDIR}
@@ -26,6 +27,17 @@ PKG_SYSCONFSUBDIR=	anubis
 CONF_FILES+=		${EGDIR}/botPolicies.json ${PKG_SYSCONFDIR}/botPolicies.json
 CONF_FILES+=		${EGDIR}/default.env ${PKG_SYSCONFDIR}/default.env
 
+APACHE_USER?=		www
+APACHE_GROUP?=		www
+PKG_USERS_VARS+=	APACHE_USER
+PKG_GROUPS_VARS+=	APACHE_GROUP
+PKG_GROUPS=		${APACHE_GROUP}
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
+
+FILES_SUBST+=		APACHE_USER=${APACHE_USER}
+FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP}
+
+RCD_SCRIPTS+=		anubis
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/botPolicies.json ${DESTDIR}${PREFIX}/share/examples/anubis
