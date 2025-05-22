@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3510 2025/05/22 07:39:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3511 2025/05/22 07:50:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5184,3 +5184,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-rich-click to 1.8.9 [adam 2025-05-22]
 	Updated lang/nodejs to 24.1.0 [adam 2025-05-22]
 	Updated lang/nodejs22 to 22.16.0 [adam 2025-05-22]
+	Updated devel/py-requirements-parser to 0.13.0 [adam 2025-05-22]
+	Updated security/py-google-auth to 2.40.2 [adam 2025-05-22]
