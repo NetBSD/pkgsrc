@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/09/02 17:15:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/23 09:28:50 jperkin Exp $
 
 DISTNAME=	mg-20240709
 CATEGORIES=	editors
@@ -13,7 +13,7 @@ LICENSE=	public-domain
 
 #FAKE_NCURSES=	yes
 USE_TOOLS+=	install gmake pkg-config
-MAKE_ENV+=	prefix=${PREFIX}
+MAKE_ENV+=	prefix=${PREFIX} INSTALL=${INSTALL:Q}
 MAKE_FILE=	GNUmakefile
 
 CFLAGS.NetBSD+=	-D_OPENBSD_SOURCE
@@ -41,7 +41,7 @@ post-extract:
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/tutorial ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/tutorial
 
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libbsd/buildlink3.mk"
 .endif
 .include "../../devel/ncurses/buildlink3.mk"
