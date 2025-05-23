@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/12/22 22:54:47 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_analytic_purchase-6.2.0.tar.gz) = 25318a7816e3296a0bb4be5409439740dae8a515df966db44493eba19dfd8e47
-SHA512 (tryton-6.2/trytond_analytic_purchase-6.2.0.tar.gz) = d7cdbef623c7efa639fef8cece3d2a471a4249f818542f614d9cc8c1171b9920859652b03eb4cb44c6af0288db045f2fe917c23f786bd97ab291f1fd8a8bec0b
-Size (tryton-6.2/trytond_analytic_purchase-6.2.0.tar.gz) = 23719 bytes

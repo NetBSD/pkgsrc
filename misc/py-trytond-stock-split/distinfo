@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:55 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_stock_split-6.2.0.tar.gz) = 92d9c314d7c89f2084d93aa7f3e39af8be27623c075d6df93352bd20983bd48b
-SHA512 (tryton-6.2/trytond_stock_split-6.2.0.tar.gz) = 669b3796e3d9f667bca0529d35738df3e808fbaf4ac326d15d72537540a8478f90bbcb17304fd3ffba73fe947de2203140532d9ccd919d72f20edc50f810bc4b
-Size (tryton-6.2/trytond_stock_split-6.2.0.tar.gz) = 32253 bytes

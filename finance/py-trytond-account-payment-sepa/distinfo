@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2021/12/22 22:54:46 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_payment_sepa-6.2.1.tar.gz) = 9c5e0429103e2db161e97c25a923fa221c623186e51bb617965c69100b10c409
-SHA512 (tryton-6.2/trytond_account_payment_sepa-6.2.1.tar.gz) = 12e8d4a4528a890e6dd01fa8d82e4a8f50b20473e1932e913af93f0e355aadef99dab8e985db9d9a9870f56f848c3ffa1f06408e719acb4b32a41cb2da16ad47
-Size (tryton-6.2/trytond_account_payment_sepa-6.2.1.tar.gz) = 124325 bytes

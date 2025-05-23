@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:49 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_sale_invoice_grouping-6.2.0.tar.gz) = f96cbe9efe297ef328e04a6f8ae319c68397f1315e00ad380dce5dbe6c2c4aa2
-SHA512 (tryton-6.2/trytond_sale_invoice_grouping-6.2.0.tar.gz) = 6a7b2282c66be5d63a6cedce87ea8e5f50628ca1c134e58e939163dce7876a6c0c439fe77b183ffe32fa8faf3949576083bcf6987f8f2743f7532f3484bef328
-Size (tryton-6.2/trytond_sale_invoice_grouping-6.2.0.tar.gz) = 26625 bytes
