@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3541 2025/05/23 20:02:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3542 2025/05/23 20:21:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5195,6 +5195,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Devel-NYTProf to 6.14nb2 [schmonz 2025-05-22]
 	Updated textproc/split-thai to 2.39 [scole 2025-05-22]
 	Added graphics/clearlooks-phenix-theme version 7.1 [nia 2025-05-22]
+	Updated net/yt-dlp to 2025.5.22 [mrg 2025-05-23]
 	Updated devel/py-pydantic to 2.11.5 [adam 2025-05-23]
 	Updated archivers/py-libarchive-c to 5.3 [adam 2025-05-23]
 	Updated www/hugo to 0.147.5 [triaxx 2025-05-23]
