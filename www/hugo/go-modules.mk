@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.19 2025/05/05 06:49:40 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.20 2025/05/23 12:15:36 triaxx Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.116.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.116.0.zip
@@ -417,11 +417,11 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.20.37.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.20.37.zip
-GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.7.15.mod
-GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.7.15.zip
-GO_MODULE_FILES+=	github.com/tdewolff/test/@v/v1.0.11-0.20231101010635-f1265d231d52.mod
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.23.5.mod
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.23.5.zip
+GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.0.mod
+GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.0.zip
+GO_MODULE_FILES+=	github.com/tdewolff/test/@v/v1.0.11.mod
 GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/tetratelabs/wazero/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/yuin/goldmark-emoji/@v/v1.0.6.mod
