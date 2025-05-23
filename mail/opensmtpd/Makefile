@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/02/25 05:05:15 vins Exp $
+# $NetBSD: Makefile,v 1.32 2025/05/23 18:40:47 vins Exp $
 
-VERSION=	7.6.0p1
-PKGREVISION=	2
+VERSION=	7.7.0p0
 DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
