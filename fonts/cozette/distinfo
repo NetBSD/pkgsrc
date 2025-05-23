@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/05/04 16:30:38 vins Exp $
+$NetBSD: distinfo,v 1.2 2025/05/23 17:12:40 vins Exp $
 
-BLAKE2s (CozetteFonts-v-1-28-0.zip) = 2de59e0727b5964df5f31614f35f9c940867fa736710b07894266d48d60f73ba
-SHA512 (CozetteFonts-v-1-28-0.zip) = f52fd53f7d0435be782a03635671474e11f39e66d44ae29f0feb37360e01dde2e846087b5ede13c7ca224a436308766cd11c5c3cf7c42f9c8f5ca3173494cbde
-Size (CozetteFonts-v-1-28-0.zip) = 4027535 bytes
+BLAKE2s (CozetteFonts-v-1-29-0.zip) = 8086ca0d4031275c6e433e91ad806ab1e4eb9a5e68143201dfdec43d11a6e540
+SHA512 (CozetteFonts-v-1-29-0.zip) = 093c81ddc2e22907c1ee4cc6bcefc57b8df2cebe0fa23d0e7f1491dc3b2c01d607be76ccb2322227197587a854db558465c6f066ae674eb9e6075ccb045a7250
+Size (CozetteFonts-v-1-29-0.zip) = 4661844 bytes
