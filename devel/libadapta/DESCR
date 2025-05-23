@@ -1,0 +1,11 @@
+libAdapta is libAdwaita with theme support and a few extra.
+
+It provides the same features and the same look as libAdwaita by
+default.
+
+In desktop environments which provide theme selection, libAdapta
+apps follow the theme and use the proper window controls.
+
+libAdwaita also provides a compatibility header which makes it easy
+for developers to switch between libAdwaita and libAdapta without
+requiring code changes.
