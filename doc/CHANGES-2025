@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3529 2025/05/23 12:30:54 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3530 2025/05/23 12:47:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5202,3 +5202,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/bacon to 3.14.0 [pin 2025-05-23]
 	Updated devel/feluda to 1.7.0 [pin 2025-05-23]
 	Updated devel/mise to 2025.5.10 [pin 2025-05-23]
+	Updated devel/py-coverage to 7.8.2 [adam 2025-05-23]
+	Updated devel/py-joblib to 1.5.1 [adam 2025-05-23]
