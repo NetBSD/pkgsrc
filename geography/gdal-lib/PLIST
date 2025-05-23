@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/05/10 11:38:35 gdt Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/05/23 10:02:39 nia Exp $
 bin/gdal
 bin/gdal-config
 bin/gdal_contour
@@ -111,7 +111,7 @@ lib/cmake/gdal/GDALConfigVersion.cmake
 lib/gdalplugins/drivers.ini
 lib/libgdal.so
 lib/libgdal.so.37
-lib/libgdal.so.37.3.11.0
+lib/libgdal.so.37.${PKGVERSION}
 lib/pkgconfig/gdal.pc
 man/man1/gdal-config.1
 man/man1/gdal-convert.1
@@ -268,7 +268,7 @@ share/gdal/GDALLogoBW.svg
 share/gdal/GDALLogoColor.svg
 share/gdal/GDALLogoGS.svg
 share/gdal/LICENSE.TXT
-share/gdal/MM_m_idofic.csv
+${PLIST.le}share/gdal/MM_m_idofic.csv
 share/gdal/cubewerx_extra.wkt
 share/gdal/default.rsc
 share/gdal/ecw_cs.wkt
