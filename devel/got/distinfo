@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/05/01 07:46:48 vins Exp $
+$NetBSD: distinfo,v 1.16 2025/05/23 17:41:17 vins Exp $
 
-BLAKE2s (got-portable-0.111.tar.gz) = 7252feaa11045ae26e38bbe0bc9cee59d294b7caf6d825417d0c42349880d087
-SHA512 (got-portable-0.111.tar.gz) = 8e70b5329da44d0069ac2847f1f883fe4978d698ee79c2ce339994d57058a05f2bdcad5df8061a1c71304510aafe7f23b7f99bd810d667563bd05b4626f6a435
-Size (got-portable-0.111.tar.gz) = 1566105 bytes
+BLAKE2s (got-portable-0.112.tar.gz) = 44b5f9face46968002b7840044e0f2ac4e9c47ab2c76174f43f9859f71d97dda
+SHA512 (got-portable-0.112.tar.gz) = bbc091715d701ae0cfd1095e9a3769dcb09fa2873d79d8aa34167853c62e050e044436af0307ce90d24ba9176c9dacbe6965a3f511294075a094e7b8506cb9e9
+Size (got-portable-0.112.tar.gz) = 1568016 bytes
 SHA1 (patch-gotd_log.h) = f978464fe9a16d3b51051aed0611e73308251dfe
