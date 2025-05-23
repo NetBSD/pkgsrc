@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.18 2024/09/02 17:15:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.19 2025/05/23 09:28:50 jperkin Exp $
 
 BLAKE2s (mg-20240709-20240709.tar.gz) = a823ab171ddd7d2be4f8c21266244acac1896d4306171be4949af37f175757d4
 SHA512 (mg-20240709-20240709.tar.gz) = 1715f3378059c995cffd9b7e6f8d237cdbae43e67516542c9ef3a5d30c7d0b78183bce1f21db6570877261c2804258f664199b4a46febbf2c10ec25e08833926
 Size (mg-20240709-20240709.tar.gz) = 159302 bytes
-SHA1 (patch-GNUmakefile) = ec7a636e40a7d307333d9f1da03be3888a88ec26
-SHA1 (patch-af) = 678983bc292b41a2d67f969182bc377a47b89d2b
+SHA1 (patch-GNUmakefile) = be73e37d61abd86a33785db52cee82dd64ab58b0
+SHA1 (patch-af) = ffb9e155564654c5a3204800d22ac5bd78ca6315
 SHA1 (patch-def.h) = fa27b6e7d45c5fcd0f48490e3f515602095cdbd6
+SHA1 (patch-fileio.c) = d0f004976a3e6423556c925704b0edfaf0ddbeda
+SHA1 (patch-openpty.c) = 3066c9ac22fee18d4ed0d7ed5fa896581b964811
 SHA1 (patch-paragraph.c) = d68754b802c99fecb63a6cfa634f0360945f034f
 SHA1 (patch-tags.c) = 1f7bbaf75a8cced86499bc5f8f6426fc6fa1232a
 SHA1 (patch-ttyio.c) = 125cbdf461aec3f629340affc3c9f600bb9d7102
