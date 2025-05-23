@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4476 2025/05/23 13:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4477 2025/05/23 14:37:00 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -939,6 +939,7 @@ SUBDIR+=	ldpc
 SUBDIR+=	leahneukirchen-redo
 SUBDIR+=	lemon
 SUBDIR+=	lettuce
+SUBDIR+=	libadapta
 SUBDIR+=	libadwaita
 SUBDIR+=	libantlr3c
 SUBDIR+=	libappindicator
