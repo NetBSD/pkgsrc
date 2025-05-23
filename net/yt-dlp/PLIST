@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2025/05/01 12:19:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.43 2025/05/23 05:00:38 mrg Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -507,9 +507,6 @@ ${PYSITELIB}/yt_dlp/extractor/canalsurmas.pyo
 ${PYSITELIB}/yt_dlp/extractor/caracoltv.py
 ${PYSITELIB}/yt_dlp/extractor/caracoltv.pyc
 ${PYSITELIB}/yt_dlp/extractor/caracoltv.pyo
-${PYSITELIB}/yt_dlp/extractor/cartoonnetwork.py
-${PYSITELIB}/yt_dlp/extractor/cartoonnetwork.pyc
-${PYSITELIB}/yt_dlp/extractor/cartoonnetwork.pyo
 ${PYSITELIB}/yt_dlp/extractor/cbc.py
 ${PYSITELIB}/yt_dlp/extractor/cbc.pyc
 ${PYSITELIB}/yt_dlp/extractor/cbc.pyo
@@ -1875,9 +1872,6 @@ ${PYSITELIB}/yt_dlp/extractor/olympics.pyo
 ${PYSITELIB}/yt_dlp/extractor/on24.py
 ${PYSITELIB}/yt_dlp/extractor/on24.pyc
 ${PYSITELIB}/yt_dlp/extractor/on24.pyo
-${PYSITELIB}/yt_dlp/extractor/once.py
-${PYSITELIB}/yt_dlp/extractor/once.pyc
-${PYSITELIB}/yt_dlp/extractor/once.pyo
 ${PYSITELIB}/yt_dlp/extractor/ondemandkorea.py
 ${PYSITELIB}/yt_dlp/extractor/ondemandkorea.pyc
 ${PYSITELIB}/yt_dlp/extractor/ondemandkorea.pyo
@@ -2460,9 +2454,6 @@ ${PYSITELIB}/yt_dlp/extractor/spreaker.pyo
 ${PYSITELIB}/yt_dlp/extractor/springboardplatform.py
 ${PYSITELIB}/yt_dlp/extractor/springboardplatform.pyc
 ${PYSITELIB}/yt_dlp/extractor/springboardplatform.pyo
-${PYSITELIB}/yt_dlp/extractor/sprout.py
-${PYSITELIB}/yt_dlp/extractor/sprout.pyc
-${PYSITELIB}/yt_dlp/extractor/sprout.pyo
 ${PYSITELIB}/yt_dlp/extractor/sproutvideo.py
 ${PYSITELIB}/yt_dlp/extractor/sproutvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/sproutvideo.pyo
@@ -3174,6 +3165,37 @@ ${PYSITELIB}/yt_dlp/extractor/youtube/_tab.pyo
 ${PYSITELIB}/yt_dlp/extractor/youtube/_video.py
 ${PYSITELIB}/yt_dlp/extractor/youtube/_video.pyc
 ${PYSITELIB}/yt_dlp/extractor/youtube/_video.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/__init__.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/__init__.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/__init__.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/__init__.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/__init__.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/__init__.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/memory_cache.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/memory_cache.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/memory_cache.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/webpo_cachespec.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/webpo_cachespec.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_builtin/webpo_cachespec.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_director.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_director.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_director.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_provider.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_provider.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_provider.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_registry.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_registry.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/_registry.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/README.md
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/cache.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/cache.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/cache.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/provider.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/provider.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/provider.pyo
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/utils.py
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/utils.pyc
+${PYSITELIB}/yt_dlp/extractor/youtube/pot/utils.pyo
 ${PYSITELIB}/yt_dlp/extractor/zaiko.py
 ${PYSITELIB}/yt_dlp/extractor/zaiko.pyc
 ${PYSITELIB}/yt_dlp/extractor/zaiko.pyo
