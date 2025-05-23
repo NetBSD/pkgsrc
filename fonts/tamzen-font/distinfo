@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:27:24 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/05/23 19:38:04 vins Exp $
 
-BLAKE2s (Tamzen-1.11.5.tar.gz) = b7243ffe8681ec980a93d4807a1891e976f7d4e034ea3e30e1a76e8c71b547fe
-SHA512 (Tamzen-1.11.5.tar.gz) = bf4765664bcea165e329b443bfffca774cacf888dc67f8767b0a1562013270159775a8d7d57331983c69976c7499a5481b6a9401c93d8dc49d39bbf7c1c06268
-Size (Tamzen-1.11.5.tar.gz) = 393833 bytes
+BLAKE2s (Tamzen-1.11.6.tar.gz) = 0d73a16a850383bf2a651e660252f4e37894e0d91ea804014fbe401ceec2d1fb
+SHA512 (Tamzen-1.11.6.tar.gz) = 66e934373826071b1a20f263d3ccb5a7bfb429733a5b3a72fb5bd9bd621b65f1ad694d8b89ef9ec64cb32e9f1e902e907a8344a6b57c6a30cc896e9e4fee5b36
+Size (Tamzen-1.11.6.tar.gz) = 394799 bytes
