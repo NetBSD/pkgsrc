@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3533 2025/05/23 14:12:12 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3534 2025/05/23 14:37:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5311,3 +5311,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/py-trytond-web-user [wiz 2025-05-23]
 	Updated archivers/libzip to 1.11.4 [wiz 2025-05-23]
 	Updated shells/sheldon to 0.8.2 [schmonz 2025-05-23]
+	Added devel/libadapta version 1.5.0 [wiz 2025-05-23]
