@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:53 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_production_routing-6.2.0.tar.gz) = 42bd3d44c9f3e40d39e16a3662a35b2b5dadd9cf83c13bc67136938451b2cb53
-SHA512 (tryton-6.2/trytond_production_routing-6.2.0.tar.gz) = 291bea929bbaf735ce779276037bdbf1df6b2dfd9c12fd089ba383aba04b64b5d21b108d19ff895749ffc4c417734530d77b3789786f88fa86c9bd5f38ac9089
-Size (tryton-6.2/trytond_production_routing-6.2.0.tar.gz) = 26128 bytes

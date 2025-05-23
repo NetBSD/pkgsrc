@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/12/22 22:54:46 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_payment_clearing-6.2.0.tar.gz) = 25084bcd349a1f5ff9b0d2be61c499814f6ec3d14a69aeabe73844bd42a15f33
-SHA512 (tryton-6.2/trytond_account_payment_clearing-6.2.0.tar.gz) = 34961e411b91696222c1753fa122eddebf6ff1fbb06ba4677d240ac86dfdeb7a3d4f975e286bc9b18f98802d6d2f2cdd858f23d30a172a23865127a61e0fca7b
-Size (tryton-6.2/trytond_account_payment_clearing-6.2.0.tar.gz) = 31923 bytes

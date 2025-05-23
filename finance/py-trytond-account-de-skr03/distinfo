@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:44 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_de_skr03-6.2.0.tar.gz) = 8f7c3b88d53d70200f615492f614eab42d9c1b56af85697f0efd1859f237d98a
-SHA512 (tryton-6.2/trytond_account_de_skr03-6.2.0.tar.gz) = 6fcf69bcb1e917c59afca22d726588ea0b974eb6f337d306e028fae626931200b768589b241a3088769acc30f7f98436be9769bb66765a5d6eed8e667a575aa5
-Size (tryton-6.2/trytond_account_de_skr03-6.2.0.tar.gz) = 54484 bytes

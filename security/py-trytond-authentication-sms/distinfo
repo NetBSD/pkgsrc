@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:55 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_authentication_sms-6.2.0.tar.gz) = 4ef96e67b6fe0d3409a7b1cacd97d6573b523eb8fc1adcb4f8d8b8496d9d7a9e
-SHA512 (tryton-6.2/trytond_authentication_sms-6.2.0.tar.gz) = 5eb64b972661d4e773c4bd9aeb562070ecac174890ed7371ada0ea9fb908f2821ce77d08aae02ba87161366a2f123d6546077d1abd858f31514cf3c30a519c22
-Size (tryton-6.2/trytond_authentication_sms-6.2.0.tar.gz) = 25059 bytes
