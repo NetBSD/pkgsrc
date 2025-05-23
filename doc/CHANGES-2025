@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3526 2025/05/23 12:27:12 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3527 2025/05/23 12:28:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5199,3 +5199,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-libarchive-c to 5.3 [adam 2025-05-23]
 	Updated www/hugo to 0.147.5 [triaxx 2025-05-23]
 	Updated shells/oh-my-posh to 25.23.2 [pin 2025-05-23]
+	Updated devel/bacon to 3.14.0 [pin 2025-05-23]
