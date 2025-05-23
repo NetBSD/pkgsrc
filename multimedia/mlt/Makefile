@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2025/04/24 14:15:18 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2025/05/23 11:01:40 wiz Exp $
 
 DISTNAME=	mlt-7.18.0
 PKGREVISION=	20
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mltframework.org/
 COMMENT=	Open source multimedia framework
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
