@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3540 2025/05/23 19:19:32 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3541 2025/05/23 20:02:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5318,3 +5318,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/keychain to 2.9.5 [vins 2025-05-23]
 	Updated mail/opensmtpd to 7.7.0p0 [vins 2025-05-23]
 	Updated shells/yash to 2.59 [vins 2025-05-23]
+	Updated net/wireguard-go to 0.0.20250522 [adam 2025-05-23]
+	Updated net/wireguard-tools to 1.0.20250521 [adam 2025-05-23]
