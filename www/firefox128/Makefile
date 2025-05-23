@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18.2.2 2025/05/02 12:47:01 maya Exp $
+# $NetBSD: Makefile,v 1.18.2.3 2025/05/23 21:20:49 maya Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		128.10
-MOZ_BRANCH_MINOR=	.0esr
+MOZ_BRANCH_MINOR=	.1esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//:S/firefox-/firefox128-/}
