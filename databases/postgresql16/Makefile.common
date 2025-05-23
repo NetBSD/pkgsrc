@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2025/05/09 13:46:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2025/05/23 12:51:41 jperkin Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -26,10 +26,12 @@ HOMEPAGE=	https://www.postgresql.org/
 LICENSE=	postgresql-license
 
 CONFLICTS+=	postgresql-[0-9]*
+CONFLICTS+=	postgresql1[0-57-9]-[0-9]*
 CONFLICTS+=	postgresql[2-9][0-9]-[0-9]*
 
 .if !empty(PKGNAME:M*-*-*)
 module=		${PKGNAME:C/-[0-9].*$//:C/^.*-//}
+CONFLICTS+=	postgresql1[0-57-9]-${module}-[0-9]*
 CONFLICTS+=	postgresql[2-9][0-9]-${module}-[0-9]*
 .endif
 
