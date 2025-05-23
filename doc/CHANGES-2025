@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3537 2025/05/23 17:41:54 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3538 2025/05/23 17:47:57 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5315,3 +5315,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/cozette to 1.29.0 [vins 2025-05-23]
 	Updated sysutils/fastfetch to 2.44.0 [vins 2025-05-23]
 	Updated devel/got to 0.112 [vins 2025-05-23]
+	Updated security/keychain to 2.9.5 [vins 2025-05-23]
