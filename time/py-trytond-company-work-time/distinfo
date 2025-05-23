@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2021/12/22 22:54:56 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_company_work_time-6.2.0.tar.gz) = fc31684241a83d21daf8058f2dba1dc1bc6bda9f3383c71ef75caa99dcf4ad5c
-SHA512 (tryton-6.2/trytond_company_work_time-6.2.0.tar.gz) = 1b58888decd5a12a74aab8a7fd19468aa0fa7a3be24beb0fad2d947288e31d6743e111ed7802289aa3888b72bd0fbedb01c9faed87d2b51335627d2f3c4606df
-Size (tryton-6.2/trytond_company_work_time-6.2.0.tar.gz) = 23439 bytes

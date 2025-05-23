@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:45 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_dunning_fee-6.2.0.tar.gz) = b40707f17d14a867d95deaf8eea860d90fd2313f89c6af64cd59e97cc70f8154
-SHA512 (tryton-6.2/trytond_account_dunning_fee-6.2.0.tar.gz) = 862cec411a99117c3fa71da4fc27d9f56a3d1361dd5534f5169d3e5cb04809e628912f0b47ec2598f5c3cd7e0a637af0ce8658e598c497f9aafaa99d913f570a
-Size (tryton-6.2/trytond_account_dunning_fee-6.2.0.tar.gz) = 29385 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2025/05/19 11:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2025/05/23 13:19:27 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -53,7 +53,6 @@ SUBDIR+=	php83-extensions
 SUBDIR+=	php84-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
-SUBDIR+=	py-tryton-platform
 SUBDIR+=	qmail-server
 SUBDIR+=	qt6
 SUBDIR+=	rime-data

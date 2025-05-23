@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:49 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_purchase_requisition-6.2.0.tar.gz) = 765ac4e8b57b7b1ab1336a8dba87465c573b3de58b58cdb0e974d11c659aef41
-SHA512 (tryton-6.2/trytond_purchase_requisition-6.2.0.tar.gz) = 7d258a39f695673af18f0231515283f18ddbe98716634fc241178b47d8451d099360b57119e2396fd441270ead064883c660bcde41d010cc684a2f66cd32d477
-Size (tryton-6.2/trytond_purchase_requisition-6.2.0.tar.gz) = 39610 bytes
