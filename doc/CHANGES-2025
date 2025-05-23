@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3532 2025/05/23 14:07:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3533 2025/05/23 14:12:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed time/py-trytond-timesheet-cost [wiz 2025-05-23]
 	Removed www/py-trytond-web-user [wiz 2025-05-23]
 	Updated archivers/libzip to 1.11.4 [wiz 2025-05-23]
+	Updated shells/sheldon to 0.8.2 [schmonz 2025-05-23]
