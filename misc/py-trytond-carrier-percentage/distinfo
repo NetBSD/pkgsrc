@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:51 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_carrier_percentage-6.2.0.tar.gz) = 9a5810413c9ec7914de64946ede843dfb47fb340387c61affae0179bd511df70
-SHA512 (tryton-6.2/trytond_carrier_percentage-6.2.0.tar.gz) = ef1ec174e6804e32d4efbb9d2ab9e65f14b6f6e1cc09f59b9e4b99d97c1d620b0880615979ff480aca53dccf9a2d400bde2f97082a03dc6c8988d5421fb2ee5d
-Size (tryton-6.2/trytond_carrier_percentage-6.2.0.tar.gz) = 25154 bytes

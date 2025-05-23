@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:47 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_tax_rule_country-6.2.0.tar.gz) = 67d7d3428d24f749b75b3fd0c54c7725e2934dad8f6b8e3f20f66f3da886d1d1
-SHA512 (tryton-6.2/trytond_account_tax_rule_country-6.2.0.tar.gz) = 1a2473b09465de0ec39341299a7ed69b75acef8b6c976d5c448b3d6d3156862cfe33f58fa55a6272754824ac7068462192c46d6660f1eb12fd7f918021ef8194
-Size (tryton-6.2/trytond_account_tax_rule_country-6.2.0.tar.gz) = 26258 bytes

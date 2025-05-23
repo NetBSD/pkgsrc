@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:49 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_sale_credit_limit-6.2.0.tar.gz) = db1db3114bfddad5f5a363489596252961e13a9465c4384ebe7da8577aff719a
-SHA512 (tryton-6.2/trytond_sale_credit_limit-6.2.0.tar.gz) = c121d5d9e430d05da33ced45a9a9a6a2b5300554bc366ecb8c1a0871ed48f5b1080814bd265983f19270278687672e9e3ad93f7e5fd92a6a0d2dda04b3dd0850
-Size (tryton-6.2/trytond_sale_credit_limit-6.2.0.tar.gz) = 20685 bytes

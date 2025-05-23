@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:44 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_ldap_authentication-6.2.0.tar.gz) = d62a2c11542d1f8242078991461a7de2ddac41607e68629ecca08360ee4c83d1
-SHA512 (tryton-6.2/trytond_ldap_authentication-6.2.0.tar.gz) = b806e1df5cffea54322749beb7e9e5bd5c5a83e3161e16751b8ea70c08705df6c3676db108daa1f5775e016cf98f1fa11757f0ede43685eeab90a9fe5a3ce214
-Size (tryton-6.2/trytond_ldap_authentication-6.2.0.tar.gz) = 24586 bytes

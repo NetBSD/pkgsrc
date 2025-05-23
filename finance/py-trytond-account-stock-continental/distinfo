@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/12/22 22:54:46 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_account_stock_continental-6.2.0.tar.gz) = 4612e3235f0dfd68339c55e1c721c52ab9df33de0f8c168e3a1b50ede6530598
-SHA512 (tryton-6.2/trytond_account_stock_continental-6.2.0.tar.gz) = c20a8b3a143063fcd37a8efeb50b9cb5feece8f47bec6e63217b30b73d5b577f4476b18b6959a188cce99a2d0bcdb37d5ea4a504bb7dc1dc26da262ebe6e69fa
-Size (tryton-6.2/trytond_account_stock_continental-6.2.0.tar.gz) = 32659 bytes

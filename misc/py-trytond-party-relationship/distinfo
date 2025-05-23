@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/12/22 22:54:52 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_party_relationship-6.2.0.tar.gz) = 0215b5d29901b0239c92fd7bd979d6335a6bccf9860c5681850499704344fe08
-SHA512 (tryton-6.2/trytond_party_relationship-6.2.0.tar.gz) = 2fdd978b19f6de86cdf62fc054d1233f5dc9dc4566827bf26954cb9e7321eb6b89d62ed3f5ef81132b687eff2f929be44558790d4b7fc8f12fc7bb638dff4704
-Size (tryton-6.2/trytond_party_relationship-6.2.0.tar.gz) = 29061 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/12/22 22:54:51 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_google_maps-6.2.0.tar.gz) = 45f22ca39800437a7883acee7d666cf8dd228dae5202a11ffb2a53244daf3a50
-SHA512 (tryton-6.2/trytond_google_maps-6.2.0.tar.gz) = 1cfb6dd584841c4f4d0c6b5af63ec702185fc327b862872219174f2a1fbf9270d32e768f52dc70779d897d32a8939fe891a0bb1f231a9fd55e1f8c01ed60b4af
-Size (tryton-6.2/trytond_google_maps-6.2.0.tar.gz) = 22049 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/12/22 22:54:55 mef Exp $
-
-BLAKE2s (tryton-6.2/trytond_stock_package_shipping_ups-6.2.0.tar.gz) = b0bba0935a7c5efd5d98cb549257c6b100f41d99ee2355f98dc7ab50f630feed
-SHA512 (tryton-6.2/trytond_stock_package_shipping_ups-6.2.0.tar.gz) = 520d8eac817488f3074b38b7ad6c7325482f90184fe8d803d3abb6cbf941196bab5bfd33fdbcadb49ce271289bdf8f41bc650a398c01e17142896ea91b15ebfb
-Size (tryton-6.2/trytond_stock_package_shipping_ups-6.2.0.tar.gz) = 34764 bytes

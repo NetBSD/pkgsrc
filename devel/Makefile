@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4475 2025/05/17 06:31:42 taca Exp $
+# $NetBSD: Makefile,v 1.4476 2025/05/23 13:19:07 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2871,7 +2871,6 @@ SUBDIR+=	py-project-api
 SUBDIR+=	py-project-metadata
 SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-propcache
-SUBDIR+=	py-proteus
 SUBDIR+=	py-proto-plus
 SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
@@ -3198,8 +3197,6 @@ SUBDIR+=	py-traitlets
 SUBDIR+=	py-transitions
 SUBDIR+=	py-treq
 SUBDIR+=	py-trio
-SUBDIR+=	py-tryton
-SUBDIR+=	py-trytond
 SUBDIR+=	py-tubes
 SUBDIR+=	py-txaio
 SUBDIR+=	py-txrequests

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2025/03/07 13:19:41 pho Exp $
+# $NetBSD: Makefile,v 1.142 2025/05/23 13:19:26 wiz Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -108,8 +108,6 @@ SUBDIR+=	py-maxminddb
 SUBDIR+=	py-obspy
 SUBDIR+=	py-owslib
 SUBDIR+=	py-proj
-SUBDIR+=	py-trytond-country
-SUBDIR+=	py-trytond-google-maps
 SUBDIR+=	qgis
 SUBDIR+=	qt6-qtlocation
 SUBDIR+=	qt6-qtpositioning
