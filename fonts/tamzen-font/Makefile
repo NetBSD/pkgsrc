@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2021/07/16 15:40:33 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/23 19:38:04 vins Exp $
 
-DISTNAME=	Tamzen-1.11.5
+DISTNAME=	Tamzen-1.11.6
 PKGNAME=	${DISTNAME:tl:S/tamzen-/tamzen-font-/1}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sunaku/}
 GITHUB_PROJECT=	tamzen-font
 GITHUB_TAG=	${DISTNAME}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/sunaku/tamzen-font
 COMMENT=	Bitmapped programming font, based on Tamsyn
 LICENSE=	isc # ish
