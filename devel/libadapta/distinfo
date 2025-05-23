@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/23 14:36:48 wiz Exp $
+
+BLAKE2s (libadapta-1.5.0.tar.gz) = 5477d8a75878c62207492fbc1f97cd41c7ad5b8132cd7dc660cadbd64abb313e
+SHA512 (libadapta-1.5.0.tar.gz) = 068b854d8eb04e8a33c96320aad373e1cc9f3dbed9187c0ce70b41e33c4bd5c81136e0b3033c0b91125ae64e021a1a715c208e87e4e9053cbb204d40ea058696
+Size (libadapta-1.5.0.tar.gz) = 2754718 bytes
