@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3524 2025/05/23 06:43:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3525 2025/05/23 12:15:52 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5197,3 +5197,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/clearlooks-phenix-theme version 7.1 [nia 2025-05-22]
 	Updated devel/py-pydantic to 2.11.5 [adam 2025-05-23]
 	Updated archivers/py-libarchive-c to 5.3 [adam 2025-05-23]
+	Updated www/hugo to 0.147.5 [triaxx 2025-05-23]
