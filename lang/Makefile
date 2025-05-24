@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.758 2025/05/07 14:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.759 2025/05/24 00:57:38 schmonz Exp $
 #
 
 COMMENT=	Programming languages
@@ -53,6 +53,7 @@ SUBDIR+=	elixir
 SUBDIR+=	elk
 SUBDIR+=	elm-lang
 SUBDIR+=	embryo
+SUBDIR+=	endbasic
 SUBDIR+=	erlang
 SUBDIR+=	erlang-doc
 SUBDIR+=	erlang-luerl
