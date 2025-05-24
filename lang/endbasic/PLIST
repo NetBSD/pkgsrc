@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/24 00:57:33 schmonz Exp $
+bin/endbasic
