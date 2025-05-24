@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3545 2025/05/24 06:31:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3546 2025/05/24 14:41:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5324,3 +5324,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/endbasic version 0.11.1 [schmonz 2025-05-24]
 	Updated devel/kdiff3 to 1.12.3 [wiz 2025-05-24]
 	Updated net/dnsdist to 1.9.10 [wiz 2025-05-24]
+	Updated www/anubis to 1.18.0nb3 [ryoon 2025-05-24]
