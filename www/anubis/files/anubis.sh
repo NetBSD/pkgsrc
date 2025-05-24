@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: anubis.sh,v 1.1 2025/05/22 15:14:15 ryoon Exp $
+# $NetBSD: anubis.sh,v 1.2 2025/05/24 14:41:18 ryoon Exp $
 #
 # PROVIDE: anubis
 # REQUIRE: DAEMON
@@ -18,9 +18,12 @@ anubis_group="@APACHE_GROUP@"
 start_precmd="anubis_precmd"
 start_cmd="anubis_start"
 start_postcmd="anubis_poststart"
+anubis_environment_file="@PREFIX@/etc/anubis/default.env"
 
 anubis_precmd()
 {
+	export $(@XARGS@ < ${anubis_environment_file})
+
 	if [ ! -d @VARBASE@/run/${name} ]; then
 		@MKDIR@ @VARBASE@/run/${name}
 		@CHOWN@ ${anubis_user}:${anubis_group} @VARBASE@/run/${name}
@@ -29,7 +32,7 @@ anubis_precmd()
 
 anubis_start()
 {
-	@SU@ -m ${anubis_user} -c "${command} -serve-robots-txt" >> @VARBASE@/log/anubis.log 2>&1 &
+	@SU@ -m ${anubis_user} -c "${command}" >> @VARBASE@/log/anubis.log 2>&1 &
 }
 
 anubis_poststart() {
