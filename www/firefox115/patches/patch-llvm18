@@ -1,3 +1,8 @@
+$NetBSD: patch-llvm18,v 1.2 2025/05/24 05:09:12 gutteridge Exp $
+
+Fix build with clang18 (including Rust code generation).
+Via https://github.com/freebsd/freebsd-ports/commit/3c6cc9a9508c7b947bf9ed5d08e48056729c2b69
+
 From cd10f3ba0d83f34ca978cc4c7a552b72fdd068aa Mon Sep 17 00:00:00 2001
 From: David Tolnay <dtolnay@gmail.com>
 Date: Tue, 28 Nov 2023 11:18:39 -0800
