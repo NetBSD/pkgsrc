@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1088 2025/05/22 20:54:15 nia Exp $
+# $NetBSD: Makefile,v 1.1089 2025/05/24 00:30:20 nia Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -388,6 +388,7 @@ SUBDIR+=	nvtv
 SUBDIR+=	ocaml-cairo
 SUBDIR+=	ocrad
 SUBDIR+=	oculante
+SUBDIR+=	onestepback-gtk-theme
 SUBDIR+=	opencolorio
 SUBDIR+=	opencsg
 SUBDIR+=	opencv

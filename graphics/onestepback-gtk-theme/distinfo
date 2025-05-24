@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/05/24 00:30:20 nia Exp $
+
+BLAKE2s (OneStepBack-v0.997.zip) = 3f659db5aa4ee3c37e4b1c7b3b8916358bd0926f08e67602957ad76a01ad8601
+SHA512 (OneStepBack-v0.997.zip) = 24c49465ad540d6ac5e62b853854e956183c490c41c2c09188935c8dc007a758a58d8c599c284dd2ebcb32b4b37129b4e2d7c42f0a687fc784d9f9e654bbafb2
+Size (OneStepBack-v0.997.zip) = 43231 bytes
