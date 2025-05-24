@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25835 2025/05/23 11:02:49 wiz Exp $
+$NetBSD: TODO,v 1.25836 2025/05/24 00:59:15 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -318,11 +318,6 @@ Suggested new packages
 	Frescobaldi
 	https://www.frescobaldi.org
 	LilyPond sheet music text editor
-
-	EndBASIC
-	https://www.endbasic.dev
-	BASIC environment with a REPL, a web interface, a graphical
-	console, and RPi support written in Rust
 
 	NORM
 	https://github.com/USNavalResearchLaboratory/norm
