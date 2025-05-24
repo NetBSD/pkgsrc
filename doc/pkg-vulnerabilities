@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.376 2025/05/24 06:23:31 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.377 2025/05/24 06:47:25 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19322,7 +19322,7 @@ apache-ant>=1.10<1.10.8	sensitive-information-disclosure	https://nvd.nist.gov/vu
 libexif<0.6.22	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-0093
 transmission<3.00	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10756
 freerdp>1.0.0<2.0.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-11521
-ansible-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-10744
+ansible-base<2.11	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-10744
 freerdp>1.0.0<2.0.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-11522
 freerdp>1.0.0<2.0.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-11523
 freerdp>1.0.0<2.0.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2020-11524
