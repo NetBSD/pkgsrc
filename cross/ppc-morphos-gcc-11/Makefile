@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/20 20:26:08 js Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/24 22:44:01 js Exp $
 
 DISTNAME=	sdk-source-20230510
 PKGNAME=	ppc-morphos-gcc-11-11.3.0
@@ -53,7 +53,7 @@ pre-patch:
 	# minimal changes that are there to the .ac file *and* is broken (it
 	# contains misordered hunks). Better to throw it away and regenerate it
 	# (regenerated in post-patch).
-	${RUN} cd ${WRKSRC} && ${PREFIX}/bin/gsed -i '5471,22839d' ../gcc-11-morphos.diff
+	${RUN} cd ${WRKSRC} && gsed -i '5471,22839d' ../gcc-11-morphos.diff
 	# Out of memory with gpatch on Darwin, so use nbpatch (which works
 	# after dropping the broken part above).
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../gcc-11-morphos.diff
@@ -65,9 +65,9 @@ pre-patch:
 post-patch:
 	# Change /gg to ${PREFIX}/gg
 	${RUN} cd ${WRKSRC} && \
-		${PREFIX}/bin/gsed -i 's,/gg/,${PREFIX}/gg/,g' \
+		gsed -i 's,/gg/,${PREFIX}/gg/,g' \
 			gcc/config/rs6000/morphos.h && \
-		${PREFIX}/bin/gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
+		gsed -i 's,/gg$$,${PREFIX}/gg,g' gcc/config.host
 	${RUN} cd ${WRKSRC}/libcc1 && autoreconf
 	${RUN} cd ${WRKSRC}/libstdc++-v3 && autoreconf
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
