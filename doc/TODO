@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25837 2025/05/24 06:07:32 gutteridge Exp $
+$NetBSD: TODO,v 1.25838 2025/05/24 06:22:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,14 +382,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-25.1.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
-	o PageEdit-2.4.0
+	o PageEdit-2.5.0
 	o QuantLib-1.22
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SQLiteCpp-2.5.0
-	o Sigil-2.4.2
+	o Sigil-2.5.0
 	o SOGo-5.12.1
 	o SOPE-5.12.1
 	o TiffIO-140a
@@ -645,6 +645,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcal-4.1
 	o gcc-15.1
 	o gcc-mips-current-7.1.0
+	o gcc14-14.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gdb-16.1
@@ -806,7 +807,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
-	o kdiff3-1.12.3
 	o kdsoap-1.10.0
 	o kea-2.6.2
 	o keybinder-0.3.2
