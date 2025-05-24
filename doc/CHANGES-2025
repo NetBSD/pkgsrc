@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3543 2025/05/24 00:57:43 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3544 2025/05/24 06:22:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/wireguard-go to 0.0.20250522 [adam 2025-05-23]
 	Updated net/wireguard-tools to 1.0.20250521 [adam 2025-05-23]
 	Added lang/endbasic version 0.11.1 [schmonz 2025-05-24]
+	Updated devel/kdiff3 to 1.12.3 [wiz 2025-05-24]
