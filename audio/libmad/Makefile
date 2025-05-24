@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/03/16 16:23:22 nia Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/24 13:14:55 nia Exp $
 
 DISTNAME=	libmad-0.15.1b
 PKGREVISION=	3
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	lib/pkgconfig
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_ARCH:Mmips64*)
+.if ${MACHINE_ARCH:Mmips64*} || ${MACHINE_ARCH:Mmipsn64*}
 # Disable MIPS-specific ASM on MIPS64 due to:
 # error: impossible constraint in 'asm'
 CONFIGURE_ARGS+=	--enable-fpm=64bit
