@@ -1,3 +1,8 @@
+$NetBSD: patch-rust-1.78.0,v 1.2 2025/05/24 05:09:12 gutteridge Exp $
+
+Fix build with rust >=1.78.0.
+Via https://github.com/freebsd/freebsd-ports/commit/cc6466e821dd5655bbc18ffd61d3527228a94015
+
 Adapted from https://hg.mozilla.org/mozilla-central/rev/1db2ef126a6a
 --
 
