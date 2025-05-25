@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/25 13:01:56 adam Exp $
 
-DISTNAME=	pocl-6.0
-PKGREVISION=	5
+DISTNAME=	pocl-7.0
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -63,4 +62,5 @@ PKGCONFIG_OVERRIDE+=	pocl.pc.in.cmake
 .include "../../parallel/opencl-headers/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
