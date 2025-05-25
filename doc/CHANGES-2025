@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3555 2025/05/25 18:19:22 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3556 2025/05/25 21:49:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5337,3 +5337,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/zig to 0.14.1 [adam 2025-05-25]
 	Updated mail/exmh to 2.9.0 [vins 2025-05-25]
 	Updated x11/worker to 5.2.1 [vins 2025-05-25]
+	Updated ham/trustedQSL to 2.8 [makoto 2025-05-25]
