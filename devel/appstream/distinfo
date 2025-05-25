@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/12/09 11:37:31 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/05/25 11:32:27 gdt Exp $
 
-BLAKE2s (appstream-1.0.4.tar.gz) = 41844d7f9a3b195e5388d6e73f94e020167c7f6d0441292e613d049ba8477e44
-SHA512 (appstream-1.0.4.tar.gz) = 3e58355b4733cb0ee9e94c6e8a49d17ba901f211a6e4a5d096a8f23a463a82bd839989f5f52c72515a17e02cf21f9224d01145dfb1a2e23cf34cda44d20187e7
-Size (appstream-1.0.4.tar.gz) = 4070253 bytes
+BLAKE2s (appstream-1.0.5.tar.gz) = ec1004077d630d26e85c474dce72bdcb599cb6bee3539c809519a23fafc3efc6
+SHA512 (appstream-1.0.5.tar.gz) = 604b1e467e189540c17e72a6df10a7cfd0b89603975aa04790d4e971c5b2f9861d8f0e62ca88148dde66ecff759000fd641bd1a3697ec1d07041a730964ce2e1
+Size (appstream-1.0.5.tar.gz) = 4084441 bytes
 SHA1 (patch-src_as-system-info.c) = 7d96a06658739979901e526126755b374fcf4aad
