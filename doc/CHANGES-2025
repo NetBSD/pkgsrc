@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3550 2025/05/25 06:09:02 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3551 2025/05/25 07:30:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5330,3 +5330,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/meson to 1.8.1 [adam 2025-05-25]
 	Updated devel/py-freezegun to 1.5.2 [adam 2025-05-25]
 	Updated archivers/rar to 7.11 [vins 2025-05-25]
+	Updated sysutils/py-fsspec to 2025.5.1 [adam 2025-05-25]
+	Updated graphics/py-tifffile to 2025.5.24 [adam 2025-05-25]
