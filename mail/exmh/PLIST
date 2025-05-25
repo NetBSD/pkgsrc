@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/25 15:04:07 vins Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
 bin/exmh-strip
+bin/exmhcomp
 bin/ftp.expect
+bin/inc.expect
 lib/${PKGNAME}/PgpDecryptExpect
 lib/${PKGNAME}/addr.tcl
 lib/${PKGNAME}/aliases.tcl
@@ -15,9 +17,32 @@ lib/${PKGNAME}/autorefile.tcl
 lib/${PKGNAME}/background.tcl
 lib/${PKGNAME}/base64.tcl
 lib/${PKGNAME}/bindings.tcl
+lib/${PKGNAME}/bitmaps/abort.xbm
+lib/${PKGNAME}/bitmaps/address.xbm
+lib/${PKGNAME}/bitmaps/bind.xbm
+lib/${PKGNAME}/bitmaps/bitmaps.defaults
+lib/${PKGNAME}/bitmaps/commit.xbm
+lib/${PKGNAME}/bitmaps/compose.xbm
+lib/${PKGNAME}/bitmaps/delete.xbm
+lib/${PKGNAME}/bitmaps/forward.xbm
+lib/${PKGNAME}/bitmaps/getmail.xbm
+lib/${PKGNAME}/bitmaps/help.xbm
+lib/${PKGNAME}/bitmaps/link.xbm
+lib/${PKGNAME}/bitmaps/move.xbm
+lib/${PKGNAME}/bitmaps/new.xbm
+lib/${PKGNAME}/bitmaps/phone.xbm
+lib/${PKGNAME}/bitmaps/pref.xbm
+lib/${PKGNAME}/bitmaps/quote.xbm
+lib/${PKGNAME}/bitmaps/scan.xbm
+lib/${PKGNAME}/bitmaps/search.xbm
+lib/${PKGNAME}/bitmaps/send.xbm
+lib/${PKGNAME}/bitmaps/sign.xbm
+lib/${PKGNAME}/bitmaps/unmark.xbm
+lib/${PKGNAME}/bitmaps/write.xbm
 lib/${PKGNAME}/bogo.tcl
 lib/${PKGNAME}/busy.tcl
 lib/${PKGNAME}/buttons.tcl
+lib/${PKGNAME}/calendar.tcl
 lib/${PKGNAME}/clink.au
 lib/${PKGNAME}/crypt.tcl
 lib/${PKGNAME}/cutbuffer.tcl
@@ -181,6 +206,7 @@ lib/${PKGNAME}/sequences.tcl
 lib/${PKGNAME}/seqwin.tcl
 lib/${PKGNAME}/sound.tcl
 lib/${PKGNAME}/source.tcl
+lib/${PKGNAME}/stacktrace.tcl
 lib/${PKGNAME}/tclIndex
 lib/${PKGNAME}/text.tcl
 lib/${PKGNAME}/textButton.tcl
@@ -199,3 +225,4 @@ lib/${PKGNAME}/widgets.tcl
 lib/${PKGNAME}/xns.tcl
 lib/${PKGNAME}/xnsgetmail.exp
 man/man1/exmh.1
+share/doc/exmh/README.pkgsrc
