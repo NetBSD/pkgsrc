@@ -1,23 +1,7 @@
-$NetBSD: distinfo,v 1.11 2025/05/09 06:05:18 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/05/25 13:01:56 adam Exp $
 
-BLAKE2s (pocl-6.0.tar.gz) = 41c872fa3c88593a4f9eecc1788cabb68b0c34906ec9d88ab545f449f3a0ce75
-SHA512 (pocl-6.0.tar.gz) = a24efadbbb81c810cd5c4bbb8abfa75b9bbdfeca786e8471dd75d40a78024d04c1b5c5a7114e75e1eb70a1b6a3756bb47ba741de0f1c4d1416fbce4688d62cc0
-Size (pocl-6.0.tar.gz) = 2466652 bytes
-SHA1 (patch-cmake_LLVM.cmake) = 4c056279c8cc9dd4cbf9d7e9eda2940f0090fc2c
-SHA1 (patch-include___kernel.h) = 4b99b4c70772583a869313539fb843ac4e09b3d0
-SHA1 (patch-lib_CL_clReleaseCommandBufferKHR.c) = e7ff54e189527b58ff719c51e0d365b3096a7607
-SHA1 (patch-lib_CL_devices_proxy_pocl__proxy.c) = 774f4a9425c7d5f2820d4c8858a90ce8299b8897
-SHA1 (patch-lib_CL_pocl__llvm__metadata.cc) = 123c43656130e86ec242012b05654aed320e2ac6
-SHA1 (patch-lib_CL_pocl__llvm__utils.cc) = 2dbc7848bebb9b8d37bffb8b367c465982a0d746
-SHA1 (patch-lib_llvmopencl_CMakeLists.txt) = 7e7dcb754a097496cc76c65c10a4d20d857f3ade
-SHA1 (patch-lib_llvmopencl_DebugHelpers.cc) = 01638488299b5f409d9f1c3478862647b0d9d0f7
-SHA1 (patch-lib_llvmopencl_Flatten.cc) = 8775190c709326d2629b6572244d0e1f319023e9
-SHA1 (patch-lib_llvmopencl_FlattenBarrierSubs.cc) = fdc2d1da22ed23dea333f5a6b465d15a635c7283
-SHA1 (patch-lib_llvmopencl_FlattenGlobals.cc) = b828b0263117c910b6cd1502543cf5791379a9d4
-SHA1 (patch-lib_llvmopencl_LLVMUtils.cc) = 6c665e1dde05357bc9461048172d3fe8013eb302
-SHA1 (patch-lib_llvmopencl_MinLegalVecSize.cc) = b7dd9c3df472eb81754e046b2169b8f1b7013d48
-SHA1 (patch-lib_llvmopencl_OptimizeWorkItemFuncCalls.cc) = 9f61cb59e614a22c72b1d289d87cf038b81a07b2
-SHA1 (patch-lib_llvmopencl_VariableUniformityAnalysis.cc) = be800311ff41a322e4b64eba513b50568b4c7cbe
-SHA1 (patch-lib_llvmopencl_Workgroup.cc) = 258e7b75b7ea9478f7c956744716a7367a8cbbf8
-SHA1 (patch-lib_llvmopencl_WorkitemHandler.cc) = 8b8ccf078250a6378c6f8125692cc6d46abe1364
-SHA1 (patch-lib_llvmopencl_linker.cpp) = 94b313e8639870fd06af84e9ad1257c5eb171867
+BLAKE2s (pocl-7.0.tar.gz) = 37653f86567d491c83081fc729d1c073154cdb95aa658adb0bb72ebffaf07fbc
+SHA512 (pocl-7.0.tar.gz) = cbf0da705eef41d3b1c0710b3d19b2f72ab63acd0a16cea2251ddf796e66b13d38fff97a154f618a38333a121db82e497eb17fa4b45c2a50eb8968786fca7b55
+Size (pocl-7.0.tar.gz) = 3766036 bytes
+SHA1 (patch-lib_CL_devices_CMakeLists.txt) = 8e3bc72f8e1787de3cc0f052679cc8a372cb6435
+SHA1 (patch-lib_CL_pocl__cl.h) = 919b76aea30270d03158a4d20fe3acf30d0956ae

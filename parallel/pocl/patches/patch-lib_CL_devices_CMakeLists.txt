@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_CL_devices_CMakeLists.txt,v 1.1 2025/05/25 13:01:56 adam Exp $
+
+On Darwin, use correct install_name.
+
+--- lib/CL/devices/CMakeLists.txt.orig	2025-05-25 07:45:29.079693588 +0000
++++ lib/CL/devices/CMakeLists.txt
+@@ -35,6 +35,9 @@ if(ENABLE_LOADABLE_DRIVERS)
+     if(WIN32)
+       set_target_properties(${name} PROPERTIES PREFIX "")
+     endif()
++    if(APPLE)
++      set_target_properties(${name} PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${POCL_INSTALL_PRIVATE_LIBDIR_REL}")
++    endif()
+     install(TARGETS ${name}
+             LIBRARY DESTINATION ${POCL_INSTALL_PRIVATE_LIBDIR_REL}
+             COMPONENT "lib"
