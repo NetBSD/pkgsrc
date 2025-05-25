@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3552 2025/05/25 11:32:34 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3553 2025/05/25 13:02:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5333,3 +5333,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fsspec to 2025.5.1 [adam 2025-05-25]
 	Updated graphics/py-tifffile to 2025.5.24 [adam 2025-05-25]
 	Updated devel/appstream to 1.0.5 [gdt 2025-05-25]
+	Updated parallel/pocl to 7.0 [adam 2025-05-25]
+	Updated lang/zig to 0.14.1 [adam 2025-05-25]
