@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/05/21 12:14:45 adam Exp $
+$NetBSD: distinfo,v 1.19 2025/05/25 07:28:51 adam Exp $
 
-BLAKE2s (fsspec-2025.5.0.tar.gz) = 0614f783ff59ace09d4efd3c4b5848defab7e7ec409020f97f18a32c75c0a9bc
-SHA512 (fsspec-2025.5.0.tar.gz) = 757deec14b8532a6d225db38700b056c967d70cfb22f648fa006c18eb8fe843f9ab51417d7d783fd8c2e1162b905476010cad71f1ae5b25fec0c68e02cc3da44
-Size (fsspec-2025.5.0.tar.gz) = 300989 bytes
+BLAKE2s (fsspec-2025.5.1.tar.gz) = 776b1838cf4f733bf3b8cbf9de7f3473def4fcdb22a0c0d968a529c72ca2dcce
+SHA512 (fsspec-2025.5.1.tar.gz) = 4bf0ec70007e9dd5f68803b90db73d400f0d71a2725f4cc4d3a7a98a73ec4674d35ca06fbb04e4f54d081b9035c110c380c0a84597623f899699658d44c598d2
+Size (fsspec-2025.5.1.tar.gz) = 303033 bytes
