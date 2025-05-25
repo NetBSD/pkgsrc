@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.295 2025/05/04 12:47:23 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.296 2025/05/25 12:42:05 manu Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -26,7 +26,7 @@ USE_LANGUAGES+=		c c++
 # For nested constant initializer support in rlbox, requires 8.
 GCC_REQD+=		8
 
-TOOL_DEPENDS+=		cbindgen>=0.26.0:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.28.0:../../devel/cbindgen
 
 .if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
@@ -257,6 +257,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 # See build/moz.configure/nspr.configure
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
+BUILDLINK_API_DEPENDS.icu+=	icu>=76.1
 .include "../../textproc/icu/buildlink3.mk"
 # See build/moz.configure/nss.configure
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.109
