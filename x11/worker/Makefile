@@ -1,29 +1,40 @@
-# $NetBSD: Makefile,v 1.7 2015/07/04 16:18:43 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/05/25 18:18:07 vins Exp $
 
-DISTNAME=	worker-2.14.1
-PKGREVISION=	1
-CATEGORIES=	x11
+DISTNAME=	worker-5.2.1
+CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
+EXTRACT_SUFX=	.tar.zst
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.boomerangsworld.de/cms/worker/
-COMMENT=	Highly configurable two-panes file manager for X11
+MAINTAINER=	dvollen@gmail.com
+HOMEPAGE=	http://www.boomerangsworld.de/cms/worker/downloads/
+COMMENT=	Orthodox file manager for the X Window System
+LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-GNU_CONFIGURE=	YES
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
-#DEPENDS+=	xview-config>=3.2.1:../../x11/xview-config
-#DEPENDS+=	xview-lib>=3.2.1:../../x11/xview-lib
-#DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config bash:run
 
-REPLACE_BASH+=	scripts/*.sh scripts/*r
-USE_TOOLS+=	bash:run
+PKGCONFIG_OVERRIDE+=	pkgconfig/worker.pc.in
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+GNU_CONFIGURE=	yes
 
+CONFIGURE_ARGS+=	--without-avfs
+CONFIGURE_ARGS+=	--without-hal
+
+REPLACE_BASH+=		scripts/*.sh scripts/*r
+REPLACE_PYTHON+=	scripts/*.py
+
+.include "options.mk"
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../sysutils/file/buildlink3.mk"
+.include "../../lang/python/application.mk"
+
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
