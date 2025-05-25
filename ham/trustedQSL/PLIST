@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/03/07 13:49:08 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/05/25 21:49:39 mef Exp $
 bin/tqsl
 include/adif.h
 include/cabrillo.h
@@ -29,6 +29,7 @@ share/TrustedQSL/help/tqslapp/addcert2.bmp
 share/TrustedQSL/help/tqslapp/addcert3.bmp
 share/TrustedQSL/help/tqslapp/addcertaccept.htm
 share/TrustedQSL/help/tqslapp/addcertreq.htm
+share/TrustedQSL/help/tqslapp/addctype.bmp
 share/TrustedQSL/help/tqslapp/additional-info.htm
 share/TrustedQSL/help/tqslapp/addstnl0.bmp
 share/TrustedQSL/help/tqslapp/backuprestore.htm
@@ -122,6 +123,7 @@ share/TrustedQSL/help/tqslapp/stnloc3.bmp
 share/TrustedQSL/help/tqslapp/stnloc4.bmp
 share/TrustedQSL/help/tqslapp/stnloc5.bmp
 share/TrustedQSL/help/tqslapp/stnprop.bmp
+share/TrustedQSL/help/tqslapp/sync.htm
 share/TrustedQSL/help/tqslapp/tqslapp.hhp
 share/TrustedQSL/help/tqslapp/tqslstyle.css
 share/TrustedQSL/help/tqslapp/unlock.bmp
@@ -130,6 +132,7 @@ share/TrustedQSL/help/tqslapp/update.htm
 share/TrustedQSL/help/tqslapp/update1.bmp
 share/TrustedQSL/help/tqslapp/update2.bmp
 share/TrustedQSL/languages.dat
+share/TrustedQSL/prefixes.dat
 share/TrustedQSL/vuccgrids.dat
 share/applications/org.arrl.trustedqsl.desktop
 share/icons/hicolor/128x128/apps/org.arrl.trustedqsl.png
