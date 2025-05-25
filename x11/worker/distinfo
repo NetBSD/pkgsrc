@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:34:31 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/05/25 18:18:07 vins Exp $
 
-BLAKE2s (worker-2.14.1.tar.gz) = 1d4b3a9db08a5960e1cd8b63479766571b37f2797bf45418f392815c01dab5d6
-SHA512 (worker-2.14.1.tar.gz) = 0d2ade2ddbcf15a03bcfdf88b81ba0706a760d91b0598261fa1b9a5db1be9c991207e55427cf4aabbc5aac3160783ae92a2113b2409bf7451696f260ff97d189
-Size (worker-2.14.1.tar.gz) = 1000621 bytes
-SHA1 (patch-aa) = a2b89fba47a8d51e808a76bce8e2c1ce028c8572
-SHA1 (patch-src_nwc__dir.cc) = 96c298e10907fe2817180d62b4159976824e894f
-SHA1 (patch-src_nwc__dir.hh) = d78e06991cca2e9b7a6e99f616e33260dc2f005b
-SHA1 (patch-src_searchop.cc) = 68ac802931e489ca362cee34f59c721b60112df7
+BLAKE2s (worker-5.2.1.tar.zst) = 24da0e64887b17c022f81f917ad4aa91e413be473565302b2e9d8374a864ebd3
+SHA512 (worker-5.2.1.tar.zst) = 9528efb88c719ba492f26fc85a47d3097201aea5798e196d718d7354f7db5b95cef957c230cf62af3829f802e9dd8bcfa2b95fd9942822c504739b40acabdd96
+Size (worker-5.2.1.tar.zst) = 1399203 bytes
