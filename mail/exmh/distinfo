@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:54:00 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/05/25 15:04:07 vins Exp $
 
-BLAKE2s (exmh-2.7.2/exmh-2.7.2.tar.gz) = f5b73b6917efb8357083caf16bc9ae77cab16868439cd148294f2078c95792a6
-SHA512 (exmh-2.7.2/exmh-2.7.2.tar.gz) = 7004a4b9fdfce38fb791323ed36c9b79bf28c78367a9f0589f558383e503443de0ff4df4b46de4c9765a9f3d2c16505096b938cec1f9104da4dd33e9a22f347d
-Size (exmh-2.7.2/exmh-2.7.2.tar.gz) = 1081601 bytes
+BLAKE2s (exmh-2.9.0/exmh-2.9.0.tar.gz) = 029251f1be91ff40bae462d87c6e755a9660bab855774a2cecf93e053029a52d
+SHA512 (exmh-2.9.0/exmh-2.9.0.tar.gz) = 37897d7c173a125c9a4d1787624748fb49b124d94e910124bbd33f42ec9245c0b478e59f03107700e22e190d7a31597ed3c8ad28a7af7482d9f7fa010b2d6954
+Size (exmh-2.9.0/exmh-2.9.0.tar.gz) = 1111608 bytes
 SHA1 (patch-aw) = 396ef41611de11a9ba48f15711e20f4e44f73da9
-SHA1 (patch-lib_mime.tcl) = 180bef533f94eb07d46874ee06d724c0fa2c0e32
-SHA1 (patch-ta) = 0670c357f0317a4b4f7684425bce8f30d7ef9cd2
-SHA1 (patch-tb) = b5f51dabf9df11420de9b50aaf7dc422eff1f3ad
-SHA1 (patch-tc) = 87ed70fd2957821c2fab06c0dc33da446dffdb6f
-SHA1 (patch-td) = cb777e02b854f82c49e20b19c08b4746dcfe76c2
-SHA1 (patch-te) = 18363fc7d6d52d8301a8d53aadb0b287e2879ccc
-SHA1 (patch-tf) = c1d29d5712b3ba7d5248094359ca3a8d434a8228
+SHA1 (patch-lib_fontsel.tcl) = ead525efcb81d719e7c9ad056f97d0290fdd281f
+SHA1 (patch-lib_html__tags.tcl) = 2a6e6857511ddcbab5e8455e7910e1334a2729fa
+SHA1 (patch-lib_html__text.tcl) = 648a24d03ed8a31ea81173430b4c8f915e42b759

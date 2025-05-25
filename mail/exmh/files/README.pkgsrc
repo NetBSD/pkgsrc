@@ -1,0 +1,21 @@
++----------------------------------------------------------------------
+| EXMH extentions 
++---------------------------------------------------------------------
+
+EXMH has a number of optional features that require additional
+software to be installed. You may want to consider some or all of
+these packages:
+
+ * databases/openldap-client
+ * mail/faces
+ * mail/procmail
+ * textproc/antiword
+ * textproc/glimpse
+ * textproc/ispell
+ * audio/rplay
+
+In addition, exmh supports pgp encryption through:
+
+ * security/gnupg[1-2]
+ * security/pgp5
+-----------------------------------------------------------------------
