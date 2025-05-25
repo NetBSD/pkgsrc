@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3551 2025/05/25 07:30:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3552 2025/05/25 11:32:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5332,3 +5332,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/rar to 7.11 [vins 2025-05-25]
 	Updated sysutils/py-fsspec to 2025.5.1 [adam 2025-05-25]
 	Updated graphics/py-tifffile to 2025.5.24 [adam 2025-05-25]
+	Updated devel/appstream to 1.0.5 [gdt 2025-05-25]
