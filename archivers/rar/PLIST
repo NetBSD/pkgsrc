@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/25 16:59:31 vins Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/05/25 06:08:30 vins Exp $
 bin/rar
 lib/default.sfx
+man/man1/rar.1
 share/doc/rar/acknow.txt
-share/doc/rar/license.txt
-share/doc/rar/rar.txt
-share/doc/rar/rarfiles.lst
 share/doc/rar/readme.txt
 share/doc/rar/whatsnew.txt
+share/examples/rar/rarfiles.lst
+@pkgdir etc

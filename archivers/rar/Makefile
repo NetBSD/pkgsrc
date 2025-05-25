@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2023/09/20 20:15:52 vins Exp $
+# $NetBSD: Makefile,v 1.59 2025/05/25 06:08:30 vins Exp $
 
-DISTNAME=	rarlinux${EMUL_PLATFORM:S|linux-x86_64|-x64|:S|linux-i386|-x32|}-${PKGVER:S/.//}
-PKGNAME=	rar-${PKGVER}
-PKGVER=		6.23
+DISTNAME=	rarlinux${EMUL_PLATFORM:S|linux-x86_64|-x64|:S|linux-i386|-x32|}-${PKGVERSION_NOREV:S/.//}
+PKGNAME=	rar-7.11
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlabs.com/rar/
 
@@ -18,19 +17,25 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 EMUL_PLATFORMS=		linux-x86_64
 EMUL_MODULES.linux=	base
 
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/rar
 USE_LANGUAGES=	# none
 
-DOCSDIR=		share/doc/rar
+DOCDIR=		share/doc/${PKGBASE}
+EGDIR=		share/examples/${PKGBASE}
+CONF_FILES+=	${EGDIR}/rarfiles.lst ${PKG_SYSCONFDIR}/rarfiles.lst
 
-INSTALLATION_DIRS=	bin etc lib ${DOCSDIR}
+PKG_DOCS=	acknow.txt readme.txt whatsnew.txt
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/rar
+
+INSTALLATION_DIRS=	bin etc lib ${DOCDIR} ${EGDIR} ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rar ${DESTDIR}${PREFIX}/bin/rar
-
 	${INSTALL_LIB} ${WRKSRC}/default.sfx ${DESTDIR}${PREFIX}/lib
-
-	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DESTDIR}${PREFIX}/${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*txt ${DESTDIR}${PREFIX}/${DOCSDIR}
+	${INSTALL_MAN} ${WRKSRC}/rar.txt		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rar.1
+	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}	\
+		${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DESTDIR}${PREFIX}/${EGDIR}
 .include "../../mk/bsd.pkg.mk"
