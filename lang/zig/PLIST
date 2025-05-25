@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/05/09 07:43:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/05/25 13:02:37 adam Exp $
 bin/zig
 lib/zig/c.zig
 lib/zig/compiler/aro/aro.zig
@@ -5118,6 +5118,7 @@ lib/zig/libc/include/loongarch64-linux-gnusf/bits/timesize.h
 lib/zig/libc/include/loongarch64-linux-gnusf/bits/wordsize.h
 lib/zig/libc/include/loongarch64-linux-gnusf/fpu_control.h
 lib/zig/libc/include/loongarch64-linux-gnusf/gnu/lib-names.h
+lib/zig/libc/include/loongarch64-linux-gnusf/gnu/stubs-lp64s.h
 lib/zig/libc/include/loongarch64-linux-gnusf/gnu/stubs.h
 lib/zig/libc/include/loongarch64-linux-gnusf/ieee754.h
 lib/zig/libc/include/loongarch64-linux-gnusf/sys/asm.h
