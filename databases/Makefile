@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.729 2025/05/23 13:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.730 2025/05/26 15:30:21 taca Exp $
 
 COMMENT=	Databases
 
@@ -446,7 +446,6 @@ SUBDIR+=	ruby-datamapper
 SUBDIR+=	ruby-dbd-mysql
 SUBDIR+=	ruby-dbd-odbc
 SUBDIR+=	ruby-dbd-pg
-SUBDIR+=	ruby-dbd-sqlite
 SUBDIR+=	ruby-dbd-sqlite3
 SUBDIR+=	ruby-dbi
 SUBDIR+=	ruby-dbm
