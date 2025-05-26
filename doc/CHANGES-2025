@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3560 2025/05/26 01:37:46 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3561 2025/05/26 05:09:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5342,3 +5342,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Cucumber-TagExpressions to 6.2.0 [schmonz 2025-05-26]
 	Updated devel/p5-Test-BDD-Cucumber to 0.87 [schmonz 2025-05-26]
 	Updated www/tipidee to 0.0.6.0nb1 [schmonz 2025-05-26]
+	Updated security/py-cryptography to 45.0.3 [adam 2025-05-26]
+	Updated security/py-cryptography_vectors to 45.0.3 [adam 2025-05-26]
