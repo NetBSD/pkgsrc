@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3582 2025/05/26 15:41:00 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3583 2025/05/26 15:48:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed databases/ruby-sqlite [taca 2025-05-26]
 	Removed databases/ruby-ldap [taca 2025-05-26]
 	Removed devel/ruby-redmine50 [taca 2025-05-26]
+	Removed mail/ruby-mail27 [taca 2025-05-26]
