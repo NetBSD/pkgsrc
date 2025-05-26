@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3564 2025/05/26 07:00:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3565 2025/05/26 08:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5350,3 +5350,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-configargparse to 1.7.1 [adam 2025-05-26]
 	Updated graphics/tesseract to 5.5.1 [adam 2025-05-26]
 	Updated net/rclone to 1.69.3 [adam 2025-05-26]
+	Updated databases/openldap to 2.6.10 [adam 2025-05-26]
+	Updated shells/nushell to 0.104.1 [adam 2025-05-26]
