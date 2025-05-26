@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/05/13 03:52:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2025/05/26 01:37:41 schmonz Exp $
 
 DISTNAME=		tipidee-0.0.6.0
 MANPAGES_VERSION=	0.0.5.0.1
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${HOMEPAGE}
 MANPAGES_DIST=		tipidee-man-pages-${MANPAGES_VERSION}.tar.gz
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-pkgconfig
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	pre-configure
 SUBST_FILES.sysconfdir=	${WRKMANSRC}/man*/*
-SUBST_SED.sysconfdir=	-e 's|/etc/tipidee|/etc/pkg/tipidee|g'
+SUBST_SED.sysconfdir=	-e 's|/etc/tipidee|${PKG_SYSCONFDIR}/tipidee|g'
 
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES+=		${PREFIX}/${EGDIR}/tipidee.conf \
