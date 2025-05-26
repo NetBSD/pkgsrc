@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2025/05/18 10:02:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2025/05/26 06:46:16 wiz Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyi
@@ -87,11 +87,11 @@ ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyi
 ${PYSITELIB}/Crypto/Cipher/_mode_gcm.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_kw.py
-${PYSITELIB}/Crypto/Cipher/_mode_kw.pyc
-${PYSITELIB}/Crypto/Cipher/_mode_kw.pyo
+${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_mode_kw.pyc
+${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_mode_kw.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_kwp.py
-${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyc
-${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyo
+${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyc
+${PLIST.py3x}${PYSITELIB}/Crypto/Cipher/_mode_kwp.pyo
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.py
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.pyc
 ${PYSITELIB}/Crypto/Cipher/_mode_ocb.pyi
