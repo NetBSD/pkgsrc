@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3563 2025/05/26 05:18:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3564 2025/05/26 07:00:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5348,3 +5348,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruamel-yaml to 0.18.11 [adam 2025-05-26]
 	Updated textproc/py-jsonschema-specifications to 2025.4.1 [adam 2025-05-26]
 	Updated devel/py-configargparse to 1.7.1 [adam 2025-05-26]
+	Updated graphics/tesseract to 5.5.1 [adam 2025-05-26]
+	Updated net/rclone to 1.69.3 [adam 2025-05-26]
