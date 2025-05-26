@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/02/11 14:17:25 taca Exp $
+$NetBSD: distinfo,v 1.5 2025/05/26 15:23:07 taca Exp $
 
-BLAKE2s (approvals-0.0.26.gem) = b8286efe9ede5df97867fcd07d3083829f5967efac31088e36839faa8c9d1f82
-SHA512 (approvals-0.0.26.gem) = d779ba470a181dc54d3343c786104fa514b255885b6fbe9fde6491d6bd91149e938d1179e9494018ffaeb9747b4021c5c451b67e4af69a8edc671239027b70d1
-Size (approvals-0.0.26.gem) = 35840 bytes
+BLAKE2s (approvals-0.1.7.gem) = 976b0357d657bfc17dd126d3c1b4335579bd86959d1c0e952ee07c4673e35e27
+SHA512 (approvals-0.1.7.gem) = 10aaf37ff57440b082bec23d6c75a76fa432b244ff1c7710073e814762eb253966096bfd265c6401cdc8ae57e3fc3470a0b891090ccf24d252c00a61d04f7024
+Size (approvals-0.1.7.gem) = 39424 bytes
