@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3570 2025/05/26 14:58:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3571 2025/05/26 15:03:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libxslt to 1.1.43 [nia 2025-05-26]
 	Updated math/xgap to 4.32nb1 [wiz 2025-05-26]
 	Updated devel/ruby-io-event to 1.10.1 [taca 2025-05-26]
+	Updated security/ruby-metasploit-payloads to 2.0.221 [taca 2025-05-26]
