@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/04/22 19:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/05/26 05:18:16 adam Exp $
 
-DISTNAME=	ConfigArgParse-1.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	configargparse-1.7.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/ConfigArgParse/}
 
@@ -16,8 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	${DISTNAME:tl}
 
 # as of 1.7
 # 6 failed, 1887 passed, 1 skipped, 1 warning
