@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3580 2025/05/26 15:33:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3581 2025/05/26 15:35:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5367,3 +5367,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/pear-Crypt_GPG to 1.6.11 [taca 2025-05-26]
 	Removed databases/ruby-dbd-sqlite [taca 2025-05-26]
 	Removed databases/ruby-sqlite [taca 2025-05-26]
+	Removed databases/ruby-ldap [taca 2025-05-26]
