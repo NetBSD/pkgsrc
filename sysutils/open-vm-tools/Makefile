@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.140 2025/05/13 03:50:40 adam Exp $
+# $NetBSD: Makefile,v 1.141 2025/05/26 07:20:23 adam Exp $
 
 OVTVER=		12.5.2
 DISTNAME=	open-vm-tools-${OVTVER}-24697584
 PKGNAME=	open-vm-tools-${OVTVER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vmware/}
-GITHUB_RELEASE=	${OVTVER}
+GITHUB_RELEASE=	stable-${OVTVER}
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://github.com/vmware/open-vm-tools
