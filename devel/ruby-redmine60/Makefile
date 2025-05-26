@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/05/17 07:25:35 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/05/26 15:54:07 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -16,7 +16,7 @@ NO_BUILD=	yes
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	31 32 33
+RUBY_VERSIONS_ACCEPTED=	32 33
 RUBY_RAILS_ACCEPTED=	72
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -53,10 +53,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 .if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.8<4:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.4.8:../../net/ruby-net-imap
-.  if ${RUBY_VER} < 32
-DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.2:../../net/ruby-net-pop
-DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.3.3:../../net/ruby-net-smtp
-.  endif
 .endif
 
 .include "options.mk"
