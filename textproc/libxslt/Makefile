@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2025/02/09 00:28:20 rillig Exp $
+# $NetBSD: Makefile,v 1.137.2.1 2025/05/26 14:17:00 maya Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -37,6 +37,10 @@ BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 CONFIGURE_ARGS+=	LIBGCRYPT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/libgcrypt-config
 CONFIGURE_ARGS+=	XML_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE:Q}/bin/xml2-config
 .endif
+
+# matching old build system defaults
+CONFIGURE_ARGS+=	--with-crypto
+CONFIGURE_ARGS+=	--with-plugins
 
 .include "../../security/libgcrypt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
