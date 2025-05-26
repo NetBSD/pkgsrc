@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/31 08:42:55 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/26 15:37:19 nia Exp $
 
 DISTNAME=	assimp-5.4.3
 CATEGORIES=	multimedia
@@ -16,9 +16,9 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	assimp.pc.in
 
 CMAKE_CONFIGURE_ARGS+=	-DASSIMP_BUILD_ZLIB=OFF
+CMAKE_CONFIGURE_ARGS+=	-DASSIMP_WARNINGS_AS_ERRORS=OFF
 
-BUILDLINK_TRANSFORM+=	rm:-Werror
-
+.include "options.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
