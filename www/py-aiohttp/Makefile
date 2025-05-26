@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2025/04/28 07:30:01 adam Exp $
+# $NetBSD: Makefile,v 1.88 2025/05/26 09:41:15 adam Exp $
 
-DISTNAME=	aiohttp-3.11.18
+DISTNAME=	aiohttp-3.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.3.0:../../net/py-aiohappyeyeballs
+DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.5.0:../../net/py-aiohappyeyeballs
 DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.1.2:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-frozenlist>=1.1.1:../../devel/py-frozenlist

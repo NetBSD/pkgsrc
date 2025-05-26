@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/04/13 18:59:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/05/26 09:41:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -60,6 +60,12 @@ ${PYSITELIB}/aiohttp/client.pyo
 ${PYSITELIB}/aiohttp/client_exceptions.py
 ${PYSITELIB}/aiohttp/client_exceptions.pyc
 ${PYSITELIB}/aiohttp/client_exceptions.pyo
+${PYSITELIB}/aiohttp/client_middleware_digest_auth.py
+${PYSITELIB}/aiohttp/client_middleware_digest_auth.pyc
+${PYSITELIB}/aiohttp/client_middleware_digest_auth.pyo
+${PYSITELIB}/aiohttp/client_middlewares.py
+${PYSITELIB}/aiohttp/client_middlewares.pyc
+${PYSITELIB}/aiohttp/client_middlewares.pyo
 ${PYSITELIB}/aiohttp/client_proto.py
 ${PYSITELIB}/aiohttp/client_proto.pyc
 ${PYSITELIB}/aiohttp/client_proto.pyo
