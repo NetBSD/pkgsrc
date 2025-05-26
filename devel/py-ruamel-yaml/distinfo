@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.42 2025/01/12 10:25:43 wiz Exp $
+$NetBSD: distinfo,v 1.43 2025/05/26 05:11:37 adam Exp $
 
-BLAKE2s (ruamel.yaml-0.18.10.tar.gz) = 2ff5986450e5e3265fbe9a8f6a8d2513ff65d77cc462dbdacf2e4c0574fab2e5
-SHA512 (ruamel.yaml-0.18.10.tar.gz) = fe3c85c55d344f33d4ca7a7b85381258bbd8b6d32249ac93b529dab7d68f84b536c531fcefd77d5c4fec5cab92595896414022ff8a53666de99502d89feaa74a
-Size (ruamel.yaml-0.18.10.tar.gz) = 143447 bytes
+BLAKE2s (ruamel.yaml-0.18.11.tar.gz) = d81b33bacf863fafffd4b2fb5c9289d6df33a297a5c743e99af1e2c1768c33c7
+SHA512 (ruamel.yaml-0.18.11.tar.gz) = dd397a5cb8c9a80795fb13b3d5830aa35e1a592a449f94d385267b995017889651e415b6170fc22516e66e8c50bc2cf25c5593e490af87e8eb83b3f1b17d3564
+Size (ruamel.yaml-0.18.11.tar.gz) = 144299 bytes
 SHA1 (patch-setup.py) = 1883f23fedba174b8f31c7f19e88bd836c893dab
