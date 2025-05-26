@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3586 2025/05/26 16:00:19 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3587 2025/05/26 18:48:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5373,3 +5373,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed mail/ruby-roadie30-rails [taca 2025-05-26]
 	Removed textproc/ruby-redcarpet35 [taca 2025-05-26]
 	Removed net/ruby-net-pop [taca 2025-05-26]
+	Updated www/nghttp3 to 1.10.0 [adam 2025-05-26]
+	Updated net/ngtcp2 to 1.13.0 [adam 2025-05-26]
