@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2022/10/09 08:26:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/26 15:12:11 taca Exp $
 
-DISTNAME=	snaky_hash-2.0.1
+DISTNAME=	snaky_hash-2.0.3
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
