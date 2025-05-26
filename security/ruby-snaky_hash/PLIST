@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/11 05:35:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/05/26 15:12:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
@@ -7,6 +7,8 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/snaky_hash.rb
+${GEM_LIBDIR}/lib/snaky_hash/extensions.rb
+${GEM_LIBDIR}/lib/snaky_hash/serializer.rb
 ${GEM_LIBDIR}/lib/snaky_hash/snake.rb
 ${GEM_LIBDIR}/lib/snaky_hash/string_keyed.rb
 ${GEM_LIBDIR}/lib/snaky_hash/symbol_keyed.rb
