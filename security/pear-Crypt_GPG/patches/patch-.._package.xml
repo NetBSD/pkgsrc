@@ -1,11 +1,11 @@
-$NetBSD: patch-.._package.xml,v 1.13 2025/05/19 15:38:45 taca Exp $
+$NetBSD: patch-.._package.xml,v 1.14 2025/05/26 15:25:26 taca Exp $
 
 * Drop MD5 for replacing shbang line.
 
---- ../package.xml.orig	2025-04-06 08:59:28.000000000 +0000
+--- ../package.xml.orig	2025-05-22 11:46:29.000000000 +0000
 +++ ../package.xml
-@@ -66,7 +66,7 @@ CI: Add PHP 8.4 [alec]
-    <file baseinstalldir="/" md5sum="d7899b9899240edab4f00f02a52a9794" name="data/pinentry-cli.xml" role="data">
+@@ -63,7 +63,7 @@ Validate gpgconf binary on object destru
+    <file baseinstalldir="/" md5sum="9cfa42ba70191426df2cb70f69aa810b" name="data/pinentry-cli.xml" role="data">
      <tasks:replace from="@package-version@" to="version" type="package-info" />
     </file>
 -   <file baseinstalldir="/" md5sum="52bc75f20871601fa26b09d5e80edf43" name="scripts/crypt-gpg-pinentry" role="script">
