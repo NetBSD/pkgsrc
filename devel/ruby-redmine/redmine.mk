@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.13 2025/02/09 10:25:57 taca Exp $
+# $NetBSD: redmine.mk,v 1.14 2025/05/26 15:40:42 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -9,7 +9,7 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSION_DEFAULT
 #	Select default Redmine version.
 #
-#	Possible values: 50 51 60
+#	Possible values: 51 60
 #	Default: 60
 #
 #
@@ -17,7 +17,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
-#	Possible values: 50 51 60
+#	Possible values: 51 60
 #	Default: 60
 #
 #
@@ -25,7 +25,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VER
 #	Redmine version.
-#	Possible values: 50 51 60
+#	Possible values: 51 60
 #	Default: 60
 #
 # RM_DIR
@@ -39,7 +39,7 @@ PRINT_PLIST_AWK+=	/^${RM_DIR:S|/|\\/|g}/ { gsub(/^${RM_DIR:S|/|\\/|g}/, "$${RM_D
 .include "../../lang/ruby/rubyversion.mk"
 
 RM_VERSION_DEFAULT?=	60
-RM_VERSIONS_SUPPORTED?=	60 51 50
+RM_VERSIONS_SUPPORTED?=	60 51
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
