@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/04/14 04:59:14 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/05/26 09:37:19 adam Exp $
 
-BLAKE2s (authlib-1.5.2.tar.gz) = b847592c514a627ce891b7ba29a173f74c2c88b906f3a3a973a5972056096e9b
-SHA512 (authlib-1.5.2.tar.gz) = ac7a989f646e34d9b712d951a7024e5dbab9103b922152ce54840f60be208ffde8761a64bf4a49937edf9bddd974bbe04ee849848022248f5c5fd95667a555ed
-Size (authlib-1.5.2.tar.gz) = 153000 bytes
+BLAKE2s (authlib-1.6.0.tar.gz) = fac770d9caf6a09c88990f9a5bb716861938676bf47a3d6722720ab98ae16ce3
+SHA512 (authlib-1.6.0.tar.gz) = 83980b44c3f5f5fe8f6ace5463b1b7c88198767f03bbf85ee1524f578753b628aeff258e1925dfd10bc7581935598f04802b0cff7ed486e05b1a1a6c7c2e5901
+Size (authlib-1.6.0.tar.gz) = 158371 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 04:59:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/26 09:37:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -379,6 +379,9 @@ ${PYSITELIB}/authlib/oauth2/rfc6749/grants/refresh_token.pyo
 ${PYSITELIB}/authlib/oauth2/rfc6749/grants/resource_owner_password_credentials.py
 ${PYSITELIB}/authlib/oauth2/rfc6749/grants/resource_owner_password_credentials.pyc
 ${PYSITELIB}/authlib/oauth2/rfc6749/grants/resource_owner_password_credentials.pyo
+${PYSITELIB}/authlib/oauth2/rfc6749/hooks.py
+${PYSITELIB}/authlib/oauth2/rfc6749/hooks.pyc
+${PYSITELIB}/authlib/oauth2/rfc6749/hooks.pyo
 ${PYSITELIB}/authlib/oauth2/rfc6749/models.py
 ${PYSITELIB}/authlib/oauth2/rfc6749/models.pyc
 ${PYSITELIB}/authlib/oauth2/rfc6749/models.pyo
@@ -532,6 +535,21 @@ ${PYSITELIB}/authlib/oauth2/rfc9068/token.pyo
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.py
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyc
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyo
+${PYSITELIB}/authlib/oauth2/rfc9101/__init__.py
+${PYSITELIB}/authlib/oauth2/rfc9101/__init__.pyc
+${PYSITELIB}/authlib/oauth2/rfc9101/__init__.pyo
+${PYSITELIB}/authlib/oauth2/rfc9101/authorization_server.py
+${PYSITELIB}/authlib/oauth2/rfc9101/authorization_server.pyc
+${PYSITELIB}/authlib/oauth2/rfc9101/authorization_server.pyo
+${PYSITELIB}/authlib/oauth2/rfc9101/discovery.py
+${PYSITELIB}/authlib/oauth2/rfc9101/discovery.pyc
+${PYSITELIB}/authlib/oauth2/rfc9101/discovery.pyo
+${PYSITELIB}/authlib/oauth2/rfc9101/errors.py
+${PYSITELIB}/authlib/oauth2/rfc9101/errors.pyc
+${PYSITELIB}/authlib/oauth2/rfc9101/errors.pyo
+${PYSITELIB}/authlib/oauth2/rfc9101/registration.py
+${PYSITELIB}/authlib/oauth2/rfc9101/registration.pyc
+${PYSITELIB}/authlib/oauth2/rfc9101/registration.pyo
 ${PYSITELIB}/authlib/oauth2/rfc9207/__init__.py
 ${PYSITELIB}/authlib/oauth2/rfc9207/__init__.pyc
 ${PYSITELIB}/authlib/oauth2/rfc9207/__init__.pyo
@@ -568,6 +586,9 @@ ${PYSITELIB}/authlib/oidc/core/grants/util.pyo
 ${PYSITELIB}/authlib/oidc/core/models.py
 ${PYSITELIB}/authlib/oidc/core/models.pyc
 ${PYSITELIB}/authlib/oidc/core/models.pyo
+${PYSITELIB}/authlib/oidc/core/userinfo.py
+${PYSITELIB}/authlib/oidc/core/userinfo.pyc
+${PYSITELIB}/authlib/oidc/core/userinfo.pyo
 ${PYSITELIB}/authlib/oidc/core/util.py
 ${PYSITELIB}/authlib/oidc/core/util.pyc
 ${PYSITELIB}/authlib/oidc/core/util.pyo
