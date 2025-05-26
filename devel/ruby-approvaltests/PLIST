@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2023/02/11 14:17:25 taca Exp $
-bin/approvals${RUBY_VER}
+@comment $NetBSD: PLIST,v 1.3 2025/05/26 15:23:07 taca Exp $
+bin/approvals${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/publish.yml
+${GEM_LIBDIR}/.github/workflows/test.yml
+${GEM_LIBDIR}/.github/workflows/updateMarkdown.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile.lock
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -13,6 +17,7 @@ ${GEM_LIBDIR}/bin/approvals
 ${GEM_LIBDIR}/lib/approvals.rb
 ${GEM_LIBDIR}/lib/approvals/approval.rb
 ${GEM_LIBDIR}/lib/approvals/cli.rb
+${GEM_LIBDIR}/lib/approvals/combination_approvals.rb
 ${GEM_LIBDIR}/lib/approvals/configuration.rb
 ${GEM_LIBDIR}/lib/approvals/dotfile.rb
 ${GEM_LIBDIR}/lib/approvals/dsl.rb
@@ -50,13 +55,19 @@ ${GEM_LIBDIR}/lib/approvals/writers/html_writer.rb
 ${GEM_LIBDIR}/lib/approvals/writers/json_writer.rb
 ${GEM_LIBDIR}/lib/approvals/writers/text_writer.rb
 ${GEM_LIBDIR}/lib/approvals/writers/xml_writer.rb
+${GEM_LIBDIR}/mdsnippets.json
+${GEM_LIBDIR}/notes/how_to_publish.md
+${GEM_LIBDIR}/run_tests.sh
 ${GEM_LIBDIR}/spec/approvals_spec.rb
+${GEM_LIBDIR}/spec/combination_approvals_spec.rb
 ${GEM_LIBDIR}/spec/configuration_spec.rb
 ${GEM_LIBDIR}/spec/dotfile_spec.rb
 ${GEM_LIBDIR}/spec/executable_spec.rb
 ${GEM_LIBDIR}/spec/extensions/rspec_approvals_spec.rb
 ${GEM_LIBDIR}/spec/filter_spec.rb
+${GEM_LIBDIR}/spec/fixtures/approvals/approvals_2_combos.approved.txt
 ${GEM_LIBDIR}/spec/fixtures/approvals/approvals_custom_writer_verifies_a_complex_object.approved.txt
+${GEM_LIBDIR}/spec/fixtures/approvals/approvals_errors.approved.txt
 ${GEM_LIBDIR}/spec/fixtures/approvals/approvals_ignores_whitespace_differences_in_json.approved.json
 ${GEM_LIBDIR}/spec/fixtures/approvals/approvals_passes_approved_files_through_erb.approved.txt
 ${GEM_LIBDIR}/spec/fixtures/approvals/approvals_passes_the_received_files_through_erb.approved.txt
@@ -116,4 +127,5 @@ ${GEM_LIBDIR}/spec/scrubber_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/system_command_spec.rb
 ${GEM_LIBDIR}/spec/verifiers/json_verifier_spec.rb
+${GEM_LIBDIR}/todo.md
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
