@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1516 2025/05/22 13:35:08 taca Exp $
+# $NetBSD: Makefile,v 1.1517 2025/05/26 15:51:46 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1336,7 +1336,6 @@ SUBDIR+=	ruby-rchardet
 SUBDIR+=	ruby-rdiscount
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcarpet
-SUBDIR+=	ruby-redcarpet35
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-review
 SUBDIR+=	ruby-rexml
