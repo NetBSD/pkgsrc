@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.15 2025/05/05 08:23:13 adam Exp $
+# $NetBSD: go-modules.mk,v 1.16 2025/05/26 07:00:13 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.zip
@@ -193,8 +193,8 @@ GO_MODULE_FILES+=	github.com/dropbox/dropbox-sdk-go-unofficial/v6/@v/v6.0.5.zip
 GO_MODULE_FILES+=	github.com/dustin/go-humanize/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/dustin/go-humanize/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/dustin/go-humanize/@v/v1.0.1.zip
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.1.mod
-GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.1.zip
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.3.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.3.zip
 GO_MODULE_FILES+=	github.com/emersion/go-message/@v/v0.18.0.mod
 GO_MODULE_FILES+=	github.com/emersion/go-message/@v/v0.18.0.zip
 GO_MODULE_FILES+=	github.com/emersion/go-textwrapper/@v/v0.0.0-20200911093747-65d896831594.mod
@@ -250,8 +250,8 @@ GO_MODULE_FILES+=	github.com/gogo/protobuf/@v/v1.3.2.mod
 GO_MODULE_FILES+=	github.com/gogo/protobuf/@v/v1.3.2.zip
 GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.2.mod
 GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.2.zip
-GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.1.mod
-GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.1.zip
+GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.2.mod
+GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.2.zip
 GO_MODULE_FILES+=	github.com/golang/glog/@v/v0.0.0-20160126235308-23def4e6c14b.mod
 GO_MODULE_FILES+=	github.com/golang/groupcache/@v/v0.0.0-20190702054246-869f871628b6.mod
 GO_MODULE_FILES+=	github.com/golang/groupcache/@v/v0.0.0-20191227052852-215e87163ea7.mod
