@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2025/05/06 18:22:11 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2025/05/26 14:52:12 wiz Exp $
 
 DISTNAME=	xgap-4.32
+PKGREVISION=	1
 CATEGORIES=	math x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gap-packages/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -9,11 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gap-system.org/Packages/xgap.html
 COMMENT=	GUI for GAP
 
-#WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
+#WRKSRC=	${WRKDIR}/${GAP_PKG_NAME}
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	default
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax perl:run
 
 CONFIGURE_ARGS+=	--with-gaproot=${GAP_DIRECTORY:Q}
 
