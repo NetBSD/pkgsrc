@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3565 2025/05/26 08:17:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3566 2025/05/26 10:33:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5352,3 +5352,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rclone to 1.69.3 [adam 2025-05-26]
 	Updated databases/openldap to 2.6.10 [adam 2025-05-26]
 	Updated shells/nushell to 0.104.1 [adam 2025-05-26]
+	Updated security/py-authlib to 1.6.0 [adam 2025-05-26]
+	Updated www/py-aiohttp to 3.12.0 [adam 2025-05-26]
