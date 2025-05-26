@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3572 2025/05/26 15:06:41 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3573 2025/05/26 15:08:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5359,3 +5359,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-io-event to 1.10.1 [taca 2025-05-26]
 	Updated security/ruby-metasploit-payloads to 2.0.221 [taca 2025-05-26]
 	Updated security/ruby-rex-random_identifier to 0.1.16 [taca 2025-05-26]
+	Updated security/ruby-rex-socket to 0.1.62 [taca 2025-05-26]
