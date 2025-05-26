@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3567 2025/05/26 10:54:59 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3568 2025/05/26 12:51:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5354,4 +5354,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.104.1 [adam 2025-05-26]
 	Updated security/py-authlib to 1.6.0 [adam 2025-05-26]
 	Updated www/py-aiohttp to 3.12.0 [adam 2025-05-26]
-	Updated textproc/libxslt to 1.1.43nb4 [nia 2025-05-26]
+	Updated textproc/libxslt to 1.1.43 [nia 2025-05-26]
