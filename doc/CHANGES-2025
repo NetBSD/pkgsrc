@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3584 2025/05/26 15:50:32 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3585 2025/05/26 15:52:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5371,3 +5371,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/ruby-redmine50 [taca 2025-05-26]
 	Removed mail/ruby-mail27 [taca 2025-05-26]
 	Removed mail/ruby-roadie30-rails [taca 2025-05-26]
+	Removed textproc/ruby-redcarpet35 [taca 2025-05-26]
