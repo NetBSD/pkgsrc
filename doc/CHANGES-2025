@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3601 2025/05/27 20:45:56 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3602 2025/05/27 20:50:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5397,3 +5397,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/multitail to 7.1.5 [vins 2025-05-27]
 	Updated biology/maeparser to 1.3.2 [bsiegert 2025-05-27]
 	Updated textproc/nuspell to 5.1.6 [bsiegert 2025-05-27]
+	Updated textproc/py-jsonschema to 4.24.0 [bsiegert 2025-05-27]
