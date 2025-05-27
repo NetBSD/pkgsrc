@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/22 16:16:29 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2025/05/27 16:55:49 schmonz Exp $
 
-BLAKE2s (prettyping-1.0.1.tar.gz) = 0bb8630087e703943d0d0c42b3b2b997bee0749a4a8cf5a3b30df3f4906dfb8b
-SHA512 (prettyping-1.0.1.tar.gz) = 967626f11cd58fd9a0ce91a320caf6b6a296681ed809e04188f0cfe00d03c80a3620bf4d3ec86e855be363810763ff3ccd8bb0a959d03e62b31edba2cfae7f79
-Size (prettyping-1.0.1.tar.gz) = 10104 bytes
-SHA1 (patch-prettyping) = 1ebd90dd1a7691eb02b64f789ee472c61d82a2ee
+BLAKE2s (prettyping-1.1.0.tar.gz) = 96bb12faf0da340efd11eadfef23a647293c37222042b5ccfaa2062321a88417
+SHA512 (prettyping-1.1.0.tar.gz) = a96dad0fa6b5fb991b58fc51458b7d3b49034d1f4f471e1fb647912e5ae4a9474678d75546416a163d32982a7a395044012f6308bddc64c61d989b761e4c0374
+Size (prettyping-1.1.0.tar.gz) = 10185 bytes
