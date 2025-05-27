@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/05/26 05:10:27 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/05/27 19:03:11 adam Exp $
 
-BLAKE2s (pytest_lazy_fixtures-1.1.3.tar.gz) = 9d732c32c8af191f28405f2a5980636e7e221c59135cc7b20fad3177973d0659
-SHA512 (pytest_lazy_fixtures-1.1.3.tar.gz) = 7e749aee04bb2daca15ef4a5f0ec977e08c2da926abffd6b1b1b2cc7993e48057b76f97033f5fc483c1f43cdaf6a39064889a560c568f3484771dc7616916b1e
-Size (pytest_lazy_fixtures-1.1.3.tar.gz) = 7342 bytes
+BLAKE2s (pytest_lazy_fixtures-1.1.4.tar.gz) = 2429e4a8aee577c8ba670c6f8ef963b12c958a72d2a9b45dbf28dece1b6b36de
+SHA512 (pytest_lazy_fixtures-1.1.4.tar.gz) = d8547df290741dbafad43dffc08de05423240d27d30534169e51d44465794e57664331298cdfab291ec1cbed93b03e58887eec5b89e78b4dd3c96bbaaa8b4536
+Size (pytest_lazy_fixtures-1.1.4.tar.gz) = 7426 bytes
