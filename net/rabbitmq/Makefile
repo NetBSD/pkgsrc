@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2024/09/15 15:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.98 2025/05/27 10:17:00 jperkin Exp $
 
 DISTNAME=	rabbitmq-server-3.13.7
 PKGNAME=	${DISTNAME:S/-server//}
@@ -22,6 +22,9 @@ TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
 BUILD_DEFS+=		VARBASE
+
+# "failed to rename rabbit_event.bea# to rabbit_event.beam: no such file..."
+MAKE_JOBS_SAFE=		no
 
 # Create a mix tool to avoid nested interpreter issues.
 TOOLS_CREATE+=		mix
