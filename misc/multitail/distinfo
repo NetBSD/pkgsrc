@@ -1,12 +1,15 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:59:16 nia Exp $
+$NetBSD: distinfo,v 1.16 2025/05/27 19:15:11 vins Exp $
 
-BLAKE2s (multitail-4.0.6.tgz) = 66d5211d9815291ada7185b72a4930a4bd843cfeee43c932cad958b0b53b296f
-SHA512 (multitail-4.0.6.tgz) = b8ef7dda4e0e76b431c3ea3721284cdf7c45b5a8b93bd0f72ba64304530fe549dfc0416ace4b37070fd6a838b1c6bea44a91e1965bb12c433e1c9de5136e8ce4
-Size (multitail-4.0.6.tgz) = 124429 bytes
-SHA1 (patch-aa) = cbb4882495421e2d6841fe95388bc2df3e7e8972
-SHA1 (patch-ab) = 322dd8a1be8565f4038340986a483bfcc08e88df
-SHA1 (patch-ac) = 67d4dd4c3a726c815c2044fe554262bb7fb094da
-SHA1 (patch-ad) = 408bcae6f646c4dee713f3061f84ee4691daa123
-SHA1 (patch-ae) = b8860c63f2f609e13aa91e388efcd627f8e56fcf
-SHA1 (patch-af) = c5b0529557464d161acc365075f26d95a2f74fda
-SHA1 (patch-ui.c) = 2279026bf89921c46bd54597e006b24b5b2687bb
+BLAKE2s (multitail-7.1.5.tar.gz) = d7f52eb5c9c48407ec169bd143f2d7a6cba12b5f11b4de46f6dece833a19290a
+SHA512 (multitail-7.1.5.tar.gz) = 7b52eaa9c99e8747f841b23ad3f7154d8cb65c5f4bd2f89fc80d37b6a2fecdacfd7657c5ba37356e67fd03f7992556af648b7d26bb730f7e8966d0230182a8a6
+Size (multitail-7.1.5.tar.gz) = 152590 bytes
+SHA1 (patch-CMakeLists.txt) = f46c86c6fa51ffc967e06ea5da9823d301bd50bd
+SHA1 (patch-ab) = e2cb5531abac35336063f7dd691ffc6574c126c4
+SHA1 (patch-ac) = 364ce3d7ad8f7f0721db6672c2627b947a79c151
+SHA1 (patch-ad) = d0560d34c7fdda1c0548b2a0d10aa7104fe2624f
+SHA1 (patch-ae) = c3955919b99c867a5ea59ad0824b3c0511b817f0
+SHA1 (patch-af) = 944ae329f9ad7e6f35570a9d881d1c3ff7803ccc
+SHA1 (patch-config.c) = 20d7b5ce2aa35fc014a2e74daf1ac7a60af02588
+SHA1 (patch-error.h) = be2ab6e30f553c7a680530e7cb733e79e3e56743
+SHA1 (patch-multitail.conf) = d06174a76d22788bde23263b9a0b7c45799c64e0
+SHA1 (patch-ui.c) = 0d753a4db0626529ba4378b7256b73d5137eac15
