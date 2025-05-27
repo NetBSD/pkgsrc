@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2025/03/09 19:47:15 bsiegert Exp $
+$NetBSD: distinfo,v 1.5 2025/05/27 18:34:46 bsiegert Exp $
 
-BLAKE2s (esbuild-0.25.0.tar.gz) = 84ca6ca32fbbc277e0a16488379971bab6aee09c0046c05a3e46ee31d8357742
-SHA512 (esbuild-0.25.0.tar.gz) = 15e4e980c0ab87f4a9446f90212ac9fc5faf148cdad0102f6a178e3ca6d95009a8054a3e655dac770a651210846585e64025063f74437827fbbb77658a1a7c35
-Size (esbuild-0.25.0.tar.gz) = 1929206 bytes
+BLAKE2s (esbuild-0.25.5.tar.gz) = ba75d8bbbfed367c9bb22e468042d53dff69bfbc9690c9381fc9708470c075b7
+SHA512 (esbuild-0.25.5.tar.gz) = 70ca6398f026b67d0b32fd17652dbfe13e8de741a9017555d499a0e606279b0ad4536f1912d6aacc9c41ac518ef5421a07a42b957a028f8f95dc5e415dbaa2f0
+Size (esbuild-0.25.5.tar.gz) = 1946445 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.0.0-20220715151400-c0bba94af5f8.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.0.0-20220715151400-c0bba94af5f8.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.0.0-20220715151400-c0bba94af5f8.mod) = 33 bytes
