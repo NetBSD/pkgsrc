@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3597 2025/05/27 19:03:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3598 2025/05/27 19:08:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5391,3 +5391,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/esbuild to 0.25.5 [bsiegert 2025-05-27]
 	Updated devel/py-hypothesis to 6.131.30 [adam 2025-05-27]
 	Updated devel/py-test-lazy-fixtures to 1.1.4 [adam 2025-05-27]
+	Updated devel/glib2 to 2.84.2 [adam 2025-05-27]
+	Updated devel/glib2-tools to 2.84.2 [adam 2025-05-27]
+	Updated devel/gdbus-codegen to 2.84.2 [adam 2025-05-27]
