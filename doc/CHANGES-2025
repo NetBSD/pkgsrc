@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3588 2025/05/27 07:51:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3589 2025/05/27 08:13:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5377,3 +5377,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ngtcp2 to 1.13.0 [adam 2025-05-26]
 	Updated devel/py-setuptools to 80.9.0 [adam 2025-05-27]
 	Updated security/vaultwarden to 1.34.1 [adam 2025-05-27]
+	Updated www/py-aiohttp to 3.12.2 [adam 2025-05-27]
+	Updated devel/py-test-xdist to 3.7.0 [adam 2025-05-27]
