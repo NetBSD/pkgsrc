@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/23 08:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/05/27 16:13:45 taca Exp $
 
 DISTNAME=	actionmailer-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-actionmailer${RUBY_RAILS}-${RAILS_VERSION}
@@ -20,8 +20,6 @@ USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	80
 RUBY_RAILS_STRICT_DEP=	yes
-
-RUBY_VERSIONS_INCOMPATIBLE=	31
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
