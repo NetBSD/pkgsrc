@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/05/22 14:14:37 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2025/05/27 17:22:16 bouyer Exp $
 
 BLAKE2s (xen418/xen-0b8f769d00bcfcda65d9f6d0729cfdc6cb336d12.tar.gz) = 8d81589710484a72bf576abf9328ec50b490f4bf8254efa19531809ad8fc8a8c
 SHA512 (xen418/xen-0b8f769d00bcfcda65d9f6d0729cfdc6cb336d12.tar.gz) = e22c205b553f57da08f1916edb8f334c0b11984be0fe270f1a19bfabe60b9ff95e918eebaaf4ca2fa62c97b73b37568e6a7a455c7077da5a8475c4c5170ab113
@@ -10,4 +10,5 @@ SHA1 (patch-xen_arch_x86_Rules.mk) = b0bc391f2ca3e96ce2bcaec5e1fcd66139ff16f9
 SHA1 (patch-xen_arch_x86_boot_build32.lds) = 9157f22876085254844f720853761a2cd0f4876e
 SHA1 (patch-xen_arch_x86_extable.c) = f64b956be1167901a60bf9be1abd98dbfaffb100
 SHA1 (patch-xen_arch_x86_mm_p2m.c) = 6e9b84dc8448eca9677f184e720bbfcb3c6d314e
+SHA1 (patch-xen_arch_x86_traps.c) = 9548d6476e2fb5898d2958c10eaf2fd1e424d9c5
 SHA1 (patch-xen_tools_check-endbr.sh) = a7268ee5ff11f21fdc5b0bc213498a1923b693be
