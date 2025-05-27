@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3592 2025/05/27 15:24:21 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3593 2025/05/27 16:55:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp3 to 1.10.1 [adam 2025-05-27]
 	Updated devel/py-mocket to 3.13.7 [adam 2025-05-27]
 	Updated games/naev to 0.12.5 [ktnb 2025-05-27]
+	Updated net/prettyping to 1.1.0 [schmonz 2025-05-27]
