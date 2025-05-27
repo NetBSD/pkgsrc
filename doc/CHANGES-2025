@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3593 2025/05/27 16:55:54 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3594 2025/05/27 17:01:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5384,4 +5384,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp3 to 1.10.1 [adam 2025-05-27]
 	Updated devel/py-mocket to 3.13.7 [adam 2025-05-27]
 	Updated games/naev to 0.12.5 [ktnb 2025-05-27]
+	Removed lang/ruby31 [taca 2025-05-27]
+	Removed lang/ruby31-base [taca 2025-05-27]
 	Updated net/prettyping to 1.1.0 [schmonz 2025-05-27]
