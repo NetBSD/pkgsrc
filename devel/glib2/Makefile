@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2024/10/22 09:50:38 adam Exp $
+# $NetBSD: Makefile,v 1.309 2025/05/27 19:07:42 adam Exp $
 
 .include "Makefile.common"
 
@@ -48,7 +48,6 @@ REPLACE_PYTHON+=	gio/tests/gengiotypefuncs.py
 REPLACE_PYTHON+=	gio/tests/memory-monitor-dbus.py.in
 REPLACE_PYTHON+=	gio/tests/memory-monitor-portal.py.in
 REPLACE_PYTHON+=	gio/tests/static-link.py
-REPLACE_PYTHON+=	glib/gtester-report.in
 REPLACE_PYTHON+=	glib/update-gtranslit.py
 REPLACE_PYTHON+=	gobject/tests/mkenums.py
 
@@ -67,6 +66,12 @@ FILES_SUBST+=		GLIB_COMPILE_SCHEMAS=${PREFIX}/bin/glib-compile-schemas
 FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 
 BUILD_DEFS+=		VARBASE
+
+SUBST_CLASSES+=		python
+SUBST_MESSAGE.python=	Replace PYTHON.
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python=	glib/gtester-report.in
+SUBST_SED.python=	-e 's,@PYTHON@,${PYTHONBIN},'
 
 SUBST_CLASSES+=		xdg
 SUBST_MESSAGE.xdg=	Adjust XDG_DATA_DIRS so schemas and pixbuf loaders are found
