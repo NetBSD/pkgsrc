@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/21 16:01:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/27 17:22:16 bouyer Exp $
 # VERSION is set in version.mk as it is shared with other packages
-#PKGREVISION=        1
+PKGREVISION=        1
 
 XENKERNEL:=
 .include        "../../sysutils/xentools418/version.mk"
