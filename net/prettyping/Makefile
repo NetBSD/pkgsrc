@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2021/12/22 16:16:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/05/27 16:55:49 schmonz Exp $
 
-GITHUB_TAG=		refs/tags/v${PKGVERSION_NOREV}
-DISTNAME=		prettyping-1.0.1
+DISTNAME=		prettyping-1.1.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=denilsonsa/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/denilsonsa/prettyping/
 COMMENT=		Wrapper to colorize and simplify ping's output
 LICENSE=		mit
-
-WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
