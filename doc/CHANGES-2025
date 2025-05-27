@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3600 2025/05/27 20:39:05 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3601 2025/05/27 20:45:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5396,3 +5396,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gdbus-codegen to 2.84.2 [adam 2025-05-27]
 	Updated misc/multitail to 7.1.5 [vins 2025-05-27]
 	Updated biology/maeparser to 1.3.2 [bsiegert 2025-05-27]
+	Updated textproc/nuspell to 5.1.6 [bsiegert 2025-05-27]
