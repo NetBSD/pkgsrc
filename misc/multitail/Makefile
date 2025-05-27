@@ -1,42 +1,45 @@
-# $NetBSD: Makefile,v 1.32 2024/03/19 01:51:17 nia Exp $
+# $NetBSD: Makefile,v 1.33 2025/05/27 19:15:11 vins Exp $
 #
 
-DISTNAME=	multitail-4.0.6
-PKGREVISION=	5
-CATEGORIES=	misc sysutils
-MASTER_SITES=	http://www.vanheusden.com/multitail/
-EXTRACT_SUFX=	.tgz
+DISTNAME=	multitail-7.1.5
+CATEGORIES=	misc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=folkertvanheusden/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
+LICENSE=	mit
 
-INCOMPAT_CURSES+=	NetBSD-[0-6].*-* NetBSD-7.[0-9].* # needs libpanel
-FAKE_NCURSES=		yes
+USE_CC_FEATURES=	c99
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
-			share/examples/multitail
+USE_TOOLS+=	perl:run
+USE_CURSES=	resize_term wide
+FAKE_NCURSES=	yes
 
-CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
-		${PKG_SYSCONFDIR:Q}/multitail.conf
+REPLACE_PERL+=	conversion-scripts/*.pl
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
-LDFLAGS.SunOS+=			-lsocket -lnsl
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Adjust conf file for pkgsrc PREFIX
+SUBST_FILES.prefix=	multitail.conf
+SUBST_STAGE.prefix=	pre-configure
+SUBST_VARS.prefix=	PREFIX
+
+CONF_FILES=	${PREFIX}/share/examples/multitail/multitail.conf	\
+		${PKG_SYSCONFDIR}/multitail.conf
+
+CMAKE_CONFIGURE_ARGS+=	-DCONFIG_FILE=${PKG_SYSCONFDIR}/multitail.conf \
+			-DCURSES_INCLUDE_PATH=${BUILDLINK_INCDIRS.curses:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+.if ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-lutil
+LDFLAGS+=		-lsocket -lnsl
+.elif ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
 BUILDLINK_TRANSFORM+=	rm:-lutil
 .endif
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${DESTDIR}${PREFIX:Q}/bin/
-	${INSTALL_MAN} ${WRKSRC:Q}/multitail.1 \
-		${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1/
-	${INSTALL_DATA} ${WRKSRC:Q}/multitail.conf \
-		${DESTDIR}${PREFIX:Q}/share/examples/multitail/
-	cd ${WRKSRC:Q} && ${INSTALL_DATA} *.txt manual*.html \
-		${DESTDIR}${PREFIX:Q}/share/doc/multitail/
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

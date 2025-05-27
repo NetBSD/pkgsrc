@@ -1,13 +1,25 @@
-$NetBSD: patch-ad,v 1.2 2006/06/25 00:01:44 hubertf Exp $
+$NetBSD: patch-ad,v 1.3 2025/05/27 19:15:12 vins Exp $
 
---- my_pty.c.orig	2006-06-12 21:45:57.000000000 +0200
+* Support openpty() on NetBSD. 
+* Add DragonFly
+
+--- my_pty.c.orig	2024-08-13 10:49:48.000000000 +0000
 +++ my_pty.c
-@@ -75,7 +75,7 @@
+@@ -26,7 +26,7 @@
+ #ifdef __APPLE__
+ #include <util.h>
+ #endif
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <util.h>
+ #endif
+ #if defined(linux) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__)
+@@ -78,7 +78,7 @@
  
  int get_pty_and_fork(int *fd_master, int *fd_slave)
  {
--#if defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__)
-+#if defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__) || defined(__minix)
++#if defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__) || defined(__minix) || defined(__DragonFly__)
  
  	if (openpty(fd_master, fd_slave, NULL, NULL, NULL) == -1)
  	{

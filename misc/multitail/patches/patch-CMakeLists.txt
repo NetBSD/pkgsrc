@@ -1,0 +1,39 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/05/27 19:15:12 vins Exp $
+
+* Do not look for panelw.
+* Compatibility install target fixes for pkgsrc.
+
+--- CMakeLists.txt.orig	2024-08-13 10:49:48.000000000 +0000
++++ CMakeLists.txt
+@@ -66,7 +66,7 @@ message(STATUS "CMAKE_C_PLATFORM_ID=${CM
+ # ``find_package(Curses)`` call if unicode functionality is required.
+ if(UTF8_SUPPORT)
+     set(CURSES_NEED_WIDE TRUE)
+-    find_library(PANEL_LIBRARY panelw REQUIRED)
++    find_library(PANEL_LIBRARY panel REQUIRED)
+     add_definitions(-DUTF8_SUPPORT)
+     add_definitions(-DNCURSES_WIDECHAR)
+ else()
+@@ -185,16 +185,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PRO
+ # install the bin
+ install(TARGETS multitail DESTINATION bin)
+ # install the config file
+-install(FILES multitail.conf DESTINATION etc RENAME multitail.conf.new)
++install(FILES multitail.conf DESTINATION share/examples/multitail)
+ # install the manual files
+-install(FILES multitail.1 DESTINATION share/man/man1)
++install(FILES multitail.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ # install doc files
+-install(FILES manual.html DESTINATION share/doc/multitail-${VERSION})
+-install(FILES LICENSE DESTINATION share/doc/multitail-${VERSION})
+-install(FILES README.md DESTINATION share/doc/multitail-${VERSION})
+-install(FILES thanks.txt DESTINATION share/doc/multitail-${VERSION})
++install(FILES manual.html DESTINATION share/doc/multitail)
++install(FILES README.md DESTINATION share/doc/multitail)
++install(FILES thanks.txt DESTINATION share/doc/multitail)
+ # cp conversion-scripts/* etc/multitail/
+-install(DIRECTORY conversion-scripts DESTINATION etc/multitail)
++install(DIRECTORY conversion-scripts/ DESTINATION libexec/multitail)
+ 
+ 
+ if(USE_CPPCHECK)

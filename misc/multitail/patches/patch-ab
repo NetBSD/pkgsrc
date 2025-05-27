@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2006/06/25 00:01:44 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2025/05/27 19:15:12 vins Exp $
+
+Add DragonFly
 
 --- exec.c.orig	2006-06-12 21:45:57.000000000 +0200
 +++ exec.c
