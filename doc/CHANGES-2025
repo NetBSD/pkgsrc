@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3590 2025/05/27 08:57:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3591 2025/05/27 11:42:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5381,3 +5381,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-xdist to 3.7.0 [adam 2025-05-27]
 	Updated devel/py-test-mock to 3.14.1 [adam 2025-05-27]
 	Updated databases/py-pypika-tortoise to 0.6.0 [adam 2025-05-27]
+	Updated www/nghttp3 to 1.10.1 [adam 2025-05-27]
+	Updated devel/py-mocket to 3.13.7 [adam 2025-05-27]
