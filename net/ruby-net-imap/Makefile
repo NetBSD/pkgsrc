@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/05/17 07:57:04 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/05/27 16:05:33 taca Exp $
 
 DISTNAME=	net-imap-0.5.8
 CATEGORIES=	net mail
@@ -11,7 +11,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 USE_LANGUAGES=	# none
 
 # Ruby 3.4.4 has the same version as a bundled gem
-RUBY_VERSIONS_ACCEPTED=	31 32 33
+RUBY_VERSIONS_ACCEPTED=	32 33
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

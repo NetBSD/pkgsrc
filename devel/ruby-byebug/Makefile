@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/05/17 06:18:00 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/05/27 16:05:33 taca Exp $
 
 DISTNAME=	byebug-12.0.0
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd
 
 RUBYGEM_OPTIONS+=	--format-executable
 
-RUBY_VERSIONS_ACCEPTED=	31 32 33
+RUBY_VERSIONS_ACCEPTED=	32 33
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
