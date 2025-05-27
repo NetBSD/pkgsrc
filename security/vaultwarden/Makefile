@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/17 21:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/05/27 07:51:06 adam Exp $
 
-DISTNAME=	vaultwarden-1.33.2
-PKGREVISION=	2
+DISTNAME=	vaultwarden-1.34.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 
@@ -10,11 +9,9 @@ HOMEPAGE=	https://github.com/dani-garcia/vaultwarden
 COMMENT=	Bitwarden compatible backend server
 LICENSE=	gnu-agpl-v3
 
-YUBICO_REV=	00df14811f58155c0f02e3ab10f1570ed3e115c6
+# See options.mk
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	yubico-${YUBICO_REV}.tar.gz
-
-SITES.yubico-${YUBICO_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=BlackDex/}yubico-rs/archive/${YUBICO_REV}.tar.gz
+RUST_REQ=	1.85.0
 
 .include "cargo-depends.mk"
 
