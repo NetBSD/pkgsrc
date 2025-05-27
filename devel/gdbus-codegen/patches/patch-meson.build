@@ -1,9 +1,9 @@
-$NetBSD: patch-meson.build,v 1.4 2024/10/22 09:50:39 adam Exp $
+$NetBSD: patch-meson.build,v 1.5 2025/05/27 19:07:43 adam Exp $
 
 Turn into a meson.build file which meson will accept, and
 subsitute some variables.
 
---- meson.build.orig	2024-10-17 11:08:41.000000000 +0000
+--- meson.build.orig	2025-05-20 16:22:25.000000000 +0000
 +++ meson.build
 @@ -15,6 +15,10 @@
  # You should have received a copy of the GNU Lesser General Public
@@ -23,7 +23,7 @@ subsitute some variables.
 -gdbus_codegen_conf.set('VERSION', glib_version)
 -gdbus_codegen_conf.set('MAJOR_VERSION', major_version)
 -gdbus_codegen_conf.set('MINOR_VERSION', minor_version)
--gdbus_codegen_conf.set('PYTHON', python.full_path())
+-gdbus_codegen_conf.set('PYTHON', python_shebang)
 -gdbus_codegen_conf.set('DATADIR', glib_datadir)
 +gdbus_codegen_conf.set('VERSION', '@VERSION@')
 +gdbus_codegen_conf.set('MAJOR_VERSION', '@MAJOR_VERSION@')
