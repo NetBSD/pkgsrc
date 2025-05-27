@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3595 2025/05/27 18:20:24 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3596 2025/05/27 18:35:02 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/ruby31-base [taca 2025-05-27]
 	Updated net/prettyping to 1.1.0 [schmonz 2025-05-27]
 	Updated devel/golangci-lint to 2.1.6 [bsiegert 2025-05-27]
+	Updated www/esbuild to 0.25.5 [bsiegert 2025-05-27]
