@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3606 2025/05/28 04:46:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3607 2025/05/28 04:58:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5406,3 +5406,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tox to 4.26.0 [adam 2025-05-28]
 	Updated devel/py-test-run-parallel to 0.4.3 [adam 2025-05-28]
 	Updated textproc/py-sphobjinv to 2.3.1.3 [adam 2025-05-28]
+	Updated devel/py-hatch-vcs to 0.5.0 [adam 2025-05-28]
+	Updated math/py-pythran to 0.18.0 [adam 2025-05-28]
+	Updated databases/py-barman to 3.14.0 [adam 2025-05-28]
+	Updated devel/py-xdis to 6.1.4 [adam 2025-05-28]
