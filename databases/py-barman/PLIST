@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/14 11:09:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/05/28 04:57:01 adam Exp $
 bin/barman
 bin/barman-cloud-backup
 bin/barman-cloud-backup-delete
@@ -108,6 +108,9 @@ ${PYSITELIB}/barman/copy_controller.pyo
 ${PYSITELIB}/barman/diagnose.py
 ${PYSITELIB}/barman/diagnose.pyc
 ${PYSITELIB}/barman/diagnose.pyo
+${PYSITELIB}/barman/encryption.py
+${PYSITELIB}/barman/encryption.pyc
+${PYSITELIB}/barman/encryption.pyo
 ${PYSITELIB}/barman/exceptions.py
 ${PYSITELIB}/barman/exceptions.pyc
 ${PYSITELIB}/barman/exceptions.pyo
@@ -193,6 +196,7 @@ man/man1/barman-generate-manifest.1
 man/man1/barman-get-wal.1
 man/man1/barman-keep.1
 man/man1/barman-list-files.1
+man/man1/barman-list-processes.1
 man/man1/barman-list-servers.1
 man/man1/barman-list_backups.1
 man/man1/barman-lock-directory-cleanup.1
@@ -209,6 +213,7 @@ man/man1/barman-switch-xlog.1
 man/man1/barman-sync-backup.1
 man/man1/barman-sync-info.1
 man/man1/barman-sync-wals.1
+man/man1/barman-terminate-process.1
 man/man1/barman-verify-backup.1
 man/man1/barman-verify.1
 man/man1/barman-wal-archive.1

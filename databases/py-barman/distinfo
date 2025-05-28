@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2025/04/29 20:04:52 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/05/28 04:57:01 adam Exp $
 
-BLAKE2s (barman-3.13.3.tar.gz) = d897a8713301f2405dad0807860ab0d6aaebe5ebbbfd33b1dd4d1b9f14708512
-SHA512 (barman-3.13.3.tar.gz) = 80ffd50f99dd7234dc5ceabc72a0eea2271b87cd0c137597895a2db3f49f075eec9bab729dec836ed458203b40bfb5d2c725bdc31d44fbdfd06a0d1dee912d08
-Size (barman-3.13.3.tar.gz) = 419018 bytes
+BLAKE2s (barman-3.14.0.tar.gz) = b4da940239fbf5ef406f34fd92f2847152e4d8e9f559043f05776e24ae2facc2
+SHA512 (barman-3.14.0.tar.gz) = 7f106e6cff33ae2208c7f262e728e268877d52a7149d6b98e5af543b177fdd0f48ae3b683b777d66ad38a4fdbb72ea33a84517cbf448fecd4d23502a12be77e5
+Size (barman-3.14.0.tar.gz) = 437078 bytes
 SHA1 (patch-barman_utils.py) = 0f93835a814bdd41c999dcebb34719312a74bd94
