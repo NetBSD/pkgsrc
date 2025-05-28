@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.379 2025/05/26 12:50:36 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.380 2025/05/28 09:24:10 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26201,3 +26201,4 @@ perl-[0-9]*	permission-race	https://nvd.nist.gov/vuln/detail/CVE-2025-40909
 ghostscript-gpl-[0-9]*		passphrase-leakage		https://nvd.nist.gov/vuln/detail/CVE-2025-48708
 ghostscript-agpl<10.05.1		passphrase-leakage		https://nvd.nist.gov/vuln/detail/CVE-2025-48708
 libxslt<1.1.43	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-24855
+coreutils<9.6nb1		heap-overflow	https://cgit.git.savannah.gnu.org/cgit/coreutils.git/commit/?id=8c9602e3a145e9596dc1a63c6ed67865814b6633
