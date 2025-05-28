@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3612 2025/05/28 13:23:02 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3613 2025/05/28 13:53:21 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5415,3 +5415,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libcurl-gnutls to 8.14.0 [wiz 2025-05-28]
 	Updated devel/nss to 3.112 [wiz 2025-05-28]
 	Updated www/hugo to 0.147.6 [triaxx 2025-05-28]
+	Updated www/php-nextcloud to 30.0.11 [gdt 2025-05-28]
