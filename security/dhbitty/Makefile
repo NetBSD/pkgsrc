@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2017/09/22 07:02:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/28 09:38:49 zafer Exp $
 
 DISTNAME=		dhbitty.c
 PKGNAME=		dhbitty-20120806
 CATEGORIES=		security
-MASTER_SITES=		https://cipherdev.org/rnd/
+MASTER_SITES=		#https://cipherdev.org/rnd/
 EXTRACT_SUFX=		#empty
 
 MAINTAINER=		agc@NetBSD.org
