@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3608 2025/05/28 09:21:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3609 2025/05/28 09:44:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5411,3 +5411,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-barman to 3.14.0 [adam 2025-05-28]
 	Updated devel/py-xdis to 6.1.4 [adam 2025-05-28]
 	Updated sysutils/coreutils to 9.6nb1 [wiz 2025-05-28]
+	Updated www/curl to 8.14.0 [wiz 2025-05-28]
