@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3614 2025/05/28 13:57:55 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3615 2025/05/28 14:16:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5417,3 +5417,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.147.6 [triaxx 2025-05-28]
 	Updated www/php-nextcloud to 30.0.11 [gdt 2025-05-28]
 	Updated lang/joker to 1.5.0 [ktnb 2025-05-28]
+	Updated databases/redis to 8.0.2 [adam 2025-05-28]
+	Updated databases/py-redis to 6.2.0 [adam 2025-05-28]
