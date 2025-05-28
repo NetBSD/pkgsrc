@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3607 2025/05/28 04:58:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3608 2025/05/28 09:21:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-pythran to 0.18.0 [adam 2025-05-28]
 	Updated databases/py-barman to 3.14.0 [adam 2025-05-28]
 	Updated devel/py-xdis to 6.1.4 [adam 2025-05-28]
+	Updated sysutils/coreutils to 9.6nb1 [wiz 2025-05-28]
