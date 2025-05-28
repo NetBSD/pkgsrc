@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.104 2025/04/16 21:27:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.105 2025/05/28 09:43:53 wiz Exp $
 bin/curl
 bin/curl-config
+bin/wcurl
 include/curl/curl.h
 include/curl/curlver.h
 include/curl/easy.h
@@ -17,6 +18,7 @@ lib/libcurl.la
 lib/pkgconfig/libcurl.pc
 man/man1/curl-config.1
 man/man1/curl.1
+man/man1/wcurl.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
 man/man3/CURLINFO_APPCONNECT_TIME_T.3
@@ -369,6 +371,7 @@ man/man3/CURLOPT_SSL_ENABLE_NPN.3
 man/man3/CURLOPT_SSL_FALSESTART.3
 man/man3/CURLOPT_SSL_OPTIONS.3
 man/man3/CURLOPT_SSL_SESSIONID_CACHE.3
+man/man3/CURLOPT_SSL_SIGNATURE_ALGORITHMS.3
 man/man3/CURLOPT_SSL_VERIFYHOST.3
 man/man3/CURLOPT_SSL_VERIFYPEER.3
 man/man3/CURLOPT_SSL_VERIFYSTATUS.3
