@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3603 2025/05/27 21:44:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3604 2025/05/28 00:21:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5400,3 +5400,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-jsonschema to 4.24.0 [bsiegert 2025-05-27]
 	Updated textproc/libxml2 to 2.14.3 [adam 2025-05-27]
 	Updated textproc/py-libxml2 to 2.14.3 [adam 2025-05-27]
+	Updated www/firefox128 to 128.11.0 [gutteridge 2025-05-28]
