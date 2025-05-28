@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3611 2025/05/28 09:47:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3612 2025/05/28 13:23:02 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5414,3 +5414,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/curl to 8.14.0 [wiz 2025-05-28]
 	Updated www/libcurl-gnutls to 8.14.0 [wiz 2025-05-28]
 	Updated devel/nss to 3.112 [wiz 2025-05-28]
+	Updated www/hugo to 0.147.6 [triaxx 2025-05-28]
