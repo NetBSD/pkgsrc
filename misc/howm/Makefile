@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2024/02/10 14:42:39 taca Exp $
+# $NetBSD: Makefile,v 1.19 2025/05/28 09:21:17 zafer Exp $
 
 DISTNAME=	howm-1.4.5
 PKGREVISION=	5
 CATEGORIES=	misc
-MASTER_SITES=	http://howm.osdn.jp/a/
+MASTER_SITES=	#http://howm.osdn.jp/a/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://howm.osdn.jp/
