@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3625 2025/05/29 14:51:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3626 2025/05/29 14:55:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5430,3 +5430,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added fonts/iosevka-fonts version 33.2.3 [ryoon 2025-05-29]
 	Updated devel/ruby-rspec-mocks to 3.13.5 [taca 2025-05-29]
 	Updated devel/ruby-rspec to 3.13.1 [taca 2025-05-29]
+	Updated devel/ruby-zeitwerk to 2.7.3 [taca 2025-05-29]
