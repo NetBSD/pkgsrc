@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3628 2025/05/29 14:59:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3629 2025/05/29 15:00:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5433,3 +5433,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-zeitwerk to 2.7.3 [taca 2025-05-29]
 	Updated finance/ruby-braintree to 4.28.0 [taca 2025-05-29]
 	Updated www/ruby-aws-partitions to 1.1108.0 [taca 2025-05-29]
+	Updated www/ruby-aws-sdk-core to 3.224.1 [taca 2025-05-29]
