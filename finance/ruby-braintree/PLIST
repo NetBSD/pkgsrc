@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/05/17 07:41:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/05/29 14:57:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -69,10 +69,14 @@ ${GEM_LIBDIR}/lib/braintree/graphql/enums/recommended_payment_option.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/inputs/create_customer_session_input.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/inputs/customer_recommendations_input.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/inputs/customer_session_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/monetary_amount_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/paypal_payee_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/paypal_purchase_unit_input.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/inputs/phone_input.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/inputs/update_customer_session_input.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/types/customer_recommendations_payload.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/types/payment_options.rb
+${GEM_LIBDIR}/lib/braintree/graphql/types/payment_recommendations.rb
 ${GEM_LIBDIR}/lib/braintree/graphql/unions/customer_recommendations.rb
 ${GEM_LIBDIR}/lib/braintree/graphql_client.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
@@ -275,6 +279,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/google_pay_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/create_customer_session_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_recommendations_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_recommendations_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_session_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/phone_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/update_customer_session_input_spec.rb
