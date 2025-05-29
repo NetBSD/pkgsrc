@@ -1,15 +1,15 @@
-$NetBSD: patch-include_haproxy_server-t.h,v 1.4 2024/09/30 17:09:27 adam Exp $
+$NetBSD: patch-include_haproxy_server-t.h,v 1.5 2025/05/29 20:36:26 adam Exp $
 
 Avoid 'struct queue' conflict.
 
---- include/haproxy/server-t.h.orig	2024-09-19 12:07:01.000000000 +0000
+--- include/haproxy/server-t.h.orig	2025-05-28 14:35:14.000000000 +0000
 +++ include/haproxy/server-t.h
-@@ -347,7 +347,7 @@ struct server {
- 	unsigned int max_used_conns;            /* Max number of used connections (the counter is reset at each connection purges */
- 	unsigned int est_need_conns;            /* Estimate on the number of needed connections (max of curr and previous max_used) */
+@@ -273,7 +273,7 @@ struct srv_per_thread {
  
+ /* Each server will have one occurrence of this structure per thread group */
+ struct srv_per_tgroup {
 -	struct queue queue;			/* pending connections */
 +	struct haqueue queue;			/* pending connections */
- 	struct mt_list sess_conns;		/* list of private conns managed by a session on this server */
- 	unsigned int dequeuing;                 /* non-zero = dequeuing in progress (atomic) */
- 
+ 	struct server *server;                  /* pointer to the corresponding server */
+ 	struct eb32_node lb_node;               /* node used for tree-based load balancing */
+ 	struct server *next_full;               /* next server in the temporary full list */
