@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3634 2025/05/29 17:36:16 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3635 2025/05/29 20:38:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5439,3 +5439,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-excon to 1.2.6 [taca 2025-05-29]
 	Updated editors/ait to 1.12 [ktnb 2025-05-29]
 	Updated games/luanti to 5.12.0 [ktnb 2025-05-29]
+	Updated net/haproxy to 3.2.0 [adam 2025-05-29]
+	Updated devel/py-zope.testrunner to 7.4 [adam 2025-05-29]
