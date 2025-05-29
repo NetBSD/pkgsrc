@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/04/25 07:09:42 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/05/29 11:38:50 wiz Exp $
 
 DISTNAME=	libspatialite-5.1.0
 PKGREVISION=	11
@@ -26,6 +26,6 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.33.0
 .include "../../geography/librttopo/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/freexl/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.libxml2+=	libxml2-2.14.2nb2
+BUILDLINK_ABI_DEPENDS.libxml2+=	libxml2>=2.14.2nb2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
