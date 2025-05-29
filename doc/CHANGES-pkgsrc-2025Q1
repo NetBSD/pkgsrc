@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.14 2025/05/26 14:17:36 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.15 2025/05/29 13:35:28 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -59,3 +59,7 @@ www/firefox128-l10n: Catch up with firefox128 changes
 
 Pullup ticket #6967 - requested by nia
 textproc/libxslt: Security fix
+
+Pullup ticket #6968 - requested by gutteridge
+www/firefox128: Security fix
+www/firefox128-l10n: Security fix
