@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3616 2025/05/29 07:50:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3617 2025/05/29 13:42:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5421,3 +5421,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-redis to 6.2.0 [adam 2025-05-28]
 	Updated math/liblinear to 2.49 [adam 2025-05-29]
 	Updated devel/memcached to 1.6.38 [adam 2025-05-29]
+	Updated textproc/link-grammar to 5.12.5 [ryoon 2025-05-29]
