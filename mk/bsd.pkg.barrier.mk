@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.23 2025/01/28 16:01:59 riastradh Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.24 2025/05/29 08:08:07 kim Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -71,7 +71,7 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 		${PHASE_MSG} "Skipping installation of already handled package"; \
 	else \
 	cd ${.CURDIR}							\
-	&& ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS} \
+	&& ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ${_BARRIER_CMDLINE_TARGETS} \
 	|| {								\
 		exitcode="$$?";						\
 		${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes barrier-error-check; \
