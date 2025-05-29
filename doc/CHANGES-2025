@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3619 2025/05/29 14:30:48 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3620 2025/05/29 14:34:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5424,3 +5424,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/link-grammar to 5.12.5 [ryoon 2025-05-29]
 	Updated textproc/py-link-grammar to 5.12.5 [ryoon 2025-05-29]
 	Updated mail/ruby-mime-types-data to 3.2025.0527 [taca 2025-05-29]
+	Updated devel/ruby-rspec-support to 3.13.4 [taca 2025-05-29]
