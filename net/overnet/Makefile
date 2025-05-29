@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:45 asau Exp $
+# $NetBSD: Makefile,v 1.17 2025/05/29 14:25:53 zafer Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
 PKGNAME=	${DISTNAME:C/clc//}
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://www.zen18864.zen.co.uk/overnet/1.0.1/
+MASTER_SITES=	#http://www.zen18864.zen.co.uk/overnet/1.0.1/
 DISTFILES=	${DISTNAME}-1.i386_compat.rpm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
