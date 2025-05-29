@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.380 2025/05/28 09:24:10 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.381 2025/05/29 07:59:15 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26197,7 +26197,7 @@ python312-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
 python313-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-4516
 ruby30-*	eol	https://www.ruby-lang.org/en/downloads/branches/
 ruby31-*	eol	https://www.ruby-lang.org/en/downloads/branches/
-perl-[0-9]*	permission-race	https://nvd.nist.gov/vuln/detail/CVE-2025-40909
+perl<5.41.13	permission-race	https://nvd.nist.gov/vuln/detail/CVE-2025-40909
 ghostscript-gpl-[0-9]*		passphrase-leakage		https://nvd.nist.gov/vuln/detail/CVE-2025-48708
 ghostscript-agpl<10.05.1		passphrase-leakage		https://nvd.nist.gov/vuln/detail/CVE-2025-48708
 libxslt<1.1.43	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-24855
