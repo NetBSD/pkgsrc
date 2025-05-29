@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/15 20:43:03 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/05/29 17:36:03 ktnb Exp $
 bin/luanti
 bin/luantiserver
 bin/minetest
 bin/minetestserver
 man/man6/luanti.6
 man/man6/luantiserver.6
-share/applications/net.minetest.minetest.desktop
+share/applications/org.luanti.luanti.desktop
 share/doc/luanti/README.md
 share/doc/luanti/client_lua_api.md
 share/doc/luanti/lua_api.md
@@ -17,6 +17,7 @@ share/icons/hicolor/128x128/apps/luanti.png
 share/icons/hicolor/scalable/apps/luanti.svg
 share/locale/be/LC_MESSAGES/luanti.mo
 share/locale/bg/LC_MESSAGES/luanti.mo
+share/locale/br/LC_MESSAGES/luanti.mo
 share/locale/ca/LC_MESSAGES/luanti.mo
 share/locale/cs/LC_MESSAGES/luanti.mo
 share/locale/cy/LC_MESSAGES/luanti.mo
@@ -87,6 +88,7 @@ share/luanti/builtin/common/filterlist.lua
 share/luanti/builtin/common/information_formspecs.lua
 share/luanti/builtin/common/item_s.lua
 share/luanti/builtin/common/math.lua
+share/luanti/builtin/common/menu.lua
 share/luanti/builtin/common/metatable.lua
 share/luanti/builtin/common/misc_helpers.lua
 share/luanti/builtin/common/mod_storage.lua
@@ -209,6 +211,7 @@ share/luanti/builtin/mainmenu/dlg_config_world.lua
 share/luanti/builtin/mainmenu/dlg_create_world.lua
 share/luanti/builtin/mainmenu/dlg_delete_content.lua
 share/luanti/builtin/mainmenu/dlg_delete_world.lua
+share/luanti/builtin/mainmenu/dlg_rebind_keys.lua
 share/luanti/builtin/mainmenu/dlg_register.lua
 share/luanti/builtin/mainmenu/dlg_reinstall_mtg.lua
 share/luanti/builtin/mainmenu/dlg_rename_modpack.lua
@@ -308,8 +311,12 @@ share/luanti/textures/base/pack/checkbox_16.png
 share/luanti/textures/base/pack/checkbox_32.png
 share/luanti/textures/base/pack/checkbox_64.png
 share/luanti/textures/base/pack/clear.png
+share/luanti/textures/base/pack/contentdb_neutral.png
+share/luanti/textures/base/pack/contentdb_thumb_down.png
+share/luanti/textures/base/pack/contentdb_thumb_up.png
 share/luanti/textures/base/pack/crack_anylength.png
 share/luanti/textures/base/pack/debug_btn.png
+share/luanti/textures/base/pack/dig_btn.png
 share/luanti/textures/base/pack/down.png
 share/luanti/textures/base/pack/drop_btn.png
 share/luanti/textures/base/pack/end_icon.png
@@ -344,6 +351,7 @@ share/luanti/textures/base/pack/no_texture_airlike.png
 share/luanti/textures/base/pack/noclip_btn.png
 share/luanti/textures/base/pack/object_marker_red.png
 share/luanti/textures/base/pack/overflow_btn.png
+share/luanti/textures/base/pack/place_btn.png
 share/luanti/textures/base/pack/player.png
 share/luanti/textures/base/pack/player_back.png
 share/luanti/textures/base/pack/player_marker.png
@@ -382,4 +390,4 @@ share/luanti/textures/base/pack/unknown_node.png
 share/luanti/textures/base/pack/unknown_object.png
 share/luanti/textures/base/pack/wieldhand.png
 share/luanti/textures/base/pack/zoom.png
-share/metainfo/net.minetest.minetest.metainfo.xml
+share/metainfo/org.luanti.luanti.metainfo.xml
