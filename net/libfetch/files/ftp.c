@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.48 2025/03/05 12:06:44 nia Exp $	*/
+/*	$NetBSD: ftp.c,v 1.49 2025/05/29 15:07:08 wiz Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -859,7 +859,9 @@ retry_mode:
 		int low = CHECK_FLAG('l');
 #endif
 		int d;
+#ifdef INET6
 		char hname[INET6_ADDRSTRLEN];
+#endif
 
 		switch (u.ss.ss_family) {
 		case AF_INET6:
