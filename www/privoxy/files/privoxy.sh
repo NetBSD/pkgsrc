@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: privoxy.sh,v 1.6 2021/11/18 03:13:29 khorben Exp $
+# $NetBSD: privoxy.sh,v 1.7 2025/05/29 13:24:48 khorben Exp $
 #
 # Startup script for privoxy
 #
@@ -15,8 +15,8 @@ $_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
 name="privoxy"
 rcvar=$name
-command="/usr/pkg/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+command="@PREFIX@/sbin/${name}"
+pidfile="@VARBASE@/run/${name}.pid"
 pconfig="@PKG_SYSCONFDIR@/config"
 puser="@PRIVOXY_USER@"
 required_files="$pconfig"
