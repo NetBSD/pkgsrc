@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25846 2025/05/28 09:00:00 zafer Exp $
+$NetBSD: TODO,v 1.25847 2025/05/29 07:50:21 adam Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mecab-ipadic-2.7.0.20070801
 	o mediawiki-1.43.0 (LTS)
 	o memached-1.5.6
-	o memcached-1.6.38
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
