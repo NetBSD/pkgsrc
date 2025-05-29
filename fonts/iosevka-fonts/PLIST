@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/29 14:48:28 ryoon Exp $
+share/fonts/X11/TTF/Iosevka.ttc
+share/fonts/X11/TTF/IosevkaAile.ttc
+share/fonts/X11/TTF/IosevkaCurly.ttc
+share/fonts/X11/TTF/IosevkaCurlySlab.ttc
+share/fonts/X11/TTF/IosevkaEtoile.ttc
+share/fonts/X11/TTF/IosevkaSS01.ttc
+share/fonts/X11/TTF/IosevkaSS02.ttc
+share/fonts/X11/TTF/IosevkaSS03.ttc
+share/fonts/X11/TTF/IosevkaSS04.ttc
+share/fonts/X11/TTF/IosevkaSS05.ttc
+share/fonts/X11/TTF/IosevkaSS06.ttc
+share/fonts/X11/TTF/IosevkaSS07.ttc
+share/fonts/X11/TTF/IosevkaSS08.ttc
+share/fonts/X11/TTF/IosevkaSS09.ttc
+share/fonts/X11/TTF/IosevkaSS10.ttc
+share/fonts/X11/TTF/IosevkaSS11.ttc
+share/fonts/X11/TTF/IosevkaSS12.ttc
+share/fonts/X11/TTF/IosevkaSS13.ttc
+share/fonts/X11/TTF/IosevkaSS14.ttc
+share/fonts/X11/TTF/IosevkaSS15.ttc
+share/fonts/X11/TTF/IosevkaSS16.ttc
+share/fonts/X11/TTF/IosevkaSS17.ttc
+share/fonts/X11/TTF/IosevkaSS18.ttc
+share/fonts/X11/TTF/IosevkaSlab.ttc
