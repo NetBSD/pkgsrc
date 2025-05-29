@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.383 2025/05/29 08:12:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.384 2025/05/29 08:18:55 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26213,3 +26213,13 @@ asterisk>=21<21.9.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-
 asterisk>=22<22.4.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-47780
 grafana<11.2.10		improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2025-3580
 cJSON<1.7.18		heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-53154
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5165
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5166
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5167
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5168
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5169
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5200
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5201
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5202
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5203
+assimp-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5204
