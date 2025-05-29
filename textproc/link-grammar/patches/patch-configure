@@ -1,10 +1,31 @@
-$NetBSD: patch-configure,v 1.5 2023/10/15 06:39:25 ryoon Exp $
+$NetBSD: patch-configure,v 1.6 2025/05/29 13:42:20 ryoon Exp $
 
+* Do not include -std=gnu11 in CC and PTHREAD_CC to fix compile.
 * POSIX shell portability.
 
---- configure.orig	2023-03-24 16:25:36.000000000 +0000
+--- configure.orig	2024-05-31 22:46:47.000000000 +0000
 +++ configure
-@@ -17054,7 +17054,7 @@ fi
+@@ -5005,7 +5005,8 @@ $ac_c_conftest_c11_program
+ _ACEOF
+ for ac_arg in '' -std=gnu11
+ do
+-  CC="$ac_save_CC $ac_arg"
++  CC="$ac_save_CC"
++  CFLAGS="$CFLAGS $ac_arg"
+   if ac_fn_c_try_compile "$LINENO"
+ then :
+   ac_cv_prog_cc_c11=$ac_arg
+@@ -5029,7 +5030,8 @@ printf "%s\n" "none needed" >&6; }
+ else $as_nop
+   { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_cv_prog_cc_c11" >&5
+ printf "%s\n" "$ac_cv_prog_cc_c11" >&6; }
+-     CC="$CC $ac_cv_prog_cc_c11"
++     CC="$CC"
++     CFLAGS="$CFLAGS $ac_cv_prog_cc_c11"
+ fi
+   ac_cv_prog_cc_stdc=$ac_cv_prog_cc_c11
+   ac_prog_cc_stdc=c11
+@@ -18258,7 +18260,7 @@ fi
  rm -f conftest.l $LEX_OUTPUT_ROOT.c
  
  fi
@@ -13,12 +34,12 @@ $NetBSD: patch-configure,v 1.5 2023/10/15 06:39:25 ryoon Exp $
  	as_fn_error $? "No flex/lex program found. Please install the \"flex\" or
                   \"btyacc\" package." "$LINENO" 5
  
-@@ -24642,7 +24642,7 @@ else
- 	$as_echo
+@@ -26380,7 +26382,7 @@ else
+ 	printf "%s\n"
  fi
  
 -if test "x${ASpellFound}" == "xyes"; then
 +if test "x${ASpellFound}" = "xyes"; then
- 	$as_echo_n "
+ 	printf %s "
     ----------
     Caution: Aspell version 0.60.8 and possibly others leak memory!
