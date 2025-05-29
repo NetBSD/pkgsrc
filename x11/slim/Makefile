@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/04/24 14:16:32 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/05/29 12:53:40 khorben Exp $
 
 DISTNAME=	slim-1.4.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slim-fork/}
 
@@ -28,6 +28,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	CMakeLists.txt slim.conf
 SUBST_VARS.paths=	PREFIX
 SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths+=	VARBASE
 SUBST_VARS.paths+=	X11BASE
 
 .include "../../mk/bsd.prefs.mk"
