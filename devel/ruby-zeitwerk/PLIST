@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.6 2024/06/15 15:52:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/05/29 14:55:16 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/zeitwerk.rb
+${GEM_LIBDIR}/lib/zeitwerk/core_ext/kernel.rb
+${GEM_LIBDIR}/lib/zeitwerk/core_ext/module.rb
 ${GEM_LIBDIR}/lib/zeitwerk/cref.rb
+${GEM_LIBDIR}/lib/zeitwerk/cref/map.rb
 ${GEM_LIBDIR}/lib/zeitwerk/error.rb
-${GEM_LIBDIR}/lib/zeitwerk/explicit_namespace.rb
 ${GEM_LIBDIR}/lib/zeitwerk/gem_inflector.rb
 ${GEM_LIBDIR}/lib/zeitwerk/gem_loader.rb
 ${GEM_LIBDIR}/lib/zeitwerk/inflector.rb
 ${GEM_LIBDIR}/lib/zeitwerk/internal.rb
-${GEM_LIBDIR}/lib/zeitwerk/kernel.rb
 ${GEM_LIBDIR}/lib/zeitwerk/loader.rb
 ${GEM_LIBDIR}/lib/zeitwerk/loader/callbacks.rb
 ${GEM_LIBDIR}/lib/zeitwerk/loader/config.rb
@@ -19,5 +20,9 @@ ${GEM_LIBDIR}/lib/zeitwerk/loader/helpers.rb
 ${GEM_LIBDIR}/lib/zeitwerk/null_inflector.rb
 ${GEM_LIBDIR}/lib/zeitwerk/real_mod_name.rb
 ${GEM_LIBDIR}/lib/zeitwerk/registry.rb
+${GEM_LIBDIR}/lib/zeitwerk/registry/autoloads.rb
+${GEM_LIBDIR}/lib/zeitwerk/registry/explicit_namespaces.rb
+${GEM_LIBDIR}/lib/zeitwerk/registry/inceptions.rb
+${GEM_LIBDIR}/lib/zeitwerk/registry/loaders.rb
 ${GEM_LIBDIR}/lib/zeitwerk/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
