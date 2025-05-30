@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/05/30 12:55:26 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2025/05/30 23:13:19 gdt Exp $
 
 # Work around setuptools insisting that distfiles not match the (pypi)
 # package name.
-VERSION=	0.19.1
+VERSION=	0.19.2
 DISTNAME=	magic_wormhole-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-magic-wormhole-${VERSION}
 CATEGORIES=	net python
