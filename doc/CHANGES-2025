@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3666 2025/05/30 20:49:41 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3667 2025/05/30 23:00:16 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5478,3 +5478,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/qemu-guest-agent to 10.0.2 [adam 2025-05-30]
 	Added security/ap24-evasive version 2.4.0 [jschauma 2025-05-30]
 	Updated misc/exercism to 3.5.5 [schmonz 2025-05-30]
+	Updated www/varnish to 7.7.1 [tnn 2025-05-30]
+	Updated net/deskflow to 1.22.0 [tnn 2025-05-30]
+	Updated sysutils/rkflashtool to 20200211 [tnn 2025-05-30]
+	Updated www/geckodriver to 0.36.0 [tnn 2025-05-30]
+	Updated textproc/ansifilter to 2.21 [tnn 2025-05-30]
+	Updated time/ntpsec to 1.2.4 [tnn 2025-05-30]
