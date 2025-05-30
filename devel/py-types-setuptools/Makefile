@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2025/05/21 06:48:26 adam Exp $
+# $NetBSD: Makefile,v 1.57 2025/05/30 09:16:34 adam Exp $
 
-DISTNAME=	types_setuptools-80.8.0.20250521
+DISTNAME=	types_setuptools-80.9.0.20250529
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-setuptools/}
