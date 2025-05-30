@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.234 2025/05/16 02:11:10 schmonz Exp $
+$NetBSD: distinfo,v 1.235 2025/05/30 13:19:18 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-10.0.0.tar.xz) = ab3a3b3fb4db99d8711eac8d5b3948fd2b8feca78b5dabb2ada6b70aeb322e97
-SHA512 (qemu-10.0.0.tar.xz) = 2215458ed8be3ab0b0032fe2a96e79183f5fc2da323d927018412ea3d980b022a07ba87d4f446229eaaa7d1b19a577d438dbcaa3af3bd537c7720b56734a2d8b
-Size (qemu-10.0.0.tar.xz) = 135618260 bytes
+BLAKE2s (qemu-10.0.2.tar.xz) = fe565b5622cb713d03288618f53b7597163d360d7c5b27cfcd7ae8781081840e
+SHA512 (qemu-10.0.2.tar.xz) = 7fda582c3845ea663aa5eda21bb38ebcfb6c25bccf8944ea6cdf8b5be6946b5a874b36674a7f5db3e325abb9cca0dd9bc0727837fdceb71a8c947d96169a9b20
+Size (qemu-10.0.2.tar.xz) = 135678180 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
 SHA1 (patch-fsdev_file-op-9p.h) = d951ea05ec31977e720f6ee02f53f1cd3d7c356e
 SHA1 (patch-fsdev_meson.build) = 918a361056b9808caecf4fbd85f44cfc405a1606
@@ -27,7 +27,6 @@ SHA1 (patch-qemu-options.hx) = 6cf811ae421db1e8d45f7098bd36733c6dc7d9cf
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
 SHA1 (patch-target_arm_tcg_translate-sve.c) = f5e5ef33107d696cdc9ef99dee4a9ca0b5d23ea6
 SHA1 (patch-target_i386_cpu.c) = 73571b7602ab9387d6cb8603c1790b7948e767d4
-SHA1 (patch-target_i386_hvf_x86__cpuid.c) = 94d4f87a9eea8c115148cf487e99a66d5b1fe86f
 SHA1 (patch-target_i386_meson.build) = b8f413866ac1079d3ddeb21aacf226509e25ae9c
 SHA1 (patch-target_i386_nvmm_nvmm-all.c) = a25d957fd9ff7c35b8370604bff379c494220bd3
 SHA1 (patch-util_coroutine-ucontext.c) = 02cdf634e64f7e71029047b93747f192df715e6a
