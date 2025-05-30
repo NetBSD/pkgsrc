@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3642 2025/05/30 02:47:41 wen Exp $
+$NetBSD: CHANGES-2025,v 1.3643 2025/05/30 05:33:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5448,3 +5448,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/p5-Mail-Box-IMAP4 to 3.009 [wen 2025-05-30]
 	Updated mail/p5-Mail-Box-POP3 to 3.007 [wen 2025-05-30]
 	Updated mail/p5-Mail-Box to 3.011 [wen 2025-05-30]
+	Updated www/py-aiohttp to 3.12.4 [adam 2025-05-30]
+	Updated fonts/py-fonttools to 4.58.1 [adam 2025-05-30]
