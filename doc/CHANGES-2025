@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3662 2025/05/30 11:36:21 js Exp $
+$NetBSD: CHANGES-2025,v 1.3663 2025/05/30 12:55:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5473,3 +5473,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-xarray-einstats to 0.9.0 [adam 2025-05-30]
 	Added textproc/ov version 0.41.0 [schmonz 2025-05-30]
 	Updated devel/fossil to 2.26 [js 2025-05-30]
+	Updated net/py-magic-wormhole to 0.19.1 [gdt 2025-05-30]
