@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/07/30 01:22:07 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/05/30 22:29:20 tnn Exp $
 bin/ntpdig
 bin/ntpfrob
 bin/ntpkeygen
@@ -140,7 +140,6 @@ share/doc/ntpsec/pic/beaver.gif
 share/doc/ntpsec/pic/boom3.gif
 share/doc/ntpsec/pic/boom3a.gif
 share/doc/ntpsec/pic/boom4.gif
-share/doc/ntpsec/pic/broad.gif
 share/doc/ntpsec/pic/bustardfly.gif
 share/doc/ntpsec/pic/c51.jpg
 share/doc/ntpsec/pic/clocktower128.png
@@ -170,11 +169,11 @@ share/doc/ntpsec/pic/neoclock4x.gif
 share/doc/ntpsec/pic/oncore_evalbig.gif
 share/doc/ntpsec/pic/oncore_utplusbig.gif
 share/doc/ntpsec/pic/orchestra.gif
+share/doc/ntpsec/pic/orphan.gif
 share/doc/ntpsec/pic/oz2.gif
 share/doc/ntpsec/pic/panda.gif
 share/doc/ntpsec/pic/pd_om006.gif
 share/doc/ntpsec/pic/pd_om011.gif
-share/doc/ntpsec/pic/peer.gif
 share/doc/ntpsec/pic/pogo-enemy2.png
 share/doc/ntpsec/pic/pogo.gif
 share/doc/ntpsec/pic/pogo1a.gif

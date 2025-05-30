@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2024/01/13 12:08:18 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/05/30 22:29:20 tnn Exp $
 
-BLAKE2s (ntpsec-1.2.3.tar.gz) = 09dd25ab6433f5bf8771fb05e8fbe423451d632f9764825dc104c04d353d51fa
-SHA512 (ntpsec-1.2.3.tar.gz) = 6baecf32f499fc12c2ef0b44360072b61ab9e8b52ec7ead64ff43a27b5a57431db939d4ce1fad92d38def981f6256a1d8ede0c0cdc5abb50d861be729255eee2
-Size (ntpsec-1.2.3.tar.gz) = 2725081 bytes
-SHA1 (patch-wscript) = c1119e5f5697655ef9a3cc27386837b3c213aafe
+BLAKE2s (ntpsec-1.2.4.tar.gz) = 68ca8d311f1cf349a56301f994c5128302d43e3d73eebd998ae0965f69b59862
+SHA512 (ntpsec-1.2.4.tar.gz) = f3e8494dd669fa2e4ac61721efe38c26a615f3fe38e659e33ea9d0994d67d779600c4ff6e65b023e6252c478ffc90a51baa90aeecc9f17daaf3f785273269efc
+Size (ntpsec-1.2.4.tar.gz) = 2736913 bytes
+SHA1 (patch-wscript) = 09ed9e25c31240849d5fac651d502b27cda7badc
