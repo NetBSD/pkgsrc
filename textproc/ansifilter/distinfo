@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/05/30 21:51:23 tnn Exp $
 
-BLAKE2s (ansifilter-2.18.tar.bz2) = eb0e01ae4fbb2a0e3f17c5784871ac42939f76f195585c7d49a755f3df758f57
-SHA512 (ansifilter-2.18.tar.bz2) = ef7febed1fc31f5c7503648e4fc0a7aefc3da8e30ea649bd6f03eac2904667fb779049106ccb77ad16fbf655e979f6651b25b84ab126c940c66bedee115a28e2
-Size (ansifilter-2.18.tar.bz2) = 436432 bytes
+BLAKE2s (ansifilter-2.21.tar.bz2) = 43052ddfd9e4a2de22e04d95d9923f37c32ffad95a7071cbd015b8033dc1f9b8
+SHA512 (ansifilter-2.21.tar.bz2) = 9bdaf7ec769ec58258c27723ae1aab5f8227b61fe8b8ddb4b429787819c7e40f8a911daacd21427b93e2668555e97b2dc28d502c971ba496a3b50a1eeec5fbb1
+Size (ansifilter-2.21.tar.bz2) = 434994 bytes
