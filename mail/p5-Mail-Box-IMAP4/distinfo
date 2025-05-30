@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/08/25 07:12:26 wen Exp $
+$NetBSD: distinfo,v 1.7 2025/05/30 02:35:37 wen Exp $
 
-BLAKE2s (Mail-Box-IMAP4-3.008.tar.gz) = 66c472a85d17c0a035574fedbc46c5df3c43daa59a14ab237dc1f1abd4ccf028
-SHA512 (Mail-Box-IMAP4-3.008.tar.gz) = 4f65944105547546b96ba5e465d29c4692cf2ee15801b25012c9e33cbac00b1d90c9d231e21415631a3658495e77da03364af8ad0b69dc2ca4d39924a52b9640
-Size (Mail-Box-IMAP4-3.008.tar.gz) = 44744 bytes
+BLAKE2s (Mail-Box-IMAP4-3.009.tar.gz) = 07c8db4ff8d70f27b2330e1e7c4595e3a33733a1ea5b0ed19c4cc027304a90d7
+SHA512 (Mail-Box-IMAP4-3.009.tar.gz) = 9536c9412a41f58fa9b8d5bfab9f4ef8ffb5f4c386693c7c49be34db6ce1a038b965f5115a1ef557a20ae299c9fcb8f75aa9958a4a1d6e0ce96d83d57124875e
+Size (Mail-Box-IMAP4-3.009.tar.gz) = 44279 bytes
