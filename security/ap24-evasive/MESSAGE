@@ -1,0 +1,21 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2025/05/30 17:31:48 jschauma Exp $
+
+In order to use this module in your Apache installation, you will need
+to add the following to your httpd.conf file:
+
+  LoadModule evasive_module lib/httpd/mod_evasive.so
+
+In addition to this you will need to specify mod_evasive configuration
+directives in your httpd.conf.  This can be achieved by adding the
+following to your httpd.conf:
+
+  <IfModule mod_evasive.c>
+      Include ${PKG_SYSCONFDIR}/httpd/mod_evasive.conf
+  </IfModule>
+
+An example configuration file for mod_evasive can be found in:
+
+  ${PREFIX}/share/examples/httpd/
+
+===========================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.980 2025/05/23 13:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.981 2025/05/30 17:31:48 jschauma Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -31,6 +31,7 @@ SUBDIR+=	amap
 SUBDIR+=	amass
 SUBDIR+=	antonym
 SUBDIR+=	ap-modsecurity2
+SUBDIR+=	ap24-evasive
 SUBDIR+=	apg
 SUBDIR+=	argon2
 SUBDIR+=	arirang
