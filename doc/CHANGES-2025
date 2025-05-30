@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3635 2025/05/29 20:38:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3636 2025/05/30 00:23:41 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5441,3 +5441,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/luanti to 5.12.0 [ktnb 2025-05-29]
 	Updated net/haproxy to 3.2.0 [adam 2025-05-29]
 	Updated devel/py-zope.testrunner to 7.4 [adam 2025-05-29]
+	Updated www/gitea to 1.22.6 [khorben 2025-05-30]
