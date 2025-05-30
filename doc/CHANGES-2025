@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3636 2025/05/30 00:23:41 khorben Exp $
+$NetBSD: CHANGES-2025,v 1.3637 2025/05/30 01:06:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5442,3 +5442,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.2.0 [adam 2025-05-29]
 	Updated devel/py-zope.testrunner to 7.4 [adam 2025-05-29]
 	Updated www/gitea to 1.22.6 [khorben 2025-05-30]
+	Updated time/p5-DateTime-Format-Natural to 1.21 [wen 2025-05-30]
