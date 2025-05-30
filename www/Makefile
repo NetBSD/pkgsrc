@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1862 2025/05/23 13:19:39 wiz Exp $
+# $NetBSD: Makefile,v 1.1863 2025/05/30 14:20:16 kim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1187,7 +1187,6 @@ SUBDIR+=	w3m
 SUBDIR+=	w3m-img
 SUBDIR+=	wApua
 SUBDIR+=	waplet
-SUBDIR+=	wcurl
 SUBDIR+=	wdg-validate
 SUBDIR+=	webalizer
 SUBDIR+=	webbrowser
