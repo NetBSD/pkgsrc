@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/05/30 13:02:11 gdt Exp $
+# $NetBSD: Makefile,v 1.74 2025/05/30 13:02:44 gdt Exp $
 
 VERSION_BASE=	1.20.0
 VERSION_RC=
@@ -65,7 +65,7 @@ DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
 
 # test:
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=  ${PYPKGPREFIX}-tox>=4.0.0:../../devel/py-tox
+TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=4.0.0:../../devel/py-tox
 # py-test (included automatically via wheel.mk)
 # pytest-twisted
 # hypothesis >= 3.6.1
