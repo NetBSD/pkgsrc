@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/04/19 16:00:38 adam Exp $
+$NetBSD: distinfo,v 1.34 2025/05/30 09:12:31 adam Exp $
 
-BLAKE2s (zziplib-0.13.79.tar.gz) = 7a98cc5c7055ee72e8e1beeacbf9f44948aca57748649b560b6da68f3b4a10f9
-SHA512 (zziplib-0.13.79.tar.gz) = bed63fa7d430bd197bb70084f28ae6edc4c4120655b882bc8367f968b32c03340bb6d9bf1b14a5fcc5a1160d91ccf00e7b1131a4123da5d52233a84840ba8b7e
-Size (zziplib-0.13.79.tar.gz) = 1197706 bytes
+BLAKE2s (zziplib-0.13.80.tar.gz) = 80f3597cbd04b360abe406c8a0b9ee31a7b81d014d539acc8b176d44054451c3
+SHA512 (zziplib-0.13.80.tar.gz) = 1560b9b6851247ef07e64c689551e191eb26e2756f7ba32bdd1a7ed345a76b444050474b2fdd5f6308ca2ff1e9a55a55c8961eefaf8db0c6674c6a2f1c368a68
+Size (zziplib-0.13.80.tar.gz) = 1192948 bytes
