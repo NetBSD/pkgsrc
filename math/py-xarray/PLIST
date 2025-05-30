@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/04/15 16:09:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/05/30 10:56:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -248,6 +248,9 @@ ${PYSITELIB}/xarray/groupers.pyo
 ${PYSITELIB}/xarray/indexes/__init__.py
 ${PYSITELIB}/xarray/indexes/__init__.pyc
 ${PYSITELIB}/xarray/indexes/__init__.pyo
+${PYSITELIB}/xarray/indexes/range_index.py
+${PYSITELIB}/xarray/indexes/range_index.pyc
+${PYSITELIB}/xarray/indexes/range_index.pyo
 ${PYSITELIB}/xarray/namedarray/__init__.py
 ${PYSITELIB}/xarray/namedarray/__init__.pyc
 ${PYSITELIB}/xarray/namedarray/__init__.pyo
@@ -521,6 +524,9 @@ ${PYSITELIB}/xarray/tests/test_plugins.pyo
 ${PYSITELIB}/xarray/tests/test_print_versions.py
 ${PYSITELIB}/xarray/tests/test_print_versions.pyc
 ${PYSITELIB}/xarray/tests/test_print_versions.pyo
+${PYSITELIB}/xarray/tests/test_range_index.py
+${PYSITELIB}/xarray/tests/test_range_index.pyc
+${PYSITELIB}/xarray/tests/test_range_index.pyo
 ${PYSITELIB}/xarray/tests/test_rolling.py
 ${PYSITELIB}/xarray/tests/test_rolling.pyc
 ${PYSITELIB}/xarray/tests/test_rolling.pyo
