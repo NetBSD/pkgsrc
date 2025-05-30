@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2022/04/12 22:57:45 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2025/05/30 21:36:26 tnn Exp $
 
-DISTNAME=	geckodriver-0.31.0
+DISTNAME=	geckodriver-0.36.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla/}
 GITHUB_PROJECT=	geckodriver
