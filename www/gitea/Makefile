@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2025/04/17 21:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/05/30 00:23:20 khorben Exp $
 
-DISTNAME=	gitea-1.22.0
+DISTNAME=	gitea-1.22.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=go-gitea/}
-PKGREVISION=	10
 CATEGORIES=	www
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
@@ -10,6 +9,8 @@ MAINTAINER=	tm@NetBSD.org
 HOMEPAGE=	https://gitea.io/
 COMMENT=	Compact self-hosted Git service
 LICENSE=	mit
+
+GO_VERSION_REQD=	123
 
 #
 # The front-end files do not change every release, so only bump this when
