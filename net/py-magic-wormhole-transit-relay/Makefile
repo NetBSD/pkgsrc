@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/04/15 08:15:59 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/05/30 12:59:39 gdt Exp $
 
 DISTNAME=	magic-wormhole-transit-relay-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magic-wormhole/magic-wormhole-transit-relay
 COMMENT=	Transit Relay server for Magic-Wormhole
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-twisted>=21.2.0:../../net/py-twisted
