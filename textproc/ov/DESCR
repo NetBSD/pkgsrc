@@ -1,0 +1,14 @@
+ov is a terminal pager.
+
+* Quickly opens files larger than memory.
+* Supports fixed header lines and columns.
+* Optimized for tabular text with column mode and customizable
+  column colors.
+* Fully customizable shortcut keys and styles.
+* Follow mode for real-time updates (like `tail -f` / `tail -F`).
+* Exec mode to display command output dynamically.
+* Watch mode to monitor file changes periodically.
+* Advanced search: incremental, regex, and filter functions.
+* Multi-color highlighting for multiple words.
+* Supports Unicode and East Asian Width characters.
+* Handles compressed files (gzip, bzip2, zstd, lz4, xz).
