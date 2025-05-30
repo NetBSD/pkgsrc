@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3667 2025/05/30 23:00:16 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.3668 2025/05/30 23:13:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5484,3 +5484,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/geckodriver to 0.36.0 [tnn 2025-05-30]
 	Updated textproc/ansifilter to 2.21 [tnn 2025-05-30]
 	Updated time/ntpsec to 1.2.4 [tnn 2025-05-30]
+	Updated net/py-magic-wormhole to 0.19.2 [gdt 2025-05-30]
