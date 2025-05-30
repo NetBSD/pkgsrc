@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/05/06 07:47:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/05/30 09:12:31 adam Exp $
 bin/unzip-mem
 bin/unzzip
 bin/unzzip-big
@@ -40,26 +40,29 @@ lib/libzzip-0.${SHLIB_EXT}.11
 lib/libzzip-0.${SHLIB_EXT}.12
 lib/libzzip-0.so
 lib/libzzip-0.so.13
-lib/libzzip-0.so.13.0.79
+lib/libzzip-0.so.13.0.80
 lib/libzzip.so
 lib/libzzipfseeko-0.${SHLIB_EXT}.10
 lib/libzzipfseeko-0.${SHLIB_EXT}.11
 lib/libzzipfseeko-0.${SHLIB_EXT}.12
 lib/libzzipfseeko-0.so
 lib/libzzipfseeko-0.so.13
-lib/libzzipfseeko-0.so.13.0.79
+lib/libzzipfseeko-0.so.13.0.80
 lib/libzzipfseeko.so
 lib/libzzipmmapped-0.${SHLIB_EXT}.10
 lib/libzzipmmapped-0.${SHLIB_EXT}.11
 lib/libzzipmmapped-0.${SHLIB_EXT}.12
 lib/libzzipmmapped-0.so
 lib/libzzipmmapped-0.so.13
-lib/libzzipmmapped-0.so.13.0.79
+lib/libzzipmmapped-0.so.13.0.80
 lib/libzzipmmapped.so
 lib/libzzipwrap-0.so
 lib/libzzipwrap-0.so.13
-lib/libzzipwrap-0.so.13.0.79
+lib/libzzipwrap-0.so.13.0.80
 lib/libzzipwrap.so
+lib/pkgconfig/zzipfseeko.pc
+lib/pkgconfig/zziplib.pc
+lib/pkgconfig/zzipmmapped.pc
 lib/pkgconfig/zzipwrap.pc
 man/man3/__zzip_fetch_disk_trailer.3
 man/man3/__zzip_parse_root_directory.3
@@ -134,6 +137,3 @@ man/man3/zzip_tell32.3
 man/man3/zzip_telldir.3
 man/man3/zzip_telldir32.3
 share/aclocal/zziplib.m4
-share/pkgconfig/zzipfseeko.pc
-share/pkgconfig/zziplib.pc
-share/pkgconfig/zzipmmapped.pc
