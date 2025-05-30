@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2025/05/27 20:29:31 maya Exp $
+# $NetBSD: Makefile,v 1.144 2025/05/30 15:34:55 jperkin Exp $
 
 PKGREVISION=	4
 .include "Makefile.common"
@@ -19,13 +19,7 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == SunOS
-.  if ${OS_VARIANT} == Solaris
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./libxslt.syms
-.  else
-BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
-.  endif
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-M rm:-Wl,./libxslt.syms
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 # Both libgcrypt and libxml2 install scripts in the _target_ system,

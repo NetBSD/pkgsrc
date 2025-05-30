@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2025/05/26 10:54:49 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2025/05/30 15:34:55 jperkin Exp $
 #
 # used by textproc/libxslt/Makefile
 # used by textproc/py-libxslt/Makefile
@@ -15,6 +15,3 @@ LICENSE=	mit # with advertisement clause
 
 PATCHDIR=	${.CURDIR}/../../textproc/libxslt/patches
 DISTINFO_FILE=	${.CURDIR}/../../textproc/libxslt/distinfo
-
-post-extract:
-	${CP} ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
