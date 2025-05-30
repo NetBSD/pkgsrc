@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/05/21 15:26:02 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/05/30 12:55:26 gdt Exp $
 bin/wormhole-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -87,6 +87,9 @@ ${PYSITELIB}/wormhole/_rlcompleter.pyo
 ${PYSITELIB}/wormhole/_send.py
 ${PYSITELIB}/wormhole/_send.pyc
 ${PYSITELIB}/wormhole/_send.pyo
+${PYSITELIB}/wormhole/_status.py
+${PYSITELIB}/wormhole/_status.pyc
+${PYSITELIB}/wormhole/_status.pyo
 ${PYSITELIB}/wormhole/_terminator.py
 ${PYSITELIB}/wormhole/_terminator.pyc
 ${PYSITELIB}/wormhole/_terminator.pyo
@@ -138,12 +141,18 @@ ${PYSITELIB}/wormhole/test/__init__.pyo
 ${PYSITELIB}/wormhole/test/common.py
 ${PYSITELIB}/wormhole/test/common.pyc
 ${PYSITELIB}/wormhole/test/common.pyo
+${PYSITELIB}/wormhole/test/conftest.py
+${PYSITELIB}/wormhole/test/conftest.pyc
+${PYSITELIB}/wormhole/test/conftest.pyo
 ${PYSITELIB}/wormhole/test/dilate/__init__.py
 ${PYSITELIB}/wormhole/test/dilate/__init__.pyc
 ${PYSITELIB}/wormhole/test/dilate/__init__.pyo
 ${PYSITELIB}/wormhole/test/dilate/common.py
 ${PYSITELIB}/wormhole/test/dilate/common.pyc
 ${PYSITELIB}/wormhole/test/dilate/common.pyo
+${PYSITELIB}/wormhole/test/dilate/test_api.py
+${PYSITELIB}/wormhole/test/dilate/test_api.pyc
+${PYSITELIB}/wormhole/test/dilate/test_api.pyo
 ${PYSITELIB}/wormhole/test/dilate/test_connect.py
 ${PYSITELIB}/wormhole/test/dilate/test_connect.pyc
 ${PYSITELIB}/wormhole/test/dilate/test_connect.pyo
@@ -183,9 +192,12 @@ ${PYSITELIB}/wormhole/test/dilate/test_record.pyo
 ${PYSITELIB}/wormhole/test/dilate/test_subchannel.py
 ${PYSITELIB}/wormhole/test/dilate/test_subchannel.pyc
 ${PYSITELIB}/wormhole/test/dilate/test_subchannel.pyo
-${PYSITELIB}/wormhole/test/run_trial.py
-${PYSITELIB}/wormhole/test/run_trial.pyc
-${PYSITELIB}/wormhole/test/run_trial.pyo
+${PYSITELIB}/wormhole/test/dilate/test_traffic_timing.py
+${PYSITELIB}/wormhole/test/dilate/test_traffic_timing.pyc
+${PYSITELIB}/wormhole/test/dilate/test_traffic_timing.pyo
+${PYSITELIB}/wormhole/test/dilate/test_version.py
+${PYSITELIB}/wormhole/test/dilate/test_version.pyc
+${PYSITELIB}/wormhole/test/dilate/test_version.pyo
 ${PYSITELIB}/wormhole/test/test_args.py
 ${PYSITELIB}/wormhole/test/test_args.pyc
 ${PYSITELIB}/wormhole/test/test_args.pyo
@@ -255,6 +267,9 @@ ${PYSITELIB}/wormhole/transit.pyo
 ${PYSITELIB}/wormhole/util.py
 ${PYSITELIB}/wormhole/util.pyc
 ${PYSITELIB}/wormhole/util.pyo
+${PYSITELIB}/wormhole/version.py
+${PYSITELIB}/wormhole/version.pyc
+${PYSITELIB}/wormhole/version.pyo
 ${PYSITELIB}/wormhole/wormhole.py
 ${PYSITELIB}/wormhole/wormhole.pyc
 ${PYSITELIB}/wormhole/wormhole.pyo
