@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2025/05/21 15:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/05/30 12:55:26 gdt Exp $
 
-DISTNAME=	magic-wormhole-0.18.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	5
+# Work around setuptools insisting that distfiles not match the (pypi)
+# package name.
+VERSION=	0.19.1
+DISTNAME=	magic_wormhole-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-magic-wormhole-${VERSION}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/magic-wormhole/}
 
@@ -10,6 +12,8 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/warner/magic-wormhole
 COMMENT=	Securely transfer data between computers
 LICENSE=	mit
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # pyproject.toml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
@@ -43,8 +47,9 @@ DEPENDS+=	${PYPKGPREFIX}-qrcode>=8.0:../../graphics/py-qrcode
 # setup.py install_requires dev
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TEST_DEPENDS+=	${PYPKGPREFIX}-flakes>=1.2.3:../../devel/py-flakes
-TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server>=0.3.1:../../net/py-magic-wormhole-mailbox-server # XXX setup.py says ==0.3.1 but 0.4.0 seems OK
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-transit-relay>=0.3.1:../../net/py-magic-wormhole-transit-relay # XXX setup.py says ==0.3.1 but 0.4.0 seems OK
+TEST_DEPENDS+=	${PYPKGPREFIX}-magic-wormhole-mailbox-server>=0.3.1:../../net/py-magic-wormhole-mailbox-server # XXX setup.py says ==0.3.1 but 0.4.0 seems OK
+#TEST_DEPENDS+=	${PYPKGPREFIX}-py-test-twisted-[0-9]*:../../net/py-test-twisted
 
 USE_LANGUAGES=	# none
 
