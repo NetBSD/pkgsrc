@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3658 2025/05/30 10:58:34 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3659 2025/05/30 10:59:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5468,3 +5468,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-publicsuffixlist to 1.0.2.20250529 [adam 2025-05-30]
 	Updated devel/cargo-edit to 0.13.6 [pin 2025-05-30]
 	Updated editors/focuswriter to 1.8.12 [pin 2025-05-30]
+	Updated shells/oh-my-posh to 26.0.3 [pin 2025-05-30]
