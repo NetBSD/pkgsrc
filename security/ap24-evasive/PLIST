@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/05/30 17:31:48 jschauma Exp $
+lib/httpd/mod_evasive.so
+share/examples/httpd/mod_evasive.conf
+share/httpd/manual/mod/mod_evasive.md
