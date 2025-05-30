@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3653 2025/05/30 07:38:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3654 2025/05/30 07:39:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5461,3 +5461,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.5.16 [pin 2025-05-30]
 	Updated shells/oh-my-posh to 26.0.2 [pin 2025-05-30]
 	Updated x11/xterm to 399 [pin 2025-05-30]
+	Updated sysutils/zoxide to 0.9.8 [pin 2025-05-30]
