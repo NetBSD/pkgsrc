@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3645 2025/05/30 06:29:47 wen Exp $
+$NetBSD: CHANGES-2025,v 1.3646 2025/05/30 06:32:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5452,3 +5452,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/py-fonttools to 4.58.1 [adam 2025-05-30]
 	Updated mail/p5-Mail-DMARC to 1.20250203 [wen 2025-05-30]
 	Updated mail/p5-Mail-Message to 3.017 [wen 2025-05-30]
+	Updated mail/p5-Mail-SPF to 3.20250505 [wen 2025-05-30]
