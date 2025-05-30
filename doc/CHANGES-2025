@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3649 2025/05/30 07:34:42 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3650 2025/05/30 07:35:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5457,3 +5457,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/scummvm to 2.9.1 [adam 2025-05-30]
 	Updated devel/py-extension-helpers to 1.3.0 [adam 2025-05-30]
 	Updated devel/ast-grep to 0.38.3 [pin 2025-05-30]
+	Updated security/gpg-tui to 0.11.1 [pin 2025-05-30]
