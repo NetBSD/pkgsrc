@@ -1,8 +1,8 @@
-$NetBSD: patch-src_lib_base_String.h,v 1.1 2025/05/05 08:39:56 tnn Exp $
+$NetBSD: patch-src_lib_base_String.h,v 1.2 2025/05/30 21:17:32 tnn Exp $
 
 cstdarg for va_list
 
---- src/lib/base/String.h.orig	2025-04-27 17:04:05.677655830 +0000
+--- src/lib/base/String.h.orig	2025-05-29 13:27:33.000000000 +0000
 +++ src/lib/base/String.h
 @@ -10,6 +10,7 @@
  
@@ -10,5 +10,5 @@ cstdarg for va_list
  
 +#include <cstdarg>
  #include <string>
- #include <vector>
  
+ namespace deskflow {
