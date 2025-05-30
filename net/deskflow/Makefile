@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/05/11 17:38:26 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2025/05/30 21:17:32 tnn Exp $
 
-DISTNAME=	deskflow-1.21.2
+DISTNAME=	deskflow-1.22.0
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,7 +16,7 @@ USE_TOOLS+=		pkg-config
 
 DISTFILES=		${DEFAULT_DISTFILES}
 
-CLI11_VERSION=		2.4.2
+CLI11_VERSION=		2.5.0
 DISTFILES+=		CLI11-${CLI11_VERSION}.hpp
 SITES.CLI11-${CLI11_VERSION}.hpp=	\
 			-https://github.com/CLIUtils/CLI11/releases/download/v${CLI11_VERSION}/CLI11.hpp
