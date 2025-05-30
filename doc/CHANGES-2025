@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3663 2025/05/30 12:55:33 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3664 2025/05/30 13:19:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5474,3 +5474,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/ov version 0.41.0 [schmonz 2025-05-30]
 	Updated devel/fossil to 2.26 [js 2025-05-30]
 	Updated net/py-magic-wormhole to 0.19.1 [gdt 2025-05-30]
+	Updated emulators/qemu to 10.0.2 [adam 2025-05-30]
+	Updated sysutils/qemu-guest-agent to 10.0.2 [adam 2025-05-30]
