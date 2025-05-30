@@ -1,10 +1,21 @@
-$NetBSD: patch-SConscript,v 1.13 2025/05/17 23:11:52 gdt Exp $
+$NetBSD: patch-SConscript,v 1.14 2025/05/30 22:16:10 tnn Exp $
 
 gpspipe requires libgpsd for serial.c cfmakeraw() compat.
 \todo Fix upstream?
 
---- SConscript.orig	2025-05-12 02:16:11.000000000 +0000
+- disable check for graphics/dia
+
+--- SConscript.orig	2025-05-16 04:18:05.000000000 +0000
 +++ SConscript
+@@ -1535,7 +1535,7 @@ if not cleaning and not helping:
+         have_canplayer = config.CheckProg('canplayer')
+         have_coverage = config.CheckProg('coverage')
+         have_cppcheck = config.CheckProg('cppcheck')
+-        have_dia = config.CheckProg('dia')
++        # have_dia = config.CheckProg('dia')
+         have_flake8 = config.CheckProg('flake8')
+         have_pycodestyle = config.CheckProg('pycodestyle')
+         have_pylint = config.CheckProg('pylint')
 @@ -2078,7 +2078,7 @@ gpsmon = env.Program('gpsmon/gpsmon', gp
                       LIBS=[libgpsd_static, libgps_static],
                       parse_flags=gpsdflags + gpsflags + ncurseslibs)
