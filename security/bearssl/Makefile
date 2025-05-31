@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/05/06 12:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/05/31 02:20:32 schmonz Exp $
 
 DISTNAME=		bearssl-0.6
 PKGREVISION=		1
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://bearssl.org/
 COMMENT=		Implementation of the SSL/TLS protocol (RFC 5246)
 LICENSE=		mit
+
+USE_TOOLS+=		gmake
 
 INSTALLATION_DIRS=	bin include lib
 
