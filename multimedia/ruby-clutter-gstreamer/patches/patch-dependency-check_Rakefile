@@ -1,11 +1,11 @@
-$NetBSD: patch-dependency-check_Rakefile,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
+$NetBSD: patch-dependency-check_Rakefile,v 1.3 2025/05/31 20:18:18 tsutsui Exp $
 
 - ignore native-package-installer dependency checks
   (pkgsrc will handle dependencies internally)
 
---- dependency-check/Rakefile.orig	2019-10-11 15:19:19.252790377 +0000
+--- dependency-check/Rakefile.orig	2025-05-31 19:53:29.571319032 +0000
 +++ dependency-check/Rakefile
-@@ -29,14 +29,14 @@ end
+@@ -29,13 +29,13 @@ end
  namespace :dependency do
    desc "Check dependency"
    task :check do
@@ -13,8 +13,7 @@ $NetBSD: patch-dependency-check_Rakefile,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
 -    unless PKGConfig.check_version?(package_id)
 -      unless NativePackageInstaller.install(:debian => "libclutter-gst-3.0-dev",
 -                                            :redhat => "pkgconfig(#{package_id})",
--                                            :homebrew => "clutter-gst",
--                                            :msys2 => "clutter-gst")
+-                                            :homebrew => "clutter-gst")
 -        exit(false)
 -      end
 -    end
@@ -22,8 +21,7 @@ $NetBSD: patch-dependency-check_Rakefile,v 1.2 2019/10/11 16:20:24 tsutsui Exp $
 +#    unless PKGConfig.check_version?(package_id)
 +#      unless NativePackageInstaller.install(:debian => "libclutter-gst-3.0-dev",
 +#                                            :redhat => "pkgconfig(#{package_id})",
-+#                                            :homebrew => "clutter-gst",
-+#                                            :msys2 => "clutter-gst")
++#                                            :homebrew => "clutter-gst")
 +#        exit(false)
 +#      end
 +#    end
