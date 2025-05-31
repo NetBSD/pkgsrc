@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3673 2025/05/31 13:08:16 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3674 2025/05/31 13:34:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/broot to 1.46.5 [pin 2025-05-31]
 	Updated shells/oh-my-posh to 26.0.5 [pin 2025-05-31]
 	Updated misc/tailspin to 5.4.3 [pin 2025-05-31]
+	Updated textproc/csvlens to 0.13.0 [pin 2025-05-31]
