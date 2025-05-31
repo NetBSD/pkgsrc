@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/05/17 23:56:37 gdt Exp $
+# $NetBSD: Makefile,v 1.81 2025/05/31 13:58:38 gdt Exp $
 
 .include "Makefile.common"
 
@@ -24,6 +24,10 @@ CONFIGURE_ARGS+=	--with-altpidpath=${NUT_RUNDIR:Q}
 # nut, bizarrely, does not install headers by default
 CONFIGURE_ARGS+=	--with-dev
 CONFIGURE_ARGS+=	--without-asciidoc
+
+# Auto-enables if prereqs (not documented) are present.  Unclear
+# usefulness, so until rationale to enable (and patch), disable.
+CONFIGURE_ARGS+=	--disable-extapi-enphase
 
 CONFIGURE_ARGS+=	--without-snmp		# provided by sysutils/ups-nut-snmp
 CONFIGURE_ARGS+=	--without-usb		# provided by sysutils/ups-nut-usb
