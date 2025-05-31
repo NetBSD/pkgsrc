@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.389 2025/05/29 21:08:48 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.390 2025/05/31 16:50:14 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26256,3 +26256,8 @@ tcpreplay<4.5.0	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-22654
 apache-tomcat>=9<9.0.15		security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-46701
 apache-tomcat>=10<10.1.41	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-46701
 apache-tomcat>=11<11.0.7	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-46701
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-44904
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-44905
+jhead-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-44906
+liboqs<0.13.0	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2025-48946
+perl>=5.13.6	race-condition	https://nvd.nist.gov/vuln/detail/CVE-2025-40909
