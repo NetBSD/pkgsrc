@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2019/11/04 21:28:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2025/05/31 06:50:12 wiz Exp $
 
 DISTNAME=	gnuit-4.9.5
 PKGREVISION=	1
@@ -9,10 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hulubei.net/tudor/git/
 COMMENT=	GNU Interactive Tools - a file system browser for UNIX systems
 LICENSE=	gnu-gpl-v3
-
-CONFLICTS=	git<=4.9.5nb1
-PREV_PKGPATH=	misc/git
-SUPERSEDES=	git<=4.9.5nb1
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/gnuit
