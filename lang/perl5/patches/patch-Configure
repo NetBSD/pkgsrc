@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
+$NetBSD: patch-Configure,v 1.16 2025/05/31 19:22:30 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -6,10 +6,19 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
 * Add Minix
 * Several other changes.
 * Add rpath for QNX
+* https://github.com/Perl/perl5/issues/23010
 
---- Configure.orig	2022-12-20 12:11:59.000000000 +0000
+--- Configure.orig	2025-03-30 10:35:38.000000000 +0000
 +++ Configure
-@@ -3515,7 +3515,8 @@ EOM
+@@ -478,6 +478,7 @@ d_fd_set=''
+ d_fds_bits=''
+ d_fdclose=''
+ d_fdim=''
++d_fdopendir=''
+ d_fegetround=''
+ d_ffs=''
+ d_ffsl=''
+@@ -3525,7 +3526,8 @@ EOM
  			osvers=`echo "$4"|sed 's/^v//'`
  			;;
  		freebsd) osname=freebsd
@@ -19,7 +28,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3537,11 +3538,11 @@ EOM
+@@ -3547,11 +3549,11 @@ EOM
  			;;
  		MiNT)	osname=mint
  			;;
@@ -33,7 +42,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3551,7 +3552,7 @@ EOM
+@@ -3561,7 +3563,7 @@ EOM
  			;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -42,7 +51,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  			;;
  		os2)	osname=os2
  			osvers="$4"
-@@ -3566,6 +3567,9 @@ EOM
+@@ -3576,6 +3578,9 @@ EOM
  		qnx) osname=qnx
  			osvers="$4"
  			;;
@@ -52,7 +61,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		solaris) osname=solaris
  			case "$3" in
  			5*) osvers=`echo $3 | $sed 's/^5/2/g'` ;;
-@@ -4943,7 +4947,7 @@ esac
+@@ -4953,7 +4958,7 @@ esac
  # If using gcc or clang, we can get better values for libpth, incpth
  # and usrinc directly from the compiler.
  # Note that ccname for clang is also gcc.
@@ -61,7 +70,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
      gcc)
  	realpath=`which realpath 2>/dev/null | sed 's/no realpath in.*//'`
  	$echo 'extern int foo;' > try.c
-@@ -5027,14 +5031,14 @@ case "$plibpth" in
+@@ -5037,14 +5042,14 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -78,7 +87,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		case " $libpth " in
  		*" $xxx "*) ;;
  		*) libpth="$libpth $xxx";;
-@@ -5150,7 +5154,7 @@ lib_ext=$_a
+@@ -5160,7 +5165,7 @@ lib_ext=$_a
  obj_ext=$_o
  path_sep=$p_
  
@@ -87,7 +96,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  
  : Which makefile gets called first.  This is used by make depend.
  case "$firstmakefile" in
-@@ -5493,7 +5497,7 @@ default|recommended)
+@@ -5480,7 +5485,7 @@ default|recommended)
  	*-fno-stack-protector*)
  	    echo "Do not add -fstack-protector nor -fstack-protector-strong" 2>&1
  	    ;;
@@ -96,7 +105,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  	   ?*)	set stack-protector-strong -fstack-protector-strong
  		eval $checkccflag
  		case "$dflt" in
-@@ -6476,6 +6480,15 @@ case "$nm_so_opt" in
+@@ -6464,6 +6469,15 @@ case "$nm_so_opt" in
  	;;
  esac
  
@@ -112,7 +121,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  : Figure out where the libc is located
  case "$runnm" in
  true)
-@@ -7656,7 +7669,9 @@ rp='Pathname for the site-specific libra
+@@ -7665,7 +7679,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
  prefixvar=sitelib
  . ./setprefixvar
@@ -123,7 +132,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
-@@ -8069,7 +8084,9 @@ case "$vendorprefix" in
+@@ -8022,7 +8038,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -134,7 +143,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  prefixvar=vendorlib
  . ./installprefix
  
-@@ -8569,6 +8586,7 @@ EOM
+@@ -8522,6 +8540,7 @@ EOM
  			  esac
  			  ;;
  		    *linux*|irix*|gnu*)  dflt="-shared $optimize" ;;
@@ -142,7 +151,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		    solaris) # See [perl #66604].
  			    # On Solaris 11, gcc -m64 on amd64
  			    # appears not to understand -G.  gcc versions at
-@@ -8608,7 +8626,7 @@ EOM
+@@ -8561,7 +8580,7 @@ EOM
  	esac
  	for thisflag in $ldflags; do
  	    case "$thisflag" in
@@ -151,7 +160,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		    case " $dflt " in
  			*" $thisflag "*) ;;
  			*) dflt="$dflt $thisflag" ;;
-@@ -8864,7 +8882,7 @@ if "$useshrplib"; then
+@@ -8817,7 +8836,7 @@ if "$useshrplib"; then
  	freebsd|minix|mirbsd|netbsd|openbsd|interix|dragonfly|bitrig)
  		xxx="-Wl,-R$shrpdir"
  		;;
@@ -160,7 +169,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  		xxx="-Wl,-rpath,$shrpdir"
  		;;
  	hpux*)
-@@ -8874,6 +8892,9 @@ if "$useshrplib"; then
+@@ -8827,6 +8846,9 @@ if "$useshrplib"; then
  	cygwin)
  		# cygwin needs only ldlibpth
  		;;
@@ -170,7 +179,7 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  	*)
  		tmp_shrpenv="env LD_RUN_PATH=$shrpdir"
  		;;
-@@ -9948,6 +9969,13 @@ esac
+@@ -9901,6 +9923,13 @@ esac
  : Check if we want perlio
  useperlio="$define"
  
@@ -184,7 +193,18 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20573,7 +20601,15 @@ RCAT(Rei,ser)
+@@ -13344,6 +13373,10 @@ esac
+ set i_fcntl
+ eval $setvar
+ 
++: see if fdopendir exists
++set fdopendir d_fdopendir
++eval $inlibc
++
+ : see if fork exists
+ set fork d_fork
+ eval $inlibc
+@@ -20825,7 +20858,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
@@ -201,3 +221,11 @@ $NetBSD: patch-Configure,v 1.15 2025/04/21 20:55:52 wiz Exp $
  	echo "Oh!  Smells like ANSI's been here." >&4
  	echo "We can catify or stringify, separately or together!"
  	cpp_stuff=42
+@@ -25047,6 +25088,7 @@ d_flockproto='$d_flockproto'
+ d_fma='$d_fma'
+ d_fmax='$d_fmax'
+ d_fmin='$d_fmin'
++d_fdopendir='$d_fdopendir'
+ d_fork='$d_fork'
+ d_fp_class='$d_fp_class'
+ d_fp_classify='$d_fp_classify'

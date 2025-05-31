@@ -1,0 +1,19 @@
+$NetBSD: patch-Porting_Glossary,v 1.1 2025/05/31 19:22:30 wiz Exp $
+
+https://github.com/Perl/perl5/issues/23010
+https://github.com/Perl/perl5/commit/918bfff86ca8d6d4e4ec5b30994451e0bd74aba9.patch
+
+--- Porting/Glossary.orig	2025-03-30 10:35:38.000000000 +0000
++++ Porting/Glossary
+@@ -947,6 +947,11 @@ d_fmin (d_fmin.U):
+ 	This variable conditionally defines the HAS_FMIN symbol, which
+ 	indicates to the C program that the fmin() routine is available.
+ 
++d_fdopendir (d_fdopendir.U):
++	This variable conditionally defines the HAS_FORK symbol, which
++	indicates that the fdopen routine is available to open a
++	directory descriptor.
++
+ d_fork (d_fork.U):
+ 	This variable conditionally defines the HAS_FORK symbol, which
+ 	indicates to the C program that the fork() routine is available.

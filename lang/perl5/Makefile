@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.287 2025/04/21 20:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.288 2025/05/31 19:22:30 wiz Exp $
 
+PKGREVISION=	1
 .include "license.mk"
 .include "Makefile.common"
 
@@ -60,6 +61,14 @@ CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 #         porting/customized.t
 #         porting/regen.t
 # https://github.com/Perl/perl5/issues/22751
+# As of 5.40.2
+# without network
+# Failed 5 tests out of 2732, 99.82% okay.
+#         ../cpan/HTTP-Tiny/t/003_agent.t
+#         ../cpan/HTTP-Tiny/t/004_timeout.t
+#         ../cpan/HTTP-Tiny/t/070_cookie_jar.t
+#         ../cpan/HTTP-Tiny/t/141_no_proxy.t
+#         ../cpan/HTTP-Tiny/t/180_verify_SSL.t
 TEST_TARGET=		test
 
 # Policy.sh generation
