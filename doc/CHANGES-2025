@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3670 2025/05/31 06:15:40 fox Exp $
+$NetBSD: CHANGES-2025,v 1.3671 2025/05/31 13:06:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-magic-wormhole to 0.19.2 [gdt 2025-05-30]
 	Updated audio/fasttracker2 to 1.96 [fox 2025-05-31]
 	Updated sysutils/pfetch to 1.9.0 [fox 2025-05-31]
+	Updated sysutils/broot to 1.46.5 [pin 2025-05-31]
