@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2025/01/27 19:12:39 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2025/05/31 20:43:17 zafer Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.fau.de/aminet/misc/unix/
+MASTER_SITES=	https://ftp.fau.de/aminet/misc/unix/
 EXTRACT_SUFX=	.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
