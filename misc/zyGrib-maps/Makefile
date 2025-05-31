@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2020/01/26 17:31:45 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2025/05/31 20:25:46 zafer Exp $
 #
 
 DISTNAME=	zyGrib-maps-2.4
 PKGREVISION=	6
 CATEGORIES=	misc
-MASTER_SITES=	http://www.zygrib.org/getfile.php?file=
+MASTER_SITES=	#http://www.zygrib.org/getfile.php?file=
 DISTFILES=	zyGrib_maps2.4.tgz
 
 MAINTAINER=	plunky@NetBSD.org
