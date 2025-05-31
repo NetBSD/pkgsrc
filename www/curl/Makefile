@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2025/05/28 09:43:53 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2025/05/31 19:27:42 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,8 @@ SUBST_FILES.rpath+=	curl-config.in
 SUBST_SED.rpath+=	-e 's!-L@libdir@!${COMPILER_RPATH_FLAG}@libdir@ -L@libdir@!'
 SUBST_STAGE.rpath=	pre-configure
 SUBST_MESSAGE.rpath=	Adding rpath to curl-config.
+
+SUPERSEDES+=		wcurl-[0-9]*
 
 .include "options.mk"
 
