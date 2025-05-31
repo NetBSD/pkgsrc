@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2025/04/24 14:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/05/31 01:08:57 fox Exp $
 
 DISTNAME=	coyim-0.4.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coyim/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	chat
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
@@ -13,9 +13,6 @@ COMMENT=	Safe and secure by default chat client
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config gmake
-
-BROKEN_ON_PLATFORM+=	Darwin-*-*
-BROKEN_ON_PLATFORM+=	NetBSD-*-*
 
 # for patching
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} github.com_awnumar_memcall_@v_v0.1.2.zip
@@ -41,6 +38,7 @@ CHECK_RELRO_SKIP=	bin/coyim
 post-extract:
 	${CP} ${FILESDIR}/go.* ${WRKSRC}
 	${RM} -rf ${WRKSRC}/vendor
+	${RM} -f ${WRKSRC}/windows_amd64_icon.syso
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/coyim ${DESTDIR}${PREFIX}/bin
