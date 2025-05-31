@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3675 2025/05/31 14:49:51 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.3676 2025/05/31 19:22:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5492,3 +5492,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tailspin to 5.4.3 [pin 2025-05-31]
 	Updated textproc/csvlens to 0.13.0 [pin 2025-05-31]
 	Updated audio/kew to 3.3.3 [ktnb 2025-05-31]
+	Updated lang/perl5 to 5.40.2nb1 [wiz 2025-05-31]
