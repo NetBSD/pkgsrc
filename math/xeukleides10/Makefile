@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2017/09/06 10:40:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/05/31 20:21:28 zafer Exp $
 
 DISTNAME=	xeukleides.1.0.1
 PKGNAME=	xeukleides-1.0.1
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://www.eukleides.org/download/
+MASTER_SITES=	#http://www.eukleides.org/download/
 
 MAINTAINER=	tsadowski@gmx.net
 #HOMEPAGE=	http://www.eukleides.or/
