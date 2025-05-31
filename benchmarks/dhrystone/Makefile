@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/05/31 23:42:48 zafer Exp $
 
 DISTNAME=		dhry2.1
 PKGNAME=		dhrystone-2.1
 PKGREVISION=		1
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.planix.com/pub/mirror/
+MASTER_SITES=		https://www.aydogan.net/distfiles/benchmarks/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
