@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2025/02/09 09:19:09 tsutsui Exp $
+$NetBSD: distinfo,v 1.26 2025/05/31 20:18:17 tsutsui Exp $
 
-BLAKE2s (gobject-introspection-4.2.7.gem) = 81a36c8eca515c2bc37a4a8fc1ac2e48349521bae7d3bd3969f91a59b4dd363d
-SHA512 (gobject-introspection-4.2.7.gem) = d6b04accd8b0130885a83393fad9552db35bbab9c0b256205474aca892ca52456e82636e3526243f0ee96c13989abd75b4cbbe4a2e7bf5750bfbb15f763d06d7
-Size (gobject-introspection-4.2.7.gem) = 74752 bytes
+BLAKE2s (gobject-introspection-4.2.9.gem) = e5078a0ab60f5abcbca237ce2019d375471b3416b7ef548163427403b7219b04
+SHA512 (gobject-introspection-4.2.9.gem) = 52d65f22838fb3406a043edcdb9d90fc2aeef8c5d8a743fab5cbc5a532fd2d1a60575c2db99d3b28e48c16aa06d0e3b2c996978045c7b92ea2bbc3ef3f016249
+Size (gobject-introspection-4.2.9.gem) = 75264 bytes
