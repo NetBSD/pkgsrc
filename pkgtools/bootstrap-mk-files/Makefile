@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2025/04/19 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/06/01 19:07:23 triaxx Exp $
 
-PKGNAME=	bootstrap-mk-files-20240422
+PKGNAME=	bootstrap-mk-files-20250601
 CATEGORIES=	pkgtools
 
 CONFLICTS+=	mk-files-[0-9]*

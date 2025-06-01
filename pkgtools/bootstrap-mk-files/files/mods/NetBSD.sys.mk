@@ -1,4 +1,4 @@
-#	$NetBSD: NetBSD.sys.mk,v 1.2 2016/09/08 14:28:12 joerg Exp $
+#	$NetBSD: NetBSD.sys.mk,v 1.3 2025/06/01 19:07:23 triaxx Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run NetBSD.
@@ -9,7 +9,7 @@ unix?=		We run NetBSD.
 .LIBS:		.a
 
 AR?=		ar
-ARFLAGS?=	rl
+ARFLAGS?=	r
 RANLIB?=	ranlib
 
 AS?=		as
