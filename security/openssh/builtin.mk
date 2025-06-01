@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2025/06/01 08:11:47 vins Exp $
+# $NetBSD: builtin.mk,v 1.2 2025/06/01 10:45:20 vins Exp $
 
 BUILTIN_PKG:=	openssh
 
@@ -61,3 +61,20 @@ USE_BUILTIN.openssh!=							\
 .  endif
 .endif
 MAKEVARS+=		USE_BUILTIN.openssh
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.openssh?=	no
+.if ${CHECK_BUILTIN.openssh:tl} == no
+#
+# Here we place code that depends on whether USE_BUILTIN.openssh is
+# set to "yes" or "no".
+#
+.  if ${USE_BUILTIN.openssh:tl} == yes
+OPENSSH=		${SSH:Q}
+.  else
+OPENSSH=		${PREFIX}/bin/ssh
+.  endif
+.endif  # CHECK_BUILTIN.openssh
