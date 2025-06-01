@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/05/18 19:31:22 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/01 14:26:13 gdt Exp $
 
 DISTNAME=	gqrx-2.17.6
 PKGREVISION=	3
@@ -23,14 +23,13 @@ USE_TOOLS+=	pkg-config
 .include "../../ham/gnuradio-core/buildlink3.mk"
 .include "../../ham/gnuradio-digital/buildlink3.mk"
 .include "../../ham/gnuradio-network/buildlink3.mk"
-
 #   gr-iqbalance
 # (not in pkgsrc) .include "../../ham/gr-iqbalance/buildlink3.mk"
 
 # optional hardware drivers: (\todo Enable or explain why not.)
 # (not in pkgsrc) .include "../../ham/gr-fcd/buildlink3.mk"
-# (not in pkgsrc) .include "../../ham/gr-fcdproplus/buildlink3.mk"
 #.include "../../ham/gnuradio-uhd/buildlink3.mk"
+# (not in pkgsrc) .include "../../ham/gr-fcdproplus/buildlink3.mk"
 #.include "../../ham/rtl-sdr/buildlink3.mk"
 .include "../../ham/hackrf/buildlink3.mk"
 # (not in pkgsrc) Airspy
