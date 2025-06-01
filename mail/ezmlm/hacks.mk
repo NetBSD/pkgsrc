@@ -1,8 +1,8 @@
-# $NetBSD: hacks.mk,v 1.1 2005/01/08 17:54:34 schmonz Exp $
+# $NetBSD: hacks.mk,v 1.2 2025/06/01 21:08:36 schmonz Exp $
 
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc-*)
+.if ${CC_VERSION:Mgcc-*}
 PKG_HACKS+=		builtin-log
 CFLAGS+=		-fno-builtin-log
 .endif
