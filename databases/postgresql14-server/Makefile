@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/05/09 13:46:32 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/01 21:22:22 thor Exp $
 
 PKGNAME=	${DISTNAME:S/-/14-server-/}
 COMMENT=	PostgreSQL database server programs
@@ -11,6 +11,10 @@ BROKEN_ON_PLATFORM=	*-*-mips
 USE_TOOLS+=		msgfmt
 TOOLS_BROKEN+=		perl
 CONFIGURE_ARGS+=	--with-openssl
+
+# On our HPC systems with > 32 cores, this shows.
+# alternating rm -f libpgcommon_srv.a and ar on same file
+MAKE_JOBS_SAFE=	no
 
 INSTALL_DIRS=	src/backend
 INSTALL_DIRS+=	src/backend/replication/libpqwalreceiver
