@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2025/04/14 10:04:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2025/06/01 05:58:01 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -37,6 +37,9 @@ ${PYSITELIB}/mypy/build.pyo
 ${PYSITELIB}/mypy/checker.py
 ${PYSITELIB}/mypy/checker.pyc
 ${PYSITELIB}/mypy/checker.pyo
+${PYSITELIB}/mypy/checker_shared.py
+${PYSITELIB}/mypy/checker_shared.pyc
+${PYSITELIB}/mypy/checker_shared.pyo
 ${PYSITELIB}/mypy/checkexpr.py
 ${PYSITELIB}/mypy/checkexpr.pyc
 ${PYSITELIB}/mypy/checkexpr.pyo
@@ -1311,6 +1314,9 @@ ${PYSITELIB}/mypyc/analysis/ircheck.pyo
 ${PYSITELIB}/mypyc/analysis/selfleaks.py
 ${PYSITELIB}/mypyc/analysis/selfleaks.pyc
 ${PYSITELIB}/mypyc/analysis/selfleaks.pyo
+${PYSITELIB}/mypyc/annotate.py
+${PYSITELIB}/mypyc/annotate.pyc
+${PYSITELIB}/mypyc/annotate.pyo
 ${PYSITELIB}/mypyc/build.py
 ${PYSITELIB}/mypyc/build.pyc
 ${PYSITELIB}/mypyc/build.pyo
@@ -1419,6 +1425,9 @@ ${PYSITELIB}/mypyc/irbuild/mapper.pyo
 ${PYSITELIB}/mypyc/irbuild/match.py
 ${PYSITELIB}/mypyc/irbuild/match.pyc
 ${PYSITELIB}/mypyc/irbuild/match.pyo
+${PYSITELIB}/mypyc/irbuild/missingtypevisitor.py
+${PYSITELIB}/mypyc/irbuild/missingtypevisitor.pyc
+${PYSITELIB}/mypyc/irbuild/missingtypevisitor.pyo
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.py
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.pyc
 ${PYSITELIB}/mypyc/irbuild/nonlocalcontrol.pyo
@@ -1548,6 +1557,9 @@ ${PYSITELIB}/mypyc/test/test_alwaysdefined.pyo
 ${PYSITELIB}/mypyc/test/test_analysis.py
 ${PYSITELIB}/mypyc/test/test_analysis.pyc
 ${PYSITELIB}/mypyc/test/test_analysis.pyo
+${PYSITELIB}/mypyc/test/test_annotate.py
+${PYSITELIB}/mypyc/test/test_annotate.pyc
+${PYSITELIB}/mypyc/test/test_annotate.pyo
 ${PYSITELIB}/mypyc/test/test_cheader.py
 ${PYSITELIB}/mypyc/test/test_cheader.pyc
 ${PYSITELIB}/mypyc/test/test_cheader.pyo
@@ -1584,6 +1596,9 @@ ${PYSITELIB}/mypyc/test/test_literals.pyo
 ${PYSITELIB}/mypyc/test/test_lowering.py
 ${PYSITELIB}/mypyc/test/test_lowering.pyc
 ${PYSITELIB}/mypyc/test/test_lowering.pyo
+${PYSITELIB}/mypyc/test/test_misc.py
+${PYSITELIB}/mypyc/test/test_misc.pyc
+${PYSITELIB}/mypyc/test/test_misc.pyo
 ${PYSITELIB}/mypyc/test/test_namegen.py
 ${PYSITELIB}/mypyc/test/test_namegen.pyc
 ${PYSITELIB}/mypyc/test/test_namegen.pyo
@@ -1638,6 +1653,9 @@ ${PYSITELIB}/mypyc/transform/lower.pyo
 ${PYSITELIB}/mypyc/transform/refcount.py
 ${PYSITELIB}/mypyc/transform/refcount.pyc
 ${PYSITELIB}/mypyc/transform/refcount.pyo
+${PYSITELIB}/mypyc/transform/spill.py
+${PYSITELIB}/mypyc/transform/spill.pyc
+${PYSITELIB}/mypyc/transform/spill.pyo
 ${PYSITELIB}/mypyc/transform/uninit.py
 ${PYSITELIB}/mypyc/transform/uninit.pyc
 ${PYSITELIB}/mypyc/transform/uninit.pyo
