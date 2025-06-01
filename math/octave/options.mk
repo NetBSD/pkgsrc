@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2025/05/08 05:48:57 dbj Exp $
+# $NetBSD: options.mk,v 1.10 2025/06/01 21:44:12 thor Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.octave
-PKG_SUPPORTED_OPTIONS=		glpk graphicsmagick hdf5 portaudio qhull
+PKG_SUPPORTED_OPTIONS=		glpk graphicsmagick hdf5 portaudio qhull suitesparse
 PKG_OPTIONS_REQUIRED_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		qt5 qt6
 PKG_SUGGESTED_OPTIONS=		hdf5 glpk qhull qt6
@@ -52,4 +52,8 @@ CONFIGURE_ARGS+=	--with-qt=6
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../x11/qt6-qscintilla/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msuitesparse)
+.include "../../math/suitesparse/buildlink3.mk"
 .endif
