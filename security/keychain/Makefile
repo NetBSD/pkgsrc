@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/06/01 09:50:26 vins Exp $
+# $NetBSD: Makefile,v 1.44 2025/06/01 18:41:25 vins Exp $
 
 DISTNAME=	keychain-2.9.5
 PKGREVISION=	1
@@ -13,6 +13,10 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	groff perl:build pod2man
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !exists(/usr/bin/ssh)
+DEPENDS+=	openssh-[0-9]*:../../security/openssh
+.endif
 
 .if exists(${X11BASE}/bin/ssh-askpass)
 ASKPASS_PROGRAM=	${X11BASE}/bin/ssh-askpass
@@ -34,5 +38,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md	\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.include "../../security/openssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
