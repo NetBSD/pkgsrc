@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/06/01 10:58:55 vins Exp $
+# $NetBSD: Makefile,v 1.22 2025/06/01 18:41:26 vins Exp $
 
 DISTNAME=	BackupPC-4.4.0
 PKGREVISION=	4
@@ -63,7 +63,13 @@ CONFIGURE_ARGS+=	--bin-path nmblookup=${PREFIX}/bin/nmblookup
 CONFIGURE_ARGS+=	--bin-path smbclient=${PREFIX}/bin/smbclient
 CONFIGURE_ARGS+=	--bin-path par2=${PREFIX}/bin/par2
 CONFIGURE_ARGS+=	--bin-path rsync_bpc=${PREFIX}/bin/rsync_bpc
-CONFIGURE_ARGS+=	--bin-path ssh=${OPENSSH:Q}
+
+.if exists(/usr/bin/ssh)
+CONFIGURE_ARGS+=	--bin-path ssh=/usr/bin/ssh
+.else
+DEPENDS+=		openssh-[0-9]*:../../security/openssh
+CONFIGURE_ARGS+=	--bin-path ssh=${PREFIX}/bin/ssh
+.endif
 
 BUILD_DEFS+=		BACKUPPC_USER BACKUPPC_GROUP APACHE_USER APACHE_GROUP VARBASE
 
@@ -126,5 +132,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/cgiwrapper.c ${DESTDIR}${PREFIX}/share/examples/BackupPC/cgiwrapper.c
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../security/openssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
