@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2024/04/25 08:27:08 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/06/01 16:55:21 thor Exp $
 #
 # used by math/openblas_pthread/Makefile
 # used by math/openblas_openmp/Makefile
@@ -81,6 +81,7 @@ BENCHMARK_ENV=	OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 MAKE_FLAGS+=	LIBNAMESUFFIX=openmp
 MAKE_FLAGS+=	USE_OPENMP=1 NO_AFFINITY=1
 BENCHMARK_ENV=	OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+.include "../../mk/openmp.mk"
 .endif
 
 .if !empty(OPENBLAS_VARIANT:M*64*)
