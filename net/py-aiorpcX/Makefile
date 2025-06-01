@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 07:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/01 05:53:42 adam Exp $
 
-DISTNAME=	aiorpcx-0.24.0
+DISTNAME=	aiorpcx-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/x/X/}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiorpcX/}
 
