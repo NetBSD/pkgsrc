@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/06 01:19:02 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/01 16:37:03 thor Exp $
 
 DISTNAME=	bcf-score-1.20
 CATEGORIES=	biology
@@ -75,5 +75,5 @@ do-install:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 # Required by cholmod, a not-always-used component of suitesparse
-.include "../../parallel/openmp/buildlink3.mk"
+.include "../../mk/openmp.mk"
 .include "../../mk/bsd.pkg.mk"
