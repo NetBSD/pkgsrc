@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/04/24 14:14:34 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/06/01 16:54:24 thor Exp $
 
 DISTNAME=	pcl-1.15.0
 PKGREVISION=	4
@@ -24,10 +24,7 @@ CMAKE_CONFIGURE_ARGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 
 .include "../../mk/compiler.mk"
 
-# Clang needs openmp package for OpenMP support.
-.if !empty(PKGSRC_COMPILER:Mclang)
-.include "../../parallel/openmp/buildlink3.mk"
-.endif
+.include "../../mk/openmp.mk"
 
 # See LIBATOMIC_NOT_NEEDED in CMakeLists.txt
 .if ${PKGSRC_COMPILER:Mgcc}
