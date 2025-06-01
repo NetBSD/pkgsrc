@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2025/06/01 14:14:35 vins Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/01 14:42:23 vins Exp $
 
-DISTNAME=		libedit-20250104-3.1
+DISTNAME=	libedit-20250104-3.1
+PKGNAME=	editline-3.1.20250104
 PKGREVISION=	1
-PKGNAME=		editline-3.1.20250104
-CATEGORIES=		devel
-MASTER_SITES=		https://thrysoee.dk/editline/
+CATEGORIES=	devel
+MASTER_SITES=	https://thrysoee.dk/editline/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		https://thrysoee.dk/editline/
