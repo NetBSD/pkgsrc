@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2025/04/24 14:14:31 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2025/06/01 16:53:35 thor Exp $
 
 DISTNAME=	luminance-hdr-2.6.1.1
 PKGREVISION=	19
@@ -30,7 +30,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-.include "../../parallel/openmp/buildlink3.mk"
+.include "../../mk/openmp.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
