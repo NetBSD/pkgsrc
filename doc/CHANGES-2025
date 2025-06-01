@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3684 2025/06/01 14:18:55 leot Exp $
+$NetBSD: CHANGES-2025,v 1.3685 2025/06/01 15:18:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5521,3 +5521,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/opa to 1.5.0 [leot 2025-06-01]
 	Updated devel/conftest to 0.61.0 [leot 2025-06-01]
 	Updated devel/regal to 0.34.0 [leot 2025-06-01]
+	Updated devel/bacon to 3.15.0 [pin 2025-06-01]
