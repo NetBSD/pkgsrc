@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3678 2025/05/31 21:50:21 fox Exp $
+$NetBSD: CHANGES-2025,v 1.3679 2025/06/01 05:48:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5511,3 +5511,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/ruby-gtk3 to 4.2.9 [tsutsui 2025-05-31]
 	Updated x11/ruby-gtksourceview3 to 4.2.9 [tsutsui 2025-05-31]
 	Updated sysutils/eza to 0.21.4 [fox 2025-05-31]
+	Updated lang/py-libcst to 1.8.0 [adam 2025-06-01]
+	Updated www/py-aiohttp to 3.12.6 [adam 2025-06-01]
+	Updated devel/py-ruamel-yaml to 0.18.12 [adam 2025-06-01]
