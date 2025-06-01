@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/01/05 01:58:52 taca Exp $
+# $NetBSD: Makefile,v 1.60 2025/06/01 10:58:55 vins Exp $
 
 PKGREVISION=	2
 CATEGORIES=	net sysutils
@@ -50,10 +50,6 @@ MAKE_ENV+=		CPPFLAGS_LFS=${CPPFLAGS_LFS:Q}
 .endif
 LIBS.SunOS+=		-lm
 
-.if !exists(/usr/bin/ssh)
-DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
-.endif
-
 .if (!exists(/usr/bin/dig) && !exists(/usr/sbin/dig)) || \
     (!exists(/usr/bin/nslookup) && !exists(/usr/sbin/nslookup))
 DEPENDS+=	bind-[0-9]*:../../net/bind918
@@ -81,5 +77,6 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/openssh/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
