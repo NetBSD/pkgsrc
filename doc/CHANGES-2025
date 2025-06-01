@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3691 2025/06/01 19:07:50 roy Exp $
+$NetBSD: CHANGES-2025,v 1.3692 2025/06/01 19:12:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5529,3 +5529,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/sbcl to 2.5.5 [rjs 2025-06-01]
 	Updated devel/jq to 1.8.0 [leot 2025-06-01]
 	Updated net/dhcpcd to 10.2.4 [roy 2025-06-01]
+	Updated pkgtools/bootstrap-mk-files to 20250601 [triaxx 2025-06-01]
