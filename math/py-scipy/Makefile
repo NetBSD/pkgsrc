@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2025/05/14 11:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/06/01 21:46:47 thor Exp $
 
 DISTNAME=	scipy-1.15.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -57,6 +57,8 @@ PYSETUPBUILDARGS+=	--fcompiler=gnu95
 .else
 BROKEN=			"Requires fortran 95"
 .endif
+
+.include "options.mk"
 
 CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 FFLAGS+=	-fPIC
