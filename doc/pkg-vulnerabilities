@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.393 2025/06/01 06:53:54 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.394 2025/06/01 13:42:57 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26270,3 +26270,6 @@ go119<1.19.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41725
 go120<1.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41725
 go120<1.19.7	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2023-24532
 go120<1.20.2	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2023-24532
+jq<1.8.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-23337
+jq<1.8.0	type-confusion		https://nvd.nist.gov/vuln/detail/CVE-2024-53427
+jq<1.8.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48060
