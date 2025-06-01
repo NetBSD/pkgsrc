@@ -1,25 +1,29 @@
-# $NetBSD: Makefile,v 1.9 2025/05/06 15:02:01 ktnb Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/01 19:18:20 thor Exp $
 
 DISTNAME=	SuiteSparse-7.10.3
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DrTimothyAldenDavis/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
+HOMEPAGE=	https://people.engr.tamu.edu/davis/suitesparse.html
 COMMENT=	Set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++ fortran8
+USE_LANGUAGES=	c c++ fortran
+USE_TOOLS=	pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+
+CMAKE_CONFIGURE_ARGS+=	-DBLA_PREFER_PKGCONFIG=true
+CMAKE_CONFIGURE_ARGS+=	-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/blas.buildlink3.mk"
 .include "../../math/metis/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../parallel/openmp/buildlink3.mk"
+.include "../../mk/openmp.mk"
 .include "../../mk/bsd.pkg.mk"
