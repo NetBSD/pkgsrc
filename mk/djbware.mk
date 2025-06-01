@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.33 2022/11/23 10:53:14 jperkin Exp $
+# $NetBSD: djbware.mk,v 1.34 2025/06/01 21:07:27 schmonz Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -67,10 +67,12 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} package/compile ${DJB_BUILD_ARGS}
 .endif
 
-# Set SUBST_CLASSES+=djberrno for packages that need this fix
+.if defined(DJB_ERRNO_FIXUP)
+SUBST_CLASSES+=		djberrno
 SUBST_STAGE.djberrno=	do-configure
-SUBST_FILES.djberrno?=	error.h
+SUBST_FILES.djberrno=	${DJB_ERRNO_FIXUP}
 SUBST_SED.djberrno=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
 SUBST_MESSAGE.djberrno=	Correcting definition of errno.
+.endif
 
 .endif	# DJBWARE_MK
