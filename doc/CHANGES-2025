@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3680 2025/06/01 05:58:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3681 2025/06/01 07:31:44 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5517,3 +5517,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-aiorpcX to 0.25.0 [adam 2025-06-01]
 	Updated devel/py-ipython to 9.3.0 [adam 2025-06-01]
 	Updated lang/py-mypy to 1.16.0 [adam 2025-06-01]
+	Updated lang/gcc14-gnat to 14.2.0nb1 [dkazankov 2025-06-01]
