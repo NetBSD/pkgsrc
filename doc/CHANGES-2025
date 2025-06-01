@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3689 2025/06/01 18:19:49 rjs Exp $
+$NetBSD: CHANGES-2025,v 1.3690 2025/06/01 18:43:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5527,3 +5527,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/libtorrent to 0.15.4 [adam 2025-06-01]
 	Updated net/rtorrent to 0.15.4 [adam 2025-06-01]
 	Updated lang/sbcl to 2.5.5 [rjs 2025-06-01]
+	Updated devel/jq to 1.8.0 [leot 2025-06-01]
