@@ -1,4 +1,4 @@
-# $NetBSD: atomic64.mk,v 1.10 2024/05/21 14:14:37 tsutsui Exp $
+# $NetBSD: atomic64.mk,v 1.11 2025/06/01 15:19:03 he Exp $
 #
 # This Makefile fragment is included by packages that require 64-bit atomic
 # operations, and will attempt to set the appropriate architecture-specific
@@ -18,10 +18,12 @@ CFLAGS+=	-march=i586
 
 # Non-NetBSD vendors tend to include libatomic as part of gcc.
 .if ${OPSYS} == "NetBSD" && \
-    (${MACHINE_ARCH} == "m68k" || \
+    (${MACHINE_ARCH} == "hppa" || \
+    ${MACHINE_ARCH} == "m68k" || \
     ${MACHINE_ARCH} == "mipsel" || \
     ${MACHINE_ARCH} == "mipseb" || \
     ${MACHINE_ARCH} == "powerpc" || \
+    ${MACHINE_ARCH} == "riscv32" || \
     ${MACHINE_ARCH} == "sh3el" || \
     ${MACHINE_ARCH} == "sh3eb" || \
     ${MACHINE_ARCH} == "sparc" || \
