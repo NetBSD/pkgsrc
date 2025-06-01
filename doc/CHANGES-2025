@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3683 2025/06/01 14:14:09 leot Exp $
+$NetBSD: CHANGES-2025,v 1.3684 2025/06/01 14:18:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5520,3 +5520,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-gnat to 14.2.0nb1 [dkazankov 2025-06-01]
 	Updated devel/opa to 1.5.0 [leot 2025-06-01]
 	Updated devel/conftest to 0.61.0 [leot 2025-06-01]
+	Updated devel/regal to 0.34.0 [leot 2025-06-01]
