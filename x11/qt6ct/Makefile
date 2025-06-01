@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/04/24 14:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/06/01 15:41:05 vins Exp $
 
 DISTNAME=	qt6ct-0.10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVERSION_NOREV}/
 # remove on next update
@@ -18,6 +18,8 @@ USE_TOOLS=		pkg-config
 
 GCC_REQD+=	9 #qt6
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
 QMAKE_ARGS+=	qt6ct.pro
 QMAKE_ARGS+=	QMAKE_CXXFLAGS=${CXXFLAGS:Q}
