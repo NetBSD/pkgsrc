@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/05/23 17:47:05 vins Exp $
+# $NetBSD: Makefile,v 1.43 2025/06/01 09:50:26 vins Exp $
 
 DISTNAME=	keychain-2.9.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=funtoo/}
 
@@ -9,11 +10,20 @@ HOMEPAGE=	https://www.funtoo.org/Keychain
 COMMENT=	Nice ssh-agent front-end
 LICENSE=	gnu-gpl-v2
 
-.if !exists(/usr/bin/ssh-agent)
-DEPENDS+=	openssh-[0-9]*:../../security/openssh
+USE_TOOLS+=	groff perl:build pod2man
+
+.include "../../mk/bsd.prefs.mk"
+
+.if exists(${X11BASE}/bin/ssh-askpass)
+ASKPASS_PROGRAM=	${X11BASE}/bin/ssh-askpass
+.elif exists(/usr/libexec/ssh-askpass)
+ASKPASS_PROGRAM=	/usr/libexec/ssh-askpass
+.else
+DEPENDS+=		ssh-askpass-[0-9]*:../../security/ssh-askpass
+ASKPASS_PROGRAM=	${PREFIX}/bin/ssh-askpass
 .endif
 
-USE_TOOLS+=	groff perl:build pod2man
+MAKE_ENV+=	ASKPASS=${ASKPASS_PROGRAM:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
@@ -24,4 +34,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md	\
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
+.include "../../security/openssh/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

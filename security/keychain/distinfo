@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.28 2025/05/23 17:47:05 vins Exp $
+$NetBSD: distinfo,v 1.29 2025/06/01 09:50:26 vins Exp $
 
 BLAKE2s (keychain-2.9.5.tar.gz) = 2137b9315bcda59d83fdf6f4870164de42cf39b850d82354f0444399a6050029
 SHA512 (keychain-2.9.5.tar.gz) = 4241a16449062b3365e1119788ab1e56eaadd7c239b5a5af03f644fb44494cc415774c1ba4d2a9ad1e6341892ddcbe4573cda6f986ecc8e5857cfbb2066ac5ac
 Size (keychain-2.9.5.tar.gz) = 42685 bytes
+SHA1 (patch-Makefile) = 3d41a10a50c360c1fb63dba4265ba369f6b4a772
+SHA1 (patch-keychain.sh) = 792bb3cd82e36a4b9d4ee48440333917c5ccfe4f
