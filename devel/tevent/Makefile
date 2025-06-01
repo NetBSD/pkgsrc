@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/02/06 14:31:55 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/06/01 21:28:06 thor Exp $
 
 DISTNAME=	tevent-0.16.2
 CATEGORIES=	devel
@@ -38,6 +38,7 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
