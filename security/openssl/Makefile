@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2025/05/06 12:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.307 2025/06/01 15:17:52 he Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -32,17 +32,18 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" && \
-	((${MACHINE_ARCH} == "arm") || \
-	(${MACHINE_ARCH} == "hppa") || \
+	((${MACHINE_ARCH} == "hppa") || \
 	(${MACHINE_ARCH} == "i386") || \
 	(${MACHINE_ARCH} == "m68k") || \
-	(${MACHINE_ARCH} == "mips") || \
+	(${MACHINE_ARCH} == "mipsel") || \
+	(${MACHINE_ARCH} == "mipseb") || \
 	(${MACHINE_ARCH} == "powerpc") || \
 	(${MACHINE_ARCH} == "riscv32") || \
 	(${MACHINE_ARCH} == "sh3eb") || \
 	(${MACHINE_ARCH} == "sh3el") || \
 	(${MACHINE_ARCH} == "sparc") || \
-	(${MACHINE_ARCH} == "vax"))
+	(${MACHINE_ARCH} == "vax") || \
+	!empty(MACHINE_ARCH:Mearm*))
 # Use OpenSSL's built-in fallbacks (not actually clang-specific)
 # see src/crypto/external/bsd/openssl/lib/libcrypto/arch/*/crypto.inc
 CFLAGS+=		-DBROKEN_CLANG_ATOMICS	# no atomic 64 bit ops
