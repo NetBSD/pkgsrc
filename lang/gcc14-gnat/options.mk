@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+# $NetBSD: options.mk,v 1.2 2025/06/01 07:24:36 dkazankov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc14-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
@@ -7,8 +7,7 @@ PKG_SUGGESTED_OPTIONS=	gcc-graphite
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-# Turn off until gettext issue fix
-#PKG_SUGGESTED_OPTIONS+=	nls
+PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
@@ -46,18 +45,18 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ### Native Language Support
 ###
 .if !empty(PKG_OPTIONS:Mnls)
+PLIST_VARS+=		nls
+USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
-#PREFER.iconv=		pkgsrc
-BUILDLINK_API_DEPENDS.iconv+=	libiconv>=1.17
+.if ${OPSYS} == "NetBSD"
+USE_GNU_ICONV=		yes
+USE_BUILTIN.gettext=	no
+.endif
 .include "../../converters/libiconv/buildlink3.mk"
-#PREFER.gettext=		pkgsrc
-BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.22.0
 .include "../../devel/gettext-lib/buildlink3.mk"
-#PLIST_VARS+=	nls
-#PLIST.nls=	yes
-.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+PLIST.nls=	yes
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
