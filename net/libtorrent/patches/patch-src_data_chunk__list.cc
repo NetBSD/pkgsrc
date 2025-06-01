@@ -1,21 +1,20 @@
-$NetBSD: patch-src_data_chunk__list.cc,v 1.1 2024/10/04 09:00:06 adam Exp $
+$NetBSD: patch-src_data_chunk__list.cc,v 1.2 2025/06/01 17:38:28 adam Exp $
 
 Add some casts now required.
 
---- src/data/chunk_list.cc.orig	2012-02-22 07:50:27.000000000 +0000
-+++ src/data/chunk_list.cc	2013-05-12 12:25:45.000000000 +0100
-@@ -368,19 +368,19 @@
-   if (flags & sync_force) {
- 
-     if (flags & sync_safe)
+--- src/data/chunk_list.cc.orig	2025-06-01 13:08:42.000000000 +0000
++++ src/data/chunk_list.cc
+@@ -329,18 +329,18 @@ std::pair<int, bool>
+ ChunkList::sync_options(ChunkListNode* node, sync_flags flags) {
+   if ((flags & sync_force)) {
+     if ((flags & sync_safe))
 -      return std::make_pair(MemoryChunk::sync_sync, true);
 +      return std::make_pair((int)MemoryChunk::sync_sync, true);
      else
 -      return std::make_pair(MemoryChunk::sync_async, true);
 +      return std::make_pair((int)MemoryChunk::sync_async, true);
  
-   } else if (flags & sync_safe) {
-       
+   } else if ((flags & sync_safe)) {
      if (node->sync_triggered())
 -      return std::make_pair(MemoryChunk::sync_sync, true);
 +      return std::make_pair((int)MemoryChunk::sync_sync, true);
