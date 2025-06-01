@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/11/16 12:05:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/01 21:26:59 thor Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.46
 PKGNAME=	p5-${DISTNAME}
@@ -16,4 +16,7 @@ PERL5_PACKLIST=		auto/Term/ReadLine/Gnu/.packlist
 .include "../../lang/perl5/module.mk"
 # does not accept editline
 .include "../../devel/readline/buildlink3.mk"
+.if empty(USE_BUILTIN.readline:L:Myes)
+MAKE_PARAMS+=	--libdir=${PREFIX}/lib
+.endif
 .include "../../mk/bsd.pkg.mk"
