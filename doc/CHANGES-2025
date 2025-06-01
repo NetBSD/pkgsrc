@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3688 2025/06/01 17:38:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3689 2025/06/01 18:19:49 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5526,3 +5526,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/gqrx to 2.17.7 [gdt 2025-06-01]
 	Updated net/libtorrent to 0.15.4 [adam 2025-06-01]
 	Updated net/rtorrent to 0.15.4 [adam 2025-06-01]
+	Updated lang/sbcl to 2.5.5 [rjs 2025-06-01]
