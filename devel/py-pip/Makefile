@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2025/05/04 12:57:37 adam Exp $
+# $NetBSD: Makefile,v 1.85 2025/06/02 08:36:21 thor Exp $
 
 DISTNAME=	pip-25.1.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
@@ -19,7 +20,7 @@ REPLACE_PYTHON+=	src/pip/_vendor/chardet/cli/chardetect.py
 REPLACE_PYTHON+=	src/pip/_vendor/requests/certs.py
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip3 && ${MV} pip pip-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f pip3 && ${MV} pip pip${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
