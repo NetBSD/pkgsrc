@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3696 2025/06/02 06:31:15 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3697 2025/06/02 07:26:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5534,3 +5534,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk18 to 18.26.2 [jnemeth 2025-06-02]
 	Updated comms/asterisk21 to 21.9.1 [jnemeth 2025-06-02]
 	Updated www/hugo to 0.147.7 [triaxx 2025-06-02]
+	Updated devel/libusb1 to 1.0.29 [adam 2025-06-02]
+	Updated graphics/py-tifffile to 2025.6.1 [adam 2025-06-02]
