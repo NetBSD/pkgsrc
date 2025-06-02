@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2025/04/24 14:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2025/06/02 00:17:49 gutteridge Exp $
 
 DISTNAME=	librsvg-2.59.2
 PKGREVISION=	2
@@ -49,6 +49,7 @@ post-install:
 
 .include "cargo-depends.mk"
 
+MESON_REQD+=	1.3.0
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
