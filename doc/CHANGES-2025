@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3693 2025/06/02 00:40:48 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3694 2025/06/02 03:16:14 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/dhcpcd to 10.2.4 [roy 2025-06-01]
 	Updated pkgtools/bootstrap-mk-files to 20250601 [triaxx 2025-06-01]
 	Updated x11/rofi to 1.7.9.1 [gutteridge 2025-06-02]
+	Updated comms/asterisk18 to 18.26.2 [jnemeth 2025-06-02]
