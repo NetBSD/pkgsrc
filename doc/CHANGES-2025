@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3703 2025/06/02 15:26:22 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3704 2025/06/02 15:59:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5542,3 +5542,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/mxkill version 1.2 [vins 2025-06-02]
 	Updated geography/proj to 9.6.1 [gdt 2025-06-02]
 	Updated geography/proj-data to 1.22 [gdt 2025-06-02]
+	Updated databases/postgresql-timescaledb to 2.20.2 [adam 2025-06-02]
+	Updated devel/py-scikit-build-core to 0.11.4 [adam 2025-06-02]
