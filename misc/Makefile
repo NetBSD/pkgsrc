@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2025/05/23 13:19:27 wiz Exp $
+# $NetBSD: Makefile,v 1.665 2025/06/02 07:46:53 vins Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -226,6 +226,7 @@ SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	mtm
 SUBDIR+=	multitail
+SUBDIR+=	mxascii
 SUBDIR+=	nq
 SUBDIR+=	nxtvepg
 SUBDIR+=	nyancat
