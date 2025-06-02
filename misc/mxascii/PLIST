@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2025/06/02 07:45:16 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/06/02 08:16:12 vins Exp $
 bin/mxascii
-lib/X11/app-defaults/MXascii.ad
+lib/X11/app-defaults/MXascii
