@@ -1,0 +1,30 @@
+$NetBSD: patch-bwm-ng.conf-example,v 1.1 2025/06/02 16:49:08 vins Exp $
+
+Avoid non portable default settings.
+
+--- bwm-ng.conf-example.orig	2025-06-02 13:55:16.911005498 +0000
++++ bwm-ng.conf-example
+@@ -1,16 +1,17 @@
+ DYNAMIC=1
+ UNIT=bits
+-PROCFILE=/proc/net/dev
+-DISKSTATSFILE=/proc/diskstats
+-PARTITIONSFILE=/proc/partitions
++#PROCFILE=/proc/net/dev
++#DISKSTATSFILE=/proc/diskstats
++#PARTITIONSFILE=/proc/partitions
+ LONGDISKNAMES=0
+ ANSIOUT=0
+-OUTPUT=plain
+ TIMEOUT=666
+ NETSTAT=netstat
+-INPUT=proc
++#INPUT=proc
++#INPUT=getifaddrs
+ ALLIF=0
+-INTERFACES=eth0
++#INTERFACES=wm0
++#OUTPUT=plain
+ OUTPUT=curses
+ CSVCHAR=;
+ #OUTFILE=
