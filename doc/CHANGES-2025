@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3698 2025/06/02 07:47:57 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3699 2025/06/02 11:06:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5537,3 +5537,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libusb1 to 1.0.29 [adam 2025-06-02]
 	Updated graphics/py-tifffile to 2025.6.1 [adam 2025-06-02]
 	Added misc/mxascii version 1.1 [vins 2025-06-02]
+	Updated www/snac to 2.78 [schmonz 2025-06-02]
