@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2025/05/16 05:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.243 2025/06/02 18:37:54 gdt Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -21,12 +21,6 @@ USE_CXX_FEATURES=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		bison flex perl pkg-config
-# Building 3.28.1 fails with BSD make.  One issue seem to be a
-# difference of opinion about quoting of $, with gmake wanting
-# "$$area" vs bmake perhaps wanting "$$$$area".  Another is filenames
-# with spaces, which are \-quoted in Makefiles, but bmake sees them as
-# separate files.
-USE_TOOLS+=		gmake
 .include "../../devel/cmake/build.mk"
 
 # minizip/zip.h shadows zip.h (from libzip)
