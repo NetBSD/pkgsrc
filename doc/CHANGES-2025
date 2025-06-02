@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3699 2025/06/02 11:06:49 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.3700 2025/06/02 11:19:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5538,3 +5538,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.6.1 [adam 2025-06-02]
 	Added misc/mxascii version 1.1 [vins 2025-06-02]
 	Updated www/snac to 2.78 [schmonz 2025-06-02]
+	Updated x11/gtk4 to 4.16.13 [prlw1 2025-06-02]
