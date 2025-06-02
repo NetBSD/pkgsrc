@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/03/30 16:08:49 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/06/02 07:24:45 adam Exp $
 
-DISTNAME=	libusb-1.0.28
+DISTNAME=	libusb-1.0.29
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libusb/}
@@ -17,7 +17,7 @@ LICENSE=	gnu-lgpl-v2.1
 # see PR 47042.
 NOT_FOR_PLATFORM=	DragonFly-*-*
 
-USE_CC_FEATURES+=	c11
+USE_CC_FEATURES=	c11
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

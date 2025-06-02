@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2025/03/30 16:08:49 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/06/02 07:24:45 adam Exp $
 
-BLAKE2s (libusb-1.0.28.tar.bz2) = 738f756b583747df38acce4dd1c9d498770d8b2b65bdda216d6044acc2cc8a07
-SHA512 (libusb-1.0.28.tar.bz2) = 0f4efa6b54e6195d2e5446652c2dc07358583e205d63bf438c4409511b8637d1700a71268c40499755747827d23cc730d9122267386f847bf781993c045c519f
-Size (libusb-1.0.28.tar.bz2) = 658053 bytes
+BLAKE2s (libusb-1.0.29.tar.bz2) = c3cebc1c5a9e4d824b8356f0d4d2b84800ec3171aa18d78bfd99f3dee3e9faf4
+SHA512 (libusb-1.0.29.tar.bz2) = 04f8bda8197c9ecf52709609b8fbfea762fd82ddb5cde153a7630b0e8ed557d42da8cbc44f2f593aa22fdd0762e16716300565d67adb0c5240d7f3723321f690
+Size (libusb-1.0.29.tar.bz2) = 645381 bytes
 SHA1 (patch-configure.ac) = 52ef406375ea88ea06b8a0c4b1bace2c43586783
 SHA1 (patch-libusb_Makefile.am) = 4cbaca146dd349aad83e1ed696e8395a60c24780
 SHA1 (patch-libusb_os_illumos__usb.c) = ec9f086e29f8cfecc08842a903d7b6be61664c51
