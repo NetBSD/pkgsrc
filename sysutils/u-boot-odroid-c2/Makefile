@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/27 11:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/06/02 00:59:45 gutteridge Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
@@ -47,7 +47,8 @@ DISTFILES+=		${BL31_BIN}
 SITES.${BL31_BIN}=	${MASTER_SITE_GITHUB:@url@ \
 			-${url}hardkernel/u-boot/raw/${ODROID}/fip/gxb/${xBL31_BIN} @}
 
-# pkgsrc tries to run distfiles that end in .bin; handle manually
+# pkgsrc tries to run distfiles that end in .bin, expecting them to be
+# Java self-extracting archives; handle manually.
 EXTRACT_ONLY=		${DISTFILES:N*.bin}
 
 post-extract:
@@ -61,8 +62,8 @@ post-extract:
 # XXX For now, we use the fip_create and aml_encrypt_gxb binaries
 # from Hardkernel.
 #
-EMUL_PLATFORMS=         linux-x86_64
-EMUL_MODULES.linux=     base
+EMUL_PLATFORMS=		linux-x86_64
+EMUL_MODULES.linux=	base
 
 TOOL_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
 post-build:
