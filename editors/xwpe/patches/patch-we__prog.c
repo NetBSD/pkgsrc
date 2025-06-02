@@ -1,6 +1,7 @@
-$NetBSD: patch-we__prog.c,v 1.1 2022/12/08 10:31:08 vins Exp $
+$NetBSD: patch-we__prog.c,v 1.2 2025/06/02 12:54:30 vins Exp $
 
-Fix implicit declaration warnings.
+* Fix implicit declaration warnings.
+* Fix format-security warning around improper printf() usage.
 
 --- we_prog.c.orig	2005-07-07 01:53:09.000000000 +0000
 +++ we_prog.c
@@ -18,3 +19,12 @@ Fix implicit declaration warnings.
  #ifdef PROG
  
  #include <time.h>
+@@ -1477,7 +1484,7 @@ int e_system(char *estr, ECNT *cn)
+  ret = system(estr);
+  if (!WpeIsXwin())
+  {
+-  printf(e_msg[ERR_HITCR]);
++  printf("%s",e_msg[ERR_HITCR]);
+   fflush(stdout);
+   fk_getch();
+  }

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2022/12/19 09:02:46 vins Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/02 12:54:30 vins Exp $
 #
 
 DISTNAME=	xwpe-1.5.30a
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.identicalsoftware.com/xwpe/
 
@@ -11,9 +12,6 @@ COMMENT=	Programming environment for UNIX systems
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
-INCOMPAT_CURSES+=	NetBSD-[0-5].*-* #tigetstr
-FAKE_NCURSES=		yes
 
 BUILD_TARGET=		# the one from the Makefile
 
@@ -23,14 +21,12 @@ INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/pixmaps
 
 post-install:
-# Run acme as a standalone application.
 	${INSTALL_DATA} ${FILESDIR}/xwpe.desktop	\
 	   ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${FILESDIR}/xwpe.xpm		\
 	   ${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
