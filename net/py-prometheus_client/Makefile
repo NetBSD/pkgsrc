@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/05/17 07:53:48 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/02 16:05:39 adam Exp $
 
-DISTNAME=	prometheus_client-0.22.0
+DISTNAME=	prometheus_client-0.22.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prometheus_client/}
