@@ -1,6 +1,6 @@
-$NetBSD: patch-setcb.c,v 1.1 2025/06/02 07:45:16 vins Exp $
+$NetBSD: patch-setcb.c,v 1.2 2025/06/02 11:23:11 vins Exp $
 
-Fix signedness mismatch warning.
+Fix size mismatch warning.
 
 --- setcb.c.orig	2025-06-02 07:29:00.090325109 +0000
 +++ setcb.c
