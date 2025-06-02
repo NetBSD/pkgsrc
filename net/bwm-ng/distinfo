@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.6 2022/07/05 07:24:41 pin Exp $
+$NetBSD: distinfo,v 1.7 2025/06/02 16:49:07 vins Exp $
 
 BLAKE2s (bwm-ng-0.6.3.tar.gz) = 59a18b9f87a6f0ee426dd51785e4f25aa8b210cfd221aa4d0545def540f601b9
 SHA512 (bwm-ng-0.6.3.tar.gz) = 85ce29e6ffa9643b4e7c1d731f4e928ddca8cfdc71c86b65ec4e55058b951eb8da9ab80139145300518223589d5fece5bdc11ede91a1ea394d569993ccdb0ab8
 Size (bwm-ng-0.6.3.tar.gz) = 70094 bytes
+SHA1 (patch-bwm-ng.conf-example) = 32426854f681b6c2b2b6c0b3be955df60c4b5d00
+SHA1 (patch-src_input_proc__diskstats.c) = 1491489a0c2fb76724b733d5ed276c3e31174f6c
+SHA1 (patch-src_output.c) = 0a136cbba7633f4f94e0e459e752b1f4e729ed0b
