@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2025/05/19 06:57:34 jnemeth Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/02 04:37:03 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-21.9.0
+DISTNAME=	asterisk-21.9.1
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -29,7 +29,7 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
+USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run gsed
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
@@ -239,7 +239,7 @@ CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_
 
 PTHREAD_OPTS+=	require native
 
-.if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
+.if ${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h)
 post-patch:
 	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .endif
@@ -269,8 +269,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.7.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}

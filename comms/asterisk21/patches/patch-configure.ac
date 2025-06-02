@@ -1,8 +1,39 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/04/08 03:20:07 jnemeth Exp $
+$NetBSD: patch-configure.ac,v 1.2 2025/06/02 04:37:03 jnemeth Exp $
 
---- configure.ac.orig	2021-03-04 16:46:08.000000000 +0000
+1. Don't clear CPPFLAGS/LDFLAGS and impose /usr/pkg or /usr/local;
+   pkgsrc will handle its own prefix, which may not be /usr/pkg in
+   which case asterisk should absolutely never look at /usr/pkg.
+2. Ditto.
+3. Standard poll is in <poll.h> -- check for that, not <sys/poll.h>.
+4. Check for strftime_l.
+5. Standard poll is in <poll.h> -- check for that, not <sys/poll.h>.
+
+--- configure.ac.orig	2025-05-22 15:57:26.000000000 +0000
 +++ configure.ac
-@@ -751,7 +751,7 @@ AC_CHECK_HEADERS([xlocale.h])
+@@ -65,13 +65,9 @@ esac
+ case "${host_os}" in
+      netbsd*)
+      ac_default_prefix=/usr/pkg
+-     CPPFLAGS=-I/usr/pkg/include
+-     LDFLAGS=-L/usr/pkg/lib
+      ;;
+      dragonfly*|freebsd*)
+      ac_default_prefix=/usr/local
+-     CPPFLAGS=-I/usr/local/include
+-     LDFLAGS=-L/usr/local/lib
+      ;;
+      openbsd*)
+      ac_default_prefix=/usr/local
+@@ -83,8 +79,6 @@ case "${host_os}" in
+            astmandir=/usr/share/man
+         fi
+      fi
+-     CPPFLAGS=-I/usr/local/include
+-     LDFLAGS=-L/usr/local/lib
+      ;;
+      darwin*)
+      ac_default_prefix=/usr/local
+@@ -828,7 +822,7 @@ AC_CHECK_HEADERS([xlocale.h])
  
  AC_CHECK_HEADERS([winsock.h winsock2.h])
  
@@ -11,7 +42,7 @@ $NetBSD: patch-configure.ac,v 1.1 2024/04/08 03:20:07 jnemeth Exp $
  	 [],
       AC_DEFINE([AST_POLL_COMPAT], 1, [Define to 1 if internal poll should be used.]))
  
-@@ -803,7 +803,7 @@ AC_FUNC_STRNLEN
+@@ -880,7 +874,7 @@ AC_FUNC_STRNLEN
  AC_FUNC_STRTOD
  AC_FUNC_UTIME_NULL
  AC_FUNC_VPRINTF
@@ -20,7 +51,7 @@ $NetBSD: patch-configure.ac,v 1.1 2024/04/08 03:20:07 jnemeth Exp $
  
  AC_MSG_CHECKING(for htonll)
  AC_LINK_IFELSE(
-@@ -872,9 +872,9 @@ AC_SUBST(PBX_DYNAMIC_LIST)
+@@ -949,9 +943,9 @@ AC_SUBST(PBX_DYNAMIC_LIST)
  LDFLAGS=${old_LDFLAGS}
  rm -f conftest.dynamics
  
