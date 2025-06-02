@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3700 2025/06/02 11:19:18 prlw1 Exp $
+$NetBSD: CHANGES-2025,v 1.3701 2025/06/02 11:19:34 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5539,3 +5539,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added misc/mxascii version 1.1 [vins 2025-06-02]
 	Updated www/snac to 2.78 [schmonz 2025-06-02]
 	Updated x11/gtk4 to 4.16.13 [prlw1 2025-06-02]
+	Added sysutils/mxkill version 1.2 [vins 2025-06-02]
