@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1159 2025/05/15 18:14:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.1160 2025/06/02 11:18:44 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -489,6 +489,7 @@ SUBDIR+=	mtx
 SUBDIR+=	munin-common
 SUBDIR+=	munin-master
 SUBDIR+=	munin-node
+SUBDIR+=	mxkill
 SUBDIR+=	nabud
 SUBDIR+=	nautilus
 SUBDIR+=	navi
