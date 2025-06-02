@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.79 2025/06/02 03:16:07 jnemeth Exp $
+$NetBSD: distinfo,v 1.80 2025/06/02 03:33:51 jnemeth Exp $
 
 BLAKE2s (asterisk-18.26.2/asterisk-18.26.2.tar.gz) = acedb758be5b149bf8545626ace49cac9bf0c94d79fd3573e9f6de191667c476
 SHA512 (asterisk-18.26.2/asterisk-18.26.2.tar.gz) = dff4a6cd5ac641f6c6c1f39e1a9d3ee5d02dd20c46c7e362130f7d5243ef9ca7e7cf887d6402c86e6644dd40777da38e3acbe18ba5280ff37abd8364c82e9f88
@@ -38,8 +38,8 @@ SHA1 (patch-channels_chan__pjsip.c) = efd4cbb82133fc5ddf7de70d01c99e185c585211
 SHA1 (patch-channels_chan__sip.c) = ed285612eae6cbfde19ded87db9360c0bca153c7
 SHA1 (patch-channels_pjsip_cli__commands.c) = 01baa9d242e3af02a1f3540cfb3064ad68c71d67
 SHA1 (patch-channels_pjsip_dialplan__functions.c) = 2cf8199c4ec9d4894eb922c2703d49ecc06188ef
-SHA1 (patch-configure) = 05bf3fc647b79e282b39075079e84795067d9933
-SHA1 (patch-configure.ac) = b972730a2be3bf54502116f1f7e03afee76a02cc
+SHA1 (patch-configure) = 9efce299008a17ded9b2700641c126d52a3fd364
+SHA1 (patch-configure.ac) = e324df38078da811b4a9dd3b0c55332416835ec9
 SHA1 (patch-contrib_scripts_vmail.cgi) = 7935ce96ea319eb19cc2ce999813eb837d5357c0
 SHA1 (patch-funcs_func__cdr.c) = 79c743df264948e5ea9e1c292012a1f6362d0c1e
 SHA1 (patch-funcs_func__channel.c) = 9d6ed8a2431fbde6879782d8228030467aabe7eb
