@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/05/20 07:40:58 adam Exp $
+$NetBSD: distinfo,v 1.18 2025/06/02 15:59:28 adam Exp $
 
-BLAKE2s (scikit_build_core-0.11.3.tar.gz) = 7a2813611f47ebf749ca32d24ec691efd96999519e64e521c8c02e44b8f83e60
-SHA512 (scikit_build_core-0.11.3.tar.gz) = e8152de7a3a099b9829ed18f8961213401c01d0428e2983a6bbc89d04a94d837012be26293da36878b38bc74328f12521f8cb8b1949d7709699d1e3d2d107f67
-Size (scikit_build_core-0.11.3.tar.gz) = 289852 bytes
+BLAKE2s (scikit_build_core-0.11.4.tar.gz) = d69fc9f401f8500bd1e78fefbdfa5554c565cd69d8d0f32731bb86b50a05119e
+SHA512 (scikit_build_core-0.11.4.tar.gz) = 9ec2ef6642660fd9ed8bbc766c5fbb6152117c7079e21efbace09174ede44c8dcdfb26a1252500dde95bed3422fc343741bed018378c1d5738566a4462a4e7a3
+Size (scikit_build_core-0.11.4.tar.gz) = 283403 bytes
