@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.396 2025/06/02 08:38:53 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.397 2025/06/02 10:45:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26274,3 +26274,4 @@ jq<1.8.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-23337
 jq<1.8.0	type-confusion		https://nvd.nist.gov/vuln/detail/CVE-2024-53427
 jq<1.8.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48060
 php{56,74,80,81,82,83}-roundcube<1.6.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49113
+p5-YAML-LibYAML<0.903.0	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-40908
