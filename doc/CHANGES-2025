@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3704 2025/06/02 15:59:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3705 2025/06/02 16:05:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5544,3 +5544,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/proj-data to 1.22 [gdt 2025-06-02]
 	Updated databases/postgresql-timescaledb to 2.20.2 [adam 2025-06-02]
 	Updated devel/py-scikit-build-core to 0.11.4 [adam 2025-06-02]
+	Updated www/py-uvicorn to 0.34.3 [adam 2025-06-02]
+	Updated net/py-prometheus_client to 0.22.1 [adam 2025-06-02]
