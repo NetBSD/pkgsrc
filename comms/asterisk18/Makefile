@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2025/05/19 04:13:38 jnemeth Exp $
+# $NetBSD: Makefile,v 1.171 2025/06/02 03:16:07 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -6,7 +6,7 @@
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 #       and libjwt
 
-DISTNAME=	asterisk-18.26.1
+DISTNAME=	asterisk-18.26.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -30,7 +30,7 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
+USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run gsed
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
@@ -114,7 +114,7 @@ MAKE_FLAGS+=		HTTP_DOCSDIR=${PREFIX}/share/httpd/htdocs
 MAKE_FLAGS+=		HTTP_CGIDIR=${PREFIX}/libexec/cgi-bin
 MAKE_FLAGS+=		OPTIMIZE=-O3
 
-.if !empty(MACHINE_PLATFORM:MSunOS-*-i386)
+.if ${MACHINE_PLATFORM:MSunOS-*-i386}
 BUILDLINK_TRANSFORM+=	rm:-march=i386
 .endif
 
@@ -127,7 +127,7 @@ PLIST_VARS+=	mgcp
 # NOSIGPIPE is a temp variable, since PLIST.mgcp MUST remain undefined
 # if the grep fails
 .for dir in ${COMPILER_INCLUDE_DIRS}
-.  if (exists(${dir}/sys/socket.h))
+.  if exists(${dir}/sys/socket.h)
 NOSIGPIPE!=	${GREP} SO_NOSIGPIPE ${dir}/sys/socket.h || echo ""
 .    if ${NOSIGPIPE} != ""
 PLIST.mgcp=	yes
@@ -146,11 +146,11 @@ PLIST.timerfd=		yes
 CONFIGURE_ARGS+=	--without-timerfd
 .endif
 
-PLIST_VARS+=	unbound
+PLIST_VARS+=		unbound
 # unbound 1.5 or later is required.`
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 090000 && \
     exists(/usr/include/unbound.h)
-PLIST.unbound=	yes
+PLIST.unbound=		yes
 .else
 CONFIGURE_ARGS+=	--without-unbound
 .endif
@@ -280,7 +280,7 @@ CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_
 
 PTHREAD_OPTS+=	require native
 
-.if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
+.if ${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h)
 post-patch:
 	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .endif
@@ -315,6 +315,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.25.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.26.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.26.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.26.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-18.26.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
