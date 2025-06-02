@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.394 2025/06/01 13:42:57 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.395 2025/06/02 08:00:15 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26273,3 +26273,4 @@ go120<1.20.2	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2023-245
 jq<1.8.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-23337
 jq<1.8.0	type-confusion		https://nvd.nist.gov/vuln/detail/CVE-2024-53427
 jq<1.8.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48060
+php{56,74,80,81,82,83}-roundcube<1.6.11	remote-code-execution	https://roundcube.net/news/2025/06/01/security-updates-1.6.11-and-1.5.10
