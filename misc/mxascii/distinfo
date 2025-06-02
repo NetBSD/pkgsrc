@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2025/06/02 07:45:16 vins Exp $
+$NetBSD: distinfo,v 1.2 2025/06/02 08:16:12 vins Exp $
 
 BLAKE2s (mxascii1.1.tar.gz) = 725662c3f841861b1202a32c91db196ce2fcbdc0b29be2180b1a901873f17fb3
 SHA512 (mxascii1.1.tar.gz) = c197532294c82303ce0942ff31cf98c7e761daf91f88b1655b05990f74420c3556d28a2cf8b849406e8f02733e7900e2c359ee55a533ea670e1c6653a7efa1b6
 Size (mxascii1.1.tar.gz) = 17864 bytes
 SHA1 (patch-Imakefile) = 117fc6d35e00ec365c9aa9b13d33916509863877
-SHA1 (patch-pkgsrc.tmpl) = 696ec40ea8529111c3062515981a603eab3c22fe
+SHA1 (patch-pkgsrc.tmpl) = f521c7047aad1662fbf529ce1445fa8b57ad5bb4
 SHA1 (patch-setcb.c) = df0bc70bb95caa5d065a5cfcbbe46f79c1fe1f3e
 SHA1 (patch-xhead.h) = b3551cb7ce0b7388e2184d7150fe57457b4e2db3

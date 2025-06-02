@@ -1,4 +1,4 @@
-$NetBSD: patch-pkgsrc.tmpl,v 1.1 2025/06/02 07:45:16 vins Exp $
+$NetBSD: patch-pkgsrc.tmpl,v 1.2 2025/06/02 08:16:12 vins Exp $
 
 Simplified imake rules for pkgsrc.
 
@@ -21,4 +21,4 @@ Simplified imake rules for pkgsrc.
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(PROG) ${DESTDIR}$(BINDIR)
 +	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(XAPPLOADDIR)
-+	$(BSD_INSTALL_DATA) MXascii.ad ${DESTDIR}$(XAPPLOADDIR)
++	$(BSD_INSTALL_DATA) MXascii.ad ${DESTDIR}$(XAPPLOADDIR)/MXascii
