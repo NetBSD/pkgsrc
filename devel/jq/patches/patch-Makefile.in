@@ -1,16 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.4 2023/12/14 08:08:03 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2025/06/02 08:07:34 wiz Exp $
 
-Do dynamic linking of libtool libraries too (otherwise bin/jq can
-end up being statically linked).
+Actually escape the "#".
 
---- Makefile.in.orig	2023-12-13 19:24:21.000000000 +0000
+If "\x23d" is used it can get substituted with "=" and that will mess up
+src/version.h.
+
+Needed due to bin/59453: sed 's/^/\x23def/' output '=ef' instead of '#def'
+
+--- Makefile.in.orig	2025-06-01 05:58:46.000000000 +0000
 +++ Makefile.in
-@@ -760,7 +760,7 @@ generate_ver = ver="`{ $(srcdir)/scripts
+@@ -754,7 +754,7 @@ AM_CPPFLAGS = -I$(srcdir)/src -I$(srcdir
+ @ENABLE_ERROR_INJECTION_TRUE@libinject_errors_la_SOURCES = src/inject_errors.c
+ @ENABLE_ERROR_INJECTION_TRUE@libinject_errors_la_LIBADD = -ldl
+ @ENABLE_ERROR_INJECTION_TRUE@libinject_errors_la_LDFLAGS = -module
+-generate_ver = ver="`{ $(srcdir)/scripts/version || echo '$(VERSION)' ; } | sed 's/.*/\x23define JQ_VERSION \"&\"/'`"
++generate_ver = ver="`{ $(srcdir)/scripts/version || echo '$(VERSION)' ; } | sed 's/.*/\#define JQ_VERSION \"&\"/'`"
  CLEANFILES = src/version.h .remake-version-h src/builtin.inc \
  	src/config_opts.inc jq.1
- jq_SOURCES = src/main.c src/version.h
--jq_LDFLAGS = -static-libtool-libs $(am__append_8)
-+jq_LDFLAGS = $(am__append_8)
- jq_LDADD = libjq.la -lm
- 
- ### Tests (make check)
+ jq_SOURCES = src/main.c

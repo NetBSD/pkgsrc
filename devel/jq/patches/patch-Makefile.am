@@ -1,9 +1,11 @@
-$NetBSD: patch-Makefile.am,v 1.4 2025/06/01 18:43:09 leot Exp $
+$NetBSD: patch-Makefile.am,v 1.5 2025/06/02 08:07:34 wiz Exp $
 
 Actually escape the "#".
 
 If "\x23d" is used it can get substituted with "=" and that will mess up
 src/version.h.
+
+Needed due to bin/59453: sed 's/^/\x23def/' output '=ef' instead of '#def'
 
 --- Makefile.am.orig	2025-06-01 18:07:55.412230053 +0000
 +++ Makefile.am
