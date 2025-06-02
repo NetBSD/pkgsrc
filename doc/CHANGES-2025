@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3702 2025/06/02 15:03:26 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3703 2025/06/02 15:26:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5541,3 +5541,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/gtk4 to 4.16.13 [prlw1 2025-06-02]
 	Added sysutils/mxkill version 1.2 [vins 2025-06-02]
 	Updated geography/proj to 9.6.1 [gdt 2025-06-02]
+	Updated geography/proj-data to 1.22 [gdt 2025-06-02]
