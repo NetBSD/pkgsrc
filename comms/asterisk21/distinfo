@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.5 2025/05/19 06:57:34 jnemeth Exp $
+$NetBSD: distinfo,v 1.6 2025/06/02 04:37:03 jnemeth Exp $
 
-BLAKE2s (asterisk-21.9.0/asterisk-21.9.0.tar.gz) = 6e8c4ed63d421541a7a230645984be397287a7e4c4a85da2e1f95bfc74237511
-SHA512 (asterisk-21.9.0/asterisk-21.9.0.tar.gz) = ec9659589897361cfd4c4b8d55c197a6c0b06fe1c2afbf7687a098b04265bc88d9a4f4df08676ef0bc364e7629e0096e528e78a3967510a7ab22c7fdfdcb62b1
-Size (asterisk-21.9.0/asterisk-21.9.0.tar.gz) = 26492636 bytes
-BLAKE2s (asterisk-21.9.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
-SHA512 (asterisk-21.9.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-21.9.0/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-BLAKE2s (asterisk-21.9.0/pjproject-2.15.1.md5) = 1bdb00828816aff69f43eaacd084bd7d0a48670af33110bd0cd6325ead45aa48
-SHA512 (asterisk-21.9.0/pjproject-2.15.1.md5) = 75963b64e702a5810fd5b8b574a07396cab1a87543d806135e7a9b9762d35129354f99283252f40ad75a6a94cd1921f164ed8e63174de0c5430e5c6913d21744
-Size (asterisk-21.9.0/pjproject-2.15.1.md5) = 172 bytes
-BLAKE2s (asterisk-21.9.0/pjproject-2.15.1.tar.bz2) = 2bcb38884531f0be966c78b6bac45ac63d8c612c060da91c584d192fe0fdf9cd
-SHA512 (asterisk-21.9.0/pjproject-2.15.1.tar.bz2) = c080eb44b49fccadb1c76ff2b3221935b0d531a1e2087b47c21b4ec2cdd8ee0e62b13c334495c9c759b348a0792204611987089a6aa6264999f0116aec8dbdfd
-Size (asterisk-21.9.0/pjproject-2.15.1.tar.bz2) = 8492214 bytes
+BLAKE2s (asterisk-21.9.1/asterisk-21.9.1.tar.gz) = c60af39bfa030808cef5752b7443d78ffc74e832929a906432b2978f44d06005
+SHA512 (asterisk-21.9.1/asterisk-21.9.1.tar.gz) = 7212be039a16602a333c623b76b5f3c829bd058825eec6151b59338bc405f43ae535d92fddcf9e5f2f9f1c0745ceacabda6549580f2d265e44ce088f7fe331e1
+Size (asterisk-21.9.1/asterisk-21.9.1.tar.gz) = 26493632 bytes
+BLAKE2s (asterisk-21.9.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
+SHA512 (asterisk-21.9.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-21.9.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+BLAKE2s (asterisk-21.9.1/pjproject-2.15.1.md5) = 1bdb00828816aff69f43eaacd084bd7d0a48670af33110bd0cd6325ead45aa48
+SHA512 (asterisk-21.9.1/pjproject-2.15.1.md5) = 75963b64e702a5810fd5b8b574a07396cab1a87543d806135e7a9b9762d35129354f99283252f40ad75a6a94cd1921f164ed8e63174de0c5430e5c6913d21744
+Size (asterisk-21.9.1/pjproject-2.15.1.md5) = 172 bytes
+BLAKE2s (asterisk-21.9.1/pjproject-2.15.1.tar.bz2) = 2bcb38884531f0be966c78b6bac45ac63d8c612c060da91c584d192fe0fdf9cd
+SHA512 (asterisk-21.9.1/pjproject-2.15.1.tar.bz2) = c080eb44b49fccadb1c76ff2b3221935b0d531a1e2087b47c21b4ec2cdd8ee0e62b13c334495c9c759b348a0792204611987089a6aa6264999f0116aec8dbdfd
+Size (asterisk-21.9.1/pjproject-2.15.1.tar.bz2) = 8492214 bytes
 SHA1 (patch-Makefile) = 5cf3b6937ec23a82e4d056b91e493a36bc1089b9
 SHA1 (patch-addons_chan__ooh323.c) = 1775da7ca2129a962ed460bd1e78ba3ce6afa62c
 SHA1 (patch-apps_app__adsiprog.c) = 031139e5cd1ef6bb2afb0a74fee3d752eded0a2c
@@ -30,8 +30,8 @@ SHA1 (patch-cel_cel__pgsql.c) = b280efab2b035ce60be268bac9bc8824910b2b8f
 SHA1 (patch-channels_chan__pjsip.c) = efd4cbb82133fc5ddf7de70d01c99e185c585211
 SHA1 (patch-channels_pjsip_cli__commands.c) = 01baa9d242e3af02a1f3540cfb3064ad68c71d67
 SHA1 (patch-channels_pjsip_dialplan__functions.c) = 2cf8199c4ec9d4894eb922c2703d49ecc06188ef
-SHA1 (patch-configure) = 03e0de2aef9ba3143c0c457d9ec658483a2570ab
-SHA1 (patch-configure.ac) = b972730a2be3bf54502116f1f7e03afee76a02cc
+SHA1 (patch-configure) = a73d5466342c79be9dac3a46796684cebed5ea10
+SHA1 (patch-configure.ac) = 511a3ecbbb404263d4d6c4773b0a0ad44c9adf6e
 SHA1 (patch-contrib_scripts_vmail.cgi) = 7935ce96ea319eb19cc2ce999813eb837d5357c0
 SHA1 (patch-funcs_func__cdr.c) = 79c743df264948e5ea9e1c292012a1f6362d0c1e
 SHA1 (patch-funcs_func__channel.c) = 9d6ed8a2431fbde6879782d8228030467aabe7eb
