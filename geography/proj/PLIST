@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/04/27 00:23:07 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/06/02 15:03:18 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
