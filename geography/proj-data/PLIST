@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/27 12:27:20 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/06/02 15:26:15 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -94,6 +94,9 @@ share/proj/de_lgvl_saarland_README.txt
 share/proj/de_lgvl_saarland_SeTa2016.tif
 share/proj/de_tlbg_thueringen_NTv2gridTH.tif
 share/proj/de_tlbg_thueringen_README.txt
+share/proj/dk_kds_README.txt
+share/proj/dk_kds_dvr90_evrf2019.tif
+share/proj/dk_kds_dvr90_evrf2019_mean_tide.tif
 share/proj/dk_sdfe_DK_bornholm.pol
 share/proj/dk_sdfe_DK_bridges.pol
 share/proj/dk_sdfe_DK_general.pol
@@ -202,7 +205,9 @@ share/proj/is_lmi_Icegeoid_ISN93.tif
 share/proj/is_lmi_README.txt
 share/proj/jp_gsi_README.txt
 share/proj/jp_gsi_gsigeo2011.tif
+share/proj/jp_gsi_jpgeo2024.tif
 share/proj/lv_lgia_README.txt
+share/proj/lv_lgia_lks92to2020.tif
 share/proj/lv_lgia_lv14.tif
 share/proj/mx_inegi_README.txt
 share/proj/mx_inegi_ggm10.tif
@@ -214,7 +219,9 @@ share/proj/nc_dittt_gr3dnc02b.tif
 share/proj/nc_dittt_gr3dnc03a.tif
 share/proj/nc_dittt_gr3dncI08.tif
 share/proj/nl_nsgi_README.txt
+share/proj/nl_nsgi_bongeo2004.tif
 share/proj/nl_nsgi_nlgeo2018.tif
+share/proj/nl_nsgi_nllat2018.tif
 share/proj/nl_nsgi_rdcorr2018.tif
 share/proj/nl_nsgi_rdtrans2018.tif
 share/proj/no_kv_CD_above_Ell_ETRS89_v2021a.tif
