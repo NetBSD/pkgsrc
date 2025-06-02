@@ -1,0 +1,24 @@
+$NetBSD: patch-pkgsrc.tmpl,v 1.1 2025/06/02 11:16:24 vins Exp $
+
+Simplified imake rules for pkgsrc.
+
+--- pkgsrc.tmpl.orig	2025-06-02 10:38:07.007571551 +0000
++++ pkgsrc.tmpl
+@@ -0,0 +1,17 @@
++CC?= cc
++PROG= mxkill
++
++INCLUDES = -I. -I./bitmaps $(MCLIENTINCLUDES)
++LDLIBS= -lm
++LOCAL_LIBRARIES= -lXm -lXt -lX11
++
++BINDIR=$(PREFIX)/bin
++XAPPLOADDIR=$(PREFIX)/lib/X11/app-defaults
++
++.PHONY: common-install
++
++common-install: $(PROG)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(PROG) ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(XAPPLOADDIR)
++	$(BSD_INSTALL_DATA) MXkill.ad ${DESTDIR}$(XAPPLOADDIR)/MXkill

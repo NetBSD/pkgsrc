@@ -1,0 +1,19 @@
+MXkill is a user friendly X/Motif graphical user interface to the ps
+command.
+
+Features:
+
+* All ps command options, including pipe,  can be used to
+  filter the ps output.
+* The ps output is displayed in a scrolled list window.
+  The vertical or horizontal scrollbar will be active if the
+  output goes beyond the viewing area.
+* One or more processes can be selected interactively by mouse, and
+  standard Unix regular expression syntax can be used to select
+  processes as well.
+* Signals can be chosen from the menu in order to be sent
+  to the process/es. By default, the signal is 9 (sure kill).
+
+Inspired by xzap by gerry.tomlinson@ncl.ac.uk, an X Athena widget
+version of the zap command described in Kernighan &l Pike's "The UNIX
+Programming Environment".
