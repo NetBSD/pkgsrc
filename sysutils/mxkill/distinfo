@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2025/06/02 11:16:24 vins Exp $
+
+BLAKE2s (mxkill1.2.tar.gz) = 669e2e44b66fcace1c8c0b952d5cb71c3b8214b9b810217ea76e0aa5b7859458
+SHA512 (mxkill1.2.tar.gz) = 52458e9021aa457df2a31ed76991baed4eb143f06979dd29ae14ba38b233830e9328eaf1b3e3a3717126a646d72e49650710b030c148249f510e5a166a9c7370
+Size (mxkill1.2.tar.gz) = 72713 bytes
+SHA1 (patch-Imakefile) = fa9952eeacb85cac671f3079979092bcf29ee016
+SHA1 (patch-crui.c) = d53e8f440c841393e44575afd976679d1d181e6b
+SHA1 (patch-main.c) = ec59c859d0454b70fe3dbc39dad7315c83451dd3
+SHA1 (patch-pkgsrc.tmpl) = 020f8d082c33e4572ca2d904bef44a6738b176e9
+SHA1 (patch-regex.c) = e899de9f324543302c784b8fe2c2b6f20b774173
+SHA1 (patch-xhead.h) = b3551cb7ce0b7388e2184d7150fe57457b4e2db3
