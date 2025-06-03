@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/10 16:47:52 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/06/03 14:06:51 wiz Exp $
 include/SDL3/SDL.h
 include/SDL3/SDL_assert.h
 include/SDL3/SDL_asyncio.h
@@ -84,6 +84,8 @@ include/SDL3/SDL_tray.h
 include/SDL3/SDL_version.h
 include/SDL3/SDL_video.h
 include/SDL3/SDL_vulkan.h
+${PLIST.libusb}lib/cmake/SDL3/FindLibUSB.cmake
+${PLIST.libusb}lib/cmake/SDL3/PkgConfigHelper.cmake
 lib/cmake/SDL3/SDL3Config.cmake
 lib/cmake/SDL3/SDL3ConfigVersion.cmake
 lib/cmake/SDL3/SDL3headersTargets.cmake
