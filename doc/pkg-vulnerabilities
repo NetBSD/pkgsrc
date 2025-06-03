@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.397 2025/06/02 10:45:24 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.398 2025/06/03 18:37:57 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26275,3 +26275,15 @@ jq<1.8.0	type-confusion		https://nvd.nist.gov/vuln/detail/CVE-2024-53427
 jq<1.8.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48060
 php{56,74,80,81,82,83}-roundcube<1.6.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49113
 p5-YAML-LibYAML<0.903.0	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-40908
+ap{22,24}-modsecurity<2.9.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48866
+catdoc-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-48877
+catdoc-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2024-52035
+catdoc-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2024-54028
+chromium<137.0.7151.68	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5068
+chromium<137.0.7151.68	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5419
+grafana>=11.6.0<11.6.1	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3260
+grafana<11.6.2		authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3454
+qt5-qtbase<5.15.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5455
+qt6-qtbase<6.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5455
+sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46806
+sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46807
