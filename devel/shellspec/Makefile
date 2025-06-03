@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/04/14 18:31:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/03 17:46:55 schmonz Exp $
 
 DISTNAME=		shellspec-0.28.1
 CATEGORIES=		devel
@@ -6,7 +6,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=shellspec/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		https://github.com/shellspec/shellspec/
+HOMEPAGE=		https://shellspec.info/
 COMMENT=		Full-featured BDD unit testing for POSIX shells
 LICENSE=		mit
 
