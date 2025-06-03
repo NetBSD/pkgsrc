@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3707 2025/06/03 08:34:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3708 2025/06/03 11:41:02 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5552,3 +5552,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.11 [taca 2025-06-03]
 	Updated textproc/py-jsonpickle to 4.1.1 [adam 2025-06-03]
 	Updated devel/py-typing-extensions to 4.14.0 [adam 2025-06-03]
+	Updated sysutils/bacula to 15.0.3 [markd 2025-06-03]
+	Updated sysutils/bacula-clientonly to 15.0.3 [markd 2025-06-03]
+	Updated sysutils/bacula-qt5-console to 15.0.3 [markd 2025-06-03]
+	Updated sysutils/bacula-tray-monitor-qt5 to 15.0.3 [markd 2025-06-03]
