@@ -1,27 +1,27 @@
-$NetBSD: patch-src_filed_Makefile.in,v 1.4 2022/10/06 02:58:17 markd Exp $
+$NetBSD: patch-src_filed_Makefile.in,v 1.5 2025/06/03 11:36:47 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/filed/Makefile.in.orig	2022-08-05 15:13:35.000000000 +0000
+--- src/filed/Makefile.in.orig	2025-03-26 14:34:35.000000000 +0000
 +++ src/filed/Makefile.in
-@@ -115,13 +115,13 @@ win32:	$(WIN32OBJS)
+@@ -118,13 +118,13 @@ win32:	$(WIN32OBJS)
  bacula-fd:  Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(SVROBJS) \
 -	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) \
 +	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) \
- 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS) $(IOKITLIBS)
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS) $(ZSTD_LIBS) $(IOKITLIBS)
  
  bfdjson:  Makefile $(JSONOBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(JSONOBJS) \
 -	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) -lbacfind -lbaccfg -lbac -lm $(LIBS) \
 +	  $(WIN32LIBS) $(FDLIBS) $(ZLIBS) ../findlib/libbacfind.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(LIBS) \
- 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS)
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS) $(AFS_LIBS) $(LZO_LIBS) $(ZSTD_LIBS)
  
  static-bacula-fd: Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
-@@ -165,16 +165,16 @@ install: all
+@@ -168,16 +168,16 @@ install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bfdjson $(DESTDIR)$(sbindir)/bfdjson
  	@srcconf=bacula-fd.conf; \
