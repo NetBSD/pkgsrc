@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/05/26 09:41:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/06/03 18:01:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -12,6 +12,9 @@ ${PYSITELIB}/aiohttp/.hash/hdrs.py.hash
 ${PYSITELIB}/aiohttp/__init__.py
 ${PYSITELIB}/aiohttp/__init__.pyc
 ${PYSITELIB}/aiohttp/__init__.pyo
+${PYSITELIB}/aiohttp/_cookie_helpers.py
+${PYSITELIB}/aiohttp/_cookie_helpers.pyc
+${PYSITELIB}/aiohttp/_cookie_helpers.pyo
 ${PYSITELIB}/aiohttp/_cparser.pxd
 ${PYSITELIB}/aiohttp/_find_header.pxd
 ${PYSITELIB}/aiohttp/_headers.pxi
