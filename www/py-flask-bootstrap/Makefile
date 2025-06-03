@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/05 22:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/06/03 11:44:42 markd Exp $
 
 DISTNAME=	Flask-Bootstrap-3.3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=0.8:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-visitor-[0-9]*:../../devel/py-visitor
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 REPLACE_PYTHON+=	flask_bootstrap/__init__.py
 
