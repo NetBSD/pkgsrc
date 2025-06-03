@@ -1,11 +1,11 @@
-$NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
+$NetBSD: patch-src_tools_Makefile.in,v 1.6 2025/06/03 11:36:47 markd Exp $
 
 - use the .la files for linking
 - remove tests that don't link (using functions not in libraries)
 
---- src/tools/Makefile.in.orig	2022-08-05 15:13:35.000000000 +0000
+--- src/tools/Makefile.in.orig	2025-03-26 14:34:35.000000000 +0000
 +++ src/tools/Makefile.in
-@@ -97,17 +97,17 @@ bsparse: bsparse.c
+@@ -103,17 +103,17 @@ bsparse: bsparse.c
  	$(CXX) -Wall -o $@ bsparse.c
  
  bsmtp: Makefile bsmtp.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)	    
@@ -27,7 +27,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
  
  thread: Makefile thread.o 
  	$(CXX) $(LDFLAGS) -o $@ thread.o -lpthread
-@@ -115,14 +115,14 @@ thread: Makefile thread.o 
+@@ -121,14 +121,14 @@ thread: Makefile thread.o 
  dbcheck: Makefile dbcheck.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	 ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) $(DIRCONFOBJS)
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ dbcheck.o $(DIRCONFOBJS) \
@@ -41,11 +41,11 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
  
  bnet_test: Makefile bnet_test.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
 -	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ bnet_test.o -lbacfind -lbac -lm \
-+	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ bnet_test.o ../findlib/libbacfind.la ../lib/libbac.la -lbac -lm \
++	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -L../lib -L../findlib -o $@ bnet_test.o ../findlib/libbacfind.la ../lib/libbac.la -lm \
  	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
- tags_test: Makefile test_tags.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/unittests.o
-@@ -131,7 +131,7 @@ tags_test: Makefile test_tags.o ../lib/l
+ block_crypto_test: Makefile block_crypto_test.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/unittests.o
+@@ -142,7 +142,7 @@ tags_test: Makefile test_tags.o ../lib/l
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) $@ $(DESTDIR)$(sbindir)/
  
  drivetype: Makefile drivetype.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
@@ -54,7 +54,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
  	  $(DLIB) $(LIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
  
  dird_conf.o: ../dird/dird_conf.c
-@@ -150,29 +150,29 @@ timelimit: timelimit.o
+@@ -161,29 +161,29 @@ timelimit: timelimit.o
  testfind: Makefile ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) \
  	  ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) $(FINDOBJS)
  	$(LIBTOOL_LINK) $(CXX) -g $(LDFLAGS) -o $@ $(FINDOBJS) -L. -L../lib -L../findlib \
@@ -90,7 +90,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
  
  # Turn on cats_test when it builds correctly
  #cats_test.o: cats_test.c
-@@ -190,13 +190,13 @@ gigaslam: gigaslam.o
+@@ -201,13 +201,13 @@ gigaslam: gigaslam.o
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -o $@ gigaslam.o
  
  grow: Makefile grow.o ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
@@ -106,7 +106,7 @@ $NetBSD: patch-src_tools_Makefile.in,v 1.5 2022/10/06 02:58:17 markd Exp $
  
  TESTDEDUPOBJS = ../stored/bitarray.o ../stored/dedupengine.o test-dedup.o
  
-@@ -205,7 +205,7 @@ test-dedup.o: test-dedup.c
+@@ -216,7 +216,7 @@ test-dedup.o: test-dedup.c
  
  test-dedup: Makefile $(TESTDEDUPOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
  	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) -static -L../lib -o $@ $(TESTDEDUPOBJS) $(ZLIBS) \

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.76 2024/04/26 15:34:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.77 2025/06/03 11:36:47 markd Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor-qt5/Makefile
 # used by sysutils/bacula-qt5-console/Makefile
 
-DISTNAME=	bacula-13.0.1
+DISTNAME=	bacula-15.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bacula/}
 
@@ -71,12 +71,18 @@ CONFIGURE_ARGS.Linux+=	--enable-smartalloc
 
 CONFIGURE_ARGS.DragonFly+=	--disable-xattr
 
+REPLACE_PERL+=		scripts/get_malware_abuse.ch
+
+REPLACE_PYTHON+=	scripts/key-manager.py.in
+REPLACE_PYTHON+=	scripts/md5tobase64.py
+
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bacula
 INSTALLATION_DIRS+=	${EXAMPLESDIR}
 
+.include "../../lang/python/application.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

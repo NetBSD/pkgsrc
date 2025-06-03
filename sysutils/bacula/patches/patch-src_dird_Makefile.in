@@ -1,11 +1,11 @@
-$NetBSD: patch-src_dird_Makefile.in,v 1.3 2022/10/06 02:58:17 markd Exp $
+$NetBSD: patch-src_dird_Makefile.in,v 1.4 2025/06/03 11:36:47 markd Exp $
 
 - use %%EXAMPLESDIR%% instead of sysconfdir
 - use the .la files for linking
 
---- src/dird/Makefile.in.orig	2022-08-05 15:13:35.000000000 +0000
+--- src/dird/Makefile.in.orig	2025-03-26 14:34:35.000000000 +0000
 +++ src/dird/Makefile.in
-@@ -72,21 +72,21 @@ bacula-dir: Makefile $(SVROBJS) ../lib/l
+@@ -73,21 +73,21 @@ bacula-dir: Makefile $(SVROBJS) ../lib/l
  	    ../cats/libbaccats$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
  	@echo "Linking $@ ..."
  	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) $(ZLIBS) \
@@ -29,8 +29,8 @@ $NetBSD: patch-src_dird_Makefile.in,v 1.3 2022/10/06 02:58:17 markd Exp $
 +	      ../lib/libbaccfg.la ../lib/libbac.la -lm $(DLIB) $(DB_LIBS) $(LIBS) \
  	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS) $(CAP_LIBS)
  
- Makefile: $(srcdir)/Makefile.in $(topdir)/config.status
-@@ -115,16 +115,16 @@ install: all
+ store_mngr_test: Makefile ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) dird.c store_mngr.c 
+@@ -123,16 +123,16 @@ install: all
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-dir $(DESTDIR)$(sbindir)/bacula-dir
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bdirjson $(DESTDIR)$(sbindir)/bdirjson
  	@srcconf=bacula-dir.conf; \
@@ -51,7 +51,7 @@ $NetBSD: patch-src_dird_Makefile.in,v 1.3 2022/10/06 02:58:17 markd Exp $
  	   fi
  	@if  test -f ${DESTDIR}${scriptdir}/query.sql; then \
  	   echo "  ==> Saving existing query.sql to query.sql.old"; \
-@@ -138,7 +138,7 @@ install: all
+@@ -146,7 +146,7 @@ install: all
  
  uninstall:
  	(cd $(DESTDIR)$(sbindir); $(RMF) bacula-dir bdirjson)

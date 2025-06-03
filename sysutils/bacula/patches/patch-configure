@@ -1,10 +1,30 @@
-$NetBSD: patch-configure,v 1.3 2020/05/24 01:22:16 joerg Exp $
+$NetBSD: patch-configure,v 1.4 2025/06/03 11:36:47 markd Exp $
+
+fix test ==
 
 NetBSD has xattr and acl.
 
---- configure.orig	2020-02-26 14:11:43.000000000 +0000
+--- configure.orig	2025-03-26 14:34:35.000000000 +0000
 +++ configure
-@@ -30085,7 +30085,7 @@ $as_echo "no" >&6; }
+@@ -23361,7 +23361,7 @@ else
+ fi
+ 
+ 
+-if test x"${error}" == "x"; then
++if test x"${error}" = "x"; then
+    support_curl=yes
+ fi
+ 
+@@ -23427,7 +23427,7 @@ fi
+ 
+ 
+ 
+-if test x"${error}" == "x"; then
++if test x"${error}" = "x"; then
+     support_zstd=yes
+ else
+     support_zstd=no
+@@ -30899,7 +30899,7 @@ $as_echo "no" >&6; }
     fi
  
              if test $have_acl = yes -a \
@@ -13,7 +33,7 @@ NetBSD has xattr and acl.
        { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ACL_TYPE_NFS4 in acl.h include file" >&5
  $as_echo_n "checking for ACL_TYPE_NFS4 in acl.h include file... " >&6; }
        grep ACL_TYPE_NFS4 /usr/include/sys/acl.h > /dev/null 2>&1
-@@ -30232,6 +30232,9 @@ $as_echo "#define HAVE_ACL 1" >>confdefs
+@@ -31046,6 +31046,9 @@ $as_echo "#define HAVE_ACL 1" >>confdefs
  	 if test x${HAVE_FREEBSD_OS_TRUE} = x; then
  	    ACLOBJS="bacl.c bacl_freebsd.c"
  	 fi
@@ -23,7 +43,7 @@ NetBSD has xattr and acl.
  	 if test x${HAVE_DARWIN_OS_TRUE} = x; then
  	    ACLOBJS="bacl.c bacl_osx.c"
  	 fi
-@@ -30706,6 +30709,9 @@ $as_echo "#define HAVE_XATTR 1" >>confde
+@@ -31520,6 +31523,9 @@ $as_echo "#define HAVE_XATTR 1" >>confde
  	 if test x${HAVE_FREEBSD_OS_TRUE} = x; then
  	    XATTROBJS="bxattr.c bxattr_freebsd.c"
  	 fi
