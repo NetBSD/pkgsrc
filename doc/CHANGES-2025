@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3705 2025/06/02 16:05:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3706 2025/06/03 02:10:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5546,3 +5546,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-scikit-build-core to 0.11.4 [adam 2025-06-02]
 	Updated www/py-uvicorn to 0.34.3 [adam 2025-06-02]
 	Updated net/py-prometheus_client to 0.22.1 [adam 2025-06-02]
+	Updated mail/roundcube to 1.6.11 [taca 2025-06-03]
+	Updated mail/roundcube-plugin-enigma to 1.6.11 [taca 2025-06-03]
+	Updated mail/roundcube-plugin-password to 1.6.11 [taca 2025-06-03]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.11 [taca 2025-06-03]
