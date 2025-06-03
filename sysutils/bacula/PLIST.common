@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.19 2019/02/07 11:29:31 markd Exp $
+@comment $NetBSD: PLIST.common,v 1.20 2025/06/03 11:36:47 markd Exp $
 lib/bpipe-fd.la
 lib/libbac.la
 lib/libbaccfg.la
@@ -15,7 +15,9 @@ libexec/bacula/btraceback.dbx
 libexec/bacula/btraceback.gdb
 libexec/bacula/btraceback.mdb
 libexec/bacula/disk-changer
+libexec/bacula/install-key-manager.sh
 libexec/bacula/isworm
+libexec/bacula/key-manager.py
 libexec/bacula/mtx-changer
 libexec/bacula/mtx-changer.conf
 libexec/bacula/query.sql
@@ -26,12 +28,16 @@ man/man8/bacula-dir.8
 man/man8/bacula-fd.8
 man/man8/bacula-sd.8
 man/man8/bacula.8
+man/man8/bbconsjson.8
 man/man8/bconsole.8
 man/man8/bcopy.8
+man/man8/bdirjson.8
 man/man8/bextract.8
+man/man8/bfdjson.8
 man/man8/bls.8
 man/man8/bregex.8
 man/man8/bscan.8
+man/man8/bsdjson.8
 man/man8/btape.8
 man/man8/btraceback.8
 man/man8/bwild.8
@@ -42,6 +48,8 @@ sbin/bbconsjson
 sbin/bconsole
 sbin/bfdjson
 sbin/btraceback
+sbin/get_malware_abuse.ch
+sbin/md5tobase64.py
 share/doc/bacula/ChangeLog
 share/doc/bacula/INSTALL
 share/doc/bacula/LICENSE
