@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3708 2025/06/03 11:41:02 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3709 2025/06/03 18:01:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5556,3 +5556,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/bacula-clientonly to 15.0.3 [markd 2025-06-03]
 	Updated sysutils/bacula-qt5-console to 15.0.3 [markd 2025-06-03]
 	Updated sysutils/bacula-tray-monitor-qt5 to 15.0.3 [markd 2025-06-03]
+	Updated archivers/py-zipp to 3.22.0 [adam 2025-06-03]
+	Updated geography/py-owslib to 0.34.0 [adam 2025-06-03]
+	Updated www/py-aiohttp to 3.12.7 [adam 2025-06-03]
