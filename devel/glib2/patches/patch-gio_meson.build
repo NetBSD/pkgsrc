@@ -1,0 +1,15 @@
+$NetBSD: patch-gio_meson.build,v 1.12 2025/06/03 11:05:06 jperkin Exp $
+
+Do not use inotify on SunOS.
+
+--- gio/meson.build.orig	2025-06-03 10:43:41.187491613 +0000
++++ gio/meson.build
+@@ -789,7 +789,7 @@ gioenumtypes_dep = declare_dependency(so
+ 
+ file_monitor_backend = get_option('file_monitor_backend')
+ if file_monitor_backend == 'auto'
+-  if glib_conf.has('HAVE_SYS_INOTIFY_H') and have_func_inotify_init1
++  if glib_conf.has('HAVE_SYS_INOTIFY_H') and have_func_inotify_init1 and host_system != 'sunos'
+     file_monitor_backend = 'inotify'
+   elif have_func_kqueue and have_func_kevent
+     file_monitor_backend = 'kqueue'
