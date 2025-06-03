@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25851 2025/06/02 08:00:14 wiz Exp $
+$NetBSD: TODO,v 1.25852 2025/06/03 17:07:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -334,6 +334,14 @@ Suggested new packages
 	Signal Desktop
 	https://github.com/signalapp/Signal-Desktop
 	Signal Instant Messenger desktop client
+
+	Focalboard
+	https://www.focalboard.com
+	Open source alternative to Trello, Notion, and Asana
+
+	Kanboard
+	https://kanboard.org
+	Open source Kanban project management software
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
