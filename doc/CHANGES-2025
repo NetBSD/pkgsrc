@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3709 2025/06/03 18:01:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3710 2025/06/03 18:47:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5559,3 +5559,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-zipp to 3.22.0 [adam 2025-06-03]
 	Updated geography/py-owslib to 0.34.0 [adam 2025-06-03]
 	Updated www/py-aiohttp to 3.12.7 [adam 2025-06-03]
+	Updated devel/SDL2 to 2.32.8 [adam 2025-06-03]
+	Updated devel/py-blessed to 1.21.0 [adam 2025-06-03]
