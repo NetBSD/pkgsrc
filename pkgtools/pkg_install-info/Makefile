@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2020/01/18 23:33:26 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/03 08:54:50 tnn Exp $
 #
 
 PKGNAME=		pkg_install-info-${VERSION}
@@ -11,6 +11,7 @@ COMMENT=		Standalone GNU info file installation utility
 LICENSE=		gnu-gpl-v2 # or later
 
 GNU_CONFIGURE=		yes
+FORCE_C_STD=		c99
 
 CHECK_PERMS=		no
 
