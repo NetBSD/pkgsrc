@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2025/04/10 16:47:52 nia Exp $
+# $NetBSD: options.mk,v 1.2 2025/06/03 14:06:51 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.SDL3
 PKG_SUPPORTED_OPTIONS=		alsa dbus jack opengl libusb pulseaudio x11
 
 # other platforms use usbhid etc
 PKG_SUGGESTED_OPTIONS.Linux=	alsa libusb
+
+PLIST_VARS+=	libusb
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -59,8 +61,9 @@ CMAKE_CONFIGURE_ARGS+=	-DSDL_JACK=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb)
+PLIST.libusb=		yes
 CMAKE_CONFIGURE_ARGS+=	-DSDL_HIDAPI_LIBUSB=ON
-.  include "../../devel/libusb/buildlink3.mk"
+.  include "../../devel/libusb1/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DSDL_HIDAPI_LIBUSB=OFF
 .endif
