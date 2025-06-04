@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/02 19:15:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/06/04 11:33:55 markd Exp $
 share/examples/rt5/RT_Config.pm
 share/examples/rt5/RT_SiteConfig.pm
 share/rt5/bin/rt
 share/rt5/bin/rt-crontool
 share/rt5/bin/rt-mailgate
+share/rt5/bin/rt-run-scheduled-processes
 share/rt5/data/docs/GDPR.pod
-share/rt5/data/docs/README
 share/rt5/data/docs/UPGRADING-2.0
 share/rt5/data/docs/UPGRADING-3.0
 share/rt5/data/docs/UPGRADING-3.2
@@ -48,12 +48,16 @@ share/rt5/data/docs/hacking.pod
 share/rt5/data/docs/images/action-decline.png
 share/rt5/data/docs/images/added-terms.png
 share/rt5/data/docs/images/advanced-search.png
+share/rt5/data/docs/images/approvals.png
 share/rt5/data/docs/images/asset-cfs.png
 share/rt5/data/docs/images/asset-date-details.png
 share/rt5/data/docs/images/asset-search.png
 share/rt5/data/docs/images/asset-ticket-create-selfservice.png
 share/rt5/data/docs/images/asset-ticket-create.png
 share/rt5/data/docs/images/catalog-rights.png
+share/rt5/data/docs/images/chart-limited-to-top-10.png
+share/rt5/data/docs/images/chart-ordered-by-value.png
+share/rt5/data/docs/images/chart-tickets-by-requestor.png
 share/rt5/data/docs/images/complicated-search-arrows.png
 share/rt5/data/docs/images/create-setowner-action.png
 share/rt5/data/docs/images/current-search.png
@@ -88,13 +92,20 @@ share/rt5/data/docs/images/queue-created-started-chart.png
 share/rt5/data/docs/images/quote-selection-highlighted.png
 share/rt5/data/docs/images/quote-selection-ticket-update.png
 share/rt5/data/docs/images/saved-dashboard.png
+share/rt5/data/docs/images/scheduled-process-create.png
+share/rt5/data/docs/images/scheduled-process-schedule.png
+share/rt5/data/docs/images/scheduled-processes.png
+share/rt5/data/docs/images/screenshot.png
 share/rt5/data/docs/images/search-arrows.png
 share/rt5/data/docs/images/search-criteria.png
 share/rt5/data/docs/images/search-results.png
 share/rt5/data/docs/images/sorting-display-columns.png
 share/rt5/data/docs/images/status-change-condition.png
 share/rt5/data/docs/images/subscriptions.png
+share/rt5/data/docs/images/support-dashboard.png
 share/rt5/data/docs/images/theme_editor_defaults.png
+share/rt5/data/docs/images/unread-messages-column.png
+share/rt5/data/docs/images/unread-notification.png
 share/rt5/data/docs/images/user-time-worked-report.png
 share/rt5/data/docs/images/with-created-before.png
 share/rt5/data/docs/images/with-newline.png
@@ -115,6 +126,7 @@ share/rt5/data/docs/subscriptions_feeds.pod
 share/rt5/data/docs/system_administration/database.pod
 share/rt5/data/docs/ticket_metadata.pod
 share/rt5/data/docs/tracking-rt-configuration.pod
+share/rt5/data/docs/unread_messages.pod
 share/rt5/data/docs/web_deployment.pod
 share/rt5/data/docs/working_with_rt.pod
 share/rt5/data/docs/writing_extensions.pod
@@ -139,6 +151,7 @@ share/rt5/data/html/Admin/Articles/Elements/Topics
 share/rt5/data/html/Admin/Articles/index.html
 share/rt5/data/html/Admin/Assets/Catalogs/Create.html
 share/rt5/data/html/Admin/Assets/Catalogs/CustomFields.html
+share/rt5/data/html/Admin/Assets/Catalogs/CustomRoles.html
 share/rt5/data/html/Admin/Assets/Catalogs/DefaultValues.html
 share/rt5/data/html/Admin/Assets/Catalogs/Elements/EditBasics
 share/rt5/data/html/Admin/Assets/Catalogs/GroupRights.html
@@ -215,6 +228,7 @@ share/rt5/data/html/Admin/Global/CustomFields/index.html
 share/rt5/data/html/Admin/Global/DashboardsInMenu.html
 share/rt5/data/html/Admin/Global/GroupRights.html
 share/rt5/data/html/Admin/Global/MyRT.html
+share/rt5/data/html/Admin/Global/RightsHistory.html
 share/rt5/data/html/Admin/Global/Scrips.html
 share/rt5/data/html/Admin/Global/SelfServiceHomePage.html
 share/rt5/data/html/Admin/Global/Template.html
@@ -271,6 +285,10 @@ share/rt5/data/html/Admin/Tools/EditConfig.html
 share/rt5/data/html/Admin/Tools/GnuPG.html
 share/rt5/data/html/Admin/Tools/Queries.html
 share/rt5/data/html/Admin/Tools/RightsInspector.html
+share/rt5/data/html/Admin/Tools/ScheduledProcesses/Create.html
+share/rt5/data/html/Admin/Tools/ScheduledProcesses/Elements/ScheduledProcess
+share/rt5/data/html/Admin/Tools/ScheduledProcesses/Modify.html
+share/rt5/data/html/Admin/Tools/ScheduledProcesses/index.html
 share/rt5/data/html/Admin/Tools/Shortener.html
 share/rt5/data/html/Admin/Tools/Shredder/Dumps/dhandler
 share/rt5/data/html/Admin/Tools/Shredder/Elements/DumpFileLink
@@ -324,7 +342,6 @@ share/rt5/data/html/Articles/Article/ExtractFromTicket.html
 share/rt5/data/html/Articles/Article/ExtractIntoClass.html
 share/rt5/data/html/Articles/Article/ExtractIntoTopic.html
 share/rt5/data/html/Articles/Article/History.html
-share/rt5/data/html/Articles/Article/PreCreate.html
 share/rt5/data/html/Articles/Article/Search.html
 share/rt5/data/html/Articles/Elements/BeforeMessageBox
 share/rt5/data/html/Articles/Elements/CheckSkipCreate
@@ -342,7 +359,6 @@ share/rt5/data/html/Articles/Elements/ShowTopic
 share/rt5/data/html/Articles/Elements/ShowTopicLink
 share/rt5/data/html/Articles/Elements/SubjectOverride
 share/rt5/data/html/Articles/Elements/UpdatedArticles
-share/rt5/data/html/Articles/Helpers/CreateInClass
 share/rt5/data/html/Articles/Topics.html
 share/rt5/data/html/Articles/index.html
 share/rt5/data/html/Asset/Create.html
@@ -358,6 +374,7 @@ share/rt5/data/html/Asset/Elements/EditBasics
 share/rt5/data/html/Asset/Elements/EditCatalogPeople
 share/rt5/data/html/Asset/Elements/EditDates
 share/rt5/data/html/Asset/Elements/EditPeople
+share/rt5/data/html/Asset/Elements/EditPeopleInline
 share/rt5/data/html/Asset/Elements/EditRoleMembers
 share/rt5/data/html/Asset/Elements/Search
 share/rt5/data/html/Asset/Elements/SelectCatalog
@@ -409,6 +426,10 @@ share/rt5/data/html/Elements/AuthToken/List
 share/rt5/data/html/Elements/BulkCustomFields
 share/rt5/data/html/Elements/BulkLinks
 share/rt5/data/html/Elements/CSRF
+share/rt5/data/html/Elements/CatalogList
+share/rt5/data/html/Elements/CatalogListAllStatuses
+share/rt5/data/html/Elements/CatalogSummaryByLifecycle
+share/rt5/data/html/Elements/CatalogSummaryByStatus
 share/rt5/data/html/Elements/Checkbox
 share/rt5/data/html/Elements/CollectionAsTable/Header
 share/rt5/data/html/Elements/CollectionAsTable/ParseFormat
@@ -460,6 +481,7 @@ share/rt5/data/html/Elements/GotoTicket
 share/rt5/data/html/Elements/GotoUser
 share/rt5/data/html/Elements/Header
 share/rt5/data/html/Elements/HeaderJavascript
+share/rt5/data/html/Elements/HttpResponseHeaders
 share/rt5/data/html/Elements/JavascriptConfig
 share/rt5/data/html/Elements/LabeledValue
 share/rt5/data/html/Elements/Lifecycle/Graph
@@ -533,6 +555,7 @@ share/rt5/data/html/Elements/SelectObject
 share/rt5/data/html/Elements/SelectOwner
 share/rt5/data/html/Elements/SelectOwnerAutocomplete
 share/rt5/data/html/Elements/SelectOwnerDropdown
+share/rt5/data/html/Elements/SelectOwnerDropdownDelay
 share/rt5/data/html/Elements/SelectPriority
 share/rt5/data/html/Elements/SelectPriorityAsString
 share/rt5/data/html/Elements/SelectQueue
@@ -605,10 +628,12 @@ share/rt5/data/html/Group/Search.html
 share/rt5/data/html/Group/Summary.html
 share/rt5/data/html/Helpers/AddTimeWorked
 share/rt5/data/html/Helpers/Admin/EditCustomFieldValue
+share/rt5/data/html/Helpers/AssetUpdate
 share/rt5/data/html/Helpers/Autocomplete/Articles
 share/rt5/data/html/Helpers/Autocomplete/Assets
 share/rt5/data/html/Helpers/Autocomplete/CustomFieldValues
 share/rt5/data/html/Helpers/Autocomplete/Groups
+share/rt5/data/html/Helpers/Autocomplete/LinkTargets
 share/rt5/data/html/Helpers/Autocomplete/Owners
 share/rt5/data/html/Helpers/Autocomplete/Principals
 share/rt5/data/html/Helpers/Autocomplete/Queues
@@ -621,6 +646,7 @@ share/rt5/data/html/Helpers/Permalink
 share/rt5/data/html/Helpers/PreviewScrips
 share/rt5/data/html/Helpers/RightsInspector/Revoke
 share/rt5/data/html/Helpers/RightsInspector/Search
+share/rt5/data/html/Helpers/SelectOwnerDropdown
 share/rt5/data/html/Helpers/ShortcutHelp
 share/rt5/data/html/Helpers/ShowSimplifiedRecipients
 share/rt5/data/html/Helpers/SpawnLinkedTicket
@@ -665,6 +691,7 @@ share/rt5/data/html/NoAuth/js/dhandler
 share/rt5/data/html/NoAuth/rss/dhandler
 share/rt5/data/html/Prefs/AboutMe.html
 share/rt5/data/html/Prefs/AuthTokens.html
+share/rt5/data/html/Prefs/CatalogList.html
 share/rt5/data/html/Prefs/CustomDateRanges.html
 share/rt5/data/html/Prefs/DashboardsInMenu.html
 share/rt5/data/html/Prefs/Elements/EditAboutMe
@@ -721,6 +748,8 @@ share/rt5/data/html/Search/Elements/EditFormat
 share/rt5/data/html/Search/Elements/EditQuery
 share/rt5/data/html/Search/Elements/EditSearches
 share/rt5/data/html/Search/Elements/EditSort
+share/rt5/data/html/Search/Elements/FilterAssets
+share/rt5/data/html/Search/Elements/FilterTickets
 share/rt5/data/html/Search/Elements/Graph
 share/rt5/data/html/Search/Elements/NewListActions
 share/rt5/data/html/Search/Elements/PickAssetCFs
@@ -772,6 +801,7 @@ share/rt5/data/html/SelfService/Elements/SearchArticle
 share/rt5/data/html/SelfService/Helpers/Autocomplete/CustomFieldValues
 share/rt5/data/html/SelfService/Helpers/Autocomplete/Principals
 share/rt5/data/html/SelfService/Helpers/Autocomplete/Users
+share/rt5/data/html/SelfService/Helpers/SelectOwnerDropdown
 share/rt5/data/html/SelfService/Helpers/ShortcutHelp
 share/rt5/data/html/SelfService/Helpers/TextDiff
 share/rt5/data/html/SelfService/Helpers/Upload/Add
@@ -871,6 +901,7 @@ share/rt5/data/html/Widgets/Form/CustomDateRanges
 share/rt5/data/html/Widgets/Form/Integer
 share/rt5/data/html/Widgets/Form/JSON
 share/rt5/data/html/Widgets/Form/MultilineString
+share/rt5/data/html/Widgets/Form/SearchFormat
 share/rt5/data/html/Widgets/Form/Select
 share/rt5/data/html/Widgets/Form/String
 share/rt5/data/html/Widgets/SavedSearch
@@ -1664,6 +1695,11 @@ share/rt5/etc/upgrade/5.0.5/schema.Oracle
 share/rt5/etc/upgrade/5.0.5/schema.Pg
 share/rt5/etc/upgrade/5.0.5/schema.SQLite
 share/rt5/etc/upgrade/5.0.5/schema.mysql
+share/rt5/etc/upgrade/5.0.6/indexes
+share/rt5/etc/upgrade/${PKGVERSION}/indexes
+share/rt5/etc/upgrade/${PKGVERSION}/schema.Oracle
+share/rt5/etc/upgrade/${PKGVERSION}/schema.Pg
+share/rt5/etc/upgrade/${PKGVERSION}/schema.mysql
 share/rt5/etc/upgrade/generate-rtaddressregexp
 share/rt5/etc/upgrade/reset-sequences
 share/rt5/etc/upgrade/sanity-check-stylesheets
@@ -1690,6 +1726,7 @@ share/rt5/lib/RT/Action/ClearCustomFieldValues.pm
 share/rt5/lib/RT/Action/CreateTickets.pm
 share/rt5/lib/RT/Action/EscalatePriority.pm
 share/rt5/lib/RT/Action/ExtractSubjectTag.pm
+share/rt5/lib/RT/Action/Forward.pm
 share/rt5/lib/RT/Action/LinearEscalate.pm
 share/rt5/lib/RT/Action/Notify.pm
 share/rt5/lib/RT/Action/NotifyAsComment.pm
@@ -1826,6 +1863,7 @@ share/rt5/lib/RT/Interface/Web/ReportsRegistry.pm
 share/rt5/lib/RT/Interface/Web/Request.pm
 share/rt5/lib/RT/Interface/Web/Scrubber.pm
 share/rt5/lib/RT/Interface/Web/Scrubber/Permissive.pm
+share/rt5/lib/RT/Interface/Web/Scrubber/Restrictive.pm
 share/rt5/lib/RT/Interface/Web/Session.pm
 share/rt5/lib/RT/LDAPImport.pm
 share/rt5/lib/RT/Lifecycle.pm
@@ -1928,8 +1966,14 @@ share/rt5/lib/RT/Record/Role/Rights.pm
 share/rt5/lib/RT/Record/Role/Roles.pm
 share/rt5/lib/RT/Record/Role/Status.pm
 share/rt5/lib/RT/Reminders.pm
+share/rt5/lib/RT/Report.pm
+share/rt5/lib/RT/Report/Assets.pm
+share/rt5/lib/RT/Report/Assets/Entry.pm
+share/rt5/lib/RT/Report/Entry.pm
 share/rt5/lib/RT/Report/Tickets.pm
 share/rt5/lib/RT/Report/Tickets/Entry.pm
+share/rt5/lib/RT/Report/Transactions.pm
+share/rt5/lib/RT/Report/Transactions/Entry.pm
 share/rt5/lib/RT/RightsInspector.pm
 share/rt5/lib/RT/Rule.pm
 share/rt5/lib/RT/Ruleset.pm
@@ -1962,15 +2006,19 @@ share/rt5/lib/RT/Shredder/Dependency.pm
 share/rt5/lib/RT/Shredder/Exceptions.pm
 share/rt5/lib/RT/Shredder/POD.pm
 share/rt5/lib/RT/Shredder/Plugin.pm
+share/rt5/lib/RT/Shredder/Plugin/Assets.pm
 share/rt5/lib/RT/Shredder/Plugin/Attachments.pm
 share/rt5/lib/RT/Shredder/Plugin/Base.pm
 share/rt5/lib/RT/Shredder/Plugin/Base/Dump.pm
 share/rt5/lib/RT/Shredder/Plugin/Base/Search.pm
+share/rt5/lib/RT/Shredder/Plugin/ExternalStorageDump.pm
 share/rt5/lib/RT/Shredder/Plugin/Objects.pm
 share/rt5/lib/RT/Shredder/Plugin/SQLDump.pm
 share/rt5/lib/RT/Shredder/Plugin/Summary.pm
 share/rt5/lib/RT/Shredder/Plugin/Tickets.pm
+share/rt5/lib/RT/Shredder/Plugin/Transactions.pm
 share/rt5/lib/RT/Shredder/Plugin/Users.pm
+share/rt5/lib/RT/Shredder/RawRecord.pm
 share/rt5/lib/RT/Squish.pm
 share/rt5/lib/RT/Squish/CSS.pm
 share/rt5/lib/RT/Squish/JS.pm
@@ -1985,6 +2033,7 @@ share/rt5/lib/RT/Test/Assets.pm
 share/rt5/lib/RT/Test/Crypt.pm
 share/rt5/lib/RT/Test/Email.pm
 share/rt5/lib/RT/Test/ExternalStorage.pm
+share/rt5/lib/RT/Test/FTS.pm
 share/rt5/lib/RT/Test/GnuPG.pm
 share/rt5/lib/RT/Test/REST2.pm
 share/rt5/lib/RT/Test/SMIME.pm
