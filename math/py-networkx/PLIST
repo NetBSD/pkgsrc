@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/04/15 16:31:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/06/04 12:32:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,9 @@ ${PYSITELIB}/networkx/algorithms/approximation/clustering_coefficient.pyo
 ${PYSITELIB}/networkx/algorithms/approximation/connectivity.py
 ${PYSITELIB}/networkx/algorithms/approximation/connectivity.pyc
 ${PYSITELIB}/networkx/algorithms/approximation/connectivity.pyo
+${PYSITELIB}/networkx/algorithms/approximation/density.py
+${PYSITELIB}/networkx/algorithms/approximation/density.pyc
+${PYSITELIB}/networkx/algorithms/approximation/density.pyo
 ${PYSITELIB}/networkx/algorithms/approximation/distance_measures.py
 ${PYSITELIB}/networkx/algorithms/approximation/distance_measures.pyc
 ${PYSITELIB}/networkx/algorithms/approximation/distance_measures.pyo
@@ -56,6 +59,9 @@ ${PYSITELIB}/networkx/algorithms/approximation/tests/test_clique.pyo
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_connectivity.py
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_connectivity.pyc
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_connectivity.pyo
+${PYSITELIB}/networkx/algorithms/approximation/tests/test_density.py
+${PYSITELIB}/networkx/algorithms/approximation/tests/test_density.pyc
+${PYSITELIB}/networkx/algorithms/approximation/tests/test_density.pyo
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_distance_measures.py
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_distance_measures.pyc
 ${PYSITELIB}/networkx/algorithms/approximation/tests/test_distance_measures.pyo
@@ -161,6 +167,9 @@ ${PYSITELIB}/networkx/algorithms/bipartite/extendability.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/generators.py
 ${PYSITELIB}/networkx/algorithms/bipartite/generators.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/generators.pyo
+${PYSITELIB}/networkx/algorithms/bipartite/link_analysis.py
+${PYSITELIB}/networkx/algorithms/bipartite/link_analysis.pyc
+${PYSITELIB}/networkx/algorithms/bipartite/link_analysis.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/matching.py
 ${PYSITELIB}/networkx/algorithms/bipartite/matching.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/matching.pyo
@@ -200,6 +209,9 @@ ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_extendability.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_generators.py
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_generators.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_generators.pyo
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_link_analysis.py
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_link_analysis.pyc
+${PYSITELIB}/networkx/algorithms/bipartite/tests/test_link_analysis.pyo
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_matching.py
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_matching.pyc
 ${PYSITELIB}/networkx/algorithms/bipartite/tests/test_matching.pyo
@@ -407,6 +419,12 @@ ${PYSITELIB}/networkx/algorithms/community/kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/label_propagation.pyo
+${PYSITELIB}/networkx/algorithms/community/leiden.py
+${PYSITELIB}/networkx/algorithms/community/leiden.pyc
+${PYSITELIB}/networkx/algorithms/community/leiden.pyo
+${PYSITELIB}/networkx/algorithms/community/local.py
+${PYSITELIB}/networkx/algorithms/community/local.pyc
+${PYSITELIB}/networkx/algorithms/community/local.pyo
 ${PYSITELIB}/networkx/algorithms/community/louvain.py
 ${PYSITELIB}/networkx/algorithms/community/louvain.pyc
 ${PYSITELIB}/networkx/algorithms/community/louvain.pyo
@@ -440,6 +458,12 @@ ${PYSITELIB}/networkx/algorithms/community/tests/test_kernighan_lin.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_label_propagation.pyo
+${PYSITELIB}/networkx/algorithms/community/tests/test_leiden.py
+${PYSITELIB}/networkx/algorithms/community/tests/test_leiden.pyc
+${PYSITELIB}/networkx/algorithms/community/tests/test_leiden.pyo
+${PYSITELIB}/networkx/algorithms/community/tests/test_local.py
+${PYSITELIB}/networkx/algorithms/community/tests/test_local.pyc
+${PYSITELIB}/networkx/algorithms/community/tests/test_local.pyo
 ${PYSITELIB}/networkx/algorithms/community/tests/test_louvain.py
 ${PYSITELIB}/networkx/algorithms/community/tests/test_louvain.pyc
 ${PYSITELIB}/networkx/algorithms/community/tests/test_louvain.pyo
@@ -1264,6 +1288,11 @@ ${PYSITELIB}/networkx/drawing/nx_pylab.pyo
 ${PYSITELIB}/networkx/drawing/tests/__init__.py
 ${PYSITELIB}/networkx/drawing/tests/__init__.pyc
 ${PYSITELIB}/networkx/drawing/tests/__init__.pyo
+${PYSITELIB}/networkx/drawing/tests/baseline/test_display_complex.png
+${PYSITELIB}/networkx/drawing/tests/baseline/test_display_empty_graph.png
+${PYSITELIB}/networkx/drawing/tests/baseline/test_display_house_with_colors.png
+${PYSITELIB}/networkx/drawing/tests/baseline/test_display_labels_and_colors.png
+${PYSITELIB}/networkx/drawing/tests/baseline/test_display_shortest_path.png
 ${PYSITELIB}/networkx/drawing/tests/baseline/test_house_with_colors.png
 ${PYSITELIB}/networkx/drawing/tests/test_agraph.py
 ${PYSITELIB}/networkx/drawing/tests/test_agraph.pyc

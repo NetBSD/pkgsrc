@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/04/15 16:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.46 2025/06/04 12:32:02 adam Exp $
 
-DISTNAME=	networkx-3.4.2
+DISTNAME=	networkx-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/}
 
