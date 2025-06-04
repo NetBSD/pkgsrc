@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/05/08 12:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/06/04 11:33:55 markd Exp $
 
-DISTNAME=	rt-5.0.5
+DISTNAME=	rt-5.0.8
 PKGNAME=	${DISTNAME:S/rt/rt5/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
