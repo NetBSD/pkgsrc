@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3740 2025/06/04 14:51:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3741 2025/06/04 14:55:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5610,3 +5610,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-uwsgi to 2.0.30 [adam 2025-06-04]
 	Updated net/samba4 to 4.21.6 [taca 2025-06-04]
 	Updated www/typo3-13 to 13.4.13 [taca 2025-06-04]
+	Updated www/php-contao-manager to 1.10.2 [taca 2025-06-04]
