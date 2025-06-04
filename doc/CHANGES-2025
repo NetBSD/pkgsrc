@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3734 2025/06/04 14:11:33 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3735 2025/06/04 14:16:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5594,3 +5594,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-kms to 1.102.0 [taca 2025-06-04]
 	Updated www/ruby-aws-sdk-s3 to 1.189.0 [taca 2025-06-04]
 	Updated www/ruby-cgi to 0.5.0 [taca 2025-06-04]
+	Updated security/ruby-metasploit-payloads to 2.0.222 [taca 2025-06-04]
