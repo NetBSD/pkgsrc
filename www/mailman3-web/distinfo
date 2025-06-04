@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2024/04/29 07:50:16 markd Exp $
+$NetBSD: distinfo,v 1.5 2025/06/04 11:17:44 markd Exp $
 
 BLAKE2s (mailman_web-0.0.9.tar.gz) = ee522261bd0c8fdb991cb0bddcaca7645f5f4df8bcd0783c9e50d77f92a9eb7f
 SHA512 (mailman_web-0.0.9.tar.gz) = 19b969a6ea864d246dfe738698bbaad353c049927223886f60eac8dabc07219a2dd39aab3ab382f3a5ede8f18fc32af8e9e48099eb06505b229c6d5b487a55bc
 Size (mailman_web-0.0.9.tar.gz) = 22300 bytes
 SHA1 (patch-mailman__web_manage.py) = dc7ba1e520869d93bedb4dedb8ac8c92ca362cd8
 SHA1 (patch-mailman__web_settings_base.py) = 3f9aa8af506f1d3b988a3a0da7193efa2e993668
-SHA1 (patch-mailman__web_settings_mailman.py) = cc6a776d6a53b959ec34637d801fa7cdf329b0bd
+SHA1 (patch-mailman__web_settings_mailman.py) = 026a8ea5e40286e495233bf4146a45813bac8073
