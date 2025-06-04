@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1863 2025/05/30 14:20:16 kim Exp $
+# $NetBSD: Makefile,v 1.1864 2025/06/04 11:02:22 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -755,6 +755,7 @@ SUBDIR+=	py-django-photologue
 SUBDIR+=	py-django-picklefield
 SUBDIR+=	py-django-polymorphic
 SUBDIR+=	py-django-q
+SUBDIR+=	py-django-q2
 SUBDIR+=	py-django-registration
 SUBDIR+=	py-django-rest-framework-proxy
 SUBDIR+=	py-django-reversion
