@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3728 2025/06/04 14:03:30 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3729 2025/06/04 14:04:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5588,3 +5588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-csv to 3.3.5 [taca 2025-06-04]
 	Updated www/ruby-aws-eventstream to 1.4.0 [taca 2025-06-04]
 	Updated www/ruby-aws-partitions to 1.1110.0 [taca 2025-06-04]
+	Updated www/ruby-aws-sigv4 to 1.12.0 [taca 2025-06-04]
