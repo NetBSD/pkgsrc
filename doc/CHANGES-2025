@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3725 2025/06/04 13:47:18 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3726 2025/06/04 13:59:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5585,3 +5585,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-sequel to 5.93.0 [taca 2025-06-04]
 	Updated devel/ruby-curses to 1.5.1 [taca 2025-06-04]
 	Updated mail/ruby-mime-types-data to 3.2025.0603 [taca 2025-06-04]
+	Updated textproc/ruby-csv to 3.3.5 [taca 2025-06-04]
