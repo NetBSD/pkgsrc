@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3718 2025/06/04 10:28:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3719 2025/06/04 11:10:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5575,3 +5575,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/seaward to 1.1.0 [pin 2025-06-04]
 	Updated devel/py-ruff to 0.11.12 [adam 2025-06-04]
 	Updated net/py-junos-eznc to 2.7.4 [adam 2025-06-04]
+	Updated www/ap-php to 8.2.28nb13 [jperkin 2025-06-04]
