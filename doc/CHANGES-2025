@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3715 2025/06/04 07:48:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3716 2025/06/04 07:49:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5571,3 +5571,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.38.4 [pin 2025-06-04]
 	Updated devel/git-cliff to 2.9.1 [pin 2025-06-04]
 	Updated devel/mise to 2025.6.0 [pin 2025-06-04]
+	Updated shells/oh-my-posh to 26.2.2 [pin 2025-06-04]
