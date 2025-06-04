@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/15 09:25:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/06/04 10:28:06 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -284,6 +284,12 @@ ${PYSITELIB}/jnpr/junos/rpcmeta.pyo
 ${PYSITELIB}/jnpr/junos/transport/__init__.py
 ${PYSITELIB}/jnpr/junos/transport/__init__.pyc
 ${PYSITELIB}/jnpr/junos/transport/__init__.pyo
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/__init__.py
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/__init__.pyc
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/__init__.pyo
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/telnetlib.py
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/telnetlib.pyc
+${PYSITELIB}/jnpr/junos/transport/_telnetlib/telnetlib.pyo
 ${PYSITELIB}/jnpr/junos/transport/tty.py
 ${PYSITELIB}/jnpr/junos/transport/tty.pyc
 ${PYSITELIB}/jnpr/junos/transport/tty.pyo
