@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/10/14 06:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/04 11:11:02 markd Exp $
 
-DISTNAME=	hyperkitty-1.3.9
+DISTNAME=	hyperkitty-1.3.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperkitty/}
 
@@ -27,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-networkx>=2.0:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-django-haystack>=2.8.0:../../www/py-django-haystack
 DEPENDS+=	${PYPKGPREFIX}-django-extensions>=1.3.7:../../www/py-django-extensions
 DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=4.0:../../devel/py-flufl.lock
-DEPENDS+=	${PYPKGPREFIX}-django-q>=1.0.0:../../www/py-django-q
+DEPENDS+=	${PYPKGPREFIX}-django-q2>=1.0.0:../../www/py-django-q2
 DEPENDS+=	${PYPKGPREFIX}-Whoosh-[0-9]*:../../textproc/py-Whoosh
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml

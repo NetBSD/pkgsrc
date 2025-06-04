@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/04/29 07:55:37 markd Exp $
+$NetBSD: distinfo,v 1.4 2025/06/04 11:11:02 markd Exp $
 
-BLAKE2s (hyperkitty-1.3.9.tar.gz) = 5bf5ddf38cac915df082a13d63625493339714d499ef3cc8323eb37dfacc5c8b
-SHA512 (hyperkitty-1.3.9.tar.gz) = add9af8ada36910d7d2416b9f5cec9b83c8efffb77b409f1734e42a030b3848b2de79156f87fa1f09852345b2fea224b837f3e8feedc2b35b0114a32e7b02929
-Size (hyperkitty-1.3.9.tar.gz) = 2204377 bytes
+BLAKE2s (hyperkitty-1.3.12.tar.gz) = bed1af19ba0487870d538b0d196c3b24043fc4dc6cd841fe42da0ad52ba64bc7
+SHA512 (hyperkitty-1.3.12.tar.gz) = 778c77ee52fda775b0acba99654a1023b38fc5a9815c23454759cdf45e6e8cfda1f026f854972f4ffaa09749f341822e9ecd07619cceea842572b90b88e583d1
+Size (hyperkitty-1.3.12.tar.gz) = 2231630 bytes
