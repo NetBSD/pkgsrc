@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.112 2025/01/07 11:33:06 adam Exp $
+$NetBSD: distinfo,v 1.113 2025/06/04 14:43:09 taca Exp $
 
-BLAKE2s (samba-4.21.3.tar.gz) = cefc7628c027e67d8986f9374f619e5578563a6c92f5d2f3cb03f498feabafed
-SHA512 (samba-4.21.3.tar.gz) = b030e4a9749742bfa31b6ef03a3327f1b77b8db388a2d1d591bc8cf26db365ac773c1aa1f2710e7c94585685cdba6c0769af7ba0e0175db33e9d2552c97601ae
-Size (samba-4.21.3.tar.gz) = 42654317 bytes
+BLAKE2s (samba-4.21.6.tar.gz) = 6d763bf813f948662e2783e407916c3214a9c31294e4d3b0236836ccac49b7c9
+SHA512 (samba-4.21.6.tar.gz) = 58e6d6d44f551e4271bbaade81ea9f5488ce9c811cea1228eb55199a7852dd0a7eaf368287dc691fa47ff86132bc20633926504348c749fbba58337c3385c6ab
+Size (samba-4.21.6.tar.gz) = 42682936 bytes
 SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = d927db17124d2bb5b382885e70a41f84c3929926
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__pidl.py) = b9015694b80c0e6382d75c806fd6e0eb92e5f998
@@ -21,6 +21,7 @@ SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f7
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
 SHA1 (patch-lib_util_tfork.c) = a9acb5561c5bba76450c48904a22019c8b14cbec
 SHA1 (patch-lib_util_time.h) = 5048614e301cf6922ff7fa6693fa58bfe17ff10e
+SHA1 (patch-lib_util_util__crypt.c) = 0868616f9cc92388fe87b6318b8f4b7be9fe5b43
 SHA1 (patch-libcli_dns_wscript__build) = 4103a144aa1bb4662fd7a62270941f1a3d01fe89
 SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdfc6fc12df2
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 1214bfbd7714b64f3ff3eb97b6f24e3d2629370f
