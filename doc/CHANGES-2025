@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3735 2025/06/04 14:16:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3736 2025/06/04 14:17:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5595,3 +5595,13 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-s3 to 1.189.0 [taca 2025-06-04]
 	Updated www/ruby-cgi to 0.5.0 [taca 2025-06-04]
 	Updated security/ruby-metasploit-payloads to 2.0.222 [taca 2025-06-04]
+	Updated lang/python39 to 3.9.23 [adam 2025-06-04]
+	Updated lang/python310 to 3.10.18 [adam 2025-06-04]
+	Updated lang/python311 to 3.11.13 [adam 2025-06-04]
+	Updated lang/python312 to 3.12.11 [adam 2025-06-04]
+	Updated lang/python313 to 3.13.4 [adam 2025-06-04]
+	Updated lang/py39-html-docs to 3.9.23 [adam 2025-06-04]
+	Updated lang/py310-html-docs to 3.10.18 [adam 2025-06-04]
+	Updated lang/py311-html-docs to 3.11.13 [adam 2025-06-04]
+	Updated lang/py312-html-docs to 3.12.11 [adam 2025-06-04]
+	Updated lang/py313-html-docs to 3.13.4 [adam 2025-06-04]
