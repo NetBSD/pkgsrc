@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2025/05/13 03:50:51 schmonz Exp $
+# $NetBSD: options.mk,v 1.9 2025/06/04 13:29:33 schmonz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.s6-networking
-PKG_SUPPORTED_OPTIONS+=	execline tls
-PKG_SUGGESTED_OPTIONS+=	execline tls
+PKG_OPTIONS_VAR=		PKG_OPTIONS.s6-networking
+PKG_OPTIONS_OPTIONAL_GROUPS=	tls
+PKG_OPTIONS_GROUP.tls=		bearssl openssl
+PKG_SUPPORTED_OPTIONS+=		execline
+PKG_SUGGESTED_OPTIONS+=		execline bearssl
+PKG_OPTIONS_LEGACY_OPTS+=	tls:bearssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,12 +17,24 @@ CONFIGURE_ARGS+=	--enable-execline
 CONFIGURE_ARGS+=	--disable-execline
 .endif
 
-PLIST_VARS=		tls
-.if !empty(PKG_OPTIONS:Mtls)
+PLIST_VARS=		tls bearssl libtls
+
+.if !empty(PKG_OPTIONS:Mbearssl)
 PLIST.tls=		yes
+PLIST.bearssl=		yes
 .  include "../../security/bearssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-ssl=bearssl
+.endif
 
+.if !empty(PKG_OPTIONS:Mopenssl)
+PLIST.tls=		yes
+PLIST.libtls=		yes
+BUILDLINK_API_DEPENDS.libretls+=	libretls>=3.8.1
+.  include "../../security/libretls/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-ssl=libtls
+.endif
+
+.if !empty(PLIST.tls) && ${PLIST.tls} == "yes"
 PKG_USERS_VARS+=	UCSPI_SSL_USER
 PKG_GROUPS_VARS+=	UCSPI_SSL_GROUP
 PKG_GROUPS+=		${UCSPI_SSL_GROUP}

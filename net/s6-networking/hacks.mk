@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.3 2021/01/22 17:16:45 schmonz Exp $
+# $NetBSD: hacks.mk,v 1.4 2025/06/04 13:29:32 schmonz Exp $
 
-# s6 TLS tools don't use OpenSSL, but do need to know where to find CA
+# s6 TLS tools don't necessarily use OpenSSL, but do need to know where to find CA
 # certs. Buildlink just enough OpenSSL to read ${SSLCERTS}.
 PKG_HACKS+=	detect-openssl-cadir
 
