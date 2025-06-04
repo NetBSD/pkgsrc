@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2025/05/06 12:07:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.62 2025/06/04 14:43:09 taca Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -617,6 +617,7 @@ ${PYSITELIB}/samba/tests/lsa_string.py
 ${PYSITELIB}/samba/tests/messaging.py
 ${PYSITELIB}/samba/tests/ndr/gkdi.py
 ${PYSITELIB}/samba/tests/ndr/gmsa.py
+${PYSITELIB}/samba/tests/ndr/sd.py
 ${PYSITELIB}/samba/tests/ndr/wbint.py
 ${PYSITELIB}/samba/tests/net_join.py
 ${PYSITELIB}/samba/tests/net_join_no_spnego.py
@@ -949,6 +950,7 @@ lib/samba/private/libtdb-wrap-private-samba.so
 lib/samba/private/libtevent-util-private-samba.so
 lib/samba/private/libtime-basic-private-samba.so
 lib/samba/private/libtorture-private-samba.so
+lib/samba/private/libutil-crypt-private-samba.so
 lib/samba/private/libutil-reg-private-samba.so
 lib/samba/private/libutil-setid-private-samba.so
 lib/samba/private/libutil-tdb-private-samba.so
