@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3720 2025/06/04 11:36:50 markd Exp $
+$NetBSD: CHANGES-2025,v 1.3721 2025/06/04 12:32:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5579,3 +5579,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/py-django-q2 version 1.8.0 [markd 2025-06-04]
 	Updated www/py-hyperkitty to 1.3.12 [markd 2025-06-04]
 	Updated devel/rt5 to 5.0.8 [markd 2025-06-04]
+	Updated www/py-starlette to 0.47.0 [adam 2025-06-04]
+	Updated math/py-networkx to 3.5 [adam 2025-06-04]
