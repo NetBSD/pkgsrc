@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3722 2025/06/04 13:34:58 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3723 2025/06/04 13:38:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5582,3 +5582,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-starlette to 0.47.0 [adam 2025-06-04]
 	Updated math/py-networkx to 3.5 [adam 2025-06-04]
 	Updated benchmarks/ruby-benchmark to 0.4.1 [taca 2025-06-04]
+	Updated databases/ruby-sequel to 5.93.0 [taca 2025-06-04]
