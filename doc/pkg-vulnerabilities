@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.398 2025/06/03 18:37:57 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.399 2025/06/04 13:11:37 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26287,3 +26287,13 @@ qt5-qtbase<5.15.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5
 qt6-qtbase<6.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5455
 sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46806
 sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46807
+python312<3.12.11	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2024-12718
+python313<3.13.4	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2024-12718
+python312<3.12.11	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4138
+python313<3.13.4	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4138
+python312<3.12.11	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4330
+python313<3.13.4	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4330
+python312<3.12.11	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-4435
+python313<3.13.4	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-4435
+python312<3.12.11	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
+python313<3.13.4	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
