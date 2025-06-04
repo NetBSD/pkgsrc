@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/15 18:14:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/06/04 13:05:47 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.2
@@ -11,5 +11,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://oskt.secure-endpoints.com/lnetd.html
 COMMENT=		Utility to bind to UNIX domain socket and spawn children
 LICENSE=		mit
+
+LDFLAGS.SunOS+=		-lsocket
 
 .include "../../mk/bsd.pkg.mk"
