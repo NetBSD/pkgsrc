@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/03/16 14:27:56 taca Exp $
+$NetBSD: distinfo,v 1.8 2025/06/04 14:01:58 taca Exp $
 
-BLAKE2s (aws-eventstream-1.3.2.gem) = c68cad60c7583cdd2b9bd6b1830f84e960a84412a0b78558e47e65469e697c14
-SHA512 (aws-eventstream-1.3.2.gem) = 1400e5c7a546c17a7707c722aaee90ba7b726ecc5423b76a220e3e9ac1636ea095d33eda0697b31c340d5c20e3e51bd68e263cc10b45a62913245e296da1a1b8
-Size (aws-eventstream-1.3.2.gem) = 13312 bytes
+BLAKE2s (aws-eventstream-1.4.0.gem) = bab9f91ade2640588c56b3dc6d08dcefcc4a94c603bff3b3fd731ec3af0c2282
+SHA512 (aws-eventstream-1.4.0.gem) = bd59f75fc5ff8b164817527c6aeb5b3e31210c016e563eaa8307c076decff8b3dd11269d90a62c4e7d625fa3750edc4f8363242dd00583d84347a3725d5f2d62
+Size (aws-eventstream-1.4.0.gem) = 13312 bytes
