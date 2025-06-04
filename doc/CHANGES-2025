@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3717 2025/06/04 07:50:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3718 2025/06/04 10:28:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5573,3 +5573,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.6.0 [pin 2025-06-04]
 	Updated shells/oh-my-posh to 26.2.2 [pin 2025-06-04]
 	Updated www/seaward to 1.1.0 [pin 2025-06-04]
+	Updated devel/py-ruff to 0.11.12 [adam 2025-06-04]
+	Updated net/py-junos-eznc to 2.7.4 [adam 2025-06-04]
