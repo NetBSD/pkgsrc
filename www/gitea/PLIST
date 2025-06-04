@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/06/09 22:55:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/06/04 01:26:11 khorben Exp $
 sbin/gitea
 share/examples/gitea/app.ini.sample
 share/gitea/options/gitignore/AL
@@ -971,7 +971,7 @@ share/gitea/public/.well-known/security.txt
 share/gitea/public/assets/css/asciinema-player.dd36a08e.css
 share/gitea/public/assets/css/code-frequency-graph.55afbe7d.css
 share/gitea/public/assets/css/colorpicker.ec78e358.css
-share/gitea/public/assets/css/contributors-graph.a63e16c9.css
+share/gitea/public/assets/css/contributors-graph.66f42f73.css
 share/gitea/public/assets/css/dropzone.5a752d14.css
 share/gitea/public/assets/css/index.css
 share/gitea/public/assets/css/katex.fb6ef55c.css
@@ -1416,19 +1416,19 @@ share/gitea/public/assets/img/wechatwork.png
 share/gitea/public/assets/js/-------.e4740076.js
 share/gitea/public/assets/js/-.2e273c97.js
 share/gitea/public/assets/js/asciinema-player.4c143977.js
-share/gitea/public/assets/js/citation-js-bibtex.3aa5a8dd.js
+share/gitea/public/assets/js/citation-js-bibtex.53a6f177.js
 share/gitea/public/assets/js/citation-js-core-citation-js-formats-citation-js-bibtex-citation-js-csl.f6949703.js
-share/gitea/public/assets/js/citation-js-csl.61ae8135.js
+share/gitea/public/assets/js/citation-js-csl.fb93f9bb.js
 share/gitea/public/assets/js/citation-js-formats.63828ec7.js
-share/gitea/public/assets/js/code-frequency-graph.50d197d3.js
+share/gitea/public/assets/js/code-frequency-graph.1d2f6f78.js
 share/gitea/public/assets/js/colorpicker.de7eb406.js
 share/gitea/public/assets/js/contributors-graph-code-frequency-graph-recent-commits-graph.eb309961.js
-share/gitea/public/assets/js/contributors-graph.454a1a6d.js
+share/gitea/public/assets/js/contributors-graph.f652150c.js
 share/gitea/public/assets/js/dropzone.6ba4ca5d.js
 share/gitea/public/assets/js/easymde.0bb18d64.js
 share/gitea/public/assets/js/eventsource.sharedworker.js
 share/gitea/public/assets/js/index.js
-share/gitea/public/assets/js/index.js.854dda92.map
+share/gitea/public/assets/js/index.js.1e029113.map
 share/gitea/public/assets/js/katex-.bd7ddd30.js
 share/gitea/public/assets/js/katex.6ad51582.js
 share/gitea/public/assets/js/mcaptcha-vanilla-glue.53a504bd.js
@@ -1529,7 +1529,8 @@ share/gitea/public/assets/js/node_modules_mermaid_dist_infoDiagram-bcd20f53_js.1
 share/gitea/public/assets/js/node_modules_mermaid_dist_stateDiagram-0ff1cf1a_js.b851cca1.js
 share/gitea/public/assets/js/node_modules_mermaid_dist_stateDiagram-v2-9a9d610d_js.51365024.js
 share/gitea/public/assets/js/pdfobject.5b03fd4e.js
-share/gitea/public/assets/js/recent-commits-graph.e061fe04.js
+share/gitea/public/assets/js/recent-commits-graph.32429bd5.js
+share/gitea/public/assets/js/scoped-access-token-selector.3fc6ff66.js
 share/gitea/public/assets/js/sortablejs.deb655b2.js
 share/gitea/public/assets/js/swagger.js
 share/gitea/public/assets/js/theme-gitea-auto.js
