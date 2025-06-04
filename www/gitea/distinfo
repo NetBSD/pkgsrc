@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2025/05/30 00:23:20 khorben Exp $
+$NetBSD: distinfo,v 1.40 2025/06/04 01:26:11 khorben Exp $
 
 BLAKE2s (cloud.google.com_go_compute_metadata_@v_v0.3.0.mod) = 1706675a0ef78a9bc5b0cbb098b25fee3ea4227605d45c19bf4c26672eb3760e
 SHA512 (cloud.google.com_go_compute_metadata_@v_v0.3.0.mod) = 766a1f8b02ab265e0b05c99b6fcb576cc0c4d95f1f7fb459cc08e63a54a6f7d07c2fec8b4caae3ab404d0f42fef48937d51d7258a6aef4cfb7e97cdb67ec110f
@@ -54,9 +54,9 @@ Size (git.sr.ht_~mariusor_go-xsd-duration_@v_v0.0.0-20220703122237-02e73435a078.
 BLAKE2s (git.sr.ht_~mariusor_go-xsd-duration_@v_v0.0.0-20220703122237-02e73435a078.zip) = bc284481601485c475de46f9890352b9b378b4ebd3ca8d74e6e557349c4a36b8
 SHA512 (git.sr.ht_~mariusor_go-xsd-duration_@v_v0.0.0-20220703122237-02e73435a078.zip) = 6905c8ccba875a4f1f1239c764fe31ada650fd652094dc00f2eb4972462be13f5e5beb3081a5f97f5e2db589c0fa5d6d8f0b94ed9fa5f064a1512a5c1bd67225
 Size (git.sr.ht_~mariusor_go-xsd-duration_@v_v0.0.0-20220703122237-02e73435a078.zip) = 5189 bytes
-BLAKE2s (gitea-1.22.0-frontend.tar.gz) = afac1542fa19ebb812afebf2f0f4dae2d52abcc313ed37e294196f02493655f5
-SHA512 (gitea-1.22.0-frontend.tar.gz) = 8b3649268e5b93ec3f10ab53afbca72f27527657dfd712003bcae6998a52763b2aab7c7469df6fefd2175bcc08e11058fc6ffc620b58f9df45bc66854efe64d2
-Size (gitea-1.22.0-frontend.tar.gz) = 7200770 bytes
+BLAKE2s (gitea-1.22.6-frontend.tar.gz) = 739b6eced872fef8ef9470d182461bcb7cad55058872577f9893105ffcb24762
+SHA512 (gitea-1.22.6-frontend.tar.gz) = 947e2692e015aff45587b53d6721d215e5448b1755d671686096c49943d840c235ce79ad494f38107b845e2f65cd9cfa131c23f9343bf007f3aaca0bc354e38f
+Size (gitea-1.22.6-frontend.tar.gz) = 7035985 bytes
 BLAKE2s (gitea-1.22.6.tar.gz) = 3678cd58bf2850117aa89efa7c8eb2dbd171be0b0b4d2ca212c78e485924b3d8
 SHA512 (gitea-1.22.6.tar.gz) = 362abd390a04f77b1305ce0c1d81fb8eb3561c6079017e04183f0c0ba89aea8f31ab295da02d93296cd200d0df435bff76cf429cab0f6cbbd5152c24750ab011
 Size (gitea-1.22.6.tar.gz) = 9613233 bytes
