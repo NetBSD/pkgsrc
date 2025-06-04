@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/03/02 14:51:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/06/04 14:11:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/cgi/escape.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/ext/cgi/escape/extconf.rb
 ${GEM_LIBDIR}/lib/cgi.rb
 ${GEM_LIBDIR}/lib/cgi/cookie.rb
 ${GEM_LIBDIR}/lib/cgi/core.rb
+${GEM_LIBDIR}/lib/cgi/escape.rb
 ${GEM_LIBDIR}/lib/cgi/escape.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/cgi/html.rb
 ${GEM_LIBDIR}/lib/cgi/session.rb
