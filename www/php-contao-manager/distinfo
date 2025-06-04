@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/05/14 14:39:04 taca Exp $
+$NetBSD: distinfo,v 1.10 2025/06/04 14:55:48 taca Exp $
 
-BLAKE2s (contao-manager/1.9.5/contao-manager.phar) = 80da056bbf680df63d6d2b3c51d39764c933b58240930a4c6fc683239c3af068
-SHA512 (contao-manager/1.9.5/contao-manager.phar) = b23f13332af518a933250e43e2b5bd48fdab45f83ddde3091403895d7a3d2066e28881ab1080dc58729757e4898a201d0db70a3a318951f1d3173cbe1393000e
-Size (contao-manager/1.9.5/contao-manager.phar) = 22942406 bytes
+BLAKE2s (contao-manager/1.10.2/contao-manager.phar) = d6bbe83706e520d935dd1ee3a0103910c107bc770bb4687f18eb92b2dac3a657
+SHA512 (contao-manager/1.10.2/contao-manager.phar) = 2182a52c839b9d58c28b6cc9ace783ea33781be4b6981c1bb0a98ae09d514bb32d62e26ca290dc1d35e604c3d77b02952ea9d402355cb5389457e08474926611
+Size (contao-manager/1.10.2/contao-manager.phar) = 23034400 bytes
