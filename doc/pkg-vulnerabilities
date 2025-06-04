@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.401 2025/06/04 21:06:33 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.402 2025/06/04 21:07:46 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26318,3 +26318,4 @@ curl<8.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5399
 py{39,310,311,312,313}-django>=4<4.2.22	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
 py{39,310,311,312,313}-django>=5.1<5.1.10	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
 py{39,310,311,312,313}-django>=5.2<5.2.2	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
+wireshark<4.4.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5601
