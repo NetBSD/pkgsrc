@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3723 2025/06/04 13:38:10 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3724 2025/06/04 13:39:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-networkx to 3.5 [adam 2025-06-04]
 	Updated benchmarks/ruby-benchmark to 0.4.1 [taca 2025-06-04]
 	Updated databases/ruby-sequel to 5.93.0 [taca 2025-06-04]
+	Updated devel/ruby-curses to 1.5.1 [taca 2025-06-04]
