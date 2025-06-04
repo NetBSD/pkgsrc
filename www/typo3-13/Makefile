@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/08 04:07:19 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/04 14:51:34 taca Exp $
 
 DISTNAME=	typo3_src-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
@@ -17,7 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbst
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 
-PHP_VERSIONS_ACCEPTED=	82 83 # 84
+PHP_VERSIONS_ACCEPTED=	82 83 84
 
 REPLACE_PHP+=	typo3/sysext/core/bin/typo3
 REPLACE_PHP+=	vendor/nikic/php-parser/bin/php-parse
@@ -25,7 +25,7 @@ REPLACE_PHP+=	vendor/symfony/yaml/Resources/bin/yaml-lint
 REPLACE_PHP+=	vendor/typo3/cms-cli/typo3
 REPLACE_PHP+=	vendor/typo3fluid/fluid/bin/fluid
 
-VER=		13.4.4
+VER=		13.4.13
 
 NO_BUILD=	YES
 TYPO3DIR=	share/typo3
@@ -41,13 +41,13 @@ CONF_FILES=		share/examples/typo3/typo3.conf \
 OWN_DIRS_PERMS+=	${PREFIX}/${TYPO3DIR} \
 			${APACHE_USER} ${APACHE_GROUP} 0750
 
-SUBST_CLASSES+=         conf
-SUBST_STAGE.conf=       pre-install
-SUBST_FILES.conf=       typo3.conf
-SUBST_VARS.conf=        TYPO3DIR PREFIX
-SUBST_MESSAGE.conf=     Fixing configuration files.
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-install
+SUBST_FILES.conf=	typo3.conf
+SUBST_VARS.conf=	TYPO3DIR PREFIX
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
-INSTALLATION_DIRS+=	share/examples/typo3 
+INSTALLATION_DIRS+=	share/examples/typo3
 
 pre-configure:
 	${CP} ${FILESDIR}/typo3.conf ${WRKSRC}
