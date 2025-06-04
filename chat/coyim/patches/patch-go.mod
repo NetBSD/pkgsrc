@@ -1,11 +1,11 @@
-$NetBSD: patch-go.mod,v 1.1 2024/05/14 22:38:57 wiz Exp $
+$NetBSD: patch-go.mod,v 1.2 2025/06/04 20:29:52 fox Exp $
 
 Use patched copy that supports NetBSD.
 
---- go.mod.orig	2024-05-14 22:00:14.425839316 +0000
+--- go.mod.orig	2025-06-04 20:16:13.809430896 +0000
 +++ go.mod
-@@ -39,3 +39,5 @@ require (
- 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
+@@ -38,3 +38,5 @@ require (
+ 	golang.org/x/sys v0.21.0 // indirect
  	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
  )
 +

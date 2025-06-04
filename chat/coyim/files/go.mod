@@ -1,6 +1,6 @@
 module github.com/coyim/coyim
 
-go 1.20
+go 1.24
 
 require (
 	github.com/TheCreeper/go-notify v0.0.0-20160203001056-b5cd14745a5c
@@ -18,9 +18,9 @@ require (
 	github.com/sirupsen/logrus v1.6.0
 	github.com/stretchr/testify v1.7.0
 	github.com/xdg/stringprep v1.0.0
-	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37
-	golang.org/x/net v0.0.0-20200520182314-0ba52f642ac2
-	golang.org/x/text v0.3.2
+	golang.org/x/crypto v0.24.0
+	golang.org/x/net v0.26.0
+	golang.org/x/text v0.16.0
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f
 	howett.net/plist v0.0.0-20200419221736-3b63eb3a43b5
 )
@@ -28,14 +28,15 @@ require (
 require (
 	github.com/awnumar/memcall v0.1.2 // indirect
 	github.com/coyim/constbn v0.0.0-20200604221525-016aa3f280ca // indirect
-	github.com/coyim/gotk3extra v0.0.0-20220706184944-5697a72a84a2 // indirect
+	github.com/coyim/gotk3extra v0.0.0-20230124185536-d67d716b99c8 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
-	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
+	golang.org/x/sys v0.21.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
+
+replace github.com/awnumar/memcall => ../github.com/awnumar/memcall@v0.1.2
