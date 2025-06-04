@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/09 14:51:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/04 14:15:56 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -345,6 +345,9 @@ lib/python${PY_VER_SUFFIX}/_pyrepl/_minimal_curses.pyo
 lib/python${PY_VER_SUFFIX}/_pyrepl/_threading_handler.py
 lib/python${PY_VER_SUFFIX}/_pyrepl/_threading_handler.pyc
 lib/python${PY_VER_SUFFIX}/_pyrepl/_threading_handler.pyo
+lib/python${PY_VER_SUFFIX}/_pyrepl/base_eventqueue.py
+lib/python${PY_VER_SUFFIX}/_pyrepl/base_eventqueue.pyc
+lib/python${PY_VER_SUFFIX}/_pyrepl/base_eventqueue.pyo
 lib/python${PY_VER_SUFFIX}/_pyrepl/commands.py
 lib/python${PY_VER_SUFFIX}/_pyrepl/commands.pyc
 lib/python${PY_VER_SUFFIX}/_pyrepl/commands.pyo
@@ -403,6 +406,9 @@ lib/python${PY_VER_SUFFIX}/_pyrepl/utils.pyo
 lib/python${PY_VER_SUFFIX}/_pyrepl/windows_console.py
 lib/python${PY_VER_SUFFIX}/_pyrepl/windows_console.pyc
 lib/python${PY_VER_SUFFIX}/_pyrepl/windows_console.pyo
+lib/python${PY_VER_SUFFIX}/_pyrepl/windows_eventqueue.py
+lib/python${PY_VER_SUFFIX}/_pyrepl/windows_eventqueue.pyc
+lib/python${PY_VER_SUFFIX}/_pyrepl/windows_eventqueue.pyo
 lib/python${PY_VER_SUFFIX}/_sitebuiltins.py
 lib/python${PY_VER_SUFFIX}/_sitebuiltins.pyc
 lib/python${PY_VER_SUFFIX}/_sitebuiltins.pyo
@@ -1153,7 +1159,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-25.1.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -3508,6 +3514,9 @@ lib/python${PY_VER_SUFFIX}/test/test_doctest/doctest_lineno.pyo
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest.py
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest.pyc
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest.pyo
+lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_errors.py
+lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_errors.pyc
+lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_errors.pyo
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_no_docstrings.py
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_no_docstrings.pyc
 lib/python${PY_VER_SUFFIX}/test/test_doctest/sample_doctest_no_docstrings.pyo
@@ -3527,7 +3536,9 @@ lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest2.pyo
 lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest2.txt
 lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest3.txt
 lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest4.txt
+lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest_errors.txt
 lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest_skip.txt
+lib/python${PY_VER_SUFFIX}/test/test_doctest/test_doctest_skip2.txt
 lib/python${PY_VER_SUFFIX}/test/test_docxmlrpc.py
 lib/python${PY_VER_SUFFIX}/test/test_docxmlrpc.pyc
 lib/python${PY_VER_SUFFIX}/test/test_docxmlrpc.pyo
@@ -4778,6 +4789,9 @@ lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyo
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_eventqueue.py
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_eventqueue.pyc
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_eventqueue.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_input.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_input.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_input.pyo
@@ -4796,9 +4810,6 @@ lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_reader.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_console.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_console.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_console.pyo
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_eventqueue.py
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_eventqueue.pyc
-lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_unix_eventqueue.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_utils.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_utils.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/test_utils.pyo
@@ -5851,6 +5862,7 @@ lib/python${PY_VER_SUFFIX}/tomllib/_re.pyo
 lib/python${PY_VER_SUFFIX}/tomllib/_types.py
 lib/python${PY_VER_SUFFIX}/tomllib/_types.pyc
 lib/python${PY_VER_SUFFIX}/tomllib/_types.pyo
+lib/python${PY_VER_SUFFIX}/tomllib/mypy.ini
 lib/python${PY_VER_SUFFIX}/trace.py
 lib/python${PY_VER_SUFFIX}/trace.pyc
 lib/python${PY_VER_SUFFIX}/trace.pyo
