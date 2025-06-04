@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3736 2025/06/04 14:17:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3737 2025/06/04 14:21:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py311-html-docs to 3.11.13 [adam 2025-06-04]
 	Updated lang/py312-html-docs to 3.12.11 [adam 2025-06-04]
 	Updated lang/py313-html-docs to 3.13.4 [adam 2025-06-04]
+	Updated devel/ruby-google-protobuf to 4.31.1 [taca 2025-06-04]
