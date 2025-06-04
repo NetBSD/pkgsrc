@@ -1,0 +1,17 @@
+Django Q2 is a fork of Django Q. Big thanks to Ilan Steemers for starting
+this project. Unfortunately, development has stalled since June 2021.
+Django Q2 is the new updated version of Django Q, with dependencies updates,
+docs updates and several bug fixes.
+
+Features
+* Multiprocessing worker pool
+* Asynchronous tasks
+* Scheduled, cron and repeated tasks
+* Signed and compressed packages
+* Failure and success database or cache
+* Result hooks, groups and chains
+* Django Admin integration
+* PaaS compatible with multiple instances
+* Multi cluster monitor
+* Redis, IronMQ, SQS, MongoDB or ORM
+* Rollbar and Sentry support
