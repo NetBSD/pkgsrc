@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/11/01 19:41:46 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/06/04 14:20:50 adam Exp $
 
-BLAKE2s (uritemplate-4.1.1.tar.gz) = 9785f0fdbbb95961dacba8ef99a1f64cfc236625c678c3d0a5ffad7975292068
-SHA512 (uritemplate-4.1.1.tar.gz) = 7682c7dcd9c8d4428b047e3adbc283b78f755face4d8dd1b0cd11df9583bd0435543640ba79229d436aeecad2b5b29684befdccc84ba71f72769ee130cb6576a
-Size (uritemplate-4.1.1.tar.gz) = 273898 bytes
+BLAKE2s (uritemplate-4.2.0.tar.gz) = 97ba8588bb3106277194d9a8e9c658faae2b8cff4a8edd42481ff8f99025ff5a
+SHA512 (uritemplate-4.2.0.tar.gz) = 1c0bda6238f651aca6126ad2e34db4af62b81666a22171f4082293804976b654cc83506d3209cc09866e682a29f8223301c62c8db420f12c38af4a23b9a1d4fe
+Size (uritemplate-4.2.0.tar.gz) = 33267 bytes

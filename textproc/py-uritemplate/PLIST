@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/22 20:45:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/04 14:20:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,6 +13,7 @@ ${PYSITELIB}/uritemplate/api.pyo
 ${PYSITELIB}/uritemplate/orderedset.py
 ${PYSITELIB}/uritemplate/orderedset.pyc
 ${PYSITELIB}/uritemplate/orderedset.pyo
+${PYSITELIB}/uritemplate/py.typed
 ${PYSITELIB}/uritemplate/template.py
 ${PYSITELIB}/uritemplate/template.pyc
 ${PYSITELIB}/uritemplate/template.pyo
