@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3738 2025/06/04 14:23:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3739 2025/06/04 14:43:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5608,3 +5608,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-google-protobuf to 4.31.1 [taca 2025-06-04]
 	Updated textproc/py-uritemplate to 4.2.0 [adam 2025-06-04]
 	Updated www/py-uwsgi to 2.0.30 [adam 2025-06-04]
+	Updated net/samba4 to 4.21.6 [taca 2025-06-04]
