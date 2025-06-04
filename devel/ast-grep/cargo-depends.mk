@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.54 2025/05/30 07:34:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.55 2025/06/04 07:45:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -26,7 +26,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	clap-4.5.39
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.39
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.51
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.52
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.32
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.12.0
@@ -159,7 +159,7 @@ CARGO_CRATE_DEPENDS+=	target-lexicon-0.13.2
 CARGO_CRATE_DEPENDS+=	target-triple-0.1.4
 CARGO_CRATE_DEPENDS+=	tempfile-3.20.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
-CARGO_CRATE_DEPENDS+=	termimad-0.32.0
+CARGO_CRATE_DEPENDS+=	termimad-0.33.0
 CARGO_CRATE_DEPENDS+=	terminal-light-1.8.0
 CARGO_CRATE_DEPENDS+=	termtree-0.5.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
@@ -202,7 +202,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-rust-0.24.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-scala-0.23.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.23.2
-CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.1
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.18
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.12.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
