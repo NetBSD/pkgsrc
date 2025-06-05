@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3746 2025/06/05 10:59:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3747 2025/06/05 13:54:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5618,3 +5618,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-contao-manager to 1.10.3 [taca 2025-06-05]
 	Updated net/wireshark to 4.4.7 [adam 2025-06-05]
 	Updated math/octave to 10.2.0 [adam 2025-06-05]
+	Updated www/php-concrete-cms to 9.4.1 [taca 2025-06-05]
