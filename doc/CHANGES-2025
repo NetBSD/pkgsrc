@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3742 2025/06/04 20:26:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3743 2025/06/05 00:39:09 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/typo3-13 to 13.4.13 [taca 2025-06-04]
 	Updated www/php-contao-manager to 1.10.2 [taca 2025-06-04]
 	Updated graphics/p5-Image-ExifTool to 13.30 [wiz 2025-06-04]
+	Updated audio/py-music21 to 9.7.0 [gutteridge 2025-06-05]
