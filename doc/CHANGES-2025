@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3753 2025/06/05 15:00:58 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3754 2025/06/05 15:03:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5626,3 +5626,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-tortoise-orm to 0.25.1 [adam 2025-06-05]
 	Updated www/ruby-aws-partitions to 1.1111.0 [taca 2025-06-05]
 	Updated net/kea to 2.6.3 [taca 2025-06-05]
+	Updated security/php-gnupg to 1.5.3 [taca 2025-06-05]
