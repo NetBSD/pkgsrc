@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3750 2025/06/05 14:48:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3751 2025/06/05 14:49:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5622,3 +5622,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/ocaml-ocplib-simplex version 0.5.1 [dkazankov 2025-06-05]
 	Updated www/ruby-rack to 3.1.16 [taca 2025-06-05]
 	Updated www/ruby-rack2 to 2.2.17 [taca 2025-06-05]
+	Updated databases/py-pypika-tortoise to 0.6.1 [adam 2025-06-05]
+	Updated databases/py-tortoise-orm to 0.25.1 [adam 2025-06-05]
