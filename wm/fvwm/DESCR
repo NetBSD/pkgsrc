@@ -9,3 +9,6 @@ feature (based on X itself) to fvwm and its modules.
 
 With this package, you may use fonts of your own language, display
 characters in everywhere in fvwm, and have fun ;-)
+
+Note this package is the now EOL 2.x version. It has been supplanted
+upstream by what is presently packaged as wm/fvwm3.
