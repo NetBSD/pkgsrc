@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.402 2025/06/04 21:07:46 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.403 2025/06/05 14:22:02 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26319,3 +26319,12 @@ py{39,310,311,312,313}-django>=4<4.2.22	log-injection	https://nvd.nist.gov/vuln/
 py{39,310,311,312,313}-django>=5.1<5.1.10	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
 py{39,310,311,312,313}-django>=5.2<5.2.2	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
 wireshark<4.4.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5601
+ruby{31,32,33,34}-rack>=3.1.0<3.1.16		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49007
+aerc-[0-9]*			directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-49466
+qt6-qtimageformats<6.8.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5683
+radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5641
+radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5642
+radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5643
+radare2-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5644
+radare2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5645
+radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5646
