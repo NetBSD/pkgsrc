@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/05/25 11:32:27 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/05 06:36:39 wiz Exp $
 
 DISTNAME=	appstream-1.0.5
 CATEGORIES=	devel
@@ -17,6 +17,8 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool msgfmt pkg-config
+
+USE_CC_FEATURES+=	c17
 
 MESON_ARGS+=	-Dapidocs=false
 MESON_ARGS+=	-Dsystemd=false
