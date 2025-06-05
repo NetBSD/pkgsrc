@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 21:37:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/05 17:37:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -38,9 +38,6 @@ ${PYSITELIB}/typeguard/_suppression.pyo
 ${PYSITELIB}/typeguard/_transformer.py
 ${PYSITELIB}/typeguard/_transformer.pyc
 ${PYSITELIB}/typeguard/_transformer.pyo
-${PYSITELIB}/typeguard/_union_transformer.py
-${PYSITELIB}/typeguard/_union_transformer.pyc
-${PYSITELIB}/typeguard/_union_transformer.pyo
 ${PYSITELIB}/typeguard/_utils.py
 ${PYSITELIB}/typeguard/_utils.pyc
 ${PYSITELIB}/typeguard/_utils.pyo

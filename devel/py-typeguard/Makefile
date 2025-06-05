@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/04/12 21:37:06 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/06/05 17:37:15 adam Exp $
 
-DISTNAME=	typeguard-4.4.2
+DISTNAME=	typeguard-4.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
