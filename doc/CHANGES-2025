@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3744 2025/06/05 04:43:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3745 2025/06/05 08:02:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5615,3 +5615,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-music21 to 9.7.0 [gutteridge 2025-06-05]
 	Updated www/curl to 8.14.1 [adam 2025-06-05]
 	Updated www/libcurl-gnutls to 8.14.1 [adam 2025-06-05]
+	Updated www/php-contao-manager to 1.10.3 [taca 2025-06-05]
