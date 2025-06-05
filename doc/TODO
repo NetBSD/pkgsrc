@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25853 2025/06/04 10:28:24 adam Exp $
+$NetBSD: TODO,v 1.25854 2025/06/05 06:59:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -457,6 +457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o assimp-6.0.0
 	o asymptote-3.01
 	o audacity-3.5
 	o authelia-4.28.0
@@ -540,6 +541,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o csvkit-1.4.0
 	o ctemplate-2.4
 	o cups-filters-2.0.0
+	o curl-8.14.1
 	o cvs2svn-2.5.0
 	o cvs-fast-export-1.56
 	o cxref-1.6e
@@ -582,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o enchant2-2.8.6
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
@@ -758,6 +761,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.22.2
 	o html2wml-0.4.11
+	o hwdata-0.395
 	o hwloc-2.11
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -791,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
+	o jack-1.9.22
 	o java-db3-3.87
 	o jcabc2ps-20181112
 	o jchkmail-2.6.2
@@ -876,6 +881,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
+	o lowdown-2.0.2
 	o lq-sp-1.3.4.14
 	o lsh-2.1
 	o lua-cov-0.15.0
@@ -962,7 +968,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-30.2
 	o ocaml-5.2.1 [wip]
 	o ocaml-cppo-1.6.9
-	o ocaml-dune-3.18.1
+	o ocaml-dune-3.19.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -980,6 +986,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opal-3.16.2
 	o openblas-0.3.29
 	o opencl-3.0.12
+	o opencolorio-2.4.2
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
@@ -1095,8 +1102,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
-	o prometheus-3.4.0
+	o prometheus-3.4.1
 	o protobuf-30.2 [wait for v30 support in net/grpc]
+	o protobuf-31.1
 	o psmisc-22.20
 	o pspp-1.4.1
 	o ptlib-2.16.2
@@ -1108,6 +1116,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-cachetools-6.0.0
 	o py-cassa-1.11.0
+	o py-cattrs-25.1.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
@@ -1120,7 +1129,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
-	o py-protobuf-6.31.0
+	o py-protobuf-6.31.1
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
@@ -1153,6 +1162,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restic-rest-server-0.14.0
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
@@ -1241,6 +1251,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o syft-0.68.1
 	o sympa-6.2.72
 	o syncstorage-0.18.3
+	o syncstorage-rs-0.18.3
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1289,6 +1300,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.25.5
 	o tree-sitter-c-0.24.1
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1308,7 +1320,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
-	o uv-0.7.8
+	o uv-0.7.9
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
@@ -1386,6 +1398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yahttp-0.2.1
 	o yarn-3.2.4
 	o yaz-5.30.3
+	o yazi-25.5.31
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
