@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3757 2025/06/05 18:10:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3758 2025/06/05 19:00:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5633,3 +5633,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-typeguard to 4.4.3 [adam 2025-06-05]
 	Updated www/py-mezzanine to 6.1.1 [adam 2025-06-05]
 	Updated mail/py-checkdmarc to 5.8.6 [adam 2025-06-05]
+	Updated devel/p5-File-Find-Rule to 0.34nb10 [wiz 2025-06-05]
