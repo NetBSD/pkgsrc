@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3751 2025/06/05 14:49:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3752 2025/06/05 14:49:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5624,3 +5624,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack2 to 2.2.17 [taca 2025-06-05]
 	Updated databases/py-pypika-tortoise to 0.6.1 [adam 2025-06-05]
 	Updated databases/py-tortoise-orm to 0.25.1 [adam 2025-06-05]
+	Updated www/ruby-aws-partitions to 1.1111.0 [taca 2025-06-05]
