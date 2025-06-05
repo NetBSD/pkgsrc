@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/05/27 08:57:04 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/06/05 14:46:22 adam Exp $
 
-DISTNAME=	pypika_tortoise-0.6.0
+DISTNAME=	pypika_tortoise-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypika-tortoise/}
