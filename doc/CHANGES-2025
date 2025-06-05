@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3749 2025/06/05 14:45:06 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3750 2025/06/05 14:48:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5621,3 +5621,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-concrete-cms to 9.4.1 [taca 2025-06-05]
 	Added math/ocaml-ocplib-simplex version 0.5.1 [dkazankov 2025-06-05]
 	Updated www/ruby-rack to 3.1.16 [taca 2025-06-05]
+	Updated www/ruby-rack2 to 2.2.17 [taca 2025-06-05]
