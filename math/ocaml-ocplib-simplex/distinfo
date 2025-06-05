@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/06/05 14:42:22 dkazankov Exp $
+
+BLAKE2s (ocplib-simplex-0.5.1.tar.gz) = 908f424820f870b7749db985c2a3bd0a02319cb08714b92ab5a053ea3a1a0a65
+SHA512 (ocplib-simplex-0.5.1.tar.gz) = 652535875ce4f21a46381847539dbc7aba80e7d374856034f8526413f6705b84cc9758a8433a67d852e864080b4e82a79834e493a7665541680aefbd1a8da3fc
+Size (ocplib-simplex-0.5.1.tar.gz) = 34208 bytes
