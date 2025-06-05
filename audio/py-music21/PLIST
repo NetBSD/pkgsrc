@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/11/07 22:49:07 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/06/05 00:38:57 gutteridge Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/WHEEL
@@ -468,6 +468,9 @@ ${PYSITELIB}/music21/meter/tools.pyo
 ${PYSITELIB}/music21/midi/__init__.py
 ${PYSITELIB}/music21/midi/__init__.pyc
 ${PYSITELIB}/music21/midi/__init__.pyo
+${PYSITELIB}/music21/midi/base.py
+${PYSITELIB}/music21/midi/base.pyc
+${PYSITELIB}/music21/midi/base.pyo
 ${PYSITELIB}/music21/midi/percussion.py
 ${PYSITELIB}/music21/midi/percussion.pyc
 ${PYSITELIB}/music21/midi/percussion.pyo
@@ -491,6 +494,13 @@ ${PYSITELIB}/music21/midi/testPrimitive/test14.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test15.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test16.mid
 ${PYSITELIB}/music21/midi/testPrimitive/test17.mid
+${PYSITELIB}/music21/midi/testPrimitive/test18.mid
+${PYSITELIB}/music21/midi/testPrimitive/test19.mid
+${PYSITELIB}/music21/midi/testPrimitive/test20.mid
+${PYSITELIB}/music21/midi/testPrimitive/test21.mid
+${PYSITELIB}/music21/midi/tests.py
+${PYSITELIB}/music21/midi/tests.pyc
+${PYSITELIB}/music21/midi/tests.pyo
 ${PYSITELIB}/music21/midi/translate.py
 ${PYSITELIB}/music21/midi/translate.pyc
 ${PYSITELIB}/music21/midi/translate.pyo
