@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/11/13 14:37:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/06/05 15:00:44 taca Exp $
 include/kea/asiodns/asiodns_messages.h
 include/kea/asiodns/io_fetch.h
 include/kea/asiodns/logger.h
@@ -59,6 +59,7 @@ include/kea/config/config_log.h
 include/kea/config/config_messages.h
 include/kea/config/hooked_command_mgr.h
 include/kea/config/timeouts.h
+include/kea/config/unix_command_config.h
 include/kea/config_backend/base_config_backend.h
 include/kea/config_backend/base_config_backend_mgr.h
 include/kea/config_backend/base_config_backend_pool.h
@@ -810,7 +811,8 @@ share/kea/scripts/mysql/upgrade_018_to_019.sh
 share/kea/scripts/mysql/upgrade_019_to_020.sh
 share/kea/scripts/mysql/upgrade_020_to_021.sh
 share/kea/scripts/mysql/upgrade_021_to_022.sh
-share/kea/scripts/mysql/upgrade_022_to_022.1.sh
+share/kea/scripts/mysql/upgrade_022.0_to_022.1.sh
+share/kea/scripts/mysql/upgrade_022.1_to_022.2.sh
 share/kea/scripts/mysql/wipe_data.sh
 share/kea/scripts/pgsql/dhcpdb_create.pgsql
 share/kea/scripts/pgsql/dhcpdb_drop.pgsql
@@ -841,5 +843,6 @@ share/kea/scripts/pgsql/upgrade_018_to_019.sh
 share/kea/scripts/pgsql/upgrade_019_to_020.sh
 share/kea/scripts/pgsql/upgrade_020_to_021.sh
 share/kea/scripts/pgsql/upgrade_021_to_022.sh
-share/kea/scripts/pgsql/upgrade_022_to_022.1.sh
+share/kea/scripts/pgsql/upgrade_022.0_to_022.1.sh
+share/kea/scripts/pgsql/upgrade_022.1_to_022.2.sh
 share/kea/scripts/pgsql/wipe_data.sh
