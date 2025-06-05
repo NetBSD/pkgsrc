@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/04/15 04:48:16 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/06/05 18:08:14 adam Exp $
 
-BLAKE2s (mezzanine-6.1.0.tar.gz) = 9564d0ef14bec7d305b1787b1eff80c43e6da22fb3fc85c91d168fd02ce9ccb8
-SHA512 (mezzanine-6.1.0.tar.gz) = e5a2fdf0b18d7484508825961ea84920f897b3c2ff288295c47ad692f852ca399c3b0e0ca8dd09aaade99d4b7123f7d780238b9acb9aec4ca669addd7566f115
-Size (mezzanine-6.1.0.tar.gz) = 6263875 bytes
+BLAKE2s (mezzanine-6.1.1.tar.gz) = d72aa42a78ae625a0e204a1f038ba6f6cf084850d0c16902b2d5625eb4ecd155
+SHA512 (mezzanine-6.1.1.tar.gz) = e44a89a76f900889cd6767ea69742debbc306fa8cb6e7cb0073a5cf37238a3cbc5225e5638447c14c0c7a9b82bdd473b15a23011f52814176824a1113005b5cf
+Size (mezzanine-6.1.1.tar.gz) = 6264061 bytes
