@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/04/15 04:48:16 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/06/05 18:08:14 adam Exp $
 
-DISTNAME=	mezzanine-6.1.0
+DISTNAME=	mezzanine-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
