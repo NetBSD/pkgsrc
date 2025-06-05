@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2025/04/24 14:16:00 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/06/05 00:25:06 gutteridge Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	16
@@ -8,7 +8,7 @@ GITHUB_RELEASE=	${FVWM_VER}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fvwm.org/
-COMMENT=	Newer version of X11 Virtual window manager
+COMMENT=	Multiple large virtual desktop window manager (legacy version 2)
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* fvwm3-[0-9]* metisse-[0-9]* xpmroot-[0-9]*
