@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2025/06/02 15:03:18 gdt Exp $
+$NetBSD: distinfo,v 1.29 2025/06/06 13:22:51 gdt Exp $
 
-BLAKE2s (proj-9.6.1.tar.gz) = 6c296ede80f7d704a4cd96ccc0cf747cf7de488d56ee439ad993318a0f287c72
-SHA512 (proj-9.6.1.tar.gz) = 64a61b571c51e1919627b0493fbf5f88b9f4990ca08a314670b15cb05aeecaf243b9334105e22a7437c87a1ead6676b5be1521823b730af1d62d31e3b9de9df3
-Size (proj-9.6.1.tar.gz) = 5852300 bytes
+BLAKE2s (proj-9.6.2.tar.gz) = 364c54c5ff51db558399f9dfa8855a6700902f85ef6c83a920739d40b0394c12
+SHA512 (proj-9.6.2.tar.gz) = f868c27f07544ac5b998f8f10d25033438f68dbce9b8eebe39fe72f8df02cd660eb54e706eac31674829d0a5fdb0aeb0358355bee187d92afc1be9f33bc42416
+Size (proj-9.6.2.tar.gz) = 6394614 bytes
