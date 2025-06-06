@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/05/25 18:18:07 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/06 16:34:18 vins Exp $
 
 DISTNAME=	worker-5.2.1
 CATEGORIES=	x11 sysutils
@@ -11,7 +11,7 @@ COMMENT=	Orthodox file manager for the X Window System
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20 # designated initializers
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config bash:run
