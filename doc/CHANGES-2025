@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3772 2025/06/06 21:20:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3773 2025/06/06 21:25:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5654,3 +5654,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mariadb1011-embedded to 10.11.13 [nia 2025-06-06]
 	Updated databases/mariadb1011-server to 10.11.13 [nia 2025-06-06]
 	Updated devel/jj to 0.30.0 [wiz 2025-06-06]
+	Updated sysutils/hwdata to 0.396 [wiz 2025-06-06]
