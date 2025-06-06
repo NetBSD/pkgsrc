@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/05/26 20:38:47 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/06/06 23:10:26 wiz Exp $
 bin/lowdown
 bin/lowdown-diff
 include/lowdown.h
@@ -39,4 +39,9 @@ man/man3/lowdown_term_new.3
 man/man3/lowdown_term_rndr.3
 man/man3/lowdown_tree_rndr.3
 man/man5/lowdown.5
+share/lowdown/html/default.html
+share/lowdown/html/sblg.xml
+share/lowdown/latex/default.latex
+share/lowdown/man/default.man
+share/lowdown/ms/default.ms
 share/lowdown/odt/styles.xml
