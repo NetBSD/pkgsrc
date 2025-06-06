@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3768 2025/06/06 19:42:15 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3769 2025/06/06 19:43:58 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5646,3 +5646,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/palemoon to 33.7.2 [nia 2025-06-06]
 	Updated databases/mariadb105-client to 10.5.29nb2 [nia 2025-06-06]
 	Updated databases/mariadb105-server to 10.5.29 [nia 2025-06-06]
+	Updated databases/mariadb106-client to 10.6.22nb2 [nia 2025-06-06]
+	Updated databases/mariadb106-server to 10.6.22 [nia 2025-06-06]
