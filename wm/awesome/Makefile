@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2025/04/24 14:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2025/06/06 15:49:35 gutteridge Exp $
 
 DISTNAME=	awesome-4.3
 PKGREVISION=	18
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	awesome<3.0
 
 USE_TOOLS+=	bash pkg-config
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 REPLACE_BASH+=	utils/awesome-client
 
@@ -54,6 +53,8 @@ SUBST_SED.lua=		-e 's|COMMAND lua|COMMAND ${LUA_INTERPRETER}|g'
 
 pre-configure:
 	${RUN} mkdir -p ${WRKSRC}/build
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
