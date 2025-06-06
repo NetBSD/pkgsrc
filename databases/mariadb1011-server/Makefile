@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/05/09 14:56:56 nia Exp $
+# $NetBSD: Makefile,v 1.27 2025/06/06 20:48:34 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	3
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (server)
 
 CONFLICTS=	mysql-server-[0-9]*
@@ -47,7 +46,7 @@ BUILD_DEFS+=		MARIADB_DATADIR
 OWN_DIRS_PERMS+=	${MARIADB_DATADIR} ${MARIADB_USER} ${MARIADB_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/log/mariadb ${MARIADB_USER} ${MARIADB_GROUP} 0700
 
-USE_TOOLS=		bash:run perl:run
+USE_TOOLS+=		bash:run perl:run
 REPLACE_BASH+=		scripts/wsrep_sst_*.sh
 REPLACE_BASH+=		scripts/mariadb-service-convert
 
