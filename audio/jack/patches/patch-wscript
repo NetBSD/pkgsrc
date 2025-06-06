@@ -1,11 +1,11 @@
-$NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
+$NetBSD: patch-wscript,v 1.6 2025/06/06 23:03:39 wiz Exp $
 
 - Add NetBSD support.
 - Ensure man pages are installed on all Unixes.
 
---- wscript.orig	2022-04-15 19:14:06.000000000 +0000
+--- wscript.orig	2023-02-02 11:04:10.000000000 +0000
 +++ wscript
-@@ -234,6 +234,7 @@ def detect_platform(conf):
+@@ -216,6 +216,7 @@ def detect_platform(conf):
          ('IS_LINUX',   'Linux',   ['gnu0', 'gnukfreebsd', 'linux', 'posix']),
          ('IS_FREEBSD', 'FreeBSD', ['freebsd']),
          ('IS_MACOSX',  'MacOS X', ['darwin']),
@@ -13,7 +13,7 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
          ('IS_SUN',     'SunOS',   ['sunos']),
          ('IS_WINDOWS', 'Windows', ['cygwin', 'msys', 'win32'])
      ]
-@@ -276,6 +277,11 @@ def configure(conf):
+@@ -258,6 +259,11 @@ def configure(conf):
          conf.check(lib='execinfo', uselib='EXECINFO', define_name='EXECINFO')
          conf.check_cfg(package='libsysinfo', args='--cflags --libs')
  
@@ -25,7 +25,7 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
      if not conf.env['IS_MACOSX']:
          conf.env.append_unique('LDFLAGS', '-Wl,--no-undefined')
      else:
-@@ -568,6 +574,9 @@ def obj_add_includes(bld, obj):
+@@ -546,6 +552,9 @@ def obj_add_includes(bld, obj):
      if bld.env['IS_SUN']:
          obj.includes += ['posix', 'solaris']
  
@@ -35,7 +35,7 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
      if bld.env['IS_WINDOWS']:
          obj.includes += ['windows']
  
-@@ -624,6 +633,10 @@ def create_driver_obj(bld, **kw):
+@@ -602,6 +611,10 @@ def create_driver_obj(bld, **kw):
      else:
          driver.env['cxxshlib_PATTERN'] = 'jack_%s.so'
  
@@ -46,7 +46,7 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
      obj_add_includes(bld, driver)
  
      return driver
-@@ -726,6 +739,11 @@ def build_drivers(bld):
+@@ -704,6 +717,11 @@ def build_drivers(bld):
          'windows/portaudio/JackPortAudioDriver.cpp',
      ]
  
@@ -58,7 +58,7 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
      winmme_src = [
          'windows/winmme/JackWinMMEDriver.cpp',
          'windows/winmme/JackWinMMEInputPort.cpp',
-@@ -834,6 +852,11 @@ def build_drivers(bld):
+@@ -812,6 +830,11 @@ def build_drivers(bld):
              target='oss',
              source=oss_src)
  
@@ -70,15 +70,13 @@ $NetBSD: patch-wscript,v 1.5 2023/01/07 21:20:19 triaxx Exp $
  
  def build(bld):
      if not bld.variant and bld.env['BUILD_WITH_32_64']:
-@@ -858,9 +881,10 @@ def build(bld):
-         bld.recurse('tools')
+@@ -831,8 +854,8 @@ def build(bld):
  
+     build_drivers(bld)
+ 
++    bld.recurse('man')
      if bld.env['IS_LINUX'] or bld.env['IS_FREEBSD']:
 -        bld.recurse('man')
          bld.recurse('systemd')
-     if not bld.env['IS_WINDOWS'] and bld.env['BUILD_JACK_EXAMPLE_TOOLS']:
-+        bld.recurse('man')
-+    if not bld.env['IS_WINDOWS'] and bld.env['BUILD_JACK_EXAMPLE_TOOLS']:
+     if not bld.env['IS_WINDOWS'] and bld.env['BUILD_TESTS']:
          bld.recurse('tests')
-     if bld.env['BUILD_JACKDBUS']:
-         bld.recurse('dbus')
