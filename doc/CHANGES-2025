@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3769 2025/06/06 19:43:58 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3770 2025/06/06 20:16:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5648,3 +5648,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mariadb105-server to 10.5.29 [nia 2025-06-06]
 	Updated databases/mariadb106-client to 10.6.22nb2 [nia 2025-06-06]
 	Updated databases/mariadb106-server to 10.6.22 [nia 2025-06-06]
+	Updated databases/mariadb114-client to 11.4.7 [nia 2025-06-06]
+	Updated databases/mariadb114-server to 11.4.7 [nia 2025-06-06]
