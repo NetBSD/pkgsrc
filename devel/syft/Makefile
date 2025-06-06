@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/04/05 18:51:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2025/06/06 14:01:28 bsiegert Exp $
 
 DISTNAME=	syft-0.65.0
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anchore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

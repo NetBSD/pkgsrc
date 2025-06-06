@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2025/04/05 18:51:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.70 2025/06/06 14:01:38 bsiegert Exp $
 
 DISTNAME=	goreman-0.3.7
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	40
+PKGREVISION=	41
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
 GITHUB_PROJECT=	goreman

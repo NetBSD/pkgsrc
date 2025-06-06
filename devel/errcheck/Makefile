@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2025/04/05 18:51:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.50 2025/06/06 14:01:23 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	errcheck-1.7.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kisielk/}
 

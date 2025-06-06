@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/05 18:51:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2025/06/06 14:01:32 bsiegert Exp $
 
 DISTNAME=	minikube-1.33.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
