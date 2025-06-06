@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3761 2025/06/06 09:48:53 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3762 2025/06/06 09:49:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5637,3 +5637,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/sentencepiece to 0.2.0 [wiz 2025-06-06]
 	Updated textproc/py-sentencepiece to 0.2.0 [wiz 2025-06-06]
 	Updated sysutils/dust to 1.2.1 [pin 2025-06-06]
+	Updated shells/oh-my-posh to 26.3.0 [pin 2025-06-06]
