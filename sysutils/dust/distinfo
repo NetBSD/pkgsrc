@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2025/04/11 12:14:08 pin Exp $
+$NetBSD: distinfo,v 1.22 2025/06/06 09:48:34 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -66,6 +66,9 @@ Size (clap_builder-4.5.31.crate) = 168303 bytes
 BLAKE2s (clap_complete-4.5.46.crate) = c6d71a7124bd38a05d8dc74df571f3d80f04b9c050308dc8d066365a7f8031b1
 SHA512 (clap_complete-4.5.46.crate) = 3e6232764f2f606e63730be808319076486a5ad53d2849c284de33d0c2f3faaa40386a25ae0fb334ad706a36325810bb06aeadc6eb9264b32ac466cc517bc709
 Size (clap_complete-4.5.46.crate) = 48021 bytes
+BLAKE2s (clap_derive-4.5.28.crate) = 82d4f177923df83ae0d066987e080b6f2e44cb36e232e713486f09a8a83417e6
+SHA512 (clap_derive-4.5.28.crate) = c68924f301000e74a5d9bec3ade8a694f5fcaecbfeb1bd1d11b1bdeafe3a279249b24daf56e6fc006c2d5a1115992996a42e49860085f7e4d53848cdb0fe373d
+Size (clap_derive-4.5.28.crate) = 33428 bytes
 BLAKE2s (clap_lex-0.7.4.crate) = 87179de8b09978be634962bb5bf3feebda3994e47c4e29fb88504349e07ad710
 SHA512 (clap_lex-0.7.4.crate) = a2566868f4619679d3b74b70592ffa6a04b13e38e3196c56bb1dae8bea0c711bddbccd778d2aba3cc0ee074c9b1cc0335222818f0d47fb3cc8109cbc35bb992e
 Size (clap_lex-0.7.4.crate) = 12858 bytes
@@ -105,9 +108,9 @@ Size (dirs-sys-0.3.7.crate) = 10597 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
-BLAKE2s (dust-1.2.0.tar.gz) = dc27f73187a5be86872250ee6c9e2832d2fbf9983d1d0762095e58215b5bcd0d
-SHA512 (dust-1.2.0.tar.gz) = 5db1d3622b7149f663d228f25975fa0b2604d46ce302343c3405ab62f8d20bfbd512297959c197194498bbba33912a955d5e16274cd93dd1c3b5171822ed406f
-Size (dust-1.2.0.tar.gz) = 115960 bytes
+BLAKE2s (dust-1.2.1.tar.gz) = 312cc86532d14111576b0ca5e777549a3fa82b4597c60680a428db635a40c57a
+SHA512 (dust-1.2.1.tar.gz) = 77d18bf9f13d826903ac0c795c5412c756c2850841d3d93a5d775a68189ce70a34cb90d2c15b940b45ef0edffc9c02d419c41c7ae99b1a0aab15f73455041fff
+Size (dust-1.2.1.tar.gz) = 116476 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
@@ -126,6 +129,9 @@ Size (getrandom-0.2.15.crate) = 37163 bytes
 BLAKE2s (getrandom-0.3.1.crate) = 0966d5f75ad40e26657c1c831283c7eb4cc6b08d45a7050f95f68b077f2fa6cb
 SHA512 (getrandom-0.3.1.crate) = 431682efdc2ba82114e173925b99e1059d4915ebec6b0432d4a7683e56ccff7b4b45b9ee9cf5d0ee53067d5ae1ba733524c18577379c8414c385189718fbbcfe
 Size (getrandom-0.3.1.crate) = 42449 bytes
+BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
+SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
+Size (heck-0.5.0.crate) = 11517 bytes
 BLAKE2s (hermit-abi-0.3.9.crate) = e79ea390b597a58b10dae2062cf72b653e4f5e9e2032d5cc6ea2caadf1802afd
 SHA512 (hermit-abi-0.3.9.crate) = f3a5a51d834a6ad55480b53f7e9cdc73a512ab0cc6c246a6ab1e8bf8f9851a0c8a55982f5bba6cb57b5a03b54870e73b0bab0a79195764c308318394a3ea8045
 Size (hermit-abi-0.3.9.crate) = 16165 bytes
