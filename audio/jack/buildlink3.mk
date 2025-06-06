@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/02/12 06:44:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/06/06 23:03:39 wiz Exp $
 
 BUILDLINK_TREE+=	jack
 
@@ -15,7 +15,6 @@ BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
 .endif
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../audio/libsndfile/buildlink3.mk"
 .endif # JACK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-jack
