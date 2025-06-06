@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3767 2025/06/06 17:41:17 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3768 2025/06/06 19:42:15 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5644,3 +5644,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go124 to 1.24.4 [bsiegert 2025-06-06]
 	Updated emulators/PC6001VX to 4.2.13 [tsutsui 2025-06-06]
 	Updated www/palemoon to 33.7.2 [nia 2025-06-06]
+	Updated databases/mariadb105-client to 10.5.29nb2 [nia 2025-06-06]
+	Updated databases/mariadb105-server to 10.5.29 [nia 2025-06-06]
