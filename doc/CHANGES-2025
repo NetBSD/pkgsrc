@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3766 2025/06/06 14:54:45 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.3767 2025/06/06 17:41:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5643,3 +5643,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go123 to 1.23.10 [bsiegert 2025-06-06]
 	Updated lang/go124 to 1.24.4 [bsiegert 2025-06-06]
 	Updated emulators/PC6001VX to 4.2.13 [tsutsui 2025-06-06]
+	Updated www/palemoon to 33.7.2 [nia 2025-06-06]
