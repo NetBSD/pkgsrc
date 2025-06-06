@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3760 2025/06/06 07:52:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3761 2025/06/06 09:48:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5636,3 +5636,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-File-Find-Rule to 0.34nb10 [wiz 2025-06-05]
 	Updated textproc/sentencepiece to 0.2.0 [wiz 2025-06-06]
 	Updated textproc/py-sentencepiece to 0.2.0 [wiz 2025-06-06]
+	Updated sysutils/dust to 1.2.1 [pin 2025-06-06]
