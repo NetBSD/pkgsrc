@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2025/04/11 12:14:08 pin Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/06 09:48:34 pin Exp $
 
-DISTNAME=	dust-1.2.0
+DISTNAME=	dust-1.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bootandy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/bootandy/dust/
 COMMENT=	More intuitive version of du in rust
 LICENSE=	apache-2.0
