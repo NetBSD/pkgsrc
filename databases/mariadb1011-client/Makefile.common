@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2025/02/16 23:28:12 nia Exp $
+# $NetBSD: Makefile.common,v 1.18 2025/06/06 20:48:33 nia Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
 # used by databases/mariadb1011-embedded/Makefile
 
-DISTNAME=	mariadb-10.11.11
+DISTNAME=	mariadb-10.11.13
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -85,6 +85,9 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Snappy=ON
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LZO=ON
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LZ4=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITHOUT_MROONGA_STORAGE_ENGINE=ON
+
+# Let mk/ determine the security hardening flags to use.
+CMAKE_CONFIGURE_ARGS+=		-DSECURITY_HARDENED=OFF
 
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_DTRACE=OFF
 
