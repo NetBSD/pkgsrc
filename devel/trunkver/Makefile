@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/05 18:51:17 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2025/06/06 14:01:28 bsiegert Exp $
 
 DISTNAME=	trunkver-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crftd-tech/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
