@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2025/04/11 12:14:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2025/06/06 09:48:34 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -22,6 +22,7 @@ CARGO_CRATE_DEPENDS+=	chrono-0.4.40
 CARGO_CRATE_DEPENDS+=	clap-4.5.31
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.31
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.46
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.28
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	clap_mangen-0.2.26
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.3
@@ -41,6 +42,7 @@ CARGO_CRATE_DEPENDS+=	fastrand-2.3.0
 CARGO_CRATE_DEPENDS+=	filesize-0.2.0
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.15
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.1
+CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.9
 CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.61
 CARGO_CRATE_DEPENDS+=	iana-time-zone-haiku-0.1.2
