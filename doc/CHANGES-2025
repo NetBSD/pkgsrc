@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3777 2025/06/06 23:03:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3778 2025/06/06 23:10:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5659,3 +5659,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-c to 0.24.1 [wiz 2025-06-06]
 	Updated www/syncstorage-rs to 0.18.3 [wiz 2025-06-06]
 	Updated audio/jack to 1.9.22 [wiz 2025-06-06]
+	Updated textproc/lowdown to 2.0.2 [wiz 2025-06-06]
