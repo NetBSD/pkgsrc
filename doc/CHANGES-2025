@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3775 2025/06/06 21:27:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3776 2025/06/06 22:45:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5657,3 +5657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/hwdata to 0.396 [wiz 2025-06-06]
 	Updated textproc/tree-sitter to 0.25.6 [wiz 2025-06-06]
 	Updated textproc/tree-sitter-c to 0.24.1 [wiz 2025-06-06]
+	Updated www/syncstorage-rs to 0.18.3 [wiz 2025-06-06]
