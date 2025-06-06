@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3764 2025/06/06 13:23:00 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3765 2025/06/06 13:47:35 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5640,3 +5640,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.3.0 [pin 2025-06-06]
 	Updated misc/tailspin to 5.4.4 [pin 2025-06-06]
 	Updated geography/proj to 9.6.2 [gdt 2025-06-06]
+	Updated lang/go123 to 1.23.10 [bsiegert 2025-06-06]
+	Updated lang/go124 to 1.24.4 [bsiegert 2025-06-06]
