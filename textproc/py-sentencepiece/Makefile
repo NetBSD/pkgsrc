@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2023/04/25 14:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/06 07:51:53 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+GITHUB_PROJECT=	sentencepiece
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	cmake pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+pre-configure:
+	${ECHO} '#!/bin/sh' > ${BUILDLINK_DIR}/bin/nproc
+	${ECHO} 'echo 1' > ${BUILDLINK_DIR}/bin/nproc
+	${CHMOD} 555 ${BUILDLINK_DIR}/bin/nproc
 
 .include "../../textproc/sentencepiece/Makefile.common"
 .include "../../textproc/sentencepiece/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

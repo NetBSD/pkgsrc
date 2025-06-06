@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2023/07/18 18:47:53 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/06/06 07:51:53 wiz Exp $
 #
 # used by textproc/sentencepiece/Makefile
 # used by textproc/py-sentencepiece/Makefile
 
-DISTNAME=	sentencepiece-0.1.97
+DISTNAME=	sentencepiece-0.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,5 +15,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+DISTINFO_FILE=		${.CURDIR}/../../textproc/sentencepiece/distinfo
+PATCHDIR=		${.CURDIR}/../../textproc/sentencepiece/patches
 
 .include "../../mk/atomic64.mk"
