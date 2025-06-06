@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3759 2025/06/06 07:52:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3760 2025/06/06 07:52:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5635,3 +5635,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-checkdmarc to 5.8.6 [adam 2025-06-05]
 	Updated devel/p5-File-Find-Rule to 0.34nb10 [wiz 2025-06-05]
 	Updated textproc/sentencepiece to 0.2.0 [wiz 2025-06-06]
+	Updated textproc/py-sentencepiece to 0.2.0 [wiz 2025-06-06]
