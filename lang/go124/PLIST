@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/08 18:55:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/06 13:45:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go124/CONTRIBUTING.md
@@ -56,6 +56,7 @@ go124/go.env
 go124/lib/fips140/Makefile
 go124/lib/fips140/README.md
 go124/lib/fips140/fips140.sum
+go124/lib/fips140/inprocess.txt
 go124/lib/fips140/v1.0.0.zip
 go124/lib/time/README
 go124/lib/time/mkzip.go
@@ -3502,6 +3503,8 @@ go124/src/cmd/link/testdata/linkname/ok.go
 go124/src/cmd/link/testdata/linkname/p/p.go
 go124/src/cmd/link/testdata/linkname/push.go
 go124/src/cmd/link/testdata/linkname/sched.go
+go124/src/cmd/link/testdata/linkname/textvar/asm.s
+go124/src/cmd/link/testdata/linkname/textvar/main.go
 go124/src/cmd/link/testdata/pe-binutils/main.go
 go124/src/cmd/link/testdata/pe-binutils/rsrc_386.syso
 go124/src/cmd/link/testdata/pe-binutils/rsrc_amd64.syso

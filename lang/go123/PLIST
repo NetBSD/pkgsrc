@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/05/08 18:55:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/06/06 13:45:14 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go123/CONTRIBUTING.md
@@ -3418,6 +3418,8 @@ go123/src/cmd/link/testdata/linkname/ok.go
 go123/src/cmd/link/testdata/linkname/p/p.go
 go123/src/cmd/link/testdata/linkname/push.go
 go123/src/cmd/link/testdata/linkname/sched.go
+go123/src/cmd/link/testdata/linkname/textvar/asm.s
+go123/src/cmd/link/testdata/linkname/textvar/main.go
 go123/src/cmd/link/testdata/pe-binutils/main.go
 go123/src/cmd/link/testdata/pe-binutils/rsrc_386.syso
 go123/src/cmd/link/testdata/pe-binutils/rsrc_amd64.syso
