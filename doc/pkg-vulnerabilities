@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.404 2025/06/05 19:01:52 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.405 2025/06/06 07:52:17 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26328,4 +26328,6 @@ radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5643
 radare2-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5644
 radare2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5645
 radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5646
+radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5647
+radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5648
 p5-File-Find-Rule<0.34nb10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2011-10007
