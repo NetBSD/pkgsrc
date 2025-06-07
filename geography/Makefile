@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2025/05/23 13:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2025/06/07 11:46:23 gdt Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -42,6 +42,7 @@ SUBDIR+=	R-terra
 SUBDIR+=	R-wk
 SUBDIR+=	cm2gpx
 SUBDIR+=	cmconvert
+SUBDIR+=	draco
 SUBDIR+=	echomap
 SUBDIR+=	epsg
 SUBDIR+=	epsg-docs
