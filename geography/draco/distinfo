@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/06/07 11:45:51 gdt Exp $
+$NetBSD: distinfo,v 1.2 2025/06/07 12:10:58 wiz Exp $
 
-BLAKE2s (draco/1.5.7.tar.gz) = c4730ab0d47e7ec7a9bfaeda1c1cf7c55ac69e46ef9a6f26056fd1085a0074c0
-SHA512 (draco/1.5.7.tar.gz) = 8b444744cdf12fb9d276916eb2ff0735cd1a6497b65b88813ec457fe2169db987db62e3db253a7d0f3ae7d45ae6502e8a9f8c0b81abde73e07b3bec69f9dc170
-Size (draco/1.5.7.tar.gz) = 60465968 bytes
+BLAKE2s (draco-1.5.7.tar.gz) = c4730ab0d47e7ec7a9bfaeda1c1cf7c55ac69e46ef9a6f26056fd1085a0074c0
+SHA512 (draco-1.5.7.tar.gz) = 8b444744cdf12fb9d276916eb2ff0735cd1a6497b65b88813ec457fe2169db987db62e3db253a7d0f3ae7d45ae6502e8a9f8c0b81abde73e07b3bec69f9dc170
+Size (draco-1.5.7.tar.gz) = 60465968 bytes
