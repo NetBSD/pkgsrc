@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/01/11 01:50:31 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2025/06/07 11:27:28 gdt Exp $
 
 DISTNAME=	bup-0.33.7
 CATEGORIES=	sysutils
@@ -131,7 +131,6 @@ REPLACE_BASH+=		test/ext/test-split-join
 REPLACE_BASH+=		test/ext/test-tz
 REPLACE_BASH+=		test/ext/test-web
 REPLACE_BASH+=		test/ext/test-xdev
-REPLACE_BASH+=		.sh
 
 DOCDIR=			share/doc/${PKGBASE}
 
