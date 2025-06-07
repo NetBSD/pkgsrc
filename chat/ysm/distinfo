@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:05:28 nia Exp $
-
-BLAKE2s (ysmv7_2_9_9_1.tar.gz) = bce642c9491972bc266e27c8c5b08672e63bd3a0db614ff0f2be3e518c1b58e5
-SHA512 (ysmv7_2_9_9_1.tar.gz) = c2a984a86d12a10be12f5d9f6c291d152011023c07e5a116126af5b9319799894de204610f953e2cb360fd5c518a82f7e35c9e197123bd3ab55a2bc0fbe40f99
-Size (ysmv7_2_9_9_1.tar.gz) = 305420 bytes
-SHA1 (patch-configure) = cfaf3d68be5144bd0fb819be682816698a778e7c
-SHA1 (patch-src_YSM__Setup.c) = 012ab4e59480349b6ce60cc397c0099524928ecd

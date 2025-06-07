@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2025/05/16 15:21:55 adam Exp $
+# $NetBSD: Makefile,v 1.298 2025/06/07 09:23:57 nia Exp $
 #
 
 COMMENT=	Communication programs
@@ -151,7 +151,6 @@ SUBDIR+=	unrealircd
 SUBDIR+=	unrealircd6
 SUBDIR+=	weechat
 SUBDIR+=	xaric
-SUBDIR+=	ysm
 SUBDIR+=	zenicb
 SUBDIR+=	zenirc
 SUBDIR+=	zircon
