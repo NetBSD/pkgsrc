@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2024/11/04 21:20:59 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/06/07 21:36:37 wiz Exp $
 
-BLAKE2s (OpenColorIO-2.4.0.tar.gz) = f5997204ff24e1a4ad75700f7e3149eff8e1896b678ab9d4780506d7f91251af
-SHA512 (OpenColorIO-2.4.0.tar.gz) = 11ad89b3ac30700be58181a0bdd4154a3ae2bf59651edb48629c51c7f1fadf221394abb285efd9b6c259195821a4e531043b266eea36d8fa4382f23c3b54ab6d
-Size (OpenColorIO-2.4.0.tar.gz) = 11380037 bytes
+BLAKE2s (OpenColorIO-2.4.2.tar.gz) = 5c8a179d7f8e701ccfac7a8db8482cd403ce23d3d2be8bc95690a52c1d7fb1f6
+SHA512 (OpenColorIO-2.4.2.tar.gz) = d626007d7a7ae26f4cf2fa8e5675963af9127f500f824548ccc4e659ddb2cd275b988822b4f66e0170971426dc330d106e281cdae63a5bd141b9aadaa874a746
+Size (OpenColorIO-2.4.2.tar.gz) = 11398186 bytes
 SHA1 (patch-share_cmake_modules_Findyaml-cpp.cmake) = d1caac8dc2f0be283b5a32d4e686c9200e8ae53f
 SHA1 (patch-share_cmake_utils_CheckSupportGL.cmake) = f259440166689f7fd8970a61456f111981083733
 SHA1 (patch-src_OpenColorIO_CMakeLists.txt) = 1d54608673f2cd04fd7382f7f513e4abb41ab65b
