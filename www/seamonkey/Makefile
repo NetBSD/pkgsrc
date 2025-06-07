@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.284 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2025/06/07 11:13:28 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	3
-SM_VER=		2.53.20
+SM_VER=		2.53.21
 CATEGORIES=	www
 MASTER_SITES=	https://archive.seamonkey-project.org/releases/${SM_VER}/source/
 EXTRACT_SUFX=	.tar.xz
@@ -93,7 +92,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 
-TOOL_DEPENDS+=			cbindgen>=0.24.3:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.24.3:../../devel/cbindgen
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
@@ -129,10 +128,6 @@ ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-
-# See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
-# support is only available when the toolkit is cairo-cocoa.
-CONFIGURE_ARGS.Darwin+=	--disable-sandbox
 
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
