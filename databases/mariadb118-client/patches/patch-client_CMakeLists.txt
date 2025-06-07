@@ -1,0 +1,15 @@
+$NetBSD: patch-client_CMakeLists.txt,v 1.1 2025/06/07 08:58:42 nia Exp $
+
+Allow building a server-only configuration.
+
+--- client/CMakeLists.txt.orig	2025-05-21 14:08:31.000000000 +0000
++++ client/CMakeLists.txt
+@@ -68,7 +68,7 @@ TARGET_INCLUDE_DIRECTORIES(mariadb-impor
+ TARGET_LINK_LIBRARIES(mariadb-import PRIVATE tpool ${CLIENT_LIB} import_util)
+ 
+ 
+-MYSQL_ADD_EXECUTABLE(mariadb-upgrade mysql_upgrade.c COMPONENT Server)
++MYSQL_ADD_EXECUTABLE(mariadb-upgrade mysql_upgrade.c)
+ TARGET_LINK_LIBRARIES(mariadb-upgrade ${CLIENT_LIB})
+ ADD_DEPENDENCIES(mariadb-upgrade GenFixPrivs)
+ 
