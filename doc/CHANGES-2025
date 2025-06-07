@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3779 2025/06/06 23:20:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3780 2025/06/07 08:59:13 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5661,3 +5661,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/jack to 1.9.22 [wiz 2025-06-06]
 	Updated textproc/lowdown to 2.0.2 [wiz 2025-06-06]
 	Updated multimedia/mlt to 7.32.0 [wiz 2025-06-06]
+	Added databases/mariadb118-client version 11.8.2 [nia 2025-06-07]
+	Added databases/mariadb118-server version 11.8.2 [nia 2025-06-07]
