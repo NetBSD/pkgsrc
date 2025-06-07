@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3784 2025/06/07 11:13:43 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3785 2025/06/07 11:46:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed chat/skypeweb-purple [nia 2025-06-07]
 	Updated devel/objfw to 1.3.1 [js 2025-06-07]
 	Updated www/seamonkey to 2.53.21 [nia 2025-06-07]
+	Added geography/draco version 1.5.7 [gdt 2025-06-07]
