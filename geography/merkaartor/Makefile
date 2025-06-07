@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2025/05/17 23:23:11 gdt Exp $
+# $NetBSD: Makefile,v 1.150 2025/06/07 11:11:43 gdt Exp $
 
 DISTNAME=	merkaartor-0.20.0
 PKGREVISION=	14
@@ -21,6 +21,12 @@ USE_TOOLS+=	pkg-config
 .include "../../devel/cmake/build.mk"
 
 CMAKE_CONFIGURE_ARGS+=	-DGPSD=ON
+
+# Remediate 'apple is special' code.
+SUBST_CLASSES+=		macfix
+SUBST_STAGE.macfix=	pre-configure
+SUBST_FILES.macfix=	CMakeLists.txt
+SUBST_SED.macfix=	-e 's/APPLE/APP_SKIP_LE/'
 
 # Dependencies, generally in the order they are searched for, or
 # ordered following pkgsrc conventions.
