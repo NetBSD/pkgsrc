@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25871 2025/06/07 22:03:41 wiz Exp $
+$NetBSD: TODO,v 1.25872 2025/06/07 22:05:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
-	o restic-rest-server-0.14.0
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
