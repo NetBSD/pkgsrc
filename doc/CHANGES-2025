@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3796 2025/06/07 21:42:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3797 2025/06/07 22:03:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/enchant2 to 2.8.6 [wiz 2025-06-07]
 	Updated devel/py-cachetools to 6.0.0 [wiz 2025-06-07]
 	Updated www/py-google-api-python-client to 2.171.0 [wiz 2025-06-07]
+	Updated devel/py-cattrs to 25.1.1 [wiz 2025-06-07]
