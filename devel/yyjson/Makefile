@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/05/11 07:31:56 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/07 15:34:05 vins Exp $
 
-DISTNAME=	yyjson-0.11.0
+DISTNAME=	yyjson-0.11.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibireme/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
