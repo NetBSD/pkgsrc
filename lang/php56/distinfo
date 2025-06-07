@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2025/04/18 15:54:30 wiz Exp $
+$NetBSD: distinfo,v 1.65 2025/06/07 15:51:49 taca Exp $
 
 BLAKE2s (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = 9eaf6505d80e90147fd0b993fb501620030eea24ccd69e42c49d8faf50d47775
 SHA512 (PHP-5.6.31-OpenSSL-1.1.0-compatibility-20170801.patch) = bbe39ad27a5a82c705692c921b214c5630227ed9852f0432340f74533b5e618d9bea01bff75a4b7a1f1b72876b6d092d2db4533758d9a927f274cff7361f3eb4
@@ -39,6 +39,7 @@ SHA1 (patch-ext_sqlite3_config0.m4) = 2435e1518a88c7d05eb93cf3c8e716fe4ea0748b
 SHA1 (patch-ext_standard_basic__functions.c) = ca1de427a3d793c3a3e99581fbd2d1fcf99aeb30
 SHA1 (patch-ext_standard_php__dns.h) = 8e544eb637044e9428a0becb7402336f64a3a23d
 SHA1 (patch-ext_tidy_tidy.c) = 8f075f17ac913f21e65f4b704574c0ae5ffdfc84
+SHA1 (patch-ext_xml_compat.c) = fbea14c738728d33cdaf38405688ed6361f8894d
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627
 SHA1 (patch-makedist) = 091d5c0ba3e890ade475faa33446c8f97bcb7bc3
 SHA1 (patch-php.ini-development) = e1a187070a9dfc28762d7476d9acc796a93c7fac
