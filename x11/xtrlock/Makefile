@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/01/13 18:36:15 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/06/07 16:32:55 vins Exp $
 
-DISTNAME=	xtrlock-2.16
+DISTNAME=	xtrlock-2.17
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
