@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.4 2025/05/21 15:26:32 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.5 2025/06/07 16:37:07 schmonz Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -13,8 +13,6 @@ GO_MODULE_FILES+=	github.com/chavacava/garif/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/chavacava/garif/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.mod
 GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.zip
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.mod
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.zip
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.mod
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
@@ -70,12 +68,8 @@ GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
 GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.12.0.mod
 GO_MODULE_FILES+=	github.com/rogpeppe/go-internal/@v/v1.12.0.zip
-GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
-GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.2-0.20230802210424-5b0b94c5c0d3.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.3.2-0.20230802210424-5b0b94c5c0d3.zip
-GO_MODULE_FILES+=	github.com/sethvargo/go-envconfig/@v/v1.1.1.mod
-GO_MODULE_FILES+=	github.com/sethvargo/go-envconfig/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/sirupsen/logrus/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/skeema/knownhosts/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/skeema/knownhosts/@v/v1.3.0.zip
@@ -91,12 +85,10 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.4.mod
-GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.5.mod
-GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.5.zip
+GO_MODULE_FILES+=	github.com/urfave/cli/v3/@v/v3.3.3.mod
+GO_MODULE_FILES+=	github.com/urfave/cli/v3/@v/v3.3.3.zip
 GO_MODULE_FILES+=	github.com/xanzy/ssh-agent/@v/v0.3.3.mod
 GO_MODULE_FILES+=	github.com/xanzy/ssh-agent/@v/v0.3.3.zip
-GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20240521201337-686a1a2994c1.mod
-GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20240521201337-686a1a2994c1.zip
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20220622213112-05595931fe9d.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.36.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.36.0.zip
