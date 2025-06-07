@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.47 2025/02/18 11:56:41 wiz Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.48 2025/06/07 09:02:55 nia Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -38,7 +38,8 @@ _SYS_VARS.mysql=	MYSQL_VERSION MYSQL_VERSION_REQD MYSQL_VERSIONS_ALL
 #
 # Set variables for all possible MySQL variants
 #
-MARIADB_VERSIONS_ALL+=		mariadb114 mariadb1011 mariadb106 mariadb105
+MARIADB_VERSIONS_ALL+=		mariadb118 mariadb114 mariadb1011 mariadb106
+MARIADB_VERSIONS_ALL+=		mariadb105
 
 MYSQL_VERSIONS_ALL=		80
 MYSQL_VERSIONS_ALL+=		${MARIADB_VERSIONS_ALL}
@@ -58,6 +59,9 @@ MYSQL_PKGSRCDIR.mariadb1011=	../../databases/mariadb1011-client
 MYSQL_PKGBASE.mariadb114=	mariadb-client-11.4.*
 MYSQL_PKGSRCDIR.mariadb114=	../../databases/mariadb114-client
 
+MYSQL_PKGBASE.mariadb118=	mariadb-client-11.8.*
+MYSQL_PKGSRCDIR.mariadb118=	../../databases/mariadb118-client
+
 .for ver in ${MYSQL_VERSIONS_ALL}
 MYSQL_OK.${ver}=		no
 _SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
@@ -71,7 +75,8 @@ _SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
 # be chosen.
 #
 MYSQL_VERSION_DEFAULT?=		mariadb114
-MYSQL_VERSIONS_ACCEPTED?=	80 mariadb114 mariadb1011 mariadb106 mariadb105
+MYSQL_VERSIONS_ACCEPTED?=	80 mariadb118 mariadb114 mariadb1011 \
+				mariadb106 mariadb105
 
 #
 # Previous versions of this file used shouty caps in the version names.  We
