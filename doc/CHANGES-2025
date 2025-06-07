@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3780 2025/06/07 08:59:13 nia Exp $
+$NetBSD: CHANGES-2025,v 1.3781 2025/06/07 09:24:16 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5663,3 +5663,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mlt to 7.32.0 [wiz 2025-06-06]
 	Added databases/mariadb118-client version 11.8.2 [nia 2025-06-07]
 	Added databases/mariadb118-server version 11.8.2 [nia 2025-06-07]
+	Removed chat/ysm [nia 2025-06-07]
