@@ -1,0 +1,14 @@
+$NetBSD: patch-plugin_hashicorp__key__management_CMakeLists.txt,v 1.1 2025/06/07 08:58:43 nia Exp $
+
+Allow building a server-only configuration.
+
+--- plugin/hashicorp_key_management/CMakeLists.txt.orig	2025-06-06 23:25:26.033454696 +0000
++++ plugin/hashicorp_key_management/CMakeLists.txt
+@@ -22,5 +22,7 @@ MYSQL_ADD_PLUGIN(HASHICORP_KEY_MANAGEMEN
+ 
+ ADD_FEATURE_INFO(HASHICORP_KEY_MANAGEMENT "ON" "Hashicorp Key Management Plugin")
+ 
++IF(NOT WITHOUT_SERVER)
+ INSTALL_DOCUMENTATION(hashicorp_key_management.txt
+   COMPONENT plugin-hashicorp-key-management)
++ENDIF()

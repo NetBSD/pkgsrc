@@ -1,0 +1,14 @@
+$NetBSD: patch-libservices_CMakeLists.txt,v 1.1 2025/06/07 08:58:42 nia Exp $
+
+Allow building a server-only configuration.
+
+--- libservices/CMakeLists.txt.orig	2025-06-06 23:22:45.555427509 +0000
++++ libservices/CMakeLists.txt
+@@ -47,5 +47,7 @@ SET(MYSQLSERVICES_SOURCES
+   provider_service_snappy.c
+ )
+ 
++IF(NOT WITHOUT_SERVER)
+ ADD_CONVENIENCE_LIBRARY(mysqlservices ${MYSQLSERVICES_SOURCES})
+ INSTALL(TARGETS mysqlservices DESTINATION ${INSTALL_LIBDIR} COMPONENT Development)
++ENDIF()

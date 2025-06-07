@@ -1,0 +1,24 @@
+$NetBSD: patch-sql_share_CMakeLists.txt,v 1.1 2025/06/07 08:58:43 nia Exp $
+
+Allow building a server-only configuration.
+
+--- sql/share/CMakeLists.txt.orig	2025-06-06 23:28:32.357779719 +0000
++++ sql/share/CMakeLists.txt
+@@ -45,13 +45,13 @@ swedish
+ ukrainian
+ )
+ 
+-INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/charsets DESTINATION ${INSTALL_MYSQLSHAREDIR}
+-  COMPONENT Common PATTERN "languages.html" EXCLUDE
+-)
+-
+ IF (NOT WITHOUT_SERVER)
+   FOREACH (dir ${dirs})
+    INSTALL(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${dir}
+     DESTINATION  ${INSTALL_MYSQLSHAREDIR} COMPONENT Server)
+   ENDFOREACH()
++ELSE()
++INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/charsets DESTINATION ${INSTALL_MYSQLSHAREDIR}
++  COMPONENT Common PATTERN "languages.html" EXCLUDE
++)
+ ENDIF()
