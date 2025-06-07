@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.405 2025/06/06 07:52:17 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.406 2025/06/07 12:40:37 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26331,3 +26331,10 @@ radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5646
 radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5647
 radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5648
 p5-File-Find-Rule<0.34nb10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2011-10007
+mariadb-client<10.5.29	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2025-30722
+mariadb-server<10.5.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52969
+mariadb-server<10.5.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-52970
+mariadb-server<10.5.29	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2025-30693
+mysql-client<8.0.42	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
+mysql-cluster<8.0.42	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
+mysql-server<8.0.42	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
