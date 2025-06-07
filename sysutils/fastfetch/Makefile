@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/05/23 17:36:17 vins Exp $
+# $NetBSD: Makefile,v 1.31 2025/06/07 15:51:04 vins Exp $
 
-DISTNAME=	fastfetch-2.44.0
+DISTNAME=	fastfetch-2.45.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -24,7 +24,7 @@ REPLACE_TOOL_PYTHON+=	scripts/gen-pciids.py scripts/gen-man.py
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
-SUBST_FILES.paths+=	src/detection/packages/packages_obsd.c	\
+SUBST_FILES.paths+=	src/detection/packages/packages_nbsd.c	\
 			src/detection/packages/packages_sunos.c \
 			src/detection/packages/packages_linux.c \
 			src/detection/packages/packages_apple.c \
