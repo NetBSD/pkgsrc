@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/30 07:18:11 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+@comment $NetBSD: PLIST,v 1.6 2025/06/07 22:03:32 wiz Exp $
 ${PYSITELIB}/cattr/__init__.py
 ${PYSITELIB}/cattr/__init__.pyc
 ${PYSITELIB}/cattr/__init__.pyo
@@ -46,6 +42,10 @@ ${PYSITELIB}/cattr/preconf/ujson.py
 ${PYSITELIB}/cattr/preconf/ujson.pyc
 ${PYSITELIB}/cattr/preconf/ujson.pyo
 ${PYSITELIB}/cattr/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cattrs/__init__.py
 ${PYSITELIB}/cattrs/__init__.pyc
 ${PYSITELIB}/cattrs/__init__.pyo
@@ -91,6 +91,9 @@ ${PYSITELIB}/cattrs/gen/_shared.pyo
 ${PYSITELIB}/cattrs/gen/typeddicts.py
 ${PYSITELIB}/cattrs/gen/typeddicts.pyc
 ${PYSITELIB}/cattrs/gen/typeddicts.pyo
+${PYSITELIB}/cattrs/literals.py
+${PYSITELIB}/cattrs/literals.pyc
+${PYSITELIB}/cattrs/literals.pyo
 ${PYSITELIB}/cattrs/preconf/__init__.py
 ${PYSITELIB}/cattrs/preconf/__init__.pyc
 ${PYSITELIB}/cattrs/preconf/__init__.pyo
@@ -134,6 +137,12 @@ ${PYSITELIB}/cattrs/strategies/_subclasses.pyo
 ${PYSITELIB}/cattrs/strategies/_unions.py
 ${PYSITELIB}/cattrs/strategies/_unions.pyc
 ${PYSITELIB}/cattrs/strategies/_unions.pyo
+${PYSITELIB}/cattrs/typealiases.py
+${PYSITELIB}/cattrs/typealiases.pyc
+${PYSITELIB}/cattrs/typealiases.pyo
+${PYSITELIB}/cattrs/types.py
+${PYSITELIB}/cattrs/types.pyc
+${PYSITELIB}/cattrs/types.pyo
 ${PYSITELIB}/cattrs/v.py
 ${PYSITELIB}/cattrs/v.pyc
 ${PYSITELIB}/cattrs/v.pyo
