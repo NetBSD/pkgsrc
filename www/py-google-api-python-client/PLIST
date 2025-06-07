@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2025/04/28 10:42:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2025/06/07 21:42:36 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -79,6 +79,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigateway.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigateway.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigee.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apigeeregistry.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/apihub.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apikeys.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/apim.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/appengine.v1.json
@@ -276,6 +277,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseapphosting.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseapphosting.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedatabase.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedataconnect.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedataconnect.v1beta.json
@@ -364,8 +367,10 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.accounts_v1be
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.conversions_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.datasources_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.issueresolution_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.lfp_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.ordertracking_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.products_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.promotions_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.quota_v1beta.json
