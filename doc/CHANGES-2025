@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3786 2025/06/07 15:35:10 vins Exp $
+$NetBSD: CHANGES-2025,v 1.3787 2025/06/07 15:52:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5669,3 +5669,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/seamonkey to 2.53.21 [nia 2025-06-07]
 	Added geography/draco version 1.5.7 [gdt 2025-06-07]
 	Updated devel/yyjson to 0.11.1 [vins 2025-06-07]
+	Updated lang/php56 to 5.6.40nb4 [taca 2025-06-07]
