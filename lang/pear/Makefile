@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2025/05/08 15:28:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2025/06/07 15:58:49 taca Exp $
 #
 
 DISTNAME=	PEAR-1.10.16
@@ -16,6 +16,9 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 EXTRACT_ONLY=	# none
 USE_TOOLS+=	bsdtar gzcat
+
+# go-pear.php fetch PEAR package information during install phase.
+ALLOW_NETWORK_ACCESS=	yes
 
 .include "../../lang/php/common.mk"
 
