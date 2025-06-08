@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3799 2025/06/08 05:56:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3800 2025/06/08 06:04:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5682,3 +5682,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cattrs to 25.1.1 [wiz 2025-06-07]
 	Updated sysutils/restic-rest-server to 0.14.0 [wiz 2025-06-07]
 	Updated devel/p5-File-Find-Rule to 0.35 [wiz 2025-06-08]
+	Updated security/p5-IO-Socket-SSL to 2.090 [wiz 2025-06-08]
