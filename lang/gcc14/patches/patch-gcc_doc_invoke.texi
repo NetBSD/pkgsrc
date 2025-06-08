@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_doc_invoke.texi,v 1.1 2025/02/05 16:30:36 adam Exp $
+$NetBSD: patch-gcc_doc_invoke.texi,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/doc/invoke.texi
+--- gcc/doc/invoke.texi.orig	2025-05-23 11:02:04.620202694 +0000
 +++ gcc/doc/invoke.texi
 @@ -732,7 +732,7 @@ Objective-C and Objective-C++ Dialects}.
  -freg-struct-return  -fshort-enums  -fshort-wchar
@@ -19,13 +19,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  -whatsloaded  -F  -gused  -gfull  -mmacosx-version-min=@var{version}
 --mkernel  -mone-byte-bool}
 +-mkernel  -mone-byte-bool -munreachable-traps}
-
+ 
  @emph{DEC Alpha Options}
  @gccoptlist{-mno-fp-regs  -msoft-float
-@@ -19132,6 +19132,17 @@ the behavior of older compilers in which temporaries' stack space is
+@@ -19134,6 +19134,17 @@ the behavior of older compilers in which
  not reused, the aggressive stack reuse can lead to runtime errors. This
  option is used to control the temporary stack reuse optimization.
-
+ 
 +@opindex fstack_use_cumulative_args
 +@item -fstack-use-cumulative-args
 +This option instructs the compiler to use the
@@ -40,10 +40,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  @opindex ftrapv
  @item -ftrapv
  This option generates traps for signed overflow on addition, subtraction,
-@@ -25148,6 +25159,11 @@ without that switch.  Using this switch may require recompiling all
+@@ -25239,6 +25250,11 @@ without that switch.  Using this switch 
  other modules in a program, including system libraries.  Use this
  switch to conform to a non-default data model.
-
+ 
 +@opindex munreachable-traps
 +@item -munreachable-traps
 +Causes @code{__builtin_unreachable} to be rendered as a trap.  This is the

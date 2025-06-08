@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/04 14:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/06/08 07:37:46 wiz Exp $
 
 GCC_PKGNAME=	gcc14
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC14_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc14 package so that with the dependence pattern
 ## '{gcc14,gcc14-libs}>=14.1.*' pkg_add will choose gcc14-libs over gcc14.
-PKGREVISION=	3
+PKGREVISION=	1
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty

@@ -1,11 +1,11 @@
-$NetBSD: patch-gcc_common_config_aarch64_aarch64-common.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_common_config_aarch64_aarch64-common.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/common/config/aarch64/aarch64-common.cc
+--- gcc/common/config/aarch64/aarch64-common.cc.orig	2025-05-23 11:02:04.268197144 +0000
 +++ gcc/common/config/aarch64/aarch64-common.cc
-@@ -298,8 +298,12 @@ aarch64_get_extension_string_for_isa_flags
-
+@@ -298,8 +298,12 @@ aarch64_get_extension_string_for_isa_fla
+ 
       However, assemblers with Armv8-R AArch64 support should not have this
       issue, so we don't need this fix when targeting Armv8-R.  */
 -  auto explicit_flags = (!(current_flags & AARCH64_FL_V8R)
@@ -16,10 +16,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#else
 +     0;
 +#endif
-
+ 
    /* Add the features in isa_flags & ~current_flags using the smallest
       possible number of extensions.  We can do this by iterating over the
-@@ -329,7 +333,10 @@ aarch64_get_extension_string_for_isa_flags
+@@ -329,7 +333,10 @@ aarch64_get_extension_string_for_isa_fla
      if (added & opt.flag_canonical)
        {
  	outstr += "+";
@@ -29,9 +29,9 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	else
 +	  outstr += opt.name;
        }
-
+ 
    /* Remove the features in current_flags & ~isa_flags.  If the feature does
-@@ -358,7 +365,10 @@ aarch64_get_extension_string_for_isa_flags
+@@ -358,7 +365,10 @@ aarch64_get_extension_string_for_isa_fla
  	{
  	  current_flags &= ~opt.flags_off;
  	  outstr += "+no";
@@ -42,3 +42,4 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	    outstr += opt.name;
  	}
      }
+ 

@@ -1,3 +1,3 @@
-# $NetBSD: version.mk,v 1.2 2024/08/02 07:44:51 wiz Exp $
+# $NetBSD: version.mk,v 1.3 2025/06/08 07:37:45 wiz Exp $
 
-GCC14_DIST_VERSION:=	14.2.0
+GCC14_DIST_VERSION:=	14.3.0
