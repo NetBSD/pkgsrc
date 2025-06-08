@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.119 2024/12/14 12:42:59 wiz Exp $
+$NetBSD: distinfo,v 1.120 2025/06/08 15:43:37 wiz Exp $
 
-BLAKE2s (libdrm-2.4.124.tar.xz) = 4dacc849278a3e199504072b0f128b9eaf146ceb3eb47c822a448ef8cb388bbb
-SHA512 (libdrm-2.4.124.tar.xz) = 0408c3ae5780c57d19321a9a7b046d656e252b2f48e520b2beb18f83495bea39c445deb9a9a6795b46194051c2ea4da476e08c63972daf841064099df6dff365
-Size (libdrm-2.4.124.tar.xz) = 481244 bytes
+BLAKE2s (libdrm-2.4.125.tar.xz) = ade21b49599db082a27c9c860936d6d709df8e650ca82dbfd15723a59d5aeea8
+SHA512 (libdrm-2.4.125.tar.xz) = faad141f48a49915c0312eb635df76968f0f4d41bb6851be625a7ae0e24826e7283b5ec9ec3b09ead9a96297bf42221c411288f9b000c3dbc159ed8dde93a7e4
+Size (libdrm-2.4.125.tar.xz) = 485592 bytes
 SHA1 (patch-ac) = 8c5ca991174e3673e17cd67aa8d1e58c2f8907d8
 SHA1 (patch-amdgpu_amdgpu__cs.c) = b48780dd51d1386e194c8142702605380ceefb7d
 SHA1 (patch-include_drm_drm.h) = fb28cb7fee68f773275c8b5572c3bd231cbb88d9
