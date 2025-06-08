@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3814 2025/06/08 16:46:13 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3815 2025/06/08 16:47:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5697,3 +5697,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-io-event to 1.10.2 [taca 2025-06-08]
 	Updated devel/ruby-io-like to 0.4.0 [taca 2025-06-08]
 	Updated devel/ruby-console to 1.31.0 [taca 2025-06-08]
+	Updated www/ruby-aws-partitions to 1.1113.0 [taca 2025-06-08]
