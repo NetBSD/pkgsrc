@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25874 2025/06/08 07:45:03 wiz Exp $
+$NetBSD: TODO,v 1.25875 2025/06/08 07:47:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1121,7 +1121,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
-	o py-sip-qt6-13.10.2
 	o py-sip6-6.11.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
