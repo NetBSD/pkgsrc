@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3806 2025/06/08 07:47:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3807 2025/06/08 08:02:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5689,3 +5689,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-libjit to 14.3.0 [wiz 2025-06-08]
 	Updated multimedia/assimp to 6.0.1 [wiz 2025-06-08]
 	Updated x11/py-sip-qt6 to 13.10.2 [wiz 2025-06-08]
+	Added devel/py-pgzero version 1.2.1 [wiz 2025-06-08]
