@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/06/08 08:02:01 wiz Exp $
+
+BLAKE2s (pgzero-1.2.1.tar.gz) = 0d071ad370e40d669d3c18bd7219650509dada5f712e3c491ba5bc38739ddc0f
+SHA512 (pgzero-1.2.1.tar.gz) = d78219f266651a6d0c18a4630b982f1462707fd312494aa7286580be2bf3bdbc3a6beec00a460af38d5ce5ea147e81752d6be7a4618772398712d9dbbbd2b506
+Size (pgzero-1.2.1.tar.gz) = 2250608 bytes
