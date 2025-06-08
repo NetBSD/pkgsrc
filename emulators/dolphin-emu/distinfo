@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:23:48 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/06/08 23:54:35 nia Exp $
 
 BLAKE2s (dolphin-emu-5.0.tar.gz) = ceec308ace0877748d49e954798a71f9262e2af537ada0a88e59c887adf1b904
 SHA512 (dolphin-emu-5.0.tar.gz) = 8de76f811abfb82e19502336734e86ba600c11d9fa95bcf7f70a2a525165d07ead826854c39377602aab7856a057af9ba91bff458cf2dd008712527290489d3a
 Size (dolphin-emu-5.0.tar.gz) = 38246344 bytes
 SHA1 (patch-CMakeLists.txt) = e6f8d72d53ea930306dfb7a879608c3d3ab946aa
 SHA1 (patch-Externals_SFML_include_SFML_Config.hpp) = 75ece2ce86b54b219a80d6ff028ecc80a00454f5
+SHA1 (patch-Source_Core_AudioCommon_OpenALStream.cpp) = 9a535d8c456667cbd377295142ab6948f28c4907
 SHA1 (patch-Source_Core_Common_FileUtil.cpp) = 27b859714e294abbfb3f468928e22b30abfd0099
 SHA1 (patch-Source_Core_Common_MemoryUtil.cpp) = af681a3f43687f7af09c87732a7a2da8e8c58e05
 SHA1 (patch-Source_Core_Common_StringUtil.cpp) = 3a53d42ae9da1d50c0693bd222cb20be9ebe5a16
