@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3819 2025/06/08 22:51:29 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3820 2025/06/08 22:51:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5704,4 +5704,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.12.11 [adam 2025-06-08]
 	Updated textproc/py-openapi-spec-validator to 0.7.2 [adam 2025-06-08]
 	Updated devel/py-ruamel-yaml to 0.18.13 [adam 2025-06-08]
+	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
 	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
