@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_config_aarch64_driver-aarch64.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_aarch64_driver-aarch64.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/driver-aarch64.cc
+--- gcc/config/aarch64/driver-aarch64.cc.orig	2025-05-23 11:02:04.288197457 +0000
 +++ gcc/config/aarch64/driver-aarch64.cc
 @@ -28,6 +28,74 @@
  #include "aarch64-protos.h"
  #include "aarch64-feature-deps.h"
-
+ 
 +#if TARGET_MACHO
 +# include <sys/types.h>
 +# include <sys/sysctl.h>
@@ -79,8 +79,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  struct aarch64_arch_extension
  {
    const char *ext;
-@@ -477,3 +545,4 @@ not_found:
+@@ -501,3 +569,4 @@ not_found:
    }
  }
-
+ 
 +#endif

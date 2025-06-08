@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64.opt,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64.opt,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64.opt
+--- gcc/config/aarch64/aarch64.opt.orig	2025-05-23 11:02:04.284197394 +0000
 +++ gcc/config/aarch64/aarch64.opt
-@@ -193,6 +193,13 @@ Enum(aarch64_abi) String(ilp32) Value(AARCH64_ABI_ILP32)
+@@ -193,6 +193,13 @@ Enum(aarch64_abi) String(ilp32) Value(AA
  EnumValue
  Enum(aarch64_abi) String(lp64) Value(AARCH64_ABI_LP64)
-
+ 
 +EnumValue
 +Enum(aarch64_abi) String(darwinpcs) Value(AARCH64_ABI_LP64)
 +

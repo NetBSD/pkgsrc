@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2025/02/05 16:30:34 adam Exp $
+$NetBSD: patch-configure,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- configure
+--- configure.orig	2025-05-23 11:03:15.437319779 +0000
 +++ configure
 @@ -3518,6 +3518,8 @@ esac
-
+ 
  # Disable libffi for some systems.
  case "${target}" in
 +  aarch64*-*-darwin2*)

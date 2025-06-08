@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64-c.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64-c.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64-c.cc
+--- gcc/config/aarch64/aarch64-c.cc.orig	2025-05-23 11:02:04.272197204 +0000
 +++ gcc/config/aarch64/aarch64-c.cc
-@@ -285,6 +285,16 @@ aarch64_cpu_cpp_builtins (cpp_reader *pfile)
+@@ -285,6 +285,16 @@ aarch64_cpu_cpp_builtins (cpp_reader *pf
  {
    aarch64_define_unconditional_macros (pfile);
    aarch64_update_cpp_builtins (pfile);
@@ -19,11 +19,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +      builtin_define ("__builtin_nansq=__builtin_nansf128");
 +    }
  }
-
+ 
  /* Hook to validate the current #pragma GCC target and set the state, and
 @@ -424,4 +434,8 @@ aarch64_register_pragmas (void)
    targetm.check_builtin_call = aarch64_check_builtin_call;
-
+ 
    c_register_pragma ("GCC", "aarch64", aarch64_pragma_aarch64);
 +
 +#ifdef REGISTER_SUBTARGET_PRAGMAS

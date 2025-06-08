@@ -1,25 +1,25 @@
-$NetBSD: patch-gcc_cp_decl2.cc,v 1.1 2025/02/05 16:30:36 adam Exp $
+$NetBSD: patch-gcc_cp_decl2.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/cp/decl2.cc
+--- gcc/cp/decl2.cc.orig	2025-05-23 11:02:04.532201307 +0000
 +++ gcc/cp/decl2.cc
-@@ -3839,9 +3839,8 @@ get_tls_init_fn (tree var)
+@@ -3858,9 +3858,8 @@ get_tls_init_fn (tree var)
    if (!flag_extern_tls_init && DECL_EXTERNAL (var))
      return NULL_TREE;
-
+ 
 -  /* If the variable is internal, or if we can't generate aliases,
 -     call the local init function directly.  */
 -  if (!TREE_PUBLIC (var) || !TARGET_SUPPORTS_ALIASES)
 +  /* If the variable is internal call the local init function directly.  */
 +  if (!TREE_PUBLIC (var))
      return get_local_tls_init_fn (DECL_SOURCE_LOCATION (var));
-
+ 
    tree sname = mangle_tls_init_fn (var);
-@@ -4005,6 +4004,25 @@ generate_tls_wrapper (tree fn)
+@@ -4024,6 +4023,25 @@ generate_tls_wrapper (tree fn)
    expand_or_defer_fn (finish_function (/*inline_p=*/false));
  }
-
+ 
 +/* A dummy init function to act as a weak placeholder for a (possibly non-
 +   existent) dynamic init.  */
 +static void
@@ -40,9 +40,9 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +}
 +
  /* Start a global constructor or destructor function.  */
-
+ 
  static tree
-@@ -4823,22 +4841,24 @@ handle_tls_init (void)
+@@ -4843,22 +4861,24 @@ handle_tls_init (void)
    finish_expr_stmt (cp_build_modify_expr (loc, guard, NOP_EXPR,
  					  boolean_true_node,
  					  tf_warning_or_error));
@@ -52,7 +52,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        tree var = TREE_VALUE (vars);
        tree init = TREE_PURPOSE (vars);
        one_static_initialization_or_destruction (/*initp=*/true, var, init);
-
+ 
 -      /* Output init aliases even with -fno-extern-tls-init.  */
 -      if (TARGET_SUPPORTS_ALIASES && TREE_PUBLIC (var))
 +      /* Output inits even with -fno-extern-tls-init.
@@ -73,8 +73,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	  direct_calls.safe_push (single_init_fn);
  	}
      }
-
-@@ -4846,6 +4866,30 @@ handle_tls_init (void)
+ 
+@@ -4866,6 +4886,30 @@ handle_tls_init (void)
    finish_if_stmt (if_stmt);
    finish_function_body (body);
    expand_or_defer_fn (finish_function (/*inline_p=*/false));
@@ -103,11 +103,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	}
 +    }
  }
-
+ 
  /* We're at the end of compilation, so generate any mangling aliases that
-@@ -5265,7 +5309,14 @@ c_parse_final_cleanups (void)
+@@ -5285,7 +5329,14 @@ c_parse_final_cleanups (void)
  	    }
-
+ 
  	  if (!DECL_INITIAL (decl) && decl_tls_wrapper_p (decl))
 -	    generate_tls_wrapper (decl);
 +	    {
@@ -118,6 +118,6 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +		 required.  */
 +	      generate_tls_dummy_init (decl);
 +	    }
-
+ 
  	  if (!DECL_SAVED_TREE (decl))
  	    continue;

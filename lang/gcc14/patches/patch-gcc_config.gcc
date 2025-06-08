@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_config.gcc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config.gcc
+--- gcc/config.gcc.orig	2025-05-23 11:02:04.272197204 +0000
 +++ gcc/config.gcc
 @@ -1177,13 +1177,22 @@ case ${target} in
    ;;
  esac
-
+ 
 -# Figure out if we need to enable heap trampolines by default
 +# Figure out if we need to enable heap trampolines
 +# and variadic functions handling.
@@ -28,7 +28,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    tm_defines="$tm_defines HEAP_TRAMPOLINES_INIT=0"
    ;;
  esac
-@@ -1227,6 +1236,14 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | aarch64*-*-rtems*)
+@@ -1227,6 +1236,14 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | a
  	done
  	TM_MULTILIB_CONFIG=`echo $TM_MULTILIB_CONFIG | sed 's/^,//'`
  	;;

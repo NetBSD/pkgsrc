@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_cp_parser.cc,v 1.1 2025/02/05 16:30:36 adam Exp $
+$NetBSD: patch-gcc_cp_parser.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/cp/parser.cc
+--- gcc/cp/parser.cc.orig	2025-05-23 11:02:04.548201561 +0000
 +++ gcc/cp/parser.cc
-@@ -705,6 +705,91 @@ cp_lexer_handle_early_pragma (cp_lexer *lexer)
+@@ -705,6 +705,91 @@ cp_lexer_handle_early_pragma (cp_lexer *
  static cp_parser *cp_parser_new (cp_lexer *);
  static GTY (()) cp_parser *the_parser;
-
+ 
 +/* Context-sensitive parse-checking for clang-style attributes.  */
 +
 +enum clang_attr_state {
@@ -95,20 +95,20 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  /* Create a new main C++ lexer, the lexer that gets tokens from the
     preprocessor, and also create the main parser.  */
-
+ 
 @@ -721,6 +806,8 @@ cp_lexer_new_main (void)
    c_common_no_more_pch ();
-
+ 
    cp_lexer *lexer = cp_lexer_alloc ();
 +  enum clang_attr_state attr_state = CA_NONE;
 +
    /* Put the first token in the buffer.  */
    cp_token *tok = lexer->buffer->quick_push (token);
-
+ 
 @@ -744,8 +831,14 @@ cp_lexer_new_main (void)
        if (tok->type == CPP_PRAGMA_EOL)
  	cp_lexer_handle_early_pragma (lexer);
-
+ 
 +      attr_state = cp_lexer_attribute_state (*tok, attr_state);
        tok = vec_safe_push (lexer->buffer, cp_token ());
 -      cp_lexer_get_preprocessor_token (C_LEX_STRING_NO_JOIN, tok);
@@ -119,18 +119,18 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	flags |= C_LEX_NUMBER_AS_STRING;
 +      cp_lexer_get_preprocessor_token (flags, tok);
      }
-
+ 
    lexer->next_token = lexer->buffer->address ();
-@@ -962,7 +1055,7 @@ cp_lexer_get_preprocessor_token (unsigned flags, cp_token *token)
+@@ -962,7 +1055,7 @@ cp_lexer_get_preprocessor_token (unsigne
  {
    static int is_extern_c = 0;
-
+ 
 -   /* Get a new token from the preprocessor.  */
 +   /* Get a new token from the preprocessor. */
    token->type
      = c_lex_with_flags (&token->u.value, &token->location, &token->flags,
  			flags);
-@@ -23348,9 +23441,16 @@ cp_parser_init_declarator (cp_parser* parser,
+@@ -23390,9 +23483,16 @@ cp_parser_init_declarator (cp_parser* pa
  		      "an %<asm%> specification is not allowed "
  		      "on a function-definition");
  	  if (attributes)
@@ -149,11 +149,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	    }
  	  /* This is a function-definition.  */
  	  *function_definition_p = true;
-
-@@ -29707,6 +29807,91 @@ cp_parser_gnu_attributes_opt (cp_parser* parser)
+ 
+@@ -29781,6 +29881,91 @@ cp_parser_gnu_attributes_opt (cp_parser*
    return attributes;
  }
-
+ 
 +/* Parse the arguments list for a clang attribute.   */
 +static tree
 +cp_parser_clang_attribute (cp_parser *parser, tree/*attr_id*/)
@@ -240,10 +240,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +}
 +
  /* Parse a GNU attribute-list.
-
+ 
     attribute-list:
-@@ -29766,9 +29951,12 @@ cp_parser_gnu_attribute_list (cp_parser* parser, bool exactly_one /* = false */)
-
+@@ -29840,9 +30025,12 @@ cp_parser_gnu_attribute_list (cp_parser*
+ 
  	  /* Peek at the next token.  */
  	  token = cp_lexer_peek_token (parser->lexer);
 -	  /* If it's an `(', then parse the attribute arguments.  */
@@ -257,14 +257,14 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	      vec<tree, va_gc> *vec;
  	      int attr_flag = (attribute_takes_identifier_p (identifier)
  			       ? id_attr : normal_attr);
-@@ -29785,12 +29973,12 @@ cp_parser_gnu_attribute_list (cp_parser* parser, bool exactly_one /* = false */)
+@@ -29859,12 +30047,12 @@ cp_parser_gnu_attribute_list (cp_parser*
  		  arguments = build_tree_list_vec (vec);
  		  release_tree_vector (vec);
  		}
 -	      /* Save the arguments away.  */
 -	      TREE_VALUE (attribute) = arguments;
  	    }
-
+ 
  	  if (arguments != error_mark_node)
  	    {
 +	      /* Save the arguments away.  */

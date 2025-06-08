@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64-builtins.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64-builtins.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64-builtins.cc
+--- gcc/config/aarch64/aarch64-builtins.cc.orig	2025-05-23 11:02:04.272197204 +0000
 +++ gcc/config/aarch64/aarch64-builtins.cc
 @@ -788,6 +788,8 @@ enum aarch64_builtins
    AARCH64_PLDX,
@@ -12,11 +12,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  AARCH64_BUILTIN_CFSTRING,
    AARCH64_BUILTIN_MAX
  };
-
-@@ -887,6 +889,9 @@ tree aarch64_fp16_ptr_type_node = NULL_TREE;
+ 
+@@ -887,6 +889,9 @@ tree aarch64_fp16_ptr_type_node = NULL_T
  /* Back-end node type for brain float (bfloat) types.  */
  tree aarch64_bf16_ptr_type_node = NULL_TREE;
-
+ 
 +/* Pointer to __float128 on Mach-O, where the 128b float is not long double.  */
 +tree aarch64_float128_ptr_type_node = NULL_TREE;
 +
@@ -26,7 +26,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 @@ -1662,6 +1667,29 @@ aarch64_init_bf16_types (void)
    aarch64_bf16_ptr_type_node = build_pointer_type (bfloat16_type_node);
  }
-
+ 
 +/* Initialize the backend REAL_TYPE type supporting __float128 on Mach-O,
 +   as well as the related built-ins.  */
 +static void
@@ -52,22 +52,22 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  /* Pointer authentication builtins that will become NOP on legacy platform.
     Currently, these builtins are for internal use only (libgcc EH unwinder).  */
-
-@@ -2047,8 +2075,9 @@ aarch64_general_init_builtins (void)
+ 
+@@ -2044,8 +2072,9 @@ aarch64_general_init_builtins (void)
    aarch64_init_fpsr_fpcr_builtins ();
-
+ 
    aarch64_init_fp16_types ();
 -
    aarch64_init_bf16_types ();
 +  if (TARGET_MACHO)
 +    aarch64_init_float128_types ();
-
+ 
    {
      aarch64_simd_switcher simd;
-@@ -2088,6 +2117,14 @@ aarch64_general_init_builtins (void)
+@@ -2079,6 +2108,14 @@ aarch64_general_init_builtins (void)
      handle_arm_acle_h ();
  }
-
+ 
 +void
 +aarch64_init_subtarget_builtins (void)
 +{
