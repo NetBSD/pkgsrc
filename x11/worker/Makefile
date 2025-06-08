@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2025/06/06 16:34:18 vins Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/08 10:15:05 vins Exp $
 
 DISTNAME=	worker-5.2.1
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 EXTRACT_SUFX=	.tar.zst
 
-MAINTAINER=	dvollen@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org	
 HOMEPAGE=	http://www.boomerangsworld.de/cms/worker/downloads/
 COMMENT=	Orthodox file manager for the X Window System
 LICENSE=	gnu-gpl-v2
