@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2025/03/30 21:10:47 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2025/06/08 06:04:16 wiz Exp $
 
-DISTNAME=	IO-Socket-SSL-2.089
+DISTNAME=	IO-Socket-SSL-2.090
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
@@ -18,6 +17,9 @@ DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IO/Socket/SSL/.packlist
+
+# as of 2.090, needs network access for t/external/ocsp.t
+#ALLOW_NETWORK_ACCESS=	yes
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
