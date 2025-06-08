@@ -1,0 +1,5 @@
+A zero-boilerplate games programming framework for Python 3, based
+on Pygame.
+
+Pygame Zero consists of a runner ``pgzrun`` that will run a Pygame
+Zero script with a full game loop and a range of useful builtins.
