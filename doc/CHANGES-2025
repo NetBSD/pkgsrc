@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3812 2025/06/08 16:38:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3813 2025/06/08 16:41:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php84 to 8.4.8 [taca 2025-06-08]
 	Updated lang/php83 to 8.3.22 [taca 2025-06-08]
 	Updated devel/ruby-io-event to 1.10.2 [taca 2025-06-08]
+	Updated devel/ruby-io-like to 0.4.0 [taca 2025-06-08]
