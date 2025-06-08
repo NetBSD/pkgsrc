@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/11/09 18:55:58 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/06/08 18:11:16 adam Exp $
 
-BLAKE2s (openapi_spec_validator-0.7.1.tar.gz) = 20b5110b20c4757cf001394e600599e2303960c83b774f9a400978d51034f79d
-SHA512 (openapi_spec_validator-0.7.1.tar.gz) = c2a4be4a945058a4e77857bf0d6dabf2bef27c25fbe72947db3ac011c5a60d2d0159ef0d1d44571152c5ffdc650f7d3d6c54f82834e499e9506fb474b7c9b270
-Size (openapi_spec_validator-0.7.1.tar.gz) = 37985 bytes
+BLAKE2s (openapi_spec_validator-0.7.2.tar.gz) = 4cbd8690f378dd1754d08c6219da78ab3faedd07412752d8c2cb3f0c147b971f
+SHA512 (openapi_spec_validator-0.7.2.tar.gz) = 83ca3f7c731680962c113a0982592842cc42df4f7f5f21bcbd9ba28c1c7b5376fe8197c43b15b0b34bf506b6ba59eb928aa5b73372c7395da7c950fb4cdc1584
+Size (openapi_spec_validator-0.7.2.tar.gz) = 36855 bytes
