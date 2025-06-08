@@ -1,12 +1,12 @@
-$NetBSD: patch-gcc_config_darwin-protos.h,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_darwin-protos.h,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/darwin-protos.h
+--- gcc/config/darwin-protos.h.orig	2025-05-23 11:02:04.332198151 +0000
 +++ gcc/config/darwin-protos.h
 @@ -86,9 +86,12 @@ extern void darwin_asm_lto_end (void);
  extern void darwin_mark_decl_preserved (const char *);
-
+ 
  extern tree darwin_handle_kext_attribute (tree *, tree, tree, int, bool *);
 -extern tree darwin_handle_weak_import_attribute (tree *node, tree name,
 -						 tree args, int flags,
@@ -20,7 +20,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  extern void machopic_output_stub (FILE *, const char *, const char *);
  extern void darwin_globalize_label (FILE *, const char *);
  extern void darwin_assemble_visibility (tree, int);
-@@ -124,6 +127,7 @@ extern void darwin_enter_string_into_cfstring_table (tree);
+@@ -124,6 +127,7 @@ extern void darwin_enter_string_into_cfs
  extern void darwin_asm_output_anchor (rtx symbol);
  extern bool darwin_use_anchors_for_symbol_p (const_rtx symbol);
  extern bool darwin_kextabi_p (void);

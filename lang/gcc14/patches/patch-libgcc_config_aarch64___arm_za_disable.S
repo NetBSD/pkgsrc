@@ -1,22 +1,22 @@
-$NetBSD: patch-libgcc_config_aarch64___arm_za_disable.S,v 1.1 2025/02/05 16:30:37 adam Exp $
+$NetBSD: patch-libgcc_config_aarch64___arm_za_disable.S,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libgcc/config/aarch64/__arm_za_disable.S
+--- libgcc/config/aarch64/__arm_za_disable.S.orig	2025-05-23 11:02:08.168258662 +0000
 +++ libgcc/config/aarch64/__arm_za_disable.S
 @@ -31,16 +31,33 @@
     - Does not return a value.
     - Can abort on failure (then registers are not preserved).  */
-
+ 
 -HIDDEN (__aarch64_have_sme)
 +HIDDEN (ASMNAME(__aarch64_have_sme))
-
+ 
 -HIDDEN (__libgcc_arm_tpidr2_save)
 +HIDDEN (ASMNAME(__libgcc_arm_tpidr2_save))
-
+ 
 -variant_pcs (__arm_za_disable)
 +variant_pcs (ASMNAME(__arm_za_disable))
-
+ 
 -ENTRY (__arm_za_disable)
 +GLOBAL (ASMNAME (__libgcc_arm_za_disable))
 +HIDDEN (ASMNAME (__libgcc_arm_za_disable))
@@ -42,7 +42,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	ldrb	w14, [x14, :lo12:ASMNAME (__aarch64_have_sme)]
 +#endif
  	cbz	w14, L(end)
-
+ 
  	.inst	0xd53bd0ae  /* mrs	x14, tpidr2_el0  */
 @@ -52,7 +69,7 @@ ENTRY (__arm_za_disable)
  	.cfi_rel_offset x29, 0
@@ -59,7 +59,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	ret
 -END (__arm_za_disable)
 +ENDm ASMNAME(__arm_za_disable)
-
+ 
 -/* Hidden alias used by the unwinder.  */
 -.global __libgcc_arm_za_disable
 -HIDDEN (__libgcc_arm_za_disable)

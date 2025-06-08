@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_c_c-parser.cc,v 1.1 2025/02/05 16:30:34 adam Exp $
+$NetBSD: patch-gcc_c_c-parser.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/c/c-parser.cc
+--- gcc/c/c-parser.cc.orig	2025-05-23 11:02:04.256196953 +0000
 +++ gcc/c/c-parser.cc
 @@ -217,6 +217,9 @@ struct GTY(()) c_parser {
       should translate them to the execution character set (false
@@ -11,11 +11,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  /* True if we want to lex arbitrary number-like sequences as their
 +     string representation.  */
 +  BOOL_BITFIELD lex_number_as_string : 1;
-
+ 
    /* Objective-C specific parser/lexer information.  */
-
-@@ -308,10 +311,10 @@ c_lex_one_token (c_parser *parser, c_token *token, bool raw = false)
-
+ 
+@@ -308,10 +311,10 @@ c_lex_one_token (c_parser *parser, c_tok
+ 
    if (raw || vec_safe_length (parser->raw_tokens) == 0)
      {
 +      int lex_flags = parser->lex_joined_string ? 0 : C_LEX_STRING_NO_JOIN;
@@ -28,7 +28,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        token->id_kind = C_ID_NONE;
        token->keyword = RID_MAX;
        token->pragma_kind = PRAGMA_NONE;
-@@ -2579,15 +2582,28 @@ c_parser_declaration_or_fndef (c_parser *parser, bool fndef_ok,
+@@ -2579,15 +2582,28 @@ c_parser_declaration_or_fndef (c_parser 
  	    d = d->declarator;
  	  underspec_name = d->u.id.id;
  	}
@@ -58,7 +58,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  if (!diagnosed_no_specs && !specs->declspecs_seen_p)
  	    {
  	      diagnosed_no_specs = true;
-@@ -2599,8 +2615,9 @@ c_parser_declaration_or_fndef (c_parser *parser, bool fndef_ok,
+@@ -2599,8 +2615,9 @@ c_parser_declaration_or_fndef (c_parser 
  	  if (c_parser_next_token_is_keyword (parser, RID_ASM))
  	    asm_name = c_parser_simple_asm_expr (parser);
  	  if (c_parser_next_token_is_keyword (parser, RID_ATTRIBUTE))
@@ -69,10 +69,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	      if (c_parser_next_token_is (parser, CPP_OPEN_BRACE))
  		{
  		  /* This means there is an attribute specifier after
-@@ -5213,6 +5230,88 @@ c_parser_gnu_attribute_any_word (c_parser *parser)
+@@ -5213,6 +5230,88 @@ c_parser_gnu_attribute_any_word (c_parse
    return attr_name;
  }
-
+ 
 +/* Handle parsing clang-form attribute arguments, where we need to adjust
 +   the parsing rules to relate to a specific attribute.  */
 +
@@ -157,14 +157,14 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  /* Parse attribute arguments.  This is a common form of syntax
     covering all currently valid GNU and standard attributes.
-
-@@ -5378,9 +5477,13 @@ c_parser_gnu_attribute (c_parser *parser, tree attrs,
+ 
+@@ -5378,9 +5477,13 @@ c_parser_gnu_attribute (c_parser *parser
        attrs = chainon (attrs, attr);
        return attrs;
      }
 -  c_parser_consume_token (parser);
 +  c_parser_consume_token (parser); /* The '('.  */
-
+ 
 -  tree attr_args
 +  tree attr_args;
 +  if (attribute_clang_form_p (attr_name))

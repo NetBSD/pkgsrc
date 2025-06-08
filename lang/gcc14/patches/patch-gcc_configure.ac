@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_configure.ac,v 1.1 2025/02/05 16:30:36 adam Exp $
+$NetBSD: patch-gcc_configure.ac,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/configure.ac
+--- gcc/configure.ac.orig	2025-05-23 11:02:04.504200864 +0000
 +++ gcc/configure.ac
 @@ -235,18 +235,17 @@ gcc_gxx_libcxx_include_dir=
  AC_ARG_WITH(gxx-libcxx-include-dir,
@@ -13,7 +13,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 -*)	gcc_gxx_libcxx_include_dir=$with_gxx_libcxx_include_dir ;;
 -esac])
 +[gcc_gxx_libcxx_include_dir=$with_gxx_libcxx_include_dir])
-
+ 
  # --with-gxx-libcxx-include-dir controls the enabling of the -stdlib option.
  # if --with-gxx-libcxx-include-dir is 'no' we disable the stdlib option.
 +# if --with-gxx-libcxx-include-dir is 'yes' we enable the stdlib option and use
@@ -35,10 +35,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    if test x${gcc_gxx_libcxx_include_dir} = xno; then
 -    # set defaults for the dir, but the option is disabled anyway.
 +    # set defaults for the dir, but the option is disabled anyway.
-     gcc_gxx_libcxx_include_dir=
++    gcc_gxx_libcxx_include_dir=
 +  elif test x${gcc_gxx_libcxx_include_dir} = xyes; then
 +    # set defaults for the dir, and enable.
-+    gcc_gxx_libcxx_include_dir=
+     gcc_gxx_libcxx_include_dir=
 +    gcc_enable_stdlib_opt=1
    else
      gcc_enable_stdlib_opt=1
@@ -53,9 +53,9 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
         # self-contained toolchain.
         gcc_enable_stdlib_opt=1
         ;;
-@@ -2817,7 +2820,15 @@ fi
+@@ -2832,7 +2835,15 @@ fi
  AC_MSG_RESULT($gold_non_default)
-
+ 
  ORIGINAL_LD_FOR_TARGET=$gcc_cv_ld
 +if test x"$ld64_flag" = x"yes"; then
 +ORIGINAL_LLD_FOR_TARGET=${gcc_cv_ld}64.lld
