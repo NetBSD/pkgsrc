@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3817 2025/06/08 16:50:23 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3818 2025/06/08 18:12:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5700,3 +5700,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-partitions to 1.1113.0 [taca 2025-06-08]
 	Updated www/ruby-aws-sdk-core to 3.225.1 [taca 2025-06-08]
 	Updated www/ruby-aws-sdk-kms to 1.104.0 [taca 2025-06-08]
+	Updated multimedia/libass to 0.17.4 [adam 2025-06-08]
+	Updated www/py-aiohttp to 3.12.11 [adam 2025-06-08]
+	Updated textproc/py-openapi-spec-validator to 0.7.2 [adam 2025-06-08]
+	Updated devel/py-ruamel-yaml to 0.18.13 [adam 2025-06-08]
