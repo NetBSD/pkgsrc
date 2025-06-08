@@ -1,15 +1,15 @@
-$NetBSD: patch-src_core_qgsapplication.cpp,v 1.4 2021/03/01 00:03:35 gdt Exp $
+$NetBSD: patch-src_core_qgsapplication.cpp,v 1.5 2025/06/08 22:51:22 gdt Exp $
 
 Only assume we are running from a Mac OS application bundle
 if the binary is in a directory ending in "/Contents/MacOS"
 
---- src/core/qgsapplication.cpp.orig	2021-02-19 12:09:21.000000000 +0000
+--- src/core/qgsapplication.cpp.orig	2025-05-16 12:02:00.000000000 +0000
 +++ src/core/qgsapplication.cpp
-@@ -279,8 +279,18 @@ void QgsApplication::init( QString profi
+@@ -353,8 +353,18 @@ void QgsApplication::init( QString profi
      {
        if ( sPrefixPath()->isNull() )
        {
--#if defined(Q_OS_MACX) || defined(Q_OS_WIN)
+-#if defined(Q_OS_MACOS) || defined(Q_OS_WIN)
 +#if defined(Q_OS_WIN)
          setPrefixPath( applicationDirPath(), true );
 +#elif defined(Q_OS_MACX)

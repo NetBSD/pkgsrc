@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.244 2025/06/08 13:27:04 gdt Exp $
+# $NetBSD: Makefile,v 1.245 2025/06/08 22:51:21 gdt Exp $
 
-# This is intentionally 3.34 Long Term Release.  Please do not update
+# This is intentionally 3.40 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions, or to only track one LTR branch.
-DISTNAME=	qgis-3.34.15
-PKGREVISION=	8
+DISTNAME=	qgis-3.40.7
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -52,7 +51,7 @@ SUBST_NOOP_OK.xapple=	yes # since SUBST_FILES is generated
 SUBST_CLASSES+=		pyqt
 SUBST_STAGE.pyqt=	pre-configure
 SUBST_MESSAGE.pyqt=	Use correct python version for PyQt5 programs
-SUBST_FILES.pyqt=	cmake/PyQtMacros.cmake cmake/FindPyQt5.cmake
+SUBST_FILES.pyqt=	cmake/FindPyQt5.cmake
 SUBST_SED.pyqt+=	-e '/^ *SET/s,pyuic5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/^ *SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
