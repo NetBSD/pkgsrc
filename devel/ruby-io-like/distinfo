@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:35 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/06/08 16:41:07 taca Exp $
 
-BLAKE2s (io-like-0.3.1.gem) = 29526175defbbffe7972437c34875d86ffe101a06b63ce4b41bb5c6c5c3f002a
-SHA512 (io-like-0.3.1.gem) = 0c53bd5d7ba87c7de06a96708150592851e02313fd29d724a21289e28c0739df57b7f792725c1cfbbd1ccc853dff1a638620f081cb355d7d27fec4c2dcf11c5e
-Size (io-like-0.3.1.gem) = 34304 bytes
+BLAKE2s (io-like-0.4.0.gem) = fe704fa43b259f3534d7b41c15dd0bb014d57b47aaa0a7bd4b7c65904e5435f7
+SHA512 (io-like-0.4.0.gem) = 05b025f84dccc860c1293d93ba34e23d77c046532592d4c254e1e0afa0d87e5863fc3c96a4eb06f625824e21705840ba0105dd3a6ff23200411e62e0ba7e4dcc
+Size (io-like-0.4.0.gem) = 37376 bytes
