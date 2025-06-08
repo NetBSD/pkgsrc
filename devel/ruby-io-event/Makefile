@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/05/26 14:58:37 taca Exp $
+# $NetBSD: Makefile,v 1.29 2025/06/08 16:38:38 taca Exp $
 
-DISTNAME=	io-event-1.10.1
+DISTNAME=	io-event-1.10.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
