@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2025/02/16 23:28:13 nia Exp $
+$NetBSD: distinfo,v 1.22.2.1 2025/06/08 22:21:55 maya Exp $
 
-BLAKE2s (mariadb-10.6.21.tar.gz) = fa1ad8a841c5fe61250696fa7d5fc38e9fa7831abc9f97e17c1e9d1a28e47612
-SHA512 (mariadb-10.6.21.tar.gz) = fe74a6fbf409723d69b35481a57d00fb04a2c560ad503ae50ff7b9d41b650dda32fe997c50303428e79a546e5c7fe91872fe3436cc3b7323f13a7138e04f5a53
-Size (mariadb-10.6.21.tar.gz) = 103982296 bytes
+BLAKE2s (mariadb-10.6.22.tar.gz) = 21da01b328e66dfaa8975a452d4640d11eabb014881230a7d811ff5afeb02dd5
+SHA512 (mariadb-10.6.22.tar.gz) = 418bf55d3bd2d8ec2dbe5cd626fa1a11419d6cd5a5241d8b26bfe368bf5ec5b4dcc505d59da1b4cf35f0f1cda3c42c3fdda9ae4be68cdc0402900d5443fe4f31
+Size (mariadb-10.6.22.tar.gz) = 104020772 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = bb5e35aea168a7f6a15bff0aa3aa179470bb693b
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
