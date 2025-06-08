@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2024/08/25 06:18:40 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2025/06/08 23:54:35 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.dolphin-emu
 PKG_SUPPORTED_OPTIONS=		alsa libao llvm openal portaudio pulseaudio
-PKG_SUGGESTED_OPTIONS+=		alsa libao
+
+PKG_SUGGESTED_OPTIONS.Linux=	alsa
+PKG_SUGGESTED_OPTIONS=		openal
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2025/04/24 14:13:48 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2025/06/08 23:54:35 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
-PKGREVISION=	61
+PKGREVISION=	62
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dolphin-emu/}
 GITHUB_PROJECT=	dolphin
@@ -34,6 +34,11 @@ BROKEN_ON_PLATFORM+=	SunOS-*-*
 
 .if ${MACHINE_ARCH} != "x86_64"
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_GENERIC=1
+.endif
+
+.include "../../mk/compiler.mk"
+.if ${CC_VERSION:Mgcc-*}
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 .endif
 
 # "Couldn't find libevdev and/or libudev.  Can't build evdev controller backend."
