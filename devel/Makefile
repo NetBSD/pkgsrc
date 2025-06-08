@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4478 2025/05/26 15:39:48 taca Exp $
+# $NetBSD: Makefile,v 1.4479 2025/06/08 08:02:13 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2845,6 +2845,7 @@ SUBDIR+=	py-pep517
 SUBDIR+=	py-pep621
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
+SUBDIR+=	py-pgzero
 SUBDIR+=	py-pip
 SUBDIR+=	py-pip-api
 SUBDIR+=	py-pip-requirements-parser
