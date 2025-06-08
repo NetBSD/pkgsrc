@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3803 2025/06/08 07:38:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3804 2025/06/08 07:38:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5686,3 +5686,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Mozilla-CA to 20250602 [wiz 2025-06-08]
 	Updated lang/gcc14 to 14.3.0 [wiz 2025-06-08]
 	Updated lang/gcc14-libs to 14.3.0nb1 [wiz 2025-06-08]
+	Updated lang/gcc14-libjit to 14.3.0 [wiz 2025-06-08]
