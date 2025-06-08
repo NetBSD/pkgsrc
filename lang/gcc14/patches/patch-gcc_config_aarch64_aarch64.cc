@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64.cc
+--- gcc/config/aarch64/aarch64.cc.orig	2025-05-23 11:02:04.284197394 +0000
 +++ gcc/config/aarch64/aarch64.cc
-@@ -329,8 +329,10 @@ static bool aarch64_vfp_is_call_or_return_candidate (machine_mode,
+@@ -329,8 +329,10 @@ static bool aarch64_vfp_is_call_or_retur
  						     const_tree,
  						     machine_mode *, int *,
  						     bool *, bool);
@@ -15,7 +15,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  static void aarch64_override_options_after_change (void);
  static bool aarch64_vector_mode_supported_p (machine_mode);
  static int aarch64_address_cost (rtx, machine_mode, addr_space_t, bool);
-@@ -848,6 +850,9 @@ static const attribute_spec aarch64_gnu_attributes[] =
+@@ -849,6 +851,9 @@ static const attribute_spec aarch64_gnu_
  {
    /* { name, min_len, max_len, decl_req, type_req, fn_type_req,
         affects_type_identity, handler, exclude } */
@@ -25,7 +25,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    { "aarch64_vector_pcs", 0, 0, false, true,  true,  true,
  			  handle_aarch64_vector_pcs_attribute, NULL },
    { "arm_sve_vector_bits", 1, 1, false, true,  false, true,
-@@ -2067,7 +2072,7 @@ aarch64_hard_regno_mode_ok (unsigned regno, machine_mode mode)
+@@ -2068,7 +2073,7 @@ aarch64_hard_regno_mode_ok (unsigned reg
        if (known_le (GET_MODE_SIZE (mode), 8))
  	return true;
        if (known_le (GET_MODE_SIZE (mode), 16))
@@ -34,7 +34,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
    else if (FP_REGNUM_P (regno))
      {
-@@ -2113,8 +2118,10 @@ static bool
+@@ -2114,8 +2119,10 @@ static bool
  aarch64_takes_arguments_in_sve_regs_p (const_tree fntype)
  {
    CUMULATIVE_ARGS args_so_far_v;
@@ -44,9 +44,9 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 -				NULL_TREE, 0, true);
 +				NULL_TREE, -1, true);
    cumulative_args_t args_so_far = pack_cumulative_args (&args_so_far_v);
-
+ 
    for (tree chain = TYPE_ARG_TYPES (fntype);
-@@ -2861,6 +2868,7 @@ aarch64_load_symref_appropriately (rtx dest, rtx imm,
+@@ -2863,6 +2870,7 @@ aarch64_load_symref_appropriately (rtx d
    switch (type)
      {
      case SYMBOL_SMALL_ABSOLUTE:
@@ -54,10 +54,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        {
  	/* In ILP32, the mode of dest can be either SImode or DImode.  */
  	rtx tmp_reg = dest;
-@@ -2871,6 +2879,21 @@ aarch64_load_symref_appropriately (rtx dest, rtx imm,
+@@ -2873,6 +2881,21 @@ aarch64_load_symref_appropriately (rtx d
  	if (can_create_pseudo_p ())
  	  tmp_reg = gen_reg_rtx (mode);
-
+ 
 +	if (TARGET_MACHO)
 +	  {
 +	    rtx sym, off;
@@ -76,15 +76,15 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	emit_move_insn (tmp_reg, gen_rtx_HIGH (mode, copy_rtx (imm)));
  	emit_insn (gen_add_losym (dest, tmp_reg, imm));
  	return;
-@@ -2954,6 +2977,7 @@ aarch64_load_symref_appropriately (rtx dest, rtx imm,
+@@ -2956,6 +2979,7 @@ aarch64_load_symref_appropriately (rtx d
  	return;
        }
-
+ 
 +    case SYMBOL_MO_SMALL_GOT:
      case SYMBOL_SMALL_GOT_4G:
        emit_insn (gen_rtx_SET (dest, imm));
        return;
-@@ -6026,6 +6050,7 @@ aarch64_expand_mov_immediate (rtx dest, rtx imm)
+@@ -6028,6 +6052,7 @@ aarch64_expand_mov_immediate (rtx dest, 
  	case SYMBOL_SMALL_TLSIE:
  	case SYMBOL_SMALL_GOT_28K:
  	case SYMBOL_SMALL_GOT_4G:
@@ -92,42 +92,42 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	case SYMBOL_TINY_GOT:
  	case SYMBOL_TINY_TLSIE:
  	  if (const_offset != 0)
-@@ -6039,6 +6064,7 @@ aarch64_expand_mov_immediate (rtx dest, rtx imm)
+@@ -6041,6 +6066,7 @@ aarch64_expand_mov_immediate (rtx dest, 
  	  /* FALLTHRU */
-
+ 
  	case SYMBOL_SMALL_ABSOLUTE:
 +	case SYMBOL_MO_SMALL_PCR:
  	case SYMBOL_TINY_ABSOLUTE:
  	case SYMBOL_TLSLE12:
  	case SYMBOL_TLSLE24:
-@@ -6628,6 +6654,7 @@ aarch64_return_in_memory (const_tree type, const_tree fndecl ATTRIBUTE_UNUSED)
+@@ -6630,6 +6656,7 @@ aarch64_return_in_memory (const_tree typ
    gcc_unreachable ();
  }
-
+ 
 +#if !TARGET_MACHO
  static bool
  aarch64_vfp_is_call_candidate (cumulative_args_t pcum_v, machine_mode mode,
  			       const_tree type, int *nregs)
-@@ -6637,6 +6664,7 @@ aarch64_vfp_is_call_candidate (cumulative_args_t pcum_v, machine_mode mode,
+@@ -6639,6 +6666,7 @@ aarch64_vfp_is_call_candidate (cumulativ
  						  &pcum->aapcs_vfp_rmode,
  						  nregs, NULL, pcum->silent_p);
  }
 +#endif
-
+ 
  /* Given MODE and TYPE of a function argument, return the alignment in
     bits.  The idea is to suppress any stronger alignment requested by
-@@ -6665,7 +6693,7 @@ aarch64_function_arg_alignment (machine_mode mode, const_tree type,
+@@ -6667,7 +6695,7 @@ aarch64_function_arg_alignment (machine_
    if (integer_zerop (TYPE_SIZE (type)))
      return 0;
-
+ 
 -  gcc_assert (TYPE_MODE (type) == mode);
 +  gcc_assert (TARGET_MACHO || TYPE_MODE (type) == mode);
-
+ 
    if (!AGGREGATE_TYPE_P (type))
      {
-@@ -6863,6 +6891,14 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -6865,6 +6893,14 @@ aarch64_layout_arg (cumulative_args_t pc
       Both behaviors were wrong, but in different cases.  */
-
+ 
    pcum->aapcs_arg_processed = true;
 +  if (TARGET_MACHO)
 +    {
@@ -137,10 +137,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +					  &abi_break_gcc_13, &abi_break_gcc_14);
 +      pcum->darwinpcs_arg_padding = BITS_PER_UNIT;
 +    }
-
+ 
    pure_scalable_type_info pst_info;
    if (type && pst_info.analyze_registers (type))
-@@ -6922,13 +6958,29 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -6924,13 +6960,29 @@ aarch64_layout_arg (cumulative_args_t pc
      /* No frontends can create types with variable-sized modes, so we
         shouldn't be asked to pass or return them.  */
      size = GET_MODE_SIZE (mode).to_constant ();
@@ -150,7 +150,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +    pcum->darwinpcs_stack_bytes = size;
 +
    size = ROUND_UP (size, UNITS_PER_WORD);
-
+ 
    allocate_ncrn = (type) ? !(FLOAT_TYPE_P (type)) : !FLOAT_MODE_P (mode);
 +  bool is_ha = false;
 +#if !TARGET_MACHO
@@ -168,12 +168,12 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +						pcum->silent_p);
 +#endif
    gcc_assert (!sve_p || !allocate_nvrn);
-
+ 
    unsigned int alignment
-@@ -6957,7 +7009,13 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -6959,7 +7011,13 @@ aarch64_layout_arg (cumulative_args_t pc
        if (!pcum->silent_p && !TARGET_FLOAT)
  	aarch64_err_no_fpadvsimd (mode);
-
+ 
 -      if (nvrn + nregs <= NUM_FP_ARG_REGS)
 +      if (TARGET_MACHO
 +	  && !arg.named)
@@ -185,7 +185,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	{
  	  pcum->aapcs_nextnvrn = nvrn + nregs;
  	  if (!aarch64_composite_type_p (type, mode))
-@@ -6987,6 +7045,7 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -6989,6 +7047,7 @@ aarch64_layout_arg (cumulative_args_t pc
  		}
  	      pcum->aapcs_reg = par;
  	    }
@@ -193,7 +193,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  return;
  	}
        else
-@@ -7003,14 +7062,24 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -7005,14 +7064,24 @@ aarch64_layout_arg (cumulative_args_t pc
    /* C6 - C9.  though the sign and zero extension semantics are
       handled elsewhere.  This is the case where the argument fits
       entirely general registers.  */
@@ -201,7 +201,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    if (allocate_ncrn && (ncrn + nregs <= NUM_ARG_REGS))
      {
        gcc_assert (nregs == 0 || nregs == 1 || nregs == 2);
-
+ 
 +      if (TARGET_MACHO
 +	  && !arg.named)
 +	{
@@ -219,7 +219,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	{
  	  /* Emit a warning if the alignment changed when taking the
  	     'packed' attribute into account.  */
-@@ -7080,8 +7149,8 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+@@ -7082,8 +7151,8 @@ aarch64_layout_arg (cumulative_args_t pc
  	    }
  	  pcum->aapcs_reg = par;
  	}
@@ -228,8 +228,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +      pcum->darwinpcs_stack_bytes = 0;
        return;
      }
-
-@@ -7091,7 +7160,81 @@ aarch64_layout_arg (cumulative_args_t pcum_v, const function_arg_info &arg)
+ 
+@@ -7093,7 +7162,81 @@ aarch64_layout_arg (cumulative_args_t pc
    /* The argument is passed on stack; record the needed number of words for
       this argument and align the total size if necessary.  */
  on_stack:
@@ -309,19 +309,19 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	}
 +      return;
 +    }
-
+ 
    if (warn_pcs_change_le_gcc14
        && abi_break_gcc_13
-@@ -7107,6 +7250,8 @@ on_stack:
+@@ -7109,6 +7252,8 @@ on_stack:
      inform (input_location, "parameter passing for argument of type "
  	    "%qT changed in GCC 14.1", type);
-
+ 
 +  /* size was already rounded up to PARM_BOUNDARY.  */
 +  pcum->aapcs_stack_words = size / UNITS_PER_WORD;
    if (alignment == 16 * BITS_PER_UNIT)
      {
        int new_size = ROUND_UP (pcum->aapcs_stack_size, 16 / UNITS_PER_WORD);
-@@ -7211,12 +7356,33 @@ aarch64_init_cumulative_args (CUMULATIVE_ARGS *pcum,
+@@ -7213,12 +7358,33 @@ aarch64_init_cumulative_args (CUMULATIVE
    pcum->aapcs_arg_processed = false;
    pcum->aapcs_stack_words = 0;
    pcum->aapcs_stack_size = 0;
@@ -352,10 +352,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      = (fntype ? aarch64_fntype_shared_flags (fntype, "zt0") : 0U);
    pcum->num_sme_mode_switch_args = 0;
 +  pcum->aapcs_vfp_rmode = VOIDmode;
-
+ 
    if (!silent_p
        && !TARGET_FLOAT
-@@ -7255,9 +7421,11 @@ aarch64_function_arg_advance (cumulative_args_t pcum_v,
+@@ -7257,9 +7423,11 @@ aarch64_function_arg_advance (cumulative
        || pcum->pcs_variant == ARM_PCS_SVE)
      {
        aarch64_layout_arg (pcum_v, arg);
@@ -369,8 +369,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +     if (pcum->aapcs_reg
  	  && aarch64_call_switches_pstate_sm (pcum->isa_mode))
  	aarch64_record_sme_mode_switch_args (pcum);
-
-@@ -7268,6 +7436,12 @@ aarch64_function_arg_advance (cumulative_args_t pcum_v,
+ 
+@@ -7270,6 +7438,12 @@ aarch64_function_arg_advance (cumulative
        pcum->aapcs_stack_size += pcum->aapcs_stack_words;
        pcum->aapcs_stack_words = 0;
        pcum->aapcs_reg = NULL_RTX;
@@ -382,11 +382,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	= pcum->darwinpcs_n_args_processed + 1 == pcum->darwinpcs_n_named;
      }
  }
-
-@@ -7279,12 +7453,15 @@ aarch64_function_arg_regno_p (unsigned regno)
+ 
+@@ -7281,12 +7455,15 @@ aarch64_function_arg_regno_p (unsigned r
  	  || (PR_REGNUM_P (regno) && regno < P0_REGNUM + NUM_PR_ARG_REGS));
  }
-
+ 
 -/* Implement FUNCTION_ARG_BOUNDARY.  Every parameter gets at least
 -   PARM_BOUNDARY bits of alignment, but will be given anything up
 -   to STACK_BOUNDARY bits if the type requires it.  This makes sure
@@ -402,10 +402,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
 +   For darwinpcs, this is only called to lower va_arg entries which are
 +   always aligned as for AAPCS64.  */
-
+ 
  static unsigned int
  aarch64_function_arg_boundary (machine_mode mode, const_tree type)
-@@ -7298,8 +7475,108 @@ aarch64_function_arg_boundary (machine_mode mode, const_tree type)
+@@ -7300,8 +7477,108 @@ aarch64_function_arg_boundary (machine_m
  							   &abi_break_gcc_14);
    /* We rely on aarch64_layout_arg and aarch64_gimplify_va_arg_expr
       to emit warnings about ABI incompatibility.  */
@@ -512,17 +512,17 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +gcc_checking_assert (boundary == pcum->darwinpcs_arg_padding);
 +  return boundary;
  }
-
+ 
  /* Implement TARGET_GET_RAW_RESULT_MODE and TARGET_GET_RAW_ARG_MODE.  */
-@@ -10698,6 +10975,7 @@ aarch64_classify_address (struct aarch64_address_info *info,
+@@ -10714,6 +10991,7 @@ aarch64_classify_address (struct aarch64
        /* load literal: pc-relative constant pool entry.  Only supported
           for SI mode or larger.  */
        info->type = ADDRESS_SYMBOLIC;
 +      info->offset = NULL_RTX;
-
+ 
        if (!load_store_pair_p
  	  && GET_MODE_SIZE (mode).is_constant (&const_size)
-@@ -10705,6 +10983,7 @@ aarch64_classify_address (struct aarch64_address_info *info,
+@@ -10721,6 +10999,7 @@ aarch64_classify_address (struct aarch64
  	{
  	  poly_int64 offset;
  	  rtx sym = strip_offset_and_salt (x, &offset);
@@ -530,7 +530,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  return ((LABEL_REF_P (sym)
  		   || (SYMBOL_REF_P (sym)
  		       && CONSTANT_POOL_ADDRESS_P (sym)
-@@ -10722,10 +11001,13 @@ aarch64_classify_address (struct aarch64_address_info *info,
+@@ -10738,10 +11017,13 @@ aarch64_classify_address (struct aarch64
  	  poly_int64 offset;
  	  HOST_WIDE_INT const_offset;
  	  rtx sym = strip_offset_and_salt (info->offset, &offset);
@@ -545,10 +545,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	    {
  	      /* The symbol and offset must be aligned to the access size.  */
  	      unsigned int align;
-@@ -10775,6 +11057,55 @@ aarch64_address_valid_for_prefetch_p (rtx x, bool strict_p)
+@@ -10791,6 +11073,55 @@ aarch64_address_valid_for_prefetch_p (rt
    if (!res)
      return false;
-
+ 
 +  /* For ELF targets using GAS, we emit prfm unconditionally; GAS will alter
 +     the instruction to pick the prfum form where possible (i.e. when the
 +     offset is in the range -256..255) and fall back to prfm otherwise.
@@ -601,10 +601,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    /* ... except writeback forms.  */
    return addr.type != ADDRESS_REG_WB;
  }
-@@ -11908,6 +12239,144 @@ sizetochar (int size)
+@@ -11924,6 +12255,144 @@ sizetochar (int size)
      }
  }
-
+ 
 +static void
 +output_macho_postfix_expr (FILE *file, rtx x, const char *postfix)
 +{
@@ -746,10 +746,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  /* Print operand X to file F in a target specific manner according to CODE.
     The acceptable formatting commands given by CODE are:
       'c':		An integer or symbol address without a preceding #
-@@ -11981,6 +12450,12 @@ aarch64_print_operand (FILE *f, rtx x, int code)
+@@ -11997,6 +12466,12 @@ aarch64_print_operand (FILE *f, rtx x, i
  	}
        break;
-
+ 
 +    case 'J':
 +      output_macho_postfix_expr (f, x, "PAGEOFF");
 +      break;
@@ -759,7 +759,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      case 'e':
        {
  	x = unwrap_const_vec_duplicate (x);
-@@ -12313,7 +12788,7 @@ aarch64_print_operand (FILE *f, rtx x, int code)
+@@ -12329,7 +12804,7 @@ aarch64_print_operand (FILE *f, rtx x, i
      case 'A':
        if (GET_CODE (x) == HIGH)
  	x = XEXP (x, 0);
@@ -768,7 +768,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        switch (aarch64_classify_symbolic_expression (x))
  	{
  	case SYMBOL_SMALL_GOT_4G:
-@@ -12344,9 +12819,26 @@ aarch64_print_operand (FILE *f, rtx x, int code)
+@@ -12360,9 +12835,26 @@ aarch64_print_operand (FILE *f, rtx x, i
  	  break;
  	}
        output_addr_const (asm_out_file, x);
@@ -789,36 +789,36 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	}
 +#endif
        break;
-
+ 
      case 'L':
 +#if !TARGET_MACHO
        switch (aarch64_classify_symbolic_expression (x))
  	{
  	case SYMBOL_SMALL_GOT_4G:
-@@ -12384,10 +12876,12 @@ aarch64_print_operand (FILE *f, rtx x, int code)
+@@ -12400,10 +12892,12 @@ aarch64_print_operand (FILE *f, rtx x, i
  	default:
  	  break;
  	}
 +#endif
        output_addr_const (asm_out_file, x);
        break;
-
+ 
      case 'G':
 +#if !TARGET_MACHO
        switch (aarch64_classify_symbolic_expression (x))
  	{
  	case SYMBOL_TLSLE24:
-@@ -12396,6 +12890,7 @@ aarch64_print_operand (FILE *f, rtx x, int code)
+@@ -12412,6 +12906,7 @@ aarch64_print_operand (FILE *f, rtx x, i
  	default:
  	  break;
  	}
 +#endif
        output_addr_const (asm_out_file, x);
        break;
-
-@@ -12561,8 +13056,13 @@ aarch64_print_address_internal (FILE *f, machine_mode mode, rtx x,
+ 
+@@ -12577,8 +13072,13 @@ aarch64_print_address_internal (FILE *f,
  	break;
-
+ 
        case ADDRESS_LO_SUM:
 +#if TARGET_MACHO
 +	asm_fprintf (f, "[%s, #", reg_names [REGNO (addr.base)]);
@@ -829,8 +829,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#endif
  	asm_fprintf (f, "]");
  	return true;
-
-@@ -12870,7 +13370,23 @@ aarch64_frame_pointer_required ()
+ 
+@@ -12886,7 +13386,23 @@ aarch64_frame_pointer_required ()
  {
    /* If the function needs to record the incoming value of PSTATE.SM,
       make sure that the slot is accessible from the frame pointer.  */
@@ -853,38 +853,38 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
 +  return flag_omit_frame_pointer != 1;
  }
-
+ 
  static bool
-@@ -13098,6 +13614,8 @@ aarch64_asm_output_labelref (FILE* f, const char *name)
+@@ -13114,6 +13630,8 @@ aarch64_asm_output_labelref (FILE* f, co
    asm_fprintf (f, "%U%s", name);
  }
-
+ 
 +#if !TARGET_MACHO
 +
  static void
  aarch64_elf_asm_constructor (rtx symbol, int priority)
  {
-@@ -13137,6 +13655,7 @@ aarch64_elf_asm_destructor (rtx symbol, int priority)
+@@ -13153,6 +13671,7 @@ aarch64_elf_asm_destructor (rtx symbol, 
        assemble_aligned_integer (POINTER_BYTES, symbol);
      }
  }
 +#endif
-
+ 
  const char*
  aarch64_output_casesi (rtx *operands)
-@@ -13289,7 +13808,11 @@ aarch64_select_rtx_section (machine_mode mode,
+@@ -13305,7 +13824,11 @@ aarch64_select_rtx_section (machine_mode
    if (aarch64_can_use_per_function_literal_pools_p ())
      return function_section (current_function_decl);
-
+ 
 +#if TARGET_MACHO
 +  return machopic_select_rtx_section (mode, x, align);
 +#else
    return default_elf_select_rtx_section (mode, x, align);
 +#endif
  }
-
+ 
  /* Implement ASM_OUTPUT_POOL_EPILOGUE.  */
-@@ -15559,15 +16082,17 @@ aarch64_init_builtins ()
+@@ -15575,15 +16098,17 @@ aarch64_init_builtins ()
  {
    aarch64_general_init_builtins ();
    aarch64_sve::init_builtins ();
@@ -893,7 +893,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 -#endif
 +  aarch64_init_subtarget_builtins ();
  }
-
+ 
  /* Implement TARGET_FOLD_BUILTIN.  */
  static tree
  aarch64_fold_builtin (tree fndecl, int nargs, tree *args, bool)
@@ -905,7 +905,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    unsigned int code = DECL_MD_FUNCTION_CODE (fndecl);
    unsigned int subcode = code >> AARCH64_BUILTIN_SHIFT;
    tree type = TREE_TYPE (TREE_TYPE (fndecl));
-@@ -18979,10 +19504,14 @@ initialize_aarch64_code_model (struct gcc_options *opts)
+@@ -18995,10 +19520,14 @@ initialize_aarch64_code_model (struct gc
  	}
        break;
      case AARCH64_CMODEL_LARGE:
@@ -922,7 +922,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	sorry ("code model %qs not supported in ilp32 mode", "large");
        break;
      case AARCH64_CMODEL_TINY_PIC:
-@@ -20899,7 +21428,9 @@ aarch64_classify_symbol (rtx x, HOST_WIDE_INT offset)
+@@ -20922,7 +21451,9 @@ aarch64_classify_symbol (rtx x, HOST_WID
  	case AARCH64_CMODEL_SMALL_SPIC:
  	case AARCH64_CMODEL_SMALL_PIC:
  	case AARCH64_CMODEL_SMALL:
@@ -930,13 +930,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	  return TARGET_MACHO
 +		 ? SYMBOL_MO_SMALL_PCR
 +		 : SYMBOL_SMALL_ABSOLUTE;
-
+ 
  	default:
  	  gcc_unreachable ();
-@@ -20935,10 +21466,22 @@ aarch64_classify_symbol (rtx x, HOST_WIDE_INT offset)
-
+@@ -20958,10 +21489,22 @@ aarch64_classify_symbol (rtx x, HOST_WID
+ 
  	  return SYMBOL_TINY_ABSOLUTE;
-
+ 
 -
  	case AARCH64_CMODEL_SMALL_SPIC:
  	case AARCH64_CMODEL_SMALL_PIC:
@@ -957,17 +957,17 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  if ((flag_pic || SYMBOL_REF_WEAK (x))
  	      && !aarch64_symbol_binds_local_p (x))
  	    return aarch64_cmodel == AARCH64_CMODEL_SMALL_SPIC
-@@ -20950,7 +21493,8 @@ aarch64_classify_symbol (rtx x, HOST_WIDE_INT offset)
+@@ -20973,7 +21516,8 @@ aarch64_classify_symbol (rtx x, HOST_WID
  		|| offset_within_block_p (x, offset)))
  	    return SYMBOL_FORCE_TO_MEM;
-
+ 
 -	  return SYMBOL_SMALL_ABSOLUTE;
 +	  return TARGET_MACHO ? SYMBOL_MO_SMALL_PCR
 +			      : SYMBOL_SMALL_ABSOLUTE;
-
+ 
  	case AARCH64_CMODEL_LARGE:
  	  /* This is alright even in PIC code as the constant
-@@ -21080,7 +21624,10 @@ static GTY(()) tree va_list_type;
+@@ -21103,7 +21647,10 @@ static GTY(()) tree va_list_type;
       void *__vr_top;
       int   __gr_offs;
       int   __vr_offs;
@@ -976,13 +976,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
 +  darwinpcs uses 'char *' for the va_list (in common with other platform
 +  ports).  */
-
+ 
  static tree
  aarch64_build_builtin_va_list (void)
-@@ -21088,6 +21635,13 @@ aarch64_build_builtin_va_list (void)
+@@ -21111,6 +21658,13 @@ aarch64_build_builtin_va_list (void)
    tree va_list_name;
    tree f_stack, f_grtop, f_vrtop, f_groff, f_vroff;
-
+ 
 +  /* darwinpcs uses a simple char * for this.  */
 +  if (TARGET_MACHO)
 +    {
@@ -993,10 +993,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    /* Create the type.  */
    va_list_type = lang_hooks.types.make_type (RECORD_TYPE);
    /* Give it the required name.  */
-@@ -21159,6 +21713,13 @@ aarch64_expand_builtin_va_start (tree valist, rtx nextarg ATTRIBUTE_UNUSED)
+@@ -21182,6 +21736,13 @@ aarch64_expand_builtin_va_start (tree va
    int vr_save_area_size = cfun->va_list_fpr_size;
    int vr_offset;
-
+ 
 +  /* darwinpcs uses the default, char * va_list impl.  */
 +  if (TARGET_MACHO)
 +    {
@@ -1007,17 +1007,17 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    cum = &crtl->args.info;
    if (cfun->va_list_gpr_size)
      gr_save_area_size = MIN ((NUM_ARG_REGS - cum->aapcs_ncrn) * UNITS_PER_WORD,
-@@ -21249,6 +21810,9 @@ aarch64_gimplify_va_arg_expr (tree valist, tree type, gimple_seq *pre_p,
+@@ -21272,6 +21833,9 @@ aarch64_gimplify_va_arg_expr (tree valis
    HOST_WIDE_INT size, rsize, adjust, align;
    tree t, u, cond1, cond2;
-
+ 
 +  if (TARGET_MACHO)
 +    return std_gimplify_va_arg_expr (valist, type, pre_p, post_p);
 +
    indirect_p = pass_va_arg_by_reference (type);
    if (indirect_p)
      type = build_pointer_type (type);
-@@ -21453,8 +22017,18 @@ aarch64_gimplify_va_arg_expr (tree valist, tree type, gimple_seq *pre_p,
+@@ -21476,8 +22040,18 @@ aarch64_gimplify_va_arg_expr (tree valis
  	  field_ptr_t = double_ptr_type_node;
  	  break;
  	case E_TFmode:
@@ -1038,17 +1038,17 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  break;
  	case E_SDmode:
  	  field_t = dfloat32_type_node;
-@@ -21537,6 +22111,9 @@ aarch64_setup_incoming_varargs (cumulative_args_t cum_v,
+@@ -21560,6 +22134,9 @@ aarch64_setup_incoming_varargs (cumulati
    int gr_saved = cfun->va_list_gpr_size;
    int vr_saved = cfun->va_list_fpr_size;
-
+ 
 +  if (TARGET_MACHO)
 +    return default_setup_incoming_varargs (cum_v, arg, pretend_size, no_rtl);
 +
    /* The caller has advanced CUM up to, but not beyond, the last named
       argument.  Advance a local copy of CUM past the last "real" named
       argument, to find out how many registers are left over.  */
-@@ -22380,6 +22957,12 @@ aarch64_autovectorize_vector_modes (vector_modes *modes, bool)
+@@ -22403,6 +22980,12 @@ aarch64_autovectorize_vector_modes (vect
  static const char *
  aarch64_mangle_type (const_tree type)
  {
@@ -1061,10 +1061,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    /* The AArch64 ABI documents say that "__va_list" has to be
       mangled as if it is in the "std" namespace.  */
    if (lang_hooks.types_compatible_p (CONST_CAST_TREE (type), va_list_type))
-@@ -22396,6 +22979,12 @@ aarch64_mangle_type (const_tree type)
+@@ -22419,6 +23002,12 @@ aarch64_mangle_type (const_tree type)
  	return "Dh";
      }
-
+ 
 +  /* __float128 is mangled as "g" on darwin.  _Float128 is not mangled here,
 +     but handled in common code (as "DF128_").  */
 +  if (TARGET_MACHO && TYPE_MODE (type) == TFmode
@@ -1074,20 +1074,20 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    /* Mangle AArch64-specific internal types.  TYPE_NAME is non-NULL_TREE for
       builtin types.  */
    if (TYPE_NAME (type) != NULL)
-@@ -23093,7 +23682,8 @@ aarch64_mov_operand_p (rtx x, machine_mode mode)
-
+@@ -23116,7 +23705,8 @@ aarch64_mov_operand_p (rtx x, machine_mo
+ 
    /* GOT accesses are valid moves.  */
    if (SYMBOL_REF_P (x)
 -      && aarch64_classify_symbolic_expression (x) == SYMBOL_SMALL_GOT_4G)
 +      && (aarch64_classify_symbolic_expression (x) == SYMBOL_SMALL_GOT_4G
 +	  || aarch64_classify_symbolic_expression (x) == SYMBOL_MO_SMALL_GOT))
      return true;
-
+ 
    if (SYMBOL_REF_P (x) && mode == DImode && CONSTANT_ADDRESS_P (x))
-@@ -24430,12 +25020,8 @@ aarch64_asm_output_variant_pcs (FILE *stream, const tree decl, const char* name)
+@@ -24453,12 +25043,8 @@ aarch64_asm_output_variant_pcs (FILE *st
  static std::string aarch64_last_printed_arch_string;
  static std::string aarch64_last_printed_tune_string;
-
+ 
 -/* Implement ASM_DECLARE_FUNCTION_NAME.  Output the ISA features used
 -   by the function fndecl.  */
 -
@@ -1098,8 +1098,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +aarch64_function_options_preamble (tree fndecl)
  {
    tree target_parts = DECL_FUNCTION_SPECIFIC_TARGET (fndecl);
-
-@@ -24474,15 +25060,60 @@ aarch64_declare_function_name (FILE *stream, const char* name,
+ 
+@@ -24497,15 +25083,60 @@ aarch64_declare_function_name (FILE *str
  		   this_tune->name);
        aarch64_last_printed_tune_string = this_tune->name;
      }
@@ -1115,7 +1115,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +{
 +  gcc_checking_assert (TREE_CODE (fndecl) == FUNCTION_DECL);
 +  gcc_checking_assert (!DECL_COMMON (fndecl));
-
++
 +  /* Update .arch and .tune as needed.  */
 +  aarch64_function_options_preamble (fndecl);
 +
@@ -1133,7 +1133,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +       || DECL_INITIAL (fndecl))
 +    (* targetm.encode_section_info) (fndecl, DECL_RTL (fndecl), false);
 +  ASM_OUTPUT_FUNCTION_LABEL (stream, name, fndecl);
-+
+ 
 +  cfun->machine->label_is_assembled = true;
 +}
 +
@@ -1147,22 +1147,22 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  aarch64_function_options_preamble (fndecl);
 +  /* Emit any necessary pcs information.  */
    aarch64_asm_output_variant_pcs (stream, fndecl, name);
-
+ 
    /* Don't forget the type directive for ELF.  */
 +#ifdef ASM_OUTPUT_TYPE_DIRECTIVE
    ASM_OUTPUT_TYPE_DIRECTIVE (stream, name, "function");
 +#endif
    ASM_OUTPUT_FUNCTION_LABEL (stream, name, fndecl);
-
+ 
    cfun->machine->label_is_assembled = true;
  }
 +#endif
-
+ 
  /* Implement PRINT_PATCHABLE_FUNCTION_ENTRY.  */
-
-@@ -24539,12 +25170,17 @@ aarch64_output_patchable_area (unsigned int patch_area_size, bool record_p)
+ 
+@@ -24562,12 +25193,17 @@ aarch64_output_patchable_area (unsigned 
  /* Implement ASM_OUTPUT_DEF_FROM_DECLS.  Output .variant_pcs for aliases.  */
-
+ 
  void
 -aarch64_asm_output_alias (FILE *stream, const tree decl, const tree target)
 +aarch64_asm_output_alias (FILE *stream, const tree decl,
@@ -1177,21 +1177,21 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    ASM_OUTPUT_DEF (stream, name, value);
 +#endif
  }
-
+ 
  /* Implement ASM_OUTPUT_EXTERNAL.  Output .variant_pcs for undefined
-@@ -24590,6 +25226,9 @@ aarch64_start_file (void)
+@@ -24613,6 +25249,9 @@ aarch64_start_file (void)
  		aarch64_last_printed_arch_string.c_str ());
-
+ 
     default_file_start ();
 +#if TARGET_MACHO
 +  darwin_file_start ();
 +#endif
  }
-
+ 
  /* Emit load exclusive.  */
-@@ -25169,6 +25808,16 @@ aarch64_output_simd_mov_immediate (rtx const_vector, unsigned width,
+@@ -25192,6 +25831,16 @@ aarch64_output_simd_mov_immediate (rtx c
      }
-
+ 
    gcc_assert (CONST_INT_P (info.u.mov.value));
 +  unsigned HOST_WIDE_INT value = UINTVAL (info.u.mov.value);
 +
@@ -1203,10 +1203,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +      unsigned HOST_WIDE_INT mask = (1U << GET_MODE_BITSIZE (info.elt_mode))-1;
 +      value &= mask;
 +    }
-
+ 
    if (which == AARCH64_CHECK_MOV)
      {
-@@ -25177,16 +25826,16 @@ aarch64_output_simd_mov_immediate (rtx const_vector, unsigned width,
+@@ -25200,16 +25849,16 @@ aarch64_output_simd_mov_immediate (rtx c
  		  ? "msl" : "lsl");
        if (lane_count == 1)
  	snprintf (templ, sizeof (templ), "%s\t%%d0, " HOST_WIDE_INT_PRINT_HEX,
@@ -1226,7 +1226,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
    else
      {
-@@ -25195,12 +25844,12 @@ aarch64_output_simd_mov_immediate (rtx const_vector, unsigned width,
+@@ -25218,12 +25867,12 @@ aarch64_output_simd_mov_immediate (rtx c
        if (info.u.mov.shift)
  	snprintf (templ, sizeof (templ), "%s\t%%0.%d%c, #"
  		  HOST_WIDE_INT_PRINT_DEC ", %s #%d", mnemonic, lane_count,
@@ -1241,28 +1241,28 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
    return templ;
  }
-@@ -28437,7 +29086,8 @@ aarch64_libgcc_floating_mode_supported_p (scalar_float_mode mode)
+@@ -28459,7 +29108,8 @@ aarch64_libgcc_floating_mode_supported_p
  }
-
+ 
  /* Implement TARGET_SCALAR_MODE_SUPPORTED_P - return TRUE
 -   if MODE is [BH]Fmode, and punt to the generic implementation otherwise.  */
 +   if MODE is [BH]Fmode, or TFmode on Mach-O, and punt to the generic
 +   implementation otherwise.  */
-
+ 
  static bool
  aarch64_scalar_mode_supported_p (scalar_mode mode)
-@@ -28445,7 +29095,7 @@ aarch64_scalar_mode_supported_p (scalar_mode mode)
+@@ -28467,7 +29117,7 @@ aarch64_scalar_mode_supported_p (scalar_
    if (DECIMAL_FLOAT_MODE_P (mode))
      return default_decimal_float_supported_p ();
-
+ 
 -  return ((mode == HFmode || mode == BFmode)
 +  return ((mode == HFmode || mode == BFmode || (mode == TFmode && TARGET_MACHO))
  	  ? true
  	  : default_scalar_mode_supported_p (mode));
  }
-@@ -29262,19 +29912,37 @@ aarch64_sls_emit_shared_blr_thunks (FILE *out_file)
+@@ -29284,19 +29934,37 @@ aarch64_sls_emit_shared_blr_thunks (FILE
  	continue;
-
+ 
        const char *name = indirect_symbol_names[regnum];
 -      switch_to_section (get_named_section (decl, NULL, 0));
 +      /* If the target uses a unique section for this switch to it.  */
@@ -1300,11 +1300,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#endif
      }
  }
-
-@@ -30366,6 +31034,60 @@ aarch64_retrieve_sysreg (const char *regname, bool write_p, bool is128op)
+ 
+@@ -30384,6 +31052,60 @@ aarch64_retrieve_sysreg (const char *reg
    return sysreg->encoding;
  }
-
+ 
 +#if TARGET_MACHO
 +/* This handles the promotion of function return values.
 +   It also handles function args under two specific curcumstances:
@@ -1360,12 +1360,12 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#endif
 +
  /* Target-specific selftests.  */
-
+ 
  #if CHECKING_P
-@@ -30571,6 +31293,15 @@ aarch64_run_selftests (void)
+@@ -30600,6 +31322,15 @@ aarch64_run_selftests (void)
  #undef TARGET_ASM_ALIGNED_SI_OP
  #define TARGET_ASM_ALIGNED_SI_OP "\t.word\t"
-
+ 
 +#if TARGET_MACHO
 +#undef TARGET_ASM_UNALIGNED_HI_OP
 +#define TARGET_ASM_UNALIGNED_HI_OP "\t.short\t"
@@ -1378,10 +1378,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  #undef TARGET_ASM_CAN_OUTPUT_MI_THUNK
  #define TARGET_ASM_CAN_OUTPUT_MI_THUNK \
    hook_bool_const_tree_hwi_hwi_const_tree_true
-@@ -30673,6 +31404,12 @@ aarch64_run_selftests (void)
+@@ -30702,6 +31433,12 @@ aarch64_run_selftests (void)
  #undef TARGET_FUNCTION_ARG_BOUNDARY
  #define TARGET_FUNCTION_ARG_BOUNDARY aarch64_function_arg_boundary
-
+ 
 +#undef TARGET_FUNCTION_ARG_BOUNDARY_CA
 +#define TARGET_FUNCTION_ARG_BOUNDARY_CA aarch64_function_arg_boundary_ca
 +
@@ -1390,13 +1390,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  #undef TARGET_FUNCTION_ARG_PADDING
  #define TARGET_FUNCTION_ARG_PADDING aarch64_function_arg_padding
-
-@@ -31013,7 +31750,7 @@ aarch64_libgcc_floating_mode_supported_p
-
+ 
+@@ -31042,7 +31779,7 @@ aarch64_libgcc_floating_mode_supported_p
+ 
  /* The architecture reserves bits 0 and 1 so use bit 2 for descriptors.  */
  #undef TARGET_CUSTOM_FUNCTION_DESCRIPTORS
 -#define TARGET_CUSTOM_FUNCTION_DESCRIPTORS 4
 +#define TARGET_CUSTOM_FUNCTION_DESCRIPTORS AARCH64_CUSTOM_FUNCTION_TEST
-
+ 
  #undef TARGET_HARD_REGNO_NREGS
  #define TARGET_HARD_REGNO_NREGS aarch64_hard_regno_nregs

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2025/01/07 19:56:07 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/08 07:37:45 wiz Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC14_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc14-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	1
+#PKGREVISION=	1
 COMMENT=	The GNU Compiler Collection (GCC) - 14.0 Release Series
 
 LANGS=		c

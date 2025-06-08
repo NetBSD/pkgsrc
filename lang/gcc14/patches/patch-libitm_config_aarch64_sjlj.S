@@ -1,17 +1,17 @@
-$NetBSD: patch-libitm_config_aarch64_sjlj.S,v 1.1 2025/02/05 16:30:37 adam Exp $
+$NetBSD: patch-libitm_config_aarch64_sjlj.S,v 1.2 2025/06/08 07:37:46 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libitm/config/aarch64/sjlj.S
+--- libitm/config/aarch64/sjlj.S.orig	2025-05-23 11:02:08.728267495 +0000
 +++ libitm/config/aarch64/sjlj.S
 @@ -57,10 +57,19 @@
-
+ 
  	.text
  	.align	2
 +#if __ELF__
  	.global	_ITM_beginTransaction
  	.type	_ITM_beginTransaction, %function
-
+ 
  _ITM_beginTransaction:
 +
 +#elif __MACH__
@@ -25,7 +25,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	CFI_PAC_KEY
  	PAC_AND_BTI
 @@ -84,8 +93,13 @@ _ITM_beginTransaction:
-
+ 
  	/* Invoke GTM_begin_transaction with the struct we just built.  */
  	mov	x1, sp
 +#if __ELF__
@@ -46,13 +46,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#if __ELF__
  	.size	_ITM_beginTransaction, . - _ITM_beginTransaction
 +#endif
-
+ 
  	.align	2
 +#if __ELF__
  	.global	GTM_longjmp
  	.hidden	GTM_longjmp
  	.type	GTM_longjmp, %function
-
+ 
  GTM_longjmp:
 +
 +#elif __MACH__
@@ -70,6 +70,6 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#if __ELF__
  	.size	GTM_longjmp, . - GTM_longjmp
 +#endif
-
+ 
  /* GNU_PROPERTY_AARCH64_* macros from elf.h for use in asm code.  */
  #define FEATURE_1_AND 0xc0000000

@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_c-family_c.opt,v 1.1 2025/02/05 16:30:34 adam Exp $
+$NetBSD: patch-gcc_c-family_c.opt,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/c-family/c.opt
+--- gcc/c-family/c.opt.orig	2025-05-23 11:02:04.248196827 +0000
 +++ gcc/c-family/c.opt
 @@ -1708,6 +1708,10 @@ static-libmpxwrappers
  Driver WarnRemoved
  Removed in GCC 9.  This switch has no effect.
-
+ 
 +fallow-extended-attribute-placement
 +C ObjC C++ ObjC++ LTO Var(flag_allow_ext_attr_placement) Init(0)
 +Allow placement of attributes on function definitions.

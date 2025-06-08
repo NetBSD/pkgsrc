@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_config_darwin.cc,v 1.1 2025/02/05 16:30:35 adam Exp $
+$NetBSD: patch-gcc_config_darwin.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/darwin.cc
+--- gcc/config/darwin.cc.orig	2025-05-23 11:02:04.332198151 +0000
 +++ gcc/config/darwin.cc
-@@ -29,6 +29,7 @@ along with GCC; see the file COPYING3.  If not see
+@@ -29,6 +29,7 @@ along with GCC; see the file COPYING3.  
  #include "cfghooks.h"
  #include "df.h"
  #include "memmodel.h"
@@ -12,35 +12,35 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  #include "tm_p.h"
  #include "stringpool.h"
  #include "attribs.h"
-@@ -49,6 +50,7 @@ along with GCC; see the file COPYING3.  If not see
+@@ -49,6 +50,7 @@ along with GCC; see the file COPYING3.  
  #include "optabs.h"
  #include "flags.h"
  #include "opts.h"
 +#include "c-family/c-objc.h"    /* for objc_method_decl().  */
-
+ 
  /* Fix and Continue.
-
+ 
 @@ -102,6 +104,7 @@ int darwin_running_cxx;
-
+ 
  /* Some code-gen now depends on OS major version numbers (at least).  */
  int generating_for_darwin_version ;
 +unsigned long current_os_version = 0;
-
+ 
  /* For older linkers we need to emit special sections (marked 'coalesced') for
     for weak or single-definition items.  */
 @@ -131,7 +134,7 @@ struct {
  section * darwin_sections[NUM_DARWIN_SECTIONS];
-
+ 
  /* While we transition to using in-tests instead of ifdef'd code.  */
 -#if !HAVE_lo_sum
 +#if !HAVE_lo_sum || DARWIN_ARM64
  #define gen_macho_high(m,a,b) (a)
  #define gen_macho_low(m,a,b,c) (a)
  #endif
-@@ -1104,6 +1107,7 @@ machopic_legitimize_pic_address (rtx orig, machine_mode mode, rtx reg)
+@@ -1104,6 +1107,7 @@ machopic_legitimize_pic_address (rtx ori
    return pic_ref;
  }
-
+ 
 +#if !DARWIN_ARM64
  /* Callbacks to output the stub or non-lazy pointers.
     Each works on the item in *SLOT,if it has been used.
@@ -50,13 +50,13 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      <FILE *, machopic_output_indirection> (out_file);
  }
 +#endif
-
+ 
  int
  machopic_operand_p (rtx op)
-@@ -2194,6 +2199,122 @@ darwin_handle_kext_attribute (tree *node, tree name,
+@@ -2194,6 +2199,122 @@ darwin_handle_kext_attribute (tree *node
    return NULL_TREE;
  }
-
+ 
 +enum version_components { MAJOR, MINOR, TINY };
 +
 +/* Parse a version number in x.y.z form and validate it as a macOS
@@ -175,11 +175,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  /* Handle a "weak_import" attribute; arguments as in
     struct attribute_spec.handler.  */
-
-@@ -2215,6 +2336,231 @@ darwin_handle_weak_import_attribute (tree *node, tree name,
+ 
+@@ -2215,6 +2336,231 @@ darwin_handle_weak_import_attribute (tre
    return NULL_TREE;
  }
-
+ 
 +#define NUM_AV_OSES 13
 +const char *availability_os[NUM_AV_OSES]
 +  = { "macos", "macosx", "ios", "tvos", "watchos", "driverkit", "swift",
@@ -408,7 +408,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  /* Emit a label for an FDE, making it global and/or weak if appropriate.
     The third parameter is nonzero if this is for exception handling.
     The fourth parameter is nonzero if this is just a placeholder for an
-@@ -2306,6 +2652,8 @@ darwin_emit_except_table_label (FILE *file)
+@@ -2306,6 +2652,8 @@ darwin_emit_except_table_label (FILE *fi
  rtx
  darwin_make_eh_symbol_indirect (rtx orig, bool ARG_UNUSED (pubvis))
  {
@@ -416,11 +416,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +    return orig;
    if (DARWIN_PPC == 0 && TARGET_64BIT)
      return orig;
-
+ 
 @@ -3154,7 +3502,12 @@ darwin_file_end (void)
        fprintf (asm_out_file, "\t.long\t0\n\t.long\t%u\n", flags);
       }
-
+ 
 +#if !DARWIN_ARM64
    machopic_finish (asm_out_file);
 +#else
@@ -433,7 +433,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 @@ -3330,6 +3683,13 @@ darwin_kextabi_p (void) {
    return flag_apple_kext;
  }
-
+ 
 +/* True, iff we want to map __builtin_unreachable to a trap.  */
 +
 +bool
@@ -446,7 +446,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  {
 @@ -3350,7 +3710,14 @@ darwin_override_options (void)
  	generating_for_darwin_version = 8;
-
+ 
        /* Earlier versions are not specifically accounted, until required.  */
 +      unsigned vers[3] = {0,0,0};
 +      if (!parse_version (vers, darwin_macosx_version_min))
@@ -456,11 +456,11 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
 +  else
 +    current_os_version = 1058;
-
+ 
    /* Some codegen needs to account for the capabilities of the target
       linker.  */
 @@ -3592,6 +3959,11 @@ darwin_override_options (void)
-
+ 
    /* The c_dialect...() macros are not available to us here.  */
    darwin_running_cxx = (strstr (lang_hooks.name, "C++") != 0);
 +
@@ -469,5 +469,5 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  if (!OPTION_SET_P (flag_allow_ext_attr_placement))
 +    flag_allow_ext_attr_placement = true;
  }
-
+ 
  #if DARWIN_PPC
