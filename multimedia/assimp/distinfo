@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2024/12/22 11:24:23 nia Exp $
+$NetBSD: distinfo,v 1.18 2025/06/08 07:44:54 wiz Exp $
 
-BLAKE2s (assimp-5.4.3.tar.gz) = 2e7defdd3d280d6a87463b4e66314b6f188b3c212c55a82a83954febc68f7de1
-SHA512 (assimp-5.4.3.tar.gz) = 4738db84068d36face8caf61c0789178fdfc1310fa8e81ffb9b025e14183bde546b784d691c92438ab310a79ab7b75ab62ee0247d5f01e81ddf04fb94b7a9c0b
-Size (assimp-5.4.3.tar.gz) = 53964510 bytes
+BLAKE2s (assimp-6.0.1.tar.gz) = 35272c24568cefcc85f3c85a0a8b01bc6d4b9fcde894ebe0010a8d143e686f31
+SHA512 (assimp-6.0.1.tar.gz) = 6028ad18a27ab3f924ec0c3decae8cf2ba2d9c7b04677d71e258a1cf997e35279dc7cf235c32e1a16261e0e5fd1eea46aeeaac472d04358d73563b05cf32b708
+Size (assimp-6.0.1.tar.gz) = 152221215 bytes
 SHA1 (patch-contrib_googletest_googletest_src_gtest.cc) = 9717b1a060e1a259d1fe53cd4bf46b1b8e739282
 SHA1 (patch-contrib_zip_src_zip.h) = 744aa7ffcec42ab3743124c954ef26daa80a8d31
