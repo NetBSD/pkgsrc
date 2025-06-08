@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.35 2025/02/16 23:28:13 nia Exp $
+# $NetBSD: Makefile.common,v 1.35.2.1 2025/06/08 21:21:55 maya Exp $
 #
 # used by databases/mariadb105-client/Makefile
 # used by databases/mariadb105-server/Makefile
 
-DISTNAME=	mariadb-10.5.28
+DISTNAME=	mariadb-10.5.29
 CATEGORIES=	databases
 MASTER_SITES=	https://archive.mariadb.org/${DISTNAME}/source/
 
@@ -83,6 +83,9 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_PERFSCHEMA_STORAGE_ENGINE=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITHOUT_MROONGA_STORAGE_ENGINE=ON
 
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_DTRACE=OFF
+
+# Let mk/ determine the security hardening flags to use.
+CMAKE_CONFIGURE_ARGS+=		-DSECURITY_HARDENED=OFF
 
 CMAKE_CONFIGURE_ARGS+=		-DTOKUDB_OK=OFF
 
