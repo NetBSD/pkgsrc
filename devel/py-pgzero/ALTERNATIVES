@@ -1,0 +1,1 @@
+bin/pgzrun @PREFIX@/bin/pgzrun-@PYVERSSUFFIX@
