@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3800 2025/06/08 06:04:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3801 2025/06/08 06:05:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5683,3 +5683,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/restic-rest-server to 0.14.0 [wiz 2025-06-07]
 	Updated devel/p5-File-Find-Rule to 0.35 [wiz 2025-06-08]
 	Updated security/p5-IO-Socket-SSL to 2.090 [wiz 2025-06-08]
+	Updated security/p5-Mozilla-CA to 20250602 [wiz 2025-06-08]
