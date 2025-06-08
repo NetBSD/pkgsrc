@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.243 2025/06/02 18:37:54 gdt Exp $
+# $NetBSD: Makefile,v 1.244 2025/06/08 13:27:04 gdt Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
 # versions, or to only track one LTR branch.
 DISTNAME=	qgis-3.34.15
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -64,9 +64,7 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 
-# \todo Understand what draco is and perhaps add to pkgsrc.
-CMAKE_CONFIGURE_ARGS+=		-DWITH_DRACO=FALSE
-# \todo Understand and probably add.
+# \todo Add Qt53DCoreConfig.cmake
 CMAKE_CONFIGURE_ARGS+=		-DWITH_3D=FALSE
 
 # Server support is WIP; it has merely been tested that regular use
@@ -95,6 +93,7 @@ CMAKE_CONFIGURE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 #.include "../../devel/qjson/buildlink3.mk"
+.include "../../geography/draco/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/libspatialite/buildlink3.mk"
 .include "../../geography/pdal-lib/buildlink3.mk"
