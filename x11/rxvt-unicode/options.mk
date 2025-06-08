@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2012/06/15 23:06:04 dholland Exp $
+# $NetBSD: options.mk,v 1.11 2025/06/08 14:43:16 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rxvt-unicode
 PKG_SUPPORTED_OPTIONS=	perl unicode3 xft2 rxvt-term
@@ -16,7 +16,6 @@ USE_TOOLS+=		perl:run
 CONFIGURE_ARGS+=	--enable-perl
 PLIST.perl=		yes
 .include "../../lang/perl5/buildlink3.mk"
-USE_TOOLS+=		perl
 REPLACE_PERL+=		src/perl/*
 .else
 CONFIGURE_ARGS+=	--disable-perl
