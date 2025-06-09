@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/05/04 14:22:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/06/09 11:17:16 dkazankov Exp $
 
 GCC_PKGNAME=		gcc14
-GCC14_DIST_VERSION=	14.2.0
+GNAT14_DIST_VERSION=	14.2.0
 
-DISTNAME=	gcc-${GCC14_DIST_VERSION}
-PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GCC14_DIST_VERSION}
+DISTNAME=	gcc-${GNAT14_DIST_VERSION}
+PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GNAT14_DIST_VERSION}
 
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc14-gnat package so that with the dependence pattern
@@ -24,8 +24,8 @@ USE_TOOLS+=	pax
 
 CHECK_RELRO_SUPPORTED=	no
 
-## Depend on exactly ${GCC14_DIST_VERSION}.
-TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC14_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc14-gnat
+## Depend on exactly ${GNAT14_DIST_VERSION}.
+TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GNAT14_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc14-gnat
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 .include "../../mk/bsd.prefs.mk"
@@ -43,7 +43,7 @@ GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX}	\
 			${ECHO} '@pkgdir ${TARGET_LIBDIR}' ;
 
 do-build:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-gnat-${GCC14_DIST_VERSION}*' | \
+	${PKG_INFO} -qL '${GCC_PKGNAME}-gnat-${GNAT14_DIST_VERSION}*' | \
 	${SED} -n -e's,^${LIBGCC_PREFIX}/,,p' | \
 	${SED} -n -e'/lib\/.*\/crt.*\.o/p' \
 		-e'/lib\/.*\/adalib\/lib.*\.so.*/p' \
