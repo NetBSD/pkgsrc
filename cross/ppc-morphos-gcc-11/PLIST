@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/03/27 23:26:29 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/06/09 16:00:48 js Exp $
 gg/bin/ppc-morphos-c++-11
 gg/bin/ppc-morphos-cpp-11
 gg/bin/ppc-morphos-g++-11
@@ -938,6 +938,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/install-tools/macro_list
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/install-tools/mkheaders
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/install-tools/mkheaders.conf
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/install-tools/mkinstalldirs
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libatomic.la
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/crtbegin.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/crtbeginS.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/crtbeginT.o
@@ -945,6 +946,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/crtend.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/crtendS.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/ecrti.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/ecrtn.o
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libatomic.la
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libgcc.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libgcov.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/crtbegin.o
@@ -954,6 +956,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/crtend.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/crtendS.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/ecrti.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/ecrtn.o
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/libatomic.la
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/libgcc.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/libgcov.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libb32/libnix/libobjc.la
@@ -977,6 +980,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/crtend.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/crtendS.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/ecrti.o
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/ecrtn.o
+gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/libatomic.la
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/libgcc.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/libgcov.a
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/libnix/libobjc.la
@@ -1444,11 +1448,7 @@ gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/wide-int.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/xcoff.h
 gg/lib/gcc-lib/ppc-morphos/${PKGVERSION}/plugin/include/xcoffout.h
 gg/lib/gcc/ppc-morphos/${PKGVERSION}/g++-mapper-server
-gg/lib/gcc/ppc-morphos/${PKGVERSION}/libatomic.la
-gg/lib/gcc/ppc-morphos/${PKGVERSION}/libb32/libatomic.la
-gg/lib/gcc/ppc-morphos/${PKGVERSION}/libb32/libnix/libatomic.la
 gg/lib/gcc/ppc-morphos/${PKGVERSION}/liblto_plugin.la
-gg/lib/gcc/ppc-morphos/${PKGVERSION}/libnix/libatomic.la
 gg/lib/gcc/ppc-morphos/${PKGVERSION}/plugin/libcc1plugin.la
 gg/lib/gcc/ppc-morphos/${PKGVERSION}/plugin/libcp1plugin.la
 gg/lib/libcc1.la
