@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.143 2025/05/10 18:20:17 adam Exp $
+# $NetBSD: Makefile,v 1.144 2025/06/09 10:20:19 adam Exp $
 
-DISTNAME=	django-5.2.1
+DISTNAME=	django-5.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	https://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
@@ -19,7 +19,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
-WHEEL_NAME=		${DISTNAME:tl}
 REPLACE_PYTHON+=	django/conf/project_template/manage.py-tpl
 
 post-install:
