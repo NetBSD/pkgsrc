@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.17 2025/06/04 02:16:20 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q1,v 1.1.2.18 2025/06/09 00:29:32 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q1 branch:
 
@@ -69,3 +69,19 @@ net/libcares: security fix; fix for using 100% CPU
 
 Pullup ticket #6970 - requested by taca
 mail/roundcube: Security fix
+
+Pullup ticket #6971 - requested by bsiegert
+lang/go123: Security fix
+lang/go124: Security fix
+
+Pullup ticket #6972 - requested by nia
+databases/mariadb105-client: Security fix
+databases/mariadb105-server: Security fix
+
+Pullup ticket #6973 - requested by nia
+databases/mariadb106-client: Security fix
+databases/mariadb106-server: Security fix
+
+databases/mariadb1011-client: Security fix
+databases/mariadb1011-embedded: Security fix
+databases/mariadb1011-server: Security fix
