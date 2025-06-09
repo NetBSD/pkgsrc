@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.16 2024/04/28 01:33:06 gutteridge Exp $
+$NetBSD: patch-ag,v 1.17 2025/06/09 19:43:19 gutteridge Exp $
 
 Handle newer NetBSD versions.  Default to NetBSD 10 if we can't guess,
 not NetBSD 1.6.
 
---- Configure.orig	2018-02-14 06:18:55.000000000 -0800
-+++ Configure	2023-01-12 15:52:55.813217146 -0800
-@@ -3038,7 +3038,7 @@
+--- Configure.orig	2018-02-14 14:18:55.000000000 +0000
++++ Configure
+@@ -3038,7 +3038,7 @@ return(0); }
  	LSOF_TSTBIGF=" "
  	LSOF_VERS="1006000"
  	;;
@@ -14,7 +14,7 @@ not NetBSD 1.6.
  	LSOF_VERS="1006000"
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 1.6"
-@@ -3077,32 +3077,90 @@
+@@ -3077,32 +3077,98 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -88,6 +88,14 @@ not NetBSD 1.6.
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="10000000"
 +	;;
++      11.99.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="11099000"
++	;;
++      11.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="11000000"
++	;;
        *)
  	echo "Unknown NetBSD release: $LSOF_VSTR"
 -	echo Assuming NetBSD 1.6
@@ -123,7 +131,7 @@ not NetBSD 1.6.
      then
        grep -q getbootfile ${LSOF_INCLUDE}/util.h
        if test $? -eq 0	# {
-@@ -3501,6 +3559,7 @@
+@@ -3501,6 +3567,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -131,7 +139,7 @@ not NetBSD 1.6.
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -3578,16 +3637,29 @@
+@@ -3578,16 +3645,29 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
@@ -168,7 +176,7 @@ not NetBSD 1.6.
  	fi	# }
        fi	# }
      fi	# }
-@@ -3863,6 +3935,28 @@
+@@ -3863,6 +3943,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
@@ -197,7 +205,7 @@ not NetBSD 1.6.
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -5607,7 +5701,7 @@
+@@ -5607,7 +5709,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then
