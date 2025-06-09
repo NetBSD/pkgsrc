@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.55 2025/06/04 07:45:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.56 2025/06/09 07:30:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -149,7 +149,7 @@ CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.5
 CARGO_CRATE_DEPENDS+=	similar-2.7.0
 CARGO_CRATE_DEPENDS+=	slab-0.4.9
-CARGO_CRATE_DEPENDS+=	smallvec-1.15.0
+CARGO_CRATE_DEPENDS+=	smallvec-1.15.1
 CARGO_CRATE_DEPENDS+=	streaming-iterator-0.1.9
 CARGO_CRATE_DEPENDS+=	strict-0.2.0
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
@@ -180,7 +180,7 @@ CARGO_CRATE_DEPENDS+=	tracing-0.1.41
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.28
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.33
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.25.4
-CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.23.3
+CARGO_CRATE_DEPENDS+=	tree-sitter-bash-0.25.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-0.24.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-c-sharp-0.23.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-cpp-0.23.4
