@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.411 2025/06/07 19:14:41 bsiegert Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.412 2025/06/09 07:47:08 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26360,3 +26360,7 @@ go124<1.24.4	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-467
 go123<1.23.10	http-header-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4673
 go124<1.24.4	insecure-key-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-22874
 go123<1.23.10	insecure-key-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-22874
+assimp<6.0.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2750
+assimp<6.0.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-2751
+assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-2757
+assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3158
