@@ -1,0 +1,44 @@
+$NetBSD: patch-gcc-config-rs6000-rs6000-logue.c,v 1.1 2025/06/09 16:00:48 js Exp $
+
+Don't use r12 to store CR when using saveds, as __restore_r13 will need the
+passed r12.
+
+--- gcc/config/rs6000/rs6000-logue.c.orig	2025-06-01 00:58:21.923156281 +0000
++++ gcc/config/rs6000/rs6000-logue.c
+@@ -3343,6 +3343,16 @@ rs6000_emit_prologue (void)
+       emit_insn (gen_hashst (mem, reg0));
+     }
+ 
++  /* If we need to save CR, put it into r12 or r11.  Choose r12 except when
++     r12 will be needed by out-of-line gpr save.  */
++  if (DEFAULT_ABI == ABI_AIX
++      && !(strategy & (SAVE_INLINE_GPRS | SAVE_NOINLINE_GPRS_SAVES_LR)))
++    cr_save_regno = 11;
++  else if (DEFAULT_ABI == ABI_ELFv2)
++    cr_save_regno = 11;
++  else
++    cr_save_regno = 12;
++
+ #ifdef TARGET_BASEREL
+   if (info->baserel_save_p && TARGET_BASEREL)
+     {
+@@ -3357,17 +3367,10 @@ rs6000_emit_prologue (void)
+       reg = gen_rtx_REG (reg_mode, 13);
+       insn = emit_move_insn (mem, reg);
+       rs6000_frame_related (insn, sp_reg_rtx, info->total_size, NULL_RTX, NULL_RTX);
++
++      cr_save_regno = 11;
+     }
+ #endif
+-  /* If we need to save CR, put it into r12 or r11.  Choose r12 except when
+-     r12 will be needed by out-of-line gpr save.  */
+-  if (DEFAULT_ABI == ABI_AIX
+-      && !(strategy & (SAVE_INLINE_GPRS | SAVE_NOINLINE_GPRS_SAVES_LR)))
+-    cr_save_regno = 11;
+-  else if (DEFAULT_ABI == ABI_ELFv2)
+-    cr_save_regno = 11;
+-  else
+-    cr_save_regno = 12;
+   if (!WORLD_SAVE_P (info)
+       && info->cr_save_p
+       && REGNO (frame_reg_rtx) != cr_save_regno
