@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/05/24 22:44:01 js Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/09 16:00:48 js Exp $
 
 DISTNAME=	sdk-source-20230510
+PKGREVISION=	1
 PKGNAME=	ppc-morphos-gcc-11-11.3.0
 CATEGORIES=	cross
 MASTER_SITES=	https://morphos-team.net/files/src/sdk/
@@ -61,6 +62,8 @@ pre-patch:
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../fix-genericize_if_stmt-ice.diff
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../morphos-std-filesystem-path.diff
 	${RUN} cd ${WRKSRC} && ${PATCH} -p1 <../fix-fenv-for-crossbuild.diff
+	${RUN} find ${WRKSRC} -name configure -print0 | xargs -0 -r perl -i.orig -p -e "s|toolexecdir='\\\$$\(libdir\)/gcc/\\\$$\(target_alias\)'|toolexecdir='\\\$$(libdir)/gcc-lib/\\\$$(target_alias)'|g;"
+	${RUN} find gcc-11.5.0 -name Makefile.in -print0 | xargs -0 -r perl -i.orig -p -e "s|= \\\$$\(libexecdir\)/gcc/\\\$$\(real_target_noncanonical\)|= \\\$$(libexecdir)/gcc-lib/\\\$$(real_target_noncanonical)|g;s|= \\\$$\(libdir\)/gcc/\\\$$\(target_noncanonical\)|= \\\$$(libdir)/gcc-lib/\\\$$(target_noncanonical)|g;"
 
 post-patch:
 	# Change /gg to ${PREFIX}/gg
