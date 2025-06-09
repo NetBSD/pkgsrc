@@ -1,6 +1,7 @@
-# $NetBSD: cargo-depends.mk,v 1.60 2025/06/04 10:25:56 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.61 2025/06/09 09:37:41 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
+CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -40,8 +41,8 @@ CARGO_CRATE_DEPENDS+=	chrono-0.4.41
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.38
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.38
+CARGO_CRATE_DEPENDS+=	clap-4.5.39
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.39
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.50
 CARGO_CRATE_DEPENDS+=	clap_complete_command-0.6.1
 CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.5.5
@@ -167,8 +168,8 @@ CARGO_CRATE_DEPENDS+=	kqueue-1.1.1
 CARGO_CRATE_DEPENDS+=	kqueue-sys-1.0.4
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.172
-CARGO_CRATE_DEPENDS+=	libcst-1.7.0
-CARGO_CRATE_DEPENDS+=	libcst_derive-1.7.0
+CARGO_CRATE_DEPENDS+=	libcst-1.8.0
+CARGO_CRATE_DEPENDS+=	libcst_derive-1.8.0
 CARGO_CRATE_DEPENDS+=	libmimalloc-sys-0.1.42
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	libtest-mimic-0.7.3
@@ -269,9 +270,9 @@ CARGO_CRATE_DEPENDS+=	rustc-stable-hash-0.1.2
 CARGO_CRATE_DEPENDS+=	rustix-1.0.7
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.20
 CARGO_CRATE_DEPENDS+=	ryu-1.0.20
-#CARGO_CRATE_DEPENDS+=	salsa-0.21.1
-#CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.21.1
-#CARGO_CRATE_DEPENDS+=	salsa-macros-0.21.1
+#CARGO_CRATE_DEPENDS+=	salsa-0.22.0
+#CARGO_CRATE_DEPENDS+=	salsa-macro-rules-0.22.0
+#CARGO_CRATE_DEPENDS+=	salsa-macros-0.22.0
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schemars-0.8.22
 CARGO_CRATE_DEPENDS+=	schemars_derive-0.8.22
