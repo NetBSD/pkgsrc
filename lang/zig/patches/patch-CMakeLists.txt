@@ -1,0 +1,27 @@
+$NetBSD: patch-CMakeLists.txt,v 1.5 2025/06/09 18:07:33 adam Exp $
+
+Skip stage3 during build to:
+* spedd up buidling
+* avoid work directory reference in zig's RUNPATH.
+
+--- CMakeLists.txt.orig	2025-03-04 22:35:21.000000000 +0000
++++ CMakeLists.txt
+@@ -971,18 +971,9 @@ if(MINGW AND "${ZIG_HOST_TARGET_ARCH}" S
+ endif()
+ 
+ 
+-add_custom_target(stage3 ALL
+-  DEPENDS "${PROJECT_BINARY_DIR}/stage3/bin/zig"
+-)
+ 
+ set(ZIG2_WORKING_DIR "${PROJECT_SOURCE_DIR}")
+ 
+-add_custom_command(
+-  OUTPUT "${PROJECT_BINARY_DIR}/stage3/bin/zig"
+-  COMMAND zig2 build --prefix "${PROJECT_BINARY_DIR}/stage3" ${ZIG_BUILD_ARGS}
+-  COMMENT "Building stage3"
+-  WORKING_DIRECTORY "${ZIG2_WORKING_DIR}"
+-)
+ 
+ set(ZIG_EXECUTABLE "$<TARGET_FILE:zig2>")
+ 
