@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3829 2025/06/09 16:30:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3830 2025/06/09 18:32:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5719,3 +5719,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/mpg123 to 1.33.0 [adam 2025-06-09]
 	Updated lang/gcc14-gnat-libs to 14.2.0nb1 [dkazankov 2025-06-09]
 	Updated mail/php-dmarc-srg to 2.3 [taca 2025-06-09]
+	Updated devel/mise to 2025.6.1 [pin 2025-06-09]
