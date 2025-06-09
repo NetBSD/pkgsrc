@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1519 2025/06/05 07:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.1520 2025/06/09 04:53:23 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -742,6 +742,7 @@ SUBDIR+=	p5-Encode-IMAPUTF7
 SUBDIR+=	p5-Encode-JIS2K
 SUBDIR+=	p5-Encode-Locale
 SUBDIR+=	p5-Feed-Find
+SUBDIR+=	p5-File-Grep
 SUBDIR+=	p5-File-ReadBackwards
 SUBDIR+=	p5-Filter
 SUBDIR+=	p5-FormValidator-Simple
