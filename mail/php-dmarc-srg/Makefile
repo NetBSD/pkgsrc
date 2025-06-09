@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2025/02/22 17:35:32 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/06/09 16:30:32 taca Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liuch/}
 GITHUB_PROJECT=	dmarc-srg
 GITHUB_TYPE=	tag
 GITHUB_TAG=	v${GITHUB_RELEASE}
-GITHUB_RELEASE=	2.2.1
+GITHUB_RELEASE=	2.3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/liuch/dmarc-srg
@@ -34,6 +33,8 @@ EGDIR=		share/examples/${PHP_PKG_PREFIX}/${WEBBASE}
 INSTALLATION_DIRS+=	${WEBDIR}/config ${EGDIR}
 OWN_DIRS_PERMS+=	${WEBDIR}/config ${REAL_ROOT_USER} ${APACHE_GROUP} 0750
 CONF_FILES+=		${EGDIR}/conf.php ${WEBDIR}/config/conf.php
+CONF_FILES+=		${EGDIR}/vendor_config.php \
+			${WEBDIR}/config/vendor_config.php
 PLIST_SUBST+=		EGDIR=${EGDIR} WEBDIR=${WEBDIR}
 PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
 			{ gsub(/${EGDIR:S|/|\\/|g}/, "$${EGDIR}") }
@@ -41,13 +42,14 @@ PRINT_PLIST_AWK+=	/^${WEBDIR:S|/|\\/|g}/ \
 			{ gsub(/${WEBDIR:S|/|\\/|g}/, "$${WEBDIR}") }
 
 pre-configure:
-	${MV} ${WRKSRC}/config/conf.sample.php ${WRKDIR}
+	${MV} ${WRKSRC}/config/conf.sample.php ${WRKDIR}/conf.php
+	${MV} ${WRKSRC}/config/vendor_config.php ${WRKDIR}
 
 do-install:
 	cd ${WRKSRC} && ${FIND} . -type f \! -name '*.orig' -print | \
 		pax -rw ${DESTDIR}${PREFIX}/${WEBDIR}
-	${INSTALL_DATA} ${WRKDIR}/conf.sample.php \
-		${DESTDIR}${PREFIX}/${EGDIR}/conf.php
+	${INSTALL_DATA} ${WRKDIR}/conf.php ${WRKDIR}/vendor_config.php \
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
