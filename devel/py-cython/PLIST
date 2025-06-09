@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.33 2025/05/11 10:28:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2025/06/09 09:29:49 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyo
@@ -413,6 +420,7 @@ ${PYSITELIB}/Cython/Includes/libcpp/unordered_map.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/unordered_set.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/utility.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/vector.pxd
+${PYSITELIB}/Cython/Includes/numpy/math.pxd
 ${PYSITELIB}/Cython/Includes/openmp.pxd
 ${PYSITELIB}/Cython/Includes/posix/__init__.pxd
 ${PYSITELIB}/Cython/Includes/posix/dlfcn.pxd
@@ -571,13 +579,6 @@ ${PYSITELIB}/Cython/__init__.pyc
 ${PYSITELIB}/Cython/__init__.pyi
 ${PYSITELIB}/Cython/__init__.pyo
 ${PYSITELIB}/Cython/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cython.py
 ${PYSITELIB}/cython.pyc
 ${PYSITELIB}/cython.pyo
