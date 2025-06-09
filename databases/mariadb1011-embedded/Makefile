@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/14 22:19:01 wiz Exp $
+# $NetBSD: Makefile,v 1.11.4.1 2025/06/09 00:28:10 maya Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
-PKGREVISION=	3
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (embedded)
 
 # for the header files needed by the installed header file of this package
@@ -17,6 +16,7 @@ DEPENDS+=	mariadb-client-10.11.*:../../databases/mariadb1011-client
 
 CMAKE_CONFIGURE_ARGS+=		-DCONNECT_WITH_MONGO=NO
 CMAKE_CONFIGURE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
+CMAKE_CONFIGURE_ARGS+=		-DWITHOUT_ROCKSDB_STORAGE_ENGINE=ON
 
 post-install:
 	for file in \
