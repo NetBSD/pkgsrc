@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/06/09 04:52:10 jnemeth Exp $
+
+BLAKE2s (File-Grep-0.02.tar.gz) = 87f92f1b52dc7e5c70226f573da83352b7bfaad4408deb3f6a975846ef1d62bd
+SHA512 (File-Grep-0.02.tar.gz) = 22c76ace58591e0f66bb0d6aea6ab983c580d31c5a61c12a2e5eb9fda2f7f3ab7a6a3bb67847d867fd46a0b9a49e502261083ba28932bdde8d43513ce6c6fc77
+Size (File-Grep-0.02.tar.gz) = 4877 bytes

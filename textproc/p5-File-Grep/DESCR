@@ -1,0 +1,4 @@
+File::Grep provides similar functionality as perl's builtin grep, map,
+and foreach commands, but iterating over a passed filelist instead of
+arrays.  While trivial, this module can provide a quick dropin when
+such functionality is needed.
