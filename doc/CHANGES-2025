@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3820 2025/06/08 22:51:47 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3821 2025/06/09 04:52:34 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5706,3 +5706,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruamel-yaml to 0.18.13 [adam 2025-06-08]
 	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
 	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
+	Added textproc/p5-File-Grep version 0.02 [jnemeth 2025-06-09]
