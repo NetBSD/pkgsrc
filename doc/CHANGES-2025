@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3823 2025/06/09 07:31:47 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3824 2025/06/09 07:46:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5705,7 +5705,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-openapi-spec-validator to 0.7.2 [adam 2025-06-08]
 	Updated devel/py-ruamel-yaml to 0.18.13 [adam 2025-06-08]
 	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
-	Updated geography/qgis to 3.40.7 [gdt 2025-06-08]
 	Added textproc/p5-File-Grep version 0.02 [jnemeth 2025-06-09]
 	Updated devel/ast-grep to 0.38.5 [pin 2025-06-09]
 	Updated shells/oh-my-posh to 26.4.2 [pin 2025-06-09]
+	Updated multimedia/assimp to 6.0.2 [adam 2025-06-09]
+	Updated devel/mold to 2.40.1 [adam 2025-06-09]
