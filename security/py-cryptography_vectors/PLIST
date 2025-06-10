@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/05/26 05:08:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/06/10 08:02:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -214,6 +214,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ec_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ec_private_key_encrypted.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ecc_private_with_rfc5915_ext.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/ed25519-scrypt.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-ec-sha1-128-rc4.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-rsa-3des.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-rsa-pkcs8.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PKCS8/enc-unknown-algorithm.pem
