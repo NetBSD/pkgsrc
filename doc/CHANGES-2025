@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3851 2025/06/10 15:01:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3852 2025/06/10 16:36:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5747,3 +5747,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.12.12 [adam 2025-06-10]
 	Updated games/wesnoth to 1.18.5 [adam 2025-06-10]
 	Updated misc/dpkg to 1.22.20 [adam 2025-06-10]
+	Updated games/rocksndiamonds to 4.4.0.5 [adam 2025-06-10]
+	Updated devel/py-ruamel-yaml to 0.18.14 [adam 2025-06-10]
