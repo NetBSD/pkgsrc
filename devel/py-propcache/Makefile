@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/04/12 19:45:04 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/06/10 06:04:51 adam Exp $
 
-DISTNAME=	propcache-0.3.1
+DISTNAME=	propcache-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/propcache/}
