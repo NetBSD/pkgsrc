@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3842 2025/06/10 06:11:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3843 2025/06/10 07:27:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5733,3 +5733,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 3.3.0 [wiz 2025-06-10]
 	Updated textproc/tree-sitter-bash to 0.25.0 [wiz 2025-06-10]
 	Updated graphics/geeqie to 2.6.1 [wiz 2025-06-10]
+	Updated www/hugo to 0.147.8 [triaxx 2025-06-10]
