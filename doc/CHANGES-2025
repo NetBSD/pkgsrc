@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3833 2025/06/10 05:12:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3834 2025/06/10 05:14:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5723,3 +5723,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.5.0 [pin 2025-06-09]
 	Updated x11/pixman to 0.46.2 [wiz 2025-06-10]
 	Updated security/py-cyclonedx-python-lib to 10.1.0 [wiz 2025-06-10]
+	Updated fonts/py-fonttools to 4.58.2 [wiz 2025-06-10]
