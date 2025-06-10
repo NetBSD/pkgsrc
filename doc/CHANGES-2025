@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3838 2025/06/10 05:40:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3839 2025/06/10 06:05:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5728,3 +5728,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.40.3 [wiz 2025-06-10]
 	Updated devel/py-packageurl to 0.17.1 [wiz 2025-06-10]
 	Updated textproc/py-pdf to 5.6.0 [wiz 2025-06-10]
+	Updated net/yt-dlp to 2025.6.9 [adam 2025-06-10]
+	Updated devel/py-propcache to 0.3.2 [adam 2025-06-10]
