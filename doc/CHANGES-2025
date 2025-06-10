@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3831 2025/06/09 18:33:06 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3832 2025/06/10 05:04:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5721,3 +5721,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/php-dmarc-srg to 2.3 [taca 2025-06-09]
 	Updated devel/mise to 2025.6.1 [pin 2025-06-09]
 	Updated shells/oh-my-posh to 26.5.0 [pin 2025-06-09]
+	Updated x11/pixman to 0.46.2 [wiz 2025-06-10]
