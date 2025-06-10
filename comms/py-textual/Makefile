@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/05/04 15:11:08 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/06/10 06:07:28 wiz Exp $
 
-DISTNAME=	textual-3.2.0
+DISTNAME=	textual-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -26,8 +26,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.7:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-# as of 3.2.0
-# 212 failed, 3026 passed, 3 skipped, 5 xfailed, 2 warnings
+# as of 3.3.0
+# 32 failed, 3225 passed, 3 skipped, 4 xfailed, 1 xpassed, 2 warnings
+
+# https://github.com/Textualize/textual/issues/5854
+INSTALLATION_DIRS+=	${PYSITELIB}/resources
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/tests/snapshot_tests/snapshot_report_template.jinja2 ${DESTDIR}${PREFIX}/${PYSITELIB}/resources/snapshot_report_template.jinja2
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
