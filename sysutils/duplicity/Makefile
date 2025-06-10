@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2025/04/25 11:03:07 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/06/10 08:51:45 triaxx Exp $
 
-DISTNAME=	duplicity-3.0.2
-PKGREVISION=	1
+DISTNAME=	duplicity-3.0.4.0
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
@@ -21,7 +20,7 @@ DEPENDS+=	lftp-[0-9]*:../../net/lftp
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-dropbox-[0-9]*:../../net/py-dropbox
-DEPENDS+=	${PYPKGPREFIX}-fasteners-[0-9]*:../../devel/py-fasteners
+DEPENDS+=	${PYPKGPREFIX}-fasteners>=0.19:../../devel/py-fasteners
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client-[0-9]*:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib-[0-9]*:../../security/py-google-auth-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
