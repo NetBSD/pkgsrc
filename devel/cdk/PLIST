@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/06/26 16:23:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/06/10 11:19:44 wiz Exp $
 bin/cdk5-config
 include/cdk.h
 include/cdk/alphalist.h
@@ -230,6 +230,7 @@ man/man3/drawCDKUSlider.3
 man/man3/drawCDKViewer.3
 man/man3/drawCdkTitle.3
 man/man3/dumpCDKSwindow.3
+man/man3/enableCursesMarkup.3
 man/man3/endCDK.3
 man/man3/eraseCDKAlphalist.3
 man/man3/eraseCDKButton.3

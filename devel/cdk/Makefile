@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/06/26 16:23:34 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/06/10 11:19:44 wiz Exp $
 
-DISTNAME=		cdk-5.0-20240619
+DISTNAME=		cdk-5.0-20250116
 PKGNAME=		${DISTNAME:S/5.0-/5.0./}
-PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://invisible-island.net/archives/cdk/ \
 			https://invisible-mirror.net/archives/cdk/
