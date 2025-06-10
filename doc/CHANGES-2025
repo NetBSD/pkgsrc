@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3843 2025/06/10 07:27:06 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3844 2025/06/10 07:42:17 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5734,3 +5734,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-bash to 0.25.0 [wiz 2025-06-10]
 	Updated graphics/geeqie to 2.6.1 [wiz 2025-06-10]
 	Updated www/hugo to 0.147.8 [triaxx 2025-06-10]
+	Updated games/openrct2 to 0.4.23 [triaxx 2025-06-10]
