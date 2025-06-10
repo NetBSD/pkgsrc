@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3852 2025/06/10 16:36:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3853 2025/06/10 17:17:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5749,3 +5749,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/dpkg to 1.22.20 [adam 2025-06-10]
 	Updated games/rocksndiamonds to 4.4.0.5 [adam 2025-06-10]
 	Updated devel/py-ruamel-yaml to 0.18.14 [adam 2025-06-10]
+	Updated lang/nodejs to 24.2.0 [adam 2025-06-10]
+	Updated www/py-httpx-socks to 0.10.1 [adam 2025-06-10]
