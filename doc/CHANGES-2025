@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3845 2025/06/10 08:03:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3846 2025/06/10 08:51:56 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5737,3 +5737,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/openrct2 to 0.4.23 [triaxx 2025-06-10]
 	Updated security/py-cryptography to 45.0.4 [adam 2025-06-10]
 	Updated security/py-cryptography_vectors to 45.0.4 [adam 2025-06-10]
+	Updated sysutils/duplicity to 3.0.4.0 [triaxx 2025-06-10]
