@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/05/12 12:03:09 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/06/10 05:15:46 wiz Exp $
 
-DISTNAME=	google_api_core-2.24.2
+DISTNAME=	google_api_core-2.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -22,8 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
 
-# test status as of 2.24.2
-# 714 passed, 23 skipped
+# test status as of 2.25.0
+# 718 passed, 23 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
