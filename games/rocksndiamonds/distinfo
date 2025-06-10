@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.45 2025/05/21 19:06:31 adam Exp $
+$NetBSD: distinfo,v 1.46 2025/06/10 16:34:13 adam Exp $
 
-BLAKE2s (rocksndiamonds-4.4.0.4-linux.tar.gz) = d0eb20c59cdb0fbd981c4a90418547147fc64b4c3d457e99457f812492a515bd
-SHA512 (rocksndiamonds-4.4.0.4-linux.tar.gz) = c3b264128b056b82fbaae10c38ebbd4656f534dec50b5b452afaa6de44b0f9d9d6092fd97e4d8ec5bb4878108226022159e01b304ffd365a93cf86acc6c56421
-Size (rocksndiamonds-4.4.0.4-linux.tar.gz) = 5346211 bytes
+BLAKE2s (rocksndiamonds-4.4.0.5-linux.tar.gz) = 0f4dbad60bc9d4c62de4493fdb6546b27dfc9eef4145d2f21b870ab7762b0da8
+SHA512 (rocksndiamonds-4.4.0.5-linux.tar.gz) = 9c2e9102b2d51fc74639a0bf3b2ca82126d0e5a0aeae27188c5a20a5db6c409e95d2dde66ae9f69cf7bcdef352b1d82f35187a61ecbbafb28d14c2bfca5e868c
+Size (rocksndiamonds-4.4.0.5-linux.tar.gz) = 5573310 bytes
 SHA1 (patch-src_Makefile) = d7f78c0f5a24d53661f678da76233b55d039f6d3
 SHA1 (patch-src_libgame_joystick.c) = 000805d76fee695cbedc42f1aa25423f04c08dbb
 SHA1 (patch-src_libgame_joystick.h) = a6bae0443a6285b9e4179119f1101ba7bf8d6727
