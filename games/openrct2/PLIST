@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/04/09 07:32:01 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/06/10 07:41:48 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -29,6 +29,7 @@ share/mime/packages/openrct2.xml
 share/openrct2/assetpack/openrct2.music.alternative.parkap
 share/openrct2/assetpack/openrct2.music.cover.parkap
 share/openrct2/assetpack/openrct2.sound.parkap
+share/openrct2/fonts.dat
 share/openrct2/g2.dat
 share/openrct2/language/ar-EG.txt
 share/openrct2/language/ca-ES.txt
@@ -2627,6 +2628,7 @@ share/openrct2/scenario_patches/8965a5c.parkpatch
 share/openrct2/scenario_patches/8cd8484.parkpatch
 share/openrct2/scenario_patches/8efd5c6.parkpatch
 share/openrct2/scenario_patches/92f4b50.parkpatch
+share/openrct2/scenario_patches/9401f88.parkpatch
 share/openrct2/scenario_patches/9c8b7cf.parkpatch
 share/openrct2/scenario_patches/a04b536.parkpatch
 share/openrct2/scenario_patches/a0b4362.parkpatch
@@ -2677,7 +2679,10 @@ share/openrct2/shaders/applypalette.frag
 share/openrct2/shaders/applypalette.vert
 share/openrct2/shaders/applytransparency.frag
 share/openrct2/shaders/applytransparency.vert
+share/openrct2/shaders/copyrect.frag
+share/openrct2/shaders/copyrect.vert
 share/openrct2/shaders/drawline.frag
 share/openrct2/shaders/drawline.vert
 share/openrct2/shaders/drawrect.frag
 share/openrct2/shaders/drawrect.vert
+share/openrct2/tracks.dat
