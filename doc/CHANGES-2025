@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3844 2025/06/10 07:42:17 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3845 2025/06/10 08:03:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5735,3 +5735,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/geeqie to 2.6.1 [wiz 2025-06-10]
 	Updated www/hugo to 0.147.8 [triaxx 2025-06-10]
 	Updated games/openrct2 to 0.4.23 [triaxx 2025-06-10]
+	Updated security/py-cryptography to 45.0.4 [adam 2025-06-10]
+	Updated security/py-cryptography_vectors to 45.0.4 [adam 2025-06-10]
