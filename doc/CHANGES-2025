@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3835 2025/06/10 05:15:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3836 2025/06/10 05:18:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5725,3 +5725,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 10.1.0 [wiz 2025-06-10]
 	Updated fonts/py-fonttools to 4.58.2 [wiz 2025-06-10]
 	Updated devel/py-google-api-core to 2.25.0 [wiz 2025-06-10]
+	Updated security/py-google-auth to 2.40.3 [wiz 2025-06-10]
