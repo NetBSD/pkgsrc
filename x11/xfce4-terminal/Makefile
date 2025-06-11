@@ -1,14 +1,21 @@
-# $NetBSD: Makefile,v 1.88 2025/04/24 14:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/06/11 23:49:34 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-terminal-1.1.4
+DISTNAME=	xfce4-terminal-1.1.5
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-terminal/1.1/
+EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://docs.xfce.org/apps/terminal/start
 COMMENT=	Xfce terminal emulator
+
+USE_TOOLS+=	autoconf automake autoreconf
+
+CONFIGURE_ARGS+=	--enable-maintainer-mode
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/pcre2/buildlink3.mk"
