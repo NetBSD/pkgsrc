@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/12 19:34:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/06/11 05:43:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -223,6 +223,9 @@ ${PYSITELIB}/libcst/_nodes/whitespace.pyo
 ${PYSITELIB}/libcst/_parser/__init__.py
 ${PYSITELIB}/libcst/_parser/__init__.pyc
 ${PYSITELIB}/libcst/_parser/__init__.pyo
+${PYSITELIB}/libcst/_parser/_parsing_check.py
+${PYSITELIB}/libcst/_parser/_parsing_check.pyc
+${PYSITELIB}/libcst/_parser/_parsing_check.pyo
 ${PYSITELIB}/libcst/_parser/base_parser.py
 ${PYSITELIB}/libcst/_parser/base_parser.pyc
 ${PYSITELIB}/libcst/_parser/base_parser.pyo
@@ -672,6 +675,9 @@ ${PYSITELIB}/libcst/helpers/common.pyo
 ${PYSITELIB}/libcst/helpers/expression.py
 ${PYSITELIB}/libcst/helpers/expression.pyc
 ${PYSITELIB}/libcst/helpers/expression.pyo
+${PYSITELIB}/libcst/helpers/matchers.py
+${PYSITELIB}/libcst/helpers/matchers.pyc
+${PYSITELIB}/libcst/helpers/matchers.pyo
 ${PYSITELIB}/libcst/helpers/module.py
 ${PYSITELIB}/libcst/helpers/module.pyc
 ${PYSITELIB}/libcst/helpers/module.pyo
@@ -687,6 +693,9 @@ ${PYSITELIB}/libcst/helpers/tests/__init__.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_expression.py
 ${PYSITELIB}/libcst/helpers/tests/test_expression.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_expression.pyo
+${PYSITELIB}/libcst/helpers/tests/test_matchers.py
+${PYSITELIB}/libcst/helpers/tests/test_matchers.pyc
+${PYSITELIB}/libcst/helpers/tests/test_matchers.pyo
 ${PYSITELIB}/libcst/helpers/tests/test_module.py
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyc
 ${PYSITELIB}/libcst/helpers/tests/test_module.pyo
