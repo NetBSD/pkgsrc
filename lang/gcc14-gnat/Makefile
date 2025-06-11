@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2025/06/01 07:24:36 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/11 13:27:04 dkazankov Exp $
 
 GCC_PKGNAME=		gcc14
-GCC_DIST_VERSION=	14.2.0
+GCC_DIST_VERSION=	14.3.0
 
 PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
-PKGREVISION=	1
+#PKGREVISION=	1
 COMMENT=	GNAT Compiler and Ada tools
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 CATEGORIES=	lang
@@ -38,8 +38,8 @@ GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
 INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
-USE_PKGSRC_GCC=	yes
-GCC_REQD+=	10
+USE_PKGSRC_GCC=		yes
+GCC_REQD+=		10
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
@@ -54,30 +54,27 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-14.1.0.diff
-PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/82b5c1c/gcc/
-PATCH_DIST_STRIP=	-p1
 .endif
 
-STAGE1_LDFLAGS=		${LDFLAGS} -static
+LDFLAGS+=		-static
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
-## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
-
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
-BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
-BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
+LDFLAGS_FOR_TARGET=	-static-libstdc++ -static-libgcc
+## The Library rpath to use in end programs.
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
-BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+LDFLAGS_FOR_TARGET+=		${LDFLAGS:M-Wl,-syslibroot*}
 .endif
+
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
@@ -103,13 +100,8 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
-CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
-CONFIGURE_ENV+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
-.endif
-
-CONFIGURE_ARGS+=	--enable-languages=c,c++,ada --enable-stage1-languages=c++,ada
-CONFIGURE_ARGS+=	--with-static-standard-libraries
+CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=ada,c,c++
+#CONFIGURE_ARGS+=	--with-static-standard-libraries
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
@@ -122,8 +114,14 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GNAT_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-gxx-include-dir='${GNAT_PREFIX}/include/c++'
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:Q}
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
+
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ARGS+=	--with-stage1-ldflags=${LDFLAGS_FOR_TARGET:Q}
+.else
+CONFIGURE_ARGS+=	--with-boot-ldflags=${LDFLAGS_FOR_TARGET:Q}
+CONFIGURE_ARGS+=	--with-stage1-ldflags=${LDFLAGS:Q}
+.endif
+
 # causes build errors even when using lang/gcc14 to self host
 CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
 # multilib on Darwin requires fat-binaries

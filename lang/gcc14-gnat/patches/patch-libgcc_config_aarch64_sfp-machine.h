@@ -1,12 +1,12 @@
-$NetBSD: patch-libgcc_config_aarch64_sfp-machine.h,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-libgcc_config_aarch64_sfp-machine.h,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libgcc/config/aarch64/sfp-machine.h
+--- libgcc/config/aarch64/sfp-machine.h.orig	2025-05-23 11:02:08.168258662 +0000
 +++ libgcc/config/aarch64/sfp-machine.h
 @@ -124,6 +124,27 @@ void __sfp_handle_exceptions (int);
-
-
+ 
+ 
  /* Define ALIASNAME as a strong alias for NAME.  */
 +#if defined __APPLE__
 +/* Mach-O doesn't support aliasing, so we build a secondary function for

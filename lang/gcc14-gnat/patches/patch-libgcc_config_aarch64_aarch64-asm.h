@@ -1,13 +1,13 @@
-$NetBSD: patch-libgcc_config_aarch64_aarch64-asm.h,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-libgcc_config_aarch64_aarch64-asm.h,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libgcc/config/aarch64/aarch64-asm.h
+--- libgcc/config/aarch64/aarch64-asm.h.orig	2025-05-23 11:02:08.168258662 +0000
 +++ libgcc/config/aarch64/aarch64-asm.h
 @@ -24,8 +24,6 @@
-
+ 
  #include "auto-target.h"
-
+ 
 -#define L(label) .L ## label
 -
  /* Marking variant PCS symbol references is important for PLT calls
@@ -16,7 +16,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 @@ -58,12 +56,31 @@
  # define AUTIASP
  #endif
-
+ 
 +#define PASTE2(a, b) PASTE2a(a, b)
 +#define PASTE2a(a, b) a ## b
 +
@@ -45,10 +45,10 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  #define SYMBOL_SIZE(name)
  #define SYMBOL_TYPE(name, _type)
  #endif
-@@ -93,16 +110,19 @@ GNU_PROPERTY (FEATURE_1_AND, BTI_FLAG|PAC_FLAG)
+@@ -93,16 +110,19 @@ GNU_PROPERTY (FEATURE_1_AND, BTI_FLAG|PA
  # endif
  #endif
-
+ 
 -#define ENTRY_ALIGN(name, align) \
 -  .global name;		\
 -  SYMBOL_TYPE(name, %function);		\

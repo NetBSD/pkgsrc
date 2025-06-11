@@ -1,4 +1,4 @@
-$NetBSD: patch-libgcc_config.host,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-libgcc_config.host,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Part 1: drop legacy library build for macOS >= 14 [PR116809].
 
@@ -35,7 +35,7 @@ libsupc++ fails to link without this, and for arm to build.
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libgcc/config.host.orig	2024-08-01 08:17:17.000000000 +0000
+--- libgcc/config.host.orig	2025-05-23 11:02:08.168258662 +0000
 +++ libgcc/config.host
 @@ -82,7 +82,7 @@ m32c*-*-*)
          cpu_type=m32c
@@ -46,38 +46,23 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	cpu_type=aarch64
  	;;
  alpha*-*-*)
-@@ -236,19 +236,25 @@ case ${host} in
+@@ -236,11 +236,14 @@ case ${host} in
    esac
    tmake_file="$tmake_file t-slibgcc-darwin"
    case ${host} in
--    *-*-darwin1[89]* | *-*-darwin2* )
--      tmake_file="t-darwin-min-8 $tmake_file"
 +    x86_64-*-darwin2[0-2]*)
 +      tmake_file="t-darwin-min-11 t-darwin-libgccs1 $tmake_file"
 +      ;;
-+    *-*-darwin2*)
-+      tmake_file="t-darwin-min-11 $tmake_file"
-+      ;;
-+    *-*-darwin1[89]*)
+     *-*-darwin2*)
+       tmake_file="t-darwin-min-11 $tmake_file"
+       ;;
+     *-*-darwin1[89]*)
+-      tmake_file="t-darwin-min-8 $tmake_file"
 +      tmake_file="t-darwin-min-8 t-darwin-libgccs1 $tmake_file"
        ;;
-     *-*-darwin9* | *-*-darwin1[0-7]*)
--      tmake_file="t-darwin-min-5 $tmake_file"
-+      tmake_file="t-darwin-min-5 t-darwin-libgccs1 $tmake_file"
-       ;;
-     *-*-darwin[4-8]*)
--      tmake_file="t-darwin-min-1 $tmake_file"
-+      tmake_file="t-darwin-min-1 t-darwin-libgccs1 $tmake_file"
-       ;;
-     *)
-       # Fall back to configuring for the oldest system known to work with
-       # all archs and the current sources.
--      tmake_file="t-darwin-min-5 $tmake_file"
-+      tmake_file="t-darwin-min-5 t-darwin-libgccs1 $tmake_file"
-       echo "Warning: libgcc configured to support macOS 10.5" 1>&2
-       ;;
-   esac
-@@ -274,7 +280,7 @@ case ${host} in
+     *-*-darwin1[67]]*)
+       tmake_file="t-darwin-min-5 $tmake_file"
+@@ -280,7 +283,7 @@ case ${host} in
    if test "x$enable_darwin_at_rpath" = "xyes"; then
      tmake_file="$tmake_file t-darwin-rpath "
    fi
@@ -86,7 +71,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
    ;;
  *-*-dragonfly*)
    tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-eh-dw2-dip"
-@@ -418,6 +424,15 @@ aarch64*-*-elf | aarch64*-*-rtems*)
+@@ -424,6 +427,15 @@ aarch64*-*-elf | aarch64*-*-rtems*)
  	tmake_file="${tmake_file} t-dfprules"
  	md_unwind_header=aarch64/aarch64-unwind.h
  	;;
@@ -102,7 +87,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  aarch64*-*-freebsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
-@@ -429,6 +444,7 @@ aarch64*-*-freebsd*)
+@@ -435,6 +447,7 @@ aarch64*-*-freebsd*)
  aarch64*-*-netbsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
@@ -110,7 +95,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
  	tmake_file="${tmake_file} t-dfprules"
  	md_unwind_header=aarch64/aarch64-unwind.h
-@@ -530,7 +546,8 @@ arm*-*-netbsdelf*)
+@@ -536,7 +549,8 @@ arm*-*-netbsdelf*)
  	case ${host} in
  	  arm*-*-netbsdelf-*eabi*)
  	    tmake_file="${tmake_file} arm/t-netbsd-eabi"
@@ -120,7 +105,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	    ;;
  	  *)
  	    tmake_file="${tmake_file} arm/t-netbsd t-slibgcc-gld-nover"
-@@ -725,14 +742,14 @@ i[34567]86-*-darwin*)
+@@ -731,14 +745,14 @@ i[34567]86-*-darwin*)
  	tmake_file="$tmake_file i386/t-crtpc t-crtfm i386/t-msabi"
  	tm_file="$tm_file i386/darwin-lib.h"
  	extra_parts="$extra_parts crtprec32.o crtprec64.o crtprec80.o"
@@ -137,7 +122,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	tmake_file="${tmake_file} i386/t-heap-trampoline"
  	;;
  i[34567]86-*-elfiamcu)
-@@ -1215,12 +1232,14 @@ powerpc-*-darwin*)
+@@ -1221,12 +1235,14 @@ powerpc-*-darwin*)
  	# We build the darwin10 EH shim for Rosetta (running on x86 machines).
  	tm_file="$tm_file i386/darwin-lib.h"
  	tmake_file="$tmake_file rs6000/t-ppc64-fp rs6000/t-ibm-ldouble"

@@ -1,13 +1,13 @@
-$NetBSD: patch-libgcc_config_aarch64___arm_tpidr2_save.S,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-libgcc_config_aarch64___arm_tpidr2_save.S,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- libgcc/config/aarch64/__arm_tpidr2_save.S
+--- libgcc/config/aarch64/__arm_tpidr2_save.S.orig	2025-05-23 11:02:08.168258662 +0000
 +++ libgcc/config/aarch64/__arm_tpidr2_save.S
 @@ -35,10 +35,15 @@ HIDDEN (__aarch64_have_sme)
-
+ 
  variant_pcs (__arm_tpidr2_save)
-
+ 
 -ENTRY (__arm_tpidr2_save)
 +ENTRY (ASMNAME (__arm_tpidr2_save))
  	/* Check if SME is available.  */
@@ -21,7 +21,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +	ldrb	w14, [x14, :lo12:ASMNAME (__aarch64_have_sme)]
 +#endif
  	cbz	w14, L(end)
-
+ 
  	.inst	0xd53bd0ae  /* mrs	x14, tpidr2_el0  */
 @@ -92,10 +97,18 @@ L(fail):
  	str	x16, [sp, 16]
@@ -29,10 +29,9 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	.inst	0xd503467f  /* smstop  */
 -	bl	abort
 -END (__arm_tpidr2_save)
--
 +	bl	ASMNAME (abort)
 +ENDm ASMNAME (__arm_tpidr2_save)
-+
+ 
 +	GLOBAL(ASMNAME (__libgcc_arm_tpidr2_save))
 +	HIDDEN (ASMNAME (__libgcc_arm_tpidr2_save))
 +#if __APPLE__

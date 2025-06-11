@@ -1,14 +1,13 @@
-$NetBSD: patch-fixincludes_inclhack.def,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-fixincludes_inclhack.def,v 1.2 2025/06/11 13:27:04 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- fixincludes/inclhack.def
+--- fixincludes/inclhack.def.orig	2025-05-23 11:02:03.804189823 +0000
 +++ fixincludes/inclhack.def
-@@ -194,33 +194,6 @@ fix = {
- 	_EndOfHeader_;
+@@ -195,33 +195,6 @@ fix = {
  };
-
--/*
+ 
+ /*
 - *  SDKs for 10.13 and 10.14 omit the definitions for API_AVAILABLE where
 - *  __attribute__((availability)) is not supported.
 - */
@@ -35,22 +34,14 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 -    "#define __API_UNAVAILABLE(...)\n";
 -};
 -
- /*
+-/*
   *  This fixes __FD_ZERO bug for linux 2.x.y (x <= 2 && y <= some n)
   */
-@@ -1273,6 +1246,7 @@ fix = {
-     hackname  = apple_local_stdio_fn_deprecation;
-     mach      = "*-*-*darwin2*";
-     files     = stdio.h;
-+    files     = _stdio.h;
-     select    = "__deprecated_msg([^\n]*)$";
-     c_fix     = format;
-     c_fix_arg = "#if defined(__APPLE_LOCAL_DEPRECATIONS)\n"
-@@ -1350,32 +1324,6 @@ fix = {
-     test_text = "extern void* malloc( size_t );";
+ fix = {
+@@ -1352,32 +1326,6 @@ fix = {
  };
-
--/*
+ 
+ /*
 - *  macOS 10.12 <AvailabilityInternal.h> uses __attribute__((availability))
 - *  unconditionally.
 - */
@@ -76,6 +67,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 -		"#define __API_D(msg,x) __attribute__((availability(__API_DEPRECATED_PLATFORM_##x,message=msg)))";
 -};
 -
- /*
+-/*
   *  For the AAB_darwin7_9_long_double_funcs fix (and later fixes for long long)
   *  to be useful, the main math.h must use <> and not "" includes.
+  */
