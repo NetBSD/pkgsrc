@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 10:37:47 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/11 13:12:06 adam Exp $
 
-DISTNAME=	editorconfig-0.17.0
+DISTNAME=	editorconfig-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-core-/}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/EditorConfig/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://editorconfig.org/
 COMMENT=	Editorconfig python library
 LICENSE=	python-software-foundation AND modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=80.9.0:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 10:37:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/11 13:12:06 adam Exp $
 bin/editorconfig-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,9 +14,6 @@ ${PYSITELIB}/editorconfig/__init__.pyo
 ${PYSITELIB}/editorconfig/__main__.py
 ${PYSITELIB}/editorconfig/__main__.pyc
 ${PYSITELIB}/editorconfig/__main__.pyo
-${PYSITELIB}/editorconfig/compat.py
-${PYSITELIB}/editorconfig/compat.pyc
-${PYSITELIB}/editorconfig/compat.pyo
 ${PYSITELIB}/editorconfig/exceptions.py
 ${PYSITELIB}/editorconfig/exceptions.pyc
 ${PYSITELIB}/editorconfig/exceptions.pyo
@@ -29,6 +26,7 @@ ${PYSITELIB}/editorconfig/handler.pyo
 ${PYSITELIB}/editorconfig/ini.py
 ${PYSITELIB}/editorconfig/ini.pyc
 ${PYSITELIB}/editorconfig/ini.pyo
+${PYSITELIB}/editorconfig/py.typed
 ${PYSITELIB}/editorconfig/version.py
 ${PYSITELIB}/editorconfig/version.pyc
 ${PYSITELIB}/editorconfig/version.pyo
