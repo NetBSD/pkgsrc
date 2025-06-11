@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/07 15:02:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/06/11 12:50:13 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -39,6 +39,7 @@ bin/indi_falcon_rotator
 bin/indi_falconv2_rotator
 bin/indi_fcusb_focus
 bin/indi_flipflat
+bin/indi_gemini_flatpanel
 bin/indi_gemini_focus
 bin/indi_getprop
 bin/indi_giotto
@@ -64,6 +65,7 @@ bin/indi_lx200_OpenAstroTech
 bin/indi_lx200_TeenAstro
 bin/indi_lx200_pegasus_nyx101
 bin/indi_lx200am5
+bin/indi_lx200ap_legacy
 bin/indi_lx200ap_v2
 bin/indi_lx200autostar
 bin/indi_lx200basic
@@ -162,6 +164,7 @@ bin/indi_terrans_powerboxgo_v2
 bin/indi_terrans_powerboxpro_v2
 bin/indi_trutech_wheel
 bin/indi_universalror_dome
+bin/indi_ups_safety
 bin/indi_uranus_weather
 bin/indi_usbdewpoint
 bin/indi_usbfocusv3_focus
@@ -296,18 +299,18 @@ lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.1.3
+lib/libindiAlignmentDriver.so.2.1.4
 lib/libindiclient.a
 lib/libindiclient.so
 lib/libindiclient.so.2
-lib/libindiclient.so.2.1.3
+lib/libindiclient.so.2.1.4
 lib/libindidriver.a
 lib/libindidriver.so
 lib/libindidriver.so.2
-lib/libindidriver.so.2.1.3
+lib/libindidriver.so.2.1.4
 lib/libindilx200.so
 lib/libindilx200.so.2
-lib/libindilx200.so.2.1.3
+lib/libindilx200.so.2.1.4
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
