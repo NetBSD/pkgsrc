@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3864 2025/06/11 15:00:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3865 2025/06/11 16:39:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5770,3 +5770,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php82 to 8.2.28nb4 [taca 2025-06-11]
 	Updated lang/php83 to 8.3.22nb1 [taca 2025-06-11]
 	Updated lang/php84 to 8.4.8nb1 [taca 2025-06-11]
+	Updated devel/opa to 1.5.1 [leot 2025-06-11]
