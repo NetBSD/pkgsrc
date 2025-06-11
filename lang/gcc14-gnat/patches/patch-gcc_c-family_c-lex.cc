@@ -1,11 +1,11 @@
-$NetBSD: patch-gcc_c-family_c-lex.cc,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_c-family_c-lex.cc,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/c-family/c-lex.cc
+--- gcc/c-family/c-lex.cc.orig	2025-05-23 11:02:04.248196827 +0000
 +++ gcc/c-family/c-lex.cc
-@@ -584,6 +584,21 @@ c_lex_with_flags (tree *value, location_t *loc, unsigned char *cpp_flags,
-
+@@ -584,6 +584,21 @@ c_lex_with_flags (tree *value, location_
+ 
      case CPP_NUMBER:
        {
 +	/* If the user wants number-like entities to be returned as a raw
@@ -25,3 +25,4 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +
  	const char *suffix = NULL;
  	unsigned int flags = cpp_classify_number (parse_in, tok, &suffix, *loc);
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/06/11 13:27:04 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc14-gnat
 
@@ -14,7 +14,7 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/gcc14-gnat/bin
 
 GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
-ADALIB_PREFIX=	gcc14-gnat/lib/gcc/${GNU_TARGET_MACHINE}/14.2.0
+ADALIB_PREFIX=	gcc14-gnat/lib/gcc/${GNU_TARGET_MACHINE}/14.3.0
 
 BUILDLINK_FILES.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib/*
 
