@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.6 2025/05/05 13:57:00 hauke Exp $
+$NetBSD: patch-meson.build,v 1.7 2025/06/11 11:24:19 hauke Exp $
 
 Add PREFIXed paths (include, lib) for all OSes.
 
@@ -6,7 +6,7 @@ Make PREFIX path configurable.
 
 Install at.h on Linux, we do it on NetBSD, too.
 
---- meson.build.orig	2025-04-27 20:58:10.000000000 +0000
+--- meson.build.orig	2025-05-31 04:47:29.000000000 +0000
 +++ meson.build
 @@ -152,16 +152,9 @@ include_dirs = [
      'include',
@@ -26,7 +26,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  # note: the brew app is not visible from within the brew build wrapper iteslf,
  # so rather than checking for brew we apply a blanket prefix
  brew_prefix = ''
-@@ -183,13 +176,7 @@ endif
+@@ -189,13 +182,7 @@ endif
  
  libsearch_dirs = []
  
@@ -41,7 +41,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  
  if brew_prefix != ''
      libsearch_dirs += brew_prefix + '/lib'
-@@ -227,9 +214,8 @@ add_global_link_arguments(netatalk_commo
+@@ -233,9 +220,8 @@ add_global_link_arguments(netatalk_commo
  #################
  
  header_dir = []
@@ -53,7 +53,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  
  check_headers = [
      'acl/libacl.h',
-@@ -386,9 +372,7 @@ else
+@@ -392,9 +378,7 @@ else
      endif
  
      bdb_dirs += [
@@ -64,16 +64,16 @@ Install at.h on Linux, we do it on NetBSD, too.
          '/usr',
      ]
  endif
-@@ -824,7 +808,7 @@ endif
- if host_os == 'darwin'
-     bison = find_program(brew_prefix / 'opt/bison/bin/bison', required: false)
+@@ -834,7 +818,7 @@ if host_os == 'darwin'
+         bison = find_program(brew_prefix / 'opt/bison/bin/bison', required: false)
+     endif
      if not bison.found()
 -        bison = find_program('/opt/local/bin/bison', required: false)
 +        bison = find_program( get_option('prefix') / 'bison', required: false)
      endif
  else
      bison = find_program('bison', required: false)
-@@ -1540,7 +1524,7 @@ else
+@@ -1550,7 +1534,7 @@ else
          pam_paths = [
              '/',
              '/usr',
@@ -82,7 +82,7 @@ Install at.h on Linux, we do it on NetBSD, too.
          ]
  
          foreach path : pam_paths
-@@ -1870,16 +1854,10 @@ cracklib_dict = ''
+@@ -1904,16 +1888,10 @@ cracklib_dict = ''
  
  if fs.is_dir('/usr/share/cracklib')
      cracklib_dict += '/usr/share/cracklib/pw_dict'
@@ -101,7 +101,7 @@ Install at.h on Linux, we do it on NetBSD, too.
  endif
  
  if not enable_cracklib
-@@ -2001,7 +1979,6 @@ if host_os.contains('freebsd')
+@@ -2035,7 +2013,6 @@ if host_os.contains('freebsd')
      cdata.set('FREEBSD', 1)
      cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
  elif host_os.contains('linux')
