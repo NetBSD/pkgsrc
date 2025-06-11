@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2025/06/01 14:14:03 leot Exp $
+$NetBSD: distinfo,v 1.27 2025/06/11 16:40:37 leot Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.20.0.mod) = 9fbd8f75efe0ea449f272307df3537390d8c9d60ddf006e1a9deaec0584ce09c
 SHA512 (cel.dev_expr_@v_v0.20.0.mod) = 2fbf9e5422fe7c8f3da9ea07c6fb16d6d35a0d884c8f48432833a92cadee27cba9100da13f68722b61daac49357d3227d6df2f2e65ed256b8ca3ac8d02605683
@@ -1830,9 +1830,9 @@ Size (cloud.google.com_go_workflows_@v_v1.8.0.mod) = 903 bytes
 BLAKE2s (cloud.google.com_go_workflows_@v_v1.9.0.mod) = 26885a9584f959412bada68876c81bdde52b70a9ac6f7e7a48aa95a6b4ad2dee
 SHA512 (cloud.google.com_go_workflows_@v_v1.9.0.mod) = a77c228f80f51ec06946d48402e4d912d0420877979c1156d92c0e4e65abf6d36ed0909d327a15263e2dbad5e539de69dc79278d7c8e43206b4968c4f8f291c7
 Size (cloud.google.com_go_workflows_@v_v1.9.0.mod) = 1013 bytes
-BLAKE2s (conftest-0.61.0.tar.gz) = 0d616e17f228189d5e68df8f96abc4fd378faae00b6f1870b277c02b49af9801
-SHA512 (conftest-0.61.0.tar.gz) = f374f406a506d1a096c2678ca1bfe4c9f6e180b0c42a01f92af2ad1f81040870dd4d6738213558a911e919d5c2c3b92dcdb2d5c5d233e7c12d4ede4b25550b34
-Size (conftest-0.61.0.tar.gz) = 204896 bytes
+BLAKE2s (conftest-0.61.2.tar.gz) = c4b87be7b33d1a6c442790a1a44b78493ed23df34f95cc8d3326250660b1e47f
+SHA512 (conftest-0.61.2.tar.gz) = 09171bf44b9a03bef0f346fba3ba73183bfda686e9a00d4829f706e4ece0ae9f2df4bb5b4001ebe5775b4792eb244e5d7b30db56da36fa9ba5535192211c8c02
+Size (conftest-0.61.2.tar.gz) = 204923 bytes
 BLAKE2s (cuelang.org_go_@v_v0.13.0.mod) = 605e7d8466a4d2447a8d58468dcf339da2ce646999582004d1944acab1f85a24
 SHA512 (cuelang.org_go_@v_v0.13.0.mod) = c9b6a8dd50f593da071ac5b131671858ef8368889fefb0f23d47d5fe28dccecda16a0ef0c1adc6a97341cbd0df17c8b851d62d499e0193e769b9e94b142841ac
 Size (cuelang.org_go_@v_v0.13.0.mod) = 1205 bytes
@@ -2907,12 +2907,12 @@ Size (github.com_olekukonko_tablewriter_@v_v0.0.5.mod) = 96 bytes
 BLAKE2s (github.com_olekukonko_tablewriter_@v_v0.0.5.zip) = e5d294dd8e425d25d1bc99ed2620a8bf4072b7d19f74408fd4b35331af3afcd3
 SHA512 (github.com_olekukonko_tablewriter_@v_v0.0.5.zip) = 51ac6647cf44f5ba36d9209576dff1f2f133ec8b0a13a957e4642e3034b2d2b755de8ebf34a0c77f146b3f33044cc2f71a85e512690553e3a3bf311c2f46bae8
 Size (github.com_olekukonko_tablewriter_@v_v0.0.5.zip) = 24933 bytes
-BLAKE2s (github.com_open-policy-agent_opa_@v_v1.5.0.mod) = 43dfbcbfd4108333213c06581b9df0f3cae573a4f093d5c08f552ee17e1cb976
-SHA512 (github.com_open-policy-agent_opa_@v_v1.5.0.mod) = cd51689cfa3c4dddda99e35d4e9f86d920f2ecb8241a4f412bc03e771525f4f2fbde571759f8fd2c95b418d2498c53aa0d623a662e996b15b4b5fc8131bf1da1
-Size (github.com_open-policy-agent_opa_@v_v1.5.0.mod) = 4698 bytes
-BLAKE2s (github.com_open-policy-agent_opa_@v_v1.5.0.zip) = 87a89e27a340955681b081171b13eac25cd8c5fbb1e288e2797402c9e05607fa
-SHA512 (github.com_open-policy-agent_opa_@v_v1.5.0.zip) = 4439a6058c2020e94a6edbfae726d9708c5aa54d684d8dbfa68a42b12f98b354f31eb0ab56635065961a6719e3b3b51dd6bc1c639c89f7530d0621a03b0dd04e
-Size (github.com_open-policy-agent_opa_@v_v1.5.0.zip) = 16092140 bytes
+BLAKE2s (github.com_open-policy-agent_opa_@v_v1.5.1.mod) = 43dfbcbfd4108333213c06581b9df0f3cae573a4f093d5c08f552ee17e1cb976
+SHA512 (github.com_open-policy-agent_opa_@v_v1.5.1.mod) = cd51689cfa3c4dddda99e35d4e9f86d920f2ecb8241a4f412bc03e771525f4f2fbde571759f8fd2c95b418d2498c53aa0d623a662e996b15b4b5fc8131bf1da1
+Size (github.com_open-policy-agent_opa_@v_v1.5.1.mod) = 4698 bytes
+BLAKE2s (github.com_open-policy-agent_opa_@v_v1.5.1.zip) = 3a8112f32be2f1782773f1656626f2659b229e1a1feae6c72c28d182ae49c3b9
+SHA512 (github.com_open-policy-agent_opa_@v_v1.5.1.zip) = 1a61961e5fd2dd8749fd79628c90f3e394c89b0dff8bbbeebe0af70a50015039b7ab81bee9a18c0e712754a4c0e07bbae20e5e5a7860ddd031514e96495786de
+Size (github.com_open-policy-agent_opa_@v_v1.5.1.zip) = 16097456 bytes
 BLAKE2s (github.com_opencontainers_go-digest_@v_v1.0.0.mod) = 04d62f69713ee3530c7d52d2b240861c9bff2d43515b6240d845fbfa3d45e284
 SHA512 (github.com_opencontainers_go-digest_@v_v1.0.0.mod) = 708918e1cabb5710f63858f35ef5bb197666b2ab8220ee48b47575b77805e44b083dc7577ad3bcf9414fd801653c21be9582086ca73fbd9c5589380a7450a400
 Size (github.com_opencontainers_go-digest_@v_v1.0.0.mod) = 52 bytes

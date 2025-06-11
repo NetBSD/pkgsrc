@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.26 2025/06/01 14:14:03 leot Exp $
+# $NetBSD: go-modules.mk,v 1.27 2025/06/11 16:40:38 leot Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.20.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.20.0.zip
@@ -968,8 +968,8 @@ GO_MODULE_FILES+=	github.com/munnerz/goautoneg/@v/v0.0.0-20191010083416-a7dc8b61
 GO_MODULE_FILES+=	github.com/munnerz/goautoneg/@v/v0.0.0-20191010083416-a7dc8b61c822.zip
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
 GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.zip
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v1.5.0.mod
-GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v1.5.0.zip
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v1.5.1.mod
+GO_MODULE_FILES+=	github.com/open-policy-agent/opa/@v/v1.5.1.zip
 GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/opencontainers/go-digest/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/opencontainers/image-spec/@v/v1.1.1.mod
