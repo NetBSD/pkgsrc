@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3859 2025/06/11 13:28:26 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.3860 2025/06/11 13:59:26 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5760,3 +5760,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-editorconfig-core to 0.17.1 [adam 2025-06-11]
 	Updated devel/py-test-run-parallel to 0.4.4 [adam 2025-06-11]
 	Updated lang/gcc14-gnat to 14.3.0 [dkazankov 2025-06-11]
+	Updated lang/gcc14-gnat-libs to 14.3.0nb1 [dkazankov 2025-06-11]
