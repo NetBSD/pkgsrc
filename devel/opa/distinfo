@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2025/06/01 14:06:19 leot Exp $
+$NetBSD: distinfo,v 1.30 2025/06/11 16:39:48 leot Exp $
 
 BLAKE2s (github.com_agnivade_levenshtein_@v_v1.2.1.mod) = 81d2217602cc601452b8bcb4d82d0f384351b9d4eda024cbdf27a580912b3365
 SHA512 (github.com_agnivade_levenshtein_@v_v1.2.1.mod) = a442860c017809a11e1cdaa0165dc15d87490e0513f94e0ad47f7fe6decdb28b2db3d24973fc7214a570d9ffce419b74e4a6c3c25f7332b1c432a7c639d92f3b
@@ -777,9 +777,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (opa-1.5.0.tar.gz) = 7986eebac213d5ac98555ef186a29ca86bb16875175dc182301f637af2eae346
-SHA512 (opa-1.5.0.tar.gz) = 5528354e7e16e9952e825b6c05a5bc5c1110dbcedc4d35d92eda7f10699c5cbab5c7db6260edd7e7470f26b4c0a8ccc77dd1849a2f56f593de4a8c33d82f0897
-Size (opa-1.5.0.tar.gz) = 99472404 bytes
+BLAKE2s (opa-1.5.1.tar.gz) = 4b2f6ae909a7eb9690b821fa3ca8226b8fe8016717a9b58a17f35dfdb0eb50bc
+SHA512 (opa-1.5.1.tar.gz) = 6490de7b6fa8536c23472cb28b7a76a5589709d9a25b4c80ad1360aa19dc1eecafaed09e4e94d102426cea63b651e8682ef93ceba32fef75b6439a714ff86a19
+Size (opa-1.5.1.tar.gz) = 99478630 bytes
 BLAKE2s (oras.land_oras-go_v2_@v_v2.5.0.mod) = a77855d98e6dc3772777673918510dbd51c726c337325e82e5ee40488eb91773
 SHA512 (oras.land_oras-go_v2_@v_v2.5.0.mod) = 6ce73b190a446a276ddaa5b6d123b100b12684db3f821fd05ee210ea225dc5c22475111dcd9762d254d6e3c1b04762d0e7615b2a31901a1a31d841a302f2d00b
 Size (oras.land_oras-go_v2_@v_v2.5.0.mod) = 165 bytes
