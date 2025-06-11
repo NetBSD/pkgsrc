@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3863 2025/06/11 14:31:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3864 2025/06/11 15:00:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5765,3 +5765,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-gnat-libs to 14.3.0nb1 [dkazankov 2025-06-11]
 	Updated editors/neovim to 0.11.2 [adam 2025-06-11]
 	Updated www/py-yarl to 1.20.1 [adam 2025-06-11]
+	Updated lang/php74 to 7.4.33nb4 [taca 2025-06-11]
+	Updated lang/php81 to 8.1.32nb4 [taca 2025-06-11]
+	Updated lang/php82 to 8.2.28nb4 [taca 2025-06-11]
+	Updated lang/php83 to 8.3.22nb1 [taca 2025-06-11]
+	Updated lang/php84 to 8.4.8nb1 [taca 2025-06-11]
