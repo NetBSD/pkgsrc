@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3857 2025/06/11 12:50:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3858 2025/06/11 13:13:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5757,3 +5757,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/netatalk4 to 4.2.4 [hauke 2025-06-11]
 	Updated databases/postgresql-timescaledb to 2.20.3 [adam 2025-06-11]
 	Updated misc/indi to 2.1.4 [adam 2025-06-11]
+	Updated devel/py-editorconfig-core to 0.17.1 [adam 2025-06-11]
+	Updated devel/py-test-run-parallel to 0.4.4 [adam 2025-06-11]
