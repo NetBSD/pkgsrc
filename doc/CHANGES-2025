@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3861 2025/06/11 14:24:05 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.3862 2025/06/11 14:24:41 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-gnat to 14.3.0 [dkazankov 2025-06-11]
 	Updated lang/gcc14-gnat-libs to 14.3.0nb1 [dkazankov 2025-06-11]
 	Updated lang/gcc13-gnat-libs to 13.3.0nb4 [dkazankov 2025-06-11]
+	Updated lang/gcc14-gnat-libs to 14.3.0nb1 [dkazankov 2025-06-11]
