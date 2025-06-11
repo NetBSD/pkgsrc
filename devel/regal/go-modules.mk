@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.18 2025/06/01 14:18:49 leot Exp $
+# $NetBSD: go-modules.mk,v 1.19 2025/06/11 16:47:06 leot Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -162,6 +162,7 @@ GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.10.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.zip
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.4.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.9.mod
 GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/modern-go/concurrent/@v/v0.0.0-20180228061459-e0a39a4cb421.mod
@@ -175,12 +176,8 @@ GO_MODULE_FILES+=	github.com/mozillazg/go-unidecode/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/mozillazg/go-unidecode/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/munnerz/goautoneg/@v/v0.0.0-20191010083416-a7dc8b61c822.mod
 GO_MODULE_FILES+=	github.com/munnerz/goautoneg/@v/v0.0.0-20191010083416-a7dc8b61c822.zip
-GO_MODULE_FILES+=	github.com/olekukonko/errors/@v/v0.0.0-20250405072817-4e6d85265da6.mod
-GO_MODULE_FILES+=	github.com/olekukonko/errors/@v/v0.0.0-20250405072817-4e6d85265da6.zip
-GO_MODULE_FILES+=	github.com/olekukonko/ll/@v/v0.0.8.mod
-GO_MODULE_FILES+=	github.com/olekukonko/ll/@v/v0.0.8.zip
-GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v1.0.7.mod
-GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v1.0.7.zip
+GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.mod
+GO_MODULE_FILES+=	github.com/olekukonko/tablewriter/@v/v0.0.5.zip
 GO_MODULE_FILES+=	github.com/onsi/ginkgo/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/onsi/ginkgo/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/onsi/gomega/@v/v1.4.3.mod
