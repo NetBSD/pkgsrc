@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc14-gnat-libs
 

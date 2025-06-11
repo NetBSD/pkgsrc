@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_calls.h,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_calls.h,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/calls.h
+--- gcc/calls.h.orig	2025-05-23 11:02:04.260197017 +0000
 +++ gcc/calls.h
 @@ -35,24 +35,43 @@ class function_arg_info
  {
@@ -12,7 +12,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +    : type (NULL_TREE), mode (VOIDmode), named (false), last_named (false),
        pass_by_reference (false)
    {}
-
+ 
    /* Initialize an argument of mode MODE, either before or after promotion.  */
    function_arg_info (machine_mode mode, bool named)
 -    : type (NULL_TREE), mode (mode), named (named), pass_by_reference (false)
@@ -24,14 +24,14 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +    : type (NULL_TREE), mode (mode), named (named), last_named (last_named),
 +      pass_by_reference (false)
    {}
-
+ 
    /* Initialize an unpromoted argument of type TYPE.  */
    function_arg_info (tree type, bool named)
 -    : type (type), mode (TYPE_MODE (type)), named (named),
 +    : type (type), mode (TYPE_MODE (type)), named (named), last_named (false),
        pass_by_reference (false)
    {}
-
+ 
 +  /* Initialize an unpromoted argument of type TYPE.  */
 +  function_arg_info (tree type, bool named, bool last_named)
 +    : type (type), mode (TYPE_MODE (type)), named (named),
@@ -50,12 +50,12 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +    : type (type), mode (mode), named (named), last_named (last_named),
 +      pass_by_reference (false)
    {}
-
+ 
    /* Return true if the gimple-level type is an aggregate.  */
 @@ -105,6 +124,9 @@ public:
       "...").  See also TARGET_STRICT_ARGUMENT_NAMING.  */
    unsigned int named : 1;
-
+ 
 +  /* True if this is the last named argument. */
 +  unsigned int last_named : 1;
 +

@@ -1,12 +1,12 @@
-$NetBSD: patch-gcc_calls.cc,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_calls.cc,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/calls.cc
+--- gcc/calls.cc.orig	2025-05-23 11:02:04.260197017 +0000
 +++ gcc/calls.cc
-@@ -1376,7 +1376,8 @@ initialize_argument_information (int num_actuals ATTRIBUTE_UNUSED,
+@@ -1376,7 +1376,8 @@ initialize_argument_information (int num
  	 with those made by function.cc.  */
-
+ 
        /* See if this argument should be passed by invisible reference.  */
 -      function_arg_info arg (type, argpos < n_named_args);
 +      function_arg_info arg (type, argpos < n_named_args,
@@ -14,8 +14,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        if (pass_by_reference (args_so_far_pnt, arg))
  	{
  	  const bool callee_copies
-@@ -1496,10 +1497,13 @@ initialize_argument_information (int num_actuals ATTRIBUTE_UNUSED,
-
+@@ -1496,10 +1497,13 @@ initialize_argument_information (int num
+ 
        unsignedp = TYPE_UNSIGNED (type);
        arg.type = type;
 -      arg.mode
@@ -31,8 +31,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +					&unsignedp, 0);
        args[i].unsignedp = unsignedp;
        args[i].mode = arg.mode;
-
-@@ -1549,6 +1553,7 @@ initialize_argument_information (int num_actuals ATTRIBUTE_UNUSED,
+ 
+@@ -1549,6 +1553,7 @@ initialize_argument_information (int num
  #endif
  			     reg_parm_stack_space,
  			     args[i].pass_on_stack ? 0 : args[i].partial,
@@ -48,18 +48,18 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  /* Output a library call to function ORGFUN (a SYMBOL_REF rtx)
     for a value of mode OUTMODE,
     with NARGS different arguments, passed as ARGS.
-@@ -4281,6 +4287,7 @@ emit_library_call_value_1 (int retval, rtx orgfun, rtx value,
+@@ -4281,6 +4287,7 @@ emit_library_call_value_1 (int retval, r
  			   argvec[count].reg != 0,
  #endif
  			   reg_parm_stack_space, 0,
 +			   args_so_far,
  			   NULL_TREE, &args_size, &argvec[count].locate);
-
+ 
        if (argvec[count].reg == 0 || argvec[count].partial != 0
-@@ -4351,8 +4358,16 @@ emit_library_call_value_1 (int retval, rtx orgfun, rtx value,
+@@ -4351,8 +4358,16 @@ emit_library_call_value_1 (int retval, r
  	  val = force_operand (XEXP (slot, 0), NULL_RTX);
  	}
-
+ 
 -      arg.mode = promote_function_mode (NULL_TREE, arg.mode, &unsigned_p,
 -					NULL_TREE, 0);
 +//      arg.mode = promote_function_mode (NULL_TREE, arg.mode, &unsigned_p,
@@ -75,7 +75,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
        argvec[count].mode = arg.mode;
        argvec[count].value = convert_modes (arg.mode, GET_MODE (val), val,
  					   unsigned_p);
-@@ -4372,6 +4387,7 @@ emit_library_call_value_1 (int retval, rtx orgfun, rtx value,
+@@ -4372,6 +4387,7 @@ emit_library_call_value_1 (int retval, r
  			       argvec[count].reg != 0,
  #endif
  			       reg_parm_stack_space, argvec[count].partial,

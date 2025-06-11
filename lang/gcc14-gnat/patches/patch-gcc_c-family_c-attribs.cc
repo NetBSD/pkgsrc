@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_c-family_c-attribs.cc,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_c-family_c-attribs.cc,v 1.2 2025/06/11 13:27:04 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/c-family/c-attribs.cc
+--- gcc/c-family/c-attribs.cc.orig	2025-05-23 11:02:04.244196764 +0000
 +++ gcc/c-family/c-attribs.cc
-@@ -665,6 +665,18 @@ attribute_takes_identifier_p (const_tree attr_id)
+@@ -665,6 +665,18 @@ attribute_takes_identifier_p (const_tree
      return targetm.attribute_takes_identifier_p (attr_id);
  }
-
+ 
 +/* Returns TRUE iff the attribute indicated by ATTR_ID needs its
 +   arguments converted to string constants.  */
 +

@@ -1,37 +1,37 @@
-$NetBSD: patch-gcc_collect2.cc,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_collect2.cc,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/collect2.cc
+--- gcc/collect2.cc.orig	2025-05-23 11:02:04.264197080 +0000
 +++ gcc/collect2.cc
-@@ -73,7 +73,7 @@ along with GCC; see the file COPYING3.  If not see
+@@ -73,7 +73,7 @@ along with GCC; see the file COPYING3.  
     In a cross-compiler, this means you need a cross nm,
     but that is not quite as unpleasant as special headers.  */
-
+ 
 -#if !defined (OBJECT_FORMAT_COFF)
 +#if !defined (OBJECT_FORMAT_COFF) && !defined (OBJECT_FORMAT_MACHO)
  #define OBJECT_FORMAT_NONE
  #endif
-
-@@ -107,7 +107,7 @@ along with GCC; see the file COPYING3.  If not see
-
+ 
+@@ -107,7 +107,7 @@ along with GCC; see the file COPYING3.  
+ 
  #endif /* OBJECT_FORMAT_COFF */
-
+ 
 -#ifdef OBJECT_FORMAT_NONE
 +#if defined (OBJECT_FORMAT_NONE) || defined (OBJECT_FORMAT_MACHO)
-
+ 
  /* Default flags to pass to nm.  */
  #ifndef NM_FLAGS
-@@ -525,7 +525,7 @@ static const char *const target_machine = TARGET_MACHINE;
-
+@@ -525,7 +525,7 @@ static const char *const target_machine 
+ 
     Return 0 if not found, otherwise return its name, allocated with malloc.  */
-
+ 
 -#ifdef OBJECT_FORMAT_NONE
 +#if defined (OBJECT_FORMAT_NONE) || defined (OBJECT_FORMAT_MACHO)
-
+ 
  /* Add an entry for the object file NAME to object file list LIST.
     New entries are added at the end of the list. The original pointer
-@@ -764,6 +764,12 @@ do_link (char **ld_argv, const char *atsuffix)
+@@ -764,6 +764,12 @@ do_link (char **ld_argv, const char *ats
      }
  }
  
@@ -42,7 +42,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +#endif
 +
  /* Main program.  */
-
+ 
  int
 @@ -777,16 +783,19 @@ main (int argc, char **argv)
        USE_BFD_LD,
@@ -108,11 +108,12 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      {
        char *linker_name;
  # ifdef HOST_EXECUTABLE_SUFFIX
-@@ -2270,7 +2288,7 @@ write_aix_file (FILE *stream, struct id *list)
+@@ -2270,7 +2288,7 @@ write_aix_file (FILE *stream, struct id 
  }
  #endif
  
 -#ifdef OBJECT_FORMAT_NONE
 +#if defined (OBJECT_FORMAT_NONE) || defined (OBJECT_FORMAT_MACHO)
-
+ 
  /* Check to make sure the file is an LTO object file.  */
+ 
