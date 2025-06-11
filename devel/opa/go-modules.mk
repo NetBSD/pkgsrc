@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.29 2025/06/01 14:06:19 leot Exp $
+# $NetBSD: go-modules.mk,v 1.30 2025/06/11 16:39:48 leot Exp $
 
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.1.zip
