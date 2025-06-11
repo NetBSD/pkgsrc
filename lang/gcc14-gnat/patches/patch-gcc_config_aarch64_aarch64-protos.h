@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64-protos.h,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64-protos.h,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64-protos.h
+--- gcc/config/aarch64/aarch64-protos.h.orig	2025-05-23 11:02:04.276197268 +0000
 +++ gcc/config/aarch64/aarch64-protos.h
 @@ -109,6 +109,14 @@ enum aarch64_symbol_type
    SYMBOL_TLSLE24,
@@ -18,7 +18,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  SYMBOL_MO_LARGE_TLS,
    SYMBOL_FORCE_TO_MEM
  };
-
+ 
 @@ -748,6 +756,7 @@ void aarch64_post_cfi_startproc (void);
  poly_int64 aarch64_initial_elimination_offset (unsigned, unsigned);
  int aarch64_get_condition_code (rtx);
@@ -27,7 +27,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  bool aarch64_bitmask_imm (unsigned HOST_WIDE_INT val, machine_mode);
  unsigned HOST_WIDE_INT aarch64_and_split_imm1 (HOST_WIDE_INT val_in);
  unsigned HOST_WIDE_INT aarch64_and_split_imm2 (HOST_WIDE_INT val_in);
-@@ -782,7 +791,11 @@ bool aarch64_is_extend_from_extract (scalar_int_mode, rtx, rtx);
+@@ -782,7 +791,11 @@ bool aarch64_is_extend_from_extract (sca
  bool aarch64_is_long_call_p (rtx);
  bool aarch64_is_noplt_call_p (rtx);
  bool aarch64_label_mentioned_p (rtx);
@@ -39,8 +39,8 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  void aarch64_asm_output_alias (FILE *, const tree, const tree);
  void aarch64_asm_output_external (FILE *, tree, const char*);
  bool aarch64_legitimate_pic_operand_p (rtx);
-@@ -999,6 +1012,7 @@ void aarch64_override_options_internal (struct gcc_options *);
-
+@@ -999,6 +1012,7 @@ void aarch64_override_options_internal (
+ 
  const char *aarch64_general_mangle_builtin_type (const_tree);
  void aarch64_general_init_builtins (void);
 +void aarch64_init_subtarget_builtins (void);

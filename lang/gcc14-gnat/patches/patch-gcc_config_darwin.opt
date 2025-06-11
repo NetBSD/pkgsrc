@@ -1,24 +1,24 @@
-$NetBSD: patch-gcc_config_darwin.opt,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_config_darwin.opt,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/darwin.opt
+--- gcc/config/darwin.opt.orig	2025-05-23 11:02:04.332198151 +0000
 +++ gcc/config/darwin.opt
 @@ -91,6 +91,10 @@ mtarget-linker
  Target RejectNegative Joined Separate Var(darwin_target_linker) Init(LD64_VERSION)
  -mtarget-linker <version>	Specify that ld64 <version> is the toolchain linker for the current invocation.
-
+ 
 +munreachable-traps
 +Target Var(darwin_unreachable_traps) Init(1)
 +When set (the default) this makes __builtin_unreachable render as a trap.
 +
  ; Driver options.
-
+ 
  all_load
-@@ -381,6 +385,10 @@ unexported_symbols_list
+@@ -385,6 +389,10 @@ weak_framework
  Driver RejectNegative Separate
- -unexported_symbols_list <filename>	Do not export the global symbols listed in <filename>.
-
+ -weak_framework <framework>	Make a weak link to the specified framework.
+ 
 +weak_framework
 +Driver RejectNegative Separate
 +-weak_framework <framework>	Make a weak link to the specified framework.

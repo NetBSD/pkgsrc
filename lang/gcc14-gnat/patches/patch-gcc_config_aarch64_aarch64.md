@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64.md,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64.md,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/aarch64.md
+--- gcc/config/aarch64/aarch64.md.orig	2025-05-23 11:02:04.284197394 +0000
 +++ gcc/config/aarch64/aarch64.md
 @@ -363,6 +363,7 @@
      ;; Wraps a constant integer that should be multiplied by the number
@@ -10,12 +10,12 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      UNSPEC_SME_VQ
 +    UNSPEC_MACHOPIC_OFFSET	; Common to Mach-O ports.
  ])
-
+ 
  (define_c_enum "unspecv" [
 @@ -995,6 +996,37 @@
    [(set_attr "type" "load_4")]
  )
-
+ 
 +(define_insn "prefetch_unscaled"
 +  [(prefetch (match_operand:DI 0 "aarch64_unscaled_prefetch_operand" "Du")
 +            (match_operand:QI 1 "const_int_operand" "")
@@ -68,7 +68,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
       [r, Usa; adr      , *   , 4] adr\t%x0, %c1
       [r, Ush; adr      , *   , 4] adrp\t%x0, %A1
       [w, r Z; f_mcr    , fp  , 4] fmov\t%d0, %x1
-@@ -7387,7 +7419,10 @@
+@@ -7390,7 +7422,10 @@
  	(lo_sum:P (match_operand:P 1 "register_operand" "r")
  		  (match_operand 2 "aarch64_valid_symref" "S")))]
    ""
@@ -79,3 +79,4 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 +  }
    [(set_attr "type" "alu_imm")]
  )
+ 

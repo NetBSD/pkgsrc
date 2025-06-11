@@ -1,13 +1,13 @@
-$NetBSD: patch-gcc_config_aarch64_predicates.md,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_config_aarch64_predicates.md,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/config/aarch64/predicates.md
+--- gcc/config/aarch64/predicates.md.orig	2025-05-23 11:02:04.288197457 +0000
 +++ gcc/config/aarch64/predicates.md
 @@ -352,9 +352,24 @@
  (define_predicate "aarch64_prefetch_operand"
    (match_test "aarch64_address_valid_for_prefetch_p (op, false)"))
-
+ 
 +(define_predicate "aarch64_unscaled_prefetch_operand"
 +  (match_test "aarch64_address_valid_for_unscaled_prefetch_p (op, false)"))
 +
