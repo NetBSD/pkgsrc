@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3856 2025/06/11 11:25:00 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.3857 2025/06/11 12:50:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5755,3 +5755,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libjpeg-turbo to 3.1.1 [adam 2025-06-11]
 	Updated lang/py-libcst to 1.8.1 [adam 2025-06-11]
 	Updated net/netatalk4 to 4.2.4 [hauke 2025-06-11]
+	Updated databases/postgresql-timescaledb to 2.20.3 [adam 2025-06-11]
+	Updated misc/indi to 2.1.4 [adam 2025-06-11]
