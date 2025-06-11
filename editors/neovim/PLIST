@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/24 12:50:18 leot Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/06/11 14:29:30 adam Exp $
 bin/nvim
+@pkgdir lib/nvim
 man/man1/nvim.1
 ${PLIST.desktop}share/applications/nvim.desktop
 share/icons/hicolor/128x128/apps/nvim.png
@@ -392,6 +393,7 @@ share/nvim/runtime/doc/vim_diff.txt
 share/nvim/runtime/doc/visual.txt
 share/nvim/runtime/doc/vvars.txt
 share/nvim/runtime/doc/windows.txt
+share/nvim/runtime/example_init.lua
 share/nvim/runtime/filetype.lua
 share/nvim/runtime/ftoff.vim
 share/nvim/runtime/ftplugin.vim
@@ -2054,4 +2056,3 @@ share/nvim/runtime/tutor/ja/vim-01-beginner.tutor
 share/nvim/runtime/tutor/ja/vim-01-beginner.tutor.json
 share/nvim/runtime/tutor/tutor.tutor
 share/nvim/runtime/tutor/tutor.tutor.json
-@pkgdir lib/nvim
