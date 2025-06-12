@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/05/11 14:08:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/06/12 06:47:04 wiz Exp $
 bin/renpy
 ${PYSITELIB}/Ren_Py-${PKGVERSION}.25031702-py${PYVERSSUFFIX}.egg-info/PKG-INFO
 ${PYSITELIB}/Ren_Py-${PKGVERSION}.25031702-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
@@ -363,7 +363,7 @@ share/renpy/launcher/game/androidstrings.rpy
 share/renpy/launcher/game/androidstrings.rpyc
 share/renpy/launcher/game/archiver.rpy
 share/renpy/launcher/game/archiver.rpyc
-share/renpy/launcher/game/cache/bytecode-313.rpyb
+share/renpy/launcher/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/launcher/game/cache/py3analysis.rpyb
 share/renpy/launcher/game/cache/screens.rpyb
 share/renpy/launcher/game/change_icon.py
@@ -1553,7 +1553,7 @@ share/renpy/sdk-fonts/SourceHanSansLite.ttf
 share/renpy/the_question/android-icon_background.png
 share/renpy/the_question/android-icon_foreground.png
 share/renpy/the_question/android.json
-share/renpy/the_question/game/cache/bytecode-313.rpyb
+share/renpy/the_question/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/the_question/game/cache/py3analysis.rpyb
 share/renpy/the_question/game/cache/screens.rpyb
 share/renpy/the_question/game/gui.rpy
@@ -1733,7 +1733,7 @@ share/renpy/tutorial/game/01director_support.rpy
 share/renpy/tutorial/game/01director_support.rpyc
 share/renpy/tutorial/game/01example.rpy
 share/renpy/tutorial/game/01example.rpyc
-share/renpy/tutorial/game/cache/bytecode-313.rpyb
+share/renpy/tutorial/game/cache/bytecode-${PYTHON_VERSION}.rpyb
 share/renpy/tutorial/game/cache/py3analysis.rpyb
 share/renpy/tutorial/game/cache/screens.rpyb
 share/renpy/tutorial/game/examples.rpy
