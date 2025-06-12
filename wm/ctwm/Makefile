@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/04/24 14:15:59 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/06/12 17:53:03 vins Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
@@ -18,11 +18,11 @@ USE_CMAKE=	YES
 
 # We need an m4 that understands the -s option.
 .if !empty(TOOLS_PLATFORM.m4)
-.  if !empty(:!${ECHO} yes | ${TOOLS_PLATFORM.m4} -s 2>/dev/null||${ECHO}!)
+.  if !empty(:!${ECHO} yes | ${TOOLS_PLATFORM.m4} -Ps 2>/dev/null||${ECHO}!)
 TOOLS_PLATFORM.gm4?=	${TOOLS_PLATFORM.m4}
 .  endif
 .endif
-USE_TOOLS+=		gm4:run
+USE_TOOLS+=		gm4
 AUTO_MKDIRS=		yes
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
