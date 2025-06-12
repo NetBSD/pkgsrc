@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3877 2025/06/12 08:13:48 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3878 2025/06/12 08:46:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5783,3 +5783,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.105.1 [pin 2025-06-12]
 	Updated shells/oh-my-posh to 26.6.1 [pin 2025-06-12]
 	Updated net/termscp to 0.18.0 [pin 2025-06-12]
+	Updated devel/ccls to 0.20241108 [adam 2025-06-12]
+	Updated meta-pkgs/bulk-test-llvm to 20250612 [adam 2025-06-12]
