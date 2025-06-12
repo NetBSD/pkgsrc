@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3880 2025/06/12 11:01:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3881 2025/06/12 11:06:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5788,3 +5788,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/mbuffer to 20250429nb1 [hauke 2025-06-12]
 	Updated net/haproxy to 3.2.1 [adam 2025-06-12]
 	Updated devel/doxygen to 1.14.0 [adam 2025-06-12]
+	Updated lang/python313 to 3.13.5 [adam 2025-06-12]
+	Updated lang/py313-html-docs to 3.13.5 [adam 2025-06-12]
