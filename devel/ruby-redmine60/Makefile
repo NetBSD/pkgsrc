@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/05/26 15:54:07 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/06/12 14:28:30 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -47,20 +48,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pip
 DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.8<1:../../textproc/ruby-commonmarker
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 
-.include "../../lang/ruby/modules.mk"
-
-# for older Ruby
-.if ${RUBY_VER} < 33
-DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.8<4:../../textproc/ruby-csv
-DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.4.8:../../net/ruby-net-imap
-.endif
-
-.include "options.mk"
-
-REPLACE_RUBY+=	${DISTNAME}/bin/*
-REPLACE_RUBY+=	${DISTNAME}/extra/mail_handler/rdm-mailhandler.rb
-REPLACE_RUBY+=	${DISTNAME}/extra/svn/reposman.rb
-REPLACE_RUBY+=	${DISTNAME}/public/dispatch.fcgi.example
+REPLACE_RUBY+=	bin/*
+REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
+REPLACE_RUBY+=	extra/svn/reposman.rb
 
 SUBST_CLASSES+=		shell
 SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine60_*${RUBY_SUFFIX}.sh
@@ -109,5 +99,14 @@ post-install: unicorn-post-install
 		${DESTDIR}/${EGDIR}
 
 .include "../../devel/ruby-redmine/redmine.mk"
+
+# for older Ruby
+.if ${RUBY_VER} < 33
+DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.8<4:../../textproc/ruby-csv
+DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.4.8:../../net/ruby-net-imap
+.endif
+
+.include "options.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
