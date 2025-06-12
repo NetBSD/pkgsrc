@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/12 11:39:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2025/06/12 09:05:01 wiz Exp $
 
 DISTNAME=	extractbb
 PKGNAME=	tex-${DISTNAME}-1.1.0
@@ -14,6 +14,8 @@ DEPENDS+=	tex-luatex-[0-9]*:../../print/tex-luatex
 REPLACE_TEXLUA=	bin/extractbb
 
 INSTALLATION_DIRS+=	bin
+
+CONFLICTS+=	dvipdfmx<20250205
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
