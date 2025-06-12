@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/30 21:17:32 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2025/06/12 06:57:50 wiz Exp $
 
 DISTNAME=	deskflow-1.22.0
 CATEGORIES=	net x11
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/deskflow/deskflow/
 COMMENT=	Let a user share a mouse and keyboard among computers
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++20
