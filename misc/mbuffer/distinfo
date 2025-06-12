@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2025/06/12 10:59:31 hauke Exp $
+$NetBSD: distinfo,v 1.12 2025/06/12 11:20:09 hauke Exp $
 
 BLAKE2s (mbuffer-20250429.tgz) = 83738390c5f7339269c631f0ae557197b145bea1e28d54666f7967743d9fd3a8
 SHA512 (mbuffer-20250429.tgz) = 9cbf233335b8f7fe4d607f93afdb1797293377f580def420a3b2285b1e777ef33fff7fd7ebbe67fd35dca48127e887de9f833c2d019075f51fcef2e479a8ff00
 Size (mbuffer-20250429.tgz) = 152402 bytes
 SHA1 (patch-Makefile.in) = d1da7397021ba38a6a71202b1083ef6e6957978f
-SHA1 (patch-configure) = 5f6a261fa49d7b2ebff9adfdc6e088fe3d75a3f6
+SHA1 (patch-configure) = 36aaef27ece8de430bc3fa77883bae7ea901e7c7
 SHA1 (patch-idev.c) = dbc5f3764933b42cb194d6d0c148f27682bcfba3
 SHA1 (patch-mbuffer.rc) = f6639110e0a30f62a8a61e725a5403c88703d671
 SHA1 (patch-mkversion.sh) = 9be57b7bff3cf27dc533bbf0f0b2f6beb14b2ed8
