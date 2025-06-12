@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2025/04/25 07:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/06/12 07:43:18 wiz Exp $
 
-DISTNAME=	breezy-3.3.8
-PKGREVISION=	1
+DISTNAME=	breezy-3.3.12
 CATEGORIES=	devel scm
-MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
+#MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=breezy-team/}
+GITHUB_TAG=	${DISTNAME:S/breezy/brz/}
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	https://breezy-vcs.org/
@@ -27,8 +28,6 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Prevent setup.py from building breezy/main.rs; use console_script instead.
 MAKE_ENV+=		CIBUILDWHEEL=1
@@ -60,6 +59,9 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_MAN} brz.1 breezy/git/git-remote-bzr.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 #do-test: "brz selftest -v" needs the installed package.
+
+# as of 3.3.12
+# 2295 failed, 8056 passed, 391 skipped, 25 xfailed, 71977 warning
 
 #.include "cargo-depends.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/25 07:41:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/06/12 07:43:18 wiz Exp $
 bin/brz
 bin/bzr-receive-pack
 bin/bzr-upload-pack
@@ -103,11 +103,6 @@ ${PYSITELIB}/breezy/bzr/_rio_py.py
 ${PYSITELIB}/breezy/bzr/_rio_py.pyc
 ${PYSITELIB}/breezy/bzr/_rio_py.pyo
 ${PYSITELIB}/breezy/bzr/_rio_pyx.so
-${PYSITELIB}/breezy/bzr/_simple_set_pyx.so
-${PYSITELIB}/breezy/bzr/_static_tuple_c.so
-${PYSITELIB}/breezy/bzr/_static_tuple_py.py
-${PYSITELIB}/breezy/bzr/_static_tuple_py.pyc
-${PYSITELIB}/breezy/bzr/_static_tuple_py.pyo
 ${PYSITELIB}/breezy/bzr/branch.py
 ${PYSITELIB}/breezy/bzr/branch.pyc
 ${PYSITELIB}/breezy/bzr/branch.pyo
@@ -264,9 +259,6 @@ ${PYSITELIB}/breezy/bzr/smart/signals.pyo
 ${PYSITELIB}/breezy/bzr/smart/vfs.py
 ${PYSITELIB}/breezy/bzr/smart/vfs.pyc
 ${PYSITELIB}/breezy/bzr/smart/vfs.pyo
-${PYSITELIB}/breezy/bzr/static_tuple.py
-${PYSITELIB}/breezy/bzr/static_tuple.pyc
-${PYSITELIB}/breezy/bzr/static_tuple.pyo
 ${PYSITELIB}/breezy/bzr/tag.py
 ${PYSITELIB}/breezy/bzr/tag.pyc
 ${PYSITELIB}/breezy/bzr/tag.pyo
@@ -369,12 +361,6 @@ ${PYSITELIB}/breezy/bzr/tests/test__groupcompress.pyo
 ${PYSITELIB}/breezy/bzr/tests/test__rio.py
 ${PYSITELIB}/breezy/bzr/tests/test__rio.pyc
 ${PYSITELIB}/breezy/bzr/tests/test__rio.pyo
-${PYSITELIB}/breezy/bzr/tests/test__simple_set.py
-${PYSITELIB}/breezy/bzr/tests/test__simple_set.pyc
-${PYSITELIB}/breezy/bzr/tests/test__simple_set.pyo
-${PYSITELIB}/breezy/bzr/tests/test__static_tuple.py
-${PYSITELIB}/breezy/bzr/tests/test__static_tuple.pyc
-${PYSITELIB}/breezy/bzr/tests/test__static_tuple.pyo
 ${PYSITELIB}/breezy/bzr/tests/test_btree_index.py
 ${PYSITELIB}/breezy/bzr/tests/test_btree_index.pyc
 ${PYSITELIB}/breezy/bzr/tests/test_btree_index.pyo
