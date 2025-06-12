@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/07/03 10:13:27 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/06/12 06:35:39 wiz Exp $
 
-BLAKE2s (libplist-2.2.0.tar.bz2) = bb7cb3155ddde9d753027e27d33c2efc9275938b773fc93304b461cf59a2e285
-SHA512 (libplist-2.2.0.tar.bz2) = dcd922ebb28efa3c507253dd4671fdb3e4d367540734765b8d545756f6be2731fc401e7992cc6b06cdbde866fd7e17ff6188895505988b41f738226a004d7291
-Size (libplist-2.2.0.tar.bz2) = 451801 bytes
+BLAKE2s (libplist-2.7.0.tar.bz2) = 33f18f23387c946fd4543b383394350b7dfd6fbad92affbeb98031a818d56f2d
+SHA512 (libplist-2.7.0.tar.bz2) = 83d0398b75ea9e610e49b4b96a7675b854c7551d4faf3e82e74c5c45cf04bbd95478cc40688f0995742e6a50601744d2a36641d0673aa7cc413f5ce2ec42f2d4
+Size (libplist-2.7.0.tar.bz2) = 484474 bytes
