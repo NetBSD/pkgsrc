@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/04 14:15:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/12 11:06:14 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -5721,8 +5721,7 @@ lib/python${PY_VER_SUFFIX}/test/typinganndata/ann_module9.pyo
 lib/python${PY_VER_SUFFIX}/test/typinganndata/mod_generics_cache.py
 lib/python${PY_VER_SUFFIX}/test/typinganndata/mod_generics_cache.pyc
 lib/python${PY_VER_SUFFIX}/test/typinganndata/mod_generics_cache.pyo
-lib/python${PY_VER_SUFFIX}/test/wheeldata/setuptools-67.6.1-py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/test/wheeldata/wheel-0.43.0-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/test/wheeldata/setuptools-79.0.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
