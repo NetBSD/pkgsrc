@@ -7,8 +7,7 @@ extensive work on screening algorithms, color generation, and printer
 feature utilization. We are continuing our work in all of these areas
 to produce ever higher quality results, particularly on the
 ubiquitous, inexpensive inkjet printers that are nonetheless capable
-of nearly photographic output quality.  Earlier versions of Gutenprint
-were called gimp-print.
+of nearly photographic output quality.
 
 This package contains the base library, the Epson utility escputil,
-cups support, and a gimp plugin.
+and cups support.
