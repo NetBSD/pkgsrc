@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2025/04/25 11:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/06/12 08:12:37 pin Exp $
 
-DISTNAME=	termscp-0.17.0
+DISTNAME=	termscp-0.18.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://termscp.veeso.dev/
@@ -18,9 +18,7 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.85.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.82.0 on amd64
+RUST_REQ=	1.85.1
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl gmake
 
