@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3870 2025/06/12 06:35:47 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3871 2025/06/12 07:20:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5776,3 +5776,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-terminal to 1.1.5 [gutteridge 2025-06-11]
 	Updated sysutils/pfetch to 1.9.1 [fox 2025-06-12]
 	Updated textproc/libplist to 2.7.0 [wiz 2025-06-12]
+	Updated sysutils/ncdu2 to 2.8.2 [wiz 2025-06-12]
