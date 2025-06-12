@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/04/17 21:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/06/12 06:35:39 wiz Exp $
 
-DISTNAME=	libplist-2.2.0
-PKGREVISION=	10
+DISTNAME=	libplist-2.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libimobiledevice/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -18,11 +17,9 @@ USE_TOOLS+=	bash gmake pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE+=		libplist++.pc.in
-PKGCONFIG_OVERRIDE+=		libplist.pc.in
+PKGCONFIG_OVERRIDE+=		src/libplist++-2.0.pc.in
+PKGCONFIG_OVERRIDE+=		src/libplist-2.0.pc.in
 PY_PATCHPLIST=			yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
