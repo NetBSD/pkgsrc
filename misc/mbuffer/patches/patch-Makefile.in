@@ -1,9 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.4 2025/04/30 13:10:04 hauke Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2025/06/12 12:59:24 hauke Exp $
 
 Fix install permissions.
 
+Remove bash dependency.
+
 --- Makefile.in.orig	2025-04-29 23:11:07.000000000 +0000
 +++ Makefile.in
+@@ -65,7 +65,7 @@ build/%.d: %.c
+ always:
+ 
+ version.h: always
+-	bash mkversion.sh
++	$(SHELL) mkversion.sh
+ 
+ $(TARGET): $(OBJECTS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJECTS) $(LIBS) -o $@
 @@ -81,14 +81,14 @@ distclean: clean
  	config.status Makefile mbuffer.1 core
  
