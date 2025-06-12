@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3868 2025/06/11 23:49:49 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3869 2025/06/12 04:50:37 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5774,3 +5774,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/conftest to 0.61.2 [leot 2025-06-11]
 	Updated devel/regal to 0.34.1 [leot 2025-06-11]
 	Updated x11/xfce4-terminal to 1.1.5 [gutteridge 2025-06-11]
+	Updated sysutils/pfetch to 1.9.1 [fox 2025-06-12]
