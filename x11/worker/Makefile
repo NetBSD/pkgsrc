@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.10 2025/06/08 10:15:05 vins Exp $
+# $NetBSD: Makefile,v 1.11 2025/06/12 17:32:43 vins Exp $
 
 DISTNAME=	worker-5.2.1
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 EXTRACT_SUFX=	.tar.zst
 
-MAINTAINER=	pkgsrc-users@NetBSD.org	
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.boomerangsworld.de/cms/worker/downloads/
 COMMENT=	Orthodox file manager for the X Window System
 LICENSE=	gnu-gpl-v2
+
+EXTRACT_USING=		bsdtar
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++20 # designated initializers
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config bash:run
+USE_TOOLS+=	pkg-config bash:run zstd
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/worker.pc.in
 
