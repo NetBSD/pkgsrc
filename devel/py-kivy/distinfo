@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2025/04/16 20:40:46 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/06/12 07:29:05 wiz Exp $
 
 BLAKE2s (Kivy-2.3.1.tar.gz) = bc67e1d62d706dfe5c8f168960bf6b352db08539eb009993069dd7bf20b4de87
 SHA512 (Kivy-2.3.1.tar.gz) = f26983a6ccdc173d7d69f0c17a36dc8a4dfd31e4777363253b6bcbf549c44ff2d281e8529ff3ea6683fbfb1c16102bd436bb0433b00c23eb4084be30b3b487ad
 Size (Kivy-2.3.1.tar.gz) = 23967306 bytes
+SHA1 (patch-kivy_graphics_context__instructions.pyx) = 832277962827829929a90ee5feeb8da34d7051a9
+SHA1 (patch-kivy_graphics_opengl.pyx) = 968074f0b413e5b1b267d8d126cbee1a10756f00
+SHA1 (patch-kivy_weakproxy.pyx) = 34214bdd35389edab5cc13e3009870b183ac6371
