@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2024/10/05 13:34:19 rhialto Exp $
+$NetBSD: distinfo,v 1.10 2025/06/12 07:43:18 wiz Exp $
 
-BLAKE2s (breezy-3.3.8.tar.gz) = 2261def39b52c7160a2dc2aa09e43e73c47dee699ddba4bae9e902272d5973fa
-SHA512 (breezy-3.3.8.tar.gz) = 476e227b7f6e42b162375fe017caedf8aa816e7cc29204d6263e1d6343f88c1aa5c764ecea7fc9c04a066a6017e0632e55f89b1a6a4ff734062e45516b04c20a
-Size (breezy-3.3.8.tar.gz) = 10398195 bytes
+BLAKE2s (breezy-3.3.12.tar.gz) = c8f5560134942f307539d94f91c44f8091ab968989d5079a06a750da5931d21b
+SHA512 (breezy-3.3.12.tar.gz) = 460cb3b7e0d2557644f5cc428ba24f769b42031716423cdfe43da04576b0a46642b01aa930ebb737b713bf627155c66e9693013a2d476b9703a9bc8a6ef694a6
+Size (breezy-3.3.12.tar.gz) = 9384932 bytes
 SHA1 (patch-breezy_bzr_rio.py) = 99566d80ba2963da4d1c4ad8813270f7cc61874b
 SHA1 (patch-breezy_tests_test__server.py) = 768c43eb412fc688c49ac5037c4dc18b046b1be0
-SHA1 (patch-setup.py) = 5fd2478ef24fc2cf414d7c72b7dfdfd6f0736081
+SHA1 (patch-setup.py) = d1b56c52e74736110cf522f8459ddf53d2e7dfce
