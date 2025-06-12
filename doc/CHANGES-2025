@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3882 2025/06/12 14:28:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3883 2025/06/12 18:41:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/python313 to 3.13.5 [adam 2025-06-12]
 	Updated lang/py313-html-docs to 3.13.5 [adam 2025-06-12]
 	Updated devel/ruby-redmine60 to 6.0.5nb1 [taca 2025-06-12]
+	Updated security/age to 1.2.1nb4 [schmonz 2025-06-12]
