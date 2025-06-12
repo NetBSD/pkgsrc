@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2025/04/24 14:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2025/06/12 06:55:06 wiz Exp $
 
 DISTNAME=	amarok-3.0.0
 PKGREVISION=	8
@@ -22,6 +22,10 @@ CONF_FILES+=	share/examples/amarok/xdg/amarok_homerc ${PKG_SYSCONFDIR}/xdg/amaro
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 
 INSTALLATION_DIRS+=	share/examples/amarok/xdg
+
+# due to googletest
+USE_CXX_FEATURES+=	c++17
+FORCE_CXX_STD=		c++17
 
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/amarok_homerc ${DESTDIR}${PREFIX}/share/examples/amarok/xdg
