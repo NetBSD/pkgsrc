@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2024/10/05 13:34:19 rhialto Exp $
+$NetBSD: patch-setup.py,v 1.3 2025/06/12 07:43:18 wiz Exp $
 
 - Surely this should work in some other way, but without this,
   "setup.py build" errors out with "error: invalid command 'build_mo'".
@@ -15,9 +15,9 @@ $NetBSD: patch-setup.py,v 1.2 2024/10/05 13:34:19 rhialto Exp $
   time, commented-out fragments in the Makefile remain for the case where
   one wants to try using Rust.
 
---- setup.py.orig	2024-06-27 14:42:24.000000000 +0000
+--- setup.py.orig	2025-04-05 23:22:03.000000000 +0000
 +++ setup.py
-@@ -79,10 +79,16 @@ class build_man(Command):
+@@ -77,10 +77,16 @@ class build_man(Command):
  
  from setuptools.command.build import build
  
@@ -34,8 +34,8 @@ $NetBSD: patch-setup.py,v 1.2 2024/10/05 13:34:19 rhialto Exp $
 +#    "build_mo": build_mo,
  }
  
- from distutils import log
-@@ -220,7 +226,7 @@ import site
+ from distutils.extension import Extension
+@@ -213,7 +219,7 @@ import site
  site.ENABLE_USER_SITE = "--user" in sys.argv
  
  rust_extensions = [
