@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/03/13 19:36:14 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/12 07:20:24 wiz Exp $
 
-DISTNAME=	ncdu-2.7
+DISTNAME=	ncdu-2.8.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
