@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/06/01 15:18:55 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/12 08:06:36 pin Exp $
 
-DISTNAME=	HexPatch-1.11.3
+DISTNAME=	HexPatch-1.12.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Etto48/}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/HexPatch-1.11.3
+WRKSRC=		${WRKDIR}/HexPatch-1.12.1
 
 #RUST_REQ=	1.87.0
 #Upstream does not state the required MSRV.
