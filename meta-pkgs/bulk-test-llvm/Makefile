@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/05/09 07:44:13 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/12 08:45:14 adam Exp $
 
-DISTNAME=	bulk-test-llvm-20250508
+DISTNAME=	bulk-test-llvm-20250612
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,6 +34,7 @@ DEPENDS+=	mlir-[0-9]*:../../lang/mlir
 DEPENDS+=	openmp-[0-9]*:../../parallel/openmp
 DEPENDS+=	polly-[0-9]*:../../devel/polly
 
+DEPENDS+=	ccls-[0-9]*:../../devel/ccls
 DEPENDS+=	cvise-[0-9]*:../../devel/cvise
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
 DEPENDS+=	firefox-esr-[0-9]*:../../www/firefox-esr
