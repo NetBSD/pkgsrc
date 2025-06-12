@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/05/27 09:45:10 taca Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/12 14:30:39 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -49,12 +49,10 @@ DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.8<1:../../textproc/ruby-commonmar
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 #DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.6<4:../../textproc/ruby-csv
 
-.include "options.mk"
-
-REPLACE_RUBY+=	${DISTNAME}/bin/*
-REPLACE_RUBY+=	${DISTNAME}/extra/mail_handler/rdm-mailhandler.rb
-REPLACE_RUBY+=	${DISTNAME}/extra/svn/reposman.rb
-REPLACE_RUBY+=	${DISTNAME}/public/dispatch.fcgi.example
+REPLACE_RUBY+=	bin/*
+REPLACE_RUBY+=	extra/mail_handler/rdm-mailhandler.rb
+REPLACE_RUBY+=	extra/svn/reposman.rb
+REPLACE_RUBY+=	public/dispatch.fcgi.example
 
 SUBST_CLASSES+=		shell
 SUBST_FILES.shell=	${DESTDIR}${PREFIX}/bin/redmine51_*${RUBY_SUFFIX}.sh
@@ -103,6 +101,7 @@ post-install: unicorn-post-install
 		${DESTDIR}/${EGDIR}
 
 .include "../../devel/ruby-redmine/redmine.mk"
+.include "options.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
