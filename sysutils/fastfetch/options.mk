@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2025/03/30 08:14:50 vins Exp $
+# $NetBSD: options.mk,v 1.14 2025/06/12 20:13:03 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -15,11 +15,6 @@ CHECK_BUILTIN.pthread:= no
 
 .if ${USE_BUILTIN.pthread:tl} == yes
 PKG_SUGGESTED_OPTIONS+=	threads
-.endif
-
-.if ${OPSYS} != "SunOS"
-# parallel/ocl-icd is currently broken on SunOS
-PKG_SUGGESTED_OPTIONS+=	opencl
 .endif
 
 .include "../../graphics/MesaLib/features.mk"
