@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3878 2025/06/12 08:46:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3879 2025/06/12 10:59:43 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/termscp to 0.18.0 [pin 2025-06-12]
 	Updated devel/ccls to 0.20241108 [adam 2025-06-12]
 	Updated meta-pkgs/bulk-test-llvm to 20250612 [adam 2025-06-12]
+	Updated misc/mbuffer to 20250429nb1 [hauke 2025-06-12]
