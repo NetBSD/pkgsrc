@@ -1,10 +1,23 @@
-$NetBSD: patch-configure,v 1.2 2015/06/05 11:36:40 wiedi Exp $
+$NetBSD: patch-configure,v 1.3 2025/06/12 10:59:31 hauke Exp $
 
 Portability fix.
 
---- configure.orig	2015-04-12 20:03:59.000000000 +0000
+Choose plain sh over bash.
+
+--- configure.orig	2025-04-29 23:11:07.000000000 +0000
 +++ configure
-@@ -3839,7 +3839,7 @@ fi
+@@ -3893,8 +3893,8 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+-# Extract the first word of "gtar tar", so it can be a program name with args.
+-set dummy gtar tar; ac_word=$2
++# Extract the first word of "tar gtar", so it can be a program name with args.
++set dummy tar gtar; ac_word=$2
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+ printf %s "checking for $ac_word... " >&6; }
+ if test ${ac_cv_path_TAR+y}
+@@ -4065,7 +4065,7 @@ rm -f core conftest.err conftest.$ac_obj
  	else
  		SUNCCVERSION=`${CC} -V 2>&1 | grep Sun`
  		SUNCC=$?
@@ -13,3 +26,14 @@ Portability fix.
  			CFLAGS="${CFLAGS} -O"
  			cflags_tmp="$CFLAGS"
  			HAS_M64=`${CC} -flags | grep m64`
+@@ -4258,8 +4258,8 @@ test -z "$INSTALL_SCRIPT" && INSTALL_SCR
+ 
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+-# Extract the first word of "bash sh", so it can be a program name with args.
+-set dummy bash sh; ac_word=$2
++# Extract the first word of "sh bash", so it can be a program name with args.
++set dummy sh bash; ac_word=$2
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+ printf %s "checking for $ac_word... " >&6; }
+ if test ${ac_cv_path_SH+y}

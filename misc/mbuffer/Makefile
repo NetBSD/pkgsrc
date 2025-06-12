@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/30 13:10:04 hauke Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/12 10:59:31 hauke Exp $
 
 DISTNAME=	mbuffer-20250429
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz
@@ -11,11 +12,14 @@ COMMENT=	Tool for buffering data streams
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c
-USE_CC_FEATURES=	c99
-USE_TOOLS+=		gmake
+USE_CC_FEATURES=	c11
+USE_TOOLS+=		gmake gtar
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+REPLACE_SH+=		mkversion.sh
+REPLACE_SH+=		tests/test?.sh
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	pre-configure
