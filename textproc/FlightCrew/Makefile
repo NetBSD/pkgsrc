@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2025/04/24 14:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/06/12 07:56:50 wiz Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -14,8 +14,8 @@ LICENSE=	gnu-lgpl-v3 AND cc-by-sa-v3.0
 
 WRKSRC=		${WRKDIR}
 
-USE_LANGUAGES=	c c++14
-USE_CMAKE=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
 # Work around NetBSD unzip vs others for patched files.
 SUBST_CLASSES+=		cr
@@ -42,6 +42,7 @@ SUBST_SED.fix-damaged+=		-e "1,1d" # deleted
 post-extract:
 	${RM} -rf ${WRKDIR}/src/BoostParts ${WRKDIR}/src/Xerces ${WRKDIR}/src/zlib ${WRKDIR}/src/googlemock
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
