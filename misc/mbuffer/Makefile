@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/06/12 10:59:31 hauke Exp $
+# $NetBSD: Makefile,v 1.13 2025/06/12 11:50:29 hauke Exp $
 
 DISTNAME=	mbuffer-20250429
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Tool for buffering data streams
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c
-USE_CC_FEATURES=	c11
+USE_CC_FEATURES=	c99
 USE_TOOLS+=		gmake gtar
 
 GNU_CONFIGURE=		yes
