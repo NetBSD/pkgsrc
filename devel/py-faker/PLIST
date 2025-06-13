@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2025/05/19 14:16:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2025/06/13 07:11:15 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -757,6 +757,9 @@ ${PYSITELIB}/faker/providers/credit_card/ru_RU/__init__.pyo
 ${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/credit_card/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/credit_card/zh_CN/__init__.py
+${PYSITELIB}/faker/providers/credit_card/zh_CN/__init__.pyc
+${PYSITELIB}/faker/providers/credit_card/zh_CN/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/__init__.py
 ${PYSITELIB}/faker/providers/currency/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/__init__.pyo
