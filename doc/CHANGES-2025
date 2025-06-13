@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3903 2025/06/13 13:14:09 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.3904 2025/06/13 21:38:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5844,3 +5844,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-cov to 6.2.1 [adam 2025-06-13]
 	Added textproc/scooter version 0.5.3 [pin 2025-06-13]
 	Updated ham/hamlib to 4.6.3 [gdt 2025-06-13]
+	Updated graphics/png to 1.6.49 [wiz 2025-06-13]
