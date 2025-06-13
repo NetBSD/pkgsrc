@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2025/04/24 14:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2025/06/13 02:32:58 gutteridge Exp $
 
-PKGREVISION= 2
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-session-4.20.0
+DISTNAME=		xfce4-session-4.20.2
 CATEGORIES=		x11
 MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-session/${PKGVERSION_NOREV:R}/
 
@@ -17,7 +16,7 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	ICEAUTH=${TOOLS_PATH.iceauth}
 
-USE_TOOLS+=		iceauth:run
+USE_TOOLS+=		gdbus-codegen iceauth:run
 
 EGDIR=			${XFCE4_EGBASE}
 PKG_SYSCONFSUBDIR=	xdg

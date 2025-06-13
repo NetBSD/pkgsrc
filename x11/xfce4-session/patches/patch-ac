@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.5 2019/08/17 19:26:19 gutteridge Exp $
+$NetBSD: patch-ac,v 1.6 2025/06/13 02:32:58 gutteridge Exp $
 
 Adjust config path.
 
---- settings/Makefile.in.orig	2019-08-11 20:13:50.000000000 +0000
+--- settings/Makefile.in.orig	2025-03-24 03:24:44.000000000 +0000
 +++ settings/Makefile.in
-@@ -463,7 +463,7 @@ xfce4_session_settings_LDADD = \
- 	$(GIO_LIBS) \
- 	$(GMODULE_LIBS)
+@@ -494,7 +494,7 @@ xfce4_session_settings_LDADD = \
+ 	$(GTK_LIBS) \
+ 	$(NULL)
  
 -settingsdir = $(sysconfdir)/xdg/xfce4/xfconf/xfce-perchannel-xml
 +settingsdir = $(datadir)/examples/xfce4/xfconf/xfce-perchannel-xml
