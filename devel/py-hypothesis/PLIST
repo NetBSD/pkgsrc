@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2025/04/12 09:57:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2025/06/13 06:49:07 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -144,6 +144,9 @@ ${PYSITELIB}/hypothesis/internal/conjecture/optimiser.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/pareto.py
 ${PYSITELIB}/hypothesis/internal/conjecture/pareto.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/pareto.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/provider_conformance.py
+${PYSITELIB}/hypothesis/internal/conjecture/provider_conformance.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/provider_conformance.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/providers.py
 ${PYSITELIB}/hypothesis/internal/conjecture/providers.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/providers.pyo
