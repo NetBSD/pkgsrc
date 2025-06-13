@@ -1,36 +1,34 @@
-# $NetBSD: Makefile,v 1.57 2025/02/18 15:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/06/13 06:56:56 adam Exp $
 
 .include "../../net/py-twisted/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 COMMENT=	Framework for writing networked applications
 
-TOOL_DEPENDS+=			${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
-TOOL_DEPENDS+=			${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
-DEPENDS+=			${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
-DEPENDS+=			${PYPKGPREFIX}-automat>=24.8.0:../../devel/py-automat
-DEPENDS+=			${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
-DEPENDS+=			${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
-DEPENDS+=			${PYPKGPREFIX}-incremental>=24.7.0:../../devel/py-incremental
-DEPENDS+=			${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
-DEPENDS+=			${PYPKGPREFIX}-zope.interface>=5:../../devel/py-zope.interface
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10.0:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
+DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-automat>=24.8.0:../../devel/py-automat
+DEPENDS+=	${PYPKGPREFIX}-constantly>=15.1:../../devel/py-constantly
+DEPENDS+=	${PYPKGPREFIX}-hyperlink>=17.1.1:../../www/py-hyperlink
+DEPENDS+=	${PYPKGPREFIX}-incremental>=24.7.0:../../devel/py-incremental
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5:../../devel/py-zope.interface
 # tls
-DEPENDS+=			${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
-DEPENDS+=			${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-idna>=2.4:../../www/py-idna
+DEPENDS+=	${PYPKGPREFIX}-service_identity>=18.1.0:../../security/py-service_identity
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 # conch
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-DEPENDS+=			${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
-PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt
+PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography
+DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 # serial
-DEPENDS+=			${PYPKGPREFIX}-serial>=3.0:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-serial>=3.0:../../comms/py-serial
 # http2
-DEPENDS+=			${PYPKGPREFIX}-h2>=3.2:../../www/py-h2
-DEPENDS+=			${PYPKGPREFIX}-priority>=1.1.0:../../www/py-priority
-TEST_DEPENDS+=			${PYPKGPREFIX}-hamcrest>=2:../../devel/py-hamcrest
-TEST_DEPENDS+=			${PYPKGPREFIX}-httpx>=0.27:../../www/py-httpx
-TEST_DEPENDS+=			${PYPKGPREFIX}-hypothesis>=6.56:../../devel/py-hypothesis
+DEPENDS+=	${PYPKGPREFIX}-h2>=3.2:../../www/py-h2
+DEPENDS+=	${PYPKGPREFIX}-priority>=1.1.0:../../www/py-priority
+TEST_DEPENDS+=	${PYPKGPREFIX}-hamcrest>=2:../../devel/py-hamcrest
+TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27:../../www/py-httpx
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.56:../../devel/py-hypothesis
 
 REPLACE_PYTHON+=	src/twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	src/twisted/trial/test/scripttest.py
