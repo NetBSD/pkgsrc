@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2025/06/13 02:32:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.125 2025/06/13 02:39:22 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -21,7 +21,7 @@ USE_TOOLS+=		gdbus-codegen iceauth:run
 EGDIR=			${XFCE4_EGBASE}
 PKG_SYSCONFSUBDIR=	xdg
 
-MAKE_DIRS+=	${PKG_SYSCONFDIR} 
+MAKE_DIRS+=	${PKG_SYSCONFDIR}
 MAKE_DIRS+=	${EGDIR} ${EGDIR}/xfconf
 MAKE_DIRS+=	${EGDIR}/xfconf/xfce-perchannel-xml
 
