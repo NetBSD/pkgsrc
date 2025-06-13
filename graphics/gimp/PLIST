@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2025/05/19 11:20:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.84 2025/06/13 06:46:19 wiz Exp $
 bin/gimp
 bin/gimp-3
 bin/gimp-3.0
@@ -395,7 +395,7 @@ lib/gimp/3.0/plug-ins/file-pdf-load/file-pdf-load
 lib/gimp/3.0/plug-ins/file-pix/file-pix
 lib/gimp/3.0/plug-ins/file-png/file-png
 lib/gimp/3.0/plug-ins/file-pnm/file-pnm
-lib/gimp/3.0/plug-ins/file-ps/file-ps
+${PLIST.ghostscript}lib/gimp/3.0/plug-ins/file-ps/file-ps
 lib/gimp/3.0/plug-ins/file-psd/file-psd
 lib/gimp/3.0/plug-ins/file-psp/file-psp
 lib/gimp/3.0/plug-ins/file-raw-data/file-raw-data
