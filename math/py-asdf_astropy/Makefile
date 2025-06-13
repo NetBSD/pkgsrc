@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/04/15 16:31:37 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/06/13 07:23:28 adam Exp $
 
-DISTNAME=	asdf_astropy-0.7.1
+DISTNAME=	asdf_astropy-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf_astropy/}
 
@@ -13,12 +12,12 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-asdf>=2.14.4:../../math/py-asdf
-DEPENDS+=	${PYPKGPREFIX}-asdf_coordinates_schemas>=0.3:../../math/py-asdf_coordinates_schemas
+DEPENDS+=	${PYPKGPREFIX}-asdf>=2.15.0:../../math/py-asdf
+DEPENDS+=	${PYPKGPREFIX}-asdf_coordinates_schemas>=0.4:../../math/py-asdf_coordinates_schemas
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
-DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.5:../../math/py-asdf-transform-schemas
+DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.6:../../math/py-asdf-transform-schemas
 DEPENDS+=	${PYPKGPREFIX}-astropy>=5.2.0:../../math/py-astropy
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.25:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0:../../devel/py-test-doctestplus
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>0:../../math/py-scipy
@@ -26,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
