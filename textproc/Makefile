@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1520 2025/06/09 04:53:23 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1521 2025/06/13 09:06:02 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1385,6 +1385,7 @@ SUBDIR+=	scdoc
 SUBDIR+=	scew
 SUBDIR+=	schemastore
 SUBDIR+=	scrollkeeper-dtd
+SUBDIR+=	scooter
 SUBDIR+=	sd
 SUBDIR+=	sdop
 SUBDIR+=	sentencepiece
