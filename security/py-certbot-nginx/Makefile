@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/04/28 09:02:35 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/06/13 06:47:01 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -16,7 +16,7 @@ PKG_SYSCONFVAR=		nginx
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing absolute paths.
-SUBST_FILES.paths=	certbot_nginx/_internal/constants.py
+SUBST_FILES.paths=	src/certbot_nginx/_internal/constants.py
 SUBST_VARS.paths=	PKG_SYSCONFDIR
 
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
