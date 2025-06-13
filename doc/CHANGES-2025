@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3900 2025/06/13 09:03:03 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3901 2025/06/13 09:04:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5838,3 +5838,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flake8-import-order to 0.19.0 [adam 2025-06-13]
 	Updated devel/py-mocket to 3.13.9 [adam 2025-06-13]
 	Updated devel/feluda to 1.8.5 [pin 2025-06-13]
+	Updated devel/py-test to 8.4.0 [adam 2025-06-13]
+	Updated devel/py-test-asyncio to 1.0.0 [adam 2025-06-13]
+	Updated devel/py-coverage to 7.9.0 [adam 2025-06-13]
+	Updated devel/py-test-cov to 6.2.1 [adam 2025-06-13]
