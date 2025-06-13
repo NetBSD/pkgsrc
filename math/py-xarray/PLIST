@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/05/30 10:56:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/06/13 07:28:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,6 +14,9 @@ ${PYSITELIB}/xarray/backends/__init__.pyo
 ${PYSITELIB}/xarray/backends/api.py
 ${PYSITELIB}/xarray/backends/api.pyc
 ${PYSITELIB}/xarray/backends/api.pyo
+${PYSITELIB}/xarray/backends/chunks.py
+${PYSITELIB}/xarray/backends/chunks.pyc
+${PYSITELIB}/xarray/backends/chunks.pyo
 ${PYSITELIB}/xarray/backends/common.py
 ${PYSITELIB}/xarray/backends/common.pyc
 ${PYSITELIB}/xarray/backends/common.pyo
@@ -101,6 +104,9 @@ ${PYSITELIB}/xarray/compat/npcompat.pyo
 ${PYSITELIB}/xarray/compat/pdcompat.py
 ${PYSITELIB}/xarray/compat/pdcompat.pyc
 ${PYSITELIB}/xarray/compat/pdcompat.pyo
+${PYSITELIB}/xarray/compat/toolzcompat.py
+${PYSITELIB}/xarray/compat/toolzcompat.pyc
+${PYSITELIB}/xarray/compat/toolzcompat.pyo
 ${PYSITELIB}/xarray/computation/__init__.py
 ${PYSITELIB}/xarray/computation/__init__.pyc
 ${PYSITELIB}/xarray/computation/__init__.pyo
@@ -353,6 +359,9 @@ ${PYSITELIB}/xarray/tests/data/example.ict
 ${PYSITELIB}/xarray/tests/data/example.uamiv
 ${PYSITELIB}/xarray/tests/data/example_1.nc
 ${PYSITELIB}/xarray/tests/data/example_1.nc.gz
+${PYSITELIB}/xarray/tests/indexes.py
+${PYSITELIB}/xarray/tests/indexes.pyc
+${PYSITELIB}/xarray/tests/indexes.pyo
 ${PYSITELIB}/xarray/tests/namespace.py
 ${PYSITELIB}/xarray/tests/namespace.pyc
 ${PYSITELIB}/xarray/tests/namespace.pyo
@@ -374,6 +383,9 @@ ${PYSITELIB}/xarray/tests/test_backends.pyo
 ${PYSITELIB}/xarray/tests/test_backends_api.py
 ${PYSITELIB}/xarray/tests/test_backends_api.pyc
 ${PYSITELIB}/xarray/tests/test_backends_api.pyo
+${PYSITELIB}/xarray/tests/test_backends_chunks.py
+${PYSITELIB}/xarray/tests/test_backends_chunks.pyc
+${PYSITELIB}/xarray/tests/test_backends_chunks.pyo
 ${PYSITELIB}/xarray/tests/test_backends_common.py
 ${PYSITELIB}/xarray/tests/test_backends_common.pyc
 ${PYSITELIB}/xarray/tests/test_backends_common.pyo
@@ -563,6 +575,9 @@ ${PYSITELIB}/xarray/tests/test_weighted.pyo
 ${PYSITELIB}/xarray/tutorial.py
 ${PYSITELIB}/xarray/tutorial.pyc
 ${PYSITELIB}/xarray/tutorial.pyo
+${PYSITELIB}/xarray/typing.py
+${PYSITELIB}/xarray/typing.pyc
+${PYSITELIB}/xarray/typing.pyo
 ${PYSITELIB}/xarray/ufuncs.py
 ${PYSITELIB}/xarray/ufuncs.pyc
 ${PYSITELIB}/xarray/ufuncs.pyo
