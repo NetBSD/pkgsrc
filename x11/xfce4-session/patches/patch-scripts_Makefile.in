@@ -1,11 +1,11 @@
-$NetBSD: patch-scripts_Makefile.in,v 1.4 2025/01/06 19:27:40 bsiegert Exp $
+$NetBSD: patch-scripts_Makefile.in,v 1.5 2025/06/13 02:32:58 gutteridge Exp $
 
 Adjust config path.
 
---- scripts/Makefile.in.orig	2024-12-15 09:26:08.000000000 +0000
+--- scripts/Makefile.in.orig	2025-03-24 03:24:43.000000000 +0000
 +++ scripts/Makefile.in
-@@ -387,7 +387,7 @@ edit = $(SED) \
- 	-e "s,@_docdir_\@,$$(dirname $(docdir)),g" \
+@@ -389,7 +389,7 @@ edit = $(SED) \
+ 	-e "s,@_datadir_\@,$(datadir),g" \
  	-e "s,@_sysconfdir_\@,$(sysconfdir),g"
  
 -conffilesdir = @sysconfdir@/xdg/xfce4

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/01/10 08:59:23 andvar Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/06/13 02:32:58 gutteridge Exp $
 bin/startxfce4
 bin/xfce4-session
 bin/xfce4-session-logout
@@ -112,3 +112,5 @@ share/locale/zh_HK/LC_MESSAGES/xfce4-session.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-session.mo
 ${PLIST.polkit}share/polkit-1/actions/org.xfce.session.policy
 share/xdg-desktop-portal/xfce-portals.conf
+share/xfce4/labwc/labwc-environment
+share/xfce4/labwc/labwc-rc.xml
