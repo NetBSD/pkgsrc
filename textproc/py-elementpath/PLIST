@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/04/14 12:06:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/06/13 07:13:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,9 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/elementpath/__init__.py
 ${PYSITELIB}/elementpath/__init__.pyc
 ${PYSITELIB}/elementpath/__init__.pyo
-${PYSITELIB}/elementpath/_typing.py
-${PYSITELIB}/elementpath/_typing.pyc
-${PYSITELIB}/elementpath/_typing.pyo
 ${PYSITELIB}/elementpath/aliases.py
 ${PYSITELIB}/elementpath/aliases.pyc
 ${PYSITELIB}/elementpath/aliases.pyo
@@ -58,6 +55,12 @@ ${PYSITELIB}/elementpath/etree.pyo
 ${PYSITELIB}/elementpath/exceptions.py
 ${PYSITELIB}/elementpath/exceptions.pyc
 ${PYSITELIB}/elementpath/exceptions.pyo
+${PYSITELIB}/elementpath/extras/__init__.py
+${PYSITELIB}/elementpath/extras/__init__.pyc
+${PYSITELIB}/elementpath/extras/__init__.pyo
+${PYSITELIB}/elementpath/extras/pathnodes.py
+${PYSITELIB}/elementpath/extras/pathnodes.pyc
+${PYSITELIB}/elementpath/extras/pathnodes.pyo
 ${PYSITELIB}/elementpath/helpers.py
 ${PYSITELIB}/elementpath/helpers.pyc
 ${PYSITELIB}/elementpath/helpers.pyo
@@ -71,6 +74,9 @@ ${PYSITELIB}/elementpath/py.typed
 ${PYSITELIB}/elementpath/regex/__init__.py
 ${PYSITELIB}/elementpath/regex/__init__.pyc
 ${PYSITELIB}/elementpath/regex/__init__.pyo
+${PYSITELIB}/elementpath/regex/categories_fallback.py
+${PYSITELIB}/elementpath/regex/categories_fallback.pyc
+${PYSITELIB}/elementpath/regex/categories_fallback.pyo
 ${PYSITELIB}/elementpath/regex/character_classes.py
 ${PYSITELIB}/elementpath/regex/character_classes.pyc
 ${PYSITELIB}/elementpath/regex/character_classes.pyo
