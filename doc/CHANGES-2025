@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3889 2025/06/13 02:40:11 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3890 2025/06/13 02:43:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5798,3 +5798,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libxfce4ui to 4.20.1 [gutteridge 2025-06-13]
 	Updated x11/xfce4-session to 4.20.2 [gutteridge 2025-06-13]
 	Updated sysutils/xfce4-thunar to 4.20.3 [gutteridge 2025-06-13]
+	Updated editors/xfce4-mousepad to 0.6.5 [gutteridge 2025-06-13]
