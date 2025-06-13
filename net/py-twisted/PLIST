@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2024/12/31 09:54:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/06/13 06:56:56 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -1378,6 +1378,7 @@ ${PYSITELIB}/twisted/python/_appdirs.pyo
 ${PYSITELIB}/twisted/python/_inotify.py
 ${PYSITELIB}/twisted/python/_inotify.pyc
 ${PYSITELIB}/twisted/python/_inotify.pyo
+${PYSITELIB}/twisted/python/_pydoctortemplates/stable-link.js
 ${PYSITELIB}/twisted/python/_pydoctortemplates/subheader.html
 ${PYSITELIB}/twisted/python/_release.py
 ${PYSITELIB}/twisted/python/_release.pyc
@@ -1821,9 +1822,6 @@ ${PYSITELIB}/twisted/test/test_cooperator.pyo
 ${PYSITELIB}/twisted/test/test_defer.py
 ${PYSITELIB}/twisted/test/test_defer.pyc
 ${PYSITELIB}/twisted/test/test_defer.pyo
-${PYSITELIB}/twisted/test/test_defgen.py
-${PYSITELIB}/twisted/test/test_defgen.pyc
-${PYSITELIB}/twisted/test/test_defgen.pyo
 ${PYSITELIB}/twisted/test/test_dirdbm.py
 ${PYSITELIB}/twisted/test/test_dirdbm.pyc
 ${PYSITELIB}/twisted/test/test_dirdbm.pyo
@@ -2248,6 +2246,9 @@ ${PYSITELIB}/twisted/web/_stan.pyo
 ${PYSITELIB}/twisted/web/_template_util.py
 ${PYSITELIB}/twisted/web/_template_util.pyc
 ${PYSITELIB}/twisted/web/_template_util.pyo
+${PYSITELIB}/twisted/web/_websocket_impl.py
+${PYSITELIB}/twisted/web/_websocket_impl.pyc
+${PYSITELIB}/twisted/web/_websocket_impl.pyo
 ${PYSITELIB}/twisted/web/client.py
 ${PYSITELIB}/twisted/web/client.pyc
 ${PYSITELIB}/twisted/web/client.pyo
@@ -2405,6 +2406,9 @@ ${PYSITELIB}/twisted/web/test/test_web__responses.pyo
 ${PYSITELIB}/twisted/web/test/test_webclient.py
 ${PYSITELIB}/twisted/web/test/test_webclient.pyc
 ${PYSITELIB}/twisted/web/test/test_webclient.pyo
+${PYSITELIB}/twisted/web/test/test_websocket.py
+${PYSITELIB}/twisted/web/test/test_websocket.pyc
+${PYSITELIB}/twisted/web/test/test_websocket.pyo
 ${PYSITELIB}/twisted/web/test/test_wsgi.py
 ${PYSITELIB}/twisted/web/test/test_wsgi.pyc
 ${PYSITELIB}/twisted/web/test/test_wsgi.pyo
@@ -2423,6 +2427,9 @@ ${PYSITELIB}/twisted/web/util.pyo
 ${PYSITELIB}/twisted/web/vhost.py
 ${PYSITELIB}/twisted/web/vhost.pyc
 ${PYSITELIB}/twisted/web/vhost.pyo
+${PYSITELIB}/twisted/web/websocket.py
+${PYSITELIB}/twisted/web/websocket.pyc
+${PYSITELIB}/twisted/web/websocket.pyo
 ${PYSITELIB}/twisted/web/wsgi.py
 ${PYSITELIB}/twisted/web/wsgi.pyc
 ${PYSITELIB}/twisted/web/wsgi.pyo
