@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/05/30 07:07:10 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/13 06:59:12 adam Exp $
 
-DISTNAME=	extension_helpers-1.3.0
+DISTNAME=	extension_helpers-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/extension-helpers/}
