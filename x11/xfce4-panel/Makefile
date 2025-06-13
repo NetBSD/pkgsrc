@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.115 2025/04/24 14:16:35 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/06/13 01:25:37 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=		xfce4-panel-4.20.3
+DISTNAME=		xfce4-panel-4.20.4
 CATEGORIES=		x11
 MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-panel/${PKGVERSION_NOREV:R}/
 
@@ -13,6 +12,7 @@ COMMENT=		Xfce panel
 TOOL_DEPENDS+=		xfce4-dev-tools-[0-9]*:../../devel/xfce4-dev-tools
 
 USE_TOOLS+=		gdbus-codegen
+REPLACE_PYTHON+=	xdt-gen-visibility
 
 PKGCONFIG_OVERRIDE=	libxfce4panel/libxfce4panel-2.0.pc.in
 PTHREAD_AUTO_VARS=	yes
@@ -27,6 +27,7 @@ CONF_FILES+=	${EGDIR}/default.xml ${PKG_SYSCONFDIR}/default.xml
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libdbusmenu-gtk3/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
