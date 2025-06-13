@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.413 2025/05/19 11:20:01 wiz Exp $
+# $NetBSD: Makefile,v 1.414 2025/06/13 06:46:19 wiz Exp $
 
 DISTNAME=	gimp-3.0.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -49,8 +50,6 @@ REPLACE_PYTHON+=	plug-ins/python/*.py
 REPLACE_PYTHON+=	plug-ins/python/*/*.py
 REPLACE_PYTHON+=	tools/*.py
 REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
-
-REPLACE_SH=		tools/in-build-gimp.sh
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
 EGDIR=			${PREFIX}/share/examples/gimp
@@ -122,7 +121,6 @@ BUILDLINK_API_DEPENDS.tiff+=	tiff>=4.0
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/vala/buildlink3.mk"
-.include "../../print/ghostscript/buildlink3.mk"
 .include "../../print/poppler-data/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
