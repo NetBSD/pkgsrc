@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3898 2025/06/13 07:29:04 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3899 2025/06/13 08:51:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5835,3 +5835,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-asdf_astropy to 0.8.0 [adam 2025-06-13]
 	Updated textproc/py-pyyaml_env_tag to 1.1 [adam 2025-06-13]
 	Updated math/py-xarray to 2025.6.1 [adam 2025-06-13]
+	Updated devel/py-flake8-import-order to 0.19.0 [adam 2025-06-13]
+	Updated devel/py-mocket to 3.13.9 [adam 2025-06-13]
