@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.67 2025/02/14 16:22:15 gdt Exp $
+# $NetBSD: Makefile,v 1.68 2025/06/13 13:14:01 gdt Exp $
 #
 
-VERSION=	4.6.2
+VERSION=	4.6.3
 DISTNAME=	hamlib-${VERSION}
 CATEGORIES=	ham
 # hamlib is both at github and sourceforge, and upstream documents
 # that github is the canonical location.
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Hamlib/}
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://hamlib.github.io/
