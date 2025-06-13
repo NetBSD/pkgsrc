@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2025/06/08 22:51:21 gdt Exp $
+# $NetBSD: Makefile,v 1.246 2025/06/13 12:47:34 gdt Exp $
 
 # This is intentionally 3.40 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -19,6 +19,9 @@ USE_LANGUAGES=		c c++ fortran77
 USE_CXX_FEATURES=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+# 3.40.7 fails with BSD make. \todo File upstream.
+# \todo Only set this if CMAKE_GENERATOR=make.
+USE_TOOLS+=		gmake
 USE_TOOLS+=		bison flex perl pkg-config
 .include "../../devel/cmake/build.mk"
 
