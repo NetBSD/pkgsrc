@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2025/04/15 16:31:37 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/06/13 07:19:54 adam Exp $
 
-DISTNAME=	asdf-4.1.0
+DISTNAME=	asdf-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
 
