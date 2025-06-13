@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3897 2025/06/13 07:24:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3898 2025/06/13 07:29:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5833,3 +5833,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-asdf to 4.2.0 [adam 2025-06-13]
 	Updated math/py-asdf_coordinates_schemas to 0.4.0 [adam 2025-06-13]
 	Updated math/py-asdf_astropy to 0.8.0 [adam 2025-06-13]
+	Updated textproc/py-pyyaml_env_tag to 1.1 [adam 2025-06-13]
+	Updated math/py-xarray to 2025.6.1 [adam 2025-06-13]
