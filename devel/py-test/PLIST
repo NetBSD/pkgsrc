@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/04/12 10:14:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/06/13 08:57:02 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -159,9 +159,9 @@ ${PYSITELIB}/_pytest/python.pyo
 ${PYSITELIB}/_pytest/python_api.py
 ${PYSITELIB}/_pytest/python_api.pyc
 ${PYSITELIB}/_pytest/python_api.pyo
-${PYSITELIB}/_pytest/python_path.py
-${PYSITELIB}/_pytest/python_path.pyc
-${PYSITELIB}/_pytest/python_path.pyo
+${PYSITELIB}/_pytest/raises.py
+${PYSITELIB}/_pytest/raises.pyc
+${PYSITELIB}/_pytest/raises.pyo
 ${PYSITELIB}/_pytest/recwarn.py
 ${PYSITELIB}/_pytest/recwarn.pyc
 ${PYSITELIB}/_pytest/recwarn.pyo
@@ -201,6 +201,9 @@ ${PYSITELIB}/_pytest/timing.pyo
 ${PYSITELIB}/_pytest/tmpdir.py
 ${PYSITELIB}/_pytest/tmpdir.pyc
 ${PYSITELIB}/_pytest/tmpdir.pyo
+${PYSITELIB}/_pytest/tracemalloc.py
+${PYSITELIB}/_pytest/tracemalloc.pyc
+${PYSITELIB}/_pytest/tracemalloc.pyo
 ${PYSITELIB}/_pytest/unittest.py
 ${PYSITELIB}/_pytest/unittest.pyc
 ${PYSITELIB}/_pytest/unittest.pyo
