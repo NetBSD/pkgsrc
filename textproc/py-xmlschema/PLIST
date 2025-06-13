@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/04/12 11:39:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/06/13 07:14:18 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -100,6 +100,9 @@ ${PYSITELIB}/xmlschema/resources/arguments.pyo
 ${PYSITELIB}/xmlschema/resources/fetchers.py
 ${PYSITELIB}/xmlschema/resources/fetchers.pyc
 ${PYSITELIB}/xmlschema/resources/fetchers.pyo
+${PYSITELIB}/xmlschema/resources/filters.py
+${PYSITELIB}/xmlschema/resources/filters.pyc
+${PYSITELIB}/xmlschema/resources/filters.pyo
 ${PYSITELIB}/xmlschema/resources/sax.py
 ${PYSITELIB}/xmlschema/resources/sax.pyc
 ${PYSITELIB}/xmlschema/resources/sax.pyo
@@ -260,6 +263,9 @@ ${PYSITELIB}/xmlschema/xpath/mixin.pyo
 ${PYSITELIB}/xmlschema/xpath/proxy.py
 ${PYSITELIB}/xmlschema/xpath/proxy.pyc
 ${PYSITELIB}/xmlschema/xpath/proxy.pyo
+${PYSITELIB}/xmlschema/xpath/selectors.py
+${PYSITELIB}/xmlschema/xpath/selectors.pyc
+${PYSITELIB}/xmlschema/xpath/selectors.pyo
 ${PYSITELIB}/xmlschema/xpath/xpath3.py
 ${PYSITELIB}/xmlschema/xpath/xpath3.pyc
 ${PYSITELIB}/xmlschema/xpath/xpath3.pyo
