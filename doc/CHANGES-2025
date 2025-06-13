@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3891 2025/06/13 02:47:33 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3892 2025/06/13 06:47:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5800,3 +5800,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-thunar to 4.20.3 [gutteridge 2025-06-13]
 	Updated editors/xfce4-mousepad to 0.6.5 [gutteridge 2025-06-13]
 	Updated meta-pkgs/xfce4 to 4.20.0nb8 [gutteridge 2025-06-13]
+	Updated security/py-acme to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-apache to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-cloudflare to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-digitalocean to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-dnsimple to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-dnsmadeeasy to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-gehirn to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-google to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-linode to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-luadns to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-nsone to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-ovh to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-rfc2136 to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-route53 to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-dns-sakuracloud to 4.1.1 [adam 2025-06-13]
+	Updated security/py-certbot-nginx to 4.1.1 [adam 2025-06-13]
