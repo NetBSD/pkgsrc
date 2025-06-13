@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/13 07:10:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/argon2/__init__.py
 ${PYSITELIB}/argon2/__init__.pyc
 ${PYSITELIB}/argon2/__init__.pyo
@@ -11,9 +15,6 @@ ${PYSITELIB}/argon2/_legacy.pyo
 ${PYSITELIB}/argon2/_password_hasher.py
 ${PYSITELIB}/argon2/_password_hasher.pyc
 ${PYSITELIB}/argon2/_password_hasher.pyo
-${PYSITELIB}/argon2/_typing.py
-${PYSITELIB}/argon2/_typing.pyc
-${PYSITELIB}/argon2/_typing.pyo
 ${PYSITELIB}/argon2/_utils.py
 ${PYSITELIB}/argon2/_utils.pyc
 ${PYSITELIB}/argon2/_utils.pyo
@@ -27,7 +28,3 @@ ${PYSITELIB}/argon2/profiles.py
 ${PYSITELIB}/argon2/profiles.pyc
 ${PYSITELIB}/argon2/profiles.pyo
 ${PYSITELIB}/argon2/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
