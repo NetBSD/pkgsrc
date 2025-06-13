@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3894 2025/06/13 06:57:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3895 2025/06/13 07:07:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5821,3 +5821,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hypothesis to 6.135.9 [adam 2025-06-13]
 	Updated graphics/py-tifffile to 2025.6.11 [adam 2025-06-13]
 	Updated net/py-twisted to 25.5.0 [adam 2025-06-13]
+	Updated devel/py-extension-helpers to 1.4.0 [adam 2025-06-13]
+	Updated math/py-astropy-iers-data to 0.2025.6.9.14.9.37 [adam 2025-06-13]
+	Updated math/py-astropy to 7.1.0 [adam 2025-06-13]
