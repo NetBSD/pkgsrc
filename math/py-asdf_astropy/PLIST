@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/15 16:31:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/06/13 07:23:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,9 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/asdf_astropy/__init__.py
 ${PYSITELIB}/asdf_astropy/__init__.pyc
 ${PYSITELIB}/asdf_astropy/__init__.pyo
-${PYSITELIB}/asdf_astropy/_astropy_init.py
-${PYSITELIB}/asdf_astropy/_astropy_init.pyc
-${PYSITELIB}/asdf_astropy/_astropy_init.pyo
 ${PYSITELIB}/asdf_astropy/_version.py
 ${PYSITELIB}/asdf_astropy/_version.pyc
 ${PYSITELIB}/asdf_astropy/_version.pyo
@@ -53,6 +50,9 @@ ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_earth_location.pyo
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_frame.py
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_frame.pyc
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_frame.pyo
+${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_masked.py
+${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_masked.pyc
+${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_masked.pyo
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_representation.py
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_representation.pyc
 ${PYSITELIB}/asdf_astropy/converters/coordinates/tests/test_representation.pyo
@@ -182,6 +182,9 @@ ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_equivalency.pyo
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_magunit.py
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_magunit.pyc
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_magunit.pyo
+${PYSITELIB}/asdf_astropy/converters/unit/tests/test_masked.py
+${PYSITELIB}/asdf_astropy/converters/unit/tests/test_masked.pyc
+${PYSITELIB}/asdf_astropy/converters/unit/tests/test_masked.pyo
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_quantity.py
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_quantity.pyc
 ${PYSITELIB}/asdf_astropy/converters/unit/tests/test_quantity.pyo
@@ -267,3 +270,6 @@ ${PYSITELIB}/asdf_astropy/tests/__init__.pyo
 ${PYSITELIB}/asdf_astropy/tests/test_integration.py
 ${PYSITELIB}/asdf_astropy/tests/test_integration.pyc
 ${PYSITELIB}/asdf_astropy/tests/test_integration.pyo
+${PYSITELIB}/asdf_astropy/tests/versions.py
+${PYSITELIB}/asdf_astropy/tests/versions.pyc
+${PYSITELIB}/asdf_astropy/tests/versions.pyo
