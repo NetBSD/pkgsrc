@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/06/13 01:31:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/13 01:43:42 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,7 +9,7 @@ MASTER_SITES=	https://archive.xfce.org/src/xfce/libxfce4windowing/${PKGVERSION_N
 COMMENT=	Xfce window management library
 
 USE_TOOLS+=		pkg-config
-REPLACE_PYTHON+=        xdt-gen-visibility
+REPLACE_PYTHON+=	xdt-gen-visibility
 
 MESON_ARGS+=		-Dx11=enabled
 
