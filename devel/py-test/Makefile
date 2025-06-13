@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2025/04/12 10:14:29 adam Exp $
+# $NetBSD: Makefile,v 1.138 2025/06/13 08:57:02 adam Exp $
 
-DISTNAME=	pytest-8.3.5
+DISTNAME=	pytest-8.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
 
@@ -13,14 +12,14 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-iniconfig-[0-9]*:../../devel/py-iniconfig
-DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-iniconfig>=1:../../devel/py-iniconfig
+DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.5:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.7.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=2.7.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
@@ -32,8 +31,8 @@ USE_TOOLS+=	bash:build
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.0:../../devel/py-exceptiongroup
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1:../../devel/py-exceptiongroup
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1:../../textproc/py-tomli
 .endif
 
 post-install:
