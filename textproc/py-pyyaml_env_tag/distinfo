@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/05 09:42:06 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/06/13 07:26:24 adam Exp $
 
-BLAKE2s (pyyaml_env_tag-0.1.tar.gz) = d8ddf863e0c447740f6ba3c805b9de8bc9de12329663fd79a678b95f21d7c3de
-SHA512 (pyyaml_env_tag-0.1.tar.gz) = 7d3dbc08fb338b3de5bbe657fa8a98a330d7ac7962ac2ea6513ade362b36deaaad8d9e82eb018454d73fd26d90003861a3ffee9abc2e9ac51dea4ba315b5c1f9
-Size (pyyaml_env_tag-0.1.tar.gz) = 5631 bytes
+BLAKE2s (pyyaml_env_tag-1.1.tar.gz) = 98924f9d860eaec6277d11ec63c23f6bbeb13e6e4ff1fc1b64ae537bc5cbaacd
+SHA512 (pyyaml_env_tag-1.1.tar.gz) = 2661dd98f3302f6a6fd14dbf6ad1382e3f018789d3b8c327c347f5d2242b9a4380fc29c892122c93f76a2edd39ee2c5dc3f85fad8def6edf04ceafa550b135ff
+Size (pyyaml_env_tag-1.1.tar.gz) = 5737 bytes
