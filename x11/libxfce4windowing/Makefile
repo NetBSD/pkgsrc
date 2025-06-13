@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2025/05/01 00:57:25 gutteridge Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/13 01:31:15 gutteridge Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4windowing-4.20.2
+DISTNAME=	libxfce4windowing-4.20.3
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/libxfce4windowing/${PKGVERSION_NOREV:R}/
 
 COMMENT=	Xfce window management library
 
 USE_TOOLS+=		pkg-config
+REPLACE_PYTHON+=        xdt-gen-visibility
 
 MESON_ARGS+=		-Dx11=enabled
 
@@ -22,5 +22,6 @@ TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../x11/libdisplay-info/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
