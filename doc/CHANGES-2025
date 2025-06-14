@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3913 2025/06/14 13:57:22 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3914 2025/06/14 14:00:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5854,3 +5854,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-CGI to 4.69 [wen 2025-06-14]
 	Updated devel/rt4 to 4.4.8 [wen 2025-06-14]
 	Updated lang/php74 to 7.4.33nb5 [taca 2025-06-14]
+	Updated lang/php81 to 8.1.32nb5 [taca 2025-06-14]
