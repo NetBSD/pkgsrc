@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2025/06/04 13:47:05 taca Exp $
+$NetBSD: distinfo,v 1.37 2025/06/14 14:22:51 taca Exp $
 
-BLAKE2s (mime-types-data-3.2025.0603.gem) = 0142c86357ddc88f6cf4fa48c941a1f0e6009d02db8fab4f5eb26147177b1a63
-SHA512 (mime-types-data-3.2025.0603.gem) = 6a9e16e9ab640e92498c0ed69c8da6189f53de333e0dd4cde1f9568e52469124828df3d7cd2c2b5300ee05959622a462929347484b1e8cd3f82cabeaa0282fb0
-Size (mime-types-data-3.2025.0603.gem) = 169472 bytes
+BLAKE2s (mime-types-data-3.2025.0610.gem) = ee81a623edeea06187d6c3f5ffe91629e5b14251511b29e3348c0b1c080b117e
+SHA512 (mime-types-data-3.2025.0610.gem) = 9d57981828e4f4f643ed83ffc6c43d2e2b9e11be6d42eeb6caadb61d79a36fb9a35354efece1a41190c3ec39591d01fa07314634732f017568f977d55781bb1c
+Size (mime-types-data-3.2025.0610.gem) = 169472 bytes
