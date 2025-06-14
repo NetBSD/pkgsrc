@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3905 2025/06/14 01:15:22 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.3906 2025/06/14 05:47:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5846,3 +5846,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/hamlib to 4.6.3 [gdt 2025-06-13]
 	Updated graphics/png to 1.6.49 [wiz 2025-06-13]
 	Updated graphics/ristretto to 0.13.4 [gutteridge 2025-06-14]
+	Updated multimedia/libtheora-docs to 1.2.0nb1 [wiz 2025-06-14]
