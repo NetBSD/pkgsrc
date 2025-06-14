@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/10/17 09:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/14 05:49:50 ryoon Exp $
 
 DISTNAME=	pyrtl-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-PyRTL-0.11.2
+PKGNAME=	${PYPKGPREFIX}-PyRTL-0.11.3
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyrtl/}
 
