@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3907 2025/06/14 05:50:26 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3908 2025/06/14 05:55:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5848,3 +5848,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ristretto to 0.13.4 [gutteridge 2025-06-14]
 	Updated multimedia/libtheora-docs to 1.2.0nb1 [wiz 2025-06-14]
 	Updated cad/py-PyRTL to 0.11.3 [ryoon 2025-06-14]
+	Updated comms/openobex to 1.7.2nb5 [wiz 2025-06-14]
