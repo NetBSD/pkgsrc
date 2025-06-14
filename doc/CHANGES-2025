@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3922 2025/06/14 14:28:28 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3923 2025/06/14 14:29:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5863,3 +5863,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-recog to 3.1.17 [taca 2025-06-14]
 	Updated www/ruby-aws-partitions to 1.1116.0 [taca 2025-06-14]
 	Updated www/ruby-aws-sigv4 to 1.12.1 [taca 2025-06-14]
+	Updated www/ruby-aws-sdk-core to 3.225.2 [taca 2025-06-14]
