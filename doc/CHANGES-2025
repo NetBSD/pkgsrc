@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3919 2025/06/14 14:23:02 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3920 2025/06/14 14:25:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-curses to 1.5.3 [taca 2025-06-14]
 	Updated devel/ruby-io-event to 1.11.0 [taca 2025-06-14]
 	Updated mail/ruby-mime-types-data to 3.2025.0610 [taca 2025-06-14]
+	Updated net/ruby-recog to 3.1.17 [taca 2025-06-14]
