@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/06/11 23:49:34 gutteridge Exp $
+# $NetBSD: Makefile,v 1.90 2025/06/14 12:19:55 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -11,6 +11,8 @@ HOMEPAGE=	https://docs.xfce.org/apps/terminal/start
 COMMENT=	Xfce terminal emulator
 
 USE_TOOLS+=	autoconf automake autoreconf
+
+TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
 
 CONFIGURE_ARGS+=	--enable-maintainer-mode
 
