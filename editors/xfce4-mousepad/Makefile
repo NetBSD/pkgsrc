@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/06/13 02:43:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.91 2025/06/14 12:14:23 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -14,8 +14,9 @@ COMMENT=	Xfce text editor
 
 USE_TOOLS+=	autoconf automake autoreconf
 
-CONFIGURE_ARGS+=	--enable-gtksourceview4
+TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
 
+CONFIGURE_ARGS+=	--enable-gtksourceview4
 CONFIGURE_ARGS+=	--enable-maintainer-mode
 
 pre-configure:
