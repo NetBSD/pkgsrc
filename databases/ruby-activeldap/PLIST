@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/01/19 14:45:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/06/14 14:15:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -130,6 +130,7 @@ ${GEM_LIBDIR}/test/test_groupmod.rb
 ${GEM_LIBDIR}/test/test_ldif.rb
 ${GEM_LIBDIR}/test/test_load.rb
 ${GEM_LIBDIR}/test/test_lpasswd.rb
+${GEM_LIBDIR}/test/test_multi_configuration.rb
 ${GEM_LIBDIR}/test/test_object_class.rb
 ${GEM_LIBDIR}/test/test_persistence.rb
 ${GEM_LIBDIR}/test/test_reflection.rb
