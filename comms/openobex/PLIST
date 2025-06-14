@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/01/22 09:21:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/06/14 05:55:15 wiz Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -14,11 +14,8 @@ share/doc/openobex/html/annotated.html
 share/doc/openobex/html/annotated_dup.js
 share/doc/openobex/html/api_8c.html
 share/doc/openobex/html/api_8c.js
-share/doc/openobex/html/bc_s.png
-share/doc/openobex/html/bc_sd.png
 share/doc/openobex/html/classes.html
 share/doc/openobex/html/clipboard.js
-share/doc/openobex/html/closed.png
 share/doc/openobex/html/cookie.js
 share/doc/openobex/html/dir_9a09b4dfda82e3e665e31092d1c3ec8d.html
 share/doc/openobex/html/dir_9a09b4dfda82e3e665e31092d1c3ec8d.js
@@ -28,18 +25,12 @@ share/doc/openobex/html/dir_e386a5083970e0fa2b6c728895c57698.html
 share/doc/openobex/html/dir_e386a5083970e0fa2b6c728895c57698.js
 share/doc/openobex/html/dir_e8acc63b1e238f3255c900eed37254b8.html
 share/doc/openobex/html/dir_e8acc63b1e238f3255c900eed37254b8.js
-share/doc/openobex/html/doc.svg
-share/doc/openobex/html/docd.svg
 share/doc/openobex/html/doxygen.css
 share/doc/openobex/html/doxygen.svg
 share/doc/openobex/html/doxygen_crawl.html
 share/doc/openobex/html/dynsections.js
 share/doc/openobex/html/files.html
 share/doc/openobex/html/files_dup.js
-share/doc/openobex/html/folderclosed.svg
-share/doc/openobex/html/folderclosedd.svg
-share/doc/openobex/html/folderopen.svg
-share/doc/openobex/html/folderopend.svg
 share/doc/openobex/html/functions.html
 share/doc/openobex/html/functions_vars.html
 share/doc/openobex/html/globals.html
@@ -55,13 +46,8 @@ share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_type.html
 share/doc/openobex/html/index.html
 share/doc/openobex/html/jquery.js
-share/doc/openobex/html/minus.svg
-share/doc/openobex/html/minusd.svg
-share/doc/openobex/html/nav_f.png
-share/doc/openobex/html/nav_fd.png
-share/doc/openobex/html/nav_g.png
-share/doc/openobex/html/nav_h.png
-share/doc/openobex/html/nav_hd.png
+share/doc/openobex/html/menu.js
+share/doc/openobex/html/menudata.js
 share/doc/openobex/html/navtree.css
 share/doc/openobex/html/navtree.js
 share/doc/openobex/html/navtreedata.js
@@ -71,13 +57,7 @@ share/doc/openobex/html/obex_8h.html
 share/doc/openobex/html/obex_8h.js
 share/doc/openobex/html/obex__const_8h.html
 share/doc/openobex/html/obex__const_8h.js
-share/doc/openobex/html/open.png
 share/doc/openobex/html/openobex_8coverpage.html
-share/doc/openobex/html/plus.svg
-share/doc/openobex/html/plusd.svg
-share/doc/openobex/html/resize.js
-share/doc/openobex/html/splitbar.png
-share/doc/openobex/html/splitbard.png
 share/doc/openobex/html/structobex__ctrans__t.html
 share/doc/openobex/html/structobex__ctrans__t.js
 share/doc/openobex/html/structobex__irda__intf__t.html
@@ -86,16 +66,6 @@ share/doc/openobex/html/structobex__usb__intf__service__t.html
 share/doc/openobex/html/structobex__usb__intf__service__t.js
 share/doc/openobex/html/structobex__usb__intf__t.html
 share/doc/openobex/html/structobex__usb__intf__t.js
-share/doc/openobex/html/sync_off.png
-share/doc/openobex/html/sync_on.png
-share/doc/openobex/html/tab_a.png
-share/doc/openobex/html/tab_ad.png
-share/doc/openobex/html/tab_b.png
-share/doc/openobex/html/tab_bd.png
-share/doc/openobex/html/tab_h.png
-share/doc/openobex/html/tab_hd.png
-share/doc/openobex/html/tab_s.png
-share/doc/openobex/html/tab_sd.png
 share/doc/openobex/html/tabs.css
 share/doc/openobex/html/unionobex__headerdata__t.html
 share/doc/openobex/html/unionobex__headerdata__t.js
