@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.104 2025/02/08 04:02:29 taca Exp $
+# $NetBSD: Makefile,v 1.105 2025/06/14 09:35:12 wen Exp $
 
-DISTNAME=	moodle-4.4.2
-PKGREVISION=	1
+DISTNAME=	moodle-5.0.1
 CATEGORIES=	www
-MASTER_SITES=	https://sourceforge.net/projects/moodle/files/Moodle/stable404/ \
-		https://jaist.dl.sourceforge.net/project/moodle/Moodle/stable404/
+MASTER_SITES=	https://download.moodle.org/download.php/stable500/ \
+		https://packaging.moodle.org/stable500/ \
+		http://distcache.freebsd.org/local-distfiles/wen/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wen@NetBSD.org
@@ -33,7 +33,7 @@ INSTALLATION_DIRS=	${EGDIR} share/moodle
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PHP_VERSIONS_ACCEPTED=		81 82 83
+PHP_VERSIONS_ACCEPTED=		82 83
 
 PKG_GROUPS_VARS=	APACHE_GROUP
 PKG_USERS_VARS=		APACHE_USER
@@ -75,6 +75,7 @@ WRKSRC=			${WRKDIR}/moodle
 
 post-extract:
 	${CP} ${FILESDIR}/moodle.conf ${WRKDIR}/moodle.conf
+	${RM} -rf ${WRKSRC}/.grunt
 
 post-patch:
 	cd ${WRKDIR} && ${FIND} moodle -type f -print \
