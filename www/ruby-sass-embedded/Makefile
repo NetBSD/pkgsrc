@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/05/19 14:54:13 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/06/14 14:38:54 taca Exp $
 
 DISTNAME=	sass-embedded-1.89.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,4 +21,5 @@ GEM_CLEANBUILD=	gem_make.out
 ALLOW_NETWORK_ACCESS=	YES
 
 .include "../../lang/ruby/gem.mk"
+.include "../../lang/nodejs/nodeversion.mk"
 .include "../../mk/bsd.pkg.mk"
