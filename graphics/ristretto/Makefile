@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2025/06/14 01:14:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.80 2025/06/14 12:55:51 gutteridge Exp $
 
 VERSION=	0.13.4
 DISTNAME=	ristretto-${VERSION}
@@ -11,14 +11,16 @@ HOMEPAGE=	https://goodies.xfce.org/projects/applications/ristretto
 COMMENT=	Xfce image viewer
 LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=	--enable-maintainer-mode
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf automake autoreconf
 USE_TOOLS+=		gmake pkg-config msgfmt gdbus-codegen
+
+TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
+
+CONFIGURE_ARGS+=	--enable-maintainer-mode
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 LDFLAGS.DragonFly=	-lX11
 LDFLAGS.FreeBSD=	-lX11
