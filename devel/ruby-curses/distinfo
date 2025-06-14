@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2025/06/04 13:39:20 taca Exp $
+$NetBSD: distinfo,v 1.40 2025/06/14 14:19:02 taca Exp $
 
-BLAKE2s (curses-1.5.1.gem) = 1bd9e78054d1d586a97875f2f5c42dff6efaa49e0da61fcbfe6a475631a0874f
-SHA512 (curses-1.5.1.gem) = f7bea888dddc85ff43076f24018b8bc81cfa923b601bb75f92f7ee2b1ee19c35451fa18f6043884b5ae8edddb3de25038065af06d9a4892baeb856963c05af94
-Size (curses-1.5.1.gem) = 526848 bytes
+BLAKE2s (curses-1.5.3.gem) = 1e84a76eb89ad9216a30c943d5725e95c15c5a19efc4fbea838b0c32d08aeb7b
+SHA512 (curses-1.5.3.gem) = 66e027379add33c46fafc1a6fccf3c54137ae7c9767fea3c562466dc7f99a7da220f19760fa2f3bade13ec0d57c12f05a2fb7c47c5128c981f78567aa14c2783
+Size (curses-1.5.3.gem) = 527360 bytes
