@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2025/06/14 12:19:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.91 2025/06/14 13:20:43 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -24,6 +24,7 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/vte3/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
