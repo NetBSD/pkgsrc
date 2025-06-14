@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3908 2025/06/14 05:55:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3909 2025/06/14 06:55:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5849,3 +5849,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/libtheora-docs to 1.2.0nb1 [wiz 2025-06-14]
 	Updated cad/py-PyRTL to 0.11.3 [ryoon 2025-06-14]
 	Updated comms/openobex to 1.7.2nb5 [wiz 2025-06-14]
+	Updated lang/ruby34 to 3.4.4nb1 [taca 2025-06-14]
