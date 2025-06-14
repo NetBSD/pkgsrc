@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3912 2025/06/14 13:37:07 wen Exp $
+$NetBSD: CHANGES-2025,v 1.3913 2025/06/14 13:57:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5853,3 +5853,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/moodle to 5.0.1 [wen 2025-06-14]
 	Updated www/p5-CGI to 4.69 [wen 2025-06-14]
 	Updated devel/rt4 to 4.4.8 [wen 2025-06-14]
+	Updated lang/php74 to 7.4.33nb5 [taca 2025-06-14]
