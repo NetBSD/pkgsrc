@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.2 2019/06/13 03:19:13 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2025/06/14 13:35:54 wen Exp $
 
 NetBSD find doesn't know about "-not" so use "!"
 
---- Makefile.in.orig	2019-01-31 14:39:47.000000000 +0000
+--- Makefile.in.orig	2025-06-14 12:31:58.883196666 +0000
 +++ Makefile.in
-@@ -302,7 +302,7 @@ fixperms:
+@@ -307,7 +307,7 @@ fixperms:
  
  	# Make upgrade scripts executable if they are in the source.
  	#
@@ -13,7 +13,7 @@ NetBSD find doesn't know about "-not" so use "!"
  		chmod a+x "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$file" ; \
  	done
  
-@@ -459,7 +459,7 @@ etc-install:
+@@ -465,7 +465,7 @@ etc-install:
  @COMMENT_INPLACE_LAYOUT@	-( cd etc/upgrade && find . -type d -print ) | while read dir ; do \
  @COMMENT_INPLACE_LAYOUT@	    $(INSTALL) -m 0755 -d "$(DESTDIR)$(RT_ETC_PATH)/upgrade/$$dir" ; \
  @COMMENT_INPLACE_LAYOUT@	done

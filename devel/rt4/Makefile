@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2024/05/08 12:07:01 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/06/14 13:35:54 wen Exp $
 
-DISTNAME=	rt-4.2.16
+DISTNAME=	rt-4.4.8
 PKGNAME=	${DISTNAME:S/rt/rt4/}
-PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -14,17 +13,19 @@ LICENSE=	gnu-gpl-v2
 # Dependency info. from sbin/rt-test-dependencies
 # Core dependencies
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
+DEPENDS+=	p5-Business-Hours>=0:../../time/p5-Business-Hours
 DEPENDS+=	p5-CGI>=3.38:../../www/p5-CGI
-# CGI::Cookie is a part of p5-CGI.
 DEPENDS+=	p5-CGI-Emulate-PSGI-[0-9]*:../../www/p5-CGI-Emulate-PSGI
 DEPENDS+=	p5-CGI-PSGI-[0-9]*:../../www/p5-CGI-PSGI
 DEPENDS+=	p5-Class-Accessor>=0.34:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
 DEPENDS+=	p5-Crypt-Eksblowfish-[0-9]*:../../security/p5-Crypt-Eksblowfish
+DEPENDS+=	p5-CSS-Minifier-XS>=0:../../www/p5-CSS-Minifier-XS
 DEPENDS+=	p5-CSS-Squish>=0.06:../../www/p5-CSS-Squish
 DEPENDS+=	p5-Date-Extract>=0.02:../../time/p5-Date-Extract
 DEPENDS+=	p5-Data-GUID-[0-9]*:../../devel/p5-Data-GUID
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
+DEPENDS+=	p5-Data-Page-Pageset>=0:../../devel/p5-Data-Page-Pageset
 DEPENDS+=	p5-Email-Address-List>=0.02:../../mail/p5-Email-Address-List
 DEPENDS+=	p5-DateTime>=0.44:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Natural>0.67:../../time/p5-DateTime-Format-Natural
@@ -35,12 +36,8 @@ DEPENDS+=	p5-Devel-GlobalDestruction-[0-9]*:../../devel/p5-Devel-GlobalDestructi
 DEPENDS+=	p5-Devel-StackTrace>=1.19:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Email-Address>=1.897:../../mail/p5-Email-Address
 DEPENDS+=	p5-Email-Address-List-[0-9]*:../../mail/p5-Email-Address-List
-# Errno is a part of perl base.
-# File::Glob is a part of perl base.
 DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
-# File::Spec is a part of perl base.
-#DEPENDS+=	{perl>=5.10.1,p5-File-Temp>=0.19}:../../devel/p5-File-Temp
-# HTML::Entities is a part of p5-HTML-Parser.
+DEPENDS+=	p5-GraphViz2>=0:../../graphics/p5-GraphViz2
 DEPENDS+=	p5-HTML-FormatText-WithLinks>=0.14:../../textproc/p5-HTML-FormatText-WithLinks
 DEPENDS+=	p5-HTML-FormatText-WithLinks-AndTables-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks-AndTables
 DEPENDS+=	p5-HTML-Mason-PSGIHandler>=0.52:../../www/p5-HTML-Mason-PSGIHandler
@@ -48,56 +45,47 @@ DEPENDS+=	p5-HTML-Quoted-[0-9]*:../../www/p5-HTML-Quoted
 DEPENDS+=	p5-HTML-RewriteAttributes>=0.05:../../www/p5-HTML-RewriteAttributes
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
+DEPENDS+=	p5-JavaScript-Minifier-XS>=0:../../www/p5-JavaScript-Minifier-XS
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
-#DEPENDS+=	{perl>=5.20.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Fuzzy-[0-9]*:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
 DEPENDS+=	p5-Log-Dispatch>=2.30:../../devel/p5-Log-Dispatch
-# Mail::Header is a part of p5-MailTools.
 DEPENDS+=	p5-MailTools>=1.57:../../mail/p5-MailTools
-# Mail::Mailer is a part of p5-MailTools.
 DEPENDS+=	p5-MIME-tools>=5.504:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
 DEPENDS+=	p5-Module-Versions-Report>=1.05:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-Net-CIDR-[0-9]*:../../devel/p5-Net-CIDR
+DEPENDS+=	p5-Parallel-ForkManager>=0:../../devel/p5-Parallel-ForkManager
 DEPENDS+=	p5-Plack>=1.0002:../../www/p5-Plack
-# Plack::Handler::Starlet is a part of p5-Startlet.
 DEPENDS+=	p5-Starlet-[0-9]*:../../www/p5-Starlet
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Regexp-Common-net-CIDR-[0-9]*:../../net/p5-Regexp-Common-net-CIDR
 DEPENDS+=	p5-Regexp-IPv6-[0-9]*:../../net/p5-Regexp-IPv6
 DEPENDS+=	p5-Role-Basic-[0-9]*:../../devel/p5-Role-Basic
-# Scalar::Util is a part of p5-Scalar-List-Utils.
 DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
-#DEPENDS+=	{perl>=5.8.1,p5-Storable>=2.08}:../../devel/p5-Storable
+DEPENDS+=	p5-Scope-Upper>=0:../../devel/p5-Scope-Upper
 DEPENDS+=	p5-Symbol-Global-Name>=0.04:../../devel/p5-Symbol-Global-Name
-#DEPENDS+=	{perl>=5.8.9,p5-Sys-Syslog>=0.16}:../../sysutils/p5-Sys-Syslog
 DEPENDS+=	p5-Text-Password-Pronounceable-[0-9]*:../../security/p5-Text-Password-Pronounceable
 DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Text-Template>=1.44:../../textproc/p5-Text-Template
 DEPENDS+=	p5-Symbol-Global-Name>=0.05:../../devel/p5-Symbol-Global-Name
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
 DEPENDS+=	p5-Text-Wrapper-[0-9]*:../../textproc/p5-Text-Wrapper
-#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes-[0-9]*}:../../time/p5-Time-HiRes
-# Time::ParseDate is a part of p5-Time-modules.
 DEPENDS+=	p5-Time-modules-[0-9]*:../../time/p5-Time-modules
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-UNIVERSAL-require-[0-9]*:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-HTML-Mason>=1.43:../../www/p5-HTML-Mason
+DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 
 # Mailgate dependencies
 # Net::SSL is a part of p5-Crypt-SSLeay.
 DEPENDS+=	p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
-#DEPENDS+=	{perl>=5,p5-Getopt-Long-[0-9]*}:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
-# LWP::UserAgent is a part of p5-libwww.
-DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
-#DEPENDS+=	{perl>=5.6.0,p5-Pod-Usage-[0-9]*}:../../devel/p5-Pod-Usage
 
 # CLI dependencies
 # p5-Getopt-Long is duplicate with Mailgate dependencies.
@@ -214,8 +202,5 @@ REPLACE_PERL+=		etc/upgrade/upgrade-mysql-schema.pl
 INSTALL_MAKE_FLAGS+=	BIN_OWNER=${ROOT_USER:Q} LIBS_OWNER=${ROOT_USER:Q} \
 			LIBS_GROUP=${ROOT_GROUP:Q} RTGROUP=${ROOT_GROUP:Q} \
 			WEB_USER=${ROOT_USER:Q} WEB_GROUP=${ROOT_GROUP:Q}
-
-post-patch:
-	rm ${WRKSRC}/lib/RT/Condition.pm.orig
 
 .include "../../mk/bsd.pkg.mk"

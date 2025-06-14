@@ -1,12 +1,12 @@
-$NetBSD: patch-sbin_rt-test-dependencies.in,v 1.1 2024/05/08 12:07:01 wiz Exp $
+$NetBSD: patch-sbin_rt-test-dependencies.in,v 1.2 2025/06/14 13:35:54 wen Exp $
 
---- sbin/rt-test-dependencies.in.orig	2024-05-08 12:04:21.149583060 +0000
+--- sbin/rt-test-dependencies.in.orig	2025-06-14 13:04:39.162900930 +0000
 +++ sbin/rt-test-dependencies.in
-@@ -225,7 +225,6 @@ HTML::Scrubber 0.08
- HTTP::Message 6.0
- IPC::Run3
- JSON
--LWP::Simple
- List::MoreUtils
- Locale::Maketext 1.06
+@@ -162,7 +162,6 @@ Locale::Maketext 1.06
  Locale::Maketext::Fuzzy 0.11
+ Locale::Maketext::Lexicon 0.32
+ Log::Dispatch 2.30
+-LWP::Simple
+ Mail::Header 2.12
+ Mail::Mailer 1.57
+ MIME::Entity 5.504
