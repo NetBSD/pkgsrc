@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/03/16 13:44:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/06/14 14:21:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/IO_Event.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -23,6 +23,10 @@ ${GEM_LIBDIR}/ext/io/event/selector/uring.c
 ${GEM_LIBDIR}/ext/io/event/selector/uring.h
 ${GEM_LIBDIR}/ext/io/event/time.c
 ${GEM_LIBDIR}/ext/io/event/time.h
+${GEM_LIBDIR}/ext/io/event/worker_pool.c
+${GEM_LIBDIR}/ext/io/event/worker_pool.h
+${GEM_LIBDIR}/ext/io/event/worker_pool_test.c
+${GEM_LIBDIR}/ext/io/event/worker_pool_test.h
 ${GEM_LIBDIR}/lib/IO_Event.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/io/event.rb
 ${GEM_LIBDIR}/lib/io/event/debug/selector.rb
