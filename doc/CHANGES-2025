@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3915 2025/06/14 14:15:38 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3916 2025/06/14 14:16:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5856,3 +5856,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php74 to 7.4.33nb5 [taca 2025-06-14]
 	Updated lang/php81 to 8.1.32nb5 [taca 2025-06-14]
 	Updated databases/ruby-activeldap to 7.2.2 [taca 2025-06-14]
+	Updated databases/ruby-sqlite3 to 2.7.0 [taca 2025-06-14]
