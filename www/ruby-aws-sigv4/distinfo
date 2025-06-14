@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/06/04 14:04:05 taca Exp $
+$NetBSD: distinfo,v 1.16 2025/06/14 14:28:17 taca Exp $
 
-BLAKE2s (aws-sigv4-1.12.0.gem) = d29141dfd344efceb4b2ec218aea8f4e6e91c3e998a4eb60aec7207976f98049
-SHA512 (aws-sigv4-1.12.0.gem) = dd026c84a9b16e6fbc4d6f9808cfbd8d2194f3b534fa88932acdf3f3dcb1c342b72c312cf10f3818e10508b042897ce2574d709ee9fbb91fb96df3c0eeb2e0de
-Size (aws-sigv4-1.12.0.gem) = 19456 bytes
+BLAKE2s (aws-sigv4-1.12.1.gem) = 40abcce54cfac3845ef43e9b3c31457920c418c20a163dfb0317fb766519d69d
+SHA512 (aws-sigv4-1.12.1.gem) = 39423ad2075cc4eeaaa0ea787bd1defa87654fb33c40d72056aefaa134bf5c19e7eba43f01108abb7ba48c95b5f831f9f0a3b56366a71422c75583e5391e3e8c
+Size (aws-sigv4-1.12.1.gem) = 19456 bytes
