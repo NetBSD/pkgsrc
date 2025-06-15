@@ -1,10 +1,18 @@
-$NetBSD: patch-aa,v 1.2 2011/09/12 16:46:45 taca Exp $
+$NetBSD: patch-aa,v 1.3 2025/06/15 16:55:16 taca Exp $
 
 Stop installing configuration which handled by pkgsrc's pkginstall framework.
 
---- Makefile.in.orig	2006-01-05 11:50:45.000000000 -0700
-+++ Makefile.in	2006-01-05 11:51:59.000000000 -0700
-@@ -62,7 +62,7 @@
+--- Makefile.in.orig	2005-01-05 15:50:10.000000000 +0000
++++ Makefile.in
+@@ -57,12 +57,15 @@ installdirs: mkinstalldirs
+ 		$(DESTDIR)$(pkgdatadir) \
+ 		$(DESTDIR)$(pkgdatadir)/db \
+ 		$(DESTDIR)$(pkgdatadir)/html \
++		$(DESTDIR)$(datadir)/examples \
++		$(DESTDIR)$(datadir)/examples/ffproxy \
++		$(DESTDIR)$(datadir)/examples/ffproxy/db \
+ 		$(DESTDIR)$(mandir) \
+ 		$(DESTDIR)$(mandir)/man5 \
  		$(DESTDIR)$(mandir)/man7 \
  		$(DESTDIR)$(mandir)/man8
  
@@ -13,3 +21,16 @@ Stop installing configuration which handled by pkgsrc's pkginstall framework.
  
  install_bin: ffproxy
  	$(INSTALL_PROGRAM) ffproxy $(DESTDIR)$(bindir)
+@@ -76,10 +79,10 @@ install_config: conf
+ 	$(INSTALL_DATA) ffproxy.conf $(DESTDIR)$(sysconfdir)
+ 
+ install_sample: conf
+-	$(INSTALL_DATA) sample.config $(DESTDIR)$(pkgdatadir)
++	$(INSTALL_DATA) ffproxy.conf $(DESTDIR)$(datadir)/examples/ffproxy
+ 
+ install_data:
+-	$(INSTALL_DATA) $(MY_DBFILES) $(DESTDIR)$(pkgdatadir)/db
++	$(INSTALL_DATA) $(MY_DBFILES) $(DESTDIR)$(datadir)/examples/ffproxy/db
+ 	$(INSTALL_DATA) $(MY_HTMLFILES) $(DESTDIR)$(pkgdatadir)/html
+ 
+ uninstall: uninstall_bin uninstall_man uninstall_sample
