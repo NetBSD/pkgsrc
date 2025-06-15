@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3946 2025/06/15 14:11:21 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3947 2025/06/15 14:46:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5890,3 +5890,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/smlnj to 110.99.8 [ryoon 2025-06-15]
 	Added www/ap2-qos version 11.76 [ryoon 2025-06-15]
 	Updated security/acmesh to 3.1.1 [ryoon 2025-06-15]
+	Updated net/sslh to 2.2.4 [wiz 2025-06-15]
