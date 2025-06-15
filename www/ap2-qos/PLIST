@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/06/15 14:05:48 ryoon Exp $
+bin/qsgeo
+bin/qslog
+bin/qsre
+bin/qsrespeed
+lib/httpd/mod_qos.la
