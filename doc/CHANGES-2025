@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3947 2025/06/15 14:46:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3948 2025/06/15 15:05:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ap2-qos version 11.76 [ryoon 2025-06-15]
 	Updated security/acmesh to 3.1.1 [ryoon 2025-06-15]
 	Updated net/sslh to 2.2.4 [wiz 2025-06-15]
+	Added devel/p5-cdk version 20250526 [wiz 2025-06-15]
