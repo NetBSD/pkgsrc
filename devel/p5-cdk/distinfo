@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/06/15 15:05:12 wiz Exp $
+
+BLAKE2s (cdk-perl-20250526.tgz) = 569244577cdd5cfd4dd828d582fbb2cf527bd8fea8360ecfea1b9902603ee208
+SHA512 (cdk-perl-20250526.tgz) = adeef3dcab971df03de71c834065abbf5977b453c6b6187e4e34fe5c4e7fa1a3c448b6c781efdea9460b486c23f414d0ead55f06f44c91740be67879552d5beb
+Size (cdk-perl-20250526.tgz) = 229293 bytes
