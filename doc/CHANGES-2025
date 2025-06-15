@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3931 2025/06/15 10:56:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3932 2025/06/15 12:51:58 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5875,3 +5875,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.12.13 [adam 2025-06-15]
 	Updated meta-pkgs/bulk-test-go to 20250615 [bsiegert 2025-06-15]
 	Updated devel/php-xdebug to 3.4.4 [taca 2025-06-15]
+	Added cross/ppc-morphos-gcc version 15.1.0 [js 2025-06-15]
