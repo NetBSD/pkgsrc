@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.360 2025/05/18 01:15:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.361 2025/06/15 13:33:39 ryoon Exp $
 
-VERREL=		25.2.3
-VERRC=		2
+VERREL=		25.2.4
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 CATEGORIES=	misc
@@ -114,7 +114,7 @@ MORE_DISTFILES= \
 	rhino-1.7.15.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-14.17.tar.bz2 \
+	postgresql-14.18.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -127,7 +127,7 @@ MORE_DISTFILES= \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
 	Amiri-1.001.zip \
-	ReemKufi-1.7.zip \
+	ReemKufi-1.8.zip \
 	pdfium-6764.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m130-3c64459d5df2fa9794b277f0959ed8a92552bf4c.tar.xz \

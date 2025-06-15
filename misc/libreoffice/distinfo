@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.166 2025/05/18 01:15:14 ryoon Exp $
+$NetBSD: distinfo,v 1.167 2025/06/15 13:33:39 ryoon Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -87,9 +87,9 @@ Size (libreoffice/NotoSerifHebrew-v2.004.zip) = 4622961 bytes
 BLAKE2s (libreoffice/NotoSerifLao-v2.003.zip) = 1c77be70836238d456666b22c9cb630d92cc180fe754e7986d715632ca941409
 SHA512 (libreoffice/NotoSerifLao-v2.003.zip) = cad15e113a77b72fdb1ebf745c80e19a93563add162d1cbf5c1f3ca2cf22360e638703ef848e7287f21f9d247bf8dec4de218a1f2663724ac7c958c4d01ecc1c
 Size (libreoffice/NotoSerifLao-v2.003.zip) = 5587972 bytes
-BLAKE2s (libreoffice/ReemKufi-1.7.zip) = bf90f8497cde90b7144c7dc8596b6957068b878ed66492db7d27672693565a53
-SHA512 (libreoffice/ReemKufi-1.7.zip) = 9c06009d7cb3f16051141ea80aadf729b688d6da9d781f0736a18385fe12373f78c5dc3754106894aa8ffee79a6af5674c0296504b663616c13aa15d5802dc1b
-Size (libreoffice/ReemKufi-1.7.zip) = 654085 bytes
+BLAKE2s (libreoffice/ReemKufi-1.8.zip) = d86d4b3ab2ed52f1bf9f741ad0b8e730c900314ddf576101292789c5fbddcb26
+SHA512 (libreoffice/ReemKufi-1.8.zip) = 2c2b5b260900cde5548a95a87c3b70cd59ffdb249247463341d248b57ee01c34d46d25868ef7fa96841dc0def17e7b0e39750ca81dc1c5d9442125ae73a28129
+Size (libreoffice/ReemKufi-1.8.zip) = 227130 bytes
 BLAKE2s (libreoffice/Scheherazade-2.100.zip) = a3e23fc612c5965a4ec332c1a5f21d01ba9533e96b0571ed74881fcac4dfb4ab
 SHA512 (libreoffice/Scheherazade-2.100.zip) = 53a6b684a9c6a6f136da28cc2f663fca9e22d1951203587394ff979c4769e4beb898ab73a7cabedf5ed6eaa2775d10c7281439f10331b203f0e03bd434aa2fb2
 Size (libreoffice/Scheherazade-2.100.zip) = 1114645 bytes
@@ -162,15 +162,15 @@ Size (libreoffice/liberation-narrow-fonts-ttf-1.07.6.tar.gz) = 300832 bytes
 BLAKE2s (libreoffice/libre-hebrew-1.0.tar.gz) = 0cf1aade1aa45f923b05b4c0c2378ad8fe954b6b56913ef8b263403696853679
 SHA512 (libreoffice/libre-hebrew-1.0.tar.gz) = 609c8ef29a1eab9b027ea04abf14949e9a204cf826fb0a792dadd8a83fc49ac9610a0b3a2bd4b8988e615688c63d0ec08a89436134980b2a9667e8966a75a795
 Size (libreoffice/libre-hebrew-1.0.tar.gz) = 531276 bytes
-BLAKE2s (libreoffice/libreoffice-25.2.3.2.tar.xz) = ad653a05db5501cb2e047bee34be7bc49f2c6e3553956b80442c77df18275176
-SHA512 (libreoffice/libreoffice-25.2.3.2.tar.xz) = 8eafbb50924538d1e23b4d763bdc6b2226351948305b485db8418f06b6e82a188ee55b892c9a6c10f995cc39cbaaa6dc5113d1575adefdb08df08303416f46c8
-Size (libreoffice/libreoffice-25.2.3.2.tar.xz) = 281913700 bytes
-BLAKE2s (libreoffice/libreoffice-dictionaries-25.2.3.2.tar.xz) = 0dd890b058ed7b30da97da4c9b0e657c342bf4f9c349c9c82e8ed364adbcb0d9
-SHA512 (libreoffice/libreoffice-dictionaries-25.2.3.2.tar.xz) = 4fe1a68f2edd10485eec8cedf3343a3c4f9cbac636072f96ad6aa3fb78c915ac8464d542931413e7e0c590ae4e5e8894db506bdc724e008aba8a3434e4c3a8b1
-Size (libreoffice/libreoffice-dictionaries-25.2.3.2.tar.xz) = 58361184 bytes
-BLAKE2s (libreoffice/libreoffice-translations-25.2.3.2.tar.xz) = d714fe898c9df095f7d186bb44f5cc6808b1bdce1419e04198e808fed3f7cb52
-SHA512 (libreoffice/libreoffice-translations-25.2.3.2.tar.xz) = 5957dc52451dbb72eab94c2aa9563618fa82d2e5f4905d01a5cd954d67d41f2c197ac9a0510ebb4f71fb8e38c6911bf1bdf20ff0b9e99db0fe07b7ff7e2376b6
-Size (libreoffice/libreoffice-translations-25.2.3.2.tar.xz) = 229102712 bytes
+BLAKE2s (libreoffice/libreoffice-25.2.4.3.tar.xz) = 871d8961a2fc0bd2bc3291666883a8c0f0f9ca648672f3e57efa4b495dd4b20f
+SHA512 (libreoffice/libreoffice-25.2.4.3.tar.xz) = 8a37036dc3751ed5f8488a86aa6db63b86dcf0d58339a322d7e97e345f72e46a5ff6c34cdfc47c378482422f3c69216e4b4b80e1ecc6142c40fdc0f48332bde7
+Size (libreoffice/libreoffice-25.2.4.3.tar.xz) = 282218988 bytes
+BLAKE2s (libreoffice/libreoffice-dictionaries-25.2.4.3.tar.xz) = a7a6c032ec4a2d8f10565d7a27493326e83b32a990483772354df6f4d1cf0517
+SHA512 (libreoffice/libreoffice-dictionaries-25.2.4.3.tar.xz) = 9bfa5aad7070d3ed1bf9a954c6770c256d2179db56b97c09d8c8eefbffb6c69258960c71d54495a15fe4ad32c98f2f7de38c5870281e193db39caace56f2c5d4
+Size (libreoffice/libreoffice-dictionaries-25.2.4.3.tar.xz) = 58376328 bytes
+BLAKE2s (libreoffice/libreoffice-translations-25.2.4.3.tar.xz) = 2fa3fb7a9c9496a9239c67734982a76dd588d94c2222c93e7714bd72fbcb8408
+SHA512 (libreoffice/libreoffice-translations-25.2.4.3.tar.xz) = c3c4c3f0c13f8ce10d49992de574ef7d99e43a26786c9e60b624c22127fd5fa8978280fd30ae2657b555320b213944ffd093d813900bead12b154e28e0dc0dea
+Size (libreoffice/libreoffice-translations-25.2.4.3.tar.xz) = 229090084 bytes
 BLAKE2s (libreoffice/lxml-4.1.1.tgz) = 8ab1ddfc30f21c433da04723d9092cd4e938cd5a5380310e8089e959a690d294
 SHA512 (libreoffice/lxml-4.1.1.tgz) = 9542e5206f9b2f9e072c52ef8e6cf44d1aaae8ae3e7ca7e820c1fac12e716503308ccb3cebc52155b4c93799f3ebca247781fc491524d004378bd26f5cddb9d1
 Size (libreoffice/lxml-4.1.1.tgz) = 2380804 bytes
@@ -186,9 +186,9 @@ Size (libreoffice/odfvalidator-0.9.0-RC2-SNAPSHOT-jar-with-dependencies-2726ab57
 BLAKE2s (libreoffice/pdfium-6764.tar.bz2) = c43ef00e29f8543ba7bd1069e1faab9aa4193523bfd15a345077fe5ffb40b1ab
 SHA512 (libreoffice/pdfium-6764.tar.bz2) = 5987bf6b3beefb4726f82ed35a25cbfe67e901f747c44cc2022e2172b1cf5d7e7c9e4f07242c2a46fc3c0aacf3fc6e79548d78e92616f15e348c3286d9bc04cb
 Size (libreoffice/pdfium-6764.tar.bz2) = 11121305 bytes
-BLAKE2s (libreoffice/postgresql-14.17.tar.bz2) = e8f6c923f81e4c0cb263d91836bf2dd79557d09245a184b67c8705be0fbde854
-SHA512 (libreoffice/postgresql-14.17.tar.bz2) = 1cb7d16fbfbceaa6bf0acd4cf9bea3e8fc078fcc6c1f7baad1d66040e1467f59ac54858b11a26543b50e25d3f0db47e0c72539cde743c794d41fa9d2f97c22c1
-Size (libreoffice/postgresql-14.17.tar.bz2) = 22488812 bytes
+BLAKE2s (libreoffice/postgresql-14.18.tar.bz2) = 7b4726f21d07517d26468b3977c8ef1d7fa539e0ba15a3bc0157beff76794d7b
+SHA512 (libreoffice/postgresql-14.18.tar.bz2) = fe40ba9fcc001f8c7eb3557c6248fa42af82b487ea4f31b8b20f5fa7ab930246659a4c8cf0bfa9a52f5143c766c0660d36b092474d2909020114ea3a1810adfd
+Size (libreoffice/postgresql-14.18.tar.bz2) = 22503241 bytes
 BLAKE2s (libreoffice/rhino-1.7.15.zip) = 02a27a3f7b0fdc3540e3eb85117c7e135ec5d9ad4c816f5db8dc3c58bca3a7b3
 SHA512 (libreoffice/rhino-1.7.15.zip) = a6a51aa9cdba57272a5da4f9193704be16e19ef2843fe2b93068e2b5321d9bc6bbd8e6715d093a9cba66013c46c6d9edf961f4ceaa51f66601b802099ba40a1a
 Size (libreoffice/rhino-1.7.15.zip) = 5856077 bytes
