@@ -1,16 +1,19 @@
-$NetBSD: patch-phoronix-test-suite,v 1.1 2025/02/08 03:28:48 taca Exp $
+$NetBSD: patch-phoronix-test-suite,v 1.2 2025/06/15 15:51:39 taca Exp $
 
 * Set pkgsrc's PHP.
 
---- phoronix-test-suite.orig	2019-05-30 15:01:30.000000000 +0000
+--- phoronix-test-suite.orig	2022-07-03 10:18:55.000000000 +0000
 +++ phoronix-test-suite
-@@ -53,66 +53,7 @@ then
+@@ -64,90 +64,7 @@ then
  fi
  
  # Determine PHP binary location
 -if [ ! "X$PHP_BIN" = "X" ] && [ -x $PHP_BIN ]
 -then
 -	export PHP_BIN=$PHP_BIN
+-elif [ -x /usr/bin/php8 ] || [ -x /usr/local/bin/php8 ] || [ -x /usr/pkg/bin/php8 ]
+-then
+-	export PHP_BIN="php8"
 -elif [ -x /usr/bin/php7 ] || [ -x /usr/local/bin/php7 ] || [ -x /usr/pkg/bin/php7 ]
 -then
 -	export PHP_BIN="php7"
@@ -20,6 +23,9 @@ $NetBSD: patch-phoronix-test-suite,v 1.1 2025/02/08 03:28:48 taca Exp $
 -elif [ -x /usr/php7/bin/php ]
 -then
 -	export PHP_BIN="/usr/php7/bin/php"
+-elif [ -x /usr/php8/bin/php ]
+-then
+-	export PHP_BIN="/usr/php8/bin/php"
 -elif [ -x /usr/php/bin/php ]
 -then
 -	export PHP_BIN="/usr/php/bin/php"
@@ -35,6 +41,21 @@ $NetBSD: patch-phoronix-test-suite,v 1.1 2025/02/08 03:28:48 taca Exp $
 -elif [ -x /usr/local/bin/php-7.2 ]
 -then
 -	export PHP_BIN="/usr/local/bin/php-7.2"
+-elif [ -x /usr/local/bin/php-7.3 ]
+-then
+-	export PHP_BIN="/usr/local/bin/php-7.3"
+-elif [ -x /usr/local/bin/php-7.4 ]
+-then
+-	export PHP_BIN="/usr/local/bin/php-7.4"
+-elif [ -x /usr/local/bin/php-8.0 ]
+-then
+-	export PHP_BIN="/usr/local/bin/php-8.0"
+-elif [ -x /usr/local/bin/php-8.1 ]
+-then
+-	export PHP_BIN="/usr/local/bin/php-8.1"
+-elif [ -x /usr/local/bin/php-8.2 ]
+-then
+-	export PHP_BIN="/usr/local/bin/php-8.2"
 -elif [ -x /opt/bin/php ]
 -then
 -	export PHP_BIN="/opt/bin/php"
@@ -47,24 +68,27 @@ $NetBSD: patch-phoronix-test-suite,v 1.1 2025/02/08 03:28:48 taca Exp $
 -elif which php7 >/dev/null 2>&1 ;
 -then
 -	export PHP_BIN="php7"
+-elif which php8 >/dev/null 2>&1 ;
+-then
+-	export PHP_BIN="php8"
 -elif [ -x /usr/php5/bin/php ]
 -then
 -	export PHP_BIN="/usr/php5/bin/php"
 -elif [ -x /usr/bin/php5 ] || [ -x /usr/local/bin/php5 ] || [ -x /usr/pkg/bin/php5 ]
 -then
 -	export PHP_BIN="php5"
+-elif which php8 >/dev/null 2>&1 ;
+-then
+-	export PHP_BIN="php8"
+-elif which php7 >/dev/null 2>&1 ;
+-then
+-	export PHP_BIN="php7"
 -elif which php5 >/dev/null 2>&1 ;
 -then
 -	export PHP_BIN="php5"
 -elif which php-cli >/dev/null 2>&1 ;
 -then
 -	export PHP_BIN="php-cli"
--elif [ -x /usr/bin/hhvm ]
--then
--	export PHP_BIN="/usr/bin/hhvm"
--elif which hhvm >/dev/null 2>&1 ;
--then
--	export PHP_BIN="hhvm"
 -else
 -	export PHP_BIN=""
 -fi
