@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:09:14 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/06/15 15:54:44 taca Exp $
 
-BLAKE2s (adodb496a.tgz) = 966cb002d749fd8b9320bb60283ed60098ff9a094d274e2bb76c399a7091f37f
-SHA512 (adodb496a.tgz) = a676af757c69f1da4b3c0b8aef01c1bed2f687f5f4d00355fe8b4f9a2e8f4a7d3a44ab6867d33245f822a66d75906044d5f7a70a8e6df8a86be73d46c6787ff1
-Size (adodb496a.tgz) = 476835 bytes
+BLAKE2s (adodb-5.22.9.tar.gz) = 76b8e21615d4f5eccb6f72624c8bbb04c61d0f10844a077c8e7c4c2c96c1d2ca
+SHA512 (adodb-5.22.9.tar.gz) = c51cdf0168632a6fb5a685fc6eee7cdc7f5a150371709f4869c7c82a46958847d9794e025aaa2417d51d53dc1cf8c0db659f8e6708461cbdc0da41970af1969b
+Size (adodb-5.22.9.tar.gz) = 450133 bytes
