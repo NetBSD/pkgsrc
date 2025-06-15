@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.88 2025/06/10 14:51:17 adam Exp $
+$NetBSD: distinfo,v 1.89 2025/06/15 08:31:09 adam Exp $
 
-BLAKE2s (aiohttp-3.12.12.tar.gz) = cf2fd937fd64cb5f6fc4ba0604d8ac2f5f05f96ee066ee543de1fed1bc14647e
-SHA512 (aiohttp-3.12.12.tar.gz) = a9d127dd7098fc4661c5d1c421161696f07d38163ba7df2e87fc142d6815589615ea76cbe966aa2f24bf0e8c3737c03149104e769cca5d2c2b55d86739aa90f8
-Size (aiohttp-3.12.12.tar.gz) = 7818643 bytes
+BLAKE2s (aiohttp-3.12.13.tar.gz) = 389fb039ae9f3b3d360248de4dfab8124dad7c19e0d9ae298bdc4e5c93d58e3b
+SHA512 (aiohttp-3.12.13.tar.gz) = e384a7581a7e0944a7283adcf70b84c3a4f6a04ddf5fafbff74d1919bd46a3fddfd7fd830189278d7d17717ca65695cf0aa26ebbf38d08e850453887a5b7f487
+Size (aiohttp-3.12.13.tar.gz) = 7819160 bytes
