@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/08/25 06:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/15 20:45:36 markd Exp $
 
 DISTNAME=	blosc-1.21.6
 CATEGORIES=	devel
@@ -29,6 +29,7 @@ FORCE_C_STD=	c99
 # Needed to use posix_memalign, see tests/test_common.h
 CFLAGS+=	-D_POSIX_C_SOURCE=200112
 
+CFLAGS.Linux+=	-D_DEFAULT_SOURCE
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE+=	blosc.pc.in
