@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3949 2025/06/15 15:51:50 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3950 2025/06/15 15:54:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5893,3 +5893,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/sslh to 2.2.4 [wiz 2025-06-15]
 	Added devel/p5-cdk version 20250526 [wiz 2025-06-15]
 	Updated benchmarks/phoronix-test-suite to 10.8.4 [taca 2025-06-15]
+	Updated databases/adodb to 5.22.9 [taca 2025-06-15]
