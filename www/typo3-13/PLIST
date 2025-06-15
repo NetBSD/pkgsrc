@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/06/04 14:51:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/06/15 16:19:54 taca Exp $
 share/examples/typo3/typo3.conf
 share/typo3/CODE_OF_CONDUCT.md
 share/typo3/CONTRIBUTING.md
@@ -722,6 +722,7 @@ share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_pages_sort
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_pagetsconfig.xlf
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_reset_password.xlf
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_resource.xlf
+share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_settingseditor.xlf
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_show_rechis.xlf
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_siteconfiguration.xlf
 share/typo3/typo3/sysext/backend/Resources/Private/Language/locallang_siteconfiguration_module.xlf
@@ -1063,6 +1064,7 @@ share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/security/element/su
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/security/sudo-mode-interceptor.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/editor.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/editor/editable-setting.js
+share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/enum/settings-mode.enum.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/type/base.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/type/bool.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/settings/type/color.js
@@ -2183,6 +2185,7 @@ share/typo3/typo3/sysext/core/Classes/Schema/Capability/SchemaCapabilityInterfac
 share/typo3/typo3/sysext/core/Classes/Schema/Capability/SystemInternalFieldCapability.php
 share/typo3/typo3/sysext/core/Classes/Schema/Capability/TcaSchemaCapability.php
 share/typo3/typo3/sysext/core/Classes/Schema/Exception/FieldTypeNotAvailableException.php
+share/typo3/typo3/sysext/core/Classes/Schema/Exception/InvalidSchemaTypeException.php
 share/typo3/typo3/sysext/core/Classes/Schema/Exception/UndefinedFieldException.php
 share/typo3/typo3/sysext/core/Classes/Schema/Exception/UndefinedSchemaException.php
 share/typo3/typo3/sysext/core/Classes/Schema/Field/AbstractFieldType.php
@@ -2227,6 +2230,7 @@ share/typo3/typo3/sysext/core/Classes/Schema/RelationMapBuilder.php
 share/typo3/typo3/sysext/core/Classes/Schema/RelationshipType.php
 share/typo3/typo3/sysext/core/Classes/Schema/SchemaCollection.php
 share/typo3/typo3/sysext/core/Classes/Schema/SchemaInterface.php
+share/typo3/typo3/sysext/core/Classes/Schema/SchemaTypeInformation.php
 share/typo3/typo3/sysext/core/Classes/Schema/SearchableSchemaFieldsCollector.php
 share/typo3/typo3/sysext/core/Classes/Schema/Struct/FlexSectionContainer.php
 share/typo3/typo3/sysext/core/Classes/Schema/Struct/FlexSheet.php
@@ -2317,6 +2321,7 @@ share/typo3/typo3/sysext/core/Classes/Settings/SettingDefinition.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingNotFoundException.php
 share/typo3/typo3/sysext/core/Classes/Settings/Settings.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsInterface.php
+share/typo3/typo3/sysext/core/Classes/Settings/SettingsMode.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsTree.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeInterface.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeRegistry.php
@@ -9758,6 +9763,7 @@ share/typo3/typo3/sysext/form/Resources/Private/Templates/Backend/FormManager/In
 share/typo3/typo3/sysext/form/Resources/Public/Css/form.css
 share/typo3/typo3/sysext/form/Resources/Public/Icons/Extension.svg
 share/typo3/typo3/sysext/form/Resources/Public/JavaScript/backend/form-editor.js
+share/typo3/typo3/sysext/form/Resources/Public/JavaScript/backend/form-editor/component/property-grid-editor.js
 share/typo3/typo3/sysext/form/Resources/Public/JavaScript/backend/form-editor/core.js
 share/typo3/typo3/sysext/form/Resources/Public/JavaScript/backend/form-editor/helper.js
 share/typo3/typo3/sysext/form/Resources/Public/JavaScript/backend/form-editor/inspector-component.js
@@ -11959,6 +11965,7 @@ share/typo3/vendor/doctrine/dbal/CONTRIBUTING.md
 share/typo3/vendor/doctrine/dbal/LICENSE
 share/typo3/vendor/doctrine/dbal/README.md
 share/typo3/vendor/doctrine/dbal/composer.json
+share/typo3/vendor/doctrine/dbal/phpstan-baseline.neon
 share/typo3/vendor/doctrine/dbal/src/ArrayParameterType.php
 share/typo3/vendor/doctrine/dbal/src/ArrayParameters/Exception.php
 share/typo3/vendor/doctrine/dbal/src/ArrayParameters/Exception/MissingNamedParameter.php
@@ -12114,6 +12121,7 @@ share/typo3/vendor/doctrine/dbal/src/Exception/ServerException.php
 share/typo3/vendor/doctrine/dbal/src/Exception/SyntaxErrorException.php
 share/typo3/vendor/doctrine/dbal/src/Exception/TableExistsException.php
 share/typo3/vendor/doctrine/dbal/src/Exception/TableNotFoundException.php
+share/typo3/vendor/doctrine/dbal/src/Exception/TransactionRolledBack.php
 share/typo3/vendor/doctrine/dbal/src/Exception/UniqueConstraintViolationException.php
 share/typo3/vendor/doctrine/dbal/src/Exception/UnknownDriver.php
 share/typo3/vendor/doctrine/dbal/src/ExpandArrayParameters.php
@@ -12295,8 +12303,8 @@ share/typo3/vendor/doctrine/dbal/src/Types/VarDateTimeType.php
 share/typo3/vendor/doctrine/deprecations/LICENSE
 share/typo3/vendor/doctrine/deprecations/README.md
 share/typo3/vendor/doctrine/deprecations/composer.json
-share/typo3/vendor/doctrine/deprecations/lib/Doctrine/Deprecations/Deprecation.php
-share/typo3/vendor/doctrine/deprecations/lib/Doctrine/Deprecations/PHPUnit/VerifyDeprecations.php
+share/typo3/vendor/doctrine/deprecations/src/Deprecation.php
+share/typo3/vendor/doctrine/deprecations/src/PHPUnit/VerifyDeprecations.php
 share/typo3/vendor/doctrine/event-manager/LICENSE
 share/typo3/vendor/doctrine/event-manager/README.md
 share/typo3/vendor/doctrine/event-manager/UPGRADE.md
