@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3953 2025/06/15 16:11:55 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3954 2025/06/15 16:20:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5897,3 +5897,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/rspamd to 3.12.0 [taca 2025-06-15]
 	Updated net/cacti to 1.2.30 [taca 2025-06-15]
 	Updated www/fengoffice to 3.11.8.0 [taca 2025-06-15]
+	Updated www/typo3-13 to 13.4.14 [taca 2025-06-15]
