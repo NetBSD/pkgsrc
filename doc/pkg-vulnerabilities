@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.420 2025/06/15 14:42:39 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.421 2025/06/15 15:16:24 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26228,7 +26228,7 @@ binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5245
 gimp<3.0.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48796
 gimp<3.0.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48797
 gimp<3.0.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-48798
-icu<78.1	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-5222
+icu<77.1	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-5222
 icinga2<2.14.6	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-48057
 p5-Net-CIDR-Set<0.14	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-40911
 kea<2.6.3	privilege-escalation			https://nvd.nist.gov/vuln/detail/CVE-2025-32801
