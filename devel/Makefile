@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4479 2025/06/08 08:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4480 2025/06/15 15:05:25 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2344,6 +2344,7 @@ SUBDIR+=	p5-autovivification
 SUBDIR+=	p5-bareword-filehandles
 SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
+SUBDIR+=	p5-cdk
 SUBDIR+=	p5-circular-require
 SUBDIR+=	p5-common-sense
 SUBDIR+=	p5-constant-def
