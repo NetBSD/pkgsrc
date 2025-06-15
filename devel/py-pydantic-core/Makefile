@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/04/18 12:28:11 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/06/15 08:26:33 adam Exp $
 
-DISTNAME=	pydantic_core-2.34.1
+DISTNAME=	pydantic_core-2.35.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/pydantic/pydantic-core
 COMMENT=	Core functionality for pydantic
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.13.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.1.post0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.92.9:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
