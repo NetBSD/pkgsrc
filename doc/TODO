@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25894 2025/06/15 16:37:30 taca Exp $
+$NetBSD: TODO,v 1.25895 2025/06/15 17:02:28 taca Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bottlerocket-0.05b3
 	o box2d-3.1.1
 	o bugzilla3-3.6.13
-	o cacti-spine-1.2.16
+	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
 	o calibre-8.4.0 [requires py-qt6-webengine]
@@ -561,6 +561,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
+	o dotclear-2.33.1
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o dropbear-2025.88
