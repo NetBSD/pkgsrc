@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3941 2025/06/15 13:42:04 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3942 2025/06/15 13:43:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5885,3 +5885,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/OmegaT to 6.0.1 [ryoon 2025-06-15]
 	Updated lang/openjdk8 to 1.8.452 [ryoon 2025-06-15]
 	Updated lang/openjdk11 to 1.11.0.27.6 [ryoon 2025-06-15]
+	Updated lang/openjdk17 to 1.17.0.15.6 [ryoon 2025-06-15]
