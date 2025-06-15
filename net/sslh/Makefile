@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/08/02 16:17:18 nia Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/15 14:46:20 wiz Exp $
 
-DISTNAME=	sslh-1.22c
+DISTNAME=	sslh-2.2.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yrutschle/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://www.rutschle.net/tech/sslh/README.html
 COMMENT=	Multiplex ssl, ssh, and other connections on the same port
 LICENSE=	gnu-gpl-v2
 
-# version.h created too late
-MAKE_JOBS_SAFE=	no
-
+GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake gzip pod2man
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
@@ -41,6 +39,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../devel/libconfig/buildlink3.mk"
+.include "../../devel/libev/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"

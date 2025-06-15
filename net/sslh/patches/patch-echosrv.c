@@ -1,4 +1,4 @@
-$NetBSD: patch-echosrv.c,v 1.2 2014/11/28 10:45:28 bsiegert Exp 
+$NetBSD: patch-echosrv.c,v 1.4 2025/06/15 14:46:20 wiz Exp $
 
 Provide allow_severity and deny_severity for libwrap.
 
