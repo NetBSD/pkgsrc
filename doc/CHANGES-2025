@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3927 2025/06/14 14:40:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3928 2025/06/15 06:36:41 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-s3 to 1.189.1 [taca 2025-06-14]
 	Updated www/ruby-sass-embedded to 1.89.0nb1 [taca 2025-06-14]
 	Updated lang/ruby-execjs to 2.10.0nb1 [taca 2025-06-14]
+	Updated devel/task to 3.44.0 [iquiw 2025-06-15]
