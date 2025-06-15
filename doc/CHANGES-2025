@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3929 2025/06/15 08:31:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.3930 2025/06/15 09:41:38 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic to 2.11.7 [adam 2025-06-15]
 	Updated security/py-certifi to 2025.6.15 [adam 2025-06-15]
 	Updated www/py-aiohttp to 3.12.13 [adam 2025-06-15]
+	Updated meta-pkgs/bulk-test-go to 20250615 [bsiegert 2025-06-15]
