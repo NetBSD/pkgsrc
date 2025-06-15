@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/06/13 01:43:42 gutteridge Exp $
+# $NetBSD: Makefile,v 1.11 2025/06/15 15:46:04 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,6 +12,9 @@ USE_TOOLS+=		pkg-config
 REPLACE_PYTHON+=	xdt-gen-visibility
 
 MESON_ARGS+=		-Dx11=enabled
+# Don't bother building tests as part of the general package. This causes build
+# failures on platforms with older GCC releases, e.g., NetBSD 9.x with GCC 7.5.
+MESON_ARGS+=		-Dtests=false
 
 PKGCONFIG_OVERRIDE+=	libxfce4windowing/libxfce4windowing-0.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4windowing/libxfce4windowing-x11-0.pc.in
