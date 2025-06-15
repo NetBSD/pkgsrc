@@ -1,0 +1,240 @@
+diff -ruN gcc-10.3.0.orig/libstdc++-v3/src/c++17/fs_ops.cc gcc-10.3.0/libstdc++-v3/src/c++17/fs_ops.cc
+--- gcc-10.3.0.orig/libstdc++-v3/src/c++17/fs_ops.cc	2021-04-08 14:56:30.405768885 +0300
++++ gcc-10.3.0/libstdc++-v3/src/c++17/fs_ops.cc	2021-04-09 00:18:12.582768492 +0300
+@@ -137,6 +137,8 @@
+ {
+ #ifdef _GLIBCXX_FILESYSTEM_IS_WINDOWS
+   inline bool is_dot(wchar_t c) { return c == L'.'; }
++#elif defined(__MORPHOS__) && defined(__libnix__)
++  inline bool is_dot(char c) { return c == '\0'; }
+ #else
+   inline bool is_dot(char c) { return c == '.'; }
+ #endif
+@@ -144,13 +146,21 @@
+   inline bool is_dot(const fs::path& path)
+   {
+     const auto& filename = path.native();
++#if defined(__MORPHOS__) && defined(__libnix__)
++    return filename.size() == 0;
++#else
+     return filename.size() == 1 && is_dot(filename[0]);
++#endif
+   }
+ 
+   inline bool is_dotdot(const fs::path& path)
+   {
+     const auto& filename = path.native();
++#if defined(__MORPHOS__) && defined(__libnix__)
++    return filename.size() == 1 && filename[0] == '/';
++#else
+     return filename.size() == 2 && is_dot(filename[0]) && is_dot(filename[1]);
++#endif
+   }
+ 
+   struct free_as_in_malloc
+diff -ruN gcc-10.3.0.orig/libstdc++-v3/src/c++17/fs_path.cc gcc-10.3.0/libstdc++-v3/src/c++17/fs_path.cc
+--- gcc-10.3.0.orig/libstdc++-v3/src/c++17/fs_path.cc	2021-04-08 14:56:30.405768885 +0300
++++ gcc-10.3.0/libstdc++-v3/src/c++17/fs_path.cc	2021-04-09 00:18:12.582768492 +0300
+@@ -80,6 +80,31 @@
+ 
+     const size_t len = input.size();
+ 
++#if defined(__MORPHOS__) && defined(__libnix__)
++    // look for root name (:)
++    if (input[0] == ':')
++      {
++         // got root directory
++         root.first.str = input.substr(0, 1);
++         root.first.type = _Type::_Root_dir;
++         ++pos;
++      }
++      // look for volume/device designator
++    else if (len > 1)
++      {
++        const auto despos = input.find_first_of(':', 1);
++        if (despos != input.npos)
++          {
++            // got volume/device designator
++            root.first.str = input.substr(0, despos);
++            root.first.type = _Type::_Root_name;
++
++            root.second.str = input.substr(despos, 1);
++            root.second.type = _Type::_Root_dir;
++            pos = despos + 1;
++          }
++      }
++#else
+     // look for root name or root directory
+     if (len && is_dir_sep(input[0]))
+       {
+@@ -137,6 +162,7 @@
+ 	pos = input.find_first_not_of(L"/\\", 2);
+       }
+ #endif
++#endif
+ 
+     if (root.second.valid())
+       last_type = root.second.type;
+@@ -159,6 +185,45 @@
+     cmpt f;
+     if (pos != input.npos)
+       {
++#if defined(__MORPHOS__) && defined(__libnix__)
++ 	// foo/bar////bleh
++	// =>
++	// 1. "foo" 2, "bar///" 3. "bleh"
++	pos = input.find_first_of(sep, pos);
++	if (pos != input.npos)
++	  {
++	    const auto end = input.find_first_not_of(sep, pos);
++	    if (end == input.npos)
++	      {
++		if (pos == last_pos)
++		  // "work:/[/...]" met, include these chars as is
++		  f.str = input.substr(last_pos, input.length() - last_pos);
++		else
++		  // Remove last / as the path ends to one
++		  f.str = input.substr(last_pos, input.length() - 1 - last_pos);
++	      }
++	    else
++	      {
++		if (pos == last_pos)
++		  // "work:/[/...]something" met, include these chars as is
++		  f.str = input.substr(last_pos, end - last_pos);
++		else
++		  f.str = input.substr(last_pos, end - 1 - last_pos);
++	      }
++	    f.type = _Type::_Filename;
++	    pos = end;
++	  }
++	else if (last_type == _Type::_Filename
++	    || last_type == _Type::_Root_dir
++	    || (last_pos == 0 && !input.empty()))
++	  {
++	      if (last_pos < input.length())
++	      {
++		f.str = input.substr(last_pos);
++		f.type = _Type::_Filename;
++	      }
++	  }
++#else
+ 	pos = input.find_first_not_of(sep, pos);
+ 	if (pos != input.npos)
+ 	  {
+@@ -176,6 +241,7 @@
+ 	    f.str = input.substr(input.length(), 0);
+ 	    f.type = _Type::_Filename;
+ 	  }
++#endif
+       }
+     last_type = f.type;
+     return f;
+@@ -935,9 +1001,11 @@
+ 	  ++it;
+ 	}
+     }
++#if !defined(__MORPHOS__) || !defined(__libnix__)
+   else if (is_dir_sep(_M_pathname.back()) && _M_type() == _Type::_Multi
+       && _M_cmpts.back()._M_type() == _Type::_Filename)
+     orig_filenamelen = 0; // current path has empty filename at end
++#endif
+ 
+   int capacity = 0;
+   if (_M_type() == _Type::_Multi)
+@@ -1653,6 +1721,21 @@
+ 
+ namespace
+ {
++#if defined(__MORPHOS__) && defined(__libnix__)
++  inline bool is_dot(fs::path::value_type c) { return c == '\0'; }
++
++  inline bool is_dot(const fs::path& path)
++  {
++    const auto& filename = path.native();
++    return filename.size() == 0;
++  }
++
++  inline bool is_dotdot(const fs::path& path)
++  {
++    const auto& filename = path.native();
++    return filename.size() == 1 && filename[0] == '/';
++  }
++#else
+   inline bool is_dot(fs::path::value_type c) { return c == dot; }
+ 
+   inline bool is_dot(const fs::path& path)
+@@ -1666,6 +1749,7 @@
+     const auto& filename = path.native();
+     return filename.size() == 2 && is_dot(filename[0]) && is_dot(filename[1]);
+   }
++#endif
+ } // namespace
+ 
+ path
+@@ -1759,6 +1843,7 @@
+ 	ret /= p;
+     }
+ 
++#if !defined(__MORPHOS__) || !defined(__libnix__)
+   if (ret._M_cmpts.size() >= 2)
+     {
+       auto back = std::prev(ret.end());
+@@ -1770,6 +1855,7 @@
+   // If the path is empty, add a dot.
+   else if (ret.empty())
+     ret = ".";
++#endif
+ 
+   return ret;
+ }
+@@ -1799,7 +1885,11 @@
+ 	return ret;
+ #endif
+   if (a == end() && b == base.end())
++#if defined(__MORPHOS__) && defined(__libnix__)
++    ret = "";
++#else
+     ret = ".";
++#endif
+   else
+   {
+     int n = 0;
+@@ -1812,10 +1902,18 @@
+ 	++n;
+     }
+     if (n == 0 && (a == end() || a->empty()))
++#if defined(__MORPHOS__) && defined(__libnix__)
++      ret = "";
++#else
+       ret = ".";
++#endif
+     else if (n >= 0)
+     {
++#if defined(__MORPHOS__) && defined(__libnix__)
++      const path dotdot("/");
++#else
+       const path dotdot("..");
++#endif
+       while (n--)
+ 	ret /= dotdot;
+       for (; a != end(); ++a)
+--- gcc-12.1.0/libstdc++-v3/src/filesystem/ops-common.h.orig	2022-05-06 10:31:00.000000000 +0300
++++ gcc-12.1.0/libstdc++-v3/src/filesystem/ops-common.h	2022-05-08 14:58:03.798844976 +0300
+@@ -635,6 +635,9 @@
+   get_temp_directory_from_env(error_code& ec) noexcept
+   {
+     ec.clear();
++#if defined(__MORPHOS__) && defined(__libnix__)
++    return "T:";
++#else
+     for (auto env : { "TMPDIR", "TMP", "TEMP", "TEMPDIR" })
+       {
+ #if _GLIBCXX_HAVE_SECURE_GETENV
+@@ -646,6 +649,7 @@
+ 	  return tmpdir;
+       }
+     return "/tmp";
++#endif
+   }
+ #endif
+ 

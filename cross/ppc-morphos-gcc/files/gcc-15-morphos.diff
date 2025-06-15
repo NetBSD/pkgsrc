@@ -1,0 +1,5639 @@
+diff -ruN gcc-15.1.0.orig/config/gthr.m4 gcc-15.1.0/config/gthr.m4
+--- gcc-15.1.0.orig/config/gthr.m4	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/config/gthr.m4	2025-04-25 15:58:40.260619802 +0300
+@@ -23,6 +23,7 @@
+     vxworks)	thread_header=config/gthr-vxworks.h ;;
+     win32)	thread_header=config/i386/gthr-win32.h ;;
+     mcf)	thread_header=config/i386/gthr-mcf.h ;;
++    morphos)	thread_header=config/rs6000/gthr-morphos.h ;;
+ esac
+ AC_SUBST(thread_header)
+ ])
+diff -ruN gcc-15.1.0.orig/config.rpath gcc-15.1.0/config.rpath
+--- gcc-15.1.0.orig/config.rpath	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/config.rpath	2025-04-25 15:58:40.260619802 +0300
+@@ -159,6 +159,9 @@
+         ld_shlibs=no
+       fi
+       ;;
++    morphos*)
++      ld_shlibs=no
++      ;;
+     netbsd*)
+       ;;
+     solaris* | sysv5*)
+diff -ruN gcc-15.1.0.orig/configure gcc-15.1.0/configure
+--- gcc-15.1.0.orig/configure	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/configure	2025-04-25 15:58:40.264619834 +0300
+@@ -4102,6 +4102,9 @@
+   powerpc-*-beos*)
+     noconfigdirs="$noconfigdirs gdb"
+     ;;
++  powerpc-*-morphos)
++    noconfigdirs="$noconfigdirs gprof target-libgloss target-libssp ${libgcj}"
++    ;;
+   rs6000-*-lynxos*)
+     noconfigdirs="$noconfigdirs gprof"
+     ;;
+diff -ruN gcc-15.1.0.orig/configure.ac gcc-15.1.0/configure.ac
+--- gcc-15.1.0.orig/configure.ac	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/configure.ac	2025-04-25 15:58:40.264619834 +0300
+@@ -1319,6 +1319,9 @@
+   powerpc-*-beos*)
+     noconfigdirs="$noconfigdirs gdb"
+     ;;
++  powerpc-*-morphos)
++    noconfigdirs="$noconfigdirs gprof target-libgloss target-libssp ${libgcj}"
++    ;;
+   rs6000-*-lynxos*)
+     noconfigdirs="$noconfigdirs gprof"
+     ;;
+diff -ruN gcc-15.1.0.orig/c++tools/resolver.cc gcc-15.1.0/c++tools/resolver.cc
+--- gcc-15.1.0.orig/c++tools/resolver.cc	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/c++tools/resolver.cc	2025-04-25 15:58:40.264619834 +0300
+@@ -41,7 +41,7 @@
+ #else
+ #ifdef HAVE_SYS_MMAN_H
+ #include <sys/mman.h>
+-#define MAPPED_READING 1
++#define MAPPED_READING 0
+ #else
+ #define MAPPED_READING 0
+ #endif
+diff -ruN gcc-15.1.0.orig/c++tools/server.cc gcc-15.1.0/c++tools/server.cc
+--- gcc-15.1.0.orig/c++tools/server.cc	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/c++tools/server.cc	2025-04-25 15:58:40.264619834 +0300
+@@ -39,7 +39,7 @@
+ // Network
+ /* Include network stuff first.  Excitingly OSX10.14 uses bcmp here, which
+    we poison later!  */
+-#if defined (HAVE_AF_UNIX) || defined (HAVE_AF_INET6)
++#if !defined(__MORPHOS__) && (defined (HAVE_AF_UNIX) || defined (HAVE_AF_INET6))
+ /* socket, bind, listen, accept{4}  */
+ # define NETWORKING 1
+ # include <sys/socket.h>
+diff -ruN gcc-15.1.0.orig/fixincludes/configure.ac gcc-15.1.0/fixincludes/configure.ac
+--- gcc-15.1.0.orig/fixincludes/configure.ac	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/fixincludes/configure.ac	2025-04-25 15:58:40.264619834 +0300
+@@ -53,6 +53,7 @@
+ 	i?86-*-mingw32* | \
+ 	x86_64-*-mingw32* | \
+ 	*-*-beos* | \
++	*-*-morphos* | \
+         *-*-*vms*)
+ 		TARGET=twoprocess
+ 		;;
+diff -ruN gcc-15.1.0.orig/fixincludes/fixlib.h gcc-15.1.0/fixincludes/fixlib.h
+--- gcc-15.1.0.orig/fixincludes/fixlib.h	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/fixincludes/fixlib.h	2025-04-25 15:58:40.264619834 +0300
+@@ -32,6 +32,10 @@
+ #include "xregex.h"
+ #include "libiberty.h"
+ 
++#ifdef __MORPHOS__
++#define fork vfork
++#endif
++
+ #ifndef STDIN_FILENO
+ # define STDIN_FILENO   0
+ #endif
+diff -ruN gcc-15.1.0.orig/fixincludes/Makefile.in gcc-15.1.0/fixincludes/Makefile.in
+--- gcc-15.1.0.orig/fixincludes/Makefile.in	2025-04-25 11:17:59.000000000 +0300
++++ gcc-15.1.0/fixincludes/Makefile.in	2025-04-25 15:58:40.264619834 +0300
+@@ -52,9 +52,9 @@
+ gcc_version := $(shell @get_gcc_base_ver@ $(srcdir)/../gcc/BASE-VER)
+ 
+ # Directory in which the compiler finds libraries etc.
+-libsubdir = $(libdir)/gcc/$(target_noncanonical)/$(gcc_version)
++libsubdir = $(libdir)/gcc-lib/$(target_noncanonical)/$(gcc_version)
+ # Directory in which the compiler finds executables
+-libexecsubdir = $(libexecdir)/gcc/$(target_noncanonical)/$(gcc_version)
++libexecsubdir = $(libexecdir)/gcc-lib/$(target_noncanonical)/$(gcc_version)
+ # Where our executable files go
+ itoolsdir = $(libexecsubdir)/install-tools
+ # Where our data files go
+diff -ruN gcc-15.1.0.orig/gcc/common/config/rs6000/rs6000-common.cc gcc-15.1.0/gcc/common/config/rs6000/rs6000-common.cc
+--- gcc-15.1.0.orig/gcc/common/config/rs6000/rs6000-common.cc	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/common/config/rs6000/rs6000-common.cc	2025-04-25 15:58:40.264619834 +0300
+@@ -27,6 +27,11 @@
+ #include "opts.h"
+ #include "flags.h"
+ 
++#ifdef TARGET_USES_MORPHOS_OPT
++/* mclib */
++const char *morphos_mclib_name = (char *)0;
++#endif
++
+ /* Implement TARGET_OPTION_OPTIMIZATION_TABLE.  */
+ static const struct default_options rs6000_option_optimization_table[] =
+   {
+@@ -231,7 +236,13 @@
+     case OPT_mrecip:
+       opts->x_rs6000_recip_name = (value) ? "default" : "none";
+       break;
+-    }
++
++	#ifdef TARGET_USES_MORPHOS_OPT
++		case OPT_mclib_:
++		  morphos_mclib_name = arg;
++		  break;
++	#endif
++	}
+   return true;
+ }
+ 
+diff -ruN gcc-15.1.0.orig/gcc/common.opt gcc-15.1.0/gcc/common.opt
+--- gcc-15.1.0.orig/gcc/common.opt	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/common.opt	2025-04-25 15:58:40.264619834 +0300
+@@ -1269,7 +1269,7 @@
+ Looks for opportunities to reduce stack adjustments and stack references.
+ 
+ fcommon
+-Common Var(flag_no_common,0) Init(1)
++Common Var(flag_no_common,0)
+ Put uninitialized globals in the common section.
+ 
+ fcompare-debug
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos.c gcc-15.1.0/gcc/config/rs6000/morphos.c
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos.c	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos.c	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,204 @@
++#include "config.h"
++#include "system.h"
++#include "coretypes.h"
++#include "tm.h"
++#include "rtl.h"
++#include "regs.h"
++#include "hard-reg-set.h"
++#include "insn-config.h"
++#include "conditions.h"
++#include "insn-flags.h"
++#include "output.h"
++#include "insn-attr.h"
++#include "flags.h"
++#include "hash-set.h"
++#include "machmode.h"
++#include "vec.h"
++#include "double-int.h"
++#include "input.h"
++#include "alias.h"
++#include "symtab.h"
++#include "wide-int.h"
++#include "inchash.h"
++#include "tree.h"
++#include "cgraph.h"
++#include "fold-const.h"
++#include "stringpool.h"
++#include "varasm.h"
++#include "stor-layout.h"
++#include "hashtab.h"
++#include "function.h"
++#include "statistics.h"
++#include "real.h"
++#include "fixed-value.h"
++#include "expmed.h"
++#include "dojump.h"
++#include "explow.h"
++#include "calls.h"
++//#include "emit-rtl.h"
++#include "stmt.h"
++#include "expr.h"
++#include "reload.h"
++#include "ggc.h"
++#include "langhooks.h"
++#include "target.h"
++#include "tm_p.h"
++#include "diagnostic-core.h"
++#include "toplev.h"
++#include "dominance.h"
++#include "cfg.h"
++#include "cfgrtl.h"
++#include "bitmap.h"
++#include "cfganal.h"
++#include "lcm.h"
++#include "cfgbuild.h"
++#include "cfgcleanup.h"
++#include "predict.h"
++#include "basic-block.h"
++#include "df.h"
++#include "debug.h"
++#include "obstack.h"
++#include "hash-table.h"
++#include "tree-ssa-alias.h"
++#include "internal-fn.h"
++#include "tree-eh.h"
++#include "gimple-expr.h"
++#include "is-a.h"
++#include "gimple.h"
++#include "gimplify.h"
++#include "gimple-iterator.h"
++#include "gimple-fold.h"
++#include "hash-map.h"
++#include "plugin-api.h"
++#include "ipa-ref.h"
++#include "cgraph.h"
++#include "lto-streamer.h"
++#include "lto-section-names.h"
++#include "rtl-iter.h"
++//#include "c-tree.h"
++#include "attribs.h"
++
++/* mclib */
++//const char *morphos_mclib_name = (char *)0;
++
++#ifdef __MORPHOS__
++#define STACKSIZE 2097152
++#define str(s) #s
++#define sstr(s) str(s)
++asm("\n"
++"        .section \".rodata\"\n"
++"        .align  2\n"
++"        .globl  __stack\n"
++"        .ascii  \"StCk\"\n"        /* Magic cookie */
++"__stack:\n"
++"        .long   " sstr(STACKSIZE) "\n"
++"        .ascii  \"sTcK\"\n"        /* Magic cookie */
++"        .section \".text\"\n"
++"        .align  2\n"
++);
++#endif
++
++/* mbaserel32 */
++rtx morphos_legitimize_baserel_address(rtx addr)
++{
++	rtx dest = gen_reg_rtx (Pmode);
++    
++	emit_insn (gen_elf_base_high (dest, gen_rtx_REG (Pmode, 13), addr));
++	emit_insn (gen_elf_base_low (dest, dest, addr));
++
++	return dest;
++}
++
++rtx morphos_legitimize_baserel_address_in_place(rtx addr, rtx dest)
++{
++	emit_insn (gen_elf_base_high (dest, gen_rtx_REG (Pmode, 13), addr));
++	emit_insn (gen_elf_base_low (dest, dest, addr));
++
++	return dest;
++}
++
++bool morphos_baserel_operand(rtx x)
++{
++   if (TARGET_BASEREL)
++	{
++		if (GET_CODE(x) == SYMBOL_REF)
++			return SYMBOL_REF_MORPHOS_BASEREL_P(x);
++		else if (GET_CODE(x) == CONST
++					&& GET_CODE(XEXP(x, 0)) == PLUS
++					&& GET_CODE(XEXP(XEXP(x, 0), 0)) == SYMBOL_REF
++					&& GET_CODE(XEXP(XEXP(x, 0), 1)) == CONST_INT)
++						return morphos_baserel_operand(XEXP(XEXP(x, 0), 0));
++		else if (GET_CODE(x) == LO_SUM)
++						return morphos_baserel_operand(XEXP(x, 1));
++	}
++
++	return false;
++}
++
++
++#if 0
++static int
++morphos_baserel_symbol_ref_1 (rtx *x, void *data ATTRIBUTE_UNUSED)
++{
++  return SYMBOL_REF_MORPHOS_BASEREL_P (*x);
++}
++
++
++bool morphos_baserel_referenced_p (rtx x)
++{
++  if (!TARGET_BASEREL)
++    return false;
++
++  return for_each_rtx (&x, &morphos_baserel_symbol_ref_1, 0);
++}
++#else
++bool morphos_baserel_referenced_p (rtx x)
++{
++	subrtx_iterator::array_type array;
++
++	if (!TARGET_BASEREL)
++	  return false;
++
++	FOR_EACH_SUBRTX (iter, array, x, NONCONST /* <= not sure about this one */)
++	{
++		if (SYMBOL_REF_MORPHOS_BASEREL_P(*iter))
++			return true;
++	}
++ 
++	return false;
++}
++#endif
++
++tree morphos_handle_saveds_attribute(tree *node, tree name, tree args ATTRIBUTE_UNUSED, int flags ATTRIBUTE_UNUSED, bool *no_add_attrs)
++{
++	if (TREE_CODE (*node) != FUNCTION_TYPE
++		&& TREE_CODE (*node) != FIELD_DECL
++		&& TREE_CODE (*node) != TYPE_DECL)
++	{
++		warning (OPT_Wattributes, "%qE attribute only applies to functions", name);
++		*no_add_attrs = true;
++	}
++
++  return NULL_TREE;
++}
++
++bool morphos_use_anchors_for_symbol_p (const_rtx symbol)
++{
++	if (TARGET_BASEREL && SYMBOL_REF_MORPHOS_BASEREL_P(symbol))
++		return false;
++	else
++		return default_use_anchors_for_symbol_p (symbol);
++}
++
++const char *morphos_check_pch_target_flags (int old_flags)
++{
++	if ((old_flags ^ target_flags) & MASK_BASEREL)
++		return "created and used with different setting -mbaserel32";
++	return NULL;
++}
++
++void morphos_rs6000_override_options (void)
++{
++	if (rs6000_default_long_calls)
++		global_options.x_TARGET_SCHED_PROLOG = 0;
++}
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos.h gcc-15.1.0/gcc/config/rs6000/morphos.h
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos.h	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos.h	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,322 @@
++#undef  MD_EXEC_PREFIX
++#undef  MD_STARTFILE_PREFIX
++
++#undef  PROCESSOR_DEFAULT
++#define PROCESSOR_DEFAULT PROCESSOR_PPC604e
++
++#undef  DEFAULT_ABI
++#define DEFAULT_ABI ABI_V4
++
++#undef  TARGET_DEFAULT
++#define TARGET_DEFAULT 0
++
++/* Put jump tables in .text to save some relocations */
++#undef  JUMP_TABLES_IN_TEXT_SECTION
++#define JUMP_TABLES_IN_TEXT_SECTION 1
++
++#undef EH_FRAME_THROUGH_COLLECT2
++#define EH_FRAME_THROUGH_COLLECT2 1
++
++/* We don't care about compatibility in this case as ABI from 2.95.x is not compatible anyway */
++#undef  DEFAULT_VTABLE_THUNKS
++#define DEFAULT_VTABLE_THUNKS 1
++
++/* Use same method of struct return as our 2.95.x */
++#undef  DEFAULT_PCC_STRUCT_RETURN
++#define DEFAULT_PCC_STRUCT_RETURN 1
++
++#undef DWARF2_DEBUGGING_INFO
++#define DWARF2_DEBUGGING_INFO 1
++
++#undef PREFERRED_DEBUGGING_TYPE
++#define PREFERRED_DEBUGGING_TYPE DWARF2_DEBUG
++
++#undef DWARF2_UNWIND_INFO
++#define DWARF2_UNWIND_INFO 1
++
++#ifdef TARGET_BASEREL
++#undef USE_TM_CLONE_REGISTRY
++#define USE_TM_CLONE_REGISTRY 0
++#endif
++
++#undef  WCHAR_TYPE
++#define WCHAR_TYPE "int"
++
++#undef  WCHAR_TYPE_SIZE
++#define WCHAR_TYPE_SIZE 32
++
++
++#define IS_MCLIB(__MCL__) \
++  (strcmp(morphos_mclib_name, __MCL__) == 0)
++
++#undef TARGET_OS_CPP_BUILTINS
++#define TARGET_OS_CPP_BUILTINS()                \
++  do                                            \
++    {                                           \
++      builtin_define_std ("__PPC__");           \
++      builtin_define_std ("__powerpc__");       \
++      builtin_define_std ("__MORPHOS__");       \
++      builtin_define_std ("__morphos__");       \
++      builtin_define_std ("AMIGA");             \
++      builtin_define_std ("_AMIGA");            \
++      builtin_define_std ("amigaos");           \
++      builtin_define_std ("__amigaos__");       \
++      builtin_assert ("cpu=powerpc");           \
++      builtin_assert ("machine=powerpc");       \
++      builtin_assert ("system=morphos");        \
++      if ( !morphos_mclib_name || IS_MCLIB("ixemul")) \
++        {                                       \
++          builtin_define_std ("ixemul");        \
++         builtin_define_std ("__ixemul");      \
++          builtin_define_std ("__ixemul__");    \
++        }                                       \
++      else if (IS_MCLIB("libnix"))              \
++        {                                       \
++          builtin_define_std ("libnix");        \
++          builtin_define_std ("__libnix");      \
++          builtin_define_std ("__libnix__");    \
++        }                                       \
++      else if (IS_MCLIB("newlib"))              \
++        {                                       \
++          builtin_define_std ("newlib");        \
++          builtin_define_std ("__newlib");      \
++         builtin_define_std ("__newlib__");    \
++        }                                       \
++     builtin_define ("__saveds=__attribute__((__saveds__))");    \
++      TARGET_OS_SYSV_CPP_BUILTINS ();           \
++    }                                           \
++  while (0)
++
++//void morphos_rs6000_override_options (void);
++//#undef SUBTARGET_OVERRIDE_OPTIONS
++//#define SUBTARGET_OVERRIDE_OPTIONS morphos_rs6000_override_options ()
++
++#undef  CPP_SPEC
++#define CPP_SPEC "%{posix: -D_POSIX_SOURCE} %{pthread: -D_REENTRANT} %(cpp_os_default)"
++
++#undef CC1_SPEC
++#define        CC1_SPEC "%{G*} %(cc1_cpu)" \
++"%{g: %{!fno-eliminate-unused-debug-symbols: -feliminate-unused-debug-symbols}} \
++%{g1: %{!fno-eliminate-unused-debug-symbols: -feliminate-unused-debug-symbols}} \
++%{msdata: -msdata=default} \
++%{mno-sdata: -msdata=none} \
++%{!mbss-plt: %{!msecure-plt: %(cc1_secure_plt_default)}} \
++%{profile: -p} \
++%{faltivec:-maltivec -include altivec.h} %{fno-altivec:-mno-altivec} \
++%<faltivec %<fno-altivec \
++%{vec:-maltivec -include altivec.h} %{fno-vec:-mno-altivec} \
++%<fvec %<fno-vec "
++
++#undef  NATIVE_SYSTEM_HEADER_DIR
++//#define NATIVE_SYSTEM_HEADER_DIR     "/include"
++
++#undef  LOCAL_INCLUDE_DIR
++#define LOCAL_INCLUDE_DIR        "/usr/include"
++
++#undef  OSINCLUDE_DIR
++#define OSINCLUDE_DIR       "/os-include"
++
++#define SUB3TARGET_OVERRIDE_OPTIONS  \
++do                                   \
++{                                    \
++  if (TARGET_ALTIVEC)                \
++  {                                  \
++    rs6000_altivec_abi = 1;          \
++    TARGET_ALTIVEC_VRSAVE = 1;       \
++  }                                  \
++  if (TARGET_RESIDENT)               \
++  {                                  \
++    target_flags |= MASK_BASEREL;    \
++  }                                  \
++} while(0)
++
++/* We can't use 'bl' from .init/.fini to .text, so use a trampoline. */
++#define CRT_CALL_STATIC_FUNCTION(SECTION_OP, FUNC) \
++static void __attribute__((__used__))              \
++call_ ## FUNC (void) {                             \
++  asm(SECTION_OP "\n"                              \
++      "lis 11," #FUNC "@ha\n"                      \
++      "addi 11,11," #FUNC "@l\n"                   \
++      "mtctr 11\n"                                 \
++      "bctrl\n"                                    \
++      TEXT_SECTION_ASM_OP); }
++
++#undef ASM_OUTPUT_ALIGNED_DECL_LOCAL
++#define        ASM_OUTPUT_ALIGNED_DECL_LOCAL(FILE, DECL, NAME, SIZE, ALIGN)    \
++do {                                                                   \
++  if ((TARGET_BASEREL) && (DECL) && TREE_READONLY (DECL)) \
++    { \
++      switch_to_section (readonly_data_section); \
++      ASM_OUTPUT_ALIGN (FILE, exact_log2 (ALIGN / BITS_PER_UNIT));     \
++      ASM_OUTPUT_LABEL (FILE, NAME);                                   \
++      ASM_OUTPUT_SKIP (FILE, SIZE);                                    \
++      if (!flag_inhibit_size_directive && (SIZE) > 0)                  \
++       ASM_OUTPUT_SIZE_DIRECTIVE (FILE, NAME, SIZE);                   \
++    } \
++  else if ((DECL) && rs6000_elf_in_small_data_p (DECL))                        \
++    {                                                                  \
++      switch_to_section (sbss_section);                                        \
++      ASM_OUTPUT_ALIGN (FILE, exact_log2 (ALIGN / BITS_PER_UNIT));     \
++      ASM_OUTPUT_LABEL (FILE, NAME);                                   \
++      ASM_OUTPUT_SKIP (FILE, SIZE);                                    \
++      if (!flag_inhibit_size_directive && (SIZE) > 0)                  \
++       ASM_OUTPUT_SIZE_DIRECTIVE (FILE, NAME, SIZE);                   \
++    }                                                                  \
++  else                                                                 \
++    {                                                                  \
++      fprintf (FILE, "%s", LCOMM_ASM_OP);                              \
++      assemble_name ((FILE), (NAME));                                  \
++      fprintf ((FILE), "," HOST_WIDE_INT_PRINT_UNSIGNED ",%u\n",         \
++              (SIZE), (ALIGN) / BITS_PER_UNIT);                        \
++    }                                                                  \
++  ASM_OUTPUT_TYPE_DIRECTIVE (FILE, NAME, "object");                    \
++} while (0)
++
++#undef ASM_OUTPUT_ALIGNED_BSS
++#define ASM_OUTPUT_ALIGNED_BSS(FILE, DECL, NAME, SIZE, ALIGN)          \
++do {                                                                   \
++  ASM_OUTPUT_ALIGNED_DECL_LOCAL (FILE, DECL, NAME, SIZE, ALIGN);       \
++} while (0)
++
++#undef  ASM_OUTPUT_ALIGNED_DECL_COMMON
++#define ASM_OUTPUT_ALIGNED_DECL_COMMON(FILE, DECL, NAME, SIZE, ALIGN)          \
++  do                                                                   \
++    {                                                                  \
++      if((TARGET_BASEREL) && (DECL) && TREE_READONLY (DECL)) \
++        fprintf ((FILE), "%s", READONLY_DATA_SECTION_ASM_OP );                         \
++      else \
++        fprintf ((FILE), "%s", COMMON_ASM_OP);                         \
++      assemble_name ((FILE), (NAME));                                  \
++      fprintf ((FILE), "," HOST_WIDE_INT_PRINT_UNSIGNED ",%u\n",         \
++              (SIZE), (ALIGN) / BITS_PER_UNIT);                        \
++    }                                                                  \
++  while (0)
++
++/* C library */
++#define CPP_MORPHOS_DEFAULT_SPEC       "%{mclib=default|!mclib=*:%<mclib=default -mclib=ixemul} %(cpp_ixemul)"
++#define LINK_MORPHOS_DEFAULT_SPEC      "%(link_ixemul)"
++#define STARTFILE_MORPHOS_DEFAULT_SPEC "%(startfile_ixemul)"
++#define ENDFILE_MORPHOS_DEFAULT_SPEC   "%(endfile_ixemul)"
++
++/* ... ixemul */
++#define CPP_IXEMUL_SPEC       "-idirafter /gg/include"
++#define LINK_IXEMUL_SPEC      "--flavor=ixemul"
++#define STARTFILE_IXEMUL_SPEC "%{mbaserel32:%{!mresident32:lcrt0i.o%s}} %{mresident32:scrt0i.o%s} %{!mresident32:%{!mbaserel32:crt0i.o%s}} ecrti.o%s crtbegin.o%s"
++#define ENDFILE_IXEMUL_SPEC   "crtend.o%s ecrtn.o%s"
++
++/* ... libnix */
++#define CPP_LIBNIX_SPEC       "-idirafter /gg/includestd -idirafter /gg/include"
++#define LINK_LIBNIX_SPEC      "--flavor=libnix"
++#define STARTFILE_LIBNIX_SPEC "%{mbaserel32:%{!mresident32:libnix/lcrt0i.o%s}} %{mresident32:libnix/scrt0i.o%s} %{!mresident32:%{!mbaserel32:libnix/crt0i.o%s}} ecrti.o%s crtbegin.o%s"
++#define ENDFILE_LIBNIX_SPEC   "crtend.o%s ecrtn.o%s"
++
++/* ... newlib */
++#define CPP_NEWLIB_SPEC       "-isystem /gg/include-newlib -isystem /gg/includenl -isystem /gg/usr/include-newlib"
++#define LINK_NEWLIB_SPEC      "--flavor=newlib"
++#define STARTFILE_NEWLIB_SPEC "%{mbaserel32:%{!mresident32:newlib/lcrt0i.o%s}} %{mresident32:newlib/scrt0i.o%s} %{!mresident32:%{!mbaserel32:newlib/crt0i.o%s}} ecrti.o%s crtbegin.o%s"
++#define ENDFILE_NEWLIB_SPEC   "crtend.o%s ecrtn.o%s"
++
++/* ... general */
++#undef  CPP_OS_DEFAULT_SPEC
++#define CPP_OS_DEFAULT_SPEC " \
++%{mbaserel32: %{msdata|msdata=default|msdata=sysv: %e-mbaserel32 and -msdata are not compatible}} \
++%{mclib=ixemul: %(cpp_ixemul); \
++mclib=libnix: %(cpp_libnix); \
++mclib=newlib: %(cpp_newlib); \
++mclib=default|!mclib=*: %{mclib=default|!nostdinc: %(cpp_morphos_default)}; \
++: %eInvalid mclib}"
++
++
++#undef LINK_SPEC
++#define LINK_SPEC "\
++--defsym __abox__=1 -Bstatic \
++%{h*} %{v:-V} %{G*} \
++%{Wl,*:%*} %{YP,*} %{R*} \
++%{Qy:} %{!Qn:-Qy} \
++%{mbaserel32: %{msdata|msdata=default|msdata=sysv: %e-mbaserel32 and -msdata are not compatible}} \
++%{mbaserel32: %{!mresident32:-m morphos_baserel --flavor=libb32}} %{mresident32:-m morphos_baserel --datadata-reloc --flavor=libb32} \
++%{mclib=ixemul: %(link_ixemul); \
++mclib=libnix: %(link_libnix); \
++mclib=newlib: %(link_newlib); \
++mclib=default|!mclib=*: %(link_morphos_default); \
++: %eInvalid mclib}"
++
++#undef STARTFILE_SPEC
++#define STARTFILE_SPEC "\
++%{mclib=ixemul: %(startfile_ixemul); \
++mclib=libnix: %(startfile_libnix); \
++mclib=newlib: %(startfile_newlib); \
++mclib=default|!mclib=*: %(startfile_morphos_default); \
++: %eInvalid mclib}"
++
++#undef ENDFILE_SPEC
++#define ENDFILE_SPEC "\
++%{mclib=ixemul: %(endfile_ixemul); \
++mclib=libnix: %(endfile_libnix); \
++mclib=newlib: %(endfile_newlib); \
++mclib=default|!mclib=*: %(endfile_morphos_default); \
++: %eInvalid mclib}"
++
++
++#undef LIB_SPEC
++#define LIB_SPEC "%{!nostdlib: -L/gg/lib -L/gg/usr/lib} --start-group -lc -labox -laboxstubs -lsavl -latomic %{mclib=libnix: -lauto} %{pthread:-lpthread} --end-group"
++
++#undef SUBTARGET_EXTRA_SPECS
++#define SUBTARGET_EXTRA_SPECS \
++  {"cpp_os_default", CPP_OS_DEFAULT_SPEC}, \
++  /* default C runtime */ \
++  {"cpp_morphos_default", CPP_MORPHOS_DEFAULT_SPEC}, \
++  {"link_morphos_default", LINK_MORPHOS_DEFAULT_SPEC}, \
++  {"startfile_morphos_default", STARTFILE_MORPHOS_DEFAULT_SPEC}, \
++  {"endfile_morphos_default", ENDFILE_MORPHOS_DEFAULT_SPEC}, \
++  /* ixemul */ \
++  {"cpp_ixemul", CPP_IXEMUL_SPEC}, \
++  {"link_ixemul", LINK_IXEMUL_SPEC}, \
++  {"startfile_ixemul", STARTFILE_IXEMUL_SPEC}, \
++  {"endfile_ixemul", ENDFILE_IXEMUL_SPEC}, \
++  /* libnix */ \
++  {"cpp_libnix", CPP_LIBNIX_SPEC}, \
++  {"link_libnix", LINK_LIBNIX_SPEC}, \
++  {"startfile_libnix", STARTFILE_LIBNIX_SPEC}, \
++  {"endfile_libnix", ENDFILE_LIBNIX_SPEC}, \
++  /* newlib */ \
++  {"cpp_newlib", CPP_NEWLIB_SPEC}, \
++  {"link_newlib", LINK_NEWLIB_SPEC}, \
++  {"startfile_newlib", STARTFILE_NEWLIB_SPEC}, \
++  {"endfile_newlib", ENDFILE_NEWLIB_SPEC},
++
++/* MorphOS specific attributes */
++#if 1
++#define SUBTARGET_ATTRIBUTE_TABLE \
++  { "saveds", 0, 0, false, true, true, false, morphos_handle_saveds_attribute, NULL }
++
++
++/* Data-Data reloc name */
++#define DATA_DATA_RELOC "drel"
++
++/* MorphOS symbol-ref flags */
++#define SYMBOL_FLAG_MORPHOS_BASEREL (SYMBOL_FLAG_MACH_DEP << 0)
++#define SYMBOL_REF_MORPHOS_BASEREL_P(RTX) \
++  (GET_CODE (RTX) == SYMBOL_REF && ((SYMBOL_REF_FLAGS (RTX) & SYMBOL_FLAG_MORPHOS_BASEREL) != 0))
++
++
++/* Do not try to mix normal/baserel32 pch files */
++#undef TARGET_CHECK_PCH_TARGET_FLAGS
++#define TARGET_CHECK_PCH_TARGET_FLAGS morphos_check_pch_target_flags
++
++/* Do not use anchors for brel ref objects */
++#undef TARGET_USE_ANCHORS_FOR_SYMBOL_P
++#define TARGET_USE_ANCHORS_FOR_SYMBOL_P morphos_use_anchors_for_symbol_p
++#endif
++
++/* We always use gas */
++#undef TARGET_GAS
++#define TARGET_GAS 1
++
++/* Override TLS support to false */
++#undef HAVE_AS_TLS
++#define HAVE_AS_TLS 0
++
++/* Use morphos.opt */
++extern const char *morphos_mclib_name;
++#define TARGET_USES_MORPHOS_OPT 1
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos.opt gcc-15.1.0/gcc/config/rs6000/morphos.opt
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos.opt	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos.opt	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,28 @@
++;
++
++mclib=
++Target RejectNegative Joined
++Select C library to use
++
++mbaserel32
++Target RejectNegative Mask(BASEREL)
++Generate 32-bits relative data access
++
++mresident32
++Target Var(TARGET_RESIDENT)
++Generate reentrant executable
++
++noixemul
++Target RejectNegative Alias(mclib=, libnix)
++
++faltivec
++Driver
++
++fvec
++Driver
++
++Waltivec-long-deprecated
++Driver Alias(mwarn-altivec-long)
++
++pthread
++Driver
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos.opt.urls gcc-15.1.0/gcc/config/rs6000/morphos.opt.urls
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos.opt.urls	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos.opt.urls	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,4 @@
++; Autogenerated by regenerate-opt-urls.py from gcc/config/rs6000/morphos.opt and generated HTML
++
++; skipping UrlSuffix for 'mcmodel=' due to finding no URLs
++
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos-protos.h gcc-15.1.0/gcc/config/rs6000/morphos-protos.h
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos-protos.h	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos-protos.h	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,21 @@
++#ifndef GCC_MORPHOS_PROTOS_H
++#define GCC_MORPHOS_PROTOS_H
++
++extern const char *morphos_check_pch_target_flags (int old_flags);
++
++#ifdef RTX_CODE
++
++extern rtx morphos_legitimize_baserel_address(rtx);
++extern rtx morphos_legitimize_baserel_address_in_place(rtx, rtx);
++extern bool morphos_baserel_operand(rtx);
++extern bool morphos_baserel_referenced_p (rtx);
++extern bool morphos_use_anchors_for_symbol_p (const_rtx);
++
++#ifdef TREE_CODE
++extern int morphos_not_baserel_tree_p(tree);
++extern tree morphos_handle_saveds_attribute (tree *, tree, tree, int, bool*);
++#endif /* TREE_CODE */
++
++#endif /* RTX_CODE */
++
++#endif /* GCC_MORPHOS_PROTOS_H */
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/morphos-stdint.h gcc-15.1.0/gcc/config/rs6000/morphos-stdint.h
+--- gcc-15.1.0.orig/gcc/config/rs6000/morphos-stdint.h	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/morphos-stdint.h	2025-04-25 15:58:40.264619834 +0300
+@@ -0,0 +1,51 @@
++/* Definitions for <stdint.h> types on systems using AIX.
++   Copyright (C) 2009-2018 Free Software Foundation, Inc.
++
++This file is part of GCC.
++
++GCC is free software; you can redistribute it and/or modify
++it under the terms of the GNU General Public License as published by
++the Free Software Foundation; either version 3, or (at your option)
++any later version.
++
++GCC is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License for more details.
++
++You should have received a copy of the GNU General Public License
++along with GCC; see the file COPYING3.  If not see
++<http://www.gnu.org/licenses/>.  */
++
++#define SIG_ATOMIC_TYPE "int"
++
++#define INT8_TYPE "signed char"
++#define INT16_TYPE "short int"
++#define INT32_TYPE "int"
++#define INT64_TYPE (LONG_TYPE_SIZE == 64 ? "long int" : "long long int")
++#define UINT8_TYPE "unsigned char"
++#define UINT16_TYPE "short unsigned int"
++#define UINT32_TYPE "unsigned int"
++#define UINT64_TYPE (LONG_TYPE_SIZE == 64 ? "long unsigned int" : "long long unsigned int")
++
++#define INT_LEAST8_TYPE "signed char"
++#define INT_LEAST16_TYPE "short int"
++#define INT_LEAST32_TYPE "int"
++#define INT_LEAST64_TYPE (LONG_TYPE_SIZE == 64 ? "long int" : "long long int")
++#define UINT_LEAST8_TYPE "unsigned char"
++#define UINT_LEAST16_TYPE "short unsigned int"
++#define UINT_LEAST32_TYPE "unsigned int"
++#define UINT_LEAST64_TYPE (LONG_TYPE_SIZE == 64 ? "long unsigned int" : "long long unsigned int")
++
++#define INT_FAST8_TYPE "signed char"
++#define INT_FAST16_TYPE "short int"
++#define INT_FAST32_TYPE "int"
++#define INT_FAST64_TYPE (LONG_TYPE_SIZE == 64 ? "long int" : "long long int")
++#define UINT_FAST8_TYPE "unsigned char"
++#define UINT_FAST16_TYPE "short unsigned int"
++#define UINT_FAST32_TYPE "unsigned int"
++#define UINT_FAST64_TYPE (LONG_TYPE_SIZE == 64 ? "long unsigned int" : "long long unsigned int")
++
++#define INTPTR_TYPE "long int"
++#define UINTPTR_TYPE "long unsigned int"
++
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/rs6000.cc gcc-15.1.0/gcc/config/rs6000/rs6000.cc
+--- gcc-15.1.0.orig/gcc/config/rs6000/rs6000.cc	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config/rs6000/rs6000.cc	2025-06-10 09:18:42.000241751 +0300
+@@ -1366,7 +1366,11 @@
+ #define TARGET_HAVE_TLS HAVE_AS_TLS
+ 
+ #undef TARGET_CANNOT_FORCE_CONST_MEM
++#ifdef TARGET_BASEREL
++#define TARGET_CANNOT_FORCE_CONST_MEM rs6000_cannot_force_const_mem_baserel
++#else
+ #define TARGET_CANNOT_FORCE_CONST_MEM rs6000_cannot_force_const_mem
++#endif
+ 
+ #undef TARGET_DELEGITIMIZE_ADDRESS
+ #define TARGET_DELEGITIMIZE_ADDRESS rs6000_delegitimize_address
+@@ -8247,6 +8251,11 @@
+ #if TARGET_ELF
+   rtx sym_ref;
+ 
++#ifdef TARGET_BASEREL
++  if (TARGET_BASEREL)
++    return 0;
++#endif
++
+   if (rs6000_sdata == SDATA_NONE || rs6000_sdata == SDATA_DATA)
+     return 0;
+ 
+@@ -9169,6 +9178,14 @@
+ 	return rs6000_legitimize_tls_address (x, model);
+     }
+ 
++#ifdef TARGET_BASEREL
++  if (TARGET_BASEREL &&
++      morphos_baserel_operand(x))
++    {
++      return morphos_legitimize_baserel_address(x);
++    }
++#endif
++
+   extra = 0;
+   switch (mode)
+     {
+@@ -9839,6 +9856,14 @@
+   return TARGET_ELF && tls_referenced_p (x);
+ }
+ 
++#ifdef TARGET_BASEREL
++static bool
++rs6000_cannot_force_const_mem_baserel (machine_mode mode ATTRIBUTE_UNUSED, rtx x)
++{
++  return rs6000_cannot_force_const_mem((machine_mode)0, x) || morphos_baserel_referenced_p(x);
++}
++#endif
++
+ /* Return true iff the given SYMBOL_REF refers to a constant pool entry
+    that we have put in the TOC, or for cmodel=medium, if the SYMBOL_REF
+    can be addressed relative to the toc pointer.  */
+@@ -11032,6 +11057,25 @@
+       operands[1] = tmp;
+     }
+ 
++#ifdef TARGET_BASEREL
++  if (TARGET_BASEREL &&
++      morphos_baserel_operand (operands[1]))
++    {
++      if (can_create_pseudo_p())
++      {
++        operands[1] = morphos_legitimize_baserel_address (operands[1]);
++      }
++      else if (GET_CODE(operands[0]) == REG)
++      {
++        operands[1] = morphos_legitimize_baserel_address_in_place (operands[1], operands[0]);
++      }
++      else
++      {
++        gcc_assert(0);
++      }
++    }
++#endif
++
+   /* 128-bit constant floating-point values on Darwin should really be loaded
+      as two parts.  However, this premature splitting is a problem when DFmode
+      values can go into Altivec registers.  */
+@@ -11291,7 +11335,15 @@
+ 					target, operands[1]));
+ 	      return;
+ 	    }
+-
++#ifdef TARGET_BASEREL
++	  if (TARGET_BASEREL &&
++         morphos_baserel_operand(operands[1]))
++	    {
++         emit_insn (gen_elf_base_high (target, gen_rtx_REG (Pmode, 13), operands[1]));
++         emit_insn (gen_elf_base_low (operands[0], target, operands[1]));
++         return;
++       }
++#endif
+ 	  emit_insn (gen_elf_high (target, operands[1]));
+ 	  emit_insn (gen_elf_low (operands[0], target, operands[1]));
+ 	  return;
+@@ -14277,6 +14329,11 @@
+ 							   UNITS_PER_WORD),
+ 				  0));
+ 
++#ifdef TARGET_BASEREL
++	   if (TARGET_BASEREL && morphos_baserel_operand(x))
++        fprintf (file, "@%s", DATA_DATA_RELOC);
++      else
++#endif
+ 	  if (small_data_operand (x, GET_MODE (x)))
+ 	    fprintf (file, "@%s(%s)", SMALL_DATA_RELOC,
+ 		     reg_names[SMALL_DATA_REG]);
+@@ -14533,6 +14590,11 @@
+ 						 XEXP (XEXP (x, 0), 0), 8));
+ 	  else
+ 	    output_address (mode, XEXP (adjust_address_nv (x, SImode, 8), 0));
++#ifdef TARGET_BASEREL
++	   if (TARGET_BASEREL && morphos_baserel_operand(x))
++        fprintf (file, "@%s", DATA_DATA_RELOC);
++      else
++#endif
+ 	  if (small_data_operand (x, GET_MODE (x)))
+ 	    fprintf (file, "@%s(%s)", SMALL_DATA_RELOC,
+ 		     reg_names[SMALL_DATA_REG]);
+@@ -14587,6 +14649,11 @@
+ 						 XEXP (XEXP (x, 0), 0), 12));
+ 	  else
+ 	    output_address (mode, XEXP (adjust_address_nv (x, SImode, 12), 0));
++#ifdef TARGET_BASEREL
++	   if (TARGET_BASEREL && morphos_baserel_operand(x))
++        fprintf (file, "@%s", DATA_DATA_RELOC);
++      else
++#endif
+ 	  if (small_data_operand (x, GET_MODE (x)))
+ 	    fprintf (file, "@%s(%s)", SMALL_DATA_RELOC,
+ 		     reg_names[SMALL_DATA_REG]);
+@@ -14718,6 +14785,11 @@
+ 	   || GET_CODE (x) == LABEL_REF)
+     {
+       output_addr_const (file, x);
++#ifdef TARGET_BASEREL
++	   if (TARGET_BASEREL && morphos_baserel_operand(x))
++        fprintf (file, "@%s", DATA_DATA_RELOC);
++      else
++#endif
+       if (small_data_operand (x, GET_MODE (x)))
+ 	fprintf (file, "@%s(%s)", SMALL_DATA_RELOC,
+ 		 reg_names[SMALL_DATA_REG]);
+@@ -14757,6 +14829,11 @@
+ 	   && CONSTANT_P (XEXP (x, 1)))
+     {
+       output_addr_const (file, XEXP (x, 1));
++#ifdef TARGET_BASEREL
++	   if (TARGET_BASEREL && morphos_baserel_operand(x))
++	      fprintf (file, "@%s@l(%s)", DATA_DATA_RELOC, reg_names[ REGNO (XEXP (x, 0)) ]);
++	   else
++#endif
+       fprintf (file, "@l(%s)", reg_names[ REGNO (XEXP (x, 0)) ]);
+     }
+ #endif
+@@ -14881,6 +14958,22 @@
+   return default_assemble_integer (x, size, aligned_p);
+ }
+ 
++#ifdef TARGET_USES_MORPHOS_OPT
++
++/* Implement `TARGET_ADDR_SPACE_ZERO_ADDRESS_VALID'. Fixes loading
++   SysBase from address 4. */
++
++static bool
++rs6000_addr_space_zero_address_valid (addr_space_t)
++{
++  return true;
++}
++
++#undef  TARGET_ADDR_SPACE_ZERO_ADDRESS_VALID
++#define TARGET_ADDR_SPACE_ZERO_ADDRESS_VALID rs6000_addr_space_zero_address_valid
++
++#endif /* TARGET_USES_MORPHOS_OPT */
++
+ /* Return a template string for assembly to emit when making an
+    external call.  FUNOP is the call mem argument operand number.  */
+ 
+@@ -20843,6 +20936,10 @@
+     return default_elf_select_rtx_section (mode, x, align);
+ }
+ 
++
++static int
++rs6000_elf_reloc_rw_mask (void);
++
+ /* For a SYMBOL_REF, set generic flags and then perform some
+    target-specific processing.
+ 
+@@ -20869,6 +20966,36 @@
+       memcpy (str + 1, XSTR (sym_ref, 0), len + 1);
+       XSTR (sym_ref, 0) = ggc_alloc_string (str, len + 1);
+     }
++
++#ifdef TARGET_BASEREL
++  if (TARGET_BASEREL)
++    {
++      rtx symbol = XEXP (rtl, 0);
++
++      if(TREE_CODE (decl) == VAR_DECL &&
++			!TREE_READONLY(decl) &&
++			GET_CODE (symbol) == SYMBOL_REF)
++        {
++          const char *name = DECL_SECTION_NAME (decl);
++          if (name == NULL || (strncmp(name, ".ctors", 6) != 0 && strncmp(name, ".dtors", 6) != 0))
++            {
++              switch (categorize_decl_for_section (decl, rs6000_elf_reloc_rw_mask()))
++                {
++                  case SECCAT_DATA:
++                  case SECCAT_SDATA:
++                  case SECCAT_TDATA:
++                  case SECCAT_BSS:
++                  case SECCAT_SBSS:
++                  case SECCAT_TBSS:
++                    SYMBOL_REF_FLAGS (symbol) |= SYMBOL_FLAG_MORPHOS_BASEREL;
++                    break;
++                  default:
++                    break;
++                }
++            }
++        }
++    }
++#endif
+ }
+ 
+ static inline bool
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/rs6000-internal.h gcc-15.1.0/gcc/config/rs6000/rs6000-internal.h
+--- gcc-15.1.0.orig/gcc/config/rs6000/rs6000-internal.h	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config/rs6000/rs6000-internal.h	2025-04-25 15:58:40.268619866 +0300
+@@ -62,6 +62,11 @@
+   int altivec_padding_size;	/* size of altivec alignment padding */
+   HOST_WIDE_INT total_size;	/* total bytes allocated for stack */
+   int savres_strategy;
++#ifdef TARGET_BASEREL
++  int baserel_save_p;		/* true if the baserel register needs to be saved */
++  int baserel_save_offset;	/* offset to save baserel register */
++  int baserel_size;		/* size of saved baserel register */
++#endif
+ } rs6000_stack_t;
+ 
+ 
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/rs6000-logue.cc gcc-15.1.0/gcc/config/rs6000/rs6000-logue.cc
+--- gcc-15.1.0.orig/gcc/config/rs6000/rs6000-logue.cc	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config/rs6000/rs6000-logue.cc	2025-04-25 15:58:40.268619866 +0300
+@@ -722,6 +722,18 @@
+       && info->calls_p)
+     info->rop_hash_size = 8;
+ 
++#ifdef TARGET_BASEREL
++  if (TARGET_BASEREL
++       && current_function_decl
++       && lookup_attribute ("saveds", TYPE_ATTRIBUTES (TREE_TYPE (current_function_decl))))
++  {
++    info->baserel_save_p = 1;
++    info->baserel_size = reg_size;
++    info->calls_p = 1;
++    df_set_regs_ever_live (13, true);
++  }
++#endif /* TARGET_BASEREL */
++
+   /* Determine if we need to save the condition code registers.  */
+   if (save_reg_p (CR2_REGNO)
+       || save_reg_p (CR3_REGNO)
+@@ -829,7 +841,12 @@
+     case ABI_V4:
+       info->fp_save_offset = -info->fp_size;
+       info->gp_save_offset = info->fp_save_offset - info->gp_size;
++#ifdef TARGET_BASEREL
++      info->baserel_save_offset = info->gp_save_offset - info->baserel_size;
++      info->cr_save_offset      = info->baserel_save_offset - info->cr_size;
++#else
+       info->cr_save_offset = info->gp_save_offset - info->cr_size;
++#endif
+ 
+       if (TARGET_ALTIVEC_ABI)
+ 	{
+@@ -865,6 +882,10 @@
+ 				  + info->vrsave_size,
+ 				  save_align);
+ 
++#ifdef TARGET_BASEREL
++  info->save_size += RS6000_ALIGN (info->baserel_size, save_align);
++#endif
++
+   non_fixed_size = info->vars_size + info->parm_size + info->save_size;
+ 
+   info->total_size = RS6000_ALIGN (non_fixed_size + info->fixed_size,
+@@ -971,6 +992,11 @@
+   if (info->cr_save_p)
+     fprintf (stderr, "\tcr_save_p           = %5d\n", info->cr_save_p);
+ 
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_p)
++    fprintf (stderr, "\tbaserel_save_p      = %5d\n", info->baserel_save_p);
++#endif
++
+   if (info->vrsave_mask)
+     fprintf (stderr, "\tvrsave_mask         = 0x%x\n", info->vrsave_mask);
+ 
+@@ -1007,6 +1033,11 @@
+   if (info->varargs_save_offset)
+     fprintf (stderr, "\tvarargs_save_offset = %5d\n", info->varargs_save_offset);
+ 
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_offset && TARGET_BASEREL)
++    fprintf (stderr, "\tbaserel_save_offset = %5d\n", info->baserel_save_offset);
++#endif
++
+   if (info->total_size)
+     fprintf (stderr, "\ttotal_size          = " HOST_WIDE_INT_PRINT_DEC"\n",
+ 	     info->total_size);
+@@ -1033,6 +1064,11 @@
+   if (info->vrsave_size)
+     fprintf (stderr, "\tvrsave_size         = %5d\n", info->vrsave_size);
+ 
++#ifdef TARGET_BASEREL
++  if (info->baserel_size && TARGET_BASEREL)
++    fprintf (stderr, "\tbaserel_size        = %5d\n", info->baserel_size);
++#endif
++
+   if (info->altivec_padding_size)
+     fprintf (stderr, "\taltivec_padding_size= %5d\n",
+ 	     info->altivec_padding_size);
+@@ -1147,6 +1183,16 @@
+   else
+     fntype = TREE_TYPE (TREE_TYPE (CALL_EXPR_FN (exp)));
+ 
++#ifdef TARGET_BASEREL
++  /* We can't do it if the calling function is baserel with saveds attribute.  */
++  if (TARGET_BASEREL
++      && current_function_decl
++      && lookup_attribute ("saveds", TYPE_ATTRIBUTES (TREE_TYPE (current_function_decl))))
++    {
++      return false;
++    }
++#endif
++
+   /* We can't do it if the called function has more vector parameters
+      than the current function; there's nowhere to put the VRsave code.  */
+   if (TARGET_ALTIVEC_ABI
+@@ -2720,6 +2766,12 @@
+       || bitmap_bit_p (kill, LR_REGNO))
+     bitmap_set_bit (components, 0);
+ 
++#ifdef TARGET_BASEREL
++  /* Always mark LR saving to occur before basic_block if "saveds" function */
++  if (TARGET_BASEREL && info->baserel_save_p)
++    bitmap_set_bit (components, 0);
++#endif
++
+   /* The TOC save.  */
+   if (bitmap_bit_p (in, TOC_REGNUM)
+       || bitmap_bit_p (gen, TOC_REGNUM)
+@@ -3281,6 +3333,22 @@
+       emit_insn (gen_hashst (mem, reg0));
+     }
+ 
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_p && TARGET_BASEREL)
++    {
++      /* Store r13 */
++      rtx addr, reg, mem;
++      rtx frame_ptr_rtx = gen_rtx_REG (Pmode, 1);
++
++      addr = gen_rtx_PLUS (Pmode, frame_reg_rtx,
++               GEN_INT (info->baserel_save_offset + frame_off));
++      mem = gen_frame_mem (reg_mode, addr);
++
++      reg = gen_rtx_REG (reg_mode, 13);
++      insn = emit_move_insn (mem, reg);
++      rs6000_frame_related (insn, sp_reg_rtx, info->total_size, NULL_RTX, NULL_RTX);
++    }
++#endif
+   /* If we need to save CR, put it into r12 or r11.  Choose r12 except when
+      r12 will be needed by out-of-line gpr save.  */
+   if (DEFAULT_ABI == ABI_AIX
+@@ -3873,6 +3941,18 @@
+ 	emit_move_insn (lr, gen_rtx_REG (Pmode, 0));
+     }
+ #endif
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_p && TARGET_BASEREL)
++    {
++      /* Call __restore_r13 */
++      rtx restore_r13_ref = gen_rtx_SYMBOL_REF (Pmode, "__restore_r13");
++      SYMBOL_REF_FLAGS (restore_r13_ref) |= (SYMBOL_FLAG_LOCAL | SYMBOL_FLAG_FUNCTION);
++
++      emit_call_insn (gen_call (gen_rtx_MEM (SImode, restore_r13_ref), const0_rtx, const0_rtx));
++
++      emit_insn (gen_blockage ());
++    }
++#endif
+ 
+   /* If we need to, save the TOC register after doing the stack setup.
+      Do not emit eh frame info for this save.  The unwinder wants info,
+@@ -3935,6 +4015,10 @@
+ 	  fprintf (file, "\t.extern %s\n", name);
+ 	}
+     }
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_p && TARGET_BASEREL)
++    fprintf (file, "\t.extern __restore_r13\n");
++#endif
+ }
+ 
+ /* Write function prologue.  */
+@@ -4880,6 +4964,24 @@
+ 	}
+     }
+ 
++#ifdef TARGET_BASEREL
++  if (info->baserel_save_p && TARGET_BASEREL)
++    {
++      rtx addr, mem, reg;
++
++      /* Restore r13 */
++      addr = gen_rtx_PLUS (Pmode, frame_reg_rtx,
++               GEN_INT (info->baserel_save_offset + frame_off));
++      mem = gen_frame_mem (reg_mode, addr);
++
++      reg = gen_rtx_REG (reg_mode, 13);
++      emit_move_insn (reg, mem);
++
++      /* Mark register as used.  */
++      emit_insn (gen_rtx_USE (VOIDmode, reg));
++    }
++#endif
++
+   /* Restore GPRs.  This is done as a PARALLEL if we are using
+      the load-multiple instructions.  */
+   if (!restoring_GPRs_inline)
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/rs6000.md gcc-15.1.0/gcc/config/rs6000/rs6000.md
+--- gcc-15.1.0.orig/gcc/config/rs6000/rs6000.md	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config/rs6000/rs6000.md	2025-04-25 15:58:40.268619866 +0300
+@@ -11341,6 +11341,25 @@
+   [(set (match_dup 0) (high:P (match_dup 1)))
+    (set (match_dup 0) (lo_sum:P (match_dup 0) (match_dup 1)))])
+ 
++;;
++;;
++;;
++(define_insn "elf_base_high"
++  [(set (match_operand:SI 0 "gpc_reg_operand" "=b")
++        (plus:SI (match_operand:SI 1 "gpc_reg_operand" "b")
++                 (high:SI (match_operand 2 "" ""))))]
++  "TARGET_ELF && ! TARGET_64BIT && TARGET_BASEREL"
++  "{addiu|addis} %0,%1,%2@drel@ha")
++
++(define_insn "elf_base_low"
++  [(set (match_operand:SI 0 "gpc_reg_operand" "=r,r")
++	(lo_sum:SI (match_operand:SI 1 "gpc_reg_operand" "b,!*r")
++		   (match_operand 2 "" "")))]
++   "TARGET_ELF && ! TARGET_64BIT && TARGET_BASEREL && morphos_baserel_operand(operands[2])"
++   "@
++    {cal|la} %0,%2@drel@l(%1)
++    {ai|addic} %0,%1,%K2")
++
+ ;; Elf specific ways of loading addresses for non-PIC code.
+ ;; The output of this could be r0, but we make a very strong
+ ;; preference for a base register because it will usually
+diff -ruN gcc-15.1.0.orig/gcc/config/rs6000/t-morphos gcc-15.1.0/gcc/config/rs6000/t-morphos
+--- gcc-15.1.0.orig/gcc/config/rs6000/t-morphos	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/gcc/config/rs6000/t-morphos	2025-04-25 15:58:40.268619866 +0300
+@@ -0,0 +1,34 @@
++MULTILIB_OPTIONS      = mbaserel32 mclib=libnix
++MULTILIB_DIRNAMES     = libb32 libnix
++MULTILIB_MATCHES      = mbaserel32=mresident32
++MULTILIB_EXTRA_OPTS   = mstrict-align
++
++EXTRA_MULTILIB_PARTS  = crtbegin$(objext) crtend$(objext) ecrti$(objext) ecrtn$(objext) ncrti$(objext) ncrtn$(objext)
++
++LIBGCC                = stmp-multilib
++INSTALL_LIBGCC        = install-multilib
++
++TARGET_LIBGCC2_CFLAGS = 
++CRTSTUFF_T_CFLAGS     = -msdata=none -mstrict-align
++
++# We want fine grained libraries, so use the new code to build the
++# floating point emulation libraries.
++FPBIT = fp-bit.c
++DPBIT = dp-bit.c
++
++# Extra
++morphos.o: $(srcdir)/config/rs6000/morphos.c $(srcdir)/config/rs6000/morphos-protos.h $(CONFIG_H)
++	$(COMPILE) $<
++
++NATIVE_SYSTEM_HEADER_DIR = /include
++
++# Don't run fixinclude
++STMP_FIXINC = stmp-sdefixinc
++stmp-sdefixinc: gsyslimits.h
++	rm -rf include; mkdir include
++	chmod a+rx include
++	rm -f include/syslimits.h
++	cp $(srcdir)/gsyslimits.h include/syslimits.h
++	chmod a+r include/syslimits.h
++	$(STAMP) stmp-sdefixinc
++
+diff -ruN gcc-15.1.0.orig/gcc/config.gcc gcc-15.1.0/gcc/config.gcc
+--- gcc-15.1.0.orig/gcc/config.gcc	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config.gcc	2025-04-25 15:58:40.268619866 +0300
+@@ -3060,6 +3060,15 @@
+ 	extra_options="${extra_options} rs6000/sysv4.opt rs6000/linux64.opt"
+ 	tmake_file="${tmake_file} rs6000/t-fprules rs6000/t-rtems rs6000/t-ppccomm"
+ 	;;
++powerpc-*-morphos*)
++	tm_file="${tm_file} elfos.h usegas.h rs6000/sysv4.h rs6000/morphos.h rs6000/morphos-stdint.h"
++	tm_p_file="${tm_p_file} rs6000/morphos-protos.h"
++	extra_options="${extra_options} rs6000/sysv4.opt rs6000/morphos.opt"
++	extra_parts="crtbegin.o crtend.o"
++	tmake_file="${tmake_file} t-dfprules rs6000/t-fprules rs6000/t-fprules-fpbit rs6000/t-ppcgas rs6000/t-ppcos rs6000/t-ppccomm rs6000/t-morphos"
++	extra_objs="${extra_objs} morphos.o"
++	use_gcc_tgmath=yes
++	;;
+ powerpc*-*-linux*)
+ 	tm_file="${tm_file} elfos.h gnu-user.h linux.h freebsd-spec.h rs6000/sysv4.h"
+ 	extra_options="${extra_options} rs6000/sysv4.opt"
+diff -ruN gcc-15.1.0.orig/gcc/config.host gcc-15.1.0/gcc/config.host
+--- gcc-15.1.0.orig/gcc/config.host	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/config.host	2025-04-25 15:58:40.272619898 +0300
+@@ -260,6 +260,10 @@
+     out_host_hook_obj="${out_host_hook_obj} host-ppc64-darwin.o"
+     host_xmake_file="${host_xmake_file} rs6000/x-darwin64"
+     ;;
++  p*pc-*-morphos*)
++    prefix=/gg
++    local_prefix=/gg
++    ;;
+   rs6000-ibm-aix* | powerpc-ibm-aix*)
+     host_xmake_file="${host_xmake_file} rs6000/x-aix"
+     ;;
+diff -ruN gcc-15.1.0.orig/gcc/configure gcc-15.1.0/gcc/configure
+--- gcc-15.1.0.orig/gcc/configure	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/gcc/configure	2025-04-25 15:58:40.272619898 +0300
+@@ -10801,7 +10801,7 @@
+    # read() to the same fd.  The only system known to have a problem here
+    # is VMS, where text files have record structure.
+    case "$host_os" in
+-     *vms* | ultrix*)
++     *vms* | morphos* | ultrix*)
+         gcc_cv_func_mmap_file=no ;;
+      *)
+         gcc_cv_func_mmap_file=yes;;
+@@ -10825,7 +10825,7 @@
+    # Systems known to be in this category are Windows (all variants),
+    # VMS, and Darwin.
+    case "$host_os" in
+-     *vms* | cygwin* | pe | mingw* | darwin* | ultrix* | hpux10* | hpux11.00)
++     *vms* | cygwin* | pe | mingw* | darwin* | ultrix* | morphos* | hpux10* | hpux11.00)
+         gcc_cv_func_mmap_dev_zero=no ;;
+      *)
+         gcc_cv_func_mmap_dev_zero=yes;;
+@@ -10882,7 +10882,7 @@
+    # above for use of /dev/zero.
+    # Systems known to be in this category are Windows, VMS, and SCO Unix.
+    case "$host_os" in
+-     *vms* | cygwin* | pe | mingw* | sco* | udk* )
++     *vms* | cygwin* | pe | mingw* | sco* |  morphos* | udk* )
+         gcc_cv_func_mmap_anon=no ;;
+      *)
+         gcc_cv_func_mmap_anon=yes;;
+@@ -10993,7 +10993,7 @@
+ fi
+ if test "x$ac_cv_func_fork_works" = xcross; then
+   case $host in
+-    *-*-amigaos* | *-*-msdosdjgpp*)
++    *-*-amigaos* | *-*-morphos* | *-*-msdosdjgpp*)
+       # Override, as these systems have only a dummy fork() stub
+       ac_cv_func_fork_works=no
+       ;;
+@@ -13165,7 +13165,7 @@
+     target_thread_file='single'
+     ;;
+   aix | dce | lynx | mipssde | posix | rtems | \
+-  single | tpf | vxworks | win32 | mcf)
++  single | tpf | vxworks | win32 | mcf | morphos)
+     target_thread_file=${enable_threads}
+     ;;
+   *)
+@@ -14960,6 +14960,10 @@
+ *)
+   enable_frame_pointer=yes
+   ;;
++*-*-*morphos*)
++  # Under MorphOS, don't try to use fork.
++  ac_cv_func_fork_works=no
++  ;;
+ esac
+ 
+ fi
+@@ -15976,7 +15980,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+@@ -24988,7 +24992,7 @@
+ 
+ else
+ 
+-if test -x "$DEFAULT_ASSEMBLER"; then
++if test -n "$DEFAULT_ASSEMBLER" -a -x "$DEFAULT_ASSEMBLER"; then
+ 	gcc_cv_as="$DEFAULT_ASSEMBLER"
+ elif test -f $gcc_cv_as_gas_srcdir/configure.ac \
+      && test -f ../gas/Makefile \
+@@ -25100,7 +25104,7 @@
+ 
+ else
+ 
+-if test -x "$DEFAULT_LINKER"; then
++if test -n "$DEFAULT_LINKER" -a -x "$DEFAULT_LINKER"; then
+ 	gcc_cv_ld="$DEFAULT_LINKER"
+ elif test $install_gold_as_default = yes \
+      && test -f $gcc_cv_ld_gold_srcdir/configure.ac \
+diff -ruN gcc-15.1.0.orig/gcc/configure.ac gcc-15.1.0/gcc/configure.ac
+--- gcc-15.1.0.orig/gcc/configure.ac	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/configure.ac	2025-04-25 15:58:40.272619898 +0300
+@@ -1619,6 +1619,10 @@
+   # just force it.
+   ac_cv_func_vfork_works=yes
+   ;;
++*-*-*morphos*)
++  # Under MorphOS, don't try to use fork.
++  ac_cv_func_fork_works=no
++  ;;
+ esac
+ AC_FUNC_FORK
+ 
+@@ -2090,7 +2094,7 @@
+     target_thread_file='single'
+     ;;
+   aix | dce | lynx | mipssde | posix | rtems | \
+-  single | tpf | vxworks | win32 | mcf)
++  single | tpf | vxworks | win32 | mcf | morphos)
+     target_thread_file=${enable_threads}
+     ;;
+   *)
+diff -ruN gcc-15.1.0.orig/gcc/coretypes.h gcc-15.1.0/gcc/coretypes.h
+--- gcc-15.1.0.orig/gcc/coretypes.h	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/coretypes.h	2025-04-25 15:58:40.276619928 +0300
+@@ -375,11 +375,13 @@
+    in target.h.  */
+ typedef int reg_class_t;
+ 
++#ifdef __cplusplus
+ class rtl_opt_pass;
+ 
+ namespace gcc {
+   class context;
+ }
++#endif
+ 
+ typedef std::pair <tree, tree> tree_pair;
+ typedef std::pair <const char *, int> string_int_pair;
+diff -ruN gcc-15.1.0.orig/gcc/cppdefault.cc gcc-15.1.0/gcc/cppdefault.cc
+--- gcc-15.1.0.orig/gcc/cppdefault.cc	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/cppdefault.cc	2025-04-25 15:58:40.276619928 +0300
+@@ -40,6 +40,10 @@
+ = INCLUDE_DEFAULTS;
+ #else
+ = {
++#ifdef OSINCLUDE_DIR
++    { OSINCLUDE_DIR, NATIVE_SYSTEM_HEADER_COMPONENT, 0, 0, 1, 2 },
++    { OSINCLUDE_DIR, NATIVE_SYSTEM_HEADER_COMPONENT, 0, 0, 1, 0 },
++#endif
+ #ifdef GPLUSPLUS_INCLUDE_DIR
+     /* Pick up GNU C++ generic include files.  */
+     { GPLUSPLUS_INCLUDE_DIR, "G++", 1, 1,
+diff -ruN gcc-15.1.0.orig/gcc/gcov-io.h gcc-15.1.0/gcc/gcov-io.h
+--- gcc-15.1.0.orig/gcc/gcov-io.h	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/gcov-io.h	2025-04-25 15:58:40.276619928 +0300
+@@ -201,7 +201,7 @@
+ #endif
+ #endif
+ 
+-#if defined (HOST_HAS_F_SETLKW)
++#if defined (HOST_HAS_F_SETLKW) && !defined (TARGET_USES_MORPHOS_OPT)
+ #define GCOV_LOCKED 1
+ #else
+ #define GCOV_LOCKED 0
+diff -ruN gcc-15.1.0.orig/gcc/ginclude/stddef.h gcc-15.1.0/gcc/ginclude/stddef.h
+--- gcc-15.1.0.orig/gcc/ginclude/stddef.h	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/ginclude/stddef.h	2025-04-25 15:58:40.276619928 +0300
+@@ -46,15 +46,21 @@
+ /* This avoids lossage on SunOS but only if stdtypes.h comes first.
+    There's no way to win with the other order!  Sun lossage.  */
+ 
+-#if defined(__NetBSD__)
++/* On 4.3bsd-net2, make sure ansi.h is included, so we have
++   one less case to deal with in the following.  */
++#if defined (__BSD_NET2__) || defined (____386BSD____) || (defined (__FreeBSD__) && (__FreeBSD__ < 5)) || defined(__NetBSD__)
+ #include <machine/ansi.h>
+ #endif
+-
+-#if defined (__FreeBSD__)
++/* On FreeBSD 5, machine/ansi.h does not exist anymore... */
++#if defined (__FreeBSD__) && (__FreeBSD__ >= 5)
+ #include <sys/_types.h>
+ #endif
+ 
+-#if defined(__NetBSD__)
++/* In 4.3bsd-net2, machine/ansi.h defines these symbols, which are
++   defined if the corresponding type is *not* defined.
++   FreeBSD-2.1 defines _MACHINE_ANSI_H_ instead of _ANSI_H_.
++   NetBSD defines _I386_ANSI_H_ and _X86_64_ANSI_H_ instead of _ANSI_H_ */
++#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) || defined(_X86_64_ANSI_H_)  || defined(_I386_ANSI_H_)
+ #if !defined(_SIZE_T_) && !defined(_BSD_SIZE_T_)
+ #define _SIZE_T
+ #endif
+@@ -81,7 +87,7 @@
+ #undef _WCHAR_T_
+ #undef _BSD_WCHAR_T_
+ #endif
+-#endif /* defined(__NetBSD__) */
++#endif /* defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) || defined(_X86_64_ANSI_H_) || defined(_I386_ANSI_H_) */
+ 
+ /* Sequent's header files use _PTRDIFF_T_ in some conflicting way.
+    Just ignore it.  */
+@@ -214,11 +220,12 @@
+ #define ___int_size_t_h
+ #define _GCC_SIZE_T
+ #define _SIZET_
+-#if defined (__FreeBSD__) \
++#if (defined (__FreeBSD__) && (__FreeBSD__ >= 5)) \
+   || defined(__DragonFly__) \
+-  || defined(__FreeBSD_kernel__) \
+-  || defined(__VMS__)
+-/* __size_t is a typedef, must not trash it.  */
++  || defined(__FreeBSD_kernel__)
++/* __size_t is a typedef on FreeBSD 5, must not trash it. */
++#elif defined (__VMS__)
++/* __size_t is also a typedef on VMS.  */
+ #else
+ #define __size_t
+ #endif
+@@ -376,7 +383,11 @@
+ #undef __need_wint_t
+ #endif
+ 
+-#if defined(__NetBSD__)
++/*  In 4.3bsd-net2, leave these undefined to indicate that size_t, etc.
++    are already defined.  */
++/*  BSD/OS 3.1 and FreeBSD [23].x require the MACHINE_ANSI_H check here.  */
++/*  NetBSD 5 requires the I386_ANSI_H and X86_64_ANSI_H checks here.  */
++#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) || defined(_X86_64_ANSI_H_) || defined(_I386_ANSI_H_)
+ /*  The references to _GCC_PTRDIFF_T_, _GCC_SIZE_T_, and _GCC_WCHAR_T_
+     are probably typos and should be removed before 2.8 is released.  */
+ #ifdef _GCC_PTRDIFF_T_
+@@ -404,7 +415,7 @@
+ #undef _WCHAR_T_
+ #undef _BSD_WCHAR_T_
+ #endif
+-#endif /* __NetBSD__ */
++#endif /* _ANSI_H_ || _MACHINE_ANSI_H_ || _X86_64_ANSI_H_ || _I386_ANSI_H_ */
+ 
+ #endif /* __sys_stdtypes_h */
+ 
+diff -ruN gcc-15.1.0.orig/gcc/Makefile.in gcc-15.1.0/gcc/Makefile.in
+--- gcc-15.1.0.orig/gcc/Makefile.in	2025-04-25 11:18:00.000000000 +0300
++++ gcc-15.1.0/gcc/Makefile.in	2025-04-25 15:58:40.276619928 +0300
+@@ -679,9 +679,9 @@
+ # --------
+ 
+ # Directory in which the compiler finds libraries etc.
+-libsubdir = $(libdir)/gcc/$(real_target_noncanonical)/$(version)$(accel_dir_suffix)
++libsubdir = $(libdir)/gcc-lib/$(real_target_noncanonical)/$(version)$(accel_dir_suffix)
+ # Directory in which the compiler finds executables
+-libexecsubdir = $(libexecdir)/gcc/$(real_target_noncanonical)/$(version)$(accel_dir_suffix)
++libexecsubdir = $(libexecdir)/gcc-lib/$(real_target_noncanonical)/$(version)$(accel_dir_suffix)
+ # Directory in which all plugin resources are installed
+ plugin_resourcesdir = $(libsubdir)/plugin
+  # Directory in which plugin headers are installed
+@@ -1113,7 +1113,7 @@
+ # Likewise.  Put INCLUDES at the beginning: this way, if some autoconf macro
+ # puts -I options in CPPFLAGS, our include files in the srcdir will always
+ # win against random include files in /usr/include.
+-ALL_CPPFLAGS = $(INCLUDES) $(CPPFLAGS)
++ALL_CPPFLAGS = $(INCLUDES) $(CPPFLAGS) -Wno-error
+ 
+ # This is the variable to use when using $(COMPILER).
+ ALL_COMPILERFLAGS = $(ALL_CXXFLAGS) $(PICFLAG)
+@@ -2598,8 +2598,8 @@
+ 
+ DRIVER_DEFINES = \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+-  -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
+-  -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
++  -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc-lib/\" \
++  -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc-lib/\" \
+   -DDEFAULT_TARGET_VERSION=\"$(version)\" \
+   -DDEFAULT_REAL_TARGET_MACHINE=\"$(real_target_noncanonical)\" \
+   -DDEFAULT_TARGET_MACHINE=\"$(target_noncanonical)\" \
+@@ -3409,7 +3409,7 @@
+   -DTOOL_INCLUDE_DIR=\"$(gcc_tooldir)/include\" \
+   -DNATIVE_SYSTEM_HEADER_DIR=\"$(NATIVE_SYSTEM_HEADER_DIR)\" \
+   -DPREFIX=\"$(prefix)/\" \
+-  -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
++  -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc-lib/\" \
+   @TARGET_SYSTEM_ROOT_DEFINE@
+ 
+ CFLAGS-cppbuiltin.o += $(PREPROCESSOR_DEFINES) -DBASEVER=$(BASEVER_s)
+@@ -4032,7 +4032,7 @@
+ 	fi
+ 
+ # Create the installation directories.
+-# $(libdir)/gcc/include isn't currently searched by cpp.
++# $(libdir)/gcc-lib/include isn't currently searched by cpp.
+ installdirs:
+ 	$(mkinstalldirs) $(DESTDIR)$(libsubdir)
+ 	$(mkinstalldirs) $(DESTDIR)$(libexecsubdir)
+@@ -4524,7 +4524,7 @@
+ # files that have already been installed there will be found.  The -B option
+ # overrides it, so use of GCC_EXEC_PREFIX will not result in using GCC files
+ # from the install tree.
+-	@echo "set TEST_GCC_EXEC_PREFIX \"$(libdir)/gcc/\"" >> ./site.tmp
++	@echo "set TEST_GCC_EXEC_PREFIX \"$(libdir)/gcc-lib/\"" >> ./site.tmp	
+ 	@echo "set TESTING_IN_BUILD_TREE 1" >> ./site.tmp
+ 	@echo "set HAVE_LIBSTDCXX_V3 1" >> ./site.tmp
+ 	@if test "@enable_plugin@" = "yes" ; then \
+diff -ruN gcc-15.1.0.orig/libada/Makefile.in gcc-15.1.0/libada/Makefile.in
+--- gcc-15.1.0.orig/libada/Makefile.in	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libada/Makefile.in	2025-04-25 15:58:40.276619928 +0300
+@@ -70,7 +70,7 @@
+ 
+ target_noncanonical:=@target_noncanonical@
+ version := $(shell @get_gcc_base_ver@ $(srcdir)/../gcc/BASE-VER)
+-libsubdir := $(libdir)/gcc/$(target_noncanonical)/$(version)$(MULTISUBDIR)
++libsubdir := $(libdir)/gcc-lib/$(target_noncanonical)/$(version)$(MULTISUBDIR)
+ ADA_RTS_DIR=$(GCC_DIR)/ada/rts$(subst /,_,$(MULTISUBDIR))
+ 
+ # exeext should not be used because it's the *host* exeext.  We're building
+diff -ruN gcc-15.1.0.orig/libatomic/config/morphos/host-config.h gcc-15.1.0/libatomic/config/morphos/host-config.h
+--- gcc-15.1.0.orig/libatomic/config/morphos/host-config.h	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/libatomic/config/morphos/host-config.h	2025-04-25 15:58:40.276619928 +0300
+@@ -0,0 +1,55 @@
++/* Copyright (C) 2014-2019 Free Software Foundation, Inc.
++   Contributed by Kai Tietz <ktietz@redhat.com>.
++   Copyright (C) 2020 Harry Sintonen <sintonen@iki.fi>.
++
++   This file is part of the GNU Atomic Library (libatomic).
++
++   Libatomic is free software; you can redistribute it and/or modify it
++   under the terms of the GNU General Public License as published by
++   the Free Software Foundation; either version 3 of the License, or
++   (at your option) any later version.
++
++   Libatomic is distributed in the hope that it will be useful, but WITHOUT ANY
++   WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
++   FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
++   more details.
++
++   Under Section 7 of GPL version 3, you are granted additional
++   permissions described in the GCC Runtime Library Exception, version
++   3.1, as published by the Free Software Foundation.
++
++   You should have received a copy of the GNU General Public License and
++   a copy of the GCC Runtime Library Exception along with this program;
++   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
++   <http://www.gnu.org/licenses/>.  */
++
++/* Included after all more target-specific host-config.h.  */
++
++#ifndef protect_start_end
++# ifdef HAVE_ATTRIBUTE_VISIBILITY
++#  pragma GCC visibility push(hidden)
++# endif
++
++void libat_lock_1(void *ptr);
++void libat_unlock_1(void *ptr);
++
++static inline UWORD
++protect_start(void *ptr)
++{
++  libat_lock_1(ptr);
++  return 0;
++}
++
++static inline void
++protect_end(void *ptr, UWORD dummy UNUSED)
++{
++  libat_unlock_1(ptr);
++}
++
++# define protect_start_end 1
++# ifdef HAVE_ATTRIBUTE_VISIBILITY
++#  pragma GCC visibility pop
++# endif
++#endif /* protect_start_end */
++
++#include_next <host-config.h>
+diff -ruN gcc-15.1.0.orig/libatomic/config/morphos/lock.c gcc-15.1.0/libatomic/config/morphos/lock.c
+--- gcc-15.1.0.orig/libatomic/config/morphos/lock.c	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/libatomic/config/morphos/lock.c	2025-04-25 15:58:40.276619928 +0300
+@@ -0,0 +1,178 @@
++/* Copyright (C) 2014-2019 Free Software Foundation, Inc.
++   Contributed by Kai Tietz <ktietz@redhat.com>.
++   Copyright (C) 2020 Harry Sintonen <sintonen@iki.fi>.
++
++   This file is part of the GNU Atomic Library (libatomic).
++
++   Libatomic is free software; you can redistribute it and/or modify it
++   under the terms of the GNU General Public License as published by
++   the Free Software Foundation; either version 3 of the License, or
++   (at your option) any later version.
++
++   Libatomic is distributed in the hope that it will be useful, but WITHOUT ANY
++   WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
++   FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
++   more details.
++
++   Under Section 7 of GPL version 3, you are granted additional
++   permissions described in the GCC Runtime Library Exception, version
++   3.1, as published by the Free Software Foundation.
++
++   You should have received a copy of the GNU General Public License and
++   a copy of the GCC Runtime Library Exception along with this program;
++   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
++   <http://www.gnu.org/licenses/>.  */
++
++#define UWORD __shadow_UWORD
++#define __IXEMUL_EXEC_MIXING_ALLOWED
++#include <exec/semaphores.h>
++#include <proto/exec.h>
++#undef UWORD
++#ifdef __ixemul__
++# include <signal.h>
++#endif
++#include "libatomic_i.h"
++
++/* The target page size.  Must be no larger than the runtime page size,
++   lest locking fail with virtual address aliasing (i.e. a page mmaped
++   at two locations).  */
++#ifndef PAGE_SIZE
++#define PAGE_SIZE 4096
++#endif
++
++/* The target cacheline size.  This is an optimization; the padding that
++   should be applied to the locks to keep them from interfering.  */
++#ifndef CACHLINE_SIZE
++#define CACHLINE_SIZE 64
++#endif
++
++/* The granularity at which locks are applied.  Almost certainly the
++   cachline size is the right thing to use here.  */
++#ifndef WATCH_SIZE
++#define WATCH_SIZE CACHLINE_SIZE
++#endif
++
++struct lock
++{
++  struct SignalSemaphore sema;
++  char pad[sizeof (struct SignalSemaphore) < CACHLINE_SIZE
++	   ? CACHLINE_SIZE - sizeof (struct SignalSemaphore)
++	   : 0];
++};
++
++#define NLOCKS (PAGE_SIZE / WATCH_SIZE)
++
++static struct lock locks[NLOCKS];
++
++static inline uintptr_t
++addr_hash(void *ptr)
++{
++  return ((uintptr_t)ptr / WATCH_SIZE) % NLOCKS;
++}
++
++static inline int
++SemaphoreIsValid(const struct SignalSemaphore *sema)
++{
++  return sema->ss_Link.ln_Type == NT_SIGNALSEM;
++}
++
++void
++libat_lock_1(void *ptr)
++{
++  #ifdef __ixemul__
++  int omask = sigsetmask(~0);
++  #endif
++  Forbid();
++  if (!SemaphoreIsValid(&locks[addr_hash(ptr)].sema))
++    InitSemaphore(&locks[addr_hash(ptr)].sema);
++  Permit();
++  ObtainSemaphore(&locks[addr_hash(ptr)].sema);
++  #ifdef __ixemul__
++  sigsetmask(omask);
++  #endif
++}
++
++void
++libat_unlock_1(void *ptr)
++{
++  if (SemaphoreIsValid(&locks[addr_hash(ptr)].sema))
++  {
++    #ifdef __ixemul__
++    int omask = sigsetmask(~0);
++    #endif
++    ReleaseSemaphore(&locks[addr_hash(ptr)].sema);
++    #ifdef __ixemul__
++    sigsetmask(omask);
++    #endif
++  }
++}
++
++void
++libat_lock_n(void *ptr, size_t n)
++{
++  uintptr_t h = addr_hash(ptr);
++  size_t i = 0;
++  uintptr_t _h;
++  #ifdef __ixemul__
++  int omask = sigsetmask(~0);
++  #endif
++
++  /* Don't lock more than all the locks we have.  */
++  if (n > PAGE_SIZE)
++    n = PAGE_SIZE;
++
++  /* First initialize uninitialized semaphores */
++  Forbid();
++  _h = h;
++  do
++    {
++      if (!SemaphoreIsValid(&locks[_h].sema))
++	InitSemaphore(&locks[_h].sema);
++      if (++_h == NLOCKS)
++	_h = 0;
++      i += WATCH_SIZE;
++    }
++  while (i < n);
++  Permit();
++
++  i = 0;
++  do
++    {
++      ObtainSemaphore(&locks[h].sema);
++      if (++h == NLOCKS)
++	h = 0;
++      i += WATCH_SIZE;
++    }
++  while (i < n);
++
++  #ifdef __ixemul__
++  sigsetmask(omask);
++  #endif
++}
++
++void
++libat_unlock_n(void *ptr, size_t n)
++{
++  uintptr_t h = addr_hash(ptr);
++  size_t i = 0;
++  #ifdef __ixemul__
++  int omask = sigsetmask(~0);
++  #endif
++
++  if (n > PAGE_SIZE)
++    n = PAGE_SIZE;
++
++  do
++    {
++      if (SemaphoreIsValid(&locks[h].sema))
++	ReleaseSemaphore(&locks[h].sema);
++      if (++h == NLOCKS)
++	h = 0;
++      i += WATCH_SIZE;
++    }
++  while (i < n);
++
++  #ifdef __ixemul__
++  sigsetmask(omask);
++  #endif
++}
+diff -ruN gcc-15.1.0.orig/libatomic/configure gcc-15.1.0/libatomic/configure
+--- gcc-15.1.0.orig/libatomic/configure	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libatomic/configure	2025-04-25 15:58:40.276619928 +0300
+@@ -5643,7 +5643,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libatomic/configure.tgt gcc-15.1.0/libatomic/configure.tgt
+--- gcc-15.1.0.orig/libatomic/configure.tgt	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libatomic/configure.tgt	2025-04-25 15:58:40.276619928 +0300
+@@ -168,6 +168,11 @@
+         esac
+ 	;;
+ 
++  *-*-morphos*)
++	# OS support for atomic primitives.
++	config_path="${config_path} morphos"
++ 	;;
++
+   *-*-rtems*)
+ 	XCFLAGS="${configure_tgt_pre_target_cpu_XCFLAGS}"
+ 	config_path="rtems"
+diff -ruN gcc-15.1.0.orig/libcpp/files.cc gcc-15.1.0/libcpp/files.cc
+--- gcc-15.1.0.orig/libcpp/files.cc	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libcpp/files.cc	2025-04-25 15:58:40.276619928 +0300
+@@ -39,6 +39,10 @@
+ # define STAT_SIZE_RELIABLE(ST) true
+ #endif
+ 
++#ifndef O_CASE
++# define O_CASE 0
++#endif
++
+ #ifdef __DJGPP__
+ #include <io.h>
+   /* For DJGPP redirected input is opened in text mode.  */
+@@ -240,7 +244,7 @@
+       set_stdin_to_binary_mode ();
+     }
+   else
+-    file->fd = open (file->path, O_RDONLY | O_NOCTTY | O_BINARY, 0666);
++    file->fd = open (file->path, O_RDONLY | O_NOCTTY | O_BINARY | O_CASE, 0666);
+ 
+   if (file->fd != -1)
+     {
+diff -ruN gcc-15.1.0.orig/libffi/configure gcc-15.1.0/libffi/configure
+--- gcc-15.1.0.orig/libffi/configure	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libffi/configure	2025-04-25 15:58:40.280619963 +0300
+@@ -5875,7 +5875,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libffi/include/Makefile.in gcc-15.1.0/libffi/include/Makefile.in
+--- gcc-15.1.0.orig/libffi/include/Makefile.in	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libffi/include/Makefile.in	2025-04-25 15:58:40.280619963 +0300
+@@ -327,7 +327,7 @@
+ 
+ # Where generated headers like ffitarget.h get installed.
+ gcc_version := $(shell @get_gcc_base_ver@ $(top_srcdir)/../gcc/BASE-VER)
+-toollibffidir := $(libdir)/gcc/$(target_alias)/$(gcc_version)/include
++toollibffidir := $(libdir)/gcc-lib/$(target_alias)/$(gcc_version)/include
+ toollibffi_HEADERS = ffi.h ffitarget.h
+ all: all-am
+ 
+diff -ruN gcc-15.1.0.orig/libgcc/config/rs6000/gthr-morphos.c gcc-15.1.0/libgcc/config/rs6000/gthr-morphos.c
+--- gcc-15.1.0.orig/libgcc/config/rs6000/gthr-morphos.c	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/libgcc/config/rs6000/gthr-morphos.c	2025-04-25 15:58:40.280619963 +0300
+@@ -0,0 +1,2321 @@
++/* Threads compatibility routines for libgcc2.  */
++/* Compile this one with gcc.  */
++/* Copyright (C) 1997, 1999, 2000, 2004, 2008, 2009
++   Free Software Foundation, Inc.
++   Copyright (C) 2016-2020 Harry Sintonen
++
++This file is part of GCC.
++
++GCC is free software; you can redistribute it and/or modify it under
++the terms of the GNU General Public License as published by the Free
++Software Foundation; either version 3, or (at your option) any later
++version.
++
++GCC is distributed in the hope that it will be useful, but WITHOUT ANY
++WARRANTY; without even the implied warranty of MERCHANTABILITY or
++FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
++for more details.
++
++Under Section 7 of GPL version 3, you are granted additional
++permissions described in the GCC Runtime Library Exception, version
++3.1, as published by the Free Software Foundation.
++
++You should have received a copy of the GNU General Public License and
++a copy of the GCC Runtime Library Exception along with this program;
++see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
++<http://www.gnu.org/licenses/>.  */
++
++#include "gthr-morphos.h"
++#include <string.h>
++
++#ifndef GCC_SYSTEM_H
++#if defined(__GNUC__) && GCC_VERSION > 4000
++/* GCC 4.0.x has a bug where it may ICE on this expression,
++   so does GCC 3.4.x (PR17436).  */
++#define CONST_CAST2(TOTYPE,FROMTYPE,X) ((__extension__(union {FROMTYPE _q; TOTYPE _nq;})(X))._nq)
++#else
++#define CONST_CAST2(TOTYPE,FROMTYPE,X) ((TOTYPE)(FROMTYPE)(X))
++#endif
++#define CONST_CAST(TYPE,X) CONST_CAST2(TYPE, const TYPE, (X))
++#endif
++
++#ifndef __ATTR_WEAK_ALIAS
++#define __ATTR_WEAK_ALIAS(_f_) __attribute__ ((weak, alias (#_f_)))
++#endif
++
++#ifndef __ATTR_WEAK
++#define __ATTR_WEAK __attribute__ ((weak))
++#endif
++
++#ifndef HIDE_EXPORTS
++#pragma GCC visibility push(default)
++#endif
++
++/*
++ * MorphOS threading
++ */
++
++#define USE_THREAD_ONLY_SETSPECIFIC 0 /* 1 -> Do not allow __gthread_setspecific for non-thread callers */
++#define USE_THREAD_SAFETYNET        1 /* 1 -> Have an atexit function to join all pending threads */
++
++/* Custom SysBase we need for memory, semaphores, etc */
++#define USE_INLINE_STDARG
++#define __NOLIBBASE__
++#include <exec/tasks.h>
++#define EXEC_BASE_NAME ABOX_GETTASKSYSBASE
++#define __IXEMUL_EXEC_MIXING_ALLOWED
++
++#include <proto/exec.h>
++#include <proto/dos.h>
++#include <hardware/atomic.h>
++#include <exec/memory.h>
++#include <exec/semaphores.h>
++#include <exec/rawfmt.h>
++#include <devices/timer.h>
++#include <dos/dostags.h>
++#define EXEC_SILENT_BUILD 1
++#include <exec/avl.h>
++#include <clib/savl_protos.h>
++#include <stddef.h>
++#include <stdlib.h>
++#if USE_THREAD_SAFETYNET
++extern struct Library *SocketBase; /* Make unistd.h select() inline not croak */
++#include <unistd.h>
++#endif
++#include <signal.h>
++#ifdef __ixemul
++#include <workbench/startup.h>
++#include <exec/interrupts.h>
++
++#include <stdio.h>
++#include <ix.h>
++
++/*
++ * ixemul internal structures as they were during ixemul <= 50.17.
++ * This stuff is needed to ensure that the fallback code will continue
++ * to build with the same offsets regardless of the potential future
++ * changes to the ixemul internal structures. This stuff is not used
++ * if the new ixemul.library 50.18+ is available. - Piru
++ */
++#define DTYPE_SOCKET50 5
++
++struct ixnode50 {
++  struct ixnode *next, *prev;
++};
++
++struct ixlist50 {
++  struct ixnode *head, *tail;
++};
++
++struct utimenode50 {
++  struct ixnode50 node;
++  unsigned time;
++};
++
++struct glue50 {
++        struct  glue50 *next;
++        int     niobs;
++        void    *iobs;
++};
++
++struct malloc_data50 {
++  struct ixlist50 md_list;
++  unsigned int md_malloc_sbrk_used;
++};
++
++struct stackframe;
++struct session50 {
++	int     s_count;
++};
++
++#ifdef __PPC__
++#define _JBLEN50  (7+19+2*18+14+3*6)
++#else
++#define _JBLEN50  17
++#endif
++typedef int jmp_buf50[_JBLEN50];
++
++typedef long time50_t;
++
++struct timeval50 {
++        long    tv_sec;
++        long    tv_usec;
++};
++
++struct itimerval50 {
++        struct  timeval50 it_interval;
++        struct  timeval50 it_value;
++};
++
++struct rusage50 {
++        struct timeval50 ru_utime;
++        struct timeval50 ru_stime;
++        long    ru_maxrss;
++        long    ru_ixrss;
++        long    ru_idrss;
++        long    ru_isrss;
++        long    ru_minflt;
++        long    ru_majflt;
++        long    ru_nswap;
++        long    ru_inblock;
++        long    ru_oublock;
++        long    ru_msgsnd;
++        long    ru_msgrcv;
++        long    ru_nsignals;
++        long    ru_nvcsw;
++        long    ru_nivcsw;
++};
++
++struct rlimit50 {
++        long    rlim_cur;
++        long    rlim_max;
++};
++
++struct mem_file50 {
++  int   mf_offset;
++  void *mf_buffer;
++};
++
++struct file50 {
++  char *f_name;
++  int f_stb_dirty,
++      f_type,
++      f_flags,
++      f_count,
++      (*f_write)(),
++      (*f_read)(),
++      (*f_ioctl)(),
++      (*f_select)(),
++      (*f_close)();
++  union {
++    struct {
++        int so;
++        int domain;
++        int type;
++        int protocol;
++        long id;
++    } inetsock;
++  } f__fh;
++};
++
++#define f_socket_domain f__fh.inetsock.domain
++#define f_socket_type f__fh.inetsock.type
++#define f_socket_protocol f__fh.inetsock.protocol
++#define f_socket_id f__fh.inetsock.id
++
++typedef char *caddr50_t;
++
++struct sigstack50 {
++        char    *ss_sp;
++        int     ss_onstack;
++};
++
++typedef void (*sig50_t)(int);
++typedef unsigned int sigset50_t;
++
++struct passwd50 {
++        char    *pw_name;
++        char    *pw_passwd;
++        int     pw_uid;
++        int     pw_gid;
++        time50_t pw_change;
++        char    *pw_class;
++        char    *pw_gecos;
++        char    *pw_dir;
++        char    *pw_shell;
++        time50_t pw_expire;
++};
++
++struct group50 {
++        char    *gr_name;
++        char    *gr_passwd;
++        int     gr_gid;
++        char    **gr_mem;
++};
++
++struct servent50 {
++        char    *s_name;
++        char    **s_aliases;
++        int     s_port;
++        char    *s_proto;
++};
++
++struct protoent50 {
++        char    *p_name;
++        char    **p_aliases;
++        int     p_proto;
++};
++
++struct netent50 {
++        char            *n_name;
++        char            **n_aliases;
++        int             n_addrtype;
++        unsigned long   n_net;
++};
++
++typedef int32_t pid50_t;
++
++typedef unsigned short uid50_t;
++typedef unsigned short gid50_t;
++
++#define NOFILE50 512
++
++struct user50 {
++	/* both a magic cookie and a way to get at the library base thru u */
++	void                    *u_ixbase;
++	void                    *u_user;        /* freely usable user field */
++
++	long            u_a4_pointers_size;     /* number of a4 pointers */
++
++/* 1.3 - signal management */
++	sig50_t         u_signal[33];           /* disposition of signals */
++	int             u_sigmask[33];          /* signals to be blocked */
++	sigset50_t      u_sigonstack;           /* signals to take on sigstack */
++	sigset50_t      u_sigintr;              /* signals that interrupt syscalls */
++	sigset50_t      u_oldmask;              /* saved mask from before sigpause */
++	struct sigstack50 u_sigstack;    /* sp & on stack state variable */
++	int             u_sig;                  /* for core dump/debugger XXX */
++	int             u_code;                 /* for core dump/debugger XXX */
++
++	int                     p_flag;         /* process flags, as necessary.. */
++	int                     p_xstat;        /* exit status */
++	char                    p_stat;
++	char                    p_cursig;
++	short                   pad;
++	sigset50_t              p_sig;          /* signals pending to this process */
++	sigset50_t              p_sigmask;      /* current signal mask */
++	sigset50_t              p_sigignore;    /* signals being ignored */
++	sigset50_t              p_sigcatch;     /* signals being caught by user */
++
++	caddr50_t               p_wchan;        /* event process is awaiting */
++
++
++/* 1.4 - descriptor management (for shared library version) */
++	struct file50           *u_ofile[NOFILE50];       /* file structures for open files */
++	char                    u_pofile[NOFILE50];       /* per-process flags of open files */
++	int                     u_lastfile;     /* high-water mark of u_ofile */
++	short                   u_cmask;        /* mask for file creation */
++
++/* 1.5 - timing and statistics */
++	struct rusage50         u_ru;           /* stats for this proc */
++	struct rusage50         u_cru;          /* sum of stats for reaped children */
++	struct itimerval50      u_timer[3];
++	struct timeval50        u_start;
++	struct utimenode50      u_time;
++	short                   u_acflag;
++
++	struct uprof50 {                /* profile arguments */
++		short   *pr_base;       /* buffer base */
++		unsigned pr_size;       /* buffer size */
++		unsigned pr_off;        /* pc offset */
++		unsigned pr_scale;      /* pc scaling */
++	} u_prof;
++	unsigned                u_prof_last_pc; /* last function that called mcount() */
++
++/* 1.6 - resource controls */
++	struct rlimit50 u_rlimit[9];
++
++/* amiga specific stuff */
++	struct malloc_data50    u_md;
++
++	struct ixnode50         u_user_node;
++	struct Task             *u_task;
++	struct MsgPort          *u_sync_mp;     /* PA_SIGNAL message port */
++	struct timerequest      *u_time_req;
++	int                     *u_errno;
++	BPTR                    u_startup_cd;
++
++	int                     u_ringring;     /* used in sleep.c and usleep.c */
++
++	char                    ***u_environ;
++
++	/* used to handle AmigaOS signals. see SIGMSG  */
++	u_int                   u_lastrcvsig;
++	char                    u_sleep_sig;
++	char                    u_pipe_sig;
++
++	/* c-startup stuff */
++	jmp_buf50               u_jmp_buf;
++	char                    *u_argline;
++	u_int                   u_arglinelen;
++	int                     u_expand_cmd_line;
++
++	void                    *u_atexit;
++
++	char                    u_getenv_buf[255];
++
++	UBYTE                   u_is_ppc;       /* is this task a native ppc one ? */
++	void                    (*u_oexcept_code)();
++	APTR                    u_otrap_code;
++	APTR                    u_ouser;
++	struct Interrupt        u_itimerint;    /* 1 interrupt / task */
++
++	int                     p_pgrp;         /* process group */
++	struct session50        *u_session;     /* session pointer */
++
++	char                    *u_strtok_last; /* moved with 37.8 */
++
++	/* vfork() support */
++	struct ixlist50         p_zombies;      /* list of death messages */
++	int                     p_zombie_sig;   /* signal to set when a child died */
++	struct Process          *p_pptr;        /* parent */
++	struct Process          *p_opptr;       /* old parent (used in ptrace) */
++	struct Process          *p_cptr;        /* last recently created child */
++	struct Process          *p_osptr;       /* older sybling */
++	struct Process          *p_ysptr;       /* younger sybling */
++	void                    *p_vfork_msg;
++
++	void                    *u_segs;        /* execve stores the SegList here */
++	u_long                  u_start_pc;     /* start and end addresses */
++	u_long                  u_end_pc;       /* of the code hunk */
++	u_long                  u_oexcept_sigs;
++
++	/* stdio support comes here */
++	char                    u_tmpnam_bu[1024]; /* quite large.. */
++	u_long                  u_tmpcount;
++	struct glue50           u_sglue;
++	/* the 3 `standard' FILE pointers (!) are here */
++	void                    *u_sF[3];
++
++	/* vfork() support #2 */
++	void                    *u_save_sp;     /* when vfork'd, this is the `real' sp */
++	jmp_buf50               u_vfork_frame;  /* for the parent in vfork () */
++#ifdef __PPC__
++	u_int                   u_mini_stack[4000]; /* 16K stack while in vfork () */
++	u_char                  u_mini_stack_pad[15]; /* align pad area */
++#else
++	u_int                   u_mini_stack[1000]; /* 4K stack while in vfork () */
++#endif
++	/* stack watcher. When usp < u_red_zone && ix.ix_watch_stack -> SIGSEGV */
++	void                    *u_red_zone;
++
++	/* base relative support. This even works for pure programs ! */
++	u_int                   u_a4;
++
++	/* currently there's just 1, meaning don't trace me */
++	u_int                   u_trace_flags;
++
++	/* this is for getmntinfo() */
++	void                    *u_mntbuf;
++	int                     u_mntsize;
++	long                    u_bufsize;
++
++	/* this is for getmntinfo64() */
++	void                    *u_mntbuf64;
++	int                     u_mntsize64;
++	long                    u_bufsize64;
++
++	/* this is for SIGWINCH support. */
++	struct IOStdReq         *u_idev_req;
++	struct Window           *u_window;      /* the watched window */
++	struct Interrupt        u_idev_int;
++
++	/* for `ps' (or dump as it's called for now.. ) */
++	char                    *p_wmesg;
++
++	/* new support for `real' process groups, control ttys etc.. */
++	struct user             *p_pgrpnxt;
++	void                    *p_pgrpptr;
++	struct Process          *p_exec_proc;   /* to get back to struct Process */
++
++	/* to be able to switch memory lists on the fly, as required when vfork'd
++	   processes are supposed to allocate memory from their parents pool until
++	   they detach. */
++	struct malloc_data50    *u_mdp;
++
++	/* data needed for network support */
++	struct Library          *u_ixnetbase;
++	void                    *u_ixnet;
++	int                     *u_h_errno;
++
++	/* ptrace() and kern_sig.c:stopped_process_handler() interface.  */
++	void                    *u_regs;
++	void                    *u_fpregs;
++	int                     u_mask_state;
++
++	/* strftime() globals */
++	size_t                  u_gsize;
++	char                    *u_pt;
++
++	/* putenv() global */
++	int                     u_env_alloced;
++
++	/* rand() global */
++	u_long                  u_rand_next;
++
++	/* stuff for stackextend */
++#ifdef __MORPHOS__
++	void                    *u_68k_tc_splower;  /* original entries of task structure */
++	void                    *u_68k_tc_spupper;  /* to restore them at exit */
++	void                    *u_68k_org_lower;   /* original stackborders */
++	void                    *u_68k_org_upper;
++	void                    **u_68k_stk_limit;  /* pointer to limit variable */
++	unsigned long           u_68k_stk_argbt;    /* Maximum size of arguments */
++	void                    *u_68k_stk_used;    /* used stackframes */
++	void                    *u_68k_stk_spare;   /* spare stackframes */
++	unsigned long           u_68k_stk_current;  /* current stack size */
++	unsigned long           u_68k_stk_max;      /* maximum stack size so far */
++
++	void                    *u_ppc_tc_splower;  /* original entries of task structure */
++	void                    *u_ppc_tc_spupper;  /* to restore them at exit */
++	void                    *u_ppc_org_lower;   /* original stackborders */
++	void                    *u_ppc_org_upper;
++	void                    **u_ppc_stk_limit;  /* pointer to limit variable */
++	unsigned long           u_ppc_stk_argbt;    /* Maximum size of arguments */
++	void                    *u_ppc_stk_used;    /* used stackframes */
++	void                    *u_ppc_stk_spare;   /* spare stackframes */
++	unsigned long           u_ppc_stk_current;  /* current stack size */
++	unsigned long           u_ppc_stk_max;      /* maximum stack size so far */
++#else
++	void                    *u_tc_splower;  /* original entries of task structure */
++	void                    *u_tc_spupper;  /* to restore them at exit */
++	void                    *u_org_lower;   /* original stackborders */
++	void                    *u_org_upper;
++	void                    **u_stk_limit;  /* pointer to limit variable */
++	unsigned long           u_stk_argbt;    /* Maximum size of arguments */
++	void                    *u_stk_used;    /* used stackframes */
++	void                    *u_stk_spare;   /* spare stackframes */
++	unsigned long           u_stk_current;  /* current stack size */
++	unsigned long           u_stk_max;      /* maximum stack size so far */
++#endif
++	char u_root_directory[1024];            /* for chroot() */
++	short                   u_is_root;      /* current directory is root */
++
++	/* stuff for muFS support */
++	void                    *u_UserInfo;    /* private muUserInfo to use */
++	void                    *u_GroupInfo;   /* private muGroupInfo to use */
++	void                    *u_fileUserInfo;    /* private muUserInfo for database ops */
++	void                    *u_fileGroupInfo;   /* private muGroupInfo for database ops */
++	BOOL                    u_groupfileopen;    /* dummy for emulation */
++	BOOL                    u_passwdfileopen;   /* dummy for emulation */
++	struct passwd50         u_passwd;       /* static buffer to hold the data */
++	struct group50          u_group;        /* ditto */
++
++	void                    *u_grp_fp;      /* File pointer to the groups file */
++	int                     u_grp_stayopen; /* TRUE if group file should stay open */
++	char                    **u_members;    /* array of group members */
++	char                    *u_grp_line;    /* buffer for reading a line from the group file */
++
++	/* Support for ixnet functions */
++	void                    *u_serv_fp;     /* File pointer to services file */
++	char                    *u_serv_line;   /* buffer for reading a line from the services file */
++	struct servent50        u_serv;
++	char                    **u_serv_aliases;
++	int                     u_serv_stayopen;
++
++	void                    *u_proto_fp;    /* File pointer to protocol file */
++	char                    *u_proto_line;
++	struct protoent50       u_proto;
++	char                    **u_proto_aliases;
++	int                     u_proto_stayopen;
++
++	void                    *u_net_fp;      /* File pointer to network file */
++	char                    *u_net_line;
++	struct netent50         u_net;
++	char                    **u_net_aliases;
++	int                     u_net_stayopen;
++
++	int                     u_logname_valid;
++	char                    u_logname[12 + 1];
++	char                    u_logname_buf[12 + 1];
++
++	char                    u_ntoa_buf[18]; /* used by inet_ntoa */
++
++	/* resolv state structure */
++	void                    *u_res;
++	int                     *u_res_socket;
++
++	/* logfile handling */
++	int                     u_LogFile;      /* fd for log */
++	int                     u_LogStat;      /* status bits, set by openlog() */
++	char                    *u_LogTag;      /* string to tag the entry with */
++	int                     u_LogFacility;  /* default facility code */
++	int                     u_LogMask;      /* mask of priorities to be logged */
++
++	int                     u_setuid;       /* used for setuid() - have to remember
++						 * to log out */
++	/* mmap handling */
++	void                    *u_mmap;
++
++	struct MsgPort          *u_select_mp;   /* PA_SIGNAL message port */
++
++	/* strtod support */
++	void                    *u_freelist[16];
++	void                    *u_p5s;
++	void                    *u_result;
++	int                     u_result_k;
++
++	/* popen support */
++	pid50_t                *u_popen_pids;
++
++	/* uid / gid support */
++
++	void                    *u_pwd_fp;      /* File pointer to the passwd file */
++	int                     u_pwd_stayopen; /* TRUE if passwd file should stay open */
++	char                    *u_pwd_line;    /* buffer for reading a line from the passwd file */
++
++	char                    u_getpass_buf[128 + 1];
++
++	char                    u_crypt_buf[21];
++
++	uid50_t                 u_nextuid;
++	uid50_t                 u_nextgid;
++
++	uid50_t                 u_ruid;
++	uid50_t                 u_euid;
++	gid50_t                 u_rgid;
++	gid50_t                 u_egid;
++	int                     u_ngroups;
++	int                     u_grouplist[1];
++};
++#define STRC50    0x010
++#define SFREEA450 0x100
++
++#define SIG_DEF int __omask;
++#define SIG_LOCK() __omask = sigsetmask(~0)
++#define SIG_UNLOCK() sigsetmask(__omask)
++#else
++#define SIG_DEF
++#define SIG_LOCK() do {} while(0)
++#define SIG_UNLOCK() do {} while(0)
++#endif
++
++#define _MOS_DEBUG 0
++#if _MOS_DEBUG
++#define _D(__f, ...) NewRawDoFmt(__f, (APTR (*)(APTR, UBYTE)) RAWFMTFUNC_SERIAL, NULL, __VA_ARGS__)
++#else
++#define _D(__f, ...) do { } while(0)
++#endif
++
++/*
++ * Internal
++ */
++
++typedef struct {
++	struct MinNode key_node;
++	void (*key_dtor) (void *);
++	struct SignalSemaphore key_sem;
++	struct AVLNode *key_tree;
++} __internal_key_t;
++
++typedef struct {
++	struct AVLNode node;
++	ULONG owner; /* pid_t */
++	void *val;
++} __internal_key_node_t;
++
++/* Nice hack to avoid a constructor */
++static struct SignalSemaphore keysema = {
++	{NULL, NULL, NT_SIGNALSEM, 0, NULL}, 0, {(struct MinNode *) &keysema.ss_WaitQueue.mlh_Tail, NULL, (struct MinNode *) &keysema.ss_WaitQueue.mlh_Head}, {{NULL, NULL}, NULL}, NULL, -1
++};
++static struct MinList keylist = {
++	(struct MinNode *) &keylist.mlh_Tail, NULL, (struct MinNode *) &keylist.mlh_Head
++};
++#if USE_THREAD_SAFETYNET
++static struct MinList threadlist = {
++	(struct MinNode *) &threadlist.mlh_Tail, NULL, (struct MinNode *) &threadlist.mlh_Head
++};
++#endif
++
++typedef struct {
++	union {
++		struct SignalSemaphore	__sem;
++		char _priv[60]; /* __gthread_mutex_t */
++	} u;
++	int incond;
++} __internal_mutex_t;
++
++typedef struct {
++	union {
++		struct SignalSemaphore __sem;
++		char _priv[60];
++	} u1;
++	union {
++		struct MinList __waiters;
++		void *_priv[3];
++	} u2;
++} __internal_cond_t;
++
++struct taskmsg {
++	struct Message m;
++	struct MsgPort deathport;
++	struct MemList *ml;
++	struct MinNode node;
++#if USE_THREAD_SAFETYNET
++	struct Task *task;
++#endif
++#ifdef __ixemul
++	struct user50 *parent;
++	int sigmask;
++	struct Message syncmsg;
++#endif
++	void *(*func)(void *);
++	void *args;
++	char name[1];
++};
++
++/*
++ * if task is non-NULL must be called within Forbid()
++ */
++static struct taskmsg *GetThreadInternal(struct Task *task)
++{
++	struct taskmsg *msg = NULL;
++	NewGetTaskAttrs(task, &msg, sizeof(msg), TASKINFOTYPE_STARTUPMSG, TAG_DONE);
++	if(msg == NULL || msg->m.mn_Length != sizeof(*msg) ||
++	   msg->m.mn_Node.ln_Name != msg->name) {
++		msg = NULL;
++	}
++	return msg;
++}
++
++static inline void newlist(struct MinList *l)
++{
++	l->mlh_TailPred = (struct MinNode *) l;
++	l->mlh_Tail = (struct MinNode *) NULL;
++	l->mlh_Head = (struct MinNode *) &l->mlh_Tail;
++}
++static inline void addtail(struct MinList *l, struct MinNode *n)
++{
++	struct MinNode *opn;
++	opn = l->mlh_TailPred;
++	n->mln_Succ = (struct MinNode *) &l->mlh_Tail;
++	n->mln_Pred = opn;
++	opn->mln_Succ = n;
++	l->mlh_TailPred = n;
++}
++static inline void noderemove(struct MinNode *n)
++{
++	struct MinNode *pn, *sn;
++	pn = n->mln_Pred;
++	sn = n->mln_Succ;
++	pn->mln_Succ = sn;
++	sn->mln_Pred = pn;
++}
++
++static inline int SemaphoreIsInvalid(struct SignalSemaphore *sem)
++{
++	return sem->ss_Link.ln_Type != NT_SIGNALSEM || sem->ss_WaitQueue.mlh_Tail != NULL;
++}
++
++/* __gthr_morphos_enable */
++__ATTR_WEAK long __gthr_morphos_enable = 1;
++
++int __gthr_morphos_active_p (void)
++{
++	return __gthr_morphos_enable;
++}
++
++/* __gthr_morphos_once */
++int __gthr_morphos_once (__gthread_once_t *__once, void (*__func) (void))
++{
++	SIG_DEF
++	_D("<%s/%s():%lu> __gthread_once_t == 0x%p, __func == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __once, __func);
++
++	if(__once == NULL || __func == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	_D("<%s/%s():%lu> __once->done = %d, __once->busy = %d\n", __FILE__, __FUNCTION__, __LINE__, __once->done, __once->busy);
++
++	if(__once->done)
++		return 0;
++
++	while(ATOMIC_STORE((LONG *) &__once->busy, 1)) {
++#ifdef __ixemul
++		SIG_LOCK();
++		usleep(20000); /* 50 times per second */
++		SIG_UNLOCK();
++#else
++		void (*oldhandler)(int) = signal(SIGINT, (void (*)(int)) SIG_IGN);
++		usleep(20000); /* 50 times per second */
++		signal(SIGINT, oldhandler);
++#endif
++	}
++
++	if(!__once->done) {
++		_D("<%s/%s():%lu> -> __func()\n", __FILE__, __FUNCTION__, __LINE__);
++		(*__func) ();
++		_D("<%s/%s():%lu> __once->done -> TRUE\n", __FILE__, __FUNCTION__, __LINE__);
++		__once->done = 1;
++	}
++	(void)ATOMIC_STORE((LONG *) &__once->busy, 0);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++	return 0;
++}
++
++/* __gthr_morphos_once_unlock */
++void __gthr_morphos_once_unlock (__gthread_once_t *__once)
++{
++	(void)ATOMIC_STORE((LONG *) &__once->busy, 0);
++}
++
++/* __gthr_morphos_key_create */
++int __gthr_morphos_key_create (__gthread_key_t *__key, void (*__func) (void *))
++{
++	__internal_key_t *key_internal;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_key_t == 0x%p, __func == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __key, __func);
++
++	if(__key == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	if (LIB_MINVER((struct Library *) EXEC_BASE_NAME, 51, 46)) {
++		ULONG index;
++		SIG_LOCK();
++		index = TLSAlloc(__func ? TLSTAG_DESTRUCTOR : TAG_IGNORE, (IPTR) __func, TAG_DONE);
++		SIG_UNLOCK();
++		if (index == TLS_INVALID_INDEX)
++			return ENOMEM;
++		*__key = (__gthread_key_t) index;
++		return 0;
++	}
++
++	key_internal = (__internal_key_t *) malloc(sizeof(*key_internal));
++	if(key_internal == NULL) {
++		_D("<%s/%s():%lu> == ENOMEM\n", __FILE__, __FUNCTION__, __LINE__);
++		return ENOMEM;
++	}
++
++	/* Setup key */
++	key_internal->key_dtor = __func;
++	key_internal->key_tree = 0;
++	memset(&key_internal->key_sem, 0, sizeof(key_internal->key_sem));
++	SIG_LOCK();
++	InitSemaphore(&key_internal->key_sem);
++
++	ObtainSemaphore(&keysema);
++	addtail(&keylist, &key_internal->key_node);
++	ReleaseSemaphore(&keysema);
++
++	_D("<%s/%s():%lu> key_internal[key_dtor == 0x%p, &key_tree == 0x%p, key_sem == 0x%p]\n", __FILE__, __FUNCTION__, __LINE__, key_internal->key_dtor, &key_internal->key_tree, &key_internal->key_sem);
++
++	*__key = (__gthread_key_t) key_internal;
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++/* __gthr_morphos_key_delete */
++int __gthr_morphos_key_delete (__gthread_key_t __key)
++{
++	__internal_key_t *key_internal = (__internal_key_t *) __key;
++	__internal_key_node_t *key_node, *next_node;
++#if !USE_THREAD_ONLY_SETSPECIFIC
++	ULONG __pid = 0;
++	int is_thread;
++#endif
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_key_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __key);
++
++	if (LIB_MINVER((struct Library *) EXEC_BASE_NAME, 51, 46)) {
++		LONG rc;
++		SIG_LOCK();
++		rc = TLSFree((ULONG) __key);
++		SIG_UNLOCK();
++		return rc ? 0 : EINVAL;
++	}
++
++	if(key_internal == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++#if !USE_THREAD_ONLY_SETSPECIFIC
++	is_thread = GetThreadInternal(NULL) != NULL;
++	NewGetTaskAttrsA(NULL, &__pid, sizeof(__pid), TASKINFOTYPE_PID, NULL);
++#endif
++
++	ObtainSemaphore(&keysema);
++	noderemove(&key_internal->key_node);
++	ReleaseSemaphore(&keysema);
++
++	/* Free all the nodes - note that it is up to the application to make sure
++	   there no are races accessing the key at this stage. */
++
++	for(key_node = (__internal_key_node_t *) AVL_FindFirstNode(key_internal->key_tree);
++	    key_node;
++	    key_node = next_node) {
++		next_node = (__internal_key_node_t *) AVL_FindNextNodeByAddress(&key_node->node);
++
++#if !USE_THREAD_ONLY_SETSPECIFIC
++		/* Call the destructor if the delete is called by the non-thread
++		   owner of this specific node. */
++		if(!is_thread && key_internal->key_dtor && key_node->val && key_node->owner == __pid) {
++			void *oldvalue = key_node->val;
++			key_node->val = NULL;
++			key_internal->key_dtor(oldvalue);
++		}
++#endif
++		/* free resources associated with the node */
++		free(key_node);
++	}
++
++	free(key_internal);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++	SIG_UNLOCK();
++
++	return 0;
++}
++
++static LONG ownernodecomparfunc(struct AVLNode *avlnode1, struct AVLNode *avlnode2)
++{
++	const __internal_key_node_t *key_node1 = (const __internal_key_node_t *) avlnode1;
++	const __internal_key_node_t *key_node2 = (const __internal_key_node_t *) avlnode2;
++	return (LONG) ((IPTR) key_node1->owner - (IPTR) key_node2->owner);
++}
++static LONG ownerkeycomparfunc(struct AVLNode *avlnode1, AVLKey avlkey)
++{
++	const __internal_key_node_t *key_node1 = (const __internal_key_node_t *) avlnode1;
++	return (LONG) ((IPTR) key_node1->owner - (IPTR) avlkey);
++}
++
++static __internal_key_node_t *__gthr_morphos_find_specific_node(__internal_key_t *key_internal, ULONG pid)
++{
++	__internal_key_node_t *key_node;
++	key_node = (__internal_key_node_t *) AVL_FindNode(key_internal->key_tree, (AVLKey) pid, (AVLKEYCOMP) ownerkeycomparfunc);
++	_D("<%s/%s():%lu> == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, key_node);
++	return key_node;
++}
++
++#define GTHREAD_DESTRUCTOR_ITERATIONS 4
++
++static void thread_cleanup(void)
++{
++	ULONG __pid = 0;
++	int foundkey, i;
++	SIG_DEF
++
++	SIG_LOCK();
++
++	NewGetTaskAttrsA(NULL, &__pid, sizeof(__pid), TASKINFOTYPE_PID, NULL);
++
++	/* Destroy all non-NULL key values for this thread.
++	   Since the destructors can set the keys themselves, we have to
++	   do multiple iterations. */
++
++	for(foundkey = 1, i = 0; foundkey && i < GTHREAD_DESTRUCTOR_ITERATIONS; i++) {
++		__internal_key_t *key_internal;
++		foundkey = 0;
++		ObtainSemaphore(&keysema);
++		for(key_internal = (__internal_key_t *) keylist.mlh_Head;
++		    key_internal->key_node.mln_Succ;
++		    key_internal = (__internal_key_t *) key_internal->key_node.mln_Succ) {
++			__internal_key_node_t *key_node;
++
++			ObtainSemaphore(&key_internal->key_sem);
++			key_node = __gthr_morphos_find_specific_node(key_internal, __pid);
++			if(key_node) {
++				if(key_internal->key_dtor && key_node->val) {
++					void *oldvalue = key_node->val;
++					key_node->val = NULL;
++					key_internal->key_dtor(oldvalue);
++					foundkey = 1;
++				}
++
++				/* unlink the node from the tree */
++				AVL_RemNodeByAddress(&key_internal->key_tree, &key_node->node);
++				/* free resources associated with the node */
++				free(key_node);
++			}
++
++			/* You might think that it would make sense to try to purge
++			   keys that become "empty" here. However, this would break
++			   calls to __gthread_key_delete. So don't do it. */
++			ReleaseSemaphore(&key_internal->key_sem);
++		}
++		ReleaseSemaphore(&keysema);
++	}
++
++	SIG_UNLOCK();
++}
++
++/* __gthr_morphos_getspecific */
++void *__gthr_morphos_getspecific (__gthread_key_t __key)
++{
++	__internal_key_t *key_internal = (__internal_key_t *) __key;
++	__internal_key_node_t *key_node;
++	ULONG __pid = 0;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_key_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __key);
++
++	if (LIB_MINVER((struct Library *) EXEC_BASE_NAME, 51, 46)) {
++		/* NOTE: TLSGetValue doesn't require signal locking */
++		return (void *) TLSGetValue((ULONG) __key);
++	}
++
++	if(key_internal == NULL) {
++		_D("<%s/%s():%lu> == NULL\n", __FILE__, __FUNCTION__, __LINE__);
++		return NULL;
++	}
++
++	SIG_LOCK();
++
++	NewGetTaskAttrsA(NULL, &__pid, sizeof(__pid), TASKINFOTYPE_PID, NULL);
++
++	ObtainSemaphoreShared(&key_internal->key_sem);
++	key_node = __gthr_morphos_find_specific_node(key_internal, __pid);
++	ReleaseSemaphore(&key_internal->key_sem);
++
++	_D("<%s/%s():%lu> == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, key_node ? key_node->val : NULL);
++
++	SIG_UNLOCK();
++
++	return key_node ? CONST_CAST(void *, key_node->val) : NULL;
++}
++
++/* __gthr_morphos_setspecific */
++int __gthr_morphos_setspecific (__gthread_key_t __key, const void *__v)
++{
++	__internal_key_t *key_internal = (__internal_key_t *) __key;
++	__internal_key_node_t *key_node;
++	ULONG __pid = 0;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_key_t == 0x%p, __v == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __key, __v);
++
++	if (LIB_MINVER((struct Library *) EXEC_BASE_NAME, 51, 46)) {
++		int rc;
++		SIG_LOCK();
++		rc = TLSSetValue((ULONG) __key, (APTR) __v) ? 0 : ENOMEM;
++		SIG_UNLOCK();
++		return rc;
++	}
++
++	/* Illegal for keys already destroyed by __gthread_key_delete */
++	if(key_internal == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++#if USE_THREAD_ONLY_SETSPECIFIC
++	if(GetThreadInternal(NULL) == NULL) {
++		/* Tried to setspecific for not a thread. */
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		SIG_UNLOCK();
++		return EINVAL;
++	}
++#endif
++
++	NewGetTaskAttrsA(NULL, &__pid, sizeof(__pid), TASKINFOTYPE_PID, NULL);
++
++	ObtainSemaphore(&key_internal->key_sem);
++
++	key_node = __gthr_morphos_find_specific_node(key_internal, __pid);
++
++	if(key_node != NULL) {
++		/* Update existing node */
++		_D("<%s/%s():%lu> key_node->val 0x%p -> 0x%p\n", __FILE__, __FUNCTION__, __LINE__, key_node->val, __v);
++		key_node->val = (void *) __v;
++
++		ReleaseSemaphore(&key_internal->key_sem);
++
++		_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++		SIG_UNLOCK();
++		return 0;
++	}
++
++	/* Create a new node */
++	key_node = (__internal_key_node_t *) malloc(sizeof(*key_node));
++
++	if(key_node == NULL) {
++		ReleaseSemaphore(&key_internal->key_sem);
++
++		_D("<%s/%s():%lu> == ENOMEM\n", __FILE__, __FUNCTION__, __LINE__);
++
++		SIG_UNLOCK();
++		return ENOMEM;
++	}
++
++	key_node->owner = __pid;
++	key_node->val = (void *) __v;
++
++	_D("<%s/%s():%lu> key_node->val == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, key_node->val);
++	AVL_AddNode(&key_internal->key_tree, &key_node->node, (AVLNODECOMP) ownernodecomparfunc);
++
++	ReleaseSemaphore(&key_internal->key_sem);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++/* __gthr_morphos_mutex_init_function */
++void __gthr_morphos_mutex_init_function (__gthread_mutex_t *_gthr_mutex)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		return;
++	}
++
++	SIG_LOCK();
++	InitSemaphore(&__mutex->u.__sem);
++	SIG_UNLOCK();
++
++	__mutex->incond = 0;
++}
++
++/* __gthr_morphos_mutex_destroy */
++int __gthr_morphos_mutex_destroy (__gthread_mutex_t *_gthr_mutex)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	if(SemaphoreIsInvalid(&__mutex->u.__sem)) {
++		/* static mutex not yet initialized, so do nothing */
++		return 0;
++	}
++
++	SIG_LOCK();
++
++	if(!AttemptSemaphore(&__mutex->u.__sem)) {
++		_D("<%s/%s():%lu> == EBUSY\n", __FILE__, __FUNCTION__, __LINE__);
++
++		SIG_UNLOCK();
++		return EBUSY;
++	}
++
++	if(__mutex->incond) {
++		_D("<%s/%s():%lu> == EBUSY\n", __FILE__, __FUNCTION__, __LINE__);
++		ReleaseSemaphore(&__mutex->u.__sem);
++
++		SIG_UNLOCK();
++		return EBUSY;
++        }
++
++	memset(&__mutex->u.__sem, 0, sizeof(__mutex->u.__sem));
++	__gthr_morphos_mutex_init_function(_gthr_mutex);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++static int __gthr_morphos_mutex_lock_generic (__gthread_mutex_t *_gthr_mutex, int recursive)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++
++	}
++
++	SIG_LOCK();
++
++	/* initialize static mutex */
++	Forbid();
++	if(SemaphoreIsInvalid(&__mutex->u.__sem))
++		__gthr_morphos_mutex_init_function(_gthr_mutex);
++	Permit();
++
++	ObtainSemaphore(&__mutex->u.__sem);
++
++	if(!recursive && __mutex->u.__sem.ss_NestCount > 1) {
++		ReleaseSemaphore(&__mutex->u.__sem);
++		_D("<%s/%s():%lu> == EDEADLK\n", __FILE__, __FUNCTION__, __LINE__);
++		SIG_UNLOCK();
++		return EDEADLK;
++	}
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++/* __gthr_morphos_mutex_lock */
++int __gthr_morphos_mutex_lock (__gthread_mutex_t *_gthr_mutex)
++{
++	return __gthr_morphos_mutex_lock_generic (_gthr_mutex, 0);
++}
++
++static int __gthr_morphos_mutex_trylock_generic (__gthread_mutex_t *_gthr_mutex, int recursive)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	LONG rc;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++	/* initialize static mutex */
++	Forbid();
++	if(SemaphoreIsInvalid(&__mutex->u.__sem))
++		__gthr_morphos_mutex_init_function(_gthr_mutex);
++	Permit();
++
++	rc = AttemptSemaphore(&__mutex->u.__sem);
++
++	if(rc) {
++		if(!recursive && __mutex->u.__sem.ss_NestCount > 1) {
++			ReleaseSemaphore(&__mutex->u.__sem);
++			_D("<%s/%s():%lu> == EDEADLK\n", __FILE__, __FUNCTION__, __LINE__);
++			SIG_UNLOCK();
++			return EDEADLK;
++		}
++	} else {
++		_D("<%s/%s():%lu> == EBUSY\n", __FILE__, __FUNCTION__, __LINE__);
++		SIG_UNLOCK();
++		return EBUSY;
++	}
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++	SIG_UNLOCK();
++	return 0;
++}
++
++/* __gthr_morphos_mutex_trylock */
++int __gthr_morphos_mutex_trylock (__gthread_mutex_t *__mutex)
++{
++	return __gthr_morphos_mutex_trylock_generic (__mutex, 0);
++}
++
++/* __gthr_morphos_mutex_unlock */
++int __gthr_morphos_mutex_unlock (__gthread_mutex_t *_gthr_mutex)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++	/* initialize static mutex */
++	Forbid();
++	if(SemaphoreIsInvalid(&__mutex->u.__sem))
++		__gthr_morphos_mutex_init_function(_gthr_mutex);
++	Permit();
++
++	if(__mutex->u.__sem.ss_Owner != FindTask(NULL)) {
++		_D("<%s/%s():%lu> == EPERM\n", __FILE__, __FUNCTION__, __LINE__);
++		SIG_UNLOCK();
++		return EPERM;
++	}
++
++	ReleaseSemaphore(&__mutex->u.__sem);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++
++static inline void UNIXTIME_TO_AMIGATIME(const struct TimeVal *from, struct TimeVal *to)
++{
++	const ULONG unix_to_amiga = (8 * 365 + 2) * 24 * 60 * 60;
++
++	if(from->tv_secs >= unix_to_amiga) {
++		to->tv_secs = from->tv_secs - unix_to_amiga;
++		to->tv_micro = from->tv_micro;
++	} else {
++		to->tv_secs = 0;
++		to->tv_micro = 0;
++	}
++}
++
++static int __gthr_morphos_mutex_timedlock_generic (__gthread_mutex_t *_gthr_mutex,
++                                                   const __gthread_time_t *abs_timeout,
++                                                   int recursive)
++{
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	struct MsgPort mp;
++	struct SemaphoreMessage bidmsg;
++	struct timerequest tr;
++	struct Message *msg;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_mutex_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __mutex);
++
++	if(__mutex == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++	/* initialize static mutex */
++	Forbid();
++	if(SemaphoreIsInvalid(&__mutex->u.__sem))
++		__gthr_morphos_mutex_init_function(_gthr_mutex);
++	Permit();
++
++	if(AttemptSemaphore(&__mutex->u.__sem)) {
++		if(!recursive && __mutex->u.__sem.ss_NestCount > 1) {
++			ReleaseSemaphore(&__mutex->u.__sem);
++			SIG_UNLOCK();
++			return EDEADLK;
++		}
++		SIG_UNLOCK();
++		return 0;
++	}
++
++	if(abs_timeout->tv_sec < 0 || abs_timeout->tv_nsec < 0 || abs_timeout->tv_nsec > 999999999) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++
++		SIG_UNLOCK();
++		return EINVAL;
++	}
++
++	mp.mp_Node.ln_Type = NT_MSGPORT;
++	mp.mp_Flags = PA_SIGNAL;
++	mp.mp_SigBit = AllocSignal(-1);
++	if((BYTE)mp.mp_SigBit == -1) {
++		mp.mp_SigBit = SIGBREAKB_CTRL_F;
++		SetSignal(1UL << mp.mp_SigBit, 0);
++	}
++	mp.mp_SigTask = FindTask(NULL);
++	newlist((struct MinList *) &mp.mp_MsgList);
++
++	tr.tr_node.io_Message.mn_Node.ln_Type = NT_REPLYMSG;
++	tr.tr_node.io_Message.mn_ReplyPort = &mp;
++	tr.tr_node.io_Message.mn_Length = sizeof(tr);
++
++	if(OpenDevice(TIMERNAME, UNIT_WAITUTC, (APTR) &tr, 0) != 0) {
++		if(mp.mp_SigBit != SIGBREAKB_CTRL_F)
++			FreeSignal(mp.mp_SigBit);
++
++		SIG_UNLOCK();
++		return ENOTSUP;
++	}
++
++	bidmsg.ssm_Message.mn_Node.ln_Type = NT_MESSAGE;
++	bidmsg.ssm_Message.mn_Node.ln_Name = (APTR) 0; /* exclusive lock */
++	bidmsg.ssm_Message.mn_ReplyPort = &mp;
++	bidmsg.ssm_Message.mn_Length = sizeof(bidmsg);
++	Procure(&__mutex->u.__sem, &bidmsg);
++
++	tr.tr_node.io_Command = TR_ADDREQUEST;
++	tr.tr_time.tv_secs  = abs_timeout->tv_sec;
++	tr.tr_time.tv_micro = abs_timeout->tv_nsec / 1000;
++	UNIXTIME_TO_AMIGATIME(&tr.tr_time, &tr.tr_time);
++	SendIO((APTR) &tr);
++
++	msg = WaitPort(&mp);
++
++	if(!CheckIO((APTR) &tr)) {
++		AbortIO((APTR) &tr);
++		WaitIO((APTR) &tr);
++	}
++
++	CloseDevice((APTR) &tr);
++
++	if(msg == &tr.tr_node.io_Message)
++		Vacate(&__mutex->u.__sem, &bidmsg);
++
++	if((BYTE)mp.mp_SigBit != SIGBREAKB_CTRL_F)
++		FreeSignal(mp.mp_SigBit);
++
++	SIG_UNLOCK();
++
++	return msg == &tr.tr_node.io_Message ? ETIMEDOUT : 0;
++}
++
++/* __gthr_morphos_mutex_timedlock */
++int __gthr_morphos_mutex_timedlock (__gthread_mutex_t *__mutex,
++                                    const __gthread_time_t *__abs_timeout)
++{
++	return __gthr_morphos_mutex_timedlock_generic (__mutex, __abs_timeout, 0);
++}
++
++/* __gthr_morphos_recursive_mutex_init_function */
++void __gthr_morphos_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex)
++{
++	__gthr_morphos_mutex_init_function (__mutex);
++}
++
++/* __gthr_morphos_recursive_mutex_lock */
++int __gthr_morphos_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
++{
++	return __gthr_morphos_mutex_lock_generic (__mutex, 1);
++}
++
++/* __gthr_morphos_recursive_mutex_trylock */
++int __gthr_morphos_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex)
++{
++	return __gthr_morphos_mutex_trylock_generic (__mutex, 1);
++}
++
++/* __gthr_morphos_recursive_mutex_unlock */
++int __gthr_morphos_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex)
++{
++	return __gthr_morphos_mutex_unlock (__mutex);
++}
++
++/* __gthr_morphos_recursive_mutex_timedlock */
++int __gthr_morphos_recursive_mutex_timedlock (__gthread_recursive_mutex_t *__mutex,
++                                              const __gthread_time_t *__abs_time)
++{
++	return __gthr_morphos_mutex_timedlock_generic (__mutex, __abs_time, 1);
++}
++
++/* Thread */
++
++#ifdef __ixemul
++
++static void safe_ix_user_release_sockets(struct user50 *u)
++{
++	if (LIB_MINVER((struct Library *)u->u_ixbase, 50, 18))
++	{
++		ix_user_release_sockets((struct user *) u);
++	}
++	else
++	{
++		int i;
++		for(i = 0; i < NOFILE50; i++)
++		{
++			if(u->u_ofile[i] && u->u_ofile[i]->f_type == DTYPE_SOCKET50)
++				u->u_ofile[i]->f_socket_id = ix_release_socket(i);
++		}
++	}
++}
++
++static int safe_ix_user_clone_parent(struct user50 *pu, struct user50 *mu)
++{
++	int a4_size;
++	int fd;
++	SIG_DEF
++
++	if (LIB_MINVER((struct Library *)mu->u_ixbase, 50, 18))
++	{
++		return ix_user_clone_parent((struct user *) pu, (struct user *) mu);
++	}
++
++	a4_size = pu->u_a4_pointers_size * 4;
++
++	mu->u_is_ppc = pu->u_is_ppc;
++
++	/* don't mess with process pointers for now */
++	mu->p_osptr = 0;
++	mu->p_ysptr = 0;
++	mu->p_pptr = 0;
++
++	SIG_LOCK();
++	Forbid();
++
++	/* inherit the session of our parent */
++	mu->u_session = pu->u_session;
++	if(mu->u_session)
++		mu->u_session->s_count++; /* and increase use count */
++
++	/* inherit the process group of our parent */
++	mu->p_pgrp = pu->p_pgrp;
++
++	/* inherit the uid/gid information from parent */
++	mu->u_ruid = pu->u_ruid;
++	mu->u_euid = pu->u_euid;
++	mu->u_rgid = pu->u_rgid;
++	mu->u_egid = pu->u_egid;
++
++	if((mu->u_ngroups = pu->u_ngroups))
++		bcopy((char *)pu->u_grouplist, (char *)mu->u_grouplist, pu->u_ngroups * sizeof(int));
++
++	if((mu->u_logname_valid = pu->u_logname_valid))
++		strcpy((char *)mu->u_logname, (char *)pu->u_logname);
++
++	/*shmfork(pu, mu);*/
++
++	/* borrow the variables of the parent */
++	mu->u_environ = pu->u_environ;
++	mu->u_errno = pu->u_errno;
++
++	/* tell malloc to use the parents malloc lists */
++	mu->u_mdp = pu->u_mdp;
++
++	/* and inherit several other things as well, upto not including u_md */
++	bcopy ((void *)&pu->u_a4_pointers_size, (void *)&mu->u_a4_pointers_size,
++               offsetof (struct user50, u_md) - offsetof (struct user50, u_a4_pointers_size));
++	bcopy ((char *)pu - a4_size, (char *)mu - a4_size, a4_size);
++
++	/* some things have been copied that should be reset */
++	mu->p_flag &= ~(SFREEA450 | STRC50);
++	mu->p_xstat = 0;
++	bzero ((void *)&mu->u_ru, sizeof (struct rusage50));
++	bzero ((void *)&mu->u_prof, sizeof (struct uprof50));
++	mu->u_prof_last_pc = 0;
++	bzero ((void *)&mu->u_cru, sizeof (struct rusage50));
++	bzero ((void *)&mu->u_timer[0], sizeof (struct itimerval50)); /* just the REAL timer! */
++	gettimeofday ((struct timeval *) & mu->u_start, 0);
++
++	/* and adjust the open count of each of the copied filedescriptors */
++	for(fd = 0; fd < NOFILE50; fd++)
++	{
++		if(!mu->u_ofile[fd])
++			continue;
++
++		/* obtain (and create a new fd) for INET sockets */
++		if(mu->u_ofile[fd]->f_type == DTYPE_SOCKET50)
++		{
++			int newfd, fd2;
++
++			/* Was this socket released? */
++			if(!mu->u_ofile[fd]->f_socket_id)
++				continue;
++
++			/* Yes, it was. So we now obtain a new socket from the underlying TCP/IP stack */
++			newfd = ix_obtain_socket(mu->u_ofile[fd]->f_socket_id,
++				mu->u_ofile[fd]->f_socket_domain,
++				mu->u_ofile[fd]->f_socket_type,
++				mu->u_ofile[fd]->f_socket_protocol);
++
++			mu->u_ofile[fd]->f_socket_id = 0;
++
++			if(newfd == -1)
++				continue;
++
++			/* Move the newly created fd to the old one.
++
++			   Tricky bit: we have to remember that for dupped sockets all file descriptors
++			   point to the same file structure: obtaining one released file descriptor will
++			   obtain them all. So we have to scan for file descriptors that point to the
++			   same file structure for which we just obtained the socket and copy the new
++			   file structure into the dupped file descriptors.
++
++			   Note that the newly created file structure has the field f_socket_id set to 0,
++			   so we won't come here again because of the if-statement above that tests whether
++			   the socket was released. */
++
++			/* scan the file descriptors */
++			for(fd2 = fd + 1; fd2 < NOFILE50; fd2++)
++			{
++				/* do they point to the same file structure? */
++				if(mu->u_ofile[fd] == mu->u_ofile[fd2])
++				{
++					/* in that case copy the newly obtained socket into this file descriptor
++					   and increase the open count */
++					mu->u_ofile[fd2] = mu->u_ofile[newfd];
++					mu->u_ofile[newfd]->f_count++;
++				}
++			}
++			/* and finally do the same for fd */
++			mu->u_ofile[fd] = mu->u_ofile[newfd];
++			mu->u_ofile[newfd] = 0;
++		}
++		else
++			mu->u_ofile[fd]->f_count++;
++	}
++
++	/* also copy u_segs, after all, the child will run initially in the
++	   same SegList as the parent. */
++	mu->u_segs = pu->u_segs;
++	mu->u_start_pc = pu->u_start_pc;
++	mu->u_end_pc = pu->u_end_pc;
++
++	mu->u_is_root = pu->u_is_root;
++	mu->u_a4 = pu->u_a4;
++
++	Permit();
++	SIG_UNLOCK();
++
++	return 0;
++}
++
++static void safe_ix_user_cleanup(struct user50 *mu)
++{
++	int i;
++
++	if (LIB_MINVER((struct Library *)mu->u_ixbase, 50, 18))
++	{
++		ix_user_cleanup((struct user *) mu);
++		return;
++	}
++
++	for(i = 0; i < NOFILE50; i++)
++		if(mu->u_ofile[i])
++			close(i);
++}
++#endif
++
++static void entryfunc(struct taskmsg *msg)
++{
++	struct Process *self = (struct Process *) FindTask(NULL);
++#ifdef __ixemul
++	struct MsgPort fakemp;
++	struct WBStartup wbmsg;
++	struct Library *ixbase;
++	struct user50 *mu;
++#endif
++	addtail((struct MinList *) &self->pr_Task.tc_MemEntry, (struct MinNode *) &msg->ml->ml_Node);
++
++#ifdef __ixemul
++	/* pr_CLI is NULL since we are a process, so ix_open will expect a wb message. Fake one. */
++	fakemp.mp_Node.ln_Type = NT_MSGPORT;
++	fakemp.mp_Flags = PA_IGNORE;
++	newlist((struct MinList *) &fakemp.mp_MsgList);
++	wbmsg.sm_Message.mn_Node.ln_Type = NT_MESSAGE;
++	wbmsg.sm_Message.mn_ReplyPort = &fakemp;
++	wbmsg.sm_Message.mn_Length = sizeof(wbmsg);
++	wbmsg.sm_Process = &self->pr_MsgPort;
++	wbmsg.sm_NumArgs = 0;
++	wbmsg.sm_ToolWindow = NULL;
++	wbmsg.sm_ArgList = 0;
++	PutMsg(&self->pr_MsgPort, &wbmsg.sm_Message);
++	ixbase = OpenLibrary("ixemul.library", 0);
++
++#if !USE_THREAD_SAFETYNET
++#warning "This code is unsafe unless if USE_THREAD_SAFETYNET is defined"
++#endif
++	mu = (struct user50 *) ix_get_long(IXID_USER, 0);
++	safe_ix_user_clone_parent(msg->parent, mu);
++	ReplyMsg(&msg->syncmsg);
++	sigsetmask(msg->sigmask);
++#endif
++
++	msg->func(msg->args);
++
++#ifdef __ixemul
++	sigsetmask(~0);
++#endif
++
++	/* free keys associated to this thread */
++	if (LIB_MINVER((struct Library *) EXEC_BASE_NAME, 51, 46))
++		TLSCallDestructors(NULL); /* NOTE: Signals are locked for ixemul above */
++	else
++		thread_cleanup();
++
++#ifdef __ixemul
++	safe_ix_user_cleanup(mu);
++
++	CloseLibrary(ixbase);
++#endif
++
++#if USE_THREAD_SAFETYNET
++	Forbid();
++	noderemove(&msg->node);
++#endif
++}
++
++/* Must be called with signals locked and Forbid() */
++static int __gthr_morphos_join_generic (struct Task *task)
++{
++	struct taskmsg *msg;
++	struct MsgPort mp;
++
++	msg = GetThreadInternal(task);
++	if(msg == NULL) {
++		/* No thread with the ID thread could be found. */
++		return ESRCH;
++	}
++
++	/* Is it a detached thread? */
++	if(msg->deathport.mp_SigBit == 0xff) {
++		/* Thread is not a joinable thread. */
++		return EINVAL;
++	}
++
++	if(msg->m.mn_ReplyPort != &msg->deathport) {
++		/* Another thread is already waiting to join with this thread. */
++		return EINVAL;
++	}
++
++	mp.mp_Node.ln_Type = NT_MSGPORT;
++	mp.mp_Flags = PA_SIGNAL;
++	mp.mp_SigBit = AllocSignal(-1);
++	if((BYTE) mp.mp_SigBit == -1) {
++		mp.mp_SigBit = SIGB_SINGLE;
++	}
++	mp.mp_SigTask = FindTask(NULL);
++	newlist((struct MinList *) &mp.mp_MsgList);
++
++	msg->m.mn_ReplyPort = &mp;
++
++	/* WaitPort() will break Forbid() as needed */
++	WaitPort(&mp);
++
++	if(mp.mp_SigBit != SIGB_SINGLE)
++		FreeSignal(mp.mp_SigBit);
++
++	return 0;
++}
++
++#if USE_THREAD_SAFETYNET
++
++static void __gthr_morphos_internal_create_cleanup(void)
++{
++	SIG_DEF
++
++	/* Join all pending threads */
++	SIG_LOCK();
++	Forbid();
++	for(;;) {
++		struct MinNode *node;
++		struct Task *task;
++
++		node = (struct MinNode *) threadlist.mlh_Head;
++		if(node->mln_Succ == NULL) {
++			/* The list is empty, we're done */
++			break;
++		}
++		task = ((struct taskmsg *) (((char *) node) - offsetof(struct taskmsg, node)))->task;
++
++		/* Note: breaks Forbid() when needed */
++		if(__gthr_morphos_join_generic(task) != 0)
++			usleep(1000000 / 100); /* On error sleep 1/100th a second */
++	}
++	Permit();
++	SIG_UNLOCK();
++}
++
++static void __gthr_morphos_internal_create_setup(void)
++{
++	if(atexit(__gthr_morphos_internal_create_cleanup) != 0)
++		exit(EXIT_FAILURE);
++}
++
++#endif
++
++int __gthr_morphos_create (__gthread_t *threadid, void *(*func) (void*),
++                           void *args)
++{
++	struct Library *DOSBase;
++	struct taskmsg *msg;
++	const struct MemList aml = {{NULL, NULL, 0, 0, NULL}, 1, {{{MEMF_CLEAR}, sizeof(*msg)}}};
++	struct MemList *ml;
++	ULONG parentppcsize, parent68ksize;
++	struct Process *proc;
++	SIG_DEF
++#ifdef __ixemul
++	struct Process *self;
++#endif
++
++#if USE_THREAD_SAFETYNET
++	{
++		static __gthread_once_t create = __GTHREAD_ONCE_INIT;
++		__gthr_morphos_once(&create, __gthr_morphos_internal_create_setup);
++	}
++#endif
++
++	SIG_LOCK();
++
++	ml = AllocEntry((struct MemList *) &aml);
++	if((IPTR) ml & (1UL << 31)) {
++		SIG_UNLOCK();
++		return EAGAIN;
++	}
++	msg = ml->ml_ME[0].me_Addr;
++	msg->ml = ml;
++	msg->m.mn_Node.ln_Type = NT_MESSAGE;
++	msg->m.mn_Node.ln_Name = msg->name; /* tested by GetThreadInternal for safety */
++	msg->m.mn_ReplyPort = &msg->deathport; /* used unless if __ghread_join is used */
++	msg->m.mn_Length = sizeof(*msg);
++	msg->deathport.mp_Node.ln_Type = NT_MSGPORT;
++	msg->deathport.mp_Flags = PA_IGNORE;
++	newlist((struct MinList *) &msg->deathport.mp_MsgList);
++	msg->func = func;
++	msg->args = args;
++#ifdef __ixemul
++	msg->parent = (struct user50 *) ix_get_long(IXID_USER, 0);
++	msg->sigmask = __omask;
++	self = (struct Process *) FindTask(NULL);
++	msg->syncmsg.mn_Node.ln_Type = NT_MESSAGE;
++	msg->syncmsg.mn_ReplyPort = &self->pr_MsgPort;
++	msg->syncmsg.mn_Length = sizeof(msg->syncmsg);
++#endif
++
++	DOSBase = OpenLibrary("dos.library", 50);
++	if(DOSBase == NULL) {
++		FreeEntry(ml);
++		SIG_UNLOCK();
++		return EAGAIN;
++	}
++
++	parentppcsize = 32768;
++	NewGetTaskAttrs(NULL, &parentppcsize, sizeof(parentppcsize), TASKINFOTYPE_STACKSIZE, TAG_DONE);
++	parent68ksize = 8192;
++	NewGetTaskAttrs(NULL, &parent68ksize, sizeof(parent68ksize), TASKINFOTYPE_STACKSIZE_M68K, TAG_DONE);
++
++#ifdef __ixemul
++	/* if some fd's are sockets, release them so the child can obtain them */
++	safe_ix_user_release_sockets(msg->parent);
++#endif
++
++#if USE_THREAD_SAFETYNET
++	Forbid();
++#endif
++
++	proc = CreateNewProcTags(NP_CodeType,     CODETYPE_PPC,
++	                         NP_Name,         (IPTR) "gthread",
++	                         NP_Entry,        (IPTR) entryfunc,
++	                         NP_PPC_Arg1,     (IPTR) msg,
++	                         NP_StartupMsg,   (IPTR) msg,
++	                         NP_PPCStackSize, parentppcsize,
++	                         NP_StackSize,    parent68ksize,
++	                         TAG_DONE);
++
++	CloseLibrary(DOSBase);
++
++	if(proc == NULL) {
++#if USE_THREAD_SAFETYNET
++		Permit();
++#endif
++		FreeEntry(ml);
++		SIG_UNLOCK();
++		return EAGAIN;
++	}
++
++#if USE_THREAD_SAFETYNET
++	msg->task = &proc->pr_Task;
++	addtail(&threadlist, &msg->node);
++	Permit();
++#endif
++
++	NewGetTaskAttrs(&proc->pr_Task, threadid, sizeof(*threadid), TASKINFOTYPE_PID, TAG_DONE);
++
++#ifdef __ixemul
++	WaitPort(&self->pr_MsgPort);
++	(void) GetMsg(&self->pr_MsgPort);
++#endif
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++int __gthr_morphos_join (__gthread_t threadid, void **value_ptr)
++{
++	struct Task *task;
++	int rc;
++	SIG_DEF
++
++	if(value_ptr != NULL)
++		return ENOTSUP;
++
++	SIG_LOCK();
++	Forbid();
++
++	task = FindTaskByPID(threadid);
++	if(task == NULL) {
++		Permit();
++		SIG_UNLOCK();
++		return 0;
++	}
++
++	if(task == FindTask(NULL)) {
++		Permit();
++		/* Joining self would deadlock anyway. */
++		SIG_UNLOCK();
++		return EDEADLK;
++	}
++
++	rc = __gthr_morphos_join_generic(task);
++
++	Permit();
++	SIG_UNLOCK();
++	return rc;
++}
++
++int __gthr_morphos_detach (__gthread_t threadid)
++{
++	struct Task *task;
++	struct taskmsg *msg;
++	SIG_DEF
++
++	SIG_LOCK();
++	Forbid();
++
++	task = FindTaskByPID(threadid);
++	if(task == NULL) {
++		Permit();
++		SIG_UNLOCK();
++		return ESRCH;
++	}
++
++	msg = GetThreadInternal(task);
++	if(msg == NULL || msg->deathport.mp_SigBit == 0xff || msg->m.mn_ReplyPort != &msg->deathport) {
++		Permit();
++		/* Thread is not a joinable thread. */
++		SIG_UNLOCK();
++		return EINVAL;
++	}
++
++	msg->deathport.mp_SigBit = 0xff;
++
++	Permit();
++	SIG_UNLOCK();
++	return 0;
++}
++
++int __gthr_morphos_equal (__gthread_t t1, __gthread_t t2)
++{
++	return t1 == t2;
++}
++
++__gthread_t __gthr_morphos_self (void)
++{
++	__gthread_t threadid;
++	SIG_DEF
++
++	SIG_LOCK();
++	NewGetTaskAttrs(NULL, &threadid, sizeof(threadid), TASKINFOTYPE_PID, TAG_DONE);
++	SIG_UNLOCK();
++	return threadid;
++}
++
++int __gthr_morphos_yield (void)
++{
++	SIG_DEF
++
++	SIG_LOCK();
++	Forbid();
++	Permit(); /* Permit() causes a reschedule */
++	SIG_UNLOCK();
++	return 0;
++}
++
++/* Cond */
++
++void __gthr_morphos_cond_init_function (__gthread_cond_t *_gthr_cond)
++{
++	__internal_cond_t *__cond = (__internal_cond_t *) _gthr_cond;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_cond_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __cond);
++
++	if(__cond == NULL) {
++		return;
++	}
++
++	SIG_LOCK();
++	InitSemaphore(&__cond->u1.__sem);
++	SIG_UNLOCK();
++	newlist(&__cond->u2.__waiters);
++}
++
++int __gthr_morphos_cond_destroy (__gthread_cond_t *_gthr_cond)
++{
++	__internal_cond_t *__cond = (__internal_cond_t *) _gthr_cond;
++	SIG_DEF
++
++	_D("<%s/%s():%lu> __gthread_cond_t == 0x%p\n", __FILE__, __FUNCTION__, __LINE__, __cond);
++
++	if(__cond == NULL) {
++		_D("<%s/%s():%lu> == EINVAL\n", __FILE__, __FUNCTION__, __LINE__);
++		return EINVAL;
++	}
++
++	if(SemaphoreIsInvalid(&__cond->u1.__sem)) {
++		/* static cond not yet initialized, so do nothing */
++		return 0;
++	}
++
++	SIG_LOCK();
++
++	if(!AttemptSemaphore(&__cond->u1.__sem)) {
++		SIG_UNLOCK();
++		return EBUSY;
++	}
++
++	if(!IsListEmpty((struct List *)&__cond->u2.__waiters)) {
++		ReleaseSemaphore(&__cond->u1.__sem);
++		SIG_UNLOCK();
++		return EBUSY;
++	}
++
++	memset(&__cond->u1.__sem, 0, sizeof(__cond->u1.__sem));
++	__gthr_morphos_cond_init_function(_gthr_cond);
++
++	_D("<%s/%s():%lu> == 0\n", __FILE__, __FUNCTION__, __LINE__);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++struct CondWaiter {
++	struct MinNode node;
++	struct Task *task;
++	ULONG sigmask;
++};
++
++static int __gthr_morphos_cond_broadcast_generic (__gthread_cond_t *_gthr_cond, int onlyfirst)
++{
++	__internal_cond_t *__cond = (__internal_cond_t *) _gthr_cond;
++	struct CondWaiter *waiter;
++	SIG_DEF
++
++	if(__cond == NULL) {
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++	/* initialize static cond */
++	Forbid();
++	if(SemaphoreIsInvalid(&__cond->u1.__sem))
++		__gthr_morphos_cond_init_function(_gthr_cond);
++	Permit();
++
++	/* signal the waiting threads */
++	ObtainSemaphoreShared(&__cond->u1.__sem);
++
++	for(waiter = (struct CondWaiter *) __cond->u2.__waiters.mlh_Head;
++	    waiter->node.mln_Succ;
++	    waiter = (struct CondWaiter *) waiter->node.mln_Succ) {
++		Signal(waiter->task, waiter->sigmask);
++		if(onlyfirst)
++			break;
++	}
++
++	ReleaseSemaphore(&__cond->u1.__sem);
++
++	SIG_UNLOCK();
++	return 0;
++}
++
++int __gthr_morphos_cond_broadcast (__gthread_cond_t *_gthr_cond)
++{
++	return __gthr_morphos_cond_broadcast_generic (_gthr_cond, 0);
++}
++
++int __gthr_morphos_cond_timedwait (__gthread_cond_t *_gthr_cond,
++                                   __gthread_mutex_t *_gthr_mutex,
++                                   const __gthread_time_t *abs_timeout)
++{
++	__internal_cond_t *__cond = (__internal_cond_t *) _gthr_cond;
++	__internal_mutex_t *__mutex = (__internal_mutex_t *) _gthr_mutex;
++	struct CondWaiter waiter;
++	BYTE signal;
++	struct Task *self;
++	struct MsgPort mp;
++	struct timerequest tr;
++	int rc = 0;
++	SIG_DEF
++
++	if(__cond == NULL || __mutex == NULL) {
++		return EINVAL;
++	}
++
++	if(abs_timeout && (abs_timeout->tv_sec < 0 || abs_timeout->tv_nsec < 0 ||
++	                   abs_timeout->tv_nsec > 999999999)) {
++		return EINVAL;
++	}
++
++	SIG_LOCK();
++
++	Forbid();
++	/* initialize static cond & mutex */
++	if(SemaphoreIsInvalid(&__cond->u1.__sem))
++		__gthr_morphos_cond_init_function(_gthr_cond);
++	if(SemaphoreIsInvalid(&__mutex->u.__sem))
++		__gthr_morphos_mutex_init_function(_gthr_mutex);
++	Permit();
++
++	signal = AllocSignal(-1);
++	if(signal == -1) {
++		signal = SIGBREAKB_CTRL_F;
++		SetSignal(1UL << signal, 0);
++	}
++
++	self = FindTask(NULL);
++
++	if(abs_timeout) {
++		mp.mp_Node.ln_Type = NT_MSGPORT;
++		mp.mp_Flags = PA_SIGNAL;
++		mp.mp_SigBit = signal;
++		mp.mp_SigTask = self;
++		newlist((struct MinList *) &mp.mp_MsgList);
++
++		tr.tr_node.io_Message.mn_Node.ln_Type = NT_REPLYMSG;
++		tr.tr_node.io_Message.mn_ReplyPort = &mp;
++		tr.tr_node.io_Message.mn_Length = sizeof(tr);
++
++		if(OpenDevice(TIMERNAME, UNIT_WAITUTC, (APTR) &tr, 0) != 0) {
++			if(signal != SIGBREAKB_CTRL_F)
++				FreeSignal(signal);
++			SIG_UNLOCK();
++			return ENOTSUP;
++		}
++
++		tr.tr_node.io_Command = TR_ADDREQUEST;
++		tr.tr_time.tv_secs  = abs_timeout->tv_sec;
++		tr.tr_time.tv_micro = abs_timeout->tv_nsec / 1000;
++		UNIXTIME_TO_AMIGATIME(&tr.tr_time, &tr.tr_time);
++		SendIO((APTR) &tr);
++	}
++
++	/* prepare a waiter node */
++	waiter.task = self;
++	waiter.sigmask = 1UL << signal;
++
++	/* add it to the end of the list */
++        ObtainSemaphore(&__cond->u1.__sem);
++	addtail(&__cond->u2.__waiters, &waiter.node);
++	ReleaseSemaphore(&__cond->u1.__sem);
++
++	/* wait for the condition to be signalled or the timeout */
++	__mutex->incond++;
++	__gthr_morphos_mutex_unlock(_gthr_mutex);
++
++	Wait(1UL << signal);
++
++	__gthr_morphos_mutex_lock(_gthr_mutex);
++	__mutex->incond--;
++
++	/* remove the node from the list */
++	ObtainSemaphore(&__cond->u1.__sem);
++	noderemove(&waiter.node);
++	ReleaseSemaphore(&__cond->u1.__sem);
++
++	if(abs_timeout) {
++		if(CheckIO((APTR) &tr))
++			rc = ETIMEDOUT;
++		else {
++			AbortIO((APTR) &tr);
++			WaitIO((APTR) &tr);
++		}
++
++		CloseDevice((APTR) &tr);
++	}
++
++	if(signal != SIGBREAKB_CTRL_F)
++		FreeSignal(signal);
++
++	SIG_UNLOCK();
++	return rc;
++}
++
++int __gthr_morphos_cond_wait (__gthread_cond_t *_gthr_cond, __gthread_mutex_t *_gthr_mutex)
++{
++	return __gthr_morphos_cond_timedwait (_gthr_cond, _gthr_mutex, NULL);
++}
++
++int __gthr_morphos_cond_wait_recursive (__gthread_cond_t *_gthr_cond,
++                                        __gthread_recursive_mutex_t *_gthr_mutex)
++{
++	return __gthr_morphos_cond_timedwait (_gthr_cond, (__gthread_mutex_t *) _gthr_mutex, NULL);
++}
++
++int __gthr_morphos_cond_signal (__gthread_cond_t *_gthr_cond)
++{
++	return __gthr_morphos_cond_broadcast_generic (_gthr_cond, 1);
++}
++
++#ifndef HIDE_EXPORTS
++#pragma GCC visibility pop
++#endif
++
++#if TESTME
++
++#if !USE_THREAD_SAFETYNET
++struct Library *SocketBase;
++#include <unistd.h>
++#endif
++
++void dprintf(const char *, ...);
++
++__gthread_once_t once = __GTHREAD_ONCE_INIT;
++__gthread_mutex_t mutex = __GTHREAD_MUTEX_INIT;
++__gthread_recursive_mutex_t rmutex = __GTHREAD_RECURSIVE_MUTEX_INIT;
++__gthread_cond_t cond = __GTHREAD_COND_INIT;
++__gthread_key_t key;
++
++void *func(void *parm)
++{
++	void *value;
++	int rc;
++
++	dprintf("thread parm %p\n", parm);
++
++	value = __gthread_getspecific(key);
++	if (value != NULL)
++		dprintf("unexpected key %p value %p (%s)\n", key, value, value);
++
++	if (__gthread_setspecific(key, "lollero") != 0)
++		dprintf("__gthread_setspecific failed when it shouldn't have\n");
++
++	value = __gthread_getspecific(key);
++	dprintf("key %p value %p (%s)\n", key, value, value);
++
++	__gthread_mutex_lock(&mutex);
++	sleep(2);
++	__gthread_mutex_unlock(&mutex);
++	if (__gthread_mutex_trylock(&mutex) == 0)
++		dprintf("__gthread_mutex_trylock succeeded when it shouldn't have\n");
++
++	dprintf("obtain the mutex %p...\n", &mutex);
++	__gthread_mutex_lock(&mutex);
++	dprintf("thread waiting for cond %p for up to 5 seconds...\n", &cond);
++	const __gthread_time_t timeout = {time(NULL) + 5, 0};
++	rc = __gthread_cond_timedwait(&cond, &mutex, &timeout);
++	if (rc == 0)
++		dprintf("thread got cond %p...\n", &cond);
++	else if (rc == ETIMEDOUT)
++		dprintf("unexpected timeout cond %p\n", &cond);
++	else
++		dprintf("unexpected cond %p error %d\n", &cond, rc);
++	__gthread_mutex_unlock(&mutex);
++
++	dprintf("thread done\n");
++	return NULL;
++}
++
++void destructor(void *value)
++{
++	dprintf("destructor called with %p <%s>\n", value, value);
++}
++
++void *func2(void *ptr)
++{
++	int f = (int) ptr;
++	dprintf("thread2 started\n");
++	write(f, "2\n", 2);
++	sleep(1);
++	dprintf("thread2 done\n");
++	write(f, "3\n", 2);
++	return NULL;
++}
++
++void oncefunc(void)
++{
++	static int counter;
++	dprintf("oncefunc called\n");
++	if (counter == 1)
++		dprintf("oncefunc unexpectedly called more than once\n");
++	counter++;
++}
++
++int main(void)
++{
++	int rc;
++	__gthread_t id;
++
++	/* test __gthread_once */
++	__gthread_once(&once, oncefunc);
++	__gthread_once(&once, oncefunc);
++
++	/* test recursion on recursive mutex */
++	rc = __gthread_recursive_mutex_lock(&rmutex);
++	if (rc != 0) {
++		dprintf("failed to __gthread_recursive_mutex_lock\n");
++		return 0;
++	}
++	rc = __gthread_recursive_mutex_lock(&rmutex);
++	if (rc != 0) {
++		dprintf("__gthread_recursive_mutex_lock failed when it should have succeeded\n");
++		return 0;
++	}
++	__gthread_recursive_mutex_unlock(&rmutex);
++	__gthread_recursive_mutex_unlock(&rmutex);
++
++	/* test recursion on non-recursive mutex */
++	rc = __gthread_mutex_lock(&mutex);
++	if (rc != 0) {
++		dprintf("failed to __gthread_mutex_lock\n");
++		return 0;
++	}
++	rc = __gthread_mutex_lock(&mutex);
++	if (rc == 0) {
++		dprintf("__gthread_mutex_lock succeeded when it should have failed\n");
++		return 0;
++	}
++	__gthread_mutex_unlock(&mutex);
++
++	/* test key (see thread) */
++	if (__gthread_key_create(&key, destructor) != 0) {
++		dprintf("failed to __gthread_key_create\n");
++		return 0;
++	}
++
++#if !USE_THREAD_ONLY_SETSPECIFIC
++	if (__gthread_setspecific(key, "mainapp") != 0)
++		dprintf("__gthread_setspecific in main app failed when it shouldn't have\n");
++	dprintf("__gthread_getspecific <%s>\n", __gthread_getspecific(key));
++#endif
++
++	dprintf("main process - func %p\n", func);
++	if (__gthread_create(&id, func, func) == 0) {
++		const time_t t = time(NULL);
++		const __gthread_time_t t1 = {t+1,0};
++		usleep(100000);
++		rc = __gthread_mutex_timedlock(&mutex, &t1);
++		dprintf("__gthread_mutex_timedlock 1 %d\n", rc);
++		if (rc != 0) {
++			const __gthread_time_t t2 = {t+2,0};
++			rc = __gthread_mutex_timedlock(&mutex, &t2);
++			dprintf("__gthread_mutex_timedlock 2 %d\n", rc);
++			if (rc != 0) {
++				const __gthread_time_t t3 = {t+3,0};
++				rc = __gthread_mutex_timedlock(&mutex, &t3);
++				dprintf("__gthread_mutex_timedlock 3 %d\n", rc);
++				if (rc == 0) {
++					sleep(1);
++					__gthread_mutex_unlock(&mutex);
++					usleep(100000);
++					dprintf("signaling cond %p\n", &cond);
++					__gthread_cond_signal(&cond);
++				}
++				else
++					dprintf("__gthread_mutex_timedlock failed when it shouldn't have\n");
++			}
++			else
++				dprintf("__gthread_mutex_timedlock 2 unexpectedly succeeded\n");
++		}
++		else
++			dprintf("__gthread_mutex_timedlock 1 unexpectedly succeeded\n");
++
++		dprintf("before join threadid %d\n", id);
++		rc = __gthread_join(id, NULL);
++		dprintf("after join rc %d\n", rc);
++	}
++	else
++		dprintf("__gthread_create failed unexpectedly\n");
++
++	dprintf("launch a second thread\n");
++	int f = 1; //open("/t/out", O_WRONLY|O_CREAT, 0);
++	write(f, "1\n", 2);
++	if (__gthread_create(&id, func2, (void *) f) == 0)
++	{
++		dprintf("before join threadid %d\n", id);
++		write(f, "4\n", 2);
++		rc = __gthread_join(id, NULL);
++		dprintf("after join rc %d\n", rc);
++		write(f, "5\n", 2);
++	}
++	else
++		dprintf("__gthread_create failed unexpectedly\n");
++
++	//close(f);
++
++	__gthread_key_delete(key);
++}
++#endif
+diff -ruN gcc-15.1.0.orig/libgcc/config/rs6000/gthr-morphos.h gcc-15.1.0/libgcc/config/rs6000/gthr-morphos.h
+--- gcc-15.1.0.orig/libgcc/config/rs6000/gthr-morphos.h	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/libgcc/config/rs6000/gthr-morphos.h	2025-04-25 15:58:40.280619963 +0300
+@@ -0,0 +1,433 @@
++/* Threads compatibility routines for libgcc2.  */
++/* Compile this one with gcc.  */
++/* Copyright (C) 1997, 1999, 2000, 2004, 2008, 2009
++   Free Software Foundation, Inc.
++   Copyright (C) 2016-2020 Harry Sintonen
++
++This file is part of GCC.
++
++GCC is free software; you can redistribute it and/or modify it under
++the terms of the GNU General Public License as published by the Free
++Software Foundation; either version 3, or (at your option) any later
++version.
++
++GCC is distributed in the hope that it will be useful, but WITHOUT ANY
++WARRANTY; without even the implied warranty of MERCHANTABILITY or
++FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
++for more details.
++
++Under Section 7 of GPL version 3, you are granted additional
++permissions described in the GCC Runtime Library Exception, version
++3.1, as published by the Free Software Foundation.
++
++You should have received a copy of the GNU General Public License and
++a copy of the GCC Runtime Library Exception along with this program;
++see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
++<http://www.gnu.org/licenses/>.  */
++
++#ifndef GCC_GTHR_MORPHOS_H
++#define GCC_GTHR_MORPHOS_H
++
++#define __GTHREADS 1
++#define __GTHREADS_CXX0X 1
++#define __GTHREAD_HAS_COND 1
++
++#include <sys/time.h>
++#include <errno.h>
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++
++/*
++ * __gthr_morphos_active_p
++ */
++
++extern int __gthr_morphos_active_p (void);
++static int __is_gthr_morphos_active = -1;
++
++static inline int
++__gthread_active_p (void)
++{
++  if(__is_gthr_morphos_active < 0)
++    __is_gthr_morphos_active = __gthr_morphos_active_p();
++
++  return __is_gthr_morphos_active > 0 ? 1 : 0;
++}
++
++/*
++ * MorphOS - Generic
++ */
++
++typedef struct timespec __gthread_time_t;
++#define __GTHREAD_TIME_INIT { 0, 0 }
++
++/*
++ * MorphOS - Once
++ */
++
++#define __GTHREAD_ONCE_INIT { 0, 0 }
++
++typedef struct {
++	volatile long busy;
++	volatile long done;
++} __gthread_once_t;
++
++extern int __gthr_morphos_once (__gthread_once_t *__once, void (*__func) (void));
++extern void __gthr_morphos_once_unlock (__gthread_once_t *__once);
++
++/*
++ * MorphOS - Key
++ */
++
++typedef unsigned long __gthread_key_t;
++
++extern int __gthr_morphos_key_create (__gthread_key_t *__key, void (*__func) (void *));
++extern int __gthr_morphos_key_delete (__gthread_key_t __key);
++extern void *__gthr_morphos_getspecific (__gthread_key_t __key);
++extern int __gthr_morphos_setspecific (__gthread_key_t __key, const void *__v);
++
++/*
++ * MorphOS - Mutex
++ */
++
++#define __GTHREAD_MUTEX_INIT_FUNCTION           __gthread_mutex_init_function
++#define __GTHREAD_MUTEX_INIT                    { {{ 0 }}, 0 }
++#ifdef _GTHREAD_USE_MUTEX_INIT_FUNC
++# undef __GTHREAD_MUTEX_INIT
++#endif
++#define __GTHREAD_RECURSIVE_MUTEX_INIT_FUNCTION __gthread_recursive_mutex_init_function
++#define __GTHREAD_RECURSIVE_MUTEX_INIT          { {{ 0 }}, 0 }
++#ifdef _GTHREAD_USE_RECURSIVE_MUTEX_INIT_FUNC
++# undef __GTHREAD_RECURSIVE_MUTEX_INIT
++#endif
++
++typedef struct {
++	union {
++		char _priv[60];
++	} u;
++	int incond;
++} __gthread_mutex_t;
++
++typedef __gthread_mutex_t __gthread_recursive_mutex_t;
++
++extern void __gthr_morphos_mutex_init_function (__gthread_mutex_t *__mutex);
++extern int __gthr_morphos_mutex_destroy (__gthread_mutex_t *__mutex);
++
++extern int __gthr_morphos_mutex_lock (__gthread_mutex_t *__mutex);
++extern int __gthr_morphos_mutex_trylock (__gthread_mutex_t *__mutex);
++extern int __gthr_morphos_mutex_unlock (__gthread_mutex_t *__mutex);
++extern int __gthr_morphos_mutex_timedlock (__gthread_mutex_t *__mutex,
++                                           const __gthread_time_t *__abs_timeout);
++
++extern void __gthr_morphos_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex);
++extern int __gthr_morphos_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex);
++extern int __gthr_morphos_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex);
++extern int __gthr_morphos_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex);
++extern int __gthr_morphos_recursive_mutex_destroy (__gthread_mutex_t *__mutex);
++extern int __gthr_morphos_recursive_mutex_timedlock (__gthread_mutex_t *__mutex,
++                                                     const __gthread_time_t *__abs_timeout);
++
++/*
++ * MorphOS - Cond
++ */
++
++#define __GTHREAD_COND_INIT          { {{ 0 }}, {{ 0 }} }
++#ifdef _GTHREAD_USE_COND_INIT_FUNC
++# undef __GTHREAD_COND_INIT
++# define __GTHREAD_COND_INIT_FUNCTION __gthread_cond_init_function
++#endif
++
++typedef struct {
++	union {
++		char _priv[60];
++	} u1;
++	union {
++		void *_priv[3];
++	} u2;
++} __gthread_cond_t;
++
++extern void __gthr_morphos_cond_init_function (__gthread_cond_t *__cond);
++extern int __gthr_morphos_cond_destroy (__gthread_cond_t *__cond);
++extern int __gthr_morphos_cond_broadcast (__gthread_cond_t *__cond);
++extern int __gthr_morphos_cond_signal (__gthread_cond_t *__cond);
++extern int __gthr_morphos_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex);
++extern int __gthr_morphos_cond_wait_recursive (__gthread_cond_t *__cond,
++                                               __gthread_recursive_mutex_t *__mutex);
++extern int __gthr_morphos_cond_timedwait (__gthread_cond_t *__cond,
++                                          __gthread_mutex_t *__mutex,
++                                          const __gthread_time_t *__abs_timeout);
++
++/*
++ * MorphOS - Thread
++ */
++
++typedef unsigned int __gthread_t;
++
++extern int __gthr_morphos_create (__gthread_t *__threadid, void *(*__func) (void *),
++                                  void *__args);
++extern int __gthr_morphos_join (__gthread_t __threadid, void **__value_ptr);
++extern int __gthr_morphos_detach (__gthread_t __threadid);
++extern int __gthr_morphos_equal (__gthread_t __t1, __gthread_t __t2);
++extern __gthread_t __gthr_morphos_self (void);
++extern int __gthr_morphos_yield (void);
++
++
++/*
++ * MorphOS - Once
++ */
++
++static inline int
++__gthread_once (__gthread_once_t *__once, void (*__func) (void))
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_once (__once, __func);
++  else
++    return -1;
++}
++
++static inline void
++__gthread_once_unlock (__gthread_once_t *__once)
++{
++  __gthr_morphos_once_unlock (__once);
++}
++
++/*
++ * MorphOS - Key
++ */
++
++static inline int
++__gthread_key_create (__gthread_key_t *__key, void (*__dtor) (void *))
++{
++  return __gthr_morphos_key_create (__key, __dtor);
++}
++
++static inline int
++__gthread_key_delete (__gthread_key_t __key)
++{
++  return __gthr_morphos_key_delete (__key);
++}
++
++static inline void *
++__gthread_getspecific (__gthread_key_t __key)
++{
++  return __gthr_morphos_getspecific (__key);
++}
++
++static inline int
++__gthread_setspecific (__gthread_key_t __key, const void *__ptr)
++{
++  return __gthr_morphos_setspecific (__key, __ptr);
++}
++
++/*
++ * MorphOS - Mutex
++ */
++
++static inline void
++__gthread_mutex_init_function (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    __gthr_morphos_mutex_init_function (__mutex);
++}
++
++static inline int
++__gthread_mutex_destroy (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_destroy (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_mutex_lock (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_lock (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_mutex_trylock (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_trylock (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_mutex_timedlock (__gthread_mutex_t *__mutex,
++                           const __gthread_time_t *__abs_timeout)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_timedlock (__mutex, __abs_timeout);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_mutex_unlock (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_unlock (__mutex);
++  else
++    return 0;
++}
++
++static inline void
++__gthread_recursive_mutex_init_function (__gthread_recursive_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    __gthr_morphos_recursive_mutex_init_function (__mutex);
++}
++
++static inline int
++__gthread_recursive_mutex_lock (__gthread_recursive_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_recursive_mutex_lock (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_recursive_mutex_trylock (__gthread_recursive_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_recursive_mutex_trylock (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_recursive_mutex_timedlock (__gthread_recursive_mutex_t *__mutex,
++                                     const __gthread_time_t *__abs_timeout)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_recursive_mutex_timedlock (__mutex, __abs_timeout);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_recursive_mutex_unlock (__gthread_recursive_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_recursive_mutex_unlock (__mutex);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_recursive_mutex_destroy (__gthread_mutex_t *__mutex)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_mutex_destroy (__mutex);
++  else
++    return 0;
++}
++
++/*
++ * MorphOS - Cond
++ */
++
++static inline void
++__gtrhread_cond_init_function (__gthread_cond_t *__cond)
++{
++  if (__gthread_active_p ())
++    __gthr_morphos_cond_init_function (__cond);
++}
++
++static inline int
++__gthread_cond_destroy (__gthread_cond_t *__cond)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_cond_destroy (__cond);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_cond_broadcast (__gthread_cond_t *__cond)
++{
++  return __gthr_morphos_cond_broadcast (__cond);
++}
++
++static inline int
++__gthread_cond_signal (__gthread_cond_t *__cond)
++{
++  return __gthr_morphos_cond_signal (__cond);
++}
++
++static inline int
++__gthread_cond_wait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex)
++{
++  return __gthr_morphos_cond_wait (__cond, __mutex);
++}
++
++static inline int
++__gthread_cond_wait_recursive (__gthread_cond_t *__cond,
++                               __gthread_recursive_mutex_t *__mutex)
++{
++  return __gthr_morphos_cond_wait_recursive (__cond, __mutex);
++}
++
++static inline int
++__gthread_cond_timedwait (__gthread_cond_t *__cond, __gthread_mutex_t *__mutex,
++                          const __gthread_time_t *__abs_timeout)
++{
++  return __gthr_morphos_cond_timedwait (__cond, __mutex, __abs_timeout);
++}
++
++/*
++ * MorphOS - Thread
++ */
++
++static inline int
++__gthread_create (__gthread_t *__threadid, void *(*__func) (void *),
++                  void *__args)
++{
++  if (__gthread_active_p ())
++    return __gthr_morphos_create (__threadid, __func, __args);
++  else
++    return 0;
++}
++
++static inline int
++__gthread_join (__gthread_t __threadid, void **__value_ptr)
++{
++  return __gthr_morphos_join (__threadid, __value_ptr);
++}
++
++static inline int
++__gthread_detach (__gthread_t __threadid)
++{
++  return __gthr_morphos_detach (__threadid);
++}
++
++static inline int
++__gthread_equal (__gthread_t __t1, __gthread_t __t2)
++{
++  return __gthr_morphos_equal (__t1, __t2);
++}
++
++static inline __gthread_t
++__gthread_self (void)
++{
++  return __gthr_morphos_self ();
++}
++
++static inline int
++__gthread_yield (void)
++{
++  return __gthr_morphos_yield ();
++}
++
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* ! GCC_GTHR_MORPHOS_H */
+diff -ruN gcc-15.1.0.orig/libgcc/config/rs6000/t-gthr-morphos gcc-15.1.0/libgcc/config/rs6000/t-gthr-morphos
+--- gcc-15.1.0.orig/libgcc/config/rs6000/t-gthr-morphos	1970-01-01 02:00:00.000000000 +0200
++++ gcc-15.1.0/libgcc/config/rs6000/t-gthr-morphos	2025-04-25 15:58:40.280619963 +0300
+@@ -0,0 +1 @@
++LIB2ADD = $(srcdir)/config/rs6000/gthr-morphos.c
+\ No newline at end of file
+diff -ruN gcc-15.1.0.orig/libgcc/config.host gcc-15.1.0/libgcc/config.host
+--- gcc-15.1.0.orig/libgcc/config.host	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/config.host	2025-04-25 15:58:40.280619963 +0300
+@@ -1239,6 +1239,10 @@
+ 	  ;;
+ 	esac
+ 	;;
++powerpc-*-morphos*)
++	tmake_file="${tmake_file} rs6000/t-ppccomm rs6000/t-savresfgpr rs6000/t-crtstuff t-crtstuff-pic t-fdpbit rs6000/t-gthr-morphos"
++	extra_parts="$extra_parts crtbegin.o crtend.o crtbeginS.o crtendS.o crtbeginT.o ecrti.o ecrtn.o ncrti.o ncrtn.o"
++	;;
+ powerpc-*-netbsd*)
+ 	tmake_file="$tmake_file rs6000/t-netbsd rs6000/t-crtstuff"
+ 	;;
+diff -ruN gcc-15.1.0.orig/libgcc/configure gcc-15.1.0/libgcc/configure
+--- gcc-15.1.0.orig/libgcc/configure	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/configure	2025-04-25 15:58:40.280619963 +0300
+@@ -5734,6 +5734,7 @@
+     vxworks)	thread_header=config/gthr-vxworks.h ;;
+     win32)	thread_header=config/i386/gthr-win32.h ;;
+     mcf)	thread_header=config/i386/gthr-mcf.h ;;
++    morphos)	thread_header=config/rs6000/gthr-morphos.h ;;
+ esac
+ 
+ 
+diff -ruN gcc-15.1.0.orig/libgcc/crtstuff.c gcc-15.1.0/libgcc/crtstuff.c
+--- gcc-15.1.0.orig/libgcc/crtstuff.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/crtstuff.c	2025-04-25 15:58:40.280619963 +0300
+@@ -157,6 +157,10 @@
+ # define USE_TM_CLONE_REGISTRY 0
+ #endif
+ 
++#ifdef __MORPHOS__
++extern const char __EH_FRAME_BEGIN__[];
++#endif
++
+ /* We do not want to add the weak attribute to the declarations of these
+    routines in unwind-dw2-fde.h because that will cause the definition of
+    these symbols to be weak as well.
+@@ -397,7 +401,7 @@
+   {
+     /* Safer version that makes sure only .dtors function pointers are
+        called even if the static variable is maliciously changed.  */
+-    extern func_ptr __DTOR_END__[] __attribute__((visibility ("hidden")));
++    extern const func_ptr __DTOR_END__[] __attribute__((visibility ("hidden")));
+     static size_t dtor_idx;
+     const size_t max_idx = __DTOR_END__ - __DTOR_LIST__ - 1;
+     func_ptr *dtor_list;
+@@ -435,6 +439,11 @@
+ #endif
+ #endif
+ 
++#ifdef __MORPHOS__
++  if (__deregister_frame_info)
++    __deregister_frame_info (__EH_FRAME_BEGIN__);
++#endif
++
+   completed = 1;
+ }
+ 
+@@ -692,9 +701,24 @@
+ static void __attribute__((used))
+ __do_global_ctors_aux (void)
+ {
++#ifdef __MORPHOS__
++  if (__register_frame_info)
++  {
++    static struct object object;
++    __register_frame_info (__EH_FRAME_BEGIN__, &object);
++  }
++  func_ptr *p = __CTOR_END__ - 1;
++  func_ptr f;
++  while((f = *p) != (func_ptr) -1)
++  {
++    f ();
++    p--;
++  }
++#else
+   func_ptr *p;
+   for (p = __CTOR_END__ - 1; *p != (func_ptr) -1; p--)
+     (*p) ();
++#endif
+ }
+ 
+ /* Stick a call to __do_global_ctors_aux into the .init section.  */
+diff -ruN gcc-15.1.0.orig/libgcc/emutls.c gcc-15.1.0/libgcc/emutls.c
+--- gcc-15.1.0.orig/libgcc/emutls.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/emutls.c	2025-04-25 15:58:40.280619963 +0300
+@@ -95,6 +95,28 @@
+   free (ptr);
+ }
+ 
++#ifdef __libnix
++#include <constructor.h>
++DESTRUCTOR_P(emutls_cleanup, 10000)
++#else
++__attribute__((destructor))
++static void
++emutls_cleanup (void)
++#endif
++{
++  if (emutls_key)
++    {
++      struct __emutls_array *arr = __gthread_getspecific (emutls_key);
++      if (arr)
++	{
++	    __gthread_setspecific (emutls_key, NULL);
++	    emutls_destroy (arr);
++	}
++      __gthread_key_delete (emutls_key);
++      emutls_key = 0;
++    }
++}
++
+ static void
+ emutls_init (void)
+ {
+diff -ruN gcc-15.1.0.orig/libgcc/libgcov.h gcc-15.1.0/libgcc/libgcov.h
+--- gcc-15.1.0.orig/libgcc/libgcov.h	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/libgcov.h	2025-04-25 15:58:40.280619963 +0300
+@@ -49,6 +49,10 @@
+ #include <sys/mman.h>
+ #endif
+ 
++#ifndef _STDINT_H_
++#include <stdint.h>
++#endif
++
+ #if __CHAR_BIT__ == 8
+ typedef unsigned gcov_unsigned_t __attribute__ ((mode (SI)));
+ typedef unsigned gcov_position_t __attribute__ ((mode (SI)));
+diff -ruN gcc-15.1.0.orig/libgcc/Makefile.in gcc-15.1.0/libgcc/Makefile.in
+--- gcc-15.1.0.orig/libgcc/Makefile.in	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libgcc/Makefile.in	2025-04-25 15:58:40.280619963 +0300
+@@ -201,7 +201,7 @@
+ STRIP_FOR_TARGET = $(STRIP)
+ 
+ # Directory in which the compiler finds libraries etc.
+-libsubdir = $(libdir)/gcc/$(real_host_noncanonical)/$(version)@accel_dir_suffix@
++libsubdir = $(libdir)/gcc-lib/$(real_host_noncanonical)/$(version)@accel_dir_suffix@
+ # Used to install the shared libgcc.
+ slibdir = @slibdir@
+ # Maybe used for DLLs on Windows targets.
+diff -ruN gcc-15.1.0.orig/libgfortran/configure gcc-15.1.0/libgfortran/configure
+--- gcc-15.1.0.orig/libgfortran/configure	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libgfortran/configure	2025-04-25 15:58:40.284619995 +0300
+@@ -7271,7 +7271,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libgfortran/Makefile.in gcc-15.1.0/libgfortran/Makefile.in
+--- gcc-15.1.0.orig/libgfortran/Makefile.in	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libgfortran/Makefile.in	2025-04-25 15:58:40.284619995 +0300
+@@ -995,7 +995,7 @@
+ 
+ libgfortran_la_DEPENDENCIES = $(version_dep) libgfortran.spec $(LIBQUADLIB_DEP)
+ cafexeclib_LTLIBRARIES = libcaf_single.la
+-cafexeclibdir = $(libdir)/gcc/$(target_alias)/$(gcc_version)$(MULTISUBDIR)
++cafexeclibdir = $(libdir)/gcc-lib/$(target_alias)/$(gcc_version)$(MULTISUBDIR)
+ libcaf_single_la_SOURCES = caf/single.c
+ libcaf_single_la_LDFLAGS = -static
+ libcaf_single_la_DEPENDENCIES = caf/libcaf.h
+diff -ruN gcc-15.1.0.orig/libgomp/configure gcc-15.1.0/libgomp/configure
+--- gcc-15.1.0.orig/libgomp/configure	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libgomp/configure	2025-04-25 15:58:40.284619995 +0300
+@@ -5656,7 +5656,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libgomp/Makefile.in gcc-15.1.0/libgomp/Makefile.in
+--- gcc-15.1.0.orig/libgomp/Makefile.in	2025-04-25 11:21:27.000000000 +0300
++++ gcc-15.1.0/libgomp/Makefile.in	2025-04-25 15:58:40.284619995 +0300
+@@ -517,8 +517,8 @@
+ search_path = $(addprefix $(top_srcdir)/config/, $(config_path)) $(top_srcdir) \
+ 	      $(top_srcdir)/../include
+ 
+-fincludedir = $(libdir)/gcc/$(target_alias)/$(gcc_version)$(MULTISUBDIR)/finclude
+-libsubincludedir = $(libdir)/gcc/$(target_alias)/$(gcc_version)/include
++fincludedir = $(libdir)/gcc-lib/$(target_alias)/$(gcc_version)$(MULTISUBDIR)/finclude
++libsubincludedir = $(libdir)/gcc-lib/$(target_alias)/$(gcc_version)/include
+ AM_CPPFLAGS = $(addprefix -I, $(search_path))
+ AM_CFLAGS = $(XCFLAGS)
+ AM_LDFLAGS = $(XLDFLAGS) $(SECTION_LDFLAGS) $(OPT_LDFLAGS)
+diff -ruN gcc-15.1.0.orig/libiberty/configure gcc-15.1.0/libiberty/configure
+--- gcc-15.1.0.orig/libiberty/configure	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libiberty/configure	2025-04-25 15:58:40.284619995 +0300
+@@ -7119,7 +7119,7 @@
+ fi
+ if test "x$ac_cv_func_fork_works" = xcross; then
+   case $host in
+-    *-*-amigaos* | *-*-msdosdjgpp*)
++    *-*-amigaos* | *-*-morphos* | *-*-msdosdjgpp*)
+       # Override, as these systems have only a dummy fork() stub
+       ac_cv_func_fork_works=no
+       ;;
+diff -ruN gcc-15.1.0.orig/libiberty/stack-limit.c gcc-15.1.0/libiberty/stack-limit.c
+--- gcc-15.1.0.orig/libiberty/stack-limit.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libiberty/stack-limit.c	2025-04-25 15:58:40.284619995 +0300
+@@ -39,7 +39,7 @@
+ #ifdef HAVE_STDINT_H
+ #include <stdint.h>
+ #endif
+-#ifdef HAVE_SYS_RESOURCE_H
++#if defined(HAVE_SYS_RESOURCE_H) && !defined(__MORPHOS__)
+ #include <sys/resource.h>
+ #endif
+ 
+diff -ruN gcc-15.1.0.orig/libobjc/configure gcc-15.1.0/libobjc/configure
+--- gcc-15.1.0.orig/libobjc/configure	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/configure	2025-04-25 15:58:40.284619995 +0300
+@@ -2536,7 +2536,7 @@
+     # Need the gcc compiler version to know where to install libraries
+     # and header files if --enable-version-specific-runtime-libs option
+     # is selected.
+-    toolexecdir='$(libdir)/gcc/$(target_noncanonical)'
++    toolexecdir='$(libdir)/gcc-lib/$(target_noncanonical)'
+     toolexeclibdir='$(toolexecdir)/$(gcc_version)$(MULTISUBDIR)'
+     ;;
+   no)
+@@ -4994,7 +4994,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libobjc/Makefile.in gcc-15.1.0/libobjc/Makefile.in
+--- gcc-15.1.0.orig/libobjc/Makefile.in	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/Makefile.in	2025-04-25 15:58:40.284619995 +0300
+@@ -48,7 +48,7 @@
+ top_builddir = .
+ 
+ libdir = $(exec_prefix)/lib
+-libsubdir = $(libdir)/gcc/$(target_noncanonical)/$(gcc_version)
++libsubdir = $(libdir)/gcc-lib/$(target_noncanonical)/$(gcc_version)
+ 
+ # Multilib support variables.
+ MULTISRCTOP =
+diff -ruN gcc-15.1.0.orig/libobjc/objc/objc.h gcc-15.1.0/libobjc/objc/objc.h
+--- gcc-15.1.0.orig/libobjc/objc/objc.h	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/objc/objc.h	2025-04-25 15:58:40.284619995 +0300
+@@ -51,8 +51,13 @@
+ 
+    Important: this could change and we could switch to 'typedef bool
+    BOOL' in the future.  Do not depend on the type of BOOL.  */
++
++#ifdef __MORPHOS__
++#include <exec/types.h>
++#else
+ #undef BOOL
+ typedef unsigned char  BOOL;
++#endif
+ 
+ #define YES   (BOOL)1
+ #define NO    (BOOL)0
+diff -ruN gcc-15.1.0.orig/libobjc/objc-sync.c gcc-15.1.0/libobjc/objc-sync.c
+--- gcc-15.1.0.orig/libobjc/objc-sync.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/objc-sync.c	2025-04-25 15:58:40.284619995 +0300
+@@ -174,6 +174,7 @@
+ void
+ __objc_sync_init (void)
+ {
++#ifndef __MORPHOS__
+   int i;
+ 
+   for (i = 0; i < SYNC_NUMBER_OF_POOLS; i++)
+@@ -193,8 +194,10 @@
+ 
+       sync_pool_array[i] = new_node;
+     }
++#endif
+ }  
+ 
++#ifndef __MORPHOS__
+ int
+ objc_sync_enter (id object)
+ {
+@@ -457,3 +460,5 @@
+   /* A lock for 'object' to unlock could not be found (!!).  */
+   return OBJC_SYNC_NOT_OWNING_THREAD_ERROR;
+ }
++
++#endif /* MorphOS */
+diff -ruN gcc-15.1.0.orig/libobjc/objects.c gcc-15.1.0/libobjc/objects.c
+--- gcc-15.1.0.orig/libobjc/objects.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/objects.c	2025-04-25 15:58:40.284619995 +0300
+@@ -36,6 +36,7 @@
+ #endif
+ 
+ /* FIXME: The semantics of extraBytes are not really clear.  */
++#ifndef __MORPHOS__
+ inline
+ id
+ class_createInstance (Class class, size_t extraBytes)
+@@ -93,6 +94,7 @@
+     }
+   return nil;
+ }
++#endif
+ 
+ const char *
+ object_getClassName (id object)
+diff -ruN gcc-15.1.0.orig/libobjc/thr.c gcc-15.1.0/libobjc/thr.c
+--- gcc-15.1.0.orig/libobjc/thr.c	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libobjc/thr.c	2025-04-25 15:58:40.288620027 +0300
+@@ -35,7 +35,16 @@
+ #include "objc/runtime.h"
+ #include "objc-private/module-abi-8.h"
+ #include "objc-private/runtime.h"
++
++#ifdef __MORPHOS__
++// MorphOS specific includes
++#define __IXEMUL_EXEC_MIXING_ALLOWED /* FIXME: this code is really broken for ixemul */
++#include <proto/dos.h>
++#include <proto/exec.h>
++#include <dos/dostags.h>
++#else
+ #include <gthr.h>
++#endif
+ 
+ #include <stdlib.h>
+ 
+@@ -75,7 +84,11 @@
+ int
+ __objc_init_thread_system(void)
+ {
++#ifdef __MORPHOS__
++  return 0;
++#else
+   return __gthread_objc_init_thread_system ();
++#endif
+ }
+ 
+ /* First function called in a thread, starts everything else.
+@@ -165,6 +178,28 @@
+   /* Lock access.  */
+   objc_mutex_lock (__objc_runtime_mutex);
+ 
++#ifdef __MORPHOS__
++	ULONG pid = 0;
++	
++	struct Task *t = (struct Task *)CreateNewProcTags(
++		NP_PPC_Arg1, (IPTR)istate,
++		NP_Entry, (IPTR)__objc_thread_detach_function,
++		NP_CodeType, CODETYPE_PPC,
++		NP_Name, (IPTR)"ObjC Runtime",
++		TAG_DONE);
++
++	if (NULL != t)
++	{
++		NewGetTaskAttrsA(t, &pid, sizeof (pid), TASKINFOTYPE_PID, NULL);
++		thread_id = (objc_thread_t)pid;
++	}
++	else
++	{
++      objc_mutex_unlock (__objc_runtime_mutex);
++      objc_free (istate);
++      return NULL;
++	}
++#else
+   /* Call the backend to spawn the thread.  */
+   if ((thread_id = __gthread_objc_thread_detach ((void *)__objc_thread_detach_function,
+ 						 istate)) == NULL)
+@@ -174,6 +209,7 @@
+       objc_free (istate);
+       return NULL;
+     }
++#endif
+ 
+   /* Increment our thread counter.  */
+   __objc_runtime_threads_alive++;
+@@ -186,14 +222,42 @@
+ int
+ objc_thread_set_priority (int priority)
+ {
+-  return __gthread_objc_thread_set_priority (priority);
++  int sys_priority = 0;
++
++  switch (priority)
++    {
++    case OBJC_THREAD_INTERACTIVE_PRIORITY:
++      sys_priority = 0;
++      break;
++    default:
++    case OBJC_THREAD_BACKGROUND_PRIORITY:
++      sys_priority = -1;
++      break;
++    case OBJC_THREAD_LOW_PRIORITY:
++      sys_priority = -127;
++      break;
++    }
++
++	SetTaskPri(FindTask(0), sys_priority);
++	
++	return 0;
+ }
+ 
+ /* Return the current thread's priority.  */
+ int
+ objc_thread_get_priority (void)
+ {
+-  return __gthread_objc_thread_get_priority ();
++	LONG priority = 0;
++	
++	NewGetTaskAttrsA(FindTask(0), &priority, sizeof (priority), TASKINFOTYPE_PRI, NULL);
++
++	if (priority < -10)
++		return OBJC_THREAD_LOW_PRIORITY;
++	
++	if (priority < 0)
++		return OBJC_THREAD_BACKGROUND_PRIORITY;
++	
++	return OBJC_THREAD_INTERACTIVE_PRIORITY;
+ }
+ 
+ /* Yield our process time to another thread.  Any BUSY waiting that is
+@@ -202,7 +266,7 @@
+ void
+ objc_thread_yield (void)
+ {
+-  __gthread_objc_thread_yield ();
++//  __gthread_objc_thread_yield ();
+ }
+ 
+ /* Terminate the current thread.  Doesn't return.  Actually, if it
+@@ -216,7 +280,9 @@
+   objc_mutex_unlock (__objc_runtime_mutex);
+ 
+   /* Call the backend to terminate the thread.  */
+-  return __gthread_objc_thread_exit ();
++//  return __gthread_objc_thread_exit ();
++  Wait(0);
++  __builtin_trap();
+ }
+ 
+ /* Returns an integer value which uniquely describes a thread.  Must
+@@ -224,7 +290,10 @@
+ objc_thread_t
+ objc_thread_id (void)
+ {
+-  return __gthread_objc_thread_id ();
++	ULONG pid = 0;
++	NewGetTaskAttrsA(FindTask(0), &pid, sizeof (pid), TASKINFOTYPE_PID, NULL);
++  	return (objc_thread_t)(size_t) pid;
++//  return __gthread_objc_thread_id ();
+ }
+ 
+ /* Sets the thread's local storage pointer.  Returns 0 if successful
+@@ -232,7 +301,9 @@
+ int
+ objc_thread_set_data (void *value)
+ {
+-  return __gthread_objc_thread_set_data (value);
++	NewSetTaskAttrsA(FindTask(0), (APTR)value, sizeof (ULONG), TASKINFOTYPE_USERDATA, 0);
++	return 0;
++//  return __gthread_objc_thread_set_data (value);
+ }
+ 
+ /* Returns the thread's local storage pointer.  Returns NULL on
+@@ -240,7 +311,10 @@
+ void *
+ objc_thread_get_data (void)
+ {
+-  return __gthread_objc_thread_get_data ();
++	ULONG rc = 0;
++	NewGetTaskAttrsA(FindTask(0), &rc, sizeof (ULONG), TASKINFOTYPE_USERDATA, 0);
++	return (void *)rc;
++//  return __gthread_objc_thread_get_data ();
+ }
+ 
+ /* Public mutex functions */
+@@ -256,6 +330,19 @@
+   if (! (mutex = (objc_mutex_t)objc_malloc (sizeof (struct objc_mutex))))
+     return NULL;
+ 
++#ifdef __MORPHOS__
++	mutex->backend = AllocMem(sizeof (struct SignalSemaphore), MEMF_ANY | MEMF_CLEAR);
++	
++	if (NULL != mutex->backend)
++	{
++		InitSemaphore((struct SignalSemaphore *)mutex->backend);
++	}
++	else
++	{
++      objc_free (mutex);
++      return NULL;
++	}
++#else
+   /* Call backend to create the mutex.  */
+   if (__gthread_objc_mutex_allocate (mutex))
+     {
+@@ -263,6 +350,7 @@
+       objc_free (mutex);
+       return NULL;
+     }
++#endif
+ 
+   /* Initialize mutex.  */
+   mutex->owner = NULL;
+@@ -287,9 +375,13 @@
+   /* Acquire lock on mutex.  */
+   depth = objc_mutex_lock (mutex);
+ 
++#ifdef __MORPHOS__
++	FreeMem(mutex->backend, sizeof (struct SignalSemaphore));
++#else
+   /* Call backend to destroy mutex.  */
+   if (__gthread_objc_mutex_deallocate (mutex))
+     return -1;
++#endif
+ 
+   /* Free the mutex structure.  */
+   objc_free (mutex);
+@@ -313,12 +405,21 @@
+     return -1;
+ 
+   /* If we already own the lock then increment depth.  */
++#ifdef __MORPHOS__
++  thread_id = objc_thread_id ();
++#else
+   thread_id = __gthread_objc_thread_id ();
++#endif
+   if (mutex->owner == thread_id)
+     return ++mutex->depth;
+ 
+   /* Call the backend to lock the mutex.  */
++#ifdef __MORPHOS__
++	ObtainSemaphore(mutex->backend);
++	status = 0;
++#else
+   status = __gthread_objc_mutex_lock (mutex);
++#endif
+ 
+   /* Failed?  */
+   if (status)
+@@ -343,12 +444,21 @@
+     return -1;
+ 
+   /* If we already own the lock then increment depth.  */
++#ifdef __MORPHOS__
++  thread_id = objc_thread_id ();
++#else
+   thread_id = __gthread_objc_thread_id ();
++#endif
+   if (mutex->owner == thread_id)
+     return ++mutex->depth;
+     
+   /* Call the backend to try to lock the mutex.  */
++#ifdef __MORPHOS__
++  if (AttemptSemaphore((struct SignalSemaphore *)mutex->backend))
++	status = 0;
++#else
+   status = __gthread_objc_mutex_trylock (mutex);
++#endif
+ 
+   /* Failed?  */
+   if (status)
+@@ -375,7 +485,11 @@
+     return -1;
+ 
+   /* If another thread owns the lock then abort.  */
++#ifdef __MORPHOS__
++  thread_id = objc_thread_id ();
++#else
+   thread_id = __gthread_objc_thread_id ();
++#endif
+   if (mutex->owner != thread_id)
+     return -1;
+ 
+@@ -388,7 +502,12 @@
+   mutex->owner = NULL;
+ 
+   /* Have the backend unlock the mutex.  */
++#ifdef __MORPHOS__
++  status = 0;
++  ReleaseSemaphore(mutex->backend);
++#else
+   status = __gthread_objc_mutex_unlock (mutex);
++#endif
+ 
+   /* Failed?  */
+   if (status)
+@@ -404,6 +523,9 @@
+ objc_condition_t 
+ objc_condition_allocate (void)
+ {
++#ifdef __MORPHOS__
++  return 0;
++#else
+   objc_condition_t condition;
+     
+   /* Allocate the condition mutex structure.  */
+@@ -421,6 +543,7 @@
+ 
+   /* Success!  */
+   return condition;
++#endif
+ }
+ 
+ /* Deallocate a condition. Note that this includes an implicit
+@@ -431,6 +554,10 @@
+ int
+ objc_condition_deallocate (objc_condition_t condition)
+ {
++#ifdef __MORPHOS__
++  condition = condition;
++  return 0;
++#else
+   /* Broadcast the condition.  */
+   if (objc_condition_broadcast (condition))
+     return -1;
+@@ -443,6 +570,7 @@
+   objc_free (condition);
+ 
+   return 0;
++#endif
+ }
+ 
+ /* Wait on the condition unlocking the mutex until
+@@ -455,6 +583,11 @@
+ int
+ objc_condition_wait (objc_condition_t condition, objc_mutex_t mutex)
+ {
++#ifdef __MORPHOS__
++  condition = condition;
++  mutex = mutex;
++  return -1;
++#else
+   objc_thread_t thread_id;
+ 
+   /* Valid arguments?  */
+@@ -482,6 +615,7 @@
+   mutex->depth = 1;
+ 
+   return 0;
++#endif
+ }
+ 
+ /* Wake up all threads waiting on this condition. It is recommended
+@@ -491,11 +625,16 @@
+ int
+ objc_condition_broadcast (objc_condition_t condition)
+ {
++#ifdef __MORPHOS__
++  condition = condition;
++  return -1;
++#else
+   /* Valid condition mutex?  */
+   if (! condition)
+     return -1;
+ 
+   return __gthread_objc_condition_broadcast (condition);
++#endif
+ }
+ 
+ /* Wake up one thread waiting on this condition. It is recommended
+@@ -505,11 +644,16 @@
+ int
+ objc_condition_signal (objc_condition_t condition)
+ {
++#ifdef __MORPHOS__
++  condition = condition;
++  return -1;
++#else
+   /* Valid condition mutex?  */
+   if (! condition)
+     return -1;
+ 
+   return __gthread_objc_condition_signal (condition);
++#endif
+ }
+ 
+ /* Make the objc thread system aware that a thread which is managed
+diff -ruN gcc-15.1.0.orig/libssp/configure gcc-15.1.0/libssp/configure
+--- gcc-15.1.0.orig/libssp/configure	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libssp/configure	2025-04-25 15:58:40.288620027 +0300
+@@ -5586,7 +5586,7 @@
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  amigaos*)
++  amigaos* | morphos*)
+     # On AmigaOS with pdksh, this test takes hours, literally.
+     # So we just punt and use a minimum line length of 8192.
+     lt_cv_sys_max_cmd_len=8192;
+diff -ruN gcc-15.1.0.orig/libssp/Makefile.in gcc-15.1.0/libssp/Makefile.in
+--- gcc-15.1.0.orig/libssp/Makefile.in	2025-04-25 11:18:04.000000000 +0300
++++ gcc-15.1.0/libssp/Makefile.in	2025-04-25 15:58:40.288620027 +0300
+@@ -366,7 +366,7 @@
+ @LIBSSP_USE_SYMVER_SUN_TRUE@@LIBSSP_USE_SYMVER_TRUE@version_dep = ssp.map-sun
+ AM_CFLAGS = -Wall $(XCFLAGS)
+ toolexeclib_LTLIBRARIES = libssp.la libssp_nonshared.la
+-libsubincludedir = $(libdir)/gcc/$(target_noncanonical)/$(gcc_version)/include
++libsubincludedir = $(libdir)/gcc-lib/$(target_noncanonical)/$(gcc_version)/include
+ nobase_libsubinclude_HEADERS = ssp/ssp.h ssp/string.h ssp/stdio.h ssp/unistd.h
+ libssp_la_SOURCES = \
+ 	ssp.c gets-chk.c memcpy-chk.c memmove-chk.c mempcpy-chk.c \
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/acinclude.m4 gcc-15.1.0/libstdc++-v3/acinclude.m4
+--- gcc-15.1.0.orig/libstdc++-v3/acinclude.m4	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/acinclude.m4	2025-04-25 15:58:40.288620027 +0300
+@@ -775,9 +775,9 @@
+     # is selected.  FIXME: these variables are misnamed, there are
+     # no executables installed in _toolexecdir or _toolexeclibdir.
+     if test x"$gxx_include_dir" = x"no"; then
+-      gxx_include_dir='${libdir}/gcc/${host_alias}/${gcc_version}/include/c++'
++      gxx_include_dir='${libdir}/gcc-lib/${host_alias}/${gcc_version}/include/c++'
+     fi
+-    glibcxx_toolexecdir='${libdir}/gcc/${host_alias}'
++    glibcxx_toolexecdir='${libdir}/gcc-lib/${host_alias}'
+     glibcxx_toolexeclibdir='${toolexecdir}/${gcc_version}$(MULTISUBDIR)'
+   fi
+ 
+@@ -796,7 +796,7 @@
+ 	  ;;
+       esac
+     else
+-      glibcxx_toolexecdir='${libdir}/gcc/${host_alias}'
++      glibcxx_toolexecdir='${libdir}/gcc-lib/${host_alias}'
+       glibcxx_toolexeclibdir='${libdir}'
+     fi
+     multi_os_directory=`$CXX -print-multi-os-directory`
+@@ -2791,6 +2791,8 @@
+   fi
+   enable_clocale_flag=$enable_clocale
+ 
++
++
+   # Probe for locale model to use if none specified.
+   # Default to "generic".
+   if test $enable_clocale_flag = auto; then
+@@ -5069,13 +5071,7 @@
+        #include <unistd.h>
+       ],
+       [
+-       #if _XOPEN_VERSION < 500
+-       #error
+-       #elif _XOPEN_VERSION >= 700 || defined(PATH_MAX)
+        char *tmp = realpath((const char*)NULL, (char*)NULL);
+-       #else
+-       #error
+-       #endif
+       ],
+       [glibcxx_cv_realpath=yes],
+       [glibcxx_cv_realpath=no])
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/config/io/basic_file_stdio.cc gcc-15.1.0/libstdc++-v3/config/io/basic_file_stdio.cc
+--- gcc-15.1.0.orig/libstdc++-v3/config/io/basic_file_stdio.cc	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/config/io/basic_file_stdio.cc	2025-04-25 15:58:40.288620027 +0300
+@@ -440,6 +440,7 @@
+   __basic_file<char>::showmanyc()
+   {
+ #if !defined(_GLIBCXX_NO_IOCTL) && !defined(_GLIBCXX_USE_STDIO_PURE)
++#ifndef __libnix__
+ #ifdef FIONREAD
+     // Pipes and sockets.
+     int __num = 0;
+@@ -448,6 +449,7 @@
+       return __num;
+ #endif
+ #endif
++#endif
+ 
+ #if defined(_GLIBCXX_HAVE_POLL) && !defined(_GLIBCXX_USE_STDIO_PURE)
+     // Cheap test.
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/config/os/generic/os_defines.h gcc-15.1.0/libstdc++-v3/config/os/generic/os_defines.h
+--- gcc-15.1.0.orig/libstdc++-v3/config/os/generic/os_defines.h	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/config/os/generic/os_defines.h	2025-04-25 15:58:40.288620027 +0300
+@@ -38,4 +38,10 @@
+ // workaround in gthr-posix.h and at link-time for static linking.
+ #define _GLIBCXX_GTHREAD_USE_WEAK 0
+ 
++#ifdef __MORPHOS__
++// Disable the libstdc++ weak reference logic completely for MorphOS because
++// it is broken.
++#define _GLIBCXX_USE_WEAK_REF 0
++#endif
++
+ #endif
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/crossconfig.m4 gcc-15.1.0/libstdc++-v3/crossconfig.m4
+--- gcc-15.1.0.orig/libstdc++-v3/crossconfig.m4	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/crossconfig.m4	2025-04-25 15:58:40.296620091 +0300
+@@ -198,6 +198,12 @@
+     AC_CHECK_FUNCS(_wfopen)
+     GCC_CHECK_TLS
+     ;;
++  *-morphos*)
++    GLIBCXX_CHECK_COMPILER_FEATURES
++    GLIBCXX_CHECK_LINKER_FEATURES
++    GLIBCXX_CHECK_MATH_SUPPORT
++    GLIBCXX_CHECK_STDLIB_SUPPORT
++    ;;
+   *-netbsd* | *-openbsd*)
+     SECTION_FLAGS='-ffunction-sections -fdata-sections'
+     AC_SUBST(SECTION_FLAGS) 
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/include/bits/locale_classes.h gcc-15.1.0/libstdc++-v3/include/bits/locale_classes.h
+--- gcc-15.1.0.orig/libstdc++-v3/include/bits/locale_classes.h	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/include/bits/locale_classes.h	2025-04-25 15:58:40.296620091 +0300
+@@ -379,8 +379,12 @@
+     _M_coalesce(const locale& __base, const locale& __add, category __cat);
+ 
+ #if _GLIBCXX_USE_CXX11_ABI
++#ifdef __MORPHOS__
++static const id* _S_twinned_facets[];
++#else
+     static const id* const _S_twinned_facets[];
+ #endif
++#endif
+   };
+ 
+ #if __cpp_lib_type_trait_variable_templates // C++ >= 17
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/include/std/mutex gcc-15.1.0/libstdc++-v3/include/std/mutex
+--- gcc-15.1.0.orig/libstdc++-v3/include/std/mutex	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/include/std/mutex	2025-04-25 15:58:40.296620091 +0300
+@@ -915,7 +915,21 @@
+       once_flag::_Prepare_execution __exec(__callable);
+ 
+       // XXX pthread_once does not reset the flag if an exception is thrown.
+-      if (int __e = __gthread_once(&__once._M_once, &__once_proxy))
++      int __e = 0;
++#if defined(__MORPHOS__) && defined(__EXCEPTIONS)
++      try
++      {
++#endif
++	__e = __gthread_once(&__once._M_once, &__once_proxy);
++#if defined(__MORPHOS__) && defined(__EXCEPTIONS)
++      }
++      catch (...)
++      {
++	__gthread_once_unlock(&__once._M_once);
++	throw;
++      }
++#endif
++      if (__e)
+ 	__throw_system_error(__e);
+     }
+ 
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/libsupc++/new_opa.cc gcc-15.1.0/libstdc++-v3/libsupc++/new_opa.cc
+--- gcc-15.1.0.orig/libstdc++-v3/libsupc++/new_opa.cc	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/libsupc++/new_opa.cc	2025-04-25 15:58:40.296620091 +0300
+@@ -97,7 +97,10 @@
+ #else // !HAVE__ALIGNED_MALLOC && !HAVE_POSIX_MEMALIGN && !HAVE_MEMALIGN
+ // The C library doesn't provide any aligned allocation functions, define one.
+ // This is a modified version of code from gcc/config/i386/gmm_malloc.h
+-static inline void*
++#ifndef __MORPHOS__
++static
++#endif
++inline void*
+ aligned_alloc (std::size_t al, std::size_t sz)
+ {
+   // We need extra bytes to store the original value returned by malloc.
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/src/c++11/locale_init.cc gcc-15.1.0/libstdc++-v3/src/c++11/locale_init.cc
+--- gcc-15.1.0.orig/libstdc++-v3/src/c++11/locale_init.cc	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/src/c++11/locale_init.cc	2025-04-25 15:58:40.296620091 +0300
+@@ -447,7 +447,11 @@
+ #if _GLIBCXX_USE_DUAL_ABI
+   // Facets that are instantiated for both the COW and SSO std::string ABIs.
+   // The COW ABI version must come first, followed by its SSO twin.
++  #ifdef __MORPHOS__
++  const locale::id* locale::_S_twinned_facets[] = {
++  #else
+   const locale::id* const locale::_S_twinned_facets[] = {
++  #endif
+     &::_ZNSt8numpunctIcE2idE,
+     &numpunct<char>::id,
+     &::_ZNSt7collateIcE2idE,
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/src/c++17/ryu/f2s_intrinsics.h gcc-15.1.0/libstdc++-v3/src/c++17/ryu/f2s_intrinsics.h
+--- gcc-15.1.0.orig/libstdc++-v3/src/c++17/ryu/f2s_intrinsics.h	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/src/c++17/ryu/f2s_intrinsics.h	2025-04-25 15:58:40.296620091 +0300
+@@ -17,6 +17,11 @@
+ #ifndef RYU_F2S_INTRINSICS_H
+ #define RYU_F2S_INTRINSICS_H
+ 
++#ifndef UINT32_MAX
++/* This is fugly, but stdint.h has already been included without __STDC_LIMIT_MACROS - Piru */
++#define UINT32_MAX 4294967295U
++#endif
++
+ // Defines RYU_32_BIT_PLATFORM if applicable.
+ 
+ #if defined(RYU_FLOAT_FULL_TABLE)
+diff -ruN gcc-15.1.0.orig/libstdc++-v3/src/filesystem/ops.cc gcc-15.1.0/libstdc++-v3/src/filesystem/ops.cc
+--- gcc-15.1.0.orig/libstdc++-v3/src/filesystem/ops.cc	2025-04-25 11:18:05.000000000 +0300
++++ gcc-15.1.0/libstdc++-v3/src/filesystem/ops.cc	2025-04-25 15:58:40.296620091 +0300
+@@ -127,11 +127,6 @@
+ 
+ #ifdef _GLIBCXX_USE_REALPATH
+   char_ptr buf{ nullptr };
+-# if _XOPEN_VERSION < 700
+-  // Not safe to call realpath(path, NULL)
+-  using char_type = fs::path::value_type;
+-  buf.reset( (char_type*)::malloc(PATH_MAX * sizeof(char_type)) );
+-# endif
+   if (char* rp = ::realpath(pa.c_str(), buf.get()))
+     {
+       if (buf == nullptr)

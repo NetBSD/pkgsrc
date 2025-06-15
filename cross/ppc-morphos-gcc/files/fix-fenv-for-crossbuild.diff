@@ -1,0 +1,36 @@
+--- gcc-11.1.0-old/libstdc++-v3/include/c_compatibility/fenv.h	2021-04-27 13:00:16.000000000 +0300
++++ gcc-11.1.0-new/libstdc++-v3/include/c_compatibility/fenv.h	2021-06-21 22:57:48.553142842 +0300
+@@ -26,6 +26,10 @@
+  *  This is a Standard C++ Library header.
+  */
+ 
++#if !defined __cplusplus || defined _GLIBCXX_INCLUDE_NEXT_C_HEADERS
++# include_next <fenv.h>
++#else
++
+ #ifndef _GLIBCXX_FENV_H
+ #define _GLIBCXX_FENV_H 1
+ 
+@@ -79,3 +83,5 @@
+ #endif // C++11
+ 
+ #endif // _GLIBCXX_FENV_H
++
++#endif
+--- gcc-11.1.0-old/libstdc++-v3/include/c_global/cfenv	2021-04-27 13:00:16.000000000 +0300
++++ gcc-11.1.0-new/libstdc++-v3/include/c_global/cfenv	2021-06-21 22:54:39.506005252 +0300
+@@ -37,9 +37,11 @@
+ 
+ #include <bits/c++config.h>
+ 
+-#if _GLIBCXX_HAVE_FENV_H
+-# include <fenv.h>
+-#endif
++// Need to ensure this finds the C library's <fenv.h> not a libstdc++
++// wrapper that might already be installed later in the include search path.
++#define _GLIBCXX_INCLUDE_NEXT_C_HEADERS
++#include_next <fenv.h>
++#undef _GLIBCXX_INCLUDE_NEXT_C_HEADERS
+ 
+ #ifdef _GLIBCXX_USE_C99_FENV_TR1
+ 

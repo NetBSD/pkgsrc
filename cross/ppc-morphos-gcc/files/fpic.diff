@@ -1,0 +1,20 @@
+--- gcc/config/rs6000/sysv4.h_orig	2019-11-16 19:26:35.231951385 +0100
++++ gcc/config/rs6000/sysv4.h	2019-11-16 19:27:56.225897027 +0100
+@@ -205,16 +205,17 @@ do {									\
+     }									\
+ 									\
+   if (TARGET_RELOCATABLE)						\
+     {									\
+       if (!flag_pic)							\
+ 	flag_pic = 2;							\
+       TARGET_NO_FP_IN_TOC = 1;						\
+     }									\
++if (flag_pic > 0) {flag_pic=0;warning (0, "-fPIC is unsupported");}	\
+ } while (0)
+ 
+ #ifndef RS6000_BI_ARCH
+ # define SUBSUBTARGET_OVERRIDE_OPTIONS					\
+ do {									\
+   if ((TARGET_DEFAULT ^ rs6000_isa_flags) & OPTION_MASK_64BIT)		\
+     error ("%<-m%s%> not supported in this configuration",		\
+ 	   (rs6000_isa_flags & OPTION_MASK_64BIT) ? "64" : "32");	\

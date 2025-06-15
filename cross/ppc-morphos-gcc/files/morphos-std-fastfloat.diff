@@ -1,0 +1,17 @@
+--- gcc-12.1.0/libstdc++-v3/src/c++17/fast_float/fast_float.h.orig	2022-05-08 15:36:29.485581656 +0300
++++ gcc-12.1.0/libstdc++-v3/src/c++17/fast_float/fast_float.h	2022-05-08 15:35:34.325734211 +0300
+@@ -42,6 +42,14 @@
+ #ifndef FASTFLOAT_FAST_FLOAT_H
+ #define FASTFLOAT_FAST_FLOAT_H
+ 
++/* This is fugly, but stdint.h has already been included without __STDC_LIMIT_MACROS - Piru */
++#ifndef SIZE_MAX
++#define SIZE_MAX 0xffffffff
++#endif
++#ifndef UINT64_MAX
++#define UINT64_MAX 18446744073709551615ULL
++#endif
++
+ namespace fast_float {
+ 
+ using std::chars_format;
