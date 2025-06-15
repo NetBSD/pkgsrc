@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.419 2025/06/15 13:16:36 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.420 2025/06/15 14:42:39 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26364,4 +26364,5 @@ assimp<6.0.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2750
 assimp<6.0.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-2751
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-2757
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3158
-p5-CryptX<0.087	integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-40914
+p5-CryptX<0.087	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40914
+sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46807
