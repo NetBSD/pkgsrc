@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25893 2025/06/15 13:53:47 ryoon Exp $
+$NetBSD: TODO,v 1.25894 2025/06/15 16:37:30 taca Exp $
 
 Suggested new packages
 ======================
@@ -497,7 +497,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bottlerocket-0.05b3
 	o box2d-3.1.1
 	o bugzilla3-3.6.13
-	o cacti-1.2.19
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
@@ -1047,7 +1046,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pgbuildfarm-12
 	o pgpdump-0.33
 	o phoronix-9.2.1
-	o phoronix-test-suite-10.8
 	o php-basercms-5.1.5
 	o php-composer-2.8.5
 	o php-dotclear-2.33
@@ -1174,7 +1172,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
-	o rspamd-3.12.0
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
