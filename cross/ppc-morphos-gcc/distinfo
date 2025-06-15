@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.1 2025/06/15 12:51:35 js Exp $
+$NetBSD: distinfo,v 1.2 2025/06/15 13:19:52 js Exp $
 
 BLAKE2s (gcc-15.1.0.tar.xz) = 260d64654fbfc0ee06540cc4604cd7071be53d616069a9dd57e5359a0b0ecf46
 SHA512 (gcc-15.1.0.tar.xz) = ddd35ca6c653dffa88f7c7ef9ee4cd806e156e0f3b30f4d63e75a8363361285cd566ee73127734cde6a934611de815bee3e32e24bfd2e0ab9f7ff35c929821c1
 Size (gcc-15.1.0.tar.xz) = 98268344 bytes
 SHA1 (patch-config_override.m4) = 1ee0186b006a987dc57151a9d112654eabd24db9
 SHA1 (patch-gcc_config_rs6000_morphos.h) = c788e480f3f510b61292f5b1ec5b84646b33ab93
+SHA1 (patch-gcc_plugin.cc) = 85facfdab177478fa423fafd0b4f7c1704e2f270
 SHA1 (patch-libcc1_configure.ac) = ca40be7af4a4ffc3a4fba1a0dbda76fcde1fa2d9
 SHA1 (patch-libgcc_config_rs6000_gthr-morphos.c) = 0fae90d02ce28f8191ef2e4eb4fdbfe2ee7c23d3
+SHA1 (patch-libiberty_fibheap.c) = f11678ec725c773a18d03236ab4387d9ec9eef7d
+SHA1 (patch-libiberty_filedescriptor.c) = 51ad6812739b459d8cb37b6bd8afd5afb92dabd3
+SHA1 (patch-libiberty_pex-unix.c) = 7cf523e46d6c669785293f82fa8cf0b6c2b69895
 SHA1 (patch-libstdc++-v3_crossconfig.m4) = 0d0d20f9a1444bd77520decd275ac22d2a6e4890
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 0234e780171554bf60858b884ab1181cad36f8b2
 SHA1 (patch-zlib_zutil.c) = 33a75b615f4d43c628450f8f3743a00a1a050c3e
