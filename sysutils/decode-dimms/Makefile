@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/03/31 14:07:36 pgoyette Exp $
+# $NetBSD: Makefile,v 1.34 2025/06/15 23:45:54 pgoyette Exp $
 
 # Track upstream's HEAD
 PKG_DATE=	20241010
@@ -9,7 +9,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/snapshot/
 
-MAINTAINER=	pgoyette@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.kernel.org/pub/scm/utils/i2c-tools/
 COMMENT=	Decode memory DIMM SPD ROM info
 LICENSE=	gnu-gpl-v2
