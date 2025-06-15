@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:05:26 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/06/15 16:04:55 taca Exp $
 
-BLAKE2s (cacti-1.2.11.tar.gz) = e116eee221954f1065aee42bf85ec8b1c40e0d89a7760043930f0c8489468807
-SHA512 (cacti-1.2.11.tar.gz) = ab8a856fde55f405314fe0ec1eccccfb78105181fc081dcc04091963b08777550182867b45daea4f630f19dbb538ad7ca5c62f2dac9cd867524dfef113e2a220
-Size (cacti-1.2.11.tar.gz) = 25099698 bytes
+BLAKE2s (cacti-1.2.30.tar.gz) = 86efba57289da5877bd9b4f1bfd53e1db60c8f8d0f03c14b276035fae03c2ff4
+SHA512 (cacti-1.2.30.tar.gz) = 8c4ded2c64c0f3b87c5d4c1acee0897bf16ef08dcdd1eec996876ece85144ddd1eebae48d95aae84ae3484a30a20316c8d05d2d31204a133c56df7538aec7766
+Size (cacti-1.2.30.tar.gz) = 46853242 bytes
 SHA1 (patch-cacti.sql) = 7bdfe92fc5254762ec4f75019ca380754f5867d5
 SHA1 (patch-cli_install__cacti.php) = 76d6fc73607902d1863fdc54c4c98171c2817454
 SHA1 (patch-include_global.php) = c115a912c63617a4821690829b46ba7350e03c6b
