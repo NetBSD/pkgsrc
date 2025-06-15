@@ -1,4 +1,4 @@
-$NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
+$NetBSD: patch-install-sh,v 1.5 2025/06/15 15:51:39 taca Exp $
 
 * Handle pkgsrc hierarchy especially paths to man pages;
 * pkgsrc will handle the MIME and desktopdb updates. No need to ask user
@@ -8,9 +8,9 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
 * Remove the systemd directory creation and make the PLIST handle
   the presence/absence of systemd ecosystem.
 
-$NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
+$NetBSD: patch-install-sh,v 1.5 2025/06/15 15:51:39 taca Exp $
 
---- install-sh.orig	2019-05-30 15:01:30.000000000 +0000
+--- install-sh.orig	2022-07-03 10:18:54.000000000 +0000
 +++ install-sh
 @@ -53,10 +53,9 @@ mkdir -p $DESTDIR$INSTALL_PREFIX/bin/
  mkdir -p $DESTDIR$INSTALL_PREFIX/share/appdata/
@@ -24,7 +24,7 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
  #mkdir -p $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
  #mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/init/
  
-@@ -65,26 +64,25 @@ cp COPYING $DESTDIR$INSTALL_PREFIX/share
+@@ -65,26 +64,27 @@ cp COPYING $DESTDIR$INSTALL_PREFIX/share
  cp AUTHORS $DESTDIR$INSTALL_PREFIX/share/doc/phoronix-test-suite/
  
  cd documentation/
@@ -36,7 +36,7 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
 -cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/share/man/man1/
 -cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/../etc/bash_completion.d/phoronix-test-suite
 +cp documentation/man-pages/*.1 $DESTDIR$INSTALL_PREFIX/$PKGMANDIR/man1/
-+cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/share/bash-completion.d
++cp pts-core/static/bash_completion $DESTDIR$INSTALL_PREFIX/share/bash-completion.d/bash-completion
  cp pts-core/static/images/phoronix-test-suite.png $DESTDIR$INSTALL_PREFIX/share/icons/hicolor/48x48/apps/phoronix-test-suite.png
  cp pts-core/static/phoronix-test-suite.desktop $DESTDIR$INSTALL_PREFIX/share/applications/
  cp pts-core/static/phoronix-test-suite-launcher.desktop $DESTDIR$INSTALL_PREFIX/share/applications/
@@ -44,20 +44,22 @@ $NetBSD: patch-install-sh,v 1.4 2019/06/10 02:48:23 jym Exp $
  
 -mkdir -p $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
 -cp deploy/*-systemd/*.service $DESTDIR$INSTALL_PREFIX/../usr/lib/systemd/system/
-+cp deploy/*-systemd/*.service $DESTDIR$INSTALL_PREFIX/lib/systemd/system/
++if test -f /bin/systemd; then
++    cp deploy/*-systemd/*.service $DESTDIR$INSTALL_PREFIX/lib/systemd/system/
++fi
  
  # mkdir -p $DESTDIR$INSTALL_PREFIX/../etc/init/
  # cp pts-core/static/upstart/*.conf $DESTDIR$INSTALL_PREFIX/../etc/init/
  
  rm -rf $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core
 -cp -r pts-core $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
--cp -r deploy $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
+-cp -r ob-cache $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
 +cp -R pts-core $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
-+cp -R deploy $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
++cp -R ob-cache $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
+ cp -r deploy $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite.desktop
  rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/static/phoronix-test-suite-launcher.desktop
- rm -f $DESTDIR$INSTALL_PREFIX/share/phoronix-test-suite/pts-core/openbenchmarking.org/openbenchmarking-mime.xml
-@@ -121,6 +119,5 @@ Phoronix Test Suite Files: $INSTALL_PREF
+@@ -122,6 +122,5 @@ Phoronix Test Suite Files: $INSTALL_PREF
  if [ "X$DESTDIR" != "X" ]
  then
  	echo "Installed to chroot: $DESTDIR"

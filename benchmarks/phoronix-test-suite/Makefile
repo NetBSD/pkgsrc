@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2025/02/08 03:28:48 taca Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/15 15:51:38 taca Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
-PTS_VERSION=	8.8.1
-PKGREVISION=	4
+PTS_VERSION=	10.8.4
 CATEGORIES=	benchmarks
-MASTER_SITES=	https://www.phoronix-test-suite.com/releases/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=phoronix-test-suite/}
+GITHUB_PROJECT=	phoronix-test-suite
+GITHUB_RELEASE=	v${PTS_VERSION}
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://www.phoronix-test-suite.com/
@@ -28,6 +29,9 @@ INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps share/mime/packages
 INSTALLATION_DIRS+=	share/icons/hicolor/64x64/mimetypes
 
 NO_BUILD=	yes
+
+CHECK_PORTABILITY_SKIP+=	ob-cache/test-profiles/*
+CHECK_INTERPRETER_SKIP+=	share/phoronix-test-suite/*
 
 WRKSRC=		${WRKDIR}/phoronix-test-suite
 
