@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3932 2025/06/15 12:51:58 js Exp $
+$NetBSD: CHANGES-2025,v 1.3933 2025/06/15 13:16:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/bulk-test-go to 20250615 [bsiegert 2025-06-15]
 	Updated devel/php-xdebug to 3.4.4 [taca 2025-06-15]
 	Added cross/ppc-morphos-gcc version 15.1.0 [js 2025-06-15]
+	Updated security/p5-CryptX to 0.087 [wiz 2025-06-15]
