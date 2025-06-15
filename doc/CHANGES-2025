@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3928 2025/06/15 06:36:41 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.3929 2025/06/15 08:31:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5869,3 +5869,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-sass-embedded to 1.89.0nb1 [taca 2025-06-14]
 	Updated lang/ruby-execjs to 2.10.0nb1 [taca 2025-06-14]
 	Updated devel/task to 3.44.0 [iquiw 2025-06-15]
+	Updated devel/py-pydantic-core to 2.35.1 [adam 2025-06-15]
+	Updated devel/py-pydantic to 2.11.7 [adam 2025-06-15]
+	Updated security/py-certifi to 2025.6.15 [adam 2025-06-15]
+	Updated www/py-aiohttp to 3.12.13 [adam 2025-06-15]
