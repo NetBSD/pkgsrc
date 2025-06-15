@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2021/04/21 08:22:42 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/06/15 13:55:34 ryoon Exp $
 #
 # used by editors/elvis-x11/Makefile
 # used by editors/elvis/Makefile
@@ -9,7 +9,7 @@ CATEGORIES=	editors
 MASTER_SITES=	# ftp://ftp.cs.pdx.edu/pub/elvis/
 
 MAINTAINER=	airhead@users.sourceforge.net
-#HOMEPAGE=	http://elvis.vi-editor.org/
+HOMEPAGE=	https://elvis.the-little-red-haired-girl.org/
 LICENSE=	artistic
 
 VERSION=	2.2.0
