@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2024/07/25 06:05:06 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2025/06/15 13:38:17 ryoon Exp $
 
-BLAKE2s (OmegaT_6.0.0_Without_JRE.zip) = 41a931a02f8513ed0dae65f27cec17632f362e9753fba490bb930e1e02fe466d
-SHA512 (OmegaT_6.0.0_Without_JRE.zip) = 3038c1084602c948be2ac2d54306e606dc763ba41c8a06d938aa90dbd983f832a99190eecde355909a72faa94ba2c345a4412808c5a6c436e091553f53202e71
-Size (OmegaT_6.0.0_Without_JRE.zip) = 184475618 bytes
+BLAKE2s (OmegaT_6.0.1_Without_JRE.zip) = af0a21ede8180611f1d3f12b1336d9743ac7355384dd92a5e58ed05154572aaa
+SHA512 (OmegaT_6.0.1_Without_JRE.zip) = f403c6bd66ab3154aba2ea65c12fdb86d700a69ebaa4b59f1871a3d609dd808a369657b68d96c9c393f3386b370b1cc9d17f3b8679c8c9a6c1c34727bed5450b
+Size (OmegaT_6.0.1_Without_JRE.zip) = 179335627 bytes
