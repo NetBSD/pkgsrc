@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/02/24 15:10:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/06/15 16:11:39 taca Exp $
 ${FO_DIR}/.gitignore
 ${FO_DIR}/README.md
 ${FO_DIR}/application/application.php
@@ -73,6 +73,7 @@ ${FO_DIR}/application/helpers/save_user_permissions.php
 ${FO_DIR}/application/helpers/sharing_table.php
 ${FO_DIR}/application/helpers/tabbednavigation.php
 ${FO_DIR}/application/helpers/textile.php
+${FO_DIR}/application/helpers/update_text_to_show_in_trees.php
 ${FO_DIR}/application/index.html
 ${FO_DIR}/application/layouts/dialog.php
 ${FO_DIR}/application/layouts/empty.php
@@ -8183,6 +8184,7 @@ ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/documents.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/download.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/edit_color.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/email.png
+${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/exclamation.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/expand.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/expand2.png
 ${FO_DIR}/public/assets/themes/default/images/icons-feng-3/16x16/expenses.png
@@ -8506,6 +8508,7 @@ ${FO_DIR}/public/assets/themes/default/stylesheets/event/week.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/file/types.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/general/construction.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/general/forms.css
+${FO_DIR}/public/assets/themes/default/stylesheets/general/forms_override.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/general/layout.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/general/rewrites.css
 ${FO_DIR}/public/assets/themes/default/stylesheets/login.css
@@ -8685,4 +8688,3 @@ ${FO_DIR}/src/showWorkedHoursWidget.js
 ${FO_DIR}/tmp/.htaccess
 ${FO_DIR}/upload/.htaccess
 ${FO_DIR}/version.php
-
