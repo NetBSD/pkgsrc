@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3959 2025/06/16 13:54:18 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3960 2025/06/16 16:17:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5901,3 +5901,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ffproxy to 1.6nb2 [taca 2025-06-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q2 branch [bsiegert 2025-06-16]
 	Updated lang/pear to 1.10.16nb3 [jperkin 2025-06-16]
+	Updated mail/openarc to 20180921nb3 [ryoon 2025-06-16]
