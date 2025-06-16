@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/04/26 15:01:22 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/06/16 16:17:05 ryoon Exp $
 
 BLAKE2s (openarc-20180921-355ee2a1ca85acccce494478991983b54f794f4e.tar.gz) = bea742cd9cab422b17296d3d90e5fcf025a6d59e6d02b60c2c3fbda7caa72d11
 SHA512 (openarc-20180921-355ee2a1ca85acccce494478991983b54f794f4e.tar.gz) = edf006b4c8312ea93f478a228a498cd00394c9ec9682cd918e15629ef77974c530033a2de466d7e3d30eefa5d0ad12514f18a914fb69ccfc4b8306ee147c917c
 Size (openarc-20180921-355ee2a1ca85acccce494478991983b54f794f4e.tar.gz) = 150982 bytes
-SHA1 (patch-libopenarc_arc.c) = 70a7a061f9a6dd5e9b63c3681d6b3f9233b5e97a
+SHA1 (patch-libopenarc_arc.c) = 2dc1206ce9cf0ba9f85710ce3342c05efbf89dc1
