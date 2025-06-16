@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3960 2025/06/16 16:17:21 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.3961 2025/06/16 21:12:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5902,3 +5902,4 @@ Changes to the packages collection and infrastructure in 2025:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q2 branch [bsiegert 2025-06-16]
 	Updated lang/pear to 1.10.16nb3 [jperkin 2025-06-16]
 	Updated mail/openarc to 20180921nb3 [ryoon 2025-06-16]
+	Updated lang/rust to 1.86.0 [he 2025-06-16]
