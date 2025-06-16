@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/05 13:57:00 hauke Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/16 09:35:36 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/addump
 ${PLIST.appletalk}bin/aecho
@@ -94,7 +94,7 @@ man/man5/afp_signature.conf.5
 man/man5/afp_voluuid.conf.5
 ${PLIST.appletalk}man/man5/atalkd.conf.5
 man/man5/extmap.conf.5
-man/man5/macipgw.conf.5
+${PLIST.appletalk}man/man5/macipgw.conf.5
 ${PLIST.appletalk}man/man5/papd.conf.5
 ${PLIST.appletalk}man/man8/a2boot.8
 man/man8/afpd.8
@@ -115,7 +115,7 @@ ${PLIST.appletalk}sbin/macipgw
 sbin/netatalk
 ${PLIST.appletalk}sbin/papd
 ${PLIST.appletalk}sbin/timelord
-share/doc/netatalk/APPLETALK.txt
+${PLIST.appletalk}share/doc/netatalk/APPLETALK.txt
 share/doc/netatalk/COMPILATION.txt
 share/doc/netatalk/CONTRIBUTORS.txt
 share/doc/netatalk/DEVELOPER.txt
