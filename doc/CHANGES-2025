@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3957 2025/06/16 07:23:44 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.3958 2025/06/16 09:21:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5901,3 +5901,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-jekyll-sass-converter to 3.1.0 [taca 2025-06-15]
 	Updated www/ffproxy to 1.6nb2 [taca 2025-06-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q2 branch [bsiegert 2025-06-16]
+	Updated lang/pear to 1.10.16nb3 [jperkin 2025-06-16]
