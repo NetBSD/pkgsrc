@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2020/04/29 20:31:58 maya Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/16 16:42:22 ryoon Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -10,7 +10,7 @@ DIST_SUBDIR=		mpd-language
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		is@NetBSD.org
-HOMEPAGE=		http://www.cs.arizona.edu/mpd/
+HOMEPAGE=		https://www2.cs.arizona.edu/mpd/
 COMMENT=		The MPD language compiler and run time system
 
 MAKE_JOBS_SAFE=		no
