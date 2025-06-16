@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.168 2025/05/07 10:29:25 tnn Exp $
+# $NetBSD: pyversion.mk,v 1.169 2025/06/16 09:27:03 jperkin Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -204,6 +204,8 @@ TEST_DEPENDS+=			${PYDEPENDENCY}
 .  else
 .    if !empty(PYTHON_FOR_BUILD_ONLY:M[yY][eE][sS])
 BUILDLINK_DEPMETHOD.python?=	build
+.    else
+BUILDLINK_DEPMETHOD.python?=	full
 .    endif
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
 .    if ${USE_CROSS_COMPILE:tl} == "yes"
