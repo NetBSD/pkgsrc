@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3956 2025/06/15 16:55:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.3957 2025/06/16 07:23:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5900,3 +5900,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/typo3-13 to 13.4.14 [taca 2025-06-15]
 	Updated www/ruby-jekyll-sass-converter to 3.1.0 [taca 2025-06-15]
 	Updated www/ffproxy to 1.6nb2 [taca 2025-06-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q2 branch [bsiegert 2025-06-16]
