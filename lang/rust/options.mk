@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.44 2025/04/08 09:31:06 wiz Exp $
+# $NetBSD: options.mk,v 1.45 2025/06/16 21:10:43 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -38,14 +38,6 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 # Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (18.x).
 GCC_REQD+=	12
 .  endif
-.endif
-
-# Fix for problem seen during rust-installer run w/rust 1.84.1 on macppc,
-# "of course" experienced near the end of the build process:
-# assertion "memcmp(mf_ptr(mf) - 1, mf_ptr(mf) - matches[i].dist - 2, matches[i].len) == 0" failed: file "xz-5.2/src/liblzma/lz/lz_encoder_mf.c", line 40, function "lzma_mf_find"
-# The above is seen with both in-tree gcc (10.5.0) and gcc12 from pkgsrc.
-.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
-GCC_REQD+=	14
 .endif
 
 #
