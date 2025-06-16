@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.14 2025/03/31 16:38:43 jakllsch Exp $
+# $NetBSD: rust.mk,v 1.15 2025/06/16 21:10:43 he Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -15,7 +15,7 @@
 #	including Darwin, FreeBSD, Linux, and NetBSD x86_64.
 #
 #	Possible values: src bin native
-#	Default: src
+#	Default: "src", except on 32-bit arm where it's "bin"
 #
 # === Package-settable variables ===
 #
@@ -37,7 +37,11 @@
 RUST_REQ?=	1.56.1
 RUST_RUNTIME?=	no
 
+.if ${MACHINE_PLATFORM:M*-*-earm*}
+RUST_TYPE?=	bin
+.else
 RUST_TYPE?=	src
+.endig
 
 .if ${RUST_TYPE} == "bin"
 .  if ${RUST_RUNTIME} == "no"
