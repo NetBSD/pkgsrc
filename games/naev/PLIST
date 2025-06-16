@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/03 18:30:52 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/16 15:14:40 ktnb Exp $
 bin/naev
 man/man6/naev.6
 share/applications/org.naev.Naev.desktop
@@ -36,8 +36,6 @@ share/doc/naev/c/background_8c_source.html
 share/doc/naev/c/background_8h_source.html
 share/doc/naev/c/base64_8c_source.html
 share/doc/naev/c/base64_8h_source.html
-share/doc/naev/c/bc_s.png
-share/doc/naev/c/bc_sd.png
 share/doc/naev/c/board_8c.html
 share/doc/naev/c/board_8c__incl.map
 share/doc/naev/c/board_8c__incl.md5
@@ -71,7 +69,6 @@ share/doc/naev/c/classshaders__c__gen_1_1SimpleShader__inherit__graph.map
 share/doc/naev/c/classshaders__c__gen_1_1SimpleShader__inherit__graph.md5
 share/doc/naev/c/classshaders__c__gen_1_1SimpleShader__inherit__graph.png
 share/doc/naev/c/clipboard.js
-share/doc/naev/c/closed.png
 share/doc/naev/c/cmark__wrap_8c_source.html
 share/doc/naev/c/cmark__wrap_8h_source.html
 share/doc/naev/c/collision_8c.html
@@ -187,8 +184,6 @@ share/doc/naev/c/distance__field_8c__incl.md5
 share/doc/naev/c/distance__field_8c__incl.png
 share/doc/naev/c/distance__field_8c_source.html
 share/doc/naev/c/distance__field_8h_source.html
-share/doc/naev/c/doc.svg
-share/doc/naev/c/docd.svg
 share/doc/naev/c/doxygen.css
 share/doc/naev/c/doxygen.svg
 share/doc/naev/c/doxygen_crawl.html
@@ -240,10 +235,6 @@ share/doc/naev/c/faction_8c__incl.png
 share/doc/naev/c/faction_8c_source.html
 share/doc/naev/c/faction_8h_source.html
 share/doc/naev/c/files.html
-share/doc/naev/c/folderclosed.svg
-share/doc/naev/c/folderclosedd.svg
-share/doc/naev/c/folderopen.svg
-share/doc/naev/c/folderopend.svg
 share/doc/naev/c/font_8c.html
 share/doc/naev/c/font_8c__incl.map
 share/doc/naev/c/font_8c__incl.md5
@@ -1450,8 +1441,6 @@ share/doc/naev/c/menu_8h__dep__incl.md5
 share/doc/naev/c/menu_8h__dep__incl.png
 share/doc/naev/c/menu_8h_source.html
 share/doc/naev/c/menudata.js
-share/doc/naev/c/minus.svg
-share/doc/naev/c/minusd.svg
 share/doc/naev/c/mission_8c.html
 share/doc/naev/c/mission_8c__incl.map
 share/doc/naev/c/mission_8c__incl.md5
@@ -1492,11 +1481,6 @@ share/doc/naev/c/naev__version_8c_source.html
 share/doc/naev/c/naevlua_8c_source.html
 share/doc/naev/c/naevpedia_8c_source.html
 share/doc/naev/c/naevpedia_8h_source.html
-share/doc/naev/c/nav_f.png
-share/doc/naev/c/nav_fd.png
-share/doc/naev/c/nav_g.png
-share/doc/naev/c/nav_h.png
-share/doc/naev/c/nav_hd.png
 share/doc/naev/c/navtree.css
 share/doc/naev/c/ndata_8c.html
 share/doc/naev/c/ndata_8c__incl.map
@@ -1816,7 +1800,6 @@ share/doc/naev/c/nxml__lua_8c__incl.md5
 share/doc/naev/c/nxml__lua_8c__incl.png
 share/doc/naev/c/nxml__lua_8c_source.html
 share/doc/naev/c/nxml__lua_8h_source.html
-share/doc/naev/c/open.png
 share/doc/naev/c/opengl_8c.html
 share/doc/naev/c/opengl_8c__incl.map
 share/doc/naev/c/opengl_8c__incl.md5
@@ -1963,8 +1946,6 @@ share/doc/naev/c/plugin_8c__incl.md5
 share/doc/naev/c/plugin_8c__incl.png
 share/doc/naev/c/plugin_8c_source.html
 share/doc/naev/c/plugin_8h_source.html
-share/doc/naev/c/plus.svg
-share/doc/naev/c/plusd.svg
 share/doc/naev/c/quadtree_8c_source.html
 share/doc/naev/c/quadtree_8h_source.html
 share/doc/naev/c/queue_8c.html
@@ -1975,7 +1956,6 @@ share/doc/naev/c/queue_8c_source.html
 share/doc/naev/c/queue_8h_source.html
 share/doc/naev/c/render_8c_source.html
 share/doc/naev/c/render_8h_source.html
-share/doc/naev/c/resize.js
 share/doc/naev/c/rng_8c.html
 share/doc/naev/c/rng_8c__incl.map
 share/doc/naev/c/rng_8c__incl.md5
@@ -2040,8 +2020,6 @@ share/doc/naev/c/spfx_8c__incl.md5
 share/doc/naev/c/spfx_8c__incl.png
 share/doc/naev/c/spfx_8c_source.html
 share/doc/naev/c/spfx_8h_source.html
-share/doc/naev/c/splitbar.png
-share/doc/naev/c/splitbard.png
 share/doc/naev/c/start_8c.html
 share/doc/naev/c/start_8c__incl.map
 share/doc/naev/c/start_8c__incl.md5
@@ -2793,16 +2771,6 @@ share/doc/naev/c/structvpoolThreadData__.html
 share/doc/naev/c/structvpoolThreadData____coll__graph.map
 share/doc/naev/c/structvpoolThreadData____coll__graph.md5
 share/doc/naev/c/structvpoolThreadData____coll__graph.png
-share/doc/naev/c/sync_off.png
-share/doc/naev/c/sync_on.png
-share/doc/naev/c/tab_a.png
-share/doc/naev/c/tab_ad.png
-share/doc/naev/c/tab_b.png
-share/doc/naev/c/tab_bd.png
-share/doc/naev/c/tab_h.png
-share/doc/naev/c/tab_hd.png
-share/doc/naev/c/tab_s.png
-share/doc/naev/c/tab_sd.png
 share/doc/naev/c/tabs.css
 share/doc/naev/c/target_8h_source.html
 share/doc/naev/c/tech_8c.html
