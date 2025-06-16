@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/06/11 11:24:19 hauke Exp $
+# $NetBSD: Makefile,v 1.21 2025/06/16 09:35:36 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -106,14 +106,14 @@ PRINT_PLIST_AWK+=	{ gsub(/^include\/netatalk\/${athdr}\.h$$/, "$${PLIST.appletal
 .for atman1 in aecho getzones nbp nbplkup nbprgstr nbpunrgstr pap
 PRINT_PLIST_AWK+=	{ gsub(/^man\/man1\/${atman1}\.1$$/, "$${PLIST.appletalk}&"); }
 .endfor
-.for atman5 in atalkd.conf papd.conf
+.for atman5 in atalkd.conf papd.conf macipgw.conf
 PRINT_PLIST_AWK+=	{ gsub(/^man\/man5\/${atman5}\.5$$/, "$${PLIST.appletalk}&"); }
 .endfor
 .for atman8 in a2boot atalkd macipgw papd papstatus timelord
 PRINT_PLIST_AWK+=	{ gsub(/^man\/man8\/${atman8}\.8$$/, "$${PLIST.appletalk}&"); }
 .endfor
+PRINT_PLIST_AWK+=	{ gsub(/^share\/doc\/netatalk\/APPLETALK.txt$$/, "$${PLIST.appletalk}&"); }
 PRINT_PLIST_AWK+=	{ gsub(/^share\/examples\/netatalk\/(atalk|pap)d\.conf$$/, "$${PLIST.appletalk}&"); }
-PRINT_PLIST_AWK+=	{ gsub(/^share\/doc\/netatalk\/README.AppleTalk$$/, "$${PLIST.appletalk}&"); }
 
 # ea
 PRINT_PLIST_AWK+=	{ gsub(/^bin\/ad$$/, "$${PLIST.ea}&"); }
