@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/02/08 03:24:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/06/16 09:21:45 jperkin Exp $
 bin/pear${PHP_VER}
 bin/peardev${PHP_VER}
 bin/pecl${PHP_VER}
@@ -9,8 +9,6 @@ ${PHP_LIBDIR}/.channels/__uri.reg
 ${PHP_LIBDIR}/.channels/doc.php.net.reg
 ${PHP_LIBDIR}/.channels/pear.php.net.reg
 ${PHP_LIBDIR}/.channels/pecl.php.net.reg
-${PHP_LIBDIR}/.depdb
-${PHP_LIBDIR}/.depdblock
 ${PHP_LIBDIR}/.filemap
 ${PHP_LIBDIR}/.lock
 ${PHP_LIBDIR}/.registry/archive_tar.reg
