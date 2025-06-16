@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.68 2025/06/07 15:58:49 taca Exp $
+# $NetBSD: Makefile,v 1.69 2025/06/16 09:21:45 jperkin Exp $
+#
+# This is super confusing, but the PEAR tarball does not include an installer,
+# it is only available in a different installer package which bundles the PEAR
+# tarball along with its dependencies.  So our distfile is pearweb_phars, and
+# we override the version to whatever PEAR it bundles.
 #
 
-DISTNAME=	PEAR-1.10.16
-PKGREVISION=	2
-PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
+DISTNAME=	pearweb_phars-1.10.24
+PKGREVISION=	3
+PKGNAME=	${PHP_PKG_PREFIX}-pear-1.10.16
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
@@ -14,11 +19,6 @@ COMMENT=	PEAR Base System for PHP
 LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
-EXTRACT_ONLY=	# none
-USE_TOOLS+=	bsdtar gzcat
-
-# go-pear.php fetch PEAR package information during install phase.
-ALLOW_NETWORK_ACCESS=	yes
 
 .include "../../lang/php/common.mk"
 
@@ -28,61 +28,38 @@ PKG_SYSCONFVAR=	php
 CONF_FILES=	${PREFIX}/${PHP_EGDIR}/pear.conf \
 		${PKG_SYSCONFDIR}/pear.conf
 
-BUNDLE=		${WRKSRC}/install/go-pear-bundle
-
-# everything else that forms a part of the "base" PEAR install
-#
-PEAR_SRCS=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		${PEAR_SRCS}
-EXTRACT_ONLY+=		${PEAR_SRCS}
-
-ARCHIVE_SRCS=		Archive_Tar-1.5.0${EXTRACT_SUFX}
-ARCHIVE_WRKSRC=		${WRKDIR}/${ARCHIVE_SRCS:S/${EXTRACT_SUFX}//}
-DISTFILES+=		${ARCHIVE_SRCS}
-EXTRACT_ONLY+=		${ARCHIVE_SRCS}
-
-CONSOLE_SRCS=		Console_Getopt-1.4.3${EXTRACT_SUFX}
-CONSOLE_WRKSRC=		${WRKDIR}/${CONSOLE_SRCS:S/${EXTRACT_SUFX}//}
-DISTFILES+=		${CONSOLE_SRCS}
-EXTRACT_ONLY+=		${CONSOLE_SRCS}
-
-STRUCTURES_SRCS=	Structures_Graph-1.2.0${EXTRACT_SUFX}
-DISTFILES+=		${STRUCTURES_SRCS}
-
-XMLUTIL_SRCS=		XML_Util-1.4.5${EXTRACT_SUFX}
-DISTFILES+=		${XMLUTIL_SRCS}
-
-#
-# end of base components
-
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	install/go-pear.php PEAR/Config.php
-SUBST_VARS.config+=	PREFIX PHP_VER PHP_LIBDIR WRKSRC
+SUBST_FILES.config=	src/PEAR/Start.php
+SUBST_VARS.config+=	PHP_LIBDIR PKGMANDIR PREFIX WRKSRC
 SUBST_MESSAGE.config=	Fixing configuration files.
 
 PEAR_COMMANDS=		pear peardev pecl
 INSTALLATION_DIRS+=	${PHP_EGDIR}
 
-pre-patch:
-	${RM} ${WRKSRC}/INSTALL
-	${MKDIR} ${WRKSRC}/install
-	${MKDIR} ${BUNDLE}
-	${CP} ${FILESDIR}/go-pear.php ${WRKSRC}/install
-	${CP} ${WRKSRC}/PEAR.php ${BUNDLE}
+# TODO: This should probably be set in lang/php
+PHPBIN=		${PREFIX}/bin/php${PHP_VER}
 
+# Unpack the .phar archive so that we can patch the source files.
+post-extract:
+	cd ${WRKSRC} && ${PHPBIN} -d phar.readonly=0 -r \
+		'$$p = new Phar("go-pear.phar"); \
+		 $$p->extractTo("src");'
+	${MV} ${WRKSRC}/go-pear.phar ${WRKSRC}/go-pear-orig.phar
+
+# This does not actually build anything, just packs our patched source files
+# back to an updated .phar.
 do-build:
-.for f in ${DISTFILES}
-	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${f} > \
-		${BUNDLE}/${f:S/${EXTRACT_SUFX}/.tar/}
-.endfor
-	${CP} ${ARCHIVE_WRKSRC}/Archive/Tar.php ${BUNDLE}
-	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
-	cd ${WRKDIR} && bsdtar -u -f ${BUNDLE}/${DISTNAME}.tar \
-		${DISTNAME}/PEAR/Config.php
+	cd ${WRKSRC} && ${PHPBIN} -d phar.readonly=0 -r \
+		'$$p = new Phar("go-pear.phar", 0, "go-pear.phar"); \
+		 $$p->buildFromDirectory(dirname(__FILE__) . "/src"); \
+		 $$p->setStub($$p->createDefaultStub("index.php"));'
+
+INSTALL_ENV+=	PHP_PEAR_PHP_BIN=${PHPBIN}
 
 do-install:
-	${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/php${PHP_VER} ${WRKSRC}/install/go-pear.php local
+	cd ${WRKSRC} && \
+		${PKGSRC_SETENV} ${INSTALL_ENV} ${PHPBIN} go-pear.phar
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
 		${DESTDIR}${PREFIX}/${PHP_EGDIR}/pear.conf
 
