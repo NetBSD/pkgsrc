@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/08/14 05:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/16 16:43:44 ryoon Exp $
 #
 
 VER=		0.1
@@ -15,7 +15,7 @@ HOMEPAGE=	http://www.staringispolite.com/likepython/
 COMMENT=	OMG! It's like Python, but like, you know, casual!
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR} # More than one possibility -- please check manually.
+WRKSRC=		${WRKDIR}
 
 REPLACE_PYTHON=	likepython
 
