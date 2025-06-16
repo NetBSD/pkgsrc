@@ -1,11 +1,10 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_sparc64__unknown__netbsd.rs,v 1.3 2025/04/08 09:31:06 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_Targets_sparc64__unknown__netbsd.rs,v 1.1 2025/06/16 21:10:43 he Exp $
 
-Make more similar to other sparc64 target specs.
-
---- compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs.orig	2025-01-27 23:20:59.000000000 +0000
+--- compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs.orig	2025-03-31 21:37:24.000000000 +0000
 +++ compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs
-@@ -1,11 +1,13 @@
- use crate::abi::Endian;
+@@ -1,12 +1,14 @@
+ use rustc_abi::Endian;
+ 
 -use crate::spec::{Cc, LinkerFlavor, Lld, Target, TargetOptions, base};
 +use crate::spec::{Cc, LinkerFlavor, Lld, Target, base};
  
@@ -19,7 +18,7 @@ Make more similar to other sparc64 target specs.
  
      Target {
          llvm_target: "sparc64-unknown-netbsd".into(),
-@@ -18,6 +20,6 @@ pub(crate) fn target() -> Target {
+@@ -19,6 +21,6 @@ pub(crate) fn target() -> Target {
          pointer_width: 64,
          data_layout: "E-m:e-i64:64-i128:128-n32:64-S128".into(),
          arch: "sparc64".into(),
