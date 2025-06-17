@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.422 2025/06/17 06:24:33 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.423 2025/06/17 06:28:15 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26367,3 +26367,9 @@ assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3158
 p5-CryptX<0.087	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40914
 sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46807
 erlang<27.3.4.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-4748
+libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49794
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49795
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49796
+libxml2-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6021
+libxml2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6170
+libxslt-[0-9]*	unknown	https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt
