@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.182 2025/06/16 21:10:43 he Exp $
+$NetBSD: distinfo,v 1.183 2025/06/17 11:12:01 jperkin Exp $
 
-BLAKE2s (rust-1.84.1-x86_64-unknown-illumos.tar.gz) = ab5f7657ebe58b4d3a1da7cd0b86081f5e91524cf00cbccaba27b55911666d43
-SHA512 (rust-1.84.1-x86_64-unknown-illumos.tar.gz) = f49d42ee3e855f2d0b9c5efb101a23a57686e71ffbae46e44e80e79deeb5ab09ccfceb26bf1045aa73db591b3a5fb6cde75db443076b0fcc6e9fa6ae570e0eb1
-Size (rust-1.84.1-x86_64-unknown-illumos.tar.gz) = 234986557 bytes
 BLAKE2s (rust-1.85.1-aarch64-apple-darwin.tar.gz) = d78359b32fe92855663ee77baf041b4f40eedbe954f9f857763ed4624633837f
 SHA512 (rust-1.85.1-aarch64-apple-darwin.tar.gz) = a61d0b08ed7c9c319d192b0ee171a641ca3f24e3f2c785957f02b5a429562de9726b8178bdb4e6d225e853ecdfa10b555e4795e79ca51d980cdca8353ec99f13
 Size (rust-1.85.1-aarch64-apple-darwin.tar.gz) = 335120124 bytes
@@ -48,6 +45,9 @@ Size (rust-1.85.1-x86_64-apple-darwin.tar.gz) = 348571995 bytes
 BLAKE2s (rust-1.85.1-x86_64-unknown-freebsd.tar.gz) = 47746d03354c19c2dad9e42a5e58484a4a7a640a5eb8938f7f53a7c0d28c3a85
 SHA512 (rust-1.85.1-x86_64-unknown-freebsd.tar.gz) = 12cbb4af547eeba606d6ebcdee41ad84361c72b65b5ce8f22b910fb9e6daf3deaad13272bf4de9849ca46595367e879bc683cf2e2161e11a2f37799d9fce60e5
 Size (rust-1.85.1-x86_64-unknown-freebsd.tar.gz) = 340522476 bytes
+BLAKE2s (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 2b5ddc732b2bcc18ce012bd94a0185ee98870624b10e8918e88c451ad75a8998
+SHA512 (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 0517c342dbdd1477c610c505c2fc0b1c03eede445fc9008c4fb807dd7041b84fab5c23616d2261bc80939a39089665e27d54d8db9f9da73836522f1e69567ae0
+Size (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 235777837 bytes
 BLAKE2s (rust-1.85.1-x86_64-unknown-linux-gnu.tar.gz) = 6ef30522d152befd54621e74336b50916c5ec2321696a6227695ba3ff20048f6
 SHA512 (rust-1.85.1-x86_64-unknown-linux-gnu.tar.gz) = 4c97a60d0145efd413438b05c654f70bf7fbb7928dab627ee800c06022925e3d245611b83ead258ce53f8f94a7d56d1257c39f4cd8b9f0069c1c065cd6157e92
 Size (rust-1.85.1-x86_64-unknown-linux-gnu.tar.gz) = 339058449 bytes
