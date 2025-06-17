@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3962 2025/06/17 07:29:46 he Exp $
+$NetBSD: CHANGES-2025,v 1.3963 2025/06/17 07:51:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/openarc to 20180921nb3 [ryoon 2025-06-16]
 	Updated lang/rust to 1.86.0 [he 2025-06-16]
 	Updated lang/rust-bin to 1.86.0 [he 2025-06-17]
+	Updated shells/oh-my-posh to 26.9.0 [pin 2025-06-17]
