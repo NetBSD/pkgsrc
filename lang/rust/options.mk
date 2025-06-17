@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2025/06/16 21:10:43 he Exp $
+# $NetBSD: options.mk,v 1.46 2025/06/17 15:14:57 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
 .if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=		rust-internal-llvm
 # There may be compatibility issues with the base LLVM on e.g. NetBSD.
-.  if !empty(HAVE_LLVM) || ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+.  if !empty(HAVE_LLVM)
 PKG_SUGGESTED_OPTIONS+=		rust-internal-llvm
 .  endif
 .endif
