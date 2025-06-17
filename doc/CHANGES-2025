@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3964 2025/06/17 08:40:55 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3965 2025/06/17 09:00:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5906,3 +5906,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust-bin to 1.86.0 [he 2025-06-17]
 	Updated shells/oh-my-posh to 26.9.0 [pin 2025-06-17]
 	Updated devel/bacon to 3.16.0 [pin 2025-06-17]
+	Updated devel/difftastic to 0.64.0 [pin 2025-06-17]
