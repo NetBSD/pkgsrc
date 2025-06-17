@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_src_lib.rs,v 1.5 2025/06/16 21:10:44 he Exp $
+$NetBSD: patch-src_bootstrap_src_lib.rs,v 1.6 2025/06/17 13:01:57 jperkin Exp $
 
 Don't filter out optimization flags.
 FreeBSD has a particular C++ runtime library name
@@ -18,7 +18,7 @@ FreeBSD has a particular C++ runtime library name
          // we want libc++ (more filled out than libstdc++), ensuring that
          // LLVM/etc are all properly compiled.
 -        if matches!(c, CLang::Cxx) && target.contains("apple-darwin") {
-+        if matches!(c, CLang::Cxx) && 
++        if matches!(c, CLang::Cxx) &&
 +            (target.contains("apple-darwin") || target.contains("freebsd")) {
              base.push("-stdlib=libc++".into());
          }
