@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.338 2025/06/17 11:12:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.339 2025/06/17 15:19:17 jperkin Exp $
 
 DISTNAME=	rustc-1.86.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -59,16 +59,6 @@ REPLACE_BASH+=		library/portable-simd/subtree-sync.sh
 # optional from do-cross.mk
 CONFIGURE_ARGS+=	${ADD_CONFIGURE_ARGS}
 
-# Getting RPATH with $ORIGIN into the bootstrap binaries is
-# problematic, since pkgsrc refuses to put $ORIGIN into RPATHs
-# of executables. So instead we need these so that the bootstrap
-# compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
-# part of the initial part of the rust compiler build.
-# This problem is not present with the amd64 bootstrap bits,
-# which are built by our upstream and uses $ORIGIN/../lib in RPATH.
-MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
-PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
-
 # This should allow us to perform "offline" builds (so cargo doesn't fetch
 # dependencies during the build stage) but this isn't hooked up yet.
 CONFIGURE_ARGS+=	--enable-vendor
@@ -92,6 +82,31 @@ CHECK_RELRO_SUPPORTED=	no
 CHECK_SSP_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# Getting RPATH with $ORIGIN into the bootstrap binaries is
+# problematic, since pkgsrc refuses to put $ORIGIN into RPATHs
+# of executables. So instead we need these so that the bootstrap
+# compiler can be run out of the $RUST_BOOTSTRAP_PATH directory as
+# part of the initial part of the rust compiler build.
+# This problem is not present with the amd64 bootstrap bits,
+# which are built by our upstream and uses $ORIGIN/../lib in RPATH.
+#
+# The above is only true on NetBSD, for other bootstrap kits (e.g. illumos)
+# the binaries are made to be relocatable after the build using elfedit or
+# similar.  It is unclear why this approach is not used by NetBSD too.
+#
+MAKE_ENV+=		LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
+.endif
+
+# TODO: Hack introduced for 1.86.0 as @loader_path is stripped from the
+# bootstrap compiler arguments and the stage1 libraries cannot be found.
+# Ideally this should be inserted only in the necessary points of the
+# bootstrap script.
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/build/aarch64-apple-darwin/stage1/lib
+.endif
 
 # Allow overriding MAKE_JOBS_SAFE
 # some may chose to mostly build faster,
