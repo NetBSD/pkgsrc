@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.336 2025/06/16 21:11:58 he Exp $
+# $NetBSD: Makefile,v 1.337 2025/06/17 11:04:35 jperkin Exp $
 
 DISTNAME=	rustc-1.86.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -654,13 +654,13 @@ stage0-bootstrap: install
 		${CP} `${PKG_CC} -print-file-name=$${lib}` \
 		    ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libLLVM.so.18.1 libcrypto.so.3 libcurl.so.4 \
+	for lib in libLLVM.so.19.1 libcrypto.so.3 libcurl.so.4 \
 		   libssl.so.3 libz.so.1 libzstd.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
 	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber.so.2 \
-		   libldap.so.2 libnghttp2.so.14 libsasl2.so.3 \
-		   libssh2.so.1 libunistring.so.5; do \
+		   libldap.so.2 liblzma.so.5 libnghttp2.so.14 libsasl2.so.3 \
+		   libssh2.so.1 libunistring.so.5 libxml2.so.16; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/bin/*; do \
