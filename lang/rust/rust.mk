@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.15 2025/06/16 21:10:43 he Exp $
+# $NetBSD: rust.mk,v 1.16 2025/06/17 01:42:15 ryoon Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -41,7 +41,7 @@ RUST_RUNTIME?=	no
 RUST_TYPE?=	bin
 .else
 RUST_TYPE?=	src
-.endig
+.endif
 
 .if ${RUST_TYPE} == "bin"
 .  if ${RUST_RUNTIME} == "no"
