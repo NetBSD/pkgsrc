@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3965 2025/06/17 09:00:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3966 2025/06/17 11:09:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5907,3 +5907,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.9.0 [pin 2025-06-17]
 	Updated devel/bacon to 3.16.0 [pin 2025-06-17]
 	Updated devel/difftastic to 0.64.0 [pin 2025-06-17]
+	Updated textproc/libxml2 to 2.14.4 [adam 2025-06-17]
+	Updated textproc/py-libxml2 to 2.14.4 [adam 2025-06-17]
