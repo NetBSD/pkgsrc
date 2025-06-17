@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/06/17 09:38:01 thor Exp $
+# $NetBSD: Makefile,v 1.12 2025/06/17 12:43:37 thor Exp $
 
 DISTNAME=	SuiteSparse-7.10.3
 PKGREVISION=	1
@@ -12,7 +12,7 @@ HOMEPAGE=	https://people.engr.tamu.edu/davis/suitesparse.html
 COMMENT=	Set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++ fortran8
+USE_LANGUAGES=	c c++ fortran
 USE_TOOLS=	pkg-config
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
