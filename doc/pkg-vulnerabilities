@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.425 2025/06/17 13:44:43 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.426 2025/06/17 14:01:53 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26406,3 +26406,16 @@ pspp-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5899
 py{39,310,311,312,313}-octoprint<1.11.2	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-48067
 py{39,310,311,312,313}-octoprint<1.11.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48879
 py{39,310,311,312,313}-protobuf<6.31.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-4565
+qt6-qtbase>=6.9.0<6.9.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-5991
+salt<3007.4	improper-authentication		https://nvd.nist.gov/vuln/detail/CVE-2024-38822
+salt<3007.4	man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2024-38823
+salt<3007.4	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2024-38824
+salt<3007.4	improper-authentication		https://nvd.nist.gov/vuln/detail/CVE-2024-38825
+salt<3007.4	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-22236
+salt<3007.4	command-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-22237
+salt<3007.4	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-22238
+salt<3007.4	improper-authorization		https://nvd.nist.gov/vuln/detail/CVE-2025-22239
+salt<3007.4	arbitrary-file-deletion		https://nvd.nist.gov/vuln/detail/CVE-2025-22240
+salt<3007.4	arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2025-22241
+salt<3007.4	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-22242
+spdlog<1.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6140
