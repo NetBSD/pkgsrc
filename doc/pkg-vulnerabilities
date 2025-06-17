@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.423 2025/06/17 06:28:15 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.424 2025/06/17 10:44:12 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26373,3 +26373,15 @@ libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49796
 libxml2-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6021
 libxml2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6170
 libxslt-[0-9]*	unknown	https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt
+apache-tomcat>=9<9.0.106	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48988
+apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48988
+apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48988
+apache-tomcat>=9<9.0.106	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-49125
+apache-tomcat>=10<10.1.42	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-49125
+apache-tomcat>=11<11.0.8	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-49125
+assimp-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-6119
+assimp-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6120
+chromium<137.0.7151.103	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-5958
+chromium<137.0.7151.103	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-5959
+firefox<139.0.4		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-47/
+thunderbird<139.0.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-50/
