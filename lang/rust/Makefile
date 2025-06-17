@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2025/06/17 15:19:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.340 2025/06/17 21:43:18 adam Exp $
 
 DISTNAME=	rustc-1.86.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -104,8 +104,8 @@ PKGSRC_MAKE_ENV+=	LD_LIBRARY_PATH=${RUST_BOOTSTRAP_PATH:Q}/lib
 # bootstrap compiler arguments and the stage1 libraries cannot be found.
 # Ideally this should be inserted only in the necessary points of the
 # bootstrap script.
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/build/aarch64-apple-darwin/stage1/lib
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	DYLD_LIBRARY_PATH="${WRKSRC}/build/${MACHINE_ARCH}-apple-darwin/stage1/lib:${WRKSRC}/build/${MACHINE_ARCH}-apple-darwin/stage2/lib"
 .endif
 
 # Allow overriding MAKE_JOBS_SAFE
