@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/06/17 13:45:05 manu Exp $
+$NetBSD: distinfo,v 1.7 2025/06/18 00:32:47 manu Exp $
 
-BLAKE2s (check_mysql_slave-0.4.tgz) = 493cbe3cd1fc84c78ce3ba18096dec1c28ee315ff66dd050274dc7d5a278ebe1
-SHA512 (check_mysql_slave-0.4.tgz) = b67a524447c1a262bb35fde226ea9c783cdbc4f15a5acbb4bdd85183677f312b590101b28e3d42344998199f8d5892a727bcd6dbba64845580c2024761f15067
-Size (check_mysql_slave-0.4.tgz) = 2743 bytes
+BLAKE2s (check_mysql_slave-0.5.tgz) = 548fcf44c1c6c569230bd71017a6dd68f9a96842ce4ffc260ce6bed6af8ad06c
+SHA512 (check_mysql_slave-0.5.tgz) = 8a15dfab5682bab15bc8c87551ee2a1771e0f3f18f0cf77b6538024e88eda283b0c8492f2652d84dc4e1b9c0154534d8a7f9deea328d940af67ddc769248ccc2
+Size (check_mysql_slave-0.5.tgz) = 2732 bytes

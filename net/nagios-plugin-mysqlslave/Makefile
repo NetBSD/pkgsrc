@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/06/17 13:45:05 manu Exp $
+# $NetBSD: Makefile,v 1.9 2025/06/18 00:32:47 manu Exp $
 #
 
-DISTNAME=	check_mysql_slave-0.4
+DISTNAME=	check_mysql_slave-0.5
 PKGNAME=	nagios-plugin-mysqlslave-${DISTNAME:C/.*-//}
 #PKGREVISION=	1
 CATEGORIES=	net
