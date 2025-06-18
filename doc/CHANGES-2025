@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3969 2025/06/18 13:46:17 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3970 2025/06/18 13:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nagios-plugin-mysqlslave to 0.4 [manu 2025-06-17]
 	Updated net/nagios-plugin-mysqlslave to 0.5 [manu 2025-06-18]
 	Updated x11/modular-xorg-server to 21.1.17 [wiz 2025-06-18]
+	Updated x11/modular-xorg-xephyr to 21.1.17 [wiz 2025-06-18]
