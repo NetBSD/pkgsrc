@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2025/04/23 12:45:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.25 2025/06/18 15:24:46 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -154,8 +154,8 @@ PYOBJC_VERS=	11.0
 
 DISTNAME?=	pyobjc_framework_${PYOBJC_FRAMEWORK:tl}-${PYOBJC_VERS}
 PKGNAME?=	${PYPKGPREFIX}-pyobjc-framework-${PYOBJC_FRAMEWORK}-${PYOBJC_VERS}
-CATEGORIES=     devel python
-MASTER_SITES=   ${MASTER_SITE_PYPI:=p/pyobjc-framework-${PYOBJC_FRAMEWORK}/}
+CATEGORIES=	devel python
+MASTER_SITES?=	${MASTER_SITE_PYPI:=p/pyobjc-framework-${PYOBJC_FRAMEWORK}/}
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pyobjc.readthedocs.io/
