@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2025/06/15 13:31:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/06/18 08:14:36 wiz Exp $
 ${PYSITELIB}/adbc_driver_duckdb/__init__.py
 ${PYSITELIB}/adbc_driver_duckdb/__init__.pyc
 ${PYSITELIB}/adbc_driver_duckdb/__init__.pyo
 ${PYSITELIB}/adbc_driver_duckdb/dbapi.py
 ${PYSITELIB}/adbc_driver_duckdb/dbapi.pyc
 ${PYSITELIB}/adbc_driver_duckdb/dbapi.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/duckdb-0.0.0.dist-info/METADATA
+${PYSITELIB}/duckdb-0.0.0.dist-info/RECORD
+${PYSITELIB}/duckdb-0.0.0.dist-info/WHEEL
+${PYSITELIB}/duckdb-0.0.0.dist-info/top_level.txt
 ${PYSITELIB}/duckdb-stubs/__init__.pyi
 ${PYSITELIB}/duckdb-stubs/functional/__init__.pyi
 ${PYSITELIB}/duckdb-stubs/typing/__init__.pyi
