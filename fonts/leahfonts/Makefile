@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/05/05 18:37:14 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/06/18 07:22:08 wiz Exp $
 
 PKGNAME=	leahfonts-20170708
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	https://git.vuxu.org/
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	leahfonts-20170708-v2
 EXTRACT_SUFX=	.tar.xz
 
 DISTFILES=			5x13-master.tar.xz sq-master.tar.xz \
