@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3967 2025/06/17 13:45:04 manu Exp $
+$NetBSD: CHANGES-2025,v 1.3968 2025/06/18 00:32:47 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libxml2 to 2.14.4 [adam 2025-06-17]
 	Updated textproc/py-libxml2 to 2.14.4 [adam 2025-06-17]
 	Updated net/nagios-plugin-mysqlslave to 0.4 [manu 2025-06-17]
+	Updated net/nagios-plugin-mysqlslave to 0.5 [manu 2025-06-18]
