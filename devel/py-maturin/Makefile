@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/06/10 09:08:38 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/06/18 23:48:34 gdt Exp $
 
 DISTNAME=	maturin-1.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Build and publish crates with pyo3, rust-cpython and cffi bindings
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.4.0:../../devel/py-setuptools-rust
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.11.1:../../devel/py-setuptools-rust
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
