@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/06/14 13:35:54 wen Exp $
+# $NetBSD: Makefile,v 1.44 2025/06/18 07:58:08 wiz Exp $
 
 DISTNAME=	rt-4.4.8
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -58,8 +58,10 @@ DEPENDS+=	p5-MIME-tools>=5.504:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
 DEPENDS+=	p5-Module-Versions-Report>=1.05:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-Net-CIDR-[0-9]*:../../devel/p5-Net-CIDR
+DEPENDS+=	p5-Net-IP-[0-9]*:../../net/p5-Net-IP
 DEPENDS+=	p5-Parallel-ForkManager>=0:../../devel/p5-Parallel-ForkManager
 DEPENDS+=	p5-Plack>=1.0002:../../www/p5-Plack
+DEPENDS+=	p5-Pod-Parser>=0:../../textproc/p5-Pod-Parser
 DEPENDS+=	p5-Starlet-[0-9]*:../../www/p5-Starlet
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-Regexp-Common-net-CIDR-[0-9]*:../../net/p5-Regexp-Common-net-CIDR
