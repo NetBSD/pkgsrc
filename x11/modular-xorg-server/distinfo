@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.132 2025/06/18 13:46:03 wiz Exp $
+$NetBSD: distinfo,v 1.133 2025/06/18 20:48:11 wiz Exp $
 
-BLAKE2s (xorg-server-21.1.17.tar.xz) = 3a528c00151f10abd5150a003edf6e6099516d328f80567fb5b6f29e9e9b52f4
-SHA512 (xorg-server-21.1.17.tar.xz) = 6f301c532b2ad6edfab76f21f8e88c4bd9d7df88c12e52caaed72a2c2084547c323fd29ff8769fe0c1cb230b483d4620bc3f382df80899c6b58d3c12431d62d0
-Size (xorg-server-21.1.17.tar.xz) = 5035952 bytes
+BLAKE2s (xorg-server-21.1.18.tar.xz) = bb95936718e7c554fd77e033a00f9b6a3c55a17793d0fd627d5c222a99d4e710
+SHA512 (xorg-server-21.1.18.tar.xz) = 839ce759fc0e5405599c4cff0acf381f278d22b465b9fb9e335b5fd1c63f6d546788e4e869854026eb4b1e1a77a83b60d6fef472cf8534d45630f31b587a50dd
+Size (xorg-server-21.1.18.tar.xz) = 5037376 bytes
 SHA1 (patch-configure) = e1497e39151d602028fc33a2dd307347c6afec9e
 SHA1 (patch-hw_kdrive_ephyr_hostx.c) = b681ee28bc7af06774f10bc882d355d42ac965d3
 SHA1 (patch-hw_xfree86_common_xf86AutoConfig.c) = 70adf85be9fc6222a335686e7e9e9f385aca02f9
