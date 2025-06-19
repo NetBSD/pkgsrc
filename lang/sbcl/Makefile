@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2025/06/01 18:18:14 rjs Exp $
+# $NetBSD: Makefile,v 1.111 2025/06/19 22:59:49 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-2.5.5
@@ -22,7 +22,7 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-MKPIE_SUPPORTED=no
+MKPIE_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -108,11 +108,17 @@ SBCL_ARCH_ARGS=		"--arch=x86"
 SBCL_ARCH_ARGS=		"--arch=x86-64"
 .endif
 
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+.if  ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "aarch64"
+SBCL_OPTIONS_ARGS=		--with-sb-thread
+.endif
+.endif
+
 do-build:
 	${RUN} ${_ULIMIT_CMD} \
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${SH} make.sh \
 	  --prefix=${PREFIX} ${SBCL_ARCH_ARGS} --xc-host=${SBCL_BOOT_SYSTEM:Q} \
-	  --with-sb-thread
+	  ${SBCL_OPTIONS_ARGS}
 
 post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
