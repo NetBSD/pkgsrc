@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3974 2025/06/19 20:20:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3975 2025/06/19 20:24:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5917,3 +5917,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/modular-xorg-xephyr to 21.1.18 [wiz 2025-06-18]
 	Updated databases/phppgadmin to 7.14.7 [khorben 2025-06-19]
 	Updated devel/action-validator to 0.6.0.20250215 [wiz 2025-06-19]
+	Updated math/kalker to 2.2.1.20250421 [wiz 2025-06-19]
