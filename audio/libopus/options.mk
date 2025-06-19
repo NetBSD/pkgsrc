@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/06/10 15:46:07 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/06/19 06:08:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libopus
 PKG_SUPPORTED_OPTIONS=	doc
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	doc
 PLIST_VARS+=	doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
-TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen>=1.14:../../devel/doxygen
 PLIST.doc=		yes
 PRINT_PLIST_AWK+=	{ if (/^share\/doc/) $$0 = "$${PLIST.doc}" $$0 }
 PRINT_PLIST_AWK+=	{ if (/^man/) $$0 = "$${PLIST.doc}" $$0 }
