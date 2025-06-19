@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2025/04/02 17:56:30 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/06/19 20:24:27 wiz Exp $
 
-DISTNAME=	kalker-2.2.1
+DISTNAME=	kalker-2.2.1.20250421
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PaddiM8/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	b8ef87ac271e11cc10f65e4ece76070ce742796a
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://kalker.strct.net/
