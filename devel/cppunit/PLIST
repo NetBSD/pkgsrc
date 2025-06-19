@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/02/11 13:56:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/06/19 06:09:42 wiz Exp $
 bin/DllPlugInTester
 include/cppunit/AdditionalMessage.h
 include/cppunit/Asserter.h
@@ -836,8 +836,6 @@ ${PLIST.doc}share/doc/cppunit/html/_xml_outputter_hook_8h__incl.png
 ${PLIST.doc}share/doc/cppunit/html/_xml_outputter_hook_8h_source.html
 ${PLIST.doc}share/doc/cppunit/html/annotated.html
 ${PLIST.doc}share/doc/cppunit/html/annotated_dup.js
-${PLIST.doc}share/doc/cppunit/html/bc_s.png
-${PLIST.doc}share/doc/cppunit/html/bc_sd.png
 ${PLIST.doc}share/doc/cppunit/html/class_additional_message-members.html
 ${PLIST.doc}share/doc/cppunit/html/class_additional_message.html
 ${PLIST.doc}share/doc/cppunit/html/class_additional_message.js
@@ -1292,7 +1290,6 @@ ${PLIST.doc}share/doc/cppunit/html/class_xml_outputter_hook.html
 ${PLIST.doc}share/doc/cppunit/html/class_xml_outputter_hook.js
 ${PLIST.doc}share/doc/cppunit/html/classes.html
 ${PLIST.doc}share/doc/cppunit/html/clipboard.js
-${PLIST.doc}share/doc/cppunit/html/closed.png
 ${PLIST.doc}share/doc/cppunit/html/cookbook_8dox.html
 ${PLIST.doc}share/doc/cppunit/html/cookie.js
 ${PLIST.doc}share/doc/cppunit/html/cppunit_cookbook.html
@@ -1355,18 +1352,12 @@ ${PLIST.doc}share/doc/cppunit/html/dir_d436eb0fd9de10b54a828ce6435f7e81.js
 ${PLIST.doc}share/doc/cppunit/html/dir_d436eb0fd9de10b54a828ce6435f7e81_dep.map
 ${PLIST.doc}share/doc/cppunit/html/dir_d436eb0fd9de10b54a828ce6435f7e81_dep.md5
 ${PLIST.doc}share/doc/cppunit/html/dir_d436eb0fd9de10b54a828ce6435f7e81_dep.png
-${PLIST.doc}share/doc/cppunit/html/doc.svg
-${PLIST.doc}share/doc/cppunit/html/docd.svg
 ${PLIST.doc}share/doc/cppunit/html/doxygen.css
 ${PLIST.doc}share/doc/cppunit/html/doxygen.svg
 ${PLIST.doc}share/doc/cppunit/html/doxygen_crawl.html
 ${PLIST.doc}share/doc/cppunit/html/dynsections.js
 ${PLIST.doc}share/doc/cppunit/html/files.html
 ${PLIST.doc}share/doc/cppunit/html/files_dup.js
-${PLIST.doc}share/doc/cppunit/html/folderclosed.svg
-${PLIST.doc}share/doc/cppunit/html/folderclosedd.svg
-${PLIST.doc}share/doc/cppunit/html/folderopen.svg
-${PLIST.doc}share/doc/cppunit/html/folderopend.svg
 ${PLIST.doc}share/doc/cppunit/html/functions.html
 ${PLIST.doc}share/doc/cppunit/html/functions_b.html
 ${PLIST.doc}share/doc/cppunit/html/functions_c.html
@@ -1574,8 +1565,6 @@ ${PLIST.doc}share/doc/cppunit/html/inherits.html
 ${PLIST.doc}share/doc/cppunit/html/jquery.js
 ${PLIST.doc}share/doc/cppunit/html/menu.js
 ${PLIST.doc}share/doc/cppunit/html/menudata.js
-${PLIST.doc}share/doc/cppunit/html/minus.svg
-${PLIST.doc}share/doc/cppunit/html/minusd.svg
 ${PLIST.doc}share/doc/cppunit/html/money_example.html
 ${PLIST.doc}share/doc/cppunit/html/namespace_string_helper.html
 ${PLIST.doc}share/doc/cppunit/html/namespace_text_ui.html
@@ -1584,11 +1573,6 @@ ${PLIST.doc}share/doc/cppunit/html/namespacemembers_func.html
 ${PLIST.doc}share/doc/cppunit/html/namespacemembers_type.html
 ${PLIST.doc}share/doc/cppunit/html/namespaces.html
 ${PLIST.doc}share/doc/cppunit/html/namespaces_dup.js
-${PLIST.doc}share/doc/cppunit/html/nav_f.png
-${PLIST.doc}share/doc/cppunit/html/nav_fd.png
-${PLIST.doc}share/doc/cppunit/html/nav_g.png
-${PLIST.doc}share/doc/cppunit/html/nav_h.png
-${PLIST.doc}share/doc/cppunit/html/nav_hd.png
 ${PLIST.doc}share/doc/cppunit/html/navtree.css
 ${PLIST.doc}share/doc/cppunit/html/navtree.js
 ${PLIST.doc}share/doc/cppunit/html/navtreedata.js
@@ -1597,14 +1581,8 @@ ${PLIST.doc}share/doc/cppunit/html/navtreeindex1.js
 ${PLIST.doc}share/doc/cppunit/html/navtreeindex2.js
 ${PLIST.doc}share/doc/cppunit/html/navtreeindex3.js
 ${PLIST.doc}share/doc/cppunit/html/navtreeindex4.js
-${PLIST.doc}share/doc/cppunit/html/open.png
 ${PLIST.doc}share/doc/cppunit/html/other__documentation_8dox.html
 ${PLIST.doc}share/doc/cppunit/html/pages.html
-${PLIST.doc}share/doc/cppunit/html/plus.svg
-${PLIST.doc}share/doc/cppunit/html/plusd.svg
-${PLIST.doc}share/doc/cppunit/html/resize.js
-${PLIST.doc}share/doc/cppunit/html/splitbar.png
-${PLIST.doc}share/doc/cppunit/html/splitbard.png
 ${PLIST.doc}share/doc/cppunit/html/struct_asserter-members.html
 ${PLIST.doc}share/doc/cppunit/html/struct_asserter.html
 ${PLIST.doc}share/doc/cppunit/html/struct_cpp_unit_test_plug_in-members.html
@@ -1626,16 +1604,6 @@ ${PLIST.doc}share/doc/cppunit/html/structassertion__traits-members.html
 ${PLIST.doc}share/doc/cppunit/html/structassertion__traits.html
 ${PLIST.doc}share/doc/cppunit/html/structassertion__traits_3_01double_01_4-members.html
 ${PLIST.doc}share/doc/cppunit/html/structassertion__traits_3_01double_01_4.html
-${PLIST.doc}share/doc/cppunit/html/sync_off.png
-${PLIST.doc}share/doc/cppunit/html/sync_on.png
-${PLIST.doc}share/doc/cppunit/html/tab_a.png
-${PLIST.doc}share/doc/cppunit/html/tab_ad.png
-${PLIST.doc}share/doc/cppunit/html/tab_b.png
-${PLIST.doc}share/doc/cppunit/html/tab_bd.png
-${PLIST.doc}share/doc/cppunit/html/tab_h.png
-${PLIST.doc}share/doc/cppunit/html/tab_hd.png
-${PLIST.doc}share/doc/cppunit/html/tab_s.png
-${PLIST.doc}share/doc/cppunit/html/tab_sd.png
 ${PLIST.doc}share/doc/cppunit/html/tabs.css
 ${PLIST.doc}share/doc/cppunit/html/todo.html
 ${PLIST.doc}share/doc/cppunit/html/topics.html
