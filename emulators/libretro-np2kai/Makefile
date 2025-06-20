@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/05/31 17:49:49 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/06/20 17:01:51 nia Exp $
 
 NP2KAI_REV=	18
 DISTNAME=	libretro-np2kai-0.86.${NP2KAI_REV}
@@ -25,6 +25,8 @@ USE_LANGUAGES=	c c++
 .if ${OPSYS} != "Linux"
 MAKE_FLAGS=	SUPPORT_NET=0
 .endif
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=link.T
 
 .include "../../emulators/retroarch/core.mk"
 .include "../../mk/bsd.pkg.mk"
