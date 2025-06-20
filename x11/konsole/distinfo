@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2024/02/06 11:17:44 markd Exp $
+$NetBSD: distinfo,v 1.18 2025/06/20 02:35:49 markd Exp $
 
 BLAKE2s (konsole-23.08.4.tar.xz) = 8ca4890a72a1f04392005c59c0b9f5468c95aedbcf2516338e305e2088eba62d
 SHA512 (konsole-23.08.4.tar.xz) = 7b6e8a3190290b82283adaf8da59cd41f14da9350ad8baa6340e37d8e8021c65694bda09b89ad3bcbf490a932ab16b2fc3182c0cafa70df189353dfc807cb5dc
 Size (konsole-23.08.4.tar.xz) = 1839412 bytes
 SHA1 (patch-src_ProcessInfo.cpp) = 6ca72a192f0fd852a2dcd1576715f2cb423af2bb
 SHA1 (patch-src_characters_CharacterColor.h) = 47e4d0d9660e4bc059c3416dd16a4b16c2f17f38
+SHA1 (patch-src_session_Session.cpp) = 873ec68b0fb1696efcaa293dcb9411232acc2a66
