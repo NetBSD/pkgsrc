@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25902 2025/06/20 12:47:20 wiz Exp $
+$NetBSD: TODO,v 1.25903 2025/06/20 19:51:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -520,7 +520,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
-	o clamav-1.4.1
+	o clamav-1.4.3
 	o classpath-0.99
 	o classpath-gui-0.99
 	o clusterssh-4.16
