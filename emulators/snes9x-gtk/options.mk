@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2024/08/25 06:18:41 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2025/06/20 16:25:05 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snes9x-gtk
 PKG_SUPPORTED_OPTIONS=		alsa pulseaudio portaudio wayland
@@ -40,5 +40,5 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_PORTAUDIO=OFF
 .if !empty(PKG_OPTIONS:Mwayland)
 .include "../../devel/wayland/buildlink3.mk"
 .else
-CMAKE_CONFIGURE_ARGS+=	-DUSE_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WAYLAND=OFF
 .endif
