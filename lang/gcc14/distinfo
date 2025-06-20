@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/06/08 07:37:45 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/06/20 07:05:18 adam Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -33,7 +33,7 @@ SHA1 (patch-gcc_config_aarch64_aarch64-c.cc) = 32c31e906263e7790112140a528e1ca03
 SHA1 (patch-gcc_config_aarch64_aarch64-cores.def) = ae9664ad30826fa7fc5c247faf15d7364a000ac0
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
 SHA1 (patch-gcc_config_aarch64_aarch64-protos.h) = d9b90df2600b7d92bca098d9dc4ac965fe94983c
-SHA1 (patch-gcc_config_aarch64_aarch64-tune.md) = 348c478781b970feefbf683b66ade0065720f099
+SHA1 (patch-gcc_config_aarch64_aarch64-tune.md) = 4c3d2f4d757e75e6f154936ae6cb0b409aabd8f2
 SHA1 (patch-gcc_config_aarch64_aarch64.cc) = 3de2cc5fe4f4da6ca25b8f7ef0ef659d7bec51f8
 SHA1 (patch-gcc_config_aarch64_aarch64.h) = b2e297c5a37d07b5d360566d111ce7b5c561209d
 SHA1 (patch-gcc_config_aarch64_aarch64.md) = 547637f1096d544897ee906c67f7d18b070ab4cc
@@ -102,3 +102,4 @@ SHA1 (patch-libphobos_libdruntime_core_internal_gc_impl_conservative_gc.d) = 6d7
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
 SHA1 (patch-libquadmath_strtod_strtod__l.c) = 6142c10d34174174cce7f06c37eab04dc431b2dc
 SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 891ec8488516592ea2065509b7310c55d7a367ad
+SHA1 (patch-zlib_zutil.h) = ef6f2439488a1b97bca9c33fc16e2e7447f0d158
