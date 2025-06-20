@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/05/01 09:33:23 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2025/06/20 14:09:49 nia Exp $
 
 DISTNAME=	nickle-2.103
 CATEGORIES=	math lang
@@ -15,6 +15,7 @@ TEST_TARGET=	check
 REPLACE_SH+=	bench/runbench.sh
 
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bison flex
 
 # Tests have a tool dependency on bc; meson insists on checking for it.
 .if !exists(/usr/bin/bc)
