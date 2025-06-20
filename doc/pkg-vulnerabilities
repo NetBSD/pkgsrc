@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.428 2025/06/19 06:06:56 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.429 2025/06/20 02:38:57 markd Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26390,7 +26390,7 @@ glib2<2.84.3	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-6052
 kafka<3.9.1	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-27817
 kafka<3.9.1	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-27818
 kafka<3.9.1	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-27819
-konsole<25.04.2	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-49091
+konsole<23.08.4nb10	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2025-49091
 libarchive<3.8.0	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5914
 libarchive<3.8.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5915
 libarchive<3.8.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-5916
