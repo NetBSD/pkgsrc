@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.429 2025/06/20 02:38:57 markd Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.430 2025/06/20 19:51:21 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26423,3 +26423,4 @@ modular-xorg-server<21.1.17	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-
 modular-xorg-xwayland<24.1.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49175
 modular-xorg-server<21.1.18	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49176
 modular-xorg-xwayland<24.1.8	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49176
+clamav<1.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-20260
