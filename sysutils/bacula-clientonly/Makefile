@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2025/06/03 11:36:48 markd Exp $
+# $NetBSD: Makefile,v 1.34 2025/06/20 13:13:20 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
+PKGREVISION=		1
 COMMENT=		The Network Backup Solution (client only)
 
 CONFLICTS=		bacula-[0-9]* bacula-client-[0-9]* bareos-[0-9]* bareos-clientonly-[0-9]*
@@ -21,6 +22,8 @@ CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
 CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
 
 RCD_SCRIPTS=		bacula-fd
+
+USE_TOOLS+=		perl:run
 
 .include "../../sysutils/bacula/Makefile.common"
 
