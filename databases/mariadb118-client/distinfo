@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/06/07 08:58:42 nia Exp $
+$NetBSD: distinfo,v 1.2 2025/06/20 14:03:21 nia Exp $
 
 BLAKE2s (mariadb-11.8.2.tar.gz) = 261989030b78edfd49637e00300a8ae9473611d0e1420e11198d361972c20961
 SHA512 (mariadb-11.8.2.tar.gz) = f915194e62633cc7c8b2fa901d83b30bdf6e3b8051c2d7e39dcae0a819787cc1f54dd92fdf692c9100ffbdc66b57e265bcc0433fcc2a80324b8dac16653de41e
@@ -14,13 +14,14 @@ SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-libmariadb_cmake_FindGSSAPI.cmake) = 94b268478e680b82b1c108a12c0f37f3dc68ffce
 SHA1 (patch-libservices_CMakeLists.txt) = abac6b86bfcd7e57937fe485803a8a50eb5b91ae
 SHA1 (patch-mysys_my__gethwaddr.c) = c3f179aa659e16f2fd9b858a718dd1cdd6f93c9f
+SHA1 (patch-mysys_my__largepage.c) = 9fefb0bcf167d7de0a42a3ca335d555ef6b46400
 SHA1 (patch-plugin_auth__gssapi_cmake_FindGSSAPI.cmake) = 215d48d80fe4dd018678ec7b03fc40ca1caf4f16
 SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = b2fddab1d94ba75c69cbf660f546f8e5821e1d51
 SHA1 (patch-plugin_daemon__example_CMakeLists.txt) = 1a8efe4886818839bea48e980a694a60de6783dc
 SHA1 (patch-plugin_hashicorp__key__management_CMakeLists.txt) = 974575e3e8e39e7b24a956d8caaca5c7af2f5095
 SHA1 (patch-scripts_CMakeLists.txt) = b8a13304e314162ab0a1fc06c5620d6b757975f5
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
-SHA1 (patch-sql_mysqld.cc) = 8820f78278ff099e5eb80528e8b501ba770fbe2a
+SHA1 (patch-sql_mysqld.cc) = fd8f215da733b0a50adf5d16f5a697062240b1de
 SHA1 (patch-sql_share_CMakeLists.txt) = 54fec8bd52a9d66f23a2ddcfd3c3730dabdd8011
 SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = d5ff507acdd21858791246ef5a2559e653cb7833
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
