@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.430 2025/06/20 19:51:21 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.431 2025/06/21 12:00:04 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26424,3 +26424,33 @@ modular-xorg-xwayland<24.1.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE
 modular-xorg-server<21.1.18	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49176
 modular-xorg-xwayland<24.1.8	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49176
 clamav<1.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-20260
+chromium<137.0.7151.119	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-6191
+chromium<137.0.7151.119	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-6192
+clamav<1.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-20234
+gdk-pixbuf2<2.43.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6199
+grafana<11.6.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1088
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6269
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6270
+jq>=1.8.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49014
+modular-xorg-server<21.1.17	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-49177
+modular-xorg-server<21.1.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49178
+modular-xorg-server<21.1.17	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49179
+modular-xorg-server<21.1.17	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49180
+modular-xorg-xwayland<24.1.7	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-49177
+modular-xorg-xwayland<24.1.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49178
+modular-xorg-xwayland<24.1.7	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49179
+modular-xorg-xwayland<24.1.7	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-49180
+poco<1.14.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-6375
+py{39,310,311,312,313}-cares<4.9.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-48945
+py{39,310,311,312,313}-mezzanine<6.1.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6050
+py{39,310,311,312,313}-urllib3<2.5.0	server-side-request-forgery	ttps://nvd.nist.gov/vuln/detail/CVE-2025-50181
+py{39,310,311,312,313}-urllib3<2.5.0	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-50182
+python39-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
+rabbitmq<4.0.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-50200
+wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6273
+wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6274
+wabt-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-6275
