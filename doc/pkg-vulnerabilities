@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.431 2025/06/21 12:00:04 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.432 2025/06/21 15:33:56 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26454,3 +26454,53 @@ rabbitmq<4.0.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail
 wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6273
 wabt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6274
 wabt-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-6275
+firefox<106		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2022-44/
+firefox<109		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-01/
+firefox<110		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-05/
+firefox102<102.8	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-06/
+firefox<111		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-09/
+firefox102<102.9	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-10/
+thunderbird<102.9	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-11/
+firefox<112		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-13/
+firefox102<102.10	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-14/
+thunderbird<102.10	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-15/
+firefox<113		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-16/
+firefox102<102.11	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-17/
+thunderbird<102.11	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-18/
+firefox102<102.12	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-19/
+firefox<114		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-20/
+thunderbird<102.12	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-21/
+firefox<115		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-22/
+firefox102<102.13	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-23/
+thunderbird<102.13	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-24/
+firefox115<115.0.2 	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-26/
+firefox<115.0.2 	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-26/
+thunderbird115<115.0.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-27/
+thunderbird<115.0.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-27/
+thunderbird<102.13.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-28/
+firefox<116		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-29/
+firefox102<102.14	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-30/
+firefox115<115.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-31/
+thunderbird115<115.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-33/
+thunderbird<115.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-33/
+firefox<117		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-34/
+firefox102<102.15	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-35/
+firefox115<115.2	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-36/
+thunderbird<102.15	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-37/
+thunderbird115<115.2	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-38/
+thunderbird<115.2	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-38/
+firefox<118		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-41/
+firefox115<115.3	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-42/
+thunderbird<115.3	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-43/
+firefox<119		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-45/
+firefox115<115.4	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-46/
+thunderbird115<115.4.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-47/
+thunderbird<115.4.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-47/
+firefox<120		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-49/
+firefox115<115.5.0	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-50/
+thunderbird115<115.5	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-52/
+thunderbird<115.5	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-52/
+firefox115<115.6	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-54/
+thunderbird115<115.6	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-55/
+thunderbird<115.6	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-55/
+firefox<121		multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2023-56/
