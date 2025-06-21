@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/07/22 07:26:14 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/06/21 15:07:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.liboggz
 PKG_SUPPORTED_OPTIONS=	doc valgrind
@@ -8,7 +8,7 @@ PLIST_VARS+=		doc
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdoc)
-TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=		doxygen>=1.14:../../devel/doxygen
 PLIST.doc=		yes
 .else
 CONFIGURE_ARGS+=	HAVE_DOXYGEN=false
