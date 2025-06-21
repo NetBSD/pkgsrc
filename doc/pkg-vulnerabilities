@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.433 2025/06/21 15:41:12 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.434 2025/06/21 16:33:08 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26603,3 +26603,38 @@ firefox128<128.10.1	multiple-vulnerabilities	https://www.mozilla.org/security/ad
 firefox115<115.23.1	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2025-38/
 thunderbird<128.10.2	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2025-40/
 thunderbird<138.0.2	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2025-41/
+mysql-server<8.0.33	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2023.html
+openjdk11<11.0.19	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2023.html
+openjdk17<17.0.7	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2023.html
+mysql-server<8.0.34	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2023.html
+openjdk11<11.0.20	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2023.html
+openjdk17<17.0.8	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2023.html
+mysql-server<8.0.35	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2023.html
+openjdk11<11.0.21	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2023.html
+openjdk17<17.0.9	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2023.html
+openjdk21<21.0.1	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2023.html
+mysql-server<8.0.36	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2024.html
+openjdk11<11.0.22	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2024.html
+openjdk17<17.0.10	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2024.html
+openjdk21<21.0.2	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2024.html
+mysql-server<8.0.37	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2024.html
+openjdk11<11.0.23	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2024.html
+openjdk17<17.0.11	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2024.html
+openjdk21<21.0.3	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2024.html
+mysql-server<8.0.38	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2024.html
+openjdk11<11.0.24	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2024.html
+openjdk17<17.0.12	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2024.html
+openjdk21<21.0.4	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2024.html
+mysql-server<8.0.40	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2024.html
+mysql-client<8.0.40	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2024.html
+openjdk11<11.0.25	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2024.html
+openjdk17<17.0.13	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2024.html
+openjdk21<21.0.5	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2024.html
+mysql-server<8.0.41	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2025.html
+openjdk11<11.0.26	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2025.html
+openjdk17<17.0.14	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2025.html
+openjdk21<21.0.6	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2025.html
+openjdk11<11.0.27	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
+openjdk17<17.0.15	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
+openjdk21<21.0.7	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
+py{39,310,311,312,313}-mysql-connector<9.2.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-21548
