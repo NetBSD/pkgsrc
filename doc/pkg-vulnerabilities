@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.434 2025/06/21 16:33:08 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.435 2025/06/21 17:07:33 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26638,3 +26638,35 @@ openjdk11<11.0.27	multiple-vulnerabilities	https://www.oracle.com/security-alert
 openjdk17<17.0.15	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
 openjdk21<21.0.7	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuapr2025.html
 py{39,310,311,312,313}-mysql-connector<9.2.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-21548
+chromium<133.0.6943.98	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-0995
+chromium<133.0.6943.98	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-0996
+chromium<133.0.6943.98	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-0997
+chromium<133.0.6943.126	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-0999
+chromium<133.0.6943.126	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-1006
+chromium<133.0.6943.126	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-1426
+chromium<134.0.6998.35	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-1914
+chromium<134.0.6998.35	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-1915
+chromium<134.0.6998.35	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1916
+chromium<134.0.6998.35	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-1918
+chromium<134.0.6998.35	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-1919
+chromium<134.0.6998.35	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-1921
+chromium<134.0.6998.35	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-1923
+chromium<134.0.6998.88	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-1920
+chromium<134.0.6998.88	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-2135
+chromium<134.0.6998.88	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-2136
+chromium<134.0.6998.88	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-2137
+chromium<134.0.6998.117	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-2476
+chromium<135.0.7049.84	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-3066
+chromium<135.0.7049.52	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-3069
+chromium<135.0.7049.52	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-3070
+chromium<135.0.7049.52	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-3071
+chromium<135.0.7049.52	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-3072
+chromium<135.0.7049.52	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-3073
+chromium<135.0.7049.52	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-3074
+chromium<135.0.7049.95	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-3620
+chromium<136.0.7103.59	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-4050
+chromium<136.0.7103.59	access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-4051
+chromium<136.0.7103.59	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-4096
+chromium<136.0.7103.59	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-4052
+chromium<136.0.7103.92	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-4372
+chromium<136.0.7103.113	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-4664
