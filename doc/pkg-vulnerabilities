@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.436 2025/06/22 06:19:27 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.437 2025/06/22 06:35:11 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26443,7 +26443,7 @@ modular-xorg-xwayland<24.1.7	integer-overflow	https://nvd.nist.gov/vuln/detail/C
 poco<1.14.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-6375
 py{39,310,311,312,313}-cares<4.9.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-48945
 py{39,310,311,312,313}-mezzanine<6.1.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-6050
-py{39,310,311,312,313}-urllib3<2.5.0	server-side-request-forgery	ttps://nvd.nist.gov/vuln/detail/CVE-2025-50181
+py{39,310,311,312,313}-urllib3<2.5.0	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-50181
 py{39,310,311,312,313}-urllib3<2.5.0	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-50182
 python39-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
 python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6069
