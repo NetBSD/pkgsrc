@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3978 2025/06/22 06:16:39 kim Exp $
+$NetBSD: CHANGES-2025,v 1.3979 2025/06/22 11:13:18 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5921,3 +5921,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/bacula-clientonly to 15.0.3nb1 [wiz 2025-06-20]
 	Updated sysutils/gam to 7.10.01 [sborrill 2025-06-20]
 	Updated devel/jq to 1.8.0nb1 [kim 2025-06-22]
+	Updated devel/ncurses to 6.5nb1 [kim 2025-06-22]
