@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2025/04/20 21:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/06/22 17:41:13 wiz Exp $
 
-DISTNAME=	urllib3-2.4.0
+DISTNAME=	urllib3-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -36,7 +36,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.26.2:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
 # quart
 #hypercorn @ git+https://github.com/urllib3/hypercorn@urllib3-changes
-#pytest-memray==1.5.0; sys_platform!="win32" and implementation_name=="cpython"
+#pytest-memray 1.5.0; sys_platform!="win32" and implementation_name=="cpython"
 
 USE_LANGUAGES=	# none
 
