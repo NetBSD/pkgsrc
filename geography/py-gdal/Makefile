@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/05/16 05:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/06/22 10:45:35 gdt Exp $
 
 PKGREVISION= 1
 .include "../../geography/gdal-lib/Makefile.common"
@@ -34,6 +34,8 @@ pre-build:
 	cmake ${CMAKE_CONFIGURE_ARGS} .. && \
 	cd swig/python && \
 	${MAKE} python_generated_files
+
+.include "../../mk/atomic64.mk"
 
 BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=3.9.0
 .include "../../geography/gdal-lib/buildlink3.mk"
