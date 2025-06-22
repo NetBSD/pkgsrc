@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.442 2025/06/22 13:58:04 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.443 2025/06/22 14:58:30 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26877,3 +26877,7 @@ gtkwave<3.3.118	integer-underflow		https://nvd.nist.gov/vuln/detail/CVE-2023-394
 gtkwave<3.3.118	integer-underflow		https://nvd.nist.gov/vuln/detail/CVE-2023-39414
 gtkwave<3.3.118	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2023-39443
 gtkwave<3.3.118	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2023-39444
+php{56,72,73,74,80}-composer<1.0.0	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2015-8371
+bitcoin<0.12				buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2015-20111
+miniupnpc<2.0				buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2015-20111
+miniupnpd<2.0				buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2015-20111
