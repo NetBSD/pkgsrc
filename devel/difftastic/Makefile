@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/06/17 08:59:49 pin Exp $
+# $NetBSD: Makefile,v 1.41 2025/06/22 07:46:49 wiz Exp $
 
 DISTNAME=	difftastic-0.64.0
 CATEGORIES=	devel
@@ -12,9 +12,10 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 RUST_REQ=	1.74.1
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
-USE_LANGUAGES+=	c c++17
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES=	c++17
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
