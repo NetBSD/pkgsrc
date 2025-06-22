@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.437 2025/06/22 06:35:11 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.438 2025/06/22 09:19:06 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26670,3 +26670,34 @@ chromium<136.0.7103.59	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-
 chromium<136.0.7103.59	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-4052
 chromium<136.0.7103.92	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-4372
 chromium<136.0.7103.113	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-4664
+php{56,73,74,80,81,82,83,84}-typo3<9.5.42	server-side-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2023-38499
+php{56,73,74,80,81,82,83,84}-typo3<12.4.8	information-disclosure			https://nvd.nist.gov/vuln/detail/CVE-2023-47126
+php{56,73,74,80,81,82,83,84}-typo3<9.5.44	authentication-bypass			https://nvd.nist.gov/vuln/detail/CVE-2023-47127
+php{56,73,74,80,81,82,83,84}-typo3<9.5.46	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2023-30451
+php{56,73,74,80,81,82,83,84}-typo3<9.5.46	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-25118
+php{56,73,74,80,81,82,83,84}-typo3<9.5.46	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-25119
+php{56,73,74,80,81,82,83,84}-typo3<9.5.46	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-25120
+php{56,73,74,80,81,82,83,84}-typo3<9.5.46	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2024-25121
+php{56,73,74,80,81,82,83,84}-typo3<13.0.1	command-injection			https://nvd.nist.gov/vuln/detail/CVE-2024-22188
+php{56,73,74,80,81,82,83,84}-typo3<13.1.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2024-34355
+php{56,73,74,80,81,82,83,84}-typo3<13.1.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2024-34357
+php{56,73,74,80,81,82,83,84}-typo3<13.1.1	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2024-34358
+php{56,73,74,80,81,82,83,84}-typo3<13.1.1	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2024-34356
+php{56,73,74,80,81,82,83,84}-typo3<13.3.1	information-disclosure			https://nvd.nist.gov/vuln/detail/CVE-2024-47780
+php{56,73,74,80,81,82,83,84}-typo3<13.3.1	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2024-34537
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-55891
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55892
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55893
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55894
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55920
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55921
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55922
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55923
+php{56,73,74,80,81,82,83,84}-typo3<13.4.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55924
+php{56,73,74,80,81,82,83,84}-typo3<11.5.42	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-55945
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-47936
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-47938
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-47937
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-47939
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2025-47940
+php{56,73,74,80,81,82,83,84}-typo3<13.4.12	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-47941
