@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.440 2025/06/22 12:17:25 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.441 2025/06/22 12:28:31 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26769,3 +26769,29 @@ moodle<4.4.3	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-4
 moodle<4.4.3	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-45690
 moodle<4.4.3	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-45691
 moodle<4.4.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-48899
+moodle<4.5.2	arbitrary-file-reading	https://nvd.nist.gov/vuln/detail/CVE-2025-26525
+moodle<4.5.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-26526
+moodle<4.5.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-26527
+moodle<4.5.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-26528
+moodle<4.5.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-26529
+moodle<4.5.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-26530
+moodle<4.5.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-26531
+moodle<4.5.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-26532
+moodle<4.5.2	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-26533
+moodle<4.5.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3634
+moodle<4.5.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-32044
+moodle<4.5.3	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-32045
+moodle<4.5.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3625
+moodle<4.5.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3627
+moodle<4.5.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-3628
+moodle<4.5.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-3635
+moodle<4.5.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3636
+moodle<4.5.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-3638
+moodle<4.5.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-3637
+moodle<4.5.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-3640
+moodle<4.5.4	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-3641
+moodle<4.5.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-3643
+moodle<4.5.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-3642
+moodle<4.5.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-3645
+moodle<4.5.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-3644
+moodle<4.5.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-3647
