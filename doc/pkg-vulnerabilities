@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.439 2025/06/22 11:16:40 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.440 2025/06/22 12:17:25 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26701,3 +26701,71 @@ php{56,73,74,80,81,82,83,84}-typo3<13.4.12	authentication-bypass		https://nvd.ni
 php{56,73,74,80,81,82,83,84}-typo3<13.4.12	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-47939
 php{56,73,74,80,81,82,83,84}-typo3<13.4.12	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2025-47940
 php{56,73,74,80,81,82,83,84}-typo3<13.4.12	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-47941
+moodle<3.11.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-36401
+moodle<3.11.1	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-36400
+moodle<3.11.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-36394
+moodle<3.11.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-36399
+moodle<3.11.1	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2021-36392
+moodle<3.11.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-36402
+moodle<4.1.2	username-enumeration	https://nvd.nist.gov/vuln/detail/CVE-2023-28334
+moodle<4.0.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-40208
+moodle<4.1.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-30944
+moodle<4.1.3	arbitrary-file-creation	https://nvd.nist.gov/vuln/detail/CVE-2023-30943
+moodle-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-27131
+moodle<4.1.4	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2023-35133
+moodle<4.1.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-35131
+moodle<4.1.4	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-35132
+moodle-[0-9]*	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-1439
+moodle<4.3.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25978
+moodle<4.3.3	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-25979
+moodle<4.3.3	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-25980
+moodle<4.3.3	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-25982
+moodle<4.3.3	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-25983
+moodle<4.3.3	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-25981
+moodle-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-29374
+moodle-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28593
+moodle<4.3.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-33996
+moodle<4.3.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-33997
+moodle<4.3.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-33998
+moodle<4.3.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-33999
+moodle<4.3.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-34000
+moodle<4.3.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-34001
+moodle<4.3.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34002
+moodle<4.3.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34003
+moodle<4.3.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34004
+moodle<4.3.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-34005
+moodle<4.3.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-34006
+moodle<4.3.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-34007
+moodle<4.3.4	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-34008
+moodle<4.3.4	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-34009
+moodle<4.3.5	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-38273
+moodle<4.4.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-38274
+moodle<4.4.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-38275
+moodle<4.3.5	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-38276
+moodle<4.4.1	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-38277
+moodle-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-37674
+moodle<4.4.2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-43425
+moodle<4.4.2	arbitrary-file-reading	https://nvd.nist.gov/vuln/detail/CVE-2024-43426
+moodle<4.4.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-43428
+moodle<4.4.2	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-43431
+moodle<4.4.2	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-43436
+moodle<4.4.2	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-43434
+moodle<4.4.2	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-43438
+moodle<4.4.2	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-43440
+moodle<4.4.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-43427
+moodle<4.4.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-43429
+moodle<4.4.2	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-43430
+moodle<4.4.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-43432
+moodle<4.4.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-43433
+moodle<4.4.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-43435
+moodle<4.4.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-43437
+moodle<4.4.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-43439
+moodle<4.4.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-48900
+moodle<4.4.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-48896
+moodle<4.4.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-48897
+moodle<4.4.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-48898
+moodle<4.4.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-48901
+moodle<4.4.3	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-45689
+moodle<4.4.3	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-45690
+moodle<4.4.3	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-45691
+moodle<4.4.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-48899
