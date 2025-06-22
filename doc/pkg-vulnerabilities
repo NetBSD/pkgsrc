@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.444 2025/06/22 16:52:33 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.445 2025/06/22 19:46:16 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26951,3 +26951,71 @@ gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50665
 gpac<2.2.0	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2022.490
 gpac<0.8.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-57184
 gpac-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-25723
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-25820
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-25818
+php{56,73,74,80,81,82,83,84}-nextcloud<24.0.9	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-25817
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-28835
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-28833
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-28644
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.3	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-28643
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-26482
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-28844
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-28834
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.5	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-30539
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.5	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-28847
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.6	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-32318
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.5	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-32319
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-32320
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.7	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-35172
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.7	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-35928
+php{56,73,74,80,81,82,83,84}-nextcloud<25.0.7	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-35927
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.2	open-redirect		https://nvd.nist.gov/vuln/detail/CVE-2023-35171
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-39963
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-39962
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-39961
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-39959
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-39958
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-39952
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-39960
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-45148
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-45151
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2023-48239
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-48301
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-48302
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-48303
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-48304
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.8	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-48305
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.6	server-side-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2023-48306
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.9	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-49791
+php{56,73,74,80,81,82,83,84}-nextcloud<26.0.9	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-49792
+php{56,73,74,80,81,82,83,84}-nextcloud<28.0.0	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-22403
+php{56,73,74,80,81,82,83,84}-nextcloud<28.0.4	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2024-37313
+php{56,73,74,80,81,82,83,84}-nextcloud<28.0.4	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-37882
+php{56,73,74,80,81,82,83,84}-nextcloud<28.0.3	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-37884
+php{56,73,74,80,81,82,83,84}-nextcloud<28.0.3	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-37315
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.1	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-37887
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-52515
+php{56,73,74,80,81,82,83,84}-nextcloud<24.0.6	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-52516
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.8		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52517
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52517
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.7		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52519
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.9		improper-authentication			https://nvd.nist.gov/vuln/detail/CVE-2024-52518
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.2	improper-authentication			https://nvd.nist.gov/vuln/detail/CVE-2024-52518
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.7		cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2024-52520
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.7		weak-encryption				https://nvd.nist.gov/vuln/detail/CVE-2024-52521
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.9		out-of-bounds-read			https://nvd.nist.gov/vuln/detail/CVE-2024-52523
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.2	out-of-bounds-read			https://nvd.nist.gov/vuln/detail/CVE-2024-52523
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.9		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52525
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52525
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.8		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52513
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-52513
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.0		improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2024-52514
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.15		improper-authentication			https://nvd.nist.gov/vuln/detail/CVE-2025-47790
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.9	improper-authentication			https://nvd.nist.gov/vuln/detail/CVE-2025-47790
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.13		improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-47794
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.7	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-47794
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.13		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-47793
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.2	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-47793
+php{56,73,74,80,81,82,83,84}-nextcloud<29.0.10		server-side-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2025-47791
+php{56,73,74,80,81,82,83,84}-nextcloud>=30<30.0.3	server-side-request-forgery		https://nvd.nist.gov/vuln/detail/CVE-2025-47791
+nextcloud-client<3.14.2		improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-52510
