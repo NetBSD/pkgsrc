@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/06/01 18:43:09 leot Exp $
+# $NetBSD: Makefile,v 1.23 2025/06/22 06:16:19 kim Exp $
 
 DISTNAME=	jq-1.8.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jqlang/}
 GITHUB_RELEASE=	${DISTNAME}
