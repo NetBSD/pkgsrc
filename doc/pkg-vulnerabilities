@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.438 2025/06/22 09:19:06 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.439 2025/06/22 11:16:40 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26398,7 +26398,7 @@ libarchive<3.8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-5
 libarchive<3.8.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-5918
 libtpms<0.10.1		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-49133
 metabase<0.54.5		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5895
-ncurses-[0-9]*		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6141
+ncurses<6.5nb1		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6141
 openssl<3.5.0		side-channel		https://nvd.nist.gov/vuln/detail/CVE-2025-27587
 p5-CryptX<0.065		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40912
 pspp-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-5898
