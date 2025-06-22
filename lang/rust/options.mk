@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2025/06/21 14:53:02 he Exp $
+# $NetBSD: options.mk,v 1.48 2025/06/22 10:19:55 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -41,13 +41,14 @@ GCC_REQD+=	12
 .endif
 
 # Apparently, using pkgsrc LLVM 19.x does not work on
-# NetBSD/x86_64 9.x unless rust is built with a newer
-# gcc than the platform-included 7.5.0.  Ref.
+# NetBSD/x86_64 9.x and NetBSD/i386 9.x unless rust is built
+# with a newer gcc than the platform-included 7.5.0.  Ref.
 # https://gnats.netbsd.org/59435 and
 # https://mail-index.netbsd.org/pkgsrc-users/2025/05/20/msg041603.html
 # and following discussion.
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
-.  if ${MACHINE_PLATFORM:MNetBSD-9.*-x86_64}
+.  if ${MACHINE_PLATFORM:MNetBSD-9.*-x86_64} || \
+      ${MACHINE_PLATFORM:MNetBSD-9.*-i386}
 GCC_REQD+=	10
 .  endif
 .endif
