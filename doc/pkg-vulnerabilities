@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.446 2025/06/23 21:18:56 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.447 2025/06/23 21:20:19 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26365,7 +26365,6 @@ assimp<6.0.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-2751
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-2757
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3158
 p5-CryptX<0.087	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40914
-sslh<2.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46807
 erlang<27.3.4.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-4748
 libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49794
 libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49795
