@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2019/11/04 22:09:55 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2025/06/23 01:25:14 zafer Exp $
 #
 
 DISTNAME=	asp2php-0.76.17
 PKGNAME=	gtk${DISTNAME}
 PKGREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://65.108.58.129/asp2php/
+MASTER_SITES=	#http://65.108.58.129/asp2php/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://asp2php.naken.cc/
