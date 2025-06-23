@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/04/17 21:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/06/23 08:29:54 pin Exp $
 
-DISTNAME=	slumber-3.0.1
-# slumber-3.1.0 requires Rust >= 1.86
-PKGREVISION=	1
+DISTNAME=	slumber-3.1.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.80.1
+RUST_REQ=	1.86.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
