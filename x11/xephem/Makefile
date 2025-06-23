@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2024/09/21 13:28:43 gdt Exp $
+# $NetBSD: Makefile,v 1.75 2025/06/23 01:23:36 zafer Exp $
 
 DISTNAME=	xephem-3.7.7
 CATEGORIES=	x11
 # New MASTER_SITES is:
 # https://github.com/XEphem/XEphem/archive/refs/tags/4.2.0.tar.gz
-MASTER_SITES=	http://97.74.56.125/free/
+MASTER_SITES=	#http://97.74.56.125/free/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.clearskyinstitute.com/
