@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3981 2025/06/23 08:27:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.3982 2025/06/23 08:28:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5924,3 +5924,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ncurses to 6.5nb1 [kim 2025-06-22]
 	Updated www/py-urllib3 to 2.5.0 [wiz 2025-06-22]
 	Updated devel/cargo-modules to 0.24.2 [pin 2025-06-23]
+	Updated devel/mise to 2025.6.6 [pin 2025-06-23]
