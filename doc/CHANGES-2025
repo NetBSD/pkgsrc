@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3988 2025/06/24 09:28:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3989 2025/06/24 16:06:14 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5931,3 +5931,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/spotify-player to 0.20.6 [pin 2025-06-23]
 	Updated misc/rlwrap to 0.46.1nb1 [leot 2025-06-23]
 	Updated sysutils/zoxide to 0.9.8nb1 [wiz 2025-06-24]
+	Updated databases/objsqlite3 to 1.0.1 [js 2025-06-24]
