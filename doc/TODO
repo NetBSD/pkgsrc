@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25908 2025/06/24 09:28:03 wiz Exp $
+$NetBSD: TODO,v 1.25909 2025/06/24 11:13:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -621,6 +621,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o fet-6.0.1
 	o filerunner-14.06.18.10
 	o firefox-140.0
+	o firefox115-115.24.0
 	o fish-4.0.0
 	o flashplayer-0.4.13
 	o flatbuffers-1.12.0
@@ -661,6 +662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
+	o ghdl-5.1.0
 	o git-cinnabar-0.7.2
 	o gjs-1.70.1
 	o gkrellm-2.4.0
@@ -1308,6 +1310,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tetrinetx-1.40c
 	o texlab-5.23.0
 	o tfmxplay-1.1.6
+	o thunderbird115-115.18.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tk-9.0
