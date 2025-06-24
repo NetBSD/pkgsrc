@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2024/12/18 10:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/06/24 16:10:26 js Exp $
 
-DISTNAME=	objpgsql-1.0
+PKGNAME=	objpgsql-1.0.1
+DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
-MASTER_SITES=	https://fl.nil.im/objpgsql/tarball/${PKGVERSION_NOREV}-release/
+MASTER_SITES=	https://git.nil.im/ObjFW/ObjPgSQL/archive/
 
 MAINTAINER=	js@NetBSD.org
-HOMEPAGE=	https://fl.nil.im/objpgsql
+HOMEPAGE=	https://git.nil.im/ObjFW/ObjPgSQL
 COMMENT=	PostgreSQL bindings for ObjFW
 LICENSE=	isc
 
+WRKSRC=			${WRKDIR}/objpgsql
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 PKGSRC_COMPILER=	clang	# Needs to be the same as devel/objfw
