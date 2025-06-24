@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2025/04/17 21:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/06/24 16:05:58 js Exp $
 
-DISTNAME=	objsqlite3-1.0
-PKGREVISION=	4
+PKGNAME=	objsqlite3-1.0.1
+DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
-MASTER_SITES=	https://fl.nil.im/objsqlite3/tarball/${PKGVERSION_NOREV}-release/
+MASTER_SITES=	https://git.nil.im/ObjFW/ObjSQLite3/archive/
 
 MAINTAINER=	js@NetBSD.org
-HOMEPAGE=	https://fl.nil.im/objsqlite3
+HOMEPAGE=	https://git.nil.im/ObjFW/ObjSQLite3
 COMMENT=	SQLite3 bindings for ObjFW
 LICENSE=	isc
 
+WRKSRC=			${WRKDIR}/objsqlite3
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 PKGSRC_COMPILER=	clang	# Needs to be the same as devel/objfw
