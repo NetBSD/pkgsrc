@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2025/06/24 16:05:58 js Exp $
+# $NetBSD: Makefile,v 1.8 2025/06/24 21:29:58 js Exp $
 
 PKGNAME=	objsqlite3-1.0.1
 DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
 MASTER_SITES=	https://git.nil.im/ObjFW/ObjSQLite3/archive/
+DIST_SUBDIR=	objsqlite3
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://git.nil.im/ObjFW/ObjSQLite3
