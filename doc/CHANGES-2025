@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3990 2025/06/24 16:10:41 js Exp $
+$NetBSD: CHANGES-2025,v 1.3991 2025/06/24 20:26:54 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5933,3 +5933,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/zoxide to 0.9.8nb1 [wiz 2025-06-24]
 	Updated databases/objsqlite3 to 1.0.1 [js 2025-06-24]
 	Updated databases/objpgsql to 1.0.1 [js 2025-06-24]
+	Updated www/firefox128 to 128.12.0 [bsiegert 2025-06-24]
