@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3987 2025/06/23 09:06:57 leot Exp $
+$NetBSD: CHANGES-2025,v 1.3988 2025/06/24 09:28:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5930,3 +5930,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/tp-note to 1.25.11 [pin 2025-06-23]
 	Updated audio/spotify-player to 0.20.6 [pin 2025-06-23]
 	Updated misc/rlwrap to 0.46.1nb1 [leot 2025-06-23]
+	Updated sysutils/zoxide to 0.9.8nb1 [wiz 2025-06-24]
