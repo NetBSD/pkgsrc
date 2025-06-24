@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/05/09 19:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/06/24 11:12:02 wiz Exp $
 
 DISTNAME=	ghdl-4.1.0
 PKGREVISION=	5
@@ -11,6 +11,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://ghdl.github.io/ghdl/
 COMMENT=	Open-source simulator/compiler/analyzer for the VHDL
 LICENSE=	gnu-gpl-v2
+
+BROKEN=		"Does not support llvm 19."
 
 USE_TOOLS+=		bash:run gmake
 
