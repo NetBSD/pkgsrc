@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/06/15 13:30:19 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/06/24 14:29:26 ryoon Exp $
 bin/duckdb
 include/duckdb.h
 include/duckdb.hpp
@@ -264,6 +264,7 @@ include/duckdb/common/serializer/serialization_traits.hpp
 include/duckdb/common/serializer/serializer.hpp
 include/duckdb/common/serializer/write_stream.hpp
 include/duckdb/common/set.hpp
+include/duckdb/common/shadow_forbidden_functions.hpp
 include/duckdb/common/shared_ptr.hpp
 include/duckdb/common/shared_ptr_ipp.hpp
 include/duckdb/common/sort/comparators.hpp
@@ -759,6 +760,9 @@ include/duckdb/optimizer/statistics_propagator.hpp
 include/duckdb/optimizer/sum_rewriter.hpp
 include/duckdb/optimizer/topn_optimizer.hpp
 include/duckdb/optimizer/unnest_rewriter.hpp
+include/duckdb/original/std/locale.hpp
+include/duckdb/original/std/memory.hpp
+include/duckdb/original/std/sstream.hpp
 include/duckdb/parallel/base_pipeline_event.hpp
 include/duckdb/parallel/concurrentqueue.hpp
 include/duckdb/parallel/event.hpp
@@ -1246,3 +1250,7 @@ lib/libjson_extension.a
 lib/libparquet_extension.a
 lib/libtpcds_extension.a
 lib/libtpch_extension.a
+@pkgdir include/duckdb/storage/serialization
+@pkgdir include/duckdb/main/capi/header_generation/functions
+@pkgdir include/duckdb/main/capi/header_generation/apis/v1/v1.2
+@pkgdir include/duckdb/main/capi/header_generation/apis/v1/unstable
