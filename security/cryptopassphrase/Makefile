@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2025/06/24 16:15:53 js Exp $
+# $NetBSD: Makefile,v 1.5 2025/06/24 19:03:57 wiz Exp $
 
 PKGNAME=	cryptopassphrase-1.0.1
 DISTNAME=	v${PKGVERSION_NOREV}
 CATEGORIES=	security
 MASTER_SITES=	https://git.nil.im/js/CryptoPassphrase/archive/
+DIST_SUBDIR=	cryptopassphrase
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://git.nil.im/js/CryptoPassphrase
