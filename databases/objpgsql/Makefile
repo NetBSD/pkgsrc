@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/06/24 16:10:26 js Exp $
+# $NetBSD: Makefile,v 1.4 2025/06/24 21:30:49 js Exp $
 
 PKGNAME=	objpgsql-1.0.1
 DISTNAME=	${PKGVERSION_NOREV}-release
 CATEGORIES=	databases
 MASTER_SITES=	https://git.nil.im/ObjFW/ObjPgSQL/archive/
+DIST_SUBDIR=	objpgsql
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://git.nil.im/ObjFW/ObjPgSQL
