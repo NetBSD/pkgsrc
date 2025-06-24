@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2025/05/30 07:39:40 pin Exp $
+# $NetBSD: Makefile,v 1.30 2025/06/24 09:27:52 wiz Exp $
 
 DISTNAME=	zoxide-0.9.8
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ajeetdsouza/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -9,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ajeetdsouza/zoxide/
 COMMENT=	Faster way to navigate your filesystem
 LICENSE=	mit
+
+DEPENDS+=	fzf>=0.51.0:../../sysutils/fzf
 
 .include "cargo-depends.mk"
 
