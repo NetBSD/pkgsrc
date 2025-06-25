@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/05/21 18:30:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2025/06/25 17:04:54 schmonz Exp $
 
 DISTNAME=		astyle-3.6.9
 CATEGORIES=		devel textproc
@@ -12,6 +12,7 @@ LICENSE=		gnu-lgpl-v3
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c++
+USE_CXX_FEATURES+=	c++17 filesystem
 AUTO_MKDIRS=		yes
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_JAVA_LIBS=OFF
