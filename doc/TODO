@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25910 2025/06/24 20:10:39 wiz Exp $
+$NetBSD: TODO,v 1.25911 2025/06/25 04:38:05 kim Exp $
 
 Suggested new packages
 ======================
@@ -675,6 +675,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o glfw-3.4
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
+	o glib2-2.85.1
 	o gliv-1.9.7
 	o global-6.6.5
 	o glom-1.14.2
