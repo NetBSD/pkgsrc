@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/05/15 18:14:12 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2025/06/25 16:58:53 schmonz Exp $
 
 BLAKE2s (lnetd-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1.tar.gz) = 382de8531fd6c61487856b950bd6df594295b11652005e4cd7afbc7cbc424645
 SHA512 (lnetd-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1.tar.gz) = fefb4d2ac9e6862d1cb91241193b6515a3ee5688e224598f6e3aaeaf911bb8584a7f81769340b35805a172db698d6e366980291a76ff1a12284b7b25b0fce34d
 Size (lnetd-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1-e0a8f304bffade91f2f8b9fb1e5e4b8cc2bd68d1.tar.gz) = 6735 bytes
-SHA1 (patch-Makefile) = 0288519ec1041a8ba6492ac6180b5971c0dc945f
+SHA1 (patch-Makefile) = ce9232832ac79e553f2e3de54459f1a5a149b7e7
