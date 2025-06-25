@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2025/06/06 21:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/06/25 11:44:32 wiz Exp $
 
 DISTNAME=	jj-0.30.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=martinvonz/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jj-vcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/martinvonz/jj/
+HOMEPAGE=	https://github.com/jj-vcs/jj
 COMMENT=	Git-compatible DVCS that is both simple and powerful
 LICENSE=	apache-2.0
 
