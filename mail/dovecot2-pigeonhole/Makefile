@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2024/08/19 09:30:35 adam Exp $
+# $NetBSD: Makefile,v 1.72 2025/06/25 13:01:34 wiz Exp $
 
 DISTNAME=	dovecot-2.3-pigeonhole-0.5.21.1
 PKGNAME=	${DISTNAME:S/-2.3-/-/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://pigeonhole.dovecot.org/releases/2.3/
 
@@ -20,6 +21,7 @@ CONFD=		${PKG_SYSCONFDIR}/dovecot/conf.d
 MAKE_DIRS+=	${CONFD}
 CONF_FILES+=	${EGDIR}/conf.d/20-managesieve.conf ${CONFD}/20-managesieve.conf
 CONF_FILES+=	${EGDIR}/conf.d/90-sieve.conf ${CONFD}/90-sieve.conf
+CONF_FILES+=	${EGDIR}/conf.d/90-sieve-extprograms.conf ${CONFD}/90-sieve-extprograms.conf
 
 .include "../../mail/dovecot2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
