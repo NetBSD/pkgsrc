@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3998 2025/06/26 09:24:28 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.3999 2025/06/26 16:37:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5941,3 +5941,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/dovecot2-pigeonhole to 0.5.21.1nb1 [wiz 2025-06-25]
 	Updated www/hugo to 0.147.9 [triaxx 2025-06-26]
 	Updated devel/premake5 to 5.0.0.b7 [triaxx 2025-06-26]
+	Added textproc/tabiew version 0.10.0 [wiz 2025-06-26]
