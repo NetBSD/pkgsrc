@@ -1,0 +1,11 @@
+Tabiew is a lightweight TUI application that allows users to view
+and query tabular data files, such as CSV, Parquet, Arrow, and ...
+
+Features
+
+- Vim-style keybindings
+- SQL support
+- Support for CSV, Parquet, JSON, JSONL, Arrow, FWF, Sqlite, and Excel
+- Fuzzy search
+- Scripting support
+- Multi-table functionality
