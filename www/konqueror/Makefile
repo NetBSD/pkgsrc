@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/04/24 14:16:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/26 20:33:20 markd Exp $
 
 DISTNAME=	konqueror-${KAPPSVER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 
 HOMEPAGE=	https://konqueror.org/
@@ -42,13 +42,15 @@ CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/translaterc \
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/useragenttemplatesrc \
 		${PKG_SYSCONFDIR}/xdg/useragenttemplatesrc
 
-# list of hunspell dictionaries to support
-# eg.   en_US en_GB en_NZ
-KONQ_DICTS?=
-.for dict in ${KONQ_DICTS}
-DEPENDS+=		hunspell-${dict}-[0-9]*:../../textproc/hunspell-${dict}
-GENERATE_PLIST+=	${ECHO} share/konqueror/webengine_dictionaries/${dict}.bdic;
-.endfor
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_DICTIONARIES=YES
+
+## list of hunspell dictionaries to support
+## eg.   en_US en_GB en_NZ
+#KONQ_DICTS?=
+#.for dict in ${KONQ_DICTS}
+#DEPENDS+=		hunspell-${dict}-[0-9]*:../../textproc/hunspell-${dict}
+#GENERATE_PLIST+=	${ECHO} share/konqueror/webengine_dictionaries/${dict}.bdic;
+#.endfor
 
 .include "../../devel/kcmutils/buildlink3.mk"
 .include "../../devel/kdoctools/buildlink3.mk"
