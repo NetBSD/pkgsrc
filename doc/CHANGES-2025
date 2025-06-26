@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.3996 2025/06/25 13:01:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.3997 2025/06/26 07:04:01 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5939,3 +5939,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/glib2-tools to 2.84.3 [kim 2025-06-25]
 	Updated devel/gdbus-codegen to 2.84.3 [kim 2025-06-25]
 	Updated mail/dovecot2-pigeonhole to 0.5.21.1nb1 [wiz 2025-06-25]
+	Updated www/hugo to 0.147.9 [triaxx 2025-06-26]
