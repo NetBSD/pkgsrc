@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2025/05/26 12:35:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/26 09:24:17 triaxx Exp $
 
-PREMAKE5_VERSION=	5.0.0-beta6
+PREMAKE5_VERSION=	5.0.0-beta7
 DISTNAME=		premake-${PREMAKE5_VERSION}-src
-PKGNAME=		premake5-${PREMAKE5_VERSION:S/-beta6/.b6/}
+PKGNAME=		premake5-${PREMAKE5_VERSION:S/-beta7/.b7/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=premake/}
 GITHUB_PROJECT=		premake-core
@@ -17,11 +17,15 @@ LICENSE=		modified-bsd
 USE_TOOLS+=		gmake
 USE_CC_FEATURES+=	c99
 
+WRKSRC=			${WRKDIR}
+
+LUA_VERSIONS_ACCEPTED=	53
+
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 # I see no indication yet where or how this is used, but let's try
 # to avoid building the bundled one
-DEPENDS+=		lua53-socket-[0-9]*:../../net/lua-socket
+DEPENDS+=		${LUA_PKGPREFIX}-socket-[0-9]*:../../net/lua-socket
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DIRS+=		build/bootstrap
@@ -34,9 +38,6 @@ LDFLAGS+=		-lmbedtls -L${BUILDLINK_PREFIX.mbedtls3}/lib
 LDFLAGS+=		-lz -L${BUILDLINK_PREFIX.zlib}/lib
 LDFLAGS+=		-lm -ldl -luuid -llua
 LDFLAGS.Darwin+=	-framework CoreFoundation
-.if ${OPSYS} != "Darwin"
-LDFLAGS+=		-lrt
-.endif
 
 SUBST_CLASSES+=		mk
 SUBST_MESSAGE.mk=	Fixing build to link against system libs
@@ -112,7 +113,8 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/
 
 # libm, libgcc, librt
-.include "../../lang/lua53/buildlink3.mk"
+.include "../../lang/lua/luaversion.mk"
+.include "${LUA_PKGSRCDIR}/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
