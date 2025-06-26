@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_gcc.lua,v 1.1 2025/05/13 14:21:57 triaxx Exp $
+$NetBSD: patch-src_tools_gcc.lua,v 1.2 2025/06/26 09:24:17 triaxx Exp $
 
 Remove the hardcoded -L/usr/lib and -L/usr/lib64
 This is not needed, and will cause issues:
@@ -6,7 +6,7 @@ https://github.com/gentoo/gentoo/pull/25825#issuecomment-1179497476
 
 --- src/tools/gcc.lua.orig	2022-09-03 20:03:02.000000000 +0000
 +++ src/tools/gcc.lua
-@@ -536,16 +536,10 @@
+@@ -544,16 +544,10 @@
  		architecture = {
  			x86 = function (cfg)
  				local r = {}
