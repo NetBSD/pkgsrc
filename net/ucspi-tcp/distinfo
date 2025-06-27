@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2021/11/15 18:11:27 wiz Exp $
+$NetBSD: distinfo,v 1.16 2025/06/27 17:18:18 schmonz Exp $
 
 BLAKE2s (rblsmtpd-nodefaultrbl.patch) = 90df6bf85bf883b60d4878a7eff8a8be0ff729690b20de85740107c5b231f3cb
 SHA512 (rblsmtpd-nodefaultrbl.patch) = 911086e4de23165dccfc0390600182339defc47cb157abd0d0d86c39400e344db72a1f8fbc59673510ae820a95d2c6f29ac5e178b0108ec4bafc6940441c10d7
@@ -12,3 +12,6 @@ Size (ucspi-tcp-0.88-man-20020317.tar.gz) = 7562 bytes
 BLAKE2s (ucspi-tcp-0.88.tar.gz) = d8ee9d4c823fd5ccf464170529b38a7f30c2b8211b8c3f6080e2f11bb243a1bc
 SHA512 (ucspi-tcp-0.88.tar.gz) = 44efbd477dacf31d39fc970e2d2f74526dc815b905742f6127f0d5c80928ecc7e743089eaab0492386a58d5b97905113fbe8bbc7214ae179b7be27966b7566c7
 Size (ucspi-tcp-0.88.tar.gz) = 53019 bytes
+SHA1 (patch-sig__block.c) = 1f68f102b0226034c963270d58fb42bdd8f90ce1
+SHA1 (patch-sig__pause.c) = 97e895bca6c95d16a5dd345632af20dd636355cf
+SHA1 (patch-trysgprm.c) = 732fc345c3e12e68d1e076edcbae1c4961d9eebd
