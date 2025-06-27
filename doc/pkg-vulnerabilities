@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.448 2025/06/27 14:15:40 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.449 2025/06/27 14:29:18 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27028,3 +27028,19 @@ hdf5-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6516
 firefox<140		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-51/
 firefox115<115.25	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-52/
 firefox128<128.12	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-53/
+libssh<0.11.2	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2025-5318
+podman<5.5.2	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-6032
+moodle<3.11.19	session-fixation		https://nvd.nist.gov/vuln/detail/CVE-2025-53021
+chromium<138.0.7204.49	heap-corruption			https://nvd.nist.gov/vuln/detail/CVE-2025-6555
+chromium<138.0.7204.49	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-6556
+chromium<138.0.7204.49	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-6557
+vault<1.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-4656
+ruby{31,32,33,34}-webrick<1.8.2	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-6442
+mongodb<6.0.21	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-6706
+mongodb<6.0.24	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2025-6707
+mongodb<6.0.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6709
+mongodb<6.0.21	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6710
+cpp-httplib<0.22.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52887
+py{39,310,311,312,313}-matplotlib<1.5.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2013-1424
+git-annex<5.20140919	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2014-6274
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6750
