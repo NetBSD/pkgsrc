@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:10:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/06/27 17:25:00 schmonz Exp $
 
 DISTNAME=		ucspi-tools-1.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=younix/}
 GITHUB_PROJECT=		ucspi
-GITHUB_TAG=		329110310c71a08a942b4a36613b6db090df65f4
+GITHUB_TAG=		9435993f47af23a98464beee872e412aec295e5c
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/younix/ucspi/
@@ -14,6 +14,10 @@ LICENSE=		isc
 
 # strlcpy
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+# NI_MAXHOST
+CFLAGS.SunOS+=		-D__EXTENSIONS__
+LDFLAGS.SunOS+=		-lsocket
 
 USE_TOOLS+=		gmake pkg-config
 MAKE_FILE=		GNUmakefile
