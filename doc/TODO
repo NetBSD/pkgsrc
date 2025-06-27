@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25913 2025/06/25 11:11:37 kim Exp $
+$NetBSD: TODO,v 1.25914 2025/06/27 09:09:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -819,6 +819,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o kdsoap-1.10.0
+	o kea-3.0.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
 	o kgb-bot-1.55
@@ -991,7 +992,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
-	o openexr-3.3.4
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1206,6 +1206,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.87 [wip]
+	o rust-1.88
 	o rust-bindgen-0.72.0
 	o rvault-0.4
 	o rvm-1.20
