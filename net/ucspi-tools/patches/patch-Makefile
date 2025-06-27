@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.5 2021/07/12 21:32:49 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.6 2025/06/27 17:25:00 schmonz Exp $
 
 Make sure openssl headers get found.
 
---- Makefile.orig	2021-07-03 15:04:54.000000000 +0000
+--- Makefile.orig	2023-09-20 18:48:11.000000000 +0000
 +++ Makefile
 @@ -3,7 +3,7 @@ include config.mk
  DISTNAME := ucspi-tools-${VERSION}
@@ -13,3 +13,18 @@ Make sure openssl headers get found.
  
  .PHONY: all test clean install
  .SUFFIXES: .c .o
+@@ -50,10 +50,10 @@ clean:
+ install: all
+ 	mkdir -p ${BINDIR}
+ 	mkdir -p ${MAN1DIR}
+-	install -m 775 sockc ${BINDIR}
+-	install -m 775 tlsc ${BINDIR}
+-	install -m 775 tlss ${BINDIR}
+-	install -m 775 httppc ${BINDIR}
++	${BSD_INSTALL_PROGRAM} sockc ${BINDIR}
++	${BSD_INSTALL_PROGRAM} tlsc ${BINDIR}
++	${BSD_INSTALL_PROGRAM} tlss ${BINDIR}
++	${BSD_INSTALL_PROGRAM} httppc ${BINDIR}
+ 	install -m 444 sockc.1 ${MAN1DIR}
+ 	install -m 444 tlsc.1 ${MAN1DIR}
+ 	install -m 444 tlss.1 ${MAN1DIR}
