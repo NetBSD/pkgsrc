@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/31 19:19:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/06/27 17:15:07 schmonz Exp $
 
 DISTNAME=		libdkim-1.0.21
 CATEGORIES=		mail
@@ -19,11 +19,12 @@ USE_LIBTOOL=		yes
 MAKE_ENV+=		VERSION=${PKGVERSION_NOREV:Q}
 MAKE_ENV+=		LIBS=${LIBS:Q}
 LIBS+=			-lssl -lcrypto
-CFLAGS+=		-I${BUILDLINK_PREFIX.openssl}/include
-LDFLAGS+=		-L${BUILDLINK_PREFIX.openssl}/lib
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+CFLAGS+=		-I${BUILDLINK_PREFIX.openssl:Q}/include
+LDFLAGS+=		-L${BUILDLINK_PREFIX.openssl:Q}/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.openssl:Q}/lib
 CFLAGS.Darwin+=		-DBIND_8_COMPAT=1
 LIBS.Darwin+=		-lresolv
+LIBS.SunOS+=		-lresolv
 
 INSTALLATION_DIRS=	include lib
 
