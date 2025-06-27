@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4000 2025/06/27 09:09:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4001 2025/06/27 17:25:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5943,3 +5943,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/premake5 to 5.0.0.b7 [triaxx 2025-06-26]
 	Added textproc/tabiew version 0.10.0 [wiz 2025-06-26]
 	Updated graphics/openexr to 3.3.4 [wiz 2025-06-27]
+	Updated net/ucspi-tools to 1.7nb2 [schmonz 2025-06-27]
