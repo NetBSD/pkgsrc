@@ -1,8 +1,8 @@
-$NetBSD: patch-GNUmakefile,v 1.1 2022/01/23 13:30:33 schmonz Exp $
+$NetBSD: patch-GNUmakefile,v 1.2 2025/06/27 17:13:31 schmonz Exp $
 
-Follow hier(7) and support PKGMANDIR.
+Respect CFLAGS, follow hier(7), support PKGMANDIR.
 
---- GNUmakefile.orig	2018-08-24 12:00:46.000000000 +0000
+--- GNUmakefile.orig	2024-10-31 13:42:37.000000000 +0000
 +++ GNUmakefile
 @@ -4,10 +4,10 @@
  # in /opt/diet, where they are in the default search path for my diet libc
@@ -17,3 +17,14 @@ Follow hier(7) and support PKGMANDIR.
  
  LIBS=byte.a fmt.a scan.a str.a uint.a open.a stralloc.a unix.a socket.a \
  buffer.a mmap.a taia.a tai.a dns.a case.a mult.a array.a io.a \
+@@ -41,8 +41,8 @@ OPT_PLUS=-O3 $(NATIVE)
+ 
+ DEFINE=-D_REENTRANT
+ 
+-CFLAGS=-pipe $(WARN) $(DEFINE) $(OPT_REG)
+-CFLAGS_OPT=-pipe $(WARN) $(DEFINE) $(OPT_PLUS)
++CFLAGS+=-pipe $(WARN) $(DEFINE) $(OPT_REG)
++CFLAGS_OPT+=-pipe $(WARN) $(DEFINE) $(OPT_PLUS)
+ 
+ #CFLAGS=-pipe -Os -march=pentiumpro -mcpu=pentiumpro -fomit-frame-pointer -fschedule-insns2 -Wall
+ 
