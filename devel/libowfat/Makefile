@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/12/08 23:08:15 hgutch Exp $
+# $NetBSD: Makefile,v 1.15 2025/06/27 17:13:31 schmonz Exp $
 
 DISTNAME=	libowfat-0.34
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 MAKE_FILE=	GNUmakefile
 MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 post-extract:
 	cd ${WRKSRC}; \
