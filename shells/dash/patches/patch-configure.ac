@@ -1,0 +1,48 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/06/28 02:40:08 schmonz Exp $
+
+Avoid redefinition of 64-bit stat, dirent, etc. on Illumos.
+
+--- configure.ac.orig	2022-12-11 06:33:19.000000000 +0000
++++ configure.ac
+@@ -141,26 +141,40 @@ fi
+ 
+ dnl Check for stat64 (dietlibc/klibc).
+ AC_CHECK_DECL(stat64, AC_CHECK_FUNC(stat64))
+-if test "$ac_cv_func_stat64" != yes; then
++if test "$ac_cv_have_decl_stat64" != yes && test "$ac_cv_func_stat64" != yes; then
+ 	AC_DEFINE(fstat64, fstat, [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(lstat64, lstat, [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(stat64, stat, [64-bit operations are the same as 32-bit])
+ fi
+ 
+ AC_CHECK_FUNC(glob64,, [
++	case `uname -s 2>/dev/null` in
++	SunOS) ;;
++	*)
++
+ 	AC_DEFINE(glob64_t, glob_t, [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(glob64, glob, [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(globfree64, globfree,
+ 		  [64-bit operations are the same as 32-bit])
++
++	;;
++	esac
+ ])
+ 
+ dnl OS X apparently has stat64 but not open64.
+ AC_CHECK_FUNC(open64,, [
++	case `uname -s 2>/dev/null` in
++	SunOS) ;;
++	*)
++
+ 	AC_DEFINE(open64, open, [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(readdir64, readdir,
+ 		  [64-bit operations are the same as 32-bit])
+ 	AC_DEFINE(dirent64, dirent,
+ 		  [64-bit operations are the same as 32-bit])
++
++	;;
++	esac
+ ])
+ 
+ dnl Check if struct stat has st_mtim.
