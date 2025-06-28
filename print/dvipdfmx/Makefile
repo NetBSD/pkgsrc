@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/06/28 00:32:23 markd Exp $
+# $NetBSD: Makefile,v 1.63 2025/06/28 01:08:43 markd Exp $
 
 .include "../../print/texlive/Makefile.common"
 
@@ -48,8 +48,7 @@ TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 # tex-extractbb package installs extractbb.1
 post-install:
-	rm -f ${DESTDIR}${PREFIX}/man/man1/extractbb.1
-	rm -f ${DESTDIR}${PREFIX}/share/man/man1/extractbb.1
+	rm -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/extractbb.1
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
