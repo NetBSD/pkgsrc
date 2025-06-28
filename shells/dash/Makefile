@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/05/28 09:40:06 zafer Exp $
+# $NetBSD: Makefile,v 1.17 2025/06/28 02:40:08 schmonz Exp $
 
 DISTNAME=	dash-0.5.12
 CATEGORIES=	shells
@@ -14,6 +14,11 @@ GNU_CONFIGURE=		yes
 PKG_SHELL=		bin/dash
 
 CONFIGURE_ARGS+=	--with-libedit
+
+USE_TOOLS+=		autoconf automake aclocal autoheader
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../devel/editline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
