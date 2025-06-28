@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2025/02/28 16:34:36 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2025/06/28 02:53:31 schmonz Exp $
 
 BLAKE2s (redo-1.5.tar.gz) = 374ac7eaa75e6f52be860bff5b2477c18d6dd3faa99cdda0445a87bda4cbda9f
 SHA512 (redo-1.5.tar.gz) = 4bb174868b9a38df7b392ae0ae813cbb7de0c043afab28507fbf85a07aeabd38a4968523aa73608a799c434d61a44173a8019f976dce6b4ba6a30a0939e45667
 Size (redo-1.5.tar.gz) = 26587 bytes
 SHA1 (patch-package_prepare) = 9dc0295ab3fe6830d920c49beeb9caae6bca0eab
+SHA1 (patch-source_lockfile.cpp) = c653049843aa7ccd0b08e6b778a93cfd2e55187f
 SHA1 (patch-source_redo.cpp) = 5c41649101d021dee2ef67b4e7f51c580b4f5eda
