@@ -1,9 +1,9 @@
-$NetBSD: patch-redo.c,v 1.2 2020/07/20 19:46:18 schmonz Exp $
+$NetBSD: patch-redo.c,v 1.3 2025/06/28 03:05:35 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
-Define PATH_MAX on Illumos.
+Define PATH_MAX and dprintf() on Illumos.
 
---- redo.c.orig	2020-06-26 21:46:40.000000000 +0000
+--- redo.c.orig	2020-10-01 16:15:36.000000000 +0000
 +++ redo.c
 @@ -34,6 +34,7 @@ todo:
  #include <errno.h>
@@ -13,7 +13,34 @@ Define PATH_MAX on Illumos.
  #include <stdarg.h>
  #include <stdint.h>
  #include <stdio.h>
-@@ -968,20 +969,25 @@ main(int argc, char *argv[])
+@@ -194,6 +195,26 @@ int level = -1;
+ int implicit_jobs = 1;
+ int kflag, jflag, xflag, fflag, sflag;
+ 
++#ifdef __sun
++#include <stdarg.h>
++static int
++dprintf(int fd, const char *format, ...)
++{
++	va_list args;
++	char buffer[1024];
++	int ret;
++
++	va_start(args, format);
++	ret = vsnprintf(buffer, sizeof(buffer), format, args);
++	va_end(args);
++
++	if (ret > 0) {
++		write(fd, buffer, ret);
++	}
++	return ret;
++}
++#endif
++
+ static void
+ redo_ifcreate(int fd, char *target)
+ {
+@@ -969,20 +990,25 @@ main(int argc, char *argv[])
  
  	dir_fd = keepdir();
  
