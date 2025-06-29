@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4001 2025/06/27 17:25:05 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4002 2025/06/29 14:09:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5944,3 +5944,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/tabiew version 0.10.0 [wiz 2025-06-26]
 	Updated graphics/openexr to 3.3.4 [wiz 2025-06-27]
 	Updated net/ucspi-tools to 1.7nb2 [schmonz 2025-06-27]
+	Updated mail/squirrelmail to 1.4.23pre15037nb1 [taca 2025-06-29]
