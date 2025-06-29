@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.149 2025/04/16 15:02:23 taca Exp $
+# $NetBSD: Makefile,v 1.150 2025/06/29 14:09:04 taca Exp $
 
 DISTNAME=	squirrelmail-webmail-1.4.23pre15037
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-webmail//}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
@@ -35,16 +36,21 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
 
-CONF_FILES=		${SMDIR}/config/config_default.php \
-			${SMDIR}/config/config.php
-CONF_FILES+=		${SMDIR}/data/default_pref \
-			${DATADIR}/data/default_pref
+SM_CONF_FILES=		config.php config_local.php
+SM_DATA_FILES=		.htaccess default_pref index.php
+SM_USER_PREFS_FILES=	.htaccess index.php
+
 CONF_FILES+=		${EGDIR}/squirrelmail.conf \
 			${PKG_SYSCONFDIR}/squirrelmail.conf
-CONF_FILES+=		${EGDIR}/data/.htaccess ${DATADIR}/data/.htaccess
-CONF_FILES+=		${EGDIR}/data/index.php ${DATADIR}/data/index.php
-CONF_FILES+=		${EGDIR}/data/.htaccess ${USER_PREFS_DIR}/.htaccess
-CONF_FILES+=		${EGDIR}/data/index.php ${USER_PREFS_DIR}/index.php
+.for f in ${SM_CONF_FILES}
+CONF_FILES+=		${EGDIR}/${f} ${SMDIR}/config/${f}
+.endfor
+.for f in ${SM_DATA_FILES}
+CONF_FILES+=		${EGDIR}/data/${f} ${DATADIR}/data/${f}
+.endfor
+.for f in ${SM_USER_PREFS_FILES}
+CONF_FILES+=		${EGDIR}/data/${f} ${USER_PREFS_DIR}/${f}
+.endfor
 
 REQD_DIRS+=		${SMDIR} ${SMDIR}/config
 
@@ -61,7 +67,6 @@ SUBST_VARS.paths+=	USER_PREFS_DIR
 SUBST_SED.paths+=	-e 's,@SMDIR@,${PREFIX}/${SMDIR},g'
 SUBST_STAGE.paths=	pre-configure
 
-DATA_FILES=		.htaccess index.php
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 ${EGDIR}/data ${SMDIR}
 
 post-extract:
@@ -70,6 +75,11 @@ post-extract:
 	${CP} -p ${WRKSRC}/contrib/conf.pl.8 ${WRKDIR}/squirrelmail-conf.pl.8
 
 pre-install:
+	${MV} ${WRKSRC}/config/config_default.php ${WRKDIR}/config.php
+	${MV} ${WRKSRC}/config/config_local.php ${WRKDIR}
+.for f in ${SM_DATA_FILES}
+	${MV} ${WRKSRC}/data/${f} ${WRKDIR}
+.endfor
 	${FIND} ${WRKSRC} \( -name '*.orig*' -o -name '.cvsignore' \) \
 		-exec rm -f {} \;
 	${FIND} ${WRKSRC} -type d -exec chmod ${PKGDIRMODE} {} \;
@@ -80,8 +90,11 @@ pre-install:
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist \
 		${DESTDIR}${PREFIX}/${EGDIR}/squirrelmail.conf
-.for f in ${DATA_FILES}
-	${INSTALL_DATA} ${WRKSRC}/data/${f} ${DESTDIR}${PREFIX}/${EGDIR}/data
+.for f in ${SM_CONF_FILES}
+	${INSTALL_DATA} ${WRKDIR}/${f} ${DESTDIR}${PREFIX}/${EGDIR}
+.endfor
+.for f in ${SM_DATA_FILES}
+	${INSTALL_DATA} ${WRKDIR}/${f} ${DESTDIR}${PREFIX}/${EGDIR}/data
 .endfor
 	cd ${WRKSRC}; pax -rw -pp . ${DESTDIR}${PREFIX}/${SMDIR}
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail-conf.pl.8 \

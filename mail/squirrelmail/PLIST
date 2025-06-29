@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.43 2023/11/13 15:59:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.44 2025/06/29 14:09:04 taca Exp $
 man/man8/squirrelmail-conf.pl.8
+${EGDIR}/config.php
+${EGDIR}/config_local.php
 ${EGDIR}/data/.htaccess
+${EGDIR}/data/default_pref
 ${EGDIR}/data/index.php
 ${EGDIR}/squirrelmail.conf
 ${SMDIR}/README
@@ -26,8 +29,6 @@ ${SMDIR}/class/mime/SMimeMessage.class.php
 ${SMDIR}/class/mime/index.php
 ${SMDIR}/config/.htaccess
 ${SMDIR}/config/conf.pl
-${SMDIR}/config/config_default.php
-${SMDIR}/config/config_local.php
 ${SMDIR}/config/index.php
 ${SMDIR}/configure
 ${SMDIR}/contrib/.htaccess
@@ -38,9 +39,6 @@ ${SMDIR}/contrib/RPM/squirrelmail.spec
 ${SMDIR}/contrib/decrypt_headers.php
 ${SMDIR}/contrib/squirrelmail.mailto.NT2KXP.reg
 ${SMDIR}/contrib/squirrelmail.mailto.Win9x.reg
-${SMDIR}/data/.htaccess
-${SMDIR}/data/default_pref
-${SMDIR}/data/index.php
 ${SMDIR}/doc/.htaccess
 ${SMDIR}/doc/AUTHORS
 ${SMDIR}/doc/COPYING
