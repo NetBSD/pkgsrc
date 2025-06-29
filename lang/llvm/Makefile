@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2025/06/21 21:38:49 he Exp $
+# $NetBSD: Makefile,v 1.113 2025/06/29 21:10:47 bsiegert Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -124,12 +124,6 @@ CXXFLAGS+=	-mno-pltseq
 CFLAGS+=	-mno-pltseq
 CXXFLAGS+=	-mno-pltseq
 .  endif
-.endif
-
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:Mi386} && ${OS_VERSION:M9.*}
-# Gcc 8 (induced elsewhere) blows up on per-process VM space
-# Ref. https://mail-index.netbsd.org/pkgsrc-users/2025/06/21/msg041678.html
-GCC_REQD+=		10
 .endif
 
 PLIST_SUBST+=	RELEASE_TYPE=${RELEASE_TYPE}
