@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.18 2025/05/09 05:53:52 adam Exp $
+# $NetBSD: version.mk,v 1.19 2025/06/29 21:10:48 bsiegert Exp $
 # used by devel/lld
 # used by devel/lldb
 # used by devel/polly
@@ -31,6 +31,15 @@ SITES.${CMAKE_DIST}${EXTRACT_SUFX}=	\
 SITES.${RUNTIMES_DIST}${EXTRACT_SUFX}=	\
 		${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 DISTFILES=	${DEFAULT_DISTFILES} ${EXTRA_DIST}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && ${OS_VERSION:M9.*}
+# Gcc 8 (induced elsewhere) blows up on per-process VM space.
+# Ref. https://mail-index.netbsd.org/pkgsrc-users/2025/06/21/msg041678.html
+# Also, the llvm produced by gcc 8 or 10 crashes when building wasi-libc.
+GCC_REQD+=		14
+.endif
+
 
 .PHONY: llvm-cmake-modules
 post-extract: llvm-cmake-modules
