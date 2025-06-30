@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:51 adam Exp $
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/beziereasing_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbase_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbasictransform_p.h
@@ -13,6 +13,7 @@ qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmimage_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmimagelayer_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmlayer_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmpathtrimmer_p.h
+qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmpolystar_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmproperty_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmrect_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmrepeater_p.h

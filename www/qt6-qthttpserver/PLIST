@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:50 adam Exp $
 lib/pkgconfig/Qt6HttpServer.pc
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qabstracthttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserver_p.h
@@ -6,6 +6,7 @@ qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp1prot
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp2protocolhandler_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverliterals_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrequest_p.h
+qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrequestfilter_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverresponder_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverresponse_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrouter_p.h
@@ -13,6 +14,7 @@ qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrouterrul
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverstream_p.h
 qt6/include/QtHttpServer/QAbstractHttpServer
 qt6/include/QtHttpServer/QHttpServer
+qt6/include/QtHttpServer/QHttpServerConfiguration
 qt6/include/QtHttpServer/QHttpServerRequest
 qt6/include/QtHttpServer/QHttpServerResponder
 qt6/include/QtHttpServer/QHttpServerResponse
@@ -25,6 +27,7 @@ qt6/include/QtHttpServer/QtHttpServerDepends
 qt6/include/QtHttpServer/QtHttpServerVersion
 qt6/include/QtHttpServer/qabstracthttpserver.h
 qt6/include/QtHttpServer/qhttpserver.h
+qt6/include/QtHttpServer/qhttpserverconfiguration.h
 qt6/include/QtHttpServer/qhttpserverrequest.h
 qt6/include/QtHttpServer/qhttpserverresponder.h
 qt6/include/QtHttpServer/qhttpserverresponse.h
@@ -46,6 +49,14 @@ qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-release.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateConfig.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateDependencies.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateTargets.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6HttpServerPrivate/Qt6HttpServerPrivateVersionlessTargets.cmake
 qt6/lib/libQt6HttpServer.prl
 qt6/lib/libQt6HttpServer.so
 qt6/lib/libQt6HttpServer.so.${PKGVERSION}
