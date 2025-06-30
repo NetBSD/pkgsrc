@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4035 2025/06/30 20:08:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4036 2025/06/30 20:13:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6005,3 +6005,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libproxy to 0.5.10 [adam 2025-06-30]
 	Updated net/libtorrent to 0.15.5 [adam 2025-06-30]
 	Updated net/rtorrent to 0.15.5 [adam 2025-06-30]
+	Updated devel/py-test to 8.4.1 [adam 2025-06-30]
+	Updated devel/py-test-subtests to 0.14.2 [adam 2025-06-30]
+	Updated textproc/py-elementpath to 5.0.3 [adam 2025-06-30]
+	Updated textproc/py-xlrd to 2.0.2 [adam 2025-06-30]
