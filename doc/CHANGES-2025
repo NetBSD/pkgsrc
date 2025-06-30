@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4024 2025/06/30 15:24:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4025 2025/06/30 15:41:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5975,3 +5975,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/qt6 to 6.9.1 [adam 2025-06-30]
 	Updated misc/stellarium to 25.2 [adam 2025-06-30]
 	Updated net/qbittorrent to 5.1.1 [adam 2025-06-30]
+	Updated devel/re2c to 4.3 [adam 2025-06-30]
+	Updated security/openssl to 3.5.0 [adam 2025-06-30]
