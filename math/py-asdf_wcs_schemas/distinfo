@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/15 06:58:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/06/30 18:53:28 adam Exp $
 
-BLAKE2s (asdf_wcs_schemas-0.4.0.tar.gz) = 898fe9a21560d7d43f6dcdb65d2dc4ae3afde7ed82c8c87c70a85295dff048dc
-SHA512 (asdf_wcs_schemas-0.4.0.tar.gz) = b18a9a9e20a8f457c36d820f137413135c7e6f45b913645533b3cff3cde028142db1a9db973017acaf5b83026c15a43a746732e356a33ae52da8287fbfb5c037
-Size (asdf_wcs_schemas-0.4.0.tar.gz) = 60195 bytes
+BLAKE2s (asdf_wcs_schemas-0.5.0.tar.gz) = 6c7842aefa16ed85301825a7f596fe632d3b6482831a103f3970b081bb17ae65
+SHA512 (asdf_wcs_schemas-0.5.0.tar.gz) = 745f77ae6efb868af70458edd7fd9a26d01222c7ecac6dc0672c312da424fbdbb37e3acf1172fcdbf9bfc872f476337386f9e2b5b59fc3588e0f082b4b21fca5
+Size (asdf_wcs_schemas-0.5.0.tar.gz) = 164223 bytes
