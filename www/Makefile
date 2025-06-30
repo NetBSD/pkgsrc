@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1865 2025/06/15 14:06:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.1866 2025/06/30 14:34:14 hauke Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -293,6 +293,7 @@ SUBDIR+=	ocsigen-i18n
 SUBDIR+=	ocsigen-ppx-rpc
 SUBDIR+=	ocsigen-start
 SUBDIR+=	ocsigen-toolkit
+SUBDIR+=	osticket
 SUBDIR+=	otter-browser
 SUBDIR+=	p5-Alien-GvaScript
 SUBDIR+=	p5-Alien-LibGumbo
