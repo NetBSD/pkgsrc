@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25917 2025/06/30 14:51:48 adam Exp $
+$NetBSD: TODO,v 1.25918 2025/06/30 15:17:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.72.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.26
@@ -1131,7 +1130,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-google-api-core-2.25.1
 	o py-google-api-python-client-2.173.0
-	o py-grpcio-1.73.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-jaraco.functools-4.2.1
