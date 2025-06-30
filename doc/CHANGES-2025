@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4013 2025/06/30 11:10:27 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.4014 2025/06/30 11:12:07 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5956,3 +5956,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/powerdns-pgsql to 4.9.5 [jperkin 2025-06-30]
 	Updated net/powerdns-recursor to 4.9.9 [jperkin 2025-06-30]
 	Updated news/newsraft to 0.31 [ktnb 2025-06-30]
+	Updated graphics/chafa to 1.16.1 [ktnb 2025-06-30]
