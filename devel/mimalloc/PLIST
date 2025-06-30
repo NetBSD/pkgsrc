@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/13 10:35:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/06/30 20:01:47 adam Exp $
 include/mimalloc-new-delete.h
 include/mimalloc-override.h
+include/mimalloc-stats.h
 include/mimalloc.h
 lib/cmake/mimalloc/mimalloc-config-version.cmake
 lib/cmake/mimalloc/mimalloc-config.cmake
@@ -9,5 +10,5 @@ lib/cmake/mimalloc/mimalloc.cmake
 lib/libmimalloc.a
 lib/libmimalloc.so
 lib/libmimalloc.so.3
-lib/libmimalloc.so.3.0
+lib/libmimalloc.so.3.1
 lib/pkgconfig/mimalloc.pc
