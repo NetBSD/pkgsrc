@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/02/09 14:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/06/30 18:03:00 adam Exp $
 
 DISTNAME=	mosh-1.4.0
 PKGREVISION=	7
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake perl:run pkg-config
 USE_LANGUAGES+=		c c++
 USE_GCC_RUNTIME=	yes
 
-FORCE_CXX_STD=	c++14
+FORCE_CXX_STD=	c++17
 
 REPLACE_PERL+=	scripts/mosh.pl
 REPLACE_PERL+=	src/tests/genbase64.pl
