@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2025/04/11 14:02:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.86 2025/06/30 13:14:28 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -2445,6 +2445,7 @@ share/cmake-${CMAKE_API}/Modules/Compiler/GNU-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-C-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-C-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX-CXXImportStd.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX-FeatureTests.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/GNU-CXX.cmake
