@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4022 2025/06/30 15:17:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4023 2025/06/30 15:20:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5972,3 +5972,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio to 1.73.1 [adam 2025-06-30]
 	Updated net/py-grpcio-testing to 1.73.1 [adam 2025-06-30]
 	Updated net/py-grpcio-tools to 1.73.1 [adam 2025-06-30]
+	Updated meta-pkgs/qt6 to 6.9.1 [adam 2025-06-30]
+	Updated misc/stellarium to 25.2 [adam 2025-06-30]
