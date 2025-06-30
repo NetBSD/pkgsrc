@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2025/05/21 16:47:21 taca Exp $
+# $NetBSD: Makefile,v 1.135 2025/06/30 15:05:14 adam Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -19,11 +19,13 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_LANGUAGES=		c c++11
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison perl:build pkg-config
 CMAKE_INSTALL_PREFIX=	${QTDIR}
 CMAKE_INSTALL_NAME_DIR=	${QTDIR}/lib
 TEST_TARGET=		test
+FORCE_CXX_STD=		c++17
 
 # XXX Workaround for icu-76 whose header files require C++17 unless you
 # define U_HIDE_DRAFT_API.  pkg/59028: qt5-qtwebkit doesn't build

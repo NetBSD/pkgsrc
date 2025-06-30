@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2025/04/24 14:16:30 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/06/30 15:05:11 adam Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebengine-${QTVERSION}
-PKGREVISION=	7
 COMMENT=	Chromium-based web engine for Qt5
 
 MAKE_ENV+=		QTDIR=${QTDIR}

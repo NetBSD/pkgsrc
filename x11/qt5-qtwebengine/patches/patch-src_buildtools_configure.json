@@ -1,23 +1,9 @@
-$NetBSD: patch-src_buildtools_configure.json,v 1.3 2023/06/08 20:38:06 markd Exp $
+$NetBSD: patch-src_buildtools_configure.json,v 1.4 2025/06/30 15:05:14 adam Exp $
 
-support netbsd openbsd
-build with python3
+Support NetBSD and OpenBSD.
 
 --- src/buildtools/configure.json.orig
 +++ src/buildtools/configure.json
-@@ -295,9 +295,9 @@
-             "label": "system ninja",
-             "type": "detectNinja"
-         },
--        "webengine-python2": {
--            "label": "python2",
--            "type": "detectPython2",
-+        "webengine-python": {
-+            "label": "python",
-+            "type": "detectPython",
-             "log": "location"
-         },
-         "webengine-winversion": {
 @@ -364,7 +364,7 @@
      "features": {
          "webengine-core-support": {
@@ -27,15 +13,6 @@ build with python3
                           && !config.static
                           && module.gui
                           && features.webengine-submodule
-@@ -374,7 +374,7 @@
-                          && features.webengine-gperf
-                          && features.webengine-bison
-                          && features.webengine-flex
--                         && features.webengine-python2
-+                         && features.webengine-python
-                          && features.webengine-nodejs
-                          && (!config.sanitizer || features.webengine-sanitizer)
-                          && (!config.linux || features.pkg-config)
 @@ -391,7 +391,7 @@
          },
          "webengine-qtpdf-support": {
@@ -45,32 +22,6 @@ build with python3
                           && module.gui
                           && features.webengine-submodule
                           && features.webengine-nowhitespace
-@@ -400,7 +400,7 @@
-                          && features.webengine-gperf
-                          && features.webengine-bison
-                          && features.webengine-flex
--                         && features.webengine-python2
-+                         && features.webengine-python
-                          && (!config.sanitizer || features.webengine-sanitizer)
-                          && (!config.linux || features.pkg-config)
-                          && (!config.linux || features.webengine-host-pkg-config)
-@@ -423,12 +423,12 @@
-             "autoDetect": "features.private_tests",
-             "output": [ "privateFeature" ]
-         },
--        "webengine-python2": {
--            "label": "python2",
--            "condition": "tests.webengine-python2",
-+        "webengine-python": {
-+            "label": "python",
-+            "condition": "tests.webengine-python",
-             "output": [
-                 "privateFeature",
--                { "type": "varAssign", "name": "QMAKE_PYTHON2", "value": "tests.webengine-python2.location" }
-+                { "type": "varAssign", "name": "QMAKE_PYTHON", "value": "tests.webengine-python.location" }
-             ]
-         },
-         "webengine-gperf": {
 @@ -578,6 +578,7 @@
          },
          "webengine-system-minizip" : {
