@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4027 2025/06/30 18:35:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4028 2025/06/30 18:40:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5981,3 +5981,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 24.3.0 [adam 2025-06-30]
 	Updated www/nghttp2 to 1.66.0 [adam 2025-06-30]
 	Updated www/nghttp2-tools to 1.66.0 [adam 2025-06-30]
+	Updated databases/sqlite3 to 3.50.2 [adam 2025-06-30]
+	Updated databases/sqlite3-docs to 3.50.2 [adam 2025-06-30]
+	Updated databases/sqlite3-tcl to 3.50.2 [adam 2025-06-30]
+	Updated devel/lemon to 1.0.3.50.2 [adam 2025-06-30]
