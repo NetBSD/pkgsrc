@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4036 2025/06/30 20:13:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4037 2025/06/30 20:25:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6009,3 +6009,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-subtests to 0.14.2 [adam 2025-06-30]
 	Updated textproc/py-elementpath to 5.0.3 [adam 2025-06-30]
 	Updated textproc/py-xlrd to 2.0.2 [adam 2025-06-30]
+	Updated geography/py-owslib to 0.34.1 [adam 2025-06-30]
+	Updated textproc/py-xlsxwriter to 3.2.5 [adam 2025-06-30]
+	Updated devel/py-typeguard to 4.4.4 [adam 2025-06-30]
+	Updated www/py-starlette to 0.47.1 [adam 2025-06-30]
