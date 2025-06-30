@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25918 2025/06/30 15:17:10 adam Exp $
+$NetBSD: TODO,v 1.25919 2025/06/30 15:41:06 adam Exp $
 
 Suggested new packages
 ======================
@@ -995,7 +995,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openmortal-0.7.1
 	o openmpi-5.0.5
 	o openslp-2.0.0
-	o openssl-3.5
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
