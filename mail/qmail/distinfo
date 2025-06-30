@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.51 2024/04/27 19:34:26 schmonz Exp $
+$NetBSD: distinfo,v 1.52 2025/06/30 20:39:59 schmonz Exp $
 
 BLAKE2s (netqmail-1.05-TAI-leapsecs.patch) = 9904388c38820c4866fe9b57cddbc0a8d4c12655e903da1b1701142c31454fe2
 SHA512 (netqmail-1.05-TAI-leapsecs.patch) = 2278139b825330a418171ad6dd4667410819591d3828f8b40dda789e1aafe1cefcc638fdc6d9de21a8c0ca6caffb41fbbb44bab2dd80f570e81c6e900c8596f7
@@ -30,3 +30,4 @@ Size (qmail-queue-custom-error-v2.netqmail-1.05.patch) = 3873 bytes
 BLAKE2s (qmail-spp-0.42.tar.gz) = 42d05876e0ce5423cdc343c16970fa554a91c094e21b7150f5c6d49399eea99c
 SHA512 (qmail-spp-0.42.tar.gz) = 03449862886a0ca20fbadab4c94b34b55d185f8df3261bd68aea99e9ded9edfab4477c6b38a8e0295e9b38b0045615da8b1a906a458f28745eadd3c4d882bcbf
 Size (qmail-spp-0.42.tar.gz) = 18689 bytes
+SHA1 (patch-dns.c) = f13f1b3dc778c836035c6edf8ebb3bf0b79c6113
