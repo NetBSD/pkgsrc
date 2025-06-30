@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.28 2025/04/12 20:03:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/06/30 14:47:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/google/__init__.py
+${PYSITELIB}/google/__init__.pyc
+${PYSITELIB}/google/__init__.pyo
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -51,9 +53,6 @@ ${PYSITELIB}/google/protobuf/field_mask_pb2.pyo
 ${PYSITELIB}/google/protobuf/internal/__init__.py
 ${PYSITELIB}/google/protobuf/internal/__init__.pyc
 ${PYSITELIB}/google/protobuf/internal/__init__.pyo
-${PYSITELIB}/google/protobuf/internal/_parameterized.py
-${PYSITELIB}/google/protobuf/internal/_parameterized.pyc
-${PYSITELIB}/google/protobuf/internal/_parameterized.pyo
 ${PYSITELIB}/google/protobuf/internal/api_implementation.py
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyc
 ${PYSITELIB}/google/protobuf/internal/api_implementation.pyo
@@ -117,6 +116,9 @@ ${PYSITELIB}/google/protobuf/proto_builder.pyo
 ${PYSITELIB}/google/protobuf/proto_json.py
 ${PYSITELIB}/google/protobuf/proto_json.pyc
 ${PYSITELIB}/google/protobuf/proto_json.pyo
+${PYSITELIB}/google/protobuf/proto_text.py
+${PYSITELIB}/google/protobuf/proto_text.pyc
+${PYSITELIB}/google/protobuf/proto_text.pyo
 ${PYSITELIB}/google/protobuf/pyext/__init__.py
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyc
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyo
@@ -129,9 +131,6 @@ ${PYSITELIB}/google/protobuf/reflection.pyo
 ${PYSITELIB}/google/protobuf/runtime_version.py
 ${PYSITELIB}/google/protobuf/runtime_version.pyc
 ${PYSITELIB}/google/protobuf/runtime_version.pyo
-${PYSITELIB}/google/protobuf/service.py
-${PYSITELIB}/google/protobuf/service.pyc
-${PYSITELIB}/google/protobuf/service.pyo
 ${PYSITELIB}/google/protobuf/service_reflection.py
 ${PYSITELIB}/google/protobuf/service_reflection.pyc
 ${PYSITELIB}/google/protobuf/service_reflection.pyo
@@ -171,4 +170,3 @@ ${PYSITELIB}/google/protobuf/util/__init__.pyo
 ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
-${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
