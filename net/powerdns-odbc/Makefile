@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/03/09 13:52:34 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2025/06/30 11:03:26 jperkin Exp $
 
-.include "../../net/powerdns/Makefile.backend"
+.include "../../net/powerdns/backend.mk"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns-odbc/}
 COMMENT=		ODBC backend module for PowerDNS
