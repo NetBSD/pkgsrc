@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.40 2025/06/30 15:05:09 adam Exp $
+$NetBSD: distinfo,v 1.41 2025/06/30 18:24:18 adam Exp $
 
-BLAKE2s (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = bf7138b663ee164806026ebb150d8fa21419670508ded9f633414a05717252e7
-SHA512 (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = 0f4a317948f46b58497d5d08a91c887c80f74e256d899816d5ec73120dd1931ae6129f6a16bd93b6fc2285141956e0f2c6e6ddebe5c536423fbb6314f4558473
-Size (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = 6550288 bytes
+BLAKE2s (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = 9afde01508a5b60d82d69703525c06e10b260a64791d00c1b1edadef623c1be1
+SHA512 (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = 8ba1f386ce45201dbd3616a328ab256553c93da3bbb99fbe20b7b93419860f3a5612261258895e58b2621b8e05c8a841f3e9cb436384091e02e6a14b72a2be31
+Size (qtlocation-everywhere-opensource-src-5.15.17.tar.xz) = 6549632 bytes
 SHA1 (patch-src_3rdparty_mapbox-gl-native_deps_rapidjson_1.1.0_include_rapidjson_document.h) = a9383d626c823a16f0ea974aaec7fdfc5e8f9e46
 SHA1 (patch-src_3rdparty_mapbox-gl-native_include_mbgl_util_geometry.hpp) = 501cb3d4cc473b505c3917d7a969f07baeb303dc
 SHA1 (patch-src_3rdparty_mapbox-gl-native_include_mbgl_util_string.hpp) = 2ce7af6f41492693ef3c0f35a89f54580973d4d2
