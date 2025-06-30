@@ -1,10 +1,10 @@
-$NetBSD: patch-dns.hh,v 1.3 2015/06/10 14:22:29 fhajny Exp $
+$NetBSD: patch-dns.hh,v 1.4 2025/06/30 11:06:46 jperkin Exp $
 
 Only attempt to define byte order if unset.
 
---- dns.hh.orig	2015-04-21 13:02:57.000000000 +0000
+--- dns.hh.orig	2024-09-17 08:11:58.000000000 +0000
 +++ dns.hh
-@@ -149,7 +149,7 @@ struct EDNS0Record
+@@ -120,7 +120,7 @@ static_assert(sizeof(EDNS0Record) == 4,
  #elif __linux__ || __GNU__
  # include <endian.h>
  
