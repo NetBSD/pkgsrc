@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:52 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -14,7 +14,6 @@ qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlinvokableservice_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachine_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachineinfo_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmltabledata_p.h
-qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qtscxml-config_p.h
 qt6/include/QtScxml/QScxmlCompiler
 qt6/include/QtScxml/QScxmlCppDataModel
 qt6/include/QtScxml/QScxmlDataModel
@@ -41,9 +40,14 @@ qt6/include/QtScxml/qscxmlinvokableservice.h
 qt6/include/QtScxml/qscxmlnulldatamodel.h
 qt6/include/QtScxml/qscxmlstatemachine.h
 qt6/include/QtScxml/qscxmltabledata.h
-qt6/include/QtScxml/qtscxml-config.h
 qt6/include/QtScxml/qtscxmlexports.h
 qt6/include/QtScxml/qtscxmlversion.h
+qt6/include/QtScxmlGlobal/${PKGVERSION}/QtScxmlGlobal/private/qtscxmlglobal-config_p.h
+qt6/include/QtScxmlGlobal/QtScxmlGlobal
+qt6/include/QtScxmlGlobal/QtScxmlGlobalDepends
+qt6/include/QtScxmlGlobal/QtScxmlGlobalVersion
+qt6/include/QtScxmlGlobal/qtscxmlglobal-config.h
+qt6/include/QtScxmlGlobal/qtscxmlglobalversion.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/eventconnection_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/invokedservices_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/qscxmlqmlglobals_p.h
@@ -65,7 +69,7 @@ qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qsignaleventgene
 qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qsignaltransition_p.h
 qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qstate_p.h
 qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qstatemachine_p.h
-qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qtstatemachine-config_p.h
+qt6/include/QtStateMachine/${PKGVERSION}/QtStateMachine/private/qstatemachineglobal_p.h
 qt6/include/QtStateMachine/QAbstractState
 qt6/include/QtStateMachine/QAbstractTransition
 qt6/include/QtStateMachine/QEventTransition
@@ -90,7 +94,6 @@ qt6/include/QtStateMachine/qsignaltransition.h
 qt6/include/QtStateMachine/qstate.h
 qt6/include/QtStateMachine/qstatemachine.h
 qt6/include/QtStateMachine/qstatemachineglobal.h
-qt6/include/QtStateMachine/qtstatemachine-config.h
 qt6/include/QtStateMachine/qtstatemachineexports.h
 qt6/include/QtStateMachine/qtstatemachineversion.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/childrenprivate_p.h
@@ -136,6 +139,21 @@ qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets-release.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfig.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateTargets.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateConfig.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateDependencies.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateTargets.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6ScxmlPrivate/Qt6ScxmlPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfig.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfigVersion.cmake
@@ -145,6 +163,14 @@ qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets-release.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateConfig.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateDependencies.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateTargets.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6ScxmlQmlPrivate/Qt6ScxmlQmlPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ScxmlTools/Qt6ScxmlToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ScxmlTools/Qt6ScxmlToolsConfig.cmake
 qt6/lib/cmake/Qt6ScxmlTools/Qt6ScxmlToolsConfigVersion.cmake
@@ -162,6 +188,14 @@ qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineTargets-release.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineTargets.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateConfig.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateDependencies.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateTargets.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6StateMachinePrivate/Qt6StateMachinePrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfig.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfigVersion.cmake
@@ -171,6 +205,14 @@ qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets-release.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessTargets.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateConfig.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateDependencies.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateTargets.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6StateMachineQmlPrivate/Qt6StateMachineQmlPrivateVersionlessTargets.cmake
 qt6/lib/libQt6Scxml.prl
 qt6/lib/libQt6Scxml.so
 qt6/lib/libQt6Scxml.so.${PKGVERSION}
@@ -199,6 +241,7 @@ qt6/metatypes/qt6statemachineqml_release_metatypes.json
 qt6/mkspecs/features/qscxmlc.prf
 qt6/mkspecs/modules/qt_lib_scxml.pri
 qt6/mkspecs/modules/qt_lib_scxml_private.pri
+qt6/mkspecs/modules/qt_lib_scxmlglobal_private.pri
 qt6/mkspecs/modules/qt_lib_scxmlqml.pri
 qt6/mkspecs/modules/qt_lib_scxmlqml_private.pri
 qt6/mkspecs/modules/qt_lib_statemachine.pri
@@ -206,6 +249,7 @@ qt6/mkspecs/modules/qt_lib_statemachine_private.pri
 qt6/mkspecs/modules/qt_lib_statemachineqml.pri
 qt6/mkspecs/modules/qt_lib_statemachineqml_private.pri
 qt6/modules/Scxml.json
+qt6/modules/ScxmlGlobalPrivate.json
 qt6/modules/ScxmlQml.json
 qt6/modules/StateMachine.json
 qt6/modules/StateMachineQml.json
