@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/01/13 10:35:58 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/06/30 20:01:47 adam Exp $
 
-BLAKE2s (mimalloc-3.0.1.tar.gz) = f0653aba6c3bb2cfc9964c8879a5c2b06ff6bb86ebb4e8e5b3c9ae76417b22c0
-SHA512 (mimalloc-3.0.1.tar.gz) = ba51cf9af3ef41728c94b72805bf8915e63910b32cb9ab331445ec28404d048c0737646e02c08dc0f0e958c526fe894e275b96326fa041a157e3e88f39f2b673
-Size (mimalloc-3.0.1.tar.gz) = 1281782 bytes
-SHA1 (patch-src_prim_unix_prim.c) = 48a79b89595f2c3d9b064bdb0876450942714169
+BLAKE2s (mimalloc-3.1.5.tar.gz) = 22efa4c5ae031a365e9cecd46a478b9bc88af7da1e6435b3744b0c79e0591f50
+SHA512 (mimalloc-3.1.5.tar.gz) = 616351e549707318c1f8b164251141684a73d5bf8205b905736f48ab21fbb19bfaa4d52c4e63642fcb144345b6a5331944b6c8e0827925000553e46f2c2c31e9
+Size (mimalloc-3.1.5.tar.gz) = 1306337 bytes
