@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4016 2025/06/30 12:37:10 sborrill Exp $
+$NetBSD: CHANGES-2025,v 1.4017 2025/06/30 13:11:40 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/chafa to 1.16.1 [ktnb 2025-06-30]
 	Updated net/p5-Net-Server to 2.014nb2 [kim 2025-06-30]
 	Updated sysutils/gam to 7.10.07 [sborrill 2025-06-30]
+	Added lang/bigloo version 4.6a [ktnb 2025-06-30]
