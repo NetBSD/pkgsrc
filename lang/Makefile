@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.761 2025/05/27 16:11:19 taca Exp $
+# $NetBSD: Makefile,v 1.762 2025/06/30 13:10:53 ktnb Exp $
 #
 
 COMMENT=	Programming languages
@@ -17,6 +17,7 @@ SUBDIR+=	asn1c
 SUBDIR+=	ats2
 SUBDIR+=	awka
 SUBDIR+=	baci
+SUBDIR+=	bigloo
 SUBDIR+=	boomerang
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
