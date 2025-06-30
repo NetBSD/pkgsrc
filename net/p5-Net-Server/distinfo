@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2024/01/29 15:38:20 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2025/06/30 11:23:49 kim Exp $
 
 BLAKE2s (Net-Server-2.014.tar.gz) = 0ab34ae40476a1d4d06a75bd2676f92066c88ebfc117196a062a7929eb89263b
 SHA512 (Net-Server-2.014.tar.gz) = 6b1bbfeed13af5f9dba76873899e162497234b5cc8fc08bf749fd86e0377bd9184a9807df61f27645634d0ff8d8e6c8c14b700b3d283fbbb7d1d844e6608c9c2
 Size (Net-Server-2.014.tar.gz) = 154783 bytes
+SHA1 (patch-lib_Net_Server_Multiplex.pm) = 53f6cf41d1ef5c48bb07237be6935108eb695eef
