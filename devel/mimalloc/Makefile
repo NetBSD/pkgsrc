@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/01/13 10:35:58 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/06/30 20:01:47 adam Exp $
 
-DISTNAME=	mimalloc-3.0.1
+DISTNAME=	mimalloc-3.1.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=microsoft/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +17,8 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
 TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_TARGET=		test
+# For building tests.
+LDFLAGS.NetBSD+=	-lpthread
 
 CMAKE_CONFIGURE_ARGS+=	-DMI_INSTALL_TOPLEVEL=ON
 
