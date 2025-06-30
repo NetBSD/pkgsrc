@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.19 2025/06/15 08:26:33 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.20 2025/06/30 18:55:44 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -62,11 +62,11 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.140
 CARGO_CRATE_DEPENDS+=	smallvec-1.15.0
-CARGO_CRATE_DEPENDS+=	speedate-0.15.0
+CARGO_CRATE_DEPENDS+=	speedate-0.16.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
-CARGO_CRATE_DEPENDS+=	strum-0.26.3
-CARGO_CRATE_DEPENDS+=	strum_macros-0.26.4
+CARGO_CRATE_DEPENDS+=	strum-0.27.1
+CARGO_CRATE_DEPENDS+=	strum_macros-0.27.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.82
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.1
 CARGO_CRATE_DEPENDS+=	tap-1.0.1
