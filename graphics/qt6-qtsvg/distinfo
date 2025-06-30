@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/03/31 16:38:09 adam Exp $
+$NetBSD: distinfo,v 1.17 2025/06/30 15:18:53 adam Exp $
 
-BLAKE2s (qtsvg-everywhere-src-6.8.3.tar.xz) = d6041f3d594aa79c6e690740eea46622b2c484171add60ba4c965d7279d93ab4
-SHA512 (qtsvg-everywhere-src-6.8.3.tar.xz) = 213af7fdf92fb64c9b824dbe044f51d89e661ccc02c17cf109e65b962a7b1de84c71e1b1b58d6cad0cc9fccee80b97efe9ebcab3491b478fb9b64bcfd33986a4
-Size (qtsvg-everywhere-src-6.8.3.tar.xz) = 2009072 bytes
+BLAKE2s (qtsvg-everywhere-src-6.9.1.tar.xz) = 612de441100cbcf1f5d6ea08e033f22381fcfed7ed27f68edeaa6c210b291475
+SHA512 (qtsvg-everywhere-src-6.9.1.tar.xz) = d36fe4921fb9d7968378e0e1f7131574642baba7eec9a492283c039fec64e307f0a4148bd7fed83ce7b3d92a1af3d9cb31917ced0f15a186262de8bb7fdc615e
+Size (qtsvg-everywhere-src-6.9.1.tar.xz) = 2017876 bytes

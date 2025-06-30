@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/12/26 22:20:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/06/30 15:18:49 adam Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -1326,12 +1326,6 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dinputpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dinputpluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dinputpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dinputpluginTargets.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginConfig.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginConfigVersion.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginTargets-release.cmake
-qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dlogicpluginTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginConfigVersion.cmake

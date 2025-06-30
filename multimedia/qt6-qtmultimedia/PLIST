@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/05/08 14:02:38 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/06/30 15:18:51 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -7,6 +7,7 @@ ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPl
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudiodecoder_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudioencoder_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudioencoderutils_p.h
+${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudioframeconverter_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudioinput_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegaudiorenderer_p.h
 ${PLIST.ffmpeg}qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpegavaudioformat_p.h
@@ -112,6 +113,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioringbuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_platform_stream_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_pipe_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcachedvalue_p.h
@@ -130,7 +132,9 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemoryvideobuffer_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_assume_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_enum_to_string_converter_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_ranges_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimediautils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiobufferinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiodecoder_p.h
@@ -153,6 +157,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideoframei
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosource_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudio_contextmanager_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevices_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosink_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosource_p.h
@@ -270,6 +275,7 @@ qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/frameg
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediabackendutils_p.h
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediafileselector_p.h
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediainfo_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/multimedia_debug_support_p.h
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/osdetection_p.h
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qcolorutil_p.h
 qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qfileutil_p.h
@@ -389,6 +395,14 @@ ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfigVers
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginConfigVersionImpl.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets-release.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6Multimedia/Qt6QGstreamerMediaPluginTargets.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfig.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateDependencies.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfig.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersion.cmake
@@ -416,6 +430,14 @@ qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateConfig.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateDependencies.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgetsPrivate/Qt6MultimediaWidgetsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfigVersion.cmake
@@ -446,6 +468,14 @@ qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets-release.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateConfig.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateDependencies.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudioPrivate/Qt6SpatialAudioPrivateVersionlessTargets.cmake
 qt6/lib/libQt6BundledResonanceAudio.a
 ${PLIST.ffmpeg}qt6/lib/libQt6FFmpegMediaPluginImpl.a
 ${PLIST.ffmpeg}qt6/lib/libQt6FFmpegMediaPluginImpl.prl
@@ -484,6 +514,7 @@ qt6/metatypes/qt6multimediatestlibprivate_release_metatypes.json
 qt6/metatypes/qt6multimediawidgets_release_metatypes.json
 qt6/metatypes/qt6quick3dspatialaudioprivate_release_metatypes.json
 qt6/metatypes/qt6spatialaudio_release_metatypes.json
+${PLIST.ffmpeg}qt6/mkspecs/features/ios/add_ios_ffmpeg_libraries.prf
 ${PLIST.ffmpeg}qt6/mkspecs/modules/qt_lib_ffmpegmediapluginimpl_private.pri
 ${PLIST.gstreamer}qt6/mkspecs/modules/qt_lib_gstreamermediapluginimpl_private.pri
 qt6/mkspecs/modules/qt_lib_multimedia.pri

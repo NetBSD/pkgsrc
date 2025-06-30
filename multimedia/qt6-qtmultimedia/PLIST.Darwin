@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.4 2025/03/31 16:38:07 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.5 2025/06/30 15:18:51 adam Exp $
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamera_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfsamplebufferdelegate_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfscreencapture_p.h
@@ -6,12 +6,15 @@ qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/privat
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcgwindowcapture_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_videotoolbox_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_kqueue_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcameradebug_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcamerautility_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfhelpers_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfvideodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcoreaudioutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiosource_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qdarwinaudiounit_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmacosaudiodatautils_p.h
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6QDarwinMediaPluginConfig.cmake
