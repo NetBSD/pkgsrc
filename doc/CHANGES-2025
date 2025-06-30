@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4020 2025/06/30 14:51:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4021 2025/06/30 15:07:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5966,3 +5966,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/osticket version 1.18.2 [hauke 2025-06-30]
 	Updated devel/protobuf to 31.1 [adam 2025-06-30]
 	Updated devel/py-protobuf to 6.31.1 [adam 2025-06-30]
+	Updated x11/qt5 to 5.15.17 [adam 2025-06-30]
+	Updated net/yt-dlp to 2025.6.25 [adam 2025-06-30]
