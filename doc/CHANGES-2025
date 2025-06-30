@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4007 2025/06/30 11:01:58 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.4008 2025/06/30 11:02:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5950,3 +5950,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/squid6 to 6.14 [sborrill 2025-06-30]
 	Updated net/powerdns to 4.9.5 [jperkin 2025-06-30]
 	Updated net/powerdns-geoip to 4.9.5 [jperkin 2025-06-30]
+	Updated net/powerdns-ldap to 4.9.5 [jperkin 2025-06-30]
