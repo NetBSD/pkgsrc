@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4030 2025/06/30 19:06:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4031 2025/06/30 19:12:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5993,3 +5993,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-ansible-compat to 25.6.0 [adam 2025-06-30]
 	Updated devel/py-frozenlist to 1.7.0 [adam 2025-06-30]
 	Updated sysutils/ansible-lint to 25.6.1 [adam 2025-06-30]
+	Updated devel/git to 2.50.0 [adam 2025-06-30]
+	Updated devel/libffi to 3.5.1 [adam 2025-06-30]
