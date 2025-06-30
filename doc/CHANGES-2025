@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4002 2025/06/29 14:09:15 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4003 2025/06/30 09:17:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5945,3 +5945,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/openexr to 3.3.4 [wiz 2025-06-27]
 	Updated net/ucspi-tools to 1.7nb2 [schmonz 2025-06-27]
 	Updated mail/squirrelmail to 1.4.23pre15037nb1 [taca 2025-06-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q2 branch [bsiegert 2025-06-30]
