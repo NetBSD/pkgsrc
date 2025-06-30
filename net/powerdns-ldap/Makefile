@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/04/19 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/06/30 11:02:21 jperkin Exp $
 
-PKGREVISION= 2
-.include "../../net/powerdns/Makefile.backend"
+.include "../../net/powerdns/backend.mk"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns-ldap/}
 COMMENT=		LDAP backend module for PowerDNS
