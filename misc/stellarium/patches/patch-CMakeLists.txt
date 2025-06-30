@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.14 2024/12/27 18:19:27 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.15 2025/06/30 15:20:30 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 Do not fetch fast_float.
 
---- CMakeLists.txt.orig	2024-12-22 10:38:06.000000000 +0000
+--- CMakeLists.txt.orig	2025-06-22 11:54:11.000000000 +0000
 +++ CMakeLists.txt
-@@ -198,7 +198,7 @@ IF(OPENGL_DEBUG_LOGGING)
+@@ -197,7 +197,7 @@ IF(OPENGL_DEBUG_LOGGING)
  ENDIF()
  
  # Use ccache if possible
@@ -15,7 +15,7 @@ Do not fetch fast_float.
       FIND_PROGRAM(CCACHE_PROGRAM ccache)
       IF(CCACHE_PROGRAM)
            MESSAGE(STATUS "Found ccache ${CCACHE_PROGRAM}")
-@@ -252,7 +252,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
+@@ -251,7 +251,7 @@ IF(${CMAKE_BUILD_TYPE} MATCHES "Fuzzer")
       ENDIF()
  ENDIF()
  
@@ -24,7 +24,7 @@ Do not fetch fast_float.
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
       SET(SDATALOC "Resources")
-@@ -361,7 +361,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
+@@ -366,7 +366,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
            SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-string-plus-int")
  	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-string-plus-int")
       ENDIF()
@@ -33,7 +33,7 @@ Do not fetch fast_float.
  	  SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter -Wno-string-plus-int")
  	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option -Wno-string-plus-int")
       ENDIF()
-@@ -851,7 +851,7 @@ ENDIF()
+@@ -836,7 +836,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -41,8 +41,8 @@ Do not fetch fast_float.
 +     IF(FALSE)
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
-           ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -1007,7 +1007,7 @@ IF(GENERATE_PACKAGE_TARGET)
+           ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")
+@@ -992,7 +992,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### macOS Bundling ###############
@@ -51,7 +51,7 @@ Do not fetch fast_float.
       MESSAGE(STATUS "macOS deployment target: ${CMAKE_OSX_DEPLOYMENT_TARGET} (${CMAKE_OSX_ARCHITECTURES})")
       SET(PACKAGE_OSX_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
       ADD_DEFINITIONS(-DPACKAGE_OSX_TARGET)
-@@ -1064,10 +1064,7 @@ ENDIF()
+@@ -1055,10 +1055,7 @@ ENDIF()
  
  include("cmake/Check-from_chars.cmake")
  IF(NOT FROM_CHARS_WORKS)
