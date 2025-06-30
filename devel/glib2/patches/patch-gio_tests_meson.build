@@ -1,10 +1,10 @@
-$NetBSD: patch-gio_tests_meson.build,v 1.10 2024/10/22 09:50:38 adam Exp $
+$NetBSD: patch-gio_tests_meson.build,v 1.11 2025/06/30 18:21:29 schmonz Exp $
 
 Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
 
---- gio/tests/meson.build.orig	2024-10-17 11:08:41.000000000 +0000
+--- gio/tests/meson.build.orig	2025-06-13 11:55:59.000000000 +0000
 +++ gio/tests/meson.build
-@@ -815,6 +815,10 @@ if not meson.is_cross_build()
+@@ -845,6 +845,10 @@ if not meson.is_cross_build()
      plugin_resources_c = custom_target('plugin-resources.c',
        input : 'test4.gresource.xml',
        output : 'plugin-resources.c',
@@ -15,7 +15,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
        command : [glib_compile_resources,
                   compiler_type,
                   '--target=@OUTPUT@',
-@@ -848,6 +852,10 @@ if not meson.is_cross_build()
+@@ -878,6 +882,10 @@ if not meson.is_cross_build()
      input : 'test.gresource.xml',
      depends : [test_generated_txt, gspawn_helpers],
      output : 'test.gresource',
@@ -26,7 +26,18 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -863,6 +871,10 @@ if not meson.is_cross_build()
+@@ -893,6 +901,10 @@ if not meson.is_cross_build()
+     input : 'test6.gresource.xml',
+     depends : [gspawn_helpers],
+     output : 'test6.gresource',
++    env : {
++      'LC_ALL': 'en_US.UTF-8',
++      'DYLD_LIBRARY_PATH': '@0@/glib:@0@/gio:@0@/gobject:@0@/gmodule'.replace('@0@', meson.project_build_root())
++    },
+     command : [glib_compile_resources,
+                compiler_type,
+                '--target=@OUTPUT@',
+@@ -908,6 +920,10 @@ if not meson.is_cross_build()
      input : 'test3.gresource.xml',
      depends : [gspawn_helpers],
      output : 'test_resources2.c',
@@ -37,7 +48,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -877,6 +889,10 @@ if not meson.is_cross_build()
+@@ -922,6 +938,10 @@ if not meson.is_cross_build()
      input : 'test3.gresource.xml',
      depends : [gspawn_helpers],
      output : 'test_resources2.h',
@@ -48,7 +59,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -891,6 +907,10 @@ if not meson.is_cross_build()
+@@ -936,6 +956,10 @@ if not meson.is_cross_build()
      input : 'test2.gresource.xml',
      depends : [big_test_resource, gspawn_helpers],
      output : 'test_resources.c',
@@ -59,7 +70,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -905,6 +925,10 @@ if not meson.is_cross_build()
+@@ -950,6 +974,10 @@ if not meson.is_cross_build()
      input : '111_digit_test.gresource.xml',
      depends : [gspawn_helpers],
      output : 'digit_test_resources.c',
@@ -70,7 +81,7 @@ Work around PR pkg/57399. + DYLD_LIBRARY_PATH for macOS
      command : [glib_compile_resources,
                 compiler_type,
                 '--target=@OUTPUT@',
-@@ -919,6 +943,10 @@ if not meson.is_cross_build()
+@@ -964,6 +992,10 @@ if not meson.is_cross_build()
      input : '111_digit_test.gresource.xml',
      depends : [gspawn_helpers],
      output : 'digit_test_resources.h',
