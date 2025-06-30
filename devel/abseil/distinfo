@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.30 2025/03/30 10:31:58 adam Exp $
+$NetBSD: distinfo,v 1.31 2025/06/30 13:04:09 adam Exp $
 
-BLAKE2s (abseil-20250127.1-20250127.1.tar.gz) = 7e90f8cd868ce98a77cc91d14d2f67f25cbbd37f6d7534668725be8b0ee443b9
-SHA512 (abseil-20250127.1-20250127.1.tar.gz) = 8312acf0ed74fa28c6397f3e41ada656dbd5ca2bf8db484319d74b144ad19c0ebdc77f7f03436be6c6ca1cde706b9055079233cf0d6b5ada4ca48406f8a55dd8
-Size (abseil-20250127.1-20250127.1.tar.gz) = 2267282 bytes
+BLAKE2s (abseil-20250512.1-20250512.1.tar.gz) = ae715f2571b29860b7ac4d0ac1a234617d774a2026f5649dec47042642e5a81d
+SHA512 (abseil-20250512.1-20250512.1.tar.gz) = d3ba654ed7dd7b432494918b2de5d8e2b0ad1c42752c5d726f20d6fe2841828fb4e8beb853e3570a11efecef725029ce5ffa3ebc434efff007e7f60735eb9856
+Size (abseil-20250512.1-20250512.1.tar.gz) = 2221441 bytes
 SHA1 (patch-absl_base_internal_sysinfo.cc) = c96dd302dde0f6071a8353a5877a3bac37949467
 SHA1 (patch-absl_debugging_internal_elf__mem__image.cc) = 4165ab657a03194a5266815440f40cf4aa958f7b
 SHA1 (patch-absl_debugging_internal_vdso__support.cc) = 2292c5b0f2b41679039a1697508343ff5b6cc401
+SHA1 (patch-absl_debugging_stacktrace.cc) = 5b64b5891d4030afc025e5b8d77270f4d3e0d29b
 SHA1 (patch-absl_time_internal_cctz_src_time__zone__format.cc) = 7f3b84cd63f847ffa4c2fcb04b28d1535ea1454b
