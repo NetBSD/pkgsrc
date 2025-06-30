@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4026 2025/06/30 16:33:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4027 2025/06/30 18:35:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5979,3 +5979,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/openssl to 3.5.0 [adam 2025-06-30]
 	Updated lang/nodejs22 to 22.17.0 [adam 2025-06-30]
 	Updated lang/nodejs to 24.3.0 [adam 2025-06-30]
+	Updated www/nghttp2 to 1.66.0 [adam 2025-06-30]
+	Updated www/nghttp2-tools to 1.66.0 [adam 2025-06-30]
