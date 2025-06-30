@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/01/10 08:58:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/06/30 18:56:48 adam Exp $
 bin/pygmentize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -141,6 +141,9 @@ ${PYSITELIB}/pygments/lexers/_scilab_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_sourcemod_builtins.py
 ${PYSITELIB}/pygments/lexers/_sourcemod_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_sourcemod_builtins.pyo
+${PYSITELIB}/pygments/lexers/_sql_builtins.py
+${PYSITELIB}/pygments/lexers/_sql_builtins.pyc
+${PYSITELIB}/pygments/lexers/_sql_builtins.pyo
 ${PYSITELIB}/pygments/lexers/_stan_builtins.py
 ${PYSITELIB}/pygments/lexers/_stan_builtins.pyc
 ${PYSITELIB}/pygments/lexers/_stan_builtins.pyo
