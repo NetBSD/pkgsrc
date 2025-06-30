@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.141 2025/05/08 04:57:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.142 2025/06/30 18:39:24 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -65,6 +65,7 @@ share/doc/sqlite3/c3ref/c_prepare_dont_log.html
 share/doc/sqlite3/c3ref/c_scanstat_complex.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_serialize_nocopy.html
+share/doc/sqlite3/c3ref/c_setlk_block_on_connect.html
 share/doc/sqlite3/c3ref/c_shm_exclusive.html
 share/doc/sqlite3/c3ref/c_shm_nlock.html
 share/doc/sqlite3/c3ref/c_source_id.html
@@ -172,6 +173,7 @@ share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/serialize.html
 share/doc/sqlite3/c3ref/set_authorizer.html
 share/doc/sqlite3/c3ref/set_last_insert_rowid.html
+share/doc/sqlite3/c3ref/setlk_timeout.html
 share/doc/sqlite3/c3ref/sleep.html
 share/doc/sqlite3/c3ref/snapshot.html
 share/doc/sqlite3/c3ref/snapshot_cmp.html
@@ -707,6 +709,9 @@ share/doc/sqlite3/releaselog/3_49_2.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
+share/doc/sqlite3/releaselog/3_50_0.html
+share/doc/sqlite3/releaselog/3_50_1.html
+share/doc/sqlite3/releaselog/3_50_2.html
 share/doc/sqlite3/releaselog/3_5_0.html
 share/doc/sqlite3/releaselog/3_5_1.html
 share/doc/sqlite3/releaselog/3_5_2.html
@@ -858,7 +863,6 @@ share/doc/sqlite3/session/sqlite3changeset_old.html
 share/doc/sqlite3/session/sqlite3changeset_op.html
 share/doc/sqlite3/session/sqlite3changeset_pk.html
 share/doc/sqlite3/session/sqlite3changeset_start.html
-share/doc/sqlite3/session/sqlite3changeset_upgrade.html
 share/doc/sqlite3/session/sqlite3rebaser_configure.html
 share/doc/sqlite3/session/sqlite3rebaser_create.html
 share/doc/sqlite3/session/sqlite3rebaser_delete.html
