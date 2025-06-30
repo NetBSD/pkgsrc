@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2025/04/07 15:03:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2025/06/30 15:20:30 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
 ${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
@@ -1622,7 +1622,6 @@ share/stellarium/scripts/uranian_analemma.ssc
 share/stellarium/scripts/zodiac.ssc
 share/stellarium/skycultures/anutan/description.md
 share/stellarium/skycultures/anutan/index.json
-share/stellarium/skycultures/arabic_al-sufi/Oph.png
 share/stellarium/skycultures/arabic_al-sufi/description.md
 share/stellarium/skycultures/arabic_al-sufi/illustrations/And.png
 share/stellarium/skycultures/arabic_al-sufi/illustrations/Aql.png
@@ -1708,9 +1707,6 @@ share/stellarium/skycultures/aztec/illustrations/xonecuilli_Glifo.png
 share/stellarium/skycultures/aztec/illustrations/xonecuilli_crop.png
 share/stellarium/skycultures/aztec/illustrations/xonecuilli_t.png
 share/stellarium/skycultures/aztec/index.json
-share/stellarium/skycultures/aztec/xonecuilli.png
-share/stellarium/skycultures/babylonian_mulapin/Mush-Snake_b.png
-share/stellarium/skycultures/babylonian_mulapin/corvus_bg.png
 share/stellarium/skycultures/babylonian_mulapin/description.md
 share/stellarium/skycultures/babylonian_mulapin/illustrations/800px-MulApin-BritishMuseum.jpg
 share/stellarium/skycultures/babylonian_mulapin/illustrations/Balance_bg.png
@@ -1828,16 +1824,13 @@ share/stellarium/skycultures/chinese/planet_names.zh_CN.fab
 share/stellarium/skycultures/chinese/star_names.zh_CN.fab
 share/stellarium/skycultures/chinese_chenzhuo/description.md
 share/stellarium/skycultures/chinese_chenzhuo/index.json
-share/stellarium/skycultures/chinese_chenzhuo/po/zh_CN.po
-share/stellarium/skycultures/chinese_chenzhuo/po/zh_HK.po
-share/stellarium/skycultures/chinese_chenzhuo/po/zh_TW.po
-share/stellarium/skycultures/chinese_medieval/constellation_boundaries.dat
-share/stellarium/skycultures/chinese_medieval/description.md
-share/stellarium/skycultures/chinese_medieval/dso_names.zh_CN.fab
-share/stellarium/skycultures/chinese_medieval/illustrations/xyxfy.png
-share/stellarium/skycultures/chinese_medieval/index.json
-share/stellarium/skycultures/chinese_medieval/planet_names.zh_CN.fab
-share/stellarium/skycultures/chinese_medieval/star_names.zh_CN.fab
+share/stellarium/skycultures/chinese_song_dynasty/constellation_boundaries.dat
+share/stellarium/skycultures/chinese_song_dynasty/description.md
+share/stellarium/skycultures/chinese_song_dynasty/dso_names.zh_CN.fab
+share/stellarium/skycultures/chinese_song_dynasty/illustrations/xyxfy.png
+share/stellarium/skycultures/chinese_song_dynasty/index.json
+share/stellarium/skycultures/chinese_song_dynasty/planet_names.zh_CN.fab
+share/stellarium/skycultures/chinese_song_dynasty/star_names.zh_CN.fab
 share/stellarium/skycultures/common_star_names.fab
 share/stellarium/skycultures/egyptian_dendera/description.md
 share/stellarium/skycultures/egyptian_dendera/illustrations/Dendera_zodiac_Louvre.jpg
@@ -1878,7 +1871,6 @@ share/stellarium/skycultures/egyptian_dendera/illustrations/uma_wagon+fox+ewe+yo
 share/stellarium/skycultures/egyptian_dendera/illustrations/vir.png
 share/stellarium/skycultures/egyptian_dendera/illustrations/vogel.jpg
 share/stellarium/skycultures/egyptian_dendera/index.json
-share/stellarium/skycultures/egyptian_dendera/per.png
 share/stellarium/skycultures/greek_almagest/README.md
 share/stellarium/skycultures/greek_almagest/almstars/AUTHORS
 share/stellarium/skycultures/greek_almagest/almstars/COPYING
@@ -1912,7 +1904,6 @@ share/stellarium/skycultures/greek_dante/illustrations/vir_scotus.jpg
 share/stellarium/skycultures/greek_dante/illustrations/wagen_bg.jpg
 share/stellarium/skycultures/greek_dante/index.json
 share/stellarium/skycultures/greek_farnese/description.md
-share/stellarium/skycultures/greek_farnese/dra_bg.png
 share/stellarium/skycultures/greek_farnese/illustrations/Atlas_(Farnese_Globe).jpg
 share/stellarium/skycultures/greek_farnese/illustrations/Farnese_viereck.png
 share/stellarium/skycultures/greek_farnese/illustrations/and_sw_bg.png
@@ -2040,12 +2031,6 @@ share/stellarium/skycultures/hawaiian_starlines/illustrations/lu2c.png
 share/stellarium/skycultures/hawaiian_starlines/illustrations/manaia.png
 share/stellarium/skycultures/hawaiian_starlines/illustrations/waa2.png
 share/stellarium/skycultures/hawaiian_starlines/index.json
-share/stellarium/skycultures/hawaiian_starlines/kekaa1c.png
-share/stellarium/skycultures/hawaiian_starlines/kua1g.png
-share/stellarium/skycultures/hawaiian_starlines/kuamoo.png
-share/stellarium/skycultures/hawaiian_starlines/manaia1c.png
-share/stellarium/skycultures/hawaiian_starlines/star_compass_plain.gif
-share/stellarium/skycultures/hawaiian_starlines/waa.png
 share/stellarium/skycultures/indian/description.md
 share/stellarium/skycultures/indian/illustrations/aquarius.png
 share/stellarium/skycultures/indian/illustrations/aries.png
@@ -2178,7 +2163,6 @@ share/stellarium/skycultures/maori/illustrations/tama.png
 share/stellarium/skycultures/maori/illustrations/taura.png
 share/stellarium/skycultures/maori/index.json
 share/stellarium/skycultures/maori/references.txt
-share/stellarium/skycultures/modern/canis-major.png
 share/stellarium/skycultures/modern/description.md
 share/stellarium/skycultures/modern/illustrations/andromeda.png
 share/stellarium/skycultures/modern/illustrations/antlia.png
@@ -2423,7 +2407,10 @@ share/stellarium/skycultures/romanian/illustrations/vacarul.png
 share/stellarium/skycultures/romanian/illustrations/varsatorul.png
 share/stellarium/skycultures/romanian/illustrations/vierii.png
 share/stellarium/skycultures/romanian/index.json
-share/stellarium/skycultures/romanian/sagetatorul.png
+share/stellarium/skycultures/ruanui_sky_tahiti_and_society_islands/description.md
+share/stellarium/skycultures/ruanui_sky_tahiti_and_society_islands/illustrations/hook2.png
+share/stellarium/skycultures/ruanui_sky_tahiti_and_society_islands/illustrations/kite2.png
+share/stellarium/skycultures/ruanui_sky_tahiti_and_society_islands/index.json
 share/stellarium/skycultures/russian_siberian/description.md
 share/stellarium/skycultures/russian_siberian/index.json
 share/stellarium/skycultures/sami/READ_ME_INCONSISTENCIES
@@ -3146,6 +3133,7 @@ share/stellarium/translations/stellarium/ms.qm
 share/stellarium/translations/stellarium/nb.qm
 share/stellarium/translations/stellarium/ne.qm
 share/stellarium/translations/stellarium/nl.qm
+share/stellarium/translations/stellarium/nn.qm
 share/stellarium/translations/stellarium/pl.qm
 share/stellarium/translations/stellarium/pt.qm
 share/stellarium/translations/stellarium/pt_BR.qm
