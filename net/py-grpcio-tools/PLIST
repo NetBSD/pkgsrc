@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/01 09:03:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/30 15:16:27 adam Exp $
+bin/python-grpc-tools-protoc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/grpc_tools/__init__.py
 ${PYSITELIB}/grpc_tools/__init__.pyc

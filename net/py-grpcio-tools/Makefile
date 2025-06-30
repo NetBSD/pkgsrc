@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2025/04/15 08:15:58 adam Exp $
+# $NetBSD: Makefile,v 1.84 2025/06/30 15:16:27 adam Exp $
 
-DISTNAME=	grpcio_tools-1.70.0
+DISTNAME=	grpcio_tools-1.73.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-tools/}
 
@@ -17,10 +16,14 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} python-grpc-tools-protoc python-grpc-tools-protoc-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

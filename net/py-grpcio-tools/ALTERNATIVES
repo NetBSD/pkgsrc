@@ -1,0 +1,1 @@
+bin/python-grpc-tools-protoc @PREFIX@/bin/python-grpc-tools-protoc-@PYVERSSUFFIX@
