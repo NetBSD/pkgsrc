@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4005 2025/06/30 10:23:13 sborrill Exp $
+$NetBSD: CHANGES-2025,v 1.4006 2025/06/30 11:00:59 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2025:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q2 branch [bsiegert 2025-06-30]
 	Updated sysutils/eza to 0.21.6 [fox 2025-06-30]
 	Updated www/squid6 to 6.14 [sborrill 2025-06-30]
+	Updated net/powerdns to 4.9.5 [jperkin 2025-06-30]
