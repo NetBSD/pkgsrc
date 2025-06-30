@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.backend,v 1.8 2022/09/29 13:49:50 jperkin Exp $
+# $NetBSD: backend.mk,v 1.1 2025/06/30 11:00:50 jperkin Exp $
 # used by net/powerdns-geoip/Makefile
 # used by net/powerdns-ldap/Makefile
 # used by net/powerdns-mysql/Makefile

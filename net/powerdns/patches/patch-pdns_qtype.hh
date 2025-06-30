@@ -1,11 +1,11 @@
-$NetBSD: patch-pdns_qtype.hh,v 1.2 2022/09/29 13:49:50 jperkin Exp $
+$NetBSD: patch-pdns_qtype.hh,v 1.3 2025/06/30 11:00:50 jperkin Exp $
 
 Avoid symbol pollution on SunOS.
 
---- pdns/qtype.hh.orig	2022-07-11 13:54:25.000000000 +0000
+--- pdns/qtype.hh.orig	2025-06-20 14:11:31.859917271 +0000
 +++ pdns/qtype.hh
-@@ -22,6 +22,10 @@
- #pragma once
+@@ -26,6 +26,10 @@
+ 
  #include "namespaces.hh"
  
 +#if defined(__sun) && defined(DS)
