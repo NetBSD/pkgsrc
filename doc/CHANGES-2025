@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4009 2025/06/30 11:03:07 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.4010 2025/06/30 11:03:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5952,3 +5952,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/powerdns-geoip to 4.9.5 [jperkin 2025-06-30]
 	Updated net/powerdns-ldap to 4.9.5 [jperkin 2025-06-30]
 	Updated net/powerdns-mysql to 4.9.5 [jperkin 2025-06-30]
+	Updated net/powerdns-odbc to 4.9.5 [jperkin 2025-06-30]
