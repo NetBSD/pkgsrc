@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.120 2025/06/13 08:57:02 adam Exp $
+$NetBSD: distinfo,v 1.121 2025/06/30 20:09:32 adam Exp $
 
-BLAKE2s (pytest-8.4.0.tar.gz) = 33572edd780103e2d1431fef7d2912f91a3b2934df024de2cbb5b569393e5748
-SHA512 (pytest-8.4.0.tar.gz) = aa4aff63e7a4c682322f231538d411b30f7d37335fc42efa8abe7824040278d0a546efaa51794ce2937da993f4972984aacbdad30f96a4d43fe9a3e23317c57a
-Size (pytest-8.4.0.tar.gz) = 1515232 bytes
+BLAKE2s (pytest-8.4.1.tar.gz) = e39af4df8eaff42b8a33d4459eb48825902fd9d7163b37c82a6c3a5bc58caa40
+SHA512 (pytest-8.4.1.tar.gz) = 1ed64a70e6b49f52364f4d08ca179a47bcd0a709c327c1666f6e5f909c723ce1e2ba56abe08cf1348f75c1fa447da71c4faac8e3e76adb0c563cf66267c8633a
+Size (pytest-8.4.1.tar.gz) = 1517714 bytes
