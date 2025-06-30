@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/04/14 11:04:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/06/30 18:41:56 adam Exp $
 bin/apsw-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,9 +28,6 @@ ${PYSITELIB}/apsw/fts5query.py
 ${PYSITELIB}/apsw/fts5query.pyc
 ${PYSITELIB}/apsw/fts5query.pyo
 ${PYSITELIB}/apsw/fts_test_strings
-${PYSITELIB}/apsw/ftstests.py
-${PYSITELIB}/apsw/ftstests.pyc
-${PYSITELIB}/apsw/ftstests.pyo
 ${PYSITELIB}/apsw/py.typed
 ${PYSITELIB}/apsw/shell.py
 ${PYSITELIB}/apsw/shell.pyc
@@ -38,9 +35,15 @@ ${PYSITELIB}/apsw/shell.pyo
 ${PYSITELIB}/apsw/speedtest.py
 ${PYSITELIB}/apsw/speedtest.pyc
 ${PYSITELIB}/apsw/speedtest.pyo
-${PYSITELIB}/apsw/tests.py
-${PYSITELIB}/apsw/tests.pyc
-${PYSITELIB}/apsw/tests.pyo
+${PYSITELIB}/apsw/tests/__main__.py
+${PYSITELIB}/apsw/tests/__main__.pyc
+${PYSITELIB}/apsw/tests/__main__.pyo
+${PYSITELIB}/apsw/tests/ftstests.py
+${PYSITELIB}/apsw/tests/ftstests.pyc
+${PYSITELIB}/apsw/tests/ftstests.pyo
+${PYSITELIB}/apsw/tests/sessiontests.py
+${PYSITELIB}/apsw/tests/sessiontests.pyc
+${PYSITELIB}/apsw/tests/sessiontests.pyo
 ${PYSITELIB}/apsw/trace.py
 ${PYSITELIB}/apsw/trace.pyc
 ${PYSITELIB}/apsw/trace.pyo
