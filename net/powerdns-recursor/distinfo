@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.41 2024/10/04 04:28:39 ryoon Exp $
+$NetBSD: distinfo,v 1.42 2025/06/30 11:06:46 jperkin Exp $
 
-BLAKE2s (pdns-recursor-4.7.3.tar.bz2) = e5de87edce1ef60555d6c4b3d908cdf25fccb00e7ef6812046ece974e0a51cc9
-SHA512 (pdns-recursor-4.7.3.tar.bz2) = e7d9fa32dd53e9b382689e6e735f35b12dbd9f2bb0e8b3031ab58f53a61b5cdc947cb5e857a991768afd1b403bc02d20d434dded5800be450ad45368c9d1dc0e
-Size (pdns-recursor-4.7.3.tar.bz2) = 1597064 bytes
-SHA1 (patch-dns.hh) = 7e9c1b10a066a605b74ebdbee2d894aed50f6c68
+BLAKE2s (pdns-recursor-4.9.9.tar.bz2) = bbcc8a5540ab6fa516e1c1f4140d4281616bb20438e5d158ecda2f5f9deda5ff
+SHA512 (pdns-recursor-4.9.9.tar.bz2) = d628364546ff93c659e12bd4978de7a0f8a3e3b33ccfb03ecfa9a8da47a05fe8addc6e1a333e17d7c17c0468c24852044e35bd59d4f2dc475294d1248b9ea250
+Size (pdns-recursor-4.9.9.tar.bz2) = 1568112 bytes
+SHA1 (patch-dns.hh) = 0994b743b31ac10874d67a54e64183d7b4e25df4
 SHA1 (patch-ext_json11_json11.cpp) = 2de8ea8b51556bd3e3c1a88f681697eff239ab1a
-SHA1 (patch-portsmplexer.cc) = 46d762b82ec2dd0ba67dab744f5f4531f09c6dec
 SHA1 (patch-qtype.hh) = 567c9f36fa0b414e605e6788ba5b7a9f293476a5
-SHA1 (patch-uuid-utils.cc) = 903123f51f79df017b268012e50e6820a75dee01
-SHA1 (patch-version.cc) = 26226a02198edd9d8890a5199ee5a8051334fe41
+SHA1 (patch-version.cc) = 2e0610de073d1a0ab280997c61eb4a09e15b03d2

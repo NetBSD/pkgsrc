@@ -1,10 +1,10 @@
-$NetBSD: patch-version.cc,v 1.2 2020/03/17 19:07:29 adam Exp $
+$NetBSD: patch-version.cc,v 1.3 2025/06/30 11:06:46 jperkin Exp $
 
 Do not store configure args, as they contain workdir references.
 
---- version.cc.orig	2020-03-17 17:04:42.000000000 +0000
+--- version.cc.orig	2025-06-23 11:49:15.710023097 +0000
 +++ version.cc
-@@ -145,7 +145,7 @@ void showBuildConfiguration()
+@@ -155,7 +155,7 @@ void showBuildConfiguration()
    // Auth only
    g_log<<Logger::Warning<<"Built-in modules: "<<PDNS_MODULES<<endl;
  #endif
