@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.28 2025/03/02 20:36:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.29 2025/06/30 18:35:29 adam Exp $
 # used by www/nghttp2/Makefile
 # used by www/nghttp2-tools/Makefile
 
-DISTNAME=	nghttp2-1.65.0
+DISTNAME=	nghttp2-1.66.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz
