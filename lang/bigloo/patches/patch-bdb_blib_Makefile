@@ -1,0 +1,15 @@
+$NetBSD: patch-bdb_blib_Makefile,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+
+GBL_INC_DIR isn't defined
+
+--- bdb/blib/Makefile.orig	2025-04-01 19:33:24.117729701 +0000
++++ bdb/blib/Makefile
+@@ -33,7 +33,7 @@ CLASS_DIR	= objs/class/bigloo/bdb
+ BHEAPFLAGS	= -unsafe -q -mkaddheap -mkaddlib -L $(LIB) -heap-library bdb
+ BFLAGS		+= -lib-dir $(LIB)
+ # C flags
+-CFLAGS		= -I$(BGL_INC_DIR) -I. -I$(BOOTLIBDIR) $(CPICFLAGS) $(GCINCLUDE)
++CFLAGS		= -I. -I$(BOOTLIBDIR) $(CPICFLAGS) $(GCINCLUDE)
+ # Bigloo flags
+ BDBFLAGS	= $(BFLAGS) -farithmetic -init-lib
+ 

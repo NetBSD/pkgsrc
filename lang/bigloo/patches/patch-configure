@@ -1,0 +1,94 @@
+$NetBSD: patch-configure,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+
+Don't override docdir when prefix is set
+Fixed the lack of build, host, and --x-* options.
+It always failed to find patch even though it's there.
+Turn off dlopen for NetBSD which will cause the bigloo compiler to
+not work once built
+
+--- configure.orig	2023-12-22 16:18:46.000000000 +0000
++++ configure
+@@ -682,8 +682,7 @@ while : ; do
+       zipdir=$libdir/$fildir;
+       dlldir=$libdir/$fildir;
+       mandir=$prefix/man/man1;
+-      infodir=$prefix/info;
+-      docdir=$prefix/doc/bigloo-$release;;
++      infodir=$prefix/info;;
+ 
+     --bigloo=*)
+       bigloo="`echo $1 | sed 's/^[^=]*=//'`";;
+@@ -1120,6 +1119,9 @@ while : ; do
+     --enable-srfi27)
+       srfi27force="yes";;
+ 
++    --enable-option-checking=*)
++      ;;
++
+     --enable-*)
+       api="`echo $1 | sed 's/--[^-]*-//'`";
+       add=1;
+@@ -1151,6 +1153,15 @@ while : ; do
+     --hostsh=*)
+       hostsh="`echo $1 | sed 's/^[^=]*=//'`";;
+ 
++    --build=*)
++      ;;
++
++    --host=*)
++      ;;
++
++    --x-*=*)
++      ;;
++
+     -*)
+       if [ "$1" != "-h" -a "$1" != "-help" -a "$1" != "--help" ]; then
+         echo "*** ERROR: unknown option \"$1\""
+@@ -2119,18 +2130,18 @@ if [ $action = "all" -o $action = "biglo
+ fi
+ 
+ # checking patch
+-patch=$PATCH
+-
+-if [ "$patch " = " " ]; then
+-  patch=patch
+-fi
+-
+-$patch --help 2> /dev/null > /dev/null
++#patch=$PATCH
+ 
+-if [ $? != 0 ]; then
+-  $echo "*** ERROR: patch ($patch) command not found. Aborting..." >&2;
+-  exit 1;
+-fi
++#if [ "$patch " = " " ]; then
++#  patch=patch
++#fi
++
++#$patch --help 2> /dev/null > /dev/null
++
++#if [ $? != 0 ]; then
++#  $echo "*** ERROR: patch ($patch) command not found. Aborting..." >&2;
++#  exit 1;
++#fi
+   
+ #*---------------------------------------------------------------------*/
+ #*    Executable names                                                 */
+@@ -2242,7 +2253,7 @@ else
+   fi
+ 
+   if [ "$gcparallelmark " = "yes " ]; then
+-    gcthread="$gcthread -DPARALLEL_MARK";
++    gcthread="-DPARALLEL_MARK";
+   fi
+ 
+   # thread local storage
+@@ -3478,7 +3489,7 @@ if [ $action = "all" -o $action = "biglo
+   fi
+ 
+   # Does the system have dlopen?
+-  if [ "$ldopt " != "no-share" ]; then
++  if [ "$ldopt " != "no-share" && "$hostos" != "NetBSD" ]; then
+     if [ "$hostos" = "mingw" ]; then
+       havedlopen=1
+       dlopen=""

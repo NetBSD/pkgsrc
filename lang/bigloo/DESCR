@@ -1,0 +1,16 @@
+Bigloo is a Scheme development environment that includes a compiler
+generating C code and Java classes, and an interpreter. Bigloo is
+the tool of choice for building autonomous applications in Scheme.
+It is mostly conformant to the Revised5 Report on the Algorithmic
+Language Scheme with many extensions:
+  - lexical and syntactic builtin parser generators;
+  - pattern-matching;
+  - foreign languages interface (connection to C and to Java);
+  - modules;
+  - object-oriented class-based programming;
+  - preemptive multi-threading;
+  - unicode characters and strings;
+  - posix programming (process, pipe, socket);
+  - openssl;
+  - multimedia libraries;
+  - event loops and event-based programming (libuv).

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+
+BLAKE2s (bigloo-4.6a.tar.gz) = d2de40261c16dcfa00f15a2e06f61c96593c4fd7a5a2f6861182af4f33692c27
+SHA512 (bigloo-4.6a.tar.gz) = fa2bef72043f769d922a18fdf26c90a19430b46cce3b4307b14298baf150077c8ee28f6fa6e7e9d9ba19e0422a110b97df2a70f1c8daa692eb911412b6ae13df
+Size (bigloo-4.6a.tar.gz) = 62520082 bytes
+SHA1 (patch-bdb_blib_Makefile) = 1180c1f0859f6c04de402bc99b1e68694e54e645
+SHA1 (patch-bmacs_ude_ude-icon.el) = 8489ce295a9829e28b074881901f63c1000d5655
+SHA1 (patch-configure) = 534c28b3406a7aa47d5b46719c3b95fa586ed455
