@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4019 2025/06/30 14:34:56 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.4020 2025/06/30 14:51:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5964,3 +5964,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake to 3.31.8 [adam 2025-06-30]
 	Updated devel/cmake-gui to 3.31.8 [adam 2025-06-30]
 	Added www/osticket version 1.18.2 [hauke 2025-06-30]
+	Updated devel/protobuf to 31.1 [adam 2025-06-30]
+	Updated devel/py-protobuf to 6.31.1 [adam 2025-06-30]

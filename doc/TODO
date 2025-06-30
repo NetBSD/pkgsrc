@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25916 2025/06/30 13:15:12 adam Exp $
+$NetBSD: TODO,v 1.25917 2025/06/30 14:51:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -1106,8 +1106,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o prometheus-3.4.1
-	o protobuf-30.2 [wait for v30 support in net/grpc]
-	o protobuf-31.1
 	o psmisc-22.20
 	o pspp-1.4.1
 	o ptlib-2.16.2
@@ -1146,7 +1144,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
-	o py-protobuf-6.31.1
 	o py-pygments-2.19.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qt-builder-1.18.2
