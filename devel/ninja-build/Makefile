@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/02/07 16:00:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.24 2025/06/30 20:40:07 adam Exp $
 
-DISTNAME=	ninja-1.12.1
+DISTNAME=	ninja-1.13.0
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ninja-build/}
 GITHUB_PROJECT=	ninja
@@ -53,8 +52,6 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/manual.asciidoc \
 		${DESTDIR}${PREFIX}/share/doc/ninja
-	${INSTALL_DATA} ${WRKSRC}/misc/ninja-mode.el \
-		${DESTDIR}${PREFIX}/share/ninja
 	${INSTALL_DATA} ${WRKSRC}/misc/ninja.vim \
 		${DESTDIR}${PREFIX}/share/ninja
 	${INSTALL_DATA} ${WRKSRC}/misc/bash-completion \
