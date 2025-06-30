@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4025 2025/06/30 15:41:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4026 2025/06/30 16:33:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -5977,3 +5977,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/qbittorrent to 5.1.1 [adam 2025-06-30]
 	Updated devel/re2c to 4.3 [adam 2025-06-30]
 	Updated security/openssl to 3.5.0 [adam 2025-06-30]
+	Updated lang/nodejs22 to 22.17.0 [adam 2025-06-30]
+	Updated lang/nodejs to 24.3.0 [adam 2025-06-30]
