@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4034 2025/06/30 20:05:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4035 2025/06/30 20:08:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6003,3 +6003,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-mypy to 1.16.1 [adam 2025-06-30]
 	Updated devel/mimalloc to 3.1.5 [adam 2025-06-30]
 	Updated www/libproxy to 0.5.10 [adam 2025-06-30]
+	Updated net/libtorrent to 0.15.5 [adam 2025-06-30]
+	Updated net/rtorrent to 0.15.5 [adam 2025-06-30]
