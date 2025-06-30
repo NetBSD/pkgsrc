@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/20 12:13:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/06/30 20:23:23 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -44,6 +44,9 @@ ${PYSITELIB}/xlsxwriter/chart_stock.pyo
 ${PYSITELIB}/xlsxwriter/chartsheet.py
 ${PYSITELIB}/xlsxwriter/chartsheet.pyc
 ${PYSITELIB}/xlsxwriter/chartsheet.pyo
+${PYSITELIB}/xlsxwriter/color.py
+${PYSITELIB}/xlsxwriter/color.pyc
+${PYSITELIB}/xlsxwriter/color.pyo
 ${PYSITELIB}/xlsxwriter/comments.py
 ${PYSITELIB}/xlsxwriter/comments.pyc
 ${PYSITELIB}/xlsxwriter/comments.pyo
