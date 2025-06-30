@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2024/11/19 22:46:10 adam Exp $
+$NetBSD: distinfo,v 1.31 2025/06/30 15:05:08 adam Exp $
 
-BLAKE2s (qtcharts-everywhere-opensource-src-5.15.16.tar.xz) = b7945d40a6231efd49884305534a49fdbc2d9bca8f3e16a2ca5ecd7b5f8dbb6f
-SHA512 (qtcharts-everywhere-opensource-src-5.15.16.tar.xz) = f57df425e767ad5e18d5bf2439c137c0b656acf4ae998d42a41e59acf8a7b3d6733ef1c4ee4b11e1d54801df1550af5ee53cb190f05db223568b31fb4fcaa96d
-Size (qtcharts-everywhere-opensource-src-5.15.16.tar.xz) = 4246260 bytes
+BLAKE2s (qtcharts-everywhere-opensource-src-5.15.17.tar.xz) = 0cb9338525f4c15645c4fd7e159d0ea812e45abd884644b25507d82ba40be5d2
+SHA512 (qtcharts-everywhere-opensource-src-5.15.17.tar.xz) = cadbbff078839ccd4cbd5d14c37ea481a03f017086dab033912f7241b21d78e037e596ef0f4afb8335a9ed3ff46e78ffad8cae0be1a929369209555fab9e973c
+Size (qtcharts-everywhere-opensource-src-5.15.17.tar.xz) = 4248056 bytes
