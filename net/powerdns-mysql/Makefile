@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2022/09/29 13:51:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2025/06/30 11:02:57 jperkin Exp $
 
-.include "../../net/powerdns/Makefile.backend"
+.include "../../net/powerdns/backend.mk"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns-mysql/}
 COMMENT=		MySQL backend module for PowerDNS
