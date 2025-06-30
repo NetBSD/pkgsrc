@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2025/05/08 04:57:14 adam Exp $
+# $NetBSD: Makefile,v 1.127 2025/06/30 18:39:24 adam Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
@@ -12,8 +12,9 @@ COMMENT=	SQL Database Engine in a C Library (TCL extension)
 WRKSRC=		${WRKDIR}/${DISTNAME}/tea
 
 USE_TOOLS+=		gmake
-GNU_CONFIGURE=		yes
+HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
+INSTALL_TARGET=		install-core
 
 PLIST_SUBST+=		TCL_TRIM_DOTS=${PKGVERSION_NOREV:S/.//g}
 
@@ -28,8 +29,8 @@ post-extract:
 .if ${OPSYS} == "Darwin"
 post-install:
 	install_name_tool -id \
-	    ${PREFIX}/lib/sqlite3/libsqlite${PKGVERSION_NOREV}.dylib \
-	    ${DESTDIR}${PREFIX}/lib/sqlite3/libsqlite${PKGVERSION_NOREV}.dylib
+	    ${PREFIX}/lib/tcl8.6/sqlite${PKGVERSION_NOREV}/libsqlite${PKGVERSION_NOREV}.dylib \
+	    ${DESTDIR}${PREFIX}/lib/tcl8.6/sqlite${PKGVERSION_NOREV}/libsqlite${PKGVERSION_NOREV}.dylib
 .endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
