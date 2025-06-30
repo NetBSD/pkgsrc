@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.39 2023/07/18 18:36:30 nia Exp $
-# used by net/powerdns/Makefile.backend
+# $NetBSD: Makefile.common,v 1.40 2025/06/30 11:00:50 jperkin Exp $
+# used by net/powerdns/backend.mk
 
-PDNS_VERSION=	4.6.4
+PDNS_VERSION=	4.9.5
 DISTNAME=	pdns-${PDNS_VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://downloads.powerdns.com/releases/

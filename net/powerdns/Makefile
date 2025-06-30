@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.86 2025/04/19 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2025/06/30 11:00:50 jperkin Exp $
 
-PKGREVISION= 16
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
 COMMENT=	Modern, advanced and high performance nameserver
 
+PDNS_MODULES+=	bind pipe remote
+
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--enable-lua-records
+CONFIGURE_ARGS+=	--enable-tools
 CONFIGURE_ARGS+=	--with-dynmodules=no
 CONFIGURE_ARGS+=	--with-modules="${PDNS_MODULES}"
 

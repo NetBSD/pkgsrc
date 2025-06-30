@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.50 2024/10/04 04:27:20 ryoon Exp $
+$NetBSD: distinfo,v 1.51 2025/06/30 11:00:50 jperkin Exp $
 
-BLAKE2s (pdns-4.6.4.tar.bz2) = 4c29e8ea41013fb06790da5c9c4ac8460b2e27acbd713508bbd80832e9f1bf80
-SHA512 (pdns-4.6.4.tar.bz2) = b05c880e1dad7cf83cb17d74c331206487bea14d7f56bc21a70d65ad2704ce71258ff055f3008fb5af2c8cfc4fbd7d09333c47c046ca306d3fdb307f203230b5
-Size (pdns-4.6.4.tar.bz2) = 1318629 bytes
-SHA1 (patch-configure) = 2635c2e5c22c419850703e3f5e5ed73ed116c339
-SHA1 (patch-ext_json11_json11.cpp) = 3f8f4518ebd807a064e83572385ea5456fc7e81f
-SHA1 (patch-pdns_dnsscope.cc) = b289b750686b25041c3e291fb0d3d562beb36eaf
-SHA1 (patch-pdns_iputils.cc) = 06b58c59034454b2c6788f28d412215ca801c5cf
-SHA1 (patch-pdns_lock.hh) = c4a5c59955b808c7a04700b32a39235dc0888285
-SHA1 (patch-pdns_qtype.hh) = 7bf40a1ace0525c6611967985fe45951eb57957e
-SHA1 (patch-pdns_uuid-utils.cc) = 9c7ada4aa04379d7155c478585c44841d1a4fcf6
-SHA1 (patch-pdns_version.cc) = 25917c329dafa34e657fa31c7a9abd99110bb4b0
+BLAKE2s (pdns-4.9.5.tar.bz2) = 5695108093c45363e9eb3b2adc4ea3f6134a0c535ddd4e6c5510135985861b48
+SHA512 (pdns-4.9.5.tar.bz2) = ac1682b0616391240aa3dc618ea93855899987f2baa46546e6592a55fc0a83da1f1e2c08109d847a560e1a0c3106f7749935d0b152992ce85da715bb842d8dad
+Size (pdns-4.9.5.tar.bz2) = 1380263 bytes
+SHA1 (patch-pdns_dnsscope.cc) = 221b860350acad10e0d2f1a854d7930819a598de
+SHA1 (patch-pdns_misc.hh) = ffc2eea374157e25cae17743db900ff6e3101a66
+SHA1 (patch-pdns_qtype.hh) = 4d086e28e7bacc624cf7db199ac16ebafec88e04
+SHA1 (patch-pdns_version.cc) = 0e089c41260546e9ef9647eeb162becf158873d9
