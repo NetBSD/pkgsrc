@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/12/26 22:20:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/06/30 15:18:53 adam Exp $
 lib/pkgconfig/Qt6Designer.pc
 lib/pkgconfig/Qt6Help.pc
 lib/pkgconfig/Qt6Linguist.pc
@@ -238,6 +238,8 @@ qt6/include/QtHelp/qhelpsearchquerywidget.h
 qt6/include/QtHelp/qhelpsearchresult.h
 qt6/include/QtHelp/qhelpsearchresultwidget.h
 qt6/include/QtHelp/qthelpversion.h
+qt6/include/QtHelp/ui_qfilternamedialog.h
+qt6/include/QtHelp/ui_qhelpfiltersettingswidget.h
 qt6/include/QtQDocCatch/QtQDocCatchDepends
 qt6/include/QtQDocCatch/catch/catch.hpp
 qt6/include/QtQDocCatchConversions/QtQDocCatchConversionsDepends
@@ -307,6 +309,14 @@ qt6/lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateTargets-r
 qt6/lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateTargets.cmake
 qt6/lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateConfig.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateDependencies.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateTargets.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6DesignerPrivate/Qt6DesignerPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Help/Qt6HelpAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Help/Qt6HelpConfig.cmake
 qt6/lib/cmake/Qt6Help/Qt6HelpConfigVersion.cmake
@@ -323,6 +333,14 @@ qt6/lib/cmake/Qt6Help/Qt6QHelpEnginePluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Help/Qt6QHelpEnginePluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Help/Qt6QHelpEnginePluginTargets-release.cmake
 qt6/lib/cmake/Qt6Help/Qt6QHelpEnginePluginTargets.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateConfig.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateDependencies.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateTargets.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6HelpPrivate/Qt6HelpPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Linguist/Qt6LinguistAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Linguist/Qt6LinguistConfig.cmake
 qt6/lib/cmake/Qt6Linguist/Qt6LinguistConfigVersion.cmake
@@ -395,6 +413,14 @@ qt6/lib/cmake/Qt6UiTools/Qt6UiToolsTargets-release.cmake
 qt6/lib/cmake/Qt6UiTools/Qt6UiToolsTargets.cmake
 qt6/lib/cmake/Qt6UiTools/Qt6UiToolsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6UiTools/Qt6UiToolsVersionlessTargets.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateConfig.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateDependencies.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateTargets.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6UiToolsPrivate/Qt6UiToolsPrivateVersionlessTargets.cmake
 qt6/lib/libQt6Designer.prl
 qt6/lib/libQt6Designer.so
 qt6/lib/libQt6Designer.so.${PKGVERSION}

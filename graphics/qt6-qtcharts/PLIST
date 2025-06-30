@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:49 adam Exp $
 lib/pkgconfig/Qt6Charts.pc
 lib/pkgconfig/Qt6ChartsQml.pc
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractbarchartitem_p.h
@@ -298,6 +298,14 @@ qt6/lib/cmake/Qt6Charts/Qt6ChartsTargets-release.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsTargets.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateConfig.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateDependencies.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateTargets.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6ChartsPrivate/Qt6ChartsPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfig.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfigVersion.cmake
@@ -307,6 +315,14 @@ qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets-release.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlTargets.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlVersionlessTargets.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateConfig.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateDependencies.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateTargets.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6ChartsQmlPrivate/Qt6ChartsQmlPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2AdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2ConfigVersion.cmake

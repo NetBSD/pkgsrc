@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST.openxr,v 1.2 2024/12/26 22:20:17 adam Exp $
+@comment $NetBSD: PLIST.openxr,v 1.3 2025/06/30 15:18:52 adam Exp $
 lib/pkgconfig/Qt6Quick3DXr.pc
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qabstractopenxrgraphics_p.h
+qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrgraphics_metal_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrhelpers_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrinputmanager_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrplatform_p.h
+qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qquick3dxrabstracthapticeffect_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qquick3dxractionmapper_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qquick3dxranchormanager_openxr_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qquick3dxranimationdriver_p.h
@@ -54,6 +56,14 @@ qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DXr/Qt6Quick3DXrVersionlessTargets.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateConfig.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateDependencies.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateTargets.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6Quick3DXrPrivate/Qt6Quick3DXrPrivateVersionlessTargets.cmake
 qt6/lib/libQt6BundledOpenXR.a
 qt6/lib/libQt6Quick3DXr.${PKGVERSION}.so
 qt6/lib/libQt6Quick3DXr.prl

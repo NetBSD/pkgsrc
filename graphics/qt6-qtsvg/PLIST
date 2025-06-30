@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2024/12/26 22:20:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/06/30 15:18:53 adam Exp $
 lib/pkgconfig/Qt6Svg.pc
 lib/pkgconfig/Qt6SvgWidgets.pc
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgabstractanimation_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvganimate_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvganimatedproperty_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvganimator_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgcssanimation_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgcsshandler_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfilter_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfont_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvggraphics_p.h
@@ -10,6 +16,7 @@ qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgnode_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
+qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgutils_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgvisitor_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgglobal_p.h
 qt6/include/QtSvg/QSvgGenerator
@@ -54,6 +61,14 @@ qt6/lib/cmake/Qt6Svg/Qt6SvgTargets-release.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgTargets.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgVersionlessTargets.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfig.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateDependencies.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateTargets.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfig.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersion.cmake
@@ -63,6 +78,14 @@ qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateConfig.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateDependencies.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateTargets.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6SvgWidgetsPrivate/Qt6SvgWidgetsPrivateVersionlessTargets.cmake
 qt6/lib/libQt6Svg.prl
 qt6/lib/libQt6Svg.so
 qt6/lib/libQt6Svg.so.${PKGVERSION}

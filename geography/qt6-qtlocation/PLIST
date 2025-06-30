@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/06/30 15:18:51 adam Exp $
 lib/pkgconfig/Qt6Location.pc
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/error_messages_p.h
 qt6/include/QtLocation/${PKGVERSION}/QtLocation/private/qabstractgeotilecache_p.h
@@ -197,6 +197,14 @@ qt6/lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryOsmPluginConfigVersion.cm
 qt6/lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryOsmPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryOsmPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Location/Qt6QGeoServiceProviderFactoryOsmPluginTargets.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateConfig.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateDependencies.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateTargets.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6LocationPrivate/Qt6LocationPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6declarative_locationConfigVersion.cmake

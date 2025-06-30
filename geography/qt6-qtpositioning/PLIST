@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/26 22:20:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/06/30 15:18:51 adam Exp $
 lib/pkgconfig/Qt6Positioning.pc
 lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
@@ -114,6 +114,14 @@ qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginConfigVer
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryPollPluginTargets.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateConfig.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateDependencies.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateTargets.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6PositioningPrivate/Qt6PositioningPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickConfig.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickConfigVersion.cmake
@@ -123,6 +131,14 @@ qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickTargets-release.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickTargets.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickVersionlessTargets.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateConfig.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateDependencies.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6PositioningQuickPrivate/Qt6PositioningQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfigVersion.cmake

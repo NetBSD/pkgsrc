@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/24 14:16:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/06/30 15:18:53 adam Exp $
 
 DISTNAME=	qttranslations-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qttranslations-${QTVERSION}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Qt6 translations
 LICENSE=	modified-bsd AND gnu-gpl-v3
