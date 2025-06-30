@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4037 2025/06/30 20:25:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4038 2025/06/30 20:43:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6013,3 +6013,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xlsxwriter to 3.2.5 [adam 2025-06-30]
 	Updated devel/py-typeguard to 4.4.4 [adam 2025-06-30]
 	Updated www/py-starlette to 0.47.1 [adam 2025-06-30]
+	Updated devel/ninja-build to 1.13.0 [adam 2025-06-30]
+	Updated databases/py-multidict to 6.6.2 [adam 2025-06-30]
