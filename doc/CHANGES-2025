@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4043 2025/07/01 05:59:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4044 2025/07/01 07:14:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6024,3 +6024,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.functools to 4.2.1 [adam 2025-07-01]
 	Updated devel/py-jaraco.logging to 3.4.0 [adam 2025-07-01]
 	Updated devel/py-jaraco.collections to 5.2.1 [adam 2025-07-01]
+	Updated devel/py-greenlet to 3.2.3 [adam 2025-07-01]
+	Updated devel/py-scikit-build-core to 0.11.5 [adam 2025-07-01]
+	Updated net/py-zmq to 27.0.0 [adam 2025-07-01]
