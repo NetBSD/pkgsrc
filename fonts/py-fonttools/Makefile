@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2025/06/10 05:14:18 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2025/07/01 19:39:31 wiz Exp $
 
-DISTNAME=	fonttools-4.58.2
+DISTNAME=	fonttools-4.58.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	fonts python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/FontTools/}
@@ -20,9 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.1:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-zopfli>=0.1.4:../../archivers/py-zopfli
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
 
-# as of 4.58.2
+# as of 4.58.4
 # https://github.com/fonttools/fonttools/issues/3660
-# 19 failed, 4481 passed, 63 skipped, 2 xfailed, 23 warnings
+# 10 failed, 4492 passed, 63 skipped, 2 xfailed, 23 warnings
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
