@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2025/06/07 21:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/07/01 19:19:52 wiz Exp $
 
-DISTNAME=		enchant-2.8.6
+DISTNAME=		enchant-2.8.10
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rrthomas/}
@@ -40,6 +40,7 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.76
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.unittest-cpp=	build	# XXX: for tests
 .include "../../devel/unittest-cpp/buildlink3.mk"
