@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2025/03/31 13:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/07/01 16:24:47 wiz Exp $
 
-DISTNAME=		gnucash-docs-5.11
+DISTNAME=		gnucash-docs-5.12
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -12,9 +12,6 @@ LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
 DEPENDS+=		yelp-[0-9]*:../../misc/yelp3
 
 USE_TOOLS+=		bash
-
-# CMake Error: failed to create symbolic link '.../work/gnucash-docs-4.13/share/doc/HTML/de': File exists
-MAKE_JOBS_SAFE=		no
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
