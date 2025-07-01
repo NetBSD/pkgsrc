@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4100 2025/07/01 21:23:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4101 2025/07/01 21:24:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6092,3 +6092,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-c to 0.10.14 [wiz 2025-07-01]
 	Updated devel/rust-bindgen to 0.72.0 [wiz 2025-07-01]
 	Updated textproc/py-smartypants to 2.0.2 [wiz 2025-07-01]
+	Updated x11/py-qt-builder to 1.18.2 [wiz 2025-07-01]
