@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4050 2025/07/01 12:01:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4051 2025/07/01 13:42:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6038,3 +6038,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-scrapy to 2.13.2 [adam 2025-07-01]
 	Updated devel/py-maturin to 1.9.0 [adam 2025-07-01]
 	Updated textproc/py-markdown to 3.8.2 [adam 2025-07-01]
+	Updated sysutils/salt to 3007.5 [adam 2025-07-01]
+	Updated sysutils/salt-docs to 3007.5 [adam 2025-07-01]
