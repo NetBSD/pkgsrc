@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4039 2025/07/01 00:55:18 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4040 2025/07/01 05:09:23 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ninja-build to 1.13.0 [adam 2025-06-30]
 	Updated databases/py-multidict to 6.6.2 [adam 2025-06-30]
 	Updated www/snac to 2.79 [schmonz 2025-07-01]
+	Updated security/sudo to 1.9.17p1 [kim 2025-07-01]
