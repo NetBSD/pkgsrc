@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2025/04/19 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.245 2025/07/01 12:16:14 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -174,6 +174,14 @@ CPPFLAGS+=	-I${WRKDIR}
 LDFLAGS+=	-L${WRKDIR}/netpgp
 
 CONFIGURE_ENV+=	LIBS=${LIBS:Q}
+
+# XXX: libnbcompat provides this function, so libarchive configure thinks it
+# is available, but does not use nbcompat headers and thus falls foul of GCC
+# 14 implicit declaration checks later on.
+#
+# TODO: provide a sane environment for each inplace build, this is just
+# papering over cracks, libarchive should not be using libnbcompat at all.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_lchmod=no
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
