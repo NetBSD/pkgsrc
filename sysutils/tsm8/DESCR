@@ -1,1 +1,2 @@
-IBM Spectrum Protect (aka Tivoli Storage Manager) client
+Client for the IBM Storage Protect (aka Spectrum Protect, Tivoli Storage
+Manager, ADSM) hierarchical storage / backup system.

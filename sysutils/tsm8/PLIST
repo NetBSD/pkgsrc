@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/02 12:19:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/07/01 11:48:23 hauke Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
 emul/linux/etc/ld.so.conf.d/tsm_ld.so.conf
@@ -148,7 +148,7 @@ emul/linux/opt/tivoli/tsm/client/api/bin64/sample/makesmp64.linux86
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/release.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapifp.h
 emul/linux/opt/tivoli/tsm/client/api/bin64/sample/tsmapitd.h
-emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Storage_Protect_API-8.1.23.swidtag
+emul/linux/opt/tivoli/tsm/client/api/swidtag/ibm.com_IBM_Storage_Protect_API-8.1.27.swidtag
 emul/linux/opt/tivoli/tsm/client/ba/README.htm
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dscjres.txt
 emul/linux/opt/tivoli/tsm/client/ba/bin/CS_CZ/dsmc.hlp
@@ -360,9 +360,9 @@ emul/linux/opt/tivoli/tsm/client/ba/bin/vmtsmvss/register_app.vbs
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xercesImpl-2.12.2.jar
 ${PLIST.java}emul/linux/opt/tivoli/tsm/client/ba/bin/xmlParserAPIs_2_2_1.jar
 emul/linux/opt/tivoli/tsm/client/ba/client_message.chg
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.23.swidtag
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.23.swidtag.configured
-emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.23.swidtag.unconfigured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.27.swidtag
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.27.swidtag.configured
+emul/linux/opt/tivoli/tsm/client/ba/swidtag/ibm.com_IBM_Storage_Protect_Client_and_VSS_Requestor-8.1.27.swidtag.unconfigured
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_cs.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_de.txt
 emul/linux/opt/tivoli/tsm/license/api/sm/LA_el.txt
