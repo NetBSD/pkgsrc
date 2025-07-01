@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4061 2025/07/01 18:21:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4062 2025/07/01 18:37:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6053,3 +6053,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xenkernel418 to 20250701 [bouyer 2025-07-01]
 	Updated sysutils/xentools418 to 20250701 [bouyer 2025-07-01]
 	Updated emulators/mame to 0.278 [wiz 2025-07-01]
+	Updated archivers/py-zopfli to 0.2.3.1 [wiz 2025-07-01]
