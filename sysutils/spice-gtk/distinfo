@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/07/17 21:23:31 wiz Exp $
+$NetBSD: distinfo,v 1.6 2025/07/01 11:35:06 adam Exp $
 
-BLAKE2s (spice-gtk-0.41.tar.xz) = 9c86d44371e37e7a52ad9843d98ed404e5a5ae3eef31916ac9d4cbe8009aa012
-SHA512 (spice-gtk-0.41.tar.xz) = bfd97c98c8bdbc29da0f26c38dfcf75d9f17e5358d4c7fa9c36e4974d0df3ce92409ca568dfc790d43f581d00b94090d9e60154e83220a719d678b596c87fcef
-Size (spice-gtk-0.41.tar.xz) = 827320 bytes
-SHA1 (patch-vapi_meson.build) = ab38cab9efb27a59874f45679e2bc6e63512ec0c
+BLAKE2s (spice-gtk-0.42.tar.xz) = b8cd475d17f7a4a970fbeae6889535bb44d991bdf800e5708f890a5bca14e739
+SHA512 (spice-gtk-0.42.tar.xz) = fd567e35f6d4ebfe6ef004f358dca4c41254336f55f7dd26cf67b62b2acb4866907186bd0526b7cb52b0c24020cdc8809251127498a8d357555bb0c5d3b8f137
+Size (spice-gtk-0.42.tar.xz) = 812776 bytes
+SHA1 (patch-src_meson.build) = 8b54554a69ce51c1d3f947d0200845b3c2eb6555

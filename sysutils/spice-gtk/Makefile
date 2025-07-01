@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/04/24 14:15:50 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/01 11:35:06 adam Exp $
 
-DISTNAME=	spice-gtk-0.41
-PKGREVISION=	16
+DISTNAME=	spice-gtk-0.42
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.spice-space.org/download/gtk/
 EXTRACT_SUFX=	.tar.xz
@@ -25,14 +24,18 @@ PKGCONFIG_OVERRIDE+=	spice-client-gtk-3.0.pc.in
 MESON_ARGS+=		-Dintrospection=enabled
 MESON_ARGS+=		-Dvapi=enabled
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/src
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/src
 
-.include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/vala/buildlink3.mk"
-.include "../../devel/meson/build.mk"
-.include "../../lang/python/pyversion.mk"
-.include "../../lang/python/tool.mk"
+REPLACE_PYTHON=	subprojects/keycodemapdb/tools/keymap-gen
+
 .include "../../audio/libopus/buildlink3.mk"
+.include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
+.include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.spice-protocol+=	spice-protocol>=0.14.1
