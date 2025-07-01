@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.17 2025/04/02 12:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/01 11:48:23 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.23.0
+PKGVER=		8.1.27.0
 PKGNAME=	${DISTNAME:C/-/8-/}
-PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8123/
+MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8127/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	https://www.ibm.com/us-en/marketplace/data-protection-and-recovery
-COMMENT=	IBM Spectrum Protect (aka Tivoli Storage Manager) Backup Client
+HOMEPAGE=	https://www.ibm.com/products/storage-protect
+COMMENT=	IBM Storage Protect (aka Tivoli Storage Manager) Backup Client
 
 CONFLICTS+=	tsm-[0-9]*
 
@@ -32,7 +31,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1].*-*
+NOT_FOR_PLATFORM=	Linux-*-*
 
 EMUL_PLATFORMS=		linux-x86_64
 #EMUL_REQD=		suse>=13.1
@@ -51,8 +50,8 @@ USE_TOOLS+=		rpm2pkg grep sed
 
 RPMFILES=		${WRKDIR}/TIVsm-BA.x86_64.rpm \
 			${WRKDIR}/TIVsm-API64.x86_64.rpm \
-			${WRKDIR}/gskcrypt64-8.0.55.31.linux.x86_64.rpm \
-			${WRKDIR}/gskssl64-8.0.55.31.linux.x86_64.rpm
+			${WRKDIR}/gskcrypt64-8.0.60.4.linux.x86_64.rpm \
+			${WRKDIR}/gskssl64-8.0.60.4.linux.x86_64.rpm
 
 EMUL_PKG_FMT=		rpm
 RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
@@ -77,6 +76,14 @@ SUBST_SED.paths=	-e "s,%PKG_SYSCONFDIR%,${PKG_SYSCONFDIR},g"
 SUBST_SED.paths+=	-e "s,%PREFIX%,${PREFIX},g"
 SUBST_SED.paths+=	-e "s,%VARBASE%,${VARBASE},g"
 
+.if !empty(PKG_OPTIONS:Mjava)
+SUBST_CLASSES+=		jpath
+SUBST_MESSAGE.jpath=	Setting Java Runtime path
+SUBST_STAGE.jpath=	post-install
+SUBST_FILES.jpath=	${DESTDIR}${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsmj
+SUBST_SED.jpath=	-E -e "s,^(JAVAPATH=.+$$),PATH=${PKG_JAVA_HOME}/bin:$$\\PATH ; export PATH\n\1,"
+.endif
+
 MESSAGE_SUBST+=		EMULDIR=${EMULDIR}
 
 INSTALLATION_DIRS+=	bin emul/linux/etc/ld.so.conf.d ${DOC_DIR} ${EG_DIR}
@@ -90,10 +97,9 @@ do-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/${DISTFILES:Q}
 
 post-install:
-	test -h ${DESTDIR}${PREFIX}/emul/linux/etc/init.d/dsmcad && \
-		rm ${DESTDIR}${PREFIX}/emul/linux/etc/init.d/dsmcad
 .if empty(PKG_OPTIONS:Mjava)
-	for bb in `${SED} -e '/^[$$]{PLIST\\.java}/!d' -e 's/^[$$]{PLIST\\.java}//g' ${PLIST_SRC}`; do \
+	for bb in `${SED} -e '/^[$$]{PLIST\\.java}/!d' \
+		-e 's/^[$$]{PLIST\\.java}//g' ${PLIST_SRC}`; do \
 	    ${RM} -f ${DESTDIR}${PREFIX}/$${bb}; \
 	done
 .else
