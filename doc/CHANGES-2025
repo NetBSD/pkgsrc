@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4095 2025/07/01 21:05:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4096 2025/07/01 21:07:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6087,3 +6087,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14-gnat-libs to 14.3.0nb1 [dkazankov 2025-07-01]
 	Updated security/p5-IO-Socket-SSL to 2.094 [wiz 2025-07-01]
 	Updated security/p5-Module-Signature to 0.93 [wiz 2025-07-01]
+	Updated devel/p5-Specio to 0.51 [wiz 2025-07-01]
