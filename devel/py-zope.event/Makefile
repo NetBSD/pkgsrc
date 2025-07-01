@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/27 08:54:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/01 11:38:54 adam Exp $
 
-DISTNAME=	zope.event-5.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	zope_event-5.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.event/}
 
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.event
 COMMENT=	Very basic event publishing system
 LICENSE=	zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
