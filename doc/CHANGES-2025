@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4082 2025/07/01 19:45:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4083 2025/07/01 19:51:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6074,3 +6074,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.174.0 [wiz 2025-07-01]
 	Updated devel/py-license-expression to 30.4.3 [wiz 2025-07-01]
 	Updated lang/py-lsprotocol to 2025.0.0 [wiz 2025-07-01]
+	Updated textproc/py-lxml to 6.0.0 [wiz 2025-07-01]
