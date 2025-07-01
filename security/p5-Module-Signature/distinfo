@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/06/15 13:21:14 wiz Exp $
+$NetBSD: distinfo,v 1.24 2025/07/01 21:04:58 wiz Exp $
 
-BLAKE2s (Module-Signature-0.90.tar.gz) = 5ee13fecaca2db5c3de03cf786f28daa8e120109d6693f8d2c438ca3732b2e58
-SHA512 (Module-Signature-0.90.tar.gz) = a8b794ce3fa0b68d3aec49b014dfe4f8f0a7fd49d444827aaeaf164559998d25223925a63e734c71aa899f176c72f17d9e1886970ec30091f3817bf0419396aa
-Size (Module-Signature-0.90.tar.gz) = 101990 bytes
+BLAKE2s (Module-Signature-0.93.tar.gz) = 13e913c86e5f10525fc1f445fcad428b2f68770842c5de434b40ed8f928cb0ab
+SHA512 (Module-Signature-0.93.tar.gz) = 0474c286a7432a600fb42481cb72fe03db8a37d4ea6909a643d1dcf76cf4b0408ac6d2554fcfb880d53f04de58b0a289b99ce510fee0d596546b73397ef46f5a
+Size (Module-Signature-0.93.tar.gz) = 92260 bytes
