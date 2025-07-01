@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/04/12 15:57:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/07/01 19:50:57 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -45,6 +45,10 @@ ${PYSITELIB}/lxml/html/__init__.pyo
 ${PYSITELIB}/lxml/html/_diffcommand.py
 ${PYSITELIB}/lxml/html/_diffcommand.pyc
 ${PYSITELIB}/lxml/html/_diffcommand.pyo
+${PYSITELIB}/lxml/html/_difflib.py
+${PYSITELIB}/lxml/html/_difflib.pyc
+${PYSITELIB}/lxml/html/_difflib.pyo
+${PYSITELIB}/lxml/html/_difflib.so
 ${PYSITELIB}/lxml/html/_html5builder.py
 ${PYSITELIB}/lxml/html/_html5builder.pyc
 ${PYSITELIB}/lxml/html/_html5builder.pyo
