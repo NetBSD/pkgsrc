@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4052 2025/07/01 14:47:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4053 2025/07/01 14:54:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6042,3 +6042,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/salt-docs to 3007.5 [adam 2025-07-01]
 	Updated security/openssl to 3.5.1 [adam 2025-07-01]
 	Updated devel/py-test-xdist to 3.8.0 [adam 2025-07-01]
+	Updated mail/rspamd to 3.12.1 [schmonz 2025-07-01]
