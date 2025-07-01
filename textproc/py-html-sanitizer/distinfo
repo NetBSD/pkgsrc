@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/03 13:49:26 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/07/01 10:29:08 adam Exp $
 
-BLAKE2s (html_sanitizer-2.5.0.tar.gz) = f571d844dcf42a71af2291b55c09119aa6ec22cece2e3d0913a7203000e284fe
-SHA512 (html_sanitizer-2.5.0.tar.gz) = 37bd7184ec207403cdbb0c9a1eceddd20751a1193d2da0004d811bf0bb814181f5d6e207f3e94ac74603281a7ae7355651e818d6b8cc05154a06eb09e08b9203
-Size (html_sanitizer-2.5.0.tar.gz) = 17489 bytes
+BLAKE2s (html_sanitizer-2.6.0.tar.gz) = 9345f59a74faaed8bf403fe3cebfe3e3ad4990993c8c5ef7aecbdc230ae7dcfd
+SHA512 (html_sanitizer-2.6.0.tar.gz) = 74035d4d3d6bf8f6621ae07924d569e813954d39cd7113f1e39b3cdbcc1fa9c51a104857bd78ccd2edeb274aa43a093bfa4a5623fa729abbf93d390f2b73565b
+Size (html_sanitizer-2.6.0.tar.gz) = 17843 bytes
