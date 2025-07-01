@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/21 05:51:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/07/01 07:10:01 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -34,6 +34,7 @@ ${PYSITELIB}/greenlet/greenlet_compiler_compat.hpp
 ${PYSITELIB}/greenlet/greenlet_cpython_compat.hpp
 ${PYSITELIB}/greenlet/greenlet_exceptions.hpp
 ${PYSITELIB}/greenlet/greenlet_internal.hpp
+${PYSITELIB}/greenlet/greenlet_msvc_compat.hpp
 ${PYSITELIB}/greenlet/greenlet_refs.hpp
 ${PYSITELIB}/greenlet/greenlet_slp_switch.hpp
 ${PYSITELIB}/greenlet/greenlet_thread_support.hpp
