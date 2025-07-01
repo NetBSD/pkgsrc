@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4038 2025/06/30 20:43:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4039 2025/07/01 00:55:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-starlette to 0.47.1 [adam 2025-06-30]
 	Updated devel/ninja-build to 1.13.0 [adam 2025-06-30]
 	Updated databases/py-multidict to 6.6.2 [adam 2025-06-30]
+	Updated www/snac to 2.79 [schmonz 2025-07-01]
