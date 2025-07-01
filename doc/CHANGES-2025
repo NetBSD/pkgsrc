@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4040 2025/07/01 05:09:23 kim Exp $
+$NetBSD: CHANGES-2025,v 1.4041 2025/07/01 05:17:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6017,3 +6017,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-multidict to 6.6.2 [adam 2025-06-30]
 	Updated www/snac to 2.79 [schmonz 2025-07-01]
 	Updated security/sudo to 1.9.17p1 [kim 2025-07-01]
+	Updated databases/py-multidict to 6.6.3 [adam 2025-07-01]
+	Updated net/yt-dlp to 2025.6.30 [adam 2025-07-01]
