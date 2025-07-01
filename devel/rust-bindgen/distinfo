@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/01/17 09:59:08 pin Exp $
+$NetBSD: distinfo,v 1.5 2025/07/01 21:21:18 wiz Exp $
 
 BLAKE2s (rust-bindgen/aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (rust-bindgen/aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -162,9 +162,9 @@ Size (rust-bindgen/regex-automata-0.4.9.crate) = 618525 bytes
 BLAKE2s (rust-bindgen/regex-syntax-0.8.5.crate) = a64af5c9a6aceb9d4e37b662d7c8b599d4179b3642f92cb8b511ba3f650b93e5
 SHA512 (rust-bindgen/regex-syntax-0.8.5.crate) = 549d8d130fea9ec0d5806126f57f31d433f50e9328c5532ad417c44bb5488ec0d20acb0983dbe54dabaa0b453cbea4533cf7baac7144df119e8f78dfe55c5ab8
 Size (rust-bindgen/regex-syntax-0.8.5.crate) = 357541 bytes
-BLAKE2s (rust-bindgen/rust-bindgen-0.71.1.tar.gz) = 7748fb6e66fd29b33c142b9a5230f8cbb97a08123e6088f8a01c6ad7fccd0c3a
-SHA512 (rust-bindgen/rust-bindgen-0.71.1.tar.gz) = c900bd3780074c9f8df5dfb349cdfd59a8a71b5ac7fd63b18eb31c7fa3ab1fb5e656ff05bb7461ddc70c40a65ef73155007abea566c9d5deb41cda901a9fd57d
-Size (rust-bindgen/rust-bindgen-0.71.1.tar.gz) = 2324976 bytes
+BLAKE2s (rust-bindgen/rust-bindgen-0.72.0.tar.gz) = ec9761f9d57f56c3804c997d6b5c210e977e47b3e07e68e6a424bfc23e71544e
+SHA512 (rust-bindgen/rust-bindgen-0.72.0.tar.gz) = 606bcf2bb087cfc16dbc28f47515684cb7cc0fa2bae624c789d6aa54e873d9b8970de020c8f19d5952a2263675a39bce91132a66dbfcb44bf3520ad86682d8f8
+Size (rust-bindgen/rust-bindgen-0.72.0.tar.gz) = 2332610 bytes
 BLAKE2s (rust-bindgen/rustc-hash-2.1.0.crate) = bb4271bf539f3c7ec62d9f737c7436dc860c54dcdea4cae2b7fac14ee8975431
 SHA512 (rust-bindgen/rustc-hash-2.1.0.crate) = 6f6a40586fd7a99016efd53888970c745888a06bb6b9d32eeb4936bcd16906c90ba22fad82a4a6b547df4b6c9cf6d73eaa8d36af097d65d3d6de18a0669d5ad2
 Size (rust-bindgen/rustc-hash-2.1.0.crate) = 13316 bytes
