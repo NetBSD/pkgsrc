@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4096 2025/07/01 21:07:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4097 2025/07/01 21:10:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6088,3 +6088,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-IO-Socket-SSL to 2.094 [wiz 2025-07-01]
 	Updated security/p5-Module-Signature to 0.93 [wiz 2025-07-01]
 	Updated devel/p5-Specio to 0.51 [wiz 2025-07-01]
+	Updated www/p5-libwww to 6.79 [wiz 2025-07-01]
