@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4045 2025/07/01 08:10:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4046 2025/07/01 10:29:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6029,3 +6029,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zmq to 27.0.0 [adam 2025-07-01]
 	Updated devel/py-versioningit to 3.3.0 [adam 2025-07-01]
 	Updated www/py-uvicorn to 0.35.0 [adam 2025-07-01]
+	Updated devel/py-cachetools to 6.1.0 [adam 2025-07-01]
+	Updated textproc/py-html-sanitizer to 2.6.0 [adam 2025-07-01]
