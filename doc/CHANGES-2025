@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4073 2025/07/01 19:29:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4074 2025/07/01 19:31:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6065,3 +6065,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/texlab to 5.23.1 [wiz 2025-07-01]
 	Updated devel/gopls to 0.19.1 [wiz 2025-07-01]
 	Updated devel/py-aiostream to 0.7.0 [wiz 2025-07-01]
+	Updated devel/py-codestyle to 2.14.0 [wiz 2025-07-01]
