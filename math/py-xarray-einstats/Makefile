@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/05/30 11:00:25 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/01 05:29:29 adam Exp $
 
-DISTNAME=	xarray_einstats-0.9.0
+DISTNAME=	xarray_einstats-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray-einstats/}
