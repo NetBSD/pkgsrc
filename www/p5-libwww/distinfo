@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.83 2025/02/23 11:21:48 wiz Exp $
+$NetBSD: distinfo,v 1.84 2025/07/01 21:10:21 wiz Exp $
 
-BLAKE2s (libwww-perl-6.78.tar.gz) = 227ed4330b1e5d630cc9eeb3b62ba671f207bd75e9bf5f4c883b73ec52240bdd
-SHA512 (libwww-perl-6.78.tar.gz) = 8582a7f2fc2599056b61ade169563f9ced40c5a4193e297e5a26e2fe68b60f0bdff5c60197bd5b359ffde6f5c033393ad013b7cf68aaac790d73198fd63d2f99
-Size (libwww-perl-6.78.tar.gz) = 184340 bytes
+BLAKE2s (libwww-perl-6.79.tar.gz) = d49c7d9f14e6f684865fbdbf2f8fecd5e3478ef0b6321706449853c3dc1f9a6b
+SHA512 (libwww-perl-6.79.tar.gz) = 0546003f9b780875a684bfd6aeca9c213cb1bf9f021f0c5872871c39ff5415d53d005fff0e2ba968d8f5a43b811fab1fe7696dcd2296de8344939e7a8da20ebe
+Size (libwww-perl-6.79.tar.gz) = 184691 bytes
