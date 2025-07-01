@@ -1013,8 +1013,10 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_tar_empty_with_gnulabel.c \
 	libarchive/test/test_read_format_tar_filename.c \
 	libarchive/test/test_read_format_tar_invalid_pax_size.c \
+	libarchive/test/test_read_format_tar_mac_metadata.c \
 	libarchive/test/test_read_format_tar_pax_g_large.c \
 	libarchive/test/test_read_format_tar_pax_large_attr.c \
+	libarchive/test/test_read_format_tar_pax_negative_time.c \
 	libarchive/test/test_read_format_tbz.c \
 	libarchive/test/test_read_format_tgz.c \
 	libarchive/test/test_read_format_tlz.c \
@@ -1047,6 +1049,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_zip_zip64.c \
 	libarchive/test/test_read_format_zip_with_invalid_traditional_eocd.c \
 	libarchive/test/test_read_large.c \
+	libarchive/test/test_read_pax_empty_val_no_nl.c \
 	libarchive/test/test_read_pax_xattr_rht_security_selinux.c \
 	libarchive/test/test_read_pax_xattr_schily.c \
 	libarchive/test/test_read_pax_truncated.c \
@@ -1452,8 +1455,10 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_tar_empty_with_gnulabel.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_filename.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_invalid_pax_size.$(OBJEXT) \
+	libarchive/test/test-test_read_format_tar_mac_metadata.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_pax_g_large.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tar_pax_large_attr.$(OBJEXT) \
+	libarchive/test/test-test_read_format_tar_pax_negative_time.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tbz.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tgz.$(OBJEXT) \
 	libarchive/test/test-test_read_format_tlz.$(OBJEXT) \
@@ -1486,6 +1491,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_zip_zip64.$(OBJEXT) \
 	libarchive/test/test-test_read_format_zip_with_invalid_traditional_eocd.$(OBJEXT) \
 	libarchive/test/test-test_read_large.$(OBJEXT) \
+	libarchive/test/test-test_read_pax_empty_val_no_nl.$(OBJEXT) \
 	libarchive/test/test-test_read_pax_xattr_rht_security_selinux.$(OBJEXT) \
 	libarchive/test/test-test_read_pax_xattr_schily.$(OBJEXT) \
 	libarchive/test/test-test_read_pax_truncated.$(OBJEXT) \
@@ -2108,8 +2114,10 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_tlz.Po \
@@ -2142,6 +2150,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_zip_with_invalid_traditional_eocd.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_zip_zip64.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_large.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_pax_truncated.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_rht_security_selinux.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_schily.Po \
@@ -3221,8 +3230,10 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_tar_empty_with_gnulabel.c \
 	libarchive/test/test_read_format_tar_filename.c \
 	libarchive/test/test_read_format_tar_invalid_pax_size.c \
+	libarchive/test/test_read_format_tar_mac_metadata.c \
 	libarchive/test/test_read_format_tar_pax_g_large.c \
 	libarchive/test/test_read_format_tar_pax_large_attr.c \
+	libarchive/test/test_read_format_tar_pax_negative_time.c \
 	libarchive/test/test_read_format_tbz.c \
 	libarchive/test/test_read_format_tgz.c \
 	libarchive/test/test_read_format_tlz.c \
@@ -3255,6 +3266,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_zip_zip64.c \
 	libarchive/test/test_read_format_zip_with_invalid_traditional_eocd.c \
 	libarchive/test/test_read_large.c \
+	libarchive/test/test_read_pax_empty_val_no_nl.c \
 	libarchive/test/test_read_pax_xattr_rht_security_selinux.c \
 	libarchive/test/test_read_pax_xattr_schily.c \
 	libarchive/test/test_read_pax_truncated.c \
@@ -3656,8 +3668,10 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_tar_empty_pax.tar.Z.uu \
 	libarchive/test/test_read_format_tar_filename_koi8r.tar.Z.uu \
 	libarchive/test/test_read_format_tar_invalid_pax_size.tar.uu \
+	libarchive/test/test_read_format_tar_mac_metadata_1.tar.uu \
 	libarchive/test/test_read_format_tar_pax_g_large.tar.uu \
 	libarchive/test/test_read_format_tar_pax_large_attr.tar.Z.uu \
+	libarchive/test/test_read_format_tar_pax_negative_time.tar.uu \
 	libarchive/test/test_read_format_ustar_filename_cp866.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_eucjp.tar.Z.uu \
 	libarchive/test/test_read_format_ustar_filename_koi8r.tar.Z.uu \
@@ -3722,6 +3736,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_large_splitted_rar_ac.uu \
 	libarchive/test/test_read_large_splitted_rar_ad.uu \
 	libarchive/test/test_read_large_splitted_rar_ae.uu \
+	libarchive/test/test_read_pax_empty_val_no_nl.tar.uu \
 	libarchive/test/test_read_pax_xattr_rht_security_selinux.tar.uu \
 	libarchive/test/test_read_pax_xattr_schily.tar.uu \
 	libarchive/test/test_read_splitted_rar_aa.uu \
@@ -6049,10 +6064,16 @@ libarchive/test/test-test_read_format_tar_filename.$(OBJEXT):  \
 libarchive/test/test-test_read_format_tar_invalid_pax_size.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_tar_mac_metadata.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_tar_pax_g_large.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_tar_pax_large_attr.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_tar_pax_negative_time.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_tbz.$(OBJEXT):  \
@@ -6149,6 +6170,9 @@ libarchive/test/test-test_read_format_zip_with_invalid_traditional_eocd.$(OBJEXT
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_large.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_pax_empty_val_no_nl.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_pax_xattr_rht_security_selinux.$(OBJEXT):  \
@@ -6985,8 +7009,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_tlz.Po@am__quote@ # am--include-marker
@@ -7019,6 +7045,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_zip_with_invalid_traditional_eocd.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_zip_zip64.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_large.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_pax_truncated.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_rht_security_selinux.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_schily.Po@am__quote@ # am--include-marker
@@ -14065,6 +14092,20 @@ libarchive/test/test-test_read_format_tar_invalid_pax_size.obj: libarchive/test/
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_invalid_pax_size.obj `if test -f 'libarchive/test/test_read_format_tar_invalid_pax_size.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_invalid_pax_size.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_invalid_pax_size.c'; fi`
 
+libarchive/test/test-test_read_format_tar_mac_metadata.o: libarchive/test/test_read_format_tar_mac_metadata.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_mac_metadata.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Tpo -c -o libarchive/test/test-test_read_format_tar_mac_metadata.o `test -f 'libarchive/test/test_read_format_tar_mac_metadata.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_mac_metadata.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_mac_metadata.c' object='libarchive/test/test-test_read_format_tar_mac_metadata.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_mac_metadata.o `test -f 'libarchive/test/test_read_format_tar_mac_metadata.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_mac_metadata.c
+
+libarchive/test/test-test_read_format_tar_mac_metadata.obj: libarchive/test/test_read_format_tar_mac_metadata.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_mac_metadata.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Tpo -c -o libarchive/test/test-test_read_format_tar_mac_metadata.obj `if test -f 'libarchive/test/test_read_format_tar_mac_metadata.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_mac_metadata.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_mac_metadata.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_mac_metadata.c' object='libarchive/test/test-test_read_format_tar_mac_metadata.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_mac_metadata.obj `if test -f 'libarchive/test/test_read_format_tar_mac_metadata.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_mac_metadata.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_mac_metadata.c'; fi`
+
 libarchive/test/test-test_read_format_tar_pax_g_large.o: libarchive/test/test_read_format_tar_pax_g_large.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_g_large.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_g_large.o `test -f 'libarchive/test/test_read_format_tar_pax_g_large.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_g_large.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
@@ -14092,6 +14133,20 @@ libarchive/test/test-test_read_format_tar_pax_large_attr.obj: libarchive/test/te
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_pax_large_attr.c' object='libarchive/test/test-test_read_format_tar_pax_large_attr.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_pax_large_attr.obj `if test -f 'libarchive/test/test_read_format_tar_pax_large_attr.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_pax_large_attr.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_pax_large_attr.c'; fi`
+
+libarchive/test/test-test_read_format_tar_pax_negative_time.o: libarchive/test/test_read_format_tar_pax_negative_time.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_negative_time.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_negative_time.o `test -f 'libarchive/test/test_read_format_tar_pax_negative_time.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_negative_time.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_pax_negative_time.c' object='libarchive/test/test-test_read_format_tar_pax_negative_time.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_pax_negative_time.o `test -f 'libarchive/test/test_read_format_tar_pax_negative_time.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tar_pax_negative_time.c
+
+libarchive/test/test-test_read_format_tar_pax_negative_time.obj: libarchive/test/test_read_format_tar_pax_negative_time.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tar_pax_negative_time.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Tpo -c -o libarchive/test/test-test_read_format_tar_pax_negative_time.obj `if test -f 'libarchive/test/test_read_format_tar_pax_negative_time.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_pax_negative_time.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_pax_negative_time.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_tar_pax_negative_time.c' object='libarchive/test/test-test_read_format_tar_pax_negative_time.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_tar_pax_negative_time.obj `if test -f 'libarchive/test/test_read_format_tar_pax_negative_time.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_tar_pax_negative_time.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_tar_pax_negative_time.c'; fi`
 
 libarchive/test/test-test_read_format_tbz.o: libarchive/test/test_read_format_tbz.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_tbz.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Tpo -c -o libarchive/test/test-test_read_format_tbz.o `test -f 'libarchive/test/test_read_format_tbz.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_tbz.c
@@ -14540,6 +14595,20 @@ libarchive/test/test-test_read_large.obj: libarchive/test/test_read_large.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_large.c' object='libarchive/test/test-test_read_large.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_large.obj `if test -f 'libarchive/test/test_read_large.c'; then $(CYGPATH_W) 'libarchive/test/test_read_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_large.c'; fi`
+
+libarchive/test/test-test_read_pax_empty_val_no_nl.o: libarchive/test/test_read_pax_empty_val_no_nl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_pax_empty_val_no_nl.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Tpo -c -o libarchive/test/test-test_read_pax_empty_val_no_nl.o `test -f 'libarchive/test/test_read_pax_empty_val_no_nl.c' || echo '$(srcdir)/'`libarchive/test/test_read_pax_empty_val_no_nl.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Tpo libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_pax_empty_val_no_nl.c' object='libarchive/test/test-test_read_pax_empty_val_no_nl.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_pax_empty_val_no_nl.o `test -f 'libarchive/test/test_read_pax_empty_val_no_nl.c' || echo '$(srcdir)/'`libarchive/test/test_read_pax_empty_val_no_nl.c
+
+libarchive/test/test-test_read_pax_empty_val_no_nl.obj: libarchive/test/test_read_pax_empty_val_no_nl.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_pax_empty_val_no_nl.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Tpo -c -o libarchive/test/test-test_read_pax_empty_val_no_nl.obj `if test -f 'libarchive/test/test_read_pax_empty_val_no_nl.c'; then $(CYGPATH_W) 'libarchive/test/test_read_pax_empty_val_no_nl.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_pax_empty_val_no_nl.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Tpo libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_pax_empty_val_no_nl.c' object='libarchive/test/test-test_read_pax_empty_val_no_nl.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_pax_empty_val_no_nl.obj `if test -f 'libarchive/test/test_read_pax_empty_val_no_nl.c'; then $(CYGPATH_W) 'libarchive/test/test_read_pax_empty_val_no_nl.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_pax_empty_val_no_nl.c'; fi`
 
 libarchive/test/test-test_read_pax_xattr_rht_security_selinux.o: libarchive/test/test_read_pax_xattr_rht_security_selinux.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_pax_xattr_rht_security_selinux.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_rht_security_selinux.Tpo -c -o libarchive/test/test-test_read_pax_xattr_rht_security_selinux.o `test -f 'libarchive/test/test_read_pax_xattr_rht_security_selinux.c' || echo '$(srcdir)/'`libarchive/test/test_read_pax_xattr_rht_security_selinux.c
@@ -17160,8 +17229,10 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tlz.Po
@@ -17194,6 +17265,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_with_invalid_traditional_eocd.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_zip64.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_large.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_truncated.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_rht_security_selinux.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_schily.Po
@@ -17963,8 +18035,10 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_empty_with_gnulabel.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_filename.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_invalid_pax_size.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_mac_metadata.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_g_large.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_large_attr.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tar_pax_negative_time.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tbz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tgz.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_tlz.Po
@@ -17997,6 +18071,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_with_invalid_traditional_eocd.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_zip_zip64.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_large.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_empty_val_no_nl.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_truncated.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_rht_security_selinux.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_pax_xattr_schily.Po
