@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/10/30 14:35:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/07/01 19:34:11 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -56,6 +56,9 @@ ${PYSITELIB}/cyclonedx/model/bom_ref.pyo
 ${PYSITELIB}/cyclonedx/model/component.py
 ${PYSITELIB}/cyclonedx/model/component.pyc
 ${PYSITELIB}/cyclonedx/model/component.pyo
+${PYSITELIB}/cyclonedx/model/component_evidence.py
+${PYSITELIB}/cyclonedx/model/component_evidence.pyc
+${PYSITELIB}/cyclonedx/model/component_evidence.pyo
 ${PYSITELIB}/cyclonedx/model/contact.py
 ${PYSITELIB}/cyclonedx/model/contact.pyc
 ${PYSITELIB}/cyclonedx/model/contact.pyo
