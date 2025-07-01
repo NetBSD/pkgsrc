@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25942 2025/07/01 19:29:37 wiz Exp $
+$NetBSD: TODO,v 1.25943 2025/07/01 19:31:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1109,7 +1109,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
-	o py-codestyle-2.14.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cyclonedx-python-lib-10.2.0
 	o py-ephem3-3.7.6.0
