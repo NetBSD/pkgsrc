@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/12/16 10:06:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/07/01 16:24:47 wiz Exp $
 share/gnucash-docs/COPYING
 share/gnucash-docs/COPYING-DOCS
 share/help/C/gnucash-guide/appendixa.docbook
@@ -600,7 +600,6 @@ share/help/de/gnucash-manual/index.docbook
 share/help/de/gnucash-manual/legal.docbook
 share/help/de/gnucash-manual/para-assist-buttons.docbook
 share/help/de/gnucash-manual/para-assist-intro.docbook
-share/help/de/gnucash-manual/tips-appendix.docbook
 share/help/de/gnucash-manual/txf-categories.docbook
 share/help/it/gnucash-guide/figures/accts_CreateAssetsAccount.png
 share/help/it/gnucash-guide/figures/accts_DefaultExpenseAccounts.png
