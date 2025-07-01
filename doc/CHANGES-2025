@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4064 2025/07/01 18:52:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4065 2025/07/01 18:58:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6056,3 +6056,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-zopfli to 0.2.3.1 [wiz 2025-07-01]
 	Updated devel/nss to 3.113.1 [wiz 2025-07-01]
 	Updated devel/wayland-protocols to 1.45 [wiz 2025-07-01]
+	Updated devel/ast-grep to 0.38.6 [wiz 2025-07-01]
