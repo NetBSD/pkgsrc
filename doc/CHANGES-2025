@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4099 2025/07/01 21:21:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4100 2025/07/01 21:23:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6091,3 +6091,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-libwww to 6.79 [wiz 2025-07-01]
 	Updated devel/cargo-c to 0.10.14 [wiz 2025-07-01]
 	Updated devel/rust-bindgen to 0.72.0 [wiz 2025-07-01]
+	Updated textproc/py-smartypants to 2.0.2 [wiz 2025-07-01]
