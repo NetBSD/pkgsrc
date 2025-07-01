@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/02/08 14:05:03 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/07/01 20:15:15 dkazankov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc13-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
@@ -44,7 +44,10 @@ PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 ###
 ### Native Language Support
 ###
+PLIST_VARS+=		nls
+PRINT_PLIST_AWK+=	/\/share\/locale\/.*[.]mo$$/ { $$0 = "$${PLIST.nls}" $$0 }
 .if !empty(PKG_OPTIONS:Mnls)
+PLIST.nls=		yes
 USE_TOOLS+=msgfmt
 CONFIGURE_ARGS+=--enable-nls
 CONFIGURE_ARGS+=--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
