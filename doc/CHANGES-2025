@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4054 2025/07/01 15:04:15 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4055 2025/07/01 15:15:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-xdist to 3.8.0 [adam 2025-07-01]
 	Updated mail/rspamd to 3.12.1 [schmonz 2025-07-01]
 	Updated devel/swagger-codegen to 3.0.70 [schmonz 2025-07-01]
+	Updated www/p5-Playwright to 1.531 [schmonz 2025-07-01]
