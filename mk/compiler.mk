@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.112 2025/01/21 17:34:46 triaxx Exp $
+# $NetBSD: compiler.mk,v 1.113 2025/07/01 19:56:04 dkazankov Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -90,6 +90,15 @@
 #	Valid values are: c++11, c++14, c++17, c++20, c++23, has_include,
 #	regex, filesystem, unique_ptr, charconv, parallelism_ts,
 #	put_time, is_trivially_copy_constructible.
+#
+# USE_ADA_FEATURES
+#
+# 	Declares the Ada compiler features required by the package.
+#
+#	This is used to (optionally) install a newer compiler
+#	than provided by the system, to or skip building the package.
+#
+#	Valid values are: gnat2020, gnat2022, ada2022.
 #
 # FORCE_C_STD
 #
