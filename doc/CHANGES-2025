@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4087 2025/07/01 20:17:46 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4088 2025/07/01 20:24:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6079,3 +6079,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-numpy to 2.3.1 [wiz 2025-07-01]
 	Updated security/py-oauthlib to 3.3.1 [wiz 2025-07-01]
 	Updated lang/gcc13-gnat to 13.3.0nb3 [dkazankov 2025-07-01]
+	Updated archivers/py-zipp to 3.23.0 [wiz 2025-07-01]
