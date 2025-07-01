@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.451 2025/07/01 05:13:18 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.452 2025/07/01 17:34:35 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27049,3 +27049,6 @@ hdf5-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6817
 hdf5-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6818
 sudo<1.9.17p1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-32462
 sudo<1.9.17p1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-32463
+hdf5-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-6856
+hdf5-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6857
+hdf5-[0-9]*	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-6858
