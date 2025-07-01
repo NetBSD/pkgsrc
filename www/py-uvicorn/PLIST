@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/12/31 09:56:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/07/01 08:09:46 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -95,6 +95,9 @@ ${PYSITELIB}/uvicorn/protocols/websockets/auto.pyo
 ${PYSITELIB}/uvicorn/protocols/websockets/websockets_impl.py
 ${PYSITELIB}/uvicorn/protocols/websockets/websockets_impl.pyc
 ${PYSITELIB}/uvicorn/protocols/websockets/websockets_impl.pyo
+${PYSITELIB}/uvicorn/protocols/websockets/websockets_sansio_impl.py
+${PYSITELIB}/uvicorn/protocols/websockets/websockets_sansio_impl.pyc
+${PYSITELIB}/uvicorn/protocols/websockets/websockets_sansio_impl.pyo
 ${PYSITELIB}/uvicorn/protocols/websockets/wsproto_impl.py
 ${PYSITELIB}/uvicorn/protocols/websockets/wsproto_impl.pyc
 ${PYSITELIB}/uvicorn/protocols/websockets/wsproto_impl.pyo
