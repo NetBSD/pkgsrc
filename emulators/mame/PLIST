@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2025/04/30 15:50:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.96 2025/07/01 18:20:51 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -474,8 +474,7 @@ share/mame/hash/mtx_rom.xml
 share/mame/hash/myvision.xml
 share/mame/hash/mz2000_cass.xml
 share/mame/hash/mz2000_flop.xml
-share/mame/hash/mz2200_cass.xml
-share/mame/hash/mz2500.xml
+share/mame/hash/mz2500_flop.xml
 share/mame/hash/mz700_cass.xml
 share/mame/hash/mz800_cass.xml
 share/mame/hash/n64.xml
@@ -518,6 +517,7 @@ share/mame/hash/pasogo.xml
 share/mame/hash/pasopia_cass.xml
 share/mame/hash/pb2000c.xml
 share/mame/hash/pc1000.xml
+share/mame/hash/pc100_flop.xml
 share/mame/hash/pc1512_flop.xml
 share/mame/hash/pc1512_hdd.xml
 share/mame/hash/pc1640_flop.xml
@@ -635,6 +635,7 @@ share/mame/hash/sgi_mips_hdd.xml
 share/mame/hash/sgx.xml
 share/mame/hash/singingstarkaraoke_cart.xml
 share/mame/hash/sitcom.xml
+share/mame/hash/smartcycle_cart.xml
 share/mame/hash/smarttv_cart.xml
 share/mame/hash/smc777.xml
 share/mame/hash/sms.xml
