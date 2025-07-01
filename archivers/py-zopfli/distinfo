@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/09/13 19:25:48 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/07/01 18:36:51 wiz Exp $
 
-BLAKE2s (zopfli-0.2.3.zip) = 6e33ffd2332d00e8aef871b0d4e707e8c802375a5871d5f65cf01c7b42368f0e
-SHA512 (zopfli-0.2.3.zip) = 0cd540e5209fc20fda814efabf39f3a754d519110cab76b2ef2c6888210b10c8d72624c371f1b2a4b68255452c2163b26809d8ecc5431afc1297c417ab1948b1
-Size (zopfli-0.2.3.zip) = 205354 bytes
+BLAKE2s (zopfli-0.2.3.post1.tar.gz) = e3533aaef555437343075f6ba33089d1d31a727badf2aad4a8134993cf74fef6
+SHA512 (zopfli-0.2.3.post1.tar.gz) = 357a10e395a5c3533f7aadd39a630229b864003a9d95b23a579f6a1cd695e54a491bfdec7cca821f401646ec2c313acb70e3764790cbeaa6ec0eb8f3bc122b67
+Size (zopfli-0.2.3.post1.tar.gz) = 175629 bytes

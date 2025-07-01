@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2025/04/22 19:52:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/01 18:36:51 wiz Exp $
 
-DISTNAME=	zopfli-0.2.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	zopfli-0.2.3.post1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zopfli/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/fonttools/py-zopfli
