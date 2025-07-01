@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4057 2025/07/01 15:22:16 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4058 2025/07/01 16:23:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6048,3 +6048,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/libarchive to 3.8.1 [adam 2025-07-01]
 	Updated devel/py-fakefs to 5.9.1 [adam 2025-07-01]
 	Updated shells/sheldon to 0.8.3 [schmonz 2025-07-01]
+	Updated finance/gnucash to 5.12 [wiz 2025-07-01]
