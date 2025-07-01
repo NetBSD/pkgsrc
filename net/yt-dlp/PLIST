@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2025/06/30 15:06:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2025/07/01 05:16:39 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1272,9 +1272,6 @@ ${PYSITELIB}/yt_dlp/extractor/japandiet.pyo
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.py
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyc
 ${PYSITELIB}/yt_dlp/extractor/jeuxvideo.pyo
-${PYSITELIB}/yt_dlp/extractor/jiocinema.py
-${PYSITELIB}/yt_dlp/extractor/jiocinema.pyc
-${PYSITELIB}/yt_dlp/extractor/jiocinema.pyo
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.py
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyc
 ${PYSITELIB}/yt_dlp/extractor/jiosaavn.pyo
@@ -2286,6 +2283,9 @@ ${PYSITELIB}/yt_dlp/extractor/samplefocus.pyo
 ${PYSITELIB}/yt_dlp/extractor/sapo.py
 ${PYSITELIB}/yt_dlp/extractor/sapo.pyc
 ${PYSITELIB}/yt_dlp/extractor/sapo.pyo
+${PYSITELIB}/yt_dlp/extractor/sauceplus.py
+${PYSITELIB}/yt_dlp/extractor/sauceplus.pyc
+${PYSITELIB}/yt_dlp/extractor/sauceplus.pyo
 ${PYSITELIB}/yt_dlp/extractor/sbs.py
 ${PYSITELIB}/yt_dlp/extractor/sbs.pyc
 ${PYSITELIB}/yt_dlp/extractor/sbs.pyo
