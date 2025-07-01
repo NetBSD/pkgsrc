@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.41 2025/05/27 08:12:47 adam Exp $
+$NetBSD: distinfo,v 1.42 2025/07/01 14:47:25 adam Exp $
 
-BLAKE2s (pytest_xdist-3.7.0.tar.gz) = 81d540cf783a01428958617882213d159f12fe769c15c7f5dcb160731f5ab0fc
-SHA512 (pytest_xdist-3.7.0.tar.gz) = 5c2287a29d2052544a1374c552fd0113841611a5dbd76aae5fc8cf990106734468e73df5c6fffb2134d226fa2e397ea11d505ac57493ac497dcc1f277905586f
-Size (pytest_xdist-3.7.0.tar.gz) = 87550 bytes
+BLAKE2s (pytest_xdist-3.8.0.tar.gz) = 119aef036ac7340d606c4db77165352a5b252ebfb50f8dfbaec965c587c7297c
+SHA512 (pytest_xdist-3.8.0.tar.gz) = fedea555be872afe09409cb1a2a3e5c183efefacc2f0eb6edeb306b855ac0ebd1d0b0063186c8c434410c0c35a178f5a80133d7f4b48ad71a4e4e0110315396b
+Size (pytest_xdist-3.8.0.tar.gz) = 88069 bytes
