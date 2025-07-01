@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4089 2025/07/01 20:34:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4090 2025/07/01 20:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6081,3 +6081,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc13-gnat to 13.3.0nb3 [dkazankov 2025-07-01]
 	Updated archivers/py-zipp to 3.23.0 [wiz 2025-07-01]
 	Updated comms/py-textual to 3.5.0 [wiz 2025-07-01]
+	Updated textproc/py-pdf to 5.7.0 [wiz 2025-07-01]
