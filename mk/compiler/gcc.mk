@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.291 2025/05/01 15:40:41 tnn Exp $
+# $NetBSD: gcc.mk,v 1.292 2025/07/01 19:54:34 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -283,6 +283,23 @@ GCC_REQD+=	8
 _NEED_GCC_AUX?=no
 .if !empty(USE_LANGUAGES:Mada)
 _NEED_GCC_AUX=yes
+
+.  if !empty(USE_ADA_FEATURES:Mgnat2020)
+# Undocumented GNAT PRO's -gnat2020 switch
+GCC_REQD+=	10
+.  endif
+
+.  if !empty(USE_ADA_FEATURES:Mgnat2022)
+# First appearance in GNAT 12
+GCC_REQD+=	13
+.  endif
+
+.  if !empty(USE_ADA_FEATURES:Mada2022)
+# GNAT (as of version 14) really doesn't implement all Ada 2022's features
+# (gnat2022 /= ada2022), so we'll just set the latest available version here
+# until that happens.
+GCC_REQD+=	14
+.  endif
 .endif
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
@@ -490,7 +507,7 @@ PKG_FAIL_REASON+=	"Package requires at least gcc 6 to build"
 _NEED_GCC7?=	no
 .for _pattern_ in ${_GCC7_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 089937
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 089937 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -503,7 +520,7 @@ _NEED_GCC7=	yes
 _NEED_GCC8?=	no
 .for _pattern_ in ${_GCC8_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099917
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099917 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -516,7 +533,7 @@ _NEED_GCC8=	yes
 _NEED_GCC9?=	no
 .for _pattern_ in ${_GCC9_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099976
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099976 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -529,7 +546,7 @@ _NEED_GCC9=	yes
 _NEED_GCC10?=	no
 .for _pattern_ in ${_GCC10_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -542,7 +559,7 @@ _NEED_GCC10=	yes
 _NEED_GCC12?=	no
 .for _pattern_ in ${_GCC12_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
-.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 109911
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 109911 && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -556,7 +573,7 @@ _NEED_GCC13?=	no
 .for _pattern_ in ${_GCC13_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
 # XXX: pin to a version when NetBSD switches to gcc13
-.    if ${OPSYS} == "NetBSD"
+.    if ${OPSYS} == "NetBSD" && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -570,7 +587,7 @@ _NEED_GCC14?=	no
 .for _pattern_ in ${_GCC14_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
 # XXX: pin to a version when NetBSD switches to gcc14
-.    if ${OPSYS} == "NetBSD"
+.    if ${OPSYS} == "NetBSD" && ${_NEED_GCC_AUX:tl} != "yes"
 USE_PKGSRC_GCC=		yes
 USE_PKGSRC_GCC_RUNTIME=	yes
 .    endif
@@ -610,23 +627,31 @@ _NEED_GCC13=	yes
 _NEED_GCC14=	yes
 .endif
 
-# We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
 _NEED_GCC6_AUX?=no
 _NEED_GCC10_AUX?=no
 _NEED_GCC13_GNAT?=no
 _NEED_GCC14_GNAT?=	no
 .if ${_NEED_GCC_AUX:tl} == "yes"
-USE_PKGSRC_GCC=yes
-USE_PKGSRC_GCC_RUNTIME=no
-.  if ${ALLOW_NEWER_COMPILER:tl} != "yes"
-PKG_FAIL_REASON+=	"Package requires at least gnat 13 to build"
+# Ada compilers are always only from pkgsrc
+USE_NATIVE_GCC=		no
+USE_PKGSRC_GCC=		yes
+
+# Switch on GNAT variables based on already determined by GCC_REQD values
+.  if ${_NEED_GCC6:tl} == "yes"
+_NEED_GCC6_AUX=		yes
 .  endif
-_NEED_GCC13_GNAT=yes
+.  if ${_NEED_GCC7:tl} == "yes" || ${_NEED_GCC8:tl} == "yes" || \
+      ${_NEED_GCC9:tl} == "yes" || ${_NEED_GCC10:tl} == "yes"
+_NEED_GCC10_AUX=	yes
+.  endif
+.  if ${_NEED_GCC12:tl} == "yes" || ${_NEED_GCC13:tl} == "yes"
+_NEED_GCC13_GNAT=	yes
+.  endif
+.  if ${_NEED_GCC14:tl} == "yes"
 _NEED_GCC14_GNAT=	yes
-.  if empty(USE_ADA_FEATURES:Mada2022)
-_NEED_GCC10_AUX=yes
-_NEED_GCC6_AUX=yes
 .  endif
+
+# We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
 .  if !empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77)
 .     if ${_NEED_GCC10_AUX:tl} == "yes"
 _NEED_GCC6_AUX=no
@@ -636,46 +661,19 @@ _NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .     endif
 .  endif
-.  if ${_NEED_GCC6_AUX:tl} == "yes" && ${_NEED_GCC6:tl} != "yes"
-_NEED_GCC6_AUX=no
-.  endif
-.  if ${_NEED_GCC10_AUX:tl} == "yes" && ${_NEED_GCC10:tl} != "yes"
-_NEED_GCC10_AUX=no
-.  endif
-.  if ${_NEED_GCC13_GNAT:tl} == "yes" && ${_NEED_GCC13:tl} != "yes"
-_NEED_GCC13_GNAT=no
-.  endif
-.  if ${_NEED_GCC14_GNAT:tl} == "yes" && ${_NEED_GCC14:tl} != "yes"
-_NEED_GCC14_GNAT=	no
-.  endif
 .  if !empty(USE_LANGUAGES:Mobjc)
-_NEED_GCC6_AUX=no
-_NEED_GCC10_AUX=no
-_NEED_GCC13_GNAT=no
-_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires objc compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mobj-c++)
-_NEED_GCC6_AUX=no
-_NEED_GCC10_AUX=no
-_NEED_GCC13_GNAT=no
-_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires obj-c++ compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mgo)
-_NEED_GCC6_AUX=no
-_NEED_GCC10_AUX=no
-_NEED_GCC13_GNAT=no
-_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires go compiler"
 .  endif
 .  if !empty(USE_LANGUAGES:Mjava)
-_NEED_GCC6_AUX=no
-_NEED_GCC10_AUX=no
-_NEED_GCC13_GNAT=no
-_NEED_GCC14_GNAT=	no
 PKG_FAIL_REASON+=	"Package requires java compiler"
 .  endif
+# It is necessary to turn off all _NEED_GCC[6-14] variables
 _NEED_GCC6=no
 _NEED_GCC7=no
 _NEED_GCC8=no
@@ -684,16 +682,6 @@ _NEED_GCC10=no
 _NEED_GCC12=no
 _NEED_GCC13=no
 _NEED_GCC14=	no
-.  if ${_NEED_GCC14_GNAT:tl} == "yes"
-_NEED_GCC6_AUX=		no
-_NEED_GCC10_AUX=	no
-_NEED_GCC13_GNAT=	no
-.  elif ${_NEED_GCC13_GNAT:tl} == "yes"
-_NEED_GCC6_AUX=no
-_NEED_GCC10_AUX=no
-.  elif ${_NEED_GCC10_AUX:tl} == "yes"
-_NEED_GCC6_AUX=no
-.  endif
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -939,10 +927,7 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc6-aux
 _GCC_DEPENDENCY=	gcc6-aux>=${_GCC_REQD}:../../lang/gcc6-aux
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mada)
-_USE_GCC_SHLIB?=	no
-.    endif
+# gcc6-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC10_AUX:M[yY][eE][sS])
 #
@@ -956,12 +941,7 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc10-aux
 _GCC_DEPENDENCY=	gcc10-aux>=${_GCC_REQD}:../../lang/gcc10-aux
-.    if !empty(_LANGUAGES.gcc:Mc++) || \
-        !empty(_LANGUAGES.gcc:Mfortran) || \
-        !empty(_LANGUAGES.gcc:Mfortran77) || \
-        !empty(_LANGUAGES.gcc:Mada)
-_USE_GCC_SHLIB?=	no
-.    endif
+# gcc10-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC13_GNAT:M[yY][eE][sS])
 #
@@ -975,7 +955,9 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc13-gnat
 _GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
-_USE_GCC_SHLIB?=	no
+.    if defined(USE_GCC_RUNTIME)
+_USE_GCC_SHLIB?=	yes
+.    endif
 .  endif
 .elif !empty(_NEED_GCC14_GNAT:M[yY][eE][sS])
 #
@@ -989,7 +971,9 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc14-gnat
 _GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
-_USE_GCC_SHLIB?=	no
+.    if defined(USE_GCC_RUNTIME)
+_USE_GCC_SHLIB?=	yes
+.    endif
 .  endif
 .endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
@@ -1004,9 +988,11 @@ _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
 # USE_GCC_RUNTIME for packages which create shared libraries but do not use
 # libtool to do so.
 #
+.if ${_NEED_GCC_AUX:tl} != "yes"
 .if (${OPSYS} == "Darwin" || ${OPSYS} == "SunOS") && \
     (defined(USE_LIBTOOL) || defined(USE_GCC_RUNTIME))
 _USE_GCC_SHLIB= yes
+.endif
 .endif
 
 .if !empty(USE_NATIVE_GCC:M[yY][eE][sS]) && !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
@@ -1265,10 +1251,15 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if ${PKGPATH} != devel/libtool-base && ${PKGPATH} != devel/binutils && \
+      empty(PKGPATH:Mlang/gcc*-aux) && empty(PKGPATH:Mlang/gcc*-gnat) && \
       empty(PKGPATH:Mlang/gcc4?) && empty(PKGPATH:Mlang/gcc[5-9]) && \
       empty(PKGPATH:Mlang/gcc10) && empty(PKGPATH:Mlang/gcc12) && \
       empty(PKGPATH:Mlang/gcc13) && empty(PKGPATH:Mlang/gcc14)
-.    if !empty(_GCC_PKGBASE:Mgcc6)
+.    if !empty(_GCC_PKGBASE:Mgcc13-gnat)
+.      include "../../lang/gcc13-gnat-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc14-gnat)
+.      include "../../lang/gcc14-gnat-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc6)
 .      include "../../lang/gcc6-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc7)
 .      include "../../lang/gcc7-libs/buildlink3.mk"
