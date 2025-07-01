@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2025/04/23 07:36:38 adam Exp $
+# $NetBSD: Makefile,v 1.121 2025/07/01 19:50:57 wiz Exp $
 
-DISTNAME=	lxml-5.4.0
+DISTNAME=	lxml-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
@@ -26,11 +26,11 @@ FORCE_C_STD=		gnu99
 # to manually test:
 # make patch
 # cd ${WRKSRC}
-# python3.12 setup.py build_ext -i
-# python3.12 test.py
+# python3.13 setup.py build_ext -i
+# python3.13 test.py
 
-# as of 5.3.0 this gives:
-# Ran 1946 tests in 5.044s
+# as of 6.0.0 this gives:
+# Ran 2003 tests in 5.956s
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
