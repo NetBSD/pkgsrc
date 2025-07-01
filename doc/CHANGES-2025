@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4070 2025/07/01 19:20:02 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4071 2025/07/01 19:22:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6062,3 +6062,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/kid3 to 3.9.6 [wiz 2025-07-01]
 	Updated sysutils/yazi to 25.5.31 [wiz 2025-07-01]
 	Updated textproc/enchant2 to 2.8.10 [wiz 2025-07-01]
+	Updated print/texlab to 5.23.1 [wiz 2025-07-01]
