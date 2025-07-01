@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4067 2025/07/01 19:03:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4068 2025/07/01 19:10:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6059,3 +6059,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.38.6 [wiz 2025-07-01]
 	Updated www/restish to 0.21.0 [wiz 2025-07-01]
 	Updated devel/re2 to 20250626b [wiz 2025-07-01]
+	Updated audio/kid3 to 3.9.6 [wiz 2025-07-01]
