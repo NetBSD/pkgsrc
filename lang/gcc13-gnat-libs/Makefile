@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/06/11 14:17:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/01 20:34:51 dkazankov Exp $
 
 GCC_PKGNAME=		gcc13
-GCC13_DIST_VERSION=	13.3.0
+GCC_DIST_VERSION=	13.3.0
 
-DISTNAME=	gcc-${GCC13_DIST_VERSION}
-PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GCC13_DIST_VERSION}
+DISTNAME=	gcc-${GCC_DIST_VERSION}
+PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GCC_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc13 package so that with the dependence pattern
 ## '{gcc13,gcc13-libs}>=13.1.*' pkg_add will choose gcc13-libs over gcc13.
@@ -22,8 +22,8 @@ USE_TOOLS+=	pax
 
 CHECK_RELRO_SUPPORTED=	no
 
-## Depend on exactly ${GCC13_DIST_VERSION}.
-TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC13_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc13-gnat
+## Depend on exactly ${GCC_DIST_VERSION}.
+TOOL_DEPENDS+=		${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc13-gnat
 TOOL_DEPENDS+=		patchelf-[0-9]*:../../devel/patchelf
 
 .include "../../mk/bsd.prefs.mk"
@@ -44,7 +44,7 @@ GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX}	\
 			${ECHO} '@pkgdir ${TARGET_LIBDIR}' ;
 
 do-build:
-	${PKG_INFO} -qL '${GCC_PKGNAME}-gnat-${GCC13_DIST_VERSION}*' | \
+	${PKG_INFO} -qL '${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}*' | \
 	${SED} -n -e's,^${LIBGCC_PREFIX}/,,p' | \
 	${SED} -n -e'/lib\/.*\/crt.*\.o/p' \
 		-e'/lib\/.*\/adalib\/lib.*\.so.*/p' \
