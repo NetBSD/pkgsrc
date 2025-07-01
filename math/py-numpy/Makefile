@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2025/05/18 10:09:47 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2025/07/01 20:09:49 wiz Exp $
 
-DISTNAME=	numpy-2.2.6
+DISTNAME=	numpy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -28,11 +28,11 @@ GCC_REQD+=		8
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
+PLIST_SRC=		PLIST
 .include "../../lang/python/pyversion.mk"
-PLIST_VARS+=		distutils
 # Python 3.12 has no distutils anymore.
 .if ${PYTHON_VERSION} < 312
-PLIST.distutils=	yes
+PLIST_SRC+=		PLIST.distutils
 .endif
 PRINT_PLIST_AWK+=	/\/distutils\// { $$0 = "$${PLIST.distutils}" $$0 }
 
@@ -96,8 +96,8 @@ SUBST_MESSAGE.paths=	Fixing path to numpy-configure (for tests).
 SUBST_FILES.paths=	numpy/tests/test_configtool.py
 SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
 
-# as of 2.2.6
-# 35 failed, 46884 passed, 1742 skipped, 2815 deselected, 33 xfailed, 4 xpassed, 1 warning
+# as of 2.3.1
+# 35 failed, 47100 passed, 1743 skipped, 2819 deselected, 34 xfailed, 4 xpassed, 1 warning
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.101 2025/05/18 10:09:47 wiz Exp $
+$NetBSD: distinfo,v 1.102 2025/07/01 20:09:49 wiz Exp $
 
-BLAKE2s (numpy-2.2.6.tar.gz) = 530cb600991fb7c8482a7ae4cbf1a2bcdef588b701356e45774769430debd281
-SHA512 (numpy-2.2.6.tar.gz) = 00c82476c6cc8e68c4cd3210896172d91bdb52a46676931d173a3bbd772b29cebc8e819dfbbaf621eba9225fff3fa3f81426fe864d8812de4ff2975e7ac5c338
-Size (numpy-2.2.6.tar.gz) = 20276440 bytes
+BLAKE2s (numpy-2.3.1.tar.gz) = 3c6b6b7d321d0a34594d8bdc730a57250400956857e27ec7b392189474a8b618
+SHA512 (numpy-2.3.1.tar.gz) = aedb917cc6d8fcb923edb5b32e8b84bddb31fcf0159cfbda88b7ea9a5bc9e0ef58f27391746c6e9140777daf928c3e9de2a73758555130e5c00725d7082f7c2a
+Size (numpy-2.3.1.tar.gz) = 20390372 bytes
 SHA1 (patch-numpy___core_feature__detection__misc.h) = c0f4d318c93fcd0e36c34c549c7778350b8a6ea5
 SHA1 (patch-numpy___core_include_numpy_npy__common.h) = 175cd8f64af681949c3e8bfde064c93908433ea2
 SHA1 (patch-numpy___core_src_common_mem__overlap.c) = 709f140252e8582c325d30fa0289dda3d9a5c888
