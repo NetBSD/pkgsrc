@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2025/02/09 14:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/07/01 19:02:58 wiz Exp $
 
 DISTNAME=	re2-${GITHUB_TAG:S/-//g}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	2024-07-02
+GITHUB_TAG=	2025-06-26b
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/re2
@@ -21,10 +20,10 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 
 # To build unit-tests:
 #CMAKE_CONFIGURE_ARGS+=	-DRE2_BUILD_TESTING=ON
-#TEST_ENV=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
+#TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 # For Darwin
-#TEST_ENV=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
-#TEST_TARGET=	test
+#TEST_ENV=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
+#TEST_TARGET=		test
 #.include "../../benchmarks/google-benchmark/buildlink3.mk"
 #.include "../../devel/googletest/buildlink3.mk"
 
