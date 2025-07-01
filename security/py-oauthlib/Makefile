@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/04/22 20:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/01 20:11:05 wiz Exp $
 
-DISTNAME=	oauthlib-3.2.2
+DISTNAME=	oauthlib-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/oauthlib/}
 
@@ -17,8 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-blinker>=1.4.0:../../devel/py-blinker
 
 USE_LANGUAGES=	# none
 
-# as of 3.2.2
-# 2 failed, 650 passed, 2 skipped, 7 warnings
+# as of 3.3.1
+# 681 passed, 2 skipped, 6 warnings
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography

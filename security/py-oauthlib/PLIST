@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/22 20:31:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/07/01 20:11:05 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -154,6 +154,27 @@ ${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/__init__.pyo
 ${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.py
 ${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.pyc
 ${PYSITELIB}/oauthlib/oauth2/rfc8628/clients/device.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/__init__.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/__init__.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/__init__.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/device_authorization.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/device_authorization.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/device_authorization.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/pre_configured.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/pre_configured.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/endpoints/pre_configured.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/errors.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/errors.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/errors.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/__init__.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/__init__.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/__init__.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/device_code.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/device_code.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/grant_types/device_code.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc8628/request_validator.py
+${PYSITELIB}/oauthlib/oauth2/rfc8628/request_validator.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc8628/request_validator.pyo
 ${PYSITELIB}/oauthlib/openid/__init__.py
 ${PYSITELIB}/oauthlib/openid/__init__.pyc
 ${PYSITELIB}/oauthlib/openid/__init__.pyo
