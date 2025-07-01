@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4042 2025/07/01 05:29:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4043 2025/07/01 05:59:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6021,3 +6021,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.6.30 [adam 2025-07-01]
 	Updated www/py-MechanicalSoup to 1.4.0 [adam 2025-07-01]
 	Updated math/py-xarray-einstats to 0.9.1 [adam 2025-07-01]
+	Updated devel/py-jaraco.functools to 4.2.1 [adam 2025-07-01]
+	Updated devel/py-jaraco.logging to 3.4.0 [adam 2025-07-01]
+	Updated devel/py-jaraco.collections to 5.2.1 [adam 2025-07-01]
