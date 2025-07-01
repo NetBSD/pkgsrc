@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.308 2025/06/30 15:40:13 adam Exp $
+# $NetBSD: Makefile,v 1.309 2025/07/01 14:45:15 adam Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-3.5.0
+DISTNAME=	openssl-3.5.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openssl/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -43,7 +43,7 @@ MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 	(${MACHINE_ARCH} == "sh3el") || \
 	(${MACHINE_ARCH} == "sparc") || \
 	(${MACHINE_ARCH} == "vax") || \
-	!empty(MACHINE_ARCH:Mearm*))
+	${MACHINE_ARCH:Mearm*})
 # Use OpenSSL's built-in fallbacks (not actually clang-specific)
 # see src/crypto/external/bsd/openssl/lib/libcrypto/arch/*/crypto.inc
 CFLAGS+=		-DBROKEN_CLANG_ATOMICS	# no atomic 64 bit ops
