@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2025/04/30 21:46:25 hauke Exp $
+# $NetBSD: Makefile,v 1.373 2025/07/02 21:27:00 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -413,6 +413,7 @@ SUBDIR+=	suse15_freetype2
 SUBDIR+=	suse15_glib2
 SUBDIR+=	suse15_glx
 SUBDIR+=	suse15_gtk3
+SUBDIR+=	suse15_gtk4
 SUBDIR+=	suse15_libdbus
 SUBDIR+=	suse15_libdrm
 SUBDIR+=	suse15_libffi
