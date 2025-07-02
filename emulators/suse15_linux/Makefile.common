@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1 2022/10/02 17:17:19 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/07/02 21:27:21 wiz Exp $
+# used by emulators/suse15_gtk4/Makefile
 
 SUSE_PKG=		yes
 SUSE_VERSION=		15.5
