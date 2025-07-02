@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:12:14 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/07/02 04:10:09 markd Exp $
 
-BLAKE2s (pycups-1.9.73.tar.bz2) = dc86d9f272753f119be85d26d8dddd1fee8ae550aac45ba83ce46283b5d86c7b
-SHA512 (pycups-1.9.73.tar.bz2) = ee893d64f1645b71805ac358c4a3cc594f6285f04272ff0558aa60cbc90fafdbac30b623ffcc3a6b739218d9fd7a6a6e1d8cb186a5582f2cc30a518ed4dde810
-Size (pycups-1.9.73.tar.bz2) = 52732 bytes
+BLAKE2s (pycups-2.0.4.tar.gz) = 2b2ab66c45580bfd2614b42f937bfeabc035a420e7897d9959d82d6e6278ed5d
+SHA512 (pycups-2.0.4.tar.gz) = d22148856c8cff4f30e6b7ab0d32d184e8b48358158f28735f0efe4c6e80fd0ea2a5ece87db3eada152f05435fb64c05f1c066bc7bda0649fbddcf5221d66161
+Size (pycups-2.0.4.tar.gz) = 65105 bytes
