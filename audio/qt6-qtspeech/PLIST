@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/07/02 22:31:41 wiz Exp $
 lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qtexttospeech_p.h
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qttexttospeech-config_p.h
@@ -54,10 +54,18 @@ qt6/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechTargets-release.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechTargets.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6TextToSpeech/Qt6TextToSpeechVersionlessTargets.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateConfig.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateDependencies.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateTargets.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6TextToSpeechPrivate/Qt6TextToSpeechPrivateVersionlessTargets.cmake
 qt6/lib/libQt6TextToSpeech.prl
 qt6/lib/libQt6TextToSpeech.so
-qt6/lib/libQt6TextToSpeech.so.${PKGVERSION}
 qt6/lib/libQt6TextToSpeech.so.6
+qt6/lib/libQt6TextToSpeech.so.${PKGVERSION}
 qt6/lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/metatypes/qt6texttospeech_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_texttospeech.pri
