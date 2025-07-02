@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4106 2025/07/02 06:11:44 markd Exp $
+$NetBSD: CHANGES-2025,v 1.4107 2025/07/02 06:29:10 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6109,3 +6109,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-thrift to 0.22.0 [markd 2025-07-02]
 	Updated devel/ruby-thrift to 0.22.0 [markd 2025-07-02]
 	Updated devel/thrift to 0.22.0 [markd 2025-07-02]
+	Updated lang/gcc14-gnat to 14.3.0nb1 [dkazankov 2025-07-02]
