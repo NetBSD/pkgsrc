@@ -1,9 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2014/08/05 18:47:31 spz Exp $
+$NetBSD: patch-aa,v 1.3 2025/07/02 04:01:41 markd Exp $
 
 recent heimdal's dont implicitly include mech headers
 so include explicitly.
 
 Fixes for 2.4 API from https://github.com/pld-linux/apache-mod_auth_kerb/blob/master/mod_auth_kerb-apache24.patch
+
+Fix build with recent mit.  Was using an internal API.
+https://gitweb.gentoo.org/repo/gentoo.git/commit/?id=b4c542201cff236f67aac6eaa0ca86863d34df80
 
 --- src/mod_auth_kerb.c.orig	2008-12-04 10:14:03.000000000 +0000
 +++ src/mod_auth_kerb.c	2014-07-18 07:11:17.000000000 +0000
@@ -73,3 +76,50 @@ Fixes for 2.4 API from https://github.com/pld-linux/apache-mod_auth_kerb/blob/ma
         apr_pool_userdata_set(prevauth, keyname, NULL, r->connection->pool);
     }
  
+@@ -1722,28 +1738,6 @@ kerb_authenticate_user(request_rec *r)
+    return ret;
+ }
+ 
+-int
+-have_rcache_type(const char *type)
+-{
+-   krb5_error_code ret;
+-   krb5_context context;
+-   krb5_rcache id = NULL;
+-   int found;
+-
+-   ret = krb5_init_context(&context);
+-   if (ret)
+-      return 0;
+-
+-   ret = krb5_rc_resolve_full(context, &id, "none:");
+-   found = (ret == 0);
+-
+-   if (ret == 0)
+-      krb5_rc_destroy(context, id);
+-   krb5_free_context(context);
+-
+-   return found;
+-}
+-
+ /*************************************************************************** 
+  Module Setup/Configuration
+  ***************************************************************************/
+@@ -1754,7 +1748,7 @@ kerb_module_init(server_rec *dummy, pool
+ #ifndef HEIMDAL
+    /* Suppress the MIT replay cache.  Requires MIT Kerberos 1.4.0 or later.
+       1.3.x are covered by the hack overiding the replay calls */
+-   if (getenv("KRB5RCACHETYPE") == NULL && have_rcache_type("none"))
++   if (getenv("KRB5RCACHETYPE") == NULL)
+       putenv(strdup("KRB5RCACHETYPE=none"));
+ #endif
+ }
+@@ -1795,7 +1789,7 @@ kerb_init_handler(apr_pool_t *p, apr_poo
+ #ifndef HEIMDAL
+    /* Suppress the MIT replay cache.  Requires MIT Kerberos 1.4.0 or later.
+       1.3.x are covered by the hack overiding the replay calls */
+-   if (getenv("KRB5RCACHETYPE") == NULL && have_rcache_type("none"))
++   if (getenv("KRB5RCACHETYPE") == NULL)
+       putenv(strdup("KRB5RCACHETYPE=none"));
+ #endif
+    
