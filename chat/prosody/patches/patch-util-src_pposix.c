@@ -1,12 +1,19 @@
-$NetBSD: patch-util-src_pposix.c,v 1.1 2022/05/08 21:24:12 khorben Exp $
+$NetBSD: patch-util-src_pposix.c,v 1.2 2025/07/02 08:36:31 sborrill Exp $
 
---- util-src/pposix.c.orig	2022-03-08 12:34:39.594708341 +0000
-+++ util-src/pposix.c
-@@ -38,6 +38,7 @@
+Define _NETBSD_SOURCE for initgroups(), etc.
+
+--- util-src/pposix.c.orig	2025-05-29 16:42:58.718566327 +0100
++++ util-src/pposix.c	2025-07-02 08:57:07.265785615 +0100
+@@ -38,6 +38,12 @@
  #endif
  #endif
  
-+#include <unistd.h>
++#if defined(__NetBSD__)
++#ifndef _NETBSD_SOURCE
++#define _NETBSD_SOURCE
++#endif
++#endif
++
  #include <stdlib.h>
  #include <math.h>
  #include <unistd.h>
