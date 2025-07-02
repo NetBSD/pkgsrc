@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/03/04 13:05:19 adam Exp $
+# $NetBSD: Makefile,v 1.102 2025/07/02 06:09:15 markd Exp $
 
 .include "../../devel/thrift/Makefile.common"
 
@@ -10,6 +10,7 @@ BUILD_DIRS=	lib/cpp
 
 TOOLS_BROKEN+=	perl
 
+CONFIGURE_ARGS+=	--without-go # puts garbage into Makefile
 CONFIGURE_ARGS+=	--without-rs # puts garbage into Makefile
 CONFIGURE_ARGS+=	--enable-tests=no
 CONFIGURE_ENV+=		THRIFT=${PREFIX}/bin/thrift

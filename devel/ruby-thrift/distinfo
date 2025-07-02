@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2025/03/04 13:05:19 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/07/02 06:09:16 markd Exp $
 
-BLAKE2s (thrift-0.21.0.tar.gz) = d304df274435888675fe38fecf56ae6640a148b8b2498556f5f520c730a5104e
-SHA512 (thrift-0.21.0.tar.gz) = 0ffca1232305c07f803adb7239b5d22ee5c766a2809703c127b45a80b820c677e05a2d5b82852af5e1e923abe07ff1d9eb2f3fa4f2aa8732c9a81d8b0daa1f35
-Size (thrift-0.21.0.tar.gz) = 4398072 bytes
+BLAKE2s (thrift-0.22.0.tar.gz) = 561863f9f04596eaf9ec0c32e5cefabd748c908495a7818b1ae5f3d5d6a9d384
+SHA512 (thrift-0.22.0.tar.gz) = beb37ee2a295fae7df12cce6449c92799076771bae515fafcc790a62ac6e76ac5584f102315d466b8f5f98e236c9dc4a244695bdcd9f1392d6e9a13d365ddadc
+Size (thrift-0.22.0.tar.gz) = 4422267 bytes
 SHA1 (patch-ext_extconf.rb) = 94b603413349c671d3262365074d3fee717f60d4

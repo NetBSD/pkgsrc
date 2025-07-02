@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.version,v 1.8 2025/03/04 13:05:20 adam Exp $
+# $NetBSD: Makefile.version,v 1.9 2025/07/02 06:09:16 markd Exp $
 # used by devel/p5-thrift/Makefile
 # used by devel/py-thrift/Makefile
 # used by devel/ruby-thrift/Makefile
 # used by devel/thrift/Makefile.common
 
-DISTNAME=	thrift-0.21.0
+DISTNAME=	thrift-0.22.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=thrift/${PKGVERSION_NOREV}/}
 
