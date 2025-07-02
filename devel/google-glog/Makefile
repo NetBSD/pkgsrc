@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/02/18 09:03:18 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/02 02:31:40 markd Exp $
 
 DISTNAME=	glog-0.7.1
 PKGNAME=	google-${DISTNAME}
@@ -16,7 +16,7 @@ USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
-CMAKE_CONFIGURE_ARGS+=	-DWITH_UNWIND=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_UNWIND=none
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 
