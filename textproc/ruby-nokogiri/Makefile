@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2025/04/29 11:04:47 tsutsui Exp $
+# $NetBSD: Makefile,v 1.104 2025/07/02 03:57:33 markd Exp $
 
 DISTNAME=	nokogiri-1.18.8
 CATEGORIES=	textproc
@@ -22,6 +22,7 @@ BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-as-needed
 
 # XXX: work around bug in bootstrap-mk-files, remove when fixed
 MAKE_ENV.SunOS+=	ARFLAGS=rcv
+MAKE_ENV.Linux+=	ARFLAGS=rcv
 
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
