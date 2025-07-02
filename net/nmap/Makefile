@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2025/05/15 15:44:40 adam Exp $
+# $NetBSD: Makefile,v 1.151 2025/07/02 03:39:36 markd Exp $
 
 .include "Makefile.common"
 
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-ndiff # provided by net/ndiff
 CONFIGURE_ARGS+=	--without-subversion
 CONFIGURE_ARGS+=	--without-zenmap # provided by net/zenmap
+CONFIGURE_ARGS+=	--without-libnl
 
 BUILD_DEFS+=		IPV6_READY
 
