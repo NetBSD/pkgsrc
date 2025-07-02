@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:55:57 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/07/02 03:12:02 markd Exp $
 
 BLAKE2s (pari-2.3.5.tar.gz) = b09825efda6fb19ea0d6678cb50fa7c85815688bbf2f7669c50bb5602731961d
 SHA512 (pari-2.3.5.tar.gz) = 0e49e6310b4c76ef3370786a13aa8cbc5bb0b7dc84ec1665866d623e6284f45db8584eea759e8b5954dc9b5c8a3e866e77a377d18073ed33f11708a7e88a4cca
@@ -19,7 +19,9 @@ SHA1 (patch-am) = 09e158e5cd3a680d786aa876ce66d034df0c3b86
 SHA1 (patch-an) = 4e1f9c8e0c63e2f1922bb8b181212b3e09c56ce6
 SHA1 (patch-ao) = 44bf077f1585e20277dcd42a7c5fd38d12b19af5
 SHA1 (patch-ap) = 21a20b68b589f8be3036d1f2f9c4b2a7f43210a8
+SHA1 (patch-config_endian.c) = dea6efdf6ae53673ca23f43645146e00bab977bb
 SHA1 (patch-config_get_fltk) = 2c2aa271fad5880a44b2df70a7143d2aea690ca0
+SHA1 (patch-config_gmp__version.c) = 7fd8c022f73020caae1ec8e9098acb2f8608a975
 SHA1 (patch-src_desc_merge__822) = 8c4c317a21174d73d59b4fd9d5a3e155df141752
 SHA1 (patch-src_headers_paridecl.h) = ee02e487807d8ed1c1a11268965ade76a2f80cf2
 SHA1 (patch-src_language_anal.c) = d0028a51e8ef14cae766cb881fcfce82cec0346f
