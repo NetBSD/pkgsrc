@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/06/11 14:17:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/02 06:31:34 dkazankov Exp $
 
 GCC_PKGNAME=		gcc14
 GCC_DIST_VERSION=	14.3.0
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-gnat-libs-${GCC_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc14-gnat package so that with the dependence pattern
 ## '{gcc14-gnat,gcc14-gnat-libs}>=14.1.*' pkg_add will choose gcc14-gnat-libs over gcc14-gnat.
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
