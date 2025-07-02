@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/07/02 03:20:00 markd Exp $
 
-DISTNAME=	Keras_Preprocessing-1.1.0
+DISTNAME=	Keras_Preprocessing-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Keras_Preprocessing/}
 
