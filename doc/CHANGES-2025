@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4113 2025/07/02 12:48:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4114 2025/07/02 15:25:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6118,3 +6118,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gettext-tools to 0.22.5nb1 [jperkin 2025-07-02]
 	Updated time/py-dateparser to 1.2.2 [adam 2025-07-02]
 	Updated devel/py-coverage to 7.9.1 [adam 2025-07-02]
+	Updated geography/gdal-lib to 3.11.1 [gdt 2025-07-02]
