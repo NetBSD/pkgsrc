@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/04/17 21:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/07/02 08:36:31 sborrill Exp $
 
-DISTNAME=	prosody-0.12.5
-PKGREVISION=	1
+DISTNAME=	prosody-13.0.2
 CATEGORIES=	chat
 MASTER_SITES=	https://prosody.im/downloads/source/
 
@@ -21,7 +20,7 @@ HAS_CONFIGURE=		yes
 TEST_TARGET=		test
 BUILD_DEFS+=		VARBASE
 
-LUA_VERSIONS_ACCEPTED=	54 52 51
+LUA_VERSIONS_ACCEPTED=	54 52
 
 .include "../../mk/bsd.prefs.mk"
 
