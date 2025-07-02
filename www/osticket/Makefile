@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/06/30 14:34:14 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/02 06:22:49 wiz Exp $
 
-PKGNAME=	osticket-${PKGVER}
-DISTNAME=	osticket-v${PKGVER}
-PKGVER=		1.18.2
+DISTNAME=	osticket-v1.18.2
+PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	www
-
-MASTER_SITES=	${MASTER_SITE_GITHUB:=osTicket/osTicket/releases/download/v${PKGVER}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=osTicket/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	hauke@NetBSD.org
@@ -42,7 +41,7 @@ REPLACE_PHP+=	include/laminas-mail/vendor/laminas/laminas-servicemanager/bin/gen
 REPLACE_PHP+=	include/laminas-mail/vendor/laminas/laminas-servicemanager/bin/generate-factory-for-class
 
 REPLACE_SH+=	include/mpdf/vendor/paragonie/random_compat/build-phar.sh
-REPLACE_PERL=+	setup/scripts/automail.pl
+REPLACE_PERL+=	setup/scripts/automail.pl
 
 .include "../../mk/bsd.prefs.mk"
 
