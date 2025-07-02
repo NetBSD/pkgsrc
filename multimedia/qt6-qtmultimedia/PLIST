@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/06/30 15:18:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/07/02 11:32:43 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -514,7 +514,7 @@ qt6/metatypes/qt6multimediatestlibprivate_release_metatypes.json
 qt6/metatypes/qt6multimediawidgets_release_metatypes.json
 qt6/metatypes/qt6quick3dspatialaudioprivate_release_metatypes.json
 qt6/metatypes/qt6spatialaudio_release_metatypes.json
-${PLIST.ffmpeg}qt6/mkspecs/features/ios/add_ios_ffmpeg_libraries.prf
+qt6/mkspecs/features/ios/add_ios_ffmpeg_libraries.prf
 ${PLIST.ffmpeg}qt6/mkspecs/modules/qt_lib_ffmpegmediapluginimpl_private.pri
 ${PLIST.gstreamer}qt6/mkspecs/modules/qt_lib_gstreamermediapluginimpl_private.pri
 qt6/mkspecs/modules/qt_lib_multimedia.pri
