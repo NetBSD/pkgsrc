@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2023/03/17 12:44:15 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.19 2025/07/02 05:37:00 markd Exp $
 #
 # used by net/nagios-plugin-ldap/Makefile
 # used by net/nagios-plugin-mysql/Makefile
@@ -7,7 +7,7 @@
 # used by net/nagios-plugin-snmp/Makefile
 # used by net/nagios-plugins/Makefile
 
-PLUGINSVERSION=	2.4.3
+PLUGINSVERSION=	2.4.11
 DISTNAME=	nagios-plugins-${PLUGINSVERSION}
 MASTER_SITES?=	http://nagios-plugins.org/download/
 
