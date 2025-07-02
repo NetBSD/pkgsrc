@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4117 2025/07/02 18:10:56 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4118 2025/07/02 18:11:36 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gdal to 3.11.1 [gdt 2025-07-02]
 	Updated lang/tcl to 8.6.16nb3 [jperkin 2025-07-02]
 	Updated lang/gcc13-gnat to 13.4.0 [dkazankov 2025-07-02]
+	Updated lang/gcc13-gnat-libs to 13.4.0nb1 [dkazankov 2025-07-02]
