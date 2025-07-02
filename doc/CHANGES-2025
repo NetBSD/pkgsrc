@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4104 2025/07/02 04:11:18 markd Exp $
+$NetBSD: CHANGES-2025,v 1.4105 2025/07/02 05:39:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6096,3 +6096,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/bc to 1.08.2 [markd 2025-07-02]
 	Updated math/py-Keras-Preprocessing to 1.1.2 [markd 2025-07-02]
 	Updated print/py-cups to 2.0.4 [markd 2025-07-02]
+	Updated net/nagios-plugin-ldap to 2.4.11 [markd 2025-07-02]
+	Updated net/nagios-plugin-mysql to 2.4.11 [markd 2025-07-02]
+	Updated net/nagios-plugin-pgsql to 2.4.11 [markd 2025-07-02]
+	Updated net/nagios-plugin-radius to 2.4.11 [markd 2025-07-02]
+	Updated net/nagios-plugin-snmp to 2.4.11 [markd 2025-07-02]
+	Updated net/nagios-plugins to 2.4.11 [markd 2025-07-02]
