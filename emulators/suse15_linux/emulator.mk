@@ -1,4 +1,4 @@
-# $NetBSD: emulator.mk,v 1.1 2022/10/02 17:17:19 wiz Exp $
+# $NetBSD: emulator.mk,v 1.2 2025/07/02 21:27:21 wiz Exp $
 #
 # This file is included by linux-suse.mk in the emulator framework.
 #
@@ -31,6 +31,7 @@ DEPENDS_suse-15.5.freetype2?=	suse_freetype2${_SUSE_VERSION_REQD}:../../emulator
 DEPENDS_suse-15.5.glib2?=	suse_glib2${_SUSE_VERSION_REQD}:../../emulators/suse15_glib2
 DEPENDS_suse-15.5.glx?=		suse_glx${_SUSE_VERSION_REQD}:../../emulators/suse15_glx
 DEPENDS_suse-15.5.gtk3?=	suse_gtk3${_SUSE_VERSION_REQD}:../../emulators/suse15_gtk3
+DEPENDS_suse-15.5.gtk4?=	suse_gtk4${_SUSE_VERSION_REQD}:../../emulators/suse15_gtk4
 DEPENDS_suse-15.5.jpeg?=	suse_libjpeg${_SUSE_VERSION_REQD}:../../emulators/suse15_libjpeg
 DEPENDS_suse-15.5.libffi?=	suse_libffi${_SUSE_VERSION_REQD}:../../emulators/suse15_libffi
 DEPENDS_suse-15.5.libsndfile?=	suse_libsndfile${_SUSE_VERSION_REQD}:../../emulators/suse15_libsndfile
