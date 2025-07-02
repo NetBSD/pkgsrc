@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4109 2025/07/02 09:05:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4110 2025/07/02 09:57:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6113,3 +6113,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/prosody to 13.0.2 [sborrill 2025-07-02]
 	Updated devel/py-cddl to 0.6.4 [adam 2025-07-02]
 	Updated devel/py-flake8-import-order to 0.19.2 [adam 2025-07-02]
+	Updated graphics/digikam to 8.7.0 [wiz 2025-07-02]
