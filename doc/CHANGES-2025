@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4111 2025/07/02 10:24:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4112 2025/07/02 11:01:39 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6115,3 +6115,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flake8-import-order to 0.19.2 [adam 2025-07-02]
 	Updated graphics/digikam to 8.7.0 [wiz 2025-07-02]
 	Updated graphics/digikam-gmic-qt to 3.2.2.20250601 [wiz 2025-07-02]
+	Updated devel/gettext-tools to 0.22.5nb1 [jperkin 2025-07-02]
