@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/02/16 10:10:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/07/02 18:09:02 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc13-gnat
 
 .if !defined(GCC13_GNAT_BUILDLINK3_MK)
 GCC13_GNAT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc13-gnat+=	gcc13-gnat>=13
-BUILDLINK_ABI_DEPENDS.gcc13-gnat+=	gcc13-gnat>=13.2
+BUILDLINK_API_DEPENDS.gcc13-gnat+=	gcc13-gnat>=13.1.0
+BUILDLINK_ABI_DEPENDS.gcc13-gnat+=	gcc13-gnat>=13.4.0
 BUILDLINK_PKGSRCDIR.gcc13-gnat=		../../lang/gcc13-gnat
 BUILDLINK_DEPMETHOD.gcc13-gnat?=	build
 
@@ -14,7 +14,7 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/gcc13-gnat/bin
 
 GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 
-ADALIB_PREFIX=		gcc13-gnat/lib/gcc/${GNU_TARGET_MACHINE}/13.3.0
+ADALIB_PREFIX=		gcc13-gnat/lib/gcc/${GNU_TARGET_MACHINE}/13.4.0
 
 BUILDLINK_FILES.gcc13-gnat+=	gcc13-gnat/${GNU_TARGET_MACHINE}/lib/*
 
