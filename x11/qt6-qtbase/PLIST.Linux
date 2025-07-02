@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2025/03/21 16:38:14 jakllsch Exp $
+@comment $NetBSD: PLIST.Linux,v 1.7 2025/07/02 13:59:24 tnn Exp $
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/minimum-linux_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_inotify_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_linux_p.h
@@ -11,12 +11,16 @@ qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevmousehandl
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevmousemanager_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtablethandler_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtabletmanager_p.h
-qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchfilter_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchhandler_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevtouchmanager_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevutil_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qoutputmapping_p.h
+qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qfdcontainer_p.h
+qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qkeyboardmap_p.h
+qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qkeycodeaction_p.h
+qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qtouchfilter_p.h
 qt6/include/QtInputSupport/QtInputSupport
+qt6/include/QtInputSupport/QtInputSupportDepends
 qt6/include/QtInputSupport/QtInputSupportVersion
 qt6/include/QtInputSupport/qtinputsupportversion.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkvalgrind_p.h
@@ -50,12 +54,26 @@ qt6/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateConfig.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateDependencies.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateTargets-release.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateTargets.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6InputSupportPrivate/Qt6InputSupportPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginConfig.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets-release.cmake
 qt6/lib/cmake/Qt6Network/Qt6QNetworkManagerNetworkInformationPluginTargets.cmake
+qt6/lib/libQt6InputSupport.a
+qt6/lib/libQt6InputSupport.prl
+qt6/metatypes/qt6inputsupportprivate_release_metatypes.json
+qt6/mkspecs/modules/qt_lib_input_support_private.pri
+qt6/modules/InputSupportPrivate.json
 qt6/plugins/generic/libqevdevkeyboardplugin.so
 qt6/plugins/generic/libqevdevmouseplugin.so
 qt6/plugins/generic/libqevdevtabletplugin.so
