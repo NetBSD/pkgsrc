@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/04/24 14:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/02 10:24:20 wiz Exp $
 
-DISTNAME=	digikam-gmic-qt-3.2.2.20250308
-PKGREVISION=	3
+DISTNAME=	digikam-gmic-qt-3.2.2.20250601
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cgilles/}
-GITHUB_TAG=	2f84d59c0060964f36271dbcf13b86d33e95f6ee
+GITHUB_TAG=	41538610ccb0006e8fcd74ad342a12c67765e9d1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cgilles/digikam-gmic-qt
@@ -27,6 +26,7 @@ CONFLICTS+=	gmic-qt-digikam-[0-9]*
 SUPERSEDES+=	gmic-qt-digikam-[0-9]*
 
 .include "../../devel/cmake/build.mk"
+BUILDLINK_API_DEPENDS.digikam+=	digikam>=8.7.0
 .include "../../graphics/digikam/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
