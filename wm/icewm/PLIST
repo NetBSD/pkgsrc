@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/05/04 08:12:46 nia Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/07/02 18:28:03 gutteridge Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -624,6 +624,7 @@ ${PLIST.nls}share/locale/ro/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/sk/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/sl/LC_MESSAGES/icewm.mo
+${PLIST.nls}share/locale/sr/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/icewm.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/icewm.mo
