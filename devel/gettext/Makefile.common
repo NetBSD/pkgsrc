@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2024/02/25 15:42:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2025/07/02 11:00:57 jperkin Exp $
 #
 # used by devel/gettext/Makefile
 # used by devel/gettext-asprintf/Makefile
@@ -19,6 +19,8 @@ CONFLICTS=	gettext<=0.10.35
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.fast.prefs.mk"
 

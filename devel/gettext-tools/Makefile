@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/07/02 10:15:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2025/07/02 11:00:57 jperkin Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -40,8 +40,6 @@ BUILDLINK_TRANSFORM.Cygwin+=	rm:-Wl,--disable-auto-import
 
 #bug 20453 in bug-gzip list, passed onto gnulib
 CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
-
-TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
