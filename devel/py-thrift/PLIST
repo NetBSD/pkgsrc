@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/03/04 13:05:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/07/02 06:09:16 markd Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -24,9 +24,6 @@ ${PYSITELIB}/thrift/Thrift.pyo
 ${PYSITELIB}/thrift/__init__.py
 ${PYSITELIB}/thrift/__init__.pyc
 ${PYSITELIB}/thrift/__init__.pyo
-${PYSITELIB}/thrift/compat.py
-${PYSITELIB}/thrift/compat.pyc
-${PYSITELIB}/thrift/compat.pyo
 ${PYSITELIB}/thrift/protocol/TBase.py
 ${PYSITELIB}/thrift/protocol/TBase.pyc
 ${PYSITELIB}/thrift/protocol/TBase.pyo
