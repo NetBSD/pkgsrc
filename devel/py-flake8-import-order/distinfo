@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/06/13 08:48:57 adam Exp $
+$NetBSD: distinfo,v 1.17 2025/07/02 09:05:39 adam Exp $
 
-BLAKE2s (flake8_import_order-0.19.0.tar.gz) = 3797d5e20ec711de9043e67a1bc34f5b3472c5c0b937049020f91125b9457a64
-SHA512 (flake8_import_order-0.19.0.tar.gz) = 0340b7918dfaeb82bb45e69ff4cace6abb584ba3ac8c9c7e1b64ff7a96b7001d02b2415bb6b37232dbb9a7ef10c6497b849976b211a16f9a18b544afa5c4b097
-Size (flake8_import_order-0.19.0.tar.gz) = 23774 bytes
+BLAKE2s (flake8_import_order-0.19.2.tar.gz) = 948eb459d1fcc29f22c58ff0bb46a0fa2280fc75434039a521f559ec3b00b65e
+SHA512 (flake8_import_order-0.19.2.tar.gz) = a07728047b3e3c5058c1ace7d8fd33cc20f01501501ca3658a671371bc475cde52f2efa9cd8d34cee1a4bdecc813ff90ba8aaf9c0658421d793b087ade2c86ca
+Size (flake8_import_order-0.19.2.tar.gz) = 31867 bytes
