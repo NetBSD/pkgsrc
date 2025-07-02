@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2025/04/25 12:33:45 dkazankov Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/02 06:31:34 dkazankov Exp $
 
 GCC_PKGNAME=		gcc13
 GCC_DIST_VERSION=	13.3.0
 
 PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	GNAT Compiler and Ada tools
 DISTNAME=	gcc-${GCC_DIST_VERSION}
 CATEGORIES=	lang
