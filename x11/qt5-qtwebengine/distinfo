@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2025/06/30 18:24:20 adam Exp $
+$NetBSD: distinfo,v 1.32 2025/07/02 11:21:58 adam Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.17.tar.xz) = dbf0aa837aad6b215382109c4c9abedc7a56387bf87fe34de51f4f675eb67909
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.17.tar.xz) = f3f8a6e9b43e9a58a0b44777fd3333a621365f7cfe323207dfafdefe41f572a58b03ae9c00ab57cbd554d9d71c09d071b93841557099205d4b6dc474921bbfdf
@@ -266,7 +266,6 @@ SHA1 (patch-src_3rdparty_chromium_content_browser_scheduler_responsiveness_jank_
 SHA1 (patch-src_3rdparty_chromium_content_browser_scheduler_responsiveness_native__event__observer.cc) = 2c52d3185a329de58f171cb6ee7f21ca4c2fd944
 SHA1 (patch-src_3rdparty_chromium_content_browser_scheduler_responsiveness_native__event__observer.h) = e758b897e29d027d1321761cf8e509efdae85f1f
 SHA1 (patch-src_3rdparty_chromium_content_browser_tracing_BUILD.gn) = c2a4263e20e70edd2d1dbbe1755a5c5497d7cd09
-SHA1 (patch-src_3rdparty_chromium_content_browser_tracing_generate__trace__viewer__grd.py) = 63e7d017bf66d90252431be5eea94a2eba6f6f18
 SHA1 (patch-src_3rdparty_chromium_content_browser_tracing_tracing__ui.cc) = f8bb72948c229440ad1e0a0401a1a5882193aa91
 SHA1 (patch-src_3rdparty_chromium_content_browser_utility__process__host.cc) = de7e38d89f6e3d6f3b9aa0e9100340a1f3d55899
 SHA1 (patch-src_3rdparty_chromium_content_browser_utility__process__host__receiver__bindings.cc) = 03bbefffcece41e1ac491ac474545462603610fa
@@ -597,7 +596,6 @@ SHA1 (patch-src_3rdparty_chromium_third__party_dav1d_BUILD.gn) = f65f1a7ab8ad5b4
 SHA1 (patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__component.gni) = ee356269df97eb28b1f87ce2dab507000ec5249c
 SHA1 (patch-src_3rdparty_chromium_third__party_dawn_scripts_dawn__features.gni) = 52ef88d16caf2cfe4e1d61a9d0c93d5fed4f0607
 SHA1 (patch-src_3rdparty_chromium_third__party_dawn_src_common_BUILD.gn) = 784a15e6abbc555d117abdcff4d58c1fc55a15e9
-SHA1 (patch-src_3rdparty_chromium_third__party_devtools-frontend_src_scripts_build_build__inspector__overlay.py) = 8da6b156298900bbbd765e0fd260037b7c7eb8cf
 SHA1 (patch-src_3rdparty_chromium_third__party_expat_BUILD.gn) = e45e78921ec4cea97b317e9ef59875015241b560
 SHA1 (patch-src_3rdparty_chromium_third__party_ffmpeg_ffmpeg__generated.gni) = 8b0b82576846c69fe79a61dd1314a4d1554679a6
 SHA1 (patch-src_3rdparty_chromium_third__party_ffmpeg_ffmpeg__options.gni) = 5f261d80ce71126e74e4f3e965fe1de648b69264
