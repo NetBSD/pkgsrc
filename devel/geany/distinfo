@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.23 2023/10/30 23:19:55 gutteridge Exp $
+$NetBSD: distinfo,v 1.24 2025/07/02 02:26:08 markd Exp $
 
 BLAKE2s (geany-2.0.tar.bz2) = 9b6d2b0df4eebe1854f7712763f6cd1875f92660a49cec96a9c4d14717389e75
 SHA512 (geany-2.0.tar.bz2) = 443b64fc09501a95241340a6ee582810a3fddb033ef06c1a42d530625921a871a5183b575d73a858fa98b040651c4308a273272cb735753e969fd1270170b87d
 Size (geany-2.0.tar.bz2) = 6836300 bytes
+SHA1 (patch-scintilla_include_ScintillaTypes.h) = 2551117be6274e30e79bb22658d66bf252a35a53
