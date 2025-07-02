@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4105 2025/07/02 05:39:04 markd Exp $
+$NetBSD: CHANGES-2025,v 1.4106 2025/07/02 06:11:44 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6102,3 +6102,10 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nagios-plugin-radius to 2.4.11 [markd 2025-07-02]
 	Updated net/nagios-plugin-snmp to 2.4.11 [markd 2025-07-02]
 	Updated net/nagios-plugins to 2.4.11 [markd 2025-07-02]
+	Updated devel/libthrift to 0.22.0 [markd 2025-07-02]
+	Updated devel/libthrift_c_glib to 0.22.0 [markd 2025-07-02]
+	Updated devel/lua-thrift to 0.22.0 [markd 2025-07-02]
+	Updated devel/p5-thrift to 0.22.0 [markd 2025-07-02]
+	Updated devel/py-thrift to 0.22.0 [markd 2025-07-02]
+	Updated devel/ruby-thrift to 0.22.0 [markd 2025-07-02]
+	Updated devel/thrift to 0.22.0 [markd 2025-07-02]
