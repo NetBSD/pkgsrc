@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:22:48 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/07/02 03:52:04 markd Exp $
 
 BLAKE2s (XML-Bare-0.53.tar.gz) = 7b9268f4740cc23c3f1a4059b3ae77d4a883fcba2540c41835aa001a3f5a952e
 SHA512 (XML-Bare-0.53.tar.gz) = e765206e5c98ed3a0c29be3a323e25beaa712489d0461e2e7269f5f3383fa805ba3829a9ed4d31cd86f35400c321f8cf519162cc41f52f8ba6992c7016f63520
 Size (XML-Bare-0.53.tar.gz) = 79278 bytes
+SHA1 (patch-parser.c) = ebec32bcc8cf4d26edd21809da6c490cdd1e0010
+SHA1 (patch-parser.h) = c106975e63e7c0dd11d2b0c0ee005421ddb68918
