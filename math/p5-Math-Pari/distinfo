@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.30 2025/05/11 06:40:56 wiz Exp $
+$NetBSD: distinfo,v 1.31 2025/07/02 03:07:31 markd Exp $
 
 BLAKE2s (Math-Pari-2.030528.tar.gz) = b79c3f7c3b39bf4516cdad55497065de654c46f3fd2296bba6b616413693290d
 SHA512 (Math-Pari-2.030528.tar.gz) = a07e3b907f3cbb9b82f6bacfbdae8813a2a9f2eb89d571bd37b67528c01b16d92156b06412d12ad7007c568a921deca70a8e7092a5e7c5403985df620048bd34
 Size (Math-Pari-2.030528.tar.gz) = 234042 bytes
 SHA1 (patch-Makefile.PL) = 5b03df3948dd9326abac7103eae61b6af148dc08
+SHA1 (patch-Pari.xs) = 8b072c2592b426afb6954bef225d7337f5ef4ff0
