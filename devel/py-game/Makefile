@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2025/04/24 14:13:40 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/07/02 02:39:22 markd Exp $
 
 DISTNAME=	pygame-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygame/}
 
@@ -46,6 +46,5 @@ pre-configure:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
-.include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
