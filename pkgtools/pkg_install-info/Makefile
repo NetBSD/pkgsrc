@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/06/03 08:54:50 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/02 08:26:47 jperkin Exp $
 #
 
 PKGNAME=		pkg_install-info-${VERSION}
@@ -12,6 +12,8 @@ LICENSE=		gnu-gpl-v2 # or later
 
 GNU_CONFIGURE=		yes
 FORCE_C_STD=		c99
+
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 CHECK_PERMS=		no
 
