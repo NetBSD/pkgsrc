@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2025/04/25 12:33:45 dkazankov Exp $
+$NetBSD: distinfo,v 1.7 2025/07/02 18:09:02 dkazankov Exp $
 
-BLAKE2s (gcc-13.3.0.tar.xz) = d204b8987b4780b569f28226cbfff34ae27124e529857c36ff90d5d40ef0b511
-SHA512 (gcc-13.3.0.tar.xz) = ed5f2f4c6ed2c796fcf2c93707159e9dbd3ddb1ba063d549804dd68cdabbb6d550985ae1c8465ae9a336cfe29274a6eb0f42e21924360574ebd8e5d5c7c9a801
-Size (gcc-13.3.0.tar.xz) = 87909952 bytes
+BLAKE2s (gcc-13.4.0.tar.xz) = 5c8d3fd323e2e2d35a6eddf09298c80a36d6963543a09cd2d439add36e3ab863
+SHA512 (gcc-13.4.0.tar.xz) = 9b4b83ecf51ef355b868608b8d257b2fa435c06d2719cb86657a7c2c2a0828ff4ce04e9bac1055bbcad8ed5b4da524cafaef654785e23a50233d95d89201e35f
+Size (gcc-13.4.0.tar.xz) = 88530720 bytes
 SHA1 (patch-fixincludes_inclhack.def) = 9ed633ac175b2180f79e10c96dccd39999bfa348
 SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_ada_Makefile.rtl) = ab068e2580ac1c93c8f27e13aa7331c486080ed0
@@ -30,10 +30,7 @@ SHA1 (patch-gcc_tree.h) = e487cd4ac071b109cd75df86cc0054d26d197622
 SHA1 (patch-gnattools_configure) = 403e5576506d1a7f42740dcbfc79c1aee3333169
 SHA1 (patch-libffi_configure) = 392e46774fdf732bd07de35082d469cc325678ea
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
-SHA1 (patch-libgcc_config.host) = e3c3bc36f9f18e4b0864f10aa464774e133339c1
-SHA1 (patch-libgcc_config_i386_t-darwin) = 5c719be042134bf33f7d4d2bde63573f37df9a84
-SHA1 (patch-libgcc_config_rs6000_t-darwin) = a88cca89c7f28997e28b81d830b96613f23978ec
-SHA1 (patch-libgcc_config_t-darwin-libgccs1) = 75e5c3467bfd5716519a65f4d1a6da169486999e
+SHA1 (patch-libgcc_config.host) = a25dbebf416bcc94dcd21450fa01220da24d65f1
 SHA1 (patch-libgcc_config_t-darwin-min-11) = 8bf932c0c2769c5e2e191626976af31f1c57df7e
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = b47b12022d1e1aad7c3997542f83dc451c33e62b
