@@ -1,4 +1,6 @@
-$NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
+$NetBSD: patch-unix_configure,v 1.19 2025/07/02 16:58:37 jperkin Exp $
+
+Fix evil -Wimplicit-function-declaration fallout on GCC 14.
 
 --- unix/configure.orig	2024-12-02 12:57:40.000000000 +0000
 +++ unix/configure
@@ -64,7 +66,15 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  
      # Define TCL_LIBS now that we know what DL_LIBS is.
      # The trick here is that we don't want to change the value of TCL_LIBS if
-@@ -19101,9 +19105,9 @@ fi
+@@ -10091,6 +10095,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ int
+ main ()
+ {
+@@ -19101,9 +19106,9 @@ fi
  #	building libtcl as a shared library instead of a static library.
  #--------------------------------------------------------------------
  
@@ -77,7 +87,7 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  
  # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
  # since on some platforms TCL_LIB_FILE contains shell escapes.
-@@ -19216,13 +19220,10 @@ else
+@@ -19216,13 +19221,10 @@ else
      eval libdir="$libdir"
      # default install directory for bundled packages
      PACKAGE_DIR="$libdir"
@@ -94,7 +104,7 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  fi
  VERSION='${VERSION}'
  eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
-@@ -19243,10 +19244,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -19243,10 +19245,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
  	TCL_PACKAGE_PATH="$TCL_PACKAGE_PATH:/Library/Frameworks/Tk.framework/Versions"
      test -z "$TCL_MODULE_PATH"  && \
  	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl"
@@ -106,7 +116,7 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  fi
  
  #--------------------------------------------------------------------
-@@ -19261,12 +19260,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+@@ -19261,12 +19261,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  eval "TCL_STUB_LIB_DIR=\"${libdir}\""
  
@@ -120,7 +130,7 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
  TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
  TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
-@@ -19420,34 +19414,15 @@ fi
+@@ -19420,34 +19415,15 @@ fi
  # Transform confdefs.h into DEFS.
  # Protect against shell expansion while executing Makefile rules.
  # Protect against Makefile macro expansion.
@@ -164,7 +174,7 @@ $NetBSD: patch-unix_configure,v 1.18 2025/04/14 16:40:19 he Exp $
  
  
  
-@@ -20077,6 +20052,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+@@ -20077,6 +20053,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
  s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
  s,@DLTEST_LD@,$DLTEST_LD,;t t
  s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t
