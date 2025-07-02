@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4102 2025/07/02 03:01:46 markd Exp $
+$NetBSD: CHANGES-2025,v 1.4103 2025/07/02 03:22:26 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6094,3 +6094,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-smartypants to 2.0.2 [wiz 2025-07-01]
 	Updated x11/py-qt-builder to 1.18.2 [wiz 2025-07-01]
 	Updated math/bc to 1.08.2 [markd 2025-07-02]
+	Updated math/py-Keras-Preprocessing to 1.1.2 [markd 2025-07-02]
