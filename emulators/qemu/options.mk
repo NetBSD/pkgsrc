@@ -1,14 +1,10 @@
-# $NetBSD: options.mk,v 1.25 2025/03/15 20:20:33 riastradh Exp $
+# $NetBSD: options.mk,v 1.26 2025/07/02 02:49:40 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug debug-info doc gtk3 iscsi jack sdl spice
 PKG_SUGGESTED_OPTIONS+=	doc iscsi sdl spice
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-PKG_SUPPORTED_OPTIONS+=	virtfs-proxy-helper
-.endif
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
 PKG_SUPPORTED_OPTIONS+=	qemu-virtfs
@@ -27,7 +23,7 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		doc gtk keymap virtfs-proxy-helper
+PLIST_VARS+=		doc gtk keymap
 
 .if !empty(PKG_OPTIONS:Mjack)
 CONFIGURE_ARGS+=	--enable-jack
@@ -88,13 +84,6 @@ PLIST.keymap=		yes
 .  else
 CONFIGURE_ARGS+=	--disable-xkbcommon
 .  endif
-.endif
-
-# NB to successfully build virtfs-proxy-helper, the upstream Linux
-# header/development libraries for libcap and libattr must be installed.
-.if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mvirtfs-proxy-helper)
-PLIST.virtfs-proxy-helper=	yes
-CONFIGURE_ARGS+=		--enable-virtfs-proxy-helper
 .endif
 
 .if !empty(PKG_OPTIONS:Mqemu-virtfs)
