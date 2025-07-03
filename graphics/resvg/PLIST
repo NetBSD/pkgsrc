@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/03 13:32:29 wiz Exp $
+bin/resvg
