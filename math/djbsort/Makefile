@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/08/14 05:24:49 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/03 01:28:19 schmonz Exp $
 
 DISTNAME=		djbsort-20190516
 PKGREVISION=		2
@@ -30,6 +30,14 @@ FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 INSTALLATION_DIRS=	include lib ${SHAREDIR}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+TOOL_DEPENDS+=		binutils>=0:../../devel/binutils
+TOOLS_CREATE+=		nm
+TOOLS_PATH.nm=		${PREFIX}/bin/gnm
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && rm -f *.orig
