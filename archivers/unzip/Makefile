@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2025/04/07 15:26:36 nia Exp $
+# $NetBSD: Makefile,v 1.101 2025/07/03 09:59:10 jperkin Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
@@ -38,7 +38,7 @@ CPPFLAGS+=	-DBSD
 CPPFLAGS+=	-DNO_LCHMOD
 .endif
 CPPFLAGS+=	-DUNIX -Dunix -DUSE_UNSHRINK -I.
-.if empty(MACHINE_PLATFORM:MSunOS-*-sparc)
+.if !${MACHINE_PLATFORM:MSunOS-*-sparc}
 CPPFLAGS+=	-DLARGE_FILE_SUPPORT
 .endif
 

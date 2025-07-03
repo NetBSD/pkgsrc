@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_unxcfg.h,v 1.3 2025/04/24 14:10:55 tnn Exp $
+$NetBSD: patch-unix_unxcfg.h,v 1.4 2025/07/03 09:59:10 jperkin Exp $
 
 * Fix build on Debian GNU/kFreeBSD.
 * Fix build under OpenBSD 5.5
@@ -16,7 +16,7 @@ $NetBSD: patch-unix_unxcfg.h,v 1.3 2025/04/24 14:10:55 tnn Exp $
  
  #ifdef NO_OFF_T
    typedef long zoff_t;
-@@ -111,13 +112,14 @@ typedef struct stat z_stat;
+@@ -111,16 +112,17 @@ typedef struct stat z_stat;
  
  #ifdef BSD
  #  include <sys/time.h>
@@ -32,4 +32,17 @@ $NetBSD: patch-unix_unxcfg.h,v 1.3 2025/04/24 14:10:55 tnn Exp $
 -   struct tm *gmtime(), *localtime();
  #endif
  
- #if (defined(BSD4_4) || (defined(SYSV) && defined(MODERN)))
+-#if (defined(BSD4_4) || (defined(SYSV) && defined(MODERN)))
++#if (defined(BSD4_4) || defined(__illumos__) || (defined(SYSV) && defined(MODERN)))
+ #  include <unistd.h>           /* this includes utime.h on SGIs */
+ #  if (defined(BSD4_4) || defined(linux) || defined(__GLIBC__))
+ #    include <utime.h>
+@@ -130,7 +132,7 @@ typedef struct stat z_stat;
+ #    include <utime.h>
+ #    define GOT_UTIMBUF
+ #  endif
+-#  if (!defined(GOT_UTIMBUF) && defined(__GNU__))
++#  if (!defined(GOT_UTIMBUF) && (defined(__GNU__) || defined(__illumos__)))
+ #    include <utime.h>
+ #    define GOT_UTIMBUF
+ #  endif
