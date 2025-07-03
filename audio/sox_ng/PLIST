@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/03 15:46:59 wiz Exp $
+bin/play_ng
+bin/rec_ng
+bin/sox_ng
+bin/soxi_ng
+include/sox_ng.h
+lib/libsox_ng.la
+lib/pkgconfig/sox_ng.pc
+man/man1/play_ng.1
+man/man1/rec_ng.1
+man/man1/sox_ng.1
+man/man1/soxi_ng.1
+man/man3/libsox_ng.3
+man/man7/soxeffect_ng.7
+man/man7/soxformat_ng.7
