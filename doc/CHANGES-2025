@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4119 2025/07/02 18:28:21 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4120 2025/07/03 04:42:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6124,3 +6124,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc13-gnat to 13.4.0 [dkazankov 2025-07-02]
 	Updated lang/gcc13-gnat-libs to 13.4.0nb1 [dkazankov 2025-07-02]
 	Updated wm/icewm to 3.8.0 [gutteridge 2025-07-02]
+	Updated net/qbittorrent to 5.1.2 [adam 2025-07-03]
+	Updated www/py-scrapy to 2.13.3 [adam 2025-07-03]
