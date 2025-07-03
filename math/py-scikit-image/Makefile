@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/03/04 06:06:19 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/07/03 19:18:09 wiz Exp $
 
 DISTNAME=	scikit_image-0.25.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -28,7 +28,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 GCC_REQD+=	9
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 pre-configure:
 	${LN} -f -s ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython

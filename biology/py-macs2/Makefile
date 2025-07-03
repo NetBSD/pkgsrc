@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/04/15 13:03:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/03 19:18:02 wiz Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macs2-2.2.9.1
@@ -19,6 +19,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 
 WHEEL_NAME=	${DISTNAME:tl}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # Distributed .c files do not support python > 3.9
 pre-configure:

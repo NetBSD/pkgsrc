@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/14 08:59:33 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/03 19:18:11 wiz Exp $
 
 DISTNAME=	trading_calendars-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-toolz-[0-9]*:../../devel/py-toolz
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/tcal \
