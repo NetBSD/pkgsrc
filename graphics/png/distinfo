@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.158 2025/06/13 21:38:36 wiz Exp $
+$NetBSD: distinfo,v 1.159 2025/07/03 13:15:49 wiz Exp $
 
 BLAKE2s (apng-20250220.patch) = 456a8fcead8bb3fd29936de9a6288bef6769026ff2c955371db0c2098548d68b
 SHA512 (apng-20250220.patch) = 120ac618b60d5e1ff2406d241e4ddc2c1893978653adcf462ce394ce3b6b2e5847545e04b0fcb20aab563a1546017ce622d1d2dd14f89d1d594130d626f1e6eb
 Size (apng-20250220.patch) = 49281 bytes
-BLAKE2s (libpng-1.6.49.tar.xz) = ca6f2e11d078fd02a9e926742e0204f3ff921760ff8ff1351131990074bbe203
-SHA512 (libpng-1.6.49.tar.xz) = c40e605c50f632b55809199cba40041b46b5b2ff37659e17dcd5ffe457d926532f3469151f99ad7aab898ef5bedf08ed134a0a4e7d00ac1e9c8cebe5b5eef9bc
-Size (libpng-1.6.49.tar.xz) = 1060752 bytes
+BLAKE2s (libpng-1.6.50.tar.xz) = bebe99204ef8ba7b90b8f9961c0a788ffaa11a8ff3344afd9d2de85ab700cfed
+SHA512 (libpng-1.6.50.tar.xz) = 05adc94ef532bbddaae46e087088a23236e6528fd3fc705c8edfb5ff293983b790d4361d6b20c20df73632a9fbe55d2f394296385cd8efd646f58393ff21257d
+Size (libpng-1.6.50.tar.xz) = 1060992 bytes
 SHA1 (patch-libpng-config.in) = 04f8d6af31114017ce9d1280e62f1768c35c289d
 SHA1 (patch-pngpriv.h) = 16f80df18a2f58eec784e2d821e8bb93c3e81747
