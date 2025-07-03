@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/07/03 13:23:15 wiz Exp $
 
-DISTNAME=	sequoia-sq-1.2.0
-PKGREVISION=	2
+DISTNAME=	sequoia-sq-1.3.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-sq
@@ -19,7 +18,7 @@ TOOL_DEPENDS+=	capnproto-[0-9]*:../../devel/capnproto
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/sequoia-sq-v1.2.0-e507fc4ad98639f33c11a8614941ca6380607a72
+WRKSRC=		${WRKDIR}/sequoia-sq-v1.3.1-198777869bd9e51d98f0782c2caa605b4dfbdfa5
 
 USE_TOOLS+=	pkg-config
 
