@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/03 13:34:05 wiz Exp $
 
-DISTNAME=	sequoia-chameleon-gnupg-0.12.0
-PKGREVISION=	2
+DISTNAME=	sequoia-chameleon-gnupg-0.13.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sequoia-pgp/}
 GITLAB_PROJECT=	sequoia-chameleon-gnupg
@@ -15,11 +14,9 @@ LICENSE=	gnu-gpl-v3
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
-#TOOL_DEPENDS+=	capnproto-[0-9]*:../../devel/capnproto
-
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/sequoia-chameleon-gnupg-v0.12.0-bba1ced319eb4cd34d937392054d9d0ea0838243
+WRKSRC=		${WRKDIR}/sequoia-chameleon-gnupg-v0.13.1-6fbe6d0fba83d5324ddf66a45cd349a458044b58
 
 USE_TOOLS+=	pkg-config
 
