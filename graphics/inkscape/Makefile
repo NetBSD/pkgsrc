@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2025/05/16 23:05:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.308 2025/07/03 19:18:05 wiz Exp $
 
 DISTNAME=	inkscape-1.4.2
 CATEGORIES=	graphics
@@ -44,6 +44,8 @@ GCC_REQD+=		9
 USE_TOOLS+=		gmake gzip msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 UNLIMIT_RESOURCES=	datasize
 

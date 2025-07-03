@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/05/05 14:08:24 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/03 19:18:12 wiz Exp $
 
 DISTNAME=	wxPython-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,6 +25,8 @@ PYDISTUTILSPKG=	no
 
 PYTHON_SELF_CONFLICT=	yes
 
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_ARGS+=	--destdir=${DESTDIR}
@@ -33,11 +35,6 @@ BUILD_ARGS+=	--release
 BUILD_ARGS+=	--use_syswx
 .if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
 BUILD_ARGS+=	--jobs=${MAKE_JOBS}
-.endif
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
 
 post-patch:

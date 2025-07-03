@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2025/07/03 06:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.250 2025/07/03 19:18:04 wiz Exp $
 
 # This is intentionally 3.40 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -90,6 +90,8 @@ DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_QTWEBKIT=FALSE
 CMAKE_CONFIGURE_ARGS+=	-DQWT_DIR=${QWT_DIR}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/03 19:18:04 wiz Exp $
 
 DISTNAME=	backtrader-1.9.74.123
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2025/07/02 15:25:17 gdt Exp $
+# $NetBSD: Makefile,v 1.88 2025/07/03 19:18:04 wiz Exp $
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}

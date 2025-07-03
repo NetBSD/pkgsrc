@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/15 16:31:40 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/03 19:18:10 wiz Exp $
 
 DISTNAME=	tables-3.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
