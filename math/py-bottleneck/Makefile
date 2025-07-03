@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/05/21 19:21:10 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/03 19:18:07 wiz Exp $
 
 DISTNAME=	bottleneck-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

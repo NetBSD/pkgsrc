@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/04/03 15:07:14 adam Exp $
+# $NetBSD: Makefile,v 1.47 2025/07/03 19:18:05 wiz Exp $
 
 DISTNAME=	pyopengl-3.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopengl/OpenGL/}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/03 19:18:10 wiz Exp $
 
 DISTNAME=	tensorboard-${GITHUB_TAG:S/-//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.11.10:../../www/py-werkzeug
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-extract:
 .for f in MANIFEST.in setup.cfg setup.py

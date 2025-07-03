@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/11/07 15:07:41 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/07/03 19:18:09 wiz Exp $
 
 DISTNAME=	pandas-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,6 +36,8 @@ SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing python binary name.
 SUBST_FILES.python=	meson.build
 SUBST_VARS.python=	TOOL_PYTHONBIN
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # This would otherwise be installed, causing PLIST mismatch
 post-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/05/14 13:33:05 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/07/03 19:18:02 wiz Exp $
 
 DISTNAME=	beets-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,6 +37,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

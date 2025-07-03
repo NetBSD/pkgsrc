@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/06/12 07:30:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/07/03 19:18:11 wiz Exp $
 
 DISTNAME=	deepdiff-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=6.0.0:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	deepdiff/diff.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

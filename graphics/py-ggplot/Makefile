@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/10/14 06:45:45 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/03 19:18:06 wiz Exp $
 
 DISTNAME=	ggplot-0.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

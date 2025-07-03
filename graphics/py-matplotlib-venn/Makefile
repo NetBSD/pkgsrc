@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/15 15:17:48 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/03 19:18:06 wiz Exp $
 
 DISTNAME=	matplotlib-venn-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

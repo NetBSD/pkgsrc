@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2025/07/01 20:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2025/07/03 19:18:08 wiz Exp $
 
 DISTNAME=	numpy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,8 @@ USE_TOOLS+=		pkg-config
 FORCE_C_STD=		c99
 # checks for gcc 8.4
 GCC_REQD+=		8
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../math/py-numpy/make_env.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/24 14:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/07/03 19:18:05 wiz Exp $
 
 DISTNAME=	cairocffi-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pikepdf-[0-9]*:../../print/py-pikepdf
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

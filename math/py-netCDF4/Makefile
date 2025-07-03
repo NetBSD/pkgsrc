@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/04/19 07:58:03 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/07/03 19:18:08 wiz Exp $
 
 DISTNAME=	netcdf4-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cdf/CDF/}
@@ -22,6 +22,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 .for bin in nc3tonc4 nc4tonc3 ncinfo

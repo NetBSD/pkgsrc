@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/06/18 08:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/03 19:18:03 wiz Exp $
 
 .include "../../databases/duckdb/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ USE_LANGUAGES+=	c++
 
 BUILD_DIRS=	tools/pythonpkg
 PYSETUPSUBDIR=	${BUILD_DIRS}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # as of 1.3.0
 # 95 skipped, 648 deselected, 65 errors

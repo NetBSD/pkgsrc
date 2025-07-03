@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/14 06:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/03 19:18:07 wiz Exp $
 
 DISTNAME=	Keras_Applications-1.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-h5py-[0-9]*:../../devel/py-h5py
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
