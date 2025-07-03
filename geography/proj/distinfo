@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.31 2025/07/03 17:55:04 gdt Exp $
+$NetBSD: distinfo,v 1.32 2025/07/03 23:40:38 gdt Exp $
 
 BLAKE2s (proj-9.6.2.tar.gz) = 364c54c5ff51db558399f9dfa8855a6700902f85ef6c83a920739d40b0394c12
 SHA512 (proj-9.6.2.tar.gz) = f868c27f07544ac5b998f8f10d25033438f68dbce9b8eebe39fe72f8df02cd660eb54e706eac31674829d0a5fdb0aeb0358355bee187d92afc1be9f33bc42416
 Size (proj-9.6.2.tar.gz) = 6394614 bytes
-SHA1 (patch-src_iso19111_coordinatesystem.cpp) = 5d22a7df7878f8773b3fff00d780b8926c49d549
-SHA1 (patch-src_iso19111_internal.cpp) = 6cb455a20d0d1fec0a62c165836bd93d5fadfb76
+SHA1 (patch-src_dmstor.cpp) = d373128b36619193e4f0b64630785c03d654935a
+SHA1 (patch-src_iso19111_internal.cpp) = bf2ccd10d2cc61a4fe71cf16b1f120a47bd47b53
