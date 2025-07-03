@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/06/02 11:18:50 prlw1 Exp $
+# $NetBSD: Makefile,v 1.61 2025/07/03 14:30:30 prlw1 Exp $
 
-DISTNAME=	gtk-4.16.13
+DISTNAME=	gtk-4.18.5
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
@@ -24,12 +24,15 @@ RELRO_SUPPORTED=	partial
 
 USE_TOOLS+=	gdbus-codegen msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
+# meson.build only mentions c++11 to build harfbuzz as a subproject
 
-MESON_REQD+=		0.60.0
+
+MESON_REQD+=		1.5.0
 MESON_ARGS+=		-Dintrospection=enabled
 # needs gstreamer-gl
 MESON_ARGS+=		-Dmedia-gstreamer=disabled
 MESON_ARGS+=		-Dvulkan=disabled
+MESON_ARGS+=		-Df16c=disabled
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gtk4-x11.pc
@@ -39,14 +42,15 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--export-dynamic
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/meson/build.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.47.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.56
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18.2
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/graphene/buildlink3.mk"
