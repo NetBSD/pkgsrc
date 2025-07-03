@@ -1,8 +1,8 @@
-$NetBSD: patch-src_iso19111_internal.cpp,v 1.1 2025/07/03 17:39:44 gdt Exp $
+$NetBSD: patch-src_iso19111_internal.cpp,v 1.2 2025/07/03 17:55:04 gdt Exp $
 
 Fix ctype abuse, which causes test failures on NetBSD-current (11).
 
-Not yet reported upstream.
+https://github.com/OSGeo/PROJ/issues/4537
 
 --- src/iso19111/internal.cpp.orig	2025-07-03 13:10:59.122964425 +0000
 +++ src/iso19111/internal.cpp
