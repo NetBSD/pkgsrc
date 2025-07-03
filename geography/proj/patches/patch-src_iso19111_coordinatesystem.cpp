@@ -1,8 +1,8 @@
-$NetBSD: patch-src_iso19111_coordinatesystem.cpp,v 1.1 2025/07/03 17:39:44 gdt Exp $
+$NetBSD: patch-src_iso19111_coordinatesystem.cpp,v 1.2 2025/07/03 17:55:04 gdt Exp $
 
 Fix ctype abuse.
 
-Not yet filed upstream.
+https://github.com/OSGeo/PROJ/issues/4537
 
 --- src/iso19111/coordinatesystem.cpp.orig	2025-07-03 13:25:01.929435443 +0000
 +++ src/iso19111/coordinatesystem.cpp
