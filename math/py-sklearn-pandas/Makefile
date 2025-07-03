@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/04/15 16:31:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/03 19:18:10 wiz Exp $
 
 DISTNAME=	sklearn-pandas-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

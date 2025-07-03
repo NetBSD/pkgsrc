@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2025/07/03 06:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2025/07/03 19:18:05 wiz Exp $
 
 PKGREVISION= 4
 .include "Makefile.common"
@@ -10,6 +10,8 @@ COMMENT=	Library for computer vision problems
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "options.mk"
 

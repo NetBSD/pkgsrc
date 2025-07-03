@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2025/05/19 15:00:34 gdt Exp $
+# $NetBSD: Makefile.common,v 1.63 2025/07/03 19:18:06 wiz Exp $
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
@@ -73,7 +73,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # filter designer
 DEPENDS+=	${PYPKGPREFIX}-qtgraph-qt5-[0-9]*:../../x11/py-qtgraph-qt5
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-qtgraph-qt5
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-qtgraph-qt5
 
 DISTINFO_FILE=	${.CURDIR}/../../ham/gnuradio-core/distinfo
 PATCHDIR=	${.CURDIR}/../../ham/gnuradio-core/patches

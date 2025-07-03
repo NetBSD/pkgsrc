@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/06/05 00:38:57 gutteridge Exp $
+# $NetBSD: Makefile,v 1.34 2025/07/03 19:18:02 wiz Exp $
 
 DISTNAME=	music21-noCorpus-9.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
@@ -29,7 +29,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # NB lilypond must be installed in order to run the test suite.
 do-test:
