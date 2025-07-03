@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.708 2025/03/30 09:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.709 2025/07/03 15:47:24 wiz Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -430,6 +430,7 @@ SUBDIR+=	sound-juicer
 SUBDIR+=	sound-theme-freedesktop
 SUBDIR+=	soundtouch
 SUBDIR+=	sox
+SUBDIR+=	sox_ng
 SUBDIR+=	spectro-edit
 SUBDIR+=	speech-dispatcher
 SUBDIR+=	speex
