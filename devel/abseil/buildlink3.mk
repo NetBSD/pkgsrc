@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/07/03 06:28:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/07/03 19:25:15 wiz Exp $
 
 BUILDLINK_TREE+=	abseil
 
@@ -9,7 +9,7 @@ ABSEIL_BUILDLINK3_MK:=
 # error: #error "This package requires GCC 7 or higher."
 GCC_REQD+=	7
 
-USE_CXX_FEATURES+=	c++14 filesystem
+USE_CXX_FEATURES+=	c++17 filesystem
 
 BUILDLINK_API_DEPENDS.abseil+=	abseil>=20220623.0
 BUILDLINK_ABI_DEPENDS.abseil+=	abseil>=20250512.1
