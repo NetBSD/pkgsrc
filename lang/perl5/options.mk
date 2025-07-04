@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2023/07/06 09:22:14 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2025/07/04 08:50:02 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
 PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
@@ -59,14 +59,8 @@ CONFIGURE_ARGS+=	-Duseithreads
 CFLAGS+=		${PTHREAD_CFLAGS}
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
-.  if ${OBJECT_FMT} == "XCOFF"
-PERL5_RPATH_THREAD=-thread
-.  endif
 .else
 CONFIGURE_ARGS+=	-Uuseithreads
-.  if ${OBJECT_FMT} == "XCOFF"
-PERL5_RPATH_THREAD=
-.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
