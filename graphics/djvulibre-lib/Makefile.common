@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2024/08/14 06:14:56 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/07/04 06:25:30 wiz Exp $
 # used by graphics/djvulibre-lib/Makefile
 # used by graphics/djvulibre-tools/Makefile
 
-DISTNAME=	djvulibre-3.5.28
+DISTNAME=	djvulibre-3.5.29
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
