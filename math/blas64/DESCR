@@ -7,3 +7,5 @@ available, they're commonly used in the development of high quality
 linear algebra software, LINPACK and LAPACK for example.
 
 This package contains the Fortran 77 reference implementation of BLAS.
+This package builds the library working with indices of 64 bits
+(INTERFACE64=1).
