@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/05/16 10:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/07/04 09:08:36 wiz Exp $
 
 DISTNAME=	pyproj-3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # tests fail
 # https://github.com/pyproj4/pyproj/issues/1447
