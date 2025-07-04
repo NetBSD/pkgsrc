@@ -1,0 +1,15 @@
+ntvcm is a tool to run i8080/Z80 .COM binaries in CP/M 2.2 emulation.
+
+Console input/output works for both BIOS and BDOS APIs.
+
+Disk input/output works via the BDOS API. There is no attempt at
+emulating physical disks. Applications that use BDOS for disk I/O will
+work, but applications that use the BIOS, or assume things about disk
+layout, will not.
+
+For example, assuming CP/M 2.2's asm.com and load.com are in the
+current directory, this will assemble test.asm and generate test.com
+on Windows, Linux, or MacOS:
+
+% ntvcm asm test
+& ntvcm load test
