@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 06:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/04 09:08:35 wiz Exp $
 
 DISTNAME=	memory_profiler-0.61.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

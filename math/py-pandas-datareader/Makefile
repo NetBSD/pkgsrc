@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/15 16:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/04 09:08:36 wiz Exp $
 
 DISTNAME=	pandas-datareader-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.19.0:../../devel/py-requests
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/07/08 14:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/07/04 09:08:37 wiz Exp $
 
 DISTNAME=	python-digitalocean-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-jsonpickle-[0-9]*:../../textproc/py-jsonpickle
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.2.1:../../devel/py-requests
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/15 15:17:48 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/04 09:08:34 wiz Exp $
 
 DISTNAME=	pycha-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../graphics/py-cairocffi
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	#none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

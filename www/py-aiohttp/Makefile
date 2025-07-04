@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2025/06/15 08:31:09 adam Exp $
+# $NetBSD: Makefile,v 1.96 2025/07/04 09:08:34 wiz Exp $
 
 DISTNAME=	aiohttp-3.12.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,10 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.0:../../devel/py-async-timeout
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)

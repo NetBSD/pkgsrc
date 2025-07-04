@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/18 10:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/04 09:08:36 wiz Exp $
 
 DISTNAME=	logbook-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 # compression
 DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

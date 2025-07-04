@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/04/12 11:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/04 09:08:35 wiz Exp $
 
 DISTNAME=	line_profiler-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 # avoid scikit-build
 MAKE_ENV+=	LINE_PROFILER_BUILD_METHOD=setuptools
 INSTALL_ENV+=	LINE_PROFILER_BUILD_METHOD=setuptools
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

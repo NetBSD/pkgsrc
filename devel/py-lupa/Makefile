@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/12 11:55:01 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/04 09:08:37 wiz Exp $
 
 DISTNAME=	lupa-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.11:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "options.mk"
 
