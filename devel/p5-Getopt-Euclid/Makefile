@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2024/11/16 12:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/07/04 08:45:51 wiz Exp $
 
 DISTNAME=	Getopt-Euclid-0.4.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Getopt/}
 

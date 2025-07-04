@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2025/04/17 21:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/07/04 08:45:07 wiz Exp $
 
 DISTNAME=	sybperl-2.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	databases perl5
 MASTER_SITES=	http://www.peppler.org/downloads/
 

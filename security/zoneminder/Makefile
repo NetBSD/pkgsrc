@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/05/06 12:07:36 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/07/04 08:48:06 wiz Exp $
 
 VERSION=	1.36.35
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -6,6 +6,7 @@ NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
 
 PKGNAME=	${DISTNAME:S/${NAME_DIST}-/${NAME_LOWER}-/}
+PKGREVISION=	1
 DISTNAME=	${NAME_DIST}-${VERSION}
 WRKSRC=		${WRKDIR}/${NAME_LOWER}-${VERSION}
 CATEGORIES=	security

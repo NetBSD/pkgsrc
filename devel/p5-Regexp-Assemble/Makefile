@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2024/11/16 12:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/04 08:46:31 wiz Exp $
 
 DISTNAME=	Regexp-Assemble-0.38
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Regexp/}
 EXTRACT_SUFX=	.tgz

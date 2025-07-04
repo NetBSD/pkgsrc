@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2024/11/16 12:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/04 08:44:47 wiz Exp $
 #
 
 DISTNAME=	App-KGB-1.31
 PKGNAME=	${DISTNAME:S/App-KGB/kgb-bot/}
-PKGREVISION=	12
+PKGREVISION=	13
 
 CATEGORIES=	chat perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}

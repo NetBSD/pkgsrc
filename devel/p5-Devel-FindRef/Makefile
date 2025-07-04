@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/11/16 12:04:05 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/04 08:45:37 wiz Exp $
 
 DISTNAME=	Devel-FindRef-1.46
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 

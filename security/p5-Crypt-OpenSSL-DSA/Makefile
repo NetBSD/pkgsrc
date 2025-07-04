@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2024/11/16 12:06:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/07/04 08:47:59 wiz Exp $
 #
 
 DISTNAME=		Crypt-OpenSSL-DSA-0.20
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 

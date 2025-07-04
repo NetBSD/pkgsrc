@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/11/16 12:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/07/04 08:45:41 wiz Exp $
 
 DISTNAME=	Event-RPC-1.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.exit1.org/packages/Event-RPC/dist/
 

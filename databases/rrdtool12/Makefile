@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/11/16 12:03:35 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/07/04 08:45:08 wiz Exp $
 
 DISTNAME=	rrdtool-1.2.30
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	databases graphics net
 MASTER_SITES=	https://oss.oetiker.ch/rrdtool/pub/archive/
 
