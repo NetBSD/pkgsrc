@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/11/16 12:05:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/04 08:47:06 wiz Exp $
 
 DISTNAME=	Padre-Plugin-Autoformat-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/11/16 12:08:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/04 08:49:39 wiz Exp $
 #
 DISTNAME=		X11-Protocol-Other-31
 PKGNAME=		p5-${DISTNAME:S/3/0.3/:}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 perl5
 MASTER_SITES=		https://cpan.metacpan.org/authors/id/K/KR/KRYDE/
 

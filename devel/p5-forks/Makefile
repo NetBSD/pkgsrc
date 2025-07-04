@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/16 12:05:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/04 08:47:03 wiz Exp $
 
 DISTNAME=	forks-0.36
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RY/RYBSKEJ/}
 
