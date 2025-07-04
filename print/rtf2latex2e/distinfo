@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:12:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/07/04 14:44:40 schmonz Exp $
 
-BLAKE2s (rtf2latex2eUnix1.tar.gz) = 7504717698839d7c64c2b91b3e0e7aae14d5248c6fd04276c0775cc66c758309
-SHA512 (rtf2latex2eUnix1.tar.gz) = 13943a6cc3f740269919e3f4549b28807715aef34609c77687017ba4ebfb2e0d682031468341901354249895418b788863183c4f347fe9fe7289b6b1eb26456d
-Size (rtf2latex2eUnix1.tar.gz) = 540992 bytes
-SHA1 (patch-aa) = a9cba2a36e0b0eb65779cbdc810e2e6f04306dd8
-SHA1 (patch-src_common_cole_oledecod.c) = adcf9d97671192102a28ce81dba5c87af5a5d3b4
+BLAKE2s (rtf2latex2e-2-2-3.tar.gz) = f8cfaf0b3aea5d45ceff3ff9c2b09c420fdd99ad590aa3243c52403ce1c05c53
+SHA512 (rtf2latex2e-2-2-3.tar.gz) = ff02701f75ac8d1655e01ee3eec5f9c51f3b9f80238577c715f84d922f1254061472b807bf37ade643701a1e2fe594cf168b522519c1e619bd1cd94f2b92da66
+Size (rtf2latex2e-2-2-3.tar.gz) = 1207871 bytes

@@ -1,36 +1,24 @@
-# $NetBSD: Makefile,v 1.7 2019/11/04 19:58:01 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/07/04 14:44:40 schmonz Exp $
 
-# fix install so it uses ${prefix}
-
-DISTNAME=	rtf2latex2eUnix1
-PKGNAME=	rtf2latex2e-1.0fc2
+DISTNAME=	rtf2latex2e-2-2-3
+PKGNAME=	${DISTNAME:S/-/./g:S/./-/}
 CATEGORIES=	print textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rtf2latex2e/}
 
-MAINTAINER=	reed@reedmedia.net
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/rtf2latex2e/
 COMMENT=	RTF to LaTeX2e converter
+LICENSE=	gnu-gpl-v2
 
-# ImageMagick is an optional component
+MAKE_ENV+=	prefix=${PREFIX}
+MAKE_ENV+=	mandir=${PREFIX}/${PKGMANDIR}
+TEST_TARGET=	test
 
-WRKSRC=		${WRKDIR}/rtf2latex2eUnix-1.0fc1/
-BUILD_DIRS=	Unix
-CONFIGURE_DIRS=	Unix
-GNU_CONFIGURE=	yes
-MAKE_ENV+=	INSTALL_DIR=${PREFIX}/share/rtf2latex2e
+USE_TOOLS+=	gmake
 
-USE_TOOLS+=	pax
+INSTALLATION_DIRS=	${PREFIX}/share/doc/${PKGBASE}/html
 
-INSTALLATION_DIRS+=	bin share/doc/rtf2latex2e share/rtf2latex2e
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rtf2latex2e.bin ${DESTDIR}${PREFIX}/bin/rtf2latex2e
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/rtf2latex2e/
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/rtf2latex2e/
-	${INSTALL_DATA} ${WRKSRC}/doc/rtf2LaTeX2eDoc.html ${DESTDIR}${PREFIX}/share/doc/rtf2latex2e/
-	cd ${WRKSRC} && pax -rw pref ${DESTDIR}${PREFIX}/share/rtf2latex2e
-
-# install other docs and examples too?
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
 
 .include "../../mk/bsd.pkg.mk"
