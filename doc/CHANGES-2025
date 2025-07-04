@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4139 2025/07/04 16:20:57 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4140 2025/07/04 16:30:59 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6145,3 +6145,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/rtf2latex2e to 2.2.3 [schmonz 2025-07-04]
 	Updated net/fehqlibs to 27 [schmonz 2025-07-04]
 	Updated textproc/ov to 0.42.1 [schmonz 2025-07-04]
+	Added emulators/ntvcm version 20250704 [hauke 2025-07-04]
