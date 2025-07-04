@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.453 2025/07/03 04:52:22 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.454 2025/07/04 01:45:53 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27053,3 +27053,15 @@ hdf5-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-6856
 hdf5-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6857
 hdf5-[0-9]*	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-6858
 xz<5.8.1	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-31115
+php81<8.1.33	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
+php81-pgsql<8.1.33	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
+php81-soap<8.1.33	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
+php82<8.2.29	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
+php82-pgsql<8.2.29	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
+php82-soap<8.2.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
+php83<8.3.23	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
+php83-pgsql<8.3.23	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
+php83-soap<8.3.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
+php84<8.4.10	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
+php84-pgsql<8.4.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
+php84-soap<8.4.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
