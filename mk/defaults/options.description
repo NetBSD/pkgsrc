@@ -319,8 +319,8 @@ gnutls			Enable GNU TLS support.
 go			Enable Go language support.
 goffice			Enable goffice support.
 gopher			Enable support for the Gopher information system.
-gpsd			Enable GPS service daemon support.
 gpgme			Enable gpg support, by using the gpgme library.
+gpsd			Enable GPS service daemon support.
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
 graphicsmagick		Use GraphicsMagick as imaging library.
@@ -737,6 +737,11 @@ pcsc			Enable PC/SC support.
 pdcurses		Enable pdcurses support.
 pdf			Enable PDF support.
 perl			Enable Perl support.
+perl-64bitall		Enable 64-bit support as much as possible (maximal 64-bit support).
+perl-64bitauto		Use perl's defaults for 64-bit support.
+perl-64bitint		Enable 64-bit scalar values (minimal 64-bit support).
+perl-64bitmore		Enable 64-bit and long double support.
+perl-64bitnone		Turn off 64-bit support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
 php-cgi			Use PHP via CGI.
