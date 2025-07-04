@@ -1,4 +1,4 @@
-$NetBSD: patch-Configure,v 1.17 2025/07/04 08:41:44 wiz Exp $
+$NetBSD: patch-Configure,v 1.18 2025/07/04 08:58:56 wiz Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
@@ -184,7 +184,7 @@ $NetBSD: patch-Configure,v 1.17 2025/07/04 08:41:44 wiz Exp $
  : Set the vendorbin variables
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
-@@ -20825,7 +20857,15 @@ RCAT(Rei,ser)
+@@ -20825,7 +20853,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
