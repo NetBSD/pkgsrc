@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/04/12 10:59:18 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/07/04 09:08:36 wiz Exp $
 
 DISTNAME=	falcon-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.21:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # as of 4.0.2
 # 1 failed, 3677 passed, 360 skipped

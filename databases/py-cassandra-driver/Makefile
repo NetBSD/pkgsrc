@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/04/14 11:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/07/04 09:08:35 wiz Exp $
 
 DISTNAME=	python-driver-3.28.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-geomet>=0:../../geography/py-geomet
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
 
 WHEEL_NAME=	${DISTNAME:S/python-/cassandra_/}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/pyversion.mk"
 

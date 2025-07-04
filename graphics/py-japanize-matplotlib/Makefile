@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/01/04 16:33:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/04 09:08:34 wiz Exp $
 
 DISTNAME=	japanize-matplotlib-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=0:../../graphics/py-matplotlib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

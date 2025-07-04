@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/06/10 06:04:51 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/04 09:08:38 wiz Exp $
 
 DISTNAME=	propcache-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,10 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.0.0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

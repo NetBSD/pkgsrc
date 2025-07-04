@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/06/30 19:03:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/04 09:08:37 wiz Exp $
 
 DISTNAME=	frozenlist-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,10 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	c++
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

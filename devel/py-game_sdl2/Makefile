@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/05/16 12:27:20 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/04 09:08:36 wiz Exp $
 
 DISTNAME=	pygame_sdl2-2.1.0+renpy8.3.7
 PKGNAME=	${PYPKGPREFIX}-game_sdl2-2.1.0.8.3.7
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/renpy/pygame_sdl2
 COMMENT=	Set of Python modules designed for writing games for RenPy
 LICENSE=	gnu-lgpl-v2.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 
