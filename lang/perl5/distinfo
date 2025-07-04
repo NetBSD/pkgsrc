@@ -1,17 +1,10 @@
-$NetBSD: distinfo,v 1.192 2025/05/31 19:22:30 wiz Exp $
+$NetBSD: distinfo,v 1.193 2025/07/04 08:41:44 wiz Exp $
 
-BLAKE2s (perl-5.40.2.tar.xz) = 0d924b3c48afb28b02dee7e250ee79f6c1993333e34d4cee5de16476f81fd224
-SHA512 (perl-5.40.2.tar.xz) = 1324b119e4370bbeb47a343d152f46c637addb0373ff07f0e214aa9d5912c03cd2bd23987a6e86d43453166412d3a03a52e780201941f679ef4186df16590e41
-Size (perl-5.40.2.tar.xz) = 13923524 bytes
-SHA1 (patch-Configure) = 5de452d2348d2a17d5f7be64211b9d2834aaae99
-SHA1 (patch-Cross_config.sh-arm-linux) = a22381c088bcdcc6954b5859f83bb64ce252a025
-SHA1 (patch-Cross_config.sh-arm-linux-n770) = 3479782761ba6bd4b9907cfde07fcb17565836ba
+BLAKE2s (perl-5.42.0.tar.xz) = 0afd0ca2a31a2445d7232c451312717a72ceb208c4e2c39016a2d9924bde7601
+SHA512 (perl-5.42.0.tar.xz) = b10f74d1245a879ae51d3ad93ad519a148df126ec865715474c801548ccfc3f542ef3bbb1f59568cea2ec77302d428dc772aba605357d7faf13eb6a351917275
+Size (perl-5.42.0.tar.xz) = 14400988 bytes
+SHA1 (patch-Configure) = 5b34557ee6a7fd79bbf3e9a77b2b537c3313d5ec
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
-SHA1 (patch-Porting_Glossary) = 736e6e6123987b07346e4117e980b093991d713e
-SHA1 (patch-Porting_config.sh) = 8a5fce893bac7d3a8d47b5686d13285f454b89fa
-SHA1 (patch-builtin.c) = 7ac5821ab3f4c9ae29d2cbe9db0407560aee2328
-SHA1 (patch-config__h.SH) = 10944c38327b94df493191c267b4f3f02c0935c8
-SHA1 (patch-configure.com) = ffbd4167e99aa860bbf6adedab3192b881c520e3
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 996556f221eb0c75c316315462bf6cea6746e030
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
@@ -20,8 +13,3 @@ SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = cb498170c18f1f429eed9be245cd1df24c7ad628
 SHA1 (patch-hints_solaris__2.sh) = 83b20650435ea3b62314af6059f3d82c3dd6b0a2
 SHA1 (patch-installperl) = b129d64cc17b898b44fe6282b8b1df36e342d0ef
-SHA1 (patch-plan9_config__sh.sample) = 340f5003ed06a8e793ac04abc58d42682f7ab7cc
-SHA1 (patch-sv.c) = 4415fb2125ef184a602ecc340fe64593546181b2
-SHA1 (patch-t_op_threads-dirh.t) = 3ab19d1fc589359a985576a5150c9368aa6520d9
-SHA1 (patch-win32_config.gc) = f339383a574567744d5dfd1ccb91ab9830b5934a
-SHA1 (patch-win32_config.vc) = 3dca3228225f46e2361293f53735b9fec1e2684a
