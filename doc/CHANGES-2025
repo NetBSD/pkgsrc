@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4133 2025/07/04 06:25:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4134 2025/07/04 06:26:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6139,3 +6139,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php81 to 8.1.33 [taca 2025-07-04]
 	Updated lang/php83 to 8.3.23 [taca 2025-07-04]
 	Updated graphics/djvulibre-lib to 3.5.29 [wiz 2025-07-04]
+	Updated graphics/djvulibre-tools to 3.5.29 [wiz 2025-07-04]
