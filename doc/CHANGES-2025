@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4137 2025/07/04 14:44:47 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4138 2025/07/04 14:49:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6143,3 +6143,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/glibmm2.68 to 2.84.0 [prlw1 2025-07-04]
 	Updated lang/perl5 to 5.42.0 [wiz 2025-07-04]
 	Updated print/rtf2latex2e to 2.2.3 [schmonz 2025-07-04]
+	Updated net/fehqlibs to 27 [schmonz 2025-07-04]
