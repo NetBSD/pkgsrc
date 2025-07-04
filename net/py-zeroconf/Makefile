@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/05/16 10:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/07/04 09:08:34 wiz Exp $
 
 DISTNAME=	zeroconf-0.147.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.1.0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

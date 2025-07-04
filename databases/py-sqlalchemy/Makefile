@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/05/16 12:54:01 adam Exp $
+# $NetBSD: Makefile,v 1.89 2025/07/04 09:08:33 wiz Exp $
 
 DISTNAME=	sqlalchemy-2.0.41
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.18:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=0:../../devel/py-test-xdist
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/04/19 07:58:22 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/07/04 09:08:35 wiz Exp $
 
 DISTNAME=	gssapi-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 # unpackaged: k5test
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../mk/bsd.prefs.mk"
 
