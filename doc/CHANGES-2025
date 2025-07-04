@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4128 2025/07/03 16:31:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4129 2025/07/04 01:22:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6134,3 +6134,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/gtk4 to 4.18.5 [prlw1 2025-07-03]
 	Added audio/sox_ng version 14.6.0.2 [wiz 2025-07-03]
 	Updated devel/jj to 0.31.0 [wiz 2025-07-03]
+	Updated lang/php84 to 8.4.10 [taca 2025-07-04]
