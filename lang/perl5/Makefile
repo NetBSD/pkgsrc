@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.288 2025/05/31 19:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.289 2025/07/04 08:41:44 wiz Exp $
 
-PKGREVISION=	1
 .include "license.mk"
 .include "Makefile.common"
 
@@ -54,16 +53,13 @@ LDFLAGS.QNX+=		-lm
 
 CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 
-# As of 5.40.0
+# As of 5.42.0
 # with
 #ALLOW_NETWORK_ACCESS=	yes
-# Failed 2 tests out of 2733, 99.93% okay.
-#         porting/customized.t
-#         porting/regen.t
-# https://github.com/Perl/perl5/issues/22751
-# As of 5.40.2
+# Failed 1 test out of 2750, 99.96% okay.
+#         ../cpan/Sys-Syslog/t/syslog-inet-udp.t
 # without network
-# Failed 5 tests out of 2732, 99.82% okay.
+# Failed 5 tests out of 2748, 99.82% okay.
 #         ../cpan/HTTP-Tiny/t/003_agent.t
 #         ../cpan/HTTP-Tiny/t/004_timeout.t
 #         ../cpan/HTTP-Tiny/t/070_cookie_jar.t
