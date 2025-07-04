@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/31 01:41:29 scole Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/04 08:46:40 wiz Exp $
 
 DISTNAME=	Tcl-1.51
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5 tcl
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tcl/}
 

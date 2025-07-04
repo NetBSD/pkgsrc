@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/11/16 12:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/04 08:47:09 wiz Exp $
 
 DISTNAME=	Data-Currency-0.06000
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 

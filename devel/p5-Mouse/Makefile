@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2024/11/16 12:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/07/04 08:46:18 wiz Exp $
 
 DISTNAME=	Mouse-v2.5.11
 PKGNAME=	p5-${DISTNAME:S/v//1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SK/SKAJI/}
 

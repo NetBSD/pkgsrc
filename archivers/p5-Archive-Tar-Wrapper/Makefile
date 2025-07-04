@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/11/16 12:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/04 08:44:44 wiz Exp $
 
 DISTNAME=	Archive-Tar-Wrapper-0.41
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2024/11/16 12:03:14 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/07/04 08:44:48 wiz Exp $
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/
 EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}

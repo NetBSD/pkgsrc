@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/04/24 14:14:06 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/07/04 08:47:10 wiz Exp $
 
 DISTNAME=		xracer-0.96.9
-PKGREVISION=		32
+PKGREVISION=		33
 CATEGORIES=		games x11
 MASTER_SITES=		#
 

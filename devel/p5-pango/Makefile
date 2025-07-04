@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2024/12/27 08:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/07/04 08:47:05 wiz Exp $
 #
 
 DISTNAME=	Pango-1.227
 PKGNAME=	p5-${DISTNAME:tl}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XA/XAOC/}
 

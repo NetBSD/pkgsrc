@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/11/16 12:06:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/04 08:48:23 wiz Exp $
 
 DISTNAME=	Snowball-Norwegian-1.2
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AS/ASKSH/}
 

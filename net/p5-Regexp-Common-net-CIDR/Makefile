@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2024/11/16 12:06:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/04 08:47:50 wiz Exp $
 #
 
 DISTNAME=	Regexp-Common-net-CIDR-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Regexp/}
 
