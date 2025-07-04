@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/06/06 14:01:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/04 16:20:51 schmonz Exp $
 
-DISTNAME=		ov-0.41.0
-PKGREVISION=		1
+DISTNAME=		ov-0.42.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=noborus/}
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
