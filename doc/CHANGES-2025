@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4136 2025/07/04 08:41:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4137 2025/07/04 14:44:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6142,3 +6142,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/djvulibre-tools to 3.5.29 [wiz 2025-07-04]
 	Updated devel/glibmm2.68 to 2.84.0 [prlw1 2025-07-04]
 	Updated lang/perl5 to 5.42.0 [wiz 2025-07-04]
+	Updated print/rtf2latex2e to 2.2.3 [schmonz 2025-07-04]
