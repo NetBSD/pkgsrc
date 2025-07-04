@@ -1,2 +1,4 @@
 This is the C wrapper to the Basic Linear Algebra Support library
 (CBLAS), extracted from the Netlib reference implementation of LAPACK.
+
+This version wraps the blas64 package, and thus uses 64-bit indices.
