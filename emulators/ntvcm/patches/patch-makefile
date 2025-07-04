@@ -1,0 +1,60 @@
+$NetBSD: patch-makefile,v 1.1 2025/07/04 16:30:12 hauke Exp $
+
+Make LFLAGS and CFLAGS overridable
+
+Drop optimization from CFLAGS, pkgsrc does that
+
+Remove ls(1) call, GNU long opts are not portable
+
+Print compiler command lines always
+
+--- makefile.orig	2025-07-02 22:41:46.000000000 +0000
++++ makefile
+@@ -27,14 +27,15 @@ FILES	= *.cxx *.hxx LICENSE README.md ma
+ OBJECTS	= $(SOURCES:.cxx=.o)
+ OUTPUT	= $(PROGRAM).out
+ LANG	= LANG_$(shell (echo $$LANG | cut -f 1 -d '_'))
+-COMMIT	!= git log -1 HEAD --format=%h 2> /dev/null
+-BUILD	!= printf "%04d" $(shell git rev-list --count HEAD 2> /dev/null)
++#COMMIT	!= git log -1 HEAD --format=%h 2> /dev/null
++#BUILD	!= printf "%04d" $(shell git rev-list --count HEAD 2> /dev/null)
+ UNAME	!= uname
+ CC	= g++
+ 
+-LIBS	= 
+-LFLAGS	= -static
+-CFLAGS	= -ggdb -fno-builtin -I .
++#LIBS	= 
++
++LFLAGS	+= -static
++CFLAGS	+= -ggdb -fno-builtin -I .
+ 
+ ifndef VERBOSE
+ VERBOSE	= 0
+@@ -48,7 +49,7 @@ ifneq ($(BUILD),)
+ CFLAGS	+= -DBUILD='".$(BUILD)"'
+ endif
+ 
+-all: CFLAGS	+= -flto -Ofast -D NDEBUG
++all: CFLAGS	+= -flto -D NDEBUG
+ all: $(PROGRAM) $(OBJECTS)
+ 
+ $(PROGRAM): $(OBJECTS)
+@@ -57,15 +58,14 @@ ifneq ($(VERBOSE),0)
+ 	@echo $(CC) $(LFLAGS) $(OBJECTS) -o $@ $(LIBS)
+ 	@echo
+ endif
+-	@$(CC) $(LFLAGS) $(OBJECTS) -o $@ $(LIBS)
+-	@ls --color $@  
++	$(CC) $(LFLAGS) $(OBJECTS) -o $@ $(LIBS)
+ 
+ $(OBJECTS) : $(SOURCES)
+ ifneq ($(VERBOSE),0)
+ 	@echo 
+ 	@echo $(CC) $(CFLAGS) -c $(SOURCES)
+ endif
+-	@$(CC) $(CFLAGS) -c $(SOURCES)
++	$(CC) $(CFLAGS) -c $(SOURCES)
+ 
+ release: clean
+ release: all

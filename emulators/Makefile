@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2025/07/02 21:27:00 wiz Exp $
+# $NetBSD: Makefile,v 1.374 2025/07/04 16:30:11 hauke Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -172,6 +172,7 @@ SUBDIR+=	netbsd32_compat30-extras
 SUBDIR+=	netbsd32_compat40
 SUBDIR+=	netbsd32_compat40-extras
 SUBDIR+=	nono
+SUBDIR+=	ntvcm
 SUBDIR+=	open-simh
 SUBDIR+=	openmsx
 SUBDIR+=	or1ksim

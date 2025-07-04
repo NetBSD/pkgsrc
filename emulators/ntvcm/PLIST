@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/04 16:30:11 hauke Exp $
+bin/ntvcm
+man/man1/ntvcm.1
+share/doc/ntvcm/README.md
