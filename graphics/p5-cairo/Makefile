@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2024/11/16 12:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/07/04 08:47:15 wiz Exp $
 
 DISTNAME=	Cairo-1.109
 PKGNAME=	p5-${DISTNAME:tl}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 

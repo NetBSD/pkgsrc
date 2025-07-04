@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2024/11/16 12:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/07/04 08:44:57 wiz Exp $
 
 DISTNAME=	DBD-Pg-3.14.2
 PKGNAME=	p5-${DISTNAME:C/-Pg-/-postgresql-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 

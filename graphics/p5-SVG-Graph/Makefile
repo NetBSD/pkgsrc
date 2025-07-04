@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/11/16 12:05:44 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/04 08:47:15 wiz Exp $
 
 DISTNAME=	SVG-Graph-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CJ/CJFIELDS/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2024/11/16 12:05:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/04 08:47:06 wiz Exp $
 #
 
 DISTNAME=		refinecvs-0.86.1251
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		devel scm
 MASTER_SITES=		http://lev.serebryakov.spb.ru/refinecvs/
 

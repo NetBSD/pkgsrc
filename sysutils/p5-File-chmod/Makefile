@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/11/16 12:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/07/04 08:48:08 wiz Exp $
 
 DISTNAME=	File-chmod-0.42
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 

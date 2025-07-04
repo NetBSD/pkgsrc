@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2025/03/09 06:11:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/07/04 08:48:27 wiz Exp $
 
 DISTNAME=	Text-CSV-2.06
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

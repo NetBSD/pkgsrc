@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/11/20 13:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/04 08:48:54 wiz Exp $
 
 DISTNAME=	AnyEvent-I3-0.19
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	wm devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSTPLBG/}
 

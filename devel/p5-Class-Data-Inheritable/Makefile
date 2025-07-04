@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2024/11/16 12:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/07/04 08:45:21 wiz Exp $
 
 EXTRACT_USING=	gtar	# XXX avoid extended attributes in distfile
 			# https://rt.cpan.org/Ticket/Display.html?id=156823
 
 DISTNAME=	Class-Data-Inheritable-0.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

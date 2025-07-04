@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2024/11/16 12:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/07/04 08:47:34 wiz Exp $
 #
 
 DISTNAME=		Business-CreditCard-0.39
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Business/}
 

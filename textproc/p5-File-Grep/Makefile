@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2025/06/09 04:52:10 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/04 08:48:14 wiz Exp $
 #
 
 DISTNAME=		File-Grep-0.02
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/01/05 22:37:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/04 08:48:55 wiz Exp $
 
 DISTNAME=	Alien-LibGumbo-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RU/RUZ/}
 

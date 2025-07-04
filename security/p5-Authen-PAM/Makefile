@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2024/11/16 12:06:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/04 08:47:55 wiz Exp $
 #
 
 DISTNAME=	Authen-PAM-0.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NIKIP/}
 

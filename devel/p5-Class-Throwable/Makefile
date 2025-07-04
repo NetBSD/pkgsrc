@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/11/16 12:03:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/04 08:45:24 wiz Exp $
 
 DISTNAME=	Class-Throwable-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2024/11/16 12:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/07/04 08:47:28 wiz Exp $
 #
 
 DISTNAME=	Math-BaseCnv-1.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 EXTRACT_SUFX=	.tgz
