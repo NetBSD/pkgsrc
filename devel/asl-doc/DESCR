@@ -1,0 +1,6 @@
+asl is a portable macro cross assembler for a variety of
+microprocessors and -controllers. Though it is mainly targeted at
+embedded processors and single-board computers, you also find CPU
+families in the target list that are used in workstations and PCs.
+
+This is the LaTeX documentation package for asl.

@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.def.pkgsrc,v 1.1 2025/07/05 12:12:13 hauke Exp $
+
+# -------------------------------------------------------------------------
+# choose your compiler (must be ANSI-compliant!) and linker command, plus
+# any additionally needed flags.  Also set target directory and file extensions:
+
+# ...for host-side build tools:
+
+OBJDIR = objects/
+CC ?= cc
+CFLAGS ?= -O2
+HOST_OBJEXTENSION = .o
+LD = $(CC)
+LDFLAGS ?=
+HOST_EXEXTENSION =
+
+# ...for the actual build targets.  This is the simple case for no cross-build:
+
+TARG_OBJDIR = $(OBJDIR)
+TARG_CC = $(CC)
+TARG_CFLAGS = $(CFLAGS)
+TARG_OBJEXTENSION = $(HOST_OBJEXTENSION)
+TARG_LD = $(LD)
+TARG_LDFLAGS = $(LDFLAGS)
+TARG_EXEXTENSION = $(HOST_EXEXTENSION)
+
+# -------------------------------------------------------------------------
+# directories where binaries, includes, and manpages should go during
+# installation
+
+BINDIR = ${DESTDIR}${PREFIX}/bin
+INCDIR = ${DESTDIR}${PREFIX}/include/asl
+MANDIR = ${DESTDIR}${PREFIX}/${PKGMANDIR}
+LIBDIR = ${DESTDIR}${PREFIX}/lib
+DOCDIR = ${DESTDIR}${PREFIX}/share/doc/asl

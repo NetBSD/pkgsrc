@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/05 12:12:14 hauke Exp $
+
+We only build documentation here.
+
+--- Makefile.orig	2025-07-05 11:10:10.515291570 +0000
++++ Makefile
+@@ -40,7 +40,7 @@ binaries: $(ALLTARGETS)
+ 
+ binaries-das: $(DASLTARGET) $(DASMSGTARGETS)
+ 
+-all: binaries docs
++all: docs
+ 
+ include makedefs.src
+ 
