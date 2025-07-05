@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.454 2025/07/04 01:45:53 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.455 2025/07/05 09:51:53 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27065,3 +27065,4 @@ php83-soap<8.3.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64
 php84<8.4.10	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
 php84-pgsql<8.4.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
 php84-soap<8.4.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
+SOPE-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53603
