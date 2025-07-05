@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4145 2025/07/05 12:13:05 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.4146 2025/07/05 19:37:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6151,3 +6151,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-manticore [wiz 2025-07-05]
 	Added devel/asl version 1.42.290 [hauke 2025-07-05]
 	Added devel/asl-doc version 1.42.290 [hauke 2025-07-05]
+	Updated devel/protobuf-c to 1.5.2 [wiz 2025-07-05]
