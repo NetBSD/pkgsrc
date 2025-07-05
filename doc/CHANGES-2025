@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4142 2025/07/05 08:28:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4143 2025/07/05 11:45:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6148,3 +6148,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added emulators/ntvcm version 20250704 [hauke 2025-07-04]
 	Updated graphics/freetype2 to 2.13.3nb1 [wiz 2025-07-05]
 	Updated shells/bash to 5.3 [wiz 2025-07-05]
+	Removed devel/py-manticore [wiz 2025-07-05]
