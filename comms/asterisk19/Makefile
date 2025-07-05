@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/04/24 14:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/07/05 19:59:36 gdt Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -33,6 +33,9 @@ MKPIE_SUPPORTED=	NO
 .include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
+# asterisk checks for `xml`, provided in pkgsrc if `xmlstarlet` is installed,
+# and then fails with a mysterious "bad substitution".
+# \todo Fix asterisk to build in the presence of xmlstarlet.
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
