@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2024/07/08 15:11:46 js Exp $
+$NetBSD: distinfo,v 1.12 2025/07/05 21:04:30 js Exp $
 
-BLAKE2s (SickGear/release_3.30.5.tar.gz) = f3f7541cd69fb5d028fbcce78d4eeb9938e452ea9dcdff761b26fa0d0952ef9f
-SHA512 (SickGear/release_3.30.5.tar.gz) = 3d10fbfbadfa66db7f4ebf4d8c161657ce2a92e8facfd40c619b5a40b8737c15be030459f99141f0a9efde321bd66da2fdad41cabfd77496eccc1920bfd7a979
-Size (SickGear/release_3.30.5.tar.gz) = 16649271 bytes
-SHA1 (patch-sickgear.py) = 3ce73861fa16cba2b9267aebf1da51437fd743f3
+BLAKE2s (SickGear/release_3.33.11.tar.gz) = e36bca569a22d90c046e3eef5eb0e0b43e12f2e8225c522407e8662e008c10f9
+SHA512 (SickGear/release_3.33.11.tar.gz) = fe6190dc0f0f3917e8e58442ed5a015a770293d298d4c5ef23ee7c31354842cef55146f9b347474c941a3c8faa038706d908782fbce7076c0e4f138369dc605e
+Size (SickGear/release_3.33.11.tar.gz) = 16730573 bytes
+SHA1 (patch-sickgear.py) = 19b36182bdccf34cad7cdabf965823be6a005bd4
 SHA1 (patch-sickgear_version_checker.py) = ca679abefb9a970cba93209af605721730d4693b
