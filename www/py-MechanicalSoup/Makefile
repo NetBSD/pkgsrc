@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/07/01 05:27:10 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/05 11:44:14 wiz Exp $
 
 DISTNAME=	mechanicalsoup-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/mechanicalsoup/MechanicalSoup/}
@@ -25,6 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # as of 1.3.0
 # 69 failed, 66 passed

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/14 05:17:11 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/05 11:44:10 wiz Exp $
 
 DISTNAME=	pyspnego-0.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-krb5>=0.3.0:../../security/py-krb5
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

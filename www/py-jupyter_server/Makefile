@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/06/02 11:32:48 prlw1 Exp $
+# $NetBSD: Makefile,v 1.17 2025/07/05 11:44:13 wiz Exp $
 
 DISTNAME=	jupyter_server-2.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -40,7 +40,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-USE_PKGLOCALEDIR=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
