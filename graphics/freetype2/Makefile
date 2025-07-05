@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2024/08/18 19:54:53 adam Exp $
+# $NetBSD: Makefile,v 1.137 2025/07/05 07:39:38 wiz Exp $
 
 DISTNAME=	freetype-2.13.3
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	https://download.savannah.gnu.org/releases/freetype/
@@ -29,7 +30,8 @@ CONFIGURE_ARGS+=	--enable-freetype-config
 LDFLAGS+=	-framework Carbon
 .endif
 
-PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
+PKGCONFIG_OVERRIDE=	builds/unix/freetype2.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
