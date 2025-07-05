@@ -1,5 +1,19 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.1 2025/06/30 09:01:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.2 2025/07/05 00:08:36 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
+Pullup ticket #6976 - requested by taca
+lang/php82: Security fix
 
+Pullup ticket #6977 - requested by taca
+lang/php81: Security fix
+
+Pullup ticket #6978 - requested by taca
+lang/php83: Security fix
+
+Pullup ticket #6979 - requested by taca
+lang/php84: Security fix
+
+Pullup ticket #6980 - requested by bouyer
+sysutils/xenkernel418: Security fix
+sysutils/xentools418: Security fix
