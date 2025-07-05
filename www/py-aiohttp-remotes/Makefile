@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/03/02 09:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/05 11:44:16 wiz Exp $
 
 DISTNAME=	aiohttp_remotes-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

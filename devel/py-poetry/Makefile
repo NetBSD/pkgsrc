@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/05/07 07:30:43 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/05 11:44:09 wiz Exp $
 
 DISTNAME=	poetry-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -41,17 +41,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 # for tests
 USE_LANGUAGES=	c
 
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	${PYPKGPREFIX}-xattr>=1.0.0:../../sysutils/py-xattr
-.endif
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.4:../../devel/py-importlib-metadata
-.endif
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.0.1:../../textproc/py-tomli
 .endif
 
 post-install:

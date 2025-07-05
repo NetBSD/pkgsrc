@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/06/30 19:45:57 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/05 11:44:07 wiz Exp $
 
 DISTNAME=	libcst-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,15 +23,12 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
 pre-build:
 	cd ${WRKSRC}/.cargo && ${LN} -f -s ../native/.cargo/config config
 
 .include "cargo-depends.mk"
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>0:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"

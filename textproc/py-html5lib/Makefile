@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/04/13 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/05 11:44:13 wiz Exp $
 
 DISTNAME=	html5lib-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-expect-[0-9]*:../../devel/py-test-expect
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

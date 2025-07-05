@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/10/28 19:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/05 11:44:17 wiz Exp $
 
 DISTNAME=	jsonschema_spec-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

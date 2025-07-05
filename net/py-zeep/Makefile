@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/15 09:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/05 11:44:08 wiz Exp $
 
 DISTNAME=	zeep-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,6 +29,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.8.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpx-[0-9]*:../../www/py-test-httpx
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # 471 passed, 18 skipped, 32 warnings
 

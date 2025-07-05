@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/04/14 12:50:21 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/07/05 11:44:19 wiz Exp $
 
 DISTNAME=	relatorio-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=2.0:../../textproc/py-lxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
