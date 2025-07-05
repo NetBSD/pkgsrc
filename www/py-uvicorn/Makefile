@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/07/01 08:09:46 adam Exp $
+# $NetBSD: Makefile,v 1.53 2025/07/05 11:44:08 wiz Exp $
 
 DISTNAME=	uvicorn-0.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,10 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.0:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

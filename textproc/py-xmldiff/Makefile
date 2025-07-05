@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/14 13:00:59 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/05 11:44:07 wiz Exp $
 
 DISTNAME=	xmldiff-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.1.0:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 .for bin in xmldiff xmlpatch

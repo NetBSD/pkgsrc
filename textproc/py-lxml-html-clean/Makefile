@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/12 19:17:27 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/05 11:44:16 wiz Exp $
 
 DISTNAME=	lxml_html_clean-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -12,6 +12,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
