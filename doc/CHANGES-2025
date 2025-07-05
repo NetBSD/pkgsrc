@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4146 2025/07/05 19:37:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4147 2025/07/05 21:04:46 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6152,3 +6152,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/asl version 1.42.290 [hauke 2025-07-05]
 	Added devel/asl-doc version 1.42.290 [hauke 2025-07-05]
 	Updated devel/protobuf-c to 1.5.2 [wiz 2025-07-05]
+	Updated multimedia/sickgear to 3.33.11 [js 2025-07-05]
