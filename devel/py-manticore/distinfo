@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2023/05/11 09:53:06 adam Exp $
-
-BLAKE2s (manticore-0.3.7.tar.gz) = 12a504cf225145371698be42b3c06edb2044a79a4b3eab4b5363017536565236
-SHA512 (manticore-0.3.7.tar.gz) = c7c87010f734ce5803637f33ce97199ab706309d112a9934a43f2a2d12769cff2541f4fc48115f133ed1e2c4240569b17d7bc667d7b394ff3a3236134afaea8b
-Size (manticore-0.3.7.tar.gz) = 385451 bytes
-SHA1 (patch-setup.py) = 9bf6aa446f2fdf6278e19b54b0fe455d699b08b7
