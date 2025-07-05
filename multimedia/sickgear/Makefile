@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/07/08 15:11:46 js Exp $
+# $NetBSD: Makefile,v 1.21 2025/07/05 21:04:30 js Exp $
 
 DISTNAME=	release_${PKGVERSION_NOREV}
-PKGNAME=	sickgear-3.30.5
-PKGREVISION=	3
+PKGNAME=	sickgear-3.33.11
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SickGear/}
 GITHUB_PROJECT=	SickGear
@@ -15,6 +14,7 @@ COMMENT=	Management of TV shows and/or Anime
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah3
+DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 
 USE_TOOLS+=			pax
 PYTHON_VERSIONS_INCOMPATIBLE=	27
