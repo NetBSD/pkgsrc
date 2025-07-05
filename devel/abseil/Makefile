@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/06/30 13:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.33 2025/07/05 13:42:44 gdt Exp $
 
 DISTNAME=	abseil-20250512.1
 CATEGORIES=	devel
@@ -11,14 +11,10 @@ HOMEPAGE=	https://github.com/abseil/abseil-cpp
 COMMENT=	C++ Common Libraries
 LICENSE=	apache-2.0
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c++
+USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
-
-# include/absl/base/policy_checks.h:57:2: error:
-# #error "This package requires GCC 7 or higher."
-GCC_REQD+=	7
 
 .include "../../mk/bsd.prefs.mk"
 
