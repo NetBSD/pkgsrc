@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4481 2025/07/05 11:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4482 2025/07/05 12:12:13 hauke Exp $
 #
 
 COMMENT=	Development utilities
@@ -159,6 +159,8 @@ SUBDIR+=	argtable
 SUBDIR+=	as31
 SUBDIR+=	asdf
 SUBDIR+=	asio
+SUBDIR+=	asl
+SUBDIR+=	asl-doc
 SUBDIR+=	aslc86k
 SUBDIR+=	asm2html
 SUBDIR+=	asmfmt
