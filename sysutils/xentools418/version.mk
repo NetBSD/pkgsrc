@@ -1,10 +1,10 @@
-# $NetBSD: version.mk,v 1.5 2025/05/22 14:14:37 bouyer Exp $
+# $NetBSD: version.mk,v 1.5.2.1 2025/07/05 00:07:27 maya Exp $
 #
 # Version number is used by xenkernel418, xentools418 and xenstoretools
 
-VERSION=		20250521
-XEN_COMMIT=		0b8f769d00bcfcda65d9f6d0729cfdc6cb336d12
-XEN_SHORTCOMMIT=	0b8f769
+VERSION=		20250701
+XEN_COMMIT=		438bb1285f470e2f385c0ea917ac9787d56aa8d3
+XEN_SHORTCOMMIT=	438bb12
 
 DIST_SUBDIR=		xen418
 DISTNAME=		xen-${XEN_COMMIT}
@@ -17,7 +17,7 @@ IPXE_DIST=		ipxe-${IPXE_VERSION}.tar.gz
 DISTFILES+=		${IPXE_DIST}
 SITES.${IPXE_DIST}=	-https://github.com/ipxe/ipxe/archive/${IPXE_VERSION}.tar.gz
 
-QEMU_VERSION=		${VERSION}
+QEMU_VERSION=		20250521
 QEMU_DIST=		qemu-xen-${QEMU_VERSION}
 QEMU_DISTFILE=		${QEMU_DIST}.tar.gz
 DISTFILES+=		${QEMU_DISTFILE}
