@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/04/22 09:46:24 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/07/05 11:44:13 wiz Exp $
 
 DISTNAME=	openpyxl-3.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

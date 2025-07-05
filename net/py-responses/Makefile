@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/04/15 09:51:03 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/07/05 11:44:20 wiz Exp $
 
 DISTNAME=	responses-0.25.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
 TEST_DEPENDS+=	${PYPKGPREFIX}-types-yaml-[0-9]*:../../textproc/py-types-yaml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

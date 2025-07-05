@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/14 12:06:25 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/05 11:44:19 wiz Exp $
 
 DISTNAME=	generateDS-2.43.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/0$//}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 WHEEL_NAME=	${DISTNAME:tl}
 

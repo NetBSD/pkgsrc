@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/30 14:56:54 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/05 11:44:20 wiz Exp $
 
 DISTNAME=	openapi3-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

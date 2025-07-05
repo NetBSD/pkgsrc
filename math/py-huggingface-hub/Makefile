@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/16 11:25:09 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/05 11:44:19 wiz Exp $
 
 DISTNAME=	huggingface_hub-0.30.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extens
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

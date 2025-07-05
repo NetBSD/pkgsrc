@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/13 08:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/07/05 11:44:14 wiz Exp $
 
 DISTNAME=	onionbalance-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -22,6 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

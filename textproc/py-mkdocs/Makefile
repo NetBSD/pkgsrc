@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/09/02 21:01:59 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/05 11:44:19 wiz Exp $
 
 DISTNAME=	mkdocs-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,10 +27,9 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.4:../../devel/py-importlib-metadata
-.endif
 .if ${PYTHON_VERSION} >= 312
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .endif

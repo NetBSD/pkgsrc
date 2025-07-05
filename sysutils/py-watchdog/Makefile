@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/04/13 18:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/07/05 11:44:07 wiz Exp $
 
 DISTNAME=	watchdog-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0.3:../../devel/py-test-timeout
 
 # as of 6.0.0
 # 3 failed, 146 passed, 13 skipped, 21 warnings
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

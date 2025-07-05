@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/08/01 23:20:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/05 11:44:08 wiz Exp $
 
 DISTNAME=	clickclick-20.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

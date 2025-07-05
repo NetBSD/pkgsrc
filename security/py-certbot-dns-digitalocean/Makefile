@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/06 12:05:45 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/05 11:44:12 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=	DigitalOcean DNS Authenticator plugin for Certbot
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-digitalocean>=1.11:../../net/py-digitalocean
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/04/14 18:56:06 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/07/05 11:44:15 wiz Exp $
 
 DISTNAME=	flask_flatpages-0.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -20,6 +20,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "options.mk"
 

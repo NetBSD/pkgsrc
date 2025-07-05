@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/07 09:48:20 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/05 11:44:08 wiz Exp $
 
 DISTNAME=	wtforms_sqlalchemy-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,6 +15,8 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=3.1:../../www/py-wtforms
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

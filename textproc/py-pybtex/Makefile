@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/04/17 19:43:34 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/05 11:44:17 wiz Exp $
 
 DISTNAME=	pybtex-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-yaml
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

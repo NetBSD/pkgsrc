@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/02/02 09:38:45 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/07/05 11:44:18 wiz Exp $
 
 DISTNAME=	black-25.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,11 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.1:../../devel/py-typing-extensions
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 .for bin in black blackd

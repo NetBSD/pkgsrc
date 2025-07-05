@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/14 12:50:20 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/05 11:44:17 wiz Exp $
 
 DISTNAME=	ramlfications-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-localserver
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

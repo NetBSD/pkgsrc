@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/02/06 09:57:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/05 11:44:09 wiz Exp $
 
 DISTNAME=	jupyter_events-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,6 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-co
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 SUBST_CLASSES+=		tests
 SUBST_STAGE.tests=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/02/12 13:08:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/05 11:44:10 wiz Exp $
 
 DISTNAME=	gcovr-8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,10 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

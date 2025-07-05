@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/04/14 09:27:05 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/07/05 11:44:17 wiz Exp $
 
 DISTNAME=	feed2exec-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -44,6 +44,8 @@ REPLACE_PYTHON+=	feed2exec/tests/test_network.py
 REPLACE_PYTHON+=	feed2exec/tests/test_feeds.py
 REPLACE_PYTHON+=	feed2exec/tests/test_main.py
 REPLACE_PYTHON+=	feed2exec/__main__.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 # 1 failed, 47 passed, 2 skipped, 1 xfailed, 119 warnings (NetBSD 10.1)
 

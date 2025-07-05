@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/17 21:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/05 11:44:07 wiz Exp $
 
 DISTNAME=	html5-parser-0.4.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.8.0:../../textproc/py-lxml
 
 USE_TOOLS+=	pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
