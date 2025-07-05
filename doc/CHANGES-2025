@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4144 2025/07/05 12:12:52 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.4145 2025/07/05 12:13:05 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6150,3 +6150,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/bash to 5.3 [wiz 2025-07-05]
 	Removed devel/py-manticore [wiz 2025-07-05]
 	Added devel/asl version 1.42.290 [hauke 2025-07-05]
+	Added devel/asl-doc version 1.42.290 [hauke 2025-07-05]
