@@ -1,10 +1,10 @@
-$NetBSD: patch-Cargo.toml,v 1.19 2025/07/01 20:43:20 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.20 2025/07/06 08:57:37 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch it.
 
 --- Cargo.toml.orig	1970-01-01 00:00:00.000000000 +0000
 +++ Cargo.toml
-@@ -106,7 +106,7 @@ libc = { version = "0.2.153" }
+@@ -112,7 +112,7 @@ libc = { version = "0.2.153" }
  libcst = { version = "1.1.0", default-features = false }
  log = { version = "0.4.17" }
  lsp-server = { version = "0.7.6" }
@@ -13,12 +13,12 @@ Depends on unpublished crates. Can't use cargo.mk to fetch it.
      "proposed",
  ] }
  matchit = { version = "0.8.1" }
-@@ -131,7 +131,7 @@ regex-automata = { version = "0.4.9" }
+@@ -137,7 +137,7 @@ regex-automata = { version = "0.4.9" }
  rustc-hash = { version = "2.0.0" }
  rustc-stable-hash = { version = "0.1.2" }
  # When updating salsa, make sure to also update the revision in `fuzz/Cargo.toml`
--salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "09627e450566f894956710a3fd923dc80462ae6d" }
-+salsa = { path = "../salsa-09627e450566f894956710a3fd923dc80462ae6d" }
+-salsa = { git = "https://github.com/salsa-rs/salsa", rev = "fc00eba89e5dcaa5edba51c41aa5f309b5cb126b" }
++salsa = { path = "../salsa-fc00eba89e5dcaa5edba51c41aa5f309b5cb126b" }
  schemars = { version = "0.8.16" }
  seahash = { version = "4.1.0" }
  serde = { version = "1.0.197", features = ["derive"] }
