@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4149 2025/07/06 05:17:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4150 2025/07/06 05:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6155,3 +6155,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/sickgear to 3.33.11 [js 2025-07-05]
 	Updated devel/p5-Syntax-Keyword-Try to 0.30 [schmonz 2025-07-06]
 	Updated graphics/py-Pillow to 11.3.0 [wiz 2025-07-06]
+	Updated devel/p5-Moose to 2.4000 [wiz 2025-07-06]
