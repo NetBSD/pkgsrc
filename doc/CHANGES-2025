@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4161 2025/07/06 08:57:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4162 2025/07/06 08:58:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6167,3 +6167,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-pillow_heif to 1.0.0 [wiz 2025-07-06]
 	Updated sysutils/py-puremagic to 1.30 [wiz 2025-07-06]
 	Updated devel/py-ruff to 0.12.2 [wiz 2025-07-06]
+	Updated devel/py-typing-extensions to 4.14.1 [wiz 2025-07-06]
