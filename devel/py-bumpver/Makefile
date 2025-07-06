@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/12 09:39:48 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/06 08:33:57 wiz Exp $
 
-DISTNAME=	bumpver-2024.1130
+DISTNAME=	bumpver-2025.1131
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bumpver/}
 
@@ -25,6 +24,9 @@ USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} bumpver bumpver-${PYVERSSUFFIX} || ${TRUE}
+
+# as of 2025.1131
+# 2 failed, 523 passed, 1 warning
 
 .include "../../lang/python/wheel.mk"
 # for tests
