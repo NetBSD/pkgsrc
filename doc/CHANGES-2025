@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4166 2025/07/06 09:29:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4167 2025/07/06 18:07:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6172,3 +6172,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/btop to 1.4.4 [wiz 2025-07-06]
 	Updated editors/nano to 8.5 [schwarz 2025-07-06]
 	Updated graphics/libheif to 1.20.1 [wiz 2025-07-06]
+	Updated databases/redis to 8.0.3 [adam 2025-07-06]
+	Updated devel/blosc2 to 2.19.0 [adam 2025-07-06]
