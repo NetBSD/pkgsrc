@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25971 2025/07/05 08:28:53 wiz Exp $
+$NetBSD: TODO,v 1.25972 2025/07/06 08:26:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -497,6 +497,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o botan-2.19.5
 	o bottlerocket-0.05b3
 	o box2d-3.1.1
+	o btop-1.4.4
 	o bugzilla3-3.6.13
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
@@ -759,6 +760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.22.2
 	o html2wml-0.4.11
+	o hwdata-0.397
 	o hwloc-2.11
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -802,6 +804,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jetty9-9.3.7
 	o jools-1.0
 	o jpilot-syncmal-0.81
+	o jq-1.8.1
 	o jrep-1.1.1
 	o kactivities-5.81.0
 	o kaffe-1.1.9
@@ -847,6 +850,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.20.1
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -969,6 +973,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-git-3.17.0
 	o ocaml-lablgtk-2.18.14
 	o ocaml-mtime-1.2.0
+	o ocaml-opam-file-format-2.2.0
 	o ocaml-parsexp-0.14.0
 	o ocaml-resource-pooling-1.2
 	o ocaml-zip-110
@@ -982,11 +987,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
+	o opencv-4.12.0
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmpi-5.0.5
+	o openmw-0.49.0
 	o openslp-2.0.0
 	o openxenmanager-0.83
 	o opera-26
@@ -1104,18 +1111,29 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-aiosignal-1.4.0
+	o py-bumpver-2025.1131
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptography-45.0.5
+	o py-cyclonedx-python-lib-10.3.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.58.5
 	o py-gammu-3.1
+	o py-gi-docgen-2025.4
+	o py-google-api-python-client-2.175.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
+	o py-pdm_backend-2.4.5
+	o py-pillow_heif-1.0.0
 	o py-postgresql-5.1.2
+	o py-puremagic-1.30
 	o py-qt6-6.9.1 [needs py-sip6-6.12.0]
+	o py-ruff-0.12.2
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
 	o py-sip6-6.12.0
@@ -1124,6 +1142,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
 	o py-trezor-0.13.10
+	o py-typing-extensions-4.14.1
 	o py-uliweb-0.6
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
