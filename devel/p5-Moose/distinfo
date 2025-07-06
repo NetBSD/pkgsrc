@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.100 2024/01/28 11:54:32 wiz Exp $
+$NetBSD: distinfo,v 1.101 2025/07/06 05:33:43 wiz Exp $
 
-BLAKE2s (Moose-2.2207.tar.gz) = ea0558947f2c4f3d3214f465e610561e649e4071e8feed075d3d1cf1cdc7f260
-SHA512 (Moose-2.2207.tar.gz) = bc0efe3b9c7fea8ef6bb2976d2ec677250f998b3d8513a7fca59a10291f8ff5f13dd5e1d49d036071d93b5caa19685b704ef3588aa9307cda40ec5ba15b6985a
-Size (Moose-2.2207.tar.gz) = 906966 bytes
+BLAKE2s (Moose-2.4000.tar.gz) = ffe6e1a5f25989f27e2e00392e92f5c2e4f7c91977280b9faf35c79d2fbf2f2c
+SHA512 (Moose-2.4000.tar.gz) = facae305a538ce55cad1aa1b420a5a2ba7a6f2de502257fe84094ce1d2f91c8f297318e404c1bc236ce6ef2800bac9bb782191061925505c970fb6e38ff1ab87
+Size (Moose-2.4000.tar.gz) = 906275 bytes
