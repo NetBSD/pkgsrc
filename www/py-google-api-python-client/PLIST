@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2025/07/01 19:43:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.45 2025/07/06 08:47:03 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -163,6 +163,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudidentity.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudidentity.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudiot.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudkms.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudlocationfinder.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudprofiler.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudresourcemanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudresourcemanager.v1beta1.json
