@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2025/06/10 08:02:55 adam Exp $
+$NetBSD: distinfo,v 1.105 2025/07/06 08:41:40 wiz Exp $
 
 BLAKE2s (asn1-0.21.3.crate) = 13408090125408fff837cdd0b7479e2645e484feca9cdfe5b564309cc505f336
 SHA512 (asn1-0.21.3.crate) = 5f7b484e6081569cb1bd86b690ffcb49b51c5dff20dc08fedd9f803d634265fb4c157e2912b4763152cf8baf5556807aee109787618c3ecdb4a7307863502417
@@ -21,9 +21,9 @@ Size (cc-1.2.23.crate) = 106527 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (cryptography-45.0.4.tar.gz) = e129ebafcf6670ad0b968ab6340fca74e36fbe5591332307e14eb41ecbd1d242
-SHA512 (cryptography-45.0.4.tar.gz) = d5bdb21956b80675ccfae78be3d56a2e3bfe8c6ceac15c87c9a3ca470605cb798774018c6c9b9597e90a6918912c9a6b5d83eac9f446364b917d7e8888b83eee
-Size (cryptography-45.0.4.tar.gz) = 744890 bytes
+BLAKE2s (cryptography-45.0.5.tar.gz) = 159edab0bc8155f2ab9dd1e560bad45b669f3f205e56b85cfc74808f500fd19e
+SHA512 (cryptography-45.0.5.tar.gz) = 1704f17250d8da6a33ac361f0fe07f6f91ebf087e81cee8fa783b220e118eba83f5c79eab001d79b383d7577b6dabd1e18de718cb16b5780d2f145107bf9cc79
+Size (cryptography-45.0.5.tar.gz) = 744903 bytes
 BLAKE2s (foreign-types-0.3.2.crate) = d6fbfbaaa345e5df7be5b4c09a69174fb43c8ab6b79a989c599f7a8c576d78ba
 SHA512 (foreign-types-0.3.2.crate) = bf27b8243ed482c202d120383374f19ff09422535e24b9c1aebccc66529bf300ca17b8bbc76d67f98ac092e614497afe3add9dc68aa69c93074df05762f91232
 Size (foreign-types-0.3.2.crate) = 7504 bytes
