@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4164 2025/07/06 09:09:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4165 2025/07/06 09:19:35 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6170,3 +6170,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-typing-extensions to 4.14.1 [wiz 2025-07-06]
 	Updated devel/jq to 1.8.1 [wiz 2025-07-06]
 	Updated sysutils/btop to 1.4.4 [wiz 2025-07-06]
+	Updated editors/nano to 8.5 [schwarz 2025-07-06]
