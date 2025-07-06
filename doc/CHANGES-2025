@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4152 2025/07/06 08:31:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4153 2025/07/06 08:34:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6158,3 +6158,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Moose to 2.4000 [wiz 2025-07-06]
 	Updated net/p5-Net-DNS to 1.51 [wiz 2025-07-06]
 	Updated devel/py-aiosignal to 1.4.0 [wiz 2025-07-06]
+	Updated devel/py-bumpver to 2025.1131 [wiz 2025-07-06]
