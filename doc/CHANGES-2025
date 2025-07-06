@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4160 2025/07/06 08:51:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4161 2025/07/06 08:57:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6166,3 +6166,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.175.0 [wiz 2025-07-06]
 	Updated graphics/py-pillow_heif to 1.0.0 [wiz 2025-07-06]
 	Updated sysutils/py-puremagic to 1.30 [wiz 2025-07-06]
+	Updated devel/py-ruff to 0.12.2 [wiz 2025-07-06]
