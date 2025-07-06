@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_CMakeLists.txt,v 1.1 2025/07/06 19:28:28 tnn Exp $
+
+Prevent spurious detection of SDL2.
+
+--- examples/CMakeLists.txt.orig	2025-07-06 19:23:35.109170410 +0000
++++ examples/CMakeLists.txt
+@@ -67,7 +67,7 @@ endif()
+ 
+ find_package(SDL2 NO_MODULE)
+ 
+-if (SDL2_FOUND)
++if (False)	# SDL2_FOUND
+     add_executable(heif-view ${getopt_sources}
+             heif_view.cc
+             sdl.cc
