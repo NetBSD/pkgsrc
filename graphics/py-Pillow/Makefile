@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.92 2025/04/24 14:14:35 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/07/06 05:16:49 wiz Exp $
 
-DISTNAME=	pillow-11.2.1
-PKGREVISION=	2
+DISTNAME=	pillow-11.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://python-pillow.org/
+HOMEPAGE=	https://python-pillow.github.io/
 COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
+TEST_DEPENDS+=	ghostscript-[0-9]*:../../print/ghostscript
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-olefile-[0-9]*:../../devel/py-olefile
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
@@ -23,8 +24,8 @@ CONFLICTS+=	py[0-9]*-imaging-[0-9]*
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
-# as of 11.2.1
-# 2 failed, 4738 passed, 211 skipped, 3 xfailed
+# as of 11.3.0
+# 2 failed, 4934 passed, 88 skipped, 3 xfailed
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libavif/buildlink3.mk"
