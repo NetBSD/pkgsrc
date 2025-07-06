@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/13 12:44:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/07/06 08:50:09 wiz Exp $
 ${PYSITELIB}/_pillow_heif.so
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,9 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSES_bundled.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
-${PYSITELIB}/pillow_heif/AvifImagePlugin.py
-${PYSITELIB}/pillow_heif/AvifImagePlugin.pyc
-${PYSITELIB}/pillow_heif/AvifImagePlugin.pyo
 ${PYSITELIB}/pillow_heif/HeifImagePlugin.py
 ${PYSITELIB}/pillow_heif/HeifImagePlugin.pyc
 ${PYSITELIB}/pillow_heif/HeifImagePlugin.pyo
