@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4154 2025/07/06 08:41:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4155 2025/07/06 08:42:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6160,3 +6160,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-aiosignal to 1.4.0 [wiz 2025-07-06]
 	Updated devel/py-bumpver to 2025.1131 [wiz 2025-07-06]
 	Updated security/py-cryptography to 45.0.5 [wiz 2025-07-06]
+	Updated security/py-cryptography_vectors to 45.0.5 [wiz 2025-07-06]
