@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4170 2025/07/07 04:41:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4171 2025/07/07 04:51:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6177,3 +6177,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx-devel to 1.28.0 [osa 2025-07-07]
 	Updated mail/procmail to 3.24nb1 [dholland 2025-07-07]
 	Updated sysutils/hwdata to 0.397 [wiz 2025-07-07]
+	Updated devel/py-gi-docgen to 2025.4 [wiz 2025-07-07]
