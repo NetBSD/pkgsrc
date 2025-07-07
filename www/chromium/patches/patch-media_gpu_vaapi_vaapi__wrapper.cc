@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_vaapi_vaapi__wrapper.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_gpu_vaapi_vaapi__wrapper.cc,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/vaapi/vaapi_wrapper.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- media/gpu/vaapi/vaapi_wrapper.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/gpu/vaapi/vaapi_wrapper.cc
-@@ -81,7 +81,7 @@
+@@ -82,7 +82,7 @@
  using media_gpu_vaapi::kModuleVa_prot;
  #endif
  

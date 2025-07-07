@@ -1,12 +1,12 @@
-$NetBSD: patch-content_public_common_content__switches.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
+$NetBSD: patch-content_public_common_content__switches.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_switches.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/public/common/content_switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/public/common/content_switches.cc
-@@ -339,6 +339,8 @@ const char kEnableIsolatedWebAppsInRende
+@@ -345,6 +345,8 @@ const char kEnableIsolatedWebAppsInRende
  // builds.
  const char kEnableLogging[]                 = "enable-logging";
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_public_common_content__switches.cc,v 1.2 2025/05/16 16:08
  // Enables the type, downlinkMax attributes of the NetInfo API. Also, enables
  // triggering of change attribute of the NetInfo API when there is a change in
  // the connection type.
-@@ -946,7 +948,7 @@ const char kPreventResizingContentsForTe
+@@ -952,7 +954,7 @@ const char kPreventResizingContentsForTe
      "prevent-resizing-contents-for-testing";
  #endif
  

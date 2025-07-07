@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_stub__password__manager__client.h,v 1.2 2025/05/16 16:08:23 wiz Exp $
+$NetBSD: patch-components_password__manager_core_browser_stub__password__manager__client.h,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/stub_password_manager_client.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/password_manager/core/browser/stub_password_manager_client.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/password_manager/core/browser/stub_password_manager_client.h
 @@ -77,7 +77,7 @@ class StubPasswordManagerClient : public
    MockPasswordFeatureManager* GetPasswordFeatureManager();
@@ -14,4 +14,4 @@ $NetBSD: patch-components_password__manager_core_browser_stub__password__manager
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
    void OpenPasswordDetailsBubble(
        const password_manager::PasswordForm& form) override;
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) ||
+   void MaybeShowSavePasswordPrimingPromo(const GURL& current_url) override;

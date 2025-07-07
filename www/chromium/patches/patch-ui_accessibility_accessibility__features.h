@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_accessibility_accessibility__features.h,v 1.1 2025/05/16 16:08:33 wiz Exp $
+$NetBSD: patch-ui_accessibility_accessibility__features.h,v 1.2 2025/07/07 09:23:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/accessibility_features.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/accessibility/accessibility_features.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/accessibility/accessibility_features.h
-@@ -324,7 +324,7 @@ AX_BASE_EXPORT BASE_DECLARE_FEATURE(kBlo
+@@ -347,7 +347,7 @@ AX_BASE_EXPORT BASE_DECLARE_FEATURE(kBlo
  AX_BASE_EXPORT bool IsBlockRootWindowAccessibleNameChangeEventEnabled();
  #endif  // BUILDFLAG(IS_MAC)
  

@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2025/05/16 16:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/07 09:23:23 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			136.0.7103.113
+VERSION=			138.0.7204.96
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
 
-#PROFILE_DISTFILES=		chromium-linux-${VERSION}-llvm17.profdata${EXTRACT_SUFX_C}
-#SITES.${PROFILE_DISTFILES}=	https://nerd.hu/distfiles/
 DISTFILES+=			${DISTNAME}${EXTRACT_SUFX_C}
-#DISTFILES+=			${PROFILE_DISTFILES}
 
 # audioio source
-A_VERSION=			130.0
+A_VERSION=			138.0
 GITHUB_SUBMODULES=		kikadf chromium-audioio v${A_VERSION} media/audio/audioio
 
 # LLVM_MAJOR_VERSION
@@ -28,17 +25,18 @@ TOOLS_PLATFORM.flex=		# override the platform definition to use pkgsrc's flex.
 USE_LANGUAGES=			c c++
 
 CHECK_PORTABILITY_SKIP+=	third_party/dawn/third_party/dxc/utils/buildit/build_llvm
-CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
-CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=	third_party/ffmpeg/configure
-CHECK_PORTABILITY_SKIP+=	third_party/nearby/src/embedded/build.sh
-CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
-CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
+CHECK_PORTABILITY_SKIP+=	third_party/fontconfig/src/.gitlab-ci/fedora-cross.sh
 CHECK_PORTABILITY_SKIP+=	third_party/llvm/flang/tools/f18/flang.sh.in
+CHECK_PORTABILITY_SKIP+=	third_party/nearby/src/embedded/build.sh
+CHECK_PORTABILITY_SKIP+=	third_party/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=	third_party/rust-src/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 CHECK_PORTABILITY_SKIP+=	third_party/rust-toolchain/lib/rustlib/src/rust/vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
-CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
+CHECK_PORTABILITY_SKIP+=	third_party/sqlite/src/configure
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal
+CHECK_PORTABILITY_SKIP+=	third_party/xdg-utils/scripts/xdg-terminal.in
 CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
+CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
 TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
@@ -93,6 +91,7 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
+SUBST_FILES.path+=	ui/gtk/ime_compat_check.cc
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 
@@ -113,6 +112,7 @@ SUBST_SED.pulse+=	-e 's,@PULSE@,${WITH_PA},g'
 
 .include "tests.mk"
 
+BUILDTYPE=	Release
 MAKE_ENV+=	BUILDTYPE=${BUILDTYPE}
 MAKE_ENV+=	GPERF=${PREFIX}/bin/gperf
 TARGET=		chrome chromedriver
@@ -132,7 +132,6 @@ GN_SYSTEM_LIBS+=	libxslt
 GN_SYSTEM_LIBS+=	openh264
 GN_SYSTEM_LIBS+=	opus
 
-#GN_ARGS+=	chrome_pgo_phase=0
 GN_ARGS+=	clang_use_chrome_plugins=false
 GN_ARGS+=	disable_fieldtrial_testing_config=true
 GN_ARGS+=	enable_backup_ref_ptr_support=false
@@ -143,6 +142,9 @@ GN_ARGS+=	fatal_linker_warnings=false
 GN_ARGS+=	icu_use_data_file=false
 GN_ARGS+=	is_cfi=false
 GN_ARGS+=	is_clang=true
+GN_ARGS+=	is_component_build=false
+GN_ARGS+=	is_debug=false
+GN_ARGS+=	is_official_build=true
 GN_ARGS+=	moc_qt6_path=\"${PREFIX}/qt6/libexec\"
 GN_ARGS+=	optimize_webui=true
 GN_ARGS+=	thin_lto_enable_optimizations=true

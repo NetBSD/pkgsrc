@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 1.2 2025/05/16 16:08:23 wiz Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_manager.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/password_manager/core/browser/password_manager.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/password_manager/core/browser/password_manager.cc
-@@ -511,7 +511,7 @@ void PasswordManager::RegisterProfilePre
+@@ -507,7 +507,7 @@ void PasswordManager::RegisterProfilePre
        prefs::kAutofillableCredentialsAccountStoreLoginDatabase, false);
  #endif  // BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_IOS)
    registry->RegisterBooleanPref(prefs::kPasswordSharingEnabled, true);
@@ -15,7 +15,7 @@ $NetBSD: patch-components_password__manager_core_browser_password__manager.cc,v 
    registry->RegisterIntegerPref(prefs::kRelaunchChromeBubbleDismissedCounter,
                                  0);
  #endif
-@@ -524,7 +524,7 @@ void PasswordManager::RegisterProfilePre
+@@ -520,7 +520,7 @@ void PasswordManager::RegisterProfilePre
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

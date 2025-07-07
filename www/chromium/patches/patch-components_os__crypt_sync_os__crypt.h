@@ -1,21 +1,21 @@
-$NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.2 2025/05/16 16:08:23 wiz Exp $
+$NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/os_crypt/sync/os_crypt.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/os_crypt/sync/os_crypt.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/os_crypt/sync/os_crypt.h
-@@ -16,7 +16,7 @@
- #include "build/chromecast_buildflags.h"
- #include "crypto/subtle_passkey.h"
+@@ -22,7 +22,7 @@ class AppleKeychain;
+ }
+ #endif
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  class KeyStorageLinux;
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -32,7 +32,7 @@ struct Config;
+@@ -38,7 +38,7 @@ struct Config;
  // Temporary interface due to OSCrypt refactor. See OSCryptImpl for descriptions
  // of what each function does.
  namespace OSCrypt {
@@ -24,7 +24,7 @@ $NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.2 2025/05/16 16:08:23 w
  COMPONENT_EXPORT(OS_CRYPT)
  void SetConfig(std::unique_ptr<os_crypt::Config> config);
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -77,7 +77,7 @@ COMPONENT_EXPORT(OS_CRYPT) void UseMockK
+@@ -83,7 +83,7 @@ COMPONENT_EXPORT(OS_CRYPT) void UseMockK
  COMPONENT_EXPORT(OS_CRYPT) void SetLegacyEncryptionForTesting(bool legacy);
  COMPONENT_EXPORT(OS_CRYPT) void ResetStateForTesting();
  #endif  // BUILDFLAG(IS_WIN)
@@ -33,7 +33,7 @@ $NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.2 2025/05/16 16:08:23 w
  COMPONENT_EXPORT(OS_CRYPT)
  void UseMockKeyStorageForTesting(
      base::OnceCallback<std::unique_ptr<KeyStorageLinux>()>
-@@ -111,7 +111,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+@@ -117,7 +117,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
    // Returns singleton instance of OSCryptImpl.
    static OSCryptImpl* GetInstance();
  
@@ -42,7 +42,7 @@ $NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.2 2025/05/16 16:08:23 w
    // Set the configuration of OSCryptImpl.
    // This method, or SetRawEncryptionKey(), must be called before using
    // EncryptString() and DecryptString().
-@@ -207,7 +207,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+@@ -213,7 +213,7 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
    void ResetStateForTesting();
  #endif
  
@@ -51,7 +51,7 @@ $NetBSD: patch-components_os__crypt_sync_os__crypt.h,v 1.2 2025/05/16 16:08:23 w
    // For unit testing purposes, inject methods to be used.
    // |storage_provider_factory| provides the desired |KeyStorage|
    // implementation. If the provider returns |nullptr|, a hardcoded password
-@@ -231,13 +231,13 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
+@@ -240,13 +240,13 @@ class COMPONENT_EXPORT(OS_CRYPT) OSCrypt
    bool DeriveKey();
  #endif  // BUILDFLAG(IS_APPLE)
  

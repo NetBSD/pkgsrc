@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- gpu/command_buffer/service/shared_image/shared_image_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/shared_image_factory.cc
 @@ -48,7 +48,7 @@
  #include "gpu/command_buffer/service/shared_image/angle_vulkan_image_backing_factory.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_shared__image__factory.
    return gfx::GpuMemoryBufferType::NATIVE_PIXMAP;
  #elif BUILDFLAG(IS_WIN)
    return gfx::GpuMemoryBufferType::DXGI_SHARED_HANDLE;
-@@ -326,7 +326,7 @@ SharedImageFactory::SharedImageFactory(
+@@ -294,7 +294,7 @@ SharedImageFactory::SharedImageFactory(
          context_state_, workarounds_);
      factories_.push_back(std::move(ozone_factory));
    }

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.3 2025/07/07 09:23:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/themes/theme_service_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/themes/theme_service_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/themes/theme_service_factory.cc
-@@ -24,7 +24,7 @@
+@@ -25,7 +25,7 @@
  #include "chrome/browser/themes/theme_helper_win.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.2 2025/05/16
  #include "chrome/browser/themes/theme_service_aura_linux.h"
  #include "ui/linux/linux_ui_factory.h"
  #endif
-@@ -103,7 +103,7 @@ ThemeServiceFactory::~ThemeServiceFactor
+@@ -105,7 +105,7 @@ ThemeServiceFactory::~ThemeServiceFactor
  std::unique_ptr<KeyedService>
  ThemeServiceFactory::BuildServiceInstanceForBrowserContext(
      content::BrowserContext* profile) const {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_themes_theme__service__factory.cc,v 1.2 2025/05/16
    using ThemeService = ThemeServiceAuraLinux;
  #endif
  
-@@ -115,7 +115,7 @@ ThemeServiceFactory::BuildServiceInstanc
+@@ -117,7 +117,7 @@ ThemeServiceFactory::BuildServiceInstanc
  
  void ThemeServiceFactory::RegisterProfilePrefs(
      user_prefs::PrefRegistrySyncable* registry) {

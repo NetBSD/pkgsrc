@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_view.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_view.cc
-@@ -2581,7 +2581,7 @@ void BrowserView::ToolbarSizeChanged(boo
+@@ -2740,7 +2740,7 @@ void BrowserView::ToolbarSizeChanged(boo
  }
  
  void BrowserView::TabDraggingStatusChanged(bool is_dragging) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__view.cc,v 1.2 2025/05/16 1
    GetContentsWebView()->SetFastResize(is_dragging);
    if (multi_contents_view_) {
      multi_contents_view_->GetInactiveContentsView()->SetFastResize(is_dragging);
-@@ -5825,7 +5825,7 @@ void BrowserView::MaybeShowProfileSwitch
+@@ -6044,7 +6044,7 @@ void BrowserView::MaybeShowProfileSwitch
  }
  
  void BrowserView::MaybeShowSupervisedUserProfileSignInIPH() {

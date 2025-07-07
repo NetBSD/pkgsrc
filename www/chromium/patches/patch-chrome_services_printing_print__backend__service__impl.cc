@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
-@@ -49,7 +49,7 @@
+@@ -48,7 +48,7 @@
  #include "printing/backend/cups_connection_pool.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.2 2
  #include "base/no_destructor.h"
  #include "ui/linux/linux_ui.h"
  #include "ui/linux/linux_ui_delegate_stub.h"
-@@ -76,7 +76,7 @@ namespace printing {
+@@ -75,7 +75,7 @@ namespace printing {
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.2 2
  void InstantiateLinuxUiDelegate() {
    // TODO(crbug.com/40561724)  Until a real UI can be used in a utility process,
    // need to use the stub version.
-@@ -85,7 +85,7 @@ void InstantiateLinuxUiDelegate() {
+@@ -84,7 +84,7 @@ void InstantiateLinuxUiDelegate() {
  #endif
  
  scoped_refptr<base::SequencedTaskRunner> GetPrintingTaskRunner() {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.2 2
    // Use task runner associated with equivalent of UI thread.  Needed for calls
    // made through `PrintDialogLinuxInterface` to properly execute.
    CHECK(base::SequencedTaskRunner::HasCurrentDefault());
-@@ -468,7 +468,7 @@ void PrintBackendServiceImpl::Init(
+@@ -467,7 +467,7 @@ void PrintBackendServiceImpl::Init(
    // `InitCommon()`.
    InitializeProcessForPrinting();
    print_backend_ = PrintBackend::CreateInstance(locale);
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.2 2
    // Test framework already initializes the UI, so this should not go in
    // `InitCommon()`.  Additionally, low-level Linux UI is not needed when tests
    // are using `TestPrintingContext`.
-@@ -689,7 +689,7 @@ void PrintBackendServiceImpl::UpdatePrin
+@@ -688,7 +688,7 @@ void PrintBackendServiceImpl::UpdatePrin
    crash_keys_ = std::make_unique<crash_keys::ScopedPrinterInfo>(
        *printer_name, print_backend_->GetPrinterDriverInfo(*printer_name));
  

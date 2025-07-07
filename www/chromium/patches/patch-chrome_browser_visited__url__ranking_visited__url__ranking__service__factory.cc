@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_visited__url__ranking_visited__url__ranking__service__factory.cc,v 1.2 2025/05/16 16:08:20 wiz Exp $
+$NetBSD: patch-chrome_browser_visited__url__ranking_visited__url__ranking__service__factory.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/visited_url_ranking/visited_url_ranking_service_factory.cc
 @@ -45,7 +45,7 @@
  #include "components/visited_url_ranking/public/visited_url_ranking_service.h"
