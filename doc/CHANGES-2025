@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4174 2025/07/07 05:15:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4175 2025/07/07 06:54:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6181,3 +6181,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pdm_backend to 2.4.5 [wiz 2025-07-07]
 	Updated graphics/opencv to 4.12.0 [wiz 2025-07-07]
 	Updated graphics/opencv-contrib-face to 4.12.0 [wiz 2025-07-07]
+	Updated devel/py-h5py to 3.14.0 [wiz 2025-07-07]
