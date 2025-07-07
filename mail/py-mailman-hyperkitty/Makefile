@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/27 10:48:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/07 05:58:05 wiz Exp $
 
 DISTNAME=	mailman-hyperkitty-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	312 311 310
+PYTHON_VERSIONS_ACCEPTED=	312 311
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

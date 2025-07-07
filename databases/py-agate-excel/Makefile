@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/14 11:04:59 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/07 05:58:03 wiz Exp $
 
 DISTNAME=	agate-excel-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-openpyxl-[0-9]*:../../textproc/py-openpyxl
 DEPENDS+=	${PYPKGPREFIX}-xlrd-[0-9]*:../../textproc/py-xlrd
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

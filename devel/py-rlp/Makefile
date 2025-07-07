@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/04/12 20:13:33 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/07/07 05:58:04 wiz Exp $
 
 DISTNAME=	rlp-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.19.0:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.4.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

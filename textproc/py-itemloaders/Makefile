@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/04/14 12:14:59 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/07 05:58:06 wiz Exp $
 
 DISTNAME=	itemloaders-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

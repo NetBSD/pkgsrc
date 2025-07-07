@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/14 19:32:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/07 05:58:06 wiz Exp $
 
 DISTNAME=	xhtml2pdf-0.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=			# none
 USE_PKG_RESOURCES=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 .for bin in pisa xhtml2pdf

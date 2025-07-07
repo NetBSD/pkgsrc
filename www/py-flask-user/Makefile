@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/04/14 18:56:07 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/07/07 05:58:08 wiz Exp $
 
 DISTNAME=	Flask-User-1.0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7:../../security/py-passlib
 USE_LANGUAGES=	# none
 
 WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography
 .include "../../lang/python/versioned_dependencies.mk"
