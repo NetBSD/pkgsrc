@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/04/21 17:45:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/07 05:58:05 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-awscli-plugin-logs-tail-0.2
@@ -24,6 +24,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 WHEEL_NAME=	${PKGNAME_NOREV:C/^${PYPKGPREFIX}-//:S/-/_/g:S/_${PKGVERSION_NOREV}/-${PKGVERSION_NOREV}/}
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

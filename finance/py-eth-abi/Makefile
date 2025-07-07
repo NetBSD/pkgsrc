@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/22 08:14:09 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/07 05:58:04 wiz Exp $
 
 DISTNAME=	eth_abi-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,6 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.0.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.4.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

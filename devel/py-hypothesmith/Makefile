@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/12 11:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/07 05:58:04 wiz Exp $
 
 DISTNAME=	hypothesmith-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,6 +25,8 @@ USE_LANGUAGES=	# none
 # 1 failed, 170 passed, 2 skipped, 3 xfailed
 # https://github.com/Zac-HD/hypothesmith/issues/21
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

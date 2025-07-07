@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/09/18 07:47:39 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/07 05:58:06 wiz Exp $
 
 DISTNAME=	class-doc-0.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
 DEPENDS+=	${PYPKGPREFIX}-more-itertools>=5.0.0:../../devel/py-more-itertools
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
