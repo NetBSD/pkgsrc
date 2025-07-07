@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4167 2025/07/06 18:07:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4168 2025/07/07 00:03:47 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6174,3 +6174,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libheif to 1.20.1 [wiz 2025-07-06]
 	Updated databases/redis to 8.0.3 [adam 2025-07-06]
 	Updated devel/blosc2 to 2.19.0 [adam 2025-07-06]
+	Updated www/nginx-devel to 1.28.0 [osa 2025-07-07]
