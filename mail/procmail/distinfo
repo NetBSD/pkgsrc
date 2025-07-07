@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2024/07/31 22:31:50 vins Exp $
+$NetBSD: distinfo,v 1.22 2025/07/07 03:36:51 dholland Exp $
 
 BLAKE2s (procmail-3.24.tar.gz) = 767825dbe6f0f2d6d089930e630e0db402dc31ab00a855a895d1f39422df8f9c
 SHA512 (procmail-3.24.tar.gz) = ce3763205d7e34c8a096c411487de296ecfb190ba817ad07926d44811222e689faedb97a3d4e85989db70e5a2298b26fff70c9d0cb0324a447ddc8988d7fe8ea
@@ -12,5 +12,6 @@ SHA1 (patch-ae) = b5ac027b337c8d9cf9c6096a48ef534315e18250
 SHA1 (patch-ag) = 8f2ae1f2e7bdc3c2295148c33183176423802fee
 SHA1 (patch-src_Makefile.0) = 9136b5f011456cba313d1a4884144e881974261d
 SHA1 (patch-src_autoconf) = 1bb90bb2280651cf55d00ee32565e14d52067fbe
+SHA1 (patch-src_formail.c) = 74d620b43cf5f2e04f3c8507c0c071e4edb82d02
 SHA1 (patch-src_formisc.c) = ce14e9587f47f70741c2ce44261fd4146361f621
 SHA1 (patch-src_mailfold.c) = 52b800662885f3da094c545961d2b054224bcc91
