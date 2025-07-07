@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.209 2025/07/01 05:09:11 kim Exp $
+# $NetBSD: Makefile,v 1.210 2025/07/07 05:00:26 wiz Exp $
 
 DISTNAME=	sudo-1.9.17p1
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
-MASTER_SITES+=	ftp://ftp.uwsg.indiana.edu/pub/security/sudo/
 MASTER_SITES+=	http://ftp.twaren.net/Unix/Security/Sudo/
-MASTER_SITES+=	http://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.sudo.ws/
