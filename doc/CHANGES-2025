@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4177 2025/07/07 07:02:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4178 2025/07/07 08:05:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6185,3 +6185,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/p5-Statistics-CaseResampling to 0.16 [wiz 2025-07-07]
 	Updated devel/shfmt to 3.12.0 [adam 2025-07-07]
 	Updated net/rclone to 1.70.2 [adam 2025-07-07]
+	Updated www/py-django to 5.2.4 [adam 2025-07-07]
+	Updated www/py-django-admin-rangefilter to 0.13.3 [adam 2025-07-07]
+	Updated www/py-django-admin-sortable2 to 2.2.8 [adam 2025-07-07]
+	Updated www/py-django-import-export to 4.3.8 [adam 2025-07-07]
