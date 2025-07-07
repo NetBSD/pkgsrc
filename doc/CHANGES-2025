@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4171 2025/07/07 04:51:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4172 2025/07/07 04:54:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6178,3 +6178,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/procmail to 3.24nb1 [dholland 2025-07-07]
 	Updated sysutils/hwdata to 0.397 [wiz 2025-07-07]
 	Updated devel/py-gi-docgen to 2025.4 [wiz 2025-07-07]
+	Updated devel/py-pdm_backend to 2.4.5 [wiz 2025-07-07]
