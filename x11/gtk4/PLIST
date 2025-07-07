@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/07/03 14:30:30 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/07/07 08:28:55 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
@@ -405,6 +405,7 @@ include/gtk-4.0/unix-print/gtk/print/gtkprinter.h
 include/gtk-4.0/unix-print/gtk/print/gtkprintjob.h
 include/gtk-4.0/unix-print/gtk/print/gtkprintunixdialog.h
 lib/girepository-1.0/Gdk-4.0.typelib
+${PLIST.quartz}lib/girepository-1.0/GdkMacos-4.0.typelib
 ${PLIST.x11}lib/girepository-1.0/GdkX11-4.0.typelib
 lib/girepository-1.0/Gsk-4.0.typelib
 lib/girepository-1.0/Gtk-4.0.typelib
@@ -412,7 +413,7 @@ ${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lib/libgtk-4.so
 lib/libgtk-4.so.1
-lib/libgtk-4.so.1.1800.5
+lib/libgtk-4.so.1.1800.6
 lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
@@ -425,6 +426,7 @@ share/applications/org.gtk.gtk4.NodeEditor.desktop
 share/gettext/its/gtk4builder.its
 share/gettext/its/gtk4builder.loc
 share/gir-1.0/Gdk-4.0.gir
+${PLIST.quartz}share/gir-1.0/GdkMacos-4.0.gir
 ${PLIST.x11}share/gir-1.0/GdkX11-4.0.gir
 share/gir-1.0/Gsk-4.0.gir
 share/gir-1.0/Gtk-4.0.gir
