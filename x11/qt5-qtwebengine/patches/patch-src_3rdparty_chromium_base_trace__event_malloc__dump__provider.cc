@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_base_trace__event_malloc__dump__dump__provider.cc,v 1.2 2022/04/18 11:18:18 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_base_trace__event_malloc__dump__provider.cc,v 1.1 2025/07/07 13:50:43 wiz Exp $
 
 --- src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
