@@ -1,8 +1,8 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_driver__utils.cpp,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_driver__utils.cpp,v 1.2 2025/07/07 13:50:44 wiz Exp $
 
 --- src/3rdparty/chromium/third_party/angle/src/libANGLE/renderer/driver_utils.cpp.orig	2020-07-15 19:01:32.000000000 +0000
 +++ src/3rdparty/chromium/third_party/angle/src/libANGLE/renderer/driver_utils.cpp
-@@ -16,7 +18,7 @@
+@@ -16,7 +16,7 @@
  #    include <sys/system_properties.h>
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_dr
  #    include <sys/utsname.h>
  #endif
  
-@@ -206,12 +208,20 @@ OSVersion GetMacOSVersion()
+@@ -206,12 +206,20 @@ OSVersion GetMacOSVersion()
  }
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_dr
      if (next == nullptr || *next != '.' || errno != 0)
      {
          return false;
-@@ -228,6 +238,7 @@ bool ParseLinuxOSVersion(const char *ver
+@@ -228,6 +236,7 @@ bool ParseLinuxOSVersion(const char *ver
      {
          return false;
      }
@@ -41,7 +41,7 @@ $NetBSD: patch-src_3rdparty_chromium_third__party_angle_src_libANGLE_renderer_dr
  
      return true;
  }
-@@ -235,7 +246,7 @@ bool ParseLinuxOSVersion(const char *ver
+@@ -235,7 +244,7 @@ bool ParseLinuxOSVersion(const char *ver
  
  OSVersion GetLinuxOSVersion()
  {

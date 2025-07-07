@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_services_network_public_cpp_cert__verifier__vert__verifier__creation.cc,v 1.1 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_network_public_cpp_cert__verifier_cert__verifier__creation.cc,v 1.1 2025/07/07 13:50:44 wiz Exp $
 
 --- src/3rdparty/chromium/services/network/public/cpp/cert_verifier/cert_verifier_creation.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/services/network/public/cpp/cert_verifier/cert_verifier_creation.cc
