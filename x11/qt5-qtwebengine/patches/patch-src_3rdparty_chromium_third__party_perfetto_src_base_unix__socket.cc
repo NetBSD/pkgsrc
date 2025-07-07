@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_unix__socket.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_third__party_perfetto_src_base_unix__socket.cc,v 1.1 2025/07/07 13:50:44 wiz Exp $
 
 --- src/3rdparty/chromium/third_party/perfetto/src/base/unix_socket.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/third_party/perfetto/src/base/unix_socket.cc

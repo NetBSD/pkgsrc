@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/06/30 15:05:11 adam Exp $
+# $NetBSD: Makefile,v 1.90 2025/07/07 13:50:43 wiz Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
@@ -12,8 +12,6 @@ INSTALLATION_DIRS+=	lib/pkgconfig
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 FORCE_CXX_STD=	gnu++17
-
-PYTHON_VERSIONS_ACCEPTED=	311 310
 
 BUILD_TARGET=	first
 QMAKE_ARGS+=	-- -webengine-icu

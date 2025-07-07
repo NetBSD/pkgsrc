@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_media_capture_video_linux_v4l2__capture__device__factory__linux.cc,v 1.2 2022/04/18 11:18:19 adam Exp $
+$NetBSD: patch-src_3rdparty_chromium_media_capture_video_linux_video__capture__device__factory__linux.cc,v 1.1 2025/07/07 13:50:44 wiz Exp $
 
 --- src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc.orig	2021-02-19 16:41:59.000000000 +0000
 +++ src/3rdparty/chromium/media/capture/video/linux/video_capture_device_factory_linux.cc
