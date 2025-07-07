@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/02/12 06:44:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2025/07/07 07:05:22 wiz Exp $
 
 BUILDLINK_TREE+=	py-game
 
@@ -16,7 +16,6 @@ BUILDLINK_PKGSRCDIR.py-game?=	../../devel/py-game
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/smpeg/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .  include "../../x11/libX11/buildlink3.mk"
 .endif
