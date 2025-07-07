@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_x_x11__cursor__factory.h,v 1.2 2025/05/16 16:08:34 wiz Exp $
+$NetBSD: patch-ui_base_x_x11__cursor__factory.h,v 1.3 2025/07/07 09:23:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/x/x11_cursor_factory.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/base/x/x11_cursor_factory.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/base/x/x11_cursor_factory.h
 @@ -20,7 +20,7 @@ namespace ui {
  class X11Cursor;

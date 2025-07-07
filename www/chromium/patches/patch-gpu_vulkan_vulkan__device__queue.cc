@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_vulkan_vulkan__device__queue.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-gpu_vulkan_vulkan__device__queue.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/vulkan/vulkan_device_queue.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- gpu/vulkan/vulkan_device_queue.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ gpu/vulkan/vulkan_device_queue.cc
-@@ -156,7 +156,7 @@ bool VulkanDeviceQueue::Initialize(
+@@ -145,7 +145,7 @@ bool VulkanDeviceQueue::Initialize(
  
        // In dual-CPU cases, we cannot detect the active GPU correctly on Linux,
        // so don't select GPU device based on the |gpu_info|.
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_vulkan_vulkan__device__queue.cc,v 1.2 2025/05/16 16:08:26 wiz
      // If gpu_info is provided, the device should match it.
      if (gpu_info && (device_properties.vendorID != gpu_info->gpu.vendor_id ||
                       device_properties.deviceID != gpu_info->gpu.device_id)) {
-@@ -303,7 +303,7 @@ bool VulkanDeviceQueue::Initialize(
+@@ -292,7 +292,7 @@ bool VulkanDeviceQueue::Initialize(
    // Android, Fuchsia, Linux, and CrOS (VaapiVideoDecoder) need YCbCr sampler
    // support.
  #if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || \

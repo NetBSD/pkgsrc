@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_build_gen.py,v 1.2 2025/05/16 16:08:33 wiz Exp $
+$NetBSD: patch-tools_gn_build_gen.py,v 1.3 2025/07/07 09:23:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2025-05-05 19:21:24.000000000 +0000
+--- tools/gn/build/gen.py.orig	2025-06-30 06:54:11.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):
    def is_solaris(self):
@@ -19,7 +19,7 @@ $NetBSD: patch-tools_gn_build_gen.py,v 1.2 2025/05/16 16:08:33 wiz Exp $
    def is_posix(self):
      return self._platform in ['linux', 'freebsd', 'darwin', 'aix', 'openbsd', 'haiku', 'solaris', 'msys', 'netbsd', 'serenity']
  
-@@ -304,7 +310,7 @@ def WriteGenericNinja(path, static_libra
+@@ -308,7 +314,7 @@ def WriteGenericNinja(path, static_libra
        'linux': 'build_linux.ninja.template',
        'freebsd': 'build_linux.ninja.template',
        'aix': 'build_aix.ninja.template',
@@ -28,7 +28,7 @@ $NetBSD: patch-tools_gn_build_gen.py,v 1.2 2025/05/16 16:08:33 wiz Exp $
        'haiku': 'build_haiku.ninja.template',
        'solaris': 'build_linux.ninja.template',
        'netbsd': 'build_linux.ninja.template',
-@@ -543,6 +549,9 @@ def WriteGNNinja(path, platform, host, o
+@@ -552,6 +558,9 @@ def WriteGNNinja(path, platform, host, o
      if platform.is_posix() and not platform.is_haiku():
        ldflags.append('-pthread')
  

@@ -1,4 +1,4 @@
-# $NetBSD: tests.mk,v 1.2 2025/05/16 16:08:14 wiz Exp $
+# $NetBSD: tests.mk,v 1.3 2025/07/07 09:23:23 kikadf Exp $
 
 REGRESS_DISTFILE=		chromium-${VERSION}-testdata${EXTRACT_SUFX_C}
 DISTFILES+=			${REGRESS_DISTFILE}

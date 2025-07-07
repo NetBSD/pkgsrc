@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_crashpad_crashpad_util_misc_capture__context.h,v 1.2 2025/05/16 16:08:32 wiz Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_util_misc_capture__context.h,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/crashpad/crashpad/util/misc/capture_context.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/crashpad/crashpad/util/misc/capture_context.h
-@@ -21,7 +21,8 @@
+@@ -21,8 +21,11 @@
  #include <mach/mach.h>
  #elif BUILDFLAG(IS_WIN)
  #include <windows.h>
@@ -14,9 +14,12 @@ $NetBSD: patch-third__party_crashpad_crashpad_util_misc_capture__context.h,v 1.2
 +#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
 +      BUILDFLAG(IS_FREEBSD) || BUILDFLAG(IS_NETBSD)
  #include <ucontext.h>
++#elif BUILDFLAG(IS_OPENBSD)
++#include <sys/signal.h>
  #endif  // BUILDFLAG(IS_APPLE)
  
-@@ -35,7 +36,8 @@ using NativeCPUContext = arm_unified_thr
+ namespace crashpad {
+@@ -35,7 +38,8 @@ using NativeCPUContext = arm_unified_thr
  #endif
  #elif BUILDFLAG(IS_WIN)
  using NativeCPUContext = CONTEXT;

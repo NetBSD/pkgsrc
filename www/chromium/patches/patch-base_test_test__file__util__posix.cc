@@ -1,10 +1,10 @@
-$NetBSD: patch-base_test_test__file__util__posix.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
+$NetBSD: patch-base_test_test__file__util__posix.cc,v 1.3 2025/07/07 09:23:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/test/test_file_util_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/test/test_file_util_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/test/test_file_util_posix.cc
 @@ -93,7 +93,7 @@ void SyncPageCacheToDisk() {
  }

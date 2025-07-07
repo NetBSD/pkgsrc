@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08:24 wiz Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -146,18 +146,20 @@
+@@ -148,18 +148,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -29,7 +29,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -186,6 +188,10 @@
+@@ -188,6 +190,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -384,7 +390,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -386,7 +392,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -422,7 +428,10 @@ void PreloadLibraryCdms() {
+@@ -424,7 +430,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -434,9 +443,16 @@ void PreSandboxInit() {
+@@ -436,9 +445,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,7 +77,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -750,7 +766,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+@@ -763,7 +779,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
      bool start_hang_watcher_now;
@@ -86,7 +86,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -863,11 +879,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -876,11 +892,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -100,13 +100,13 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1048,10 +1063,22 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1073,10 +1088,22 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
 +#elif BUILDFLAG(IS_BSD)
 +  PreSandboxInit();
- #elif BUILDFLAG(IS_IOS)
+ #elif BUILDFLAG(IS_IOS) && !BUILDFLAG(IS_IOS_TVOS)
    ChildProcessEnterSandbox();
  #endif
  
@@ -123,7 +123,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.2 2025/05/16 16:08
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1149,6 +1176,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+@@ -1177,6 +1204,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

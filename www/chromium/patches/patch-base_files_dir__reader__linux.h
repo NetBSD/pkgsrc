@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_dir__reader__linux.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
+$NetBSD: patch-base_files_dir__reader__linux.h,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/dir_reader_linux.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/files/dir_reader_linux.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/files/dir_reader_linux.h
 @@ -21,10 +21,16 @@
  #include "base/logging.h"

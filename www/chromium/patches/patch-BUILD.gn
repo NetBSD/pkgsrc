@@ -1,10 +1,10 @@
-$NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
+$NetBSD: patch-BUILD.gn,v 1.3 2025/07/07 09:23:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
+--- BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
 +++ BUILD.gn
 @@ -71,7 +71,7 @@ declare_args() {
    root_extra_deps = []
@@ -23,7 +23,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        "//net:net_unittests",
        "//sandbox:sandbox_unittests",
        "//services:services_unittests",
-@@ -449,7 +448,7 @@ group("gn_all") {
+@@ -448,7 +447,7 @@ group("gn_all") {
        }
      }
  
@@ -32,7 +32,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        deps += [
          "//third_party/breakpad:breakpad_unittests",
          "//third_party/breakpad:core-2-minidump",
-@@ -636,6 +635,15 @@ group("gn_all") {
+@@ -635,6 +634,15 @@ group("gn_all") {
        }
      }
  
@@ -48,7 +48,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
      if (is_mac) {
        deps += [
          "//third_party/breakpad:dump_syms($host_system_allocator_toolchain)",
-@@ -684,7 +692,7 @@ group("gn_all") {
+@@ -683,7 +691,7 @@ group("gn_all") {
        }
      }
  
@@ -57,7 +57,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        # The official builders use this binary from the default toolchain's
        # output directory after building in order to upload the symbols of that
        # binary. They build the binary like `ninja symupload` which requires the
-@@ -719,7 +727,7 @@ group("gn_all") {
+@@ -718,7 +726,7 @@ group("gn_all") {
        ]
      }
  
@@ -66,7 +66,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        deps += [
          "//third_party/crashpad/crashpad:crashpad_tests",
          "//third_party/crashpad/crashpad/handler:crashpad_handler",
-@@ -1128,7 +1136,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1127,7 +1135,7 @@ if (use_blink && !is_cronet_build) {
        "//third_party/blink/public:all_blink",
      ]
  
@@ -75,7 +75,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        deps += [
          ":chrome_wpt_tests",
          ":headless_shell_wpt",
-@@ -1275,7 +1283,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1274,7 +1282,7 @@ if (use_blink && !is_cronet_build) {
        data_deps += [ "//content/web_test:web_test_common_mojom_js_data_deps" ]
      }
  
@@ -84,7 +84,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        # Using the default toolchain for this tool, as it's run during tests not
        # during the build. This places a symlink in the root_build_dir for scrips
        # to use.
-@@ -1289,7 +1297,7 @@ if (use_blink && !is_cronet_build) {
+@@ -1288,7 +1296,7 @@ if (use_blink && !is_cronet_build) {
        data_deps += [ "//third_party/breakpad:dump_syms" ]
      }
  
@@ -93,7 +93,7 @@ $NetBSD: patch-BUILD.gn,v 1.2 2025/05/16 16:08:14 wiz Exp $
        # Using the default toolchain for this tool, as it's run during tests not
        # during the build. This places a symlink in the root_build_dir for scrips
        # to use.
-@@ -1760,7 +1768,7 @@ group("chromium_builder_perf") {
+@@ -1742,7 +1750,7 @@ group("chromium_builder_perf") {
        data_deps += [ "//chrome/test:performance_browser_tests" ]
      }
  

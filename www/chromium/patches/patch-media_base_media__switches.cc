@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_base_media__switches.cc,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- media/base/media_switches.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/base/media_switches.cc
 @@ -19,7 +19,7 @@
  #include "ui/gl/gl_features.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // The Alsa device to use when opening an audio input stream.
  const char kAlsaInputDevice[] = "alsa-input-device";
  // The Alsa device to use when opening an audio stream.
-@@ -358,8 +358,8 @@ BASE_FEATURE(kUseSCContentSharingPicker,
+@@ -366,8 +366,8 @@ BASE_FEATURE(kUseSCContentSharingPicker,
               "UseSCContentSharingPicker",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_MAC)
@@ -35,7 +35,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // Enables system audio mirroring using pulseaudio.
  BASE_FEATURE(kPulseaudioLoopbackForCast,
               "PulseaudioLoopbackForCast",
-@@ -369,6 +369,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
+@@ -377,6 +377,31 @@ BASE_FEATURE(kPulseaudioLoopbackForCast,
  BASE_FEATURE(kPulseaudioLoopbackForScreenShare,
               "PulseaudioLoopbackForScreenShare",
               base::FEATURE_DISABLED_BY_DEFAULT);
@@ -67,7 +67,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  #endif  // BUILDFLAG(IS_LINUX)
  
  // When enabled, MediaCapabilities will check with GPU Video Accelerator
-@@ -636,7 +661,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
+@@ -658,7 +683,7 @@ BASE_FEATURE(kFileDialogsBlockPictureInP
  // Show toolbar button that opens dialog for controlling media sessions.
  BASE_FEATURE(kGlobalMediaControls,
               "GlobalMediaControls",
@@ -76,7 +76,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -659,7 +684,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
+@@ -681,7 +706,7 @@ BASE_FEATURE(kGlobalMediaControlsUpdated
  // If enabled, users can request Media Remoting without fullscreen-in-tab.
  BASE_FEATURE(kMediaRemotingWithoutFullscreen,
               "MediaRemotingWithoutFullscreen",
@@ -85,7 +85,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -671,7 +696,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
+@@ -693,7 +718,7 @@ BASE_FEATURE(kMediaRemotingWithoutFullsc
  BASE_FEATURE(kGlobalMediaControlsPictureInPicture,
               "GlobalMediaControlsPictureInPicture",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -94,7 +94,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -700,7 +725,7 @@ BASE_FEATURE(kUnifiedAutoplay,
+@@ -722,7 +747,7 @@ BASE_FEATURE(kUnifiedAutoplay,
               "UnifiedAutoplay",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -103,7 +103,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // Enable vaapi/v4l2 video decoding on linux. This is already enabled by default
  // on chromeos, but needs an experiment on linux.
  BASE_FEATURE(kAcceleratedVideoDecodeLinux,
-@@ -800,7 +825,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
+@@ -795,7 +820,7 @@ BASE_FEATURE(kVSyncMjpegDecoding,
               "VSyncMjpegDecoding",
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // defined(ARCH_CPU_X86_FAMILY) && BUILDFLAG(IS_CHROMEOS)
@@ -112,7 +112,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // Enable H264 temporal layer encoding with V4L2 HW encoder on ChromeOS.
  BASE_FEATURE(kV4L2H264TemporalLayerHWEncoding,
               "V4L2H264TemporalLayerHWEncoding",
-@@ -1361,7 +1386,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
+@@ -1355,7 +1380,7 @@ BASE_FEATURE(kUseOutOfProcessVideoDecodi
  );
  #endif  // BUILDFLAG(ALLOW_OOP_VIDEO_DECODER)
  
@@ -121,7 +121,7 @@ $NetBSD: patch-media_base_media__switches.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // Spawn utility processes to perform hardware encode acceleration instead of
  // using the GPU process.
  BASE_FEATURE(kUseOutOfProcessVideoEncoding,
-@@ -1443,7 +1468,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
+@@ -1437,7 +1462,7 @@ BASE_FEATURE(kRecordWebAudioEngagement,
               "RecordWebAudioEngagement",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

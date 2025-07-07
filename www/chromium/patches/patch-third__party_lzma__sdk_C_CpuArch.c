@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_lzma__sdk_C_CpuArch.c,v 1.2 2025/05/16 16:08:32 wiz Exp $
+$NetBSD: patch-third__party_lzma__sdk_C_CpuArch.c,v 1.3 2025/07/07 09:23:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/lzma_sdk/C/CpuArch.c.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/lzma_sdk/C/CpuArch.c.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/lzma_sdk/C/CpuArch.c
 @@ -854,6 +854,34 @@ BoolInt CPU_IsSupported_SHA1(void) { ret
  BoolInt CPU_IsSupported_SHA2(void) { return APPLE_CRYPTO_SUPPORT_VAL; }

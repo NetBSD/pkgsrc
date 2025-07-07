@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__unittest.cc,v 1.2 2025/05/16 16:08:15 wiz Exp $
+$NetBSD: patch-base_process_process__unittest.cc,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/process/process_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/process/process_unittest.cc
 @@ -202,7 +202,7 @@ TEST_F(ProcessTest, CreationTimeOtherPro
    // was spawned and a time recorded after it was spawned. However, since the

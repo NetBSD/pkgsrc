@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
+$NetBSD: patch-printing_print__settings.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- printing/print_settings.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ printing/print_settings.cc
 @@ -319,7 +319,7 @@ PrintSettings& PrintSettings::operator=(
  #endif
@@ -17,7 +17,7 @@ $NetBSD: patch-printing_print__settings.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 @@ -349,7 +349,7 @@ bool PrintSettings::operator==(const Pri
  #endif
-                   is_modifiable_, requested_custom_margins_in_points_,
+                   is_modifiable_, requested_custom_margins_in_microns_,
                    pages_per_sheet_
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
@@ -26,7 +26,7 @@ $NetBSD: patch-printing_print__settings.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
  #endif
 @@ -373,7 +373,7 @@ bool PrintSettings::operator==(const Pri
                    other.is_modifiable_,
-                   other.requested_custom_margins_in_points_,
+                   other.requested_custom_margins_in_microns_,
                    other.pages_per_sheet_
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)

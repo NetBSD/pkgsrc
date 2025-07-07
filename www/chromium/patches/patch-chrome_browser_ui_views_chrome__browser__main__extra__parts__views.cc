@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_chrome__browser__main__extra__parts__views.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_chrome__browser__main__extra__parts__views.cc,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/chrome_browser_main_extra_parts_views.cc
 @@ -39,7 +39,7 @@
  #include "ui/wm/core/wm_state.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_chrome__browser__main__extra__parts__view
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <unistd.h>
-@@ -135,7 +135,7 @@ void ChromeBrowserMainExtraPartsViews::P
+@@ -143,7 +143,7 @@ void ChromeBrowserMainExtraPartsViews::P
          return controller;
        }));
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
 @@ -32,7 +32,7 @@ inline constexpr std::string_view kAutof
  inline constexpr char kAutofillAiOptInStatus[] =
@@ -15,7 +15,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.2 2025/05/1
  // Boolean that is true if BNPL on Autofill is enabled.
  inline constexpr char kAutofillBnplEnabled[] = "autofill.bnpl_enabled";
  // Boolean that is true if the user has ever seen a BNPL suggestion.
-@@ -208,7 +208,7 @@ void SetFacilitatedPaymentsEwallet(PrefS
+@@ -220,7 +220,7 @@ void SetFacilitatedPaymentsEwallet(PrefS
  bool IsFacilitatedPaymentsEwalletEnabled(const PrefService* prefs);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.2 2025/05/1
  void SetAutofillBnplEnabled(PrefService* prefs, bool value);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -216,7 +216,7 @@ void SetAutofillBnplEnabled(PrefService*
+@@ -228,7 +228,7 @@ void SetAutofillBnplEnabled(PrefService*
  bool IsAutofillBnplEnabled(const PrefService* prefs);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
+$NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__request__dispatcher.cc,v 1.3 2025/07/07 09:23:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/resource_coordinator/memory_instrumentation/queued_request_dispatcher.cc
 @@ -54,7 +54,7 @@ uint32_t CalculatePrivateFootprintKb(con
                                       uint32_t shared_resident_kb) {
@@ -31,8 +31,8 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
 -#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
 +#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_BSD)
      request->pending_responses.insert({client_info.pid, ResponseType::kOSDump});
-     client->RequestOSMemoryDump(request->memory_map_option(),
-                                 {base::kNullProcessId},
+     client->RequestOSMemoryDump(
+         request->memory_map_option(), request->memory_dump_flags(),
 @@ -237,7 +237,7 @@ void QueuedRequestDispatcher::SetUpAndDi
  
  // In some cases, OS stats can only be dumped from a privileged process to
@@ -42,7 +42,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
    std::vector<base::ProcessId> pids;
    mojom::ClientProcess* browser_client = nullptr;
    base::ProcessId browser_client_pid = base::kNullProcessId;
-@@ -283,7 +283,7 @@ void QueuedRequestDispatcher::SetUpAndDi
+@@ -284,7 +284,7 @@ void QueuedRequestDispatcher::SetUpAndDi
      const OsCallback& os_callback) {
  // On Linux, OS stats can only be dumped from a privileged process to
  // get around to sandboxing/selinux restrictions (see crbug.com/461788).
@@ -51,7 +51,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
    mojom::ClientProcess* browser_client = nullptr;
    base::ProcessId browser_client_pid = 0;
    for (const auto& client_info : clients) {
-@@ -333,7 +333,7 @@ QueuedRequestDispatcher::FinalizeVmRegio
+@@ -334,7 +334,7 @@ QueuedRequestDispatcher::FinalizeVmRegio
      // each client process provides 1 OS dump, % the case where the client is
      // disconnected mid dump.
      OSMemDumpMap& extra_os_dumps = response.second.os_dumps;
@@ -60,7 +60,7 @@ $NetBSD: patch-services_resource__coordinator_memory__instrumentation_queued__re
      for (auto& kv : extra_os_dumps) {
        auto pid = kv.first == base::kNullProcessId ? original_pid : kv.first;
        DCHECK(results.find(pid) == results.end());
-@@ -394,7 +394,7 @@ void QueuedRequestDispatcher::Finalize(Q
+@@ -395,7 +395,7 @@ void QueuedRequestDispatcher::Finalize(Q
      // crash). In the latter case (OS_LINUX) we expect the full map to come
      // from the browser process response.
      OSMemDumpMap& extra_os_dumps = response.second.os_dumps;
