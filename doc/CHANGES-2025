@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4181 2025/07/07 12:40:30 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.4182 2025/07/07 16:05:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6193,3 +6193,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/dpkg to 1.22.21 [adam 2025-07-07]
 	Updated www/chromium to 138.0.7204.96 [kikadf 2025-07-07]
 	Updated graphics/chafa to 1.16.2 [ktnb 2025-07-07]
+	Updated misc/exercism to 3.5.6 [schmonz 2025-07-07]
