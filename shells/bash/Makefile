@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2025/07/05 08:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/07/07 19:43:20 wiz Exp $
 
 BASH_VERSION=		5.3
 #BASH_PATCHLEVEL=	37
@@ -58,14 +58,6 @@ CONFIGURE_ARGS+=	--enable-job-control
 # bash malloc() is broken on Minix and musl libc
 .if ${OPSYS} == "Minix" || (${OPSYS} == "Linux" && empty(GLIBC_VERSION))
 CONFIGURE_ARGS+=	--with-bash-malloc=no
-.endif
-
-# Use "readline" package on Darwin to avoid link erros.
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=		--with-installed-readline
-
-BUILDLINK_API_DEPENDS.readline+=	readline>=7.0
-.include "../../devel/readline/buildlink3.mk"
 .endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == yes && ${OPSYS} == "NetBSD"
