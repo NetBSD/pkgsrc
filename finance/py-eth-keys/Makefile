@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/04/18 11:59:37 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/07 05:58:05 wiz Exp $
 
 DISTNAME=	eth_keys-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -21,6 +21,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-factory_boy>=3.0.1:../../devel/py-factory_boy
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.10.3:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

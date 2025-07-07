@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/01/29 18:04:43 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/07/07 05:58:08 wiz Exp $
 
 DISTNAME=	nbconvert-7.16.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,10 +37,7 @@ USE_LANGUAGES=	# none
 PYTHON_SELF_CONFLICT=	yes
 REPLACE_PYTHON+=	nbconvert/nbconvertapp.py
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 .for bin in jupyter-dejavu jupyter-nbconvert

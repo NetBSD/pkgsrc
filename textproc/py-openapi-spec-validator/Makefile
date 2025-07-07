@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/06/08 18:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/07 05:58:07 wiz Exp $
 
 DISTNAME=	openapi_spec_validator-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

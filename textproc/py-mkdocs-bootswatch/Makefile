@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/02/10 10:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/07 05:58:07 wiz Exp $
 
 DISTNAME=	mkdocs-bootswatch-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-mkdocs>=1.1:../../textproc/py-mkdocs
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 312
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

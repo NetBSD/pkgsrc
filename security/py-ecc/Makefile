@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/04/18 12:46:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/07 05:58:06 wiz Exp $
 
 DISTNAME=	py_ecc-8.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.4.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

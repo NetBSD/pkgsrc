@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/10/14 17:19:56 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/07 05:58:03 wiz Exp $
 
 DISTNAME=	tinydb-4.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

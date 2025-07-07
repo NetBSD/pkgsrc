@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/02/23 21:06:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/07 05:58:07 wiz Exp $
 
 DISTNAME=	flask_session-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-flask>=2.2:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-msgspec>=0.18.6:../../devel/py-msgspec
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

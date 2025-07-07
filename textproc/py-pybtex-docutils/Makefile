@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/22 20:40:21 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/07 05:58:07 wiz Exp $
 
 DISTNAME=	pybtex-docutils-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pybtex>=0.16:../../textproc/py-pybtex
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
