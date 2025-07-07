@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/07/03 19:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/07 06:54:27 wiz Exp $
 
-DISTNAME=	h5py-3.11.0
+DISTNAME=	h5py-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/h5py/}
 
