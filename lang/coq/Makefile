@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2025/04/24 14:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2025/07/07 03:04:04 dholland Exp $
 
 DISTNAME=	coq-8.20.1
 PKGREVISION=	2
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV:S/+/-/}
 # "coq-core" and "coq-stdlib", it doesn't work: unless you explicitly
 # build both, coqide fails.
 #
-# It is neessary to set INSTALL_UNSTRIPPED because opam/opaline
+# It is necessary to set INSTALL_UNSTRIPPED because opam/opaline
 # doesn't distinguish scripts from bins and the infrastructure tells
 # it to use INSTALL_PROGRAM; it will use the latter to install a
 # Python script, and then strip chokes.
