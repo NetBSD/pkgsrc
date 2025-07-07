@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_profile__menu__view.cc,v 1.2 2025/05/16 16:08:20 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_profile__menu__view.cc,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/profile_menu_view.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/profiles/profile_menu_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/profiles/profile_menu_view.cc
 @@ -92,7 +92,7 @@
  #include "ui/strings/grit/ui_strings.h"
@@ -15,7 +15,16 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_profile__menu__view.cc,v 1.2 202
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #endif
  
-@@ -550,7 +550,7 @@ void ProfileMenuView::SetMenuTitleForAcc
+@@ -418,7 +418,7 @@ void ProfileMenuView::OnSigninButtonClic
+   }
+   GetWidget()->CloseWithReason(views::Widget::ClosedReason::kUnspecified);
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   // TODO(crbug.com/404807488): Update the button and the dialog strings.
+   if (base::FeatureList::IsEnabled(switches::kEnableHistorySyncOptin)) {
+     browser()->signin_view_controller()->ShowModalHistorySyncOptInDialog();
+@@ -555,7 +555,7 @@ void ProfileMenuView::SetMenuTitleForAcc
      case signin_util::SignedInState::kSignedOut:
      case signin_util::SignedInState::kWebOnlySignedIn: {
        std::string profile_user_display_name, profile_user_email;
@@ -24,12 +33,3 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_profile__menu__view.cc,v 1.2 202
        profile_user_display_name = profile->GetPrefs()->GetString(
            enterprise_signin::prefs::kProfileUserDisplayName);
        profile_user_email = profile->GetPrefs()->GetString(
-@@ -647,7 +647,7 @@ void ProfileMenuView::BuildIdentity() {
-         badge_image_model, menu_title_, menu_subtitle_, management_label);
-   } else {
-     std::string profile_user_display_name, profile_user_email;
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-     profile_user_display_name = profile->GetPrefs()->GetString(
-         enterprise_signin::prefs::kProfileUserDisplayName);
-     profile_user_email = profile->GetPrefs()->GetString(

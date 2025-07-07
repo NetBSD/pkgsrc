@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.h,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_base_video__frame.h,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- media/base/video_frame.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/base/video_frame.h
 @@ -42,7 +42,7 @@
  #include "ui/gfx/geometry/size.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.2 2025/05/16 16:08:27 wiz Exp $
      STORAGE_DMABUFS = 5,  // Each plane is stored into a DmaBuf.
  #endif
      STORAGE_GPU_MEMORY_BUFFER = 6,
-@@ -435,7 +435,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -420,7 +420,7 @@ class MEDIA_EXPORT VideoFrame : public b
        ReleaseMailboxAndGpuMemoryBufferCB mailbox_holder_and_gmb_release_cb,
        base::TimeDelta timestamp);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.2 2025/05/16 16:08:27 wiz Exp $
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -748,7 +748,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -733,7 +733,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // wait for the included sync point.
    scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.2 2025/05/16 16:08:27 wiz Exp $
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -988,7 +988,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -973,7 +973,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
    bool is_mappable_si_enabled_ = false;
  

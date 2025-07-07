@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
 @@ -173,7 +173,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;

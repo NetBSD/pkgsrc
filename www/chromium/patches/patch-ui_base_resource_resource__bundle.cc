@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_base_resource_resource__bundle.cc,v 1.2 2025/05/16 16:08:34 wiz Exp $
+$NetBSD: patch-ui_base_resource_resource__bundle.cc,v 1.3 2025/07/07 09:23:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/resource/resource_bundle.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/base/resource/resource_bundle.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/base/resource/resource_bundle.cc
-@@ -929,7 +929,7 @@ void ResourceBundle::ReloadFonts() {
+@@ -971,7 +971,7 @@ void ResourceBundle::ReloadFonts() {
  }
  
  ResourceScaleFactor ResourceBundle::GetMaxResourceScaleFactor() const {

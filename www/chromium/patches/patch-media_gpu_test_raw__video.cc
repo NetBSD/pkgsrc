@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_test_raw__video.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_gpu_test_raw__video.cc,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/test/raw_video.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- media/gpu/test/raw_video.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/gpu/test/raw_video.cc
-@@ -61,7 +61,7 @@ std::unique_ptr<base::MemoryMappedFile> 
+@@ -63,7 +63,7 @@ std::unique_ptr<base::MemoryMappedFile> 
                               base::File::FLAG_READ | base::File::FLAG_WRITE
  // On Windows FLAG_CREATE_ALWAYS will require FLAG_WRITE, and FLAG_APPEND
  // must not be specified.

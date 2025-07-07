@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_media_cdm__host__file__path.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_common_media_cdm__host__file__path.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/media/cdm_host_file_path.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/common/media/cdm_host_file_path.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/media/cdm_host_file_path.cc
 @@ -90,7 +90,7 @@ void AddCdmHostFilePaths(
    cdm_host_file_paths->emplace_back(chrome_framework_path,

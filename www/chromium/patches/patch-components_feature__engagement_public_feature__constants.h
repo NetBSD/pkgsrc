@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/feature_engagement/public/feature_constants.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.h
-@@ -27,7 +27,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
+@@ -30,7 +30,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDe
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHDummyFeature);
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.2 
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kEsbDownloadRowPromoFeature);
  #endif
-@@ -316,7 +316,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kDefau
+@@ -358,7 +358,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kDefau
  
  #endif  // BUILDFLAG(IS_IOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.h,v 1.2 
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature);
  FEATURE_CONSTANTS_DECLARE_FEATURE(
-@@ -374,7 +374,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHSc
+@@ -419,7 +419,7 @@ FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHSc
  FEATURE_CONSTANTS_DECLARE_FEATURE(kIPHScalableIphGamingFeature);
  #endif
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_linux_pkg-config.py,v 1.2 2025/05/16 16:08:15 wiz Exp $
+$NetBSD: patch-build_config_linux_pkg-config.py,v 1.3 2025/07/07 09:23:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/linux/pkg-config.py.orig	2025-05-05 19:21:24.000000000 +0000
+--- build/config/linux/pkg-config.py.orig	2025-06-30 06:54:11.000000000 +0000
 +++ build/config/linux/pkg-config.py
 @@ -108,7 +108,7 @@ def main():
    # If this is run on non-Linux platforms, just return nothing and indicate

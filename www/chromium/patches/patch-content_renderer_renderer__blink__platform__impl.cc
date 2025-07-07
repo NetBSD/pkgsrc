@@ -1,12 +1,12 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
-@@ -124,7 +124,7 @@
+@@ -123,7 +123,7 @@
  
  #if BUILDFLAG(IS_MAC)
  #include "content/child/child_process_sandbox_support_impl_mac.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.2 2025/05
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
-@@ -192,13 +192,13 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -191,13 +191,13 @@ RendererBlinkPlatformImpl::RendererBlink
        is_locked_to_site_(false),
        main_thread_scheduler_(main_thread_scheduler),
        next_frame_sink_id_(uint32_t{std::numeric_limits<int32_t>::max()} + 1) {
@@ -31,7 +31,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.2 2025/05
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -223,7 +223,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -222,7 +222,7 @@ RendererBlinkPlatformImpl::RendererBlink
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -40,7 +40,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.2 2025/05
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -296,7 +296,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
+@@ -295,7 +295,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

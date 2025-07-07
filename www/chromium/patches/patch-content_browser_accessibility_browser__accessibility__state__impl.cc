@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl.cc,v 1.1 2025/05/16 16:08:24 wiz Exp $
+$NetBSD: patch-content_browser_accessibility_browser__accessibility__state__impl.cc,v 1.2 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/browser/accessibility/browser_accessibility_state_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/browser/accessibility/browser_accessibility_state_impl.cc
-@@ -180,7 +180,7 @@ BrowserAccessibilityStateImpl* BrowserAc
+@@ -278,7 +278,7 @@ BrowserAccessibilityStateImpl* BrowserAc
  
  // On Android, Mac, Windows and Linux there are platform-specific subclasses.
  #if !BUILDFLAG(IS_ANDROID) && !BUILDFLAG(IS_WIN) && !BUILDFLAG(IS_MAC) && \

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chrome__desktop__report__request__helper.cc,v 1.2 2025/05/16 16:08:17 wiz Exp $
+$NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chrome__desktop__report__request__helper.cc,v 1.3 2025/07/07 09:23:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/extensions/api/enterprise_reporting_private/chrome_desktop_report_request_helper.cc
 @@ -24,7 +24,7 @@
  #include "base/win/registry.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chro
  #include "base/environment.h"
  #include "base/nix/xdg_util.h"
  #endif
-@@ -255,7 +255,7 @@ base::FilePath GetEndpointVerificationDi
+@@ -264,7 +264,7 @@ base::FilePath GetEndpointVerificationDi
    bool got_path = false;
  #if BUILDFLAG(IS_WIN)
    got_path = base::PathService::Get(base::DIR_LOCAL_APP_DATA, &path);
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_extensions_api_enterprise__reporting__private_chro
    std::unique_ptr<base::Environment> env(base::Environment::Create());
    path = base::nix::GetXDGDirectory(env.get(), base::nix::kXdgConfigHomeEnvVar,
                                      base::nix::kDotConfigDir);
-@@ -266,7 +266,7 @@ base::FilePath GetEndpointVerificationDi
+@@ -275,7 +275,7 @@ base::FilePath GetEndpointVerificationDi
    if (!got_path)
      return path;
  

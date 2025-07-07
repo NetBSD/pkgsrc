@@ -1,10 +1,10 @@
-$NetBSD: patch-base_files_important__file__writer__cleaner.cc,v 1.2 2025/05/16 16:08:14 wiz Exp $
+$NetBSD: patch-base_files_important__file__writer__cleaner.cc,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/files/important_file_writer_cleaner.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/files/important_file_writer_cleaner.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/files/important_file_writer_cleaner.cc
 @@ -25,7 +25,8 @@ namespace base {
  namespace {

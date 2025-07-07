@@ -1,12 +1,12 @@
-$NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ v8/src/wasm/baseline/ia32/liftoff-assembler-ia32-inl.h
-@@ -579,7 +579,7 @@ void LiftoffAssembler::StoreTaggedPointe
+@@ -597,7 +597,7 @@ void LiftoffAssembler::AtomicStoreTagged
  }
  
  void LiftoffAssembler::Load(LiftoffRegister dst, Register src_addr,
@@ -15,7 +15,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                              LoadType type, uint32_t* protected_load_pc,
                              bool /* is_load_mem */, bool /* i64_offset */,
                              bool needs_shift) {
-@@ -659,7 +659,7 @@ void LiftoffAssembler::Load(LiftoffRegis
+@@ -677,7 +677,7 @@ void LiftoffAssembler::Load(LiftoffRegis
  }
  
  void LiftoffAssembler::Store(Register dst_addr, Register offset_reg,
@@ -24,7 +24,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                               StoreType type, LiftoffRegList pinned,
                               uint32_t* protected_store_pc,
                               bool /* is_store_mem */, bool /* i64_offset */) {
-@@ -738,7 +738,7 @@ void LiftoffAssembler::Store(Register ds
+@@ -756,7 +756,7 @@ void LiftoffAssembler::Store(Register ds
  }
  
  void LiftoffAssembler::AtomicLoad(LiftoffRegister dst, Register src_addr,
@@ -33,7 +33,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                    LoadType type, LiftoffRegList /* pinned */,
                                    bool /* i64_offset */) {
    if (type.value() != LoadType::kI64Load) {
-@@ -756,7 +756,7 @@ void LiftoffAssembler::AtomicLoad(Liftof
+@@ -774,7 +774,7 @@ void LiftoffAssembler::AtomicLoad(Liftof
  }
  
  void LiftoffAssembler::AtomicStore(Register dst_addr, Register offset_reg,
@@ -42,7 +42,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                     StoreType type, LiftoffRegList pinned,
                                     bool /* i64_offset */) {
    DCHECK_LE(offset_imm, std::numeric_limits<int32_t>::max());
-@@ -826,7 +826,7 @@ enum Binop { kAdd, kSub, kAnd, kOr, kXor
+@@ -844,7 +844,7 @@ enum Binop { kAdd, kSub, kAnd, kOr, kXor
  
  inline void AtomicAddOrSubOrExchange32(LiftoffAssembler* lasm, Binop binop,
                                         Register dst_addr, Register offset_reg,
@@ -51,7 +51,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                         LiftoffRegister value,
                                         LiftoffRegister result, StoreType type) {
    DCHECK_EQ(value, result);
-@@ -894,7 +894,7 @@ inline void AtomicAddOrSubOrExchange32(L
+@@ -912,7 +912,7 @@ inline void AtomicAddOrSubOrExchange32(L
  }
  
  inline void AtomicBinop32(LiftoffAssembler* lasm, Binop op, Register dst_addr,
@@ -60,7 +60,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                            LiftoffRegister value, LiftoffRegister result,
                            StoreType type) {
    DCHECK_EQ(value, result);
-@@ -1009,7 +1009,7 @@ inline void AtomicBinop32(LiftoffAssembl
+@@ -1027,7 +1027,7 @@ inline void AtomicBinop32(LiftoffAssembl
  }
  
  inline void AtomicBinop64(LiftoffAssembler* lasm, Binop op, Register dst_addr,
@@ -69,7 +69,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                            LiftoffRegister value, LiftoffRegister result) {
    // We need {ebx} here, which is the root register. As the root register it
    // needs special treatment. As we use {ebx} directly in the code below, we
-@@ -1105,7 +1105,7 @@ inline void AtomicBinop64(LiftoffAssembl
+@@ -1123,7 +1123,7 @@ inline void AtomicBinop64(LiftoffAssembl
  }  // namespace liftoff
  
  void LiftoffAssembler::AtomicAdd(Register dst_addr, Register offset_reg,
@@ -78,7 +78,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                   LiftoffRegister result, StoreType type,
                                   bool /* i64_offset */) {
    if (type.value() == StoreType::kI64Store) {
-@@ -1119,7 +1119,7 @@ void LiftoffAssembler::AtomicAdd(Registe
+@@ -1137,7 +1137,7 @@ void LiftoffAssembler::AtomicAdd(Registe
  }
  
  void LiftoffAssembler::AtomicSub(Register dst_addr, Register offset_reg,
@@ -87,7 +87,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                   LiftoffRegister result, StoreType type,
                                   bool /* i64_offset */) {
    if (type.value() == StoreType::kI64Store) {
-@@ -1132,7 +1132,7 @@ void LiftoffAssembler::AtomicSub(Registe
+@@ -1150,7 +1150,7 @@ void LiftoffAssembler::AtomicSub(Registe
  }
  
  void LiftoffAssembler::AtomicAnd(Register dst_addr, Register offset_reg,
@@ -96,7 +96,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                   LiftoffRegister result, StoreType type,
                                   bool /* i64_offset */) {
    if (type.value() == StoreType::kI64Store) {
-@@ -1146,7 +1146,7 @@ void LiftoffAssembler::AtomicAnd(Registe
+@@ -1164,7 +1164,7 @@ void LiftoffAssembler::AtomicAnd(Registe
  }
  
  void LiftoffAssembler::AtomicOr(Register dst_addr, Register offset_reg,
@@ -105,7 +105,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                  LiftoffRegister result, StoreType type,
                                  bool /* i64_offset */) {
    if (type.value() == StoreType::kI64Store) {
-@@ -1160,7 +1160,7 @@ void LiftoffAssembler::AtomicOr(Register
+@@ -1178,7 +1178,7 @@ void LiftoffAssembler::AtomicOr(Register
  }
  
  void LiftoffAssembler::AtomicXor(Register dst_addr, Register offset_reg,
@@ -114,7 +114,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                   LiftoffRegister result, StoreType type,
                                   bool /* i64_offset */) {
    if (type.value() == StoreType::kI64Store) {
-@@ -1174,7 +1174,7 @@ void LiftoffAssembler::AtomicXor(Registe
+@@ -1192,7 +1192,7 @@ void LiftoffAssembler::AtomicXor(Registe
  }
  
  void LiftoffAssembler::AtomicExchange(Register dst_addr, Register offset_reg,
@@ -123,7 +123,7 @@ $NetBSD: patch-v8_src_wasm_baseline_ia32_liftoff-assembler-ia32-inl.h,v 1.2 2025
                                        LiftoffRegister value,
                                        LiftoffRegister result, StoreType type,
                                        bool /* i64_offset */) {
-@@ -1189,7 +1189,7 @@ void LiftoffAssembler::AtomicExchange(Re
+@@ -1207,7 +1207,7 @@ void LiftoffAssembler::AtomicExchange(Re
  }
  
  void LiftoffAssembler::AtomicCompareExchange(

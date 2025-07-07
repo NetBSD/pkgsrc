@@ -1,10 +1,10 @@
-$NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/audio/sndio/audio_manager_sndio.cc.orig	2025-05-08 12:01:57.767307090 +0000
+--- media/audio/sndio/audio_manager_sndio.cc.orig	2025-07-03 13:12:11.685667283 +0000
 +++ media/audio/sndio/audio_manager_sndio.cc
 @@ -0,0 +1,213 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
@@ -68,7 +68,7 @@ $NetBSD: patch-media_audio_sndio_audio__manager__sndio.cc,v 1.2 2025/05/16 16:08
 +}
 +
 +#if defined(USE_SNDIO)
-+const char* AudioManagerSndio::GetName() {
++const std::string_view AudioManagerSndio::GetName() {
 +  return "SNDIO";
 +}
 +#endif

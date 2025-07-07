@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.1 2025/05/16 16:08:17 wiz Exp $
+$NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.2 2025/07/07 09:23:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/enterprise/signals/context_info_fetcher.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/enterprise/signals/context_info_fetcher.cc
-@@ -179,6 +179,8 @@ std::vector<std::string> ContextInfoFetc
+@@ -181,6 +181,8 @@ std::vector<std::string> ContextInfoFetc
  SettingValue ContextInfoFetcher::GetOSFirewall() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC)
    return device_signals::GetOSFirewall();
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_signals_context__info__fetcher.cc,v 1.1
  #elif BUILDFLAG(IS_CHROMEOS)
    return GetChromeosFirewall();
  #else
-@@ -198,7 +200,7 @@ ScopedUfwConfigPathForTesting::~ScopedUf
+@@ -200,7 +202,7 @@ ScopedUfwConfigPathForTesting::~ScopedUf
  #endif  // BUILDFLAG(IS_LINUX)
  
  std::vector<std::string> ContextInfoFetcher::GetDnsServers() {

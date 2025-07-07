@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings.h,v 1.2 2025/05/16 16:08:29 wiz Exp $
+$NetBSD: patch-printing_print__settings.h,v 1.3 2025/07/07 09:23:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- printing/print_settings.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"
@@ -42,7 +42,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.2 2025/05/16 16:08:29 wiz Exp $
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -429,7 +429,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -437,7 +437,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
    // Number of pages per sheet.
    int pages_per_sheet_;
  

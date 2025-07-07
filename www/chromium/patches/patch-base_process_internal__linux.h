@@ -1,12 +1,12 @@
-$NetBSD: patch-base_process_internal__linux.h,v 1.2 2025/05/16 16:08:15 wiz Exp $
+$NetBSD: patch-base_process_internal__linux.h,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/internal_linux.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/process/internal_linux.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/process/internal_linux.h
-@@ -144,6 +144,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
+@@ -146,6 +146,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
  // arguments to the lambda.
  template <typename Lambda>
  void ForEachProcessTask(base::ProcessHandle process, Lambda&& lambda) {
@@ -16,7 +16,7 @@ $NetBSD: patch-base_process_internal__linux.h,v 1.2 2025/05/16 16:08:15 wiz Exp 
    // Iterate through the different threads tracked in /proc/<pid>/task.
    FilePath fd_path = GetProcPidDir(process).Append("task");
  
-@@ -167,6 +170,7 @@ void ForEachProcessTask(base::ProcessHan
+@@ -169,6 +172,7 @@ void ForEachProcessTask(base::ProcessHan
      FilePath task_path = fd_path.Append(tid_str);
      lambda(tid, task_path);
    }
