@@ -1,4 +1,4 @@
-$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__connection__netbsd.c,v 1.1 2021/08/03 21:04:35 markd Exp $
+$NetBSD: patch-src_3rdparty_chromium_services_device_hid_hid__connection__netbsd.cc,v 1.1 2025/07/07 13:50:44 wiz Exp $
 
 --- src/3rdparty/chromium/services/device/hid/hid_connection_netbsd.cc.orig	2020-07-23 00:19:17.901829453 +0000
 +++ src/3rdparty/chromium/services/device/hid/hid_connection_netbsd.cc

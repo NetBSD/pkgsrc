@@ -1,4 +1,4 @@
-$NetBSD: patch-src_buildtools_config_linking.pri,v 1.3 2023/12/30 16:18:35 adam Exp $
+$NetBSD: patch-src_buildtools_config_linking.pri,v 1.4 2025/07/07 13:50:44 wiz Exp $
 
 --- src/buildtools/config/linking.pri.orig
 +++ src/buildtools/config/linking.pri
@@ -17,7 +17,7 @@ $NetBSD: patch-src_buildtools_config_linking.pri,v 1.3 2023/12/30 16:18:35 adam 
  linking_pri = $$OUT_PWD/$$getConfigDir()/$${TARGET}.pri
  
  !include($$linking_pri) {
-@@ -34,7 +38,7 @@ if(macos|ios) {
+@@ -34,7 +42,7 @@ if(macos|ios) {
      }
  }
  
@@ -26,7 +26,7 @@ $NetBSD: patch-src_buildtools_config_linking.pri,v 1.3 2023/12/30 16:18:35 adam 
      !static {
          QMAKE_LFLAGS += @$${RSP_OBJECT_FILE}
          QMAKE_LFLAGS += -Wl,--start-group @$${RSP_ARCHIVE_FILE} -Wl,--end-group
-@@ -60,7 +64,7 @@ LIBS_PRIVATE += $$NINJA_LIB_DIRS $$NINJA_LIBS
+@@ -60,7 +68,7 @@ LIBS_PRIVATE += $$NINJA_LIB_DIRS $$NINJA_LIBS
  
  unix:qtConfig(webengine-noexecstack): \
      QMAKE_LFLAGS += -Wl,-z,noexecstack
