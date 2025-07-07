@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25988 2025/07/07 04:54:12 wiz Exp $
+$NetBSD: TODO,v 1.25989 2025/07/07 05:15:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -983,7 +983,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencl-3.0.12
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
-	o opencv-4.12.0
 	o opendnssec-2.1.8
 	o opengrok-1.7.1
 	o openh323-1.19.1
