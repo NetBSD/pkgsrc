@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/12 11:08:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/07/07 06:54:27 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/hdf5.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/license.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/pytables.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/python.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/stdint.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/lzf/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/h5py/__init__.py
 ${PYSITELIB}/h5py/__init__.pyc
@@ -48,6 +54,7 @@ ${PYSITELIB}/h5py/_hl/selections2.pyo
 ${PYSITELIB}/h5py/_hl/vds.py
 ${PYSITELIB}/h5py/_hl/vds.pyc
 ${PYSITELIB}/h5py/_hl/vds.pyo
+${PYSITELIB}/h5py/_npystrings.so
 ${PYSITELIB}/h5py/_objects.so
 ${PYSITELIB}/h5py/_proxy.so
 ${PYSITELIB}/h5py/_selector.so
@@ -168,12 +175,18 @@ ${PYSITELIB}/h5py/tests/test_h5p.pyo
 ${PYSITELIB}/h5py/tests/test_h5pl.py
 ${PYSITELIB}/h5py/tests/test_h5pl.pyc
 ${PYSITELIB}/h5py/tests/test_h5pl.pyo
+${PYSITELIB}/h5py/tests/test_h5s.py
+${PYSITELIB}/h5py/tests/test_h5s.pyc
+${PYSITELIB}/h5py/tests/test_h5s.pyo
 ${PYSITELIB}/h5py/tests/test_h5t.py
 ${PYSITELIB}/h5py/tests/test_h5t.pyc
 ${PYSITELIB}/h5py/tests/test_h5t.pyo
 ${PYSITELIB}/h5py/tests/test_h5z.py
 ${PYSITELIB}/h5py/tests/test_h5z.pyc
 ${PYSITELIB}/h5py/tests/test_h5z.pyo
+${PYSITELIB}/h5py/tests/test_npystrings.py
+${PYSITELIB}/h5py/tests/test_npystrings.pyc
+${PYSITELIB}/h5py/tests/test_npystrings.pyo
 ${PYSITELIB}/h5py/tests/test_objects.py
 ${PYSITELIB}/h5py/tests/test_objects.pyc
 ${PYSITELIB}/h5py/tests/test_objects.pyo
