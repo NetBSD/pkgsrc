@@ -1,0 +1,32 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/07/07 00:54:38 schmonz Exp $
+
+Fix parallel builds.
+
+--- Makefile.in.orig	2023-01-21 02:01:52.000000000 +0000
++++ Makefile.in
+@@ -136,6 +136,7 @@ $(ALIB): $(ALIBOBJS)
+ 	$(RANLIB) $(ALIB)
+ 
+ $(OBJS) $(LOBJS): fm.h funcname1.h
++$(ALIBOBJS): funcname1.h
+ 
+ tagtable.c: tagtable.tab mktable$(EXT) html.h 
+ 	./mktable$(EXT) 100 $(srcdir)/tagtable.tab > $@
+@@ -194,7 +195,7 @@ inflate.o: inflate.c
+ 	$(CC) $(CFLAGS) -o $@ -c $(srcdir)/inflate.c
+ 
+ libwc/libwc.a: libwc
+-libwc:
++libwc: funcname1.h
+ 	(cd libwc && $(MAKE) CC='$(CC0)' OPTS='$(OPTS)')
+  
+ dummy.o: entity.c
+@@ -207,7 +208,7 @@ w3mimgdisplay.o: w3mimgdisplay.c w3mimg/
+ 	$(CC) $(CFLAGS) $(IMGCFLAGS) -o $@ -c $(srcdir)/w3mimgdisplay.c
+ 
+ w3mimg/w3mimg.a: w3mimg
+-w3mimg:
++w3mimg: funcname1.h
+ 	(cd w3mimg && $(MAKE) CC="$(CC0)" OPTS="$(OPTS)")
+ 
+ po:
