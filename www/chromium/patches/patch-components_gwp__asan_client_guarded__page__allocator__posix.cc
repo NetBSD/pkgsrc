@@ -1,10 +1,10 @@
-$NetBSD: patch-components_gwp__asan_client_guarded__page__allocator__posix.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_gwp__asan_client_guarded__page__allocator__posix.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/gwp_asan/client/guarded_page_allocator_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/gwp_asan/client/guarded_page_allocator_posix.cc
 @@ -35,8 +35,9 @@ void GuardedPageAllocator::MarkPageInacc
    // mmap() a PROT_NONE page over the address to release it to the system, if

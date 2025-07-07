@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_brotli_common_platform.h,v 1.2 2025/05/16 16:08:31 wiz Exp $
+$NetBSD: patch-third__party_brotli_common_platform.h,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/brotli/common/platform.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/brotli/common/platform.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/brotli/common/platform.h
 @@ -28,7 +28,7 @@
  #include <brotli/port.h>

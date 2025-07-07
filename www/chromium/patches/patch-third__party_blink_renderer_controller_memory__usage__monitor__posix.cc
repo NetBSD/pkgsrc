@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_controller_memory__usage__monitor__posix.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_controller_memory__usage__monitor__posix.cc,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/controller/memory_usage_monitor_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/blink/renderer/controller/memory_usage_monitor_posix.cc
-@@ -133,15 +133,17 @@ void MemoryUsageMonitorPosix::ResetFileD
+@@ -132,15 +132,17 @@ void MemoryUsageMonitorPosix::ResetFileD
  
  void MemoryUsageMonitorPosix::SetProcFiles(base::File statm_file,
                                             base::File status_file) {

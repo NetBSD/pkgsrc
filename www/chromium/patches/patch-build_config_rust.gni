@@ -1,12 +1,12 @@
-$NetBSD: patch-build_config_rust.gni,v 1.2 2025/05/16 16:08:15 wiz Exp $
+$NetBSD: patch-build_config_rust.gni,v 1.3 2025/07/07 09:23:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2025-05-05 19:21:24.000000000 +0000
+--- build/config/rust.gni.orig	2025-06-30 06:54:11.000000000 +0000
 +++ build/config/rust.gni
-@@ -178,7 +178,7 @@ if (is_linux || is_chromeos) {
+@@ -191,7 +191,7 @@ if (is_linux || is_chromeos) {
      rust_abi_target = "aarch64-unknown-linux-gnu"
      cargo_target_abi = ""
    } else if (current_cpu == "x86") {
@@ -15,14 +15,16 @@ $NetBSD: patch-build_config_rust.gni,v 1.2 2025/05/16 16:08:15 wiz Exp $
      cargo_target_abi = ""
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
-@@ -346,6 +346,10 @@ if (is_linux || is_chromeos) {
+@@ -373,7 +373,11 @@ if (is_linux || is_chromeos) {
    }
  }
  
+-if (toolchain_has_rust) {
 +if (is_bsd) {
 +  rust_abi_target = string_replace(rust_abi_target, "linux-gnu", current_os)
 +}
 +
- assert(!toolchain_has_rust || rust_abi_target != "")
++if (toolchain_has_rust && !is_bsd) {
+   assert(rust_abi_target != "")
  
- # This variable is passed to the Rust libstd build.
+   _known_rust_target_triples_filepath = "//build/rust/known-target-triples.txt"

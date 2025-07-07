@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_printing__context__linux.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
+$NetBSD: patch-printing_printing__context__linux.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/printing_context_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- printing/printing_context_linux.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ printing/printing_context_linux.cc
 @@ -23,7 +23,7 @@
  #endif
@@ -15,7 +15,7 @@ $NetBSD: patch-printing_printing__context__linux.cc,v 1.2 2025/05/16 16:08:29 wi
  #include "ui/linux/linux_ui.h"
  #endif
  
-@@ -66,7 +66,7 @@ mojom::ResultCode PrintingContextLinux::
+@@ -69,7 +69,7 @@ mojom::ResultCode PrintingContextLinux::
  
    ResetSettings();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-printing_printing__context__linux.cc,v 1.2 2025/05/16 16:08:29 wi
    if (!ui::LinuxUi::instance())
      return mojom::ResultCode::kSuccess;
  
-@@ -82,7 +82,7 @@ mojom::ResultCode PrintingContextLinux::
+@@ -85,7 +85,7 @@ mojom::ResultCode PrintingContextLinux::
  }
  
  gfx::Size PrintingContextLinux::GetPdfPaperSizeDeviceUnits() {
@@ -33,7 +33,7 @@ $NetBSD: patch-printing_printing__context__linux.cc,v 1.2 2025/05/16 16:08:29 wi
    if (ui::LinuxUi::instance())
      return ui::LinuxUi::instance()->GetPdfPaperSize(this);
  #endif
-@@ -95,7 +95,7 @@ mojom::ResultCode PrintingContextLinux::
+@@ -98,7 +98,7 @@ mojom::ResultCode PrintingContextLinux::
    DCHECK(!printer_settings.show_system_dialog);
    DCHECK(!in_print_job_);
  

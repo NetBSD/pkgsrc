@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_platform_x11_x11__screen__ozone.cc,v 1.2 2025/05/16 16:08:35 wiz Exp $
+$NetBSD: patch-ui_ozone_platform_x11_x11__screen__ozone.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/ozone/platform/x11/x11_screen_ozone.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/ozone/platform/x11/x11_screen_ozone.cc
 @@ -22,7 +22,7 @@
  #include "ui/ozone/platform/x11/x11_window.h"

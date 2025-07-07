@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
+$NetBSD: patch-media_base_video__frame.cc,v 1.3 2025/07/07 09:23:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- media/base/video_frame.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ media/base/video_frame.cc
 @@ -92,7 +92,7 @@ std::string VideoFrame::StorageTypeToStr
        return "OWNED_MEMORY";
@@ -24,7 +24,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
        // This is not strictly needed but makes explicit that, at VideoFrame
        // level, DmaBufs are not mappable from userspace.
        storage_type != VideoFrame::STORAGE_DMABUFS &&
-@@ -420,7 +420,7 @@ VideoFrame::CreateFrameForGpuMemoryBuffe
+@@ -417,7 +417,7 @@ VideoFrame::CreateFrameForGpuMemoryBuffe
          plane_size.width() * VideoFrame::BytesPerElement(*format, plane);
    }
    uint64_t modifier = gfx::NativePixmapHandle::kNoModifier;
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
    bool is_native_buffer =
        gpu_memory_buffer
            ? (gpu_memory_buffer->GetType() != gfx::SHARED_MEMORY_BUFFER)
-@@ -938,7 +938,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
+@@ -889,7 +889,7 @@ scoped_refptr<VideoFrame> VideoFrame::Wr
    return frame;
  }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_video__frame.cc,v 1.2 2025/05/16 16:08:27 wiz Exp $
  // static
  scoped_refptr<VideoFrame> VideoFrame::WrapExternalDmabufs(
      const VideoFrameLayout& layout,
-@@ -1625,7 +1625,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
+@@ -1573,7 +1573,7 @@ scoped_refptr<gpu::ClientSharedImage> Vi
    return wrapped_frame_ ? wrapped_frame_->shared_image() : shared_image_;
  }
  

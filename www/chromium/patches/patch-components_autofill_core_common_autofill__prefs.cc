@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_common_autofill__prefs.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__prefs.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.cc
-@@ -98,7 +98,7 @@ void RegisterProfilePrefs(user_prefs::Pr
+@@ -101,7 +101,7 @@ void RegisterProfilePrefs(user_prefs::Pr
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__prefs.cc,v 1.2 2025/05/
    registry->RegisterBooleanPref(
        kAutofillBnplEnabled, true,
        user_prefs::PrefRegistrySyncable::SYNCABLE_PREF);
-@@ -277,7 +277,7 @@ bool IsFacilitatedPaymentsEwalletEnabled
+@@ -280,7 +280,7 @@ bool IsFacilitatedPaymentsEwalletEnabled
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__prefs.cc,v 1.2 2025/05/
  void SetAutofillBnplEnabled(PrefService* prefs, bool value) {
    prefs->SetBoolean(kAutofillBnplEnabled, value);
  }
-@@ -286,7 +286,7 @@ void SetAutofillBnplEnabled(PrefService*
+@@ -289,7 +289,7 @@ void SetAutofillBnplEnabled(PrefService*
  
  bool IsAutofillBnplEnabled(const PrefService* prefs) {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-components_autofill_core_common_autofill__prefs.cc,v 1.2 2025/05/
    return prefs->GetBoolean(kAutofillBnplEnabled);
  #else
    return false;
-@@ -295,7 +295,7 @@ bool IsAutofillBnplEnabled(const PrefSer
+@@ -298,7 +298,7 @@ bool IsAutofillBnplEnabled(const PrefSer
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

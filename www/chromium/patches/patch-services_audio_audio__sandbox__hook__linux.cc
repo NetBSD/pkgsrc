@@ -1,12 +1,12 @@
-$NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
+$NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.3 2025/07/07 09:23:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/audio/audio_sandbox_hook_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- services/audio/audio_sandbox_hook_linux.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ services/audio/audio_sandbox_hook_linux.cc
-@@ -143,6 +143,7 @@ void AddPulseAudioFilePermissions(
+@@ -147,6 +147,7 @@ void AddPulseAudioFilePermissions(
  }
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.2 2025/05/16 16
  std::vector<BrokerFilePermission> GetAudioFilePermissions() {
    std::vector<BrokerFilePermission> permissions{
        BrokerFilePermission::ReadOnly("/dev/urandom"),
-@@ -171,10 +172,12 @@ void LoadAudioLibraries() {
+@@ -175,10 +176,12 @@ void LoadAudioLibraries() {
      }
    }
  }
@@ -27,7 +27,7 @@ $NetBSD: patch-services_audio_audio__sandbox__hook__linux.cc,v 1.2 2025/05/16 16
    LoadAudioLibraries();
    auto* instance = sandbox::policy::SandboxLinux::GetInstance();
    instance->StartBrokerProcess(MakeBrokerCommandSet({
-@@ -192,6 +195,7 @@ bool AudioPreSandboxHook(sandbox::policy
+@@ -196,6 +199,7 @@ bool AudioPreSandboxHook(sandbox::policy
    // TODO(crbug.com/40579955) enable namespace sandbox. Currently, if
    // enabled, connect() on pulse native socket fails with ENOENT (called from
    // pa_context_connect).

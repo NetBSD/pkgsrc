@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_ozone_platform_wayland_common_wayland__util.cc,v 1.2 2025/05/16 16:08:35 wiz Exp $
+$NetBSD: patch-ui_ozone_platform_wayland_common_wayland__util.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/ozone/platform/wayland/common/wayland_util.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/ozone/platform/wayland/common/wayland_util.cc
-@@ -424,6 +424,7 @@ void RecordConnectionMetrics(wl_display*
+@@ -421,6 +421,7 @@ void RecordConnectionMetrics(wl_display*
          {"weston", WaylandCompositor::kWeston},
      };
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ui_ozone_platform_wayland_common_wayland__util.cc,v 1.2 2025/05/1
      const int fd = wl_display_get_fd(display);
      if (fd == -1) {
        return WaylandCompositor::kUnknown;
-@@ -449,6 +450,7 @@ void RecordConnectionMetrics(wl_display*
+@@ -446,6 +447,7 @@ void RecordConnectionMetrics(wl_display*
          return compositor;
        }
      }

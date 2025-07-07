@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.h,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_common_chrome__features.h,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/common/chrome_features.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/chrome_features.h
 @@ -50,13 +50,13 @@ BASE_DECLARE_FEATURE(kUseAdHocSigningFor
  #endif  // BUILDFLAG(IS_MAC)
@@ -22,7 +22,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.2 2025/05/16 16:08:21 wiz Ex
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kBackgroundModeAllowRestart);
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-@@ -146,7 +146,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsPrevent
+@@ -150,7 +150,7 @@ BASE_DECLARE_FEATURE(kDesktopPWAsPrevent
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kDesktopPWAsTabStripSettings);
  
@@ -31,7 +31,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.2 2025/05/16 16:08:21 wiz Ex
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kChromeAppsDeprecation);
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kShortcutsNotApps);
-@@ -521,7 +521,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
+@@ -578,7 +578,7 @@ BASE_DECLARE_FEATURE(kKAnonymityServiceO
  COMPONENT_EXPORT(CHROME_FEATURES)
  BASE_DECLARE_FEATURE(kKAnonymityServiceStorage);
  
@@ -40,7 +40,7 @@ $NetBSD: patch-chrome_common_chrome__features.h,v 1.2 2025/05/16 16:08:21 wiz Ex
  COMPONENT_EXPORT(CHROME_FEATURES) BASE_DECLARE_FEATURE(kLinuxLowMemoryMonitor);
  COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorModerateLevel;
-@@ -529,7 +529,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
+@@ -586,7 +586,7 @@ COMPONENT_EXPORT(CHROME_FEATURES)
  extern const base::FeatureParam<int> kLinuxLowMemoryMonitorCriticalLevel;
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

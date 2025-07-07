@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_tools_run-paxctl.py,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-v8_tools_run-paxctl.py,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/tools/run-paxctl.py.orig	2025-05-08 12:01:57.924673269 +0000
+--- v8/tools/run-paxctl.py.orig	2025-07-03 13:12:11.820039652 +0000
 +++ v8/tools/run-paxctl.py
 @@ -0,0 +1,16 @@
 +#!@PYTHONBIN@

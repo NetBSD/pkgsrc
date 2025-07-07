@@ -1,12 +1,12 @@
-$NetBSD: patch-tools_protoc__wrapper_protoc__wrapper.py,v 1.2 2025/05/16 16:08:33 wiz Exp $
+$NetBSD: patch-tools_protoc__wrapper_protoc__wrapper.py,v 1.3 2025/07/07 09:23:39 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-05-05 19:21:24.000000000 +0000
+--- tools/protoc_wrapper/protoc_wrapper.py.orig	2025-06-30 06:54:11.000000000 +0000
 +++ tools/protoc_wrapper/protoc_wrapper.py
-@@ -183,15 +183,19 @@ def main(argv):
+@@ -226,15 +226,19 @@ def main(argv):
      if not options.exclude_imports:
        protoc_cmd += ["--include_imports"]
  

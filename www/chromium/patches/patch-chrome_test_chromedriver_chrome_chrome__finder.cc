@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/test/chromedriver/chrome/chrome_finder.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/test/chromedriver/chrome/chrome_finder.cc
-@@ -58,7 +58,7 @@ void GetApplicationDirs(std::vector<base
+@@ -59,7 +59,7 @@ void GetApplicationDirs(std::vector<base
          installation_locations[i].Append(L"Chromium\\Application"));
    }
  }
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.2 2025/05/1
  void GetApplicationDirs(std::vector<base::FilePath>* locations) {
    // TODO: Respect users' PATH variables.
    // Until then, we use an approximation of the most common defaults.
-@@ -125,7 +125,7 @@ std::vector<base::FilePath> GetChromePro
+@@ -126,7 +126,7 @@ std::vector<base::FilePath> GetChromePro
              chrome::kGoogleChromeForTestingBrowserProcessExecutablePath),
          base::FilePath(chrome::kGoogleChromeBrowserProcessExecutablePath),
          base::FilePath(chrome::kChromiumBrowserProcessExecutablePath),
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_test_chromedriver_chrome_chrome__finder.cc,v 1.2 2025/05/1
      base::FilePath(chrome::kBrowserProcessExecutablePath),
          base::FilePath("chrome"),  // Chrome for Testing or Google Chrome
          base::FilePath("google-chrome"), base::FilePath("chromium"),
-@@ -141,7 +141,7 @@ std::vector<base::FilePath> GetHeadlessS
+@@ -142,7 +142,7 @@ std::vector<base::FilePath> GetHeadlessS
    return {
  #if BUILDFLAG(IS_WIN)
      base::FilePath(FILE_PATH_LITERAL("chrome-headless-shell.exe")),

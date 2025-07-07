@@ -1,12 +1,12 @@
-$NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.2 2025/05/16 16:08:28 wiz Exp $
+$NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/socket/udp_socket_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- net/socket/udp_socket_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ net/socket/udp_socket_unittest.cc
-@@ -371,7 +371,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
+@@ -397,7 +397,7 @@ TEST_F(UDPSocketTest, PartialRecv) {
    EXPECT_EQ(second_packet, received);
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.2 2025/05/16 16:08:28 wiz
  // - MacOS: requires root permissions on OSX 10.7+.
  // - Android: devices attached to testbots don't have default network, so
  // broadcasting to 255.255.255.255 returns error -109 (Address not reachable).
-@@ -682,7 +682,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
+@@ -708,7 +708,7 @@ TEST_F(UDPSocketTest, ClientSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = client.SetDoNotFragment();
@@ -24,7 +24,7 @@ $NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.2 2025/05/16 16:08:28 wiz
      // TODO(crbug.com/42050633): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #else
-@@ -704,7 +704,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
+@@ -730,7 +730,7 @@ TEST_F(UDPSocketTest, ServerSetDoNotFrag
      EXPECT_THAT(rv, IsOk());
  
      rv = server.SetDoNotFragment();
@@ -33,7 +33,7 @@ $NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.2 2025/05/16 16:08:28 wiz
      // TODO(crbug.com/42050633): IP_MTU_DISCOVER is not implemented on Fuchsia.
      EXPECT_THAT(rv, IsError(ERR_NOT_IMPLEMENTED));
  #else
-@@ -770,7 +770,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
+@@ -796,7 +796,7 @@ TEST_F(UDPSocketTest, JoinMulticastGroup
  
  // TODO(crbug.com/40620614): failing on device on iOS 12.2.
  // TODO(crbug.com/40189274): flaky on Mac 11.
@@ -42,7 +42,7 @@ $NetBSD: patch-net_socket_udp__socket__unittest.cc,v 1.2 2025/05/16 16:08:28 wiz
  #define MAYBE_SharedMulticastAddress DISABLED_SharedMulticastAddress
  #else
  #define MAYBE_SharedMulticastAddress SharedMulticastAddress
-@@ -824,7 +824,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
+@@ -850,7 +850,7 @@ TEST_F(UDPSocketTest, MAYBE_SharedMultic
                                  NetLogSource());
    ASSERT_THAT(client_socket.Connect(send_address), IsOk());
  

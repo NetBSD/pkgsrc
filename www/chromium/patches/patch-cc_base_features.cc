@@ -1,12 +1,12 @@
-$NetBSD: patch-cc_base_features.cc,v 1.2 2025/05/16 16:08:16 wiz Exp $
+$NetBSD: patch-cc_base_features.cc,v 1.3 2025/07/07 09:23:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- cc/base/features.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- cc/base/features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ cc/base/features.cc
-@@ -48,7 +48,7 @@ const base::FeatureParam<int> kDeferImpl
+@@ -52,7 +52,7 @@ const base::FeatureParam<int> kDeferImpl
  // be using a separate flag to control the launch on GL.
  BASE_FEATURE(kUseDMSAAForTiles,
               "UseDMSAAForTiles",

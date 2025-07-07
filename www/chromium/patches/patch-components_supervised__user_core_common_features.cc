@@ -1,12 +1,12 @@
-$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.2 2025/05/16 16:08:24 wiz Exp $
+$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.3 2025/07/07 09:23:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
-@@ -36,7 +36,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
+@@ -37,7 +37,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
  #endif
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.2 2025/05
  const int kLocalWebApprovalBottomSheetLoadTimeoutDefaultValueMs = 5000;
  
  const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs{
-@@ -45,7 +45,7 @@ const base::FeatureParam<int> kLocalWebA
+@@ -46,7 +46,7 @@ const base::FeatureParam<int> kLocalWebA
  #endif  // BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_WIN)
  
@@ -23,35 +23,17 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.2 2025/05
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kEnableLocalWebApprovalErrorDialog,
               "EnableLocalWebApprovalErrorDialog",
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -97,7 +97,7 @@ BASE_FEATURE(kUpdatedSupervisedUserExten
-              "UpdatedSupervisedUserExtensionApprovalStrings",
               base::FEATURE_ENABLED_BY_DEFAULT);
- 
--#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kEnableExtensionsPermissionsForSupervisedUsersOnDesktop,
-              "EnableExtensionsPermissionsForSupervisedUsersOnDesktop",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -112,7 +112,7 @@ bool IsSupervisedUserSkipParentApprovalT
- #if BUILDFLAG(IS_CHROMEOS)
-   return base::FeatureList::IsEnabled(
-       kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
--#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
-+#elif BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-   bool skipParentApprovalEnabled = base::FeatureList::IsEnabled(
-       kEnableSupervisedUserSkipParentApprovalToInstallExtensions);
-   bool permissionExtensionsForSupervisedUsersEnabled =
-@@ -129,7 +129,7 @@ bool IsSupervisedUserSkipParentApprovalT
+@@ -89,7 +89,7 @@ bool IsLocalWebApprovalsEnabledForSubfra
+   return base::FeatureList::IsEnabled(kAllowSubframeLocalWebApprovals);
  }
- #endif  // BUILDFLAG(ENABLE_EXTENSIONS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
  BASE_FEATURE(kCustomProfileStringsForSupervisedUsers,
               "CustomProfileStringsForSupervisedUsers",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -141,13 +141,13 @@ BASE_FEATURE(kShowKiteForSupervisedUsers
+@@ -101,13 +101,13 @@ BASE_FEATURE(kShowKiteForSupervisedUsers
  
  BASE_FEATURE(kForceSafeSearchForUnauthenticatedSupervisedUsers,
               "ForceSafeSearchForUnauthenticatedSupervisedUsers",
@@ -67,7 +49,7 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.2 2025/05
  BASE_FEATURE(kEnableSupervisedUserVersionSignOutDialog,
               "EnableSupervisedUserVersionSignOutDialog",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -169,7 +169,7 @@ BASE_FEATURE(kExemptYouTubeInfrastructur
+@@ -119,7 +119,7 @@ BASE_FEATURE(kEnableSupervisedUserVersio
  // platform #defines.
  BASE_FEATURE(kUncredentialedFilteringFallbackForSupervisedUsers,
               "UncredentialedFilteringFallbackForSupervisedUsers",

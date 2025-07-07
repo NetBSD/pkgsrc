@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_extensions_permissions_chrome__permission__message__rules.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_common_extensions_permissions_chrome__permission__message__rules.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/common/extensions/permissions/chrome_permission_message_rules.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/extensions/permissions/chrome_permission_message_rules.cc
 @@ -280,7 +280,7 @@ class USBDevicesFormatter : public Chrom
  int GetEnterpriseReportingPrivatePermissionMessageId() {

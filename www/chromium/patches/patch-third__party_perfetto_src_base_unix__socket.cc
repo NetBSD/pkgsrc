@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.2 2025/05/16 16:08:32 wiz Exp $
+$NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.3 2025/07/07 09:23:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/unix_socket.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/perfetto/src/base/unix_socket.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/perfetto/src/base/unix_socket.cc
 @@ -45,7 +45,7 @@
  #include <unistd.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_perfetto_src_base_unix__socket.cc,v 1.2 2025/05/16 1
  #include <sys/ucred.h>
  #endif
  
-@@ -977,15 +977,27 @@ void UnixSocket::ReadPeerCredentialsPosi
+@@ -1031,15 +1031,27 @@ void UnixSocket::ReadPeerCredentialsPosi
    int res = getpeereid(fd, &peer_uid_, nullptr);
    PERFETTO_CHECK(res == 0);
    // There is no pid when obtaining peer credentials for QNX

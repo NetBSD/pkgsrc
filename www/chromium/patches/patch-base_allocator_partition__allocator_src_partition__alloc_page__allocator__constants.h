@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h
 @@ -26,8 +26,8 @@
  #define PAGE_ALLOCATOR_CONSTANTS_DECLARE_CONSTEXPR __attribute__((const))

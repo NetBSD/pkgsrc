@@ -1,12 +1,12 @@
-$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.2 2025/05/16 16:08:30 wiz Exp $
+$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_os__metrics__bsd.cc,v 1.3 2025/07/07 09:23:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-05-08 12:01:57.808722109 +0000
+--- services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc.orig	2025-07-03 13:12:11.723689589 +0000
 +++ services/resource_coordinator/public/cpp/memory_instrumentation/os_metrics_bsd.cc
-@@ -0,0 +1,66 @@
+@@ -0,0 +1,67 @@
 +// Copyright 2022 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -32,6 +32,7 @@ $NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation
 +
 +// static
 +bool OSMetrics::FillOSMemoryDump(base::ProcessId pid,
++                                 const MemDumpFlagSet& flags,
 +                                 mojom::RawOSMemDump* dump) {
 +  base::Process process = pid == base::kNullProcessId
 +                              ? base::Process::Current()

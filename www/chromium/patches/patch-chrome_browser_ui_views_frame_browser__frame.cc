@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/browser_frame.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/frame/browser_frame.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/frame/browser_frame.cc
 @@ -52,7 +52,7 @@
  #include "ui/aura/window.h"
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.2 2025/05/16 
    return ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme();
  #else
    return false;
-@@ -184,7 +184,7 @@ void BrowserFrame::InitBrowserFrame() {
+@@ -185,7 +185,7 @@ void BrowserFrame::InitBrowserFrame() {
  
    Init(std::move(params));
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.2 2025/05/16 
    SelectNativeTheme();
  #else
    SetNativeTheme(ui::NativeTheme::GetInstanceForNativeUi());
-@@ -370,7 +370,7 @@ void BrowserFrame::OnNativeWidgetWorkspa
+@@ -371,7 +371,7 @@ void BrowserFrame::OnNativeWidgetWorkspa
    chrome::SaveWindowWorkspace(browser_view_->browser(), GetWorkspace());
    chrome::SaveWindowVisibleOnAllWorkspaces(browser_view_->browser(),
                                             IsVisibleOnAllWorkspaces());
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.2 2025/05/16 
    // If the window was sent to a different workspace, prioritize it if
    // it was sent to the current workspace and deprioritize it
    // otherwise.  This is done by MoveBrowsersInWorkspaceToFront()
-@@ -568,7 +568,7 @@ void BrowserFrame::OnMenuClosed() {
+@@ -569,7 +569,7 @@ void BrowserFrame::OnMenuClosed() {
  }
  
  void BrowserFrame::SelectNativeTheme() {
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_views_frame_browser__frame.cc,v 1.2 2025/05/16 
    // Use the regular NativeTheme instance if running incognito mode, regardless
    // of system theme (gtk, qt etc).
    ui::NativeTheme* native_theme = ui::NativeTheme::GetInstanceForNativeUi();
-@@ -609,7 +609,7 @@ void BrowserFrame::OnTouchUiChanged() {
+@@ -610,7 +610,7 @@ void BrowserFrame::OnTouchUiChanged() {
  bool BrowserFrame::RegenerateFrameOnThemeChange(
      BrowserThemeChangeType theme_change_type) {
    bool need_regenerate = false;

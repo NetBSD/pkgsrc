@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.2 2025/05/16 16:08:31 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.json5,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/platform/runtime_enabled_features.json5.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/blink/renderer/platform/runtime_enabled_features.json5
-@@ -434,7 +434,7 @@
+@@ -501,7 +501,7 @@
        name: "AppTitle",
        status: "experimental",
        origin_trial_feature_name: "AppTitle",
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature: "WebAppEnableAppTitle",
      },
      {
-@@ -1698,7 +1698,7 @@
+@@ -1840,7 +1840,7 @@
        name: "DocumentIsolationPolicy",
        status: "experimental",
        origin_trial_feature_name: "DocumentIsolationPolicy",
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        base_feature: "none",
      },
      {
-@@ -1943,7 +1943,7 @@
+@@ -2101,7 +2101,7 @@
        base_feature: "none",
        public: true,
        origin_trial_feature_name: "FedCmMultipleIdentityProviders",
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        origin_trial_allows_third_party: true,
      },
      {
-@@ -3331,7 +3331,7 @@
+@@ -3594,7 +3594,7 @@
        // Tracking bug for the implementation: https://crbug.com/1462930
        name: "PermissionElement",
        origin_trial_feature_name: "PermissionElement",
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        public: true,
        base_feature_status: "enabled",
-@@ -3475,7 +3475,7 @@
+@@ -3758,7 +3758,7 @@
      {
        name: "PrivateNetworkAccessPermissionPrompt",
        origin_trial_feature_name: "PrivateNetworkAccessPermissionPrompt",
@@ -51,7 +51,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "stable",
        public: true,
        base_feature: "none",
-@@ -4636,7 +4636,7 @@
+@@ -5047,7 +5047,7 @@
        name: "UnrestrictedSharedArrayBuffer",
        base_feature: "none",
        origin_trial_feature_name: "UnrestrictedSharedArrayBuffer",
@@ -60,7 +60,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
      },
      // Enables using policy-controlled feature "usb-unrestricted" to allow
      // isolated context to access protected USB interface classes and to
-@@ -4811,7 +4811,7 @@
+@@ -5217,7 +5217,7 @@
      {
        name: "WebAppScopeExtensions",
        origin_trial_feature_name: "WebAppScopeExtensions",
@@ -69,7 +69,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_runtime__enabled__features.j
        status: "experimental",
        base_feature: "none",
      },
-@@ -5086,7 +5086,7 @@
+@@ -5504,7 +5504,7 @@
      {
        name: "WebIdentityDigitalCredentials",
        origin_trial_feature_name: "WebIdentityDigitalCredentials",

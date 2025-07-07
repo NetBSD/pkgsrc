@@ -1,14 +1,14 @@
-$NetBSD: patch-components_eye__dropper_eye__dropper__view.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_eye__dropper_eye__dropper__view.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/eye_dropper/eye_dropper_view.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/eye_dropper/eye_dropper_view.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/eye_dropper/eye_dropper_view.cc
-@@ -208,7 +208,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
+@@ -206,7 +206,7 @@ EyeDropperView::EyeDropperView(gfx::Nati
    // EyeDropper/WidgetDelegate.
-   set_owned_by_client();
+   set_owned_by_client(OwnedByClientPassKey());
    SetPreferredSize(GetSize());
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)

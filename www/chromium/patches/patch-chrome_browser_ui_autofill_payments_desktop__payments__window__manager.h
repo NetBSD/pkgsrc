@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_autofill_payments_desktop__payments__window__manager.h,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_autofill_payments_desktop__payments__window__manager.h,v 1.3 2025/07/07 09:23:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/autofill/payments/desktop_payments_window_manager.h
 @@ -14,7 +14,7 @@
  #include "components/autofill/core/browser/payments/payments_window_manager.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_autofill_payments_desktop__payments__window__ma
    // BrowserListObserver:
    void OnBrowserSetLastActive(Browser* browser) override;
  #endif  // BUILDFLAG(IS_LINUX)
-@@ -161,7 +161,7 @@ class DesktopPaymentsWindowManager : pub
+@@ -165,7 +165,7 @@ class DesktopPaymentsWindowManager : pub
    // Used in tests to notify the test infrastructure that the pop-up has closed.
    base::RepeatingClosure popup_closed_closure_for_testing_;
  

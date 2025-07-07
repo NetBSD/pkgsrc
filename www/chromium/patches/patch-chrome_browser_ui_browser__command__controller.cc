@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/16 16:08:19 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.3 2025/07/07 09:23:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/browser_command_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/browser_command_controller.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/browser_command_controller.cc
-@@ -126,7 +126,7 @@
+@@ -127,7 +127,7 @@
  #include "components/user_manager/user_manager.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
  #include "ui/base/ime/text_edit_commands.h"
  #include "ui/base/ime/text_input_flags.h"
  #include "ui/linux/linux_ui.h"
-@@ -136,7 +136,7 @@
+@@ -137,7 +137,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
  #include "chrome/browser/ui/shortcuts/desktop_shortcuts_utils.h"
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -332,7 +332,7 @@ bool BrowserCommandController::IsReserve
+@@ -363,7 +363,7 @@ bool BrowserCommandController::IsReserve
  #endif
    }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
    // If this key was registered by the user as a content editing hotkey, then
    // it is not reserved.
    auto* linux_ui = ui::LinuxUi::instance();
-@@ -595,7 +595,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -632,7 +632,7 @@ bool BrowserCommandController::ExecuteCo
        break;
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
      case IDC_MINIMIZE_WINDOW:
        browser_->window()->Minimize();
        break;
-@@ -812,7 +812,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -849,7 +849,7 @@ bool BrowserCommandController::ExecuteCo
        break;
      case IDC_CREATE_SHORTCUT:
        base::RecordAction(base::UserMetricsAction("CreateShortcut"));
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
        chrome::CreateDesktopShortcutForActiveWebContents(browser_);
  #else
        web_app::CreateWebAppFromCurrentWebContents(
-@@ -979,7 +979,7 @@ bool BrowserCommandController::ExecuteCo
+@@ -1015,7 +1015,7 @@ bool BrowserCommandController::ExecuteCo
  #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING)
      case IDC_CHROME_WHATS_NEW:
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING) && \
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
        ShowChromeWhatsNew(browser_);
        break;
  #else
-@@ -1324,7 +1324,7 @@ void BrowserCommandController::InitComma
+@@ -1392,7 +1392,7 @@ void BrowserCommandController::InitComma
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_4, true);
    command_updater_.UpdateCommandEnabled(IDC_VISIT_DESKTOP_OF_LRU_USER_5, true);
  #endif
@@ -69,12 +69,12 @@ $NetBSD: patch-chrome_browser_ui_browser__command__controller.cc,v 1.2 2025/05/1
    command_updater_.UpdateCommandEnabled(IDC_MINIMIZE_WINDOW, true);
    command_updater_.UpdateCommandEnabled(IDC_MAXIMIZE_WINDOW, true);
    command_updater_.UpdateCommandEnabled(IDC_RESTORE_WINDOW, true);
-@@ -1682,7 +1682,7 @@ void BrowserCommandController::UpdateCom
+@@ -1747,7 +1747,7 @@ void BrowserCommandController::UpdateCom
    bool can_create_web_app = web_app::CanCreateWebApp(browser_);
    command_updater_.UpdateCommandEnabled(IDC_INSTALL_PWA, can_create_web_app);
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
    command_updater_.UpdateCommandEnabled(
-       IDC_CREATE_SHORTCUT, shortcuts::CanCreateDesktopShortcut(browser_));
- #else
+       IDC_CREATE_SHORTCUT,
+       shortcuts::CanCreateDesktopShortcut(current_web_contents));

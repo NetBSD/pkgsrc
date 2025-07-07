@@ -1,12 +1,12 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/utility/utility_main.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/utility/utility_main.cc
-@@ -36,18 +36,22 @@
+@@ -37,15 +37,19 @@
  #include "services/tracing/public/cpp/trace_startup.h"
  #include "services/video_effects/public/cpp/buildflags.h"
  
@@ -16,35 +16,32 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
  #include "base/files/file_util.h"
  #include "base/pickle.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
++#if !BUILDFLAG(IS_BSD)
  #include "content/common/gpu_pre_sandbox_hook_linux.h"
 +#endif
  #include "content/public/common/content_descriptor_keys.h"
  #include "content/utility/speech/speech_recognition_sandbox_hook_linux.h"
- #include "gpu/config/gpu_info_collector.h"
- #include "media/gpu/sandbox/hardware_video_decoding_sandbox_hook_linux.h"
- #include "media/gpu/sandbox/hardware_video_encoding_sandbox_hook_linux.h"
 +#if !BUILDFLAG(IS_BSD)
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
  #include "services/audio/audio_sandbox_hook_linux.h"
  #include "services/network/network_sandbox_hook_linux.h"
  #include "services/screen_ai/buildflags/buildflags.h"
-@@ -66,7 +70,12 @@
+@@ -70,7 +74,12 @@
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
--#if BUILDFLAG(IS_LINUX)
+-#if BUILDFLAG(ENABLE_VIDEO_EFFECTS) && BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_BSD)
 +#include "sandbox/policy/sandbox.h"
 +#include "content/common/gpu_pre_sandbox_hook_bsd.h"
 +#endif
 +
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
++#if BUILDFLAG(ENABLE_VIDEO_EFFECTS) && (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
  #include "services/video_effects/video_effects_sandbox_hook_linux.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -101,7 +110,7 @@
+@@ -105,7 +114,7 @@
  sandbox::TargetServices* g_utility_target_services = nullptr;
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -53,7 +50,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
  #include "components/services/on_device_translation/sandbox_hook.h"
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
  
-@@ -109,7 +118,7 @@ namespace content {
+@@ -113,7 +122,7 @@ namespace content {
  
  namespace {
  
@@ -62,7 +59,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -247,7 +256,8 @@ int UtilityMain(MainFunctionParams param
+@@ -252,7 +261,8 @@ int UtilityMain(MainFunctionParams param
      CHECK(on_device_model::OnDeviceModelService::PreSandboxInit());
    }
  
@@ -72,7 +69,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
    // Thread type delegate of the process should be registered before first
    // thread type change in ChildProcess constructor. It also needs to be
    // registered before the process has multiple threads, which may race with
-@@ -255,7 +265,7 @@ int UtilityMain(MainFunctionParams param
+@@ -260,7 +270,7 @@ int UtilityMain(MainFunctionParams param
    SandboxedProcessThreadTypeHandler::Create();
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -81,7 +78,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
    // Seccomp-BPF policy.
-@@ -287,7 +297,7 @@ int UtilityMain(MainFunctionParams param
+@@ -292,7 +302,7 @@ int UtilityMain(MainFunctionParams param
        pre_sandbox_hook =
            base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
        break;
@@ -90,23 +87,16 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
      case sandbox::mojom::Sandbox::kOnDeviceTranslation:
        pre_sandbox_hook = base::BindOnce(
            &on_device_translation::OnDeviceTranslationSandboxHook);
-@@ -303,13 +313,13 @@ int UtilityMain(MainFunctionParams param
+@@ -308,7 +318,7 @@ int UtilityMain(MainFunctionParams param
  #else
        NOTREACHED();
  #endif
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
      case sandbox::mojom::Sandbox::kVideoEffects:
+ #if BUILDFLAG(ENABLE_VIDEO_EFFECTS)
        pre_sandbox_hook =
-           base::BindOnce(&video_effects::VideoEffectsPreSandboxHook);
-       break;
- #endif  // BUILDFLAG(IS_LINUX)
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-     case sandbox::mojom::Sandbox::kHardwareVideoDecoding:
-       pre_sandbox_hook =
-           base::BindOnce(&media::HardwareVideoDecodingPreSandboxHook);
-@@ -336,6 +346,7 @@ int UtilityMain(MainFunctionParams param
+@@ -343,6 +353,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -114,7 +104,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.2 2025/05/16 16:08:26 wiz Ex
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -343,6 +354,11 @@ int UtilityMain(MainFunctionParams param
+@@ -350,6 +361,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }

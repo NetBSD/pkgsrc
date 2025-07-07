@@ -1,12 +1,12 @@
-$NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
+$NetBSD: patch-content_gpu_gpu__main.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/gpu/gpu_main.cc
-@@ -95,10 +95,14 @@
+@@ -105,10 +105,14 @@
  #include "sandbox/win/src/sandbox.h"
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
  #include "sandbox/policy/sandbox_type.h"
  #endif
  
-@@ -117,7 +121,7 @@ namespace content {
+@@ -126,7 +130,7 @@ namespace content {
  
  namespace {
  
@@ -31,7 +31,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
  bool StartSandboxLinux(gpu::GpuWatchdogThread*,
                         const gpu::GPUInfo*,
                         const gpu::GpuPreferences&);
-@@ -177,7 +181,7 @@ class ContentSandboxHelper : public gpu:
+@@ -188,7 +192,7 @@ class ContentSandboxHelper : public gpu:
                                  const gpu::GPUInfo* gpu_info,
                                  const gpu::GpuPreferences& gpu_prefs) override {
      GPU_STARTUP_TRACE_EVENT("gpu_main::EnsureSandboxInitialized");
@@ -40,7 +40,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
      return StartSandboxLinux(watchdog_thread, gpu_info, gpu_prefs);
  #elif BUILDFLAG(IS_WIN)
      return StartSandboxWindows(sandbox_info_);
-@@ -303,7 +307,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -304,7 +308,7 @@ int GpuMain(MainFunctionParams parameter
            std::make_unique<base::SingleThreadTaskExecutor>(
                gpu_preferences.message_pump_type);
      }
@@ -59,7 +59,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
    // Thread type delegate of the process should be registered before
    // thread type change below for the main thread and for thread pool in
    // ChildProcess constructor.
-@@ -462,7 +467,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -461,7 +466,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -68,7 +68,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.2 2025/05/16 16:08:25 wiz Exp $
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -502,7 +507,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -509,7 +514,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

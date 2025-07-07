@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_flags_flags.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-v8_src_flags_flags.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/flags/flags.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- v8/src/flags/flags.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ v8/src/flags/flags.cc
 @@ -16,6 +16,10 @@
  #include <set>

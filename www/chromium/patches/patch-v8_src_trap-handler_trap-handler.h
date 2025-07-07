@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_trap-handler_trap-handler.h,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-v8_src_trap-handler_trap-handler.h,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/trap-handler/trap-handler.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- v8/src/trap-handler/trap-handler.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ v8/src/trap-handler/trap-handler.h
 @@ -18,7 +18,7 @@ namespace v8::internal::trap_handler {
  // X64 on Linux, Windows, MacOS, FreeBSD.
@@ -13,5 +13,5 @@ $NetBSD: patch-v8_src_trap-handler_trap-handler.h,v 1.2 2025/05/16 16:08:36 wiz 
 -     V8_OS_FREEBSD)
 +     V8_OS_FREEBSD || V8_OS_OPENBSD || V8_OS_NETBSD)
  #define V8_TRAP_HANDLER_SUPPORTED true
- // Arm64 (non-simulator) on Linux, Windows, MacOS.
+ // Arm64 native on Linux, Windows, MacOS.
  #elif V8_TARGET_ARCH_ARM64 && V8_HOST_ARCH_ARM64 && \

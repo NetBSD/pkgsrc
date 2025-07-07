@@ -1,10 +1,10 @@
-$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.2 2025/05/16 16:08:30 wiz Exp $
+$NetBSD: patch-skia_ext_SkMemory__new__handler.cpp,v 1.3 2025/07/07 09:23:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- skia/ext/SkMemory_new_handler.cpp.orig	2025-05-05 19:21:24.000000000 +0000
+--- skia/ext/SkMemory_new_handler.cpp.orig	2025-06-30 06:54:11.000000000 +0000
 +++ skia/ext/SkMemory_new_handler.cpp
 @@ -24,7 +24,7 @@
  #include <windows.h>

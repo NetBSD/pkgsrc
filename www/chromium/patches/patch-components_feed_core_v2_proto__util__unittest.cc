@@ -1,12 +1,12 @@
-$NetBSD: patch-components_feed_core_v2_proto__util__unittest.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_feed_core_v2_proto__util__unittest.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/feed/core/v2/proto_util_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/feed/core/v2/proto_util_unittest.cc
-@@ -43,8 +43,8 @@ TEST(ProtoUtilTest, CreateClientInfo) {
+@@ -42,8 +42,8 @@ TEST(ProtoUtilTest, CreateClientInfo) {
    feedwire::ClientInfo result = CreateClientInfo(request_metadata);
    EXPECT_EQ(feedwire::ClientInfo::CHROME_ANDROID, result.app_type());
    EXPECT_EQ(feedwire::Version::RELEASE, result.app_version().build_type());

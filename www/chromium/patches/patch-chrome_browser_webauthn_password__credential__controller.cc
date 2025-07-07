@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_webauthn_password__credential__controller.cc,v 1.1 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_browser_webauthn_password__credential__controller.cc,v 1.2 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/webauthn/password_credential_controller.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/webauthn/password_credential_controller.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/webauthn/password_credential_controller.cc
 @@ -46,7 +46,7 @@ password_manager::PasswordManagerClient*
  }

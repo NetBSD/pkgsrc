@@ -1,10 +1,10 @@
-$NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
 @@ -26,13 +26,13 @@
  #include "content/public/browser/browser_thread.h"

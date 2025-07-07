@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_views_widget_widget.h,v 1.1 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-ui_views_widget_widget.h,v 1.2 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/views/widget/widget.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/views/widget/widget.h
-@@ -487,7 +487,7 @@ class VIEWS_EXPORT Widget : public inter
+@@ -488,7 +488,7 @@ class VIEWS_EXPORT Widget : public inter
      bool force_system_menu_for_frameless = false;
  #endif  // BUILDFLAG(IS_WIN)
  

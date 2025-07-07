@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_hid_hid__connection__freebsd.h,v 1.2 2025/05/16 16:08:30 wiz Exp $
+$NetBSD: patch-services_device_hid_hid__connection__freebsd.h,v 1.3 2025/07/07 09:23:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_connection_freebsd.h.orig	2025-05-08 12:01:57.803039954 +0000
+--- services/device/hid/hid_connection_freebsd.h.orig	2025-07-03 13:12:11.718102681 +0000
 +++ services/device/hid/hid_connection_freebsd.h
 @@ -0,0 +1,67 @@
 +// Copyright (c) 2014 The Chromium Authors. All rights reserved.

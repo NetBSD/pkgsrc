@@ -1,12 +1,12 @@
-$NetBSD: patch-build_rust_std_BUILD.gn,v 1.2 2025/05/16 16:08:16 wiz Exp $
+$NetBSD: patch-build_rust_std_BUILD.gn,v 1.3 2025/07/07 09:23:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/rust/std/BUILD.gn.orig	2025-05-05 19:21:24.000000000 +0000
+--- build/rust/std/BUILD.gn.orig	2025-06-30 06:54:11.000000000 +0000
 +++ build/rust/std/BUILD.gn
-@@ -89,13 +89,20 @@ if (toolchain_has_rust) {
+@@ -50,13 +50,20 @@ if (toolchain_has_rust) {
      # These are no longer present in the Windows toolchain.
      stdlib_files += [
        "addr2line",
@@ -28,7 +28,7 @@ $NetBSD: patch-build_rust_std_BUILD.gn,v 1.2 2025/05/16 16:08:16 wiz Exp $
    }
  
    if (toolchain_for_rust_host_build_tools) {
-@@ -115,7 +122,6 @@ if (toolchain_has_rust) {
+@@ -76,7 +83,6 @@ if (toolchain_has_rust) {
    # don't need to pass to the C++ linker because they're used for specialized
    # purposes.
    skip_stdlib_files = [

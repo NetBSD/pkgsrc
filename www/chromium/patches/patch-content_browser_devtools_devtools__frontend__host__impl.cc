@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.2 2025/05/16 16:08:24 wiz Exp $
+$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
 @@ -24,7 +24,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"

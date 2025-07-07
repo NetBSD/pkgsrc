@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platform.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ ui/views/widget/desktop_aura/desktop_window_tree_host_platform.cc
 @@ -50,7 +50,7 @@
  #include "ui/wm/core/window_util.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platfo
  #include "ui/views/widget/desktop_aura/desktop_drag_drop_client_ozone_linux.h"
  #endif
  
-@@ -353,7 +353,7 @@ std::unique_ptr<aura::client::DragDropCl
+@@ -356,7 +356,7 @@ std::unique_ptr<aura::client::DragDropCl
  DesktopWindowTreeHostPlatform::CreateDragDropClient() {
    ui::WmDragHandler* drag_handler = ui::GetWmDragHandler(*(platform_window()));
    std::unique_ptr<DesktopDragDropClientOzone> drag_drop_client =
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_views_widget_desktop__aura_desktop__window__tree__host__platfo
        std::make_unique<DesktopDragDropClientOzoneLinux>(window(), drag_handler);
  #else
        std::make_unique<DesktopDragDropClientOzone>(window(), drag_handler);
-@@ -1185,7 +1185,7 @@ bool DesktopWindowTreeHostPlatform::Rota
+@@ -1188,7 +1188,7 @@ bool DesktopWindowTreeHostPlatform::Rota
  // DesktopWindowTreeHost:
  
  // Linux subclasses this host and adds some Linux specific bits.

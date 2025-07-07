@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_remote__open__url_url__forwarder__configurator.cc,v 1.2 2025/05/16 16:08:29 wiz Exp $
+$NetBSD: patch-remoting_host_remote__open__url_url__forwarder__configurator.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- remoting/host/remote_open_url/url_forwarder_configurator.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ remoting/host/remote_open_url/url_forwarder_configurator.cc
 @@ -12,7 +12,7 @@ UrlForwarderConfigurator::UrlForwarderCo
  

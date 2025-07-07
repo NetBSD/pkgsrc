@@ -1,12 +1,12 @@
-$NetBSD: patch-components_live__caption_caption__util.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_live__caption_caption__util.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/live_caption/caption_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/live_caption/caption_util.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/live_caption/caption_util.cc
-@@ -136,7 +136,7 @@ bool IsLiveCaptionFeatureSupported() {
+@@ -141,7 +141,7 @@ bool IsHeadlessCaptionFeatureSupported()
  std::string GetCaptionSettingsUrl() {
  #if BUILDFLAG(IS_CHROMEOS)
    return "chrome://os-settings/audioAndCaptions";

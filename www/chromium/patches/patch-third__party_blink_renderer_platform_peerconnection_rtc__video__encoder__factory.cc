@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_peerconnection_rtc__video__encoder__factory.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_peerconnection_rtc__video__encoder__factory.cc,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/blink/renderer/platform/peerconnection/rtc_video_encoder_factory.cc
 @@ -324,12 +324,12 @@ SupportedFormats GetSupportedFormatsInte
        supported_formats.profiles.push_back(profile.profile);

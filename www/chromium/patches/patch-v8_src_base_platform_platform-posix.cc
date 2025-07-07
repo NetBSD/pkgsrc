@@ -1,22 +1,12 @@
-$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 wiz Exp $
+$NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/platform/platform-posix.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- v8/src/base/platform/platform-posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ v8/src/base/platform/platform-posix.cc
-@@ -27,6 +27,9 @@
-     defined(__NetBSD__) || defined(__OpenBSD__)
- #include <sys/sysctl.h>  // for sysctl
- #endif
-+#if defined(__NetBSD__)
-+#include <lwp.h>
-+#endif
- 
- #if defined(ANDROID) && !defined(V8_ANDROID_LOG_STDOUT)
- #define LOG_TAG "v8"
-@@ -76,9 +79,11 @@
+@@ -76,9 +76,11 @@
  #include <sys/syscall.h>
  #endif
  
@@ -29,7 +19,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
  
  #if defined(V8_OS_SOLARIS)
  #if (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE > 2) || defined(__EXTENSIONS__)
-@@ -315,6 +320,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
+@@ -313,6 +315,13 @@ void OS::SetRandomMmapSeed(int64_t seed)
    }
  }
  
@@ -43,7 +33,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
  // static
  void* OS::GetRandomMmapAddr() {
    uintptr_t raw_addr;
-@@ -413,6 +425,7 @@ void* OS::GetRandomMmapAddr() {
+@@ -411,6 +420,7 @@ void* OS::GetRandomMmapAddr() {
  #endif
    return reinterpret_cast<void*>(raw_addr);
  }
@@ -51,7 +41,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
  
  // TODO(bbudge) Move Cygwin and Fuchsia stuff into platform-specific files.
  #if !V8_OS_CYGWIN && !V8_OS_FUCHSIA
-@@ -701,7 +714,7 @@ void OS::DestroySharedMemoryHandle(Platf
+@@ -699,7 +709,7 @@ void OS::DestroySharedMemoryHandle(Platf
  #if !V8_OS_ZOS
  // static
  bool OS::HasLazyCommits() {
@@ -60,16 +50,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
    return true;
  #else
    // TODO(bbudge) Return true for all POSIX platforms.
-@@ -855,6 +868,8 @@ int OS::GetCurrentThreadIdInternal() {
-   return static_cast<int>(thread_self());
- #elif V8_OS_FUCHSIA
-   return static_cast<int>(zx_thread_self());
-+#elif V8_OS_NETBSD
-+  return static_cast<int>(_lwp_self());
- #elif V8_OS_SOLARIS
-   return static_cast<int>(pthread_self());
- #elif V8_OS_ZOS
-@@ -1156,7 +1171,11 @@ Thread::Thread(const Options& options)
+@@ -1154,7 +1164,11 @@ Thread::Thread(const Options& options)
        stack_size_(options.stack_size()),
        priority_(options.priority()),
        start_semaphore_(nullptr) {
@@ -81,7 +62,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
    if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -1171,7 +1190,7 @@ static void SetThreadName(const char* na
+@@ -1169,7 +1183,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    static_assert(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
@@ -90,7 +71,7 @@ $NetBSD: patch-v8_src_base_platform_platform-posix.cc,v 1.2 2025/05/16 16:08:36 
  #elif V8_OS_DARWIN
    // pthread_setname_np is only available in 10.6 or later, so test
    // for it at runtime.
-@@ -1346,7 +1365,7 @@ void Thread::SetThreadLocal(LocalStorage
+@@ -1344,7 +1358,7 @@ void Thread::SetThreadLocal(LocalStorage
  // keep this version in POSIX as most Linux-compatible derivatives will
  // support it. MacOS and FreeBSD are different here.
  #if !defined(V8_OS_FREEBSD) && !defined(V8_OS_DARWIN) && !defined(_AIX) && \

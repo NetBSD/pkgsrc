@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_speech_speech__recognition__sandbox__hook__linux.cc,v 1.2 2025/05/16 16:08:26 wiz Exp $
+$NetBSD: patch-content_utility_speech_speech__recognition__sandbox__hook__linux.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- content/utility/speech/speech_recognition_sandbox_hook_linux.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ content/utility/speech/speech_recognition_sandbox_hook_linux.cc
 @@ -12,11 +12,14 @@
  #include "sandbox/linux/syscall_broker/broker_command.h"

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.2 2025/05/16 16:08:20 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__driver.cc,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/web_apps/web_app_integration_test_driver.cc
-@@ -510,7 +510,7 @@ std::string GetFileExtension(FileExtensi
+@@ -511,7 +511,7 @@ std::string GetFileExtension(FileExtensi
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
  SiteConfig GetSiteConfigurationFromAppName(const std::string& app_name) {
    SiteConfig config;
    bool is_app_found = false;
-@@ -2057,7 +2057,7 @@ void WebAppIntegrationTestDriver::Delete
+@@ -2069,7 +2069,7 @@ void WebAppIntegrationTestDriver::Delete
    if (app_name.empty()) {
      app_name = GetSiteConfiguration(site).app_name;
    }
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    ASSERT_TRUE(override_registration_->test_override().IsShortcutCreated(
        profile(), app_id, app_name));
    ASSERT_TRUE(
-@@ -3377,7 +3377,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3389,7 +3389,7 @@ void WebAppIntegrationTestDriver::CheckR
            app_state->id, app_state->name);
    ASSERT_TRUE(icon_color.has_value());
    ASSERT_THAT(site_config.icon_color, testing::Eq(icon_color.value()));
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    ASSERT_TRUE(override_registration_->test_override().IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3392,7 +3392,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3404,7 +3404,7 @@ void WebAppIntegrationTestDriver::CheckR
        GetAppBySiteMode(after_state_change_action_state_.get(), profile(), site);
    ASSERT_TRUE(app_state);
    base::ScopedAllowBlockingForTesting allow_blocking;
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    ASSERT_FALSE(override_registration_->test_override().IsRunOnOsLoginEnabled(
        profile(), app_state->id, app_state->name));
  #endif
-@@ -3402,7 +3402,7 @@ void WebAppIntegrationTestDriver::CheckR
+@@ -3414,7 +3414,7 @@ void WebAppIntegrationTestDriver::CheckR
  void WebAppIntegrationTestDriver::CheckSiteHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -3418,7 +3418,7 @@ void WebAppIntegrationTestDriver::CheckS
+@@ -3430,7 +3430,7 @@ void WebAppIntegrationTestDriver::CheckS
  void WebAppIntegrationTestDriver::CheckSiteNotHandlesFile(
      Site site,
      FileExtension file_extension) {
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    if (!BeforeStateCheckAction(__FUNCTION__)) {
      return;
    }
-@@ -4243,7 +4243,7 @@ base::FilePath WebAppIntegrationTestDriv
+@@ -4255,7 +4255,7 @@ base::FilePath WebAppIntegrationTestDriv
      base::FilePath shortcut_dir,
      const std::string& app_name,
      const webapps::AppId& app_id) {
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    return override_registration_->test_override().GetShortcutPath(
        profile(), shortcut_dir, app_id, app_name);
  #else
-@@ -4443,7 +4443,7 @@ bool WebAppIntegrationTestDriver::IsShor
+@@ -4455,7 +4455,7 @@ bool WebAppIntegrationTestDriver::IsShor
      const webapps::AppId& id) {
    base::ScopedAllowBlockingForTesting allow_blocking;
    bool is_shortcut_and_icon_correct = false;
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_ui_views_web__apps_web__app__integration__test__dr
    bool is_shortcut_correct =
        override_registration_->test_override().IsShortcutCreated(profile, id,
                                                                  name);
-@@ -4487,7 +4487,7 @@ bool WebAppIntegrationTestDriver::DoIcon
+@@ -4499,7 +4499,7 @@ bool WebAppIntegrationTestDriver::DoIcon
      do_icon_colors_match =
          (expected_icon_pixel_color == shortcut_pixel_color_apps_folder.value());
    }

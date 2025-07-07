@@ -1,12 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delegate__views.h,v 1.2 2025/05/16 16:08:20 wiz Exp $
+$NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delegate__views.h,v 1.3 2025/07/07 09:23:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/browser/ui/views/profiles/signin_view_controller_delegate_views.h
-@@ -73,7 +73,7 @@ class SigninViewControllerDelegateViews
+@@ -57,7 +57,7 @@ class SigninViewControllerDelegateViews
+       SyncConfirmationStyle style,
+       bool is_sync_promo);
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   static std::unique_ptr<views::WebView> CreateHistorySyncOptInWebView(
+       Browser* browser);
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -78,7 +78,7 @@ class SigninViewControllerDelegateViews
        SignoutConfirmationCallback callback);
  #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
  
@@ -15,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_views_profiles_signin__view__controller__delega
    static std::unique_ptr<views::WebView>
    CreateManagedUserNoticeConfirmationWebView(
        Browser* browser,
-@@ -144,7 +144,7 @@ class SigninViewControllerDelegateViews
+@@ -149,7 +149,7 @@ class SigninViewControllerDelegateViews
        std::optional<int> dialog_width,
        InitializeSigninWebDialogUI initialize_signin_web_dialog_ui);
  

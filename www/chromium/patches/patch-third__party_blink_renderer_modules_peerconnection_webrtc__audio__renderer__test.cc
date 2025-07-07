@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_modules_peerconnection_webrtc__audio__renderer__test.cc,v 1.2 2025/05/16 16:08:31 wiz Exp $
+$NetBSD: patch-third__party_blink_renderer_modules_peerconnection_webrtc__audio__renderer__test.cc,v 1.3 2025/07/07 09:23:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ third_party/blink/renderer/modules/peerconnection/webrtc_audio_renderer_test.cc
-@@ -304,7 +304,7 @@ TEST_F(WebRtcAudioRendererTest, DISABLED
+@@ -382,7 +382,7 @@ TEST_F(WebRtcAudioRendererTest, DISABLED
    SetupRenderer(kDefaultOutputDeviceId);
    renderer_proxy_->Start();
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_APPLE) || \

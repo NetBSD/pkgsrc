@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_browser_user__permission__service__impl.cc,v 1.2 2025/05/16 16:08:22 wiz Exp $
+$NetBSD: patch-components_device__signals_core_browser_user__permission__service__impl.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/browser/user_permission_service_impl.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/device_signals/core/browser/user_permission_service_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/device_signals/core/browser/user_permission_service_impl.cc
 @@ -87,7 +87,7 @@ bool UserPermissionServiceImpl::ShouldCo
           consent_required_by_dependent_policy;

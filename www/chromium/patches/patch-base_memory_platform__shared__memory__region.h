@@ -1,12 +1,12 @@
-$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.2 2025/05/16 16:08:14 wiz Exp $
+$NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.3 2025/07/07 09:23:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/platform_shared_memory_region.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- base/memory/platform_shared_memory_region.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ base/memory/platform_shared_memory_region.h
-@@ -18,7 +18,7 @@
+@@ -19,7 +19,7 @@
  #include "base/unguessable_token.h"
  #include "build/build_config.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.2 2025/05/16 1
  namespace content {
  class SandboxIPCHandler;
  }
-@@ -85,7 +85,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -86,7 +86,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
      kMaxValue = GET_SHMEM_TEMP_DIR_FAILURE
    };
  
@@ -24,7 +24,16 @@ $NetBSD: patch-base_memory_platform__shared__memory__region.h,v 1.2 2025/05/16 1
    // Structure to limit access to executable region creation.
    struct ExecutableRegion {
     private:
-@@ -217,7 +217,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+@@ -125,7 +125,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
+ #if BUILDFLAG(IS_FUCHSIA)
+     kNotVmo,
+ #endif
+-#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+     kFcntlFailed,
+     kReadOnlyFdNotReadOnly,
+     kUnexpectedReadOnlyFd,
+@@ -256,7 +256,7 @@ class BASE_EXPORT PlatformSharedMemoryRe
                             CheckPlatformHandlePermissionsCorrespondToMode);
    static PlatformSharedMemoryRegion Create(Mode mode,
                                             size_t size

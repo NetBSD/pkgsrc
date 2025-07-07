@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_test_chromedriver_key__converter__unittest.cc,v 1.2 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_test_chromedriver_key__converter__unittest.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/test/chromedriver/key_converter_unittest.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/test/chromedriver/key_converter_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/test/chromedriver/key_converter_unittest.cc
-@@ -252,7 +252,7 @@ TEST(KeyConverter, ToggleModifiers) {
+@@ -248,7 +248,7 @@ TEST(KeyConverter, ToggleModifiers) {
    CheckEventsReleaseModifiers(keys, key_events);
  }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_test_chromedriver_key__converter__unittest.cc,v 1.2 2025/0
  // Fails on bots: crbug.com/174962
  #define MAYBE_AllEnglishKeyboardSymbols DISABLED_AllEnglishKeyboardSymbols
  #else
-@@ -310,7 +310,7 @@ TEST(KeyConverter, AllEnglishKeyboardTex
+@@ -306,7 +306,7 @@ TEST(KeyConverter, AllEnglishKeyboardTex
  TEST(KeyConverter, AllSpecialWebDriverKeysOnEnglishKeyboard) {
    ui::ScopedKeyboardLayout keyboard_layout(ui::KEYBOARD_LAYOUT_ENGLISH_US);
    const auto kTextForKeys = std::to_array<char>({

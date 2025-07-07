@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.2 2025/05/16 16:08:23 wiz Exp $
+$NetBSD: patch-components_policy_core_common_cloud_cloud__policy__util.cc,v 1.3 2025/07/07 09:23:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-05-05 19:21:24.000000000 +0000
+--- components/policy/core/common/cloud/cloud_policy_util.cc.orig	2025-06-30 06:54:11.000000000 +0000
 +++ components/policy/core/common/cloud/cloud_policy_util.cc
 @@ -21,7 +21,7 @@
  #include "base/win/wincred_shim.h"

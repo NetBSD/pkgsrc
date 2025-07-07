@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_extensions_extension__constants.h,v 1.1 2025/05/16 16:08:21 wiz Exp $
+$NetBSD: patch-chrome_common_extensions_extension__constants.h,v 1.2 2025/07/07 09:23:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/extensions/extension_constants.h.orig	2025-05-05 19:21:24.000000000 +0000
+--- chrome/common/extensions/extension_constants.h.orig	2025-06-30 06:54:11.000000000 +0000
 +++ chrome/common/extensions/extension_constants.h
-@@ -310,7 +310,7 @@ inline constexpr char kReadingModeGDocsH
+@@ -311,7 +311,7 @@ inline constexpr char kReadingModeGDocsH
  inline constexpr base::FilePath::CharType
      kReadingModeGDocsHelperManifestFilename[] =
          FILE_PATH_LITERAL("reading_mode_gdocs_helper_manifest.json");
