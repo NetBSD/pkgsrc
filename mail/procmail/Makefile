@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/02/18 03:58:31 kim Exp $
+# $NetBSD: Makefile,v 1.60 2025/07/07 03:36:51 dholland Exp $
 
 DISTNAME=	procmail-3.24
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BuGlessRB/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
