@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/12/10 14:32:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/08 21:20:18 schmonz Exp $
 
 DISTNAME=		fdtools-2024.12.07
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}/releases/
 EXTRACT_SUFX=		.tar.bz2
