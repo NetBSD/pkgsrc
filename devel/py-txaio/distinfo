@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/05/01 09:43:06 wiz Exp $
+$NetBSD: distinfo,v 1.19 2025/07/08 16:00:03 adam Exp $
 
-BLAKE2s (txaio-23.1.1.tar.gz) = 3da3004058fc8210c38483edef5ceca4dbccd9d6496a856894e8118150032043
-SHA512 (txaio-23.1.1.tar.gz) = 41320501ec3e2555edc63326f2c5ee9bbc2fd103198a515b6dc4c44603a41d633c99a8f12c92ffc85f43546f0382d40f0c9748b13f7a7e70d98c5c4a2de85e2e
-Size (txaio-23.1.1.tar.gz) = 53704 bytes
+BLAKE2s (txaio-25.6.1.tar.gz) = f68e82d1e5b7e22ab09d87df554ebe67c93ee73ed881dc4ac884180c97d5fd06
+SHA512 (txaio-25.6.1.tar.gz) = 70ebf010c8baf9a374437ef6670215fef29a27f9b15839181031149e712ecb2a9bfeb0554df1a223f1f073d76de38497e01e2e5289622a9249740afc663b4dfb
+Size (txaio-25.6.1.tar.gz) = 58709 bytes
