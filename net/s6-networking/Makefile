@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.23 2025/05/13 03:50:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/08 21:17:06 schmonz Exp $
 
-DISTNAME=		s6-networking-2.7.1.0
+DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=		s6-networking-2.7.1.0
+PKGREVISION=		1
 MANPAGES_VERSION=	2.7.0.4.1
-CATEGORIES=		net
-MASTER_SITES=		${HOMEPAGE}
+CATEGORIES=		net security
+MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
+GITHUB_PROJECT=		s6-networking
+GITHUB_TAG=		442b0d45ec12a0a383405f923d11f015adf0a25e
+DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
 MANPAGES_DIST=		s6-networking-man-pages-${MANPAGES_VERSION}.tar.gz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -22,6 +26,8 @@ TOOLS_PLATFORM.install=	${PREFIX}/bin/ginstall
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-pkgconfig
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--disable-allstatic
 
 INSTALL_DIRS+=		. ${WRKMANSRC}
 INSTALL_ENV+=		PREFIX=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR:Q}

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.12 2025/06/04 13:29:32 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/07/08 21:17:06 schmonz Exp $
+bin/proxy-server
 bin/s6-clockadd
 bin/s6-clockview
 bin/s6-getservbyname
@@ -25,9 +26,9 @@ include/s6-networking/ident.h
 include/s6-networking/s6net.h
 include/s6-networking/sbearssl.h
 include/s6-networking/stls.h
-lib/libs6net.a
-${PLIST.bearssl}lib/libsbearssl.a
-${PLIST.libtls}lib/libstls.a
+lib/libs6net.la
+${PLIST.bearssl}lib/libsbearssl.la
+${PLIST.libtls}lib/libstls.la
 lib/pkgconfig/libs6net.pc
 ${PLIST.bearssl}lib/pkgconfig/libsbearssl.pc
 ${PLIST.libtls}lib/pkgconfig/libstls.pc
