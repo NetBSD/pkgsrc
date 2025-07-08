@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/02 16:52:38 pin Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/07/08 01:54:40 gutteridge Exp $
 bin/lxqt2-transupdate
 share/cmake/lxqt2-build-tools/find-modules/FindClazy.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindExif.cmake
@@ -6,7 +6,6 @@ share/cmake/lxqt2-build-tools/find-modules/FindFontconfig.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindGLIB.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindMenuCache.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindUDev.cmake
-share/cmake/lxqt2-build-tools/find-modules/FindXCB.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindXKBCommon.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindXTerm.cmake
 share/cmake/lxqt2-build-tools/find-modules/FindXdgEmail.cmake
