@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4206 2025/07/08 21:19:59 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4207 2025/07/08 21:20:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6221,3 +6221,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/smtpd-starttls-proxy to 0.0.2.0nb1 [schmonz 2025-07-08]
 	Updated www/tipidee to 0.0.6.0nb2 [schmonz 2025-07-08]
 	Updated www/apaste to 0.0.3.0nb1 [schmonz 2025-07-08]
+	Updated sysutils/fdtools to 2024.12.07nb1 [schmonz 2025-07-08]
