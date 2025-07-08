@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/07/05 19:59:36 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2025/07/08 11:54:38 gdt Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -32,10 +32,7 @@ MKPIE_SUPPORTED=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
-# asterisk checks for `xml`, provided in pkgsrc if `xmlstarlet` is installed,
-# and then fails with a mysterious "bad substitution".
-# \todo Fix asterisk to build in the presence of xmlstarlet.
+USE_TOOLS+=		bison gmake perl:run pkg-config tar bash
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
 REPLACE_BASH+=		contrib/scripts/ast_coredumper
@@ -49,6 +46,10 @@ REPLACE_PYTHON+=	contrib/scripts/reflocks.py contrib/scripts/refstats.py
 CHECK_INTERPRETER_SKIP+=	libdata/asterisk/scripts/refcounter.py
 
 GNU_CONFIGURE=		yes
+# asterisk's makefiles don't work with POSIX shell if xmlstarlet is
+# installed, even though they are not documented to need bash.  Work
+# around that by specifying bash as the shell for configure.
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-gtk2
