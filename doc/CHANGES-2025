@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4193 2025/07/08 14:45:30 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4194 2025/07/08 16:00:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6207,3 +6207,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/libiconv to 1.17nb1 [jperkin 2025-07-08]
 	Updated shells/sheldon to 0.8.4 [schmonz 2025-07-08]
 	Updated devel/swagger-codegen to 3.0.71 [schmonz 2025-07-08]
+	Updated textproc/py-anyascii to 0.3.3 [adam 2025-07-08]
+	Updated devel/py-txaio to 25.6.1 [adam 2025-07-08]
