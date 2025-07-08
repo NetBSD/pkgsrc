@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2025/05/26 01:37:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/08 21:19:18 schmonz Exp $
 
-DISTNAME=		tipidee-0.0.6.0
+DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=		tipidee-0.0.6.0
+PKGREVISION=		2
 MANPAGES_VERSION=	0.0.5.0.1
-PKGREVISION=		1
 CATEGORIES=		www
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
+GITHUB_PROJECT=		tipidee
+GITHUB_TAG=		9acee22dd82472bf408204a066476334c3568e87
 MANPAGES_DIST=		tipidee-man-pages-${MANPAGES_VERSION}.tar.gz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
+DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -15,7 +18,7 @@ COMMENT=		Minimalistic web server
 LICENSE=		isc
 
 TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
-DEPENDS+=		s6-networking>=2.7.0.4:../../net/s6-networking
+DEPENDS+=		s6-networking>=2.7.1.0nb1:../../net/s6-networking
 
 WRKMANSRC=		${WRKDIR}/${PKGBASE}-man-pages-v${MANPAGES_VERSION}
 
@@ -25,6 +28,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-pkgconfig
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--disable-allstatic
 
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	pre-configure
