@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2025/07/01 15:22:09 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2025/07/08 14:42:53 schmonz Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -252,9 +252,9 @@ Size (serde_json-1.0.140.crate) = 154852 bytes
 BLAKE2s (serde_spanned-0.6.9.crate) = ef7717caf8e0a8c53559ebe4e7389cae4d1e994f87cc89d52738db9b60e08015
 SHA512 (serde_spanned-0.6.9.crate) = 7bea513792e7712d9672d890c0b80df8e212c90b22c6ffbaa290729a0f89d04e3b7a65a8b39b774d2203cbea2515047789de163f93c8839cfba8cc88737ca5f2
 Size (serde_spanned-0.6.9.crate) = 10210 bytes
-BLAKE2s (sheldon-0.8.3.tar.gz) = c2fabab6c5bb11a921e89ac9271a129b34e01940b2a25c91ca1975592013eec7
-SHA512 (sheldon-0.8.3.tar.gz) = 8af1ac3e0ff489fda138ccb68f8004979a3139f285b06be75f74a721a5673a9558c67e1471eaeeaf5f94e067439c8390ce968bd36237fbe6f52173cb255ec240
-Size (sheldon-0.8.3.tar.gz) = 85490 bytes
+BLAKE2s (sheldon-0.8.4.tar.gz) = 95dc79334d6e6dd814de5bee04675e494017abc5f3fa14bd9d7643582dd94f0e
+SHA512 (sheldon-0.8.4.tar.gz) = ec3298632bc4f821d9f7ad6b242ed39c536d744b4994a7da278b674d7916f6ff565507a910a9da0e1ba973912661c907608ae8d6afeacf770ab36efa458ed2cc
+Size (sheldon-0.8.4.tar.gz) = 85664 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
