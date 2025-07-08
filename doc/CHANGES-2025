@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4201 2025/07/08 21:17:11 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4202 2025/07/08 21:17:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6216,3 +6216,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/s6 to 2.13.2.0nb1 [schmonz 2025-07-08]
 	Updated net/s6-dns to 2.4.1.0nb1 [schmonz 2025-07-08]
 	Updated net/s6-networking to 2.7.1.0nb1 [schmonz 2025-07-08]
+	Updated net/shibari to 0.0.2.0nb1 [schmonz 2025-07-08]
