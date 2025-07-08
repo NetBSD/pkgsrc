@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/16 20:54:20 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/08 10:46:22 markd Exp $
 
-DISTNAME=	freecell-solver-6.12.0
+DISTNAME=	freecell-solver-6.14.0
 CATEGORIES=	games
 MASTER_SITES=	https://fc-solve.shlomifish.org/downloads/fc-solve/
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +11,7 @@ COMMENT=	Solves layouts of Freecell and similar variants of Card Solitaire
 LICENSE=	mit
 
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
-DEPENDS+=	${PYPKGPREFIX}-pysol_cards-[0-9]*:../../games/py-pysol_cards
-DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
+DEPENDS+=	${PYPKGPREFIX}-pysol_cards>=0.24.0:../../games/py-pysol_cards
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
@@ -46,4 +45,6 @@ SUBST_SED.man=		-e 's:share/man:man:'
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+
+.include "../../devel/rinutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
