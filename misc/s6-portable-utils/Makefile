@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2025/05/13 03:49:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/08 21:18:15 schmonz Exp $
 
-DISTNAME=		s6-portable-utils-2.3.1.0
-MANPAGES_VERSION=	2.3.0.3.1
+DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=		s6-portable-utils-2.3.1.0
+PKGREVISION=		1
+MANPAGES_VERSION=	2.3.0.4.1
 CATEGORIES=		misc
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
+GITHUB_PROJECT=		s6-portable-utils
+GITHUB_TAG=		e2e283b00702579dee22b5ac769c4933d8cc1865
+DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
 MANPAGES_DIST=		s6-portable-utils-man-pages-${MANPAGES_VERSION}.tar.gz
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -22,6 +26,8 @@ TOOLS_PLATFORM.install=	${PREFIX}/bin/ginstall
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-pkgconfig
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--disable-allstatic
 
 INSTALL_DIRS+=		. ${WRKMANSRC}
 INSTALL_ENV+=		PREFIX=${PREFIX:Q} MAN_DIR=${PREFIX:Q}/${PKGMANDIR:Q}
