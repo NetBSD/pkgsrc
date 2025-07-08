@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4191 2025/07/08 11:04:46 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.4192 2025/07/08 14:42:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6205,3 +6205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/freecell-solver to 6.14.0 [markd 2025-07-08]
 	Updated www/snac to 2.80 [schmonz 2025-07-08]
 	Updated converters/libiconv to 1.17nb1 [jperkin 2025-07-08]
+	Updated shells/sheldon to 0.8.4 [schmonz 2025-07-08]
