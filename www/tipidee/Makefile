@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/07/08 21:19:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/08 21:45:34 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		tipidee-0.0.6.0
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
 GITHUB_PROJECT=		tipidee
 GITHUB_TAG=		9acee22dd82472bf408204a066476334c3568e87
 MANPAGES_DIST=		tipidee-man-pages-${MANPAGES_VERSION}.tar.gz
-DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
+DISTFILES=		${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} ${MANPAGES_DIST}
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
 MAINTAINER=		schmonz@NetBSD.org
