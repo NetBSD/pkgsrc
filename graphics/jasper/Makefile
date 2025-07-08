@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2025/04/24 14:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2025/07/08 14:06:36 jperkin Exp $
 
 DISTNAME=	jasper-4.2.5
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Software-based reference implementation of the JPEG-2000 codec
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
-FORCE_C_STD=		c99
 USE_TOOLS+=		bash:test
 CMAKE_CONFIGURE_ARGS+=	-DALLOW_IN_SOURCE_BUILD=ON
 CMAKE_CONFIGURE_ARGS+=	-DJAS_ENABLE_DOC=OFF
@@ -20,9 +19,9 @@ CMAKE_CONFIGURE_ARGS+=	-DJAS_ENABLE_DOC=OFF
 PKGCONFIG_OVERRIDE=	build/pkgconfig/jasper.pc.in
 REPLACE_BASH=		test/bin/*
 TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src/libjasper
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src/libjasper
 TEST_TARGET=		test
 
-CFLAGS+=	-D_POSIX_C_SOURCE=200112L	# nanosleep(2)
 CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE=1
 
 .include "../../mk/bsd.prefs.mk"
