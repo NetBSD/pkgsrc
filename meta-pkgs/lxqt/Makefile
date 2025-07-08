@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/05/19 09:13:28 pin Exp $
+# $NetBSD: Makefile,v 1.39 2025/07/08 02:08:06 gutteridge Exp $
 
 PKGNAME=	lxqt-2.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,7 +12,7 @@ META_PACKAGE=	yes
 
 .include "options.mk"
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.2.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.2.1:../../devel/lxqt-build-tools
 
 DEPENDS+=	libqtxdg>=4.2.0:../../x11/libqtxdg
 DEPENDS+=	qtxdg-tools>=4.2.0:../../x11/qtxdg-tools
@@ -30,14 +30,14 @@ DEPENDS+=	lxqt-config>=2.2.0:../../x11/lxqt-config
 DEPENDS+=	lxqt-globalkeys>=2.2.0:../../x11/lxqt-globalkeys
 DEPENDS+=	lxqt-openssh-askpass>=2.2.0:../../security/lxqt-openssh-askpass
 DEPENDS+=	lxqt-notificationd>=2.2.0:../../x11/lxqt-notificationd
-DEPENDS+=	lxqt-powermanagement>=2.2.0:../../sysutils/lxqt-powermanagement
+DEPENDS+=	lxqt-powermanagement>=2.2.1:../../sysutils/lxqt-powermanagement
 DEPENDS+=	libdbusmenu-lxqt>=0.3.0:../../devel/libdbusmenu-lxqt
 DEPENDS+=	lxqt-qtplugin>=2.2.0:../../x11/lxqt-qtplugin
 DEPENDS+=	lxqt-session>=2.2.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.2.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.2.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.2.1:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.2.1:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.2.2:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.2.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=3.0.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.2.0:../../archivers/lxqt-archiver
