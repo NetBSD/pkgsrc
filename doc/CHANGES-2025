@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4186 2025/07/08 02:08:35 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4187 2025/07/08 08:14:22 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6198,3 +6198,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lxqt-powermanagement to 2.2.1 [gutteridge 2025-07-08]
 	Updated x11/lxqt-panel to 2.2.2 [gutteridge 2025-07-08]
 	Updated meta-pkgs/lxqt to 2.2.0nb3 [gutteridge 2025-07-08]
+	Updated games/openrct2 to 0.4.24 [triaxx 2025-07-08]
