@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.3 2025/07/07 15:20:02 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.4 2025/07/08 23:34:50 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -20,3 +20,6 @@ sysutils/xentools418: Security fix
 
 Pullup ticket #6981 - requested by taca
 databases/redis: Security fix
+
+Pullup ticket #6982 - requested by wiz
+devel/git: Security fix
