@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2025/04/30 07:43:33 adam Exp $
+# $NetBSD: Makefile,v 1.99 2025/07/08 12:35:55 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -65,6 +65,12 @@ SUBST_STAGE.resdir=	post-extract
 SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
+
+# https://www.illumos.org/issues/17491
+SUBST_CLASSES.SunOS+=	assert
+SUBST_STAGE.assert=	pre-configure
+SUBST_FILES.assert=	base/assert_.h
+SUBST_SED.assert=	-e 's,_ASSERT_H,GS_ASSERT_H,g'
 
 # On Linux-*-x86_64, there was an error message:
 # gp_unix.o: relocation R_X86_64_32 against `a local symbol' can not be
