@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4184 2025/07/08 02:00:09 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4185 2025/07/08 02:04:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/exercism to 3.5.6 [schmonz 2025-07-07]
 	Updated devel/lxqt-build-tools to 2.2.1 [gutteridge 2025-07-08]
 	Updated sysutils/lxqt-powermanagement to 2.2.1 [gutteridge 2025-07-08]
+	Updated x11/lxqt-panel to 2.2.2 [gutteridge 2025-07-08]
