@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/07/05 20:13:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/08 15:55:42 adam Exp $
 
-DISTNAME=	anyascii-0.3.2
+DISTNAME=	anyascii-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyascii/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/anyascii/anyascii
 COMMENT=	Intelligent Unicode to ASCII conversion
 LICENSE=	isc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
