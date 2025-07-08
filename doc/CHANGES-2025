@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4188 2025/07/08 09:22:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4189 2025/07/08 10:51:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6201,3 +6201,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/openrct2 to 0.4.24 [triaxx 2025-07-08]
 	Updated net/haproxy to 3.2.2 [adam 2025-07-08]
 	Updated www/py-pook to 2.1.4 [adam 2025-07-08]
+	Updated games/py-pysol_cards to 0.24.0 [markd 2025-07-08]
+	Updated games/freecell-solver to 6.14.0 [markd 2025-07-08]
