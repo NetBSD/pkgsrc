@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/07/08 21:18:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2025/07/08 21:45:34 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		s6-portable-utils-2.3.1.0
@@ -8,7 +8,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
 GITHUB_PROJECT=		s6-portable-utils
 GITHUB_TAG=		e2e283b00702579dee22b5ac769c4933d8cc1865
-DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
+DISTFILES=		${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} ${MANPAGES_DIST}
 MANPAGES_DIST=		s6-portable-utils-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
