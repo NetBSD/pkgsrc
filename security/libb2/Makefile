@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/08 14:09:46 jperkin Exp $
 
 DISTNAME=	libb2-0.98.1
 CATEGORIES=	security
@@ -13,6 +13,10 @@ LICENSE=	cc0-1.0-universal
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
+CPPFLAGS.SunOS+=	-D__STDC_WANT_LIB_EXT1__=1	# memset_s
+
 PKGCONFIG_OVERRIDE+=	libb2.pc.in
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
