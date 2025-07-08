@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4192 2025/07/08 14:42:59 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4193 2025/07/08 14:45:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/snac to 2.80 [schmonz 2025-07-08]
 	Updated converters/libiconv to 1.17nb1 [jperkin 2025-07-08]
 	Updated shells/sheldon to 0.8.4 [schmonz 2025-07-08]
+	Updated devel/swagger-codegen to 3.0.71 [schmonz 2025-07-08]
