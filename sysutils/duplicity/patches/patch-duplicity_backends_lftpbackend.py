@@ -1,10 +1,10 @@
-$NetBSD: patch-duplicity_backends_lftpbackend.py,v 1.1 2024/05/24 15:08:39 triaxx Exp $
+$NetBSD: patch-duplicity_backends_lftpbackend.py,v 1.2 2025/07/08 17:21:28 triaxx Exp $
 
 Replace lftp executable name by absolute path.
 
 --- duplicity/backends/lftpbackend.py.orig	2024-05-24 06:47:44.796435030 +0000
 +++ duplicity/backends/lftpbackend.py
-@@ -51,7 +51,7 @@ class LFTPBackend(duplicity.backend.Back
+@@ -48,7 +48,7 @@ class LFTPBackend(duplicity.backend.Back
  
          # we expect an output
          try:
@@ -13,7 +13,7 @@ Replace lftp executable name by absolute path.
              fout = p.read()
              ret = p.close()
          except Exception:
-@@ -145,7 +145,7 @@ class LFTPBackend(duplicity.backend.Back
+@@ -142,7 +142,7 @@ class LFTPBackend(duplicity.backend.Back
          if isinstance(remote_filename, bytes):
              remote_filename = os.fsdecode(remote_filename)
          commandline = (
@@ -22,7 +22,7 @@ Replace lftp executable name by absolute path.
              f"put {cmd_quote(source_path.uc_name)} "
              f'-o {cmd_quote(self.remote_path) + os.fsdecode(remote_filename)}"'
          )
-@@ -159,7 +159,7 @@ class LFTPBackend(duplicity.backend.Back
+@@ -156,7 +156,7 @@ class LFTPBackend(duplicity.backend.Back
          if isinstance(remote_filename, bytes):
              remote_filename = os.fsdecode(remote_filename)
          commandline = (
@@ -31,7 +31,7 @@ Replace lftp executable name by absolute path.
              f"get {cmd_quote(self.remote_path) + remote_filename} "
              f'-o {cmd_quote(local_path.uc_name)}"'
          )
-@@ -176,7 +176,7 @@ class LFTPBackend(duplicity.backend.Back
+@@ -173,7 +173,7 @@ class LFTPBackend(duplicity.backend.Back
          quoted_path = cmd_quote(self.remote_path)
          # failing to cd into the folder might be because it was not created already
          commandline = (
@@ -40,7 +40,7 @@ Replace lftp executable name by absolute path.
              f'( mkdir -p -f {quoted_path} && cd {quoted_path} && ls )"'
          )
          log.Debug(f"CMD: {commandline}")
-@@ -189,7 +189,7 @@ class LFTPBackend(duplicity.backend.Back
+@@ -186,7 +186,7 @@ class LFTPBackend(duplicity.backend.Back
  
      def _delete(self, filename):
          commandline = (

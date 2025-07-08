@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/04/25 11:03:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/07/08 17:21:28 triaxx Exp $
 bin/duplicity
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,7 +24,6 @@ ${PYSITELIB}/duplicity/backend_pool.pyo
 ${PYSITELIB}/duplicity/backend.py
 ${PYSITELIB}/duplicity/backend.pyc
 ${PYSITELIB}/duplicity/backend.pyo
-${PYSITELIB}/duplicity/backends/README
 ${PYSITELIB}/duplicity/backends/__init__.py
 ${PYSITELIB}/duplicity/backends/__init__.pyc
 ${PYSITELIB}/duplicity/backends/__init__.pyo
