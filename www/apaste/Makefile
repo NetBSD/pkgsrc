@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2025/05/13 03:54:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/08 21:19:54 schmonz Exp $
 
-DISTNAME=		apaste-0.0.3.0
+DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=		apaste-0.0.3.0
+PKGREVISION=		1
 CATEGORIES=		www
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
+GITHUB_PROJECT=		apaste
+GITHUB_TAG=		4813dd0cc1b8f408c8a46299acdc666e0e03831e
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://skarnet.org/software/apaste/
@@ -15,6 +19,8 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-pkgconfig
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--disable-allstatic
 
 # for mkdtemp
 CPPFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
