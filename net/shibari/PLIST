@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/05/13 03:50:20 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/07/08 21:17:45 schmonz Exp $
 bin/shibari-server-tcp
 bin/shibari-server-udp
 include/shibari/common.h
@@ -11,9 +11,9 @@ include/shibari/server.h
 include/shibari/shibari.h
 include/shibari/tdb.h
 include/shibari/util.h
-lib/libdcache.a
-lib/libshibari-common.a
-lib/libshibari-server.a
+lib/libdcache.la
+lib/libshibari-common.la
+lib/libshibari-server.la
 lib/pkgconfig/libdcache.pc
 lib/pkgconfig/libshibari-common.pc
 lib/pkgconfig/libshibari-server.pc
