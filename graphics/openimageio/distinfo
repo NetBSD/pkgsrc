@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.35 2025/02/15 15:47:55 wiz Exp $
+$NetBSD: distinfo,v 1.36 2025/07/08 05:54:48 wiz Exp $
 
 BLAKE2s (OpenImageIO-2.5.17.0.tar.gz) = 5e381a7ef26c5cba138c75ad1eb06e24a182a0e86b63a88b95ff2d0bcd2eec4f
 SHA512 (OpenImageIO-2.5.17.0.tar.gz) = a979d84ce985d80d42058ea9cdc631096ddcd712643eef497425e63f5d747cad0c5acb9a87af47be529f850c902f4bcaf33857fb3adec53e41a3d950d49a59d2
 Size (OpenImageIO-2.5.17.0.tar.gz) = 52548216 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = d4abc010c5016cfcffab51191b5ea37edbfdd9cc
 SHA1 (patch-src_cmake_externalpackages.cmake) = 710f1f66e55fbee5f7e330064db8535e7a1110fe
+SHA1 (patch-src_heif.imageio_heifinput.cpp) = c638e9630c2f44c8591a0ac3a8b17982407a43e8
+SHA1 (patch-src_heif.imageio_heifoutput.cpp) = 4b22ce1ec0297c792c2dd3cefe3da297869835af
 SHA1 (patch-src_include_OpenImageIO_imagebuf.h) = 6460cb5ff97b7d2c3eaedd7fb157dfce9d8d7984
 SHA1 (patch-src_include_OpenImageIO_strutil.h) = 90efe95bf763881478aea851cce0ea67a9de9c1a
 SHA1 (patch-src_libutil_strutil.cpp) = fd63f4648cd9750d7b9e496c183886d348c2cff5
