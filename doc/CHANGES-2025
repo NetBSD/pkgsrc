@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4196 2025/07/08 20:49:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4197 2025/07/08 21:13:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6211,3 +6211,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-txaio to 25.6.1 [adam 2025-07-08]
 	Updated sysutils/duplicity to 3.0.5.1 [triaxx 2025-07-08]
 	Updated devel/git to 2.50.1 [wiz 2025-07-08]
+	Updated devel/skalibs to 2.14.4.0nb2 [schmonz 2025-07-08]
