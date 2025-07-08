@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/10/08 15:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/08 12:38:12 jperkin Exp $
 
 DISTNAME=	raqm-0.10.2
 CATEGORIES=	graphics
@@ -13,6 +13,8 @@ COMMENT=	Library for complex text layout
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/raqm.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
