@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/07/08 21:14:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/08 21:45:34 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		execline-2.9.7.0
@@ -8,7 +8,7 @@ CATEGORIES=		lang shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
 GITHUB_PROJECT=		execline
 GITHUB_TAG=		d7eb7a92cd7511f3a3f8bcd6f9652bd53de75cc5
-DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
+DISTFILES=		${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} ${MANPAGES_DIST}
 MANPAGES_DIST=		execline-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/07/08 21:17:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/08 21:45:34 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		shibari-0.0.2.0
@@ -8,7 +8,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
 GITHUB_PROJECT=		shibari
 GITHUB_TAG=		25625e55e308ca7f714f06357d137066fa42fbb1
-DISTFILES=		${_GITHUB_DEFAULT_DISTFILES} ${MANPAGES_DIST}
+DISTFILES=		${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} ${MANPAGES_DIST}
 MANPAGES_DIST=		shibari-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
