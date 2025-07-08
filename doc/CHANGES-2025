@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4195 2025/07/08 17:21:41 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.4196 2025/07/08 20:49:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6210,3 +6210,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-anyascii to 0.3.3 [adam 2025-07-08]
 	Updated devel/py-txaio to 25.6.1 [adam 2025-07-08]
 	Updated sysutils/duplicity to 3.0.5.1 [triaxx 2025-07-08]
+	Updated devel/git to 2.50.1 [wiz 2025-07-08]
