@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4187 2025/07/08 08:14:22 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.4188 2025/07/08 09:22:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6199,3 +6199,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-panel to 2.2.2 [gutteridge 2025-07-08]
 	Updated meta-pkgs/lxqt to 2.2.0nb3 [gutteridge 2025-07-08]
 	Updated games/openrct2 to 0.4.24 [triaxx 2025-07-08]
+	Updated net/haproxy to 3.2.2 [adam 2025-07-08]
+	Updated www/py-pook to 2.1.4 [adam 2025-07-08]
