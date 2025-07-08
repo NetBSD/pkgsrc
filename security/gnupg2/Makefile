@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2025/05/21 15:01:29 adam Exp $
+# $NetBSD: Makefile,v 1.165 2025/07/08 13:21:06 jperkin Exp $
 
 DISTNAME=	gnupg-2.4.8
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg2-/}
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
 
 TEST_TARGET=		check
+
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600	# socklen_t
 
 LDFLAGS.NetBSD+=	-lintl
 LDFLAGS.Darwin+=	-lintl -lresolv
