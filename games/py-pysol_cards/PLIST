@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/16 20:42:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/07/08 10:43:10 markd Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -11,12 +11,18 @@ ${PYSITELIB}/pysol_cards/__init__.pyo
 ${PYSITELIB}/pysol_cards/cards.py
 ${PYSITELIB}/pysol_cards/cards.pyc
 ${PYSITELIB}/pysol_cards/cards.pyo
+${PYSITELIB}/pysol_cards/cwrap.py
+${PYSITELIB}/pysol_cards/cwrap.pyc
+${PYSITELIB}/pysol_cards/cwrap.pyo
 ${PYSITELIB}/pysol_cards/deal_game.py
 ${PYSITELIB}/pysol_cards/deal_game.pyc
 ${PYSITELIB}/pysol_cards/deal_game.pyo
 ${PYSITELIB}/pysol_cards/errors.py
 ${PYSITELIB}/pysol_cards/errors.pyc
 ${PYSITELIB}/pysol_cards/errors.pyo
+${PYSITELIB}/pysol_cards/gen_multi_cli.py
+${PYSITELIB}/pysol_cards/gen_multi_cli.pyc
+${PYSITELIB}/pysol_cards/gen_multi_cli.pyo
 ${PYSITELIB}/pysol_cards/random.py
 ${PYSITELIB}/pysol_cards/random.pyc
 ${PYSITELIB}/pysol_cards/random.pyo
