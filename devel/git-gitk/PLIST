@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/01/20 20:07:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.10.44.1 2025/07/08 23:34:01 maya Exp $
 bin/gitk
 libexec/git-core/git-citool
 libexec/git-core/git-gui
@@ -72,5 +72,6 @@ share/gitk/lib/msgs/pt_br.msg
 share/gitk/lib/msgs/pt_pt.msg
 share/gitk/lib/msgs/ru.msg
 share/gitk/lib/msgs/sv.msg
+share/gitk/lib/msgs/ta.msg
 share/gitk/lib/msgs/vi.msg
 share/gitk/lib/msgs/zh_cn.msg
