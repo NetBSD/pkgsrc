@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.4 2025/07/08 23:34:50 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.5 2025/07/09 14:43:22 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -23,3 +23,7 @@ databases/redis: Security fix
 
 Pullup ticket #6982 - requested by wiz
 devel/git: Security fix
+
+Pullup ticket #6983 - requested by bsiegert
+lang/go123: Security fix
+lang/go124: Security fix
