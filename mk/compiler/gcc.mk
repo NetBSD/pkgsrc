@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.293 2025/07/09 17:43:50 rillig Exp $
+# $NetBSD: gcc.mk,v 1.294 2025/07/09 17:56:00 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -71,7 +71,8 @@ _SYS_VARS.gcc=	\
 	CC_VERSION CC_VERSION_STRING LANGUAGES.gcc \
 	CCPATH CPPPATH CXXPATH F77PATH FCPATH \
 	PKG_CC PKG_CPP PKG_CXX PKG_FC FC PKGSRC_FORTRAN \
-	ADAPATH GMKPATH GLKPATH GBDPATH CHPPATH GLSPATH GNTPATH PRPPATH
+	GNATMAKE ADAPATH GMKPATH GLKPATH GBDPATH CHPPATH GLSPATH GNTPATH PRPPATH \
+	GNAT_PKGBASE GNAT_PREFIX GNAT_NAME ADA_PROJECT_PATH
 _DEF_VARS.gcc=	\
 	MAKEFLAGS IMAKEOPTS \
 	CFLAGS LDFLAGS \
@@ -98,6 +99,7 @@ _DEF_VARS.gcc=	\
 	_NEED_GCC10 _NEED_GCC12 _NEED_GCC13 _NEED_GCC14 \
 	_NEED_GCC_AUX _NEED_NEWER_GCC \
 	_NEED_GCC6_AUX _NEED_GCC10_AUX _NEED_GCC13_GNAT _NEED_GCC14_GNAT \
+	_GNAT_NAME \
 	_PKGSRC_GCC_VERSION \
 	_USE_GCC_SHLIB _USE_PKGSRC_GCC \
 	_WRAP_EXTRA_ARGS.CC \
@@ -920,13 +922,15 @@ _USE_GCC_SHLIB?=	yes
 # We require Ada-capable compiler in the lang/gcc6-aux directory.
 #
 _GCC_PKGBASE=		gcc6-aux
-.  if ${PKGPATH} == lang/gcc6-aux
+_GNAT_NAME=		gnat6
+.  if ${PKGPATH} == lang/${_GCC_PKGBASE}
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc6-aux
-_GCC_DEPENDENCY=	gcc6-aux>=${_GCC_REQD}:../../lang/gcc6-aux
+.  if !defined(_IGNORE_GCC)
+_GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
+# _GCC_DEPENDENCY is some kind of artifact
+#_GCC_DEPENDENCY=	gcc6-aux>=${_GCC_REQD}:../../lang/gcc6-aux
 # gcc6-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC10_AUX:M[yY][eE][sS])
@@ -934,13 +938,14 @@ _GCC_DEPENDENCY=	gcc6-aux>=${_GCC_REQD}:../../lang/gcc6-aux
 # We require Ada-capable compiler in the lang/gcc10-aux directory.
 #
 _GCC_PKGBASE=		gcc10-aux
-.  if ${PKGPATH} == lang/gcc10-aux
+_GNAT_NAME=		gnat10
+.  if ${PKGPATH} == lang/${_GCC_PKGBASE}
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc10-aux
-_GCC_DEPENDENCY=	gcc10-aux>=${_GCC_REQD}:../../lang/gcc10-aux
+_GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
+#_GCC_DEPENDENCY=	gcc10-aux>=${_GCC_REQD}:../../lang/gcc10-aux
 # gcc10-aux doesn't have a separate package for shared libraries
 .  endif
 .elif !empty(_NEED_GCC13_GNAT:M[yY][eE][sS])
@@ -948,13 +953,14 @@ _GCC_DEPENDENCY=	gcc10-aux>=${_GCC_REQD}:../../lang/gcc10-aux
 # We require Ada-capable compiler in the lang/gcc13-gnat directory.
 #
 _GCC_PKGBASE=		gcc13-gnat
-.  if ${PKGPATH} == lang/gcc13-gnat
+_GNAT_NAME=		gnat13
+.  if ${PKGPATH} == lang/${_GCC_PKGBASE}
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc13-gnat
-_GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
+.  if !defined(_IGNORE_GCC)
+_GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
+#_GCC_DEPENDENCY=	gcc13-gnat>=${_GCC_REQD}:../../lang/gcc13-gnat
 .    if defined(USE_GCC_RUNTIME)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -964,13 +970,14 @@ _USE_GCC_SHLIB?=	yes
 # We require Ada-capable compiler in the lang/gcc14-gnat directory.
 #
 _GCC_PKGBASE=		gcc14-gnat
-.  if ${PKGPATH} == lang/gcc14-gnat
+_GNAT_NAME=		gnat14
+.  if ${PKGPATH} == lang/${_GCC_PKGBASE}
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
-.  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc14-gnat
-_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
+.  if !defined(_IGNORE_GCC)
+_GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
+#_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
 .    if defined(USE_GCC_RUNTIME)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -1143,14 +1150,14 @@ PKGSRC_FORTRAN?=	gfortran
 #GNAT doesn't provide 'ada' but always provides 'gnatls' - inspired by gprbuild
 .if exists(${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls)
 _GCC_VARS+=	ADA GMK GLK GBD CHP PRP GLS GNT
-_GCC_ADA=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}ada
-_GCC_GMK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatmake
-_GCC_GLK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatlink
-_GCC_GBD=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatbind
-_GCC_CHP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatchop
-_GCC_PRP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatprep
-_GCC_GLS=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatls
-_GCC_GNT=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnat
+_GCC_ADA=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}ada${GCC_VERSION_SUFFIX}
+_GCC_GMK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatmake${GCC_VERSION_SUFFIX}
+_GCC_GLK=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatlink${GCC_VERSION_SUFFIX}
+_GCC_GBD=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatbind${GCC_VERSION_SUFFIX}
+_GCC_CHP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatchop${GCC_VERSION_SUFFIX}
+_GCC_PRP=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatprep${GCC_VERSION_SUFFIX}
+_GCC_GLS=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnatls${GCC_VERSION_SUFFIX}
+_GCC_GNT=	${_GCC_DIR}/bin/${_GCC_BIN_PREFIX}gnat${GCC_VERSION_SUFFIX}
 _ALIASES.ADA=	ada
 _ALIASES.GMK=	gnatmake
 _ALIASES.GLK=	gnatlink
@@ -1159,15 +1166,15 @@ _ALIASES.CHP=	gnatchop
 _ALIASES.PRP=	gnatprep
 _ALIASES.GLS=	gnatls
 _ALIASES.GNT=	gnat
-ADAPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada
-GMKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatmake
-GLKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatlink
-GBDPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatbind
-CHPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatchop
-PRPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatprep
-GLSPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls
-GNTPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnat
-#PKG_ADA:=	${_GCC_ADA}
+ADAPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}ada${GCC_VERSION_SUFFIX}
+GMKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatmake${GCC_VERSION_SUFFIX}
+GLKPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatlink${GCC_VERSION_SUFFIX}
+GBDPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatbind${GCC_VERSION_SUFFIX}
+CHPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatchop${GCC_VERSION_SUFFIX}
+PRPPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatprep${GCC_VERSION_SUFFIX}
+GLSPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnatls${GCC_VERSION_SUFFIX}
+GNTPATH=	${_GCCBINDIR}/${_GCC_BIN_PREFIX}gnat${GCC_VERSION_SUFFIX}
+PKG_ADA:=	${_GCC_ADA}
 PKG_GMK:=	${_GCC_GMK}
 PKG_GLK:=	${_GCC_GLK}
 PKG_GBD:=	${_GCC_GBD}
@@ -1233,6 +1240,16 @@ CC_VERSION=		gcc-${_GCC_REQD}
 .else
 CC_VERSION_STRING=	${CC_VERSION}
 CC_VERSION=		${_GCC_PKG}
+.endif
+
+.if ${_NEED_GCC_AUX:tl} == "yes"
+GNAT_PKGBASE=		${_GCC_PKGBASE}
+GNAT_PREFIX=		${PREFIX}/${_GCC_PKGBASE}
+GNAT_NAME=		${_GNAT_NAME}
+PLIST_SUBST+=		GNAT_PKGBASE="${_GCC_PKGBASE}"
+PRINT_PLIST_AWK+=	{ gsub(/${_GCC_PKGBASE}/, "$${GNAT_PKGBASE}"); }
+ADA_PROJECT_PATH=	${BUILDLINK_DIR}/lib/gnat
+MAKE_ENV+=		ADA_PROJECT_PATH=${ADA_PROJECT_PATH}
 .endif
 
 # Prepend the path to the compiler to the PATH.
