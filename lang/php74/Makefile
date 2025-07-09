@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/06/14 13:57:10 taca Exp $
+# $NetBSD: Makefile,v 1.33 2025/07/09 10:25:08 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -57,6 +57,12 @@ INSTALL_UNSTRIPPED=	yes
 # and lacks the zone memory allocator
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=incompatible-pointer-types	# libxml2 API
 .endif
 
 pre-configure:
