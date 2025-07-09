@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/06/07 15:51:49 taca Exp $
+# $NetBSD: Makefile,v 1.45 2025/07/09 10:22:20 jperkin Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -42,6 +42,12 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${PHP_EGDIR} \
 # and lacks the zone memory allocator
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
+.endif
+
+.include "../../mk/compiler.mk"
+
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=incompatible-pointer-types   # libxml2 API
 .endif
 
 pre-configure:
