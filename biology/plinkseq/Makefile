@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/07/03 06:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/07/09 15:56:50 wiz Exp $
 
 DISTNAME=	plinkseq-0.08
 PKGREVISION=	15
@@ -16,8 +16,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS=	bash:run
 REPLACE_BASH=	browser/pbrowse.in index/index.in
 
-USE_CXX_FEATURES=	c++14
-FORCE_CXX_STD=		c++14
+USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
