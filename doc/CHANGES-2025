@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4215 2025/07/09 15:21:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4216 2025/07/09 17:11:22 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6234,3 +6234,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-lfs to 3.7.0 [adam 2025-07-09]
 	Updated security/gnutls to 3.8.10 [adam 2025-07-09]
 	Added devel/jjui version 0.8.12 [wiz 2025-07-09]
+	Updated lang/gcc13-gnat to 13.4.0nb1 [dkazankov 2025-07-09]
