@@ -1,8 +1,9 @@
-$NetBSD: patch-libraries_libldap_thr__posix.c,v 1.1 2021/08/23 09:58:58 adam Exp $
+$NetBSD: patch-libraries_libldap_thr__posix.c,v 1.2 2025/07/09 09:18:01 jperkin Exp $
 
 Fix for systems lacking pthread_attr_setstacksize().
+Correct includes for thr_yield().
 
---- libraries/libldap/thr_posix.c.orig	2021-07-27 17:44:47.000000000 +0000
+--- libraries/libldap/thr_posix.c.orig	2025-05-22 17:56:21.000000000 +0000
 +++ libraries/libldap/thr_posix.c
 @@ -25,6 +25,7 @@
  #endif
@@ -12,7 +13,17 @@ Fix for systems lacking pthread_attr_setstacksize().
  
  #ifdef REPLACE_BROKEN_YIELD
  #ifndef HAVE_NANOSLEEP
-@@ -161,11 +162,13 @@ ldap_pvt_thread_create( ldap_pvt_thread_
+@@ -38,6 +39,9 @@
+ #define LDAP_THREAD_RDWR_IMPLEMENTATION
+ #include "ldap_thr_debug.h"	 /* May rename the symbols defined below */
+ #include <signal.h>			 /* For pthread_kill() */
++#ifdef HAVE_THR_YIELD
++#include <thread.h>
++#endif
+ 
+ extern int ldap_int_stackguard;
+ 
+@@ -161,11 +165,13 @@ ldap_pvt_thread_create( ldap_pvt_thread_
  #endif
  
  #ifdef LDAP_PVT_THREAD_SET_STACK_SIZE
