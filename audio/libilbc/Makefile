@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/07/03 06:28:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/09 15:56:27 wiz Exp $
 
 DISTNAME=	libilbc-3.0.4
 PKGREVISION=	3
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/TimothyGu/libilbc
 COMMENT=	The iLBC codec from the WebRTC project
 LICENSE=	modified-bsd
 
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
