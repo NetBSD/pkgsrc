@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/07/01 20:34:51 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/07/09 17:21:59 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc13-gnat-libs
 
@@ -13,15 +13,6 @@ BUILDLINK_API_DEPENDS.gcc13-gnat-libs+=	{gcc13-gnat,gcc13-gnat-libs}>=13.2.0
 BUILDLINK_PKGSRCDIR.gcc13-gnat-libs?=	../../lang/gcc13-gnat-libs
 BUILDLINK_DEPMETHOD.gcc13-gnat-libs?=	full
 
-#GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-
-#TARGET_LIBDIR.gcc13-gnat-libs=	${PREFIX}/gcc13-gnat/${GCC_TARGET_MACHINE}/lib
-
-#BUILDLINK_PASSTHRU_DIRS+=	${TARGET_LIBDIR.gcc13-gnat-libs}
-
-#BUILDLINK_FILES.gcc13-gnat-libs=	#empty
-#BUILDLINK_AUTO_VARS.gcc13-gnat-libs=	no
-#BUILDLINK_AUTO_DIRS.gcc13-gnat-libs=	no
 BUILDLINK_CONTENTS_FILTER.gcc13-gnat-libs=	${FALSE}
 
 .include "../../mk/dlopen.buildlink3.mk"
