@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/09 11:27:39 adam Exp $
 
-DISTNAME=	progress-1.6
+DISTNAME=	progress-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/verigak/progress/
+HOMEPAGE=	https://github.com/verigak/progress
 COMMENT=	Easy to use progress bars
 LICENSE=	isc
 
-#DEPENDS+=	${PYPKGPREFIX}-cachecontrol-[0-9]*:../../devel/py-cachecontrol
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
