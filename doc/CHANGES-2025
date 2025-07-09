@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4209 2025/07/09 05:57:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4210 2025/07/09 07:20:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6225,3 +6225,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/naev to 0.12.6 [ktnb 2025-07-08]
 	Updated databases/py-peewee to 3.18.2 [adam 2025-07-09]
 	Updated security/py-certifi to 2025.7.9 [adam 2025-07-09]
+	Removed comms/asterisk13 [jnemeth 2025-07-09]
