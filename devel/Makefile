@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4482 2025/07/05 12:12:13 hauke Exp $
+# $NetBSD: Makefile,v 1.4483 2025/07/09 15:20:57 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -864,6 +864,7 @@ SUBDIR+=	jenkins-lts
 SUBDIR+=	jflex
 SUBDIR+=	jj
 SUBDIR+=	jj-docs
+SUBDIR+=	jjui
 SUBDIR+=	jq
 SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
