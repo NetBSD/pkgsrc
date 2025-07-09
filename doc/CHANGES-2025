@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4210 2025/07/09 07:20:41 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.4211 2025/07/09 07:42:38 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6226,3 +6226,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-peewee to 3.18.2 [adam 2025-07-09]
 	Updated security/py-certifi to 2025.7.9 [adam 2025-07-09]
 	Removed comms/asterisk13 [jnemeth 2025-07-09]
+	Updated lang/go123 to 1.23.11 [bsiegert 2025-07-09]
+	Updated lang/go124 to 1.24.5 [bsiegert 2025-07-09]
