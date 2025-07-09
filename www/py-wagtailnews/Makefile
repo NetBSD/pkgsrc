@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/25 10:48:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/09 15:53:42 wiz Exp $
 
 DISTNAME=	wagtailnews-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wagtail>=5.2.0:../../www/py-wagtail
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
