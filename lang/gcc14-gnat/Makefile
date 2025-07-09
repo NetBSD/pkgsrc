@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2025/07/02 06:28:28 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/09 17:24:08 dkazankov Exp $
 
-GCC_PKGNAME=		gcc14
-GCC_DIST_VERSION=	14.3.0
-
-PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
-PKGREVISION=	1
-COMMENT=	GNAT Compiler and Ada tools
-DISTNAME=	gcc-${GCC_DIST_VERSION}
+DISTNAME=	gcc-${PKGVERSION_NOREV}
+PKGNAME=	gcc14-gnat-14.3.0
+PKGREVISION=	2
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
+COMMENT=	GNAT Compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
@@ -25,20 +22,14 @@ USE_LANGUAGES=		c c++ ada
 USE_TOOLS+=		gmake makeinfo sed perl
 USE_TOOLS.NetBSD+=	gsed
 
+INFO_FILES=		yes
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no
 
-## Build outside ${WRKSRC}
-OBJDIR=			${WRKDIR}/build
-CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	${WRKSRC}/configure
-GNAT_SUBPREFIX=		${GCC_PKGNAME}-gnat
-GNAT_PREFIX=		${PREFIX}/${GNAT_SUBPREFIX}
-GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
-INFO_FILES=		yes
-CONFIGURE_ARGS+=	--disable-libstdcxx-pch
-
 USE_PKGSRC_GCC=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
 GCC_REQD+=		10
 
 UNLIMIT_RESOURCES+=	datasize
@@ -47,9 +38,15 @@ UNLIMIT_RESOURCES+=	stacksize
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
-.include "../../mk/bsd.prefs.mk"
+## Build outside ${WRKSRC}
+OBJDIR=			${WRKDIR}/build
+CONFIGURE_DIRS=		${OBJDIR}
+CONFIGURE_SCRIPT=	${WRKSRC}/configure
+GNU_CONFIGURE_PREFIX=	${PREFIX}/${PKGBASE}
 
 .include "options.mk"
+
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
@@ -66,8 +63,8 @@ LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 # we mash supply them.
 LDFLAGS_FOR_TARGET=	-static-libstdc++ -static-libgcc
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
-LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
 LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # Needed on Darwin when LDFLAGS point to a SDK
@@ -101,17 +98,12 @@ CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
 CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=ada,c,c++
-#CONFIGURE_ARGS+=	--with-static-standard-libraries
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
-#CONFIGURE_ARGS+=	--enable-host-pie
-#CONFIGURE_ARGS+=	--enable-host-bind-now
-#CONFIGURE_ARGS+=	--enable-default-pie
-#CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--with-local-prefix=${GNAT_PREFIX:Q}
-CONFIGURE_ARGS+=	--with-gxx-include-dir='${GNAT_PREFIX}/include/c++'
+CONFIGURE_ARGS+=	--with-local-prefix=${PREFIX}/${PKGBASE}
+CONFIGURE_ARGS+=	--with-gxx-include-dir='${PREFIX}/${PKGBASE}/include/c++'
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-threads=posix
 
@@ -224,18 +216,18 @@ post-test:
 
 post-install:
 # Fix group write mode
-	${CHMOD} g-w ${DESTDIR}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adainclude/standard.ads.h
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adainclude/standard.ads.h
 # Create old name that modern gnat no longer provides
-	${TEST} -f ${DESTDIR}${GNAT_PREFIX}/bin/gnat && \
-		( cd ${DESTDIR}${GNAT_PREFIX}/bin ; ${LN} -f gnat ada )
+	${TEST} -f ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gnat && \
+		( cd ${DESTDIR}${PREFIX}/${PKGBASE}/bin ; ${LN} -f gnat ada )
 .if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
-	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m32 || ${TRUE}
-	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m64 || ${TRUE}
+	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m32 || ${TRUE}
+	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m64 || ${TRUE}
 .endif
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
-	${FIND} ${GNAT_SUBPREFIX} \( -type f -or -type l \) -print | ${SORT};
+	${FIND} ${PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../archivers/zstd/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}

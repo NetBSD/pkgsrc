@@ -1,36 +1,29 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/06/11 13:27:04 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/07/09 17:24:08 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc14-gnat
 
 .if !defined(GCC14_GNAT_BUILDLINK3_MK)
 GCC14_GNAT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14
-BUILDLINK_ABI_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.1
-BUILDLINK_PKGSRCDIR.gcc14-gnat=		../../lang/gcc14-gnat
+BUILDLINK_API_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.1.0
+BUILDLINK_ABI_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.3.0
+BUILDLINK_PKGSRCDIR.gcc14-gnat?=	../../lang/gcc14-gnat
 BUILDLINK_DEPMETHOD.gcc14-gnat?=	build
 
-PREPEND_PATH+=	${BUILDLINK_DIR}/gcc14-gnat/bin
+ADALIB_BASE=		lib/gcc/${MACHINE_GNU_PLATFORM}/14.3.0
 
-GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
-
-ADALIB_PREFIX=	gcc14-gnat/lib/gcc/${GNU_TARGET_MACHINE}/14.3.0
-
-BUILDLINK_FILES.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib/*
+BUILDLINK_FNAME_TRANSFORM.gcc14-gnat+=	-e "s|^${BUILDLINK_DIR}/gcc14-gnat/|${BUILDLINK_DIR}/|g"
 
 BUILDLINK_INCDIRS.gcc14-gnat+=	gcc14-gnat/include
-BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/include
-BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/include-fixed
-BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/plugin/include
-BUILDLINK_INCDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/adainclude
+BUILDLINK_INCDIRS.gcc14-gnat+=	gcc14-gnat/${ADALIB_BASE}/include
+BUILDLINK_INCDIRS.gcc14-gnat+=	gcc14-gnat/${ADALIB_BASE}/adainclude
 
 BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/lib
-BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}
-BUILDLINK_LIBDIRS.gcc14-gnat+=	${ADALIB_PREFIX}/adalib
-BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/${GNU_TARGET_MACHINE}/lib
+BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/${ADALIB_BASE}
+BUILDLINK_LIBDIRS.gcc14-gnat+=	gcc14-gnat/${ADALIB_BASE}/adalib
 
 BUILDLINK_CONTENTS_FILTER.gcc14-gnat=	${EGREP} \
-					'(bin/.*|include/.*|lib/.*|libexec/.*|${GNU_TARGET_MACHINE}/lib/.*)'
+					'(bin/.*|include/.*|lib/.*|libexec/.*)'
 
 pkgbase := gcc14-gnat
 .include "../../mk/pkg-build-options.mk"
