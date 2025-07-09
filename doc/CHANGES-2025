@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4208 2025/07/09 01:32:26 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.4209 2025/07/09 05:57:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6223,3 +6223,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/apaste to 0.0.3.0nb1 [schmonz 2025-07-08]
 	Updated sysutils/fdtools to 2024.12.07nb1 [schmonz 2025-07-08]
 	Updated games/naev to 0.12.6 [ktnb 2025-07-08]
+	Updated databases/py-peewee to 3.18.2 [adam 2025-07-09]
+	Updated security/py-certifi to 2025.7.9 [adam 2025-07-09]
