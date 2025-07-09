@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.89 2025/05/16 08:41:37 adam Exp $
+$NetBSD: distinfo,v 1.90 2025/07/09 05:56:08 adam Exp $
 
-BLAKE2s (peewee-3.18.1.tar.gz) = 7b7671b259de32889eb3a3e7c42cf181a8644fdc3bebf30d6c05f2260fa5eb40
-SHA512 (peewee-3.18.1.tar.gz) = 30034c66fff02283fbffa19861b0e0a4f2a04766ef479a951ce4cfffcfe7a65f4c05206d9455e43a53d540288ee61d98564fc087771e195b8a5950e9c176f018
-Size (peewee-3.18.1.tar.gz) = 3026130 bytes
-SHA1 (patch-playhouse___sqlite__ext.pyx) = 048862112c9cf9cb3aa3fc424432024f54382837
+BLAKE2s (peewee-3.18.2.tar.gz) = 32b9e015d36ce305f6f41f5e2d496a2ec3d9beb81886fba372914df9d62c6f8f
+SHA512 (peewee-3.18.2.tar.gz) = 84ff0321f92d28d213d891977d71e9d6e8115e0d0f8ca2d577b710443cecfe5d91b5ad56ad1be8e2256db23a6eca4097edc529a1460ad9f118e67aca9a937e38
+Size (peewee-3.18.2.tar.gz) = 949220 bytes
 SHA1 (patch-setup.py) = 59788f77a576274de46a2c090a9a0a6ede0e1166
