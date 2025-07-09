@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.292 2025/07/01 19:54:34 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.293 2025/07/09 17:43:50 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1296,10 +1296,10 @@ ${_GCC_${_var_}}:
 	) > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
 .    endif
-.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
-	${RUN}					\
-	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -f -s ${.TARGET:T} ${_alias_};			\
+.    for _alias_ in ${_ALIASES.${_var_}}
+	${RUN}								\
+	if [ ! -x "${.TARGET:H}/${_alias_}" ]; then			\
+		${LN} -f -s ${.TARGET:T} ${.TARGET:H}/${_alias_};	\
 	fi
 .    endfor
 .  endif
