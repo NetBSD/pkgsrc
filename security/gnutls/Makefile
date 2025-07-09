@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.267 2025/04/17 21:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.268 2025/07/09 11:55:36 adam Exp $
 
-DISTNAME=	gnutls-3.8.9
-PKGREVISION=	1
+DISTNAME=	gnutls-3.8.10
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_GNUPG:=gnutls/v${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
