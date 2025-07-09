@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/06 13:45:14 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2025/07/09 14:42:51 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go124/CONTRIBUTING.md
@@ -647,6 +647,10 @@ go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global2_fail.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global3_fail.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global4_fail.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global5.go
+go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/asm.s
+go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/main.go
+go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/asm.s
+go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/main.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/main.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/p/p.go
 go124/src/cmd/cgo/internal/testsanitizers/testdata/asan_unsafe_fail1.go
@@ -2840,6 +2844,7 @@ go124/src/cmd/go/testdata/script/test_match_only_subtests.txt
 go124/src/cmd/go/testdata/script/test_match_only_subtests_parallel.txt
 go124/src/cmd/go/testdata/script/test_match_only_tests.txt
 go124/src/cmd/go/testdata/script/test_minus_n.txt
+go124/src/cmd/go/testdata/script/test_multivcs.txt
 go124/src/cmd/go/testdata/script/test_n_cover_std.txt
 go124/src/cmd/go/testdata/script/test_no_run_example.txt
 go124/src/cmd/go/testdata/script/test_no_tests.txt
@@ -13242,6 +13247,8 @@ go124/test/fixedbugs/issue7310.go
 go124/test/fixedbugs/issue7316.go
 go124/test/fixedbugs/issue7346.go
 go124/test/fixedbugs/issue7366.go
+go124/test/fixedbugs/issue73748a.go
+go124/test/fixedbugs/issue73748b.go
 go124/test/fixedbugs/issue7405.go
 go124/test/fixedbugs/issue7419.go
 go124/test/fixedbugs/issue7525.go
