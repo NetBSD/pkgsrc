@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4207 2025/07/08 21:20:23 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4208 2025/07/09 01:32:26 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6222,3 +6222,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/tipidee to 0.0.6.0nb2 [schmonz 2025-07-08]
 	Updated www/apaste to 0.0.3.0nb1 [schmonz 2025-07-08]
 	Updated sysutils/fdtools to 2024.12.07nb1 [schmonz 2025-07-08]
+	Updated games/naev to 0.12.6 [ktnb 2025-07-08]
