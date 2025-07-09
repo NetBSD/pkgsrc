@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4211 2025/07/09 07:42:38 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.4212 2025/07/09 07:54:01 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed comms/asterisk13 [jnemeth 2025-07-09]
 	Updated lang/go123 to 1.23.11 [bsiegert 2025-07-09]
 	Updated lang/go124 to 1.24.5 [bsiegert 2025-07-09]
+	Updated shells/tcsh to 6.24.16 [kim 2025-07-09]
