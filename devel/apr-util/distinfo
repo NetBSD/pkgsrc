@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2023/02/05 08:42:04 wiz Exp $
+$NetBSD: distinfo,v 1.27 2025/07/09 09:42:49 jperkin Exp $
 
 BLAKE2s (apr-util-1.6.3.tar.bz2) = 35c3a9e24f738e70c42bb9040102f838ab51635a88650ab2f13f0b81f3f7ecdc
 SHA512 (apr-util-1.6.3.tar.bz2) = 8050a481eeda7532ef3751dbd8a5aa6c48354d52904a856ef9709484f4b0cc2e022661c49ddf55ec58253db22708ee0607dfa7705d9270e8fee117ae4f06a0fe
 Size (apr-util-1.6.3.tar.bz2) = 432692 bytes
-SHA1 (patch-aa) = 350b4e8fb3097d4df597c284321ca5dc25ce015c
+SHA1 (patch-aa) = c91b22de1f0c99e9fab57117e601bc623da44ce6
