@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.457 2025/07/08 20:17:43 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.458 2025/07/09 13:21:40 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27071,3 +27071,4 @@ git-gitk<2.50.1	remote-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2761
 git-gitk<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-27614
 git-base<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-48384
 git-base<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-48385
+gnutls<3.8.10	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-32988
