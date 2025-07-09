@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/04/24 14:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/07/09 08:18:19 hauke Exp $
 
 DISTNAME=	ghex-3.18.4
 PKGREVISION=	17
@@ -17,6 +17,8 @@ PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/data/gtkhex-3.pc
+
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-undefined
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
