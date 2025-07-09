@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2013/12/10 08:27:06 obache Exp $
+$NetBSD: patch-aa,v 1.8 2025/07/09 09:42:49 jperkin Exp $
+
+* Remove hardcoded iconv const, let the configure test decide.
 
 * Use libtool in the wrapper directory instead of the one installed by
   apr.  Otherwise, dependency_libs in libaprutil-1.la is set incorrectly.
@@ -7,9 +9,20 @@ $NetBSD: patch-aa,v 1.7 2013/12/10 08:27:06 obache Exp $
   doesn't know about all dependencies of apr-util.  Otherwise the final binary
   wouldn't have the proper RPATHs.
 
---- configure.orig	2013-11-13 16:41:32.000000000 +0000
+--- configure.orig	2023-01-31 20:57:52.000000000 +0000
 +++ configure
-@@ -24308,7 +24308,7 @@ case $host in
+@@ -4461,10 +4461,6 @@ if test "x$apu_preload_done" != "xyes" ;
+         ;;
+     *-solaris2*)
+ 
+-  if test -z "$apu_iconv_inbuf_const"; then
+-    test "x$silent" != "xyes" && echo "  setting apu_iconv_inbuf_const to \"1\""
+-    apu_iconv_inbuf_const="1"
+-  fi
+ 
+ 
+   if test -z "$apu_crypt_threadsafe"; then
+@@ -24790,7 +24786,7 @@ case $host in
              < $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
          ;;
      *)

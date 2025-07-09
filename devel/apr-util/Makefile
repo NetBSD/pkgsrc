@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/04/17 21:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/07/09 09:42:49 jperkin Exp $
 
 DISTNAME=	apr-util-1.6.3
 PKGREVISION=	8
@@ -31,6 +31,8 @@ MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+TEST_TARGET=	test
 
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
