@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4217 2025/07/09 17:22:14 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4218 2025/07/09 17:25:08 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6236,3 +6236,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/jjui version 0.8.12 [wiz 2025-07-09]
 	Updated lang/gcc13-gnat to 13.4.0nb1 [dkazankov 2025-07-09]
 	Updated lang/gcc13-gnat-libs to 13.4.0nb2 [dkazankov 2025-07-09]
+	Updated lang/gcc14-gnat to 14.3.0nb2 [dkazankov 2025-07-09]
