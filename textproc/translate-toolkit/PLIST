@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/25 10:56:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/07/09 11:24:34 adam Exp $
 bin/android2po
 bin/build_tmdb
 bin/csv2po
@@ -487,6 +487,9 @@ ${PYSITELIB}/translate/lang/team.pyo
 ${PYSITELIB}/translate/lang/th.py
 ${PYSITELIB}/translate/lang/th.pyc
 ${PYSITELIB}/translate/lang/th.pyo
+${PYSITELIB}/translate/lang/tok.py
+${PYSITELIB}/translate/lang/tok.pyc
+${PYSITELIB}/translate/lang/tok.pyo
 ${PYSITELIB}/translate/lang/tr.py
 ${PYSITELIB}/translate/lang/tr.pyc
 ${PYSITELIB}/translate/lang/tr.pyo
