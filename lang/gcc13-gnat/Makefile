@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2025/07/02 18:09:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/09 17:10:43 dkazankov Exp $
 
-GCC_PKGNAME=		gcc13
-GCC_DIST_VERSION=	13.4.0
-
-PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
-#PKGREVISION=	4
-COMMENT=	GNAT Compiler and Ada tools
-DISTNAME=	gcc-${GCC_DIST_VERSION}
+DISTNAME=	gcc-${PKGVERSION_NOREV}
+PKGNAME=	gcc13-gnat-13.4.0
+PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
+COMMENT=	GNAT Compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 INFO_FILES=		yes
@@ -43,9 +40,7 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
-GNAT_SUBPREFIX=		${GCC_PKGNAME}-gnat
-GNAT_PREFIX=		${PREFIX}/${GNAT_SUBPREFIX}
-GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/${PKGBASE}
 
 .include "options.mk"
 
@@ -63,8 +58,8 @@ LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
-BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
-BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
 BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
@@ -105,8 +100,8 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++,ada --enable-stage1-languages=c++,ada
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--with-local-prefix=${GNAT_PREFIX:Q}
-CONFIGURE_ARGS+=	--with-gxx-include-dir=${GNAT_PREFIX}/include/c++
+CONFIGURE_ARGS+=	--with-local-prefix=${PREFIX}/${PKGBASE}
+CONFIGURE_ARGS+=	--with-gxx-include-dir=${PREFIX}/${PKGBASE}/include/c++
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:Q}
@@ -205,13 +200,7 @@ TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
-	${FIND} ${GNAT_SUBPREFIX} \( -type f -or -type l \) -print | ${SORT};
-
-.include "../../archivers/zstd/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
-
-.include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+	${FIND} ${PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
@@ -223,13 +212,19 @@ post-test:
 
 post-install:
 # Fix group write mode
-	${CHMOD} g-w ${DESTDIR}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adainclude/standard.ads.h
+	${CHMOD} g-w ${DESTDIR}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adainclude/standard.ads.h
 # Create old name that modern gnat no longer provides
-	${TEST} -f ${DESTDIR}${GNAT_PREFIX}/bin/gnat && \
-		( cd ${DESTDIR}${GNAT_PREFIX}/bin ; ${LN} -f gnat ada )
+	${TEST} -f ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gnat && \
+		( cd ${DESTDIR}${PREFIX}/${PKGBASE}/bin ; ${LN} -f gnat ada )
 .if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
-	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m32 || ${TRUE}
-	${SH} files/values.c ${DESTDIR}${GNAT_PREFIX}/bin/gcc -m64 || ${TRUE}
+	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m32 || ${TRUE}
+	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m64 || ${TRUE}
 .endif
+
+.include "../../archivers/zstd/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
