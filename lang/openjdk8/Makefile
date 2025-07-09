@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2025/06/15 13:40:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.140 2025/07/09 09:33:12 jperkin Exp $
 
 DISTNAME=	jdk8u-${GITHUB_TAG}
 PKGNAME=	openjdk8-1.8.${GITHUB_TAG:C/.*u([0-9]+).*/\1/}
@@ -108,6 +108,7 @@ CONFIGURE_ENV+=	CXXFLAGS_JDK=${CXXFLAGS:Q}
 .if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
 MAKE_ENV+=	USE_GCC=1
 MAKE_ENV+=	ARCH_DATA_MODEL=${ABI:Q}
+CFLAGS+=	-Wno-error=incompatible-pointer-types
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
