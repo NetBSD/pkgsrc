@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4212 2025/07/09 07:54:01 kim Exp $
+$NetBSD: CHANGES-2025,v 1.4213 2025/07/09 11:27:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6229,3 +6229,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go123 to 1.23.11 [bsiegert 2025-07-09]
 	Updated lang/go124 to 1.24.5 [bsiegert 2025-07-09]
 	Updated shells/tcsh to 6.24.16 [kim 2025-07-09]
+	Updated textproc/translate-toolkit to 3.15.6 [adam 2025-07-09]
+	Updated devel/py-progress to 1.6.1 [adam 2025-07-09]
