@@ -592,7 +592,7 @@ int input(void)	/* get next lexical input character */
 
 void unput(int c)	/* put lexical character back on input */
 {
-	if (c == '\n')  
+	if (c == '\n')
 		lineno--;
 	if (yysptr >= yysbuf + sizeof(yysbuf))
 		FATAL("pushed back too much: %.20s...", yysbuf);

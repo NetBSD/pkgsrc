@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2023/02/24 20:57:50 vins Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/09 17:11:22 rillig Exp $
 #
 # This file is copied from "makefile.orig" with the following
 # modifications for pkgsrc:
 #
 #    * Some problematic comment lines and unnecessary make targets have
-#      been stripped. 
+#      been stripped.
 #    * Use the supplied awkgram.tab.[ch] files instead of regenerating
 #      them with yacc.
 #    * Use the supplied proctab.c file instead of regenerating it
