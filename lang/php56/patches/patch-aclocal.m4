@@ -1,7 +1,8 @@
-$NetBSD: patch-aclocal.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
+$NetBSD: patch-aclocal.m4,v 1.4 2025/07/09 10:22:20 jperkin Exp $
 
 * Adjust PHP directories.
 * Adjust PHP library name.
+* GCC 14 -Werror fixes.
 
 --- aclocal.m4.orig	2019-01-09 10:25:55.000000000 +0000
 +++ aclocal.m4
@@ -32,7 +33,21 @@ $NetBSD: patch-aclocal.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
    php_sapi_module=static
  ])
  
-@@ -2771,8 +2771,8 @@ AC_DEFUN([PHP_CHECK_PDO_INCLUDES],[
+@@ -1362,11 +1362,13 @@ AC_DEFUN([PHP_READDIR_R_TYPE],[
+ #define _REENTRANT
+ #include <sys/types.h>
+ #include <dirent.h>
++#include <stdlib.h>
+ 
+ #ifndef PATH_MAX
+ #define PATH_MAX 1024
+ #endif
+ 
++int
+ main() {
+   DIR *dir;
+   char entry[sizeof(struct dirent)+PATH_MAX];
+@@ -2771,8 +2773,8 @@ AC_DEFUN([PHP_CHECK_PDO_INCLUDES],[
        pdo_cv_inc_path=$abs_srcdir/ext
      elif test -f $abs_srcdir/ext/pdo/php_pdo_driver.h; then
        pdo_cv_inc_path=$abs_srcdir/ext
