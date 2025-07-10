@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/07/10 14:03:15 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/07/10 15:27:43 dkazankov Exp $
 
 BUILDLINK_TREE+=	adasat-24
 
@@ -10,10 +10,10 @@ BUILDLINK_PKGSRCDIR.adasat-24?=		../../math/ada-adasat-24
 BUILDLINK_DEPMETHOD.adasat-24?=		build
 
 BUILDLINK_CONTENTS_FILTER.adasat-24=	\
-    ${EGREP} "${GNAT_PKGBASE}/include/.*$$|${GNAT_PKGBASE}/lib/.*$$|${GNAT_PKGBASE}/share/gpr/.*$$"
+	${EGREP} "${GNAT_PKGBASE}/include/.*$$|${GNAT_PKGBASE}/lib/.*$$|${GNAT_PKGBASE}/share/gpr/.*$$"
 
 BUILDLINK_FNAME_TRANSFORM.adasat-24+=	\
-    -e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
+	-e "s|${BUILDLINK_DIR}/${GNAT_PKGBASE}/|${BUILDLINK_DIR}/|g"
 
 
 .endif
