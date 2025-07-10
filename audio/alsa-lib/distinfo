@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2025/04/28 11:05:35 wiz Exp $
+$NetBSD: distinfo,v 1.46 2025/07/10 14:41:01 jperkin Exp $
 
 BLAKE2s (alsa-lib-1.2.14.tar.bz2) = 04fdbd69e52b2eb53e60ca9f07be3fb0d42d328d4a587d21066cf3ebc9c1958a
 SHA512 (alsa-lib-1.2.14.tar.bz2) = 2716cc3a2299da4a1a170d734af082d78dc452b253179d0f1a9ec190140734aecf002b6924eec4ff2699ce88ce1ae5c56821c267f36384910984db726d1f9626
@@ -21,6 +21,6 @@ SHA1 (patch-src_control_control__hw.c) = 07cfe3abe586b32f6b989403cd162599da07e86
 SHA1 (patch-src_pcm_pcm__mmap.c) = bf5b59af96110bf8f51269b86bcf60ec0e23a06e
 SHA1 (patch-src_seq_seq__midi__event.c) = c5a673a14c23aeefc512f04ac550b906fa4f7d30
 SHA1 (patch-src_shmarea.c) = 1a3b508fafe3ef7fda76620ed1c06035f32e9096
-SHA1 (patch-src_ucm_main.c) = 965bde91f225bfa685eb7ddadad9c01a04f42b20
+SHA1 (patch-src_ucm_main.c) = 3bcf60e49bf34059cb5d2eb7aca7e5354bd0e304
 SHA1 (patch-src_ucm_parser.c) = cf53012d24ff7df16800be4b0e6287ae0c3b0799
 SHA1 (patch-src_ucm_ucm__exec.c) = 93380f00497c0f645d4bc5375b66f9f05b4934f1
