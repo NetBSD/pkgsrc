@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2025/02/26 11:43:05 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/07/10 10:54:39 jperkin Exp $
 
 BLAKE2s (avahi-0.8.tar.gz) = d7f8334157bd36c5cdafbf804c293b593a7f2acd7b299454ac3823e9a705d608
 SHA512 (avahi-0.8.tar.gz) = c6ba76feb6e92f70289f94b3bf12e5f5c66c11628ce0aeb3cadfb72c13a5d1a9bd56d71bdf3072627a76cd103b9b056d9131aa49ffe11fa334c24ab3b596c7de
@@ -7,7 +7,7 @@ SHA1 (patch-CVE-2023-38469) = 808917aa3ea4586124d8368d4579085d63b44116
 SHA1 (patch-CVE-2023-38470) = e2d6c8d561aa46b3f56ada9b01eee39ae6f956ba
 SHA1 (patch-CVE-2023-38472) = 1c816bc129e860e55ca7d88951f9ce041d02473c
 SHA1 (patch-CVE-2023-38473) = e07d9213ff1c045d6bc570f9fea8272a0fb7ed04
-SHA1 (patch-aa) = 95b883bf14dd1852cdf0ea8a364c57717eebb03f
+SHA1 (patch-aa) = 4f421c0fc28da5ebeea1840b60f481931401df1e
 SHA1 (patch-ab) = 1f482b2a2f9a9bc59c3b1e300bad2896e2cf7bd2
 SHA1 (patch-ah) = 4b3ffdb927daef8c939527fd5c5893f9f88b3ff3
 SHA1 (patch-ai) = dcf1e3149b09d7354ce90490f9c1ff0b584710c8
