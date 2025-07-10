@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/07/10 12:27:48 dkazankov Exp $
+
+BLAKE2s (gprbuild-24.0.0.tar.gz) = d8279a6ae9f2df9fa76fa5eccb9d58a39f0a71cf27773ed140f2e20f93778e12
+SHA512 (gprbuild-24.0.0.tar.gz) = 09da4d54f2f151e9f9453e1a459533e2373eb5d4c51831be2bf90964ebcf653752de2f8b271c77f7b599f62146516fc60258ec3c96779fa2b52cd52979c6bd03
+Size (gprbuild-24.0.0.tar.gz) = 959615 bytes
+SHA1 (patch-Makefile) = 56c90f388d955d0a6cb46e8b4f4eb23b73557b0e
+SHA1 (patch-gpr_gpr.gpr) = b18713da0795ebefd241414e5e9171ecfa9b79db
+SHA1 (patch-gpr_src_gpr-util-put__resource__usage____unix.adb) = 73cf60af1123151a4177250ac496384cb55e72ec
+SHA1 (patch-gpr_src_gpr_imports.c) = 1b72dd42355c7f7189d4a4a8a7bcf7153f206731
