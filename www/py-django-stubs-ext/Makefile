@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/04/29 08:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/10 15:58:06 adam Exp $
 
-DISTNAME=	django_stubs_ext-5.2.0
+DISTNAME=	django_stubs_ext-5.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-stubs-ext/}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/typeddjango/django-stubs
 COMMENT=	Monkey-patching and extensions for django-stubs
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
