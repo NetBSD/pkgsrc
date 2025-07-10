@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.203 2025/06/04 14:43:09 taca Exp $
+# $NetBSD: Makefile,v 1.204 2025/07/10 15:24:28 taca Exp $
 
-DISTNAME=	samba-4.21.6
+DISTNAME=	samba-4.21.7
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
