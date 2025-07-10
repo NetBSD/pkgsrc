@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2025/07/07 19:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2025/07/10 14:36:20 jperkin Exp $
 
 BASH_VERSION=		5.3
 #BASH_PATCHLEVEL=	37
@@ -22,6 +22,7 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 CONFIGURE_ARGS=		LOCAL_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:M*:Q}
 CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/sbin:/usr/sbin:/usr/bin:/bin:${PREFIX}/sbin:${PREFIX}/bin:/usr/local/sbin:/usr/local/bin\""
+BUILD_TARGET=		all loadables
 TEST_TARGET=		test
 
 PKGCONFIG_OVERRIDE=	support/bash.pc.in
