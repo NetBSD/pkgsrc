@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/07/10 16:55:09 dkazankov Exp $
+
+Fix cross compiling test
+
+--- configure.orig	2023-09-07 14:33:41.000000000 +0300
++++ configure
+@@ -1895,7 +1895,7 @@
+ end Lib;
+ EOF
+ 
+-      if test "x$host_alias" != "x$target_alias"; then
++      if test "x$host_alias" != "x$target_alias" && test "x" != "x$target_alias"; then
+           $gprbuild --target=$target_alias -c -q -P$tmp/lib 2>/dev/null
+       else
+           $gprbuild -c -q -P$tmp/lib 2>/dev/null
