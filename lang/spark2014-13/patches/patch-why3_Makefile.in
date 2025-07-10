@@ -1,0 +1,15 @@
+$NetBSD: patch-why3_Makefile.in,v 1.1 2025/07/10 12:43:03 dkazankov Exp $
+
+NetBSD doesn't have -C option
+
+--- why3/Makefile.in.orig	2022-12-21 10:10:00.000000000 +0200
++++ why3/Makefile.in
+@@ -844,7 +844,7 @@
+ 	$(INSTALL_DATA) share/images/*.png $(DATADIR)/why3/images
+ 	$(MKDIR_P) $(DATADIR)/why3/lang
+ 	# Install all Why3 tools
+-	for f in bin/why3*.@OCAMLBEST@; do install -C "$$f" $(BINDIR)/"$$(basename "$$f" .@OCAMLBEST@)$(EXE)"; done
++	for f in bin/why3*.@OCAMLBEST@; do install "$$f" $(BINDIR)/"$$(basename "$$f" .@OCAMLBEST@)$(EXE)"; done
+ 	# Install lang files for Why3 IDE
+ 	for f in share/lang/*.lang; do $(INSTALL_DATA) "$$f" "$(DATADIR)/why3/lang/$$(basename $$f)"; done
+ 

@@ -1,0 +1,66 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/10 12:43:03 dkazankov Exp $
+
+Fix install directory, build type, version number and NetBSD sha256sum
+
+--- Makefile.orig	2023-01-05 11:22:11.000000000 +0200
++++ Makefile
+@@ -41,7 +41,9 @@
+ 	install-all why3 all setup all-nightly doc-nightly run-benchmark \
+         create-benchmark
+ 
+-INSTALLDIR=$(CURDIR)/install
++PREFIX=
++DESTDIR=
++INSTALLDIR=$(DESTDIR)$(PREFIX)
+ SHAREDIR=$(INSTALLDIR)/share
+ SIDDIR=$(SHAREDIR)/gnat2why-sids
+ INCLUDEDIR=$(INSTALLDIR)/include/spark
+@@ -55,9 +57,10 @@
+ DOC=ug lrm
+ # Control if gnatprove is built in production or debug mode
+ PROD=-XBuild=Production
++GPRARGS='$(PROD)'
+ CP=cp -pr
+ MV=mv -f
+-VERSION=0.0w
++VERSION='FSF 13.0'
+ 
+ # main target for developers
+ all: gnat2why gnatprove why3
+@@ -78,7 +81,7 @@
+ #   install-all  install of gnatprove and why3
+ 
+ setup:
+-	cd why3 && ./configure --prefix=$(INSTALLDIR)/libexec/spark \
++	cd why3 && ./configure --prefix=$(PREFIX)/libexec/spark \
+ 		--enable-relocation --disable-js-of-ocaml \
+ 		--disable-hypothesis-selection --disable-re
+ 
+@@ -89,15 +92,16 @@
+ install-all:
+ 	$(MAKE) install
+ 	$(MAKE) -C why3 install_spark2014_dev
+-	sha256sum install/libexec/spark/bin/gnatwhy3 | cut -d' ' -f1 > install/libexec/spark/bin/gnatwhy3.hash
++	sha256 -n $(INSTALLDIR)/libexec/spark/bin/gnatwhy3 | cut -d' ' -f1 > $(INSTALLDIR)/libexec/spark/bin/gnatwhy3.hash
+ 	# Create the fake prover scripts to help extract benchmarks.
+-	$(CP) benchmark_script/fake_* install/libexec/spark/bin
++	$(CP) benchmark_script/fake_* $(INSTALLDIR)/libexec/spark/bin
+ 
+ install:
+ 	mkdir -p $(INSTALLDIR)/bin $(CONFIGDIR) $(THEORIESDIR) \
+ 	  $(RUNTIMESDIR) $(INCLUDEDIR) $(LIBDIR)
+ 	@echo "Generate default target.atp in $(INSTALLDIR)/bin:"
+ 	gcc -c -gnats spark2014vsn.ads -gnatet=$(INSTALLDIR)/bin/target.atp
++	$(CP) install/bin/* $(INSTALLDIR)/bin
+ 	$(CP) share/spark/help.txt $(GNATPROVEDIR)
+ 	$(CP) share/spark/config/* $(CONFIGDIR)
+ 	$(CP) share/spark/theories/*why $(THEORIESDIR)
+@@ -131,7 +135,7 @@
+ 	# This script should be run *ONLY* in developer build not in prod
+ 	# (gnat2why-nightly)
+ 	python3 scripts/why3keywords.py why3/src/core/keywords.ml src/why/why-keywords.adb
+-	$(MAKE) -C gnat2why
++	$(MAKE) -C gnat2why AUTOMATED=1 GPRARGS=$(GPRARGS)
+ 	# (The timestamp of) src/why/xgen/gnat_ast.ml is updated every time `make` is called in
+ 	# `gnat2why`, causing a recompilation of why3 every time because Why3's makefile is
+ 	# based on timestamps not file content. So we check if anything changed before copying.
