@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4219 2025/07/09 17:27:25 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4220 2025/07/10 06:41:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6238,3 +6238,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc13-gnat-libs to 13.4.0nb2 [dkazankov 2025-07-09]
 	Updated lang/gcc14-gnat to 14.3.0nb2 [dkazankov 2025-07-09]
 	Updated lang/gcc14-gnat-libs to 14.3.0nb3 [dkazankov 2025-07-09]
+	Updated www/hugo to 0.148.0 [triaxx 2025-07-10]
