@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.86 2025/07/05 08:28:43 wiz Exp $
+$NetBSD: distinfo,v 1.87 2025/07/10 14:36:20 jperkin Exp $
 
 BLAKE2s (bash-5.3.tar.gz) = 48e50ced4874740dc0f36bd19d0f7aab0cb5d6d4b04899e27143707fcab41d4c
 SHA512 (bash-5.3.tar.gz) = 05ef640e8ba011d10f858a270c626daa42ed5a75789d0298ae0ced9b2ebaf93d94d8ed5a211ac30cd34e82af8865e50024144c88a3c979bee7c38e449350e02e
 Size (bash-5.3.tar.gz) = 11354270 bytes
 SHA1 (patch-Makefile.in) = 5e5333bfbb7ea03207e01ea75caeca0d9c9ecdc0
 SHA1 (patch-examples_loadables_Makefile.in) = 0d27f82399c4ae9fae8ac0f8c48c68a23a3dcbd8
+SHA1 (patch-examples_loadables_finfo.c) = 3151c7cc860f263ff055654aadb61cc62141e157
