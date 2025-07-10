@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/12/08 12:28:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/10 20:25:40 ktnb Exp $
 
-DISTNAME=	apache-maven-3.8.6
+DISTNAME=	apache-maven-3.9.10
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 SUBST_CLASSES+=		maven
 SUBST_FILES.maven=	bin/m2.conf bin/mvn
 SUBST_STAGE.maven=	pre-configure
-SUBST_VARS.maven=	PKG_JAVA_HOME PKG_SYSCONFDIR PREFIX
+SUBST_VARS.maven=	PKG_JAVA_HOME PKG_SYSCONFDIR
 
 INSTALLATION_DIRS=	bin etc/maven lib/java/maven lib/java/maven/boot \
 			share/doc/java/maven share/examples/maven \
