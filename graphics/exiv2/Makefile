@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/03/02 09:41:02 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2025/07/10 14:12:27 jperkin Exp $
 
 DISTNAME=	exiv2-0.28.5
 CATEGORIES=	graphics
@@ -29,7 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-CXXFLAGS.SunOS+=	-fPIC -DICONV_ACCEPTS_CONST_INPUT
+CXXFLAGS.SunOS+=	-fPIC
 
 PKGCONFIG_OVERRIDE=	cmake/exiv2.pc.in
 
