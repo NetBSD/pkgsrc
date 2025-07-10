@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2025/05/01 16:50:44 tnn Exp $
+# $NetBSD: Makefile,v 1.256 2025/07/10 10:23:55 jperkin Exp $
 
 DISTNAME=	netpbm-11.02.09
 PKGREVISION=	6
@@ -84,6 +84,11 @@ SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE/s/1$$/600/'
 SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE[^0-9]*\//s/SOURCE/SOURCE 600/'
 SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE$$/s/E$$/E 600/'
 SUBST_SED.xopen+=	-e '/_POSIX_SOURCE.*fdopen/s/_POSIX_SOURCE/_XOPEN_SOURCE 600/'
+.endif
+
+# Fixing this properly would require patching far too many files.
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=implicit-function-declaration
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 share/netpbm
