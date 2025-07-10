@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/10 12:35:22 dkazankov Exp $
+
+Fix target calculation
+Add necessary parameters for pkgsrc build
+
+--- Makefile.orig	2023-09-21 18:57:14.000000000 +0300
++++ Makefile
+@@ -72,7 +72,7 @@
+ endif
+ 
+ TARGET := $(shell gcc -dumpmachine)
+-NORMALIZED_TARGET := $(subst normalized_target:,,$(wordlist 6,6,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers)))
++NORMALIZED_TARGET := $(lastword $(subst :, ,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers | grep ' 1 normalized_target:')))
+ ifeq ($(NORMALIZED_TARGET),)
+   $(error No toolchain found for target "$(TARGET)")
+ endif
+@@ -129,12 +129,13 @@
+ 
+ # Used to pass extra options to GPRBUILD, like -d for instance
+ GPRBUILD_OPTIONS=
++GPRINSTALL_OPTIONS=
+ 
+ BUILDER=$(GNATCOV_PROJECT_PATH) gprbuild -p -m $(GTARGET) $(RBD) \
+         -j$(PROCESSORS) $(GPR_VARS) \
+ 	$(GPRBUILD_OPTIONS) $(GNATCOV_BUILD_OPTS)
+ INSTALLER=gprinstall -p -f $(GTARGET) $(GPR_VARS) \
+-	$(RBD) --sources-subdir=include/gnatcoll --prefix=$(prefix)$(integrated_install)
++	$(RBD) --sources-subdir=include/gnatcoll --prefix=$(prefix)$(integrated_install) $(GPRINSTALL_OPTIONS)
+ CLEANER=gprclean -q $(RBD) $(GTARGET)
+ UNINSTALLER=$(INSTALLER) -p -f --install-name=gnatcoll --uninstall
+ 
