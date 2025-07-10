@@ -1,0 +1,17 @@
+$NetBSD: patch-gnatprove.gpr,v 1.1 2025/07/10 12:43:03 dkazankov Exp $
+
+Add libpthread link on NetBSD
+
+--- gnatprove.gpr.orig	2023-01-05 11:22:11.000000000 +0200
++++ gnatprove.gpr
+@@ -61,6 +61,10 @@
+       case Target is
+          when "x86-linux" | "x86_64-linux" =>
+             for Default_Switches ("Ada") use ("-pthread");
++         when "x86_64-netbsd" =>
++            for Default_Switches ("Ada") use ("-lpthread");
++            for Default_Switches ("C") use ("-lpthread");
++            for Linker_Options use ("-lpthread");
+          when others =>
+             null;
+       end case;
