@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4231 2025/07/10 18:53:12 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4232 2025/07/10 20:25:59 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6251,3 +6251,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/ada-xmlada-25 version 25.0.0 [dkazankov 2025-07-10]
 	Added devel/ada-libgpr-25 version 25.0.0 [dkazankov 2025-07-10]
 	Added devel/ada-gnatcoll-core-25 version 25.0.0 [dkazankov 2025-07-10]
+	Updated devel/apache-maven to 3.9.10 [ktnb 2025-07-10]
