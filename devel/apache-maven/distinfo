@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2022/12/08 12:28:41 schmonz Exp $
+$NetBSD: distinfo,v 1.23 2025/07/10 20:25:40 ktnb Exp $
 
-BLAKE2s (apache-maven-3.8.6-bin.tar.gz) = f8c4f231ab4e04a38fee9cc82d837be1e89a8bc4cc2ed7bc905abace69c3d283
-SHA512 (apache-maven-3.8.6-bin.tar.gz) = f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-Size (apache-maven-3.8.6-bin.tar.gz) = 8676320 bytes
-SHA1 (patch-bin_m2.conf) = 4fb50adbfb744635281853f0b81ec95a5fdab504
-SHA1 (patch-bin_mvn) = 77195b4e468af5041e11e5d4c0677a58465060e2
+BLAKE2s (apache-maven-3.9.10-bin.tar.gz) = 3f22534dea29ce40296e616ffcbbce4ed8fb38d3736d5327b031c7017e4d132f
+SHA512 (apache-maven-3.9.10-bin.tar.gz) = 4ef617e421695192a3e9a53b3530d803baf31f4269b26f9ab6863452d833da5530a4d04ed08c36490ad0f141b55304bceed58dbf44821153d94ae9abf34d0e1b
+Size (apache-maven-3.9.10-bin.tar.gz) = 8885210 bytes
+SHA1 (patch-bin_m2.conf) = a61e30a06282a4e08914a85793449a3a60a9ab75
+SHA1 (patch-bin_mvn) = 9aa27abc262cd4788c140ff9d5564e87d64b6c7a
