@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4228 2025/07/10 15:58:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4229 2025/07/10 16:56:22 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/ada-adasat-25 version 25.0.0 [dkazankov 2025-07-10]
 	Updated www/py-django-allauth to 65.10.0 [adam 2025-07-10]
 	Updated www/py-django-stubs-ext to 5.2.1 [adam 2025-07-10]
+	Added textproc/ada-xmlada-25 version 25.0.0 [dkazankov 2025-07-10]
