@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2013/04/21 00:58:47 rodent Exp $
+$NetBSD: patch-aa,v 1.4 2025/07/10 10:54:39 jperkin Exp $
 
 Add NetBSD support.
+Fix -Wint-conversion.
 
---- avahi-core/iface-pfroute.c.orig	2010-06-26 00:14:35.000000000 +0000
+--- avahi-core/iface-pfroute.c.orig	2020-02-17 04:46:57.505614727 +0000
 +++ avahi-core/iface-pfroute.c
 @@ -46,6 +46,13 @@
  #include "iface-pfroute.h"
@@ -18,3 +19,12 @@ Add NetBSD support.
  static int bitcount (unsigned int n)
  {
    int count=0 ;
+@@ -519,7 +526,7 @@ void avahi_interface_monitor_sync(AvahiI
+             avahi_log_error("malloc failed in avahi_interface_monitor_sync");
+             goto end;
+     }
+-    lifc.lifc_family = NULL;
++    lifc.lifc_family = (sa_family_t)NULL;
+     lifc.lifc_flags = 0;
+     if(ioctl(sockfd, SIOCGLIFCONF, &lifc) < 0) {
+         avahi_log_error(__FILE__": ioctl(SIOCGLIFCONF): %s", strerror(errno));
