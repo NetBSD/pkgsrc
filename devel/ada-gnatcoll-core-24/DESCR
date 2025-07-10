@@ -1,0 +1,8 @@
+The GNAT Components Collection (GNATcoll) - Core packages
+
+The reusable library known as the GNAT Component Collection (GNATColl) is
+based on one main principle: general-purpose packages that are part of
+the GNAT technology should also be available to GNAT user application code.
+The GNATColl components complement the predefined Ada and GNAT libraries
+and deal with a range of common programming issues including string and text
+processing, memory management, and file handling.
