@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4226 2025/07/10 15:24:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4227 2025/07/10 15:48:51 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6245,3 +6245,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/spark2014-13 version 13.3.0 [dkazankov 2025-07-10]
 	Added math/ada-adasat-24 version 24.0.0 [dkazankov 2025-07-10]
 	Updated net/samba4 to 4.21.7 [taca 2025-07-10]
+	Added math/ada-adasat-25 version 25.0.0 [dkazankov 2025-07-10]
