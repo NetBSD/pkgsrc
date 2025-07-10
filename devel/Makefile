@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4485 2025/07/10 12:35:21 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4486 2025/07/10 17:43:35 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -128,6 +128,7 @@ SUBDIR+=	action-validator
 SUBDIR+=	acunia-jam
 SUBDIR+=	ada-gnatcoll-core-24
 SUBDIR+=	ada-libgpr-24
+SUBDIR+=	ada-libgpr-25
 SUBDIR+=	ade
 SUBDIR+=	adocman
 SUBDIR+=	aegis
