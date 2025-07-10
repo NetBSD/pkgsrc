@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/07/10 12:35:21 dkazankov Exp $
+
+BLAKE2s (gnatcoll-core-24.0.0.tar.gz) = dfd9779a3aee0a5bccad92fcfb3e6473065a73f6cfb33a2319be6a6e974db191
+SHA512 (gnatcoll-core-24.0.0.tar.gz) = 1f1d470e7b74f238682f0938efe04c303c6bfca5a6b723eb789f5cb4bd33a199a9f2323626b8887758f01709ab1ba4d8045c56ce45f02e535babca4025662d9f
+Size (gnatcoll-core-24.0.0.tar.gz) = 764526 bytes
+SHA1 (patch-Makefile) = f97dc157f447af25972d7e516bc72a8e5e8b1dbc
+SHA1 (patch-src_executable__path.c) = b9a405eabad3f8b4063498ac28937a8ce3cfe58a
+SHA1 (patch-src_os_unix_libc-wrappers.c) = 4b00d65e5716ee2dd66e0949cd146be7a3b80ee2
+SHA1 (patch-src_os_unix_process-wrappers.c) = 63708233981b88249d3cd58d90599f02dba37337
