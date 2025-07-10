@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1524 2025/07/10 10:50:23 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1525 2025/07/10 16:55:09 dkazankov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -50,6 +50,7 @@ SUBDIR+=	R-xmlparsedata
 SUBDIR+=	R-yaml
 SUBDIR+=	WordNet
 SUBDIR+=	ada-xmlada-24
+SUBDIR+=	ada-xmlada-25
 SUBDIR+=	aha
 SUBDIR+=	aiksaurus
 SUBDIR+=	align
