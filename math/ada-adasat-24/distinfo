@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/07/10 14:03:15 dkazankov Exp $
+
+BLAKE2s (AdaSAT-24.0.0.tar.gz) = e8ed8c0caf66fe8271e3882c68a2fc376ec734d3c54c2b8181aa242ed001af87
+SHA512 (AdaSAT-24.0.0.tar.gz) = 313310537c5d6a024e6acae4e2d6fba29b4ab6221a0d793cd9af6b7fec16be8ea59551566781eec676c544066f5721a03e61a340e0a45e3f1af51992fda096c6
+Size (AdaSAT-24.0.0.tar.gz) = 30088 bytes
+SHA1 (patch-Makefile) = c3f9108306b7d1812d5fbf8a1663ea75d92d1987
