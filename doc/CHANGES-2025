@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4222 2025/07/10 12:28:40 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4223 2025/07/10 12:36:16 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6241,3 +6241,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.148.0 [triaxx 2025-07-10]
 	Added textproc/ada-xmlada-24 version 24.0.0 [dkazankov 2025-07-10]
 	Added devel/ada-libgpr-24 version 24.0.0 [dkazankov 2025-07-10]
+	Added devel/ada-gnatcoll-core-24 version 24.0.0 [dkazankov 2025-07-10]
