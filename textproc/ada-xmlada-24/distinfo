@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/07/10 10:50:23 dkazankov Exp $
+
+BLAKE2s (xmlada-24.0.0.tar.gz) = a02dae17a91d326f06fc85e9b69ee5bfe181ab97ca3f7e3a846b71bc5928b643
+SHA512 (xmlada-24.0.0.tar.gz) = 4e6773a5fdf9b6ebb5afca913d77aba9f697768f28ef9b23b9277aa4ea4ce09de4e53655dd5559e2326ff847327adb53fa6b776775aa923100a2624df415c97d
+Size (xmlada-24.0.0.tar.gz) = 1053363 bytes
+SHA1 (patch-configure) = abb1e41b3b5bb7ec67a9cf06a353926334623d67
