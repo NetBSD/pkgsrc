@@ -1,0 +1,7 @@
+Implementation of a DPLL-based SAT solver in Ada
+
+Main features:
+- Conflict analysis and backjumping
+- Two-watched literals scheme
+- Built-in support for At-Most-One constraints
+- Custom theories
