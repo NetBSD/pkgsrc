@@ -1,0 +1,56 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+
+Fix target calculation
+Add necessary parameters for pkgsrc build
+Fix destdir building in rsync absence
+
+--- Makefile.orig	2024-09-24 12:28:32.000000000 +0300
++++ Makefile
+@@ -61,7 +61,7 @@
+ GNATCOLL_GPR=$(SOURCE_DIR)/gnatcoll.gpr
+ 
+ TARGET := $(shell gcc -dumpmachine)
+-NORMALIZED_TARGET := $(subst normalized_target:,,$(wordlist 6,6,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers)))
++NORMALIZED_TARGET := $(lastword $(subst :, ,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers | grep ' 1 normalized_target:')))
+ ifeq ($(NORMALIZED_TARGET),)
+   $(error No toolchain found for target "$(TARGET)")
+ endif
+@@ -98,8 +98,13 @@
+  --build=$(BUILD) \
+  --target=$(NORMALIZED_TARGET) \
+  --prefix=local-install \
+- --install \
+- --enable-shared=$(ENABLE_SHARED)
++ --enable-shared=$(ENABLE_SHARED) \
++ --add-gpr-path='./minimal,./core,./projects' \
++ --gpr-opts $(GPRBUILD_OPTIONS)
++
++INSTALL_ARGS= \
++ --prefix=local-install \
++ --gpr-opts $(GPRINSTALL_OPTIONS)
+ 
+ build:
+ 	rm -rf local-install
+@@ -112,18 +117,21 @@
+ endif
+ 
+ 	$(PYTHON) $(SOURCE_DIR)/minimal/gnatcoll_minimal.gpr.py build $(INSTR_BUILD_OPTS) $(BUILD_ARGS)
++	$(PYTHON) $(SOURCE_DIR)/minimal/gnatcoll_minimal.gpr.py install $(INSTALL_ARGS)
+ 
+ ifeq ($(GNATCOLL_MINIMAL_ONLY), no)
+ 	$(PYTHON) $(SOURCE_DIR)/core/gnatcoll_core.gpr.py build $(INSTR_BUILD_OPTS) $(BUILD_ARGS)
++	$(PYTHON) $(SOURCE_DIR)/core/gnatcoll_core.gpr.py install $(INSTALL_ARGS)
+ endif
+ 
+ ifeq ($(GNATCOLL_PROJECTS), yes)
+ 	$(PYTHON) $(SOURCE_DIR)/projects/gnatcoll_projects.gpr.py build $(INSTR_BUILD_OPTS) $(BUILD_ARGS)
++	$(PYTHON) $(SOURCE_DIR)/projects/gnatcoll_projects.gpr.py install $(INSTALL_ARGS)
+ endif
+ 
+ install:
+ 	@echo "Installing gnatcoll into $(prefix)"
+-	rsync -av ./local-install/ $(prefix)$(integrated_install)  
++	cp -r ./local-install/* $(prefix)$(integrated_install)  
+ 
+ ###########
+ # Cleanup #
