@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:46:03 nia Exp $
+$NetBSD: distinfo,v 1.17 2025/07/10 14:54:16 jperkin Exp $
 
 BLAKE2s (cogl-1.22.0.tar.xz) = 349a07926122632bf126258fa551e1c217ea79dc7559f68b781de7b14d7cb8b7
 SHA512 (cogl-1.22.0.tar.xz) = b19edced4282bd2b828357391fd6175feb483acfec87e344b7719215924dc8996dc8162d7b39d62a108d4f3ebd426caeefeab4e16b6c1962cc3383c239d6c359
 Size (cogl-1.22.0.tar.xz) = 1654120 bytes
 SHA1 (patch-cogl-winsys-cogl-winsys-glx.c) = 52be226fb3c62a3275ebec470597937e0b017f96
+SHA1 (patch-cogl_driver_gl_cogl-framebuffer-gl.c) = 593a5e156231877c0be54e72c33a52348aacee9f
 SHA1 (patch-cogl_driver_gl_gl_cogl-driver-gl.c) = 41d0010a6e2a6a1fb03b6fb23f34db59cb867e14
 SHA1 (patch-configure) = aee31057c06af64ec04bcd1b5750ed9a62658661
 SHA1 (patch-tests_conform_test-backface-culling.c) = e5141784424aed0f9a9e59b2a32e375d1a41e73b
