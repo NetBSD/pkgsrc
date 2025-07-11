@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/07/03 19:18:04 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/07/11 16:08:52 gdt Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
@@ -18,6 +18,7 @@ USE_CXX_FEATURES+=	c++17 charconv
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
 PYSETUPSUBDIR=		build/swig/python
+WHEEL_NAME=		gdal-${VERSION_BASE}
 
 # Upstream's distfile does not have a ready-to-use python module
 # source directory.  Creating it requires cmake, but apparently not
