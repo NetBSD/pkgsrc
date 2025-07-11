@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/11 18:02:07 scole Exp $
+
+BLAKE2s (thai-font-collection/1.02.tar.gz) = 8742b4d438221211dd8a5bb255bb5b4ad1f63f959c1d5fcd84e54aa70f6a01a7
+SHA512 (thai-font-collection/1.02.tar.gz) = 9fc8f05dd807cfdd1f4cbb917234686e51767b97db0d0626bdfa245aa15e18fe1f1f7903af0b57440e9c5c307cfe0976c2d6a1a2996e3f57bee57706193a1fb2
+Size (thai-font-collection/1.02.tar.gz) = 39160022 bytes
