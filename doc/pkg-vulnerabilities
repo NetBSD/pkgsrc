@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.458 2025/07/09 13:21:40 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.459 2025/07/11 07:20:23 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27072,3 +27072,12 @@ git-gitk<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-
 git-base<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-48384
 git-base<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-48385
 gnutls<3.8.10	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-32988
+apache<2.4.64	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-23048
+apache<2.4.64	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2025-49812
+apache-tomcat>=9<9.0.107	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52434
+apache-tomcat>=9<9.0.107	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52520
+apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52520
+apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52520
+apache-tomcat>=9<9.0.107	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
+apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
+apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
