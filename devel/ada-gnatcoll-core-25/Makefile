@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/11 14:52:45 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -46,7 +46,7 @@ USE_PKGSRC_GCC_RUNTIME?=	no
 PLIST.shlibs=			yes
 MAKE_FLAGS+=			ENABLE_SHARED=yes
 BUILDLINK_DEPMETHOD.xmlada-25=	full
-BUILDLINK_DEPMETHOD.gprlib-25=	full
+BUILDLINK_DEPMETHOD.libgpr-25=	full
 .else
 MAKE_FLAGS+=			ENABLE_SHARED=no
 .endif
