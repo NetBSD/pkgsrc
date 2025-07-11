@@ -1,0 +1,17 @@
+$NetBSD: patch-xref_gnatcoll__xref.gpr,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+
+Fix project paths
+
+--- xref/gnatcoll_xref.gpr.orig	2022-09-02 15:43:38.000000000 +0300
++++ xref/gnatcoll_xref.gpr
+@@ -24,8 +24,8 @@
+ with "gnatcoll_xref_conf.gpr";
+ with "gnatcoll";
+ with "gnatcoll_iconv";
+-with "gnatcoll_sql";
+-with "gnatcoll_sqlite";
++with "../sql/gnatcoll_sql";
++with "../sqlite/gnatcoll_sqlite";
+ 
+ library project GnatColl_Xref is
+ 

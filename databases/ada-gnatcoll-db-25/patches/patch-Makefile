@@ -1,0 +1,111 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+
+Create single common Makefile to control all components.
+Makefile in gnatcoll_db2ada can build and install four different apps,
+but one at a time. So we need special build and install process for
+this directory.
+
+--- /dev/null
++++ Makefile
+@@ -0,0 +1,101 @@
++prefix ?= $(dir $(shell $(WHICH) gnatls))..
++ENABLE_SHARED ?= yes
++BUILD         ?= PROD
++PROCESSORS    ?= 0
++TARGET ?= $(shell gcc -dumpmachine)
++
++BUILD_DIRS    ?= sql sqlite postgres xref gnatinspect gnatcoll_db2ada
++DB_BACKENDS   ?= db postgres sqlite all
++
++NORMALIZED_TARGET := $(lastword $(subst :, ,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers | grep ' 1 normalized_target:')))
++ifeq ($(NORMALIZED_TARGET),)
++  $(error No toolchain found for target "$(TARGET)")
++endif
++
++ifeq ($(ENABLE_SHARED), yes)
++   LIBRARY_TYPES=static,static-pic,relocatable
++else
++   LIBRARY_TYPES=static
++endif
++
++# Used to pass extra options to GPRBUILD, like -d for instance
++GPRBUILD_OPTIONS=
++GPRINSTALL_OPTIONS=
++
++.PHONY: setup
++setup: $(BUILD_DIRS:%=setup-%)
++
++setup-%:
++	cd $* && \
++	make prefix=$(prefix) BUILD=$(BUILD) ENABLE_SHARED=$(ENABLE_SHARED) \
++	    PROCESSORS=$(PROCESSORS) \
++	    setup
++	cd ..
++
++all: build
++
++.PHONY: build $(BUILD_DIRS)
++build: $(BUILD_DIRS:%=build-%)
++
++build-gnatcoll_db2ada: $(DB_BACKENDS:%=build-db2ada-%)
++
++build-db2ada-%:
++	cd gnatcoll_db2ada && \
++	make GPRBUILD_OPTIONS="$(subst $$,\$$\$$,$(GPRBUILD_OPTIONS))" DB_BACKEND=$* all
++	cd ..
++
++build-%:
++	cd $* && \
++	make GPRBUILD_OPTIONS="$(subst $$,\$$\$$,$(GPRBUILD_OPTIONS))" all
++	cd ..
++
++.PHONY: install
++install: $(BUILD_DIRS:%=install-%)
++
++install-gnatcoll_db2ada: $(DB_BACKENDS:%=install-db2ada-%)
++
++install-db2ada-%:
++	cd gnatcoll_db2ada && \
++	make GPRINSTALL_OPTIONS='$(subst ','',$(GPRINSTALL_OPTIONS))' DB_BACKEND=$* install
++	cd ..
++
++install-%:
++	cd $* && \
++	make GPRINSTALL_OPTIONS='$(subst ','',$(GPRINSTALL_OPTIONS))' install
++	cd ..
++
++.PHONY: uninstall
++uninstall: $(BINDINGS:%=uninstall-%)
++
++uninstall-gnatcoll_db2ada: $(DB_BACKENDS:%=uninstall-db2ada-%)
++
++uninstall-db2ada-%:
++	cd gnatcoll_db2ada && \
++	make GPRINSTALL_OPTIONS='$(subst ','',$(GPRINSTALL_OPTIONS))' DB_BACKEND=$* uninstall
++	cd ..
++
++uninstall-%:
++	cd $* && \
++	make GPRINSTALL_OPTIONS='$(subst ','',$(GPRINSTALL_OPTIONS))' uninstall
++	cd ..
++
++.PHONY: clean
++clean: $(BINDINGS:%=clean-%)
++
++clean-gnatcoll_db2ada: $(DB_BACKENDS:%=clean-db2ada-%)
++
++clean-db2ada-%:
++	cd gnatcoll_db2ada && \
++	make DBBACKEND=$* clean
++	cd ..
++
++clean-%:
++	cd $* && \
++	make clean
++	cd ..
++
++.PHONY: test
++test:
++	sh testsuite/run-tests
++
++.NOTPARALLEL:

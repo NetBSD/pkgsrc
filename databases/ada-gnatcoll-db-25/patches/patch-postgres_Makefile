@@ -1,0 +1,31 @@
+$NetBSD: patch-postgres_Makefile,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+
+Fix target calculation
+Add extra options to gprinstall
+
+--- postgres/Makefile.orig	2023-11-06 12:21:17.000000000 +0200
++++ postgres/Makefile	2025-06-06 18:41:18.733713631 +0300
+@@ -66,7 +66,7 @@
+ endif
+ 
+ TARGET := $(shell gcc -dumpmachine)
+-NORMALIZED_TARGET := $(subst normalized_target:,,$(wordlist 6,6,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers)))
++NORMALIZED_TARGET := $(lastword $(subst :, ,$(shell gprconfig  --config=ada --target=$(TARGET) --mi-show-compilers | grep ' 1 normalized_target:')))
+ ifeq ($(NORMALIZED_TARGET),)
+   $(error No toolchain found for target "$(TARGET)")
+ endif
+@@ -105,11 +105,13 @@
+ 
+ # Used to pass extra options to GPRBUILD, like -d for instance
+ GPRBUILD_OPTIONS=
++GPRINSTALL_OPTIONS=
+ 
+ BUILDER=gprbuild -p -m $(GTARGET) $(RBD) -j$(PROCESSORS) $(GPR_VARS) \
+ 	$(GPRBUILD_OPTIONS)
+ INSTALLER=gprinstall -p -f --target=$(TARGET) $(GPR_VARS) \
+-	$(RBD) --sources-subdir=include/$(NAME) --prefix=$(prefix)$(integrated_install)
++	$(RBD) --sources-subdir=include/$(NAME) --prefix=$(prefix)$(integrated_install) \
++	$(GPRINSTALL_OPTIONS)
+ CLEANER=gprclean -q $(RBD) $(GPR_VARS)
+ UNINSTALLER=$(INSTALLER) -p -f --install-name=$(NAME) --uninstall
+ 
