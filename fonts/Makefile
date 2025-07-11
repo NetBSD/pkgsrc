@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2025/06/05 07:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.444 2025/07/11 18:02:07 scole Exp $
 #
 
 COMMENT=	Fonts
@@ -180,7 +180,6 @@ SUBDIR+=	ko-x11fonts
 SUBDIR+=	kochi-ttf
 SUBDIR+=	konatu-ttf
 SUBDIR+=	koruri-ttf
-SUBDIR+=	lanna-io
 SUBDIR+=	lato-ttf
 SUBDIR+=	lcdftypetools
 SUBDIR+=	leahfonts
@@ -951,6 +950,7 @@ SUBDIR+=	tex-zhmetrics-uptex
 SUBDIR+=	tex-zhmetrics-uptex-doc
 SUBDIR+=	tex-zlmtt
 SUBDIR+=	tex-zlmtt-doc
+SUBDIR+=	thai-font-collection
 SUBDIR+=	thaixfonts
 SUBDIR+=	ttf-meera
 SUBDIR+=	ttf-tlwg
