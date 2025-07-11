@@ -1,0 +1,17 @@
+$NetBSD: patch-Garlic_isthrbio.gpr,v 1.1 2025/07/11 06:17:38 dkazankov Exp $
+
+Make project to fix link time version warning
+
+--- /dev/null
++++ Garlic/isthrbio.gpr
+@@ -0,0 +1,10 @@
++project Isthrbio is
++
++   for Languages use ("C", "Ada");
++
++   for Exec_Dir use "../";
++   for Source_Dirs use (".");
++   for Main use ("isthrbio");
++   for Source_Files use ("isthrbio.adb", "select.c");
++
++end Isthrbio;
