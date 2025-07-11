@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2025/07/03 06:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2025/07/11 08:27:18 pho Exp $
 
 DISTNAME=		vlc-3.0.21
 PKGREVISION=		11
@@ -24,6 +24,12 @@ CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c c++
 PLIST_VARS+=		altivec cdrom egl oss v4l2 x86simd
+
+# vlc indirectly depends on devel/abseil which requires that the language
+# variant of c++ is at least c++17. Anything using abseil has to declare
+# -std=c++17 or later. Setting this in devel/abseil/buildlink3.mk would be
+# wrong, because packages may require later language versions.
+FORCE_CXX_STD=		c++17
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
