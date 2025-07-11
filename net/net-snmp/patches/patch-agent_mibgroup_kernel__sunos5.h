@@ -1,10 +1,11 @@
-$NetBSD: patch-agent_mibgroup_kernel__sunos5.h,v 1.1 2015/08/20 13:51:03 jperkin Exp $
+$NetBSD: patch-agent_mibgroup_kernel__sunos5.h,v 1.2 2025/07/11 10:11:52 jperkin Exp $
 
 Support Crossbow.
+Integer conversion fixes.
 
---- agent/mibgroup/kernel_sunos5.h.orig	2007-11-08 23:17:16.000000000 +0000
+--- agent/mibgroup/kernel_sunos5.h.orig	2023-08-15 20:32:01.000000000 +0000
 +++ agent/mibgroup/kernel_sunos5.h
-@@ -176,17 +176,17 @@ extern          "C" {
+@@ -190,17 +190,17 @@ extern          "C" {
  #endif
      void            init_kernel_sunos5(void);
  
@@ -17,9 +18,10 @@ Support Crossbow.
      int             Get_everything(void *, void *);
 -    int             getKstatInt(const char *classname,
 -                                const char *statname, const char *varname,
+-                                int *value);
 +    int             getKstatInt(char *classname,
 +                                char *statname, char *varname,
-                                 int *value);
++                                uintptr_t *value);
  
 -    int             getKstatString(const char *statname, const char *varname,
 +    int             getKstatString(char *statname, char *varname,
