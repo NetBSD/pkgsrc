@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.21 2024/10/08 05:48:25 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.22 2025/07/11 07:58:12 pho Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -148,6 +148,23 @@ SUBST_STAGE.sqlite3-opt=		pre-configure
 SUBST_MESSAGE.sqlite3-opt=		Fixing segfault in libmozsqlite3.so
 SUBST_FILES.sqlite3-opt+=		${MOZILLA_DIR}third_party/sqlite3/src/moz.build
 SUBST_VARS.sqlite3-opt+=		SQLITE3OPTFLAG
+
+# Don't use ASM functions using SVE2 instructions, otherwise it will result
+# in a linkage failure. When the build system detects that the assembler on
+# the build machine cannot do SVE2, it correctly suppresses compiling
+# functions like I444ToARGBRow_SVE2(). However, it fails to tell potential
+# users of those functions to not use the SVE2 implementation, which
+# results in references to missing symbols. Since we don't know how to fix
+# this correctly, we work around the issue by replacing *_SVE2() calls with
+# *_NEON(), which are always available on aarch64 platforms.
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "aarch64"
+SUBST_CLASSES+=		sve2
+SUBST_STAGE.sve2=	pre-configure
+SUBST_FILES.sve2=	media/libyuv/libyuv/source/convert.cc
+SUBST_FILES.sve2+=	media/libyuv/libyuv/source/scale_argb.cc
+SUBST_FILES.sve2+=	media/libyuv/libyuv/source/convert_argb.cc
+SUBST_SED.sve2=		-e 's/_SVE2/_NEON/g'
+.endif
 
 # Do not pass '-j1 -j1' for MAKE_JOBS=1 for NetBSD 9.3 or earlier.
 RUST_MAKE_JOBS=		# empty by default
