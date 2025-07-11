@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2025/07/11 08:11:20 wiz Exp $
 
 DISTNAME=	numpy-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,8 +21,8 @@ USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		c99
-# checks for gcc 8.4
-GCC_REQD+=		8
+# meson checks for gcc 9.3
+GCC_REQD+=		9
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
