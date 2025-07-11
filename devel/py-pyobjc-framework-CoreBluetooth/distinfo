@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/02/05 08:05:29 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/07/11 09:03:55 adam Exp $
 
-BLAKE2s (pyobjc_framework_corebluetooth-11.0.tar.gz) = 85405f34ee1d2e91db11807803858422bd4186c5b0ec574d5da1dbc9a86106de
-SHA512 (pyobjc_framework_corebluetooth-11.0.tar.gz) = 691aa4287bb3edb3c1bddc9c45233b82a41129ce42db934200a40715f693ee7ada480cf4d8aa482ffb89583eae4e2e0b90ad74871e8d0d1a2f987cf355b91cf0
-Size (pyobjc_framework_corebluetooth-11.0.tar.gz) = 59797 bytes
+BLAKE2s (pyobjc_framework_corebluetooth-11.1.tar.gz) = 2b291ed7f3397c8f4226cb1e0c5c808d2128b7107d6c5d98e591543868855e26
+SHA512 (pyobjc_framework_corebluetooth-11.1.tar.gz) = 27295921907e93bc49925754c5ae0560d164fb13f8ea7bfd0c6aab43844c92f1ad677ab4511c7945b00e87ac20e967304e5db6d53176570f381991fb51e46306
+Size (pyobjc_framework_corebluetooth-11.1.tar.gz) = 60337 bytes

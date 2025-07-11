@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:23 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.5 2025/07/11 09:04:08 adam Exp $
 
 PYOBJC_FRAMEWORK=	SecurityFoundation
 

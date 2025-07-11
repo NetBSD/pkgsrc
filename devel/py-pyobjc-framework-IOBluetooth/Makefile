@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:17 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.5 2025/07/11 09:04:01 adam Exp $
 
 PYOBJC_FRAMEWORK=	IOBluetooth
 

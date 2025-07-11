@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/23 12:45:15 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.5 2025/07/11 09:03:59 adam Exp $
 
 PYOBJC_FRAMEWORK=	FileProviderUI
 
