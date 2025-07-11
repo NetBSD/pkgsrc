@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4239 2025/07/11 18:09:29 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4240 2025/07/11 19:26:24 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6265,3 +6265,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed fonts/lanna-io [scole 2025-07-11]
 	Added fonts/thai-font-collection version 1.02 [scole 2025-07-11]
 	Added databases/ada-gnatcoll-db-25 version 25.0.0 [dkazankov 2025-07-11]
+	Updated audio/kew to 3.4.0 [ktnb 2025-07-11]
