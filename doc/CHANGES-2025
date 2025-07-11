@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4238 2025/07/11 18:08:37 scole Exp $
+$NetBSD: CHANGES-2025,v 1.4239 2025/07/11 18:09:29 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6264,3 +6264,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gdal to 3.11.2 [gdt 2025-07-11]
 	Removed fonts/lanna-io [scole 2025-07-11]
 	Added fonts/thai-font-collection version 1.02 [scole 2025-07-11]
+	Added databases/ada-gnatcoll-db-25 version 25.0.0 [dkazankov 2025-07-11]
