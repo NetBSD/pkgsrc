@@ -1,0 +1,16 @@
+$NetBSD: patch-Dist_config.sdefault,v 1.1 2025/07/11 06:17:37 dkazankov Exp $
+
+Fix libgnat.a search
+https://github.com/reznikmm/garlic/commit/1c459d17d989e5df86234276013fd32430c97220
+
+--- Dist/config.sdefault.orig	2007-11-26 15:10:13.000000000 +0200
++++ Dist/config.sdefault
+@@ -7,7 +7,7 @@
+    sed -e '1,/Object Search Path/ d' | grep -v 'Current_Directory' > tmp1
+ sed -e 's,\\,/,g' tmp1 > tmp2
+ for i in `cat tmp2`; do
+-  if [ -f ${i}libgnat.a ]; then
++  if [ -f ${i}/libgnat.a ]; then
+     LIBGNAT_DIR=${i}
+     break
+   fi

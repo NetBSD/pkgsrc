@@ -1,0 +1,92 @@
+$NetBSD: patch-configure,v 1.1 2025/07/11 06:17:39 dkazankov Exp $
+
+Fix version
+Add var for configuration helper
+Fix GNAT version control
+Add NetBSD support
+Fix link time version warning
+Add configuration helper
+
+--- configure.orig	2007-11-28 21:27:21.000000000 +0200
++++ configure
+@@ -1669,7 +1669,7 @@
+ 
+ # Define the identity of the package.
+  PACKAGE=GLADE
+- VERSION=dev
++ VERSION=6.0.1
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -3372,7 +3372,6 @@
+ fi
+ 
+ 
+-
+ #
+ # Check for maintainer mode
+ #
+@@ -3521,8 +3520,14 @@
+ 
+ echo "$as_me:$LINENO: checking if the Ada compiler is recent enough" >&5
+ echo $ECHO_N "checking if the Ada compiler is recent enough... $ECHO_C" >&6
+-am_gnatls_date=`$GNATLS -v | $SED -ne 's/^GNATLS .*(\(........\).*$/\1/p'`
+-if test "20041007" -le "$am_gnatls_date"; then
++am_gnatls_date=`$GNATLS -v | $SED -ne 's/^GNATLS .*(\(........\)).*$/\1/p'`
++if test -z "$am_gnatls_date"; then
++  echo "$as_me:$LINENO: result: yes" >&5
++  echo "${ECHO_T}yes" >&6
++elif test "release" -le "$am_gnatls_date"; then
++  echo "$as_me:$LINENO: result: yes" >&5
++  echo "${ECHO_T}yes" >&6
++elif test "20041007" -le "$am_gnatls_date"; then
+   echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+ else
+@@ -3559,6 +3564,7 @@
+     *-linux*)          PLATFORM_SPECIFIC=l;;
+     *-*-solaris2*)     PLATFORM_SPECIFIC=s;;
+     sparc-sun-sunos4*) PLATFORM_SPECIFIC=u;;
++    *-*netbsd)         PLATFORM_SPECIFIC=n;;
+     *)                 ;;
+   esac
+ 
+@@ -3574,6 +3580,7 @@
+     g) PSNAME="SGI";;
+     h) PSNAME="HP";;
+     b) PSNAME="AIX";;
++    n) PSNAME="NetBSD";;
+     e) PSNAME="Empty";;
+     *) PSNAME="Unknown target (${target})";;
+   esac
+@@ -3603,6 +3610,13 @@
+     fi;
+     /bin/rm -f ./isthrbio*;
+     ;;
++  n)
++    ${GNATMAKE} -q -P${srcdir}/Garlic/isthrbio.gpr >/dev/null 2>&1;
++    if ./isthrbio; then
++      PROCESS_BLOCKING_IO="yes";
++    fi;
++    /bin/rm -f ./isthrbio*;
++    ;;
+   *)
+     ;;
+   esac;
+@@ -4054,7 +4068,7 @@
+ #
+ # Output
+ #
+-                                                                                                                                                                                                        ac_config_files="$ac_config_files Makefile Dist/Makefile Dist/xe_defs-defaults.ads Garlic/Makefile Garlic/s-gaplsp.ads Examples/check-config Examples/Makefile Examples/Bank/Makefile Examples/Eratho/Makefile Examples/Eratho/absolute/Makefile Examples/Eratho/cycle/Makefile Examples/Eratho/dynamic/Makefile Examples/Eratho/spiral/Makefile Examples/Filters/Makefile Examples/Messages/Makefile Examples/MultiPro/Makefile Examples/DSMStorage/Makefile Examples/MultiSto/Makefile Examples/Reconnection/Makefile Examples/LightBank/Makefile"
++ac_config_files="$ac_config_files Makefile Dist/Makefile Dist/xe_defs-defaults.ads Dist/gnatdist-config Garlic/Makefile Garlic/s-gaplsp.ads Examples/check-config Examples/Makefile Examples/Bank/Makefile Examples/Eratho/Makefile Examples/Eratho/absolute/Makefile Examples/Eratho/cycle/Makefile Examples/Eratho/dynamic/Makefile Examples/Eratho/spiral/Makefile Examples/Filters/Makefile Examples/Messages/Makefile Examples/MultiPro/Makefile Examples/DSMStorage/Makefile Examples/MultiSto/Makefile Examples/Reconnection/Makefile Examples/LightBank/Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -4633,6 +4647,7 @@
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "Dist/Makefile" ) CONFIG_FILES="$CONFIG_FILES Dist/Makefile" ;;
+   "Dist/xe_defs-defaults.ads" ) CONFIG_FILES="$CONFIG_FILES Dist/xe_defs-defaults.ads" ;;
++  "Dist/gnatdist-config" ) CONFIG_FILES="$CONFIG_FILES Dist/gnatdist-config" ;;
+   "Garlic/Makefile" ) CONFIG_FILES="$CONFIG_FILES Garlic/Makefile" ;;
+   "Garlic/s-gaplsp.ads" ) CONFIG_FILES="$CONFIG_FILES Garlic/s-gaplsp.ads" ;;
+   "Examples/check-config" ) CONFIG_FILES="$CONFIG_FILES Examples/check-config" ;;
