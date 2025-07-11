@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/02/05 08:05:43 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/07/11 09:04:10 adam Exp $
 
-BLAKE2s (pyobjc_framework_videotoolbox-11.0.tar.gz) = d9b750c5744d82dbde6a0b33418df45e59a01ad7653212fe2a2d932344a131a3
-SHA512 (pyobjc_framework_videotoolbox-11.0.tar.gz) = 423f5ddfda820f22a8970fe566760727df307b184802d3f7baa31a540af73dc4d5c588221ee9bf74730c77d74f7e11775782fbc195693969150d802d5a8ec635
-Size (pyobjc_framework_videotoolbox-11.0.tar.gz) = 81157 bytes
+BLAKE2s (pyobjc_framework_videotoolbox-11.1.tar.gz) = 6cfd34b49f1f13666e92dee9456fce37609c4b343a6229274d88421f442b2b31
+SHA512 (pyobjc_framework_videotoolbox-11.1.tar.gz) = 9234effce86e5ef97cfee997b2785497c9238412f6ce450b46159d392285debc29564f8d44254326bd57642f9d37d1b70e496376e265f5b6d6b23b77e9351b66
+Size (pyobjc_framework_videotoolbox-11.1.tar.gz) = 88551 bytes
