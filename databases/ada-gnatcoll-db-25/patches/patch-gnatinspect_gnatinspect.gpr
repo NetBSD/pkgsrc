@@ -1,0 +1,19 @@
+$NetBSD: patch-gnatinspect_gnatinspect.gpr,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+
+Fix project paths
+
+--- gnatinspect/gnatinspect.gpr.orig	2022-09-02 15:43:38.000000000 +0300
++++ gnatinspect/gnatinspect.gpr
+@@ -23,9 +23,9 @@
+ 
+ with "../gnatcoll_db_shared.gpr";
+ with "gnatcoll";
+-with "gnatcoll_xref";
+-with "gnatcoll_sql";
+-with "gnatcoll_sqlite";
++with "../xref/gnatcoll_xref";
++with "../sql/gnatcoll_sql";
++with "../sqlite/gnatcoll_sqlite";
+ 
+ standard project Gnatinspect is
+ 
