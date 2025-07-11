@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/23 12:45:12 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.9 2025/07/11 09:03:55 adam Exp $
 
 PYOBJC_FRAMEWORK=	CoreData
 

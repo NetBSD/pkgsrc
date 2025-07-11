@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/02/05 08:05:33 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/07/11 09:04:01 adam Exp $
 
-BLAKE2s (pyobjc_framework_iosurface-11.0.tar.gz) = 9acf47dac04b1a9ced18d37a7dce92794332d21e352822c9407f62dbbc8753ba
-SHA512 (pyobjc_framework_iosurface-11.0.tar.gz) = 7098e8866bed142b1113c8c4085ffce993803a8ec6d58ee84d59df9291fc7c05dba1d5ab2f8898199f5325d17bc6e631cb1773cc581ea81b934ffaa16f603e59
-Size (pyobjc_framework_iosurface-11.0.tar.gz) = 20555 bytes
+BLAKE2s (pyobjc_framework_iosurface-11.1.tar.gz) = f1d3afb8810979ad1c31eb583f4795f96d33d5508d955d63635a42016a677a3a
+SHA512 (pyobjc_framework_iosurface-11.1.tar.gz) = 78d3804f0ccfdf2bf6084bb94f79dc8bcb5bf899ae41c148d784da1d5acb4a2ade2de4c8c3618a78b720b21c62919d54341c445e8b7f50ede88c20b301287054
+Size (pyobjc_framework_iosurface-11.1.tar.gz) = 20275 bytes

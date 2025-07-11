@@ -1,12 +1,12 @@
-$NetBSD: patch-setup.py,v 1.8 2025/02/05 08:05:24 adam Exp $
+$NetBSD: patch-setup.py,v 1.9 2025/07/11 09:03:51 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2025-01-02 09:36:19.000000000 +0000
+--- setup.py.orig	2025-06-14 19:43:45.000000000 +0000
 +++ setup.py
-@@ -68,7 +68,6 @@ def get_sdk_level(sdk):
+@@ -67,7 +67,6 @@ def get_sdk_level(sdk):
  
  # CFLAGS for the objc._objc extension:
  CFLAGS = [
@@ -14,11 +14,8 @@ Avoid a hack.
      "-fexceptions",
      # Explicitly opt-out of ARC
      "-fno-objc-arc",
-@@ -91,13 +90,8 @@ CFLAGS = [
-     "-Wshorten-64-to-32",
-     # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
-     # "--analyze",
--    "-Werror",
+@@ -94,10 +93,6 @@ CFLAGS = [
+     "-Wno-cast-function-type-mismatch",
      "-I/usr/include/ffi",
      "-fvisibility=hidden",
 -    # "-O0",
@@ -27,8 +24,8 @@ Avoid a hack.
 -    "-O3",
      "-flto=thin",
      # XXX: Use object_path_lto (during linking?)
-     "-UNDEBUG",
-@@ -113,13 +107,9 @@ OBJC_LDFLAGS = [
+     # "-fsanitize-thread-atomics",
+@@ -113,13 +108,9 @@ OBJC_LDFLAGS = [
      "-framework",
      "Foundation",
      # "-fvisibility=protected",
@@ -41,8 +38,8 @@ Avoid a hack.
 -    "-O3",
      "-flto=thin",
      "-fexceptions",
- ]
-@@ -254,8 +244,6 @@ class oc_test(Command):
+     # "-fsanitize-thread-atomics",
+@@ -251,8 +242,6 @@ class oc_test(Command):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  
@@ -50,4 +47,4 @@ Avoid a hack.
 -            del sys.modules["PyObjCTools"]
  
          ei_cmd = self.get_finalized_command("egg_info")
-         sys.path.insert(0, normalize_path(ei_cmd.egg_base))
+         sys.path.insert(0, os.path.abspath(ei_cmd.egg_base))

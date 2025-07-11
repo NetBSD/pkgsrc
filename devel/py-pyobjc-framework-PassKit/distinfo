@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/02/05 08:05:38 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/07/11 09:04:05 adam Exp $
 
-BLAKE2s (pyobjc_framework_passkit-11.0.tar.gz) = e721eea62ed89ac10919bc88ba8add6e00738d9dabf66075df3323972bd696e0
-SHA512 (pyobjc_framework_passkit-11.0.tar.gz) = b78c2304c715bc399810158ae57546b32cef5f5022b9600b17ac40acfa97db1489da6f775d2c324b5145bf37af7a37d2a14a73a203236eb50a93130f6c129c74
-Size (pyobjc_framework_passkit-11.0.tar.gz) = 120495 bytes
+BLAKE2s (pyobjc_framework_passkit-11.1.tar.gz) = 6e7e90619dbffa1970a5fab3ecdc8abfa0ca9981016c7e0aa7c1d94e857d3bf7
+SHA512 (pyobjc_framework_passkit-11.1.tar.gz) = 145b22be4ca6623712a49b0b0741e69c23533b5bf0485583948a52aee7855372092fd1126a97c742411ae6605f41ad4e6bb8f4c4607753cb40ed303953448c01
+Size (pyobjc_framework_passkit-11.1.tar.gz) = 144859 bytes
