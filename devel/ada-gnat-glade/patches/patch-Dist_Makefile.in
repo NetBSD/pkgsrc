@@ -1,0 +1,29 @@
+$NetBSD: patch-Dist_Makefile.in,v 1.1 2025/07/11 06:17:37 dkazankov Exp $
+
+Add configuration helper
+Fix bindir location
+
+--- Dist/Makefile.in.orig	2007-11-26 15:10:13.000000000 +0200
++++ Dist/Makefile.in
+@@ -223,9 +223,11 @@
+ 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
+ xe_defs-defaults.ads: $(top_builddir)/config.status $(srcdir)/xe_defs-defaults.ads.in
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
++gnatdist-config: $(top_builddir)/config.status $(srcdir)/gnatdist-config.in
++	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
++	test -z "$(DESTDIR)$(bindir)" || $(mkdir_p) "$(DESTDIR)$(bindir)"
+ 	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+ 	  p1=`echo $$p|sed 's/$(EXEEXT)$$//'`; \
+ 	  if test -f $$p \
+@@ -235,6 +237,8 @@
+ 	   $(INSTALL_PROGRAM_ENV) $(binPROGRAMS_INSTALL) "$$p" "$(DESTDIR)$(bindir)/$$f" || exit 1; \
+ 	  else :; fi; \
+ 	done
++	cp -p $(srcdir)/gnatdist-config $(DESTDIR)$(bindir)/gnatdist-config ; \
++	chmod a+x $(DESTDIR)$(bindir)/gnatdist-config
+ 
+ uninstall-binPROGRAMS:
+ 	@$(NORMAL_UNINSTALL)

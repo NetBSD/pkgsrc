@@ -1,0 +1,44 @@
+$NetBSD: patch-Garlic_garlic.gpr,v 1.1 2025/07/11 06:17:38 dkazankov Exp $
+
+Provide project file for gnatmake
+
+--- /dev/null
++++ Garlic/garlic.gpr
+@@ -0,0 +1,37 @@
++library project Garlic is
++
++   for Languages use ("Ada");
++
++   for Source_Dirs use ("../../include/garlic");
++   for Library_Dir  use "../../lib/garlic";
++   for Library_Kind use "static";
++
++   for Library_Name use "garlic";
++
++   package Naming is
++      for dot_replacement use "-";
++      for casing use "lowercase";
++      for body_suffix ("ada") use ".adb";
++      for spec_suffix ("ada") use ".ads";
++   end Naming;
++
++   package Install is
++      for Active use "False";
++   end Install;
++
++   for Externally_Built use "True";
++
++   type Platforms is ("Posix", "Windows_NT");
++
++   type Library_Kind is ("static", "static-pic", "relocatable");
++
++   type Garlic_Build_Kind is ("dev", "prod");
++
++   Ada_Switches := ("-O2", "-g", "-gnatg");
++   Common_Dir := "../Garlic";
++   Platform_Dir := "../Garlic/platform/e";
++   Platform : Platforms := "Posix";
++   Library_Type : Library_Kind := "static";
++   Build_Mode : Garlic_Build_Kind := "prod";
++
++end Garlic;

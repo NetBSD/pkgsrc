@@ -1,0 +1,2025 @@
+$NetBSD: patch-Garlic_s-stratt.adb,v 1.1 2025/07/11 06:17:39 dkazankov Exp $
+
+Remove old stream attributes implementation
+
+--- Garlic/s-stratt.adb.orig	2007-11-26 15:10:13.000000000 +0200
++++ Garlic/s-stratt.adb
+@@ -1,2018 +0,0 @@
+-------------------------------------------------------------------------------
+---                                                                          --
+---                            GLADE COMPONENTS                              --
+---                                                                          --
+---             S Y S T E M . S T R E A M _ A T T R I B U T E S              --
+---                                                                          --
+---                                 B o d y                                  --
+---                                                                          --
+---         Copyright (C) 1996-2006 Free Software Foundation, Inc.           --
+---                                                                          --
+--- GARLIC is free software;  you can redistribute it and/or modify it under --
+--- terms of the  GNU General Public License  as published by the Free Soft- --
+--- ware Foundation;  either version 2,  or (at your option)  any later ver- --
+--- sion.  GARLIC is distributed  in the hope that  it will be  useful,  but --
+--- WITHOUT ANY WARRANTY;  without even the implied warranty of MERCHANTABI- --
+--- LITY or  FITNESS FOR A PARTICULAR PURPOSE.  See the  GNU General Public  --
+--- License  for more details.  You should have received  a copy of the GNU  --
+--- General Public License  distributed with GARLIC;  see file COPYING.  If  --
+--- not, write to the Free Software Foundation, 59 Temple Place - Suite 330, --
+--- Boston, MA 02111-1307, USA.                                              --
+---                                                                          --
+--- As a special exception,  if other files  instantiate  generics from this --
+--- unit, or you link  this unit with other files  to produce an executable, --
+--- this  unit  does not  by itself cause  the resulting  executable  to  be --
+--- covered  by the  GNU  General  Public  License.  This exception does not --
+--- however invalidate  any other reasons why  the executable file  might be --
+--- covered by the  GNU Public License.                                      --
+---                                                                          --
+---               GLADE  is maintained by ACT Europe.                        --
+---               (email: glade-report@act-europe.fr)                        --
+---                                                                          --
+-------------------------------------------------------------------------------
+-
+-with Ada.IO_Exceptions;
+-with Ada.Streams;              use Ada.Streams;
+-with Ada.Unchecked_Conversion;
+-
+-package body System.Stream_Attributes is
+-
+-   pragma Suppress (Range_Check);
+-   pragma Suppress (Overflow_Check);
+-
+-   use UST;
+-
+-   Data_Error : exception renames Ada.IO_Exceptions.End_Error;
+-   --  Exception raised if insufficient data read (End_Error is
+-   --  mandated by AI95-00132).
+-
+-   SU : constant := System.Storage_Unit;
+-   --  XXXXX pragma Assert (SU = 8);
+-
+-   BB : constant := 2 ** SU;           --  Byte base
+-   BL : constant := 2 ** SU - 1;       --  Byte last
+-   BS : constant := 2 ** (SU - 1);     --  Byte sign
+-
+-   US : constant := Unsigned'Size;     --  Unsigned size
+-   UB : constant := (US - 1) / SU + 1; --  Unsigned byte
+-   UL : constant := 2 ** US - 1;       --  Unsigned last
+-
+-   FB : constant := 2.0 ** SU;         --  Float base
+-
+-   subtype SE  is Ada.Streams.Stream_Element;
+-   subtype SEA is Ada.Streams.Stream_Element_Array;
+-   subtype SEO is Ada.Streams.Stream_Element_Offset;
+-
+-   generic function UC renames Ada.Unchecked_Conversion;
+-
+-   type Field_Type is
+-      record
+-         E_Size       : Integer; --  Exponent bit size
+-         E_Bias       : Integer; --  Exponent bias
+-         F_Size       : Integer; --  Fraction bit size
+-         E_Last       : Integer; --  Max exponent value
+-         F_Mask       : SE;      --  Mask to apply on first fraction byte
+-         E_Bytes      : SEO;     --  N. of exponent bytes completly used
+-         F_Bytes      : SEO;     --  N. of fraction bytes completly used
+-         F_Bits       : Integer; --  N. of bits used on first fraction word
+-      end record;
+-
+-   type Precision is (Single, Double, Extended);
+-   Fields : constant array (Precision) of Field_Type
+-     := (
+-         --  Single precision
+-         (E_Size  => 8,
+-          E_Bias  => 127,
+-          F_Size  => 23,
+-          E_Last  => 2 ** 8 - 1,
+-          F_Mask  => 16#7F#,                  --  2 ** 7 - 1,
+-          E_Bytes => 2,
+-          F_Bytes => 3,
+-          F_Bits  => 23 mod US),
+-         --  Double precision
+-         (E_Size  => 11,
+-          E_Bias  => 1023,
+-          F_Size  => 52,
+-          E_Last  => 2 ** 11 - 1,
+-          F_Mask  => 16#0F#,                  --  2 ** 4 - 1,
+-          E_Bytes => 2,
+-          F_Bytes => 7,
+-          F_Bits  => 52 mod US),
+-         --  Extended precision
+-         (E_Size  => 15,
+-          E_Bias  => 16383,
+-          F_Size  => 63,
+-          E_Last  => 2 ** 15 - 1,
+-          F_Mask  => 16#FF#,                  --  2 ** 8 - 1,
+-          E_Bytes => 2,
+-          F_Bytes => 8,
+-          F_Bits  => 63 mod US));
+-
+-   --  The representation of all items requires a multiple of four bytes
+-   --  (or 32 bits) of data. The bytes are numbered 0 through n-1. The bytes
+-   --  are read or written to some byte stream such that byte m always
+-   --  precedes byte m+1. If the n bytes needed to contain the data are not
+-   --  a multiple of four, then the n bytes are followed by enough (0 to 3)
+-   --  residual zero bytes, r, to make the total byte count a multiple of 4.
+-
+-   --  An XDR signed integer is a 32-bit datum that encodes an integer
+-   --  in the range [-2147483648,2147483647]. The integer is represented
+-   --  in two's complement notation. The most and least significant bytes
+-   --  are 0 and 3, respectively. Integers are declared as follows:
+-   --
+-   --        (MSB)                   (LSB)
+-   --      +-------+-------+-------+-------+
+-   --      |byte 0 |byte 1 |byte 2 |byte 3 |
+-   --      +-------+-------+-------+-------+
+-   --      <------------32 bits------------>
+-
+-   --  XXXXX pragma Assert (Long_Long_Integer'Size <= 64);
+-   --  XXXXX pragma Assert (16 <= Integer'Size and Integer'Size <= 32);
+-
+-   SSI_L : constant := 1;
+-   SI_L  : constant := 2;
+-   I_L   : constant := 4;
+-   LI_L  : constant := 8;
+-   LLI_L : constant := 8;
+-
+-   subtype XDR_S_SSI is SEA (1 .. SSI_L);
+-   subtype XDR_S_SI  is SEA (1 .. SI_L);
+-   subtype XDR_S_I   is SEA (1 .. I_L);
+-   subtype XDR_S_LI  is SEA (1 .. LI_L);
+-   subtype XDR_S_LLI is SEA (1 .. LLI_L);
+-
+-   function Short_Short_Integer_To_XDR_S_SSI is
+-      new Ada.Unchecked_Conversion (Short_Short_Integer, XDR_S_SSI);
+-   function XDR_S_SSI_To_Short_Short_Integer is
+-      new Ada.Unchecked_Conversion (XDR_S_SSI, Short_Short_Integer);
+-
+-   function Short_Integer_To_XDR_S_SI is
+-      new Ada.Unchecked_Conversion (Short_Integer, XDR_S_SI);
+-   function XDR_S_SI_To_Short_Integer is
+-      new Ada.Unchecked_Conversion (XDR_S_SI, Short_Integer);
+-
+-   function Integer_To_XDR_S_I is
+-      new Ada.Unchecked_Conversion (Integer, XDR_S_I);
+-   function XDR_S_I_To_Integer is
+-     new Ada.Unchecked_Conversion (XDR_S_I, Integer);
+-
+-   function Long_Long_Integer_To_XDR_S_LI is
+-      new Ada.Unchecked_Conversion (Long_Long_Integer, XDR_S_LI);
+-   function XDR_S_LI_To_Long_Long_Integer is
+-      new Ada.Unchecked_Conversion (XDR_S_LI, Long_Long_Integer);
+-
+-   function Long_Long_Integer_To_XDR_S_LLI is
+-      new Ada.Unchecked_Conversion (Long_Long_Integer, XDR_S_LLI);
+-   function XDR_S_LLI_To_Long_Long_Integer is
+-      new Ada.Unchecked_Conversion (XDR_S_LLI, Long_Long_Integer);
+-
+-   --  An XDR unsigned integer is a 32-bit datum that encodes a nonnegative
+-   --  integer in the range [0,4294967295]. It is represented by an unsigned
+-   --  binary number whose most and least significant bytes are 0 and 3,
+-   --  respectively. An unsigned integer is declared as follows:
+-   --
+-   --        (MSB)                   (LSB)
+-   --      +-------+-------+-------+-------+
+-   --      |byte 0 |byte 1 |byte 2 |byte 3 |
+-   --      +-------+-------+-------+-------+
+-   --      <------------32 bits------------>
+-
+-   --  XXXXX pragma Assert (Long_Long_Unsigned'Size <= 64);
+-   --  XXXXX pragma Assert (16 <= Unsigned'Size and Unsigned'Size <= 32);
+-
+-   SSU_L : constant := 1;
+-   SU_L  : constant := 2;
+-   U_L   : constant := 4;
+-   LU_L  : constant := 8;
+-   LLU_L : constant := 8;
+-
+-   subtype XDR_S_SSU is SEA (1 .. SSU_L);
+-   subtype XDR_S_SU  is SEA (1 .. SU_L);
+-   subtype XDR_S_U   is SEA (1 .. U_L);
+-   subtype XDR_S_LU  is SEA (1 .. LU_L);
+-   subtype XDR_S_LLU is SEA (1 .. LLU_L);
+-
+-   type XDR_SSU is mod BB ** SSU_L;
+-   type XDR_SU  is mod BB ** SU_L;
+-   type XDR_U   is mod BB ** U_L;
+-   --  type XDR_LU  is mod BB ** LU_L;  --  Computed using Unsigned
+-   --  type XDR_LLU is mod BB ** LLU_L; --  Computed using Unsigned
+-
+-   function Short_Unsigned_To_XDR_S_SU is
+-      new Ada.Unchecked_Conversion (Short_Unsigned, XDR_S_SU);
+-   function XDR_S_SU_To_Short_Unsigned is
+-      new Ada.Unchecked_Conversion (XDR_S_SU, Short_Unsigned);
+-
+-   function Unsigned_To_XDR_S_U is
+-      new Ada.Unchecked_Conversion (Unsigned, XDR_S_U);
+-   function XDR_S_U_To_Unsigned is
+-      new Ada.Unchecked_Conversion (XDR_S_U, Unsigned);
+-
+-   function Long_Long_Unsigned_To_XDR_S_LU is
+-      new Ada.Unchecked_Conversion (Long_Long_Unsigned, XDR_S_LU);
+-   function XDR_S_LU_To_Long_Long_Unsigned is
+-      new Ada.Unchecked_Conversion (XDR_S_LU, Long_Long_Unsigned);
+-
+-   function Long_Long_Unsigned_To_XDR_S_LLU is
+-      new Ada.Unchecked_Conversion (Long_Long_Unsigned, XDR_S_LLU);
+-   function XDR_S_LLU_To_Long_Long_Unsigned is
+-      new Ada.Unchecked_Conversion (XDR_S_LLU, Long_Long_Unsigned);
+-
+-   --  The standard defines the floating-point data type "float" (32 bits
+-   --  or 4 bytes). The encoding used is the IEEE standard for normalized
+-   --  single-precision floating-point numbers.
+-
+-   --  The standard defines the encoding for the double-precision
+-   --  floating-point data type "double" (64 bits or 8 bytes). The
+-   --  encoding used is the IEEE standard for normalized double-precision
+-   --  floating-point numbers.
+-
+-   SF_L  : constant := 4;   --  Single precision
+-   F_L   : constant := 4;   --  Single precision
+-   LF_L  : constant := 8;   --  Double precision
+-   LLF_L : constant := 12;  --  Extended precision
+-
+-   --  TBD
+-   TM_L : constant := 8;
+-   subtype XDR_S_TM is SEA (1 .. TM_L);
+-   type XDR_TM is mod BB ** TM_L;
+-
+-   type XDR_SA is mod 2 ** Standard'Address_Size;
+-   function To_XDR_SA is new UC (System.Address, XDR_SA);
+-   function To_XDR_SA is new UC (XDR_SA, System.Address);
+-
+-   --  Enumerations have the same representation as signed integers.
+-   --  Enumerations are handy for describing subsets of the integers.
+-
+-   --  Booleans are important enough and occur frequently enough to warrant
+-   --  their own explicit type in the standard. Booleans are declared as
+-   --  an enumeration, with FALSE = 0 and TRUE = 1.
+-
+-   --  The standard defines a string of n (numbered 0 through n-1) ASCII
+-   --  bytes to be the number n encoded as an unsigned integer (as described
+-   --  above), and followed by the n bytes of the string. Byte m of the string
+-   --  always precedes byte m+1 of the string, and byte 0 of the string always
+-   --  follows the string's length. If n is not a multiple of four, then the
+-   --  n bytes are followed by enough (0 to 3) residual zero bytes, r, to make
+-   --  the total byte count a multiple of four.
+-
+-   --  To fit with XDR string, do not consider character as an enumeration
+-   --  type.
+-
+-   C_L   : constant := 1;
+-   subtype XDR_S_C is SEA (1 .. C_L);
+-
+-   --  Consider Wide_Character as an enumeration type.
+-   WC_L  : constant := 4;
+-   subtype XDR_S_WC is SEA (1 .. WC_L);
+-   type XDR_WC is mod BB ** WC_L;
+-
+-   --  Optimization: if we already have the correct Bit_Order, then some
+-   --  computations can be avoided since the source and the target will be
+-   --  identical anyway. They will be replaced by direct unchecked
+-   --  conversions.
+-
+-   Optimize_Integers : constant Boolean :=
+-     Default_Bit_Order = High_Order_First;
+-
+-   ----------------
+-   -- Workaround --
+-   ----------------
+-
+-   function Scaling
+-     (X : Short_Float; A : Integer)
+-     return Short_Float;
+-
+-   function Scaling
+-     (X : Float; A : Integer)
+-      return Float;
+-
+-   function Scaling
+-     (X : Long_Float; A : Integer)
+-      return Long_Float;
+-   function Scaling
+-     (X : Long_Long_Float; A : Integer)
+-      return Long_Long_Float;
+-   ----------
+-   -- I_AD --
+-   ----------
+-
+-   function I_AD (Stream : not null access RST) return Fat_Pointer is
+-      FP : Fat_Pointer;
+-
+-   begin
+-      FP.P1 := I_AS (Stream).P1;
+-      FP.P2 := I_AS (Stream).P1;
+-
+-      return FP;
+-   end I_AD;
+-
+-   ----------
+-   -- I_AS --
+-   ----------
+-
+-   function I_AS (Stream : not null access RST) return Thin_Pointer is
+-      S : XDR_S_TM;
+-      L : SEO;
+-      U : XDR_TM := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_TM (S (N));
+-         end loop;
+-
+-         return (P1 => To_XDR_SA (XDR_SA (U)));
+-      end if;
+-   end I_AS;
+-
+-   ---------
+-   -- I_B --
+-   ---------
+-
+-   function I_B (Stream : not null access RST) return Boolean is
+-   begin
+-      case I_SSU (Stream) is
+-         when 0      => return False;
+-         when 1      => return True;
+-         when others => raise Data_Error;
+-      end case;
+-   end I_B;
+-
+-   ---------
+-   -- I_C --
+-   ---------
+-
+-   function I_C (Stream : not null access RST) return Character is
+-      S : XDR_S_C;
+-      L : SEO;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      else
+-
+-         --  Use Ada requirements on Character representation clause.
+-         return Character'Val (S (1));
+-      end if;
+-   end I_C;
+-
+-   ---------
+-   -- I_F --
+-   ---------
+-
+-   function I_F (Stream : not null access RST) return Float is
+-      I       : constant Precision := Single;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      F_Size  : Integer  renames Fields (I).F_Size;
+-      F_Mask  : SE       renames Fields (I).F_Mask;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Unsigned;
+-      P : Boolean;
+-      X : Float;
+-      S : SEA (1 .. F_L);
+-      L : SEO;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      end if;
+-
+-      --  Extract Fraction, Exponent and Sign.
+-      X := Float (S (F_L + 1 - F_Bytes) and F_Mask);
+-      for N in F_L + 2 - F_Bytes .. F_L loop
+-         X := X * FB + Float (S (N));
+-      end loop;
+-      X := Scaling (X, -F_Size); --  Float
+-
+-      if BS <= S (1) then
+-         P := False;
+-         E := Unsigned (S (1) - BS);
+-      else
+-         P := True;
+-         E := Unsigned (S (1));
+-      end if;
+-
+-      for N in 2 .. E_Bytes loop
+-         E := E * BB + Unsigned (S (N));
+-      end loop;
+-      E := Shift_Right (E, Integer (E_Bytes) * SU - E_Size - 1);
+-
+-      --  Look for special cases.
+-      if X = 0.0 then
+-
+-         --  Signed zeros.
+-         if E = 0 then
+-            if P then
+-               return Float'Copy_Sign (0.0, 1.0);
+-            else
+-               return Float'Copy_Sign (0.0, -1.0);
+-            end if;
+-
+-         else
+-
+-            --  Signed infinites.
+-            if E = Unsigned (E_Last) then
+-               if P then
+-                  return Float'Safe_Last;
+-               else
+-                  return Float'Safe_First;
+-               end if;
+-            end if;
+-         end if;
+-      end if;
+-
+-      --  Denormalized float.
+-      if E = 0 then
+-
+-         X := Scaling (X, 1 - E_Bias); --  Flaot
+-
+-      --  Normalized float.
+-      else
+-
+-         X := Scaling (X + 1.0, Integer (E) - E_Bias); --  Float
+-
+-      end if;
+-
+-      if P then
+-         X := Float'Copy_Sign (X, 1.0);
+-      else
+-         X := Float'Copy_Sign (X, -1.0);
+-      end if;
+-
+-      return X;
+-   end I_F;
+-
+-   ---------
+-   -- I_I --
+-   ---------
+-
+-   function I_I (Stream : not null access RST) return Integer is
+-      S : XDR_S_I;
+-      L : SEO;
+-      U : XDR_U := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_I_To_Integer (S);
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_U (S (N));
+-         end loop;
+-
+-         --  Test sign and apply two complement's notation.
+-         if S (1) < BL then
+-            return Integer (U);
+-         else
+-            return Integer (-((XDR_U'Last xor U) + 1));
+-         end if;
+-      end if;
+-   end I_I;
+-
+-   ----------
+-   -- I_LF --
+-   ----------
+-
+-   function I_LF (Stream : not null access RST) return Long_Float is
+-      I       : constant Precision := Double;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      F_Size  : Integer  renames Fields (I).F_Size;
+-      F_Mask  : SE       renames Fields (I).F_Mask;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Unsigned;
+-      P : Boolean;
+-      X : Long_Float;
+-      S : SEA (1 .. LF_L);
+-      L : SEO;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      end if;
+-
+-      --  Extract Fraction, Exponent and Sign.
+-      X := Long_Float (S (LF_L + 1 - F_Bytes) and F_Mask);
+-      for N in LF_L + 2 - F_Bytes .. LF_L loop
+-         X := X * FB + Long_Float (S (N));
+-      end loop;
+-      X := Scaling (X, -F_Size); --  Long_Float
+-
+-      if BS <= S (1) then
+-         P := False;
+-         E := Unsigned (S (1) - BS);
+-      else
+-         P := True;
+-         E := Unsigned (S (1));
+-      end if;
+-
+-      for N in 2 .. E_Bytes loop
+-         E := E * BB + Unsigned (S (N));
+-      end loop;
+-      E := Shift_Right (E, Integer (E_Bytes) * SU - E_Size - 1);
+-
+-      --  Look for special cases.
+-      if X = 0.0 then
+-
+-         --  Signed zeros.
+-         if E = 0 then
+-            if P then
+-               return Long_Float'Copy_Sign (0.0, 1.0);
+-            else
+-               return Long_Float'Copy_Sign (0.0, -1.0);
+-            end if;
+-
+-         else
+-
+-            --  Signed infinites.
+-            if E = Unsigned (E_Last) then
+-               if P then
+-                  return Long_Float'Safe_Last;
+-               else
+-                  return Long_Float'Safe_First;
+-               end if;
+-            end if;
+-         end if;
+-      end if;
+-
+-      --  Denormalized float.
+-      if E = 0 then
+-
+-         X := Scaling (X, 1 - E_Bias); --  Long_Float
+-
+-      --  Normalized float.
+-      else
+-
+-         X := Scaling (X + 1.0, Integer (E) - E_Bias); --  Long_Float
+-
+-      end if;
+-
+-      if P then
+-         X := Long_Float'Copy_Sign (X, 1.0);
+-      else
+-         X := Long_Float'Copy_Sign (X, -1.0);
+-      end if;
+-
+-      return X;
+-   end I_LF;
+-
+-   ----------
+-   -- I_LI --
+-   ----------
+-
+-   function I_LI (Stream : not null access RST) return Long_Integer is
+-      S : XDR_S_LI;
+-      L : SEO;
+-      U : Unsigned := 0;
+-      X : Long_Unsigned := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return Long_Integer (XDR_S_LI_To_Long_Long_Integer (S));
+-      else
+-
+-         --  Compute using machine unsigned
+-         --  rather than long_long_unsigned
+-
+-         for N in S'Range loop
+-            U := U * BB + Unsigned (S (N));
+-
+-            --  We have filled an unsigned.
+-            if N mod UB = 0 then
+-               X := Shift_Left (X, US) + Long_Unsigned (U);
+-               U := 0;
+-            end if;
+-         end loop;
+-
+-         --  Test sign and apply two complement's notation.
+-         if S (1) < BL then
+-            return Long_Integer (X);
+-         else
+-            return Long_Integer (-((Long_Unsigned'Last xor X) + 1));
+-         end if;
+-
+-      end if;
+-   end I_LI;
+-
+-   -----------
+-   -- I_LLF --
+-   -----------
+-
+-   function I_LLF (Stream : not null access RST) return Long_Long_Float is
+-      I       : constant Precision := Extended;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      F_Size  : Integer  renames Fields (I).F_Size;
+-      F_Mask  : SE       renames Fields (I).F_Mask;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Unsigned;
+-      P : Boolean;
+-      X : Long_Long_Float;
+-      S : SEA (1 .. LLF_L);
+-      L : SEO;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      end if;
+-
+-      --  Extract Fraction, Exponent and Sign.
+-      X := Long_Long_Float (S (LLF_L + 1 - F_Bytes) and F_Mask);
+-      for N in LLF_L + 2 - F_Bytes .. LLF_L loop
+-         X := X * FB + Long_Long_Float (S (N));
+-      end loop;
+-      X := Scaling (X, -F_Size); --  Long_Long_Float
+-
+-      if BS <= S (1) then
+-         P := False;
+-         E := Unsigned (S (1) - BS);
+-      else
+-         P := True;
+-         E := Unsigned (S (1));
+-      end if;
+-
+-      for N in 2 .. E_Bytes loop
+-         E := E * BB + Unsigned (S (N));
+-      end loop;
+-      E := Shift_Right (E, Integer (E_Bytes) * SU - E_Size - 1);
+-
+-      --  Look for special cases.
+-      if X = 0.0 then
+-
+-         --  Signed zeros.
+-         if E = 0 then
+-            if P then
+-               return Long_Long_Float'Copy_Sign (0.0, 1.0);
+-            else
+-               return Long_Long_Float'Copy_Sign (0.0, -1.0);
+-            end if;
+-
+-         else
+-
+-            --  Signed infinites.
+-            if E = Unsigned (E_Last) then
+-               if P then
+-                  return Long_Long_Float'Safe_Last;
+-               else
+-                  return Long_Long_Float'Safe_First;
+-               end if;
+-            end if;
+-         end if;
+-      end if;
+-
+-      --  Denormalized float.
+-      if E = 0 then
+-
+-         X := Scaling (X, 1 - E_Bias); --  Long_Long_Float
+-
+-      --  Normalized float.
+-      else
+-
+-         X := Scaling (X + 1.0, Integer (E) - E_Bias); --  Long_Long_Float
+-
+-      end if;
+-
+-      if P then
+-         X := Long_Long_Float'Copy_Sign (X, 1.0);
+-      else
+-         X := Long_Long_Float'Copy_Sign (X, -1.0);
+-      end if;
+-
+-      return X;
+-   end I_LLF;
+-
+-   -----------
+-   -- I_LLI --
+-   -----------
+-
+-   function I_LLI (Stream : not null access RST) return Long_Long_Integer is
+-      S : XDR_S_LLI;
+-      L : SEO;
+-      U : Unsigned := 0;
+-      X : Long_Long_Unsigned := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_LLI_To_Long_Long_Integer (S);
+-      else
+-
+-         --  Compute using machine unsigned for computing
+-         --  rather than long_long_unsigned.
+-
+-         for N in S'Range loop
+-            U := U * BB + Unsigned (S (N));
+-
+-            --  We have filled an unsigned.
+-            if N mod UB = 0 then
+-               X := Shift_Left (X, US) + Long_Long_Unsigned (U);
+-               U := 0;
+-            end if;
+-         end loop;
+-
+-         --  Test sign and apply two complement's notation.
+-         if S (1) < BL then
+-            return Long_Long_Integer (X);
+-         else
+-            return Long_Long_Integer (-((Long_Long_Unsigned'Last xor X) + 1));
+-         end if;
+-      end if;
+-   end I_LLI;
+-
+-   -----------
+-   -- I_LLU --
+-   -----------
+-
+-   function I_LLU (Stream : not null access RST) return Long_Long_Unsigned is
+-      S : XDR_S_LLU;
+-      L : SEO;
+-      U : Unsigned := 0;
+-      X : Long_Long_Unsigned := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_LLU_To_Long_Long_Unsigned (S);
+-      else
+-
+-         --  Compute using machine unsigned
+-         --  rather than long_long_unsigned.
+-
+-         for N in S'Range loop
+-            U := U * BB + Unsigned (S (N));
+-
+-            --  We have filled an unsigned.
+-            if N mod UB = 0 then
+-               X := Shift_Left (X, US) + Long_Long_Unsigned (U);
+-               U := 0;
+-            end if;
+-         end loop;
+-
+-         return X;
+-      end if;
+-   end I_LLU;
+-
+-   ----------
+-   -- I_LU --
+-   ----------
+-
+-   function I_LU (Stream : not null access RST) return Long_Unsigned is
+-      S : XDR_S_LU;
+-      L : SEO;
+-      U : Unsigned := 0;
+-      X : Long_Unsigned := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return Long_Unsigned (XDR_S_LU_To_Long_Long_Unsigned (S));
+-      else
+-
+-         --  Compute using machine unsigned
+-         --  rather than long_unsigned.
+-
+-         for N in S'Range loop
+-            U := U * BB + Unsigned (S (N));
+-
+-            --  We have filled an unsigned.
+-            if N mod UB = 0 then
+-               X := Shift_Left (X, US) + Long_Unsigned (U);
+-               U := 0;
+-            end if;
+-         end loop;
+-
+-         return X;
+-      end if;
+-   end I_LU;
+-
+-   ----------
+-   -- I_SF --
+-   ----------
+-
+-   function I_SF (Stream : not null access RST) return Short_Float is
+-      I       : constant Precision := Single;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      F_Size  : Integer  renames Fields (I).F_Size;
+-      F_Mask  : SE       renames Fields (I).F_Mask;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Unsigned;
+-      P : Boolean;
+-      X : Short_Float;
+-      S : SEA (1 .. SF_L);
+-      L : SEO;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      end if;
+-
+-      --  Extract Fraction, Exponent and Sign.
+-      X := Short_Float (S (SF_L + 1 - F_Bytes) and F_Mask);
+-      for N in SF_L + 2 - F_Bytes .. SF_L loop
+-         X := X * FB + Short_Float (S (N));
+-      end loop;
+-      X := Scaling (X, -F_Size); --  Short_Float
+-
+-      if BS <= S (1) then
+-         P := False;
+-         E := Unsigned (S (1) - BS);
+-      else
+-         P := True;
+-         E := Unsigned (S (1));
+-      end if;
+-
+-      for N in 2 .. E_Bytes loop
+-         E := E * BB + Unsigned (S (N));
+-      end loop;
+-      E := Shift_Right (E, Integer (E_Bytes) * SU - E_Size - 1);
+-
+-      --  Look for special cases.
+-      if X = 0.0 then
+-
+-         --  Signed zeros.
+-         if E = 0 then
+-            if P then
+-               return Short_Float'Copy_Sign (0.0, 1.0);
+-            else
+-               return Short_Float'Copy_Sign (0.0, -1.0);
+-            end if;
+-
+-         else
+-
+-            --  Signed infinites.
+-            if E = Unsigned (E_Last) then
+-               if P then
+-                  return Short_Float'Safe_Last;
+-               else
+-                  return Short_Float'Safe_First;
+-               end if;
+-            end if;
+-         end if;
+-      end if;
+-
+-      --  Denormalized float.
+-      if E = 0 then
+-
+-         X := Scaling (X, 1 - E_Bias); --  Short_Float
+-
+-      --  Normalized float.
+-      else
+-
+-         X := Scaling (X + 1.0, Integer (E) - E_Bias); --  Short_Float
+-
+-      end if;
+-
+-      if P then
+-         X := Short_Float'Copy_Sign (X, 1.0);
+-      else
+-         X := Short_Float'Copy_Sign (X, -1.0);
+-      end if;
+-
+-      return X;
+-   end I_SF;
+-
+-   ----------
+-   -- I_SI --
+-   ----------
+-
+-   function I_SI (Stream : not null access RST) return Short_Integer is
+-      S : XDR_S_SI;
+-      L : SEO;
+-      U : XDR_SU := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_SI_To_Short_Integer (S);
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_SU (S (N));
+-         end loop;
+-
+-         --  test sign and apply two complement's notation.
+-         if S (1) < BL then
+-            return Short_Integer (U);
+-         else
+-            return Short_Integer (-((XDR_SU'Last xor U) + 1));
+-         end if;
+-      end if;
+-   end I_SI;
+-
+-   -----------
+-   -- I_SSI --
+-   -----------
+-
+-   function I_SSI (Stream : not null access RST) return Short_Short_Integer is
+-      S : XDR_S_SSI;
+-      L : SEO;
+-      U : XDR_SSU;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_SSI_To_Short_Short_Integer (S);
+-      else
+-         --  for N in S'Range loop
+-         --     U := U * BB + XDR_SSU (S (N));
+-         --  end loop;
+-         U := XDR_SSU (S (1));
+-
+-         --  Test sign and apply two complement's notation.
+-         if S (1) < BL then
+-            return Short_Short_Integer (U);
+-         else
+-            return Short_Short_Integer (-((XDR_SSU'Last xor U) + 1));
+-         end if;
+-      end if;
+-   end I_SSI;
+-
+-   -----------
+-   -- I_SSU --
+-   -----------
+-
+-   function I_SSU (Stream : not null access RST) return Short_Short_Unsigned is
+-      S : XDR_S_SSU;
+-      L : SEO;
+-      U : XDR_SSU := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      else
+-         --  for N in S'Range loop
+-         --     U := U * BB + XDR_SSU (S (N));
+-         --  end loop;
+-         U := XDR_SSU (S (1));
+-
+-         return Short_Short_Unsigned (U);
+-      end if;
+-   end I_SSU;
+-
+-   ----------
+-   -- I_SU --
+-   ----------
+-
+-   function I_SU (Stream : not null access RST) return Short_Unsigned is
+-      S : XDR_S_SU;
+-      L : SEO;
+-      U : XDR_SU := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_SU_To_Short_Unsigned (S);
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_SU (S (N));
+-         end loop;
+-
+-         return Short_Unsigned (U);
+-      end if;
+-   end I_SU;
+-
+-   ---------
+-   -- I_U --
+-   ---------
+-
+-   function I_U (Stream : not null access RST) return Unsigned is
+-      S : XDR_S_U;
+-      L : SEO;
+-      U : XDR_U := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      elsif Optimize_Integers then
+-         return XDR_S_U_To_Unsigned (S);
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_U (S (N));
+-         end loop;
+-
+-         return Unsigned (U);
+-      end if;
+-   end I_U;
+-
+-   ----------
+-   -- I_WC --
+-   ----------
+-
+-   function I_WC (Stream : not null access RST) return Wide_Character is
+-      S : XDR_S_WC;
+-      L : SEO;
+-      U : XDR_WC := 0;
+-
+-   begin
+-      Ada.Streams.Read (Stream.all, S, L);
+-
+-      if L /= S'Last then
+-         raise Data_Error;
+-      else
+-         for N in S'Range loop
+-            U := U * BB + XDR_WC (S (N));
+-         end loop;
+-
+-         --  Use Ada requirements on Wide_Character representation clause.
+-         return Wide_Character'Val (U);
+-      end if;
+-   end I_WC;
+-
+-   -------------
+-   -- Scaling --
+-   -------------
+-
+-   function Scaling
+-     (X : Short_Float; A : Integer)
+-      return Short_Float is
+-      E : constant Integer := Short_Float'Exponent (X);
+-   begin
+-      return Short_Float'Compose (X, A + E);
+-   end Scaling;
+-
+-   -------------
+-   -- Scaling --
+-   -------------
+-
+-   function Scaling
+-     (X : Float; A : Integer)
+-      return Float is
+-      E : constant Integer := Float'Exponent (X);
+-   begin
+-      return Float'Compose (X, A + E);
+-   end Scaling;
+-
+-   -------------
+-   -- Scaling --
+-   -------------
+-
+-   function Scaling
+-     (X : Long_Float; A : Integer)
+-      return Long_Float is
+-      E : constant Integer := Long_Float'Exponent (X);
+-   begin
+-      return Long_Float'Compose (X, A + E);
+-   end Scaling;
+-
+-   -------------
+-   -- Scaling --
+-   -------------
+-
+-   function Scaling
+-     (X : Long_Long_Float; A : Integer)
+-      return Long_Long_Float is
+-      E : constant Integer := Long_Long_Float'Exponent (X);
+-   begin
+-      return Long_Long_Float'Compose (X, A + E);
+-   end Scaling;
+-
+-   ----------
+-   -- W_AD --
+-   ----------
+-
+-   procedure W_AD (Stream : not null access RST; Item : Fat_Pointer) is
+-      S : XDR_S_TM;
+-      U : XDR_TM;
+-
+-   begin
+-      U := XDR_TM (To_XDR_SA (Item.P1));
+-      for N in reverse S'Range loop
+-         S (N) := SE (U mod BB);
+-         U := U / BB;
+-      end loop;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      U := XDR_TM (To_XDR_SA (Item.P2));
+-      for N in reverse S'Range loop
+-         S (N) := SE (U mod BB);
+-         U := U / BB;
+-      end loop;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_AD;
+-
+-   ----------
+-   -- W_AS --
+-   ----------
+-
+-   procedure W_AS (Stream : not null access RST; Item : Thin_Pointer) is
+-      S : XDR_S_TM;
+-      U : XDR_TM := XDR_TM (To_XDR_SA (Item.P1));
+-
+-   begin
+-      for N in reverse S'Range loop
+-         S (N) := SE (U mod BB);
+-         U := U / BB;
+-      end loop;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_AS;
+-
+-   ---------
+-   -- W_B --
+-   ---------
+-
+-   procedure W_B (Stream : not null access RST; Item : Boolean) is
+-   begin
+-      if Item then
+-         W_SSU (Stream, 1);
+-      else
+-         W_SSU (Stream, 0);
+-      end if;
+-   end W_B;
+-
+-   ---------
+-   -- W_C --
+-   ---------
+-
+-   procedure W_C (Stream : not null access RST; Item : Character) is
+-      S : XDR_S_C;
+-
+-      pragma Assert (C_L = 1);
+-
+-   begin
+-
+-      --  Use Ada requirements on Character representation clause.
+-      S (1) := SE (Character'Pos (Item));
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_C;
+-
+-   ---------
+-   -- W_F --
+-   ---------
+-
+-   procedure W_F (Stream : not null access RST; Item : Float) is
+-      I       : constant Precision := Single;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Integer := 0;
+-      F : Float;
+-      Q : Float;
+-      N : SEO;
+-      U : Unsigned;
+-      P : Integer;
+-      S : SEA (1 .. F_L) := (others => 0);
+-      V : Float;
+-
+-   begin
+-      if Item'Valid then
+-         V := Item;
+-      else
+-         V := 0.0;
+-      end if;
+-
+-      F := abs (V);
+-
+-      --  Signed zero.
+-      if V = 0.0 then
+-
+-         U := 0;
+-
+-      else
+-
+-         --  Signed infinites.
+-         if V <= Float'Safe_First or else
+-            Float'Safe_Last <= V then
+-            E := E_Last;
+-
+-         else
+-            E := Float'Exponent (F);
+-
+-            --  Denormalized float.
+-            if E <= 1 - E_Bias then
+-               E := 0;
+-               F := Scaling (F, E_Bias - 1); --  Float
+-
+-            --  Signed infinites.
+-            else
+-               if E_Last + E_Bias < E then
+-                  E := E_Last;
+-                  F := 0.0;
+-
+-               --  Normalized float.
+-               else
+-                  E := E + E_Bias - 1;
+-                  F := Float'Fraction (F) * 2.0 - 1.0;
+-               end if;
+-            end if;
+-
+-            --  Copy fraction on the stream array.
+-            --  Compute using machine unsigned rather
+-            --  than larger unsigned.
+-            --  N : Number of intermediate unsigned.
+-            --  F : Float fraction.
+-            --  P : Bits to shift left.
+-            --  U : Intermediate unsigned.
+-
+-            N := (F_Bytes - 1) / UB;
+-            P := Fields (I).F_Bits;
+-            loop
+-               F := Scaling  (F, P); --  Float
+-               Q := Float'Truncation (F);
+-               U := Unsigned (Q);
+-               for I in reverse F_L - UB * (N + 1) + 1 .. F_L - UB * N loop
+-                  S (I) := SE (U mod BB);
+-                  U := U / BB;
+-               end loop;
+-               exit when N = 0;
+-               N := N - 1;
+-               F := F - Q;
+-               P := Unsigned'Size;
+-            end loop;
+-         end if;
+-
+-         --  Store the exponent at the proper bit position.
+-         U := Shift_Left (Unsigned (E), Integer (E_Bytes) * SU - E_Size - 1);
+-
+-         --  We intentionnally don't store the first byte
+-         --  as we have to add the sign bit.
+-         for N in reverse 2 .. E_Bytes loop
+-            S (N) := SE (U mod BB) + S (N);
+-            U := U / BB;
+-         end loop;
+-
+-      end if;
+-
+-      --  Store the sign and the first exponent byte.
+-      if Float'Copy_Sign (1.0, V) = -1.0 then
+-         S (1) := SE (U + BS);
+-      else
+-         S (1) := SE (U);
+-      end if;
+-      U := U / BB;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_F;
+-
+-   ---------
+-   -- W_I --
+-   ---------
+-
+-   procedure W_I (Stream : not null access RST; Item : Integer) is
+-      S : XDR_S_I;
+-      U : XDR_U;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Integer_To_XDR_S_I (Item);
+-      else
+-         --  Test sign and apply two complement's notation.
+-         if Item < 0 then
+-            U := XDR_U'Last xor XDR_U (-(Item + 1));
+-         else
+-            U := XDR_U (Item);
+-         end if;
+-
+-         for N in reverse S'Range loop
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_I;
+-
+-   ----------
+-   -- W_LF --
+-   ----------
+-
+-   procedure W_LF (Stream : not null access RST; Item : Long_Float) is
+-      I       : constant Precision := Double;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Integer := 0;
+-      F : Long_Float;
+-      Q : Long_Float;
+-      N : SEO;
+-      U : Unsigned;
+-      P : Integer;
+-      S : SEA (1 .. LF_L) := (others => 0);
+-      V : Long_Float;
+-
+-   begin
+-      if Item'Valid then
+-         V := Item;
+-      else
+-         V := 0.0;
+-      end if;
+-
+-      F := abs (V);
+-
+-      --  Signed zero.
+-      if V = 0.0 then
+-
+-         U := 0;
+-
+-      else
+-
+-         --  Signed infinites.
+-         if V <= Long_Float'Safe_First or else
+-            Long_Float'Safe_Last <= V then
+-            E := E_Last;
+-
+-         else
+-            E := Long_Float'Exponent (F);
+-
+-            --  Denormalized float.
+-            if E <= 1 - E_Bias then
+-               E := 0;
+-               F := Scaling (F, E_Bias - 1); --  Long_Float
+-
+-            --  Signed infinites.
+-            else
+-               if E_Last + E_Bias < E then
+-                  E := E_Last;
+-                  F := 0.0;
+-
+-               --  Normalized float.
+-               else
+-                  E := E + E_Bias - 1;
+-                  F := Long_Float'Fraction (F) * 2.0 - 1.0;
+-               end if;
+-            end if;
+-
+-            --  Copy fraction on the stream array.
+-            --  Compute using machine unsigned rather
+-            --  than larger unsigned.
+-            --  N : Number of intermediate unsigned.
+-            --  F : Float fraction.
+-            --  P : Bits to shift left.
+-            --  U : Intermediate unsigned.
+-
+-            N := (F_Bytes - 1) / UB;
+-            P := Fields (I).F_Bits;
+-            loop
+-               F := Scaling  (F, P); --  Long_Float
+-               Q := Long_Float'Truncation (F);
+-               U := Unsigned (Q);
+-               for I in reverse LF_L - UB * (N + 1) + 1 .. LF_L - UB * N loop
+-                  S (I) := SE (U mod BB);
+-                  U := U / BB;
+-               end loop;
+-               exit when N = 0;
+-               N := N - 1;
+-               F := F - Q;
+-               P := Unsigned'Size;
+-            end loop;
+-         end if;
+-
+-         --  Store the exponent at the proper bit position.
+-         U := Shift_Left (Unsigned (E), Integer (E_Bytes) * SU - E_Size - 1);
+-
+-         --  We intentionnally don't store the first byte
+-         --  as we have to add the sign bit.
+-         for N in reverse 2 .. E_Bytes loop
+-            S (N) := SE (U mod BB) + S (N);
+-            U := U / BB;
+-         end loop;
+-
+-      end if;
+-
+-      --  Store the sign and the first exponent byte.
+-      if Long_Float'Copy_Sign (1.0, V) = -1.0 then
+-         S (1) := SE (U + BS);
+-      else
+-         S (1) := SE (U);
+-      end if;
+-      U := U / BB;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_LF;
+-
+-   ----------
+-   -- W_LI --
+-   ----------
+-
+-   procedure W_LI (Stream : not null access RST; Item : Long_Integer) is
+-      S : XDR_S_LI;
+-      U : Unsigned;
+-      X : Long_Unsigned;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Long_Long_Integer_To_XDR_S_LI (Long_Long_Integer (Item));
+-      else
+-         --  Test sign and apply two complement's notation.
+-         if Item < 0 then
+-            X := Long_Unsigned'Last xor Long_Unsigned (-(Item + 1));
+-         else
+-            X := Long_Unsigned (Item);
+-         end if;
+-
+-         --  Compute using machine unsigned
+-         --  rather than long_unsigned.
+-
+-         for N in reverse S'Range loop
+-
+-            --  We have filled an unsinged.
+-            if (LU_L - N) mod UB = 0 then
+-               U := Unsigned (X and UL);
+-               X := Shift_Right (X, US);
+-            end if;
+-
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_LI;
+-
+-   -----------
+-   -- W_LLF --
+-   -----------
+-
+-   procedure W_LLF (Stream : not null access RST; Item : Long_Long_Float) is
+-      I       : constant Precision := Extended;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Integer := 0;
+-      F : Long_Long_Float;
+-      Q : Long_Long_Float;
+-      N : SEO;
+-      U : Unsigned;
+-      P : Integer;
+-      S : SEA (1 .. LLF_L) := (others => 0);
+-      V : Long_Long_Float;
+-
+-   begin
+-      if Item'Valid then
+-         V := Item;
+-      else
+-         V := 0.0;
+-      end if;
+-
+-      F := abs (V);
+-
+-      --  Signed zero.
+-      if V = 0.0 then
+-
+-         U := 0;
+-
+-      else
+-
+-         --  Signed infinites.
+-         if V <= Long_Long_Float'Safe_First or else
+-            Long_Long_Float'Safe_Last <= V then
+-            E := E_Last;
+-
+-         else
+-            E := Long_Long_Float'Exponent (F);
+-
+-            --  Denormalized float.
+-            if E <= 1 - E_Bias then
+-               E := 0;
+-               F := Scaling (F, E_Bias - 1); --  Long_Long_Float
+-
+-            --  Signed infinites.
+-            else
+-               if E_Last + E_Bias < E then
+-                  E := E_Last;
+-                  F := 0.0;
+-
+-               --  Normalized float.
+-               else
+-                  E := E + E_Bias - 1;
+-                  F := Long_Long_Float'Fraction (F) * 2.0 - 1.0;
+-               end if;
+-            end if;
+-
+-            --  Copy fraction on the stream array.
+-            --  Compute using machine unsigned rather
+-            --  than larger unsigned.
+-            --  N : Number of intermediate unsigned.
+-            --  F : Float fraction.
+-            --  P : Bits to shift left.
+-            --  U : Intermediate unsigned.
+-
+-            N := (F_Bytes - 1) / UB;
+-            P := Fields (I).F_Bits;
+-            loop
+-               F := Scaling  (F, P); --  Long_Long_Float
+-               Q := Long_Long_Float'Truncation (F);
+-               U := Unsigned (Q);
+-               for I in reverse LLF_L - UB * (N + 1) + 1 .. LLF_L - UB * N loop
+-                  S (I) := SE (U mod BB);
+-                  U := U / BB;
+-               end loop;
+-               exit when N = 0;
+-               N := N - 1;
+-               F := F - Q;
+-               P := Unsigned'Size;
+-            end loop;
+-         end if;
+-
+-         --  Store the exponent at the proper bit position.
+-         U := Shift_Left (Unsigned (E), Integer (E_Bytes) * SU - E_Size - 1);
+-
+-         --  We intentionnally don't store the first byte
+-         --  as we have to add the sign bit.
+-         for N in reverse 2 .. E_Bytes loop
+-            S (N) := SE (U mod BB) + S (N);
+-            U := U / BB;
+-         end loop;
+-
+-      end if;
+-
+-      --  Store the sign and the first exponent byte.
+-      if Long_Long_Float'Copy_Sign (1.0, V) = -1.0 then
+-         S (1) := SE (U + BS);
+-      else
+-         S (1) := SE (U);
+-      end if;
+-      U := U / BB;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_LLF;
+-
+-   -----------
+-   -- W_LLI --
+-   -----------
+-
+-   procedure W_LLI
+-     (Stream : not null access RST; Item : Long_Long_Integer)
+-   is
+-      S : XDR_S_LLI;
+-      U : Unsigned;
+-      X : Long_Long_Unsigned;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Long_Long_Integer_To_XDR_S_LLI (Item);
+-      else
+-         --  Test sign and apply two complement's notation.
+-         if Item < 0 then
+-            X := Long_Long_Unsigned'Last xor Long_Long_Unsigned (-(Item + 1));
+-         else
+-            X := Long_Long_Unsigned (Item);
+-         end if;
+-
+-         --  Compute using machine unsigned
+-         --  rather than long_long_unsigned.
+-
+-         for N in reverse S'Range loop
+-
+-            --  We have filled an unsigned.
+-            if (LLU_L - N) mod UB = 0 then
+-               U := Unsigned (X and UL);
+-               X := Shift_Right (X, US);
+-            end if;
+-
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_LLI;
+-
+-   -----------
+-   -- W_LLU --
+-   -----------
+-
+-   procedure W_LLU
+-     (Stream : not null access RST; Item : Long_Long_Unsigned)
+-   is
+-      S : XDR_S_LLU;
+-      U : Unsigned;
+-      X : Long_Long_Unsigned := Item;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Long_Long_Unsigned_To_XDR_S_LLU (Item);
+-      else
+-         --  Compute using machine unsigned
+-         --  rather than long_long_unsigned.
+-
+-         for N in reverse S'Range loop
+-
+-            --  We have filled an unsigned.
+-            if (LLU_L - N) mod UB = 0 then
+-               U := Unsigned (X and UL);
+-               X := Shift_Right (X, US);
+-            end if;
+-
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_LLU;
+-
+-   ----------
+-   -- W_LU --
+-   ----------
+-
+-   procedure W_LU (Stream : not null access RST; Item : Long_Unsigned) is
+-      S : XDR_S_LU;
+-      U : Unsigned;
+-      X : Long_Unsigned := Item;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Long_Long_Unsigned_To_XDR_S_LU (Long_Long_Unsigned (Item));
+-      else
+-         --  Compute using machine unsigned
+-         --  rather than long_unsigned.
+-
+-         for N in reverse S'Range loop
+-
+-            --  We have filled an unsigned.
+-            if (LU_L - N) mod UB = 0 then
+-               U := Unsigned (X and UL);
+-               X := Shift_Right (X, US);
+-            end if;
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_LU;
+-
+-   ----------
+-   -- W_SF --
+-   ----------
+-
+-   procedure W_SF (Stream : not null access RST; Item : Short_Float) is
+-      I       : constant Precision := Single;
+-      E_Size  : Integer  renames Fields (I).E_Size;
+-      E_Bias  : Integer  renames Fields (I).E_Bias;
+-      E_Last  : Integer  renames Fields (I).E_Last;
+-      E_Bytes : SEO      renames Fields (I).E_Bytes;
+-      F_Bytes : SEO      renames Fields (I).F_Bytes;
+-
+-      E : Integer := 0;
+-      F : Short_Float;
+-      Q : Short_Float;
+-      N : SEO;
+-      U : Unsigned := 0;
+-      P : Integer;
+-      S : SEA (1 .. SF_L) := (others => 0);
+-      V : Short_Float;
+-
+-   begin
+-      if Item'Valid then
+-         V := Item;
+-      else
+-         V := 0.0;
+-      end if;
+-
+-      F := abs (V);
+-
+-      --  Signed zero.
+-      if V = 0.0 then
+-
+-         U := 0;
+-
+-      else
+-
+-         --  Signed infinites.
+-         if V <= Short_Float'Safe_First or else
+-            Short_Float'Safe_Last <= V then
+-            E := E_Last;
+-
+-         else
+-            E := Short_Float'Exponent (F);
+-
+-            --  Denormalized float.
+-            if E <= 1 - E_Bias then
+-               E := 0;
+-               F := Scaling (F, E_Bias - 1); --  Short_Float
+-
+-            --  Signed infinites.
+-            else
+-               if E_Last + E_Bias < E then
+-                  E := E_Last;
+-                  F := 0.0;
+-
+-               --  Normalized float.
+-               else
+-                  E := E + E_Bias - 1;
+-                  F := Short_Float'Fraction (F) * 2.0 - 1.0;
+-               end if;
+-            end if;
+-
+-            --  Copy fraction on the stream array.
+-            --  Compute using machine unsigned rather
+-            --  than larger unsigned.
+-            --  N : Number of intermediate unsigned.
+-            --  F : Float fraction.
+-            --  P : Bits to shift left.
+-            --  U : Intermediate unsigned.
+-
+-            N := (F_Bytes - 1) / UB;
+-            P := Fields (I).F_Bits;
+-            loop
+-               F := Scaling  (F, P); --  Short_Float
+-               Q := Short_Float'Truncation (F);
+-               U := Unsigned (Q);
+-               for I in reverse SF_L - UB * (N + 1) + 1 .. SF_L - UB * N loop
+-                  S (I) := SE (U mod BB);
+-                  U := U / BB;
+-               end loop;
+-               exit when N = 0;
+-               N := N - 1;
+-               F := F - Q;
+-               P := Unsigned'Size;
+-            end loop;
+-         end if;
+-
+-         --  Store the exponent at the proper bit position.
+-         U := Shift_Left (Unsigned (E), Integer (E_Bytes) * SU - E_Size - 1);
+-
+-         --  We intentionnally don't store the first byte
+-         --  as we have to add the sign bit.
+-         for N in reverse 2 .. E_Bytes loop
+-            S (N) := SE (U mod BB) + S (N);
+-            U := U / BB;
+-         end loop;
+-
+-      end if;
+-
+-      --  Store the sign and the first exponent byte.
+-      if Short_Float'Copy_Sign (1.0, V) = -1.0 then
+-         S (1) := SE (U + BS);
+-      else
+-         S (1) := SE (U);
+-      end if;
+-      U := U / BB;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_SF;
+-
+-   ----------
+-   -- W_SI --
+-   ----------
+-
+-   procedure W_SI (Stream : not null access RST; Item : Short_Integer) is
+-      S : XDR_S_SI;
+-      U : XDR_SU;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Short_Integer_To_XDR_S_SI (Item);
+-      else
+-         --  Test sign and apply two complement's notation.
+-         if Item < 0 then
+-            U := XDR_SU'Last xor XDR_SU (-(Item + 1));
+-         else
+-            U := XDR_SU (Item);
+-         end if;
+-
+-         for N in reverse S'Range loop
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_SI;
+-
+-   -----------
+-   -- W_SSI --
+-   -----------
+-
+-   procedure W_SSI
+-     (Stream : not null access RST; Item : Short_Short_Integer)
+-   is
+-      S : XDR_S_SSI;
+-      U : XDR_SSU;
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Short_Short_Integer_To_XDR_S_SSI (Item);
+-      else
+-         --  Test sign and apply two complement's notation.
+-         if Item < 0 then
+-            U := XDR_SSU'Last xor XDR_SSU (-(Item + 1));
+-         else
+-            U := XDR_SSU (Item);
+-         end if;
+-
+-         S (1) := SE (U);
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_SSI;
+-
+-   -----------
+-   -- W_SSU --
+-   -----------
+-
+-   procedure W_SSU
+-     (Stream : not null access RST; Item : Short_Short_Unsigned)
+-   is
+-      S : XDR_S_SSU;
+-      U : constant XDR_SSU := XDR_SSU (Item);
+-
+-   begin
+-      --  for N in reverse S'Range loop
+-      --     S (N) := SE (U mod BB);
+-      --     U := U / BB;
+-      --  end loop;
+-      S (1) := SE (U);
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      --  if U /= 0 then
+-      --     raise Data_Error;
+-      --  end if;
+-   end W_SSU;
+-
+-   ----------
+-   -- W_SU --
+-   ----------
+-
+-   procedure W_SU (Stream : not null access RST; Item : Short_Unsigned) is
+-      S : XDR_S_SU;
+-      U : XDR_SU := XDR_SU (Item);
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Short_Unsigned_To_XDR_S_SU (Item);
+-      else
+-         for N in reverse S'Range loop
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_SU;
+-
+-   ---------
+-   -- W_U --
+-   ---------
+-
+-   procedure W_U (Stream : not null access RST; Item : Unsigned) is
+-      S : XDR_S_U;
+-      U : XDR_U := XDR_U (Item);
+-
+-   begin
+-      if Optimize_Integers then
+-         S := Unsigned_To_XDR_S_U (Item);
+-      else
+-         for N in reverse S'Range loop
+-            S (N) := SE (U mod BB);
+-            U := U / BB;
+-         end loop;
+-
+-         if U /= 0 then
+-            raise Data_Error;
+-         end if;
+-      end if;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-   end W_U;
+-
+-   ----------
+-   -- W_WC --
+-   ----------
+-
+-   procedure W_WC (Stream : not null access RST; Item : Wide_Character) is
+-      S : XDR_S_WC;
+-      U : XDR_WC;
+-
+-   begin
+-
+-      --  Use Ada requirements on Wide_Character representation clause.
+-      U := XDR_WC (Wide_Character'Pos (Item));
+-
+-      for N in reverse S'Range loop
+-         S (N) := SE (U mod BB);
+-         U := U / BB;
+-      end loop;
+-
+-      Ada.Streams.Write (Stream.all, S);
+-
+-      if U /= 0 then
+-         raise Data_Error;
+-      end if;
+-   end W_WC;
+-
+-end System.Stream_Attributes;

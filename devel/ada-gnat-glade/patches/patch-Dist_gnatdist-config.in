@@ -1,0 +1,171 @@
+$NetBSD: patch-Dist_gnatdist-config.in,v 1.1 2025/07/11 06:17:37 dkazankov Exp $
+
+Create configuration helper for building applications
+
+--- /dev/null
++++ Dist/gnatdist-config.in
+@@ -0,0 +1,164 @@
++#!@SHELL@
++
++# This script provides tool chain command line switches used to build
++# applications that use garlic.
++
++# @configure_input@
++
++host=@host@
++target=@target@
++if [ "$host" = "$target" ]; then
++  is_cross=false
++else
++  is_cross=true
++fi
++
++# Determine installation prefix
++
++case "$0" in
++  */*)
++    # Already has a directory indication
++    exec_name="$0"
++    ;;
++
++  *)
++    # Just base filename, retrieve from PATH
++    exec_name=`which $0`
++    ;;
++esac
++exec_rel_dir=`dirname "${exec_name}"`
++exec_abs_dir=`cd ${exec_rel_dir} && pwd`
++exec_prefix=`dirname "${exec_abs_dir}"`
++
++# Translate Cygwin-style path to Windows equivalent
++
++case "$OS" in
++   Windows_NT)
++      exec_prefix=`cygpath -w $exec_prefix`
++esac
++
++unset tgt_subdir
++if $is_cross; then
++  tgt_subdir=/$target
++fi
++
++for candidate_prefix in "${exec_prefix}${tgt_subdir}" "@prefix@${tgt_subdir}"; do
++  prefix="${candidate_prefix}"
++  if [ -f "${candidate_prefix}"/include/garlic/s-garlic.ads ]; then
++    break
++  fi
++done
++
++usage() {
++   cat <<EOF 1>&2
++Usage: gnatdist-config [OPTIONS]
++Options:
++        No option:
++            Same as --options.
++        [--options]
++            Output options to use for GLADE.
++        [--prefix[=DIR]]
++            Output the directory in which GLADE architecture-independent
++            files are installed, or set this directory to DIR.
++        [--exec-prefix[=DIR]]
++            Output the directory in which GLADE architecture-dependent
++            files are installed, or set this directory to DIR.
++        [--version|-v]
++            Output the version of GLADE.
++        [--largs]
++            Output the linker flags to use for GLADE.
++        [--cargs]
++            Output the compiler flags to use for GLADE.
++        [--bargs]
++            Output the binder flags to use for GLADE.
++        [--help]
++            Output this message
++EOF
++}
++
++no_args=true
++while test $# -gt 0; do
++  no_args=false
++  case "$1" in
++  -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
++  *) optarg= ;;
++  esac
++
++  case $1 in
++    --help|-h)
++      usage 1>&2
++      exit 1
++      ;;
++    --prefix=*)
++      prefix=$optarg;
++      if test "x$exec_prefix_set" = x ; then
++	  exec_prefix=$prefix
++      fi
++      ;;
++    --prefix)
++      echo_prefix=true
++      ;;
++    --exec-prefix=*)
++      exec_prefix=$optarg
++      ;;
++    --exec-prefix)
++      echo_exec_prefix=true
++      ;;
++    --version|-v)
++      echo "GNAT-GLADE @VERSION@ for ${target}" 1>&2
++      if $is_cross; then
++        echo " hosted on ${host}" 1>&2
++      fi
++      exit 0
++      ;;
++    --largs)
++      echo_largs=true
++      ;;
++    --cargs)
++      echo_cargs=true
++      ;;
++    --bargs)
++      echo_bargs=true
++      ;;
++    --options)
++      echo_options=true
++      ;;
++
++    *)
++      usage 1>&2
++      exit 1
++      ;;
++  esac
++  shift
++done
++if test ! x"$no_args" = x"true" ; then
++  echo_options=true
++fi
++
++includedir="@includedir@"
++libdir="@libdir@"
++garlic_incdir="${includedir}/garlic"
++garlic_libdir="${libdir}/garlic"
++
++if test ! x"$echo_options" = x"true" ; then
++  echo -a -aI${garlic_incdir} -aO${garlic_libdir}
++fi
++
++if test x"$echo_cargs" = x"true"; then
++  echo -cargs @GNATFLAGS@ -I${garlic_incdir}
++fi
++
++#if test x"$echo_bargs" = x"true"; then
++#  echo -bargs ${garlic_lib}
++#fi
++
++if test x"$echo_largs" = x"true"; then
++  echo -largs @LDFLAGS@ -L${garlic_libdir} -lgarlic
++fi
++
++if test x"$echo_prefix" = x"true" ; then
++  echo $prefix
++fi
++if test x"$echo_exec_prefix" = x"true" ; then
++  echo $exec_prefix
++fi

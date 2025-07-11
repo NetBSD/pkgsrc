@@ -1,0 +1,4 @@
+GNAT Library for Ada Distributed Environment
+
+Provides implementations of Annex E (Distributed Systems)
+of the ISO standard ISO/IEC 8652:1995/COR1:2000 for GNAT.
