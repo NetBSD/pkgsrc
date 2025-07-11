@@ -1,8 +1,9 @@
-$NetBSD: patch-agent_mibgroup_kernel__sunos5.c,v 1.2 2022/10/18 12:01:52 adam Exp $
+$NetBSD: patch-agent_mibgroup_kernel__sunos5.c,v 1.3 2025/07/11 10:11:52 jperkin Exp $
 
 Support Crossbow.
+Integer conversion fixes.
 
---- agent/mibgroup/kernel_sunos5.c.orig	2022-07-13 21:14:14.000000000 +0000
+--- agent/mibgroup/kernel_sunos5.c.orig	2023-08-15 20:32:01.000000000 +0000
 +++ agent/mibgroup/kernel_sunos5.c
 @@ -285,8 +285,8 @@ init_kernel_sunos5(void)
  
@@ -11,7 +12,7 @@ Support Crossbow.
 -getKstatInt(const char *classname, const char *statname, 
 -	    const char *varname, int *value)
 +getKstatInt(char *classname, char *statname,
-+               char *varname, int *value)
++               char *varname, uintptr_t *value)
  {
      kstat_ctl_t    *ksc;
      kstat_t        *ks;
@@ -41,7 +42,7 @@ Support Crossbow.
 +     * Get link speed, try the "link" module first, then fallback to NULL (ie: unix)
       */
 -    if ((getKstat(name, "ifspeed", &ifspeed) == 0)) {
-+    if ((getKstatInt("link", name, "ifspeed", &ifp->ifSpeed) == 0)) {
++    if ((getKstatInt("link", name, "ifspeed", (uintptr_t *)&ifp->ifSpeed) == 0)) {
          /*
           * check for SunOS patch with half implemented ifSpeed 
           */
@@ -53,10 +54,19 @@ Support Crossbow.
 +	/* WORKAROUND: If this is a link and DLPI doesn't know, its probly a VNIC */
 +	if (ifp->ifType == 1 || ifp->ifType == 0)
 +		ifp->ifType = 6;
-+    } else if (getKstatInt(NULL, name, "ifspeed", &ifp->ifSpeed) == 0) {
++    } else if (getKstatInt(NULL, name, "ifspeed", (uintptr_t *)&ifp->ifSpeed) == 0) {
          /*
           * this is good 
           */
+@@ -1669,7 +1672,7 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
+ 
+     /* make ifOperStatus depend on link status if available */
+     if (ifp->ifAdminStatus == 1) {
+-        int i_tmp;
++        uintptr_t i_tmp;
+         /* only UPed interfaces get correct link status - if any */
+         if (getKstatInt(NULL, name,"link_up",&i_tmp) == 0) {
+             ifp->ifOperStatus = i_tmp ? 1 : 2;
 @@ -1689,6 +1692,9 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
  
      /*
@@ -67,9 +77,12 @@ Support Crossbow.
       */
      if (ifp->ifType == 24) {
          ifp->ifSpeed = 127000000;
-@@ -1771,15 +1777,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
+@@ -1769,42 +1775,58 @@ set_if_info(mib2_ifEntry_t *ifp, unsigne
+ static int 
+ get_if_stats(mib2_ifEntry_t *ifp)
  {
-     int l_tmp;
+-    int l_tmp;
++    uintptr_t l_tmp;
      char *name = ifp->ifDescr.o_bytes;
 +    char classname[32];
  
@@ -96,51 +109,56 @@ Support Crossbow.
       * fall back to 32-bit.
       */
 -    if (getKstat(name, "ipackets64", &ifp->ifHCInUcastPkts) != 0) {
-+    if (getKstatInt(classname, name, "ipackets64", &ifp->ifHCInUcastPkts) != 0) {
-         if (getKstatInt(NULL, name, "ipackets", &ifp->ifInUcastPkts) != 0) {
+-        if (getKstatInt(NULL, name, "ipackets", &ifp->ifInUcastPkts) != 0) {
++    if (getKstatInt(classname, name, "ipackets64", (uintptr_t *)&ifp->ifHCInUcastPkts) != 0) {
++        if (getKstatInt(NULL, name, "ipackets", (uintptr_t *)&ifp->ifInUcastPkts) != 0) {
              return (-1);
          }
-@@ -1787,7 +1809,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+     } else { 
              ifp->ifInUcastPkts = (uint32_t)(ifp->ifHCInUcastPkts & 0xffffffff); 
      }
      
 -    if (getKstat(name, "rbytes64", &ifp->ifHCInOctets) != 0) {
-+    if (getKstatInt(classname, name, "rbytes64", &ifp->ifHCInOctets) != 0) {
-         if (getKstatInt(NULL, name, "rbytes", &ifp->ifInOctets) != 0) {
+-        if (getKstatInt(NULL, name, "rbytes", &ifp->ifInOctets) != 0) {
++    if (getKstatInt(classname, name, "rbytes64", (uintptr_t *)&ifp->ifHCInOctets) != 0) {
++        if (getKstatInt(NULL, name, "rbytes", (uintptr_t *)&ifp->ifInOctets) != 0) {
              ifp->ifInOctets = ifp->ifInUcastPkts * 308; 
          }
-@@ -1795,7 +1817,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+     } else {
              ifp->ifInOctets = (uint32_t)(ifp->ifHCInOctets & 0xffffffff);
      }
     
 -    if (getKstat(name, "opackets64", &ifp->ifHCOutUcastPkts) != 0) {
-+    if (getKstatInt(classname, name, "opackets64", &ifp->ifHCOutUcastPkts) != 0) {
-         if (getKstatInt(NULL, name, "opackets", &ifp->ifOutUcastPkts) != 0) {
+-        if (getKstatInt(NULL, name, "opackets", &ifp->ifOutUcastPkts) != 0) {
++    if (getKstatInt(classname, name, "opackets64", (uintptr_t *)&ifp->ifHCOutUcastPkts) != 0) {
++        if (getKstatInt(NULL, name, "opackets", (uintptr_t *)&ifp->ifOutUcastPkts) != 0) {
              return (-1);
          }
-@@ -1803,7 +1825,7 @@ get_if_stats(mib2_ifEntry_t *ifp)
+     } else {
           ifp->ifOutUcastPkts = (uint32_t)(ifp->ifHCOutUcastPkts & 0xffffffff);
      }
      
 -    if (getKstat(name, "obytes64", &ifp->ifHCOutOctets) != 0) {
-+    if (getKstatInt(classname, name, "obytes64", &ifp->ifHCOutOctets) != 0) {
-         if (getKstatInt(NULL, name, "obytes", &ifp->ifOutOctets) != 0) { 
+-        if (getKstatInt(NULL, name, "obytes", &ifp->ifOutOctets) != 0) { 
++    if (getKstatInt(classname, name, "obytes64", (uintptr_t *)&ifp->ifHCOutOctets) != 0) {
++        if (getKstatInt(NULL, name, "obytes", (uintptr_t *)&ifp->ifOutOctets) != 0) { 
              ifp->ifOutOctets = ifp->ifOutUcastPkts * 308;    /* XXX */
          }
+     } else {
 @@ -1815,31 +1837,31 @@ get_if_stats(mib2_ifEntry_t *ifp)
          return (0);
  
      /* some? VLAN interfaces don't have error counters, so ignore failure */
 -    getKstatInt(NULL, name, "ierrors", &ifp->ifInErrors);
 -    getKstatInt(NULL, name, "oerrors", &ifp->ifOutErrors);
-+    getKstatInt(classname, name, "ierrors", &ifp->ifInErrors);
-+    getKstatInt(classname, name, "oerrors", &ifp->ifOutErrors);
++    getKstatInt(classname, name, "ierrors", (uintptr_t *)&ifp->ifInErrors);
++    getKstatInt(classname, name, "oerrors", (uintptr_t *)&ifp->ifOutErrors);
  
      /* Try to grab some additional information */
 -    getKstatInt(NULL, name, "collisions", &ifp->ifCollisions); 
 -    getKstatInt(NULL, name, "unknowns", &ifp->ifInUnknownProtos); 
-+    getKstatInt(classname, name, "collisions", &ifp->ifCollisions);
-+    getKstatInt(classname, name, "unknowns", &ifp->ifInUnknownProtos);
++    getKstatInt(classname, name, "collisions", (uintptr_t *)&ifp->ifCollisions);
++    getKstatInt(classname, name, "unknowns", (uintptr_t *)&ifp->ifInUnknownProtos);
                  
  
      /*
