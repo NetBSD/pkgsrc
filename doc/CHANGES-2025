@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4240 2025/07/11 19:26:24 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.4241 2025/07/11 21:16:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6266,3 +6266,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added fonts/thai-font-collection version 1.02 [scole 2025-07-11]
 	Added databases/ada-gnatcoll-db-25 version 25.0.0 [dkazankov 2025-07-11]
 	Updated audio/kew to 3.4.0 [ktnb 2025-07-11]
+	Updated net/s6-networking to 2.7.1.0nb2 [schmonz 2025-07-11]
