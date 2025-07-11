@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/04/23 12:45:20 adam Exp $
-
-PKGREVISION=	1
+# $NetBSD: Makefile,v 1.9 2025/07/11 09:04:05 adam Exp $
 
 PYOBJC_FRAMEWORK=	OpenDirectory
 

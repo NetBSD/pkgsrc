@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2025/02/05 08:05:38 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/07/11 09:04:05 adam Exp $
 
-BLAKE2s (pyobjc_framework_opendirectory-11.0.tar.gz) = cd99f715e7e56e532d2c4ec5b3497a1dc51dc11462b64a470f3352a366162787
-SHA512 (pyobjc_framework_opendirectory-11.0.tar.gz) = 6dffd0235d88a3747f004d30a6ffeaf7470370d1f93c8e7c68cbb142ae11198912eb72f58dd39f600143402ed4a5c0497e8c1f55aa971029eb4fcc0cde3a09e3
-Size (pyobjc_framework_opendirectory-11.0.tar.gz) = 189165 bytes
+BLAKE2s (pyobjc_framework_opendirectory-11.1.tar.gz) = e6132fe461f1616a71c07e6be3ae3a0944c2070b5d0560847bf104d4d364a2dd
+SHA512 (pyobjc_framework_opendirectory-11.1.tar.gz) = f3544c35a7503511ef2fcade4eec0c53b9a94b1a389ef2efd14ed5e461fde4ffaabe9db9465a4f56cc1c0a613f0dde7733e70f4522ce28f3b27fd28d354ab179
+Size (pyobjc_framework_opendirectory-11.1.tar.gz) = 188880 bytes
