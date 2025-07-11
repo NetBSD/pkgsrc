@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2025/07/08 21:17:06 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/07/11 21:16:20 schmonz Exp $
 bin/proxy-server
 bin/s6-clockadd
 bin/s6-clockview
 bin/s6-getservbyname
 bin/s6-ident-client
-${PLIST.tls}bin/s6-pkgsrc-cadir
 bin/s6-sntpclock
 bin/s6-taiclock
 bin/s6-taiclockd

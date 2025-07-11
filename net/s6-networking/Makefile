@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2025/07/08 21:45:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/11 21:16:20 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		s6-networking-2.7.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 MANPAGES_VERSION=	2.7.0.4.1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
