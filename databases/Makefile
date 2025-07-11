@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.734 2025/06/15 13:33:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.735 2025/07/11 18:08:31 dkazankov Exp $
 
 COMMENT=	Databases
 
@@ -7,6 +7,7 @@ SUBDIR+=	R-dbplyr
 SUBDIR+=	R-sqldf
 SUBDIR+=	SQLiteCpp
 SUBDIR+=	abook
+SUBDIR+=	ada-gnatcoll-db-25
 SUBDIR+=	adodb
 SUBDIR+=	anymeal
 SUBDIR+=	apache-cassandra
