@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2024/03/16 21:33:11 nia Exp $
+# $NetBSD: Makefile,v 1.98 2025/07/11 10:19:27 jperkin Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -36,6 +36,12 @@ CONFIGURE_ENV.NetBSD+=	glib_cv_rtldglobal_broken=no
 CONFIGURE_ENV+=		glib_cv_has__inline=yes
 CONFIGURE_ENV+=		glib_cv_has__inline__=yes
 CONFIGURE_ENV+=		glib_cv_hasinline=yes
+.endif
+
+# Way too many hardcoded issues to patch
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=		-Wno-error=implicit-function-declaration
+CFLAGS+=		-Wno-error=implicit-int
 .endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
