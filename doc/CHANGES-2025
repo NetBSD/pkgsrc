@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4236 2025/07/11 12:48:12 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4237 2025/07/11 16:09:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6260,3 +6260,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/ada-gnat-glade version 13.0.0 [dkazankov 2025-07-11]
 	Updated devel/py-pyobjc to 11.1 [adam 2025-07-11]
 	Added devel/ada-gnatcoll-bindings-25 version 25.0.0 [dkazankov 2025-07-11]
+	Updated geography/gdal-lib to 3.11.2 [gdt 2025-07-11]
+	Updated geography/py-gdal to 3.11.2 [gdt 2025-07-11]
