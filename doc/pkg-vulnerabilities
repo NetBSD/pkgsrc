@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.459 2025/07/11 07:20:23 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.460 2025/07/12 09:11:05 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27081,3 +27081,4 @@ apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-
 apache-tomcat>=9<9.0.107	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
 apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
 apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
+poppler<25.06.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-52886
