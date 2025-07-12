@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4243 2025/07/12 15:37:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4244 2025/07/12 17:03:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6270,3 +6270,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/mosquitto to 2.0.22 [gdt 2025-07-12]
 	Updated textproc/po4a to 0.74 [adam 2025-07-12]
 	Updated devel/mold to 2.40.2 [adam 2025-07-12]
+	Updated geography/py-gdal to 3.11.3 [gdt 2025-07-12]
+	Updated geography/gdal-lib to 3.11.3 [gdt 2025-07-12]
