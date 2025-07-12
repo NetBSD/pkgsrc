@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4242 2025/07/12 12:56:19 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4243 2025/07/12 15:37:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6268,3 +6268,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/kew to 3.4.0 [ktnb 2025-07-11]
 	Updated net/s6-networking to 2.7.1.0nb2 [schmonz 2025-07-11]
 	Updated net/mosquitto to 2.0.22 [gdt 2025-07-12]
+	Updated textproc/po4a to 0.74 [adam 2025-07-12]
+	Updated devel/mold to 2.40.2 [adam 2025-07-12]
