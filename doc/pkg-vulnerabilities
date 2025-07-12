@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.462 2025/07/12 17:43:40 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.463 2025/07/12 18:10:01 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27103,3 +27103,34 @@ gnutls<3.8.10		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-329
 gnutls<3.8.10		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-6395
 gstreamer<1.26.3	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6663
 gtar-[0-9]*		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-45582
+guacamole-server<1.6.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-35164
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7067
+hdf5-[0-9]*	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-7068
+hdf5-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7069
+liboqs<0.14.0	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-52473
+libsoup-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7370
+libssh<0.11.2	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5351
+libssh<0.11.2	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-5372
+libssh<0.11.2	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-5987
+LuaJIT2<2.1.1713773202	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-25176
+LuaJIT2<2.1.1713773202	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25177
+LuaJIT2<2.1.1713773202	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-25178
+mbedtls<3.6.4	signature-forgery			https://nvd.nist.gov/vuln/detail/CVE-2025-49600
+mbedtls<3.6.4	out-of-bounds-read			https://nvd.nist.gov/vuln/detail/CVE-2025-49601
+mbedtls<3.6.4	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-52496
+mbedtls<3.6.4	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-52497
+mediawiki<1.43.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-53495
+mediawiki<1.43.2	insufficient-logging	https://nvd.nist.gov/vuln/detail/CVE-2025-53498
+mediawiki<1.43.2	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-53499
+mongodb<6.0.21		insufficient-logging	https://nvd.nist.gov/vuln/detail/CVE-2025-6711
+mongodb>=8.0<8.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6712
+mongodb<6.0.22		authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-6713
+mongodb<6.0.23		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6714
+mongodb>=8.1<8.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7259
+mtr<0.96		unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-49809
+pandoc<3.6.4		server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-51591
+plan9port<20250422	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-7208
+plan9port<20250422	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7209
+qt6-qtbase<6.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5992
+redis<8.0.3		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-32023
+redis<8.0.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48367
