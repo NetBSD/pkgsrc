@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.461 2025/07/12 09:15:54 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.462 2025/07/12 17:43:40 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27084,3 +27084,22 @@ apache-tomcat>=9<9.0.107	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-
 apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
 apache-tomcat>=11<11.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53506
 poppler<25.06.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-52886
+ap{22,24}-modsecurity<2.9.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52891
+apache<2.4.64	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2024-42516
+apache<2.4.64	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-43204
+apache<2.4.64	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-43394
+apache<2.4.64	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2024-47252
+apache<2.4.64	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-49630
+apache<2.4.64	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-53020
+chromium<138.0.7204.96	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-6554
+cpp-httplib<0.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53628
+cpp-httplib<0.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53629
+djvulibre<3.5.29	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-53367
+dpkg<1.22.21		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6297
+gdk-pixbuf2-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-7345
+git-base<2.50.1		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-48386
+gnutls<3.8.10		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-32989
+gnutls<3.8.10		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-32990
+gnutls<3.8.10		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-6395
+gstreamer<1.26.3	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-6663
+gtar-[0-9]*		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-45582
