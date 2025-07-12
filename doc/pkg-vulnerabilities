@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.460 2025/07/12 09:11:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.461 2025/07/12 09:15:54 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26371,6 +26371,8 @@ libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49795
 libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49796
 libxml2-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6021
 libxml2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6170
+libxslt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7424
+libxslt-[0-9]*	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-7425
 libxslt-[0-9]*	unknown	https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt
 apache-tomcat>=9<9.0.106	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48988
 apache-tomcat>=10<10.1.42	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48988
