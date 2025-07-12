@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2025/03/08 13:59:13 gdt Exp $
+$NetBSD: distinfo,v 1.39 2025/07/12 12:56:07 gdt Exp $
 
-BLAKE2s (mosquitto-2.0.21.tar.gz) = 187ec09757dcca65da0e805d02f8ff426b71116d2fceaf4e578ab37d1ff0d68e
-SHA512 (mosquitto-2.0.21.tar.gz) = 3acc093ef709c3f0f9d837abbb9e39e4e4ed60488c6180e2da733d65b19107f607c1fb89592d39a14faea531c8689227232e7cb13f3f58cb5ee43dad317c7cd6
-Size (mosquitto-2.0.21.tar.gz) = 804168 bytes
-SHA1 (patch-lib_CMakeLists.txt) = a1b1327c81eefc13fcb5249697f7a6bc3c94e308
+BLAKE2s (mosquitto-2.0.22.tar.gz) = 2769b4d2538943c378d5674996f5e40558f7b263be588837a9b0c3d5bad96944
+SHA512 (mosquitto-2.0.22.tar.gz) = 5aae399b308d8262a758a72064c613bfd6930e1a54f34939e30454d988c65c9d7c4c139ed70a016baa1264a0100a0c842c00e843ffe3ef83f90be440403e7482
+Size (mosquitto-2.0.22.tar.gz) = 805967 bytes
+SHA1 (patch-lib_CMakeLists.txt) = 8aefb1ddc43c3bd1edb16d0453edaf8c264eb76c
 SHA1 (patch-mosquitto.conf) = ac304038543f8cd84f06a748c3e538f32186f942
 SHA1 (patch-src_CMakeLists.txt) = ad906a507fcd39ac4fdcf98afde75ff715101698
