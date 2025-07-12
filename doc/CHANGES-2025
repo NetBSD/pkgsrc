@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4241 2025/07/11 21:16:26 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4242 2025/07/12 12:56:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6267,3 +6267,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added databases/ada-gnatcoll-db-25 version 25.0.0 [dkazankov 2025-07-11]
 	Updated audio/kew to 3.4.0 [ktnb 2025-07-11]
 	Updated net/s6-networking to 2.7.1.0nb2 [schmonz 2025-07-11]
+	Updated net/mosquitto to 2.0.22 [gdt 2025-07-12]
