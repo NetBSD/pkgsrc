@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4260 2025/07/13 12:11:53 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.4261 2025/07/13 12:59:19 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6288,3 +6288,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter to 0.25.7 [wiz 2025-07-13]
 	Updated comms/py-textual to 4.0.0 [wiz 2025-07-13]
 	Updated pkgtools/pkglint to 23.18.0 [rillig 2025-07-13]
+	Updated graphics/argyllcms to 3.4.0 [jakllsch 2025-07-13]
