@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4265 2025/07/13 15:40:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4266 2025/07/13 15:57:52 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6295,3 +6295,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby32-base to 3.2.8nb1 [taca 2025-07-13]
 	Updated lang/ruby33 to 3.3.8nb1 [taca 2025-07-13]
 	Updated lang/ruby34 to 3.4.4nb2 [taca 2025-07-13]
+	Updated pkgtools/url2pkg to 23.6.0 [rillig 2025-07-13]
