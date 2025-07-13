@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/06/10 06:07:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/07/13 10:52:55 wiz Exp $
 ${PYSITELIB}/resources/snapshot_report_template.jinja2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -397,6 +397,9 @@ ${PYSITELIB}/textual/fuzzy.pyo
 ${PYSITELIB}/textual/geometry.py
 ${PYSITELIB}/textual/geometry.pyc
 ${PYSITELIB}/textual/geometry.pyo
+${PYSITELIB}/textual/getters.py
+${PYSITELIB}/textual/getters.pyc
+${PYSITELIB}/textual/getters.pyo
 ${PYSITELIB}/textual/keys.py
 ${PYSITELIB}/textual/keys.pyc
 ${PYSITELIB}/textual/keys.pyo
