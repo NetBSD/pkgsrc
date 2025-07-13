@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.251 2025/04/28 12:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.252 2025/07/13 13:41:27 adam Exp $
 
-DISTNAME=	mkvtoolnix-92.0
+DISTNAME=	mkvtoolnix-93.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -82,3 +82,13 @@ BUILDLINK_API_DEPENDS.libmatroska+= libmatroska>=1.7.1
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# mkvtoolnix insists on a UTF8, override setting C in bsd.pkg.mk
+ALL_ENV+=	LANG=C.UTF-8
+ALL_ENV+=	LC_ALL=C.UTF-8
+ALL_ENV+=	LC_COLLATE=C.UTF-8
+ALL_ENV+=	LC_CTYPE=C.UTF-8
+ALL_ENV+=	LC_MESSAGES=C.UTF-8
+ALL_ENV+=	LC_MONETARY=C.UTF-8
+ALL_ENV+=	LC_NUMERIC=C.UTF-8
+ALL_ENV+=	LC_TIME=C.UTF-8
