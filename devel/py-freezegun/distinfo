@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/05/25 06:02:17 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/07/13 13:43:10 adam Exp $
 
-BLAKE2s (freezegun-1.5.2.tar.gz) = dabe39d643ce6ed9e2fe3d25491eb035da5507f10ecb303e49e573951c4bc917
-SHA512 (freezegun-1.5.2.tar.gz) = 63826a9b578dd7f90432c41aeca168a729e5c2fcaf6f8dac84c26d811147678f7416454115aa940e90f6902c6c38984939e28a8bcd04e139c2fc0c2a2d473274
-Size (freezegun-1.5.2.tar.gz) = 34855 bytes
+BLAKE2s (freezegun-1.5.3.tar.gz) = 10d976bd66d5f49a2e1150b863dd1e4cdd63617d754cbbdfa085e38ec2a229d5
+SHA512 (freezegun-1.5.3.tar.gz) = e77910a28627c9c03056639b04bb83b6f76f3f1ff9dc96c25074b160b6c0c053576fd4edca33d11ca69ef06c8a3074af7e251865df8dbb143c045e50a95ccadd
+Size (freezegun-1.5.3.tar.gz) = 35484 bytes
