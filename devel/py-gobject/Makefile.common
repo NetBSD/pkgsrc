@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2024/04/17 11:57:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2025/07/13 17:27:11 rillig Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 PATCHDIR=		${.CURDIR}/../../devel/py-gobject/patches

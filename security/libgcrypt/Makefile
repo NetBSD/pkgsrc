@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2025/05/09 14:05:32 adam Exp $
+# $NetBSD: Makefile,v 1.120 2025/07/13 17:27:11 rillig Exp $
 
 DISTNAME=	libgcrypt-1.11.1
 CATEGORIES=	security
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 TEST_TARGET=		check
 TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
