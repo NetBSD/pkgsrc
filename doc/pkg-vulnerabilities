@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.463 2025/07/12 18:10:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.464 2025/07/13 06:33:22 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27127,7 +27127,7 @@ mongodb>=8.0<8.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-
 mongodb<6.0.22		authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-6713
 mongodb<6.0.23		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6714
 mongodb>=8.1<8.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7259
-mtr<0.96		unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-49809
+#mtr<0.96		unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-49809
 pandoc<3.6.4		server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-51591
 plan9port<20250422	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-7208
 plan9port<20250422	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7209
