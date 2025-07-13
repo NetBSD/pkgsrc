@@ -1,0 +1,31 @@
+$NetBSD: patch-make.local,v 1.1 2025/07/13 15:13:34 vins Exp $
+
+Local makefile for pkgsrc.
+
+--- make.local.orig	2025-07-13 14:21:28.214790743 +0000
++++ make.local
+@@ -0,0 +1,24 @@
++CC	?= gcc
++
++CFLAGS	+= -Wall
++LDFLAGS	+= -lX11 -lXinerama -lImlib2
++
++PREFIX	?=
++BINDIR	?= $(PREFIX)/bin
++MANDIR	?= $(PREFIX)/$(PKGMANDIR)/man1
++
++PROGS=	hsetroot hsr-outputs
++
++all: $(PROGS)
++
++.c.o:
++	$(CC) $(CFLAGS) -c -o $(<:.c=.o) $>
++
++install: all
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(PROGS) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)
++	$(BSD_INSTALL_MAN) hsetroot.1 $(DESTDIR)$(MANDIR)
++
++clean:
++	rm -f *.o hsetroot hsr-outputs
