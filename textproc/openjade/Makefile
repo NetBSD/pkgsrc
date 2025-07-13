@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/06/28 11:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/07/13 17:27:12 rillig Exp $
 
 DISTNAME=	openjade-1.3.2
 PKGREVISION=	20
@@ -16,6 +16,7 @@ USE_LANGUAGES=		c c++03
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--datadir=${OPENJADE_DATA_DIR}
 CONFIGURE_ARGS+=	--enable-default-catalog=${OPENJADE_DATA_DIR}/catalog
 CONFIGURE_ARGS+=	--enable-spincludedir=${BUILDLINK_PREFIX.opensp}/include/OpenSP
