@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4257 2025/07/13 10:44:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4258 2025/07/13 10:50:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6285,3 +6285,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-pspdfutils to 3.3.11 [wiz 2025-07-13]
 	Updated devel/py-rope to 1.14.0 [wiz 2025-07-13]
 	Updated devel/py-ruff to 0.12.3 [wiz 2025-07-13]
+	Updated textproc/tree-sitter to 0.25.7 [wiz 2025-07-13]
