@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/07/15 09:33:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/07/13 13:41:27 adam Exp $
 bin/mkvextract
 bin/mkvinfo
 bin/mkvmerge
@@ -34,6 +34,11 @@ ${PLIST.doc}man/fr/man1/mkvinfo.1
 ${PLIST.doc}man/fr/man1/mkvmerge.1
 ${PLIST.doc}man/fr/man1/mkvpropedit.1
 ${PLIST.gui}${PLIST.doc}man/fr/man1/mkvtoolnix-gui.1
+${PLIST.doc}man/hu/man1/mkvextract.1
+${PLIST.doc}man/hu/man1/mkvinfo.1
+${PLIST.doc}man/hu/man1/mkvmerge.1
+${PLIST.doc}man/hu/man1/mkvpropedit.1
+${PLIST.gui}${PLIST.doc}man/hu/man1/mkvtoolnix-gui.1
 ${PLIST.doc}man/it/man1/mkvextract.1
 ${PLIST.doc}man/it/man1/mkvinfo.1
 ${PLIST.doc}man/it/man1/mkvmerge.1
@@ -138,6 +143,7 @@ share/locale/de/LC_MESSAGES/mkvtoolnix.mo
 share/locale/es/LC_MESSAGES/mkvtoolnix.mo
 share/locale/eu/LC_MESSAGES/mkvtoolnix.mo
 share/locale/fr/LC_MESSAGES/mkvtoolnix.mo
+share/locale/hu/LC_MESSAGES/mkvtoolnix.mo
 share/locale/it/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ja/LC_MESSAGES/mkvtoolnix.mo
 share/locale/ko/LC_MESSAGES/mkvtoolnix.mo
