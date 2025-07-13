@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:33:54 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/07/13 15:13:34 vins Exp $
 
 BLAKE2s (hsetroot-1.0.5.tar.gz) = 67d05a00b5f6488e189ed46194d633d0c68797d580451f2b74d5442ffd675138
 SHA512 (hsetroot-1.0.5.tar.gz) = b43f7cd75886e72cb6134446d383d7d9a684c818f2d8a0f829670c8dfca5eaaa1eb6c25f30dda41f3483609b25e8a44a3a3cb3a969bba7f77a9b9df712fa2167
 Size (hsetroot-1.0.5.tar.gz) = 12878 bytes
+SHA1 (patch-hsetroot.1) = 921ef0f8538d4915182150fecc234fc47df8955b
+SHA1 (patch-hsetroot.c) = 7da5e8303a179f60f71cefa51b3983f56d13ed88
+SHA1 (patch-make.local) = 65c6b3efb52e1c085e08bf3a4c87e6cc57aaee3a
