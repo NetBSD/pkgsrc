@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/03/14 19:45:48 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/07/13 15:20:38 vins Exp $
 
-BLAKE2s (qt6gtk2-0.4.tar.gz) = 71c6f784f554e3e11bf1e63655d50a4a1235f0f3a35e5b5461b7fa05cf5b11f4
-SHA512 (qt6gtk2-0.4.tar.gz) = 875c9198b94f196f515b087ed29b84f4b3890187e8f9e188d686d8f7bca0dc817acdb881014da21aa71735c2d3cd60ff7bf9ee95be227cfad1be15faba2f68c2
-Size (qt6gtk2-0.4.tar.gz) = 66215 bytes
+BLAKE2s (qt6gtk2-0.5.tar.gz) = 54043b3185a7cdfc93c63ad680ed1da341e93d2bbe3489455dd50019ead93d27
+SHA512 (qt6gtk2-0.5.tar.gz) = a4aaaee077067a821fa84343c91cc30960a2e3705cfd601e27df5295c3232c144044a73d2b669c6172e3b8dea4599301d820e976add0b0c630893ae71713e950
+Size (qt6gtk2-0.5.tar.gz) = 66258 bytes

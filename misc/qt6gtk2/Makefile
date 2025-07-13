@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/06/01 15:42:04 vins Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/13 15:20:38 vins Exp $
 
-DISTNAME=	qt6gtk2-0.4
-PKGREVISION=	3
+DISTNAME=	qt6gtk2-0.5
 CATEGORIES=	misc x11
 MASTER_SITES=	https://www.opencode.net/trialuser/qt6gtk2/-/archive/${PKGVERSION_NOREV}/
 
