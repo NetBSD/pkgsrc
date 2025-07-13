@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/05/21 14:12:54 ktnb Exp $
+# $NetBSD: Makefile,v 1.78 2025/07/13 16:17:55 rillig Exp $
 
 DISTNAME=	slang-2.3.3
 PKGNAME=	lib${DISTNAME}
@@ -16,6 +16,7 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
