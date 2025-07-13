@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.58 2025/01/23 06:05:44 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.59 2025/07/13 15:57:40 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -447,13 +447,10 @@ def test_PackageVars_adjust_site_GitHub_archive__tag():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'DISTNAME=       1.0.0',
-        'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}',
+        'DISTNAME=       proj-1.0.0',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
-        'GITHUB_PROJECT= proj',
-        'GITHUB_TAG=     refs/tags/1.0.0',
-        'DIST_SUBDIR=    ${GITHUB_PROJECT}',
+        'GITHUB_TAG=     ${PKGVERSION_NOREV}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://github.com/org/proj/',
