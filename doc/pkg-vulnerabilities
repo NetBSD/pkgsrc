@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.464 2025/07/13 06:33:22 kim Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.465 2025/07/13 10:04:57 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27134,3 +27134,7 @@ plan9port<20250422	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-72
 qt6-qtbase<6.8.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5992
 redis<8.0.3		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-32023
 redis<8.0.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48367
+ruby31-base-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-24294
+ruby32-base-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-24294
+ruby33-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-24294
+ruby34-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-24294
