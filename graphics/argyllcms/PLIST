@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/07/13 12:59:03 jakllsch Exp $
 bin/applycal
 bin/average
 bin/cb2ti3
@@ -133,3 +133,4 @@ share/argyll/ref/lab2lab.icm
 share/argyll/ref/linear.cal
 share/argyll/ref/sRGB.icm
 share/argyll/ref/strange.cal
+share/metainfo/com.argyllcms.metainfo.xml
