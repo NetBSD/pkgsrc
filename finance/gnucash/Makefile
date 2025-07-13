@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2025/07/01 16:22:53 wiz Exp $
+# $NetBSD: Makefile,v 1.371 2025/07/13 18:16:42 wiz Exp $
 
 DISTNAME=		gnucash-5.12
 CATEGORIES=		finance
@@ -21,6 +21,7 @@ USE_TOOLS+=		bash perl:run pkg-config
 USE_TOOLS+=		gmake
 
 USE_CXX_FEATURES=	c++17
+GCC_REQD+=		8
 
 # build failure in test-tx_import and a couple test failures
 # https://bugzilla.gnome.org/show_bug.cgi?id=795251
