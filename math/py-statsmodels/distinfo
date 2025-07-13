@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2025/01/05 11:10:48 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/07/13 16:41:50 adam Exp $
 
-BLAKE2s (statsmodels-0.14.4.tar.gz) = 03cf866314aed79796234a595e48bb14027c2ca481d0f03da5289c2fddc82bf0
-SHA512 (statsmodels-0.14.4.tar.gz) = db3bd19b8b47af453ad6fbd24449a621895e4237bbc8b7813810306748c32a3fbf005387a0e1e8db550c9c4a59666bdd50aeb49e24f0ecb86619bc90f166f5f9
-Size (statsmodels-0.14.4.tar.gz) = 20354802 bytes
+BLAKE2s (statsmodels-0.14.5.tar.gz) = 5a5db5b24d674d740c42b66c668efbd1cf6721dc7324596c68baf52b1b293219
+SHA512 (statsmodels-0.14.5.tar.gz) = b36763d2ea3a1db2181838cc05834e96c9914789155b4723ee260f94a6f481fd8ea5c07294e375efd783b06d28cf9b71385c00b94ed0271189da551f562948f3
+Size (statsmodels-0.14.5.tar.gz) = 20525016 bytes
 SHA1 (patch-statsmodels_tsa_exponential__smoothing___ets__smooth.pyx) = 7f16d85398a2dda6a11c3a4e0c47bad454194207
 SHA1 (patch-statsmodels_tsa_statespace___filters___inversions.pyx.in) = 2d22542e9ce8122fe8d127907897fd33b310d610
 SHA1 (patch-statsmodels_tsa_statespace___filters___univariate.pyx.in) = 38a00193937033bd7bd739cbf6859c67dd443c97
