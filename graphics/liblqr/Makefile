@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/29 09:26:10 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/13 16:19:04 rillig Exp $
 
 DISTNAME=	liblqr-1-0.4.3
 PKGNAME=	${DISTNAME:S/-1-/-/}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 PKGCONFIG_OVERRIDE=	lqr-1.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"

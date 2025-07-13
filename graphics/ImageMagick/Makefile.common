@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.282 2025/05/05 07:50:44 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.283 2025/07/13 16:19:04 rillig Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 #
@@ -28,6 +28,7 @@ WRKSRC=		${WRKDIR}/ImageMagick-${DISTSUFFIX}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.
 CONFIGURE_ARGS+=	--without-dps
