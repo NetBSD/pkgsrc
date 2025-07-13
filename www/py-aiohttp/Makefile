@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2025/07/04 09:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/07/13 09:11:58 wiz Exp $
 
-DISTNAME=	aiohttp-3.12.13
+DISTNAME=	aiohttp-3.12.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.5.0:../../net/py-aiohappyeyeballs
-DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.1.2:../../devel/py-aiosignal
+DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.4.0:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-frozenlist>=1.1.1:../../devel/py-frozenlist
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5:../../databases/py-multidict
@@ -26,6 +26,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-re-assert-[0-9]*:../../devel/py-re-assert
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+#TEST_DEPENDS+=	${PYPKGPREFIX}-isal-[0-9]*:../../wip/py-isal
+TEST_DEPENDS+=	${PYPKGPREFIX}-zlib-ng-[0-9]*:../../archivers/py-zlib-ng
+#TEST_DEPENDS+=	${PYPKGPREFIX}-blockbuster-[0-9]*:../../wip/py-blockbuster
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
