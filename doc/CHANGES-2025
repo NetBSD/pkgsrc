@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4259 2025/07/13 10:53:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4260 2025/07/13 12:11:53 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6287,3 +6287,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.12.3 [wiz 2025-07-13]
 	Updated textproc/tree-sitter to 0.25.7 [wiz 2025-07-13]
 	Updated comms/py-textual to 4.0.0 [wiz 2025-07-13]
+	Updated pkgtools/pkglint to 23.18.0 [rillig 2025-07-13]
