@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/07/01 11:59:04 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/07/13 17:23:28 adam Exp $
 
-DISTNAME=	maturin-1.9.0
+DISTNAME=	maturin-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maturin/}
