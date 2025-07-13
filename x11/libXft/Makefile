@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/04/21 12:03:13 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/07/13 17:27:12 rillig Exp $
 
 DISTNAME=	libXft-2.3.9
 CATEGORIES=	x11 fonts
@@ -12,6 +12,7 @@ COMMENT=	Library for configuring and customizing font access
 CONFLICTS+=	Xft2-[0-9]*
 
 GNU_CONFIGURE=		YES
+GNU_CONFIGURE_ICONV=	no
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	xft.pc.in

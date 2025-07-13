@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/04/17 21:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/13 17:27:12 rillig Exp $
 #
 # When updating this package, also update x11/py-xcbgen
 
@@ -13,9 +13,10 @@ HOMEPAGE=	https://xcb.freedesktop.org/
 COMMENT=	XCB protocol descriptions (in XML)
 LICENSE=	mit # with no-advertising clause
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	# none
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
+USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		# none
 
 PKGCONFIG_OVERRIDE+=	xcb-proto.pc.in
 
