@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4251 2025/07/13 09:12:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4252 2025/07/13 10:27:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6279,3 +6279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/fq to 0.15.1 [wiz 2025-07-13]
 	Updated devel/ninja-build to 1.13.1 [wiz 2025-07-13]
 	Updated www/py-aiohttp to 3.12.14 [wiz 2025-07-13]
+	Updated security/py-cyclonedx-python-lib to 10.4.1 [wiz 2025-07-13]
