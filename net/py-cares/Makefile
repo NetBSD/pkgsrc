@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/14 17:05:53 kim Exp $
+# $NetBSD: Makefile,v 1.15 2025/07/13 06:20:09 kim Exp $
 
-DISTNAME=	pycares-4.5.0
+DISTNAME=	pycares-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
 
