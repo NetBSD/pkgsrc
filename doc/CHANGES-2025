@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4247 2025/07/13 08:18:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4248 2025/07/13 08:54:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6275,3 +6275,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/liboqs to 0.14.0 [kim 2025-07-13]
 	Updated net/py-cares to 4.9.0 [kim 2025-07-13]
 	Updated print/poppler to 25.07.0 [wiz 2025-07-13]
+	Updated devel/ast-grep to 0.38.7 [wiz 2025-07-13]
