@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4268 2025/07/13 16:42:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4269 2025/07/13 17:23:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6301,3 +6301,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/apache24 to 2.4.64 [adam 2025-07-13]
 	Updated textproc/py-rapidjson to 1.21 [adam 2025-07-13]
 	Updated math/py-statsmodels to 0.14.5 [adam 2025-07-13]
+	Updated lang/nodejs to 24.4.0 [adam 2025-07-13]
+	Updated textproc/py-cmudict to 1.0.33 [adam 2025-07-13]
+	Updated devel/py-maturin to 1.9.1 [adam 2025-07-13]
