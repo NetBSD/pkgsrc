@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/05/13 13:06:46 nikita Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/07/13 17:24:31 wiz Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -133,20 +133,19 @@ include/irssi/src/irc/notifylist/notify-setup.h
 include/irssi/src/irc/notifylist/notifylist.h
 include/irssi/src/lib-config/iconfig.h
 include/irssi/src/lib-config/module.h
-lib/irssi/modules/libirc_proxy.la
-lib/pkgconfig/irssi-1.pc
+${PLIST.perl}lib/irssi/modules/libfe_perl.so
+lib/irssi/modules/libirc_proxy.so
+${PLIST.otr}lib/irssi/modules/libotr_core.so
+${PLIST.perl}lib/irssi/modules/libperl_core.so
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/Irc.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/TextUI.pm
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/Irssi/UI.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/.packlist
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irc/.packlist
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irc/Irc.${MODULEEXT}
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/Irssi.${MODULEEXT}
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/TextUI/.packlist
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/TextUI/TextUI.${MODULEEXT}
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/UI/.packlist
 ${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/auto/Irssi/UI/UI.${MODULEEXT}
+lib/pkgconfig/irssi-1.pc
 man/man1/irssi.1
 share/doc/irssi/capsicum.txt
 share/doc/irssi/design.html
@@ -279,14 +278,11 @@ share/irssi/help/window
 share/irssi/scripts/autoop.pl
 share/irssi/scripts/autorejoin.pl
 share/irssi/scripts/buf.pl
-share/irssi/scripts/command.pl
 share/irssi/scripts/dns.pl
 share/irssi/scripts/kills.pl
 share/irssi/scripts/mail.pl
 share/irssi/scripts/mlock.pl
-share/irssi/scripts/msg-event.pl
 share/irssi/scripts/quitmsg.pl
-share/irssi/scripts/redirect.pl
 share/irssi/scripts/scriptassist.pl
 share/irssi/scripts/usercount.pl
 share/irssi/themes/colorless.theme
