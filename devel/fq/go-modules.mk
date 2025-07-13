@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.13 2025/04/20 20:19:22 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.14 2025/07/13 08:55:20 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -26,16 +26,16 @@ GO_MODULE_FILES+=	github.com/niemeyer/pretty/@v/v0.0.0-20200227124842-a10e7caefd
 GO_MODULE_FILES+=	github.com/niemeyer/pretty/@v/v0.0.0-20200227124842-a10e7caefd8e.zip
 GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20250208151254-0aa7b87b2c2b.mod
 GO_MODULE_FILES+=	github.com/wader/gojq/@v/v0.12.1-0.20250208151254-0aa7b87b2c2b.zip
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.37.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.37.0.zip
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.39.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.39.0.zip
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.32.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.32.0.zip
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.31.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.31.0.zip
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.24.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.24.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.40.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.40.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.42.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.42.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.33.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.33.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.27.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.27.0.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20200227125254-8fa46927fb4f.mod
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v1.0.0-20200227125254-8fa46927fb4f.zip
