@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4244 2025/07/12 17:03:02 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4245 2025/07/13 06:09:07 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6272,3 +6272,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mold to 2.40.2 [adam 2025-07-12]
 	Updated geography/py-gdal to 3.11.3 [gdt 2025-07-12]
 	Updated geography/gdal-lib to 3.11.3 [gdt 2025-07-12]
+	Updated security/liboqs to 0.14.0 [kim 2025-07-13]
