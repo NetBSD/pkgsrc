@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2018/12/01 04:58:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/07/13 21:08:08 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -34,6 +34,7 @@ share/aclocal-${PKG_DIR_VERSION}/obsolete.m4
 share/aclocal-${PKG_DIR_VERSION}/options.m4
 share/aclocal-${PKG_DIR_VERSION}/prog-cc-c-o.m4
 share/aclocal-${PKG_DIR_VERSION}/python.m4
+share/aclocal-${PKG_DIR_VERSION}/rmf.m4
 share/aclocal-${PKG_DIR_VERSION}/runlog.m4
 share/aclocal-${PKG_DIR_VERSION}/sanity.m4
 share/aclocal-${PKG_DIR_VERSION}/silent.m4
@@ -42,6 +43,7 @@ share/aclocal-${PKG_DIR_VERSION}/substnot.m4
 share/aclocal-${PKG_DIR_VERSION}/tar.m4
 share/aclocal-${PKG_DIR_VERSION}/upc.m4
 share/aclocal-${PKG_DIR_VERSION}/vala.m4
+share/aclocal-${PKG_DIR_VERSION}/xargsn.m4
 share/aclocal/README
 share/automake-${PKG_DIR_VERSION}/Automake/ChannelDefs.pm
 share/automake-${PKG_DIR_VERSION}/Automake/Channels.pm
