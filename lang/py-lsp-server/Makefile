@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/04/13 19:05:17 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/13 10:36:32 wiz Exp $
 
-DISTNAME=	python_lsp_server-1.12.2
+DISTNAME=	python_lsp_server-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
 
@@ -40,6 +39,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-rope -> py-toolconfig -> py-sphinx
+
+# as of 1.13.0
+# 1 failed, 196 passed, 8 skipped, 74 warnings
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
