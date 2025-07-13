@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.64 2025/01/23 06:05:44 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.65 2025/07/13 15:57:40 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -420,7 +420,7 @@ class PackageVars:
     def adjust_site_CPAN(self):
         pattern = r'''(?x)
             ^
-            https://cpan.metacpan.org/authors
+            https://cpan\.metacpan\.org/authors
             /id/(?:\w+/)+
             (               # distfile
                 (\w+-)+     # namespace prefixes
@@ -508,6 +508,13 @@ class PackageVars:
             self.distfile = f'{proj}-{version}{ext}'
             self.github_tag = f'refs/tags/v${{PKGVERSION_NOREV}}'
             self.wrksrc = '${WRKDIR}/${DISTNAME}'
+            return
+
+        m = re.search(r'^refs/tags/(\d[\d.]*)$', tag)
+        if m:
+            version = m.group(1)
+            self.distfile = f'{proj}-{version}{ext}'
+            self.github_tag = '${PKGVERSION_NOREV}'
             return
 
         self.github_project = proj
