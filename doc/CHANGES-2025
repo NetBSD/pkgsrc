@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4255 2025/07/13 10:39:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4256 2025/07/13 10:41:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6283,3 +6283,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.176.0 [wiz 2025-07-13]
 	Updated lang/py-lsp-server to 1.13.0 [wiz 2025-07-13]
 	Updated print/py-pspdfutils to 3.3.11 [wiz 2025-07-13]
+	Updated devel/py-rope to 1.14.0 [wiz 2025-07-13]
