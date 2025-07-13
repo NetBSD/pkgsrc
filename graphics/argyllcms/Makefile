@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/24 14:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/13 12:59:03 jakllsch Exp $
 
-DISTNAME=	Argyll_V3.3.0_src
+DISTNAME=	Argyll_V3.4.0_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
 EXTRACT_SUFX=	.zip
@@ -34,6 +33,9 @@ do-install:
 		${MAKE_ENV} jam -q -fJambase ${_MAKE_JOBS} install
 	${MV} ${DESTDIR}${PREFIX}/bin/License.txt \
 		${DESTDIR}${PREFIX}/share/argyll/
+	${MKDIR} ${DESTDIR}${PREFIX}/share/metainfo
+	${MV} ${DESTDIR}${PREFIX}/bin/com.argyllcms.metainfo.xml \
+		${DESTDIR}${PREFIX}/share/metainfo/
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
@@ -46,5 +48,6 @@ do-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
