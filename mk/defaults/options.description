@@ -407,7 +407,7 @@ ipa-without-limits	Disable limits support.
 ipa-without-rules	Disable static rules support.
 ipa-without-sublimits	Disable sublimits support.
 ipa-without-thresholds	Disable thresholds support.
-irssi-perl		Enable Perl support in irssi.
+irssi-truecolor		Enable truecolor support in irssi.
 iscsi			Enable iSCSI support.
 iso			Build a .iso file.
 ispell			Add spell checking support using ispell.
