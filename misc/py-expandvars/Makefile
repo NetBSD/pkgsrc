@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/04/12 07:26:16 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/13 21:10:52 wiz Exp $
 
-DISTNAME=	expandvars-1.0.0
+DISTNAME=	expandvars-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/expandvars/}
