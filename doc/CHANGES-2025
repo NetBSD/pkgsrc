@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4271 2025/07/13 21:08:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4272 2025/07/13 21:11:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6306,3 +6306,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-maturin to 1.9.1 [adam 2025-07-13]
 	Updated chat/irssi to 1.4.5nb3 [wiz 2025-07-13]
 	Updated devel/automake to 1.18 [wiz 2025-07-13]
+	Updated misc/py-expandvars to 1.1.1 [wiz 2025-07-13]
