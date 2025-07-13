@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2022/06/28 11:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/07/13 17:27:12 rillig Exp $
 
 DISTNAME=		intltool-0.51.0
 PKGREVISION=		7
@@ -17,6 +17,7 @@ CONFLICTS=		xml-i18n-tools-[0-9]*
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
+GNU_CONFIGURE_ICONV=	no
 CHECK_INTERPRETER_SKIP=	share/intltool/*.in
 TEST_TARGET=		check
 
