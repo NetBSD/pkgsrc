@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2025/06/07 15:51:04 vins Exp $
+$NetBSD: distinfo,v 1.21 2025/07/14 17:11:06 vins Exp $
 
-BLAKE2s (fastfetch-2.45.0.tar.gz) = 2e99e557c6952f8e5c59fa2b65bbbbd6bdb9fc0443d137b1bc0d59cefd17bc76
-SHA512 (fastfetch-2.45.0.tar.gz) = a4adef728218e5bcc694d6e2bea0a86b78a24f04a176336a2ad7526673044b7709b0645d521137f9f85f3a1b9ad565ba6fc26c2dbd7e7cd883f9d7658cf5cf37
-Size (fastfetch-2.45.0.tar.gz) = 1307132 bytes
+BLAKE2s (fastfetch-2.47.0.tar.gz) = 665cc6f5ee9f84482bfede057967803f4f65d375f633e800275be3321db69f54
+SHA512 (fastfetch-2.47.0.tar.gz) = b86ad47b95ddc83fdaa34c33930d4500bccb2e90a77ad1cdd3d4837d65b80b50e6278c0526b7b4991436e942e6e711323398c3b605e985729fa2be94dcd47531
+Size (fastfetch-2.47.0.tar.gz) = 1327613 bytes
 SHA1 (patch-src_detection_packages_packages__apple.c) = 3678300a59d8ef989d1848b3685485db3c638038
