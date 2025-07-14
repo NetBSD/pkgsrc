@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/07/08 10:46:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/07/14 07:52:24 markd Exp $
 bin/dbm-fc-solver
 bin/depth-dbm-fc-solver
 bin/fc-solve
@@ -41,7 +41,6 @@ share/doc/freecell-solver/NEWS
 share/doc/freecell-solver/README
 share/doc/freecell-solver/TODO
 share/doc/freecell-solver/USAGE
-share/doc/freecell-solver/fc-solve.txt
 share/freecell-solver/presetrc
 share/freecell-solver/presets/abra-kadabra.sh
 share/freecell-solver/presets/amateur-star.sh
