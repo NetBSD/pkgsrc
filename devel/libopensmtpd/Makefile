@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2025/02/11 19:03:18 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/14 17:40:44 vins Exp $
 
-DISTNAME=	libopensmtpd-0.8
+DISTNAME=	libopensmtpd-1.0
 CATEGORIES=	devel mail
 MASTER_SITES=	https://src.imperialat.at/releases/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://distfiles.sigtrap.nl/
+HOMEPAGE=	https://src.imperialat.at/?action=summary&path=libopensmtpd.git
 COMMENT=	Library for creating opensmtpd filters
 LICENSE=	isc
 
@@ -14,7 +14,7 @@ USE_TOOLS+=	gmake
 CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE   # strtonum()
 
 MAKE_FILE=		Makefile.gnu
-MAKE_ENV+=		LOCALBASE=${PREFIX:Q}
+MAKE_ENV+=		LOCALBASE=${PREFIX}
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man3
 MAKE_ENV+=		MANFORMAT=man
 
