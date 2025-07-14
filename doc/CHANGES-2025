@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4276 2025/07/13 21:20:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4277 2025/07/14 05:31:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6311,3 +6311,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Future to 0.52 [wiz 2025-07-13]
 	Updated security/p5-IO-Socket-SSL to 2.095 [wiz 2025-07-13]
 	Updated devel/p5-Test-Differences to 0.7200 [wiz 2025-07-13]
+	Updated devel/py-astroid to 3.3.11 [adam 2025-07-14]
+	Updated math/py-astropy-iers-data to 0.2025.7.14.0.40.29 [adam 2025-07-14]
+	Updated security/py-certifi to 2025.7.14 [adam 2025-07-14]
+	Updated sysutils/py-crontab to 3.3.0 [adam 2025-07-14]
