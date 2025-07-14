@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.27 2024/04/05 17:26:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/07/14 16:05:49 wiz Exp $
 include/gstreamer-1.0/gst/analytics/analytics-meta-prelude.h
 include/gstreamer-1.0/gst/analytics/analytics.h
 include/gstreamer-1.0/gst/analytics/gstanalyticsclassificationmtd.h
 include/gstreamer-1.0/gst/analytics/gstanalyticsmeta.h
 include/gstreamer-1.0/gst/analytics/gstanalyticsobjectdetectionmtd.h
 include/gstreamer-1.0/gst/analytics/gstanalyticsobjecttrackingmtd.h
+include/gstreamer-1.0/gst/analytics/gstanalyticssegmentationmtd.h
+include/gstreamer-1.0/gst/analytics/gsttensor.h
+include/gstreamer-1.0/gst/analytics/gsttensormeta.h
 include/gstreamer-1.0/gst/audio/audio-bad-prelude.h
 include/gstreamer-1.0/gst/audio/gstnonstreamaudiodecoder.h
 include/gstreamer-1.0/gst/audio/gstplanaraudioadapter.h
@@ -16,8 +19,10 @@ include/gstreamer-1.0/gst/codecparsers/codecparsers-prelude.h
 include/gstreamer-1.0/gst/codecparsers/gstav1parser.h
 include/gstreamer-1.0/gst/codecparsers/gsth264parser.h
 include/gstreamer-1.0/gst/codecparsers/gsth265parser.h
+include/gstreamer-1.0/gst/codecparsers/gsth266parser.h
 include/gstreamer-1.0/gst/codecparsers/gstjpeg2000sampling.h
 include/gstreamer-1.0/gst/codecparsers/gstjpegparser.h
+include/gstreamer-1.0/gst/codecparsers/gstlcevcmeta.h
 include/gstreamer-1.0/gst/codecparsers/gstmpeg4parser.h
 include/gstreamer-1.0/gst/codecparsers/gstmpegvideometa.h
 include/gstreamer-1.0/gst/codecparsers/gstmpegvideoparser.h
@@ -36,8 +41,6 @@ include/gstreamer-1.0/gst/mpegts/gst-dvb-descriptor.h
 include/gstreamer-1.0/gst/mpegts/gst-dvb-section.h
 include/gstreamer-1.0/gst/mpegts/gst-hdmv-section.h
 include/gstreamer-1.0/gst/mpegts/gst-isdb-descriptor.h
-include/gstreamer-1.0/gst/mpegts/gst-metadata-descriptor.h
-include/gstreamer-1.0/gst/mpegts/gst-mpegtspesmetadatameta.h
 include/gstreamer-1.0/gst/mpegts/gst-scte-section.h
 include/gstreamer-1.0/gst/mpegts/gstmpegts-enumtypes.h
 include/gstreamer-1.0/gst/mpegts/gstmpegtsdescriptor.h
@@ -162,6 +165,7 @@ lib/gstreamer-1.0/libgstsmooth.so
 lib/gstreamer-1.0/libgstspeed.so
 lib/gstreamer-1.0/libgstsubenc.so
 lib/gstreamer-1.0/libgstswitchbin.so
+lib/gstreamer-1.0/libgsttensordecoders.so
 lib/gstreamer-1.0/libgsttimecode.so
 lib/gstreamer-1.0/libgsttranscode.so
 lib/gstreamer-1.0/libgstvideofiltersbad.so
