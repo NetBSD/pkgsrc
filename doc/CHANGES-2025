@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4294 2025/07/14 16:58:10 vins Exp $
+$NetBSD: CHANGES-2025,v 1.4295 2025/07/14 17:13:19 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6339,3 +6339,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc12-libs to 12.5.0nb1 [wiz 2025-07-14]
 	Updated lang/gcc12-libjit to 12.5.0 [wiz 2025-07-14]
 	Updated devel/got to 0.115 [vins 2025-07-14]
+	Updated sysutils/fastfetch to 2.47.0 [vins 2025-07-14]
