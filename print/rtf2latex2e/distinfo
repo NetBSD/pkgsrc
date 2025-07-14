@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/07/04 14:44:40 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2025/07/14 16:50:23 schmonz Exp $
 
 BLAKE2s (rtf2latex2e-2-2-3.tar.gz) = f8cfaf0b3aea5d45ceff3ff9c2b09c420fdd99ad590aa3243c52403ce1c05c53
 SHA512 (rtf2latex2e-2-2-3.tar.gz) = ff02701f75ac8d1655e01ee3eec5f9c51f3b9f80238577c715f84d922f1254061472b807bf37ade643701a1e2fe594cf168b522519c1e619bd1cd94f2b92da66
 Size (rtf2latex2e-2-2-3.tar.gz) = 1207871 bytes
+SHA1 (patch-Makefile) = fb17a8f2f96a24e8e2562b0cf78a3f2024f05689

@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/14 16:50:24 schmonz Exp $
+
+Match case to the file that actually exists in tree.
+
+--- Makefile.orig	2025-07-14 16:47:26.079448846 +0000
++++ Makefile
+@@ -66,7 +66,7 @@ PREFS        = pref/latex-encoding      
+                pref/cp936raw.txt                  pref/cp932raw.txt                  \
+                pref/rtf-encoding.cp1251           
+ 
+-DOCS         = doc/GPL_license      doc/ChangeLog     \
++DOCS         = doc/GPL_license      doc/Changelog     \
+                doc/rtf2latexDoc.tex doc/rtf2latex2e.1 \
+                doc/Makefile                           \
+ 
