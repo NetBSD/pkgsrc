@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/02/12 06:44:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2025/07/14 16:05:49 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-pulse/}
-PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - PulseAudio plugin
