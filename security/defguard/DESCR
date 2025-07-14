@@ -1,0 +1,24 @@
+Defguard provides Comprehensive Access Control (a complete security platform):
+* WireGuard VPN with 2FA/MFA - not 2FA to "access application" like most
+  solutions
+  - The only solution with automatic and real-time synchronization for users'
+    desktop client settings (including all VPNs/locations).
+  - Control users ability to manage devices and VPN options
+* ACLs/Firewall Management for Linux and FreeBSD/OPNSense
+* Integrated SSO based on OpenID Connect:
+  - significant cost saving, simplifying deployment and maintenance
+  - enabling features unavailable to VPN platforms relying upon 3rd party SSO
+    integration
+* Already using Google/Microsoft or other OpenID Provider? - external OpenID
+  provider support
+* Two way Active Directory/LDAP synchronization
+* Only solution with secure remote user Enrollment & Onboarding
+* Yubico YubiKey Hardware security key management and provisioning
+* Secure and robust architecture, featuring components and micro-services
+  seamlessly deployable in diverse network setups (eg. utilizing network
+  segments like Demilitarized Zones, Intranet with no external access, etc),
+  ensuring a secure environment.
+* Enterprise ready (multiple Locations/Gateways/Kubernetes deployment, etc..)
+* Built on WireGuard protocol which is faster than IPSec, and significantly
+  faster than OpenVPN
+* Built with Rust for speed and security
