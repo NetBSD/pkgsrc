@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/05/10 10:53:21 adam Exp $
+# $NetBSD: Makefile,v 1.41 2025/07/14 10:34:29 adam Exp $
 
-DISTNAME=	qt-creator-opensource-src-16.0.1
+DISTNAME=	qt-creator-opensource-src-17.0.0
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
 CATEGORIES=	editors
 MASTER_SITES=	http://download.qt.io/official_releases/${PKGBASE}/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/
@@ -45,6 +45,13 @@ REPLACE_PERL+=		scripts/purify2tasks.pl
 REPLACE_PERL+=		scripts/qdoc2tasks.pl
 REPLACE_PERL+=		scripts/test2tasks.pl
 REPLACE_PERL+=		scripts/updateCopyright.pl
+
+PLIST_VARS+=	nodarwin
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+PLIST.nodarwin=	yes
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
