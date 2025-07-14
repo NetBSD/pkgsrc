@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2012/10/25 06:56:02 asau Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/14 08:37:17 pho Exp $
 #
 
-DISTNAME=		jing-20090818
+DISTNAME=		jing-20241231
 CATEGORIES=		textproc
-MASTER_SITES=		http://jing-trang.googlecode.com/files/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=relaxng/}
+GITHUB_PROJECT=		jing-trang
+GITHUB_RELEASE=		V${PKGVERSION_NOREV}
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.thaiopensource.com/relaxng/trang.html
+HOMEPAGE=		https://relaxng.org/jclark/
 COMMENT=		RELAX NG validator in Java
+LICENSE=		modified-bsd
 
 USE_TOOLS+=	pax
 
 USE_JAVA=		run
-USE_JAVA2=		1.4
+USE_JAVA2=		8
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/jing
