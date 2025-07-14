@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/07/13 10:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/07/14 10:57:29 wiz Exp $
 
 DISTNAME=	cyclonedx_python_lib-10.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -27,8 +27,9 @@ USE_LANGUAGES=	# none
 # 30 failed, 5794 passed, 543 warnings
 
 .include "../../lang/python/pyversion.mk"
+
 .if ${PYTHON_VERSION} < 313
-DEPENDS+=	${PYPKGPREFIX}-typing_extensions>=4.6:../../devel/py-typing_extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
