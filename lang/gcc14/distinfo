@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2025/06/20 07:05:18 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/07/14 11:16:56 ryoon Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -71,7 +71,7 @@ SHA1 (patch-gcc_jit_libgccjit.h) = f4c90a77f7c44ae5213ac6a79e55e254490e09f7
 SHA1 (patch-gcc_opts.cc) = 5cebef0db25dc6cfd1d067a934183bda5ab481ee
 SHA1 (patch-gcc_target.def) = 492dd52d713affb9c976a184aac289ef17c4611c
 SHA1 (patch-gcc_target.h) = 8f874ab5b7894285d9ddcbabd23be9517e6775d6
-SHA1 (patch-gcc_targhooks.cc) = 96676212a086a1fe260d36364eab4abc3573e63b
+SHA1 (patch-gcc_targhooks.cc) = 26783d97e8e4240e3a9f4e6c40d0f66916d75115
 SHA1 (patch-gcc_targhooks.h) = 6769cdc38b6a586306f224c4b8bef32b8898cddb
 SHA1 (patch-gcc_testsuite_g++.dg_cpp0x_pr106435-b.cc) = a4d22c5924393b549caea0395e9490dcea356f83
 SHA1 (patch-gcc_testsuite_g++.dg_cpp0x_pr106435.C) = 3a60c331c0039c28b28ca17e97f752e6d1e59095
