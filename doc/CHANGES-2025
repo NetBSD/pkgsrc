@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4290 2025/07/14 16:16:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4291 2025/07/14 16:27:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6335,3 +6335,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/gupnp to 1.6.9 [adam 2025-07-14]
 	Updated net/gupnp-av to 0.14.4 [adam 2025-07-14]
 	Updated net/gupnp-tools to 0.12.2 [adam 2025-07-14]
+	Updated lang/gcc12 to 12.5.0 [wiz 2025-07-14]
