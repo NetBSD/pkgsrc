@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4299 2025/07/14 17:50:47 vins Exp $
+$NetBSD: CHANGES-2025,v 1.4300 2025/07/14 18:25:07 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6344,3 +6344,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/gcc15 version 15.1.0 [wiz 2025-07-14]
 	Added lang/gcc15-libs version 15.1.0nb1 [wiz 2025-07-14]
 	Updated mail/opensmtpd-filter-dnsbl to 0.4 [vins 2025-07-14]
+	Updated security/signify to 0.14 [vins 2025-07-14]
