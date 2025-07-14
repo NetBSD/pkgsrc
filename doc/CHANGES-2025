@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4289 2025/07/14 16:06:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4290 2025/07/14 16:16:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6332,3 +6332,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed multimedia/subtitleeditor [wiz 2025-07-14]
 	Removed multimedia/gstreamermm1 [wiz 2025-07-14]
 	Updated multimedia/gstreamer1 to 1.26.3 [wiz 2025-07-14]
+	Updated net/gupnp to 1.6.9 [adam 2025-07-14]
+	Updated net/gupnp-av to 0.14.4 [adam 2025-07-14]
+	Updated net/gupnp-tools to 0.12.2 [adam 2025-07-14]
