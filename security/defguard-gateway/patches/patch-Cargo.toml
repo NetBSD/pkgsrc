@@ -1,0 +1,22 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2025/07/14 05:36:04 adam Exp $
+
+--- Cargo.toml.orig	2025-06-30 13:20:45.000000000 +0000
++++ Cargo.toml
+@@ -7,7 +7,7 @@ edition = "2021"
+ axum = { version = "0.8", features = ["macros"] }
+ base64 = "0.22"
+ clap = { version = "4.5", features = ["derive", "env"] }
+-defguard_wireguard_rs = { git = "https://github.com/DefGuard/wireguard-rs.git", rev = "v0.7.5" }
++defguard_wireguard_rs = "0.7.5"
+ env_logger = "0.11"
+ gethostname = "1.0"
+ ipnetwork = "0.21"
+@@ -28,7 +28,7 @@ tonic = { version = "0.12", default-feat
+ ] }
+ 
+ [target.'cfg(target_os = "linux")'.dependencies]
+-nftnl = { git = "https://github.com/DefGuard/nftnl-rs.git", rev = "1a1147271f43b9d7182a114bb056a5224c35d38f" }
++nftnl = { path = "../nftnl-rs-1a1147271f43b9d7182a114bb056a5224c35d38f/nftnl" }
+ mnl = "0.2"
+ 
+ [target.'cfg(any(target_os = "freebsd", target_os = "macos", target_os = "netbsd"))'.dependencies]

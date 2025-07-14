@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/14 05:36:04 adam Exp $
+bin/defguard-gateway
