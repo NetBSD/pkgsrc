@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2025/02/11 19:05:47 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/14 17:50:07 vins Exp $
 
-DISTNAME=	filter-dnsbl-0.3
+DISTNAME=	filter-dnsbl-0.4
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
-PKGREVISION=	3
 CATEGORIES=	mail
-MASTER_SITES=	https://imperialat.at/releases/
+MASTER_SITES=	https://src.imperialat.at/releases/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	http://imperialat.at/dev/filter-dnsbl/
+HOMEPAGE=	https://src.imperialat.at/?action=summary&path=filter-dnsbl.git
 COMMENT=	OpenSMTPD filter integration for DNSBL lists
 LICENSE=	isc
 
