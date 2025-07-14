@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4281 2025/07/14 08:38:28 pho Exp $
+$NetBSD: CHANGES-2025,v 1.4282 2025/07/14 10:45:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6322,3 +6322,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-watchfiles to 1.1.0 [adam 2025-07-14]
 	Updated textproc/jing to 20241231 [pho 2025-07-14]
 	Updated textproc/trang to 20241231 [pho 2025-07-14]
+	Updated editors/qtcreator to 17.0.0 [adam 2025-07-14]
+	Updated multimedia/libvpx to 1.15.2 [adam 2025-07-14]
