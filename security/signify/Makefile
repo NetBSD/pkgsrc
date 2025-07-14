@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/01/16 14:18:59 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/14 18:24:21 vins Exp $
 
-DISTNAME=	outils-0.13
+DISTNAME=	outils-0.14
 PKGNAME=	${DISTNAME:S,outils,signify,}
 CATEGORIES=	security
 MASTER_SITES=	https://git.vuxu.org/outils/snapshot/
@@ -54,8 +54,8 @@ post-patch:
 .elif ${OPSYS} == "SunOS"
 # Solaris lacks MIN/MAX macros in sys/param.h
 	cd ${LIBSRCDIR} &&			\
-	${RUN}${CAT} outils.h >> minmax.h &&	\
-	${RUN}${MV} minmax.h outils.h
+	${RUN}${CAT:Q} outils.h >> minmax.h &&	\
+	${RUN}${MV:Q} minmax.h outils.h
 .endif
 
 do-install:
