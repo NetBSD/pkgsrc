@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4285 2025/07/14 11:17:11 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4286 2025/07/14 11:18:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6327,3 +6327,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-scikit-build-core to 0.11.5nb1 [wiz 2025-07-14]
 	Updated devel/py-pybind11 to 3.0.0 [wiz 2025-07-14]
 	Updated lang/gcc14 to 14.3.0nb1 [ryoon 2025-07-14]
+	Updated lang/gcc14-libs to 14.3.0nb2 [ryoon 2025-07-14]
