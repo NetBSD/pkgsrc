@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.169 2025/06/16 09:27:03 jperkin Exp $
+# $NetBSD: pyversion.mk,v 1.170 2025/07/14 05:51:57 wiz Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -11,7 +11,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 27 310 311 312 313
+#	Possible values: 27 311 312 313
 #	Default: 312
 #
 # === Infrastructure variables ===
@@ -30,8 +30,8 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 313 312 311 310 27
-#	Default: 313 312 311 310
+#	Possible values: 313 312 311 27
+#	Default: 313 312 311
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
@@ -102,12 +102,8 @@ PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9][0-9])-.*/\2/}
 BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
-.if ${COMPILER_HAS_C11:Uyes} != "no"
 PYTHON_VERSION_DEFAULT?=		312
-.else
-PYTHON_VERSION_DEFAULT?=		310
-.endif
-PYTHON_VERSIONS_ACCEPTED?=		313 312 311 310
+PYTHON_VERSIONS_ACCEPTED?=		313 312 311
 .if defined(PYTHON_27_ACCEPTED)
 PYTHON_VERSIONS_ACCEPTED+=		27
 .endif
