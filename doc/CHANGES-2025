@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4278 2025/07/14 05:37:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4279 2025/07/14 07:13:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6318,3 +6318,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/defguard version 1.4.0 [adam 2025-07-14]
 	Added security/defguard-gateway version 1.4.0 [adam 2025-07-14]
 	Added security/defguard-proxy version 1.4.0 [adam 2025-07-14]
+	Updated time/py-types-python-dateutil to 2.9.0.20250708 [adam 2025-07-14]
+	Updated misc/py-watchfiles to 1.1.0 [adam 2025-07-14]
