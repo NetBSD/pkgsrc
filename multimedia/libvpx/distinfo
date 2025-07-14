@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.53 2025/05/14 10:02:53 adam Exp $
+$NetBSD: distinfo,v 1.54 2025/07/14 10:44:45 adam Exp $
 
-BLAKE2s (libvpx-1.15.1.tar.gz) = 395a847502b0e54cb9fe63031050212e9d519f34c17fce637618f2ea4260294a
-SHA512 (libvpx-1.15.1.tar.gz) = 4cf5c3d7735ed75be1984b826dd6706e46e21ef9f0e9c7c52001d0c71ab10e79633ae292132d49db11ca2251a77573473b911400b1e4cf2383a74e59c540b640
-Size (libvpx-1.15.1.tar.gz) = 5630041 bytes
+BLAKE2s (libvpx-1.15.2.tar.gz) = c471130dbcc2c50f95e09038df77cf5db0ef21443915cc85443a353848ee31a1
+SHA512 (libvpx-1.15.2.tar.gz) = 824fe8719e4115ec359ae0642f5e1cea051d458f09eb8c24d60858cf082f66e411215e23228173ab154044bafbdfbb2d93b589bb726f55b233939b91f928aae0
+Size (libvpx-1.15.2.tar.gz) = 5630368 bytes
 SHA1 (patch-build_make_Makefile) = f36e7addd3e26536e80f806e1bf759a9a72b4ce8
 SHA1 (patch-build_make_configure.sh) = ef4247ed3712ed81654f465f813160685dc09e8b
 SHA1 (patch-configure) = aeb5bfd9d58b06b4f2fdbdb8c73b03339de313e7
