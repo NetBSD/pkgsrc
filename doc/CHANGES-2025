@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4280 2025/07/14 08:37:33 pho Exp $
+$NetBSD: CHANGES-2025,v 1.4281 2025/07/14 08:38:28 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6321,3 +6321,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-types-python-dateutil to 2.9.0.20250708 [adam 2025-07-14]
 	Updated misc/py-watchfiles to 1.1.0 [adam 2025-07-14]
 	Updated textproc/jing to 20241231 [pho 2025-07-14]
+	Updated textproc/trang to 20241231 [pho 2025-07-14]
