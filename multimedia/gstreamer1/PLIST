@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/03/05 14:45:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/07/14 16:05:51 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -74,6 +74,7 @@ include/gstreamer-1.0/gst/gsterror.h
 include/gstreamer-1.0/gst/gstevent.h
 include/gstreamer-1.0/gst/gstformat.h
 include/gstreamer-1.0/gst/gstghostpad.h
+include/gstreamer-1.0/gst/gstidstr.h
 include/gstreamer-1.0/gst/gstinfo.h
 include/gstreamer-1.0/gst/gstiterator.h
 include/gstreamer-1.0/gst/gstmacros.h
@@ -115,6 +116,7 @@ include/gstreamer-1.0/gst/gsttypefindfactory.h
 include/gstreamer-1.0/gst/gsturi.h
 include/gstreamer-1.0/gst/gstutils.h
 include/gstreamer-1.0/gst/gstvalue.h
+include/gstreamer-1.0/gst/gstvecdeque.h
 include/gstreamer-1.0/gst/gstversion.h
 include/gstreamer-1.0/gst/math-compat.h
 include/gstreamer-1.0/gst/net/gstnet.h
@@ -163,6 +165,7 @@ man/man1/gst-launch-1.0.1
 man/man1/gst-stats-1.0.1
 man/man1/gst-typefind-1.0.1
 share/aclocal/gst-element-check-1.0.m4
+share/cmake/FindGStreamer.cmake
 share/gdb/auto-load${LOCALBASE}/lib/libgstreamer-1.0.so.0.${SHLIBVER}.0-gdb.py
 share/gir-1.0/Gst-1.0.gir
 share/gir-1.0/GstBase-1.0.gir

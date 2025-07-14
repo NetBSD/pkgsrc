@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.73 2025/04/12 06:54:22 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/07/14 16:05:50 wiz Exp $
 
-PKGREVISION= 1
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-libav-${GST_VERSION}
@@ -19,6 +18,6 @@ USE_TOOLS+=	pkg-config perl
 .include "../../lang/python/tool.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
