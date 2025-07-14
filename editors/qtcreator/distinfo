@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2025/05/10 10:53:21 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/07/14 10:34:29 adam Exp $
 
-BLAKE2s (qt-creator-opensource-src-16.0.1.tar.xz) = d8a24731d8aa11d0ed992bb42d69a51ed672fa42ae2cd0117aeb968c91c77723
-SHA512 (qt-creator-opensource-src-16.0.1.tar.xz) = f3056e06b214b3a49dd928ca5a40c0387954e0391a7f7debc9cad4fa2eedc62c17728a9bb5c1447ac08a70e8fe545e62e57b16ea600397b0b95ecaaa4065a4c7
-Size (qt-creator-opensource-src-16.0.1.tar.xz) = 53538384 bytes
+BLAKE2s (qt-creator-opensource-src-17.0.0.tar.xz) = 71817d14aa14097ed3442a7a09267c48ad9cb7fbc3d97bc041eeb4c6ba49faf3
+SHA512 (qt-creator-opensource-src-17.0.0.tar.xz) = e77f386c3e112ca2f062242501aa74ac67ced58b30397b6ac1907c9524cea6912185d47866aeb42e9a5e0494fb9b059e3e3784a8628ec0416ca1d23ebe9a7b8d
+Size (qt-creator-opensource-src-17.0.0.tar.xz) = 55713368 bytes
 SHA1 (patch-bin_CMakeLists.txt) = 40c715ae76a1093f066fb86de9863cf7379d640e
 SHA1 (patch-cmake_QtCreatorAPI.cmake) = ea21f5bacce9834510f04de3797b3d1f034dfcaf
 SHA1 (patch-cmake_QtCreatorAPIInternal.cmake) = 07379adf7ad463b686e0c908d33a6bcdc9731372
