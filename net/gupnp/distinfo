@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2025/04/08 12:27:16 adam Exp $
+$NetBSD: distinfo,v 1.34 2025/07/14 16:07:02 adam Exp $
 
-BLAKE2s (gupnp-1.6.8.tar.xz) = f2193fc5d0fbfeb7476e3f265cd2a52d81b940a9bba4db5e044d57a54775ad31
-SHA512 (gupnp-1.6.8.tar.xz) = 8885f3cdb437062b14292d213a5e1599c3722c991e2edaad777769cd1430e354fa46f27b033310621dcba7aa08c9d6397afe7c31a2e189ed21ff29df880f282e
-Size (gupnp-1.6.8.tar.xz) = 1288496 bytes
+BLAKE2s (gupnp-1.6.9.tar.xz) = 27b69a6721d20dc6a972203d18fd05a314dcb697cb10caa3316ca39df0808857
+SHA512 (gupnp-1.6.9.tar.xz) = 016c946f6fff47f65abd2761afc7ac3b7b42d7f48626472c28badaa6ec8a1d656e3860fd780ad4c189b1673c2b32486e113bd8b2d7c09c00aefd9486888dc029
+Size (gupnp-1.6.9.tar.xz) = 1289220 bytes
