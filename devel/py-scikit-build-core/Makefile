@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2025/07/01 07:11:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/07/14 10:54:34 wiz Exp $
 
 DISTNAME=	scikit_build_core-0.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
 
@@ -18,7 +19,8 @@ TEST_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TEST_DEPENDS+=	${PYPKGPREFIX}-build>=0.8:../../devel/py-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-cattrs>=22.2.0:../../devel/py-cattrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=24.1:../../devel/py-pip
-TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.11:../../devel/py-pybind11
+# pybind11 uses this for building itself, so we can't depend on it
+#TEST_DEPENDS+=	${PYPKGPREFIX}-pybind11>=2.11:../../devel/py-pybind11
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess>=1.5:../../devel/py-test-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
@@ -36,5 +38,5 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
 
 .include "../../lang/python/wheel.mk"
 # only needed for testing, but this is not supported by buildlink3, so make it build dependency
-.include "../../devel/py-pybind11/buildlink3.mk"
+#.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
