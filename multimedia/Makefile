@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.350 2025/03/09 11:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.351 2025/07/14 15:59:40 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -77,7 +77,6 @@ SUBDIR+=	gst-plugins1-x264
 SUBDIR+=	gst-plugins1-x265
 SUBDIR+=	gst123
 SUBDIR+=	gstreamer1
-SUBDIR+=	gstreamermm1
 SUBDIR+=	gtranscode
 SUBDIR+=	gxine
 SUBDIR+=	handbrake
@@ -187,7 +186,6 @@ SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
 SUBDIR+=	ssr
 SUBDIR+=	streamlink
-SUBDIR+=	subtitleeditor
 SUBDIR+=	svt-av1
 SUBDIR+=	t-rec
 SUBDIR+=	totem

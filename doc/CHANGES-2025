@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4287 2025/07/14 15:46:25 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4288 2025/07/14 15:59:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6329,3 +6329,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc14 to 14.3.0nb1 [ryoon 2025-07-14]
 	Updated lang/gcc14-libs to 14.3.0nb2 [ryoon 2025-07-14]
 	Updated devel/ruby-jirametrics to 2.12.1 [schmonz 2025-07-14]
+	Removed multimedia/subtitleeditor [wiz 2025-07-14]
+	Removed multimedia/gstreamermm1 [wiz 2025-07-14]
