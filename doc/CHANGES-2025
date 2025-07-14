@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4288 2025/07/14 15:59:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4289 2025/07/14 16:06:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6331,3 +6331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-jirametrics to 2.12.1 [schmonz 2025-07-14]
 	Removed multimedia/subtitleeditor [wiz 2025-07-14]
 	Removed multimedia/gstreamermm1 [wiz 2025-07-14]
+	Updated multimedia/gstreamer1 to 1.26.3 [wiz 2025-07-14]
