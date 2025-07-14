@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/10 12:27:48 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/14 13:48:28 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	libgpr-${GNAT_NAME}-24.0.0
@@ -65,7 +65,7 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} ${GNAT_PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
-PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
+PRINT_PLIST_AWK+=	/\.relocatable\/|\/relocatable\/|\.static-pic\/|\/static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
 
 .include "../../devel/gprbuild/buildlink3.mk"
 .include "../../textproc/ada-xmlada-24/buildlink3.mk"
