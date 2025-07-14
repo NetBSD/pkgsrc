@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 08:59:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/07/14 07:11:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,8 +7,10 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dateutil-stubs/METADATA.toml
 ${PYSITELIB}/dateutil-stubs/__init__.pyi
 ${PYSITELIB}/dateutil-stubs/_common.pyi
+${PYSITELIB}/dateutil-stubs/_version.pyi
 ${PYSITELIB}/dateutil-stubs/easter.pyi
 ${PYSITELIB}/dateutil-stubs/parser/__init__.pyi
+${PYSITELIB}/dateutil-stubs/parser/_parser.pyi
 ${PYSITELIB}/dateutil-stubs/parser/isoparser.pyi
 ${PYSITELIB}/dateutil-stubs/py.typed
 ${PYSITELIB}/dateutil-stubs/relativedelta.pyi
@@ -16,6 +18,8 @@ ${PYSITELIB}/dateutil-stubs/rrule.pyi
 ${PYSITELIB}/dateutil-stubs/tz/__init__.pyi
 ${PYSITELIB}/dateutil-stubs/tz/_common.pyi
 ${PYSITELIB}/dateutil-stubs/tz/tz.pyi
+${PYSITELIB}/dateutil-stubs/tz/win.pyi
+${PYSITELIB}/dateutil-stubs/tzwin.pyi
 ${PYSITELIB}/dateutil-stubs/utils.pyi
 ${PYSITELIB}/dateutil-stubs/zoneinfo/__init__.pyi
 ${PYSITELIB}/dateutil-stubs/zoneinfo/rebuild.pyi
