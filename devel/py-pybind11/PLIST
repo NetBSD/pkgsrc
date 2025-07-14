@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2025/04/12 20:03:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/07/14 10:54:52 wiz Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pybind11/__init__.py
 ${PYSITELIB}/pybind11/__init__.pyc
 ${PYSITELIB}/pybind11/__init__.pyo
@@ -24,15 +23,26 @@ ${PYSITELIB}/pybind11/include/pybind11/cast.h
 ${PYSITELIB}/pybind11/include/pybind11/chrono.h
 ${PYSITELIB}/pybind11/include/pybind11/common.h
 ${PYSITELIB}/pybind11/include/pybind11/complex.h
+${PYSITELIB}/pybind11/include/pybind11/conduit/README.txt
+${PYSITELIB}/pybind11/include/pybind11/conduit/pybind11_conduit_v1.h
+${PYSITELIB}/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h
+${PYSITELIB}/pybind11/include/pybind11/conduit/wrap_include_python_h.h
+${PYSITELIB}/pybind11/include/pybind11/critical_section.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/class.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/common.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/cpp_conduit.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/descr.h
+${PYSITELIB}/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/exception_translation.h
+${PYSITELIB}/pybind11/include/pybind11/detail/function_record_pyobject.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/init.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/internals.h
+${PYSITELIB}/pybind11/include/pybind11/detail/native_enum_data.h
+${PYSITELIB}/pybind11/include/pybind11/detail/pybind11_namespace_macros.h
+${PYSITELIB}/pybind11/include/pybind11/detail/struct_smart_holder.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/type_caster_base.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/typeid.h
+${PYSITELIB}/pybind11/include/pybind11/detail/using_smart_holder.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/value_and_holder.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen/common.h
@@ -43,7 +53,9 @@ ${PYSITELIB}/pybind11/include/pybind11/eval.h
 ${PYSITELIB}/pybind11/include/pybind11/functional.h
 ${PYSITELIB}/pybind11/include/pybind11/gil.h
 ${PYSITELIB}/pybind11/include/pybind11/gil_safe_call_once.h
+${PYSITELIB}/pybind11/include/pybind11/gil_simple.h
 ${PYSITELIB}/pybind11/include/pybind11/iostream.h
+${PYSITELIB}/pybind11/include/pybind11/native_enum.h
 ${PYSITELIB}/pybind11/include/pybind11/numpy.h
 ${PYSITELIB}/pybind11/include/pybind11/operators.h
 ${PYSITELIB}/pybind11/include/pybind11/options.h
@@ -52,12 +64,18 @@ ${PYSITELIB}/pybind11/include/pybind11/pytypes.h
 ${PYSITELIB}/pybind11/include/pybind11/stl.h
 ${PYSITELIB}/pybind11/include/pybind11/stl/filesystem.h
 ${PYSITELIB}/pybind11/include/pybind11/stl_bind.h
+${PYSITELIB}/pybind11/include/pybind11/subinterpreter.h
+${PYSITELIB}/pybind11/include/pybind11/trampoline_self_life_support.h
 ${PYSITELIB}/pybind11/include/pybind11/type_caster_pyobject_ptr.h
 ${PYSITELIB}/pybind11/include/pybind11/typing.h
+${PYSITELIB}/pybind11/include/pybind11/warnings.h
 ${PYSITELIB}/pybind11/py.typed
 ${PYSITELIB}/pybind11/setup_helpers.py
 ${PYSITELIB}/pybind11/setup_helpers.pyc
 ${PYSITELIB}/pybind11/setup_helpers.pyo
+${PYSITELIB}/pybind11/share/__init__.py
+${PYSITELIB}/pybind11/share/__init__.pyc
+${PYSITELIB}/pybind11/share/__init__.pyo
 ${PYSITELIB}/pybind11/share/cmake/pybind11/FindPythonLibsNew.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Common.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Config.cmake
@@ -66,4 +84,7 @@ ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11GuessPythonExtSuffix.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11NewTools.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Targets.cmake
 ${PYSITELIB}/pybind11/share/cmake/pybind11/pybind11Tools.cmake
+${PYSITELIB}/pybind11/share/pkgconfig/__init__.py
+${PYSITELIB}/pybind11/share/pkgconfig/__init__.pyc
+${PYSITELIB}/pybind11/share/pkgconfig/__init__.pyo
 ${PYSITELIB}/pybind11/share/pkgconfig/pybind11.pc
