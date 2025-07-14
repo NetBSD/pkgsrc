@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4296 2025/07/14 17:41:32 vins Exp $
+$NetBSD: CHANGES-2025,v 1.4297 2025/07/14 17:46:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/got to 0.115 [vins 2025-07-14]
 	Updated sysutils/fastfetch to 2.47.0 [vins 2025-07-14]
 	Updated devel/libopensmtpd to 1.0 [vins 2025-07-14]
+	Added lang/gcc15 version 15.1.0 [wiz 2025-07-14]
