@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/07/08 10:46:22 markd Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/14 07:52:24 markd Exp $
 
 DISTNAME=	freecell-solver-6.14.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://fc-solve.shlomifish.org/downloads/fc-solve/
 EXTRACT_SUFX=	.tar.xz
@@ -22,6 +23,7 @@ USE_TOOLS+=	gmake perl
 
 CMAKE_CONFIGURE_ARGS+=	-DFCS_WITH_TEST_SUITE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_STATIC_LIBRARY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Asciidoc=YES
 
 PKGCONFIG_OVERRIDE+=	libfreecell-solver.pc.in
 
