@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/04/15 15:49:09 adam Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/15 21:38:26 wiz Exp $
 
 DISTNAME=	m3u8-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-backports-datetime-fromisoformat-[0-9]*:../../time/py-backports-datetime-fromisoformat
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
