@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2024/12/28 22:10:50 triaxx Exp $
+# $NetBSD: Makefile,v 1.126 2025/07/15 21:35:52 wiz Exp $
 
-DISTNAME=	fetchmail-6.5.1
+DISTNAME=	fetchmail-6.5.4
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
@@ -24,7 +24,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 LDFLAGS+=		${CFLAGS}
-USE_TOOLS+=		msgfmt tbl
+USE_TOOLS+=		msgfmt pkg-config tbl
 USE_LANGUAGES+=		c
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -32,7 +32,6 @@ INSTALL_TARGET=		install-pythonPYTHON
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 REPLACE_PYTHON=	fetchmailconf.py
-PYTHON_VERSIONS_ACCEPTED=	310
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf.py ${DESTDIR}${PREFIX}/bin/fetchmailconf
