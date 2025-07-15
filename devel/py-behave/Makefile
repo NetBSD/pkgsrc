@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/12 08:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/15 21:38:07 wiz Exp $
 
 DISTNAME=	behave-1.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-path>=10.1:../../devel/py-path
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	311 310
+PYTHON_VERSIONS_ACCEPTED=	311
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} behave behave-${PYVERSSUFFIX} || ${TRUE}
