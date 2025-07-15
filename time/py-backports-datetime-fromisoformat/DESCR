@@ -1,2 +1,0 @@
-A backport of Python 3.11's datetime.fromisoformat methods to earlier versions
-of Python 3.
