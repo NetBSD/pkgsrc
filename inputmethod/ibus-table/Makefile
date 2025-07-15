@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/12/18 01:46:06 maya Exp $
+# $NetBSD: Makefile,v 1.32 2025/07/15 21:31:29 wiz Exp $
 
 DISTNAME=	ibus-table-1.9.2
 PKGREVISION=	7
@@ -25,7 +25,7 @@ SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
 REPLACE_PYTHON+=		engine/tabcreatedb.py
 # Needs 'imp' removed in 3.12
-PYTHON_VERSIONS_ACCEPTED=	310 311
+PYTHON_VERSIONS_ACCEPTED=	311
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
