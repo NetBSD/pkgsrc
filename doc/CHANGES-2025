@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4312 2025/07/15 21:37:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4313 2025/07/15 21:39:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6362,3 +6362,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/fetchmail to 6.5.4 [wiz 2025-07-15]
 	Updated mail/fetchmailconf to 6.5.4 [wiz 2025-07-15]
 	Removed devel/py-backports.strenum [wiz 2025-07-15]
+	Removed time/py-backports-datetime-fromisoformat [wiz 2025-07-15]
