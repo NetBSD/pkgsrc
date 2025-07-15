@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.211 2025/04/19 07:58:01 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2025/07/15 21:35:52 wiz Exp $
 
 # Note to updaters: mail/fetchmailconf reaches over here, make sure it builds.
-DISTNAME=	fetchmail-6.5.1
-PKGREVISION=	1
+DISTNAME=	fetchmail-6.5.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fetchmail/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,7 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 CONFIGURE_ENV+=		PYTHON=:
 LDFLAGS+=		${CFLAGS}
-USE_TOOLS+=		msgfmt tbl
+USE_TOOLS+=		msgfmt pkg-config tbl
 
 LDFLAGS.Darwin+=	-lresolv
 CFLAGS.Darwin+=		-DBIND_8_COMPAT -DHAVE_RESOLV_H
