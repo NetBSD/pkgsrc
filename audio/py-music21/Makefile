@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/07/03 19:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/07/15 13:21:37 adam Exp $
 
-DISTNAME=	music21-noCorpus-9.7.0
+DISTNAME=	music21-noCorpus-9.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
@@ -12,15 +12,15 @@ HOMEPAGE=	https://github.com/cuthbertLab/music21
 COMMENT=	Python toolkit for computer-aided musical analysis
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.8.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
+DEPENDS+=	${PYPKGPREFIX}-jsonpickle-[0-9]*:../../textproc/py-jsonpickle
+DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-Levenshtein-[0-9]*:../../textproc/py-Levenshtein
-DEPENDS+=	${PYPKGPREFIX}-jsonpickle-[0-9]*:../../textproc/py-jsonpickle
 DEPENDS+=	${PYPKGPREFIX}-webcolors>=1.11:../../www/py-webcolors
 
 # Many tests will fail because they depend on the score files that
