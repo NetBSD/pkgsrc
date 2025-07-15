@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4303 2025/07/15 07:48:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4304 2025/07/15 13:23:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6349,3 +6349,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/icewm to 3.8.1 [gutteridge 2025-07-14]
 	Updated lang/py-cxxheaderparser to 1.5.4 [adam 2025-07-15]
 	Updated textproc/py-pyaml to 25.7.0 [adam 2025-07-15]
+	Updated audio/py-music21 to 9.7.1 [adam 2025-07-15]
+	Updated sysutils/py-xattr to 1.2.0 [adam 2025-07-15]
