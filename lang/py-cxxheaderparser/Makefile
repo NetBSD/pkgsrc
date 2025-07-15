@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/04/17 15:45:50 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/15 07:45:56 adam Exp $
 
-DISTNAME=	cxxheaderparser-1.5.0
+DISTNAME=	cxxheaderparser-1.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cxxheaderparser/}
