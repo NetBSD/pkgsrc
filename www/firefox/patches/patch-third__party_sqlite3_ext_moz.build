@@ -1,9 +1,9 @@
-$NetBSD: patch-third__party_sqlite3_ext_moz.build,v 1.1 2024/08/12 14:03:32 ryoon Exp $
+$NetBSD: patch-third__party_sqlite3_ext_moz.build,v 1.2 2025/07/15 13:58:05 ryoon Exp $
 
---- third_party/sqlite3/ext/moz.build.orig	2024-08-06 01:06:04.545236415 +0000
+--- third_party/sqlite3/ext/moz.build.orig	2025-05-20 17:57:17.576392093 +0000
 +++ third_party/sqlite3/ext/moz.build
-@@ -20,7 +20,7 @@ SOURCES += [
-     "fts5.c",
+@@ -21,7 +21,7 @@ SOURCES += [
+     "sqlite-vec/sqlite-vec.c",
  ]
  
 -if CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "Android":

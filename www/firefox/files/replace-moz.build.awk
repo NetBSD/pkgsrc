@@ -89,6 +89,10 @@
 	flag = 0;
 	sub(/^if CONFIG\[\"TARGET_CPU\"\] == \"x86_64\" and CONFIG\[\"MOZ_X11\"\] == \"1\" and CONFIG\[\"OS_TARGET\"\] == \"Linux\":/, "if CONFIG\[\"TARGET_CPU\"\] == \"x86_64\" and CONFIG\[\"MOZ_X11\"\] == \"1\" and (CONFIG[\"OS_TARGET\"] == \"Linux\" or CONFIG[\"OS_TARGET\"] == \"NetBSD\" or CONFIG[\"OS_TARGET\"] == \"OpenBSD\" or CONFIG[\"OS_TARGET\"] == \"FreeBSD\"):");
 }
+/^if CONFIG\[\"MOZ_X11\"\] == \"1\" and CONFIG\[\"OS_TARGET\"\] == \"Linux\":/{
+	flag = 0;
+	sub(/^if CONFIG\[\"MOZ_X11\"\] == \"1\" and CONFIG\[\"OS_TARGET\"\] == \"Linux\":/, "if CONFIG\[\"MOZ_X11\"\] == \"1\" and (CONFIG[\"OS_TARGET\"] == \"Linux\" or CONFIG[\"OS_TARGET\"] == \"NetBSD\" or CONFIG[\"OS_TARGET\"] == \"OpenBSD\" or CONFIG[\"OS_TARGET\"] == \"FreeBSD\"):");
+}
 {
 	if (flag != 1) {
 		sub(/^    DEFINES\[\"WEBRTC_LINUX\"\] = True/, "    if CONFIG\[\"OS_TARGET\"\] == \"Linux\":\n        DEFINES\[\"WEBRTC_LINUX\"\] = True\n    else:\n        DEFINES\[\"WEBRTC_BSD\"\] = True");

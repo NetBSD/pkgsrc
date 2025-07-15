@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.557 2025/05/20 15:08:58 ryoon Exp $
+$NetBSD: distinfo,v 1.558 2025/07/15 13:58:05 ryoon Exp $
 
-BLAKE2s (firefox-138.0.4.source.tar.xz) = 227d7778a96f75e223c18bec815b424b5ee176b19bd036c14c8374edc79dd4f6
-SHA512 (firefox-138.0.4.source.tar.xz) = 64d80456da8df27d7eeed7eb20c35fcf213bc948eb48739b6101e2c476ea9a9133da928477a79683c96c160f8d53bed52be487f01a8d29e38d39071f12676806
-Size (firefox-138.0.4.source.tar.xz) = 623414956 bytes
-BLAKE2s (nodejs-output-138.0.1.tgz) = cc0d5b7303d19718144296e8d388c375906c3716d99aa9a05e656d03ecfc1bc6
-SHA512 (nodejs-output-138.0.1.tgz) = 468966859f12b9648c13b7e552db242f02978ff8ca56a8ba6534ef444778ef4434c33d0ac7c809526364ee2d895abd1dcc839f04c4e5c5384f1a9045e81e8b4a
-Size (nodejs-output-138.0.1.tgz) = 257148 bytes
+BLAKE2s (firefox-139.0.4.source.tar.xz) = fd43e99072e9f199969b4d0527e58e472e8edcef785f52925f279d21784c29c6
+SHA512 (firefox-139.0.4.source.tar.xz) = fa5ae798b0cd485e0a56b0c57ed7f33e0d0ef921302dc0169eac91926194abe2070beb54239c81924f819a60b589f305f923970d753c07ba50acc36e1a492db4
+Size (firefox-139.0.4.source.tar.xz) = 644670560 bytes
+BLAKE2s (nodejs-output-139.0.tgz) = 8e09ba1884ac87b6755a31c5f62f1e5b2ba142689d8906e3f47ed29babcbcc50
+SHA512 (nodejs-output-139.0.tgz) = fe306729c6d706865df714e349c7a8747b57d0067a095753aee41a171394246a05efd4db716ab706ca61205983e62bfbd96c781c479ff762661df5b6c07da29c
+Size (nodejs-output-139.0.tgz) = 258868 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -32,14 +32,18 @@ SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = 2b5955027add79d1b8709667b0433b2d19fbd1bc
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
+SHA1 (patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc) = 47ba1a2b88b3fdfd16cd29da3eb1e4a218ecada8
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
-SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 4cb0e1c88dc83370024ed1aac7f75445b9f98df8
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8831d477f14fd4f8f735ff0c1a322cba8c70e277
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__v4l2.cc) = 8111952a107eb2cd665525ddd0e27c79eee3c1cd
+SHA1 (patch-third__party_libwebrtc_modules_video__capture_video__capture__options.cc) = e15f7e365ef6d57cd262f920f49c4d73f3a13305
+SHA1 (patch-third__party_libwebrtc_rtc__base_memory__usage.cc) = f8d926d400bf3df107127823eac27816f4b85644
 SHA1 (patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc) = 6909c4da9e7b3785252e5bce9be0ff47ebb87e01
+SHA1 (patch-third__party_libwebrtc_rtc__base_platform__thread__types.cc) = 8ae75100775037347008d168eedc151e0e993b0f
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_python_dlmanager_check.py) = 69054522d8ced8cb47e65e5a8b1a87ed5ce6708e
-SHA1 (patch-third__party_sqlite3_ext_moz.build) = 2df374daa1c974b52db602613508e4fc965a7bcd
+SHA1 (patch-third__party_sqlite3_ext_moz.build) = 026483e9cdc61eda80b699978b1677e1b6d3ff6d
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b
