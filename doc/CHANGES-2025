@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4310 2025/07/15 21:36:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4311 2025/07/15 21:36:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6360,3 +6360,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ugrep to 7.5.0 [adam 2025-07-15]
 	Removed devel/py-pysha3 [wiz 2025-07-15]
 	Updated mail/fetchmail to 6.5.4 [wiz 2025-07-15]
+	Updated mail/fetchmailconf to 6.5.4 [wiz 2025-07-15]
