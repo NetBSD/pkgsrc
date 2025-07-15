@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2025/01/25 12:05:48 adam Exp $
+$NetBSD: distinfo,v 1.42 2025/07/15 18:51:13 adam Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -39,9 +39,9 @@ Size (flate2-1.0.35.crate) = 109188 bytes
 BLAKE2s (libc-0.2.169.crate) = 2a4aa1b409bfdcd544082bdece61f482252806c43a5ddb9081203416a7c65f85
 SHA512 (libc-0.2.169.crate) = c4566330a7967efc211edf31a23647d1a33aa51fc25aa4e9337716748c8fd4be0ae63679220ff2cf6e892f37d03bc5264c55e8f082eb82574a6ec1fa8e5e45ce
 Size (libc-0.2.169.crate) = 757901 bytes
-BLAKE2s (libimagequant-4.3.4.tar.gz) = 14d18448a0c214e3992bf28f2eb695a3e83e7a6450038e29e7920c28c9c986e0
-SHA512 (libimagequant-4.3.4.tar.gz) = 224ea686792a25ff49aea6a94554222d155eef37e1c70644351717cc3eb6db7918da5cc555c11c0d48344879dade7b5536f58299a6ce997c7ccfd32122c0a7b8
-Size (libimagequant-4.3.4.tar.gz) = 88710 bytes
+BLAKE2s (libimagequant-4.4.0.tar.gz) = 2e6d05f162872a56822b3816a1778972f7067ffe95134a721bf85a622b2e279f
+SHA512 (libimagequant-4.4.0.tar.gz) = fa9a1c4f12ba06507fd14c9e4b48a84fd2bcf68b6cf17de1a6d0b64b8dcd91967f433eb3145490ec03003f7ed926653ed5ae4b056dc03442e2cbb73b4910fbe8
+Size (libimagequant-4.4.0.tar.gz) = 89068 bytes
 BLAKE2s (lodepng-3.11.0.crate) = a1ecbd87882f7c31d6b6b6fc2f9803a54f6456abc32d5e0a39b320b7271bc823
 SHA512 (lodepng-3.11.0.crate) = 46eaf62834496551d23e012e533314fc51f88c43aafe4dad5876f0c1bbd7a213d12e92e698e8a2dd4436e1a1085ab75676e859962e1a2bdc1240daa3f0de4d59
 Size (lodepng-3.11.0.crate) = 52160 bytes
