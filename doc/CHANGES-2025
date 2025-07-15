@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4308 2025/07/15 18:52:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4309 2025/07/15 21:30:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6358,3 +6358,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic-settings to 2.10.1 [adam 2025-07-15]
 	Updated graphics/libimagequant to 4.4.0 [adam 2025-07-15]
 	Updated textproc/ugrep to 7.5.0 [adam 2025-07-15]
+	Removed devel/py-pysha3 [wiz 2025-07-15]
