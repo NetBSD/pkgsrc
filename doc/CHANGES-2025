@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4305 2025/07/15 13:58:51 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4306 2025/07/15 14:00:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6352,3 +6352,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-music21 to 9.7.1 [adam 2025-07-15]
 	Updated sysutils/py-xattr to 1.2.0 [adam 2025-07-15]
 	Updated www/firefox to 139.0.4 [ryo_on 2025-07-15]
+	Updated www/firefox-l10n to 139.0.4 [ryo_on 2025-07-15]
