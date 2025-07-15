@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/07/09 15:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/15 08:43:14 adam Exp $
 
 DISTNAME=	libilbc-3.0.4
 PKGREVISION=	3
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+FORCE_CXX_STD=		c++17
 
 PKGCONFIG_OVERRIDE+=	libilbc.pc.in
 
