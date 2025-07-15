@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1866 2025/06/30 14:34:14 hauke Exp $
+# $NetBSD: Makefile,v 1.1867 2025/07/15 21:40:00 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -717,7 +717,6 @@ SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
-SUBDIR+=	py-cookies
 SUBDIR+=	py-curl
 SUBDIR+=	py-daphne
 SUBDIR+=	py-django
