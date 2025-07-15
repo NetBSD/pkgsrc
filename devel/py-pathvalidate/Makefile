@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/12 12:18:00 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/15 18:31:32 adam Exp $
 
-DISTNAME=	pathvalidate-3.2.3
+DISTNAME=	pathvalidate-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pathvalidate/}
 
