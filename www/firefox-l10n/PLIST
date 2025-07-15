@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2024/07/13 22:12:16 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.72 2025/07/15 14:00:31 ryoon Exp $
 lib/firefox/distribution/extensions/langpack-ach@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-af@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-an@firefox.mozilla.org.xpi
@@ -76,6 +76,7 @@ lib/firefox/distribution/extensions/langpack-pt-PT@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-rm@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ro@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-ru@firefox.mozilla.org.xpi
+lib/firefox/distribution/extensions/langpack-sat@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-sc@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-sco@firefox.mozilla.org.xpi
 lib/firefox/distribution/extensions/langpack-si@firefox.mozilla.org.xpi
