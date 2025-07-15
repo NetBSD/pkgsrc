@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4489 2025/07/11 12:46:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4490 2025/07/15 21:30:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3059,7 +3059,6 @@ SUBDIR+=	py-pyparsing2
 SUBDIR+=	py-pypi-cli
 SUBDIR+=	py-pyproject_hooks
 SUBDIR+=	py-pyrsistent
-SUBDIR+=	py-pysha3
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
