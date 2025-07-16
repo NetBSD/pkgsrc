@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2020/03/20 11:58:17 nia Exp $
+# $NetBSD: Makefile,v 1.24 2025/07/16 09:58:41 jperkin Exp $
 
 DISTNAME=	libmcrypt-2.5.8
 CATEGORIES=	security devel
@@ -14,6 +14,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	include/mutils
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=	-Wno-error=implicit-int
+.endif
+
+TEST_TARGET=	check
 
 post-install:
 	rmdir ${DESTDIR}${PREFIX}/lib/libmcrypt
