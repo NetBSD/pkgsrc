@@ -1,0 +1,12 @@
+This is a proof-of-concept interactive REPL for Laurent Bercot's
+execline language. execshell provides an interactive interface with
+readline/Emacs-alike line editing to the command lexer used by the
+execlineb script launcher. For example:
+
+$ ./execshell
+> foreground { echo foo } echo bar
+foo
+bar
+> pipeline { echo baz } sed -e "s/a/u/" -e "s/$/z/"
+buzz
+(Note that the prompt string here is > .)
