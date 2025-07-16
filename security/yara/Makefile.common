@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2024/06/11 10:29:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2025/07/16 10:27:19 adam Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-YARA_VERSION=	4.5.1
+YARA_VERSION=	4.5.4
 MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 GITHUB_TAG=	v${YARA_VERSION}
 
