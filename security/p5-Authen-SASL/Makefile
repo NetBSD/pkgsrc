@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2025/07/04 08:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/16 21:45:29 wiz Exp $
 
 DISTNAME=	Authen-SASL-2.1800
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 
@@ -12,6 +12,7 @@ COMMENT=	Perl module to handle SASL authentication
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
+DEPENDS+=	p5-Crypt-URandom-[0-9]*:../../security/p5-Crypt-URandom
 
 PERL5_PACKLIST=		auto/Authen/SASL/.packlist
 
