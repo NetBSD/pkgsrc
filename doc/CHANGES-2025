@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4319 2025/07/16 14:26:36 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.4320 2025/07/16 14:48:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6371,3 +6371,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-yara to 4.5.4 [adam 2025-07-16]
 	Added www/squid7 version 7.1 [sborrill 2025-07-16]
 	Updated x11/kitty to 0.42.2 [ktnb 2025-07-16]
+	Updated net/bind918 to 9.18.38 [taca 2025-07-16]
