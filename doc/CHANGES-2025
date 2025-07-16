@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4316 2025/07/16 08:04:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4317 2025/07/16 10:29:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6367,3 +6367,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/xfce4-dict to 0.8.9 [gutteridge 2025-07-16]
 	Updated graphics/libwebp to 1.6.0 [adam 2025-07-16]
 	Updated textproc/libxml2 to 2.14.5 [adam 2025-07-16]
+	Updated security/yara to 4.5.4 [adam 2025-07-16]
+	Updated security/py-yara to 4.5.4 [adam 2025-07-16]
