@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/05/16 13:16:11 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/07/16 14:26:21 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -20,6 +20,12 @@ lib/kitty/kittens/broadcast/__init__.pyo
 lib/kitty/kittens/broadcast/main.py
 lib/kitty/kittens/broadcast/main.pyc
 lib/kitty/kittens/broadcast/main.pyo
+lib/kitty/kittens/choose_files/__init__.py
+lib/kitty/kittens/choose_files/__init__.pyc
+lib/kitty/kittens/choose_files/__init__.pyo
+lib/kitty/kittens/choose_files/main.py
+lib/kitty/kittens/choose_files/main.pyc
+lib/kitty/kittens/choose_files/main.pyo
 lib/kitty/kittens/choose_fonts/__init__.py
 lib/kitty/kittens/choose_fonts/__init__.pyc
 lib/kitty/kittens/choose_fonts/__init__.pyo
@@ -35,6 +41,12 @@ lib/kitty/kittens/clipboard/__init__.pyo
 lib/kitty/kittens/clipboard/main.py
 lib/kitty/kittens/clipboard/main.pyc
 lib/kitty/kittens/clipboard/main.pyo
+lib/kitty/kittens/desktop_ui/__init__.py
+lib/kitty/kittens/desktop_ui/__init__.pyc
+lib/kitty/kittens/desktop_ui/__init__.pyo
+lib/kitty/kittens/desktop_ui/main.py
+lib/kitty/kittens/desktop_ui/main.pyc
+lib/kitty/kittens/desktop_ui/main.pyo
 lib/kitty/kittens/diff/__init__.py
 lib/kitty/kittens/diff/__init__.pyc
 lib/kitty/kittens/diff/__init__.pyo
@@ -602,9 +614,18 @@ man/man1/kitten-@-signal-child.1
 man/man1/kitten-@.1
 man/man1/kitten-ask.1
 man/man1/kitten-broadcast.1
+man/man1/kitten-choose-files.1
 man/man1/kitten-choose-fonts.1
 man/man1/kitten-choose_fonts.1
 man/man1/kitten-clipboard.1
+man/man1/kitten-desktop-ui-enable-portal.1
+man/man1/kitten-desktop-ui-run-server.1
+man/man1/kitten-desktop-ui-set-accent-color.1
+man/man1/kitten-desktop-ui-set-color-scheme.1
+man/man1/kitten-desktop-ui-set-contrast.1
+man/man1/kitten-desktop-ui-set-setting.1
+man/man1/kitten-desktop-ui-show-settings.1
+man/man1/kitten-desktop-ui.1
 man/man1/kitten-diff.1
 man/man1/kitten-edit-in-kitty.1
 man/man1/kitten-hints.1
@@ -667,9 +688,11 @@ share/doc/kitty/html/_images/social_previews/summary_intro_vid_14889341.png
 share/doc/kitty/html/_images/social_previews/summary_invocation_05c40da8.png
 share/doc/kitty/html/_images/social_previews/summary_keyboard-protocol_37967379.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_broadcast_4dfe59be.png
+share/doc/kitty/html/_images/social_previews/summary_kittens_choose-files_08a7d242.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_choose-fonts_14869f23.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_clipboard_93006611.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_custom_264d6309.png
+share/doc/kitty/html/_images/social_previews/summary_kittens_desktop-ui_4b8fd2af.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_developing-builtin-kittens_70cf5f2d.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_diff_56ec1326.png
 share/doc/kitty/html/_images/social_previews/summary_kittens_hints_cf0d0da9.png
@@ -734,9 +757,11 @@ share/doc/kitty/html/_sources/intro_vid.rst.txt
 share/doc/kitty/html/_sources/invocation.rst.txt
 share/doc/kitty/html/_sources/keyboard-protocol.rst.txt
 share/doc/kitty/html/_sources/kittens/broadcast.rst.txt
+share/doc/kitty/html/_sources/kittens/choose-files.rst.txt
 share/doc/kitty/html/_sources/kittens/choose-fonts.rst.txt
 share/doc/kitty/html/_sources/kittens/clipboard.rst.txt
 share/doc/kitty/html/_sources/kittens/custom.rst.txt
+share/doc/kitty/html/_sources/kittens/desktop-ui.rst.txt
 share/doc/kitty/html/_sources/kittens/developing-builtin-kittens.rst.txt
 share/doc/kitty/html/_sources/kittens/diff.rst.txt
 share/doc/kitty/html/_sources/kittens/hints.rst.txt
@@ -830,9 +855,11 @@ share/doc/kitty/html/intro_vid.html
 share/doc/kitty/html/invocation.html
 share/doc/kitty/html/keyboard-protocol.html
 share/doc/kitty/html/kittens/broadcast.html
+share/doc/kitty/html/kittens/choose-files.html
 share/doc/kitty/html/kittens/choose-fonts.html
 share/doc/kitty/html/kittens/clipboard.html
 share/doc/kitty/html/kittens/custom.html
+share/doc/kitty/html/kittens/desktop-ui.html
 share/doc/kitty/html/kittens/developing-builtin-kittens.html
 share/doc/kitty/html/kittens/diff.html
 share/doc/kitty/html/kittens/hints.html
