@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4315 2025/07/16 00:08:25 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4316 2025/07/16 08:04:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6365,3 +6365,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed time/py-backports-datetime-fromisoformat [wiz 2025-07-15]
 	Removed www/py-cookies [wiz 2025-07-15]
 	Updated textproc/xfce4-dict to 0.8.9 [gutteridge 2025-07-16]
+	Updated graphics/libwebp to 1.6.0 [adam 2025-07-16]
+	Updated textproc/libxml2 to 2.14.5 [adam 2025-07-16]
