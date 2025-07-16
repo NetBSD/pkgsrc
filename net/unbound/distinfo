@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.85 2025/04/24 21:29:08 he Exp $
+$NetBSD: distinfo,v 1.86 2025/07/16 21:53:27 he Exp $
 
-BLAKE2s (unbound-1.23.0.tar.gz) = 8bbb0f4887b103c362ebbae5ac4d3b5c20230a443a38e5d27a50377db82c3a75
-SHA512 (unbound-1.23.0.tar.gz) = 9b5ca48f4f5189f168f76396f5895f39262a4333e589f8c64bb9298a55c6266f626a4a4399370c68edd9f6318215a401146bf9e16a101c54decf623668a398af
-Size (unbound-1.23.0.tar.gz) = 6770860 bytes
+BLAKE2s (unbound-1.23.1.tar.gz) = c33081f2cd1aaa9ec7fce2233670b87eb7f7488d5eb6e22dbf25accb8141ff85
+SHA512 (unbound-1.23.1.tar.gz) = b31858eb03fed1fb2aead03aa5b6f32476678067c28ff4816808cbdcae32591e36bee966b25c6b702e3fb51588ae467efab7934a24971193f1183edd5c561b7b
+Size (unbound-1.23.1.tar.gz) = 6771025 bytes
 SHA1 (patch-configure) = 0779bb9174e358163430fa0b05e81c464776b12f
