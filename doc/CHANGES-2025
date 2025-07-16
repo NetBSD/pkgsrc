@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4324 2025/07/16 16:11:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4325 2025/07/16 16:12:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6376,3 +6376,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/ncspot to 1.3.0 [pin 2025-07-16]
 	Updated chat/neonmodem to 1.0.7 [pin 2025-07-16]
 	Updated shells/oh-my-posh to 26.16.0 [pin 2025-07-16]
+	Updated x11/xterm to 401 [pin 2025-07-16]
