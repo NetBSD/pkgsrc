@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/04/24 14:14:30 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/07/16 07:59:50 adam Exp $
 
-DISTNAME=	libwebp-1.5.0
-PKGREVISION=	1
+DISTNAME=	libwebp-1.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://storage.googleapis.com/downloads.webmproject.org/releases/webp/
 
@@ -23,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-libwebpmux
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
-.if !empty(MACHINE_PLATFORM:MSunOS-*-i386) && !empty(CC_VERSION:Mgcc-[23]*)
+.if ${MACHINE_PLATFORM:MSunOS-*-i386} && ${CC_VERSION:Mgcc-[23]*}
 CPPFLAGS+=	-D__pic__
 .endif
 
