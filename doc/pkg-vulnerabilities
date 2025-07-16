@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.468 2025/07/15 09:44:19 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.469 2025/07/16 21:44:36 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27162,3 +27162,5 @@ php84-soap<8.4.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64
 polkit-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-7519
 py{27,39,310,311,312,313}-aiohttp<3.12.14	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-53643
 roundup<2.5.0		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-53865
+p5-Plack-Middleware-Session<0.35		insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2025-40923
+p5-Authen-SASL<2.1800nb2			insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2025-40918
