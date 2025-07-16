@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/05/11 12:31:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/16 10:09:16 jperkin Exp $
 
 DISTNAME=	espeak-ng-1.52.0
 PKGREVISION=	1
@@ -26,6 +26,8 @@ TEST_TARGET=	check
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=	-D_NETBSD_SOURCE
 .endif
+
+CFLAGS.SunOS+=	-D_LARGEFILE64_SOURCE -D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE+=	espeak-ng.pc.in
 
