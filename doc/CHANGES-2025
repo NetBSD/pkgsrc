@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4314 2025/07/15 21:40:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4315 2025/07/16 00:08:25 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6364,3 +6364,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-backports.strenum [wiz 2025-07-15]
 	Removed time/py-backports-datetime-fromisoformat [wiz 2025-07-15]
 	Removed www/py-cookies [wiz 2025-07-15]
+	Updated textproc/xfce4-dict to 0.8.9 [gutteridge 2025-07-16]
