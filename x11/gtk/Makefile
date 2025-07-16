@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2022/06/28 11:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2025/07/16 09:32:49 jperkin Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		21
@@ -25,6 +25,13 @@ CONFIGURE_ARGS+=	--with-xinput=xfree \
 			--with-native-locale=yes \
 			--sysconfdir=${PREFIX}/share
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
+
+# Way too many hardcoded issues to patch
+.if ${PKGSRC_COMPILER:Mgcc}
+CFLAGS+=		-Wno-error=implicit-function-declaration
+CFLAGS+=		-Wno-error=implicit-int
+CFLAGS+=		-Wno-error=incompatible-pointer-types
+.endif
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
