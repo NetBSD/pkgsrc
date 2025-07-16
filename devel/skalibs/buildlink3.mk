@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/07/08 21:13:37 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/07/16 19:34:48 schmonz Exp $
 
 BUILDLINK_TREE+=	skalibs
 
@@ -17,6 +17,7 @@ SUBST_CLASSES+=				skalibs-target
 SUBST_STAGE.skalibs-target=		post-configure
 SUBST_FILES.skalibs-target=		config.mak
 SUBST_SED.skalibs-target=		-e 's|\(CROSS_COMPILE := \).*|\1|'
+SUBST_NOOP_OK.skalibs-target=		yes
 .endif # SKALIBS_TOLERATE_TARGET_SKEW
 
 .include "shlibs.mk"
