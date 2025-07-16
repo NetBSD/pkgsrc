@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/02/03 01:26:00 wen Exp $
+$NetBSD: distinfo,v 1.12 2025/07/16 21:41:25 wiz Exp $
 
-BLAKE2s (Plack-Middleware-Session-0.34.tar.gz) = 057e1716b15494175db2ec5d21468e5cdd9d9f73773a3e26d3626e16cde72ca4
-SHA512 (Plack-Middleware-Session-0.34.tar.gz) = 8ad53048c887324e3acbac6700c9a5487328b62b722e7a923db7f90ce58cb2312bf332c55904b759afa4750798fc1a8a7bc8384a0eddf4d66bb2a8d92fb9c22f
-Size (Plack-Middleware-Session-0.34.tar.gz) = 28366 bytes
+BLAKE2s (Plack-Middleware-Session-0.35.tar.gz) = 021b90d640d899936435ca00705bde8847ee2396bf22b99ac7d9bd8de3117abc
+SHA512 (Plack-Middleware-Session-0.35.tar.gz) = 3b63a8ad63c407bdcb52a54582b43071de7e786787ea5add02fe5d8d00296013686d5361e9fa2e1f5a60565d7700037e69a2589d32a19aff0555f6b5ee490a9d
+Size (Plack-Middleware-Session-0.35.tar.gz) = 28495 bytes
