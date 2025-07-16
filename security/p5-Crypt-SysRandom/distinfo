@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/16 21:37:50 wiz Exp $
+
+BLAKE2s (Crypt-SysRandom-0.007.tar.gz) = 4ee7441ce270591a150477c3720ddf6fdeb563a790595db435942c39aadffb93
+SHA512 (Crypt-SysRandom-0.007.tar.gz) = 75d5d89e8d883560f24f4f617afbb57f8953c6f7b96c4934ff8a7d2251ffddffe372ee8b5411011cb4eae0e7d19d4a44dd8414146c50d6bdc9b489ba8a4a23a6
+Size (Crypt-SysRandom-0.007.tar.gz) = 12202 bytes
