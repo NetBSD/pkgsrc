@@ -1,14 +1,21 @@
-# $NetBSD: Makefile,v 1.39 2025/04/24 14:15:56 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/07/16 00:08:04 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-dict-0.8.8
+DISTNAME=	xfce4-dict-0.8.9
 CATEGORIES=	textproc
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-dict/0.8/
+EXTRACT_SUFX=	.tar.xz
 
 HOMEPAGE=	https://goodies.xfce.org/projects/applications/xfce4-dict
 COMMENT=	Xfce dictionary application
+
+USE_TOOLS+=	autoconf automake autoreconf gdbus-codegen
+
+TOOL_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
