@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.982 2025/07/14 05:36:33 adam Exp $
+# $NetBSD: Makefile,v 1.983 2025/07/16 21:42:07 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -347,6 +347,7 @@ SUBDIR+=	p5-Crypt-Rijndael
 SUBDIR+=	p5-Crypt-SMIME
 SUBDIR+=	p5-Crypt-SSLeay
 SUBDIR+=	p5-Crypt-SmbHash
+SUBDIR+=	p5-Crypt-SysRandom
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Crypt-URandom
 SUBDIR+=	p5-Crypt-X509
