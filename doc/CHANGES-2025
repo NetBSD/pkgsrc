@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4331 2025/07/16 21:45:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4332 2025/07/16 21:54:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6383,3 +6383,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Plack-Middleware-Session to 0.35 [wiz 2025-07-16]
 	Added security/p5-Crypt-SysRandom version 0.007 [wiz 2025-07-16]
 	Updated security/p5-Authen-SASL to 2.1800nb2 [wiz 2025-07-16]
+	Updated net/unbound to 1.23.1 [he 2025-07-16]
