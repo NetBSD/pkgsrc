@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4328 2025/07/16 19:35:38 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4329 2025/07/16 21:41:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6380,3 +6380,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/broot to 1.47.0 [pin 2025-07-16]
 	Updated devel/cargo-modules to 0.24.3 [pin 2025-07-16]
 	Added shells/execshell version 0.0.20201101 [schmonz 2025-07-16]
+	Updated www/p5-Plack-Middleware-Session to 0.35 [wiz 2025-07-16]
