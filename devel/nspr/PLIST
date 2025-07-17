@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/10/22 12:52:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/07/17 22:06:58 wiz Exp $
 ${PLIST.native}bin/compile-et.pl
 bin/nspr-config
 ${PLIST.native}bin/prerr.properties
@@ -71,7 +71,6 @@ include/nspr/prtpool.h
 include/nspr/prtrace.h
 include/nspr/prtypes.h
 include/nspr/prvrsion.h
-include/nspr/prwin.h
 lib/nspr/libnspr4.a
 lib/nspr/libnspr4.so
 lib/nspr/libplc4.a
