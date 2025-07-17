@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4342 2025/07/17 11:24:51 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4343 2025/07/17 11:33:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6398,3 +6398,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/unrar to 7.1.2 [adam 2025-07-17]
 	Updated net/wireshark to 4.4.8 [adam 2025-07-17]
 	Updated chat/matrix-synapse to 1.134.0 [gdt 2025-07-17]
+	Updated finance/bitcoin to 29.0 [adam 2025-07-17]
+	Updated devel/py-orderly-set to 5.5.0 [adam 2025-07-17]
