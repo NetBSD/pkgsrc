@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2025/06/13 07:28:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/07/17 08:20:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -254,6 +254,9 @@ ${PYSITELIB}/xarray/groupers.pyo
 ${PYSITELIB}/xarray/indexes/__init__.py
 ${PYSITELIB}/xarray/indexes/__init__.pyc
 ${PYSITELIB}/xarray/indexes/__init__.pyo
+${PYSITELIB}/xarray/indexes/nd_point_index.py
+${PYSITELIB}/xarray/indexes/nd_point_index.pyc
+${PYSITELIB}/xarray/indexes/nd_point_index.pyo
 ${PYSITELIB}/xarray/indexes/range_index.py
 ${PYSITELIB}/xarray/indexes/range_index.pyc
 ${PYSITELIB}/xarray/indexes/range_index.pyo
@@ -515,6 +518,9 @@ ${PYSITELIB}/xarray/tests/test_missing.pyo
 ${PYSITELIB}/xarray/tests/test_namedarray.py
 ${PYSITELIB}/xarray/tests/test_namedarray.pyc
 ${PYSITELIB}/xarray/tests/test_namedarray.pyo
+${PYSITELIB}/xarray/tests/test_nd_point_index.py
+${PYSITELIB}/xarray/tests/test_nd_point_index.pyc
+${PYSITELIB}/xarray/tests/test_nd_point_index.pyo
 ${PYSITELIB}/xarray/tests/test_nputils.py
 ${PYSITELIB}/xarray/tests/test_nputils.pyc
 ${PYSITELIB}/xarray/tests/test_nputils.pyo
