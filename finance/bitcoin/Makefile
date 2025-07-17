@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2025/07/03 06:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/07/17 11:22:59 adam Exp $
 
-DISTNAME=	bitcoin-28.1
-PKGREVISION=	5
+DISTNAME=	bitcoin-29.0
 CATEGORIES=	finance
 MASTER_SITES=	https://bitcoincore.org/bin/bitcoin-core-${PKGVERSION_NOREV}/
 
@@ -15,15 +14,18 @@ RCD_SCRIPTS=	bitcoind
 USE_CXX_FEATURES+=	c++20 filesystem
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake gmake pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-ccache
-CONFIGURE_ARGS+=	--disable-hardening # uses -fPIE which is problemtic
-CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+USE_TOOLS+=		pkg-config
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_BENCH=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_UTIL=ON
 # Tests take a lot of time to compile.
-CONFIGURE_ARGS+=	--disable-tests
-PKGCONFIG_OVERRIDE=	libbitcoinconsensus.pc.in
-TEST_TARGET=		check
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TX=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WALLET_TOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_HARDENING=OFF # uses -fPIE which is problemtic
+CMAKE_CONFIGURE_ARGS+=	-DWITH_BDB=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CCACHE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_ZMQ=ON
+PKGCONFIG_OVERRIDE=	libbitcoinkernel.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,11 +47,10 @@ INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 #src/univalue
 
 .include "options.mk"
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
-
 .include "../../databases/db4/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.21
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../net/zeromq/buildlink3.mk"
