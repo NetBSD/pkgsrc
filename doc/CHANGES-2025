@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4346 2025/07/17 17:12:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4347 2025/07/17 17:14:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6403,3 +6403,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/clock-rs to 0.1.215 [pin 2025-07-17]
 	Updated devel/hexpatch to 1.12.2 [pin 2025-07-17]
 	Updated devel/mise to 2025.7.11 [pin 2025-07-17]
+	Updated sysutils/parallel-disk-usage to 0.13.1 [pin 2025-07-17]
