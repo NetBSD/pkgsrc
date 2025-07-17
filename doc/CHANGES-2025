@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4338 2025/07/17 07:26:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4339 2025/07/17 07:49:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6392,3 +6392,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs20 to 20.19.4 [adam 2025-07-17]
 	Updated lang/nodejs22 to 22.17.1 [adam 2025-07-17]
 	Updated lang/nodejs to 24.4.1 [adam 2025-07-17]
+	Updated print/scribus-qt5 to 1.6.4 [wiz 2025-07-17]
