@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/04/12 19:03:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/07/17 08:16:48 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -47,6 +47,9 @@ ${PYSITELIB}/IPython/core/crashhandler.pyo
 ${PYSITELIB}/IPython/core/debugger.py
 ${PYSITELIB}/IPython/core/debugger.pyc
 ${PYSITELIB}/IPython/core/debugger.pyo
+${PYSITELIB}/IPython/core/debugger_backport.py
+${PYSITELIB}/IPython/core/debugger_backport.pyc
+${PYSITELIB}/IPython/core/debugger_backport.pyo
 ${PYSITELIB}/IPython/core/display.py
 ${PYSITELIB}/IPython/core/display.pyc
 ${PYSITELIB}/IPython/core/display.pyo
