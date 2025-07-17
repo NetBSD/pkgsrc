@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4354 2025/07/17 17:52:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4355 2025/07/17 22:04:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6412,3 +6412,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tui-journal to 0.16.0 [pin 2025-07-17]
 	Updated net/tor to 0.4.8.17 [adam 2025-07-17]
 	Updated audio/fluidsynth to 2.4.7 [adam 2025-07-17]
+	Updated devel/nss to 3.114 [wiz 2025-07-17]
