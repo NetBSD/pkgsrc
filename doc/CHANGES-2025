@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4337 2025/07/17 05:45:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4338 2025/07/17 07:26:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6389,3 +6389,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/gcc15-gnat-libs version 15.1.0nb1 [dkazankov 2025-07-17]
 	Updated multimedia/py-gstreamer1 to 1.26.3 [wiz 2025-07-17]
 	Updated meta-pkgs/bulk-test-poppler to 20250717 [wiz 2025-07-17]
+	Updated lang/nodejs20 to 20.19.4 [adam 2025-07-17]
+	Updated lang/nodejs22 to 22.17.1 [adam 2025-07-17]
+	Updated lang/nodejs to 24.4.1 [adam 2025-07-17]
