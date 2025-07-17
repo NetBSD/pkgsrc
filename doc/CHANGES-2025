@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4352 2025/07/17 17:35:57 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4353 2025/07/17 17:36:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6409,3 +6409,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/wallust to 3.4.0 [pin 2025-07-17]
 	Updated sysutils/onefetch to 2.25.0 [pin 2025-07-17]
 	Updated editors/tp-note to 1.25.12 [pin 2025-07-17]
+	Updated misc/tui-journal to 0.16.0 [pin 2025-07-17]
