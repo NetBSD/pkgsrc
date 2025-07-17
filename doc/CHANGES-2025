@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4350 2025/07/17 17:17:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4351 2025/07/17 17:34:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6407,3 +6407,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 3.2.0 [pin 2025-07-17]
 	Updated misc/tailspin to 5.4.5 [pin 2025-07-17]
 	Updated graphics/wallust to 3.4.0 [pin 2025-07-17]
+	Updated sysutils/onefetch to 2.25.0 [pin 2025-07-17]
