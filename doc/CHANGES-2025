@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4345 2025/07/17 17:11:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4346 2025/07/17 17:12:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-orderly-set to 5.5.0 [adam 2025-07-17]
 	Updated time/clock-rs to 0.1.215 [pin 2025-07-17]
 	Updated devel/hexpatch to 1.12.2 [pin 2025-07-17]
+	Updated devel/mise to 2025.7.11 [pin 2025-07-17]
