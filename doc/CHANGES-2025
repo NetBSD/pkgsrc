@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4334 2025/07/17 05:01:04 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4335 2025/07/17 05:01:33 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6386,3 +6386,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/unbound to 1.23.1 [he 2025-07-16]
 	Updated lang/rust to 1.86.0nb1 [he 2025-07-16]
 	Added lang/gcc15-gnat version 15.1.0 [dkazankov 2025-07-17]
+	Added lang/gcc15-gnat-libs version 15.1.0nb1 [dkazankov 2025-07-17]
