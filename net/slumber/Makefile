@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/06/23 08:29:54 pin Exp $
+# $NetBSD: Makefile,v 1.41 2025/07/17 17:14:47 pin Exp $
 
-DISTNAME=	slumber-3.1.3
+DISTNAME=	slumber-3.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
