@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2025/03/14 11:48:43 gdt Exp $
+@comment $NetBSD: PLIST,v 1.59 2025/07/17 11:24:44 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -298,6 +298,9 @@ ${PYSITELIB}/synapse/config/tracer.pyo
 ${PYSITELIB}/synapse/config/user_directory.py
 ${PYSITELIB}/synapse/config/user_directory.pyc
 ${PYSITELIB}/synapse/config/user_directory.pyo
+${PYSITELIB}/synapse/config/user_types.py
+${PYSITELIB}/synapse/config/user_types.pyc
+${PYSITELIB}/synapse/config/user_types.pyo
 ${PYSITELIB}/synapse/config/voip.py
 ${PYSITELIB}/synapse/config/voip.pyc
 ${PYSITELIB}/synapse/config/voip.pyo
@@ -484,6 +487,9 @@ ${PYSITELIB}/synapse/handlers/register.pyo
 ${PYSITELIB}/synapse/handlers/relations.py
 ${PYSITELIB}/synapse/handlers/relations.pyc
 ${PYSITELIB}/synapse/handlers/relations.pyo
+${PYSITELIB}/synapse/handlers/reports.py
+${PYSITELIB}/synapse/handlers/reports.pyc
+${PYSITELIB}/synapse/handlers/reports.pyo
 ${PYSITELIB}/synapse/handlers/room.py
 ${PYSITELIB}/synapse/handlers/room.pyc
 ${PYSITELIB}/synapse/handlers/room.pyo
@@ -496,6 +502,9 @@ ${PYSITELIB}/synapse/handlers/room_member.pyo
 ${PYSITELIB}/synapse/handlers/room_member_worker.py
 ${PYSITELIB}/synapse/handlers/room_member_worker.pyc
 ${PYSITELIB}/synapse/handlers/room_member_worker.pyo
+${PYSITELIB}/synapse/handlers/room_policy.py
+${PYSITELIB}/synapse/handlers/room_policy.pyc
+${PYSITELIB}/synapse/handlers/room_policy.pyo
 ${PYSITELIB}/synapse/handlers/room_summary.py
 ${PYSITELIB}/synapse/handlers/room_summary.pyc
 ${PYSITELIB}/synapse/handlers/room_summary.pyo
@@ -688,6 +697,12 @@ ${PYSITELIB}/synapse/module_api/callbacks/__init__.pyo
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.py
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.pyc
 ${PYSITELIB}/synapse/module_api/callbacks/account_validity_callbacks.pyo
+${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.py
+${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.pyc
+${PYSITELIB}/synapse/module_api/callbacks/media_repository_callbacks.pyo
+${PYSITELIB}/synapse/module_api/callbacks/ratelimit_callbacks.py
+${PYSITELIB}/synapse/module_api/callbacks/ratelimit_callbacks.pyc
+${PYSITELIB}/synapse/module_api/callbacks/ratelimit_callbacks.pyo
 ${PYSITELIB}/synapse/module_api/callbacks/spamchecker_callbacks.py
 ${PYSITELIB}/synapse/module_api/callbacks/spamchecker_callbacks.pyc
 ${PYSITELIB}/synapse/module_api/callbacks/spamchecker_callbacks.pyo
@@ -910,6 +925,9 @@ ${PYSITELIB}/synapse/rest/admin/registration_tokens.pyo
 ${PYSITELIB}/synapse/rest/admin/rooms.py
 ${PYSITELIB}/synapse/rest/admin/rooms.pyc
 ${PYSITELIB}/synapse/rest/admin/rooms.pyo
+${PYSITELIB}/synapse/rest/admin/scheduled_tasks.py
+${PYSITELIB}/synapse/rest/admin/scheduled_tasks.pyc
+${PYSITELIB}/synapse/rest/admin/scheduled_tasks.pyo
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.py
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.pyc
 ${PYSITELIB}/synapse/rest/admin/server_notice_servlet.pyo
@@ -1420,6 +1438,9 @@ ${PYSITELIB}/synapse/storage/engines/postgres.pyo
 ${PYSITELIB}/synapse/storage/engines/sqlite.py
 ${PYSITELIB}/synapse/storage/engines/sqlite.pyc
 ${PYSITELIB}/synapse/storage/engines/sqlite.pyo
+${PYSITELIB}/synapse/storage/invite_rule.py
+${PYSITELIB}/synapse/storage/invite_rule.pyc
+${PYSITELIB}/synapse/storage/invite_rule.pyo
 ${PYSITELIB}/synapse/storage/keys.py
 ${PYSITELIB}/synapse/storage/keys.pyc
 ${PYSITELIB}/synapse/storage/keys.pyo
@@ -1911,6 +1932,17 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_sliding_sync_room_config_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/06_events_received_ts_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/89/01_sliding_sync_membership_snapshot_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/90/01_add_column_participant_room_memberships_table.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/91/01_media_hash.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/01_remove_trigger.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/92/01_remove_trigger.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/92/02_remove_populate_participant_bg_update.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/04_ss_membership_snapshot_idx.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/05_fixup_max_depth_cap.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/06_device_federation_inbox_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/07_add_user_reports.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/07_event_txn_id_device_id_txn_id2.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1925,6 +1957,8 @@ ${PYSITELIB}/synapse/storage/schema/state/delta/56/state_group_room_idx.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/61/02state_groups_state_n_distinct.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/delta/70/08_state_group_edges_unique.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/89/01_state_groups_deletion.sql
+${PYSITELIB}/synapse/storage/schema/state/delta/90/02_delete_unreferenced_state_groups.sql
+${PYSITELIB}/synapse/storage/schema/state/delta/90/03_remove_old_deletion_bg_update.sql
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/types.py
@@ -1955,14 +1989,19 @@ ${PYSITELIB}/synapse/synapse_rust.abi3.so
 ${PYSITELIB}/synapse/synapse_rust/__init__.pyi
 ${PYSITELIB}/synapse/synapse_rust/acl.pyi
 ${PYSITELIB}/synapse/synapse_rust/events.pyi
+${PYSITELIB}/synapse/synapse_rust/http_client.pyi
 ${PYSITELIB}/synapse/synapse_rust/push.pyi
 ${PYSITELIB}/synapse/synapse_rust/rendezvous.pyi
+${PYSITELIB}/synapse/synapse_rust/segmenter.pyi
 ${PYSITELIB}/synapse/types/__init__.py
 ${PYSITELIB}/synapse/types/__init__.pyc
 ${PYSITELIB}/synapse/types/__init__.pyo
 ${PYSITELIB}/synapse/types/handlers/__init__.py
 ${PYSITELIB}/synapse/types/handlers/__init__.pyc
 ${PYSITELIB}/synapse/types/handlers/__init__.pyo
+${PYSITELIB}/synapse/types/handlers/policy_server.py
+${PYSITELIB}/synapse/types/handlers/policy_server.pyc
+${PYSITELIB}/synapse/types/handlers/policy_server.pyo
 ${PYSITELIB}/synapse/types/handlers/sliding_sync.py
 ${PYSITELIB}/synapse/types/handlers/sliding_sync.pyc
 ${PYSITELIB}/synapse/types/handlers/sliding_sync.pyo
@@ -2026,6 +2065,9 @@ ${PYSITELIB}/synapse/util/cancellation.pyo
 ${PYSITELIB}/synapse/util/check_dependencies.py
 ${PYSITELIB}/synapse/util/check_dependencies.pyc
 ${PYSITELIB}/synapse/util/check_dependencies.pyo
+${PYSITELIB}/synapse/util/constants.py
+${PYSITELIB}/synapse/util/constants.pyc
+${PYSITELIB}/synapse/util/constants.pyo
 ${PYSITELIB}/synapse/util/daemonize.py
 ${PYSITELIB}/synapse/util/daemonize.pyc
 ${PYSITELIB}/synapse/util/daemonize.pyo
