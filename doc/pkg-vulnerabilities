@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.469 2025/07/16 21:44:36 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.470 2025/07/17 09:38:19 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27164,3 +27164,20 @@ py{27,39,310,311,312,313}-aiohttp<3.12.14	request-smuggling	https://nvd.nist.gov
 roundup<2.5.0		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-53865
 p5-Plack-Middleware-Session<0.35		insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2025-40923
 p5-Authen-SASL<2.1800nb2			insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2025-40918
+bind>=9.20<9.20.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40777
+chromium<138.0.7204.157	sandbox-escape		https://nvd.nist.gov/vuln/detail/CVE-2025-6558
+chromium<138.0.7204.157	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-7656
+chromium<138.0.7204.157	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-7657
+mysql-client<8.0.43	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixMSQL
+mysql-cluster<8.0.43	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixMSQL
+mysql-server<8.0.43	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixMSQL
+openjdk11<11.0.28	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixJAVA
+openjdk17<17.0.16	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixJAVA
+openjdk21<21.0.8	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujul2025.html#AppendixJAVA
+php{56,73,74,80,81,82,83,84}-tiki6<14.2	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-34113
+sqlite3<3.50.2	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-6965
+unbound<1.23.1	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2025-5994
+vim<9.1.1552	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53905
+vim<9.1.1551	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53906
+xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
+xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
