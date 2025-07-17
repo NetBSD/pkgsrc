@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/06/30 15:18:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/07/17 15:35:55 leot Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -2970,14 +2970,14 @@ ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusTargets-release.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfig.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersion.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateDependencies.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargets.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessTargets.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateAdditionalTargetInfo.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfig.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersion.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateDependencies.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateTargets.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake
+${PLIST.dbus}qt6/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessTargets.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake
 ${PLIST.dbus}qt6/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake
