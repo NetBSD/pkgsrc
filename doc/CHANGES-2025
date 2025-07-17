@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4348 2025/07/17 17:15:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4349 2025/07/17 17:16:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6405,3 +6405,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.7.11 [pin 2025-07-17]
 	Updated sysutils/parallel-disk-usage to 0.13.1 [pin 2025-07-17]
 	Updated net/slumber to 3.2.0 [pin 2025-07-17]
+	Updated misc/tailspin to 5.4.5 [pin 2025-07-17]
