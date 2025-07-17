@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/03/30 16:57:27 pin Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/17 17:16:48 pin Exp $
 
-DISTNAME=	wallust-3.3.0
+DISTNAME=	wallust-3.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	https://static.crates.io/crates/wallust/
 EXTRACT_SUFX=	.crate
@@ -10,14 +10,11 @@ HOMEPAGE=	https://codeberg.org/explosion-mental/wallust/
 COMMENT=	Generate colors from an image
 LICENSE=	mit
 
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
-SITES.wasi-0.14.2+wasi-0.2.4.crate=		https://static.crates.io/crates/wasi/
-
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.85.1
+#RUST_REQ=	1.87.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.85.1 on amd64
+#This package is confirmed to build with Rust 1.87.0 on amd64
 
 INSTALLATION_DIRS=	share/examples/wallust \
 			${PKGMANDIR}/man1 \
