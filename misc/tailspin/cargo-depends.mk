@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2025/06/06 09:50:27 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/07/17 17:15:51 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -96,7 +96,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.140
-CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.8
+CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.9
 CARGO_CRATE_DEPENDS+=	shell-words-1.1.0
 CARGO_CRATE_DEPENDS+=	shellexpand-3.1.1
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.5
@@ -115,10 +115,10 @@ CARGO_CRATE_DEPENDS+=	thiserror-2.0.12
 CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.12
 CARGO_CRATE_DEPENDS+=	tokio-1.45.1
 CARGO_CRATE_DEPENDS+=	tokio-macros-2.5.0
-CARGO_CRATE_DEPENDS+=	toml-0.8.22
-CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.9
-CARGO_CRATE_DEPENDS+=	toml_edit-0.22.26
-CARGO_CRATE_DEPENDS+=	toml_write-0.1.1
+CARGO_CRATE_DEPENDS+=	toml-0.8.23
+CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.11
+CARGO_CRATE_DEPENDS+=	toml_edit-0.22.27
+CARGO_CRATE_DEPENDS+=	toml_write-0.1.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.18
 CARGO_CRATE_DEPENDS+=	unicode-linebreak-0.1.5
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
