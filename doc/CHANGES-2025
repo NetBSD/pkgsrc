@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4336 2025/07/17 05:25:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4337 2025/07/17 05:45:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6388,3 +6388,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/gcc15-gnat version 15.1.0 [dkazankov 2025-07-17]
 	Added lang/gcc15-gnat-libs version 15.1.0nb1 [dkazankov 2025-07-17]
 	Updated multimedia/py-gstreamer1 to 1.26.3 [wiz 2025-07-17]
+	Updated meta-pkgs/bulk-test-poppler to 20250717 [wiz 2025-07-17]
