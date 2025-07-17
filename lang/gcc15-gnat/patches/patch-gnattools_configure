@@ -1,0 +1,16 @@
+$NetBSD: patch-gnattools_configure,v 1.1 2025/07/17 05:00:17 dkazankov Exp $
+
+Include NetBSD in the gnat tools configure.
+
+--- gnattools/configure.orig	2025-04-25 08:18:04.000000000 +0000
++++ gnattools/configure
+@@ -2075,6 +2075,9 @@
+   *-*-freebsd*)
+     TOOLS_TARGET_PAIRS="indepsw.adb<indepsw-gnu.adb"
+     ;;
++  *-*-netbsd*)
++    TOOLS_TARGET_PAIRS="indepsw.adb<indepsw-gnu.adb"
++    ;;
+   *-*-linux*)
+     TOOLS_TARGET_PAIRS="indepsw.adb<indepsw-gnu.adb"
+     ;;
