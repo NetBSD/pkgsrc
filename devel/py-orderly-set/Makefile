@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/05/07 07:32:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/17 11:26:48 adam Exp $
 
-DISTNAME=	orderly_set-5.4.1
+DISTNAME=	orderly_set-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orderly-set/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/seperman/orderly-set
 COMMENT=	Multiple implementations of ordered set
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark~=5.1.0:../../devel/py-test-benchmark
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov~=6.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
