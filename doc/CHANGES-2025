@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4343 2025/07/17 11:33:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4344 2025/07/17 17:10:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6400,3 +6400,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/matrix-synapse to 1.134.0 [gdt 2025-07-17]
 	Updated finance/bitcoin to 29.0 [adam 2025-07-17]
 	Updated devel/py-orderly-set to 5.5.0 [adam 2025-07-17]
+	Updated time/clock-rs to 0.1.215 [pin 2025-07-17]
