@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.6 2025/07/17 02:52:13 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.7 2025/07/17 23:59:55 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -45,3 +45,12 @@ lang/ruby34: Security fix
 
 Pullup ticket #6989 - requested by taca
 www/apache24: Security fix
+
+Pullup ticket #6990 - requested by taca
+net/bind918: Security fix
+
+Pullup ticket #6991 - requested by gdt
+chat/matrix-synapse: Update package in anticipation of security fix
+
+Pullup ticket #6992 - requested by he
+lang/rust: Runtime fix to reduce memory usage on NetBSD/i386
