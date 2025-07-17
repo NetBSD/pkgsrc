@@ -1,0 +1,18 @@
+$NetBSD: patch-libgomp_configure.tgt,v 1.1 2025/07/17 05:00:17 dkazankov Exp $
+
+Add NetBSD target
+
+--- libgomp/configure.tgt.orig	2025-04-25 11:18:04.000000000 +0300
++++ libgomp/configure.tgt
+@@ -158,6 +158,11 @@
+ 	XLDFLAGS="${XLDFLAGS} -lpthread"
+ 	;;
+ 
++  *-*-netbsd*)
++	# Need to link with -lpthread so libgomp.so is self-contained.
++	XLDFLAGS="${XLDFLAGS} -lpthread"
++	;;
++
+   *-*-aix*)
+ 	config_path="posix"
+ 	# Need to link with -lpthread so libgomp.so is self-contained.
