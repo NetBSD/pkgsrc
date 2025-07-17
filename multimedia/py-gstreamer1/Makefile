@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/11/16 09:22:51 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/17 05:25:01 wiz Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -24,6 +24,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.1
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-bad/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 MESON_REQD+=	1.2.0
 .include "../../devel/meson/build.mk"
