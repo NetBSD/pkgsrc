@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2024/12/02 17:59:49 abs Exp $
+$NetBSD: distinfo,v 1.16 2025/07/17 05:41:50 wiz Exp $
 
 BLAKE2s (ddclient-3.11.2.tar.gz) = 4448187c55cd926c797aad6744f1a367e0b86420cfad9a14759af593f2b70660
 SHA512 (ddclient-3.11.2.tar.gz) = b0d275f5ccc36cd8b532b6176de885696ff189dbdffa71bc63e9fa6db2aaf4ab5ff3290c251e318f05b2163c546dcc785eb3582388d9fb70e8439e35e5cbcd7f
 Size (ddclient-3.11.2.tar.gz) = 278314 bytes
+SHA1 (patch-Makefile.am) = 12612a178bc77321ab5ddd59693332ed0e7e6303
