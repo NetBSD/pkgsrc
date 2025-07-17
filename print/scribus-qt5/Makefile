@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2025/07/13 08:17:41 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/07/17 07:49:04 wiz Exp $
 
-DISTNAME=	scribus-1.6.2
-PKGREVISION=	18
+DISTNAME=	scribus-1.6.4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=		c++17
 CMAKE_CONFIGURE_ARGS+=		-DWANT_CPP17=ON
 
 .include "../../devel/cmake/build.mk"
