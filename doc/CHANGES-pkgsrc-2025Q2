@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.5 2025/07/09 14:43:22 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.6 2025/07/17 02:52:13 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -27,3 +27,21 @@ devel/git: Security fix
 Pullup ticket #6983 - requested by bsiegert
 lang/go123: Security fix
 lang/go124: Security fix
+
+Pullup ticket #6984 - requested by taca
+security/gnutls: Security fix
+
+Pullup ticket #6985 - requested by taca
+net/samba4: Security fix
+
+Pullup ticket #6986 - requested by taca
+lang/ruby32-base: Security fix
+
+Pullup ticket #6987 - requested by taca
+lang/ruby33: Security fix
+
+Pullup ticket #6988 - requested by taca
+lang/ruby34: Security fix
+
+Pullup ticket #6989 - requested by taca
+www/apache24: Security fix
