@@ -1,15 +1,19 @@
-$NetBSD: patch-tools_meson.build,v 1.2 2020/03/11 10:09:36 wiz Exp $
+$NetBSD: patch-tools_meson.build,v 1.3 2025/07/18 08:37:35 adam Exp $
 
 After testing for the meson_option "python", meson.build then overwrites it.
 
---- tools/meson.build.orig	2020-03-07 14:13:21.693311500 +0000
+--- tools/meson.build.orig	2025-03-15 13:50:44.000000000 +0000
 +++ tools/meson.build
-@@ -12,7 +12,7 @@ endif
- if cc.get_id() == 'msvc'
-   python_cmd = '/usr/bin/env ' + python.path()
- else
--  python_cmd = '/usr/bin/env python@0@'.format(python.language_version().split('.')[0])
-+  python_cmd = python.path()
+@@ -9,11 +9,7 @@ if with_doctool
+   tools += [['g-ir-doc-tool', 'docmain', 'doc_main']]
  endif
  
+-if not python.full_path().startswith('/usr/bin')
+-  python_cmd = '/usr/bin/env ' + python.full_path()
+-else
+-  python_cmd = '/usr/bin/env python@0@'.format(python.language_version().split('.')[0])
+-endif
++python_cmd = python.path()
+ 
  tool_output = []
+ foreach tool : tools
