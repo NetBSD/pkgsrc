@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2025/01/14 13:17:12 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/07/18 08:37:35 adam Exp $
 
-DISTNAME=	gobject-introspection-1.82.0
+DISTNAME=	gobject-introspection-1.84.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .if ${PYTHON_VERSION} > 311
 # https://gitlab.gnome.org/GNOME/gobject-introspection/-/issues/395
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 .endif
 
 USE_TOOLS+=	pkg-config flex bison
