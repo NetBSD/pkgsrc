@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.99 2025/07/16 16:11:10 pin Exp $
+# $NetBSD: go-modules.mk,v 1.100 2025/07/18 16:58:38 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -131,7 +131,8 @@ GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.9.2.zip
 GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.mod
 GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.9.1.zip
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.mod
-GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.7.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.7.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.zip

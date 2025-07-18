@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.242 2025/07/16 16:11:10 pin Exp $
+$NetBSD: distinfo,v 1.243 2025/07/18 16:58:38 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -393,9 +393,12 @@ Size (github.com_spf13_cobra_@v_v1.9.1.zip) = 237545 bytes
 BLAKE2s (github.com_spf13_pflag_@v_v1.0.6.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
 SHA512 (github.com_spf13_pflag_@v_v1.0.6.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
 Size (github.com_spf13_pflag_@v_v1.0.6.mod) = 39 bytes
-BLAKE2s (github.com_spf13_pflag_@v_v1.0.6.zip) = 9b9fed448b5670ac79b33c17f56a47e17ce490be129405434616f37cd22a66c6
-SHA512 (github.com_spf13_pflag_@v_v1.0.6.zip) = 5b953fac0f17a29a299829784b549aa9c0a556dbd12c60e3ae98c206341f8ba2c5e981ab64d68cb89113798d795f01b85e89e2ae9d2409d9266e5f24fe652ae7
-Size (github.com_spf13_pflag_@v_v1.0.6.zip) = 94062 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.7.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
+SHA512 (github.com_spf13_pflag_@v_v1.0.7.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
+Size (github.com_spf13_pflag_@v_v1.0.7.mod) = 39 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.7.zip) = a20c7049bd764ffc16f694a9d28e397598a4d9c67e5d497e2f9e4a4ba3f3b957
+SHA512 (github.com_spf13_pflag_@v_v1.0.7.zip) = 03ebb6b41c9819e1df17554506a04be8ea2e3872c0eda6d162d6524295054b25e9b871bed9d148039ae0aa09acdae84f15a4a6b2030a811d9055bc7cc30bf651
+Size (github.com_spf13_pflag_@v_v1.0.7.zip) = 106035 bytes
 BLAKE2s (github.com_stretchr_objx_@v_v0.1.0.mod) = 1eb73df00a63ad02b651d13ef6fec7b4842f22c3ecf50546104fddb717aa1c0b
 SHA512 (github.com_stretchr_objx_@v_v0.1.0.mod) = 4e366e5a60559a8863cb2a50280deb307d8bf885ca5440cce1b49a084b4cc4583b3481240125f35f161226592a43f2c0a426152f117d79b68c92c72a93f751d5
 Size (github.com_stretchr_objx_@v_v0.1.0.mod) = 32 bytes
@@ -549,9 +552,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-26.16.0.tar.gz) = f5790014c724914652ef1ddef201f802defb0d2a8107d4f905d28a241ef42461
-SHA512 (oh-my-posh-26.16.0.tar.gz) = b7361ddec1195f6f7b9466dad5974c2990c7ae841dffb9f3cfb66a948e5a10bec72cba7dd56ffa4275b5bbf178eab9d0c35d23680c120f4daf676edd7165d096
-Size (oh-my-posh-26.16.0.tar.gz) = 6762648 bytes
+BLAKE2s (oh-my-posh-26.17.0.tar.gz) = 02728832572be3d9946bf1b8c2937a6f7be17db34bbce29bd1b9c70fac9d80bb
+SHA512 (oh-my-posh-26.17.0.tar.gz) = a2f8dde15c46a3f2b1441315971cb4c3370902e92a36f1073442fd6538085d292af63b3b9eabfb11581eeb6ff1a95b5c22334d9596dd3b9f0f45b571e056ad61
+Size (oh-my-posh-26.17.0.tar.gz) = 6762935 bytes
 SHA1 (patch-go.mod) = f02ebe53cae01005f81d0e9abfe06cf756bac9b2
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
