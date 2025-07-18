@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4357 2025/07/18 07:36:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4358 2025/07/18 07:46:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6416,3 +6416,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nspr to 4.37 [wiz 2025-07-17]
 	Updated sysutils/ansible-core to 2.18.7 [adam 2025-07-18]
 	Updated sysutils/ansible to 11.8.0 [adam 2025-07-18]
+	Updated devel/re2 to 20250717 [adam 2025-07-18]
+	Updated devel/blosc2 to 2.19.1 [adam 2025-07-18]
