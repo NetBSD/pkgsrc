@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.470 2025/07/17 09:38:19 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.471 2025/07/18 18:45:22 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27181,3 +27181,4 @@ vim<9.1.1552	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53905
 vim<9.1.1551	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53906
 xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
 xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
+7-zip<25.00	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-53816
