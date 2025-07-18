@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4363 2025/07/18 16:58:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4364 2025/07/18 17:00:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6427,3 +6427,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/cln to 1.3.7 [schmonz 2025-07-18]
 	Updated devel/mise to 2025.7.12 [pin 2025-07-18]
 	Updated shells/oh-my-posh to 26.17.0 [pin 2025-07-18]
+	Updated textproc/scooter to 0.5.4 [pin 2025-07-18]
