@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4356 2025/07/17 22:07:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4357 2025/07/18 07:36:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6414,3 +6414,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/fluidsynth to 2.4.7 [adam 2025-07-17]
 	Updated devel/nss to 3.114 [wiz 2025-07-17]
 	Updated devel/nspr to 4.37 [wiz 2025-07-17]
+	Updated sysutils/ansible-core to 2.18.7 [adam 2025-07-18]
+	Updated sysutils/ansible to 11.8.0 [adam 2025-07-18]
