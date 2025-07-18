@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.30 2022/04/02 10:06:32 wen Exp $
+# $NetBSD: Makefile,v 1.31 2025/07/18 16:19:44 schmonz Exp $
 
-DISTNAME=	cln-1.3.6
+DISTNAME=	cln-1.3.7
 CATEGORIES=	math
-MASTER_SITES=	http://www.ginac.de/CLN/
+MASTER_SITES=	${HOMEPAGE}
 MASTER_SITES+=	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://www.ginac.de/CLN/
-COMMENT=	CLN Class Library for Numbers
+COMMENT=	Class Library for Numbers
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake pkg-config
