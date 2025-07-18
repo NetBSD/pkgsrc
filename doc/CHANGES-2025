@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4366 2025/07/18 17:02:01 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4367 2025/07/18 18:46:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6430,3 +6430,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/scooter to 0.5.4 [pin 2025-07-18]
 	Updated net/sniffnet to 1.4.0 [pin 2025-07-18]
 	Updated net/yaydl to 0.17.3 [pin 2025-07-18]
+	Updated archivers/7-zip to 25.00 [wiz 2025-07-18]
