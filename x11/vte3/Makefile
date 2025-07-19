@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2025/07/19 05:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/07/19 13:01:10 gutteridge Exp $
 
-DISTNAME=	vte-0.76.4
+DISTNAME=	vte-0.80.3
 PKGNAME=	${DISTNAME:S/vte/vte3/}
-PKGREVISION=	9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
 GITHUB_PROJECT=	vte
@@ -51,6 +50,7 @@ REPLACE_PYTHON=		src/*.py
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+.include "../../math/fast_float/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
