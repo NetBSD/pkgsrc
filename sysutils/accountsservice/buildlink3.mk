@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2020/12/04 04:56:13 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/07/19 05:37:45 wiz Exp $
 
 BUILDLINK_TREE+=	accountsservice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	accountsservice
 ACCOUNTSSERVICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.accountsservice+=	accountsservice>=0.6.40
-BUILDLINK_ABI_DEPENDS.accountsservice?=	accountsservice>=0.6.42nb2
+BUILDLINK_ABI_DEPENDS.accountsservice?=	accountsservice>=0.6.42nb5
 BUILDLINK_PKGSRCDIR.accountsservice?=	../../sysutils/accountsservice
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

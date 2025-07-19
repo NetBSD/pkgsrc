@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2025/04/24 14:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2025/07/19 05:37:44 wiz Exp $
 
 DISTNAME=	Remmina-v1.4.39
 PKGNAME=	${DISTNAME:tl:S/-v/-/1}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITLAB:=Remmina/}
 GITLAB_PROJECT=	Remmina

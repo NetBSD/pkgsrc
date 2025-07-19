@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2025/05/31 20:18:18 tsutsui Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/19 05:37:51 wiz Exp $
 #
 
 DISTNAME=		gtk3-${VERSION}
 COMMENT=		Ruby binding of GTK+-3.x
+PKGREVISION=		1
 CATEGORIES=		x11
 
 MAINTAINER=		tsutsui@NetBSD.org
