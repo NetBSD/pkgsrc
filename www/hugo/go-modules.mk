@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.24 2025/07/10 06:40:58 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.25 2025/07/19 08:59:42 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.23.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.23.0.zip
@@ -381,8 +381,8 @@ GO_MODULE_FILES+=	github.com/muesli/smartcrop/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/neurosnap/sentences/@v/v1.0.6.mod
 GO_MODULE_FILES+=	github.com/nfnt/resize/@v/v0.0.0-20180221191011-83c6a9932646.mod
 GO_MODULE_FILES+=	github.com/nfnt/resize/@v/v0.0.0-20180221191011-83c6a9932646.zip
-GO_MODULE_FILES+=	github.com/niklasfasching/go-org/@v/v1.9.0.mod
-GO_MODULE_FILES+=	github.com/niklasfasching/go-org/@v/v1.9.0.zip
+GO_MODULE_FILES+=	github.com/niklasfasching/go-org/@v/v1.8.0.mod
+GO_MODULE_FILES+=	github.com/niklasfasching/go-org/@v/v1.8.0.zip
 GO_MODULE_FILES+=	github.com/oasdiff/yaml/@v/v0.0.0-20250309154309-f31be36b4037.mod
 GO_MODULE_FILES+=	github.com/oasdiff/yaml/@v/v0.0.0-20250309154309-f31be36b4037.zip
 GO_MODULE_FILES+=	github.com/oasdiff/yaml3/@v/v0.0.0-20250309153720-d2182401db90.mod

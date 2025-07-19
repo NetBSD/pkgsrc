@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2025/07/10 06:40:58 triaxx Exp $
+$NetBSD: distinfo,v 1.38 2025/07/19 08:59:42 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.23.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.23.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -1143,12 +1143,12 @@ Size (github.com_nfnt_resize_@v_v0.0.0-20180221191011-83c6a9932646.mod) = 30 byt
 BLAKE2s (github.com_nfnt_resize_@v_v0.0.0-20180221191011-83c6a9932646.zip) = bf17f2c3fd5b7916a8411a83b6a6c5953df584df04d375ebfbd59fe7dabba6d3
 SHA512 (github.com_nfnt_resize_@v_v0.0.0-20180221191011-83c6a9932646.zip) = 7a4b7824bc8b2431d731acca009b1cb2de5e9432a9a2c43f5dfd3b65cd83696b8f299c6f98a97b16fbde101e8a3bedf1d21f0ba2633c377c77d44df44b4e1d62
 Size (github.com_nfnt_resize_@v_v0.0.0-20180221191011-83c6a9932646.zip) = 21438 bytes
-BLAKE2s (github.com_niklasfasching_go-org_@v_v1.9.0.mod) = f96a986e5094c2b0948793279224fccb1476d400188e86e208c643d14fd246a5
-SHA512 (github.com_niklasfasching_go-org_@v_v1.9.0.mod) = 883772337da41328bfab8d89fd1db6bc224821d52aed54b0302dc8a09dcff7837fd19487fefc182f115e22a0eabfe18245db5d0993c190deaa34afcbe2163141
-Size (github.com_niklasfasching_go-org_@v_v1.9.0.mod) = 243 bytes
-BLAKE2s (github.com_niklasfasching_go-org_@v_v1.9.0.zip) = af0fc24012fde3bcd7055fc8885e5958c21f0e0596325e5ddb0224f718386503
-SHA512 (github.com_niklasfasching_go-org_@v_v1.9.0.zip) = cf9ba954f8572006d7d59e44ea615d41f9b7db86f3661819e27d804a8d3f657e5f820909f0b81ca134996131d0df1e00dbf3daba2681eb0d573399ed6c9a62e9
-Size (github.com_niklasfasching_go-org_@v_v1.9.0.zip) = 289694 bytes
+BLAKE2s (github.com_niklasfasching_go-org_@v_v1.8.0.mod) = 2361fc5fea41c1fd5f396724c74cf65c1a5ec3d7fd3800145d5f7bbb5757acfd
+SHA512 (github.com_niklasfasching_go-org_@v_v1.8.0.mod) = ccf7cf40e44fd79dc10960040b84d9c45bd45ba55a18276dd9d38215144335277e0396761da7234a75dd4bb3955e1c6c70f8cd27907df3586f19ad542f21e2a7
+Size (github.com_niklasfasching_go-org_@v_v1.8.0.mod) = 221 bytes
+BLAKE2s (github.com_niklasfasching_go-org_@v_v1.8.0.zip) = 67c9f80999ab5d11762d066beb09706e7fdf83bffc4a7338a1045574b414d0ba
+SHA512 (github.com_niklasfasching_go-org_@v_v1.8.0.zip) = 08ee8c6f7557134db2e5a106e618b3e45583e7e582d3720cebf7850f64c3886f6c4a67723b11381530c923bfde006d4764ea354651f42de7512f855da1d64d5d
+Size (github.com_niklasfasching_go-org_@v_v1.8.0.zip) = 288807 bytes
 BLAKE2s (github.com_oasdiff_yaml3_@v_v0.0.0-20250309153720-d2182401db90.mod) = 1443a2a32ad52f4a1001f7a30eb2c5910eba4ffb97bd904c2ab22984719c5bd6
 SHA512 (github.com_oasdiff_yaml3_@v_v0.0.0-20250309153720-d2182401db90.mod) = 66b627c17c20f4c1b87a02a1da3bd2c61b32f5bc017e362fb303f0614bd9de817a104f8de0d8ebaf0a13f8db3ba6e0b636bcf27eb89384a3ddce7a1d37af8eb5
 Size (github.com_oasdiff_yaml3_@v_v0.0.0-20250309153720-d2182401db90.mod) = 105 bytes
@@ -2631,9 +2631,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.148.0.tar.gz) = aa5719ac91029e76c54e83bc374556840e8aa8720fe1d283cf5c9e0407b02c8d
-SHA512 (hugo-0.148.0.tar.gz) = a8df95e425d9883985992d97780aacc9793e10f4f1131411cf5b2bb9b80b58539de79ec72100d5627102657e7c3a7bd61f4a34d1ce3dc472cf1bfabb409e520a
-Size (hugo-0.148.0.tar.gz) = 14611933 bytes
+BLAKE2s (hugo-0.148.1.tar.gz) = acbe3b3d6eb76143163d21a0b58fb1ab1bff35ec903b949b08970cc3eff44b6f
+SHA512 (hugo-0.148.1.tar.gz) = a3f6e6f13c0c2262e506fb5079a379de8b34c4ca2a4a1c352e318ba706db7affe59f746839d782c21afcb12c045e290a5f9259b6d581d077dfd4cc579ae7ab04
+Size (hugo-0.148.1.tar.gz) = 14612804 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
