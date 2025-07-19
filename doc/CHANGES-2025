@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4380 2025/07/19 20:48:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4381 2025/07/19 20:49:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-texmath to 0.12.10.3 [wiz 2025-07-19]
 	Updated textproc/hs-typst-symbols to 0.1.8.1 [wiz 2025-07-19]
 	Updated textproc/hs-typst to 0.8.0.1 [wiz 2025-07-19]
+	Updated converters/hs-pandoc to 3.7.0.2 [wiz 2025-07-19]
