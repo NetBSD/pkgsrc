@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/01/30 23:32:29 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/07/19 20:50:18 wiz Exp $
 
-BLAKE2s (pandoc-server-0.1.0.10.tar.gz) = de8f70f588d2b9a2de51b07680656bd78eb90129c13fc4dcf75223a35bcde7f6
-SHA512 (pandoc-server-0.1.0.10.tar.gz) = 5968920ecef33ae8b2582ca7d911f4bb0fd85c1e161a6ddfc854abe2e053bb693079d2039ddbad910efd5d18dc5ccb79288f0f235936255e31fefdf5a05b5939
-Size (pandoc-server-0.1.0.10.tar.gz) = 12878 bytes
+BLAKE2s (pandoc-server-0.1.0.11.tar.gz) = 1fd80233514da86eabeb0a9a019e7469fa921aab3f6fe0afdda015bb9558bece
+SHA512 (pandoc-server-0.1.0.11.tar.gz) = eb8874eeb2b5ef44ebdfb118dda1c020755a264fd2a6c1b6082e66b5382adb75c468c2d6999432c0ad82af19ac458f476940a816958cbc7b356aab2690f20295
+Size (pandoc-server-0.1.0.11.tar.gz) = 12877 bytes
