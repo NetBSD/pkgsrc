@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4369 2025/07/19 06:52:59 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4370 2025/07/19 06:54:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6433,3 +6433,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/7-zip to 25.00 [wiz 2025-07-18]
 	Updated ham/hamlib to 4.6.4 [gdt 2025-07-18]
 	Updated sysutils/eza to 0.23.0 [pin 2025-07-19]
+	Updated devel/hexpatch to 1.12.3 [pin 2025-07-19]
