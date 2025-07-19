@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2025/03/08 05:13:50 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/07/19 20:49:50 wiz Exp $
 
-DISTNAME=	pandoc-lua-engine-0.4.1
-PKGREVISION=	3
+DISTNAME=	pandoc-lua-engine-0.4.3
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Lua engine to power custom pandoc conversions
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	hslua-module-zip	\
-	pandoc-lua-marshal
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../security/hs-crypton/buildlink3.mk"
