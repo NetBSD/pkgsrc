@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/02/23 22:03:42 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/07/19 20:48:19 wiz Exp $
 
-BLAKE2s (hs-typst/typst-0.6.2.tar.gz) = f2b0bb338dfa23775e757fcea2bc12b099327bde85975c20dbd06a8d4057fb3a
-SHA512 (hs-typst/typst-0.6.2.tar.gz) = 1bc8b2cb0bda4015703cda06e7e8d8bcf0bc866718e6654c66f674c4f29f24afe3e7c77aa9f7500c68310de149abf7a5e171cd89436262ad60306cc3b21e9d4f
-Size (hs-typst/typst-0.6.2.tar.gz) = 6437021 bytes
+BLAKE2s (hs-typst/typst-0.8.0.1.tar.gz) = 090ebeb3b3a5858b5c408e7146b08cbde6e187cf6fcc3131ed8955f6318552b6
+SHA512 (hs-typst/typst-0.8.0.1.tar.gz) = 0f2ebadcec766a60e20c5030435ab621f05034fe7f76e6b6477d857b830dd8a85f846a9f368db869b62d05e0ee8e01f8cffce79526ba6c7b2f68c72875a0f000
+Size (hs-typst/typst-0.8.0.1.tar.gz) = 6430160 bytes
