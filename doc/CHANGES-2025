@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4375 2025/07/19 20:10:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4376 2025/07/19 20:10:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6439,3 +6439,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.148.1 [triaxx 2025-07-19]
 	Updated x11/vte3 to 0.80.3 [gutteridge 2025-07-19]
 	Updated security/mozilla-rootcerts to 1.1.20250711 [wiz 2025-07-19]
+	Updated security/mozilla-rootcerts-openssl to 2.19 [wiz 2025-07-19]
