@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/01/15 08:41:38 adam Exp $
+# $NetBSD: Makefile,v 1.56 2025/07/19 05:37:45 wiz Exp $
 
 DISTNAME=	polkit-126
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=polkit-org/}
 

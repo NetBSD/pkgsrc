@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2025/04/24 14:13:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2025/07/19 05:37:35 wiz Exp $
 
 BUILDLINK_TREE+=	libpeas
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libpeas
 LIBPEAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.4.0
-BUILDLINK_ABI_DEPENDS.libpeas+=	libpeas>=1.26.0nb17
+BUILDLINK_ABI_DEPENDS.libpeas+=	libpeas>=1.26.0nb18
 BUILDLINK_PKGSRCDIR.libpeas?=	../../devel/libpeas
 
 .include "../../devel/glib2/buildlink3.mk"
