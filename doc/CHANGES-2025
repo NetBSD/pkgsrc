@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4372 2025/07/19 06:56:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4373 2025/07/19 08:59:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6436,3 +6436,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hexpatch to 1.12.3 [pin 2025-07-19]
 	Updated devel/mise to 2025.7.15 [pin 2025-07-19]
 	Updated audio/termusic to 0.11.0 [pin 2025-07-19]
+	Updated www/hugo to 0.148.1 [triaxx 2025-07-19]
