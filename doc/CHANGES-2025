@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4374 2025/07/19 13:01:42 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4375 2025/07/19 20:10:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6438,3 +6438,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/termusic to 0.11.0 [pin 2025-07-19]
 	Updated www/hugo to 0.148.1 [triaxx 2025-07-19]
 	Updated x11/vte3 to 0.80.3 [gutteridge 2025-07-19]
+	Updated security/mozilla-rootcerts to 1.1.20250711 [wiz 2025-07-19]
