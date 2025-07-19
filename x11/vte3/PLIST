@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/10/04 00:25:05 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/07/19 13:01:10 gutteridge Exp $
 bin/vte-2.91
 include/vte-2.91/vte/vte.h
 include/vte-2.91/vte/vtedeprecated.h
@@ -10,13 +10,15 @@ include/vte-2.91/vte/vteregex.h
 include/vte-2.91/vte/vteterminal.h
 include/vte-2.91/vte/vtetypebuiltins-gtk3.h
 include/vte-2.91/vte/vtetypebuiltins.h
+include/vte-2.91/vte/vteuuid.h
 include/vte-2.91/vte/vteversion.h
 lib/girepository-1.0/Vte-2.91.typelib
 lib/libvte-2.91.so
 lib/libvte-2.91.so.0
-lib/libvte-2.91.so.0.7600.4
+lib/libvte-2.91.so.0.8000.3
 lib/pkgconfig/vte-2.91.pc
 libexec/vte-urlencode-cwd
+share/applications/org.gnome.Vte.App.Gtk3.desktop
 share/examples/profile.d/vte.csh
 share/examples/profile.d/vte.sh
 share/gir-1.0/Vte-2.91.gir
@@ -70,6 +72,7 @@ share/locale/is/LC_MESSAGES/vte-2.91.mo
 share/locale/it/LC_MESSAGES/vte-2.91.mo
 share/locale/ja/LC_MESSAGES/vte-2.91.mo
 share/locale/ka/LC_MESSAGES/vte-2.91.mo
+share/locale/kab/LC_MESSAGES/vte-2.91.mo
 share/locale/kk/LC_MESSAGES/vte-2.91.mo
 share/locale/kn/LC_MESSAGES/vte-2.91.mo
 share/locale/ko/LC_MESSAGES/vte-2.91.mo
@@ -114,6 +117,7 @@ share/locale/th/LC_MESSAGES/vte-2.91.mo
 share/locale/tr/LC_MESSAGES/vte-2.91.mo
 share/locale/ug/LC_MESSAGES/vte-2.91.mo
 share/locale/uk/LC_MESSAGES/vte-2.91.mo
+share/locale/uz/LC_MESSAGES/vte-2.91.mo
 share/locale/uz@cyrillic/LC_MESSAGES/vte-2.91.mo
 share/locale/vi/LC_MESSAGES/vte-2.91.mo
 share/locale/wa/LC_MESSAGES/vte-2.91.mo
@@ -121,3 +125,4 @@ share/locale/xh/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_CN/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_HK/LC_MESSAGES/vte-2.91.mo
 share/locale/zh_TW/LC_MESSAGES/vte-2.91.mo
+share/xdg-terminals/org.gnome.Vte.App.Gtk3.desktop

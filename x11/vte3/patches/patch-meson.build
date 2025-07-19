@@ -1,6 +1,6 @@
-$NetBSD: patch-meson.build,v 1.4 2023/06/24 00:47:48 gutteridge Exp $
+$NetBSD: patch-meson.build,v 1.5 2025/07/19 13:01:10 gutteridge Exp $
 
-Remove silly asserts that do nothing except break portability.
+Remove asserts that break portability.
 
 Fix Solaris derivate builds, where defining _XOPEN_SOURCE_EXTENDED can be
 harmful, avoid _XOPEN_SOURCE clashes, etc.
@@ -16,20 +16,6 @@ harmful, avoid _XOPEN_SOURCE clashes, etc.
    # Defining _POSIX_C_SOURCE above makes freebsd not expose some functionality
    # that's hidden behind __BSD_VISIBLE.  Not defininy any of the above however
    # makes it expose verything.
-@@ -273,13 +273,6 @@ endforeach
- 
- # Check for symbols
- 
--check_symbols_required = [
--  ['TIOCGWINSZ', 'sys/ioctl.h'],
--]
--
--foreach symbol: check_symbols_required
--  assert(cxx.has_header_symbol(symbol[1], symbol[0]), symbol[0] + ' not found')
--endforeach
- 
- # Check for functions
- 
 @@ -603,14 +596,10 @@ linker_flags = [
  foreach flag: linker_flags
    if cc.has_link_argument(flag[0])
