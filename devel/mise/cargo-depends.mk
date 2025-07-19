@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.73 2025/07/18 16:57:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.74 2025/07/19 06:54:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -82,6 +82,7 @@ CARGO_CRATE_DEPENDS+=	comfy-table-7.1.4
 CARGO_CRATE_DEPENDS+=	confique-0.3.0
 CARGO_CRATE_DEPENDS+=	confique-macro-0.0.11
 CARGO_CRATE_DEPENDS+=	console-0.15.11
+CARGO_CRATE_DEPENDS+=	console-0.16.0
 CARGO_CRATE_DEPENDS+=	const-oid-0.9.6
 CARGO_CRATE_DEPENDS+=	constant_time_eq-0.3.1
 CARGO_CRATE_DEPENDS+=	contracts-0.6.6
@@ -289,6 +290,7 @@ CARGO_CRATE_DEPENDS+=	indenter-0.3.3
 CARGO_CRATE_DEPENDS+=	indexmap-1.9.3
 CARGO_CRATE_DEPENDS+=	indexmap-2.10.0
 CARGO_CRATE_DEPENDS+=	indicatif-0.17.11
+CARGO_CRATE_DEPENDS+=	indicatif-0.18.0
 CARGO_CRATE_DEPENDS+=	indoc-2.0.6
 CARGO_CRATE_DEPENDS+=	inout-0.1.4
 CARGO_CRATE_DEPENDS+=	insta-1.43.1
@@ -382,7 +384,7 @@ CARGO_CRATE_DEPENDS+=	os-release-0.1.0
 CARGO_CRATE_DEPENDS+=	os_pipe-1.2.2
 CARGO_CRATE_DEPENDS+=	overload-0.1.1
 CARGO_CRATE_DEPENDS+=	owo-colors-4.2.2
-CARGO_CRATE_DEPENDS+=	papergrid-0.15.0
+CARGO_CRATE_DEPENDS+=	papergrid-0.17.0
 CARGO_CRATE_DEPENDS+=	parking_lot-0.12.4
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.11
 CARGO_CRATE_DEPENDS+=	parse-zoneinfo-0.3.1
@@ -529,7 +531,7 @@ CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	sys-info-0.9.1
 CARGO_CRATE_DEPENDS+=	system-configuration-0.6.1
 CARGO_CRATE_DEPENDS+=	system-configuration-sys-0.6.0
-CARGO_CRATE_DEPENDS+=	tabled-0.19.0
+CARGO_CRATE_DEPENDS+=	tabled-0.20.0
 CARGO_CRATE_DEPENDS+=	tabled_derive-0.11.0
 CARGO_CRATE_DEPENDS+=	taplo-0.14.0
 CARGO_CRATE_DEPENDS+=	tar-0.4.44
@@ -594,6 +596,7 @@ CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.12.0
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.14
 CARGO_CRATE_DEPENDS+=	unicode-width-0.2.1
 CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.6
+CARGO_CRATE_DEPENDS+=	unit-prefix-0.5.1
 CARGO_CRATE_DEPENDS+=	universal-hash-0.5.1
 CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
