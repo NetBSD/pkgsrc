@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2025/05/08 16:01:47 vins Exp $
+# $NetBSD: Makefile,v 1.29 2025/07/19 05:37:47 wiz Exp $
 
 DISTNAME=	upower-v1.90.9
 PKGNAME=	${DISTNAME:S/v//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://gitlab.freedesktop.org/upower/upower/-/archive/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
