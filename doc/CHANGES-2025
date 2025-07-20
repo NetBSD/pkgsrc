@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4392 2025/07/20 10:27:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4393 2025/07/20 10:28:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6456,3 +6456,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-feedgenerator to 2.2.0 [wiz 2025-07-20]
 	Updated fonts/py-fonttools to 4.59.0 [wiz 2025-07-20]
 	Updated www/py-nh3 to 0.3.0 [wiz 2025-07-20]
+	Updated math/py-roman to 5.1 [wiz 2025-07-20]
