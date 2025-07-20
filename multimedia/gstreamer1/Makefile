@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/07/19 05:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/07/20 09:34:13 wiz Exp $
 
 PKGREVISION= 1
 .include "version.mk"
@@ -52,4 +52,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
