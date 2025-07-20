@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/02/07 13:19:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/20 09:34:54 wiz Exp $
 
 DISTNAME=	capnproto-c++-1.1.0
 PKGNAME=	${DISTNAME:S/-c++-/-/}
@@ -43,4 +43,5 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/kj.pc.in
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
