@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4391 2025/07/20 10:25:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4392 2025/07/20 10:27:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6455,3 +6455,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libhighway to 1.2.0nb1 [wiz 2025-07-20]
 	Updated www/py-feedgenerator to 2.2.0 [wiz 2025-07-20]
 	Updated fonts/py-fonttools to 4.59.0 [wiz 2025-07-20]
+	Updated www/py-nh3 to 0.3.0 [wiz 2025-07-20]
