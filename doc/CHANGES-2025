@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4388 2025/07/20 10:15:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4389 2025/07/20 10:18:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6452,3 +6452,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/sayaka to 3.8.3 [tsutsui 2025-07-19]
 	Updated devel/happy-lib to 2.1.6 [wiz 2025-07-20]
 	Updated devel/happy to 2.1.6 [wiz 2025-07-20]
+	Updated graphics/libhighway to 1.2.0nb1 [wiz 2025-07-20]
