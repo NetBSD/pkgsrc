@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/04/19 20:03:52 js Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/20 10:17:55 wiz Exp $
 
 DISTNAME=	highway-1.2.0
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	highway
@@ -31,7 +32,5 @@ TEST_TARGET=	test
 
 .include "../../devel/cmake/build.mk"
 .include "options.mk"
-.if ${OPSYS} != "Darwin"
-.include "../../devel/libatomic/buildlink3.mk"
-.endif
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
