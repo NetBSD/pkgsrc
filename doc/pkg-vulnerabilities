@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.471 2025/07/18 18:45:22 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.472 2025/07/20 07:43:58 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27182,3 +27182,17 @@ vim<9.1.1551	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-53906
 xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
 xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27465
 7-zip<25.00	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-53816
+7-zip<25.00	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53817
+gpac-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-7797
+grafana<12.0.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-3415
+grafana<12.0.3	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-6023
+grafana<12.0.3	open-redirect				https://nvd.nist.gov/vuln/detail/CVE-2025-6197
+nodejs24<24.4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27209
+opencv<4.12.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-53644
+p5-Catalyst-Plugin-Session<0.44	lack-of-entropy	https://nvd.nist.gov/vuln/detail/CVE-2025-40924
+qbittorrent<5.1.2	local-file-inclusion	https://nvd.nist.gov/vuln/detail/CVE-2025-54310
+wolfssl<5.8.2	weak-cryptography		https://nvd.nist.gov/vuln/detail/CVE-2025-7394
+wolfssl<5.8.2	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-7395
+wolfssl<5.8.2	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-7396
+xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
+xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
