@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.472 2025/07/20 07:43:58 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.473 2025/07/20 09:04:44 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27196,3 +27196,4 @@ wolfssl<5.8.2	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/C
 wolfssl<5.8.2	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-7396
 xenkernel415-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
 xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1713
+ruby{31,32,33,34}-thor<1.4.0	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-54314
