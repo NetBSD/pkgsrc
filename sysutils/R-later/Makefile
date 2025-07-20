@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/12/07 05:59:14 mef Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/20 09:40:39 wiz Exp $
 
 R_PKGNAME=	later
 R_PKGVER=	1.4.1
@@ -17,6 +17,12 @@ TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 USE_LANGUAGES=	c c++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+.include "../../devel/libatomic/buildlink3.mk"
+.endif
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-Rcpp/buildlink3.mk"
