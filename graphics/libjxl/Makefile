@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/05/07 17:53:41 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2025/07/20 09:36:32 wiz Exp $
 
 .include "Makefile.common"
 
@@ -40,4 +40,5 @@ PKGCONFIG_OVERRIDE+=	lib/threads/libjxl_threads.pc.in
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libhighway/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
