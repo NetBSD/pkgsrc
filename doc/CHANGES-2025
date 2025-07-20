@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4389 2025/07/20 10:18:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4390 2025/07/20 10:20:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6453,3 +6453,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/happy-lib to 2.1.6 [wiz 2025-07-20]
 	Updated devel/happy to 2.1.6 [wiz 2025-07-20]
 	Updated graphics/libhighway to 1.2.0nb1 [wiz 2025-07-20]
+	Updated www/py-feedgenerator to 2.2.0 [wiz 2025-07-20]
