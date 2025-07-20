@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/22 21:17:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/07/20 10:20:39 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/feedgenerator/__init__.py
 ${PYSITELIB}/feedgenerator/__init__.pyc
 ${PYSITELIB}/feedgenerator/__init__.pyo
@@ -25,9 +24,6 @@ ${PYSITELIB}/feedgenerator/django/utils/feedgenerator.pyo
 ${PYSITELIB}/feedgenerator/django/utils/functional.py
 ${PYSITELIB}/feedgenerator/django/utils/functional.pyc
 ${PYSITELIB}/feedgenerator/django/utils/functional.pyo
-${PYSITELIB}/feedgenerator/django/utils/timezone.py
-${PYSITELIB}/feedgenerator/django/utils/timezone.pyc
-${PYSITELIB}/feedgenerator/django/utils/timezone.pyo
 ${PYSITELIB}/feedgenerator/django/utils/xmlutils.py
 ${PYSITELIB}/feedgenerator/django/utils/xmlutils.pyc
 ${PYSITELIB}/feedgenerator/django/utils/xmlutils.pyo
