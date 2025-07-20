@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.7 2025/07/17 23:59:55 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.8 2025/07/20 14:42:29 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -54,3 +54,6 @@ chat/matrix-synapse: Update package in anticipation of security fix
 
 Pullup ticket #6992 - requested by he
 lang/rust: Runtime fix to reduce memory usage on NetBSD/i386
+
+Pullup ticket #6993 - requested by morr
+editors/vim-share: Security fix
