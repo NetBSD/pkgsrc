@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2025/02/04 02:02:32 gdt Exp $
+$NetBSD: distinfo,v 1.21 2025/07/21 08:47:11 adam Exp $
 
-BLAKE2s (EasyRSA-3.2.2.tgz) = 9934115a08d26dee7df26d00d90422d64319d3a06ce068351da803fda84ba7ae
-SHA512 (EasyRSA-3.2.2.tgz) = 329114b48a1f2e4135aceca01da47d01e1871d489fc2189a1771295b1fce0716d5676842339dbb6ccc8255ae42b773225ffb79f1acef9ebc107b881c96ba94a7
-Size (EasyRSA-3.2.2.tgz) = 86324 bytes
+BLAKE2s (EasyRSA-3.2.3.tgz) = 08d4c9589cbf2905eee01b86147a194a3b2a8f16977898efc6c813ac86aba0a5
+SHA512 (EasyRSA-3.2.3.tgz) = 708f6e54c15803fdaadd235e1ad4c06502bbd0591649872f34acf97f162c2d0f105b30103c625bdb8acf8efae1babff0f1cac84d148f61c5afea12c46f3c3da7
+Size (EasyRSA-3.2.3.tgz) = 88015 bytes
 SHA1 (patch-easyrsa) = cc44e86031c875f102e140cea9582e4d88789b20
 SHA1 (patch-vars.example) = 6148e15e404da398b9e04064f3195b60361339e9
