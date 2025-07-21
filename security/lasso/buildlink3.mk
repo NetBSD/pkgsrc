@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2025/04/17 21:52:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2025/07/21 08:57:20 wiz Exp $
 
 BUILDLINK_TREE+=	lasso
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.lasso?=	../../security/lasso
 .include "../../security/xmlsec1/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .endif # LASSO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-lasso
