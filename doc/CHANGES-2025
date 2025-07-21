@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4407 2025/07/21 16:39:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4408 2025/07/21 17:16:19 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6473,3 +6473,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mu to 1.12.12 [ktnb 2025-07-21]
 	Updated fonts/harfbuzz to 11.3.0 [wiz 2025-07-21]
 	Updated fonts/harfbuzz-icu to 11.3.0 [wiz 2025-07-21]
+	Updated shells/bash to 5.3nb1 [kim 2025-07-21]
