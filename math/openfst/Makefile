@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/07/18 18:30:01 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/21 22:01:50 he Exp $
 
 DISTNAME=	openfst-1.8.2
 CATEGORIES=	math
@@ -17,4 +17,5 @@ USE_CXX_FEATURES+=	c++17 charconv
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
