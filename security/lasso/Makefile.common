@@ -1,41 +1,34 @@
-# $NetBSD: Makefile.common,v 1.18 2022/06/07 07:39:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2025/07/21 08:57:20 wiz Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
 
-DISTNAME=	lasso-2.7.0
+DISTNAME=	lasso-2.8.2
 CATEGORIES=	security
 MASTER_SITES=	https://dev.entrouvert.org/lasso/
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	https://lasso.entrouvert.org/
-COMMENT=	Liberty Alliance Single Sign On implementation
+COMMENT?=	Liberty Alliance Single Sign On implementation
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../security/lasso/distinfo
 PATCHDIR=		${.CURDIR}/../../security/lasso/patches
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-sasl2=${PREFIX}
 CONFIGURE_ARGS+=	--with-zlib=${PREFIX}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config perl
 
-CFLAGS.NetBSD+=	-D_POSIX_C_SOURCE=199506
-
 PKGCONFIG_OVERRIDE+=	lasso.pc.in
 
-DEPENDS+=			${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-.include "../../lang/python/application.mk"
-
+.include "../../lang/python/tool.mk"
 .include "../../security/xmlsec1/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/cyrus-sasl/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.35
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-
-.include "../../mk/bsd.pkg.mk"
