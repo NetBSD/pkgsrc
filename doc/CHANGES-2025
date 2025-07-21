@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4404 2025/07/21 09:48:22 abs Exp $
+$NetBSD: CHANGES-2025,v 1.4405 2025/07/21 11:53:23 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6470,3 +6470,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/cppzmq to 4.11.0 [adam 2025-07-21]
 	Updated security/lasso to 2.8.2 [wiz 2025-07-21]
 	Updated security/py-lasso to 2.8.2 [wiz 2025-07-21]
+	Updated mail/mu to 1.12.12 [ktnb 2025-07-21]
