@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4401 2025/07/21 08:50:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4402 2025/07/21 08:57:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6467,3 +6467,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-apsw to 3.50.3.0 [adam 2025-07-21]
 	Updated security/easy-rsa to 3.2.3 [adam 2025-07-21]
 	Updated net/cppzmq to 4.11.0 [adam 2025-07-21]
+	Updated security/lasso to 2.8.2 [wiz 2025-07-21]
