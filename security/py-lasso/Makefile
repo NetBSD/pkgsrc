@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.57 2025/04/17 21:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/07/21 08:57:49 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	25
 COMMENT=	Liberty Alliance Single Sign On binding for Python
 
-CONFIGURE_ARGS+=	--disable-php4
+CONFIGURE_ARGS+=	--disable-php5
+CONFIGURE_ARGS+=	--disable-php7
 CONFIGURE_ARGS+=	--disable-perl
 
 INSTALL_DIRS=	bindings/python
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.4.1
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} > 311
+# needs distutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
-
 .include "../../security/lasso/buildlink3.mk"
-
 .include "../../security/lasso/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
