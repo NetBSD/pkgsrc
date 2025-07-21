@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2025/06/30 20:07:42 adam Exp $
+# $NetBSD: Makefile,v 1.108 2025/07/21 19:13:13 he Exp $
 
 DISTNAME=	rtorrent-0.15.5
 CATEGORIES=	net
@@ -48,4 +48,5 @@ post-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libtorrent/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
