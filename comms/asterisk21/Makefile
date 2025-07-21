@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2025/06/02 04:37:03 jnemeth Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/21 06:30:02 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-21.9.1
+DISTNAME=	asterisk-21.10.0
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -232,7 +232,7 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	rtp.conf say.conf sla.conf smdi.conf sorcery.conf ss7.timers	\
 	stasis.conf statsd.conf stir_shaken.conf telcordia-1.adsi	\
 	test_sorcery.conf udptl.conf unistim.conf users.conf		\
-	voicemail.conf xmpp.conf
+	websocket_client.conf voicemail.conf xmpp.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
 .  endfor
 .endif
@@ -270,9 +270,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
