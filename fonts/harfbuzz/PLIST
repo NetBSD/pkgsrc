@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.85 2025/05/04 14:53:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.86 2025/07/21 16:38:41 wiz Exp $
 ${PLIST.introspection}bin/hb-info
 ${PLIST.introspection}bin/hb-shape
 ${PLIST.introspection}bin/hb-subset
@@ -108,6 +108,7 @@ ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-10-4-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-2-0.html
+${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-11-3-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-0-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-1-0.html
 ${PLIST.doc}share/gtk-doc/html/harfbuzz/api-index-2-2-0.html
