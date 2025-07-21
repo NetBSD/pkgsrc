@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/02 04:37:03 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/07/21 06:30:02 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -321,6 +321,7 @@ ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
 ${PLIST.timerfd}lib/asterisk/modules/res_timing_timerfd.so
 lib/asterisk/modules/res_tonedetect.so
+lib/asterisk/modules/res_websocket_client.so
 ${PLIST.jabber}lib/asterisk/modules/res_xmpp.so
 lib/libasteriskssl.so
 lib/libasteriskssl.so.1
@@ -2319,6 +2320,8 @@ share/doc/asterisk/ChangeLog-21.0.0.md
 share/doc/asterisk/ChangeLog-21.0.1.md
 share/doc/asterisk/ChangeLog-21.0.2.md
 share/doc/asterisk/ChangeLog-21.1.0.md
+share/doc/asterisk/ChangeLog-21.10.0.html
+share/doc/asterisk/ChangeLog-21.10.0.md
 share/doc/asterisk/ChangeLog-21.2.0.md
 share/doc/asterisk/ChangeLog-21.3.0.md
 share/doc/asterisk/ChangeLog-21.3.1.md
@@ -2447,6 +2450,7 @@ share/examples/asterisk/udptl.conf
 share/examples/asterisk/unistim.conf
 share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
+share/examples/asterisk/websocket_client.conf
 share/examples/asterisk/xmpp.conf
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
