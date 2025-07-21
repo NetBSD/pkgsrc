@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4400 2025/07/21 06:51:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4401 2025/07/21 08:50:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6465,3 +6465,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk21 to 21.10.0 [jnemeth 2025-07-21]
 	Updated textproc/py-tree-sitter to 0.25.0 [adam 2025-07-21]
 	Updated databases/py-apsw to 3.50.3.0 [adam 2025-07-21]
+	Updated security/easy-rsa to 3.2.3 [adam 2025-07-21]
+	Updated net/cppzmq to 4.11.0 [adam 2025-07-21]
