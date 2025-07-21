@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4406 2025/07/21 16:38:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4407 2025/07/21 16:39:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6472,3 +6472,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-lasso to 2.8.2 [wiz 2025-07-21]
 	Updated mail/mu to 1.12.12 [ktnb 2025-07-21]
 	Updated fonts/harfbuzz to 11.3.0 [wiz 2025-07-21]
+	Updated fonts/harfbuzz-icu to 11.3.0 [wiz 2025-07-21]
