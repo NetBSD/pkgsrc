@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/04/17 21:52:16 wiz Exp $
-
-PKGREVISION=	16
+# $NetBSD: Makefile,v 1.66 2025/07/21 08:57:20 wiz Exp $
 
 CONFIGURE_ENV+=		INKSCAPE=/bin/false
 CONFIGURE_ARGS+=	--disable-python
@@ -9,11 +7,9 @@ CONFIGURE_ARGS+=	--disable-php7
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--enable-gtk-doc
 
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported as of 2.4.1
-PYTHON_FOR_BUILD_ONLY=		yes
-
 EXTRACT_USING=		bsdtar
 
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.32nb9
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../security/lasso/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:17:11 nia Exp $
+$NetBSD: distinfo,v 1.29 2025/07/21 08:57:21 wiz Exp $
 
-BLAKE2s (lasso-2.7.0.tar.gz) = 625c78c08c4db21cc8b186b313ddf98ee3d67a675dfbf488a8b05c58d02079f4
-SHA512 (lasso-2.7.0.tar.gz) = 98615d6166cdec52abef4f5346119040f310dbee624c2cd168d2f95b5fe3e0e1437ec6bfc2cd8b680044438afa15770402f5aef87d1885f7bc61528617c17a74
-Size (lasso-2.7.0.tar.gz) = 6332202 bytes
+BLAKE2s (lasso-2.8.2.tar.gz) = b84e36a041987abdd6a96d17a11155baf0fff6da5090dd6ee3f8e2044c59e87b
+SHA512 (lasso-2.8.2.tar.gz) = f56b5fef68fd1e6025a7cfb0f84d65be9ddf195f0e80d38d60c31d43fcd4377be5a0d67140bc654c224331230f06c10e4eb498671a10ebfadc1d93decadf4c72
+Size (lasso-2.8.2.tar.gz) = 4023587 bytes
