@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.5 2024/08/14 06:05:16 adam Exp $
+$NetBSD: patch-meson.build,v 1.6 2025/07/21 20:53:04 yhardy Exp $
 
 Link against mupdf normally, not assuming static linking.
 
@@ -22,3 +22,24 @@ Link against mupdf normally, not assuming static linking.
    # normal build of mupdf
    mupdf = cc.find_library('mupdf', has_headers: ['mupdf/fitz/version.h', 'mupdf/fitz.h', 'mupdf/pdf.h'], required: true)
    version_check = '''
+@@ -47,6 +47,20 @@ if not mupdf.found()
+   endif
+ 
+   build_dependencies += [mupdf, mupdfthird]
++
++  libjpeg = dependency('libjpeg')
++  libjbig2dec = cc.find_library('jbig2dec')
++  libopenjp2 = dependency('libopenjp2')
++  gumbo = dependency('gumbo')
++  mujs = dependency('mujs')
++
++  build_dependencies += [
++    libjpeg,
++    libjbig2dec,
++    libopenjp2,
++    gumbo,
++    mujs
++  ]
+ else
+   # build from Debian's libmupdf-dev
+   build_dependencies += [mupdf, mupdfthird]
