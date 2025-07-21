@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4403 2025/07/21 08:58:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4404 2025/07/21 09:48:22 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6194,6 +6194,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 138.0.7204.96 [kikadf 2025-07-07]
 	Updated graphics/chafa to 1.16.2 [ktnb 2025-07-07]
 	Updated misc/exercism to 3.5.6 [schmonz 2025-07-07]
+	Updated devel/plasma-wayland-protocols to 1.14.0 [abs 2025-07-07]
 	Updated devel/lxqt-build-tools to 2.2.1 [gutteridge 2025-07-08]
 	Updated sysutils/lxqt-powermanagement to 2.2.1 [gutteridge 2025-07-08]
 	Updated x11/lxqt-panel to 2.2.2 [gutteridge 2025-07-08]
