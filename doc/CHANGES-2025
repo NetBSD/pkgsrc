@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4425 2025/07/22 22:44:08 abs Exp $
+$NetBSD: CHANGES-2025,v 1.4426 2025/07/22 23:39:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6497,3 +6497,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-esptool to 5.0.1 [gdt 2025-07-22]
 	Updated chat/element-web to 1.11.106 [js 2025-07-22]
 	Updated net/ddclient to 4.0.0 [abs 2025-07-22]
+	Updated www/firefox128 to 128.13.0 [gutteridge 2025-07-22]
