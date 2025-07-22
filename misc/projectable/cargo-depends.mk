@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2023/07/10 19:51:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2025/07/22 11:30:40 he Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.19.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -152,6 +152,7 @@ CARGO_CRATE_DEPENDS+=	pkg-config-0.3.26
 CARGO_CRATE_DEPENDS+=	plotters-0.3.5
 CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.5
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.5
+CARGO_CRATE_DEPENDS+=	portable-atomic-1.11.1
 CARGO_CRATE_DEPENDS+=	predicates-2.1.5
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.5
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.7

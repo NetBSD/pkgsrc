@@ -1,0 +1,16 @@
+$NetBSD: patch-.._vendor_tui-textarea-0.2.0_Cargo.toml,v 1.1 2025/07/22 11:30:40 he Exp $
+
+Add use of portable-atomic.
+
+--- ../vendor/tui-textarea-0.2.0/Cargo.toml.orig	2025-07-22 10:43:45.353315368 +0000
++++ ../vendor/tui-textarea-0.2.0/Cargo.toml
+@@ -78,6 +78,9 @@ required-features = ["crossterm"]
+ name = "variable"
+ required-features = ["crossterm"]
+ 
++[dependencies]
++portable-atomic = "1.11.1"
++
+ [dependencies.arbitrary]
+ version = "1"
+ features = ["derive"]

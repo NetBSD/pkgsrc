@@ -1,4 +1,4 @@
-$NetBSD: patch-.._vendor_openssl-src_111.26.0+1.1.1u_src_lib.rs,v 1.1 2023/07/10 19:51:06 pin Exp $
+$NetBSD: patch-.._vendor_openssl-src_111.26.0+1.1.1u_src_lib.rs,v 1.2 2025/07/22 11:30:40 he Exp $
 
 Provide defaults for the various NetBSD targets.
 
@@ -17,13 +17,13 @@ Provide defaults for the various NetBSD targets.
              "armv5te-unknown-linux-gnueabi" => "linux-armv4",
              "armv5te-unknown-linux-musleabi" => "linux-armv4",
              "armv6-unknown-freebsd" => "BSD-generic32",
-+            "armv6-unknown-netbsd-eabihf" => "BSD-generic32",
++            "armv6-unknown-netbsd-eabihf" => "NetBSD-generic32",
              "armv7-unknown-freebsd" => "BSD-generic32",
              "armv7-unknown-linux-gnueabi" => "linux-armv4",
              "armv7-unknown-linux-musleabi" => "linux-armv4",
              "armv7-unknown-linux-gnueabihf" => "linux-armv4",
              "armv7-unknown-linux-musleabihf" => "linux-armv4",
-+            "armv7-unknown-netbsd-eabihf" => "BSD-generic32",
++            "armv7-unknown-netbsd-eabihf" => "NetBSD-generic32",
              "asmjs-unknown-emscripten" => "gcc",
              "i586-unknown-linux-gnu" => "linux-elf",
              "i586-unknown-linux-musl" => "linux-elf",
@@ -36,7 +36,7 @@ Provide defaults for the various NetBSD targets.
              "loongarch64-unknown-linux-gnu" => "linux64-loongarch64",
              "mips-unknown-linux-gnu" => "linux-mips32",
              "mips-unknown-linux-musl" => "linux-mips32",
-@@ -273,18 +279,21 @@ impl Build {
+@@ -273,18 +279,22 @@ impl Build {
              "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
@@ -45,6 +45,7 @@ Provide defaults for the various NetBSD targets.
              "powerpc-unknown-linux-gnu" => "linux-ppc",
              "powerpc-unknown-linux-gnuspe" => "linux-ppc",
              "powerpc64-unknown-freebsd" => "BSD-generic64",
++	    "powerpc-unknown-netbsd" => "NetBSD-generic32",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
 +            "powerpc64-unknown-freebsd" => "BSD-generic64",
