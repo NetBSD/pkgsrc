@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2025/02/11 09:52:25 abs Exp $
+# $NetBSD: Makefile,v 1.56 2025/07/22 22:43:32 abs Exp $
 
-DISTNAME=	ddclient-3.11.2
-PKGREVISION=	2
+DISTNAME=	ddclient-4.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ddclient/}
 GITHUB_TAG=	v${DISTNAME:S/ddclient-//}
