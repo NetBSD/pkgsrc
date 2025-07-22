@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4416 2025/07/22 10:54:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4417 2025/07/22 11:07:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6488,3 +6488,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-starlette to 0.47.2 [wiz 2025-07-22]
 	Updated x11/py-qt5-webengine to 5.15.7 [adam 2025-07-22]
 	Updated time/py-tempora to 5.8.1 [adam 2025-07-22]
+	Added textproc/py-et_xmlfile version 2.0.0 [wiz 2025-07-22]
