@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/04/24 14:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/22 10:52:31 adam Exp $
 
 DISTNAME=	PyQtWebEngine-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.6
-PKGREVISION=	15
+PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.7
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQtWebEngine/}
 
@@ -11,11 +10,11 @@ HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqtwebengine/
 COMMENT=	Python module for QtWebEngine (Chromium-based)
 LICENSE=	gnu-gpl-v3
 
+WHEEL_NAME=	${DISTNAME:tl}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++
 
