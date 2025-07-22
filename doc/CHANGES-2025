@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4413 2025/07/22 06:43:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4414 2025/07/22 07:14:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6482,3 +6482,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 11.3.2 [adam 2025-07-22]
 	Updated inputmethod/librime to 1.14.0 [adam 2025-07-22]
 	Updated x11/wxGTK32 to 3.2.8.1 [adam 2025-07-22]
+	Updated net/yt-dlp to 2025.7.21 [adam 2025-07-22]
+	Updated textproc/py-pybtex to 0.25.1 [adam 2025-07-22]
+	Updated textproc/py-sphinxcontrib-bibtex to 2.6.5 [adam 2025-07-22]
