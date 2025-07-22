@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4422 2025/07/22 14:36:58 he Exp $
+$NetBSD: CHANGES-2025,v 1.4423 2025/07/22 19:13:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6494,3 +6494,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.39.1 [pin 2025-07-22]
 	Updated devel/mise to 2025.7.20 [pin 2025-07-22]
 	Updated sysutils/yazi to 25.5.31nb1 [he 2025-07-22]
+	Updated comms/py-esptool to 5.0.1 [gdt 2025-07-22]
