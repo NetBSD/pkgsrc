@@ -1,9 +1,21 @@
-# $NetBSD: Makefile,v 1.28 2025/07/22 04:51:38 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/07/22 18:32:44 gdt Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
-# currently known) must be tested to build and run ok.  The 6.8.0
-# release of sip was very broken, and .0 releases of sip should be
-# viewed with extreme caution and probably skipped.
+# currently known) must be tested to build and run (with an actual
+# project, loading data).  This is due to a repeated history of
+# problematic sip releases.
+#
+# The 6.8.0 release of sip was very broken.
+# In 2025-06, 6.11.1 caused the build of qgis 3.34 to fail.
+# In 2025-06, 6.12.0 caused the build of qgis 3.34 and 3.40 to fail.
+# (qgis 3.40.8 contained an accommodation for sip's behavior change.)
+#
+# sip's .0 releases should be viewed with extreme caution and if not
+# skipped, deferred until they have been out for 90 days, intended to
+# be long enough that any pain will have been taken and reported by
+# other packaging systems -- the MAINTAINER's decision is that lack of
+# trouble is more important than fast updates.
+
 DISTNAME=	sip-6.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
 CATEGORIES=	x11 python
