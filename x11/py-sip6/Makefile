@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2025/06/09 00:40:00 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/22 04:51:38 adam Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build and run ok.  The 6.8.0
 # release of sip was very broken, and .0 releases of sip should be
 # viewed with extreme caution and probably skipped.
-# 6.11.1: qgis 3.34 fails to build
-# 6.12.0: qgis 3.34 and 3.40 both fail to build
-DISTNAME=	sip-6.10.0
+DISTNAME=	sip-6.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/sip/sip6/}
-PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sip/}
 # Upstream NEWS is not in NEWS, but instead at:
