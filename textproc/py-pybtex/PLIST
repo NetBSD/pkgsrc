@@ -1,23 +1,20 @@
-@comment $NetBSD: PLIST,v 1.3 2018/12/13 21:01:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/07/22 07:12:07 adam Exp $
 bin/pybtex-${PYVERSSUFFIX}
 bin/pybtex-convert-${PYVERSSUFFIX}
 bin/pybtex-format-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/pybtex/__init__.py
 ${PYSITELIB}/pybtex/__init__.pyc
 ${PYSITELIB}/pybtex/__init__.pyo
 ${PYSITELIB}/pybtex/__main__.py
 ${PYSITELIB}/pybtex/__main__.pyc
 ${PYSITELIB}/pybtex/__main__.pyo
-${PYSITELIB}/pybtex/__version__.py
-${PYSITELIB}/pybtex/__version__.pyc
-${PYSITELIB}/pybtex/__version__.pyo
 ${PYSITELIB}/pybtex/auxfile.py
 ${PYSITELIB}/pybtex/auxfile.pyc
 ${PYSITELIB}/pybtex/auxfile.pyo
@@ -126,9 +123,6 @@ ${PYSITELIB}/pybtex/markup/__init__.pyo
 ${PYSITELIB}/pybtex/plugin/__init__.py
 ${PYSITELIB}/pybtex/plugin/__init__.pyc
 ${PYSITELIB}/pybtex/plugin/__init__.pyo
-${PYSITELIB}/pybtex/py3compat.py
-${PYSITELIB}/pybtex/py3compat.pyc
-${PYSITELIB}/pybtex/py3compat.pyo
 ${PYSITELIB}/pybtex/richtext.py
 ${PYSITELIB}/pybtex/richtext.pyc
 ${PYSITELIB}/pybtex/richtext.pyo
