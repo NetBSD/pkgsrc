@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/12/02 15:34:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/07/22 10:52:31 adam Exp $
 
-BLAKE2s (PyQtWebEngine-5.15.6.tar.gz) = 04a7041cd540e92d3e1c1fa987ba438c619f1aaeb2036f575827f9992037695a
-SHA512 (PyQtWebEngine-5.15.6.tar.gz) = f744fb0468ccbc79aad23d941c8e96d537ceeedfae215c7095dbf36b04b3dd042f0ff80aeca25a23715964b7d6db3bc80513f509d15c6dd6bd51e42a1a4e1975
-Size (PyQtWebEngine-5.15.6.tar.gz) = 48871 bytes
+BLAKE2s (PyQtWebEngine-5.15.7.tar.gz) = 28b9ae8567053aba45576c42705099d4121bcfb11b4279c09016b15633a20897
+SHA512 (PyQtWebEngine-5.15.7.tar.gz) = 0eede365bd0fa6eb60aa09443298a7afdb94497960ae31bf050311aec919c02a17ea13e57abe37e55f74d458acf34a6c3ab7f5895914742adc90e90a8c0eb442
+Size (PyQtWebEngine-5.15.7.tar.gz) = 32223 bytes
