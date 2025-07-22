@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/22 11:07:23 wiz Exp $
+
+BLAKE2s (et_xmlfile-2.0.0.tar.gz) = f0bb24c8010ca729bde033e61b79e0911ba23c4cdc8c62f7341649a927985af5
+SHA512 (et_xmlfile-2.0.0.tar.gz) = 9a6b8bf3aa97fa48d85f063bcf093664fabb70a2d1a176a8b7803045a9add26613c0f44664cb63e04addfa2cb20cf24f55e426197f92befff0cf9a2051b4fa20
+Size (et_xmlfile-2.0.0.tar.gz) = 17234 bytes
