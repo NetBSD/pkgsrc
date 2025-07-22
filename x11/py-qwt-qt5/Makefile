@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2025/05/07 11:47:39 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2025/07/22 05:29:13 adam Exp $
 
 DISTNAME=	pyqt-qwt-1.02.02
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt-qwt/qwt-qt5/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GauiStori/}
 GITHUB_PROJECT=	PyQt-Qwt
@@ -18,9 +18,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-WHEEL_NAME=	PyQt_Qwt-${PKGVERSION_NOREV}
+WHEEL_NAME=	pyqt_qwt-${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c++
 
