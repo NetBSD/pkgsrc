@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.171 2025/07/22 12:07:51 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.172 2025/07/22 12:24:28 gdt Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -15,6 +15,11 @@
 #   current 3.x: Usable unless marked as not accepted.  Includes the
 #     default version, older versions not yet too troublesome, and
 #     often a version newer than default.
+#
+# The value of "current 3.x" is defined by the default value of
+# PYTHON_VERSIONS_ACCEPTED.  pbulk uses this set to determine which
+# python versions are built during a bulk build.
+#
 #
 # The general plan for version selection (ignoring 2.7) is:
 #   - If PYTHON_VERSION_REQD is set, choose it (and fail if not in
@@ -33,12 +38,11 @@
 # === User-settable variables ===
 #
 # PYTHON_VERSION_DEFAULT
-#	The preferred Python version to use.  The set of reasonable
-#	values defines "current 3.x".  Typical use is to move to a
-#	newer version before pkgsrc moves.  Another possible use is to
-#	stay on an older version when pkgsrc advances.
+#	The preferred Python version to use.  Typical use is to move
+#	to a newer version before pkgsrc moves.  Another possible use
+#	is to stay on an older version when pkgsrc advances.
 #	
-#	Reasonable values: 311 312 313
+#	Reasonable values: Default value of PYTHON_VERSIONS_ACCEPTED.
 #	Possible values: Reasonable values and "old 3.x".
 #	Default: 312
 #
