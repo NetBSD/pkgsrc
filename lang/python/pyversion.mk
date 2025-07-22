@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.173 2025/07/22 14:30:26 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.174 2025/07/22 21:39:50 gdt Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -9,16 +9,14 @@
 # There are three kinds of python versions:
 #   - 2.7: Very old, and only usable if explicitly marked as supported.
 #   - old 3.x: Usable if explicitly marked as supported and requested,
-#     but globally disabled by default because too many packages fail,
+#     but not part of defaults because too many packages fail,
 #     and it's painful for no gain to have to explicitly exclude it.
-#     Bulk builds do not build these versions.
-#   - current 3.x: Usable unless marked as not accepted.  Includes the
-#     default version, older versions not yet too troublesome, and
-#     often a version newer than default.
+#   - current 3.x: Usable unless a package is specifically marked.
+#     Includes the default version, older versions not yet too
+#     troublesome, and often a version newer than default.
 #
 # The value of "current 3.x" is defined by the default value of
-# PYTHON_VERSIONS_ACCEPTED.  pbulk uses this set to determine which
-# python versions are built during a bulk build.
+# PYTHON_VERSIONS_ACCEPTED.
 #
 # For any given package, there are a set of python3 versions that one
 # can use with the upstream code, and perhaps a reduced version that
@@ -26,15 +24,15 @@
 # supporting an older version.  The set of versions is expressed in
 # one of several ways, but not a mixture:
 #  - No variables set, meaning that the supported versions are exactly
-#   those in the default value of PYTHON_VERSIONS_ACCEPTED.
+#    those in the default value of PYTHON_VERSIONS_ACCEPTED.
 #  - PYTHON_VERSIONS_ACCEPTED set, meaning that is the set of
 #    buildable versions.  This can include values not in the default,
 #    and it can omit values in the default.
 #  - PYTHON_VERSIONS_INCOMPATIBLE set, meaning that the set of
 #    buildable versions is the default value of
 #    PYTHON_VERSIONS_ACCEPTED, minus the INCOMPATIBLE versions.  This
-#    is preferred when omitting a specific old version, so that when a
-#    new version is added, it is included.
+#    is preferred when omitting a specific old or new version, so that
+#    as versions are added and removed from DEFAULT, the set updates.
 # NB: If a version is in the ACCEPTED set, that version must also be
 # in the ACCEPTED set of every (recursive) dependency.
 #
