@@ -1,24 +1,53 @@
-# $NetBSD: pyversion.mk,v 1.170 2025/07/14 05:51:57 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.171 2025/07/22 12:07:51 gdt Exp $
 
-# This file should be included by packages as a way to depend on
-# python when none of the other methods are appropriate, e.g. a
-# package that produces a binary that embeds python.
-# It determines which Python version is used as a dependency for
-# a package.
+# This file provides an interface to decide which version of python
+# should be used in building a package.  It should be directly
+# included by packages as a way to depend on python when none of the
+# other methods are appropriate, e.g. a package that produces a binary
+# that embeds python.  It is indirectly included by the other methods.
+#
+# There are three kinds of python versions:
+#   2.7: Very old, and only usable if explicitly marked as supported.
+#   old 3.x: Usable if explicitly marked as supported and requested,
+#     but globally disabled by default because too many packages fail,
+#     and it's painful for no gain to have to explicitly exclude it.
+#     Bulk builds do not build these versions.
+#   current 3.x: Usable unless marked as not accepted.  Includes the
+#     default version, older versions not yet too troublesome, and
+#     often a version newer than default.
+#
+# The general plan for version selection (ignoring 2.7) is:
+#   - If PYTHON_VERSION_REQD is set, choose it (and fail if not in
+#       PYTHON_VERSIONS_ACCEPTED).
+#   - If PYTHON_VERSION_DEFAULT is in PYTHON_VERSIONS_ACCEPTED, choose
+#     it.
+#   - Otherwise, choose the first version in PYTHON_VERSIONS_ACCEPTED.
+#
+# With 2.7, 27 is considered included in PYTHON_VERSIONS_ACCEPTED if
+# PYTHON_27_ACCEPTED is defined.  If so, then:
+#   - If PYTHON_VERSION_REQD is 27, 27 is used.
+#   - If PYTHON_VERSION_DEFAULT is not in PYTHON_VERSIONS_ACCEPTED,
+#     then the highest version in ACCEPTED is chosen.  (For a package
+#     that supports only 27, this will be 27.)
 #
 # === User-settable variables ===
 #
 # PYTHON_VERSION_DEFAULT
-#	The preferred Python version to use.
-#
-#	Possible values: 27 311 312 313
+#	The preferred Python version to use.  The set of reasonable
+#	values defines "current 3.x".  Typical use is to move to a
+#	newer version before pkgsrc moves.  Another possible use is to
+#	stay on an older version when pkgsrc advances.
+#	
+#	Reasonable values: 311 312 313
+#	Possible values: Reasonable values and "old 3.x".
 #	Default: 312
 #
 # === Infrastructure variables ===
 #
 # PYTHON_VERSION_REQD
-#	Python version to use. This variable should not be set in
-#	packages.  Normally it is used by bulk build tools.
+#	Python version to use. This variable should not be set by the
+#	user or in packages.  Normally it is used by bulk build tools,
+#	or e.g. as "make PYTHON_VERSION_REQD=311 replace".
 #
 #	Possible: ${PYTHON_VERSIONS_ACCEPTED}
 #	Default:  ${PYTHON_VERSION_DEFAULT}
@@ -26,17 +55,29 @@
 # === Package-settable variables ===
 #
 # PYTHON_VERSIONS_ACCEPTED
-#	The Python versions that are acceptable for the package. The
-#	order of the entries matters, since earlier entries are
-#	preferred over later ones.
+#	The Python versions that can be used to build the package.
+#	Order is significant, with the first feasible value chosen;
+#	normal practice is to list all feasible versions in decreasing
+#	order.
 #
-#	Possible values: 313 312 311 27
+#	Possible values: 313 312 311
 #	Default: 313 312 311
 #
-# PYTHON_VERSIONS_INCOMPATIBLE
-#	The Python versions that are NOT acceptable for the package.
+# PYTHON_27_ACCEPTED
+#       Set if the package can build with 2.7.  (27 should not be
+#       placed in PYTHON_VERSIONS_ACCEPTED.)
 #
-#	Possible values: 27 39 310 311 312 313
+# PYTHON_VERSIONS_INCOMPATIBLE
+#	The Python versions that cannot be used to build the package.
+#	Any "current 3.x" version that fails to build and work must be
+#	listed.  "Old 3.x" versions may be listed, and if present
+#	should not be pruned (as long as the old lang/pythonNN version
+#	is in pkgsrc).  However it is not a consequential error if it
+#	is missing, as those are not built by default in bulk builds.
+#	(27 should not be listed as incompatible, as that's true
+#	unless PYTHON_27_ACCEPTED is set.)
+#
+#	Possible values: 39 310 311 312 313
 #	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
