@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/07/05 11:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/07/22 19:13:18 gdt Exp $
 
-DISTNAME=	esptool-4.8.1
+DISTNAME=	esptool-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/esptool/}
@@ -11,21 +11,24 @@ COMMENT=	Firmware tool for ESP8266/ESP32
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-argcomplete>=3:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-bitstring>=4.2.1:../../devel/py-bitstring
-DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0.16.0:../../security/py-ecdsa
-DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
-DEPENDS+=	${PYPKGPREFIX}-reedsolo>=1.5.3:../../converters/py-reedsolo
+PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.3:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-reedsolo>=1.5.3:../../converters/py-reedsolo
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
+DEPENDS+=	${PYPKGPREFIX}-rich-click-[0-9]*:../../devel/py-rich-click
+DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+# esptool requires >= 3.10
+# \todo Should 3.10 be explicitly in ACCEPTED?
+# \todo If 39 is not added to accepted, do we need to put it in INCOMPATIBLE?
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
