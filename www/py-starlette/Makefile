@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/06/30 20:25:25 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/22 10:04:29 wiz Exp $
 
-DISTNAME=	starlette-0.47.1
+DISTNAME=	starlette-0.47.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/starlette/}
@@ -20,6 +20,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
+
+# test status as of 0.47.1 and 0.47.2
+# python core dump in thread trampoline
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
