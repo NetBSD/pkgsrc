@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2025/07/07 13:50:43 wiz Exp $
+$NetBSD: distinfo,v 1.34 2025/07/22 10:16:36 adam Exp $
 
 BLAKE2s (qtwebengine-everywhere-opensource-src-5.15.17.tar.xz) = dbf0aa837aad6b215382109c4c9abedc7a56387bf87fe34de51f4f675eb67909
 SHA512 (qtwebengine-everywhere-opensource-src-5.15.17.tar.xz) = f3f8a6e9b43e9a58a0b44777fd3333a621365f7cfe323207dfafdefe41f572a58b03ae9c00ab57cbd554d9d71c09d071b93841557099205d4b6dc474921bbfdf
@@ -643,6 +643,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_bu
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_thread__utils.h) = 7df9f81f260af749dd41ac2c96ccff870af90bfe
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_base_time.h) = dfdfac6d80b1be8316fb09cf033cd0c7533a419c
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_ext_base_unix__socket.h) = 6b8be19e13f49e20e23b19864e5a387cd632e90b
+SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_include_perfetto_tracing_internal_track__event__data__source.h) = 3ea226e2179c0c4a39043af3e13d08ded0f8d4e1
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_src_base_BUILD.gn) = 1a7ebaca5ff35a4ea297cae7856f4c87f299ec2e
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_src_base_unix__socket.cc) = e2f65b3214053fc2938b886182b9a998add7c85a
 SHA1 (patch-src_3rdparty_chromium_third__party_perfetto_src_tracing_core_tracing__service__impl.cc) = 75df644880769d096beb138d272c6fdb9da306fd
@@ -745,6 +746,7 @@ SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_test_BUILD.gn) = cf10aa3e5
 SHA1 (patch-src_3rdparty_chromium_third__party_webrtc_webrtc.gni) = 501ac49f4dd406057089ac65196a7c0eff2560c4
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_BUILD.gn) = d48d4b8ab33d9c650b3d7ab1fd4d5c034029443e
 SHA1 (patch-src_3rdparty_chromium_third__party_zlib_cpu__features.c) = 2ae5c09b935a94fc50c052f199a945875d3d9127
+SHA1 (patch-src_3rdparty_chromium_third__party_zlib_zutil.h) = 0c65c03ccd434071d4a08897e361c84d5a7d41c1
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_BUILD.gn) = 1952774426515651e3f2797a296be102e9ef55b2
 SHA1 (patch-src_3rdparty_chromium_tools_binary__size_libsupersize_caspian_BUILD.gn) = d5db9eae64c975ce7770b9e1f2b5578c7c4883b6
 SHA1 (patch-src_3rdparty_chromium_tools_grit_BUILD.gn) = 85172e974e874b8e2ab9f47619faa2578f84bdc4
