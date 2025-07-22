@@ -1,0 +1,4 @@
+A low-memory way of creating XML files.
+
+This is an implementation of lxml's xmlfile module for the standard library's
+ElementTree.
