@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4419 2025/07/22 13:30:47 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4420 2025/07/22 13:49:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6491,3 +6491,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/py-et_xmlfile version 2.0.0 [wiz 2025-07-22]
 	Updated misc/projectable to 1.3.0nb2 [he 2025-07-22]
 	Updated wm/lefthk to 0.3.0 [pin 2025-07-22]
+	Updated devel/ast-grep to 0.39.1 [pin 2025-07-22]
