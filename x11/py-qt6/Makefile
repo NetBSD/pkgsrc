@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/04/29 11:20:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/22 04:55:48 adam Exp $
 
-DISTNAME=	pyqt6-6.9.0
+DISTNAME=	pyqt6-6.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt6
 HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/
 LICENSE=	gnu-gpl-v3
-
-WHEEL_NAME=	${DISTNAME:S/^pyq/PyQ/}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.17:../../x11/py-qt-builder
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.9:../../x11/py-sip6

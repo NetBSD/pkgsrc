@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/29 11:20:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/07/22 04:55:48 adam Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/PyQt6/QtBluetooth.abi3.so
 ${PYSITELIB}/PyQt6/QtCore.abi3.so
 ${PYSITELIB}/PyQt6/QtDBus.abi3.so

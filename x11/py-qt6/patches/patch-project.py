@@ -1,14 +1,19 @@
-$NetBSD: patch-project.py,v 1.1 2023/08/05 07:23:35 adam Exp $
+$NetBSD: patch-project.py,v 1.2 2025/07/22 04:55:48 adam Exp $
 
 Accept license for pkgsrc.
 
---- project.py.orig	2023-07-22 15:08:24.000000000 +0000
+--- project.py.orig	2025-06-03 15:55:52.456821200 +0000
 +++ project.py
-@@ -169,6 +169,8 @@ del find_qt
-         if tool == 'pep517':
-             self.confirm_license = True
+@@ -164,11 +164,8 @@ del find_qt
+                     "Qt v6 is required, not v{0}".format(
+                             self.builder.qt_version_str))
  
-+	# accept license automatically (handled by pkgsrc license framework)
+-        # Automatically confirm the license if there might not be a command
+-        # line option to do so.
+-        if tool == 'pep517':
+-            self.confirm_license = True
+-
++	# Accept license automatically (handled by pkgsrc license framework)
 +        self.confirm_license = True
          self._check_license()
  
