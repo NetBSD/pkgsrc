@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4411 2025/07/22 04:56:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4412 2025/07/22 05:35:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6478,3 +6478,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/gitea to 1.23.8 [khorben 2025-07-22]
 	Updated x11/py-sip6 to 6.12.0 [adam 2025-07-22]
 	Updated x11/py-qt6 to 6.9.1 [adam 2025-07-22]
+	Updated fonts/harfbuzz to 11.3.2 [adam 2025-07-22]
+	Updated fonts/harfbuzz-icu to 11.3.2 [adam 2025-07-22]
