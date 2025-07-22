@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2025/07/21 22:00:55 wiz Exp $
+$NetBSD: distinfo,v 1.26 2025/07/22 14:36:15 he Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -606,6 +606,9 @@ Size (plist-1.7.1.crate) = 102902 bytes
 BLAKE2s (png-0.17.16.crate) = b7004f600e3b71a4f2896eaca9ddcaf770c675e794202b8917b8ddb58d0e3800
 SHA512 (png-0.17.16.crate) = fd9130d8d91fe40724f4065748bf1a6175de0b7e8df521939f169000933dadd0815bed0f95c00d12bf5ad341469983ea97be427392a85b82c232473ea753b6ba
 Size (png-0.17.16.crate) = 117975 bytes
+BLAKE2s (portable-atomic-1.11.1.crate) = 3758e723fa680cf28dc6cc870b7f521f37f8a3abf788e07b7178f9c875a53d29
+SHA512 (portable-atomic-1.11.1.crate) = 4c037ae0b4aef43077bdbf803389bc078d963f20d023e2e1d339a54f67fa9b27c174e7c1b6eca8881ecf301e30c431632d2c0dcedfb5b19552892fac0f81e2e1
+Size (portable-atomic-1.11.1.crate) = 185506 bytes
 BLAKE2s (powerfmt-0.2.0.crate) = bdb2e56103b2ec9bd76d865753db13d6e94acfe71e1196ee3b4e7e51efeb7cd6
 SHA512 (powerfmt-0.2.0.crate) = 0623f92e4d6ab284b3f6dae58220d79d9185df4a738999d68040c50d72fe0380d70358cb622f079c629bab53bb03c6e085e165d5bddfbeea84245864fed90029
 Size (powerfmt-0.2.0.crate) = 15165 bytes
@@ -1080,4 +1083,12 @@ Size (zune-inflate-0.2.54.crate) = 37973 bytes
 BLAKE2s (zune-jpeg-0.4.14.crate) = 30b1e0c577996dc406e9b3740208a6ca5481c3eaefb0dab371b4b4331a4a0a9f
 SHA512 (zune-jpeg-0.4.14.crate) = 1f62cd2c3f5bc1773a7654aadf45b02aec0384c0abad4c77210e9bc2c05533f47e63a6d44fa1596dc9103d7569079be7266905421f91091f77536c1407f3a0e5
 Size (zune-jpeg-0.4.14.crate) = 63388 bytes
+SHA1 (patch-.._vendor_async-priority-channel-0.2.0_Cargo.toml) = af01f6ee00de93298e7b960a7e8fdab892583327
+SHA1 (patch-.._vendor_async-priority-channel-0.2.0_src_awaitable__atomics.rs) = 7ffcc8fabf7ead8aa6e26d8093ea8bc77a0a49b1
+SHA1 (patch-Cargo.lock) = 549853d270295065bac4d52151463d42bc60a2af
 SHA1 (patch-yazi-core_src_mgr_watcher.rs) = f505d398d6672ab16fa50dd3083f9444a56c687c
+SHA1 (patch-yazi-dds_Cargo.toml) = 46d41b0529b8ef54c794ee905fb1f16ae61a4429
+SHA1 (patch-yazi-dds_src_state.rs) = af4d8cedfab8f2641eb140823fc2838405de5b36
+SHA1 (patch-yazi-shared_Cargo.toml) = 087d2f9a240bd3ffb263a878906cac27bf171894
+SHA1 (patch-yazi-shared_src_id.rs) = 33ed3dcf4262cdfbb3e35ea25cbd4c7caa95284e
+SHA1 (patch-yazi-shared_src_throttle.rs) = 2fd856c98b89a847fc12b42535edb016b3ed123c
