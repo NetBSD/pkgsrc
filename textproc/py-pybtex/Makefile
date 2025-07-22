@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/07/05 11:44:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/22 07:12:07 adam Exp $
 
-DISTNAME=	pybtex-0.24.0
+DISTNAME=	pybtex-0.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
 
@@ -11,13 +10,11 @@ HOMEPAGE=	https://pybtex.org/
 COMMENT=	BibTeX-compatible bibliography processor written in Python
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-latexcodec>=1.0.4:../../print/py-latexcodec
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.01:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
@@ -27,5 +24,5 @@ post-install:
 	${MV} pybtex-convert pybtex-convert-${PYVERSSUFFIX} && \
 	${MV} pybtex-format pybtex-format-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
