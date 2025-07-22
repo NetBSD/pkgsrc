@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.474 2025/07/21 08:15:28 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.475 2025/07/22 09:47:18 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27200,3 +27200,5 @@ ruby{31,32,33,34}-thor<1.4.0	command-injection	https://nvd.nist.gov/vuln/detail/
 mbedtls<3.6.4		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-47917
 mbedtls<3.6.4		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-48965
 mbedtls>=3.6.1<3.6.4	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-49087
+powerdns-recursor<5.0.12	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2025-30192
+py{27,39,310,311,312,313}-starlette<0.47.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54121
