@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.172 2025/07/22 12:24:28 gdt Exp $
+# $NetBSD: pyversion.mk,v 1.173 2025/07/22 14:30:26 gdt Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -7,12 +7,12 @@
 # that embeds python.  It is indirectly included by the other methods.
 #
 # There are three kinds of python versions:
-#   2.7: Very old, and only usable if explicitly marked as supported.
-#   old 3.x: Usable if explicitly marked as supported and requested,
+#   - 2.7: Very old, and only usable if explicitly marked as supported.
+#   - old 3.x: Usable if explicitly marked as supported and requested,
 #     but globally disabled by default because too many packages fail,
 #     and it's painful for no gain to have to explicitly exclude it.
 #     Bulk builds do not build these versions.
-#   current 3.x: Usable unless marked as not accepted.  Includes the
+#   - current 3.x: Usable unless marked as not accepted.  Includes the
 #     default version, older versions not yet too troublesome, and
 #     often a version newer than default.
 #
@@ -20,6 +20,23 @@
 # PYTHON_VERSIONS_ACCEPTED.  pbulk uses this set to determine which
 # python versions are built during a bulk build.
 #
+# For any given package, there are a set of python3 versions that one
+# can use with the upstream code, and perhaps a reduced version that
+# pkgsrc chooses to use, often due to dependencies in pkgsrc not
+# supporting an older version.  The set of versions is expressed in
+# one of several ways, but not a mixture:
+#  - No variables set, meaning that the supported versions are exactly
+#   those in the default value of PYTHON_VERSIONS_ACCEPTED.
+#  - PYTHON_VERSIONS_ACCEPTED set, meaning that is the set of
+#    buildable versions.  This can include values not in the default,
+#    and it can omit values in the default.
+#  - PYTHON_VERSIONS_INCOMPATIBLE set, meaning that the set of
+#    buildable versions is the default value of
+#    PYTHON_VERSIONS_ACCEPTED, minus the INCOMPATIBLE versions.  This
+#    is preferred when omitting a specific old version, so that when a
+#    new version is added, it is included.
+# NB: If a version is in the ACCEPTED set, that version must also be
+# in the ACCEPTED set of every (recursive) dependency.
 #
 # The general plan for version selection (ignoring 2.7) is:
 #   - If PYTHON_VERSION_REQD is set, choose it (and fail if not in
