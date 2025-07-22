@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2023/07/10 19:51:05 pin Exp $
+$NetBSD: distinfo,v 1.2 2025/07/22 11:30:40 he Exp $
 
 BLAKE2s (addr2line-0.19.0.crate) = c0485ba9fdf036b53d78b606222e7ce9d647d27f582d7df92948b8dbd686a8bb
 SHA512 (addr2line-0.19.0.crate) = 18da72e412bb89028e2ccb838192330535e45300f6fd8edc7d1d64397792a3db12418aa24a3312730c5414e2a1b1d65e6b9d5691ba234c9142b5d885523a5e94
@@ -456,6 +456,9 @@ Size (plotters-backend-0.3.5.crate) = 13440 bytes
 BLAKE2s (plotters-svg-0.3.5.crate) = e2cbad4d4eb14740d2ab2cb475757f5a00741c8a0d34fd499d6c9e8678173922
 SHA512 (plotters-svg-0.3.5.crate) = 91c4955f62dbb8d80e01e5cbdc7ad5f1869be6025de1d2baeeb9198fb108ad8f01916cdc0728b7123ed9217abe92cdd8ad30116dd454312c8f63bf9cec98644a
 Size (plotters-svg-0.3.5.crate) = 6948 bytes
+BLAKE2s (portable-atomic-1.11.1.crate) = 3758e723fa680cf28dc6cc870b7f521f37f8a3abf788e07b7178f9c875a53d29
+SHA512 (portable-atomic-1.11.1.crate) = 4c037ae0b4aef43077bdbf803389bc078d963f20d023e2e1d339a54f67fa9b27c174e7c1b6eca8881ecf301e30c431632d2c0dcedfb5b19552892fac0f81e2e1
+Size (portable-atomic-1.11.1.crate) = 185506 bytes
 BLAKE2s (predicates-2.1.5.crate) = ab4853e824938707842d1f03db9a52689e5b08ae2fc22df3b3e84378cc1e378d
 SHA512 (predicates-2.1.5.crate) = d4b555d7f57ccec5788a957d4a3e130f5549a9333a47654baaef098bb284c64bd5c662677ba7e659b4563b3d0146914f1235e0caa2274af8787d9777141f4dd4
 Size (predicates-2.1.5.crate) = 24165 bytes
@@ -762,4 +765,9 @@ Size (winnow-0.3.6.crate) = 176641 bytes
 BLAKE2s (wyz-0.5.1.crate) = dc39cd7a740b1e5bc6799cf3f502684350913a83f457249d2c868ede49ad0849
 SHA512 (wyz-0.5.1.crate) = 15d86c167145c90e3fbabcefd11754fb1cb835896e32d1bb7f4b027e5b2092f5fdbdca4062c129bc38e655cb87c6a3f4e181747ee25d89db5e01fb1fcac18fe9
 Size (wyz-0.5.1.crate) = 18790 bytes
-SHA1 (patch-.._vendor_openssl-src_111.26.0+1.1.1u_src_lib.rs) = 614576904a7c4d88f814130badc24e1dd1865789
+SHA1 (patch-.._vendor_openssl-src_111.26.0+1.1.1u_openssl_Configurations_10-main.conf) = 1e73f48187cf51da4c642a4deabdeec74aac11a3
+SHA1 (patch-.._vendor_openssl-src_111.26.0+1.1.1u_src_lib.rs) = e13c3c75165ef3730967bdd396b079ceea716c14
+SHA1 (patch-.._vendor_tui-textarea-0.2.0_Cargo.toml) = 15e1308ab50e3699fb230e5aeeaf41bb4bbe2085
+SHA1 (patch-.._vendor_tui-textarea-0.2.0_src_widget.rs) = eb0579e4b19c2853018101ef7636c17ac04e3780
+SHA1 (patch-Cargo.lock) = 66f652d1c94c1e46c546145c61c79991b52ada26
+SHA1 (patch-Cargo.toml) = d9ec3b9ae33e9ce6039ac824d296ccbb35cbb7c8
