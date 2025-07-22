@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/04/24 14:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/22 05:03:20 adam Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../x11/qt6-qscintilla/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-qt6-${DISTNAME:S/_src//:tl}
@@ -12,9 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-WHEEL_NAME=	PyQt6_${DISTNAME:S/_src//}
+WHEEL_NAME=	pyqt6_${DISTNAME:S/_src//:tl}
 
 post-extract:
 	cd ${WRKSRC} && ${CP} pyproject-qt6.toml pyproject.toml
