@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4423 2025/07/22 19:13:53 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4424 2025/07/22 20:28:14 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6495,3 +6495,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.7.20 [pin 2025-07-22]
 	Updated sysutils/yazi to 25.5.31nb1 [he 2025-07-22]
 	Updated comms/py-esptool to 5.0.1 [gdt 2025-07-22]
+	Updated chat/element-web to 1.11.106 [js 2025-07-22]
