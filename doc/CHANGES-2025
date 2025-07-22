@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4415 2025/07/22 10:04:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4416 2025/07/22 10:54:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6486,3 +6486,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pybtex to 0.25.1 [adam 2025-07-22]
 	Updated textproc/py-sphinxcontrib-bibtex to 2.6.5 [adam 2025-07-22]
 	Updated www/py-starlette to 0.47.2 [wiz 2025-07-22]
+	Updated x11/py-qt5-webengine to 5.15.7 [adam 2025-07-22]
+	Updated time/py-tempora to 5.8.1 [adam 2025-07-22]
