@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4412 2025/07/22 05:35:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4413 2025/07/22 06:43:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6480,3 +6480,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/py-qt6 to 6.9.1 [adam 2025-07-22]
 	Updated fonts/harfbuzz to 11.3.2 [adam 2025-07-22]
 	Updated fonts/harfbuzz-icu to 11.3.2 [adam 2025-07-22]
+	Updated inputmethod/librime to 1.14.0 [adam 2025-07-22]
+	Updated x11/wxGTK32 to 3.2.8.1 [adam 2025-07-22]
