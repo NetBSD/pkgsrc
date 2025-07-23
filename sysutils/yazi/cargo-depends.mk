@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2025/07/22 14:36:15 he Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2025/07/23 10:14:28 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -202,7 +202,6 @@ CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.32
 CARGO_CRATE_DEPENDS+=	plist-1.7.1
 CARGO_CRATE_DEPENDS+=	png-0.17.16
-CARGO_CRATE_DEPENDS+=	portable-atomic-1.11.1
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.21
 CARGO_CRATE_DEPENDS+=	proc-macro-error-attr2-2.0.0
