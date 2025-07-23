@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/12 15:06:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/07/23 16:41:56 schmonz Exp $
 bin/kapt
 bin/kotlin
 bin/kotlinc
@@ -20,10 +20,8 @@ share/kotlin/lib/android-extensions-runtime.jar
 share/kotlin/lib/annotations-13.0.jar
 share/kotlin/lib/assignment-compiler-plugin.jar
 share/kotlin/lib/compose-compiler-plugin.jar
-share/kotlin/lib/js.engines.jar
 share/kotlin/lib/jvm-abi-gen.jar
 share/kotlin/lib/kotlin-annotation-processing-cli.jar
-share/kotlin/lib/kotlin-annotation-processing-compiler.jar
 share/kotlin/lib/kotlin-annotation-processing-runtime.jar
 share/kotlin/lib/kotlin-annotation-processing.jar
 share/kotlin/lib/kotlin-annotations-jvm-sources.jar
@@ -34,6 +32,8 @@ share/kotlin/lib/kotlin-daemon-client.jar
 share/kotlin/lib/kotlin-daemon.jar
 share/kotlin/lib/kotlin-imports-dumper-compiler-plugin.jar
 share/kotlin/lib/kotlin-main-kts.jar
+share/kotlin/lib/kotlin-metadata-jvm-sources.jar
+share/kotlin/lib/kotlin-metadata-jvm.jar
 share/kotlin/lib/kotlin-preloader.jar
 share/kotlin/lib/kotlin-reflect-sources.jar
 share/kotlin/lib/kotlin-reflect.jar
@@ -73,7 +73,6 @@ share/kotlin/lib/parcelize-runtime.jar
 share/kotlin/lib/power-assert-compiler-plugin.jar
 share/kotlin/lib/sam-with-receiver-compiler-plugin.jar
 share/kotlin/lib/scripting-compiler.jar
-share/kotlin/lib/trove4j.jar
 share/kotlin/license/COPYRIGHT.txt
 share/kotlin/license/COPYRIGHT_HEADER.txt
 share/kotlin/license/LICENSE.txt
@@ -106,9 +105,9 @@ share/kotlin/license/third_party/lombok_LICENSE.txt
 share/kotlin/license/third_party/maven_LICENSE.txt
 share/kotlin/license/third_party/mocha-teamcity-reporter_LICENSE.txt
 share/kotlin/license/third_party/okhttp_license.txt
+share/kotlin/license/third_party/opentelemetry_license.txt
 share/kotlin/license/third_party/power_assert_license.txt
 share/kotlin/license/third_party/prototype_license.txt
-share/kotlin/license/third_party/qunit_license.txt
 share/kotlin/license/third_party/rhino_LICENSE.txt
 share/kotlin/license/third_party/scala_license.txt
 share/kotlin/license/third_party/sl4f_license.txt
@@ -123,5 +122,4 @@ share/kotlin/license/third_party/testdata/jspecify_license.txt
 share/kotlin/license/third_party/testdata/lombok_license.txt
 share/kotlin/license/third_party/testdata/rxjava_license.txt
 share/kotlin/license/third_party/testdata/spring_license.txt
-share/kotlin/license/third_party/trove_license.txt
-share/kotlin/license/third_party/trove_readme_license.txt
+share/kotlin/license/third_party/threetenbp_license.txt
