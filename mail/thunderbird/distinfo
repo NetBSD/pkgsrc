@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.283 2025/05/18 00:54:58 ryoon Exp $
+$NetBSD: distinfo,v 1.284 2025/07/23 19:18:45 ryoon Exp $
 
-BLAKE2s (thunderbird-138.0.1.source.tar.xz) = f7c611e3704cdb446685ca28dd10932333f32016d775c52cd4fc17b5daea4cce
-SHA512 (thunderbird-138.0.1.source.tar.xz) = 2e71ee537292ec1a49237e93c43ed4c1a9eae58becfc7fa9ca0daf1e982c38704cb6d44e92b1bf7b45c5b8c27b23eb3aa7f48b375580f49ee60884dadc5d85b5
-Size (thunderbird-138.0.1.source.tar.xz) = 758760604 bytes
+BLAKE2s (thunderbird-140.0.1.source.tar.xz) = 0bc683bc0878780bc5dec5e029d03f5f6a61b5a0bab7570f35ba7c57b6d93c34
+SHA512 (thunderbird-140.0.1.source.tar.xz) = fbef1d0228c49fc9c11425b6be03bb7e44e6abc6f2027ee23317270ca2c6b0a935bb41b38667acf014bd9e1166cbe62754f1e919e04f2355dc4c833e015c78b8
+Size (thunderbird-140.0.1.source.tar.xz) = 760372872 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -20,7 +20,7 @@ SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 753bb4e90758f5b4
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218b848344ce1
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
-SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
+SHA1 (patch-js_src_jit_FlushICache.cpp) = f5d1fcb391c36a29fb71a78dbf731ee6a1cb17b6
 SHA1 (patch-js_src_old-configure.in) = adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
@@ -41,7 +41,7 @@ SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_video__capture__
 SHA1 (patch-third__party_libwebrtc_rtc__base_physical__socket__server.cc) = 6909c4da9e7b3785252e5bce9be0ff47ebb87e01
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
 SHA1 (patch-third__party_python_dlmanager_check.py) = 69054522d8ced8cb47e65e5a8b1a87ed5ce6708e
-SHA1 (patch-third__party_sqlite3_ext_moz.build) = 2df374daa1c974b52db602613508e4fc965a7bcd
+SHA1 (patch-third__party_sqlite3_ext_moz.build) = 53248ac4ba98983362b173d7644f1001f5127b3c
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
 SHA1 (patch-third__party_wasm2c_src_prebuilt_wasm2c__source__includes.cc) = 99d0db944f0c2d0c623460991efd423d9127c988
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c695c019f15609350c1c43b

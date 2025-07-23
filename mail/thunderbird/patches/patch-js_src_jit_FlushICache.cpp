@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.2 2025/04/30 03:47:13 ryoon Exp $
+$NetBSD: patch-js_src_jit_FlushICache.cpp,v 1.3 2025/07/23 19:18:45 ryoon Exp $
 
 NetBSD does not have the Linux-specific membarrier(2) syscall.
 
---- js/src/jit/FlushICache.cpp.orig	2023-08-15 20:31:19.000000000 +0000
+--- js/src/jit/FlushICache.cpp.orig	2025-06-13 17:08:49.000000000 +0000
 +++ js/src/jit/FlushICache.cpp
 @@ -31,12 +31,18 @@
  #    elif defined(__android__)
@@ -23,10 +23,10 @@ NetBSD does not have the Linux-specific membarrier(2) syscall.
  }
  
  // These definitions come from the Linux kernel source, for kernels before 4.16
-@@ -92,6 +98,8 @@ bool CanFlushExecutionContextForAllThrea
+@@ -112,6 +118,8 @@ bool CanFlushExecutionContextForAllThrea
+   MOZ_ASSERT(state != MemBarrierAvailable::Unset);
+   return state == MemBarrierAvailable::Yes;
  
-   computed = true;
-   return kernelHasMembarrier;
 +#  elif defined(__NetBSD__)
 +  return false;
  #  else
