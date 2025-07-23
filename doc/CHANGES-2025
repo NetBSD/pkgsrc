@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4428 2025/07/23 07:17:21 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.4429 2025/07/23 08:07:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6500,3 +6500,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128 to 128.13.0 [gutteridge 2025-07-22]
 	Updated www/firefox128-l10n to 128.13.0 [gutteridge 2025-07-22]
 	Updated graphics/ImageMagick to 7.1.2.0 [triaxx 2025-07-23]
+	Updated net/amfora to 1.11.0 [pin 2025-07-23]
