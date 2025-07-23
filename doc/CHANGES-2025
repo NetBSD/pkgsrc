@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4437 2025/07/23 12:08:15 abs Exp $
+$NetBSD: CHANGES-2025,v 1.4438 2025/07/23 13:57:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6509,3 +6509,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt5ct to 1.9 [wiz 2025-07-23]
 	Updated pkgtools/pkgin to 25.7.0 [jperkin 2025-07-23]
 	Updated editors/yed to 3.25.1 [abs 2025-07-23]
+	Updated www/firefox to 140.0.4 [ryoon 2025-07-23]
