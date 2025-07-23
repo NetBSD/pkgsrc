@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.8 2025/07/20 14:42:29 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.9 2025/07/23 12:22:57 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -57,3 +57,7 @@ lang/rust: Runtime fix to reduce memory usage on NetBSD/i386
 
 Pullup ticket #6993 - requested by morr
 editors/vim-share: Security fix
+
+Pullup ticket #6994 - requested by gutteridge
+www/firefox128: Security fix
+www/firefox128-l10n: Security fix
