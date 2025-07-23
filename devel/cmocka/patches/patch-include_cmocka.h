@@ -1,8 +1,8 @@
-$NetBSD: patch-include_cmocka.h,v 1.2 2024/01/06 09:07:07 pin Exp $
+$NetBSD: patch-include_cmocka.h,v 1.3 2025/07/23 08:09:09 pin Exp $
 
 C99 fix.
 
---- include/cmocka.h.orig	2024-01-05 09:30:00.219203105 +0000
+--- include/cmocka.h.orig	2025-07-23 07:24:12.915739467 +0000
 +++ include/cmocka.h
 @@ -121,6 +121,11 @@ typedef uintmax_t LargestIntegralType;
      ((LargestIntegralType)(value))
@@ -13,6 +13,6 @@ C99 fix.
 +# define _UINTPTR_T
 +# define _UINTPTR_T_DEFINED
 +#endif
- #if !defined(_UINTPTR_T) && !defined(_UINTPTR_T_DEFINED) && !defined(HAVE_UINTPTR_T)
+ #if !defined(_UINTPTR_T) && !defined(_UINTPTR_T_DEFINED) && !defined(HAVE_UINTPTR_T) && !defined(__UINTPTR_TYPE__)
  # if defined(_WIN32)
      /* WIN32 is an ILP32 platform */

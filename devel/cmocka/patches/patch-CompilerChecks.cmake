@@ -1,10 +1,10 @@
-$NetBSD: patch-CompilerChecks.cmake,v 1.2 2024/01/06 09:07:07 pin Exp $
+$NetBSD: patch-CompilerChecks.cmake,v 1.3 2025/07/23 08:09:09 pin Exp $
 
 Let PkgSrc handle security features.
 
---- CompilerChecks.cmake.orig	2024-01-05 09:27:46.665856486 +0000
+--- CompilerChecks.cmake.orig	2025-07-23 07:22:57.049057609 +0000
 +++ CompilerChecks.cmake
-@@ -66,29 +66,6 @@ if (UNIX)
+@@ -64,29 +64,6 @@ if (UNIX)
          endif()
      endif()
  
