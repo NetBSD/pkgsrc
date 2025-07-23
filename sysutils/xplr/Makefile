@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/03/30 16:58:38 pin Exp $
+# $NetBSD: Makefile,v 1.64 2025/07/23 18:31:02 pin Exp $
 
-DISTNAME=	xplr-1.0.0
+DISTNAME=	xplr-1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sayanarijit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,14 +10,11 @@ HOMEPAGE=	https://xplr.dev/
 COMMENT=	Hackable, minimal, fast TUI file explorer
 LICENSE=	mit
 
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
-SITES.wasi-0.14.2+wasi-0.2.4.crate=		https://static.crates.io/crates/wasi/
-
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.83.0
+#RUST_REQ=	1.88.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.83.0 on amd64
+#This package is confirmed to build with Rust 1.88.0 on amd64
 USE_TOOLS+=	pkg-config bash:run
 
 INSTALLATION_DIRS=	share/examples/xplr share/applications share/icons/hicolor/scalable/apps
