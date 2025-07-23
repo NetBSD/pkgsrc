@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc,v 1.1 2025/07/15 13:58:05 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc,v 1.2 2025/07/23 13:57:35 ryoon Exp $
 
 --- third_party/libwebrtc/modules/audio_device/audio_device_impl.cc.orig	2025-05-21 12:45:39.616635762 +0000
 +++ third_party/libwebrtc/modules/audio_device/audio_device_impl.cc
