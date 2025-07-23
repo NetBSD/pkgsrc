@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4441 2025/07/23 17:03:55 prlw1 Exp $
+$NetBSD: CHANGES-2025,v 1.4442 2025/07/23 18:30:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6513,3 +6513,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 140.0.4 [ryoon 2025-07-23]
 	Updated lang/kotlin to 2.2.0 [schmonz 2025-07-23]
 	Updated textproc/aspic to 2.00 [prlw1 2025-07-23]
+	Updated biology/molsketch to 0.8.2 [pin 2025-07-23]
