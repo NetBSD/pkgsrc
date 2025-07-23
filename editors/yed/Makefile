@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2025/02/03 13:11:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/07/23 12:07:53 abs Exp $
 
-DISTNAME=	yEd-3.25
+DISTNAME=	yEd-3.25.1
 PKGNAME=	${DISTNAME:S/yEd/yed/}
 CATEGORIES=	editors
 MASTER_SITES=	https://www.yworks.com/resources/yed/demo/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.yworks.com/en/
+HOMEPAGE=	https://www.yworks.com/products/yed
 COMMENT=	Graph editor (UML, Flowcharts, BPMN and more)
 LICENSE=	yed-license
 
