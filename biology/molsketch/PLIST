@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/26 19:01:45 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/07/23 18:29:46 pin Exp $
 bin/molsketch
 include/libmolsketch/TextInputItem.h
 include/libmolsketch/abstractxmlobject.h
@@ -47,9 +47,6 @@ include/libmolsketch/constants.h
 include/libmolsketch/coordinatedelegate.h
 include/libmolsketch/coordinatemodel.h
 include/libmolsketch/coordinatetableview.h
-include/libmolsketch/core/coreatom.h
-include/libmolsketch/core/corebond.h
-include/libmolsketch/core/coremolecule.h
 include/libmolsketch/debuggable.h
 include/libmolsketch/electronsystem.h
 include/libmolsketch/element.h
@@ -93,6 +90,11 @@ include/libmolsketch/stringify.h
 include/libmolsketch/sumformula.h
 include/libmolsketch/textitem.h
 include/libmolsketch/xmlobjectinterface.h
+include/libmskcore/coreatom.h
+include/libmskcore/corebond.h
+include/libmskcore/coremolecule.h
+include/libmskcore/position.h
+lib/libmolsketch.so
 lib/libmskcore.so
 lib/libobabeliface.so
 share/applications/molsketch.desktop
