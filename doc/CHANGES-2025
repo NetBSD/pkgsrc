@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4432 2025/07/23 08:12:02 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4433 2025/07/23 08:13:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6504,3 +6504,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmocka to 1.1.8 [pin 2025-07-23]
 	Updated www/gumbo-parser to 0.13.1 [pin 2025-07-23]
 	Updated editors/tp-note to 1.25.13 [pin 2025-07-23]
+	Updated emulators/jgenesis to 0.10.1 [pin 2025-07-23]
