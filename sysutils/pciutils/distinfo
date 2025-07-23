@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.48 2025/04/07 11:22:49 jperkin Exp $
+$NetBSD: distinfo,v 1.49 2025/07/23 18:32:32 pin Exp $
 
-BLAKE2s (pciutils-3.13.0.tar.gz) = ae334c70141ef9f02b1651fff58159aab9f60169df4dc71e79bfb397f2c3f718
-SHA512 (pciutils-3.13.0.tar.gz) = 39cf4141c87c9a39fb42ec7a2412525f4283c62a1d1aa3533eb92bae4c59d3beb9a2ab1a9fcfe89b1f6cb8f0a011ef2f32fbed3111d357ce43d9569b3d0253d9
-Size (pciutils-3.13.0.tar.gz) = 661455 bytes
-SHA1 (patch-Makefile) = fa08f05d7d1620859248375f34f88a57b2470f8f
-SHA1 (patch-lib_configure) = c1b3c39459addef566d15913a4cca15ad02207c8
-SHA1 (patch-lib_internal.h) = 27909aa286050e9155ceb5ca6966af49780a0fe9
-SHA1 (patch-lib_libpci.pc.in) = 7b81272b4ba46690da537b7cde23da2dc80dd09a
+BLAKE2s (pciutils-3.14.0.tar.gz) = f1e4110ab4b40a43e1c628b441de602885aef5642381490f71f46e35c27ce9ef
+SHA512 (pciutils-3.14.0.tar.gz) = 3b635274263fea621755b30a7c57348830957d8b4dfb9af69e14e269b07cc4a55a575acb092a5b6a66addb939c31082dfcb79a03531f34a31ea3c3ff7c7ce132
+Size (pciutils-3.14.0.tar.gz) = 710484 bytes
+SHA1 (patch-Makefile) = 2fca9c9248a358484c8ec79fe0f843821f4335bf
+SHA1 (patch-lib_configure) = f41677c323bf1dd79314880844c76289748dab19
+SHA1 (patch-lib_internal.h) = f0c92c4e50cd6d2c9253ff7429993892d2ac2761
+SHA1 (patch-lib_libpci.pc.in) = 467fee3b34afb509ee55c91f8aabf905c13dcf02
