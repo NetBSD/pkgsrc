@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4427 2025/07/22 23:43:56 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4428 2025/07/23 07:17:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6499,3 +6499,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ddclient to 4.0.0 [abs 2025-07-22]
 	Updated www/firefox128 to 128.13.0 [gutteridge 2025-07-22]
 	Updated www/firefox128-l10n to 128.13.0 [gutteridge 2025-07-22]
+	Updated graphics/ImageMagick to 7.1.2.0 [triaxx 2025-07-23]
