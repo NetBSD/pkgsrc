@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_rtc__base_memory__usage.cc,v 1.1 2025/07/15 13:58:05 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_rtc__base_memory__usage.cc,v 1.2 2025/07/23 13:57:35 ryoon Exp $
 
 --- third_party/libwebrtc/rtc_base/memory_usage.cc.orig	2025-05-21 12:27:20.023110519 +0000
 +++ third_party/libwebrtc/rtc_base/memory_usage.cc
