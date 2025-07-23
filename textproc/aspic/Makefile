@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2021/04/22 10:16:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/23 17:03:29 prlw1 Exp $
 
-DISTNAME=	aspic-1.05
+DISTNAME=	aspic-2.00
 CATEGORIES=	textproc
-#MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/aspic/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PhilipHazel/}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	http://quercite.dx.am/

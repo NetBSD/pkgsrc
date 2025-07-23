@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:21:44 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/07/23 17:03:29 prlw1 Exp $
 
-BLAKE2s (aspic-1.05.tar.gz) = 9d48065786b347cf7f338c37b9694f4c33437664f3f833eeb6fa82602e25d8af
-SHA512 (aspic-1.05.tar.gz) = 3a3757a8f82dc4faa89441cedfe99ebfb5375457204bff3dd220c643ba3bb6e3c63872f308db34a4941ea83dbf6101b5594af0abef21fae349a8c1152d3c9079
-Size (aspic-1.05.tar.gz) = 246999 bytes
-SHA1 (patch-Makefile.in) = a38027c30132b528d64cc613ac8d078e9fd8814c
+BLAKE2s (aspic-2.00.tar.gz) = c1df4a36d113e055d3557992a4f71a3b26b199a8ac0160d5d025acd7f9bd5fce
+SHA512 (aspic-2.00.tar.gz) = 5c58ee675d21a1336308ae4c6ff9976eb64c53f431ec9681cfaac14478ca715ae6248f5bb4edecf1ee35ecd0efe8915cfc34bce867c9ac7db9c0231a85cacb19
+Size (aspic-2.00.tar.gz) = 299443 bytes
+SHA1 (patch-Makefile.in) = 8e02d077ca8f169d825ef1f1e77d000efac2024c
