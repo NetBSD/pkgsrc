@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4434 2025/07/23 10:21:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4435 2025/07/23 10:41:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6506,3 +6506,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/tp-note to 1.25.13 [pin 2025-07-23]
 	Updated emulators/jgenesis to 0.10.1 [pin 2025-07-23]
 	Updated graphics/gifski to 1.34.0 [wiz 2025-07-23]
+	Updated x11/qt5ct to 1.9 [wiz 2025-07-23]
