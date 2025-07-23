@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4436 2025/07/23 11:11:00 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.4437 2025/07/23 12:08:15 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6508,3 +6508,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gifski to 1.34.0 [wiz 2025-07-23]
 	Updated x11/qt5ct to 1.9 [wiz 2025-07-23]
 	Updated pkgtools/pkgin to 25.7.0 [jperkin 2025-07-23]
+	Updated editors/yed to 3.25.1 [abs 2025-07-23]
