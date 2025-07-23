@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2024/01/06 09:07:07 pin Exp $
+$NetBSD: distinfo,v 1.13 2025/07/23 08:09:09 pin Exp $
 
-BLAKE2s (cmocka-1.1.7.tar.xz) = 319b75e3a0ed138f512913cd4e130d1dc977763a5d25f7378392ca28396a2955
-SHA512 (cmocka-1.1.7.tar.xz) = fe451893474dce1270e12af707a9a8fe1f0217e1782b4e1a67d25dadf56ff4a5e7dbc9ba4431f774aedffa46a40a28a6a0488df24feefb2f93e90fd2369c2c88
-Size (cmocka-1.1.7.tar.xz) = 84064 bytes
-SHA1 (patch-CompilerChecks.cmake) = 08052e3fac8c3c850bfa9a96c2fa30fde377dd95
-SHA1 (patch-include_cmocka.h) = bfde5dbac32b37d1cd31fa1f1b452ce163b0cf53
+BLAKE2s (cmocka-1.1.8.tar.xz) = 1d6c29c4031008e8e44cb9838ff1ea20498f3b67ac22c36c631cf906adbd667c
+SHA512 (cmocka-1.1.8.tar.xz) = 59c3d8732c5558abf4dd9aedac2d5e41cf7693c26a88932449c3dec7be7903c479515f15b4ab8876e4b03f3b4b68460ef34bc6ce079677262638c15e29da37ef
+Size (cmocka-1.1.8.tar.xz) = 77872 bytes
+SHA1 (patch-CompilerChecks.cmake) = cca13b204281b4e36f011178ccfd9a38b8897918
+SHA1 (patch-include_cmocka.h) = 262f1a4a82e518021e1bcdb22c7fa24792099788
