@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/02/03 13:11:51 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/07/23 12:07:53 abs Exp $
 
-BLAKE2s (yEd-3.25.zip) = 228b82e8c1a1d878d4dc5ab17edae215dc11a202a3037c8c1841aba14f1c73ea
-SHA512 (yEd-3.25.zip) = 5f14cee58639d0ae8c88f9d4e9dcfc1c3bdaf4df88a72954c242aa6a2b74e35a5563b705422e33e838fa4d1b234ce08a595bf389d93d1775c1fbfdebadb20d6d
-Size (yEd-3.25.zip) = 36604018 bytes
+BLAKE2s (yEd-3.25.1.zip) = ad9b9461de9da2570a1ca24279e2dca6cca4dc299501fa157ab43a63422ec4dc
+SHA512 (yEd-3.25.1.zip) = cdaf9821a1f2c79bb7eb01c854e3a477c8aa31a4288714a52856f49595f0c5e0057fdf6c631016b0836cf3efd5efca3131a491a95196e150b12490e37ddb67df
+Size (yEd-3.25.1.zip) = 36492327 bytes
