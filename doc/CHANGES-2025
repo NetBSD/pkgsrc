@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4442 2025/07/23 18:30:14 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4443 2025/07/23 18:31:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6514,3 +6514,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/kotlin to 2.2.0 [schmonz 2025-07-23]
 	Updated textproc/aspic to 2.00 [prlw1 2025-07-23]
 	Updated biology/molsketch to 0.8.2 [pin 2025-07-23]
+	Updated sysutils/xplr to 1.0.1 [pin 2025-07-23]
