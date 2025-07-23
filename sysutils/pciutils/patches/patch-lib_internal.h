@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_internal.h,v 1.6 2025/04/07 11:22:49 jperkin Exp $
+$NetBSD: patch-lib_internal.h,v 1.7 2025/07/23 18:32:32 pin Exp $
 
 No symbol versioning available on SunOS.
 
---- lib/internal.h.orig	2025-02-28 18:43:48.758232339 +0000
+--- lib/internal.h.orig	2025-07-23 14:28:45.448123907 +0000
 +++ lib/internal.h
 @@ -23,6 +23,17 @@
  #define STATIC_ALIAS(_decl, _for) VERSIONED_ABI _decl { return _for; }
