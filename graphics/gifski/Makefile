@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/04/12 06:54:18 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/07/23 10:21:22 wiz Exp $
 
-DISTNAME=	gifski-1.32.0
-PKGREVISION=	1
+DISTNAME=	gifski-1.34.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
@@ -18,5 +17,5 @@ LICENSE=	gnu-agpl-v3
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
