@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2025/01/23 07:12:38 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/07/24 13:41:04 wiz Exp $
 
 BLAKE2s (Net-Curl-0.57.tar.gz) = 5abf41dd0887f7119deed622611d7852ba43dd48b666ea295aa878a9258a1b7b
 SHA512 (Net-Curl-0.57.tar.gz) = 510aaaef037d20191dd33999f7a8946ebb68d61dcac3b4858b9a98fe774ff9a2bbc78904d5a48e677761c42c167110877ffc5f21d74aee223b36ee8b02586bf7
 Size (Net-Curl-0.57.tar.gz) = 109678 bytes
+SHA1 (patch-Makefile.PL) = 8a4a0190c5b60ea469eb19811e8c3fd283556390
