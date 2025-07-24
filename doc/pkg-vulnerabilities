@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.475 2025/07/22 09:47:18 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.476 2025/07/24 08:22:08 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27202,3 +27202,11 @@ mbedtls<3.6.4		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-202
 mbedtls>=3.6.1<3.6.4	side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-49087
 powerdns-recursor<5.0.12	cache-poisoning		https://nvd.nist.gov/vuln/detail/CVE-2025-30192
 py{27,39,310,311,312,313}-starlette<0.47.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54121
+libssh<0.11.2	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-4878
+viewvc<1.2.4	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-54141
+chromium<138.0.7204.168	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8010
+chromium<138.0.7204.168	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8011
+php{56,73,74,80,81,82,83,84}-xdebug-[0-9]*	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2015-10141
+apache<2.4.65	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-54090
+py{27,39,310,311,312,313}-mezzanine<6.1.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-50481
+redis-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-46686
