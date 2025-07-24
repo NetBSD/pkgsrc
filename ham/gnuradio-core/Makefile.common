@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2025/07/03 19:18:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.64 2025/07/24 07:37:05 wiz Exp $
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
@@ -49,7 +49,7 @@ USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c11
 # Experimentally, FORCE_CXX_STD=c++11 fails and =c++17 succeeds, for
 # building gnuradio-core and gr-osmosdr (with gcc10).
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++17 filesystem
 FORCE_CXX_STD=		c++17
 
 USE_TOOLS=	gmake perl pkg-config
