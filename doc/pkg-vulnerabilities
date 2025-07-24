@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.476 2025/07/24 08:22:08 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.477 2025/07/24 08:27:31 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27210,3 +27210,12 @@ php{56,73,74,80,81,82,83,84}-xdebug-[0-9]*	command-injection	https://nvd.nist.go
 apache<2.4.65	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-54090
 py{27,39,310,311,312,313}-mezzanine<6.1.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-50481
 redis-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-46686
+thunderbird<140		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-54/
+thunderbird<128.12	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2025-55/
+firefox<141		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-56/
+firefox115<115.26	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-57/
+firefox128<128.13	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-58/
+firefox140<140.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-59/
+thunderbird<141		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-61/
+thunderbird<128.13	multiple-vulnerabilities	https://www.mozilla.org/security/advisories/mfsa2025-62/
+thunderbird<140.1	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-63/
