@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.115 2025/07/10 15:24:28 taca Exp $
+$NetBSD: distinfo,v 1.116 2025/07/24 15:12:51 tsutsui Exp $
 
 BLAKE2s (samba-4.21.7.tar.gz) = 4cee4b3035ff21c547049e348ca7dac48cadfb5a653277bf06f4f9d8595a4fa9
 SHA512 (samba-4.21.7.tar.gz) = f44a0dc880b2a5694f9c46ff11c808ae263f68c91cc9b0e32869bb44f84c1fdcc49370a396f38e0f452133c29357d8ad80a689af67bd85f648b2121e7792b555
@@ -29,6 +29,7 @@ SHA1 (patch-nsswitch_wscript__build) = 5be3e07f8a34ae3e2f68126eb6f05f8b65f5be2f
 SHA1 (patch-python_pyglue.c) = ba8b0f7d471f16e603a050f735d4a92a95e0b886
 SHA1 (patch-source3_lib_sysquotas__4A.c) = da4e557485b95dbd780b3345613c506ef18d7923
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 962bb35b140ec11c0035ffa7fb83c9143fa5615f
+SHA1 (patch-source3_modules_vfs__cap.c) = 7299d9b83c3ec08a22f317bbbdbed9721defd086
 SHA1 (patch-source3_modules_vfs__solarisacl.c) = 1a56006393d08d9977c60e75fddfcf501e2233f7
 SHA1 (patch-source3_modules_vfs__solarisacl.h) = 11f8664641a14fd83d78b1a7e10056a77b7b634f
 SHA1 (patch-source3_printing_samba-bgqd.c) = e9b83c35fbb24c702650d745b82fe6c9efbcdf76
