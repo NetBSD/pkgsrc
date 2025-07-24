@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4453 2025/07/24 13:19:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4454 2025/07/24 13:30:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6532,3 +6532,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/dropbear to 2025.88 [adam 2025-07-24]
 	Updated devel/py-amaranth to 0.5.7 [adam 2025-07-24]
 	Updated devel/py-resolvelib to 1.2.0 [adam 2025-07-24]
+	Updated www/apache24 to 2.4.65 [adam 2025-07-24]
+	Updated editors/neovim to 0.11.3 [adam 2025-07-24]
