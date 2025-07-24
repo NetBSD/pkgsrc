@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/04/15 15:47:10 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/07/24 07:33:44 adam Exp $
 
-DISTNAME=	qrcode-8.1
+DISTNAME=	qrcode-8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=q/qrcode/}
