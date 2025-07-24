@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2025/06/11 14:29:30 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/07/24 13:30:40 adam Exp $
 
-DISTNAME=	neovim-0.11.2
+DISTNAME=	neovim-0.11.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://neovim.org/
+HOMEPAGE=	https://neovim.io/
 COMMENT=	Vim fork focused on extensibility and usability
 LICENSE=	apache-2.0 AND vim-license
 
