@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/04/27 05:04:31 wiz Exp $
+$NetBSD: distinfo,v 1.15.2.1 2025/07/24 22:21:07 maya Exp $
 
 BLAKE2s (Authen-SASL-2.1800.tar.gz) = a49089c4d2fe9765df3a938472ce587c69fd3a9b53d86dd2f0cc8281c089007d
 SHA512 (Authen-SASL-2.1800.tar.gz) = feedfe2f65a531cb6f7c740404681f0f1a2ebe9308efb5e33cf225a3b84e5e958f53cd68ae0a9949089fd52a71ee5bed1b9a1ebe9024953f6868723a12102deb
 Size (Authen-SASL-2.1800.tar.gz) = 39499 bytes
+SHA1 (patch-lib_Authen_SASL_Perl_DIGEST__MD5.pm) = 121a2218ff2c34cae350e9fd50dceddb29dbb66e
