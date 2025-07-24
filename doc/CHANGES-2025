@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4452 2025/07/24 13:11:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4453 2025/07/24 13:19:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6530,3 +6530,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.event to 5.1.1 [adam 2025-07-24]
 	Updated devel/re2 to 20250722 [adam 2025-07-24]
 	Updated security/dropbear to 2025.88 [adam 2025-07-24]
+	Updated devel/py-amaranth to 0.5.7 [adam 2025-07-24]
+	Updated devel/py-resolvelib to 1.2.0 [adam 2025-07-24]
