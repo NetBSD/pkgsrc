@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/04/15 07:56:55 adam Exp $
+# $NetBSD: Makefile,v 1.63 2025/07/24 08:31:13 adam Exp $
 
-DISTNAME=	boto3-1.37.34
+DISTNAME=	boto3-1.39.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto3/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-botocore>=${PKGVERSION_NOREV}:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.7.1:../../textproc/py-jmespath
-DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.11.0:../../net/py-s3transfer
+DEPENDS+=	${PYPKGPREFIX}-s3transfer>=0.13.0:../../net/py-s3transfer
 
 USE_LANGUAGES=	# none
 
