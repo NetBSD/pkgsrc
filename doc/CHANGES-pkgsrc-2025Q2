@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.9 2025/07/23 12:22:57 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.10 2025/07/24 22:30:46 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -61,3 +61,15 @@ editors/vim-share: Security fix
 Pullup ticket #6994 - requested by gutteridge
 www/firefox128: Security fix
 www/firefox128-l10n: Security fix
+
+Pullup ticket #6995 - requested by taca
+archivers/7-zip: Security fix
+
+Pullup ticket #6996 - requested by taca
+www/apache24: Security fix
+
+Pullup ticket #6997 - requested by taca
+security/p5-Authen-SASL: Security fix
+
+Pullup ticket #6998 - requested by taca
+net/unbound: Security fix
