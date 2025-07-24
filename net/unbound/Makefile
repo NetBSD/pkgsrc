@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2025/04/24 21:29:08 he Exp $
+# $NetBSD: Makefile,v 1.125.2.1 2025/07/24 22:29:41 maya Exp $
 
-DISTNAME=	unbound-1.23.0
+DISTNAME=	unbound-1.23.1
 CATEGORIES=	net
 MASTER_SITES=	https://nlnetlabs.nl/downloads/unbound/
 
