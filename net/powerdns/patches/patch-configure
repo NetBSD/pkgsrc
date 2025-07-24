@@ -1,0 +1,84 @@
+$NetBSD: patch-configure,v 1.14 2025/07/24 07:50:01 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2025-07-24 07:47:20.356946188 +0000
++++ configure
+@@ -22199,12 +22199,12 @@ fi
+ then :
+ 
+ 
+-        if test "x$enable_fortify_source" == "xauto"
++        if test "x$enable_fortify_source" = "xauto"
+ then :
+   enable_fortify_source=3
+ fi
+ 
+-        if test "x$enable_fortify_source" == "x3"
++        if test "x$enable_fortify_source" = "x3"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=3" >&5
+@@ -22253,7 +22253,7 @@ fi
+ 
+ fi
+ 
+-        if test "x$enable_fortify_source" == "x2"
++        if test "x$enable_fortify_source" = "x2"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=2" >&5
+@@ -22302,7 +22302,7 @@ fi
+ 
+ fi
+ 
+-    if test "x$enable_fortify_source" == "x1"
++    if test "x$enable_fortify_source" = "x1"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -D_FORTIFY_SOURCE=1" >&5
+@@ -27378,7 +27378,7 @@ fi
+   if test "x$PG_CONFIG" != "x" -o "x$PGSQL_LIBS" = "x"
+ then :
+ 
+-        if test "x$PG_CONFIG" == "x"
++        if test "x$PG_CONFIG" = "x"
+ then :
+ 
+       # Extract the first word of "pg_config", so it can be a program name with args.
+@@ -27428,7 +27428,7 @@ fi
+ 
+ 
+ fi
+-    if test "x$PG_CONFIG" == "x"
++    if test "x$PG_CONFIG" = "x"
+ then :
+ 
+       as_fn_error $? "Can not find pg_config, use --with-pg-config to specify the path to pg_config" "$LINENO" 5
+@@ -31468,7 +31468,7 @@ fi
+ then :
+ 
+ 
+-        if test "x$enable_lto" == "xthin"
++        if test "x$enable_lto" = "xthin"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto=thin" >&5
+@@ -31518,7 +31518,7 @@ fi
+ 
+ fi
+ 
+-        if test "x$enable_lto" == "xauto"
++        if test "x$enable_lto" = "xauto"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto=auto" >&5
+@@ -31568,7 +31568,7 @@ fi
+ 
+ fi
+ 
+-    if test "x$enable_lto" == "xyes"
++    if test "x$enable_lto" = "xyes"
+ then :
+ 
+       { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler handles -flto" >&5
