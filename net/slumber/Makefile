@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2025/07/17 17:14:47 pin Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/24 11:54:03 pin Exp $
 
 DISTNAME=	slumber-3.2.0
+# slumber-3.3.0 requires Rust >= 1.88
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
