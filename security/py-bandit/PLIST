@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 05:08:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/07/24 10:46:42 adam Exp $
 bin/bandit-${PYVERSSUFFIX}
 bin/bandit-baseline-${PYVERSSUFFIX}
 bin/bandit-config-generator-${PYVERSSUFFIX}
@@ -157,6 +157,9 @@ ${PYSITELIB}/bandit/plugins/general_hardcoded_tmp.pyo
 ${PYSITELIB}/bandit/plugins/hashlib_insecure_functions.py
 ${PYSITELIB}/bandit/plugins/hashlib_insecure_functions.pyc
 ${PYSITELIB}/bandit/plugins/hashlib_insecure_functions.pyo
+${PYSITELIB}/bandit/plugins/huggingface_unsafe_download.py
+${PYSITELIB}/bandit/plugins/huggingface_unsafe_download.pyc
+${PYSITELIB}/bandit/plugins/huggingface_unsafe_download.pyo
 ${PYSITELIB}/bandit/plugins/injection_paramiko.py
 ${PYSITELIB}/bandit/plugins/injection_paramiko.pyc
 ${PYSITELIB}/bandit/plugins/injection_paramiko.pyo
@@ -214,3 +217,4 @@ ${PYSITELIB}/bandit/plugins/weak_cryptographic_key.pyo
 ${PYSITELIB}/bandit/plugins/yaml_load.py
 ${PYSITELIB}/bandit/plugins/yaml_load.pyc
 ${PYSITELIB}/bandit/plugins/yaml_load.pyo
+man/man1/bandit-${PYVERSSUFFIX}.1
