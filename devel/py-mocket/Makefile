@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/06/13 08:51:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/07/24 07:38:25 adam Exp $
 
-DISTNAME=	mocket-3.13.9
+DISTNAME=	mocket-3.13.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mocket/}
