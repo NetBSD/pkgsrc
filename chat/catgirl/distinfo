@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2025/07/25 18:41:27 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/07/25 19:30:09 vins Exp $
 
 BLAKE2s (catgirl-2.2a.tar.gz) = 1eb55626f1732e24beec306ef55d508a1f66e1db11299b63b6faadd10007eb33
 SHA512 (catgirl-2.2a.tar.gz) = 988750c960630ec8314ebde7b9802f8b6a3087f733359f61f49c4f83cb6e327c03cde9ad88f2cb535d56ead1376cd121a7124c367c90394a6d4d7f80b25e329f
 Size (catgirl-2.2a.tar.gz) = 69660 bytes
-SHA1 (patch-configure) = 2cb05f06685e2790002ec9b90e7f1621468f2cb4
+SHA1 (patch-chat.c) = 5360774b099892b2f0c90f1cd026113772633448
+SHA1 (patch-configure) = 1d3c3815393d8c2943325bf16dbdfb02b82b096e
