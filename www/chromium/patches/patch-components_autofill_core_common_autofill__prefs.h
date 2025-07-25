@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.3 2025/07/07 09:23:29 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__prefs.h,v 1.4 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_prefs.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/autofill/core/common/autofill_prefs.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/autofill/core/common/autofill_prefs.h
 @@ -32,7 +32,7 @@ inline constexpr std::string_view kAutof
  inline constexpr char kAutofillAiOptInStatus[] =

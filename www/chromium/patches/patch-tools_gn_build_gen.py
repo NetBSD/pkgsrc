@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gn_build_gen.py,v 1.3 2025/07/07 09:23:38 kikadf Exp $
+$NetBSD: patch-tools_gn_build_gen.py,v 1.4 2025/07/25 16:17:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/gn/build/gen.py.orig	2025-06-30 06:54:11.000000000 +0000
+--- tools/gn/build/gen.py.orig	2025-07-21 19:32:31.000000000 +0000
 +++ tools/gn/build/gen.py
 @@ -94,6 +94,12 @@ class Platform(object):
    def is_solaris(self):
