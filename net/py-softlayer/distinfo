@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/01/25 11:43:43 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/07/25 11:24:09 adam Exp $
 
-BLAKE2s (softlayer-6.2.6.tar.gz) = 42535aabdb54e370358aa82f785e675e7c68ac4fd02cf4d98692cdaf833acced
-SHA512 (softlayer-6.2.6.tar.gz) = cddc88395d5926e170f685a83c05b967f2687d8f96912f54a24448ab94af8873dea5e26b5c35c2b9629b6b47274c0646a1e86fbbfed7a77416a2cb3f2feea0e3
-Size (softlayer-6.2.6.tar.gz) = 501889 bytes
+BLAKE2s (softlayer-6.2.7.tar.gz) = b59e65cd4f04a91032164d3866ad8446f68d6139d95b182eca5674892b3962e8
+SHA512 (softlayer-6.2.7.tar.gz) = 2126bfdf62058760482409ee49b121ba72d216ad8a4b20e10bf05ebe32b73e3ae088c79c972cc40315d91760718b4eb5d56544d5b54765c06f345cf8f724c9e6
+Size (softlayer-6.2.7.tar.gz) = 480192 bytes

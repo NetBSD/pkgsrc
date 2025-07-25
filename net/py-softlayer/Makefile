@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/04/15 09:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/25 11:24:09 adam Exp $
 
-DISTNAME=	softlayer-6.2.6
+DISTNAME=	softlayer-6.2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SoftLayer/}
 
