@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/10/03 08:40:16 adam Exp $
+$NetBSD: distinfo,v 1.17 2025/07/25 11:09:49 adam Exp $
 
-BLAKE2s (python_sql-1.5.2.tar.gz) = d59e9344f339dc91a8d4b260b938876cea509915c2bcdec49b9a2902d0c8e0e8
-SHA512 (python_sql-1.5.2.tar.gz) = 132be94e111379938ac275401acbde62e493a4952f24d8433cb38519b342aad95bde63ecd29a3f82a9024f4f04424dc30b5abcf955e7be737484bf1fecc82d6e
-Size (python_sql-1.5.2.tar.gz) = 39171 bytes
+BLAKE2s (python_sql-1.6.0.tar.gz) = 24322b12d7f1b3b36c8266b96a9dd477b79bf246074ff258b368fdd5c15c0087
+SHA512 (python_sql-1.6.0.tar.gz) = 02e86ff078fa68d7ad8def275eab2df556c2f450df896ca3e66cbed60bfa2b4402c41068d28cba859123ecb3b20546da9705ff2afb13da5a259458e7e30df2d5
+Size (python_sql-1.6.0.tar.gz) = 39406 bytes
