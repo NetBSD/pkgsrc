@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/04/12 21:10:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/07/25 09:47:55 adam Exp $
 
-DISTNAME=	pytest-random-order-1.1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
+DISTNAME=	pytest_random_order-1.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-random-order/}
 
