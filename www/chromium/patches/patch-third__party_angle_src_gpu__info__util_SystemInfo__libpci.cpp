@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__libpci.cpp,v 1.3 2025/07/07 09:23:37 kikadf Exp $
+$NetBSD: patch-third__party_angle_src_gpu__info__util_SystemInfo__libpci.cpp,v 1.4 2025/07/25 16:17:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp.orig	2025-06-30 06:54:11.000000000 +0000
+--- third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp.orig	2025-07-21 19:32:31.000000000 +0000
 +++ third_party/angle/src/gpu_info_util/SystemInfo_libpci.cpp
 @@ -12,6 +12,11 @@
  #include <pci/pci.h>

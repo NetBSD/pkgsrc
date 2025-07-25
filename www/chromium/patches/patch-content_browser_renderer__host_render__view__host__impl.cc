@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_renderer__host_render__view__host__impl.cc,v 1.3 2025/07/07 09:23:32 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_render__view__host__impl.cc,v 1.4 2025/07/25 16:17:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/render_view_host_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- content/browser/renderer_host/render_view_host_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ content/browser/renderer_host/render_view_host_impl.cc
 @@ -271,7 +271,7 @@ void RenderViewHostImpl::GetPlatformSpec
        display::win::GetScreenWin()->GetSystemMetricsInDIP(SM_CYVSCROLL);

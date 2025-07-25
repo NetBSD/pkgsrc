@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/07/07 09:23:23 kikadf Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/25 16:17:08 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			138.0.7204.96
+VERSION=			138.0.7204.168
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -91,7 +91,7 @@ SUBST_FILES.path+=	services/device/hid/hid_service_freebsd.cc
 SUBST_FILES.path+=	services/device/time_zone_monitor/time_zone_monitor_linux.cc
 SUBST_FILES.path+=	third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp
 SUBST_FILES.path+=	third_party/perfetto/src/base/utils.cc
-SUBST_FILES.path+=	ui/gtk/ime_compat_check.cc
+#SUBST_FILES.path+=	ui/gtk/ime_compat_check.cc
 SUBST_FILES.path+=	v8/tools/run-paxctl.py
 SUBST_VARS.path+=	PREFIX PKG_SYSCONFBASE VARBASE QTDIR X11BASE PYTHONBIN
 

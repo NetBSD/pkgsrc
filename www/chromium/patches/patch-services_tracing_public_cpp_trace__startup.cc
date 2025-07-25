@@ -1,10 +1,10 @@
-$NetBSD: patch-services_tracing_public_cpp_trace__startup.cc,v 1.1 2025/07/07 09:23:36 kikadf Exp $
+$NetBSD: patch-services_tracing_public_cpp_trace__startup.cc,v 1.2 2025/07/25 16:17:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/tracing/public/cpp/trace_startup.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- services/tracing/public/cpp/trace_startup.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ services/tracing/public/cpp/trace_startup.cc
 @@ -66,7 +66,7 @@ void EnableStartupTracingIfNeeded(bool w
    // Create the PerfettoTracedProcess.

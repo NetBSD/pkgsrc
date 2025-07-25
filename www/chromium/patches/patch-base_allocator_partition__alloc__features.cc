@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_partition__alloc__features.cc,v 1.1 2025/07/07 09:23:23 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__alloc__features.cc,v 1.2 2025/07/25 16:17:08 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_alloc_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- base/allocator/partition_alloc_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ base/allocator/partition_alloc_features.cc
 @@ -164,7 +164,7 @@ BASE_FEATURE(kPartitionAllocEventuallyZe
  // disabled elsewhere (for now). Does not apply to Windows.

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_policy_web__app__policy__manager.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_policy_web__app__policy__manager.cc,v 1.4 2025/07/25 16:17:13 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/web_applications/policy/web_app_policy_manager.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/web_applications/policy/web_app_policy_manager.cc
 @@ -111,7 +111,7 @@ namespace web_app {
  

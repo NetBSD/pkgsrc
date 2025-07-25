@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_crash__keys.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
+$NetBSD: patch-chrome_common_crash__keys.cc,v 1.4 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/crash_keys.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/common/crash_keys.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/common/crash_keys.cc
 @@ -51,7 +51,9 @@ class CrashKeyWithName {
    ~CrashKeyWithName() = delete;
