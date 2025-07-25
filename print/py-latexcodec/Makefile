@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/15 05:04:20 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/07/25 11:20:10 adam Exp $
 
-DISTNAME=	latexcodec-3.0.0
+DISTNAME=	latexcodec-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/latexcodec/}
 
