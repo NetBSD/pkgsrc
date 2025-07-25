@@ -1,18 +1,18 @@
-$NetBSD: patch-configure,v 1.1 2022/03/04 10:09:15 nia Exp $
+$NetBSD: patch-configure,v 1.2 2025/07/25 18:41:27 vins Exp $
 
 NetBSD support. Note that native curses does not work.
 
---- configure.orig	2022-02-23 23:05:10.000000000 +0000
+--- configure.orig	2024-03-22 01:38:43.000000000 +0000
 +++ configure
-@@ -53,6 +53,12 @@ case "$(uname)" in
+@@ -54,6 +54,12 @@ case "$(uname)" in
  		config libtls ncursesw
  		defvar OPENSSL_BIN openssl exec_prefix /bin/openssl
  		;;
 +	(NetBSD)
 +		cflags "-D'explicit_bzero(b,l)=explicit_memset((b),0,(l))'"
-+		config libtls ncursesw
-+		defvar OPENSSL_BIN openssl exec_prefix /usr/bin/openssl
++		config libtls ncurses
 +		echo 'OBJS += compat_readpassphrase.o'
++		defstr OPENSSL_BIN /usr/bin/openssl
 +		;;
  	(*)
  		config libtls ncursesw

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/05/06 08:40:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/25 18:41:27 vins Exp $
 
-DISTNAME=	catgirl-2.2
-PKGREVISION=	1
+DISTNAME=	catgirl-2.2a
 CATEGORIES=	chat
 MASTER_SITES=	https://git.causal.agency/catgirl/snapshot/
 
