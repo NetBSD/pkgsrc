@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4461 2025/07/25 11:24:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4462 2025/07/25 11:32:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6547,3 +6547,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-portend to 3.2.1 [adam 2025-07-25]
 	Updated print/py-latexcodec to 3.0.1 [adam 2025-07-25]
 	Updated net/py-softlayer to 6.2.7 [adam 2025-07-25]
+	Updated math/py-numpy to 2.3.2 [adam 2025-07-25]
+	Updated textproc/py-numpydoc to 1.9.0 [adam 2025-07-25]
