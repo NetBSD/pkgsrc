@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4456 2025/07/25 08:34:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4457 2025/07/25 09:27:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6537,3 +6537,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/samba4 to 4.21.7nb1 [tsutsui 2025-07-24]
 	Updated devel/py-rpds-py to 0.26.0 [adam 2025-07-25]
 	Updated textproc/py-jsonschema to 4.25.0 [adam 2025-07-25]
+	Updated emulators/qemu to 10.0.3 [adam 2025-07-25]
+	Updated audio/taglib to 2.1.1 [adam 2025-07-25]
