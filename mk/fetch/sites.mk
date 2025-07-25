@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.197 2025/07/25 22:17:33 zafer Exp $
+# $NetBSD: sites.mk,v 1.198 2025/07/25 23:00:48 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -127,7 +127,6 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.ie.debian.org/debian/ \
 	http://ftp.is.debian.org/debian/ \
 	http://ftp.it.debian.org/debian/ \
-	http://ftp.jp.debian.org/debian/ \
 	http://ftp.nl.debian.org/debian/ \
 	http://ftp.no.debian.org/debian/ \
 	http://ftp.nz.debian.org/debian/ \
