@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.4 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -28,7 +28,7 @@ bool IsOnDeviceStorageEnabled() {
  }

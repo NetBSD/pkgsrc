@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.3 2025/07/07 09:23:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.4 2025/07/25 16:17:11 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -24,7 +24,7 @@
  #include "chrome/browser/glic/host/glic_synthetic_trial_manager.h"  // nogncheck

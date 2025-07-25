@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.3 2025/07/07 09:23:29 kikadf Exp $
+$NetBSD: patch-chrome_services_printing_print__backend__service__impl.cc,v 1.4 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/services/printing/print_backend_service_impl.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/services/printing/print_backend_service_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/services/printing/print_backend_service_impl.cc
 @@ -48,7 +48,7 @@
  #include "printing/backend/cups_connection_pool.h"

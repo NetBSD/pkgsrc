@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_client_fake__gpu__memory__buffer.h,v 1.1 2025/07/07 09:23:33 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_client_fake__gpu__memory__buffer.h,v 1.2 2025/07/25 16:17:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/client/fake_gpu_memory_buffer.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- gpu/command_buffer/client/fake_gpu_memory_buffer.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ gpu/command_buffer/client/fake_gpu_memory_buffer.h
 @@ -12,7 +12,7 @@
  
