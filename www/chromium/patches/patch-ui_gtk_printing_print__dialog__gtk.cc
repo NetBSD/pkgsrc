@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gtk_printing_print__dialog__gtk.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
+$NetBSD: patch-ui_gtk_printing_print__dialog__gtk.cc,v 1.4 2025/07/25 16:17:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gtk/printing/print_dialog_gtk.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/gtk/printing/print_dialog_gtk.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/gtk/printing/print_dialog_gtk.cc
 @@ -445,7 +445,7 @@ void PrintDialogGtk::ShowDialog(
    GtkPrintCapabilities cap = static_cast<GtkPrintCapabilities>(

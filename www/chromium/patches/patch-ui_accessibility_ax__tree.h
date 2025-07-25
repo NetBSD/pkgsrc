@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__tree.h,v 1.2 2025/07/07 09:23:39 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__tree.h,v 1.3 2025/07/25 16:17:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/accessibility/ax_tree.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/accessibility/ax_tree.h
 @@ -63,7 +63,7 @@ enum class AXTreeUnserializeError {
  };

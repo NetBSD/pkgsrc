@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
+$NetBSD: patch-gpu_ipc_service_gpu__init.cc,v 1.4 2025/07/25 16:17:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/ipc/service/gpu_init.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- gpu/ipc/service/gpu_init.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ gpu/ipc/service/gpu_init.cc
 @@ -156,7 +156,7 @@ void InitializePlatformOverlaySettings(G
  

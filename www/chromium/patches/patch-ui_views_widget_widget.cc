@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_views_widget_widget.cc,v 1.3 2025/07/07 09:23:40 kikadf Exp $
+$NetBSD: patch-ui_views_widget_widget.cc,v 1.4 2025/07/25 16:17:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/views/widget/widget.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/views/widget/widget.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/views/widget/widget.cc
 @@ -63,7 +63,7 @@
  #include "ui/views/window/custom_frame_view.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_crashpad_crashpad_util_posix_symbolic__constants__posix.cc,v 1.3 2025/07/07 09:23:37 kikadf Exp $
+$NetBSD: patch-third__party_crashpad_crashpad_util_posix_symbolic__constants__posix.cc,v 1.4 2025/07/25 16:17:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ third_party/crashpad/crashpad/util/posix/symbolic_constants_posix.cc
 @@ -68,7 +68,7 @@ constexpr const char* kSignalNames[] = {
      "INFO",

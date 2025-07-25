@@ -1,10 +1,10 @@
-$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h,v 1.2 2025/07/07 09:23:29 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h,v 1.3 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.h
 @@ -365,7 +365,7 @@ class PaymentsDataManager : public Autof
    void SetAutofillHasSeenIban();

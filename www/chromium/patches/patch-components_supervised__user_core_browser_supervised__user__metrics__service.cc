@@ -1,10 +1,10 @@
-$NetBSD: patch-components_supervised__user_core_browser_supervised__user__metrics__service.cc,v 1.3 2025/07/07 09:23:31 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_browser_supervised__user__metrics__service.cc,v 1.4 2025/07/25 16:17:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/supervised_user/core/browser/supervised_user_metrics_service.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/supervised_user/core/browser/supervised_user_metrics_service.cc
 @@ -68,7 +68,7 @@ SupervisedUserMetricsService::Supervised
        extensions_metrics_delegate_(std::move(extensions_metrics_delegate)) {

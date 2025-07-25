@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.2 2025/07/07 09:23:30 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.3 2025/07/25 16:17:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/device_signals/core/common/linux/platform_utils_linux.cc
 @@ -4,11 +4,22 @@
  

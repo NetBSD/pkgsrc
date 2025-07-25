@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.2 2025/07/07 09:23:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.3 2025/07/25 16:17:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -48,20 +48,20 @@
  #include "content/public/browser/web_ui_controller_interface_binder.h"

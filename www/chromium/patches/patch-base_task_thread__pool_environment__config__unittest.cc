@@ -1,10 +1,10 @@
-$NetBSD: patch-base_task_thread__pool_environment__config__unittest.cc,v 1.3 2025/07/07 09:23:25 kikadf Exp $
+$NetBSD: patch-base_task_thread__pool_environment__config__unittest.cc,v 1.4 2025/07/25 16:17:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/task/thread_pool/environment_config_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- base/task/thread_pool/environment_config_unittest.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ base/task/thread_pool/environment_config_unittest.cc
 @@ -21,7 +21,7 @@ TEST(ThreadPoolEnvironmentConfig, CanUse
              base::FeatureList::IsEnabled(

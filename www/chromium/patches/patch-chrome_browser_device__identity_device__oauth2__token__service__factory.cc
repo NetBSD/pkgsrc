@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_device__identity_device__oauth2__token__service__factory.cc,v 1.3 2025/07/07 09:23:26 kikadf Exp $
+$NetBSD: patch-chrome_browser_device__identity_device__oauth2__token__service__factory.cc,v 1.4 2025/07/25 16:17:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/device_identity/device_oauth2_token_service_factory.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/device_identity/device_oauth2_token_service_factory.cc
 @@ -26,7 +26,7 @@ std::unique_ptr<DeviceOAuth2TokenStore> 
  #if BUILDFLAG(IS_CHROMEOS)

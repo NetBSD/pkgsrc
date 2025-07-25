@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feed_core_v2_feed__network__impl__unittest.cc,v 1.3 2025/07/07 09:23:30 kikadf Exp $
+$NetBSD: patch-components_feed_core_v2_feed__network__impl__unittest.cc,v 1.4 2025/07/25 16:17:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/feed/core/v2/feed_network_impl_unittest.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/feed/core/v2/feed_network_impl_unittest.cc
 @@ -747,8 +747,8 @@ TEST_F(FeedNetworkTest, SendApiRequest_D
  

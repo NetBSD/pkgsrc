@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.3 2025/07/07 09:23:25 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.4 2025/07/25 16:17:10 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2025-06-30 06:54:11.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2025-07-21 19:32:31.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
 @@ -577,7 +577,7 @@ class ChromeContentBrowserClient : publi
    bool IsPluginAllowedToUseDevChannelAPIs(

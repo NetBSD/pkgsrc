@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings__conversion.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
+$NetBSD: patch-printing_print__settings__conversion.cc,v 1.4 2025/07/25 16:17:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings_conversion.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- printing/print_settings_conversion.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ printing/print_settings_conversion.cc
 @@ -291,7 +291,7 @@ std::unique_ptr<PrintSettings> PrintSett
      settings->set_is_modifiable(is_modifiable.value());

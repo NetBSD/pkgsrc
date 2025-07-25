@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__posix.cc,v 1.3 2025/07/07 09:23:24 kikadf Exp $
+$NetBSD: patch-base_process_process__posix.cc,v 1.4 2025/07/25 16:17:09 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_posix.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- base/process/process_posix.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ base/process/process_posix.cc
 @@ -25,10 +25,15 @@
  #include "base/trace_event/base_tracing.h"

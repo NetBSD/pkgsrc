@@ -1,10 +1,10 @@
-$NetBSD: patch-components_viz_service_display__embedder_software__output__surface.cc,v 1.3 2025/07/07 09:23:31 kikadf Exp $
+$NetBSD: patch-components_viz_service_display__embedder_software__output__surface.cc,v 1.4 2025/07/25 16:17:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- components/viz/service/display_embedder/software_output_surface.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ components/viz/service/display_embedder/software_output_surface.cc
 @@ -115,7 +115,7 @@ void SoftwareOutputSurface::SwapBuffersC
    base::TimeTicks now = base::TimeTicks::Now();

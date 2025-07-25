@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_speech-dispatcher_libspeechd__version.h,v 1.3 2025/07/07 09:23:38 kikadf Exp $
+$NetBSD: patch-third__party_speech-dispatcher_libspeechd__version.h,v 1.4 2025/07/25 16:17:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-07-03 13:12:11.749338811 +0000
+--- third_party/speech-dispatcher/libspeechd_version.h.orig	2025-07-24 17:00:09.236955262 +0000
 +++ third_party/speech-dispatcher/libspeechd_version.h
 @@ -0,0 +1,29 @@
 +/*

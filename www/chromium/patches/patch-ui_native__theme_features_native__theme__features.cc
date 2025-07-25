@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_native__theme_features_native__theme__features.cc,v 1.2 2025/07/07 09:23:40 kikadf Exp $
+$NetBSD: patch-ui_native__theme_features_native__theme__features.cc,v 1.3 2025/07/25 16:17:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/native_theme/features/native_theme_features.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/native_theme/features/native_theme_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/native_theme/features/native_theme_features.cc
 @@ -59,7 +59,7 @@ namespace ui {
  

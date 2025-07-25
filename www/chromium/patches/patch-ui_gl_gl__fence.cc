@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_gl__fence.cc,v 1.3 2025/07/07 09:23:39 kikadf Exp $
+$NetBSD: patch-ui_gl_gl__fence.cc,v 1.4 2025/07/25 16:17:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_fence.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- ui/gl/gl_fence.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ ui/gl/gl_fence.cc
 @@ -17,7 +17,7 @@
  #include "ui/gl/gl_surface_egl.h"

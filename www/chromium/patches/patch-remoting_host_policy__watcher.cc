@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_policy__watcher.cc,v 1.3 2025/07/07 09:23:35 kikadf Exp $
+$NetBSD: patch-remoting_host_policy__watcher.cc,v 1.4 2025/07/25 16:17:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/policy_watcher.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- remoting/host/policy_watcher.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ remoting/host/policy_watcher.cc
 @@ -182,7 +182,7 @@ base::Value::Dict PolicyWatcher::GetDefa
    result.Set(key::kRemoteAccessHostAllowEnterpriseFileTransfer, false);

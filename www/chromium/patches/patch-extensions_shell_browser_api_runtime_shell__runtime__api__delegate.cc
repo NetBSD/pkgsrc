@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_shell_browser_api_runtime_shell__runtime__api__delegate.cc,v 1.3 2025/07/07 09:23:33 kikadf Exp $
+$NetBSD: patch-extensions_shell_browser_api_runtime_shell__runtime__api__delegate.cc,v 1.4 2025/07/25 16:17:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2025-06-30 06:54:11.000000000 +0000
+--- extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc.orig	2025-07-21 19:32:31.000000000 +0000
 +++ extensions/shell/browser/api/runtime/shell_runtime_api_delegate.cc
 @@ -45,7 +45,7 @@ void ShellRuntimeAPIDelegate::OpenURL(co
  bool ShellRuntimeAPIDelegate::GetPlatformInfo(PlatformInfo* info) {
