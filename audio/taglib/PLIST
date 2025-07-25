@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/04/10 08:48:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/07/25 09:27:25 adam Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -71,6 +71,9 @@ include/taglib/relativevolumeframe.h
 include/taglib/rifffile.h
 include/taglib/s3mfile.h
 include/taglib/s3mproperties.h
+include/taglib/shortenfile.h
+include/taglib/shortenproperties.h
+include/taglib/shortentag.h
 include/taglib/speexfile.h
 include/taglib/speexproperties.h
 include/taglib/synchronizedlyricsframe.h
@@ -78,6 +81,7 @@ include/taglib/tableofcontentsframe.h
 include/taglib/tag.h
 include/taglib/tag_c.h
 include/taglib/taglib.h
+include/taglib/taglib_config.h
 include/taglib/taglib_export.h
 include/taglib/tbytevector.h
 include/taglib/tbytevectorlist.h
@@ -118,10 +122,10 @@ lib/cmake/taglib/taglib-config.cmake
 lib/cmake/taglib/taglib-targets-noconfig.cmake
 lib/cmake/taglib/taglib-targets.cmake
 lib/libtag.so
-lib/libtag.so.2
 lib/libtag.so.${PKGVERSION}
+lib/libtag.so.2
 lib/libtag_c.so
-lib/libtag_c.so.2
 lib/libtag_c.so.${PKGVERSION}
+lib/libtag_c.so.2
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
