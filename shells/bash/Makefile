@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.120 2025/07/21 17:16:09 kim Exp $
+# $NetBSD: Makefile,v 1.121 2025/07/25 20:15:47 kre Exp $
 
 BASH_VERSION=		5.3
-#BASH_PATCHLEVEL=	37
+BASH_PATCHLEVEL=	3
 
 DISTNAME=	bash-${BASH_VERSION}
-#PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
-PKGREVISION=	1
+PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
+#PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/}
 
-#PATCH_SITES=	${MASTER_SITES:=bash-5.3-patches/}
-#PATCHFILES+=	bash52-001 bash52-002 bash52-003 bash52-004 bash52-005
+PATCH_SITES=	${MASTER_SITES:=bash-5.3-patches/}
+PATCHFILES+=	bash53-001 bash53-002 bash53-003
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/bash/bash.html
