@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4458 2025/07/25 09:48:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4459 2025/07/25 11:12:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6541,3 +6541,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/taglib to 2.1.1 [adam 2025-07-25]
 	Updated devel/py-test-lazy-fixtures to 1.3.2 [adam 2025-07-25]
 	Updated devel/py-test-random-order to 1.2.0 [adam 2025-07-25]
+	Updated databases/py-python-sql to 1.6.0 [adam 2025-07-25]
+	Updated devel/py-serializable to 2.1.0 [adam 2025-07-25]
