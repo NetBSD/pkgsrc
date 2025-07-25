@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/25 20:53:51 vins Exp $
+include/imsg.h
+lib/libimsg.a
+lib/libimsg.so
+lib/pkgconfig/libimsg.pc
+man/man3/ibuf_add.3
+man/man3/imsg_init.3
