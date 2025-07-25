@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/09/18 08:00:07 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/07/25 11:15:43 adam Exp $
 
-BLAKE2s (hatch_nodejs_version-0.3.2.tar.gz) = 06ade7fdedc6eb376e8ecc37a83ca7bcf702d11184da59a09611fb89813f41d5
-SHA512 (hatch_nodejs_version-0.3.2.tar.gz) = e781669c84c3e61333cbd47f078ff6f16dae5b3c6e7d2ea76ae20ee78012ea9686a2be684127db821a6128408030bc09a0210386424f155af5a044f0178d44d4
-Size (hatch_nodejs_version-0.3.2.tar.gz) = 16942 bytes
+BLAKE2s (hatch_nodejs_version-0.4.0.tar.gz) = ef41148dfe29e952df0b08f8e0bd5d8495433db30506d526a6b5923757f47e3c
+SHA512 (hatch_nodejs_version-0.4.0.tar.gz) = 3ba742a9c802499e8cb5be53220a60b9ea40c3124bc5fbe7b0d5f95544edc853dc3d54fc29e97f5f2db41f5bb3d573dc59eae78e53578ba0f7574539fb45671e
+Size (hatch_nodejs_version-0.4.0.tar.gz) = 17797 bytes
