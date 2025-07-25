@@ -1,0 +1,7 @@
+This is an unofficial port of OpenBSD's imsg interface to linux.
+
+The imsg functions provide a simple mechanism for communication between
+local processes using sockets. Each transmitted message is guaranteed to
+be presented to the receiving program whole.  They are commonly used in
+privilege separated processes, where processes with different rights are
+required to cooperate.
