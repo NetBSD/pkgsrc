@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/21 12:20:55 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2025/07/25 09:44:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pytest_lazy_fixtures/__init__.py
 ${PYSITELIB}/pytest_lazy_fixtures/__init__.pyc
 ${PYSITELIB}/pytest_lazy_fixtures/__init__.pyo
+${PYSITELIB}/pytest_lazy_fixtures/fixture_collector.py
+${PYSITELIB}/pytest_lazy_fixtures/fixture_collector.pyc
+${PYSITELIB}/pytest_lazy_fixtures/fixture_collector.pyo
 ${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.py
 ${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.pyc
 ${PYSITELIB}/pytest_lazy_fixtures/lazy_fixture.pyo
@@ -23,3 +26,6 @@ ${PYSITELIB}/pytest_lazy_fixtures/plugin.py
 ${PYSITELIB}/pytest_lazy_fixtures/plugin.pyc
 ${PYSITELIB}/pytest_lazy_fixtures/plugin.pyo
 ${PYSITELIB}/pytest_lazy_fixtures/py.typed
+${PYSITELIB}/pytest_lazy_fixtures/utils.py
+${PYSITELIB}/pytest_lazy_fixtures/utils.pyc
+${PYSITELIB}/pytest_lazy_fixtures/utils.pyo
