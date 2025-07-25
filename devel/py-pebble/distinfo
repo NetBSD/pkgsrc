@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/03/15 19:28:21 adam Exp $
+$NetBSD: distinfo,v 1.17 2025/07/25 11:53:32 adam Exp $
 
-BLAKE2s (Pebble-5.1.1.tar.gz) = f9702eeadd52e38745d2f75f72d8860329c3253264ee3a0ee24f965be94816af
-SHA512 (Pebble-5.1.1.tar.gz) = 16d738ca8cf2651f0dbd1b39549838e7c807ffb705bd567f68e489d3f81428cf16d61ce80d59d808d9379deeedeecf96f146fd9f11fd1f863b310982bd3bdede
-Size (Pebble-5.1.1.tar.gz) = 38720 bytes
+BLAKE2s (pebble-5.1.2.tar.gz) = 8fe071159f14f98aa4b78e1c52b48eab5b7ec7aef2c38b0f5aeedb5614bea661
+SHA512 (pebble-5.1.2.tar.gz) = a153ce777291111015bd8e611f81ad54108435fc72d2acad13547a4f4add128864088bf5622644bb07cd76647fe6f9b49139f3fcbe2d4b540efcfe43cbf53d73
+Size (pebble-5.1.2.tar.gz) = 38813 bytes
