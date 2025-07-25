@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4491 2025/07/15 21:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4492 2025/07/25 20:55:31 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -850,6 +850,7 @@ SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake
 SUBDIR+=	immer
+SUBDIR+=	imsg-compat
 SUBDIR+=	include-what-you-use
 SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
