@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4474 2025/07/26 06:32:20 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4475 2025/07/26 06:38:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6564,3 +6564,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby32 to 3.2.9 [taca 2025-07-26]
 	Updated lang/ruby33 to 3.3.9 [taca 2025-07-26]
 	Updated databases/ruby-gdbm to 2.1.1 [taca 2025-07-26]
+	Updated net/ruby-net-imap to 0.5.9 [taca 2025-07-26]
