@@ -1,4 +1,4 @@
-$NetBSD: patch-src___imsg__compat.h,v 1.1 2025/07/25 20:53:51 vins Exp $
+$NetBSD: patch-src___imsg__compat.h,v 1.2 2025/07/26 09:06:46 vins Exp $
 
 Define PATH_MAX on NetBSD.
 
@@ -11,7 +11,7 @@ Define PATH_MAX on NetBSD.
 -#ifdef __linux__
 +#if defined(__linux__)
  # include <linux/limits.h>
-+#else if defined(__NetBSD__) 
++#elif defined(__NetBSD__) 
 +# include <sys/syslimits.h>
  #endif
  
