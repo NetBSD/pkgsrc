@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.39 2025/05/05 01:33:56 iquiw Exp $
+$NetBSD: distinfo,v 1.40 2025/07/26 02:28:31 iquiw Exp $
 
-BLAKE2s (fzf-0.62.0.tar.gz) = 2276e216791f0828d40bafb4becdb27ee0a2ab9912287468b1e8f56d0582dbc9
-SHA512 (fzf-0.62.0.tar.gz) = e0246a9caac7bc99e6b7596f79bd6c091b55da3843a0ca22cfa7984c0eba2e42430037f4c0f58b99f29a82c91ca36aa8bfd8315e6814b076adb21fe6d40e0a3f
-Size (fzf-0.62.0.tar.gz) = 333078 bytes
-BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.10.mod) = c40097d4f4ad93e100ae36b295bd103784b6f696d22d9bf7278a742f99be5199
-SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.10.mod) = 2088d7467b0b19cc8e8f7ac6d22793fc3c4ae696e81d1b21c563e84ce787afdc8817d43ef0a4568ea6b0a3aed5ad4fc45ea25a874be733fbaf26bbe902e869ae
-Size (github.com_charlievieth_fastwalk_@v_v1.0.10.mod) = 92 bytes
-BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.10.zip) = 847aec1db3f4e67293f1ea4e1a5a4e3b450c66023b41f1792efe51d1949dd191
-SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.10.zip) = 086ccb1013a8dfcba1da09e81fe8a760ed65ab998755b9bf4e18f7f9650a28779028d605f0cb01e2d437f1c63865fadfe308f66eec152b6cf12a895b89efd70c
-Size (github.com_charlievieth_fastwalk_@v_v1.0.10.zip) = 68998 bytes
+BLAKE2s (fzf-0.64.0.tar.gz) = a98dd4469808462437835a7d4e3d71f6292617a06b984effbb59934d8e33dfa9
+SHA512 (fzf-0.64.0.tar.gz) = 69320e8b41e02f8adb4993c514edc9029c718da7bfce2240c93f98166179b922441cb078bcf5c06352754fa98e36b6f4371ff66ad6410b9024f9c3b875abac58
+Size (fzf-0.64.0.tar.gz) = 346041 bytes
+BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.12.mod) = c40097d4f4ad93e100ae36b295bd103784b6f696d22d9bf7278a742f99be5199
+SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.12.mod) = 2088d7467b0b19cc8e8f7ac6d22793fc3c4ae696e81d1b21c563e84ce787afdc8817d43ef0a4568ea6b0a3aed5ad4fc45ea25a874be733fbaf26bbe902e869ae
+Size (github.com_charlievieth_fastwalk_@v_v1.0.12.mod) = 92 bytes
+BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.12.zip) = 0e313cfd3422349aa3699b4809bb072c65f87cf1bbcb452f35752778f7c87ea6
+SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.12.zip) = f7d2d0da02f34c4894a91ecb4f6a879a628921939b606d6a1f0e14f1ba9f9bdb64d926b70218dd4cd09fc56f80614ff65d91b5961be10a39ab776ecbe73ab246
+Size (github.com_charlievieth_fastwalk_@v_v1.0.12.zip) = 73710 bytes
 BLAKE2s (github.com_gdamore_encoding_@v_v1.0.1.mod) = e0e5fdad7cc9bec7cba5f299575ae275b0d3656d7ae0d43948e617d3258b3f7a
 SHA512 (github.com_gdamore_encoding_@v_v1.0.1.mod) = 14d64e8ddcf0474559c0abcdc41c62bdbc16eacb34367b115625c68947b17fd3066d004b9f471ac32077b8a0beeefdff010385134f5dd09140f601b639ec964a
 Size (github.com_gdamore_encoding_@v_v1.0.1.mod) = 78 bytes
