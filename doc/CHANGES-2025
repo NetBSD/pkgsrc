@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4468 2025/07/26 02:28:47 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.4469 2025/07/26 05:10:24 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6556,3 +6556,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/bash to 5.3.3 [kre 2025-07-25]
 	Updated devel/task to 3.44.1 [iquiw 2025-07-26]
 	Updated sysutils/fzf to 0.64.0 [iquiw 2025-07-26]
+	Updated games/ironwail to 0.8.0 [charlotte 2025-07-26]
