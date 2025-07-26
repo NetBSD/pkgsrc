@@ -1,0 +1,30 @@
+#	$NetBSD: Makefile.def,v 1.1 2025/07/26 03:06:53 tsutsui Exp $
+
+OBJDIR =
+CC = @CC@
+CFLAGS = @CFLAGS@
+# @GNU: why does this have to change every two years ?!
+HOST_OBJEXTENSION = .o
+LD = @CC@
+LDFLAGS = @LDFLAGS@
+HOST_EXEXTENSION =
+
+# no cross build
+
+TARG_OBJDIR = $(OBJDIR)
+TARG_CC = $(CC)
+TARG_CFLAGS = $(CFLAGS)
+TARG_OBJEXTENSION = $(HOST_OBJEXTENSION)
+TARG_LD = $(LD)
+TARG_LDFLAGS = $(LDFLAGS)
+TARG_EXEXTENSION = $(HOST_EXEXTENSION)
+
+# -------------------------------------------------------------------------
+# directories where binaries, includes, and manpages should go during
+# installation
+
+BINDIR = ${DESTDIR}${PREFIX}/bin
+INCDIR = ${DESTDIR}${PREFIX}/share/asl/include
+MANDIR = ${DESTDIR}${PREFIX}/man
+LIBDIR = ${DESTDIR}${PREFIX}/lib
+DOCDIR = ${DESTDIR}${PREFIX}/share/doc/asl

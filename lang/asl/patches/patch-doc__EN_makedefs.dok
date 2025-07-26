@@ -1,0 +1,12 @@
+$NetBSD: patch-doc__EN_makedefs.dok,v 1.1 2025/07/26 03:06:53 tsutsui Exp $
+
+- disable generating PDF manual that requires non-standard pdflatex
+
+--- doc_EN/makedefs.dok.orig	2025-07-22 18:04:43.514342299 +0000
++++ doc_EN/makedefs.dok
+@@ -1,4 +1,4 @@
+-docs_EN: docs_EN_notex $(DOC_EN_DIR)as.pdf
++docs_EN: docs_EN_notex #$(DOC_EN_DIR)as.pdf
+ 
+ docs_EN_notex: $(DOC_EN_DIR)as.doc $(DOC_EN_DIR)as.html
+ 
