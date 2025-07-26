@@ -1,0 +1,15 @@
+$NetBSD: patch-tool_leaked-globals,v 1.1 2025/07/26 06:25:23 taca Exp $
+
+Pass "make test".
+
+--- tool/leaked-globals.orig	2025-07-24 10:04:28.000000000 +0000
++++ tool/leaked-globals
+@@ -73,6 +73,8 @@ IO.foreach("|#{NM} #{ARGV.join(' ')}") d
+   case n
+   when /\A(?:Init_|InitVM_|pm_|[Oo]nig|dln_|coroutine_)/
+     next
++  when /\A__dtrace/
++    next
+   when /\Aruby_static_id_/
+     next unless so
+   when /\A(?:RUBY_|ruby_|rb_)/

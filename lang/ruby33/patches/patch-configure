@@ -1,11 +1,7 @@
-$NetBSD: patch-configure,v 1.2 2025/04/21 20:54:56 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2025/07/26 06:25:23 taca Exp $
 
-* Avoid bash specific variable substitution.
-* Ignore doxygen.
 * Ignore VCS.
-* Handle SSP in pkgsrc.
 * Retain _XOPEN_SOURCE, fixes eventmachine.
-* Fix argument for pthread_self() on NetBSD.
 * Explictly stop display with color.
 * Remove bogus MJIT disabling on SunOS.
 
