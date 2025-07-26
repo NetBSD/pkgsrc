@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/26 06:36:33 vins Exp $
+
+BLAKE2s (libgrapheme-2.0.2.tar.gz) = 2a24941e8dab45bb45dc147deb1b760461ff431069dfcd6c9b51286a62635970
+SHA512 (libgrapheme-2.0.2.tar.gz) = 640fb0926f8f46ae98aaba708f8bd1539f7485f150d4b8021195268813ff361ebfc05a49f27ef6eaca9f2051e648912e70b9dac7fbbef84cedefdd4f2cdcb45e
+Size (libgrapheme-2.0.2.tar.gz) = 846990 bytes
