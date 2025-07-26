@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/02/13 13:32:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/07/26 07:28:16 taca Exp $
 bin/cmew
 bin/incm
 bin/mew-pinentry
@@ -98,6 +98,8 @@ ${EMACS_LISPPREFIX}/mew/mew-nntp.el
 ${EMACS_LISPPREFIX}/mew/mew-nntp.elc
 ${EMACS_LISPPREFIX}/mew/mew-nntp2.el
 ${EMACS_LISPPREFIX}/mew/mew-nntp2.elc
+${EMACS_LISPPREFIX}/mew/mew-oauth2.el
+${EMACS_LISPPREFIX}/mew/mew-oauth2.elc
 ${EMACS_LISPPREFIX}/mew/mew-passwd.el
 ${EMACS_LISPPREFIX}/mew/mew-passwd.elc
 ${EMACS_LISPPREFIX}/mew/mew-pgp.el
