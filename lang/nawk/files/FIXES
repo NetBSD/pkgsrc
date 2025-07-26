@@ -25,6 +25,10 @@ THIS SOFTWARE.
 This file lists all bug fixes, changes, etc., made since the AWK book
 was sent to the printers in August 1987.
 
+Jul 26, 2025:
+	Fix segmentation fault on NetBSD 10.99 due to invalid usage of the
+	character classification functions in <ctype.h>.
+
 Sep 06, 2023:
 	Fix edge case where FS is changed on commandline. Thanks to
 	Gordon Shephard and Miguel Pineiro Jr.
