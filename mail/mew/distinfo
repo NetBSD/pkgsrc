@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.53 2023/02/13 13:32:43 taca Exp $
+$NetBSD: distinfo,v 1.54 2025/07/26 07:28:16 taca Exp $
 
-BLAKE2s (mew-6.9.tar.gz) = 56f2410e006286d39ace06c2e7c7ab1a3fdd48bba58b1af9c6d37e16b2ecea02
-SHA512 (mew-6.9.tar.gz) = b19aaa6596df3fa7ca2a7e0ce32a163e5fbf6a86df4cd02b09518aeafd400348d64fe73b0fd16bf7fca3a63bc1f70c32c1cf1e74f115e91cd28c9289eb5c448f
-Size (mew-6.9.tar.gz) = 995999 bytes
+BLAKE2s (mew-6.10.tar.gz) = 7afc855f9457705123463d7f8d339d5903b8d31fafd603ffa760aee4ba644e63
+SHA512 (mew-6.10.tar.gz) = a6e9df46c81f7d7bff0a3a66911e9e3a2d7d3eab5cc0ecd98bccc14d66e4c9becac983d40a905791f077e4f50a72f057ced99b7e964f1671500a5d2cc1fc9ff7
+Size (mew-6.10.tar.gz) = 1020754 bytes
 SHA1 (patch-elisp_mew-key.el) = 3aa5736afa5e1bc64bf8bca15c4c02af186f511f
