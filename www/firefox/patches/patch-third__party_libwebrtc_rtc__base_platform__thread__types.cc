@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_rtc__base_platform__thread__types.cc,v 1.2 2025/07/23 13:57:35 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_rtc__base_platform__thread__types.cc,v 1.3 2025/07/26 14:12:54 ryoon Exp $
 
 --- third_party/libwebrtc/rtc_base/platform_thread_types.cc.orig	2025-05-21 12:30:11.564823191 +0000
 +++ third_party/libwebrtc/rtc_base/platform_thread_types.cc
