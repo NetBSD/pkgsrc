@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/05/27 07:00:07 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/26 07:42:16 charlotte Exp $
 
-DISTNAME=	libdivecomputer-0.8.0
+DISTNAME=	libdivecomputer-0.9.0
 CATEGORIES=	misc
 MASTER_SITES=	https://libdivecomputer.org/releases/
 

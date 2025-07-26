@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/05/27 07:00:07 charlotte Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/07/26 07:42:16 charlotte Exp $
 bin/dctool
 include/libdivecomputer/atomics_cobalt.h
 include/libdivecomputer/ble.h
@@ -61,7 +61,7 @@ man/man3/dc_descriptor_get_model.3
 man/man3/dc_descriptor_get_product.3
 man/man3/dc_descriptor_get_transports.3
 man/man3/dc_descriptor_get_vendor.3
-man/man3/dc_descriptor_iterator.3
+man/man3/dc_descriptor_iterator_new.3
 man/man3/dc_device_close.3
 man/man3/dc_device_foreach.3
 man/man3/dc_device_open.3
@@ -81,7 +81,6 @@ man/man3/dc_parser_get_datetime.3
 man/man3/dc_parser_get_field.3
 man/man3/dc_parser_new.3
 man/man3/dc_parser_samples_foreach.3
-man/man3/dc_parser_set_data.3
 man/man3/dc_serial_device_free.3
 man/man3/dc_serial_device_get_name.3
 man/man3/dc_serial_iterator_new.3
@@ -118,7 +117,7 @@ share/doc/libdivecomputer/dc_descriptor_get_model.3.html
 share/doc/libdivecomputer/dc_descriptor_get_product.3.html
 share/doc/libdivecomputer/dc_descriptor_get_transports.3.html
 share/doc/libdivecomputer/dc_descriptor_get_vendor.3.html
-share/doc/libdivecomputer/dc_descriptor_iterator.3.html
+share/doc/libdivecomputer/dc_descriptor_iterator_new.3.html
 share/doc/libdivecomputer/dc_device_close.3.html
 share/doc/libdivecomputer/dc_device_foreach.3.html
 share/doc/libdivecomputer/dc_device_open.3.html
@@ -138,7 +137,6 @@ share/doc/libdivecomputer/dc_parser_get_datetime.3.html
 share/doc/libdivecomputer/dc_parser_get_field.3.html
 share/doc/libdivecomputer/dc_parser_new.3.html
 share/doc/libdivecomputer/dc_parser_samples_foreach.3.html
-share/doc/libdivecomputer/dc_parser_set_data.3.html
 share/doc/libdivecomputer/dc_serial_device_free.3.html
 share/doc/libdivecomputer/dc_serial_device_get_name.3.html
 share/doc/libdivecomputer/dc_serial_iterator_new.3.html
