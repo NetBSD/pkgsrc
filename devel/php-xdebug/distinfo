@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.45 2025/06/15 10:55:55 taca Exp $
+$NetBSD: distinfo,v 1.46 2025/07/26 06:46:23 taca Exp $
 
-BLAKE2s (php-xdebug/xdebug-3.4.4.tgz) = f7c2fedc9c7c0c9b4c7f383407748e229eb3bfed17f9b0a69e69930fdfccd56c
-SHA512 (php-xdebug/xdebug-3.4.4.tgz) = 59cbd2c6b80d0fffcc7073e531dc34afd47786817e8af9c7c46d0fb701abf333f35ace7bf08e857844f531f3f5be424e87ccab2400e3e96b233cb9c9c4d4de47
-Size (php-xdebug/xdebug-3.4.4.tgz) = 262823 bytes
+BLAKE2s (php-xdebug/xdebug-3.4.5.tgz) = e05e0e9ff96abccabff242ddf0688a1b9aa9f232a14edb0769dab7fa743c8167
+SHA512 (php-xdebug/xdebug-3.4.5.tgz) = b2b5cdad9f248d151cfed86bfccb384fd1aa7c7919ab043518735b48db2459323a65b73cc8de3d624062db3ff935de65d859c96c48b90d3eb9e7f3aa6c371386
+Size (php-xdebug/xdebug-3.4.5.tgz) = 263514 bytes
 SHA1 (patch-src_debugger_com.c) = 51c3ea372dca99ab06490d2dc0611277ea0ba8f0
