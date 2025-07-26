@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/19 14:39:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/07/26 06:17:00 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -73,6 +73,7 @@ ${RUBY_INC}/ruby/internal/attr/nodiscard.h
 ${RUBY_INC}/ruby/internal/attr/noexcept.h
 ${RUBY_INC}/ruby/internal/attr/noinline.h
 ${RUBY_INC}/ruby/internal/attr/nonnull.h
+${RUBY_INC}/ruby/internal/attr/nonstring.h
 ${RUBY_INC}/ruby/internal/attr/noreturn.h
 ${RUBY_INC}/ruby/internal/attr/packed_struct.h
 ${RUBY_INC}/ruby/internal/attr/pure.h
@@ -229,6 +230,8 @@ ${RUBY_LIB}/bundler/cli/common.rb
 ${RUBY_LIB}/bundler/cli/config.rb
 ${RUBY_LIB}/bundler/cli/console.rb
 ${RUBY_LIB}/bundler/cli/doctor.rb
+${RUBY_LIB}/bundler/cli/doctor/diagnose.rb
+${RUBY_LIB}/bundler/cli/doctor/ssl.rb
 ${RUBY_LIB}/bundler/cli/exec.rb
 ${RUBY_LIB}/bundler/cli/fund.rb
 ${RUBY_LIB}/bundler/cli/gem.rb
@@ -864,10 +867,8 @@ ${RUBY_LIB}/rdoc/generator/pot/po_entry.rb
 ${RUBY_LIB}/rdoc/generator/ri.rb
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_footer.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_head.rhtml
-${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_VCS_info.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_classes.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_extends.rhtml
-${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_in_files.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_includes.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_installed.rhtml
 ${RUBY_LIB}/rdoc/generator/template/darkfish/_sidebar_methods.rhtml
@@ -1191,7 +1192,6 @@ ${RUBY_LIB}/rubygems/security/policy.rb
 ${RUBY_LIB}/rubygems/security/signer.rb
 ${RUBY_LIB}/rubygems/security/trust_dir.rb
 ${RUBY_LIB}/rubygems/security_option.rb
-${RUBY_LIB}/rubygems/shellwords.rb
 ${RUBY_LIB}/rubygems/source.rb
 ${RUBY_LIB}/rubygems/source/git.rb
 ${RUBY_LIB}/rubygems/source/installed.rb
