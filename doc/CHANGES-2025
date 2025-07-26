@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4477 2025/07/26 06:46:38 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4478 2025/07/26 06:54:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6567,3 +6567,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-net-imap to 0.5.9 [taca 2025-07-26]
 	Added textproc/libgrapheme version 2.0.2 [vins 2025-07-26]
 	Updated devel/php-xdebug to 3.4.5 [taca 2025-07-26]
+	Updated www/php-concrete-cms to 9.4.2 [taca 2025-07-26]
