@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/07/25 20:53:51 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/26 09:06:46 vins Exp $
 
 DISTNAME=	imsg-compat-8.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bsd-ac/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
