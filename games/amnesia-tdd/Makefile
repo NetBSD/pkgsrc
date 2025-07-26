@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:13:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/07/26 09:13:28 charlotte Exp $
 
-DISTNAME=	amnesia-tdd-0.3.2
-PKGREVISION=	9
+DISTNAME=	amnesia-tdd-0.3.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shamazmazum/}
 GITHUB_PROJECT=	AmnesiaTheDarkDescent
-GITHUB_TAG=	d3abfdd93bb650b12aa224ecc6f6aace42424189
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	charlotte@NetBSD.org
 HOMEPAGE=	https://frictionalgames.com/
@@ -15,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
 
-USE_CMAKE=	yes
 CMAKE_CONFIGURE_ARGS+=	-DSYSTEMWIDE_RESOURCES=ON
 CMAKE_CONFIGURE_ARGS+=	-DSYSTEMWIDE_RESOURCES_LOCATION="${PREFIX}/share/amnesia-tdd"
 CMAKE_CONFIGURE_ARGS+=	./amnesia/src
@@ -29,6 +27,7 @@ FORCE_CXX_STD=		c++11
 CFLAGS+=		-msse
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/devIL/buildlink3.mk"
