@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4470 2025/07/26 05:37:59 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.4471 2025/07/26 06:17:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6558,3 +6558,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fzf to 0.64.0 [iquiw 2025-07-26]
 	Updated games/ironwail to 0.8.0 [charlotte 2025-07-26]
 	Updated lang/nawk to 20250726 [rillig 2025-07-26]
+	Updated lang/ruby34 to 3.4.5 [taca 2025-07-26]
