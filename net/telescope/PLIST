@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/26 13:37:32 vins Exp $
+bin/telescope
+bin/telescope-identity
+man/man1/telescope-identity.1
+man/man1/telescope.1
