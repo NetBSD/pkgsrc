@@ -1,4 +1,4 @@
-$NetBSD: patch-third__party_libwebrtc_modules_video__capture_video__capture__options.cc,v 1.2 2025/07/23 13:57:35 ryoon Exp $
+$NetBSD: patch-third__party_libwebrtc_modules_video__capture_video__capture__options.cc,v 1.3 2025/07/26 14:12:54 ryoon Exp $
 
 --- third_party/libwebrtc/modules/video_capture/video_capture_options.cc.orig	2025-05-21 12:41:53.782245708 +0000
 +++ third_party/libwebrtc/modules/video_capture/video_capture_options.cc
