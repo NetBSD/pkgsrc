@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.198 2025/07/25 23:00:48 zafer Exp $
+# $NetBSD: sites.mk,v 1.199 2025/07/26 16:15:17 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -33,7 +33,8 @@ MASTER_SITE_GNUPG+=	\
 	http://www.ring.gr.jp/pub/net/gnupg/
 
 MASTER_SITE_OSDN+=	\
-	https://iij.dl.osdn.jp/
+	https://ftp.iij.ad.jp/pub/sourceforge.jp/ \
+	https://ftp.jaist.ac.jp/pub/sourceforge.jp/
 
 MASTER_SITE_PERL_CPAN+= \
 	https://www.cpan.org/modules/by-module/ \
