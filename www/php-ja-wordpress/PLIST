@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/01/19 14:29:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/07/26 07:21:50 taca Exp $
 share/doc/ja-wordpress/license.txt
 share/doc/ja-wordpress/readme.html
 share/examples/ja-wordpress/ja-wordpress.conf
@@ -601,7 +601,6 @@ share/ja-wordpress/wp-content/languages/ja-1d17475f620f63a92e2c5d2681c51ee8.json
 share/ja-wordpress/wp-content/languages/ja-2617ce121227a46077ede6c69aa9fcb5.json
 share/ja-wordpress/wp-content/languages/ja-270d72d1cff17227d37f3244759cbecb.json
 share/ja-wordpress/wp-content/languages/ja-28b3c3d595952907e08d98287077426c.json
-share/ja-wordpress/wp-content/languages/ja-2a60fb9605efeab98825d6b2f781090a.json
 share/ja-wordpress/wp-content/languages/ja-2b390f85a3048c5b4255fb45960b6514.json
 share/ja-wordpress/wp-content/languages/ja-2c5d274ea625dd91556554ad82901529.json
 share/ja-wordpress/wp-content/languages/ja-320f4ad9792aaa6dedb1e71cbdf85d57.json
@@ -673,12 +672,12 @@ share/ja-wordpress/wp-content/plugins/akismet/_inc/img/akismet-activation-banner
 share/ja-wordpress/wp-content/plugins/akismet/_inc/img/akismet-refresh-logo.svg
 share/ja-wordpress/wp-content/plugins/akismet/_inc/img/akismet-refresh-logo@2x.png
 share/ja-wordpress/wp-content/plugins/akismet/_inc/img/arrow-left.svg
-share/ja-wordpress/wp-content/plugins/akismet/_inc/img/icon-external.svg
 share/ja-wordpress/wp-content/plugins/akismet/_inc/img/logo-a-2x.png
 share/ja-wordpress/wp-content/plugins/akismet/_inc/rtl/akismet-admin-rtl.css
 share/ja-wordpress/wp-content/plugins/akismet/_inc/rtl/akismet-rtl.css
 share/ja-wordpress/wp-content/plugins/akismet/akismet.php
 share/ja-wordpress/wp-content/plugins/akismet/changelog.txt
+share/ja-wordpress/wp-content/plugins/akismet/class-akismet-compatible-plugins.php
 share/ja-wordpress/wp-content/plugins/akismet/class.akismet-admin.php
 share/ja-wordpress/wp-content/plugins/akismet/class.akismet-cli.php
 share/ja-wordpress/wp-content/plugins/akismet/class.akismet-rest-api.php
@@ -687,6 +686,7 @@ share/ja-wordpress/wp-content/plugins/akismet/class.akismet.php
 share/ja-wordpress/wp-content/plugins/akismet/index.php
 share/ja-wordpress/wp-content/plugins/akismet/readme.txt
 share/ja-wordpress/wp-content/plugins/akismet/views/activate.php
+share/ja-wordpress/wp-content/plugins/akismet/views/compatible-plugins.php
 share/ja-wordpress/wp-content/plugins/akismet/views/config.php
 share/ja-wordpress/wp-content/plugins/akismet/views/connect-jp.php
 share/ja-wordpress/wp-content/plugins/akismet/views/enter.php
@@ -1433,6 +1433,7 @@ share/ja-wordpress/wp-includes/block-patterns/query-small-posts.php
 share/ja-wordpress/wp-includes/block-patterns/query-standard-posts.php
 share/ja-wordpress/wp-includes/block-patterns/social-links-shared-background-color.php
 share/ja-wordpress/wp-includes/block-supports/align.php
+share/ja-wordpress/wp-includes/block-supports/aria-label.php
 share/ja-wordpress/wp-includes/block-supports/background.php
 share/ja-wordpress/wp-includes/block-supports/block-style-variations.php
 share/ja-wordpress/wp-includes/block-supports/border.php
@@ -1875,10 +1876,6 @@ share/ja-wordpress/wp-includes/blocks/post-comments-form/style.css
 share/ja-wordpress/wp-includes/blocks/post-comments-form/style.min.css
 share/ja-wordpress/wp-includes/blocks/post-content.php
 share/ja-wordpress/wp-includes/blocks/post-content/block.json
-share/ja-wordpress/wp-includes/blocks/post-content/editor-rtl.css
-share/ja-wordpress/wp-includes/blocks/post-content/editor-rtl.min.css
-share/ja-wordpress/wp-includes/blocks/post-content/editor.css
-share/ja-wordpress/wp-includes/blocks/post-content/editor.min.css
 share/ja-wordpress/wp-includes/blocks/post-content/style-rtl.css
 share/ja-wordpress/wp-includes/blocks/post-content/style-rtl.min.css
 share/ja-wordpress/wp-includes/blocks/post-content/style.css
@@ -1917,10 +1914,6 @@ share/ja-wordpress/wp-includes/blocks/post-navigation-link/style.css
 share/ja-wordpress/wp-includes/blocks/post-navigation-link/style.min.css
 share/ja-wordpress/wp-includes/blocks/post-template.php
 share/ja-wordpress/wp-includes/blocks/post-template/block.json
-share/ja-wordpress/wp-includes/blocks/post-template/editor-rtl.css
-share/ja-wordpress/wp-includes/blocks/post-template/editor-rtl.min.css
-share/ja-wordpress/wp-includes/blocks/post-template/editor.css
-share/ja-wordpress/wp-includes/blocks/post-template/editor.min.css
 share/ja-wordpress/wp-includes/blocks/post-template/style-rtl.css
 share/ja-wordpress/wp-includes/blocks/post-template/style-rtl.min.css
 share/ja-wordpress/wp-includes/blocks/post-template/style.css
@@ -1983,6 +1976,12 @@ share/ja-wordpress/wp-includes/blocks/query-title/style-rtl.css
 share/ja-wordpress/wp-includes/blocks/query-title/style-rtl.min.css
 share/ja-wordpress/wp-includes/blocks/query-title/style.css
 share/ja-wordpress/wp-includes/blocks/query-title/style.min.css
+share/ja-wordpress/wp-includes/blocks/query-total.php
+share/ja-wordpress/wp-includes/blocks/query-total/block.json
+share/ja-wordpress/wp-includes/blocks/query-total/style-rtl.css
+share/ja-wordpress/wp-includes/blocks/query-total/style-rtl.min.css
+share/ja-wordpress/wp-includes/blocks/query-total/style.css
+share/ja-wordpress/wp-includes/blocks/query-total/style.min.css
 share/ja-wordpress/wp-includes/blocks/query.php
 share/ja-wordpress/wp-includes/blocks/query/block.json
 share/ja-wordpress/wp-includes/blocks/query/editor-rtl.css
@@ -2275,6 +2274,7 @@ share/ja-wordpress/wp-includes/class-wp-object-cache.php
 share/ja-wordpress/wp-includes/class-wp-oembed-controller.php
 share/ja-wordpress/wp-includes/class-wp-oembed.php
 share/ja-wordpress/wp-includes/class-wp-paused-extensions-storage.php
+share/ja-wordpress/wp-includes/class-wp-phpmailer.php
 share/ja-wordpress/wp-includes/class-wp-plugin-dependencies.php
 share/ja-wordpress/wp-includes/class-wp-post-type.php
 share/ja-wordpress/wp-includes/class-wp-post.php
@@ -2294,6 +2294,7 @@ share/ja-wordpress/wp-includes/class-wp-simplepie-file.php
 share/ja-wordpress/wp-includes/class-wp-simplepie-sanitize-kses.php
 share/ja-wordpress/wp-includes/class-wp-site-query.php
 share/ja-wordpress/wp-includes/class-wp-site.php
+share/ja-wordpress/wp-includes/class-wp-speculation-rules.php
 share/ja-wordpress/wp-includes/class-wp-styles.php
 share/ja-wordpress/wp-includes/class-wp-tax-query.php
 share/ja-wordpress/wp-includes/class-wp-taxonomy.php
@@ -2308,6 +2309,7 @@ share/ja-wordpress/wp-includes/class-wp-theme-json-schema.php
 share/ja-wordpress/wp-includes/class-wp-theme-json.php
 share/ja-wordpress/wp-includes/class-wp-theme.php
 share/ja-wordpress/wp-includes/class-wp-token-map.php
+share/ja-wordpress/wp-includes/class-wp-url-pattern-prefixer.php
 share/ja-wordpress/wp-includes/class-wp-user-meta-session-tokens.php
 share/ja-wordpress/wp-includes/class-wp-user-query.php
 share/ja-wordpress/wp-includes/class-wp-user-request.php
@@ -2473,6 +2475,8 @@ share/ja-wordpress/wp-includes/css/wp-embed-template-ie.css
 share/ja-wordpress/wp-includes/css/wp-embed-template-ie.min.css
 share/ja-wordpress/wp-includes/css/wp-embed-template.css
 share/ja-wordpress/wp-includes/css/wp-embed-template.min.css
+share/ja-wordpress/wp-includes/css/wp-empty-template-alert.css
+share/ja-wordpress/wp-includes/css/wp-empty-template-alert.min.css
 share/ja-wordpress/wp-includes/css/wp-pointer-rtl.css
 share/ja-wordpress/wp-includes/css/wp-pointer-rtl.min.css
 share/ja-wordpress/wp-includes/css/wp-pointer.css
@@ -2746,8 +2750,6 @@ share/ja-wordpress/wp-includes/js/dist/element.js
 share/ja-wordpress/wp-includes/js/dist/element.min.js
 share/ja-wordpress/wp-includes/js/dist/escape-html.js
 share/ja-wordpress/wp-includes/js/dist/escape-html.min.js
-share/ja-wordpress/wp-includes/js/dist/fields.js
-share/ja-wordpress/wp-includes/js/dist/fields.min.js
 share/ja-wordpress/wp-includes/js/dist/format-library.js
 share/ja-wordpress/wp-includes/js/dist/format-library.min.js
 share/ja-wordpress/wp-includes/js/dist/hooks.js
@@ -2796,6 +2798,8 @@ share/ja-wordpress/wp-includes/js/dist/script-modules/a11y/index.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/a11y/index.min.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/file/view.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/file/view.min.js
+share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/form/view.js
+share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/form/view.min.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/image/view.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/image/view.min.js
 share/ja-wordpress/wp-includes/js/dist/script-modules/block-library/navigation/view.js
@@ -2818,8 +2822,6 @@ share/ja-wordpress/wp-includes/js/dist/style-engine.js
 share/ja-wordpress/wp-includes/js/dist/style-engine.min.js
 share/ja-wordpress/wp-includes/js/dist/token-list.js
 share/ja-wordpress/wp-includes/js/dist/token-list.min.js
-share/ja-wordpress/wp-includes/js/dist/undo-manager.js
-share/ja-wordpress/wp-includes/js/dist/undo-manager.min.js
 share/ja-wordpress/wp-includes/js/dist/url.js
 share/ja-wordpress/wp-includes/js/dist/url.min.js
 share/ja-wordpress/wp-includes/js/dist/vendor/lodash.js
@@ -3098,6 +3100,8 @@ share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/pagebreak-2x.pn
 share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/pagebreak.png
 share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/playlist-audio.png
 share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/playlist-video.png
+share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/script.svg
+share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/style.svg
 share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/images/video.png
 share/ja-wordpress/wp-includes/js/tinymce/skins/wordpress/wp-content.css
 share/ja-wordpress/wp-includes/js/tinymce/themes/inlite/theme.js
@@ -3380,6 +3384,7 @@ share/ja-wordpress/wp-includes/sodium_compat/src/Crypto32.php
 share/ja-wordpress/wp-includes/sodium_compat/src/File.php
 share/ja-wordpress/wp-includes/sodium_compat/src/PHP52/SplFixedArray.php
 share/ja-wordpress/wp-includes/sodium_compat/src/SodiumException.php
+share/ja-wordpress/wp-includes/speculative-loading.php
 share/ja-wordpress/wp-includes/spl-autoload-compat.php
 share/ja-wordpress/wp-includes/style-engine.php
 share/ja-wordpress/wp-includes/style-engine/class-wp-style-engine-css-declarations.php
