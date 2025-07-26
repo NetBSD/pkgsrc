@@ -1,23 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2019/12/16 16:52:40 taca Exp $
+# $NetBSD: options.mk,v 1.4 2025/07/26 07:21:50 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wordpress
-
-PKG_OPTIONS_REQUIRED_GROUPS=	wordpress
-PKG_OPTIONS_GROUP.wordpress=	php-cgi ap-php php-fpm
-
-PKG_SUGGESTED_OPTIONS=		php-fpm
+PKG_SUPPORTED_OPTIONS=		ap-php php-fpm
+PKG_SUGGESTED_OPTIONS=		ap-php
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mphp-cgi)
-DEPENDS+=	php>=5.6.0:${PHPPKGSRCDIR}
-.endif
-
 .if !empty(PKG_OPTIONS:Map-php)
 .  include "../../mk/apache.mk"
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.6.0:../../www/ap-php
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
 .endif
 
 .if !empty(PKG_OPTIONS:Mphp-fpm)
-DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=5.6.0:../../www/php-fpm
+DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=${PHP_BASE_VERS}:../../www/php-fpm
 .endif
