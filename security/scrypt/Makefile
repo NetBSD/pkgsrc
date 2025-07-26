@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/03/03 20:29:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/07/26 22:11:18 wiz Exp $
 
-DISTNAME=	scrypt-1.3.1
-PKGREVISION=	1
+DISTNAME=	scrypt-1.3.3
 CATEGORIES=	security
 MASTER_SITES=	https://www.tarsnap.com/scrypt/
 EXTRACT_SUFX=	.tgz
