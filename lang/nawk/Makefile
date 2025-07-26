@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2025/04/19 08:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/07/26 05:37:46 rillig Exp $
 
-DISTNAME=	nawk-20230909
+DISTNAME=	nawk-20250726
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
