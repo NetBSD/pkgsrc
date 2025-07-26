@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/13 16:05:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/07/26 06:25:23 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -73,6 +73,7 @@ ${RUBY_INC}/ruby/internal/attr/nodiscard.h
 ${RUBY_INC}/ruby/internal/attr/noexcept.h
 ${RUBY_INC}/ruby/internal/attr/noinline.h
 ${RUBY_INC}/ruby/internal/attr/nonnull.h
+${RUBY_INC}/ruby/internal/attr/nonstring.h
 ${RUBY_INC}/ruby/internal/attr/noreturn.h
 ${RUBY_INC}/ruby/internal/attr/packed_struct.h
 ${RUBY_INC}/ruby/internal/attr/pure.h
@@ -1591,6 +1592,7 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/flags.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_parser.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_parser/parser_utils.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_reader.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl/anonymous_authenticator.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl/authentication_exchange.rb
