@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4491 2025/07/26 08:59:37 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4492 2025/07/26 09:02:07 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6588,3 +6588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.106.0 [pin 2025-07-26]
 	Updated audio/spotify-qt to 4.0.1 [pin 2025-07-26]
 	Added textproc/xan version 0.51.0 [pin 2025-07-26]
+	Added sysutils/lstr version 0.2.1 [pin 2025-07-26]
