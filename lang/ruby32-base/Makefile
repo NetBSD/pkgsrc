@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/07/13 15:23:00 taca Exp $
+# $NetBSD: Makefile,v 1.12 2025/07/26 06:21:35 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -76,9 +75,9 @@ pre-configure:
 	${CHMOD} -x ${WRKSRC}/sample/test.rb
 
 pre-install:
-#	cd ${WRKSRC}/lib; \
-#		${FIND} . \( -name '*.orig' -o -name '*.orig_dist' \) \
-#		-exec ${RM} -f {} \;
+	cd ${WRKSRC}/.bundle; \
+		${FIND} . \( -name '*.orig' -o -name '*.orig_dist' \) \
+		-exec ${RM} -f {} \;
 .for f in ${EMPTY_DIRS}
 	${RMDIR} ${WRKSRC}/lib/rdoc/${f} 2>/dev/null || ${TRUE}
 .endfor
