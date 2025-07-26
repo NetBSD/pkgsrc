@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1160 2025/06/02 11:18:44 vins Exp $
+# $NetBSD: Makefile,v 1.1161 2025/07/26 09:01:44 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -446,6 +446,7 @@ SUBDIR+=	lscpu
 SUBDIR+=	lsd
 SUBDIR+=	lsfp
 SUBDIR+=	lsof
+SUBDIR+=	lstr
 SUBDIR+=	lvm2
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
