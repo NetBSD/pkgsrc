@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/08 05:21:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/07/26 06:21:35 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -73,6 +73,7 @@ ${RUBY_INC}/ruby/internal/attr/nodiscard.h
 ${RUBY_INC}/ruby/internal/attr/noexcept.h
 ${RUBY_INC}/ruby/internal/attr/noinline.h
 ${RUBY_INC}/ruby/internal/attr/nonnull.h
+${RUBY_INC}/ruby/internal/attr/nonstring.h
 ${RUBY_INC}/ruby/internal/attr/noreturn.h
 ${RUBY_INC}/ruby/internal/attr/pure.h
 ${RUBY_INC}/ruby/internal/attr/restrict.h
@@ -1411,8 +1412,11 @@ ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/Rakefile
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/TODO.md
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/exe/rdbg
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/debug.c
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/debug_version.h
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/extconf.h
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/extconf.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/iseq_collector.c
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/exts.mk
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug/abbrev_command.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug/breakpoint.rb
@@ -1498,6 +1502,7 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/errors.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/flags.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_parser.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/response_reader.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl/saslprep.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/sasl/saslprep_tables.rb
@@ -1694,6 +1699,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/docs/tools.md
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/exe/rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/constants.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/constants.h
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/extconf.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/extconf.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/lexer.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/lexer.h
@@ -1710,6 +1716,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/rbs_extension.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/ruby_objs.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/ruby_objs.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/unescape.c
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/exts.mk
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/goodcheck.yml
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ancestor_graph.rb
