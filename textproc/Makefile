@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1527 2025/07/26 06:38:24 vins Exp $
+# $NetBSD: Makefile,v 1.1528 2025/07/26 08:59:07 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1493,6 +1493,7 @@ SUBDIR+=	wdiff
 SUBDIR+=	word2vec
 SUBDIR+=	writer2latex
 SUBDIR+=	xalan-j
+SUBDIR+=	xan
 SUBDIR+=	xapian
 SUBDIR+=	xapian-omega
 SUBDIR+=	xerces-c
