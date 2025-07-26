@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/06/05 13:54:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/07/26 06:53:53 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -8810,6 +8810,7 @@ ${CC_WEBDIR}/concrete/src/File/StorageLocation/StorageLocationFactory.php
 ${CC_WEBDIR}/concrete/src/File/StorageLocation/StorageLocationInterface.php
 ${CC_WEBDIR}/concrete/src/File/StorageLocation/Type/Type.php
 ${CC_WEBDIR}/concrete/src/File/Tracker/FileTrackableInterface.php
+${CC_WEBDIR}/concrete/src/File/Tracker/RichTextExtractor.php
 ${CC_WEBDIR}/concrete/src/File/Tracker/UsageTracker.php
 ${CC_WEBDIR}/concrete/src/File/Type/Inspector/FlvInspector.php
 ${CC_WEBDIR}/concrete/src/File/Type/Inspector/ImageInspector.php
@@ -10363,6 +10364,8 @@ ${CC_WEBDIR}/concrete/src/Support/JSConstantGenerator.php
 ${CC_WEBDIR}/concrete/src/Support/Less/TreeCallColor.php
 ${CC_WEBDIR}/concrete/src/Support/Manager.php
 ${CC_WEBDIR}/concrete/src/Support/ShortTagExpander.php
+${CC_WEBDIR}/concrete/src/Support/Symbol/CheckerGenerator.php
+${CC_WEBDIR}/concrete/src/Support/Symbol/CheckerGenerator/Method.php
 ${CC_WEBDIR}/concrete/src/Support/Symbol/ClassSymbol/ClassSymbol.php
 ${CC_WEBDIR}/concrete/src/Support/Symbol/ClassSymbol/MethodSymbol/MethodSymbol.php
 ${CC_WEBDIR}/concrete/src/Support/Symbol/MetadataGenerator.php
