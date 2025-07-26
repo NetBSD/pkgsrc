@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/26 06:36:33 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/26 19:26:35 vins Exp $
 
 DISTNAME=	libgrapheme-2.0.2
 CATEGORIES=	textproc devel
@@ -24,7 +24,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX} \
 		CFLAGS=${CFLAGS:Q} \
 		LDFLAGS=${LDFLAGS:Q} \
 		SONAME=${SONAME:Q} \
-		SOFLAGS="-shared -nostdlib -Wl,--soname=${SONAME}" \
+		SOFLAGS="-shared -nostdlib" \
 		LDCONFIG=
 
 .include "../../mk/bsd.pkg.mk"
