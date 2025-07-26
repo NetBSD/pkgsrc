@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4488 2025/07/26 08:54:17 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4489 2025/07/26 08:55:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6585,3 +6585,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mew to 6.10 [taca 2025-07-26]
 	Updated misc/libdivecomputer to 0.9.0 [charlotte 2025-07-26]
 	Updated devel/mise to 2025.7.27 [pin 2025-07-26]
+	Updated shells/nushell to 0.106.0 [pin 2025-07-26]
