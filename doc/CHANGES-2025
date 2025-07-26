@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4494 2025/07/26 09:33:28 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4495 2025/07/26 13:39:53 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6591,3 +6591,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/lstr version 0.2.1 [pin 2025-07-26]
 	Updated games/amnesia-tdd to 0.3.3 [charlotte 2025-07-26]
 	Updated graphics/stitchy to 0.1.10 [pin 2025-07-26]
+	Added net/telescope version 0.11 [vins 2025-07-26]
