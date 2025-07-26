@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4475 2025/07/26 06:38:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4476 2025/07/26 06:39:36 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6565,3 +6565,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby33 to 3.3.9 [taca 2025-07-26]
 	Updated databases/ruby-gdbm to 2.1.1 [taca 2025-07-26]
 	Updated net/ruby-net-imap to 0.5.9 [taca 2025-07-26]
+	Added textproc/libgrapheme version 2.0.2 [vins 2025-07-26]
