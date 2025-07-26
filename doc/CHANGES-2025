@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4466 2025/07/25 23:19:32 kre Exp $
+$NetBSD: CHANGES-2025,v 1.4467 2025/07/26 02:21:08 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6554,3 +6554,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/catgirl to 2.2a [vins 2025-07-25]
 	Added devel/imsg-compat version 8.0.0 [vins 2025-07-25]
 	Updated shells/bash to 5.3.3 [kre 2025-07-25]
+	Updated devel/task to 3.44.1 [iquiw 2025-07-26]
