@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.113 2025/02/24 15:06:48 taca Exp $
+# $NetBSD: Makefile,v 1.114 2025/07/26 07:20:28 taca Exp $
 
 DISTNAME=		wordpress-${VERSION}
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
-VERSION=		6.7.2
+VERSION=		6.8.2
 CATEGORIES=		www
 MASTER_SITES=		https://wordpress.org/
-EXTRACT_SUFX=		.zip
 
 MAINTAINER=		morr@NetBSD.org
 HOMEPAGE=		https://wordpress.org/

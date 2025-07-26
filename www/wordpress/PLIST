@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2025/01/02 12:02:37 wen Exp $
+@comment $NetBSD: PLIST,v 1.56 2025/07/26 07:20:28 taca Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -592,12 +592,12 @@ share/wordpress/wp-content/plugins/akismet/_inc/img/akismet-activation-banner-el
 share/wordpress/wp-content/plugins/akismet/_inc/img/akismet-refresh-logo.svg
 share/wordpress/wp-content/plugins/akismet/_inc/img/akismet-refresh-logo@2x.png
 share/wordpress/wp-content/plugins/akismet/_inc/img/arrow-left.svg
-share/wordpress/wp-content/plugins/akismet/_inc/img/icon-external.svg
 share/wordpress/wp-content/plugins/akismet/_inc/img/logo-a-2x.png
 share/wordpress/wp-content/plugins/akismet/_inc/rtl/akismet-admin-rtl.css
 share/wordpress/wp-content/plugins/akismet/_inc/rtl/akismet-rtl.css
 share/wordpress/wp-content/plugins/akismet/akismet.php
 share/wordpress/wp-content/plugins/akismet/changelog.txt
+share/wordpress/wp-content/plugins/akismet/class-akismet-compatible-plugins.php
 share/wordpress/wp-content/plugins/akismet/class.akismet-admin.php
 share/wordpress/wp-content/plugins/akismet/class.akismet-cli.php
 share/wordpress/wp-content/plugins/akismet/class.akismet-rest-api.php
@@ -606,6 +606,7 @@ share/wordpress/wp-content/plugins/akismet/class.akismet.php
 share/wordpress/wp-content/plugins/akismet/index.php
 share/wordpress/wp-content/plugins/akismet/readme.txt
 share/wordpress/wp-content/plugins/akismet/views/activate.php
+share/wordpress/wp-content/plugins/akismet/views/compatible-plugins.php
 share/wordpress/wp-content/plugins/akismet/views/config.php
 share/wordpress/wp-content/plugins/akismet/views/connect-jp.php
 share/wordpress/wp-content/plugins/akismet/views/enter.php
@@ -1218,6 +1219,7 @@ share/wordpress/wp-includes/block-patterns/query-small-posts.php
 share/wordpress/wp-includes/block-patterns/query-standard-posts.php
 share/wordpress/wp-includes/block-patterns/social-links-shared-background-color.php
 share/wordpress/wp-includes/block-supports/align.php
+share/wordpress/wp-includes/block-supports/aria-label.php
 share/wordpress/wp-includes/block-supports/background.php
 share/wordpress/wp-includes/block-supports/block-style-variations.php
 share/wordpress/wp-includes/block-supports/border.php
@@ -1660,10 +1662,6 @@ share/wordpress/wp-includes/blocks/post-comments-form/style.css
 share/wordpress/wp-includes/blocks/post-comments-form/style.min.css
 share/wordpress/wp-includes/blocks/post-content.php
 share/wordpress/wp-includes/blocks/post-content/block.json
-share/wordpress/wp-includes/blocks/post-content/editor-rtl.css
-share/wordpress/wp-includes/blocks/post-content/editor-rtl.min.css
-share/wordpress/wp-includes/blocks/post-content/editor.css
-share/wordpress/wp-includes/blocks/post-content/editor.min.css
 share/wordpress/wp-includes/blocks/post-content/style-rtl.css
 share/wordpress/wp-includes/blocks/post-content/style-rtl.min.css
 share/wordpress/wp-includes/blocks/post-content/style.css
@@ -1702,10 +1700,6 @@ share/wordpress/wp-includes/blocks/post-navigation-link/style.css
 share/wordpress/wp-includes/blocks/post-navigation-link/style.min.css
 share/wordpress/wp-includes/blocks/post-template.php
 share/wordpress/wp-includes/blocks/post-template/block.json
-share/wordpress/wp-includes/blocks/post-template/editor-rtl.css
-share/wordpress/wp-includes/blocks/post-template/editor-rtl.min.css
-share/wordpress/wp-includes/blocks/post-template/editor.css
-share/wordpress/wp-includes/blocks/post-template/editor.min.css
 share/wordpress/wp-includes/blocks/post-template/style-rtl.css
 share/wordpress/wp-includes/blocks/post-template/style-rtl.min.css
 share/wordpress/wp-includes/blocks/post-template/style.css
@@ -1768,6 +1762,12 @@ share/wordpress/wp-includes/blocks/query-title/style-rtl.css
 share/wordpress/wp-includes/blocks/query-title/style-rtl.min.css
 share/wordpress/wp-includes/blocks/query-title/style.css
 share/wordpress/wp-includes/blocks/query-title/style.min.css
+share/wordpress/wp-includes/blocks/query-total.php
+share/wordpress/wp-includes/blocks/query-total/block.json
+share/wordpress/wp-includes/blocks/query-total/style-rtl.css
+share/wordpress/wp-includes/blocks/query-total/style-rtl.min.css
+share/wordpress/wp-includes/blocks/query-total/style.css
+share/wordpress/wp-includes/blocks/query-total/style.min.css
 share/wordpress/wp-includes/blocks/query.php
 share/wordpress/wp-includes/blocks/query/block.json
 share/wordpress/wp-includes/blocks/query/editor-rtl.css
@@ -2060,6 +2060,7 @@ share/wordpress/wp-includes/class-wp-object-cache.php
 share/wordpress/wp-includes/class-wp-oembed-controller.php
 share/wordpress/wp-includes/class-wp-oembed.php
 share/wordpress/wp-includes/class-wp-paused-extensions-storage.php
+share/wordpress/wp-includes/class-wp-phpmailer.php
 share/wordpress/wp-includes/class-wp-plugin-dependencies.php
 share/wordpress/wp-includes/class-wp-post-type.php
 share/wordpress/wp-includes/class-wp-post.php
@@ -2079,6 +2080,7 @@ share/wordpress/wp-includes/class-wp-simplepie-file.php
 share/wordpress/wp-includes/class-wp-simplepie-sanitize-kses.php
 share/wordpress/wp-includes/class-wp-site-query.php
 share/wordpress/wp-includes/class-wp-site.php
+share/wordpress/wp-includes/class-wp-speculation-rules.php
 share/wordpress/wp-includes/class-wp-styles.php
 share/wordpress/wp-includes/class-wp-tax-query.php
 share/wordpress/wp-includes/class-wp-taxonomy.php
@@ -2093,6 +2095,7 @@ share/wordpress/wp-includes/class-wp-theme-json-schema.php
 share/wordpress/wp-includes/class-wp-theme-json.php
 share/wordpress/wp-includes/class-wp-theme.php
 share/wordpress/wp-includes/class-wp-token-map.php
+share/wordpress/wp-includes/class-wp-url-pattern-prefixer.php
 share/wordpress/wp-includes/class-wp-user-meta-session-tokens.php
 share/wordpress/wp-includes/class-wp-user-query.php
 share/wordpress/wp-includes/class-wp-user-request.php
@@ -2258,6 +2261,8 @@ share/wordpress/wp-includes/css/wp-embed-template-ie.css
 share/wordpress/wp-includes/css/wp-embed-template-ie.min.css
 share/wordpress/wp-includes/css/wp-embed-template.css
 share/wordpress/wp-includes/css/wp-embed-template.min.css
+share/wordpress/wp-includes/css/wp-empty-template-alert.css
+share/wordpress/wp-includes/css/wp-empty-template-alert.min.css
 share/wordpress/wp-includes/css/wp-pointer-rtl.css
 share/wordpress/wp-includes/css/wp-pointer-rtl.min.css
 share/wordpress/wp-includes/css/wp-pointer.css
@@ -2531,8 +2536,6 @@ share/wordpress/wp-includes/js/dist/element.js
 share/wordpress/wp-includes/js/dist/element.min.js
 share/wordpress/wp-includes/js/dist/escape-html.js
 share/wordpress/wp-includes/js/dist/escape-html.min.js
-share/wordpress/wp-includes/js/dist/fields.js
-share/wordpress/wp-includes/js/dist/fields.min.js
 share/wordpress/wp-includes/js/dist/format-library.js
 share/wordpress/wp-includes/js/dist/format-library.min.js
 share/wordpress/wp-includes/js/dist/hooks.js
@@ -2581,6 +2584,8 @@ share/wordpress/wp-includes/js/dist/script-modules/a11y/index.js
 share/wordpress/wp-includes/js/dist/script-modules/a11y/index.min.js
 share/wordpress/wp-includes/js/dist/script-modules/block-library/file/view.js
 share/wordpress/wp-includes/js/dist/script-modules/block-library/file/view.min.js
+share/wordpress/wp-includes/js/dist/script-modules/block-library/form/view.js
+share/wordpress/wp-includes/js/dist/script-modules/block-library/form/view.min.js
 share/wordpress/wp-includes/js/dist/script-modules/block-library/image/view.js
 share/wordpress/wp-includes/js/dist/script-modules/block-library/image/view.min.js
 share/wordpress/wp-includes/js/dist/script-modules/block-library/navigation/view.js
@@ -2603,8 +2608,6 @@ share/wordpress/wp-includes/js/dist/style-engine.js
 share/wordpress/wp-includes/js/dist/style-engine.min.js
 share/wordpress/wp-includes/js/dist/token-list.js
 share/wordpress/wp-includes/js/dist/token-list.min.js
-share/wordpress/wp-includes/js/dist/undo-manager.js
-share/wordpress/wp-includes/js/dist/undo-manager.min.js
 share/wordpress/wp-includes/js/dist/url.js
 share/wordpress/wp-includes/js/dist/url.min.js
 share/wordpress/wp-includes/js/dist/vendor/lodash.js
@@ -2883,6 +2886,8 @@ share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/pagebreak-2x.png
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/pagebreak.png
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/playlist-audio.png
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/playlist-video.png
+share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/script.svg
+share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/style.svg
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/video.png
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/wp-content.css
 share/wordpress/wp-includes/js/tinymce/themes/inlite/theme.js
@@ -3165,6 +3170,7 @@ share/wordpress/wp-includes/sodium_compat/src/Crypto32.php
 share/wordpress/wp-includes/sodium_compat/src/File.php
 share/wordpress/wp-includes/sodium_compat/src/PHP52/SplFixedArray.php
 share/wordpress/wp-includes/sodium_compat/src/SodiumException.php
+share/wordpress/wp-includes/speculative-loading.php
 share/wordpress/wp-includes/spl-autoload-compat.php
 share/wordpress/wp-includes/style-engine.php
 share/wordpress/wp-includes/style-engine/class-wp-style-engine-css-declarations.php
