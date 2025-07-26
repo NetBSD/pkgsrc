@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4486 2025/07/26 07:28:31 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4487 2025/07/26 07:43:05 charlotte Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6583,3 +6583,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/wordpress to 6.8.2 [taca 2025-07-26]
 	Updated www/php-ja-wordpress to 6.8.2 [taca 2025-07-26]
 	Updated mail/mew to 6.10 [taca 2025-07-26]
+	Updated misc/libdivecomputer to 0.9.0 [charlotte 2025-07-26]
