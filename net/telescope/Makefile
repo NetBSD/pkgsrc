@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/26 13:37:32 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/26 19:45:58 vins Exp $
 
 DISTNAME=	telescope-0.11
 CATEGORIES=	net
@@ -15,14 +15,11 @@ USE_TOOLS+=	autoconf automake autoreconf \
 USE_CURSES=	wide
 FAKE_NCURSES=	yes
 
-DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-
 CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE   # strtonum()
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	YACC=${YACC:Q}
 CONFIGURE_ARGS+=	--with-default-editor=vi
-CONFIGURE_ARGS+=	--with-default-opener=xdg-open
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +28,7 @@ CONFIGURE_ARGS+=	--with-default-opener=xdg-open
 CONFIGURE_ARGS+=	--with-libimsg
 .endif
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libbsd
 .endif
