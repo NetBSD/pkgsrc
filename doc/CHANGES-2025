@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4481 2025/07/26 07:05:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4482 2025/07/26 07:07:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6578,3 +6578,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-sqlite to 3.10.3 [taca 2025-07-26]
 	Updated www/typo3-13 to 13.4.15 [taca 2025-07-26]
 	Updated mail/ruby-mime-types-data to 3.2025.0722 [taca 2025-07-26]
+	Updated www/php-contao-manager to 1.10.4 [taca 2025-07-26]
