@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/07/26 19:45:58 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/26 21:41:39 vins Exp $
 
 DISTNAME=	telescope-0.11
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://ftp.telescope-browser.org/
 
@@ -15,7 +16,9 @@ USE_TOOLS+=	autoconf automake autoreconf \
 USE_CURSES=	wide
 FAKE_NCURSES=	yes
 
-CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE   # strtonum()
+CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE	# strtonum()
+CFLAGS.SunOS+=		-D__EXTENSIONS__ -D_XOPEN_SOURCE=600 # CMSG_ functions
+LDFLAGS.SunOS+=		-lxnet
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	YACC=${YACC:Q}
