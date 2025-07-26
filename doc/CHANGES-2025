@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4485 2025/07/26 07:22:04 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4486 2025/07/26 07:28:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6582,3 +6582,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/bugdom to 1.3.4 [charlotte 2025-07-26]
 	Updated www/wordpress to 6.8.2 [taca 2025-07-26]
 	Updated www/php-ja-wordpress to 6.8.2 [taca 2025-07-26]
+	Updated mail/mew to 6.10 [taca 2025-07-26]
