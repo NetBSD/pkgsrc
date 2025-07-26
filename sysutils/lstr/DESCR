@@ -1,0 +1,3 @@
+A blazingly fast, minimalist directory tree viewer, written in
+Rust. Inspired by the command line program tree, with a powerful
+interactive mode.
