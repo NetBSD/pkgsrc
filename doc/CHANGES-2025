@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4483 2025/07/26 07:13:05 charlotte Exp $
+$NetBSD: CHANGES-2025,v 1.4484 2025/07/26 07:20:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6580,3 +6580,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-mime-types-data to 3.2025.0722 [taca 2025-07-26]
 	Updated www/php-contao-manager to 1.10.4 [taca 2025-07-26]
 	Updated games/bugdom to 1.3.4 [charlotte 2025-07-26]
+	Updated www/wordpress to 6.8.2 [taca 2025-07-26]
