@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/06/26 16:36:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/07/27 10:14:09 wiz Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -987,6 +987,9 @@ Size (serde_urlencoded-0.7.1.crate) = 12822 bytes
 BLAKE2s (sha2-0.10.9.crate) = b0b7a333d767acd0419a8fa55bd26673d2d2b82a30ce17d140d9cd25f4d2a8d9
 SHA512 (sha2-0.10.9.crate) = 963adeeb4ed8b0e7fc19085e8721ea13e9b3aea5d115ca1b3dbca495ad14810c6450991dd3753807c293c415aaeb1054b8b4124c72e7090cd9e86f09fcbb4f80
 Size (sha2-0.10.9.crate) = 29271 bytes
+BLAKE2s (shell-words-1.1.0.crate) = 84a7e31b11cf452d0d0606c8e6d6809ce707d4e1abe35546491dd262010f4912
+SHA512 (shell-words-1.1.0.crate) = 05c280a8e1f65b205746560a82e397689a3b5ec934219b558ece3a25efbfdefe903f9172319240e96039b38fb2c4be6e070805aedbdfd10344d9144b9c93de00
+Size (shell-words-1.1.0.crate) = 9871 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
@@ -1083,9 +1086,9 @@ Size (sync_wrapper-1.0.2.crate) = 6958 bytes
 BLAKE2s (synstructure-0.13.2.crate) = 674ef97e051051a22c4ec20f4b53a60e382b933bd94e75d853ebb2f98a3a797d
 SHA512 (synstructure-0.13.2.crate) = 2698f4e80b93f7cf1d8ae97c4c42a7f61e7b7081f7f1bbb94d7f48ab7ae813a666d73c49ba3812cda9155e0138b55cc246fb96e5858e411a8d32bafb3e2b2afb
 Size (synstructure-0.13.2.crate) = 18950 bytes
-BLAKE2s (tabiew-0.10.0.tar.gz) = 5eeedfc6fe9514190c08d4b0719747d0e4b5bd893a5c9f3908e9c5c2874739c5
-SHA512 (tabiew-0.10.0.tar.gz) = f8c30dc65e4bfc717acb8bad15f1e34f44a1da7d482bdc02f1c84be6507017908974be9eedde1c7943140972f640ca3670ad44cc00cf0136c85f17c0448b9a9d
-Size (tabiew-0.10.0.tar.gz) = 6390250 bytes
+BLAKE2s (tabiew-0.11.0.tar.gz) = 7acd84d28ecc3b7f04302d65217893030b385b8f663f4ebfe29e3dcfd2482bdb
+SHA512 (tabiew-0.11.0.tar.gz) = 1838f4cef328987bdd4879ef0815e7771c35b4a94f337a5b7670a2d080f05e24021edaea3921fc378984a6f395ad4e8bd1084c42a049224a97276507fe7f5b99
+Size (tabiew-0.11.0.tar.gz) = 6395314 bytes
 BLAKE2s (tempfile-3.20.0.crate) = 570c7fb574a6e01ccafac682202f3a7894dc4f7d6e41156f5e2fdd3456d10414
 SHA512 (tempfile-3.20.0.crate) = e317273225182b565f971b08160080e6162b0de855c0cc8c5b8d34b2afb48f73ed15a2848b65b6db73789fbf96dc88354b1d357d9c2267658de0c718286de8c6
 Size (tempfile-3.20.0.crate) = 42306 bytes
