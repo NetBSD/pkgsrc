@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4522 2025/07/27 09:32:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4523 2025/07/27 09:35:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 11.0.0 [wiz 2025-07-27]
 	Updated www/py-google-api-python-client to 2.177.0 [wiz 2025-07-27]
 	Updated net/py-grpcio to 1.74.0 [wiz 2025-07-27]
+	Updated audio/py-last to 5.5.0 [wiz 2025-07-27]
