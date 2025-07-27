@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4524 2025/07/27 09:36:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4525 2025/07/27 09:43:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6624,3 +6624,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio to 1.74.0 [wiz 2025-07-27]
 	Updated audio/py-last to 5.5.0 [wiz 2025-07-27]
 	Updated comms/py-rich to 14.1.0 [wiz 2025-07-27]
+	Updated devel/py-ruff to 0.12.5 [wiz 2025-07-27]
