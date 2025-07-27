@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4536 2025/07/27 15:43:19 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4537 2025/07/27 15:46:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6637,3 +6637,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Playwright to 1.532 [schmonz 2025-07-27]
 	Updated devel/ruby-io-event to 1.12.1 [taca 2025-07-27]
 	Updated devel/ruby-jirametrics to 2.13 [schmonz 2025-07-27]
+	Updated shells/sheldon to 0.8.5 [schmonz 2025-07-27]
