@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4504 2025/07/27 06:23:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4505 2025/07/27 08:25:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6601,3 +6601,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfsinfo to 1.0.8 [wiz 2025-07-27]
 	Updated filesystems/p5-Path-Tiny to 0.150 [wiz 2025-07-27]
 	Updated textproc/p5-Text-CSV_XS to 1.61 [wiz 2025-07-27]
+	Updated fonts/harfbuzz to 11.3.3 [adam 2025-07-27]
+	Updated fonts/harfbuzz-icu to 11.3.3 [adam 2025-07-27]
