@@ -1,7 +1,8 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2025/07/25 11:48:47 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2025/07/27 08:28:50 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	associative-cache-2.0.0
 CARGO_CRATE_DEPENDS+=	bytecount-0.6.9
+CARGO_CRATE_DEPENDS+=	bytes-1.10.1
 CARGO_CRATE_DEPENDS+=	cc-1.2.29
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.1
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.4
