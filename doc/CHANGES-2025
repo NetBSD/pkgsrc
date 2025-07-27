@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4513 2025/07/27 09:07:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4514 2025/07/27 09:09:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6613,3 +6613,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/jnv to 0.6.1 [wiz 2025-07-27]
 	Added textproc/py-sphinx-argparse version 0.5.2 [wiz 2025-07-27]
 	Updated misc/khard to 0.20.0 [wiz 2025-07-27]
+	Updated www/nghttp3 to 1.11.0 [wiz 2025-07-27]
