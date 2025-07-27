@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/05/01 14:53:41 fox Exp $
+# $NetBSD: Makefile,v 1.28 2025/07/27 23:42:23 fox Exp $
 
-DISTNAME=	wolfssl-5.8.0
+DISTNAME=	wolfssl-5.8.2
 CATEGORIES=	security
 MASTER_SITES=	https://www.wolfssl.com/
 EXTRACT_SUFX=	.zip
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://www.wolfssl.com/
 COMMENT=	Embedded SSL C-Library
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-dependency-tracking
