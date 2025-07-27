@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/06/14 14:30:03 taca Exp $
+# $NetBSD: Makefile,v 1.35 2025/07/27 16:21:24 taca Exp $
 
-DISTNAME=	aws-sdk-kms-1.105.0
+DISTNAME=	aws-sdk-kms-1.108.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/aws/aws-sdk-ruby
 COMMENT=	AWS SDK for Ruby - KMS
 LICENSE=	apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.225<4:../../www/ruby-aws-sdk-core
+DEPENDS+=	${RUBY_PKGPREFIX}-aws-sdk-core>=3.227<4:../../www/ruby-aws-sdk-core
 #DEPENDS+=	${RUBY_PKGPREFIX}-aws-sigv4>=1.5<2:../../www/ruby-aws-sigv4
 
 USE_LANGUAGES=		# none
