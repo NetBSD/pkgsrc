@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/06/26 16:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/27 10:14:09 wiz Exp $
 
-DISTNAME=	tabiew-0.10.0
+DISTNAME=	tabiew-0.11.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shshemi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
