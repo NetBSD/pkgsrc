@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/27 09:04:35 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.rst
+${PYSITELIB}/sphinxarg/__init__.py
+${PYSITELIB}/sphinxarg/__init__.pyc
+${PYSITELIB}/sphinxarg/__init__.pyo
+${PYSITELIB}/sphinxarg/ext.py
+${PYSITELIB}/sphinxarg/ext.pyc
+${PYSITELIB}/sphinxarg/ext.pyo
+${PYSITELIB}/sphinxarg/markdown.py
+${PYSITELIB}/sphinxarg/markdown.pyc
+${PYSITELIB}/sphinxarg/markdown.pyo
+${PYSITELIB}/sphinxarg/parser.py
+${PYSITELIB}/sphinxarg/parser.pyc
+${PYSITELIB}/sphinxarg/parser.pyo
