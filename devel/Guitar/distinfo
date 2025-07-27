@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2025/07/27 08:34:05 wiz Exp $
+
+BLAKE2s (Guitar-1.3.0.tar.gz) = c5be125f311985924b14b0397ff2d1c88ec0f88e889fd70bd0c9119c30ad03de
+SHA512 (Guitar-1.3.0.tar.gz) = bb5484c9a618b0b5ef08846b28ac79c05728ceffa2fdb668dc092461c13010b979484b9680695ae0e00f0748b661e92ef66aaf332954f34f65c0d47e0f8bac87
+Size (Guitar-1.3.0.tar.gz) = 29348519 bytes
+SHA1 (patch-filetype_file_src_gmtime__r.c) = ab52c180e4165fa1c541e6268481ddeb5f3e6329
+SHA1 (patch-src_common_jstream.h) = 0a6108072d5bb61b388f2b55fdf92899b30c4bc6
+SHA1 (patch-src_common_rwfile.h) = d693c7b9534d20c33e935527a6c182726a0a4f0a
+SHA1 (patch-src_platform.cpp) = 4e21e50e30bfef60f823daa5278c25cd828e1410
+SHA1 (patch-src_webclient.cpp) = 2c4a38cf3e298aa1dc6b31727a983f4d15bb2d31
+SHA1 (patch-src_zip_ziparchive.cpp) = 54cb11ab0e3995f5a32fcf1ef0cfa102a102f520
