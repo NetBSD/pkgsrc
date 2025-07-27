@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/07/26 21:52:03 vins Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/27 05:44:02 vins Exp $
 
 DISTNAME=	imsg-compat-8.0.0
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://github.com/bsd-ac/imsg-compat/
 COMMENT=	Portable version of OpenBSD's imsg interface
 LICENSE=	isc
+
+USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libimsg.pc.in
 
