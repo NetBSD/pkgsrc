@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4542 2025/07/27 16:08:37 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4543 2025/07/27 16:09:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6643,3 +6643,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/texttest to 4.4.4 [schmonz 2025-07-27]
 	Updated devel/ruby-rspec-core to 3.13.5 [taca 2025-07-27]
 	Updated devel/ruby-simplecov-html to 0.13.2 [taca 2025-07-27]
+	Updated finance/ruby-braintree to 4.29.0 [taca 2025-07-27]
