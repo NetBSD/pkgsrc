@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/06/12 15:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/07/27 09:34:50 wiz Exp $
 
-DISTNAME=	pylast-5.3.0
+DISTNAME=	pylast-5.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-random-order-[0-9]*:../../devel/py-test-rando
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
