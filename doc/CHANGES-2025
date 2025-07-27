@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4505 2025/07/27 08:25:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4506 2025/07/27 08:34:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6603,3 +6603,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-Text-CSV_XS to 1.61 [wiz 2025-07-27]
 	Updated fonts/harfbuzz to 11.3.3 [adam 2025-07-27]
 	Updated fonts/harfbuzz-icu to 11.3.3 [adam 2025-07-27]
+	Added devel/Guitar version 1.3.0 [wiz 2025-07-27]
