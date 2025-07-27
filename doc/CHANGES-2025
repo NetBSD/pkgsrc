@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4528 2025/07/27 10:17:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4529 2025/07/27 15:21:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6629,3 +6629,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tabiew to 0.11.0 [wiz 2025-07-27]
 	Updated lang/oracle-jdk21 to 21.0.8 [adam 2025-07-27]
 	Updated security/py-authlib to 1.6.1 [adam 2025-07-27]
+	Updated databases/ruby-sequel to 5.94.0 [taca 2025-07-27]
