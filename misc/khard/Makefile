@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/04/22 20:22:18 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/27 09:07:28 wiz Exp $
 
-DISTNAME=	khard-0.19.1
-PKGREVISION=	1
+DISTNAME=	khard-0.20.0
 CATEGORIES=	misc net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khard/}
 
@@ -15,13 +14,16 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_sc
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-[0-9]*:../../devel/py-ruamel-yaml
-DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.9.4:../../textproc/py-vobject
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-argparse-[0-9]*:../../textproc/py-sphinx-argparse
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autoapi-[0-9]*:../../textproc/py-sphinx-autoapi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10:../../textproc/py-sphinx-autodoc-typehints
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+
+# as of 0.20.0
+# 2 failed, 396 passed, 1 xfailed, 34 warnings
 
 INSTALLATION_DIRS=	share/examples/khard ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	*/*.py

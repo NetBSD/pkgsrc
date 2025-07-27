@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/22 20:22:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/07/27 09:07:28 wiz Exp $
 bin/khard
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -18,17 +18,20 @@ ${PYSITELIB}/khard/actions.pyo
 ${PYSITELIB}/khard/address_book.py
 ${PYSITELIB}/khard/address_book.pyc
 ${PYSITELIB}/khard/address_book.pyo
-${PYSITELIB}/khard/carddav_object.py
-${PYSITELIB}/khard/carddav_object.pyc
-${PYSITELIB}/khard/carddav_object.pyo
 ${PYSITELIB}/khard/cli.py
 ${PYSITELIB}/khard/cli.pyc
 ${PYSITELIB}/khard/cli.pyo
 ${PYSITELIB}/khard/config.py
 ${PYSITELIB}/khard/config.pyc
 ${PYSITELIB}/khard/config.pyo
+${PYSITELIB}/khard/contacts.py
+${PYSITELIB}/khard/contacts.pyc
+${PYSITELIB}/khard/contacts.pyo
 ${PYSITELIB}/khard/data/config.spec
 ${PYSITELIB}/khard/data/template.yaml
+${PYSITELIB}/khard/exceptions.py
+${PYSITELIB}/khard/exceptions.pyc
+${PYSITELIB}/khard/exceptions.pyo
 ${PYSITELIB}/khard/formatter.py
 ${PYSITELIB}/khard/formatter.pyc
 ${PYSITELIB}/khard/formatter.pyo
