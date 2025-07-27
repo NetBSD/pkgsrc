@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4492 2025/07/25 20:55:31 vins Exp $
+# $NetBSD: Makefile,v 1.4493 2025/07/27 08:34:31 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -8,6 +8,7 @@ SUBDIR+=	ETL
 SUBDIR+=	GConf
 SUBDIR+=	GConf-ui
 SUBDIR+=	Gorm
+SUBDIR+=	Guitar
 SUBDIR+=	MoarVM
 SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
