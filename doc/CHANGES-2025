@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4526 2025/07/27 09:52:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4527 2025/07/27 10:14:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6626,3 +6626,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-rich to 14.1.0 [wiz 2025-07-27]
 	Updated devel/py-ruff to 0.12.5 [wiz 2025-07-27]
 	Updated comms/py-textual to 5.0.1 [wiz 2025-07-27]
+	Updated textproc/tabiew to 0.11.0 [wiz 2025-07-27]
