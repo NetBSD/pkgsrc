@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4517 2025/07/27 09:17:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4518 2025/07/27 09:19:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6617,3 +6617,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ngtcp2 to 1.14.0 [wiz 2025-07-27]
 	Updated graphics/openexr to 3.3.5 [wiz 2025-07-27]
 	Added lang/tcl90 version 9.0.2 [wiz 2025-07-27]
+	Added x11/tk90 version 9.0.2 [wiz 2025-07-27]
