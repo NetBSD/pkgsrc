@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2025/05/17 07:19:58 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/07/27 15:54:17 taca Exp $
 
-DISTNAME=	reline-0.6.1
+DISTNAME=	reline-0.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	https://rubygems.org/gems/reline/
+HOMEPAGE=	https://github.com/ruby/reline
 COMMENT=	Alternative GNU Readline or Editline implementation by pure Ruby
 LICENSE=	2-clause-bsd OR ruby-license
 
