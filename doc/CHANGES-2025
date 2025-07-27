@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4533 2025/07/27 15:39:04 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4534 2025/07/27 15:40:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6634,3 +6634,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-console to 1.33.0 [taca 2025-07-27]
 	Updated devel/ruby-io-console to 0.8.1 [taca 2025-07-27]
 	Updated devel/astyle to 3.6.11 [schmonz 2025-07-27]
+	Updated www/p5-Playwright to 1.532 [schmonz 2025-07-27]
