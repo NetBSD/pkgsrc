@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4539 2025/07/27 15:54:29 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4540 2025/07/27 15:56:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6640,3 +6640,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/sheldon to 0.8.5 [schmonz 2025-07-27]
 	Updated devel/ruby-async to 2.27.0 [taca 2025-07-27]
 	Updated devel/ruby-reline to 0.6.2 [taca 2025-07-27]
+	Updated devel/texttest to 4.4.4 [schmonz 2025-07-27]
