@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/06/25 17:04:54 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2025/07/27 15:38:57 schmonz Exp $
 
-DISTNAME=		astyle-3.6.9
+DISTNAME=		astyle-3.6.11
 CATEGORIES=		devel textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
