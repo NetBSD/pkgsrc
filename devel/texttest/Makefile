@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/04/24 14:13:41 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/07/27 15:55:55 schmonz Exp $
 
-DISTNAME=		texttest-4.4.3.1
-PKGREVISION=		3
+DISTNAME=		texttest-4.4.4
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 
@@ -19,6 +18,8 @@ USE_LANGUAGES=		# none
 REPLACE_PYTHON+=	texttestlib/default/batch/__init__.py
 REPLACE_PYTHON+=	texttestlib/default/virtualdisplay.py
 REPLACE_PYTHON+=	texttestlib/log/logconfiggen_setup.py
+
+# pyproject.toml
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
