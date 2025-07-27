@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2025/05/29 14:42:35 taca Exp $
+# $NetBSD: Makefile,v 1.40 2025/07/27 16:01:28 taca Exp $
 
-DISTNAME=	rspec-core-3.13.4
+DISTNAME=	rspec-core-3.13.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://relishapp.com/rspec
+HOMEPAGE=	https://github.com/rspec/rspec-core
 COMMENT=	Behaviour Driven Development framework for Ruby, core part
 LICENSE=	mit
 
