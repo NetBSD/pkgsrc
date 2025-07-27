@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2025/05/27 16:05:33 taca Exp $
+# $NetBSD: Makefile,v 1.17 2025/07/27 15:34:56 taca Exp $
 
-DISTNAME=	io-console-0.8.0
+DISTNAME=	io-console-0.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	wen@NetBSD.org
-HOMEPAGE=	https://rubygems.org/gems/io-console/
+HOMEPAGE=	https://github.com/ruby/io-console
 COMMENT=	Add console capabilities to IO instances
 LICENSE=	2-clause-bsd OR ruby-license
 
-# Ruby 3.4.4 has io-console 0.8.0 gem.
+# Ruby 3.4.5 has io-console 0.8.1 gem.
 RUBY_VERSIONS_ACCEPTED=	32 33
 
 .include "../../lang/ruby/gem.mk"
