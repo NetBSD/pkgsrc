@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4498 2025/07/26 22:11:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4499 2025/07/27 05:53:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6595,3 +6595,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 141.0 [ryoon 2025-07-26]
 	Updated www/firefox-l10n to 141.0 [ryoon 2025-07-26]
 	Updated security/scrypt to 1.3.3 [wiz 2025-07-26]
+	Updated x11/xdpyinfo to 1.4.0 [wiz 2025-07-27]
