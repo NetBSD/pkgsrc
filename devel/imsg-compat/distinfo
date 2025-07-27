@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/07/26 09:06:46 vins Exp $
+$NetBSD: distinfo,v 1.3 2025/07/27 14:37:37 vins Exp $
 
 BLAKE2s (imsg-compat-8.0.0.tar.gz) = edd98212238cd39e92997236e3d42d4edf3551a97a6de27f48900f91b89a66c5
 SHA512 (imsg-compat-8.0.0.tar.gz) = 532742d16c817fded6299d0baccaf779cc0d989280d471df92ddf4340215b91a709fb231a2a1b553eb5f950f15e73d87031634270f19635d6f274dc7246adda9
 Size (imsg-compat-8.0.0.tar.gz) = 16474 bytes
-SHA1 (patch-src___imsg__compat.h) = f6d7fd6bf717294e04122c214beff56bcd9c47c0
+SHA1 (patch-src___imsg__compat.h) = d29e94dbb4b797fe0624187c73620f0e4034881c
