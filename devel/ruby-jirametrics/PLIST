@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/07/14 15:46:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/07/27 15:43:13 schmonz Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/lib/jirametrics/aging_work_bar_chart.rb
 ${GEM_LIBDIR}/lib/jirametrics/aging_work_in_progress_chart.rb
 ${GEM_LIBDIR}/lib/jirametrics/aging_work_table.rb
 ${GEM_LIBDIR}/lib/jirametrics/anonymizer.rb
+${GEM_LIBDIR}/lib/jirametrics/atlassian_document_format.rb
 ${GEM_LIBDIR}/lib/jirametrics/blocked_stalled_change.rb
 ${GEM_LIBDIR}/lib/jirametrics/board.rb
 ${GEM_LIBDIR}/lib/jirametrics/board_column.rb
