@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4529 2025/07/27 15:21:13 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4530 2025/07/27 15:23:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6630,3 +6630,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/oracle-jdk21 to 21.0.8 [adam 2025-07-27]
 	Updated security/py-authlib to 1.6.1 [adam 2025-07-27]
 	Updated databases/ruby-sequel to 5.94.0 [taca 2025-07-27]
+	Updated databases/ruby-sqlite3 to 2.7.3 [taca 2025-07-27]
