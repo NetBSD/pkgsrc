@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4510 2025/07/27 08:53:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4511 2025/07/27 08:57:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/enchant2 to 2.8.11 [wiz 2025-07-27]
 	Updated sysutils/fzf to 0.65.0 [wiz 2025-07-27]
 	Updated devel/jjui to 0.9.0 [wiz 2025-07-27]
+	Updated textproc/jnv to 0.6.1 [wiz 2025-07-27]
