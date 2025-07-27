@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/07/14 06:39:46 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/07/27 05:58:26 wiz Exp $
 
-BLAKE2s (xeyes-1.3.0.tar.xz) = 1ea3dacd78c934b77b935ff53e69271b3c319396db99c3d18154ef0ddce0375b
-SHA512 (xeyes-1.3.0.tar.xz) = 6108a476cd0807ce2a522d905894817f7f14f653f928c218c96c078f0822d9abef5fb941d3e7163a1cadaa7d74f1bd09bbf60345a7ac0fe906667af5a0490906
-Size (xeyes-1.3.0.tar.xz) = 130444 bytes
+BLAKE2s (xeyes-1.3.1.tar.xz) = 7e1a83f8978e78c24ed9cf8993d8728ca14e6ee6010eed8dcc181825e304893c
+SHA512 (xeyes-1.3.1.tar.xz) = c0c3e25b1685cc943c8d27f88c4d3ec79aa05c102ba7ac0cbd7dcebdf703111ecb2288f4bac55d9ffc5b7aa3b15cba58f28c21025a53b415a8a18bdb61688dcf
+Size (xeyes-1.3.1.tar.xz) = 135900 bytes

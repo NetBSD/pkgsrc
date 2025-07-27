@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2023/09/01 09:39:02 nia Exp $
+# $NetBSD: Makefile,v 1.16 2025/07/27 05:58:26 wiz Exp $
 
-DISTNAME=	xeyes-1.3.0
+DISTNAME=	xeyes-1.3.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,11 +10,9 @@ HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Follow the mouse demo
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
-
+.include "../../devel/meson/build.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
