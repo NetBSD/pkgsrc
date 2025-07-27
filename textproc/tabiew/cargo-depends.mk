@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/06/26 16:36:45 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2025/07/27 10:14:09 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -329,6 +329,7 @@ CARGO_CRATE_DEPENDS+=	serde_json-1.0.140
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.9
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
+CARGO_CRATE_DEPENDS+=	shell-words-1.1.0
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
