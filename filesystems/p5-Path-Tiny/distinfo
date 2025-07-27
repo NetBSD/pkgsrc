@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2025/03/30 08:54:04 wiz Exp $
+$NetBSD: distinfo,v 1.27 2025/07/27 06:22:21 wiz Exp $
 
-BLAKE2s (Path-Tiny-0.148.tar.gz) = 0b9da6fe8a937f91cc205e066fa36bfa54960b40e4f1cc189fbe0829842a9b9e
-SHA512 (Path-Tiny-0.148.tar.gz) = 2adc60d3872ebd53dff4197b6c8fe4132f6bf3a5de4f27ef0d5885e8f2cdcc88d0fbce3bd12f2b547681d0cd59fd8ce9a7eaf896a580f54089f118a28e0a0393
-Size (Path-Tiny-0.148.tar.gz) = 109809 bytes
+BLAKE2s (Path-Tiny-0.150.tar.gz) = 9cc904a6169563d1058640bbd78d6ce03413b2bb2ea264defb8385156264252a
+SHA512 (Path-Tiny-0.150.tar.gz) = 638ff4bf9b2a13c68793be8201a5452392ce38408a9d561a2d58067b40e5d24d27912964972f3e49cb4a3bc829ff7a4a86b47bda6b884c6edae6a4381839dec2
+Size (Path-Tiny-0.150.tar.gz) = 105901 bytes
