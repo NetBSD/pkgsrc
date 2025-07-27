@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2025/07/17 05:00:16 dkazankov Exp $
+# $NetBSD: Makefile,v 1.766 2025/07/27 09:17:17 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -355,6 +355,7 @@ SUBDIR+=	swi-prolog-packages
 SUBDIR+=	tcl
 SUBDIR+=	tcl-expect
 SUBDIR+=	tcl-otcl
+SUBDIR+=	tcl90
 SUBDIR+=	tcltutor
 SUBDIR+=	tclx
 SUBDIR+=	tinyscheme
