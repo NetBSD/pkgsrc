@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2025/04/14 08:14:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/07/27 23:47:19 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -88,6 +88,9 @@ ${PYSITELIB}/glances/exports/glances_influxdb/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_influxdb2/__init__.py
 ${PYSITELIB}/glances/exports/glances_influxdb2/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_influxdb2/__init__.pyo
+${PYSITELIB}/glances/exports/glances_influxdb3/__init__.py
+${PYSITELIB}/glances/exports/glances_influxdb3/__init__.pyc
+${PYSITELIB}/glances/exports/glances_influxdb3/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_json/__init__.py
 ${PYSITELIB}/glances/exports/glances_json/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_json/__init__.pyo
@@ -118,6 +121,9 @@ ${PYSITELIB}/glances/exports/glances_riemann/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_statsd/__init__.py
 ${PYSITELIB}/glances/exports/glances_statsd/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_statsd/__init__.pyo
+${PYSITELIB}/glances/exports/glances_timescaledb/__init__.py
+${PYSITELIB}/glances/exports/glances_timescaledb/__init__.pyc
+${PYSITELIB}/glances/exports/glances_timescaledb/__init__.pyo
 ${PYSITELIB}/glances/exports/glances_zeromq/__init__.py
 ${PYSITELIB}/glances/exports/glances_zeromq/__init__.pyc
 ${PYSITELIB}/glances/exports/glances_zeromq/__init__.pyo
@@ -329,6 +335,9 @@ ${PYSITELIB}/glances/plugins/vms/engines/__init__.pyo
 ${PYSITELIB}/glances/plugins/vms/engines/multipass.py
 ${PYSITELIB}/glances/plugins/vms/engines/multipass.pyc
 ${PYSITELIB}/glances/plugins/vms/engines/multipass.pyo
+${PYSITELIB}/glances/plugins/vms/engines/virsh.py
+${PYSITELIB}/glances/plugins/vms/engines/virsh.pyc
+${PYSITELIB}/glances/plugins/vms/engines/virsh.pyo
 ${PYSITELIB}/glances/plugins/wifi/__init__.py
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyc
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyo
