@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4551 2025/07/27 23:42:48 fox Exp $
+$NetBSD: CHANGES-2025,v 1.4552 2025/07/27 23:45:18 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6652,3 +6652,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-kms to 1.108.0 [taca 2025-07-27]
 	Updated www/ruby-aws-sdk-s3 to 1.194.0 [taca 2025-07-27]
 	Updated security/wolfssl to 5.8.2 [fox 2025-07-27]
+	Updated audio/fasttracker2 to 1.97 [fox 2025-07-27]
