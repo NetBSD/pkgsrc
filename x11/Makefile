@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1064 2025/06/07 17:10:59 vins Exp $
+# $NetBSD: Makefile,v 1.1065 2025/07/27 09:19:01 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -403,6 +403,7 @@ SUBDIR+=	tinyx-wscons
 SUBDIR+=	tk
 SUBDIR+=	tk-BWidget
 SUBDIR+=	tk-Tix
+SUBDIR+=	tk90
 SUBDIR+=	tkinfo
 SUBDIR+=	tktable
 SUBDIR+=	transset
