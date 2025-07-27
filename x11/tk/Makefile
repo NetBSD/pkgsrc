@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/04/06 05:37:48 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/07/27 09:25:55 wiz Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tcl.tk/
-COMMENT=	Graphical toolkit for TCL
+COMMENT=	Graphical toolkit for TCL (8.6 branch)
 LICENSE=	2-clause-bsd
 
 .include "../../x11/tk/Makefile.version"
