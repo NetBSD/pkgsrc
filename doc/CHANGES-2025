@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4509 2025/07/27 08:50:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4510 2025/07/27 08:53:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6609,3 +6609,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-license-expression to 30.4.4 [adam 2025-07-27]
 	Updated textproc/enchant2 to 2.8.11 [wiz 2025-07-27]
 	Updated sysutils/fzf to 0.65.0 [wiz 2025-07-27]
+	Updated devel/jjui to 0.9.0 [wiz 2025-07-27]
