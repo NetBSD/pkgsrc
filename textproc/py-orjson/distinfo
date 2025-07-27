@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2025/07/25 11:48:47 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/07/27 08:28:51 adam Exp $
 
 BLAKE2s (associative-cache-2.0.0.crate) = 337d054dfd3e0ae9dc1c811f0159d65e30fc578bb756a7e0104481c5158810b3
 SHA512 (associative-cache-2.0.0.crate) = 854f5130f286aaa76ffa2f4cbe27ca57c8220ec517c0d6fac46e5a505a3cb5fdc9ab60818db9f890b63ce2f44d243594d44747f7a87af9f304aaab3f4a4e8567
@@ -6,6 +6,9 @@ Size (associative-cache-2.0.0.crate) = 13960 bytes
 BLAKE2s (bytecount-0.6.9.crate) = 08ab8034e520d7b5a85e59743f84ff3d9b922d82d43da39c5f50e68e8b77595b
 SHA512 (bytecount-0.6.9.crate) = e77fa4d95ec0641f40e937ccfba4a560363284a63b79ededc00fba27080d076546bdaaa81eccf622332b924159328964dff017d017ec7d89b55427a7227975b5
 Size (bytecount-0.6.9.crate) = 18695 bytes
+BLAKE2s (bytes-1.10.1.crate) = 5b3216b1cac8c7d1740ecf85c7cdfcf54dfc2fab12d4e634b882fc8bcf27e480
+SHA512 (bytes-1.10.1.crate) = 03429f01927b94ba6c958c46b2e5bf92a23b39ce9385689e21accd34a5d3be01fd0f665f4bbffb1f7c5bdf1edfb1bf11d5ccad00eff0f9388be39fe2f753d296
+Size (bytes-1.10.1.crate) = 76779 bytes
 BLAKE2s (cc-1.2.29.crate) = a474632613fec85e51bf2148553a007528ef9bc03a6be0b6398c2071c57addf3
 SHA512 (cc-1.2.29.crate) = 5dd2e7c9d1cd78d7e71f3a9e0ffa81ca1b97bd1b51ba00154153601eec953f75d84ef8e59799603c70b84bd503b02787d4f48624176e4e9cb4ce7588a8ea6f4b
 Size (cc-1.2.29.crate) = 108072 bytes
@@ -45,9 +48,9 @@ Size (memchr-2.7.5.crate) = 97603 bytes
 BLAKE2s (once_cell-1.21.3.crate) = 5b077d9ff947a795057e5647e50cf1bead07170110d0adb8337b88fa28b9e289
 SHA512 (once_cell-1.21.3.crate) = 32a87506c6f4598f3ca2c88556014ef2093d5db9a08602335e847caa537a866492fa74c894e7e1da2e4289a1d3dbffcb90a9e37a4a1453203832f434b8206990
 Size (once_cell-1.21.3.crate) = 34534 bytes
-BLAKE2s (orjson-3.11.0.tar.gz) = e33500c204573bcbe7c8a055d1156409527569d7f7d21a3e332b4a47c9d28abc
-SHA512 (orjson-3.11.0.tar.gz) = be823592bc5fb28b1d5e90c412c9ec32b5953db27e5dcc088e43e2369dad28586603d0a3e450f72b5761a819bcd68a1305dac60219e5719b24e0a410c6e22af2
-Size (orjson-3.11.0.tar.gz) = 5318246 bytes
+BLAKE2s (orjson-3.11.1.tar.gz) = 23049f4cd91846be7ff28fc49947d022fe729d40841438f37219783866ba166c
+SHA512 (orjson-3.11.1.tar.gz) = 762f8185639ff7b533ad1cd54a1fe1cea71f4afdce7572dd35172a894e5f98ba0d8145e14b2c55634e7ea20b209ef5a5d537365d805278062eda668087b56147
+Size (orjson-3.11.1.tar.gz) = 5393373 bytes
 BLAKE2s (portable-atomic-1.11.1.crate) = 3758e723fa680cf28dc6cc870b7f521f37f8a3abf788e07b7178f9c875a53d29
 SHA512 (portable-atomic-1.11.1.crate) = 4c037ae0b4aef43077bdbf803389bc078d963f20d023e2e1d339a54f67fa9b27c174e7c1b6eca8881ecf301e30c431632d2c0dcedfb5b19552892fac0f81e2e1
 Size (portable-atomic-1.11.1.crate) = 185506 bytes
