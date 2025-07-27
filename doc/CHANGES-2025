@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4540 2025/07/27 15:56:01 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4541 2025/07/27 16:01:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6641,3 +6641,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-async to 2.27.0 [taca 2025-07-27]
 	Updated devel/ruby-reline to 0.6.2 [taca 2025-07-27]
 	Updated devel/texttest to 4.4.4 [schmonz 2025-07-27]
+	Updated devel/ruby-rspec-core to 3.13.5 [taca 2025-07-27]
