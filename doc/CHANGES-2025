@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4538 2025/07/27 15:50:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4539 2025/07/27 15:54:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6639,3 +6639,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-jirametrics to 2.13 [schmonz 2025-07-27]
 	Updated shells/sheldon to 0.8.5 [schmonz 2025-07-27]
 	Updated devel/ruby-async to 2.27.0 [taca 2025-07-27]
+	Updated devel/ruby-reline to 0.6.2 [taca 2025-07-27]
