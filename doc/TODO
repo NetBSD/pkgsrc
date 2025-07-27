@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26054 2025/07/27 09:21:16 wiz Exp $
+$NetBSD: TODO,v 1.26055 2025/07/27 09:24:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
-	o py-cyclonedx-python-lib-11.0.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
@@ -1248,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tads-3.0.16
 	o taplo-lsp-0.7.0
 	o tc-hasida-table-0.8 [wip]
-	o tcl-9.0.2 [wip]
 	o tcl-tDOM-0.9.2
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1276,7 +1274,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o thunderbird115-115.18.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
-	o tk-9.0.2 [wip]
 	o tkcon-2.7.3
 	o tkhylafax-3.2
 	o tkinfo-2.11
