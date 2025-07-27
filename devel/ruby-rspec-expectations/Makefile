@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2025/05/29 14:49:19 taca Exp $
+# $NetBSD: Makefile,v 1.42 2025/07/27 16:04:28 taca Exp $
 
 DISTNAME=	rspec-expectations-3.13.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://relishapp.com/rspec
+HOMEPAGE=	https://github.com/rspec/rspec-expectations
 COMMENT=	Behaviour Driven Development framework for Ruby, expectations
 LICENSE=	mit
 
