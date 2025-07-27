@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4506 2025/07/27 08:34:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4507 2025/07/27 08:36:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6604,3 +6604,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 11.3.3 [adam 2025-07-27]
 	Updated fonts/harfbuzz-icu to 11.3.3 [adam 2025-07-27]
 	Added devel/Guitar version 1.3.0 [wiz 2025-07-27]
+	Updated textproc/py-orjson to 3.11.1 [adam 2025-07-27]
+	Updated audio/py-discid to 1.3.0 [adam 2025-07-27]
+	Updated devel/py-license-expression to 30.4.4 [adam 2025-07-27]
