@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/07/08 14:42:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2025/07/27 15:46:08 schmonz Exp $
 
-DISTNAME=		sheldon-0.8.4
+DISTNAME=		sheldon-0.8.5
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rossmacarthur/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
