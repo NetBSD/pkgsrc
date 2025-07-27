@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/12/20 14:39:23 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/07/27 05:56:15 wiz Exp $
 
-BLAKE2s (xdriinfo-1.0.7.tar.xz) = 6c64c7d3ca9cbe5e4c57bf4dbc6ddef5788f928af1cff7183e9ca47409447e6f
-SHA512 (xdriinfo-1.0.7.tar.xz) = a368cf32c606ca78f3a23bc5d88fb57b9c1a3827d0fec3e48cee153703135e47cecd3db8ee0eba93f309d7f03b4306c3f2e7f46f36d0d2970671c5e5b78093ad
-Size (xdriinfo-1.0.7.tar.xz) = 118268 bytes
+BLAKE2s (xdriinfo-1.0.8.tar.xz) = 8390a72a8e0359470575bd3b1a006ca5356fcb0c46ca427f517a1e4e90ab23ef
+SHA512 (xdriinfo-1.0.8.tar.xz) = 36ea6a453b7f3ec7caa028282c701c98dfb45886dc833e31931d3ed6333a96a5bf7d3816bf5db51b3c359297f25e242c913eae4dd01be5de557475b4cd98d458
+Size (xdriinfo-1.0.8.tar.xz) = 123872 bytes
