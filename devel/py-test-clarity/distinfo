@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 20:36:36 dkazankov Exp $
+
+BLAKE2s (pytest-clarity-1.0.1.tar.gz) = e0b67d7f2b2bec2446815dae4fc78b520e50b274054957b8142001ac1dba12b3
+SHA512 (pytest-clarity-1.0.1.tar.gz) = b99232534fae96e4eb4fe9191f7da926bb67259e01a55710531e22986d00d544c117aca4ae7afa74c70b8ad5816ebc002980fbe7aef9a1ed66270b1f8ad08842
+Size (pytest-clarity-1.0.1.tar.gz) = 4891 bytes

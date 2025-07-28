@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/28 20:36:36 dkazankov Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_clarity/__init__.py
+${PYSITELIB}/pytest_clarity/__init__.pyc
+${PYSITELIB}/pytest_clarity/__init__.pyo
+${PYSITELIB}/pytest_clarity/diff.py
+${PYSITELIB}/pytest_clarity/diff.pyc
+${PYSITELIB}/pytest_clarity/diff.pyo
+${PYSITELIB}/pytest_clarity/plugin.py
+${PYSITELIB}/pytest_clarity/plugin.pyc
+${PYSITELIB}/pytest_clarity/plugin.pyo
+${PYSITELIB}/pytest_clarity/util.py
+${PYSITELIB}/pytest_clarity/util.pyc
+${PYSITELIB}/pytest_clarity/util.pyo
