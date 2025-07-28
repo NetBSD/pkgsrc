@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4569 2025/07/28 13:15:27 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.4570 2025/07/28 13:15:55 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6670,3 +6670,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/xgc to 1.0.7 [wiz 2025-07-28]
 	Added devel/py-funcy version 2.0 [dkazankov 2025-07-28]
 	Updated www/hugo to 0.148.2 [triaxx 2025-07-28]
+	Added graphics/py-railroad-diagrams version 3.0.1 [dkazankov 2025-07-28]
