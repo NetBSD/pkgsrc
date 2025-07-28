@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1868 2025/07/16 10:59:22 sborrill Exp $
+# $NetBSD: Makefile,v 1.1869 2025/07/28 21:25:49 dkazankov Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -931,6 +931,7 @@ SUBDIR+=	py-test-jupyter
 SUBDIR+=	py-test-sanic
 SUBDIR+=	py-tornado
 SUBDIR+=	py-twill
+SUBDIR+=	py-url-normalize
 SUBDIR+=	py-urllib3
 SUBDIR+=	py-uvicorn
 SUBDIR+=	py-uwsgi
