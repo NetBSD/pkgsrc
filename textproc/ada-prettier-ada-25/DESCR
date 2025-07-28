@@ -1,0 +1,5 @@
+Prettier-Ada - port of the Prettier formatter to the Ada
+
+This project is a port of the Prettier formatter to the Ada programming
+language. The aim of this project is to provide a tool that allows Ada
+programmers to create formatters for any language of their choosing.

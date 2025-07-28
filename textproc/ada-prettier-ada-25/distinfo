@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 11:40:31 dkazankov Exp $
+
+BLAKE2s (prettier-ada-25.0.0.tar.gz) = cfa22b6a5009c42606a845e54ba3d66b83b0770e860f1f14fb78e53c46fc9ad4
+SHA512 (prettier-ada-25.0.0.tar.gz) = 5e31bedf76f6051a1e40a298953d9aa269f24d374b619fba1de934d4b85efc358532d9d695084b41607ae7d8d87bf91f27a151760c1f010782b2af3f64783c6a
+Size (prettier-ada-25.0.0.tar.gz) = 60082 bytes
+SHA1 (patch-Makefile) = 52f186647c58f46a7a23de4afa60ef073bceadf8
