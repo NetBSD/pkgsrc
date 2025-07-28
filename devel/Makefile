@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4499 2025/07/28 14:47:52 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4500 2025/07/28 16:21:49 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -3248,6 +3248,7 @@ SUBDIR+=	py-vulture
 SUBDIR+=	py-wasm
 SUBDIR+=	py-wat-inspector
 SUBDIR+=	py-wcwidth
+SUBDIR+=	py-whatever
 SUBDIR+=	py-whatthepatch
 SUBDIR+=	py-wheel
 SUBDIR+=	py-whichcraft
