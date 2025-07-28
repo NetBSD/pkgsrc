@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1090 2025/07/03 13:32:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1091 2025/07/28 13:15:20 dkazankov Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -519,6 +519,7 @@ SUBDIR+=	py-pygal
 SUBDIR+=	py-pygraphviz
 SUBDIR+=	py-pypng
 SUBDIR+=	py-qrcode
+SUBDIR+=	py-railroad-diagrams
 SUBDIR+=	py-scour
 SUBDIR+=	py-seaborn
 SUBDIR+=	py-seqdiag
