@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4562 2025/07/28 10:59:22 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4563 2025/07/28 11:01:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6663,3 +6663,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.39.2 [pin 2025-07-28]
 	Updated devel/mise to 2025.7.29 [pin 2025-07-28]
 	Updated sysutils/parallel-disk-usage to 0.20.1 [pin 2025-07-28]
+	Updated audio/spotify-player to 0.20.7 [pin 2025-07-28]
