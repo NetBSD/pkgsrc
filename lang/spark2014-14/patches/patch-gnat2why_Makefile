@@ -1,0 +1,23 @@
+$NetBSD: patch-gnat2why_Makefile,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+
+Make gprbuild options settable
+
+--- gnat2why/Makefile.orig	2024-01-11 17:55:20.000000000 +0200
++++ gnat2why/Makefile
+@@ -2,6 +2,7 @@
+ # This makefile assumes that it executed from the backend directory.
+ 
+ GPRBUILD=gprbuild
++GPRBUILD_OPTIONS=-j$(PROCS) -cargs $(CFLAGS) -largs $(LDFLAGS)
+ 
+ # number of processors
+ PROCS=0
+@@ -72,7 +73,7 @@
+ 	mv $(GEN_IL_FILES) ../obj
+ 
+ build: setup force
+-	$(GPRBUILD) $(GPRARGS) $(COVERAGEARGS) -Pgnat2why -j$(PROCS) -cargs ${CFLAGS} -largs $(LDFLAGS)
++	$(GPRBUILD) $(GPRARGS) $(COVERAGEARGS) -Pgnat2why $(GPRBUILD_OPTIONS)
+ 
+ # Compilation and linking settings for coverage and profiling; for details see
+ # "Code Coverage and Profiling" in GNAT User's Guide.
