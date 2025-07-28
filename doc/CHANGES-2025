@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4579 2025/07/28 20:53:47 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4580 2025/07/28 21:26:28 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6682,3 +6682,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-pprintpp version 0.4.0 [dkazankov 2025-07-28]
 	Added devel/py-test-clarity version 1.0.1 [dkazankov 2025-07-28]
 	Added devel/py-test-pretty version 1.3.0 [dkazankov 2025-07-28]
+	Added www/py-url-normalize version 2.2.1 [dkazankov 2025-07-28]
