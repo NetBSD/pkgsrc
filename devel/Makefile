@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4494 2025/07/28 05:46:26 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4495 2025/07/28 06:52:41 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -134,6 +134,7 @@ SUBDIR+=	ada-gnatcoll-core-25
 SUBDIR+=	ada-libgpr-24
 SUBDIR+=	ada-libgpr-25
 SUBDIR+=	ada-libgpr2-25
+SUBDIR+=	ada-sparklib-14
 SUBDIR+=	ade
 SUBDIR+=	adocman
 SUBDIR+=	aegis
