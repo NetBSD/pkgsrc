@@ -1,0 +1,2 @@
+Plugin which brings the coloured diff output from the Ward test
+framework to pytest
