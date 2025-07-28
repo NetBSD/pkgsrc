@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2025/07/03 06:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2025/07/28 13:48:50 adam Exp $
 
-DISTNAME=	grpc-1.73.1
-PKGREVISION=	1
+DISTNAME=	grpc-1.74.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +15,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DgRPC_DOWNLOAD_ARCHIVES=OFF
 # use cmake's find_package() to locate a pre-installed dependency
 CMAKE_CONFIGURE_ARGS+=	-DgRPC_ABSL_PROVIDER=package
 CMAKE_CONFIGURE_ARGS+=	-DgRPC_BENCHMARK_PROVIDER=package
@@ -30,9 +30,6 @@ CMAKE_CONFIGURE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 CENSUS_VER=		0.3.0
 CENSUS_DIST=		opencensus-proto-${CENSUS_VER}.tar.gz
 SITES.${CENSUS_DIST}=	-${MASTER_SITE_GITHUB:=census-instrumentation/opencensus-proto/archive/}/v${CENSUS_VER}.tar.gz
-
-ENVOY_DIST=		envoy-api-f8b75d1efa92bbf534596a013d9ca5873f79dd30..tar.gz
-SITES.${ENVOY_DIST}=	-${MASTER_SITE_GITHUB:=envoyproxy/data-plane-api/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${CENSUS_DIST}
 
