@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 12:56:12 dkazankov Exp $
+
+BLAKE2s (funcy-2.0.tar.gz) = 95eafb13e3d39d99e9084ad8724d86a301609ada3b1221a271bfe647c0da3e52
+SHA512 (funcy-2.0.tar.gz) = 3abd76296aa03d6c3fa0583cd1c3912a47ce04c340f668d7321e2c4191a61a1679f1a419b787c92680cbbae5757e1fabc5918a6a80130c244b4018c28751e01e
+Size (funcy-2.0.tar.gz) = 537931 bytes

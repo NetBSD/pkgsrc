@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4496 2025/07/28 09:07:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4497 2025/07/28 12:56:12 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -2678,6 +2678,7 @@ SUBDIR+=	py-frozenlist
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
 SUBDIR+=	py-functools32
+SUBDIR+=	py-funcy
 SUBDIR+=	py-future
 SUBDIR+=	py-futures
 SUBDIR+=	py-fuzzywuzzy
