@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2022/10/15 23:12:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/07/28 12:12:03 wiz Exp $
 
-DISTNAME=	xgc-1.0.6
+DISTNAME=	xgc-1.0.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
