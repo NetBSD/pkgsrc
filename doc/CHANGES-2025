@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4559 2025/07/28 10:21:49 nat Exp $
+$NetBSD: CHANGES-2025,v 1.4560 2025/07/28 10:55:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6660,3 +6660,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/gpr2-tools version 25.0.0 [dkazankov 2025-07-28]
 	Updated x11/fltk to 1.4.4 [micha 2025-07-28]
 	Updated x11/tinyx-wscons to 0.8 [nat 2025-07-28]
+	Updated devel/ast-grep to 0.39.2 [pin 2025-07-28]
