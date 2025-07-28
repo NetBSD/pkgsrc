@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2025/02/02 04:54:49 taca Exp $
+# $NetBSD: Makefile,v 1.219 2025/07/28 17:26:31 dkazankov Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -128,6 +128,7 @@ SUBDIR+=	php-mbstring
 SUBDIR+=	php-recode
 SUBDIR+=	psiconv
 SUBDIR+=	pstotext
+SUBDIR+=	py-ansi2html
 SUBDIR+=	py-arabic-reshaper
 SUBDIR+=	py-base58
 SUBDIR+=	py-bidi
