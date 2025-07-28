@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 14:47:52 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/28 20:17:13 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in e3-convert-xunit e3-find-skipped-tests e3-opt-parser e3-run-test-fragment e3-test e3-testsuite-report
