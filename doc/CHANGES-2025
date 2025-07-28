@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4576 2025/07/28 17:27:16 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4577 2025/07/28 20:19:13 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6679,3 +6679,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-e3-testsuite version 26.0 [dkazankov 2025-07-28]
 	Added devel/py-whatever version 0.7 [dkazankov 2025-07-28]
 	Added converters/py-ansi2html version 1.9.2 [dkazankov 2025-07-28]
+	Added devel/py-pprintpp version 0.4.0 [dkazankov 2025-07-28]
