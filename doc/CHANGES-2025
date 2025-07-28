@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4553 2025/07/27 23:47:40 fox Exp $
+$NetBSD: CHANGES-2025,v 1.4554 2025/07/28 05:47:25 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6654,3 +6654,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/wolfssl to 5.8.2 [fox 2025-07-27]
 	Updated audio/fasttracker2 to 1.97 [fox 2025-07-27]
 	Updated sysutils/py-Glances to 4.3.2 [fox 2025-07-27]
+	Added devel/ada-libgpr2-25 version 25.0.0 [dkazankov 2025-07-28]
