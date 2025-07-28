@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 05:46:26 dkazankov Exp $
+
+BLAKE2s (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = eb32df0aa23a0ba4c8bcc88a580a06887ff7b12efc87bb0eac9b4d292ec548a6
+SHA512 (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = afc1754efdf6e3cbff9752a182cd063f83965c6a13e53930a14f806a46e3cbfb0afed8f8e11b098986227f27a1a67b45d22369adaa39a5dc1f2a8cc494f789e8
+Size (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = 44165 bytes
+BLAKE2s (gpr2-25.0.0.tar.gz) = 17755dafff06fed43397492965dc2ff70338d8ad404932d4986a1dc51622b8db
+SHA512 (gpr2-25.0.0.tar.gz) = 2fdcb4c7038dfe852c0636510a408d7dab95ca6ec7645ed6bda65e785cc1cb32709dda0f36ce6e1bc8d10c9df8ae5433b5fd4d2c2779116ef74ab5a2508226d0
+Size (gpr2-25.0.0.tar.gz) = 1684646 bytes
+SHA1 (patch-gpr2.gpr) = 4d7af060a60df5f800199d1ad6c053dbc961592a

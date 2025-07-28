@@ -1,0 +1,17 @@
+$NetBSD: patch-gpr2.gpr,v 1.1 2025/07/28 05:46:26 dkazankov Exp $
+
+Workaround an issue with GNAT FSF 14
+
+--- gpr2.gpr.orig	2024-10-16 13:31:33.000000000 +0300
++++ gpr2.gpr
+@@ -54,6 +54,10 @@
+       --  generated knowledge base
+       for Switches ("gpr2-kb-embedded.adb") use
+         Compiler'Default_Switches ("Ada") & ("-gnatws", "-gnatyN");
++
++      for Switches ("gpr2-build-actions-post_bind.adb") use Compiler'Default_Switches ("Ada") & ("-O0");
++      for Switches ("gpr2-build-actions-compile-ada.adb") use Compiler'Default_Switches ("Ada") & ("-O0");
++
+    end Compiler;
+ 
+    --------------
