@@ -1,0 +1,6 @@
+SPARKlib libraries
+
+SPARKlib is meant to provide users of SPARK libraries to
+use in SPARK code. SPARKlib contains various libraries,
+such as a wide range of containers, as well as lemmas to
+use directly in user code.
