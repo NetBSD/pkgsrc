@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4563 2025/07/28 11:01:17 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4564 2025/07/28 11:35:25 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6664,3 +6664,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.7.29 [pin 2025-07-28]
 	Updated sysutils/parallel-disk-usage to 0.20.1 [pin 2025-07-28]
 	Updated audio/spotify-player to 0.20.7 [pin 2025-07-28]
+	Added textproc/ada-vss-25 version 25.0.0 [dkazankov 2025-07-28]
