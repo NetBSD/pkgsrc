@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2025/04/30 09:58:59 micha Exp $
+# $NetBSD: Makefile,v 1.96 2025/07/28 10:06:48 micha Exp $
 
-DISTNAME=	fltk-1.4.3-source
+DISTNAME=	fltk-1.4.4-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
