@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4500 2025/07/28 16:21:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4501 2025/07/28 20:17:13 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -2878,6 +2878,7 @@ SUBDIR+=	py-poetry-core
 SUBDIR+=	py-poetry-plugin-export
 SUBDIR+=	py-polib
 SUBDIR+=	py-pooch
+SUBDIR+=	py-pprintpp
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-prefixspan
 SUBDIR+=	py-pretend
