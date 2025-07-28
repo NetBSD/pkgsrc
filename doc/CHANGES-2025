@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4566 2025/07/28 12:10:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4567 2025/07/28 12:12:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6667,3 +6667,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/ada-vss-25 version 25.0.0 [dkazankov 2025-07-28]
 	Added textproc/ada-prettier-ada-25 version 25.0.0 [dkazankov 2025-07-28]
 	Updated x11/xgamma to 1.0.8 [wiz 2025-07-28]
+	Updated graphics/xgc to 1.0.7 [wiz 2025-07-28]
