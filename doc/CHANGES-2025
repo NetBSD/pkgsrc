@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4572 2025/07/28 13:51:41 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4573 2025/07/28 13:57:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6673,3 +6673,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/py-railroad-diagrams version 3.0.1 [dkazankov 2025-07-28]
 	Added textproc/py-types-docutils version 0.21.0.20250604 [dkazankov 2025-07-28]
 	Added devel/py-types-gdb version 15.0.0.20250516 [dkazankov 2025-07-28]
+	Updated net/grpc to 1.74.0 [adam 2025-07-28]
+	Updated net/py-grpcio-testing to 1.74.0 [adam 2025-07-28]
+	Updated net/py-grpcio-tools to 1.74.0 [adam 2025-07-28]
