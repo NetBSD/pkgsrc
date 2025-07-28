@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/28 17:26:31 dkazankov Exp $
+bin/ansi2html-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/ansi2html/__init__.py
+${PYSITELIB}/ansi2html/__init__.pyc
+${PYSITELIB}/ansi2html/__init__.pyo
+${PYSITELIB}/ansi2html/__main__.py
+${PYSITELIB}/ansi2html/__main__.pyc
+${PYSITELIB}/ansi2html/__main__.pyo
+${PYSITELIB}/ansi2html/_version.py
+${PYSITELIB}/ansi2html/_version.pyc
+${PYSITELIB}/ansi2html/_version.pyo
+${PYSITELIB}/ansi2html/converter.py
+${PYSITELIB}/ansi2html/converter.pyc
+${PYSITELIB}/ansi2html/converter.pyo
+${PYSITELIB}/ansi2html/py.typed
+${PYSITELIB}/ansi2html/style.py
+${PYSITELIB}/ansi2html/style.pyc
+${PYSITELIB}/ansi2html/style.pyo
+${PYSITELIB}/ansi2html/util.py
+${PYSITELIB}/ansi2html/util.pyc
+${PYSITELIB}/ansi2html/util.pyo
