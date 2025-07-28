@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/28 20:17:13 dkazankov Exp $
+bin/pypprint-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pprintpp/__init__.py
+${PYSITELIB}/pprintpp/__init__.pyc
+${PYSITELIB}/pprintpp/__init__.pyo
+${PYSITELIB}/pprintpp/ipython.py
+${PYSITELIB}/pprintpp/ipython.pyc
+${PYSITELIB}/pprintpp/ipython.pyo
+${PYSITELIB}/pprintpp/safesort.py
+${PYSITELIB}/pprintpp/safesort.pyc
+${PYSITELIB}/pprintpp/safesort.pyo
