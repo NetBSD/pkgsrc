@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4558 2025/07/28 10:08:56 micha Exp $
+$NetBSD: CHANGES-2025,v 1.4559 2025/07/28 10:21:49 nat Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6659,3 +6659,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/spark2014-14 version 14.2.0 [dkazankov 2025-07-28]
 	Added devel/gpr2-tools version 25.0.0 [dkazankov 2025-07-28]
 	Updated x11/fltk to 1.4.4 [micha 2025-07-28]
+	Updated x11/tinyx-wscons to 0.8 [nat 2025-07-28]
