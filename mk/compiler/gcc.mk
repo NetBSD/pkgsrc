@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.295 2025/07/28 07:25:15 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.296 2025/07/28 07:31:41 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -653,6 +653,7 @@ _NEED_GCC6_AUX?=no
 _NEED_GCC10_AUX?=no
 _NEED_GCC13_GNAT?=no
 _NEED_GCC14_GNAT?=	no
+_NEED_GCC15_GNAT?=	no
 .if ${_NEED_GCC_AUX:tl} == "yes"
 # Ada compilers are always only from pkgsrc
 USE_NATIVE_GCC=		no
@@ -672,6 +673,9 @@ _NEED_GCC13_GNAT=	yes
 .  if ${_NEED_GCC14:tl} == "yes"
 _NEED_GCC14_GNAT=	yes
 .  endif
+.  if ${_NEED_GCC15:tl} == "yes"
+_NEED_GCC15_GNAT=	yes
+.  endif
 
 # We have fixed set of Ada compilers and languages them provided. So we try to find best possible variant
 .  if !empty(USE_LANGUAGES:Mfortran) || !empty(USE_LANGUAGES:Mfortran77)
@@ -679,6 +683,7 @@ _NEED_GCC14_GNAT=	yes
 _NEED_GCC6_AUX=no
 _NEED_GCC13_GNAT=no
 _NEED_GCC14_GNAT=	no
+_NEED_GCC15_GNAT=	no
 .     else
 PKG_FAIL_REASON+=	"Package requires fortran compiler"
 .     endif
@@ -704,6 +709,7 @@ _NEED_GCC10=no
 _NEED_GCC12=no
 _NEED_GCC13=no
 _NEED_GCC14=	no
+_NEED_GCC15=	no
 .endif
 
 # Assume by default that GCC will only provide a C compiler.
@@ -736,6 +742,8 @@ LANGUAGES.gcc=	c c++ fortran fortran77 ada
 .elif !empty(_NEED_GCC13_GNAT:M[yY][eE][sS])
 LANGUAGES.gcc=c c++ ada
 .elif !empty(_NEED_GCC14_GNAT:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ ada
+.elif !empty(_NEED_GCC15_GNAT:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ ada
 .endif
 _LANGUAGES.gcc=		# empty
@@ -1021,6 +1029,22 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  if !defined(_IGNORE_GCC)
 _GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
 #_GCC_DEPENDENCY=	gcc14-gnat>=${_GCC_REQD}:../../lang/gcc14-gnat
+.    if defined(USE_GCC_RUNTIME)
+_USE_GCC_SHLIB?=	yes
+.    endif
+.  endif
+.elif !empty(_NEED_GCC15_GNAT:M[yY][eE][sS])
+#
+# We require Ada-capable compiler in the lang/gcc15-gnat directory.
+#
+_GCC_PKGBASE=		gcc15-gnat
+_GNAT_NAME=		gnat15
+.  if ${PKGPATH} == lang/${_GCC_PKGBASE}
+_IGNORE_GCC=		yes
+MAKEFLAGS+=		_IGNORE_GCC=yes
+.  endif
+.  if !defined(_IGNORE_GCC)
+_GCC_PKGSRCDIR=		../../lang/${_GCC_PKGBASE}
 .    if defined(USE_GCC_RUNTIME)
 _USE_GCC_SHLIB?=	yes
 .    endif
@@ -1318,6 +1342,8 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .      include "../../lang/gcc13-gnat-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc14-gnat)
 .      include "../../lang/gcc14-gnat-libs/buildlink3.mk"
+.    elif !empty(_GCC_PKGBASE:Mgcc15-gnat)
+.      include "../../lang/gcc15-gnat-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc6)
 .      include "../../lang/gcc6-libs/buildlink3.mk"
 .    elif !empty(_GCC_PKGBASE:Mgcc7)
