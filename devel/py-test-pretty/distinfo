@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 20:53:23 dkazankov Exp $
+
+BLAKE2s (pytest-pretty-1.3.0.tar.gz) = 2645a248609e12359418b01da22e5ff31235cb8c72a6ac8b30d66e7082082ced
+SHA512 (pytest-pretty-1.3.0.tar.gz) = 25bf212f4b347de80222f70cde2bf2f5264e1383ca636e67927aef38afcd73c5558d0e764cda48f17632f80b7dad8707a893684e88a2a5359b9fbaebc3a4246b
+Size (pytest-pretty-1.3.0.tar.gz) = 217320 bytes
