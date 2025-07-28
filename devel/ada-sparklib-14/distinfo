@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 06:52:41 dkazankov Exp $
+
+BLAKE2s (SPARKlib-fsf-14.tar.gz) = b1b62a533d681917108aa7ac9b70d052fb7760c7959492c1c36fbf1a14acf789
+SHA512 (SPARKlib-fsf-14.tar.gz) = 9e6f695a095deaad8bfa8f8348dbc089dec8c05f3ec18c662a91cf0d2c0d8a6aa7a644c83ef304cd0fdb7dc52220abcfd8f4171fb0fcf2411a679da398eeda6f
+Size (SPARKlib-fsf-14.tar.gz) = 349425 bytes
