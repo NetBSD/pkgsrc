@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4502 2025/07/28 20:36:36 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4503 2025/07/28 20:53:23 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -3173,6 +3173,7 @@ SUBDIR+=	py-test-mypy-plugins
 SUBDIR+=	py-test-order
 SUBDIR+=	py-test-perf
 SUBDIR+=	py-test-plus
+SUBDIR+=	py-test-pretty
 SUBDIR+=	py-test-pylint
 SUBDIR+=	py-test-pythonpath
 SUBDIR+=	py-test-random-order

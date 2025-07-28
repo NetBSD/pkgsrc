@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/28 20:53:23 dkazankov Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pytest_pretty/__init__.py
+${PYSITELIB}/pytest_pretty/__init__.pyc
+${PYSITELIB}/pytest_pretty/__init__.pyo
