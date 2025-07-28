@@ -1,0 +1,78 @@
+$NetBSD: patch-Makefile,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+
+Fix install directory
+Fix version value substitution
+Fix build type
+Remove unused SPARKlib build
+
+--- Makefile.orig	2024-01-11 17:55:20.000000000 +0200
++++ Makefile
+@@ -43,7 +43,9 @@
+ 
+ COVERAGE_ROOT_DIR=/it/wave/x86_64-linux/spark2014-core_assertions_coverage/src/
+ 
+-INSTALLDIR=$(CURDIR)/install
++PREFIX=
++DESTDIR=
++INSTALLDIR=$(DESTDIR)$(PREFIX)
+ SHAREDIR=$(INSTALLDIR)/share
+ SIDDIR=$(SHAREDIR)/gnat2why-sids
+ INCLUDEDIR=$(INSTALLDIR)/include/spark
+@@ -81,7 +83,7 @@
+ #   install-all  install of gnatprove and why3
+ 
+ setup:
+-	cd why3 && ./configure --prefix=$(INSTALLDIR)/libexec/spark \
++	cd why3 && ./configure --prefix=$(PREFIX)/libexec/spark \
+ 		--enable-relocation --disable-js-of-ocaml \
+ 		--disable-hypothesis-selection --disable-re --disable-coq-libs
+ 
+@@ -100,26 +102,22 @@
+ 	  $(EXPLAINCODESDIR) $(RUNTIMESDIR) $(INCLUDEDIR) $(LIBDIR)
+ 	@echo "Generate default target.atp in $(INSTALLDIR)/bin:"
+ 	gcc -c -gnats spark2014vsn.ads -gnatet=$(INSTALLDIR)/bin/target.atp
++	$(CP) install/bin/* $(INSTALLDIR)/bin
+ 	$(CP) share/spark/help.txt $(GNATPROVEDIR)
+ 	$(CP) share/spark/config/* $(CONFIGDIR)
+ 	$(CP) share/spark/explain_codes/* $(EXPLAINCODESDIR)
+ 	$(CP) share/spark/theories/*why $(THEORIESDIR)
+ 	$(CP) share/spark/theories/*mlw $(THEORIESDIR)
+ 	$(CP) share/spark/runtimes/README $(RUNTIMESDIR)
+-	@echo "Generate Coq files by preprocessing context files:"
+-	$(MAKE) -C include generate
+-	$(CP) include/src/*.ad? $(INCLUDEDIR)
+-	$(CP) include/*.gpr $(LIBDIR)
+-	$(CP) include/proof $(LIBDIR)
+ 
+ doc: $(DOC)
+ 
+ doc-nightly: $(DOC)
+-	cd docs/ug; $(MAKE) generate-nightly VERSION=$(VERSION)
++	cd docs/ug; $(MAKE) generate-nightly VERSION="$(VERSION)"
+ 
+ $(DOC):
+-	$(MAKE) -C docs/$@ latexpdf LATEXOPTS="-interaction=nonstopmode" VERSION=$(VERSION)
+-	$(MAKE) -C docs/$@ html VERSION=$(VERSION)
++	$(MAKE) -C docs/$@ latexpdf LATEXOPTS="-interaction=nonstopmode" VERSION="$(VERSION)"
++	$(MAKE) -C docs/$@ html VERSION="$(VERSION)"
+ 	mkdir -p $(DOCDIR)/pdf
+ 	mkdir -p $(DOCDIR)/html/$@
+ 	$(CP) docs/$@/_build/latex/*.pdf $(DOCDIR)/pdf
+@@ -134,7 +132,7 @@
+ 	# This script should be run *ONLY* in developer build not in prod
+ 	# (gnat2why-nightly)
+ 	python3 scripts/why3keywords.py why3/src/core/keywords.ml src/why/why-keywords.adb
+-	$(MAKE) -C gnat2why
++	$(MAKE) -C gnat2why AUTOMATED=1 GPRARGS=$(PROD)
+ 	# (The timestamp of) src/why/xgen/gnat_ast.ml is updated every time `make` is called in
+ 	# `gnat2why`, causing a recompilation of why3 every time because Why3's makefile is
+ 	# based on timestamps not file content. So we check if anything changed before copying.
+@@ -181,7 +179,7 @@
+ 	fi
+ 
+ gnatprove:
+-	$(MAKE) -f Makefile.gnatprove build
++	$(MAKE) -f Makefile.gnatprove build PROD=$(PROD)
+ 
+ gnatprove-nightly:
+ 	$(MAKE) -f Makefile.gnatprove build PROD=$(PROD)

@@ -1,0 +1,8 @@
+SPARK 2014 toolset
+
+SPARK is a software development technology specifically designed for
+engineering high-reliability applications.
+It consists of a programming language, a verification toolset and a design
+method which, taken together, ensure that ultra-low defect software can be
+deployed in application domains where high-reliability must be assured
+and where safety and security are key requirements.

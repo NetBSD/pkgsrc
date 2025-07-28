@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile.gnatprove,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+
+Add options for gprbuild
+
+--- Makefile.gnatprove.orig	2024-01-11 17:55:20.000000000 +0200
++++ Makefile.gnatprove
+@@ -1,11 +1,12 @@
+ # need to define this variable here, to allow overriding it when calling the
+ # Makefile
+ PROD=
++GPRBUILD_OPTIONS=
+ 
+ all: build
+ 
+ build:
+-	gprbuild -p -j0 -P gnatprove.gpr $(PROD)
++	gprbuild -p -j0 -P gnatprove.gpr $(PROD) $(GPRBUILD_OPTIONS)
+ 
+ codepeer-run:
+ 	gnatsas analyze -P gnatprove.gpr --no-gnat
