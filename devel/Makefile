@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4503 2025/07/28 20:53:23 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4504 2025/07/28 22:15:15 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -3083,6 +3083,7 @@ SUBDIR+=	py-rednose
 SUBDIR+=	py-reparser
 SUBDIR+=	py-repoze.lru
 SUBDIR+=	py-requests
+SUBDIR+=	py-requests-cache
 SUBDIR+=	py-requests-file
 SUBDIR+=	py-requests-futures
 SUBDIR+=	py-requests-mock
