@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4574 2025/07/28 14:48:30 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4575 2025/07/28 16:43:42 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6677,3 +6677,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio-testing to 1.74.0 [adam 2025-07-28]
 	Updated net/py-grpcio-tools to 1.74.0 [adam 2025-07-28]
 	Added devel/py-e3-testsuite version 26.0 [dkazankov 2025-07-28]
+	Added devel/py-whatever version 0.7 [dkazankov 2025-07-28]
