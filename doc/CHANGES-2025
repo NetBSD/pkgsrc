@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4555 2025/07/28 06:53:06 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4556 2025/07/28 07:01:35 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6656,3 +6656,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-Glances to 4.3.2 [fox 2025-07-27]
 	Added devel/ada-libgpr2-25 version 25.0.0 [dkazankov 2025-07-28]
 	Added devel/ada-sparklib-14 version 14.0.0 [dkazankov 2025-07-28]
+	Added lang/spark2014-14 version 14.2.0 [dkazankov 2025-07-28]
