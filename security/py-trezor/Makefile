@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/05/13 10:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/07/28 23:03:50 js Exp $
 
 DISTNAME=	trezor-0.13.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trezor/}
 
