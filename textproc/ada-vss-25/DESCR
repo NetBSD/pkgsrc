@@ -1,0 +1,7 @@
+VSS - high level string and text processing library for Ada
+
+Main features:
+- Conflict analysis and backjumping
+- Two-watched literals scheme
+- Built-in support for At-Most-One constraints
+- Custom theories
