@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/07/28 13:15:20 dkazankov Exp $
+
+BLAKE2s (railroad-diagrams-3.0.1.tar.gz) = 7a6388ae3807cb89c1402bd99793f274fb528766c03d41a01d380096279629ea
+SHA512 (railroad-diagrams-3.0.1.tar.gz) = 6b8c57dd50faf43fa039414992b4ee3ae2568a8ecd1fecb8c9c9214be2c200cbe62c71d04e89f555227107597f5cf4ebb81d65a4747872e63ad19c37dc782893
+Size (railroad-diagrams-3.0.1.tar.gz) = 22057 bytes
