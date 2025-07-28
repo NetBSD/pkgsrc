@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4497 2025/07/28 12:56:12 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4498 2025/07/28 13:51:07 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -3216,6 +3216,7 @@ SUBDIR+=	py-tubes
 SUBDIR+=	py-txaio
 SUBDIR+=	py-txrequests
 SUBDIR+=	py-typeguard
+SUBDIR+=	py-types-gdb
 SUBDIR+=	py-types-setuptools
 SUBDIR+=	py-types-toml
 SUBDIR+=	py-types-ujson
