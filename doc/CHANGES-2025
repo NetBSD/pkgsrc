@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4560 2025/07/28 10:55:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4561 2025/07/28 10:57:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6661,3 +6661,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/fltk to 1.4.4 [micha 2025-07-28]
 	Updated x11/tinyx-wscons to 0.8 [nat 2025-07-28]
 	Updated devel/ast-grep to 0.39.2 [pin 2025-07-28]
+	Updated devel/mise to 2025.7.29 [pin 2025-07-28]
