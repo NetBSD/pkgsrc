@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/07/28 09:07:49 dkazankov Exp $
+bin/gpr2build
+bin/gpr2clean
+bin/gpr2config
+bin/gprdoc
+bin/gprinspect
+bin/processes-wrapper
+share/gpr/manifests/gpr2-tools
