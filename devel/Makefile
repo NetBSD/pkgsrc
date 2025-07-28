@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4495 2025/07/28 06:52:41 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4496 2025/07/28 09:07:49 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -508,6 +508,7 @@ SUBDIR+=	gotests
 SUBDIR+=	govulncheck
 SUBDIR+=	gperf
 SUBDIR+=	gperftools
+SUBDIR+=	gpr2-tools
 SUBDIR+=	gprbuild
 SUBDIR+=	gputils
 SUBDIR+=	gradle
