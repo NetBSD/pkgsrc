@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4568 2025/07/28 13:04:48 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4569 2025/07/28 13:15:27 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6669,3 +6669,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xgamma to 1.0.8 [wiz 2025-07-28]
 	Updated graphics/xgc to 1.0.7 [wiz 2025-07-28]
 	Added devel/py-funcy version 2.0 [dkazankov 2025-07-28]
+	Updated www/hugo to 0.148.2 [triaxx 2025-07-28]
