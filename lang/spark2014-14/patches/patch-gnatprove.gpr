@@ -1,0 +1,27 @@
+$NetBSD: patch-gnatprove.gpr,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+
+Fix missing RELRO
+Add librt link on NetBSD
+
+--- gnatprove.gpr.orig	2023-01-05 11:22:11.000000000 +0200
++++ gnatprove.gpr
+@@ -51,6 +51,8 @@
+          when "Production" =>
+             for Default_Switches ("Ada") use
+                Common_Switches & ("-O2", "-gnatn");
++            for PIC_Option ("Ada") use ("-fPIC");
++            for PIC_Option ("C") use ("-fPIC");
+          when "Coverage" =>
+             --  We don't do coverage of gnatprove yet, only gnat2why
+             null;
+@@ -61,6 +63,10 @@
+       case Target is
+          when "x86-linux" | "x86_64-linux" =>
+             for Default_Switches ("Ada") use ("-pthread");
++         when "x86_64-netbsd" =>
++            for Default_Switches ("Ada") use ("-lrt");
++            for Default_Switches ("C") use ("-lrt");
++            for Linker_Options use ("-lrt");
+          when others =>
+             null;
+       end case;
