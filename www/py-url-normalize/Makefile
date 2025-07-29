@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/29 05:27:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/29 06:33:55 dkazankov Exp $
 
 DISTNAME=	url_normalize-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-idna>=3.3:../../www/py-idna
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit-[0-9]*:../../wip/py-pre-commit
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test-socket-[0-9]*:../../devel/py-test-socket
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-ruff-[0-9]*:../../devel/py-ruff
 
 post-install:
