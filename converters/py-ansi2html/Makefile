@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 17:26:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/29 05:28:02 dkazankov Exp $
 
 DISTNAME=	ansi2html-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,13 +12,6 @@ LICENSE=	gnu-lgpl-v3 OR mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 38
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
-
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 post-install:
