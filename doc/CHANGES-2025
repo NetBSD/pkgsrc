@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4582 2025/07/29 06:48:58 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.4583 2025/07/29 08:37:12 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6685,3 +6685,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/py-url-normalize version 2.2.1 [dkazankov 2025-07-28]
 	Added devel/py-requests-cache version 1.2.1 [dkazankov 2025-07-28]
 	Added devel/py-e3-core version 22.10.0 [dkazankov 2025-07-29]
+	Updated games/corsix-th to 0.69.0 [triaxx 2025-07-29]
