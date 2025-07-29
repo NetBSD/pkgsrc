@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/05/06 12:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/07/29 08:36:56 triaxx Exp $
 
-DISTNAME=	corsix-th-0.68.0
-PKGREVISION=	4
+DISTNAME=	corsix-th-0.69.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CorsixTH/}
 GITHUB_PROJECT=	CorsixTH
