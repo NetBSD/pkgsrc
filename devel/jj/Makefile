@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/07/03 16:31:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/07/29 17:19:48 wiz Exp $
 
 DISTNAME=	jj-0.31.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jj-vcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,10 +14,24 @@ LICENSE=	apache-2.0
 .include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS+=	share/bash-completion
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
+INSTALLATION_DIRS+=	share/zsh/site-functions
+
+post-build:
+	for shell in bash fish zsh; do \
+		${WRKSRC}/target/release/jj util completion $$shell > ${WRKDIR}/$$shell; \
+	done
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jj \
 		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/bash \
+		${DESTDIR}${PREFIX}/share/bash-completion
+	${INSTALL_DATA} ${WRKDIR}/fish \
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
+	${INSTALL_DATA} ${WRKDIR}/zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_jj
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
