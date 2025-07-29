@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/29 13:14:58 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-fsf-14
 PKGNAME=	${GITHUB_PROJECT}-14-14.2.0
@@ -21,7 +21,7 @@ HAS_CONFIGURE=	yes
 
 CHECK_PIE_SKIP+=	gcc14-gnat/bin/*
 
-GITHUB_SUBMODULES+=	AdaCore	why3		fb4ca6cd8c7d888d3e8d281e6de87c66ec20f084	why3
+GITHUB_SUBMODULES+=	AdaCore	why3	fsf-14	why3
 
 # Do not use GNAT 14.3 sources
 GCC_DISTNAME=		gcc-${PKGVERSION_NOREV}
