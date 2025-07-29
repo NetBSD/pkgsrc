@@ -1,0 +1,15 @@
+$NetBSD: patch-package_bsd_prepare,v 1.1 2025/07/29 14:15:57 schmonz Exp $
+
+Avoid spurious output during configure.
+
+--- package/bsd/prepare.orig	2015-06-02 10:34:38.000000000 +0000
++++ package/bsd/prepare
+@@ -5,6 +5,8 @@ then
+ 	exit 100
+ fi
+ 
++unset CDPATH
++
+ # Create and populate the bsd directory.
+ mkdir -p bsd
+ (

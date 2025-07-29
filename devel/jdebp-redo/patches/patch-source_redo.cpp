@@ -1,13 +1,13 @@
-$NetBSD: patch-source_redo.cpp,v 1.2 2025/02/28 16:34:36 schmonz Exp $
+$NetBSD: patch-source_redo.cpp,v 1.3 2025/07/29 14:15:57 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
 
---- source/redo.cpp.orig	2019-05-09 23:12:40.000000000 +0000
+--- source/redo.cpp.orig	2025-07-02 09:25:31.000000000 +0000
 +++ source/redo.cpp
-@@ -1221,13 +1221,16 @@ redo_main ( const char * prog, int argc,
- 	putenv(gnulevelbuf);
+@@ -1323,13 +1323,16 @@ redo_main (
  	putenv(bsdlevelbuf);
  
+ 	std::set<std::string> seen;
 -	if (0 == std::strcmp(prog, "redo-ifcreate"))
 +	if (0 == std::strcmp(prog, "redo-ifcreate")
 +	||  0 == std::strcmp(prog, "jdebp-redo-ifcreate"))
@@ -16,15 +16,15 @@ Avoid CONFLICTS with other redo implementations.
 -	if (0 == std::strcmp(prog, "redo-ifchange"))
 +	if (0 == std::strcmp(prog, "redo-ifchange")
 +	||  0 == std::strcmp(prog, "jdebp-redo-ifchange"))
- 		return redo_ifchange(prog, meta_depth, filev) ? EXIT_SUCCESS : EXIT_FAILURE;
+ 		return redo_ifchange(prog, meta_depth, filev, seen) ? EXIT_SUCCESS : EXIT_FAILURE;
  	else
 -	if (0 == std::strcmp(prog, "redo")) {
 +	if (0 == std::strcmp(prog, "redo")
 +	||  0 == std::strcmp(prog, "jdebp-redo")) {
  		mkdir(".redo", 0777);
- 		return redo(true, prog, meta_depth, filev) ? EXIT_SUCCESS : EXIT_FAILURE;
+ 		return redo(true, prog, meta_depth, filev, seen) ? EXIT_SUCCESS : EXIT_FAILURE;
  	} else
-@@ -1283,7 +1286,8 @@ main ( int argc, const char * argv[] )
+@@ -1390,7 +1393,8 @@ main ( int argc, const char * argv[] )
  {
  	const char * prog(basename_of(argv[0]));
  
