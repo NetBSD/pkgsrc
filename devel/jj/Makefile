@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/07/29 17:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/07/29 17:25:00 wiz Exp $
 
 DISTNAME=	jj-0.31.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 .include "cargo-depends.mk"
 
 INSTALLATION_DIRS=	bin
-INSTALLATION_DIRS+=	share/bash-completion
+INSTALLATION_DIRS+=	share/bash-completion/completions
 INSTALLATION_DIRS+=	share/fish/vendor_completions.d
 INSTALLATION_DIRS+=	share/zsh/site-functions
 
@@ -27,9 +27,9 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/jj \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/bash \
-		${DESTDIR}${PREFIX}/share/bash-completion
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/jj
 	${INSTALL_DATA} ${WRKDIR}/fish \
-		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d
+		${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/jj.fish
 	${INSTALL_DATA} ${WRKDIR}/zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_jj
 
