@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2025/06/28 02:53:31 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2025/07/29 14:15:57 schmonz Exp $
 
-BLAKE2s (redo-1.5.tar.gz) = 374ac7eaa75e6f52be860bff5b2477c18d6dd3faa99cdda0445a87bda4cbda9f
-SHA512 (redo-1.5.tar.gz) = 4bb174868b9a38df7b392ae0ae813cbb7de0c043afab28507fbf85a07aeabd38a4968523aa73608a799c434d61a44173a8019f976dce6b4ba6a30a0939e45667
-Size (redo-1.5.tar.gz) = 26587 bytes
-SHA1 (patch-package_prepare) = 9dc0295ab3fe6830d920c49beeb9caae6bca0eab
+BLAKE2s (jdebp-redo-1.5/redo-1.5.tar.gz) = e16b24cccf01b9661b3f6b3511be10aa16d76675b336a172914be3bb66fea714
+SHA512 (jdebp-redo-1.5/redo-1.5.tar.gz) = 4ce92919e7ef2ee7bf52d9a672bf218a9cad027677174058151e21d3526f6eec39f0fe3a4805b1166d372ad3a2e993fa3417792d2105a6ee33b737abe666a496
+Size (jdebp-redo-1.5/redo-1.5.tar.gz) = 26680 bytes
+SHA1 (patch-package_bsd_prepare) = 8be6a94ab4f0a59ce1a03fcc4b37dad2619085ec
+SHA1 (patch-package_compile) = 37a1e53fcd3fbf0b8226d9009718c49a796fb318
 SHA1 (patch-source_lockfile.cpp) = c653049843aa7ccd0b08e6b778a93cfd2e55187f
-SHA1 (patch-source_redo.cpp) = 5c41649101d021dee2ef67b4e7f51c580b4f5eda
+SHA1 (patch-source_redo.cpp) = 0052a27a633d3e182ac0257cb21b5406e04aed05
