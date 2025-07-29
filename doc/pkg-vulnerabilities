@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.478 2025/07/28 20:06:32 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.479 2025/07/29 18:46:07 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -21490,7 +21490,7 @@ gstreamer1<1.18.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-3
 lz4<1.9.3nb1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3520
 py{34,35,36,37,38,39}-websockets<9.1	password-exposure	https://nvd.nist.gov/vuln/detail/CVE-2021-33880
 jdom-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-33813
-quassel-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-34825
+quassel<0.14.0	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-34825
 mantis<2.25.2	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-33557
 zziplib<0.13.72	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18442
 openexr<3.0.5	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-3598
