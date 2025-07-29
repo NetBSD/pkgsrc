@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/07/28 07:00:55 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/07/29 13:14:58 dkazankov Exp $
 
-BLAKE2s (AdaCore-why3-fb4ca6cd8c7d888d3e8d281e6de87c66ec20f084.tar.gz) = c35a6eaceeceef43b60f671d2e0fb9953f4e0960465175b68cee7e76c197ab0e
-SHA512 (AdaCore-why3-fb4ca6cd8c7d888d3e8d281e6de87c66ec20f084.tar.gz) = 88220595eae9c5cf4125c0dc9d5176e637a1f1e355f61f51176bdb7643a000c837e501101e45c2b50ae3f41f81436e1133be241fd5fb0b6816823b2106113ae7
-Size (AdaCore-why3-fb4ca6cd8c7d888d3e8d281e6de87c66ec20f084.tar.gz) = 7119379 bytes
+BLAKE2s (AdaCore-why3-fsf-14.tar.gz) = a51b7b1acab911664c1a15fc2378c3af42b4b5a40c2305b9eb3718b2e1f37d71
+SHA512 (AdaCore-why3-fsf-14.tar.gz) = c1e0d97c2e5704c9ba81857c1b2bf67e4254fb101a10d4046fc29c93693ee3ada09fbfe954d1417235807967abb5cdca9719f5b27fa43bea85c15fa3799dd2bb
+Size (AdaCore-why3-fsf-14.tar.gz) = 7115080 bytes
 BLAKE2s (gcc-14.2.0.tar.xz) = 4cbc121d8d3982be05e1d0621363c6ec4cd34c78007a1af0599559370a93376e
 SHA512 (gcc-14.2.0.tar.xz) = 932bdef0cda94bacedf452ab17f103c0cb511ff2cec55e9112fc0328cbf1d803b42595728ea7b200e0a057c03e85626f937012e49a7515bc5dd256b2bf4bc396
 Size (gcc-14.2.0.tar.xz) = 92306460 bytes
