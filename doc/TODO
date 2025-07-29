@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26063 2025/07/27 19:28:59 wiz Exp $
+$NetBSD: TODO,v 1.26064 2025/07/29 15:16:26 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o amavis-perl-0.3.12 [called just amavis]
 	o ampache-4.2.5
 	o amtterm-1.7.1
-	o anubis-1.20.0
 	o ap-Embperl-1.3.6
 	o ap-auth-mellon-0.14.2
 	o ap-auth-pam-1.1.1
