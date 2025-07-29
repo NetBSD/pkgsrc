@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/28 20:17:13 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/07/29 07:08:07 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 
+DEPENDS+=	${PYPKGPREFIX}-e3-core-[0-9]*:../../devel/py-e3-core
+
+DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-botocore-[0-9]*:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
