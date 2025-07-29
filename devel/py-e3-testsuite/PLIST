@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/28 14:47:52 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/07/29 11:32:46 dkazankov Exp $
 bin/e3-convert-xunit-${PYVERSSUFFIX}
 bin/e3-find-skipped-tests-${PYVERSSUFFIX}
 bin/e3-opt-parser-${PYVERSSUFFIX}
@@ -74,7 +74,7 @@ ${PYSITELIB}/e3/testsuite/testcase_finder.pyo
 ${PYSITELIB}/e3/testsuite/utils.py
 ${PYSITELIB}/e3/testsuite/utils.pyc
 ${PYSITELIB}/e3/testsuite/utils.pyo
-${PYSITELIB}/e3_testsuite-${PKGVERSION}-py3.12-nspkg.pth
+${PYSITELIB}/e3_testsuite-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
