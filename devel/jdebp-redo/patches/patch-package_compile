@@ -1,0 +1,46 @@
+$NetBSD: patch-package_compile,v 1.1 2025/07/29 14:15:57 schmonz Exp $
+
+Let pkgsrc be in charge of build flags.
+
+--- package/compile.orig	2025-07-02 09:25:56.000000000 +0000
++++ package/compile
+@@ -8,38 +8,7 @@ fi
+ 
+ CDPATH=
+ 
+-if command -v >/dev/null clang++
+-then
+-	extra_flags=''
+-	major_version="`clang++ --version|sed -ne 's/^.*version *\([[:digit:]]*\)\..*$/\1/p'`"
+-	if test "${major_version}" -gt 3
+-	then
+-		extra_flags="${extra_flags}"' -Wno-suggest-destructor-override -Wno-suggest-override -Wno-disabled-macro-expansion -Wno-global-constructors -Wno-exit-time-destructors'
+-	fi
+-	if test "${major_version}" -gt 14
+-	then
+-		extra_flags="${extra_flags}"' -Wno-unsafe-buffer-usage'
+-	fi
+-	cxx=clang++
+-	cppflags=''
+-	cxxflags='-g -O3 -std=gnu++11 -Weverything -integrated-as -Wno-weak-vtables -Wno-padded -Wno-missing-prototypes -Wno-c++98-compat'"${extra_flags}"
+-	ldflags='-g'
+-elif command -v >/dev/null g++
+-then
+-	cxx=g++
+-	cppflags=''
+-	cxxflags=' -g -O3 -std=gnu++11 -Wall -Wextra -Wshadow -Wcast-qual -Wsynth -Woverloaded-virtual -Wcast-align'
+-	ldflags='-g'
+-elif command -v >/dev/null owcc
+-then
+-	cxx=owcc
+-	cppflags=''
+-	cxxflags=' -g -Wall -Wextra -Wc,-xs -Wc,-xr'
+-	ldflags='-g'
+-else
+-	echo "Cannot find clang++, g++, or owcc." 1>&2
+-	exit 100
+-fi
++cxx=c++
+ 
+ # Create and populate the build directory.
+ install -d -m 0755 build
