@@ -1,0 +1,5 @@
+E3 core. Tools and library for building and testing software.
+
+e3 - Python framework to ease the development of portable automated build
+systems (compilation, dependencies management, binary code packaging, and
+automated testing).
