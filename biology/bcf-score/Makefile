@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/06/01 16:37:03 thor Exp $
+# $NetBSD: Makefile,v 1.4 2025/07/30 15:42:07 ktnb Exp $
 
 DISTNAME=	bcf-score-1.20
+PKGREVISION=	1
 CATEGORIES=	biology
 # Can't get ${MASTER_SITE_GITHUB:=samtools/} to work with additional distfile
 MASTER_SITES=	https://software.broadinstitute.org/software/score/
