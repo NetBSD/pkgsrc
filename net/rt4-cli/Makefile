@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2022/06/28 11:35:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/07/30 21:25:42 leot Exp $
 
 DISTNAME=	rt-4.4.4
 PKGNAME=	${DISTNAME:S/rt/rt4-cli/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	https://download.bestpractical.com/pub/rt/release/
 
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	rt<4.0
 
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
+DEPENDS+=	p5-LWP-Authen-Negotiate-[0-9]*:../../www/p5-LWP-Authen-Negotiate
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
