@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4598 2025/07/30 12:50:10 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4599 2025/07/30 12:51:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6704,3 +6704,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.12.15 [adam 2025-07-30]
 	Updated shells/nushell to 0.106.1 [pin 2025-07-30]
 	Updated devel/git-cliff to 2.10.0 [pin 2025-07-30]
+	Updated devel/lazygit to 0.53.0 [pin 2025-07-30]
