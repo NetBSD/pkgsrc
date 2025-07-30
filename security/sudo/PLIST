@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/09/15 15:22:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/07/30 06:29:47 triaxx Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -119,6 +119,7 @@ ${PLIST.nls}share/locale/uk/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/sudoers.mo
+${PLIST.nls}share/locale/yue/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/sudo.mo
