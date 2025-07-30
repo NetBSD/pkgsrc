@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4600 2025/07/30 13:21:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4601 2025/07/30 15:36:33 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6706,3 +6706,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-cliff to 2.10.0 [pin 2025-07-30]
 	Updated devel/lazygit to 0.53.0 [pin 2025-07-30]
 	Updated textproc/mandoc to 1.14.6nb3 [wiz 2025-07-30]
+	Updated math/suitesparse to 7.11.0 [ktnb 2025-07-30]
