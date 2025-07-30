@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/07/11 12:46:49 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/07/30 17:49:48 dkazankov Exp $
 
 BLAKE2s (gnatcoll-bindings-25.0.0.tar.gz) = 9b494fc8ac73012d939a6b8764242dd94462e1d3253aabd809ebb5e275e8e08d
 SHA512 (gnatcoll-bindings-25.0.0.tar.gz) = 0cc5b4a1e966b6e05dcfa15e60cb3960894ffe73b9348f0642a972f4d517e535c617893a4080d33095ee62779b14aeb6cdd8a8f0a8b5a6c8e81c94df132420b2
 Size (gnatcoll-bindings-25.0.0.tar.gz) = 299443 bytes
 SHA1 (patch-Makefile) = 26846a3ea97049f543e7c35bdf0565c94ea6afc4
+SHA1 (patch-iconv_iconv__support.c) = 9612f4899c44bb5f10832b79dfe20844df008f57
 SHA1 (patch-setup__support.py) = c91171307d3d7781111c89ba3a38ced019eab4e2
