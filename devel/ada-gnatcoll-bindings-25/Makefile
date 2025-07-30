@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/11 12:46:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/07/30 17:49:48 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-bindings
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
+MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatcoll-bindings
 COMMENT=	The GNAT Components Collection (GNATcoll) - Bindings, release 25
 LICENSE=	gnu-gpl-v3
