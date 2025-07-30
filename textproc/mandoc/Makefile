@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/05/09 06:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/07/30 13:21:45 wiz Exp $
 
 DISTNAME=	mandoc-1.14.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mandoc.bsd.lv/snapshots/
 
