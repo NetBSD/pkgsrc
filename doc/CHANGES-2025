@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4593 2025/07/30 06:53:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4594 2025/07/30 08:59:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6696,3 +6696,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/tokei to 13.0.0.alpha9 [pin 2025-07-30]
 	Updated misc/tui-journal to 0.16.1 [pin 2025-07-30]
 	Updated shells/oh-my-posh to 26.17.2 [pin 2025-07-30]
+	Updated shells/oh-my-posh to 26.17.3 [pin 2025-07-30]
