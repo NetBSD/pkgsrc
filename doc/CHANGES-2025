@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4596 2025/07/30 10:41:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4597 2025/07/30 12:48:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6702,3 +6702,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/mkvtoolnix to 94.0 [adam 2025-07-30]
 	Updated net/iperf3 to 3.19.1 [adam 2025-07-30]
 	Updated www/py-aiohttp to 3.12.15 [adam 2025-07-30]
+	Updated shells/nushell to 0.106.1 [pin 2025-07-30]
