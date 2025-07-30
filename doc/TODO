@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26064 2025/07/29 15:16:26 ryoon Exp $
+$NetBSD: TODO,v 1.26065 2025/07/30 12:51:59 pin Exp $
 
 Suggested new packages
 ======================
@@ -825,7 +825,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ktorrent3-3.3.4
 	o lapack-3.12.1
 	o latexmk-486
-	o lazygit-0.53.0
 	o lbdb-49
 	o lcc-4.2
 	o ldapsdk-6.0.7
