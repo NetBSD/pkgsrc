@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4591 2025/07/30 06:50:10 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4592 2025/07/30 06:52:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6694,3 +6694,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.9.7 [pin 2025-07-30]
 	Updated devel/mise to 2025.7.31 [pin 2025-07-30]
 	Updated devel/tokei to 13.0.0.alpha9 [pin 2025-07-30]
+	Updated misc/tui-journal to 0.16.1 [pin 2025-07-30]
