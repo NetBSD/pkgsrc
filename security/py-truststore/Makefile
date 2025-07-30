@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/02/23 19:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/07/30 10:17:01 adam Exp $
 
-DISTNAME=	truststore-0.10.1
+DISTNAME=	truststore-0.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/truststore/}
 
