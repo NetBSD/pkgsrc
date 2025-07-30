@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2025/05/06 15:02:01 ktnb Exp $
+$NetBSD: distinfo,v 1.11 2025/07/30 15:35:37 ktnb Exp $
 
-BLAKE2s (SuiteSparse-7.10.3.tar.gz) = 312fdc75dce6e09711de57b66e69cd8801a7bc62c723d046240c533eca96c4a6
-SHA512 (SuiteSparse-7.10.3.tar.gz) = 429ac46a5f1c1c4a875e67652d37be9fdbe830ae238249679919c515b64d2b5a4b1a625a4a929868b97cbd32c0468da9e0aec13f3b813e679d8a01a9e2dc0057
-Size (SuiteSparse-7.10.3.tar.gz) = 87836881 bytes
+BLAKE2s (SuiteSparse-7.11.0.tar.gz) = 161468d5740e9017376480fb4569b3e43af2e2610deb5d2f0fa601890e084406
+SHA512 (SuiteSparse-7.11.0.tar.gz) = 93ecb066c7ce8f9bd16406cdadae0db0ab2d668a6bb530fb8decd5dd69e305ff71fea4fcabf118a613bdaff0f69bbea41793a489d7988ef173f84a01fa911037
+Size (SuiteSparse-7.11.0.tar.gz) = 95030220 bytes
 SHA1 (patch-GraphBLAS_CMakeLists.txt) = 2f32b3534f08bcfd7fa5fc53dccbc6fd283a9976
 SHA1 (patch-ParU_Source_paru__init__rowFronts.cpp) = 52fdeca699c598f745ce35210242f1480ab24426
 SHA1 (patch-SPQR_Source_spqr__factorize.cpp) = f8ad367e749435058f8df7c3961af8cf8b7dfb95
