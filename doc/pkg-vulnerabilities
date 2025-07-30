@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.479 2025/07/29 18:46:07 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.480 2025/07/30 19:36:13 mrg Exp $
 #
 #FORMAT 1.0.0
 #
@@ -332,7 +332,7 @@ zlib<1.1.4nb1		remote-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?n
 ethereal-0.8.[7-9]	remote-code-execution	http://www.ethereal.com/appnotes/enpa-sa-00008.html
 ethereal-0.9.[0-9]	remote-code-execution	http://www.ethereal.com/appnotes/enpa-sa-00008.html
 qpopper<4.0.5		remote-user-shell	http://archives.neohapsis.com/archives/bugtraq/2003-03/0152.html
-ircII<20030313		remote-code-execution	http://eterna.com.au/ircii/
+ircII<20030313		remote-code-execution	http://eterna23.net/ircii/
 samba<2.2.8		remote-code-execution	http://us1.samba.org/samba/whatsnew/samba-2.2.8.html
 openssl<0.9.6gnb2	remote-key-theft	http://www.openssl.org/news/secadv_20030317.txt
 openssl<0.9.6gnb2	remote-use-of-secret	http://www.openssl.org/news/secadv_20030319.txt
@@ -4880,7 +4880,7 @@ seamonkey-bin-flash<10.1.82.76	arbitrary-code-execution	https://cve.mitre.org/cg
 firefox-bin-flash<10.1.82.76	arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2884
 mailman<2.1.12nb2	cross-site-scripting	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3089
 python26<2.6.6nb4	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3492
-bozohttpd<20100920	remote-file-view	http://eterna.com.au/bozohttpd/
+bozohttpd<20100920	remote-file-view	http://eterna23.net/bozohttpd/
 wireshark<1.4.0		denial-of-service	http://secunia.com/advisories/41535/
 bzip2<1.0.6		remote-system-access	http://cve.circl.lu/cve/CVE-2010-0405
 clamav<0.96.3		remote-system-access	http://secunia.com/advisories/41503/
