@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26065 2025/07/30 12:51:59 pin Exp $
+$NetBSD: TODO,v 1.26066 2025/07/30 19:43:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1337,6 +1337,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xf86-video-amdgpu-25.0.0 [needs libudev, which is only available on Linux: https://gitlab.freedesktop.org/xorg/driver/xf86-video-amdgpu/-/issues/84]
 	o xf86-video-fbdev-0.5.1
 	o xfpt-0.11
 	o xfractint-20.04p16
