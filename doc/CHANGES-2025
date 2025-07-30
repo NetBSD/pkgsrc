@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4594 2025/07/30 08:59:17 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4595 2025/07/30 10:17:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6697,3 +6697,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/tui-journal to 0.16.1 [pin 2025-07-30]
 	Updated shells/oh-my-posh to 26.17.2 [pin 2025-07-30]
 	Updated shells/oh-my-posh to 26.17.3 [pin 2025-07-30]
+	Updated textproc/py-regex to 2025.7.31 [adam 2025-07-30]
+	Updated security/py-truststore to 0.10.3 [adam 2025-07-30]
