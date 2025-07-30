@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.296 2025/07/28 07:31:41 dkazankov Exp $
+# $NetBSD: gcc.mk,v 1.297 2025/07/30 19:22:49 dkazankov Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -1315,8 +1315,6 @@ GNAT_PREFIX=		${PREFIX}/${_GCC_PKGBASE}
 GNAT_NAME=		${_GNAT_NAME}
 PLIST_SUBST+=		GNAT_PKGBASE="${_GCC_PKGBASE}"
 PRINT_PLIST_AWK+=	{ gsub(/${_GCC_PKGBASE}/, "$${GNAT_PKGBASE}"); }
-ADA_PROJECT_PATH=	${BUILDLINK_DIR}/lib/gnat
-MAKE_ENV+=		ADA_PROJECT_PATH=${ADA_PROJECT_PATH}
 .endif
 
 # Prepend the path to the compiler to the PATH.
