@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/07/09 17:24:08 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/07/30 19:22:48 dkazankov Exp $
 
 BUILDLINK_TREE+=	gcc14-gnat
 
@@ -10,7 +10,13 @@ BUILDLINK_ABI_DEPENDS.gcc14-gnat+=	gcc14-gnat>=14.3.0
 BUILDLINK_PKGSRCDIR.gcc14-gnat?=	../../lang/gcc14-gnat
 BUILDLINK_DEPMETHOD.gcc14-gnat?=	build
 
+ADA_PROJECT_PATH=	${BUILDLINK_DIR}/lib/gnat
+MAKE_ENV+=		ADA_PROJECT_PATH=${ADA_PROJECT_PATH}
+
 ADALIB_BASE=		lib/gcc/${MACHINE_GNU_PLATFORM}/14.3.0
+
+ADA_INCLUDE_PATH=	${BUILDLINK_DIR}/include:${BUILDLINK_DIR}/${ADALIB_BASE}/adainclude:${BUILDLINK_DIR}/${ADALIB_BASE}/include
+MAKE_ENV+=		ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH}
 
 BUILDLINK_FNAME_TRANSFORM.gcc14-gnat+=	-e "s|^${BUILDLINK_DIR}/gcc14-gnat/|${BUILDLINK_DIR}/|g"
 
