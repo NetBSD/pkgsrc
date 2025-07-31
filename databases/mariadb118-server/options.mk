@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/06/07 08:58:43 nia Exp $
+# $NetBSD: options.mk,v 1.2 2025/07/31 09:13:06 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
@@ -11,7 +11,8 @@ PKG_SUGGESTED_OPTIONS=	ssl
 
 # auth_pam is not built on Solaris < 11.2 due to lack of getgrouplist
 # but will work on illumos
-.if ${OS_VARIANT} != "Solaris"
+# now it's broken on illumos too
+.if ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	auth-pam
 .endif
 
