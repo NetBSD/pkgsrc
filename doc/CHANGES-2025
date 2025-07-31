@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4604 2025/07/31 10:47:09 nia Exp $
+$NetBSD: CHANGES-2025,v 1.4605 2025/07/31 11:50:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6710,3 +6710,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.7.32 [pin 2025-07-31]
 	Updated misc/projectable to 1.3.2 [pin 2025-07-31]
 	Updated www/palemoon to 33.8.1.1 [nia 2025-07-31]
+	Updated textproc/xan to 0.52.0 [pin 2025-07-31]
