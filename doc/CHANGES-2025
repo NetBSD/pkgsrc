@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4603 2025/07/31 08:07:48 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4604 2025/07/31 10:47:09 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6709,3 +6709,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/suitesparse to 7.11.0 [ktnb 2025-07-30]
 	Updated devel/mise to 2025.7.32 [pin 2025-07-31]
 	Updated misc/projectable to 1.3.2 [pin 2025-07-31]
+	Updated www/palemoon to 33.8.1.1 [nia 2025-07-31]
