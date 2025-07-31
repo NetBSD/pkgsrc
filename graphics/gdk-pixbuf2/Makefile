@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/07/19 05:37:38 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/07/31 20:22:07 wiz Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.12
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -24,6 +24,9 @@ SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
 SUBST_STAGE.rst2man=	pre-configure
 SUBST_FILES.rst2man=	docs/meson.build
 SUBST_SED.rst2man=	-e "s,'rst2man','rst2man-${PYVERSSUFFIX}',g"
+
+post-extract:
+	${CHMOD} a+x ${WRKSRC}/build-aux/gen-thumbnailer.py
 
 .include "../../mk/bsd.prefs.mk"
 
