@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4602 2025/07/31 07:57:09 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4603 2025/07/31 08:07:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6708,3 +6708,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/mandoc to 1.14.6nb3 [wiz 2025-07-30]
 	Updated math/suitesparse to 7.11.0 [ktnb 2025-07-30]
 	Updated devel/mise to 2025.7.32 [pin 2025-07-31]
+	Updated misc/projectable to 1.3.2 [pin 2025-07-31]
