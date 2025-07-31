@@ -1,0 +1,16 @@
+$NetBSD: patch-.._vendor_tui-textarea-0.2.4_Cargo.toml,v 1.1 2025/07/31 08:06:28 pin Exp $
+
+Add use of portable-atomic.
+
+--- ../vendor/tui-textarea-0.2.4/Cargo.toml.orig	2025-07-31 07:28:24.775309949 +0000
++++ ../vendor/tui-textarea-0.2.4/Cargo.toml
+@@ -114,6 +114,9 @@ required-features = ["ratatui-termion"]
+ name = "termwiz"
+ required-features = ["ratatui-termwiz"]
+ 
++[dependencies]
++portable-atomic = "1.11.1"
++
+ [dependencies.arbitrary]
+ version = "1"
+ features = ["derive"]
