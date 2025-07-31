@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4605 2025/07/31 11:50:10 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4606 2025/07/31 13:42:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6711,3 +6711,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/projectable to 1.3.2 [pin 2025-07-31]
 	Updated www/palemoon to 33.8.1.1 [nia 2025-07-31]
 	Updated textproc/xan to 0.52.0 [pin 2025-07-31]
+	Updated net/scaleway-cli to 2.42.0 [leot 2025-07-31]
