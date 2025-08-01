@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.15 2022/03/20 15:19:21 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2025/08/01 20:58:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
-PKG_SUPPORTED_OPTIONS+=	debug x11
+PKG_SUPPORTED_OPTIONS+=	x11
 PKG_SUGGESTED_OPTIONS=	x11
 
-.if (${OPSYS} == "NetBSD"  ||	\
-     ${OPSYS} == "FreeBSD" ||	\
-     ${OPSYS} == "OpenBSD" ||	\
-     ${OPSYS} == "Darwin" ||	\
-     ${OPSYS} == "DragonFly")
+.if ${OPSYS} == "NetBSD"  ||	\
+    ${OPSYS} == "FreeBSD" ||	\
+    ${OPSYS} == "OpenBSD" ||	\
+    ${OPSYS} == "Darwin"  ||	\
+    ${OPSYS} == "DragonFly"
 PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
@@ -20,35 +20,25 @@ PKG_SUPPORTED_OPTIONS.Darwin+=	launchd
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-asserts
-CONFIGURE_ARGS+=	--enable-verbose-mode
-.else
-CONFIGURE_ARGS+=	--disable-asserts
-CONFIGURE_ARGS+=	--disable-verbose-mode
-.endif
-
 .if !empty(PKG_OPTIONS:Mkqueue)
-CONFIGURE_ARGS+=	--enable-kqueue
+MESON_ARGS+=		-Dkqueue=enabled
 .else
-CONFIGURE_ARGS+=	--disable-kqueue
+MESON_ARGS+=		-Dkqueue=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
-CONFIGURE_ARGS+=	--with-x=auto
-CONFIGURE_ARGS+=	--enable-x11-autolaunch
+MESON_ARGS+=		-Dx11_autolaunch=enabled
 .  include "../../x11/libX11/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libXt=	build
 .  include "../../x11/libXt/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--without-x
+MESON_ARGS+=		-Dx11_autolaunch=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mlaunchd)
 MESSAGE_SRC+=			MESSAGE.launchd
 PLIST.launchd=			yes
-CONFIGURE_ARGS+=		--enable-launchd
-CONFIGURE_ARGS+=		--with-launchd-agent-dir=${PREFIX}/Library/LaunchAgents
+MESON_ARGS+=			-Dlaunchd=enabled
+MESON_ARGS+=			-Dlaunchd_agent_dir=${PREFIX}/Library/LaunchAgents
 .else
-CONFIGURE_ARGS+=		--disable-launchd
+MESON_ARGS+=			-Dlaunchd=disabled
 .endif
