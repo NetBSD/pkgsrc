@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4616 2025/08/01 20:23:23 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4617 2025/08/01 20:27:20 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6723,3 +6723,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/mame to 0.279 [wiz 2025-08-01]
 	Updated sysutils/dust to 1.2.3 [pin 2025-08-01]
 	Updated finance/rex to 0.1.20 [pin 2025-08-01]
+	Added security/sshs version 4.7.2 [pin 2025-08-01]
