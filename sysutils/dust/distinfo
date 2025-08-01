@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2025/07/16 16:07:55 pin Exp $
+$NetBSD: distinfo,v 1.24 2025/08/01 20:21:32 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -108,9 +108,9 @@ Size (dirs-sys-0.3.7.crate) = 10597 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
-BLAKE2s (dust-1.2.2.tar.gz) = 06be585bf08f3120a704d2400b6bac33afd9e2cc8e8d5f14e91b61453da41127
-SHA512 (dust-1.2.2.tar.gz) = 8041c49048c96bbdf1ecb08c23e582e74f6eac6f92204cacdb7fc7f92137395618313ec9ea5313f0287968ff22f97db039bcf362bc5ff1266284071e36977b8b
-Size (dust-1.2.2.tar.gz) = 117905 bytes
+BLAKE2s (dust-1.2.3.tar.gz) = b8fe10f1e547700415a283f36e994c5a06db2edfbaf68cd7d2f53f7ebeb3415c
+SHA512 (dust-1.2.3.tar.gz) = 041570788449101fbc2b01bf24301b4e62bbbafaceaedbbee3b16de562b48c799b6a50d6221d5d854ec8d999e329c7c034265859895b910844ee4af9660812b1
+Size (dust-1.2.3.tar.gz) = 117984 bytes
 BLAKE2s (either-1.15.0.crate) = 7c84d6a0e5f2b2ab835c6a5a557e2b80af4b533e6d792d546a42ac2f5b846e22
 SHA512 (either-1.15.0.crate) = d70c34d903e8e5088fd065a6da6673eadb569a20af183fa9bd6418940b37c8c2a777c44dbdab1b9960890cba5cb7464b805667ac42f4e05499ddcd4277d24e3f
 Size (either-1.15.0.crate) = 20114 bytes
