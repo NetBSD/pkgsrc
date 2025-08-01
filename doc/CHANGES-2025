@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4608 2025/08/01 06:50:30 fox Exp $
+$NetBSD: CHANGES-2025,v 1.4609 2025/08/01 08:13:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6715,3 +6715,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/meson to 1.8.3 [adam 2025-07-31]
 	Updated devel/mold to 2.40.3 [adam 2025-07-31]
 	Updated sysutils/py-Glances to 4.3.3 [fox 2025-08-01]
+	Updated sysutils/pwgen to 2.08nb1 [jperkin 2025-08-01]
