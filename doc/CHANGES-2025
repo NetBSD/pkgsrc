@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4607 2025/07/31 17:43:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4608 2025/08/01 06:50:30 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6714,3 +6714,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/scaleway-cli to 2.42.0 [leot 2025-07-31]
 	Updated devel/meson to 1.8.3 [adam 2025-07-31]
 	Updated devel/mold to 2.40.3 [adam 2025-07-31]
+	Updated sysutils/py-Glances to 4.3.3 [fox 2025-08-01]
