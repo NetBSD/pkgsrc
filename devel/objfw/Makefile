@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/06/08 13:20:39 js Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/01 10:28:48 js Exp $
 
 DISTNAME=	objfw-1.3.2
 CATEGORIES=	devel
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v3
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
-CONFIGURE_ARGS+=	OBJC=clang	# Clang has much better ObjC support
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 
@@ -32,9 +31,9 @@ CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 .elif ${OPSYS} == "Darwin"
 # Darwin always has good Objective-C support with the system compiler.
 .else
-PKGSRC_COMPILER=	clang
-
+CONFIGURE_ARGS+=	OBJC=clang	# Clang has much better ObjC support
 TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
+PKGSRC_COMPILER=	clang
 .endif
 
 PLIST_SRC=	PLIST
