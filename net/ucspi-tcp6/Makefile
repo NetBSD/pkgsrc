@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/09/24 13:38:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.37 2025/08/01 16:53:55 schmonz Exp $
 
-DISTNAME=		ucspi-tcp6-1.13.02
+DISTNAME=		ucspi-tcp6-1.13.04
 CATEGORIES=		net sysutils
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-tcp6/
 EXTRACT_SUFX=		.tgz
