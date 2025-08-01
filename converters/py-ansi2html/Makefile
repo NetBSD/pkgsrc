@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/29 05:28:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/01 08:27:40 wiz Exp $
 
 DISTNAME=	ansi2html-1.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Convert text with ANSI color codes to HTML or to LaTeX
 LICENSE=	gnu-lgpl-v3 OR mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
