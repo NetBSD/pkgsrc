@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/01 20:25:32 pin Exp $
+bin/sshs
