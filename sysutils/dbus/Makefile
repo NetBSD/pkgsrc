@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2023/10/17 22:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2025/08/01 20:58:51 wiz Exp $
 
-DISTNAME=	dbus-1.14.10
+DISTNAME=	dbus-1.16.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dbus.freedesktop.org/releases/dbus/
 EXTRACT_SUFX=	.tar.xz
@@ -10,14 +10,13 @@ HOMEPAGE=	https://www.freedesktop.org/Software/dbus
 COMMENT=	Message bus system
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
 CONFLICTS+=	dbus-glib<0.71
 CONFLICTS+=	py27-dbus<0.71
 
-TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
-GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
-USE_LIBTOOL=		YES
+USE_TOOLS+=		msgfmt pkg-config
+USE_CC_FEATURES=	c99
 
 PKGCONFIG_OVERRIDE=	dbus-1.pc.in
 
@@ -29,45 +28,25 @@ SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROU
 SMF_METHODS=	dbus
 SMF_NAME=	dbus
 
+CHECK_PORTABILITY_SKIP+=	tools/cmake-format
+
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+MESON_ARGS+=		-Ddbus_user=${DBUS_USER}
+MESON_ARGS+=		-Dlocalstatedir=${VARBASE}
+MESON_ARGS+=		-Dsystem_socket=${VARBASE}/run/dbus/system_bus_socket
+MESON_ARGS+=		-Dsystem_pid_file=${VARBASE}/run/dbus/pid
+MESON_ARGS+=		-Ddoxygen_docs=disabled
 
-# Prevent the configure script from picking up a per-user tmp
-# directory. See the commit message on revision 1.35
-CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
-
-CONFIGURE_ARGS+=	--disable-ansi
-CONFIGURE_ARGS+=	--disable-console-owner-file
-CONFIGURE_ARGS+=	--disable-doxygen-docs
-CONFIGURE_ARGS+=	--enable-checks
-CONFIGURE_ARGS+=	--enable-static
-
-###
-### XXX the spawn test hangs, and some of these tests may be bogus
-###
-#.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-#PKG_OPTIONS.dbus+=		debug
-#TEST_TARGET=			check
-#.endif
-
-CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
-CONFIGURE_ARGS+=	--with-test-socket-dir=${WRKDIR:Q}
-
-LDFLAGS.SunOS+=		-lsocket -lnsl
+LDFLAGS.SunOS+=		-lnsl
 
 SUBST_CLASSES+=		docbook
 SUBST_STAGE.docbook=	pre-configure
 SUBST_FILES.docbook=	doc/*.xml*
 SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/xml/docbook,g'
 
-PTHREAD_AUTO_VARS=	yes
-
-.if ${OPSYS} == "Linux"
-# not currently used
-#PLIST.linux=		yes
-.else
-CONFIGURE_ARGS+=	--disable-selinux
+.if ${OPSYS} == "SunOS"
+MESON_ARGS+=		-Dsolaris_console_owner_file="/dev/vt/console_user"
 .endif
 
 DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
@@ -97,8 +76,6 @@ BUILDLINK_TRANSFORM+=	rm:-fPIE
 BUILDLINK_TRANSFORM+=	rm:-pie
 .endif
 
-BUILDLINK_TRANSFORM.OpenBSD+=	rm:-lrt
-
 .include "options.mk"
 
 post-install:
@@ -107,8 +84,11 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/etc/dbus-1/s*.conf
 	${RMDIR} ${DESTDIR}${PREFIX}/etc/dbus-1 || ${TRUE}
 
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.expat+=	expat>=2.1.0
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

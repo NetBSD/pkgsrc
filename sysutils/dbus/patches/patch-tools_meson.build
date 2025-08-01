@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_meson.build,v 1.1 2025/08/01 20:58:52 wiz Exp $
+
+Explicitly link against libdbus to avoid @rpath in executables on Darwin.
+
+--- tools/meson.build.orig	2025-05-18 08:54:08.689176730 +0000
++++ tools/meson.build
+@@ -63,7 +63,7 @@ if message_bus
+         'dbus-run-session.c',
+         'tool-common.c',
+         include_directories: root_include,
+-        link_with: libdbus_internal,
++        link_with: [libdbus, libdbus_internal],
+         install: true,
+     )
+ endif

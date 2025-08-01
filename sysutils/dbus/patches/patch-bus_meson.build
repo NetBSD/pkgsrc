@@ -1,0 +1,24 @@
+$NetBSD: patch-bus_meson.build,v 1.1 2025/08/01 20:58:52 wiz Exp $
+
+Explicitly link against libdbus to avoid @rpath in executables on Darwin.
+
+--- bus/meson.build.orig	2025-05-18 08:46:07.973006923 +0000
++++ bus/meson.build
+@@ -137,7 +137,7 @@ libdbus_daemon_internal = static_library
+ dbus_daemon = executable('dbus-daemon',
+     'main.c',
+     include_directories: root_include,
+-    link_with: libdbus_daemon_internal,
++    link_with: [libdbus, libdbus_daemon_internal],
+     install: true,
+ )
+ 
+@@ -177,7 +177,7 @@ if platform_unix and use_traditional_act
+     dbus_daemon_launch_helper = executable('dbus-daemon-launch-helper',
+         dbus_daemon_launch_helper_sources,
+         include_directories: root_include,
+-        link_with: liblaunch_helper_internal,
++        link_with: [libdbus, liblaunch_helper_internal],
+         install: true,
+         install_dir: get_option('libexecdir'),
+     )
