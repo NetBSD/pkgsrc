@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4614 2025/08/01 18:31:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4615 2025/08/01 20:21:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6721,3 +6721,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ucspi-ssl to 0.999.13.04 [schmonz 2025-08-01]
 	Updated games/luanti to 5.13.0 [ktnb 2025-08-01]
 	Updated emulators/mame to 0.279 [wiz 2025-08-01]
+	Updated sysutils/dust to 1.2.3 [pin 2025-08-01]
