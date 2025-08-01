@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4610 2025/08/01 10:41:10 nia Exp $
+$NetBSD: CHANGES-2025,v 1.4611 2025/08/01 16:54:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6717,3 +6717,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-Glances to 4.3.3 [fox 2025-08-01]
 	Updated sysutils/pwgen to 2.08nb1 [jperkin 2025-08-01]
 	Updated www/arcticfox to 46.1 [nia 2025-08-01]
+	Updated net/ucspi-tcp6 to 1.13.04 [schmonz 2025-08-01]
