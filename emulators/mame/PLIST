@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2025/07/01 18:20:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.97 2025/08/01 18:31:11 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -242,6 +242,7 @@ share/mame/hash/dragon_cass.xml
 share/mame/hash/dragon_flex.xml
 share/mame/hash/dragon_flop.xml
 share/mame/hash/dragon_os9.xml
+share/mame/hash/duelmast_cart.xml
 share/mame/hash/e01_flop.xml
 share/mame/hash/easy_karaoke_cart.xml
 share/mame/hash/ec1841.xml
@@ -337,6 +338,7 @@ share/mame/hash/ibm5170_hdd.xml
 share/mame/hash/ibm6580.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
+share/mame/hash/ibmpcjx.xml
 share/mame/hash/icanguit.xml
 share/mame/hash/icanpian.xml
 share/mame/hash/intellect02.xml
@@ -475,8 +477,11 @@ share/mame/hash/myvision.xml
 share/mame/hash/mz2000_cass.xml
 share/mame/hash/mz2000_flop.xml
 share/mame/hash/mz2500_flop.xml
+share/mame/hash/mz5500_flop.xml
 share/mame/hash/mz700_cass.xml
 share/mame/hash/mz800_cass.xml
+share/mame/hash/mz80b_cass.xml
+share/mame/hash/mz80b_flop.xml
 share/mame/hash/n64.xml
 share/mame/hash/n64_lodgenet.xml
 share/mame/hash/n64dd.xml
@@ -514,6 +519,7 @@ share/mame/hash/p500_flop.xml
 share/mame/hash/partner_cass.xml
 share/mame/hash/partner_flop.xml
 share/mame/hash/pasogo.xml
+share/mame/hash/pasopia7_cass.xml
 share/mame/hash/pasopia_cass.xml
 share/mame/hash/pb2000c.xml
 share/mame/hash/pc1000.xml
