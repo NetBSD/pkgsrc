@@ -1,12 +1,12 @@
-$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2022/02/05 20:51:07 nia Exp $
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.2 2025/08/01 10:40:59 nia Exp $
 
 - Add Sun Audio support.
 
---- media/libcubeb/src/moz.build.orig	2021-12-03 05:22:04.000000000 +0000
+--- media/libcubeb/src/moz.build.orig	2025-07-16 22:47:04.000000000 +0000
 +++ media/libcubeb/src/moz.build
-@@ -25,6 +25,12 @@ if CONFIG['MOZ_PULSEAUDIO']:
-     if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
-         DEFINES['DISABLE_LIBPULSE_DLOPEN'] = True
+@@ -41,6 +41,12 @@ if CONFIG['MOZ_JACK']:
+     ]
+     DEFINES['USE_JACK'] = True
  
 +if CONFIG['MOZ_SUN']:
 +    SOURCES += [
