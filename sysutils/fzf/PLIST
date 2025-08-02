@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2023/11/19 00:38:13 iquiw Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/02 20:48:05 wiz Exp $
 bin/fzf
 bin/fzf-preview.sh
 bin/fzf-tmux
 man/man1/fzf-tmux.1
 man/man1/fzf.1
+share/bash-completion/completions/fzf
 share/fzf/plugin/fzf.vim
-share/fzf/shell/completion.bash
-share/fzf/shell/completion.zsh
 share/fzf/shell/key-bindings.bash
 share/fzf/shell/key-bindings.fish
 share/fzf/shell/key-bindings.zsh
+share/zsh/site-functions/_fzf
