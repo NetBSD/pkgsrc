@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4622 2025/08/02 03:25:16 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4623 2025/08/02 03:26:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6729,3 +6729,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/php84 to 8.4.11 [taca 2025-08-02]
 	Updated www/php-apcu to 5.1.25 [taca 2025-08-02]
 	Updated databases/ruby-pg to 1.6.0 [taca 2025-08-02]
+	Updated databases/ruby-sequel to 5.95.0 [taca 2025-08-02]
