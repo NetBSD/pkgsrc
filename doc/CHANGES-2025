@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4657 2025/08/02 17:43:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4658 2025/08/02 20:46:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6779,3 +6779,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pip to 25.2 [adam 2025-08-02]
 	Updated devel/libffi to 3.5.2 [adam 2025-08-02]
 	Updated audio/mpg123 to 1.33.1 [adam 2025-08-02]
+	Updated devel/mise to 2025.8.2 [pin 2025-08-02]
