@@ -1,6 +1,8 @@
---- readline.pc.in~     2022-12-06 14:19:31.133661175 +0900
-+++ readline.pc.in      2022-12-06 14:20:52.293041763 +0900
-@@ -7,6 +7,5 @@
+$NetBSD: patch-readline.pc.in,v 1.1 2025/08/02 06:56:15 wiz Exp $
+
+--- readline.pc.in.orig	2019-04-08 18:22:47.000000000 +0000
++++ readline.pc.in
+@@ -7,6 +7,5 @@ Name: Readline
  Description: Gnu Readline library for command line editing
  URL: http://tiswww.cwru.edu/php/chet/readline/rltop.html
  Version: @LIBVERSION@
