@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.128 2025/05/17 05:49:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.129 2025/08/02 03:26:28 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -215,6 +215,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/boolean_readers.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/boolean_subsets.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance.rb
+${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_conflicts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_encryption.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_select.rb
