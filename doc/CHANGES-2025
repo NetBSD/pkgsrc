@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4653 2025/08/02 14:22:11 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4654 2025/08/02 14:26:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6773,3 +6773,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fakefs to 5.9.2 [adam 2025-08-02]
 	Updated net/py-comm to 0.2.3 [adam 2025-08-02]
 	Updated sysutils/parallel-disk-usage to 0.21.0 [pin 2025-08-02]
+	Updated sysutils/dua-cli to 2.31.0 [pin 2025-08-02]
