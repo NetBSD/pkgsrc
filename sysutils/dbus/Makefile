@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.140 2025/08/01 20:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2025/08/02 05:04:27 wiz Exp $
 
 DISTNAME=	dbus-1.16.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dbus.freedesktop.org/releases/dbus/
 EXTRACT_SUFX=	.tar.xz
@@ -18,7 +19,8 @@ CONFLICTS+=	py27-dbus<0.71
 USE_TOOLS+=		msgfmt pkg-config
 USE_CC_FEATURES=	c99
 
-PKGCONFIG_OVERRIDE=	dbus-1.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/dbus-1.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
