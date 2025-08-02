@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4620 2025/08/02 03:13:58 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4621 2025/08/02 03:20:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6727,3 +6727,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/dbus to 1.16.2 [wiz 2025-08-01]
 	Updated lang/php83 to 8.3.24 [taca 2025-08-02]
 	Updated lang/php84 to 8.4.11 [taca 2025-08-02]
+	Updated www/php-apcu to 5.1.25 [taca 2025-08-02]
