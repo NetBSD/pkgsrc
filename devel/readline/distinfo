@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.39 2024/03/31 17:14:32 js Exp $
+$NetBSD: distinfo,v 1.40 2025/08/02 06:56:14 wiz Exp $
 
-BLAKE2s (readline-8.2.tar.gz) = 680d2c3d7ce2de64a7e3a72adc5021e564f29af270d48781b0669b3e075f55e8
-SHA512 (readline-8.2.tar.gz) = 0a451d459146bfdeecc9cdd94bda6a6416d3e93abd80885a40b334312f16eb890f8618a27ca26868cebbddf1224983e631b1cbc002c1a4d1cd0d65fba9fea49a
-Size (readline-8.2.tar.gz) = 3043952 bytes
-SHA1 (patch-ae) = 15a0252befd0770f5de646ef8b36bf19cc93ec28
+BLAKE2s (readline-8.3.tar.gz) = 9138ef5b41fb1a5cf758b99281c915cc6b09bd640c7ddc3460db8c6a116feccc
+SHA512 (readline-8.3.tar.gz) = 513002753dcf5db9213dbbb61d51217245f6a40d33b1dd45238e8062dfa8eef0c890b87a5548e11db959e842724fb572c4d3d7fb433773762a63c30efe808344
+Size (readline-8.3.tar.gz) = 3419642 bytes
+SHA1 (patch-ae) = c917e0f4cc2e502bab2b695bb042216b7a21b822
 SHA1 (patch-ag) = 3114e6959dfff3e2aae74c3df3ba4b0f692b79bb
 SHA1 (patch-ah) = d812ea068415939beb42c72dd9bed8d210db57d1
-SHA1 (patch-ai) = 92600d64a9184e7b3b0ee31c3e7fccb115e3343d
 SHA1 (patch-examples_Makefile.in) = 12bdbc3a0d1a116bed96c66ef4d25273b071fd3c
-SHA1 (patch-input.c) = d402ec2ad55dfd62830f4b8e104b371e02d1db0f
+SHA1 (patch-readline.pc.in) = b953a4ca1636b30eee0e90d76484b9ecb73f84f5
 SHA1 (patch-rlprivate.h) = b04503026cb4fd5bfeb9cd884bb6a35b6014f058
