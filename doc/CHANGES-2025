@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4634 2025/08/02 05:07:52 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4635 2025/08/02 05:11:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6741,3 +6741,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/dbus to 1.16.2nb1 [wiz 2025-08-02]
 	Updated sysutils/ruby-specinfra to 2.94.1 [taca 2025-08-02]
 	Updated textproc/ruby-libxml to 5.0.5 [taca 2025-08-02]
+	Updated textproc/ruby-multi_json to 1.17.0 [taca 2025-08-02]
