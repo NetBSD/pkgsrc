@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2025/07/21 06:51:14 adam Exp $
+# $NetBSD: Makefile,v 1.86 2025/08/02 09:39:43 adam Exp $
 
-DISTNAME=	apsw-3.50.3.0
+DISTNAME=	apsw-3.50.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
