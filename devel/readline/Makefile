@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/08/02 06:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/08/02 06:57:22 wiz Exp $
 
 DISTNAME=	readline-8.3
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	readline.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 CONFIGURE_ENV.NetBSD+=	bash_cv_wcwidth_broken=no
 .endif
 
