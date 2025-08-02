@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/20 16:41:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/02 03:37:40 schmonz Exp $
 bin/snac
 man/man1/snac.1
 man/man5/snac.5
@@ -15,4 +15,5 @@ share/snac/po/fr.po
 share/snac/po/it.po
 share/snac/po/pt_BR.po
 share/snac/po/ru.po
+share/snac/po/uk.po
 share/snac/po/zh.po
