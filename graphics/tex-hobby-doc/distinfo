@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/02 15:44:54 riastradh Exp $
+
+BLAKE2s (hobby.doc.r68137.tar.xz) = cb7f02ac18de37202563ac4754fdbf9206deaf1f1288a9df170992cc9e73ea61
+SHA512 (hobby.doc.r68137.tar.xz) = 3e418503ef48dd0be479f17171d8c6767c77da95d43a2f31a374cbb6ed47c5129e2baa64ca15128240856790ea92acd2b090364384c29954266d2b9ec6aed362
+Size (hobby.doc.r68137.tar.xz) = 969172 bytes
