@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4637 2025/08/02 05:14:46 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4638 2025/08/02 05:49:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6744,3 +6744,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-multi_json to 1.17.0 [taca 2025-08-02]
 	Updated textproc/ruby-temple to 0.10.4 [taca 2025-08-02]
 	Updated textproc/ruby-tilt to 2.6.1 [taca 2025-08-02]
+	Updated www/ruby-aws-partitions to 1.1140.0 [taca 2025-08-02]
