@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4618 2025/08/01 20:59:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4619 2025/08/02 03:12:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6725,3 +6725,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/rex to 0.1.20 [pin 2025-08-01]
 	Added security/sshs version 4.7.2 [pin 2025-08-01]
 	Updated sysutils/dbus to 1.16.2 [wiz 2025-08-01]
+	Updated lang/php83 to 8.3.24 [taca 2025-08-02]
