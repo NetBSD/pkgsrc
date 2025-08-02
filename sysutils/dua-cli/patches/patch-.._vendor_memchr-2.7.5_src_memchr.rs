@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.4_src_memchr.rs,v 1.1 2024/10/02 17:49:02 he Exp $
+$NetBSD: patch-.._vendor_memchr-2.7.5_src_memchr.rs,v 1.1 2025/08/02 14:26:15 pin Exp $
 
 Make this build on big-endian aarch64.
 
---- ../vendor/memchr-2.7.4/src/memchr.rs.orig	2024-10-01 22:37:24.143489357 +0000
-+++ ../vendor/memchr-2.7.4/src/memchr.rs
+--- ../vendor/memchr-2.7.5/src/memchr.rs.orig	2025-08-02 10:50:16.802738934 +0000
++++ ../vendor/memchr-2.7.5/src/memchr.rs
 @@ -518,14 +518,14 @@ unsafe fn memchr_raw(
      {
          crate::arch::wasm32::memchr::memchr_raw(needle, start, end)
