@@ -1,22 +1,20 @@
-@comment $NetBSD: PLIST,v 1.24 2024/10/27 13:30:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/08/02 03:25:05 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pg/postgresql_lib_path.rb
 ${GEM_EXTSDIR}/pg_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Contributors.rdoc
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/POSTGRES
 ${GEM_LIBDIR}/README-OS_X.rdoc
 ${GEM_LIBDIR}/README-Windows.rdoc
 ${GEM_LIBDIR}/README.ja.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/Rakefile.cross
 ${GEM_LIBDIR}/certs/ged.pem
 ${GEM_LIBDIR}/certs/kanis@comcard.de.pem
 ${GEM_LIBDIR}/certs/larskanis-2022.pem
@@ -32,6 +30,7 @@ ${GEM_LIBDIR}/ext/pg.c
 ${GEM_LIBDIR}/ext/pg.h
 ${GEM_LIBDIR}/ext/pg_binary_decoder.c
 ${GEM_LIBDIR}/ext/pg_binary_encoder.c
+${GEM_LIBDIR}/ext/pg_cancel_connection.c
 ${GEM_LIBDIR}/ext/pg_coder.c
 ${GEM_LIBDIR}/ext/pg_connection.c
 ${GEM_LIBDIR}/ext/pg_copy_coder.c
@@ -61,6 +60,7 @@ ${GEM_LIBDIR}/lib/pg/basic_type_registry.rb
 ${GEM_LIBDIR}/lib/pg/binary_decoder/date.rb
 ${GEM_LIBDIR}/lib/pg/binary_decoder/timestamp.rb
 ${GEM_LIBDIR}/lib/pg/binary_encoder/timestamp.rb
+${GEM_LIBDIR}/lib/pg/cancel_connection.rb
 ${GEM_LIBDIR}/lib/pg/coder.rb
 ${GEM_LIBDIR}/lib/pg/connection.rb
 ${GEM_LIBDIR}/lib/pg/exceptions.rb
@@ -91,7 +91,15 @@ ${GEM_LIBDIR}/misc/ruby-pg/Manifest.txt
 ${GEM_LIBDIR}/misc/ruby-pg/README.txt
 ${GEM_LIBDIR}/misc/ruby-pg/Rakefile
 ${GEM_LIBDIR}/misc/ruby-pg/lib/ruby/pg.rb
+${GEM_LIBDIR}/misc/yugabyte/Dockerfile
+${GEM_LIBDIR}/misc/yugabyte/docker-compose.yml
+${GEM_LIBDIR}/misc/yugabyte/pg-test.rb
 ${GEM_LIBDIR}/pg.gemspec
+${GEM_LIBDIR}/ports/patches/krb5/1.21.3/0001-Allow-static-linking-krb5-library.patch
+${GEM_LIBDIR}/ports/patches/openssl/3.5.1/0001-aarch64-mingw.patch
+${GEM_LIBDIR}/ports/patches/postgresql/17.5/0001-Use-workaround-of-__builtin_setjmp-only-on-MINGW-on-.patch
+${GEM_LIBDIR}/ports/patches/postgresql/17.5/0001-libpq-Process-buffered-SSL-read-bytes-to-support-rec.patch
+${GEM_LIBDIR}/rakelib/pg_gem_helper.rb
 ${GEM_LIBDIR}/rakelib/task_extension.rb
 ${GEM_LIBDIR}/sample/array_insert.rb
 ${GEM_LIBDIR}/sample/async_api.rb
