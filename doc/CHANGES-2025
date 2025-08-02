@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4647 2025/08/02 06:56:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4648 2025/08/02 09:30:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6754,3 +6754,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-faraday-em_synchrony to 1.0.1 [taca 2025-08-02]
 	Updated www/ruby-selenium-webdriver to 4.34.0 [taca 2025-08-02]
 	Updated devel/readline to 8.3 [wiz 2025-08-02]
+	Updated databases/sqlite3 to 3.50.4 [adam 2025-08-02]
+	Updated databases/sqlite3-docs to 3.50.4 [adam 2025-08-02]
+	Updated databases/sqlite3-tcl to 3.50.4 [adam 2025-08-02]
+	Updated devel/lemon to 1.0.3.50.4 [adam 2025-08-02]
