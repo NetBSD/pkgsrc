@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2024/09/22 14:58:18 taca Exp $
+$NetBSD: distinfo,v 1.28 2025/08/02 03:20:23 taca Exp $
 
-BLAKE2s (php-apcu/apcu-5.1.24.tgz) = f864aced38a926c4691823f6571480e77258548af6cb247655bc6405b452036d
-SHA512 (php-apcu/apcu-5.1.24.tgz) = 771c0551feb35bf64bc07a7a2c60c9b549009a252f4f158fbc83c7d77f4119d84291a1128302a350042d83879dcb38a445672ce115d8c14b969b51f423a446fa
-Size (php-apcu/apcu-5.1.24.tgz) = 90866 bytes
+BLAKE2s (php-apcu/apcu-5.1.25.tgz) = d143eb6cc3ad5f679f6d58ba11d18cfdae45ccd29ef0257d37b82e175dbc0e5c
+SHA512 (php-apcu/apcu-5.1.25.tgz) = 463d9e71b6bb0a1fb1e34b1f7b263aa1c78719d4e94f03e47dde0dc88c39e958a62671098c652d9651883c8182250a90d61d3ce56b8c41056b4bd6e7b6a054f5
+Size (php-apcu/apcu-5.1.25.tgz) = 94319 bytes
 SHA1 (patch-config.m4) = 5f301583137a0c5a928b7372aa32cd319aa17cc7
