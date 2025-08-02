@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4655 2025/08/02 16:10:54 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4656 2025/08/02 17:25:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6775,3 +6775,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/parallel-disk-usage to 0.21.0 [pin 2025-08-02]
 	Updated sysutils/dua-cli to 2.31.0 [pin 2025-08-02]
 	Updated editors/tp-note to 1.25.14 [pin 2025-08-02]
+	Updated net/py-python-socks to 2.7.2 [adam 2025-08-02]
+	Updated devel/py-pip to 25.2 [adam 2025-08-02]
