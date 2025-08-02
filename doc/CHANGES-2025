@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4629 2025/08/02 03:59:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4630 2025/08/02 04:39:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6736,3 +6736,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-recog to 3.1.18 [taca 2025-08-02]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.45 [taca 2025-08-02]
 	Updated security/ruby-rex-bin_tools to 0.1.12 [taca 2025-08-02]
+	Updated security/ruby-rex-random_identifier to 0.1.20 [taca 2025-08-02]
