@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/09/10 16:09:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/08/02 05:11:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -9,10 +9,8 @@ ${GEM_LIBDIR}/lib/multi_json/adapter.rb
 ${GEM_LIBDIR}/lib/multi_json/adapter_error.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/gson.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/jr_jackson.rb
-${GEM_LIBDIR}/lib/multi_json/adapters/json_common.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_gem.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/json_pure.rb
-${GEM_LIBDIR}/lib/multi_json/adapters/nsjsonserialization.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/oj.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/ok_json.rb
 ${GEM_LIBDIR}/lib/multi_json/adapters/yajl.rb
