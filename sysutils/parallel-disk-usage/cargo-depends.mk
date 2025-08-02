@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2025/07/28 10:58:15 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2025/08/02 14:21:49 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.19
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.11
@@ -10,9 +10,9 @@ CARGO_CRATE_DEPENDS+=	autocfg-1.5.0
 CARGO_CRATE_DEPENDS+=	bitflags-2.9.1
 CARGO_CRATE_DEPENDS+=	build-fs-tree-0.7.1
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.1
-CARGO_CRATE_DEPENDS+=	clap-4.5.41
+CARGO_CRATE_DEPENDS+=	clap-4.5.42
 CARGO_CRATE_DEPENDS+=	clap-utilities-0.2.0
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.41
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.42
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.55
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.41
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.5
@@ -51,7 +51,7 @@ CARGO_CRATE_DEPENDS+=	hashbrown-0.15.4
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
 CARGO_CRATE_DEPENDS+=	indexmap-2.9.0
-CARGO_CRATE_DEPENDS+=	into-sorted-0.0.2
+CARGO_CRATE_DEPENDS+=	into-sorted-0.0.3
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itertools-0.14.0
@@ -88,7 +88,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.26
 CARGO_CRATE_DEPENDS+=	serde-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.219
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.141
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.142
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	smallvec-1.15.1
 CARGO_CRATE_DEPENDS+=	smart-default-0.7.1
