@@ -1,0 +1,4 @@
+This package defines a path generation function for PGF/TikZ which
+implements Hobby's algorithm for a path built out of Bezier curves
+which passes through a given set of points.  The path thus generated
+may by used as a TikZ 'to path'.  The implementation is in LaTeX3.

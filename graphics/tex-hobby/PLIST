@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/02 15:44:54 riastradh Exp $
+share/texmf-dist/tex/latex/hobby/hobby-l3draw.sty
+share/texmf-dist/tex/latex/hobby/hobby.code.tex
+share/texmf-dist/tex/latex/hobby/pgflibraryhobby.code.tex
+share/texmf-dist/tex/latex/hobby/pml3array.sty
+share/texmf-dist/tex/latex/hobby/tikzlibraryhobby.code.tex

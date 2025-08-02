@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/02 15:44:54 riastradh Exp $
+share/texmf-dist/doc/latex/hobby/README
+share/texmf-dist/doc/latex/hobby/README.txt
+share/texmf-dist/doc/latex/hobby/hobby.pdf
+share/texmf-dist/doc/latex/hobby/hobby.tex
+share/texmf-dist/doc/latex/hobby/hobby_code.pdf
