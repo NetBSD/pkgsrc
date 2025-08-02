@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.482 2025/08/01 09:11:47 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.483 2025/08/02 16:10:18 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27225,3 +27225,45 @@ python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-819
 python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
 python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
 python313-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8194
+anubis-1.21.3		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-54414
+asterisk<18.26.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
+asterisk>=20<20.15.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
+asterisk>=21<21.10.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
+asterisk>=22<22.5.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49832
+binutils<2.44		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8224
+binutils<2.45		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2025-8225
+chromium<138.0.7204.183	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-8292
+glpi<10.0.19	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2025-27514
+glpi<10.0.19	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-52567
+glpi<10.0.19	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2025-52897
+glpi<10.0.19	weak-authentication		https://nvd.nist.gov/vuln/detail/CVE-2025-53008
+glpi<10.0.19	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2025-53111
+glpi<10.0.19	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2025-53112
+glpi<10.0.19	improper-access-control		https://nvd.nist.gov/vuln/detail/CVE-2025-53113
+glpi<10.0.19	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-53357
+go123<1.23.11		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
+go124<1.24.5		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-4674
+libsoup-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8197
+libssh<0.11.2		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-5449
+libssh-[0-9]*		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8114
+openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48071
+openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48072
+openexr<3.3.3		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-48073
+openexr<3.3.3		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-48074
+php{56,74,81,82,83,84}-piwigo<15.0.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-43018
+py{27,39,310,311,312,313}-JWT-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45768
+qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54566
+qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54567
+sqlite3<3.42.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7458
+squid<6.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-54574
+tiff-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-13978
+tiff-[0-9]*	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-8176
+tiff-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8177
+vault<1.20.0	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2025-5999
+vault<1.20.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-6000
+vault<1.20.1	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-6004
+vault<1.20.1	username-enumeration		https://nvd.nist.gov/vuln/detail/CVE-2025-6011
+vault<1.20.1	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-6014
+vault<1.20.1	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-6015
+vault<1.20.1	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-6037
+yarn-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8262
