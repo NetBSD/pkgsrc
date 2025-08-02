@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/04/12 10:06:40 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/08/02 09:40:57 adam Exp $
 
-BLAKE2s (python_dotenv-1.1.0.tar.gz) = 09f88eb29c25f68775fca915fee9ba99c5d588d6a0636267ae710f3660365d7c
-SHA512 (python_dotenv-1.1.0.tar.gz) = 453f1262d330e1783dae1ef2ac18b998f817203c10705a974b294b79316a4cee68433622b4fa0aff2efed45e5fad04ec1fa4d15434ec1fc57c1c73a2518ef396
-Size (python_dotenv-1.1.0.tar.gz) = 39920 bytes
+BLAKE2s (python_dotenv-1.1.1.tar.gz) = 166e70b47a2c8f7cfc7de999f346d625393af3d4c5822407f841f745f2de9981
+SHA512 (python_dotenv-1.1.1.tar.gz) = c19d427f845ccdeacfdcd312e340139b9744ec3e8874b06b78b3f7b49e43b1024dd4dc85c5d7d79e65308c2924232729cb6a10301dd6f49142e2574956b2c14d
+Size (python_dotenv-1.1.1.tar.gz) = 41978 bytes
