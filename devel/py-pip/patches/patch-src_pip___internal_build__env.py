@@ -1,20 +1,20 @@
-$NetBSD: patch-src_pip___internal_build__env.py,v 1.6 2023/03/06 15:49:29 wiz Exp $
+$NetBSD: patch-src_pip___internal_build__env.py,v 1.7 2025/08/02 17:24:33 adam Exp $
 
 Copy distutils distro config file to overlay.
 https://github.com/pypa/pip/issues/10949
 
---- src/pip/_internal/build_env.py.orig	2023-02-17 18:31:10.000000000 +0000
+--- src/pip/_internal/build_env.py.orig	2025-07-30 21:31:52.000000000 +0000
 +++ src/pip/_internal/build_env.py
-@@ -8,6 +8,8 @@ import site
- import sys
+@@ -10,6 +10,8 @@ import sys
  import textwrap
  from collections import OrderedDict
+ from collections.abc import Iterable
 +from shutil import copy
 +from sysconfig import get_paths
  from types import TracebackType
- from typing import TYPE_CHECKING, Iterable, List, Optional, Set, Tuple, Type, Union
+ from typing import TYPE_CHECKING, Protocol
  
-@@ -102,6 +104,9 @@ class BuildEnvironment:
+@@ -203,6 +205,9 @@ class BuildEnvironment:
          self._site_dir = os.path.join(temp_dir.path, "site")
          if not os.path.exists(self._site_dir):
              os.mkdir(self._site_dir)
