@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/08/02 10:47:33 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/02 10:48:15 adam Exp $
 
 DISTNAME=	comm-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Jupyter Python Comm implementation
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.10:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-traitlets>=5.4:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none
 
