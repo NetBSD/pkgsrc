@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/07/01 15:17:45 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/02 10:45:15 adam Exp $
 
-DISTNAME=	pyfakefs-5.9.1
+DISTNAME=	pyfakefs-5.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfakefs/}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/07/01 15:17:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/08/02 10:45:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -118,6 +118,9 @@ ${PYSITELIB}/pyfakefs/pytest_tests/pytest_plugin_test.pyo
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.py
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.pyc
 ${PYSITELIB}/pyfakefs/pytest_tests/pytest_reload_pandas_test.pyo
+${PYSITELIB}/pyfakefs/pytest_tests/test_fs_with_monkeypatch.py
+${PYSITELIB}/pyfakefs/pytest_tests/test_fs_with_monkeypatch.pyc
+${PYSITELIB}/pyfakefs/pytest_tests/test_fs_with_monkeypatch.pyo
 ${PYSITELIB}/pyfakefs/pytest_tests/test_patch_on_setup.py
 ${PYSITELIB}/pyfakefs/pytest_tests/test_patch_on_setup.pyc
 ${PYSITELIB}/pyfakefs/pytest_tests/test_patch_on_setup.pyo
