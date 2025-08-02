@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4627 2025/08/02 03:50:30 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4628 2025/08/02 03:57:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6734,3 +6734,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ruby-color to 2.1.0 [taca 2025-08-02]
 	Updated mail/ruby-mime-types-data to 3.2025.0729 [taca 2025-08-02]
 	Updated net/ruby-recog to 3.1.18 [taca 2025-08-02]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.45 [taca 2025-08-02]
