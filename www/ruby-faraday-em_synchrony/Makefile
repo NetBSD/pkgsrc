@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2021/08/30 15:18:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/02 05:58:39 taca Exp $
 
-DISTNAME=	faraday-em_synchrony-1.0.0
+DISTNAME=	faraday-em_synchrony-1.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
