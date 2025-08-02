@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4651 2025/08/02 10:30:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4652 2025/08/02 10:48:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6768,3 +6768,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flufl.lock to 8.2.0 [adam 2025-08-02]
 	Updated devel/py-freezegun to 1.5.4 [adam 2025-08-02]
 	Updated devel/py-click-plugins to 1.1.1.2 [adam 2025-08-02]
+	Updated devel/py-xdis to 6.1.5 [adam 2025-08-02]
+	Updated devel/py-packageurl to 0.17.3 [adam 2025-08-02]
+	Updated devel/py-fakefs to 5.9.2 [adam 2025-08-02]
+	Updated net/py-comm to 0.2.3 [adam 2025-08-02]
