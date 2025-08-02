@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/04/13 06:51:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/08/02 10:42:10 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -176,6 +176,9 @@ ${PYSITELIB}/xdis/opcodes/opcode_310pypy.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_311.py
 ${PYSITELIB}/xdis/opcodes/opcode_311.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_311.pyo
+${PYSITELIB}/xdis/opcodes/opcode_311pypy.py
+${PYSITELIB}/xdis/opcodes/opcode_311pypy.pyc
+${PYSITELIB}/xdis/opcodes/opcode_311pypy.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_312.py
 ${PYSITELIB}/xdis/opcodes/opcode_312.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_312.pyo
