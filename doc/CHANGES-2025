@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4648 2025/08/02 09:30:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4649 2025/08/02 09:41:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6758,3 +6758,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3-docs to 3.50.4 [adam 2025-08-02]
 	Updated databases/sqlite3-tcl to 3.50.4 [adam 2025-08-02]
 	Updated devel/lemon to 1.0.3.50.4 [adam 2025-08-02]
+	Updated devel/py-click to 8.2.2 [adam 2025-08-02]
+	Updated graphics/py-matplotlib to 3.10.5 [adam 2025-08-02]
+	Updated databases/py-apsw to 3.50.4.0 [adam 2025-08-02]
+	Updated devel/py-dotenv to 1.1.1 [adam 2025-08-02]
