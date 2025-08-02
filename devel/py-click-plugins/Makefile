@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/12 09:50:45 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/02 10:30:22 adam Exp $
 
-DISTNAME=	click-plugins-1.1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	click_plugins-1.1.1.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-plugins/}
 
