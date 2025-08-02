@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.112 2025/07/27 08:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2025/08/02 20:48:05 wiz Exp $
 
 DISTNAME=	fzf-0.65.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junegunn/}
-GITHUB_TAG=     v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/junegunn/fzf/
@@ -19,10 +20,13 @@ GO_BUILD_PATTERN=	.
 REPLACE_BASH+=	bin/fzf-tmux
 REPLACE_BASH+=	bin/fzf-preview.sh
 
-FZF_SHELL_FILES+=	completion.bash completion.zsh
 FZF_SHELL_FILES+=	key-bindings.bash key-bindings.fish key-bindings.zsh
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/fzf/plugin share/fzf/shell
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fzf/plugin
+INSTALLATION_DIRS+=	share/fzf/shell
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/fzf-tmux ${DESTDIR}${PREFIX}/bin
@@ -30,6 +34,8 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man1/fzf-tmux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/plugin/fzf.vim ${DESTDIR}${PREFIX}/share/fzf/plugin
+	${INSTALL_DATA} ${WRKSRC}/shell/completion.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/fzf
+	${INSTALL_DATA} ${WRKSRC}/shell/completion.zsh ${DESTDIR}${PREFIX}/share/zsh/site-functions/_fzf
 .for f in ${FZF_SHELL_FILES}
 	${INSTALL_DATA} ${WRKSRC}/shell/${f} ${DESTDIR}${PREFIX}/share/fzf/shell
 .endfor
