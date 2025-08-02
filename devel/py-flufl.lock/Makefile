@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/01/21 15:56:14 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/02 10:28:15 adam Exp $
 
-DISTNAME=	flufl_lock-8.1.0
+DISTNAME=	flufl_lock-8.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.lock/}
