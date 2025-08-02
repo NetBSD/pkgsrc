@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.23 2025/04/21 16:33:08 wiz Exp $
+# $NetBSD: builtin.mk,v 1.24 2025/08/02 06:57:22 wiz Exp $
 
 BUILTIN_PKG:=	readline
 
@@ -29,7 +29,7 @@ MAKEVARS+=		IS_BUILTIN.readline
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.readline) && \
-    !empty(IS_BUILTIN.readline:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.readline:tl} == yes && \
     empty(H_READLINE:M__nonexistent__)
 BUILTIN_VERSION.readline!=						\
 	${AWK} '/\#define[ 	]*RL_VERSION_MAJOR/ { M = $$3 }		\
@@ -50,10 +50,10 @@ USE_BUILTIN.readline=	no
 .  else
 USE_BUILTIN.readline=	${IS_BUILTIN.readline}
 .    if defined(BUILTIN_PKG.readline) && \
-        !empty(IS_BUILTIN.readline:M[yY][eE][sS])
+        ${IS_BUILTIN.readline:tl} == yes
 USE_BUILTIN.readline=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.readline}
-.        if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
+.        if ${USE_BUILTIN.readline:tl} == yes
 USE_BUILTIN.readline!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.readline:Q}; then \
 		${ECHO} "yes";						\
@@ -68,7 +68,7 @@ USE_BUILTIN.readline!=							\
 # replace GNU readline.
 #
 _INCOMPAT_READLINE?=	Darwin-[567].*-*
-.    if defined(OS_VARIANT) && empty(OS_VARIANT:MOmniOS)
+.    if defined(OS_VARIANT) && ${OS_VARIANT} != OmniOS
 _INCOMPAT_READLINE+=	SunOS-*-*
 .    endif
 .    for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
@@ -85,9 +85,9 @@ MAKEVARS+=		USE_BUILTIN.readline
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.readline?=	no
-.if !empty(CHECK_BUILTIN.readline:M[nN][oO])
+.if ${CHECK_BUILTIN.readline:tl} == no
 
-.  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
+.  if ${USE_BUILTIN.readline:tl} == yes
 BUILDLINK_TRANSFORM+=	l:history:readline:${BUILTIN_LIBNAME.termcap}
 .  endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2022/12/06 06:29:51 sekiya Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2025/08/02 06:57:22 wiz Exp $
 
 BUILDLINK_TREE+=	readline
 
@@ -31,7 +31,7 @@ CHECK_BUILTIN.readline:=	yes
 CHECK_BUILTIN.readline:=	no
 
 # A built-in readline is always going to use a built-in termcap.
-.if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
+.if ${USE_BUILTIN.readline:tl} == yes
 USE_BUILTIN.termcap=	yes
 .endif
 
