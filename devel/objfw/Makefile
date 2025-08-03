@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2025/08/01 10:28:48 js Exp $
+# $NetBSD: Makefile,v 1.50 2025/08/03 12:56:04 js Exp $
 
-DISTNAME=	objfw-1.3.2
+DISTNAME=	objfw-1.4
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -41,6 +41,7 @@ PLIST_SRC=	PLIST
 .if ${OPSYS} == "Darwin"
 PLIST_SRC+=	PLIST.bridge
 PLIST_SRC+=	PLIST.framework
+PLIST_SRC+=	PLIST.ofgctester
 .else
 PLIST_SRC+=	PLIST.runtime
 .endif
@@ -57,6 +58,7 @@ PLIST_SRC+=	PLIST.sctp
 .if ${OPSYS} == "Linux"
 PLIST_SRC+=	PLIST.ddp
 PLIST_SRC+=	PLIST.ipx
+PLIST_SRC+=	PLIST.ofgctester
 PLIST_SRC+=	PLIST.sctp
 .endif
 
