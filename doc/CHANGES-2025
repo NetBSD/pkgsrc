@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4681 2025/08/03 14:21:28 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.4682 2025/08/03 15:39:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6803,3 +6803,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lf to 34nb4 [wiz 2025-08-03]
 	Updated devel/objfw to 1.4 [js 2025-08-03]
 	Updated www/chromium to 138.0.7204.183 [kikadf 2025-08-03]
+	Updated cad/py-PyRTL to 0.12 [ryoon 2025-08-03]
