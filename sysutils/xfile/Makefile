@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2025/05/07 15:56:43 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/03 07:23:07 vins Exp $
 
-DISTNAME=	xfile-20250430
-PKGREVISION=	1
+DISTNAME=	xfile-src-1.0
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	sysutils x11
-#MASTER_SITES=	https://fastestcode.org/dl/
-MASTER_SITES=	${MASTER_SITE_GITHUB:=alx210/}
+MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
-GITHUB_TAG=	ffdae16e124727f85b3ad3226d619a8d0ab4abe9
+EXTRACT_SUFX=	.tar.xz
 
-DISTFILES+=	${DEFAULT_DISTFILES} xfile-slanted-icons.tar.xz
-SITES.xfile-slanted-icons.tar.xz= https://fastestcode.org/dl/
+DISTFILES+=	${DEFAULT_DISTFILES} xfile-addon.tar.xz \
+		xfile-slanted-icons.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/xfile.html
@@ -37,21 +36,20 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 MAKE_FLAGS+=	SHELL=${SH:Q}
 MAKE_FLAGS+=	AWK=${AWK:Q}
 
-#WRKSRC=	${WRKDIR}/xfile-beta
-
 post-extract:
 	${RUN}${MV} ${WRKDIR}/slanted-icons/*.xpm	\
-	${WRKSRC}/addon/icons/
+	${WRKSRC}/src/icons/
 
 INSTALLATION_DIRS+=	share/applications
 
 post-install:
-	${RUN}${LN} -s ${PREFIX}/bin/xfile ${DESTDIR}${PREFIX}/bin/xfile-open
-	${INSTALL_DATA} ${WRKSRC}/addon/icons/*.xpm	\
+	${RUN}${LN} -s ${PREFIX}/bin/xfile			\
+		${DESTDIR}${PREFIX}/bin/xfile-open
+	${INSTALL_DATA} ${WRKDIR}/xfile-addon/icons/*.xpm	\
 		${DESTDIR}${SHAREDIR}/icons
-	${INSTALL_DATA} ${WRKSRC}/addon/types/*.db	\
+	${INSTALL_DATA} ${WRKDIR}/xfile-addon/types/*.db	\
 		${DESTDIR}${SHAREDIR}/types
-	${INSTALL_DATA} ${FILESDIR}/xfile.desktop  	\
+	${INSTALL_DATA} ${FILESDIR}/xfile.desktop		\
 		${DESTDIR}${PREFIX}/share/applications
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
