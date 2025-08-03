@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.9 2025/03/22 13:10:55 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.10 2025/08/03 12:56:04 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -72,6 +72,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRI.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRIHandler.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIndexSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInflate64Stream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInflateStream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInitializationFailedException.h
@@ -112,6 +113,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableArray.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableData.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableDictionary.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableIRI.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableIndexSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableLHAArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutablePair.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableSet.h
