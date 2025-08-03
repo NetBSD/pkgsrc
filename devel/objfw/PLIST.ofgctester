@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.ofgctester,v 1.1 2025/08/03 12:56:04 js Exp $
+bin/ofgctester

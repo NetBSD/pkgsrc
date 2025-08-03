@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/06/08 13:20:39 js Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/08/03 12:56:04 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
@@ -75,6 +75,7 @@ include/ObjFW/OFINIFile.h
 include/ObjFW/OFINISection.h
 include/ObjFW/OFIRI.h
 include/ObjFW/OFIRIHandler.h
+include/ObjFW/OFIndexSet.h
 include/ObjFW/OFInflate64Stream.h
 include/ObjFW/OFInflateStream.h
 include/ObjFW/OFInitializationFailedException.h
@@ -115,6 +116,7 @@ include/ObjFW/OFMutableArray.h
 include/ObjFW/OFMutableData.h
 include/ObjFW/OFMutableDictionary.h
 include/ObjFW/OFMutableIRI.h
+include/ObjFW/OFMutableIndexSet.h
 include/ObjFW/OFMutableLHAArchiveEntry.h
 include/ObjFW/OFMutablePair.h
 include/ObjFW/OFMutableSet.h
@@ -271,10 +273,10 @@ include/ObjFWTest/OTTestCase.h
 include/ObjFWTest/ObjFWTest.h
 lib/libobjfw.so
 lib/libobjfw.so.1
-lib/libobjfw.so.1.3.2
+lib/libobjfw.so.1.4.0
 lib/libobjfwhid.so
 lib/libobjfwhid.so.1
-lib/libobjfwhid.so.1.3.0
+lib/libobjfwhid.so.1.4.0
 lib/libobjfwtest.a
 lib/objfw-config/ObjFWHID.oc
 lib/objfw-config/ObjFWTest.oc
