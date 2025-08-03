@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4678 2025/08/03 10:33:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4679 2025/08/03 12:55:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6800,3 +6800,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.12.7 [wiz 2025-08-03]
 	Updated comms/py-textual to 5.2.0 [wiz 2025-08-03]
 	Updated textproc/py-pdf to 5.9.0 [wiz 2025-08-03]
+	Updated sysutils/lf to 34nb4 [wiz 2025-08-03]
