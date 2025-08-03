@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/07/27 09:51:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/08/03 10:32:33 wiz Exp $
 ${PYSITELIB}/resources/snapshot_report_template.jinja2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -43,9 +43,6 @@ ${PYSITELIB}/textual/_color_constants.pyo
 ${PYSITELIB}/textual/_compat.py
 ${PYSITELIB}/textual/_compat.pyc
 ${PYSITELIB}/textual/_compat.pyo
-${PYSITELIB}/textual/_compose.py
-${PYSITELIB}/textual/_compose.pyc
-${PYSITELIB}/textual/_compose.pyo
 ${PYSITELIB}/textual/_compositor.py
 ${PYSITELIB}/textual/_compositor.pyc
 ${PYSITELIB}/textual/_compositor.pyo
@@ -208,6 +205,9 @@ ${PYSITELIB}/textual/color.pyo
 ${PYSITELIB}/textual/command.py
 ${PYSITELIB}/textual/command.pyc
 ${PYSITELIB}/textual/command.pyo
+${PYSITELIB}/textual/compose.py
+${PYSITELIB}/textual/compose.pyc
+${PYSITELIB}/textual/compose.pyo
 ${PYSITELIB}/textual/constants.py
 ${PYSITELIB}/textual/constants.pyc
 ${PYSITELIB}/textual/constants.pyo
@@ -421,6 +421,9 @@ ${PYSITELIB}/textual/layouts/grid.pyo
 ${PYSITELIB}/textual/layouts/horizontal.py
 ${PYSITELIB}/textual/layouts/horizontal.pyc
 ${PYSITELIB}/textual/layouts/horizontal.pyo
+${PYSITELIB}/textual/layouts/stream.py
+${PYSITELIB}/textual/layouts/stream.pyc
+${PYSITELIB}/textual/layouts/stream.pyo
 ${PYSITELIB}/textual/layouts/vertical.py
 ${PYSITELIB}/textual/layouts/vertical.pyc
 ${PYSITELIB}/textual/layouts/vertical.pyo
