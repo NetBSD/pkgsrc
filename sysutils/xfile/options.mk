@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/05/07 15:56:43 vins Exp $
+# $NetBSD: options.mk,v 1.3 2025/08/03 07:23:07 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xfile
 
@@ -18,7 +18,6 @@ PLIST_VARS+=		dbus
 .  include "../../sysutils/dbus/buildlink3.mk"
 
 DISTFILES+=	xfile-xdgsvc-src.tar.xz
-SITES.xfile-xdgsvc-src.tar.xz=	https://fastestcode.org/dl/
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
