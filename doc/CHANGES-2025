@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4665 2025/08/03 07:34:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4666 2025/08/03 09:39:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6787,3 +6787,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/p5-Net-DNS to 1.52 [wiz 2025-08-03]
 	Updated devel/p5-Proc-ProcessTable to 0.637 [wiz 2025-08-03]
 	Updated devel/p5-Scalar-List-Utils to 1.70 [wiz 2025-08-03]
+	Updated fonts/noto-emoji-ttf to 2.048 [wiz 2025-08-03]
