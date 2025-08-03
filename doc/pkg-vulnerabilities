@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.483 2025/08/02 16:10:18 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.484 2025/08/03 10:05:54 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27267,3 +27267,6 @@ vault<1.20.1	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-60
 vault<1.20.1	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-6015
 vault<1.20.1	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-6037
 yarn-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8262
+iperf3<3.19.1	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-54349
+iperf3<3.19.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-54350
+iperf3<3.19.1	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-54351
