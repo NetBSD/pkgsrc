@@ -1,16 +1,16 @@
-$NetBSD: patch-src_common.mf,v 1.3 2025/03/14 18:31:21 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.4 2025/08/03 07:33:35 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2025-03-11 12:31:37.000000000 +0000
+--- src/common.mf.orig	2025-08-02 14:30:15.000000000 +0000
 +++ src/common.mf
-@@ -28,10 +28,10 @@ wsm_objs = \
- 	WmWsmLib/util.o WmWsmLib/utm_send.o
+@@ -16,10 +16,10 @@ mwm_objs = \
+ 	WmXinerama.o WmEwmh.o
  
- emwm: $(mwm_objs) $(wsm_objs)
--	$(CC) $(LDFLAGS) $(LIBDIRS) -o $@ $(mwm_objs) $(wsm_objs) $(SYSLIBS)
-+	$(CC) $(LDFLAGS) -o $@ $(mwm_objs) $(wsm_objs) $(SYSLIBS)
+ emwm: $(mwm_objs)
+-	$(CC) $(LDFLAGS) $(LIBDIRS) -o $@ $(mwm_objs) $(SYSLIBS)
++	$(CC) $(LDFLAGS) -o $@ $(mwm_objs) $(SYSLIBS)
  
  .depend:
 -	$(CC) -MM $(INCDIRS) $(mwm_objs:.o=.c) $(wsm_objs:.o=.c) > $@
@@ -18,7 +18,7 @@ $NetBSD: patch-src_common.mf,v 1.3 2025/03/14 18:31:21 vins Exp $
  
  .PHONY: clean install common_install
  
-@@ -40,15 +40,14 @@ clean:
+@@ -28,15 +28,14 @@ clean:
  	-rm .depend
  
  common_install:
