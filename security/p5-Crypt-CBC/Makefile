@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2025/07/04 08:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/08/03 07:32:38 wiz Exp $
 
-DISTNAME=		Crypt-CBC-3.04
+DISTNAME=		Crypt-CBC-3.07
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
@@ -18,6 +17,7 @@ DEPENDS+=		p5-Math-Int128-[0-9]*:../../math/p5-Math-Int128
 .endif
 DEPENDS+=		p5-Crypt-PBKDF2-[0-9]*:../../security/p5-Crypt-PBKDF2
 DEPENDS+=		p5-CryptX-[0-9]*:../../security/p5-CryptX
+DEPENDS+=		p5-Crypt-URandom-[0-9]*:../../security/p5-Crypt-URandom
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/CBC/.packlist
