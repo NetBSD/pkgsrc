@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2025/06/06 14:01:38 bsiegert Exp $
+# $NetBSD: Makefile,v 1.84 2025/08/03 12:55:40 wiz Exp $
 
 DISTNAME=		lf-34
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
 GITHUB_TAG=		r${PKGVERSION_NOREV}
@@ -12,11 +12,17 @@ COMMENT=		Terminal file manager
 LICENSE=		2-clause-bsd
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/applications share/examples/lf
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/lf.desktop ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/lf
+	${MV} ${DESTDIR}${PREFIX}/share/examples/lf/lf.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/lf
+	${MV} ${DESTDIR}${PREFIX}/share/examples/lf/lf.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/lf.fish
+	${MV} ${DESTDIR}${PREFIX}/share/examples/lf/lf.zsh ${DESTDIR}${PREFIX}/share/zsh/site-functions/_lf
 
 .include "go-modules.mk"
 
