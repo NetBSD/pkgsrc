@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2025/01/24 19:03:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.46 2025/08/03 15:46:20 ryoon Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -453,10 +453,10 @@ lib/libgailutil-3.so.0
 lib/libgailutil-3.so.0.0.0
 lib/libgdk-3.so
 lib/libgdk-3.so.0
-lib/libgdk-3.so.0.2411.32
+lib/libgdk-3.so.0.2417.32
 lib/libgtk-3.so
 lib/libgtk-3.so.0
-lib/libgtk-3.so.0.2411.32
+lib/libgtk-3.so.0.2417.32
 lib/pkgconfig/gail-3.0.pc
 lib/pkgconfig/gdk-3.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-3.0.pc
@@ -544,6 +544,7 @@ ${PLIST.doc}share/gtk-doc/html/gdk3/GdkScreen.html
 ${PLIST.doc}share/gtk-doc/html/gdk3/GdkSeat.html
 ${PLIST.doc}share/gtk-doc/html/gdk3/X_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/alias_cursor.png
+${PLIST.doc}share/gtk-doc/html/gdk3/all_resize_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/all_scroll_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/annotation-glossary.html
 ${PLIST.doc}share/gtk-doc/html/gdk3/api-index-3-0.html
@@ -585,6 +586,7 @@ ${PLIST.doc}share/gtk-doc/html/gdk3/crosshair.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/crosshair_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/default_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/diamond_cross.png
+${PLIST.doc}share/gtk-doc/html/gdk3/dnd_ask_cursor.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/dot.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/dotbox.png
 ${PLIST.doc}share/gtk-doc/html/gdk3/double_arrow.png
