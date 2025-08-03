@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2025/02/23 19:48:05 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/08/03 10:06:37 wiz Exp $
 
-DISTNAME=	docutils-0.21.2
+DISTNAME=	docutils-0.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/docutils/}
 
@@ -12,13 +11,11 @@ COMMENT=	Python tool to generate documents
 LICENSE=	public-domain AND 2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	docutils/__main__.py
-REPLACE_PYTHON+=	docutils/utils/error_reporting.py
 REPLACE_PYTHON+=	docutils/utils/math/math2html.py
 REPLACE_PYTHON+=	docutils/utils/smartquotes.py
 REPLACE_PYTHON+=	docutils/writers/odf_odt/prepstyles.py
