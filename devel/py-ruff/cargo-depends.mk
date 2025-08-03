@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.66 2025/07/27 09:43:23 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.67 2025/08/03 10:20:21 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -74,8 +74,9 @@ CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	countme-3.0.1
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.17
 CARGO_CRATE_DEPENDS+=	crc32fast-1.4.2
-CARGO_CRATE_DEPENDS+=	criterion-0.6.0
+CARGO_CRATE_DEPENDS+=	criterion-0.7.0
 CARGO_CRATE_DEPENDS+=	criterion-plot-0.5.0
+CARGO_CRATE_DEPENDS+=	criterion-plot-0.6.0
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.4
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
@@ -122,8 +123,8 @@ CARGO_CRATE_DEPENDS+=	fs-err-2.11.0
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	funty-2.0.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
-CARGO_CRATE_DEPENDS+=	get-size-derive2-0.5.2
-CARGO_CRATE_DEPENDS+=	get-size2-0.5.2
+CARGO_CRATE_DEPENDS+=	get-size-derive2-0.6.1
+CARGO_CRATE_DEPENDS+=	get-size2-0.6.1
 CARGO_CRATE_DEPENDS+=	getopts-0.2.21
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.3
