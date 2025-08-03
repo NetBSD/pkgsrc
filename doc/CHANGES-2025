@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4670 2025/08/03 09:55:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4671 2025/08/03 09:57:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6792,3 +6792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/enchant2 to 2.8.12 [wiz 2025-08-03]
 	Updated textproc/inih to 61 [wiz 2025-08-03]
 	Updated graphics/jasper to 4.2.7 [wiz 2025-08-03]
+	Updated devel/gopls to 0.20.0 [wiz 2025-08-03]
