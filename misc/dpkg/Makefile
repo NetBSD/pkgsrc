@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2025/07/07 08:33:01 adam Exp $
+# $NetBSD: Makefile,v 1.77 2025/08/03 21:08:23 wiz Exp $
 
 DISTNAME=	dpkg_1.22.21
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
@@ -26,6 +27,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-admindir=${VARBASE}/db/dpkg
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--with-zshcompletionsdir=${PREFIX}/share/zsh/site-functions
+
 CONFIGURE_ARGS.Darwin+=	--enable-linker-optimizations=no
 CONFIGURE_ENV+=		PATCH=${PREFIX}/bin/gpatch
 TEST_TARGET=		check
