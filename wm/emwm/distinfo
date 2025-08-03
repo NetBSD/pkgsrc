@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.8 2025/03/14 18:31:21 vins Exp $
+$NetBSD: distinfo,v 1.9 2025/08/03 07:33:35 vins Exp $
 
-BLAKE2s (emwm-1.3/Xresources-sample) = 4d09707d4a4c9fe5c1dba8dc562a6cf448c9f5bb77dbe4f690db977f86182d58
-SHA512 (emwm-1.3/Xresources-sample) = 216c7363738c5e3f2a57027ebd6f8261d1320c95b00b57728a460834d143eb50be6d04ea491241af109ec1b729bf9aa553fde6649e6fe2500a9f107e4b3357d6
-Size (emwm-1.3/Xresources-sample) = 3572 bytes
-BLAKE2s (emwm-1.3/app-icons.tar.xz) = e086685b5fba5d37f5478c1237166fd9ff55fc284f0975b73f50950051c3cdf0
-SHA512 (emwm-1.3/app-icons.tar.xz) = 573166a99562acc96ac5560d2ecb71854507fe5a88c1bb99b602a713a6e27cfc4112cdb661abd9d209a8ed44ffd9c76faa6acf3a0cbc797f3fd06d31a6b85e98
-Size (emwm-1.3/app-icons.tar.xz) = 4788 bytes
-BLAKE2s (emwm-1.3/emwm-src-1.3.tar.xz) = fe0b4c607ffd567ef9a2e018f6aa79853def8358d5e55c9b11c7db996e241b69
-SHA512 (emwm-1.3/emwm-src-1.3.tar.xz) = fe0116dce46326b45ee88e5d90775028c3a7ccc8b76d3b928e321024004f0e39eade115308abfbc88b8826f85e094be272aa1e153e988756d9069b095ba627b6
-Size (emwm-1.3/emwm-src-1.3.tar.xz) = 337648 bytes
-BLAKE2s (emwm-1.3/gtk-configs.tar.xz) = f7e37849431175dde1ef48a4cd0ef44cc92307afeeb73e02a44f7da077f7f2df
-SHA512 (emwm-1.3/gtk-configs.tar.xz) = 868d0103db3d59437a43c2f2c93397a6d6af58fc585ca18618adbf0b6720dd1b36d60e31a7fe74379486db9100b2ca9dc54dc5a43dcebcfacd50b0432534bc69
-Size (emwm-1.3/gtk-configs.tar.xz) = 1828 bytes
+BLAKE2s (emwm-1.3.1/Xresources-sample) = 250436c7d012fdd3b656bc567e091118714c3b05be9a218b949685d610fc3ce1
+SHA512 (emwm-1.3.1/Xresources-sample) = e5b517b1c9231a11edaaa1f99031ef2846a83930fb29018d5a8d4ec36664304b0667730221dac3ffbedef8128a99796f01a1241b8e6fa225b210876b24e21c57
+Size (emwm-1.3.1/Xresources-sample) = 3776 bytes
+BLAKE2s (emwm-1.3.1/app-icons.tar.xz) = eb40dcb7c9c3abbb5629e05b25db801ece6e65a312871a6445f209f202d9ab4e
+SHA512 (emwm-1.3.1/app-icons.tar.xz) = 791e05cda9cfaa6bc43aa6bd5fb8046af386e0ee58cd7d0075c70eea6f29cc394dc302c5ac14e17600622cb928cd932c847bbaec86c79c66e1e87e3eb7c5d904
+Size (emwm-1.3.1/app-icons.tar.xz) = 6664 bytes
+BLAKE2s (emwm-1.3.1/emwm-src-1.3.1.tar.xz) = 14e9adf3c8dc9a5af27809970ecd6bd73907eb4edb963eefbcebf296e0538367
+SHA512 (emwm-1.3.1/emwm-src-1.3.1.tar.xz) = 2370aef68d4524991d188786d75d3e5a223a477ac665244d7a764c536fe6bac76207a352f55e5b1408f9b7d7192599ddb54207ebff6660f5aa4598356997b175
+Size (emwm-1.3.1/emwm-src-1.3.1.tar.xz) = 289252 bytes
+BLAKE2s (emwm-1.3.1/gtk-configs.tar.xz) = f7e37849431175dde1ef48a4cd0ef44cc92307afeeb73e02a44f7da077f7f2df
+SHA512 (emwm-1.3.1/gtk-configs.tar.xz) = 868d0103db3d59437a43c2f2c93397a6d6af58fc585ca18618adbf0b6720dd1b36d60e31a7fe74379486db9100b2ca9dc54dc5a43dcebcfacd50b0432534bc69
+Size (emwm-1.3.1/gtk-configs.tar.xz) = 1828 bytes
 SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
 SHA1 (patch-mf_Makefile.pkgsrc) = dd5fe15f5951dfacec0fc268d675fc4afa058636
-SHA1 (patch-src_common.mf) = 65e9973252a7ea6f8f3824c940c2bb4173a100f8
+SHA1 (patch-src_common.mf) = 8b548a413571f333b6d0a99f7b692801ccd9c8ff
