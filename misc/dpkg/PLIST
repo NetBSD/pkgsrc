@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/05/21 15:04:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/08/03 21:08:23 wiz Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -772,4 +772,4 @@ share/locale/zh_CN/LC_MESSAGES/dselect.mo
 share/locale/zh_TW/LC_MESSAGES/dpkg.mo
 share/locale/zh_TW/LC_MESSAGES/dselect.mo
 share/polkit-1/actions/org.dpkg.pkexec.update-alternatives.policy
-share/zsh/vendor-completions/_dpkg-parsechangelog
+share/zsh/site-functions/_dpkg-parsechangelog
