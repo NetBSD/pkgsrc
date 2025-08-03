@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4675 2025/08/03 10:14:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4676 2025/08/03 10:20:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6797,3 +6797,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-build to 1.3.0 [wiz 2025-08-03]
 	Updated devel/py-maturin to 1.9.2 [wiz 2025-08-03]
 	Updated graphics/py-pillow_heif to 1.1.0 [wiz 2025-08-03]
+	Updated devel/py-ruff to 0.12.7 [wiz 2025-08-03]
