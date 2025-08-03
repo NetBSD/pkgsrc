@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/05 17:16:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/03 15:39:41 ryoon Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -21,6 +21,9 @@ ${PYSITELIB}/pyrtl/core.pyo
 ${PYSITELIB}/pyrtl/corecircuits.py
 ${PYSITELIB}/pyrtl/corecircuits.pyc
 ${PYSITELIB}/pyrtl/corecircuits.pyo
+${PYSITELIB}/pyrtl/gate_graph.py
+${PYSITELIB}/pyrtl/gate_graph.pyc
+${PYSITELIB}/pyrtl/gate_graph.pyo
 ${PYSITELIB}/pyrtl/helperfuncs.py
 ${PYSITELIB}/pyrtl/helperfuncs.pyc
 ${PYSITELIB}/pyrtl/helperfuncs.pyo
