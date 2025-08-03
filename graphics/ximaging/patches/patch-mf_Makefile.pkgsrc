@@ -1,0 +1,34 @@
+$NetBSD: patch-mf_Makefile.pkgsrc,v 1.1 2025/08/03 06:29:10 vins Exp $
+
+Add custom Makefile for pkgsrc.
+
+--- mf/Makefile.pkgsrc.orig	2025-08-03 06:10:13.665504435 +0000
++++ mf/Makefile.pkgsrc
+@@ -0,0 +1,27 @@
++
++# Ximaging pkgsrc Makefile
++
++PREFIX		= @PREFIX@
++BINDIR		= @PREFIX@/bin
++MANDIR		= @PREFIX@/@PKGMANDIR@
++APPLRESDIR	= @PREFIX@/lib/X11/app-defaults
++
++# Enable support Xinerama and various image formats.
++CFLAGS+=        -DENABLE_XINERAMA \
++		-DENABLE_JPEG -DENABLE_PNG -DENABLE_TIFF
++
++# OpenMP loop optimizations
++.ifdef ENABLE_OMP
++CFLAGS		+= -fopenmp -DENABLE_OMP
++LDFLAGS		+= -fopenmp
++.endif
++
++# IPC support for when CDE integration is disabled
++IPC_OBJS	= xipc.o
++
++.include "common.mf"
++
++# pkgsrc compat
++PNG_LIBS	= -lpng16
++
++install: common_install

@@ -1,0 +1,38 @@
+$NetBSD: patch-src_common.mf,v 1.1 2025/08/03 06:29:10 vins Exp $
+
+* Use standard CFLAGS and LDFLAGS.
+* Provide a pkgsrc-compliant install target.
+
+--- src/common.mf.orig	2025-07-30 21:22:50.000000000 +0000
++++ src/common.mf
+@@ -56,7 +56,7 @@ OBJS = main.o menu.o imgfile.o browser.o
+ 
+ # Application
+ ximaging: $(OBJS)
+-	$(CC) -o $@ $(LIBDIRS) $(LDFLAGS) $(OBJS) $(SYS_LIBS) $(X_LIBS) \
++	$(CC) -o $@ $(LDFLAGS) $(OBJS) $(SYS_LIBS) $(X_LIBS) \
+ 		$(EXT_LIBS) $(LD_RPATH) $(CDE_LIBS)
+ 
+ # Message catalogs
+@@ -76,14 +76,16 @@ clean:
+ 
+ # Dependencies
+ .depend:
+-	$(CC) -MM $(INCDIRS) $(OBJS:.o=.c) > .depend
++	$(CC) -MM $(CFLAGS) $(OBJS:.o=.c) > .depend
+ 
+ # Root installation
+ common_install: $(INSTALL_RULES)
+-	install -m755 -o0 -g0 ximaging $(PREFIX)/bin/ximaging
+-	install -d -o0 -g0 $(MANDIR)/man1
+-	install -m644 -o0 -g0 ximaging.1 $(MANDIR)/man1/ximaging.1
+-	install -m644 -o0 -g0 XImaging.ad $(APPLRESDIR)/XImaging
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) ximaging $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_MAN) ximaging.1 $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(APPLRESDIR)
++	$(BSD_INSTALL_DATA) XImaging.ad $(DESTDIR)$(APPLRESDIR)/XImaging
+ 	
+ # Install message catalogs and localized share files
+ common_install_nls: messages
