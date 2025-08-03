@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/02/23 18:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/03 10:08:39 wiz Exp $
 
-DISTNAME=	build-1.2.2.post1
+DISTNAME=	build-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
 
@@ -32,10 +31,9 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pyproject-build pyproject-build-${PYVERSSUFFIX} || ${TRUE}
 
-# as of 1.2.2.post1
-# 14 failed, 125 passed, 55 skipped, 1 xfailed, 1 error, 10 rerun
+# as of 1.3.0
+# 19 failed, 124 passed, 57 skipped, 1 xfailed, 1 error, 10 rerun
 
-# needs 'make install'
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
