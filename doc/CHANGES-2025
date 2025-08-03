@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4680 2025/08/03 12:56:21 js Exp $
+$NetBSD: CHANGES-2025,v 1.4681 2025/08/03 14:21:28 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6802,3 +6802,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 5.9.0 [wiz 2025-08-03]
 	Updated sysutils/lf to 34nb4 [wiz 2025-08-03]
 	Updated devel/objfw to 1.4 [js 2025-08-03]
+	Updated www/chromium to 138.0.7204.183 [kikadf 2025-08-03]
