@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/09 13:50:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/03 10:12:22 wiz Exp $
 bin/maturin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/license-apache
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/license-mit
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/maturin/__init__.py
 ${PYSITELIB}/maturin/__init__.pyc
