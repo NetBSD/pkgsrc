@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4671 2025/08/03 09:57:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4672 2025/08/03 10:06:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6793,3 +6793,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/inih to 61 [wiz 2025-08-03]
 	Updated graphics/jasper to 4.2.7 [wiz 2025-08-03]
 	Updated devel/gopls to 0.20.0 [wiz 2025-08-03]
+	Updated textproc/py-docutils to 0.22 [wiz 2025-08-03]
