@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4660 2025/08/03 06:29:58 vins Exp $
+$NetBSD: CHANGES-2025,v 1.4661 2025/08/03 07:23:42 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6782,3 +6782,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.8.2 [pin 2025-08-02]
 	Updated sysutils/fzf to 0.65.0nb1 [wiz 2025-08-02]
 	Updated graphics/ximaging to 1.9 [vins 2025-08-03]
+	Updated sysutils/xfile to 1.0 [vins 2025-08-03]
