@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/05/01 07:33:20 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/03 07:23:07 vins Exp $
 bin/xfile
 bin/xfile-open
 ${PLIST.dbus}bin/xfile-xdgsvc
@@ -13,6 +13,10 @@ share/xfile/icons/arch.l.xpm
 share/xfile/icons/arch.m.xpm
 share/xfile/icons/arch.s.xpm
 share/xfile/icons/arch.t.xpm
+share/xfile/icons/asm.l.xpm
+share/xfile/icons/asm.m.xpm
+share/xfile/icons/asm.s.xpm
+share/xfile/icons/asm.t.xpm
 share/xfile/icons/audio.l.xpm
 share/xfile/icons/audio.m.xpm
 share/xfile/icons/audio.s.xpm
@@ -78,6 +82,14 @@ share/xfile/icons/isocd.l.xpm
 share/xfile/icons/isocd.m.xpm
 share/xfile/icons/isocd.s.xpm
 share/xfile/icons/isocd.t.xpm
+share/xfile/icons/java.l.xpm
+share/xfile/icons/java.m.xpm
+share/xfile/icons/java.s.xpm
+share/xfile/icons/java.t.xpm
+share/xfile/icons/javac.l.xpm
+share/xfile/icons/javac.m.xpm
+share/xfile/icons/javac.s.xpm
+share/xfile/icons/javac.t.xpm
 share/xfile/icons/kra.l.xpm
 share/xfile/icons/kra.m.xpm
 share/xfile/icons/kra.s.xpm
@@ -141,6 +153,14 @@ share/xfile/icons/pixmap.l.xpm
 share/xfile/icons/pixmap.m.xpm
 share/xfile/icons/pixmap.s.xpm
 share/xfile/icons/pixmap.t.xpm
+share/xfile/icons/python.l.xpm
+share/xfile/icons/python.m.xpm
+share/xfile/icons/python.s.xpm
+share/xfile/icons/python.t.xpm
+share/xfile/icons/rtrace.l.xpm
+share/xfile/icons/rtrace.m.xpm
+share/xfile/icons/rtrace.s.xpm
+share/xfile/icons/rtrace.t.xpm
 share/xfile/icons/script.l.xpm
 share/xfile/icons/script.m.xpm
 share/xfile/icons/script.s.xpm
@@ -182,6 +202,7 @@ share/xfile/icons/xpm.m.xpm
 share/xfile/icons/xpm.s.xpm
 share/xfile/icons/xpm.t.xpm
 share/xfile/types/archive.db
+share/xfile/types/code.db
 share/xfile/types/graphics.db
 share/xfile/types/office.db
 share/xfile/types/system.db
