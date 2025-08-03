@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4667 2025/08/03 09:49:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4668 2025/08/03 09:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6789,3 +6789,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Scalar-List-Utils to 1.70 [wiz 2025-08-03]
 	Updated fonts/noto-emoji-ttf to 2.048 [wiz 2025-08-03]
 	Updated security/zxcvbn-c to 2.6 [wiz 2025-08-03]
+	Updated textproc/enchant2 to 2.8.12 [wiz 2025-08-03]
