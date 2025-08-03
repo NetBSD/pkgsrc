@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/04/28 20:44:38 tnn Exp $
+$NetBSD: distinfo,v 1.3 2025/08/03 09:49:35 wiz Exp $
 
-BLAKE2s (zxcvbn-c-2.5.tar.gz) = 6e2e43801bd63da217ccbb03c48edcdf05a712a22e6c4a1b0561e295d8ec8d01
-SHA512 (zxcvbn-c-2.5.tar.gz) = d7199b3cc36cd0e401bd8f857132425908307aefcdb1bb635ee81c34cf71ccbcdf0fe36a336a55da1281692b508881b54773afa41379a448863095f4abd5c0e8
-Size (zxcvbn-c-2.5.tar.gz) = 1404434 bytes
-SHA1 (patch-dict-generate.cpp) = 963a1a2be8cb86868fc976630584a5c34555253a
-SHA1 (patch-makefile) = b8b7b1643ce0b6a04f32abadbd84a0dce0f78cb7
+BLAKE2s (zxcvbn-c-2.6.tar.gz) = 4d39de1ad9bb3060b987a3ff0b19df88761d2a0b1a1b5e6f9adcc29a71703510
+SHA512 (zxcvbn-c-2.6.tar.gz) = fd9c7dc7d5d584db320d9a2d15035605396afdcba44de6236e481eea91bf21f8d0ef289dff2f34b0050178d8de43e7c6bd6b07087abe883204acf8c269abbaee
+Size (zxcvbn-c-2.6.tar.gz) = 1405136 bytes
