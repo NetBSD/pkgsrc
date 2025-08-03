@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2025/04/06 10:16:02 wiz Exp $
+$NetBSD: distinfo,v 1.41 2025/08/03 07:34:49 wiz Exp $
 
-BLAKE2s (Scalar-List-Utils-1.69.tar.gz) = e9df17f198be4c63967cb49cf226a166e60a3fa328b471372b95933d7e337609
-SHA512 (Scalar-List-Utils-1.69.tar.gz) = cc7af589b7af91cfd6f7cf0cbf3b43a29a2ba2f92263ae11d19a191124f505bd94f172d214d7538ea9025cbafeca7a5d1c920894bb8d715710488aaa86194749
-Size (Scalar-List-Utils-1.69.tar.gz) = 181435 bytes
+BLAKE2s (Scalar-List-Utils-1.70.tar.gz) = cfeadd4b07dd8a4f5eeeab39504e992dc375733489de6f9e78df936b051eb440
+SHA512 (Scalar-List-Utils-1.70.tar.gz) = 1b339fe9cf43c104b9118509c64e32bc74bdf9c8075b119bfb8200ae1100ee84dc03b67b2d34e5690a85eb6f9bf46be798116db176e588f0daa27cb531891a01
+Size (Scalar-List-Utils-1.70.tar.gz) = 181542 bytes
