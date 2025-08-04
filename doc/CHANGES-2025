@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4689 2025/08/04 08:01:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4690 2025/08/04 08:01:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6811,3 +6811,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/dpkg to 1.22.21nb1 [wiz 2025-08-03]
 	Updated news/newsraft to 0.32 [ktnb 2025-08-03]
 	Added devel/py-assertpy version 1.1 [wiz 2025-08-04]
+	Added devel/py-cucumber-expressions version 18.0.1 [wiz 2025-08-04]
