@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4694 2025/08/04 09:25:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4695 2025/08/04 11:11:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6817,3 +6817,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/himalaya to 1.1.0nb1 [wiz 2025-08-04]
 	Updated lang/nodejs22 to 22.18.0 [adam 2025-08-04]
 	Updated lang/nodejs to 24.5.0 [adam 2025-08-04]
+	Updated lang/racket to 8.15nb4 [wiz 2025-08-04]
