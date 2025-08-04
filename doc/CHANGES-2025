@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4697 2025/08/04 17:02:01 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4698 2025/08/04 17:03:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6820,3 +6820,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/racket to 8.15nb4 [wiz 2025-08-04]
 	Updated graphics/ImageMagick6 to 6.9.13.26 [kikadf 2025-08-04]
 	Updated devel/mise to 2025.8.4 [pin 2025-08-04]
+	Updated chat/senpai to 0.4.1 [pin 2025-08-04]
