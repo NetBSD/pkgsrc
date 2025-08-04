@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.2 2023/07/22 10:09:06 adam Exp $
+@comment $NetBSD: PLIST.doc,v 1.3 2025/08/04 16:09:34 kikadf Exp $
 man/man1/ImageMagick6.1
 man/man1/Magick++-config6.1
 man/man1/Magick-config6.1
@@ -163,6 +163,7 @@ share/doc/ImageMagick-6/www/Magick++/README.txt
 share/doc/ImageMagick-6/www/Magick++/STL.html
 share/doc/ImageMagick-6/www/Magick++/TypeMetric.html
 share/doc/ImageMagick-6/www/Magick++/index.html
+share/doc/ImageMagick-6/www/Magick++/logo.png
 share/doc/ImageMagick-6/www/Magick++/magick.css
 share/doc/ImageMagick-6/www/Magick++/montage-sample-framed.jpg
 share/doc/ImageMagick-6/www/Magick++/right_triangle.png
@@ -239,8 +240,9 @@ share/doc/ImageMagick-6/www/api/transform.html
 share/doc/ImageMagick-6/www/api/version.html
 share/doc/ImageMagick-6/www/api/wand-view.html
 share/doc/ImageMagick-6/www/architecture.html
-share/doc/ImageMagick-6/www/assets/magick.css
-share/doc/ImageMagick-6/www/assets/magick.js
+share/doc/ImageMagick-6/www/assets/bootstrap.bundle.min.js
+share/doc/ImageMagick-6/www/assets/bootstrap.min.css
+share/doc/ImageMagick-6/www/assets/color-modes.js
 share/doc/ImageMagick-6/www/changelog.html
 share/doc/ImageMagick-6/www/cipher.html
 share/doc/ImageMagick-6/www/cite.html
@@ -294,6 +296,7 @@ share/doc/ImageMagick-6/www/opencl.html
 share/doc/ImageMagick-6/www/openmp.html
 share/doc/ImageMagick-6/www/perl-magick.html
 share/doc/ImageMagick-6/www/porting.html
+share/doc/ImageMagick-6/www/privacy-policy.html
 share/doc/ImageMagick-6/www/quantize.html
 share/doc/ImageMagick-6/www/resources.html
 share/doc/ImageMagick-6/www/search.html

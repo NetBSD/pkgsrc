@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2024/04/02 22:37:53 nia Exp $
+# $NetBSD: options.mk,v 1.10 2025/08/04 16:09:34 kikadf Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ImageMagick6
 PKG_SUPPORTED_OPTIONS=		doc fontconfig ghostscript x11 jp2 djvu openexr
@@ -75,8 +75,8 @@ CONFIGURE_ARGS+=	--with-fpx
 CONFIGURE_ARGS+=	--without-fpx
 .endif
 
-.if !empty(PKG_OPTIONS:Mfpx)
-.include "../../graphics/pango/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mpango)
+.include "../../devel/pango/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pango
 .else
 CONFIGURE_ARGS+=	--without-pango
