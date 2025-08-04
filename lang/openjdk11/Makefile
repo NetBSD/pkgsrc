@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2025/06/15 13:41:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2025/08/04 13:22:05 pho Exp $
 
 DISTNAME=	jdk11u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk11-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -34,6 +34,7 @@ CONFIG_GUESS_OVERRIDE+=	make/autoconf/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	make/autoconf/build-aux/autoconf-config.sub
 CONFIG_GUESS_OVERRIDE+=	make/autoconf/build-aux/autoconf-config.guess
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		bash gmake pax pkg-config unzip:run zip:run autoconf automake
 UNLIMIT_RESOURCES=	datasize stacksize virtualsize cputime
 
@@ -43,7 +44,10 @@ BUILDLINK_PASSTHRU_DIRS+=	${ALT_BOOTDIR}
 BOOT_JVMARGS=	-XX:+UnlockDiagnosticVMOptions \
 		-XX:-UseSemaphoreGCThreadsSynchronization
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+# ${WRKSRC}/doc/building.mk explicitly states that its Makefiles are unsafe
+# to use -j.
+MAKE_JOBS_SAFE=	no
+
 CONFIGURE_ARGS+=	--openjdk-target=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-boot-jdk=${ALT_BOOTDIR}
 CONFIGURE_ARGS+=	--with-boot-jdk-jvmargs=${BOOT_JVMARGS:Q}
