@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4505 2025/07/29 06:48:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4506 2025/08/04 08:01:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2505,6 +2505,7 @@ SUBDIR+=	py-argparse
 SUBDIR+=	py-argparse-addons
 SUBDIR+=	py-argparse-manpage
 SUBDIR+=	py-args
+SUBDIR+=	py-assertpy
 SUBDIR+=	py-astor
 SUBDIR+=	py-astroid
 SUBDIR+=	py-astunparse
@@ -2603,6 +2604,8 @@ SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
 SUBDIR+=	py-cram
 SUBDIR+=	py-crayons
+SUBDIR+=	py-cucumber-expressions
+SUBDIR+=	py-cucumber-tag-expressions
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cwcwidth
 SUBDIR+=	py-cykhash
