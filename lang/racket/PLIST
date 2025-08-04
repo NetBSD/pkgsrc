@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/11/29 22:06:13 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/08/04 11:11:33 wiz Exp $
 bin/drracket
 bin/gracket
 bin/gracket-text
@@ -12205,6 +12205,7 @@ man/man1/raco.1
 man/man1/setup-plt.1
 share/applications/drracket.desktop
 share/applications/slideshow.desktop
+share/bash-completion/completions/racket
 share/doc/racket/2d/blueboxes.rktd
 share/doc/racket/2d/in.sxref
 share/doc/racket/2d/index.html
@@ -23875,4 +23876,5 @@ share/racket/shares.rktd
 share/racket/slatex.py
 share/racket/slatex.sty
 share/racket/slideshow-exe-icon.png
+share/zsh/site-functions/_racket
 @pkgdir etc/racket

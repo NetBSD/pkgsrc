@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2025/04/24 14:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/08/04 11:11:33 wiz Exp $
 
 DISTNAME=		racket-8.15-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://www-old.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 #
 # ERROR: --prefix not allowed for a Mac OS build, unless either
 #          --enable-xonx is supplied (to create a Unix-style
-#            build), or 
+#            build), or
 #          --enable-macprefix is supplied (to allow a Mac-style
 #            installation, even though --prefix is normally used
 #            for Unix-style installations)
@@ -70,9 +70,16 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/racket
 CONF_FILES+=		${EGDIR}/config.rktd \
 			${PKG_SYSCONFDIR}/racket/config.rktd
 
+INSTALLATION_DIRS+=	share/bash-completion/completions
+INSTALLATION_DIRS+=	share/zsh/site-functions
+
 post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
+	${CP} ${DESTDIR}${PREFIX}/share/racket/pkgs/shell-completion/racket-completion.bash \
+		${DESTDIR}${PREFIX}/share/bash-completion/completions/racket
+	${CP} ${DESTDIR}${PREFIX}/share/racket/pkgs/shell-completion/racket-completion.zsh \
+		${DESTDIR}${PREFIX}/share/zsh/site-functions/_racket
 
 PRINT_PLIST_AWK+=	{ sub(/${PREFIX:S,/,\\/,g}/, "$${PREFIX}") }
 
