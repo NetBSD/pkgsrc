@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2025/04/10 13:19:49 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/04 09:07:26 wiz Exp $
 
 DISTNAME=	himalaya-1.1.0
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pimalaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pimalaya.org/himalaya/
+HOMEPAGE=	https://github.com/pimalaya/himalaya
 COMMENT=	Command-line interface for email management
 LICENSE=	mit
 
@@ -23,10 +24,9 @@ USE_LANGUAGES+=	c c++
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/examples/himalaya/completion
 INSTALLATION_DIRS+=	share/bash-completion/completions
-INSTALLATION_DIRS+=	share/fish/completions
-
+INSTALLATION_DIRS+=	share/fish/vendor_completions.d
+INSTALLATION_DIRS+=	share/zsh/site-functions
 
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
@@ -42,9 +42,9 @@ pre-install:
 
 do-install:
 	${INSTALL_PROGRAM} ${BIN_CMD} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/himalaya.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/
-	${INSTALL_DATA} ${WRKSRC}/himalaya.fish ${DESTDIR}${PREFIX}/share/fish/completions/
-	${INSTALL_DATA} ${WRKSRC}/himalaya.zsh ${DESTDIR}${PREFIX}/share/examples/himalaya/completion/
+	${INSTALL_DATA} ${WRKSRC}/himalaya.bash ${DESTDIR}${PREFIX}/share/bash-completion/completions/himalaya
+	${INSTALL_DATA} ${WRKSRC}/himalaya.fish ${DESTDIR}${PREFIX}/share/fish/vendor_completions.d/himalaya.fish
+	${INSTALL_DATA} ${WRKSRC}/himalaya.zsh ${DESTDIR}${PREFIX}/share/zsh/site-functions/_himalaya
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
