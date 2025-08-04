@@ -1,0 +1,15 @@
+Cucumber Tag Expressions is a simple query language for tags. The
+simplest tag expression is simply a single tag, for example:
+
+@smoke
+
+A slightly more elaborate expression may combine tags, for example:
+
+@smoke and not @ui
+
+Tag Expressions are used for two purposes:
+
+- Run a subset of scenarios (using the --tags expression option of
+  the command line)
+- Specify that a hook should only run for a subset
+  of scenarios (using conditional hooks)
