@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/07/19 06:52:39 pin Exp $
+# $NetBSD: Makefile,v 1.65 2025/08/04 18:26:47 pin Exp $
 
 DISTNAME=	eza-0.23.0
 CATEGORIES=	sysutils
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://eza.rocks/
 COMMENT=	Modern, maintained replacement for ls
-LICENSE=	mit
+LICENSE=	eupl-v1.2
 
 RUST_REQ=	1.82.0
 SUPERSEDES=	exa-[0-9]*
