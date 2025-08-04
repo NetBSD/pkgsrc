@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/12/16 13:10:01 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/08/04 08:03:38 wiz Exp $
 
-BLAKE2s (behave-1.2.6.tar.gz) = 155cd2fea934347cddade46255c66c29b24b18f1f3b1ad0ad94841818fb340f0
-SHA512 (behave-1.2.6.tar.gz) = e741204d005aebf217b87e8ff0a6b8a2add4029612b63e994a3e8c12175723c88aabb6a053528130f07b278cf8a6592abd6beecce4fd3ffb5e0046ccfa2cd88d
-Size (behave-1.2.6.tar.gz) = 701696 bytes
-SHA1 (patch-setup.py) = 31d580b0c256f2a77d97a2907296d1e75874bff7
+BLAKE2s (behave-1.3.0.tar.gz) = 4f21c6c6f592ebb7d9c43317d5375b5af335c8cb35d25a292cc0757a96e6263c
+SHA512 (behave-1.3.0.tar.gz) = b786fac469f1f2f9e91dcdb6b2b44f1ab6f94092c255fa283ea4cd49e013673a7bcdd3c8eb1cb4ac437a23a16698875802fa82b475c083de6c5c93492e4ad383
+Size (behave-1.3.0.tar.gz) = 880792 bytes
