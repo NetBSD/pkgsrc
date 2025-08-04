@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.10 2025/07/24 22:30:46 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.11 2025/08/04 15:11:08 maya Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -73,3 +73,12 @@ security/p5-Authen-SASL: Security fix
 
 Pullup ticket #6998 - requested by taca
 net/unbound: Security fix
+
+Pullup ticket #6999 - requested by nia
+graphics/gdk-pixbuf2: Security fix
+
+Pullup ticket #7000 - requested by nia
+www/palemoon: Security fix
+
+Pullup ticket #7001 - requested by nia
+www/arcticfox: Security fix
