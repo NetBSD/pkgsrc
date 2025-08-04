@@ -1,0 +1,6 @@
+Cucumber Expressions is an alternative to Regular Expressions with
+a more intuitive syntax.
+
+Cucumber supports both Cucumber Expressions and Regular Expressions
+for defining Step Definitions, but you cannot mix Cucumber Expression
+syntax with Regular Expression syntax in the same expression.
