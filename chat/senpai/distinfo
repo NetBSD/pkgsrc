@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/04/13 15:25:48 pin Exp $
+$NetBSD: distinfo,v 1.5 2025/08/04 17:02:40 pin Exp $
 
 BLAKE2s (codeberg.org_emersion_go-scfg_@v_v0.1.0.mod) = 0edcb1444aa3b67dae550e9ef2e4efe7743222d64bdcdbf82a858e2fe96d840d
 SHA512 (codeberg.org_emersion_go-scfg_@v_v0.1.0.mod) = 5bb4fd6c11d67a4c5be097673e0e8bb9d2fc1bf45905ab00793c2b1255166161896a0857aa429f3f2cf50f6e0f0460ca0c8fbd6908c309e582b5fd0bb9219148
@@ -111,6 +111,6 @@ Size (mvdan.cc_xurls_v2_@v_v2.5.0.mod) = 140 bytes
 BLAKE2s (mvdan.cc_xurls_v2_@v_v2.5.0.zip) = 37706c5194c840de5a827dd891cfc4ca666cdefecbc5bc5f3374015a99ce700c
 SHA512 (mvdan.cc_xurls_v2_@v_v2.5.0.zip) = 8951c83b6d61bcd872bb6b43ea763e1f10a25d6c4aa5573abf0620d5c4832cd71a0e6c085ccc773d8bc30aaee4a8a5d928243c075e42d19b221ae93bab3dbd58
 Size (mvdan.cc_xurls_v2_@v_v2.5.0.zip) = 33829 bytes
-BLAKE2s (senpai-v0.4.0.tar.gz) = 3573c2882065ea196852f4657e569fea1603d9c8c55ed3e0f41cd6f646085bef
-SHA512 (senpai-v0.4.0.tar.gz) = 334f1f40b9e6075334cb223018d2e2fdacc39ecf01ad772d9ecda0df2c5dfafa86c7226f4e86eec0a35774a60c04f5dba23f08f0349d14d40637f4c4d26d9c3e
-Size (senpai-v0.4.0.tar.gz) = 288392 bytes
+BLAKE2s (senpai-0.4.1.tar.gz) = f8939db882cade3a4152679da20800aa7bfe518add89eff50f322fd3fbce6074
+SHA512 (senpai-0.4.1.tar.gz) = b60c6a31dc51645024e575f9896273fac672975459353e755294427b31fe610e9e284e4d97f49647e6921c4999aa591d444ee80500028ac559e911e458a435fe
+Size (senpai-0.4.1.tar.gz) = 288601 bytes
