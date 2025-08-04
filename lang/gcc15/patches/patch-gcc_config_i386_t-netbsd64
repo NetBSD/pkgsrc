@@ -1,0 +1,22 @@
+$NetBSD: patch-gcc_config_i386_t-netbsd64,v 1.1 2025/08/04 02:48:24 mrg Exp $
+
+Enable multilib support on amd64.
+
+--- /dev/null	2025-08-03 17:17:47.388033634 -0700
++++ gcc/config/i386/t-netbsd64	2025-08-03 17:20:16.285905032 -0700
+@@ -0,0 +1,15 @@
++# NetBSD has "non-native" libraries in /usr/lib/<arch>.
++# For NetBSD/amd64 we thus have /usr/lib and /usr/lib/i386.
++
++MULTILIB_OPTIONS = m64/m32
++MULTILIB_DIRNAMES = 64 32 
++MULTILIB_OSDIRNAMES = . ../lib/i386
++
++LIBGCC = stmp-multilib
++INSTALL_LIBGCC = install-multilib
++
++# The pushl in CTOR initialization interferes with frame pointer elimination.
++# crtend*.o cannot be compiled without -fno-asynchronous-unwind-tables,
++# because then __FRAME_END__ might not be the last thing in .eh_frame
++# section.
++CRTSTUFF_T_CFLAGS += -fno-omit-frame-pointer -fno-asynchronous-unwind-tables

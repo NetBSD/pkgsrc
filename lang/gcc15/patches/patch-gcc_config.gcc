@@ -1,0 +1,14 @@
+$NetBSD: patch-gcc_config.gcc,v 1.1 2025/08/04 02:48:24 mrg Exp $
+
+Enable multilib support on amd64.
+
+--- gcc/config.gcc.orig	2025-04-25 01:18:00.000000000 -0700
++++ gcc/config.gcc	2025-08-03 17:22:06.592442114 -0700
+@@ -1992,6 +1992,7 @@
+ 	;;
+ x86_64-*-netbsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h elfos.h ${nbsd_tm_file} i386/x86-64.h i386/netbsd64.h"
++	tmake_file="${tmake_file} i386/t-netbsd64"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
+ 	;;
+ i[34567]86-*-openbsd*)
