@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2022/05/25 06:05:34 tnn Exp $
+# $NetBSD: options.mk,v 1.9 2025/08/04 13:22:05 pho Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openjdk11
 PKG_OPTIONS_OPTIONAL_GROUPS=	variant
@@ -45,8 +45,10 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .else
+CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
 CONFIGURE_ARGS+=	--enable-headless-only
-# We apparently still need the Xlib headers to build headless. why?
+# We apparently still need the Xlib headers and libraries to build headless. why?
 BUILDLINK_DEPMETHOD.libX11?=	build
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXext?=build

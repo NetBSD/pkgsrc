@@ -1,11 +1,11 @@
-# $NetBSD: bootstrap.mk,v 1.9 2023/12/12 12:37:44 ryoon Exp $
+# $NetBSD: bootstrap.mk,v 1.10 2025/08/04 13:22:05 pho Exp $
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 080000
 PKG_FAIL_REASON+=		"Only supports NetBSD >= 8"
 .endif
 
-.if (!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || !empty(MACHINE_PLATFORM:MNetBSD-*-*earm*)) && ${OPSYS_VERSION} < 099983
-PKG_FAIL_REASON+=		"PR 55248: please update to NetBSD >= 9.99.83 to use this package"
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) && ${OPSYS_VERSION} < 090400
+PKG_FAIL_REASON+=		"Only supports NetBSD >= 9.4"
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-i386
@@ -25,7 +25,7 @@ EXTRACT_ONLY+=			${BOOT.nb7-amd64}
 .endif
 
 ONLY_FOR_PLATFORM+=		NetBSD-*-aarch64
-BOOT.nb9-aarch64=		bootstrap-jdk-1.11.0.7.10-netbsd-9-aarch64-20200509.tar.xz
+BOOT.nb9-aarch64=		bootstrap-jdk-1.11.0.27.6-netbsd-9-aarch64-20250804.tar.xz
 SITES.${BOOT.nb9-aarch64}=	${MASTER_SITE_LOCAL:=openjdk11/}
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo)
 DISTFILES+=			${BOOT.nb9-aarch64}

@@ -1,9 +1,10 @@
-$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.4 2024/10/01 14:48:00 ryoon Exp $
+$NetBSD: patch-make_autoconf_flags-cflags.m4,v 1.5 2025/08/04 13:22:06 pho Exp $
 
 We prefer to use explicit run paths.
 Add lib/jli to link libjli.so dynamically. Fix runtime error of Bazel.
+Require c++11 as we have some patches using it.
 
---- make/autoconf/flags-cflags.m4.orig	2024-08-26 15:59:52.654571089 +0000
+--- make/autoconf/flags-cflags.m4.orig	2025-04-19 23:57:10.000000000 +0000
 +++ make/autoconf/flags-cflags.m4
 @@ -42,8 +42,8 @@ AC_DEFUN([FLAGS_SETUP_SHARED_LIBS],
      # --disable-new-dtags forces use of RPATH instead of RUNPATH for rpaths.
@@ -39,3 +40,21 @@ Add lib/jli to link libjli.so dynamically. Fix runtime error of Bazel.
      fi
  
    elif test "x$TOOLCHAIN_TYPE" = xsolstudio; then
+@@ -566,7 +559,7 @@ AC_DEFUN([FLAGS_SETUP_CFLAGS_HELPER],
+       TOOLCHAIN_CFLAGS_JDK="-pipe"
+       TOOLCHAIN_CFLAGS_JDK_CONLY="-fno-strict-aliasing" # technically NOT for CXX
+ 
+-      CXXSTD_CXXFLAG="-std=gnu++98"
++      CXXSTD_CXXFLAG="-std=gnu++11"
+       FLAGS_CXX_COMPILER_CHECK_ARGUMENTS(ARGUMENT: [$CXXSTD_CXXFLAG -Werror],
+     						   IF_FALSE: [CXXSTD_CXXFLAG=""])
+       TOOLCHAIN_CFLAGS_JDK_CXXONLY="$CXXSTD_CXXFLAG"
+@@ -817,7 +810,7 @@ AC_DEFUN([FLAGS_SETUP_CFLAGS_CPU_DEP],
+       $1_CFLAGS_CPU_JDK="${$1_CFLAGS_CPU_JDK} -fno-omit-frame-pointer"
+     fi
+ 
+-    $1_CXXSTD_CXXFLAG="-std=gnu++98"
++    $1_CXXSTD_CXXFLAG="-std=gnu++11"
+     FLAGS_CXX_COMPILER_CHECK_ARGUMENTS(ARGUMENT: [${$1_CXXSTD_CXXFLAG} -Werror],
+         PREFIX: $3, IF_FALSE: [$1_CXXSTD_CXXFLAG=""])
+     $1_TOOLCHAIN_CFLAGS_JDK_CXXONLY="${$1_CXXSTD_CXXFLAG}"
