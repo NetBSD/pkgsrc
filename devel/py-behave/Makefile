@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/07/15 21:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/04 08:03:38 wiz Exp $
 
-DISTNAME=	behave-1.2.6
+DISTNAME=	behave-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/behave/}
 
@@ -12,17 +11,22 @@ COMMENT=	Behaviour-driven development
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-parse>=1.8.2:../../textproc/py-parse
-DEPENDS+=	${PYPKGPREFIX}-parse_type>=0.4.2:../../textproc/py-parse_type
-DEPENDS+=	${PYPKGPREFIX}-six>=1.11:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-parse>=1.18.0:../../textproc/py-parse
+DEPENDS+=	${PYPKGPREFIX}-parse_type>=0.6.0:../../textproc/py-parse_type
+DEPENDS+=	${PYPKGPREFIX}-cucumber-expressions>=17.1.0:../../devel/py-cucumber-expressions
+DEPENDS+=	${PYPKGPREFIX}-cucumber-tag-expressions>=4.1.0:../../devel/py-cucumber-tag-expressions
+DEPENDS+=	${PYPKGPREFIX}-six>=1.15.0:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.7:../../comms/py-colorama
+TEST_DEPENDS+=	${PYPKGPREFIX}-assertpy>=0:../../devel/py-assertpy
+TEST_DEPENDS+=	${PYPKGPREFIX}-chardet>=0:../../converters/py-chardet
 TEST_DEPENDS+=	${PYPKGPREFIX}-hamcrest>=1.8:../../devel/py-hamcrest
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.1:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3:../../devel/py-nose
-TEST_DEPENDS+=	${PYPKGPREFIX}-path>=10.1:../../devel/py-path
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-html>=0:../../devel/py-test-html
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	311
+# as of 1.3.0
+# 1846 passed, 10 skipped, 2 xfailed
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} behave behave-${PYVERSSUFFIX} || ${TRUE}
