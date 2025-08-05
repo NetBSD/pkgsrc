@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4702 2025/08/05 06:01:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4703 2025/08/05 06:15:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6828,3 +6828,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-gnupg to 0.5.5 [adam 2025-08-05]
 	Updated devel/py-poetry to 2.1.4 [adam 2025-08-05]
 	Updated lang/py-findpython to 0.7.0 [adam 2025-08-05]
+	Updated security/libgcrypt to 1.11.2 [adam 2025-08-05]
+	Updated net/py-zmq to 27.0.1 [adam 2025-08-05]
+	Updated devel/py-maturin to 1.9.3 [adam 2025-08-05]
+	Updated devel/py-path to 17.1.1 [adam 2025-08-05]
