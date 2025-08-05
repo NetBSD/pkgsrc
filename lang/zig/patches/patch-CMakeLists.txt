@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2025/08/05 13:27:17 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2025/08/05 13:33:19 wiz Exp $
 
 Do not append a buildlinked directory to ZIG_CMAKE_PREFIX_PATH to avoid WRKREF
 in bin/zig.
 
 Skip stage3 during build to:
-* speed up buidling
+* speed up building
 * avoid work directory reference in zig's RUNPATH.
 
 --- CMakeLists.txt.orig	2025-05-23 04:31:41.000000000 +0000
