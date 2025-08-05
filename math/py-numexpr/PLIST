@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/15 16:31:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/05 07:52:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -35,6 +35,9 @@ ${PYSITELIB}/numexpr/str-two-way.hpp
 ${PYSITELIB}/numexpr/tests/__init__.py
 ${PYSITELIB}/numexpr/tests/__init__.pyc
 ${PYSITELIB}/numexpr/tests/__init__.pyo
+${PYSITELIB}/numexpr/tests/conftest.py
+${PYSITELIB}/numexpr/tests/conftest.pyc
+${PYSITELIB}/numexpr/tests/conftest.pyo
 ${PYSITELIB}/numexpr/tests/test_numexpr.py
 ${PYSITELIB}/numexpr/tests/test_numexpr.pyc
 ${PYSITELIB}/numexpr/tests/test_numexpr.pyo
