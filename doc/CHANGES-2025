@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4713 2025/08/05 19:03:16 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4714 2025/08/05 19:33:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6844,3 +6844,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/molsketch to 0.8.3 [pin 2025-08-05]
 	Updated shells/bash-preexec to 0.6.0 [schmonz 2025-08-05]
 	Updated devel/mise to 2025.8.5 [pin 2025-08-05]
+	Updated audio/shairport-sync to 4.3.7 [schmonz 2025-08-05]
