@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.1 2025/02/23 21:54:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/08/05 14:16:59 wiz Exp $
 
-BLAKE2s (cpuinfo-0.0.20250219-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea.tar.gz) = 7c223c899d6083b17b8421b46ec260f59fcb2f6f2d7cf9acdb574998b1b25967
-SHA512 (cpuinfo-0.0.20250219-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea.tar.gz) = 068fb7ff96a27aff1321026d8598b7352dee136d6bd1a088f119de4f8671efebb3b2e0a8a0bc2460088f1307d355c39e4db36e6b9cf3fb5c2a1130a5733be437
-Size (cpuinfo-0.0.20250219-b73ae6ce38d5dd0b7fe46dbe0a4b5f4bab91c7ea.tar.gz) = 3545694 bytes
+BLAKE2s (benchmark-1.6.1.tar.gz) = e1d824a20befda52931de3256cbf065724b076fdf4d6feb8b101e56d283f8418
+SHA512 (benchmark-1.6.1.tar.gz) = 7d3e3baf5a2d92e9552ab5007c37253b3510ac269edf8922a2794ff3dfbd0bf5b4c519240d4577b1ec30ef9e8a64caa17a809054c3dc7f2b1bcd410596177d67
+Size (benchmark-1.6.1.tar.gz) = 184616 bytes
+BLAKE2s (cpuinfo-0.0.20250724-33ed0be77d7767d0e2010e2c3cf972ef36c7c307.tar.gz) = 501c3de724c1420111f2784fb470e6371239286fddb2f4962bacf7c5619b7d84
+SHA512 (cpuinfo-0.0.20250724-33ed0be77d7767d0e2010e2c3cf972ef36c7c307.tar.gz) = 41775802b5a33f1bb0cb2c5dd126180e25d281a57c934d94247130c31ec7bf1dbf269ed9e8e946be1bdeeb09f0c17fee42048f71b4beb44c65df18cfb0cddc3b
+Size (cpuinfo-0.0.20250724-33ed0be77d7767d0e2010e2c3cf972ef36c7c307.tar.gz) = 3546678 bytes
+BLAKE2s (googletest-1.11.0.tar.gz) = 0b546cc02c7a8d6e15337b5dde02e2ff1c17bb5232212cba0b665ad47ff51eac
+SHA512 (googletest-1.11.0.tar.gz) = 6fcc7827e4c4d95e3ae643dd65e6c4fc0e3d04e1778b84f6e06e390410fe3d18026c131d828d949d2f20dde6327d30ecee24dcd3ef919e21c91e010d149f3a28
+Size (googletest-1.11.0.tar.gz) = 886330 bytes
+SHA1 (patch-CMakeLists.txt) = ec8a0d584d00540102d50b436f251fbf6521259e
+SHA1 (patch-src_freebsd_topology.c) = 4561cabdbad0765d63c6822d9ee3dfd5235592f2
+SHA1 (patch-src_init.c) = 8a516a15d55b7fb1c9cf505d4dcaf5320775fb4a
