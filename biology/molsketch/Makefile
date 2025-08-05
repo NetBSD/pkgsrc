@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2025/07/23 18:29:46 pin Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/05 17:05:41 pin Exp $
 
-DISTNAME=	Molsketch-0.8.2-src
+DISTNAME=	Molsketch-0.8.3-src
 PKGNAME=	${DISTNAME:S/-src//:tl}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=molsketch/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	http://molsketch.sourceforge.net/
 COMMENT=	Program for drawing molecular structures
 LICENSE=	gnu-gpl-v2
