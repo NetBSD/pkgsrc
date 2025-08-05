@@ -1,12 +1,30 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2025/06/09 18:07:33 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2025/08/05 13:27:17 ryoon Exp $
+
+Do not append a buildlinked directory to ZIG_CMAKE_PREFIX_PATH to avoid WRKREF
+in bin/zig.
 
 Skip stage3 during build to:
-* spedd up buidling
+* speed up buidling
 * avoid work directory reference in zig's RUNPATH.
 
---- CMakeLists.txt.orig	2025-03-04 22:35:21.000000000 +0000
+--- CMakeLists.txt.orig	2025-05-23 04:31:41.000000000 +0000
 +++ CMakeLists.txt
-@@ -971,18 +971,9 @@ if(MINGW AND "${ZIG_HOST_TARGET_ARCH}" S
+@@ -18,13 +18,7 @@ endif()
+ # cache variable. Furthermore, the environment variable follows the system path
+ # separator, such as ':' on POSIX and ';' on Windows, but the cache variable
+ # follows CMake's array behavior, i.e. always ';' for a separator.
+-list(APPEND ZIG_CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH}")
+-if(WIN32)
+-  list(APPEND ZIG_CMAKE_PREFIX_PATH $ENV{CMAKE_PREFIX_PATH})
+-else()
+-  string(REGEX REPLACE ":" ";" ZIG_CMAKE_PREFIX_PATH_STRING "$ENV{CMAKE_PREFIX_PATH}")
+-  list(APPEND ZIG_CMAKE_PREFIX_PATH "${ZIG_CMAKE_PREFIX_PATH_STRING}")
+-endif()
++set(ZIG_CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH}")
+ 
+ list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+ 
+@@ -978,18 +972,9 @@ if(MINGW AND "${ZIG_HOST_TARGET_ARCH}" S
  endif()
  
  
