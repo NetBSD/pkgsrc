@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4706 2025/08/05 13:27:31 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4707 2025/08/05 14:17:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6837,3 +6837,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-icecream to 2.1.5 [adam 2025-08-05]
 	Updated math/py-numexpr to 2.11.0 [adam 2025-08-05]
 	Updated lang/zig to 0.14.1nb1 [ryoon 2025-08-05]
+	Updated sysutils/cpuinfo to 0.0.20250724 [wiz 2025-08-05]
