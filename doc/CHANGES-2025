@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4714 2025/08/05 19:33:09 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4715 2025/08/05 20:05:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6845,3 +6845,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/bash-preexec to 0.6.0 [schmonz 2025-08-05]
 	Updated devel/mise to 2025.8.5 [pin 2025-08-05]
 	Updated audio/shairport-sync to 4.3.7 [schmonz 2025-08-05]
+	Updated security/openssl to 3.5.2 [adam 2025-08-05]
+	Updated databases/py-redis to 6.3.0 [adam 2025-08-05]
