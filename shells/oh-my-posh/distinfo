@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.245 2025/07/30 08:58:12 pin Exp $
+$NetBSD: distinfo,v 1.246 2025/08/05 17:04:39 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.2.mod) = 7b465f298a2de57c12f0f78180f97e8de899412ad8639d2d72653c98d550d78f
 SHA512 (dario.cat_mergo_@v_v1.0.2.mod) = 7ce66ba65c020143c4a7d000bbe82ad40dcef6602b462cbe81a4cb79bb948decae6e3dee7dfc7f580f09573efe37e1380d8e14a0e8c37b1dc2d32d0b8c1adbb6
@@ -60,12 +60,12 @@ Size (github.com_alecthomas_colour_@v_v0.1.0.mod) = 36 bytes
 BLAKE2s (github.com_alecthomas_colour_@v_v0.1.0.zip) = 8e36c30ced1443ac4eb28f0b741a832cf5e01352dd1f303de290783142b9b353
 SHA512 (github.com_alecthomas_colour_@v_v0.1.0.zip) = f2f6c296718bfaa36eda0bfd4f0026e7dbcee1525061c01956de49704013699f52740620e0145437480fde6619b40996ba4d164902a6e0ed04be2b596cc49035
 Size (github.com_alecthomas_colour_@v_v0.1.0.zip) = 4696 bytes
-BLAKE2s (github.com_alecthomas_repr_@v_v0.4.0.mod) = df5aacf7ab3b330ec3535c46dbf85f624e80ba9bce81fa8b93d55cbde4f6af19
-SHA512 (github.com_alecthomas_repr_@v_v0.4.0.mod) = 48b21725b7be986a9229b1e59013d71aa4be8c37b99727f0de9e71f4599188f90b9072cc34807f5ae54e453bb52a2b929155b490f916c66f42df413fc59f3fff
-Size (github.com_alecthomas_repr_@v_v0.4.0.mod) = 43 bytes
-BLAKE2s (github.com_alecthomas_repr_@v_v0.4.0.zip) = 0ac3b577747e8481c6e44db2c34e3b667ef8556b6b05f5a14170a24db59bd84b
-SHA512 (github.com_alecthomas_repr_@v_v0.4.0.zip) = 77261dec2e05ac49db14c1d9856e3431bf6301fc8aa480ce68e6205af25d897a6f243b7ba9103c6c02c6413aabea76ace527a69016d0804a9f1810a15f16d93f
-Size (github.com_alecthomas_repr_@v_v0.4.0.zip) = 10773 bytes
+BLAKE2s (github.com_alecthomas_repr_@v_v0.5.1.mod) = df5aacf7ab3b330ec3535c46dbf85f624e80ba9bce81fa8b93d55cbde4f6af19
+SHA512 (github.com_alecthomas_repr_@v_v0.5.1.mod) = 48b21725b7be986a9229b1e59013d71aa4be8c37b99727f0de9e71f4599188f90b9072cc34807f5ae54e453bb52a2b929155b490f916c66f42df413fc59f3fff
+Size (github.com_alecthomas_repr_@v_v0.5.1.mod) = 43 bytes
+BLAKE2s (github.com_alecthomas_repr_@v_v0.5.1.zip) = f706e5b1f846e5484392073aed538aa12e00e08a8840af13cd22f7258a4111d9
+SHA512 (github.com_alecthomas_repr_@v_v0.5.1.zip) = ea5b39c51660b76c49143b53553e7dc47f84085fcd50ab2e9d86b0c3cd0be08c00a42f3d6e97a9a7db010313be69e4fcfe58c44145cc59e6959d97a95aef3a9b
+Size (github.com_alecthomas_repr_@v_v0.5.1.zip) = 11325 bytes
 BLAKE2s (github.com_apparentlymart_go-textseg_v15_@v_v15.0.0.mod) = 3838e103bc63d480a2b9531d9713f5e91afd0b539c6d06fba979e29007a26bf1
 SHA512 (github.com_apparentlymart_go-textseg_v15_@v_v15.0.0.mod) = dedb09db0e52d123588809755fde385d09c1017c490cb53187400900284f7de47c0bf0e34b172c6a98f24147d381e6aeae0c51eca80407b6906f4b8a6bbdb458
 Size (github.com_apparentlymart_go-textseg_v15_@v_v15.0.0.mod) = 57 bytes
@@ -552,9 +552,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-26.17.3.tar.gz) = 525fb3e6f4f8f5aebdbe1f0a90aee5e6a14d3641d0394451ba60e1eb5e107dba
-SHA512 (oh-my-posh-26.17.3.tar.gz) = c3db5219436aba7b8ca7aad17d6b0ff563ae088b665f9712a64634cdee2eb3efaaf146ed59981faf8073acdb838b5a20811f60428c38805594c15eefcfc66d3d
-Size (oh-my-posh-26.17.3.tar.gz) = 6753053 bytes
+BLAKE2s (oh-my-posh-26.18.0.tar.gz) = 600d762e2c43ad820603c86f5c4191a7944f0834a8303e0c56a118d02626e3ae
+SHA512 (oh-my-posh-26.18.0.tar.gz) = 54cc9f874ec8cdb4779e6f78ca12e9d742593e258875fe2390d81572a9a72cf126000f8feed3e9fe6acaea93d4e9095621f508501b0673b3da50418674ed5d85
+Size (oh-my-posh-26.18.0.tar.gz) = 6753203 bytes
 SHA1 (patch-go.mod) = f02ebe53cae01005f81d0e9abfe06cf756bac9b2
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708

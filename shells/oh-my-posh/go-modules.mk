@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.100 2025/07/18 16:58:38 pin Exp $
+# $NetBSD: go-modules.mk,v 1.101 2025/08/05 17:04:39 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -20,8 +20,8 @@ GO_MODULE_FILES+=	github.com/alecthomas/assert/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/assert/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/alecthomas/colour/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/colour/@v/v0.1.0.zip
-GO_MODULE_FILES+=	github.com/alecthomas/repr/@v/v0.4.0.mod
-GO_MODULE_FILES+=	github.com/alecthomas/repr/@v/v0.4.0.zip
+GO_MODULE_FILES+=	github.com/alecthomas/repr/@v/v0.5.1.mod
+GO_MODULE_FILES+=	github.com/alecthomas/repr/@v/v0.5.1.zip
 GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.mod
 GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.zip
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
