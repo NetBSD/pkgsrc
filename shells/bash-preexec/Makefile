@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/04/10 13:59:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/05 18:46:30 schmonz Exp $
 
-DISTNAME=		bash-preexec-0.5.0
+DISTNAME=		bash-preexec-0.6.0
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rcaloras/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
