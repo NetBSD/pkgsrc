@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.19 2024/11/25 14:37:35 tnn Exp $
+$NetBSD: patch-compiler_rustc__codegen__ssa_src_back_linker.rs,v 1.20 2025/08/05 12:38:56 tnn Exp $
 
 Do not use @rpath on Darwin.
 Find external libunwind on Linux.
@@ -19,7 +19,7 @@ Find external libunwind on Linux.
  
      fn link_dylib_by_name(&mut self, name: &str, verbatim: bool, as_needed: bool) {
 +        if self.sess.target.os.contains("linux") && name == "unwind" {
-+            self.link_arg("-rpath,@PREFIX@/lib");
++            self.link_arg("-R@PREFIX@/lib");
 +            self.link_arg("-L@PREFIX@/lib");
 +        }
          if self.sess.target.os == "illumos" && name == "c" {
