@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 09:08:36 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/05 07:19:41 adam Exp $
 
-DISTNAME=	logbook-1.8.1
+DISTNAME=	logbook-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=L/Logbook/}
