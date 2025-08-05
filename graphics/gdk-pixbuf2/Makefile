@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/08/01 09:10:57 nia Exp $
+# $NetBSD: Makefile,v 1.71 2025/08/05 04:57:19 adam Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.12
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -65,9 +65,10 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gdk-pixbuf
 
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYTHON_FOR_BUILD_ONLY=		tool
+PYTHON_FOR_BUILD_ONLY=	tool
+REPLACE_PYTHON+=	build-aux/gen-thumbnailer.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 
 _BUILDING_GTK2= yes
@@ -80,7 +81,7 @@ _BUILDING_GTK2= yes
 .include "../../devel/py-gi-docgen/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.37.2
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
