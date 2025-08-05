@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/03/12 14:16:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/05 06:01:09 adam Exp $
 
-DISTNAME=	findpython-0.6.3
+DISTNAME=	findpython-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/findpython/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.3.6:../../misc/py-platformdirs
 
 USE_LANGUAGES=	# none
 
