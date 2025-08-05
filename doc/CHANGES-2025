@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4701 2025/08/05 05:03:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4702 2025/08/05 06:01:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6824,3 +6824,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk18 to 18.26.3 [jnemeth 2025-08-04]
 	Updated comms/asterisk21 to 21.10.1 [jnemeth 2025-08-04]
 	Downgraded textproc/py-docutils to 0.21.2nb1 [wiz 2025-08-03]
+	Updated devel/py-anyio to 4.10.0 [adam 2025-08-05]
+	Updated security/py-gnupg to 0.5.5 [adam 2025-08-05]
+	Updated devel/py-poetry to 2.1.4 [adam 2025-08-05]
+	Updated lang/py-findpython to 0.7.0 [adam 2025-08-05]
