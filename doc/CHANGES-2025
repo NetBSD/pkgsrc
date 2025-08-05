@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4715 2025/08/05 20:05:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4716 2025/08/05 23:33:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6847,3 +6847,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/shairport-sync to 4.3.7 [schmonz 2025-08-05]
 	Updated security/openssl to 3.5.2 [adam 2025-08-05]
 	Updated databases/py-redis to 6.3.0 [adam 2025-08-05]
+	Added lang/gcc15-libjit version 15.1.0 [wiz 2025-08-05]
