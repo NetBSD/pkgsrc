@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4710 2025/08/05 17:05:01 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4711 2025/08/05 17:06:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6841,3 +6841,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/lagrange to 1.18.6 [pin 2025-08-05]
 	Updated devel/lazygit to 0.54.0 [pin 2025-08-05]
 	Updated shells/oh-my-posh to 26.18.0 [pin 2025-08-05]
+	Updated biology/molsketch to 0.8.3 [pin 2025-08-05]
