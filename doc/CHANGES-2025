@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4711 2025/08/05 17:06:04 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4712 2025/08/05 18:46:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6842,3 +6842,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/lazygit to 0.54.0 [pin 2025-08-05]
 	Updated shells/oh-my-posh to 26.18.0 [pin 2025-08-05]
 	Updated biology/molsketch to 0.8.3 [pin 2025-08-05]
+	Updated shells/bash-preexec to 0.6.0 [schmonz 2025-08-05]
