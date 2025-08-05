@@ -1,29 +1,15 @@
-$NetBSD: patch-shairport.c,v 1.1 2022/07/01 18:36:28 nia Exp $
+$NetBSD: patch-shairport.c,v 1.2 2025/08/05 19:33:02 schmonz Exp $
 
 Show the configurable config file install location.
 
---- shairport.c.orig	2021-12-08 10:42:01.000000000 +0000
+--- shairport.c.orig	2025-01-31 14:57:31.000000000 +0000
 +++ shairport.c
-@@ -217,11 +217,11 @@ void usage(char *progname) {
- #endif
-   printf("    -V, --version           show version information.\n");
-   printf("    -c, --configfile=FILE   read configuration settings from FILE. Default is "
--         "/etc/shairport-sync.conf.\n");
-+         "@PKG_SYSCONFDIR@/shairport-sync.conf.\n");
- 
-   printf("\n");
-   printf("The following general options are for backward compatibility. These and all new options "
--         "have settings in the configuration file, by default /etc/shairport-sync.conf:\n");
-+         "have settings in the configuration file, by default @PKG_SYSCONFDIR@/shairport-sync.conf:\n");
-   printf("    -v, --verbose           -v print debug information; -vv more; -vvv lots.\n");
-   printf("    -p, --port=PORT         set RTSP listening port.\n");
-   printf("    -a, --name=NAME         set advertised name.\n");
-@@ -1279,7 +1279,7 @@ int parse_options(int argc, char **argv)
- #ifdef DEFINED_CUSTOM_PID_DIR
+@@ -1536,7 +1536,7 @@ int parse_options(int argc, char **argv)
    char *use_this_pid_dir = PIDDIR;
  #else
--  char *use_this_pid_dir = "/var/run/shairport-sync";
-+  char *use_this_pid_dir = "@VARBASE@/run/shairport-sync";
- #endif
-   // debug(1,"config.piddir \"%s\".",config.piddir);
-   if (config.piddir)
+   char temp_pid_dir[4096];
+-  strcpy(temp_pid_dir, "/var/run/");
++  strcpy(temp_pid_dir, "@VARBASE@/run/");
+   strcat(temp_pid_dir, config.appName);
+   debug(3, "Default PID directory is \"%s\".", temp_pid_dir);
+   char *use_this_pid_dir = temp_pid_dir;

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/02/12 06:44:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/05 19:33:02 schmonz Exp $
 
-DISTNAME=	shairport-sync-3.3.9
-PKGREVISION=	7
+DISTNAME=	shairport-sync-4.3.7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mikebrady/}
 
@@ -18,6 +17,7 @@ GNU_CONFIGURE=	yes
 
 BUILD_DEFS+=	VARBASE
 
+# XXX add to mk/defaults/mk.conf
 SHAIRPORT_GROUP?=	shairport
 SHAIRPORT_USER?=	shairport
 
@@ -30,8 +30,10 @@ RCD_SCRIPTS=		${PKGBASE}
 
 FILES_SUBST+=		SHAIRPORT_USER=${SHAIRPORT_USER}
 FILES_SUBST+=		SHAIRPORT_GROUP=${SHAIRPORT_GROUP}
+FILES_SUBST+=		UNAME=${UNAME}
 FILES_SUBST+=		VARBASE=${VARBASE}
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-ao
 CONFIGURE_ARGS+=	--with-libdaemon
 CONFIGURE_ARGS+=	--with-metadata
@@ -40,14 +42,19 @@ CONFIGURE_ARGS+=	--with-soxr
 CONFIGURE_ARGS+=	--with-stdout
 
 CONFIGURE_ARGS+=	--without-configfiles
+CONFIGURE_ARGS+=	--without-airplay-2
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS" || \
     exists(/usr/include/sys/audioio.h)
 CONFIGURE_ARGS+=	--with-sun
+CONFIGURE_ARGS+=	--with-os=freebsd
 .endif
 
 .if ${OPSYS} != "Darwin"
-CPPFLAGS+=	-DCOMPILE_FOR_LINUX_AND_FREEBSD_AND_CYGWIN_AND_OPENBSD=1
+CPPFLAGS+=		-DCOMPILE_FOR_LINUX_AND_FREEBSD_AND_CYGWIN_AND_OPENBSD=1
+CPPFLAGS+=		-DCOMPILE_FOR_BSD=1
+.else
+CONFIGURE_ARGS+=	--with-os=darwin
 .endif
 
 SUBST_CLASSES+=		etc
