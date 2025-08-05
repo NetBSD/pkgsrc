@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/12 08:05:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/08/05 05:53:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -23,6 +23,9 @@ ${PYSITELIB}/anyio/_core/__init__.pyo
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.py
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.pyc
 ${PYSITELIB}/anyio/_core/_asyncio_selector_thread.pyo
+${PYSITELIB}/anyio/_core/_contextmanagers.py
+${PYSITELIB}/anyio/_core/_contextmanagers.pyc
+${PYSITELIB}/anyio/_core/_contextmanagers.pyo
 ${PYSITELIB}/anyio/_core/_eventloop.py
 ${PYSITELIB}/anyio/_core/_eventloop.pyc
 ${PYSITELIB}/anyio/_core/_eventloop.pyo
