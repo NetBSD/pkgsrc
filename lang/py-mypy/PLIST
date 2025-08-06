@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2025/06/01 05:58:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2025/08/06 06:29:14 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -40,6 +40,9 @@ ${PYSITELIB}/mypy/checker.pyo
 ${PYSITELIB}/mypy/checker_shared.py
 ${PYSITELIB}/mypy/checker_shared.pyc
 ${PYSITELIB}/mypy/checker_shared.pyo
+${PYSITELIB}/mypy/checker_state.py
+${PYSITELIB}/mypy/checker_state.pyc
+${PYSITELIB}/mypy/checker_state.pyo
 ${PYSITELIB}/mypy/checkexpr.py
 ${PYSITELIB}/mypy/checkexpr.pyc
 ${PYSITELIB}/mypy/checkexpr.pyo
@@ -557,8 +560,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_curses.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_curses_panel.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_dbm.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_decimal.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/_dummy_thread.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/_dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_frozen_importlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_frozen_importlib_external.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_gdbm.pyi
@@ -595,6 +596,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_threading_local.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tkinter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tracemalloc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/_type_checker_internals.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/dbapi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/importlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/wsgi.pyi
@@ -605,6 +607,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_weakrefset.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_winapi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/aifc.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/annotationlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/antigravity.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/argparse.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/array.pyi
@@ -621,6 +624,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/events.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/exceptions.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/format_helpers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/futures.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/asyncio/graph.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/locks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/log.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/mixins.pyi
@@ -666,9 +670,17 @@ ${PYSITELIB}/mypy/typeshed/stdlib/collections/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/collections/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/colorsys.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/compileall.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/_common/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/_common/_streams.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/bz2/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/gzip/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/lzma/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/zlib/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/_base.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/interpreter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/thread.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/configparser.pyi
@@ -752,7 +764,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/distutils/unixccompiler.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/util.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/distutils/version.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/doctest.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/_header_value_parser.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/email/_policybase.pyi
@@ -868,7 +879,6 @@ ${PYSITELIB}/mypy/typeshed/stdlib/encodings/koi8_u.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/kz1048.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/latin_1.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/mac_arabic.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/encodings/mac_centeuro.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/mac_croatian.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/mac_cyrillic.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/encodings/mac_farsi.pyi
@@ -1089,7 +1099,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/os/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/os/path.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ossaudiodev.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/parser.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/pathlib.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/pathlib/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/pathlib/types.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pdb.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pickle.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/pickletools.pyi
@@ -1146,7 +1157,8 @@ ${PYSITELIB}/mypy/typeshed/stdlib/sre_parse.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/ssl.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/stat.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/statistics.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/string.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/string/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/string/templatelib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/stringprep.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/struct.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/subprocess.pyi
