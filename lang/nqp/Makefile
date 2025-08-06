@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2025/05/17 11:49:16 mef Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/06 16:46:48 wiz Exp $
 
 DISTNAME=	nqp-2025.04
-CATEGORIES=	lang perl6
+PKGREVISION=	1
+CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +25,7 @@ CONFIG_SHELL=		${PERL5}
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--backends=moar
+PERL_SITE_LIB=		perl -MConfig -e 'print($$Config{"sitelib"} . "\n");'
 
 # lang/rakudo wants these two *.pm on @INC path as well as 3rdparty/nqp..
 EXTRA_MODULES+=		Config.pm Macros.pm
@@ -35,13 +37,12 @@ pre-configure:
 	      ${FILESDIR}/Macros.pm \
 	${WRKSRC}/3rdparty/nqp-configure/lib/NQP
 
-# please (or let me ) correct later for hard coding
 post-install:
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.40.0/NQP
+	${INSTALL_LIB_DIR} ${DESTDIR}${PERL_SITE_LIB:sh}/NQP
 	(cd ${WRKSRC} ; \
 	for i in ${EXTRA_MODULES} ; \
 	do \
-	${INSTALL}  3rdparty/nqp-configure/lib/NQP/$${i} ${DESTDIR}${PREFIX}/lib/perl5/site_perl/5.40.0/NQP ; \
+	${INSTALL}  3rdparty/nqp-configure/lib/NQP/$${i} ${DESTDIR}${PERL_SITE_LIB:sh}/NQP ; \
 	done ; \
 	)
 
