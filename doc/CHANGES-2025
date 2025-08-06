@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4736 2025/08/06 21:40:17 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4737 2025/08/06 21:55:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6876,3 +6876,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 141.0.2 [ryoon 2025-08-06]
 	Updated www/firefox-l10n to 141.0.2 [ryoon 2025-08-06]
 	Updated archivers/bzip3 to 1.5.2 [ryoon 2025-08-06]
+	Updated time/libical to 3.0.20nb2 [ryoon 2025-08-06]
