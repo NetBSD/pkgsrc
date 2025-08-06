@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4730 2025/08/06 17:09:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4731 2025/08/06 17:57:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6870,3 +6870,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nqp to 2025.04nb1 [wiz 2025-08-06]
 	Updated lang/rakudo to 2025.04nb2 [wiz 2025-08-06]
 	Updated net/arti to 1.4.6 [wiz 2025-08-06]
+	Updated sysutils/onefetch to 2.25.0nb1 [pin 2025-08-06]
