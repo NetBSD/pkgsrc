@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/06 14:01:53 wiz Exp $
 #
 
 DISTNAME=	ctorrent-dnh3.3.2
@@ -19,6 +19,12 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} > 15
+CFLAGS+=		-DHAVE_CLOCKID_T
+.endif
 
 DOCDIR=			share/doc/ctorrent
 
