@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2025/08/04 13:22:05 pho Exp $
+$NetBSD: distinfo,v 1.49 2025/08/06 13:42:45 pho Exp $
 
 BLAKE2s (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = f93572f551f242344e5d6d5e46b9812e5b426772842b5fa06fea4422e327c871
 SHA512 (bootstrap-jdk-1.11.0.15.10-netbsd-8-earmv6hf-20220525.tar.xz) = c4030c99e4c1bb209f0c1ca6c10665c3f4c906f9d7dc13b912c3fbb8031f3dbb6f8d2e5e966cbbc452c307ba5d6de816c0f000b5b7c5d4e3fe8511baf12aab49
@@ -37,19 +37,7 @@ SHA1 (patch-src_hotspot_os__cpu_bsd__arm_bsd__arm__32.s) = 474a66abfb25030d4e321
 SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 6322cbdda03dee528e89ac8b725f3df5e2165797
 SHA1 (patch-src_hotspot_os_bsd_os__perf__bsd.cpp) = 7bb57f82f3a93adc1970ed4215148fc02ecbcd5a
 SHA1 (patch-src_hotspot_os_posix_os__posix.cpp) = e70e8c1e59f0be184a7a1d6e9d11ac7b934ce4b2
-SHA1 (patch-src_hotspot_share_c1_c1__Runtime1.cpp) = a5e22891f91792e16aced8738c916b7c3e583010
-SHA1 (patch-src_hotspot_share_interpreter_interpreterRuntime.cpp) = 50da5fb63869733859bbae7756eef07b4718fd7f
-SHA1 (patch-src_hotspot_share_jvmci_jvmciEnv.hpp) = 75c7e29a69c75abc7747a7f1ba792400889f6157
 SHA1 (patch-src_hotspot_share_libadt_dict.cpp) = a5c62973f563742d4ccc7db341b33366d14e2a01
-SHA1 (patch-src_hotspot_share_opto_runtime.cpp) = 65c60e5ca89be4d7003a4667c43f18a936a9a95d
-SHA1 (patch-src_hotspot_share_prims_jniCheck.cpp) = a3e92b764d9b7aef64ed3908435921ba4d7fec1c
-SHA1 (patch-src_hotspot_share_prims_jvmtiEnter.xsl) = a29d326249ae0a1fb960c7aa17f5128869869000
-SHA1 (patch-src_hotspot_share_prims_jvmtiEnv.cpp) = 475117e9d8578291294b5752029b92fe86fccae6
-SHA1 (patch-src_hotspot_share_prims_whitebox.inline.hpp) = 3efde30edae364d19541b9aceb9a2f52edbc364a
-SHA1 (patch-src_hotspot_share_runtime_deoptimization.cpp) = d791d59c9491f7bc448c9f7c10afdfa950e0f5b0
-SHA1 (patch-src_hotspot_share_runtime_interfaceSupport.inline.hpp) = a4d92a4aab76fcd4754004876dc27753322f3aa7
 SHA1 (patch-src_hotspot_share_runtime_safefetch.inline.hpp) = 1dc90818272e04b8b8825e54241c78e233e34593
-SHA1 (patch-src_hotspot_share_runtime_safepoint.cpp) = 0c694e52ae6a9e2e893d832e58b555fa9c316e75
-SHA1 (patch-src_hotspot_share_runtime_thread.cpp) = 54cbd9300afc23dbd90db4c21eced285cee56e8f
 SHA1 (patch-src_hotspot_share_runtime_threadWXSetters.inline.hpp) = f704bb060803e500415b5d300e26857cf7288ca5
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = c27a058dbcc836fa5a9f979f193284a706a7c50b
