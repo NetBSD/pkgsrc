@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.9 2016/09/20 12:04:44 mef Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/06 15:33:25 ryoon Exp $
 
-DISTNAME=	KanjiStrokeOrders_v${KSOVER}
-PKGNAME=	${DISTNAME:tl:S/_v/-ttf-/}
+DISTNAME=	KanjiStrokeOrders-${KSOVER}
+PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	https://dl.dropboxusercontent.com/u/39004158/
-MASTER_SITES=	https://sites.google.com/site/nihilistorguk/
+MASTER_SITES=	-https://drive.google.com/uc?export=download&id=1DKZEYA3PJ8ulLnjYDP5bxzJ3SWi59ghr
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://sites.google.com/site/nihilistorguk/
+HOMEPAGE=	https://kanji.uk/
 COMMENT=	Japanese Kanji characters stroke order font
 LICENSE=	modified-bsd
 
+USE_LANGUAGES=	# none
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-KSOVER=		4.000
+KSOVER=		4.005
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
@@ -28,11 +28,8 @@ FONTS_DIRS.ttf=	${FONTDIR}
 INSTALL_FONTS=	KanjiStrokeOrders_v${KSOVER}.ttf
 INSTALL_DOCS=	KSO_Excel_Sample.pdf \
 		KSO_PPT_Sample.pdf \
-		copyright.txt \
-		readme_en_v${KSOVER}.txt
-
-WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	# none
+		LICENCE.txt \
+		README_en_v${KSOVER}.txt
 
 do-install:
 .for f in ${INSTALL_FONTS}

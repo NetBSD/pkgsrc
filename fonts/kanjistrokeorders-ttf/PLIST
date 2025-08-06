@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/09/20 12:04:44 mef Exp $
-share/fonts/X11/TTF/KanjiStrokeOrders_v${PKGVERSION}.ttf
+@comment $NetBSD: PLIST,v 1.5 2025/08/06 15:33:25 ryoon Exp $
 share/doc/kanjistrokeorders-ttf/KSO_Excel_Sample.pdf
 share/doc/kanjistrokeorders-ttf/KSO_PPT_Sample.pdf
-share/doc/kanjistrokeorders-ttf/copyright.txt
-share/doc/kanjistrokeorders-ttf/readme_en_v${PKGVERSION}.txt
+share/doc/kanjistrokeorders-ttf/LICENCE.txt
+share/doc/kanjistrokeorders-ttf/README_en_v${PKGVERSION}.txt
+share/fonts/X11/TTF/KanjiStrokeOrders_v${PKGVERSION}.ttf
