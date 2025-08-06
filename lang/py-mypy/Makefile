@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/06/30 19:48:34 adam Exp $
+# $NetBSD: Makefile,v 1.64 2025/08/06 06:29:14 adam Exp $
 
-DISTNAME=	mypy-1.16.1
+DISTNAME=	mypy-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
+DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=18.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
