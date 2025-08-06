@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/06 19:57:56 vins Exp $
+bin/xfind
+lib/X11/app-defaults/XFind
+man/man1/xfind.1
+share/applications/xfind.desktop
+share/pixmaps/xfind_48x48.xpm
