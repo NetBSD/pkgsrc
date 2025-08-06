@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2018/04/29 21:07:38 ryoon Exp $
-share/fonts/X11/TTF/SourceCodePro-Black.otf
-share/fonts/X11/TTF/SourceCodePro-BlackIt.otf
-share/fonts/X11/TTF/SourceCodePro-Bold.otf
-share/fonts/X11/TTF/SourceCodePro-BoldIt.otf
-share/fonts/X11/TTF/SourceCodePro-ExtraLight.otf
-share/fonts/X11/TTF/SourceCodePro-ExtraLightIt.otf
-share/fonts/X11/TTF/SourceCodePro-It.otf
-share/fonts/X11/TTF/SourceCodePro-Light.otf
-share/fonts/X11/TTF/SourceCodePro-LightIt.otf
-share/fonts/X11/TTF/SourceCodePro-Medium.otf
-share/fonts/X11/TTF/SourceCodePro-MediumIt.otf
-share/fonts/X11/TTF/SourceCodePro-Regular.otf
-share/fonts/X11/TTF/SourceCodePro-Semibold.otf
-share/fonts/X11/TTF/SourceCodePro-SemiboldIt.otf
+@comment $NetBSD: PLIST,v 1.5 2025/08/06 14:53:59 ryoon Exp $
+share/fonts/X11/OTF/SourceCodePro-Black.otf
+share/fonts/X11/OTF/SourceCodePro-BlackIt.otf
+share/fonts/X11/OTF/SourceCodePro-Bold.otf
+share/fonts/X11/OTF/SourceCodePro-BoldIt.otf
+share/fonts/X11/OTF/SourceCodePro-ExtraLight.otf
+share/fonts/X11/OTF/SourceCodePro-ExtraLightIt.otf
+share/fonts/X11/OTF/SourceCodePro-It.otf
+share/fonts/X11/OTF/SourceCodePro-Light.otf
+share/fonts/X11/OTF/SourceCodePro-LightIt.otf
+share/fonts/X11/OTF/SourceCodePro-Medium.otf
+share/fonts/X11/OTF/SourceCodePro-MediumIt.otf
+share/fonts/X11/OTF/SourceCodePro-Regular.otf
+share/fonts/X11/OTF/SourceCodePro-Semibold.otf
+share/fonts/X11/OTF/SourceCodePro-SemiboldIt.otf
