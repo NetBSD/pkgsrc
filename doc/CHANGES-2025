@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4734 2025/08/06 21:20:05 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4735 2025/08/06 21:20:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6874,3 +6874,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/toot to 0.49.0 [leot 2025-08-06]
 	Added x11/xfind version 1.0 [vins 2025-08-06]
 	Updated www/firefox to 141.0.2 [ryoon 2025-08-06]
+	Updated www/firefox-l10n to 141.0.2 [ryoon 2025-08-06]
