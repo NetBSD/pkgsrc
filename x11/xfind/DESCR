@@ -1,0 +1,3 @@
+XFind is a simple, graphical file search utility based on X11/Motif
+It is designed to interface with XFile (sysutils/xfile), but can be
+used also as a standalone application.
