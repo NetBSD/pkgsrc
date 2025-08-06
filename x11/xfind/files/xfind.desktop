@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=XFind
+GenericName=File search
+Comment=Search the file system
+Keywords=files;find;locate;lookup;search;
+Categories=X11;Utility;System;
+Exec=xfind %f
+Icon=xfind_48x48.xpm
+Terminal=false
+Type=Application
+MimeType=inode/directory;
+StartupWMClass=XFind
