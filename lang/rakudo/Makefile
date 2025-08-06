@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2025/07/04 08:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/06 16:47:21 wiz Exp $
 
 DISTNAME=	rakudo-2025.04
-PKGREVISION=	1
-CATEGORIES=	lang perl6
+PKGREVISION=	2
+CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakudo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -47,8 +47,8 @@ INSTALLATION_DIRS=	share/perl6/bin
 # hard coding should be corrected ..
 pre-build:
 	${MKDIR} -p  ${WRKSRC}/3rdparty/nqp-configure/lib/NQP
-	cp -p ${PREFIX}/lib/perl5/site_perl/5.40.0/NQP/Config.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
-	cp -p ${PREFIX}/lib/perl5/site_perl/5.40.0/NQP/Macros.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.42.0/NQP/Config.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
+	cp -p ${PREFIX}/lib/perl5/site_perl/5.42.0/NQP/Macros.pm ${WRKSRC}/3rdparty/nqp-configure/lib/NQP/
 
 
 post-install:
