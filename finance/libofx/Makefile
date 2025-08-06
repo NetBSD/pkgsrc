@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/04/19 07:57:47 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/06 22:09:08 ryoon Exp $
 
-DISTNAME=	libofx-0.9.15
-PKGREVISION=	20
+DISTNAME=	LibOFX%200.10.9
+PKGNAME=	${DISTNAME:S/LibOFX%20/libofx-/}
 CATEGORIES=	finance devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libofx/}
 
@@ -10,17 +10,14 @@ HOMEPAGE=	http://libofx.sourceforge.net/
 COMMENT=	OFX (Open Financial eXchange) Library
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/libofx-libofx-d01712e
+
 USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pkg-config
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-opensp-includes=${BUILDLINK_PREFIX.opensp}/include/OpenSP
-CONFIGURE_ARGS+=	--with-opensp-libs=${BUILDLINK_PREFIX.opensp}/libs
-TEST_TARGET=		check
 
-post-extract:
-	${CHMOD} -R go-w ${WRKSRC}
+TEST_TARGET=	check
 
+.include "../../devel/cmake/build.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

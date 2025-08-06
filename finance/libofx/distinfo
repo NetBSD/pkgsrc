@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:26:02 nia Exp $
+$NetBSD: distinfo,v 1.19 2025/08/06 22:09:08 ryoon Exp $
 
-BLAKE2s (libofx-0.9.15.tar.gz) = 2ae22165ee88c0a675fd871ec0159a6abbe946764496f839c47fc8e984aff99e
-SHA512 (libofx-0.9.15.tar.gz) = 9d9c5e55bd4ac71d1158c7b8dfe7ecbcaba6f03afdbf3dc2f6d3699c5e4f3fce045400df0217d5f1f4ba45a0ee1b10862b0ebbe1a0f634d756c3b1b88872ce1f
-Size (libofx-0.9.15.tar.gz) = 1298356 bytes
-SHA1 (patch-lib_Makefile.in) = 512cf3dbaa257205ffff18f3953a08eb81d015f4
-SHA1 (patch-lib_ofx__preproc.cpp) = 73f2b1f4fd30466e8af7fd87fba8815f5c206815
+BLAKE2s (LibOFX%200.10.9.tar.gz) = 563de149e9cf1aac85cc3c725ad867b20817b1eb39bd1bdd49b82820b925d784
+SHA512 (LibOFX%200.10.9.tar.gz) = c559107b3965ba2817a8600e04d7b2d228108316084ccef3cfeb6069ef4cdf6ec1e500f6be0c80e420d48f85a1828da435828da22ed3272419ec40b2874f4f9d
+Size (LibOFX%200.10.9.tar.gz) = 251845 bytes
