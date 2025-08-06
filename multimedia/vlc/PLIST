@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2024/02/28 15:49:52 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.78 2025/08/06 09:51:47 kikadf Exp $
 bin/cvlc
 ${PLIST.qt5}bin/qvlc
 bin/rvlc
@@ -310,6 +310,7 @@ lib/vlc/plugins/demux/librawvid_plugin.la
 lib/vlc/plugins/demux/libreal_plugin.la
 lib/vlc/plugins/demux/libsmf_plugin.la
 lib/vlc/plugins/demux/libsubtitle_plugin.la
+lib/vlc/plugins/demux/libts_plugin.la
 lib/vlc/plugins/demux/libtta_plugin.la
 lib/vlc/plugins/demux/libty_plugin.la
 lib/vlc/plugins/demux/libvc1_plugin.la
@@ -347,6 +348,7 @@ lib/vlc/plugins/mux/libmux_mp4_plugin.la
 lib/vlc/plugins/mux/libmux_mpjpeg_plugin.la
 lib/vlc/plugins/mux/libmux_ogg_plugin.la
 lib/vlc/plugins/mux/libmux_ps_plugin.la
+lib/vlc/plugins/mux/libmux_ts_plugin.la
 lib/vlc/plugins/mux/libmux_wav_plugin.la
 lib/vlc/plugins/packetizer/libpacketizer_a52_plugin.la
 lib/vlc/plugins/packetizer/libpacketizer_av1_plugin.la
