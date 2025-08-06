@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:27:16 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/08/06 15:33:25 ryoon Exp $
 
-BLAKE2s (KanjiStrokeOrders_v4.000.zip) = 828df916265d93f09f0b69ca9da21d2a32c65ddc1d36091dacb3dc5581f0f2a3
-SHA512 (KanjiStrokeOrders_v4.000.zip) = e5fa0eb47d0fe21b325f5124a948b3ba2c9531791ea38005207e26e6a5a1cae5beb046715a72bace11328d89fc6578adbd94740d6f98302c555d5445c2839f7d
-Size (KanjiStrokeOrders_v4.000.zip) = 9417374 bytes
+BLAKE2s (KanjiStrokeOrders-4.005.zip) = d99bafeeeac6c6f0689b9a68aef9c8eda63fe4d9da5262774ca39a8d5c176602
+SHA512 (KanjiStrokeOrders-4.005.zip) = 537a388e51fe73d3fc92122ce74f9ba39d4c1efde2adb8cbe3be97e0ca8a5016758864ab8c3ca4b31852b47bef5eac6b1c4dbd7e346fd6ac31f5d10b7e6b463c
+Size (KanjiStrokeOrders-4.005.zip) = 9468131 bytes
