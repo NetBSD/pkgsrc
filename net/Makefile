@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1603 2025/07/26 13:39:02 vins Exp $
+# $NetBSD: Makefile,v 1.1604 2025/08/06 06:36:50 pin Exp $
 #
 
 COMMENT=	Networking tools
@@ -670,6 +670,7 @@ SUBDIR+=	php-xmlrpc
 SUBDIR+=	php-yaz
 SUBDIR+=	pim6dd
 SUBDIR+=	pim6sd
+SUBDIR+=	pingy
 SUBDIR+=	piratebay
 SUBDIR+=	pload
 SUBDIR+=	podcastdl
