@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/04/18 11:30:36 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/06 20:00:00 leot Exp $
 
-DISTNAME=	toot-0.48.1
+DISTNAME=	toot-0.49.0
 CATEGORIES=	chat net
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/toot/}
 
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-click>=8.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.13:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.10.0:../../textproc/py-tomlkit
-DEPENDS+=	${PYPKGPREFIX}-urwid>=2.0.0:../../devel/py-urwid
+DEPENDS+=	${PYPKGPREFIX}-urwid>=3.0.0:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../devel/py-wcwidth
 # richtext
 DEPENDS+=	${PYPKGPREFIX}-urwidgets>=0.2:../../devel/py-urwidgets
