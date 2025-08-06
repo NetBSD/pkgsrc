@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/06 06:35:44 pin Exp $
+bin/pingy

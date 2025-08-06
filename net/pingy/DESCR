@@ -1,0 +1,10 @@
+Fast, concurrent Rust-based ping tool with real-time updates & visual charts!
+
+Features
+- Concurrent Ping: Ping multiple addresses simultaneously for faster results.
+- Visual Latency Display: Graphical representation of latency for easy analysis.
+- Real-Time Metrics: Displays max, min, avg latency, packet loss rate, and more
+  in real-time.
+- IPv4 & IPv6 Support: Works seamlessly with both IP versions.
+- Multi-IP Under One Address: Supports concurrent pinging of multiple IPs under
+  a single domain.
