@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2025/04/14 13:14:03 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/08/06 04:51:19 adam Exp $
 
-DISTNAME=	asgiref-3.8.1
+DISTNAME=	asgiref-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asgiref/}
 
@@ -12,7 +11,7 @@ COMMENT=	Contains various reference ASGI implementations
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.800:../../lang/py-mypy
+TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.14.0:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none
