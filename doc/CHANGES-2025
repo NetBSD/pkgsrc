@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4719 2025/08/06 04:53:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4720 2025/08/06 06:30:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6854,3 +6854,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fixtures to 4.2.6 [adam 2025-08-06]
 	Updated www/py-asgiref to 3.9.1 [adam 2025-08-06]
 	Updated textproc/py-colored to 2.3.1 [adam 2025-08-06]
+	Updated textproc/py-regex to 2025.7.34 [adam 2025-08-06]
+	Updated textproc/py-markdown2 to 2.5.4 [adam 2025-08-06]
+	Updated lang/py-mypy to 1.17.1 [adam 2025-08-06]
+	Updated misc/py-pbs-installer to 2025.7.23 [adam 2025-08-06]
