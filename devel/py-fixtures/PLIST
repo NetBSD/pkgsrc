@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/12 16:25:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/06 04:45:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -58,6 +58,7 @@ ${PYSITELIB}/fixtures/callmany.pyo
 ${PYSITELIB}/fixtures/fixture.py
 ${PYSITELIB}/fixtures/fixture.pyc
 ${PYSITELIB}/fixtures/fixture.pyo
+${PYSITELIB}/fixtures/py.typed
 ${PYSITELIB}/fixtures/testcase.py
 ${PYSITELIB}/fixtures/testcase.pyc
 ${PYSITELIB}/fixtures/testcase.pyo
