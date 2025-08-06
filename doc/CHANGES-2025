@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4716 2025/08/05 23:33:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4717 2025/08/06 04:39:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6848,3 +6848,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/openssl to 3.5.2 [adam 2025-08-05]
 	Updated databases/py-redis to 6.3.0 [adam 2025-08-05]
 	Added lang/gcc15-libjit version 15.1.0 [wiz 2025-08-05]
+	Updated graphics/jasper to 4.2.8 [adam 2025-08-06]
+	Updated audio/mpg123 to 1.33.2 [adam 2025-08-06]
