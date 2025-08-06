@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4725 2025/08/06 09:56:47 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4726 2025/08/06 14:54:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6865,3 +6865,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cryptography to 45.0.6 [adam 2025-08-06]
 	Updated security/py-cryptography_vectors to 45.0.6 [adam 2025-08-06]
 	Removed multimedia/libdvbpsi0 successor multimedia/libdvbpsi [wiz 2025-08-06]
+	Updated fonts/sourcecodepro-fonts to 2.042 [ryoon 2025-08-06]
