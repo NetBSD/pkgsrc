@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2025/07/27 09:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/08/06 16:29:41 wiz Exp $
 
 DISTNAME=	grpcio-1.74.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
