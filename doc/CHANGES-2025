@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4720 2025/08/06 06:30:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4721 2025/08/06 06:32:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6858,3 +6858,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-markdown2 to 2.5.4 [adam 2025-08-06]
 	Updated lang/py-mypy to 1.17.1 [adam 2025-08-06]
 	Updated misc/py-pbs-installer to 2025.7.23 [adam 2025-08-06]
+	Updated devel/ast-grep to 0.39.3 [pin 2025-08-06]
