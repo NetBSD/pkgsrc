@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:27:23 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/08/06 14:53:59 ryoon Exp $
 
-BLAKE2s (sourcecodepro-fonts-1.050/1.050R-it.tar.gz) = e40e188f982de0fb12b7a2cca3fe6cc979db0330cf888f33fa1148b31fb4a491
-SHA512 (sourcecodepro-fonts-1.050/1.050R-it.tar.gz) = e4ff04ac926e07f4cfa824d3ff4c6c9475c5e0a4172ed055aac8c80378f79c0c5838214377a7ea3bc2bb3997804f5a1420abaae7bf13c6e4a4ffe6f82d01a2e3
-Size (sourcecodepro-fonts-1.050/1.050R-it.tar.gz) = 8245124 bytes
+BLAKE2s (OTF-source-code-pro-2.042R-u_1.062R-i.zip) = 1845169057b569cd199b29a2105c05081aa8de86e7146c4d97c9382d424f47aa
+SHA512 (OTF-source-code-pro-2.042R-u_1.062R-i.zip) = a961c607557f727ae1099d741318eac49bd177009faca4ff843da86075c2403ccb72fa633050edf86dccd014a7aaa8348260b2af36a7b5e964b1be7b9dabe3d6
+Size (OTF-source-code-pro-2.042R-u_1.062R-i.zip) = 1152928 bytes
