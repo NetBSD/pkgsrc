@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1532 2025/07/28 13:31:36 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1533 2025/08/07 19:12:01 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1423,6 +1423,7 @@ SUBDIR+=	tcl-xml
 SUBDIR+=	tei
 SUBDIR+=	tei-p5-schema
 SUBDIR+=	tei-xsl
+SUBDIR+=	television
 SUBDIR+=	tex-csvsimple
 SUBDIR+=	tex-csvsimple-doc
 SUBDIR+=	tex-latexdiff
