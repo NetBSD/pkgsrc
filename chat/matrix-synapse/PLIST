@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2025/07/17 11:24:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.60 2025/08/07 18:54:39 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -544,6 +544,9 @@ ${PYSITELIB}/synapse/handlers/stats.pyo
 ${PYSITELIB}/synapse/handlers/sync.py
 ${PYSITELIB}/synapse/handlers/sync.pyc
 ${PYSITELIB}/synapse/handlers/sync.pyo
+${PYSITELIB}/synapse/handlers/thread_subscriptions.py
+${PYSITELIB}/synapse/handlers/thread_subscriptions.pyc
+${PYSITELIB}/synapse/handlers/thread_subscriptions.pyo
 ${PYSITELIB}/synapse/handlers/typing.py
 ${PYSITELIB}/synapse/handlers/typing.pyc
 ${PYSITELIB}/synapse/handlers/typing.pyo
@@ -673,9 +676,6 @@ ${PYSITELIB}/synapse/metrics/_gc.pyo
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.py
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyc
 ${PYSITELIB}/synapse/metrics/_reactor_metrics.pyo
-${PYSITELIB}/synapse/metrics/_twisted_exposition.py
-${PYSITELIB}/synapse/metrics/_twisted_exposition.pyc
-${PYSITELIB}/synapse/metrics/_twisted_exposition.pyo
 ${PYSITELIB}/synapse/metrics/_types.py
 ${PYSITELIB}/synapse/metrics/_types.pyc
 ${PYSITELIB}/synapse/metrics/_types.pyo
@@ -764,6 +764,9 @@ ${PYSITELIB}/synapse/replication/http/_base.pyo
 ${PYSITELIB}/synapse/replication/http/account_data.py
 ${PYSITELIB}/synapse/replication/http/account_data.pyc
 ${PYSITELIB}/synapse/replication/http/account_data.pyo
+${PYSITELIB}/synapse/replication/http/deactivate_account.py
+${PYSITELIB}/synapse/replication/http/deactivate_account.pyc
+${PYSITELIB}/synapse/replication/http/deactivate_account.pyo
 ${PYSITELIB}/synapse/replication/http/delayed_events.py
 ${PYSITELIB}/synapse/replication/http/delayed_events.pyc
 ${PYSITELIB}/synapse/replication/http/delayed_events.pyo
@@ -1066,6 +1069,9 @@ ${PYSITELIB}/synapse/rest/client/tags.pyo
 ${PYSITELIB}/synapse/rest/client/thirdparty.py
 ${PYSITELIB}/synapse/rest/client/thirdparty.pyc
 ${PYSITELIB}/synapse/rest/client/thirdparty.pyo
+${PYSITELIB}/synapse/rest/client/thread_subscriptions.py
+${PYSITELIB}/synapse/rest/client/thread_subscriptions.pyc
+${PYSITELIB}/synapse/rest/client/thread_subscriptions.pyo
 ${PYSITELIB}/synapse/rest/client/tokenrefresh.py
 ${PYSITELIB}/synapse/rest/client/tokenrefresh.pyc
 ${PYSITELIB}/synapse/rest/client/tokenrefresh.pyo
@@ -1189,6 +1195,18 @@ ${PYSITELIB}/synapse/rest/synapse/client/sso_register.pyo
 ${PYSITELIB}/synapse/rest/synapse/client/unsubscribe.py
 ${PYSITELIB}/synapse/rest/synapse/client/unsubscribe.pyc
 ${PYSITELIB}/synapse/rest/synapse/client/unsubscribe.pyo
+${PYSITELIB}/synapse/rest/synapse/mas/__init__.py
+${PYSITELIB}/synapse/rest/synapse/mas/__init__.pyc
+${PYSITELIB}/synapse/rest/synapse/mas/__init__.pyo
+${PYSITELIB}/synapse/rest/synapse/mas/_base.py
+${PYSITELIB}/synapse/rest/synapse/mas/_base.pyc
+${PYSITELIB}/synapse/rest/synapse/mas/_base.pyo
+${PYSITELIB}/synapse/rest/synapse/mas/devices.py
+${PYSITELIB}/synapse/rest/synapse/mas/devices.pyc
+${PYSITELIB}/synapse/rest/synapse/mas/devices.pyo
+${PYSITELIB}/synapse/rest/synapse/mas/users.py
+${PYSITELIB}/synapse/rest/synapse/mas/users.pyc
+${PYSITELIB}/synapse/rest/synapse/mas/users.pyo
 ${PYSITELIB}/synapse/rest/well_known.py
 ${PYSITELIB}/synapse/rest/well_known.pyc
 ${PYSITELIB}/synapse/rest/well_known.pyo
@@ -1237,6 +1255,9 @@ ${PYSITELIB}/synapse/storage/__init__.pyo
 ${PYSITELIB}/synapse/storage/_base.py
 ${PYSITELIB}/synapse/storage/_base.pyc
 ${PYSITELIB}/synapse/storage/_base.pyo
+${PYSITELIB}/synapse/storage/admin_client_config.py
+${PYSITELIB}/synapse/storage/admin_client_config.pyc
+${PYSITELIB}/synapse/storage/admin_client_config.pyo
 ${PYSITELIB}/synapse/storage/background_updates.py
 ${PYSITELIB}/synapse/storage/background_updates.pyc
 ${PYSITELIB}/synapse/storage/background_updates.pyo
@@ -1402,6 +1423,9 @@ ${PYSITELIB}/synapse/storage/databases/main/tags.pyo
 ${PYSITELIB}/synapse/storage/databases/main/task_scheduler.py
 ${PYSITELIB}/synapse/storage/databases/main/task_scheduler.pyc
 ${PYSITELIB}/synapse/storage/databases/main/task_scheduler.pyo
+${PYSITELIB}/synapse/storage/databases/main/thread_subscriptions.py
+${PYSITELIB}/synapse/storage/databases/main/thread_subscriptions.pyc
+${PYSITELIB}/synapse/storage/databases/main/thread_subscriptions.pyo
 ${PYSITELIB}/synapse/storage/databases/main/transactions.py
 ${PYSITELIB}/synapse/storage/databases/main/transactions.pyc
 ${PYSITELIB}/synapse/storage/databases/main/transactions.pyo
@@ -1939,8 +1963,12 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/92/01_remove_trigger.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/01_remove_trigger.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/02_remove_populate_participant_bg_update.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/04_ss_membership_snapshot_idx.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/04_thread_subscriptions.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/04_thread_subscriptions_seq.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/05_fixup_max_depth_cap.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/05_thread_subscriptions_comments.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/06_device_federation_inbox_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/06_threads_last_sent_stream_ordering_comments.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_add_user_reports.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_event_txn_id_device_id_txn_id2.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
@@ -2122,6 +2150,9 @@ ${PYSITELIB}/synapse/util/msisdn.pyo
 ${PYSITELIB}/synapse/util/patch_inline_callbacks.py
 ${PYSITELIB}/synapse/util/patch_inline_callbacks.pyc
 ${PYSITELIB}/synapse/util/patch_inline_callbacks.pyo
+${PYSITELIB}/synapse/util/pydantic_models.py
+${PYSITELIB}/synapse/util/pydantic_models.pyc
+${PYSITELIB}/synapse/util/pydantic_models.pyo
 ${PYSITELIB}/synapse/util/ratelimitutils.py
 ${PYSITELIB}/synapse/util/ratelimitutils.pyc
 ${PYSITELIB}/synapse/util/ratelimitutils.pyo
