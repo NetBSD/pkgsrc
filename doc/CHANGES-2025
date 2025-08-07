@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4743 2025/08/07 11:39:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4744 2025/08/07 13:59:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6890,3 +6890,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual-autocomplete to 4.0.5 [adam 2025-08-07]
 	Updated lang/python313 to 3.13.6 [adam 2025-08-07]
 	Updated lang/py313-html-docs to 3.13.6 [adam 2025-08-07]
+	Updated net/deskflow to 1.23.0 [abs 2025-08-07]
