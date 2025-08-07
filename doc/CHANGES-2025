@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4741 2025/08/07 07:37:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4742 2025/08/07 11:15:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6886,3 +6886,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ntopng to 6.4 [adam 2025-08-07]
 	Updated multimedia/rav1e to 0.8.1 [adam 2025-08-07]
 	Updated archivers/unrar to 7.1.3 [adam 2025-08-07]
+	Updated security/vaultwarden to 1.34.3 [adam 2025-08-07]
+	Updated comms/py-textual-autocomplete to 4.0.5 [adam 2025-08-07]
