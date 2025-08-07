@@ -1,24 +1,41 @@
-$NetBSD: patch-meson.build,v 1.1 2025/08/02 05:16:29 wiz Exp $
+$NetBSD: patch-meson.build,v 1.2 2025/08/07 09:33:05 jperkin Exp $
 
 Handle Illumos like Solaris.
 
 --- meson.build.orig	2025-02-27 16:29:06.000000000 +0000
 +++ meson.build
-@@ -171,7 +171,7 @@ compile_args = [
+@@ -171,14 +171,14 @@ compile_args = [
  # See https://gitlab.freedesktop.org/dbus/dbus/-/issues/4
  compile_args += ['-fno-strict-aliasing']
  
 -if host_os.contains('solaris')
-+if host_os.contains('solaris') or host_os.contains('illumos')
++if host_os.contains('sunos')
      compile_args += [
          # Solaris' C library apparently needs these runes to be threadsafe...
          '-D_POSIX_PTHREAD_SEMANTICS',
+         # ... this opt-in to get sockaddr_in6 and sockaddr_storage...
+         '-D__EXTENSIONS__',
+         # ... and this opt-in to get file descriptor passing support
+-        ' -D_XOPEN_SOURCE=500',
++        '-D_XOPEN_SOURCE=600',
+     ]
+ endif
+ 
+@@ -429,7 +429,7 @@ else
+     endif
+ endif
+ 
+-if get_option('epoll').disabled()
++if get_option('epoll').disabled() or host_os.contains('sunos')
+     use_linux_epoll = false
+ else
+     use_linux_epoll = (
 @@ -532,7 +532,7 @@ endif
  have_console_owner_file = false
  console_owner_file = get_option('solaris_console_owner_file')
  if console_owner_file != ''
 -  if not host_os.contains('solaris')
-+  if not host_os.contains('solaris') and not host_os.contains('illumos')
++  if not host_os.contains('sunos')
      error('solaris_console_owner_file is only supported on Solaris)')
    endif
    have_console_owner_file = true
@@ -27,7 +44,7 @@ Handle Illumos like Solaris.
  }
  
 -if host_os.contains('solaris')
-+if host_os.contains('solaris') or host_os.contains('illumos')
++if host_os.contains('sunos')
    summary_dict += {
        'Console owner file': console_owner_file,
    }
