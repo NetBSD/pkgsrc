@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4745 2025/08/07 18:54:44 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4746 2025/08/07 19:07:51 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6892,3 +6892,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py313-html-docs to 3.13.6 [adam 2025-08-07]
 	Updated net/deskflow to 1.23.0 [abs 2025-08-07]
 	Updated chat/matrix-synapse to 1.135.0 [gdt 2025-08-07]
+	Updated devel/mise to 2025.8.7 [pin 2025-08-07]
