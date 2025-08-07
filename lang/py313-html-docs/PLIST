@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/04 22:21:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/07 11:39:16 adam Exp $
 share/doc/python3.13/.buildinfo
 share/doc/python3.13/404.html
 share/doc/python3.13/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -91,6 +91,7 @@ share/doc/python3.13/_sources/contents.rst.txt
 share/doc/python3.13/_sources/copyright.rst.txt
 share/doc/python3.13/_sources/deprecations/c-api-pending-removal-in-3.14.rst.txt
 share/doc/python3.13/_sources/deprecations/c-api-pending-removal-in-3.15.rst.txt
+share/doc/python3.13/_sources/deprecations/c-api-pending-removal-in-3.16.rst.txt
 share/doc/python3.13/_sources/deprecations/c-api-pending-removal-in-future.rst.txt
 share/doc/python3.13/_sources/deprecations/index.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.13.rst.txt
@@ -626,6 +627,7 @@ share/doc/python3.13/contents.html
 share/doc/python3.13/copyright.html
 share/doc/python3.13/deprecations/c-api-pending-removal-in-3.14.html
 share/doc/python3.13/deprecations/c-api-pending-removal-in-3.15.html
+share/doc/python3.13/deprecations/c-api-pending-removal-in-3.16.html
 share/doc/python3.13/deprecations/c-api-pending-removal-in-future.html
 share/doc/python3.13/deprecations/index.html
 share/doc/python3.13/deprecations/pending-removal-in-3.13.html
