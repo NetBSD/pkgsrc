@@ -1,0 +1,9 @@
+Television is a cross-platform, fast and extensible fuzzy finder for the
+terminal.
+
+It integrates with your shell and lets you quickly search through any kind of
+data source (files, git repositories, environment variables, docker images, you
+name it) using a fuzzy matching algorithm and is designed to be extensible.
+
+It is inspired by the neovim telescope plugin and leverages tokio and the
+nucleo matcher used by the helix editor to ensure optimal performance.
