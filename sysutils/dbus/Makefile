@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2025/08/02 05:04:27 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2025/08/07 09:33:05 jperkin Exp $
 
 DISTNAME=	dbus-1.16.2
 PKGREVISION=	1
@@ -40,7 +40,7 @@ MESON_ARGS+=		-Dsystem_socket=${VARBASE}/run/dbus/system_bus_socket
 MESON_ARGS+=		-Dsystem_pid_file=${VARBASE}/run/dbus/pid
 MESON_ARGS+=		-Ddoxygen_docs=disabled
 
-LDFLAGS.SunOS+=		-lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=		docbook
 SUBST_STAGE.docbook=	pre-configure
