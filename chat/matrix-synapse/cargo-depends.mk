@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2025/07/17 11:24:44 gdt Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2025/08/07 18:54:39 gdt Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -8,7 +8,6 @@ CARGO_CRATE_DEPENDS+=	arc-swap-1.7.1
 CARGO_CRATE_DEPENDS+=	atomic-waker-1.1.2
 CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.74
-CARGO_CRATE_DEPENDS+=	base64-0.21.7
 CARGO_CRATE_DEPENDS+=	base64-0.22.1
 CARGO_CRATE_DEPENDS+=	bitflags-2.8.0
 CARGO_CRATE_DEPENDS+=	blake2-0.10.6
@@ -93,7 +92,7 @@ CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.8
 CARGO_CRATE_DEPENDS+=	mio-1.0.3
 CARGO_CRATE_DEPENDS+=	object-0.36.7
-CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
+CARGO_CRATE_DEPENDS+=	once_cell-1.21.3
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.6
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	pin-project-lite-0.2.16
@@ -137,7 +136,7 @@ CARGO_CRATE_DEPENDS+=	security-framework-3.2.0
 CARGO_CRATE_DEPENDS+=	security-framework-sys-2.14.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.219
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.219
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.140
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.141
 CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	sha1-0.10.6
 CARGO_CRATE_DEPENDS+=	sha2-0.10.9
