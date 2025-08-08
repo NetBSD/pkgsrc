@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.169 2025/03/04 09:37:36 nia Exp $
+# $NetBSD: Makefile.common,v 1.170 2025/08/08 22:04:28 morr Exp $
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
 # used by editors/vim-gtk3/Makefile
@@ -49,6 +49,10 @@ DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon
 .endif
+
+# Haiku needs -lgnu for the xattr family of functions.
+# Haikuports also adds -lgnu but doesn't explain why.
+LIBS.Haiku+=           -lgnu
 
 .if empty(PKGNAME:Mvim-share*)
 ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
