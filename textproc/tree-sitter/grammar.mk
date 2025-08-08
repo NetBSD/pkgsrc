@@ -1,4 +1,4 @@
-# $NetBSD: grammar.mk,v 1.6 2024/04/10 21:23:41 wiz Exp $
+# $NetBSD: grammar.mk,v 1.7 2025/08/08 21:06:16 wiz Exp $
 #
 # Common logic to build and install tree-sitter grammars.
 #
@@ -15,11 +15,11 @@ USE_LIBTOOL=		yes
 
 do-build:
 	cd ${WRKSRC}/${GRAMMAR_SOURCE_DIR} && \
-	libtool --mode=compile ${CC} ${CFLAGS} -std=${GRAMMAR_C_STANDARD} -I. -c -fPIC parser.c
+	libtool --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -std=${GRAMMAR_C_STANDARD} -I. -c -fPIC parser.c
 	cd ${WRKSRC}/${GRAMMAR_SOURCE_DIR} && \
-	if [ -f scanner.c ]; then libtool --mode=compile ${CC} ${CFLAGS} -std=${GRAMMAR_C_STANDARD} -I. -c -fPIC scanner.c; fi
+	if [ -f scanner.c ]; then libtool --mode=compile ${CC} ${CPPFLAGS} ${CFLAGS} -std=${GRAMMAR_C_STANDARD} -I. -c -fPIC scanner.c; fi
 	cd ${WRKSRC}/${GRAMMAR_SOURCE_DIR} && \
-	if [ -f scanner.cc ]; then libtool --mode=compile ${CXX} ${CXXFLAGS} -I. -c -fPIC scanner.cc; fi
+	if [ -f scanner.cc ]; then libtool --mode=compile ${CXX} ${CPPFLAGS} ${CXXFLAGS} -I. -c -fPIC scanner.cc; fi
 	cd ${WRKSRC}/${GRAMMAR_SOURCE_DIR} && \
 	libtool --mode=link ${CXX} ${LDFLAGS} -module -rpath ${PREFIX}/lib -shared -avoid-version -o ${GRAMMAR_LIBRARY_NAME}.la *.lo
 
