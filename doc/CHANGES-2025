@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4758 2025/08/08 19:32:25 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4759 2025/08/08 22:04:58 morr Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6910,3 +6910,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.12.8 [adam 2025-08-08]
 	Updated net/erlang-xmpp to 1.11.0 [gdt 2025-08-08]
 	Updated chat/ejabberd to 25.07 [gdt 2025-08-08]
+	Updated editors/vim-share to 9.1.1572nb1 [morr 2025-08-08]
