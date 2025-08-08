@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/08/07 14:23:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/08 11:03:30 ryoon Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1807,7 +1807,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_testlimitedcapi.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testmultiphase.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testsinglephase.so
 ${PLIST.tkinter}lib/python${PY_VER_SUFFIX}/lib-dynload/_tkinter.so
-${PLIST.uuid}lib/python${PY_VER_SUFFIX}/lib-dynload/_uuid.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/_uuid.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_xxtestfuzz.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_zoneinfo.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
