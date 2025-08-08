@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/06/02 02:13:21 wen Exp $
+$NetBSD: distinfo,v 1.12 2025/08/08 23:46:49 wen Exp $
 
-BLAKE2s (Test-Inter-1.11.tar.gz) = 457b76444fccdcb9b6972d6a83753003bc469aeea9558fe89f07a6f4cd76a23b
-SHA512 (Test-Inter-1.11.tar.gz) = a7e3f6f49e4a6ba60679a5c203c33585d42a2b930354bb2b948554f476409971ecf789f607fb15c5b7af785f45ff55543ef02974b91006a726fdbf27d788a5a9
-Size (Test-Inter-1.11.tar.gz) = 45815 bytes
+BLAKE2s (Test-Inter-1.12.tar.gz) = e27f6338237d194b748c0401337a9a90d5461b4f98df366c35087c0d555c802f
+SHA512 (Test-Inter-1.12.tar.gz) = 8db6572ed863458d741b0dad78b3a09d83bf3c0f53e5512f8721c64fc1de675a78d16a58465cf16acb6059a49a735e6d0e1e1781d2cbc9421df4ab7026c01460
+Size (Test-Inter-1.12.tar.gz) = 46208 bytes
