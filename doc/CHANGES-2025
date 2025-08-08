@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4755 2025/08/08 11:56:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4756 2025/08/08 16:50:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6906,3 +6906,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xf86-video-amdgpu to 25.0.0 [wiz 2025-08-08]
 	Updated devel/py-types-setuptools to 80.9.0.20250801 [adam 2025-08-08]
 	Updated devel/py-packageurl to 0.17.5 [adam 2025-08-08]
+	Updated security/py-argon2-cffi-bindings to 25.1.0 [adam 2025-08-08]
+	Updated devel/py-ruff to 0.12.8 [adam 2025-08-08]
