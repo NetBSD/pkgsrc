@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/05 14:16:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/08 10:12:55 wiz Exp $
 
 DISTNAME=	cpuinfo-0.0.20250724
 CATEGORIES=	sysutils
@@ -37,7 +37,7 @@ post-install:
 	lib/libbenchmark.a \
 	lib/libbenchmark_main.a \
 	lib/pkgconfig/benchmark.pc
-	${RM} ${DESTDIR}${PREFIX}/${file}
+	${RM} -f ${DESTDIR}${PREFIX}/${file}
 .endfor
 
 
