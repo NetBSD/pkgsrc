@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.381 2025/05/30 13:19:18 adam Exp $
+# $NetBSD: Makefile,v 1.382 2025/08/08 20:48:48 wiz Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -12,6 +12,7 @@ HOMEPAGE=	https://www.qemu.org/
 COMMENT=	Machine emulator and virtualizer
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
