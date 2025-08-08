@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4761 2025/08/08 23:45:17 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4762 2025/08/08 23:47:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6913,3 +6913,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/vim-share to 9.1.1572nb1 [morr 2025-08-08]
 	Updated devel/p5-Test-File to 1.995 [wen 2025-08-08]
 	Updated devel/p5-Test-Future-IO-Impl to 0.15 [wen 2025-08-08]
+	Updated devel/p5-Test-Inter to 1.12 [wen 2025-08-08]
