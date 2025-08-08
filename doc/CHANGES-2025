@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4749 2025/08/08 07:37:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4750 2025/08/08 08:13:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6897,3 +6897,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/scooter to 0.6.0 [pin 2025-08-07]
 	Updated security/hashcat to 7.0.0 [adam 2025-08-08]
 	Updated databases/tdb to 1.4.14 [adam 2025-08-08]
+	Updated net/rtmpdump to 2.6.0.0.6f6bb1353fc84f4cc37138baa99f586750028a01 [wiz 2025-08-08]
