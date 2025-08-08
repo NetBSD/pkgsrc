@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.21 2023/02/27 10:23:37 wiz Exp $
+$NetBSD: distinfo,v 1.22 2025/08/08 11:28:14 wiz Exp $
 
-BLAKE2s (xf86-video-amdgpu-23.0.0.tar.xz) = 97cf6ffb31f6202aa46ad8917ee6c652716a42d2c268da5d48c304d783afeb62
-SHA512 (xf86-video-amdgpu-23.0.0.tar.xz) = bf26f147629a34e84a0ae8435119e170b9c95edafcab1995b63bb8f55abef32f2efbf4536eb070e64b2ae1460424b1b27a4206cb9836d33ddc6dfbee404f718b
-Size (xf86-video-amdgpu-23.0.0.tar.xz) = 381268 bytes
-SHA1 (patch-configure) = 3989dfc22c4dd9096f588a023516f26a28739724
+BLAKE2s (xf86-video-amdgpu-25.0.0.tar.xz) = efd5ab5756fbb63f6fec60cec7e2f3af106adc0bc0f737ad1460edf1ec1f95c9
+SHA512 (xf86-video-amdgpu-25.0.0.tar.xz) = d143294fead7073c14100299ccab20d1f5eab8b7e36c1770b12aaade958211e1961f4353dc47123c3b9af9f7a911d913def71d25b83dab3dee1d289043869891
+Size (xf86-video-amdgpu-25.0.0.tar.xz) = 75000 bytes
+SHA1 (patch-src_amdgpu__bo__helper.c) = 9306e81c608b0ad8e79f204f5f458d7b51da7820
+SHA1 (patch-src_drmmode__display.c) = 64b8f0218521492a694f719af843b00593f2bdd4
+SHA1 (patch-src_drmmode__display.h) = cf4270d168a3d7c9cd14ae9d8c02fc24d77f20fb
