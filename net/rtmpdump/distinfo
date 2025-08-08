@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:06:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/08/08 08:13:08 wiz Exp $
 
-BLAKE2s (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = d44501682f37e3ca446612c99241a0e4f6b17f1c6e845a383124f5439a2f727d
-SHA512 (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 05a55c7170fa4e9b132166deddf7ff78f9b02880a22420ffd7af891f95172a293315b323d40bf6e0b891c2b8874dfa678c28b8671b0c09fe33c100dcf7d680b4
-Size (rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0.tar.gz) = 1030982 bytes
-SHA1 (patch-Makefile) = 0001b2c1745f4ee6eae36e780d256ff584631ab9
-SHA1 (patch-librtmp_Makefile) = 90a076de219dcf7ba6840913cb6101e007f549cf
+BLAKE2s (rtmpdump-2.6-git-6f6bb1353fc84f4cc37138baa99f586750028a01.tar.gz) = 99dfb4780f9441cff105dbf9ee8d5bbf47822a6cd3c45256f2206adb44722ced
+SHA512 (rtmpdump-2.6-git-6f6bb1353fc84f4cc37138baa99f586750028a01.tar.gz) = dc1d804eb1cd56a5f2de50cc4989ebb465ddce53e2adfb69777560020655e244eb1a2d869307d44e3a8244327cbcfe8f8b60058b3ff33ae8cc0a4f05308f18a1
+Size (rtmpdump-2.6-git-6f6bb1353fc84f4cc37138baa99f586750028a01.tar.gz) = 1045281 bytes
+SHA1 (patch-Makefile) = ec766e2696498a36e80bcd8fef539b3a96679ce8
+SHA1 (patch-librtmp_Makefile) = 6826a406f3302699c5ff93fce6eb4ea2e6d56634
 SHA1 (patch-rtmpdump.c) = 7ab83af82e58270e46e75d0357df1f5cead248c4
