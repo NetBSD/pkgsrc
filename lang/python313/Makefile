@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2025/08/07 14:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/08/08 11:03:30 ryoon Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python313-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -52,16 +53,13 @@ PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	uuid
-
 # NetBSD-8 curses has enough support for py-curses
 USE_CURSES=	getsyx update_panels wide
 # But we build as ncurses still to get the full feature set easily
 .if ${OPSYS} == "NetBSD"
 FAKE_NCURSES=	yes
-.else
-# https://github.com/python/cpython/issues/124228
-PLIST.uuid=	yes
+## Force use of libuuid
+CONFIGURE_ARGS+=	ac_cv_header_uuid_h=false
 .endif
 
 .if ${USE_CROSS_COMPILE:tl} == yes
