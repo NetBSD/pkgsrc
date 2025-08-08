@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4748 2025/08/07 19:54:33 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4749 2025/08/08 07:37:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6895,3 +6895,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.8.7 [pin 2025-08-07]
 	Added textproc/television version 0.13.2 [pin 2025-08-07]
 	Updated textproc/scooter to 0.6.0 [pin 2025-08-07]
+	Updated security/hashcat to 7.0.0 [adam 2025-08-08]
+	Updated databases/tdb to 1.4.14 [adam 2025-08-08]
