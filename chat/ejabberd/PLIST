@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2025/04/28 12:38:17 gdt Exp $
+@comment $NetBSD: PLIST,v 1.62 2025/08/08 18:37:34 gdt Exp $
 lib/${PKGNAME}/COPYING
 lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/${PKGNAME}/ebin/acl.beam
@@ -109,6 +109,12 @@ lib/${PKGNAME}/ebin/mod_announce.beam
 lib/${PKGNAME}/ebin/mod_announce_mnesia.beam
 lib/${PKGNAME}/ebin/mod_announce_opt.beam
 lib/${PKGNAME}/ebin/mod_announce_sql.beam
+lib/${PKGNAME}/ebin/mod_antispam.beam
+lib/${PKGNAME}/ebin/mod_antispam_dump.beam
+lib/${PKGNAME}/ebin/mod_antispam_files.beam
+lib/${PKGNAME}/ebin/mod_antispam_filter.beam
+lib/${PKGNAME}/ebin/mod_antispam_opt.beam
+lib/${PKGNAME}/ebin/mod_antispam_rtbl.beam
 lib/${PKGNAME}/ebin/mod_auth_fast.beam
 lib/${PKGNAME}/ebin/mod_auth_fast_mnesia.beam
 lib/${PKGNAME}/ebin/mod_auth_fast_opt.beam
@@ -228,6 +234,8 @@ lib/${PKGNAME}/ebin/mod_proxy65_stream.beam
 lib/${PKGNAME}/ebin/mod_pubsub.beam
 lib/${PKGNAME}/ebin/mod_pubsub_mnesia.beam
 lib/${PKGNAME}/ebin/mod_pubsub_opt.beam
+lib/${PKGNAME}/ebin/mod_pubsub_serverinfo.beam
+lib/${PKGNAME}/ebin/mod_pubsub_serverinfo_opt.beam
 lib/${PKGNAME}/ebin/mod_pubsub_sql.beam
 lib/${PKGNAME}/ebin/mod_push.beam
 lib/${PKGNAME}/ebin/mod_push_keepalive.beam
@@ -314,6 +322,7 @@ lib/${PKGNAME}/include/eldap.hrl
 lib/${PKGNAME}/include/http_bind.hrl
 lib/${PKGNAME}/include/logger.hrl
 lib/${PKGNAME}/include/mod_announce.hrl
+lib/${PKGNAME}/include/mod_antispam.hrl
 lib/${PKGNAME}/include/mod_caps.hrl
 lib/${PKGNAME}/include/mod_last.hrl
 lib/${PKGNAME}/include/mod_mam.hrl
