@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4757 2025/08/08 18:22:13 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4758 2025/08/08 19:32:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6909,3 +6909,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-argon2-cffi-bindings to 25.1.0 [adam 2025-08-08]
 	Updated devel/py-ruff to 0.12.8 [adam 2025-08-08]
 	Updated net/erlang-xmpp to 1.11.0 [gdt 2025-08-08]
+	Updated chat/ejabberd to 25.07 [gdt 2025-08-08]
