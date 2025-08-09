@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/08 05:18:27 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/09 05:53:58 adam Exp $
 
-DISTNAME=	dict2xml-1.7.6
+DISTNAME=	dict2xml-1.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dict2xml/}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
