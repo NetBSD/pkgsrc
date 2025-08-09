@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/04/25 21:25:03 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/09 16:24:42 nia Exp $
 # This package is mostly derived from www/palemoon since they use the
 # same backend.  However, several key things are different.
 
-PKGNAME=	basilisk-2025.04.23
+PKGNAME=	basilisk-2025.07.04
 CATEGORIES=	www
 
 DIST_SUBDIR=	basilisk-${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.basilisk.tar.gz= \
 	-https://repo.palemoon.org/Basilisk-Dev/Basilisk/archive/v${PKGVERSION_NOREV}.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/d892468fd052cb8961b7e36d5b087e53eb625f8e.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/05bae9bb7231eb6fd851802d097400542bba50a1.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
@@ -60,6 +60,7 @@ CONFIGURE_ARGS+=	--enable-devtools
 CONFIGURE_ARGS+=	--enable-av1
 CONFIGURE_ARGS+=	--enable-jxl
 CONFIGURE_ARGS+=	--enable-pie
+CONFIGURE_ARGS+=	--enable-webrtc		# without seems broken
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-gamepad	# non-default
 CONFIGURE_ARGS+=	--disable-debug
@@ -84,6 +85,11 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 .include "../../mk/bsd.prefs.mk"
 
+# The default bundled copy of ICU does not contain big-endian
+# data files, so this one is generated manually.
+DISTFILES+=		icudt63b.dat.gz
+SITES.icudt63b.dat.gz=	${MASTER_SITE_LOCAL}
+
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 .endif
@@ -92,7 +98,21 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 LDFLAGS+=		-Wl,--no-keep-memory
 .endif
 
+PLIST_VARS+=		be le
 PLIST_VARS+=		ffvpx
+
+PM_BIG_ENDIAN?=	no
+.for plat in ${BIGENDIANPLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${plat})
+PM_BIG_ENDIAN=	yes
+.  endif
+.endfor
+
+.if ${PM_BIG_ENDIAN:tl} != "no"
+PLIST.be=	yes
+.else
+PLIST.le=	yes
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.ffvpx=		yes	# see platform/old-configure.in
@@ -136,6 +156,10 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX} -name '*.a' -exec ${RM} '{}' ';'
 	${RM} -rf ${DESTDIR}${PREFIX}/include
 	${RM} -rf ${DESTDIR}${PREFIX}/share/idl
+.if ${PM_BIG_ENDIAN:tl} != "no"
+	${INSTALL_DATA} ${WRKDIR}/icudt63b.dat \
+	    ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/
+.endif
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/*-devel*
 	${RM} -rf ${DESTDIR}${PREFIX}/lib/basilisk-devel-${PKGVERSION_NOREV}
 	${INSTALL_DATA} ${WRKSRC}/basilisk/branding/unofficial/default16.png \
@@ -156,6 +180,7 @@ post-install:
 .endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/libv4l/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
