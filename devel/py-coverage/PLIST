@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/04/12 09:56:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/08/09 05:57:36 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -88,6 +88,9 @@ ${PYSITELIB}/coverage/numbits.pyo
 ${PYSITELIB}/coverage/parser.py
 ${PYSITELIB}/coverage/parser.pyc
 ${PYSITELIB}/coverage/parser.pyo
+${PYSITELIB}/coverage/patch.py
+${PYSITELIB}/coverage/patch.pyc
+${PYSITELIB}/coverage/patch.pyo
 ${PYSITELIB}/coverage/phystokens.py
 ${PYSITELIB}/coverage/phystokens.pyc
 ${PYSITELIB}/coverage/phystokens.pyo
