@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/11/12 13:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/09 15:56:02 leot Exp $
 
-DISTNAME=	tabbed-0.7
-PKGREVISION=	2
+DISTNAME=	tabbed-0.9
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/tools/
 
@@ -14,19 +13,14 @@ USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Fixing config.mk
-SUBST_FILES.makefile=	config.mk
+SUBST_MESSAGE.makefile=	Fixing Makefile
+SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
-SUBST_SED.makefile+=	-e 's,^CFLAGS = ,CFLAGS += ,'
-SUBST_SED.makefile+=	-e 's,^LDFLAGS = ,LDFLAGS += ,'
-SUBST_SED.makefile+=	-e 's/-I$${FREETYPEINC}/$${FREETYPEINC}/'
 SUBST_SED.makefile+=	-e 's,^FREETYPEINC *=.*,FREETYPEINC != freetype-config --cflags,'
-SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
-SUBST_SED.makefile+=	-e '/^CFLAGS/ s/-Os//'
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/tabbed
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
