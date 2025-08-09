@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/05 22:42:46 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/08/09 06:17:07 wiz Exp $
 
-BLAKE2s (xf86-video-ast-1.2.0.tar.xz) = 8750c60cc0d42c2614e55600716b6c7320a985b46e32039a8213e41f0bfe6bdf
-SHA512 (xf86-video-ast-1.2.0.tar.xz) = 08e89eef33ce97d87f996ad52ed77387267614911df8d9f820a12742b82a5d036c8f5350d4d130a570d5c9f99b650d43f0be3c01eeae4e9979b92e9dc2d6499c
-Size (xf86-video-ast-1.2.0.tar.xz) = 317756 bytes
+BLAKE2s (xf86-video-ast-1.2.1.tar.xz) = bdfd5666dda2a2cf5c04b735058f6656221392fb89567b66598a22c7f2361c73
+SHA512 (xf86-video-ast-1.2.1.tar.xz) = 50603333b3780aaf9a44132589e30ba8c9e1c938d769a38361ab3886231896227d2f526428cae36cc4e8f054f3bf8a75b1e4911d9c449298bf36c75c0f962745
+Size (xf86-video-ast-1.2.1.tar.xz) = 322180 bytes
