@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4506 2025/08/04 08:01:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4507 2025/08/09 03:28:33 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1855,6 +1855,7 @@ SUBDIR+=	p5-Log-Message-Simple
 SUBDIR+=	p5-Log-Report
 SUBDIR+=	p5-Log-Report-Optional
 SUBDIR+=	p5-Log-Trace
+SUBDIR+=	p5-Long-Jump
 SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-Mac-Carbon
 SUBDIR+=	p5-Mac-SystemDirectory
