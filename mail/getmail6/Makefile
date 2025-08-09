@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/09 20:10:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/09 20:11:10 wiz Exp $
 
 DISTNAME=		getmail6-6.19.08
 CATEGORIES=		mail
@@ -16,7 +16,6 @@ USE_LANGUAGES=		# none
 
 REPLACE_PYTHON=		*.py getmailcore/*.py
 
-CONFLICTS+=		getmail-[0-9]*
 # not yet
 #SUPERSEDES=		getmail-[0-9]*
 
