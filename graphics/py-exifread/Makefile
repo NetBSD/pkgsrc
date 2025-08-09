@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/04/28 21:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/09 06:04:31 adam Exp $
 
-DISTNAME=	exifread-3.2.0
+DISTNAME=	exifread-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=E/ExifRead/}
