@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2025/04/25 21:25:03 nia Exp $
+# $NetBSD: options.mk,v 1.2 2025/08/09 16:24:42 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.basilisk
-PKG_SUPPORTED_OPTIONS=		dbus pulseaudio webrtc
-#PKG_SUGGESTED_OPTIONS.NetBSD=	webrtc
-#PKG_SUGGESTED_OPTIONS.Linux=	webrtc
+PKG_SUPPORTED_OPTIONS=		dbus pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,11 +17,4 @@ CONFIGURE_ARGS+=	--enable-pulseaudio
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
-.endif
-
-.if !empty(PKG_OPTIONS:Mwebrtc)
-CONFIGURE_ARGS+=	--enable-webrtc
-.  include "../../graphics/libv4l/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-webrtc
 .endif
