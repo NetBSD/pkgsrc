@@ -1,15 +1,11 @@
-$NetBSD: patch-setup.py,v 1.2 2023/10/31 14:55:36 schmonz Exp $
+$NetBSD: patch-setup.py,v 1.3 2025/08/09 20:10:23 wiz Exp $
 
-Use standard pkgsrc paths. Avoid conflicting with getmail.
+Use standard pkgsrc paths.
 
---- setup.py.orig	2023-08-22 15:38:27.000000000 +0000
+--- setup.py.orig	2025-05-14 19:25:00.000000000 +0000
 +++ setup.py
-@@ -36,10 +36,10 @@ for (pos, arg) in enumerate(args):
-         # hack hack hack hack hack hack hack
-         datadir = args[pos + 1]
- 
--DOCDIR = os.path.join('share','doc','getmail-%s' % __version__)
-+DOCDIR = os.path.join('share','doc','getmail6')
+@@ -39,7 +39,7 @@ for (pos, arg) in enumerate(args):
+ DOCDIR = os.path.join('share','doc','getmail')
  GETMAILDOCDIR = os.path.join(datadir or prefix, DOCDIR)
  
 -MANDIR = os.path.join('share','man','man1')
@@ -17,43 +13,3 @@ Use standard pkgsrc paths. Avoid conflicting with getmail.
  GETMAILMANDIR = os.path.join( datadir or prefix, MANDIR)
  
  if '--show-default-install-dirs' in args:
-@@ -79,15 +79,15 @@ setup(
-         'Topic :: Utilities',
-     ],
-     packages=[
--        'getmailcore'
-+        'getmail6core'
-     ],
-     scripts=[
--        'getmail',
--        'getmails',
--        'getmail_fetch',
--        'getmail_maildir',
--        'getmail_mbox',
--        'getmail-gmail-xoauth-tokens',
-+        'getmail6',
-+        'getmail6s',
-+        'getmail6_fetch',
-+        'getmail6_maildir',
-+        'getmail6_mbox',
-+        'getmail6-gmail-xoauth-tokens',
-     ],
-     data_files=[
-         (DOCDIR, [
-@@ -108,11 +108,11 @@ setup(
-             'docs/troubleshooting.txt',
-         ]),
-         (MANDIR, [
--            'docs/getmails.1',
--            'docs/getmail.1',
--            'docs/getmail_fetch.1',
--            'docs/getmail_maildir.1',
--            'docs/getmail_mbox.1',
-+            'docs/getmail6s.1',
-+            'docs/getmail6.1',
-+            'docs/getmail6_fetch.1',
-+            'docs/getmail6_maildir.1',
-+            'docs/getmail6_mbox.1',
-         ]),
-     ],
- )
