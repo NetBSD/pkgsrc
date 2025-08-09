@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/03/22 12:14:49 pin Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/09 15:40:02 leot Exp $
 
-DISTNAME=	dwm-6.5
+DISTNAME=	dwm-6.6
 CATEGORIES=	wm
 MASTER_SITES=	https://dl.suckless.org/dwm/
 
@@ -10,8 +10,6 @@ COMMENT=	Dynamic window manager
 LICENSE=	mit
 
 USE_LANGUAGES=	c99
-
-CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 # Adjust config.mk
 SUBST_CLASSES+=		makefile
