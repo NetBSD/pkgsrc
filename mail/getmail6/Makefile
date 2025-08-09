@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/10/31 14:55:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/09 20:10:23 wiz Exp $
 
-DISTNAME=		getmail6-6.18.13
-PKGREVISION=		1
+DISTNAME=		getmail6-6.19.08
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=getmail6/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -11,22 +10,18 @@ HOMEPAGE=		https://getmail6.org/
 COMMENT=		Secure, flexible, reliable fetchmail replacement
 LICENSE=		gnu-gpl-v2
 
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=		# none
 
-REPLACE_PYTHON=		*.py getmail6core/*.py
+REPLACE_PYTHON=		*.py getmailcore/*.py
 
-SUBST_CLASSES+=		core
-SUBST_STAGE.core=	pre-configure
-SUBST_FILES.core=	* */*
-SUBST_SED.core=		-e 's|getmailcore|getmail6core|g'
+CONFLICTS+=		getmail-[0-9]*
+# not yet
+#SUPERSEDES=		getmail-[0-9]*
 
-post-extract:
-	cd ${WRKSRC} && \
-	for f in getmail* docs/getmail*.1; do \
-		g=$$(echo $$f | sed -e 's|getmail|getmail6|'); \
-		${MV} $$f $$g; \
-	done
+WHEEL_NAME=		${DISTNAME:S/08/8/}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
