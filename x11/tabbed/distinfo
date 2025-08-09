@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/10/09 12:32:02 leot Exp $
+$NetBSD: distinfo,v 1.6 2025/08/09 15:56:02 leot Exp $
 
-BLAKE2s (tabbed-0.7.tar.gz) = b80e87add064b3c8473e8daa05abd23c953d6d73e936459763a92c5886a2eab1
-SHA512 (tabbed-0.7.tar.gz) = 770420935fd152e10bef59e29eeb8125ee181993691c6c5f03baf311bd685c2b5f0ded13854b3715cc60d0f1ae99eceacd3e6cb7e4008c34917ae55c38b436a7
-Size (tabbed-0.7.tar.gz) = 13778 bytes
-SHA1 (patch-Makefile) = 94f9b16abd8e6a4020466c89608284c97ba1fc31
+BLAKE2s (tabbed-0.9.tar.gz) = d523386a534ebb0a1e86c03cb55f95db170bc2f256cdb3d581105d8833e97789
+SHA512 (tabbed-0.9.tar.gz) = 08435b3b7837f2efd4c6a3f8ccea54f89d08c19601d84792f783d0c0f8b8e00721d35f5679b4d71526ef43121f3f8eee160e777d071e17fbe04b610696a684f6
+Size (tabbed-0.9.tar.gz) = 14484 bytes
+SHA1 (patch-Makefile) = 78179634bfffb82a2e26addbe0760f18f7463129
