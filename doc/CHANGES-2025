@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4766 2025/08/09 06:04:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4767 2025/08/09 06:10:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6925,3 +6925,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/7-zip to 25.01 [adam 2025-08-09]
 	Updated sysutils/py-fsspec to 2025.7.0 [adam 2025-08-09]
 	Updated graphics/py-exifread to 3.4.0 [adam 2025-08-09]
+	Updated devel/py-greenlet to 3.2.4 [adam 2025-08-09]
+	Updated devel/py-rpds-py to 0.27.0 [adam 2025-08-09]
