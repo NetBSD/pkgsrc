@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/09 03:27:22 wen Exp $
+
+BLAKE2s (Long-Jump-0.000003.tar.gz) = 750ab925dc8ef6b94b721482a9ea060f9d63c6b8c09ac608294c785d96bc9507
+SHA512 (Long-Jump-0.000003.tar.gz) = 19028137434042193cfb97884ffea7ca8dde833edc564eed245bb28cd6dc53f66826f67b3353164af96974d486da76a226e3d553598e9b2174ee30a7b477fb1c
+Size (Long-Jump-0.000003.tar.gz) = 12570 bytes
