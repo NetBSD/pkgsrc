@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4778 2025/08/09 16:24:56 nia Exp $
+$NetBSD: CHANGES-2025,v 1.4779 2025/08/09 19:15:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6938,3 +6938,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/tabbed to 0.9 [leot 2025-08-09]
 	Updated net/Geomyidae to 0.99 [leot 2025-08-09]
 	Updated www/basilisk to 2025.07.04 [nia 2025-08-09]
+	Updated sysutils/direnv to 2.37.1 [leot 2025-08-09]
