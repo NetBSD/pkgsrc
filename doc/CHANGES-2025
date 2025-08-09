@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4774 2025/08/09 15:53:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4775 2025/08/09 15:53:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/slock to 1.6 [leot 2025-08-09]
 	Updated lang/gcc15 to 15.2.0 [wiz 2025-08-09]
 	Updated lang/gcc15-libs to 15.2.0nb1 [wiz 2025-08-09]
+	Updated lang/gcc15-libjit to 15.2.0 [wiz 2025-08-09]
