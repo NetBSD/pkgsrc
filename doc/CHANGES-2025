@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4768 2025/08/09 06:17:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4769 2025/08/09 15:36:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6928,3 +6928,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-greenlet to 3.2.4 [adam 2025-08-09]
 	Updated devel/py-rpds-py to 0.27.0 [adam 2025-08-09]
 	Updated x11/xf86-video-ast to 1.2.1 [wiz 2025-08-09]
+	Updated x11/dmenu to 5.4 [leot 2025-08-09]
