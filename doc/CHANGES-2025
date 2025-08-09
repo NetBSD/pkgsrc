@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4762 2025/08/08 23:47:50 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4763 2025/08/09 03:30:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6914,3 +6914,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-File to 1.995 [wen 2025-08-08]
 	Updated devel/p5-Test-Future-IO-Impl to 0.15 [wen 2025-08-08]
 	Updated devel/p5-Test-Inter to 1.12 [wen 2025-08-08]
+	Added devel/p5-Long-Jump version 0.000003 [wen 2025-08-09]
