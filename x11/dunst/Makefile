@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/04/24 14:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/08/10 10:31:30 wiz Exp $
 
-DISTNAME=	dunst-1.12.2
-PKGREVISION=	2
+DISTNAME=	dunst-1.13.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dunst-project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,7 +27,7 @@ REPLACE_BASH+=	test/test-install.sh
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		dunstrc docs/dunst.1.pod
+SUBST_FILES.fix-paths=		dunstrc
 SUBST_FILES.fix-paths+=		docs/dunst.5.pod
 SUBST_FILES.fix-paths+=		src/icon-lookup.c
 SUBST_FILES.fix-paths+=		src/settings_data.h
