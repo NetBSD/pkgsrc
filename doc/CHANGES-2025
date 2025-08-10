@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4805 2025/08/10 10:34:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4806 2025/08/10 10:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6973,3 +6973,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-reprotest to 0.7.30 [adam 2025-08-10]
 	Updated x11/dunst to 1.13.0 [wiz 2025-08-10]
 	Updated sysutils/fzf to 0.65.1 [wiz 2025-08-10]
+	Updated sysutils/hwdata to 0.398 [wiz 2025-08-10]
