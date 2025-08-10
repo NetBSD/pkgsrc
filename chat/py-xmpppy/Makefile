@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/11/24 00:52:59 gdt Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/10 14:36:24 gdt Exp $
 
-DISTNAME=	xmpppy-0.7.1
+DISTNAME=	xmpppy-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xmpppy/}
 GITHUB_PROJECT=	xmpppy
@@ -45,5 +44,5 @@ post-install:
 		${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
