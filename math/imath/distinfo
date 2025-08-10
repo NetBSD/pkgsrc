@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/09/15 10:21:44 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/08/10 10:38:09 wiz Exp $
 
-BLAKE2s (imath-3.1.12.tar.gz) = 4b95981db714c88e3056c3bab33997dbfa3254b432b7ce4c6cf22823ba1cf6fb
-SHA512 (imath-3.1.12.tar.gz) = 32628dfcacb610310b81ffe017a66215cf5fb84c2e0a6ac8c94a68c048be3d2b97eb57965dd253770184d5824cce1e5440b8eefb2834666b273b3193ff108343
-Size (imath-3.1.12.tar.gz) = 604232 bytes
+BLAKE2s (imath-3.2.0.tar.gz) = d5d96ce9dea399b5a47f3b93601ebfb326707821750c3a3429440a17de1aa0f3
+SHA512 (imath-3.2.0.tar.gz) = b5fbad894ff1a725d3b1488d4907106bbc21c4a0c2ac5aa912ef76219d033544a3d56c87f94c71af5ec01759a06a5db2385dcfed25ea5886540398df163c53cd
+Size (imath-3.2.0.tar.gz) = 688331 bytes
