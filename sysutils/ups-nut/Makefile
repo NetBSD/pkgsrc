@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2025/05/31 13:58:38 gdt Exp $
+# $NetBSD: Makefile,v 1.82 2025/08/10 21:51:59 gdt Exp $
 
 .include "Makefile.common"
 
@@ -93,6 +93,8 @@ post-install:
 	for f in ${WRKSRC}/docs/*.txt; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${NUT_DOCDIR}/detailed; \
 	done
+
+TEST_TARGET=	check
 
 # nut-scanner needs libltdl, but this is not documented
 .include "../../devel/libltdl/buildlink3.mk"

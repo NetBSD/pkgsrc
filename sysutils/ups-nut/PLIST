@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/05/17 23:56:37 gdt Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/08/10 21:51:59 gdt Exp $
 bin/nut-scanner
 bin/nutconf
 bin/upsc
@@ -43,6 +43,7 @@ libexec/nut/clone-outlet
 libexec/nut/dummy-ups
 libexec/nut/etapro
 libexec/nut/everups
+libexec/nut/failover
 libexec/nut/gamatronic
 libexec/nut/genericups
 libexec/nut/isbmex
@@ -56,12 +57,14 @@ libexec/nut/mge-shut
 libexec/nut/mge-utalk
 libexec/nut/microdowell
 libexec/nut/microsol-apc
+libexec/nut/nutdrv_hashx
 libexec/nut/nutdrv_qx
 libexec/nut/nutdrv_siemens-sitop
 libexec/nut/oneac
 libexec/nut/optiups
 libexec/nut/powercom
 libexec/nut/powerpanel
+libexec/nut/powervar_cx_ser
 libexec/nut/rhino
 libexec/nut/riello_ser
 libexec/nut/safenet
@@ -71,6 +74,7 @@ libexec/nut/solis
 libexec/nut/tripplite
 libexec/nut/tripplitesu
 libexec/nut/upscode2
+libexec/nut/ve-direct
 libexec/nut/victronups
 libexec/sockdebug
 man/man3/libnutclient.3
@@ -166,6 +170,7 @@ man/man5/upsd.conf.5
 man/man5/upsd.users.5
 man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
+man/man7/nut.7
 man/man8/al175.8
 man/man8/apcsmart-old.8
 man/man8/apcsmart.8
@@ -184,6 +189,7 @@ man/man8/clone.8
 man/man8/dummy-ups.8
 man/man8/etapro.8
 man/man8/everups.8
+man/man8/failover.8
 man/man8/gamatronic.8
 man/man8/genericups.8
 man/man8/isbmex.8
@@ -197,10 +203,10 @@ man/man8/mge-shut.8
 man/man8/mge-utalk.8
 man/man8/microdowell.8
 man/man8/microsol-apc.8
-man/man8/nut-driver-enumerator.8
 man/man8/nut-recorder.8
 man/man8/nut-scanner.8
 man/man8/nutconf.8
+man/man8/nutdrv_hashx.8
 man/man8/nutdrv_qx.8
 man/man8/nutdrv_siemens_sitop.8
 man/man8/nutupsdrv.8
@@ -208,6 +214,7 @@ man/man8/oneac.8
 man/man8/optiups.8
 man/man8/powercom.8
 man/man8/powerpanel.8
+man/man8/powervar_cx_ser.8
 man/man8/rhino.8
 man/man8/riello_ser.8
 man/man8/safenet.8
@@ -221,11 +228,11 @@ man/man8/upscmd.8
 man/man8/upscode2.8
 man/man8/upsd.8
 man/man8/upsdrvctl.8
-man/man8/upsdrvsvcctl.8
 man/man8/upslog.8
 man/man8/upsmon.8
 man/man8/upsrw.8
 man/man8/upssched.8
+man/man8/ve-direct.8
 man/man8/victronups.8
 sbin/upsd
 sbin/upsdrvctl
