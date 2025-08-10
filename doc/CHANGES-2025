@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4824 2025/08/10 21:59:35 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4825 2025/08/10 22:04:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6994,3 +6994,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/glib2-tools to 2.84.4 [adam 2025-08-10]
 	Updated devel/gdbus-codegen to 2.84.4 [adam 2025-08-10]
 	Updated sysutils/ups-nut to 2.8.4 [gdt 2025-08-10]
+	Updated sysutils/ups-nut-cgi to 2.8.4 [gdt 2025-08-10]
+	Updated sysutils/ups-nut-snmp to 2.8.4 [gdt 2025-08-10]
+	Updated sysutils/ups-nut-usb to 2.8.4 [gdt 2025-08-10]
