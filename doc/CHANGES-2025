@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4791 2025/08/10 03:31:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4792 2025/08/10 03:33:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6951,3 +6951,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Log-Dispatchouli to 3.011 [wen 2025-08-10]
 	Updated security/p5-Authen-SASL to 2.1900 [wiz 2025-08-10]
 	Updated devel/p5-Specio to 0.52 [wiz 2025-08-10]
+	Updated devel/p5-Test-Script to 1.30 [wiz 2025-08-10]
