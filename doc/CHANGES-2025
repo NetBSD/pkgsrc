@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4802 2025/08/10 08:59:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4803 2025/08/10 09:13:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6969,3 +6969,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-minio to 7.2.16 [adam 2025-08-10]
 	Updated sysutils/ansible-core to 2.19.0 [adam 2025-08-10]
 	Updated sysutils/ansible-lint to 25.7.0 [adam 2025-08-10]
+	Updated geography/py-maxminddb to 2.8.2 [adam 2025-08-10]
+	Updated sysutils/py-reprotest to 0.7.30 [adam 2025-08-10]
