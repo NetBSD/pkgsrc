@@ -1,0 +1,13 @@
+$NetBSD: patch-meson.build,v 1.1 2025/08/10 13:58:35 ryoon Exp $
+
+--- meson.build.orig	2025-04-02 14:51:30.122923578 +0000
++++ meson.build
+@@ -529,7 +529,7 @@ configure_file(output: 'config.h', confi
+ configure_file(output: 'fonts.conf',
+                input: 'fonts.conf.in',
+                configuration: fonts_conf,
+-               install_dir: fc_baseconfigdir,
++               install_dir: '@PREFIX@/share/examples/fontconfig',
+                install: true,
+                install_tag: 'runtime')
+ 

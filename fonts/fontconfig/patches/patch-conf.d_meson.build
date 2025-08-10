@@ -1,0 +1,24 @@
+$NetBSD: patch-conf.d_meson.build,v 1.1 2025/08/10 13:58:35 ryoon Exp $
+
+--- conf.d/meson.build.orig	2025-01-17 15:15:05.000000000 +0000
++++ conf.d/meson.build
+@@ -74,11 +74,6 @@ install_data(conf_files,
+              install_dir: fc_templatedir,
+              install_tag: 'runtime')
+ 
+-meson.add_install_script('link_confs.py', fc_templatedir,
+-                         fc_configdir,
+-                         conf_links,
+-                         install_tag: 'runtime')
+-
+ # 35-lang-normalize.conf
+ orths = []
+ foreach o : orth_files          # orth_files is from fc-lang/meson.build
+@@ -101,6 +96,6 @@ readme_cdata.set('TEMPLATEDIR', fc_templ
+ configure_file(output: 'README',
+   input: 'README.in',
+   configuration: readme_cdata,
+-  install_dir: fc_configdir,
++  install_dir: '@PREFIX@/share/examples/fontconfig/conf.d',
+   install: true,
+   install_tag: 'runtime')

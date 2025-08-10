@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.132 2023/12/30 10:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2025/08/10 13:58:34 ryoon Exp $
 
-DISTNAME=	fontconfig-2.15.0
+DISTNAME=	fontconfig-2.17.1
 CATEGORIES=	fonts
-MASTER_SITES=	https://www.fontconfig.org/release/
+MASTER_SITES=	https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,14 +14,11 @@ COMMENT=	Library for configuring and customizing font access
 TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-default-fonts=${PREFIX}/share/fonts/X11
-CONFIGURE_ARGS+=	--with-expat-includes=${BUILDLINK_PREFIX.expat}/include
-CONFIGURE_ARGS+=	--with-expat-lib=${BUILDLINK_PREFIX.expat}/lib
-CONFIGURE_ARGS+=	--with-baseconfigdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-cache-dir=${VARBASE}/cache/fontconfig
-CONFIGURE_ARGS+=	--enable-docs
+USE_TOOLS+=		pkg-config msgfmt
+MESON_ARGS+=		-Ddefault-fonts-dirs=${PREFIX}/share/fonts/X11
+MESON_ARGS+=		-Dbaseconfig-dir=${PKG_SYSCONFDIR}
+MESON_ARGS+=		-Dcache-dir=${VARBASE}/cache/fontconfig
+MESON_ARGS+=		-Ddoc=disabled # docbook2man and docbook2html are required.
 CONFIGURE_ENV+=		HASDOCBOOK=no
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
@@ -49,15 +46,11 @@ ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
 ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
 
-.if ${OPSYS} == "Darwin"
-ADDFONTS:=		~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
-CONFIGURE_ARGS+=	--with-arch=${MACHINE_ARCH}
-.endif
-CONFIGURE_ARGS+=	--with-add-fonts=${ADDFONTS}
-
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-build
-SUBST_FILES.prefix=	conf.d/README
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	meson.build
+SUBST_FILES.prefix+=	conf.d/meson.build
+SUBST_FILES.prefix+=	conf.d/README.in
 SUBST_VARS.prefix=	PREFIX
 
 EGDIR=		${PREFIX}/share/examples/fontconfig
@@ -103,17 +96,14 @@ BUILD_DEFS+=	VARBASE
 
 TEST_TARGET=	check
 
-.if ${USE_CROSS_COMPILE:U:tl} == yes
-CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
-.endif
-
 pre-configure:
-	-cd ${BUILDLINK_X11_DIR:Q} && ${FIND} . -path "*fontconfig*" -type l -delete
+	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
 	${INSTALL_DATA} ${FILESDIR}/70-no-bitmap-webfonts.conf ${DESTDIR}${TMPLDIR}
 
+.include "../../devel/meson/build.mk"
 .include "../../lang/python/tool.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
