@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/06/11 12:50:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/10 08:26:51 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -14,6 +14,7 @@ bin/indi_astromechfoc
 bin/indi_astrometry
 bin/indi_astrotrac_telescope
 bin/indi_baader_dome
+bin/indi_camelot_rotator
 bin/indi_celestron_gps
 bin/indi_celestron_sct_focus
 bin/indi_cheapodc
@@ -109,6 +110,7 @@ bin/indi_pegasus_uch
 bin/indi_pegasus_upb
 bin/indi_pegasusindigo_wheel
 bin/indi_perfectstar_focus
+bin/indi_pinefeat_cef_focus
 bin/indi_planewave_deltat
 bin/indi_planewave_telescope
 bin/indi_pmc8_telescope
@@ -170,6 +172,8 @@ bin/indi_usbdewpoint
 bin/indi_usbfocusv3_focus
 bin/indi_vantage_weather
 bin/indi_wanderer_cover
+bin/indi_wanderer_dew_terminator
+bin/indi_wanderer_eclipse
 bin/indi_wanderer_lite_rotator
 bin/indi_wanderer_rotator_lite_v2
 bin/indi_wanderer_rotator_mini
@@ -181,6 +185,7 @@ bin/indi_watcher_weather
 bin/indi_wavesharemodbus_relay
 bin/indi_weather_safety_alpaca
 bin/indi_weather_safety_proxy
+bin/indi_weatherflow_weather
 bin/indi_xagyl_wheel
 bin/shelyak_usis
 include/libindi/abstractbaseclient.h
@@ -299,18 +304,18 @@ lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
 lib/libindiAlignmentDriver.so.2
-lib/libindiAlignmentDriver.so.2.1.4
+lib/libindiAlignmentDriver.so.2.1.5
 lib/libindiclient.a
 lib/libindiclient.so
 lib/libindiclient.so.2
-lib/libindiclient.so.2.1.4
+lib/libindiclient.so.2.1.5
 lib/libindidriver.a
 lib/libindidriver.so
 lib/libindidriver.so.2
-lib/libindidriver.so.2.1.4
+lib/libindidriver.so.2.1.5
 lib/libindilx200.so
 lib/libindilx200.so.2
-lib/libindilx200.so.2.1.4
+lib/libindilx200.so.2.1.5
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
