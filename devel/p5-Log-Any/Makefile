@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2025/07/04 08:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/08/10 02:39:26 wen Exp $
 
-DISTNAME=	Log-Any-1.717
+DISTNAME=	Log-Any-1.718
 # 1.708 -> 1.70.8
 PKGNAME=	p5-${DISTNAME:C/-([0-9])\.([0-9])([0-9])([0-9])/-\1.\2\3.\4/}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
