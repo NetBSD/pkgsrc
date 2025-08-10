@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4787 2025/08/10 02:36:22 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4788 2025/08/10 02:40:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6947,3 +6947,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Inline to 0.87 [wen 2025-08-10]
 	Updated devel/p5-IO-Interactive to 1.027 [wen 2025-08-10]
 	Updated devel/p5-IO-Prompter to 0.005002 [wen 2025-08-10]
+	Updated devel/p5-Log-Any to 1.718 [wen 2025-08-25]
