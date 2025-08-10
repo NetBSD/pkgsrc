@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/08/10 13:41:17 ryoon Exp $
+
+BLAKE2s (boca-1.0.7.tar.gz) = 32363ef12612bb30dcb4d182af3766cbe4ba0e24586c11f2e7d34aaf3b2bdaf2
+SHA512 (boca-1.0.7.tar.gz) = 8443ca20cd42bac50f135848e86f0cb309757fb00d3b369b4bb7e994ae7647b812fa2fef20bda02eb9f3de711c9f1815c94501441ea84c49d356bd16e9591af8
+Size (boca-1.0.7.tar.gz) = 2378963 bytes
+SHA1 (patch-Makefile-commands) = e62f3ebe345d6df0568bc33a557450cb6eed8a3f
+SHA1 (patch-runtime_Makefile) = 41b655b8f20d63573bdbc69b694c51c4b5054d08

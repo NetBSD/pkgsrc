@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile-commands,v 1.1 2025/08/10 13:41:17 ryoon Exp $
+
+* Use common option to fix linkage in pkgsrc.
+
+--- Makefile-commands.orig	2024-08-16 21:11:30.191812360 +0000
++++ Makefile-commands
+@@ -52,7 +52,7 @@ allcmds:
+ $(BOCA_PATH)/$(BINDIR)/boca_$(TYPE)_$(TARGET).$(VERSION)$(SHARED) : $(OBJECTS)
+ 	mkdir -p $(BOCA_PATH)/$(BINDIR)
+ ifneq ($(BUILD_OSX),True)
+-	$(LD) --shared -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
++	$(LD) -shared -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
+ else
+ 	$(LD) -dynamiclib -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
+ endif
