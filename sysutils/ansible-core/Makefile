@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2025/07/18 07:28:15 adam Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/10 08:57:00 adam Exp $
 
-DISTNAME=	ansible_core-2.18.7
+DISTNAME=	ansible_core-2.19.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS+=	ansible<2.10
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.5.3:../../devel/py-resolvelib
