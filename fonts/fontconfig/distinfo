@@ -1,15 +1,17 @@
-$NetBSD: distinfo,v 1.76 2025/03/30 21:10:42 wiz Exp $
+$NetBSD: distinfo,v 1.77 2025/08/10 13:58:35 ryoon Exp $
 
-BLAKE2s (fontconfig-2.15.0.tar.xz) = cc853fee4eda1050baf2cf5b1c8871b035f2cc0cc5507ef872e4350e158cbf92
-SHA512 (fontconfig-2.15.0.tar.xz) = 754cd5fffa198fc07a39cf7df683e9adfa7f54ab41fdff8c0eacc078fd35d3e01069ba343f2b045e0b40df88d9f1fc1ee0f7565799f9cb194a59cf95b64c4417
-Size (fontconfig-2.15.0.tar.xz) = 1447820 bytes
+BLAKE2s (fontconfig-2.17.1.tar.xz) = 628b35de56b1f861d4b6a372bf0a2e91bcdaa72498336fc286f482dc9b45de3b
+SHA512 (fontconfig-2.17.1.tar.xz) = c09c1f041f61ee0d220ff906a86b5c4b329106dc96f8c04b23f8fdeb480df626717fe3613bccb41cb39e86334078139322710377f5ddaa3abe48569e798161c9
+Size (fontconfig-2.17.1.tar.xz) = 1326312 bytes
 SHA1 (patch-aa) = 8fec573ffd4bcc976681cae51a4ead1647e521e8
-SHA1 (patch-ac) = 10372dec9a5b7d2949798f3a4f45f437ab5b077c
-SHA1 (patch-af) = d351265c894738284215f0bb38d47cc1c8f28ec7
-SHA1 (patch-configure) = 343cc3879f4d3d08a5d9d8101d47affa17f28df4
+SHA1 (patch-ac) = 869f7b831dde13626df5a25cf6ed74f5c64ffce4
+SHA1 (patch-af) = 542245860fd4f5374a8935f41a757b2ae960633d
+SHA1 (patch-conf.d_meson.build) = d4cda841bc0be5ba04fe63207bc8c3845bbad520
+SHA1 (patch-configure) = 7926460361da8edda9c1189bf72e5b31993480b6
+SHA1 (patch-meson.build) = 12c848996a2e08aebcc89d155f36168666269dcc
 SHA1 (patch-scandir.c) = e35f4c005f635dd0d8bb949cd32aa34f5e314200
 SHA1 (patch-src_fccharset.c) = a292088633030a67627cc73db501c504bc4ffd94
-SHA1 (patch-src_fcftint.h) = d629fd7ef9713ccc56800d033ba2e09c5a9e2bff
-SHA1 (patch-src_fcint.h) = 0f8accec35b75ad4cd4c558f9680d1f82548a308
-SHA1 (patch-src_fcstat.c) = f7c127ce77e637f3cc804f7de31fd256e59841c8
+SHA1 (patch-src_fcftint.h) = 28086bf5f6a1d397512699d7dc61b3716c971c89
+SHA1 (patch-src_fcint.h) = 2f7062dad03431fdf820f7bc61cdd767789d2caa
+SHA1 (patch-src_fcstat.c) = bbd650ce6f6a777393acb4fa33f211c2189e1f7d
 SHA1 (patch-test_test-migration.c) = 0fcbae562f8ebdef807978755c252626ade44a09
