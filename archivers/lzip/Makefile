@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/03/30 09:58:40 nia Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/10 13:02:56 ryoon Exp $
 
-DISTNAME=	lzip-1.24.1
+DISTNAME=	lzip-1.25
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/
 
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
 TEST_TARGET=		check
+USE_TOOLS+=		gmake
 
 CPPFLAGS.SCO_SV+=	-Dstrtoull=strtoul -DS_ISSOCK=S_ISBLK
 
