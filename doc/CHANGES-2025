@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4781 2025/08/09 20:10:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4782 2025/08/10 01:59:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6941,3 +6941,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/direnv to 2.37.1 [leot 2025-08-09]
 	Updated misc/fzy to 1.1 [leot 2025-08-09]
 	Updated mail/getmail6 to 6.19.08 [wiz 2025-08-09]
+	Updated devel/p5-Future-IO to 0.17 [wen 2025-08-10]
