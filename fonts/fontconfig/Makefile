@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2025/08/10 13:58:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2025/08/10 19:39:18 ryoon Exp $
 
 DISTNAME=	fontconfig-2.17.1
 CATEGORIES=	fonts
@@ -97,7 +97,7 @@ BUILD_DEFS+=	VARBASE
 TEST_TARGET=	check
 
 pre-configure:
-	cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
+	-cd ${BUILDLINK_X11_DIR} && ${FIND} . -path "*fontconfig*" -type l -delete
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf ${DESTDIR}${TMPLDIR}
