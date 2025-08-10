@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4811 2025/08/10 10:57:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4812 2025/08/10 11:44:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6979,3 +6979,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jjui to 0.9.1 [wiz 2025-08-10]
 	Updated graphics/libheif to 1.20.2 [wiz 2025-08-10]
 	Updated www/py-google-api-python-client to 2.178.0 [wiz 2025-08-10]
+	Updated misc/py-trove-classifiers to 2025.8.6.13 [wiz 2025-08-10]
