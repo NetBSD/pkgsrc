@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2023/06/06 08:02:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/08/10 10:38:51 wiz Exp $
 
 BUILDLINK_TREE+=	imath
 
@@ -9,7 +9,7 @@ IMATH_BUILDLINK3_MK:=
 GCC_REQD+=	6
 
 BUILDLINK_API_DEPENDS.imath+=	imath>=3.0.4
-BUILDLINK_ABI_DEPENDS.imath+=	imath>=3.1.9
+BUILDLINK_ABI_DEPENDS.imath+=	imath>=3.2.0
 BUILDLINK_PKGSRCDIR.imath?=	../../math/imath
 .endif	# IMATH_BUILDLINK3_MK
 
