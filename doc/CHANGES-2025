@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4822 2025/08/10 18:14:07 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.4823 2025/08/10 19:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6990,3 +6990,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.19.0 [pin 2025-08-10]
 	Updated chat/py-xmpppy to 0.7.2 [gdt 2025-08-10]
 	Updated x11/xsel to 1.2.1 [kikadf 2025-08-10]
+	Updated devel/glib2 to 2.84.4 [adam 2025-08-10]
+	Updated devel/glib2-tools to 2.84.4 [adam 2025-08-10]
+	Updated devel/gdbus-codegen to 2.84.4 [adam 2025-08-10]
