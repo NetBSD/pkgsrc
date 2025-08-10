@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:59 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/08/10 07:23:28 wen Exp $
 
-BLAKE2s (Module-Install-Repository-0.06.tar.gz) = 387b900e7195007f6dace5fcd67b4cdaaf78c874656d79529b8ab2b180d5565c
-SHA512 (Module-Install-Repository-0.06.tar.gz) = 793db0c81ddded246dc2feb9358ed2367492de077639f947b56290d381ec6310cfa5dc123bd7cd5cbdb2b770850a47c57206110c4dabb53cb577df33a445d54c
-Size (Module-Install-Repository-0.06.tar.gz) = 48339 bytes
+BLAKE2s (Module-Install-Repository-0.08.tar.gz) = dab0d0eeb498653e17a8dd73df065e22986dd2e8105a31c894ef1a588eab6149
+SHA512 (Module-Install-Repository-0.08.tar.gz) = 9e18d7985bd8ffcc138998afb372e46111623436b10fdf8bf811cd55ba064fbedf9f7f31704222d1b58b25da85d541a7c1f278d25dbbf48c1644a2acbe31a887
+Size (Module-Install-Repository-0.08.tar.gz) = 21889 bytes
