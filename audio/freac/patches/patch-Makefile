@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/08/10 13:44:09 ryoon Exp $
+
+* Use common option to fix linkage in pkgsrc.
+
+--- Makefile.orig	2024-08-16 21:29:32.425729077 +0000
++++ Makefile
+@@ -102,7 +102,7 @@ else
+ 	ifeq ($(BUILD_OSX),True)
+ 		LDOPTS_DLL	+= -dynamiclib -framework Cocoa -framework IOKit -Wl,-dylib_install_name,freac$(SHARED) -Wl,-headerpad,80
+ 	else
+-		LDOPTS_DLL	+= --shared
++		LDOPTS_DLL	+= -shared
+ 	endif
+ 
+ 	ifeq ($(BUILD_OPENBSD),True)

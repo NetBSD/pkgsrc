@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/08/10 13:44:09 ryoon Exp $
+
+BLAKE2s (freac-1.1.7.tar.gz) = 36d25ce406df3ccfdacfecdf264060efcd1e769c1ccef82500a2e69593c08ef3
+SHA512 (freac-1.1.7.tar.gz) = 7b32738f3a6bd63a33d010c81d818fb7ba1f210abb0f0a9abe53a4014ffdd91d5d5440f2f5f5ab318961b833aa09a78263f46c74efa7177885925e9cb36d5af7
+Size (freac-1.1.7.tar.gz) = 4662284 bytes
+SHA1 (patch-Makefile) = bd5951be920ed7b68ad60efed8507aeccc7ec67c
+SHA1 (patch-Makefile-commands) = 3000b9c98aa60e7422fbe8aa1e72e8e86996c8a9
