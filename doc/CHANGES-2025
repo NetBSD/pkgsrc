@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4820 2025/08/10 14:36:47 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4821 2025/08/10 14:36:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6988,3 +6988,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/fontconfig to 2.17.1 [ryoon 2025-08-10]
 	Updated x11/gtk3 to 3.24.50 [ryoon 2025-08-10]
 	Updated shells/oh-my-posh to 26.19.0 [pin 2025-08-10]
+	Updated chat/py-xmpppy to 0.7.2 [gdt 2025-08-10]
