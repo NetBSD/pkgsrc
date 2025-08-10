@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4793 2025/08/10 03:35:55 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.4794 2025/08/10 06:40:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6953,3 +6953,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Specio to 0.52 [wiz 2025-08-10]
 	Updated devel/p5-Test-Script to 1.30 [wiz 2025-08-10]
 	Updated textproc/ruby-nokogiri to 1.18.9 [tsutsui 2025-08-10]
+	Updated devel/p5-Log-Report to 1.40 [wen 2025-08-10]
