@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/10/04 01:23:19 wen Exp $
+$NetBSD: distinfo,v 1.5 2025/08/10 01:58:25 wen Exp $
 
-BLAKE2s (Future-IO-0.16.tar.gz) = f4242cd8e28b01231777aad6104c2be4b23c7813a1ba91b99fad849a9be32d9f
-SHA512 (Future-IO-0.16.tar.gz) = 9e5a9bf839127693ae028673ffa6bf47480fae1347e9b0c48b5f17380c35b221f15e9f86092165d2f04747f4652a7ce5dda7d8d43e89df8101abe07d3acb7491
-Size (Future-IO-0.16.tar.gz) = 25652 bytes
+BLAKE2s (Future-IO-0.17.tar.gz) = d012aa58af7090a7dbf09a62ada309e32f480a46a0df8f238595e99f42a3103a
+SHA512 (Future-IO-0.17.tar.gz) = 671eb8f2eee0cda55477631fd6a89bcc98495cd98e98bef55ed5b50e2b877f47451fcaed98cec48d13604351dd96ea06b69bab80246c393aa69b3940efca52b6
+Size (Future-IO-0.17.tar.gz) = 27223 bytes
