@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2025/05/28 04:43:00 adam Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/10 08:04:43 adam Exp $
 
-DISTNAME=	tox-4.26.0
+DISTNAME=	tox-4.28.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tox/}
@@ -10,17 +10,17 @@ HOMEPAGE=	https://tox.wiki/
 COMMENT=	Virtualenv-based automation of test activities
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.26.3:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-cachetools>=5.5:../../devel/py-cachetools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-cachetools>=6.1:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.2:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.6:../../comms/py-colorama
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.16.1:../../devel/py-filelock
-DEPENDS+=	${PYPKGPREFIX}-packaging>=24.2:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.3.6:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.5:../../devel/py-pluggy
-DEPENDS+=	${PYPKGPREFIX}-project-api>=1.8:../../devel/py-project-api
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.27.1:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-filelock>=3.18:../../devel/py-filelock
+DEPENDS+=	${PYPKGPREFIX}-packaging>=25:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.3.8:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-pluggy>=1.6:../../devel/py-pluggy
+DEPENDS+=	${PYPKGPREFIX}-project-api>=1.9.1:../../devel/py-project-api
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.31.2:../../devel/py-virtualenv
 
 # more unpackaged TEST_DEPENDS from pyproject.toml
 # "detect-test-pollution>=1.2",
@@ -44,8 +44,8 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=2.1:../../textproc/py-tomli
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-tomli>=2.2.1:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.14.1:../../devel/py-typing-extensions
 .endif
 
 post-install:
