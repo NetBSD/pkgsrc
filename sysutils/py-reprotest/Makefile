@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/10 09:13:08 adam Exp $
 
-DISTNAME=	reprotest-0.7.28
+DISTNAME=	reprotest-0.7.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reprotest/}
