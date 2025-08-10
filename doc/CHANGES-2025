@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4798 2025/08/10 07:24:25 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4799 2025/08/10 08:05:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6958,3 +6958,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Modern-Perl to 1.20250607 [wen 2025-08-10]
 	Updated devel/p5-Module-Find to 0.17 [wen 2025-08-10]
 	Updated devel/p5-Module-Install-Repository to 0.08 [wen 2025-08-10]
+	Updated devel/py-virtualenv to 20.33.1 [adam 2025-08-10]
+	Updated devel/py-tox to 4.28.4 [adam 2025-08-10]
