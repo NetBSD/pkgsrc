@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/04/14 20:28:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/08/10 08:21:50 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -213,6 +213,9 @@ ${PYSITELIB}/sanic/models/__init__.pyo
 ${PYSITELIB}/sanic/models/asgi.py
 ${PYSITELIB}/sanic/models/asgi.pyc
 ${PYSITELIB}/sanic/models/asgi.pyo
+${PYSITELIB}/sanic/models/ctx_types.py
+${PYSITELIB}/sanic/models/ctx_types.pyc
+${PYSITELIB}/sanic/models/ctx_types.pyo
 ${PYSITELIB}/sanic/models/futures.py
 ${PYSITELIB}/sanic/models/futures.pyc
 ${PYSITELIB}/sanic/models/futures.pyo
