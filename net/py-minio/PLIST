@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 08:15:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/10 08:29:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -53,7 +53,6 @@ ${PYSITELIB}/minio/notificationconfig.pyo
 ${PYSITELIB}/minio/objectlockconfig.py
 ${PYSITELIB}/minio/objectlockconfig.pyc
 ${PYSITELIB}/minio/objectlockconfig.pyo
-${PYSITELIB}/minio/py.typed
 ${PYSITELIB}/minio/replicationconfig.py
 ${PYSITELIB}/minio/replicationconfig.pyc
 ${PYSITELIB}/minio/replicationconfig.pyo
