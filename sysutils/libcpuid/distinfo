@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/12 22:22:26 nikita Exp $
+$NetBSD: distinfo,v 1.2 2025/08/10 13:35:20 ryoon Exp $
 
-BLAKE2s (libcpuid/v0.5.1.tar.gz) = 66c0d89cdf0350649581ff01aabaa032eafdf74f5f24d998ad4e735f81bea8cd
-SHA512 (libcpuid/v0.5.1.tar.gz) = d725bc82e5aa2db69cea7b3590afbe11d6028cf4802fde8d498b4f1cc6d823e73d71b89a453d81bf996d97b36a71f6c00d0f6e8292b72f2be8a64b5d59c01861
-Size (libcpuid/v0.5.1.tar.gz) = 166522 bytes
-SHA1 (patch-configure.ac) = 130cf88478f611b2b96f17a7040d5733eb492a5d
-SHA1 (patch-libcpuid_libcpuid_util.c) = 2b041a0829ff23acf8f6adf741d9427879cab363
+BLAKE2s (libcpuid-0.8.0.tar.gz) = fd028ef1bf65e81db86fdcb4a504395010046b641f00218ee5d9b619775f3da0
+SHA512 (libcpuid-0.8.0.tar.gz) = 5af116a9ced4cf53944480a0c8e91c18266971db134315e31e97116a4149bf13b330fb7ec6279364724f1658d2e1542c1fba02870e4ee15064481ff1fd69138d
+Size (libcpuid-0.8.0.tar.gz) = 912357 bytes
