@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4807 2025/08/10 10:38:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4808 2025/08/10 10:44:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6975,3 +6975,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fzf to 0.65.1 [wiz 2025-08-10]
 	Updated sysutils/hwdata to 0.398 [wiz 2025-08-10]
 	Updated math/imath to 3.2.0 [wiz 2025-08-10]
+	Updated devel/jj to 0.32.0 [wiz 2025-08-10]
