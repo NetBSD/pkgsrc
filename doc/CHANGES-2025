@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4796 2025/08/10 07:16:49 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4797 2025/08/10 07:21:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6956,3 +6956,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Log-Report to 1.40 [wen 2025-08-10]
 	Updated devel/p5-MetaCPAN-Client to 2.033000 [wen 2025-08-10]
 	Updated devel/p5-Modern-Perl to 1.20250607 [wen 2025-08-10]
+	Updated devel/p5-Module-Find to 0.17 [wen 2025-08-10]
