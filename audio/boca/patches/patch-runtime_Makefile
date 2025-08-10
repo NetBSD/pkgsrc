@@ -1,0 +1,15 @@
+$NetBSD: patch-runtime_Makefile,v 1.1 2025/08/10 13:41:17 ryoon Exp $
+
+* Use common option to fix linkage in pkgsrc.
+
+--- runtime/Makefile.orig	2024-08-16 21:12:59.585991835 +0000
++++ runtime/Makefile
+@@ -82,7 +82,7 @@ ifeq ($(BUILD_WIN32),True)
+ 	$(LD) --shared -o $@ $(OBJECTS) -Wl,--out-implib,$(BOCA_PATH)/$(LIBDIR)/libboca.a $(LDOPTS) $(LDFLAGS)
+ else
+ ifneq ($(BUILD_OSX),True)
+-	$(LD) --shared -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
++	$(LD) -shared -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
+ else
+ 	$(LD) -dynamiclib -o $@ $(OBJECTS) $(LDOPTS) $(LDFLAGS)
+ endif
