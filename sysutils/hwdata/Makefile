@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/07/07 04:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/10 10:35:43 wiz Exp $
 
-DISTNAME=	hwdata-0.397
+DISTNAME=	hwdata-0.398
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcrhonek/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
