@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/02/14 21:42:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/10 13:03:35 ryoon Exp $
 
-DISTNAME=	lziprecover-1.24
+DISTNAME=	lziprecover-1.25
 CATEGORIES=	archivers
 MASTER_SITES=	https://download.savannah.gnu.org/releases/lzip/lziprecover/
 
@@ -16,6 +16,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 INFO_FILES=		yes
 TEST_TARGET=		check
+USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		CXX=${CXX:Q}
 MAKE_FLAGS+=		CPPFLAGS=${CPPFLAGS:Q}
