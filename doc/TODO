@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26096 2025/08/08 21:08:08 wiz Exp $
+$NetBSD: TODO,v 1.26097 2025/08/10 08:36:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -565,6 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o drivel-3.0.5
 	o drupal-10.0.5
 	o drupal-9.5.5
+	o dunst-1.13.0
 	o eagle-8.1.0
 	o easymenu-0.7.2p1
 	o ec2-ami-tools-1.5.7
@@ -641,6 +642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o frink-2.3.1a2
 	o ftplibpp-2.0.2
 	o fuse-unionfs-2.1
+	o fzf-0.65.1
 	o gallery3-3.0.9
 	o gammu-1.42.0
 	o ganglia-3.7.5
@@ -754,6 +756,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.22.2
 	o html2wml-0.4.11
+	o hwdata-0.398
 	o hwloc-2.11
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -762,6 +765,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.2.0
 	o imlib2-1.12.4
 	o imp-6.2.12
 	o inadyn-2.8.1
@@ -795,6 +799,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.32.0
+	o jjui-0.9.1
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -843,6 +849,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.20.2
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1103,13 +1110,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-acme-4.2.0
 	o py-cassa-1.11.0
+	o py-certbot-4.2.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-docutils-0.22 [breaks qemu build, see https://sourceforge.net/p/docutils/bugs/508/]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-google-api-python-client-2.178.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
@@ -1119,9 +1129,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-5.3.0
 	o py-tokyocabinet-0.6
 	o py-torch-2.8
 	o py-trezor-0.13.10
+	o py-trove-classifiers-2025.8.6.13
 	o py-uliweb-0.6
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
@@ -1134,6 +1146,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o radare2-6.0
 	o radiance-5.4
 	o rails-6.1.0
+	o raqm-0.10.3
 	o rasmol-2.7.5.2
 	o rat-4.2.25
 	o razor-qt-0.5.2
@@ -1230,6 +1243,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o syft-0.68.1
 	o sympa-6.2.72
 	o syncstorage-0.18.3
+	o syncstorage-rs-0.19.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1313,6 +1327,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o visual-regexp-3.1
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-2.14
+	o vtk-9.5.0
 	o wMosaic-3.8.22
 	o wandio-4.2.3
 	o wap-utils-1.4.1
