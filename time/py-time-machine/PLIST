@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 08:49:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/10 08:18:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,4 +9,10 @@ ${PYSITELIB}/_time_machine.so
 ${PYSITELIB}/time_machine/__init__.py
 ${PYSITELIB}/time_machine/__init__.pyc
 ${PYSITELIB}/time_machine/__init__.pyo
+${PYSITELIB}/time_machine/__main__.py
+${PYSITELIB}/time_machine/__main__.pyc
+${PYSITELIB}/time_machine/__main__.pyo
+${PYSITELIB}/time_machine/cli.py
+${PYSITELIB}/time_machine/cli.pyc
+${PYSITELIB}/time_machine/cli.pyo
 ${PYSITELIB}/time_machine/py.typed
