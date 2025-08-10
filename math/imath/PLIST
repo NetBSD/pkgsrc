@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/09/15 10:21:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/08/10 10:38:09 wiz Exp $
 include/Imath/ImathBox.h
 include/Imath/ImathBoxAlgo.h
 include/Imath/ImathColor.h
@@ -38,8 +38,8 @@ lib/cmake/Imath/ImathConfig.cmake
 lib/cmake/Imath/ImathConfigVersion.cmake
 lib/cmake/Imath/ImathTargets-release.cmake
 lib/cmake/Imath/ImathTargets.cmake
-lib/libImath-3_1.so
-lib/libImath-3_1.so.29
-lib/libImath-3_1.so.29.11.0
+lib/libImath-3_2.so
+lib/libImath-3_2.so.30
+lib/libImath-3_2.so.30.${PKGVERSION}
 lib/libImath.so
 lib/pkgconfig/Imath.pc
