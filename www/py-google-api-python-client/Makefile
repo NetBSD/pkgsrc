@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2025/07/27 09:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/08/10 10:57:11 wiz Exp $
 
-DISTNAME=	google_api_python_client-2.177.0
+DISTNAME=	google_api_python_client-2.178.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
@@ -21,8 +21,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 USE_LANGUAGES=	# none
 
-# as of 2.177.0
-# 2 failed, 310 passed, 9 skipped, 2 warnings
+# as of 2.178.0
+# 2 failed, 310 passed, 9 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
