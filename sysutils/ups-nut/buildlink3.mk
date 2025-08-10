@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/06/28 11:36:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/08/10 21:51:59 gdt Exp $
 
 BUILDLINK_TREE+=	ups-nut
 
@@ -14,8 +14,8 @@ pkgbase:= ups-nut
 
 .if ${PKG_BUILD_OPTIONS.ups-nut:Mnss}
 .  include "../../devel/nss/buildlink3.mk"
-#.elif ${PKG_BUILD_OPTIONS.ups-nut:Mopenssl}
-#.  include "../../security/openssl/buildlink3.mk"
+.elif ${PKG_BUILD_OPTIONS.ups-nut:Mopenssl}
+.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
