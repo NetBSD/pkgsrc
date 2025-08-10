@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4799 2025/08/10 08:05:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4800 2025/08/10 08:17:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6960,3 +6960,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Module-Install-Repository to 0.08 [wen 2025-08-10]
 	Updated devel/py-virtualenv to 20.33.1 [adam 2025-08-10]
 	Updated devel/py-tox to 4.28.4 [adam 2025-08-10]
+	Updated converters/py-charset-normalizer to 3.4.3 [adam 2025-08-10]
+	Updated devel/py-freezegun to 1.5.5 [adam 2025-08-10]
+	Updated devel/py-pylint to 3.3.8 [adam 2025-08-10]
