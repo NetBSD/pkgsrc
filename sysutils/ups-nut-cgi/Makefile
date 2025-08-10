@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/05/17 23:56:37 gdt Exp $
+# $NetBSD: Makefile,v 1.81 2025/08/10 22:01:38 gdt Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
@@ -27,9 +27,16 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats-single.html.sample \
 CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 			${NUT_CONFDIR}/upsstats.html
 
+# cgi links against libupsclient, but it's in the base package.
+# Rather than fight the build system to add
+# --with-system-libnutclient, remove it from the destdir for now.
+# libnutclient is installed for reasons that are not clear, but again
+# just prune it.
 do-install:
 	(cd ${WRKSRC}/clients && env ${MAKE_ENV} \
 	    ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install-cgiexecPROGRAMS)
+	rm -f ${DESTDIR}${PREFIX}/lib/libupsclient*
+	rm -f ${DESTDIR}${PREFIX}/lib/libnutclient*
 	for f in hosts.conf.sample upsset.conf.sample \
 	    upsstats.html.sample upsstats-single.html.sample; do \
 		${INSTALL_DATA} ${WRKSRC}/conf/$$f ${DESTDIR}${NUT_EGDIR}; \
