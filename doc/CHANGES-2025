@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4809 2025/08/10 10:46:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4810 2025/08/10 10:51:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6977,3 +6977,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/imath to 3.2.0 [wiz 2025-08-10]
 	Updated devel/jj to 0.32.0 [wiz 2025-08-10]
 	Updated devel/jjui to 0.9.1 [wiz 2025-08-10]
+	Updated graphics/libheif to 1.20.2 [wiz 2025-08-10]
