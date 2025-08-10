@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:43 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/08/10 02:19:56 wen Exp $
 
-BLAKE2s (Hash-Merge-Simple-0.051.tar.gz) = 19eaf7a4caa246d7eb894c3931d05546a7d170a97d2cb55b071bc186f0c5d0f2
-SHA512 (Hash-Merge-Simple-0.051.tar.gz) = 8db850144593632ce8ac8a560dac6670814a9ce3d1091d6aa42ab0eadca4b350671103b1de906d562aeaa0934fd58bd4e557821c5bcd730a10849f8505f65c4c
-Size (Hash-Merge-Simple-0.051.tar.gz) = 4181 bytes
+BLAKE2s (Hash-Merge-Simple-0.052.tar.gz) = 00f27d46c406c69f8aba645eb3f469232594ff9ead8b0e68ec052ffaffdc47f1
+SHA512 (Hash-Merge-Simple-0.052.tar.gz) = e682f1636ebd5a786820e4355bcc20e64ded2a95b5bec08b62782e7acde3533f99da901590b4264a500a26df2c0403927746544a8cfba5841da32027492ee8fa
+Size (Hash-Merge-Simple-0.052.tar.gz) = 17507 bytes
