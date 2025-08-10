@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2022/04/12 22:22:26 nikita Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/10 13:35:20 ryoon Exp $
 
-DISTNAME=		v${VERSION}
-PKGNAME=		${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-VERSION=		0.5.1
-GITHUB_PROJECT=		libcpuid
-GITHUB_TAG=		${DISTNAME}
+DISTNAME=		libcpuid-0.8.0
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=anrieff/}
-DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_PROJECT=		libcpuid
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/anrieff/libcpuid/
@@ -19,8 +16,8 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES=		c
 USE_TOOLS=		autoconf automake
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf --install
+# Disable docs
+CONFIGURE_ENV+=		ac_cv_prog_DOXYGEN= #empty
 
 # only for a couple of archs, specify here.
 
