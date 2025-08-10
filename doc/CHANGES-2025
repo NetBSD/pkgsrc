@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4801 2025/08/10 08:30:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4802 2025/08/10 08:59:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6967,3 +6967,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-sanic to 25.3.0 [adam 2025-08-10]
 	Updated misc/indi to 2.1.5 [adam 2025-08-10]
 	Updated net/py-minio to 7.2.16 [adam 2025-08-10]
+	Updated sysutils/ansible-core to 2.19.0 [adam 2025-08-10]
+	Updated sysutils/ansible-lint to 25.7.0 [adam 2025-08-10]
