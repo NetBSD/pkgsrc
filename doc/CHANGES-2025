@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4794 2025/08/10 06:40:56 wen Exp $
+$NetBSD: CHANGES-2025,v 1.4795 2025/08/10 07:14:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6954,3 +6954,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Script to 1.30 [wiz 2025-08-10]
 	Updated textproc/ruby-nokogiri to 1.18.9 [tsutsui 2025-08-10]
 	Updated devel/p5-Log-Report to 1.40 [wen 2025-08-10]
+	Updated devel/p5-MetaCPAN-Client to 2.033000 [wen 2025-08-10]
