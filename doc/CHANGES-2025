@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4831 2025/08/11 09:19:55 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4832 2025/08/11 09:21:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7004,3 +7004,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-redmine60 to 6.0.6 [taca 2025-08-11]
 	Updated devel/ruby-redmine51 to 5.1.9 [taca 2025-08-11]
 	Updated security/php-pecl-mcrypt to 1.0.9 [taca 2025-08-11]
+	Updated www/php-apcu to 5.1.26 [taca 2025-08-11]
