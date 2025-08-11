@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2025/07/19 21:17:44 tsutsui Exp $
+$NetBSD: distinfo,v 1.40 2025/08/11 08:34:02 tsutsui Exp $
 
-BLAKE2s (sayaka-3.8.3.tar.gz) = e9e09d69885453c35bab4614aed01d85a38bf5697a3674d54789ec8658241e76
-SHA512 (sayaka-3.8.3.tar.gz) = a28cc510ba78ec2a5f672b0c6b0ba1f8c68a883252dbf2382601c77272579eb7e8f617410fc7933e2e813626244171e883efa2bfda5d6169c359a0c55601df16
-Size (sayaka-3.8.3.tar.gz) = 288905 bytes
+BLAKE2s (sayaka-3.8.4.tar.gz) = 74ad423e8ee5a555eba5ab0acb014a29859b382e360abec9092604ce82254eb1
+SHA512 (sayaka-3.8.4.tar.gz) = 25fe89d04ad5138888b58b98fac2522683c8c9e3d0ad8f7671f887848c0928634dd215ac52743ffccadf528d5185a5ec7876082567a5d7329852d25878e834e7
+Size (sayaka-3.8.4.tar.gz) = 289326 bytes
