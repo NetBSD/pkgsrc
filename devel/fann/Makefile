@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/01/24 18:36:22 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/11 08:51:35 wiz Exp $
 
 PKGREVISION=		2
 
@@ -10,11 +10,15 @@ LICENSE=		gnu-lgpl-v2.1
 
 USE_TOOLS+=		cmake
 
-USE_LANGUAGES+=	c99
+USE_LANGUAGES+=	c
 # Perhaps not, but cmake complains
 USE_LANGUAGES+=	c++
 
+USE_CC_FEATURES+=	c99
+
 PKGCONFIG_OVERRIDE+=	cmake/fann.pc.cmake
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
