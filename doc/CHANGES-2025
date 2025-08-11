@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4825 2025/08/10 22:04:28 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4826 2025/08/11 06:28:43 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6997,3 +6997,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ups-nut-cgi to 2.8.4 [gdt 2025-08-10]
 	Updated sysutils/ups-nut-snmp to 2.8.4 [gdt 2025-08-10]
 	Updated sysutils/ups-nut-usb to 2.8.4 [gdt 2025-08-10]
+	Updated comms/asterisk22 to 22.5.1 [jnemeth 2025-08-11]
