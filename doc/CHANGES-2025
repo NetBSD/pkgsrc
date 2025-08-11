@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4866 2025/08/11 15:37:03 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4867 2025/08/11 15:38:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7043,3 +7043,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-faraday-multipart to 1.1.1 [taca 2025-08-11]
 	Updated www/ruby-faraday-net_http to 3.4.1 [taca 2025-08-11]
 	Updated www/ruby-faraday-net_http_persistent to 2.3.1 [taca 2025-08-11]
+	Updated www/ruby-faraday-patron to 2.0.2 [taca 2025-08-11]
