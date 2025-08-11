@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/09 09:28:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/11 14:45:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/metrics/capture.rb
+${GEM_LIBDIR}/bake/metrics/provider.rb
 ${GEM_LIBDIR}/lib/metrics.rb
 ${GEM_LIBDIR}/lib/metrics/backend.rb
 ${GEM_LIBDIR}/lib/metrics/backend/capture.rb
