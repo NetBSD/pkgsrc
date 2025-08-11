@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/11 12:25:51 wiz Exp $
+
+https://github.com/lensfun/lensfun/issues/2520
+
+--- CMakeLists.txt.orig	2025-08-11 12:24:18.939674339 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,4 @@
+-# require at least cmake 2.8.12
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12 FATAL_ERROR )
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5 FATAL_ERROR )
+ 
+ # path for helper modules
+ set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${CMAKE_SOURCE_DIR}/cmake/modules")
