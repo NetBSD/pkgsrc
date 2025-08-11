@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4876 2025/08/11 16:10:02 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4877 2025/08/11 16:14:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7053,3 +7053,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-sass-embedded to 1.89.2 [taca 2025-08-11]
 	Updated wm/enlightenment16 to 1.0.31 [gutteridge 2025-08-11]
 	Updated www/thin to 2.0.1 [taca 2025-08-11]
+	Updated www/php-concrete-cms to 9.4.3 [taca 2025-08-11]
