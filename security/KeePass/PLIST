@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2019/09/11 11:36:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/11 13:06:55 kikadf Exp $
 bin/KeePass
 libexec/KeePass/KeePass.XmlSerializers.dll
 libexec/KeePass/KeePass.chm
+libexec/KeePass/KeePass.config.xml
 libexec/KeePass/KeePass.exe
 libexec/KeePass/KeePass.exe.config
-libexec/KeePass/KeePassLibC32.dll
-libexec/KeePass/KeePassLibC64.dll
+libexec/KeePass/KeePassLibN.a64.dll
+libexec/KeePass/KeePassLibN.x32.dll
+libexec/KeePass/KeePassLibN.x64.dll
 libexec/KeePass/License.txt
 libexec/KeePass/ShInstUtil.exe
 libexec/KeePass/XSL/KDBX_Common.xsl
