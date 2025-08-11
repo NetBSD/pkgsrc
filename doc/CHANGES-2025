@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4854 2025/08/11 15:13:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4855 2025/08/11 15:15:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7031,3 +7031,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-traces to 0.16.2 [taca 2025-08-11]
 	Updated finance/ruby-braintree to 4.30.0 [taca 2025-08-11]
 	Updated graphics/ruby-color to 2.1.1 [taca 2025-08-11]
+	Updated mail/ruby-mime-types-data to 3.2025.0805 [taca 2025-08-11]
