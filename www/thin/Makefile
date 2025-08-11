@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2023/04/30 14:55:01 taca Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/11 16:09:42 taca Exp $
 
-DISTNAME=	thin-1.8.2
+DISTNAME=	thin-2.0.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/macournoyer/thin
 COMMENT=	Fast and very simple Ruby web server
-LICENSE=	mit
+LICENSE=	ruby-license OR 2-clause-bsd OR gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.6.0:../../www/ruby-rack
 DEPENDS+=	${RUBY_PKGPREFIX}-daemons>=1.0.9:../../misc/ruby-daemons
