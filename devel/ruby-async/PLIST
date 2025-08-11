@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2025/07/27 15:50:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/08/11 14:35:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/agent.md
+${GEM_LIBDIR}/context/best-practices.md
+${GEM_LIBDIR}/context/debugging.md
+${GEM_LIBDIR}/context/getting-started.md
+${GEM_LIBDIR}/context/index.yaml
+${GEM_LIBDIR}/context/scheduler.md
+${GEM_LIBDIR}/context/tasks.md
+${GEM_LIBDIR}/context/thread-safety.md
 ${GEM_LIBDIR}/lib/async.rb
 ${GEM_LIBDIR}/lib/async/barrier.md
 ${GEM_LIBDIR}/lib/async/barrier.rb
