@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/05/29 14:57:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/08/11 15:11:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -239,6 +239,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/transaction_line_item_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_payment_facilitator_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/transaction_transfer_type_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/transaction_us_bank_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/us_bank_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/us_bank_account_verification_search_spec.rb
