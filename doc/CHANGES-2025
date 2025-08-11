@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4828 2025/08/11 08:34:17 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.4829 2025/08/11 08:38:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7001,3 +7001,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.8.11 [adam 2025-08-11]
 	Updated devel/py-coverage to 7.10.3 [adam 2025-08-11]
 	Updated net/sayaka to 3.8.4 [tsutsui 2025-08-11]
+	Updated devel/ruby-redmine60 to 6.0.6 [taca 2025-08-11]
