@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4879 2025/08/11 16:52:03 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4880 2025/08/11 17:24:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6982,7 +6982,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-trove-classifiers to 2025.8.6.13 [wiz 2025-08-10]
 	Updated archivers/lzip to 1.25 [ryoon 2025-08-10]
 	Updated archivers/lziprecover to 1.25 [ryoon 2025-08-10]
-	Updated sysutils/libcpuid to 0.8.0 [ryoon 2025-08-10]
 	Added audio/boca version 1.0.7 [ryoon 2025-08-10]
 	Added audio/freac version 1.1.7 [ryoon 2025-08-10]
 	Updated fonts/fontconfig to 2.17.1 [ryoon 2025-08-10]
@@ -7013,6 +7012,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xkeyboard-config to 2.45 [wiz 2025-08-11]
 	Updated devel/py-zope.deferredimport to 5.1 [adam 2025-08-11]
 	Updated devel/py-zope.schema to 7.1 [adam 2025-08-11]
+	Updated net/py-aio-pika to 9.5.7 [adam 2025-08-11]
+	Updated textproc/py-tree-sitter to 0.25.1 [adam 2025-08-11]
 	Added www/ruby-llhttp-ffi version 0.5.1 [ryoon 2025-08-11]
 	Updated www/ruby-http to 5.3.1 [ryoon 2025-08-11]
 	Added www/ruby-neocities version 0.1.1 [ryoon 2025-08-11]
