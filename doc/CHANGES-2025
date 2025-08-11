@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4852 2025/08/11 15:10:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4853 2025/08/11 15:11:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7029,3 +7029,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-hoe to 4.3.0 [taca 2025-08-11]
 	Updated devel/ruby-metrics to 0.13.0 [taca 2025-08-11]
 	Updated devel/ruby-traces to 0.16.2 [taca 2025-08-11]
+	Updated finance/ruby-braintree to 4.30.0 [taca 2025-08-11]
