@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:20:10 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/08/11 08:49:18 wiz Exp $
 
 BLAKE2s (yajl-2.1.0.tar.gz) = 549a95149082f503efca7ee48538c33d93c22a5767386a3f85852d0bc28ebb35
 SHA512 (yajl-2.1.0.tar.gz) = 671c06081e01584d170b614dc0685f49c6d7448b673d8ed99749ce4e0ca73875af9f62df7787b919ceaecab213668ac1d2a5800b6831731ec146353552f36985
 Size (yajl-2.1.0.tar.gz) = 84039 bytes
+SHA1 (patch-CMakeLists.txt) = f5440d21c7e6f8ce8f1007300060208416a3b291
+SHA1 (patch-reformatter_CMakeLists.txt) = 0130cfd5e578197e4a000f90cc2d81aaf2e108ab
 SHA1 (patch-src_CMakeLists.txt) = 6999cdcb8450ec3abd1c81b8a8ab3cab8c9d008e
+SHA1 (patch-verify_CMakeLists.txt) = 2522309edb55a3a19c3ad3949865da98ec785d03
