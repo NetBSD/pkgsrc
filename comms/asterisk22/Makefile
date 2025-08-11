@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2025/05/05 12:40:30 manu Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/11 06:28:13 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-22.0.0
-PKGREVISION=	10
+DISTNAME=	asterisk-22.5.1
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -50,6 +49,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
 CONFIGURE_ARGS+=	--without-unbound
+CONFIGURE_ENV+=		ac_cv_path_XMLSTARLET=":"
 # XXX uncomment below to debug build issues
 #CONFIGURE_ENV+=		PJPROJECT_CONFIGURE_OPTS="NOISY_BUILD=yes"
 
@@ -140,7 +140,7 @@ CONFIGURE_ARGS+=	--without-timerfd
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.14.1
+PJPROJ_VERSION=	2.15.1
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -207,7 +207,7 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 .if !empty(PKG_OPTIONS:Masterisk-config)
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
 .  for f in acl.conf adsi.conf aeap.conf agents.conf alarmreceiver.conf	\
-	amd.conf app_skel.conf ari.conf	 ast_debug_tools.conf		\
+	amd.conf app_skel.conf ari.conf ast_debug_tools.conf		\
 	asterisk.adsi calendar.conf ccss.conf cdr.conf			\
 	cdr_adaptive_odbc.conf cdr_beanstalkd.conf cdr_custom.conf	\
 	cdr_manager.conf cdr_odbc.conf cdr_pgsql.conf			\
@@ -233,14 +233,14 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	rtp.conf say.conf sla.conf smdi.conf sorcery.conf ss7.timers	\
 	stasis.conf statsd.conf stir_shaken.conf telcordia-1.adsi	\
 	test_sorcery.conf udptl.conf unistim.conf users.conf		\
-	voicemail.conf xmpp.conf
+	voicemail.conf websocket_client.conf xmpp.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
 .  endfor
 .endif
 
 PTHREAD_OPTS+=	require native
 
-.if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
+.if ${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h)
 post-patch:
 	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
 .endif
@@ -254,6 +254,19 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.0.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.1.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.1.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.2.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.3.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.3.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
