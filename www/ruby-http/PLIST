@@ -1,20 +1,27 @@
-@comment $NetBSD: PLIST,v 1.14 2020/06/07 15:24:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/08/11 11:56:55 ryoon Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.coveralls.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/.rubocop/layout.yml
+${GEM_LIBDIR}/.rubocop/metrics.yml
+${GEM_LIBDIR}/.rubocop/rspec.yml
+${GEM_LIBDIR}/.rubocop/style.yml
+${GEM_LIBDIR}/.rubocop_todo.yml
 ${GEM_LIBDIR}/.yardopts
-${GEM_LIBDIR}/CHANGES.md
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CHANGES_OLD.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/http.gemspec
 ${GEM_LIBDIR}/lib/http.rb
+${GEM_LIBDIR}/lib/http/base64.rb
 ${GEM_LIBDIR}/lib/http/chainable.rb
 ${GEM_LIBDIR}/lib/http/client.rb
 ${GEM_LIBDIR}/lib/http/connection.rb
@@ -26,9 +33,11 @@ ${GEM_LIBDIR}/lib/http/features/auto_inflate.rb
 ${GEM_LIBDIR}/lib/http/features/instrumentation.rb
 ${GEM_LIBDIR}/lib/http/features/logging.rb
 ${GEM_LIBDIR}/lib/http/features/normalize_uri.rb
+${GEM_LIBDIR}/lib/http/features/raise_error.rb
 ${GEM_LIBDIR}/lib/http/headers.rb
 ${GEM_LIBDIR}/lib/http/headers/known.rb
 ${GEM_LIBDIR}/lib/http/headers/mixin.rb
+${GEM_LIBDIR}/lib/http/headers/normalizer.rb
 ${GEM_LIBDIR}/lib/http/mime_type.rb
 ${GEM_LIBDIR}/lib/http/mime_type/adapter.rb
 ${GEM_LIBDIR}/lib/http/mime_type/json.rb
@@ -43,6 +52,10 @@ ${GEM_LIBDIR}/lib/http/response/inflater.rb
 ${GEM_LIBDIR}/lib/http/response/parser.rb
 ${GEM_LIBDIR}/lib/http/response/status.rb
 ${GEM_LIBDIR}/lib/http/response/status/reasons.rb
+${GEM_LIBDIR}/lib/http/retriable/client.rb
+${GEM_LIBDIR}/lib/http/retriable/delay_calculator.rb
+${GEM_LIBDIR}/lib/http/retriable/errors.rb
+${GEM_LIBDIR}/lib/http/retriable/performer.rb
 ${GEM_LIBDIR}/lib/http/timeout/global.rb
 ${GEM_LIBDIR}/lib/http/timeout/null.rb
 ${GEM_LIBDIR}/lib/http/timeout/per_operation.rb
@@ -56,7 +69,9 @@ ${GEM_LIBDIR}/spec/lib/http/features/auto_deflate_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/features/auto_inflate_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/features/instrumentation_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/features/logging_spec.rb
+${GEM_LIBDIR}/spec/lib/http/features/raise_error_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers/mixin_spec.rb
+${GEM_LIBDIR}/spec/lib/http/headers/normalizer_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/body_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/features_spec.rb
@@ -75,6 +90,9 @@ ${GEM_LIBDIR}/spec/lib/http/response/body_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response/parser_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response/status_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/response_spec.rb
+${GEM_LIBDIR}/spec/lib/http/retriable/delay_calculator_spec.rb
+${GEM_LIBDIR}/spec/lib/http/retriable/performer_spec.rb
+${GEM_LIBDIR}/spec/lib/http/uri/normalizer_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/uri_spec.rb
 ${GEM_LIBDIR}/spec/lib/http_spec.rb
 ${GEM_LIBDIR}/spec/regression_specs.rb
@@ -84,9 +102,11 @@ ${GEM_LIBDIR}/spec/support/capture_warning.rb
 ${GEM_LIBDIR}/spec/support/dummy_server.rb
 ${GEM_LIBDIR}/spec/support/dummy_server/servlet.rb
 ${GEM_LIBDIR}/spec/support/fakeio.rb
+${GEM_LIBDIR}/spec/support/fuubar.rb
 ${GEM_LIBDIR}/spec/support/http_handling_shared.rb
 ${GEM_LIBDIR}/spec/support/proxy_server.rb
 ${GEM_LIBDIR}/spec/support/servers/config.rb
 ${GEM_LIBDIR}/spec/support/servers/runner.rb
+${GEM_LIBDIR}/spec/support/simplecov.rb
 ${GEM_LIBDIR}/spec/support/ssl_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
