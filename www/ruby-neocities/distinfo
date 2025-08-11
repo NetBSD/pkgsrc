@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/11 12:00:36 ryoon Exp $
+
+BLAKE2s (neocities-0.1.1.gem) = 0be5d278e1eb38e55c268096b490fa8cd281a50b7ae838e93d8afb6ea6bdca00
+SHA512 (neocities-0.1.1.gem) = 468237439040c063fbbdc603242ffd2bba1d05b3657f4eee1460fdeac82bf9ce372458cfdecfa54355411a7c608786141e1f6cf21ad790d9af6568a9e9c075d5
+Size (neocities-0.1.1.gem) = 15872 bytes
