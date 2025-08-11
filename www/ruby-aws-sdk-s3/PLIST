@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/01/19 16:50:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/08/11 15:29:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -69,6 +69,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/file_downloader.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/file_part.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/file_uploader.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/legacy_signer.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/multipart_download_error.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/multipart_file_uploader.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/multipart_stream_uploader.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/multipart_upload.rb
