@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4835 2025/08/11 10:01:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4836 2025/08/11 11:00:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7011,3 +7011,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-types-yaml to 6.0.12.20250809 [adam 2025-08-11]
 	Updated security/php-gnupg to 1.5.4 [taca 2025-08-11]
 	Updated x11/xkeyboard-config to 2.45 [wiz 2025-08-11]
+	Updated devel/py-zope.deferredimport to 5.1 [adam 2025-08-11]
+	Updated devel/py-zope.schema to 7.1 [adam 2025-08-11]
