@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/11 16:27:08 gutteridge Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,3 +13,4 @@ ${PYSITELIB}/cmudict/data/cmudict.dict
 ${PYSITELIB}/cmudict/data/cmudict.phones
 ${PYSITELIB}/cmudict/data/cmudict.symbols
 ${PYSITELIB}/cmudict/data/cmudict.vp
+${PYSITELIB}/cmudict/py.typed
