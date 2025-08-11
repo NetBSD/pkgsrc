@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/08/11 08:33:14 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/11 11:58:19 wiz Exp $
 
 DISTNAME=	x265_4.1
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -18,6 +18,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PIC=ON
 # Set version here instead of relying on git; see patch-CMakeLists.txt
 CMAKE_CONFIGURE_ARGS+=	-DX265_VERSION=${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=	-DX265_LATEST_TAG=${PKGVERSION_NOREV}
+# https://bitbucket.org/multicoreware/x265_git/issues/1008/build-fails-with-cmake-4
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=		cr
