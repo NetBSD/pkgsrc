@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/08/11 11:51:08 ryoon Exp $
+
+BLAKE2s (llhttp-ffi-0.5.1.gem) = 1b887370a7799a9eaa9062f5afbbfdc2fdfcbcd1a90a1644417c272b2d991460
+SHA512 (llhttp-ffi-0.5.1.gem) = 78a88af2f46c7715e45ea0be9a397f7ea5eded264779ff99e4634b6abb38e8f4194cd5b61acd8b9d3913ce8b3ba11f95ae73bab4cc4ce1a79d747d2cb9b9f506
+Size (llhttp-ffi-0.5.1.gem) = 97792 bytes
+SHA1 (patch-.._llhttp-ffi-0.5.1.gemspec) = cb764fd390579c048b0739c0e61a7dd459ed1589
