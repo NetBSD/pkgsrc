@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2025/02/18 10:05:03 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/08/11 11:50:23 wiz Exp $
 
 BLAKE2s (double-conversion-3.3.1.tar.gz) = bc30c0c18e9a2e3e68ac098432b9e7615d4675f3c5ca443d5ac48328f91286fd
 SHA512 (double-conversion-3.3.1.tar.gz) = 60cab2fe623204cfa8737150e6ffcae091266180461dba377231e4fe8dccf712e74c643cd317b62266240ab82f1c0f820cf825038d627934d2dd0af1426f0cca
 Size (double-conversion-3.3.1.tar.gz) = 7035094 bytes
+SHA1 (patch-CMakeLists.txt) = d59e104afbf7fdd98b4b3e36204dbdd9d5d5b31c
 SHA1 (patch-double-conversion_utils.h) = 78400f52773ccd6e5780c43865a740e01c299c8b

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/08/11 08:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/11 11:50:23 wiz Exp $
 
 DISTNAME=	double-conversion-3.3.1
 CATEGORIES=	math converters
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
