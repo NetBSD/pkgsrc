@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/12/11 14:31:38 taca Exp $
+$NetBSD: distinfo,v 1.11 2025/08/11 15:43:24 taca Exp $
 
-BLAKE2s (mustermann-3.0.3.gem) = 59a68dfac646110abe711eceafb535582e8b627bd6115f63664179ffe3244657
-SHA512 (mustermann-3.0.3.gem) = d205985a5da83d83248899642ed359056b0cdb511e77d51309319c2f8d8b6c84040e9e1d3a56b7f83a0b26aed4b344f4df371b310e419c20170f0a486e89ba6f
-Size (mustermann-3.0.3.gem) = 50176 bytes
+BLAKE2s (mustermann-3.0.4.gem) = bdd3d600be38b65f97423ae3fba536c7d1e9d382b51e860810cfccede2e87d86
+SHA512 (mustermann-3.0.4.gem) = 5815e898c9b6b3a7126ab17aa7a742c9f81d17ef948ea3cf24d63bbaf196bc004f1e7f439e018d8a32068799fbc8cfda1f0ad6d58e232f96350ff21419550765
+Size (mustermann-3.0.4.gem) = 50176 bytes
