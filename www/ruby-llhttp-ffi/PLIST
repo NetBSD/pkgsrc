@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/11 11:51:08 ryoon Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/gem_make.out
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/Rakefile
+${GEM_LIBDIR}/ext/llhttp/api.c
+${GEM_LIBDIR}/ext/llhttp/extconf.rb
+${GEM_LIBDIR}/ext/llhttp/http.c
+${GEM_LIBDIR}/ext/llhttp/llhttp.c
+${GEM_LIBDIR}/ext/llhttp/llhttp.h
+${GEM_LIBDIR}/ext/llhttp/llhttp_ext.c
+${GEM_LIBDIR}/ext/${MACHINE_ARCH}-${LOWER_OPSYS}/libllhttp-ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/ext/${MACHINE_ARCH}-${LOWER_OPSYS}/llhttp/api.o
+${GEM_LIBDIR}/ext/${MACHINE_ARCH}-${LOWER_OPSYS}/llhttp/http.o
+${GEM_LIBDIR}/ext/${MACHINE_ARCH}-${LOWER_OPSYS}/llhttp/llhttp.o
+${GEM_LIBDIR}/ext/${MACHINE_ARCH}-${LOWER_OPSYS}/llhttp/llhttp_ext.o
+${GEM_LIBDIR}/lib/llhttp.rb
+${GEM_LIBDIR}/lib/llhttp/delegate.rb
+${GEM_LIBDIR}/lib/llhttp/error.rb
+${GEM_LIBDIR}/lib/llhttp/parser.rb
+${GEM_LIBDIR}/lib/llhttp/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
