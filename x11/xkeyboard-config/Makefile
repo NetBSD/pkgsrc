@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2024/02/14 08:13:23 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/11 10:01:47 wiz Exp $
 
-DISTNAME=		xkeyboard-config-2.41
+DISTNAME=		xkeyboard-config-2.45
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=data/${PKGBASE}/}
 EXTRACT_SUFX=		.tar.xz
@@ -18,8 +18,6 @@ CONFLICTS+=		xkbdata-[0-9]*
 USE_TOOLS+=		msgfmt perl pkg-config
 PKGCONFIG_OVERRIDE+=	xkeyboard-config.pc.in
 PYTHON_FOR_BUILD_ONLY=	tool
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		XKBCOMPDIR
