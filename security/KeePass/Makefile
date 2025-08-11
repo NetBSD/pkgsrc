@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/04/24 14:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/11 13:06:55 kikadf Exp $
 
-DISTNAME=	KeePass-2.44
-PKGREVISION=	24
+DISTNAME=	KeePass-2.59
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepass/}
 EXTRACT_SUFX=	.zip
@@ -20,13 +19,15 @@ INSTALLATION_DIRS+=	share/applications
 
 do-build:
 	${ECHO} '#!/bin/sh' > ${WRKSRC}/KeePass
-	${ECHO} "${PREFIX}/bin/mono ${PREFIX}/libexec/KeePass/KeePass.exe "'"$$@"' >> ${WRKSRC}/KeePass
+	${ECHO} 'export LD_LIBRARY_PATH=/usr/lib:/usr/X11R7/lib:/usr/pkg/lib'>> ${WRKSRC}/KeePass
+	${ECHO} "${PREFIX}/bin/mono --verify-all ${PREFIX}/libexec/KeePass/KeePass.exe "'"$$@"' >> ${WRKSRC}/KeePass
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/KeePass ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/*.* ${DESTDIR}${PREFIX}/libexec/KeePass
 	${INSTALL_DATA} ${WRKSRC}/XSL/* ${DESTDIR}${PREFIX}/libexec/KeePass/XSL
 	${INSTALL_DATA} ${FILESDIR}/keepass.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${FILESDIR}/KeePass.config.xml ${DESTDIR}${PREFIX}/libexec/KeePass
 
 .include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
