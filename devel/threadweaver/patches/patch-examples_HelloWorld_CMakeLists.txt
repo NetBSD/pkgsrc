@@ -1,0 +1,24 @@
+$NetBSD: patch-examples_HelloWorld_CMakeLists.txt,v 1.1 2025/08/11 20:37:43 wiz Exp $
+
+Fix build with cmake 4.
+https://github.com/KDE/threadweaver/commit/f3e1801852a9fa27db7775131e5c00882d5d32a1
+
+--- examples/HelloWorld/CMakeLists.txt.orig	2024-05-04 11:44:11.000000000 +0000
++++ examples/HelloWorld/CMakeLists.txt
+@@ -2,15 +2,10 @@
+ # https://cmake.org/documentation/
+ # https://community.kde.org/Guidelines_and_HOWTOs/CMake
+ ##@@snippet_begin(adding_tw_1)
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.16)
+ find_package(ECM 1.1.0 REQUIRED NO_MODULE)
+ ##@@snippet_end
+ 
+-if(POLICY CMP0063)
+-    cmake_policy(SET CMP0063 NEW)
+-endif()
+-
+-
+ if (NOT TARGET KF5ThreadWeaver)
+   # Find the ThreadWeaver framework when we compiling this example stand-alone
+ ##@@snippet_begin(adding_tw_2)
