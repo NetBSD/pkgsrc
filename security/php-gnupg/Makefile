@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/06/05 15:03:01 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/11 09:51:12 taca Exp $
 
 MODNAME=		gnupg
-PECL_VERSION=		1.5.3
+PECL_VERSION=		1.5.4
 CATEGORIES=		security
 
 MAINTAINER=		tpaul@NetBSD.org
