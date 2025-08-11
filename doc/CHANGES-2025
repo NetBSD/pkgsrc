@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4846 2025/08/11 13:32:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4847 2025/08/11 14:29:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7023,3 +7023,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/qca2-qt5-gnupg to 2.3.10 [wiz 2025-08-11]
 	Updated security/qca2-qt5-ossl to 2.3.10 [wiz 2025-08-11]
 	Updated security/qca2-qt6 to 2.3.10 [wiz 2025-08-11]
+	Updated databases/ruby-pg to 1.6.1 [taca 2025-08-11]
