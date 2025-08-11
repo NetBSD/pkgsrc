@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4827 2025/08/11 06:56:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4828 2025/08/11 08:34:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk22 to 22.5.1 [jnemeth 2025-08-11]
 	Updated net/yt-dlp to 2025.8.11 [adam 2025-08-11]
 	Updated devel/py-coverage to 7.10.3 [adam 2025-08-11]
+	Updated net/sayaka to 3.8.4 [tsutsui 2025-08-11]
