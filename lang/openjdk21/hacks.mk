@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2023/11/22 14:06:50 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.2 2025/08/11 18:06:32 pho Exp $
 
 .if !defined(OPENJDK17_HACKS_MK)
 OPENJDK17_HACKS_MK=	# empty
@@ -18,9 +18,12 @@ post-wrapper:
 # JDK can correctly build itself. Compiling or running programs other than
 # openjdk itself on such hardware may still cause unexpected behaviour.
 #
-
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)	|| \
-	!empty(MACHINE_PLATFORM:MNetBSD-*-aarch64)
+# The issue has been fixed in OpenJDK 21 for aarch64. We aren't sure if
+# it's still an issue on 32bit ARM. Probably not? You know when the issue
+# bites you: javac enters into an infinite loop while parsing subnormal
+# numeric constants.
+#
+.if ${MACHINE_PLATFORM:MNetBSD-*-*arm*}
 PKG_HACKS+=		broken-ieee-floats
 SUBST_CLASSES+=		fpu
 SUBST_STAGE.fpu=	pre-build
