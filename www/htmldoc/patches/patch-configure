@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/08/11 16:31:31 schmonz Exp $
+
+Compile one (auto-selected) arch on macOS.
+
+--- configure.orig	2025-08-11 16:29:15.540457333 +0000
++++ configure
+@@ -6441,7 +6441,7 @@ rm -f core conftest.err conftest.$ac_obj
+         if test "$host_os_name" = darwin -a x$enable_debug != xyes
+ then :
+ 
+-        OPTIM="$OPTIM -mmacosx-version-min=10.14 -arch x86_64 -arch arm64"
++        OPTIM="$OPTIM -mmacosx-version-min=10.14"
+ 
+ fi
+ 
