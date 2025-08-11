@@ -1,4 +1,4 @@
-$NetBSD: patch-include_rapidjson_document.h,v 1.1 2024/06/18 10:06:21 markd Exp $
+$NetBSD: patch-include_rapidjson_document.h,v 1.2 2025/08/11 12:04:14 wiz Exp $
 
 From Fedora
 From 1257fe9096b70cc278f9d6e4029776b50df5d5cf Mon Sep 17 00:00:00 2001
@@ -13,7 +13,7 @@ Subject: [PATCH 2/7] Explicitly disable copy assignment operator
 
 diff --git a/include/rapidjson/document.h b/include/rapidjson/document.h
 index e3e20dfb..b0f1f70b 100644
---- include/rapidjson/document.h
+--- include/rapidjson/document.h.orig	2016-08-25 07:59:05.000000000 +0000
 +++ include/rapidjson/document.h
 @@ -316,8 +316,6 @@ struct GenericStringRef {
  
@@ -23,8 +23,8 @@ index e3e20dfb..b0f1f70b 100644
 -
      //! implicit conversion to plain CharType pointer
      operator const Ch *() const { return s; }
-
-@@ -326,6 +324,8 @@ private:
+ 
+@@ -328,6 +326,8 @@ private:
      //! Disallow construction from non-const array
      template<SizeType N>
      GenericStringRef(CharType (&str)[N]) /* = delete */;
