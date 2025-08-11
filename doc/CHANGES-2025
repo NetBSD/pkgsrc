@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4840 2025/08/11 12:19:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4841 2025/08/11 12:33:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7017,3 +7017,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-http to 5.3.1 [ryoon 2025-08-11]
 	Added www/ruby-neocities version 0.1.1 [ryoon 2025-08-11]
 	Updated audio/game-music-emu to 0.6.4 [wiz 2025-08-11]
+	Updated textproc/json-schema to 1.4 [wiz 2025-08-11]
