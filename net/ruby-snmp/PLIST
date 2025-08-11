@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/04 16:05:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/11 15:20:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/ACCOUNTING-CONTROL-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/ADSL-LINE-EXT-MIB.yaml
@@ -272,6 +274,7 @@ ${GEM_LIBDIR}/data/ruby/snmp/mibs/VDSL-LINE-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/VPN-TC-STD-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/VRRP-MIB.yaml
 ${GEM_LIBDIR}/data/ruby/snmp/mibs/WWW-MIB.yaml
+${GEM_LIBDIR}/dump_yaml.rb
 ${GEM_LIBDIR}/examples/datetime.rb
 ${GEM_LIBDIR}/examples/dump.rb
 ${GEM_LIBDIR}/examples/get.rb
@@ -280,6 +283,7 @@ ${GEM_LIBDIR}/examples/link_down.rb
 ${GEM_LIBDIR}/examples/log_traps.rb
 ${GEM_LIBDIR}/examples/set.rb
 ${GEM_LIBDIR}/examples/walk.rb
+${GEM_LIBDIR}/import.rb
 ${GEM_LIBDIR}/lib/snmp.rb
 ${GEM_LIBDIR}/lib/snmp/agent.rb
 ${GEM_LIBDIR}/lib/snmp/ber.rb
@@ -289,14 +293,4 @@ ${GEM_LIBDIR}/lib/snmp/options.rb
 ${GEM_LIBDIR}/lib/snmp/pdu.rb
 ${GEM_LIBDIR}/lib/snmp/varbind.rb
 ${GEM_LIBDIR}/lib/snmp/version.rb
-${GEM_LIBDIR}/test/if_table1.yaml
-${GEM_LIBDIR}/test/if_table6.yaml
-${GEM_LIBDIR}/test/test_ber.rb
-${GEM_LIBDIR}/test/test_manager.rb
-${GEM_LIBDIR}/test/test_mib.rb
-${GEM_LIBDIR}/test/test_pdu.rb
-${GEM_LIBDIR}/test/test_retry.rb
-${GEM_LIBDIR}/test/test_smi.rb
-${GEM_LIBDIR}/test/test_varbind.rb
-${GEM_LIBDIR}/test/test_walk.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
