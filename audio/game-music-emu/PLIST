@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2020/03/22 08:44:19 nia Exp $
-include/gme/blargg_source.h
+@comment $NetBSD: PLIST,v 1.3 2025/08/11 12:19:44 wiz Exp $
 include/gme/gme.h
+lib/libgme.a
 lib/libgme.so
 lib/libgme.so.0
 lib/libgme.so.${PKGVERSION}

@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2025/08/11 08:43:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/11 12:19:44 wiz Exp $
 
-DISTNAME=	game-music-emu-0.6.3
+DISTNAME=	game-music-emu-0.6.4
 CATEGORIES=	audio
-MASTER_SITES=	https://bitbucket.org/mpyne/game-music-emu/downloads/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libgme/}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pallegra@gmail.com
-HOMEPAGE=	https://bitbucket.org/mpyne/game-music-emu/wiki/Home
+HOMEPAGE=	https://github.com/libgme/game-music-emu/
 COMMENT=	Video game music file emulation/playback library
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_UBSAN=OFF
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	gme/libgme.pc.in
 
