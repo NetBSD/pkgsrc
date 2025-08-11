@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4836 2025/08/11 11:00:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4837 2025/08/11 11:51:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7013,3 +7013,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xkeyboard-config to 2.45 [wiz 2025-08-11]
 	Updated devel/py-zope.deferredimport to 5.1 [adam 2025-08-11]
 	Updated devel/py-zope.schema to 7.1 [adam 2025-08-11]
+	Added www/ruby-llhttp-ffi version 0.5.1 [ryoon 2025-08-11]
