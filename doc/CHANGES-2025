@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4875 2025/08/11 16:08:09 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.4876 2025/08/11 16:10:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7052,3 +7052,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rouge to 4.6.0 [taca 2025-08-11]
 	Updated www/ruby-sass-embedded to 1.89.2 [taca 2025-08-11]
 	Updated wm/enlightenment16 to 1.0.31 [gutteridge 2025-08-11]
+	Updated www/thin to 2.0.1 [taca 2025-08-11]
