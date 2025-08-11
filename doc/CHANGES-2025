@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4864 2025/08/11 15:34:33 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4865 2025/08/11 15:35:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7041,3 +7041,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-s3 to 1.196.1 [taca 2025-08-11]
 	Updated www/ruby-faraday-httpclient to 2.0.2 [taca 2025-08-11]
 	Updated www/ruby-faraday-multipart to 1.1.1 [taca 2025-08-11]
+	Updated www/ruby-faraday-net_http to 3.4.1 [taca 2025-08-11]
