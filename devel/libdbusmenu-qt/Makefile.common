@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/08/25 06:18:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/08/11 12:48:55 wiz Exp $
 # used by devel/libdbusmenu-qt/Makefile
 # used by devel/libdbusmenu-qt5/Makefile
 
@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_CONFIGURE_ARGS+=	-DWITH_DOC=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
