@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.81 2025/08/07 18:54:39 gdt Exp $
+$NetBSD: distinfo,v 1.82 2025/08/11 18:41:38 gdt Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -258,9 +258,9 @@ Size (litemap-0.8.0.crate) = 34344 bytes
 BLAKE2s (log-0.4.27.crate) = adc848fff8d9c3a226236ff5827a4b39046421f74eb4c78dd76b763c4ceee42f
 SHA512 (log-0.4.27.crate) = 8d57219b76c8a25bae193e4d16d4d03bf0b8523e1ed3bdc80a692cabe00fc0359ae9bc3be989f04476ecda7187f27e4ad23fe260a96fcefc819af00fe12a1151
 Size (log-0.4.27.crate) = 48120 bytes
-BLAKE2s (matrix-synapse-1.135.0.tar.gz) = 1e380d69e0e7669b3b36cbe0c7efd37bf9f6326648752ddfb60a702910ceee33
-SHA512 (matrix-synapse-1.135.0.tar.gz) = 7751ce9544f57bf234cef7ed9eaa5083a2a5d8ae2f42cc9fcb6a21783abd5af2f3325d7bf9e0a794bf01ec32339215ab1ddccd8af5dd86a52bbfe71e3a17570b
-Size (matrix-synapse-1.135.0.tar.gz) = 9056065 bytes
+BLAKE2s (matrix-synapse-1.135.2.tar.gz) = f3340848d0587f21ea5d1986c0f8d5c5c02520d854c12d704e136732d9b69cab
+SHA512 (matrix-synapse-1.135.2.tar.gz) = 4706112745b7ad83bf62585a619e31fcfd71f7de7a07552b39c9cd5b7346108a5472a3c1893d8a2978a8765696eec12dfaae5da866ab2fc507cb3b74bcd51ee4
+Size (matrix-synapse-1.135.2.tar.gz) = 9076454 bytes
 BLAKE2s (memchr-2.7.2.crate) = 58bad593cd29bb59ae79239f6f69364c2c512fa365107c1c46c37878bf53126f
 SHA512 (memchr-2.7.2.crate) = cadcb4239c7f3aaab042592c5186770a225621e32f8583052fd3dbebb4a6d9b99be28f589b39b5ca36cb2d56fb3709e7d4ba91838ebb882e28e51280c02bbc40
 Size (memchr-2.7.2.crate) = 96220 bytes
@@ -651,4 +651,3 @@ Size (zerovec-derive-0.10.3.crate) = 19438 bytes
 BLAKE2s (zerovec-derive-0.11.1.crate) = cfea7dfa4d5c22306c1da32313cc6afd011e9771ff933e6b2a9d1279f932d99a
 SHA512 (zerovec-derive-0.11.1.crate) = 5836035134bdf09a4a8cdd5a18f629696902704903c4b3579ddf1adfa49ab47a68287ecf2be165d631ba454daf150c043410359783bf1ce448e7ca46b8cb6039
 Size (zerovec-derive-0.11.1.crate) = 21294 bytes
-SHA1 (patch-synapse_handlers_room.py) = f39e6f679a95f7830ba27c007e097c573d953b21
