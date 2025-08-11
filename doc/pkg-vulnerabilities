@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.488 2025/08/10 03:35:46 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.489 2025/08/11 13:34:44 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23052,7 +23052,7 @@ zabbix-[0-9]*	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-24349
 gitea<1.16.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-0905
 libcaca-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0856
 php{56,70,71,72,73,74,80}-phpmyadmin<4.9.10	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-0813
-keepass-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-0725
+keepass<2.59	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-0725
 ming-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-34342
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-34341
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-34340
