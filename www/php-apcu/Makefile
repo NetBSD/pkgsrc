@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2025/08/02 03:20:23 taca Exp $
+# $NetBSD: Makefile,v 1.29 2025/08/11 09:21:17 taca Exp $
 
 MODNAME=	apcu
-PECL_VERSION=	5.1.25
+PECL_VERSION=	5.1.26
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
