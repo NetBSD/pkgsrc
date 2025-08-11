@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/01/09 12:53:27 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/11 15:38:12 taca Exp $
 
-DISTNAME=	faraday-patron-2.0.1
+DISTNAME=	faraday-patron-2.0.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
