@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/08/25 06:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/08/11 08:40:39 wiz Exp $
 
 DISTNAME=	tidy-html5-5.8.0
 PKGNAME=	${DISTNAME:S/-html5//}
@@ -21,6 +21,7 @@ GCC_REQD+=	4.4
 
 CMAKE_CONFIGURE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PKGMANDIR}/man1
 CMAKE_CONFIGURE_ARGS+=	-DINCLUDE_INSTALL_DIR:PATH=include/tidy
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
