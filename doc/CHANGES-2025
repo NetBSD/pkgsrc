@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4872 2025/08/11 15:49:00 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4873 2025/08/11 15:50:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7049,3 +7049,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-mustermann to 3.0.4 [taca 2025-08-11]
 	Updated www/ruby-puma to 6.6.1 [taca 2025-08-11]
 	Updated www/ruby-rack to 3.2.0 [taca 2025-08-11]
+	Updated www/ruby-rouge to 4.6.0 [taca 2025-08-11]
