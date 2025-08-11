@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/12/11 14:45:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/08/11 15:50:35 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/awk
 ${GEM_LIBDIR}/lib/rouge/demos/batchfile
 ${GEM_LIBDIR}/lib/rouge/demos/bbcbasic
 ${GEM_LIBDIR}/lib/rouge/demos/bibtex
+${GEM_LIBDIR}/lib/rouge/demos/bicep
 ${GEM_LIBDIR}/lib/rouge/demos/biml
 ${GEM_LIBDIR}/lib/rouge/demos/bpf
 ${GEM_LIBDIR}/lib/rouge/demos/brainfuck
@@ -267,6 +268,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/awk.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/batchfile.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/bbcbasic.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/bibtex.rb
+${GEM_LIBDIR}/lib/rouge/lexers/bicep.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/biml.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/bpf.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/brainfuck.rb
