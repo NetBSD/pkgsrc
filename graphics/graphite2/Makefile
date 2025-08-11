@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/11/12 13:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/11 08:26:09 wiz Exp $
 
 DISTNAME=	graphite2-1.3.14
 PKGREVISION=	3
@@ -16,6 +16,8 @@ USE_LIBTOOL=	yes
 
 USE_CXX_FEATURES+=	c++11
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
@@ -27,10 +29,10 @@ BUILDLINK_DEPMETHOD.freetype2?=	build
 
 # python and py-fonttools seem to be used only during test
 # uncomment the following to do so
-#TEST_TARGET=			test
+#TEST_TARGET=	test
 #PYTHON_FOR_BUILD_ONLY?=	tool
 #.include "../../lang/python/tool.mk"
-#TOOL_DEPENDS+=		${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools/
+#TOOL_DEPENDS+=	${PYPKGPREFIX}-fonttools-[0-9]*:../../fonts/py-fonttools/
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
