@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/08/11 08:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/11 12:04:14 wiz Exp $
 
 DISTNAME=	rapidjson-1.1.0
 PKGREVISION=	2
@@ -17,13 +17,13 @@ USE_CXX_FEATURES=	c++11
 
 CMAKE_CONFIGURE_ARGS+=		-DRAPIDJSON_BUILD_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Doxygen=ON
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	RapidJSON.pc.in
 BUILDLINK_TRANSFORM+=	rm:-march=native rm:-Werror
 
 post-install:
 	rm ${DESTDIR}${PREFIX}/include/rapidjson/*.orig
+	rm ${DESTDIR}${PREFIX}/share/doc/RapidJSON/examples/CMakeLists.txt.orig
 
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk"
