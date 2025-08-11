@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/06/11 15:14:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/08/11 15:48:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -28,7 +28,6 @@ ${GEM_LIBDIR}/lib/rack/head.rb
 ${GEM_LIBDIR}/lib/rack/headers.rb
 ${GEM_LIBDIR}/lib/rack/lint.rb
 ${GEM_LIBDIR}/lib/rack/lock.rb
-${GEM_LIBDIR}/lib/rack/logger.rb
 ${GEM_LIBDIR}/lib/rack/media_type.rb
 ${GEM_LIBDIR}/lib/rack/method_override.rb
 ${GEM_LIBDIR}/lib/rack/mime.rb
