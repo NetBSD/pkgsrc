@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2024/08/25 06:19:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/08/11 13:30:51 wiz Exp $
 #
 # used by security/qca2-qt5-gnupg/Makefile
 # used by security/qca2-qt5-ossl/Makefile
 # used by security/qca2-qt6/Makefile
 
-DISTNAME=	qca-2.3.8
+DISTNAME=	qca-2.3.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_KDE:=qca/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz
