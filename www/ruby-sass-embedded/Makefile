@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/06/14 14:38:54 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/11 15:59:21 taca Exp $
 
-DISTNAME=	sass-embedded-1.89.0
-PKGREVISION=	1
+DISTNAME=	sass-embedded-1.89.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
