@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/03/11 15:26:15 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/12 03:53:58 ryoon Exp $
 
 DISTNAME=	strings-0.2.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +14,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-unicode_utils>=1.4<2:../../textproc/ruby-unicode_uti
 DEPENDS+=	${RUBY_PKGPREFIX}-unicode-display_width>=1.5:../../textproc/ruby-unicode-display_width
 
 USE_LANGUAGES=	# none
+
+OVERRIDE_GEMSPEC+=	unicode-display_width>=3.1.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
