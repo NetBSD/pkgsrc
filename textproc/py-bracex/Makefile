@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/08/08 05:46:04 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/12 16:02:30 adam Exp $
 
-DISTNAME=	bracex-2.5
+DISTNAME=	bracex-2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bracex/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
