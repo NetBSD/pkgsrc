@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/08/12 07:30:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/12 10:20:43 adam Exp $
 include/zix-0/zix/allocator.h
 include/zix-0/zix/attributes.h
 include/zix-0/zix/btree.h
@@ -16,8 +16,8 @@ include/zix-0/zix/thread.h
 include/zix-0/zix/tree.h
 include/zix-0/zix/zix.h
 lib/libzix-0.so
+lib/libzix-0.so.${PKGVERSION}
 lib/libzix-0.so.0
-lib/libzix-0.so.0.4.2
 lib/pkgconfig/zix-0.pc
 ${PLIST.doc}share/doc/zix-0/html/_static/pygments.css
 ${PLIST.doc}share/doc/zix-0/html/_static/sphinx_lv2_theme.css
