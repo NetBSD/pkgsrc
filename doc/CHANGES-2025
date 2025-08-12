@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4899 2025/08/12 15:16:54 leot Exp $
+$NetBSD: CHANGES-2025,v 1.4900 2025/08/12 16:05:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7099,3 +7099,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/openjdk17 to 1.17.0.16.8 [ryoon 2025-08-12]
 	Updated lang/openjdk11 to 1.11.0.28.6 [ryoon 2025-08-12]
 	Updated sysutils/monit to 5.35.2 [leot 2025-08-12]
+	Updated textproc/py-bracex to 2.6 [adam 2025-08-12]
+	Updated databases/py-sqlalchemy to 2.0.43 [adam 2025-08-12]
+	Updated devel/py-types-gdb to 16.3.0.20250812 [adam 2025-08-12]
