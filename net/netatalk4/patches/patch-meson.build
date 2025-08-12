@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.7 2025/06/11 11:24:19 hauke Exp $
+$NetBSD: patch-meson.build,v 1.8 2025/08/12 18:22:55 hauke Exp $
 
 Add PREFIXed paths (include, lib) for all OSes.
 
@@ -6,7 +6,7 @@ Make PREFIX path configurable.
 
 Install at.h on Linux, we do it on NetBSD, too.
 
---- meson.build.orig	2025-05-31 04:47:29.000000000 +0000
+--- meson.build.orig	2025-08-05 13:56:32.000000000 +0000
 +++ meson.build
 @@ -152,16 +152,9 @@ include_dirs = [
      'include',
@@ -53,27 +53,18 @@ Install at.h on Linux, we do it on NetBSD, too.
  
  check_headers = [
      'acl/libacl.h',
-@@ -392,9 +378,7 @@ else
-     endif
+@@ -400,9 +386,7 @@ if 'dbd' in get_option('with-cnid-backen
+         endif
  
-     bdb_dirs += [
--        '/usr/local',
--        '/usr/pkg',
--        '/opt/local',
-+	get_option('prefix'),
-         '/usr',
-     ]
- endif
-@@ -834,7 +818,7 @@ if host_os == 'darwin'
-         bison = find_program(brew_prefix / 'opt/bison/bin/bison', required: false)
+         bdb_dirs += [
+-            '/usr/local',
+-            '/usr/pkg',
+-            '/opt/local',
++	    get_option('prefix'),
+             '/usr',
+         ]
      endif
-     if not bison.found()
--        bison = find_program('/opt/local/bin/bison', required: false)
-+        bison = find_program( get_option('prefix') / 'bison', required: false)
-     endif
- else
-     bison = find_program('bison', required: false)
-@@ -1550,7 +1534,7 @@ else
+@@ -1567,7 +1551,7 @@ else
          pam_paths = [
              '/',
              '/usr',
@@ -82,7 +73,7 @@ Install at.h on Linux, we do it on NetBSD, too.
          ]
  
          foreach path : pam_paths
-@@ -1904,16 +1888,10 @@ cracklib_dict = ''
+@@ -1918,16 +1902,10 @@ cracklib_dict = ''
  
  if fs.is_dir('/usr/share/cracklib')
      cracklib_dict += '/usr/share/cracklib/pw_dict'
@@ -101,10 +92,10 @@ Install at.h on Linux, we do it on NetBSD, too.
  endif
  
  if not enable_cracklib
-@@ -2035,7 +2013,6 @@ if host_os.contains('freebsd')
+@@ -2051,7 +2029,6 @@ if host_os == 'freebsd'
      cdata.set('FREEBSD', 1)
      cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
- elif host_os.contains('linux')
+ elif host_os == 'linux'
 -    use_glibc_at_header = cc.has_header('netatalk/at.h')
      cdata.set('_GNU_SOURCE', 1)
      if cc.compiles(
