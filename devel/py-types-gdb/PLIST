@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/28 13:51:07 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/12 16:05:12 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gdb-stubs/FrameDecorator.pyi
 ${PYSITELIB}/gdb-stubs/FrameIterator.pyi
 ${PYSITELIB}/gdb-stubs/METADATA.toml
@@ -28,14 +33,11 @@ ${PYSITELIB}/gdb-stubs/dap/varref.pyi
 ${PYSITELIB}/gdb-stubs/disassembler.pyi
 ${PYSITELIB}/gdb-stubs/events.pyi
 ${PYSITELIB}/gdb-stubs/missing_debug.pyi
+${PYSITELIB}/gdb-stubs/missing_files.pyi
+${PYSITELIB}/gdb-stubs/missing_objfile.pyi
 ${PYSITELIB}/gdb-stubs/printing.pyi
 ${PYSITELIB}/gdb-stubs/prompt.pyi
 ${PYSITELIB}/gdb-stubs/py.typed
 ${PYSITELIB}/gdb-stubs/types.pyi
 ${PYSITELIB}/gdb-stubs/unwinder.pyi
 ${PYSITELIB}/gdb-stubs/xmethod.pyi
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
