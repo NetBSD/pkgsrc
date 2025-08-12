@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.67 2025/06/13 06:47:00 adam Exp $
+$NetBSD: distinfo,v 1.68 2025/08/12 06:18:23 adam Exp $
 
-BLAKE2s (certbot_dns_ovh-4.1.1.tar.gz) = 5f3f881c9af3ca87884e339989641daa45175aa90d54b5510bec9f65bccdc89e
-SHA512 (certbot_dns_ovh-4.1.1.tar.gz) = 43085f3d0a26eebbc99fb4727ecf2e31f94c139efe1ea2cf23bed9ce3c41b367c0b91f45874757d689cd3add942b52a8f276f7dbb1e0af078db6d8143196c70c
-Size (certbot_dns_ovh-4.1.1.tar.gz) = 12469 bytes
+BLAKE2s (certbot_dns_ovh-4.2.0.tar.gz) = 31e9f6ae2d33fa5f49fb78c67ce1d0f3f7d8ff1f4aabd7b37d6a676d30139f2c
+SHA512 (certbot_dns_ovh-4.2.0.tar.gz) = 86da346b7e3a4a451ef21e782c0d01e7a5515fc94d08618b3833d77b3dd23c664489ee01d040a0c996157034c80ed9b54fdfbaad7423582fd5c82d03601fc7e7
+Size (certbot_dns_ovh-4.2.0.tar.gz) = 12477 bytes

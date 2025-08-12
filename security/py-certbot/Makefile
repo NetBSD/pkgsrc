@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/06/13 06:46:59 adam Exp $
+# $NetBSD: Makefile,v 1.50 2025/08/12 06:18:22 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -13,15 +13,9 @@ DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=2.0.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=8.6.1:../../devel/py-importlib-metadata
-.endif
 
 BUILD_DEFS+=		VARBASE
 
