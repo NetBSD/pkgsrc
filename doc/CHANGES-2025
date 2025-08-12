@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4897 2025/08/12 14:50:58 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4898 2025/08/12 14:51:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7097,3 +7097,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-chef-vault to 4.1.23 [taca 2025-08-12]
 	Updated www/typo3-13 to 13.4.16 [taca 2025-08-12]
 	Updated lang/openjdk17 to 1.17.0.16.8 [ryoon 2025-08-12]
+	Updated lang/openjdk11 to 1.11.0.28.6 [ryoon 2025-08-12]
