@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4900 2025/08/12 16:05:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4901 2025/08/12 16:12:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7102,3 +7102,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-bracex to 2.6 [adam 2025-08-12]
 	Updated databases/py-sqlalchemy to 2.0.43 [adam 2025-08-12]
 	Updated devel/py-types-gdb to 16.3.0.20250812 [adam 2025-08-12]
+	Updated devel/blosc2 to 2.20.0 [adam 2025-08-12]
+	Updated net/grpc to 1.74.1 [adam 2025-08-12]
