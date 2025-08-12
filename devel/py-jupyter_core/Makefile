@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/03/17 17:29:01 adam Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/12 18:51:11 adam Exp $
 
-DISTNAME=	jupyter_core-5.7.2
+DISTNAME=	jupyter_core-5.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter_core/}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	jupyter_core/troubleshoot.py
 
