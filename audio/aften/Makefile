@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/25 06:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/12 07:56:23 adam Exp $
 
 DISTNAME=	aften-0.0.8
 CATEGORIES=	audio
@@ -10,15 +10,11 @@ HOMEPAGE=	http://aften.sourceforge.net/
 COMMENT=	ATSC A/52 / AC-3 / Dolby Digital audio encoder
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 
 CMAKE_CONFIGURE_ARGS+=	-DBINDINGS_CXX=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 CMAKE_CONFIGURE_ARGS+=	-DSHARED=ON
 
-pre-configure:
-	mkdir ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
