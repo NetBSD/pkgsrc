@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2023/09/05 14:42:17 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2025/08/12 12:50:56 ryoon Exp $
 
-BLAKE2s (sane-airscan-0.99.27.tar.gz) = 2ee783c4e59a8d6f49b22e521383b29488899a5617c70ca0a755473664e04bd2
-SHA512 (sane-airscan-0.99.27.tar.gz) = a35a92e26a4e3831f127e59bc520248abde8a7b304eb63ecf1d68092f51a8bc49bbc7503bead47ac84d0333d59ae0045d6d7a9f7b89d95f3ddfa2458f3781256
-Size (sane-airscan-0.99.27.tar.gz) = 198418 bytes
+BLAKE2s (sane-airscan-0.99.36.tar.gz) = 3f58b6b3543d566fb9a5dca9889d84da1fb7783b6fc0bb3e872758c002c3bd3c
+SHA512 (sane-airscan-0.99.36.tar.gz) = a87f9ede123710b4be9d0bbf950487abf71ddc9691020d2defadf99eae12afc78b4d99df834c4f84984bc2cae4e3190fa4dac7a44518a3445f263aa4ad37ea67
+Size (sane-airscan-0.99.36.tar.gz) = 218775 bytes
 SHA1 (patch-airscan-netif.c) = 205be7f582ede767a4e0ee46b7943f666cd503cf
 SHA1 (patch-airscan-os.c) = 2ea106af5c7e9e6a7a03f8a1ea7fa85ac14aaf6a
 SHA1 (patch-meson.build) = 3348d065567db299b2cd8e2139b382ddbc3f53db
