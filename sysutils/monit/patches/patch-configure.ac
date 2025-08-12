@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/08/12 15:02:09 leot Exp $
+
+Avoid unportable == test(1) operator.
+
+--- configure.ac.orig	2025-08-12 14:57:21.889503159 +0000
++++ configure.ac
+@@ -1098,7 +1098,7 @@ AC_ARG_ENABLE([codesign],
+ AM_CONDITIONAL([WITH_CODESIGN], [test $enable_codesign -eq 1])
+ 
+ # Determine the minimum macOS version we can build
+-if [[ $(uname) == "Darwin" ]]; then
++if [[ $(uname) = "Darwin" ]]; then
+     AC_MSG_CHECKING([for minimum macOS version supported])
+ 
+     # Create a simple C program

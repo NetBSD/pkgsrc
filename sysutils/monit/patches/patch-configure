@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/08/12 15:02:09 leot Exp $
+
+Avoid unportable == test(1) operator.
+
+--- configure.orig	2025-08-12 14:57:10.612615638 +0000
++++ configure
+@@ -23242,7 +23242,7 @@ fi
+ 
+ 
+ # Determine the minimum macOS version we can build
+-if [ $(uname) == "Darwin" ]; then
++if [ $(uname) = "Darwin" ]; then
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for minimum macOS version supported" >&5
+ printf %s "checking for minimum macOS version supported... " >&6; }
+ 
