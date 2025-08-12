@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4881 2025/08/12 00:56:08 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4882 2025/08/12 03:54:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7058,3 +7058,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-cmudict to 1.1.1 [gutteridge 2025-08-11]
 	Updated textproc/p5-sdf to 2.001nb7 [schmonz 2025-08-11]
 	Added devel/smooth version 0.9.10 [ryoon 2025-08-12]
+	Updated textproc/ruby-strings to 0.2.1nb1 [ryoon 2025-08-12]
