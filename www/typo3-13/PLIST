@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/07/26 07:02:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/12 14:21:06 taca Exp $
 share/examples/typo3/typo3.conf
 share/typo3/CODE_OF_CONDUCT.md
 share/typo3/CONTRIBUTING.md
@@ -143,6 +143,7 @@ share/typo3/typo3/sysext/backend/Classes/Backend/ColorScheme.php
 share/typo3/typo3/sysext/backend/Classes/Backend/Event/ModifyClearCacheActionsEvent.php
 share/typo3/typo3/sysext/backend/Classes/Backend/Event/SystemInformationToolbarCollectorEvent.php
 share/typo3/typo3/sysext/backend/Classes/Backend/Shortcut/ShortcutRepository.php
+share/typo3/typo3/sysext/backend/Classes/Backend/ThumbnailSize.php
 share/typo3/typo3/sysext/backend/Classes/Backend/ToolbarItems/ClearCacheToolbarItem.php
 share/typo3/typo3/sysext/backend/Classes/Backend/ToolbarItems/HelpToolbarItem.php
 share/typo3/typo3/sysext/backend/Classes/Backend/ToolbarItems/LiveSearchToolbarItem.php
@@ -940,6 +941,7 @@ share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/element/pagination.
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/element/progress-bar-element.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/element/progress-tracker-element.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/element/spinner-element.js
+share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/element/thumbnail-element.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/enum/data-transfer-types.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/enum/icon-types.js
 share/typo3/typo3/sysext/backend/Resources/Public/JavaScript/enum/key-types.js
@@ -2320,7 +2322,9 @@ share/typo3/typo3/sysext/core/Classes/Session/UserSessionManager.php
 share/typo3/typo3/sysext/core/Classes/Settings/Category.php
 share/typo3/typo3/sysext/core/Classes/Settings/CategoryAccumulator.php
 share/typo3/typo3/sysext/core/Classes/Settings/CategoryDefinition.php
+share/typo3/typo3/sysext/core/Classes/Settings/InvalidSettingDefinitionException.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingDefinition.php
+share/typo3/typo3/sysext/core/Classes/Settings/SettingDefinitionValidation.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingNotFoundException.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingValue.php
 share/typo3/typo3/sysext/core/Classes/Settings/Settings.php
@@ -2330,6 +2334,8 @@ share/typo3/typo3/sysext/core/Classes/Settings/SettingsInterface.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsMode.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsProviderInterface.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeInterface.php
+share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeOption.php
+share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeOptionAwareInterface.php
 share/typo3/typo3/sysext/core/Classes/Settings/SettingsTypeRegistry.php
 share/typo3/typo3/sysext/core/Classes/Settings/Type/BoolType.php
 share/typo3/typo3/sysext/core/Classes/Settings/Type/ColorType.php
@@ -4159,7 +4165,6 @@ share/typo3/typo3/sysext/core/Documentation/Changelog/13.4/Deprecation-105279-Re
 share/typo3/typo3/sysext/core/Documentation/Changelog/13.4/Deprecation-105297-DeprecateTableoptionsAndCollateConnectionConfiguration.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/13.4/Important-105175-MoveFrontendBackendUserAuthenticationIntoEXTfrontend.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/13.4/Index.rst
-share/typo3/typo3/sysext/core/Documentation/Changelog/14.0/Important-105310-CreateCHARAndBINARYAsFixedLengthColumns.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/7.0/Breaking-19737-PreferRootTemplate.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/7.0/Breaking-33805-ClickMenuRewrite.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/7.0/Breaking-42543-DefaultTypoScriptRemoved.rst
@@ -11186,6 +11191,7 @@ share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/Reference.rst
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_AllowSpecificTag.yaml
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_CustomizeToolbar.yaml
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_FontPlugin.yaml
+share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_FullscreenPlugin.yaml
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_GroupingToolbarItems.yaml
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_MyPreset.yaml
 share/typo3/typo3/sysext/rte_ckeditor/Documentation/Configuration/_Examples/_timestamp-plugin.yaml
@@ -11217,12 +11223,14 @@ share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckedito
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-code-block.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-core.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-editor-classic.js
+share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-editor-decoupled.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-editor-multi-root.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-engine.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-enter.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-essentials.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-find-and-replace.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-font.js
+share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-fullscreen.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-heading.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-highlight.js
 share/typo3/typo3/sysext/rte_ckeditor/Resources/Public/Contrib/@ckeditor/ckeditor5-horizontal-line.js
@@ -11738,7 +11746,6 @@ share/typo3/typo3/sysext/workspaces/Classes/Service/Dependency/CollectionService
 share/typo3/typo3/sysext/workspaces/Classes/Service/GridDataService.php
 share/typo3/typo3/sysext/workspaces/Classes/Service/HistoryService.php
 share/typo3/typo3/sysext/workspaces/Classes/Service/IntegrityService.php
-share/typo3/typo3/sysext/workspaces/Classes/Service/RecordService.php
 share/typo3/typo3/sysext/workspaces/Classes/Service/StagesService.php
 share/typo3/typo3/sysext/workspaces/Classes/Service/WorkspaceService.php
 share/typo3/typo3/sysext/workspaces/Configuration/Backend/AjaxRoutes.php
@@ -11792,7 +11799,6 @@ share/typo3/typo3/sysext/workspaces/README.rst
 share/typo3/typo3/sysext/workspaces/Resources/Private/Language/locallang.xlf
 share/typo3/typo3/sysext/workspaces/Resources/Private/Language/locallang_db.xlf
 share/typo3/typo3/sysext/workspaces/Resources/Private/Language/locallang_mod.xlf
-share/typo3/typo3/sysext/workspaces/Resources/Private/Partials/Preview/StageButtons.html
 share/typo3/typo3/sysext/workspaces/Resources/Private/Partials/WorkingTable.html
 share/typo3/typo3/sysext/workspaces/Resources/Private/Templates/Email/StageChangeNotification.html
 share/typo3/typo3/sysext/workspaces/Resources/Private/Templates/Email/StageChangeNotification.txt
@@ -14652,6 +14658,7 @@ share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Debug.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/DefaultCase.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Else.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/First.rst
+share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Flatten.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/For.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/Case.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/Cdata.rst
@@ -14665,6 +14672,7 @@ share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/Raw.r
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/StripTags.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/Trim.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Format/Urlencode.rst
+share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Fragment.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/GroupedFor.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/If.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Index.rst
@@ -14676,6 +14684,7 @@ share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Or.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Render.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Replace.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Section.rst
+share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Shuffle.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Slot.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Spaceless.rst
 share/typo3/vendor/typo3fluid/fluid/Documentation/ViewHelpers/Fluid/Split.rst
@@ -14801,6 +14810,7 @@ share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/DebugViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/DefaultCaseViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/ElseViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/FirstViewHelper.php
+share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/FlattenViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/ForViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/CaseViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/CdataViewHelper.php
@@ -14813,6 +14823,7 @@ share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/RawViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/StripTagsViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/TrimViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/Format/UrlencodeViewHelper.php
+share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/FragmentViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/GroupedForViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/IfViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/InlineViewHelper.php
@@ -14823,6 +14834,7 @@ share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/OrViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/RenderViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/ReplaceViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/SectionViewHelper.php
+share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/ShuffleViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/SlotViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/SpacelessViewHelper.php
 share/typo3/vendor/typo3fluid/fluid/src/ViewHelpers/SplitViewHelper.php
