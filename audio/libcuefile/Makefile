@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2023/01/24 18:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/12 09:15:14 adam Exp $
 
-DISTNAME=		libcuefile_r475
-PKGNAME=		libcuefile-0rc475
-CATEGORIES=		audio
-MASTER_SITES=		http://files.musepack.net/source/
+DISTNAME=	libcuefile_r475
+PKGNAME=	libcuefile-0rc475
+CATEGORIES=	audio
+MASTER_SITES=	http://files.musepack.net/source/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.musepack.net/
-COMMENT=		CUE File library for the musepack decoder
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.musepack.net/
+COMMENT=	CUE File library for the musepack decoder
+LICENSE=	gnu-gpl-v2
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 INSTALLATION_DIRS=	include/cuetools
 
