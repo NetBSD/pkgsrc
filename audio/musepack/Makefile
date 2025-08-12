@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/01/24 18:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/12 09:17:05 adam Exp $
 
 DISTNAME=	musepack_src_r475
 PKGNAME=	musepack-0rc475
@@ -12,6 +12,8 @@ COMMENT=	MPEG-Plus and MusePack decoder (V8)
 LICENSE=	modified-bsd
 
 CONFLICTS=	libmpcdec-[0-9]*
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-install:
 	rm -rf ${DESTDIR}${PREFIX}/include/mpc/.svn/
