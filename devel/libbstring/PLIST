@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/12 18:13:55 hauke Exp $
+include/bstraux.h
+include/bstrlib.h
+lib/libbstring.so
+lib/libbstring.so.1
+lib/libbstring.so.1.0.0
+lib/pkgconfig/bstring.pc

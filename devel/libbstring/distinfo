@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/12 18:13:55 hauke Exp $
+
+BLAKE2s (bstring-1.0.1.tar.xz) = 7bb58e6b8a6524bf36b7b7288d2fc598a3b94148d680b87e8335415d0599ffb4
+SHA512 (bstring-1.0.1.tar.xz) = bdbe065981a3242e1f020275169347d712d6abc697be62acf0d26b4b9bf677c4dd96e6063e9bfa56f91f9b49f8d22bbb1ef62640957d53c99c3c787db2faf9c4
+Size (bstring-1.0.1.tar.xz) = 93096 bytes
