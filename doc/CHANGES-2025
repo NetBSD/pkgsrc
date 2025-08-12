@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4886 2025/08/12 07:36:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4887 2025/08/12 10:34:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7084,3 +7084,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/sord to 0.16.18 [adam 2025-08-12]
 	Updated converters/sratom to 0.6.18 [adam 2025-08-12]
 	Updated audio/lilv to 0.24.26 [adam 2025-08-12]
+	Updated multimedia/gstreamer1 to 1.26.5 [adam 2025-08-12]
