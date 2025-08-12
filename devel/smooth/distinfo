@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/08/12 00:54:26 ryoon Exp $
+
+BLAKE2s (smooth-0.9.10.tar.gz) = 670506710d01bb22bb79b533656808e78a2a788cfc02f867fd3b1f7521f2a067
+SHA512 (smooth-0.9.10.tar.gz) = 165865f37ae13aa65f83f89bc1f0a9f158439c182ef9b3a0681bd7185e313e0b3fa25ec8f198ec30cd59e81de8b9e12c7e22751457289335775e4861234ca2ee
+Size (smooth-0.9.10.tar.gz) = 8961354 bytes
+SHA1 (patch-Makefile) = 24fa178c5c883c9a7d263af5114da65f2a2971c4

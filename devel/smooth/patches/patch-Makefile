@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/08/12 00:54:27 ryoon Exp $
+
+* Use common option to fix linkage in pkgsrc.
+
+--- Makefile.orig	2024-08-16 20:58:37.073940966 +0000
++++ Makefile
+@@ -258,7 +258,7 @@ ifeq ($(BUILD_WIN32),True)
+ else ifeq ($(BUILD_OSX),True)
+ 	LINKER_OPTS += -dynamiclib -framework Carbon -framework Cocoa -Wl,-dylib_install_name,libsmooth-$(VERSION).$(REVISION)$(SHARED)
+ else
+-	LINKER_OPTS += --shared -Wl,-soname,libsmooth-$(VERSION)$(SHARED).$(REVISION)
++	LINKER_OPTS += -shared -Wl,-soname,libsmooth-$(VERSION)$(SHARED).$(REVISION)
+ 
+ 	ifeq ($(BUILD_FREEBSD),True)
+ 		LINKER_OPTS += -L/usr/local/lib
