@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2025/04/15 15:17:48 adam Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/12 11:30:21 adam Exp $
 
-DISTNAME=	graphviz-0.20.3
+DISTNAME=	graphviz-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/graphviz/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/xflr6/graphviz
