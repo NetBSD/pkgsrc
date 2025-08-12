@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2024/03/23 16:34:07 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/08/12 11:30:21 adam Exp $
 
-BLAKE2s (graphviz-0.20.3.zip) = 3a260660b94b68a68397280b0ac34e1abd547c69b7e1b2e7e74966f78cd26a69
-SHA512 (graphviz-0.20.3.zip) = 2071fdd699bfe3918260489c9cc8014b248059196d573acd2a3a666b1c8b5fce0b0592484955ee9ada32e540517ab1951595ad932a75c4d120fc6ec117f66d60
-Size (graphviz-0.20.3.zip) = 256455 bytes
+BLAKE2s (graphviz-0.21.tar.gz) = 7e26c54fa45014a6552a0bc88a65b29795c03d3c870e14fd196e33ed461e77fd
+SHA512 (graphviz-0.21.tar.gz) = 907c7c6a2f296394cb274203b647a8ea8f6ab4b0faf355f0b40da21cde1c36fcbce953535ddc0cfc84cf68aec4d2ff3a08b20fc7cde4abdefda743e067eacbda
+Size (graphviz-0.21.tar.gz) = 200434 bytes
