@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4880 2025/08/11 17:24:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4881 2025/08/12 00:56:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7057,3 +7057,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-concrete-cms to 9.4.3 [taca 2025-08-11]
 	Updated textproc/py-cmudict to 1.1.1 [gutteridge 2025-08-11]
 	Updated textproc/p5-sdf to 2.001nb7 [schmonz 2025-08-11]
+	Added devel/smooth version 0.9.10 [ryoon 2025-08-12]
