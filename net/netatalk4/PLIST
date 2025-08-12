@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/06/16 09:35:36 hauke Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/12 18:22:55 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/addump
 ${PLIST.appletalk}bin/aecho
@@ -15,13 +15,13 @@ ${PLIST.appletalk}bin/nbprgstr
 ${PLIST.appletalk}bin/nbpunrgstr
 ${PLIST.appletalk}bin/pap
 ${PLIST.appletalk}bin/papstatus
+bin/rtmpqry
 include/atalk/acl.h
 include/atalk/adouble.h
 include/atalk/aep.h
 include/atalk/afp.h
 include/atalk/asp.h
 include/atalk/atp.h
-include/atalk/bstrlib.h
 include/atalk/cnid.h
 include/atalk/ddp.h
 include/atalk/ea.h
@@ -67,11 +67,6 @@ lib/netatalk/uams_randnum.so
 man/man1/ad.1
 man/man1/addump.1
 ${PLIST.appletalk}man/man1/aecho.1
-man/man1/afp_lantest.1
-man/man1/afp_logintest.1
-man/man1/afp_spectest.1
-man/man1/afp_speedtest.1
-man/man1/afparg.1
 man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/afpstats.1
@@ -86,6 +81,7 @@ ${PLIST.appletalk}man/man1/nbplkup.1
 ${PLIST.appletalk}man/man1/nbprgstr.1
 ${PLIST.appletalk}man/man1/nbpunrgstr.1
 ${PLIST.appletalk}man/man1/pap.1
+man/man1/rtmpqry.1
 man/man3/atalk_aton.3
 man/man3/nbp_name.3
 man/man4/atalk.4
