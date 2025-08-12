@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/07/17 05:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/08/12 10:33:58 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -18,8 +18,6 @@ USE_LANGUAGES=		c c++
 PY_PATCHPLIST=		yes
 PYTHON_SELF_CONFLICT=	yes
 TEST_TARGET=		check
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/py-gobject3-common/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.1
