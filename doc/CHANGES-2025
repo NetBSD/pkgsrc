@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4901 2025/08/12 16:12:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4902 2025/08/12 18:14:37 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7104,3 +7104,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-gdb to 16.3.0.20250812 [adam 2025-08-12]
 	Updated devel/blosc2 to 2.20.0 [adam 2025-08-12]
 	Updated net/grpc to 1.74.1 [adam 2025-08-12]
+	Added devel/libbstring version 1.0.1 [hauke 2025-08-12]
