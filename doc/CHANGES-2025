@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4885 2025/08/12 07:22:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4886 2025/08/12 07:36:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7079,3 +7079,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-dns-sakuracloud to 4.2.0 [adam 2025-08-12]
 	Updated security/py-certbot-nginx to 4.2.0 [adam 2025-08-12]
 	Updated net/dnsdist to 2.0.0 [wiz 2025-08-12]
+	Updated devel/zix to 0.6.2 [adam 2025-08-12]
+	Updated textproc/serd to 0.32.4 [adam 2025-08-12]
+	Updated textproc/sord to 0.16.18 [adam 2025-08-12]
+	Updated converters/sratom to 0.6.18 [adam 2025-08-12]
+	Updated audio/lilv to 0.24.26 [adam 2025-08-12]
