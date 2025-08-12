@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4507 2025/08/09 03:28:33 wen Exp $
+# $NetBSD: Makefile,v 1.4508 2025/08/12 00:55:30 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -3629,6 +3629,7 @@ SUBDIR+=	slibtool
 SUBDIR+=	sloccount
 SUBDIR+=	smake
 SUBDIR+=	sml-mode
+SUBDIR+=	smooth
 SUBDIR+=	snappy
 SUBDIR+=	snappy-java10
 SUBDIR+=	sofia-sip
