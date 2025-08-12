@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/08/07 13:59:30 abs Exp $
+$NetBSD: distinfo,v 1.4 2025/08/12 17:05:10 tnn Exp $
 
 BLAKE2s (CLI11-2.5.0.hpp) = 2a27af60fd6ccb1d1d5883c415a7432277544287a29d69dec2f92dc79de22518
 SHA512 (CLI11-2.5.0.hpp) = 1440f3500126e2edfb8e52811339a80721509446a2725e845961b7d41a42e0726b6a91cfe714b75684b3fa41b44c2b578af2f7b94746e5ef1a24e2f211b939f3
@@ -12,4 +12,5 @@ Size (toml-3.4.0.hpp) = 485931 bytes
 SHA1 (patch-src_lib_base_String.h) = 403de91490a20aa46bc298207b246c58381d3599
 SHA1 (patch-src_lib_client_Client.h) = 3faecc7dd7bf378c384d2e63f4f7bee4edd2ffcb
 SHA1 (patch-src_lib_deskflow_CMakeLists.txt) = 9edeedd98c6e4c89d50626813a19c3a09b7e23da
+SHA1 (patch-src_lib_deskflow_KeyMap.cpp) = 960b28a1a56709975e6c3d75a8d57ebf0c2d1f2e
 SHA1 (patch-src_lib_server_Server.h) = 1784efe6dfa7c580f902e57d153cb7fe6c6492a1

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/08/07 13:59:30 abs Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/12 17:05:10 tnn Exp $
 
 DISTNAME=	deskflow-1.23.0
+PKGREVISION=	1
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -33,7 +34,9 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/lib/common/Settings.h
+SUBST_FILES.paths+=	src/lib/deskflow/unix/AppUtilUnix.cpp
 SUBST_SED.paths=	-e 's,"/etc,"${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,"/usr/local\(/share/X11/xkb\),"${X11BASE}\1,g'
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/${CMAKE_BUILD_DIR}/include/CLI
