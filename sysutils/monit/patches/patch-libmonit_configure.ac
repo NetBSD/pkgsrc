@@ -1,0 +1,15 @@
+$NetBSD: patch-libmonit_configure.ac,v 1.1 2025/08/12 15:02:09 leot Exp $
+
+Avoid unportable == test(1) operator.
+
+--- libmonit/configure.ac.orig	2025-08-12 14:57:40.425387108 +0000
++++ libmonit/configure.ac
+@@ -362,7 +362,7 @@ AC_ARG_WITH(ipv6,
+ # ---------------------------------------------------------------------------
+ 
+ # Determine the minimum macOS version we can build
+-if [[ $(uname) == "Darwin" ]]; then
++if [[ $(uname) = "Darwin" ]]; then
+     AC_MSG_CHECKING([for minimum macOS version supported])
+ 
+     # Create a simple C program
