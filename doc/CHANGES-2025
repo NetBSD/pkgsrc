@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4887 2025/08/12 10:34:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4888 2025/08/12 11:18:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7085,3 +7085,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/sratom to 0.6.18 [adam 2025-08-12]
 	Updated audio/lilv to 0.24.26 [adam 2025-08-12]
 	Updated multimedia/gstreamer1 to 1.26.5 [adam 2025-08-12]
+	Updated databases/redis to 8.2.0 [adam 2025-08-12]
+	Updated databases/py-redis to 6.4.0 [adam 2025-08-12]
