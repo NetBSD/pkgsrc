@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2024/11/05 17:16:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/12 07:33:11 adam Exp $
 bin/serdi
 include/serd-0/serd/serd.h
 lib/libserd-0.so
 lib/libserd-0.so.${PKGVERSION}
 lib/libserd-0.so.0
 lib/pkgconfig/serd-0.pc
-${PLIST.doc}man/man1/serdi.1
+man/man1/serdi.1
 ${PLIST.doc}share/doc/serd-0/html/_static/pygments.css
 ${PLIST.doc}share/doc/serd-0/html/_static/serd.svg
 ${PLIST.doc}share/doc/serd-0/html/_static/sphinx_lv2_theme.css
@@ -22,8 +22,8 @@ ${PLIST.doc}share/doc/serd-0/html/api/serd_writer.html
 ${PLIST.doc}share/doc/serd-0/html/genindex.html
 ${PLIST.doc}share/doc/serd-0/html/index.html
 ${PLIST.doc}share/doc/serd-0/html/overview.html
-${PLIST.doc}share/doc/serd-0/man/mandoc.css
-${PLIST.doc}share/doc/serd-0/man/serdi.html
+share/doc/serd-0/man/mandoc.css
+share/doc/serd-0/man/serdi.html
 ${PLIST.doc}share/doc/serd-0/singlehtml/_static/pygments.css
 ${PLIST.doc}share/doc/serd-0/singlehtml/_static/serd.svg
 ${PLIST.doc}share/doc/serd-0/singlehtml/_static/sphinx_lv2_theme.css
