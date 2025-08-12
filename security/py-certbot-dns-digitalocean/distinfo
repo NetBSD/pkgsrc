@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.55 2025/06/13 06:46:59 adam Exp $
+$NetBSD: distinfo,v 1.56 2025/08/12 06:18:22 adam Exp $
 
-BLAKE2s (certbot_dns_digitalocean-4.1.1.tar.gz) = c8eb4aaf101b1475b4ae3dfadb9ad51b50fb0e1c42759fba2d19ec5a054289c0
-SHA512 (certbot_dns_digitalocean-4.1.1.tar.gz) = 4ccddd3b48872b711a9a18089e28183e10e203a3c0ab3f8a78f2b93a660c18e8617b47a5b2d1d26a9f257f26e22d836af245bcc250c61dc0e467b2b3586d57b7
-Size (certbot_dns_digitalocean-4.1.1.tar.gz) = 14397 bytes
+BLAKE2s (certbot_dns_digitalocean-4.2.0.tar.gz) = fc0354b4569ab8cac9fc0401724a0613d6b110436e06cf24ea06b61543ee700b
+SHA512 (certbot_dns_digitalocean-4.2.0.tar.gz) = f16a6390b6131bc89248521eef22b5c47214e922cf1a9cdc6ff63209e1f6a309530a96688665a54094cdc15f7d1abd78c252eb85a86db5c018f7aaa4a8fee37e
+Size (certbot_dns_digitalocean-4.2.0.tar.gz) = 14397 bytes
