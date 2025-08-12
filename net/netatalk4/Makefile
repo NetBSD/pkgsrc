@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2025/07/05 12:30:16 hauke Exp $
+# $NetBSD: Makefile,v 1.23 2025/08/12 18:22:55 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
 DISTNAME=	netatalk-${PKGVER:C/\./-/g}
-PKGREVISION=	1
 
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGVER=		4.2.4
+PKGVER=		4.3.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -67,10 +66,10 @@ LDFLAGS.FreeBSD+=	-lpthread
 # into scripts, so replace manually
 SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure
-SUBST_FILES.perlpath+=	contrib/shell_utils/macusers.in
-SUBST_FILES.perlpath+=	contrib/shell_utils/afpstats.in
-SUBST_FILES.perlpath+=	contrib/shell_utils/addump.in
-SUBST_FILES.perlpath+=	contrib/shell_utils/asip-status.in
+SUBST_FILES.perlpath+=	contrib/bin_utils/macusers.pl
+SUBST_FILES.perlpath+=	contrib/bin_utils/afpstats.pl
+SUBST_FILES.perlpath+=	contrib/bin_utils/addump.pl
+SUBST_FILES.perlpath+=	contrib/bin_utils/asip-status.pl
 SUBST_SED.perlpath=	-e 's|@PERL@|${PERL5}|g'
 
 # Keep Meson from installing rc.d files
@@ -168,6 +167,7 @@ post-install:
 .include "../../devel/iniparser/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=        libevent>=2
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libbstring/buildlink3.mk"
 .include "../../security/cracklib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

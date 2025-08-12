@@ -1,17 +1,14 @@
-$NetBSD: patch-config_meson.build,v 1.3 2025/05/05 13:57:00 hauke Exp $
+$NetBSD: patch-config_meson.build,v 1.4 2025/08/12 18:22:55 hauke Exp $
 
 Leave installation of config files to pkgsrc framework
 
---- config/meson.build.orig	2025-04-27 20:58:10.000000000 +0000
+--- config/meson.build.orig	2025-08-05 13:56:32.000000000 +0000
 +++ config/meson.build
-@@ -4,47 +4,12 @@ afp_conf = configure_file(
+@@ -4,41 +4,12 @@ afp_conf = configure_file(
      configuration: cdata,
  )
  
--if (
--    fs.exists(pkgconfdir / 'afp.conf')
--    and not get_option('with-overwrite')
--)
+-if (fs.exists(pkgconfdir / 'afp.conf') and not get_option('with-overwrite'))
 -    message('will not replace existing', pkgconfdir / 'afp.conf')
 -else
 -    install_data(afp_conf, install_dir: pkgconfdir)
@@ -39,54 +36,47 @@ Leave installation of config files to pkgsrc framework
 -        fs.exists(dbus_sysconfpath / 'netatalk-dbus.conf')
 -        and not get_option('with-overwrite')
 -    )
--        message('will not replace existing', dbus_sysconfpath / 'netatalk-dbus.conf')
+-        message(
+-            'will not replace existing',
+-            dbus_sysconfpath / 'netatalk-dbus.conf',
+-        )
 -    else
 -        install_data('netatalk-dbus.conf', install_dir: dbus_sysconfpath)
 -    endif
--endif
--
--static_conf_files = ['extmap.conf']
--
--if have_appletalk
--    static_conf_files += ['atalkd.conf', 'macipgw.conf', 'papd.conf']
  endif
  
- cups_libdir = ''
-@@ -62,37 +27,7 @@ if have_appletalk and have_cups and get_
+ static_conf_files = ['extmap.conf']
+@@ -62,33 +33,17 @@ if have_appletalk and have_cups and get_
          input: 'pap.in',
          output: 'pap',
          configuration: cdata,
 -        install: true,
 -        install_dir: cups_libdir / 'cups/backend',
--    )
--endif
--
--foreach file : static_conf_files
--    if (
--        fs.exists(pkgconfdir / file)
--        and not get_option('with-overwrite')
      )
+ endif
+ 
+-foreach file : static_conf_files
+-    if (fs.exists(pkgconfdir / file) and not get_option('with-overwrite'))
 -        message('will not replace existing', pkgconfdir / file)
 -    else
 -        install_data(file, install_dir: pkgconfdir)
 -    endif
 -endforeach
 -
--if (
--    fs.exists('/etc/ld.so.conf.d')
--    and get_option('with-ldsoconf')
--)
--    configure_file(
--        input: 'libatalk.conf.in',
--        output: 'libatalk.conf',
--        configuration: cdata,
+ if (fs.exists('/etc/ld.so.conf.d') and get_option('with-ldsoconf'))
+     configure_file(
+         input: 'libatalk.conf.in',
+         output: 'libatalk.conf',
+         configuration: cdata,
 -        install: true,
 -        install_dir: '/etc/ld.so.conf.d',
--    )
--endif
--
--if get_option('with-statedir-creation')
--    install_data('README', install_dir: localstatedir / 'netatalk/CNID')
+     )
  endif
  
+-if get_option('with-statedir-creation')
+-    install_data('README', install_dir: localstatedir / 'netatalk/CNID')
+-endif
+-
  if have_pam
+     subdir('pam')
+ endif
