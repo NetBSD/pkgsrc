@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4893 2025/08/12 13:59:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4894 2025/08/12 14:01:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7093,3 +7093,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/sane-airscan to 0.99.36 [ryoon 2025-08-12]
 	Updated devel/ruby-regexp_parser to 2.11.1 [taca 2025-08-12]
 	Updated devel/ruby-tins to 1.39.1 [taca 2025-08-12]
+	Updated net/ruby-recog to 3.1.19 [taca 2025-08-12]
