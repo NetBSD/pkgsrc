@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2025/07/10 20:25:40 ktnb Exp $
+$NetBSD: distinfo,v 1.24 2025/08/12 01:28:38 ktnb Exp $
 
 BLAKE2s (apache-maven-3.9.10-bin.tar.gz) = 3f22534dea29ce40296e616ffcbbce4ed8fb38d3736d5327b031c7017e4d132f
 SHA512 (apache-maven-3.9.10-bin.tar.gz) = 4ef617e421695192a3e9a53b3530d803baf31f4269b26f9ab6863452d833da5530a4d04ed08c36490ad0f141b55304bceed58dbf44821153d94ae9abf34d0e1b
 Size (apache-maven-3.9.10-bin.tar.gz) = 8885210 bytes
-SHA1 (patch-bin_m2.conf) = a61e30a06282a4e08914a85793449a3a60a9ab75
+SHA1 (patch-bin_m2.conf) = 88bbedef1d6eb8b9404d669f5774142c766c440a
 SHA1 (patch-bin_mvn) = 9aa27abc262cd4788c140ff9d5564e87d64b6c7a
