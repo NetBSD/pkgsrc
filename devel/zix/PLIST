@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/05 17:08:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/12 07:30:15 adam Exp $
 include/zix-0/zix/allocator.h
 include/zix-0/zix/attributes.h
 include/zix-0/zix/btree.h
 include/zix-0/zix/bump_allocator.h
 include/zix-0/zix/digest.h
+include/zix-0/zix/environment.h
 include/zix-0/zix/filesystem.h
 include/zix-0/zix/hash.h
 include/zix-0/zix/path.h
@@ -34,6 +35,8 @@ ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_searching.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_btree_setup.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_data_structures.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_digest.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_environment.html
+${PLIST.doc}share/doc/zix-0/html/api/zix_expand.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_file_system.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_fs_access.html
 ${PLIST.doc}share/doc/zix-0/html/api/zix_fs_creation.html

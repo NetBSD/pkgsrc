@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/11/05 17:08:41 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/08/12 07:30:15 adam Exp $
 
-BLAKE2s (zix-0.4.2.tar.xz) = 1c06e60a87f8b8df7ba79acca8f3a530a3fde5296ab54b150b2f785a3f89ec85
-SHA512 (zix-0.4.2.tar.xz) = b8fb931a3e9ab5a67f6da57a07bf10b91e7f861c8cf39db14c49c083a9983a0971cc6bc6abcb54a83c00471b386e377cb9bb51e2edd945ba07b9ae43a35964cc
-Size (zix-0.4.2.tar.xz) = 76492 bytes
+BLAKE2s (zix-0.6.2.tar.xz) = ae7eef5bc1482a5988569332ee6369052248508c1420225f9a313cb1ed02ad54
+SHA512 (zix-0.6.2.tar.xz) = 3b072f00481a34e8b900311c2dc77fd73a63a34f69ea953be6b714f5bcbdebcc3cdd81feae73b5ad2bdc09a4bac122e12d9035cfc417ca41dfe5230d1fe13d9c
+Size (zix-0.6.2.tar.xz) = 81316 bytes
