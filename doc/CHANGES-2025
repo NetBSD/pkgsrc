@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4902 2025/08/12 18:14:37 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.4903 2025/08/12 18:23:07 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7105,3 +7105,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/blosc2 to 2.20.0 [adam 2025-08-12]
 	Updated net/grpc to 1.74.1 [adam 2025-08-12]
 	Added devel/libbstring version 1.0.1 [hauke 2025-08-12]
+	Updated net/netatalk4 to 4.3.0 [hauke 2025-08-12]
