@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4889 2025/08/12 11:36:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4890 2025/08/12 12:44:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7089,3 +7089,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-redis to 6.4.0 [adam 2025-08-12]
 	Updated graphics/py-graphviz to 0.21 [adam 2025-08-12]
 	Updated converters/py-fastbencode to 0.3.5 [adam 2025-08-12]
+	Updated multimedia/libaom to 3.12.1 [ryoon 2025-08-12]
