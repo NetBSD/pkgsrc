@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4895 2025/08/12 14:18:16 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4896 2025/08/12 14:21:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7095,3 +7095,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-tins to 1.39.1 [taca 2025-08-12]
 	Updated net/ruby-recog to 3.1.19 [taca 2025-08-12]
 	Updated security/ruby-chef-vault to 4.1.23 [taca 2025-08-12]
+	Updated www/typo3-13 to 13.4.16 [taca 2025-08-12]
