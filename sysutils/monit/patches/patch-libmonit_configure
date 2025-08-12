@@ -1,0 +1,15 @@
+$NetBSD: patch-libmonit_configure,v 1.1 2025/08/12 15:02:09 leot Exp $
+
+Avoid unportable == test(1) operator.
+
+--- libmonit/configure.orig	2025-08-12 14:56:43.549969084 +0000
++++ libmonit/configure
+@@ -19673,7 +19673,7 @@ fi
+ # ---------------------------------------------------------------------------
+ 
+ # Determine the minimum macOS version we can build
+-if [ $(uname) == "Darwin" ]; then
++if [ $(uname) = "Darwin" ]; then
+     { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for minimum macOS version supported" >&5
+ printf %s "checking for minimum macOS version supported... " >&6; }
+ 
