@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/06/19 06:10:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/12 07:34:16 adam Exp $
 bin/sord_validate
 bin/sordi
 include/sord-0/sord/sord.h
@@ -7,8 +7,8 @@ lib/libsord-0.so
 lib/libsord-0.so.${PKGVERSION}
 lib/libsord-0.so.0
 lib/pkgconfig/sord-0.pc
-${PLIST.doc}man/man1/sord_validate.1
-${PLIST.doc}man/man1/sordi.1
+man/man1/sord_validate.1
+man/man1/sordi.1
 ${PLIST.doc}share/doc/sord-0/html/clipboard.js
 ${PLIST.doc}share/doc/sord-0/html/dir_9a371e47b713cbf140a6beeab466575d.html
 ${PLIST.doc}share/doc/sord-0/html/dir_d436eb0fd9de10b54a828ce6435f7e81.html
