@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/08/11 20:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/12 00:57:28 ryoon Exp $
 
 DISTNAME=	boca-1.0.7
 CATEGORIES=	audio
@@ -17,7 +17,7 @@ CFLAGS+=	-I${BUILDLINK_DIR}/include
 
 MAKE_FLAGS=	prefix=${PREFIX}
 
-#.include "../../devel/smooth/buildlink3.mk"
+.include "../../devel/smooth/buildlink3.mk"
 .include "../../misc/libcdio-paranoia/buildlink3.mk"
 .include "../../textproc/uriparser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
