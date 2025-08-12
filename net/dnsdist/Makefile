@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.35 2025/07/03 06:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/08/12 07:22:24 wiz Exp $
 
-DISTNAME=	dnsdist-1.9.10
-PKGREVISION=	1
+DISTNAME=	dnsdist-2.0.0
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.powerdns.com/releases/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://dnsdist.org/
 COMMENT=	Highly DNS-, DoS- and abuse-aware loadbalancer
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
@@ -24,6 +25,8 @@ DNSDIST_GROUP?=			dnsdist
 PKG_GROUPS+=			${DNSDIST_GROUP}
 PKG_USERS+=			${DNSDIST_USER}:${DNSDIST_GROUP}
 PKG_GECOS.${DNSDIST_USER}=	dnsdist daemon user
+
+CHECK_WRKREF_SKIP+=		bin/dnsdist
 
 FILES_SUBST+=	DNSDIST_USER=${DNSDIST_USER}
 FILES_SUBST+=	DNSDIST_GROUP=${DNSDIST_GROUP}
@@ -66,5 +69,6 @@ RCD_SCRIPTS+=		dnsdist
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/nghttp2/buildlink3.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
