@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/04/28 09:01:48 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/08/12 06:11:27 adam Exp $
 
-BLAKE2s (cloudflare-4.1.0.tar.gz) = 2471a6b774f988042577e67658163c566b03ee9cea3f281509bca724097be7ba
-SHA512 (cloudflare-4.1.0.tar.gz) = 61dc66d287f68dc3325bd9d971bdff73b2fdb200eba83a43fd3cd488cac6cee32bbabcaa45bb51a71a88ff0e92f5779b4cccb31f864f156d2d17386ee3014d55
-Size (cloudflare-4.1.0.tar.gz) = 1826873 bytes
+BLAKE2s (cloudflare-4.3.1.tar.gz) = 627f717f8327c5eeb6ac84e23c77a2e79edcebdc11233a816225ea4a6654cc7f
+SHA512 (cloudflare-4.3.1.tar.gz) = 6907a7f84420b86f3990b720317a5339e3ff473d9b1b85e43651b1a264f540c915af07e3f329f9f5658eeb3c1e69860c1027dbb40dd4989459f5ac7a53447b57
+Size (cloudflare-4.3.1.tar.gz) = 1933187 bytes

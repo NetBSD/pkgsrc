@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/04/28 09:01:48 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/12 06:11:27 adam Exp $
 
-DISTNAME=	cloudflare-4.1.0
+DISTNAME=	cloudflare-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudflare/}
