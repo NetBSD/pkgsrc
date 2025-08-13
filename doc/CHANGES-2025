@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4908 2025/08/13 04:52:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4909 2025/08/13 05:40:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7116,3 +7116,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-sybil to 9.2.0 [adam 2025-08-13]
 	Updated devel/py-wrapt to 1.17.3 [adam 2025-08-13]
 	Updated devel/re2 to 20250812 [adam 2025-08-13]
+	Updated textproc/py-sphinx-automodapi to 0.20.0 [adam 2025-08-13]
+	Updated net/py-responses to 0.25.8 [adam 2025-08-13]
