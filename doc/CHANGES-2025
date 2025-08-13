@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4921 2025/08/13 13:45:04 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4922 2025/08/13 15:03:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7134,3 +7134,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-codspeed to 4.0.0 [adam 2025-08-13]
 	Updated lang/openjdk21 to 1.21.0.8.9 [ryoon 2025-08-13]
 	Updated www/lighttpd to 1.4.80 [schmonz 2025-08-13]
+	Added chat/libomemo-c version 0.5.1 [gdt 2025-08-13]
