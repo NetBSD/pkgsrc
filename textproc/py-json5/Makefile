@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/04/14 12:27:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/13 07:21:58 adam Exp $
 
-DISTNAME=	json5-0.12.0
+DISTNAME=	json5-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/json5/}
