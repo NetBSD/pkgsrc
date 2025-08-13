@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:40:10 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:07:43 pho Exp $
 
 DISTNAME=	http-semantics-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

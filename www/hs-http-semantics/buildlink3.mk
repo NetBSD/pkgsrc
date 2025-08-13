@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:40:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:43 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-semantics
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-semantics
 HS_HTTP_SEMANTICS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-semantics+=	hs-http-semantics>=0.3.0
-BUILDLINK_ABI_DEPENDS.hs-http-semantics+=	hs-http-semantics>=0.3.0nb2
+BUILDLINK_ABI_DEPENDS.hs-http-semantics+=	hs-http-semantics>=0.3.0nb3
 BUILDLINK_PKGSRCDIR.hs-http-semantics?=		../../www/hs-http-semantics
 
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"

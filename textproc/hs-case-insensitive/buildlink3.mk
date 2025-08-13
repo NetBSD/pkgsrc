@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/03/05 03:39:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/08/13 11:07:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-case-insensitive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-case-insensitive
 HS_CASE_INSENSITIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-case-insensitive+=	hs-case-insensitive>=1.2.1
-BUILDLINK_ABI_DEPENDS.hs-case-insensitive+=	hs-case-insensitive>=1.2.1.0nb10
+BUILDLINK_ABI_DEPENDS.hs-case-insensitive+=	hs-case-insensitive>=1.2.1.0nb11
 BUILDLINK_PKGSRCDIR.hs-case-insensitive?=	../../textproc/hs-case-insensitive
 
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/03/05 03:40:07 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/13 11:07:40 pho Exp $
 
 DISTNAME=	time-manager-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time
 
 MAINTAINER=	pho@cielonegro.org

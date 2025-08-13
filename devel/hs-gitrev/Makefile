@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/03/05 03:39:14 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/13 11:06:42 pho Exp $
 
 DISTNAME=	gitrev-1.3.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/03/05 03:39:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-network-byte-order
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-network-byte-order
 HS_NETWORK_BYTE_ORDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-network-byte-order+=	hs-network-byte-order>=0.1.7
-BUILDLINK_ABI_DEPENDS.hs-network-byte-order+=	hs-network-byte-order>=0.1.7nb4
+BUILDLINK_ABI_DEPENDS.hs-network-byte-order+=	hs-network-byte-order>=0.1.7nb5
 BUILDLINK_PKGSRCDIR.hs-network-byte-order?=	../../net/hs-network-byte-order
 .endif	# HS_NETWORK_BYTE_ORDER_BUILDLINK3_MK
 

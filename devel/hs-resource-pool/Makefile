@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:26 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:06:55 pho Exp $
 
 DISTNAME=	resource-pool-0.4.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

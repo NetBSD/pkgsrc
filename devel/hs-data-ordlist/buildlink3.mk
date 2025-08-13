@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:06:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-data-ordlist
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-data-ordlist
 HS_DATA_ORDLIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-data-ordlist+=	hs-data-ordlist>=0.4.7.0
-BUILDLINK_ABI_DEPENDS.hs-data-ordlist+=	hs-data-ordlist>=0.4.7.0nb7
+BUILDLINK_ABI_DEPENDS.hs-data-ordlist+=	hs-data-ordlist>=0.4.7.0nb8
 BUILDLINK_PKGSRCDIR.hs-data-ordlist?=	../../devel/hs-data-ordlist
 .endif	# HS_DATA_ORDLIST_BUILDLINK3_MK
 

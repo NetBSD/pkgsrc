@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:39:57 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:07:30 pho Exp $
 
 BUILDLINK_TREE+=	hs-diff3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-diff3
 HS_DIFF3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-diff3+=	hs-diff3>=0.3.1
-BUILDLINK_ABI_DEPENDS.hs-diff3+=	hs-diff3>=0.3.1nb2
+BUILDLINK_ABI_DEPENDS.hs-diff3+=	hs-diff3>=0.3.1nb3
 BUILDLINK_PKGSRCDIR.hs-diff3?=		../../textproc/hs-diff3
 
 .include "../../textproc/hs-Diff/buildlink3.mk"

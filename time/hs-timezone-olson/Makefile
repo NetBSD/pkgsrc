@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/03/05 03:40:07 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/13 11:07:40 pho Exp $
 
 DISTNAME=	timezone-olson-0.2.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	time
 
 MAINTAINER=	szptvlfn@NetBSD.org

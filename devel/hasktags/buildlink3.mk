@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:06:27 pho Exp $
 
 BUILDLINK_TREE+=	hasktags
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hasktags
 HASKTAGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hasktags+=	hasktags>=0.73.0
-BUILDLINK_ABI_DEPENDS.hasktags+=	hasktags>=0.73.0nb4
+BUILDLINK_ABI_DEPENDS.hasktags+=	hasktags>=0.73.0nb5
 BUILDLINK_PKGSRCDIR.hasktags?=		../../devel/hasktags
 
 .include "../../converters/hs-json/buildlink3.mk"

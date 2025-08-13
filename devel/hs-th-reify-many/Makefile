@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 16:46:15 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:02 pho Exp $
 
 DISTNAME=	th-reify-many-0.1.10
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

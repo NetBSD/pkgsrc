@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/03/05 03:39:51 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/08/13 11:07:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-dbus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dbus
 HS_DBUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dbus+=	hs-dbus>=1.3.11
-BUILDLINK_ABI_DEPENDS.hs-dbus+=	hs-dbus>=1.3.11nb2
+BUILDLINK_ABI_DEPENDS.hs-dbus+=	hs-dbus>=1.3.11nb3
 BUILDLINK_PKGSRCDIR.hs-dbus?=	../../sysutils/hs-dbus
 
 .include "../../devel/hs-cereal/buildlink3.mk"

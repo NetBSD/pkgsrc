@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 17:40:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:12 pho Exp $
 
 BUILDLINK_TREE+=	hs-mbox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-mbox
 HS_MBOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-mbox+=	hs-mbox>=0.3.4
-BUILDLINK_ABI_DEPENDS.hs-mbox+=	hs-mbox>=0.3.4
+BUILDLINK_ABI_DEPENDS.hs-mbox+=	hs-mbox>=0.3.4nb1
 BUILDLINK_PKGSRCDIR.hs-mbox?=	../../mail/hs-mbox
 
 .include "../../devel/hs-safe/buildlink3.mk"

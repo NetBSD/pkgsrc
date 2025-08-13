@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:53 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:07:26 pho Exp $
 
 DISTNAME=	posix-paths-0.3.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

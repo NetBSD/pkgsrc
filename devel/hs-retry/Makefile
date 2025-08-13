@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/03/05 03:39:26 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/13 11:06:55 pho Exp $
 
 DISTNAME=	retry-0.9.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

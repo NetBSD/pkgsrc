@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/03/05 03:40:13 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/13 11:07:46 pho Exp $
 
 DISTNAME=	yesod-core-1.6.26.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

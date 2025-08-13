@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:06:51 pho Exp $
 
 BUILDLINK_TREE+=	hs-optional-args
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-optional-args
 HS_OPTIONAL_ARGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-optional-args+=	hs-optional-args>=1.0.2
-BUILDLINK_ABI_DEPENDS.hs-optional-args+=	hs-optional-args>=1.0.2nb7
+BUILDLINK_ABI_DEPENDS.hs-optional-args+=	hs-optional-args>=1.0.2nb8
 BUILDLINK_PKGSRCDIR.hs-optional-args?=		../../devel/hs-optional-args
 .endif	# HS_OPTIONAL_ARGS_BUILDLINK3_MK
 

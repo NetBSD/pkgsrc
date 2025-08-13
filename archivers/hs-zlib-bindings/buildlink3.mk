@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/08 02:47:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:06:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-zlib-bindings
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-zlib-bindings
 HS_ZLIB_BINDINGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-zlib-bindings+=	hs-zlib-bindings>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-zlib-bindings+=	hs-zlib-bindings>=0.1.1.5
+BUILDLINK_ABI_DEPENDS.hs-zlib-bindings+=	hs-zlib-bindings>=0.1.1.5nb1
 BUILDLINK_PKGSRCDIR.hs-zlib-bindings?=		../../archivers/hs-zlib-bindings
 
 .include "../../archivers/hs-zlib/buildlink3.mk"

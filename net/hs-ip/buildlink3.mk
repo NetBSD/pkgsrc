@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 17:26:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:18 pho Exp $
 
 BUILDLINK_TREE+=	hs-ip
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ip
 HS_IP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ip+=	hs-ip>=1.7.8
-BUILDLINK_ABI_DEPENDS.hs-ip+=	hs-ip>=1.7.8
+BUILDLINK_ABI_DEPENDS.hs-ip+=	hs-ip>=1.7.8nb1
 BUILDLINK_PKGSRCDIR.hs-ip?=	../../net/hs-ip
 
 .include "../../converters/hs-aeson/buildlink3.mk"

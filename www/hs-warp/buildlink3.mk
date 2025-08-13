@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/03/05 03:40:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/08/13 11:07:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-warp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-warp
 HS_WARP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=3.4.7
-BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.4.7nb2
+BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.4.7nb3
 BUILDLINK_PKGSRCDIR.hs-warp?=	../../www/hs-warp
 
 .include "../../devel/hs-auto-update/buildlink3.mk"

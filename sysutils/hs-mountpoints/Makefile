@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:53 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:07:25 pho Exp $
 
 DISTNAME=	mountpoints-1.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

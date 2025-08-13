@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/08 03:21:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:45 pho Exp $
 
 BUILDLINK_TREE+=	hs-snap-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-snap-server
 HS_SNAP_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-snap-server+=	hs-snap-server>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-snap-server+=	hs-snap-server>=1.1.2.1
+BUILDLINK_ABI_DEPENDS.hs-snap-server+=	hs-snap-server>=1.1.2.1nb1
 BUILDLINK_PKGSRCDIR.hs-snap-server?=	../../www/hs-snap-server
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

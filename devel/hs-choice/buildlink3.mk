@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:39:05 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:06:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-choice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-choice
 HS_CHOICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-choice+=	hs-choice>=0.2.4
-BUILDLINK_ABI_DEPENDS.hs-choice+=	hs-choice>=0.2.4.1nb2
+BUILDLINK_ABI_DEPENDS.hs-choice+=	hs-choice>=0.2.4.1nb3
 BUILDLINK_PKGSRCDIR.hs-choice?=		../../devel/hs-choice
 
 .endif	# HS_CHOICE_BUILDLINK3_MK

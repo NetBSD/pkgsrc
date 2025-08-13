@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/03/05 03:39:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2025/08/13 11:06:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-data-default-instances-dlist
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-data-default-instances-dlist
 HS_DATA_DEFAULT_INSTANCES_DLIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-data-default-instances-dlist+=	hs-data-default-instances-dlist>=0.0.1
-BUILDLINK_ABI_DEPENDS.hs-data-default-instances-dlist+=	hs-data-default-instances-dlist>=0.0.1.2nb2
+BUILDLINK_ABI_DEPENDS.hs-data-default-instances-dlist+=	hs-data-default-instances-dlist>=0.0.1.2nb3
 BUILDLINK_PKGSRCDIR.hs-data-default-instances-dlist?=	../../devel/hs-data-default-instances-dlist
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"

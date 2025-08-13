@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 14:04:19 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:32 pho Exp $
 
 DISTNAME=	hxt-relaxng-9.1.5.5
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

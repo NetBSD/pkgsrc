@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/03/05 03:39:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:06:38 pho Exp $
 
 BUILDLINK_TREE+=	hs-errors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-errors
 HS_ERRORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-errors+=	hs-errors>=2.3.0
-BUILDLINK_ABI_DEPENDS.hs-errors+=	hs-errors>=2.3.0nb10
+BUILDLINK_ABI_DEPENDS.hs-errors+=	hs-errors>=2.3.0nb11
 BUILDLINK_PKGSRCDIR.hs-errors?=		../../devel/hs-errors
 
 .include "../../devel/hs-transformers-compat/buildlink3.mk"

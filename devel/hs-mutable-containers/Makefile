@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 03:39:22 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/13 11:06:50 pho Exp $
 
 DISTNAME=	mutable-containers-0.3.4.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

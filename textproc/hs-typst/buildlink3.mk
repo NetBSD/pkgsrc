@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/07/19 20:48:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:07:38 pho Exp $
 
 BUILDLINK_TREE+=	hs-typst
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-typst
 HS_TYPST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-typst+=	hs-typst>=0.8.0
-BUILDLINK_ABI_DEPENDS.hs-typst+=	hs-typst>=0.8.0.1
+BUILDLINK_ABI_DEPENDS.hs-typst+=	hs-typst>=0.8.0.1nb1
 BUILDLINK_PKGSRCDIR.hs-typst?=		../../textproc/hs-typst
 
 .include "../../textproc/hs-typst-symbols/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:53 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:07:25 pho Exp $
 
 BUILDLINK_TREE+=	hs-hslogger
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hslogger
 HS_HSLOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hslogger+=	hs-hslogger>=1.3.1
-BUILDLINK_ABI_DEPENDS.hs-hslogger+=	hs-hslogger>=1.3.1.1nb3
+BUILDLINK_ABI_DEPENDS.hs-hslogger+=	hs-hslogger>=1.3.1.1nb4
 BUILDLINK_PKGSRCDIR.hs-hslogger?=	../../sysutils/hs-hslogger
 
 .include "../../devel/hs-old-locale/buildlink3.mk"

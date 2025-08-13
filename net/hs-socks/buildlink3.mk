@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/03/05 03:39:48 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:07:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-socks
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-socks
 HS_SOCKS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-socks+=	hs-socks>=0.6.1
-BUILDLINK_ABI_DEPENDS.hs-socks+=	hs-socks>=0.6.1nb10
+BUILDLINK_ABI_DEPENDS.hs-socks+=	hs-socks>=0.6.1nb11
 BUILDLINK_PKGSRCDIR.hs-socks?=		../../net/hs-socks
 
 .include "../../devel/hs-basement/buildlink3.mk"

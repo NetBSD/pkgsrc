@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/03/05 03:39:06 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/08/13 11:06:34 pho Exp $
 
 BUILDLINK_TREE+=	hs-classy-prelude
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-classy-prelude
 HS_CLASSY_PRELUDE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-classy-prelude+=	hs-classy-prelude>=1.5.0
-BUILDLINK_ABI_DEPENDS.hs-classy-prelude+=	hs-classy-prelude>=1.5.0.3nb4
+BUILDLINK_ABI_DEPENDS.hs-classy-prelude+=	hs-classy-prelude>=1.5.0.3nb5
 BUILDLINK_PKGSRCDIR.hs-classy-prelude?=		../../devel/hs-classy-prelude
 
 .include "../../devel/hs-async/buildlink3.mk"

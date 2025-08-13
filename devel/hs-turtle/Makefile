@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/03/05 03:39:33 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/13 11:07:03 pho Exp $
 
 DISTNAME=	turtle-1.6.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

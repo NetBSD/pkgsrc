@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:39:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:07:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-tasty-golden
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tasty-golden
 HS_TASTY_GOLDEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tasty-golden+=	hs-tasty-golden>=2.3.5
-BUILDLINK_ABI_DEPENDS.hs-tasty-golden+=	hs-tasty-golden>=2.3.5nb2
+BUILDLINK_ABI_DEPENDS.hs-tasty-golden+=	hs-tasty-golden>=2.3.5nb3
 BUILDLINK_PKGSRCDIR.hs-tasty-golden?=	../../devel/hs-tasty-golden
 
 .include "../../devel/hs-tasty/buildlink3.mk"

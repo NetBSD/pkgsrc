@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/03/05 03:39:04 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/13 11:06:32 pho Exp $
 
 DISTNAME=	boring-0.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

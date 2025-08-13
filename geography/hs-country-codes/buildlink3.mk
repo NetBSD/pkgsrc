@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 13:19:24 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-country-codes
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-country-codes
 HS_COUNTRY_CODES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-country-codes+=	hs-country-codes>=0.1.4
-BUILDLINK_ABI_DEPENDS.hs-country-codes+=	hs-country-codes>=0.1.4
+BUILDLINK_ABI_DEPENDS.hs-country-codes+=	hs-country-codes>=0.1.4nb1
 BUILDLINK_PKGSRCDIR.hs-country-codes?=		../../geography/hs-country-codes
 
 .include "../../converters/hs-aeson/buildlink3.mk"

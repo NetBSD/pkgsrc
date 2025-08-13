@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/04/17 21:50:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/08/13 11:06:26 pho Exp $
 
 BUILDLINK_TREE+=	hs-direct-sqlite
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-direct-sqlite
 HS_DIRECT_SQLITE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-direct-sqlite+=	hs-direct-sqlite>=2.3.29
-BUILDLINK_ABI_DEPENDS.hs-direct-sqlite+=	hs-direct-sqlite>=2.3.29nb8
+BUILDLINK_ABI_DEPENDS.hs-direct-sqlite+=	hs-direct-sqlite>=2.3.29nb9
 BUILDLINK_PKGSRCDIR.hs-direct-sqlite?=		../../databases/hs-direct-sqlite
 
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.45.3

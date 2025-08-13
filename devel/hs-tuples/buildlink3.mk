@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 16:25:36 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-tuples
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tuples
 HS_TUPLES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tuples+=	hs-tuples>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-tuples+=	hs-tuples>=0.1.0.0
+BUILDLINK_ABI_DEPENDS.hs-tuples+=	hs-tuples>=0.1.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-tuples?=		../../devel/hs-tuples
 
 .include "../../devel/hs-primitive/buildlink3.mk"

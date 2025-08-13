@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/03/05 03:39:16 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/08/13 11:06:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-hslua-module-system
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hslua-module-system
 HS_HSLUA_MODULE_SYSTEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hslua-module-system+=	hs-hslua-module-system>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-hslua-module-system+=	hs-hslua-module-system>=1.1.2nb2
+BUILDLINK_ABI_DEPENDS.hs-hslua-module-system+=	hs-hslua-module-system>=1.1.2nb3
 BUILDLINK_PKGSRCDIR.hs-hslua-module-system?=	../../devel/hs-hslua-module-system
 
 .include "../../lang/hs-hslua-core/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:40:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:07:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-neat-interpolation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-neat-interpolation
 HS_NEAT_INTERPOLATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-neat-interpolation+=	hs-neat-interpolation>=0.5.1
-BUILDLINK_ABI_DEPENDS.hs-neat-interpolation+=	hs-neat-interpolation>=0.5.1.4nb2
+BUILDLINK_ABI_DEPENDS.hs-neat-interpolation+=	hs-neat-interpolation>=0.5.1.4nb3
 BUILDLINK_PKGSRCDIR.hs-neat-interpolation?=	../../textproc/hs-neat-interpolation
 
 .include "../../textproc/hs-megaparsec/buildlink3.mk"

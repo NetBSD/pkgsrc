@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/03/05 03:39:07 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/13 11:06:35 pho Exp $
 
 DISTNAME=	conduit-parse-0.2.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

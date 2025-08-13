@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/08 02:51:31 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:06:46 pho Exp $
 
 DISTNAME=	io-streams-1.5.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

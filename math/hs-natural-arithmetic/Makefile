@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 15:57:54 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:15 pho Exp $
 
 DISTNAME=	natural-arithmetic-0.2.1.0
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

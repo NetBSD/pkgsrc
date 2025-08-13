@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/03/05 03:39:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2025/08/13 11:06:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-foundation
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-foundation
 HS_FOUNDATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-foundation+=	hs-foundation>=0.0.30
-BUILDLINK_ABI_DEPENDS.hs-foundation+=	hs-foundation>=0.0.30nb4
+BUILDLINK_ABI_DEPENDS.hs-foundation+=	hs-foundation>=0.0.30nb5
 BUILDLINK_PKGSRCDIR.hs-foundation?=	../../devel/hs-foundation
 
 .include "../../devel/hs-basement/buildlink3.mk"

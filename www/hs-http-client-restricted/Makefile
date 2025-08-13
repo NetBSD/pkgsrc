@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/03/08 05:13:51 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/13 11:07:42 pho Exp $
 
 DISTNAME=	http-client-restricted-0.1.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

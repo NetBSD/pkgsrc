@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:07:12 pho Exp $
 
 BUILDLINK_TREE+=	hs-algebraic-graphs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-algebraic-graphs
 HS_ALGEBRAIC_GRAPHS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-algebraic-graphs+=	hs-algebraic-graphs>=0.7
-BUILDLINK_ABI_DEPENDS.hs-algebraic-graphs+=	hs-algebraic-graphs>=0.7nb6
+BUILDLINK_ABI_DEPENDS.hs-algebraic-graphs+=	hs-algebraic-graphs>=0.7nb7
 BUILDLINK_PKGSRCDIR.hs-algebraic-graphs?=	../../math/hs-algebraic-graphs
 .endif	# HS_ALGEBRAIC_GRAPHS_BUILDLINK3_MK
 

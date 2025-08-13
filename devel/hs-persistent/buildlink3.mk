@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/03/05 03:39:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/08/13 11:06:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-persistent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-persistent
 HS_PERSISTENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-persistent+=	hs-persistent>=2.14.6
-BUILDLINK_ABI_DEPENDS.hs-persistent+=	hs-persistent>=2.14.6.3nb2
+BUILDLINK_ABI_DEPENDS.hs-persistent+=	hs-persistent>=2.14.6.3nb3
 BUILDLINK_PKGSRCDIR.hs-persistent?=	../../devel/hs-persistent
 
 .include "../../converters/hs-aeson/buildlink3.mk"

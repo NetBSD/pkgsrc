@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:40:07 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:07:40 pho Exp $
 
 DISTNAME=	time-locale-compat-0.1.1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

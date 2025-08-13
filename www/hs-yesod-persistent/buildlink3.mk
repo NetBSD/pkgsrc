@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:40:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-yesod-persistent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-yesod-persistent
 HS_YESOD_PERSISTENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-yesod-persistent+=	hs-yesod-persistent>=1.6.0
-BUILDLINK_ABI_DEPENDS.hs-yesod-persistent+=	hs-yesod-persistent>=1.6.0.8nb4
+BUILDLINK_ABI_DEPENDS.hs-yesod-persistent+=	hs-yesod-persistent>=1.6.0.8nb5
 BUILDLINK_PKGSRCDIR.hs-yesod-persistent?=	../../www/hs-yesod-persistent
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"

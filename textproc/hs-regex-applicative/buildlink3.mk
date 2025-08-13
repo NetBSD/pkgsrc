@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:40:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:07:34 pho Exp $
 
 BUILDLINK_TREE+=	hs-regex-applicative
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-regex-applicative
 HS_REGEX_APPLICATIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-regex-applicative+=	hs-regex-applicative>=0.3.4
-BUILDLINK_ABI_DEPENDS.hs-regex-applicative+=	hs-regex-applicative>=0.3.4nb7
+BUILDLINK_ABI_DEPENDS.hs-regex-applicative+=	hs-regex-applicative>=0.3.4nb8
 BUILDLINK_PKGSRCDIR.hs-regex-applicative?=	../../textproc/hs-regex-applicative
 
 .include "../../devel/hs-filtrable/buildlink3.mk"

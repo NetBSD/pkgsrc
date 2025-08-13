@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:40:13 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-yesod
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-yesod
 HS_YESOD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-yesod+=	hs-yesod>=1.6.2
-BUILDLINK_ABI_DEPENDS.hs-yesod+=	hs-yesod>=1.6.2.1nb4
+BUILDLINK_ABI_DEPENDS.hs-yesod+=	hs-yesod>=1.6.2.1nb5
 BUILDLINK_PKGSRCDIR.hs-yesod?=		../../www/hs-yesod
 
 .include "../../converters/hs-aeson/buildlink3.mk"
