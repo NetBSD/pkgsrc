@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2025/06/07 09:40:33 nia Exp $
+# $NetBSD: Makefile,v 1.300 2025/08/13 15:02:58 gdt Exp $
 #
 
 COMMENT=	Communication programs
@@ -65,6 +65,7 @@ SUBDIR+=	libfolks
 SUBDIR+=	libgadu
 SUBDIR+=	libmesode
 SUBDIR+=	libmsn
+SUBDIR+=	libomemo-c
 SUBDIR+=	libotr
 SUBDIR+=	libpurple
 SUBDIR+=	libsignal-protocol-c
