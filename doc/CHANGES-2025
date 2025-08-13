@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4904 2025/08/12 18:55:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4905 2025/08/13 00:18:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7108,3 +7108,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/netatalk4 to 4.3.0 [hauke 2025-08-12]
 	Updated devel/py-jupyter_core to 5.8.1 [adam 2025-08-12]
 	Updated devel/py-ipykernel to 6.30.1 [adam 2025-08-12]
+	Updated chat/dino to 0.4.5 [gdt 2025-08-13]
