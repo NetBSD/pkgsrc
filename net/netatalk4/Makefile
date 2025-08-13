@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/08/12 18:22:55 hauke Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/13 09:03:26 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -94,7 +94,7 @@ PLIST.ea=		yes
 .endif
 
 # appletalk
-.for atbin in aecho getzones nbplkup nbprgstr nbpunrgstr pap papstatus
+.for atbin in aecho getzones nbplkup nbprgstr nbpunrgstr pap papstatus rtmpqry
 PRINT_PLIST_AWK+=	{ gsub(/^bin\/${atbin}$$/, "$${PLIST.appletalk}&"); }
 .endfor
 .for atsbin in a2boot atalkd macipgw papd timelord
@@ -103,7 +103,7 @@ PRINT_PLIST_AWK+=	{ gsub(/^sbin\/${atsbin}$$/, "$${PLIST.appletalk}&"); }
 .for athdr in aarp at at_var ddp ddp_var endian phase2
 PRINT_PLIST_AWK+=	{ gsub(/^include\/netatalk\/${athdr}\.h$$/, "$${PLIST.appletalk}&"); }
 .endfor
-.for atman1 in aecho getzones nbp nbplkup nbprgstr nbpunrgstr pap
+.for atman1 in aecho getzones nbp nbplkup nbprgstr nbpunrgstr pap rtmpqry
 PRINT_PLIST_AWK+=	{ gsub(/^man\/man1\/${atman1}\.1$$/, "$${PLIST.appletalk}&"); }
 .endfor
 .for atman5 in atalkd.conf papd.conf macipgw.conf
