@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2025/08/13 00:18:29 gdt Exp $
+# $NetBSD: Makefile,v 1.50 2025/08/13 10:13:57 gdt Exp $
 
 DISTNAME=		dino-0.4.5
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=dino/}
-#GITHUB_RELEASE=	v${PKGVERSION_NOREV}
-# use post-release branch commits to fix a build issue
-GITHUB_TAG=		235efcdab9b792a8cc328f466cbe700c102cd48f
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/dino/dino/
