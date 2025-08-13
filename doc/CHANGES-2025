@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4915 2025/08/13 07:22:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4916 2025/08/13 08:13:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7126,3 +7126,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xf86-input-mouse to 2.0.0 [wiz 2025-08-13]
 	Updated net/py-cares to 4.10.0 [adam 2025-08-13]
 	Updated textproc/py-json5 to 0.12.1 [adam 2025-08-13]
+	Updated devel/py-fasteners to 0.20 [adam 2025-08-13]
+	Updated databases/py-multidict to 6.6.4 [adam 2025-08-13]
