@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/04/12 10:59:18 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/13 08:09:48 adam Exp $
 
-DISTNAME=	fasteners-0.19
+DISTNAME=	fasteners-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fasteners/}
 
