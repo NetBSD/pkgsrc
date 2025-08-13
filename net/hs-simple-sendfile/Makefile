@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/03/05 03:39:47 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/13 11:07:19 pho Exp $
 
 DISTNAME=	simple-sendfile-0.2.32
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org

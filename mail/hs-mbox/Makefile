@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 17:40:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:12 pho Exp $
 
 DISTNAME=	mbox-0.3.4
+PKGREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

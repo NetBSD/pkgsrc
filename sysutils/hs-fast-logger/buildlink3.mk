@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/03/05 03:39:52 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/08/13 11:07:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-fast-logger
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-fast-logger
 HS_FAST_LOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-fast-logger+=	hs-fast-logger>=3.2.5
-BUILDLINK_ABI_DEPENDS.hs-fast-logger+=	hs-fast-logger>=3.2.5nb2
+BUILDLINK_ABI_DEPENDS.hs-fast-logger+=	hs-fast-logger>=3.2.5nb3
 BUILDLINK_PKGSRCDIR.hs-fast-logger?=	../../sysutils/hs-fast-logger
 
 .include "../../devel/hs-auto-update/buildlink3.mk"

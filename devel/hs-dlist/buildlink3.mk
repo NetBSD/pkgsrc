@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/03/05 03:39:09 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/08/13 11:06:37 pho Exp $
 
 BUILDLINK_TREE+=	hs-dlist
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dlist
 HS_DLIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dlist+=	hs-dlist>=1.0
-BUILDLINK_ABI_DEPENDS.hs-dlist+=	hs-dlist>=1.0nb10
+BUILDLINK_ABI_DEPENDS.hs-dlist+=	hs-dlist>=1.0nb11
 BUILDLINK_PKGSRCDIR.hs-dlist?=		../../devel/hs-dlist
 .endif	# HS_DLIST_BUILDLINK3_MK
 

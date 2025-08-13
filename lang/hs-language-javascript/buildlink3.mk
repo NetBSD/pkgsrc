@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:40 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:07:11 pho Exp $
 
 BUILDLINK_TREE+=	hs-language-javascript
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-language-javascript
 HS_LANGUAGE_JAVASCRIPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-language-javascript+=	hs-language-javascript>=0.7.1
-BUILDLINK_ABI_DEPENDS.hs-language-javascript+=	hs-language-javascript>=0.7.1.0nb7
+BUILDLINK_ABI_DEPENDS.hs-language-javascript+=	hs-language-javascript>=0.7.1.0nb8
 BUILDLINK_PKGSRCDIR.hs-language-javascript?=	../../lang/hs-language-javascript
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"

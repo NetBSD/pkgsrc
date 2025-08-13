@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 03:39:51 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/13 11:07:23 pho Exp $
 
 DISTNAME=	byteorder-1.0.4
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils
 
 MAINTAINER=	pho@cielonegro.org

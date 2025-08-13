@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:06:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-persistent-template
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-persistent-template
 HS_PERSISTENT_TEMPLATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-persistent-template+=	hs-persistent-template>=2.12.0
-BUILDLINK_ABI_DEPENDS.hs-persistent-template+=	hs-persistent-template>=2.12.0.0nb4
+BUILDLINK_ABI_DEPENDS.hs-persistent-template+=	hs-persistent-template>=2.12.0.0nb5
 BUILDLINK_PKGSRCDIR.hs-persistent-template?=	../../devel/hs-persistent-template
 .endif	# HS_PERSISTENT_TEMPLATE_BUILDLINK3_MK
 

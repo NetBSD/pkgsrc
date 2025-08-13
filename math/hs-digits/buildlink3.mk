@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-digits
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-digits
 HS_DIGITS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-digits+=	hs-digits>=0.3.1
-BUILDLINK_ABI_DEPENDS.hs-digits+=	hs-digits>=0.3.1nb4
+BUILDLINK_ABI_DEPENDS.hs-digits+=	hs-digits>=0.3.1nb5
 BUILDLINK_PKGSRCDIR.hs-digits?=		../../math/hs-digits
 
 .include "../../devel/hs-QuickCheck/buildlink3.mk"

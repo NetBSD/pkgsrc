@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:53 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:07:25 pho Exp $
 
 BUILDLINK_TREE+=	hs-opentelemetry
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-opentelemetry
 HS_OPENTELEMETRY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-opentelemetry+=	hs-opentelemetry>=0.8.0
-BUILDLINK_ABI_DEPENDS.hs-opentelemetry+=	hs-opentelemetry>=0.8.0nb6
+BUILDLINK_ABI_DEPENDS.hs-opentelemetry+=	hs-opentelemetry>=0.8.0nb7
 BUILDLINK_PKGSRCDIR.hs-opentelemetry?=		../../sysutils/hs-opentelemetry
 
 .include "../../devel/hs-ghc-trace-events/buildlink3.mk"

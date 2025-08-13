@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 12:39:35 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:07:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-chart
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-chart
 HS_CHART_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-chart+=	hs-chart>=1.9.5
-BUILDLINK_ABI_DEPENDS.hs-chart+=	hs-chart>=1.9.5
+BUILDLINK_ABI_DEPENDS.hs-chart+=	hs-chart>=1.9.5nb1
 BUILDLINK_PKGSRCDIR.hs-chart?=		../../graphics/hs-chart
 
 .include "../../devel/hs-old-locale/buildlink3.mk"

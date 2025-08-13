@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/03/05 03:39:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/08/13 11:07:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-contravariant
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-contravariant
 HS_CONTRAVARIANT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-contravariant+=	hs-contravariant>=1.5.5
-BUILDLINK_ABI_DEPENDS.hs-contravariant+=	hs-contravariant>=1.5.5nb8
+BUILDLINK_ABI_DEPENDS.hs-contravariant+=	hs-contravariant>=1.5.5nb9
 BUILDLINK_PKGSRCDIR.hs-contravariant?=		../../math/hs-contravariant
 
 .include "../../devel/hs-StateVar/buildlink3.mk"

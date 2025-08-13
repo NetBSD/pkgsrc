@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:38:56 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/13 11:06:24 pho Exp $
 
 DISTNAME=	bencode-0.6.1.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

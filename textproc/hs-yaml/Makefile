@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/03/05 03:40:06 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/13 11:07:39 pho Exp $
 
 DISTNAME=	yaml-0.11.11.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@NetBSD.org
