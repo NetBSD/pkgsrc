@@ -1,4 +1,6 @@
-$NetBSD: patch-src_include_OpenImageIO_typedesc.h,v 1.1 2025/08/13 06:35:13 wiz Exp $
+$NetBSD: patch-src_include_OpenImageIO_typedesc.h,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/include/OpenImageIO/typedesc.h.orig	2025-08-13 06:24:05.048800007 +0000
 +++ src/include/OpenImageIO/typedesc.h

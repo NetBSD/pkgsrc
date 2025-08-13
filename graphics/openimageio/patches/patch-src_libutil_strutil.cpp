@@ -1,6 +1,7 @@
-$NetBSD: patch-src_libutil_strutil.cpp,v 1.1 2023/10/15 19:52:09 ryoon Exp $
+$NetBSD: patch-src_libutil_strutil.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
 
 * For NetBSD
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/libutil/strutil.cpp.orig	2023-06-01 17:26:37.000000000 +0000
 +++ src/libutil/strutil.cpp

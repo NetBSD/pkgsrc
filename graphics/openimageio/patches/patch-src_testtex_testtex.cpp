@@ -1,4 +1,6 @@
-$NetBSD: patch-src_testtex_testtex.cpp,v 1.1 2025/08/13 06:35:14 wiz Exp $
+$NetBSD: patch-src_testtex_testtex.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/testtex/testtex.cpp.orig	2025-08-13 06:26:53.842812970 +0000
 +++ src/testtex/testtex.cpp

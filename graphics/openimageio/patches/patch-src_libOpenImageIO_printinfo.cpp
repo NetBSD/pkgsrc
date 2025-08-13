@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libOpenImageIO_printinfo.cpp,v 1.1 2025/08/13 06:35:14 wiz Exp $
+$NetBSD: patch-src_libOpenImageIO_printinfo.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/libOpenImageIO/printinfo.cpp.orig	2025-08-13 06:20:47.321951087 +0000
 +++ src/libOpenImageIO/printinfo.cpp

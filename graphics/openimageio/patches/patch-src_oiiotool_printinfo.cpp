@@ -1,4 +1,6 @@
-$NetBSD: patch-src_oiiotool_printinfo.cpp,v 1.1 2025/08/13 06:35:14 wiz Exp $
+$NetBSD: patch-src_oiiotool_printinfo.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/oiiotool/printinfo.cpp.orig	2025-08-13 06:26:13.271475820 +0000
 +++ src/oiiotool/printinfo.cpp

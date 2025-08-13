@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libOpenImageIO_imagebufalgo__compare.cpp,v 1.1 2025/08/13 06:35:13 wiz Exp $
+$NetBSD: patch-src_libOpenImageIO_imagebufalgo__compare.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/libOpenImageIO/imagebufalgo_compare.cpp.orig	2025-08-13 06:18:52.121013693 +0000
 +++ src/libOpenImageIO/imagebufalgo_compare.cpp
