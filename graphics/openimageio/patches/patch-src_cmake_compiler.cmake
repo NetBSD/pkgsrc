@@ -1,14 +1,13 @@
-$NetBSD: patch-src_cmake_compiler.cmake,v 1.3 2024/06/26 16:26:24 adam Exp $
+$NetBSD: patch-src_cmake_compiler.cmake,v 1.4 2025/08/13 06:35:13 wiz Exp $
 
 Disable custom rpath handling that conflicts with pkgsrc.
 
---- src/cmake/compiler.cmake.orig	2024-06-01 19:59:05.000000000 +0000
+--- src/cmake/compiler.cmake.orig	2025-08-13 06:30:18.571566460 +0000
 +++ src/cmake/compiler.cmake
-@@ -632,27 +632,6 @@ if (DEFINED ENV{${PROJECT_NAME}_CI})
- endif ()
+@@ -688,36 +688,6 @@ endif ()
  
  
--###########################################################################
+ ###########################################################################
 -# Rpath handling at the install step
 -#
 -# set (MACOSX_RPATH ON)
@@ -22,13 +21,23 @@ Disable custom rpath handling that conflicts with pkgsrc.
 -    unset (CMAKE_INSTALL_RPATH)
 -else ()
 -    if (NOT CMAKE_INSTALL_RPATH)
--        set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_FULL_LIBDIR}")
+-        if(APPLE)
+-            set(BASEPOINT @loader_path)
+-        else()
+-            set(BASEPOINT $ORIGIN)
+-        endif()
+-        set (CMAKE_INSTALL_RPATH ${BASEPOINT}
+-                                 ${BASEPOINT}/${CMAKE_INSTALL_LIBDIR}
+-                                 ${BASEPOINT}/../${CMAKE_INSTALL_LIBDIR})
 -    endif ()
 -    # add the automatically determined parts of the RPATH that
 -    # point to directories outside the build tree to the install RPATH
 -    set (CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 -    message (VERBOSE "CMAKE_INSTALL_RPATH = ${CMAKE_INSTALL_RPATH}")
 -endif ()
+-
+-
+-###########################################################################
+ # Generate compile_commands.json for use by editors and tools.
+ set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
  
- 
- ###########################################################################
