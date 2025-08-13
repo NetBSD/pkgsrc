@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/10 06:29:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/13 09:53:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,21 +7,27 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_codspeed/__init__.py
 ${PYSITELIB}/pytest_codspeed/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/__init__.pyo
+${PYSITELIB}/pytest_codspeed/config.py
+${PYSITELIB}/pytest_codspeed/config.pyc
+${PYSITELIB}/pytest_codspeed/config.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/__init__.py
 ${PYSITELIB}/pytest_codspeed/instruments/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/__init__.pyo
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.py
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.pyc
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.pyo
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.py
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.pyc
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.pyo
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.py
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.pyc
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.pyo
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.c
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.h
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.pyi
+${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.py
+${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.pyc
+${PYSITELIB}/pytest_codspeed/instruments/hooks/__init__.pyo
+${PYSITELIB}/pytest_codspeed/instruments/hooks/build.py
+${PYSITELIB}/pytest_codspeed/instruments/hooks/build.pyc
+${PYSITELIB}/pytest_codspeed/instruments/hooks/build.pyo
+${PYSITELIB}/pytest_codspeed/instruments/hooks/dist_instrument_hooks.pyi
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/dist/core.c
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/callgrind.h
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/core.h
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/valgrind.h
+${PYSITELIB}/pytest_codspeed/instruments/hooks/instrument-hooks/includes/zig.h
+${PYSITELIB}/pytest_codspeed/instruments/valgrind.py
+${PYSITELIB}/pytest_codspeed/instruments/valgrind.pyc
+${PYSITELIB}/pytest_codspeed/instruments/valgrind.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.py
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/walltime.pyo
