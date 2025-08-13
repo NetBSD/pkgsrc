@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_metrics_power_process__metrics__recorder__util.cc,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_power_process__metrics__recorder__util.cc,v 1.5 2025/08/13 07:44:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/metrics/power/process_metrics_recorder_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/metrics/power/process_metrics_recorder_util.cc
 @@ -65,7 +65,7 @@ void RecordProcessHistograms(const char*
                               const ProcessMonitor::Metrics& metrics) {

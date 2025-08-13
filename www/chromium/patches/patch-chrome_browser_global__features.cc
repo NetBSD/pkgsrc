@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_global__features.cc,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_global__features.cc,v 1.5 2025/08/13 07:44:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/global_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/global_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/global_features.cc
 @@ -24,7 +24,7 @@
  #include "chrome/browser/glic/host/glic_synthetic_trial_manager.h"  // nogncheck
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_global__features.cc,v 1.4 2025/07/25 16:17:11 kika
    whats_new_registry_ = CreateWhatsNewRegistry();
  #endif
  
-@@ -120,7 +120,7 @@ GlobalFeatures::CreateSystemPermissionsP
+@@ -119,7 +119,7 @@ GlobalFeatures::CreateSystemPermissionsP
    return system_permission_settings::PlatformHandle::Create();
  }
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/25 16:17:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.5 2025/08/13 07:44:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.cc
-@@ -468,7 +468,7 @@
+@@ -474,7 +474,7 @@
  #include "components/user_manager/user_manager.h"
  #include "services/service_manager/public/mojom/interface_provider_spec.mojom.h"
  #include "storage/browser/file_system/external_mount_points.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  #include "chrome/browser/chrome_browser_main_linux.h"
  #include "chrome/browser/ui/views/chrome_browser_main_extra_parts_views_linux.h"
  #elif BUILDFLAG(IS_ANDROID)
-@@ -563,7 +563,7 @@
+@@ -570,7 +570,7 @@
  #include "services/network/public/mojom/permissions_policy/permissions_policy_feature.mojom.h"
  #endif  //  !BUILDFLAG(IS_ANDROID)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  #include "components/crash/core/app/crash_switches.h"
  #include "components/crash/core/app/crashpad.h"
  #endif
-@@ -572,7 +572,7 @@
+@@ -579,7 +579,7 @@
  #include "components/crash/content/browser/crash_handler_host_linux.h"
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  #include "chrome/browser/enterprise/chrome_browser_main_extra_parts_enterprise.h"
  #endif
  
-@@ -580,7 +580,7 @@
+@@ -587,7 +587,7 @@
  #include "chrome/browser/ui/views/chrome_browser_main_extra_parts_views.h"
  #endif
  
@@ -42,16 +42,16 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  #include "chrome/browser/chrome_browser_main_extra_parts_linux.h"
  #elif BUILDFLAG(IS_OZONE)
  #include "chrome/browser/chrome_browser_main_extra_parts_ozone.h"
-@@ -1398,7 +1398,7 @@ void ChromeContentBrowserClient::Registe
-   registry->RegisterBooleanPref(prefs::kDeviceNativeClientForceAllowedCache,
-                                 false);
- #endif  // BUILDFLAG(IS_CHROMEOS)
+@@ -1409,7 +1409,7 @@ void ChromeContentBrowserClient::Registe
+   registry->RegisterBooleanPref(prefs::kDataURLWhitespacePreservationEnabled,
+                                 true);
+   registry->RegisterBooleanPref(prefs::kEnableUnsafeSwiftShader, false);
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
    registry->RegisterBooleanPref(prefs::kOutOfProcessSystemDnsResolutionEnabled,
                                  true);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID)
-@@ -1617,7 +1617,7 @@ ChromeContentBrowserClient::CreateBrowse
+@@ -1622,7 +1622,7 @@ ChromeContentBrowserClient::CreateBrowse
  #elif BUILDFLAG(IS_CHROMEOS)
    main_parts = std::make_unique<ash::ChromeBrowserMainPartsAsh>(
        is_integration_test, &startup_data_);
@@ -60,7 +60,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    main_parts = std::make_unique<ChromeBrowserMainPartsLinux>(
        is_integration_test, &startup_data_);
  #elif BUILDFLAG(IS_ANDROID)
-@@ -1648,7 +1648,7 @@ ChromeContentBrowserClient::CreateBrowse
+@@ -1653,7 +1653,7 @@ ChromeContentBrowserClient::CreateBrowse
    // Construct additional browser parts. Stages are called in the order in
    // which they are added.
  #if defined(TOOLKIT_VIEWS)
@@ -69,7 +69,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    main_parts->AddParts(
        std::make_unique<ChromeBrowserMainExtraPartsViewsLinux>());
  #else
-@@ -1665,7 +1665,7 @@ ChromeContentBrowserClient::CreateBrowse
+@@ -1670,7 +1670,7 @@ ChromeContentBrowserClient::CreateBrowse
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsAsh>());
  #endif
  
@@ -78,7 +78,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsLinux>());
  #elif BUILDFLAG(IS_OZONE)
    main_parts->AddParts(std::make_unique<ChromeBrowserMainExtraPartsOzone>());
-@@ -1684,7 +1684,7 @@ ChromeContentBrowserClient::CreateBrowse
+@@ -1689,7 +1689,7 @@ ChromeContentBrowserClient::CreateBrowse
  
    chrome::AddMetricsExtraParts(main_parts.get());
  
@@ -87,7 +87,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    main_parts->AddParts(
        std::make_unique<
            enterprise_util::ChromeBrowserMainExtraPartsEnterprise>());
-@@ -2628,7 +2628,9 @@ void MaybeAppendBlinkSettingsSwitchForFi
+@@ -2685,7 +2685,9 @@ void MaybeAppendBlinkSettingsSwitchForFi
  void ChromeContentBrowserClient::AppendExtraCommandLineSwitches(
      base::CommandLine* command_line,
      int child_process_id) {
@@ -97,7 +97,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  #if BUILDFLAG(IS_MAC)
    std::unique_ptr<metrics::ClientInfo> client_info =
        GoogleUpdateSettings::LoadMetricsClientInfo();
-@@ -2637,7 +2639,7 @@ void ChromeContentBrowserClient::AppendE
+@@ -2694,7 +2696,7 @@ void ChromeContentBrowserClient::AppendE
                                      client_info->client_id);
    }
  #elif BUILDFLAG(IS_POSIX)
@@ -106,7 +106,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    pid_t pid;
    if (crash_reporter::GetHandlerSocket(nullptr, &pid)) {
      command_line->AppendSwitchASCII(
-@@ -3005,7 +3007,7 @@ void ChromeContentBrowserClient::AppendE
+@@ -3052,7 +3054,7 @@ void ChromeContentBrowserClient::AppendE
      }
    }
  
@@ -115,7 +115,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    // Opt into a hardened stack canary mitigation if it hasn't already been
    // force-disabled.
    if (!browser_command_line.HasSwitch(switches::kChangeStackGuardOnFork)) {
-@@ -3994,7 +3996,7 @@ bool UpdatePreferredColorScheme(WebPrefe
+@@ -4110,7 +4112,7 @@ bool UpdatePreferredColorScheme(WebPrefe
    return old_preferred_color_scheme != web_prefs->preferred_color_scheme;
  }
  
@@ -124,7 +124,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  // Sets the `root_scrollbar_theme_color` web pref if the user has enabled a
  // custom colored frame for the UI.
  void UpdateRootScrollbarThemeColor(Profile* profile,
-@@ -4631,7 +4633,7 @@ void ChromeContentBrowserClient::Overrid
+@@ -4748,7 +4750,7 @@ void ChromeContentBrowserClient::Overrid
  
    UpdatePreferredColorScheme(web_prefs, main_frame_site.GetSiteURL(),
                               web_contents, GetWebTheme());
@@ -133,7 +133,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
    UpdateRootScrollbarThemeColor(profile, web_contents, web_prefs);
  #endif  //  BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -4956,7 +4958,7 @@ void ChromeContentBrowserClient::GetAddi
+@@ -5085,7 +5087,7 @@ void ChromeContentBrowserClient::GetAddi
    }
  }
  
@@ -142,7 +142,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client.cc,v 1.4 2025/07/
  void ChromeContentBrowserClient::GetAdditionalMappedFilesForChildProcess(
      const base::CommandLine& command_line,
      int child_process_id,
-@@ -7120,7 +7122,7 @@ bool ChromeContentBrowserClient::ShouldS
+@@ -7232,7 +7234,7 @@ bool ChromeContentBrowserClient::ShouldS
  bool ChromeContentBrowserClient::ShouldRunOutOfProcessSystemDnsResolution() {
  // This enterprise policy is supported on Android, but the feature will not be
  // launched there.

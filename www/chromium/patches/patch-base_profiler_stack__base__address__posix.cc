@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.4 2025/07/25 16:17:09 kikadf Exp $
+$NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.5 2025/08/13 07:44:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/profiler/stack_base_address_posix.cc
 @@ -18,6 +18,14 @@
  #include "base/files/scoped_file.h"

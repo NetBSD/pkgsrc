@@ -1,17 +1,17 @@
-$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.4 2025/07/25 16:17:16 kikadf Exp $
+$NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.5 2025/08/13 07:44:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/supervised_user/core/common/features.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/supervised_user/core/common/features.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/supervised_user/core/common/features.cc
 @@ -37,7 +37,7 @@ BASE_FEATURE(kAllowSubframeLocalWebAppro
  #endif
  
  #if BUILDFLAG(IS_IOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_WIN)
-+    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
++    BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD) || BUILDFLAG(IS_BSD)
  const int kLocalWebApprovalBottomSheetLoadTimeoutDefaultValueMs = 5000;
  
  const base::FeatureParam<int> kLocalWebApprovalBottomSheetLoadTimeoutMs{
@@ -49,12 +49,3 @@ $NetBSD: patch-components_supervised__user_core_common_features.cc,v 1.4 2025/07
  BASE_FEATURE(kEnableSupervisedUserVersionSignOutDialog,
               "EnableSupervisedUserVersionSignOutDialog",
               base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -119,7 +119,7 @@ BASE_FEATURE(kEnableSupervisedUserVersio
- // platform #defines.
- BASE_FEATURE(kUncredentialedFilteringFallbackForSupervisedUsers,
-              "UncredentialedFilteringFallbackForSupervisedUsers",
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
-              base::FEATURE_ENABLED_BY_DEFAULT);
- #else
-              base::FEATURE_DISABLED_BY_DEFAULT);

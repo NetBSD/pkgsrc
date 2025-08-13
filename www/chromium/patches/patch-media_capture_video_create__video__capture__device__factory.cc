@@ -1,12 +1,12 @@
-$NetBSD: patch-media_capture_video_create__video__capture__device__factory.cc,v 1.4 2025/07/25 16:17:18 kikadf Exp $
+$NetBSD: patch-media_capture_video_create__video__capture__device__factory.cc,v 1.5 2025/08/13 07:44:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/create_video_capture_device_factory.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- media/capture/video/create_video_capture_device_factory.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ media/capture/video/create_video_capture_device_factory.cc
-@@ -12,7 +12,7 @@
+@@ -13,7 +13,7 @@
  #include "media/capture/video/fake_video_capture_device_factory.h"
  #include "media/capture/video/file_video_capture_device_factory.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-media_capture_video_create__video__capture__device__factory.cc,v 
  #include "media/capture/video/linux/video_capture_device_factory_linux.h"
  #elif BUILDFLAG(IS_CHROMEOS)
  #include "media/capture/video/chromeos/public/cros_features.h"
-@@ -55,7 +55,7 @@ CreateFakeVideoCaptureDeviceFactory() {
+@@ -56,7 +56,7 @@ CreateFakeVideoCaptureDeviceFactory() {
  std::unique_ptr<VideoCaptureDeviceFactory>
  CreatePlatformSpecificVideoCaptureDeviceFactory(
      scoped_refptr<base::SingleThreadTaskRunner> ui_task_runner) {

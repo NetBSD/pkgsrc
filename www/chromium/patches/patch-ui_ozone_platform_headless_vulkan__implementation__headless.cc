@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 1.4 2025/07/25 16:17:24 kikadf Exp $
+$NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 1.5 2025/08/13 07:44:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/ozone/platform/headless/vulkan_implementation_headless.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/ozone/platform/headless/vulkan_implementation_headless.cc
-@@ -116,7 +116,7 @@ VulkanImplementationHeadless::ExportVkFe
+@@ -117,7 +117,7 @@ VulkanImplementationHeadless::ExportVkFe
  
  VkExternalSemaphoreHandleTypeFlagBits
  VulkanImplementationHeadless::GetExternalSemaphoreHandleType() {
@@ -15,7 +15,7 @@ $NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 
    return VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_SYNC_FD_BIT;
  #else
    return VK_EXTERNAL_SEMAPHORE_HANDLE_TYPE_OPAQUE_FD_BIT;
-@@ -126,7 +126,7 @@ VulkanImplementationHeadless::GetExterna
+@@ -127,7 +127,7 @@ VulkanImplementationHeadless::GetExterna
  bool VulkanImplementationHeadless::CanImportGpuMemoryBuffer(
      gpu::VulkanDeviceQueue* device_queue,
      gfx::GpuMemoryBufferType memory_buffer_type) {
@@ -24,7 +24,7 @@ $NetBSD: patch-ui_ozone_platform_headless_vulkan__implementation__headless.cc,v 
    const auto& enabled_extensions = device_queue->enabled_extensions();
    return gfx::HasExtension(enabled_extensions,
                             VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME) &&
-@@ -149,7 +149,7 @@ VulkanImplementationHeadless::CreateImag
+@@ -150,7 +150,7 @@ VulkanImplementationHeadless::CreateImag
        VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_SAMPLED_BIT |
        VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT;
    auto tiling = VK_IMAGE_TILING_OPTIMAL;

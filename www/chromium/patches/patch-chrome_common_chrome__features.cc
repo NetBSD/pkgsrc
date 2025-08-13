@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__features.cc,v 1.4 2025/07/25 16:17:13 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__features.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_features.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/common/chrome_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/common/chrome_features.cc
 @@ -81,7 +81,7 @@ BASE_FEATURE(kUseAdHocSigningForWebAppSh
  #endif  // BUILDFLAG(IS_MAC)
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.4 2025/07/25 16:17:13 kikad
  // Enables the Restart background mode optimization. When all Chrome UI is
  // closed and it goes in the background, allows to restart the browser to
  // discard memory.
-@@ -249,7 +249,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
+@@ -241,7 +241,7 @@ BASE_FEATURE(kDesktopPWAsElidedExtension
  BASE_FEATURE(kDesktopPWAsRunOnOsLogin,
               "DesktopPWAsRunOnOsLogin",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.4 2025/07/25 16:17:13 kikad
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -282,7 +282,7 @@ BASE_FEATURE(kDisplayEdgeToEdgeFullscree
+@@ -281,7 +281,7 @@ BASE_FEATURE(kEnableExclusiveAccessManag
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.4 2025/07/25 16:17:13 kikad
  // Controls whether Chrome Apps are supported. See https://crbug.com/1221251.
  // If the feature is disabled, Chrome Apps continue to work. If enabled, Chrome
  // Apps will not launch and will be marked in the UI as deprecated.
-@@ -995,7 +995,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
+@@ -1081,7 +1081,7 @@ BASE_FEATURE(kKAnonymityServiceStorage,
               "KAnonymityServiceStorage",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -51,7 +51,7 @@ $NetBSD: patch-chrome_common_chrome__features.cc,v 1.4 2025/07/25 16:17:13 kikad
  BASE_FEATURE(kLinuxLowMemoryMonitor,
               "LinuxLowMemoryMonitor",
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -1008,7 +1008,7 @@ constexpr base::FeatureParam<int> kLinux
+@@ -1094,7 +1094,7 @@ constexpr base::FeatureParam<int> kLinux
      &kLinuxLowMemoryMonitor, "critical_level", 255};
  #endif  // BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS)
  

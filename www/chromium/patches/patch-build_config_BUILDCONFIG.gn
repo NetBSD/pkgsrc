@@ -1,10 +1,10 @@
-$NetBSD: patch-build_config_BUILDCONFIG.gn,v 1.4 2025/07/25 16:17:10 kikadf Exp $
+$NetBSD: patch-build_config_BUILDCONFIG.gn,v 1.5 2025/08/13 07:44:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/BUILDCONFIG.gn.orig	2025-07-21 19:32:31.000000000 +0000
+--- build/config/BUILDCONFIG.gn.orig	2025-07-29 22:51:44.000000000 +0000
 +++ build/config/BUILDCONFIG.gn
 @@ -136,7 +136,8 @@ declare_args() {
    is_official_build = false
@@ -16,7 +16,7 @@ $NetBSD: patch-build_config_BUILDCONFIG.gn,v 1.4 2025/07/25 16:17:10 kikadf Exp 
               (current_cpu != "s390x" && current_cpu != "s390" &&
                current_cpu != "ppc64" && current_cpu != "ppc" &&
                current_cpu != "mips" && current_cpu != "mips64" &&
-@@ -235,6 +236,12 @@ if (host_toolchain == "") {
+@@ -242,6 +243,12 @@ if (host_toolchain == "") {
      host_toolchain = "//build/toolchain/aix:$host_cpu"
    } else if (host_os == "zos") {
      host_toolchain = "//build/toolchain/zos:$host_cpu"
@@ -29,7 +29,7 @@ $NetBSD: patch-build_config_BUILDCONFIG.gn,v 1.4 2025/07/25 16:17:10 kikadf Exp 
    } else {
      assert(false, "Unsupported host_os: $host_os")
    }
-@@ -284,6 +291,8 @@ if (target_os == "android") {
+@@ -291,6 +298,8 @@ if (target_os == "android") {
    assert(
        false,
        "emscripten is not a supported target_os. It is available only as secondary toolchain.")
@@ -38,7 +38,7 @@ $NetBSD: patch-build_config_BUILDCONFIG.gn,v 1.4 2025/07/25 16:17:10 kikadf Exp 
  } else {
    assert(false, "Unsupported target_os: $target_os")
  }
-@@ -318,7 +327,12 @@ is_android = current_os == "android"
+@@ -325,7 +334,12 @@ is_android = current_os == "android"
  is_chromeos = current_os == "chromeos"
  is_fuchsia = current_os == "fuchsia"
  is_ios = current_os == "ios"

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_hid_hid__service__fido.cc,v 1.4 2025/07/25 16:17:20 kikadf Exp $
+$NetBSD: patch-services_device_hid_hid__service__fido.cc,v 1.5 2025/08/13 07:44:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_fido.cc.orig	2025-07-24 17:00:09.202088902 +0000
+--- services/device/hid/hid_service_fido.cc.orig	2025-08-12 17:48:59.526146187 +0000
 +++ services/device/hid/hid_service_fido.cc
 @@ -0,0 +1,396 @@
 +// Copyright 2014 The Chromium Authors

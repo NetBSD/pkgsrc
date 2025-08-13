@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.5 2025/08/13 07:44:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/media/webrtc/chrome_screen_enumerator.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/media/webrtc/chrome_screen_enumerator.cc
 @@ -21,7 +21,7 @@
  #if BUILDFLAG(IS_CHROMEOS)
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.4 2
  blink::mojom::StreamDevicesSetPtr EnumerateScreens(
      blink::mojom::MediaStreamType stream_type) {
    DCHECK_CURRENTLY_ON(content::BrowserThread::UI);
-@@ -130,7 +130,7 @@ void ChromeScreenEnumerator::SetRootWind
+@@ -132,7 +132,7 @@ void ChromeScreenEnumerator::SetRootWind
    root_windows_for_testing_.Get() = std::move(root_windows);
  }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_media_webrtc_chrome__screen__enumerator.cc,v 1.4 2
  void ChromeScreenEnumerator::SetDesktopCapturerForTesting(
      std::unique_ptr<webrtc::DesktopCapturer> capturer) {
    g_desktop_capturer_for_testing.Get() = std::move(capturer);
-@@ -143,7 +143,7 @@ void ChromeScreenEnumerator::EnumerateSc
+@@ -145,7 +145,7 @@ void ChromeScreenEnumerator::EnumerateSc
      ScreensCallback screens_callback) const {
    DCHECK_CURRENTLY_ON(content::BrowserThread::IO);
  

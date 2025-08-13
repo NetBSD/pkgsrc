@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.4 2025/07/25 16:17:13 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__paths.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_paths.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/common/chrome_paths.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/common/chrome_paths.cc
 @@ -32,7 +32,7 @@
  #include "base/apple/foundation_util.h"
@@ -67,16 +67,16 @@ $NetBSD: patch-chrome_common_chrome__paths.cc,v 1.4 2025/07/25 16:17:13 kikadf E
      case chrome::DIR_STANDALONE_EXTERNAL_EXTENSIONS: {
        cur = base::FilePath(kFilepathSinglePrefExtensions);
        break;
-@@ -558,7 +558,7 @@ bool PathProvider(int key, base::FilePat
-       break;
+@@ -559,7 +559,7 @@ bool PathProvider(int key, base::FilePat
  
- #if BUILDFLAG(ENABLE_EXTENSIONS) && \
--    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC))
-+    (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD))
+ #if BUILDFLAG(ENABLE_EXTENSIONS_CORE) &&                                   \
+     (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
+-     BUILDFLAG(IS_ANDROID))
++     BUILDFLAG(IS_ANDROID)) || BUILDFLAG(IS_BSD)
      case chrome::DIR_NATIVE_MESSAGING:
  #if BUILDFLAG(IS_MAC)
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
-@@ -572,6 +572,9 @@ bool PathProvider(int key, base::FilePat
+@@ -573,6 +573,9 @@ bool PathProvider(int key, base::FilePat
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
        cur = base::FilePath(
            FILE_PATH_LITERAL("/etc/opt/chrome/native-messaging-hosts"));
