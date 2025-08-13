@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4907 2025/08/13 04:48:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4908 2025/08/13 04:52:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7114,3 +7114,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-tornado to 6.5.2 [adam 2025-08-13]
 	Updated devel/py-testfixtures to 9.1.0 [adam 2025-08-13]
 	Updated devel/py-sybil to 9.2.0 [adam 2025-08-13]
+	Updated devel/py-wrapt to 1.17.3 [adam 2025-08-13]
+	Updated devel/re2 to 20250812 [adam 2025-08-13]
