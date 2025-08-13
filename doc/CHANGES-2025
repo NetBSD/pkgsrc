@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4916 2025/08/13 08:13:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4917 2025/08/13 08:27:31 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7128,3 +7128,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-json5 to 0.12.1 [adam 2025-08-13]
 	Updated devel/py-fasteners to 0.20 [adam 2025-08-13]
 	Updated databases/py-multidict to 6.6.4 [adam 2025-08-13]
+	Updated www/chromium to 139.0.7258.66 [kikadf 2025-08-13]
