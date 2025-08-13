@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2025/07/28 13:54:01 adam Exp $
+# $NetBSD: Makefile,v 1.87 2025/08/13 06:56:00 wiz Exp $
 
 DISTNAME=	grpcio_tools-1.74.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,6 +18,7 @@ CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
+FORCE_CXX_STD=		c++17
 
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
 
