@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libOpenImageIO_maketexture.cpp,v 1.1 2025/08/13 06:35:13 wiz Exp $
+$NetBSD: patch-src_libOpenImageIO_maketexture.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/libOpenImageIO/maketexture.cpp.orig	2025-08-13 06:21:04.554909439 +0000
 +++ src/libOpenImageIO/maketexture.cpp
