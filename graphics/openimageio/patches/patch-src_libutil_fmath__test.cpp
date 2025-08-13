@@ -1,4 +1,6 @@
-$NetBSD: patch-src_libutil_fmath__test.cpp,v 1.1 2025/08/13 06:35:14 wiz Exp $
+$NetBSD: patch-src_libutil_fmath__test.cpp,v 1.2 2025/08/13 06:51:22 wiz Exp $
+
+https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/4857
 
 --- src/libutil/fmath_test.cpp.orig	2025-08-13 06:25:41.173006216 +0000
 +++ src/libutil/fmath_test.cpp
