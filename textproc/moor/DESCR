@@ -1,0 +1,24 @@
+Moor is a pager. It reads and displays UTF-8 encoded text from files or
+pipelines. Moor should be trivial to get into if you have previously
+been using Less.
+
+`moor` is designed to just do the right thing without any configuration:
+
+- Syntax highlight source code by default using Chroma
+- Search is incremental / find-as-you-type just like in Chrome or Emacs
+- Filtering is incremental: Press & to filter the input interactively
+- Search becomes case sensitive if you add any UPPER CASE characters
+- Regexp search if your search string is a valid regexp
+- Snappy UI even on slow / large input by reading input in the
+  background and using multi-threaded search
+- Supports displaying ANSI color coded texts (like the output from git
+  diff | riff for example)
+- Supports UTF-8 input and output
+- Transparent decompression when viewing compressed text files (.gz,
+  .bz2, .xz, .zst, .zstd) or streams
+- The position in the file is always shown
+- Supports word wrapping (on actual word boundaries) if requested using
+  --wrap or by pressing w
+- Follows output as long as you are on the last line, just like tail -f
+- Renders terminal hyperlinks properly
+- Mouse Scrolling works out of the box (but look here for tradeoffs)
