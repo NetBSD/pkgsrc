@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/08/10 17:41:28 kikadf Exp $
-#
+# $NetBSD: Makefile,v 1.7 2025/08/13 06:53:30 wiz Exp $
 
 DISTNAME=	xsel-1.2.1
 CATEGORIES=	x11
@@ -12,6 +11,7 @@ LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	aclocal autoconf automake pkg-config
+USE_LIBTOOL=	yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
