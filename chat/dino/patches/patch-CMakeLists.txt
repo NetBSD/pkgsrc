@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/13 00:13:54 gdt Exp $
+
+Adjust cmake min version to a value that makes cmake happy, without
+understanding why one needs to specify a min version and what the
+consquences are.
+
+Left to upstream to fix this properly:
+  https://github.com/dino/dino/issues/1747
+
+--- CMakeLists.txt.orig	2025-08-12 23:37:56.782694627 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.3)
++cmake_minimum_required(VERSION 3.22)
+ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+ include(ComputeVersion)
+ if (NOT VERSION_FOUND)
