@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4919 2025/08/13 09:54:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4920 2025/08/13 12:26:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7132,3 +7132,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/frei0r to 2.3.3 [wiz 2025-08-13]
 	Updated devel/py-test-datadir to 1.8.0 [adam 2025-08-13]
 	Updated devel/py-test-codspeed to 4.0.0 [adam 2025-08-13]
+	Updated lang/openjdk21 to 1.21.0.8.9 [ryoon 2025-08-13]
