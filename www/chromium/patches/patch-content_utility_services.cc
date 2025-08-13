@@ -1,10 +1,10 @@
-$NetBSD: patch-content_utility_services.cc,v 1.4 2025/07/25 16:17:17 kikadf Exp $
+$NetBSD: patch-content_utility_services.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- content/utility/services.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ content/utility/services.cc
 @@ -73,7 +73,7 @@
  extern sandbox::TargetServices* g_utility_target_services;

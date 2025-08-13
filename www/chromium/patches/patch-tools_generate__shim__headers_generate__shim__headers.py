@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_generate__shim__headers_generate__shim__headers.py,v 1.4 2025/07/25 16:17:23 kikadf Exp $
+$NetBSD: patch-tools_generate__shim__headers_generate__shim__headers.py,v 1.5 2025/08/13 07:44:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/generate_shim_headers/generate_shim_headers.py.orig	2025-07-21 19:32:31.000000000 +0000
+--- tools/generate_shim_headers/generate_shim_headers.py.orig	2025-07-29 22:51:44.000000000 +0000
 +++ tools/generate_shim_headers/generate_shim_headers.py
 @@ -18,7 +18,7 @@ import sys
  

@@ -1,13 +1,13 @@
-$NetBSD: patch-third__party_perfetto_src_base_string__utils.cc,v 1.4 2025/07/25 16:17:22 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_string__utils.cc,v 1.5 2025/08/13 07:44:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/string_utils.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- third_party/perfetto/src/base/string_utils.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ third_party/perfetto/src/base/string_utils.cc
 @@ -39,7 +39,8 @@ namespace base {
- // Locale-independant as possible version of strtod.
+ // Locale-independent as possible version of strtod.
  double StrToD(const char* nptr, char** endptr) {
  #if PERFETTO_BUILDFLAG(PERFETTO_OS_ANDROID) ||           \
 -    PERFETTO_BUILDFLAG(PERFETTO_OS_LINUX_BUT_NOT_QNX) || \

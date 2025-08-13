@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_net_system__network__context__manager.h,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_net_system__network__context__manager.h,v 1.5 2025/08/13 07:44:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/net/system_network_context_manager.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/net/system_network_context_manager.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/net/system_network_context_manager.h
-@@ -198,7 +198,7 @@ class SystemNetworkContextManager {
+@@ -202,7 +202,7 @@ class SystemNetworkContextManager {
    class URLLoaderFactoryForSystem;
    class NetworkProcessLaunchWatcher;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_net_system__network__context__manager.h,v 1.4 2025
    class GssapiLibraryLoadObserver
        : public network::mojom::GssapiLibraryLoadObserver {
     public:
-@@ -281,7 +281,7 @@ class SystemNetworkContextManager {
+@@ -285,7 +285,7 @@ class SystemNetworkContextManager {
    std::unique_ptr<NetworkAnnotationMonitor> network_annotation_monitor_;
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

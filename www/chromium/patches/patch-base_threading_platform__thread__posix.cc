@@ -1,10 +1,10 @@
-$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.4 2025/07/25 16:17:10 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_posix.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/threading/platform_thread_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/threading/platform_thread_posix.cc
 @@ -79,11 +79,11 @@ void* ThreadFunc(void* params) {
        base::DisallowSingleton();
@@ -44,7 +44,7 @@ $NetBSD: patch-base_threading_platform__thread__posix.cc,v 1.4 2025/07/25 16:17:
    NOTIMPLEMENTED();
 +// avoid pledge(2) violation
 +#elif BUILDFLAG(IS_BSD)
-+   NOTIMPLEMENTED();
++  NOTIMPLEMENTED();
  #else
    if (internal::SetCurrentThreadTypeForPlatform(thread_type, pump_type_hint)) {
      return;

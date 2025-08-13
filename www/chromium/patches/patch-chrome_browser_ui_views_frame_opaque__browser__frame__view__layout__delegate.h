@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view__layout__delegate.h,v 1.4 2025/07/25 16:17:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_frame_opaque__browser__frame__view__layout__delegate.h,v 1.5 2025/08/13 07:44:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/views/frame/opaque_browser_frame_view_layout_delegate.h
 @@ -9,7 +9,7 @@
  
