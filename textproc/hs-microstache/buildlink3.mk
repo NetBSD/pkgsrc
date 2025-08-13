@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/03/05 03:40:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/08/13 11:07:33 pho Exp $
 
 BUILDLINK_TREE+=	hs-microstache
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-microstache
 HS_MICROSTACHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-microstache+=	hs-microstache>=1.0.3
-BUILDLINK_ABI_DEPENDS.hs-microstache+=	hs-microstache>=1.0.3nb2
+BUILDLINK_ABI_DEPENDS.hs-microstache+=	hs-microstache>=1.0.3nb3
 BUILDLINK_PKGSRCDIR.hs-microstache?=	../../textproc/hs-microstache
 
 .include "../../converters/hs-aeson/buildlink3.mk"

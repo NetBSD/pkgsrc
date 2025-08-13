@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/03/05 03:39:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/08/13 11:06:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-monad-control
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-monad-control
 HS_MONAD_CONTROL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-monad-control+=	hs-monad-control>=1.0.3
-BUILDLINK_ABI_DEPENDS.hs-monad-control+=	hs-monad-control>=1.0.3.1nb8
+BUILDLINK_ABI_DEPENDS.hs-monad-control+=	hs-monad-control>=1.0.3.1nb9
 BUILDLINK_PKGSRCDIR.hs-monad-control?=		../../devel/hs-monad-control
 
 .include "../../devel/hs-transformers-base/buildlink3.mk"

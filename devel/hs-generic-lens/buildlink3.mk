@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-generic-lens
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-generic-lens
 HS_GENERIC_LENS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-generic-lens+=	hs-generic-lens>=2.2.2
-BUILDLINK_ABI_DEPENDS.hs-generic-lens+=	hs-generic-lens>=2.2.2.0nb4
+BUILDLINK_ABI_DEPENDS.hs-generic-lens+=	hs-generic-lens>=2.2.2.0nb5
 BUILDLINK_PKGSRCDIR.hs-generic-lens?=	../../devel/hs-generic-lens
 
 .include "../../devel/hs-generic-lens-core/buildlink3.mk"

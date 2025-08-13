@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/08/13 11:06:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-memotrie
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-memotrie
 HS_MEMOTRIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-memotrie+=	hs-memotrie>=0.6.11
-BUILDLINK_ABI_DEPENDS.hs-memotrie+=	hs-memotrie>=0.6.11nb4
+BUILDLINK_ABI_DEPENDS.hs-memotrie+=	hs-memotrie>=0.6.11nb5
 BUILDLINK_PKGSRCDIR.hs-memotrie?=	../../devel/hs-memotrie
 
 .include "../../devel/hs-newtype-generics/buildlink3.mk"

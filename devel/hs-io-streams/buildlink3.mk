@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/08 02:51:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:06:46 pho Exp $
 
 BUILDLINK_TREE+=	hs-io-streams
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-io-streams
 HS_IO_STREAMS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-io-streams+=	hs-io-streams>=1.5.2
-BUILDLINK_ABI_DEPENDS.hs-io-streams+=	hs-io-streams>=1.5.2.2
+BUILDLINK_ABI_DEPENDS.hs-io-streams+=	hs-io-streams>=1.5.2.2nb1
 BUILDLINK_PKGSRCDIR.hs-io-streams?=	../../devel/hs-io-streams
 
 .include "../../textproc/hs-attoparsec/buildlink3.mk"

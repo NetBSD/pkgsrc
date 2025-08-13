@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/03/05 03:39:46 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/13 11:07:18 pho Exp $
 
 DISTNAME=	modern-uri-0.3.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

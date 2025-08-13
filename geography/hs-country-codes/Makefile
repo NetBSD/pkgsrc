@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 13:19:24 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:09 pho Exp $
 
 DISTNAME=	country-codes-0.1.4
+PKGREVISION=	1
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

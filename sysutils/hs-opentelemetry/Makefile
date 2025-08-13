@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/03/05 03:39:53 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/13 11:07:25 pho Exp $
 
 DISTNAME=	opentelemetry-0.8.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

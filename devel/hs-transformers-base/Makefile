@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/03/05 03:39:33 pho Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/13 11:07:03 pho Exp $
 
 DISTNAME=	transformers-base-0.4.6
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 16:34:02 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:06:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-byteslice
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-byteslice
 HS_BYTESLICE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-byteslice+=	hs-byteslice>=0.2.14
-BUILDLINK_ABI_DEPENDS.hs-byteslice+=	hs-byteslice>=0.2.14.0
+BUILDLINK_ABI_DEPENDS.hs-byteslice+=	hs-byteslice>=0.2.14.0nb1
 BUILDLINK_PKGSRCDIR.hs-byteslice?=	../../devel/hs-byteslice
 
 .include "../../math/hs-natural-arithmetic/buildlink3.mk"

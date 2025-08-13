@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:39:19 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/08/13 11:06:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-lsp-test
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lsp-test
 HS_LSP_TEST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lsp-test+=	hs-lsp-test>=0.17.1
-BUILDLINK_ABI_DEPENDS.hs-lsp-test+=	hs-lsp-test>=0.17.1.1nb2
+BUILDLINK_ABI_DEPENDS.hs-lsp-test+=	hs-lsp-test>=0.17.1.1nb3
 BUILDLINK_PKGSRCDIR.hs-lsp-test?=	../../devel/hs-lsp-test
 
 .include "../../converters/hs-aeson/buildlink3.mk"

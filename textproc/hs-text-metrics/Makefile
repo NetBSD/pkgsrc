@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 10:43:34 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:37 pho Exp $
 
 DISTNAME=	text-metrics-0.3.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

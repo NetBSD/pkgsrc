@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:38:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:06:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-bencode
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-bencode
 HS_BENCODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-bencode+=	hs-bencode>=0.6.1
-BUILDLINK_ABI_DEPENDS.hs-bencode+=	hs-bencode>=0.6.1.1nb4
+BUILDLINK_ABI_DEPENDS.hs-bencode+=	hs-bencode>=0.6.1.1nb5
 BUILDLINK_PKGSRCDIR.hs-bencode?=	../../converters/hs-bencode
 
 .include "../../devel/hs-transformers-compat/buildlink3.mk"

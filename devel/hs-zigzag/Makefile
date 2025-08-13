@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 17:04:41 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:07 pho Exp $
 
 DISTNAME=	zigzag-0.1.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
