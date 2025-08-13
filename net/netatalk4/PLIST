@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/08/12 18:22:55 hauke Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/08/13 09:03:26 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/addump
 ${PLIST.appletalk}bin/aecho
@@ -15,7 +15,7 @@ ${PLIST.appletalk}bin/nbprgstr
 ${PLIST.appletalk}bin/nbpunrgstr
 ${PLIST.appletalk}bin/pap
 ${PLIST.appletalk}bin/papstatus
-bin/rtmpqry
+${PLIST.appletalk}bin/rtmpqry
 include/atalk/acl.h
 include/atalk/adouble.h
 include/atalk/aep.h
@@ -81,7 +81,7 @@ ${PLIST.appletalk}man/man1/nbplkup.1
 ${PLIST.appletalk}man/man1/nbprgstr.1
 ${PLIST.appletalk}man/man1/nbpunrgstr.1
 ${PLIST.appletalk}man/man1/pap.1
-man/man1/rtmpqry.1
+${PLIST.appletalk}man/man1/rtmpqry.1
 man/man3/atalk_aton.3
 man/man3/nbp_name.3
 man/man4/atalk.4
