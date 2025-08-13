@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4905 2025/08/13 00:18:38 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4906 2025/08/13 04:39:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7109,3 +7109,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jupyter_core to 5.8.1 [adam 2025-08-12]
 	Updated devel/py-ipykernel to 6.30.1 [adam 2025-08-12]
 	Updated chat/dino to 0.4.5 [gdt 2025-08-13]
+	Updated sysutils/ansible to 11.9.0 [adam 2025-08-13]
+	Updated devel/py-behave to 1.3.1 [adam 2025-08-13]
