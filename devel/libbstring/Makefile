@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/08/12 18:13:55 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 08:56:12 hauke Exp $
 
 DISTNAME=	bstring-${PKGVER}
 PKGNAME=	libbstring-${PKGVER}
 PKGVER=		1.0.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=msteinert/bstring/releases/download/v${PKGVER}}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=msteinert/bstring/releases/download/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	hauke@NetBSD.org
