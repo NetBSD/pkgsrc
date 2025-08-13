@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/13 15:02:26 gdt Exp $
+
+BLAKE2s (libomemo-c-0.5.1.tar.gz) = 1c897d9c8e5ffbef5e97e3aab77ad9280512198552bda3ae99a5da1af2baf89b
+SHA512 (libomemo-c-0.5.1.tar.gz) = ff59565406c51663f2944e9a7c12c5b0e3fa01073039f5161472dd81f59194b1cf2685bc1e0cc930a141bc409b965c5d93313cfc3e0e237250102af3b5e88826
+Size (libomemo-c-0.5.1.tar.gz) = 239763 bytes
