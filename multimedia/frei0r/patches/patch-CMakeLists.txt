@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/13 09:00:25 wiz Exp $
+
+https://github.com/dyne/frei0r/commit/31efba74b26c161125c6c41d381dcf3f6207a728
+
+--- CMakeLists.txt.orig	2025-08-13 08:57:30.241196674 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 3.1)
++cmake_minimum_required (VERSION 3.5)
+ 
+ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
+ 

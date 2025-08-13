@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2022/04/10 15:14:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/08/13 09:00:25 wiz Exp $
 
-BLAKE2s (frei0r-plugins-1.8.0.tar.gz) = 9f7dedf16d803bb6c6ab693c9a7482937e4b80a7fafd30f6d6e5d1d7baaaa078
-SHA512 (frei0r-plugins-1.8.0.tar.gz) = b9933b5e46da6e6b4ae242ec48b3ca4e51fb21d7924fd83375bf6628437b194697dd2bff43a42220bd5e6bc4c50b0352480d6986956f110eb966e1005b51dc35
-Size (frei0r-plugins-1.8.0.tar.gz) = 823119 bytes
+BLAKE2s (frei0r-2.3.3.tar.gz) = 9c3f320b308743c03212e490448c96a96f0da0ea15d5ce6b10a2406cef1f3a0b
+SHA512 (frei0r-2.3.3.tar.gz) = 4f1b7b098563b38379821a81b19e2f9722512827e6ef986e5bac836e4406ce23f7cb486fd882646a372044555a897c3532c4fa733f2e5797613c3b65aff4b015
+Size (frei0r-2.3.3.tar.gz) = 921452 bytes
+SHA1 (patch-CMakeLists.txt) = 14f7986423393935afb05519643f3568df0f2c18
