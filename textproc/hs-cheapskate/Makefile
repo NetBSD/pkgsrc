@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/03/05 03:39:56 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/13 11:07:29 pho Exp $
 
 DISTNAME=	cheapskate-0.1.1.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/04/17 21:50:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/08/13 11:06:44 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-test-utils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-test-utils
 HS_HLS_TEST_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-test-utils+=	hs-hls-test-utils>=2.9.0
-BUILDLINK_ABI_DEPENDS.hs-hls-test-utils+=	hs-hls-test-utils>=2.9.0.0nb3
+BUILDLINK_ABI_DEPENDS.hs-hls-test-utils+=	hs-hls-test-utils>=2.9.0.0nb4
 BUILDLINK_PKGSRCDIR.hs-hls-test-utils?=		../../devel/hs-hls-test-utils
 
 .include "../../converters/hs-aeson/buildlink3.mk"

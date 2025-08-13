@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:58 pho Exp $
 
 BUILDLINK_TREE+=	hs-sorted-list
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-sorted-list
 HS_SORTED_LIST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-sorted-list+=	hs-sorted-list>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-sorted-list+=	hs-sorted-list>=0.2.2.0nb4
+BUILDLINK_ABI_DEPENDS.hs-sorted-list+=	hs-sorted-list>=0.2.2.0nb5
 BUILDLINK_PKGSRCDIR.hs-sorted-list?=	../../devel/hs-sorted-list
 .endif	# HS_SORTED_LIST_BUILDLINK3_MK
 

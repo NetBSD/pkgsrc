@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/03/09 07:35:55 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/13 11:07:10 pho Exp $
 
 DISTNAME=	elm-0.19.1
 PKGNAME=	${DISTNAME:S/elm/elm-lang/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elm/}
 GITHUB_PROJECT=	compiler

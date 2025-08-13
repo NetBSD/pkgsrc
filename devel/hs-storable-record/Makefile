@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/03/05 03:39:29 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/13 11:06:59 pho Exp $
 
 DISTNAME=	storable-record-0.0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

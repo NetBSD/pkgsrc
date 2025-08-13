@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/07 17:19:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/13 11:06:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-bytesmith
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-bytesmith
 HS_BYTESMITH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-bytesmith+=	hs-bytesmith>=0.3.11
-BUILDLINK_ABI_DEPENDS.hs-bytesmith+=	hs-bytesmith>=0.3.11.1
+BUILDLINK_ABI_DEPENDS.hs-bytesmith+=	hs-bytesmith>=0.3.11.1nb1
 BUILDLINK_PKGSRCDIR.hs-bytesmith?=	../../devel/hs-bytesmith
 
 .include "../../devel/hs-byteslice/buildlink3.mk"

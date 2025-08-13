@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/03/05 03:39:29 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/13 11:06:58 pho Exp $
 
 DISTNAME=	sop-core-0.5.0.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

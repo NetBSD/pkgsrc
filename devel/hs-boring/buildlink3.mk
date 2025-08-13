@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-boring
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-boring
 HS_BORING_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-boring+=	hs-boring>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-boring+=	hs-boring>=0.2.2nb2
+BUILDLINK_ABI_DEPENDS.hs-boring+=	hs-boring>=0.2.2nb3
 BUILDLINK_PKGSRCDIR.hs-boring?=		../../devel/hs-boring
 
 .include "../../devel/hs-tagged/buildlink3.mk"

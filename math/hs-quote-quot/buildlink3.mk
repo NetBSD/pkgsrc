@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:44 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/13 11:07:15 pho Exp $
 
 BUILDLINK_TREE+=	hs-quote-quot
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-quote-quot
 HS_QUOTE_QUOT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-quote-quot+=	hs-quote-quot>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-quote-quot+=	hs-quote-quot>=0.2.1.0nb4
+BUILDLINK_ABI_DEPENDS.hs-quote-quot+=	hs-quote-quot>=0.2.1.0nb5
 BUILDLINK_PKGSRCDIR.hs-quote-quot?=	../../math/hs-quote-quot
 .endif	# HS_QUOTE_QUOT_BUILDLINK3_MK
 

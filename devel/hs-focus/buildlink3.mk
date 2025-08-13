@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:39 pho Exp $
 
 BUILDLINK_TREE+=	hs-focus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-focus
 HS_FOCUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-focus+=	hs-focus>=1.0.3
-BUILDLINK_ABI_DEPENDS.hs-focus+=	hs-focus>=1.0.3.2nb4
+BUILDLINK_ABI_DEPENDS.hs-focus+=	hs-focus>=1.0.3.2nb5
 BUILDLINK_PKGSRCDIR.hs-focus?=		../../devel/hs-focus
 .endif	# HS_FOCUS_BUILDLINK3_MK
 

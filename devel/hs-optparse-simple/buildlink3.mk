@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/08/13 11:06:51 pho Exp $
 
 BUILDLINK_TREE+=	hs-optparse-simple
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-optparse-simple
 HS_OPTPARSE_SIMPLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-optparse-simple+=	hs-optparse-simple>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-optparse-simple+=	hs-optparse-simple>=0.1.1.4nb8
+BUILDLINK_ABI_DEPENDS.hs-optparse-simple+=	hs-optparse-simple>=0.1.1.4nb9
 BUILDLINK_PKGSRCDIR.hs-optparse-simple?=	../../devel/hs-optparse-simple
 
 .include "../../devel/hs-githash/buildlink3.mk"
