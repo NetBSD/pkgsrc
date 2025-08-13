@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4914 2025/08/13 07:16:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4915 2025/08/13 07:22:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7124,3 +7124,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/freeglut to 3.6.0 [wiz 2025-08-13]
 	Updated graphics/openimageio to 3.0.9.1 [wiz 2025-08-13]
 	Updated x11/xf86-input-mouse to 2.0.0 [wiz 2025-08-13]
+	Updated net/py-cares to 4.10.0 [adam 2025-08-13]
+	Updated textproc/py-json5 to 0.12.1 [adam 2025-08-13]
