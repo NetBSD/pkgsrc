@@ -1,12 +1,21 @@
-$NetBSD: patch-ui_gl_gl__context.cc,v 1.4 2025/07/25 16:17:24 kikadf Exp $
+$NetBSD: patch-ui_gl_gl__context.cc,v 1.5 2025/08/13 07:44:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/gl_context.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/gl/gl_context.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/gl/gl_context.cc
-@@ -517,7 +517,7 @@ bool GLContext::MakeVirtuallyCurrent(
+@@ -159,7 +159,7 @@ bool GLContext::MakeCurrent(GLSurface* s
+     recorded_max_gles_version_if_feasible = true;
+   }
+ #elif (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
+-       BUILDFLAG(IS_WIN))
++       BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD))
+   static bool recorded_emulated_gles_version = false;
+   if (!recorded_emulated_gles_version) {
+     base::UmaHistogramBoolean("GPU.ANGLECanEmulateGLES3",
+@@ -526,7 +526,7 @@ bool GLContext::MakeVirtuallyCurrent(
    DCHECK(virtual_context->IsCurrent(surface));
  
    if (switched_real_contexts || virtual_context != current_virtual_context_) {

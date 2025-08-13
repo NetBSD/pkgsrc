@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.4 2025/07/25 16:17:08 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.5 2025/08/13 07:44:14 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/allocator/partition_allocator/partition_alloc.gni
-@@ -91,7 +91,7 @@ if (is_nacl) {
+@@ -87,7 +87,7 @@ if (current_cpu == "x64" || current_cpu 
  # TODO(crbug.com/329199197): Clean this up when experiments are complete.
  use_large_empty_slot_span_ring = true
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.4 20
                       !is_hwasan && (is_linux || is_android)
  
  declare_args() {
-@@ -351,7 +351,7 @@ declare_args() {
+@@ -340,7 +340,7 @@ declare_args() {
  declare_args() {
    # Shadow metadata is still under development and only supports Linux
    # for now.
@@ -24,7 +24,7 @@ $NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.4 20
  }
  
  declare_args() {
-@@ -494,7 +494,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+@@ -483,7 +483,7 @@ assert(!use_asan_backup_ref_ptr || use_r
  # dependencies that use partition_allocator are compiled in AOSP against a
  # version of glibc that does not include pkeys syscall numbers.
  is_pkeys_available =

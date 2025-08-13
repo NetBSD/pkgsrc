@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics__netbsd.cc,v 1.4 2025/07/25 16:17:09 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics__netbsd.cc,v 1.5 2025/08/13 07:44:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_netbsd.cc.orig	2025-07-24 17:00:09.041657688 +0000
+--- base/process/process_metrics_netbsd.cc.orig	2025-08-12 17:48:59.363962288 +0000
 +++ base/process/process_metrics_netbsd.cc
 @@ -0,0 +1,228 @@
 +// Copyright 2013 The Chromium Authors
@@ -25,7 +25,7 @@ $NetBSD: patch-base_process_process__metrics__netbsd.cc,v 1.4 2025/07/25 16:17:0
 +#include "base/memory/ptr_util.h"
 +#include "base/types/expected.h"
 +#include "base/values.h"
-+#include "base/notreached.h"
++#include "base/notimplemented.h"
 +
 +namespace base {
 +
@@ -142,7 +142,7 @@ $NetBSD: patch-base_process_process__metrics__netbsd.cc,v 1.4 2025/07/25 16:17:0
 +}
 +
 +bool GetSystemMemoryInfo(SystemMemoryInfoKB* meminfo) {
-+  NOTIMPLEMENTED_LOG_ONCE();
++  NOTIMPLEMENTED();
 +  return false;
 +}
 +

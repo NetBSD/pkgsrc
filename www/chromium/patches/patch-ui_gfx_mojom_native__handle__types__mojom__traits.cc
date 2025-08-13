@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.4 2025/07/25 16:17:23 kikadf Exp $
+$NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.5 2025/08/13 07:44:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/gfx/mojom/native_handle_types_mojom_traits.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/gfx/mojom/native_handle_types_mojom_traits.cc
 @@ -14,7 +14,7 @@
  #include "ui/gfx/mac/io_surface.h"
@@ -47,21 +47,21 @@ $NetBSD: patch-ui_gfx_mojom_native__handle__types__mojom__traits.cc,v 1.4 2025/0
    out->modifier = data.modifier();
    out->supports_zero_copy_webgpu_import =
        data.supports_zero_copy_webgpu_import();
-@@ -187,7 +187,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
+@@ -211,7 +211,7 @@ gfx::mojom::GpuMemoryBufferPlatformHandl
      case gfx::IO_SURFACE_BUFFER:
-       return Tag::kMachPort;
+       return Tag::kIoSurfaceHandle;
  #endif  // BUILDFLAG(IS_APPLE)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
      case gfx::NATIVE_PIXMAP:
        return Tag::kNativePixmapHandle;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
-@@ -251,7 +251,7 @@ bool UnionTraits<gfx::mojom::GpuMemoryBu
-       }
+@@ -292,7 +292,7 @@ bool UnionTraits<gfx::mojom::GpuMemoryBu
+ #endif
        return true;
  #endif  // BUILDFLAG(IS_APPLE)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_OZONE) || BUILDFLAG(IS_BSD)
      case Tag::kNativePixmapHandle:
-       handle->type = gfx::NATIVE_PIXMAP;
-       return data.ReadNativePixmapHandle(&handle->native_pixmap_handle_);
+       gmb_handle->type = gfx::NATIVE_PIXMAP;
+       return data.ReadNativePixmapHandle(&gmb_handle->native_pixmap_handle_);

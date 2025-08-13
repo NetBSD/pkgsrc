@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__sandbox__hook__linux.h,v 1.4 2025/07/25 16:17:20 kikadf Exp $
+$NetBSD: patch-services_network_network__sandbox__hook__linux.h,v 1.5 2025/08/13 07:44:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_sandbox_hook_linux.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- services/network/network_sandbox_hook_linux.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ services/network/network_sandbox_hook_linux.h
 @@ -6,7 +6,11 @@
  #define SERVICES_NETWORK_NETWORK_SANDBOX_HOOK_LINUX_H_

@@ -1,10 +1,10 @@
-$NetBSD: patch-gpu_command__buffer_tests_gl__gpu__memory__buffer__unittest.cc,v 1.4 2025/07/25 16:17:18 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_tests_gl__gpu__memory__buffer__unittest.cc,v 1.5 2025/08/13 07:44:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ gpu/command_buffer/tests/gl_gpu_memory_buffer_unittest.cc
 @@ -29,7 +29,7 @@
  #include "ui/gfx/half_float.h"
@@ -12,10 +12,10 @@ $NetBSD: patch-gpu_command__buffer_tests_gl__gpu__memory__buffer__unittest.cc,v 
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- #include "gpu/ipc/common/gpu_memory_buffer_impl_native_pixmap.h"
  #include "ui/gfx/linux/client_native_pixmap_factory_dmabuf.h"
  #endif
-@@ -72,7 +72,7 @@ class GpuMemoryBufferTest : public testi
+ 
+@@ -71,7 +71,7 @@ class GpuMemoryBufferTest : public testi
    GLManager gl_;
  };
  
