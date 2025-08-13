@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2025/05/22 12:57:44 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2025/08/13 17:18:46 sjmulder Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -32,7 +32,8 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_vfs_h=no
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_PLATFORM:MSunOS-*-i386}
+.if ${MACHINE_PLATFORM:MSunOS-*-i386} || \
+    ${MACHINE_PLATFORM:MLinux-*-i386}
 CONFIGURE_ARGS+=	--disable-year2038
 .endif
 
