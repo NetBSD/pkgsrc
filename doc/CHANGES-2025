@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4910 2025/08/13 05:46:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4911 2025/08/13 06:01:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7120,3 +7120,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-responses to 0.25.8 [adam 2025-08-13]
 	Updated textproc/py-orjson to 3.11.2 [adam 2025-08-13]
 	Updated textproc/py-parse_type to 0.6.6 [adam 2025-08-13]
+	Updated devel/robin-map to 1.4.0 [wiz 2025-08-13]
