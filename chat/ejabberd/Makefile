@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/08/08 18:37:34 gdt Exp $
+# $NetBSD: Makefile,v 1.107 2025/08/13 16:32:49 gdt Exp $
 
 DISTNAME=	ejabberd-25.07
 CATEGORIES=	chat
@@ -8,6 +8,11 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
+
+# As of 2025-04, no one responded to a query on pkgsrc-users@ asking
+# if anyone else used ejabberd.  Thus, gdt intends to commit updates
+# if they test ok on his server, and not worry about other usages.
+# Feel free to speak up!
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
