@@ -1,11 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2025/04/24 14:16:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/13 12:46:08 kikadf Exp $
 
 DISTNAME=	copyq-10.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hluk/}
 GH_PROJECT=	CopyQ
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+# Fix build with Qt 6.9, remove after release>10.0.0
+PATCH_SITES=		${MASTER_SITES}${GH_PROJECT}/commit/
+PATCH_DIST_STRIP=	-p1
+PATCHFILES=		f08c0d46a239362c5d3525ef9c3ba943bb00f734.patch
 
 MAINTAINER=	kikadf.01@gmail.com
 HOMEPAGE=	https://hluk.github.io/CopyQ
