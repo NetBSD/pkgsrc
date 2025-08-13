@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.12 2023/08/23 08:05:02 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/08/13 06:08:55 wiz Exp $
 
 BLAKE2s (yaml-cpp-0.8.0.tar.gz) = cc80f79c5c4368a03088504a1a3e72d5742d07376d60ebab474621edb63c7880
 SHA512 (yaml-cpp-0.8.0.tar.gz) = aae9d618f906117d620d63173e95572c738db518f4ff1901a06de2117d8deeb8045f554102ca0ba4735ac0c4d060153a938ef78da3e0da3406d27b8298e5f38e
 Size (yaml-cpp-0.8.0.tar.gz) = 1017151 bytes
+SHA1 (patch-CMakeLists.txt) = 0f139e0409583a3e4a73a508cb9b4cf5794cc5bf
+SHA1 (patch-test_CMakeLists.txt) = f1d8151e3004806bafa835bba818549c656b671e
