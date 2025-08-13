@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/12 20:54:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/13 04:48:33 adam Exp $
 
-DISTNAME=	sybil-9.1.0
+DISTNAME=	sybil-9.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sybil/}
 
@@ -13,7 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../wip/py-testfixtures
+TEST_DEPENDS+=	${PYPKGPREFIX}-testfixtures-[0-9]*:../../devel/py-testfixtures
 
 USE_LANGUAGES=	# none
 
