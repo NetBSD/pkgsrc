@@ -1,10 +1,10 @@
-$NetBSD: patch-chromecast_media_base_default__monotonic__clock.cc,v 1.4 2025/07/25 16:17:14 kikadf Exp $
+$NetBSD: patch-chromecast_media_base_default__monotonic__clock.cc,v 1.5 2025/08/13 07:44:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/media/base/default_monotonic_clock.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chromecast/media/base/default_monotonic_clock.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chromecast/media/base/default_monotonic_clock.cc
 @@ -11,7 +11,7 @@
  #include "base/time/time.h"

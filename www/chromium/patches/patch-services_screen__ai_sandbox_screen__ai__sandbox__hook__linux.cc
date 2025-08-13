@@ -1,12 +1,12 @@
-$NetBSD: patch-services_screen__ai_sandbox_screen__ai__sandbox__hook__linux.cc,v 1.4 2025/07/25 16:17:20 kikadf Exp $
+$NetBSD: patch-services_screen__ai_sandbox_screen__ai__sandbox__hook__linux.cc,v 1.5 2025/08/13 07:44:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ services/screen_ai/sandbox/screen_ai_sandbox_hook_linux.cc
-@@ -58,6 +58,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
+@@ -70,6 +70,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
      }
    }
  
@@ -14,7 +14,7 @@ $NetBSD: patch-services_screen__ai_sandbox_screen__ai__sandbox__hook__linux.cc,v
    auto* instance = sandbox::policy::SandboxLinux::GetInstance();
  
    std::vector<BrokerFilePermission> permissions{
-@@ -79,6 +80,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
+@@ -91,6 +92,7 @@ bool ScreenAIPreSandboxHook(base::FilePa
                              sandbox::syscall_broker::COMMAND_OPEN}),
        permissions, options);
    instance->EngageNamespaceSandboxIfPossible();

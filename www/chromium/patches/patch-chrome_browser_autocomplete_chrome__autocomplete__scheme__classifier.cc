@@ -1,17 +1,17 @@
-$NetBSD: patch-chrome_browser_autocomplete_chrome__autocomplete__scheme__classifier.cc,v 1.4 2025/07/25 16:17:10 kikadf Exp $
+$NetBSD: patch-chrome_browser_autocomplete_chrome__autocomplete__scheme__classifier.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/autocomplete/chrome_autocomplete_scheme_classifier.cc
-@@ -88,7 +88,7 @@ ChromeAutocompleteSchemeClassifier::GetI
+@@ -104,7 +104,7 @@ ChromeAutocompleteSchemeClassifier::GetI
        return metrics::OmniboxInputType::QUERY;
  
      case ExternalProtocolHandler::UNKNOWN: {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-#if BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
        // Linux impl of GetApplicationNameForScheme doesn't distinguish
        // between URL schemes with handers and those without. This will
        // make the default behaviour be search on Linux.

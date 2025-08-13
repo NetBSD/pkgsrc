@@ -1,13 +1,13 @@
-$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.4 2025/07/25 16:17:14 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.5 2025/08/13 07:44:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_list.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/feature_engagement/public/feature_list.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/feature_engagement/public/feature_list.cc
-@@ -189,7 +189,7 @@ const base::Feature* const kAllFeatures[
-     &kIPHIOSGLICPromoFeature,
+@@ -193,7 +193,7 @@ const base::Feature* const kAllFeatures[
+     &kIPHIOSPageActionMenu,
  #endif  // BUILDFLAG(IS_IOS)
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.4 2025
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
      &kEsbDownloadRowPromoFeature,
  #endif
-@@ -264,7 +264,7 @@ const base::Feature* const kAllFeatures[
+@@ -266,7 +266,7 @@ const base::Feature* const kAllFeatures[
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX) ||
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_FUCHSIA)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__list.cc,v 1.4 2025
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
      &kIPHAutofillAiOptInFeature,
      &kIPHAutofillBnplAffirmOrZipSuggestionFeature,
-@@ -319,7 +319,7 @@ const base::Feature* const kAllFeatures[
+@@ -323,7 +323,7 @@ const base::Feature* const kAllFeatures[
      &kIPHScalableIphGamingFeature,
  #endif  // BUILDFLAG(IS_CHROMEOS)
  

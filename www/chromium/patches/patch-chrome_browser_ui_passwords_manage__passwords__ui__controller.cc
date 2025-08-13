@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_passwords_manage__passwords__ui__controller.cc,v 1.4 2025/07/25 16:17:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_passwords_manage__passwords__ui__controller.cc,v 1.5 2025/08/13 07:44:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/passwords/manage_passwords_ui_controller.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/passwords/manage_passwords_ui_controller.cc
-@@ -104,7 +104,7 @@ namespace {
+@@ -108,7 +108,7 @@ namespace {
  
  using Logger = autofill::SavePasswordProgressLogger;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_passwords_manage__passwords__ui__controller.cc,
  // Should be kept in sync with constant declared in
  // bubble_controllers/relaunch_chrome_bubble_controller.cc.
  constexpr int kMaxNumberOfTimesKeychainErrorBubbleIsShown = 3;
-@@ -562,7 +562,7 @@ void ManagePasswordsUIController::OnBiom
+@@ -567,7 +567,7 @@ void ManagePasswordsUIController::OnBiom
  }
  
  void ManagePasswordsUIController::OnKeychainError() {

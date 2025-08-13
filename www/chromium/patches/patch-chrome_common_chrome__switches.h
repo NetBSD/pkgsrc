@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_chrome__switches.h,v 1.4 2025/07/25 16:17:14 kikadf Exp $
+$NetBSD: patch-chrome_common_chrome__switches.h,v 1.5 2025/08/13 07:44:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/chrome_switches.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/common/chrome_switches.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/common/chrome_switches.h
-@@ -275,7 +275,7 @@ extern const char kAllowNaClSocketAPI[];
+@@ -276,7 +276,7 @@ extern const char kAllowNaClSocketAPI[];
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_common_chrome__switches.h,v 1.4 2025/07/25 16:17:14 kikadf
  extern const char kEnableNewAppMenuIcon[];
  extern const char kGuest[];
  extern const char kForceNtpMobilePromo[];
-@@ -293,7 +293,7 @@ extern const char kGlicDev[];
+@@ -294,7 +294,7 @@ extern const char kGlicDev[];
  extern const char kGlicHostLogging[];
  #endif
  

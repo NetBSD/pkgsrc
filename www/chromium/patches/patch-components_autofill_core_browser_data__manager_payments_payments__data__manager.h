@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h,v 1.3 2025/07/25 16:17:14 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.h,v 1.4 2025/08/13 07:44:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.h
-@@ -365,7 +365,7 @@ class PaymentsDataManager : public Autof
+@@ -370,7 +370,7 @@ class PaymentsDataManager : public Autof
    void SetAutofillHasSeenIban();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments_
    // Returns the value of the kAutofillHasSeenBnpl pref.
    bool IsAutofillHasSeenBnplPrefEnabled() const;
  
-@@ -685,7 +685,7 @@ class PaymentsDataManager : public Autof
+@@ -693,7 +693,7 @@ class PaymentsDataManager : public Autof
    void ClearAllCreditCardBenefits();
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

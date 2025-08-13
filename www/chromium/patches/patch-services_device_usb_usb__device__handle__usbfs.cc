@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.3 2025/07/25 16:17:20 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.4 2025/08/13 07:44:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
 @@ -38,7 +38,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"
@@ -12,10 +12,19 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.3 2025/07/2
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #include "base/metrics/histogram_macros.h"
  #include "services/device/public/cpp/device_features.h"
  #include "services/device/usb/usb_interface_detach_allowlist.h"
- #endif  // BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
-@@ -270,7 +270,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
+@@ -55,7 +55,7 @@ using mojom::UsbTransferType;
+ 
+ namespace {
+ 
+-#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Outcome of detaching a kernel driver before ClaimInterface().
+ // These values are persisted to logs. Entries should not be renumbered and
+ // numeric values should never be reused.
+@@ -297,7 +297,7 @@ bool UsbDeviceHandleUsbfs::BlockingTaskR
    return true;
  }
  
@@ -24,7 +33,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.3 2025/07/2
  bool UsbDeviceHandleUsbfs::BlockingTaskRunnerHelper::DetachInterface(
      int interface_number,
      const CombinedInterfaceInfo& interface_info) {
-@@ -598,7 +598,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
+@@ -633,7 +633,7 @@ void UsbDeviceHandleUsbfs::ClaimInterfac
      return;
    }
  #endif
@@ -33,7 +42,7 @@ $NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.3 2025/07/2
    if (base::FeatureList::IsEnabled(features::kAutomaticUsbDetach)) {
      const mojom::UsbConfigurationInfo* config =
          device_->GetActiveConfiguration();
-@@ -944,7 +944,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
+@@ -979,7 +979,7 @@ void UsbDeviceHandleUsbfs::ReleaseInterf
      return;
    }
  #endif

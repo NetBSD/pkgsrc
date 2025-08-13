@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17:16 kikadf Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.5 2025/08/13 07:44:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -148,18 +148,20 @@
+@@ -149,18 +149,20 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -29,7 +29,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -188,6 +190,10 @@
+@@ -189,6 +191,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +40,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -386,7 +392,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -390,7 +396,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +49,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  
  #if BUILDFLAG(ENABLE_PPAPI)
  // Loads the (native) libraries but does not initialize them (i.e., does not
-@@ -424,7 +430,10 @@ void PreloadLibraryCdms() {
+@@ -428,7 +434,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,7 +60,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -436,9 +445,16 @@ void PreSandboxInit() {
+@@ -440,9 +449,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
@@ -77,16 +77,16 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  
  #if BUILDFLAG(ENABLE_PPAPI)
    // Ensure access to the Pepper plugins before the sandbox is turned on.
-@@ -763,7 +779,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+@@ -765,7 +781,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+     base::HangWatcher::CreateHangWatcherInstance();
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
-     bool start_hang_watcher_now;
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -876,11 +892,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -883,11 +899,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -100,7 +100,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1073,10 +1088,22 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1088,10 +1103,22 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -123,7 +123,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.4 2025/07/25 16:17
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1177,6 +1204,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+@@ -1192,6 +1219,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

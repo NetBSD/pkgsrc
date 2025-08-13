@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.4 2025/07/25 16:17:12 kikadf Exp $
+$NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.5 2025/08/13 07:44:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/sync/sync_service_factory.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/sync/sync_service_factory.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/sync/sync_service_factory.cc
-@@ -110,7 +110,7 @@
+@@ -115,7 +115,7 @@
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.4 2025/07/25 16
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_keyed_service.h"
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_service_factory.h"
  #include "chrome/browser/ui/tabs/saved_tab_groups/saved_tab_group_utils.h"
-@@ -137,7 +137,7 @@ namespace {
+@@ -142,7 +142,7 @@ namespace {
  tab_groups::TabGroupSyncService* GetTabGroupSyncService(Profile* profile) {
    CHECK(profile);
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.4 2025/07/25 16
    tab_groups::TabGroupSyncService* service =
        tab_groups::SavedTabGroupUtils::GetServiceForProfile(profile);
    CHECK(service);
-@@ -381,7 +381,7 @@ std::unique_ptr<KeyedService> BuildSyncS
+@@ -405,7 +405,7 @@ std::unique_ptr<KeyedService> BuildSyncS
    bool local_sync_backend_enabled = false;
    // Only check the local sync backend pref on the supported platforms of
    // Windows, Mac and Linux.
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_sync_sync__service__factory.cc,v 1.4 2025/07/25 16
    syncer::SyncPrefs prefs(profile->GetPrefs());
    local_sync_backend_enabled = prefs.IsLocalSyncEnabled();
    base::UmaHistogramBoolean("Sync.Local.Enabled2", local_sync_backend_enabled);
-@@ -520,7 +520,7 @@ SyncServiceFactory::SyncServiceFactory()
+@@ -544,7 +544,7 @@ SyncServiceFactory::SyncServiceFactory()
    DependsOn(ProfilePasswordStoreFactory::GetInstance());
    DependsOn(PowerBookmarkServiceFactory::GetInstance());
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \

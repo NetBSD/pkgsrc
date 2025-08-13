@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__client.cc,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__client.cc,v 1.5 2025/08/13 07:44:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/password_manager/chrome_password_manager_client.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/password_manager/chrome_password_manager_client.cc
-@@ -658,7 +658,7 @@ void ChromePasswordManagerClient::
+@@ -764,7 +764,7 @@ void ChromePasswordManagerClient::
  bool ChromePasswordManagerClient::IsReauthBeforeFillingRequired(
      device_reauth::DeviceAuthenticator* authenticator) {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    if (!GetLocalStatePrefs() || !GetPrefs() || !authenticator) {
      return false;
    }
-@@ -936,7 +936,7 @@ void ChromePasswordManagerClient::Notify
+@@ -1043,7 +1043,7 @@ void ChromePasswordManagerClient::Notify
  }
  
  void ChromePasswordManagerClient::NotifyKeychainError() {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    PasswordsClientUIDelegate* manage_passwords_ui_controller =
        PasswordsClientUIDelegateFromWebContents(web_contents());
    if (manage_passwords_ui_controller) {
-@@ -2043,7 +2043,7 @@ void ChromePasswordManagerClient::HideFi
+@@ -2101,7 +2101,7 @@ void ChromePasswordManagerClient::HideFi
  bool ChromePasswordManagerClient::IsPasswordManagementEnabledForCurrentPage(
      const GURL& url) const {
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_password__manager_chrome__password__manager__clien
    if (IsPasswordManagerForUrlDisallowedByPolicy(url)) {
      return false;
    }
-@@ -2082,7 +2082,7 @@ bool ChromePasswordManagerClient::IsPass
+@@ -2140,7 +2140,7 @@ bool ChromePasswordManagerClient::IsPass
  }
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_internal__linux.h,v 1.4 2025/07/25 16:17:09 kikadf Exp $
+$NetBSD: patch-base_process_internal__linux.h,v 1.5 2025/08/13 07:44:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/internal_linux.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- base/process/internal_linux.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ base/process/internal_linux.h
 @@ -146,6 +146,9 @@ TimeDelta ClockTicksToTimeDelta(int64_t 
  // arguments to the lambda.

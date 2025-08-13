@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards_relaunch__chrome__promo.cc,v 1.4 2025/07/25 16:17:13 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_password__manager_promo__cards_relaunch__chrome__promo.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/ui/webui/password_manager/promo_cards/relaunch_chrome_promo.cc
 @@ -37,7 +37,7 @@ std::u16string RelaunchChromePromo::GetT
    return l10n_util::GetStringUTF16(

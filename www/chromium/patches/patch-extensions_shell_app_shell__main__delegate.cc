@@ -1,12 +1,12 @@
-$NetBSD: patch-extensions_shell_app_shell__main__delegate.cc,v 1.4 2025/07/25 16:17:17 kikadf Exp $
+$NetBSD: patch-extensions_shell_app_shell__main__delegate.cc,v 1.5 2025/08/13 07:44:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- extensions/shell/app/shell_main_delegate.cc.orig	2025-07-21 19:32:31.000000000 +0000
+--- extensions/shell/app/shell_main_delegate.cc.orig	2025-07-29 22:51:44.000000000 +0000
 +++ extensions/shell/app/shell_main_delegate.cc
-@@ -41,7 +41,7 @@
+@@ -31,7 +31,7 @@
  #if BUILDFLAG(IS_WIN)
  #include "base/base_paths_win.h"
  #include "base/process/process_info.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-extensions_shell_app_shell__main__delegate.cc,v 1.4 2025/07/25 16
  #include "base/nix/xdg_util.h"
  #elif BUILDFLAG(IS_MAC)
  #include "base/base_paths_mac.h"
-@@ -61,7 +61,7 @@ base::FilePath GetDataPath() {
+@@ -51,7 +51,7 @@ base::FilePath GetDataPath() {
    }
  
    base::FilePath data_dir;

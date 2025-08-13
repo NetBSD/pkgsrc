@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.h,v 1.4 2025/07/25 16:17:11 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.h,v 1.5 2025/08/13 07:44:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.h
 @@ -19,7 +19,7 @@
  #include "components/keyed_service/core/keyed_service.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
  #include "components/device_signals/core/browser/signals_types.h"
  #endif
  
-@@ -116,7 +116,7 @@ class RealtimeReportingClient : public R
+@@ -118,7 +118,7 @@ class RealtimeReportingClient : public R
        const std::string& dm_token) override;
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
    // DEPRECATED: Use MaybeCollectDeviceSignalsAndReportEvent(Event, ...).
    void MaybeCollectDeviceSignalsAndReportEventDeprecated(
        base::Value::Dict event,
-@@ -166,7 +166,7 @@ class RealtimeReportingClient : public R
+@@ -168,7 +168,7 @@ class RealtimeReportingClient : public R
    base::WeakPtrFactory<RealtimeReportingClient> weak_ptr_factory_{this};
  };
  

@@ -1,12 +1,12 @@
-$NetBSD: patch-ui_compositor_compositor.h,v 1.4 2025/07/25 16:17:23 kikadf Exp $
+$NetBSD: patch-ui_compositor_compositor.h,v 1.5 2025/08/13 07:44:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/compositor/compositor.h.orig	2025-07-21 19:32:31.000000000 +0000
+--- ui/compositor/compositor.h.orig	2025-07-29 22:51:44.000000000 +0000
 +++ ui/compositor/compositor.h
-@@ -463,7 +463,7 @@ class COMPOSITOR_EXPORT Compositor : pub
+@@ -462,7 +462,7 @@ class COMPOSITOR_EXPORT Compositor : pub
    // base::PowerSuspendObserver:
    void OnResume() override;
  
