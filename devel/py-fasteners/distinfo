@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/09/27 15:12:29 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/08/13 08:09:48 adam Exp $
 
-BLAKE2s (fasteners-0.19.tar.gz) = 8c3fcd7b02f55916b5762aab339b63f0cee93ac50ccf3f0eb519c6ba76e5ae02
-SHA512 (fasteners-0.19.tar.gz) = ac698c590cdb17d202e3a3bca794bf6e3bafac2ddc7b112ca972bfa81f4faa666461f90b6d779536f8edbeb5b56fbbcbe7fa21c612a47bf3e34a4beaf2cd43f3
-Size (fasteners-0.19.tar.gz) = 24832 bytes
+BLAKE2s (fasteners-0.20.tar.gz) = 68300ae49805a37414504853c633f8f7c605c49193be4ec5eecf94138c7e3931
+SHA512 (fasteners-0.20.tar.gz) = 71d6c42cd64c1a5e864c11caa9043428412cb101da6bac2f621c4c6db69b35833e4ca7a208be1e5ee15c8e10b3ae0cd369aa8bbf17620ba03f4efef59e48ffc3
+Size (fasteners-0.20.tar.gz) = 25087 bytes
