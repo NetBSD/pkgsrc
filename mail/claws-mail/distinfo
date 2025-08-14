@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.39 2022/11/23 08:50:20 thor Exp $
+$NetBSD: distinfo,v 1.40 2025/08/14 01:23:43 ktnb Exp $
 
-BLAKE2s (claws-mail-4.1.1.tar.xz) = 2a2c01686cba72a67c1e745cdd1059a369e1af4d6dbc6d8eba8751f4b483deac
-SHA512 (claws-mail-4.1.1.tar.xz) = 4157772fd0e918bae1df11230ce52691ff86181a0c164c0c5116d1ebb91885910e2e24ff18ae5e5ad4ed1c83ef830773de0b4ab40da988607909e0c17efb26b4
-Size (claws-mail-4.1.1.tar.xz) = 6523688 bytes
+BLAKE2s (claws-mail-4.3.1.tar.xz) = e4764ea37eb66106fe06573d3e2ce349e11f628a61773ab0e49126e37dac5809
+SHA512 (claws-mail-4.3.1.tar.xz) = 1ecd34c9d4b529dbad42febdd873a1cb06c965fbfd9c0677b20b13ccfed7dae23602bdcf63285ff267a55c4b07a5565d9e8c60622b849e1ece1b9e3046995fa9
+Size (claws-mail-4.3.1.tar.xz) = 6782236 bytes
 SHA1 (patch-po_Makefile.in.in) = 88cb5106595d2959f31d7825b7474861281b290c
 SHA1 (patch-src_Makefile.in) = 8e8cc2d08ab640aa51c6a761bb8913f518d1ad65
 SHA1 (patch-src_common_unmime.c) = b572895a8a3be4d6d78b34f6466cc2e80fa9d96f
-SHA1 (patch-src_plugins_pgpcore_sgpgme.c) = 1e972ddb501655ae347c35e623ccb4694776cf3e
 SHA1 (patch-src_plugins_vcalendar_vcal__folder.c) = 41978f0e0e390e3665fd92c5200b04ec06aa3e9d
 SHA1 (patch-src_prefs__other.c) = 871782f31872ec459598caa667b6cb518f7a8b35
