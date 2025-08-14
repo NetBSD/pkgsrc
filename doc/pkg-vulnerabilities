@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.490 2025/08/12 17:41:33 morr Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.491 2025/08/14 08:19:50 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -9111,7 +9111,7 @@ curl<7.43.0			sensitive-information-exposure	http://curl.haxx.se/docs/adv_201506
 curl<7.43.0			sensitive-information-exposure	http://curl.haxx.se/docs/adv_20150617B.html
 wireshark<1.12.6		multiple-vulnerabilities	https://www.wireshark.org/docs/relnotes/wireshark-1.12.6.html
 ruby{18,193,200,215}-rubygems<2.4.8	remote-hijacking	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4020
-cryptopp-[0-9]*			sensitive-information-exposure	http://www.mail-archive.com/cryptopp-users@googlegroups.com/msg07835.html
+cryptopp<5.6.3			sensitive-information-exposure	http://www.mail-archive.com/cryptopp-users@googlegroups.com/msg07835.html
 haproxy<1.5.14		information-leak		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3281
 openssl<1.0.1o			signature-forgery		https://www.openssl.org/news/secadv_20150709.txt
 openssl>1.0.2<1.0.2c		signature-forgery		https://www.openssl.org/news/secadv_20150709.txt
@@ -10532,7 +10532,7 @@ mysql-server>5.6<5.6.33	privilege-escalation	https://dev.mysql.com/doc/relnotes/
 mysql-server>5.7<5.7.15	privilege-escalation	https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-15.html
 mariadb-server<5.5.51	privilege-escalation	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-6662
 curl<7.50.3		heap-overflow		https://curl.haxx.se/docs/adv_20160914.html
-cryptopp-[0-9]*		sensitive-information-disclosure	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-7420
+cryptopp<5.6.5		sensitive-information-disclosure	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-7420
 openssl>=1.0.2<1.0.2i		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2179
 openssl>=1.0.2<1.0.2i		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2181
 openssl>=1.0.2<1.0.2i		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2182
@@ -11102,7 +11102,7 @@ hexchat<2.14.0		stack-overflow		https://github.com/hexchat/hexchat/issues/1934
 socat<1.7.3.1		openssl-implementation	http://www.dest-unreach.org/socat/contrib/socat-secadv7.html
 libXpm-3.5.12		denial-of-service	https://www.debian.org/security/2017/dsa-3772
 libquicktime-[0-9]*	denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-2399
-cryptopp-[0-9]*		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-9939
+cryptopp<6.0.0		denial-of-service	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-9939
 potrace<1.13		multiple-vulnerabilities	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-8695
 phpmyadmin<4.6.6	server-side-request-forgery	https://www.phpmyadmin.net/security/PMASA-2016-44/
 ruby200-archive-tar-minitar-[0-9]*	directory-traversal	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2016-10173
@@ -17745,7 +17745,7 @@ ruby{22,23,24,25,26}-yard<0.9.20	path-traversal	https://nvd.nist.gov/vuln/detail
 u-boot<2019.10	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-13103
 jabberd<=2	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 freetype2<2.6.1	buffer-overrun	https://nvd.nist.gov/vuln/detail/CVE-2015-9290
-cryptopp-[0-9]*	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2019-14318
+cryptopp<8.3.0	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2019-14318
 libopenmpt<0.4.3	null-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-14381
 binutils<2.33	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-14444
 openssl<1.0.2t		multiple-vulnerabilities	https://www.openssl.org/news/secadv/20190730.txt
@@ -21996,7 +21996,7 @@ weechat<3.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-40516
 botan-[0-9]*	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2021-40529
 consul<1.8.15	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2021-37219
 consul<1.8.15	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-38698
-cryptopp-[0-9]*	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2021-40530
+cryptopp<8.6.0	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2021-40530
 fuse-ntfs-3g<2021.8.22	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-33285
 fuse-ntfs-3g<2021.8.22	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-33286
 fuse-ntfs-3g<2021.8.22	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-33287
@@ -22315,7 +22315,7 @@ htmldoc<1.9.12		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4098
 grafana>=8.0.0<8.2.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-41174
 libxls-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-27836
 libheif<1.7.0		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-23109
-cryptopp-[0-9]*		side-channel		https://nvd.nist.gov/vuln/detail/CVE-2021-43398
+#cryptopp-[0-9]*		side-channel		https://nvd.nist.gov/vuln/detail/CVE-2021-43398
 vim<8.2.3581		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3928
 vim<8.2.3582		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3927
 go116<1.16.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-41772
