@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/08/14 11:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/14 11:46:25 wiz Exp $
 
 DISTNAME=	lcov-2.3.1
 CATEGORIES=	devel
@@ -9,6 +9,8 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://github.com/linux-test-project/lcov
 COMMENT=	Front-end for GCC's coverage testing tool gcov
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 
 USE_TOOLS+=	bash:run gmake perl
 
