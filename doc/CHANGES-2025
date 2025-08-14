@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4936 2025/08/14 10:14:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4937 2025/08/14 10:15:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/glow to 2.1.1 [sjmulder 2025-08-14]
 	Added converters/bin2iso version 2.0 [nia 2025-08-14]
 	Updated www/p5-Net-Curl to 0.58 [wiz 2025-08-14]
+	Updated graphics/cairo to 1.18.4nb1 [wiz 2025-08-14]
