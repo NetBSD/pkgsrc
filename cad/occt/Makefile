@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2025/01/19 23:37:49 mef Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/14 12:15:47 gdt Exp $
 
+# \todo Update to 7.9.1.
 VERSION=	7.8.0
 DISTNAME=	opencascade-${VERSION}
 PKGNAME=	${DISTNAME:S/opencascade/occt/}
 CATEGORIES=	cad
+# \todo Downloads are now via github.
 MASTER_SITES=	https://distfiles.macports.org/opencascade/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://dev.opencascade.org/release
+HOMEPAGE=	https://dev.opencascade.org/
 COMMENT=	Boundary Representation modeling toolkit and 3D geometry library
 LICENSE=	gnu-lgpl-v2.1
 
