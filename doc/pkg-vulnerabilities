@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.494 2025/08/14 09:33:51 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.495 2025/08/14 10:16:01 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27256,9 +27256,9 @@ qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54566
 qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54567
 sqlite3<3.42.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7458
 squid<6.4	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-54574
-tiff-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-13978
-tiff-[0-9]*	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-8176
-tiff-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8177
+tiff<4.7.0nb2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-13978
+tiff<4.7.0nb2	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-8176
+tiff<4.7.0nb2	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8177
 vault<1.20.0	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2025-5999
 vault<1.20.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-6000
 vault<1.20.1	security-bypass			https://nvd.nist.gov/vuln/detail/CVE-2025-6004
@@ -27272,7 +27272,7 @@ iperf3<3.19.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-54350
 iperf3<3.19.1	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-54351
 p5-Crypt-CBC<3.07	lack-of-entropy	https://nvd.nist.gov/vuln/detail/CVE-2025-2814
 poppler-utils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-50420
-cairo-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-50422
+cairo<1.18.4nb1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-50422
 mupdf<1.26.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46206
 SOGo-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-50340
 7-zip<25.01	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-55188
