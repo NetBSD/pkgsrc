@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.148 2025/08/10 10:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2025/08/14 12:10:38 wiz Exp $
 
-DISTNAME=		krita-5.2.9
-PKGREVISION=		2
+DISTNAME=		krita-5.2.11
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_KDE:=krita/${PKGVERSION_NOREV}/}
 
@@ -21,8 +20,6 @@ DEPENDS+=	kitemmodels-[0-9]*:../../devel/kitemmodels
 
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kritarc \
 		${PKG_SYSCONFDIR}/xdg/kritarc
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	libs/ui/tests/data/AppImageUpdateDummy
 
