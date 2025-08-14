@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4945 2025/08/14 15:11:53 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4946 2025/08/14 15:13:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7158,3 +7158,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-regexp_parser to 2.11.2 [taca 2025-08-14]
 	Updated mail/ruby-mime-types-data to 3.2025.0812 [taca 2025-08-14]
 	Updated print/ruby-pdf-reader to 2.15.0 [taca 2025-08-14]
+	Updated fonts/ruby-afm to 1.0.0 [taca 2025-08-14]
