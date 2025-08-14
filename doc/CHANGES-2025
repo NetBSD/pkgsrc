@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4954 2025/08/14 21:39:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4955 2025/08/14 21:40:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7205,3 +7205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 37.5.3 [adam 2025-08-14]
 	Updated fonts/py-fonttools to 4.59.1 [adam 2025-08-14]
 	Updated editors/emacs30 to 30.2 [wiz 2025-08-14]
+	Updated editors/emacs30-nox11 to 30.2 [wiz 2025-08-14]
