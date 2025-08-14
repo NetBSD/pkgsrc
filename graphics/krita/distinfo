@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.19 2025/07/09 19:00:44 wiz Exp $
+$NetBSD: distinfo,v 1.20 2025/08/14 12:10:38 wiz Exp $
 
-BLAKE2s (krita-5.2.9.tar.xz) = f1fc1d1342f07bb3049b3474ddd8966463fce8e896bf079a5796b8e27d7ab42b
-SHA512 (krita-5.2.9.tar.xz) = fc4af177371afad307a77047ceff3fb793c76e6e8b64382acd950bd89d6fc12fb2c83d76d8e8d0482860add178b8fe70ac05b1db4bc0e17520be53b9190e4bfe
-Size (krita-5.2.9.tar.xz) = 186574780 bytes
+BLAKE2s (krita-5.2.11.tar.xz) = 6679f736ef1d6f74ea28c9078b5301d9647f2b1b2656aac4364c230d3626ba69
+SHA512 (krita-5.2.11.tar.xz) = 1c388380f366118452f33ca028b4fb9ea134d8cd519f7878cc61d4f4fbd1d0fe51894fee9be8d4bed864d5d0df546986fae05812c9e25011516ce1000dd221de
+Size (krita-5.2.11.tar.xz) = 190966516 bytes
 SHA1 (patch-cmake_modules_FindLibMyPaint.cmake) = 4d2273db42e4427f1ec2f4f2e1c86d976c0e24f3
 SHA1 (patch-krita_data_CMakeLists.txt) = bc0a37c1a60a2e0702c4a87b70ae0abf8359cc45
 SHA1 (patch-plugins_dockers_CMakeLists.txt) = 67623184a85eea82727e67eb076cc7b7c772d348
-SHA1 (patch-plugins_impex_heif_HeifExport.cpp) = 80acc79bccb9faba2b9f7a4ab7296c5a3215a41e
-SHA1 (patch-plugins_impex_heif_HeifImport.cpp) = 391653be4bbfc191914d1be3d94150c75390333e
