@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4924 2025/08/13 17:19:02 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.4925 2025/08/14 01:23:57 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7137,3 +7137,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added chat/libomemo-c version 0.5.1 [gdt 2025-08-13]
 	Added textproc/moor version 2.0.3 [schmonz 2025-08-13]
 	Updated devel/libuuid to 2.40.2 [sjmulder 2025-08-13]
+	Updated mail/claws-mail to 4.3.1nb27 [ktnb 2025-08-13]
