@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.499 2025/08/14 13:16:32 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.500 2025/08/14 21:04:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27341,3 +27341,5 @@ tiff<4.7.0	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8851
 u-boot-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-45512
 uv<0.8.6	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2025-54368
 vault<1.20.2	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-6013
+aide-[0-9]*	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-54389
+aide>=0.13	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-54409
