@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4937 2025/08/14 10:15:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4938 2025/08/14 10:16:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7150,3 +7150,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added converters/bin2iso version 2.0 [nia 2025-08-14]
 	Updated www/p5-Net-Curl to 0.58 [wiz 2025-08-14]
 	Updated graphics/cairo to 1.18.4nb1 [wiz 2025-08-14]
+	Updated graphics/tiff to 4.7.0nb2 [wiz 2025-08-14]
