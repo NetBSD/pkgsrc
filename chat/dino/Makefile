@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/08/14 10:25:26 gdt Exp $
+# $NetBSD: Makefile,v 1.52 2025/08/14 23:30:33 gdt Exp $
 
 DISTNAME=		dino-0.5.0
 CATEGORIES=		chat
@@ -15,11 +15,15 @@ DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-BUILDLINK_TRANSFORM+=	opt:-Wno-incompatible-pointer-types-discards-qualifiers:-Wno-incompatible-pointer-types
+# Leftover from 0.4.x.  Unclear which platforms/compilers.
+# The first option does not appear after building.  For now, omit and see if there is breakage.
+#BUILDLINK_TRANSFORM+=	opt:-Wno-incompatible-pointer-types-discards-qualifiers:-Wno-incompatible-pointer-types
 
 # tests fail because of missing RPATH in plugins/omemo/omemo-test.
-# With LD_LIBRARY_PATH=/usr/pkg/lib/dino/plugins they pass.
 # This seems to be because of upstream's use of ORIGIN.
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/plugins/omemo
+# For Darwin                                                                                                                                                                                                  
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/plugins/omemo
 
 .include "../../devel/meson/build.mk"
 
