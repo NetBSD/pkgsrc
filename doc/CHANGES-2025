@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4934 2025/08/14 07:43:47 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.4935 2025/08/14 09:32:46 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7147,3 +7147,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/openrct2 to 0.4.25 [triaxx 2025-08-14]
 	Updated graphics/ImageMagick to 7.1.2.1 [triaxx 2025-08-14]
 	Updated textproc/glow to 2.1.1 [sjmulder 2025-08-14]
+	Added converters/bin2iso version 2.0 [nia 2025-08-14]
