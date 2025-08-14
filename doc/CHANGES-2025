@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4928 2025/08/14 03:27:54 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4929 2025/08/14 03:28:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7141,3 +7141,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 141.0.3 [ryoon 2025-08-14]
 	Updated www/firefox-l10n to 141.0.3 [ryoon 2025-08-14]
 	Updated shells/oh-my-posh to 26.19.1 [pin 2025-08-14]
+	Updated mail/notmuch to 0.39 [ryoon 2025-08-14]
