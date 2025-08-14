@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.491 2025/08/14 08:19:50 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.492 2025/08/14 08:26:57 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -9034,7 +9034,7 @@ zeromq>=4.1.0<4.1.1		protocol-downgrade		https://www.debian.org/security/2015/ds
 moodle>=2.8<2.8.6		multiple-vulnerabilities	http://secunia.com/advisories/64167/
 moodle>=2.7<2.7.8		multiple-vulnerabilities	http://secunia.com/advisories/64167/
 moodle>=2.6<2.6.11		multiple-vulnerabilities	http://secunia.com/advisories/64167/
-avidemux-[0-9]*			multiple-vulnerabilities	http://advisories.mageia.org/MGASA-2015-0233.html
+avidemux<2.6.8			multiple-vulnerabilities	http://advisories.mageia.org/MGASA-2015-0233.html
 libntfs-[0-9]*			privilege-escalation		https://www.debian.org/security/2015/dsa-3268
 fuse-ntfs-3g-[0-9]*		privilege-escalation		https://www.debian.org/security/2015/dsa-3268
 postgresql90-server<9.0.20	multiple-vulnerabilities	http://www.postgresql.org/about/news/1587/
