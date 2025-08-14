@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2025/08/13 10:13:57 gdt Exp $
+$NetBSD: distinfo,v 1.14 2025/08/14 10:25:26 gdt Exp $
 
-BLAKE2s (dino-0.4.5.tar.gz) = 9593e838f8f26e7265b9342cc0d2aa17dad0ba5b23c5da533a6bd60f0dd6d40f
-SHA512 (dino-0.4.5.tar.gz) = 877e218105b4c9b643145d557ebf0e19d9ad989146dcffde047aba46290389babf8814a8bd819788f91e34c11df0c8609c68f9de8fa418c0801c83642ad861c6
-Size (dino-0.4.5.tar.gz) = 886933 bytes
+BLAKE2s (dino-0.5.0.tar.gz) = 07a25a64a98f9298a025dd7fd53dacc4808a0c902044354359513c7be8c03566
+SHA512 (dino-0.5.0.tar.gz) = 9cb6db27e6afd42204990c836019bc84a2a61af839d59cf8378520308d3016e6ac674ea4abd3044dfdf18e21e8431ef3cc85ad70d02c89d95c4dc702b32e05d2
+Size (dino-0.5.0.tar.gz) = 1002577 bytes
 SHA1 (patch-CMakeLists.txt) = 78b6a3f18ca5386943714d30befae70469a6f2a2
