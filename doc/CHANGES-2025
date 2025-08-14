@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4939 2025/08/14 10:25:36 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.4940 2025/08/14 11:38:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7152,3 +7152,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/cairo to 1.18.4nb1 [wiz 2025-08-14]
 	Updated graphics/tiff to 4.7.0nb2 [wiz 2025-08-14]
 	Updated chat/dino to 0.5.0 [gdt 2025-08-14]
+	Updated devel/lcov to 2.3.1 [wiz 2025-08-14]
