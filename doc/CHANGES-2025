@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4930 2025/08/14 03:29:03 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4931 2025/08/14 03:29:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7143,3 +7143,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.19.1 [pin 2025-08-14]
 	Updated mail/notmuch to 0.39 [ryoon 2025-08-14]
 	Updated mail/notmuch-emacs to 0.39 [ryoon 2025-08-14]
+	Updated mail/py-notmuch2 to 0.39 [ryoon 2025-08-14]
