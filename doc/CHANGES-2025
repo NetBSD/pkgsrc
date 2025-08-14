@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4947 2025/08/14 15:21:29 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4948 2025/08/14 15:23:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7172,3 +7172,16 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-railties71 to 7.1.5.2 [taca 2025-08-14]
 	Updated textproc/ruby-actiontext71 to 7.1.5.2 [taca 2025-08-14]
 	Updated www/ruby-rails71 to 7.1.5.2 [taca 2025-08-14]
+	Updated devel/ruby-activesupport72 to 7.2.2.2 [taca 2025-08-14]
+	Updated devel/ruby-activemodel72 to 7.2.2.2 [taca 2025-08-14]
+	Updated devel/ruby-activejob72 to 7.2.2.2 [taca 2025-08-14]
+	Updated databases/ruby-activerecord72 to 7.2.2.2 [taca 2025-08-14]
+	Updated www/ruby-actionview72 to 7.2.2.2 [taca 2025-08-14]
+	Updated www/ruby-actionpack72 to 7.2.2.2 [taca 2025-08-14]
+	Updated www/ruby-actioncable72 to 7.2.2.2 [taca 2025-08-14]
+	Updated devel/ruby-railties72 to 7.2.2.2 [taca 2025-08-14]
+	Updated devel/ruby-activestorage72 to 7.2.2.2 [taca 2025-08-14]
+	Updated mail/ruby-actionmailer72 to 7.2.2.2 [taca 2025-08-14]
+	Updated mail/ruby-actionmailbox72 to 7.2.2.2 [taca 2025-08-14]
+	Updated textproc/ruby-actiontext72 to 7.2.2.2 [taca 2025-08-14]
+	Updated www/ruby-rails72 to 7.2.2.2 [taca 2025-08-14]
