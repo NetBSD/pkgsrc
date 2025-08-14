@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2025/08/13 10:13:57 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/14 10:25:26 gdt Exp $
 
-DISTNAME=		dino-0.4.5
+DISTNAME=		dino-0.5.0
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=dino/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/dino/dino/
@@ -15,16 +15,19 @@ DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-CMAKE_CONFIGURE_ARGS+=		-DUSE_SOUP3:BOOL=ON
-
 BUILDLINK_TRANSFORM+=	opt:-Wno-incompatible-pointer-types-discards-qualifiers:-Wno-incompatible-pointer-types
 
-# make[2]: don't know how to make exports/xmpp-vala.vapi. Stop
-MAKE_JOBS_SAFE=	no
+# tests fail because of missing RPATH in plugins/omemo/omemo-test.
+# With LD_LIBRARY_PATH=/usr/pkg/lib/dino/plugins they pass.
+# This seems to be because of upstream's use of ORIGIN.
 
-.include "../../devel/cmake/build.mk"
+.include "../../devel/meson/build.mk"
 
-.include "../../chat/libsignal-protocol-c/buildlink3.mk"
+# Upstream's dependency documentation is at
+#   https://github.com/dino/dino/wiki/Build
+# \todo Sort/group by upstream and add missing.
+
+.include "../../chat/libomemo-c/buildlink3.mk"
 .include "../../comms/srtp/buildlink3.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.24
