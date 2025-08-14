@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.102 2025/04/01 05:19:04 adam Exp $
+$NetBSD: distinfo,v 1.103 2025/08/14 10:14:48 wiz Exp $
 
 BLAKE2s (cairo-1.18.4.tar.xz) = 54a70468f46aef501497461765cebf5c44d0c80579ea5d5165dbec67ba9cfdbd
 SHA512 (cairo-1.18.4.tar.xz) = 863679f817ed67dc2c916c035d740916e27e7e69c04fca63936e37d274e7f4c79848d16c8f7c481798864602e8847c489f698df89b785cbc576c925dbd513316
 Size (cairo-1.18.4.tar.xz) = 32578804 bytes
 SHA1 (patch-meson.build) = 3187c754af123be69e1b5651165f6310c8786558
+SHA1 (patch-src_cairo-bentley-ottmann-rectangular.c) = 7284b21954a35729ca92b248b99d1dca3496f9b5
 SHA1 (patch-src_cairo-colr-glyph-render.c) = 3dc6dc2b0a808b1bd6e2323645f895e276f0a8af
 SHA1 (patch-src_cairo-image-surface.c) = 3ae5966abf7851dfdb74742c39d2033b4655d7f7
 SHA1 (patch-test_pdf-structure.c) = dd3e5ee2cdbc19e77c2d5a60dab98195ecbe82bb
