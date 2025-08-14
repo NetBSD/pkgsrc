@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2025/02/09 14:46:22 taca Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/14 15:11:41 taca Exp $
 
-DISTNAME=	pdf-reader-2.14.1
+DISTNAME=	pdf-reader-2.15.0
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-Ascii85>=1.0.0:../../converters/ruby-Ascii85
 DEPENDS+=	${RUBY_PKGPREFIX}-rc4>=0:../../security/ruby-rc4
 DEPENDS+=	${RUBY_PKGPREFIX}-hashery>=2.0<3:../../devel/ruby-hashery
-DEPENDS+=	${RUBY_PKGPREFIX}-afm>=0.2.1<0.3:../../fonts/ruby-afm
+DEPENDS+=	${RUBY_PKGPREFIX}-afm>=0.2.1<2:../../fonts/ruby-afm
 DEPENDS+=	${RUBY_PKGPREFIX}-ttfunk>=0:../../fonts/ruby-ttfunk
 
 USE_LANGUAGES=	# none
