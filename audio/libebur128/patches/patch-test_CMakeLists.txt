@@ -1,0 +1,13 @@
+$NetBSD: patch-test_CMakeLists.txt,v 1.1 2025/08/14 08:27:18 wiz Exp $
+
+cmake 4 compatibility.
+https://github.com/jiixyj/libebur128/issues/134
+
+--- test/CMakeLists.txt.orig	2025-08-14 08:22:36.261329563 +0000
++++ test/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(ENABLE_TESTS OFF CACHE BOOL "Build test binaries, needs libsndfile")
+ set(ENABLE_FUZZER OFF CACHE BOOL "Build fuzzer binary")
