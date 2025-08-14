@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2023/01/17 14:01:57 spz Exp $
+$NetBSD: distinfo,v 1.25 2025/08/14 16:03:58 gdt Exp $
 
 BLAKE2s (podofo-0.9.8.tar.gz) = 16c57b22a80fa29abbd4cf34895efc9cd4e549ac4590234363652a60d48ec50c
 SHA512 (podofo-0.9.8.tar.gz) = b220322114450f1656c73d325f5172bc4cec0b1913e98b4eb2455f8ed7394bcaa47438d41003c9678937ef44d411e135431ddd6784f83d3663337d471baa02b1
 Size (podofo-0.9.8.tar.gz) = 1012918 bytes
-SHA1 (patch-CMakeLists.txt) = cb576aaf2e6ebe875818aefbba8d83c4ddbae7e4
+SHA1 (patch-CMakeLists.txt) = 2b5f1dbe9c2447b2726597deb860613c77cf1afc
 SHA1 (patch-cmake_modules_FindFREETYPE.cmake) = 755d6d7ad73dea490479b90299728129bb1b0795
 SHA1 (patch-src_podofo_CMakeLists.txt) = 9a75d0ce18f331b02bcd74a2935d36e0de701266
 SHA1 (patch-src_podofo_base_PdfMemoryManagement.cpp) = ad5772c41f401b1a31caa37c4f05209f31899c87

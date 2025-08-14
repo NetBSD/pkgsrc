@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2025/08/14 12:12:29 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/14 16:03:57 gdt Exp $
 
 # \todo Update to 1.0.1, from github, and needing c++17.
 DISTNAME=	podofo-0.9.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
 
