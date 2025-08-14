@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.495 2025/08/14 10:16:01 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.496 2025/08/14 11:57:09 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -12321,7 +12321,7 @@ ImageMagick<7.0.6.0	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?
 ImageMagick6<6.9.8.10	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9500
 poppler-utils<0.56.0	null-dereference	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7511
 poppler-utils<0.57.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-7515
-poppler-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9083
+#poppler-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9083
 poppler<0.56		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9406
 poppler<0.56		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-9408
 samba<4.4.10		infinite-loop		https://nvd.nist.gov/vuln/detail/CVE-2017-9461
