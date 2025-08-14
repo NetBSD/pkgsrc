@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26110 2025/08/14 11:10:43 wiz Exp $
+$NetBSD: TODO,v 1.26111 2025/08/14 12:10:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -820,7 +820,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o knot-resolver-1.1.1
 	o kodi-16.1
 	o kqtquickcharts4-20.12.3
-	o krita-5.2.11 [wip]
 	o kronolith-4.2.14
 	o ktorrent3-3.3.4
 	o lapack-3.12.1
