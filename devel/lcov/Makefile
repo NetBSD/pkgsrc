@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/03/03 07:38:22 fcambus Exp $
-#
+# $NetBSD: Makefile,v 1.20 2025/08/14 11:38:41 wiz Exp $
 
-DISTNAME=	lcov-1.13
-PKGREVISION=	5
+DISTNAME=	lcov-2.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -10,35 +8,45 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://github.com/linux-test-project/lcov
 COMMENT=	Front-end for GCC's coverage testing tool gcov
+LICENSE=	gnu-gpl-v2
 
-NO_BUILD=		yes
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/examples/lcov
-USE_TOOLS+=		perl
+USE_TOOLS+=	bash:run gmake perl
 
-REPLACE_PERL=		bin/gendesc bin/genhtml bin/geninfo bin/genpng bin/lcov
-
-SUBST_CLASSES+=		egdir
-SUBST_STAGE.egdir=	pre-configure
-SUBST_FILES.egdir=	bin/genhtml
-SUBST_FILES.egdir+=	bin/geninfo
-SUBST_FILES.egdir+=	bin/lcov
-SUBST_SED.egdir=	-e 's,"/etc/lcovrc","'${PKG_SYSCONFDIR}/lcovrc'",g'
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	MAN_DIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=	CFG_INST_DIR=${DESTDIR}${PREFIX}/share/examples/lcov
 
 CONF_FILES=	${PREFIX}/share/examples/lcov/lcovrc \
 		${PKG_SYSCONFDIR}/lcovrc
 
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/lcov ${DESTDIR}${PREFIX}/bin/lcov
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/genhtml ${DESTDIR}${PREFIX}/bin/genhtml
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/geninfo ${DESTDIR}${PREFIX}/bin/geninfo
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/genpng ${DESTDIR}${PREFIX}/bin/genpng
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/gendesc ${DESTDIR}${PREFIX}/bin/gendesc
-	${INSTALL_MAN} ${WRKSRC}/man/lcov.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/lcov.1
-	${INSTALL_MAN} ${WRKSRC}/man/genhtml.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/genhtml.1
-	${INSTALL_MAN} ${WRKSRC}/man/geninfo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/geninfo.1
-	${INSTALL_MAN} ${WRKSRC}/man/genpng.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/genpng.1
-	${INSTALL_MAN} ${WRKSRC}/man/gendesc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gendesc.1
-	${INSTALL_MAN} ${WRKSRC}/man/lcovrc.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/lcovrc.5
-	${INSTALL_DATA} ${WRKSRC}/lcovrc ${DESTDIR}${PREFIX}/share/examples/lcov/lcovrc
+REPLACE_BASH+=	bin/checkstyle.sh
+REPLACE_BASH+=	bin/copy_dates.sh
+REPLACE_PERL+=	bin/fix.pl
+REPLACE_PERL+=	bin/gendesc
+REPLACE_PERL+=	bin/genhtml
+REPLACE_PERL+=	bin/geninfo
+REPLACE_PERL+=	bin/genpng
+REPLACE_BASH+=	bin/get_changes.sh
+REPLACE_BASH+=	bin/get_version.sh
+REPLACE_PERL+=	bin/lcov
+REPLACE_PERL+=	bin/llvm2lcov
+REPLACE_PERL+=	bin/perl2lcov
+REPLACE_PERL+=	scripts/*.pm
+REPLACE_PERL+=	scripts/analyzeInfoFiles
+REPLACE_PERL+=	scripts/criteria
+REPLACE_PERL+=	scripts/get_signature
+REPLACE_PERL+=	scripts/getp4version
+REPLACE_PERL+=	scripts/gitblame
+REPLACE_PERL+=	scripts/gitdiff
+REPLACE_PERL+=	scripts/gitversion
+REPLACE_PERL+=	scripts/p4annotate
+REPLACE_PERL+=	scripts/p4udiff
 
+REPLACE_PYTHON+=	bin/py2lcov
+REPLACE_PYTHON+=	bin/xml2lcov
+REPLACE_PYTHON+=	bin/xml2lcovutil.py
+REPLACE_PYTHON+=	scripts/*.py
+
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
