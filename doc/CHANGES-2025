@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4941 2025/08/14 12:10:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4942 2025/08/14 15:06:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7154,3 +7154,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/dino to 0.5.0 [gdt 2025-08-14]
 	Updated devel/lcov to 2.3.1 [wiz 2025-08-14]
 	Updated graphics/krita to 5.2.11 [wiz 2025-08-14]
+	Updated devel/ruby-redmine_code_review to 1.2.2 [taca 2025-08-14]
