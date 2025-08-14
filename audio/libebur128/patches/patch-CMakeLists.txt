@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/14 08:27:18 wiz Exp $
+
+cmake 4 compatibility.
+https://github.com/jiixyj/libebur128/issues/134
+
+--- CMakeLists.txt.orig	2021-02-14 14:31:05.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.5)
+ project(libebur128 C)
+ 
+ option(BUILD_SHARED_LIBS
