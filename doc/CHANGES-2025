@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4926 2025/08/14 03:25:27 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4927 2025/08/14 03:27:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7139,3 +7139,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libuuid to 2.40.2 [sjmulder 2025-08-13]
 	Updated mail/claws-mail to 4.3.1nb27 [ktnb 2025-08-13]
 	Updated www/firefox to 141.0.3 [ryoon 2025-08-14]
+	Updated www/firefox-l10n to 141.0.3 [ryoon 2025-08-14]
