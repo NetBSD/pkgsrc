@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4949 2025/08/14 15:26:18 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4950 2025/08/14 15:28:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7198,3 +7198,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-actionmailbox80 to 8.0.2.1 [taca 2025-08-14]
 	Updated textproc/ruby-actiontext80 to 8.0.2.1 [taca 2025-08-14]
 	Updated www/ruby-rails80 to 8.0.2.1 [taca 2025-08-14]
+	Updated www/ruby-selenium-webdriver to 4.35.0 [taca 2025-08-14]
