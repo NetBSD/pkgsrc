@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.497 2025/08/14 12:32:17 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.498 2025/08/14 12:57:51 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27278,3 +27278,45 @@ SOGo-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-50340
 7-zip<25.01	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-55188
 vim>=9.1.1231<9.1.1400	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-55157
 vim>=9.1.1231<9.1.1406	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-55158
+ImageMagick<7.1.2.1	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-55004
+ImageMagick<7.1.2.1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-55005
+ImageMagick6<6.9.13.27	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-55154
+ImageMagick<7.1.2.1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-55154
+ImageMagick6<6.9.13.27	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55160
+ImageMagick<7.1.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55160
+ap{22,24}-modsecurity<2.9.12	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-54571
+apache-tomcat>=9<9.0.108	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48989
+apache-tomcat>=10<10.1.44	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48989
+apache-tomcat>=11<11.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-48989
+apache-tomcat>=9<9.0.108	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
+apache-tomcat>=10<10.1.42	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
+apache-tomcat>=11<11.0.8	session-fixation	https://nvd.nist.gov/vuln/detail/CVE-2025-55668
+bison-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8733
+bison-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8734
+cflow-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8735
+cflow-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8736
+chromium<139.0.7258.66	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8576
+chromium<139.0.7258.66	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-8577
+chromium<139.0.7258.66	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-8578
+chromium<139.0.7258.66	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-8579
+chromium<139.0.7258.66	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-8580
+chromium<139.0.7258.66	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8581
+chromium<139.0.7258.66	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-8582
+chromium<139.0.7258.66	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-8583
+chromium<139.0.7258.127	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-8879
+chromium<139.0.7258.127	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-8880
+chromium<139.0.7258.127	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8881
+chromium<139.0.7258.127	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-8882
+chromium<139.0.7258.127	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-8901
+go123-[0-9]*	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-8244
+go124-[0-9]*	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-8244
+go123<1.23.12	race-condition		https://nvd.nist.gov/vuln/detail/CVE-2025-47907
+go124<1.24.6	race-condition		https://nvd.nist.gov/vuln/detail/CVE-2025-47907
+gst-plugins1-good<1.26.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-47183
+gst-plugins1-good<1.26.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-47219
+gst-plugins1-base<1.26.2	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-47806
+gst-plugins1-base<1.26.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-47807
+gst-plugins1-base<1.26.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-47808
+h2o-[0-9]*			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
+varnish<6.0.15			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
+varnish>=7<7.7.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
