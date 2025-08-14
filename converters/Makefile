@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2025/07/28 17:26:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.220 2025/08/14 09:32:31 nia Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -16,6 +16,7 @@ SUBDIR+=	bdf2psf
 SUBDIR+=	bdf2sfd
 SUBDIR+=	bib2xml
 SUBDIR+=	bibtex2html
+SUBDIR+=	bin2iso
 SUBDIR+=	cbmconvert
 SUBDIR+=	chef
 SUBDIR+=	cn2jp

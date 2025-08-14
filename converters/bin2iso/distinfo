@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/14 09:32:31 nia Exp $
+
+BLAKE2s (bin2iso-2.0.tar.gz) = ec4d69467dd91566eec44c6d6aeca742799e0e9ac5fe14aa350b8384f2212ab3
+SHA512 (bin2iso-2.0.tar.gz) = d5eb556e33ac42cd2cff840dc4532dffd351adc07f87e095dbea168a7f5f3f609b860330e11c182ab7db54367d8a42cd7906350943a20479750c6bf5573f6ca6
+Size (bin2iso-2.0.tar.gz) = 16687 bytes
