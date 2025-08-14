@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4935 2025/08/14 09:32:46 nia Exp $
+$NetBSD: CHANGES-2025,v 1.4936 2025/08/14 10:14:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7148,3 +7148,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.2.1 [triaxx 2025-08-14]
 	Updated textproc/glow to 2.1.1 [sjmulder 2025-08-14]
 	Added converters/bin2iso version 2.0 [nia 2025-08-14]
+	Updated www/p5-Net-Curl to 0.58 [wiz 2025-08-14]
