@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.382 2025/08/08 20:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.383 2025/08/14 19:25:58 tsutsui Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -65,32 +65,40 @@ SSP_SUPPORTED=		no
 CONFIGURE_ARGS+=	--enable-stack-protector
 .endif
 
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-arm
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-hppa
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-i386
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-m68k
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblaze
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblazeel
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mipsel
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-or1k
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-riscv32
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-riscv64
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-s390x
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4eb
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sparc
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sparc64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-tricore
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-x86_64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-xtensa
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-xtensaeb
+
+PLIST_VARS+=		lp64
+.for platform in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${platform}}
+PLIST.lp64=		yes
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-hppa
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-loongarch64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblaze
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblazeel
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-riscv64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-s390x
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sparc64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-x86_64
+.  endif
+.endfor
 
 PKG_SYSCONFSUBDIR=	qemu
 
