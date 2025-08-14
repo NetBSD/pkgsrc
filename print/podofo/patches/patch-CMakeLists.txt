@@ -1,18 +1,18 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2020/04/11 10:54:00 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2025/08/14 16:03:58 gdt Exp $
 
 Require newer CMake to fix install_name on Darwin.
 Set correct shared library target.
 Install man pages to correct directory.
 
---- CMakeLists.txt.orig	2018-07-08 10:33:27.000000000 +0000
+--- CMakeLists.txt.orig	2022-05-03 12:18:23.000000000 +0000
 +++ CMakeLists.txt
 @@ -1,4 +1,4 @@
 -CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-+CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.22)
  
  #*****************  IMPORTANT  ************* IMPORTANT **********************
  # Look at http://www.vtk.org/Wiki/CMake_HowToDoPlatformChecks
-@@ -516,9 +516,9 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
+@@ -525,9 +525,9 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
    INCLUDE_DIRECTORIES(${FONTCONFIG_INCLUDE_DIR})
  ENDIF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
  
@@ -24,7 +24,7 @@ Install man pages to correct directory.
        ${PODOFO_LIB_DEPENDS}
        )
  ELSE(WIN32 OR PODOFO_BUILD_STATIC)
-@@ -530,7 +530,7 @@ ENDIF(WIN32 OR PODOFO_BUILD_STATIC)
+@@ -539,7 +539,7 @@ ENDIF(WIN32 OR PODOFO_BUILD_STATIC)
  #
  # Setup directories we will need
  #
@@ -33,3 +33,11 @@ Install man pages to correct directory.
  
  # Create the config file. It'll be appended to as the subdirs run though
  # then dependency information will be written to it at the end of the
+@@ -574,6 +574,6 @@ IF(PODOFO_BUILD_SHARED)
+   EXPORT(TARGETS podofo_shared FILE "${CMAKE_CURRENT_BINARY_DIR}/PoDoFoConfig.cmake")
+ ENDIF(PODOFO_BUILD_SHARED)
+ IF(PODOFO_BUILD_STATIC)
+-  EXPORT(TARGETS podofo_static FILE "${CMAKE_CURRENT_BINARY_DIR}/PoDoFoConfig.cmake")
++  EXPORT(TARGETS podofo_static APPEND FILE "${CMAKE_CURRENT_BINARY_DIR}/PoDoFoConfig.cmake")
+ ENDIF(PODOFO_BUILD_STATIC)
+ 
