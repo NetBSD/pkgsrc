@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4938 2025/08/14 10:16:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4939 2025/08/14 10:25:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7151,3 +7151,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Net-Curl to 0.58 [wiz 2025-08-14]
 	Updated graphics/cairo to 1.18.4nb1 [wiz 2025-08-14]
 	Updated graphics/tiff to 4.7.0nb2 [wiz 2025-08-14]
+	Updated chat/dino to 0.5.0 [gdt 2025-08-14]
