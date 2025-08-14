@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2018/01/01 22:29:24 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/14 11:38:41 wiz Exp $
 bin/gendesc
 bin/genhtml
 bin/geninfo
 bin/genpng
 bin/lcov
+bin/llvm2lcov
+bin/perl2lcov
+bin/py2lcov
+bin/xml2lcov
+bin/xml2lcovutil.py
+lib/lcov/lcovutil.pm
 man/man1/gendesc.1
 man/man1/genhtml.1
 man/man1/geninfo.1
@@ -11,3 +17,23 @@ man/man1/genpng.1
 man/man1/lcov.1
 man/man5/lcovrc.5
 share/examples/lcov/lcovrc
+share/lcov/support-scripts/P4version.pm
+share/lcov/support-scripts/analyzeInfoFiles
+share/lcov/support-scripts/annotateutil.pm
+share/lcov/support-scripts/batchGitVersion.pm
+share/lcov/support-scripts/context.pm
+share/lcov/support-scripts/criteria
+share/lcov/support-scripts/criteria.pm
+share/lcov/support-scripts/get_signature
+share/lcov/support-scripts/getp4version
+share/lcov/support-scripts/gitblame
+share/lcov/support-scripts/gitblame.pm
+share/lcov/support-scripts/gitdiff
+share/lcov/support-scripts/gitversion
+share/lcov/support-scripts/gitversion.pm
+share/lcov/support-scripts/p4annotate
+share/lcov/support-scripts/p4annotate.pm
+share/lcov/support-scripts/p4udiff
+share/lcov/support-scripts/select.pm
+share/lcov/support-scripts/spreadsheet.py
+share/lcov/support-scripts/threshold.pm
