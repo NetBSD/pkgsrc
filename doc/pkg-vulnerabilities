@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.496 2025/08/14 11:57:09 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.497 2025/08/14 12:32:17 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27276,5 +27276,5 @@ cairo<1.18.4nb1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-20
 mupdf<1.26.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46206
 SOGo-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-50340
 7-zip<25.01	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-55188
-vim>=9.1.1231<9.1.1400	use-after-free	https://github.com/vim/vim/security/advisories/GHSA-3r4f-mm4w-wgg6
-vim>=9.1.1231<9.1.1406	double-free	https://github.com/vim/vim/security/advisories/GHSA-5fg8-wvx3-583x
+vim>=9.1.1231<9.1.1400	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-55157
+vim>=9.1.1231<9.1.1406	double-free	https://nvd.nist.gov/vuln/detail/CVE-2025-55158
