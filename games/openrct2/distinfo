@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.40 2025/07/08 08:13:44 triaxx Exp $
+$NetBSD: distinfo,v 1.41 2025/08/14 07:33:44 triaxx Exp $
 
-BLAKE2s (openrct2-0.4.24/objects.zip) = 2f9bd7b5cd87f6371554beff5db11bdaa72c5c036a8dd8d13703b20e9b746cc7
-SHA512 (openrct2-0.4.24/objects.zip) = ee5742020418554f101a74ac53e92f31b1c57aa13693807100280efd2df568e57a4d074b100f8a3c312c944beedc41e063e7e984fab542bffa61cbcedf947c69
-Size (openrct2-0.4.24/objects.zip) = 10939128 bytes
-BLAKE2s (openrct2-0.4.24/openmusic.zip) = 15a8b57d6bf1aa8e06c33dc001c9fb3273caaef75283c6873c9ac028c4bc1e7b
-SHA512 (openrct2-0.4.24/openmusic.zip) = 88e3242da45f372e06de04e58d03fc3d256b1485467a25a3f8878c03eb2570eea2c787a9e0416c1b040c15886723ced1379d762f941a23e4bd2fce81416123b0
-Size (openrct2-0.4.24/openmusic.zip) = 42921141 bytes
-BLAKE2s (openrct2-0.4.24/openrct.tar.gz) = f7928e55de1a3537debf0247089a5a39908c69872898f817c225fbe524018eb2
-SHA512 (openrct2-0.4.24/openrct.tar.gz) = ce5f1667464a0eb4147e925eccb8551d0fa6304be74b922949e2b79ea10d6a743a470d69a501fd4c6471e40f5fb6ffd31b04a71bfadc4c54e863f37f5cb75735
-Size (openrct2-0.4.24/openrct.tar.gz) = 23966640 bytes
-BLAKE2s (openrct2-0.4.24/opensound.zip) = dc673d3cf272c0c1ccca9629771bf3d1bc2b10e27558cfed9209dfa569c35e7b
-SHA512 (openrct2-0.4.24/opensound.zip) = fc46ffb3f6243b3d783a280481ce373a8ddc8cf1fd28bfeceecf6223b72b38f1d49d0c95eea3376308a61a77c50c7a06252b6d72248cfecc493b63b65bd6512a
-Size (openrct2-0.4.24/opensound.zip) = 4012384 bytes
-BLAKE2s (openrct2-0.4.24/replays.zip) = f57d37f544d2418723191f834c68e5aa878d9f153b95d903d30c1ca15624ebf2
-SHA512 (openrct2-0.4.24/replays.zip) = 529fa8cd71ddbe0a321d0cda68b618fc22f0016e23abff10c4c01c08c06ffa765e5f2bf9488954cecf39f3f1d2a79c20e40c0f13d82d8b5d6142bf539fba1150
-Size (openrct2-0.4.24/replays.zip) = 1866031 bytes
-BLAKE2s (openrct2-0.4.24/title-sequences.zip) = 59f5b4a86a39b292971cf2ad9a276c37fe87319aba03d3a34083e950402001af
-SHA512 (openrct2-0.4.24/title-sequences.zip) = 27a1f5e87063ed9baf5faeca15a914e1a57584da6ab0d06d2b9e1f08e801c53f2ea9826381bf5e3dd8e220ff2da601a98841a08f9bcad1e0280b04746512bfb1
-Size (openrct2-0.4.24/title-sequences.zip) = 7791573 bytes
+BLAKE2s (openrct2-0.4.25/objects.zip) = 8b3922c97233dfd4fa714be9dfae766afe76dcc767da585f2f888eb040f355f0
+SHA512 (openrct2-0.4.25/objects.zip) = c358546c8e2ee26d8d6fbecb221698a98067366209054800730bb525f96320c133d059a3fc5f178a13fa074f332039c969de3a39c30f3cd943f0ad7ea7d021b6
+Size (openrct2-0.4.25/objects.zip) = 10954277 bytes
+BLAKE2s (openrct2-0.4.25/openmusic.zip) = 3b2fb47e5807f9ff07231f349d5311a3f0ccfe875d62cb5adb6008b02fe09673
+SHA512 (openrct2-0.4.25/openmusic.zip) = bc524b20ab72696a5f38bd65d96a4a83f29a0e65884d9b847540631d31aae42f3bdc4a6db5fa5fe34869012e598543b9327ad92d34e8f4f0f274c7f04d4a2e7f
+Size (openrct2-0.4.25/openmusic.zip) = 42921420 bytes
+BLAKE2s (openrct2-0.4.25/openrct.tar.gz) = fff1bde3125396e698c1b0e21084bf26303a9c6505eaf5aa4434daf73a751452
+SHA512 (openrct2-0.4.25/openrct.tar.gz) = db0ee895a76ca9013c3847e4330145f251ab23eca5e65f547d9f1862188581de130f67d6aaa6d4d1304aada99e439ebae018b1c83b054d9cbbe6afa217031d5c
+Size (openrct2-0.4.25/openrct.tar.gz) = 23980968 bytes
+BLAKE2s (openrct2-0.4.25/opensound.zip) = 7d1bc77eed8cc83465a22a036139c72986469995d3498b0ab4690e81ee3af1f8
+SHA512 (openrct2-0.4.25/opensound.zip) = 8ae2d31687c29cfcdc7630da5addc3bed4b94ed1712891bb1e22d2747f2f8435b7fda843b4490543dbd9d63d392c8b3e4863cd3e669df9ca34f9780c8d9e5485
+Size (openrct2-0.4.25/opensound.zip) = 4273495 bytes
+BLAKE2s (openrct2-0.4.25/replays.zip) = 5c9b7c2ec43e15c39707c4ebd79a567ee885e1cc300c08803587aad28d4c4349
+SHA512 (openrct2-0.4.25/replays.zip) = e4446e7e2c49380c396d3e5014552b1e420e432ac3699d8e20df2355c0efb8388a6cc012d35eba9ade3980efed4a156fc75975c716d8100ee5672e4f945f4c2e
+Size (openrct2-0.4.25/replays.zip) = 2078665 bytes
+BLAKE2s (openrct2-0.4.25/title-sequences.zip) = 59f5b4a86a39b292971cf2ad9a276c37fe87319aba03d3a34083e950402001af
+SHA512 (openrct2-0.4.25/title-sequences.zip) = 27a1f5e87063ed9baf5faeca15a914e1a57584da6ab0d06d2b9e1f08e801c53f2ea9826381bf5e3dd8e220ff2da601a98841a08f9bcad1e0280b04746512bfb1
+Size (openrct2-0.4.25/title-sequences.zip) = 7791573 bytes
 SHA1 (patch-src_openrct2_platform_Platform.macOS.mm) = 395c35b84882e874a5529b7a88af3c7c1aad7f54

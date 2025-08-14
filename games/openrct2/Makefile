@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/07/08 08:13:44 triaxx Exp $
+# $NetBSD: Makefile,v 1.80 2025/08/14 07:33:44 triaxx Exp $
 
-PKGNAME=	openrct2-0.4.24
+PKGNAME=	openrct2-0.4.25
 CATEGORIES=	games
 
 DIST_SUBDIR=	openrct2-${PKGVERSION_NOREV}
@@ -15,10 +15,10 @@ DISTFILES+=	replays.zip
 EXTRACT_ONLY+=	openrct.tar.gz
 
 TITLE_SEQUENCE_VERSION=	0.4.14
-OBJECTS_VERSION=	1.7.1
-OPENSFX_VERSION=	1.0.5
-OPENMSX_VERSION=	1.6
-REPLAYS_VERSION=	0.0.87
+OBJECTS_VERSION=	1.7.2
+OPENSFX_VERSION=	1.0.6
+OPENMSX_VERSION=	1.6.1
+REPLAYS_VERSION=	0.0.89
 
 SITES.openrct.tar.gz= \
 	-https://github.com/OpenRCT2/OpenRCT2/archive/refs/tags/v${PKGVERSION_NOREV}.tar.gz
