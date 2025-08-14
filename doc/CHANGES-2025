@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4931 2025/08/14 03:29:24 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4932 2025/08/14 07:34:24 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7144,3 +7144,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/notmuch to 0.39 [ryoon 2025-08-14]
 	Updated mail/notmuch-emacs to 0.39 [ryoon 2025-08-14]
 	Updated mail/py-notmuch2 to 0.39 [ryoon 2025-08-14]
+	Updated games/openrct2 to 0.4.25 [triaxx 2025-08-14]
