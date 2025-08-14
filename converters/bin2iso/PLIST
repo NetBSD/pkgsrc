@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/14 09:32:31 nia Exp $
+bin/bin2iso
+share/doc/bin2iso/CHANGELOG
+share/doc/bin2iso/README.md
