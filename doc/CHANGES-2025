@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4951 2025/08/14 15:30:21 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4952 2025/08/14 15:57:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7200,3 +7200,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rails80 to 8.0.2.1 [taca 2025-08-14]
 	Updated www/ruby-selenium-webdriver to 4.35.0 [taca 2025-08-14]
 	Updated www/ruby-aws-partitions to 1.1146.0 [taca 2025-08-14]
+	Updated www/typo3-13 to 13.4.17 [taca 2025-08-14]
