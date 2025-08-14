@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.493 2025/08/14 08:48:47 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.494 2025/08/14 09:33:51 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14790,7 +14790,7 @@ ffmpeg3<3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10001
 SDL2_image<2.0.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-3837
 SDL2_image<2.0.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-3838
 SDL2_image<2.0.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-3839
-binutils-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-9996
+binutils<2.32		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-9996
 jenkins-lts<2.44	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2017-2599
 nasm<2.14		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10016
 libopenmpt<0.3.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-10017
@@ -15259,7 +15259,7 @@ binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12697
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12698
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12699
 binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12700
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12934
+binutils<2.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12934
 php72-exif<7.2.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2018-12882
 php{56,70,71,72}-basercms<3.0.16	arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-0569
 php{56,70,71,72}-basercms<3.0.16	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2018-0570
@@ -16524,7 +16524,7 @@ netbeans-ide<10.0	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-
 jasper<2.0.19		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2018-20622
 binutils<2.32		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2018-20623
 binutils<2.32		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-20651
-binutils-[0-9]*		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2018-20657
+binutils<2.32		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2018-20657
 poppler<0.73.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-20650
 ghostscript-gpl-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-19478
 ghostscript-agpl<9.26	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-19478
@@ -16561,7 +16561,7 @@ rdesktop<1.8.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-2
 rdesktop<1.8.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-20181
 rdesktop<1.8.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-20182
 binutils<2.32	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-20671
-binutils-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-20673
+binutils<2.32	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-20673
 qemu<3.1.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2018-16867
 wireshark>=2.6.0<2.6.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-5716
 wireshark<2.4.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-5717
@@ -16583,7 +16583,7 @@ openssh<8.0		spoofing		https://nvd.nist.gov/vuln/detail/CVE-2019-6110
 openssh<8.0		validation-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-6111
 polkit<0.116		authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-6133
 zeromq>=4.2.0<4.3.1	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2019-6250
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20712
+binutils<2.35	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20712
 yaml-cpp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6285
 yaml-cpp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6292
 libsass<3.6.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-6283
@@ -16856,14 +16856,14 @@ matio-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-9035
 matio-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-9036
 matio-[0-9]*	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-9037
 matio-[0-9]*	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2019-9038
-binutils-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-9070
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9071
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9072
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9073
-binutils-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-9074
-binutils-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9075
-binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9076
-binutils-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9077
+binutils<2.35	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-9070
+binutils<2.35	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9071
+#binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9072
+binutils<2.33	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9073
+binutils<2.33	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-9074
+binutils<2.33	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9075
+binutils<2.33	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9076
+binutils<2.33	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9077
 vim<8.1.0633	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20786
 webkit-gtk<2.24.0	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-8375
 ming-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-9113
@@ -17508,7 +17508,7 @@ powerdns>=4.1.0<4.1.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-20
 expat<2.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20843
 xpdf>=4.0<4.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-12957
 xpdf>=4.0<4.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-12958
-binutils-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-12972
+binutils<2.33	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-12972
 openjpeg<2.3.1	divide-by-zero	https://nvd.nist.gov/vuln/detail/CVE-2018-20845
 openjpeg<2.3.1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-20847
 moodle>=3.6<3.6.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-10133
@@ -17713,7 +17713,7 @@ binutils>=2.21<2.32	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019
 tcpdump-[0-9]*		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-1010220
 cherokee-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-1010218
 nasm<2.15		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-14248
-binutils-[0-9]*		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-14250
+binutils<2.33		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-14250
 libdwarf-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-14249
 mpg321-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-14247
 mgetty<1.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-1010189
@@ -20821,8 +20821,8 @@ webkit-gtk<2.30.6	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-20
 spamassassin<3.4.5	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-1946
 webkit-gtk<2.32.0	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2021-0003.html
 ImageMagick<7.0.10.46	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-27829
-binutils-[0-9]*		symlink-attack			https://nvd.nist.gov/vuln/detail/CVE-2021-20197
-binutils-[0-9]*		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-20284
+binutils<2.37		symlink-attack			https://nvd.nist.gov/vuln/detail/CVE-2021-20197
+binutils<2.36		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-20284
 go115<1.15.9		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-27918
 go116<1.16.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-27918
 go116<1.16.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-27919
