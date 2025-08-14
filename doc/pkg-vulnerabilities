@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.498 2025/08/14 12:57:51 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.499 2025/08/14 13:16:32 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27320,3 +27320,24 @@ gst-plugins1-base<1.26.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-
 h2o-[0-9]*			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
 varnish<6.0.15			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
 varnish>=7<7.7.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8671
+jasper<4.2.6	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8835
+jasper<4.2.7	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8836
+jasper<4.2.8	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-8837
+libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-8732
+nasm-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-8842
+nasm-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8843
+nasm-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8844
+nasm-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8845
+nasm-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8846
+openjpeg<2.5.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-50952
+openjpeg-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-54874
+p5-Catalyst-Authentication-Credential-HTTP<1.019	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2025-40920
+php{56,74,81,82,83,84}-adodb<5.22.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-54119
+php{56,74,81,82,83,84}-concrete-cms<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-8571
+php{56,74,81,82,83,84}-concrete-cms<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-8573
+poco-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45766
+tiff-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8534
+tiff<4.7.0	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8851
+u-boot-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-45512
+uv<0.8.6	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2025-54368
+vault<1.20.2	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-6013
