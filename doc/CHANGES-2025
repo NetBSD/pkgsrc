@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4955 2025/08/14 21:40:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.4956 2025/08/15 05:51:53 kim Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7206,3 +7206,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/py-fonttools to 4.59.1 [adam 2025-08-14]
 	Updated editors/emacs30 to 30.2 [wiz 2025-08-14]
 	Updated editors/emacs30-nox11 to 30.2 [wiz 2025-08-14]
+	Added devel/py-pipx version 1.7.1 [kim 2025-08-15]
