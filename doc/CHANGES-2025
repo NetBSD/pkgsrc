@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4966 2025/08/15 10:48:00 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.4967 2025/08/15 11:12:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7228,3 +7228,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 24.6.0 [adam 2025-08-15]
 	Updated devel/py-distlib to 0.4.0 [adam 2025-08-15]
 	Updated www/chromium to 139.0.7258.127 [kikadf 2025-08-15]
+	Updated pkgtools/pkglint to 23.19.0 [rillig 2025-08-15]
