@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/09 17:10:43 dkazankov Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/15 16:57:57 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc13-gnat-13.4.0
@@ -11,6 +11,9 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNAT Compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=114065
+BROKEN_ON_PLATFORM=	*-*-i386
 
 INFO_FILES=		yes
 GNU_CONFIGURE=		yes
