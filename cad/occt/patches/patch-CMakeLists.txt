@@ -1,11 +1,17 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/02/12 16:03:28 tnn Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/08/15 10:25:07 gdt Exp $
 
 Don't install world writable files.
 Fix DESTDIR issues.
 
---- CMakeLists.txt.orig	2022-11-11 22:19:44.000000000 +0000
+--- CMakeLists.txt.orig	2023-12-26 08:37:59.000000000 +0000
 +++ CMakeLists.txt
-@@ -1002,10 +1002,10 @@ if (${DRAWEXE_INDEX} GREATER -1)
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 3.1 FATAL_ERROR)
++cmake_minimum_required (VERSION 3.22 FATAL_ERROR)
+ 
+ set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/adm/cmake")
+ 
+@@ -1012,10 +1012,10 @@ if (${DRAWEXE_INDEX} GREATER -1)
    # copy draw script to install script folder
    if (BUILD_PATCH AND EXISTS "${BUILD_PATCH}/adm/templates/draw.${SCRIPT_EXT}")
      install (FILES "${BUILD_PATCH}/adm/templates/draw.${SCRIPT_EXT}" DESTINATION  "${INSTALL_DIR_SCRIPT}"
@@ -18,7 +24,7 @@ Fix DESTDIR issues.
    endif()
  
    # copy draw script to CMake binary folder
-@@ -1021,7 +1021,8 @@ else()
+@@ -1031,7 +1031,8 @@ else()
  endif()
  
   # change custom.bat/sh
@@ -28,7 +34,7 @@ Fix DESTDIR issues.
    file (READ "${INSTALL_DIR}/${INSTALL_DIR_SCRIPT}/custom.${SCRIPT_EXT}" CUSTOM_CONTENT)
  
    set (CUSTOM_CONTENT "${CUSTOM_CONTENT} ${ADDITIONAL_CUSTOM_CONTENT}")
-@@ -1265,7 +1266,7 @@ foreach (OCCT_CONFIGURATION ${CMAKE_CONF
+@@ -1275,7 +1276,7 @@ foreach (OCCT_CONFIGURATION ${CMAKE_CONF
  endforeach()
  # install OpenCASCADE config file with compile definitions and C/C++ flags ONLY for current configuration
  install (CODE "string (TOLOWER \"\${CMAKE_INSTALL_CONFIG_NAME}\" CMAKE_INSTALL_CONFIG_NAME_LOWER)")
