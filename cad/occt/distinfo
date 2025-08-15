@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2025/01/19 13:42:28 mef Exp $
+$NetBSD: distinfo,v 1.7 2025/08/15 10:25:07 gdt Exp $
 
 BLAKE2s (opencascade-7.8.0.tgz) = 4ce03bb4bdb8781c85ea17e727f83b323eaf4bb33f9a646bdacb337d034dfbd9
 SHA512 (opencascade-7.8.0.tgz) = bf119c2963a69dfad58ddef064e3f2df15f6e8fa660db56b4c94a7d69f83eb238ed3ff06b9431b1e758829cd0e3ae6d4757fb68368b8531099499f6dd6c0cb17
 Size (opencascade-7.8.0.tgz) = 48431454 bytes
-SHA1 (patch-CMakeLists.txt) = d6f533f8a54881b060e05ed816cb6e9bbfe0c5a8
+SHA1 (patch-CMakeLists.txt) = 50942ab046a3aca71cb2cc2ac8a35db20eed08f6
 SHA1 (patch-adm_cmake_occt__macros.cmake) = 9f17527238443cc770d2def9ad8211f410fae7f4
 SHA1 (patch-adm_cmake_occt_csf.cmake) = df33048718a1ff1f490d1a566dc99573713d3677
 SHA1 (patch-src_MeshVS_MeshVS__MeshPrsBuilder.cxx) = ba177be057941b7077a4525348d0563cb1378213
