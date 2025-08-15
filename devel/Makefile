@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4510 2025/08/12 18:13:54 hauke Exp $
+# $NetBSD: Makefile,v 1.4511 2025/08/15 05:49:28 kim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2873,6 +2873,7 @@ SUBDIR+=	py-pip-requirements-parser
 SUBDIR+=	py-pip-run
 SUBDIR+=	py-pip20
 SUBDIR+=	py-pip2pi
+SUBDIR+=	py-pipx
 SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
 SUBDIR+=	py-plaster

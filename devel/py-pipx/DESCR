@@ -1,0 +1,18 @@
+pipx is a tool to help you install and run end-user applications written
+in Python.  It's roughly similar to macOS's brew, JavaScript's npx, and
+Linux's apt.
+
+It's closely related to pip.  In fact, it uses pip, but is focused on
+installing and managing Python packages that can be run from the command
+line directly as applications.
+
+pipx enables you to:
+- Expose CLI entrypoints of packages ("apps") installed to isolated
+  environments with the install command.  This guarantees no dependency
+  conflicts and clean uninstalls!
+- Easily list, upgrade, and uninstall packages that were installed with
+  pipx.
+- Run the latest version of a Python application in a temporary
+  environment with the run command.
+
+Best of all, pipx runs with regular user permissions.
