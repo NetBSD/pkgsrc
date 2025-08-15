@@ -1,0 +1,8 @@
+PolyORB is a polymorphic infrastructure for building distributed systems
+
+PolyORB is a polymorphic, reusable infrastructure for building or prototyping
+new middleware adapted to specific application needs. It provides a set of
+components on top of which various instances can be elaborated. These instances
+(or personalities) are views on PolyORB facilities that are compliant to
+existing standards, either at the API level (application personality) or at the
+protocol level (protocol personality).

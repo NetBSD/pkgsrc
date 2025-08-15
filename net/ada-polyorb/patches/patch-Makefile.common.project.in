@@ -1,0 +1,45 @@
+$NetBSD: patch-Makefile.common.project.in,v 1.1 2025/08/15 08:10:03 dkazankov Exp $
+
+Fix declarations position
+
+--- Makefile.common.project.in.orig	2024-08-23 19:03:44.000000000 +0300
++++ Makefile.common.project.in
+@@ -1,18 +1,5 @@
+ # Common Makefile fragments for all PolyORB subsystems
+ 
+-APPLI_LIST   := @APPLI_LIST@
+-APPLI_LIBS   := @APPLI_LIBS@
+-APPLI_EXES   := @APPLI_EXES@
+-
+-PROTO_LIST   := @PROTO_LIST@
+-PROTO_LIBS   := @PROTO_LIBS@
+-
+-LIBS_LIST    := @LIBS_LIST@
+-LIBS_LIBS    := @LIBS_LIBS@
+-
+-SERVICE_LIBS := @SERVICE_LIBS@
+-SERVICE_EXES := @SERVICE_EXES@
+-
+ #
+ # PolyORB's libraries
+ #
+@@ -86,6 +73,19 @@
+ ir_lib=libpolyorb-corba-cos-ir-impl.a
+ time_lib=libpolyorb-corba-cos-time.a libpolyorb-corba-cos-time-impl.a
+ 
++APPLI_LIST   := @APPLI_LIST@
++APPLI_LIBS   := @APPLI_LIBS@
++APPLI_EXES   := @APPLI_EXES@
++
++PROTO_LIST   := @PROTO_LIST@
++PROTO_LIBS   := @PROTO_LIBS@
++
++LIBS_LIST    := @LIBS_LIST@
++LIBS_LIBS    := @LIBS_LIBS@
++
++SERVICE_LIBS := @SERVICE_LIBS@
++SERVICE_EXES := @SERVICE_EXES@
++
+ #
+ # PolyORB's include files
+ #
