@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4973 2025/08/15 15:09:28 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.4974 2025/08/15 15:32:16 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7252,3 +7252,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/ruby-poppler to 4.3.2 [tsutsui 2025-08-15]
 	Updated x11/ruby-gtk3 to 4.3.2 [tsutsui 2025-08-15]
 	Updated x11/ruby-gtksourceview3 to 4.3.2 [tsutsui 2025-08-15]
+	Updated lang/joker to 1.5.2 [ktnb 2025-08-15]
