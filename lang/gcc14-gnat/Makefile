@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/07/09 17:24:08 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/15 16:57:57 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc14-gnat-14.3.0
@@ -14,6 +14,9 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
+
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=114065
+BROKEN_ON_PLATFORM=	*-*-i386
 
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
