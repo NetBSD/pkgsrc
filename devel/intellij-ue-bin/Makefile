@@ -1,64 +1,80 @@
-# $NetBSD: Makefile,v 1.9 2023/08/14 05:24:09 wiz Exp $
-#
-# TODO Import intellij-fsnotifier with inotify support from FreeBSD.
+# $NetBSD: Makefile,v 1.10 2025/08/15 18:10:45 schmonz Exp $
 
-VERSION=	2018.3.5
-DISTNAME=	ideaIU-${VERSION:S/.0.0//}-no-jdk
-PKGNAME=	intellij-ue-bin-${VERSION}
-PKGREVISION=	5
-CATEGORIES=	devel
-MASTER_SITES=	http://download.jetbrains.com/idea/
+VERSION=		2025.2
+DISTNAME=		ideaIU-${VERSION:S/.0.0//}
+PKGNAME=		intellij-ue-bin-${VERSION}
+CATEGORIES=		devel
+MASTER_SITES=		https://download.jetbrains.com/idea/
 
-MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://www.jetbrains.org/
-COMMENT=	JetBrain's Java IDE, ultimate edition
-LICENSE=	apache-2.0
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		https://www.jetbrains.org/
+COMMENT=		JetBrains IntelliJ IDEA Ultimate Edition
+LICENSE=		apache-2.0
 
-WRKSRC=		${WRKDIR}/idea-IU-183.5912.21
-USE_JAVA=	yes
-USE_JAVA2=	8
+DEPENDS+=		intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-USE_TOOLS+=	pax sed
+WRKSRC=			${WRKDIR}/idea-IU-252.23892.409
+USE_JAVA2=		17
 
-REPLACE_PYTHON=	bin/printenv.py \
-		bin/restart.py  \
+USE_TOOLS+=		bash pax sed
 
-REPLACE_BASH=	plugins/Kotlin/kotlinc/bin/kotlin	\
-		plugins/Kotlin/kotlinc/bin/kotlin-dce-js\
-		plugins/Kotlin/kotlinc/bin/kotlinc	\
-		plugins/Kotlin/kotlinc/bin/kotlinc-js	\
-		plugins/Kotlin/kotlinc/bin/kotlinc-jvm
+REPLACE_BASH=		plugins/Kotlin/kotlinc/bin/kapt		\
+			plugins/Kotlin/kotlinc/bin/kotlin	\
+			plugins/Kotlin/kotlinc/bin/kotlinc	\
+			plugins/Kotlin/kotlinc/bin/kotlinc-js	\
+			plugins/Kotlin/kotlinc/bin/kotlinc-jvm	\
+			plugins/terminal/shell-integrations/bash/bash-integration.bash
 
-.include "../../mk/bsd.prefs.mk"
+CHECK_SHLIBS_SKIP=	*
+CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
 
-INSTALLATION_DIRS=	intellij-ce-bin-${VERSION} \
+INSTALLATION_DIRS=	${PKGBASE} \
 			share/applications
 
-NO_BUILD=	yes
-
 SUBST_CLASSES+=		jdk
-SUBST_STAGE.jdk=	pre-install
-SUBST_MESSAGE.jdk=	Adding JVM options
+SUBST_STAGE.jdk=	pre-configure
 SUBST_FILES.jdk=	bin/idea.sh
 SUBST_VARS.jdk=		PKG_JAVA_HOME
 
-do-install:
-	cd ${WRKSRC} &&	\
-	${RM} -r bin/fsnotifier bin/fsnotifier-arm bin/idea.sh.orig\
-	bin/fsnotifier64 bin/libdbm64.so			\
-	bin/libyjpagent-linux.so bin/libyjpagent-linux64.so	\
-	plugins/performanceTesting/lib/libasyncProfiler-linux.so\
-	plugins/performanceTesting/lib/libasyncProfiler-macos.so\
-	lib/pty4j-native/linux/x86/libpty.so			\
-	lib/pty4j-native/linux/x86_64/libpty.so			\
-	plugins/android/lib/libwebp/linux/libwebp_jni.so	\
-	plugins/android/lib/libwebp/linux/libwebp_jni64.so 	\
-	plugins/tfsIntegration/lib/native/ &&			\
-	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
-	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
-	${FILESDIR}/idea-ultimate.desktop > ${DESTDIR}${PREFIX}/share/applications/idea-ultimate.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
+SUBST_CLASSES+=		vmoptions
+SUBST_STAGE.vmoptions=	pre-configure
+SUBST_FILES.vmoptions=	bin/idea64.vmoptions
+SUBST_SED.vmoptions=	-e 's|^-Xmx.*|-Xmx4096m|'
+SUBST_SED.vmoptions+=	-e 's|^-Xms.*|-Xms4096m|'
 
-.include "../../lang/python/application.mk"
+pre-configure:
+	cd ${WRKSRC} &&	\
+	${RM} -r bin/*.orig \
+		bin/fsnotifier \
+		lib/jna/amd64/libjnidispatch.so \
+		lib/native/linux-x86_64/libsqliteij.so \
+		lib/pty4j/linux/x86-64/libpty.so \
+		plugins/cwm-plugin/quiche-native/*/*.so \
+		plugins/webp/lib/libwebp/linux/*.so \
+		plugins/maven/lib/maven3/lib/jansi-native/Windows/*/*.dll \
+		jbr
+
+post-configure:
+	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGBASE}|g" \
+	    < ${FILESDIR}/idea-ultimate.desktop \
+	    > ${WRKDIR}/idea-ultimate.desktop
+
+do-build:
+	${ECHO} "-XX:-UseCompressedClassPointers" \
+	    >> ${WRKSRC}/bin/idea64.vmoptions
+	${ECHO} "-XX:-UseCompressedOops" \
+	    >> ${WRKSRC}/bin/idea64.vmoptions
+	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" \
+	    >> ${WRKSRC}/bin/idea.properties
+	${ECHO} "idea.ui.icons.svg.disk.cache=false" \
+	    >> ${WRKSRC}/bin/idea.properties
+
+do-install:
+	${INSTALL_DATA} ${WRKDIR}/idea-ultimate.desktop \
+	    ${DESTDIR}${PREFIX}/share/applications/
+	cd ${WRKSRC} &&	pax -rw -pm -s ',.*\.orig,,' \
+	    * ${DESTDIR}${PREFIX}/${PKGBASE}
+
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
