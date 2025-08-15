@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2025/08/07 09:33:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.143 2025/08/15 15:49:12 hauke Exp $
 
 DISTNAME=	dbus-1.16.2
 PKGREVISION=	1
@@ -70,12 +70,13 @@ PKG_HOME.${DBUS_USER}=	${VARBASE}/run/dbus
 FILES_SUBST+=		DBUS_USER=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
-BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
+BUILDLINK_TRANSFORM.FreeBSD+=	rm:-Wl,--no-undefined
+BUILDLINK_TRANSFORM+=		rm:-Wl,--gc-sections
 .if !empty(_PKGSRC_MKPIE:M[Nn][Oo])
 # Package tries to use these if gcc accepts them, but that doesn't
 # mean that we universally can *run* the executables
-BUILDLINK_TRANSFORM+=	rm:-fPIE
-BUILDLINK_TRANSFORM+=	rm:-pie
+BUILDLINK_TRANSFORM+=		rm:-fPIE
+BUILDLINK_TRANSFORM+=		rm:-pie
 .endif
 
 .include "options.mk"
