@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4971 2025/08/15 13:29:07 pin Exp $
+$NetBSD: CHANGES-2025,v 1.4972 2025/08/15 13:30:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7234,3 +7234,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-edit to 0.13.7 [pin 2025-08-15]
 	Updated devel/mise to 2025.8.10 [pin 2025-08-15]
 	Updated sysutils/lla to 0.4.0 [pin 2025-08-15]
+	Updated textproc/television to 0.13.3 [pin 2025-08-15]
