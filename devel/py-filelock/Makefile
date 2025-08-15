@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2025/03/14 08:07:18 adam Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/15 06:32:29 adam Exp $
 
-DISTNAME=	filelock-3.18.0
+DISTNAME=	filelock-3.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filelock/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/tox-dev/py-filelock
+HOMEPAGE=	https://github.com/tox-dev/filelock
 COMMENT=	Platform independent file lock
 LICENSE=	unlicense
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.5:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.24:../../devel/py-test-asyncio
