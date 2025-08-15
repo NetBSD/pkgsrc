@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4957 2025/08/15 06:36:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4958 2025/08/15 06:41:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7211,3 +7211,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-filelock to 3.19.1 [adam 2025-08-15]
 	Updated misc/py-pbs-installer to 2025.8.14 [adam 2025-08-15]
 	Updated math/py-kiwisolver to 1.4.9 [adam 2025-08-15]
+	Updated devel/nss to 3.115 [wiz 2025-08-15]
