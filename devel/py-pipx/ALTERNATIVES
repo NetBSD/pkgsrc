@@ -1,1 +1,1 @@
-bin/pipx @PREFIX@/bin/pip@PYVERSSUFFIX@
+bin/pipx @PREFIX@/bin/pipx@PYVERSSUFFIX@
