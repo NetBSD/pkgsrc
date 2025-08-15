@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/05/28 13:57:40 ktnb Exp $
+$NetBSD: distinfo,v 1.7 2025/08/15 15:31:58 ktnb Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.0.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.0.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -27,12 +27,12 @@ Size (github.com_candid82_liner_@v_v1.4.0.mod) = 88 bytes
 BLAKE2s (github.com_candid82_liner_@v_v1.4.0.zip) = c7c5f8558557f8a2d9d2f8a6d0114751b78229d230f366b2a0c612389b3bc4c0
 SHA512 (github.com_candid82_liner_@v_v1.4.0.zip) = 5ba7c476b59fca534fcaf1adacd7ecd07c28ddd7674ecaf0799fa567e5aa021a56bc98e6f8670a19d38599dd70e8344101814aa86c9dea2c81a84634b93907b7
 Size (github.com_candid82_liner_@v_v1.4.0.zip) = 29193 bytes
-BLAKE2s (github.com_cloudflare_circl_@v_v1.3.7.mod) = fea0834395f1dd9d4cbd112df8aa4f2101ce6be8c4f3cce8e56fe7c4193d21e1
-SHA512 (github.com_cloudflare_circl_@v_v1.3.7.mod) = 252191cbc57cd72c782ec0bd2fd608b7b678c092af9467b059d96ef5605477f978796a87f19870507219196da72b331706d3796f8eb5712a4b1ddb1c2b6b66aa
-Size (github.com_cloudflare_circl_@v_v1.3.7.mod) = 153 bytes
-BLAKE2s (github.com_cloudflare_circl_@v_v1.3.7.zip) = 48f43408fd9b10d408bdd1ee478fb774c5a07348b7b0ecf2c10ce258f0e298b5
-SHA512 (github.com_cloudflare_circl_@v_v1.3.7.zip) = 5c88550808b459876caf3d6a9daadf621019c5223bb87f061fe74a1a4d49e60e83dbb4e7337ff71362c6b26bf8319ea26f1119973653142f9dfad5bb20cff42e
-Size (github.com_cloudflare_circl_@v_v1.3.7.zip) = 4936771 bytes
+BLAKE2s (github.com_cloudflare_circl_@v_v1.6.1.mod) = e6bb8f9994b312f7c2208518de289de10992f280f7657056b83255b48f486563
+SHA512 (github.com_cloudflare_circl_@v_v1.6.1.mod) = 60ff56e5e1bb065f17411af4ca1051f93e10b1e2514149829166524b2db89282279063e52a0fd93a6d4cd0aefde020f119a2b091aff76b0070692eb47516f02d
+Size (github.com_cloudflare_circl_@v_v1.6.1.mod) = 185 bytes
+BLAKE2s (github.com_cloudflare_circl_@v_v1.6.1.zip) = cc0dca98aefd2b80e5db4ce5f6699db92cd62325c5b14634d2ae2f2d2c0baa3f
+SHA512 (github.com_cloudflare_circl_@v_v1.6.1.zip) = 205997d8e1cf73d9c55a3d8165a9caaca987ae5bed38b3d0e4dfb5392369c18af81869dc2f12f94e514316767838da13fd203cd6ad993144c0c6a411134b66de
+Size (github.com_cloudflare_circl_@v_v1.6.1.zip) = 7096784 bytes
 BLAKE2s (github.com_cyphar_filepath-securejoin_@v_v0.2.5.mod) = fc5819cf4e4d7a827ddabd0237b4845b5d3d2712837a6552e19380339862dfda
 SHA512 (github.com_cyphar_filepath-securejoin_@v_v0.2.5.mod) = 78a9a387ac82a766c8c71c7fc31e977cd013c806d53794f81bb112ed2f6494ea2bc411e6f5746b71abcf8c39b0b60b981ccf09794197879ed96ba0aa8819580c
 Size (github.com_cyphar_filepath-securejoin_@v_v0.2.5.mod) = 54 bytes
@@ -261,6 +261,6 @@ Size (gopkg.in_yaml.v2_@v_v2.4.0.zip) = 81183 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
 Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
-BLAKE2s (joker-1.5.0.tar.gz) = 3a5314b69f741ada083bdd7297e6f1c8e6d20674f355bd2956497f7123e7109e
-SHA512 (joker-1.5.0.tar.gz) = 3c404ef65a618646cd6763b8d80e28786a42242c3454856e9d9d250890ac7333da0267bc3d592275350fde194a920b31c405e2f2d7dc4a179b331d2ee8748b57
-Size (joker-1.5.0.tar.gz) = 511462 bytes
+BLAKE2s (joker-1.5.2.tar.gz) = c6b1d333dcc026ed7ced6c30d3bb597a1442c839e020ea074d9f3aae37866cfd
+SHA512 (joker-1.5.2.tar.gz) = a3596acfcd2eeb348c57b095542c8e317b3738cc086c4f4ee68ce3b297c92676fc475bf47e6424568add2ab045eb80bcb2872cf8225de0de6d53d497f47bf376
+Size (joker-1.5.2.tar.gz) = 511914 bytes
