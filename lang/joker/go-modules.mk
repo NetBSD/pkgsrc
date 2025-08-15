@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2025/05/28 13:57:40 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.6 2025/08/15 15:31:58 ktnb Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -9,8 +9,8 @@ GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.1.3.mod
 GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.1.3.zip
 GO_MODULE_FILES+=	github.com/candid82/liner/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/candid82/liner/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.mod
-GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.zip
+GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.6.1.mod
+GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.6.1.zip
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.mod
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
