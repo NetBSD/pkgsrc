@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2025/07/19 05:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/15 15:06:52 tsutsui Exp $
 #
 
 DISTNAME=		clutter-gtk-${VERSION}
 COMMENT=		Ruby binding of Clutter-GTK
-PKGREVISION=		1
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
