@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2024/07/22 20:21:57 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/08/15 18:01:42 prlw1 Exp $
 
 BLAKE2s (uchardet-0.0.8.tar.xz) = 1d8b7cbd6de599de895cbcc49f46720dd002705cbf47b24fef2c556c73028210
 SHA512 (uchardet-0.0.8.tar.xz) = 4a5dcc9ff021352f3b252e103ff1475cec62c974294b264ee9243f024633c3ae44be8c7733608624066113e635f8b156ecb08c8ff87c736d04b07641eb166382
 Size (uchardet-0.0.8.tar.xz) = 222648 bytes
+SHA1 (patch-CMakeLists.txt) = 10305fb7cbdbcb25d62b599c4d9b860fa38e649e
 SHA1 (patch-src_symbols.cmake) = b0bfe9c32ce33037d50b2ffb7b94e0b787855601
