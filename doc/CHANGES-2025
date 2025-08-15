@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4976 2025/08/15 18:10:50 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.4977 2025/08/15 20:35:11 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7255,3 +7255,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/joker to 1.5.2 [ktnb 2025-08-15]
 	Updated devel/intellij-ce-bin to 2025.2 [schmonz 2025-08-15]
 	Updated devel/intellij-ue-bin to 2025.2 [schmonz 2025-08-15]
+	Updated www/nginx-devel to 1.29.1 [osa 2025-08-15]
