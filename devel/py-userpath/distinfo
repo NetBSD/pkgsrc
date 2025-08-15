@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/15 06:51:29 kim Exp $
+
+BLAKE2s (userpath-1.9.2.tar.gz) = 12774200ac84000856942ada8e8b64bbaf819f779ac10c0d178a6c403e4a632f
+SHA512 (userpath-1.9.2.tar.gz) = 8c55d164cb96484967155442ffd9c3e9a74f9e6487f2c6575be3cbf064d23a8cfd96f5f1c5aeba159574e156e66e4d3f99594cde8c5024e49c625e1d4f7ac8aa
+Size (userpath-1.9.2.tar.gz) = 11140 bytes
