@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4967 2025/08/15 11:12:46 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.4968 2025/08/15 12:46:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7229,3 +7229,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-distlib to 0.4.0 [adam 2025-08-15]
 	Updated www/chromium to 139.0.7258.127 [kikadf 2025-08-15]
 	Updated pkgtools/pkglint to 23.19.0 [rillig 2025-08-15]
+	Updated lang/go123 to 1.23.12 [bsiegert 2025-08-15]
+	Updated lang/go124 to 1.24.6 [bsiegert 2025-08-15]
