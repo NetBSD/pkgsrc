@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4968 2025/08/15 12:46:55 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.4969 2025/08/15 13:27:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7231,3 +7231,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.19.0 [rillig 2025-08-15]
 	Updated lang/go123 to 1.23.12 [bsiegert 2025-08-15]
 	Updated lang/go124 to 1.24.6 [bsiegert 2025-08-15]
+	Updated devel/cargo-edit to 0.13.7 [pin 2025-08-15]
