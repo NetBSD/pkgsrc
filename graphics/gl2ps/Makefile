@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/08/11 05:08:41 gutteridge Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/15 23:12:30 gdt Exp $
 
 DISTNAME=	gl2ps-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://geuz.org/gl2ps/src/
 EXTRACT_SUFX=	.tgz
@@ -11,9 +11,10 @@ HOMEPAGE=	https://geuz.org/gl2ps/
 COMMENT=	OpenGL to PostScript printing library
 LICENSE=	gnu-lgpl-v2
 
-USE_CMAKE=	yes
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
