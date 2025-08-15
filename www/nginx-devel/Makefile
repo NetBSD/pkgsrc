@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.156 2025/07/10 20:54:15 osa Exp $
+# $NetBSD: Makefile,v 1.157 2025/08/15 20:33:45 osa Exp $
 
-DISTNAME=	nginx-1.29.0
-PKGREVISION=	1
+DISTNAME=	nginx-1.29.1
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
-
-PATCH_SITES=		https://github.com/freenginx/nginx/commit/
-PATCHFILES=		1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch
-PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
 MAINTAINER=	osa@NetBSD.org
 HOMEPAGE=	https://nginx.org/
