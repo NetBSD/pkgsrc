@@ -1,13 +1,13 @@
-$NetBSD: patch-Cargo.toml,v 1.1 2025/08/07 19:11:06 pin Exp $
+$NetBSD: patch-Cargo.toml,v 1.2 2025/08/15 13:30:02 pin Exp $
 
-Relax MSRV, confrirmed to work by @wiz.
+Relax MSRV.
 
---- Cargo.toml.orig	2025-08-07 17:55:03.279117172 +0000
+--- Cargo.toml.orig	2025-08-15 12:31:14.518710690 +0000
 +++ Cargo.toml
 @@ -15,7 +15,7 @@ categories = [
    "development-tools",
  ]
- exclude = ["website", ".github", "apt", "website"]
+ exclude = ["website", ".github", "apt", "website", "assets"]
 -rust-version = "1.87"
 +rust-version = "1.86"
  build = "build.rs"
