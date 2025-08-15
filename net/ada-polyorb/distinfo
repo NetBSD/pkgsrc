@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2025/08/15 08:10:03 dkazankov Exp $
+
+BLAKE2s (polyorb-25.0.0.tar.gz) = 21dd2d3f800d3da3e4bbdd2125374a374cffbfc754f9110e0bb661fa811fdfad
+SHA512 (polyorb-25.0.0.tar.gz) = 467402fb536b77c4756c3bcbda0b5d55b57f40b4c67e0781e7e970e3237e87a93a08be721ef8f727c678bc0cb4bcda6fe66ab7fad8d3301766311956786bcc49
+Size (polyorb-25.0.0.tar.gz) = 2870640 bytes
+SHA1 (patch-Makefile.common.project.in) = 03f43f1a8dee02833e39be26dcc5ffb751f25268
+SHA1 (patch-compilers_gnatdist_xe__back-garlic.adb) = 56f9d6614fccb0fc540bcef1183cfe6a47f45919
+SHA1 (patch-configure) = e82a58b42d3c190966fa90cea83106eb165be1d8
+SHA1 (patch-cos_time_time__utils__c.c) = ffa13318cc415ceb04ebdddc560db6abc4e1b934
+SHA1 (patch-projects_polyorb__src__aws.gpr) = 2fe33ff7165001e7e90b17c635af8b650862b916
+SHA1 (patch-src_security_polyorb__asn1.c) = 6f8c83a72518e17ecd0aa3e9655234513156a91f
+SHA1 (patch-src_security_tls_polyorb-tls.adb) = 364ec157dd67bfd51478d2e52d6abe03a6baa307
+SHA1 (patch-src_security_tls_polyorb-tls.ads) = 3d368a923977e4476077723b41b14103330c9a97
+SHA1 (patch-src_security_x509_polyorb-x509.adb) = 20ab2472068cb06c034e8e83bb28c70957c659c4
+SHA1 (patch-src_security_x509_polyorb__x509.c) = 372c480df9bebd43a0f37e96381fe27ef2df8419
+SHA1 (patch-src_ssl_polyorb-ssl.adb) = a1db67e4b26ac8c7d2e8173635ce2695041d406c
+SHA1 (patch-src_ssl_polyorb-ssl.ads) = 731a74d78d04dc15fcb7d991d689678f6822f8cc
