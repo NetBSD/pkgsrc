@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/09 09:19:08 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/15 15:06:51 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gio2.${RUBY_DLEXT}
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/lib/gio2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/gio2/action-map.rb
 ${GEM_LIBDIR}/lib/gio2/action.rb
 ${GEM_LIBDIR}/lib/gio2/application-command-line.rb
+${GEM_LIBDIR}/lib/gio2/bytes-icon.rb
 ${GEM_LIBDIR}/lib/gio2/content-type.rb
 ${GEM_LIBDIR}/lib/gio2/deprecated.rb
 ${GEM_LIBDIR}/lib/gio2/file.rb

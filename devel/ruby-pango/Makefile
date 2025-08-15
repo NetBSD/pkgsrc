@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/07/19 05:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/08/15 15:06:51 tsutsui Exp $
 #
 
 DISTNAME=		pango-${VERSION}
 COMMENT=		Ruby binding of pango-1.x
-PKGREVISION=		1
 CATEGORIES=		devel fonts
 
 MAINTAINER=		tsutsui@NetBSD.org

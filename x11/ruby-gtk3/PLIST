@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/09 09:19:11 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/08/15 15:06:53 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -61,6 +61,7 @@ ${GEM_LIBDIR}/lib/gtk3/loader.rb
 ${GEM_LIBDIR}/lib/gtk3/menu-item.rb
 ${GEM_LIBDIR}/lib/gtk3/message-dialog.rb
 ${GEM_LIBDIR}/lib/gtk3/paned.rb
+${GEM_LIBDIR}/lib/gtk3/popover.rb
 ${GEM_LIBDIR}/lib/gtk3/radio-action.rb
 ${GEM_LIBDIR}/lib/gtk3/radio-button.rb
 ${GEM_LIBDIR}/lib/gtk3/recent-chooser-dialog.rb
@@ -513,6 +514,7 @@ ${GEM_LIBDIR}/test/test-gtk-menu.rb
 ${GEM_LIBDIR}/test/test-gtk-message-dialog.rb
 ${GEM_LIBDIR}/test/test-gtk-paned.rb
 ${GEM_LIBDIR}/test/test-gtk-places-sidebar.rb
+${GEM_LIBDIR}/test/test-gtk-popover.rb
 ${GEM_LIBDIR}/test/test-gtk-radio-action.rb
 ${GEM_LIBDIR}/test/test-gtk-radio-button.rb
 ${GEM_LIBDIR}/test/test-gtk-recent-chooser-dialog.rb
