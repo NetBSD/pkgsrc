@@ -1,0 +1,61 @@
+$NetBSD: patch-configure,v 1.1 2025/08/15 08:10:03 dkazankov Exp $
+
+Fix usage of old SSL function
+Fix later linker error when using SSL
+Fix $$ORIGIN substitution in LDFLAGS
+
+--- configure.orig	2024-08-23 19:03:44.000000000 +0300
++++ configure
+@@ -7859,8 +7859,8 @@
+             # unset ac_cv_XXX to prevent reuse of cached results from a previous
+             # iteration.
+             unset ac_cv_lib_crypto_SSLeay_version
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for SSLeay_version in -lcrypto" >&5
+-$as_echo_n "checking for SSLeay_version in -lcrypto... " >&6; }
++            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OpenSSL_version in -lcrypto" >&5
++$as_echo_n "checking for OpenSSL_version in -lcrypto... " >&6; }
+ if ${ac_cv_lib_crypto_SSLeay_version+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+@@ -7875,11 +7875,11 @@
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char SSLeay_version ();
++char OpenSSL_version ();
+ int
+ main ()
+ {
+-return SSLeay_version ();
++return OpenSSL_version ();
+   ;
+   return 0;
+ }
+@@ -8052,7 +8052,16 @@
+ 
+ set_linker_options() {
+   while test $# -gt 0; do
+-    SSL_LINKER_OPTIONS="${SSL_LINKER_OPTIONS}\"$1\""
++    SSL_LINKER_OPTION1=$1
++    case $SSL_LINKER_OPTION1 in
++    -L*/)
++    SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}
++    ;;
++    -L*)
++    SSL_LINKER_OPTION1=${SSL_LINKER_OPTION1}/
++    ;;
++    esac
++    SSL_LINKER_OPTIONS="${SSL_LINKER_OPTIONS}\"${SSL_LINKER_OPTION1}\""
+     if test $# -gt 1; then
+       SSL_LINKER_OPTIONS="${SSL_LINKER_OPTIONS} & ASCII.NUL & "
+     fi
+@@ -9457,6 +9466,9 @@
+     keylen = length(key)
+     if (S_is_set[key]) {
+       value = S[key]
++      if (key == "LDFLAGS") {
++        sub(/\\\\\\\$\\\\\\\$ORIGIN/, "\\\\\\\\\\\$\\\\\\\\\\\$ORIGIN", value)
++      }
+       line = substr(line, 1, len) "" value "" substr(line, len + keylen + 3)
+       len += length(value) + length(field[++i])
+       substed = 1
