@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2025/08/13 06:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2025/08/15 14:50:59 wiz Exp $
 
 DISTNAME=	blender-4.2.4
 PKGREVISION=	6
@@ -16,8 +16,6 @@ USE_CXX_FEATURES=	c++17
 
 # GCC 11.0.0 or later is required.
 GCC_REQD+=	12
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
