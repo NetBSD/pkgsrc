@@ -32,10 +32,6 @@ anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
 aom			Enable AV1 support using libaom.
 ap-php			Use PHP via Apache module.
-ap-corba		Build PolyORB with CORBA application personality.
-ap-dsa			Build PolyORB with DSA application personality.
-ap-moma			Build PolyORB with MOMA application personality.
-ap-aws			Build PolyORB with AWS application personality.
 apache			Enable support for Apache web server.
 apache-managed-domain-handling	Enable managing domains and ACME support in Apache web server.
 apache-mpm-event	Use multi-threaded workers in Apache web server.
@@ -131,11 +127,6 @@ courier-esmtp		ESMTP mail delivery.
 courier-gnutls		Support using GNU TLS instead of OpenSSL.
 courier-local		Local mail delivery.
 courier-uucp		UUCP mail delivery.
-cs-event		Build PolyORB with Event COS service.
-cs-ir			Build PolyORB with Interface Repository COS service.
-cs-naming		Build PolyORB with Naming COS service.
-cs-notification		Build PolyORB with Notification COS service.
-cs-time			Build PolyORB with Time COS service.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -315,7 +306,6 @@ glfw			Enable GLFW support
 glib2			Enable libGIO support.
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
-gnatcoll		Build PolyORB with GNATCOLL support.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
@@ -770,16 +760,26 @@ pkgin-static		Link all pkgsrc libraries statically.
 plotutils		Enable plotutils support.
 png			Enable PNG support.
 polkit                  Enable Polkit support.
+polyorb-ap-corba	Build PolyORB with CORBA application personality.
+polyorb-ap-dsa		Build PolyORB with DSA application personality.
+polyorb-ap-moma		Build PolyORB with MOMA application personality.
+polyorb-ap-aws		Build PolyORB with AWS application personality.
+polyorb-cs-event	Build PolyORB with Event COS service.
+polyorb-cs-ir		Build PolyORB with Interface Repository COS service.
+polyorb-cs-naming	Build PolyORB with Naming COS service.
+polyorb-cs-notification	Build PolyORB with Notification COS service.
+polyorb-cs-time		Build PolyORB with Time COS service.
+polyorb-gnatcoll	Build PolyORB with GNATCOLL support.
+polyorb-pp-giop		Build PolyORB with GIOP protocol personality.
+polyorb-pp-soap		Build PolyORB with SOAP protocol personality.
+polyorb-pp-srp		Build PolyORB with SRP protocol personality.
+polyorb-pp-dns		Build PolyORB with DNS protocol personality.
 poppler			Enable poppler-utils support.
 portals			Enable BSD Portals support
 portaudio		Enable PortAudio audio library support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 postgrey-targrey	Enable the Postgrey taRgrey tarpitting patch.
-pp-giop			Build PolyORB with GIOP protocol personality.
-pp-soap			Build PolyORB with SOAP protocol personality.
-pp-srp			Build PolyORB with SRP protocol personality.
-pp-dns			Build PolyORB with DNS protocol personality.
 ppx			Enable PPX support.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
