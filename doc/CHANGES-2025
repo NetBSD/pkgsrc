@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4956 2025/08/15 05:51:53 kim Exp $
+$NetBSD: CHANGES-2025,v 1.4957 2025/08/15 06:36:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7207,3 +7207,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/emacs30 to 30.2 [wiz 2025-08-14]
 	Updated editors/emacs30-nox11 to 30.2 [wiz 2025-08-14]
 	Added devel/py-pipx version 1.7.1 [kim 2025-08-15]
+	Updated textproc/py-fastjsonschema to 2.21.2 [adam 2025-08-15]
+	Updated devel/py-filelock to 3.19.1 [adam 2025-08-15]
+	Updated misc/py-pbs-installer to 2025.8.14 [adam 2025-08-15]
+	Updated math/py-kiwisolver to 1.4.9 [adam 2025-08-15]
