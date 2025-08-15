@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/07 11:39:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/15 06:44:41 adam Exp $
 share/doc/python3.13/.buildinfo
 share/doc/python3.13/404.html
 share/doc/python3.13/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -117,6 +117,7 @@ share/doc/python3.13/_sources/faq/library.rst.txt
 share/doc/python3.13/_sources/faq/programming.rst.txt
 share/doc/python3.13/_sources/faq/windows.rst.txt
 share/doc/python3.13/_sources/glossary.rst.txt
+share/doc/python3.13/_sources/howto/a-conceptual-overview-of-asyncio.rst.txt
 share/doc/python3.13/_sources/howto/annotations.rst.txt
 share/doc/python3.13/_sources/howto/argparse-optparse.rst.txt
 share/doc/python3.13/_sources/howto/argparse.rst.txt
@@ -684,6 +685,7 @@ share/doc/python3.13/genindex-_.html
 share/doc/python3.13/genindex-all.html
 share/doc/python3.13/genindex.html
 share/doc/python3.13/glossary.html
+share/doc/python3.13/howto/a-conceptual-overview-of-asyncio.html
 share/doc/python3.13/howto/annotations.html
 share/doc/python3.13/howto/argparse-optparse.html
 share/doc/python3.13/howto/argparse.html
