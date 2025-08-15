@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4961 2025/08/15 07:08:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4962 2025/08/15 07:51:58 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7218,3 +7218,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.2.4 [adam 2025-08-15]
 	Updated net/ldns to 1.8.4 [adam 2025-08-15]
 	Updated net/drill to 1.8.4 [adam 2025-08-15]
+	Updated lang/gcc15-gnat to 15.1.0nb1 [dkazankov 2025-08-15]
