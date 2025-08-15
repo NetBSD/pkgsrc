@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/07/24 09:35:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/15 18:01:42 prlw1 Exp $
 
 DISTNAME=	uchardet-0.0.8
+PKGVERSION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.freedesktop.org/software/uchardet/releases/
 EXTRACT_SUFX=	.tar.xz
