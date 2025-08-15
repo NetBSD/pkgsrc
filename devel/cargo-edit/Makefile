@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/05/30 10:56:52 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/15 13:26:46 pin Exp $
 
-DISTNAME=	cargo-edit-0.13.6
+DISTNAME=	cargo-edit-0.13.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=killercup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,9 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.85.0
+#RUST_REQ=	1.89.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.89.0 on amd64
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
