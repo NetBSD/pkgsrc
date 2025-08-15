@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1604 2025/08/06 06:36:50 pin Exp $
+# $NetBSD: Makefile,v 1.1605 2025/08/15 08:10:02 dkazankov Exp $
 #
 
 COMMENT=	Networking tools
@@ -16,6 +16,7 @@ SUBDIR+=	Radicale
 SUBDIR+=	Radicale2
 SUBDIR+=	SDL2_net
 SUBDIR+=	SDL_net
+SUBDIR+=	ada-polyorb
 SUBDIR+=	adns
 SUBDIR+=	aget
 SUBDIR+=	aiccu

@@ -1,0 +1,15 @@
+$NetBSD: patch-projects_polyorb__src__aws.gpr,v 1.1 2025/08/15 08:10:03 dkazankov Exp $
+
+Fix incorrect project name
+
+--- projects/polyorb_src_aws.gpr.orig	2024-08-23 19:03:44.000000000 +0300
++++ projects/polyorb_src_aws.gpr
+@@ -40,7 +40,7 @@
+    Dir := "src/aws";
+    Obj_Dir := PolyORB_Common.Build_Dir & Dir;
+    for Object_Dir use Obj_Dir;
+-   for Source_Dirs use (Obj_Dir, PolyORB_Common.Source_Dir & Dir, Common.Source_Dir & "src/aws_orig");
++   for Source_Dirs use (Obj_Dir, PolyORB_Common.Source_Dir & Dir, PolyORB_Common.Source_Dir & "src/aws_orig");
+ 
+    for Library_Name use "polyorb-aws";
+    for Library_Dir use PolyORB_Common.Build_Dir & "lib";
