@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/08/07 19:11:06 pin Exp $
+$NetBSD: distinfo,v 1.2 2025/08/15 13:30:02 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -651,9 +651,9 @@ Size (subtle-2.6.1.crate) = 14562 bytes
 BLAKE2s (syn-2.0.104.crate) = dc86e60e2bc366f3c2b26397756117d9928a445e6721eea48ac7db9dfb53f142
 SHA512 (syn-2.0.104.crate) = da532fa362266161b5604c821c913f8f990eb32c18e18c0a360b7147b9f71ae008e208f377cb203e85818bd5db926951122a971fa97563a10678f0ba4671e64f
 Size (syn-2.0.104.crate) = 299699 bytes
-BLAKE2s (television-0.13.2.tar.gz) = 0f8ece21032e2c61b5d41752b58b2fdc0991253fea0b10d52b4cf1012b29607d
-SHA512 (television-0.13.2.tar.gz) = 58a6153120e9d4c580f587e8ad687f235de900fc2d64016d1b7702538068877d203fc5902d0200476223e53bd960fdfdd2099f9e075312889d3e9734c1bd644d
-Size (television-0.13.2.tar.gz) = 15292610 bytes
+BLAKE2s (television-0.13.3.tar.gz) = 14ab175fb46ba54030971d3d0af0ebc70d124550c1898d82a60dbf8a38692ec5
+SHA512 (television-0.13.3.tar.gz) = 6bbc79bcf0710883e0bada031a5f51a783d2f5766e276642736904a8822bc5e6233985caab5377d1f2e8c5df85fafcdf250341d6d35f47acd22c24a686d640cb
+Size (television-0.13.3.tar.gz) = 16479105 bytes
 BLAKE2s (tempfile-3.20.0.crate) = 570c7fb574a6e01ccafac682202f3a7894dc4f7d6e41156f5e2fdd3456d10414
 SHA512 (tempfile-3.20.0.crate) = e317273225182b565f971b08160080e6162b0de855c0cc8c5b8d34b2afb48f73ed15a2848b65b6db73789fbf96dc88354b1d357d9c2267658de0c718286de8c6
 Size (tempfile-3.20.0.crate) = 42306 bytes
@@ -918,4 +918,4 @@ Size (wit-bindgen-rt-0.39.0.crate) = 12241 bytes
 BLAKE2s (zeroize-1.8.1.crate) = 5a10298ca4d45f2d0a2cefc2ee481fc2341b0355e78a4b0940c31f776e5b2d38
 SHA512 (zeroize-1.8.1.crate) = dd40ebe98b98fd742608d4066b5ab66caba94b2e679428fcaff9fe547d8cd6ff2360dc85d671ee9183e32fb79cb554d00d6aef9eb8f3d8ad0ec92d0435aa4ebe
 Size (zeroize-1.8.1.crate) = 20029 bytes
-SHA1 (patch-Cargo.toml) = ed2d2ad5407bfe44712adb9f3d113a884d3a6d97
+SHA1 (patch-Cargo.toml) = 9356d23b8fb8ebec0a01b9c2e2d7fed33e9632b6
