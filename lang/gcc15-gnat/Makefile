@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/07/17 05:00:16 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/15 07:49:32 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc15-gnat-15.1.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,6 +13,9 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNAT compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+# https://gcc.gnu.org/bugzilla/show_bug.cgi?id=114065
+BROKEN_ON_PLATFORM=	*-*-i386
 
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
@@ -70,6 +74,12 @@ SUBST_STAGE.select=		pre-configure
 SUBST_FILES.select=		gcc/ada/libgnat/g-socthi.ads
 SUBST_SED.select=		-e "s,\"select\",\"__gnat_select\","
 
+SUBST_CLASSES+=			socket
+SUBST_MESSAGE.socket=		Replace socket with __gnat_socket in ${SUBST_FILES.socket}
+SUBST_STAGE.socket=		pre-configure
+SUBST_FILES.socket=		gcc/ada/libgnat/g-socthi.adb
+SUBST_SED.socket=		-e "s,\"socket\",\"__gnat_socket\","
+
 SUBST_CLASSES+=			nanosleep
 SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
 SUBST_STAGE.nanosleep=		pre-configure
@@ -83,11 +93,28 @@ SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
 SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 .endif
 
+.if ${MACHINE_PLATFORM:MDarwin-*-*}
+BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+PATCHFILES=		gcc-15.1.0.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
+PATCH_DIST_STRIP=	-p1
+.endif
+
 .if ${OS_VARIANT} == "SmartOS"
 SUBST_CLASSES+=		ccs
 SUBST_STAGE.ccs=	pre-configure
 SUBST_FILES.ccs=	contrib/make_sunver.pl
 SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
+.endif
+
+# Disable fixincludes on SmartOS, header changes result in broken includes
+# being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		fixinc
+SUBST_STAGE.fixinc=	pre-configure
+SUBST_FILES.fixinc=	gcc/Makefile.in
+SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
@@ -113,15 +140,6 @@ BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
-
-# Disable fixincludes on SmartOS, header changes result in broken includes
-# being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
-.if ${OS_VARIANT} == "SmartOS"
-SUBST_CLASSES+=		fixinc
-SUBST_STAGE.fixinc=	pre-configure
-SUBST_FILES.fixinc=	gcc/Makefile.in
-SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
-.endif
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-*}
 # on NetBSD, use the native SSP code in libc
