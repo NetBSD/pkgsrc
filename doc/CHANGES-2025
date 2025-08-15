@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4964 2025/08/15 08:38:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4965 2025/08/15 10:07:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7225,3 +7225,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql15 to 15.14 [adam 2025-08-15]
 	Updated databases/postgresql16 to 16.10 [adam 2025-08-15]
 	Updated databases/postgresql17 to 17.6 [adam 2025-08-15]
+	Updated lang/nodejs to 24.6.0 [adam 2025-08-15]
+	Updated devel/py-distlib to 0.4.0 [adam 2025-08-15]
