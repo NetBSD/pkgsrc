@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4960 2025/08/15 07:01:47 kim Exp $
+$NetBSD: CHANGES-2025,v 1.4961 2025/08/15 07:08:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7215,3 +7215,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/python313 to 3.13.7 [adam 2025-08-15]
 	Updated lang/py313-html-docs to 3.13.7 [adam 2025-08-15]
 	Added devel/py-userpath version 1.9.2 [kim 2025-08-15]
+	Updated net/haproxy to 3.2.4 [adam 2025-08-15]
+	Updated net/ldns to 1.8.4 [adam 2025-08-15]
+	Updated net/drill to 1.8.4 [adam 2025-08-15]
