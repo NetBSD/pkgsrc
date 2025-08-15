@@ -1,24 +1,15 @@
-$NetBSD: patch-bin_idea.sh,v 1.1 2019/03/03 17:11:13 youri Exp $
+$NetBSD: patch-bin_idea.sh,v 1.2 2025/08/15 18:10:45 schmonz Exp $
 
-Add a few JVM options to make it work in a common case.
+Run under pkgsrc-determined Java.
 
---- bin/idea.sh.orig	2019-02-26 12:34:54.000000000 +0000
+--- bin/idea.sh.orig	1970-01-21 07:13:44.000000000 +0000
 +++ bin/idea.sh
-@@ -21,6 +21,7 @@ message()
-   fi
- }
- 
-+IDEA_JDK=@PKG_JAVA_HOME@
- UNAME=`which uname`
- GREP=`which egrep`
- GREP_OPTIONS=""
-@@ -202,6 +203,9 @@ fi
+@@ -47,7 +47,7 @@ CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/
+ # Locate a JRE installation directory command -v will be used to run the IDE.
+ # Try (in order): $IDEA_JDK, .../idea.jdk, .../jbr, $JDK_HOME, $JAVA_HOME, "java" in $PATH.
  # ---------------------------------------------------------------------
- IFS="$(printf '\n\t')"
- "$JAVA_BIN" \
-+  -Xmx4096 -Xms4096 \
-+  -XX:-UseCompressedClassPointers \
-+  -XX:-UseCompressedOops \
-   -classpath "$CLASSPATH" \
-   ${VM_OPTIONS} \
-   "-XX:ErrorFile=$HOME/java_error_in_IDEA_%p.log" \
+-JRE=""
++JRE="@PKG_JAVA_HOME@"
+ 
+ # shellcheck disable=SC2154
+ if [ -n "$IDEA_JDK" ] && [ -x "$IDEA_JDK/bin/java" ]; then
