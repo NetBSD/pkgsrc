@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.501 2025/08/15 10:00:09 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.502 2025/08/15 14:03:47 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27251,7 +27251,8 @@ openexr<3.3.3		heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-48072
 openexr<3.3.3		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-48073
 openexr<3.3.3		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-48074
 php{56,74,81,82,83,84}-piwigo<15.0.0	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-43018
-py{27,39,310,311,312,313}-JWT-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45768
+# https://github.com/jpadilla/pyjwt/issues/1080
+#py{27,39,310,311,312,313}-JWT-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45768
 qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54566
 qemu>=10.0.0	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2025-54567
 sqlite3<3.42.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7458
