@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/13 11:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/15 06:36:06 adam Exp $
 
-DISTNAME=	kiwisolver-1.4.8
+DISTNAME=	kiwisolver-1.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kiwisolver/}
 
