@@ -1,29 +1,13 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.13 2023/11/02 13:18:15 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.14 2025/08/15 10:02:38 adam Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
-Remove legacy madvise(2) prototypes, prefer posix_madvise(2) if available.
 
 Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 (PR port-arm/55533)
 
 --- deps/v8/src/base/platform/platform-posix.cc.orig	2023-10-24 10:04:41.000000000 +0000
 +++ deps/v8/src/base/platform/platform-posix.cc
-@@ -77,14 +77,6 @@
- #define MAP_ANONYMOUS MAP_ANON
- #endif
- 
--#if defined(V8_OS_SOLARIS)
--#if (defined(_POSIX_C_SOURCE) && _POSIX_C_SOURCE > 2) || defined(__EXTENSIONS__)
--extern "C" int madvise(caddr_t, size_t, int);
--#else
--extern int madvise(caddr_t, size_t, int);
--#endif
--#endif
--
- #ifndef MADV_FREE
- #define MADV_FREE MADV_DONTNEED
- #endif
 @@ -399,6 +391,10 @@ void* OS::GetRandomMmapAddr() {
  #endif
  #endif
