@@ -1,0 +1,4 @@
+sb (Saorsa Browser) is a fast, secure, keyboard-centric terminal UI for browsing
+and editing Markdown notes and code. It blends a rendered Markdown preview,
+inline media, Git-aware diffs, and inline editing into a single, ergonomic
+interface with enterprise-grade security features.
