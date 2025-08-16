@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/08/03 10:32:33 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/16 07:00:49 adam Exp $
 
-DISTNAME=	textual-5.2.0
+DISTNAME=	textual-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -11,13 +11,13 @@ COMMENT=	Modern Text User Interface framework
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.2.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.2.2:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.3.3:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
 # optional, and also needs tree-sitter-languages, which is unpackaged because of
 # https://github.com/grantjenks/py-tree-sitter-languages/issues/76
-#DEPENDS+=	${PYPKGPREFIX}-tree-sitter>=0.20.1:../../textproc/py-tree-sitter
+#DEPENDS+=	${PYPKGPREFIX}-tree-sitter>=0.25.0:../../textproc/py-tree-sitter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=1.0.0:../../devel/py-test-textual-snapshot
@@ -32,7 +32,8 @@ USE_LANGUAGES=	# none
 # https://github.com/Textualize/textual/issues/5854
 INSTALLATION_DIRS+=	${PYSITELIB}/resources
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/tests/snapshot_tests/snapshot_report_template.jinja2 ${DESTDIR}${PREFIX}/${PYSITELIB}/resources/snapshot_report_template.jinja2
+	${INSTALL_DATA} ${WRKSRC}/tests/snapshot_tests/snapshot_report_template.jinja2 \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/resources/snapshot_report_template.jinja2
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
