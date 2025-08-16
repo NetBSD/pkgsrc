@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/01/24 18:36:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/16 07:15:41 adam Exp $
 
 DISTNAME=	libebur128-1.2.6
 CATEGORIES=	audio
@@ -12,6 +12,8 @@ COMMENT=	EBU R128 loudness standard implementation
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	ebur128/libebur128.pc.cmake
 
