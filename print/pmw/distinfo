@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:12:13 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/08/16 09:15:35 prlw1 Exp $
 
-BLAKE2s (pmw-4.51.tar.gz) = 8e6b42f18f2426a852c37ec045c74a49146ea9ab271842f80214dd61b4abf282
-SHA512 (pmw-4.51.tar.gz) = 70b85e57464cec234f937e7ff3524ae1c4d4a63ee2f32b55816c5764ce8f29bd910725e7f851fb5de7a41eda3d88b8ad383a2906a7e29dd0f4f5d580d76d1c5f
-Size (pmw-4.51.tar.gz) = 2241739 bytes
-SHA1 (patch-Makefile.in) = 287f7ed907797b42b65d95af7a2798970aec8698
+BLAKE2s (pmw-5.32.tar.gz) = af0863cceab2eae5f5ec8f857715abc4aa4186879e4dd51cc63faa4ac75f8853
+SHA512 (pmw-5.32.tar.gz) = f334017d6d95fce67dc26b5a0278d9bd4670a617e156936f2d6ad3e3810fa9b00f2abdf1851687c60c6d90587b489dedb1ddef768e91bfafb8d84530a4863822
+Size (pmw-5.32.tar.gz) = 2196382 bytes
+SHA1 (patch-Makefile.in) = fb06bd88f4be3d416d4afc530b06a1a9d8a10723
