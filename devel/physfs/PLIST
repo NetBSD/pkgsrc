@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2017/11/28 14:47:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/16 10:29:37 prlw1 Exp $
 bin/test_physfs
 include/physfs.h
+lib/cmake/PhysFS/PhysFSConfig-noconfig.cmake
+lib/cmake/PhysFS/PhysFSConfig.cmake
 lib/libphysfs.a
 lib/libphysfs.so
 lib/libphysfs.so.1
