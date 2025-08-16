@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5001 2025/08/16 15:55:11 osa Exp $
+$NetBSD: CHANGES-2025,v 1.5002 2025/08/16 20:56:38 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7288,3 +7288,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/sb version 0.3.8 [pin 2025-08-16]
 	Added lang/go125 version 1.25.0 [bsiegert 2025-08-16]
 	Updated www/nginx to 1.28.0nb5 [osa 2025-08-16]
+	Updated games/KoboDeluxe to 0.5.1nb8 [triaxx 2025-08-16]
