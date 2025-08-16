@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/08/16 20:55:51 triaxx Exp $
+
+Set DESTDIR to Applications subdirectory of PREFIX.
+Do not remove DESTDIR first to not remove GFX and SFX installation.
+
+--- Makefile.in.orig	2007-12-18 01:03:35.000000000 +0000
++++ Makefile.in
+@@ -842,9 +842,8 @@ uninstall-man: uninstall-man6
+ @BUILD_MACOSX_BUNDLE_TRUE@	$(INSTALL_PROGRAM) ${EXEFILE} $(bundle_contents)/MacOS/
+ 
+ @BUILD_MACOSX_BUNDLE_TRUE@install-exec-hook: @PACKAGE@_bundle
+-@BUILD_MACOSX_BUNDLE_TRUE@	rm -rf $(DESTDIR)$(prefix)/@PACKAGE@.app
+-@BUILD_MACOSX_BUNDLE_TRUE@	mkdir -p $(DESTDIR)$(prefix)/
+-@BUILD_MACOSX_BUNDLE_TRUE@	cp -r @PACKAGE@.app $(DESTDIR)$(prefix)/
++@BUILD_MACOSX_BUNDLE_TRUE@	mkdir -p $(DESTDIR)@MACOS_BUNDLE_PREFIX@
++@BUILD_MACOSX_BUNDLE_TRUE@	cp -r @PACKAGE@.app $(DESTDIR)@MACOS_BUNDLE_PREFIX@
+ 
+ @BUILD_MACOSX_BUNDLE_TRUE@clean-local:
+ @BUILD_MACOSX_BUNDLE_TRUE@	rm -rf $(bundle_contents)

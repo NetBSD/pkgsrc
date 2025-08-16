@@ -1,0 +1,15 @@
+$NetBSD: patch-data_sfx_Makefile.in,v 1.1 2025/08/16 20:55:51 triaxx Exp $
+
+Set DESTDIR to Applications subdirectory of PREFIX.
+
+--- data/sfx/Makefile.in.orig	2025-08-16 20:28:16.824125024 +0000
++++ data/sfx/Makefile.in
+@@ -181,7 +181,7 @@ target_vendor = @target_vendor@
+ KOBOSFX_OBJECTS = *.agw *.mid *.h
+ @BUILD_MACOSX_BUNDLE_FALSE@@BUILD_SIMPLE_BUNDLE_FALSE@kobosfxdir = $(datadir)/kobo-deluxe/sfx
+ @BUILD_MACOSX_BUNDLE_FALSE@@BUILD_SIMPLE_BUNDLE_TRUE@kobosfxdir = $(srcdir)/../@PACKAGE@/sfx
+-@BUILD_MACOSX_BUNDLE_TRUE@kobosfxdir = $(srcdir)/../@PACKAGE@.app/Contents/Resources/sfx
++@BUILD_MACOSX_BUNDLE_TRUE@kobosfxdir = @MACOS_BUNDLE_PREFIX@/@PACKAGE@.app/Contents/Resources/sfx
+ kobosfx_DATA = $(KOBOSFX_OBJECTS)
+ EXTRA_DIST = $(KOBOSFX_OBJECTS)
+ CLEANFILES = *_c.raw

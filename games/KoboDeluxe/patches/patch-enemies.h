@@ -1,4 +1,6 @@
-$NetBSD: patch-enemies.h,v 1.1 2011/09/25 19:46:21 joerg Exp $
+$NetBSD: patch-enemies.h,v 1.2 2025/08/16 20:55:51 triaxx Exp $
+
+Fix conflict with pipe2(2) syscall.
 
 --- enemies.h.orig	2011-09-24 20:34:52.000000000 +0000
 +++ enemies.h
