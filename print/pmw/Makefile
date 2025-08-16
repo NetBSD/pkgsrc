@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.5 2021/08/07 13:39:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/16 09:15:35 prlw1 Exp $
 
-DISTNAME=	pmw-4.51
+DISTNAME=	pmw-5.32
 CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_GITHUB:=PhilipHazel/}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://people.ds.cam.ac.uk/ph10/pmw.html
+HOMEPAGE=	https://philiphazel.github.io/pmw/
 COMMENT=	High quality music typesetting program
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	autoconf gmake
 
 BUILD_TARGET=	build
 
-SPECPDF=	${PREFIX}/share/doc/pmw/spec.pdf
-MESSAGE_SUBST+=	SPECPDF=${SPECPDF}
-MESSAGE_SUBST+=	GS=${PREFIX}/bin/gs
-MESSAGE_SUBST+=	BINDIR=${PREFIX}/bin
-MESSAGE_SUBST+=	DATADIR=${PREFIX}/share/pmw
-MESSAGE_SUBST+=	MANDIR=${PREFIX}/${PKGMANDIR}
-
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
+
+CONFIGURE_ARGS+=	--enable-musicxml
+CONFIGURE_ARGS+=	--enable-pdf-default
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/spec.pdf ${DESTDIR}${SPECPDF}
+	${INSTALL_DATA} ${WRKSRC}/doc/spec.pdf ${DESTDIR}${PREFIX}/share/doc/pmw/spec.pdf
 
 .include "../../mk/bsd.pkg.mk"
