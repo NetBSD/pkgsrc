@@ -1,0 +1,15 @@
+$NetBSD: patch-data_gfx_Makefile.in,v 1.1 2025/08/16 20:55:51 triaxx Exp $
+
+Set DESTDIR to Applications subdirectory of PREFIX.
+
+--- data/gfx/Makefile.in.orig	2025-08-16 20:24:22.468733214 +0000
++++ data/gfx/Makefile.in
+@@ -181,7 +181,7 @@ target_vendor = @target_vendor@
+ KOBOGFX_OBJECTS = *.png
+ @BUILD_MACOSX_BUNDLE_FALSE@@BUILD_SIMPLE_BUNDLE_FALSE@kobogfxdir = $(datadir)/kobo-deluxe/gfx
+ @BUILD_MACOSX_BUNDLE_FALSE@@BUILD_SIMPLE_BUNDLE_TRUE@kobogfxdir = $(srcdir)/../@PACKAGE@/gfx
+-@BUILD_MACOSX_BUNDLE_TRUE@kobogfxdir = $(srcdir)/../@PACKAGE@.app/Contents/Resources/gfx
++@BUILD_MACOSX_BUNDLE_TRUE@kobogfxdir = @MACOS_BUNDLE_PREFIX@/@PACKAGE@.app/Contents/Resources/gfx
+ kobogfx_DATA = $(KOBOGFX_OBJECTS)
+ EXTRA_DIST = $(KOBOGFX_OBJECTS)
+ all: all-am
