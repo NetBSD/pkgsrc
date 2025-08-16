@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/29 15:00:26 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2025/08/16 01:32:49 ryoon Exp $
 
-BLAKE2s (metabase-0.50.22/metabase.jar) = dabf585ab88b8b46918bf08cc526dc941e08dd24169cececdcfd2fb32f5f1fe9
-SHA512 (metabase-0.50.22/metabase.jar) = 7890414f3a23ff113437130e8dcd5872a5d7d9eb017bd5899196b9d10efbcb1695236a9c73f946945df204c38f1b5e8674eea00356d33b05dde1c4eb4d023251
-Size (metabase-0.50.22/metabase.jar) = 389025041 bytes
+BLAKE2s (metabase-0.56.2/metabase.jar) = 5fcd5b8d532ba3d3befe29ab7ab2c84224db6125d5bd7e6c450a2214fc195538
+SHA512 (metabase-0.56.2/metabase.jar) = 3f2202fb6a1a26b6415aab0893327e97d339d3bd0b328957de8472fbb3a6d2b545099da9fa86b78d018e50e20cfb8745b3c6f1692e19ed1be1b15406c055feed
+Size (metabase-0.56.2/metabase.jar) = 508359826 bytes
