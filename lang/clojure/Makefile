@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/12/12 14:45:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/16 01:46:43 ryoon Exp $
 
-DISTNAME=	clojure-tools-1.12.0.1488
+DISTNAME=	clojure-tools-1.12.1.1561
 PKGNAME=	${DISTNAME:S/-tools//}
 CATEGORIES=	lang
 MASTER_SITES=	https://download.clojure.org/install/
