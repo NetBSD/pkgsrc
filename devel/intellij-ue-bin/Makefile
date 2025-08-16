@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2025/08/15 18:10:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/16 03:29:05 schmonz Exp $
 
 VERSION=		2025.2
-DISTNAME=		ideaIU-${VERSION:S/.0.0//}
+JB_SUFX=		# empty
+.if ${MACHINE_ARCH} == "aarch64"
+JB_SUFX=		-aarch64
+.endif
+DISTNAME=		ideaIU-${VERSION:S/.0.0//}${JB_SUFX}
 PKGNAME=		intellij-ue-bin-${VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		https://download.jetbrains.com/idea/
@@ -25,6 +29,12 @@ REPLACE_BASH=		plugins/Kotlin/kotlinc/bin/kapt		\
 			plugins/Kotlin/kotlinc/bin/kotlinc-jvm	\
 			plugins/terminal/shell-integrations/bash/bash-integration.bash
 
+CHECK_INTERPRETER_SKIP=	${PKGBASE}/plugins/tailwindcss/server/tailwindcss-language-server \
+			${PKGBASE}/plugins/vuejs/vue-language-server/bin/vue-language-server.js \
+			${PKGBASE}/plugins/nodeJS/js/ts-file-loader/node_modules/tsx/dist/cli.mjs \
+			${PKGBASE}/plugins/nodeJS/js/ts-file-loader/node_modules/esbuild/bin/esbuild \
+			${PKGBASE}/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules/semver/bin/semver.js
+
 CHECK_SHLIBS_SKIP=	*
 CHECK_RELRO_SUPPORTED=	no
 CHECK_PIE_SUPPORTED=	no
@@ -43,13 +53,20 @@ SUBST_FILES.vmoptions=	bin/idea64.vmoptions
 SUBST_SED.vmoptions=	-e 's|^-Xmx.*|-Xmx4096m|'
 SUBST_SED.vmoptions+=	-e 's|^-Xms.*|-Xms4096m|'
 
+PLIST_VARS+=		aarch64 x86_64
+.if ${MACHINE_ARCH} == "aarch64"
+PLIST.aarch64=		yes
+.else
+PLIST.x86_64=		yes
+.endif
+
 pre-configure:
 	cd ${WRKSRC} &&	\
-	${RM} -r bin/*.orig \
+	${RM} -rf bin/*.orig \
 		bin/fsnotifier \
-		lib/jna/amd64/libjnidispatch.so \
-		lib/native/linux-x86_64/libsqliteij.so \
-		lib/pty4j/linux/x86-64/libpty.so \
+		lib/jna/*/libjnidispatch.so \
+		lib/native/*/libsqliteij.so \
+		lib/pty4j/linux/*/libpty.so \
 		plugins/cwm-plugin/quiche-native/*/*.so \
 		plugins/webp/lib/libwebp/linux/*.so \
 		plugins/maven/lib/maven3/lib/jansi-native/Windows/*/*.dll \
