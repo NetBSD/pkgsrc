@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.31 2025/08/16 20:55:51 triaxx Exp $
 #
 
 DISTNAME=	KoboDeluxe-0.5.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://olofson.net/kobodl/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +20,17 @@ CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}/games
 
 # Fails with C++14 default language.
 FORCE_CXX_STD=	c++03
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+MACOS_BUNDLE_PREFIX=	${PREFIX}/Applications
+SUBST_CLASSES+=		app
+SUBST_STAGE.app=	pre-configure
+SUBST_MESSAGE.app=	Fixing installation paths.
+SUBST_FILES.app=	Makefile.in data/gfx/Makefile.in data/sfx/Makefile.in
+SUBST_VARS.app=		MACOS_BUNDLE_PREFIX
+PLIST_SRC=		PLIST.bundle
+.endif
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
