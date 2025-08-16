@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/08/16 00:58:19 ryoon Exp $
+
+BLAKE2s (libcupsfilters-2.1.1.tar.xz) = a7c57bcf329169f33d5c69db2574791d601e83c580842a978c5a00f7d57fa12f
+SHA512 (libcupsfilters-2.1.1.tar.xz) = 3025a52713a06cc5f79b2c55bcb4a331fddeb7439636951fd25bfb77c048a1a336143a1b03496e284f12de9c97f35cf1cea44c99f7e8d02f90d849e8f4f083ad
+Size (libcupsfilters-2.1.1.tar.xz) = 1446192 bytes
+SHA1 (patch-cupsfilters_filter.c) = 519552f93f2e656955a15ca51fbd817f04ccbe4d
+SHA1 (patch-cupsfilters_testfilters.c) = 62aa81d13f0e7b392f9ad1511bdffa489f730e1c
