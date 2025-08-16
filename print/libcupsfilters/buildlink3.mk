@@ -1,0 +1,17 @@
+# $NetBSD: buildlink3.mk,v 1.1 2025/08/16 00:58:19 ryoon Exp $
+
+BUILDLINK_TREE+=	libcupsfilters
+
+.if !defined(LIBCUPSFILTERS_BUILDLINK3_MK)
+LIBCUPSFILTERS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libcupsfilters+=	libcupsfilters>=2.1.1
+BUILDLINK_PKGSRCDIR.libcupsfilters?=	../../print/libcupsfilters
+
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
+.include "../../print/libcups/buildlink3.mk"
+.include "../../print/qpdf/buildlink3.mk"
+.endif	# LIBCUPSFILTERS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libcupsfilters
