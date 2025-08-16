@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/08/16 01:20:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/16 22:48:00 ryoon Exp $
 
 DISTNAME=	wasi-libc-0.0.0pre20250809
 CATEGORIES=	lang
@@ -51,9 +51,9 @@ BUILD_TARGET=	no-check-symbols
 # It conflicts with musl libc so must be removed.
 pre-configure:
 	rm -f ${BUILDLINK_DIR}/include/iconv.h
-	${MKDIR} ${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasm32-unknown-wasi
+	${MKDIR} ${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasi
 	${MV} ${WRKDIR}/libclang_rt.builtins-wasm32-wasi-25.0/*.a \
-		${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasm32-unknown-wasi
+		${WRKSRC}/build/wasm32-wasi/resource-dir/lib/wasi
 
 ABI=			# 32
 CFLAGS+=		-O2
