@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2025/06/22 11:13:07 kim Exp $
+# $NetBSD: Makefile,v 1.120 2025/08/16 13:22:47 bsiegert Exp $
 
 DISTNAME=	ncurses-6.5
 PKGREVISION=	1
@@ -16,6 +16,7 @@ SUPERSEDES+=	ncursesw-[0-9]*
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config tbl
+FORCE_C_STD=		gnu99
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libtool
