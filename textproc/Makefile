@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1534 2025/08/13 15:41:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.1535 2025/08/16 14:34:52 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1390,6 +1390,7 @@ SUBDIR+=	ruby-yard
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
+SUBDIR+=	sb
 SUBDIR+=	scdoc
 SUBDIR+=	scew
 SUBDIR+=	schemastore
