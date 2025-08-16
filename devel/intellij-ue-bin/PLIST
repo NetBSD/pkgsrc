@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/08/15 18:10:45 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/16 03:29:05 schmonz Exp $
 intellij-ue-bin/Install-Linux-tar.txt
 intellij-ue-bin/bin/appletviewer.policy
 intellij-ue-bin/bin/brokenPlugins.db
@@ -193,7 +193,8 @@ intellij-ue-bin/lib/rhino.jar
 intellij-ue-bin/lib/rt/servlet.jar
 intellij-ue-bin/lib/rt/xerces1.jar
 intellij-ue-bin/lib/rt/xml-apis.jar
-intellij-ue-bin/lib/skiko-awt-runtime-all/libskiko-linux-x64.so
+${PLIST.aarch64}intellij-ue-bin/lib/skiko-awt-runtime-all/libskiko-linux-arm64.so
+${PLIST.x86_64}intellij-ue-bin/lib/skiko-awt-runtime-all/libskiko-linux-x64.so
 intellij-ue-bin/lib/stats.jar
 intellij-ue-bin/lib/testFramework.jar
 intellij-ue-bin/lib/trove.jar
