@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4983 2025/08/16 01:20:39 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4984 2025/08/16 01:33:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7262,3 +7262,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/cups-filters to 2.0.1 [ryoon 2025-08-16]
 	Added print/cups-browsed version 2.1.1 [ryoon 2025-08-16]
 	Updated lang/wasi-libc to 0.0.0pre20250809 [ryoon 2025-08-16]
+	Updated www/metabase to 0.56.2 [ryoon 2025-08-16]
