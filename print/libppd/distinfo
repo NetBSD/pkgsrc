@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/16 01:02:27 ryoon Exp $
+
+BLAKE2s (libppd-2.1.1.tar.xz) = c3c2202768df51fb5f6c563695ea751f6792adcf6aaa897bcbba8a61c54ceee2
+SHA512 (libppd-2.1.1.tar.xz) = b469a94d090f49776486c8b5570bd40d964ea493b81fc404c23e88f18cfdaef2bbddcdf5123c243d9284fa254eec727e6ea4003075386f8f70c3f9145307458b
+Size (libppd-2.1.1.tar.xz) = 585776 bytes
