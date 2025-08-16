@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.948 2025/08/16 01:03:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.949 2025/08/16 01:12:32 ryoon Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -29,6 +29,7 @@ SUBDIR+=	cjkutils
 SUBDIR+=	cnprint
 SUBDIR+=	cups
 SUBDIR+=	cups-base
+SUBDIR+=	cups-browsed
 SUBDIR+=	cups-drivers-Magicolor5440DL
 SUBDIR+=	cups-filters
 SUBDIR+=	cups-pdf
