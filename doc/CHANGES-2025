@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4985 2025/08/16 01:46:56 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4986 2025/08/16 01:49:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7264,3 +7264,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/wasi-libc to 0.0.0pre20250809 [ryoon 2025-08-16]
 	Updated www/metabase to 0.56.2 [ryoon 2025-08-16]
 	Updated lang/clojure to 1.12.1.1561 [ryoon 2025-08-16]
+	Added lang/clojure-leiningen version 2.11.2 [ryoon 2025-08-16]
