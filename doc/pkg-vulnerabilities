@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.504 2025/08/16 15:16:04 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.505 2025/08/16 15:58:53 osa Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27345,3 +27345,4 @@ vault<1.20.2	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-60
 aide<0.19.2		improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-54389
 aide>=0.13<0.19.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-54409
 nginx-devel>=0.7.22<1.29.1	sensitive-information-exposure	https://nvd.nist.gov/vuln/detail/CVE-2025-53859
+nginx>=0.7.22<1.28.0nb5	sensitive-information-exposure	https://nvd.nist.gov/vuln/detail/CVE-2025-53859
