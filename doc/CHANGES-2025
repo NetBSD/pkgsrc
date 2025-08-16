@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4992 2025/08/16 02:48:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.4993 2025/08/16 06:38:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7271,3 +7271,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-unicode-display_width to 3.1.5 [taca 2025-08-16]
 	Updated www/ruby-aws-partitions to 1.1147.0 [taca 2025-08-16]
 	Updated www/ruby-excon to 1.2.9 [taca 2025-08-16]
+	Updated devel/protobuf to 32.0 [adam 2025-08-16]
+	Updated devel/py-protobuf to 6.32.0 [adam 2025-08-16]
