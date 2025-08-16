@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4979 2025/08/16 00:58:51 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.4980 2025/08/16 01:02:41 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7258,3 +7258,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx-devel to 1.29.1 [osa 2025-08-15]
 	Updated print/qpdf to 12.2.0 [ryoon 2025-08-16]
 	Added print/libcupsfilters version 2.1.1 [ryoon 2025-08-16]
+	Added print/libppd version 2.1.1 [ryoon 2025-08-16]
