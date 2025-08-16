@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.31 2025/06/30 14:47:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/08/16 06:37:36 adam Exp $
 bin/protoc
 bin/protoc-${PKGVERSION}.0
 bin/protoc-gen-upb
 bin/protoc-gen-upb-${PKGVERSION}.0
+bin/protoc-gen-upb_minitable
+bin/protoc-gen-upb_minitable-${PKGVERSION}.0
 bin/protoc-gen-upbdefs
 bin/protoc-gen-upbdefs-${PKGVERSION}.0
 include/google/protobuf/any.h
@@ -26,7 +28,6 @@ include/google/protobuf/compiler/cpp/options.h
 include/google/protobuf/compiler/csharp/csharp_generator.h
 include/google/protobuf/compiler/csharp/names.h
 include/google/protobuf/compiler/importer.h
-include/google/protobuf/compiler/java/context.h
 include/google/protobuf/compiler/java/doc_comment.h
 include/google/protobuf/compiler/java/generator.h
 include/google/protobuf/compiler/java/helpers.h
@@ -161,6 +162,7 @@ include/google/protobuf/unknown_field_set.h
 include/google/protobuf/util/delimited_message_util.h
 include/google/protobuf/util/field_comparator.h
 include/google/protobuf/util/field_mask_util.h
+include/google/protobuf/util/internal_timeval.h
 include/google/protobuf/util/json_util.h
 include/google/protobuf/util/message_differencer.h
 include/google/protobuf/util/time_util.h
@@ -239,6 +241,7 @@ include/upb/mini_table/message.h
 include/upb/mini_table/sub.h
 include/upb/port/atomic.h
 include/upb/port/def.inc
+include/upb/port/sanitizers.h
 include/upb/port/undef.inc
 include/upb/port/vsnprintf_compat.h
 include/upb/reflection/common.h
@@ -282,11 +285,16 @@ include/upb/util/def_to_proto.h
 include/upb/util/required_fields.h
 include/upb/wire/byte_size.h
 include/upb/wire/decode.h
+include/upb/wire/decode_fast/combinations.h
+include/upb/wire/decode_fast/data.h
+include/upb/wire/decode_fast/select.h
 include/upb/wire/encode.h
 include/upb/wire/eps_copy_input_stream.h
-include/upb/wire/internal/decode_fast.h
+include/upb/wire/internal/decoder.h
+include/upb/wire/internal/reader.h
 include/upb/wire/reader.h
 include/upb/wire/types.h
+include/upb/wire/writer.h
 include/utf8_range.h
 include/utf8_validity.h
 lib/cmake/protobuf/protobuf-config-version.cmake
