@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2025/06/04 14:21:14 taca Exp $
+$NetBSD: distinfo,v 1.9 2025/08/16 08:04:44 taca Exp $
 
-BLAKE2s (google-protobuf-4.31.1.gem) = c0884cccd93f39161c94479b56339779b6ea52294d29f6661591ebe5ccc366d6
-SHA512 (google-protobuf-4.31.1.gem) = 9fd923a527173aaabdbb79957126172e69696f25eca90a4c88bb878786c99cccce39297563fc5b67e80b216bc0e4a44e5f6616c64a20c653f2ead67d4e1eb5fe
-Size (google-protobuf-4.31.1.gem) = 303104 bytes
+BLAKE2s (google-protobuf-4.32.0.gem) = 308de07ad77d9b34426f176acf4ac82d2c1129015c79d987cfd68fb18357e609
+SHA512 (google-protobuf-4.32.0.gem) = ec2756aeb6d567d6edf371e17c39594fc4a716c70ecad97bcbd98542a36fc680bb2872136c923d4cae4620b2a6a766214a76f0b5d4b6046347da575178bc898c
+Size (google-protobuf-4.32.0.gem) = 299520 bytes
 SHA1 (patch-ext_google_protobuf__c_ruby-upb.h) = 74949fae8f63cd543de16a6d9dc5a0d1731bf838
