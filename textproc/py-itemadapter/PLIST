@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 12:14:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/16 06:51:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/itemadapter/__init__.py
 ${PYSITELIB}/itemadapter/__init__.pyc
 ${PYSITELIB}/itemadapter/__init__.pyo
 ${PYSITELIB}/itemadapter/_imports.py
 ${PYSITELIB}/itemadapter/_imports.pyc
 ${PYSITELIB}/itemadapter/_imports.pyo
+${PYSITELIB}/itemadapter/_json_schema.py
+${PYSITELIB}/itemadapter/_json_schema.pyc
+${PYSITELIB}/itemadapter/_json_schema.pyo
 ${PYSITELIB}/itemadapter/adapter.py
 ${PYSITELIB}/itemadapter/adapter.pyc
 ${PYSITELIB}/itemadapter/adapter.pyo
