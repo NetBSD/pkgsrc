@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.135 2025/07/10 20:54:15 osa Exp $
+$NetBSD: distinfo,v 1.136 2025/08/16 15:52:43 osa Exp $
 
 BLAKE2s (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 6c3880dc781886fb1f4190fa9b8f1459246cc5d157aaed3b9a24cc7abaf7c5a1
 SHA512 (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = b780bea19736f5db844f11b0b407c159cc6ba7326b50177cefde6f8ee875238d3618e50d29b132a66fe98103cb5656f33895e5989d98d4cdc26cfeaa7f12865f
@@ -69,3 +69,4 @@ Size (vozlt-nginx-module-vts-b6f6528_GH.tar.gz) = 182368 bytes
 SHA1 (patch-auto_cc_conf) = 5e6a479ba419cd16dedeb3b4c47dc685d126ef6a
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
 SHA1 (patch-conf_nginx.conf) = d2ca1954e9682b9d0007cc02e5841e3986ecf5c1
+SHA1 (patch-src_mail_ngx__mail__handler.c) = 701c274ad5405484bb07ab5996d0f2afd1b8773a
