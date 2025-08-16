@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: metabase.sh,v 1.1 2024/08/29 15:00:26 ryoon Exp $
+# $NetBSD: metabase.sh,v 1.2 2025/08/16 01:32:50 ryoon Exp $
 #
 # PROVIDE: metabase
 # REQUIRE: DAEMON
@@ -15,6 +15,7 @@ stop_cmd="metabase_stop"
 status_cmd="metabase_status"
 extra_commands="status"
 
+JAVA_OPTS="${JAVA_OPTS} -Xmx8g"
 JAVA_OPTS="${JAVA_OPTS} -XX:+IgnoreUnrecognizedVMOptions"
 JAVA_OPTS="${JAVA_OPTS} -Dfile.encoding=UTF-8"
 JAVA_OPTS="${JAVA_OPTS} -Dlog4j.configurationFile=file:/usr/pkg/share/metabase/conf/log4j2.xml"
