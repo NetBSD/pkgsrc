@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/06/07 11:09:24 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/08/16 06:45:47 adam Exp $
 
-BLAKE2s (argparse-manpage-4.6.tar.gz) = 699576519939c82006d62bbb3ae24c633bb43cdcf3ed0b564f3941b8b375b597
-SHA512 (argparse-manpage-4.6.tar.gz) = ba9149609b3724811b4cb780c2ebcbfde7f0850153df679fad9e7c12a4a25f84635669ef8f6011ed023228c57e3917cb4850b2d7c395c38191a179edfc288028
-Size (argparse-manpage-4.6.tar.gz) = 58674 bytes
+BLAKE2s (argparse_manpage-4.7.tar.gz) = 5fe40de27b572d83a0dff348476622f45ee894dd0dfbefdf6bae4cbc595f1356
+SHA512 (argparse_manpage-4.7.tar.gz) = 88c2e0e0747f5950b131d5456b1bc153e64d11ca41d87e3c995d91f7ffb662685a5c58f7ea99f011151aa72e45a5bcab98ac6729e20a19d086a7798d9c783452
+Size (argparse_manpage-4.7.tar.gz) = 58871 bytes
