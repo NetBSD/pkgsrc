@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/05/20 05:44:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/08/16 06:48:01 adam Exp $
 bin/deep-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,6 +14,9 @@ ${PYSITELIB}/deepdiff/anyset.pyo
 ${PYSITELIB}/deepdiff/base.py
 ${PYSITELIB}/deepdiff/base.pyc
 ${PYSITELIB}/deepdiff/base.pyo
+${PYSITELIB}/deepdiff/colored_view.py
+${PYSITELIB}/deepdiff/colored_view.pyc
+${PYSITELIB}/deepdiff/colored_view.pyo
 ${PYSITELIB}/deepdiff/commands.py
 ${PYSITELIB}/deepdiff/commands.pyc
 ${PYSITELIB}/deepdiff/commands.pyo
