@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.947 2025/08/16 00:59:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.948 2025/08/16 01:03:13 ryoon Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -86,6 +86,7 @@ SUBDIR+=	libcupsfilters
 SUBDIR+=	libgxps
 SUBDIR+=	libharu
 SUBDIR+=	libpaper
+SUBDIR+=	libppd
 SUBDIR+=	libspectre
 SUBDIR+=	lilypond
 SUBDIR+=	luajittex
