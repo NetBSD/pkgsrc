@@ -1,4 +1,6 @@
-$NetBSD: patch-enemy.cpp,v 1.1 2011/09/25 19:46:21 joerg Exp $
+$NetBSD: patch-enemy.cpp,v 1.2 2025/08/16 20:55:51 triaxx Exp $
+
+Fix conflict with pipe2(2) syscall.
 
 --- enemy.cpp.orig	2011-09-24 20:34:55.000000000 +0000
 +++ enemy.cpp
