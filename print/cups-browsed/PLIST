@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/16 01:11:39 ryoon Exp $
+libexec/cups/backend/implicitclass
+man/man5/cups-browsed.conf.5
+man/man8/cups-browsed.8
+sbin/cups-browsed
+share/doc/cups-browsed/ABOUT-NLS
+share/doc/cups-browsed/AUTHORS
+share/doc/cups-browsed/CHANGES-1.x.md
+share/doc/cups-browsed/CHANGES.md
+share/doc/cups-browsed/CONTRIBUTING.md
+share/doc/cups-browsed/COPYING
+share/doc/cups-browsed/DEVELOPING.md
+share/doc/cups-browsed/INSTALL
+share/doc/cups-browsed/LICENSE
+share/doc/cups-browsed/NOTICE
+share/doc/cups-browsed/README.md
+share/examples/cups-filters/cups-browsed.conf
+@pkgdir etc/cups
