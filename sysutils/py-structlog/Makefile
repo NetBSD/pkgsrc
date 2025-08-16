@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/05/10 11:14:32 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/16 07:04:57 adam Exp $
 
-DISTNAME=	structlog-25.3.0
+DISTNAME=	structlog-25.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/structlog/}
