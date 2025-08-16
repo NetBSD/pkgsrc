@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4977 2025/08/15 20:35:11 osa Exp $
+$NetBSD: CHANGES-2025,v 1.4978 2025/08/16 00:57:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7256,3 +7256,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/intellij-ce-bin to 2025.2 [schmonz 2025-08-15]
 	Updated devel/intellij-ue-bin to 2025.2 [schmonz 2025-08-15]
 	Updated www/nginx-devel to 1.29.1 [osa 2025-08-15]
+	Updated print/qpdf to 12.2.0 [ryoon 2025-08-16]
