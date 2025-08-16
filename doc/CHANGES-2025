@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4993 2025/08/16 06:38:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.4994 2025/08/16 06:54:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7273,3 +7273,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-excon to 1.2.9 [taca 2025-08-16]
 	Updated devel/protobuf to 32.0 [adam 2025-08-16]
 	Updated devel/py-protobuf to 6.32.0 [adam 2025-08-16]
+	Updated devel/py-argparse-manpage to 4.7 [adam 2025-08-16]
+	Updated textproc/py-deepdiff to 8.6.0 [adam 2025-08-16]
+	Updated textproc/py-itemadapter to 0.12.1 [adam 2025-08-16]
+	Updated finance/py-braintree to 4.38.0 [adam 2025-08-16]
