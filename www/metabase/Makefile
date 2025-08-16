@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/08/29 15:00:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/16 01:32:49 ryoon Exp $
 
 DISTNAME=	metabase
-PKGNAME=	${DISTNAME}-0.50.22
+PKGNAME=	${DISTNAME}-0.56.2
 CATEGORIES=	www
-MASTER_SITES=	https://downloads.metabase.com/v${PKGVERSION_NOREV:S/rc/-RC/}/
+MASTER_SITES=	https://downloads.metabase.com/v${PKGVERSION_NOREV:S/rc/-RC/}.x/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.jar
 
