@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/08/16 01:49:03 ryoon Exp $
+
+BLAKE2s (leiningen-2.11.2-standalone.jar) = e7ea309cc7ee10db8c40ef25670ed4074ba421377d7cda7175b9d9ef3a0fd2c1
+SHA512 (leiningen-2.11.2-standalone.jar) = a49e82acccdaae4f619796adf1ef9d0cfc4998c01f4c918520bb3f757b9f7808fb5c65241f79aea730d1e90181c9c2983b7219ef0893103f7abcedf94afcafd5
+Size (leiningen-2.11.2-standalone.jar) = 16481883 bytes
+BLAKE2s (leiningen-2.11.2.tar.gz) = bd30b62fb4922689dfefe4261710ebbc58c59b02a416c077843024c0d1c915f8
+SHA512 (leiningen-2.11.2.tar.gz) = a5fb5a15307aa22d8d3bb60622b30c4ee0ce31a810e0d5b0013f7ed898da9b3d9722137aa5d2add2a002f169eefc0cb2fc813ab2a90edb845195046a3818f1b4
+Size (leiningen-2.11.2.tar.gz) = 981415 bytes
+SHA1 (patch-bin_lein-pkg) = 391670433ca9277ce4ade643415091d474027a36
