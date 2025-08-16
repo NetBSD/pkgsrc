@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/16 01:11:39 ryoon Exp $
+
+BLAKE2s (cups-browsed-2.1.1.tar.xz) = 88633e46d2545d6ce40f15a7cbe2c69ec18f58d3ec7abe68a703c2f6d3fc9a8f
+SHA512 (cups-browsed-2.1.1.tar.xz) = b5048bce179fc037f7dd737b4ab2a7c8b5bdf8fd5554ebb742675792f05b984c7286c2760797c07bca3fccf635259d924acf9579908681488ef1f37ce830d335
+Size (cups-browsed-2.1.1.tar.xz) = 419892 bytes
