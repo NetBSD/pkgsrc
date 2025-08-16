@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.4998 2025/08/16 10:30:16 prlw1 Exp $
+$NetBSD: CHANGES-2025,v 1.4999 2025/08/16 14:35:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7285,3 +7285,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-google-protobuf to 4.32.0 [taca 2025-08-16]
 	Updated print/pmw to 5.32 [prlw1 2025-08-16]
 	Updated devel/physfs to 3.2.0 [prlw1 2025-08-16]
+	Added textproc/sb version 0.3.8 [pin 2025-08-16]
