@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:51:38 nia Exp $
+$NetBSD: distinfo,v 1.21 2025/08/17 20:07:06 pho Exp $
 
 BLAKE2s (hugs98-Sep2006.tar.gz) = 48c90590740b31354b5aaa76198ebfaad008e904530918cdc90ade5f9e1759f0
 SHA512 (hugs98-Sep2006.tar.gz) = d09fb0d7da2fc701896cd25dba2823f30891f84190163de8bea916be3942f156b8647361fbbb394d5322e49c65f21ec864ae947287d4d056c9bb5530a1393b22
@@ -8,3 +8,4 @@ SHA1 (patch-packages_base_configure) = ebd2c0b0d169ae091cd23f03bc8b8d6d9431450a
 SHA1 (patch-packages_base_configure.ac) = 9653d4dba5085402d77346a570c5202dddd5c4bc
 SHA1 (patch-packages_base_include_HsBase.h) = b71d74c302bd8974176e55d076ac32ca029a6763
 SHA1 (patch-packages_base_include_HsBaseConfig.h.in) = 3cbe42c0752952238f23069d9524c7015337434d
+SHA1 (patch-src_bignums.c) = 9a8095c48d5a5087123585f9145dad40782582f8
