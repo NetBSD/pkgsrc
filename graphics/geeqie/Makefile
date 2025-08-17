@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.147 2025/07/13 08:17:38 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2025/08/17 19:33:39 wiz Exp $
 
 DISTNAME=	geeqie-2.6.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -54,6 +54,7 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
