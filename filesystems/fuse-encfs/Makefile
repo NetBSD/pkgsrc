@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/18 05:36:13 pho Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/17 19:56:27 wiz Exp $
 #
 
 DISTNAME=	encfs-1.9.5
@@ -14,10 +14,11 @@ HOMEPAGE=	https://vgough.github.io/encfs/
 COMMENT=	FUSE Encrypted Filesystem
 LICENSE=	gnu-gpl-v3
 
-
 USE_TOOLS+=	autoconf cmake pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CONFIGURE_DIRS=	${WRKDIR}/build
 CMAKE_ARG_PATH=	${WRKSRC}
