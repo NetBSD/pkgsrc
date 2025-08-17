@@ -1,0 +1,13 @@
+$NetBSD: patch-cmake_sscanf_CMakeLists.txt,v 1.1 2025/08/17 08:50:35 wiz Exp $
+
+cmake 4 compatibility
+
+--- cmake/sscanf/CMakeLists.txt.orig	2025-08-17 08:46:15.011390799 +0000
++++ cmake/sscanf/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ PROJECT($CMAKE_PROJECT_NAME)
+ add_definitions()
+ include_directories()
