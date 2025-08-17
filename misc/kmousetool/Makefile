@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/04/24 14:15:09 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/08/17 21:03:55 wiz Exp $
 
 DISTNAME=	kmousetool-${KAPPSVER}
 PKGREVISION=	8
@@ -19,4 +19,5 @@ USE_TOOLS+=	msgmerge
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
