@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/08/25 06:18:38 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2025/08/17 12:21:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucommon
 PKG_SUPPORTED_OPTIONS=	gnutls tests
@@ -8,7 +8,6 @@ PKG_SUGGESTED_OPTIONS+=	gnutls
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 CMAKE_CONFIGURE_ARGS+=	-DCRYPTO_GNUTLS=ON
-BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.0.0
 .include "../../security/gnutls/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DCRYPTO_GNUTLS=OFF
 .endif
