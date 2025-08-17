@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5012 2025/08/17 09:38:18 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5013 2025/08/17 10:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7299,3 +7299,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Devel-OverloadInfo to 0.008 [wiz 2025-08-17]
 	Updated devel/p5-Test-Script to 1.31 [wiz 2025-08-17]
 	Added graphics/lerc version 4.0.0 [bsiegert 2025-08-17]
+	Updated databases/p5-DBD-mysql to 5.013 [wiz 2025-08-17]
