@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 09:09:13 wiz Exp $
+
+cmake 4 compatibility
+
+--- CMakeLists.txt.orig	2025-08-17 09:08:34.847397574 +0000
++++ CMakeLists.txt
+@@ -11,7 +11,7 @@
+ 
+ set(PHYSFS_VERSION 3.2.0)
+ 
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(PhysicsFS VERSION ${PHYSFS_VERSION} LANGUAGES C )
+ 
