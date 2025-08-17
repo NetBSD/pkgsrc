@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/08/10 03:33:00 wiz Exp $
+$NetBSD: distinfo,v 1.20 2025/08/17 09:33:02 wiz Exp $
 
-BLAKE2s (Test-Script-1.30.tar.gz) = 32d3f33517af1b892ba7434836b2cb8e5dd9607aada4453519ac33a07f151487
-SHA512 (Test-Script-1.30.tar.gz) = 0adee9fd845c3d50e168e1cf1a92606c14582b65bec948ec97fc92e3d3a87154e30b02102a0b60f2f2b912a8ea7ced4a50db63707f60251c79e61de8e8557dc9
-Size (Test-Script-1.30.tar.gz) = 26360 bytes
+BLAKE2s (Test-Script-1.31.tar.gz) = f0dba3b6119b88e6ba533f6e8f3f9195ddc74aa3918cf963c544f9386360b141
+SHA512 (Test-Script-1.31.tar.gz) = 4ed8e89a4606f28e281e04ac4bc667915b4dc1422eaed407b2a792ea5c9428ee7901947e22cd425d48701b3b6e3c1419a7c52f83d92f8378ad14c49e03f8cf94
+Size (Test-Script-1.31.tar.gz) = 26161 bytes
