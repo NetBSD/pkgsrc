@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2025/08/16 10:29:37 prlw1 Exp $
+$NetBSD: distinfo,v 1.17 2025/08/17 09:09:13 wiz Exp $
 
 BLAKE2s (physfs-3.2.0.tar.gz) = 5313f11fd57ee2a5b806f5172e7457fe03bed3181ef63e17030e78db1ef7e363
 SHA512 (physfs-3.2.0.tar.gz) = e0d84d6ac6bd8f0973149a5add54ed5ed890b5fabb4592ba61b59a3b3e01c05e05f1754f18d7a1c8d72e68777a23cda0c50dc0512cf57a8310a950bf908f54b1
 Size (physfs-3.2.0.tar.gz) = 242857 bytes
+SHA1 (patch-CMakeLists.txt) = fcef62d9ea58e42036255de20186998d6d4bb723
 SHA1 (patch-src_physfs__platform__unix.c) = 704cbbdc45c99e583983dadfb1e0d7950c4957cf
