@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/04/24 14:13:31 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/08/17 12:39:57 wiz Exp $
 
 DISTNAME=	kde-dev-scripts-${KAPPSVER}
 PKGREVISION=	7
@@ -7,6 +7,8 @@ CATEGORIES=	devel
 HOMEPAGE=	https://kde.org/applications/development/
 COMMENT=	Scripts useful during development of KDE software
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../meta-pkgs/kde/applications.mk"
 
