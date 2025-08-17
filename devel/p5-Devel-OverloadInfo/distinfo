@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:16:27 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/08/17 09:32:26 wiz Exp $
 
-BLAKE2s (Devel-OverloadInfo-0.007.tar.gz) = eb37bcaf7989a86c3b8c8ef0188ff149d1886b37e80f2fc9c142ad195a576147
-SHA512 (Devel-OverloadInfo-0.007.tar.gz) = 4db830d6f9edb467626213ab4d45b3e4b8fa9b3c38fad1349233f7b420d08be42833e57daa9a8076f4127cafba92f4cfc177ca33bd19cf2a582b644ac1ae7d72
-Size (Devel-OverloadInfo-0.007.tar.gz) = 16258 bytes
+BLAKE2s (Devel-OverloadInfo-0.008.tar.gz) = fb196fce4764dd980f5ed0fb24a6cb4c08ef5d142eb8524588f9bf8263c36225
+SHA512 (Devel-OverloadInfo-0.008.tar.gz) = 1c614e1132c8c763ccac79ea3c80c08636d617af55bdcba4cc52aa06c9cefca07fd4f1921e54f5dc76b140ed8546da917602eab81f59efd6c490f23b8b8abe41
+Size (Devel-OverloadInfo-0.008.tar.gz) = 16801 bytes
