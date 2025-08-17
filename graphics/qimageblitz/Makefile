@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/04/24 14:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/08/17 09:11:33 wiz Exp $
 
 DISTNAME=	qimageblitz-0.0.6
 PKGREVISION=	29
@@ -12,6 +12,8 @@ COMMENT=	Interm graphical effect and filter library for KDE4.0
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 #BUILD_MAKE_FLAGS+=	VERBOSE=1
 

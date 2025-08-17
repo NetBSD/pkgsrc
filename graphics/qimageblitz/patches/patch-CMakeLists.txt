@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 09:11:33 wiz Exp $
+
+cmake 4 compatibility.
+
+--- CMakeLists.txt.orig	2025-08-17 09:10:32.960592633 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(blitz)
+ 
++cmake_minimum_required(VERSION 3.5)
++
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
+ find_package(Qt4 REQUIRED)
+ # properly set up compile flags (QT_DEBUG/QT_NO_DEBUG, ...)
