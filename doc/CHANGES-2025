@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5006 2025/08/17 09:24:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5007 2025/08/17 09:30:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7293,3 +7293,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/phonon to 4.10.3nb20 [wiz 2025-08-17]
 	Updated devel/p5-Class-Autouse to 2.02 [wiz 2025-08-17]
 	Updated devel/p5-Class-Unload to 0.12 [wiz 2025-08-17]
+	Updated devel/p5-Data-Entropy to 0.008 [wiz 2025-08-17]
