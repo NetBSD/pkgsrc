@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/04/17 21:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/17 12:19:20 wiz Exp $
 
 DISTNAME=	ucommon-7.0.0
 PKGREVISION=	18
@@ -14,8 +14,13 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+# does not support c++17, so force c++11
+USE_CXX_FEATURES=	c++11
+FORCE_CXX_STD=		c++11
+
 # Incompatible with OpenSSL 1.1
 CMAKE_CONFIGURE_ARGS+=	-DCRYPTO_OPENSSL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in
