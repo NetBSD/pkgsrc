@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.7 2025/08/17 08:50:35 wiz Exp $
+
+cmake 4 compatibility
+
+--- CMakeLists.txt.orig	2021-04-11 09:39:22.000000000 +0000
++++ CMakeLists.txt
+@@ -2,7 +2,7 @@
+ # CMAKE SETUP
+ #
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
+ # The CMake Policy mechanism is designed to help keep existing projects building as new versions of CMake introduce changes in behavior.
+ # http://www.cmake.org/cmake/help/cmake2.6docs.html#command:cmake_policy
