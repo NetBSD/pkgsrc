@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.169 2025/08/14 10:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.170 2025/08/17 09:38:57 bsiegert Exp $
 
 VERSION_BASE=	4.7.0
 # Accomodate testing unreleased versions.
 VERSION_RC=
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
 
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-sphinx
 CONFIGURE_ARGS+=	--disable-webp
 CONFIGURE_ARGS+=	--disable-zstd
 CONFIGURE_ARGS+=	--disable-opengl
+CONFIGURE_ARGS+=	--enable-lerc
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
@@ -48,5 +49,6 @@ post-install:
 # XXX for liblzma; there are more potential suppliers
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/jbigkit/buildlink3.mk"
+.include "../../graphics/lerc/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
