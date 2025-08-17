@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5008 2025/08/17 09:31:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5009 2025/08/17 09:32:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7295,3 +7295,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Class-Unload to 0.12 [wiz 2025-08-17]
 	Updated devel/p5-Data-Entropy to 0.008 [wiz 2025-08-17]
 	Updated devel/p5-Data-Float to 0.015 [wiz 2025-08-17]
+	Updated devel/p5-Date-Manip to 6.98 [wiz 2025-08-17]
