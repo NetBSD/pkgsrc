@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 09:18:06 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-17 09:16:13.235500026 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ cmake_minimum_required(VERSION 2.8.12)
+ 
+-project( kdiagram )
++project( kdiagram VERSION 2.8.0)
+ 
+ set(KF5_MIN_VERSION "5.60.0")
+ find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)

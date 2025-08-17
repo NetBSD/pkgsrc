@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/24 14:14:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/17 09:18:06 wiz Exp $
 
 DISTNAME=	kdiagram-2.8.0
 PKGREVISION=	12
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DECM_MKSPECS_INSTALL_DIR=${QTDIR}/mkspecs/modules
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 
