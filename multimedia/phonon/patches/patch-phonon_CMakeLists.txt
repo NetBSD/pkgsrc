@@ -1,0 +1,21 @@
+$NetBSD: patch-phonon_CMakeLists.txt,v 1.1 2025/08/17 09:06:30 wiz Exp $
+
+cmake 4 compatibility.
+
+--- phonon/CMakeLists.txt.orig	2025-08-17 09:04:31.282190211 +0000
++++ phonon/CMakeLists.txt
+@@ -168,13 +168,7 @@ endif (${CMAKE_SYSTEM_NAME} MATCHES "Sun
+ set_target_properties(${PHONON_LIB_SONAME} PROPERTIES
+                                            VERSION ${PHONON_LIB_VERSION}
+                                            SOVERSION ${PHONON_LIB_SOVERSION}
+-                                           DEFINE_SYMBOL MAKE_PHONON_LIB
+-                                           LINK_INTERFACE_LIBRARIES "")
+-# LINK_INTERFACE_LIBRARIES: By default don't add any linked libraries to the "exported"
+-# link interfaces, so that executables linking against this library
+-# will not automatically add implicit dependencies to their link list.
+-# This reduces inter-package dependencies and makes it easier to remove
+-# dependencies of shared libraries without breaking binary compatibility.
++                                           DEFINE_SYMBOL MAKE_PHONON_LIB)
+ 
+ target_include_directories(${PHONON_LIB_SONAME}
+     INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>")
