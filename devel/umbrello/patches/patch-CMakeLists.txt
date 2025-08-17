@@ -1,0 +1,17 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 21:30:39 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-17 21:25:20.614775923 +0000
++++ CMakeLists.txt
+@@ -2,10 +2,6 @@ cmake_minimum_required(VERSION 3.16.0 FA
+ 
+ project(umbrello)
+ 
+-if(POLICY CMP0028)
+-    cmake_policy(SET CMP0028 OLD)
+-endif()
+-
+ if(POLICY CMP0057)
+     cmake_policy(SET CMP0057 NEW)
+ endif()
