@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.23 2021/10/26 11:01:14 nia Exp $
+$NetBSD: distinfo,v 1.24 2025/08/17 09:06:30 wiz Exp $
 
 BLAKE2s (phonon-4.10.3.tar.xz) = f3f04f83e0c116979d12462211060113301eef3d0f93284889ff0278bc5e3dec
 SHA512 (phonon-4.10.3.tar.xz) = 2619ac0d7873205a2773bdb226695b5a9e2deb4f47b1a0bb9dbf9a905e3f82f7834ced1b4b1e7a6dadf50fca289f92a5749e3057546c3e16a41e1d6420b594c6
 Size (phonon-4.10.3.tar.xz) = 336724 bytes
 SHA1 (patch-cmake_FindPhononInternal.cmake) = 637df634276927ce8cdeeaa8657a8bbd88380544
 SHA1 (patch-cmake_PhononQt4.cmake) = 6cd5a6768df140e9683ae21dbb0f7d54cdbca617
+SHA1 (patch-phonon_CMakeLists.txt) = c3809844e19eaa9f0c495af3ab075cfa5b45ad31
+SHA1 (patch-phonon_experimental_CMakeLists.txt) = 20464b7c1cffacd2d5fa73fd96fbd95d0b24589a

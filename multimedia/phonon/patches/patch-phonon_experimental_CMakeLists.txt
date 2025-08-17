@@ -1,0 +1,14 @@
+$NetBSD: patch-phonon_experimental_CMakeLists.txt,v 1.1 2025/08/17 09:06:30 wiz Exp $
+
+cmake 4 compatibility.
+
+--- phonon/experimental/CMakeLists.txt.orig	2025-08-17 09:05:10.928688690 +0000
++++ phonon/experimental/CMakeLists.txt
+@@ -26,7 +26,6 @@ set_target_properties(${PHONON_LIB_SONAM
+                                          VERSION ${PHONON_LIB_VERSION}
+                                          SOVERSION ${PHONON_LIB_SOVERSION}
+                                          DEFINE_SYMBOL MAKE_PHONONEXPERIMENTAL_LIB
+-                                         LINK_INTERFACE_LIBRARIES ""
+                                          )
+ install(TARGETS ${PHONON_LIB_SONAME}experimental EXPORT PhononExperimentalLibs ${INSTALL_TARGETS_DEFAULT_ARGS})
+ target_include_directories(${PHONON_LIB_SONAME}experimental
