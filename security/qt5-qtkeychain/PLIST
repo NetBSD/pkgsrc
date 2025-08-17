@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2019/10/27 18:20:00 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/17 08:57:12 wiz Exp $
 include/qt5keychain/keychain.h
 include/qt5keychain/qkeychain_export.h
 lib/cmake/Qt5Keychain/Qt5KeychainConfig.cmake
@@ -6,9 +6,11 @@ lib/cmake/Qt5Keychain/Qt5KeychainConfigVersion.cmake
 lib/cmake/Qt5Keychain/Qt5KeychainLibraryDepends-noconfig.cmake
 lib/cmake/Qt5Keychain/Qt5KeychainLibraryDepends.cmake
 lib/libqt5keychain.so
-lib/libqt5keychain.so.1
 lib/libqt5keychain.so.${PKGVERSION}
-qt5/translations/qtkeychain_de.qm
-qt5/translations/qtkeychain_ro.qm
+lib/libqt5keychain.so.1
 mkspecs/modules/qt_Qt5Keychain.pri
-
+share/qt5keychain/translations/qtkeychain_de.qm
+share/qt5keychain/translations/qtkeychain_fr.qm
+share/qt5keychain/translations/qtkeychain_ro.qm
+share/qt5keychain/translations/qtkeychain_ru.qm
+share/qt5keychain/translations/qtkeychain_zh.qm
