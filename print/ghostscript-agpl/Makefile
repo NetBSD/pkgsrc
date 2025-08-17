@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2025/07/08 12:35:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.100 2025/08/17 19:15:46 bsiegert Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -22,6 +22,7 @@ LICENSE=	gnu-agpl-v3
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 USE_LANGUAGES+=		c c++
+FORCE_C_STD=		gnu99
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
@@ -66,7 +67,7 @@ SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
-# https://www.illumos.org/issues/17491
+# https://www.illumos.org/issues/17491
 SUBST_CLASSES.SunOS+=	assert
 SUBST_STAGE.assert=	pre-configure
 SUBST_FILES.assert=	base/assert_.h
