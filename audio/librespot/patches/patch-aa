@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2025/08/17 12:39:32 wiz Exp $
+
+cmake 4 compatibility.
+
+--- ../vendor/aws-lc-sys-0.22.0/CMakeLists.txt.orig	2025-08-17 12:28:33.167770659 +0000
++++ ../vendor/aws-lc-sys-0.22.0/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ # SPDX-License-Identifier: Apache-2.0 OR ISC
+ 
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(AWS_LC_RUST NONE)
+ enable_language(C)
