@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_snippets_CMakeLists.txt,v 1.1 2025/08/17 12:25:02 wiz Exp $
+
+cmake 4 compatibility.
+
+--- doc/snippets/CMakeLists.txt.orig	2025-08-17 12:24:12.594593007 +0000
++++ doc/snippets/CMakeLists.txt
+@@ -14,8 +14,6 @@ ADD_EXECUTABLE(${compile_snippet_target}
+ if(EIGEN_STANDARD_LIBRARIES_TO_LINK_TO)
+   target_link_libraries(${compile_snippet_target} ${EIGEN_STANDARD_LIBRARIES_TO_LINK_TO})
+ endif()
+-GET_TARGET_PROPERTY(compile_snippet_executable
+-                    ${compile_snippet_target} LOCATION)
+ ADD_CUSTOM_COMMAND(
+   TARGET ${compile_snippet_target}
+   POST_BUILD

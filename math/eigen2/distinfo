@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:55:38 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/08/17 12:25:01 wiz Exp $
 
 BLAKE2s (eigen2/2.0.17.tar.bz2) = 19b56719c342bfa41d37a2790453b539dd66f730a1016d4c18c3194807adb2db
 SHA512 (eigen2/2.0.17.tar.bz2) = 8fa0e4507864f61c30de14e3b29d963eb8b777d1a6bb04192d53e1f4c9db323b9fab2ddcedb63bf2af243fe0e26dcd717e97eb72216b6a1d444e455520192c72
 Size (eigen2/2.0.17.tar.bz2) = 367890 bytes
 SHA1 (patch-Eigen_src_Sparse_AmbiVector.h) = 0f98d635b975c67c92a02078fa563759566513df
+SHA1 (patch-doc_examples_CMakeLists.txt) = c0a2c951ab27832b367fe9251d28b3c044cc8608
+SHA1 (patch-doc_snippets_CMakeLists.txt) = 6c1fd33dfc24002afd25ce7af782cd397ad77c79
