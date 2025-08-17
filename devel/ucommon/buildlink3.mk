@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2025/08/17 12:19:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2025/08/17 12:20:41 wiz Exp $
 
 BUILDLINK_TREE+=	ucommon
 
@@ -14,10 +14,6 @@ pkgbase := ucommon
 
 .if ${PKG_BUILD_OPTIONS.ucommon:Mgnutls}
 .include "../../security/gnutls/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.ucommon:Mopenssl}
-.include "../../security/openssl/buildlink3.mk"
 .endif
 
 .if ${PKG_BUILD_OPTIONS.ucommon:Mstatic}
