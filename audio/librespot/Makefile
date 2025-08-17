@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/04/10 13:03:50 pin Exp $
+# $NetBSD: Makefile,v 1.39 2025/08/17 12:39:32 wiz Exp $
 
 DISTNAME=	librespot-0.6.0
 PKGREVISION=	5
@@ -14,7 +14,7 @@ LICENSE=	mit
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
-TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
