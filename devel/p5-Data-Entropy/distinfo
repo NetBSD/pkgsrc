@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/15 16:33:23 gdt Exp $
+$NetBSD: distinfo,v 1.2 2025/08/17 09:29:55 wiz Exp $
 
-BLAKE2s (Data-Entropy-0.007.tar.gz) = 36d6f479b7a8a031aaa1c1eb2260b54ac23699b41f33e627afb41bfa01dd3253
-SHA512 (Data-Entropy-0.007.tar.gz) = f845fabcac67ab16d44f8bbefa0fc09df171efd6cd9ae2f2ee7e189cbb707cf074705763a022941cbfdda5ab4e03b85eacdb7942a504644a40970c42b5a7e0b9
-Size (Data-Entropy-0.007.tar.gz) = 43667 bytes
+BLAKE2s (Data-Entropy-0.008.tar.gz) = 29fafb725cd9ab9eb39b209826b62ba3c69bf13b66a4c7415c881b7068724332
+SHA512 (Data-Entropy-0.008.tar.gz) = 60f6d54e38a0b24343e7f595d21d1134f1c52bbcdf3224bdae53abcc1fda67cc7629b294b11c8d864f652768e629f2700cad96e0c66391f07117bfd445af197d
+Size (Data-Entropy-0.008.tar.gz) = 40697 bytes
