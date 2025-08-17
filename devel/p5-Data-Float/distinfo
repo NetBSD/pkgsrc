@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/15 17:58:26 gdt Exp $
+$NetBSD: distinfo,v 1.2 2025/08/17 09:30:50 wiz Exp $
 
-BLAKE2s (Data-Float-0.013.tar.gz) = d858c1253005ed0dfd22e21e6ad5c8a01fb83eb25860f68a3f0278d36db58949
-SHA512 (Data-Float-0.013.tar.gz) = 7e3be7843df30e581bd8937fde226ac6f24100206a376e1dbed2d4699c95d3f39a25cd1485f5871c46adba88d2fb1899efcd326f908797cdc985ec713cd9a90f
-Size (Data-Float-0.013.tar.gz) = 25939 bytes
+BLAKE2s (Data-Float-0.015.tar.gz) = 9aba6750f33923ba738e77284b59a5b199b84f4cc7a84f98dd5a6f36da4a65b0
+SHA512 (Data-Float-0.015.tar.gz) = 9a757a2398e7213ea172ab444de0aa1d06ee69d5d2447e8cd071ee8c2a8749ce4ee8616e479d0bf4c42e2db6acdf2bb3c80c82c0a28b28c54d38021239672515
+Size (Data-Float-0.015.tar.gz) = 24156 bytes
