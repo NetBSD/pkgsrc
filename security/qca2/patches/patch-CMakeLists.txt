@@ -1,10 +1,23 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2018/01/31 09:14:55 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/17 09:01:06 wiz Exp $
+
+Fix build with cmake 4.
 
 Add mozilla-rootcerts certstore to list
 
---- CMakeLists.txt.orig	2018-01-31 20:15:27.000000000 +0000
+--- CMakeLists.txt.orig	2019-04-24 12:58:14.000000000 +0000
 +++ CMakeLists.txt
-@@ -304,6 +304,7 @@ else ( WIN32 )
+@@ -14,10 +14,6 @@ set(QCA_LIB_MAJOR_VERSION "2")
+ set(QCA_LIB_MINOR_VERSION "2")
+ set(QCA_LIB_PATCH_VERSION "1")
+ 
+-if(POLICY CMP0042)
+-  cmake_policy(SET CMP0042 OLD)
+-endif()
+-
+ option(BUILD_TESTS "Create test" ON)
+ option(BUILD_TOOLS "Compile mozcerts and qcatool" ON)
+ set(BUILD_PLUGINS "auto" CACHE STRING "Plugins for building (also possible values: none, all and auto)")
+@@ -309,6 +305,7 @@ else ( WIN32 )
        "/etc/pki/tls/cert.pem"
        "/etc/ssl/ca-bundle.pem"
        "/usr/share/curl/curl-ca-bundle.crt"
