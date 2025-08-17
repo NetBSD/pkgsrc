@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_examples_CMakeLists.txt,v 1.1 2025/08/17 12:25:01 wiz Exp $
+
+cmake 4 compatibility.
+
+--- doc/examples/CMakeLists.txt.orig	2025-08-17 12:23:39.090174068 +0000
++++ doc/examples/CMakeLists.txt
+@@ -8,8 +8,6 @@ ADD_EXECUTABLE(${example} ${example_src}
+ if(EIGEN_STANDARD_LIBRARIES_TO_LINK_TO)
+   target_link_libraries(${example} ${EIGEN_STANDARD_LIBRARIES_TO_LINK_TO})
+ endif()
+-GET_TARGET_PROPERTY(example_executable
+-                    ${example} LOCATION)
+ ADD_CUSTOM_COMMAND(
+   TARGET ${example}
+   POST_BUILD

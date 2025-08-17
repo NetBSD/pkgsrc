@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/09/09 12:05:01 maya Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/17 12:25:01 wiz Exp $
 
 DISTNAME=	2.0.17
 PKGNAME=	eigen-2.0.17
@@ -16,5 +16,7 @@ LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 WRKSRC=		${WRKDIR}/eigen-eigen-b23437e61a07
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"
