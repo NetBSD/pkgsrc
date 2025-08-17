@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5003 2025/08/17 08:57:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5004 2025/08/17 09:06:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7290,3 +7290,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.28.0nb5 [osa 2025-08-16]
 	Updated games/KoboDeluxe to 0.5.1nb8 [triaxx 2025-08-16]
 	Updated security/qt5-qtkeychain to 0.15.0 [wiz 2025-08-17]
+	Updated multimedia/phonon to 4.10.3nb20 [wiz 2025-08-17]
