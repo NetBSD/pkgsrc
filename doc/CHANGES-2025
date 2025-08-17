@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5016 2025/08/17 19:33:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5017 2025/08/17 19:59:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7303,3 +7303,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gl2ps to 1.4.2nb4 [wiz 2025-08-17]
 	Added graphics/gdk-pixbuf2-jxl version 0.11.1 [wiz 2025-08-17]
 	Updated graphics/geeqie to 2.6.1nb2 [wiz 2025-08-17]
+	Updated filesystems/fuse-encfs to 1.9.5nb3 [wiz 2025-08-17]
