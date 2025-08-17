@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2025/08/13 16:32:49 gdt Exp $
+# $NetBSD: Makefile,v 1.108 2025/08/17 11:52:52 gdt Exp $
 
 DISTNAME=	ejabberd-25.07
 CATEGORIES=	chat
@@ -21,6 +21,9 @@ USE_TOOLS+=		aclocal autoconf automake bash:run gmake patch perl
 # Upstream allows building with mix, rebar(2), and rebar3.  As of
 # 22.05, the mix build fails, and both rebar versions work.  Disabling
 # bundled deps seems cleaner with rebar(2).
+# In general the erlang ecosystem is troubled by language-specific
+# packaging disease, but this isn't particularly about ejabberd.
+# Useful info at https://github.com/processone/ejabberd/issues/4431
 
 #Tries to download, objecting to p1_utils
 #TOOL_DEPENDS+=		elixir-[0-9]*:../../lang/elixir
