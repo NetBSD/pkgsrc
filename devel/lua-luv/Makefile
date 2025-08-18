@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/01/21 11:00:11 nia Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/18 07:27:41 wiz Exp $
 
 DISTNAME=	luv-1.43.0-0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-0$/.0/1}
@@ -22,13 +22,12 @@ LUA_LINKER_MAGIC=	no
 DEPENDS+=	${LUA_PKGPREFIX}-compat53-[0-9]*:../../devel/lua-compat53
 .endif
 
-USE_CMAKE=	yes
-
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SHARED_LIBUV=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_MODULE=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DLUA_BUILD_TYPE=System
 CMAKE_CONFIGURE_ARGS+=	-DWITH_LUA_ENGINE=Lua
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	libluv.pc.in
 
@@ -37,6 +36,7 @@ pre-configure:
 	${CP} ${PREFIX}/${LUA_INCDIR}/compat-5.3.* ${WRKSRC}/src
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/lua/module.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
