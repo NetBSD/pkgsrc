@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5020 2025/08/18 02:47:21 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5021 2025/08/18 02:49:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7307,3 +7307,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-zstandard to 0.24.0 [wiz 2025-08-17]
 	Updated devel/astyle to 3.6.12 [schmonz 2025-08-18]
 	Updated sysutils/etckeeper to 1.18.23 [schmonz 2025-08-18]
+	Updated www/lighttpd to 1.4.81 [schmonz 2025-08-18]
