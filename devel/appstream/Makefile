@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/07/19 05:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/18 15:01:52 adam Exp $
 
-DISTNAME=	appstream-1.0.5
-PKGREVISION=	1
+DISTNAME=	appstream-1.0.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ximion/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,11 +14,10 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
+USE_CC_FEATURES=	c17
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		itstool msgfmt pkg-config
-
-USE_CC_FEATURES+=	c17
 
 MESON_ARGS+=	-Dapidocs=false
 MESON_ARGS+=	-Dsystemd=false
