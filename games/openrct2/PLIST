@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/07/08 08:13:44 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/08/18 22:37:57 wiz Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -98,6 +98,7 @@ share/openrct2/object/official/scenario_meta/rct1dlc.scenario_meta.steel_roller_
 share/openrct2/object/official/scenario_meta/rct1dlc.scenario_meta.steel_twister_roller_coaster_competition.parkobj
 share/openrct2/object/official/scenario_meta/rct1dlc.scenario_meta.suspended_roller_coaster_competition.parkobj
 share/openrct2/object/official/scenario_meta/rct1dlc.scenario_meta.wooden_roller_coaster_competition.parkobj
+share/openrct2/object/official/scenario_meta/rct1tw.scenario_meta.taiwan_park.parkobj
 share/openrct2/object/official/scenario_meta/rct2dlc.scenario_meta.panda_world.parkobj
 share/openrct2/object/official/scenario_meta/uces.scenario_meta.beneath_the_christmas_tree.parkobj
 share/openrct2/object/official/scenario_meta/uces.scenario_meta.bigrock_blast.parkobj
