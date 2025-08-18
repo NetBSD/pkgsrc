@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/05/29 14:35:59 khorben Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/18 06:33:12 wiz Exp $
 
 DISTNAME=	slim-1.4.0
 PKGREVISION=	6
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-USE_CMAKE=	yes
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 AUTO_MKDIRS=	yes
 RCD_SCRIPTS+=	slim
@@ -30,6 +30,8 @@ SUBST_VARS.paths=	PREFIX
 SUBST_VARS.paths+=	PKG_SYSCONFDIR
 SUBST_VARS.paths+=	VARBASE
 SUBST_VARS.paths+=	X11BASE
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
