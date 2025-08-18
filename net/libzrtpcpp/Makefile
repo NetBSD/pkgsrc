@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/04/17 21:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2025/08/18 07:13:49 wiz Exp $
 
 DISTNAME=	libzrtpcpp-4.7.0
 PKGREVISION=	11
@@ -16,9 +16,9 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
-USE_CMAKE=		yes
-CMAKE_CONFIGURE_ARGS+=		-DCCRTP=ON
-CMAKE_CONFIGURE_ARGS+=		-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-DCCRTP=ON
+CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
 
@@ -26,6 +26,7 @@ PKGCONFIG_OVERRIDE=	libzrtpcpp.pc.cmake
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../net/ccrtp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
