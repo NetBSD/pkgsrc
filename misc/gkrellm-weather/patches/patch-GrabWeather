@@ -1,0 +1,16 @@
+$NetBSD: patch-GrabWeather,v 1.1 2025/08/18 09:11:14 pho Exp $
+
+Update NOAA link to weather information.
+
+--- GrabWeather.orig	2025-08-18 08:37:52.396300032 +0000
++++ GrabWeather
+@@ -12,7 +12,8 @@
+ 
+ $ReportDir  = '.wmWeatherReports';
+ #$WeatherSrc = 'ftp://weather.noaa.gov/data/observations/metar/decoded';
+-$WeatherSrc = 'http://weather.noaa.gov/pub/data/observations/metar/decoded';
++#$WeatherSrc = 'http://weather.noaa.gov/pub/data/observations/metar/decoded';
++$WeatherSrc = 'http://tgftp.nws.noaa.gov/data/observations/metar/decoded';
+ 
+ use strict; 
+ use vars qw( $ReportDir $WeatherSrc );
