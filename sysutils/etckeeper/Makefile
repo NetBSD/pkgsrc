@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/12/10 14:06:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2025/08/18 02:47:16 schmonz Exp $
 #
 
-DISTNAME=		etckeeper_1.18.22
+DISTNAME=		etckeeper_1.18.23
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		sysutils
 MASTER_SITES=		https://git.joeyh.name/index.cgi/etckeeper.git/snapshot/
