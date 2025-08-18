@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5018 2025/08/17 20:44:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5019 2025/08/18 02:41:44 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7305,3 +7305,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/geeqie to 2.6.1nb2 [wiz 2025-08-17]
 	Updated filesystems/fuse-encfs to 1.9.5nb3 [wiz 2025-08-17]
 	Updated archivers/py-zstandard to 0.24.0 [wiz 2025-08-17]
+	Updated devel/astyle to 3.6.12 [schmonz 2025-08-18]
