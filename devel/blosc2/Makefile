@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/08/12 16:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/08/18 19:39:04 adam Exp $
 
-DISTNAME=	blosc2-2.20.0
+DISTNAME=	blosc2-2.21.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc2
@@ -12,9 +12,9 @@ COMMENT=	Fast, compressed and persistent data store library for C
 LICENSE=	modified-bsd
 
 USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/blosc
 # For Darwin
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/blosc
