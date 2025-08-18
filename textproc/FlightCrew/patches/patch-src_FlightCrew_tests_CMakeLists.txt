@@ -1,12 +1,14 @@
-$NetBSD: patch-src_FlightCrew_tests_CMakeLists.txt,v 1.2 2016/07/02 14:43:12 joerg Exp $
+$NetBSD: patch-src_FlightCrew_tests_CMakeLists.txt,v 1.3 2025/08/18 07:02:06 wiz Exp $
 
 * libgtest is needed.
 
---- src/FlightCrew/tests/CMakeLists.txt.orig	2011-08-11 21:03:56.000000000 +0000
+--- src/FlightCrew/tests/CMakeLists.txt.orig	2011-08-11 19:03:56.000000000 +0000
 +++ src/FlightCrew/tests/CMakeLists.txt
-@@ -59,13 +59,13 @@ set( ALL_INCLUDES ${gtest_SOURCE_DIR}/in
+@@ -57,15 +57,14 @@ link_directories ( ${PROJECT_BINARY_DIR}
+ include( ${CMAKE_SOURCE_DIR}/cmake_extras/CustomPCH.cmake )
+ set( ALL_INCLUDES ${gtest_SOURCE_DIR}/include ${BoostParts_SOURCE_DIR} )
  
- set( GCC_PCH_TARGET gccPCH_tests )
+-set( GCC_PCH_TARGET gccPCH_tests )
  
 -precompiled_header( TEST_SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
 +# precompiled_header( TEST_SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
@@ -20,3 +22,12 @@ $NetBSD: patch-src_FlightCrew_tests_CMakeLists.txt,v 1.2 2016/07/02 14:43:12 joe
  
  #############################################################################
  
+@@ -97,7 +96,7 @@ if( MSVC )
+     
+ elseif( CMAKE_COMPILER_IS_GNUCXX )
+     # Make sure the PCH is built for GCC
+-    add_dependencies( ${PROJECT_NAME} ${GCC_PCH_TARGET} )
++    add_dependencies( ${PROJECT_NAME} )
+ endif()
+ 
+ # needed for correct Xerces header inclusion

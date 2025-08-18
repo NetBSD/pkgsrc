@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/06/18 07:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/08/18 07:02:05 wiz Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # Work around NetBSD unzip vs others for patched files.
 SUBST_CLASSES+=		cr
