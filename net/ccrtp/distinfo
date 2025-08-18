@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:05:27 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/08/18 07:13:08 wiz Exp $
 
 BLAKE2s (ccrtp-2.1.2.tar.gz) = 65090331988362953eaf2de85837dc16f4d1b83f4e74e1a505cc4d22f68e3bf3
 SHA512 (ccrtp-2.1.2.tar.gz) = a835f57a0eef7cba11c55c93ce2f11ebd8ab4099e7c723043c51e4872f3da87af946fc50fac18b47ea5d72b2a1227b377810e9134c1f3a8982d4ce5944d043e9
 Size (ccrtp-2.1.2.tar.gz) = 764869 bytes
 SHA1 (patch-doc_CMakeLists.txt) = e9cfcfc618dc6bc16da5d3bff61774c57febaff6
+SHA1 (patch-src_CMakeLists.txt) = 3cabe1bb78c20a8c5107db0287746582e7ba251c
 SHA1 (patch-src_ccrtp_crypto_gcrypt_InitializeGcrypt.cpp) = 407f3a7f6536028a1b727a826183133dfe3ce4d6
 SHA1 (patch-src_ccrtp_crypto_openssl_hmac.cpp) = eb0372a01628cecb638a00278686054633d396dd
