@@ -1,0 +1,14 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/08/18 07:13:08 wiz Exp $
+
+Fix build with cmake 4.
+
+--- src/CMakeLists.txt.orig	2025-08-18 07:10:33.458820938 +0000
++++ src/CMakeLists.txt
+@@ -62,7 +62,6 @@ endif()
+ add_library(ccrtp ${BUILD_LIBRARY_TYPE} ${ccrtp_srcs} ${crypto_srcs} ${skein_srcs} ${twofish_srcs})
+ set_target_properties(ccrtp PROPERTIES VERSION ${LIB_VERSION} SOVERSION ${SOVERSION})
+ target_link_libraries(ccrtp commoncpp ${LIBS})
+-add_dependencies(ccrtp commoncpp)
+ 
+ ########### install files ###############
+ 

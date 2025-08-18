@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/17 21:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/18 07:13:08 wiz Exp $
 
 DISTNAME=	ccrtp-2.1.2
 PKGREVISION=	22
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.gnu.org/software/ccrtp/
 COMMENT=	RTP and RTSP protocol implementation using GNU CommonCpp
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=		yes
 USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
@@ -19,9 +18,11 @@ INFO_FILES=		yes
 
 CMAKE_CONFIGURE_ARGS+=	-DLIB_VERSION=${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=	-DSOVERSION=2
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 BUILDLINK_API_DEPENDS.ucommon+=	ucommon>=6.3.1
 .include "../../devel/ucommon/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
