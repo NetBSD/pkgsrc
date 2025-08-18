@@ -1,6 +1,9 @@
-$NetBSD: patch-src_in_flac.c,v 1.1 2024/12/03 09:57:13 kim Exp $
+$NetBSD: patch-src_in_flac.c,v 1.2 2025/08/18 05:26:28 kim Exp $
 
 Adapt to latest libFLAC API.
+
+Compare against title= and artist= to avoid accidentally matching
+titlesort and artistsort.
 
 --- src/in_flac.c.orig	2004-07-31 17:52:24.000000000 +0000
 +++ src/in_flac.c
