@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/08/08 07:23:59 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/18 05:29:33 wiz Exp $
 
 DISTNAME=	hashcat-7.0.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://hashcat.net/files/
 
@@ -11,7 +12,7 @@ LICENSE=	mit
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake gsed
+USE_TOOLS+=		gmake gsed perl:run
 
 BUILD_TARGET=	hashcat
 MAKE_ENV+=	SHARED=1
