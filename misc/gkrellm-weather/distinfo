@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/11/27 05:58:50 pho Exp $
+$NetBSD: distinfo,v 1.11 2025/08/18 09:11:14 pho Exp $
 
-BLAKE2s (gkrellweather-2.0.7.tgz) = 24eeb8b0719c502354e33899d7d43c30e4ee09623043cf062e5b12b7200d8a61
-SHA512 (gkrellweather-2.0.7.tgz) = 103212f5d8c66c512cf22689f5e64e886e2df57b963a2c01873f6d2044653653d2bd8d5804ed788f202e2bb2b7289090198434ddad363c124c047bcc530e04e3
-Size (gkrellweather-2.0.7.tgz) = 19968 bytes
-SHA1 (patch-aa) = 2c4850e84b873c3b3dbc2d1cf41123a9e2fffbce
+BLAKE2s (gkrellweather-2.0.8.tar.gz) = fa57ad05189efc5fe13a11b4b4c75ccf5a3f9d3556c5f8ee02dc2f382b325b89
+SHA512 (gkrellweather-2.0.8.tar.gz) = da9408ebc9518fe805d3f0dd9496b4aeb805a2ab6566b619b61fc25c91122c0ee45e2a7b804206b2ee08300309dd9b1e1c3b6605a41c594cf75fd39b58767264
+Size (gkrellweather-2.0.8.tar.gz) = 20227 bytes
+SHA1 (patch-GrabWeather) = b782e8db7e028d3e79e367b2b2ac9342627bbe7d
+SHA1 (patch-aa) = 0101c56585ca96304cbfb2c9e379fd23b719daf7
 SHA1 (patch-ab) = d223c10869a7c4ec6338ac39a56a4bc300857bea

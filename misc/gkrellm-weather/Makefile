@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.101 2025/04/24 14:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/08/18 09:11:14 pho Exp $
 
-DISTNAME=	gkrellweather-2.0.7
-PKGNAME=	gkrellm-weather-2.0.7
-PKGREVISION=	71
+DISTNAME=	gkrellweather-2.0.8
+PKGNAME=	${DISTNAME:S/gkrellweather/gkrellm-weather/}
 CATEGORIES=	misc
-#MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	tripledes@eslack.org
-#HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
 COMMENT=	Gkrellm2 weather plugin
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	wget>=1.8:../../net/wget
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
 
 USE_TOOLS+=		gmake msgfmt perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
@@ -20,13 +18,13 @@ REPLACE_PERL=		GrabWeather
 BUILD_TARGET=		gkrellweather.so
 
 LOCALEDIR=		${PREFIX}/${PKGLOCALEDIR}/locale
-INSTALLATION_DIRS=	bin lib lib/gkrellm2/plugins
+INSTALLATION_DIRS=	lib libexec lib/gkrellm2/plugins
 
 MAKE_ENV+=	LOCALEDIR=${LOCALEDIR}
 MAKE_ENV+=	enable_nls=1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/GrabWeather ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/GrabWeather ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_LIB} ${WRKSRC}/gkrellweather.so \
 	    ${DESTDIR}${PREFIX}/lib/gkrellm2/plugins
 	set -e; cd ${WRKSRC}/po && for f in *.mo; do \
