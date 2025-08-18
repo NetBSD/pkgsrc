@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2018/05/06 10:22:59 leot Exp $
+$NetBSD: MESSAGE,v 1.3 2025/08/18 09:38:49 leot Exp $
 
 youtube-dl works fine for most supported sites.
 
-For some extractors youtube-dl also needs multimedia/ffmpeg[234],
+For some extractors youtube-dl also needs multimedia/ffmpeg[765],
 net/rtmpdump and multimedia/mplayer or multimedia/mpv.
 All these packages are not automatically installed and it is needed to
 manually install them if required.
