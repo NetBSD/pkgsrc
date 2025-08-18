@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5026 2025/08/18 15:03:04 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5027 2025/08/18 19:39:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7314,3 +7314,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/gkrellm-weather to 2.0.8 [pho 2025-08-18]
 	Updated devel/appstream to 1.0.6 [adam 2025-08-18]
 	Updated security/hashcat to 7.1.1 [adam 2025-08-18]
+	Updated devel/git to 2.51.0 [adam 2025-08-18]
+	Updated devel/blosc2 to 2.21.0 [adam 2025-08-18]
