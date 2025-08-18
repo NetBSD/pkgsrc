@@ -1,11 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 09:18:06 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/18 23:20:34 wiz Exp $
 
 Fix build with cmake 4.
 
---- CMakeLists.txt.orig	2025-08-17 09:16:13.235500026 +0000
+--- CMakeLists.txt.orig	2021-01-15 08:05:46.000000000 +0000
 +++ CMakeLists.txt
 @@ -1,6 +1,6 @@
- cmake_minimum_required(VERSION 2.8.12)
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
  
 -project( kdiagram )
 +project( kdiagram VERSION 2.8.0)
