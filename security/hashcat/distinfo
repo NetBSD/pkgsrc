@@ -1,18 +1,12 @@
-$NetBSD: distinfo,v 1.3 2025/08/08 07:23:59 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/08/18 15:02:40 adam Exp $
 
-BLAKE2s (hashcat-7.0.0.tar.gz) = 02ed451e3c1cf5db75cff5113a3cb141596846d6009c23dd617e56b7fe5175fe
-SHA512 (hashcat-7.0.0.tar.gz) = 3e4837e4004859c6de60353641e519d1e1007d689ec106c4278f13a27ebb6f4779750db0ffbcaa8cbd815c6015cba0ff61d66d363c772ce82f7ca641be1481f5
-Size (hashcat-7.0.0.tar.gz) = 19084663 bytes
-SHA1 (patch-include_sort__r.h) = be4ecc96def303630439374b2f739a8cef0ad522
-SHA1 (patch-include_terminal.h) = b4fa77eb4eeaf048e50e85948cb63d401205cc68
-SHA1 (patch-src_Makefile) = f6dcc9a99b16cee5d9c8533416ff55da86e2feed
-SHA1 (patch-src_affinity.c) = e3db09035e4a5bb030fc87dedce3198b14ef6078
+BLAKE2s (hashcat-7.1.1.tar.gz) = 21540218cf635f46fa46d9dd75bf4025c9a8acec6c8e297e1b498b2978226e21
+SHA512 (hashcat-7.1.1.tar.gz) = ce7878a335d7c541a4619cb004838aa420c91f7f02bf43b2e410229430c59d6e85830c2dd569537440543980f80a9567222de756eed98b49e9564dbed12f8f03
+Size (hashcat-7.1.1.tar.gz) = 19163743 bytes
+SHA1 (patch-include_sort__r.h) = 1ef87463b02e5b4167ead0d789fb0a11e1f2e48a
+SHA1 (patch-src_Makefile) = 20d8fb65adfd0c1ce5bf789ec52921bd5395c793
 SHA1 (patch-src_bridges_bridge__argon2id__reference.mk) = cfc2997e558d2431b5a8bcb8ee2a0ad7cd78ddff
 SHA1 (patch-src_bridges_bridge__python__generic__hash__mp.mk) = 86ffd66910f0251022bf1d686ef6f0db99de98bf
 SHA1 (patch-src_bridges_bridge__python__generic__hash__sp.mk) = f5f65a831866037145eae44c68fc69c19e0010e3
 SHA1 (patch-src_bridges_bridge__scrypt__jane.mk) = c4e76e8af82311c030fc6e802b09deb02e147015
 SHA1 (patch-src_bridges_bridge__scrypt__yescrypt.mk) = dd3572618239645873af6141307ac5a96e3796b3
-SHA1 (patch-src_folder.c) = 0bd1e1edb4f9aa7187661c5e974a7114b10ab173
-SHA1 (patch-src_memory.c) = 2118b0b618e8a7a0e595b4d319f648235301ab39
-SHA1 (patch-src_shared.c) = b26c987a19964d271b309b39ab3074804b66f288
-SHA1 (patch-src_terminal.c) = ad94f4c4aefc8753f8fcbd2b26285ad1d649985e

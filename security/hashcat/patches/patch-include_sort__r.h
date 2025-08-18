@@ -1,18 +1,9 @@
-$NetBSD: patch-include_sort__r.h,v 1.3 2025/08/08 07:23:59 adam Exp $
+$NetBSD: patch-include_sort__r.h,v 1.4 2025/08/18 15:02:40 adam Exp $
 
-BSD support https://github.com/hashcat/hashcat/pull/4392
+Fix build on NetBSD.
 
 --- include/sort_r.h.orig	2025-08-01 21:03:55.000000000 +0000
 +++ include/sort_r.h
-@@ -25,7 +25,7 @@ Slightly modified to work with hashcat t
- */
- 
- #if (defined __APPLE__ || defined __MACH__ || defined __DARWIN__ || \
--     defined __FreeBSD__ || defined __DragonFly__ || defined __NetBSD__)
-+     defined __OpenBSD__ || defined __FreeBSD__ || defined __DragonFly__ || defined __NetBSD__)
- #  define _SORT_R_BSD
- #  define _SORT_R_INLINE inline
- #elif (defined __linux__) || defined (__CYGWIN__)
 @@ -138,7 +138,7 @@ static _SORT_R_INLINE void sort_r_simple
  
    /* Declare structs and functions */
@@ -22,21 +13,3 @@ BSD support https://github.com/hashcat/hashcat/pull/4392
  
      /* Ensure qsort_r is defined */
      extern void qsort_r(void *base, size_t nel, size_t width, void *thunk,
-@@ -199,13 +199,13 @@ static _SORT_R_INLINE void sort_r_simple
- 
-     #elif defined _SORT_R_BSD
- 
--      struct sort_r_data tmp;
--      tmp.arg = arg;
--      tmp.compar = compar;
--
-       #if defined __NetBSD__
-         sort_r_simple(base, nel, width, compar, arg);
-       #else
-+        struct sort_r_data tmp;
-+        tmp.arg = arg;
-+        tmp.compar = compar;
-+
-         qsort_r(base, nel, width, &tmp, sort_r_arg_swap);
-       #endif
- 
