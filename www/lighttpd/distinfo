@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.87 2025/08/13 13:44:58 schmonz Exp $
+$NetBSD: distinfo,v 1.88 2025/08/18 02:49:07 schmonz Exp $
 
-BLAKE2s (lighttpd-1.4.80.tar.xz) = a83b13ee875b2f737a0d6e24d10aa3f43ff24e2858224953f7102a00781bc4ea
-SHA512 (lighttpd-1.4.80.tar.xz) = 82903869d769b684b006d3df496e92d304aa2f77d457501dd1ba5e6ea43afe80e107477ec56cd2cf3342949a76d5848fd5125bda41958a552d26e545bfc461af
-Size (lighttpd-1.4.80.tar.xz) = 882656 bytes
+BLAKE2s (lighttpd-1.4.81.tar.xz) = 098ec5dc2c5de3e96a1df2bf5f7a4b125f1cf309726c00cb3436bc7675279e37
+SHA512 (lighttpd-1.4.81.tar.xz) = 10c24b1c1ce1aa1d826a426868223393eb81d7c0fbcc0b4f032b082a14593e0364228a5275e1440ed8782a2e78f0ded7cf72bc6642e5528bc82defcefab9301b
+Size (lighttpd-1.4.81.tar.xz) = 882560 bytes
 SHA1 (patch-doc_config_lighttpd.annotated.conf) = f987b208cac0d24f24e8aa03c268556029d6e184
 SHA1 (patch-doc_lighttpd.8) = 217166e0f0d0e64a2161e6db4d593c386b7c386a
