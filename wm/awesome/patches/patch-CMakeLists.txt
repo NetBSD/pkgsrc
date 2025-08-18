@@ -1,13 +1,17 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2023/05/08 00:12:41 nikita Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2025/08/18 06:45:19 wiz Exp $
 
 Do not introduce timestamps in PNG files (for icons).
 See <https://wiki.debian.org/ReproducibleBuilds/TimestampsInPNG>.
 
 Install config file to the examples directory.
 
---- CMakeLists.txt.orig	2019-01-28 07:53:24.000000000 +0100
-+++ CMakeLists.txt	2023-05-08 02:08:53.084892550 +0200
-@@ -336,7 +336,7 @@
+Fix:
+CMake Error at CMakeLists.txt:457 (add_dependencies):
+  The dependency target "check-examples" of target "check" does not exist.
+
+--- CMakeLists.txt.orig	2019-01-28 06:53:24.000000000 +0000
++++ CMakeLists.txt
+@@ -336,7 +336,7 @@ macro(a_icon_convert match replacement i
          set(ALL_ICONS ${ALL_ICONS} ${output})
  
          add_custom_command(
@@ -16,7 +20,7 @@ Install config file to the examples directory.
              OUTPUT  ${output}
              DEPENDS ${input}
              VERBATIM)
-@@ -371,7 +371,7 @@
+@@ -371,7 +371,7 @@ install(TARGETS ${PROJECT_AWE_NAME} RUNT
  install(FILES "utils/awesome-client" DESTINATION bin PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
  install(DIRECTORY ${BUILD_DIR}/lib DESTINATION ${AWESOME_DATA_PATH}
      PATTERN "*.in" EXCLUDE)
@@ -25,3 +29,12 @@ Install config file to the examples directory.
          RENAME rc.lua)
  if(GENERATE_MANPAGES)
      if(COMPRESS_MANPAGES)
+@@ -454,7 +454,7 @@ if(LUACHECK_EXECUTABLE)
+     list(APPEND CHECK_QA_TARGETS luacheck)
+ endif()
+ add_custom_target(check-qa DEPENDS ${CHECK_QA_TARGETS})
+-add_dependencies(check check-qa check-examples)
++add_dependencies(check check-qa)
+ # }}}
+ 
+ INCLUDE(${CMAKE_SOURCE_DIR}/Packaging.cmake)
