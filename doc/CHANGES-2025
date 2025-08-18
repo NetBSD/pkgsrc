@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5025 2025/08/18 09:11:28 pho Exp $
+$NetBSD: CHANGES-2025,v 1.5026 2025/08/18 15:03:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7312,3 +7312,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.0.4 [schmonz 2025-08-18]
 	Updated security/hashcat to 7.0.0nb1 [wiz 2025-08-18]
 	Updated misc/gkrellm-weather to 2.0.8 [pho 2025-08-18]
+	Updated devel/appstream to 1.0.6 [adam 2025-08-18]
+	Updated security/hashcat to 7.1.1 [adam 2025-08-18]
