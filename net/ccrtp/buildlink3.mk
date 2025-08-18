@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2025/04/17 21:51:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2025/08/18 07:13:21 wiz Exp $
 
 BUILDLINK_TREE+=	ccrtp
 
@@ -12,11 +12,11 @@ BUILDLINK_PKGSRCDIR.ccrtp?=	../../net/ccrtp
 pkgbase := ccrtp
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.ccrtp:Mlibgcrypt)
+.if ${PKG_BUILD_OPTIONS.ccrtp:Mlibgcrypt}
 .include "../../security/libgcrypt/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.ccrtp:Mopenssl)
+.if ${PKG_BUILD_OPTIONS.ccrtp:Mopenssl}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
