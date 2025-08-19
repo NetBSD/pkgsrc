@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2025/08/13 04:35:11 adam Exp $
+# $NetBSD: Makefile,v 1.95 2025/08/19 16:35:17 kim Exp $
 
 DISTNAME=	ansible-11.9.0
 CATEGORIES=	sysutils python
@@ -12,7 +12,10 @@ LICENSE=	gnu-gpl-v3
 PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	ansible-core>=2.18.8:../../sysutils/ansible-core
+
+# Each ansible release tracks a specific release branch of ansible-core.
+# Enforce this by using an upper limit for the dependency version.
+DEPENDS+=	ansible-core>=2.18.8<2.19:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
