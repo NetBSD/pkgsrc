@@ -1,0 +1,16 @@
+$NetBSD: patch-samples_sample2_CMakeLists.txt,v 1.1 2025/08/19 14:08:44 wiz Exp $
+
+Fix build with cmake 4.
+
+--- samples/sample2/CMakeLists.txt.orig	2025-08-19 14:05:30.811394041 +0000
++++ samples/sample2/CMakeLists.txt
+@@ -6,9 +6,6 @@
+ 
+ # Set CMake flags to enable compatibility both with 2.4 and 2.6
+ cmake_minimum_required(VERSION 2.4)
+-if(COMMAND cmake_policy)
+-      cmake_policy(SET CMP0003 OLD)
+-endif(COMMAND cmake_policy)
+ 
+ SET(wxWidgets_USE_LIBS base core)
+ find_package(wxWidgets)
