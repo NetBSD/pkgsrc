@@ -1,8 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2007/03/24 20:17:58 heinz Exp $
+$NetBSD: patch-ab,v 1.2 2025/08/19 13:21:25 wiz Exp $
 
---- CMakeLists.txt.orig	2007-03-16 07:17:17.000000000 +0100
+Fix build with cmake 4.
+Fix installation target.
+
+--- CMakeLists.txt.orig	2007-03-16 06:17:17.000000000 +0000
 +++ CMakeLists.txt
-@@ -4,7 +4,7 @@ CompareArgs.cpp Metric.cpp)
+@@ -1,10 +1,11 @@
+ PROJECT (PerceptualDiff)
++cmake_minimum_required(VERSION 3.5)
+ SET(DIFF_SRC PerceptualDiff.cpp LPyramid.cpp RGBAImage.cpp
+ CompareArgs.cpp Metric.cpp)
  
  ADD_EXECUTABLE (perceptualdiff ${DIFF_SRC})
  
