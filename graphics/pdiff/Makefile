@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/04/24 14:14:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2025/08/19 13:21:25 wiz Exp $
 
 DISTNAME=		PerceptualDiff-1.0.1
 PKGNAME=		pdiff-1.0.1
@@ -12,8 +11,8 @@ HOMEPAGE=		http://pdiff.sourceforge.net/
 COMMENT=		Image comparison through perceptually based image metric
 
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
 
+.include "../../devel/cmake/build.mk"
 # not compatible with png>=1.4
 #.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
