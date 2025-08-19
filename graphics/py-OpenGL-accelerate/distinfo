@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2025/05/16 14:47:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/08/19 11:15:15 adam Exp $
 
-BLAKE2s (pyopengl_accelerate-3.1.9.tar.gz) = 099d741d64543905de62c2bf3c1ed7d03cd79401e2c83ab6085e0b7fe86480e0
-SHA512 (pyopengl_accelerate-3.1.9.tar.gz) = a6e4dc2ee88f2133e02384113fa7947f9a30bd2b0dff5905c29fe46b346ba7e61b2d4dc2d598901524f46560025026d5163f750be0a2b58864b3863fa7179fcf
-Size (pyopengl_accelerate-3.1.9.tar.gz) = 21799 bytes
+BLAKE2s (pyopengl_accelerate-3.1.10.tar.gz) = 10a2991bba39b9f9db7ba0ab656e263af15c6009585a3088e58f3714c72b03d0
+SHA512 (pyopengl_accelerate-3.1.10.tar.gz) = 85a3eb19ead97ed4820bd70757e41c9a6719a8dd3fab2f7c4f57f654a216fd3fd3a21bc731d5c2e2c07fdd1236756f79ee70e3600c2cc22105b2885feb2187a7
+Size (pyopengl_accelerate-3.1.10.tar.gz) = 21930 bytes
 SHA1 (patch-src_vbo.pyx) = f543eb44956939cfd00d3da5d0927b08239afee4

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/04/03 15:07:15 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/08/19 11:15:15 adam Exp $
 
-BLAKE2s (pyopengl-3.1.9.tar.gz) = feebfdea45c69ccab33684e61328193e2025987e79e0229a03e3545001d595b2
-SHA512 (pyopengl-3.1.9.tar.gz) = b0fae0031cf0c47899d3cef6a334ee885595b4bc7d3da5055cd12240e6612b2ade1dc75afe1b1f6fe8e4572b994b88c4ec557d893e6606353f4700111cb6f161
-Size (pyopengl-3.1.9.tar.gz) = 1913642 bytes
+BLAKE2s (pyopengl-3.1.10.tar.gz) = 1c7a1b887d190e4f8cca642c28a481a77b258c2d6a1d244524ca00a3e79750ff
+SHA512 (pyopengl-3.1.10.tar.gz) = f11c94e442e0954453974900de5c1ef984d19f92ffc152fcc904a81aedc39ed294f4c51a6f1247e85499224f60422c4567e52516c156079d4efabbdd437e8f7d
+Size (pyopengl-3.1.10.tar.gz) = 1915580 bytes

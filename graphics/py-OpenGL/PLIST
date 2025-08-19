@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/03 15:07:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/08/19 11:15:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -1641,6 +1641,9 @@ ${PYSITELIB}/OpenGL/GL/MESA/resize_buffers.pyo
 ${PYSITELIB}/OpenGL/GL/MESA/shader_integer_functions.py
 ${PYSITELIB}/OpenGL/GL/MESA/shader_integer_functions.pyc
 ${PYSITELIB}/OpenGL/GL/MESA/shader_integer_functions.pyo
+${PYSITELIB}/OpenGL/GL/MESA/texture_const_bandwidth.py
+${PYSITELIB}/OpenGL/GL/MESA/texture_const_bandwidth.pyc
+${PYSITELIB}/OpenGL/GL/MESA/texture_const_bandwidth.pyo
 ${PYSITELIB}/OpenGL/GL/MESA/tile_raster_order.py
 ${PYSITELIB}/OpenGL/GL/MESA/tile_raster_order.pyc
 ${PYSITELIB}/OpenGL/GL/MESA/tile_raster_order.pyo
@@ -3252,6 +3255,9 @@ ${PYSITELIB}/OpenGL/GLES2/MESA/sampler_objects.pyo
 ${PYSITELIB}/OpenGL/GLES2/MESA/shader_integer_functions.py
 ${PYSITELIB}/OpenGL/GLES2/MESA/shader_integer_functions.pyc
 ${PYSITELIB}/OpenGL/GLES2/MESA/shader_integer_functions.pyo
+${PYSITELIB}/OpenGL/GLES2/MESA/texture_const_bandwidth.py
+${PYSITELIB}/OpenGL/GLES2/MESA/texture_const_bandwidth.pyc
+${PYSITELIB}/OpenGL/GLES2/MESA/texture_const_bandwidth.pyo
 ${PYSITELIB}/OpenGL/GLES2/NV/__init__.py
 ${PYSITELIB}/OpenGL/GLES2/NV/__init__.pyc
 ${PYSITELIB}/OpenGL/GLES2/NV/__init__.pyo
@@ -3435,6 +3441,9 @@ ${PYSITELIB}/OpenGL/GLES2/NV/shadow_samplers_cube.pyo
 ${PYSITELIB}/OpenGL/GLES2/NV/stereo_view_rendering.py
 ${PYSITELIB}/OpenGL/GLES2/NV/stereo_view_rendering.pyc
 ${PYSITELIB}/OpenGL/GLES2/NV/stereo_view_rendering.pyo
+${PYSITELIB}/OpenGL/GLES2/NV/texture_barrier.py
+${PYSITELIB}/OpenGL/GLES2/NV/texture_barrier.pyc
+${PYSITELIB}/OpenGL/GLES2/NV/texture_barrier.pyo
 ${PYSITELIB}/OpenGL/GLES2/NV/texture_border_clamp.py
 ${PYSITELIB}/OpenGL/GLES2/NV/texture_border_clamp.pyc
 ${PYSITELIB}/OpenGL/GLES2/NV/texture_border_clamp.pyo
@@ -6006,6 +6015,9 @@ ${PYSITELIB}/OpenGL/raw/GL/MESA/resize_buffers.pyo
 ${PYSITELIB}/OpenGL/raw/GL/MESA/shader_integer_functions.py
 ${PYSITELIB}/OpenGL/raw/GL/MESA/shader_integer_functions.pyc
 ${PYSITELIB}/OpenGL/raw/GL/MESA/shader_integer_functions.pyo
+${PYSITELIB}/OpenGL/raw/GL/MESA/texture_const_bandwidth.py
+${PYSITELIB}/OpenGL/raw/GL/MESA/texture_const_bandwidth.pyc
+${PYSITELIB}/OpenGL/raw/GL/MESA/texture_const_bandwidth.pyo
 ${PYSITELIB}/OpenGL/raw/GL/MESA/tile_raster_order.py
 ${PYSITELIB}/OpenGL/raw/GL/MESA/tile_raster_order.pyc
 ${PYSITELIB}/OpenGL/raw/GL/MESA/tile_raster_order.pyo
@@ -7611,6 +7623,9 @@ ${PYSITELIB}/OpenGL/raw/GLES2/MESA/sampler_objects.pyo
 ${PYSITELIB}/OpenGL/raw/GLES2/MESA/shader_integer_functions.py
 ${PYSITELIB}/OpenGL/raw/GLES2/MESA/shader_integer_functions.pyc
 ${PYSITELIB}/OpenGL/raw/GLES2/MESA/shader_integer_functions.pyo
+${PYSITELIB}/OpenGL/raw/GLES2/MESA/texture_const_bandwidth.py
+${PYSITELIB}/OpenGL/raw/GLES2/MESA/texture_const_bandwidth.pyc
+${PYSITELIB}/OpenGL/raw/GLES2/MESA/texture_const_bandwidth.pyo
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/__init__.py
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/__init__.pyc
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/__init__.pyo
@@ -7794,6 +7809,9 @@ ${PYSITELIB}/OpenGL/raw/GLES2/NV/shadow_samplers_cube.pyo
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/stereo_view_rendering.py
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/stereo_view_rendering.pyc
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/stereo_view_rendering.pyo
+${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_barrier.py
+${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_barrier.pyc
+${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_barrier.pyo
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_border_clamp.py
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_border_clamp.pyc
 ${PYSITELIB}/OpenGL/raw/GLES2/NV/texture_border_clamp.pyo
