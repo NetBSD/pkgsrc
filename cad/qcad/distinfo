@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2025/08/19 12:52:17 plunky Exp $
+$NetBSD: distinfo,v 1.48 2025/08/19 13:57:11 wiz Exp $
 
 BLAKE2s (qcad-3.32.3.4.tar.gz) = 5dd55492b7e49e23182137e481fdcc6a6a0edc6c3da3452b7e25202138233502
 SHA512 (qcad-3.32.3.4.tar.gz) = 39135251f342224cf633c88257e9ebdcc7fad3607c0d32c09fc37b577173e5064f20c20a027402fdb44290ed8b0869698293c5154138ab1320458341a5519be9
@@ -11,9 +11,10 @@ SHA512 (qcad-qtjsapi-v3.32.3.4.tar.gz) = 3108e9c730c3611bb25a7e3c5a697d734bec91a
 Size (qcad-qtjsapi-v3.32.3.4.tar.gz) = 3209211 bytes
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 5b843d1c11c70b2be533fdc4c3ec46442cd4ac19
 SHA1 (patch-src_3rdparty_CMakeLists.txt) = 789a1d14b9c74374a7333bddc931ea6ffa2fac56
+SHA1 (patch-src_3rdparty_opennurbs_android__uuid_CMakeLists.txt) = ed9ef1b4ccb74badc74f1d802fe1901d133ea0bf
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__defines.cpp) = 18295a7a94579de8ef76f2e0a12a2adc07556658
 SHA1 (patch-src_3rdparty_opennurbs_opennurbs__system__runtime.h) = ebcfdfb5d54e1516216b8ee4130a0ded05db19f3
-SHA1 (patch-src_3rdparty_opennurbs_zlib_zconf.h) = 17850165130eb3ee50aa31aaa62a173c3733b7e8
+SHA1 (patch-src_3rdparty_opennurbs_zlib_zconf.h) = ccd801621223aeb9e9e0ec665dfe2b345377d48f
 SHA1 (patch-src_CMakeLists.txt) = 4243a56124dbf049644477da22e8cf9aea6d16b0
 SHA1 (patch-src_core_RS.cpp) = f8b7d6be3a2e822c04342b3490f2f99d47b57484
 SHA1 (patch-src_core_RSettings.cpp) = 8c5cba0026f727829c539195a0632224e3e51638
