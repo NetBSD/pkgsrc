@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2025/08/10 10:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.196 2025/08/19 11:23:21 wiz Exp $
 
 DISTNAME=	flightgear-2020.3.11
 PKGREVISION=	61
@@ -13,23 +13,16 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++14
-USE_CMAKE=		yes
 LDFLAGS.NetBSD+=	-lexecinfo
-
-CONFIGURE_DIRS=		fgbuild
-BUILD_DIRS=		fgbuild
-CMAKE_ARG_PATH=		..
 
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=		-DFG_BUILD_TYPE=Release
 
 CMAKE_CONFIGURE_ARGS+=		-DSYSTEM_FLITE=OFF
 CMAKE_CONFIGURE_ARGS+=		-DSYSTEM_HTS_ENGINE=OFF
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-# The cmake script warns against building in the source directory.
-pre-configure:
-	cd ${WRKSRC} && ${MKDIR} fgbuild
-
+.include "../../devel/cmake/build.mk"
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
