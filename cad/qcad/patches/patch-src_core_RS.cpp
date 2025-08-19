@@ -1,10 +1,10 @@
-$NetBSD: patch-src_core_RS.cpp,v 1.4 2022/05/24 05:17:12 plunky Exp $
+$NetBSD: patch-src_core_RS.cpp,v 1.5 2025/08/19 12:52:17 plunky Exp $
 
 fix hardcoded paths
 
---- src/core/RS.cpp.orig	2020-03-17 10:40:38.000000000 +0000
+--- src/core/RS.cpp.orig	2025-06-10 07:10:41.000000000 +0000
 +++ src/core/RS.cpp
-@@ -149,6 +149,7 @@
+@@ -168,6 +168,7 @@ bool RS::compare(const QPair<QVariant, R
  QStringList RS::getDirectoryList(const QString& subDirectory) {
      QStringList dirList;
  
@@ -12,7 +12,7 @@ fix hardcoded paths
      QString appDir = QCoreApplication::applicationDirPath();
      QFileInfo fi(appDir);
      if (fi.fileName() == "debug" || fi.fileName() == "release") {
-@@ -187,6 +188,11 @@
+@@ -206,6 +207,11 @@ QStringList RS::getDirectoryList(const Q
      }
  #endif
      */

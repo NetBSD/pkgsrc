@@ -1,8 +1,8 @@
-$NetBSD: patch-scripts_Help_ShowReadme_ShowReadme.js,v 1.2 2018/07/27 14:12:41 plunky Exp $
+$NetBSD: patch-scripts_Help_ShowReadme_ShowReadme.js,v 1.3 2025/08/19 12:52:17 plunky Exp $
 
 fix path to file
 
---- scripts/Help/ShowReadme/ShowReadme.js.orig	2018-07-10 13:17:39.000000000 +0000
+--- scripts/Help/ShowReadme/ShowReadme.js.orig	2025-06-10 07:10:41.000000000 +0000
 +++ scripts/Help/ShowReadme/ShowReadme.js
 @@ -19,7 +19,7 @@
  

@@ -1,0 +1,14 @@
+$NetBSD: patch-src_run_CMakeInclude.txt,v 1.1 2025/08/19 12:52:17 plunky Exp $
+
+don't link opennurbs in that way
+
+--- src/run/CMakeInclude.txt.orig	2025-06-29 19:50:30.599468737 +0000
++++ src/run/CMakeInclude.txt
+@@ -118,7 +118,6 @@ endif()
+ if(NOT r_no_opennurbs)
+     target_link_libraries(${PROJECT_NAME} PRIVATE
+         zlib
+-        opennurbs
+     )
+ endif()
+ 

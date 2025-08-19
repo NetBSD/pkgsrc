@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/03/16 14:56:11 plunky Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/08/19 12:52:17 plunky Exp $
 bin/qcad
 lib/libopennurbs.so
 lib/libqcadcore.so
@@ -1492,18 +1492,32 @@ lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_ja.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_nl.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_pl.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_bg.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_cs.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_da.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_de.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_en.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_es.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_et.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_fi.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_fr.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_hu.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_id.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_it.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_ja.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_lt.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_lv.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_nl.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_pl.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_pt.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_ro.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_ru.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_sk.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_sl.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_sv.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_tr.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_uk.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_zh_CN.html
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_proc_zh_TW.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_pt.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_ru.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_sl.html
@@ -4045,8 +4059,12 @@ lib/qcad/scripts/Draw/Polyline/DrawPolyline/Redo-inverse.svg
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Redo.svg
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest00.js
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest01.js
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest02.js
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/DrawPolylineTest03.js
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest00_000.dxf
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest01_000.dxf
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest02_000.dxf
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest03_000.dxf
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Undo-inverse.svg
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Undo.svg
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/Close.png
@@ -12845,4 +12863,3 @@ share/qcad/readme.txt
 @pkgdir lib/qcad/scripts/Block/EditBlock/Tests/actual
 @pkgdir lib/qcad/scripts/Block/CreateBlock/Tests/actual
 @pkgdir lib/qcad/scripts/Block/AddBlock/Tests/actual
-@pkgdir lib/plugins

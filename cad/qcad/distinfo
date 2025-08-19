@@ -1,20 +1,24 @@
-$NetBSD: distinfo,v 1.46 2025/03/16 14:56:12 plunky Exp $
+$NetBSD: distinfo,v 1.47 2025/08/19 12:52:17 plunky Exp $
 
-BLAKE2s (qcad-3.32.2.0.tar.gz) = 3e150349b061c13c5d6f27bcc2db515f53a52bd6314066bb95660465b76e5121
-SHA512 (qcad-3.32.2.0.tar.gz) = b13bfad1f2aa714949f82baa4ba80f264f1353e768264cb74225e24eab876fe763e0b4551ece6497ca251946e0aee1349d28478738c855a6b00a7178308a041d
-Size (qcad-3.32.2.0.tar.gz) = 43092869 bytes
-BLAKE2s (qcad-qcadjsapi-v3.32.2.0.tar.gz) = b74a6ba6c3bd9cad94af6dd7ee46968a44adeec430f808a7e5c0f2338da3cace
-SHA512 (qcad-qcadjsapi-v3.32.2.0.tar.gz) = 0a4e496938d56cef6c22869bd0b792dd04d5a9ed15c99f4c6307f688202a31b3762518063fda3bc79b1079322dd7a4c5b5c7c74bd6a3d4eb0f5c6ed06dff446c
-Size (qcad-qcadjsapi-v3.32.2.0.tar.gz) = 3471956 bytes
-BLAKE2s (qcad-qtjsapi-v3.32.2.0.tar.gz) = 9ed9cc79e86e069fb89936daca01fff50678247a04f5f08cc9298a90c1b7060b
-SHA512 (qcad-qtjsapi-v3.32.2.0.tar.gz) = d78fb2b03378e04a973af5ec77b41ee60091e25e0fadf8ec98b018326af337803f75902c60a561cdf91813beb8453b04c58191e308f807228623ecf018aefe10
-Size (qcad-qtjsapi-v3.32.2.0.tar.gz) = 3167711 bytes
-SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 96412237a7c4422f02dc5d2ab3634457b376a2d2
+BLAKE2s (qcad-3.32.3.4.tar.gz) = 5dd55492b7e49e23182137e481fdcc6a6a0edc6c3da3452b7e25202138233502
+SHA512 (qcad-3.32.3.4.tar.gz) = 39135251f342224cf633c88257e9ebdcc7fad3607c0d32c09fc37b577173e5064f20c20a027402fdb44290ed8b0869698293c5154138ab1320458341a5519be9
+Size (qcad-3.32.3.4.tar.gz) = 47995615 bytes
+BLAKE2s (qcad-qcadjsapi-v3.32.3.4.tar.gz) = ac59bb11d096f2445e3c4601c8bf0222346c45d90331b23717c1598f9bee4788
+SHA512 (qcad-qcadjsapi-v3.32.3.4.tar.gz) = 50bf01b20aff724de84280a12c298fd52d0cfe9d170d0cf05fa3ebb97823527cafb48624a1ea8a8fe391e69edbd11fe8537501734b35662296e6f5fa7ecc5239
+Size (qcad-qcadjsapi-v3.32.3.4.tar.gz) = 3447940 bytes
+BLAKE2s (qcad-qtjsapi-v3.32.3.4.tar.gz) = 1a159c1256a53df8b81faeeeb55eda42833870c7915b8f84aaaa94eeacf870ce
+SHA512 (qcad-qtjsapi-v3.32.3.4.tar.gz) = 3108e9c730c3611bb25a7e3c5a697d734bec91a3a594fe5558ca182693dc47719e8cb7424d3cd2d8fe2848e9d926cb04ac74a811cefde1d5250fc282c8464d69
+Size (qcad-qtjsapi-v3.32.3.4.tar.gz) = 3209211 bytes
+SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 5b843d1c11c70b2be533fdc4c3ec46442cd4ac19
 SHA1 (patch-src_3rdparty_CMakeLists.txt) = 789a1d14b9c74374a7333bddc931ea6ffa2fac56
-SHA1 (patch-src_3rdparty_opennurbs_CMakeLists.txt) = 0e5a5b4547840c38a3b18fdfbf2c716c1e30be50
-SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp) = 5691a80688cfe135a1d47ce340768c6db6c60c66
-SHA1 (patch-src_3rdparty_opennurbs_opennurbs__zlib.h) = e83185090c36a7d502d11852b0469e26be523d51
-SHA1 (patch-src_CMakeLists.txt) = 37e003e48e51d43abfa4509ecbe2003a703aadc2
-SHA1 (patch-src_core_RS.cpp) = a8814a6f475bde9c7ff03c3066e13daff2313ac5
-SHA1 (patch-src_core_RSettings.cpp) = d59135a840520f88abb5ed37ae6bd511f0578c92
+SHA1 (patch-src_3rdparty_opennurbs_opennurbs__defines.cpp) = 18295a7a94579de8ef76f2e0a12a2adc07556658
+SHA1 (patch-src_3rdparty_opennurbs_opennurbs__system__runtime.h) = ebcfdfb5d54e1516216b8ee4130a0ded05db19f3
+SHA1 (patch-src_3rdparty_opennurbs_zlib_zconf.h) = 17850165130eb3ee50aa31aaa62a173c3733b7e8
+SHA1 (patch-src_CMakeLists.txt) = 4243a56124dbf049644477da22e8cf9aea6d16b0
+SHA1 (patch-src_core_RS.cpp) = f8b7d6be3a2e822c04342b3490f2f99d47b57484
+SHA1 (patch-src_core_RSettings.cpp) = 8c5cba0026f727829c539195a0632224e3e51638
+SHA1 (patch-src_entity_CMakeLists.txt) = 6bf41871ea1df9b8534d2d9078ce441c2f57f68b
+SHA1 (patch-src_qcadjsapi_CMakeLists.txt) = a73eeb21ac7da58b27b7ea17153776060c632069
+SHA1 (patch-src_qtjsapi_RJSTools.cpp) = 11bd60ffbb3d3c32ac9219844b912fcf02786ea2
+SHA1 (patch-src_run_CMakeInclude.txt) = f484ba9ff244196f2f80401b964f45cb7acc3963
 SHA1 (patch-src_run_main.cpp) = 2414fdbd6434c5a7d12647f9f964775b01fcee6a
