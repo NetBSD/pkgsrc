@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/07/07 05:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/19 11:56:39 adam Exp $
 
-DISTNAME=	jupyter-lsp-2.2.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	jupyter_lsp-2.2.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-lsp/}
 
