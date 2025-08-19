@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2024/03/23 20:29:04 bsiegert Exp $
+$NetBSD: distinfo,v 1.17 2025/08/19 08:16:13 wiz Exp $
 
-BLAKE2s (anope-2.0.15.tar.gz) = d619dad1dcac077e9523386608ed584300deb20c74c77aaa3beb176d9b8ff79e
-SHA512 (anope-2.0.15.tar.gz) = e3acf6a45f68aa00c75a8d7bb8479e823af9e0dba3ae6e4bf18fd0d51ea1ce6fb77301aee50692ef8111aab20a44017af48e4ae756348194071db1b32883851f
-Size (anope-2.0.15.tar.gz) = 1653857 bytes
+BLAKE2s (anope-2.0.18.tar.gz) = 2768396753c2a3bc204fafe0d43bb87d24f163ad10e307ca1089fb557bc7ed84
+SHA512 (anope-2.0.18.tar.gz) = d3244e2bea305ba94bcd7f9c9c4f571251069e6554678cc0285668e690c6bfb1a314e9a9e405e2a4ed2652373fda1ed863d51b95ca60fc2c97ff0a6a4ebfecc6
+Size (anope-2.0.18.tar.gz) = 1656281 bytes
 SHA1 (patch-CMakeLists.txt) = 698034091457fb58de32a43fd701c7ce716f898e
 SHA1 (patch-data_CMakeLists.txt) = e0d762da4345ded9a080ea6cf216db510c4c1665
 SHA1 (patch-data_example.conf) = 6866b154f464ed6072b267f589ee67056bea73ac
