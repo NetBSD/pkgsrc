@@ -1,4 +1,4 @@
-$NetBSD: patch-src_program.cpp,v 1.1 2016/07/27 21:14:36 kamil Exp $
+$NetBSD: patch-src_program.cpp,v 1.2 2025/08/19 11:57:03 wiz Exp $
 
 Add NetBSD support.
 
