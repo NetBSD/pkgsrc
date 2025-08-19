@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/08/19 13:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2025/08/19 13:40:03 wiz Exp $
 
 GITHUB_PROJECT=	ibus-chewing
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 
+USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pkg-config
@@ -22,16 +23,12 @@ TOOLS_NOOP+=		msgmerge xgettext
 
 MAKE_JOBS_SAFE=		no
 
-# generator not passed to sub-cmake calls
-CMAKE_GENERATOR_INCOMPATIBLE=	ninja
-
 BUILD_TARGET=	all translations
 
 TEST_TARGET=	test
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-.include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/schemas.mk"
 
 .include "../../devel/glib2/buildlink3.mk"
