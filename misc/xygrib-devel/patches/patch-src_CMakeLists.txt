@@ -1,5 +1,7 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2024/06/27 12:31:32 bouyer Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2025/08/19 14:17:49 wiz Exp $
+
 * don't create bundle under OSX
+
 --- src/CMakeLists.txt.orig	2019-12-10 11:27:27.459588414 +0000
 +++ src/CMakeLists.txt
 @@ -112,7 +112,7 @@ ENDIF()
