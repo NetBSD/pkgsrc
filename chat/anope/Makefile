@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2025/04/17 21:49:52 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/08/19 08:16:13 wiz Exp $
 
-DISTNAME=	anope-2.0.15
-PKGNAME=	${DISTNAME:S/-source//1}
-PKGREVISION=	6
+DISTNAME=	anope-2.0.18
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anope/}
 GITHUB_PROJECT=	anope
@@ -15,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt
-USE_CMAKE=	yes
 
 CMAKE_CONFIGURE_ARGS+=	-DPROGRAM_NAME=anope
 
@@ -109,5 +106,6 @@ post-install:
 	${MV} ${DESTDIR}${EGDIR}/stats.standalone.example.conf \
 		${DESTDIR}${DOCDIR}/stats.standalone.example.conf
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
