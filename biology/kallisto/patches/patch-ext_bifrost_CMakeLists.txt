@@ -1,9 +1,17 @@
-$NetBSD: patch-ext_bifrost_CMakeLists.txt,v 1.3 2024/09/20 00:03:15 bacon Exp $
+$NetBSD: patch-ext_bifrost_CMakeLists.txt,v 1.4 2025/08/19 08:13:21 wiz Exp $
+
+Fix build with cmake 4
 
 # Respect pkgsrc build flags
 
---- ext/bifrost/CMakeLists.txt.orig	2024-07-23 11:56:13.172038229 +0000
+--- ext/bifrost/CMakeLists.txt.orig	2024-09-17 05:40:08.000000000 +0000
 +++ ext/bifrost/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.0.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(Bifrost)
+ 
 @@ -6,18 +6,12 @@ find_package(Threads REQUIRED)
  
  # To enable a larger default k-mer size, replace MAX_KMER_SIZE with a larger multiple of 32: actual maximum k-mer size will be MAX_KMER_SIZE-1.
