@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5040 2025/08/19 14:13:41 pho Exp $
+$NetBSD: CHANGES-2025,v 1.5041 2025/08/19 19:41:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7338,3 +7338,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-elementpath to 5.0.4 [adam 2025-08-19]
 	Updated devel/py-fire to 0.7.1 [adam 2025-08-19]
 	Updated net/gkrellm-snmp to 1.1 [pho 2025-08-19]
+	Updated graphics/SDL_image to 1.2.12nb14 [triaxx 2025-08-19]
