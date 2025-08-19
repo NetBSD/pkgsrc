@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/05/08 08:23:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/08/19 11:50:16 adam Exp $
 bin/jsonschema-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -105,6 +105,12 @@ ${PYSITELIB}/jsonschema/tests/test_utils.pyo
 ${PYSITELIB}/jsonschema/tests/test_validators.py
 ${PYSITELIB}/jsonschema/tests/test_validators.pyc
 ${PYSITELIB}/jsonschema/tests/test_validators.pyo
+${PYSITELIB}/jsonschema/tests/typing/__init__.py
+${PYSITELIB}/jsonschema/tests/typing/__init__.pyc
+${PYSITELIB}/jsonschema/tests/typing/__init__.pyo
+${PYSITELIB}/jsonschema/tests/typing/test_all_concrete_validators_match_protocol.py
+${PYSITELIB}/jsonschema/tests/typing/test_all_concrete_validators_match_protocol.pyc
+${PYSITELIB}/jsonschema/tests/typing/test_all_concrete_validators_match_protocol.pyo
 ${PYSITELIB}/jsonschema/validators.py
 ${PYSITELIB}/jsonschema/validators.pyc
 ${PYSITELIB}/jsonschema/validators.pyo
