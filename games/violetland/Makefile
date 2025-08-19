@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:18 ktnb Exp $
+# $NetBSD: Makefile,v 1.31 2025/08/19 11:57:02 wiz Exp $
 
 DISTNAME=	violetland-0.5-source-with-dependencies
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,6 +16,9 @@ LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	xgettext
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
