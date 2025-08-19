@@ -1,21 +1,24 @@
-# $NetBSD: Makefile,v 1.84 2025/04/24 14:15:23 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/08/19 14:13:16 pho Exp $
 #
 
-DISTNAME=	gkrellm_snmp-0.21
+DISTNAME=	gkrellm_snmp-1.1
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	64
 CATEGORIES=	net
-MASTER_SITES=	http://triq.net/gkrellm/
+MASTER_SITES=	http://triq.net/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://triq.net/gkrellm_snmp.html
 COMMENT=	GKrellM plugin to display values collected from a SNMP agent
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
 
-INSTALLATION_DIRS=	lib/gkrellm2/plugins
+MAKE_FILE=	${FILESDIR}/Makefile
+MAKE_FLAGS+=	INSTALL_LIB_DIR=${INSTALL_LIB_DIR:Q}
+MAKE_FLAGS+=	INSTALL_LIB=${INSTALL_LIB:Q}
+MAKE_FLAGS+=	PLUGIN_DIR=${PREFIX:Q}/lib/gkrellm2/plugins
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
