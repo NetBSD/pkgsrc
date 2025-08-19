@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/19 10:15:19 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-19 10:14:17.969503233 +0000
++++ CMakeLists.txt
+@@ -18,15 +18,6 @@ if (POLICY CMP0022)
+   cmake_policy(SET CMP0022 NEW) # automatic when 2.8.12 is required
+ endif()
+ 
+-if (POLICY CMP0051)
+-  # CMake 3.1 and higher include generator expressions of the form
+-  # $<TARGETLIB:obj> in the SOURCES property.  These need to be
+-  # stripped everywhere that access the SOURCES property, so we just
+-  # defer to the OLD behavior of not including generator expressions
+-  # in the output for now.
+-  cmake_policy(SET CMP0051 OLD)
+-endif()
+-
+ if (POLICY CMP0063)
+   set(CMAKE_POLICY_DEFAULT_CMP0063 NEW) # automatic when 3.3.2 is required
+ endif()

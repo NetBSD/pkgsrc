@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/25 06:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/19 10:15:19 wiz Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_TARGETS_TO_BUILD=all
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
