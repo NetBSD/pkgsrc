@@ -1,0 +1,20 @@
+$NetBSD: patch-plugins_vst__base_CMakeLists.txt,v 1.1 2025/08/19 07:20:26 wiz Exp $
+
+cmake 4 compatibility using arch patch.
+https://gitlab.archlinux.org/archlinux/packaging/packages/lmms/-/blob/main/cmake-4.patch?ref_type=heads
+
+--- plugins/vst_base/CMakeLists.txt.orig	2018-11-03 01:43:42.000000000 +0000
++++ plugins/vst_base/CMakeLists.txt
+@@ -78,11 +78,10 @@ ENDIF()
+ set(ENV{PATH} "$ENV{PATH}:${WINE_BINDIR}")
+ 
+ ADD_CUSTOM_COMMAND(
+-	SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/RemoteVstPlugin.cpp"
+ 	COMMAND export
+ 		ARGS "PATH=$PATH:${WINE_BINDIR}"
+ 	COMMAND ${WINE_CXX}
+-	ARGS ${WINE_CXX_ARGS}
++	ARGS ${WINE_CXX_ARGS} "${CMAKE_CURRENT_SOURCE_DIR}/RemoteVstPlugin.cpp"
+ 	# Ensure correct file extension
+ 	COMMAND sh -c "mv ../RemoteVstPlugin.exe ../RemoteVstPlugin || true"
+ 	TARGET vstbase

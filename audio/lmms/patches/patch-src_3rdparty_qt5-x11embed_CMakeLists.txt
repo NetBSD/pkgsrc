@@ -1,0 +1,13 @@
+$NetBSD: patch-src_3rdparty_qt5-x11embed_CMakeLists.txt,v 1.1 2025/08/19 07:20:26 wiz Exp $
+
+cmake 4 compatibility using arch patch.
+https://gitlab.archlinux.org/archlinux/packaging/packages/lmms/-/blob/main/cmake-4.patch?ref_type=heads
+
+--- src/3rdparty/qt5-x11embed/CMakeLists.txt.orig	2018-11-03 01:43:42.000000000 +0000
++++ src/3rdparty/qt5-x11embed/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+ project(qt5-x11embed)
+ 
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/ECM/find-modules")

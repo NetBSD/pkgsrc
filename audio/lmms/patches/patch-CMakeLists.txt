@@ -1,10 +1,41 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2019/06/10 19:08:42 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/08/19 07:20:26 wiz Exp $
 
+cmake 4 compatibility using arch patch.
+https://gitlab.archlinux.org/archlinux/packaging/packages/lmms/-/blob/main/cmake-4.patch?ref_type=heads
 Install plain (un-gzipped) man page.
 
 --- CMakeLists.txt.orig	2018-11-03 01:43:42.000000000 +0000
 +++ CMakeLists.txt
-@@ -563,16 +563,6 @@ ADD_SUBDIRECTORY(doc)
+@@ -1,19 +1,9 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.7)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ PROJECT(lmms)
+ 
+ SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" ${CMAKE_MODULE_PATH})
+ 
+-IF(COMMAND CMAKE_POLICY)
+-	CMAKE_POLICY(SET CMP0005 NEW)
+-	CMAKE_POLICY(SET CMP0003 NEW)
+-	IF (CMAKE_MAJOR_VERSION GREATER 2)
+-		CMAKE_POLICY(SET CMP0026 OLD)
+-		CMAKE_POLICY(SET CMP0045 NEW)
+-		CMAKE_POLICY(SET CMP0050 OLD)
+-	ENDIF()
+-ENDIF(COMMAND CMAKE_POLICY)
+-
+ INCLUDE(AddFileDependencies)
+ INCLUDE(CheckIncludeFiles)
+ INCLUDE(FindPkgConfig)
+@@ -539,7 +529,6 @@ IF(WIN32 OR WIN64)
+ 	ADD_CUSTOM_TARGET(bin2res COMMAND g++ "\"${BIN2RES_CPP}\"" -o "\"${BIN2RES}\"" DEPENDS "${BIN2RES_CPP}")
+ ELSE(WIN32 OR WIN64)
+ 	ADD_EXECUTABLE(bin2res buildtools/bin2res.cpp)
+-	GET_TARGET_PROPERTY(BIN2RES bin2res LOCATION)
+ ENDIF(WIN32 OR WIN64)
+ 
+ # we somehow have to make LMMS-binary depend on MOC-files
+@@ -575,16 +564,6 @@ ADD_SUBDIRECTORY(doc)
  # post-install tasks
  ADD_SUBDIRECTORY(cmake/postinstall)
  

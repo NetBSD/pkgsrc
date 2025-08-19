@@ -1,9 +1,21 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2019/06/10 19:08:42 nia Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2025/08/19 07:20:26 wiz Exp $
+
+cmake 4 compatibility using arch patch.
+https://gitlab.archlinux.org/archlinux/packaging/packages/lmms/-/blob/main/cmake-4.patch?ref_type=heads
 
 Install uncompressed man pages to the correct location.
 
 --- src/CMakeLists.txt.orig	2018-11-03 01:43:42.000000000 +0000
 +++ src/CMakeLists.txt
+@@ -45,7 +45,7 @@ ENDIF()
+ 
+ SET(lmms_EMBEDDED_RESOURCES "${CMAKE_SOURCE_DIR}/doc/AUTHORS" "${CMAKE_SOURCE_DIR}/LICENSE.txt" "${CONTRIBUTORS}")
+ SET(LMMS_ER_H "${CMAKE_CURRENT_BINARY_DIR}/embedded_resources.h")
+-ADD_CUSTOM_COMMAND(OUTPUT "${LMMS_ER_H}" COMMAND "${BIN2RES}" ARGS ${lmms_EMBEDDED_RESOURCES} > "${LMMS_ER_H}" DEPENDS bin2res)
++ADD_CUSTOM_COMMAND(OUTPUT "${LMMS_ER_H}" COMMAND bin2res ARGS ${lmms_EMBEDDED_RESOURCES} > "${LMMS_ER_H}" DEPENDS bin2res)
+ 
+ # Paths relative to lmms executable
+ FILE(RELATIVE_PATH LIB_DIR_RELATIVE "/${BIN_DIR}" "/${LIB_DIR}")
 @@ -113,7 +113,7 @@ ELSE()
  	)
  ENDIF()
@@ -18,6 +30,6 @@ Install uncompressed man pages to the correct location.
  
  	INSTALL(TARGETS lmms RUNTIME DESTINATION "${BIN_DIR}")
 -	INSTALL(FILES "${CMAKE_BINARY_DIR}/lmms.1.gz" DESTINATION "${CMAKE_INSTALL_PREFIX}/share/man/man1/" PERMISSIONS OWNER_READ GROUP_READ WORLD_READ)
-+	INSTALL(FILES "${CMAKE_BINARY_DIR}/doc/lmms.1" DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}/man1/" PERMISSIONS OWNER_READ GROUP_READ WORLD_READ)
++	INSTALL(FILES "${CMAKE_SOURCE_DIR}/doc/lmms.1" DESTINATION "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_MANDIR}/man1/" PERMISSIONS OWNER_READ GROUP_READ WORLD_READ)
  
  ENDIF(LMMS_BUILD_WIN32)
