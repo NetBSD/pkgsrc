@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5031 2025/08/19 08:16:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5032 2025/08/19 10:27:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7323,3 +7323,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-timescaledb to 2.21.3 [adam 2025-08-19]
 	Updated devel/mold to 2.40.4 [adam 2025-08-19]
 	Updated chat/anope to 2.0.18 [wiz 2025-08-19]
+	Updated devel/blosc2 to 2.21.1 [adam 2025-08-19]
+	Updated archivers/bkcrack to 1.8.0 [adam 2025-08-19]
