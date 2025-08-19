@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_googletest_googlemock_CMakeLists.txt,v 1.1 2025/08/19 08:07:11 wiz Exp $
+
+Fix build with cmake 4.
+
+--- lib/googletest/googlemock/CMakeLists.txt.orig	2025-08-19 08:00:45.001538366 +0000
++++ lib/googletest/googlemock/CMakeLists.txt
+@@ -42,7 +42,7 @@ else()
+   cmake_policy(SET CMP0048 NEW)
+   project(gmock VERSION ${GOOGLETEST_VERSION} LANGUAGES CXX C)
+ endif()
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ if (COMMAND set_up_hermetic_build)
+   set_up_hermetic_build()
