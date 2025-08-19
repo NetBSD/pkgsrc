@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.11 2025/01/31 13:30:15 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/08/19 08:23:14 wiz Exp $
 
 BLAKE2s (mysql-connector-c++-9.2.0-src.tar.gz) = f213dee3d69a95cadadfd882e53f617ed124fe569e7def9f203398bc1fa4bcc9
 SHA512 (mysql-connector-c++-9.2.0-src.tar.gz) = bbd829ba426772702c8109e8706e5e542bc2a102dae6cddc0ba4f9f6d26952b4652210930d9a983cfadd3a72cf95ba430a401eeb100d766de69ddc2ec6eefa71
 Size (mysql-connector-c++-9.2.0-src.tar.gz) = 4784018 bytes
+SHA1 (patch-cdk_extra_lz4_CMakeLists.txt) = 7b395ee311793715b41bafa9c7767f648cabf330
+SHA1 (patch-cdk_extra_protobuf_CMakeLists.txt) = e8ca8cb48de499e3c4932abf8e8d6a7966eeb423
+SHA1 (patch-cdk_extra_zstd_CMakeLists.txt) = 0a498ca681fd324235625a3c99f11d72144903f1

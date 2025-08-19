@@ -1,0 +1,15 @@
+$NetBSD: patch-cdk_extra_lz4_CMakeLists.txt,v 1.1 2025/08/19 08:23:14 wiz Exp $
+
+Fix build with cmake 4.
+
+--- cdk/extra/lz4/CMakeLists.txt.orig	2025-08-19 08:20:06.974424719 +0000
++++ cdk/extra/lz4/CMakeLists.txt
+@@ -26,7 +26,7 @@
+ # along with this program; if not, write to the Free Software Foundation, Inc.,
+ # 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+ 
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ PROJECT(zstd C)
+ 
+ include(../setup.cmake)

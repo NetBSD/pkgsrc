@@ -1,0 +1,15 @@
+$NetBSD: patch-cdk_extra_zstd_CMakeLists.txt,v 1.1 2025/08/19 08:23:14 wiz Exp $
+
+Fix build with cmake 4.
+
+--- cdk/extra/zstd/CMakeLists.txt.orig	2025-08-19 08:20:25.934432974 +0000
++++ cdk/extra/zstd/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ # ################################################################
+ 
+ PROJECT(zstd)
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.9)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ include(../setup.cmake)
+ include(platform)
