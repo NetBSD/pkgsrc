@@ -1,0 +1,15 @@
+$NetBSD: patch-cdk_extra_protobuf_CMakeLists.txt,v 1.1 2025/08/19 08:23:14 wiz Exp $
+
+Fix build with cmake 4.
+
+--- cdk/extra/protobuf/CMakeLists.txt.orig	2025-08-19 08:19:46.375566692 +0000
++++ cdk/extra/protobuf/CMakeLists.txt
+@@ -57,7 +57,7 @@
+ # - fix minor compilation issues on SunPro 5.14.0
+ 
+ 
+-cmake_minimum_required(VERSION 3.1)
++cmake_minimum_required(VERSION 3.5)
+ PROJECT(Protobuf)
+ 
+ include(../setup.cmake)
