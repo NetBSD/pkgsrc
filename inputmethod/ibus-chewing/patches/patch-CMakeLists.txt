@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/08/19 13:31:52 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-19 13:28:09.657830468 +0000
++++ CMakeLists.txt
+@@ -1,12 +1,5 @@
+ cmake_minimum_required(VERSION 2.8.0)
+ 
+-# Included scripts do automatic cmake_policy PUSH and POP.
+-# OLD: CMake policy in included script will affect the invoker.
+-CMAKE_POLICY(SET CMP0011 OLD)
+-IF(POLICY CMP0065)
+-    CMAKE_POLICY(SET CMP0065 OLD)
+-ENDIF()
+-
+ ####################################################################
+ # Find cmake-fedora
+ #
