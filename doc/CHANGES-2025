@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5037 2025/08/19 12:23:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5038 2025/08/19 12:52:38 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7334,3 +7334,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyter-lsp to 2.2.6 [adam 2025-08-19]
 	Updated databases/redis to 8.2.1 [adam 2025-08-19]
 	Updated mail/py-mail-parser to 4.1.4 [adam 2025-08-19]
+	Updated cad/qcad to 3.32.3.4 [plunky 2025-08-19]
