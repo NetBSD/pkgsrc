@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/08/18 19:39:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/19 10:26:13 adam Exp $
 include/b2nd.h
 include/blosc2.h
 include/blosc2/blosc2-common.h
@@ -12,7 +12,10 @@ lib/cmake/Blosc2/Blosc2ConfigVersion.cmake
 lib/cmake/Blosc2/Blosc2Targets-release.cmake
 lib/cmake/Blosc2/Blosc2Targets.cmake
 lib/cmake/Blosc2/Modules/FindIPP.cmake
+lib/cmake/Blosc2/Modules/FindLZ4.cmake
 lib/cmake/Blosc2/Modules/FindSIMD.cmake
+lib/cmake/Blosc2/Modules/FindZLIB_NG.cmake
+lib/cmake/Blosc2/Modules/FindZSTD.cmake
 lib/cmake/Blosc2/Modules/toolchain-aarch64.cmake
 lib/cmake/Blosc2/Modules/toolchain-armhf.cmake
 lib/cmake/Blosc2/Modules/toolchain-armsf.cmake
