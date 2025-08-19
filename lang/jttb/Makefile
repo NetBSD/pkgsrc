@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/01 00:55:34 thorpej Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/19 13:44:53 wiz Exp $
 
 DISTNAME=	JTTB-0.6
 CATEGORIES=	lang
@@ -15,6 +15,8 @@ USE_LANGUAGES=	c c++
 
 CFLAGS+=	-Wno-error=unknown-pragmas
 
+# build failure, doesn't find tbasm program during build
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 MAKE_JOBS_SAFE=	no
 
 .include "../../devel/cmake/build.mk"
