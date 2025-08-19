@@ -1,9 +1,26 @@
-$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.2 2017/08/24 13:01:32 bouyer Exp $
+$NetBSD: patch-cmake_PluginConfigure.cmake,v 1.3 2025/08/19 12:39:06 wiz Exp $
+
+Fix build with cmake 4.
+
 Do not overwrite CMAKE_SHARED_LINKER_FLAGS
 
---- cmake/PluginConfigure.cmake.orig	2016-07-16 16:24:09.000000000 +0200
-+++ cmake/PluginConfigure.cmake	2017-08-24 11:41:35.216982638 +0200
-@@ -35,9 +35,9 @@
+--- cmake/PluginConfigure.cmake.orig	2016-07-16 14:24:09.000000000 +0000
++++ cmake/PluginConfigure.cmake
+@@ -6,13 +6,6 @@
+ 
+ SET(PLUGIN_SOURCE_DIR .)
+ 
+-# This should be 2.8.0 to have FindGTK2 module
+-IF (COMMAND cmake_policy)
+-  CMAKE_POLICY(SET CMP0003 OLD)
+-  CMAKE_POLICY(SET CMP0005 OLD)
+-  CMAKE_POLICY(SET CMP0011 OLD)
+-ENDIF (COMMAND cmake_policy)
+-
+ MESSAGE (STATUS "*** Staging to build ${PACKAGE_NAME} ***")
+ 
+ configure_file(cmake/version.h.in ${PROJECT_SOURCE_DIR}/src/version.h)
+@@ -35,9 +28,9 @@ IF(NOT MSVC)
   ENDIF(PROFILING)
  
   IF(NOT APPLE)
