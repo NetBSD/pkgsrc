@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2025/08/15 15:54:27 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2025/08/19 03:58:21 schmonz Exp $
 
 BLAKE2s (ideaIC-2025.2.tar.gz) = f6075e5fdd09230e800064be67870beb2c925ce4df260829fbaaed2568dfdf3d
 SHA512 (ideaIC-2025.2.tar.gz) = c4258b77071fafc6bb22e238b9734994b572d0e8f68f8b994f79572c170ceb2e2fe6c466233b9348fe4d9fee4211b0c5d2e732704d74048696e45e62b0702b77
 Size (ideaIC-2025.2.tar.gz) = 1209241428 bytes
-SHA1 (patch-bin_idea.sh) = 70c824b8958a19b636ec6a284e2c0ccca3a5c2f2
+BLAKE2s (ideaIC-2025.2-aarch64.tar.gz) = 282bf9930edd3ecf9c6272282567811d78d257f1d2501d6e8bf781e0006663d8
+SHA512 (ideaIC-2025.2-aarch64.tar.gz) = 1ef9944a0bfe3642adcfd099e3568acae4a80bf554a5a841a4e5c12ec2593fbf3e807d1d8378db887976b73e2d490f1ccae160514d3ec7c5234db5fac6be410f
+Size (ideaIC-2025.2-aarch64.tar.gz) = 1206873941 bytes
+SHA1 (patch-bin_idea.sh) = 9b92d2194c928b2e761258a8aca6488e5936ff98
