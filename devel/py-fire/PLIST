@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/12 10:59:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/19 13:12:49 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +16,7 @@ ${PYSITELIB}/fire/completion.pyo
 ${PYSITELIB}/fire/completion_test.py
 ${PYSITELIB}/fire/completion_test.pyc
 ${PYSITELIB}/fire/completion_test.pyo
+${PYSITELIB}/fire/console/README.md
 ${PYSITELIB}/fire/console/__init__.py
 ${PYSITELIB}/fire/console/__init__.pyc
 ${PYSITELIB}/fire/console/__init__.pyo

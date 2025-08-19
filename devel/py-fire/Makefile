@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 10:59:18 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/19 13:12:49 adam Exp $
 
-DISTNAME=	fire-0.7.0
+DISTNAME=	fire-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fire/}
 
