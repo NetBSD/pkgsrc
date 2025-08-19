@@ -1,0 +1,12 @@
+$NetBSD: patch-src_3rdparty_opennurbs_android__uuid_CMakeLists.txt,v 1.1 2025/08/19 13:57:11 wiz Exp $
+
+Fix build with cmake 4.
+
+--- src/3rdparty/opennurbs/android_uuid/CMakeLists.txt.orig	2025-08-19 11:57:35.372105563 +0000
++++ src/3rdparty/opennurbs/android_uuid/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 3.4)
++cmake_minimum_required (VERSION 3.5)
+ project( android_uuid C)
+ 
+ 
