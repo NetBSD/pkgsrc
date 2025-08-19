@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5030 2025/08/19 07:38:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5031 2025/08/19 08:16:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7322,3 +7322,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-coverage to 7.10.4 [adam 2025-08-19]
 	Updated databases/postgresql-timescaledb to 2.21.3 [adam 2025-08-19]
 	Updated devel/mold to 2.40.4 [adam 2025-08-19]
+	Updated chat/anope to 2.0.18 [wiz 2025-08-19]
