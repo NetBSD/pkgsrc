@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/24 23:34:11 cube Exp $
-lib/gkrellm2/plugins/gkrellm_snmp.so
+@comment $NetBSD: PLIST,v 1.3 2025/08/19 14:13:16 pho Exp $
+lib/gkrellm2/plugins/gkrellm_snmp.la
