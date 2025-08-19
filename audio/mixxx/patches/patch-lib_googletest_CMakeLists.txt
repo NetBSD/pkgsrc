@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_googletest_CMakeLists.txt,v 1.1 2025/08/19 08:07:11 wiz Exp $
+
+Fix build with cmake 4.
+
+--- lib/googletest/CMakeLists.txt.orig	2025-08-19 08:00:25.912054765 +0000
++++ lib/googletest/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # Note: CMake support is community-based. The maintainers do not use CMake
+ # internally.
+ 
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ if (POLICY CMP0048)
+   cmake_policy(SET CMP0048 NEW)
