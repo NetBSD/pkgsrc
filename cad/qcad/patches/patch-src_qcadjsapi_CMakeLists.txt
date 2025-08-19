@@ -1,0 +1,12 @@
+$NetBSD: patch-src_qcadjsapi_CMakeLists.txt,v 1.1 2025/08/19 12:52:17 plunky Exp $
+
+don't link to opennurbs in that way
+
+--- src/qcadjsapi/CMakeLists.txt.orig	2025-06-30 17:43:41.724951923 +0000
++++ src/qcadjsapi/CMakeLists.txt
+@@ -139,5 +139,4 @@ target_link_libraries(qcadjsapi PRIVATE
+     qcadspatialindex
+     qcadstemmer
+     qtjsapi
+-    opennurbs
+ )
