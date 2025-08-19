@@ -1,4 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2025/08/19 10:44:40 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/19 16:19:51 kim Exp $
+
+# When upgrading ansible-core, please also upgrade the ansible package
+# to a version that supports the new version of ansible-core.  At times
+# this may mean not upgrading ansible-core to its latest release branch.
 
 DISTNAME=	ansible_core-2.18.8
 PKGNAME=	${DISTNAME:S/_/-/}
