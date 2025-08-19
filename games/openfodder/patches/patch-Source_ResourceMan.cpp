@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_ResourceMan.cpp,v 1.1 2024/10/23 08:30:30 nia Exp $
+$NetBSD: patch-Source_ResourceMan.cpp,v 1.2 2025/08/19 11:29:40 wiz Exp $
 
 Load static data from pkgsrc prefix.
 
@@ -13,10 +13,3 @@ Load static data from pkgsrc prefix.
  #endif
  }
  
-@@ -624,4 +624,4 @@ std::vector<std::string> cResourceMan::D
- 	return results;
- }
- 
--#endif
-\ No newline at end of file
-+#endif
