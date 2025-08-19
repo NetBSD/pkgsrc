@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26123 2025/08/19 08:16:30 wiz Exp $
+$NetBSD: TODO,v 1.26124 2025/08/19 11:17:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -582,6 +582,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
+	o emulationstation-2.11.2
 	o endless-sky-0.10.2
 	o enigma-1.30
 	o enlightenment-0.27.1
@@ -1283,6 +1284,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tkhylafax-3.2
 	o tkinfo-2.11
 	o tkpasman-2.2b
+	o tlsh-4.12.0
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
