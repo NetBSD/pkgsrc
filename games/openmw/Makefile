@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/08/10 10:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/08/19 11:35:44 wiz Exp $
 
 DISTNAME=	openmw-openmw-0.47.0
 PKGNAME=	${DISTNAME:S/^openmw-//1}
@@ -28,6 +28,7 @@ CMAKE_CONFIGURE_ARGS+=	-DGLOBAL_CONFIG_DIR=${PKG_SYSCONFDIR}
 # System bullet is unacceptable due to OpenMW requiring
 # double-precision bullet.
 CMAKE_CONFIGURE_ARGS+=	-DOPENMW_USE_SYSTEM_BULLET=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 EGDIR=		${PREFIX}/share/examples/openmw
 
