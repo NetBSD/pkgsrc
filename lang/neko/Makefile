@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/04/24 14:14:54 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/19 13:47:35 wiz Exp $
 
 DISTNAME=	neko-2.3.0
 PKGREVISION=	30
@@ -11,10 +11,9 @@ HOMEPAGE=	https://nekovm.org/
 COMMENT=	High-level dynamically typed programming language
 LICENSE=	mit
 
-TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+USE_TOOLS+=	git pkg-config
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # Tries to build "bin/nekoc.n, bin/nekoml.n" multiple times at once
 # and then chokes because nekoc.n won't load. Examination shows that
@@ -23,6 +22,7 @@ USE_TOOLS+=	pkg-config
 # with cmake about this sort of thing is a waste of breath.
 MAKE_JOBS_SAFE=	no
 
+.include "../../devel/cmake/build.mk"
 .include "options.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
