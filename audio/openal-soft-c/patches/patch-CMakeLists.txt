@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/19 07:56:45 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-19 07:55:32.598325026 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ # CMake build file list for OpenAL
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 3.0.2)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ PROJECT(OpenAL)
+ 
