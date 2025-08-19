@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/04/24 14:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/19 19:40:54 triaxx Exp $
 
 DISTNAME=	SDL_image-1.2.12
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE=	SDL_image.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
+.if ${OPSYS} == "Darwin" && (${OPSYS_VERSION} < 100500 || ${SDL12_TYPE:U:tl} == "compat")
 CONFIGURE_ARGS+=	--disable-imageio
 .endif
 
