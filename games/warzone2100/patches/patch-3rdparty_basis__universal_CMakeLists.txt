@@ -1,0 +1,14 @@
+$NetBSD: patch-3rdparty_basis__universal_CMakeLists.txt,v 1.1 2025/08/19 12:33:49 wiz Exp $
+
+Fix build with cmake 4.
+
+--- 3rdparty/basis_universal/CMakeLists.txt.orig	2025-08-19 12:26:35.009912897 +0000
++++ 3rdparty/basis_universal/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(basisu)
+ 
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ option(STATIC "static linking" FALSE)
+ option(SAN "sanitize" FALSE)
+ 
