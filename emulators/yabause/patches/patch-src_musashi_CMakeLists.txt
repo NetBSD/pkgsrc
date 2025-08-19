@@ -1,0 +1,14 @@
+$NetBSD: patch-src_musashi_CMakeLists.txt,v 1.1 2025/08/19 10:24:00 wiz Exp $
+
+Fix build with cmake 4.
+
+--- src/musashi/CMakeLists.txt.orig	2016-08-19 15:31:13.000000000 +0000
++++ src/musashi/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(m68kmake)
+ 
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.5)
+ 
+ add_executable(m68kmake m68kmake.c)
+ 
