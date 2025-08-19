@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/04/17 21:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/19 08:45:55 wiz Exp $
 
 DISTNAME=	hyperscan-5.4.2
 PKGREVISION=	1
@@ -25,6 +25,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXAMPLES=OFF
 # Static libs are needed to build Chimera.
 # Chimera is required for py-hyperscan.
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_STATIC_AND_SHARED=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 PKGCONFIG_OVERRIDE+=	chimera/libch.pc.in
 PKGCONFIG_OVERRIDE+=	libhs.pc.in
 
