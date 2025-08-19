@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:15:13 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/19 14:17:49 wiz Exp $
 
 VERSION=	20240620
 DISTNAME=	XyGrib-${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opengribs/}
 GITHUB_PROJECT=	XyGrib
 GITHUB_TAG=	88c425ca2d7f4ba5d7ab75bfa25e177bee02d310
-EXTRACT_USING= bsdtar
+EXTRACT_USING=	bsdtar
 DISTFILES=	${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX}
 
 
@@ -22,12 +22,12 @@ LICENSE=	gnu-gpl-v3
 
 .include "data.mk"
 
-USE_LANGUAGES+=	c c++
-USE_CMAKE=	yes
+USE_LANGUAGES+=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DGNU_PACKAGE=ON -DGEN_TRANSLATIONS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
+.include "../../devel/cmake/build.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/libnova/buildlink3.mk"
