@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/19 10:34:32 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2008-12-06 20:51:54.000000000 +0000
++++ CMakeLists.txt
+@@ -158,13 +158,11 @@ IF(THEORA_FOUND)
+ 	TARGET_LINK_LIBRARIES(LostPixels ${THEORA_LIBRARY})
+ ENDIF(THEORA_FOUND)
+ 
+-GET_TARGET_PROPERTY(BMFCOMPRESS_EXE bmfcompress LOCATION)
+-
+ # Does not work with cmake 2.4.2: /bin/sh: ./bmfcompress: No such file or directory
+ # Dont know why the correct Path is not used. Require at least 2.4.3...
+ ADD_CUSTOM_COMMAND(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/basedata.bmf
+-                   COMMAND ${BMFCOMPRESS_EXE} META config ${CMAKE_CURRENT_BINARY_DIR}/basedata.bmf
+-                   DEPENDS ${BMFCOMPRESS_EXE}
++                   COMMAND bmfcompress META config ${CMAKE_CURRENT_BINARY_DIR}/basedata.bmf
++                   DEPENDS bmfcompress
+                    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/BASEDATA
+ 		   COMMENT "Building basedata.bmf"
+ )

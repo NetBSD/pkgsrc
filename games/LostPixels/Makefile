@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/01/06 21:49:08 ktnb Exp $
-#
+# $NetBSD: Makefile,v 1.20 2025/08/19 10:34:32 wiz Exp $
 
 DISTNAME=	LostPixels-0.5.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -12,14 +11,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Blinken Sisters - Hunt for the Lost Pixels (80s-style Jump'n'Run)
 
 WRKSRC=		${WRKDIR}/blinkensisters/lostpixels/game/software
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 ALL_ENV+=	SDLDIR=${BUILDLINK_PREFIX.SDL}/include/SDL
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
 # Fails with C++14 default language.
 FORCE_CXX_STD=	c++03
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
