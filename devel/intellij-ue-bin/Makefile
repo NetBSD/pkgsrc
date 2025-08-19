@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/08/16 03:29:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/19 03:58:45 schmonz Exp $
 
 VERSION=		2025.2
 JB_SUFX=		# empty
@@ -11,7 +11,7 @@ CATEGORIES=		devel
 MASTER_SITES=		https://download.jetbrains.com/idea/
 
 MAINTAINER=		youri@NetBSD.org
-HOMEPAGE=		https://www.jetbrains.org/
+HOMEPAGE=		https://www.jetbrains.com/opensource/idea/
 COMMENT=		JetBrains IntelliJ IDEA Ultimate Edition
 LICENSE=		apache-2.0
 
@@ -84,6 +84,7 @@ do-build:
 	    >> ${WRKSRC}/bin/idea64.vmoptions
 	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" \
 	    >> ${WRKSRC}/bin/idea.properties
+	# https://youtrack.jetbrains.com/issue/IDEA-323750
 	${ECHO} "idea.ui.icons.svg.disk.cache=false" \
 	    >> ${WRKSRC}/bin/idea.properties
 
