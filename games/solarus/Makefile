@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2025/04/24 14:14:05 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/08/19 11:39:07 wiz Exp $
 
 VERSION=	1.6.5
 DISTNAME=	solarus-${VERSION}-src
@@ -25,6 +25,8 @@ USE_CXX_FEATURES+=	c++11
 FORCE_CXX_STD=		c++11
 
 CXXFLAGS+=	-DGLM_ENABLE_EXPERIMENTAL
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
