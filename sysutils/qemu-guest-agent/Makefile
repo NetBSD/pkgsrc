@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/01 07:27:14 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/19 09:25:26 kim Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -16,6 +16,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 # meson.build: unsupported OS for QEMU guest agent
 NOT_FOR_PLATFORM=	Darwin-*-*
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-distlib-[0-9]*:../../devel/py-distlib
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 
