@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/02/12 06:44:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2025/08/19 07:28:18 wiz Exp $
 
 DISTNAME=	milkytracker-1.04.00
 PKGREVISION=	3
@@ -12,7 +12,6 @@ HOMEPAGE=	https://milkytracker.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
@@ -34,6 +33,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/resources/milkytracker.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../archivers/lhasa/buildlink3.mk"
