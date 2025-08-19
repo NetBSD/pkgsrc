@@ -1,0 +1,14 @@
+$NetBSD: patch-src_entity_CMakeLists.txt,v 1.1 2025/08/19 12:52:17 plunky Exp $
+
+don't link to opennurbs in that way
+
+--- src/entity/CMakeLists.txt.orig	2025-06-29 18:03:28.748685869 +0000
++++ src/entity/CMakeLists.txt
+@@ -120,7 +120,6 @@ target_link_libraries(qcadentity PUBLIC
+     Qt::Svg
+     Qt::Xml
+     qcadcore
+-    opennurbs
+ )
+ 
+ if(win32-msvc2010)
