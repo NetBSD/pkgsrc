@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/07/17 11:22:59 adam Exp $
+# $NetBSD: Makefile,v 1.94 2025/08/19 10:33:17 wiz Exp $
 
 DISTNAME=	bitcoin-29.0
 CATEGORIES=	finance
@@ -43,7 +43,7 @@ BUILDLINK_TRANSFORM+=	l:db_cxx:db4_cxx
 
 # TODO: Decide if secp256k1 and univalue are supposed to be installed,
 # and if so where, or if they should be linked with privately.
-INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 #src/univalue
+#INSTALL_DIRS=	${BUILD_DIRS} src/secp256k1 #src/univalue
 
 .include "options.mk"
 
