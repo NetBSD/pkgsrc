@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5029 2025/08/19 05:31:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5030 2025/08/19 07:38:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7320,3 +7320,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-requests to 2.32.5 [adam 2025-08-19]
 	Updated devel/py-test-lazy-fixtures to 1.3.3 [adam 2025-08-19]
 	Updated devel/py-coverage to 7.10.4 [adam 2025-08-19]
+	Updated databases/postgresql-timescaledb to 2.21.3 [adam 2025-08-19]
+	Updated devel/mold to 2.40.4 [adam 2025-08-19]
