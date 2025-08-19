@@ -1,0 +1,12 @@
+$NetBSD: patch-third__party_FP16_CMakeLists.txt,v 1.1 2025/08/19 15:05:38 wiz Exp $
+
+Fix build with cmake 4.
+
+--- third_party/FP16/CMakeLists.txt.orig	2025-08-19 13:56:19.467938142 +0000
++++ third_party/FP16/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12 FATAL_ERROR)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ INCLUDE(GNUInstallDirs)
+ 

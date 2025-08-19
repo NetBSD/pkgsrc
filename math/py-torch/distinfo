@@ -1,13 +1,14 @@
-$NetBSD: distinfo,v 1.3 2025/01/26 12:33:03 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/08/19 15:05:38 wiz Exp $
 
 BLAKE2s (pytorch-v2.5.1.tar.gz) = 299bbffbdde5673d420cf21f08c3bcc518b233e63a19231e6a631980849bd8b9
 SHA512 (pytorch-v2.5.1.tar.gz) = a8882608c2ab6467a58d60c6df84c9f1004b43eafeba57db499dbbfdecc09db2e221b9d4c344c8af7c0bea6252e874c400483502dca24a0b474c376b9fef1dd4
 Size (pytorch-v2.5.1.tar.gz) = 298929057 bytes
 SHA1 (patch-c10_core_Scalar.h) = bc7a922886c2683589d1dc428c55ac43b3a36716
 SHA1 (patch-c10_macros_Macros.h) = d2b9b14000767b25babe15166b1b825a00cfc4ea
-SHA1 (patch-cmake_Dependencies.cmake) = 7723ccf277d80c68e7db0b5cc128ab4fa60480dc
+SHA1 (patch-cmake_Dependencies.cmake) = d524cb2a811788d801f086a3a84625f4c3dc3bf8
 SHA1 (patch-cmake_Modules_FindBLAS.cmake) = fd29b5e717eda52f249ee3cff04e6fdd6c398cc2
 SHA1 (patch-cmake_public_mkldnn.cmake) = 3cd077c540c0923a689d403ba92dc2c206b7f937
+SHA1 (patch-third__party_FP16_CMakeLists.txt) = f747d3dd15ed38316b5accea883fb86253730e7c
 SHA1 (patch-third__party_cpuinfo_CMakeLists.txt) = 3498ce31f37b35f99726d1d8dcf7f84e363cc707
 SHA1 (patch-third__party_cpuinfo_src_cpuinfo_internal-api.h) = fbdfd4ae278b570514a4473e651d61c3fe2b6ecc
 SHA1 (patch-third__party_cpuinfo_src_init.c) = c57d05229b4eaa0287ed567478de33834b300d68
@@ -15,9 +16,14 @@ SHA1 (patch-third__party_cpuinfo_src_netbsd_api.h) = 018be10b2cb520f870fcc479610
 SHA1 (patch-third__party_cpuinfo_src_netbsd_topology.c) = 5138bf2355bc70042f5ce9f7a019d315be038bca
 SHA1 (patch-third__party_cpuinfo_src_x86_netbsd_init.c) = 52bcc18d780736b6f56f478b90dd81eede2fb499
 SHA1 (patch-third__party_fbgemm_third__party_cpuinfo_src_init.c) = 0bb63c242f06cb189a24c4dbfad77bdc59d6b092
+SHA1 (patch-third__party_gloo_CMakeLists.txt) = 4209a7bc930ce6697e98f8471e2bef0b5e35157d
+SHA1 (patch-third__party_ittapi_CMakeLists.txt) = 238a57c4a007a04537d438c5fb8e21d16be59877
 SHA1 (patch-third__party_kineto_libkineto_src_ThreadUtil.cpp) = cb6462eea995445c8f65592bf427605e781000f9
+SHA1 (patch-third__party_protobuf_cmake_CMakeLists.txt) = 20926b73cb40cde56170dd15c0abd9830ec50c3e
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = b27d6497f8649491441ef3a2bfc9eb5fa22ba474
+SHA1 (patch-third__party_psimd_CMakeLists.txt) = 8c1a0b0ed20b01585fa49115a98611877c8218be
 SHA1 (patch-third__party_tensorpipe_tensorpipe_common_system.cc) = 6f714d89681c245d531809fbf64b2b9c77fce84d
+SHA1 (patch-third__party_tensorpipe_third__party_libuv_CMakeLists.txt) = a22fc6bd450c2b52a774543c3785107580eec980
 SHA1 (patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp) = 2c56c736040090040aa04d8d446ead61bb3b207c
 SHA1 (patch-torch_csrc_distributed_c10d_socket.cpp) = cace5d33d59bb8fec1933e74223049e5d63aa0a9
 SHA1 (patch-torch_csrc_utils_byte__order.h) = 089495773fbd7e7340dbd7545341c56d2f4de9b3
