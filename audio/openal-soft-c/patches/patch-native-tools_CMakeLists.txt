@@ -1,0 +1,12 @@
+$NetBSD: patch-native-tools_CMakeLists.txt,v 1.1 2025/08/19 07:56:45 wiz Exp $
+
+Fix build with cmake 4.
+
+--- native-tools/CMakeLists.txt.orig	2025-08-19 07:55:27.396855965 +0000
++++ native-tools/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.0.2)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(native-tools)
+ 
