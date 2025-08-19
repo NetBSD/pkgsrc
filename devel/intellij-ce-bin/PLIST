@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/15 15:54:27 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/19 03:58:21 schmonz Exp $
 intellij-ce-bin/Install-Linux-tar.txt
 intellij-ce-bin/LICENSE.txt
 intellij-ce-bin/NOTICE.txt
@@ -157,7 +157,8 @@ intellij-ce-bin/lib/platform-loader.jar
 intellij-ce-bin/lib/protobuf.jar
 intellij-ce-bin/lib/rd.jar
 intellij-ce-bin/lib/rhino.jar
-intellij-ce-bin/lib/skiko-awt-runtime-all/libskiko-linux-x64.so
+${PLIST.aarch64}intellij-ce-bin/lib/skiko-awt-runtime-all/libskiko-linux-arm64.so
+${PLIST.x86_64}intellij-ce-bin/lib/skiko-awt-runtime-all/libskiko-linux-x64.so
 intellij-ce-bin/lib/stats.jar
 intellij-ce-bin/lib/testFramework.jar
 intellij-ce-bin/lib/trove.jar

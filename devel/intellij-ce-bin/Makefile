@@ -1,22 +1,26 @@
-# $NetBSD: Makefile,v 1.14 2025/08/15 15:54:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/19 03:58:21 schmonz Exp $
 
-VERSION=	2025.2
-DISTNAME=	ideaIC-${VERSION:S/.0.0//}
-PKGNAME=	intellij-ce-bin-${VERSION}
-CATEGORIES=	devel
-MASTER_SITES=	https://download.jetbrains.com/idea/
+VERSION=		2025.2
+JB_SUFX=		# empty
+.if ${MACHINE_ARCH} == "aarch64"
+JB_SUFX=		-aarch64
+.endif
+DISTNAME=		ideaIC-${VERSION:S/.0.0//}${JB_SUFX}
+PKGNAME=		intellij-ce-bin-${VERSION}
+CATEGORIES=		devel
+MASTER_SITES=		https://download.jetbrains.com/idea/
 
-MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	https://www.jetbrains.com/idea/
-COMMENT=	JetBrains IntelliJ IDEA Community Edition
-LICENSE=	apache-2.0
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		https://www.jetbrains.com/opensource/idea/
+COMMENT=		JetBrains IntelliJ IDEA Community Edition
+LICENSE=		apache-2.0
 
-DEPENDS+=	intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
+DEPENDS+=		intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-WRKSRC=		${WRKDIR}/idea-IC-252.23892.409
-USE_JAVA2=	17
+WRKSRC=			${WRKDIR}/idea-IC-252.23892.409
+USE_JAVA2=		17
 
-USE_TOOLS+=	bash pax sed
+USE_TOOLS+=		bash pax sed
 
 REPLACE_BASH=		plugins/Kotlin/kotlinc/bin/kapt		\
 			plugins/Kotlin/kotlinc/bin/kotlin	\
@@ -32,20 +36,31 @@ CHECK_PIE_SUPPORTED=	no
 INSTALLATION_DIRS=	${PKGBASE} \
 			share/applications
 
-NO_BUILD=	yes
-
 SUBST_CLASSES+=		jdk
 SUBST_STAGE.jdk=	pre-configure
 SUBST_FILES.jdk=	bin/idea.sh
 SUBST_VARS.jdk=		PKG_JAVA_HOME
 
+SUBST_CLASSES+=		vmoptions
+SUBST_STAGE.vmoptions=	pre-configure
+SUBST_FILES.vmoptions=	bin/idea64.vmoptions
+SUBST_SED.vmoptions=	-e 's|^-Xmx.*|-Xmx4096m|'
+SUBST_SED.vmoptions+=	-e 's|^-Xms.*|-Xms4096m|'
+
+PLIST_VARS+=		aarch64 x86_64
+.if ${MACHINE_ARCH} == "aarch64"
+PLIST.aarch64=		yes
+.else
+PLIST.x86_64=		yes
+.endif
+
 pre-configure:
 	cd ${WRKSRC} &&	\
-	${RM} -r bin/*.orig \
+	${RM} -rf bin/*.orig \
 		bin/fsnotifier \
-		lib/jna/amd64/libjnidispatch.so \
-		lib/native/linux-x86_64/libsqliteij.so \
-		lib/pty4j/linux/x86-64/libpty.so \
+		lib/jna/*/libjnidispatch.so \
+		lib/native/*/libsqliteij.so \
+		lib/pty4j/linux/*/libpty.so \
 		plugins/cwm-plugin/quiche-native/*/*.so \
 		plugins/webp/lib/libwebp/linux/*.so \
 		plugins/maven/lib/maven3/lib/jansi-native/Windows/*/*.dll \
@@ -56,13 +71,22 @@ post-configure:
 	    < ${FILESDIR}/idea.desktop \
 	    > ${WRKDIR}/idea.desktop
 
+do-build:
+	${ECHO} "-XX:-UseCompressedClassPointers" \
+	    >> ${WRKSRC}/bin/idea64.vmoptions
+	${ECHO} "-XX:-UseCompressedOops" \
+	    >> ${WRKSRC}/bin/idea64.vmoptions
+	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" \
+	    >> ${WRKSRC}/bin/idea.properties
+	# https://youtrack.jetbrains.com/issue/IDEA-323750
+	${ECHO} "idea.ui.icons.svg.disk.cache=false" \
+	    >> ${WRKSRC}/bin/idea.properties
+
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/idea.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/
 	cd ${WRKSRC} &&	pax -rw -pm -s ',.*\.orig,,' \
 	    * ${DESTDIR}${PREFIX}/${PKGBASE}
-	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" \
-	    > ${DESTDIR}${PREFIX}/${PKGBASE}/bin/idea.properties
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
