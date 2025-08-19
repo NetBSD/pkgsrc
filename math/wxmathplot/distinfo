@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1 2023/10/11 13:32:37 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2025/08/19 14:08:44 wiz Exp $
 
 BLAKE2s (wxMathPlot_0.2.0.zip) = c150370c0101333597e2ff1e7454ce3286d63741629c52113e1bd666de7633a9
 SHA512 (wxMathPlot_0.2.0.zip) = eee818be09f1cb4c46bb66870168f56ca66f98ba0903568e16d93359e0ed59f9ec133f2e3930a2ecbec95b324a86278bafe2775f004703b7e527801e23aa1283
 Size (wxMathPlot_0.2.0.zip) = 136814 bytes
 SHA1 (patch-CMakeLists.txt) = 4dd7c962da8c702c36710c53debd52c00a794294
+SHA1 (patch-samples_sample1_CMakeLists.txt) = e11894d40456a3258096f69f38bd43b5b7bfd29e
+SHA1 (patch-samples_sample2_CMakeLists.txt) = c18829b4903da1abb4993cab07d2b33ca8140bbf
+SHA1 (patch-samples_sample3_CMakeLists.txt) = 21047e2789415d0860bfd8fdc0cb8d3158e2d1f0
