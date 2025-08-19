@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 10:49:33 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/08/19 13:31:52 wiz Exp $
 
 BLAKE2s (ibus-chewing-1.5.1-Source.tar.gz) = a32a8f74a0ec4f6ba3e7727cfe1d6574dd970acea239f230ae472dca5cc8a61b
 SHA512 (ibus-chewing-1.5.1-Source.tar.gz) = 2db6def1fe8ca3bd71419a001909d285ee48ef84c2f65e14bacff9cd114676bed594f0c90217e1fdab67c995a7b05d675812e90e281371d8464722c31649c633
 Size (ibus-chewing-1.5.1-Source.tar.gz) = 177044 bytes
-SHA1 (patch-Modules_ManageEnvironment.cmake) = 213274162dca9e3fb4d54d494908a309b6819e51
+SHA1 (patch-CMakeLists.txt) = 54cc38a7f728c552853d13d1aedbf6b539c57088
+SHA1 (patch-Modules_ManageEnvironment.cmake) = 14d9c9495bb7f9f621d0e89152c465b521db6b6a
 SHA1 (patch-Modules_ManageEnvironmentCommon.cmake) = 1d8bb1e91c448df5dc8c7e5b7aa1760bb637a9d0
 SHA1 (patch-po_zh__CN.po) = c05a5f6024941a7900529e152f771cc440964531
 SHA1 (patch-src_generate-gconf-schemas.c) = e48a546d676f65c83379ed0cd35bd3529b5db4e5
