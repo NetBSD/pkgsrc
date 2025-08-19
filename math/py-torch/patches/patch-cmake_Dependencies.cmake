@@ -1,8 +1,8 @@
-$NetBSD: patch-cmake_Dependencies.cmake,v 1.1 2025/01/21 13:36:49 ryoon Exp $
+$NetBSD: patch-cmake_Dependencies.cmake,v 1.2 2025/08/19 15:05:38 wiz Exp $
 
 * Fix errors related to RPATH change.
 
---- cmake/Dependencies.cmake.orig	2025-01-19 11:34:31.033893427 +0000
+--- cmake/Dependencies.cmake.orig	2024-10-29 18:00:43.000000000 +0000
 +++ cmake/Dependencies.cmake
 @@ -9,7 +9,7 @@ endif(APPLE)
  # Use separate rpaths during build and install phases
