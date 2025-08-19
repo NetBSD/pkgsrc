@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2025/07/03 19:18:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/19 11:15:15 adam Exp $
 
-DISTNAME=	pyopengl_accelerate-3.1.9
+DISTNAME=	pyopengl_accelerate-3.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopengl_/OpenGL-/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL-accelerate/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pyopengl.sourceforge.net/
+HOMEPAGE=	https://mcfletch.github.io/pyopengl/
 COMMENT=	Acceleration code for PyOpenGL
 # There are many similar licenses, see license.txt
 LICENSE=	modified-bsd AND mit

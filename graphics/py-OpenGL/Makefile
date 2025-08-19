@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.47 2025/07/03 19:18:05 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/08/19 11:15:15 adam Exp $
 
-DISTNAME=	pyopengl-3.1.9
+DISTNAME=	pyopengl-3.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopengl/OpenGL/}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pyopengl.sourceforge.net/
+HOMEPAGE=	https://mcfletch.github.io/pyopengl/
 COMMENT=	Python bindings for OpenGL
 # There are many similar licenses, see license.txt
 LICENSE=	modified-bsd AND mit
