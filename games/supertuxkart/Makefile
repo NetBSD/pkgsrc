@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/04/24 14:14:05 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/08/19 11:52:25 wiz Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -27,6 +27,8 @@ USE_CXX_FEATURES+=	c++20
 
 # Needs linux joystick support.
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
