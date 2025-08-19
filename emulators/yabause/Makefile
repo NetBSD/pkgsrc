@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2025/05/18 10:35:36 zafer Exp $
+# $NetBSD: Makefile,v 1.99 2025/08/19 10:24:00 wiz Exp $
 
 DISTNAME=	yabause-0.9.15
 PKGREVISION=	46
@@ -10,7 +10,6 @@ HOMEPAGE=	http://yabause.org/
 COMMENT=	Sega Saturn system emulator
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
@@ -18,6 +17,7 @@ CONFIGURE_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
 
 .include "options.mk"
 
+.include "../../devel/cmake/build.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
