@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/19 11:17:11 wiz Exp $
 
-DISTNAME=	1.3.3
+DISTNAME=	1.4.1
 PKGNAME=	ecwolf-${DISTNAME}
-PKGREVISION=	13
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/ecwolf/ecwolf/get/
 DIST_SUBDIR=	ecwolf
@@ -12,9 +11,8 @@ HOMEPAGE=	https://bitbucket.org/ecwolf/ecwolf
 COMMENT=	Advanced port of Wolfenstein 3D
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/ecwolf-ecwolf-d715e0a2f8d4
+WRKSRC=		${WRKDIR}/ecwolf-ecwolf-8cf8d23a6da3
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -28,6 +26,7 @@ SUBST_FILES.paths+=	src/wl_iwad.cpp
 SUBST_SED.paths=	-e 's,/usr/local/share/games/wolf3d,${PREFIX}/share/ecwolf,g'
 SUBST_VARS.paths=	PREFIX
 
+INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man6
 INSTALLATION_DIRS+=	libexec
 INSTALLATION_DIRS+=	share/ecwolf
@@ -43,11 +42,11 @@ pre-configure:
 	    ${WRKSRC}/ecwolf.sh
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/ecwolf \
+	${MV} ${DESTDIR}${PREFIX}/games/ecwolf \
 		${DESTDIR}${PREFIX}/libexec/ecwolf
 	${INSTALL_SCRIPT} ${WRKSRC}/ecwolf.sh \
 		${DESTDIR}${PREFIX}/bin/ecwolf
-	${INSTALL_DATA} ${WRKSRC}/ecwolf.pk3 \
+	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/ecwolf.pk3 \
 		${DESTDIR}${PREFIX}/share/ecwolf/ecwolf.pk3
 	${INSTALL_MAN} ${WRKSRC}/docs/ecwolf.6 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/ecwolf.6
@@ -62,12 +61,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/android-libs/launcher/res/drawable-xhdpi/ic_launcher.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/96x96/apps/ecwolf.png
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../net/SDL2_net/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

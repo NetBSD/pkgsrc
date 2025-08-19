@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:43:55 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/08/19 11:17:11 wiz Exp $
 
-BLAKE2s (ecwolf/1.3.3.tar.gz) = 4f51fad8d9211ba8fb709c6a98c94986f751cfa3247b20300a46c06c95971514
-SHA512 (ecwolf/1.3.3.tar.gz) = bbce936a9ea556ba12a649c4394002d660a1e328861646d558ff7fc088e6ab6f0fab789955321ea0c1122df4043bd16b84bb7a7507e5ccab91cf128778c7608a
-Size (ecwolf/1.3.3.tar.gz) = 9618283 bytes
+BLAKE2s (ecwolf/1.4.1.tar.gz) = 3250c844c9fea13b79327ea7fea783ae69fda4e0034800adaa4103e85c7bbf70
+SHA512 (ecwolf/1.4.1.tar.gz) = cfe9d6e7a6c01ace0c10e1b068cedbaae17a4c0f79451c85b2149389d1c95112226a15aca95a5a7b09319c61dcad89831697dd63b94d0f4b8134a5006bd74e28
+Size (ecwolf/1.4.1.tar.gz) = 3139795 bytes
 SHA1 (patch-docs_ecwolf.6) = 981208f925e285f3e21fdbefd2c5c0e42251069b
 SHA1 (patch-src_wl__iwad__picker.cpp) = 786978d4e5a23154713166af914a55c0b45f60d2
