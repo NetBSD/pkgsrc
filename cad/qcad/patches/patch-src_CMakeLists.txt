@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/03/16 14:56:12 plunky Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2025/08/19 12:52:17 plunky Exp $
 
 turn off debug output
 
@@ -10,7 +10,7 @@ include qtjsapi (library) and qcadjsapi (plugin) in build
  
  include(../CMakeInclude.txt)
  
-+add_compile_definitions(QT_DEBUG_NO_OUTPUT)
++add_compile_definitions(QT_NO_DEBUG_OUTPUT)
 +
  add_subdirectory(3rdparty)
  add_subdirectory(core)
