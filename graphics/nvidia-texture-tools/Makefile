@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/08/10 10:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/19 13:19:34 wiz Exp $
 
 DISTNAME=	nvidia-texture-tools-2.1.0
 PKGREVISION=	12
@@ -12,11 +12,12 @@ COMMENT=	Texture processing tools with support for Direct3D 10 and 11 formats
 LICENSE=	mit
 
 HAS_CONFIGURE=	yes
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DNVTT_SHARED=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
