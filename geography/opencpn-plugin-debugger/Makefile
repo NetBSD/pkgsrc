@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2025/04/24 14:14:08 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.32 2025/08/19 12:39:06 wiz Exp $
 
 VERSION=	20170414
-PKGREVISION=	25
 DISTNAME=	ocpndebugger_pi-${VERSION}
 PKGNAME=	opencpn-plugin-debugger-${VERSION}
+PKGREVISION=	25
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nohal/}
 GITHUB_PROJECT=	ocpndebugger_pi
@@ -19,7 +18,8 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 
 CMAKE_CONFIGURE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
-CMAKE_MODULE_PATH_OVERRIDE = \
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_MODULE_PATH_OVERRIDE= \
 		cmake/PluginConfigure.cmake \
 		cmake/PluginInstall.cmake \
 		cmake/PluginLocalization.cmake \
