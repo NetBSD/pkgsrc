@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2025/08/19 11:52:25 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2025/08/20 07:40:14 wiz Exp $
 
 Fix build with cmake 4.
 
---- CMakeLists.txt.orig	2025-08-19 11:50:02.554009370 +0000
+--- CMakeLists.txt.orig	2022-10-31 21:00:41.000000000 +0000
 +++ CMakeLists.txt
 @@ -6,10 +6,6 @@ set(PROJECT_VERSION "1.4")
  
@@ -12,6 +12,6 @@ Fix build with cmake 4.
 -  cmake_policy(SET CMP0043 OLD)
 -endif()
 -
- set (CMAKE_MODULE_PATH "/scratch/games/supertuxkart/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
  include(CMakeDependentOption)
  
