@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2025/08/11 06:54:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2025/08/20 07:18:07 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -258,9 +258,6 @@ ${PYSITELIB}/yt_dlp/extractor/arcpublishing.pyo
 ${PYSITELIB}/yt_dlp/extractor/ard.py
 ${PYSITELIB}/yt_dlp/extractor/ard.pyc
 ${PYSITELIB}/yt_dlp/extractor/ard.pyo
-${PYSITELIB}/yt_dlp/extractor/arkena.py
-${PYSITELIB}/yt_dlp/extractor/arkena.pyc
-${PYSITELIB}/yt_dlp/extractor/arkena.pyo
 ${PYSITELIB}/yt_dlp/extractor/arnes.py
 ${PYSITELIB}/yt_dlp/extractor/arnes.pyc
 ${PYSITELIB}/yt_dlp/extractor/arnes.pyo
@@ -588,9 +585,6 @@ ${PYSITELIB}/yt_dlp/extractor/clubic.pyo
 ${PYSITELIB}/yt_dlp/extractor/clyp.py
 ${PYSITELIB}/yt_dlp/extractor/clyp.pyc
 ${PYSITELIB}/yt_dlp/extractor/clyp.pyo
-${PYSITELIB}/yt_dlp/extractor/cmt.py
-${PYSITELIB}/yt_dlp/extractor/cmt.pyc
-${PYSITELIB}/yt_dlp/extractor/cmt.pyo
 ${PYSITELIB}/yt_dlp/extractor/cnbc.py
 ${PYSITELIB}/yt_dlp/extractor/cnbc.pyc
 ${PYSITELIB}/yt_dlp/extractor/cnbc.pyo
@@ -1983,9 +1977,6 @@ ${PYSITELIB}/yt_dlp/extractor/piramidetv.pyo
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.py
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyc
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyo
-${PYSITELIB}/yt_dlp/extractor/pladform.py
-${PYSITELIB}/yt_dlp/extractor/pladform.pyc
-${PYSITELIB}/yt_dlp/extractor/pladform.pyo
 ${PYSITELIB}/yt_dlp/extractor/planetmarathi.py
 ${PYSITELIB}/yt_dlp/extractor/planetmarathi.pyc
 ${PYSITELIB}/yt_dlp/extractor/planetmarathi.pyo
@@ -2433,9 +2424,6 @@ ${PYSITELIB}/yt_dlp/extractor/spankbang.pyo
 ${PYSITELIB}/yt_dlp/extractor/spiegel.py
 ${PYSITELIB}/yt_dlp/extractor/spiegel.pyc
 ${PYSITELIB}/yt_dlp/extractor/spiegel.pyo
-${PYSITELIB}/yt_dlp/extractor/spike.py
-${PYSITELIB}/yt_dlp/extractor/spike.pyc
-${PYSITELIB}/yt_dlp/extractor/spike.pyo
 ${PYSITELIB}/yt_dlp/extractor/sport5.py
 ${PYSITELIB}/yt_dlp/extractor/sport5.pyc
 ${PYSITELIB}/yt_dlp/extractor/sport5.pyo
@@ -2772,9 +2760,6 @@ ${PYSITELIB}/yt_dlp/extractor/tvigle.pyo
 ${PYSITELIB}/yt_dlp/extractor/tviplayer.py
 ${PYSITELIB}/yt_dlp/extractor/tviplayer.pyc
 ${PYSITELIB}/yt_dlp/extractor/tviplayer.pyo
-${PYSITELIB}/yt_dlp/extractor/tvland.py
-${PYSITELIB}/yt_dlp/extractor/tvland.pyc
-${PYSITELIB}/yt_dlp/extractor/tvland.pyo
 ${PYSITELIB}/yt_dlp/extractor/tvn24.py
 ${PYSITELIB}/yt_dlp/extractor/tvn24.pyc
 ${PYSITELIB}/yt_dlp/extractor/tvn24.pyo
@@ -2889,9 +2874,6 @@ ${PYSITELIB}/yt_dlp/extractor/veo.pyo
 ${PYSITELIB}/yt_dlp/extractor/vesti.py
 ${PYSITELIB}/yt_dlp/extractor/vesti.pyc
 ${PYSITELIB}/yt_dlp/extractor/vesti.pyo
-${PYSITELIB}/yt_dlp/extractor/vevo.py
-${PYSITELIB}/yt_dlp/extractor/vevo.pyc
-${PYSITELIB}/yt_dlp/extractor/vevo.pyo
 ${PYSITELIB}/yt_dlp/extractor/vgtv.py
 ${PYSITELIB}/yt_dlp/extractor/vgtv.pyc
 ${PYSITELIB}/yt_dlp/extractor/vgtv.pyo
