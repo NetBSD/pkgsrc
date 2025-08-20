@@ -1,0 +1,1 @@
+bin/setuptools-scm @PREFIX@/bin/setuptools-scm-@PYVERSSUFFIX@
