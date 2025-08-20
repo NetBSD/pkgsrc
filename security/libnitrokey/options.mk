@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/08/25 06:19:12 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/08/20 07:12:19 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libnitrokey
 
@@ -15,5 +15,5 @@ DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 .if ${PKG_OPTIONS:Mtests}
 # These tests do not require any device to be connected
 CMAKE_CONFIGURE_ARGS+=	-DCOMPILE_OFFLINE_TESTS=ON
-TEST_DEPENDS+=	catch2-[0-9]*:../../devel/catch2
+TEST_DEPENDS+=		catch2-[0-9]*:../../devel/catch2
 .endif
