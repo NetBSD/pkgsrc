@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/04/24 14:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/08/20 07:03:15 wiz Exp $
 
 DISTNAME=	gpgmepp-15.12.2
 PKGREVISION=	39
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
