@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2025/04/14 11:25:38 adam Exp $
+$NetBSD: distinfo,v 1.33 2025/08/20 07:20:35 adam Exp $
 
-BLAKE2s (alembic-1.15.2.tar.gz) = 8a5520eca6e1446678f7dba4ae3b260dc573012227eaf9b879ad4835ef5329c8
-SHA512 (alembic-1.15.2.tar.gz) = 2d749123181c58985794f1c51d6f67d5fb11dbd0dd38d696a2b9e28a59560bf8f8d93473b0bce1e95426bbe65c0b24f9b3287a5819e6606dd982d7ecdedbcdab
-Size (alembic-1.15.2.tar.gz) = 1925573 bytes
+BLAKE2s (alembic-1.16.4.tar.gz) = e1208db9c4916dc9cded91bd1ed40ded4679eba08851988a3a7bd1b5f8703916
+SHA512 (alembic-1.16.4.tar.gz) = 7cd6ddd8ebb7c4f9b941ff611226c5a7a498e097dcd15ff1b7c4e6e584f1e2f3c6f0f66d34089708f84275c6b6cc0510580a39acf1e90393119ea4ed925c4d8a
+Size (alembic-1.16.4.tar.gz) = 1968161 bytes
