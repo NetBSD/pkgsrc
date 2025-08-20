@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5050 2025/08/20 13:32:35 pho Exp $
+$NetBSD: CHANGES-2025,v 1.5051 2025/08/20 14:08:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7353,3 +7353,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-scipy to 1.16.1 [adam 2025-08-20]
 	Updated misc/py-icecream to 2.1.7 [adam 2025-08-20]
 	Updated net/gkrellm-multiping to 2.0.15 [pho 2025-08-20]
+	Removed graphics/radiance [wiz 2025-08-20]
+	Removed net/owncloudclient [wiz 2025-08-20]
