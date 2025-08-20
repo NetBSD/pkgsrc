@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26126 2025/08/19 14:13:41 pho Exp $
+$NetBSD: TODO,v 1.26127 2025/08/20 07:43:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,7 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o autoconvert-0.3.16
 	o autojump-22.5.3
 	o autosetup-0.7.0
-	o avidemux-2.8
+	o avidemux-2.8.1
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-gdb-10.1
 	o baci-20040415
@@ -964,7 +964,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nvidia-texture-tools-2.1.1
 	o nxtvepg-2.8.1
 	o objc-3.3.24
-	o obs-studio-31.1
+	o obs-studio-31.1.2
 	o ocaml-5.2.1 [wip]
 	o ocaml-cppo-1.6.9
 	o ocaml-dune-3.19.1
@@ -1221,7 +1221,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.1
-	o squeak-5.0
+	o squeak-6.0
 	o squeak-vm-4.10.2.2765
 	o squidclamav-7.2
 	o ssh-askpass-1.2.4.1
