@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/04/17 21:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/20 06:49:38 wiz Exp $
 
 DISTNAME=	taskd-1.1.0
 PKGNAME=	${DISTNAME:S/taskd/taskserver/}
@@ -11,11 +11,11 @@ HOMEPAGE=	https://taskwarrior.org/download/
 COMMENT=	Lightweight, secure server providing access to task data
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DTASKD_MAN1DIR=${PREFIX}/${PKGMANDIR}/man1
 CMAKE_CONFIGURE_ARGS+=	-DTASKD_MAN5DIR=${PREFIX}/${PKGMANDIR}/man5
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
@@ -59,6 +59,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${EGDIR}/${file}
 .endfor
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
