@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/04/12 20:13:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/08/20 09:50:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -49,6 +49,9 @@ ${PYSITELIB}/ruamel/yaml/loader.pyo
 ${PYSITELIB}/ruamel/yaml/main.py
 ${PYSITELIB}/ruamel/yaml/main.pyc
 ${PYSITELIB}/ruamel/yaml/main.pyo
+${PYSITELIB}/ruamel/yaml/mergevalue.py
+${PYSITELIB}/ruamel/yaml/mergevalue.pyc
+${PYSITELIB}/ruamel/yaml/mergevalue.pyo
 ${PYSITELIB}/ruamel/yaml/nodes.py
 ${PYSITELIB}/ruamel/yaml/nodes.pyc
 ${PYSITELIB}/ruamel/yaml/nodes.pyo
