@@ -1,0 +1,9 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/20 07:17:36 wiz Exp $
+
+--- CMakeLists.txt.orig	2025-08-20 07:15:29.409074792 +0000
++++ CMakeLists.txt
+@@ -1,3 +1,4 @@
+ PROJECT (cdrkit C)
++cmake_minimum_required(VERSION 3.5)
+ SUBDIRS(include genisoimage wodim libedc libhfs_iso libparanoia icedax libusal librols libunls readom netscsid 3rd-party/dirsplit)
+ 
