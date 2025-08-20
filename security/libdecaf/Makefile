@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/20 07:09:13 wiz Exp $
 
 PKGNAME=	libdecaf-1.0.2
 PKGREVISION=	1
 DISTNAME=	ed448goldilocks-code-da2f2f9b2ab1bce9a2bb77e4f37037ee135fdd72
 CATEGORIES=	security
-MASTER_SITES=   https://sourceforge.net/code-snapshots/git/e/ed/ed448goldilocks/code.git/
+MASTER_SITES=	https://sourceforge.net/code-snapshots/git/e/ed/ed448goldilocks/code.git/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	fox@NetBSD.org
@@ -12,9 +12,13 @@ HOMEPAGE=	http://ed448goldilocks.sourceforge.net/
 COMMENT=	Implementation of Ed448-Goldilocks elliptic curve for cryptography
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c99 c++11
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=YES
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 # These are required to prevent build breakage when tests are enabled
 # This is probably due to the auto-generated headers clobbering with
@@ -31,5 +35,6 @@ TEST_TARGET=	test
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libdecaf.a
 
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
