@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/07/03 19:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/08/20 19:58:17 adam Exp $
 
-DISTNAME=	pywavelets-1.8.0
+DISTNAME=	pywavelets-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyWavelets/}
@@ -11,7 +11,7 @@ COMMENT=	Discrete Wavelet Transforms in Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.4:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.16.0:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.18.0:../../devel/py-meson_python
 
 USE_CC_FEATURES=	c17
 
