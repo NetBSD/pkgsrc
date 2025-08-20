@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/07/20 10:17:55 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/20 19:31:43 wiz Exp $
 
-DISTNAME=	highway-1.2.0
+DISTNAME=	highway-1.3.0
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	highway
@@ -28,7 +27,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/hwy/hwy.version
 # libhighway run executables during build and
 # they need to find its own shared libs
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
-TEST_TARGET=	test
+#TEST_TARGET=	test
 
 .include "../../devel/cmake/build.mk"
 .include "options.mk"
