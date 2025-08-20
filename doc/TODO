@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26128 2025/08/20 09:56:17 adam Exp $
+$NetBSD: TODO,v 1.26129 2025/08/20 13:32:35 pho Exp $
 
 Suggested new packages
 ======================
@@ -665,7 +665,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gitea-1.24.3
 	o gjs-1.70.1
 	o gkrellm-2.4.0
-	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.11
 	o gkrellm-share-2.3.11
 	o gleam-1.12.0
