@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2025/08/10 10:57:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2025/08/20 19:42:20 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -365,17 +365,28 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/marketingplatformadmin.v1
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/meet.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/memcache.v1beta2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.accounts_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.accounts_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.conversions_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.conversions_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.datasources_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.datasources_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.issueresolution_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.issueresolution_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.lfp_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.ordertracking_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.ordertracking_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.products_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.products_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.promotions_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.promotions_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.quota_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.quota_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reports_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reports_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reviews_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
