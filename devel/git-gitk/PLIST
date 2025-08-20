@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/08/18 19:36:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/08/20 08:47:19 wiz Exp $
 bin/gitk
 share/gitk/lib/msgs/bg.msg
 share/gitk/lib/msgs/ca.msg
