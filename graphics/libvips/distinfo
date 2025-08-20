@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/20 16:47:24 schmonz Exp $
+
+BLAKE2s (vips-8.17.1.tar.xz) = 207eb0a2cf9a02de68ee47be4380fdb2d0760ced1eb2c87e8cf94ae103b1a1bf
+SHA512 (vips-8.17.1.tar.xz) = 04962e7d3fb8956c986f3aed7a10c4927195bc555a22c805a5b190c257e9e8b0fe97eddd0eb44e0e7d9047ba5671e96ac88f50a2597caa4f78c84ce1091541ff
+Size (vips-8.17.1.tar.xz) = 29529248 bytes
