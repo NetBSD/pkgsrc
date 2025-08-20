@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26139 2025/08/20 19:42:29 wiz Exp $
+$NetBSD: TODO,v 1.26140 2025/08/20 19:44:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o racket-8.17
 	o radare2-6.0
 	o rails-6.1.0
-	o raqm-0.10.3
 	o rasmol-2.7.5.2
 	o rat-4.2.25
 	o razor-qt-0.5.2
