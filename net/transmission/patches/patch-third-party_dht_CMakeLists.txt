@@ -1,0 +1,12 @@
+$NetBSD: patch-third-party_dht_CMakeLists.txt,v 1.1 2025/08/20 06:54:21 wiz Exp $
+
+Fix build with cmake 4.
+
+--- third-party/dht/CMakeLists.txt.orig	2025-08-20 06:52:35.546623735 +0000
++++ third-party/dht/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ project(dht C)
+ 
+ add_library(${PROJECT_NAME} STATIC
