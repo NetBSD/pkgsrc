@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2025/06/30 13:14:28 adam Exp $
+# $NetBSD: Makefile,v 1.230 2025/08/20 11:34:12 wiz Exp $
 
 .include "Makefile.common"
 
@@ -39,6 +39,7 @@ CONFIGURE_ENV+=		CMAKE_OSX_ARCHITECTURES=arm64
 .endif
 
 PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
+PRINT_PLIST_AWK+=	{ gsub(/cmake-${CMAKE_API}/, "cmake-$${CMAKE_API}"); }
 
 REPLACE_SH=		Modules/Compiler/XL-Fortran/cpp
 

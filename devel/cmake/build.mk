@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.24 2025/05/01 12:31:45 wiz Exp $
+# $NetBSD: build.mk,v 1.25 2025/08/20 11:34:12 wiz Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -82,7 +82,7 @@ CMAKE_INSTALL_ARGS?=	-j ${_MAKE_JOBS_N:U1}
 
 CMAKE_GENERATORS_INCOMPATIBLE?=	# empty
 
-.for cg in ${CMAKE_GENERATOR} make ninja
+.for cg in ${CMAKE_GENERATOR:tl} make ninja
 .  if empty(CMAKE_GENERATORS_INCOMPATIBLE:M${cg})
 _CMAKE_GENERATOR?=	${cg}
 .  endif
