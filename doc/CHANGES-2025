@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5067 2025/08/20 19:46:19 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5068 2025/08/20 19:51:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7372,3 +7372,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.179.0 [wiz 2025-08-20]
 	Updated graphics/raqm to 0.10.3 [wiz 2025-08-20]
 	Updated games/arx-libertatis to 1.2.1nb1 [triaxx 2025-08-20]
+	Updated www/syncstorage-rs to 0.20.0 [wiz 2025-08-20]
