@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2024/12/29 14:56:38 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/08/20 07:22:10 wiz Exp $
 
 BLAKE2s (hyperscan-5.4.2.tar.gz) = 56eb9b80011ec253c3a2543d19ae3bb12d66b66d6be7a3942f798a3a1ec5430f
 SHA512 (hyperscan-5.4.2.tar.gz) = 328f21133161d16b36ebdc7f8b80a7afe7ca9e7e7433348e9bfa9acb5f3641522e8314beea1b219891f4e95f1392ff8036ebb87780fe808b8b4bd15a535e9509
 Size (hyperscan-5.4.2.tar.gz) = 1848851 bytes
 SHA1 (patch-CMakeLists.txt) = 09b5f2653d233faa10ed83c3a3def6ea66e4f3ce
-SHA1 (patch-chimera_CMakeLists.txt) = 8c762191adb5088a31e884ff0745f7c05995eb14
+SHA1 (patch-chimera_CMakeLists.txt) = 440ccae8b276979fc535cb8d5f8bcdf7b7741f1e
 SHA1 (patch-chimera_ch__runtime.c) = a3e89529a4397eeaea2db358f2676cf03e66a91e
 SHA1 (patch-src_util_popcount.h) = 3d30d412318c474c9d7a5b7fc45ea3148e6ed4b4
 SHA1 (patch-tools_hsbench_CMakeLists.txt) = 69ea565ee36811a632e8bc521901c4cdd0a91ca3
