@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5046 2025/08/20 09:56:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5047 2025/08/20 11:19:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7348,3 +7348,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-sugar to 1.1.0 [adam 2025-08-20]
 	Updated devel/py-ruamel-yaml to 0.18.15 [adam 2025-08-20]
 	Updated devel/py-ruff to 0.12.9 [adam 2025-08-20]
+	Updated devel/automoc4 to 0.9.88nb34 [wiz 2025-08-20]
