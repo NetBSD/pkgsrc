@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/12/29 15:09:39 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/20 11:34:47 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	coordgenlibs-1.4.2
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../biology/maeparser/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

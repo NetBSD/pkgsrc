@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/04/24 14:13:40 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/08/20 11:34:52 wiz Exp $
 
 DISTNAME=	qjson-0.8.1
 PKGREVISION=	11
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	QJson.pc.in
 

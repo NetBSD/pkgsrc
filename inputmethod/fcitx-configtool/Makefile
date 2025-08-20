@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/24 14:14:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/20 11:35:01 wiz Exp $
 
 DISTNAME=	fcitx-configtool-0.4.9
 PKGREVISION=	19
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../inputmethod/fcitx/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"

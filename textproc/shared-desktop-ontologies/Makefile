@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/09/29 05:47:18 markd Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/20 11:35:13 wiz Exp $
 
 DISTNAME=	shared-desktop-ontologies-0.11.0
 CATEGORIES=	textproc
@@ -12,6 +12,8 @@ COMMENT=	Ontologies for Semantic Desktop
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	# none
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	shared-desktop-ontologies.pc.cmake
 

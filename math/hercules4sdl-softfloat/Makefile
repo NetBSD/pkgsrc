@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/19 12:54:00 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/20 11:35:05 wiz Exp $
 
 DISTNAME=	hercules4sdl-softfloat-3.5.0
 PKGREVISION=	20250325
@@ -20,6 +20,7 @@ BLDDIR=		${WRKDIR}/SoftFloat64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
 CMAKE_CONFIGURE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 pre-configure:
 	${MKDIR} ${BLDDIR}

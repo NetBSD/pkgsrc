@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2025/07/19 05:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2025/08/20 11:35:14 wiz Exp $
 
 DISTNAME=	midori-v9.0
 PKGNAME=	${DISTNAME:S/v//}
@@ -20,6 +20,8 @@ USE_TOOLS+=	intltool msgfmt pkg-config
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 CONFIGURE_ENV+=	VALAC=${VALAC}
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

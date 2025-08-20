@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/24 14:13:42 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/20 11:34:53 wiz Exp $
 
 DISTNAME=	PageEdit-2.0.2
 PKGREVISION=	11
@@ -22,6 +22,7 @@ USE_TOOLS+=	pkg-config
 
 # upstream defaults to Qt6, but this needs the unpackaged qt6-webengine
 CMAKE_CONFIGURE_ARGS+=	-DUSE_QT5=1
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"

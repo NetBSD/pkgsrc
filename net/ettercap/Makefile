@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/04/19 07:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2025/08/20 11:35:07 wiz Exp $
 
 PKGREVISION= 15
 .include "Makefile.common"
@@ -9,5 +9,6 @@ COMMENT=	Suite for man in the middle attacks
 CONFLICTS+=	ettercap-gtk-[0-9]*
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GTK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

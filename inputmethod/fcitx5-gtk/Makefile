@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/07/19 05:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/20 11:35:02 wiz Exp $
 
 DISTNAME=	fcitx5-gtk-5.1.1
 PKGREVISION=	8
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	fcitx-gclient/Fcitx5GClient.pc.in
 

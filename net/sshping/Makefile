@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/04/19 07:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/20 11:35:08 wiz Exp $
 
 DISTNAME=	sshping-0.1.4
 PKGREVISION=	2
@@ -16,6 +16,8 @@ USE_TOOLS=	pod2man
 USE_LANGUAGES=	c c++
 
 LDFLAGS.NetBSD+=	-pthread
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../security/libssh/buildlink3.mk"

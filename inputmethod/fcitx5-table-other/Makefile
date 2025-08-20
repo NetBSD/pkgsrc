@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/01/23 23:27:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/20 11:35:03 wiz Exp $
 
 DISTNAME=	fcitx5-table-other-5.1.0
 PKGREVISION=	2
@@ -16,6 +16,8 @@ DEPENDS+=	libime-[0-9]*:../../inputmethod/libime
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 

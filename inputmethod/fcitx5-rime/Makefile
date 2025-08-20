@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/01/23 23:27:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/20 11:35:03 wiz Exp $
 
 DISTNAME=	fcitx5-rime-5.1.4
 CATEGORIES=	inputmethod
@@ -15,6 +15,8 @@ DEPENDS+=	rime-luna-pinyin-[0-9]*:../../inputmethod/rime-luna-pinyin
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 

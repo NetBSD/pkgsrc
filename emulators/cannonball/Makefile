@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/02/12 06:44:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2025/08/20 11:34:54 wiz Exp $
 
 DISTNAME=	cannonball-0.34
 PKGREVISION=	16
@@ -14,10 +14,10 @@ LICENSE=	mame-license
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-USE_CMAKE=		yes
-CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}/cmake
+CONFIGURE_DIR=		cmake
 CMAKE_CONFIGURE_ARGS+=		-DTARGET=linux.cmake
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
@@ -36,24 +36,22 @@ pre-configure:
 	   res/cannonball.ico
 .endfor
 
-	${MKDIR} ${WRKSRC}/build
-
 post-build:
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/cannonball.sh.in > \
 	    ${WRKDIR}/cannonball.sh
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/build/res/tilemap.bin \
+	${INSTALL_DATA} ${WRKSRC}/cmake/${CMAKE_BUILD_DIR}/res/tilemap.bin \
 	    ${DESTDIR}${PREFIX}/share/cannonball/res/tilemap.bin
-	${INSTALL_DATA} ${WRKSRC}/build/res/tilepatch.bin \
+	${INSTALL_DATA} ${WRKSRC}/cmake/${CMAKE_BUILD_DIR}/res/tilepatch.bin \
 	    ${DESTDIR}${PREFIX}/share/cannonball/res/tilepatch.bin
-	${INSTALL_DATA} ${WRKSRC}/build/config.xml \
+	${INSTALL_DATA} ${WRKSRC}/cmake/${CMAKE_BUILD_DIR}/config.xml \
 	    ${DESTDIR}${PREFIX}/share/cannonball/conf/config.xml
 	${INSTALL_DATA} ${FILESDIR}/cannonball.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKDIR}/cannonball.sh \
 	    ${DESTDIR}${PREFIX}/bin/cannonball
-	${INSTALL_PROGRAM} ${WRKSRC}/build/cannonball \
+	${INSTALL_PROGRAM} ${WRKSRC}/cmake/${CMAKE_BUILD_DIR}/cannonball \
 	    ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_MAN} ${WRKSRC}/docs/cannonball.6 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
@@ -62,6 +60,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/${s}x${s}/apps/cannonball.png
 .endfor
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"

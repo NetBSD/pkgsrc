@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/07/26 06:51:23 charlotte Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/20 11:34:57 wiz Exp $
 
 DISTNAME=	openclonk-8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 USE_CXX_FEATURES+=	c++14
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"

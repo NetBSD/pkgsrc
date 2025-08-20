@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2019/11/02 16:16:22 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:35:05 wiz Exp $
 
 DISTNAME=	ranger-0.4.2
 CATEGORIES=	math
@@ -15,6 +15,8 @@ USE_CMAKE=		yes
 PTHREAD_AUTO_VARS=	yes
 
 INSTALLATION_DIRS+=	bin
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ranger ${DESTDIR}${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2019/09/08 20:54:16 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/20 11:34:57 wiz Exp $
 
 DISTNAME=	megaglest-data-3.13.0
 CATEGORIES=	games
@@ -17,5 +17,7 @@ WRKSRC=		${WRKDIR}/megaglest-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 # XXX only needed because cmake complains otherwise
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

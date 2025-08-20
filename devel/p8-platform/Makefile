@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/18 14:11:17 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/20 11:34:52 wiz Exp $
 
 DISTNAME=	p8-platform-2.1.0.1
 CATEGORIES=	devel
@@ -15,5 +15,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 
 USE_CXX_FEATURES+=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

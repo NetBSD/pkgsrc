@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/02/04 18:44:40 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/20 11:35:08 wiz Exp $
 
 DISTNAME=	nanomsg-1.2.1
 CATEGORIES=	net
@@ -17,6 +17,8 @@ TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	src/pkgconfig.in
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

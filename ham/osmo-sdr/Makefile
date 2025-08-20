@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/08/19 17:36:06 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/20 11:35:00 wiz Exp $
 
 DISTNAME=		osmo-sdr-0.1
 PKGREVISION=		7
@@ -13,6 +13,8 @@ LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		perl pkg-config tar
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 CONFIGURE_DIR=		software/libosmosdr

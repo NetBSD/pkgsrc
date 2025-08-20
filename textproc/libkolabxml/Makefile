@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/19 07:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/20 11:35:12 wiz Exp $
 
 DISTNAME=	libkolabxml-1.1.6
 PKGREVISION=	21
@@ -15,11 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
-
-SUBST_CLASSES+=		pathes
-SUBST_STAGE.pathes=	post-install
-SUBST_FILES.pathes=	${DESTDIR}${PREFIX}/lib/cmake/Libkolabxml/LibkolabxmlTargets-noconfig.cmake
-SUBST_SED.pathes=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/xsd/buildlink3.mk"

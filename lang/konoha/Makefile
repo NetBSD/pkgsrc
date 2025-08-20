@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/04/19 07:58:00 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/08/20 11:35:04 wiz Exp $
 #
 
 DISTNAME=	konoha-1.0.0-952
@@ -15,6 +15,8 @@ LICENSE=	gnu-lgpl-v3
 WRKSRC=		${WRKDIR}/konoha-1.0.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"

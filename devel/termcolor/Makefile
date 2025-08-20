@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/12/31 17:25:25 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/20 11:34:53 wiz Exp $
 #
 
 DISTNAME=	termcolor-2.0.0
@@ -13,5 +13,7 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2025/05/06 09:40:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/08/20 11:34:49 wiz Exp $
 #
 
 DISTNAME=	mysql-cluster-gpl-7.5.25
@@ -65,6 +65,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET:Q}
 CMAKE_CONFIGURE_ARGS+=		-DWITH_NDB_JAVA=OFF
 CMAKE_CONFIGURE_ARGS+=		-UWITH_UNIT_TESTS
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SSL=system
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # MySQL 5 depends on builtin functions enabled with i486 and later with GCC.
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == i386

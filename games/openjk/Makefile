@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/04/24 14:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/20 11:34:57 wiz Exp $
 
 DISTNAME=	openjk-0.0.0.20191030
 PKGREVISION=	12
@@ -28,6 +28,7 @@ CXXFLAGS+=	-I${BUILDLINK_DIR}/include/GL
 .else
 CMAKE_CONFIGURE_ARGS+=	-DUseInternalJPEG=OFF
 .endif
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "Darwin"
 OPENJK_ARCH=	x86

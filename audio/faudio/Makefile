@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/04/12 06:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/08/20 11:34:45 wiz Exp $
 
 DISTNAME=	faudio-22.05
 PKGREVISION=	11
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"

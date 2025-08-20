@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/02/12 06:44:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/20 11:34:51 wiz Exp $
 
 DISTNAME=	fifechan-0.1.5
 PKGREVISION=	11
@@ -18,6 +18,7 @@ CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build

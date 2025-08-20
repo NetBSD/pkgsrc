@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/04/19 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/08/20 11:35:08 wiz Exp $
 #
 
 DISTNAME=	podcastdl-0.3.3
@@ -13,6 +13,8 @@ COMMENT=	CLI podcast client
 LICENSE=	isc
 
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 USE_LANGUAGES=	c c++
 

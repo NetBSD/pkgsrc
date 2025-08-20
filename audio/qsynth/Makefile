@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2025/04/24 14:13:16 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2025/08/20 11:34:47 wiz Exp $
 
 DISTNAME=	qsynth-0.6.3
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
@@ -17,6 +17,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 LDFLAGS.SunOS+=	-lsocket
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

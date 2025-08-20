@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/07/13 08:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/08/20 11:35:00 wiz Exp $
 
 DISTNAME=	pdfpc-4.4.0
 PKGREVISION=	40
@@ -16,6 +16,8 @@ DEPENDS+=	gst-plugins1-gtk-[0-9]*:../../multimedia/gst-plugins1-gtk
 
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 EGDIR=		${PREFIX}/share/examples/pdfpc
 CONF_FILES+=	${EGDIR}/pdfpcrc	${PKG_SYSCONFDIR}/pdfpcrc

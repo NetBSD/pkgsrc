@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/20 11:34:52 wiz Exp $
 
 GITHUB_PROJECT=	libyang
 GITHUB_TAG=	v1.0.240
@@ -33,6 +33,7 @@ pre-configure:
 
 CMAKE_CONFIGURE_ARGS?=	-DCMAKE_BUILD_TYPE:String="Release"
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_LYD_PRIV=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/pcre/buildlink3.mk"
 

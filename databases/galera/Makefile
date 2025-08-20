@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/12/29 15:09:43 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/20 11:34:49 wiz Exp $
 
 DISTNAME=	galera-26.4.13
 PKGREVISION=	6
@@ -17,6 +17,8 @@ LICENSE=	gnu-gpl-v2 AND boost-license
 WRKSRC=		${WRKDIR}/galera-release_26.4.13
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CHECK_PORTABILITY_SKIP+=	scripts/mysql/centos/mysqld_safe
 CHECK_PORTABILITY_SKIP+=	scripts/mysql/debian/mysqld_safe-5.5

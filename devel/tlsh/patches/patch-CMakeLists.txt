@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2024/12/18 13:54:16 nros Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/08/20 11:34:53 wiz Exp $
 
 Squelch configure warnings.
 Don't use static linking for libgcc and libstdc++,
@@ -7,18 +7,17 @@ some systems.
 
 --- CMakeLists.txt.orig	2021-09-09 05:56:28.000000000 +0000
 +++ CMakeLists.txt
-@@ -52,6 +52,10 @@
+@@ -52,6 +52,9 @@
  # OF THE POSSIBILITY OF SUCH DAMAGE.
  
  cmake_minimum_required(VERSION 2.6)
 +# let CMAKE_MODULE_PATH override modules installed with cmake
-+cmake_policy(SET CMP0017 OLD)	
 +# set MACOSX_RPATH
 +cmake_policy(SET CMP0042 NEW)
  
  project(TLSH)
  
-@@ -139,7 +143,7 @@ if(MSVC)
+@@ -139,7 +142,7 @@ if(MSVC)
  endif()
  
  # user can override CXX; make sure tests link and load properly regardless of LD_LIBRARY_PATH

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/04/24 14:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2025/08/20 11:35:06 wiz Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.10.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -19,6 +19,7 @@ CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
 
 CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_QTPLUGINDIR=${QTDIR}/plugins
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 #WRKSRC=		${WRKDIR}/phonon-gstreamer-4.9.1
 

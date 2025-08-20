@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/05/05 09:45:19 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/20 11:34:59 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	flameshot-12.1.0
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 ICON_THEMES=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c++
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	external/Qt-Color-Widgets/QtColorWidgets.pc.in
 

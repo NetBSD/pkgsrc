@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/05/06 07:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/08/20 11:34:46 wiz Exp $
 
 DISTNAME=	libgroove-4.3.0
 PKGREVISION=	23
@@ -20,6 +20,7 @@ USE_LANGUAGES=	c c++
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg4}/include/ffmpeg4
 CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg4}/lib/ffmpeg4/lib${lib:tl}.${SHLIB_EXT}
 .endfor
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=	yasm-[0-9]*:../../devel/yasm

@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2025/06/30 13:14:28 adam Exp $
+# $NetBSD: Makefile,v 1.57 2025/08/20 11:34:50 wiz Exp $
+
+# BUILD_DIRS
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../devel/cmake/Makefile.common"
 

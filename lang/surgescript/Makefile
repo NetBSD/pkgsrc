@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/02/28 08:06:52 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/20 11:35:04 wiz Exp $
 
 DISTNAME=	surgescript-0.5.5
 CATEGORIES=	lang
@@ -13,5 +13,7 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	src/surgescript/misc/surgescript.pc.in
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

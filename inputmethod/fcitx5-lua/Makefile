@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/23 23:27:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/20 11:35:02 wiz Exp $
 
 DISTNAME=	fcitx5-lua-5.0.12
 CATEGORIES=	inputmethod
@@ -12,6 +12,8 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LUA_VERSIONS_ACCEPTED=	54 53
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/23 23:27:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/20 11:35:03 wiz Exp $
 
 DISTNAME=	fcitx5-zhuyin-5.1.0
 PKGREVISION=	1
@@ -22,6 +22,7 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-extract:
 .for f in ${MOREDISTFILES}

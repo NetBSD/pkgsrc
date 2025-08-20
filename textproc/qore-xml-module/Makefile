@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/04/17 21:52:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/08/20 11:35:12 wiz Exp $
 
 DISTNAME=	qore-xml-module-1.8.1
 PKGREVISION=	11
@@ -20,7 +20,10 @@ PTHREAD_OPTS+=	native
 
 REPLACE_QORE=	bin/soaputil bin/webdav-server
 
-CMAKE_USE_GNU_INSTALL_DRIS=	no
+CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
 #This is needed in order to comply the with MIT license and binary distribution
 INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:

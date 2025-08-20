@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/08/10 10:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2025/08/20 11:34:59 wiz Exp $
 
 DISTNAME=	luminance-hdr-2.6.1.1
 PKGREVISION=	21
@@ -17,6 +17,7 @@ FORCE_CXX_STD=	c++14
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cfitsio/buildlink3.mk"

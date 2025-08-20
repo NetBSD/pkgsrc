@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/17 21:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/20 11:34:55 wiz Exp $
 #
 
 DISTNAME=	fuse-darling-dmg-1.0.4.20210411
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 FORCE_CXX_STD=	c++17
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../textproc/icu/buildlink3.mk"

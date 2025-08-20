@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:14:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/20 11:34:58 wiz Exp $
 
 DISTNAME=	vcmi-1.6.7
 PKGREVISION=	3
@@ -40,6 +40,7 @@ SUBST_STAGE.ffmpeg=	pre-configure
 .if ${CC_VERSION:Mgcc-*}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 .endif
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.fast.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/02/16 20:31:13 nros Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 11:34:49 wiz Exp $
 
 DISTNAME=	qore-openldap-module-1.2.3
 PKGREVISION=	6
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake pax
 PTHREAD_OPTS+=	native
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

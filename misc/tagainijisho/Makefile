@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/24 14:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/20 11:35:06 wiz Exp $
 
 DISTNAME=	tagainijisho-1.2.2
 PKGREVISION=	16
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/30 06:08:51 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/20 11:35:10 wiz Exp $
 
 DISTNAME=	olm-3.2.16
 CATEGORIES=	security
@@ -14,6 +14,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	olm.pc.in
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

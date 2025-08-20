@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/02/16 20:31:13 nros Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/20 11:34:52 wiz Exp $
 
 DISTNAME=	qore-magic-module-1.0.1
 PKGREVISION=	4
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../lang/qore/module.mk"
 

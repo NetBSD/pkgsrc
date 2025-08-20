@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2024/12/24 18:52:22 adam Exp $
+# $NetBSD: Makefile.common,v 1.15 2025/08/20 11:34:49 wiz Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
@@ -78,6 +78,7 @@ CMAKE_CONFIGURE_ARGS+=		-DSHOW_BUILD_ID=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_EXTRA_CHARSETS=${MYSQL_EXTRA_CHARSET}
 CMAKE_CONFIGURE_ARGS+=		-DWITH_ROUTER=OFF
 CMAKE_CONFIGURE_ARGS+=		-DWITH_UNIT_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CHECK_PORTABILITY_SKIP+=	packaging/deb-in/mysql-packagesource-server.config.in
 

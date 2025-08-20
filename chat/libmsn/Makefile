@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/03 10:15:47 nros Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/20 11:34:48 wiz Exp $
 
 DISTNAME=	libmsn-4.2.1
 PKGREVISION=	5
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++
 # fix build with compilers that default to c++ 17 and above
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD=98
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD_REQUIRED:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	libmsn.pc.cmake
 

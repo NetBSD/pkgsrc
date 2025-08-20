@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 19:24:10 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/20 11:34:49 wiz Exp $
 
 DISTNAME=	pg_top-4.0.0
 CATEGORIES=	databases
@@ -10,6 +10,8 @@ HOMEPAGE=	https://pg_top.gitlab.io/
 COMMENT=	Monitoring program similar to top for PostgreSQL
 
 NOT_FOR_PLATFORM=	NetBSD-*-*
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/24 14:15:36 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/20 11:35:09 wiz Exp $
 
 DISTNAME=	xpdf-4.05
 PKGREVISION=	9
@@ -20,6 +20,7 @@ TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
 # don't accidentally find qt6
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt6Widgets=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps

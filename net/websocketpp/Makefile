@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/06 20:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/20 11:35:09 wiz Exp $
 
 DISTNAME=	websocketpp-0.8.2
 CATEGORIES=	net devel
@@ -12,6 +12,8 @@ LICENSE=	modified-bsd # includes other free software, see COPYING
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

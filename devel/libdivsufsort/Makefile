@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:34:51 wiz Exp $
 
 DISTNAME=	libdivsufsort-2.0.1
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ USE_CMAKE=	yes
 
 # Examples do not get installed.
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXAMPLES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libdivsufsort.pc.cmake
 

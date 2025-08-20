@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2025/04/24 14:13:26 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/08/20 11:34:50 wiz Exp $
 
 DISTNAME=	sqlitebrowser-3.13.1
 PKGREVISION=	6
@@ -13,6 +13,8 @@ LICENSE=	mpl-2.0 OR gnu-gpl-v3
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

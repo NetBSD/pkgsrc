@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/06/24 13:55:26 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/20 11:35:10 wiz Exp $
 
 DISTNAME=	libuecc-7
 CATEGORIES=	security
@@ -13,5 +13,7 @@ LICENSE=	2-clause-bsd
 USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	libuecc.pc.in
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/04/19 07:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/08/20 11:35:07 wiz Exp $
 
 DISTNAME=	grive2-0.5.1
 PKGREVISION=	20
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=		manpath
 SUBST_MESSAGE.manpath=	Fix manpath

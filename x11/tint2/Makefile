@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/04/24 14:16:32 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/08/20 11:35:14 wiz Exp $
 
 DISTNAME=		tint2-v17.0.2
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -29,6 +29,8 @@ CONF_FILES=		${PREFIX}/share/examples/tint2/tint2rc \
 
 CMAKE_CONFIGURE_ARGS.Linux=	-DENABLE_BATTERY=ON
 CMAKE_CONFIGURE_ARGS.*=		-DENABLE_BATTERY=OFF
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 CFLAGS.SunOS+=		-Du_int8_t=uint8_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t

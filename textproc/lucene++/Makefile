@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/12/29 15:10:00 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/20 11:35:12 wiz Exp $
 
 DISTNAME=	lucene++-3.0.9
 PKGREVISION=	2
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEMO=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TEST=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

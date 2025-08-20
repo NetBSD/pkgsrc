@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/16 01:49:38 markd Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/20 11:34:55 wiz Exp $
 
 DISTNAME=	dynamips-0.2.23
 CATEGORIES=	emulators
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=		libelf
 SUBST_STAGE.libelf=	pre-configure
