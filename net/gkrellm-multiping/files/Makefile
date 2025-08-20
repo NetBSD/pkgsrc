@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/08/20 13:32:18 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/20 17:12:27 pho Exp $
 #
 # Replacement Makefile for gkrellm-multiping for portability
 #
@@ -38,8 +38,8 @@ ${MULTIPING_OBJS}: ${.TARGET:.lo=.c}
 
 .PHONY: install
 install: ${TARGETS}
-	${INSTALL_LIB_DIR} ${DESTDIR}${HELPER_DIR}
-	${LIBTOOL} --mode=install ${INSTALL_LIB} pinger ${DESTDIR}${HELPER_DIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${HELPER_DIR}
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} pinger ${DESTDIR}${HELPER_DIR}
 
 	${INSTALL_LIB_DIR} ${DESTDIR}${PLUGIN_DIR}
 	${LIBTOOL} --mode=install ${INSTALL_LIB} multiping.la ${DESTDIR}${PLUGIN_DIR}
