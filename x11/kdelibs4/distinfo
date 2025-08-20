@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.60 2022/08/17 18:51:09 tnn Exp $
+$NetBSD: distinfo,v 1.61 2025/08/20 11:32:40 wiz Exp $
 
 BLAKE2s (kdelibs-4.14.38.tar.xz) = 1b2445541c6dc1ce334f888950ea0a6bf994d642eb4db034001f8394335a4b4a
 SHA512 (kdelibs-4.14.38.tar.xz) = 54fbbb9b2f12a47d5aca21c152164ed03cc6a6619bf285e2b93c8e9260042ffd728ef41e1badb217e552de6478687cab5d3caf14af7b32da8caca3468d469e45
@@ -11,7 +11,7 @@ SHA1 (patch-ag) = 67561007567ba10f20d8e8572dd0a33c8139b7cd
 SHA1 (patch-ah) = 368f4f641ce55257409137185357e796666ae42f
 SHA1 (patch-aj) = 501e34c8fdf242c3718ecb26577ac5940d37fae5
 SHA1 (patch-ak) = 73cc1bb149039d2fe3c05ee631426a8773f951c6
-SHA1 (patch-al) = 20212d740191a699f7aa35db8c23a3b3cb55904e
+SHA1 (patch-al) = 63e4163b4ba44b8f865f0a417e6ec5e14a84c244
 SHA1 (patch-am) = b6c315d152d2c3d3c66ad85050549d0b39b263e5
 SHA1 (patch-cmake_modules_FindHUNSPELL.cmake) = 52bd28c88d696d52ce052ddd7702a0f46244f86e
 SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = becfce89d45fd9b70c2ca08a83ca0e650004996a
@@ -28,7 +28,7 @@ SHA1 (patch-khtml_misc_AtomicString.cpp) = eff036bcd09e031651eba1e3a2136e313d184
 SHA1 (patch-kimgio_jp2.cpp) = 165ff6b2e6176366739c78c1ca9dc2065c2d008d
 SHA1 (patch-kinit_CMakeLists.txt) = bcbf273d79702a4f1a617df0c86c2d5771447364
 SHA1 (patch-kinit_kinit.cpp) = 75dfe546c92169e692ddb45cd1a056a1b4042bb6
-SHA1 (patch-kio_CMakeLists.txt) = 3033fe7d31555e83f197f889cf1aa15949a3c14e
+SHA1 (patch-kio_CMakeLists.txt) = 010022fe3fa44e352a9646f3f7e49c9a2412a71a
 SHA1 (patch-kio_kfile_kopenwithdialog.cpp) = b705ed794a082bca03890d69369b4e043e90f6c5
 SHA1 (patch-kio_kfile_kpropertiesdialog.cpp) = 27bced17b818051c6df5bc1ea176fd9f2692caa4
 SHA1 (patch-kio_kssl_kopenssl.cpp) = 4d9319966f4be0b8c09501105f7664481af2834e
