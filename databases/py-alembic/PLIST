@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/14 11:04:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/08/20 07:20:35 adam Exp $
 bin/alembic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -132,6 +132,20 @@ ${PYSITELIB}/alembic/templates/multidb/env.py
 ${PYSITELIB}/alembic/templates/multidb/env.pyc
 ${PYSITELIB}/alembic/templates/multidb/env.pyo
 ${PYSITELIB}/alembic/templates/multidb/script.py.mako
+${PYSITELIB}/alembic/templates/pyproject/README
+${PYSITELIB}/alembic/templates/pyproject/alembic.ini.mako
+${PYSITELIB}/alembic/templates/pyproject/env.py
+${PYSITELIB}/alembic/templates/pyproject/env.pyc
+${PYSITELIB}/alembic/templates/pyproject/env.pyo
+${PYSITELIB}/alembic/templates/pyproject/pyproject.toml.mako
+${PYSITELIB}/alembic/templates/pyproject/script.py.mako
+${PYSITELIB}/alembic/templates/pyproject_async/README
+${PYSITELIB}/alembic/templates/pyproject_async/alembic.ini.mako
+${PYSITELIB}/alembic/templates/pyproject_async/env.py
+${PYSITELIB}/alembic/templates/pyproject_async/env.pyc
+${PYSITELIB}/alembic/templates/pyproject_async/env.pyo
+${PYSITELIB}/alembic/templates/pyproject_async/pyproject.toml.mako
+${PYSITELIB}/alembic/templates/pyproject_async/script.py.mako
 ${PYSITELIB}/alembic/testing/__init__.py
 ${PYSITELIB}/alembic/testing/__init__.pyc
 ${PYSITELIB}/alembic/testing/__init__.pyo
