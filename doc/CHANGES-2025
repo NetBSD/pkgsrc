@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5042 2025/08/20 07:21:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5043 2025/08/20 08:47:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7341,3 +7341,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/SDL_image to 1.2.12nb14 [triaxx 2025-08-19]
 	Updated net/yt-dlp to 2025.8.20 [adam 2025-08-20]
 	Updated databases/py-alembic to 1.16.4 [adam 2025-08-20]
+	Updated devel/git-gitk to 2.51.0nb1 [wiz 2025-08-20]
