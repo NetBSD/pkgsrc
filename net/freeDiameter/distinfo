@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:05:36 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/08/20 06:43:28 wiz Exp $
 
 BLAKE2s (freeDiameter/1.5.0.tar.gz) = fe127b36783f58ce25c808b7343358e2bbca3796203d443179983568dcff7a08
 SHA512 (freeDiameter/1.5.0.tar.gz) = 21350a22ca3538da598c162ac493bd2b42199bfe2bdcac4203924ce0b5cdcd78ec6437dc41fea451f29f64e764bbbff18c21294b9ccb6ac8465768b5a850ef29
 Size (freeDiameter/1.5.0.tar.gz) = 1010247 bytes
+SHA1 (patch-libfdcore_CMakeLists.txt) = c2196972cc35554246597055c7a886f6f342e5aa
+SHA1 (patch-libfdproto_CMakeLists.txt) = 1543d99c3af7fef8863b1a81136bf5056ffd95ad
