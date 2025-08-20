@@ -1,0 +1,12 @@
+$NetBSD: patch-third-party_libnatpmp_CMakeLists.txt,v 1.1 2025/08/20 06:54:21 wiz Exp $
+
+Fix build with cmake 4.
+
+--- third-party/libnatpmp/CMakeLists.txt.orig	2024-05-29 01:37:03.000000000 +0000
++++ third-party/libnatpmp/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ project(natpmp C)
+ 
+ add_definitions(-DNATPMP_STATICLIB -DENABLE_STRNATPMPERR)
