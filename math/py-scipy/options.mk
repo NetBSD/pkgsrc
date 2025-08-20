@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2025/06/01 21:46:47 thor Exp $
+# $NetBSD: options.mk,v 1.2 2025/08/20 12:19:23 adam Exp $
 
 # Not making that option dependent on python version. Would only
 # confuse, no?
-PKG_OPTIONS_VAR=       PKG_OPTIONS.scipy
+PKG_OPTIONS_VAR=	PKG_OPTIONS.scipy
 
 # Could be that we need BLAS directly here, too?
 
