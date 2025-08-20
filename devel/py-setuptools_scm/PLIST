@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/12 15:53:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/08/20 19:16:11 wiz Exp $
+bin/setuptools-scm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,6 +16,9 @@ ${PYSITELIB}/setuptools_scm/__main__.pyo
 ${PYSITELIB}/setuptools_scm/_cli.py
 ${PYSITELIB}/setuptools_scm/_cli.pyc
 ${PYSITELIB}/setuptools_scm/_cli.pyo
+${PYSITELIB}/setuptools_scm/_compat.py
+${PYSITELIB}/setuptools_scm/_compat.pyc
+${PYSITELIB}/setuptools_scm/_compat.pyo
 ${PYSITELIB}/setuptools_scm/_config.py
 ${PYSITELIB}/setuptools_scm/_config.pyc
 ${PYSITELIB}/setuptools_scm/_config.pyo
@@ -45,21 +49,33 @@ ${PYSITELIB}/setuptools_scm/_integration/dump_version.pyo
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.py
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyc
 ${PYSITELIB}/setuptools_scm/_integration/pyproject_reading.pyo
+${PYSITELIB}/setuptools_scm/_integration/setup_cfg.py
+${PYSITELIB}/setuptools_scm/_integration/setup_cfg.pyc
+${PYSITELIB}/setuptools_scm/_integration/setup_cfg.pyo
 ${PYSITELIB}/setuptools_scm/_integration/setuptools.py
 ${PYSITELIB}/setuptools_scm/_integration/setuptools.pyc
 ${PYSITELIB}/setuptools_scm/_integration/setuptools.pyo
 ${PYSITELIB}/setuptools_scm/_integration/toml.py
 ${PYSITELIB}/setuptools_scm/_integration/toml.pyc
 ${PYSITELIB}/setuptools_scm/_integration/toml.pyo
+${PYSITELIB}/setuptools_scm/_integration/version_inference.py
+${PYSITELIB}/setuptools_scm/_integration/version_inference.pyc
+${PYSITELIB}/setuptools_scm/_integration/version_inference.pyo
 ${PYSITELIB}/setuptools_scm/_log.py
 ${PYSITELIB}/setuptools_scm/_log.pyc
 ${PYSITELIB}/setuptools_scm/_log.pyo
 ${PYSITELIB}/setuptools_scm/_modify_version.py
 ${PYSITELIB}/setuptools_scm/_modify_version.pyc
 ${PYSITELIB}/setuptools_scm/_modify_version.pyo
+${PYSITELIB}/setuptools_scm/_node_utils.py
+${PYSITELIB}/setuptools_scm/_node_utils.pyc
+${PYSITELIB}/setuptools_scm/_node_utils.pyo
 ${PYSITELIB}/setuptools_scm/_overrides.py
 ${PYSITELIB}/setuptools_scm/_overrides.pyc
 ${PYSITELIB}/setuptools_scm/_overrides.pyo
+${PYSITELIB}/setuptools_scm/_requirement_cls.py
+${PYSITELIB}/setuptools_scm/_requirement_cls.pyc
+${PYSITELIB}/setuptools_scm/_requirement_cls.pyo
 ${PYSITELIB}/setuptools_scm/_run_cmd.py
 ${PYSITELIB}/setuptools_scm/_run_cmd.pyc
 ${PYSITELIB}/setuptools_scm/_run_cmd.pyo
@@ -87,6 +103,7 @@ ${PYSITELIB}/setuptools_scm/hg_git.pyo
 ${PYSITELIB}/setuptools_scm/integration.py
 ${PYSITELIB}/setuptools_scm/integration.pyc
 ${PYSITELIB}/setuptools_scm/integration.pyo
+${PYSITELIB}/setuptools_scm/py.typed
 ${PYSITELIB}/setuptools_scm/scm_workdir.py
 ${PYSITELIB}/setuptools_scm/scm_workdir.pyc
 ${PYSITELIB}/setuptools_scm/scm_workdir.pyo
