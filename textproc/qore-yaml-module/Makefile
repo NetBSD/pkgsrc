@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/02/16 20:31:14 nros Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 11:35:13 wiz Exp $
 
 DISTNAME=	qore-yaml-module-0.7.3
 PKGREVISION=	6
@@ -19,6 +19,8 @@ USE_TOOLS+=	gmake
 PTHREAD_OPTS+=	native
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 #This is needed in order to comply the with MIT license and binary distribution
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}

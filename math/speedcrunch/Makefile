@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/24 14:15:01 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/08/20 11:35:06 wiz Exp $
 #
 
 DISTNAME=	release-0.12.0
@@ -17,6 +17,8 @@ WRKSRC=		${WRKDIR}/heldercorreia-speedcrunch-ea93b21f9498/src
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS=	gmake # Required for handling file names with whitespaces
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-build:
 	(cd ${WRKSRC} && ${QTDIR}/bin/lrelease speedcrunch.pro)

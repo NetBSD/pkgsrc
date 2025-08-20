@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/04/24 14:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/20 11:34:47 wiz Exp $
 
 DISTNAME=	traverso-0.49.6
 PKGREVISION=	39
@@ -17,6 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
 CMAKE_CONFIGURE_ARGS+=	-DWANT_MP3_ENCODE=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.prefs.mk"
 

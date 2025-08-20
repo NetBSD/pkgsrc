@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/02/12 06:45:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/20 11:34:59 wiz Exp $
 
 DISTNAME=	mojoshader-0.0.20220415
 PKGREVISION=	6
@@ -19,6 +19,7 @@ USE_CMAKE=	yes
 CMAKE_CONFIGURE_ARGS=	-DBUILD_SHARED_LIBS=ON \
 		-DFLIP_VIEWPORT=1 \
 		-DPROFILE_METAL=OFF
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	gnu99

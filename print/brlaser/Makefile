@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/24 14:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/20 11:35:09 wiz Exp $
 
 DISTNAME=		brlaser-6.2.7
 PKGREVISION=		3
@@ -15,6 +15,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=		c++
 USE_CXX_FEATURES+=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../print/libcups/buildlink3.mk"

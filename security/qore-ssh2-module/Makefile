@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/02/16 20:31:14 nros Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/20 11:35:11 wiz Exp $
 
 DISTNAME=	qore-ssh2-module-1.4.2
 PKGREVISION=	4
@@ -18,6 +18,8 @@ USE_TOOLS+=	gmake pax pkg-config
 PTHREAD_OPTS+=	native
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs

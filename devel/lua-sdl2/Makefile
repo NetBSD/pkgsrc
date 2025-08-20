@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/02/12 06:44:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 11:34:52 wiz Exp $
 
 DISTNAME=	luasdl2-2.0.5.6.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua//1}
@@ -13,16 +13,17 @@ HOMEPAGE=	https://github.com/Tangent128/luasdl2
 COMMENT=	Pure C binding of SDL 2.0 for Lua
 LICENSE=	isc
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_DOCSDIR=${LUA_DOCDIR}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_LUAVER="user"
 CMAKE_CONFIGURE_ARGS+=	-DLUA_LIBDIR=${LUA_CDIR}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # build fails on lua52.
 LUA_VERSIONS_INCOMPATIBLE=	52
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"

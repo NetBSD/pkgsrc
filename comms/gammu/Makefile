@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/19 07:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/08/20 11:34:48 wiz Exp $
 #
 
 DISTNAME=	gammu-1.41.0
@@ -18,6 +18,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=		dialog-[0-9]*:../../misc/dialog
 
 USE_CMAKE=	yes
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DINSTALL_MAN_DIR:STRING=${PKGMANDIR}
 # make sure some optional dependencies are not found:

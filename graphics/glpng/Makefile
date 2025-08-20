@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 14:23:11 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/20 11:34:59 wiz Exp $
 
 DISTNAME=	1079563a36edfe10a5f5d79ad38fe465425b989e
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Load PNG images directly as OpenGL textures
 USE_CMAKE=		yes
 INSTALLATION_DIRS+=	share/doc/glpng
 WRKSRC=			${WRKDIR}/glpng
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/glpng.htm ${DESTDIR}${PREFIX}/share/doc/glpng

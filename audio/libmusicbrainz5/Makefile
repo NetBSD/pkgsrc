@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/17 21:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/20 11:34:46 wiz Exp $
 
 DISTNAME=	libmusicbrainz-5.1.0
 PKGNAME=	${DISTNAME:S/brainz/brainz5/}
@@ -18,6 +18,8 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	libmusicbrainz5.pc.cmake
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.neon+=	neon>=0.25.0

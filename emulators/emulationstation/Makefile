@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/04/19 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/08/20 11:34:55 wiz Exp $
 
 DISTNAME=	emulationstation-2.9.4
 PKGREVISION=	27
@@ -17,6 +17,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
 
 USE_CXX_FEATURES+=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 WRKSRC=		${WRKDIR}/EmulationStation-${PKGVERSION_NOREV}
 

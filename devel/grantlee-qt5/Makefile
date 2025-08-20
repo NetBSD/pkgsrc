@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/04/24 14:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/08/20 11:34:51 wiz Exp $
 
 DISTNAME=	grantlee-5.3.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -16,6 +16,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"

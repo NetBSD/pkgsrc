@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2020/07/07 09:04:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/20 11:34:51 wiz Exp $
 
 DISTNAME=		cpputest-4.0
 CATEGORIES=		devel
@@ -17,6 +17,8 @@ USE_CMAKE=		yes
 #USE_LIBTOOL=		yes
 #USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 TEST_TARGET=		check tdd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/15 09:40:27 nros Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/20 11:34:50 wiz Exp $
 
 DISTNAME=	cppcodec-0.2
 PKGREVISION=	1
@@ -20,6 +20,7 @@ TEST_TARGET=	test
 USE_CXX_FEATURES+=	c++14
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_STANDARD=14
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/catch2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

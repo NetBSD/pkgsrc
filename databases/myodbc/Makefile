@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/08/25 06:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/08/20 11:34:49 wiz Exp $
 
 DISTNAME=	mysql-connector-odbc-8.0.31
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 CMAKE_CONFIGURE_ARGS=		-Wno-dev
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 #CMAKE_CONFIGURE_ARGS+=		-DMYSQL_DIR=${BUILDLINK_PREFIX.mysql-client}
 CMAKE_CONFIGURE_ARGS+=		-DMYSQL_INCLUDE_DIR=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 USE_LANGUAGES=		c c++

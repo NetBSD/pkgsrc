@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/31 10:03:14 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/20 11:34:58 wiz Exp $
 
 DISTNAME=	laszip-src-3.4.3
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,6 +13,8 @@ COMMENT=	Free and lossless LiDAR compression
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

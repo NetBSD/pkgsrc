@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/04/24 14:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 11:34:46 wiz Exp $
 
 DISTNAME=	jack-keyboard-2.7.2
 PKGREVISION=	15
@@ -14,6 +14,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DLashEnable=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/jack/buildlink3.mk"

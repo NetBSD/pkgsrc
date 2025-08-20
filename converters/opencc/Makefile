@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/06/19 11:01:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/20 11:34:48 wiz Exp $
 
 VERSION=	1.1.3
 GITHUB_PROJECT=	OpenCC
@@ -21,6 +21,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++14
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	opencc.pc.in
 

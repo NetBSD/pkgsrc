@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/04/24 14:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/08/20 11:35:07 wiz Exp $
 #
 
 DISTNAME=	ssr-0.4.4
@@ -25,6 +25,7 @@ CFLAGS.SunOS+=	-DBSD
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_QT5=on
 CMAKE_CONFIGURE_ARGS+=	-DWITH_V4L2=off
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/24 14:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/20 11:34:47 wiz Exp $
 
 DISTNAME=	zynaddsubfx-3.0.5
 PKGREVISION=	11
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/oss.buildlink3.mk"
 
