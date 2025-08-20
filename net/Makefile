@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1605 2025/08/15 08:10:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1606 2025/08/20 14:08:33 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -521,7 +521,6 @@ SUBDIR+=	openvpn-acct-wtmpx
 SUBDIR+=	openvpn-nagios
 SUBDIR+=	ortp
 SUBDIR+=	overnet
-SUBDIR+=	owncloudclient
 SUBDIR+=	p5-Cisco-Abbrev
 SUBDIR+=	p5-DNS-LDNS
 SUBDIR+=	p5-DNS-ZoneParse
