@@ -1,19 +1,19 @@
-$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.5 2022/11/22 19:14:03 adam Exp $
+$NetBSD: patch-Source_QtDialog_CMakeLists.txt,v 1.6 2025/08/20 11:34:12 wiz Exp $
 
 Do not make app bundle on Darwin.
 
---- Source/QtDialog/CMakeLists.txt.orig	2022-11-16 14:42:03.000000000 +0000
+--- Source/QtDialog/CMakeLists.txt.orig	2025-08-05 14:55:57.000000000 +0000
 +++ Source/QtDialog/CMakeLists.txt
-@@ -256,7 +256,7 @@ target_link_libraries(
+@@ -263,7 +263,7 @@ target_link_libraries(
      CMakeGUILib
    )
  
 -add_executable(cmake-gui WIN32 MACOSX_BUNDLE CMakeGUIExec.cxx)
 +add_executable(cmake-gui WIN32 CMakeGUIExec.cxx)
+ set_property(TARGET cmake-gui PROPERTY CMake_QT_MAJOR_VERSION "${CMake_QT_MAJOR_VERSION}")
  target_link_libraries(cmake-gui
    PRIVATE
-     CMakeGUIMainLib
-@@ -269,7 +269,7 @@ target_link_libraries(cmake-gui
+@@ -277,7 +277,7 @@ target_link_libraries(cmake-gui
  if(WIN32)
    target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.rc)
  endif()
@@ -22,16 +22,16 @@ Do not make app bundle on Darwin.
    target_sources(CMakeGUIMainLib INTERFACE CMakeSetup.icns)
    set(MACOSX_BUNDLE_ICON_FILE CMakeSetup.icns)
    set_source_files_properties(CMakeSetup.icns PROPERTIES
-@@ -299,7 +299,7 @@ Checks: '-*,llvm-twine-local'
+@@ -307,7 +307,7 @@ Checks: '-*,llvm-twine-local'
  ...
  ")
  
 -if(APPLE)
 +if(FALSE)
-   file(STRINGS "${CMake_SOURCE_DIR}/Copyright.txt" copyright_line
-     LIMIT_COUNT 1 REGEX "^Copyright 2000-20[0-9][0-9] Kitware")
- 
-@@ -324,7 +324,7 @@ install(TARGETS cmake-gui
+   set_target_properties(cmake-gui PROPERTIES
+     OUTPUT_NAME CMake
+     MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
+@@ -329,7 +329,7 @@ install(TARGETS cmake-gui
    RUNTIME DESTINATION bin ${COMPONENT}
    BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" ${COMPONENT})
  
@@ -40,7 +40,7 @@ Do not make app bundle on Darwin.
    foreach(size IN ITEMS 32 128)
      install(
        FILES       "${CMAKE_CURRENT_SOURCE_DIR}/CMakeSetup${size}.png"
-@@ -343,14 +343,14 @@ if(UNIX AND NOT APPLE)
+@@ -348,14 +348,14 @@ if(UNIX AND NOT APPLE)
      ${COMPONENT})
  endif()
  
