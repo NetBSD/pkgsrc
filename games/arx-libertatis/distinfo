@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:43:46 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/08/20 19:45:10 triaxx Exp $
 
-BLAKE2s (arx-libertatis-1.2.tar.xz) = 07ea55c967bd2b7b637cbac500a01c075f907a14d80fead85626697fd7ec72be
-SHA512 (arx-libertatis-1.2.tar.xz) = faa838469ed65346e660eda5af95626bd140fa589f6d46917cd567782969f47080214bc98e99b3b7c85b5a150d610fb8712f261ac84799d504e4dda75533f67c
-Size (arx-libertatis-1.2.tar.xz) = 2478640 bytes
-SHA1 (patch-CMakeLists.txt) = 61ec31c85ef4b775f9467b343e6b9e1516e146a1
+BLAKE2s (arx-libertatis-1.2.1.tar.xz) = 6fb018623a637bf9bc2b533b81ef2d3ee3e39d9974bc1a70f72f5abd4e1e2a0f
+SHA512 (arx-libertatis-1.2.1.tar.xz) = 1013b18bb695e99145b44afd012a072cb4f376030301fe4432e503190c45d26f2a4ab0b6ff4ba284bfd10e66007ac8de417f07141e686a56314413c2de35feb4
+Size (arx-libertatis-1.2.1.tar.xz) = 2479764 bytes
+SHA1 (patch-CMakeLists.txt) = 434e1b8becacb2592dff35c6b28ccbdf9cc9311d
 SHA1 (patch-cmake_CompileCheck.cmake) = ca205e24c331f84765bf1bc29e0d7db9213250cc
 SHA1 (patch-src_platform_Thread.cpp) = a1ef75e2e9e9c9981aee992ade0713eecdf538b2

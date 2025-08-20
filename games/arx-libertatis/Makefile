@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/02/12 06:44:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 19:45:10 triaxx Exp $
 
-DISTNAME=	arx-libertatis-1.2
-PKGREVISION=	11
+DISTNAME=	arx-libertatis-1.2.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://arx-libertatis.org/files/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,6 @@ HOMEPAGE=	https://arx-libertatis.org/
 COMMENT=	Cross-platform, open source port of the Arx Fatalis RPG
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-D CMAKE_INSTALL_MANDIR:STRING:=${PKGMANDIR}
@@ -31,6 +30,7 @@ post-patch:
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
