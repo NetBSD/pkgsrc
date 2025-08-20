@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5064 2025/08/20 19:41:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5065 2025/08/20 19:42:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7369,3 +7369,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-markdown-it-py to 4.0.0 [wiz 2025-08-20]
 	Updated devel/alex to 3.5.4.0 [wiz 2025-08-20]
 	Updated textproc/tree-sitter-php to 0.24.1 [wiz 2025-08-20]
+	Updated www/py-google-api-python-client to 2.179.0 [wiz 2025-08-20]
