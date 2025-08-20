@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5043 2025/08/20 08:47:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5044 2025/08/20 09:04:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7342,3 +7342,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.8.20 [adam 2025-08-20]
 	Updated databases/py-alembic to 1.16.4 [adam 2025-08-20]
 	Updated devel/git-gitk to 2.51.0nb1 [wiz 2025-08-20]
+	Updated net/py-gevent to 25.5.1 [adam 2025-08-20]
+	Updated net/py-geventhttpclient to 2.3.4 [adam 2025-08-20]
