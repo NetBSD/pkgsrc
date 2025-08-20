@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5041 2025/08/19 19:41:13 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5042 2025/08/20 07:21:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7339,3 +7339,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fire to 0.7.1 [adam 2025-08-19]
 	Updated net/gkrellm-snmp to 1.1 [pho 2025-08-19]
 	Updated graphics/SDL_image to 1.2.12nb14 [triaxx 2025-08-19]
+	Updated net/yt-dlp to 2025.8.20 [adam 2025-08-20]
+	Updated databases/py-alembic to 1.16.4 [adam 2025-08-20]
