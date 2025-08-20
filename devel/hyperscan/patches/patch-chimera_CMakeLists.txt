@@ -1,10 +1,20 @@
-$NetBSD: patch-chimera_CMakeLists.txt,v 1.1 2024/12/29 14:56:38 adam Exp $
+$NetBSD: patch-chimera_CMakeLists.txt,v 1.2 2025/08/20 07:22:10 wiz Exp $
+
+Fix build with cmake 4.
 
 Do not leak work dir in pkg-config file.
 
---- chimera/CMakeLists.txt.orig	2024-12-29 14:09:56.883237585 +0000
+--- chimera/CMakeLists.txt.orig	2023-04-19 09:34:39.000000000 +0000
 +++ chimera/CMakeLists.txt
-@@ -41,7 +41,7 @@ if (NOT WIN32)
+@@ -28,7 +28,6 @@ SET(chimera_SRCS
+ )
+ 
+ add_library(chimera STATIC ${chimera_SRCS})
+-add_dependencies(chimera hs pcre)
+ target_link_libraries(chimera hs pcre)
+ 
+ install(TARGETS chimera DESTINATION ${CMAKE_INSTALL_LIBDIR})
+@@ -41,7 +40,7 @@ if (NOT WIN32)
              set(PRIVATE_LIBS "${PRIVATE_LIBS} -l${LIB}")
          endif()
      endforeach()
