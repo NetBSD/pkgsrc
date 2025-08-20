@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5054 2025/08/20 18:32:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5055 2025/08/20 19:16:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7359,3 +7359,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/mitmproxy to 12.1.1 [leot 2025-08-20]
 	Updated devel/meson to 1.8.4 [adam 2025-08-20]
 	Updated time/py-ciso8601 to 2.3.3 [adam 2025-08-20]
+	Updated devel/py-setuptools_scm to 9.2.0 [wiz 2025-08-20]
