@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/24 14:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/20 11:35:04 wiz Exp $
 
 GITHUB_PROJECT=	ibus-rime
 $GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -17,6 +17,8 @@ DEPENDS+=	rime-luna-pinyin-[0-9]*:../../inputmethod/rime-luna-pinyin
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure

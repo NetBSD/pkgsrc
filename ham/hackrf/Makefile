@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/08/25 06:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/20 11:35:00 wiz Exp $
 
 DISTNAME=	hackrf-2024.02.1
 CATEGORIES=	ham
@@ -16,6 +16,7 @@ USE_TOOLS+=	pax pkg-config
 
 CONFIGURE_DIR=	host
 CMAKE_CONFIGURE_ARGS+=	-DLIBUSB_INCLUDE_DIR=${PREFIX}/include/libusb-1.0
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 INSTALLATION_DIRS+=	share/hackerRF
 

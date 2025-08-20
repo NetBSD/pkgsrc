@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/04/17 21:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/08/20 11:35:11 wiz Exp $
 
 DISTNAME=	qore-xmlsec-module-1.0.0
 PKGREVISION=	17
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++11
 PTHREAD_OPTS+=	native
 
 CMAKE_USE_GNU_INSTALL_DIRS=	no
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/xmlsec1/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/20 11:34:56 wiz Exp $
 
 DISTNAME=	flare-game-1.12
 PKGREVISION=	2
@@ -22,6 +22,7 @@ REPLACE_PYTHON+=	mods/default/languages/xgettext.py
 REPLACE_PYTHON+=	mods/fantasycore/languages/xgettext.py
 
 CMAKE_CONFIGURE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare"
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"

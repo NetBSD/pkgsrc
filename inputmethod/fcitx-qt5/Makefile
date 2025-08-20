@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/04/24 14:14:46 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/20 11:35:01 wiz Exp $
 
 DISTNAME=	fcitx-qt5-1.2.3
 PKGREVISION=	30
@@ -16,6 +16,8 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 LDFLAGS+=	-lintl
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/extra-cmake-modules/buildlink3.mk"

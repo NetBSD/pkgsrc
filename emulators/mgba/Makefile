@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/04/17 21:50:39 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/08/20 11:34:55 wiz Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -13,6 +13,7 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_QT=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 
 CMAKE_CONFIGURE_ARGS+=	-DUSE_EDITLINE=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"

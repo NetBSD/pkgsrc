@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2018/07/04 13:40:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/20 11:35:08 wiz Exp $
 #
 
 DISTNAME=	libnipper-0.12.1
@@ -12,6 +12,8 @@ COMMENT=	Performs security audits of network device configuration
 
 USE_LANGUAGES=	c++
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CONF_FILES+=	${PREFIX}/share/examples/nipper.conf \
 		${PKG_SYSCONFDIR}/nipper.conf

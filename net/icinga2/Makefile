@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/02/19 18:02:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/20 11:35:07 wiz Exp $
 
 DISTNAME=	icinga2-2.14.5
 CATEGORIES=	net sysutils
@@ -138,6 +138,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE} # not PKG_S
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LOCALSTATEDIR=${VARBASE}
 # For ICINGA2_WITH_XXX see options.mk
 CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # Avoid a name clash with Boost header on case-insensitive file systems.
 # Remove outdated GNUInstallDirs.cmake.

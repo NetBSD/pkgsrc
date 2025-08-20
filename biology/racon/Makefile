@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/19 18:50:42 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:34:47 wiz Exp $
 
 GITHUB_PROJECT=	racon
 DISTNAME=	racon-v1.4.3
@@ -13,6 +13,8 @@ COMMENT=	Genomic consensus builder
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	vendor/bioparser/vendor/zlib/contrib/minizip/minizip.pc.in
 PKGCONFIG_OVERRIDE+=	vendor/bioparser/vendor/zlib/zlib.pc.in

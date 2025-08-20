@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/04/19 07:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/08/20 11:35:08 wiz Exp $
 
 DISTNAME=	ocsync-0.90.4
 PKGREVISION=	37
@@ -19,6 +19,8 @@ USE_CMAKE=	yes
 OBJDIR=		../build
 CONFIGURE_DIRS=	${OBJDIR}
 CMAKE_ARG_PATH=	../${DISTNAME}
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 EGDIR=		${PREFIX}/share/examples/ocsync
 CONF_FILES+=	${EGDIR}/ocsync.conf.default ${PKG_SYSCONFDIR}/ocsync.conf

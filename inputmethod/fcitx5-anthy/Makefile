@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/23 23:27:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/20 11:35:01 wiz Exp $
 
 DISTNAME=	fcitx5-anthy-5.1.3
 CATEGORIES=	inputmethod
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 

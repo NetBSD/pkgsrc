@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/19 17:29:29 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/20 11:35:00 wiz Exp $
 
 # https://github.com/drowe67/LPCNet/archive/v0.2.tar.gz
 # http://rowetel.com/downloads/deep/lpcnet_191005_v1.0.tgz
@@ -29,6 +29,7 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 CMAKE_CONFIGURE_ARGS+=    -DDISABLE_CPU_OPTIMIZATION=TRUE
 #CMAKE_CONFIGURE_ARGS+=    -DAVX2=1 -DAVX=1
 #CMAKE_CONFIGURE_ARGS+=    -DNEON=1
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # \todo File a bug upstream; this seems like it should not be needed.
 pre-configure:

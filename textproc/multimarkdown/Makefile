@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/04/19 07:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/20 11:35:12 wiz Exp $
 
 DISTNAME=	multimarkdown-6.5.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fletcher/}
@@ -20,6 +20,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
