@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5049 2025/08/20 12:22:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5050 2025/08/20 13:32:35 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7352,3 +7352,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake to 4.1.0 [wiz 2025-08-20]
 	Updated math/py-scipy to 1.16.1 [adam 2025-08-20]
 	Updated misc/py-icecream to 2.1.7 [adam 2025-08-20]
+	Updated net/gkrellm-multiping to 2.0.15 [pho 2025-08-20]
