@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2018/07/04 13:40:29 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.8 2025/08/20 06:44:25 wiz Exp $
 
 DISTNAME=	nipper-cli-0.12.0
 PKGNAME=	${DISTNAME:S/-cli//}
@@ -12,7 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Performs security audits of network device configuration
 
 USE_LANGUAGES=	c++ c
-USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
@@ -22,6 +22,7 @@ SUBST_SED.config+=	-e "s|@@PKGMANDIR@@|${PKGMANDIR}|g"
 SUBST_SED.config+=	-e "s|/etc|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.config=	Fixing configuration files.
 
+.include "../../devel/cmake/build.mk"
 .include "../../net/libnipper/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
