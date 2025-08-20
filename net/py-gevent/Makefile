@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2025/07/04 09:08:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/08/20 07:49:18 adam Exp $
 
-DISTNAME=	gevent-24.11.1
+DISTNAME=	gevent-25.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
 
@@ -12,8 +11,8 @@ COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.1.1:../../devel/py-greenlet
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.2.2:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
