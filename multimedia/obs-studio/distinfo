@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:01:13 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/08/20 06:15:38 wiz Exp $
 
 BLAKE2s (obs-studio-26.1.2.tar.gz) = 428c47c336bc563ad6050c0f89bd2fbfb8a4fb03e30c072131a050410c23d1e4
 SHA512 (obs-studio-26.1.2.tar.gz) = cd95fbf587f7edfe415cae75299d65c1d771bb118649fb839ae43d77145d87725c23df3360aa7b8c35ab8b62e5ec7983a8b02f8b102caa78f768eb58b4263417
 Size (obs-studio-26.1.2.tar.gz) = 16624899 bytes
 SHA1 (patch-UI_obs-app.cpp) = 262db99099ec044857d5c7080affbbc7ad07bf9f
+SHA1 (patch-deps_obs-scripting_obs-scripting-python.c) = 16e6c95df4e666c8c5a77ead763407de5cdd6691
 SHA1 (patch-libobs_graphics_graphics.h) = a6e403a03574f7628ac1f8b191b57f9d573c63f0
 SHA1 (patch-libobs_obs-nix.c) = 467faaa65062d2e6b0740c5e177ec67b0748ab45
 SHA1 (patch-plugins_CMakeLists.txt) = aa2bfe532b9214e46dc371fa295b6cddb9356b1f
