@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/08/18 08:12:04 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/20 19:22:52 wiz Exp $
 
-DISTNAME=	happy-lib-2.1.6
+DISTNAME=	happy-lib-2.1.7
 PKGNAME=	${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
