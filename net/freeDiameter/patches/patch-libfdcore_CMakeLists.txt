@@ -1,0 +1,19 @@
+$NetBSD: patch-libfdcore_CMakeLists.txt,v 1.1 2025/08/20 06:43:28 wiz Exp $
+
+Fix build with cmake 4.
+
+--- libfdcore/CMakeLists.txt.orig	2025-08-20 06:41:37.964800184 +0000
++++ libfdcore/CMakeLists.txt
+@@ -1,12 +1,6 @@
+ # The subproject name
+ Project("freeDiameter core library" C)
+ 
+-# Configuration for newer cmake
+-cmake_policy(VERSION 2.6)
+-if (POLICY CMP0022)
+-	cmake_policy(SET CMP0022 OLD)
+-endif (POLICY CMP0022)
+-
+ # Configuration parser
+ BISON_FILE(fdd.y)
+ FLEX_FILE(fdd.l)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/04/17 21:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/08/20 06:43:28 wiz Exp $
 
 DISTNAME=	1.5.0
 PKGNAME=	freeDiameter-${DISTNAME}
@@ -13,11 +13,13 @@ COMMENT=	Open source Diameter protocol implementation
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_CMAKE=	yes
-CMAKE_CONFIGURE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex pkg-config
-FLEX_REQD=	2.5.35
+FLEX_REQD+=	2.5.35
+
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
@@ -34,8 +36,8 @@ post-install:
 	cd ${WRKSRC}/doc/single_host && ${INSTALL_DATA} *.* \
 		${DESTDIR}${PREFIX}/share/examples/freeDiameter/single_host
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

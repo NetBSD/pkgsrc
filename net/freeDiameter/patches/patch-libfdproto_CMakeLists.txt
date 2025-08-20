@@ -1,0 +1,19 @@
+$NetBSD: patch-libfdproto_CMakeLists.txt,v 1.1 2025/08/20 06:43:28 wiz Exp $
+
+Fix build with cmake 4.
+
+--- libfdproto/CMakeLists.txt.orig	2025-08-20 06:41:28.483436291 +0000
++++ libfdproto/CMakeLists.txt
+@@ -1,12 +1,6 @@
+ # Name of the subproject
+ Project("libfdproto" C)
+ 
+-# Configuration for newer cmake
+-cmake_policy(VERSION 2.6)
+-if (POLICY CMP0022)
+-	cmake_policy(SET CMP0022 OLD)
+-endif (POLICY CMP0022)
+-
+ # List of source files for the library
+ SET(LFDPROTO_SRC
+ 	fdproto-internal.h
