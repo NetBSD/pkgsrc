@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5055 2025/08/20 19:16:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5056 2025/08/20 19:23:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7360,3 +7360,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/meson to 1.8.4 [adam 2025-08-20]
 	Updated time/py-ciso8601 to 2.3.3 [adam 2025-08-20]
 	Updated devel/py-setuptools_scm to 9.2.0 [wiz 2025-08-20]
+	Updated devel/happy-lib to 2.1.7 [wiz 2025-08-20]
