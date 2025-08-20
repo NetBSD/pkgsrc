@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5044 2025/08/20 09:04:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5045 2025/08/20 09:29:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7344,3 +7344,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-gitk to 2.51.0nb1 [wiz 2025-08-20]
 	Updated net/py-gevent to 25.5.1 [adam 2025-08-20]
 	Updated net/py-geventhttpclient to 2.3.4 [adam 2025-08-20]
+	Updated www/py-posting to 2.7.1 [adam 2025-08-20]
+	Updated devel/py-test-sugar to 1.1.0 [adam 2025-08-20]
