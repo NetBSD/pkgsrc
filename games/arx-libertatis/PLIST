@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/07/21 12:53:20 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/20 19:45:10 triaxx Exp $
 bin/arx
 bin/arx-install-data
 bin/arxsavetool
@@ -53,14 +53,14 @@ share/games/arx/localisation/xtext_russian_001_arxlibertatis.ini
 share/games/arx/localisation/xtext_spanish_001_arxlibertatis.ini
 share/games/arx/misc/dejavusansmono.ttf
 share/games/arx/misc/icons.ttf
-share/icons/hicolor/128x128/apps/arx-libertatis.png
-share/icons/hicolor/16x16/apps/arx-libertatis.png
-share/icons/hicolor/192x192/apps/arx-libertatis.png
-share/icons/hicolor/22x22/apps/arx-libertatis.png
-share/icons/hicolor/24x24/apps/arx-libertatis.png
-share/icons/hicolor/256x256/apps/arx-libertatis.png
-share/icons/hicolor/32x32/apps/arx-libertatis.png
-share/icons/hicolor/48x48/apps/arx-libertatis.png
-share/icons/hicolor/512x512/apps/arx-libertatis.png
-share/icons/hicolor/64x64/apps/arx-libertatis.png
-share/icons/hicolor/96x96/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/128x128/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/16x16/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/192x192/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/22x22/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/24x24/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/256x256/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/32x32/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/48x48/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/512x512/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/64x64/apps/arx-libertatis.png
+${PLIST.NotDarwin}share/icons/hicolor/96x96/apps/arx-libertatis.png
