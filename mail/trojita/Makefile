@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/24 14:14:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/20 11:35:05 wiz Exp $
 
 DISTNAME=	trojita-0.4.1
 PKGREVISION=	11
@@ -16,6 +16,8 @@ DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

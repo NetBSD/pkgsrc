@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/04/24 14:14:47 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/20 11:35:02 wiz Exp $
 
 DISTNAME=	fcitx5-m17n-5.1.0
 PKGREVISION=	8
@@ -14,6 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../devel/cmake/build.mk"
 

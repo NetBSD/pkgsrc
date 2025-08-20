@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2025/07/13 08:17:37 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2025/08/20 11:34:54 wiz Exp $
 
 DISTNAME=	tea-48.0.1
 PKGREVISION=	48
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # XXX should not be needed but we have weird paths with spaces
 # which break bmake

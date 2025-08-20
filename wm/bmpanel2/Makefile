@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2024/12/27 08:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/08/20 11:35:13 wiz Exp $
 
 DISTNAME=	bmpanel2-2.1pre1
 PKGREVISION=	38
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 REPLACE_PYTHON=			extra/py/bmpanel2.py
 PYDISTUTILSPKG=			no

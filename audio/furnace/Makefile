@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/03/11 12:42:22 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:34:45 wiz Exp $
 
 DISTNAME=	furnace-0.6.7
 PKGREVISION=	1
@@ -33,6 +33,7 @@ CMAKE_CONFIGURE_ARGS+=	-DSYSTEM_ZLIB=ON
 CMAKE_CONFIGURE_ARGS+=	-DSYSTEM_SDL2=ON
 
 CMAKE_CONFIGURE_ARGS+=	-DRTMIDI_API_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"

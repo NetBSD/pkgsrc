@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/05/23 17:54:04 nikita Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/20 11:34:48 wiz Exp $
 
 GITHUB_PROJECT=	hidapi
 GITHUB_TAG=	${GITHUB_PROJECT}-0.14.0
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3 OR modified-bsd
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PTHREAD_AUTO_VARS=	yes
 LDFLAGS+=		${PTHREAD_LFLAGS}

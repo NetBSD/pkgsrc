@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/20 11:35:06 wiz Exp $
 
 DISTNAME=	SFML-2.5.1-sources
 PKGNAME=	${DISTNAME:S/-sources//:tl}
@@ -15,6 +15,8 @@ LICENSE=	zlib
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	rm
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-sources//}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/04/19 07:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/08/20 11:34:46 wiz Exp $
 #
 
 DISTNAME=	glyr-1.0.10
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	libglyr.pc.in
 

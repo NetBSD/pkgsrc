@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2025/04/13 16:19:29 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/08/20 11:34:55 wiz Exp $
 # used by emulators/ppsspp/Makefile
 # used by emulators/ppsspp-qt/Makefile
 # used by emulators/libretro-ppsspp/Makefile
@@ -31,6 +31,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBPNG=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_MINIUPNPC=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_SNAPPY=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_ZSTD=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # let pkgsrc take care of this
 CMAKE_CONFIGURE_ARGS+=	-DUSE_CCACHE=OFF

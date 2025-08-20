@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/04/24 14:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/08/20 11:34:56 wiz Exp $
 
 DISTNAME=	megaglest-3.13.0
 PKGREVISION=	46
@@ -27,6 +27,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWANT_USE_GoogleBreakpad=OFF
 # detection fails; only used by tests?
 CMAKE_CONFIGURE_ARGS+=	-DWANT_USE_FriBiDi=OFF
 CMAKE_CONFIGURE_ARGS+=	-DMEGAGLEST_MANPAGE_INSTALL_PATH="${PKGMANDIR}/man6/"
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

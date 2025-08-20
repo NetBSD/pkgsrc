@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/25 06:19:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:35:05 wiz Exp $
 
 DISTNAME=	hercules4sdl-decnumber-3.68.0
 PKGREVISION=	20220201
@@ -20,6 +20,7 @@ BLDDIR=		${WRKDIR}/decNumber64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
 CMAKE_CONFIGURE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 pre-configure:
 	${MKDIR} ${BLDDIR}

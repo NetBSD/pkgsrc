@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/05/09 19:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/20 11:35:09 wiz Exp $
 
 DISTNAME=	opencl-clang-19.1.0
 PKGREVISION=	1
@@ -15,6 +15,8 @@ LICENSE=	modified-bsd
 USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--no-undefined
 BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,-Bsymbolic

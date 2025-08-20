@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/02/12 06:44:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/20 11:34:56 wiz Exp $
 
 DISTNAME=	julius-1.7.0
 PKGREVISION=	4
@@ -11,10 +11,12 @@ HOMEPAGE=	https://github.com/bvschaik/julius
 COMMENT=	Engine for the classic city building game Caesar III
 LICENSE=	gnu-agpl-v3
 
+DEPENDS+=	dialog-[0-9]*:../../misc/dialog
+
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-DEPENDS+=	dialog-[0-9]*:../../misc/dialog
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 LDFLAGS.NetBSD+=	-lexecinfo
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/04/24 14:16:05 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/08/20 11:35:14 wiz Exp $
 
 DISTNAME=	otter-browser-1.0.03
 PKGREVISION=	21
@@ -12,6 +12,8 @@ COMMENT=	Project aiming to recreate classic Opera (12.x) UI using Qt5
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "options.mk"
 

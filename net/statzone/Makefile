@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/27 15:29:16 fcambus Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/20 11:35:08 wiz Exp $
 
 DISTNAME=	statzone-1.1.1
 CATEGORIES=	net
@@ -15,5 +15,7 @@ USE_LANGUAGES=  c++
 USE_CMAKE=	yes
 
 TEST_TARGET=	test
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.pkg.mk"

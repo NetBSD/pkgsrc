@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/02/12 06:45:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2025/08/20 11:34:57 wiz Exp $
 
 DISTNAME=	teeworlds-0.7.5-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -17,6 +17,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 

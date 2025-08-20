@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/04/24 14:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/08/20 11:34:56 wiz Exp $
 
 DISTNAME=	crossfire-client-1.75.3
 PKGREVISION=	10
@@ -19,6 +19,8 @@ USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config perl:run
 
 REPLACE_PERL+=	common/items.pl
+
+CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 # Gtk2 has to be built with X11: fatal error: 'gdk/gdkx.h' file not found.
 

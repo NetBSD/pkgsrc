@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/04/24 14:14:47 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/08/20 11:35:01 wiz Exp $
 
 DISTNAME=	fcitx5-chinese-addons-5.1.3
 PKGREVISION=	12
@@ -25,6 +25,8 @@ EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-extract:
 .for f in ${MOREDISTFILES}

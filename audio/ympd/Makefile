@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/24 22:08:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/20 11:34:47 wiz Exp $
 
 DISTNAME=	ympd-1.3.0
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 BUILD_DEFS+=	VARBASE
 

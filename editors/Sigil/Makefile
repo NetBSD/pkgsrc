@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2025/04/24 14:13:42 wiz Exp $
+# $NetBSD: Makefile,v 1.182 2025/08/20 11:34:54 wiz Exp $
 
 DISTNAME=	Sigil-2.0.2
 PKGREVISION=	11
@@ -27,6 +27,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_QT5=1
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/24 14:13:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/20 11:34:54 wiz Exp $
 
 PKGREVISION= 11
 .include "../../emulators/duckstation-qt/Makefile.common"
@@ -13,6 +13,8 @@ INSTALLATION_DIRS+=	share/duckstation/translations
 INSTALLATION_DIRS+=	share/pixmaps
 
 NOT_PAX_MPROTECT_SAFE+=	bin/duckstation-qt
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/bin/duckstation-qt \

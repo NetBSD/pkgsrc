@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/02/12 09:25:41 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/20 11:35:12 wiz Exp $
 
 DISTNAME=	0.29.0.gfm.13
 PKGREVISION=	1
@@ -16,6 +16,8 @@ LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	src/libcmark-gfm.pc.in
 
