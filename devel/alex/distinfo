@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/04/30 10:10:02 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/08/20 19:39:34 wiz Exp $
 
-BLAKE2s (alex-3.5.3.0.tar.gz) = 63a5c8bb64b450cea213eda6b093652a093a8d032338ed4b9c44e29d109b5020
-SHA512 (alex-3.5.3.0.tar.gz) = 3d7ea919e739f88dea93a2b9d62281c64b570fa042773c095078fd12b34fd0397f8ee9f4a8a6b9391aff370926c99127242a26465c7f1d613741fe3386948710
-Size (alex-3.5.3.0.tar.gz) = 92759 bytes
+BLAKE2s (alex-3.5.4.0.tar.gz) = e6e55fbcc341bc70e8c7d5d8ee31198ad813ad521ccb3ca6852f81a4fdd5bef3
+SHA512 (alex-3.5.4.0.tar.gz) = a2f31537cd295858630d2d2e3d55c9fb0a4c565ca0c1833a003ba975faa2c81693773b6fc29f526cf0535e5db81952f22d45efa48df1bf6ff02d5afe462bfaa6
+Size (alex-3.5.4.0.tar.gz) = 94220 bytes
