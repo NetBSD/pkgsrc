@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:14 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2025/08/20 07:17:36 wiz Exp $
 
 DISTNAME=	cdrkit-1.1.9
 PKGREVISION=	10
@@ -12,9 +11,9 @@ COMMENT=	Portable command-line CD/DVD recorder software
 
 CONFLICTS=	cdrtools-[0-9]*
 
-USE_CMAKE=	yes
-USE_TOOLS+=	perl:run
-USE_LANGUAGES=	c c++
+USE_CMAKE=		yes
+USE_TOOLS+=		perl:run
+USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DMANSUBDIR=${PKGMANDIR}
 
 REPLACE_PERL=	3rd-party/dirsplit/dirsplit
