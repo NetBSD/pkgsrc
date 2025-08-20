@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:05:39 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/08/20 13:32:18 pho Exp $
 
-BLAKE2s (gkrellm-multiping-2.0.8.tgz) = 388ea352796709adfd0a6f3e25ff9f580e0d599731f618516369d6fca1329e2e
-SHA512 (gkrellm-multiping-2.0.8.tgz) = a18b2033faedbce7a52afb1f6479338eafd56e1210d3b306cee60a4ac377d298508401d0ed83e1923eff9d38fb4a1dedc26528c357cb1cda24248248ad923979
-Size (gkrellm-multiping-2.0.8.tgz) = 14377 bytes
-SHA1 (patch-aa) = af0247a420626ef04428b42544c53ef3259ca30f
-SHA1 (patch-ab) = 465567eb777db1d144d23e7fc457fb63db8ff23c
-SHA1 (patch-ac) = d8979ef7d975ec19c71a72bfc9e19e6c82a16a83
+BLAKE2s (gkrellm-multiping-2.0.15.tar.gz) = 996c2c894bbec0281e7af166e8c6b847215fd7fbd045ded78320b4092921b225
+SHA512 (gkrellm-multiping-2.0.15.tar.gz) = 355858a63b9760029c67197e30ca9a8b9fa6652f2da24b5efcdf947fcf872ea4974f735b8c2476410b2b1a01deb39944ebe0e616104c038abf685d9fb8ce595a
+Size (gkrellm-multiping-2.0.15.tar.gz) = 18645 bytes
+SHA1 (patch-ac) = bf98cae83af095bae8e6f5db2ecb845b5e308803
