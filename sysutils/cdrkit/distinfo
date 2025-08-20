@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/08/20 07:17:36 wiz Exp $
 
 BLAKE2s (cdrkit-1.1.9.tar.gz) = 1fbf1f85044d967e25a6a1edabead95714cc8e69c53d061835d97ab1d84fa658
 SHA512 (cdrkit-1.1.9.tar.gz) = c6d1fe04d384fda22cae009ca60b7aa7990797a6a552130953fb6c677f4989bb29dff4a086c5f720985c5913b7a58a8b5e604f717c0332182772c12dd3147451
 Size (cdrkit-1.1.9.tar.gz) = 1430065 bytes
+SHA1 (patch-CMakeLists.txt) = 9e9ac5a4d3d63af178acfe7d5452ff9bf3fa1f34
 SHA1 (patch-aa) = b83c5b64b957db9f2c0b003b2c6088ca9d17aa9a
 SHA1 (patch-ab) = 07e110ec3165c697f80f8fc2dbb104863f2bac97
 SHA1 (patch-ac) = c8d1387ececa092b2e652711228fba9aef612ad5
