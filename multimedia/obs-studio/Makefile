@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2025/04/24 14:15:19 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/08/20 06:15:38 wiz Exp $
 
 DISTNAME=	obs-studio-26.1.2
 PKGREVISION=	42
@@ -15,11 +15,9 @@ USE_LANGUAGES=	c gnu++11
 
 CMAKE_CONFIGURE_ARGS+=	-DDISABLE_LIBFDK=BOOL:ON
 CMAKE_CONFIGURE_ARGS+=	-DOBS_VERSION_OVERRIDE="${PKGVERSION}"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
-
-# Python 3 only
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.prefs.mk"
