@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5068 2025/08/20 19:51:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5069 2025/08/20 20:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7373,3 +7373,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/raqm to 0.10.3 [wiz 2025-08-20]
 	Updated games/arx-libertatis to 1.2.1nb1 [triaxx 2025-08-20]
 	Updated www/syncstorage-rs to 0.20.0 [wiz 2025-08-20]
+	Updated math/py-pywavelets to 1.9.0 [adam 2025-08-20]
+	Updated textproc/py-ujson to 5.11.0 [adam 2025-08-20]
