@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.77 2025/04/24 14:15:23 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/08/20 13:32:18 pho Exp $
 #
 
-DISTNAME=	gkrellm-multiping-2.0.8
-PKGREVISION=	64
+DISTNAME=	gkrellm-multiping-2.0.15
 CATEGORIES=	net
-#MASTER_SITES=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jmakovicka/}
+GITHUB_TAG=	refs/tags/${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/index.html
+HOMEPAGE=	https://github.com/jmakovicka/gkrellm-multiping
 COMMENT=	Pings several machines and prints out stats
+LICENSE=	gnu-gpl-v2
 
-SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
 
-PTHREAD_OPTS+=		require
-PTHREAD_AUTO_VARS=	yes
+MAKE_FILE=	${FILESDIR}/Makefile
+MAKE_FLAGS+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
+MAKE_FLAGS+=	INSTALL_PROGRAM_DIR=${INSTALL_PROGRAM_DIR:Q}
+MAKE_FLAGS+=	INSTALL_LIB=${INSTALL_LIB:Q}
+MAKE_FLAGS+=	INSTALL_LIB_DIR=${INSTALL_LIB_DIR:Q}
+MAKE_FLAGS+=	HELPER_DIR=${PREFIX:Q}/libexec
+MAKE_FLAGS+=	PLUGIN_DIR=${PREFIX:Q}/lib/gkrellm2/plugins
+MAKE_FLAGS+=	VERSION=${PKGVERSION:Q}
 
-INSTALLATION_DIRS=	lib/gkrellm2/plugins
-
-post-patch:
-	${SED} -e s,@@PREFIX@@,${PREFIX}, ${WRKSRC}/multiping.c > ${WRKSRC}/multiping.c.sed
-	${CP} ${WRKSRC}/multiping.c.sed ${WRKSRC}/multiping.c
+SPECIAL_PERMS+=	libexec/pinger ${SETUID_ROOT_PERMS}
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
