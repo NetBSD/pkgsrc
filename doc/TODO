@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26135 2025/08/20 19:34:54 wiz Exp $
+$NetBSD: TODO,v 1.26136 2025/08/20 19:38:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o coordgenlibs-2.0.3
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
-	o crush-0.6.2
 	o csound6-6.18.1
 	o csvkit-1.4.0
 	o ctemplate-2.4
@@ -1114,7 +1113,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-google-api-python-client-2.179.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
-	o py-markdown-it-py-4.0.0
 	o py-omniORBpy-3.7
 	o py-pdf-6.0.0
 	o py-pdf-parser-0.7.4
