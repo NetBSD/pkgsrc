@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/03/02 20:12:27 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/08/20 19:41:11 wiz Exp $
 
-BLAKE2s (tree-sitter-php-0.23.12.tar.gz) = 51c0bfe740294980119233b0b522454777a3851b06ce248919698b2985e8b419
-SHA512 (tree-sitter-php-0.23.12.tar.gz) = d505b6b626ec7d18752278587c92f1478641aa366ab88daeb847d1f1551940600363445dc60b9b17afa7c638467a7aec94bc8c67a6f3c11b3ffdd5b54d6741cd
-Size (tree-sitter-php-0.23.12.tar.gz) = 588888 bytes
+BLAKE2s (tree-sitter-php-0.24.1.tar.gz) = 93c8e47273e46e6f5bb5e0540f0a7f9789fed3663f27f3c28d829e254dfed78c
+SHA512 (tree-sitter-php-0.24.1.tar.gz) = 38a2ff043f08c6aca3aea487129daf7339a0e79af67a2a4de44f19a6f7f67889b3c0aeec59d7707f817171eca681c6cdf9a6342bb60b294d162512fcc5f32b16
+Size (tree-sitter-php-0.24.1.tar.gz) = 750861 bytes
