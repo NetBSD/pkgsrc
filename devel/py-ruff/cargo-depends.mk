@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.68 2025/08/08 16:50:14 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.69 2025/08/20 09:55:53 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -36,7 +36,7 @@ CARGO_CRATE_DEPENDS+=	bstr-1.12.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.19.0
 CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	cachedir-0.3.1
-CARGO_CRATE_DEPENDS+=	camino-1.1.10
+CARGO_CRATE_DEPENDS+=	camino-1.1.11
 CARGO_CRATE_DEPENDS+=	cast-0.3.0
 CARGO_CRATE_DEPENDS+=	castaway-0.2.4
 CARGO_CRATE_DEPENDS+=	cc-1.2.31
@@ -133,7 +133,7 @@ CARGO_CRATE_DEPENDS+=	globset-0.4.16
 CARGO_CRATE_DEPENDS+=	globwalk-0.9.1
 CARGO_CRATE_DEPENDS+=	half-2.6.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
-CARGO_CRATE_DEPENDS+=	hashbrown-0.15.4
+CARGO_CRATE_DEPENDS+=	hashbrown-0.15.5
 CARGO_CRATE_DEPENDS+=	hashlink-0.10.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.5.2
@@ -260,7 +260,7 @@ CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.12
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.1
 CARGO_CRATE_DEPENDS+=	proc-macro-crate-3.3.0
 CARGO_CRATE_DEPENDS+=	proc-macro-utils-0.10.0
-CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.95
+CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.96
 CARGO_CRATE_DEPENDS+=	pyproject-toml-0.13.5
 CARGO_CRATE_DEPENDS+=	quick-junit-0.5.1
 CARGO_CRATE_DEPENDS+=	quick-xml-0.37.5
