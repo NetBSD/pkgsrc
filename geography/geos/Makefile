@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2025/03/04 19:45:56 gdt Exp $
+# $NetBSD: Makefile,v 1.53 2025/08/21 17:59:45 gdt Exp $
 
-VERSION_BASE=	3.13.1
+VERSION_BASE=	3.14.0
 # Accomodate testing unreleased versions.
-VERSION_RC=
+#VERSION_RC=	rc1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	geos-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES+=	c++17
 
 .include "../../devel/cmake/build.mk"
 # cmake hides what it is doing; ask it to be like traditional builds.
