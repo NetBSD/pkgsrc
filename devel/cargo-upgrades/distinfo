@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/01/24 21:22:30 pin Exp $
+$NetBSD: distinfo,v 1.4 2025/08/21 18:38:04 wiz Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -441,3 +441,5 @@ Size (zerovec-0.10.4.crate) = 126398 bytes
 BLAKE2s (zerovec-derive-0.10.3.crate) = 39169b3f694a23e151216d25802a49f00889bfe0e5c6e744cc26792325703db2
 SHA512 (zerovec-derive-0.10.3.crate) = caefbffeb35265db9f74933bf07109d57f0da48156cafd4f330af78a5c7eb9ab0831a80789ad4fb119875ebc6cfd7e3de68c9984b77dca5151f9be41f1ae6e09
 Size (zerovec-derive-0.10.3.crate) = 19438 bytes
+SHA1 (patch-aa) = 18618a32728dfaaf2b0680171aab456b6ff0117f
+SHA1 (patch-ab) = a7e6e78ddb5a23afb256b5ddd5f8ef3bdd9f0817
