@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5075 2025/08/21 07:31:28 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5076 2025/08/21 07:34:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7382,3 +7382,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.39.4 [pin 2025-08-21]
 	Updated devel/bacon to 3.17.0 [pin 2025-08-21]
 	Updated devel/mise to 2025.8.16 [pin 2025-08-21]
+	Updated graphics/simp to 3.10.0 [pin 2025-08-21]
