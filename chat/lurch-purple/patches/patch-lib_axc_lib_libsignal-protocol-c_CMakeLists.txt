@@ -1,0 +1,12 @@
+$NetBSD: patch-lib_axc_lib_libsignal-protocol-c_CMakeLists.txt,v 1.1 2025/08/21 18:09:07 wiz Exp $
+
+Fix build with cmake 4.
+
+--- lib/axc/lib/libsignal-protocol-c/CMakeLists.txt.orig	2025-08-21 18:08:11.354479071 +0000
++++ lib/axc/lib/libsignal-protocol-c/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.4)
++cmake_minimum_required(VERSION 3.5)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMakeModules/")
+ project(signal-protocol-c)
+ 
