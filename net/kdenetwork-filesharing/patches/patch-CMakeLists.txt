@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/21 17:59:09 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-21 17:56:03.286774653 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(filesharing)
+ 
++cmake_minimum_required(VERSION 3.5)
++
+ if(NOT INSIDE_KDENETWORK)
+     message("Not building inside KDENetwork, loading KDE CMake Macros.")
+ 
+@@ -28,7 +30,7 @@ endif(NOT INSIDE_KDENETWORK)
+ 
+ option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
+ if(NOT SAMBA_PACKAGE_NAME)
+-    set(SAMBA_PACKAGE_NAME \\\"samba\\\")
++    set(SAMBA_PACKAGE_NAME \"samba\")
+ endif(NOT SAMBA_PACKAGE_NAME)
+ if(SAMBA_INSTALL)
+     message(STATUS "Samba install feature will be enabled.")
