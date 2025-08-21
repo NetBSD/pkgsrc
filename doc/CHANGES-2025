@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5072 2025/08/21 07:11:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5073 2025/08/21 07:29:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7379,3 +7379,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/clion-bin to 2025.2 [schmonz 2025-08-21]
 	Updated net/py-zmq to 27.0.2 [adam 2025-08-21]
 	Updated time/py-time-machine to 2.19.0 [adam 2025-08-21]
+	Updated devel/ast-grep to 0.39.4 [pin 2025-08-21]
