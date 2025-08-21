@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2025/08/21 18:46:33 wiz Exp $
+
+Fix build with cmake 4.
+
+--- ../vendor/glsl-to-spirv-0.1.7/glslang/CMakeLists.txt.orig	2025-08-21 18:34:18.969442426 +0000
++++ ../vendor/glsl-to-spirv-0.1.7/glslang/CMakeLists.txt
+@@ -1,6 +1,6 @@
+ # increase to 3.1 once all major distributions
+ # include a version of CMake >= 3.1
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+ 
+ # Adhere to GNU filesystem layout conventions
