@@ -1,0 +1,15 @@
+$NetBSD: patch-contrib_libjpeg-turbo_module.defs,v 1.1 2025/08/21 18:41:57 wiz Exp $
+
+Fix build with cmake 4.
+
+--- contrib/libjpeg-turbo/module.defs.orig	2025-08-21 18:40:34.457137083 +0000
++++ contrib/libjpeg-turbo/module.defs
+@@ -7,7 +7,7 @@ LIBJPEGTURBO.FETCH.sha256  = a78b05c0d84
+ 
+ LIBJPEGTURBO.build_dir             = build
+ LIBJPEGTURBO.CONFIGURE.exe         = cmake
+-LIBJPEGTURBO.CONFIGURE.args.prefix = -DCMAKE_INSTALL_PREFIX="$(LIBJPEGTURBO.CONFIGURE.prefix)"
++LIBJPEGTURBO.CONFIGURE.args.prefix = -DCMAKE_INSTALL_PREFIX="$(LIBJPEGTURBO.CONFIGURE.prefix)" -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+ LIBJPEGTURBO.CONFIGURE.deps        =
+ LIBJPEGTURBO.CONFIGURE.static      =
+ LIBJPEGTURBO.CONFIGURE.shared      = -DENABLE_SHARED=OFF
