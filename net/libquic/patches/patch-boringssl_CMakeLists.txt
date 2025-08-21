@@ -1,0 +1,12 @@
+$NetBSD: patch-boringssl_CMakeLists.txt,v 1.1 2025/08/21 18:49:06 wiz Exp $
+
+Fix build with cmake 4.
+
+--- boringssl/CMakeLists.txt.orig	2016-03-11 16:33:39.000000000 +0000
++++ boringssl/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.10)
++cmake_minimum_required (VERSION 3.5)
+ 
+ project (BoringSSL)
+ 

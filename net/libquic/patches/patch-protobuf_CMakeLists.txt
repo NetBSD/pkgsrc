@@ -1,0 +1,12 @@
+$NetBSD: patch-protobuf_CMakeLists.txt,v 1.1 2025/08/21 18:49:06 wiz Exp $
+
+Fix build with cmake 4.
+
+--- protobuf/CMakeLists.txt.orig	2025-08-21 18:43:41.348819228 +0000
++++ protobuf/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.10)
++cmake_minimum_required (VERSION 3.5)
+ 
+ project (libprotobuf)
+ 
