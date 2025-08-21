@@ -1,0 +1,12 @@
+$NetBSD: patch-libolm_CMakeLists.txt,v 1.1 2025/08/21 17:54:51 wiz Exp $
+
+Fix build with cmake 4.
+
+--- libolm/CMakeLists.txt.orig	2025-08-21 17:53:15.985875596 +0000
++++ libolm/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.4)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(olm VERSION 3.2.16 LANGUAGES CXX C)
+ 
