@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:23 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/08/21 18:05:08 wiz Exp $
 
 BLAKE2s (38195-koverartist_0.7.6.orig.tar.bz2) = abd1664c4a92c0f13ed2c43088c34a982440e5b49677e3a49bcfeafcf70363d2
 SHA512 (38195-koverartist_0.7.6.orig.tar.bz2) = 9d5c9a9676ae4e442cbe8b496d85a28c2ef69e5e79e53b56fc117c42cbcf769e5695d55f132f5ebfcaed244abba9e6d699e2ed25d4f49459c5d6434c8590f892
 Size (38195-koverartist_0.7.6.orig.tar.bz2) = 131626 bytes
+SHA1 (patch-CMakeLists.txt) = edf5ca9dd84a099fb54d1b400ab6c336a9c760e2
 SHA1 (patch-aa) = 8b16c6732421138a9719018148ffcb77e6cce0dd
 SHA1 (patch-ab) = 7d7f5685f06a4d897dc514519d1e263f67e2ba24
 SHA1 (patch-ac) = b3f5e3355e0da996f24594051864dc6f892ab55f
