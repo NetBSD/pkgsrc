@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5078 2025/08/21 17:59:56 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5079 2025/08/21 20:29:06 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7386,3 +7386,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-pandas to 2.3.2 [adam 2025-08-21]
 	Updated net/py-mitmproxy_rs to 0.12.7 [adam 2025-08-21]
 	Updated geography/geos to 3.14.0 [gdt 2025-08-21]
+	Updated games/devilutionx to 1.2.1nb14 [triaxx 2025-08-21]
