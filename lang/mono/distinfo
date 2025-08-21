@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.120 2023/11/24 13:58:45 ryoon Exp $
+$NetBSD: distinfo,v 1.121 2025/08/21 16:36:51 ryoon Exp $
 
 BLAKE2s (mono-6.12.0.199.tar.xz) = 50c074d858ce32159283f5eb2c5efee22fca111d09e0b1556474a6db33acb25e
 SHA512 (mono-6.12.0.199.tar.xz) = 9e379aaeb2e8750edbda74648c0ae9cc8cb9b2d7af85512bf2e729132c2e0322e776ef0b7657da708cbc1ae2a62f5532519d339fa68f465b30a65ca30d4a1e51
@@ -13,11 +13,24 @@ SHA1 (patch-data_net__4__0_Browsers_Makefile.am) = 0ada5af132816efb41dfbd7ce2ba2
 SHA1 (patch-data_net__4__0_Makefile.am) = 7c0fa175047f01a556f61503b2fcfabdedd2c606
 SHA1 (patch-data_net__4__5_Browsers_Makefile.am) = 80bd57a2ac3fc95adef18acd9cfd7744ca112b01
 SHA1 (patch-data_net__4__5_Makefile.am) = d7591e835bfdd27fa0fba4b669b778924c811be4
+SHA1 (patch-external_bdwgc_CMakeLists.txt) = 33efc37b9260716fca95d9933016c6b2fb55d18e
+SHA1 (patch-external_boringssl_CMakeLists.txt) = f1fb377878bfdc3514108d8abeb334fb28bb3b96
 SHA1 (patch-external_boringssl_crypto_cpu-aarch64-linux.c) = 7c876a1e937e21758199a1842bfc15c205069922
 SHA1 (patch-external_boringssl_include_openssl_thread.h) = a0855fa36e98111961e58338e7c810c5e0568bfb
+SHA1 (patch-external_boringssl_third__party_android-cmake_android.toolchain.cmake) = efe2df8dd238d6c31f8e7d5d1c3820e56506cca1
+SHA1 (patch-external_boringssl_util_android-cmake_android.toolchain.cmake) = 9a97a42364dbc1402c9085b5c1918d254a237362
+SHA1 (patch-external_corefx_src_Native_Unix_CMakeLists.txt) = 21ecf7e947c74d74493ea1b376e49ef9b339a7ec
+SHA1 (patch-external_corefx_src_Native_Windows_CMakeLists.txt) = 5e53ed0dfc5ce29a72fe0764a3edbffefe5df76f
+SHA1 (patch-external_corefx_src_Native_Windows_clrcompression_zlib_CMakeLists.txt) = 059c1e17cc93ceb8f3d4140373dae2be202f8328
+SHA1 (patch-external_corert_src_Native_CMakeLists.txt) = 94dd2d630adc3c4cf5cc8837171231745462af96
 SHA1 (patch-external_corert_src_Native_gc_env_gcenv.structs.h) = 91b37d93c1c3aadcdb383c443142fe28f50ad8e6
+SHA1 (patch-external_llvm-project_libcxx_utils_google-benchmark_CMakeLists.txt) = b479e864b9907cc2bae3a63f1808a179dc819352
+SHA1 (patch-external_llvm-project_openmp_CMakeLists.txt) = 4d760531ead6ff67ae61f7464e1b435daf16cc56
+SHA1 (patch-external_llvm-project_openmp_cmake_DetectTestCompiler_CMakeLists.txt) = 5d2d00e90537cb0ab6ccaa403dc8e54f3b6a6c6a
+SHA1 (patch-external_llvm-project_openmp_runtime_cmake_LibompCheckLinkerFlag.cmake) = 2ae5282fbba399a2c35f43dfab23ff1ceea25f3b
 SHA1 (patch-mcs_class_System_System.Net.NetworkInformation_UnixNetworkInterfaceFactory.cs) = 90cb31154f325c19ae82a9e7dd52b4de0ee7b2d2
 SHA1 (patch-mcs_class_System_System_Platform.cs) = ef773547c0f27738319e1c9d4c8624185456ee0c
+SHA1 (patch-mono_btls_CMakeLists.txt) = 7729551ad083353a54a6cf426632c77508ded1f2
 SHA1 (patch-mono_eglib_giconv.c) = 5c2ca5788b93d371d1aa30f296a447516b622a4e
 SHA1 (patch-mono_metadata_icall.c) = 9c0ec3d4d3263943a7351a76065ef80ce312396a
 SHA1 (patch-mono_metadata_w32mutex-unix.c) = c3d424fe4ae1079c9c664c876a087fb0134f2e22

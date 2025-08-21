@@ -1,0 +1,13 @@
+$NetBSD: patch-external_bdwgc_CMakeLists.txt,v 1.1 2025/08/21 16:36:51 ryoon Exp $
+
+--- external/bdwgc/CMakeLists.txt.orig	2025-08-21 15:41:11.449263967 +0000
++++ external/bdwgc/CMakeLists.txt
+@@ -27,7 +27,7 @@ PROJECT(gc)
+ 
+ INCLUDE(CTest)
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ ADD_DEFINITIONS("-D_CRT_SECURE_NO_DEPRECATE
+                  -DALL_INTERIOR_POINTERS -DNO_EXECUTE_PERMISSION")
