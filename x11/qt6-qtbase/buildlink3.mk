@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2025/04/24 14:16:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2025/08/21 10:06:29 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -22,6 +22,8 @@ BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
 BUILDLINK_FILES.qt6-qtbase+=	qt6/bin/*
 BUILDLINK_FILES.qt6-qtbase+=	qt6/libexec/*
 BUILDLINK_FILES.qt6-qtbase+=	qt6/plugins/*/*/*/*
+# referred to from qt6/lib/cmake/Qt6ExampleIconsPrivate/Qt6ExampleIconsPrivateTargets.cmake
+BUILDLINK_FILES.qt6-qtbase+=	qt6/lib/objects-Release/ExampleIconsPrivate_resources_1/.qt/rcc/qrc_example_icons_init.cpp.o
 
 # \todo Fix duplication with prefix coded in Makefile.common
 QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
