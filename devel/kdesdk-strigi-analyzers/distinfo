@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:15:09 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/08/21 18:33:05 wiz Exp $
 
 BLAKE2s (kdesdk-strigi-analyzers-16.04.0.tar.xz) = c72bf39384eac24756fe70a9a67010dc53bdc64d3e484cd8e632e64be64c15e8
 SHA512 (kdesdk-strigi-analyzers-16.04.0.tar.xz) = e2fe57729c3c2f0f3c2c40ba8839eb06c28919008e8cbab28d35e5cd8da090be8a14e0378865851f94cc2f9805b73785551946469e4d738dfc031b04c07f88cd
 Size (kdesdk-strigi-analyzers-16.04.0.tar.xz) = 18224 bytes
+SHA1 (patch-CMakeLists.txt) = 69e667495fe61e6fff5c287ce141291f0ccd58bc
