@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2025/05/01 21:39:20 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2025/08/21 16:37:56 ryoon Exp $
 
 DISTNAME=	liborcus-0.19.2
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 # python detection completely broken
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-werror
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_DIR.boost-libs}
 
 PKGCONFIG_OVERRIDE+=	liborcus.pc.in
 PKGCONFIG_OVERRIDE+=	liborcus-spreadsheet-model.pc.in
