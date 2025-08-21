@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.bundle,v 1.1 2025/08/21 20:13:19 triaxx Exp $
+Applications/devilutionx.app/Contents/MacOS/devilutionx
+Applications/devilutionx.app/Contents/Resources/AppIcon.icns
+Applications/devilutionx.app/Contents/Resources/CharisSILB.ttf
+Applications/devilutionx.app/Contents/Info.plist
