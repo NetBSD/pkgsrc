@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/10/14 03:39:54 markd Exp $
+$NetBSD: distinfo,v 1.8 2025/08/21 18:29:31 wiz Exp $
 
 BLAKE2s (okteta-0.26.13.tar.xz) = da3c8c2189eef8899a862fa7ea27cbb816172bd55d3c6372680095bc0b6637fb
 SHA512 (okteta-0.26.13.tar.xz) = 1f7d099acda1d39382b9d36fc75e301588a4f026e46a363f0ac15f3025a37c2edd2fac20c8097761469f4259adc20874d90acae5fa7b378f2d88e88521952fd8
 Size (okteta-0.26.13.tar.xz) = 1080884 bytes
+SHA1 (patch-CMakeLists.txt) = 46d1fde99d57464e034c2e6f17b338ba3fc579e8

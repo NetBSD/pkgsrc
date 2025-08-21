@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/21 18:29:31 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-21 18:26:08.975006276 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(Okteta VERSION 0.26.13)
+ 
