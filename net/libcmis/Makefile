@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/04/19 07:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/08/21 16:38:56 ryoon Exp $
 
 DISTNAME=	libcmis-0.6.2
 PKGREVISION=	3
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.1
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-man=no --disable-werror
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_DIR.boost-libs}
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
