@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2025/05/03 10:43:39 leot Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/21 14:07:07 adam Exp $
 #
 # When updating this, make sure that net/mitmproxy still
 # works - usually it also needs to be updated.
 
-DISTNAME=	mitmproxy_rs-0.12.3
+DISTNAME=	mitmproxy_rs-0.12.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
@@ -20,7 +20,7 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 311
 
-BORINGTUN_REV=	e3252d9c4f4c8fc628995330f45369effd4660a1
+BORINGTUN_REV=	2f3c85f5c4a601018c10b464b1ca890d9504bf6e
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	boringtun-${BORINGTUN_REV}.tar.gz
 
