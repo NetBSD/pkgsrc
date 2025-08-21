@@ -1,0 +1,10 @@
+$NetBSD: patch-external_llvm-project_openmp_cmake_DetectTestCompiler_CMakeLists.txt,v 1.1 2025/08/21 16:36:52 ryoon Exp $
+
+--- external/llvm-project/openmp/cmake/DetectTestCompiler/CMakeLists.txt.orig	2025-08-21 15:42:55.934840166 +0000
++++ external/llvm-project/openmp/cmake/DetectTestCompiler/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ project(DetectTestCompiler C CXX)
+ 
+ include(CheckCCompilerFlag)

@@ -1,0 +1,10 @@
+$NetBSD: patch-external_llvm-project_openmp_CMakeLists.txt,v 1.1 2025/08/21 16:36:52 ryoon Exp $
+
+--- external/llvm-project/openmp/CMakeLists.txt.orig	2025-08-21 15:43:29.043588913 +0000
++++ external/llvm-project/openmp/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+ 
+ # Add cmake directory to search for custom cmake functions.
+ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})

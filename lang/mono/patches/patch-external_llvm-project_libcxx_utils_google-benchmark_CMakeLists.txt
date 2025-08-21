@@ -1,0 +1,10 @@
+$NetBSD: patch-external_llvm-project_libcxx_utils_google-benchmark_CMakeLists.txt,v 1.1 2025/08/21 16:36:52 ryoon Exp $
+
+--- external/llvm-project/libcxx/utils/google-benchmark/CMakeLists.txt.orig	2025-08-21 15:42:39.018418344 +0000
++++ external/llvm-project/libcxx/utils/google-benchmark/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.12)
++cmake_minimum_required (VERSION 3.5)
+ project (benchmark)
+ 
+ foreach(p

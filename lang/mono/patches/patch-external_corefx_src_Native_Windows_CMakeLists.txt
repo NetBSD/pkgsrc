@@ -1,0 +1,10 @@
+$NetBSD: patch-external_corefx_src_Native_Windows_CMakeLists.txt,v 1.1 2025/08/21 16:36:51 ryoon Exp $
+
+--- external/corefx/src/Native/Windows/CMakeLists.txt.orig	2025-08-21 15:41:42.257812257 +0000
++++ external/corefx/src/Native/Windows/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ # C Compiler flags
+ SET (CMAKE_C_FLAGS_INIT                     "/W0 /FC")
