@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/03/06 18:56:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/08/21 13:44:17 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1294,6 +1294,9 @@ ${PYSITELIB}/pandas/tests/arrays/sparse/test_unary.pyo
 ${PYSITELIB}/pandas/tests/arrays/string_/__init__.py
 ${PYSITELIB}/pandas/tests/arrays/string_/__init__.pyc
 ${PYSITELIB}/pandas/tests/arrays/string_/__init__.pyo
+${PYSITELIB}/pandas/tests/arrays/string_/test_concat.py
+${PYSITELIB}/pandas/tests/arrays/string_/test_concat.pyc
+${PYSITELIB}/pandas/tests/arrays/string_/test_concat.pyo
 ${PYSITELIB}/pandas/tests/arrays/string_/test_string.py
 ${PYSITELIB}/pandas/tests/arrays/string_/test_string.pyc
 ${PYSITELIB}/pandas/tests/arrays/string_/test_string.pyo
@@ -2623,6 +2626,15 @@ ${PYSITELIB}/pandas/tests/indexes/ranges/test_range.pyo
 ${PYSITELIB}/pandas/tests/indexes/ranges/test_setops.py
 ${PYSITELIB}/pandas/tests/indexes/ranges/test_setops.pyc
 ${PYSITELIB}/pandas/tests/indexes/ranges/test_setops.pyo
+${PYSITELIB}/pandas/tests/indexes/string/__init__.py
+${PYSITELIB}/pandas/tests/indexes/string/__init__.pyc
+${PYSITELIB}/pandas/tests/indexes/string/__init__.pyo
+${PYSITELIB}/pandas/tests/indexes/string/test_astype.py
+${PYSITELIB}/pandas/tests/indexes/string/test_astype.pyc
+${PYSITELIB}/pandas/tests/indexes/string/test_astype.pyo
+${PYSITELIB}/pandas/tests/indexes/string/test_indexing.py
+${PYSITELIB}/pandas/tests/indexes/string/test_indexing.pyc
+${PYSITELIB}/pandas/tests/indexes/string/test_indexing.pyo
 ${PYSITELIB}/pandas/tests/indexes/test_any_index.py
 ${PYSITELIB}/pandas/tests/indexes/test_any_index.pyc
 ${PYSITELIB}/pandas/tests/indexes/test_any_index.pyo

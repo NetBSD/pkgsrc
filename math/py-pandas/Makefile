@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/07/03 19:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/08/21 13:44:17 adam Exp $
 
-DISTNAME=	pandas-2.2.3
+DISTNAME=	pandas-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -23,10 +23,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.34.2:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.17.0:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.2.0:../../devel/py-test-xdist
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
-
 USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 # __has_builtin
 GCC_REQD+=		10
