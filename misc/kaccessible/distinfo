@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:59:07 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/08/21 18:02:15 wiz Exp $
 
 BLAKE2s (kaccessible-16.12.0.tar.xz) = d71f33399fce4fcf1d61a9fa0c8e3f64163bf811766fdba1ad60ae1fa772dfd0
 SHA512 (kaccessible-16.12.0.tar.xz) = 993831500ba455e0d94ef22f3e22eac10da65ca064094c3ceeea44e62c64d207d2a88eb780b7b2c48dfe75c1a1545d73e6013d3aff8e2fb38245bde7a78936ba
 Size (kaccessible-16.12.0.tar.xz) = 20600 bytes
+SHA1 (patch-CMakeLists.txt) = adf5c52870588fc419ddd8d5a1c45152ed0054ea
