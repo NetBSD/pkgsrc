@@ -1,0 +1,10 @@
+$NetBSD: patch-external_corert_src_Native_CMakeLists.txt,v 1.1 2025/08/21 16:36:51 ryoon Exp $
+
+--- external/corert/src/Native/CMakeLists.txt.orig	2025-08-21 15:44:29.199183637 +0000
++++ external/corert/src/Native/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ project(CoreRT)
+ 
+ # Include cmake functions
