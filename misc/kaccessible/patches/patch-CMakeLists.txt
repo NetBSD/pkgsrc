@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/21 18:02:16 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2014-06-26 07:40:52.000000000 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(kaccessible)
+ 
++cmake_minimum_required(VERSION 3.5)
++
+ set(CMAKE_MODULE_PATH "${kaccessible_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+ 
+ find_package(KDE4 REQUIRED)
