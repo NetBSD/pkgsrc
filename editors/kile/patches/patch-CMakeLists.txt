@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/21 18:20:45 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-21 18:19:38.181728886 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(kile)
+ 
+-cmake_minimum_required(VERSION 3.0.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(KILE_VERSION CACHE STRING "Kile's version; can be used to set the internal version of Kile on MacOSX")
+ 
