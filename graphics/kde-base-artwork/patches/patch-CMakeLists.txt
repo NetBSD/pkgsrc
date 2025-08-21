@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/21 18:07:19 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-21 18:06:08.165504562 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,5 @@
+ find_package(KDE4 REQUIRED)
++cmake_minimum_required(VERSION 4.1)
+ include(KDE4Defaults)
+ 
+ add_subdirectory(ksplashx-themes)
