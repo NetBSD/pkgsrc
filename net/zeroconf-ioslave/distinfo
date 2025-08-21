@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:07:15 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/08/21 18:10:52 wiz Exp $
 
 BLAKE2s (zeroconf-ioslave-4.14.3.tar.xz) = c3536b8ce1da9fe2ae0235aa72d5ac99abdeb4cc8e17ee7e61312a5b3884ea8a
 SHA512 (zeroconf-ioslave-4.14.3.tar.xz) = 8889a789ec2830fdb8a7a30ad0eab40a9ea5cc446d70a1c8bdf64cd1ef43ad35642da3bd2ef5b3368370ac1ec8251b3e8e6b6219cd9bd95af28c6005302b4dac
 Size (zeroconf-ioslave-4.14.3.tar.xz) = 25964 bytes
+SHA1 (patch-CMakeLists.txt) = db03363e21b4e03d49e3580095907b364fed45e9
