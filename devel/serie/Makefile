@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/05/02 11:03:36 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/21 07:32:19 pin Exp $
 
 DISTNAME=	serie-0.4.6
+# serie-0.4.7 requires Rust >= 1.87
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lusingander/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
