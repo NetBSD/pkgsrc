@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:05:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/08/21 18:49:06 wiz Exp $
 
 BLAKE2s (libquic-0.0.3.tar.gz) = 9898f85077ce4301d2e34357be21070e86b5169413f6b1090a7c75f493a55896
 SHA512 (libquic-0.0.3.tar.gz) = a04f5285b2448cd763daa9833574e5977e903975dd20980c80020ee4177df6ff6294ee2c1821d97a8ac34e44aae215178f57b52a12826135f5ee4efc8e74643b
 Size (libquic-0.0.3.tar.gz) = 5848330 bytes
+SHA1 (patch-CMakeLists.txt) = 58a283a2b7d4687295d53b1a4be04d29a9258009
 SHA1 (patch-Makefile) = 5cdfd0daf53e61b5d14f6bc1e60c8f03a72da99d
+SHA1 (patch-boringssl_CMakeLists.txt) = 029edf78a957ff5f86215e9ec06754642e9c5c44
 SHA1 (patch-boringssl_crypto_aes_aes__test.cc) = 8e4dd8bc2f00e790675c1c6b12bffaac00d0d981
 SHA1 (patch-crypto__bio__bio_test.cc) = 36d61ff4b424ca29b320b3ac132dc1f0bf468f85
 SHA1 (patch-crypto__bio__internal.h) = 39e070e153db2c3a8ba814e1902f8abc96f9a082
@@ -11,5 +13,6 @@ SHA1 (patch-crypto__bio__socket_helper.c) = 91d0321882a2c843f31f202cc66bee10c2e6
 SHA1 (patch-crypto__lhash__lhash_test.c) = 4183d05f29062bb8e67fe23b1a8795509f049a02
 SHA1 (patch-crypto__mem.c) = c65a57491c2cf98b4c0b0b3309bd20cb70a22852
 SHA1 (patch-include__openssl__thread.h) = f4cc2433a30be7bd476dabdff7d8be186a95ce0d
+SHA1 (patch-protobuf_CMakeLists.txt) = f7637c2dd101b173c7daadea3655ce7cea16e7cd
 SHA1 (patch-src__base__base_paths_posix.cc) = 8fbf7865f16fd89017a33b8c3ae9f5cdccb598a2
 SHA1 (patch-src__build__build_config.h) = b0cb41d7418836b9327c09fb843a2dc3278863a6
