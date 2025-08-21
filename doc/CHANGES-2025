@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5071 2025/08/21 00:25:51 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5072 2025/08/21 07:11:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7377,3 +7377,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-ujson to 5.11.0 [adam 2025-08-20]
 	Updated textproc/py-pdf to 6.0.0 [wiz 2025-08-20]
 	Updated devel/clion-bin to 2025.2 [schmonz 2025-08-21]
+	Updated net/py-zmq to 27.0.2 [adam 2025-08-21]
+	Updated time/py-time-machine to 2.19.0 [adam 2025-08-21]
