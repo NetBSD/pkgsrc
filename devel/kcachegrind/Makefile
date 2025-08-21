@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/04/24 14:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/08/21 18:56:21 wiz Exp $
 
 DISTNAME=	kcachegrind-${KAPPSVER}
 PKGREVISION=	11
@@ -20,7 +20,7 @@ REPLACE_PERL+=	converters/op2calltree
 
 REPLACE_PYTHON+=	converters/hotshot2calltree.in
 
-REPLACE_PHP+= converters/pprof2calltree
+REPLACE_PHP+=	converters/pprof2calltree
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
