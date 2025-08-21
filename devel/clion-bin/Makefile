@@ -1,63 +1,96 @@
-# $NetBSD: Makefile,v 1.8 2023/12/30 01:20:30 zafer Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/21 00:25:45 schmonz Exp $
 
-VERSION=	2021.2
-DISTNAME=	CLion-${VERSION}
-PKGNAME=	clion-bin-${VERSION}
-PKGREVISION=	2
-CATEGORIES=	devel
-MASTER_SITES=	https://download.jetbrains.com/cpp/
+VERSION=		2025.2
+JB_SUFX=		# empty
+.if ${MACHINE_ARCH} == "aarch64"
+JB_SUFX=		-aarch64
+.endif
+DISTNAME=		CLion-${VERSION:S/.0.0//}${JB_SUFX}
+PKGNAME=		clion-bin-${VERSION}
+CATEGORIES=		devel
+MASTER_SITES=		https://download.jetbrains.com/cpp/
 
-MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://www.jetbrains.org/
-COMMENT=	JetBrain\'s C/C++ IDE
-LICENSE=	apache-2.0
+MAINTAINER=		youri@NetBSD.org
+HOMEPAGE=		https://www.jetbrains.com/clion/
+COMMENT=		JetBrains C/C++ IDE
+LICENSE=		apache-2.0
 
-WRKSRC=		${WRKDIR}/clion-${VERSION}
-USE_JAVA=	yes
-USE_JAVA2=	8
+DEPENDS+=		intellij-fsnotifier-[0-9]*:../../sysutils/intellij-fsnotifier
 
-USE_TOOLS+=	pax sed
+WRKSRC=			${WRKDIR}/clion-${VERSION}
+USE_JAVA2=		17
 
-REPLACE_PYTHON+=	bin/printenv.py
-REPLACE_PYTHON+=	bin/restart.py
+USE_TOOLS+=		bash:run pax sed
 
-.include "../../mk/bsd.prefs.mk"
+REPLACE_BASH+=		plugins/clion-radler/tools/profiler/dotTrace.sh \
+			plugins/terminal/shell-integrations/bash/bash-integration.bash
 
-INSTALLATION_DIRS=	clion-bin-${VERSION} \
+CHECK_INTERPRETER_SKIP=	${PKGBASE}/plugins/tailwindcss/server/tailwindcss-language-server \
+			${PKGBASE}/plugins/vuejs/vue-language-server/bin/vue-language-server.js \
+			${PKGBASE}/plugins/nodeJS/js/ts-file-loader/node_modules/tsx/dist/cli.mjs \
+			${PKGBASE}/plugins/nodeJS/js/ts-file-loader/node_modules/esbuild/bin/esbuild \
+			${PKGBASE}/plugins/javascript-plugin/helpers/package-version-range-matcher/node_modules/semver/bin/semver.js
+
+CHECK_SHLIBS_SKIP=	*
+CHECK_RELRO_SUPPORTED=	no
+CHECK_PIE_SUPPORTED=	no
+
+INSTALLATION_DIRS=	${PKGBASE} \
 			share/applications
-
-NO_BUILD=	yes
 
 SUBST_CLASSES+=		jdk
 SUBST_STAGE.jdk=	pre-install
-SUBST_MESSAGE.jdk=	Adding JVM options
 SUBST_FILES.jdk=	bin/clion.sh
 SUBST_VARS.jdk=		PKG_JAVA_HOME
 
-REPLACE_BASH+=	bin/gdb/linux/bin/gcore
+SUBST_CLASSES+=		vmoptions
+SUBST_STAGE.vmoptions=	pre-configure
+SUBST_FILES.vmoptions=	bin/clion64.vmoptions
+SUBST_SED.vmoptions=	-e 's|^-Xmx.*|-Xmx4096m|'
+SUBST_SED.vmoptions+=	-e 's|^-Xms.*|-Xms4096m|'
+
+PLIST_VARS+=		aarch64 x86_64
+.if ${MACHINE_ARCH} == "aarch64"
+PLIST.aarch64=		yes
+.else
+PLIST.x86_64=		yes
+.endif
+
+pre-configure:
+	cd ${WRKSRC} &&	\
+	${RM} -rf bin/*.orig \
+		bin/clang \
+		bin/fsnotifier \
+		bin/cmake \
+		bin/gdb \
+		plugins/python-ce \
+		plugins/performanceTesting \
+		plugins/cwm-plugin \
+		jbr/lib \
+		jbr/bin \
+		bin/lldb
+
+post-configure:
+	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGBASE}|g" \
+	    < ${FILESDIR}/clion.desktop \
+	    > ${WRKDIR}/clion.desktop
+
+do-build:
+	${ECHO} "-XX:-UseCompressedClassPointers" \
+	    >> ${WRKSRC}/bin/clion64.vmoptions
+	${ECHO} "-XX:-UseCompressedOops" \
+	    >> ${WRKSRC}/bin/clion64.vmoptions
+	${ECHO} "idea.filewatcher.executable.path=${PREFIX}/bin/fsnotifier" \
+	    >> ${WRKSRC}/bin/idea.properties
+	# https://youtrack.jetbrains.com/issue/IDEA-323750
+	${ECHO} "idea.ui.icons.svg.disk.cache=false" \
+	    >> ${WRKSRC}/bin/idea.properties
 
 do-install:
-	cd ${WRKSRC} &&	\
-	${RM} -r \
-	bin/clang \
-	bin/clion.sh.orig \
-	bin/fsnotifier \
-	bin/cmake \
-	bin/gdb \
-	bin/libdbm64.so \
-	lib/pty4j-native/ \
-	plugins/python-ce \
-	plugins/performanceTesting \
-	plugins/cwm-plugin \
-	jbr/lib \
-	jbr/bin \
-	bin/lldb && \
-	${ECHO} "idea.filewatcher.disabled=true" >> bin/idea.properties && \
-	${SED} -e "s|@@IDEA_HOME@@|${PREFIX}/${PKGNAME}|g" \
-	${FILESDIR}/clion.desktop > \
-	${DESTDIR}${PREFIX}/share/applications/clion.desktop && \
-	pax -rw -pm * ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKDIR}/clion.desktop \
+	    ${DESTDIR}${PREFIX}/share/applications/
+	cd ${WRKSRC} &&	pax -rw -pm -s ',.*\.orig,,' \
+	    * ${DESTDIR}${PREFIX}/${PKGBASE}
 
-.include "../../lang/python/application.mk"
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

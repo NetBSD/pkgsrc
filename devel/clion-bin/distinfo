@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/08/21 00:25:45 schmonz Exp $
 
-BLAKE2s (CLion-2021.2.tar.gz) = c135b1743fcffc5bef0cf5f7ed81e234d1ab47e421ae592e387890a4f5cda8e9
-SHA512 (CLion-2021.2.tar.gz) = 9742c29f57ecf2ca4b69fa323241d12bb7660cd64b875d953cbf720bc54daaaf7dab14c487ef113368c8ad7cbb6733d34a4740bb0997d9ceb8ca702f1e30da32
-Size (CLion-2021.2.tar.gz) = 750721029 bytes
-SHA1 (patch-bin_clion.sh) = 3001ec036c37466ae93f14209508235fa1fd2fb1
+BLAKE2s (CLion-2025.2.tar.gz) = fa27196d9240b0b31b05e24c65d22fb17ca97feb85a40ef1f4472fb9e7ab4e29
+SHA512 (CLion-2025.2.tar.gz) = 0c89691e6ae92eab44b148496232aadeb73c07e4c16335a392ef7f60a6300565809f1ebe618cc12de0514293027914bb8ea10e9df17f24e739fd33271cb8380c
+Size (CLion-2025.2.tar.gz) = 2142936981 bytes
+BLAKE2s (CLion-2025.2-aarch64.tar.gz) = 56b3801a06bcaf61aade381a5b7a74e43a7a23aab33881651dcd63ad2b60817a
+SHA512 (CLion-2025.2-aarch64.tar.gz) = 73dd2cc97170b836aa6815b4496fa3bdd0019455b009664abc2dae79541aa5e61adbe99854ee6e2e221e3486a720abc904a0bd9e5c32743b3c8d8ac8a1c77c9d
+Size (CLion-2025.2-aarch64.tar.gz) = 2139634891 bytes
+SHA1 (patch-bin_clion.sh) = 1f5cf57d541987c85fde3d61048d6cd79b0670d1
