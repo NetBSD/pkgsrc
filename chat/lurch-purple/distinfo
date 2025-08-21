@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2022/04/06 19:53:52 gdt Exp $
+$NetBSD: distinfo,v 1.6 2025/08/21 18:09:07 wiz Exp $
 
 BLAKE2s (lurch-0.7.0-src.tar.gz) = 2ceea74cd5e6360c91a014be081b894c265b58b59a0e42a46f2d14736572b8fe
 SHA512 (lurch-0.7.0-src.tar.gz) = ae45963313d2e145ac801fe1bb99f596dae69c8b44fdb71cdfcd5a8a81614960ba2010bc00fa84300019947f23965fc1dc6868f2bb0c045e83fb4f1dac690fa7
 Size (lurch-0.7.0-src.tar.gz) = 401110 bytes
 SHA1 (patch-Makefile) = ee55fe2fce1c75610b5f884dc397765bf6596af0
+SHA1 (patch-lib_axc_lib_libsignal-protocol-c_CMakeLists.txt) = 0ee0703f356a78d0b2b9093a9ced61ecab5878b8
