@@ -1,9 +1,23 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2022/05/12 12:37:54 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/21 18:17:18 wiz Exp $
 
 Build fix from arch linux package.
 
 --- CMakeLists.txt.orig	2017-08-30 11:48:37.000000000 +0000
 +++ CMakeLists.txt
+@@ -4,12 +4,12 @@
+ # Redistribution and use is allowed according to the terms of the BSD license.
+ # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
+ 
+ project(MediaWiki)
+ 
+ message(STATUS "----------------------------------------------------------------------------------")
+ message(STATUS "Starting CMake configuration for: ${PROJECT_NAME}")
+ 
+-set(CMAKE_MIN_VERSION   "2.8.12")
++set(CMAKE_MIN_VERSION   "3.5")
+ set(ECM_MIN_VERSION     "1.5.0")
+ set(KF5_VERSION         "5.5.0")
+ set(REQUIRED_QT_VERSION "5.2.0")
 @@ -46,6 +46,8 @@ ecm_setup_version(${LIBMEDIAWIKI_LIBVERS
  find_package(Qt5 ${REQUIRED_QT_VERSION} NO_MODULE REQUIRED Core Network)
  find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
