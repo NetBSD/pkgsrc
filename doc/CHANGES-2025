@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5070 2025/08/20 20:06:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5071 2025/08/21 00:25:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7376,3 +7376,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-pywavelets to 1.9.0 [adam 2025-08-20]
 	Updated textproc/py-ujson to 5.11.0 [adam 2025-08-20]
 	Updated textproc/py-pdf to 6.0.0 [wiz 2025-08-20]
+	Updated devel/clion-bin to 2025.2 [schmonz 2025-08-21]
