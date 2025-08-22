@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/23 20:54:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/08/22 05:35:03 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -91,6 +91,10 @@ ${PYSITELIB}/mdit_py_plugins/myst_role/index.py
 ${PYSITELIB}/mdit_py_plugins/myst_role/index.pyc
 ${PYSITELIB}/mdit_py_plugins/myst_role/index.pyo
 ${PYSITELIB}/mdit_py_plugins/py.typed
+${PYSITELIB}/mdit_py_plugins/subscript/__init__.py
+${PYSITELIB}/mdit_py_plugins/subscript/__init__.pyc
+${PYSITELIB}/mdit_py_plugins/subscript/__init__.pyo
+${PYSITELIB}/mdit_py_plugins/subscript/port.yaml
 ${PYSITELIB}/mdit_py_plugins/substitution.py
 ${PYSITELIB}/mdit_py_plugins/substitution.pyc
 ${PYSITELIB}/mdit_py_plugins/substitution.pyo
