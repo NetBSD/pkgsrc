@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5087 2025/08/22 09:19:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5088 2025/08/22 10:04:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7402,3 +7402,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/xentools420 version 20250821 [bouyer 2025-08-22]
 	Updated math/py-xarray to 2025.8.0 [adam 2025-08-22]
 	Updated textproc/py-xml2rfc to 3.30.0 [adam 2025-08-22]
+	Updated devel/py-scard to 2.3.0 [adam 2025-08-22]
+	Updated devel/py-hypothesis to 6.138.2 [adam 2025-08-22]
