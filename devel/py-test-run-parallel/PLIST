@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/22 11:26:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/22 07:14:14 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,9 +8,18 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_run_parallel/__init__.py
 ${PYSITELIB}/pytest_run_parallel/__init__.pyc
 ${PYSITELIB}/pytest_run_parallel/__init__.pyo
+${PYSITELIB}/pytest_run_parallel/cpu_detection.py
+${PYSITELIB}/pytest_run_parallel/cpu_detection.pyc
+${PYSITELIB}/pytest_run_parallel/cpu_detection.pyo
 ${PYSITELIB}/pytest_run_parallel/plugin.py
 ${PYSITELIB}/pytest_run_parallel/plugin.pyc
 ${PYSITELIB}/pytest_run_parallel/plugin.pyo
+${PYSITELIB}/pytest_run_parallel/thread_comparator.py
+${PYSITELIB}/pytest_run_parallel/thread_comparator.pyc
+${PYSITELIB}/pytest_run_parallel/thread_comparator.pyo
+${PYSITELIB}/pytest_run_parallel/thread_unsafe_detection.py
+${PYSITELIB}/pytest_run_parallel/thread_unsafe_detection.pyc
+${PYSITELIB}/pytest_run_parallel/thread_unsafe_detection.pyo
 ${PYSITELIB}/pytest_run_parallel/utils.py
 ${PYSITELIB}/pytest_run_parallel/utils.pyc
 ${PYSITELIB}/pytest_run_parallel/utils.pyo
