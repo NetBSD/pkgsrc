@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.514 2025/08/22 09:49:55 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.515 2025/08/22 10:18:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27352,7 +27352,7 @@ firefox128<128.14	multiple-vulnerabilities	https://www.mozilla.org/en-US/securit
 firefox140<140.2	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-67/
 thunderbird<142		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-70/
 chromium<139.0.7258.138	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-9132
-cmake-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9301
+cmake<4.1.0nb1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9301
 intellij-ce-bin<2025.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-57727
 intellij-ce-bin<2025.2	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-57728
 intellij-ce-bin<2025.2	unspecified				https://nvd.nist.gov/vuln/detail/CVE-2025-57729
