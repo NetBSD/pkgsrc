@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/08 16:10:45 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/22 01:49:47 nia Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 
 BUILD_TARGET=	server
 
