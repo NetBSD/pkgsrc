@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/06/11 13:13:35 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/08/22 07:14:14 adam Exp $
 
-BLAKE2s (pytest_run_parallel-0.4.4.tar.gz) = d81c568f755e2a0e9f6f6af12ed62aa966067a97b4634f96b687363d4061789d
-SHA512 (pytest_run_parallel-0.4.4.tar.gz) = a3b97386802a8e17d98b3b7c1f21cd9b441cc1117cd82ed61a808e62bfbb6f0f3d9e57fa0ff6890a992606525a0f83cc6ad008bc942891dcbd96f2991717adc9
-Size (pytest_run_parallel-0.4.4.tar.gz) = 42541 bytes
+BLAKE2s (pytest_run_parallel-0.6.1.tar.gz) = bb0e2f26ee07b5616c1b8be69f2935ccdb12fd3d12f42802c4532db2b91b6667
+SHA512 (pytest_run_parallel-0.6.1.tar.gz) = a6d2a8cbbbe6d5f91f96e26deb4317355c0a9b55739186d2ece55c22e112822ebae192ef05e1d7afa67729ec131680c04e58397b979dc24884e727b3ba024318
+Size (pytest_run_parallel-0.6.1.tar.gz) = 45481 bytes
