@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5092 2025/08/22 13:04:16 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5093 2025/08/22 13:05:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7408,3 +7408,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-asyncio to 1.1.0 [wiz 2025-08-22]
 	Updated time/clock-rs to 0.1.216 [pin 2025-08-22]
 	Updated editors/focuswriter to 1.8.13 [pin 2025-08-22]
+	Updated net/gping to 1.20.1 [pin 2025-08-22]
