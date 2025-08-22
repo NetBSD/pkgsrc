@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5098 2025/08/22 14:41:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5099 2025/08/22 15:25:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7414,3 +7414,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/zola to 0.21.0 [pin 2025-08-22]
 	Updated lang/joker to 1.5.6 [ktnb 2025-08-22]
 	Updated inputmethod/ibus-table to 1.17.5 [wiz 2025-08-22]
+	Updated devel/opa to 1.7.1 [leot 2025-08-22]
