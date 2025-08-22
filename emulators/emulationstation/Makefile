@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/08/20 11:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/08/22 05:31:50 adam Exp $
 
-DISTNAME=	emulationstation-2.9.4
-PKGREVISION=	27
+DISTNAME=	emulationstation-2.11.2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RetroPie/}
 GITHUB_PROJECT=	EmulationStation
@@ -12,17 +11,14 @@ HOMEPAGE=	https://github.com/RetroPie/EmulationStation
 COMMENT=	Themeable multi-system emulator frontend
 LICENSE=	mit
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES+=	c c++
-
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-WRKSRC=		${WRKDIR}/EmulationStation-${PKGVERSION_NOREV}
-
 INSTALLATION_DIRS=	bin share/doc/emulationstation
+INSTALLATION_DIRS+=	share/emulationstation/resources/help
 
 SUBST_CLASSES+=		fceu
 SUBST_STAGE.fceu=	pre-configure
@@ -59,11 +55,15 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/GAMELISTS.md ${WRKSRC}/README.md \
-	    ${WRKSRC}/SYSTEMS.md ${WRKSRC}/THEMES.md \
-	    ${DESTDIR}${PREFIX}/share/doc/emulationstation
+		${WRKSRC}/SYSTEMS.md ${WRKSRC}/THEMES.md \
+		${DESTDIR}${PREFIX}/share/doc/emulationstation
+	cd ${WRKSRC} && ${FIND} resources -type f -print | while read f; do \
+		${INSTALL_DATA} "$${f}" ${DESTDIR}${PREFIX}/share/emulationstation/"$${f}"; \
+	done
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
