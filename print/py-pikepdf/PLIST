@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 05:25:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/22 07:19:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,6 +15,9 @@ ${PYSITELIB}/pikepdf/_core.so
 ${PYSITELIB}/pikepdf/_cpphelpers.py
 ${PYSITELIB}/pikepdf/_cpphelpers.pyc
 ${PYSITELIB}/pikepdf/_cpphelpers.pyo
+${PYSITELIB}/pikepdf/_data.py
+${PYSITELIB}/pikepdf/_data.pyc
+${PYSITELIB}/pikepdf/_data.pyo
 ${PYSITELIB}/pikepdf/_exceptions.py
 ${PYSITELIB}/pikepdf/_exceptions.pyc
 ${PYSITELIB}/pikepdf/_exceptions.pyo
@@ -39,6 +42,9 @@ ${PYSITELIB}/pikepdf/codec.pyo
 ${PYSITELIB}/pikepdf/exceptions.py
 ${PYSITELIB}/pikepdf/exceptions.pyc
 ${PYSITELIB}/pikepdf/exceptions.pyo
+${PYSITELIB}/pikepdf/form.py
+${PYSITELIB}/pikepdf/form.pyc
+${PYSITELIB}/pikepdf/form.pyo
 ${PYSITELIB}/pikepdf/jbig2.py
 ${PYSITELIB}/pikepdf/jbig2.pyc
 ${PYSITELIB}/pikepdf/jbig2.pyo
