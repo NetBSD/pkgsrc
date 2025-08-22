@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5096 2025/08/22 13:08:14 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5097 2025/08/22 13:18:18 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7412,3 +7412,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/kvantum to 1.1.5 [pin 2025-08-22]
 	Updated devel/lazygit to 0.54.2 [pin 2025-08-22]
 	Updated www/zola to 0.21.0 [pin 2025-08-22]
+	Updated lang/joker to 1.5.6 [ktnb 2025-08-22]
