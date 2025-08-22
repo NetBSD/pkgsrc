@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5102 2025/08/22 16:42:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5103 2025/08/22 16:43:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7418,3 +7418,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/conftest to 0.62.0 [leot 2025-08-22]
 	Updated devel/regal to 0.35.1 [leot 2025-08-22]
 	Added multimedia/ffmpeg8 version 8.0 [wiz 2025-08-22]
+	Added multimedia/ffplay8 version 8.0 [wiz 2025-08-22]
