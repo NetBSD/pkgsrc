@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2025/04/17 21:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2025/08/22 13:50:13 wiz Exp $
 
 DISTNAME=	glusterfs-10.4
 PKGREVISION=	11
@@ -145,6 +145,11 @@ pre-build:
 #LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
+
+.PHONY: clean-opt
+post-install: clean-opt
+clean-opt:
+	${FIND} ${DESTDIR}${PREFIX} -name *.opt-2.pyc -delete || ${TRUE}
 
 .if ${OPSYS} == "Linux"
 post-install:
