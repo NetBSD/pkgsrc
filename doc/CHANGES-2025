@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5084 2025/08/22 07:32:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5085 2025/08/22 08:16:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7397,3 +7397,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nss to 3.115.1 [wiz 2025-08-22]
 	Updated devel/py-jaraco.functools to 4.3.0 [adam 2025-08-22]
 	Updated security/py-paramiko to 4.0.0 [adam 2025-08-22]
+	Updated print/poppler to 25.08.0 [adam 2025-08-22]
