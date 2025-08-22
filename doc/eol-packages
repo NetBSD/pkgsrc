@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.16 2025/05/21 15:09:32 taca Exp $
+# $NetBSD: eol-packages,v 1.17 2025/08/22 10:34:33 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1188,3 +1188,8 @@ Package: ruby (3.1)
 eol date: March 26, 2025
 URL: https://www.ruby-lang.org/en/downloads/branches/
 Description: Update to Ruby 3.2 or later.
+
+Package: Xen (4.15)
+eol date: April 2024
+URL: https://wiki.xenproject.org/wiki/Xen_Project_Release_Features
+Description: Security support for 4.15 ended April 2024. Update to xen 4.18 or newer.
