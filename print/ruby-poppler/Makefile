@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.48 2025/08/15 15:06:52 tsutsui Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/22 08:15:54 adam Exp $
 
-DISTNAME=		poppler-${VERSION}
-COMMENT=		Ruby binding of poppler-glib
-CATEGORIES=		print
+DISTNAME=	poppler-${VERSION}
+COMMENT=	Ruby binding of poppler-glib
+CATEGORIES=	print
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
-CONFLICTS+=		ruby-gnome2-poppler-[0-9]*
-SUPERSEDES+=		ruby-gnome2-poppler-[0-9]*
+CONFLICTS+=	ruby-gnome2-poppler-[0-9]*
+SUPERSEDES+=	ruby-gnome2-poppler-[0-9]*
 
-DEPENDS+=		${RUBY_PKGPREFIX}-gio2>=${VERSION}:../../devel/ruby-gio2
-DEPENDS+=		${RUBY_PKGPREFIX}-cairo-gobject>=${VERSION}:../../graphics/ruby-cairo-gobject
+DEPENDS+=	${RUBY_PKGPREFIX}-gio2>=${VERSION}:../../devel/ruby-gio2
+DEPENDS+=	${RUBY_PKGPREFIX}-cairo-gobject>=${VERSION}:../../graphics/ruby-cairo-gobject
 
 .include "../../devel/ruby-gio2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
