@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.311 2025/07/13 08:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.312 2025/08/22 08:15:53 adam Exp $
 
 # Needs update to 6.9.0
 DISTNAME=	calibre-5.44.0
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	misc
 MASTER_SITES=	https://download.calibre-ebook.com/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
