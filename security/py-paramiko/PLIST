@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/04/14 05:17:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/08/22 07:27:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,9 +7,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
-${PYSITELIB}/paramiko/_version.py
-${PYSITELIB}/paramiko/_version.pyc
-${PYSITELIB}/paramiko/_version.pyo
 ${PYSITELIB}/paramiko/_winapi.py
 ${PYSITELIB}/paramiko/_winapi.pyc
 ${PYSITELIB}/paramiko/_winapi.pyo
@@ -43,9 +40,6 @@ ${PYSITELIB}/paramiko/compress.pyo
 ${PYSITELIB}/paramiko/config.py
 ${PYSITELIB}/paramiko/config.pyc
 ${PYSITELIB}/paramiko/config.pyo
-${PYSITELIB}/paramiko/dsskey.py
-${PYSITELIB}/paramiko/dsskey.pyc
-${PYSITELIB}/paramiko/dsskey.pyo
 ${PYSITELIB}/paramiko/ecdsakey.py
 ${PYSITELIB}/paramiko/ecdsakey.pyc
 ${PYSITELIB}/paramiko/ecdsakey.pyo
