@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2021/04/18 12:31:26 bouyer Exp $
+$NetBSD: MESSAGE,v 1.2 2025/08/22 09:05:24 bouyer Exp $
 
 Please note that the xm command has been removed.
 You have to switch to the xl command, which is now functional on NetBSD.
@@ -8,4 +8,6 @@ Also note that the rc.d scripts have been updated in this version.
 If you don't use PKG_RCD_SCRIPTS=YES then it is very important for
 you to copy the new rc.d scripts to /etc/rc.d.
 
+Note that this package is unmaintained and will be removed after
+the pkgsrc-2025Q3 branch, please consider switching to xen 4.18 or 4.20
 ===========================================================================
