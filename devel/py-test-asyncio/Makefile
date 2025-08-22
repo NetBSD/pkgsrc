@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/06/13 08:59:40 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/08/22 10:30:00 wiz Exp $
 
-DISTNAME=	pytest_asyncio-1.0.0
+DISTNAME=	pytest_asyncio-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-asyncio/}
@@ -17,6 +17,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.7.1:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none
+
+# test status as of 1.1.0 after 'make install'
+# 168 passed
+
+# https://github.com/pytest-dev/pytest-asyncio/issues/1194
+pre-configure:
+	${MV} ${WRKSRC}/dependencies ${WRKSRC}/not-dependencies
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
