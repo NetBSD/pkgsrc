@@ -1,4 +1,4 @@
-$NetBSD: patch-build__bundled.sh,v 1.1 2025/08/22 14:31:49 wiz Exp $
+$NetBSD: patch-build__bundled.sh,v 1.1 2025/08/22 17:29:00 wiz Exp $
 
 Fix build with cmake 4.
 
