@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2023/04/25 13:51:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.102 2025/08/22 14:48:13 wiz Exp $
 
 DISTNAME=	mpich-3.4.3
 CATEGORIES=	parallel
@@ -56,6 +56,10 @@ TEST_TARGET=	check
 # Needed for <ISO_Fortran_binding.h>
 USE_PKGSRC_GCC=		yes
 GCC_REQD+=		10
+# TODO: false positive in library dependency resolution like:
+# ERROR: lib/libmpicxx.so.12.1.12: /usr/pkg/gcc10/lib/./libstdc++.so.7: gcc10-10.5.0nb4 is not a runtime dependency
+CHECK_SHLIBS_SKIP+=	lib/libmpicxx.so*
+CHECK_SHLIBS_SKIP+=	lib/libmpifort.so*
 .endif
 
 # Re-enable when at version 2.x.
