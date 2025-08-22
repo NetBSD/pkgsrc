@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.512 2025/08/22 09:19:44 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.513 2025/08/22 09:37:46 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27346,3 +27346,8 @@ aide<0.19.2		improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE
 aide>=0.13<0.19.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-54409
 nginx-devel>=0.7.22<1.29.1	sensitive-information-exposure	https://nvd.nist.gov/vuln/detail/CVE-2025-53859
 nginx>=0.7.22<1.28.0nb5	sensitive-information-exposure	https://nvd.nist.gov/vuln/detail/CVE-2025-53859
+firefox<142		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-64/
+firefox115<115.27	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-65/
+firefox128<128.14	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-66/
+firefox140<140.2	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-67/
+thunderbird<142		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-70/
