@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5095 2025/08/22 13:07:13 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5096 2025/08/22 13:08:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7411,3 +7411,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/gping to 1.20.1 [pin 2025-08-22]
 	Updated graphics/kvantum to 1.1.5 [pin 2025-08-22]
 	Updated devel/lazygit to 0.54.2 [pin 2025-08-22]
+	Updated www/zola to 0.21.0 [pin 2025-08-22]
