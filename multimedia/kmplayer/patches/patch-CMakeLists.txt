@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.4 2025/08/22 14:00:30 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2016-09-24 15:29:58.000000000 +0000
++++ CMakeLists.txt
+@@ -1,8 +1,6 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ project(kmplayer)
+ 
+-cmake_policy(VERSION 2.6)
+-
+ SET(KMPLAYER_MAJOR_VERSION "0")
+ SET(KMPLAYER_MINOR_VERSION "12")
+ SET(KMPLAYER_PATCH_VERSION "0b")

@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 11:01:06 nia Exp $
+$NetBSD: distinfo,v 1.30 2025/08/22 14:00:30 wiz Exp $
 
 BLAKE2s (kmplayer-0.12.0b.tar.bz2) = 570b67128484b078701ddde32e0b67f4e8e681e4ae3f99d75d1bdfba7603e23a
 SHA512 (kmplayer-0.12.0b.tar.bz2) = d34c496d0c24c6d5c1bb675b83fac60da5c9672e4076aed72bac2e9b333e88d031076e7e386ec7b61ae8ece88870f6187c61f483f425aa78edd1e443c7f2e882
 Size (kmplayer-0.12.0b.tar.bz2) = 599496 bytes
+SHA1 (patch-CMakeLists.txt) = a801ee4cf1ce82be4d6a7bc57c01b14dd2cc38c2
 SHA1 (patch-src_CMakeLists.txt) = 407d76078b00e172dc0f33bab7530ab7e6df6d8e
 SHA1 (patch-src_kmplayer.desktop) = 7750eecc3925890b7ce50e4f01f960ce13057e54
 SHA1 (patch-src_kmplayer__part.h) = 229debbc8db20a4bf1e6a896b778ab37a7ebe54b
