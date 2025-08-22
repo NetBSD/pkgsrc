@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2025/05/30 10:58:08 pin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2025/08/22 13:03:51 pin Exp $
 
 Make iconv test work in NetBSD 9.
 
@@ -8,8 +8,8 @@ Make iconv test work in NetBSD 9.
  cmake_minimum_required(VERSION 3.16)
  
  # Configure project
--project(focuswriter VERSION 1.8.12 LANGUAGES CXX)
-+project(focuswriter VERSION 1.8.12 LANGUAGES C CXX)
+-project(focuswriter VERSION 1.8.13 LANGUAGES CXX)
++project(focuswriter VERSION 1.8.13 LANGUAGES C CXX)
  
  set(project_copyright "2008-2025 Graeme Gott")
  
