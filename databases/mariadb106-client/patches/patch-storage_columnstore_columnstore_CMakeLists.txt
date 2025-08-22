@@ -1,0 +1,13 @@
+$NetBSD: patch-storage_columnstore_columnstore_CMakeLists.txt,v 1.1 2025/08/22 13:07:55 wiz Exp $
+
+Fix build with cmake 4.
+
+--- storage/columnstore/columnstore/CMakeLists.txt.orig	2025-08-22 11:42:34.587200734 +0000
++++ storage/columnstore/columnstore/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ PROJECT(Columnstore)
+ 
