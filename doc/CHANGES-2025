@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5100 2025/08/22 15:55:06 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5101 2025/08/22 16:12:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7416,3 +7416,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated inputmethod/ibus-table to 1.17.5 [wiz 2025-08-22]
 	Updated devel/opa to 1.7.1 [leot 2025-08-22]
 	Updated devel/conftest to 0.62.0 [leot 2025-08-22]
+	Updated devel/regal to 0.35.1 [leot 2025-08-22]
