@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.507 2025/08/22 08:59:49 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.508 2025/08/22 09:01:13 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22537,7 +22537,7 @@ patch-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45261
 py{27,36,37,38,39,310}-celery<5.2.2	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-23727
 py{27,36,37,38,39,310}-nltk<3.6.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43854
 py{27,36,37,38,39,310}-ujson-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-45958
-qt5-qtsvg-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-45930
+qt5-qtsvg<5.12.12	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-45930
 qt6-qtsvg<6.2.2		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-45930
 ruby26-base<2.6.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-41817
 ruby27-base<2.7.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-41817
