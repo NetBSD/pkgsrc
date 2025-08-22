@@ -1,4 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/22 14:27:24 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/22 14:30:23 wiz Exp $
+
+Fix build with cmake 4.
 
 --- CMakeLists.txt.orig	2014-06-29 07:30:23.000000000 +0000
 +++ CMakeLists.txt

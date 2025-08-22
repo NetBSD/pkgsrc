@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2025/08/22 14:27:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/08/22 14:30:23 wiz Exp $
 
 BLAKE2s (kactivities-4.13.3.tar.xz) = b386d38960a9d51bce1e92e4970f1c5b8f5204f4df20006733c757960fe10f00
 SHA512 (kactivities-4.13.3.tar.xz) = 1d248ae6045a7ae8d54ce5355100cd76be954c2a57be3abaab968d8ff2693d09aa9b1d0242266de4eedf6005bedfde38df69a84a9a5a0b16606fe958159b31bc
 Size (kactivities-4.13.3.tar.xz) = 87476 bytes
-SHA1 (patch-CMakeLists.txt) = 971c6b6db88fa0e7d85d1fe5befb71e2fe2bc604
+SHA1 (patch-CMakeLists.txt) = 4cd770edf3f0452dd690d6fa02d9ac67e5ee1ef4
