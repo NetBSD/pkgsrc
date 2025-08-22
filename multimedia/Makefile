@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.352 2025/08/06 09:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.353 2025/08/22 16:42:38 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -32,6 +32,7 @@ SUBDIR+=	ffmpeg4
 SUBDIR+=	ffmpeg5
 SUBDIR+=	ffmpeg6
 SUBDIR+=	ffmpeg7
+SUBDIR+=	ffmpeg8
 SUBDIR+=	ffmpegthumbnailer
 SUBDIR+=	ffmpegthumbs
 SUBDIR+=	ffplay2
@@ -40,6 +41,7 @@ SUBDIR+=	ffplay4
 SUBDIR+=	ffplay5
 SUBDIR+=	ffplay6
 SUBDIR+=	ffplay7
+SUBDIR+=	ffplay8
 SUBDIR+=	flashplayer
 SUBDIR+=	flvstreamer
 SUBDIR+=	frei0r
