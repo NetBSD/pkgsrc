@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.515 2025/08/22 10:18:03 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.516 2025/08/22 10:30:52 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27361,3 +27361,30 @@ jetty<9.4.58		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-5115
 libsixel-[0-9]*		stack-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-9300
 libsndfile-[0-9]*	buffer-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-52194
 libssh<0.11.2		integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-4877
+postgresql-server>=13<13.22	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
+postgresql-server>=14<14.19	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
+postgresql-server>=15<15.14	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
+postgresql-server>=16<16.10	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
+postgresql-server>=17<17.6	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
+postgresql-server>=13<13.22	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8714
+postgresql-server>=14<14.19	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8714
+postgresql-server>=15<15.14	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8714
+postgresql-server>=16<16.10	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8714
+postgresql-server>=17<17.6	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8714
+postgresql-server>=13<13.22	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
+postgresql-server>=14<14.19	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
+postgresql-server>=15<15.14	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
+postgresql-server>=16<16.10	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
+postgresql-server>=17<17.6	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
+proftpd<1.3.3d			backdoor		https://nvd.nist.gov/vuln/detail/CVE-2010-20103
+py{27,39,310,311,312,313}-future-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-50817
+py{27,39,310,311,312,313}-pdf<6.0.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-55197
+retroarch<1.21.0			out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2025-9136
+ruby{31,32,33,34}-rails71<7.1.5.2	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-55193
+ruby{31,32,33,34}-rails72<7.2.2.2	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-55193
+ruby{31,32,33,34}-rails80<8.0.2.1	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-55193
+tcpreplay<4.5.2		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-9019
+tcpreplay<4.5.2		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-9157
+tiff-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8961
+tiff-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-9165
+yarn-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9308
