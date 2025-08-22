@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/08/05 17:03:34 pin Exp $
+$NetBSD: distinfo,v 1.12 2025/08/22 13:06:55 pin Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1998,9 +1998,9 @@ Size (honnef.co_go_tools_@v_v0.0.1-2020.1.3.mod) = 300 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = 5910300fed26fe3a7d3d75555521429fe0c14f72daf11aac2e489f8ab8e2fd8b
 SHA512 (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = d814675e448688f6a506397bedb262fb2583c913ec1f8ca9ffc11206bdcd7e1f4ee3c561aee366eb2cdaede8c522a6f58f116236f3033bc7e91ec139bdd140f9
 Size (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = 300 bytes
-BLAKE2s (lazygit-0.54.0.tar.gz) = 227b469893ac69df2df583602b7f7ca409b9006f72438843f0fbe97ce5942893
-SHA512 (lazygit-0.54.0.tar.gz) = 0a2416ad5593fef07c546180d9ce046d2a0a571cb7d587c6c202ac277852d66c425b13146142d1ca609d13d0249917a9ad112826c32359f483c9dc766fb46119
-Size (lazygit-0.54.0.tar.gz) = 5362017 bytes
+BLAKE2s (lazygit-0.54.2.tar.gz) = 36a5cb89b0f2cd8bcd4e27c50934297e2fcb81e8b2081a7a60ac7700c575c44a
+SHA512 (lazygit-0.54.2.tar.gz) = 8e05507f99e5fb32481e217454e0bb6b31157dcc0f5f1cb24c43161acaeb5427fdb5e83c9e3dfc19d4d023488b6cfa06d211b52f5f06add976bda901bbfe93a4
+Size (lazygit-0.54.2.tar.gz) = 5363291 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
