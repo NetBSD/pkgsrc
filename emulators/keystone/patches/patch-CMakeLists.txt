@@ -1,9 +1,18 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/19 10:15:19 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/22 14:36:05 wiz Exp $
 
 Fix build with cmake 4.
 
---- CMakeLists.txt.orig	2025-08-19 10:14:17.969503233 +0000
+--- CMakeLists.txt.orig	2020-06-21 12:03:54.000000000 +0000
 +++ CMakeLists.txt
+@@ -1,7 +1,7 @@
+ # Keystone Assembler Engine (www.keystone-engine.org)
+ # By Nguyen Anh Quynh, 2016
+ 
+-cmake_minimum_required(VERSION 2.8.7)
++cmake_minimum_required(VERSION 3.5)
+ project(keystone)
+ 
+ set(KEYSTONE_VERSION_MAJOR 0)
 @@ -18,15 +18,6 @@ if (POLICY CMP0022)
    cmake_policy(SET CMP0022 NEW) # automatic when 2.8.12 is required
  endif()
