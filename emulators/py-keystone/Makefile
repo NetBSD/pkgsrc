@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/22 18:00:00 wiz Exp $
 
 PKGREVISION= 1
 .include "../../emulators/keystone/Makefile.common"
@@ -15,6 +15,8 @@ PYSETUPSUBDIR=	bindings/python
 EGG_NAME=	keystone_engine-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+
+USE_TOOLS+=	gmake
 
 .include "../../emulators/keystone/buildlink3.mk"
 .include "../../lang/python/egg.mk"
