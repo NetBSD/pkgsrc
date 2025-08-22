@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/22 13:51:49 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-22 13:50:54.546292882 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(OxygenFont)
+ set(PROJECT_VERSION "5.4.3")
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ find_package(ECM 1.2.0 REQUIRED NO_MODULE)
+ 
