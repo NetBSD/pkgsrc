@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.511 2025/08/22 09:07:13 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.512 2025/08/22 09:19:44 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16450,7 +16450,7 @@ libarchive>=3.1.0<3.4.0	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-20
 libarchive>=3.3.0<3.4.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2018-1000879
 libarchive>=3.2.0<3.4.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-1000880
 mbedtls1-[0-9]*		eol				https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-nasm-[0-9]*		buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-1000886
+nasm<2.15.04		buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-1000886
 knc<1.11.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2017-9732
 elasticsearch>=6.4.0<6.4.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-17244
 elasticsearch>=6.5.0<6.5.2	xml-external-entity			https://nvd.nist.gov/vuln/detail/CVE-2018-17247
@@ -16502,8 +16502,8 @@ qt5-qtsvg<5.11.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19
 wireshark<2.4.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12086
 wireshark>=2.6.0<2.6.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-12086
 py{27,34,35,36,37,38}-mezzanine-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-16632
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20535
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20538
+nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20535
+nasm<2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20538
 libcaca<0.99.20	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2018-20544
 libcaca<0.99.20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20545
 libcaca<0.99.20	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-20546
@@ -16661,7 +16661,7 @@ zoneminder-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-699
 zoneminder-[0-9]*	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-6992
 firefox<65.0	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2019-01/
 firefox60<60.5	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2019-02/
-nasm-[0-9]*	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2019-7147
+nasm<2.15.04	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2019-7147
 thunderbird<60.4	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2018-31/
 thunderbird<60.5	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2019-03/
 libvncserver<0.9.12	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-20748
@@ -18794,7 +18794,7 @@ mysql-server>=5.7<5.7.29	multiple-vulnerabilities	https://www.oracle.com/securit
 mysql-server>=8.0<8.0.19	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2020.html#AppendixMSQL
 openjdk8<1.8.232		multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2020.html#AppendixJAVA
 openjdk11<1.11.0.6		multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpujan2020.html#AppendixJAVA
-nasm-[0-9]*		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-20352
+nasm<2.15.04		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-20352
 nginx<1.16.1nb2		http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2019-20372
 nginx>=1.17<1.17.7	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2019-20372
 ntp-[0-9]*		information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2014-5209
@@ -19848,8 +19848,8 @@ tor-browser<9.5.4	multiple-vulnerabilities	https://www.mozilla.org/en-US/securit
 firefox78<78.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2020-38/
 mozjs78<78.2		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2020-38/
 bison<3.7.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-24240
-nasm-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-24241
-nasm-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-24242
+nasm<2.15.04	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-24241
+nasm<2.15.04	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-24242
 squid<4.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-24606
 wolfssl<4.5.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-24613
 vault<1.2.5	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-16251
@@ -24060,7 +24060,7 @@ advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/C
 advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35015
 advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35014
 nasm-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-41420
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-46457
+nasm<2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-46457
 nasm-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-46456
 tcpreplay-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-37049
 tcpreplay-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-37048
@@ -25448,11 +25448,11 @@ nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38668
 nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38667
 nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38665
 nasm<2.15.05	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29654
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21687
+nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21687
 nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21686
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21685
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21528
-nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18780
+nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21685
+nasm<2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21528
+nasm<2.15.04	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18780
 puppet<7.11.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1894
 openssh>=8.9<9.3	configuration-misinterpretation	https://nvd.nist.gov/vuln/detail/CVE-2023-28531
 wolfssl<5.6.2	privacy-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-3724
