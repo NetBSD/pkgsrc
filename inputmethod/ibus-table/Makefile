@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2025/07/15 21:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/22 14:41:31 wiz Exp $
 
-DISTNAME=	ibus-table-1.9.2
-PKGREVISION=	7
+DISTNAME=	ibus-table-1.17.5
 CATEGORIES=	inputmethod
-MASTER_SITES=	https://github.com/kaio/ibus-table/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=kaio/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ibus/ibus/wiki
@@ -24,9 +24,8 @@ SUBST_FILES.prefix=	engine/tabcreatedb.py
 SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
 REPLACE_PYTHON+=		engine/tabcreatedb.py
-# Needs 'imp' removed in 3.12
-PYTHON_VERSIONS_ACCEPTED=	311
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
