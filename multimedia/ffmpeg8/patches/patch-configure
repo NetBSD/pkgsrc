@@ -1,0 +1,70 @@
+$NetBSD: patch-configure,v 1.1 2025/08/22 16:42:06 wiz Exp $
+
+Sun audio support.
+
+Enable PIC on NetBSD, even on i386, to avoid text relocations.
+
+Fix install_name_dir on Darwin.
+
+Do not use 'rsync'.
+
+--- configure.orig	2025-08-22 09:24:23.000000000 +0000
++++ configure
+@@ -2322,6 +2322,7 @@ HEADERS_LIST="
+     sys_resource_h
+     sys_select_h
+     sys_soundcard_h
++    sys_audioio_h
+     sys_time_h
+     sys_un_h
+     sys_videoio_h
+@@ -2472,7 +2473,6 @@ TOOLCHAIN_FEATURES="
+     inline_asm_labels
+     inline_asm_nonlocal_labels
+     pragma_deprecated
+-    rsync_contimeout
+     symver_asm_label
+     symver_gnu_asm
+     vfp_args
+@@ -3825,6 +3825,8 @@ libdc1394_indev_deps="libdc1394"
+ openal_indev_deps="openal"
+ oss_indev_deps_any="sys_soundcard_h"
+ oss_outdev_deps_any="sys_soundcard_h"
++sunau_indev_deps_any="sys_audioio_h"
++sunau_outdev_deps_any="sys_audioio_h"
+ pulse_indev_deps="libpulse"
+ pulse_outdev_deps="libpulse"
+ sndio_indev_deps="sndio"
+@@ -5871,6 +5873,7 @@ case $target_os in
+     netbsd)
+         disable symver
+         enable section_data_rel_ro
++        enable pic
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -5897,7 +5900,7 @@ case $target_os in
+         ;;
+     darwin)
+         enabled ppc && add_asflags -force_cpusubtype_ALL
+-        install_name_dir_default='$(SHLIBDIR)'
++        install_name_dir_default=$shlibdir
+         SHFLAGS='-dynamiclib -Wl,-single_module -Wl,-install_name,$(INSTALL_NAME_DIR)/$(SLIBNAME_WITH_MAJOR),-current_version,$(LIBVERSION),-compatibility_version,$(LIBMAJOR)'
+         enabled x86_32 && append SHFLAGS -Wl,-read_only_relocs,suppress
+         strip="${strip} -x"
+@@ -6777,6 +6780,7 @@ check_headers malloc.h
+ check_headers mftransform.h
+ check_headers net/udplite.h
+ check_headers poll.h
++check_headers sys/audioio.h
+ check_headers pthread_np.h
+ check_headers sys/param.h
+ check_headers sys/resource.h
+@@ -7345,7 +7349,6 @@ enabled makeinfo \
+ disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
+ perl -v            > /dev/null 2>&1 && enable perl      || disable perl
+ pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
+-rsync --help 2> /dev/null | grep -q 'contimeout=' && enable rsync_contimeout || disable rsync_contimeout
+ xmllint --version  > /dev/null 2>&1 && enable xmllint   || disable xmllint
+ 
+ check_headers linux/fb.h
