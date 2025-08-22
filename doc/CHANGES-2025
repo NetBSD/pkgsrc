@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5083 2025/08/22 07:21:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5084 2025/08/22 07:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7395,3 +7395,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-run-parallel to 0.6.1 [adam 2025-08-22]
 	Updated print/py-pikepdf to 9.10.2 [adam 2025-08-22]
 	Updated devel/nss to 3.115.1 [wiz 2025-08-22]
+	Updated devel/py-jaraco.functools to 4.3.0 [adam 2025-08-22]
+	Updated security/py-paramiko to 4.0.0 [adam 2025-08-22]
