@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2025/08/19 10:15:19 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/08/22 14:36:05 wiz Exp $
 
 BLAKE2s (keystone-0.9.2.tar.gz) = 9a32cd25b940e1a1f6bb5e6f1292cdcd7a8500b668ebf201ac5ebcafbd9c84a8
 SHA512 (keystone-0.9.2.tar.gz) = 5d4dd30410410bc7848e75a2e31e8ecef6241ad25e21963aa7a07bbea21d95b75e235c80573129014102684c9647710ace3c0776a8401844d7e4b45cab7bd04b
 Size (keystone-0.9.2.tar.gz) = 4433222 bytes
-SHA1 (patch-CMakeLists.txt) = 0bd1626922dce88625f357e3f17365708b6ebc39
-SHA1 (patch-llvm_CMakeLists.txt) = 0eb3728658f03927e4a5834b930b3bf19218b85d
+SHA1 (patch-CMakeLists.txt) = 08fec45dc91ef12ffa3f60a57dcdb8874bd7aa73
+SHA1 (patch-llvm_CMakeLists.txt) = 7390d0527a379f3133f3fe8ef1a35cb0f1c7064d
