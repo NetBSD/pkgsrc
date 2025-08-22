@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/08/21 20:13:19 triaxx Exp $
+# $NetBSD: Makefile,v 1.36 2025/08/22 10:10:46 wiz Exp $
 
 DISTNAME=	devilutionx-1.2.1
 PKGREVISION=	14
@@ -19,9 +19,6 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	unique_ptr
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_CONFIGURE_ARGS+=	-DASAN=OFF -DUBSAN=OFF
 CMAKE_CONFIGURE_ARGS+=	-DDEBUG=OFF
@@ -30,10 +27,6 @@ CMAKE_CONFIGURE_ARGS+=	-DDEVILUTIONX_SYSTEM_LIBSODIUM=ON
 CMAKE_CONFIGURE_ARGS+=	-DDEVILUTIONX_STATIC_LIBSODIUM=OFF
 
 LDFLAGS.SunOS+=	-lsocket
-
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share/applications
-INSTALLATION_DIRS+=	share/icons/hicolor/512x512/apps
 
 pre-patch:
 	dos2unix ${WRKSRC}/CMakeLists.txt
@@ -57,11 +50,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/devilutionx.app/Contents/Resources/CharisSILB.ttf \
 		${DESTDIR}${MACOS_BUNDLE_PREFIX}/devilutionx.app/Contents/Resources/CharisSILB.ttf
 .else
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	share/icons/hicolor/512x512/apps
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/devilutionx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/devilutionx ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${FILESDIR}/devilutionx.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/Packaging/resources/icon.png \
