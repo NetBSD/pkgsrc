@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/22 14:27:24 wiz Exp $
+
+--- CMakeLists.txt.orig	2014-06-29 07:30:23.000000000 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,9 @@
++cmake_minimum_required(VERSION 4.1)
++
+ project (KACTIVITIES)
+ 
++cmake_policy(SET CMP0153 OLD)
++
+ find_package (KDE4 REQUIRED)
+ 
+ include (GenerateExportHeader)
