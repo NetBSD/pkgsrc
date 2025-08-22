@@ -1,10 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2023/07/07 07:27:07 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2025/08/22 13:27:13 wiz Exp $
 
 Avoid PLIST complexity on Haiku and Darwin.
 
---- CMakeLists.txt.orig	2023-01-11 03:51:20.000000000 +0000
+--- CMakeLists.txt.orig	2025-03-09 03:09:26.000000000 +0000
 +++ CMakeLists.txt
-@@ -919,7 +919,7 @@ if(NOT SKIP_LIBRARY)
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.1)
++cmake_minimum_required(VERSION 3.5)
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/src/platform/cmake/")
+ 
+ if(POLICY CMP0025)
+@@ -927,7 +927,7 @@ if(NOT SKIP_LIBRARY)
  	if(BUILD_SHARED)
  		install(TARGETS ${BINARY_NAME} LIBRARY DESTINATION ${LIBDIR} COMPONENT ${BINARY_NAME}-dev NAMELINK_ONLY)
  	endif()
