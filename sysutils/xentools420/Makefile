@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/08/22 09:00:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/22 13:09:40 bouyer Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 #PKGREVISION=        1
@@ -244,6 +244,7 @@ BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
