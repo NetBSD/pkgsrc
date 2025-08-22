@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5090 2025/08/22 10:30:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5091 2025/08/22 13:03:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7406,3 +7406,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hypothesis to 6.138.2 [adam 2025-08-22]
 	Updated devel/cmake to 4.1.0nb1 [wiz 2025-08-22]
 	Updated devel/py-test-asyncio to 1.1.0 [wiz 2025-08-22]
+	Updated time/clock-rs to 0.1.216 [pin 2025-08-22]
