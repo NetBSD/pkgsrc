@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/07/17 08:20:10 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/08/22 09:04:09 adam Exp $
 
-DISTNAME=	xarray-2025.7.1
+DISTNAME=	xarray-2025.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray/}
@@ -12,9 +12,9 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.26:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-packaging>=24.1:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pandas>=2.2:../../math/py-pandas
 TEST_DEPENDS+=	${PYPKGPREFIX}-cftime>0:../../time/py-cftime
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-env>0:../../devel/py-test-env
