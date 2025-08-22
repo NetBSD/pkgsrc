@@ -1,0 +1,12 @@
+$NetBSD: patch-BLACS_INSTALL_CMakeLists.txt,v 1.1 2025/08/22 17:55:01 wiz Exp $
+
+Fix build with cmake 4.
+
+--- BLACS/INSTALL/CMakeLists.txt.orig	2025-08-22 17:53:29.561789809 +0000
++++ BLACS/INSTALL/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ project(INSTALL C Fortran)
+ 
+ add_executable(xintface Fintface.f Cintface.c)
