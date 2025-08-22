@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/09/08 12:34:38 nia Exp $
+# $NetBSD: options.mk,v 1.3 2025/08/22 05:31:50 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emulationstation
 PKG_OPTIONS_REQUIRED_GROUPS=	graphics
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.graphics=	opengl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(MACHINE_ARCH:M*arm*)
+.if ${MACHINE_ARCH:M*arm*}
 PKG_OPTIONS_GROUP.graphics+=	rpi
 PKG_SUGGESTED_OPTIONS+=		rpi
 .else
