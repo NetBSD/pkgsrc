@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.509 2025/08/22 09:02:23 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.510 2025/08/22 09:04:48 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17044,7 +17044,7 @@ ghostscript-agpl<9.27	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-
 dropbear<2013.59	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-2659
 p5-Email-Address-List<0.06	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-18898
 webmin-[0-9]*		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-19191
-qt5-qtbase-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19872
+qt5-qtbase<5.11.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19872
 haproxy<1.8.17	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2018-20615
 libsndfile<1.0.28nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-3832
 qemu<4.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-6501
@@ -18878,7 +18878,7 @@ p5-Module-Metadata<1.000015	arbitrary-code-execution	https://nvd.nist.gov/vuln/d
 # Disputed: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=726578
 #pwgen-[0-9]*			weak-password-generator		https://nvd.nist.gov/vuln/detail/CVE-2013-4441
 py{26,27,33,34}-tornado<3.2.2	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2014-9720
-qt5-qtbase-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2015-9541
+qt5-qtbase<5.15.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2015-9541
 librsvg<2.40.21		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2019-20446
 librsvg>=2.41<2.46.2	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2019-20446
 qemu<5.0.0	heap-overflow				https://nvd.nist.gov/vuln/detail/CVE-2020-1711
@@ -21713,7 +21713,7 @@ php{56,72,73,74,80}-typo3<7.6.53	cross-site-scripting	https://nvd.nist.gov/vuln/
 py{27,36,37,38,39}-notebook<6.4.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-32798
 qt5-qtbase<5.14.1	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-24741
 qt5-qtbase<5.14.0	code-execution		https://nvd.nist.gov/vuln/detail/CVE-2020-24742
-qt5-qtbase-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-38593
+qt5-qtbase<5.15.6	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2021-38593
 trojita-[0-9]*	man-in-the-middle-attack	https://nvd.nist.gov/vuln/detail/CVE-2021-38372
 tor<0.4.6.7		denial-of-service		https://lists.torproject.org/pipermail/tor-announce/2021-August/000228.html
 ffmpeg4<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-38291
@@ -24755,7 +24755,7 @@ rtf2html-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43148
 rabbitmq<3.8.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31008
 rabbitmq>=3.9.0<3.9.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31008
 rabbitmq>=3.10.0<3.10.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31008
-qt5-qtbase-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-3481
+qt5-qtbase<5.15.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-3481
 qemu<7.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-14394
 qemu<7.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0216
 qemu-[0-9]*	insecure-lock-files	https://nvd.nist.gov/vuln/detail/CVE-2021-3735
