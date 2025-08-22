@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/07/17 17:09:57 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/22 13:02:43 pin Exp $
 
-DISTNAME=	clock-rs-0.1.215
+DISTNAME=	clock-rs-0.1.216
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Oughie/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
