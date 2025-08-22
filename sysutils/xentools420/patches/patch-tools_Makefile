@@ -1,0 +1,38 @@
+$NetBSD: patch-tools_Makefile,v 1.1 2025/08/22 09:00:13 bouyer Exp $
+
+--- tools/Makefile.orig	2025-08-04 15:22:34.000000000 +0200
++++ tools/Makefile	2025-08-21 16:34:11.296454784 +0200
+@@ -35,7 +35,6 @@
+ SUBDIRS-y += 9pfsd
+ SUBDIRS-$(CONFIG_X86) += xenpaging
+ SUBDIRS-$(CONFIG_X86) += debugger
+-SUBDIRS-$(CONFIG_TESTS) += tests
+ 
+ SUBDIRS-y += python
+ SUBDIRS-$(CONFIG_PYGRUB) += pygrub
+@@ -231,7 +230,7 @@
+ 	else \
+ 		virtfs='' ; \
+ 	fi ; \
+-	PKG_CONFIG_PATH=$(XEN_ROOT)/tools/pkg-config$${PKG_CONFIG_PATH:+:$${PKG_CONFIG_PATH}} \
++	PKG_CONFIG_PATH=$(XEN_ROOT)/tools/pkg-config$${PKG_CONFIG_PATH:+:$${PKG_CONFIG_PATH}} CFLAGS= \
+ 	$$source/configure --enable-xen --target-list=i386-softmmu \
+ 		$(QEMU_XEN_ENABLE_DEBUG) \
+ 		$$enable_trace_backend \
+@@ -247,6 +246,7 @@
+ 		--bindir=$(LIBEXEC_BIN) \
+ 		--datadir=$(SHAREDIR)/qemu-xen \
+ 		--localstatedir=$(localstatedir) \
++		--disable-opengl \
+ 		--docdir=$(LIBEXEC)/share/doc \
+ 		--mandir=$(LIBEXEC)/share/man \
+ 		--libexecdir=$(LIBEXEC)/libexec \
+@@ -259,7 +259,7 @@
+ 		--cpu=$(IOEMU_CPU_ARCH) \
+ 		$(IOEMU_CONFIGURE_CROSS) \
+ 		$$virtfs; \
+-	$(MAKE) all
++	CFLAGS= $(MAKE) all
+ 
+ subdir-install-qemu-xen-dir: subdir-all-qemu-xen-dir
+ 	cd qemu-xen-build; \
