@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/22 14:20:10 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-22 14:05:39.738886649 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(choqok)
+ 
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set (QT_MIN_VERSION "5.9.0")
+ 
