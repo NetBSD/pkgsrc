@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/07/01 05:56:42 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/08/22 07:24:55 adam Exp $
 
-DISTNAME=	jaraco_functools-4.2.1
+DISTNAME=	jaraco_functools-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.functools/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
+TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
 
 USE_LANGUAGES=	# none
 
