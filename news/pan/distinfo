@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.52 2025/05/19 19:43:44 rhialto Exp $
+$NetBSD: distinfo,v 1.53 2025/08/23 16:52:22 rhialto Exp $
 
-BLAKE2s (pan-v0.162.tar.bz2) = f3f1b8519427bb3608cc08bddb592b842318354a3e19a076379683277d85af79
-SHA512 (pan-v0.162.tar.bz2) = 57a8ec6d98f6c0b6dc7b52939e449da7d06b271396c6e7de0d57c34bac478662ab2ee92f0200dfe87afcf379b9f24842e9cacbdc35a47e10fde8f83aeddab4f8
-Size (pan-v0.162.tar.bz2) = 2047305 bytes
+BLAKE2s (pan-v0.164.tar.bz2) = 7b41d6d34dd6080cb8b334e2d94e9f700b45fd574cc8be249ce7b42b9b0d1005
+SHA512 (pan-v0.164.tar.bz2) = b56435072595a55934b7b801b512e993e37f8745129f9f21cc0b15ffad46e2de4105513bc955b482bfbe04e56716bd1279b4c6a23e6f10db25538563bf8a809d
+Size (pan-v0.164.tar.bz2) = 2051642 bytes
 SHA1 (patch-pan_general_text-match.cc) = d719a6d5a59714f228cfd208627d2d6a70da07ff
 SHA1 (patch-pan_general_text-match.h) = 77dae6ba00c3b58b4353f60d90756a409b5699e2
