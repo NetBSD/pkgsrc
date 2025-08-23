@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5108 2025/08/23 16:52:35 rhialto Exp $
+$NetBSD: CHANGES-2025,v 1.5109 2025/08/23 20:28:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7427,3 +7427,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-lxml to 6.0.1 [adam 2025-08-23]
 	Updated www/php-contao-manager to 1.10.5 [taca 2025-08-23]
 	Updated news/pan to 0.164 [rhialto 2025-08-23]
+	Updated math/qcalc to 0.15.3 [pin 2025-08-23]
