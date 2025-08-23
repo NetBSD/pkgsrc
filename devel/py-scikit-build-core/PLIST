@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/06/02 15:59:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/23 08:02:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -13,9 +13,6 @@ ${PYSITELIB}/scikit_build_core/__main__.pyo
 ${PYSITELIB}/scikit_build_core/_compat/__init__.py
 ${PYSITELIB}/scikit_build_core/_compat/__init__.pyc
 ${PYSITELIB}/scikit_build_core/_compat/__init__.pyo
-${PYSITELIB}/scikit_build_core/_compat/argparse.py
-${PYSITELIB}/scikit_build_core/_compat/argparse.pyc
-${PYSITELIB}/scikit_build_core/_compat/argparse.pyo
 ${PYSITELIB}/scikit_build_core/_compat/builtins.py
 ${PYSITELIB}/scikit_build_core/_compat/builtins.pyc
 ${PYSITELIB}/scikit_build_core/_compat/builtins.pyo
