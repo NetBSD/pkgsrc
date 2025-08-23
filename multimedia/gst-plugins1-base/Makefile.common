@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.50 2024/08/20 13:58:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.51 2025/08/23 12:45:41 adam Exp $
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
 # used by audio/gst-plugins1-libvisual/Makefile
 # used by audio/gst-plugins1-opus/Makefile
 # used by audio/gst-plugins1-vorbis/Makefile
 # used by devel/gst-plugins1-pango/Makefile
+# used by graphics/gst-plugins1-gl/Makefile
 # used by multimedia/gst-plugins1-ogg/Makefile
 # used by multimedia/gst-plugins1-theora/Makefile
 # used by x11/gst-plugins1-x11/Makefile
@@ -16,7 +17,6 @@ MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-plugins-base/
 EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	c c++
-
 USE_TOOLS+=	pkg-config
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
@@ -104,8 +104,7 @@ MESON_ARGS+=	-D${i}=disabled
 GST_EXT_BASEDIR?=	ext
 GST_PLUGIN_DIRS?=	${GST_PLUGINS}
 
-pre-configure: fix-subdirs
-
+.PHONY: fix-subdirs
 fix-subdirs:
 	${AWK} -f ${.CURDIR}/../../multimedia/gst-plugins1-base/files/only-build-extensions.awk \
 	    -v basedir=${GST_EXT_BASEDIR} ${WRKSRC}/meson.build > ${WRKSRC}/meson.build.new
@@ -114,20 +113,24 @@ fix-subdirs:
 	# libraries which -base itself builds...
 .  for ext in ${GST_PLUGIN_DIRS}
 	${CAT} ${.CURDIR}/../../multimedia/gst-plugins1-base/files/base-deps.meson \
-	    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build > \
-		    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build.new
+		${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build > \
+		${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build.new
 	${MV} ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build.new \
-	    ${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build
+		${WRKSRC}/${GST_EXT_BASEDIR}/${ext}/meson.build
 .  endfor
 	# ... this is a bit nasty compared to BUILD_DIRS...
+	# This is a hack to correctly build 'gl' extension.
+	${ECHO} "subdir('gl')" > ${WRKSRC}/gst-libs/gst/meson.build
+
+pre-configure: fix-subdirs
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/pkgconfig/gstreamer-plugins-base-1.0.pc
 .endif
 
 .include "../../devel/meson/build.mk"
-.include "../../lang/python/tool.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.20.0
 .include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"

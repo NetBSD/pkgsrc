@@ -1,0 +1,15 @@
+$NetBSD: patch-gst-libs_gst_gl_meson.build,v 1.4 2025/08/23 12:45:41 adam Exp $
+
+To build stand-alone gl.
+
+--- gst-libs/gst/gl/meson.build.orig	2025-08-23 09:55:31.084095801 +0000
++++ gst-libs/gst/gl/meson.build
+@@ -1140,7 +1140,7 @@ if build_gstgl
+   library_def = {'lib': gstgl}
+   pkg_name = 'gstreamer-gl-1.0'
+   pkgconfig.generate(gstgl,
+-    libraries : [gstvideo, gst_base_dep, gst_dep],
++    libraries : [gst_base_dep, gst_dep],
+     variables : pkgconfig_variables + pkgconfig_gl_variables,
+     uninstalled_variables : pkgconfig_gl_variables,
+     subdirs : pkgconfig_subdirs,
