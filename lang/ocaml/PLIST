@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2022/05/24 18:25:38 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.58 2025/08/23 15:07:54 wiz Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
@@ -924,7 +924,7 @@ ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cma
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamloptcomp.cmxa
 ${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamltoplevel.a
 lib/ocaml/compiler-libs/ocamltoplevel.cma
-${PLIST.ocaml-opt}${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamltoplevel.cmxa
+${PLIST.ocaml-opt}lib/ocaml/compiler-libs/ocamltoplevel.cmxa
 lib/ocaml/compiler-libs/opcodes.cmi
 lib/ocaml/compiler-libs/opcodes.cmt
 lib/ocaml/compiler-libs/opcodes.cmti
