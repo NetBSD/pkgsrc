@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5106 2025/08/23 12:48:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5107 2025/08/23 15:56:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7425,3 +7425,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/digikam-gmic-qt to 3.6.0.20250805 [wiz 2025-08-23]
 	Added graphics/gst-plugins1-gl version 1.26.5 [adam 2025-08-23]
 	Updated textproc/py-lxml to 6.0.1 [adam 2025-08-23]
+	Updated www/php-contao-manager to 1.10.5 [taca 2025-08-23]
