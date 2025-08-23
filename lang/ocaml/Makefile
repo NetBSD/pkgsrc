@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.148 2023/04/09 07:28:27 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2025/08/23 15:04:29 wiz Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
