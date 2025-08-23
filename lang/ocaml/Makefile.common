@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2025/03/04 09:37:38 nia Exp $
+# $NetBSD: Makefile.common,v 1.69 2025/08/23 15:04:29 wiz Exp $
 
 # not used by anything else these days
 
@@ -24,15 +24,12 @@ MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
 MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
 MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
 
-#CONFIGURE_ENV+=	BDB_LIBS=${BDB_LINK:Q}
-#CONFIGURE_ENV+=	BDB_BUILTIN=${USE_BUILTIN.${BDB_TYPE}:Q}
 #CONFIGURE_ENV+=	LDFLAGS=${LDFLAGS:Q}
 #CONFIGURE_ARGS+=	-prefix ${PREFIX}
 #CONFIGURE_ARGS+=	-with-pthread
 #CONFIGURE_ARGS+=	-host ${MACHINE_GNU_PLATFORM:Q}
 #CONFIGURE_ARGS+=	-mandir ${PREFIX}/lib/ocaml/${PKGMANDIR}
 #CONFIGURE_ARGS+=	--without-x
-#CPPFLAGS+=		-DDB_DBM_HSEARCH
 
 #DISTINFO_FILE=	${.CURDIR}/../../lang/ocaml/distinfo
 #PATCHDIR=	${.CURDIR}/../../lang/ocaml/patches
@@ -52,13 +49,6 @@ INSTALL_UNSTRIPPED=	yes
 #CONFIGURE_ENV+=	AS="as -arch ${MACHINE_ARCH}"
 #.else
 #CONFIGURE_ENV+=	CC="${CC} ${CFLAGS}"
-#.endif
-
-.include "../../mk/bdb.buildlink3.mk"
-
-#BDB_LINK=	${BDB_LIBS}
-#.if empty(BDBBASE:M/usr)
-#BDB_LINK+=	-L${BDBBASE}/lib ${COMPILER_RPATH_FLAG}${BDBBASE}/lib
 #.endif
 
 #post-extract: cp-gnu-config
