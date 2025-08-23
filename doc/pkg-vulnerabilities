@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.518 2025/08/23 13:15:38 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.519 2025/08/23 18:19:22 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27389,3 +27389,4 @@ tiff-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8961
 tiff-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-9165
 yarn-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9308
 xenkernel415-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+ufoai<2.3.1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2009-10006
