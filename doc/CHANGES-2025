@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5109 2025/08/23 20:28:02 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5110 2025/08/23 20:29:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7428,3 +7428,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-contao-manager to 1.10.5 [taca 2025-08-23]
 	Updated news/pan to 0.164 [rhialto 2025-08-23]
 	Updated math/qcalc to 0.15.3 [pin 2025-08-23]
+	Updated devel/mise to 2025.8.20 [pin 2025-08-23]
