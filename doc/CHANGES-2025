@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5103 2025/08/22 16:43:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5104 2025/08/23 08:02:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7419,3 +7419,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/regal to 0.35.1 [leot 2025-08-22]
 	Added multimedia/ffmpeg8 version 8.0 [wiz 2025-08-22]
 	Added multimedia/ffplay8 version 8.0 [wiz 2025-08-22]
+	Updated net/yt-dlp to 2025.8.22 [adam 2025-08-23]
+	Updated devel/py-pybind11 to 3.0.1 [adam 2025-08-23]
+	Updated devel/py-scikit-build-core to 0.11.6 [adam 2025-08-23]
