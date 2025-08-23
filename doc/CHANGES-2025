@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5105 2025/08/23 12:29:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5106 2025/08/23 12:48:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7423,3 +7423,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pybind11 to 3.0.1 [adam 2025-08-23]
 	Updated devel/py-scikit-build-core to 0.11.6 [adam 2025-08-23]
 	Updated graphics/digikam-gmic-qt to 3.6.0.20250805 [wiz 2025-08-23]
+	Added graphics/gst-plugins1-gl version 1.26.5 [adam 2025-08-23]
+	Updated textproc/py-lxml to 6.0.1 [adam 2025-08-23]
