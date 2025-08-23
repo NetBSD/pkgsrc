@@ -1,4 +1,8 @@
-!/subdir([a-zA-Z0-9_-]*)/ {
+!/subdir\('[a-zA-Z0-9_-]*'\)/ {
+	print
+}
+
+/subdir\('gst-libs'\)/ {
 	print
 }
 
