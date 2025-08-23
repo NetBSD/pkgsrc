@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2025/08/10 10:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2025/08/23 07:20:03 wiz Exp $
 
 PKGREVISION= 1
 .include "Makefile.common"
@@ -12,6 +12,8 @@ PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
 
 .include "options.mk"
 
