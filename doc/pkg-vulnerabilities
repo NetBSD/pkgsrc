@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.517 2025/08/22 10:35:49 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.518 2025/08/23 13:15:38 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17927,10 +17927,10 @@ ImageMagick<7.0.8.43	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019
 ImageMagick6<6.9.10.43	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15140
 ImageMagick<7.0.8.43	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15141
 ImageMagick6<6.9.10.43	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15141
-djvulibre-lib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15142
-djvulibre-lib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15143
-djvulibre-lib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15144
-djvulibre-lib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15145
+djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15142
+djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15143
+djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15144
+djvulibre-lib<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-15145
 adplug<2.3.3		double-free		https://nvd.nist.gov/vuln/detail/CVE-2019-15151
 ruby{22,23,24,25,26}-rest-client>=1.6.10<1.6.14  remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-15224
 webmin<1.930				remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2019-15231
@@ -18340,7 +18340,7 @@ xlockmore-[0-9]*		unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2006-
 xlockmore<5.24			unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2006-0062
 openttd<1.1.5		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2012-0049
 tahoe-lafs<1.9.1	unspecified			https://nvd.nist.gov/vuln/detail/CVE-2012-0051
-djvulibre-lib-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-18804
+djvulibre-lib<3.5.28	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-18804
 viewvc-[0-9]*	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2007-5743
 clamav<0.91.2	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2007-6745
 gri<2.12.18	insecure-temporary-files	https://nvd.nist.gov/vuln/detail/CVE-2008-7291
@@ -21335,11 +21335,11 @@ thunderbird<78.11	multiple-vulnerabilities		https://www.mozilla.org/en-US/securi
 # rejected
 #ImageMagick-[0-9]*	memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2021-34183
 ampache<4.4.3		code-injection			https://nvd.nist.gov/vuln/detail/CVE-2021-32644
-djvulibre-lib-[0-9]*	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-32490
-djvulibre-lib-[0-9]*	integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-32491
-djvulibre-lib-[0-9]*	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2021-32492
-djvulibre-lib-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-32493
-djvulibre-lib-[0-9]*	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-3500
+djvulibre-lib<3.5.29	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-32490
+djvulibre-lib<3.5.29	integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-32491
+djvulibre-lib<3.5.29	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2021-32492
+djvulibre-lib<3.5.29	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-32493
+djvulibre-lib<3.5.29	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-3500
 jetty<9.4.41		improper-session-handling	https://nvd.nist.gov/vuln/detail/CVE-2021-34428
 moodle-[0-9]*		arbitrary-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-21809
 opengrok<1.6.9		unspecified			https://nvd.nist.gov/vuln/detail/CVE-2021-2322
