@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5107 2025/08/23 15:56:02 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5108 2025/08/23 16:52:35 rhialto Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7426,3 +7426,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/gst-plugins1-gl version 1.26.5 [adam 2025-08-23]
 	Updated textproc/py-lxml to 6.0.1 [adam 2025-08-23]
 	Updated www/php-contao-manager to 1.10.5 [taca 2025-08-23]
+	Updated news/pan to 0.164 [rhialto 2025-08-23]
