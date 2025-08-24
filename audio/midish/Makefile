@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/03/09 21:18:06 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/24 18:03:46 vins Exp $
 
-DISTNAME=	midish-1.3.3
+DISTNAME=	midish-1.4.0
 CATEGORIES=	audio
 MASTER_SITES=	https://midish.org/
 
