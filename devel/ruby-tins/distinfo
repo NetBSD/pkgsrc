@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2025/08/12 13:58:53 taca Exp $
+$NetBSD: distinfo,v 1.36 2025/08/24 14:04:12 taca Exp $
 
-BLAKE2s (tins-1.39.1.gem) = 199be368ac1b9efb682ba0cd230da3170529299ecf2d9e3acdb7980f754f27c1
-SHA512 (tins-1.39.1.gem) = c0778a6e33c4efb0bb06ada47cfe1e114be6d4908aca78eb0095569e2929f7c3f55893d41cdfebb780cad779e7344fdfb5f46110baf5fd966899a474f40f3acc
-Size (tins-1.39.1.gem) = 310784 bytes
+BLAKE2s (tins-1.42.0.gem) = 65118c7b9a602f08906b46d28b5547bbf3beae84c2a530ae72cc26b9da659a1f
+SHA512 (tins-1.42.0.gem) = 79b69faa36df6754ece3bb95a10dd0968f83d1fd18d7d7840a21dc11f2da64e5f79e1c8e0eb381b22c6558065aa32f3c4710c336b5968b0b295746b68337247c
+Size (tins-1.42.0.gem) = 316416 bytes
