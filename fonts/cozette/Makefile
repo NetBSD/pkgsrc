@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/05/23 17:12:40 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/24 17:14:26 vins Exp $
 
 DISTNAME=	${PKGNAME:S/cozette/CozetteFonts-v/:S/./-/g}
-PKGNAME=	cozette-1.29.0
+PKGNAME=	cozette-1.30.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=slavfox/}
 GITHUB_RELEASE=	v.${PKGVERSION_NOREV}
