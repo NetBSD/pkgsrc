@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/09/18 15:09:33 taca Exp $
+$NetBSD: distinfo,v 1.28 2025/08/24 13:57:32 taca Exp $
 
-BLAKE2s (flexmock-3.0.1.gem) = 135a730fd3f1e40d560a69eaf209c010764a4004d47b7c136c77e77e67861bd2
-SHA512 (flexmock-3.0.1.gem) = 3cc339d553b60b827ef970054a6afbb45b607697b74dca5850031bbf7520de9251092fe09f49a8c7c34aa49441080e847ac6a63bfc8e6124f2d2f10a14ac5734
-Size (flexmock-3.0.1.gem) = 69632 bytes
+BLAKE2s (flexmock-3.0.2.gem) = bb76c515a29a1c0a384d043ffb3d58ba34a836fa5569a07891c9ffe1cd83046f
+SHA512 (flexmock-3.0.2.gem) = 07902e5641e2d014e626c1b64f65aeae493fff88ea4f7be42816e63f7609db92ff5fa3b1ad3010e6c352c88f81480667326d83257f55de17b388f3ab68ece827
+Size (flexmock-3.0.2.gem) = 69632 bytes
