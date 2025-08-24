@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5148 2025/08/24 17:46:40 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5149 2025/08/24 18:04:22 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7467,3 +7467,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/cozette to 1.30.0 [vins 2025-08-24]
 	Updated devel/yyjson to 0.12.0 [vins 2025-08-24]
 	Updated time/calcurse to 4.8.2 [vins 2025-08-24]
+	Updated audio/midish to 1.4.0 [vins 2025-08-24]
