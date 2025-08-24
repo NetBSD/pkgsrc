@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/08/14 05:25:26 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/24 17:45:34 vins Exp $
 
-DISTNAME=	calcurse-4.8.1
-PKGREVISION=	1
+DISTNAME=	calcurse-4.8.2
 CATEGORIES=	time
 MASTER_SITES=	http://calcurse.org/files/
 
