@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5146 2025/08/24 17:15:04 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5147 2025/08/24 17:24:10 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7465,3 +7465,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/unzip to 6.0nb11 [kikadf 2025-08-24]
 	Updated devel/got to 0.117 [vins 2025-08-24]
 	Updated fonts/cozette to 1.30.0 [vins 2025-08-24]
+	Updated devel/yyjson to 0.12.0 [vins 2025-08-24]
