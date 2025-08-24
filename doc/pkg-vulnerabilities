@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.519 2025/08/23 18:19:22 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.520 2025/08/24 07:57:46 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27390,3 +27390,11 @@ tiff-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-9165
 yarn-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9308
 xenkernel415-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 ufoai<2.3.1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2009-10006
+7-zip-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-47111
+7-zip-[0-9]*	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-47112
+7-zip<23.00	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31102
+7-zip<23.00	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-40481
+7-zip<24.01	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-52169
+7-zip<24.07	integer-underflow	https://nvd.nist.gov/vuln/detail/CVE-2024-11477
+7-zip<24.08	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-11612
+7-zip<24.09	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-0411
