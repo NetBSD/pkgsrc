@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5140 2025/08/24 16:24:48 schwarz Exp $
+$NetBSD: CHANGES-2025,v 1.5141 2025/08/24 16:31:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/copyq to 11.0.0 [kikadf 2025-08-24]
 	Updated sysutils/py-supervisor to 4.3.0 [wiz 2025-08-24]
 	Updated editors/moe to 1.15 [schwarz 2025-08-24]
+	Updated textproc/tree-sitter-php to 0.24.2 [wiz 2025-08-24]
