@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/06/07 15:34:05 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/08/24 17:20:59 vins Exp $
 
-BLAKE2s (yyjson-0.11.1.tar.gz) = 8af33be832e99784e81aef597be22e4e43dcfd9d3a43e2e7b5e75ead73d0b5a2
-SHA512 (yyjson-0.11.1.tar.gz) = 26c93768e96080ca88e9c9acf6620ca26c54a7198bb7a5efe0294bf89102ab30e15f196597a79171b7e51f3dca1b5b0075136701007ecdc142293156031e21de
-Size (yyjson-0.11.1.tar.gz) = 1592503 bytes
+BLAKE2s (yyjson-0.12.0.tar.gz) = 40232af64e8db1b475cf61759c1bcd1b2f829e6bd9f138b1fd65112b1a508963
+SHA512 (yyjson-0.12.0.tar.gz) = a468477544f40a13595eb0afa74857b669b0cf0bf3258678541368863cc3a27fa6f43cc2ef1f4c6103c81b798cea2f67cc14268789de3965e1315a44972c713f
+Size (yyjson-0.12.0.tar.gz) = 1620674 bytes
