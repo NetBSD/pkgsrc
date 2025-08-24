@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26149 2025/08/24 15:47:34 wiz Exp $
+$NetBSD: TODO,v 1.26150 2025/08/24 15:54:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,6 +404,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abiword-3.0.7
+	o abseil-20250814.0
 	o accountsservice-23.13.9 [switched to meson]
 	o admesh-0.98.2
 	o adms-2.3.6
@@ -701,6 +702,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o go-ldap-3.3.0
 	o go-logrus-1.8.1
 	o go-siphash-1.2.2
+	o go-wire-0.7.0
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
@@ -739,6 +741,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hamster-applet-2.32.1
 	o handbrake-1.9.0
 	o hanzim-3.5
+	o harfbuzz-11.4.3
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -795,6 +798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.9.2
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -948,6 +952,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
+	o ngtcp2-1.15.0
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -962,7 +967,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-5.2.1 [wip]
 	o ocaml-5.3.0
 	o ocaml-cppo-1.6.9
-	o ocaml-dune-3.19.1
+	o ocaml-dune-3.20.0
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1108,15 +1113,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-docutils-0.22 [breaks qemu build, see https://sourceforge.net/p/docutils/bugs/508/]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
+	o py-feedgenerator-2.2.1
 	o py-filebytes-0.10.2
+	o py-flask-3.1.2
 	o py-gammu-3.1
+	o py-h2-4.3.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
+	o py-parso-0.8.5
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-rfc3339-2.1.0
+	o py-ruff-0.12.10
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
+	o py-supervisor-4.3.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
@@ -1278,6 +1290,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-php-0.24.2
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
