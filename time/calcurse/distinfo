@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/07/02 19:03:55 vins Exp $
+$NetBSD: distinfo,v 1.3 2025/08/24 17:45:34 vins Exp $
 
-BLAKE2s (calcurse-4.8.1.tar.gz) = 4d572115f64ee1417fc2d9cf264addef26adf80c1ccab177662ded62b0be3317
-SHA512 (calcurse-4.8.1.tar.gz) = a0a0bcfceb28a4e363168711a3c2de8f6e94d7f12aa78ff40f157c247ea6a41646bd218a1defba2d128b131ed0ab71c4d417820a0af0adbaa215011b11f0a040
-Size (calcurse-4.8.1.tar.gz) = 730787 bytes
+BLAKE2s (calcurse-4.8.2.tar.gz) = 30f1dcfcbc7f8a95a831cf8bf3f3592d38e21de8b1897bf78e411e99f90abae9
+SHA512 (calcurse-4.8.2.tar.gz) = 9949eb32b79022c3c2e7c8cdf32de34cc370d7550e4211146666fadf2a00110b9c9f2e224b4ecd0caaf0b6437d73675b016f20caa123a3fef9d10ebe03c42460
+Size (calcurse-4.8.2.tar.gz) = 753648 bytes
