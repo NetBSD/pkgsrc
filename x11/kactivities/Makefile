@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/04/24 14:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/08/24 15:14:23 wiz Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGREVISION=	49
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_KDE:=4.13.3/src/}
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 DEPENDS+=	libkactivities4-[0-9]*:../../x11/libkactivities4
-
-DISTINFO_FILE=	${.CURDIR}/../../x11/libkactivities4/distinfo
 
 USE_CXX_FEATURES+=	c++11
 

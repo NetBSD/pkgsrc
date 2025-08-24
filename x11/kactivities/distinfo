@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.11 2025/08/24 15:14:23 wiz Exp $
+
+BLAKE2s (kactivities-4.13.3.tar.xz) = b386d38960a9d51bce1e92e4970f1c5b8f5204f4df20006733c757960fe10f00
+SHA512 (kactivities-4.13.3.tar.xz) = 1d248ae6045a7ae8d54ce5355100cd76be954c2a57be3abaab968d8ff2693d09aa9b1d0242266de4eedf6005bedfde38df69a84a9a5a0b16606fe958159b31bc
+Size (kactivities-4.13.3.tar.xz) = 87476 bytes
+SHA1 (patch-CMakeLists.txt) = 370ca32b0f3e848fe732dd6196cd61c79e730142
