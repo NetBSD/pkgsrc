@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5143 2025/08/24 16:52:36 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5144 2025/08/24 17:00:37 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7462,3 +7462,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-php to 0.24.2 [wiz 2025-08-24]
 	Updated devel/abseil to 20250814.0 [wiz 2025-08-24]
 	Updated sysutils/fastfetch to 2.50.2 [vins 2025-08-24]
+	Updated archivers/unzip to 6.0nb11 [kikadf 2025-08-24]
