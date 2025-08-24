@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5142 2025/08/24 16:35:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5143 2025/08/24 16:52:36 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7461,3 +7461,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/moe to 1.15 [schwarz 2025-08-24]
 	Updated textproc/tree-sitter-php to 0.24.2 [wiz 2025-08-24]
 	Updated devel/abseil to 20250814.0 [wiz 2025-08-24]
+	Updated sysutils/fastfetch to 2.50.2 [vins 2025-08-24]
