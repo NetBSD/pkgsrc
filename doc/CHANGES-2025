@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5119 2025/08/24 13:57:43 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5120 2025/08/24 14:00:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7438,3 +7438,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-algorithms to 1.1.0 [taca 2025-08-24]
 	Updated devel/ruby-async to 2.27.4 [taca 2025-08-24]
 	Updated devel/ruby-flexmock to 3.0.2 [taca 2025-08-24]
+	Updated devel/ruby-rspec-support to 3.13.5 [taca 2025-08-24]
