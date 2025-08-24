@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5132 2025/08/24 16:04:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5133 2025/08/24 16:06:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7451,3 +7451,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jjui to 0.9.2 [wiz 2025-08-24]
 	Updated net/ngtcp2 to 1.15.0 [wiz 2025-08-24]
 	Updated www/py-feedgenerator to 2.2.1 [wiz 2025-08-24]
+	Updated www/py-flask to 3.1.2 [wiz 2025-08-24]
