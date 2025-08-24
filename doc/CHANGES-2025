@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5139 2025/08/24 16:22:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5140 2025/08/24 16:24:48 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7458,3 +7458,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/nano to 8.6 [schwarz 2025-08-24]
 	Updated x11/copyq to 11.0.0 [kikadf 2025-08-24]
 	Updated sysutils/py-supervisor to 4.3.0 [wiz 2025-08-24]
+	Updated editors/moe to 1.15 [schwarz 2025-08-24]

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/03/21 00:07:27 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/24 16:24:48 schwarz Exp $
 
-DISTNAME=	moe-1.14
+DISTNAME=	moe-1.15
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=moe/}
 EXTRACT_SUFX=	.tar.lz
@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
 INFO_FILES=	yes
-USE_TOOLS+=	makeinfo
-USE_LANGUAGES=	c c++
+USE_TOOLS+=	makeinfo gmake
+USE_LANGUAGES=	c++
 
 FAKE_NCURSES=	yes
 
