@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5149 2025/08/24 18:04:22 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5150 2025/08/24 22:09:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7468,3 +7468,11 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/yyjson to 0.12.0 [vins 2025-08-24]
 	Updated time/calcurse to 4.8.2 [vins 2025-08-24]
 	Updated audio/midish to 1.4.0 [vins 2025-08-24]
+	Updated mail/postfix to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-cdb to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-ldap to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-lmdb to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-mysql to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-pcre to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-pgsql to 3.10.4 [taca 2025-08-24]
+	Updated mail/postfix-sqlite to 3.10.4 [taca 2025-08-24]
