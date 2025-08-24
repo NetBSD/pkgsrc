@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 07:33:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/08/24 16:21:55 wiz Exp $
 bin/echo_supervisord_conf-${PYVERSSUFFIX}
 bin/pidproxy-${PYVERSSUFFIX}
 bin/supervisorctl-${PYVERSSUFFIX}
@@ -145,6 +145,7 @@ ${PYSITELIB}/supervisor/tests/fixtures/issue-1298.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1483a.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1483b.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-1483c.conf
+${PYSITELIB}/supervisor/tests/fixtures/issue-1596.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-291a.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-550.conf
 ${PYSITELIB}/supervisor/tests/fixtures/issue-565.conf
