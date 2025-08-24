@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.521 2025/08/24 08:16:53 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.522 2025/08/24 17:06:08 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14316,7 +14316,7 @@ ruby{22,23,24,25}-puppet<5.3.4	information-leak		https://nvd.nist.gov/vuln/detai
 squid>=3.0<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1000024
 git-base<2.15.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2018-1000021
 squid>=3.0<3.5.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1000027
-unzip-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1000035
+unzip<6.0nb11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-1000035
 librsvg<2.40.20	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2018-1000041
 mupdf<1.13.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2018-1000051
 ffmpeg3-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-6912
@@ -17591,7 +17591,7 @@ xpdf<4.2			denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-13288
 xpdf<4.2			use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2019-13289
 xpdf<4.2			information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2019-13291
 mupdf<1.15.0nb1			buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-13290
-unzip-[0-9]*			denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-13232
+unzip<6.0nb11			denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-13232
 squid-[0-9]*			cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-13345
 ffmpeg4<4.2.3			buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-13312
 ImageMagick<7.0.8.50		memory-leak			https://nvd.nist.gov/vuln/detail/CVE-2019-13309
@@ -24707,7 +24707,7 @@ py{27,36,37,38,39,310,311}-wheel<0.38.1	input-validation	https://nvd.nist.gov/vu
 xfce4-settings<4.16.4	missing-argument-check	https://nvd.nist.gov/vuln/detail/CVE-2022-45062
 vtk<9.0.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-42521
 vlc<3.0.18	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-41325
-unzip-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-4217
+unzip<6.0nb11	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-4217
 editorconfig-core<0.12.6	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2023-0341
 tor<0.4.7.13	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2023-23589
 u-boot-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-2347
