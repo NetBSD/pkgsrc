@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 11:33:55 nia Exp $
+$NetBSD: distinfo,v 1.25 2025/08/24 15:44:12 wiz Exp $
 
 BLAKE2s (Daemon.README) = c333f7f722cabc6afe2918ff7d24ac9e46dce3b7ec0d83f0ca9782cca005b336
 SHA512 (Daemon.README) = 8aaf704a95c7cd25c85c4e0d789ed050b555f3ec0a3c11754b79d8b118b68c32d0eac1fbc3022124b10a7c588e78b592e77ad2f718ab4120a95b8859ca94fa5b
@@ -12,10 +12,13 @@ Size (NetBSD-flag-1.0.png) = 4532 bytes
 BLAKE2s (kde-workspace-4.11.22.tar.xz) = a66f86651cce2e5daa68f5cd38e5033d8849c81ed47b8dd2ccc8ef345f0f4f86
 SHA512 (kde-workspace-4.11.22.tar.xz) = 9def2cc8d1e597259966cd6cc44e9aad7ebe2c7cde5943e362c6782d1344e7da4fff0dddd0fe0c948bca159dba128d8a36006e1ae409415cd22f74955d0a9b95
 Size (kde-workspace-4.11.22.tar.xz) = 13553668 bytes
+SHA1 (patch-kcontrol_dateandtime_CMakeLists.txt) = 5cc55408f021df42591a142b76da8bf865ef8950
 SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead046a8e71
+SHA1 (patch-kcontrol_kfontinst_dbus_CMakeLists.txt) = c10cf4fa29e3a2020e1854525764b67543b7cca6
 SHA1 (patch-kcontrol_randr_krandrtray.cpp) = 47de3212baab5f2f20ccd9b9869ba4450b6a9bb7
 SHA1 (patch-kcontrol_randr_randroutput.cpp) = 6f9e6f18007023941018d2088a585c2ab30a7299
 SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
+SHA1 (patch-kdm_kcm_CMakeLists.txt) = a2ba7c905c5cadf18ea532687129b753984c6544
 SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
 SHA1 (patch-kdm_kfrontend_genkdmconf.c) = 28829bb285df6a3d252eb1bf7043cbd44e10500f
@@ -37,7 +40,7 @@ SHA1 (patch-kwin_killer_killer.cpp) = b64133ee8b96e4275ed1cbe68a64630e08f77154
 SHA1 (patch-kwin_scene_opengl.cpp) = 53de757225b74ddf85609b2ec920659964940e59
 SHA1 (patch-libs_kephal_service_xrandr12_randroutput.cpp) = 03fc906e4ec34b31d9237ea27e7c94f3cfd4213b
 SHA1 (patch-libs_ksysguard_ksgrd_SensorManager.cpp) = 5fa92fa4876514198813f900f71f3364794b8248
-SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eacb7db79de0ae5eaf80
+SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = c4ccfed57b57c304f40652b98f0726d03a9afe35
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
 SHA1 (patch-libs_ksysguard_processcore_processes__netbsd__p.cpp) = 37303769e7b3890b47cc4f1f2715f55f2015a3ca
 SHA1 (patch-libs_oxygen_oxygenhelper.cpp) = ef013d9492a1e59e627a82a5b842cb0b7a23160f

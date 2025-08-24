@@ -1,0 +1,13 @@
+$NetBSD: patch-kdm_kcm_CMakeLists.txt,v 1.1 2025/08/24 15:44:12 wiz Exp $
+
+--- kdm/kcm/CMakeLists.txt.orig	2025-08-24 15:30:59.919788072 +0000
++++ kdm/kcm/CMakeLists.txt
+@@ -44,8 +44,6 @@ install(TARGETS kcmkdmhelper DESTINATION
+ 
+ kde4_install_auth_helper_files(kcmkdmhelper org.kde.kcontrol.kcmkdm root)
+ 
+-kde4_install_auth_actions(org.kde.kcontrol.kcmkdm kcmkdm_actions.actions)
+-
+ ########### install files ###############
+ 
+ install( FILES kdm.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )

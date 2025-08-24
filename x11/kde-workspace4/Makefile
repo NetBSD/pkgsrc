@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2025/04/24 14:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2025/08/24 15:44:12 wiz Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	66
+PKGREVISION=	67
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
@@ -22,6 +22,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_Soprano:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_Wayland:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_libgps:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
@@ -59,11 +60,7 @@ PKG_GROUPS=		${KDM_GROUP}
 PKG_USERS=		${KDM_USER}:${KDM_GROUP}
 PKG_GECOS.${KDM_USER}=	kdm unprivileged user
 
-REPLACE_PERL+=		\
-	kcontrol/keys/convertShortcuts.pl \
-	kwin/clients/oxygen/data/update_oxygen.pl \
-	kwin/data/kwin3_plugin.pl \
-	kwin/data/pluginlibFix.pl
+REPLACE_PERL+=		kwin/clients/oxygen/data/update_oxygen.pl
 REPLACE_SH+=		libs/plasmagenericshell/widgetsexplorer/package/Messages.sh
 
 PY_PATCHPLIST=	yes
