@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5136 2025/08/24 16:14:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5137 2025/08/24 16:16:07 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7455,3 +7455,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-h2 to 4.3.0 [wiz 2025-08-24]
 	Updated lang/py-parso to 0.8.5 [wiz 2025-08-24]
 	Updated time/py-rfc3339 to 2.1.0 [wiz 2025-08-24]
+	Updated editors/nano to 8.6 [schwarz 2025-08-24]
