@@ -1,15 +1,20 @@
-$NetBSD: distinfo,v 1.37 2025/07/03 09:59:10 jperkin Exp $
+$NetBSD: distinfo,v 1.38 2025/08/24 16:58:07 kikadf Exp $
 
 BLAKE2s (unzip60.tgz) = d083b60907af71a6870edc1e87be4566dee486d5089e1fc3b57cc6ebac00818f
 SHA512 (unzip60.tgz) = 0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b6cdbf9ddc0d9471f67af783e960f8fa2e620394d51384257dca23d06bcd90224a80ce5d
 Size (unzip60.tgz) = 1376845 bytes
 SHA1 (patch-ab) = 672635c469e0a53ac9808f8155ee38643a8acf69
-SHA1 (patch-ac) = 27b91401d4d5ecc3842c91dc49c08f42c8646154
+SHA1 (patch-ac) = 0e1eb1e868bc2a26500b1d895bae2d9e7bc105ff
 SHA1 (patch-crypt.c) = e44e14ba2c8e5651659c6756a5adbe88b4385ca4
-SHA1 (patch-extract.c) = 042fe7d233d0b3cb1e978902c901e8239f7a3732
-SHA1 (patch-fileio.c) = ef87b5e8a60b9268e4b0439766d089130b322d86
-SHA1 (patch-globals.h) = d537ad18fa4406cd4b78ccee694c3cccb832f5a3
+SHA1 (patch-extract.c) = cc5756372f3bc4fbdbf06a118a506d5045b17578
+SHA1 (patch-fileio.c) = 761051e87782f8bb0b195ecd0ea6e000e9f93530
+SHA1 (patch-globals.c) = c9f7467c3a5baf837d3561752b0e9d8383098bcb
+SHA1 (patch-globals.h) = 9c21780eb795cca6379832c73183b3bef11c884e
 SHA1 (patch-list.c) = 29e6dc3f5d40bb087a8bff58f75eb02568f3ad87
-SHA1 (patch-process.c) = a9c95ada1a0d3ac706d97a0bbd7dd99220f1fe69
+SHA1 (patch-man_unzip.1) = e7d43e774c909a1f06f19bba7b6c2870f9402ce9
+SHA1 (patch-process.c) = 4f451259055a240e4d99baa61349e31f6832a3e2
 SHA1 (patch-unix_unxcfg.h) = 8128ea53719ca88e9a4f4788fb7b4f706399f8ae
+SHA1 (patch-unzip.c) = e17e9c0f7bcb400de2e2da79a9fa1eca8e279e37
+SHA1 (patch-unzip.h) = fe448902952fe8597f0009942f86d3fc6d06dc7c
+SHA1 (patch-unzpriv.h) = fb8d0e8d1eea195d6ecdd7bc7773a3e30db3da8a
 SHA1 (patch-zipinfo.c) = 0d93fd9b145e7e707762119ee30ddf8eac9c2f31
