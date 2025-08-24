@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2025/05/09 19:37:10 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.95 2025/08/24 15:08:17 wiz Exp $
 
 DISTNAME=	kdevelop-${KAPPSVER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 
 HOMEPAGE=	https://www.kdevelop.org/
@@ -42,5 +41,5 @@ pre-configure:
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
