@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/09 21:18:06 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/08/24 18:03:46 vins Exp $
 bin/midish
 bin/smfplay
 bin/smfrec
@@ -8,4 +8,4 @@ man/man1/smfrec.1
 share/doc/midish/README
 share/doc/midish/manual.html
 share/examples/midish/midishrc
-share/examples/midish/sample.sng
+share/examples/midish/sample.msh
