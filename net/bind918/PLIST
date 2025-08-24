@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/13 17:29:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/08/24 08:56:59 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -49,6 +49,7 @@ include/dns/dnssec.h
 include/dns/dnstap.h
 include/dns/ds.h
 include/dns/dsdigest.h
+include/dns/dsync.h
 include/dns/dyndb.h
 include/dns/ecs.h
 include/dns/edns.h
