@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/02/03 16:04:22 taca Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/24 14:10:32 taca Exp $
 
-DISTNAME=	net-ldap-0.19.0
+DISTNAME=	net-ldap-0.20.0
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
