@@ -1,8 +1,17 @@
-$NetBSD: patch-ac,v 1.3 2012/09/14 13:10:48 wiz Exp $
+$NetBSD: patch-ac,v 1.4 2025/08/24 16:58:07 kikadf Exp $
 
 Fix build with -DFUNZIP.
+Fix CVE-2019-13232
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part1.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part2.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part3.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-manpage.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part4.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part5.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part6.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-switch.patch
 
---- inflate.c.orig	2008-07-30 01:31:08.000000000 +0000
+--- inflate.c.orig	2008-07-30 03:31:08.000000000 +0200
 +++ inflate.c
 @@ -473,7 +473,11 @@ int UZinflate(__G__ is_defl64)
                      retval = 2;
@@ -28,3 +37,12 @@ Fix build with -DFUNZIP.
                  }
              } else {
                  Trace((stderr, "oops!  (inflateBack() err = %d)\n", err));
+@@ -700,7 +708,7 @@ int UZinflate(__G__ is_defl64)
+       G.dstrm.total_out));
+ 
+     G.inptr = (uch *)G.dstrm.next_in;
+-    G.incnt = (G.inbuf + INBUFSIZ) - G.inptr;  /* reset for other routines */
++    G.incnt -= G.inptr - G.inbuf;       /* reset for other routines */
+ 
+ uzinflate_cleanup_exit:
+     err = inflateReset(&G.dstrm);
