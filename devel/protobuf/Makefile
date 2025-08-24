@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2025/08/16 06:37:36 adam Exp $
+# $NetBSD: Makefile,v 1.93 2025/08/24 16:36:16 wiz Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -9,6 +9,7 @@
 # require a recursive revbump.
 
 DISTNAME=	protobuf-32.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=protocolbuffers/}
 GITHUB_PROJECT=	protobuf

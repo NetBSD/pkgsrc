@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.97 2025/08/06 16:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/08/24 16:36:18 wiz Exp $
 
 DISTNAME=	grpcio-1.74.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio/}
 
