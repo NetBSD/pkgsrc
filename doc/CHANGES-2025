@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5138 2025/08/24 16:20:06 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5139 2025/08/24 16:22:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7457,3 +7457,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-rfc3339 to 2.1.0 [wiz 2025-08-24]
 	Updated editors/nano to 8.6 [schwarz 2025-08-24]
 	Updated x11/copyq to 11.0.0 [kikadf 2025-08-24]
+	Updated sysutils/py-supervisor to 4.3.0 [wiz 2025-08-24]
