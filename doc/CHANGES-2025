@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5113 2025/08/24 08:57:12 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5114 2025/08/24 13:48:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7432,3 +7432,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128 to 128.14.0 [gutteridge 2025-08-24]
 	Updated www/firefox128-l10n to 128.14.0 [gutteridge 2025-08-24]
 	Updated net/bind918 to 9.18.39 [taca 2025-08-24]
+	Updated www/ruby-aws-partitions to 1.1150.0 [taca 2025-08-24]
