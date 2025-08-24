@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/06/16 16:17:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/24 22:10:25 taca Exp $
 
 DISTNAME=	openarc-20180921
 PKGREVISION=	3
@@ -12,13 +12,10 @@ HOMEPAGE=	https://github.com/trusteddomainproject/OpenARC
 COMMENT=	Open source ARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
 
-# for m4 file
-TOOL_DEPENDS+=	pkg-config-[0-9]*:../../devel/pkg-config
-
 RCD_SCRIPTS=	openarc
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf automake
+USE_TOOLS+=	aclocal autoconf automake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
