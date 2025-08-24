@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.179 2025/08/24 15:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2025/08/24 15:27:39 wiz Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	109
+PKGREVISION=	110
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
