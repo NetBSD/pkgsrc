@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2025/04/24 14:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2025/08/24 15:27:26 wiz Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -13,6 +13,7 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_LibSSH:BOOL=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_khelpcenter=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_drkonqi=OFF
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 .include "../../mk/bsd.prefs.mk"
 CMAKE_CONFIGURE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
@@ -47,7 +48,7 @@ PLIST.polkit=	yes
 PLIST.x11=	yes
 .endif
 
-#SUBST_CLASSES+=		htdig
+#SUBST_CLASSES+=	htdig
 #SUBST_STAGE.htdig=	pre-configure
 #SUBST_MESSAGE.htdig=	Fix htdig paths.
 #SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
@@ -66,9 +67,9 @@ REPLACE_PERL+= \
 	kioslave/info/kde-info2html
 
 CONF_FILES+=	${PREFIX}/share/examples/kde-runtime4/kde-information.menu \
-                ${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
-CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf \
-		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmremotewidgets.conf
+		${PKG_SYSCONFDIR}/xdg/menus/kde-information.menu
+#CONF_FILES+=	${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf \
+#		${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.kcontrol.kcmremotewidgets.conf
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 
@@ -89,7 +90,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.attica?=	attica>=0.1.4
+BUILDLINK_API_DEPENDS.attica?=	attica>=0.1.4
 .include "../../misc/attica/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
