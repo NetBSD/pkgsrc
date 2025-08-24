@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/07/27 16:13:29 taca Exp $
+# $NetBSD: Makefile,v 1.36 2025/08/24 14:06:45 taca Exp $
 
-DISTNAME=	mini_magick-5.3.0
+DISTNAME=	mini_magick-5.3.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	graphics
 
