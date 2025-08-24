@@ -1,0 +1,9 @@
+$NetBSD: patch-kcontrol_kfontinst_dbus_CMakeLists.txt,v 1.1 2025/08/24 15:44:12 wiz Exp $
+
+--- kcontrol/kfontinst/dbus/CMakeLists.txt.orig	2025-08-24 15:32:05.035715567 +0000
++++ kcontrol/kfontinst/dbus/CMakeLists.txt
+@@ -29,4 +29,3 @@ configure_file(org.kde.fontinst.service.
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/session/org.kde.fontinst.service DESTINATION ${DBUS_SERVICES_INSTALL_DIR} )
+ 
+ kde4_install_auth_helper_files(fontinst_helper org.kde.fontinst root)
+-kde4_install_auth_actions(org.kde.fontinst fontinst.actions)

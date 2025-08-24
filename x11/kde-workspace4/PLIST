@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/20 20:46:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/08/24 15:44:12 wiz Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -2137,9 +2137,9 @@ share/kde4/servicetypes/solid-device-type.desktop
 share/kde4/servicetypes/systemsettingscategory.desktop
 share/kde4/servicetypes/systemsettingsexternalapp.desktop
 share/kde4/servicetypes/systemsettingsview.desktop
-share/polkit-1/actions/org.kde.fontinst.policy
-share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
-share/polkit-1/actions/org.kde.kcontrol.kcmkdm.policy
-share/polkit-1/actions/org.kde.ksysguard.processlisthelper.policy
+@comment share/polkit-1/actions/org.kde.fontinst.policy
+@comment share/polkit-1/actions/org.kde.kcontrol.kcmclock.policy
+@comment share/polkit-1/actions/org.kde.kcontrol.kcmkdm.policy
+@comment share/polkit-1/actions/org.kde.ksysguard.processlisthelper.policy
 share/sounds/pop.wav
 @pkgdir share/kde/config/kdm/sessions
