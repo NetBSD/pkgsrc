@@ -1,0 +1,11 @@
+$NetBSD: patch-plasma_remotewidgetshelper_CMakeLists.txt,v 1.1 2025/08/24 15:27:26 wiz Exp $
+
+--- plasma/remotewidgetshelper/CMakeLists.txt.orig	2025-08-24 15:19:44.237095408 +0000
++++ plasma/remotewidgetshelper/CMakeLists.txt
+@@ -4,6 +4,3 @@ kde4_add_executable(kcmremotewidgetshelp
+ target_link_libraries(kcmremotewidgetshelper ${KDE4_KDECORE_LIBS})
+ install(TARGETS kcmremotewidgetshelper DESTINATION ${LIBEXEC_INSTALL_DIR})
+ 
+-kde4_install_auth_helper_files(kcmremotewidgetshelper org.kde.kcontrol.kcmremotewidgets root)
+-kde4_install_auth_actions(org.kde.kcontrol.kcmremotewidgets kcm_remotewidgets.actions)
+-

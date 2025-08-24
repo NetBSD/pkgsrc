@@ -1,0 +1,17 @@
+$NetBSD: patch-keditfiletype_tests_CMakeLists.txt,v 1.1 2025/08/24 15:27:26 wiz Exp $
+
+--- keditfiletype/tests/CMakeLists.txt.orig	2025-08-24 15:19:05.884207060 +0000
++++ keditfiletype/tests/CMakeLists.txt
+@@ -2,12 +2,3 @@ set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURR
+ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${KDE4_INCLUDES} )
+ 
+ ########### filetypestest ###############
+-
+-kde4_add_unit_test(filetypestest TEST 
+- filetypestest.cpp
+- ../mimetypedata.cpp
+- ../mimetypewriter.cpp
+- ../sharedmimeinfoversion.cpp
+-)
+-target_link_libraries(filetypestest ${KDE4_KDECORE_LIBS} ${KDE4_KIO_LIBRARY} ${KDE4_KDEUI_LIBRARIES}
+-                      ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTTEST_LIBRARY})

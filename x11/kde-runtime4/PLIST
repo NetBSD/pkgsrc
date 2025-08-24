@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/08/16 10:20:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/08/24 15:27:26 wiz Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -259,7 +259,7 @@ share/dbus-1/interfaces/org.kde.KTimeZoned.xml
 share/dbus-1/interfaces/org.kde.network.kioslavenotifier.xml
 share/dbus-1/services/org.kde.knotify.service
 share/dbus-1/services/org.kde.kuiserver.service
-share/dbus-1/system-services/org.kde.kcontrol.kcmremotewidgets.service
+@comment share/dbus-1/system-services/org.kde.kcontrol.kcmremotewidgets.service
 share/desktop-directories/kde-development-translation.directory
 share/desktop-directories/kde-development-webdevelopment.directory
 share/desktop-directories/kde-development.directory
@@ -600,7 +600,7 @@ share/emoticons/kde4/unlove.png
 share/emoticons/kde4/wilted_rose.png
 share/emoticons/kde4/wink.png
 share/examples/kde-runtime4/kde-information.menu
-share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf
+@comment share/examples/kde4-dbus/org.kde.kcontrol.kcmremotewidgets.conf
 share/icons/default.kde4
 share/icons/hicolor/128x128/apps/knetattach.png
 share/icons/hicolor/16x16/apps/knetattach.png
@@ -1713,7 +1713,7 @@ share/locale/l10n/zw/entry.desktop
 share/locale/l10n/zw/flag.png
 share/mime/packages/network.xml
 share/mime/packages/webp.xml
-${PLIST.polkit}share/polkit-1/actions/org.kde.kcontrol.kcmremotewidgets.policy
+@comment ${PLIST.polkit}share/polkit-1/actions/org.kde.kcontrol.kcmremotewidgets.policy
 share/sounds/KDE-Im-Cant-Connect.ogg
 share/sounds/KDE-Im-Connection-Lost.ogg
 share/sounds/KDE-Im-Contact-In.ogg
