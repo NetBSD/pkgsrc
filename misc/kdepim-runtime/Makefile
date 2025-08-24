@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/04/24 14:15:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/24 06:38:06 wiz Exp $
 
 DISTNAME=	kdepim-runtime-${KAPPSVER}
 PKGREVISION=	13
@@ -7,6 +7,9 @@ CATEGORIES=	misc
 HOMEPAGE=	https://community.kde.org/KDE_PIM
 COMMENT=	Extends the functionality of kdepim
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+# resources/ews/test/isolatedtestbase.cpp:15:10: fatal error: ewsresourceinterface.h: No such file or directory
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 .include "../../meta-pkgs/kde/applications.mk"
 
