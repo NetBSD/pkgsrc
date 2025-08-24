@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/11/08 14:07:57 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/08/24 16:13:53 wiz Exp $
 
-BLAKE2s (pyrfc3339-2.0.1.tar.gz) = 3220c1cfb98a0aedd31e9134bd83de4cdd0ac61771adc8f96f3cd02cd14cc0f0
-SHA512 (pyrfc3339-2.0.1.tar.gz) = b1c6768842a8fc8917280264e4fa3e2e1223399184bd7639fbb12d3bd4755ea2cadfb291efe2bf1f3b7e89e50fcb1f89a46a9e81a94cca3a5ca0aa8c0b698c69
-Size (pyrfc3339-2.0.1.tar.gz) = 4573 bytes
+BLAKE2s (pyrfc3339-2.1.0.tar.gz) = 2f66e79a9997a72c1ff74f52c866a8814c962b2e335309ba63becadcee36bb05
+SHA512 (pyrfc3339-2.1.0.tar.gz) = e2567a486187405f93fd4e766e48154ee25d5de9470074563b1bb381e96426b830f0daefee991988dd9c6d315c451d75baf9e5e151713df7799481e4c9f27f88
+Size (pyrfc3339-2.1.0.tar.gz) = 12589 bytes
