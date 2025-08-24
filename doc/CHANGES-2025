@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5144 2025/08/24 17:00:37 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5145 2025/08/24 17:02:28 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7463,3 +7463,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/abseil to 20250814.0 [wiz 2025-08-24]
 	Updated sysutils/fastfetch to 2.50.2 [vins 2025-08-24]
 	Updated archivers/unzip to 6.0nb11 [kikadf 2025-08-24]
+	Updated devel/got to 0.117 [vins 2025-08-24]
