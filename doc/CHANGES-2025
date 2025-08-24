@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5124 2025/08/24 14:10:43 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5125 2025/08/24 15:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7443,3 +7443,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ruby-mini-magick to 5.3.1 [taca 2025-08-24]
 	Updated mail/ruby-mime-types-data to 3.2025.0819 [taca 2025-08-24]
 	Updated net/ruby-net-ldap to 0.20.0 [taca 2025-08-24]
+	Updated devel/p5-Struct-Dumb to 0.15 [wiz 2025-08-24]
