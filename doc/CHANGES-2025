@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5127 2025/08/24 15:56:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5128 2025/08/24 15:59:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7446,3 +7446,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Struct-Dumb to 0.15 [wiz 2025-08-24]
 	Updated devel/p5-Sub-Quote to 2.006009 [wiz 2025-08-24]
 	Updated devel/go-wire to 0.7.0 [wiz 2025-08-24]
+	Updated fonts/harfbuzz to 11.4.3 [wiz 2025-08-24]
