@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/02/02 16:04:23 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/08/24 16:08:36 wiz Exp $
 
-BLAKE2s (h2-4.2.0.tar.gz) = f7ec4be13ffe2cd6056e86ee84e07272157f4b4299f6334bf485977ff8659db9
-SHA512 (h2-4.2.0.tar.gz) = a88a06ad7511cbc3870e8477aa3a4f1ab79c9db0ab1e71578c6e5be1bbc22d2d0a7b6878a8c18bd8b2cb22f1df9e46fe3e3c7223f44fa01f8d25f5f5bad28983
-Size (h2-4.2.0.tar.gz) = 2150682 bytes
+BLAKE2s (h2-4.3.0.tar.gz) = a7a4cbc696f5b7ce994fdc487a9db3faab00b45d8c33cf7f4182dec165788dd8
+SHA512 (h2-4.3.0.tar.gz) = f4a09644dec595a0a2280db2bdcdc26e22fc05a1853a0692e4c208c77cf7f9fe5ac2f185f31617ecb43d6afd6d0e24d8ce649ce38720744f6a30ca60dd3b9a49
+Size (h2-4.3.0.tar.gz) = 2152026 bytes
