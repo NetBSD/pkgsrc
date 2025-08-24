@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/20 19:45:10 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/24 15:10:56 wiz Exp $
 bin/arx
 bin/arx-install-data
 bin/arxsavetool
@@ -6,7 +6,7 @@ bin/arxunpak
 include/ArxIO.h
 lib/libArxIO.so
 lib/libArxIO.so.0
-lib/libArxIO.so.1.2
+lib/libArxIO.so.1.2.1
 libexec/arxtool
 man/man1/arx-install-data.1
 man/man1/arxsavetool.1
