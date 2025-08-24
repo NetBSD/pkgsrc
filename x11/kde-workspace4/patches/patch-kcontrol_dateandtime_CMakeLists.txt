@@ -1,0 +1,13 @@
+$NetBSD: patch-kcontrol_dateandtime_CMakeLists.txt,v 1.1 2025/08/24 15:44:12 wiz Exp $
+
+--- kcontrol/dateandtime/CMakeLists.txt.orig	2025-08-24 15:32:17.647179029 +0000
++++ kcontrol/dateandtime/CMakeLists.txt
+@@ -17,8 +17,6 @@ install(TARGETS kcmdatetimehelper DESTIN
+ 
+ kde4_install_auth_helper_files(kcmdatetimehelper org.kde.kcontrol.kcmclock root)
+ 
+-kde4_install_auth_actions(org.kde.kcontrol.kcmclock kcmclock_actions.actions)
+-
+ ########### install files ###############
+ 
+ install( FILES clock.desktop  DESTINATION  ${SERVICES_INSTALL_DIR} )
