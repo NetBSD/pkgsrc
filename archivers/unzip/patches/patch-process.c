@@ -1,9 +1,22 @@
-$NetBSD: patch-process.c,v 1.2 2024/08/06 14:40:13 nia Exp $
+$NetBSD: patch-process.c,v 1.3 2025/08/24 16:58:07 kikadf Exp $
 
 https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2014-8141
 https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-0530.patch/
 
---- process.c.orig	2009-03-06 01:25:10.000000000 +0000
+Fix CVE-2019-13232
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part1.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part2.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part3.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-manpage.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part4.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part5.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-part6.patch
+  https://src.fedoraproject.org/rpms/unzip/raw/rawhide/f/unzip-zipbomb-switch.patch
+
+Fix CVE-2021-4217
+  https://gitlab.archlinux.org/archlinux/packaging/packages/unzip/-/raw/main/unzip-6.0_CVE-2021-4217.patch
+
+--- process.c.orig	2009-03-06 02:25:10.000000000 +0100
 +++ process.c
 @@ -1,5 +1,5 @@
  /*
@@ -21,7 +34,41 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
  #endif
  
  
-@@ -1888,48 +1890,83 @@ int getZip64Data(__G__ ef_buf, ef_len)
+@@ -637,6 +639,13 @@ void free_G_buffers(__G)     /* releases
+     }
+ #endif
+ 
++    /* Free the cover span list and the cover structure. */
++    if (G.cover != NULL) {
++        free(*(G.cover));
++        free(G.cover);
++        G.cover = NULL;
++    }
++
+ } /* end function free_G_buffers() */
+ 
+ 
+@@ -1401,6 +1410,10 @@ static int find_ecrec64(__G__ searchlen)
+ 
+     /* Now, we are (almost) sure that we have a Zip64 archive. */
+     G.ecrec.have_ecr64 = 1;
++    G.ecrec.ec_start -= ECLOC64_SIZE+4;
++    G.ecrec.ec64_start = ecrec64_start_offset;
++    G.ecrec.ec64_end = ecrec64_start_offset +
++                       12 + makeint64(&byterec[ECREC64_LENGTH]);
+ 
+     /* Update the "end-of-central-dir offset" for later checks. */
+     G.real_ecrec_offset = ecrec64_start_offset;
+@@ -1535,6 +1548,8 @@ static int find_ecrec(__G__ searchlen)  
+       makelong(&byterec[OFFSET_START_CENTRAL_DIRECTORY]);
+     G.ecrec.zipfile_comment_length =
+       makeword(&byterec[ZIPFILE_COMMENT_LENGTH]);
++    G.ecrec.ec_start = G.real_ecrec_offset;
++    G.ecrec.ec_end = G.ecrec.ec_start + 22 + G.ecrec.zipfile_comment_length;
+ 
+     /* Now, we have to read the archive comment, BEFORE the file pointer
+        is moved away backwards to seek for a Zip64 ECLOC64 structure.
+@@ -1888,48 +1903,85 @@ int getZip64Data(__G__ ef_buf, ef_len)
      and a 4-byte version of disk start number.
      Sets both local header and central header fields.  Not terribly clever,
      but it means that this procedure is only called in one place.
@@ -65,15 +112,15 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
 +        if (eb_id == EF_PKSZ64)
 +        {
 +          unsigned offset = EB_HEADSIZE;
-+
-+          if ((G.crec.ucsize == Z64FLGL) || (G.lrec.ucsize == Z64FLGL))
-+          {
-+            if (offset+ 8 > ef_len)
-+              return PK_ERR;
  
 -          if (G.crec.ucsize == 0xffffffff || G.lrec.ucsize == 0xffffffff){
 -            G.lrec.ucsize = G.crec.ucsize = makeint64(offset + ef_buf);
 -            offset += sizeof(G.crec.ucsize);
++          if ((G.crec.ucsize == Z64FLGL) || (G.lrec.ucsize == Z64FLGL))
++          {
++            if (offset+ 8 > ef_len)
++              return PK_ERR;
++
 +            G.crec.ucsize = G.lrec.ucsize = makeint64(offset + ef_buf);
 +            offset += 8;
            }
@@ -114,6 +161,8 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
 +#if 0
 +          break;                /* Expect only one EF_PKSZ64 block. */
 +#endif /* 0 */
++
++          G.pInfo->zip64 = TRUE;
          }
  
 -        /* Skip this extra field block */
@@ -121,7 +170,7 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
          ef_buf += (eb_len + EB_HEADSIZE);
          ef_len -= (eb_len + EB_HEADSIZE);
      }
-@@ -1984,7 +2021,7 @@ int getUnicodeData(__G__ ef_buf, ef_len)
+@@ -1984,7 +2036,7 @@ int getUnicodeData(__G__ ef_buf, ef_len)
          }
          if (eb_id == EF_UNIPATH) {
  
@@ -130,7 +179,23 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
            ush ULen = eb_len - 5;
            ulg chksum = CRCVAL_INITIAL;
  
-@@ -2440,16 +2477,17 @@ char *wide_to_local_string(wide_string, 
+@@ -2002,10 +2054,14 @@ int getUnicodeData(__G__ ef_buf, ef_len)
+           G.unipath_checksum = makelong(offset + ef_buf);
+           offset += 4;
+ 
++          if (!G.filename_full) {
++            /* Check if we have a unicode extra section but no filename set */
++            return PK_ERR;
++          }
++
+           /*
+            * Compute 32-bit crc
+            */
+-
+           chksum = crc32(chksum, (uch *)(G.filename_full),
+                          strlen(G.filename_full));
+ 
+@@ -2440,16 +2496,17 @@ char *wide_to_local_string(wide_string, 
    int state_dependent;
    int wsize = 0;
    int max_bytes = MB_CUR_MAX;
@@ -151,7 +216,7 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
      return NULL;
    }
  
-@@ -2487,8 +2525,28 @@ char *wide_to_local_string(wide_string, 
+@@ -2487,8 +2544,28 @@ char *wide_to_local_string(wide_string, 
      } else {
        /* no MB for this wide */
          /* use escape for wide character */
@@ -182,7 +247,7 @@ https://sources.debian.org/patches/unzip/6.0-28/28-cve-2022-0529-and-cve-2022-05
          free(escape_string);
      }
    }
-@@ -2540,9 +2598,18 @@ char *utf8_to_local_string(utf8_string, 
+@@ -2540,9 +2617,18 @@ char *utf8_to_local_string(utf8_string, 
    ZCONST char *utf8_string;
    int escape_all;
  {
