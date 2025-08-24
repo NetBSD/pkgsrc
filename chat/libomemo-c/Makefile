@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/08/13 15:02:26 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/24 16:36:15 wiz Exp $
 
 DISTNAME=	libomemo-c-0.5.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dino/}
 GITHUB_PROJECT=	libomemo-c

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/07/09 15:56:50 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/24 16:36:14 wiz Exp $
 
 DISTNAME=	plinkseq-0.08
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	biology
 MASTER_SITES=	#
 
