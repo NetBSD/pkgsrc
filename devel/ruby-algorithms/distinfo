@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/12/17 14:12:38 taca Exp $
+$NetBSD: distinfo,v 1.7 2025/08/24 13:53:21 taca Exp $
 
-BLAKE2s (algorithms-1.0.1.gem) = 216b4960b6d626d07a1e2a15faa87cf2596986232704bc8078f9e9e4d463a6a7
-SHA512 (algorithms-1.0.1.gem) = eb451d068bf892a5d21b25a21d206fe2f7c85cd0b922f198fa90a488f59e8d22bae815ed2bfedf8d175e08f04bf14a1fc9c4201866713ce7206a638ad5ed41f4
-Size (algorithms-1.0.1.gem) = 324096 bytes
+BLAKE2s (algorithms-1.1.0.gem) = 1da504afc19975d98e4c074abb376c6ca334ef1514bb76d35e9fd3ce446dde86
+SHA512 (algorithms-1.1.0.gem) = 29d0a239e5e5c5dde58c4608a15316d2bd054ff63f2def92b5092c32a8fb23c39156c537c5282e2fd507fbeb060216a702e59d7484829f679460d7ce3a14144d
+Size (algorithms-1.1.0.gem) = 326144 bytes
