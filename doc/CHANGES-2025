@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5122 2025/08/24 14:06:55 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5123 2025/08/24 14:08:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7441,3 +7441,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-rspec-support to 3.13.5 [taca 2025-08-24]
 	Updated devel/ruby-tins to 1.42.0 [taca 2025-08-24]
 	Updated graphics/ruby-mini-magick to 5.3.1 [taca 2025-08-24]
+	Updated mail/ruby-mime-types-data to 3.2025.0819 [taca 2025-08-24]
