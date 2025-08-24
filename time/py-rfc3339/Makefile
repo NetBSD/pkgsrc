@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/13 12:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/24 16:13:53 wiz Exp $
 
-DISTNAME=	pyrfc3339-2.0.1
+DISTNAME=	pyrfc3339-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyRFC3339/}
 
@@ -12,6 +11,7 @@ COMMENT=	Library for generating and parsing RFC 3339-compliant timestamps
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
