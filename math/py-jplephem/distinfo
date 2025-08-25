@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/02/07 07:34:39 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/08/25 17:47:19 adam Exp $
 
-BLAKE2s (jplephem-2.22.tar.gz) = d8349e0d127bcfaf1debd71f5e10550e983f9201b04e6f96872f88a58aadfef4
-SHA512 (jplephem-2.22.tar.gz) = 736b24b7791985dbf4d748629e218b387036cd817dfc90c057e4dc29ce62546827cedeaf72a9e9c11a8ad03c9b653780393830bad335fb760c3c4fc04cc7aff1
-Size (jplephem-2.22.tar.gz) = 43113 bytes
+BLAKE2s (jplephem-2.23.tar.gz) = 7b17f28d6b7949a08a64f716bd63550f4655ebf41ac4e222282a1c077a9b13a1
+SHA512 (jplephem-2.23.tar.gz) = 13e59d058b63cb157a32c0ac32988eb3514de2cd0e7ededa8f4b8193480cbdae263a36d1c84d07c67292cdce4181b8ba2ecd136fcdbc09e0c111dca562e7027f
+Size (jplephem-2.23.tar.gz) = 44989 bytes
