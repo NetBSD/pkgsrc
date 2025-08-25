@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/24 18:59:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/25 08:34:58 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	expect_test_helpers_core
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/expect_test_helpers_core/
 COMMENT=	Helper library for writing expectation tests
 LICENSE=	mit

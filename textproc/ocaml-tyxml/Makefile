@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2022/05/24 18:59:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2025/08/25 08:35:13 wiz Exp $
 #
 
 VERSION=	4.5.0
@@ -9,7 +9,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ocsigen.org/tyxml/
 COMMENT=	OCaml XML typing library
 LICENSE=	gnu-lgpl-v2.1 # with openssl exemption

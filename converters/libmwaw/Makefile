@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/12/29 15:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/08/25 08:34:52 wiz Exp $
 
 DISTNAME=	libmwaw-0.3.21
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/p/libmwaw/wiki/Home/
 COMMENT=	Import library for pre-OSX Mac text formats
 LICENSE=	mpl-2.0 OR gnu-lgpl-v2

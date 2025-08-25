@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/04/17 21:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/08/25 08:34:52 wiz Exp $
 
 DISTNAME=	libmspub-0.1.4
 PKGREVISION=	34
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libmspub/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wiki.documentfoundation.org/DLP/Libraries/libmspub
 COMMENT=	Library for importing Microsoft Publisher content
 LICENSE=	mpl-1.1 OR gnu-lgpl-v2 OR gnu-gpl-v2

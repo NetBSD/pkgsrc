@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/30 09:11:17 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:58 wiz Exp $
 
 DISTNAME=	fpath-0.7.3
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/fpath/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://erratique.ch/software/fpath/
 COMMENT=	System-independent file path for OCaml
 LICENSE=	isc

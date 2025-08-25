@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/05/24 18:51:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/25 08:35:00 wiz Exp $
 
 DISTNAME=	lwt_log-1.1.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 GITHUB_PROJECT=	lwt_log
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/lwt_log/
 COMMENT=	Lwt-friendly logging library
 LICENSE=	gnu-lgpl-v2.1

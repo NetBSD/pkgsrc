@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/24 18:59:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/25 08:35:05 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.26.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-ppx/}
 GITHUB_PROJECT=	ppxlib
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml-ppx/ppxlib/
 COMMENT=	Base library and tools for ppx rewriters
 LICENSE=	apache-2.0

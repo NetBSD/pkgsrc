@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2017/08/01 17:40:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/25 08:35:08 wiz Exp $
 
 DISTNAME=		eag-2.6
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.ru.nl/pub/eag/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		jaapb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.cs.ru.nl/~kees/eag/
 COMMENT=		Transducer generator using affix grammars
 LICENSE=		eag-license

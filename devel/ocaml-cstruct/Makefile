@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/05/24 18:59:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/25 08:34:57 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-6.1.0
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	ocaml-cstruct
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-cstruct/
 COMMENT=	Map OCaml arrays onto C-like structs
 LICENSE=	isc

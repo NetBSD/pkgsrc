@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/06/03 09:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/25 08:34:57 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.5
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	duff
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/duff/
 COMMENT=	Library to generate ocaml-angstrom decoders and encoders
 LICENSE=	modified-bsd

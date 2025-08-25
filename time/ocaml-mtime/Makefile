@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/24 18:51:56 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/25 08:35:14 wiz Exp $
 
 DISTNAME=	mtime-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	https://erratique.ch/software/mtime/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://erratique.ch/software/mtime/releases/
 COMMENT=	Monotonic wall-clock time for OCaml
 LICENSE=	isc

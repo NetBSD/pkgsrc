@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/24 18:51:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:35:03 wiz Exp $
 
 GITHUB_PROJECT=	ppx_fields_conv
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/ppx_fields_conv/
 COMMENT=	Generation of access and iteration functions for OCaml records
 LICENSE=	mit

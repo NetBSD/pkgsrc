@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2022/05/24 18:51:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/25 08:35:13 wiz Exp $
 
 VERSION=	0.0.2
 GITHUB_PROJECT=	uchar
@@ -9,7 +9,7 @@ PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/uchar/
 COMMENT=	Compatibility library for the OCaml UChar module
 LICENSE=	gnu-lgpl-v2.1
