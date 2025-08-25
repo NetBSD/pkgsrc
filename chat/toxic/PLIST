@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/25 20:03:22 ktnb Exp $
+bin/toxic
+man/man1/toxic.1
+man/man5/toxic.conf.5
+share/applications/toxic.desktop
+share/toxic/nameservers
+share/toxic/sounds/ToxicContactOffline.wav
+share/toxic/sounds/ToxicContactOnline.wav
+share/toxic/sounds/ToxicError.wav
+share/toxic/sounds/ToxicIncomingCall.wav
+share/toxic/sounds/ToxicOutgoingCall.wav
+share/toxic/sounds/ToxicRecvMessage.wav
+share/toxic/sounds/ToxicTransferComplete.wav
+share/toxic/sounds/ToxicTransferStart.wav
+share/toxic/toxic.conf.example

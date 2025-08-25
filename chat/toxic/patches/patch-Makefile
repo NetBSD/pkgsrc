@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/08/25 20:03:22 ktnb Exp $
+
+binary will fail to link if we aren't expicit
+
+--- Makefile.orig	2025-01-09 14:41:43.000000000 +0000
++++ Makefile
+@@ -44,7 +44,7 @@ LDFLAGS += -lncursesw
+ endif
+ ifeq ($(UNAME_S), NetBSD)
+ LIBS := $(filter-out ncursesw, $(LIBS))
+-LDFLAGS += -lncursesw
++LDFLAGS += -lncursesw -ltoxcore -lconfig -lcurl
+ endif
+ ifeq ($(UNAME_S), Darwin)
+     -include $(CFG_DIR)/systems/Darwin.mk
