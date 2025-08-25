@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5167 2025/08/25 18:35:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5168 2025/08/25 20:07:01 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7501,3 +7501,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-sugar to 1.1.1 [adam 2025-08-25]
 	Updated devel/meson to 1.9.0 [wiz 2025-08-25]
 	Updated devel/py-ruff to 0.12.10 [wiz 2025-08-25]
+	Updated chat/toxic to 0.16.1 [ktnb 2025-08-25]
