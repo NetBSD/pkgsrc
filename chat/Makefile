@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2025/08/13 15:02:58 gdt Exp $
+# $NetBSD: Makefile,v 1.301 2025/08/25 20:03:21 ktnb Exp $
 #
 
 COMMENT=	Communication programs
@@ -146,6 +146,7 @@ SUBDIR+=	tkirc2
 SUBDIR+=	toot
 SUBDIR+=	tootstream
 SUBDIR+=	toxcore
+SUBDIR+=	toxic
 SUBDIR+=	twitch-tui
 SUBDIR+=	unrealircd
 SUBDIR+=	unrealircd6
