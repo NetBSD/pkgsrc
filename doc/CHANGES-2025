@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5159 2025/08/25 16:27:39 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5160 2025/08/25 16:55:55 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7490,3 +7490,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/jicofo to 2.0.10431 [ktnb 2025-08-25]
 	Updated chat/jitsi-meet-prosody to 2.0.10431 [ktnb 2025-08-25]
 	Updated news/sfeed to 2.2 [leot 2025-08-25]
+	Updated chat/toxcore to 0.2.21 [ktnb 2025-08-25]
