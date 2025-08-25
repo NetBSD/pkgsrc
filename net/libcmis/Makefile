@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/08/21 16:38:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2025/08/25 08:35:09 wiz Exp $
 
 DISTNAME=	libcmis-0.6.2
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=tdf/}
 GITHUB_PROJECT=	libcmis
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tdf/libcmis
 COMMENT=	Client library for the CMIS interface
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.1

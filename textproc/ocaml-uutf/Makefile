@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2022/05/24 18:59:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/25 08:35:13 wiz Exp $
 
 DISTNAME=	uutf-1.0.3
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/uutf/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/uutf/
 COMMENT=	Unicode library for OCaml
 LICENSE=	isc

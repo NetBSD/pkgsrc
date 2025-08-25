@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/24 18:51:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/25 08:34:57 wiz Exp $
 
 VERSION=	1.7.8
 GITHUB_PROJECT=	ocaml-extlib
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ygrek/ocaml-extlib
 COMMENT=	Alternative standard library for OCaml
 LICENSE=	gnu-lgpl-v2.1

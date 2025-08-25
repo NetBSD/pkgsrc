@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/24 18:51:48 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/25 08:34:57 wiz Exp $
 
 DISTNAME=	digestif-1.1.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	digestif
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/digestif/
 COMMENT=	Simple hash algorithms in OCaml
 LICENSE=	mit

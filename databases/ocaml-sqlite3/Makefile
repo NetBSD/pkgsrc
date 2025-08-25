@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/04/17 21:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/08/25 08:34:53 wiz Exp $
 
 DISTNAME=	sqlite3-5.1.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	sqlite3-ocaml
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mmottl/sqlite3-ocaml/
 COMMENT=	Sqlite bindings for OCaml
 LICENSE=	mit

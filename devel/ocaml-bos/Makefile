@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/30 21:17:27 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:56 wiz Exp $
 
 DISTNAME=	bos-0.2.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/bos/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://erratique.ch/software/bos
 COMMENT=	Basic OS interaction for OCaml
 LICENSE=	isc

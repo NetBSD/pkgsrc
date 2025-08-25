@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/05/24 18:59:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/25 08:35:07 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.3.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 GITHUB_PROJECT=	stdlib-shims
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/stdlib-shims/
 COMMENT=	OCaml stdlib compatibility module
 LICENSE=	gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2022/05/24 18:59:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/25 08:34:52 wiz Exp $
 #
 
 DISTNAME=	caml${GITHUB_PROJECT}-1.3
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	dbm
 GITHUB_TAG=	camldbm-${PKGVERSION_NOREV}
 DIST_SUBDIR=	ocaml-
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/dbm/
 COMMENT=	OCaml binding to the NDBM and GDBM database library
 LICENSE=	gnu-lgpl-v2

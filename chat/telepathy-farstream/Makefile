@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2023/12/30 01:31:58 zafer Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:52 wiz Exp $
 
 DISTNAME=	telepathy-farstream-0.6.2
 PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://telepathy.freedesktop.org/releases/telepathy-farstream/
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://telepathy.freedesktop.org/doc/telepathy-farstream/
 COMMENT=	Farstream connection manager for Telepathy
 LICENSE=	gnu-lgpl-v2.1

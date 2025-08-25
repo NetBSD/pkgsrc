@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/24 18:59:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/25 08:34:55 wiz Exp $
 
 VERSION=	1.1.0
 GITHUB_PROJECT=	bigarray-compat
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/bigarray-compat/
 COMMENT=	Compatibility package for the BigArray library in OCaml
 LICENSE=	isc

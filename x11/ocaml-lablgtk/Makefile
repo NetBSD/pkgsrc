@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2025/04/24 14:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2025/08/25 08:35:16 wiz Exp $
 
 GITHUB_PROJECT=	lablgtk
 DISTNAME=	${GITHUB_PROJECT}-2.18.13
@@ -7,7 +7,7 @@ PKGREVISION=	19
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/garrigue/lablgtk
 COMMENT=	GTK+ 2.x bindings for Objective Caml
 # for installed files; more restrictions on applications/

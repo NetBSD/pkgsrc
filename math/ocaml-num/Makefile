@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/24 18:51:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/25 08:35:08 wiz Exp $
 
 GITHUB_PROJECT=	num
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/num/
 COMMENT=	Library for arbitrary-precision arithmetic
 LICENSE=	gnu-lgpl-v2.1

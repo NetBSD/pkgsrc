@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2025/07/07 05:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/25 08:35:14 wiz Exp $
 
 DISTNAME=	pybtex-docutils-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex-docutils/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mcmtroffaes/pybtex-docutils
 COMMENT=	Docutils backend for pybtex
 LICENSE=	mit

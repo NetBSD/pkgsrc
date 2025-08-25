@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/30 01:05:00 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:57 wiz Exp $
 
 .include "../../devel/ocaml-dune/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGNAME=	ocaml-dune-configurator-${DUNE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	devel
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/dune/
 COMMENT=	Configuration test library for Dune
 

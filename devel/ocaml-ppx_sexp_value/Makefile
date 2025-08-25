@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/24 18:59:30 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/25 08:35:04 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	ppx_sexp_value
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/ppx_sexp_value/
 COMMENT=	PPX rewriter that simplifies building s-expressions from OCaml values
 LICENSE=	mit

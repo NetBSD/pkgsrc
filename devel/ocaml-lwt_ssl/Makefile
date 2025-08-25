@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/24 22:08:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/25 08:35:00 wiz Exp $
 
 GITHUB_PROJECT=	lwt_ssl
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ PKGREVISION=	3
 CATEGORIES=	devel security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/lwt_ssl/
 COMMENT=	SSL module for ocaml-lwt
 LICENSE=	gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/05/24 18:51:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/25 08:34:59 wiz Exp $
 
 GITHUB_PROJECT=	ke
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ke/
 COMMENT=	Fast implementation of queue in OCaml
 LICENSE=	modified-bsd

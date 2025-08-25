@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/05/24 18:59:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/25 08:34:55 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	base
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DIST_SUBDIR=	ocaml-${GITHUB_PROJECT}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/base/
 COMMENT=	Alternative standard library for OCaml
 LICENSE=	apache-2.0

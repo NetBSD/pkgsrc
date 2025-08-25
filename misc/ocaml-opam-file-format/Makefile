@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/04/27 12:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/25 08:35:09 wiz Exp $
 
 VERSION=	2.1.6
 GITHUB_PROJECT=	opam-file-format
@@ -8,7 +8,7 @@ PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opam.ocaml.org/
 COMMENT=	Parser and printer for the opam file syntax
 LICENSE=	gnu-lgpl-v3

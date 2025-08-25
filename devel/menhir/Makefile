@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2022/05/24 18:59:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.34 2025/08/25 08:34:54 wiz Exp $
 #
 
 DISTNAME=	menhir-20220210
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.inria.fr/fpottier/${PKGBASE}/-/archive/${PKGVERSION_NOREV}/
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gallium.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
 LICENSE=	qpl-v1.0

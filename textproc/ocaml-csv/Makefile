@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2022/05/24 18:59:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/25 08:35:12 wiz Exp $
 
 VERSION=	2.4
 PKGREVISION=	1
@@ -7,7 +7,7 @@ DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Chris00/ocaml-csv/
 COMMENT=	CSV library for OCaml
 LICENSE=	gnu-lgpl-v2.1

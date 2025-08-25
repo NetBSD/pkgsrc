@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/05/24 18:59:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/25 08:35:00 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-2.3.0
 CATEGORIES=	devel
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-ppx/}
 GITHUB_PROJECT=	ocaml-migrate-parsetree
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml-ppx/ocaml-migrate-parsetree/
 COMMENT=	Migrate parse trees between versions of OCaml
 LICENSE=	gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/24 14:15:41 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/25 08:35:12 wiz Exp $
 #
 
 PKGNAME=	qoauth-1.0.1
@@ -8,7 +8,7 @@ CATEGORIES=	security
 #MASTER_SITES=	http://files.ayoy.net/qoauth/release/1.0.1/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://files.ayoy.net/qoauth/release/1.0.1/src/
 COMMENT=	OAuth library for Qt
 LICENSE=	gnu-lgpl-v3

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2022/06/04 08:43:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/25 08:35:15 wiz Exp $
 
 GITHUB_PROJECT=	ocsigen-i18n
 DISTNAME=	${GITHUB_PROJECT}-4.0.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=besport/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/besport/ocsigen-i18n/
 COMMENT=	I18n package for Ocsigen
 LICENSE=	gnu-lgpl-v2.1

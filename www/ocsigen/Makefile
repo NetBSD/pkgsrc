@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/10/24 22:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/08/25 08:35:15 wiz Exp $
 #
 
 VERSION=	5.0.1
@@ -9,7 +9,7 @@ DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Web programming framework for OCaml
 LICENSE=	gnu-lgpl-v2.1

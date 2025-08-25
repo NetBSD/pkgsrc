@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/06/03 09:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/25 08:35:15 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-5.0.0
 CATEGORIES=	www
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	ocaml-cohttp
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-cohttp/
 COMMENT=	OCaml library for HTTP clients and servers
 LICENSE=	isc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/13 08:19:27 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/25 08:35:10 wiz Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	${GITHUB_PROJECT}-0.0.5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dinosaure/}
 GITHUB_PROJECT=	mimic
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dinosaure/mimic/
 COMMENT=	Dynamic instantiation of transmission protocols
 LICENSE=	isc

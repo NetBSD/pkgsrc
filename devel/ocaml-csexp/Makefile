@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/05 21:03:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/25 08:34:56 wiz Exp $
 
 GITHUB_PROJECT=	csexp
 DISTNAME=	${GITHUB_PROJECT}-1.5.2
@@ -6,7 +6,7 @@ PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-dune/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml-dune/csexp/
 COMMENT=	Canonical S-expressions library for OCaml
 LICENSE=	mit

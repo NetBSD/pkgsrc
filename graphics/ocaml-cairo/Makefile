@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/04/24 14:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/08/25 08:35:08 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.6.5
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 GITHUB_PROJECT=	ocaml-cairo
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Chris00/ocaml-cairo/
 COMMENT=	Bindings for OCaml to the cairo library
 LICENSE=	gnu-lgpl-v3

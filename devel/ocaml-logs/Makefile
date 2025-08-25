@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/24 18:51:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/25 08:34:59 wiz Exp $
 
 DISTNAME=	logs-0.7.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/logs/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://erratique.ch/software/logs/
 COMMENT=	Logging infrastructure for OCaml
 LICENSE=	isc

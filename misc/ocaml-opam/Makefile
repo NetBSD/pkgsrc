@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/04/19 07:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/08/25 08:35:09 wiz Exp $
 
 VERSION=	2.1.3
 GITHUB_PROJECT=	opam
@@ -8,7 +8,7 @@ PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opam.ocaml.org/
 COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3

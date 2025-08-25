@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2025/07/22 07:13:51 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/25 08:35:14 wiz Exp $
 
 DISTNAME=	sphinxcontrib_bibtex-2.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-bibtex/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mcmtroffaes/sphinxcontrib-bibtex
 COMMENT=	Sphinx extension for BibTeX style citations
 LICENSE=	2-clause-bsd

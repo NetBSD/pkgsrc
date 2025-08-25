@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/24 18:51:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/25 08:35:06 wiz Exp $
 
 GITHUB_PROJECT=	result
 DISTNAME=	${GITHUB_PROJECT}-1.5
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/result/
 COMMENT=	OCaml compatibility library for Result module
 LICENSE=	modified-bsd

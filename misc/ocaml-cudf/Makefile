@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/05/24 18:51:53 jaapb Exp $
+# $NetBSD: Makefile,v 1.20 2025/08/25 08:35:09 wiz Exp $
 
 DISTNAME=	cudf-0.9
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	7
 CATEGORIES=	misc
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/36602/
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gforge.inria.fr/projects/cudf
 COMMENT=	OCaml library for the Common Upgradeability Description Format
 LICENSE=	gnu-lgpl-v3
