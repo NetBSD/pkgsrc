@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.1 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_mod.rs,v 1.2 2025/08/25 17:51:12 wiz Exp $
 
 Apply https://github.com/rust-lang/libc/pull/4265/files
 to fix getmntinfo() from rust.

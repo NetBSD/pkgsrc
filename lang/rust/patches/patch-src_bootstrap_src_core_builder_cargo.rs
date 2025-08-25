@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_src_core_builder_cargo.rs,v 1.2 2025/06/16 21:10:44 he Exp $
+$NetBSD: patch-src_bootstrap_src_core_builder_cargo.rs,v 1.3 2025/08/25 17:51:12 wiz Exp $
 
 Find external libunwind and libLLVM in pkgsrc (not just Linux).
 Use @PREFIX@ in rpath.

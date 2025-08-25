@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.17 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.18 2025/08/25 17:51:12 wiz Exp $
 
 Don't attempt incremental operations on sparc64, ref.
 https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_incremental_build.patch/

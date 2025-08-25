@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_lzma-sys-0.1.20_config.h,v 1.1 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-vendor_lzma-sys-0.1.20_config.h,v 1.2 2025/08/25 17:51:13 wiz Exp $
 
 clock_gettime() is available also on NetBSD.
 
