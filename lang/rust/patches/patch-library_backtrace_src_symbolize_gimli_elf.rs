@@ -1,4 +1,4 @@
-$NetBSD: patch-library_backtrace_src_symbolize_gimli_elf.rs,v 1.9 2025/04/08 09:31:06 wiz Exp $
+$NetBSD: patch-library_backtrace_src_symbolize_gimli_elf.rs,v 1.10 2025/08/25 17:51:12 wiz Exp $
 
 Make NetBSD also find its debug libraries, if present.
 

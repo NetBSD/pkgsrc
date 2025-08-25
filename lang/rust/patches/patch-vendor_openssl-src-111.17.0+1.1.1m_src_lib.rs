@@ -1,8 +1,10 @@
-$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.2 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-vendor_openssl-src-111.17.0+1.1.1m_src_lib.rs,v 1.1 2025/08/25 17:51:13 wiz Exp $
 
---- vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs.orig	2024-08-29 18:09:29.494697634 +0000
-+++ vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs
-@@ -239,6 +239,8 @@ impl Build {
+Add the various NetBSD targets.
+
+--- vendor/openssl-src-111.17.0+1.1.1m/src/lib.rs.orig	2025-05-18 13:26:41.970702318 +0000
++++ vendor/openssl-src-111.17.0+1.1.1m/src/lib.rs
+@@ -219,6 +219,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
              "aarch64-unknown-linux-musl" => "linux-aarch64",
@@ -11,7 +13,7 @@ $NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.2 2025/04/08 09
              "aarch64-pc-windows-msvc" => "VC-WIN64-ARM",
              "arm-linux-androideabi" => "linux-armv4",
              "armv7-linux-androideabi" => "linux-armv4",
-@@ -249,14 +251,17 @@ impl Build {
+@@ -229,14 +231,17 @@ impl Build {
              "armv5te-unknown-linux-gnueabi" => "linux-armv4",
              "armv5te-unknown-linux-musleabi" => "linux-armv4",
              "armv6-unknown-freebsd" => "BSD-generic32",
@@ -29,27 +31,26 @@ $NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.2 2025/04/08 09
              "i686-apple-darwin" => "darwin-i386-cc",
              "i686-linux-android" => "linux-elf",
              "i686-pc-windows-gnu" => "mingw",
-@@ -264,6 +269,7 @@ impl Build {
+@@ -244,6 +249,7 @@ impl Build {
              "i686-unknown-freebsd" => "BSD-x86-elf",
              "i686-unknown-linux-gnu" => "linux-elf",
              "i686-unknown-linux-musl" => "linux-elf",
 +            "i686-unknown-netbsd" => "BSD-x86-elf",
-             "loongarch64-unknown-linux-gnu" => "linux-generic64",
-             "loongarch64-unknown-linux-musl" => "linux-generic64",
              "mips-unknown-linux-gnu" => "linux-mips32",
-@@ -274,9 +280,11 @@ impl Build {
+             "mips-unknown-linux-musl" => "linux-mips32",
+             "mips64-unknown-linux-gnuabi64" => "linux64-mips64",
+@@ -252,8 +258,10 @@ impl Build {
              "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
 +            "mipsel-unknown-netbsd" => "NetBSD-generic32",
              "powerpc-unknown-freebsd" => "BSD-generic32",
              "powerpc-unknown-linux-gnu" => "linux-ppc",
-             "powerpc-unknown-linux-gnuspe" => "linux-ppc",
 +            "powerpc-unknown-netbsd" => "BSD-generic32",
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-@@ -284,8 +292,10 @@ impl Build {
+@@ -261,8 +269,10 @@ impl Build {
              "powerpc64le-unknown-linux-gnu" => "linux-ppc64le",
              "powerpc64le-unknown-linux-musl" => "linux-ppc64le",
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",

@@ -1,12 +1,14 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_Targets_sparc64__unknown__netbsd.rs,v 1.1 2025/06/16 21:10:43 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_Targets_sparc64__unknown__netbsd.rs,v 1.2 2025/08/25 17:51:12 wiz Exp $
+
+Minor adjustments so that this builds.
 
 --- compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs.orig	2025-03-31 21:37:24.000000000 +0000
 +++ compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs
 @@ -1,12 +1,14 @@
  use rustc_abi::Endian;
  
--use crate::spec::{Cc, LinkerFlavor, Lld, Target, TargetOptions, base};
-+use crate::spec::{Cc, LinkerFlavor, Lld, Target, base};
+-use crate::spec::{Cc, LinkerFlavor, Lld, Target, TargetMetadata, TargetOptions, base};
++use crate::spec::{Cc, LinkerFlavor, Lld, Target, TargetMetadata, base};
  
  pub(crate) fn target() -> Target {
      let mut base = base::netbsd::opts();
