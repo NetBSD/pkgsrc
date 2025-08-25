@@ -1,10 +1,10 @@
-$NetBSD: patch-src_llvm-project_llvm_CMakeLists.txt,v 1.14 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-src_llvm-project_llvm_CMakeLists.txt,v 1.15 2025/08/25 17:51:12 wiz Exp $
 
 Don't implement sys/regset.h workaround, fix source instead.
 
 --- src/llvm-project/llvm/CMakeLists.txt.orig	2018-03-10 02:51:13.000000000 +0000
 +++ src/llvm-project/llvm/CMakeLists.txt
-@@ -939,11 +939,6 @@ if(LLVM_TARGET_IS_CROSSCOMPILE_HOST)
+@@ -1225,11 +1225,6 @@ if(LLVM_TARGET_IS_CROSSCOMPILE_HOST)
  # (this is a variable that CrossCompile sets on recursive invocations)
  endif()
  
@@ -14,5 +14,5 @@ Don't implement sys/regset.h workaround, fix source instead.
 -endif( ${CMAKE_SYSTEM_NAME} MATCHES SunOS )
 -
  # Make sure we don't get -rdynamic in every binary. For those that need it,
- # use export_executable_symbols(target).
+ # use EXPORT_SYMBOLS argument.
  set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")

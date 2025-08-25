@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_src_core_build__steps_install.rs,v 1.2 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-src_bootstrap_src_core_build__steps_install.rs,v 1.3 2025/08/25 17:51:12 wiz Exp $
 
 --- src/bootstrap/src/core/build_steps/install.rs.orig	2006-07-24 01:21:28.000000000 +0000
 +++ src/bootstrap/src/core/build_steps/install.rs

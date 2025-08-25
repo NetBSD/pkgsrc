@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_line-index-0.1.2_src_lib.rs,v 1.1 2025/04/08 09:31:07 wiz Exp $
+$NetBSD: patch-vendor_line-index-0.1.2_src_lib.rs,v 1.2 2025/08/25 17:51:13 wiz Exp $
 
 Do not attempt use of neon extension in big-endian mode.
 

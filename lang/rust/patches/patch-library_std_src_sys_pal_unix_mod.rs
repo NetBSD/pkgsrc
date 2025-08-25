@@ -1,4 +1,4 @@
-$NetBSD: patch-library_std_src_sys_pal_unix_mod.rs,v 1.3 2025/06/16 21:10:44 he Exp $
+$NetBSD: patch-library_std_src_sys_pal_unix_mod.rs,v 1.4 2025/08/25 17:51:12 wiz Exp $
 
 Add libexecinfo for backtrace() on NetBSD.
 
