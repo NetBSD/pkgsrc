@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/24 18:59:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/25 08:35:10 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-5.3.0
 CATEGORIES=	net
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	ocaml-ipaddr
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-ipaddr/
 COMMENT=	Library for manipulation of IP and MAC addresses
 LICENSE=	isc

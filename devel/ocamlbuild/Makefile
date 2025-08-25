@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2025/02/23 11:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/08/25 08:35:07 wiz Exp $
 
 DISTNAME=	ocamlbuild-0.16.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml/ocamlbuild/
 COMMENT=	Build system for OCaml
 LICENSE=	gnu-lgpl-v2

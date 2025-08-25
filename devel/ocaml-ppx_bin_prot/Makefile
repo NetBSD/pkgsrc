@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/24 18:59:27 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:35:01 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	ppx_bin_prot
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/ppx_bin_prot/
 COMMENT=	Generation of bin_prot readers and writers from types
 LICENSE=	mit

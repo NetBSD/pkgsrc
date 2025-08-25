@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/20 08:16:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/25 08:34:58 wiz Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	${GITHUB_PROJECT}-0.3.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dinosaure/}
 GITHUB_PROJECT=	hxd
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dinosaure/hxd/
 COMMENT=	Hexdump in OCaml
 LICENSE=	mit

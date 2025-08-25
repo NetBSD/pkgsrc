@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/05/24 18:59:23 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/25 08:34:56 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	core
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/core/
 COMMENT=	Standard library overlay for OCaml by Jane Street
 LICENSE=	mit

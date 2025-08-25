@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/24 18:59:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/25 08:34:52 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-1.4.3
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	decompress
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/decompress/
 COMMENT=	Pure OCaml implementation of Zlib
 LICENSE=	mit

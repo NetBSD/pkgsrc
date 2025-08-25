@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2022/05/24 18:59:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.34 2025/08/25 08:34:53 wiz Exp $
 #
 
 VERSION=	1.2.4
@@ -8,7 +8,7 @@ DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
-MAINTAINER=		jaapb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/ygrek/ocaml-mysql
 COMMENT=		Ocaml library for MySQL database access
 LICENSE=		gnu-lgpl-v2.1

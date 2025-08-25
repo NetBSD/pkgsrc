@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/11/05 21:08:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/25 08:35:09 wiz Exp $
 
 DISTNAME=	topkg-1.0.7
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://erratique.ch/software/topkg/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/topkg/
 COMMENT=	Transitory OCaml software packager
 LICENSE=	isc

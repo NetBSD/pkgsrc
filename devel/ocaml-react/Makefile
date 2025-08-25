@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2023/12/30 21:20:06 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2025/08/25 08:35:05 wiz Exp $
 
 DISTNAME=	react-1.2.2
 PKGNAME=	ocaml-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	https://erratique.ch/software/react/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://erratique.ch/software/react
 COMMENT=	OCaml module for functional reactive programming
 LICENSE=	isc

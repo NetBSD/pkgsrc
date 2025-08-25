@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2023/11/05 21:31:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.48 2025/08/25 08:34:59 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -6,7 +6,7 @@
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ocsigen.org/
 COMMENT=	Cooperative threading library for OCaml
 

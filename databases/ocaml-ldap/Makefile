@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/10/24 22:08:30 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/25 08:34:53 wiz Exp $
 
 VERSION=	2.4.2
 GITHUB_PROJECT=	ocamldap
@@ -9,7 +9,7 @@ DISTNAME=	ocamldap-${VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kit-ty-kate/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kit-ty-kate/ocamldap
 COMMENT=	OCamL implementation of the LDAP protocol
 LICENSE=	gnu-lgpl-v2.1

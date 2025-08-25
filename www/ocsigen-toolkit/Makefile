@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2022/06/03 12:51:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/25 08:35:16 wiz Exp $
 
 GITHUB_PROJECT=	ocsigen-toolkit
 DISTNAME=	${GITHUB_PROJECT}-3.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/ocsigen-toolkit/
 COMMENT=	User interface widgets for Ocsigen applications
 LICENSE=	gnu-lgpl-v2.1
