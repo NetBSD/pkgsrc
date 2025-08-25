@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5152 2025/08/25 09:15:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5153 2025/08/25 09:41:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7480,3 +7480,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-authlib to 1.6.2 [adam 2025-08-25]
 	Updated net/libtorrent to 0.15.6 [adam 2025-08-25]
 	Updated net/rtorrent to 0.15.6 [adam 2025-08-25]
+	Updated www/py-beautifulsoup4 to 4.13.5 [adam 2025-08-25]
+	Updated devel/py-coverage to 7.10.5 [adam 2025-08-25]
