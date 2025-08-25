@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5151 2025/08/25 08:21:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5152 2025/08/25 09:15:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7478,3 +7478,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-sqlite to 3.10.4 [taca 2025-08-24]
 	Updated devel/gperftools to 2.17.2 [adam 2025-08-25]
 	Updated security/py-authlib to 1.6.2 [adam 2025-08-25]
+	Updated net/libtorrent to 0.15.6 [adam 2025-08-25]
+	Updated net/rtorrent to 0.15.6 [adam 2025-08-25]
