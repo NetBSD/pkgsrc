@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5162 2025/08/25 17:47:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5163 2025/08/25 17:51:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7495,3 +7495,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-checkdmarc to 5.8.9 [adam 2025-08-25]
 	Added textproc/mdbook version 0.4.52 [adam 2025-08-25]
 	Updated math/py-jplephem to 2.23 [adam 2025-08-25]
+	Updated lang/rust to 1.88.0 [wiz 2025-08-25]
