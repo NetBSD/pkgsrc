@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5156 2025/08/25 15:45:45 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5157 2025/08/25 15:46:05 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7487,3 +7487,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ndiff to 7.98 [adam 2025-08-25]
 	Updated net/zenmap to 7.98 [adam 2025-08-25]
 	Updated chat/jitsi-videobridge to 2.0.10431 [ktnb 2025-08-25]
+	Updated chat/jicofo to 2.0.10431 [ktnb 2025-08-25]
