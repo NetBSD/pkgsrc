@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2022/05/24 18:59:26 jaapb Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/25 08:35:00 wiz Exp $
 
 .include "../../devel/ocaml-lwt/Makefile.common"
 
 PKGNAME=	ocaml-lwt_react-1.1.5
 CATEGORIES=	devel
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/lwt/
 COMMENT=	Reactive programming module for ocaml-lwt
 

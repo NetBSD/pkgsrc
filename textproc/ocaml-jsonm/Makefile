@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/25 08:35:13 wiz Exp $
 
 DISTNAME=	jsonm-1.0.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/jsonm/releases/
 EXTRACT_SUFX=	.tbz
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://erratique.ch/software/jsonm/
 COMMENT=	OCaml streaming codec for JSON
 LICENSE=	isc

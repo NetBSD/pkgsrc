@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/05/24 18:59:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.9 2025/08/25 08:34:54 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.15.0
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 GITHUB_PROJECT=	async_unix
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/async_unix/
 COMMENT=	Asynchronous execution library from Jane Street (unix)
 LICENSE=	mit

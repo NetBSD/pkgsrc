@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/05/24 18:59:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2025/08/25 08:35:09 wiz Exp $
 
 GITHUB_PROJECT=	ocaml-conduit
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -6,7 +6,7 @@ DISTNAME=	${GITHUB_PROJECT}-5.1.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-conduit/
 COMMENT=	Dereference URIs into OCaml communication channels
 LICENSE=	isc

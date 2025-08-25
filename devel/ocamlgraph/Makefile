@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.71 2025/04/24 14:13:39 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2025/08/25 08:35:07 wiz Exp $
 
 DISTNAME=	ocamlgraph-1.8.8
 PKGREVISION=	46
 CATEGORIES=	devel
 MASTER_SITES=	http://ocamlgraph.lri.fr/download/
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ocamlgraph.lri.fr/
 COMMENT=	Graph library for OCaml
 LICENSE=	gnu-lgpl-v2.1

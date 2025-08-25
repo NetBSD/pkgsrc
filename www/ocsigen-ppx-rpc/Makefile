@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/04 10:01:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/25 08:35:15 wiz Exp $
 
 GITHUB_PROJECT=	ocsigen-ppx-rpc
 DISTNAME=	${GITHUB_PROJECT}-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/ocsigen-ppx-rpc/
 COMMENT=	OCaml PPX extension for Ocsigen RPCs
 LICENSE=	gnu-lgpl-v2.1

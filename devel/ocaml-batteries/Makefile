@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/30 09:52:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/25 08:34:55 wiz Exp $
 
 VERSION=	3.5.1
 GITHUB_PROJECT=	batteries-included
@@ -8,7 +8,7 @@ PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-batteries-team/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml-batteries-team/batteries-included/
 COMMENT=	Alternative standard library for OCaml
 LICENSE=	gnu-lgpl-v2.1

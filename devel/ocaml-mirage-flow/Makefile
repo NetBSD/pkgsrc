@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/06/13 08:12:02 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/25 08:35:00 wiz Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	${GITHUB_PROJECT}-3.0.0
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_PROJECT=	mirage-flow
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/mirage-flow/
 COMMENT=	Flow implementations for Mirage
 LICENSE=	isc

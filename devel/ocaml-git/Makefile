@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/01/08 01:52:38 gutteridge Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/25 08:34:58 wiz Exp $
 
 GITHUB_PROJECT=	ocaml-git
 DISTNAME=	${GITHUB_PROJECT}-2.0.0
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-git/
 COMMENT=	Pure-language git bindings for OCaml
 LICENSE=	isc

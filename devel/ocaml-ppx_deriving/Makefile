@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2022/05/24 18:59:28 jaapb Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/25 08:35:02 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-5.2.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml-ppx/}
 GITHUB_PROJECT=	ppx_deriving
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocaml-ppx/ppx_deriving/
 COMMENT=	Type-driven code generation for OCaml
 LICENSE=	mit

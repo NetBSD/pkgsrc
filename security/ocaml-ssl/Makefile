@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/10/24 22:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/08/25 08:35:12 wiz Exp $
 #
 
 DISTNAME=	ocaml-ssl-0.5.10
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=savonet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/savonet/ocaml-ssl
 COMMENT=	SSL library for OCaml
 LICENSE=	gnu-lgpl-v2.1

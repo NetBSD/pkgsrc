@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2025/07/22 07:12:07 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/25 08:35:14 wiz Exp $
 
 DISTNAME=	pybtex-0.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybtex/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pybtex.org/
 COMMENT=	BibTeX-compatible bibliography processor written in Python
 LICENSE=	mit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/05/24 18:59:20 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/25 08:34:53 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-1.1.0
 CATEGORIES=	databases
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	ocsipersist
 GITHUB_TAG=	${PKGVERSION_NOREV}
 #DIST_SUBDIR=	${GITHUB_PROJECT}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/ocsigen/ocsipersist/
 COMMENT=	Key/value storage libraries for OCaml
 LICENSE=	gnu-lgpl-v2.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2022/05/24 18:59:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/25 08:34:55 wiz Exp $
 
 VERSION=	3.5.0
 GITHUB_PROJECT=	ocaml-base64
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-base64/
 COMMENT=	Base64 encoding and decoding in OCaml
 LICENSE=	isc

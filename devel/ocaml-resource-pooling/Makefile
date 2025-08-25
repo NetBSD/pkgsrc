@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/05/24 18:51:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/25 08:35:05 wiz Exp $
 
 GITHUB_PROJECT=	resource-pooling
 DISTNAME=	${GITHUB_PROJECT}-1.1
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	pkgsrc-users@kerguelen.org
 HOMEPAGE=	https://github.com/ocsigen/resource-pooling/
 COMMENT=	Library for pooling resources like connections and threads
 LICENSE=	mit

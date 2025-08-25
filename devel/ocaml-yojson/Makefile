@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/25 08:35:07 wiz Exp $
 
 GITHUB_PROJECT=	yojson
 DISTNAME=	${GITHUB_PROJECT}-1.7.0
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mjambon/yojson/
 COMMENT=	JSON parsing and pretty-printing library for OCaml
 LICENSE=	modified-bsd

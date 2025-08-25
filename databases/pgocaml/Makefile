@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/06/03 13:17:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/25 08:34:53 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-4.3.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darioteixeira/}
 GITHUB_PROJECT=	pgocaml
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pgocaml.forge.ocamlcore.org/
 COMMENT=	Native PostgreSQL binding for OCaml
 LICENSE=	gnu-lgpl-v2

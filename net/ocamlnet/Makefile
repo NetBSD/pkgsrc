@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2025/04/24 14:15:28 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2025/08/25 08:35:10 wiz Exp $
 #
 
 DISTNAME=		ocamlnet-4.1.9
@@ -6,7 +6,7 @@ PKGREVISION=		21
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
-MAINTAINER=		jaapb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://projects.camlcity.org/projects/ocamlnet.html
 COMMENT=		Library focusing on application-level network protocols (OCaml)
 LICENSE=		zlib AND gnu-gpl-v2

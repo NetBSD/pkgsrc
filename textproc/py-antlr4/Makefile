@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/25 08:35:14 wiz Exp $
 
 DISTNAME=	antlr4-python3-runtime-4.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python3-runtime//1}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/antlr4-python3-runtime/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.antlr.org/
 COMMENT=	AntLR 4 bindings for Python
 LICENSE=	modified-bsd

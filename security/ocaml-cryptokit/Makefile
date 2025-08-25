@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2022/05/24 18:59:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/25 08:35:12 wiz Exp $
 #
 
 VERSION=	1.17
@@ -9,7 +9,7 @@ PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xavierleroy/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/xavierleroy/cryptokit
 COMMENT=	Cryptographic primitives library for Objective Caml
 LICENSE=	gnu-lgpl-v2 # with static compilation exception

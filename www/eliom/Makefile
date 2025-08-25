@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2022/06/03 12:40:12 jaapb Exp $
+# $NetBSD: Makefile,v 1.38 2025/08/25 08:35:15 wiz Exp $
 #
 
 GITHUB_PROJECT=	eliom
@@ -6,7 +6,7 @@ DISTNAME=	${GITHUB_PROJECT}-10.0.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/eliom/
 COMMENT=	Dynamic webpage generation library
 LICENSE=	gnu-lgpl-v2.1

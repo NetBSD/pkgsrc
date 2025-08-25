@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/24 18:51:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/25 08:34:59 wiz Exp $
 
 VERSION=	113.33.06
 GITHUB_PROJECT=	js-build-tools
@@ -8,7 +8,7 @@ PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/janestreet/js-build-tools/
 COMMENT=	OCaml build helper tools from Jane Street
 LICENSE=	apache-2.0
