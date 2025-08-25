@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5153 2025/08/25 09:41:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5154 2025/08/25 11:30:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7482,3 +7482,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rtorrent to 0.15.6 [adam 2025-08-25]
 	Updated www/py-beautifulsoup4 to 4.13.5 [adam 2025-08-25]
 	Updated devel/py-coverage to 7.10.5 [adam 2025-08-25]
+	Updated mail/mutt to 2.2.14nb3 [wiz 2025-08-25]
