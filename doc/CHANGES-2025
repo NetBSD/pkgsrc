@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5161 2025/08/25 17:06:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5162 2025/08/25 17:47:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7493,3 +7493,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/toxcore to 0.2.21 [ktnb 2025-08-25]
 	Updated net/rclone to 1.71.0 [adam 2025-08-25]
 	Updated mail/py-checkdmarc to 5.8.9 [adam 2025-08-25]
+	Added textproc/mdbook version 0.4.52 [adam 2025-08-25]
+	Updated math/py-jplephem to 2.23 [adam 2025-08-25]
