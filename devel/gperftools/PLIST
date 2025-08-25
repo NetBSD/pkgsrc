@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/12/26 17:17:42 adam Exp $
-bin/pprof
-bin/pprof-symbolize
+@comment $NetBSD: PLIST,v 1.9 2025/08/25 08:09:42 adam Exp $
 include/gperftools/heap-checker.h
 include/gperftools/heap-profiler.h
 include/gperftools/malloc_extension.h
@@ -22,7 +20,6 @@ lib/pkgconfig/libtcmalloc.pc
 lib/pkgconfig/libtcmalloc_debug.pc
 lib/pkgconfig/libtcmalloc_minimal.pc
 lib/pkgconfig/libtcmalloc_minimal_debug.pc
-man/man1/pprof.1
 share/doc/gperftools/AUTHORS
 share/doc/gperftools/COPYING
 share/doc/gperftools/ChangeLog.old
@@ -30,12 +27,10 @@ share/doc/gperftools/INSTALL
 share/doc/gperftools/NEWS
 share/doc/gperftools/README
 share/doc/gperftools/README_windows.txt
-share/doc/gperftools/cpuprofile-fileformat.html
-share/doc/gperftools/cpuprofile.html
-share/doc/gperftools/designstyle.css
+share/doc/gperftools/cpuprofile-fileformat.adoc
+share/doc/gperftools/cpuprofile.adoc
 share/doc/gperftools/heap-example1.png
-share/doc/gperftools/heapprofile.html
-share/doc/gperftools/index.html
+share/doc/gperftools/heapprofile.adoc
 share/doc/gperftools/overview.dot
 share/doc/gperftools/overview.gif
 share/doc/gperftools/pageheap.dot
@@ -44,31 +39,9 @@ share/doc/gperftools/pprof-test-big.gif
 share/doc/gperftools/pprof-test.gif
 share/doc/gperftools/pprof-vsnprintf-big.gif
 share/doc/gperftools/pprof-vsnprintf.gif
-share/doc/gperftools/pprof_remote_servers.html
+share/doc/gperftools/pprof_integration.adoc
 share/doc/gperftools/spanmap.dot
 share/doc/gperftools/spanmap.gif
-share/doc/gperftools/t-test1.times.txt
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.1024.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.128.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.131072.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.16384.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.2048.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.256.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.32768.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.4096.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.512.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.64.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.65536.bytes.png
-share/doc/gperftools/tcmalloc-opspercpusec.vs.threads.8192.bytes.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.1.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.12.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.16.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.2.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.20.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.3.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.4.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.5.threads.png
-share/doc/gperftools/tcmalloc-opspersec.vs.size.8.threads.png
-share/doc/gperftools/tcmalloc.html
+share/doc/gperftools/tcmalloc.adoc
 share/doc/gperftools/threadheap.dot
 share/doc/gperftools/threadheap.gif

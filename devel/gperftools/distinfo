@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2024/12/26 17:17:42 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/08/25 08:09:42 adam Exp $
 
-BLAKE2s (gperftools-2.16.tar.gz) = 1fe22e57673fd7997cebc693277787d7d0b4bc78cfe4c16e3529f7e08ce75215
-SHA512 (gperftools-2.16.tar.gz) = 26947f553122020bec79e99ee0f42b929c8dd3024ba0c440efb3b813bf210b28280fa428d0fbfb7f6fc4f3e1d66995347f0df892d9d1180e1b2705589e7c7495
-Size (gperftools-2.16.tar.gz) = 2405927 bytes
+BLAKE2s (gperftools-2.17.2.tar.gz) = d284366022cb46a28093f6c1b1cf74a949edac857c3c9125e46d1470c3ca7aac
+SHA512 (gperftools-2.17.2.tar.gz) = 07517cbbe8e9df68a6033f2cfb906d80efc1495f2c9204a0845b21f2fad544bc92213d17ec56ec8ae08cc89feeccc2bc1cab6972c7912c74c4fad9f5e92c3512
+Size (gperftools-2.17.2.tar.gz) = 2815669 bytes
 SHA1 (patch-src_base_basictypes.h) = 2a818c3eac1d0116f3ef75a283680e03d9f93035
-SHA1 (patch-src_symbolize.cc) = 81c6b1b406098c03653f078efa8e8e8dec6465c2
+SHA1 (patch-src_base_sysinfo.cc) = d3a79e75c775d2f355f28f6f117886b5afde046f
