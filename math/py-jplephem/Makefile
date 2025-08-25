@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/25 17:47:19 adam Exp $
 
-DISTNAME=	jplephem-2.22
+DISTNAME=	jplephem-2.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jplephem/}
 
