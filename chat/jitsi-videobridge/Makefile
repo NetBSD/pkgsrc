@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2023/02/16 10:33:08 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/25 15:45:09 ktnb Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
 
 GITHUB_PROJECT=	jitsi-videobridge
 PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
-PKGREVISION=	1
 
 HOMEPAGE=	https://github.com/jitsi/jitsi-videobridge/
 COMMENT=	WebRTC compatible video router or SFU
 
 DISTINFO_FILE=	${.CURDIR}/../../chat/jitsi-videobridge/distinfo
 DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}nb1.tar.gz
-SITES.jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}nb1.tar.gz= \
-		ftp://ftp.NetBSD.org/pub/NetBSD/misc/khorben/
+DISTFILES+=	jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz
+SITES.jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz= \
+		ftp://ftp.NetBSD.org/pub/NetBSD/misc/ktnb/
 
 DEPENDS+=	jitsi-srtp-[0-9]*:../../chat/jitsi-srtp
 
