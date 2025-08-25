@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/04/29 10:46:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/08/25 18:06:10 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -90,6 +90,12 @@ ${PYSITELIB}/mesonbuild/cargo/interpreter.pyo
 ${PYSITELIB}/mesonbuild/cargo/manifest.py
 ${PYSITELIB}/mesonbuild/cargo/manifest.pyc
 ${PYSITELIB}/mesonbuild/cargo/manifest.pyo
+${PYSITELIB}/mesonbuild/cargo/raw.py
+${PYSITELIB}/mesonbuild/cargo/raw.pyc
+${PYSITELIB}/mesonbuild/cargo/raw.pyo
+${PYSITELIB}/mesonbuild/cargo/toml.py
+${PYSITELIB}/mesonbuild/cargo/toml.pyc
+${PYSITELIB}/mesonbuild/cargo/toml.pyo
 ${PYSITELIB}/mesonbuild/cargo/version.py
 ${PYSITELIB}/mesonbuild/cargo/version.pyc
 ${PYSITELIB}/mesonbuild/cargo/version.pyo
