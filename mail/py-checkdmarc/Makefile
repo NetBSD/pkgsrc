@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/06/05 18:10:29 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/25 17:05:54 adam Exp $
 
-DISTNAME=	checkdmarc-5.8.6
+DISTNAME=	checkdmarc-5.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/checkdmarc/}
