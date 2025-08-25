@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.2 2025/08/25 17:51:12 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.170_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2025/08/25 17:51:12 wiz Exp $
 
 Unbreak this module.
 
@@ -6,15 +6,14 @@ I admit to this entirely being based on "cargo cult", but at least
 the rust compiler (cross-)builds for NetBSD/risc64 with this,
 whereas it did not earlier.
 
---- vendor/libc-0.2.169/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-02-24 07:49:42.565876506 +0000
-+++ vendor/libc-0.2.169/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
-@@ -1,4 +1,4 @@
+--- vendor/libc-0.2.170/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-05-19 23:28:32.395024196 +0000
++++ vendor/libc-0.2.170/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
+@@ -1,24 +1,70 @@
 -use PT_FIRSTMACH;
 +use crate::PT_FIRSTMACH;
  
  use crate::prelude::*;
  
-@@ -8,20 +8,66 @@ pub type c_char = u8;
  pub type __greg_t = u64;
  pub type __cpu_simple_lock_nv_t = c_int;
  pub type __gregset = [__greg_t; _NGREG];
@@ -44,8 +43,8 @@ whereas it did not earlier.
 +    if #[cfg(feature = "extra_traits")] {
 +//      use ::self::fmt;
 +//      use ::self::hash;
-+	use core::marker::Copy;
-+	use core::clone::Clone;
++        use core::marker::Copy;
++        use core::clone::Clone;
 +        #[cfg(libc_union)]
 +        impl PartialEq for __fpreg {
 +            fn eq(&self, other: &__fpreg) -> bool {

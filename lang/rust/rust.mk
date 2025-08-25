@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.16 2025/06/17 01:42:15 ryoon Exp $
+# $NetBSD: rust.mk,v 1.17 2025/08/25 17:51:11 wiz Exp $
 #
 # This file determines the type of rust package to use.
 #

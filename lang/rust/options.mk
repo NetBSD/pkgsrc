@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.48 2025/06/22 10:19:55 he Exp $
+# $NetBSD: options.mk,v 1.49 2025/08/25 17:51:11 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -51,6 +51,14 @@ GCC_REQD+=	12
       ${MACHINE_PLATFORM:MNetBSD-9.*-i386}
 GCC_REQD+=	10
 .  endif
+.endif
+
+# Fix for problem seen during rust-installer run w/rust 1.84.1 on macppc,
+# "of course" experienced near the end of the build process:
+# assertion "memcmp(mf_ptr(mf) - 1, mf_ptr(mf) - matches[i].dist - 2, matches[i].len) == 0" failed: file "xz-5.2/src/liblzma/lz/lz_encoder_mf.c", line 40, function "lzma_mf_find"
+# The above is seen with both in-tree gcc (10.5.0) and gcc12 from pkgsrc.
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc}
+GCC_REQD+=	14
 .endif
 
 #
