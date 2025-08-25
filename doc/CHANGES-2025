@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5168 2025/08/25 20:07:01 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5169 2025/08/25 20:59:39 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/meson to 1.9.0 [wiz 2025-08-25]
 	Updated devel/py-ruff to 0.12.10 [wiz 2025-08-25]
 	Updated chat/toxic to 0.16.1 [ktnb 2025-08-25]
+	Updated devel/objfw to 1.4.1 [js 2025-08-25]
