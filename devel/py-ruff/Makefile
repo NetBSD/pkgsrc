@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2025/08/20 09:55:53 adam Exp $
+# $NetBSD: Makefile,v 1.75 2025/08/25 18:34:55 wiz Exp $
 
-DISTNAME=	ruff-0.12.9
+DISTNAME=	ruff-0.12.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -12,12 +12,14 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
+RUST_REQ=	1.87
+
 # for tikv-jemalloc-sys
 USE_TOOLS+=	gmake
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 LSP_TYPES_REV=	3512a9f33eadc5402cfab1b8f7340824c8ca1439
-SALSA_REV=	918d35d873b2b73a0237536144ef4d22e8d57f27
+SALSA_REV=	a3ffa22cb26756473d56f867aedec3fd907c4dd9
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
 DISTFILES+=	salsa-${SALSA_REV}.tar.gz
