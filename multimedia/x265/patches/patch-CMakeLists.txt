@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2025/08/11 08:33:14 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2025/08/25 18:14:39 pho Exp $
 
 Do not insist on old cmake policies (allows build with cmake 4).
 
@@ -29,6 +29,15 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
  
  project (x265)
  cmake_minimum_required (VERSION 2.8.8) # OBJECT libraries require 2.8.8
+@@ -168,7 +162,7 @@ if(APPLE)
+   add_definitions(-DMACOS=1)
+ endif()
+ 
+-if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
++if(${CMAKE_CXX_COMPILER_ID} MATCHES "Clang|AppleClang")
+     set(CLANG 1)
+ endif()
+ if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Intel")
 @@ -207,6 +201,11 @@ if(HAVE_INT_TYPES_H)
      add_definitions(-DHAVE_INT_TYPES_H=1)
  endif()
@@ -41,6 +50,15 @@ Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
  if(INTEL_CXX AND UNIX)
      set(GCC 1) # treat icpc roughly like gcc
  elseif(CLANG)
+@@ -614,7 +613,7 @@ endif(ARM64)
+ 
+ option(WARNINGS_AS_ERRORS "Stop compiles on first warning" OFF)
+ if(WARNINGS_AS_ERRORS)
+-    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
++    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang|AppleClang")
+         add_definitions(-Werror)
+         add_definitions(-Wno-unused)
+     elseif(MSVC)
 @@ -658,7 +657,6 @@ if(POWER)
      endif()
  endif()
