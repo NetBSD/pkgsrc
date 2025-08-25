@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/01/03 10:27:40 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/25 15:45:08 ktnb Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
 
@@ -12,7 +12,7 @@ DISTINFO_FILE=	${.CURDIR}/../../chat/jicofo/distinfo
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	jicofo-java-deps-${JITSI_MEET_VERSION}.tar.gz
 SITES.jicofo-java-deps-${JITSI_MEET_VERSION}.tar.gz= \
-		ftp://ftp.NetBSD.org/pub/NetBSD/misc/khorben/
+		ftp://ftp.NetBSD.org/pub/NetBSD/misc/ktnb/
 
 USE_TOOLS+=	bash:run pax:build unzip
 
