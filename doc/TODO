@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26163 2025/08/25 17:21:04 wiz Exp $
+$NetBSD: TODO,v 1.26164 2025/08/25 18:06:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -908,7 +908,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
-	o meson-1.9
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
