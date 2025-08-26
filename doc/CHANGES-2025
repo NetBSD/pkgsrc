@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5184 2025/08/26 13:24:19 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5185 2025/08/26 13:25:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7528,3 +7528,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-blurhash to 1.1.5 [adam 2025-08-26]
 	Updated math/py-lmfit to 1.3.4 [adam 2025-08-26]
 	Updated devel/serie to 0.4.7 [pin 2025-08-26]
+	Updated net/slumber to 3.4.0 [pin 2025-08-26]
