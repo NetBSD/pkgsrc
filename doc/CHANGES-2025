@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5176 2025/08/26 13:10:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5177 2025/08/26 13:13:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7519,3 +7519,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-lazy-object-proxy to 1.12.0 [adam 2025-08-26]
 	Updated www/py-pelican to 4.11.0 [adam 2025-08-26]
 	Updated devel/py-mocket to 3.13.11 [adam 2025-08-26]
+	Updated sysutils/fd-find to 10.3.0 [pin 2025-08-26]
