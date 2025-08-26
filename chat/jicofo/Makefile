@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/08/25 15:45:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/26 18:35:50 gdt Exp $
 
+# Despite using chat/jitsi-meet/Makefile.common, this package uses a
+# different distfile.  Confusingly, it has the same name as the
+# jitsi-meet distfile.  Thus DIST_SUBDIR is set below.
 .include "../../chat/jitsi-meet/Makefile.common"
 
 GITHUB_PROJECT=	jicofo
@@ -8,7 +11,7 @@ PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 HOMEPAGE=	https://github.com/jitsi/jicofo/
 COMMENT=	Server-side focus component used in Jitsi Meet conferences
 
-DISTINFO_FILE=	${.CURDIR}/../../chat/jicofo/distinfo
+DIST_SUBDIR=	jicofo
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	jicofo-java-deps-${JITSI_MEET_VERSION}.tar.gz
 SITES.jicofo-java-deps-${JITSI_MEET_VERSION}.tar.gz= \

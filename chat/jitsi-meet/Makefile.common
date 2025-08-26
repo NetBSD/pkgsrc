@@ -1,14 +1,27 @@
-# $NetBSD: Makefile.common,v 1.4 2025/08/25 15:45:08 ktnb Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/08/26 18:35:50 gdt Exp $
 # used by chat/jicofo/Makefile
 # used by chat/jitsi-meet-prosody/Makefile
 # used by chat/jitsi-videobridge/Makefile
+# used by wip/jitsi-meet
+
+# This makefile is used by packages that use tarballs from the
+# jitsi-meet project with the name jitsi-meet_$version.  As expected,
+# this includes multiple packages that use the tarball distributed
+# from the jitsi-meet repository.
+#
+# Not expected, it includes jicofo, which uses a tarball distributed
+# under the jicofo repository, which has the same name but different
+#  contents.
+#
+# \todo Separate same-tarball from same-project content into separate
+# include files, to avoid confusing use of ?= and overrides, in favor
+# of just setting what should be set.
 
 GITHUB_PROJECT?=	jitsi-meet
 GITHUB_TAG?=		stable/jitsi-meet_10431
 DISTNAME?=		jitsi-meet_10431
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jitsi/}
-DIST_SUBDIR=		${GITHUB_PROJECT}
 JITSI_MEET_VERSION=	2.0.10431
 
 MAINTAINER=		khorben@defora.org
@@ -17,5 +30,3 @@ COMMENT?=		Secure, Simple and Scalable Video Conferences
 LICENSE=		apache-2.0
 
 WRKSRC?=		${WRKDIR}/${GITHUB_PROJECT}-stable-${DISTNAME}
-
-DISTINFO_FILE?=		${.CURDIR}/../../chat/jitsi-meet/distinfo
