@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/08/17 21:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/08/26 07:53:56 ryoon Exp $
 
 DISTNAME=	wasi-libc-0.0.0pre20250809
 CATEGORIES=	lang
@@ -17,10 +17,6 @@ LICENSE=	mit AND apache-2.0 # apache-2.0-with-LLVM-exception
 BUILTINSFILE=		libclang_rt.builtins-wasm32-wasi-25.0.tar.gz
 DISTFILES=		${DEFAULT_DISTFILES} ${BUILTINSFILE}
 SITES.${BUILTINSFILE}=	https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-25/
-
-# TODO: Fix! This should not download files during build
-USE_TOOLS+=		curl
-ALLOW_NETWORK_ACCESS=	yes
 
 # Do not fail tests and compile time error (undefined symbols) in www/firefox.
 SSP_SUPPORTED=		no
