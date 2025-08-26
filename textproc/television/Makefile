@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/08/15 13:30:02 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/26 14:12:25 pin Exp $
 
 DISTNAME=	television-0.13.3
 CATEGORIES=	textproc devel
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=		1.87.0
+RUST_REQ=		1.87.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 share/examples/television
 
 post-build:
