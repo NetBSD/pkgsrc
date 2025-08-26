@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/26 13:23:07 adam Exp $
 
-DISTNAME=	lmfit-1.3.3
+DISTNAME=	lmfit-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lmfit/}
 
