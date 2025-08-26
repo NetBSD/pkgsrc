@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/13 07:11:30 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/ujson-stubs/METADATA.toml
-${PYSITELIB}/ujson-stubs/__init__.pyi
-${PYSITELIB}/ujson-stubs/py.typed

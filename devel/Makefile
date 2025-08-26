@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4512 2025/08/15 06:51:29 kim Exp $
+# $NetBSD: Makefile,v 1.4513 2025/08/26 08:48:16 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3231,7 +3231,6 @@ SUBDIR+=	py-typeguard
 SUBDIR+=	py-types-gdb
 SUBDIR+=	py-types-setuptools
 SUBDIR+=	py-types-toml
-SUBDIR+=	py-types-ujson
 SUBDIR+=	py-typing-extensions
 SUBDIR+=	py-typing-inspect
 SUBDIR+=	py-typing-inspection
