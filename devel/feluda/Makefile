@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2025/07/30 06:45:34 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/08/26 13:16:22 pin Exp $
 
-DISTNAME=	feluda-1.9.7
+DISTNAME=	feluda-1.9.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anistark/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/anistark/feluda/
@@ -14,8 +15,8 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.70.0
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES+=		c c++
+USE_TOOLS+=		pkg-config perl gmake
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
