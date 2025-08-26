@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2025/07/01 10:28:04 adam Exp $
+$NetBSD: distinfo,v 1.25 2025/08/26 08:57:59 adam Exp $
 
-BLAKE2s (cachetools-6.1.0.tar.gz) = 522109bb8a34e6cf293483462086fe068a1359d6601ff9d4f095bc3bd32a231d
-SHA512 (cachetools-6.1.0.tar.gz) = 679696ac6d09ab1dffcce72c141b307dc5f3e8783ce8dd2603854d2c39dfa99ebc5911950a3421a4e80fb92279361ffdd648ad37fecbf42eecf9756e949ef910
-Size (cachetools-6.1.0.tar.gz) = 30714 bytes
+BLAKE2s (cachetools-6.2.0.tar.gz) = 54b798170daee4d39a99678317e7fe9102099008d09ce0c4ffa85b84505902aa
+SHA512 (cachetools-6.2.0.tar.gz) = 0ea8a07c68f0bdf148e69f3317c39f0cd78b4839aad428cb80019a92efbf896b012a7f4d22e685962fc777f583ec12672dd3b243a061461e99dd68dd9567aa9d
+Size (cachetools-6.2.0.tar.gz) = 30988 bytes
