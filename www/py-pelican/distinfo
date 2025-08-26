@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2024/08/14 07:42:47 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/08/26 13:09:10 adam Exp $
 
-BLAKE2s (pelican-4.9.1.tar.gz) = 69723369617adacaeb0d605dd688b77e75be4c94330f0a47842130c76b2ab85a
-SHA512 (pelican-4.9.1.tar.gz) = 3c5ece93864a29aa296e353e044022864c1c551b7a805adeb0914df9021bdf7a3d3977c91ddeba6c542c8879ff5fe7ca23e0163e17aaa93ed36747f35895937b
-Size (pelican-4.9.1.tar.gz) = 1230892 bytes
-SHA1 (patch-pyproject.toml) = c6a77c362f56abb0f94a37f11bd10349681ff7d2
+BLAKE2s (pelican-4.11.0.tar.gz) = 9e6bfb731f0db10b55c51aadcbb7930ab34a9c4b482129445a97f3c040ce25dd
+SHA512 (pelican-4.11.0.tar.gz) = 67d4f874a960cb8aab021de8bb78997a09ea74a9ab66aa84e2dfa76fcc2b626e039a1a252cd905ecbca9d2ba3842b342a32411a15022bfc859f84745d4bf8b3c
+Size (pelican-4.11.0.tar.gz) = 24148058 bytes
+SHA1 (patch-pyproject.toml) = 30b5d1167a0e2357d9555e71ad40f3d45657c70d
