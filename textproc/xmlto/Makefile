@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2025/07/13 17:27:12 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/26 18:52:09 adam Exp $
 
-DISTNAME=	xmlto-0.0.28
-PKGREVISION=	15
+DISTNAME=	xmlto-0.0.29
 CATEGORIES=	textproc
 MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,23 +10,23 @@ HOMEPAGE=	https://pagure.io/xmlto/
 COMMENT=	Tool to help transform XML documents into other formats
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		getopt-[0-9]*:../../misc/getopt
-DEPENDS+=		docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
-DEPENDS+=		libxml2>=2.6.2:../../textproc/libxml2
+DEPENDS+=	docbook-xsl>=1.67.0nb1:../../textproc/docbook-xsl
+DEPENDS+=	getopt-[0-9]*:../../misc/getopt
+DEPENDS+=	libxml2>=2.6.2:../../textproc/libxml2
 
 USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		mktemp flex
+USE_TOOLS+=		autoconf automake autoreconf flex gmake mktemp
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_ICONV=	no
-CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
-CONFIGURE_ENV+=		BASH=${TOOLS_PATH.sh}
 CONFIGURE_ENV+=		GCP=${TOOLS_PATH.cp}
+CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
 CONFIGURE_ENV+=		TAIL=${TOOLS_PATH.tail}
+CONFIGURE_ENV+=		XMLTO_BASH_PATH=${TOOLS_PATH.sh}
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
-## FIXME: the package should use XML catalog to access transformations from docbook-xsl package
+# FIXME: the package should use XML catalog to access transformations from docbook-xsl package
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		post-build
 SUBST_MESSAGE.fix-paths=	Fixing location of XSLTs.
@@ -39,6 +38,9 @@ REPLACE_BASH+=		xmlif/test/run-test
 TEST_TARGET=		check
 
 INSTALLATION_DIRS=	share/xmlto/format/docbook share/xmlto/format/fo
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
