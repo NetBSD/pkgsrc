@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5169 2025/08/25 20:59:39 js Exp $
+$NetBSD: CHANGES-2025,v 1.5170 2025/08/26 05:06:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7503,3 +7503,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.12.10 [wiz 2025-08-25]
 	Updated chat/toxic to 0.16.1 [ktnb 2025-08-25]
 	Updated devel/objfw to 1.4.1 [js 2025-08-25]
+	Updated fonts/harfbuzz to 11.4.4 [adam 2025-08-26]
+	Updated fonts/harfbuzz-icu to 11.4.4 [adam 2025-08-26]
