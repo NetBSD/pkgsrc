@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5187 2025/08/26 15:08:16 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5188 2025/08/26 15:15:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7531,3 +7531,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 3.4.0 [pin 2025-08-26]
 	Updated lang/konoha to 1.0.0.952nb59 [wiz 2025-08-26]
 	Updated www/curl to 8.15.0 [leot 2025-08-26]
+	Updated net/socat to 1.8.0.3 [leot 2025-08-26]
