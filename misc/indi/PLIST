@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/08/10 08:26:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/08/26 07:07:27 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
@@ -180,6 +180,7 @@ bin/indi_wanderer_rotator_mini
 bin/indi_wandererbox_plus_v3
 bin/indi_wandererbox_pro_v3
 bin/indi_wanderercover_v4_ec
+bin/indi_wanderercover_v4_pro_ec
 bin/indi_watchdog
 bin/indi_watcher_weather
 bin/indi_wavesharemodbus_relay
