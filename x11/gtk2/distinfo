@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.172 2025/02/12 05:07:23 rillig Exp $
+$NetBSD: distinfo,v 1.173 2025/08/26 04:36:17 pho Exp $
 
 BLAKE2s (gtk+-2.24.33.tar.xz) = 358ff13c5e021a4634bc5944474c0818181d56cff55473d911a4afb42d5d81fb
 SHA512 (gtk+-2.24.33.tar.xz) = 71b588797c81f727dfac8dcb1be193f7436f717d30ecf18eae2d3aeb0f445b3be4743400acac16435490db8f564f01032065d3f42d27871317f80c98aef929d5
@@ -6,6 +6,8 @@ Size (gtk+-2.24.33.tar.xz) = 12661828 bytes
 SHA1 (patch-ab) = 9c82cc60f3825d377a197c876fcc6faa379cbde3
 SHA1 (patch-af) = d59414e24a7da7f8694dbefbd2f0c2c2b60ec5ad
 SHA1 (patch-aj) = 9887573ac7ade9e8f8ee2ead68e279f67836a1a3
+SHA1 (patch-gdk_quartz_gdkdrawable-quartz.c) = 4bda4ee6d45472e56d0551e19821947fafaa840d
+SHA1 (patch-gdk_quartz_gdkimage-quartz.c) = 1b1d673249720975778a11d0ff49b4e60b924c9f
 SHA1 (patch-gtk_Makefile.in) = 354b61b7bde7105f065d0d97283e09002e9a0dbf
 SHA1 (patch-gtk_gtkfilechooserdefault.c) = f690f3a8c3066e49e8184fb096f5dd74e5a93f33
 SHA1 (patch-gtk_gtkfilesystemmodel.c) = 5a70efa956be67b8d9b4a5b79147003988c4befd
