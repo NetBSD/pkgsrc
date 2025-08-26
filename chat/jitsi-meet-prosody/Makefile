@@ -1,8 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2023/01/03 10:25:06 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/26 22:23:49 gdt Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
+# This package is a secondary target built from the jitsi-meet repo's
+# distfile.
 
 PKGNAME=	${GITHUB_PROJECT}-prosody-${JITSI_MEET_VERSION}
+# The jitsi-meet repo distributes files with the same name as
+# multiple other related repos, but with different contents.
+DIST_SUBDIR=	jitsi-meet
 
 COMMENT=	Additional plug-ins for Prosody from Jitsi Meet
 
