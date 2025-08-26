@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5178 2025/08/26 13:16:42 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5179 2025/08/26 13:18:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7521,3 +7521,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-mocket to 3.13.11 [adam 2025-08-26]
 	Updated sysutils/fd-find to 10.3.0 [pin 2025-08-26]
 	Updated devel/feluda to 1.9.8 [pin 2025-08-26]
+	Updated audio/librespot to 0.7.0 [pin 2025-08-26]
