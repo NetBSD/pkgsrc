@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/07/05 11:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/26 09:18:51 adam Exp $
 
-DISTNAME=	wtforms_alchemy-0.19.0
+DISTNAME=	wtforms_alchemy-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	2
 CATEGORIES=	www databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Alchemy/}
 
