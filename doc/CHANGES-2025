@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5173 2025/08/26 09:05:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5174 2025/08/26 09:20:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7513,3 +7513,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-types-python-dateutil to 2.9.0.20250822 [adam 2025-08-26]
 	Updated devel/py-cachetools to 6.2.0 [adam 2025-08-26]
 	Updated textproc/py-xml2rfc to 3.30.1 [adam 2025-08-26]
+	Updated www/py-wtforms-alchemy to 0.19.1 [adam 2025-08-26]
+	Updated www/py-starlette to 0.47.3 [adam 2025-08-26]
