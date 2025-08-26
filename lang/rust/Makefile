@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2025/08/25 17:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.344 2025/08/26 13:56:24 jperkin Exp $
 
 DISTNAME=	rustc-1.88.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -282,7 +282,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.85.1
+RUST_STAGE0_VER=	1.87.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
@@ -479,7 +479,7 @@ CKSUMS+=	2dc054435fd2976536b6685d66ba6796d4eb143885bd573e686e9b042ae7257a
 
 CKSUM_CRATES+=	vendor/libc-0.2.172
 CKSUMS+=	ec4c1dce83e8531df71b89e4aee1ab4d3b3b18d1b6d34b03d94573144c40e7c5
-CKSUMS+=	27a886823ba28aa0f5c2a55b325ad7df8c420cf1e92b050357a2411727a338e7
+CKSUMS+=	dc3179a14c65c5e3d250ce9819934236f11fc6c9bfa7afa8d4208931d28e4250
 CKSUMS+=	f3778a9bd2ba923220537d167cfb10b91580ffbf583100789a46d2807f7a1e3e
 CKSUMS+=	2dc054435fd2976536b6685d66ba6796d4eb143885bd573e686e9b042ae7257a
 
@@ -692,9 +692,9 @@ stage0-bootstrap: install
 		   libssl.so.3 libz.so.1 libzstd.so.1; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
-	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 liblber.so.2 \
-		   libldap.so.2 liblzma.so.5 libnghttp2.so.14 libsasl2.so.3 \
-		   libssh2.so.1 libunistring.so.5 libxml2.so.16; do \
+	for lib in libiconv.so.2 libidn2.so.0 libintl.so.8 \
+		   liblzma.so.5 libnghttp2.so.14 \
+		   libunistring.so.5 libxml2.so.16; do \
 		${CP} ${PREFIX}/lib/$${lib} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc/; \
 	done; \
 	for f in ${BOOTSTRAP_TMPDIR}/bin/*; do \

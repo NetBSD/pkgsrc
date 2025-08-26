@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs,v 1.1 2025/08/25 17:51:13 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs,v 1.2 2025/08/26 13:56:24 jperkin Exp $
 
 Fix xattr build.
 
@@ -9,7 +9,7 @@ Fix xattr build.
  pub const ENOTRECOVERABLE: c_int = 59;
  pub const ENOSTR: c_int = 60;
 +// This is not supported but is required for xattr
-+pub const ENOATTR: ::c_int = ::ENODATA;
++pub const ENOATTR: c_int = ENODATA;
  pub const ENODATA: c_int = 61;
  pub const ETIME: c_int = 62;
  pub const ENOSR: c_int = 63;

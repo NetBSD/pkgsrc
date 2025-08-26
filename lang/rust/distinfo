@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.186 2025/08/25 17:51:11 wiz Exp $
+$NetBSD: distinfo,v 1.187 2025/08/26 13:56:24 jperkin Exp $
 
-BLAKE2s (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 2b5ddc732b2bcc18ce012bd94a0185ee98870624b10e8918e88c451ad75a8998
-SHA512 (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 0517c342dbdd1477c610c505c2fc0b1c03eede445fc9008c4fb807dd7041b84fab5c23616d2261bc80939a39089665e27d54d8db9f9da73836522f1e69567ae0
-Size (rust-1.85.1-x86_64-unknown-illumos.tar.gz) = 235777837 bytes
 BLAKE2s (rust-1.87.0-aarch64-apple-darwin.tar.gz) = 10af213e2fc6ccea7f999047e1ef38941da5e046745e626a8c7e2f0ec8364d4c
 SHA512 (rust-1.87.0-aarch64-apple-darwin.tar.gz) = f13f1781ffb6496bdd66fcb9ad8d28343de6656c9bf642e3f1b8a187cc3198245c020624bb3fbee2e8d9b9ee3eade2331d95ff82d974e46781752c722939a353
 Size (rust-1.87.0-aarch64-apple-darwin.tar.gz) = 374337450 bytes
@@ -48,6 +45,9 @@ Size (rust-1.87.0-x86_64-apple-darwin.tar.gz) = 386517789 bytes
 BLAKE2s (rust-1.87.0-x86_64-unknown-freebsd.tar.gz) = be9f43f7e6c297911fd2fa1211d1ca69b6a8bae15ad8f8cbec4f1b5d6df7ab2c
 SHA512 (rust-1.87.0-x86_64-unknown-freebsd.tar.gz) = e61e195b3b468250776efc6230ec788497654d160f5ae26d9568f3a40e2e82a1520de9357255d63124601028398e6f32fcfe276e349456210c86f60a00be7397
 Size (rust-1.87.0-x86_64-unknown-freebsd.tar.gz) = 374981980 bytes
+BLAKE2s (rust-1.87.0-x86_64-unknown-illumos.tar.gz) = fc109a019f2c469e6989179c779d47be79fd39215c2c02a8589f3f5d4e907f8e
+SHA512 (rust-1.87.0-x86_64-unknown-illumos.tar.gz) = 220110cad2d04a51307d4e57c8f0e3c674de13528a73cdbca5bf899de325481ac3f7ef652e58031931887a6ff18a43df64b9de75a104cbde071917c0f3bbfaee
+Size (rust-1.87.0-x86_64-unknown-illumos.tar.gz) = 239905107 bytes
 BLAKE2s (rust-1.87.0-x86_64-unknown-linux-gnu.tar.gz) = d6c8c9e0223122a73ceba3de013cfc0d88511d23d9d5e05d14c7f006e99e9fe6
 SHA512 (rust-1.87.0-x86_64-unknown-linux-gnu.tar.gz) = eb6b45f768c36cbbfacd0ca27cb2ecf73afda602de442b55d44c2cc0c14dfcf068a0aea9492ee21aa03f5cc121dc3411b861814fa55aa9f709d358ba50987c16
 Size (rust-1.87.0-x86_64-unknown-linux-gnu.tar.gz) = 359529223 bytes
@@ -138,17 +138,14 @@ SHA1 (patch-tests_assembly_targets_targets-elf.rs) = ee7d036c055ed2a2b3b303f381a
 SHA1 (patch-vendor_bytecount-0.6.8_src_lib.rs) = df3641afebac2b06dc9d266524e295c461c441d4
 SHA1 (patch-vendor_crossbeam-utils-0.8.18_no__atomic.rs) = d4d9288cb199af9bc7e321fbd2b42860aed954ec
 SHA1 (patch-vendor_libc-0.2.155_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 36d927a0c3fd6ef8d211da5389a981e077aedc29
-SHA1 (patch-vendor_libc-0.2.155_src_unix_solarish_mod.rs) = 97505b88875aa80fa2b5589b6090237c3786e143
 SHA1 (patch-vendor_libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_mod.rs) = c5cd529719daee44aead47ffd97e682ca9d9a1ae
 SHA1 (patch-vendor_libc-0.2.168_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = acbd63b911637fef336a92169a8130133eb64c8c
-SHA1 (patch-vendor_libc-0.2.168_src_unix_solarish_mod.rs) = edbb81319e5f685fd9c2ffe94138c377855a982d
 SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_mod.rs) = 02c4efefbf1e9e1bd98eb9524515677250ae7454
 SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = c5e1c2d896d5e9d32aeb56bc3e4d9fb26be9edf0
-SHA1 (patch-vendor_libc-0.2.169_src_unix_solarish_mod.rs) = e02c56106a092b4f2e27427ea8b5d96bf437c356
 SHA1 (patch-vendor_libc-0.2.170_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = b6f2a00c83cbeedd8142dff58261bbb393449600
 SHA1 (patch-vendor_libc-0.2.171_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = adfc737db618e2fdbe99aafaee3e7802ee04ca26
 SHA1 (patch-vendor_libc-0.2.172_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = 3127715d2eb1e0ce148d67323b25dd0bc07b67ad
-SHA1 (patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs) = 56b3e6273dc61a8b4c0d4e84abeeba0527c73dd1
+SHA1 (patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs) = 9365cab6fd25dd077ed56f6105cde22a4a3356dd
 SHA1 (patch-vendor_line-index-0.1.2_src_lib.rs) = 30aa5c82630ea0e8969abb527c11640712efba1e
 SHA1 (patch-vendor_lzma-sys-0.1.20_config.h) = 4849052ddb2f04f539fd7060fc1b43cc3acf99c4
 SHA1 (patch-vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs) = 3e17e9f068afe5e812d10bf57fd3f6d4c21baf0b
