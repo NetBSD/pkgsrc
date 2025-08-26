@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.522 2025/08/24 17:06:08 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.523 2025/08/26 15:26:01 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27425,3 +27425,13 @@ ImageMagick<7.1.1.36	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/C
 ImageMagick6<6.9.13.22	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-43965
 ImageMagick<7.1.1.44	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-43965
 ImageMagick<7.1.1.44	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-46393
+apache-cassandra<4.0.17	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-26467
+#jq-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9403 # test only
+lrzip-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-9396
+podofo-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-9394
+py{27,39,310,311,312,313}-h2<4.3.0	request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-57804
+tcpreplay<4.5.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-9384
+tcpreplay<4.5.2	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-9385
+tcpreplay<4.5.2	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-9386
+vim>=9.1.1459<9.1.1683	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9389
+vim-share<9.1.1616	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-9390
