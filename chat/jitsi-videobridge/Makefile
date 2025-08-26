@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/08/26 18:35:50 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/26 22:15:45 gdt Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
 
@@ -8,6 +8,9 @@ PKGNAME=	${GITHUB_PROJECT}-${JITSI_MEET_VERSION}
 HOMEPAGE=	https://github.com/jitsi/jitsi-videobridge/
 COMMENT=	WebRTC compatible video router or SFU
 
+# The jitsi-videobridge repo distributes files with the same name as
+# the jitsi-meet repo, but with different contents.
+DIST_SUBDIR=	jitsi-videobridge
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz
 SITES.jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz= \
