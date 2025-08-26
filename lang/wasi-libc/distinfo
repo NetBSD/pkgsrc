@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/08/16 01:20:27 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2025/08/26 07:53:56 ryoon Exp $
 
 BLAKE2s (WebAssembly-WASI-59cbe140561db52fc505555e859de884e0ee7f00.tar.gz) = e13f04fd0def3ffba6758bc700db814329a3d8dbae6df82010b1bdb5f0fbf072
 SHA512 (WebAssembly-WASI-59cbe140561db52fc505555e859de884e0ee7f00.tar.gz) = 974228b9b4332f1805d6425a3bed2217604a63baa5ea751ebc106d57b6ec1d211453295f0a878c06bf92bc68d5173de1dffa18c56b6513e818b1d429dc312742
@@ -9,4 +9,4 @@ Size (libclang_rt.builtins-wasm32-wasi-25.0.tar.gz) = 128688 bytes
 BLAKE2s (wasi-libc-0.0.0pre20250809-08799da37ae52955427ebec1336b49d6a8eb5051.tar.gz) = 7359820b1543617f0ccf901625a9614cbce0735b81ab1e8c974adf9088c9ec24
 SHA512 (wasi-libc-0.0.0pre20250809-08799da37ae52955427ebec1336b49d6a8eb5051.tar.gz) = 3a1c0ba0d24fc0ff9bca936e4e747efa3c6f1f5177d005d99582674a5f96d88db63622145df0a4a6b128364a80193df14e7269bc144254b57a1402bf1e534730
 Size (wasi-libc-0.0.0pre20250809-08799da37ae52955427ebec1336b49d6a8eb5051.tar.gz) = 1473084 bytes
-SHA1 (patch-Makefile) = de8af5d2dd444cfe1235c580980acc74bb8f3725
+SHA1 (patch-Makefile) = 2dc0f3ed86a2d57061d0dfe0d2fb9e13f444e6da
