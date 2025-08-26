@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/08/17 12:39:32 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/08/26 13:18:25 pin Exp $
 
-DISTNAME=	librespot-0.6.0
-PKGREVISION=	5
+DISTNAME=	librespot-0.7.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=librespot-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,18 +13,19 @@ LICENSE=	mit
 # See, https://github.com/briansmith/ring/issues/1999
 .include "../../mk/compiler/i386-sse2.mk"
 
-TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
-
 .include "cargo-depends.mk"
 
-RUST_REQ=		1.75.0
+RUST_REQ=		1.85.0
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
 
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+
 CARGO_NO_DEFAULT_FEATURES=	yes
+CARGO_FEATURES+=		native-tls with-libmdns
 
 .include "options.mk"
 
@@ -34,4 +34,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
