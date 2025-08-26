@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5174 2025/08/26 09:20:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5175 2025/08/26 10:46:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7515,3 +7515,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xml2rfc to 3.30.1 [adam 2025-08-26]
 	Updated www/py-wtforms-alchemy to 0.19.1 [adam 2025-08-26]
 	Updated www/py-starlette to 0.47.3 [adam 2025-08-26]
+	Updated devel/py-pylint-plugin-utils to 0.9.0 [adam 2025-08-26]
+	Updated devel/py-lazy-object-proxy to 1.12.0 [adam 2025-08-26]
