@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5188 2025/08/26 15:15:01 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5189 2025/08/26 18:56:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7532,3 +7532,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/konoha to 1.0.0.952nb59 [wiz 2025-08-26]
 	Updated www/curl to 8.15.0 [leot 2025-08-26]
 	Updated net/socat to 1.8.0.3 [leot 2025-08-26]
+	Updated textproc/xmlto to 0.0.29 [adam 2025-08-26]
+	Updated misc/py-trove-classifiers to 2025.8.26.11 [adam 2025-08-26]
+	Updated databases/py-pymysql to 1.1.2 [adam 2025-08-26]
+	Updated security/py-authlib to 1.6.3 [adam 2025-08-26]
