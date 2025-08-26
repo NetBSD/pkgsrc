@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/25 15:45:09 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/26 12:13:32 gdt Exp $
 
 .include "../../chat/jitsi-meet/Makefile.common"
 
@@ -60,14 +60,29 @@ SUBST_STAGE.rc=		post-configure
 SUBST_FILES.rc=		jvb/resources/jvb.sh
 SUBST_SED.rc=		-e 's,$$SCRIPT_DIR/lib/videobridge\.rc,${PKG_SYSCONFDIR}/videobridge.rc,'
 
+# \todo Document why and file bug upstream.
 MAKE_JOBS_SAFE=		no
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	${EGDIR} share/jitsi-videobridge
 
+# When updating, it is necessary to create a tarball of the java
+# dependencies, because the java/maven approach is to download them at
+# build time.  This rule does a build, and then tars up the deps.  The
+# next step is to place that tarball somewhere and update the
+# DISTFILES statement above.  Note that the pkgsrc version is encoded
+# in the file, so if this results in PKGREVISION++ (e.g. because the
+# deps file changed), or if it's a new upstream version, the version
+# must be bumped *before* creating the deps file.
+#
+# \todo maven should have support for declaring offline by default, and a
+# way for rules like this to omit that.
+# 
+# NB: Comment out "MAVEN_FLAGS+= --offline" above to allow downloading
+# when running this target.
+#
 .PHONY: create-deps-file
 create-deps-file: build
-	#XXX disable offline mode for maven before using this rule
 	cd ${WRKSRC} && ${MVN} validate
 	cd ${WRKDIR} && \
 		${PAX} -wz -f jitsi-videobridge-java-deps-${JITSI_MEET_VERSION}.tar.gz deps
