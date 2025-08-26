@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/08/10 07:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/26 13:09:10 adam Exp $
 
-DISTNAME=	pelican-4.9.1
+DISTNAME=	pelican-4.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pelican/}
@@ -26,12 +26,13 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 REPLACE_PYTHON+=	pelican/tools/pelican_import.py
 REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
 REPLACE_PYTHON+=	pelican/tools/pelican_themes.py
 REPLACE_PYTHON+=	pelican/tools/templates/publishconf.py.jinja2
+
+post-extract:
+	${RM} ${WRKSRC}/pelican/.DS_Store
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
