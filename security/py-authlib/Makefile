@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/08/25 08:20:44 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/26 18:56:16 adam Exp $
 
-DISTNAME=	authlib-1.6.2
+DISTNAME=	authlib-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Authlib/}
