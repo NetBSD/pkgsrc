@@ -1,11 +1,21 @@
-$NetBSD: patch-Makefile,v 1.4 2025/08/16 01:20:27 ryoon Exp $
+$NetBSD: patch-Makefile,v 1.5 2025/08/26 07:53:56 ryoon Exp $
 
+* Do not depend on previously installed wasi runtime.
 * Workaround for rebuild in install stage.
 * Do not install share/ in no-check-symbols case.
 * Disable symbol comparison, it's fragile
 
 --- Makefile.orig	2025-08-08 15:50:22.000000000 +0000
 +++ Makefile
+@@ -599,7 +599,7 @@ SYSTEM_BUILTINS_LIB := $(shell ${CC} ${C
+ SYSTEM_RESOURCE_DIR := $(shell ${CC} ${CFLAGS} -print-resource-dir)
+ BUILTINS_LIB_REL_1 := $(subst $(SYSTEM_RESOURCE_DIR),,$(SYSTEM_BUILTINS_LIB))
+ # Substitute '/' for '\' so Windows paths work
+-BUILTINS_LIB_REL := $(subst \,/,$(BUILTINS_LIB_REL_1))
++BUILTINS_LIB_REL := lib/wasi
+ TMP_RESOURCE_DIR := $(OBJDIR)/resource-dir
+ BUILTINS_LIB_PATH := $(TMP_RESOURCE_DIR)/$(BUILTINS_LIB_REL)
+ BUILTINS_LIB_DIR := $(dir $(BUILTINS_LIB_PATH))
 @@ -885,9 +885,9 @@ finish: check-symbols
  endif
  endif
