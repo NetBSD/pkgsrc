@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5171 2025/08/26 07:10:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5172 2025/08/26 08:50:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7507,3 +7507,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 11.4.4 [adam 2025-08-26]
 	Updated misc/indi to 2.1.5.1 [adam 2025-08-26]
 	Updated devel/cargo-c to 0.10.15 [adam 2025-08-26]
+	Updated textproc/py-types-yaml to 6.0.12.20250822 [adam 2025-08-26]
+	Removed devel/py-types-ujson [adam 2025-08-26]
+	Updated devel/py-types-setuptools to 80.9.0.20250822 [adam 2025-08-26]
+	Updated time/py-types-python-dateutil to 2.9.0.20250822 [adam 2025-08-26]
