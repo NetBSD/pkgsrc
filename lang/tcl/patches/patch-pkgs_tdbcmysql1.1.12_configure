@@ -1,11 +1,11 @@
-$NetBSD: patch-pkgs_itcl4.3.2_configure,v 1.1 2025/01/25 21:29:25 adam Exp $
+$NetBSD: patch-pkgs_tdbcmysql1.1.12_configure,v 1.1 2025/08/27 15:08:21 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/itcl4.3.2/configure.orig	2023-12-20 17:04:40.000000000 +0000
-+++ pkgs/itcl4.3.2/configure
-@@ -7444,20 +7444,18 @@ then :
+--- pkgs/tdbcmysql1.1.12/configure.orig	2024-02-09 15:49:31.000000000 +0000
++++ pkgs/tdbcmysql1.1.12/configure
+@@ -8131,20 +8131,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
