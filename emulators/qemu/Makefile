@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.383 2025/08/14 19:25:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.384 2025/08/27 06:27:03 adam Exp $
 
 .include "../../emulators/qemu/version.mk"
 
@@ -222,7 +222,10 @@ post-install:
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/capstone/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/libcbor/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
