@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5196 2025/08/27 19:01:33 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5197 2025/08/27 19:02:21 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7548,3 +7548,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/tcl to 8.6.17 [adam 2025-08-27]
 	Updated x11/tk to 8.6.17 [adam 2025-08-27]
 	Updated lang/gcc15-gnat to 15.2.0 [dkazankov 2025-08-27]
+	Updated lang/gcc15-gnat-libs to 15.2.0nb1 [dkazankov 2025-08-27]
