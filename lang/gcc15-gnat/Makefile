@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/08/15 07:49:32 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/27 18:59:44 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
-PKGNAME=	gcc15-gnat-15.1.0
-PKGREVISION=	1
+PKGNAME=	gcc15-gnat-15.2.0
+#PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
@@ -93,13 +93,13 @@ SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
 SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 .endif
 
-.if ${MACHINE_PLATFORM:MDarwin-*-*}
-BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
-CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-15.1.0.diff
-PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
-PATCH_DIST_STRIP=	-p1
-.endif
+#.if ${MACHINE_PLATFORM:MDarwin-*-*}
+#BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
+#CONFIGURE_ARGS+=	--disable-darwin-at-rpath
+#PATCHFILES=		gcc-15.1.0.diff
+#PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
+#PATCH_DIST_STRIP=	-p1
+#.endif
 
 .if ${OS_VARIANT} == "SmartOS"
 SUBST_CLASSES+=		ccs
@@ -256,6 +256,15 @@ GENERATE_PLIST+= \
 
 TEST_TARGET=	-j ${MAKE_JOBS} -k check || ${TRUE}
 TEST_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
+
+CHECK_BUILTIN.zlib:= yes
+.include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.zlib:= no
+.if ${USE_BUILTIN.zlib:tl} == yes
+CONFIGURE_ARGS+=	--with-system-zlib
+.else
+CONFIGURE_ARGS+=	--without-system-zlib
+.endif
 
 .include "../../archivers/zstd/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}

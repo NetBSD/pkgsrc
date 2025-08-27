@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/07/17 05:00:16 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/08/27 18:59:44 dkazankov Exp $
 
-BLAKE2s (gcc-15.1.0.tar.xz) = 260d64654fbfc0ee06540cc4604cd7071be53d616069a9dd57e5359a0b0ecf46
-SHA512 (gcc-15.1.0.tar.xz) = ddd35ca6c653dffa88f7c7ef9ee4cd806e156e0f3b30f4d63e75a8363361285cd566ee73127734cde6a934611de815bee3e32e24bfd2e0ab9f7ff35c929821c1
-Size (gcc-15.1.0.tar.xz) = 98268344 bytes
-SHA1 (patch-configure) = 5ecea55b80b6e17dc9584d688369994b4d5f9e54
-SHA1 (patch-configure.ac) = 4e1a22b7cd0935975bb3671689abfa1f6d6396e4
+BLAKE2s (gcc-15.2.0.tar.xz) = ee9b2705b03ef8e6b5a41cf523dad26dcdaa8047be3743121b1673ce2fcc8832
+SHA512 (gcc-15.2.0.tar.xz) = 89047a2e07bd9da265b507b516ed3635adb17491c7f4f67cf090f0bd5b3fc7f2ee6e4cc4008beef7ca884b6b71dffe2bb652b21f01a702e17b468cca2d10b2de
+Size (gcc-15.2.0.tar.xz) = 101056276 bytes
 SHA1 (patch-gcc_Makefile.in) = a3976de1679978fb7598fd5777ea1ab4bb596896
 SHA1 (patch-gcc_ada_Makefile.rtl) = 376acf3e0b26bf07d0e83c54437403945de604f0
 SHA1 (patch-gcc_ada_adaint.c) = 62411073bac71aa96d12c69a0b02a4206401f852
@@ -24,6 +22,7 @@ SHA1 (patch-gcc_config_arm_bpabi.h) = ba9850c0d606188510151b6c8c018d75bfe5b920
 SHA1 (patch-gcc_config_arm_elf.h) = 46b8507e4b0ae03e9eed50067048b34ef991076b
 SHA1 (patch-gcc_config_arm_netbsd-eabi.h) = ae9b0523165e512f2b1644ec63dd7cab41294d4f
 SHA1 (patch-gcc_config_arm_netbsd-elf.h) = 107a79e40d42be0fa1e21e8ee50de66f30e42bfe
+SHA1 (patch-gcc_config_i386_t-netbsd64) = 914b4d2fd65f5e46681aa2ea592d0bc75299f09a
 SHA1 (patch-gcc_configure) = 72983cd72129a920ec8123ab52f66026df909782
 SHA1 (patch-gcc_tree.h) = 402c23ae02a6d50d0899baa7e32205e3292f1eca
 SHA1 (patch-gnattools_configure) = ca592eb0ff40d7103ed69370b34a55de43ba6b09
