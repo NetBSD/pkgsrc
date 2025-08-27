@@ -1,11 +1,11 @@
-$NetBSD: patch-pkgs_thread2.8.11_configure,v 1.1 2025/01/25 21:29:26 adam Exp $
+$NetBSD: patch-pkgs_itcl4.3.4_configure,v 1.1 2025/08/27 15:08:20 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/thread2.8.11/configure.orig	2024-02-07 18:27:29.000000000 +0000
-+++ pkgs/thread2.8.11/configure
-@@ -7667,20 +7667,18 @@ then :
+--- pkgs/itcl4.3.4/configure.orig	2023-12-20 17:04:40.000000000 +0000
++++ pkgs/itcl4.3.4/configure
+@@ -7444,20 +7444,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
