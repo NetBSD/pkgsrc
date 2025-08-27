@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/04/22 12:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/08/27 09:13:41 adam Exp $
 
-DISTNAME=	fido2-1.2.0
+DISTNAME=	fido2-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fido2/}
@@ -10,10 +10,12 @@ HOMEPAGE=	https://developers.yubico.com/python-fido2/
 COMMENT=	Yubico FIDO U2F and FIDO 2.0 USB Python library
 LICENSE=	2-clause-bsd AND apache-2.0 AND mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
 # optional
 DEPENDS+=	${PYPKGPREFIX}-scard>=2.0.0:../../devel/py-scard
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # as of 1.2.0
 # check fido2/hid/__init__.py for supported platforms
