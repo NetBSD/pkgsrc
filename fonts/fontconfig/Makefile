@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2025/08/10 20:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2025/08/27 10:35:30 jperkin Exp $
 
 DISTNAME=	fontconfig-2.17.1
 CATEGORIES=	fonts
@@ -20,6 +20,8 @@ MESON_ARGS+=		-Dbaseconfig-dir=${PKG_SYSCONFDIR}
 MESON_ARGS+=		-Dcache-dir=${VARBASE}/cache/fontconfig
 MESON_ARGS+=		-Ddoc=disabled # docbook2man and docbook2html are required.
 CONFIGURE_ENV+=		HASDOCBOOK=no
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE=	fontconfig.pc.in
 
