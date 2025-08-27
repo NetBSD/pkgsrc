@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.523 2025/08/26 15:26:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.524 2025/08/27 10:50:01 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27435,3 +27435,19 @@ tcpreplay<4.5.2	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-9385
 tcpreplay<4.5.2	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-9386
 vim>=9.1.1459<9.1.1683	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9389
 vim-share<9.1.1616	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-9390
+abseil<20250127	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-0838
+php{56,74,81,82,83,84}-adodb<5.22.9	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-46337
+amavisd-new<2.12.3	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-28054
+ampache<6.3.1	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-28852
+ampache<6.3.1	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-28853
+ampache<6.6.0	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-41665
+ampache<6.6.0	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-47184
+ampache<6.6.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-47828
+ampache<7.0.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-51484
+ampache<7.0.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-51485
+ampache<7.0.1	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-51486
+ampache<7.0.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-51487
+ampache<7.0.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-51488
+ampache<7.0.1	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-51489
+ampache<7.0.1	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-51490
+anope<2.0.15	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-30187
