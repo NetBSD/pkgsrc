@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.236 2025/07/25 09:23:40 adam Exp $
+$NetBSD: distinfo,v 1.237 2025/08/27 06:27:03 adam Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
 Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
-BLAKE2s (qemu-10.0.3.tar.xz) = 85ad5a1718fbc2643f5966c169408999f224a5f0704a6085412f0bcdd8f25ddc
-SHA512 (qemu-10.0.3.tar.xz) = 7f37c2df5ac7048fb32f1d89a7c2da0929be9d2f5767bc209ca1e99167f196fb5867fc8b69f915c8c349c58089ce3d7e08c9a3f35a73223abff258b9a5bf3466
-Size (qemu-10.0.3.tar.xz) = 135736600 bytes
+BLAKE2s (qemu-10.1.0.tar.xz) = 944d4f678b3f18ddfdb0d2186ea8209841bd05ddcd054c3cf753f4f533dce88c
+SHA512 (qemu-10.1.0.tar.xz) = 20552a524b6b298181df1af7084b470ded3fe8d1505f05011dda3c33cbc3d91f518ce026b44ba1a8b7f34c64ae81afddceda383066f4772a3a2a6333a2638caf
+Size (qemu-10.1.0.tar.xz) = 141999456 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
 SHA1 (patch-fsdev_file-op-9p.h) = d951ea05ec31977e720f6ee02f53f1cd3d7c356e
 SHA1 (patch-fsdev_meson.build) = 918a361056b9808caecf4fbd85f44cfc405a1606
@@ -25,9 +25,8 @@ SHA1 (patch-hw_usb_dev-mtp.c) = f148a3ad6d72eb29f85684316af5fb219ddaeb71
 SHA1 (patch-meson.build) = 8a76d92303efa054b37d46b27d76d0fb75c15133
 SHA1 (patch-qemu-options.hx) = 6cf811ae421db1e8d45f7098bd36733c6dc7d9cf
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
-SHA1 (patch-target_arm_tcg_translate-sve.c) = f5e5ef33107d696cdc9ef99dee4a9ca0b5d23ea6
-SHA1 (patch-target_i386_cpu.c) = 73571b7602ab9387d6cb8603c1790b7948e767d4
-SHA1 (patch-target_i386_meson.build) = b8f413866ac1079d3ddeb21aacf226509e25ae9c
+SHA1 (patch-target_arm_tcg_translate-sve.c) = 11663f670c6ca1b9e523b0d16843d87a6061b9a2
+SHA1 (patch-target_i386_cpu.c) = 46a37ffc8ece4db52e8239b32dde37403ad568bb
 SHA1 (patch-target_i386_nvmm_nvmm-all.c) = a25d957fd9ff7c35b8370604bff379c494220bd3
 SHA1 (patch-util_coroutine-ucontext.c) = 02cdf634e64f7e71029047b93747f192df715e6a
 SHA1 (patch-util_osdep.c) = 1e5bcde7be23792f487334d35797869bff686d25

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2025/08/14 19:25:59 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.100 2025/08/27 06:27:03 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -102,6 +102,7 @@ ${PLIST.doc}share/doc/qemu/devel/build-environment.html
 ${PLIST.doc}share/doc/qemu/devel/build-system.html
 ${PLIST.doc}share/doc/qemu/devel/clocks.html
 ${PLIST.doc}share/doc/qemu/devel/code-of-conduct.html
+${PLIST.doc}share/doc/qemu/devel/code-provenance.html
 ${PLIST.doc}share/doc/qemu/devel/codebase.html
 ${PLIST.doc}share/doc/qemu/devel/conflict-resolution.html
 ${PLIST.doc}share/doc/qemu/devel/control-flow-integrity.html
@@ -161,7 +162,6 @@ ${PLIST.doc}share/doc/qemu/devel/tcg-ops.html
 ${PLIST.doc}share/doc/qemu/devel/tcg-plugins.html
 ${PLIST.doc}share/doc/qemu/devel/tcg.html
 ${PLIST.doc}share/doc/qemu/devel/testing/acpi-bits.html
-${PLIST.doc}share/doc/qemu/devel/testing/avocado.html
 ${PLIST.doc}share/doc/qemu/devel/testing/blkdebug.html
 ${PLIST.doc}share/doc/qemu/devel/testing/blkverify.html
 ${PLIST.doc}share/doc/qemu/devel/testing/ci.html
@@ -193,11 +193,14 @@ ${PLIST.doc}share/doc/qemu/interop/nbd.html
 ${PLIST.doc}share/doc/qemu/interop/parallels.html
 ${PLIST.doc}share/doc/qemu/interop/pr-helper.html
 ${PLIST.doc}share/doc/qemu/interop/prl-xml.html
+${PLIST.doc}share/doc/qemu/interop/qcow2.html
+${PLIST.doc}share/doc/qemu/interop/qed_spec.html
 ${PLIST.doc}share/doc/qemu/interop/qemu-ga-ref.html
 ${PLIST.doc}share/doc/qemu/interop/qemu-ga.html
 ${PLIST.doc}share/doc/qemu/interop/qemu-qmp-ref.html
 ${PLIST.doc}share/doc/qemu/interop/qemu-storage-daemon-qmp-ref.html
 ${PLIST.doc}share/doc/qemu/interop/qmp-spec.html
+${PLIST.doc}share/doc/qemu/interop/vfio-user.html
 ${PLIST.doc}share/doc/qemu/interop/vhost-user-gpu.html
 ${PLIST.doc}share/doc/qemu/interop/vhost-user.html
 ${PLIST.doc}share/doc/qemu/interop/vhost-vdpa.html
@@ -260,6 +263,7 @@ ${PLIST.doc}share/doc/qemu/system/arm/imx25-pdk.html
 ${PLIST.doc}share/doc/qemu/system/arm/imx8mp-evk.html
 ${PLIST.doc}share/doc/qemu/system/arm/integratorcp.html
 ${PLIST.doc}share/doc/qemu/system/arm/kzm.html
+${PLIST.doc}share/doc/qemu/system/arm/max78000.html
 ${PLIST.doc}share/doc/qemu/system/arm/mcimx6ul-evk.html
 ${PLIST.doc}share/doc/qemu/system/arm/mcimx7d-sabre.html
 ${PLIST.doc}share/doc/qemu/system/arm/mps2.html
@@ -301,6 +305,7 @@ ${PLIST.doc}share/doc/qemu/system/devices/net.html
 ${PLIST.doc}share/doc/qemu/system/devices/nvme.html
 ${PLIST.doc}share/doc/qemu/system/devices/usb-u2f.html
 ${PLIST.doc}share/doc/qemu/system/devices/usb.html
+${PLIST.doc}share/doc/qemu/system/devices/vfio-user.html
 ${PLIST.doc}share/doc/qemu/system/devices/vhost-user-input.html
 ${PLIST.doc}share/doc/qemu/system/devices/vhost-user-rng.html
 ${PLIST.doc}share/doc/qemu/system/devices/vhost-user.html
@@ -318,8 +323,10 @@ ${PLIST.doc}share/doc/qemu/system/i386/microvm.html
 ${PLIST.doc}share/doc/qemu/system/i386/nitro-enclave.html
 ${PLIST.doc}share/doc/qemu/system/i386/pc.html
 ${PLIST.doc}share/doc/qemu/system/i386/sgx.html
+${PLIST.doc}share/doc/qemu/system/i386/tdx.html
 ${PLIST.doc}share/doc/qemu/system/i386/xen.html
 ${PLIST.doc}share/doc/qemu/system/i386/xenpvh.html
+${PLIST.doc}share/doc/qemu/system/igvm.html
 ${PLIST.doc}share/doc/qemu/system/images.html
 ${PLIST.doc}share/doc/qemu/system/index.html
 ${PLIST.doc}share/doc/qemu/system/introduction.html
@@ -352,6 +359,7 @@ ${PLIST.doc}share/doc/qemu/system/riscv/microchip-icicle-kit.html
 ${PLIST.doc}share/doc/qemu/system/riscv/shakti-c.html
 ${PLIST.doc}share/doc/qemu/system/riscv/sifive_u.html
 ${PLIST.doc}share/doc/qemu/system/riscv/virt.html
+${PLIST.doc}share/doc/qemu/system/riscv/xiangshan-kunminghu.html
 ${PLIST.doc}share/doc/qemu/system/s390x/3270.html
 ${PLIST.doc}share/doc/qemu/system/s390x/bootdevices.html
 ${PLIST.doc}share/doc/qemu/system/s390x/cpu-topology.html
@@ -362,6 +370,7 @@ ${PLIST.doc}share/doc/qemu/system/s390x/vfio-ap.html
 ${PLIST.doc}share/doc/qemu/system/s390x/vfio-ccw.html
 ${PLIST.doc}share/doc/qemu/system/secrets.html
 ${PLIST.doc}share/doc/qemu/system/security.html
+${PLIST.doc}share/doc/qemu/system/sriov.html
 ${PLIST.doc}share/doc/qemu/system/target-arm.html
 ${PLIST.doc}share/doc/qemu/system/target-avr.html
 ${PLIST.doc}share/doc/qemu/system/target-i386.html
@@ -411,11 +420,14 @@ ${PLIST.gtk}share/locale/uk/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/zh_CN/LC_MESSAGES/qemu.mo
 share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
-share/qemu/bamboo.dtb
+share/qemu/ast27x0_bootrom.bin
 share/qemu/bios-256k.bin
 share/qemu/bios-microvm.bin
 share/qemu/bios.bin
-share/qemu/canyonlands.dtb
+share/qemu/dtb/bamboo.dtb
+share/qemu/dtb/canyonlands.dtb
+share/qemu/dtb/petalogix-ml605.dtb
+share/qemu/dtb/petalogix-s3adsp1800.dtb
 share/qemu/edk2-aarch64-code.fd
 share/qemu/edk2-arm-code.fd
 share/qemu/edk2-arm-vars.fd
@@ -494,8 +506,6 @@ share/qemu/openbios-sparc64
 share/qemu/opensbi-riscv32-generic-fw_dynamic.bin
 share/qemu/opensbi-riscv64-generic-fw_dynamic.bin
 share/qemu/palcode-clipper
-share/qemu/petalogix-ml605.dtb
-share/qemu/petalogix-s3adsp1800.dtb
 share/qemu/pnv-pnor.bin
 share/qemu/pvh.bin
 share/qemu/pxe-e1000.rom
