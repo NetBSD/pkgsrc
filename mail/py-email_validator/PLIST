@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 09:56:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/08/27 09:21:19 adam Exp $
 bin/email_validator-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -15,9 +15,9 @@ ${PYSITELIB}/email_validator/__main__.pyo
 ${PYSITELIB}/email_validator/deliverability.py
 ${PYSITELIB}/email_validator/deliverability.pyc
 ${PYSITELIB}/email_validator/deliverability.pyo
-${PYSITELIB}/email_validator/exceptions_types.py
-${PYSITELIB}/email_validator/exceptions_types.pyc
-${PYSITELIB}/email_validator/exceptions_types.pyo
+${PYSITELIB}/email_validator/exceptions.py
+${PYSITELIB}/email_validator/exceptions.pyc
+${PYSITELIB}/email_validator/exceptions.pyo
 ${PYSITELIB}/email_validator/py.typed
 ${PYSITELIB}/email_validator/rfc_constants.py
 ${PYSITELIB}/email_validator/rfc_constants.pyc
@@ -25,6 +25,9 @@ ${PYSITELIB}/email_validator/rfc_constants.pyo
 ${PYSITELIB}/email_validator/syntax.py
 ${PYSITELIB}/email_validator/syntax.pyc
 ${PYSITELIB}/email_validator/syntax.pyo
+${PYSITELIB}/email_validator/types.py
+${PYSITELIB}/email_validator/types.pyc
+${PYSITELIB}/email_validator/types.pyo
 ${PYSITELIB}/email_validator/validate_email.py
 ${PYSITELIB}/email_validator/validate_email.pyc
 ${PYSITELIB}/email_validator/validate_email.pyo
