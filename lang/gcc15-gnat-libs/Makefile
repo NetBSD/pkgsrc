@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2025/08/15 07:50:56 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/27 18:59:45 dkazankov Exp $
 
 GNAT_PKGNAME=	gcc15-gnat
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
-PKGNAME=	${GNAT_PKGNAME}-libs-15.1.0
+PKGNAME=	${GNAT_PKGNAME}-libs-15.2.0
 
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc15-gnat package so that with the dependence pattern
 ## '{gcc15-gnat,gcc15-gnat-libs}>=15.1.*' pkg_add will choose gcc15-gnat-libs over gcc15-gnat.
-PKGREVISION=	2
+PKGREVISION=	1
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -53,7 +53,6 @@ do-install:
 GENERATE_PLIST+=	${ECHO} '@pkgdir ${TARGET_LIBDIR}' ;
 GENERATE_PLIST+=	${SED} -e 's,^\(.*\/\)\([^\/]*\),\2,' ${LIBRARY_FILES} | \
 			${SED} -e 's,^,${GNAT_PKGNAME}/${MACHINE_GNU_PLATFORM}/lib/,' ;
-#			${SED} -e 's,^,${PREFIX}/${GNAT_PKGNAME}/${MACHINE_GNU_PLATFORM}/lib/,' ;
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
