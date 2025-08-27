@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5191 2025/08/27 06:22:05 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5192 2025/08/27 06:27:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7539,3 +7539,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-lsp-server to 1.13.1 [adam 2025-08-27]
 	Updated textproc/py-orjson to 3.11.3 [adam 2025-08-27]
 	Updated graphics/ImageMagick to 7.1.2.2 [triaxx 2025-08-27]
+	Updated emulators/qemu to 10.1.0 [adam 2025-08-27]
+	Updated sysutils/qemu-guest-agent to 10.1.0 [adam 2025-08-27]
