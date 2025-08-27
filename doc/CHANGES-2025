@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5193 2025/08/27 09:21:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5194 2025/08/27 11:58:07 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7544,3 +7544,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-fido2 to 2.0.0 [adam 2025-08-27]
 	Updated archivers/py-cramjam to 2.11.0 [adam 2025-08-27]
 	Updated mail/py-email_validator to 2.3.0 [adam 2025-08-27]
+	Updated geography/qgis to 3.40.10 [gdt 2025-08-27]
