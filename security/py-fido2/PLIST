@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/08/27 09:13:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.APLv2
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING.MPLv2
@@ -32,9 +32,15 @@ ${PYSITELIB}/fido2/attestation/u2f.pyo
 ${PYSITELIB}/fido2/cbor.py
 ${PYSITELIB}/fido2/cbor.pyc
 ${PYSITELIB}/fido2/cbor.pyo
-${PYSITELIB}/fido2/client.py
-${PYSITELIB}/fido2/client.pyc
-${PYSITELIB}/fido2/client.pyo
+${PYSITELIB}/fido2/client/__init__.py
+${PYSITELIB}/fido2/client/__init__.pyc
+${PYSITELIB}/fido2/client/__init__.pyo
+${PYSITELIB}/fido2/client/win_api.py
+${PYSITELIB}/fido2/client/win_api.pyc
+${PYSITELIB}/fido2/client/win_api.pyo
+${PYSITELIB}/fido2/client/windows.py
+${PYSITELIB}/fido2/client/windows.pyc
+${PYSITELIB}/fido2/client/windows.pyo
 ${PYSITELIB}/fido2/cose.py
 ${PYSITELIB}/fido2/cose.pyc
 ${PYSITELIB}/fido2/cose.pyo
@@ -98,6 +104,9 @@ ${PYSITELIB}/fido2/hid/windows.pyo
 ${PYSITELIB}/fido2/mds3.py
 ${PYSITELIB}/fido2/mds3.pyc
 ${PYSITELIB}/fido2/mds3.pyo
+${PYSITELIB}/fido2/payment.py
+${PYSITELIB}/fido2/payment.pyc
+${PYSITELIB}/fido2/payment.pyo
 ${PYSITELIB}/fido2/pcsc.py
 ${PYSITELIB}/fido2/pcsc.pyc
 ${PYSITELIB}/fido2/pcsc.pyo
@@ -115,6 +124,3 @@ ${PYSITELIB}/fido2/utils.pyo
 ${PYSITELIB}/fido2/webauthn.py
 ${PYSITELIB}/fido2/webauthn.pyc
 ${PYSITELIB}/fido2/webauthn.pyo
-${PYSITELIB}/fido2/win_api.py
-${PYSITELIB}/fido2/win_api.pyc
-${PYSITELIB}/fido2/win_api.pyo
