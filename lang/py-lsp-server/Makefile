@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/07/13 10:36:32 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/27 05:28:08 adam Exp $
 
-DISTNAME=	python_lsp_server-1.13.0
+DISTNAME=	python_lsp_server-1.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-lsp-server/}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-docstring-to-markdown-[0-9]*:../../textproc/py-docstring-to-markdown
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17.2:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-lsp-jsonrpc>=1.1.0:../../textproc/py-lsp-jsonrpc
