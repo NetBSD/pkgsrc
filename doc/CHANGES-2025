@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5192 2025/08/27 06:27:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5193 2025/08/27 09:21:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7541,3 +7541,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.2.2 [triaxx 2025-08-27]
 	Updated emulators/qemu to 10.1.0 [adam 2025-08-27]
 	Updated sysutils/qemu-guest-agent to 10.1.0 [adam 2025-08-27]
+	Updated security/py-fido2 to 2.0.0 [adam 2025-08-27]
+	Updated archivers/py-cramjam to 2.11.0 [adam 2025-08-27]
+	Updated mail/py-email_validator to 2.3.0 [adam 2025-08-27]
