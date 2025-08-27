@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:33:55 nia Exp $
+$NetBSD: distinfo,v 1.17 2025/08/27 23:02:32 wiz Exp $
 
 BLAKE2s (kde-baseapps-15.12.0.tar.xz) = ac4982b3a2a946d27e160adaf89bfc0fb9159d3002865a932cefa9e511505c30
 SHA512 (kde-baseapps-15.12.0.tar.xz) = 67dfcfc46d0c9f10c6071927833d9a16c5c2696a16c1be7315a28d4c33ceb402c1505a613ff6222635771f55e6e71cb5df954ec6f477ee0ab199e8727aea8ed4
 Size (kde-baseapps-15.12.0.tar.xz) = 2050764 bytes
-SHA1 (patch-CMakeLists.txt) = f8f5fbf60388d057f845264f4c2759c90b5bc7c3
+SHA1 (patch-CMakeLists.txt) = c58024c9a517837ba7760dee2a2172e361e7125b
 SHA1 (patch-dolphin_src_CMakeLists.txt) = f524104916a8de097309fbc3d775b2ff7f9b13a8
 SHA1 (patch-dolphin_src_dolphin.desktop) = c97d4e0e9ac393b87f62fa88d4414944e18a014d
 SHA1 (patch-dolphin_src_kitemviews_private_kdirectorycontentscounterworker.cpp) = db1d193f2413ae1aa53dbc979076ba76d485883f
 SHA1 (patch-konq-plugins_validators_tidy__validator.cpp) = b1dbebad77ce52d4b07ed1015256378778400641
+SHA1 (patch-konqueror_src_tests_CMakeLists.txt) = 923e56236d6e4b3ab6511bb8c80b432cf95961f2

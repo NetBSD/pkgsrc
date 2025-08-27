@@ -1,0 +1,37 @@
+$NetBSD: patch-konqueror_src_tests_CMakeLists.txt,v 1.1 2025/08/27 23:02:32 wiz Exp $
+
+Fix build with cmake 4.
+
+--- konqueror/src/tests/CMakeLists.txt.orig	2015-12-08 07:04:21.000000000 +0000
++++ konqueror/src/tests/CMakeLists.txt
+@@ -9,30 +9,4 @@ kde4_add_executable(centralwidget TEST c
+ target_link_libraries(centralwidget konq ${KDE4_KDECORE_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
+                       ${QT_QTTEST_LIBRARY})
+ 
+-########### konqviewmgrtest ###############
+-
+-kde4_add_unit_test(konqviewmgrtest TEST konqviewmgrtest.cpp)
+-target_link_libraries(konqviewmgrtest kdeinit_konqueror ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY}
+-                      ${KDE4_KHTML_LIBS} ${QT_QTTEST_LIBRARY})
+-
+-########### historymanagertest ###############
+-
+-kde4_add_unit_test(historymanagertest historymanagertest.cpp)
+-target_link_libraries(historymanagertest konq konquerorprivate ${KDE4_KDEUI_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
+-
+-########### undomanagertest ###############
+-
+-kde4_add_unit_test(undomanagertest undomanagertest.cpp)
+-target_link_libraries(undomanagertest kdeinit_konqueror ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
+-
+-########### konqhtmltest ###############
+-
+-kde4_add_unit_test(konqhtmltest konqhtmltest.cpp)
+-target_link_libraries(konqhtmltest kdeinit_konqueror ${KDE4_KHTML_LIBS} ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
+-
+-########### konqviewtest ###############
+-
+-kde4_add_unit_test(konqviewtest konqviewtest.cpp)
+-target_link_libraries(konqviewtest kdeinit_konqueror ${QT_QTCORE_LIBRARY} ${QT_QTTEST_LIBRARY})
+-
+ endif (NOT WIN32)
