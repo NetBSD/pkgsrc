@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/08/10 08:21:50 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/08/27 05:30:33 adam Exp $
 
 DISTNAME=	sanic-25.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,7 +37,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sanic-[0-9]*:../../www/py-test-sanic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar-[0-9]*:../../devel/py-test-sugar
-TEST_DEPENDS+=	${PYPKGPREFIX}-types-ujson-[0-9]*:../../devel/py-types-ujson
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
