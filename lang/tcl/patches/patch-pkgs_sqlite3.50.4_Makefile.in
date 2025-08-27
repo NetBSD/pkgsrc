@@ -1,9 +1,9 @@
-$NetBSD: patch-pkgs_sqlite3.47.2_Makefile.in,v 1.1 2025/01/25 21:29:25 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.50.4_Makefile.in,v 1.1 2025/08/27 15:08:21 adam Exp $
 
 Fix building with system sqlite3.
 
---- pkgs/sqlite3.47.2/Makefile.in.orig	2022-11-18 18:49:30.000000000 +0000
-+++ pkgs/sqlite3.47.2/Makefile.in
+--- pkgs/sqlite3.50.4/Makefile.in.orig	2022-11-18 18:49:30.000000000 +0000
++++ pkgs/sqlite3.50.4/Makefile.in
 @@ -155,7 +155,7 @@ SHARED_BUILD	= @SHARED_BUILD@
  INCLUDES	= @PKG_INCLUDES@ @TCL_INCLUDES@ -I. -I$(srcdir)/..
  #INCLUDES	= @PKG_INCLUDES@ @TCL_INCLUDES@ @TK_INCLUDES@ @TK_XINCLUDES@

@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_configure,v 1.19 2025/07/02 16:58:37 jperkin Exp $
+$NetBSD: patch-unix_configure,v 1.20 2025/08/27 15:08:21 adam Exp $
 
 Fix evil -Wimplicit-function-declaration fallout on GCC 14.
 
---- unix/configure.orig	2024-12-02 12:57:40.000000000 +0000
+--- unix/configure.orig	2025-07-31 17:29:02.000000000 +0000
 +++ unix/configure
 @@ -6772,12 +6772,12 @@ fi
  	    LD_SEARCH_FLAGS=""
@@ -104,8 +104,8 @@ Fix evil -Wimplicit-function-declaration fallout on GCC 14.
  fi
  VERSION='${VERSION}'
  eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
-@@ -19243,10 +19245,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
- 	TCL_PACKAGE_PATH="$TCL_PACKAGE_PATH:/Library/Frameworks/Tk.framework/Versions"
+@@ -19241,10 +19243,8 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+ 	TCL_PACKAGE_PATH="~/Library/Tcl:/Library/Tcl:~/Library/Frameworks:/Library/Frameworks"
      test -z "$TCL_MODULE_PATH"  && \
  	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl"
 -elif test "$prefix/lib" != "$libdir"; then
@@ -116,7 +116,7 @@ Fix evil -Wimplicit-function-declaration fallout on GCC 14.
  fi
  
  #--------------------------------------------------------------------
-@@ -19261,12 +19261,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+@@ -19259,12 +19259,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  eval "TCL_STUB_LIB_DIR=\"${libdir}\""
  
@@ -130,7 +130,7 @@ Fix evil -Wimplicit-function-declaration fallout on GCC 14.
  TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
  TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
  TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
-@@ -19420,34 +19415,15 @@ fi
+@@ -19418,34 +19413,15 @@ fi
  # Transform confdefs.h into DEFS.
  # Protect against shell expansion while executing Makefile rules.
  # Protect against Makefile macro expansion.
@@ -174,7 +174,7 @@ Fix evil -Wimplicit-function-declaration fallout on GCC 14.
  
  
  
-@@ -20077,6 +20053,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+@@ -20075,6 +20051,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
  s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
  s,@DLTEST_LD@,$DLTEST_LD,;t t
  s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t
