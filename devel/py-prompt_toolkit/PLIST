@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/12 19:21:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/08/27 20:28:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -372,6 +372,9 @@ ${PYSITELIB}/prompt_toolkit/selection.pyo
 ${PYSITELIB}/prompt_toolkit/shortcuts/__init__.py
 ${PYSITELIB}/prompt_toolkit/shortcuts/__init__.pyc
 ${PYSITELIB}/prompt_toolkit/shortcuts/__init__.pyo
+${PYSITELIB}/prompt_toolkit/shortcuts/choice_input.py
+${PYSITELIB}/prompt_toolkit/shortcuts/choice_input.pyc
+${PYSITELIB}/prompt_toolkit/shortcuts/choice_input.pyo
 ${PYSITELIB}/prompt_toolkit/shortcuts/dialogs.py
 ${PYSITELIB}/prompt_toolkit/shortcuts/dialogs.pyc
 ${PYSITELIB}/prompt_toolkit/shortcuts/dialogs.pyo
