@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/04/14 09:56:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/27 09:21:19 adam Exp $
 
-DISTNAME=	email_validator-2.2.0
+DISTNAME=	email_validator-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/email-validator/}
 
