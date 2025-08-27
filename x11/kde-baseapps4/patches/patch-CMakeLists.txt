@@ -1,10 +1,22 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/02/11 21:38:08 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/27 23:02:32 wiz Exp $
+
+Fix build with cmake 4.
 
 dont build dolphin
 
 --- CMakeLists.txt.orig	2015-12-08 07:04:21.000000000 +0000
 +++ CMakeLists.txt
-@@ -37,7 +37,7 @@ if ( KActivities_FOUND )
+@@ -1,7 +1,9 @@
++cmake_minimum_required(VERSION 3.5)
++
+ project(KDEBASE_APPS)
+ 
+ # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
+ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules )
+ 
+ include(CTest)
+ include(CTestConfig.cmake)
+@@ -37,7 +39,7 @@ if ( KActivities_FOUND )
  endif ( KActivities_FOUND )
  
  add_subdirectory( lib )
