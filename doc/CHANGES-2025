@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5204 2025/08/28 12:09:04 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.5205 2025/08/28 19:13:46 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -6174,7 +6174,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libheif to 1.20.1 [wiz 2025-07-06]
 	Updated databases/redis to 8.0.3 [adam 2025-07-06]
 	Updated devel/blosc2 to 2.19.0 [adam 2025-07-06]
-	Updated www/nginx-devel to 1.28.0 [osa 2025-07-07]
+	Updated www/nginx-devel to 1.29.0 [osa 2025-07-07]
 	Updated mail/procmail to 3.24nb1 [dholland 2025-07-07]
 	Updated sysutils/hwdata to 0.397 [wiz 2025-07-07]
 	Updated devel/py-gi-docgen to 2025.4 [wiz 2025-07-07]
@@ -6474,7 +6474,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 11.3.0 [wiz 2025-07-21]
 	Updated fonts/harfbuzz-icu to 11.3.0 [wiz 2025-07-21]
 	Updated shells/bash to 5.3nb1 [kim 2025-07-21]
-	Updated sysutils/yazi to 25.5.31nb1 [wiz 2025-07-21]
 	Updated www/gitea to 1.23.8 [khorben 2025-07-22]
 	Updated x11/py-sip6 to 6.12.0 [adam 2025-07-22]
 	Updated x11/py-qt6 to 6.9.1 [adam 2025-07-22]
@@ -6823,7 +6822,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/senpai to 0.4.1 [pin 2025-08-04]
 	Updated comms/asterisk18 to 18.26.3 [jnemeth 2025-08-04]
 	Updated comms/asterisk21 to 21.10.1 [jnemeth 2025-08-04]
-	Downgraded textproc/py-docutils to 0.21.2nb1 [wiz 2025-08-03]
+	Downgraded textproc/py-docutils to 0.21.2nb1 [wiz 2025-08-05]
 	Updated devel/py-anyio to 4.10.0 [adam 2025-08-05]
 	Updated security/py-gnupg to 0.5.5 [adam 2025-08-05]
 	Updated devel/py-poetry to 2.1.4 [adam 2025-08-05]
@@ -6947,7 +6946,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Inline to 0.87 [wen 2025-08-10]
 	Updated devel/p5-IO-Interactive to 1.027 [wen 2025-08-10]
 	Updated devel/p5-IO-Prompter to 0.005002 [wen 2025-08-10]
-	Updated devel/p5-Log-Any to 1.718 [wen 2025-08-25]
+	Updated devel/p5-Log-Any to 1.718 [wen 2025-08-10]
 	Updated devel/p5-Log-Dispatchouli to 3.011 [wen 2025-08-10]
 	Updated security/p5-Authen-SASL to 2.1900 [wiz 2025-08-10]
 	Updated devel/p5-Specio to 0.52 [wiz 2025-08-10]
