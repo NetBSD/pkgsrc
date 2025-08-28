@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/08/26 13:25:18 pin Exp $
+# $NetBSD: Makefile,v 1.45 2025/08/28 22:36:36 wiz Exp $
 
 DISTNAME=	slumber-3.4.0
 CATEGORIES=	net
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.89.0
+#RUST_REQ=	1.89.0
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
