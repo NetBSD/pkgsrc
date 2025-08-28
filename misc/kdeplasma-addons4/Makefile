@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2025/04/24 14:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2025/08/28 07:32:27 wiz Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	60
+PKGREVISION=	61
 CATEGORIES=	misc
 COMMENT=	Plasmoids
 
@@ -29,6 +29,7 @@ BUILDLINK_API_DEPENDS.eigen2+=	eigen2>=2.0.3
 #.include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../security/qoauth/buildlink3.mk"
+.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
 .include "../../x11/kde-workspace4/buildlink3.mk"

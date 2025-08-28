@@ -1,0 +1,11 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/28 07:32:27 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-28 06:57:20.098807948 +0000
++++ CMakeLists.txt
+@@ -1,2 +1,4 @@
++cmake_minimum_required(VERSION 3.5)
++
+ project(kdeplasma-addons)
+ 
