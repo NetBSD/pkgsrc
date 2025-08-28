@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.526 2025/08/28 12:00:49 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.527 2025/08/28 12:02:05 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19741,7 +19741,7 @@ grub2<2.0.6		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2020-15706
 grub2<2.0.6		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-15707
 grub2<2.0.6		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-10713
 balsa<2.6.0		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16118
-libssh-[0-9]*		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16135
+libssh<0.9.5		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16135
 evolution-data-server<3.35.91		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-16117
 ruby{25,26,27}-faye-websocket<0.11.0	improper-certificate-validation https://nvd.nist.gov/vuln/detail/CVE-2020-15133
 php{56,71,72,73,74}-tiki6-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-8966
