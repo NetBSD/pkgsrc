@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: fcgiwrap.sh,v 1.2 2024/12/11 15:25:04 ryoon Exp $
+# $NetBSD: fcgiwrap.sh,v 1.3 2025/08/28 04:27:31 khorben Exp $
 #
 # PROVIDE: fcgiwrap
 # REQUIRE: DAEMON
@@ -36,6 +36,7 @@ fcgiwrap_precmd()
 
 fcgiwrap_start()
 {
+	echo "Starting ${name}."
 	@SU@ -m ${fcgiwrap_user} -c "${command} -f -s unix:${fcgiwrap_socket}" &
 }
 
