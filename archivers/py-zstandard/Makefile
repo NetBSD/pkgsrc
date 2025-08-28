@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/08/26 14:35:41 leot Exp $
+# $NetBSD: Makefile,v 1.38 2025/08/28 12:40:15 pho Exp $
 
 DISTNAME=	zstandard-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-
-USE_TOOLS+=	cpp
 
 .include "../../mk/bsd.prefs.mk"
 # qsort_r(3) was added in NetBSD 11.0
