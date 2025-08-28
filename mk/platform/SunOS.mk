@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.97 2025/04/12 08:41:11 nia Exp $
+# $NetBSD: SunOS.mk,v 1.98 2025/08/28 12:11:57 pho Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -38,6 +38,10 @@ ULIMIT_CMD_stacksize?=	ulimit -s 131072
 EXTRACT_USING?=		bsdtar
 # But bsdtar chokes on UTF-8 file names on the C locale.
 EXTRACT_ENV+=		LC_CTYPE=en_US.UTF-8
+
+# The native cpp is at /usr/lib/cpp but it doesn't support the -o flag,
+# which is required by some packages including devel/gobject-introspection.
+CPP=			${CC} -E
 .endif
 
 .if exists(/usr/openwin/include/X11/X.h)
