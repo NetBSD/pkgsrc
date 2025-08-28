@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.525 2025/08/28 11:58:59 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.526 2025/08/28 12:00:49 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -18259,7 +18259,7 @@ isc-dhcpd<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-647
 libarchive<3.4.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2019-18408
 libidn2<2.2.0		spoofing		https://nvd.nist.gov/vuln/detail/CVE-2019-12290
 libidn2<2.1.1		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-18224
-libssh2-[0-9]*		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-17498
+libssh2<1.10.0		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-17498
 libvncserver-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-15681
 magento<1.9.4.1		multiple-vulnerabilities	https://magento.com/security/patches/magento-2.3.1-2.2.8-and-2.1.17-security-update
 magento>=2.1<2.1.17	multiple-vulnerabilities	https://magento.com/security/patches/magento-2.3.1-2.2.8-and-2.1.17-security-update
