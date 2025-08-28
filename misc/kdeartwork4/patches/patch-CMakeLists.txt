@@ -1,0 +1,11 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/28 07:02:39 wiz Exp $
+
+Fix build with cmake 4.
+
+--- CMakeLists.txt.orig	2025-08-28 06:58:10.304550427 +0000
++++ CMakeLists.txt
+@@ -1,2 +1,4 @@
++cmake_minimum_required(VERSION 3.5)
++
+ project(kdeartwork)
+ 
