@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.524 2025/08/27 10:50:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.525 2025/08/28 11:58:59 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22371,8 +22371,8 @@ moodle<3.9.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-39
 moodle>=3.10<3.10.8	remote-code-execution 	https://nvd.nist.gov/vuln/detail/CVE-2021-3943
 moodle<3.9.11	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43558
 moodle>=3.10<3.10.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43558
-lua51-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
-lua52-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+#lua51-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
+#lua52-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
 lua53<5.3.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
 lua54<5.4.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43519
 matrix-synapse<1.47.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2021-41281
