@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5201 2025/08/28 08:17:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5202 2025/08/28 08:18:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7555,3 +7555,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.8.28 [adam 2025-08-28]
 	Updated misc/kdeplasma-addons4 to 4.14.3nb61 [wiz 2025-08-28]
 	Updated devel/mise to 2025.8.21 [pin 2025-08-28]
+	Updated sysutils/xcp to 0.24.2 [pin 2025-08-28]
