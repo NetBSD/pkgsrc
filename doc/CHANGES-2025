@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5198 2025/08/27 20:31:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5199 2025/08/28 06:01:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7551,3 +7551,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc15-gnat-libs to 15.2.0nb1 [dkazankov 2025-08-27]
 	Updated devel/py-prompt_toolkit to 3.0.52 [adam 2025-08-27]
 	Updated misc/py-platformdirs to 4.4.0 [adam 2025-08-27]
+	Updated net/yt-dlp to 2025.8.27 [adam 2025-08-28]
+	Updated graphics/py-tifffile to 2025.8.28 [adam 2025-08-28]
