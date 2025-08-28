@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.13 2025/02/03 16:25:01 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.14 2025/08/28 12:43:01 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -93,12 +93,6 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
 
-.if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"
-# On this platform cpp(1) is missing from /usr/bin. Why? This leads
-# ${WRKSRC}/libffi/configure to fail.
-TOOLS_PLATFORM.cpp=	/usr/lib/cpp
-.endif
-
 
 # -----------------------------------------------------------------------------
 # The "pre-configure" hook
@@ -106,7 +100,7 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz cpp gtar patch
+USE_TOOLS+=	xzcat xz gtar patch
 # - patch is for bootstrap.py
 # - gtar isn't strictly necessary, but we need a tar(1) implementation
 #   supporting --use-compress-program (see
