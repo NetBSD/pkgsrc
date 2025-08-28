@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/07/04 08:47:50 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/08/28 12:41:05 pho Exp $
 
 DISTNAME=		Socket6-0.29
 PKGNAME=		p5-${DISTNAME}
@@ -17,7 +17,6 @@ PERL5_PACKLIST=		auto/Socket6/.packlist
 BUILD_DEFS+=		IPV6_READY
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		cpp
 MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
