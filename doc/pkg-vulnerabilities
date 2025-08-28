@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.529 2025/08/28 12:04:55 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.530 2025/08/28 12:06:18 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14911,7 +14911,7 @@ openssl>=1.1.0<1.1.0h	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2
 npm<6.0.1		modification-of-assumed-immutable-data	https://nvd.nist.gov/vuln/detail/CVE-2018-3728
 leptonica<1.75.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2018-3836
 ffmpeg3<3.4.3		infinite-loop		https://nvd.nist.gov/vuln/detail/CVE-2018-7751
-ktexteditor>=5.34.0	symlink-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-10361
+ktexteditor>=5.34.0<5.48.0	symlink-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-10361
 binutils<2.31		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10372
 binutils<2.31		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10373
 glusterfs<3.12.9	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-1112
