@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.2 2025/02/03 16:47:59 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.3 2025/08/28 12:14:54 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -91,7 +91,7 @@ SITES.${i}?=	${MASTER_SITE_LOCAL}
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz cpp gtar patch
+USE_TOOLS+=	xzcat xz gtar patch
 # - patch is for bootstrap.py
 # - gtar isn't strictly necessary, but we need a tar(1) implementation
 #   supporting --use-compress-program (see
