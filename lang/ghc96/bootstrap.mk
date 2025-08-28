@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2023/11/30 13:36:05 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2025/08/28 12:43:01 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -83,12 +83,6 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 SITES.${i}?=	${MASTER_SITE_LOCAL}
 .endfor
 
-.if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"
-# Also cpp is missing from /usr/bin. Why? This leads
-# ${WRKSRC}/libffi/configure to fail.
-TOOLS_PLATFORM.cpp=	/usr/lib/cpp
-.endif
-
 
 # -----------------------------------------------------------------------------
 # The "pre-configure" hook
@@ -96,7 +90,7 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz gtar cpp
+USE_TOOLS+=	xzcat xz gtar
 
 # Bootkits from the pre-Hadrian era has a different name for the top
 # directory in their archives. We can eliminate this conditional once all

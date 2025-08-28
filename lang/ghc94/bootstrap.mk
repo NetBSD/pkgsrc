@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.8 2023/10/12 07:51:09 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.9 2025/08/28 12:43:00 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -96,12 +96,6 @@ TOOL_DEPENDS+=	libiconv>=1.9.1:../../converters/libiconv
 TOOL_DEPENDS+=	ncurses>=6.0:../../devel/ncurses
 .endif
 
-.if ${OPSYS} == "SunOS" && ${OS_VARIANT:U} == "OmniOS"
-# Also cpp is missing from /usr/bin. Why? This leads
-# ${WRKSRC}/libffi/configure to fail.
-TOOLS_PLATFORM.cpp=	/usr/lib/cpp
-.endif
-
 
 # -----------------------------------------------------------------------------
 # The "pre-configure" hook
@@ -109,7 +103,7 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz gtar cpp
+USE_TOOLS+=	xzcat xz gtar
 
 pre-configure:
 	${RUN}${TEST} -f ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} || \
