@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.528 2025/08/28 12:03:51 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.529 2025/08/28 12:04:55 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19903,7 +19903,7 @@ php>=7.3<7.3.22		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-20
 php>=7.4<7.4.10		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2020-7068
 bitcoin>=0.16.0<0.16.2	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-17145
 bitcoin>=0.20.0<0.20.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-14198
-yarn-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-15168
+#yarn-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-15168
 zeromq<4.3.3		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-15166
 p5-DBI<1.632		memory-corruption		https://nvd.nist.gov/vuln/detail/CVE-2013-7490
 p5-DBI<1.628		stack-corruption		https://nvd.nist.gov/vuln/detail/CVE-2013-7491
