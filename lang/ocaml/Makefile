@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2025/08/23 15:04:29 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2025/08/28 21:01:12 wiz Exp $
 
 .include "Makefile.common"
 
@@ -50,10 +50,6 @@ INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
 INSTALLATION_DIRS=	share/doc/ocaml
-
-OPSYSVARS+=		EXTRA_RT_LIBS
-EXTRA_RT_LIBS.NetBSD=	-lcurses
-EXTRA_RT_LIBS.*=
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
 
