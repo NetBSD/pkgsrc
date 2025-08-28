@@ -1,25 +1,41 @@
-# $NetBSD: Makefile,v 1.150 2025/08/28 21:01:12 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2025/08/28 23:57:59 wiz Exp $
 
-.include "Makefile.common"
+# Please do not update to ocaml 5.x without discussion, as the
+# consensus is mostly that those versions are not yet baked, and will
+# cause hard-to-debug problems.
+DISTNAME=	ocaml-4.14.2
+PKGREVISION=	1
+CATEGORIES=	lang
+MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.14/
+#EXTRACT_SUFX=	.tar.bz2
 
-PKGREVISION=		1
+MAINTAINER=	pkgsrc-users@NetBSD.org
+#MAINTAINER+=	gdt@NetBSD.org
+HOMEPAGE=	https://ocaml.org/
+COMMENT=	The latest implementation of the Caml dialect of ML
+LICENSE=	gnu-gpl-v2
+
+USE_LANGUAGES+=		c
+USE_LIBTOOL=		yes
+USE_TOOLS+=		bash gmake
+GNU_CONFIGURE=		yes
+USE_GNU_CONFIGURE_HOST=	no
+
+MAKE_FLAGS+=		INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=		INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_FLAGS+=		INSTALL_PROG=${INSTALL_SCRIPT:Q}
+
+# build failure on i386: "../ocamlopt.opt: text relocations"
+MKPIE_SUPPORTED=	no
 
 TEST_PROGRAM=		ocamltest
 MAKE_JOBS_SAFE=		no
 UNLIMIT_RESOURCES=	stacksize
 
-USE_TOOLS+=		bash
-USE_LANGUAGES+=		c
-USE_LIBTOOL=		yes
-USE_GNU_CONFIGURE_HOST=	no
-
-#USE_GCC_RUNTIME=	yes
-
 .include "options.mk"
 .include "native.mk"
 
 # Options
-
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 CONFIGURE_ARGS+=	--enable-native-compiler
 BUILD_TARGET=		world.opt
@@ -49,6 +65,10 @@ CONFIGURE_ARGS+=	--enable-imprecise-c99-float-ops
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
+.if ${OPSYS} == "Linux"
+INSTALL_UNSTRIPPED=	yes
+.endif
+
 INSTALLATION_DIRS=	share/doc/ocaml
 
 PRINT_PLIST_AWK+=	{ gsub(/lib\/ocaml\/${PKGMANDIR:S|/|\\/|}/, "lib/ocaml/$${PKGMANDIR}"); }
@@ -68,5 +88,6 @@ fix-darwin-install-name:
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
