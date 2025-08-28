@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/12/11 15:25:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2025/08/28 04:27:31 khorben Exp $
 
 DISTNAME=	fcgiwrap-1.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 
 COMMENT=	FastCGI wrapper for plain CGI scripts
