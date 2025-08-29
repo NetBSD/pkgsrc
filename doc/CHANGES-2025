@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5222 2025/08/29 14:20:45 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5223 2025/08/29 14:22:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7580,3 +7580,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/gam to 7.19.02 [sborrill 2025-08-29]
 	Updated mail/gyb to 1.90 [sborrill 2025-08-29]
 	Updated lang/php84 to 8.4.12 [taca 2025-08-29]
+	Updated lang/php83 to 8.3.25 [taca 2025-08-29]
