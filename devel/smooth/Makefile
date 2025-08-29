@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/08/12 00:54:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/29 06:41:58 adam Exp $
 
 DISTNAME=	smooth-0.9.10
 CATEGORIES=	devel
@@ -13,15 +13,17 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 # For build and install targets
-MAKE_FLAGS+=	config="systemlibcpuid systemlibwebp"
+MAKE_FLAGS+=	config="systemlibbz2 systemlibcpuid systemlibcurl systemlibfribidi systemlibiconv systemlibjpeg systemlibpng systemlibwebp systemlibxml2 systemzlib"
 MAKE_FLAGS+=	prefix=${PREFIX}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../sysutils/libcpuid/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
