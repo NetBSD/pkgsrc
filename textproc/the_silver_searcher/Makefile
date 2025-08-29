@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2018/08/09 11:02:17 leot Exp $
+# $NetBSD: Makefile,v 1.20 2025/08/29 12:17:31 leot Exp $
 
 DISTNAME=	the_silver_searcher-2.2.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://geoff.greer.fm/ag/releases/
 
