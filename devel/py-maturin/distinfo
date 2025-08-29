@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2025/08/05 06:13:23 adam Exp $
+$NetBSD: distinfo,v 1.40 2025/08/29 09:51:36 adam Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -459,9 +459,9 @@ Size (mailparse-0.15.0.crate) = 37293 bytes
 BLAKE2s (matchers-0.1.0.crate) = e16e40b59402c6282f2b7ce6e930e3f88bb630b24e68b5bd0a2b1d9fb57f1fac
 SHA512 (matchers-0.1.0.crate) = 84214c1a84952d85631aa1ab5115df7cda223ac64e2acf055b6129ba1aa26ddc87615a8b51ca890ce3fee0419053fa7fe1599ae128f1d211b58c07b0c4af3b19
 Size (matchers-0.1.0.crate) = 6948 bytes
-BLAKE2s (maturin-1.9.3.tar.gz) = b4b3e2579b87fa2ff9251bed15b61ecc2a6ebf71cc1ac9c119acf575ae959fc7
-SHA512 (maturin-1.9.3.tar.gz) = f798bf581d53135aae9fbfe770d7e3ac567738b87b3358bcd52dfb7c17999305a747d0c79d14fa30a8313ff982ca04fc6ceb0292ac5b43f591c7b8405583421d
-Size (maturin-1.9.3.tar.gz) = 212713 bytes
+BLAKE2s (maturin-1.9.4.tar.gz) = 94132cf56b051a53e155aab259cc943bedf627260e621f34f9c980ea7d382c08
+SHA512 (maturin-1.9.4.tar.gz) = ff50ff88a3af8ad5a9fde463edd59dae50dd93c55c5af64abbe3abe9efaa74c5601b720c0e729ca3ba165f06c765c002b3d52a4cb8ac18a8cbb0c6c967f7185c
+Size (maturin-1.9.4.tar.gz) = 213647 bytes
 BLAKE2s (memchr-2.7.4.crate) = 87799dee61c273cba812d73b67f6ccaf05d8f18d4cc33e0f70986a1485ee0d64
 SHA512 (memchr-2.7.4.crate) = 8d0e8b9c30208897d4b1b920f1bdcccd0c2b75d92a06abe4a1b2407938768abb6487d63de56c6a80419798fe69517210643dfaf11f5f5540185f0eccf220adb2
 Size (memchr-2.7.4.crate) = 96670 bytes
@@ -1117,4 +1117,4 @@ BLAKE2s (zstd-sys-2.0.15+zstd.1.5.7.crate) = ab7e4cb65c8b12350a87e0a2a325068c047
 SHA512 (zstd-sys-2.0.15+zstd.1.5.7.crate) = c684e3d966746dfac12947174d7786f528f2e26ed2802e24b457a751616a9b6e6a274d77f70f7e75a111caefdc4357257ed4c2e2137cd2f051206f56e9cd19cf
 Size (zstd-sys-2.0.15+zstd.1.5.7.crate) = 774847 bytes
 SHA1 (patch-maturin_____init____.py) = 0fe5f824c5623d3123c34307a326d995ad3830d4
-SHA1 (patch-src_build__context.rs) = 8f58795c83920e56479d48c1ea2dc06dfa811dc9
+SHA1 (patch-src_build__context.rs) = d23dd3d46ea7c864883fcc5af07aa5a3e0cb1543
