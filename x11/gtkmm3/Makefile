@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2025/04/24 14:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/08/29 21:51:19 wiz Exp $
 
 DISTNAME=	gtkmm-3.24.9
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gtkmm.org/
 COMMENT=	C++ Interfaces for GTK+ and GNOME (v3)
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++11
@@ -39,6 +41,5 @@ BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.14.0
 .include "../../graphics/cairomm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.35.5
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
