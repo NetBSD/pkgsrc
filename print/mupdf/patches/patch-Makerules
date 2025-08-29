@@ -1,4 +1,4 @@
-$NetBSD: patch-Makerules,v 1.1 2024/08/14 05:55:32 adam Exp $
+$NetBSD: patch-Makerules,v 1.2 2025/08/29 09:17:06 leot Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -10,9 +10,9 @@ $NetBSD: patch-Makerules,v 1.1 2024/08/14 05:55:32 adam Exp $
 - Avoid internal version of freeglut and try to pick it up via pkg-config and
   set SYS_GLUT_{CFLAGS,LIBS} accordingly.
 
---- Makerules.orig	2024-03-19 15:31:58.000000000 +0000
+--- Makerules.orig	2025-08-22 20:10:30.000000000 +0000
 +++ Makerules
-@@ -48,30 +48,6 @@ endif
+@@ -100,19 +100,6 @@ endif
  
  # System specific features
  
@@ -21,37 +21,22 @@ $NetBSD: patch-Makerules,v 1.1 2024/08/14 05:55:32 adam Exp $
 -  CFLAGS += -ffunction-sections -fdata-sections
 -endif
 -
--ifeq ($(OS),MACOS)
+-ifeq ($(OS),Darwin)
 -  LDREMOVEUNREACH := -Wl,-dead_strip
 -  SO := dylib
 -else
 -  LDREMOVEUNREACH := -Wl,--gc-sections
--  ifeq ($(OS),MINGW)
--    SO := dll
--    EXE := .exe
--  else
--    SO := so
--  endif
--endif
--
--ifeq "$(OS)" "ios"
--  NEONFLAGS =
--else
--  NEONFLAGS = -mneon
+-  SO := so
 -endif
 -
  SANITIZE_FLAGS += -fsanitize=address
  SANITIZE_FLAGS += -fsanitize=leak
  
-@@ -178,37 +154,7 @@ ifeq ($(OS),OpenBSD)
-     LINUX_OR_OPENBSD := yes
+@@ -212,37 +199,7 @@ ifneq "$(CLUSTER)" ""
+   CFLAGS += -DCLUSTER
  endif
  
--ifeq ($(OS),MINGW)
--  WINDRES := windres
--  HAVE_WIN32 := yes
--
--else ifeq ($(OS),MACOS)
+-ifeq ($(OS),Darwin)
 -  HAVE_GLUT := yes
 -  SYS_GLUT_CFLAGS := -Wno-deprecated-declarations
 -  SYS_GLUT_LIBS := -framework GLUT -framework OpenGL
@@ -68,38 +53,26 @@ $NetBSD: patch-Makerules,v 1.1 2024/08/14 05:55:32 adam Exp $
 -  else
 -    HAVE_LIBCRYPTO := $(shell pkg-config --exists 'libcrypto >= 1.1.0' && echo yes)
 -    ifeq ($(HAVE_LIBCRYPTO),yes)
--	  LIBCRYPTO_CFLAGS := $(shell pkg-config --cflags libcrypto) -DHAVE_LIBCRYPTO
--	  LIBCRYPTO_LIBS := $(shell pkg-config --libs libcrypto)
+-      LIBCRYPTO_CFLAGS := $(shell pkg-config --cflags libcrypto) -DHAVE_LIBCRYPTO
+-      LIBCRYPTO_LIBS := $(shell pkg-config --libs libcrypto)
 -    endif
 -  endif
 -
--else ifeq ($(LINUX_OR_OPENBSD),yes)
+-else
 -
 -  ifeq ($(OS),Linux)
 -    HAVE_OBJCOPY := yes
 -  endif
+-
+-  ifeq ($(OS),OpenBSD)
+-    LDFLAGS += -pthread
+-  endif
 +HAVE_OBJCOPY := no
  
-   ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
- 	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
-@@ -263,15 +209,9 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
- 	SYS_CURL_LIBS := $(shell pkg-config --libs libcurl)
-   endif
- 
--  HAVE_GLUT := yes
-   ifeq ($(HAVE_GLUT),yes)
--    ifeq ($(OS),OpenBSD)
-       SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut gl)
-       SYS_GLUT_LIBS := $(shell pkg-config --libs glut gl)
--    else
--      SYS_GLUT_CFLAGS :=
--      SYS_GLUT_LIBS := -lglut -lGL
--    endif
-   endif
- 
-   HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
-@@ -294,8 +234,6 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
- 	PTHREAD_LIBS := -lpthread
+   ifeq ($(shell pkg-config --exists 'freetype2 >= 18.3.12' && echo yes),yes)
+     SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
+@@ -344,8 +301,6 @@ else
+     PTHREAD_LIBS := -lpthread
    endif
  
 -endif
