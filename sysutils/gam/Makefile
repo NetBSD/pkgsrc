@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/08/29 13:42:23 sborrill Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/29 13:50:22 wiz Exp $
 
 DISTNAME=	gam-7.19.02
 CATEGORIES=	sysutils python
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/GAM-team/GAM
 COMMENT=	Command line tool for Google Workspace admins
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.0:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.11.2:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2-[0-9]*:../../security/py-google-auth-httplib2
@@ -24,11 +24,12 @@ DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.2:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gam/*.py
+REPLACE_PYTHON+=	src/gam/__init__.py
 
 WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}
 
 WHEEL_NAME=	gam7-${VERSION_TRIM}
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
