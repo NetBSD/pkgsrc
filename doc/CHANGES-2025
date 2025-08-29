@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5217 2025/08/29 12:21:48 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5218 2025/08/29 12:22:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7574,3 +7574,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/chirp to 20250829 [gdt 2025-08-29]
 	Updated devel/bacon to 3.18.0 [pin 2025-08-29]
 	Updated sysutils/broot to 1.48.0 [pin 2025-08-29]
+	Updated shells/oh-my-posh to 26.19.2 [pin 2025-08-29]
