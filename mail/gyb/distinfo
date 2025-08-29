@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/12/02 08:44:46 sborrill Exp $
+$NetBSD: distinfo,v 1.4 2025/08/29 14:14:00 sborrill Exp $
 
-BLAKE2s (gyb-1.82.tar.gz) = d12a6c18246639adae1e7e22c88c5c4acad36a86966ed6bf69ffbdafc1194a2b
-SHA512 (gyb-1.82.tar.gz) = 6402c503bfc03fee9c9bb2edbe9b151fe36bd180a3f4bf4b8a90ed1fc4cac4b25f1c04f2e836d60298403641eed1989212ed7f43a53fb31fdd15dfdd6db35a98
-Size (gyb-1.82.tar.gz) = 1157102 bytes
+BLAKE2s (gyb-1.90.tar.gz) = e7b074d9b013e2c09e731bce74a54a3a6d1135fcc6c9f18cdf5ff9cf217ee5ef
+SHA512 (gyb-1.90.tar.gz) = ff847f5edc06f7ae89605166f72008961b0d5c4dcf61ba8f40362d689fa4f99d5b5439f43bd1ac7623282da620ee0f85022eaa33ee5714be60be35e46109f4b6
+Size (gyb-1.90.tar.gz) = 1162187 bytes
 SHA1 (patch-gyb.py) = 0f3575814d27a345eaf6e9e0217904134242420e
