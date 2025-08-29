@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.29 2025/08/29 09:17:06 leot Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/08/29 09:54:49 leot Exp $
 bin/mupdf
-bin/mupdf-gl
+${PLIST.opengl}bin/mupdf-gl
+${PLIST.curl}bin/mupdf-x11-curl
 bin/mutool
 include/mupdf/fitz.h
 include/mupdf/fitz/archive.h
