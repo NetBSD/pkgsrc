@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5219 2025/08/29 12:40:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5220 2025/08/29 13:44:07 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7577,3 +7577,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.19.2 [pin 2025-08-29]
 	Updated textproc/py-mistune to 3.1.4 [adam 2025-08-29]
 	Updated devel/py-ipython to 9.5.0 [adam 2025-08-29]
+	Updated sysutils/gam to 7.19.02 [sborrill 2025-08-29]
