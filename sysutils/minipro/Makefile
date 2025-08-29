@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/28 12:33:21 hauke Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/29 02:01:00 thorpej Exp $
 
-MINIPRO_VERS=	0.7.3
+MINIPRO_VERS=	0.7.4
 
 DISTNAME=	minipro-${MINIPRO_VERS}
 #PKGREVISION=	1
