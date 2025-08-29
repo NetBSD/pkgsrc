@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.11 2025/08/04 15:11:08 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q2,v 1.1.2.12 2025/08/29 18:32:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2025Q2 branch:
 
@@ -82,3 +82,8 @@ www/palemoon: Security fix
 
 Pullup ticket #7001 - requested by nia
 www/arcticfox: Security fix
+
+Pullup ticket #7002 - requested by gutteridge
+www/firefox128: security fix
+www/firefox128-l10n: dependent update
+
