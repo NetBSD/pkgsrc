@@ -1,10 +1,10 @@
-$NetBSD: patch-src_build__context.rs,v 1.3 2023/10/04 09:43:49 adam Exp $
+$NetBSD: patch-src_build__context.rs,v 1.4 2025/08/29 09:51:37 adam Exp $
 
 Fix wrong python wheel tag on NetBSD/evbarm.
 
---- src/build_context.rs.orig	2023-10-02 15:32:03.000000000 +0000
+--- src/build_context.rs.orig	2025-08-27 11:23:56.000000000 +0000
 +++ src/build_context.rs
-@@ -560,6 +560,17 @@ impl BuildContext {
+@@ -623,6 +623,17 @@ impl BuildContext {
                      format!("macosx_{x86_64_tag}_x86_64")
                  }
              }
@@ -20,5 +20,5 @@ Fix wrong python wheel tag on NetBSD/evbarm.
 +                )
 +            }
              // FreeBSD
-             (Os::FreeBsd, _)
-             // NetBSD
+             | (Os::FreeBsd, _) => {
+                 format!(
