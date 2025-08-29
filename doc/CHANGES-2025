@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5212 2025/08/29 11:20:34 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5213 2025/08/29 11:21:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7569,3 +7569,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-easy-thumbnails to 2.10.1 [adam 2025-08-29]
 	Updated www/py-django-mptt to 0.18.0 [adam 2025-08-29]
 	Updated www/firefox to 142.0.1 [ryoon 2025-08-29]
+	Updated www/firefox-l10n to 142.0.1 [ryoon 2025-08-29]
