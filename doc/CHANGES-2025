@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5210 2025/08/29 10:46:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5211 2025/08/29 11:07:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7566,3 +7566,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-maturin to 1.9.4 [adam 2025-08-29]
 	Updated net/wireshark to 4.4.9 [adam 2025-08-29]
 	Updated devel/py-absl-py to 2.3.1 [adam 2025-08-29]
+	Updated www/py-easy-thumbnails to 2.10.1 [adam 2025-08-29]
+	Updated www/py-django-mptt to 0.18.0 [adam 2025-08-29]
