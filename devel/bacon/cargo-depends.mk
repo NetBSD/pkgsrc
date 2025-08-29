@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.29 2025/08/21 07:30:07 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.30 2025/08/29 12:20:23 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -39,7 +39,7 @@ CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	chrono-0.4.41
 CARGO_CRATE_DEPENDS+=	clang-sys-1.8.1
 CARGO_CRATE_DEPENDS+=	clap-4.5.45
-CARGO_CRATE_DEPENDS+=	clap-help-1.4.0
+CARGO_CRATE_DEPENDS+=	clap-help-1.5.0
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.44
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.57
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.45
@@ -57,8 +57,8 @@ CARGO_CRATE_DEPENDS+=	coreaudio-sys-0.2.17
 CARGO_CRATE_DEPENDS+=	cpal-0.15.3
 CARGO_CRATE_DEPENDS+=	cpufeatures-0.2.17
 CARGO_CRATE_DEPENDS+=	crc32fast-1.5.0
-CARGO_CRATE_DEPENDS+=	crokey-1.2.0
-CARGO_CRATE_DEPENDS+=	crokey-proc_macros-1.2.0
+CARGO_CRATE_DEPENDS+=	crokey-1.3.0
+CARGO_CRATE_DEPENDS+=	crokey-proc_macros-1.3.0
 CARGO_CRATE_DEPENDS+=	crossbeam-0.8.4
 CARGO_CRATE_DEPENDS+=	crossbeam-channel-0.5.15
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.6
@@ -273,7 +273,7 @@ CARGO_CRATE_DEPENDS+=	symphonia-metadata-0.5.4
 CARGO_CRATE_DEPENDS+=	syn-2.0.106
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.2
 CARGO_CRATE_DEPENDS+=	tempfile-3.20.0
-CARGO_CRATE_DEPENDS+=	termimad-0.32.0
+CARGO_CRATE_DEPENDS+=	termimad-0.34.0
 CARGO_CRATE_DEPENDS+=	terminal-light-1.8.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-2.0.15
