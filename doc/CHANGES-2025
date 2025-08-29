@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5205 2025/08/28 19:13:46 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.5206 2025/08/29 02:04:26 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7558,3 +7558,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-checkdmarc to 5.9.2 [adam 2025-08-28]
 	Updated fonts/py-fonttools to 4.59.2 [adam 2025-08-28]
 	Updated inputmethod/ibus to 1.5.32nb2 [tsutsui 2025-08-28]
+	Updated sysutils/minipro to 0.7.4 [thorpej 2025-08-28]
