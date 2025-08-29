@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/04/14 18:56:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/08/29 11:04:36 adam Exp $
 
-DISTNAME=	easy_thumbnails-2.10
+DISTNAME=	easy_thumbnails-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/easy-thumbnails/}
 
