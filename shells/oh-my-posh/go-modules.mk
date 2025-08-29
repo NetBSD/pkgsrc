@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.102 2025/08/10 14:36:28 pin Exp $
+# $NetBSD: go-modules.mk,v 1.103 2025/08/29 12:22:26 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -72,8 +72,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.0.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.0.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
@@ -144,8 +144,8 @@ GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.7.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.zip
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.zip
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.15.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.15.zip
