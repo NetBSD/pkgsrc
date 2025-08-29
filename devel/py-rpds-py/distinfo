@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2025/08/09 06:10:09 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/08/29 08:45:39 adam Exp $
 
 BLAKE2s (archery-1.2.1.crate) = 12657cf26b225414f9ca212c40081db5e24123599fdb2e0e0806658c32a4d038
 SHA512 (archery-1.2.1.crate) = b8a5bafcc6cbc20426619e522f7d31e60f2bbc68af87e7bd9cbd4f4c1ccaa55f210b46dcf650fb354786f41b27778bdfba307ad3607b118da254fb18990ad5db
@@ -54,9 +54,9 @@ Size (quote-1.0.40.crate) = 31063 bytes
 BLAKE2s (rpds-1.1.1.crate) = f17ab8258ae7e92e61bebf76a1c29bb8534b01d4dd9152df84baa79f96ea2e8f
 SHA512 (rpds-1.1.1.crate) = 21624cd1716945475be938632260535842c5f8220662c9eb31e39440a5e90741551d7cfa9581de2cfe736cacc70ccb0742c98911bfb8e108197638fa51768f85
 Size (rpds-1.1.1.crate) = 75894 bytes
-BLAKE2s (rpds_py-0.27.0.tar.gz) = 4666a159631e7782717dd3396bc1c485d1e2dc5e05359d6702c144a4e12f6bc8
-SHA512 (rpds_py-0.27.0.tar.gz) = feacf8d405cb86ba0361e2066edd958bf6cd3a614bab03a5a993a9de3062352133b05bbff40bdb8bf41065d9f2eefdbe50b1b634d69e2abf9c8eda84efc82e11
-Size (rpds_py-0.27.0.tar.gz) = 27420 bytes
+BLAKE2s (rpds_py-0.27.1.tar.gz) = 4e472a44bcd676a0a6e3f3c43c3bc644f28390615ea500e8ff7a0b8f952fc7e2
+SHA512 (rpds_py-0.27.1.tar.gz) = 3d252925cc4a54c7d9c5908332f8c85efbdb1a0756fceec730bb844587c4421a46f731fc44e9578eba756c272f705bf879bec247d5cffc8ad7ae8ea3bfefd1ec
+Size (rpds_py-0.27.1.tar.gz) = 27479 bytes
 BLAKE2s (shlex-1.3.0.crate) = 00a54f2882a7a2c2170fca55bd1acd51eea79f115f972ce143b5f4c9c974ee43
 SHA512 (shlex-1.3.0.crate) = 5c8cedbe666a14b8a0874defb9208146ce64579cde52ed483e4a794cac5dde6a24bf8d684404edff582f842e1fd4fa3fbeddbe074f191e4ec4aa517aa456fe8a
 Size (shlex-1.3.0.crate) = 18713 bytes
