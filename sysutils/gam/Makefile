@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/06/30 12:36:42 sborrill Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/29 13:42:23 sborrill Exp $
 
-DISTNAME=	gam-7.10.07
+DISTNAME=	gam-7.19.02
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -24,15 +24,11 @@ DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.2:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-REPLACE_PYTHON=	gam.py
-WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}/src
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/gam/*.py
 
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	pre-configure
-SUBST_FILES.version=	setup.cfg
-SUBST_VARS.version=	PKGVERSION_NOREV
+WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}
 
-WHEEL_NAME=	gam_for_google_workspace-${VERSION_TRIM}
+WHEEL_NAME=	gam7-${VERSION_TRIM}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
