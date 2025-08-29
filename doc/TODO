@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26167 2025/08/28 07:51:50 taca Exp $
+$NetBSD: TODO,v 1.26168 2025/08/29 10:28:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -869,6 +869,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-20.1.8 [wip]
+	o llvm-21.1
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -958,8 +959,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nxtvepg-2.8.1
 	o objc-3.3.24
 	o obs-studio-31.1.2
-	o ocaml-5.2.1 [wip]
-	o ocaml-5.3.0
+	o ocaml-5.3.0 [wip]
 	o ocaml-cppo-1.6.9
 	o ocaml-dune-3.20.0
 	o ocaml-encore-0.8
