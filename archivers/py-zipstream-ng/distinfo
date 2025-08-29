@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/10/14 11:26:43 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/08/29 09:45:40 adam Exp $
 
-BLAKE2s (zipstream_ng-1.8.0.tar.gz) = 85b1b1bffac27b8831ce33b92be342b48d3fb1fb1606840bea0696891f3a068a
-SHA512 (zipstream_ng-1.8.0.tar.gz) = 87f5ac8fb099f3faa142408a1d76521f1b4c90ded98fcd319ebe4b128cdfb0f34a41c8642c77f0420ea08d38d8c544f4406bbfc946459cd198c8fa5448964636
-Size (zipstream_ng-1.8.0.tar.gz) = 35887 bytes
+BLAKE2s (zipstream_ng-1.9.0.tar.gz) = 4da3947c7a074fc810f33beba0ffa1cb34bd8d91f318f6dc4388e35ca6e4794e
+SHA512 (zipstream_ng-1.9.0.tar.gz) = 8ec1d0493056a857d6240b1039093e7075e72f9f855eae97a41345558183aa9ce8fffe8c90c4f021451dacf4ba6b93b87303e58313c8f09b1014542016864091
+Size (zipstream_ng-1.9.0.tar.gz) = 37963 bytes
