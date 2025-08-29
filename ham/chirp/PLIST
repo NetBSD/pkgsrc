@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/05/19 21:54:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/08/29 10:49:50 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -47,9 +47,6 @@ ${PYSITELIB}/chirp/cli/experttune.pyo
 ${PYSITELIB}/chirp/cli/main.py
 ${PYSITELIB}/chirp/cli/main.pyc
 ${PYSITELIB}/chirp/cli/main.pyo
-${PYSITELIB}/chirp/detect.py
-${PYSITELIB}/chirp/detect.pyc
-${PYSITELIB}/chirp/detect.pyo
 ${PYSITELIB}/chirp/directory.py
 ${PYSITELIB}/chirp/directory.pyc
 ${PYSITELIB}/chirp/directory.pyo
@@ -377,6 +374,9 @@ ${PYSITELIB}/chirp/drivers/puxing.pyo
 ${PYSITELIB}/chirp/drivers/puxing_px888k.py
 ${PYSITELIB}/chirp/drivers/puxing_px888k.pyc
 ${PYSITELIB}/chirp/drivers/puxing_px888k.pyo
+${PYSITELIB}/chirp/drivers/radioddity_gm30.py
+${PYSITELIB}/chirp/drivers/radioddity_gm30.pyc
+${PYSITELIB}/chirp/drivers/radioddity_gm30.pyo
 ${PYSITELIB}/chirp/drivers/radioddity_r2.py
 ${PYSITELIB}/chirp/drivers/radioddity_r2.pyc
 ${PYSITELIB}/chirp/drivers/radioddity_r2.pyo
@@ -389,6 +389,12 @@ ${PYSITELIB}/chirp/drivers/radtel_rt620.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
+${PYSITELIB}/chirp/drivers/retevis_h777v4.py
+${PYSITELIB}/chirp/drivers/retevis_h777v4.pyc
+${PYSITELIB}/chirp/drivers/retevis_h777v4.pyo
+${PYSITELIB}/chirp/drivers/retevis_ra25.py
+${PYSITELIB}/chirp/drivers/retevis_ra25.pyc
+${PYSITELIB}/chirp/drivers/retevis_ra25.pyo
 ${PYSITELIB}/chirp/drivers/retevis_ra87.py
 ${PYSITELIB}/chirp/drivers/retevis_ra87.pyc
 ${PYSITELIB}/chirp/drivers/retevis_ra87.pyo
@@ -738,6 +744,9 @@ ${PYSITELIB}/chirp/wxui/radiothread.pyo
 ${PYSITELIB}/chirp/wxui/report.py
 ${PYSITELIB}/chirp/wxui/report.pyc
 ${PYSITELIB}/chirp/wxui/report.pyo
+${PYSITELIB}/chirp/wxui/serialtrace.py
+${PYSITELIB}/chirp/wxui/serialtrace.pyc
+${PYSITELIB}/chirp/wxui/serialtrace.pyo
 ${PYSITELIB}/chirp/wxui/settingsedit.py
 ${PYSITELIB}/chirp/wxui/settingsedit.pyc
 ${PYSITELIB}/chirp/wxui/settingsedit.pyo
