@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5207 2025/08/29 08:45:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5208 2025/08/29 09:17:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7561,3 +7561,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/minipro to 0.7.4 [thorpej 2025-08-28]
 	Updated devel/pcre2 to 10.46 [adam 2025-08-29]
 	Updated devel/py-rpds-py to 0.27.1 [adam 2025-08-29]
+	Updated print/mupdf to 1.26.7 [leot 2025-08-29]
