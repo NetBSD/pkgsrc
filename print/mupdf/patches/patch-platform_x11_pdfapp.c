@@ -1,7 +1,6 @@
-$NetBSD: patch-platform_x11_pdfapp.c,v 1.3 2023/09/07 14:36:54 vins Exp $
+$NetBSD: patch-platform_x11_pdfapp.c,v 1.4 2025/08/29 10:05:56 leot Exp $
 
 * Implement fine-grained zoom control (from OpenBSD ports).
-* Fix up/down scrolling with vi-like keys (from FreeBSD ports).
 
 --- platform/x11/pdfapp.c.orig	2023-09-05 11:51:19.000000000 +0000
 +++ platform/x11/pdfapp.c
@@ -30,40 +29,6 @@ $NetBSD: patch-platform_x11_pdfapp.c,v 1.3 2023/09/07 14:36:54 vins Exp $
  static int zoom_in(int oldres)
  {
  	int i;
-@@ -1538,6 +1548,8 @@ key_rewritten:
- 
- 	case 'j':
- 		{
-+			if (app->pany + app->imgh <= app->winh)
-+			  goto pagedown;
- 			if (app->imgh <= app->winh || app->pany <= app->winh - app->imgh)
- 			{
- 				panto = PAN_TO_TOP;
-@@ -1553,6 +1565,8 @@ key_rewritten:
- 
- 	case 'k':
- 		{
-+			if (app->pany >= 0)
-+			  goto pageup;
- 			if (app->imgh <= app->winh || app->pany == 0)
- 			{
- 				panto = PAN_TO_BOTTOM;
-@@ -1627,6 +1641,7 @@ key_rewritten:
- 	 */
- 
- 	case ',':
-+		pageup:
- 		panto = DONT_PAN;
- 		if (app->numberlen > 0)
- 			app->pageno -= atoi(app->number);
-@@ -1635,6 +1650,7 @@ key_rewritten:
- 		break;
- 
- 	case '.':
-+		pagedown:
- 		panto = DONT_PAN;
- 		if (app->numberlen > 0)
- 			app->pageno += atoi(app->number);
 @@ -1642,6 +1658,7 @@ key_rewritten:
  			app->pageno++;
  		break;
