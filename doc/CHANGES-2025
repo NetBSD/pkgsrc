@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5214 2025/08/29 11:56:07 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5215 2025/08/29 12:10:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7571,3 +7571,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 142.0.1 [ryoon 2025-08-29]
 	Updated www/firefox-l10n to 142.0.1 [ryoon 2025-08-29]
 	Updated www/chromium to 139.0.7258.154 [kikadf 2025-08-29]
+	Updated ham/chirp to 20250829 [gdt 2025-08-29]
