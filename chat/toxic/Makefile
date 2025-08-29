@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/08/25 20:03:22 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/29 08:18:26 wiz Exp $
 
 DISTNAME=	toxic-0.16.1
 CATEGORIES=	chat
@@ -30,6 +30,7 @@ post-install:
 
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
+BUILDLINK_API_DEPENDS.toxcore+=	toxcore>=0.2.21
 .include "../../chat/toxcore/buildlink3.mk"
 .include "../../converters/qrencode/buildlink3.mk"
 .include "../../devel/libconfig/buildlink3.mk"
