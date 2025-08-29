@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.640 2025/08/14 03:25:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.641 2025/08/29 11:20:15 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=		141.0
-MOZ_BRANCH_MINOR=	.3
+MOZ_BRANCH=		142.0
+MOZ_BRANCH_MINOR=	.1
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${DISTNAME:S/.source//:S/b/beta/:S/esr//}
@@ -11,7 +11,7 @@ MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
-NODEJSKIT=		nodejs-output-141.0.tgz
+NODEJSKIT=		nodejs-output-142.0.1.tgz
 DISTFILES=		${DEFAULT_DISTFILES} ${NODEJSKIT}
 SITES.${NODEJSKIT}=	${MASTER_SITE_LOCAL}
 
