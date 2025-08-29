@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.78 2025/08/29 09:17:06 leot Exp $
+$NetBSD: distinfo,v 1.79 2025/08/29 10:05:56 leot Exp $
 
 BLAKE2s (mupdf-1.26.7-source.tar.gz) = 181155ce4293b960e2803e5e595eede245ab9ba94e7b436baf857469953fce83
 SHA512 (mupdf-1.26.7-source.tar.gz) = e447447e10f752ea612e091de9af4bdc8144393a3349b73578d172e40e45a1c25b3a30c2a6d92b2d8c6589790171420d10174197debe2fe5ee1ebe052d82c43b
@@ -9,7 +9,7 @@ SHA1 (patch-Makerules) = 5caa3319b121201952b0562201cee7bf0f0ea55f
 SHA1 (patch-docs_man_mupdf.1) = c2a2c1ad283428168a714adb634aa50cdd6a4aba
 SHA1 (patch-platform_gl_gl-app.h) = 1e915249010acd3ff1343f0607e785d06577fe78
 SHA1 (patch-platform_x11_curl__stream.c) = ccabcd665359ae00b76230a4ced22f360a0989e5
-SHA1 (patch-platform_x11_pdfapp.c) = 33b53c845c6778614e4384a783a34d00b6814e74
+SHA1 (patch-platform_x11_pdfapp.c) = e806f10b9c7dad2f6db2386c0b5509d5cf311f06
 SHA1 (patch-source_fitz_crypt-sha2.c) = c6b113818b32cb4470e8549c00a16e0b2f364ede
 SHA1 (patch-source_fitz_load-jpx.c) = 8d7f58168c8429a82127b821387298341a1fcbfb
 SHA1 (patch-source_helpers_pkcs7_pkcs7-openssl.c) = f3e949de8bdfc55e2da402a5bc59b4baf04b0d55
