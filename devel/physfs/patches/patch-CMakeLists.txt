@@ -1,8 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/17 09:09:13 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/08/29 06:23:40 adam Exp $
 
 cmake 4 compatibility
+CMAKE_SKIP_RPATH is handled by pkgsrc.
 
---- CMakeLists.txt.orig	2025-08-17 09:08:34.847397574 +0000
+--- CMakeLists.txt.orig	2022-09-30 20:13:07.000000000 +0000
 +++ CMakeLists.txt
 @@ -11,7 +11,7 @@
  
@@ -13,3 +14,12 @@ cmake 4 compatibility
  
  project(PhysicsFS VERSION ${PHYSFS_VERSION} LANGUAGES C )
  
+@@ -32,8 +32,6 @@ endif()
+ 
+ if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang")
+     add_compile_options(-Wall)
+-    # Don't use -rpath.
+-    set(CMAKE_SKIP_RPATH ON CACHE BOOL "Skip RPATH" FORCE)
+ endif()
+ 
+ if(CMAKE_C_COMPILER_ID STREQUAL "SunPro")
