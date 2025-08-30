@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5250 2025/08/30 19:41:52 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5251 2025/08/30 20:57:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7610,3 +7610,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added time/gkrellm-reminder version 2.1.0 [pho 2025-08-30]
 	Updated mail/spamassassin to 4.0.2 [gdt 2025-08-30]
 	Updated sysutils/bup to 0.33.9 [gdt 2025-08-30]
+	Updated emulators/PC6001VX to 4.2.14 [tsutsui 2025-08-30]
