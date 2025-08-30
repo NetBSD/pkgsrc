@@ -1,0 +1,54 @@
+$NetBSD: patch-server_Makefile,v 1.1 2025/08/30 08:24:21 pho Exp $
+
+Hunk #0:
+  Support building on DragonFly.
+
+Hunk #1:
+  Add an explicit -lm for Solaris. Not sure why it's needed but we've been
+  doing this.
+
+Hunk #2:
+  Move gkrellmd(1) to section 8 because it's not supposed to be directly
+  executed by users.
+
+--- server/Makefile.orig	2025-01-19 16:02:37.000000000 +0000
++++ server/Makefile
+@@ -88,6 +88,9 @@ static: $(OBJS) $(EXTRAOBJS)
+ 	$(CC) $(OBJS) $(EXTRAOBJS) -o gkrellmd.static -static \
+ 		$(LDFLAGS) $(LIBS) $(LINK_FLAGS)
+ 
++dragonfly:
++	$(MAKE) EXTRAOBJS= SYS_LIBS="-lkvm -lkinfo -ldevstat -lm" gkrellmd
++
+ freebsd2:
+ 	$(MAKE) EXTRAOBJS= SYS_LIBS="-lkvm -lmd" gkrellmd
+ 
+@@ -124,12 +127,12 @@ openbsd:
+ 
+ solaris:
+ ifeq ($(OS_RELEASE),5.8)
+-	$(MAKE) CFLAGS="-Wno-implicit-int" \
+-		SYS_LIBS="-lkstat -lkvm -ldevinfo -lsocket -lnsl -lintl" \
++	$(MAKE) CFLAGS="-Wno-implicit-int -DSOLARIS_8" \
++		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl -lintl" \
+ 		LINK_FLAGS="" gkrellmd
+ else
+ 	$(MAKE) CFLAGS="-Wno-implicit-int" \
+-		SYS_LIBS="-lkstat -lkvm -ldevinfo -lsocket -lnsl" \
++		SYS_LIBS="-lm -lkstat -lkvm -ldevinfo -lsocket -lnsl" \
+ 		LINK_FLAGS="" gkrellmd
+ endif
+ 
+@@ -174,10 +177,10 @@ uninstall_inc:
+ 
+ install_man:
+ 	$(INSTALL) -d -m $(MANDIRMODE) $(SMANDIR)
+-	$(INSTALL) -c -m $(MANMODE) ../gkrellmd.1 $(SMANDIR)/$(PACKAGE_D).1
++	$(INSTALL) -c -m $(MANMODE) ../gkrellmd.1 $(SMANDIR)/$(PACKAGE_D).8
+ 
+ uninstall_man:
+-	$(RM) $(SMANDIR)/$(PACKAGE_D).1
++	$(RM) $(SMANDIR)/$(PACKAGE_D).8
+ 
+ install_cfg:
+ 	$(INSTALL) -d -m $(CFGDIRMODE) $(CFGDIR)

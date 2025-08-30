@@ -1,53 +1,48 @@
-# $NetBSD: Makefile,v 1.130 2025/04/24 14:15:45 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2025/08/30 08:24:18 pho Exp $
+
 .include "Makefile.common"
 
-PKGREVISION=		67
-
 GKRELLM_PKGBASE=	gkrellm
-WRKSRC=			${GKRELLM_SRCDIR}
-
 COMMENT=		GTK2 based system monitor
-
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
 USE_TOOLS+=		pkg-config
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 
-# NetBSD 3.99.1 and above don't have to be installed setgid.
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || \
-    (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 039900))
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly"
 SPECIAL_PERMS+=		${PREFIX}/bin/gkrellm ${BINOWN} kmem 2555
-.endif
-
-NOT_FOR_PLATFORM=	IRIX-*-*
-
-.include "options.mk"
-
-MAKE_ENV+=		MODULES=src LINK_FLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
-MAKE_ENV+=		SSL_TYPE=${GKRELLM_SSL_TYPE:Q}
-MAKE_ENV+=		PKG_INCLUDE=-I${BUILDLINK_PREFIX.${GKRELLM_SSL_TYPE}}/include
-MAKE_ENV+=		PKG_LIBS="-L${BUILDLINK_PREFIX.${GKRELLM_SSL_TYPE}}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${GKRELLM_SSL_TYPE}}/lib"
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
-MAKE_ENV+=		SMANDIR=${PREFIX}/${PKGMANDIR}/man8
-MAKE_FLAGS+=		BINOWNER=${BINOWN} BINGROUP=${BINGRP}
-INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-INSTALL_MAKE_FLAGS+=	SMANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-
-# Fix PR pkg/40047, Thanks to Ondrej Tuma
-.if ${OBJECT_FMT} == "ELF" && ${OPSYS} != "SunOS"
-LDFLAGS+=	-Wl,-export-dynamic
 .endif
 
 SUBST_CLASSES+=		gkprefix
 SUBST_STAGE.gkprefix=	pre-configure
 SUBST_FILES.gkprefix=	src/gkrellm.h
-SUBST_SED.gkprefix=	-e '/SYSTEM_/{s!/usr!${PREFIX}!;}'
+SUBST_SED.gkprefix+=	-e '/LOCAL_[A-Z][A-Z]*_DIR/d'
+SUBST_SED.gkprefix+=	-e '/SYSTEM_[A-Z][A-Z]*_DIR/{s!/usr!${PREFIX}!;}'
 
-REQD_DIRS=	lib/gkrellm2/plugins lib/gkrellm2 include/gkrellm2
+BUILD_DIRS=		src
+BUILD_TARGET=		${GKRELLM_PER_PLATFORM_TARGET}
+.if !empty(PKG_OPTIONS:Mnls)
+BUILD_MAKE_FLAGS+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
+.endif
+
+MAKE_ENV+=		MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+REQD_DIRS=		lib/gkrellm2/plugins lib/gkrellm2/themes
+
+# Generate and install gkrellm.pc
+post-build:
+	${RUN}cd ${WRKSRC} && \
+		${BUILD_MAKE_CMD} gkrellm.pc
+
+INSTALL_MAKE_CMD= \
+	${PKGSRC_SETENV} ${MAKE_ENV} \
+	${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}
+post-install:
+	${RUN}cd ${WRKSRC} && \
+		${INSTALL_MAKE_CMD} install_gkrellm.pc
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

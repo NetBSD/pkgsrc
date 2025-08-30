@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.73 2025/04/24 14:15:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.74 2025/08/30 08:24:18 pho Exp $
 
 BUILDLINK_TREE+=	gkrellm
 
@@ -11,19 +11,6 @@ BUILDLINK_PKGSRCDIR.gkrellm?=	../../sysutils/gkrellm
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-
-pkgbase := gkrellm
-.include "../../mk/pkg-build-options.mk"
-
-.if ${PKG_BUILD_OPTIONS.gkrellm:Mopenssl}
-.include "../../security/openssl/buildlink3.mk"
-.endif
-
-.if ${PKG_BUILD_OPTIONS.gkrellm:Mgnutls}
-.include "../../security/gnutls/buildlink3.mk"
-.endif
-
 .endif # GKRELLM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gkrellm
