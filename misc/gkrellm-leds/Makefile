@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.78 2025/04/24 14:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/08/30 09:54:08 pho Exp $
 #
 
 DISTNAME=	gkleds-0.8.2
 PKGNAME=	${DISTNAME:S/^gk/gkrellm-/}
 PKGREVISION=	62
 CATEGORIES=	misc
-MASTER_SITES=	http://heim.ifi.uio.no/~oyvinha/files/files/
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/96/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://heim.ifi.uio.no/~oyvinha/gkleds/
 COMMENT=	GKrellM plugin that monitors CapsLock, NumLock and ScrollLock keys
 
 USE_TOOLS+=	pkg-config
