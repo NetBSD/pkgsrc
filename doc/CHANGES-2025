@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5247 2025/08/30 17:00:38 pho Exp $
+$NetBSD: CHANGES-2025,v 1.5248 2025/08/30 17:37:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7607,3 +7607,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/go-mockery to 3.5.4 [bsiegert 2025-08-30]
 	Added time/gkrellaclock version 0.3.4 [pho 2025-08-30]
 	Added graphics/gkrellshoot version 0.4.4 [pho 2025-08-30]
+	Added time/gkrellm-reminder version 2.1.0 [pho 2025-08-30]
