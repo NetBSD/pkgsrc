@@ -1,17 +1,23 @@
-$NetBSD: distinfo,v 1.6 2024/03/16 17:21:02 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2025/08/30 09:54:27 bsiegert Exp $
 
-BLAKE2s (errcheck-1.7.0.tar.gz) = 63f540f582b42ac7c0bf75c446e4a917f51298733a15fa3d4c07b68989bd41e1
-SHA512 (errcheck-1.7.0.tar.gz) = 1b029fbeb76d6586b5a7e16e1f355fe16c8944b34273d8c3f65b48dacad4b830ddb28273a5a1fa6e32f18e9332653436a24f4be0acffea65433f9a1332244e2b
-Size (errcheck-1.7.0.tar.gz) = 20272 bytes
-BLAKE2s (golang.org_x_mod_@v_v0.14.0.mod) = 756609d6566fdcb4fd11633882849e0163d09de134e085f0aa006dcbb10825e0
-SHA512 (golang.org_x_mod_@v_v0.14.0.mod) = d741bbf0270c5cda8ff6abb6c3aeec25f5edadae32df5f146c4c88b9c30abef2f2e9bc69f214757b4702f2df9dc08fbd2073e4fa64e683850d33a60806c8c4ba
-Size (golang.org_x_mod_@v_v0.14.0.mod) = 84 bytes
-BLAKE2s (golang.org_x_mod_@v_v0.14.0.zip) = 2bcf3d8b0da751aa74f0188bc91c7890489b8c43d6b2955774fc9971ba1f21fb
-SHA512 (golang.org_x_mod_@v_v0.14.0.zip) = db54bd61ae6f202ed46814499ec5808c83642cc66e5ac2a32880cb3a348fb4011dec6674c9886f7c5d5c99d6a7a730273ce92e6f242d072a8b069f6aa01d63b3
-Size (golang.org_x_mod_@v_v0.14.0.zip) = 165104 bytes
-BLAKE2s (golang.org_x_tools_@v_v0.17.0.mod) = 125cb657f21418985f2fe41a96faf9f214d13a02663c754da53fd7c66f037a72
-SHA512 (golang.org_x_tools_@v_v0.17.0.mod) = 3c993a8fb020fa29eb2abe6ea6c6f14a6b5196607205203bc4c9ada0ac99e1aed290e26849fe2a7c9d09b6de37121f3483b19c14054b0b076fc690aca0d0906a
-Size (golang.org_x_tools_@v_v0.17.0.mod) = 168 bytes
-BLAKE2s (golang.org_x_tools_@v_v0.17.0.zip) = e93b2f135bc3a25c1e212956cf2938208f5508c2b04fd0f37ca6ac0407a7a2df
-SHA512 (golang.org_x_tools_@v_v0.17.0.zip) = 4e37f98c6a12df91ef29a3229e9131e305dd31bdda561b6b63c9682d18527a1cecc7c4dec27fbb3baa32d652b82cc62d7751c3c203f939d01dde9a9df7b2a079
-Size (golang.org_x_tools_@v_v0.17.0.zip) = 3148561 bytes
+BLAKE2s (errcheck-1.9.0.tar.gz) = 03d24006c85da59bc385c55a36aeb758b81e06c1067560821ab8336c05878169
+SHA512 (errcheck-1.9.0.tar.gz) = 99e83004c6a265d4a0808822425c7676372d2db5ce511936ddf3dd84877dc3aeb6bbc6ae5d7a9f327e27ebbf533a06f2b0677e808999b338c8341fbf8eab577a
+Size (errcheck-1.9.0.tar.gz) = 20982 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.23.0.mod) = 8864bfdeb5855b1b0df4972c15a73c6f0e9ca9fb40069d7bfed5cf9c39e4b93d
+SHA512 (golang.org_x_mod_@v_v0.23.0.mod) = 1af6a7d754a49cd9215b84db4415672134221f606800452fa83e0caab65d9d0c085400583bc75454d628ceff7e012f727c2e595124394a16e080ff25ed63a1e6
+Size (golang.org_x_mod_@v_v0.23.0.mod) = 86 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.23.0.zip) = c1bcbb6e07d5d58892d134128d3496fd50bda46475274e38cf0e41dd62e82fc5
+SHA512 (golang.org_x_mod_@v_v0.23.0.zip) = 376ba97527b631c13f7ac26bb5462d8462ed7e30dbfe5004ae855b09c8c0c9fc3d9c7b921e7ee6ad24cdfe28688577d2c9f63fed49f6c84250e71785bd6b3ce6
+Size (golang.org_x_mod_@v_v0.23.0.zip) = 172143 bytes
+BLAKE2s (golang.org_x_sync_@v_v0.11.0.mod) = 0fa1fb1833cee855281d59c95598cae38e2fd86ea0c52c4b67ba2e815fb513b3
+SHA512 (golang.org_x_sync_@v_v0.11.0.mod) = 2d159d931db45104e0714e311698dff5905d206e5740cb4f7e1442d1b561da91928b0882f9f56f8190abb7cddadeaec7684f8d598fb6afd6322c5782232b4d5b
+Size (golang.org_x_sync_@v_v0.11.0.mod) = 34 bytes
+BLAKE2s (golang.org_x_sync_@v_v0.11.0.zip) = 1879b48e58c48a87d5b78901240e8d8c9371f1e70e1ba244f26f35d27457f5bd
+SHA512 (golang.org_x_sync_@v_v0.11.0.zip) = 4acc1da22688bdfe3c64ab08f0f0f069ac422cc12eae42df4b32f34f587b647715c76e9ebc87a6efb83cab8eb49bfc763acde7083751caed82b08c91bd7ace64
+Size (golang.org_x_sync_@v_v0.11.0.zip) = 26960 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.30.0.mod) = e38385b7d0314ff5292960b2e48093d96445308807ece3b95d787ba4360b11ec
+SHA512 (golang.org_x_tools_@v_v0.30.0.mod) = addf0a4a9116658f266d98d1d6fcf039cf666bccf45269cd137035176b6b95016c9b20930c6e05136258574bd5c1ffdd415530472cf69ea7b359882a97aad2fb
+Size (golang.org_x_tools_@v_v0.30.0.mod) = 342 bytes
+BLAKE2s (golang.org_x_tools_@v_v0.30.0.zip) = 58ec8e3d09daa06445a33927ecabbdf4dad057e9544b79ee13050543a6181c45
+SHA512 (golang.org_x_tools_@v_v0.30.0.zip) = e841f98309e53871f9659ce6fbaa7706c455595a32c5c8ffcaebbffe9f0854c70c00792e940e6edc76b5dc7b80156766c891ee25f8cf995282edd00e5cb3565b
+Size (golang.org_x_tools_@v_v0.30.0.zip) = 3305770 bytes
