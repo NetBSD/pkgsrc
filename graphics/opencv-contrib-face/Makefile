@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2025/08/24 16:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2025/08/30 22:45:29 wiz Exp $
 
 # can't use ninja because we only want to install parts of it
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 INSTALL_DIRS=		modules/face modules/plot modules/tracking
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../graphics/opencv/Makefile.common"
 
 DISTNAME=	opencv_contrib-${OPENCV_VERSION}

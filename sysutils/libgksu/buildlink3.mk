@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2025/04/24 14:15:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2025/08/30 22:46:19 wiz Exp $
 
 BUILDLINK_TREE+=	libgksu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgksu
 LIBGKSU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgksu+=	libgksu>=2.0.7
-BUILDLINK_ABI_DEPENDS.libgksu+=	libgksu>=2.0.12nb33
+BUILDLINK_ABI_DEPENDS.libgksu+=	libgksu>=2.0.12nb34
 BUILDLINK_PKGSRCDIR.libgksu?=	../../sysutils/libgksu
 
 .include "../../security/libgnome-keyring/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2025/04/24 14:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/08/30 22:46:24 wiz Exp $
 
 DISTNAME=	xfe-1.45
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xfe/}
 EXTRACT_SUFX=	.tar.xz

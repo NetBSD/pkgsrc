@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/07/19 05:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/08/30 22:46:14 wiz Exp $
 
-PKGREVISION= 12
+PKGREVISION= 13
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-polkit-${VERSION:R}.1

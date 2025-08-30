@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.157 2025/05/19 11:21:38 gdt Exp $
+# $NetBSD: Makefile,v 1.158 2025/08/30 22:45:21 wiz Exp $
 
 # PKGPATH having gimp- is historical; this used to be primarily a gimp
 # plugin but is now a standalone program.
 DISTNAME=		ufraw-0.22
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		51
+PKGREVISION=		52
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 

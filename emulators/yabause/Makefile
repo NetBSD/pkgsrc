@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2025/08/19 10:24:00 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/08/30 22:45:02 wiz Exp $
 
 DISTNAME=	yabause-0.9.15
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.aydogan.net/distfiles/emulators/
 

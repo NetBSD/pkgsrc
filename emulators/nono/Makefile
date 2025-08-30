@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2025/05/18 10:38:32 jun Exp $
+# $NetBSD: Makefile,v 1.55 2025/08/30 22:45:01 wiz Exp $
 
 DISTNAME=	nono-1.4.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pastel-flower.jp/~isaki/nono/archive/
 
