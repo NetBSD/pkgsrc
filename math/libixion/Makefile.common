@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2025/04/28 21:04:38 tnn Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/08/30 05:05:15 ryoon Exp $
 #
 # used by math/libixion/Makefile
 # used by math/py-libixion/Makefile
 
-DISTNAME=	libixion-0.19.0
+DISTNAME=	libixion-0.20.0
 CATEGORIES=	math devel
 MASTER_SITES=	https://gitlab.com/api/v4/projects/ixion%2Fixion/packages/generic/source/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
