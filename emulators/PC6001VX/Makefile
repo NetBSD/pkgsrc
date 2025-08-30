@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2025/08/13 12:50:01 tsutsui Exp $
+# $NetBSD: Makefile,v 1.116 2025/08/30 20:56:41 tsutsui Exp $
 
-VERSION=		4.2.13
+VERSION=		4.2.14
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
 CATEGORIES=		emulators
