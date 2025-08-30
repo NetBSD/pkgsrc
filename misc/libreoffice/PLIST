@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2025/06/15 13:33:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.64 2025/08/30 06:44:05 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -63,7 +63,6 @@ ${PKGNAME}/lib/libreoffice/program/libLanguageToollo.so
 ${PKGNAME}/lib/libreoffice/program/libOGLTranslo.so
 ${PKGNAME}/lib/libreoffice/program/libPresentationMinimizerlo.so
 ${PKGNAME}/lib/libreoffice/program/libabplo.so
-${PKGNAME}/lib/libreoffice/program/libacclo.so
 ${PKGNAME}/lib/libreoffice/program/libaffine_uno_uno.so
 ${PKGNAME}/lib/libreoffice/program/libanalysislo.so
 ${PKGNAME}/lib/libreoffice/program/libanimcorelo.so
@@ -80,8 +79,7 @@ ${PKGNAME}/lib/libreoffice/program/libcairocanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libcanvasfactorylo.so
 ${PKGNAME}/lib/libreoffice/program/libcanvastoolslo.so
-${PKGNAME}/lib/libreoffice/program/libchartcontrollerlo.so
-${PKGNAME}/lib/libreoffice/program/libchartcorelo.so
+${PKGNAME}/lib/libreoffice/program/libchart2lo.so
 ${PKGNAME}/lib/libreoffice/program/libclewlo.so
 ${PKGNAME}/lib/libreoffice/program/libcmdmaillo.so
 ${PKGNAME}/lib/libreoffice/program/libcomphelper.so
@@ -135,8 +133,8 @@ ${PKGNAME}/lib/libreoffice/program/libintrospectionlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
-${PLIST.ldap}${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
+${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
@@ -258,7 +256,7 @@ ${PKGNAME}/lib/libreoffice/program/libvbaswobjlo.so
 ${PKGNAME}/lib/libreoffice/program/libvclcanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libvcllo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_genlo.so
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
+${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftdrawlo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftimpresslo.so
@@ -318,7 +316,6 @@ ${PKGNAME}/lib/libreoffice/program/pythonscript.py
 ${PKGNAME}/lib/libreoffice/program/pyuno.so
 ${PKGNAME}/lib/libreoffice/program/redirectrc
 ${PKGNAME}/lib/libreoffice/program/regview
-${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/chart.mo
@@ -351,7 +348,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ab/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/chart.mo
@@ -384,7 +380,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/af/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/chart.mo
@@ -417,7 +412,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/am/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/chart.mo
@@ -450,7 +444,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ar/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/chart.mo
@@ -483,7 +476,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/as/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/chart.mo
@@ -516,7 +508,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ast/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/chart.mo
@@ -549,7 +540,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/be/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/chart.mo
@@ -582,7 +572,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bg/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/chart.mo
@@ -615,7 +604,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/chart.mo
@@ -648,7 +636,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bn_IN/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/chart.mo
@@ -681,7 +668,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bo/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/chart.mo
@@ -714,7 +700,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/br/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/chart.mo
@@ -747,7 +732,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/brx/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/chart.mo
@@ -780,7 +764,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/bs/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/chart.mo
@@ -813,7 +796,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/chart.mo
@@ -846,7 +828,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ca@valencia/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/chart.mo
@@ -880,7 +861,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ckb/LC_MESSAGES/xsc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/common/fonts/opens___.ttf
-${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/chart.mo
@@ -913,7 +893,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cs/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/chart.mo
@@ -946,7 +925,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/cy/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/chart.mo
@@ -979,7 +957,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/da/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/chart.mo
@@ -1012,7 +989,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/de/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/chart.mo
@@ -1045,7 +1021,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dgo/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/chart.mo
@@ -1078,7 +1053,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dsb/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/chart.mo
@@ -1111,7 +1085,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/dz/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/chart.mo
@@ -1144,7 +1117,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/el/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/chart.mo
@@ -1177,7 +1149,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_GB/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/chart.mo
@@ -1210,7 +1181,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/en_ZA/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/chart.mo
@@ -1243,7 +1213,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eo/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/chart.mo
@@ -1276,7 +1245,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/es/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/chart.mo
@@ -1309,7 +1277,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/et/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/chart.mo
@@ -1342,7 +1309,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/eu/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/chart.mo
@@ -1375,7 +1341,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fa/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/chart.mo
@@ -1408,7 +1373,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fi/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/chart.mo
@@ -1441,7 +1405,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/chart.mo
@@ -1474,7 +1437,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fur/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/chart.mo
@@ -1507,7 +1469,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/fy/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/chart.mo
@@ -1540,7 +1501,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ga/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/chart.mo
@@ -1573,7 +1533,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gd/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/chart.mo
@@ -1606,7 +1565,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/chart.mo
@@ -1639,7 +1597,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gu/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/chart.mo
@@ -1672,7 +1629,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/gug/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/chart.mo
@@ -1705,7 +1661,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/he/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/chart.mo
@@ -1738,7 +1693,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hi/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/chart.mo
@@ -1771,7 +1725,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/chart.mo
@@ -1804,7 +1757,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hsb/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/chart.mo
@@ -1837,7 +1789,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hu/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/chart.mo
@@ -1870,7 +1821,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/hy/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/chart.mo
@@ -1903,7 +1853,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/id/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/chart.mo
@@ -1936,7 +1885,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/is/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/chart.mo
@@ -1969,7 +1917,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/it/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/chart.mo
@@ -2002,7 +1949,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ja/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/chart.mo
@@ -2035,7 +1981,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ka/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/chart.mo
@@ -2068,7 +2013,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kab/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/chart.mo
@@ -2101,7 +2045,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kk/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/chart.mo
@@ -2134,7 +2077,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/km/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/chart.mo
@@ -2167,7 +2109,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kmr@latin/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/chart.mo
@@ -2200,7 +2141,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kn/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/chart.mo
@@ -2233,7 +2173,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ko/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/chart.mo
@@ -2266,7 +2205,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/kok/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/chart.mo
@@ -2299,7 +2237,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ks/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/chart.mo
@@ -2332,7 +2269,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lb/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/chart.mo
@@ -2365,7 +2301,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lo/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/chart.mo
@@ -2398,7 +2333,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lt/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/chart.mo
@@ -2431,7 +2365,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/lv/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/chart.mo
@@ -2464,7 +2397,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mai/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/chart.mo
@@ -2497,7 +2429,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mk/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/chart.mo
@@ -2530,7 +2461,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ml/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/chart.mo
@@ -2563,7 +2493,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mn/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/chart.mo
@@ -2596,7 +2525,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mni/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/chart.mo
@@ -2629,7 +2557,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/mr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/chart.mo
@@ -2662,7 +2589,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/my/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/chart.mo
@@ -2695,7 +2621,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nb/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/chart.mo
@@ -2728,7 +2653,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ne/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/chart.mo
@@ -2761,7 +2685,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/chart.mo
@@ -2794,7 +2717,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nn/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/chart.mo
@@ -2827,7 +2749,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/chart.mo
@@ -2860,7 +2781,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/nso/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/chart.mo
@@ -2893,7 +2813,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/oc/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/chart.mo
@@ -2926,7 +2845,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/om/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/chart.mo
@@ -2959,7 +2877,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/or/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/chart.mo
@@ -2992,7 +2909,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pa_IN/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/chart.mo
@@ -3025,7 +2941,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/chart.mo
@@ -3058,7 +2973,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/chart.mo
@@ -3091,7 +3005,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/pt_BR/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/chart.mo
@@ -3124,7 +3037,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ro/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/chart.mo
@@ -3157,7 +3069,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ru/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/chart.mo
@@ -3190,7 +3101,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/rw/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/chart.mo
@@ -3223,7 +3133,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sa_IN/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/chart.mo
@@ -3256,7 +3165,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/chart.mo
@@ -3289,7 +3197,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sat_Olck/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/chart.mo
@@ -3322,7 +3229,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sd/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/chart.mo
@@ -3355,7 +3261,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/si/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/chart.mo
@@ -3388,7 +3293,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sid/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/chart.mo
@@ -3421,7 +3325,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sk/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/chart.mo
@@ -3454,7 +3357,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/chart.mo
@@ -3487,7 +3389,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sq/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/chart.mo
@@ -3520,7 +3421,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/chart.mo
@@ -3553,7 +3453,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sr@latin/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/chart.mo
@@ -3586,7 +3485,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ss/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/chart.mo
@@ -3619,7 +3517,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/st/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/chart.mo
@@ -3652,7 +3549,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sv/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/chart.mo
@@ -3685,7 +3581,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sw_TZ/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/chart.mo
@@ -3718,7 +3613,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/szl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/chart.mo
@@ -3751,7 +3645,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ta/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/chart.mo
@@ -3784,7 +3677,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/te/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/chart.mo
@@ -3817,7 +3709,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tg/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/chart.mo
@@ -3850,7 +3741,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/th/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/chart.mo
@@ -3883,7 +3773,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tl/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/chart.mo
@@ -3916,7 +3805,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tn/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/chart.mo
@@ -3949,7 +3837,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tr/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/chart.mo
@@ -3982,7 +3869,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ts/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/chart.mo
@@ -4015,7 +3901,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/tt/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/chart.mo
@@ -4048,7 +3933,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ug/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/chart.mo
@@ -4081,7 +3965,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uk/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/chart.mo
@@ -4114,7 +3997,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/uz/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/chart.mo
@@ -4147,7 +4029,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/ve/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/chart.mo
@@ -4180,7 +4061,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vec/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/chart.mo
@@ -4213,7 +4093,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/vi/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/chart.mo
@@ -4246,7 +4125,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/xh/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/chart.mo
@@ -4279,7 +4157,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_CN/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/chart.mo
@@ -4312,7 +4189,6 @@ ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/vcl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/wiz.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/wpt.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zh_TW/LC_MESSAGES/xsc.mo
-${PKGNAME}/lib/libreoffice/program/resource/zu/LC_MESSAGES/acc.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zu/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zu/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/zu/LC_MESSAGES/chart.mo
@@ -5090,6 +4966,8 @@ ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/dlgConsole.xdl
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/dlgProgress.xdl
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/po/ScriptForge.pot
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/po/en.po
+${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/po/es.po
+${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/po/fr.po
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/po/pt.po
 ${PKGNAME}/lib/libreoffice/share/basic/ScriptForge/script.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/Template/Autotext.xba
@@ -5315,11 +5193,11 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletegradientdi
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletehatchdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletelineenddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydeletelinestyledialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querydialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/queryduplicatedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querynoloadedfiledialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querynosavefiledialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querysavelistdialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/querysetinsmodedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/queryupdategalleryfilelistdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/recordnumberdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/rotationtabpage.ui
@@ -5352,10 +5230,14 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/textdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/textflowpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/thesaurus.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/tipofthedaydialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/toolbarmodedialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/toolbartabpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/transparencytabpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/tsaurldialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/twolinespage.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/uipickerdialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/uitabpage.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/welcomedialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/whatsnewtabpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/widgettestdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/wordcompletionpage.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/zoomdialog.ui
@@ -5854,6 +5736,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/toolbar/toolb
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/3dviewdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/attributedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/chardialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/chartcolorpalettepopup.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/chartdatadialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/charttypedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/columnfragment.ui
@@ -5869,6 +5752,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/insertgrid
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/inserttitledlg.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/paradialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/sidebaraxis.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/sidebarcolors.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/sidebarelements.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/sidebarerrorbar.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/sidebarseries.ui
@@ -5880,6 +5764,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_3D_Scen
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_3D_SceneGeometry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_3D_SceneIllumination.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_AxisPositions.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_ChartColorPalette.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_ChartType.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_DataLabel.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/tp_DataPointOption.ui
@@ -6419,6 +6304,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/me
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/notebookbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/oleobject.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/preview.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/recordtrackedchanges.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/showtrackedchanges.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/table.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/popupmenu/text.xml
@@ -6525,6 +6411,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/contentco
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/contentcontroldropdown.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/contentcontrollistitemdlg.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/converttexttable.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/copyfielddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/createaddresslist.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/createauthorentry.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/createautomarkdialog.ui
@@ -6771,7 +6658,6 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swxform/toolbar/text
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swxform/toolbar/toolbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swxform/toolbar/viewerbar.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/addtargetdialog.ui
-${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/alienwarndialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/autoredactdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/bookmarkdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/bookmarkmenu.ui
@@ -9265,6 +9151,13 @@ ${PKGNAME}/lib/libreoffice/share/theme_definitions/ios/tick-off.svg
 ${PKGNAME}/lib/libreoffice/share/theme_definitions/ios/tick-on-disabled.svg
 ${PKGNAME}/lib/libreoffice/share/theme_definitions/ios/tick-on-pressed.svg
 ${PKGNAME}/lib/libreoffice/share/theme_definitions/ios/tick-on.svg
+${PKGNAME}/lib/libreoffice/share/themes/Beach.theme
+${PKGNAME}/lib/libreoffice/share/themes/Breeze.theme
+${PKGNAME}/lib/libreoffice/share/themes/Forest.theme
+${PKGNAME}/lib/libreoffice/share/themes/Libreoffice.theme
+${PKGNAME}/lib/libreoffice/share/themes/Ocean.theme
+${PKGNAME}/lib/libreoffice/share/themes/Rainbow.theme
+${PKGNAME}/lib/libreoffice/share/themes/Sunset.theme
 ${PKGNAME}/lib/libreoffice/share/tipoftheday/expand_formula_bar.png
 ${PKGNAME}/lib/libreoffice/share/tipoftheday/formdocuments.png
 ${PKGNAME}/lib/libreoffice/share/tipoftheday/fraction.png
@@ -9762,11 +9655,3 @@ share/metainfo/libreoffice-impress.appdata.xml
 share/metainfo/libreoffice-writer.appdata.xml
 share/metainfo/org.libreoffice.kde.metainfo.xml
 share/mime/packages/libreoffice.xml
-@pkgdir ${PKGNAME}/lib/libreoffice/share/uno_packages/cache/uno_packages
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tl
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sat-Olck
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/hy
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/fur
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/common
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ckb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ab
