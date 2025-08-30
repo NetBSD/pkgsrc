@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.530 2025/08/28 12:06:18 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.531 2025/08/30 17:55:40 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -15821,7 +15821,7 @@ php{71,72}-contao45-4.5.*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/e
 openssh-[0-9]*	oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2018-15919
 qemu<4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-15746
 grafana<4.6.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-15727
-fig2dev-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-16140
+fig2dev<3.2.7b	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2018-16140
 jdbc-postgresql{93,94}-[0-9]*	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2018-10936
 tiff<4.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16335
 xpdf<4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-16368
@@ -17724,7 +17724,7 @@ mysql-server>=8.0<8.0.17	multiple-vulnerabilities	https://www.oracle.com/technet
 zstd<1.3.8			out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2019-11922
 exim>=4.85<4.92.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2019-13917
 mcpp-[0-9]*			multiple-vulnerabilities	https://nvd.nist.gov/vuln/detail/CVE-2019-14274
-fig2dev-[0-9]*			buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-14275
+fig2dev<3.2.7b			buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-14275
 openldap-server<2.4.48		unauthorized-access		https://nvd.nist.gov/vuln/detail/CVE-2019-13057
 openldap-server<2.4.48		unauthorized-access		https://nvd.nist.gov/vuln/detail/CVE-2019-13565
 patch-[0-9]*			shell-command-injection		https://nvd.nist.gov/vuln/detail/CVE-2019-13638
@@ -18485,7 +18485,7 @@ php{56,71,72,73}-davical<1.1.9	cross-site-scripting		https://nvd.nist.gov/vuln/d
 php{56,71,72,73}-davical<1.1.9	cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2019-18346
 php{56,71,72,73}-davical<1.1.9	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-18347
 dia<0.97.3nb21		infinite-loop			https://nvd.nist.gov/vuln/detail/CVE-2019-19451
-fig2dev-[0-9]*		stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-19555
+fig2dev<3.2.8		stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2019-19555
 freeradius>=3.0.0<3.0.20	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2019-13456
 opensc<0.20.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-19479
 opensc<0.20.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2019-19480
@@ -18543,7 +18543,7 @@ xenkernel48-[0-9]*	privilege-escalation	https://xenbits.xen.org/xsa/advisory-310
 xenkernel411<4.11.3nb1  privilege-escalation	https://xenbits.xen.org/xsa/advisory-310.html
 xenkernel48-[0-9]*	privilege-escalation	https://xenbits.xen.org/xsa/advisory-311.html
 xenkernel411<4.11.3nb1  privilege-escalation	https://xenbits.xen.org/xsa/advisory-311.html
-fig2dev-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-19746
+fig2dev<3.2.8		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-19746
 cacti<1.2.8		input-validation	https://nvd.nist.gov/vuln/detail/CVE-2019-17358
 spamassassin<3.4.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-12420
 npm<6.13.3		arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2019-16775
@@ -18560,7 +18560,7 @@ bash<5.1		privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2019-18276
 cyrus-imapd<2.5.15	arbitrary-file-write		https://nvd.nist.gov/vuln/detail/CVE-2019-19783
 cyrus-imapd>=3.0<3.0.13	arbitrary-file-write		https://nvd.nist.gov/vuln/detail/CVE-2019-19783
 cyrus-sasl<2.1.27nb1	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2019-19906
-fig2dev-[0-9]*		out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2019-19797
+fig2dev<3.2.8		out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2019-19797
 git-base<2.23.1 	arbitrary-file-write		https://nvd.nist.gov/vuln/detail/CVE-2019-1348
 git-base>=2.24<2.24.1 	arbitrary-file-write		https://nvd.nist.gov/vuln/detail/CVE-2019-1348
 git-base<2.23.1 	unspecified			https://nvd.nist.gov/vuln/detail/CVE-2019-1349
@@ -21215,7 +21215,7 @@ ffmpeg4<4.4	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-22032
 ffmpeg4<4.4.1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-22033
 ffmpeg4<4.3	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-22034
 ffmpeg4<4.4	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-24020
-fig2dev-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3561
+fig2dev<3.2.8b	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3561
 go115<1.15.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-31525
 go116<1.16.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-31525
 go115<1.15.12	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2021-33194
