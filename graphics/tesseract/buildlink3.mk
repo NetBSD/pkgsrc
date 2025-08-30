@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/04/24 14:14:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/08/30 22:45:35 wiz Exp $
 
 BUILDLINK_TREE+=	tesseract
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tesseract
 TESSERACT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tesseract+=	tesseract>=3.05.01nb6
-BUILDLINK_ABI_DEPENDS.tesseract+=	tesseract>=5.5.0nb3
+BUILDLINK_ABI_DEPENDS.tesseract+=	tesseract>=5.5.1nb1
 BUILDLINK_PKGSRCDIR.tesseract?=		../../graphics/tesseract
 
 .include "../../graphics/leptonica/buildlink3.mk"

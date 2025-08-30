@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2025/07/19 05:37:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2025/08/30 22:46:41 wiz Exp $
 
 BUILDLINK_TREE+=	lua-keybinder
 
@@ -8,7 +8,7 @@ LUA_KEYBINDER_BUILDLINK3_MK:=
 .include "../../lang/lua/luaversion.mk"
 
 BUILDLINK_API_DEPENDS.lua-keybinder+=	${LUA_PKGPREFIX}-keybinder>=0.3.0
-BUILDLINK_ABI_DEPENDS.lua-keybinder?=	lua51-keybinder>=0.3.0nb24
+BUILDLINK_ABI_DEPENDS.lua-keybinder?=	lua51-keybinder>=0.3.0nb25
 BUILDLINK_PKGSRCDIR.lua-keybinder?=	../../x11/lua-keybinder
 
 .include "../../x11/keybinder/buildlink3.mk"

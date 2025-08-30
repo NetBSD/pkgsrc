@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/08/20 16:47:24 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/08/30 22:45:27 wiz Exp $
 
 BUILDLINK_TREE+=	libvips
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libvips
 LIBVIPS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libvips+=	libvips>=8.16.0
+BUILDLINK_ABI_DEPENDS.libvips?=	libvips>=8.17.1nb1
 BUILDLINK_PKGSRCDIR.libvips?=	../../graphics/libvips
 
 .include "../../graphics/libexif/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2025/04/24 14:13:09 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2025/08/30 22:44:32 wiz Exp $
 
 DISTNAME=	Ardour-8.10.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	https://community.ardour.org/src/
 EXTRACT_SUFX=	.tar.bz2

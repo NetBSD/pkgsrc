@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2025/04/24 14:15:51 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/08/30 22:46:22 wiz Exp $
 
 DISTNAME=	xcdroast-1.18
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
 

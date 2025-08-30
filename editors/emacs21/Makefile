@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/04/24 14:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/30 22:44:55 wiz Exp $
 
-PKGREVISION=	48
+PKGREVISION=	49
 CATEGORIES=	editors
 
 CONFLICTS+=	emacs21-nox11-[0-9]*
