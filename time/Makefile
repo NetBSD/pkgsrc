@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2025/08/30 13:37:30 pho Exp $
+# $NetBSD: Makefile,v 1.284 2025/08/30 17:38:00 pho Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -36,6 +36,7 @@ SUBDIR+=	fet
 SUBDIR+=	gcal
 SUBDIR+=	gchore
 SUBDIR+=	gkrellaclock
+SUBDIR+=	gkrellm-reminder
 SUBDIR+=	glclock
 SUBDIR+=	globe
 SUBDIR+=	gnome-calendar
