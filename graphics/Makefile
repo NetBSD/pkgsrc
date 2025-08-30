@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1097 2025/08/23 12:44:56 adam Exp $
+# $NetBSD: Makefile,v 1.1098 2025/08/30 17:00:49 pho Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -184,6 +184,7 @@ SUBDIR+=	gimp-resynthesizer
 SUBDIR+=	gimp-ufraw
 SUBDIR+=	giram
 SUBDIR+=	girara
+SUBDIR+=	gkrellshoot
 SUBDIR+=	gl2ps
 SUBDIR+=	glad
 SUBDIR+=	gle
