@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.22 2025/02/05 03:50:01 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.23 2025/08/30 06:44:05 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -48,13 +48,10 @@ ${PKGNAME}/lib/libreoffice/program/libjuh.so
 ${PKGNAME}/lib/libreoffice/program/libjuhx.so
 ${PKGNAME}/lib/libreoffice/program/libjvmaccesslo.so
 ${PKGNAME}/lib/libreoffice/program/libjvmfwklo.so
-${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
-${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/libofficebean.so
 ${PKGNAME}/lib/libreoffice/program/librptlo.so
 ${PKGNAME}/lib/libreoffice/program/librptuilo.so
 ${PKGNAME}/lib/libreoffice/program/librptxmllo.so
-${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforbeanshell.rdb
 ${PKGNAME}/lib/libreoffice/program/services/scriptproviderforjavascript.rdb
 ${PKGNAME}/lib/libreoffice/share/Scripts/beanshell/Calc/CopyRange.bsh
@@ -3084,12 +3081,8 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/zu/help.idxl/seg
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/zu/help.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/zu/help.key_
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/zu/help.tree
-${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/license/THIRDPARTYLICENSEREADME.html
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/mediawiki.jar
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/registration/LICENSE
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/templates/MediaWiki/mediawiki.ott
 ${PKGNAME}/lib/libreoffice/share/registry/reportbuilder.xcd
 ${PKGNAME}/lib/libreoffice/share/template/common/wizard/report/default.otr
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
-${PLIST.ldap}${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
