@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.gtk4,v 1.1 2025/08/30 04:45:32 ryoon Exp $
+bin/ghb
+share/applications/fr.handbrake.ghb.desktop
+share/icons/hicolor/scalable/apps/fr.handbrake.ghb.svg
+share/metainfo/fr.handbrake.ghb.metainfo.xml
