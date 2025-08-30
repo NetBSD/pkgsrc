@@ -687,6 +687,7 @@ notmuch			Enable notmuch support for indexing.
 notmuch-emacs		Install emacs support files for notmuch.
 nspluginwrapper		Enable running non native netscape compatible plugins.
 nss			Enable Network Security Services (NSS) support.
+ntlm			Enable Microsoft's NTLM authentication support.
 oauth			Enable OAuth support.
 objc			Support programs written in Objective C.
 ocaml			Enable OCaml support.
