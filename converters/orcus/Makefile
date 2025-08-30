@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2025/08/21 16:37:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2025/08/30 05:16:00 ryoon Exp $
 
-DISTNAME=	liborcus-0.19.2
+DISTNAME=	liborcus-0.20.2
 PKGNAME=	${DISTNAME:S/liborcus/orcus/}
-PKGREVISION=	3
 CATEGORIES=	converters
-MASTER_SITES=	https://kohei.us/files/orcus/src/
+MASTER_SITES=	https://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
