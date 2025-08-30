@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5237 2025/08/30 07:31:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5238 2025/08/30 07:33:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7595,3 +7595,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-apcu to 5.1.27 [taca 2025-08-30]
 	Updated misc/libreoffice to 25.8.1.1 [ryoon 2025-08-30]
 	Updated devel/ruby-async to 2.28.0 [taca 2025-08-30]
+	Updated devel/ruby-metrics to 0.14.0 [taca 2025-08-30]
