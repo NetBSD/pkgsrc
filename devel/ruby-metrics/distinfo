@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/08/11 14:45:32 taca Exp $
+$NetBSD: distinfo,v 1.4 2025/08/30 07:33:06 taca Exp $
 
-BLAKE2s (metrics-0.13.0.gem) = d5757a67fe1c78d5d6227d6d4026ab83ff9a4af8938c6d1c6b53bc11330a2bb5
-SHA512 (metrics-0.13.0.gem) = 93035c4570b731061d18a1e0dc8b2033700e2ca61c3f68d22fbd954eb3fd5ddbdb3d7453ea228df4169ffbdbae36a83be50f75a05d4c47de82b3ce8f9c5b02e3
-Size (metrics-0.13.0.gem) = 13312 bytes
+BLAKE2s (metrics-0.14.0.gem) = 03d486af2a750e1c0bcae3df5191cc8be58c907669f33a9ac13ae09a70b6f764
+SHA512 (metrics-0.14.0.gem) = 6057d9b822a14bc14673910ffb31a7cd820605b3299235152df39d3f506f670253ef0af8f44a78474e57a4fc8418ddd8e59017ae1b83452341758cf4163b8ccb
+Size (metrics-0.14.0.gem) = 13312 bytes
