@@ -1,30 +1,9 @@
-$NetBSD: distinfo,v 1.49 2021/11/27 04:43:02 pho Exp $
+$NetBSD: distinfo,v 1.50 2025/08/30 08:24:18 pho Exp $
 
-BLAKE2s (gkrellm-2.2.10.tar.bz2) = 7cfeedd45dd708d10725ead8e46f01394da4db5219c9393341c2d66eda03ac73
-SHA512 (gkrellm-2.2.10.tar.bz2) = f3bc055c54bd18c20a59fae471e27c7f4067067525cbc351a0e9fb80a70f7da59c220f36ecabae341e73e0b0e93546edabebff896eed863b515c6d8408a5670a
-Size (gkrellm-2.2.10.tar.bz2) = 718894 bytes
-SHA1 (patch-Makefile.inc) = 958f3f402b3f13c2d81520eda62fe4293ac784ab
-SHA1 (patch-aa) = 1cf9b98520b37aa75c6c5b9d0398e8d92204a12e
-SHA1 (patch-ab) = e900c811ddea106efee5cbfc04d0cf14cc6e6451
-SHA1 (patch-ac) = 8890d5a5e8eaf21508a1bf91de788183fd6f7a75
-SHA1 (patch-ad) = 2a12402c941a5a197aa58e711e254ae2c91dfb10
-SHA1 (patch-ae) = 7ebbdd1dddb87f84f6e9e7ae316af18b316d4ddf
-SHA1 (patch-ag) = 6791436e17fccd7265cda8b4e3da229c4937c20f
-SHA1 (patch-ah) = 2018be5c2dd11c22c6d3f7c7fc8607e2c63123f3
-SHA1 (patch-ai) = 234e3e1e458e5709157668cf7d18faabdd076071
-SHA1 (patch-aj) = 224deaa57e7703f34a7911c63d2e6833862920c5
-SHA1 (patch-ak) = b96987c120ca4c37c83075da61e8eb04e41d2023
-SHA1 (patch-al) = 4eab3c3757c198dcc3049a63fc3b8adceef7bc1c
-SHA1 (patch-am) = bf8b01f5e368a5387f8d224ca51ec18a74410b5c
-SHA1 (patch-an) = 1e63ce0e4fbe9bd22c46d00c6aeac6b3e7cda440
-SHA1 (patch-ao) = c9e1a7324e0a9194c05554a09bafd4fe0460df38
-SHA1 (patch-ap) = 0781bec3da89724f7145beaffba4aa318493dbef
-SHA1 (patch-aq) = 0799e334333ae072a40cdcb6ccd04ed6a2f52765
-SHA1 (patch-ar) = 86ee88c8506c1ceb1d35eb488d209b16306a715d
-SHA1 (patch-as) = 3df33e28754cf1fee88717b431726bf090c15f70
-SHA1 (patch-au) = 27df64d854cb15202fa984170faeab4c128d5cad
-SHA1 (patch-av) = 09cbc2fbb8226f8fe56bff458a4772998cae3f32
-SHA1 (patch-aw) = c32ae045dad9754edb88e375b8893cfe161567d0
-SHA1 (patch-ay) = 54ce179dd051509d9fdf857730cf2ddf9b9fe0b3
-SHA1 (patch-az) = 3dbfe97e17a9aad5a6fc8e62b1116ac1fd2ec3a2
-SHA1 (patch-src_Makefile) = 2f5e83b5d8eca2a2e7dff8e05e85da0ce84fe02e
+BLAKE2s (gkrellm-2.4.0.tar.bz2) = fe1062d50117f49eb846063e773d012cc6e1ad86e8a2208372880e1a73f36430
+SHA512 (gkrellm-2.4.0.tar.bz2) = 770acfe5ee23b74ffe5becc89d3735e9e8688ac338b052e1c2f86cb722b7867b1f8c262a969ef3140eb32912cf0426ac13bf3743e2a9149eec2a962655e05a9f
+Size (gkrellm-2.4.0.tar.bz2) = 790070 bytes
+SHA1 (patch-gkrellmd.1) = 579f6eac994ec5321645a21a117e621260be8a6c
+SHA1 (patch-server_Makefile) = a8194ddd9dc9f58cbacd0615914b53cc2af8a9b0
+SHA1 (patch-src_Makefile) = 6bfbcd0d33975671cbd1d60473a00b55a27eba2a
+SHA1 (patch-src_sysdeps_freebsd.c) = 830c55f97cc374148f2e1fbf57e843bccc33ab00
