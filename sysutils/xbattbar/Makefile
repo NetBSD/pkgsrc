@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.38 2024/10/10 17:25:57 nia Exp $
+# $NetBSD: Makefile,v 1.39 2025/08/30 02:49:33 tsutsui Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	10
 CATEGORIES=	sysutils x11
-MASTER_SITES=	http://iplab.aist-nara.ac.jp/member/suguru/
+#MASTER_SITES=	http://iplab.aist-nara.ac.jp/member/suguru/
+MASTER_SITES=	https://www.minix3.org/distfiles-backup/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://iplab.aist-nara.ac.jp/member/suguru/xbattbar.html
+HOMEPAGE=	https://web.archive.org/web/20160729024814/http://iplab.naist.jp/member/suguru/xbattbar.html
 COMMENT=	X11 battery graph for laptops
+LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	NetBSD-*-*

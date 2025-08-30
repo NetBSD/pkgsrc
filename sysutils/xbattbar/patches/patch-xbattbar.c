@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.10 2018/05/06 14:32:06 jmcneill Exp $
+$NetBSD: patch-xbattbar.c,v 1.1 2025/08/30 02:49:33 tsutsui Exp $
+
+- misc support and fixes for NetBSD using apm(4), acpi(4), and envsys(4)
+- properly report battery and AC info from axppmic(4) found on Pinebook
 
 --- xbattbar.c.orig	2001-02-02 05:25:29.000000000 +0000
 +++ xbattbar.c
