@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2024/12/29 15:09:45 adam Exp $
+# $NetBSD: Makefile,v 1.60 2025/08/30 04:55:15 ryoon Exp $
 
-DISTNAME=	mdds-2.1.1
-PKGREVISION=	3
+DISTNAME=	mdds-3.1.0
 CATEGORIES=	devel
-MASTER_SITES=	https://kohei.us/files/mdds/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://dev-www.libreoffice.org/src/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/mdds/mdds
