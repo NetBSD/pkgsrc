@@ -1,40 +1,98 @@
-# $NetBSD: Makefile.common,v 1.19 2021/11/27 05:37:59 pho Exp $
+# $NetBSD: Makefile.common,v 1.20 2025/08/30 08:24:18 pho Exp $
 #
 # used by sysutils/gkrellm-share/Makefile
 # used by sysutils/gkrellm-server/Makefile
 
+GKRELLM_VERSION=	2.4.0
+GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
+
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://members.dslextreme.com/users/billw/gkrellm/
+MASTER_SITES=	https://gkrellm.srcbox.net/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://gkrellm.net/
-LICENSE=	gnu-gpl-v2
+HOMEPAGE=	https://gkrellm.srcbox.net/
+LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=		gmake
-USE_PKGLOCALEDIR=	YES
-
-MAKE_ENV+=		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale
-MAKE_ENV+=		GREP=${GREP:Q}
-
-.if defined(GKRELLM_DEBUG)
-MAKE_ENV+=		DEBUG=yes
-.endif
-
-GKRELLM_VERSION=	2.2.10
-GKRELLM_DISTBASE=	gkrellm-${GKRELLM_VERSION}
-GKRELLM_SRCDIR=		${WRKDIR}/${GKRELLM_DISTBASE}
 
 FILESDIR=		${.CURDIR}/../../sysutils/gkrellm/files
 PATCHDIR=		${.CURDIR}/../../sysutils/gkrellm/patches
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/gkrellm/distinfo
 
-post-extract:
-	${CP} ${FILESDIR}/top.Makefile ${WRKSRC}/Makefile
-	${CP} ${FILESDIR}/top.Makefile.inc ${WRKSRC}/Makefile.inc
-	${CP} ${FILESDIR}/po.Makefile ${WRKSRC}/po/Makefile
-	${CP} ${FILESDIR}/server.Makefile ${WRKSRC}/server/Makefile
-	${CP} ${FILESDIR}/src.Makefile ${WRKSRC}/src/Makefile
-	${CP} ${FILESDIR}/dragonfly.c ${WRKSRC}/src/sysdeps
+.include "../../sysutils/gkrellm/options.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+
+BROKEN_EXCEPT_ON_PLATFORM=	# empty
+
+###
+### Darwin
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	Darwin-*-*
+.if ${OPSYS} == "Darwin"
+.  if !empty(PKG_OPTIONS:Mquartz)
+GKRELLM_PER_PLATFORM_TARGET=	macosx
+.  elif ${OPSYS_VERSION} >= 100400 # post-Tiger; libkvm unavailable
+GKRELLM_PER_PLATFORM_TARGET=	darwin9
+.  else
+GKRELLM_PER_PLATFORM_TARGET=	darwin
+.  endif
+.endif
+
+###
+### DragonFly
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	DragonFly-*-*
+.if ${OPSYS} == "DragonFly"
+GKRELLM_PER_PLATFORM_TARGET=	dragonfly
+.endif
+
+###
+### FreeBSD
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	FreeBSD-*-*
+.if ${OPSYS} == "FreeBSD"
+.  if ${OPSYS_VERSION} >= 030000
+GKRELLM_PER_PLATFORM_TARGET=	freebsd
+.  else
+GKRELLM_PER_PLATFORM_TARGET=	freebsd2
+.  endif
+.endif
+
+###
+### Linux
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	Linux-*-*
+.if ${OPSYS} == "Linux"
+GKRELLM_PER_PLATFORM_TARGET=	all
+.endif
+
+###
+### NetBSD
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	NetBSD-*-*
+.if ${OPSYS} == "NetBSD"
+.  if ${OPSYS_VERSION} >= 020000
+GKRELLM_PER_PLATFORM_TARGET=	netbsd2
+.  else
+GKRELLM_PER_PLATFORM_TARGET=	netbsd1
+.  endif
+.endif
+
+###
+### OpenBSD
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	OpenBSD-*-*
+.if ${OPSYS} == "OpenBSD"
+GKRELLM_PER_PLATFORM_TARGET=	openbsd
+.endif
+
+###
+### SunOS
+###
+BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-*
+.if ${OPSYS} == "SunOS"
+GKRELLM_PER_PLATFORM_TARGET=	solaris
+.endif
