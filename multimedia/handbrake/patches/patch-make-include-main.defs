@@ -1,11 +1,11 @@
-$NetBSD: patch-make-include-main.defs,v 1.5 2023/04/09 11:15:50 plunky Exp $
+$NetBSD: patch-make-include-main.defs,v 1.6 2025/08/30 04:45:32 ryoon Exp $
 
 Use comon pkgsrc libraries, except for libjpeg-turbo which is required but
 cannot coexist with libjpeg (required by gtk3)
 
---- make/include/main.defs.orig	2023-01-22 16:36:49.000000000 +0000
+--- make/include/main.defs.orig	2025-08-08 16:41:24.000000000 +0000
 +++ make/include/main.defs
-@@ -13,49 +13,12 @@ ifneq ($(HAS.bz2),1)
+@@ -14,23 +14,6 @@ ifneq ($(HAS.bz2),1)
  endif
  endif
  
@@ -13,7 +13,6 @@ cannot coexist with libjpeg (required by gtk3)
 -    MODULES += contrib/freetype
 -    MODULES += contrib/fribidi
 -    MODULES += contrib/harfbuzz
--    MODULES += contrib/libxml2
 -    MODULES += contrib/libass
 -    MODULES += contrib/libogg
 -    MODULES += contrib/libvorbis
@@ -27,32 +26,31 @@ cannot coexist with libjpeg (required by gtk3)
 -    MODULES += contrib/libjpeg-turbo
 -endif
 -
--ifeq (1,$(FEATURE.flatpak))
--    MODULES += contrib/libass
--    MODULES += contrib/jansson
--    MODULES += contrib/x264
--endif
-+MODULES += contrib/libjpeg-turbo
- 
- ifeq (1,$(FEATURE.fdk_aac))
-     MODULES += contrib/fdk-aac
+ ifeq (1,$(FEATURE.flatpak))
+     MODULES += contrib/libass
+     MODULES += contrib/jansson
+@@ -48,13 +31,7 @@ ifeq (1,$(FEATURE.x265))
+     MODULES += contrib/x265_12bit
  endif
  
--ifeq (1,$(FEATURE.x265))
--    MODULES += contrib/x265
--    MODULES += contrib/x265_8bit
--    MODULES += contrib/x265_10bit
--    MODULES += contrib/x265_12bit
--endif
--
 -MODULES += contrib/libdav1d
 -MODULES += contrib/svt-av1
 -MODULES += contrib/zimg
--MODULES += contrib/ffmpeg
+ MODULES += contrib/ffmpeg
 -MODULES += contrib/libdvdread
 -MODULES += contrib/libdvdnav
 -MODULES += contrib/libbluray
--
+ 
  ifeq (1,$(FEATURE.qsv))
  ifeq (,$(filter $(HOST.system),freebsd))
-     MODULES += contrib/libvpl
+@@ -70,10 +47,6 @@ ifeq (1,$(FEATURE.nvenc))
+     MODULES += contrib/nvenc
+ endif
+ 
+-ifeq (1,$(FEATURE.libdovi))
+-    MODULES += contrib/libdovi
+-endif
+-
+ ifneq (,$(filter $(HOST.system),darwin))
+     MODULES += contrib/xz
+     MODULES += contrib/bin2c

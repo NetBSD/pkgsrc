@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.8 2022/10/03 10:46:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/30 04:45:32 ryoon Exp $
 bin/HandBrakeCLI
