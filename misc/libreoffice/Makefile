@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.363 2025/08/24 16:36:17 wiz Exp $
+# $NetBSD: Makefile,v 1.364 2025/08/30 06:44:04 ryoon Exp $
 
-VERREL=		25.2.4
-VERRC=		3
+VERREL=		25.8.1
+VERRC=		1
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -93,7 +92,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.6.tar.gz \
+	xmlsec1-1.3.7.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -115,7 +114,7 @@ MORE_DISTFILES= \
 	rhino-1.7.15.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-14.18.tar.bz2 \
+	postgresql-15.14.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -129,9 +128,9 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-1.001.zip \
 	ReemKufi-1.8.zip \
-	pdfium-6764.tar.bz2 \
+	pdfium-7012.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m130-3c64459d5df2fa9794b277f0959ed8a92552bf4c.tar.xz \
+	skia-m136-28685d899b0a35894743e2cedad4c9f525e90e1e.tar.xz \
 	Java-WebSocket-1.6.0.tar.gz \
 	NotoSans-v2.015.zip \
 	NotoSerif-v2.015.zip \
@@ -331,6 +330,7 @@ post-install:
 .endfor
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libabw/buildlink3.mk"
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libe-book/buildlink3.mk"

@@ -1,13 +1,13 @@
-$NetBSD: patch-sw_source_uibase_config_usrpref.cxx,v 1.2 2025/02/05 03:50:02 ryoon Exp $
+$NetBSD: patch-sw_source_uibase_config_usrpref.cxx,v 1.3 2025/08/30 06:44:05 ryoon Exp $
 
 Disable unnecessary code to resolve "std::strcmp not found" problem on
 NetBSD 9.x
 
---- sw/source/uibase/config/usrpref.cxx.orig	2025-01-30 14:19:43.944837340 +0000
+--- sw/source/uibase/config/usrpref.cxx.orig	2025-08-12 11:36:36.000000000 +0000
 +++ sw/source/uibase/config/usrpref.cxx
-@@ -130,13 +130,6 @@ Sequence<OUString> SwContentViewConfig::
-         "Display/TableBoundaries",              // 32
-         "Display/ShowBoundaries"                // 33
+@@ -132,13 +132,6 @@ Sequence<OUString> SwContentViewConfig::
+         "Display/ShowBoundaries",               // 33
+         "Draw/ClickChangeRotation"              // 34
      };
 -#if defined(__GNUC__) && !defined(__clang__)
 -    // clang 8.0.0 says strcmp isn't constexpr

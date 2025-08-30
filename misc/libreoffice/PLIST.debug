@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.debug,v 1.5 2024/10/23 14:21:00 ryoon Exp $
-${PKGNAME}/lib/libreoffice/program/resource/sun/LC_MESSAGES/acc.mo
+@comment $NetBSD: PLIST.debug,v 1.6 2025/08/30 06:44:05 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/resource/sun/LC_MESSAGES/avmedia.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sun/LC_MESSAGES/basctl.mo
 ${PKGNAME}/lib/libreoffice/program/resource/sun/LC_MESSAGES/chart.mo
