@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/30 13:37:09 pho Exp $
+
+BLAKE2s (gkrellaclock-0.3.4.tar.gz) = fae58c83e91bb6a486ea2458e1b3439009480836ed0307b96061f8a95bc8a4d2
+SHA512 (gkrellaclock-0.3.4.tar.gz) = 2e6002bc4d535899cc8b86377d596bcee5e64d05fe4239eaab2de8e387a40b8dee600d9fcd5f30feb68bb3e54bf6b4745d4c7b79ea9fee57b856eeb3dac12524
+Size (gkrellaclock-0.3.4.tar.gz) = 18853 bytes
