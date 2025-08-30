@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/25 00:49:59 cube Exp $
-lib/gkrellm2/plugins/gkrellflynn.so
+@comment $NetBSD: PLIST,v 1.2 2025/08/30 09:25:51 pho Exp $
+lib/gkrellm2/plugins/gkrellflynn.la
