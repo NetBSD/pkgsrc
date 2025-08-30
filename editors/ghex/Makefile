@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2025/07/09 08:18:19 hauke Exp $
+# $NetBSD: Makefile,v 1.80 2025/08/30 22:44:56 wiz Exp $
 
 DISTNAME=	ghex-3.18.4
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ghex/3.18/}
 EXTRACT_SUFX=	.tar.xz

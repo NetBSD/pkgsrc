@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/08/17 18:26:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/08/30 22:45:20 wiz Exp $
 
+PKGREVISION= 1
 .include "../../graphics/libjxl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lib/gdk-pixbuf2-/g}

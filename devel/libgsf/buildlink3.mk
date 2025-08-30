@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2025/04/24 14:13:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2025/08/30 22:44:51 wiz Exp $
 
 BUILDLINK_TREE+=	libgsf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgsf
 LIBGSF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.13.3
-BUILDLINK_ABI_DEPENDS.libgsf+=	libgsf>=1.14.53nb5
+BUILDLINK_ABI_DEPENDS.libgsf+=	libgsf>=1.14.53nb6
 BUILDLINK_PKGSRCDIR.libgsf?=	../../devel/libgsf
 
 .include "../../archivers/bzip2/buildlink3.mk"

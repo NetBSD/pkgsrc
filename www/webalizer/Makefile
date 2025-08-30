@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2025/04/24 14:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/08/30 22:46:32 wiz Exp $
 
 DISTNAME=	webalizer-2.23-08-src
 PKGNAME=	webalizer-2.23.8
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2

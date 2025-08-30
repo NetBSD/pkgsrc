@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2025/05/16 22:40:42 zafer Exp $
+# $NetBSD: Makefile,v 1.67 2025/08/30 22:45:00 wiz Exp $
 #
 
 DISTNAME=	gpsim-20050905
-PKGREVISION=	50
+PKGREVISION=	51
 CATEGORIES=	emulators
 MASTER_SITES=	https://largo.lip6.fr/~bouyer/pic/
 

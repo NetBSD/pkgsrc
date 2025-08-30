@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/07/04 08:47:15 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/08/30 22:45:30 wiz Exp $
 
 DISTNAME=	GooCanvas2-0.06
 PKGNAME=	p5-${DISTNAME:S/GooCanvas/goocanvas/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PERLMAX/
 

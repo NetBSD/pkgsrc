@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/08/30 17:05:52 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/30 22:45:21 wiz Exp $
 
 DISTNAME=	gkrellshoot-0.4.4
+PKGREVISION=	1
 CATEGORIES=	graphics sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gkrellshoot/}
 

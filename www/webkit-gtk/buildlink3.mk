@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.113 2025/04/24 14:16:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.114 2025/08/30 22:46:32 wiz Exp $
 
 BUILDLINK_TREE+=	webkit-gtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	webkit-gtk
 WEBKIT_GTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.webkit-gtk+=	webkit-gtk>=2.8
-BUILDLINK_ABI_DEPENDS.webkit-gtk?=	webkit-gtk>=2.36.8nb24
+BUILDLINK_ABI_DEPENDS.webkit-gtk?=	webkit-gtk>=2.36.8nb26
 BUILDLINK_PKGSRCDIR.webkit-gtk?=	../../www/webkit-gtk
 
 # This is necessary to match the package requirement.

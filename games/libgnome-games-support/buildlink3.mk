@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/04/24 14:14:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/08/30 22:45:07 wiz Exp $
 
 BUILDLINK_TREE+=	libgnome-games-support
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnome-games-support
 LIBGNOME_GAMES_SUPPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnome-games-support+=	libgnome-games-support>=2.0.0
-BUILDLINK_ABI_DEPENDS.libgnome-games-support?=	libgnome-games-support>=2.0.0nb4
+BUILDLINK_ABI_DEPENDS.libgnome-games-support?=	libgnome-games-support>=2.0.0nb5
 BUILDLINK_PKGSRCDIR.libgnome-games-support?=	../../games/libgnome-games-support
 
 .include "../../devel/libgee/buildlink3.mk"

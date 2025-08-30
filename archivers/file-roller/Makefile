@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.166 2025/04/24 14:13:08 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2025/08/30 22:44:32 wiz Exp $
 
 DISTNAME=	file-roller-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	archivers gnome
 EXTRACT_SUFX=	.tar.xz
 

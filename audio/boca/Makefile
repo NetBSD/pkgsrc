@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/08/12 00:57:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2025/08/30 22:44:34 wiz Exp $
 
 DISTNAME=	boca-1.0.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=enzo1982/}
 GITHUB_PROJECT=	BoCA

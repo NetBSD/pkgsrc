@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/07/19 05:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/08/30 22:46:15 wiz Exp $
 
 DISTNAME=	ayatana-ido-0.10.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AyatanaIndicators/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

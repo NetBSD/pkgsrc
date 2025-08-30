@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/07/03 19:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/08/30 22:46:44 wiz Exp $
 
 DISTNAME=	wxPython-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wxPython/}
 

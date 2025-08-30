@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2025/07/19 05:37:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2025/08/30 22:46:28 wiz Exp $
 
 BUILDLINK_TREE+=	mutter
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mutter
 MUTTER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mutter+=	mutter>=40.0
-BUILDLINK_ABI_DEPENDS.mutter?=	mutter>=40.2nb14
+BUILDLINK_ABI_DEPENDS.mutter?=	mutter>=40.2nb15
 BUILDLINK_PKGSRCDIR.mutter?=	../../wm/mutter
 
 .include "../../devel/gobject-introspection/buildlink3.mk"

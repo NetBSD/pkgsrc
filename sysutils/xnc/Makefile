@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2025/04/24 14:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/30 22:46:24 wiz Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.xnc.dubna.su/src-5/
 

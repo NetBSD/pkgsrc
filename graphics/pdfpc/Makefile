@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/08/22 08:15:53 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/08/30 22:45:31 wiz Exp $
 
 DISTNAME=	pdfpc-4.4.0
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pdfpc/}
 GITHUB_PROJECT=	pdfpc

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/24 14:13:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/08/30 22:44:50 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-purpose
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-purpose
 KF6_PURPOSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-purpose+=	kf6-purpose>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-purpose?=	kf6-purpose>=6.8.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-purpose?=	kf6-purpose>=6.8.0nb4
 BUILDLINK_PKGSRCDIR.kf6-purpose?=	../../devel/kf6-purpose
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"

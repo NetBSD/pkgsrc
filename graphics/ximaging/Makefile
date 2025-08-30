@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/08/03 06:29:10 vins Exp $
+# $NetBSD: Makefile,v 1.10 2025/08/30 22:45:37 wiz Exp $
 
 DISTNAME=	ximaging-src-1.9
 PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz

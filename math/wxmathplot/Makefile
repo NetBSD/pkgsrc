@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/08/19 14:08:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/08/30 22:45:51 wiz Exp $
 
 DISTNAME=	wxMathPlot_0.2.0
 PKGNAME=	wxmathplot-0.2.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxmathplot/}
 EXTRACT_SUFX=	.zip

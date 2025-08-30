@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.166 2025/08/22 08:15:54 adam Exp $
+# $NetBSD: Makefile,v 1.167 2025/08/30 22:46:11 wiz Exp $
 
 DISTNAME=	okular-${KAPPSVER}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	print
 
 HOMEPAGE=	https://kde.org/applications/graphics/okular/

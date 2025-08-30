@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2025/08/22 08:04:03 adam Exp $
+# $NetBSD: Makefile,v 1.117 2025/08/30 22:46:11 wiz Exp $
 
 COMMENT=	PDF rendering library
+PKGREVISION=	1
 
 SUPERSEDES+=	poppler-glib-[0-9]*
 
