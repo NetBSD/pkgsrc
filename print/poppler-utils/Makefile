@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2025/08/22 08:04:04 adam Exp $
+# $NetBSD: Makefile,v 1.81 2025/08/30 22:46:12 wiz Exp $
 
 PKGNAME=	poppler-utils-${POPPLER_VERS}
+PKGREVISION=	1
 COMMENT=	PDF utilities (from poppler)
 
 CONFLICTS+=	poppler-0.5.1{,nb*}

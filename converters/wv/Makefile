@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2025/04/24 14:13:25 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2025/08/30 22:44:46 wiz Exp $
 
 DISTNAME=	wv-1.2.9
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	converters
 MASTER_SITES=	http://www.nl.abisource.com/downloads/wv/${PKGVERSION_NOREV}/
 

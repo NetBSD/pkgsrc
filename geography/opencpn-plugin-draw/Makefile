@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2025/08/20 11:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/08/30 22:45:11 wiz Exp $
 #
 
 VERSION=	1.6.8
 DISTNAME=	ocpn_draw_pi-${VERSION}
 PKGNAME=	opencpn-plugin-draw-${VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jongough/}
 GITHUB_PROJECT=	ocpn_draw_pi

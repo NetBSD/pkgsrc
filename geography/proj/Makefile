@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/07/03 23:40:38 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2025/08/30 22:45:12 wiz Exp $
 
 VERSION_BASE=	9.6.2
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
@@ -7,7 +7,7 @@ VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

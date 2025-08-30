@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2025/04/24 14:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/30 22:45:01 wiz Exp $
 
 # The author has not yet created any tags, but this is what it reports
 # as its version.
 MARDUK_VERSION=	0.26e
 
 DISTNAME=	marduk-${MARDUK_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=buricco/}
 GITHUB_TAG=	7cf954b7f9681daafa7240f49b7860f6f2107898

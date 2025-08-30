@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2025/04/24 14:16:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2025/08/30 22:46:33 wiz Exp $
 #
 
 BUILDLINK_TREE+=	deforaos-keyboard
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	deforaos-keyboard
 DEFORAOS_KEYBOARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-keyboard+=	deforaos-keyboard>=0.3.0
-BUILDLINK_ABI_DEPENDS.deforaos-keyboard?=	deforaos-keyboard>=0.4.0nb17
+BUILDLINK_ABI_DEPENDS.deforaos-keyboard?=	deforaos-keyboard>=0.4.0nb18
 BUILDLINK_PKGSRCDIR.deforaos-keyboard?=		../../x11/deforaos-keyboard
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

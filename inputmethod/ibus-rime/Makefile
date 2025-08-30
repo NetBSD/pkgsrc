@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2025/08/20 11:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/08/30 22:45:42 wiz Exp $
 
 GITHUB_PROJECT=	ibus-rime
 $GITHUB_TAG=	${PKGVERSION_NOREV}
 DISTNAME=	ibus-rime-1.5.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 

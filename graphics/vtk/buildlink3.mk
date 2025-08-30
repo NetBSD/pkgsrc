@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2025/04/24 14:14:41 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2025/08/30 22:45:36 wiz Exp $
 
 BUILDLINK_TREE+=	vtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vtk
 VTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vtk+=	vtk>=9.0.1
-BUILDLINK_ABI_DEPENDS.vtk+=	vtk>=9.4.1nb4
+BUILDLINK_ABI_DEPENDS.vtk+=	vtk>=9.4.1nb5
 BUILDLINK_PKGSRCDIR.vtk?=	../../graphics/vtk
 
 .include "../../archivers/lz4/buildlink3.mk"
