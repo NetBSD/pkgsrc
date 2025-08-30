@@ -1,10 +1,10 @@
-$NetBSD: patch-autogen.sh,v 1.5 2021/08/22 02:41:50 ryoon Exp $
+$NetBSD: patch-autogen.sh,v 1.6 2025/08/30 06:44:05 ryoon Exp $
 
 * Run configure script with bash
 
---- autogen.sh.orig	2021-08-16 19:56:28.000000000 +0000
+--- autogen.sh.orig	2025-08-12 11:36:36.000000000 +0000
 +++ autogen.sh
-@@ -319,7 +319,7 @@ if (defined $ENV{NOCONFIGURE}) {
+@@ -335,7 +335,7 @@ if (defined $ENV{NOCONFIGURE}) {
          $ENV{"PROGRAMFILESX86"} = $ENV{"ProgramFiles(x86)"};
      }
  
@@ -12,4 +12,4 @@ $NetBSD: patch-autogen.sh,v 1.5 2021/08/22 02:41:50 ryoon Exp $
 +    system ('@BASH@', @args) && die "Error running configure";
  }
  
- # Local Variables:
+ # cspell:ignore Distros PROGRAMFILESX WSLENV emconfigure realpath wslsys
