@@ -1,0 +1,13 @@
+$NetBSD: patch-gkrellmd.1,v 1.1 2025/08/30 08:24:21 pho Exp $
+
+Move gkrellmd(1) to section 8 because it's not supposed to be directly
+executed by users.
+
+--- gkrellmd.1.orig	2025-08-25 14:03:28.877318062 +0000
++++ gkrellmd.1
+@@ -1,4 +1,4 @@
+-.TH gkrellmd 1 "Jan 07, 2025" "" "User's Manual"
++.TH gkrellmd 8 "Jan 07, 2025" "" "User's Manual"
+ 
+ .SH "NAME"
+ gkrellmd \- The GNU Krell Monitors Server

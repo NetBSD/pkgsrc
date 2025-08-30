@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gkrellmd.sh,v 1.1.1.1 2004/02/24 22:11:28 cube Exp $
+# $NetBSD: gkrellmd.sh,v 1.2 2025/08/30 08:24:18 pho Exp $
 #
 
 # PROVIDE: gkrellmd
@@ -10,7 +10,7 @@
 
 name="gkrellmd"
 rcvar=$name
-command="@PREFIX@/bin/gkrellmd"
+command="@PREFIX@/sbin/gkrellmd"
 gkrellmd_flags="-d"
 
 load_rc_config $name
