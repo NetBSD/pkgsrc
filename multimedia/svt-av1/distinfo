@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.10 2024/11/01 08:05:44 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/08/30 04:40:06 ryoon Exp $
 
-BLAKE2s (svt-av1-2.3.0.tar.bz2) = a2c7cfe255975a916f358e21d335d54a9c7b8a6b76bd3349566ed02a76291b89
-SHA512 (svt-av1-2.3.0.tar.bz2) = 943fb21ef1d9fb3bc3b6ce2c0180c4ce109be76c1a6d703b39eba8b94322fdc99b2f0c101cc6cd839e0c9bfea57dd161c1f10958c84fff10392767b6e1118b85
-Size (svt-av1-2.3.0.tar.bz2) = 10168419 bytes
+BLAKE2s (svt-av1-3.1.2.tar.bz2) = 86e2b0b08873fb3450a8bf5978df08e7cafee73f0a8db9d84752ec21be0ffa60
+SHA512 (svt-av1-3.1.2.tar.bz2) = d23327cf348d576643d6385f756d9354ed93801c99bf63c4fb049902f4fd2b81c816cacdcab71dffb1cc330385c89c5abef67b8f81d2abd69a70f01a3e55b25a
+Size (svt-av1-3.1.2.tar.bz2) = 10203273 bytes
 SHA1 (patch-CMakeLists.txt) = c9bf8c9628c51b63f9455706400e348faebd6ba0
 SHA1 (patch-Source_App_app__config.c) = e12eb168735cc99d7c72d5d9ae29650d3f9fc9e7
 SHA1 (patch-Source_App_app__config.h) = e27dcd0af9494be4a400b025780b4058c2deb9a9
-SHA1 (patch-third__party_cpuinfo_CMakeLists.txt) = 5afbc2a716568aa529e9af85fd716d405a2ad751
-SHA1 (patch-third__party_cpuinfo_src_init.c) = 26e8c0689ed9e7f7734c4cf7a3f7278fe3092fcb
