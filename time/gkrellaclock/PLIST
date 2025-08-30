@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/30 13:37:09 pho Exp $
+lib/gkrellm2/plugins/gkrellaclock.la
