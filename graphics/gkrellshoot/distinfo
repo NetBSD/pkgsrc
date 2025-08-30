@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/30 17:00:29 pho Exp $
+
+BLAKE2s (gkrellshoot-0.4.4.tar.gz) = c3e140be9a31f5e3d934f7954909c7f89392afc5478e51d1a366b64fd31e6dbe
+SHA512 (gkrellshoot-0.4.4.tar.gz) = 9363c045a99c23f8fedf95ac82c7bab4ce21acb675fdabdd831f174d9816a14a22ed6d7048d475b4c4199b9e6a88f3f663702ac2f9304f08860339beb323322a
+Size (gkrellshoot-0.4.4.tar.gz) = 16556 bytes
