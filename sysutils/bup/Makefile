@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2025/06/07 11:27:28 gdt Exp $
+# $NetBSD: Makefile,v 1.72 2025/08/30 19:41:46 gdt Exp $
 
-DISTNAME=	bup-0.33.7
+DISTNAME=	bup-0.33.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -52,6 +52,8 @@ ALL_ENV+=	BUP_PYTHON_CONFIG=${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
 
 # Note that tests 1) will fail on a fs mounted noatime and 2) need a
 # lot of space, perhaps 1 GB.
+# Tests fail on netbsd-9 because of non-portable use of script(1)
+# introduced in 0.33.9.  Reported upstream by email 20250830.
 TEST_TARGET=	test
 TEST_ENV+=	TZ=UTC
 
