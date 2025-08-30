@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5235 2025/08/30 06:34:32 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5236 2025/08/30 06:45:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7593,3 +7593,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-libixion to 0.20.0 [ryoon 2025-08-30]
 	Updated converters/orcus to 0.20.2 [ryoon 2025-08-30]
 	Updated www/php-apcu to 5.1.27 [taca 2025-08-30]
+	Updated misc/libreoffice to 25.8.1.1 [ryoon 2025-08-30]
