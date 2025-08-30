@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2004/04/20 10:31:13 lukem Exp $
+$NetBSD: patch-xbattbar.man,v 1.1 2025/08/30 02:49:34 tsutsui Exp $
 
---- xbattbar.man.orig	2001-02-02 16:25:29.000000000 +1100
+- mention about ACPI support
+- imporove misc wording
+
+--- xbattbar.man.orig	2001-02-02 05:25:29.000000000 +0000
 +++ xbattbar.man
 @@ -36,8 +36,8 @@
  .Sh DESCRIPTION
