@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5227 2025/08/29 21:51:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5228 2025/08/30 00:36:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7585,3 +7585,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/arti to 1.5.0 [wiz 2025-08-29]
 	Updated devel/wayland to 1.23.0nb7 [wiz 2025-08-29]
 	Updated x11/gtkmm3 to 3.24.9nb10 [wiz 2025-08-29]
+	Updated graphics/inkscape to 1.4.2nb3 [ryoon 2025-08-30]
