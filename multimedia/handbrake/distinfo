@@ -1,12 +1,16 @@
-$NetBSD: distinfo,v 1.22 2025/08/21 18:41:57 wiz Exp $
+$NetBSD: distinfo,v 1.23 2025/08/30 04:45:32 ryoon Exp $
 
-BLAKE2s (handbrake/HandBrake-1.6.1-source.tar.bz2) = c6e252157756026b1f46e399805b5568c77261046737d4041f3876763900e8dd
-SHA512 (handbrake/HandBrake-1.6.1-source.tar.bz2) = e5cc0fee5bf063c4cdb8f64a772dac6800a7214bfdc65042c121e0e81878599fe615b499ebf6466bb78740314374ad8b8fa364fb24ff86852183e7dbbf565617
-Size (handbrake/HandBrake-1.6.1-source.tar.bz2) = 15934833 bytes
-BLAKE2s (handbrake/libjpeg-turbo-2.1.4.tar.gz) = 496a0492afa7a589fcc570ab4b171392729ca8128e795338d4d8f4739fd4a034
-SHA512 (handbrake/libjpeg-turbo-2.1.4.tar.gz) = d3e92d614168355827e0ed884ff847cc7df8f6f1fb7b673c6c99afdf61fdfc0372afe5d30fdbf5e743335e2a7a27ca9f510c67d213e5cb2315a8d946e9414575
-Size (handbrake/libjpeg-turbo-2.1.4.tar.gz) = 2261822 bytes
+BLAKE2s (handbrake/HandBrake-1.10.0-source.tar.bz2) = b4e7e0d95fa2eacc6874d93b7ca844b0daa23dede0f1d6244bd3c1a6522d654f
+SHA512 (handbrake/HandBrake-1.10.0-source.tar.bz2) = d03f6c60bde5d968c92044fee68afe533ce394eb9952ec330b06f6250197c99bbef46265393aa346816f3b8e816e453472a8ebd116b7c388a12e8b9142029cfc
+Size (handbrake/HandBrake-1.10.0-source.tar.bz2) = 9452293 bytes
+BLAKE2s (handbrake/ffmpeg-7.1.1.tar.bz2) = 95f62af1eb95f5c8bded7d0876e01a2b34c28879b1532654fa43d0d125e0292a
+SHA512 (handbrake/ffmpeg-7.1.1.tar.bz2) = db2682bd3f7dbfe4a33a5a7f0803010258d14f92e98ff2a5fdd17197422bc5cbfd992a63b93c9c5fb2b2420371a82e34a16e155f135a2aaf03764ed71adbc16b
+Size (handbrake/ffmpeg-7.1.1.tar.bz2) = 13278839 bytes
+BLAKE2s (handbrake/libjpeg-turbo-3.1.1.tar.gz) = b1c21dac0e2a2231ac6e0a63eedf13b6d6ec159899e6abb1275d9d43596756f9
+SHA512 (handbrake/libjpeg-turbo-3.1.1.tar.gz) = 4937b63a27818cdb5087091b2d78837f7f385fd6b4d3e3fcaf4d9ad2944fed4a00020dcacb33e9c2fd4b0f9d9851fb4051ed3da86f606aca5167357262a73e89
+Size (handbrake/libjpeg-turbo-3.1.1.tar.gz) = 2506010 bytes
+BLAKE2s (handbrake/x265-snapshot-20250729-13276.tar.gz) = 122bcf8aa664cdf163a33549d5bc45b27249b2769f52ab3bb2c5b1c7598f68ba
+SHA512 (handbrake/x265-snapshot-20250729-13276.tar.gz) = 50648176cf1e20e384be4145a525c193f515b73d3ff96ae2042b393ebb3ee3a8cab031e1c5314bdd67f53a6a00010226a5709cdb720dec47142a93c6828469af
+Size (handbrake/x265-snapshot-20250729-13276.tar.gz) = 1738652 bytes
 SHA1 (patch-contrib_libjpeg-turbo_module.defs) = ab3829aa63f286854893d0297d0f33707b2698bd
-SHA1 (patch-libhb_encx265.c) = 58255c80bbbf48459afd3fef25ec6a5713fc6553
-SHA1 (patch-make-include-main.defs) = 76fd8cd19059d77d93c4fafc50bc7b501e120283
-SHA1 (patch-test_module.defs) = 2fe9c787e849b5e0be6c1ebf469904a21f648e16
+SHA1 (patch-make-include-main.defs) = 9c0553a25cc8c376287e7272422dcea245b89aef
