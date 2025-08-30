@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/08/30 17:37:41 pho Exp $
+
+BLAKE2s (gkrellm-reminder-2.1.0.tar.gz) = 680f2fc8b6e452da43f58e47a361aa417fc57dccb98ee2110c3041401ea4b52c
+SHA512 (gkrellm-reminder-2.1.0.tar.gz) = 9678b115b46bb99653c45aa11f9f662f3e677b1fd0021ad6bc8e4f70235dc5b82584761dab1f92173534fcab11869a15f29f8fc3d5ceb0f72147298c16e23846
+Size (gkrellm-reminder-2.1.0.tar.gz) = 27270 bytes
