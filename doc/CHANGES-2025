@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5240 2025/08/30 07:36:52 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5241 2025/08/30 07:42:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7598,3 +7598,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-metrics to 0.14.0 [taca 2025-08-30]
 	Updated devel/ruby-pkg-config to 1.6.3 [taca 2025-08-30]
 	Updated devel/ruby-traces to 0.18.1 [taca 2025-08-30]
+	Updated net/ruby-net-imap to 0.5.10 [taca 2025-08-30]
