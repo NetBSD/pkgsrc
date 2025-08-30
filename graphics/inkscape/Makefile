@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.310 2025/08/22 08:15:53 adam Exp $
+# $NetBSD: Makefile,v 1.311 2025/08/30 00:36:33 ryoon Exp $
 
 DISTNAME=	inkscape-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.xz
@@ -137,6 +137,7 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../textproc/gspell/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.24
 .include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../x11/gtksourceview4/buildlink3.mk"
