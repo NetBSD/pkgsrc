@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2023/10/15 07:18:52 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2025/08/30 04:55:15 ryoon Exp $
 
 * Do not conflict with older mdds.
 
@@ -9,7 +9,7 @@ $NetBSD: patch-configure,v 1.4 2023/10/15 07:18:52 ryoon Exp $
  includedir='${prefix}/include'
  oldincludedir='/usr/include'
 -docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
-+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}-2.1'
++docdir='${datarootdir}/doc/${PACKAGE_TARNAME}-3.0'
  infodir='${datarootdir}/info'
  htmldir='${docdir}'
  dvidir='${docdir}'
