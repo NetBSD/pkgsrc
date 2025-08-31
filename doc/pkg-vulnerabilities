@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.534 2025/08/31 09:47:15 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.535 2025/08/31 09:48:07 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23059,7 +23059,7 @@ ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-34340
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-34339
 ming-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-34338
 libpano13-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-33293
-libsixel-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2020-36123
+#libsixel-[0-9]*	double-free	https://nvd.nist.gov/vuln/detail/CVE-2020-36123 # rejected
 gpac-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-26967
 gpac<2.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-24578
 gpac<2.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-24577
