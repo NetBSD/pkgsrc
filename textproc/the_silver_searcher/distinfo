@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2025/08/29 12:17:31 leot Exp $
+$NetBSD: distinfo,v 1.24 2025/08/31 12:22:34 leot Exp $
 
 BLAKE2s (the_silver_searcher-2.2.0.tar.gz) = cefd4d8ca1dd8c0223208e97c2681555586ac3c449e808a6a0fd09f9e70f9b02
 SHA512 (the_silver_searcher-2.2.0.tar.gz) = 89d4e4f7f34c0d57aa880e7c3466f0373b961744a89ad30541e89e2d614322ab46c8044ec458406a117f74b0fea14cd3063fa4e0624a96526aa23eaccd6f1141
 Size (the_silver_searcher-2.2.0.tar.gz) = 190585 bytes
-SHA1 (patch-src_ignore.c) = 4b7a3c5d8fe7846a28b181a20e2f301b0dcd4ac6
-SHA1 (patch-src_main.c) = d73e56d4bc527a7c178f30276975d1a3302c73fb
+SHA1 (patch-src_ignore.c) = 6d8a6b91d2d5bf72a3987b47b9d21c305eb80fe7
+SHA1 (patch-src_main.c) = b5fee1395ef63455176401d98bb207a7d6e1157f
 SHA1 (patch-src_scandir.c) = 41c0af602ef478db39bd48315b0fb1a644a9db91
-SHA1 (patch-src_util.c) = 223e5b1027c502b2478caf9ef6cd48f4b4ea2611
+SHA1 (patch-src_util.c) = 415d9af7deefe18568264a8cbe8fa80d946801f8

@@ -1,6 +1,7 @@
-$NetBSD: patch-src_main.c,v 1.3 2025/08/29 12:17:31 leot Exp $
+$NetBSD: patch-src_main.c,v 1.4 2025/08/31 12:22:34 leot Exp $
 
-- Fix ctype(3) abuses
+- Fix ctype(3) abuses, shared upstream via:
+  <https://github.com/ggreer/the_silver_searcher/pull/1553>
 - DragonFly also has a particular 'cpuset' type
 
 --- src/main.c.orig	2018-08-07 06:20:25.000000000 +0000

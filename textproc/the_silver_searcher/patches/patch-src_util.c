@@ -1,6 +1,8 @@
-$NetBSD: patch-src_util.c,v 1.3 2025/08/29 12:17:50 leot Exp $
+$NetBSD: patch-src_util.c,v 1.4 2025/08/31 12:22:34 leot Exp $
 
 Fix ctype(3) abuses
+
+Shared upstream via <https://github.com/ggreer/the_silver_searcher/pull/1553>
 
 --- src/util.c.orig	2025-08-29 12:08:47.866239353 +0000
 +++ src/util.c
