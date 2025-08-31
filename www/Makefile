@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1872 2025/08/31 19:20:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1873 2025/08/31 20:22:48 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -219,6 +219,7 @@ SUBDIR+=	kaput-cli
 SUBDIR+=	kf6-syndication
 SUBDIR+=	khtml
 SUBDIR+=	kimagemapeditor
+SUBDIR+=	kiwix-desktop
 SUBDIR+=	kiwix-tools
 SUBDIR+=	kjs
 SUBDIR+=	kjsembed
