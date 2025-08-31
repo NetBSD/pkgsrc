@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5294 2025/08/31 14:46:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5295 2025/08/31 14:52:02 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7654,3 +7654,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-recog to 3.1.21 [taca 2025-08-31]
 	Updated mail/ruby-mime-types-data to 3.2025.0826 [taca 2025-08-31]
 	Updated www/php-contao-manager to 1.10.5nb1 [taca 2025-08-31]
+	Updated security/clamav to 1.4.3 [bouyer 2025-08-31]
+	Updated security/clamav-doc to 1.4.3 [bouyer 2025-08-31]
