@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2025/08/30 22:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2025/08/31 06:05:22 wiz Exp $
 
 DISTNAME=	HandBrake-1.10.0-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -63,7 +63,7 @@ TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 TOOL_DEPENDS+=		meson-[0-9]*:../../devel/meson
 
-LDFLAGS+=	-ldovi -L${PREFIX}/${BUILDLINK_PREFIX.libdovi}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdovi}/lib
+#LDFLAGS+=	-ldovi -L${PREFIX}/${BUILDLINK_PREFIX.libdovi}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdovi}/lib
 
 .include "../../mk/compiler.mk"
 
@@ -95,7 +95,7 @@ post-build-gtk4:
 	done
 
 .include "../../audio/lame/buildlink3.mk"
-.include "../../audio/libdovi/buildlink3.mk"
+#.include "../../audio/libdovi/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
