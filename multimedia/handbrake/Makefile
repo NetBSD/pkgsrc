@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2025/08/31 06:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2025/08/31 12:08:21 ryoon Exp $
 
 DISTNAME=	HandBrake-1.10.0-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -95,7 +95,7 @@ post-build-gtk4:
 	done
 
 .include "../../audio/lame/buildlink3.mk"
-#.include "../../audio/libdovi/buildlink3.mk"
+.include "../../audio/libdovi/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
