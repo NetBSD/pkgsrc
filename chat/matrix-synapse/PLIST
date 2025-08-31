@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2025/08/07 18:54:39 gdt Exp $
+@comment $NetBSD: PLIST,v 1.61 2025/08/31 13:12:06 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -75,6 +75,9 @@ ${PYSITELIB}/synapse/api/auth/base.pyo
 ${PYSITELIB}/synapse/api/auth/internal.py
 ${PYSITELIB}/synapse/api/auth/internal.pyc
 ${PYSITELIB}/synapse/api/auth/internal.pyo
+${PYSITELIB}/synapse/api/auth/mas.py
+${PYSITELIB}/synapse/api/auth/mas.pyc
+${PYSITELIB}/synapse/api/auth/mas.pyo
 ${PYSITELIB}/synapse/api/auth/msc3861_delegated.py
 ${PYSITELIB}/synapse/api/auth/msc3861_delegated.pyc
 ${PYSITELIB}/synapse/api/auth/msc3861_delegated.pyo
@@ -229,6 +232,9 @@ ${PYSITELIB}/synapse/config/key.pyo
 ${PYSITELIB}/synapse/config/logger.py
 ${PYSITELIB}/synapse/config/logger.pyc
 ${PYSITELIB}/synapse/config/logger.pyo
+${PYSITELIB}/synapse/config/mas.py
+${PYSITELIB}/synapse/config/mas.pyc
+${PYSITELIB}/synapse/config/mas.pyo
 ${PYSITELIB}/synapse/config/metrics.py
 ${PYSITELIB}/synapse/config/metrics.pyc
 ${PYSITELIB}/synapse/config/metrics.pyo
@@ -634,6 +640,9 @@ ${PYSITELIB}/synapse/logging/formatter.pyo
 ${PYSITELIB}/synapse/logging/handlers.py
 ${PYSITELIB}/synapse/logging/handlers.pyc
 ${PYSITELIB}/synapse/logging/handlers.pyo
+${PYSITELIB}/synapse/logging/loggers.py
+${PYSITELIB}/synapse/logging/loggers.pyc
+${PYSITELIB}/synapse/logging/loggers.pyo
 ${PYSITELIB}/synapse/logging/opentracing.py
 ${PYSITELIB}/synapse/logging/opentracing.pyc
 ${PYSITELIB}/synapse/logging/opentracing.pyo
@@ -791,9 +800,6 @@ ${PYSITELIB}/synapse/replication/http/push.pyo
 ${PYSITELIB}/synapse/replication/http/register.py
 ${PYSITELIB}/synapse/replication/http/register.pyc
 ${PYSITELIB}/synapse/replication/http/register.pyo
-${PYSITELIB}/synapse/replication/http/send_event.py
-${PYSITELIB}/synapse/replication/http/send_event.pyc
-${PYSITELIB}/synapse/replication/http/send_event.pyo
 ${PYSITELIB}/synapse/replication/http/send_events.py
 ${PYSITELIB}/synapse/replication/http/send_events.pyc
 ${PYSITELIB}/synapse/replication/http/send_events.pyo
@@ -1971,6 +1977,9 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/92/06_device_federation_inbox_ind
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/06_threads_last_sent_stream_ordering_comments.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_add_user_reports.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_event_txn_id_device_id_txn_id2.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/08_room_ban_redactions.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
