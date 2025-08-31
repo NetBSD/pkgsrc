@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5253 2025/08/31 06:56:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5254 2025/08/31 06:57:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7613,3 +7613,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/PC6001VX to 4.2.14 [tsutsui 2025-08-30]
 	Updated textproc/split-thai to 2.40 [scole 2025-08-31]
 	Updated www/p5-Net-HTTP to 6.24 [wiz 2025-08-31]
+	Updated net/p5-Net-DNS to 1.53 [wiz 2025-08-31]
