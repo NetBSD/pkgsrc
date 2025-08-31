@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2025/06/14 09:35:12 wen Exp $
+# $NetBSD: Makefile,v 1.106 2025/08/31 14:00:59 taca Exp $
 
 DISTNAME=	moodle-5.0.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.moodle.org/download.php/stable500/ \
 		https://packaging.moodle.org/stable500/ \
