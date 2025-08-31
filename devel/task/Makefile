@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/07/26 02:20:41 iquiw Exp $
+# $NetBSD: Makefile,v 1.11 2025/08/31 10:02:49 bsiegert Exp $
 
 PKGNAME=	task-3.44.1
+PKGREVISION=	1
 
 DISTNAME=	task-${GITHUB_TAG}
 CATEGORIES=	devel
