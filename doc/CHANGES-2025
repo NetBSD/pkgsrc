@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5295 2025/08/31 14:52:02 bouyer Exp $
+$NetBSD: CHANGES-2025,v 1.5296 2025/08/31 15:00:18 jym Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7656,3 +7656,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-contao-manager to 1.10.5nb1 [taca 2025-08-31]
 	Updated security/clamav to 1.4.3 [bouyer 2025-08-31]
 	Updated security/clamav-doc to 1.4.3 [bouyer 2025-08-31]
+	Updated security/stunnel to 5.75 [jym 2025-08-31]
