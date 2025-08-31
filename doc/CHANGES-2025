@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5279 2025/08/31 12:03:50 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5280 2025/08/31 12:45:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7639,3 +7639,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-go to 0.25.0 [wiz 2025-08-31]
 	Updated textproc/tabiew to 0.11.1 [wiz 2025-08-31]
 	Added audio/libdovi version 2.3.0 [ryoon 2025-08-31]
+	Updated print/p5-Net-CUPS to 0.64nb42 [wiz 2025-08-31]
