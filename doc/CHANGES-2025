@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5260 2025/08/31 09:57:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5261 2025/08/31 10:00:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7620,3 +7620,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/httpx to 1.7.1 [leot 2025-08-31]
 	Updated devel/go-staticcheck to 2025.1.1 [bsiegert 2025-08-31]
 	Updated emulators/mame to 0.280 [wiz 2025-08-31]
+	Updated security/nuclei to 3.4.10 [leot 2025-08-31]
