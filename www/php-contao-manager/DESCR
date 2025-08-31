@@ -6,3 +6,6 @@ install and mange Contao Open Source CMS with Web GUI.
 For more information, please refer Installation guide for Contao:
 
 	https://to.contao.org/quickstart
+
+This package intended to prepare runtime environment for Contao Open
+Source CMS, too.

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2025/08/23 15:55:52 taca Exp $
+# $NetBSD: Makefile,v 1.15 2025/08/31 14:46:24 taca Exp $
 #
 
 DISTNAME=	${CM_NAME}.phar
 PKGNAME=	${PHP_PKG_PREFIX}-${CM_NAME}-${CM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.contao.org/contao-manager/stable/
 DIST_SUBDIR=	${CM_NAME}/${CM_VERSION}
@@ -75,5 +76,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/contao.conf ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/README ${DESTDIR}${PREFIX}/${CT_DOCDIR}
 
+.include "options.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
