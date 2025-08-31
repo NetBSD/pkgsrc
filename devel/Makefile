@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4514 2025/08/31 19:15:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4515 2025/08/31 19:18:27 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1221,6 +1221,7 @@ SUBDIR+=	mph
 SUBDIR+=	msgpack
 SUBDIR+=	muon
 SUBDIR+=	mustach
+SUBDIR+=	mustache
 SUBDIR+=	myrepos
 SUBDIR+=	nana
 SUBDIR+=	nancy
