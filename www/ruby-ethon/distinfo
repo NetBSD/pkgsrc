@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/12/04 16:15:05 taca Exp $
+$NetBSD: distinfo,v 1.7 2025/08/31 14:21:05 taca Exp $
 
-BLAKE2s (ethon-0.16.0.gem) = c8f31414f8ebe78e33a1221d94366b9c648b0f971218292cf921dc5a7110b2bd
-SHA512 (ethon-0.16.0.gem) = 3b31affcee0d5a5be05b5497d4a8d13515f8393f54579a3a9c8de49f78d3f065bb92659434b023f0a8bf8e0cccfbc94b617695b93c4d3f744cccd1eff2e68905
-Size (ethon-0.16.0.gem) = 60416 bytes
+BLAKE2s (ethon-0.17.0.gem) = 8bd9445c755eeb92b5a4526fbd7cf375e84d6bc9b0e0bd085f5f7818766b0d5e
+SHA512 (ethon-0.17.0.gem) = 503fb6ff68913ca3965a3bad42cc211f280647b2a285f51380ec32abdb8ca1df09d7b2927d485da4a54d2b438baf3039be9dc3984688c8fcdeafe073e942b16a
+Size (ethon-0.17.0.gem) = 39936 bytes

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/12/04 16:15:05 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/08/31 14:21:05 taca Exp $
 
-DISTNAME=	ethon-0.16.0
+DISTNAME=	ethon-0.17.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
