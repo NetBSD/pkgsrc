@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5268 2025/08/31 10:09:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5269 2025/08/31 10:12:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7628,3 +7628,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jjui to 0.9.3 [wiz 2025-08-31]
 	Updated devel/lcov to 2.3.2 [wiz 2025-08-31]
 	Updated devel/libcbor to 0.13.0 [wiz 2025-08-31]
+	Updated www/py-httplib2 to 0.30.0 [wiz 2025-08-31]
