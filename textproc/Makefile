@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1536 2025/08/25 17:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.1537 2025/08/31 19:16:31 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -543,6 +543,7 @@ SUBDIR+=	libxml2
 SUBDIR+=	libxmlb
 SUBDIR+=	libxslt
 SUBDIR+=	libyaml
+SUBDIR+=	libzim
 SUBDIR+=	link-grammar
 SUBDIR+=	lit2epub
 SUBDIR+=	log4cpp
