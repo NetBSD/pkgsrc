@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5276 2025/08/31 10:34:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5277 2025/08/31 10:41:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7636,3 +7636,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-soupsieve to 2.8 [wiz 2025-08-31]
 	Updated time/py-vdirsyncer to 0.20.0 [wiz 2025-08-31]
 	Updated www/syncstorage-rs to 0.20.1 [wiz 2025-08-31]
+	Updated textproc/tree-sitter-go to 0.25.0 [wiz 2025-08-31]
