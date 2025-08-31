@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/06/06 14:01:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.49 2025/08/31 09:48:03 bsiegert Exp $
 
 DISTNAME=	gotosocial-0.19.0
 PKGREVISION=	1
@@ -10,6 +10,9 @@ MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/superseriousbusiness/gotosocial/
 COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
+
+# TODO: fix build of this package with Go 1.25 and remove this line
+GO_VERSION_DEFAULT=	124
 
 USE_TOOLS+=	pax tar
 
