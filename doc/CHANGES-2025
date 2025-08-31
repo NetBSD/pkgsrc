@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5257 2025/08/31 09:31:04 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.5258 2025/08/31 09:31:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7617,3 +7617,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/tlsx to 1.2.0 [leot 2025-08-31]
 	Updated security/subfinder to 2.8.0 [leot 2025-08-31]
 	Updated graphics/libsixel to 1.8.7 [tsutsui 2025-08-31]
+	Updated security/httpx to 1.7.1 [leot 2025-08-31]
