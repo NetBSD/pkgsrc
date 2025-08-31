@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.97 2025/08/01 18:31:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.98 2025/08/31 09:57:02 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -156,6 +156,7 @@ share/mame/hash/bbc_flop_torch.xml
 share/mame/hash/bbc_flop_z80.xml
 share/mame/hash/bbc_hdd.xml
 share/mame/hash/bbc_rom.xml
+share/mame/hash/bbc_vsm.xml
 share/mame/hash/bbcb_flop.xml
 share/mame/hash/bbcb_flop_orig.xml
 share/mame/hash/bbcb_flop_us.xml
@@ -278,6 +279,7 @@ share/mame/hash/fmtowns_flop_cracked.xml
 share/mame/hash/fmtowns_flop_misc.xml
 share/mame/hash/fmtowns_flop_orig.xml
 share/mame/hash/fp1100_cass.xml
+share/mame/hash/gaelco_ds5002fp_rom.xml
 share/mame/hash/galaxy.xml
 share/mame/hash/gamate.xml
 share/mame/hash/gameboy.xml
@@ -290,6 +292,7 @@ share/mame/hash/gba.xml
 share/mame/hash/gba_ereader.xml
 share/mame/hash/gbcolor.xml
 share/mame/hash/gcslottv.xml
+share/mame/hash/generic_flop_525.xml
 share/mame/hash/ggm.xml
 share/mame/hash/gimix.xml
 share/mame/hash/gj4000.xml
@@ -701,6 +704,7 @@ share/mame/hash/tc4.xml
 share/mame/hash/tdv2324.xml
 share/mame/hash/tek4052_cart.xml
 share/mame/hash/telestory_cart.xml
+share/mame/hash/teradrive_flop.xml
 share/mame/hash/tg16.xml
 share/mame/hash/thinkpad8xx.xml
 share/mame/hash/ti74_cart.xml
