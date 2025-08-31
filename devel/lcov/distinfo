@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/08/14 14:36:31 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/08/31 10:08:08 wiz Exp $
 
-BLAKE2s (lcov-2.3.1.tar.gz) = 7328ae269ded035b7df9c2e949024d8c84b5ddc4bc8eb8eeaf16354d2d3636f6
-SHA512 (lcov-2.3.1.tar.gz) = 42a6a09a6cacb6dd840bf6343a86dbeb5c655c724b64b699213d58ac7b4a8768d046e6e086f11ee35a36ad15610a8bb6b2b8451b456fffd858805a12d68efb63
-Size (lcov-2.3.1.tar.gz) = 611162 bytes
-SHA1 (patch-man_lcov.1) = 175aae88e033edfbcff2f73e50deddf624ec882b
+BLAKE2s (lcov-2.3.2.tar.gz) = 06e68b59e0fb6a395cd30b30a25779360bd8d60a24bc3ec00b016bd921404643
+SHA512 (lcov-2.3.2.tar.gz) = b1f441a29e50109ab1983ebd9b0bef993e069da17a560d157456087637fb21d011874ea75a02fb6ec68aca905ebd418b265b568ce2391960df8cc6292dbbcf87
+Size (lcov-2.3.2.tar.gz) = 620787 bytes
