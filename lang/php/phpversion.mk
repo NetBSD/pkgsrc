@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.474 2025/08/29 14:21:53 taca Exp $
+# $NetBSD: phpversion.mk,v 1.475 2025/08/31 13:59:02 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -11,7 +11,7 @@
 #	the package.
 #
 #	Possible: 56 74 81 82 83 84
-#	Default: 82
+#	Default: 83
 #
 # === Infrastructure variables ===
 #
@@ -28,7 +28,7 @@
 #	The PHP versions that are accepted by the package.
 #
 #	Possible: 56 74 81 82 83 84
-#	Default: 82 81 83 84 74 56
+#	Default: 83 82 84 81 74 56
 #
 # PHP_VERSIONS_INCOMPATIBLE
 #	The PHP versions that are not supported by the package.
@@ -67,7 +67,7 @@
 #	The directory of the PHP implementation, relative to the
 #	package directory.
 #
-#	Example: ../../lang/php82
+#	Example: ../../lang/php83
 #
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
@@ -77,22 +77,22 @@
 # PHP_INCDIR
 #	PHP include directory path relative to ${PREFIX}.
 #
-#	Example: include/php/8.2
+#	Example: include/php/8.3
 #
 # PHP_LIBDIR
 #	PHP library directory path relative to ${PREFIX}.
 #
-#	Example: lib/php/8.2
+#	Example: lib/php/8.3
 #
 # PHP_EGDIR
 #	PHP example directory path relative to ${PREFIX}.
 #
-#	Example: share/example/php/8.2
+#	Example: share/example/php/8.3
 #
 # PHP_SHAREDIR
 #	PHP share directory path relative to ${PREFIX}.
 #
-#	Example: share/share/php/8.2
+#	Example: share/share/php/8.3
 #
 #
 # PHP_EXTENSION_DIR
@@ -122,8 +122,8 @@ _SYS_VARS.php=	PHP_VERSION_PHP PHPPKGSRCDIR PHP_PKG_PREFIX PHP_VER PHP_MAJOR_VER
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP_VERSION_DEFAULT?=		82
-PHP_VERSIONS_ACCEPTED?=		82 81 83 84 74 56
+PHP_VERSION_DEFAULT?=		83
+PHP_VERSIONS_ACCEPTED?=		83 82 84 81 74 56
 .for pv in ${PHP_VERSIONS_ACCEPTED}
 .  if empty(PHP_VERSIONS_INCOMPATIBLE:M${pv})
 _PHP_VERSIONS_ACCEPTED+=	${pv}
