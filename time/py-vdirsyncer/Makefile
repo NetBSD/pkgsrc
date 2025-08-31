@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2025/04/13 21:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/08/31 10:31:03 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.19.3
+DISTNAME=	vdirsyncer-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
 
@@ -16,7 +15,6 @@ EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.3.0:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.8.0:../../www/py-aiohttp
@@ -40,8 +38,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 USE_TOOLS+=	gmake
 
-# test status as of 0.19.3
-# 409 passed, 160 skipped, 2 xfailed, 7 warnings
+# test status as of 0.20.0
+# 410 passed, 160 skipped, 2 xfailed
 
 post-build:
 	cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} PYTHONPATH=${WRKSRC} ${GMAKE} man SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
