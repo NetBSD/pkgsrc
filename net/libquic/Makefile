@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2025/06/06 14:01:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2025/08/31 10:02:53 bsiegert Exp $
 
 DISTNAME=	libquic-0.0.3
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=devsisters/}
 GITHUB_TAG=	v0.0.3-6e3a05d

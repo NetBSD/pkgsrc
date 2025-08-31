@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/08/22 13:18:04 ktnb Exp $
+# $NetBSD: Makefile,v 1.26 2025/08/31 10:02:50 bsiegert Exp $
 
 DISTNAME=	joker-1.5.6
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=candid82/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

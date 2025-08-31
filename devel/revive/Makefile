@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2025/06/06 14:01:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2025/08/31 10:02:49 bsiegert Exp $
 
 DISTNAME=	revive-1.2.4
 PKGNAME=	go-${DISTNAME}
-PKGREVISION=	25
+PKGREVISION=	26
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgechev/}
 CATEGORIES=	devel
 GITHUB_TAG=	v${PKGVERSION_NOREV}
