@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/08/31 19:15:04 wiz Exp $
+
+cmake 4 compatibility
+https://github.com/docopt/docopt.cpp/issues/166
+
+--- CMakeLists.txt.orig	2025-08-14 20:01:20.968561125 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.1)
++cmake_minimum_required(VERSION 3.5)
+ project(docopt.cpp VERSION 0.6.2)
+ 
+ include(GNUInstallDirs)
