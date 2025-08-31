@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/08/11 12:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/08/31 10:09:20 wiz Exp $
 
-DISTNAME=	libcbor-0.12.0
+DISTNAME=	libcbor-0.13.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PJK/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
