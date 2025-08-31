@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5281 2025/08/31 12:56:42 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5282 2025/08/31 13:12:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7641,3 +7641,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added audio/libdovi version 2.3.0 [ryoon 2025-08-31]
 	Updated print/p5-Net-CUPS to 0.64nb42 [wiz 2025-08-31]
 	Updated net/syncthing to 1.29.6 [gdt 2025-08-31]
+	Updated chat/matrix-synapse to 1.137.0 [gdt 2025-08-31]
