@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5270 2025/08/31 10:19:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5271 2025/08/31 10:20:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7630,3 +7630,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libcbor to 0.13.0 [wiz 2025-08-31]
 	Updated www/py-httplib2 to 0.30.0 [wiz 2025-08-31]
 	Updated print/py-pspdfutils to 3.3.12 [wiz 2025-08-31]
+	Updated graphics/py-matplotlib to 3.10.6 [wiz 2025-08-31]
