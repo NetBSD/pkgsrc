@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5283 2025/08/31 14:11:08 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5284 2025/08/31 14:12:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7643,3 +7643,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/syncthing to 1.29.6 [gdt 2025-08-31]
 	Updated chat/matrix-synapse to 1.137.0 [gdt 2025-08-31]
 	Updated www/ruby-aws-partitions to 1.1153.0 [taca 2025-08-31]
+	Updated www/ruby-aws-sdk-core to 3.232.0 [taca 2025-08-31]
