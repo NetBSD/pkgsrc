@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2025/08/31 10:19:45 leot Exp $
+$NetBSD: distinfo,v 1.9 2025/08/31 10:44:08 leot Exp $
 
 BLAKE2s (fzy-1.1.tar.gz) = 1db13373db47c4b120bd0b4cde0d8c1bdbae3dea0b55b7f687356b2185c2b529
 SHA512 (fzy-1.1.tar.gz) = 09a14c409f9c0000a0827c14007eeb919404e6b29b11b8d05c415575e678238a669c9fff7c8cd23ab330c9dc0341186c6c52347745813570cc4e0987e26d3781
 Size (fzy-1.1.tar.gz) = 49070 bytes
 SHA1 (patch-Makefile) = 9b3ec29304d110b4a33a550af7b17cf16f92d634
-SHA1 (patch-src_match.c) = c78567d02e1479ae09a50b58b7e366a5ecf77786
-SHA1 (patch-src_tty__interface.c) = 485286ddaa67174fbe66e031d1af2d6f99615ae2
+SHA1 (patch-src_match.c) = 5e9f429b15a0ad37f262a83d858b112f689d1b32
+SHA1 (patch-src_tty__interface.c) = f2242d17bafe2da7765118798fbb5605148a8e74

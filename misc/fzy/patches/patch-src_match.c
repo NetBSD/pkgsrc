@@ -1,6 +1,8 @@
-$NetBSD: patch-src_match.c,v 1.1 2025/08/31 10:19:45 leot Exp $
+$NetBSD: patch-src_match.c,v 1.2 2025/08/31 10:44:08 leot Exp $
 
 Fix ctype(3) abuse
+
+Shared upstream via <https://github.com/jhawthorn/fzy/pull/197>.
 
 --- src/match.c.orig	2025-08-31 10:15:49.302462188 +0000
 +++ src/match.c
