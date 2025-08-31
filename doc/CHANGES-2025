@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5282 2025/08/31 13:12:12 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5283 2025/08/31 14:11:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7642,3 +7642,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/p5-Net-CUPS to 0.64nb42 [wiz 2025-08-31]
 	Updated net/syncthing to 1.29.6 [gdt 2025-08-31]
 	Updated chat/matrix-synapse to 1.137.0 [gdt 2025-08-31]
+	Updated www/ruby-aws-partitions to 1.1153.0 [taca 2025-08-31]
