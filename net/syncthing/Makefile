@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.195 2025/08/31 10:02:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.196 2025/08/31 12:56:31 gdt Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
-DISTNAME=	syncthing-source-v1.26.1
+# Update to 2.0.0 is very much on hold until 1) upstream withdraws the
+# rough edges warning and 2) it is known to be safe on NetBSD.
+# Update to 1.30.0 is on hold until after 2025Q3, just because it's recent.
+DISTNAME=	syncthing-source-v1.29.6
 PKGNAME=	${DISTNAME:S,source-v,,}
-PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -36,18 +38,6 @@ SUBST_FILES.version=	build.go
 SUBST_SED.version=	-e 's|runError("git", "describe", "--always", "--dirty")|runError("echo","v${PKGVERSION_NOREV}")|'
 SUBST_SED.version+=	-e 's|runError("git", "show", "-s", "--format=%ct")|runError("false")|'
 SUBST_SED.version+=	-e 's|"go"|"${GO}"|'
-
-SUBST_CLASSES+=		go
-SUBST_STAGE.go=		pre-build
-SUBST_MESSAGE.go=	Fixing go executable reference
-SUBST_FILES.go=		lib/api/auto/doc.go cmd/strelaypoolsrv/auto/doc.go
-SUBST_SED.go+=		-e 's|go run|"${GO}" run|'
-
-SUBST_CLASSES+=		bin
-SUBST_STAGE.bin=	pre-install
-SUBST_MESSAGE.bin=	Fixing location of installed binaries
-SUBST_FILES.bin=	etc/linux-desktop/*.desktop
-SUBST_SED.bin+=		-e 's,/usr/bin/syncthing,${PREFIX}/bin/syncthing,'
 
 .include "../../mk/bsd.prefs.mk"
 
