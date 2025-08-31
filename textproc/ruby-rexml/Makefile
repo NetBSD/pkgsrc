@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/02/23 15:01:38 taca Exp $
+# $NetBSD: Makefile,v 1.28 2025/08/31 14:24:42 taca Exp $
 
-DISTNAME=	rexml-3.4.1
+DISTNAME=	rexml-3.4.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
