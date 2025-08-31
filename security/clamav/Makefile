@@ -1,35 +1,23 @@
-# $NetBSD: Makefile,v 1.99 2025/04/19 07:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/08/31 14:49:45 bouyer Exp $
 
-PKGREVISION= 5
+#PKGREVISION= 5
+.include "cargo-depends.mk"
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gsed
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		gsed pkg-config gmake
 SET_LIBDIR=		yes
-FAKE_NCURSES=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
-CONFIGURE_ARGS+=	--with-group=${CLAMAV_GROUP}
-CONFIGURE_ARGS+=	--with-user=${CLAMAV_USER}
-CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
-CONFIGURE_ARGS+=	--with-libjson=${BUILDLINK_PREFIX.json-c}
-CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
-CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre2}
-CONFIGURE_ARGS+=	--with-system-libmspack=${BUILDLINK_PREFIX.libmspack}
-CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-# Linux only:
-CONFIGURE_ARGS+=	--disable-clamonacc
-# Work around build failure PR pkg/54420
-CONFIGURE_ARGS+=	--disable-unrar
-
-CONFIGURE_ENV.SunOS+=	ac_cv_ld_version_script=no
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DAPP_CONFIG_DIRECTORY=${PKG_SYSCONFDIR}
+CMAKE_CONFIGURE_ARGS+=	-DDATABASE_DIRECTORY=${CLAMAV_DBDIR}
+CMAKE_CONFIGURE_ARGS+=	-DCLAMAV_USER=${CLAMAV_USER}
+CMAKE_CONFIGURE_ARGS+=	-DCLAMAV_GROUP=${CLAMAV_GROUP}
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_EXTERNAL_MSPACK=on
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=off
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_MILTER=off
 
 CHECK_PORTABILITY_SKIP=	contrib/* unit_tests/* win32/*
 
@@ -80,21 +68,26 @@ CONF_FILES+=		${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 
 INSTALLATION_DIRS+=	${EGDIR}
 
+pre-configure:
+	#prevent docs install
+	${RM} -r ${WRKSRC}/docs/html
+
 post-install:
 .for i in ${CONF_SAMPLES}
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/${i}.sample ${DESTDIR}${EGDIR}/${i}
 .endfor
 
+.include "../../devel/cmake/build.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/libmspack/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
