@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5300 2025/08/31 19:20:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5301 2025/08/31 19:20:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7661,3 +7661,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/docopt.cpp version 0.6.3 [wiz 2025-08-31]
 	Added devel/mustache version 4.1 [wiz 2025-08-31]
 	Added www/libkiwix version 14.0.0 [wiz 2025-08-31]
+	Added www/kiwix-tools version 3.7.0.20250613 [wiz 2025-08-31]
