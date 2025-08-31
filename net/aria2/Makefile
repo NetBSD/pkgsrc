@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2025/04/17 21:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2025/08/31 19:55:33 wiz Exp $
 
 DISTNAME=	aria2-1.36.0
 PKGREVISION=	13
@@ -33,7 +33,7 @@ USE_FEATURES=		getopt_long snprintf
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+.if ${PKGSRC_RUN_TEST:U:tl} == yes
 BUILDLINK_DEPMETHOD.cppunit=	build
 BUILDLINK_API_DEPENDS.cppunit+=	cppunit>=1.10.2
 .  include "../../devel/cppunit/buildlink3.mk"
