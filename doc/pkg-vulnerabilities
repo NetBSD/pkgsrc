@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.531 2025/08/30 17:55:40 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.532 2025/08/31 09:44:21 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19181,7 +19181,7 @@ wireshark<2.6.16	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-11
 wireshark>=3.0.0<3.0.10	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-11647
 wireshark>=3.2.0<3.2.3	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-11647
 wolfssl<4.4.0		side-channel			https://nvd.nist.gov/vuln/detail/CVE-2020-11713
-libsixel-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-11721
+libsixel<1.8.7		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-11721
 git-base<2.25.3 	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-5260
 git-base>=2.26<2.26.1 	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-5260
 xenkernel411<4.11.3nb2	multiple-vulnerabilities	https://xenbits.xen.org/xsa/advisory-313.html
@@ -20201,7 +20201,7 @@ moodle>=3.7<3.7.9	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-20
 moodle>=3.8<3.8.6	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-25703
 moodle>=3.9<3.9.3	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-25703
 moodle>=3.9<3.9.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2020-25702
-libsixel-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-19668
+libsixel<1.8.7	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-19668
 ImageMagick6<6.9.11.7	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-19667
 ImageMagick<7.0.10.7	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-19667
 php{56,70,71,72,73,74}-drupal>=7<7.74	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-13671
@@ -22713,7 +22713,7 @@ ldns<1.8.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-1986
 librecad-[0-9]*	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-45341
 librecad-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-45342
 librecad-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45343
-libsixel-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45340
+libsixel<1.8.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45340
 libspf2<1.2.11	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-33912
 mariadb-server>=10.4<10.4.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
 mariadb-server>=10.5<10.5.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46657
@@ -23109,11 +23109,11 @@ radare2<5.6.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1284
 radare2<5.6.8	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-1283
 radare2<5.6.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-1296
 radare2<5.6.8	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-1297
-libsixel-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27938
-libsixel-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-27046
-libsixel-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-27044
-libsixel-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-41715
-libsixel-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-40656
+libsixel<1.8.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-27938
+libsixel<1.8.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-27046
+libsixel<1.8.7	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-27044
+libsixel<1.8.7	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-41715
+libsixel<1.8.7	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-40656
 gpac-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1035
 gpac-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2022-1222
 gpac-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-27148
@@ -23397,7 +23397,7 @@ prosody<0.11.12		denial-of-service	https://prosody.im/security/advisory_20220113
 radare2-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-1649
 vim<8.2.4925	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1629
 vim<8.2.4919	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-1621
-libsixel-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29977
+libsixel<1.8.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-29977
 tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1623
 tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1622
 qemu<7.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3611
@@ -27358,7 +27358,7 @@ intellij-ce-bin<2025.2	improper-access-control			https://nvd.nist.gov/vuln/detai
 intellij-ce-bin<2025.2	unspecified				https://nvd.nist.gov/vuln/detail/CVE-2025-57729
 intellij-ce-bin<2025.2	cross-site-scripting			https://nvd.nist.gov/vuln/detail/CVE-2025-57730
 jetty<9.4.58		denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-5115
-libsixel-[0-9]*		stack-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-9300
+libsixel<1.8.7		stack-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-9300
 libsndfile-[0-9]*	buffer-overflow				https://nvd.nist.gov/vuln/detail/CVE-2025-52194
 libssh<0.11.2		integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-4877
 postgresql-server>=13<13.22	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-8713
