@@ -1,9 +1,9 @@
-$NetBSD: patch-etc_clamd.conf.sample,v 1.3 2020/09/19 13:41:42 taca Exp $
+$NetBSD: patch-etc_clamd.conf.sample,v 1.4 2025/08/31 14:49:46 bouyer Exp $
 
 Make this useable out of the box.
 
---- etc/clamd.conf.sample.orig	2020-09-13 00:27:09.000000000 +0000
-+++ etc/clamd.conf.sample
+--- etc/clamd.conf.sample.orig	2025-06-17 03:41:15.000000000 +0200
++++ etc/clamd.conf.sample	2025-08-23 16:34:54.711397995 +0200
 @@ -5,7 +5,7 @@
  
  
@@ -13,20 +13,20 @@ Make this useable out of the box.
  
  # Uncomment this option to enable logging.
  # LogFile must be writable for the user running daemon.
-@@ -74,7 +74,7 @@ Example
+@@ -74,7 +74,7 @@
  # It is recommended that the directory where this file is stored is
  # also owned by root to keep other users from tampering with it.
  # Default: disabled
--#PidFile /var/run/clamd.pid
+-#PidFile /run/clamav/clamd.pid
 +PidFile @CLAMAV_DBDIR@/clamd.pid
  
  # Optional path to the global temporary directory.
  # Default: system specific (usually /tmp or /var/tmp).
-@@ -93,7 +93,7 @@ Example
- 
+@@ -99,7 +99,7 @@
  # Path to a local socket file the daemon will listen on.
  # Default: disabled (must be specified by a user)
--#LocalSocket /tmp/clamd.socket
+ #LocalSocket /run/clamav/clamd.sock
+-#LocalSocket /tmp/clamd.sock
 +LocalSocket @CLAMAV_DBDIR@/clamd.sock
  
  # Sets the group ownership on the unix socket.
