@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.711 2025/08/10 13:44:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.712 2025/08/31 12:04:36 ryoon Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -224,6 +224,7 @@ SUBDIR+=	libcddb
 SUBDIR+=	libcuefile
 SUBDIR+=	libdca
 SUBDIR+=	libdiscid
+SUBDIR+=	libdovi
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libebur128
 SUBDIR+=	libfishsound
