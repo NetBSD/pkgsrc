@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2025/08/09 20:10:23 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/08/31 15:19:17 jym Exp $
 
-BLAKE2s (getmail6-6.19.08.tar.gz) = 9e6f20ddecdc6f43e5439d658747835c16d05435f82fad93240ec157942c9826
-SHA512 (getmail6-6.19.08.tar.gz) = 23a9770bdc4ed6425c94df11d6ba62dc678105e4430b024c0f696d44c35893427b13c1b26b25629ad3157fcde32a41d11482a1dfc7ba4f4940e21de2c5022ea4
-Size (getmail6-6.19.08.tar.gz) = 220470 bytes
-SHA1 (patch-getmailcore_baseclasses.py) = 947ffd338dff60c34d488acff40ed61d59282898
+BLAKE2s (getmail6-6.19.10.tar.gz) = 64ba85c727338f6daa1d8f8c7a0767fa4e7607a13787cc3ff1a81d750dd217b1
+SHA512 (getmail6-6.19.10.tar.gz) = af584b28733bc28e6348ca324e69902dcf3058d1afb00ac54735d00c87995e399987a11afa6b112c87667bd6e69b79f252ba9baed57f8b14a4564cd9683710f7
+Size (getmail6-6.19.10.tar.gz) = 220437 bytes
 SHA1 (patch-setup.py) = 33aea8c9c46a371f249182bc85d0674cc147702a
