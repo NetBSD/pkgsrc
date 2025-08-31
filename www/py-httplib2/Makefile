@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2025/04/22 21:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/08/31 10:12:27 wiz Exp $
 
-DISTNAME=	httplib2-0.22.0
+DISTNAME=	httplib2-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
 
@@ -26,8 +25,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-# as of 0.22.0
-# 3 failed, 483 passed, 6 skipped, 1 xfailed, 1 xpassed, 31 warnings
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
+# as of 0.30.0
+# 6 failed, 480 passed, 6 skipped, 1 xfailed, 1 xpassed, 16 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

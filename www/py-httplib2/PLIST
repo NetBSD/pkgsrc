@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/22 21:21:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/08/31 10:12:27 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -20,6 +20,3 @@ ${PYSITELIB}/httplib2/error.pyo
 ${PYSITELIB}/httplib2/iri2uri.py
 ${PYSITELIB}/httplib2/iri2uri.pyc
 ${PYSITELIB}/httplib2/iri2uri.pyo
-${PYSITELIB}/httplib2/socks.py
-${PYSITELIB}/httplib2/socks.pyc
-${PYSITELIB}/httplib2/socks.pyo
