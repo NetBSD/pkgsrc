@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5255 2025/08/31 09:13:46 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5256 2025/08/31 09:18:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7615,3 +7615,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Net-HTTP to 6.24 [wiz 2025-08-31]
 	Updated net/p5-Net-DNS to 1.53 [wiz 2025-08-31]
 	Updated security/tlsx to 1.2.0 [leot 2025-08-31]
+	Updated security/subfinder to 2.8.0 [leot 2025-08-31]
