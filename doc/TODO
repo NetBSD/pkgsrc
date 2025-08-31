@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26173 2025/08/30 08:26:52 pho Exp $
+$NetBSD: TODO,v 1.26174 2025/08/31 09:57:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -517,6 +517,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cheese-44.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
+	o chromaprint-1.6.0
 	o chrpath-0.16
 	o cim-5.1
 	o cjk-lyx-1.4.4
@@ -607,6 +608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
+	o exiv2-0.28.6
 	o exult-1.10.1
 	o faces-1.7.7
 	o facter-2.4.5
@@ -717,6 +719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gromacs-2021.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gtk4-4.20
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -733,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-11.4.5
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -789,6 +793,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.9.3
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -820,6 +825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o latexmk-486
 	o lbdb-49
 	o lcc-4.2
+	o lcov-2.3.2
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
 	o libatomic-15.1.0
@@ -828,6 +834,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcbor-0.13.0
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
@@ -923,6 +930,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
 	o moodle-4.5.2 (LTS)
+	o moor-2.1.0
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -955,7 +963,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-31.1.2
 	o ocaml-5.3.0 [wip]
 	o ocaml-cppo-1.6.9
-	o ocaml-dune-3.20.0
+	o ocaml-dune-3.20.1
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -990,6 +998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ordCalc-0.3.2
 	o oroborus-2.0.18
 	o ortp-0.27.0
+	o ov-0.43.0
 	o p0f-3.09b
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
@@ -1104,18 +1113,25 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-hgview-1.9.0
+	o py-httplib2-0.30.0
 	o py-input-pad-1.4.2
+	o py-matplotlib-3.10.6
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-pspdfutils-3.3.12
+	o py-ruff-0.12.11
 	o py-sbws-1.1.0
+	o py-setuptools-rust-1.12.0
 	o py-simpletal-5.1
+	o py-soupsieve-2.8
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
 	o py-torch-2.8
 	o py-trezor-0.13.10
 	o py-uliweb-0.6
+	o py-vdirsyncer-0.20.0
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1220,11 +1236,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
 	o sympa-6.2.72
-	o syncstorage-0.18.3
+	o syncstorage-rs-0.20.1
 	o syncthing-2.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
+	o tabiew-0.11.1
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-4.0.4.29a
 	o tads-3.0.16
@@ -1270,6 +1287,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-go-0.25.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
