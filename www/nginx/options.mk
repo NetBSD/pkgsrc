@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.119 2025/07/10 20:54:15 osa Exp $
+# $NetBSD: options.mk,v 1.120 2025/08/31 11:15:46 wiz Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -194,7 +194,6 @@ LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
 DISTFILES+=		${LUA_DISTFILE}
-.include "../../devel/pcre2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.LuaJIT2+=	LuaJIT2>=2.1
 .include "../../lang/LuaJIT2/buildlink3.mk"
 DEPENDS+=		lua-resty-core>=0.1.27nb1:../../www/lua-resty-core
