@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5296 2025/08/31 15:00:18 jym Exp $
+$NetBSD: CHANGES-2025,v 1.5297 2025/08/31 15:20:57 jym Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7657,3 +7657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/clamav to 1.4.3 [bouyer 2025-08-31]
 	Updated security/clamav-doc to 1.4.3 [bouyer 2025-08-31]
 	Updated security/stunnel to 5.75 [jym 2025-08-31]
+	Updated mail/getmail6 to 6.19.10 [jym 2025-08-31]
