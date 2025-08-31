@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5262 2025/08/31 10:01:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5263 2025/08/31 10:03:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7622,3 +7622,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/mame to 0.280 [wiz 2025-08-31]
 	Updated security/nuclei to 3.4.10 [leot 2025-08-31]
 	Updated audio/chromaprint to 1.6.0 [wiz 2025-08-31]
+	Updated graphics/exiv2 to 0.28.6 [wiz 2025-08-31]
