@@ -1,2 +1,3 @@
-Getmail 6 is a fork of getmail v5.14 by Charles Cazabon with adaptations to
-work with Python 3 and newer.
+Getmail 6 is a fork of the original getmail (v5.14 made by Charles Cazabon)
+with adaptations to work with Python 3 and newer. Please note that this
+project is neither supported nor sanctioned by getmail's original author.
