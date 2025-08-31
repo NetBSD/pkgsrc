@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2025/08/02 09:38:20 adam Exp $
+# $NetBSD: Makefile,v 1.109 2025/08/31 10:19:58 wiz Exp $
 
-DISTNAME=	matplotlib-3.10.5
+DISTNAME=	matplotlib-3.10.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -42,8 +42,8 @@ PYTHON_FOR_BUILD_ONLY=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
-# as of 3.10.3
-# 906 failed, 7073 passed, 1599 skipped, 32 xfailed
+# as of 3.10.6
+# 906 failed, 7091 passed, 1603 skipped, 32 xfailed
 # possible additional test dependencies to pass more tests include
 # pandas, py-qt*, pikepdf, tex, qt, ghostscript, ...
 # py-test command line comes from https://github.com/matplotlib/matplotlib/issues/28260
