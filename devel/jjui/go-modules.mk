@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2025/07/27 08:53:46 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.3 2025/08/31 10:06:56 wiz Exp $
 
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/!burnt!sushi/toml/@v/v1.5.0.zip
@@ -12,12 +12,12 @@ GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.6.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.6.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.2.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.1.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.9.3.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.9.3.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.10.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.10.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.13.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/cellbuf/@v/v0.0.13.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/exp/golden/@v/v0.0.0-20241011142426-46044092ad91.mod
@@ -51,18 +51,18 @@ GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.zip
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.11.1.zip
 GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v0.0.0-20220910002029-abceb7e1c41e.mod
 GO_MODULE_FILES+=	github.com/xo/terminfo/@v/v0.0.0-20220910002029-abceb7e1c41e.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.16.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.16.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.34.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.35.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.35.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.27.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.27.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.28.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.28.0.zip
 GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
 GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.zip
