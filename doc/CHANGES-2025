@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5274 2025/08/31 10:26:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5275 2025/08/31 10:31:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7634,3 +7634,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.12.11 [wiz 2025-08-31]
 	Updated devel/py-setuptools-rust to 1.12.0 [wiz 2025-08-31]
 	Updated www/py-soupsieve to 2.8 [wiz 2025-08-31]
+	Updated time/py-vdirsyncer to 0.20.0 [wiz 2025-08-31]
