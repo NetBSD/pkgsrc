@@ -3,3 +3,6 @@ from one or more mail accounts on various mail servers to your
 local machine for reading with a minimum of fuss. getmail is designed
 to be secure, flexible, reliable, and easy-to-use. getmail is
 designed to replace other mail retrievers such as fetchmail.
+
+getmail only supports Python 2 and is considered unmaintained. Consider
+using mail/getmail6 package if you require Python 3 support.
