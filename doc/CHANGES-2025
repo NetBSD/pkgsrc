@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5302 2025/08/31 19:40:24 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5303 2025/08/31 20:23:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7663,3 +7663,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/libkiwix version 14.0.0 [wiz 2025-08-31]
 	Added www/kiwix-tools version 3.7.0.20250613 [wiz 2025-08-31]
 	Updated security/trufflehog to 3.90.5 [leot 2025-08-31]
+	Added www/kiwix-desktop version 2.4.1 [wiz 2025-08-31]
