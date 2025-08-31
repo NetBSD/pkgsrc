@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/12/06 21:24:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2025/08/31 10:41:22 wiz Exp $
 
-BLAKE2s (tree-sitter-go-0.23.4.tar.gz) = d8e43a586630c6f7e71f3e7aa61159d32832847c655d2002f03039c194875cf5
-SHA512 (tree-sitter-go-0.23.4.tar.gz) = 94a930b848003604dfb0e947f37b622fea31dc14bc72bc87948c67adfb7857261d0c7701592d59a5d2475e2c8bed6c7ed363981f9f45f6868b7c20ae10368485
-Size (tree-sitter-go-0.23.4.tar.gz) = 205831 bytes
+BLAKE2s (tree-sitter-go-0.25.0.tar.gz) = b724441c8e90306eab35cdb8044302f8b4df0529ad649f3e40c861cd39c39cc9
+SHA512 (tree-sitter-go-0.25.0.tar.gz) = 27690315ffa8a5834a96bb0f8654afe148eb495c20fb1ff8db790422203a0573f866254b38793588cbcc570c9c2fb7d628396ffed88529c7f70fd45f159e6b48
+Size (tree-sitter-go-0.25.0.tar.gz) = 211242 bytes
