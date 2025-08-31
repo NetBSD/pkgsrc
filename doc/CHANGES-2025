@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5261 2025/08/31 10:00:47 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5262 2025/08/31 10:01:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7621,3 +7621,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/go-staticcheck to 2025.1.1 [bsiegert 2025-08-31]
 	Updated emulators/mame to 0.280 [wiz 2025-08-31]
 	Updated security/nuclei to 3.4.10 [leot 2025-08-31]
+	Updated audio/chromaprint to 1.6.0 [wiz 2025-08-31]
