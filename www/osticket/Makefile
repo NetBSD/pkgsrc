@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/07/02 06:22:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/31 14:00:59 taca Exp $
 
 DISTNAME=	osticket-v1.18.2
 PKGNAME=	${DISTNAME:S/-v/-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=osTicket/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
