@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2025/08/20 19:51:23 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/08/31 10:34:03 wiz Exp $
 
 BLAKE2s (actix-codec-0.5.2.crate) = dd059989f99593b1f5b01a1b433630ed2121ad1a30854b6de98ef0bca3e9af11
 SHA512 (actix-codec-0.5.2.crate) = 9fc455a3ae36b93b3b9358b1f0915934f7e52ea1486d4d1a943c47759ff7cb6b7733e3c423378725a3da456669dcca02150cf44033707affff756579d5adba15
@@ -903,9 +903,9 @@ Size (syn-2.0.104.crate) = 299699 bytes
 BLAKE2s (sync_wrapper-1.0.2.crate) = 547320efb0d5c3dcc6440216448eb9f0b1c3b6841baadb32cbef79eb7beaa22e
 SHA512 (sync_wrapper-1.0.2.crate) = aa314a6ab3ba028d2a169ea55a50eecf3b73b475a81c91330430ece9f1734296562627a8c32fad51b5a26796931f364e2803b3a13075ccd9a0aa614d5220903c
 Size (sync_wrapper-1.0.2.crate) = 6958 bytes
-BLAKE2s (syncstorage-rs-0.20.0.tar.gz) = e49d7edfec5988aa0c8fa88a592bb8ae4ca4952c7f265edd71f120931ed72490
-SHA512 (syncstorage-rs-0.20.0.tar.gz) = 1d912a78fbd0a91f3b9d95d9294944ce9201f25ad72600d5a40f8d73aa010775a7cfd59f463b5700d64715a415224c184f40271f89eae5090a65d62fcd6fc179
-Size (syncstorage-rs-0.20.0.tar.gz) = 583543 bytes
+BLAKE2s (syncstorage-rs-0.20.1.tar.gz) = 35b50e46e910c21818380e305f894319515de1435f12f515206a7e8b6e4aec66
+SHA512 (syncstorage-rs-0.20.1.tar.gz) = 48f31c484390d67435d5538d7a7f189f603f34275d5bf5cb38a3d4d58f1c54c76a89ab140dce21d1b8f985b0be20e5e3ca8e5f14dd7ef54c066663dc1e8bbdda
+Size (syncstorage-rs-0.20.1.tar.gz) = 583799 bytes
 BLAKE2s (synstructure-0.13.2.crate) = 674ef97e051051a22c4ec20f4b53a60e382b933bd94e75d853ebb2f98a3a797d
 SHA512 (synstructure-0.13.2.crate) = 2698f4e80b93f7cf1d8ae97c4c42a7f61e7b7081f7f1bbb94d7f48ab7ae813a666d73c49ba3812cda9155e0138b55cc246fb96e5858e411a8d32bafb3e2b2afb
 Size (synstructure-0.13.2.crate) = 18950 bytes
