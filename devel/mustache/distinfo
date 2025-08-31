@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/08/31 19:18:18 wiz Exp $
+
+BLAKE2s (Mustache-4.1.tar.gz) = ff29c053de6769e71abb093c07466509678d0fe54b944cab4866dbe570e66812
+SHA512 (Mustache-4.1.tar.gz) = 609c876fc085d1331355ec1f0396e588edf1fb3ea6765abcd06043cc5f7288f015d6bb7fdeb560df78aab54ae8d97e934375de577b944a09c9ae93f9915e7aff
+Size (Mustache-4.1.tar.gz) = 98905 bytes
+SHA1 (patch-CMakeLists.txt) = 85d1e0210803ecce140f89495a2c532059885613

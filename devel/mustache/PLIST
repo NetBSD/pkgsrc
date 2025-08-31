@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/31 19:18:18 wiz Exp $
+include/mustache.hpp
