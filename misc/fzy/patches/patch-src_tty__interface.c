@@ -1,6 +1,8 @@
-$NetBSD: patch-src_tty__interface.c,v 1.1 2025/08/31 10:19:45 leot Exp $
+$NetBSD: patch-src_tty__interface.c,v 1.2 2025/08/31 10:44:08 leot Exp $
 
 Fix ctype(3) abuse
+
+Shared upstream via <https://github.com/jhawthorn/fzy/pull/197>
 
 --- src/tty_interface.c.orig	2025-08-31 10:16:28.393716776 +0000
 +++ src/tty_interface.c
