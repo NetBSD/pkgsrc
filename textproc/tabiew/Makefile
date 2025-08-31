@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/07/27 10:14:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/08/31 10:49:09 wiz Exp $
 
-DISTNAME=	tabiew-0.11.0
+DISTNAME=	tabiew-0.11.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shshemi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,7 @@ COMMENT=	Lightweight TUI application to view and query tabular data files
 LICENSE=	mit
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	gmake perl
 
 .include "cargo-depends.mk"
 
