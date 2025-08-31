@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2025/08/31 12:08:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.125 2025/08/31 12:11:29 wiz Exp $
 
 DISTNAME=	HandBrake-1.10.0-source
 PKGNAME=	${DISTNAME:tl:S/-source//}
@@ -63,7 +63,7 @@ TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=		nasm>=2.05.01:../../devel/nasm
 TOOL_DEPENDS+=		meson-[0-9]*:../../devel/meson
 
-#LDFLAGS+=	-ldovi -L${PREFIX}/${BUILDLINK_PREFIX.libdovi}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdovi}/lib
+LDFLAGS+=	-ldovi -L${PREFIX}/${BUILDLINK_PREFIX.libdovi}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libdovi}/lib
 
 .include "../../mk/compiler.mk"
 
