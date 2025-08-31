@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/08/31 19:15:04 wiz Exp $
+
+BLAKE2s (docopt.cpp-0.6.3.tar.gz) = 6700efe4d1ed50010fc25290575ab637e4ebd11c05ee1fcfbb6eca37e803585d
+SHA512 (docopt.cpp-0.6.3.tar.gz) = 01f881684d416d25f27120e7707473ee7337c09d1d3ce73bd1efd7763955c0bfa86c6d14655d989e37659af940b12c9ac0854571a758a71bf4a7f35e70277c40
+Size (docopt.cpp-0.6.3.tar.gz) = 27598 bytes
+SHA1 (patch-CMakeLists.txt) = 065451c944a6dde5ff0a3099c668cfd72f03b576
