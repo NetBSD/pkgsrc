@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.158 2025/08/01 18:31:11 wiz Exp $
+$NetBSD: distinfo,v 1.159 2025/08/31 09:57:02 wiz Exp $
 
-BLAKE2s (mame-0.279.tar.gz) = 16796df004c5eb952a43bca45fa7771c2d90c5e8cbecaa3a5e94f8b1fd2247f5
-SHA512 (mame-0.279.tar.gz) = 8e4ae33319f9db3ae3ac29140c61f66cd544f23f183fe10921aa3f3b973ddabe63f0a63544e98eea56bbaad175d45bde38a3acd47e1af4277ee55157cb2b1412
-Size (mame-0.279.tar.gz) = 209967861 bytes
+BLAKE2s (mame-0.280.tar.gz) = 105bfaa82851d04a28f781e5ef29ec00be83861dfa9e647d4afc945c44be8c12
+SHA512 (mame-0.280.tar.gz) = 8a4508cdc40270370c5fe25e0e2143f735625d1ace98af101ed7beb1fa8ccd21557c6e30dfda91b731d314e3f3b4fcc7fede153ee45865fd9651250013fc7bbf
+Size (mame-0.280.tar.gz) = 210121031 bytes
 SHA1 (patch-3rdparty_bx_src_thread.cpp) = 03d4b6918ee91c600748fe8d518fd62c630c33a7
 SHA1 (patch-3rdparty_genie_build_gmake.darwin_genie.make) = bb2e8c06d4b5f5869fb48e06390d5ca94a190056
 SHA1 (patch-makefile) = 865b1513a86567352570aeba5f12251486c65052
 SHA1 (patch-scripts_src_3rdparty.lua) = 906d1024907ff6577bcf232bf9e384f852535781
 SHA1 (patch-scripts_toolchain.lua) = df383dab4787f58348d62e1c5f25ddaa45eb8199
-SHA1 (patch-src_devices_machine_macseconds.cpp) = 34b2e2362064861ba4d18c47f3f41f33fcb032e6
-SHA1 (patch-src_devices_video_serialvfd.cpp) = c905e498fa01fb45ed06b1689e91ada7e15d1c9b
-SHA1 (patch-src_devices_video_serialvfd.h) = 2357ed604ba5c8aa45996fd4bf846e5165f329a5
