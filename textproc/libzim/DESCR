@@ -1,0 +1,3 @@
+The Libzim is the reference implementation for the ZIM file format.
+It's a software library to read and write ZIM files on many systems
+and architectures.
