@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/08/14 11:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/08/31 10:08:08 wiz Exp $
 
-DISTNAME=	lcov-2.3.1
+DISTNAME=	lcov-2.3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linux-test-project/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
