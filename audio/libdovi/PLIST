@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/08/31 12:03:34 ryoon Exp $
+include/libdovi/rpu_parser.h
+lib/libdovi.so
+lib/libdovi.so.3
+lib/libdovi.so.3.3.2
+lib/pkgconfig/dovi.pc
