@@ -1,6 +1,8 @@
-$NetBSD: patch-src_ignore.c,v 1.1 2025/08/29 12:17:50 leot Exp $
+$NetBSD: patch-src_ignore.c,v 1.2 2025/08/31 12:22:34 leot Exp $
 
 Fix ctype(3) abuses.
+
+Shared upstream via <https://github.com/ggreer/the_silver_searcher/pull/1553>.
 
 --- src/ignore.c.orig	2025-08-29 12:08:03.916286916 +0000
 +++ src/ignore.c
