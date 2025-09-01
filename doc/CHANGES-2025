@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5314 2025/09/01 09:41:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5315 2025/09/01 10:39:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7679,3 +7679,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/simp to 3.10.1 [pin 2025-09-01]
 	Updated audio/spotify-player to 0.21.0 [pin 2025-09-01]
 	Updated textproc/xt-rs to 0.19.5 [pin 2025-09-01]
+	Updated security/tlsx to 1.2.1 [leot 2025-09-01]
