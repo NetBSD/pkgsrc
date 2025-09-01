@@ -1,0 +1,25 @@
+$NetBSD: patch-scripts_kernel-doc,v 1.1 2025/09/01 20:55:06 wiz Exp $
+
+Fix documentation creation bug.
+https://gitlab.com/qemu-project/qemu/-/commit/5ffd387e9e0f787744fadaad35e1bf92224b0642
+
+--- scripts/kernel-doc.orig	2025-08-26 18:32:38.000000000 +0000
++++ scripts/kernel-doc
+@@ -1594,13 +1594,12 @@ sub push_parameter($$$$$) {
+ 
+ 	if ($type eq "" && $param =~ /\.\.\.$/)
+ 	{
+-	    if (!$param =~ /\w\.\.\.$/) {
+-	      # handles unnamed variable parameters
+-	      $param = "...";
+-	    }
+-	    elsif ($param =~ /\w\.\.\.$/) {
++	    if ($param =~ /\w\.\.\.$/) {
+ 	      # for named variable parameters of the form `x...`, remove the dots
+ 	      $param =~ s/\.\.\.$//;
++	    } else {
++	      # handles unnamed variable parameters
++	      $param = "...";
+ 	    }
+ 	    if (!defined $parameterdescs{$param} || $parameterdescs{$param} eq "") {
+ 		$parameterdescs{$param} = "variable arguments";
