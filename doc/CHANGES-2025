@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5304 2025/09/01 06:14:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5305 2025/09/01 08:06:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7666,3 +7666,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/kiwix-desktop version 2.4.1 [wiz 2025-08-31]
 	Updated devel/rust-bindgen to 0.72.1 [adam 2025-09-01]
 	Updated audio/fluidsynth to 2.4.8 [adam 2025-09-01]
+	Updated net/ngtcp2 to 1.15.1 [adam 2025-09-01]
+	Updated lang/nodejs to 24.7.0 [adam 2025-09-01]
+	Updated lang/nodejs22 to 22.19.0 [adam 2025-09-01]
