@@ -1,7 +1,7 @@
-$NetBSD: patch-xbattbar.man,v 1.1 2025/08/30 02:49:34 tsutsui Exp $
+$NetBSD: patch-xbattbar.man,v 1.2 2025/09/01 21:46:23 gutteridge Exp $
 
-- mention about ACPI support
-- imporove misc wording
+- mention ACPI support
+- improve misc wording
 
 --- xbattbar.man.orig	2001-02-02 05:25:29.000000000 +0000
 +++ xbattbar.man
@@ -12,7 +12,7 @@ $NetBSD: patch-xbattbar.man,v 1.1 2025/08/30 02:49:34 tsutsui Exp $
 -Battery status is obtained through the APM kernel module.
 -The APM kernel module depends on your UNIX platform,
 +Battery status is obtained through the APM or ACPI kernel module.
-+The APM and ACPI kernels module depends on your UNIX platform,
++The APM and ACPI kernel modules depend on your UNIX platform,
  therefore, consult your documentation for its detail.
  .Pp
  .Nm xbattbar
@@ -59,7 +59,7 @@ $NetBSD: patch-xbattbar.man,v 1.1 2025/08/30 02:49:34 tsutsui Exp $
  .Nm xbattbar
 -trys to know its battery status in every 10 seconds in default.
 -This is achived by APM polling.
-+trys to know the battery status in every 10 seconds.
++tries to determine the battery status every 10 seconds (by default).
 +This is achieved by APM or ACPI polling.
  .Nm -p
 -option sets the polling interval in second.
