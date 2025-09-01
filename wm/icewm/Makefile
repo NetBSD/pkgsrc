@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2025/07/14 22:23:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.64 2025/09/01 15:41:27 gutteridge Exp $
 
-DISTNAME=	icewm-3.8.1
+DISTNAME=	icewm-3.9.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ice-wm/}
 
@@ -40,11 +40,11 @@ post-extract:
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
