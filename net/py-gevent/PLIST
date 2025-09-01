@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/08/20 07:49:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/09/01 13:09:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -635,6 +635,9 @@ ${PYSITELIB}/gevent/tests/test__monkey_sigchld_2.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_sigchld_3.py
 ${PYSITELIB}/gevent/tests/test__monkey_sigchld_3.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_sigchld_3.pyo
+${PYSITELIB}/gevent/tests/test__monkey_sigchld_wakeup_fd.py
+${PYSITELIB}/gevent/tests/test__monkey_sigchld_wakeup_fd.pyc
+${PYSITELIB}/gevent/tests/test__monkey_sigchld_wakeup_fd.pyo
 ${PYSITELIB}/gevent/tests/test__monkey_ssl_warning.py
 ${PYSITELIB}/gevent/tests/test__monkey_ssl_warning.pyc
 ${PYSITELIB}/gevent/tests/test__monkey_ssl_warning.pyo
