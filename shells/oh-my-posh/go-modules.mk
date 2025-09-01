@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.103 2025/08/29 12:22:26 pin Exp $
+# $NetBSD: go-modules.mk,v 1.104 2025/09/01 09:36:32 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -53,6 +53,8 @@ GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/dsnet/compress/@v/v0.0.1.zip
 GO_MODULE_FILES+=	github.com/dsnet/golib/@v/v0.0.0-20171103203638-1ea166775780.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.4.mod
+GO_MODULE_FILES+=	github.com/ebitengine/purego/@v/v0.8.4.zip
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.mod
 GO_MODULE_FILES+=	github.com/erikgeiser/coninput/@v/v0.0.0-20211004153227-1c3628e74d0f.zip
 GO_MODULE_FILES+=	github.com/esimov/stackblur-go/@v/v1.1.1.mod
@@ -70,8 +72,8 @@ GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.7.0.zip
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
-GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
-GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
+GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.0.mod
+GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.mod
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.7.1.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.24.0.mod
@@ -127,10 +129,8 @@ GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.mod
 GO_MODULE_FILES+=	github.com/sahilm/fuzzy/@v/v0.1.1.zip
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/sergi/go-diff/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.5.mod
-GO_MODULE_FILES+=	github.com/shirou/gopsutil/v3/@v/v3.24.5.zip
-GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.mod
-GO_MODULE_FILES+=	github.com/shoenig/go-m1cpu/@v/v0.1.6.zip
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.7.mod
+GO_MODULE_FILES+=	github.com/shirou/gopsutil/v4/@v/v4.25.7.zip
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/shopspring/decimal/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/shurcoo!l/gofontwoff/@v/v0.0.0-20181114050219-180f79e6909d.mod
