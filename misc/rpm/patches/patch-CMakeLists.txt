@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/09/01 11:26:29 adam Exp $
+
+-fhardened is not portable.
+
+--- CMakeLists.txt.orig	2025-09-01 10:25:27.516647611 +0000
++++ CMakeLists.txt
+@@ -415,7 +415,7 @@ if (ENABLE_ASAN OR ENABLE_UBSAN)
+ endif()
+ 
+ # try to ensure some compiler sanity and hardening options where supported
+-foreach (flag -fno-strict-overflow -fno-delete-null-pointer-checks -fhardened)
++foreach (flag -fno-strict-overflow -fno-delete-null-pointer-checks)
+ 	check_c_compiler_flag(${flag} found)
+ 	if (found)
+ 		add_compile_options(${flag})
