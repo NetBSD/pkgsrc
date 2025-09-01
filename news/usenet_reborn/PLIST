@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/01 18:42:22 vins Exp $
+bin/usenet_reborn
+share/examples/usenet_reborn/config.toml
+share/examples/usenet_reborn/subscriptions
