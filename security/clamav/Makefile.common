@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2025/08/31 14:49:46 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.29 2025/09/01 08:59:13 taca Exp $
 #
 # used by wip/clamav/Makefile
 # used by wip/clamav-doc/Makefile
@@ -11,5 +11,5 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.clamav.net/
 LICENSE=	gnu-gpl-v2
 
-DISTINFO_FILE=	${.CURDIR}/../../wip/clamav/distinfo
-PATCHDIR=	${.CURDIR}/../../wip/clamav/patches
+DISTINFO_FILE=	${.CURDIR}/../../security/clamav/distinfo
+PATCHDIR=	${.CURDIR}/../../security/clamav/patches
