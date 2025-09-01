@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/04/04 20:27:29 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/01 09:40:48 pin Exp $
 
-DISTNAME=	xt-0.19.4
-PKGNAME=	xt-rs-0.19.4
+DISTNAME=	xt-0.19.5
+PKGNAME=	xt-rs-0.19.5
 CATEGORIES=	textproc
 MASTER_SITES=	https://static.crates.io/crates/xt/
 EXTRACT_SUFX=	.crate

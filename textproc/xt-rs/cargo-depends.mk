@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2025/02/24 08:39:47 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2025/09/01 09:40:48 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
@@ -36,7 +36,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.10
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.67
 CARGO_CRATE_DEPENDS+=	lazy_static-1.4.0
-CARGO_CRATE_DEPENDS+=	lexopt-0.3.0
+CARGO_CRATE_DEPENDS+=	lexopt-0.3.1
 CARGO_CRATE_DEPENDS+=	libc-0.2.169
 CARGO_CRATE_DEPENDS+=	log-0.4.20
 CARGO_CRATE_DEPENDS+=	memchr-2.7.1
@@ -67,15 +67,16 @@ CARGO_CRATE_DEPENDS+=	semver-1.0.21
 CARGO_CRATE_DEPENDS+=	serde-1.0.196
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.196
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.138
-CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.8
+CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.9
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	similar-2.6.0
 CARGO_CRATE_DEPENDS+=	similar-asserts-1.6.1
 CARGO_CRATE_DEPENDS+=	syn-2.0.98
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
-CARGO_CRATE_DEPENDS+=	toml-0.8.20
-CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.8
-CARGO_CRATE_DEPENDS+=	toml_edit-0.22.24
+CARGO_CRATE_DEPENDS+=	toml-0.8.23
+CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.11
+CARGO_CRATE_DEPENDS+=	toml_edit-0.22.27
+CARGO_CRATE_DEPENDS+=	toml_write-0.1.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.16
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.10.1
 CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
@@ -96,4 +97,4 @@ CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.0
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.0
-CARGO_CRATE_DEPENDS+=	winnow-0.7.2
+CARGO_CRATE_DEPENDS+=	winnow-0.7.11
