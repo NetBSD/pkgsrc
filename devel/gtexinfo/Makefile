@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2025/08/31 14:34:55 taca Exp $
+# $NetBSD: Makefile,v 1.130 2025/09/01 13:10:58 taca Exp $
 
 DISTNAME=	texinfo-7.2
 PKGNAME=	g${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
 DEPENDS+=	p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
 
-FORCE_C_STD=		c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
