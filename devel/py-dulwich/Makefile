@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2025/04/19 20:10:27 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/09/01 12:56:14 adam Exp $
 
-DISTNAME=	dulwich-0.22.8
+DISTNAME=	dulwich-0.24.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
 
@@ -20,6 +19,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpcli
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 313
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
