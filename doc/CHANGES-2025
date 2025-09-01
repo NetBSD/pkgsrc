@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5310 2025/09/01 09:37:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5311 2025/09/01 09:38:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7675,3 +7675,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/librespot to 0.7.1 [pin 2025-09-01]
 	Updated shells/oh-my-posh to 26.20.1 [pin 2025-09-01]
 	Updated devel/serie to 0.5.0 [pin 2025-09-01]
+	Updated graphics/ImageMagick to 7.1.2.3 [triaxx 2025-09-01]
