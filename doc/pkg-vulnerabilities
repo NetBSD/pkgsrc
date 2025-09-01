@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.538 2025/09/01 15:03:39 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.539 2025/09/01 15:27:04 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20368,7 +20368,7 @@ ImageMagick<7.0.9.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-2
 php-7.2.[0-9]*		eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 apache-tomcat<8.5.60		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-17527
 apache-tomcat>=9.0<9.0.40	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-17527
-audacity-[0-9]*	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2020-11867
+audacity<2.4.1nb28	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2020-11867
 libvirt<6.6.0	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-14339
 libxls<1.5.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2017-2910
 poppler-utils<0.76.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-27778
