@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.59 2023/11/15 13:20:53 adam Exp $
+$NetBSD: distinfo,v 1.60 2025/09/01 14:55:27 kikadf Exp $
 
 BLAKE2s (GraphicsMagick-1.3.42.tar.xz) = 0a0fbc4559bc93c98d329819b0cf87611f8e6cc38a02865cbea454df24bb1e0a
 SHA512 (GraphicsMagick-1.3.42.tar.xz) = b512c9c4c06ec60f7d31e140da08f2bc16d492a2dab82778f1b38c074a25340159e59bfbaa30b2997a6fbd10a500ae1bda527e3c3854e4462bcae837e818428a
 Size (GraphicsMagick-1.3.42.tar.xz) = 5553692 bytes
+SHA1 (patch-coders_jxl.c) = fe72e6a52839a55f6f8c56ade0e439f4631d8ef9
 SHA1 (patch-config_delegates.mgk.in) = c52192a35bede530d310688a576ef2181a9f073c
 SHA1 (patch-configure) = 327dcb718ebaf65f2d2c97440c1cc7fdb9e03482
