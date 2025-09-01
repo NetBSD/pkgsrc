@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2025/08/30 02:49:33 tsutsui Exp $
+# $NetBSD: Makefile,v 1.40 2025/09/01 21:46:23 gutteridge Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	sysutils x11
 #MASTER_SITES=	http://iplab.aist-nara.ac.jp/member/suguru/
 MASTER_SITES=	https://www.minix3.org/distfiles-backup/
