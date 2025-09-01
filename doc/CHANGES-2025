@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5316 2025/09/01 11:29:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5317 2025/09/01 12:59:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7682,3 +7682,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/tlsx to 1.2.1 [leot 2025-09-01]
 	Updated misc/rpm to 4.20.1 [adam 2025-09-01]
 	Updated security/libjwt to 3.2.2 [adam 2025-09-01]
+	Updated devel/py-dulwich to 0.24.1 [adam 2025-09-01]
+	Updated devel/py-stevedore to 5.5.0 [adam 2025-09-01]
+	Updated textproc/py-humanize to 4.13.0 [adam 2025-09-01]
