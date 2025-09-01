@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5303 2025/08/31 20:23:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5304 2025/09/01 06:14:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7664,3 +7664,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/kiwix-tools version 3.7.0.20250613 [wiz 2025-08-31]
 	Updated security/trufflehog to 3.90.5 [leot 2025-08-31]
 	Added www/kiwix-desktop version 2.4.1 [wiz 2025-08-31]
+	Updated devel/rust-bindgen to 0.72.1 [adam 2025-09-01]
+	Updated audio/fluidsynth to 2.4.8 [adam 2025-09-01]
