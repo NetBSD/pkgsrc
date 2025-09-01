@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5305 2025/09/01 08:06:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5306 2025/09/01 08:25:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7669,3 +7669,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ngtcp2 to 1.15.1 [adam 2025-09-01]
 	Updated lang/nodejs to 24.7.0 [adam 2025-09-01]
 	Updated lang/nodejs22 to 22.19.0 [adam 2025-09-01]
+	Updated devel/cmake to 4.1.1 [adam 2025-09-01]
+	Updated devel/cmake-gui to 4.1.1 [adam 2025-09-01]
