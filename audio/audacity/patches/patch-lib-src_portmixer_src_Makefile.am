@@ -1,4 +1,4 @@
-$NetBSD: patch-lib-src_portmixer_src-extra_Makefile.am,v 1.1 2015/09/18 21:19:07 mrg Exp $
+$NetBSD: patch-lib-src_portmixer_src_Makefile.am,v 1.1 2025/09/01 15:12:19 kikadf Exp $
 
 don't build a shared library of this.
 
