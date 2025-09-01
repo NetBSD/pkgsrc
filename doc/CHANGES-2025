@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5319 2025/09/01 13:21:32 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5320 2025/09/01 13:22:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7688,3 +7688,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-gevent to 25.8.2 [adam 2025-09-01]
 	Updated devel/py-fakefs to 5.9.3 [adam 2025-09-01]
 	Updated devel/ruby-io-event to 1.13.0 [taca 2025-09-01]
+	Updated devel/ruby-async to 2.28.1 [taca 2025-09-01]
