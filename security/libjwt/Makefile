@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/04/01 08:28:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/01 11:29:06 adam Exp $
 
-DISTNAME=	libjwt-3.2.1
+DISTNAME=	libjwt-3.2.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benmcollins/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
