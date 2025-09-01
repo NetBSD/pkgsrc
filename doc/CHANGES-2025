@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5306 2025/09/01 08:25:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5307 2025/09/01 08:36:39 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7671,3 +7671,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs22 to 22.19.0 [adam 2025-09-01]
 	Updated devel/cmake to 4.1.1 [adam 2025-09-01]
 	Updated devel/cmake-gui to 4.1.1 [adam 2025-09-01]
+	Updated www/hugo to 0.149.0 [triaxx 2025-09-01]
