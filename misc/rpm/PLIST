@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/02/07 15:06:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/09/01 11:26:29 adam Exp $
 bin/gendiff
 bin/rpm
 bin/rpm2archive
@@ -10,6 +10,7 @@ bin/rpmkeys
 bin/rpmlua
 bin/rpmquery
 bin/rpmsign
+bin/rpmsort
 bin/rpmspec
 bin/rpmverify
 include/rpm/argv.h
@@ -55,16 +56,16 @@ lib/cmake/rpm/rpm-targets-noconfig.cmake
 lib/cmake/rpm/rpm-targets.cmake
 lib/librpm.so
 lib/librpm.so.10
-lib/librpm.so.10.2.0
+lib/librpm.so.10.2.1
 lib/librpmbuild.so
 lib/librpmbuild.so.10
-lib/librpmbuild.so.10.2.0
+lib/librpmbuild.so.10.2.1
 lib/librpmio.so
 lib/librpmio.so.10
-lib/librpmio.so.10.2.0
+lib/librpmio.so.10.2.1
 lib/librpmsign.so
 lib/librpmsign.so.10
-lib/librpmsign.so.10.2.0
+lib/librpmsign.so.10.2.1
 lib/pkgconfig/rpm.pc
 lib/rpm-plugins/fapolicyd.so
 lib/rpm-plugins/prioreset.so
@@ -445,10 +446,12 @@ share/doc/rpm/API/nav_fd.png
 share/doc/rpm/API/nav_g.png
 share/doc/rpm/API/nav_h.png
 share/doc/rpm/API/nav_hd.png
+share/doc/rpm/API/navtree.css
 share/doc/rpm/API/open.png
 share/doc/rpm/API/pages.html
 share/doc/rpm/API/plus.svg
 share/doc/rpm/API/plusd.svg
+share/doc/rpm/API/resize.js
 share/doc/rpm/API/rpmarchive_8h.html
 share/doc/rpm/API/rpmarchive_8h__dep__incl.map
 share/doc/rpm/API/rpmarchive_8h__dep__incl.md5
@@ -822,6 +825,7 @@ share/doc/rpm/COPYING
 share/doc/rpm/CREDITS
 share/doc/rpm/INSTALL
 share/doc/rpm/README
+share/doc/rpm/about.md
 share/doc/rpm/arch_dependencies.md
 share/doc/rpm/autosetup.md
 share/doc/rpm/boolean_dependencies.md
@@ -839,6 +843,7 @@ share/doc/rpm/large_files.md
 share/doc/rpm/lua.md
 share/doc/rpm/macros.md
 share/doc/rpm/more_dependencies.md
+share/doc/rpm/philosophy.md
 share/doc/rpm/plugins.md
 share/doc/rpm/queryformat.md
 share/doc/rpm/relocatable.md

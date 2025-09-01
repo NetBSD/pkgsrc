@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.21 2025/02/07 15:06:18 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/09/01 11:26:29 adam Exp $
 
-BLAKE2s (rpm-4.20.0.tar.bz2) = 398a8ac763c7437842a6ff9fcfcd35d5b056ae510fbbf2db4b3833130c4a3211
-SHA512 (rpm-4.20.0.tar.bz2) = b340c66cfda3abed38e81f91c4a789f2c6c0d3ce408de71d861fef27e180b607ae698e046b6925c7781a7177cde9df4075943714ed2aad7c62645eca348f5544
-Size (rpm-4.20.0.tar.bz2) = 5984513 bytes
+BLAKE2s (rpm-4.20.1.tar.bz2) = 823611e488f6263c0d2c96c80cb0659baa3c2e3eb7ea016630a7d4253c5f2835
+SHA512 (rpm-4.20.1.tar.bz2) = 77979cb49dec5a8816fc5019cf5d0c817adddec10c0018c8ad9487db8ffc58613557fa21f8e2163b747197b55a6de202c29c88e19b70d1fa6b4c18d3a84bf681
+Size (rpm-4.20.1.tar.bz2) = 4534720 bytes
+SHA1 (patch-CMakeLists.txt) = 3abfa98de7530fa6edfd5835160f0cca9b8d983e
 SHA1 (patch-build_rpmfc.c) = 3c02113a7ad206bf0cf033b3f9350c642289ef3d
 SHA1 (patch-installplatform) = f53dfc2c0d3e1e534bc20fece6a40f1c22b4ff95
 SHA1 (patch-lib_backend_ndb_rpmxdb.c) = 2742f64345ed2bf8bb942b7d7dffa7e759e07335
