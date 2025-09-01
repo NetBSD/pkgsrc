@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5313 2025/09/01 09:40:07 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5314 2025/09/01 09:41:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7678,3 +7678,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.2.3 [triaxx 2025-09-01]
 	Updated graphics/simp to 3.10.1 [pin 2025-09-01]
 	Updated audio/spotify-player to 0.21.0 [pin 2025-09-01]
+	Updated textproc/xt-rs to 0.19.5 [pin 2025-09-01]
