@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/04/09 21:48:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/02 06:36:57 wiz Exp $
 
-DISTNAME=		libXfixes-6.0.1
+DISTNAME=		libXfixes-6.0.2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
@@ -12,12 +12,10 @@ LICENSE=		mit
 
 CONFLICTS+=		Xfixes-[0-9]*
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 
+.include "../../devel/meson/build.mk"
 X11_LIB_NAME?=		libXfixes
 .include "../../meta-pkgs/modular-xorg/avoid-duplicate.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
