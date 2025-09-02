@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5338 2025/09/02 12:00:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5339 2025/09/02 12:55:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7714,3 +7714,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.1.0 [adam 2025-09-02]
 	Updated devel/garden to 2.3.0 [pin 2025-09-02]
 	Updated sysutils/parallel-disk-usage to 0.21.1 [pin 2025-09-02]
+	Updated devel/py-coverage to 7.10.6 [adam 2025-09-02]
+	Updated net/py-pypiserver to 2.4.0 [adam 2025-09-02]
