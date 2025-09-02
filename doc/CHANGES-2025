@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5343 2025/09/02 18:44:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5344 2025/09/02 19:02:11 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7722,3 +7722,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-postgis2 to 3.6.0nb4 [gdt 2025-09-02]
 	Updated www/nghttp2 to 1.67.0 [adam 2025-09-02]
 	Updated www/nghttp2-tools to 1.67.0 [adam 2025-09-02]
+	Updated mail/mailutils to 3.20 [vins 2025-09-02]
