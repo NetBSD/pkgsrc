@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/12/15 13:58:02 vins Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/02 19:01:24 vins Exp $
 bin/decodemail
 bin/dotlock
 bin/frm
@@ -179,6 +179,7 @@ lib/mailutils/numaddr.la
 lib/mailutils/pipe.la
 lib/mailutils/spamd.la
 lib/mailutils/timestamp.la
+lib/mailutils/uidnew.la
 lib/mailutils/vacation.la
 libexec/mailutils/ali
 libexec/mailutils/anno
