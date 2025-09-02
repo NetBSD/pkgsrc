@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5331 2025/09/02 06:37:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5332 2025/09/02 07:30:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7702,3 +7702,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-rapidfuzz to 3.14.0 [adam 2025-09-02]
 	Updated x11/xcb-util-cursor to 0.1.6 [wiz 2025-09-02]
 	Updated x11/libXfixes to 6.0.2 [wiz 2025-09-02]
+	Updated math/py-arviz to 0.22.0 [adam 2025-09-02]
+	Updated security/py-nvdlib to 0.8.3 [adam 2025-09-02]
