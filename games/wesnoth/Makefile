@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2025/06/10 15:00:10 adam Exp $
+# $NetBSD: Makefile,v 1.232 2025/09/02 09:33:32 leot Exp $
 
 DISTNAME=	wesnoth-1.18.5
 CATEGORIES=	games
@@ -56,6 +56,8 @@ PLIST.icons=		yes
 
 LDFLAGS.SunOS+=		-lsocket
 
+.include "options.mk"
+
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
@@ -75,7 +77,6 @@ BUILDLINK_API_DEPENDS.pango+=	pango>=1.14.8
 .include "../../lang/python/application.mk"
 .include "../../net/SDL2_net/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
