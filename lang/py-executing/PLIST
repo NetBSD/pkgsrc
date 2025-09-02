@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 10:04:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/02 09:22:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -16,6 +16,9 @@ ${PYSITELIB}/executing/_position_node_finder.pyo
 ${PYSITELIB}/executing/_pytest_utils.py
 ${PYSITELIB}/executing/_pytest_utils.pyc
 ${PYSITELIB}/executing/_pytest_utils.pyo
+${PYSITELIB}/executing/_utils.py
+${PYSITELIB}/executing/_utils.pyc
+${PYSITELIB}/executing/_utils.pyo
 ${PYSITELIB}/executing/executing.py
 ${PYSITELIB}/executing/executing.pyc
 ${PYSITELIB}/executing/executing.pyo
