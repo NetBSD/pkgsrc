@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5325 2025/09/01 20:34:44 rjs Exp $
+$NetBSD: CHANGES-2025,v 1.5326 2025/09/02 05:08:10 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7694,3 +7694,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/icewm to 3.9.0 [gutteridge 2025-09-01]
 	Added news/usenet_reborn version 0.2.0 [vins 2025-09-01]
 	Updated lang/sbcl to 2.5.8 [rjs 2025-09-01]
+	Updated www/jira-cli to 1.7.0 [fox 2025-09-02]
