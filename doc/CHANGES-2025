@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5337 2025/09/02 11:59:20 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5338 2025/09/02 12:00:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7713,3 +7713,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyter_server to 2.17.0 [adam 2025-09-02]
 	Updated comms/py-textual to 6.1.0 [adam 2025-09-02]
 	Updated devel/garden to 2.3.0 [pin 2025-09-02]
+	Updated sysutils/parallel-disk-usage to 0.21.1 [pin 2025-09-02]
