@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2025/04/14 04:58:34 vins Exp $
+$NetBSD: distinfo,v 1.6 2025/09/02 19:01:24 vins Exp $
 
-BLAKE2s (mailutils-3.19.tar.gz) = f0ffdac8cd012045dedd612d7114f561a091ac0d70d5af9726f5eb263a5d6108
-SHA512 (mailutils-3.19.tar.gz) = 521c8d5d81af2cc68c3784c7da347db65382144ccd115d8905ff5b709b49402bc091276bed4eef223b7f8ce35640e9c98686622bc358f00446fceb4ac0861e1f
-Size (mailutils-3.19.tar.gz) = 7861937 bytes
+BLAKE2s (mailutils-3.20.tar.gz) = f986de911beab8d400c466f7a9b9f80ad0aa6814f14202236b0f1d17841c9c92
+SHA512 (mailutils-3.20.tar.gz) = 0ddbdcf57fd20677da76a906ace5d0d0aa35f515530c077a6ec8e6eb22beeed9011dcb3bd3e5e800f0e51d9cfad09fa49a4c7a2ddd04b286a5adafaa55b5230c
+Size (mailutils-3.20.tar.gz) = 7883826 bytes
+SHA1 (patch-configure.ac) = 8fdcba83e0ef8769945f43e41b48a4e9a3319d0b
 SHA1 (patch-frm_frm.h) = 8ed8ae4b64b3b6b30d0572d06b35165b2e1d7e3e
 SHA1 (patch-lib_tcpwrap.c) = 758619c13030816b99b772f65ae8205aff23b323
 SHA1 (patch-mh_mh__init.c) = 3ffa0200cf579e45f76a6c66f8d7192f88c51806
