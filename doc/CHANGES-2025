@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5332 2025/09/02 07:30:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5333 2025/09/02 08:49:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7704,3 +7704,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libXfixes to 6.0.2 [wiz 2025-09-02]
 	Updated math/py-arviz to 0.22.0 [adam 2025-09-02]
 	Updated security/py-nvdlib to 0.8.3 [adam 2025-09-02]
+	Updated comms/py-textual to 6.0.0 [adam 2025-09-02]
+	Updated textproc/py-regex to 2025.9.1 [adam 2025-09-02]
