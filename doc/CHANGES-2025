@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5344 2025/09/02 19:02:11 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5345 2025/09/02 20:22:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7723,3 +7723,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp2 to 1.67.0 [adam 2025-09-02]
 	Updated www/nghttp2-tools to 1.67.0 [adam 2025-09-02]
 	Updated mail/mailutils to 3.20 [vins 2025-09-02]
+	Updated textproc/dasel to 2.8.1nb6 [wiz 2025-09-02]
