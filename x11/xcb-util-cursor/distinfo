@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/10/19 20:48:57 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/09/02 06:35:06 wiz Exp $
 
-BLAKE2s (xcb-util-cursor-0.1.5.tar.xz) = 2eb76ba4b77cc7b01863e405b611dea3f015eafc4c83be9b240150162a4e1822
-SHA512 (xcb-util-cursor-0.1.5.tar.xz) = e2d14c3f0ab117524ba90d1a992b61717ccee04bc9e66c587a6a0f10571f15e89fc5db3413882ca7ce14ebc07b6b7b0a4ddecd59ba910e6ca654ea9b1c705ed5
-Size (xcb-util-cursor-0.1.5.tar.xz) = 266788 bytes
+BLAKE2s (xcb-util-cursor-0.1.6.tar.xz) = bdd8d4f22b040814bb40358bd1ef4d1bbbb7113709ec527b1446ffd48e11dabf
+SHA512 (xcb-util-cursor-0.1.6.tar.xz) = 5cdf2f942e3aad9662456cf6b5c2be2ff1837d73348046f6d8b72aeabf005c481a5f00ee169d9ccd18878697cb1744f0b274d0caa85955979c8e4f92d2cc3f72
+Size (xcb-util-cursor-0.1.6.tar.xz) = 273084 bytes
