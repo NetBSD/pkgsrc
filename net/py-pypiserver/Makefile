@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/07/07 05:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/09/02 12:54:24 adam Exp $
 
-DISTNAME=	pypiserver-2.3.2
+DISTNAME=	pypiserver-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
 
@@ -13,8 +12,10 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip
+# passlib
+DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
+# cache
 DEPENDS+=	${PYPKGPREFIX}-watchdog-[0-9]*:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebTest-[0-9]*:../../www/py-WebTest
 TEST_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
