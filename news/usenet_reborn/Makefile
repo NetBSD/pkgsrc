@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/09/01 18:42:22 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/02 16:40:03 wiz Exp $
 
-DISTNAME=	0.2.0
-PKGNAME=	${DISTNAME:S|^|usenet_reborn-|}
+# make sure to upload a copy to ftp.NetBSD.org when updating this package
+DISTNAME=	usenet_reborn-0.2.0
 CATEGORIES=	news
-MASTER_SITES=	https://git.sr.ht/~rek2/usenet_reborn/archive/
-DIST_SUBDIR=	${PKGNAME_NOREV}
+# doesn't allow direct downloads
+#MASTER_SITES=	https://git.sr.ht/~rek2/usenet_reborn/archive/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~rek2/usenet_reborn/
