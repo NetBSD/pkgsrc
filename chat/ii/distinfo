@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:05:16 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/09/02 20:24:02 vins Exp $
 
-BLAKE2s (ii-1.8.tar.gz) = 2cf341124ac1333f9a08d8c041aaeabaaeb019833a54e0a97fd5d9ddb45c4e71
-SHA512 (ii-1.8.tar.gz) = 2b41a0611ac76612c9333e8490709ee22d17506f0c5d7e680a0d8f3f8b511bd5b279555cf609c1543aba71948819369a3c306b1168086890aa49c145b7860e17
-Size (ii-1.8.tar.gz) = 12326 bytes
-SHA1 (patch-config.mk) = 3b307c3ba351242cdefece01d154bb0da315b8b8
+BLAKE2s (ii-2.0-tls.diff) = 4fd3b60f07c254a040810d15721cb9675154868c3656b7eadce67ad763c4eed5
+SHA512 (ii-2.0-tls.diff) = ee41dc661988b0158b5fc5e3fb92c0b6753993645882fe6a8fc1dc81e904bbcd01ca05623af4eaf8aa1a3fb31b1423ff533e35771f5b47c45fef7546be3c4cb9
+Size (ii-2.0-tls.diff) = 4917 bytes
+BLAKE2s (ii-2.0.tar.gz) = 85d8a85333511e52b913e285470fce32d38447a6cf19236ce186331ed15cebe9
+SHA512 (ii-2.0.tar.gz) = ab8102b5669495b7bc6a3311245f3eb49d2add1e387290e41deb51e121f4c7c98a09d117052c345d8b896149276a83790c0b78efe3ed19fc52bc00575bf8e44a
+Size (ii-2.0.tar.gz) = 11129 bytes
+SHA1 (patch-Makefile) = 2af128eecb5f60aae0f74d939975a05fbe1e8342
+SHA1 (patch-ii.c) = e958dad9b3f7fa2a11d5fe4715dc677178c94723
