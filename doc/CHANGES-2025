@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5327 2025/09/02 05:12:17 fox Exp $
+$NetBSD: CHANGES-2025,v 1.5328 2025/09/02 05:19:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7696,3 +7696,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/sbcl to 2.5.8 [rjs 2025-09-01]
 	Updated www/jira-cli to 1.7.0 [fox 2025-09-02]
 	Updated sysutils/pfetch to 1.9.2 [fox 2025-09-02]
+	Updated devel/SDL2 to 2.32.10 [adam 2025-09-02]
+	Updated devel/SDL3 to 3.2.22 [adam 2025-09-02]
