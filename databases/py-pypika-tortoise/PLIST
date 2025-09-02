@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2025/01/23 16:37:40 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/09/02 05:31:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pypika_tortoise/__init__.py
 ${PYSITELIB}/pypika_tortoise/__init__.pyc
 ${PYSITELIB}/pypika_tortoise/__init__.pyo
