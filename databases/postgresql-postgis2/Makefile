@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.178 2025/08/30 22:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2025/09/02 18:13:41 gdt Exp $
 
-# Note that the directory is still postgis2, for historical reasons.
-# It remains, due to inertia and the pain of renaming outweighing the
-# benefit.  So far it looks more likely than not that postgis will not
-# need to be versioned again soon.
-MAJOR=		3.5
-DISTNAME=	postgis-${MAJOR}.3
+# Note that the PKGPATH remains "postgresql-postgis2", added during
+# postgis 1->2 migration, due to inertia and the pain of renaming.  So
+# far it looks more likely than not that postgis will not need to be
+# versioned again soon.
+#
+# The version number is split because part of the version number ends
+# up in file names.  Alpha/beta/rc are cleanly flavors of minor and
+# thus do not need accomodating.
+MAJOR=		3.6
+MINOR=		0
+VERSION=	${MAJOR}.${MINOR}
+DISTNAME=	postgis-${VERSION}
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	databases geography
@@ -62,6 +68,10 @@ REPLACE_PERL+=		utils/create_spatial_ref_sys_config_dump.pl
 INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
 
 TEST_TARGET=		check
+# Assume the user running 'make test' can connect as pgsql, because
+# postgis tests require a superuser.
+TEST_ENV+=		PGUSER=pgsql
+
 # https://trac.osgeo.org/postgis/wiki/DevWikiGettingABackTrace#Usingwithregressiontests
 
 # TEST_DEPENDS
