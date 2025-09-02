@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/05/19 10:45:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/09/02 14:32:34 adam Exp $
 bin/daphne-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -54,3 +54,6 @@ ${PYSITELIB}/daphne/utils.pyo
 ${PYSITELIB}/daphne/ws_protocol.py
 ${PYSITELIB}/daphne/ws_protocol.pyc
 ${PYSITELIB}/daphne/ws_protocol.pyo
+${PYSITELIB}/twisted/plugins/fd_endpoint.py
+${PYSITELIB}/twisted/plugins/fd_endpoint.pyc
+${PYSITELIB}/twisted/plugins/fd_endpoint.pyo
