@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2025/08/14 20:06:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.65 2025/09/02 09:24:27 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -328,6 +328,9 @@ ${PYSITELIB}/faker/providers/automotive/id_ID/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.py
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.py
+${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/lt_LT/__init__.py
 ${PYSITELIB}/faker/providers/automotive/lt_LT/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/lt_LT/__init__.pyo
