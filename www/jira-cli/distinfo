@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/05/03 08:34:51 fox Exp $
+$NetBSD: distinfo,v 1.12 2025/09/02 05:06:17 fox Exp $
 
 BLAKE2s (jira-cli/al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6b700bc0ea1a5a9070b79e2df5ee41bda8994973fbf2a4deac2a482ec151279b
 SHA512 (jira-cli/al.essio.dev_pkg_shellescape_@v_v1.6.0.mod) = 6e2becc6b0294a2ce097ef7bb8ddedfc9793e9e5281620bf920644fb9bef3bb69ad0367e7ffb706acf955c48bf46b118360107241014555562985337a0bbd051
@@ -627,6 +627,6 @@ Size (jira-cli/gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (jira-cli/gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (jira-cli/gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (jira-cli/gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (jira-cli/jira-cli-1.6.0.tar.gz) = f738ee4babe5d8d7062bbb270a0a0f684032f35bbaf1261e099f5cda3406031f
-SHA512 (jira-cli/jira-cli-1.6.0.tar.gz) = 96f497d0f1c0a9d743f356b1ea455c8aa7bab53d72ff625e903daa851661c032f861bba8cc57effc05ef86dedbd22f0f89ff0e8421c3afca16432e92f005235f
-Size (jira-cli/jira-cli-1.6.0.tar.gz) = 53296357 bytes
+BLAKE2s (jira-cli/jira-cli-1.7.0.tar.gz) = 8d6f6b969bb929e1717964fc810db21355138d50cbf52b2dd925e99e3ac35967
+SHA512 (jira-cli/jira-cli-1.7.0.tar.gz) = 95ad9e6fe3da66517afba0df0485a03569df82a63dd0d01afafb89361225f68ad7497550891846ed158f7e2faa501152797afb8fa7004a6e23c7174d851a3a78
+Size (jira-cli/jira-cli-1.7.0.tar.gz) = 53299162 bytes

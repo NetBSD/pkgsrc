@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2025/05/03 08:34:51 fox Exp $
+# $NetBSD: go-modules.mk,v 1.10 2025/09/02 05:06:17 fox Exp $
 
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.mod
 GO_MODULE_FILES+=	al.essio.dev/pkg/shellescape/@v/v1.6.0.zip
