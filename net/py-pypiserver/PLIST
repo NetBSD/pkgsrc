@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 09:51:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/02 12:54:24 adam Exp $
 bin/pypi-server-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,9 +20,12 @@ ${PYSITELIB}/pypiserver/_app.pyo
 ${PYSITELIB}/pypiserver/backend.py
 ${PYSITELIB}/pypiserver/backend.pyc
 ${PYSITELIB}/pypiserver/backend.pyo
-${PYSITELIB}/pypiserver/bottle.py
-${PYSITELIB}/pypiserver/bottle.pyc
-${PYSITELIB}/pypiserver/bottle.pyo
+${PYSITELIB}/pypiserver/bottle_wrapper/__init__.py
+${PYSITELIB}/pypiserver/bottle_wrapper/__init__.pyc
+${PYSITELIB}/pypiserver/bottle_wrapper/__init__.pyo
+${PYSITELIB}/pypiserver/bottle_wrapper/bottle.py
+${PYSITELIB}/pypiserver/bottle_wrapper/bottle.pyc
+${PYSITELIB}/pypiserver/bottle_wrapper/bottle.pyo
 ${PYSITELIB}/pypiserver/cache.py
 ${PYSITELIB}/pypiserver/cache.pyc
 ${PYSITELIB}/pypiserver/cache.pyo
