@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5342 2025/09/02 18:13:52 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5343 2025/09/02 18:44:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7720,3 +7720,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-daphne to 4.2.1 [adam 2025-09-02]
 	Updated www/py-channels to 4.3.1 [adam 2025-09-02]
 	Updated databases/postgresql-postgis2 to 3.6.0nb4 [gdt 2025-09-02]
+	Updated www/nghttp2 to 1.67.0 [adam 2025-09-02]
+	Updated www/nghttp2-tools to 1.67.0 [adam 2025-09-02]
