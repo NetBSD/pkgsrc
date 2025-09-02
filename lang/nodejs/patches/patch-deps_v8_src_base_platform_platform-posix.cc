@@ -1,4 +1,4 @@
-$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.14 2025/08/15 10:02:38 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_platform-posix.cc,v 1.15 2025/09/02 07:41:08 wiz Exp $
 
 Use sysconf(_SC_THREAD_STACK_MIN) instead of PTHREAD_STACK_MIN.
 Cast explicitly.
@@ -8,7 +8,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
 
 --- deps/v8/src/base/platform/platform-posix.cc.orig	2023-10-24 10:04:41.000000000 +0000
 +++ deps/v8/src/base/platform/platform-posix.cc
-@@ -399,6 +391,10 @@ void* OS::GetRandomMmapAddr() {
+@@ -399,6 +399,10 @@ void* OS::GetRandomMmapAddr() {
  #endif
  #endif
  #endif
@@ -19,7 +19,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
    return reinterpret_cast<void*>(raw_addr);
  }
  
-@@ -565,14 +561,11 @@ bool OS::DiscardSystemPages(void* addres
+@@ -565,14 +569,11 @@ bool OS::DiscardSystemPages(void* addres
      // MADV_FREE_REUSABLE sometimes fails, so fall back to MADV_DONTNEED.
      ret = madvise(address, size, MADV_DONTNEED);
    }
@@ -36,7 +36,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #else
    int ret = madvise(address, size, MADV_DONTNEED);
  #endif
-@@ -815,6 +808,8 @@ int OS::GetCurrentThreadId() {
+@@ -815,6 +816,8 @@ int OS::GetCurrentThreadId() {
    return static_cast<int>(syscall(__NR_gettid));
  #elif V8_OS_ANDROID
    return static_cast<int>(gettid());
@@ -45,7 +45,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
  #elif V8_OS_AIX
    return static_cast<int>(thread_self());
  #elif V8_OS_FUCHSIA
-@@ -1091,7 +1086,11 @@ Thread::Thread(const Options& options)
+@@ -1091,7 +1094,11 @@ Thread::Thread(const Options& options)
        stack_size_(options.stack_size()),
        priority_(options.priority()),
        start_semaphore_(nullptr) {
@@ -57,7 +57,7 @@ Avoid using a random hint, some low numbers cause spurious ENOMEM on netbsd
    if (stack_size_ > 0) stack_size_ = std::max(stack_size_, min_stack_size);
    set_name(options.name());
  }
-@@ -1106,7 +1105,7 @@ static void SetThreadName(const char* na
+@@ -1106,7 +1113,7 @@ static void SetThreadName(const char* na
    pthread_set_name_np(pthread_self(), name);
  #elif V8_OS_NETBSD
    static_assert(Thread::kMaxThreadNameLength <= PTHREAD_MAX_NAMELEN_NP);
