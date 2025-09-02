@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5329 2025/09/02 05:34:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5330 2025/09/02 06:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7700,3 +7700,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/SDL3 to 3.2.22 [adam 2025-09-02]
 	Updated databases/py-pypika-tortoise to 0.6.2 [adam 2025-09-02]
 	Updated textproc/py-rapidfuzz to 3.14.0 [adam 2025-09-02]
+	Updated x11/xcb-util-cursor to 0.1.6 [wiz 2025-09-02]
