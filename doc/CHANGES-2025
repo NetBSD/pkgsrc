@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5333 2025/09/02 08:49:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5334 2025/09/02 09:17:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7706,3 +7706,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-nvdlib to 0.8.3 [adam 2025-09-02]
 	Updated comms/py-textual to 6.0.0 [adam 2025-09-02]
 	Updated textproc/py-regex to 2025.9.1 [adam 2025-09-02]
+	Updated security/py-cryptography to 45.0.7 [adam 2025-09-02]
+	Updated security/py-cryptography_vectors to 45.0.7 [adam 2025-09-02]
