@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.298 2025/09/02 07:37:58 wiz Exp $
+$NetBSD: distinfo,v 1.299 2025/09/02 07:41:07 wiz Exp $
 
 BLAKE2s (node-v24.7.0.tar.xz) = ddf1e50552b2794e98cce7c292360a1d6df8142151e15047b21fe0226454ce4a
 SHA512 (node-v24.7.0.tar.xz) = d90cca68bf1d1b5a550d68dd1d2e6957610809a67c36e198626cd2ba84ebe006f5d8579a7ea1768fc6802edf0ceb7be5200e566944c2632ff83586e0e3f2af2d
@@ -10,7 +10,7 @@ SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 32b85ef5824b96b35aba9280bbe7aa
 SHA1 (patch-deps_v8_src_base_platform_memory.h) = 10603b12ccdb97df87de70a2b91b96739c2ab13b
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = b47025f33d2991275bbcd15dbabb28900afab0e1
 SHA1 (patch-deps_v8_src_base_platform_platform-openbsd.cc) = 5e593879dbab095f99e82593272a0de91043f9a8
-SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = e3e0e5bf74dce9013480a455501e1aac6e4ada3a
+SHA1 (patch-deps_v8_src_base_platform_platform-posix.cc) = 6977d36538d9d29b315e0cacad95f4e6a6563861
 SHA1 (patch-deps_v8_src_base_platform_semaphore.cc) = 802a95f1b1d131e0d85c1f99c659cc68b31ba2f6
 SHA1 (patch-deps_v8_src_base_strings.h) = 4d2b37491f2f74f1a573f8c1942790204e23a8bb
 SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b11ebb0e582b
