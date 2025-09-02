@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/09/02 08:45:41 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/09/02 11:56:28 adam Exp $
 
-DISTNAME=	textual-6.0.0
+DISTNAME=	textual-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
