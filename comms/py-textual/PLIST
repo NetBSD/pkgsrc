@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2025/08/03 10:32:33 wiz Exp $
-${PYSITELIB}/resources/snapshot_report_template.jinja2
+@comment $NetBSD: PLIST,v 1.15 2025/09/02 08:45:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/resources/snapshot_report_template.jinja2
 ${PYSITELIB}/textual/__init__.py
 ${PYSITELIB}/textual/__init__.pyc
 ${PYSITELIB}/textual/__init__.pyo
@@ -118,6 +118,9 @@ ${PYSITELIB}/textual/_path.pyo
 ${PYSITELIB}/textual/_profile.py
 ${PYSITELIB}/textual/_profile.pyc
 ${PYSITELIB}/textual/_profile.pyo
+${PYSITELIB}/textual/_queue.py
+${PYSITELIB}/textual/_queue.pyc
+${PYSITELIB}/textual/_queue.pyo
 ${PYSITELIB}/textual/_resolve.py
 ${PYSITELIB}/textual/_resolve.pyc
 ${PYSITELIB}/textual/_resolve.pyo
@@ -283,6 +286,15 @@ ${PYSITELIB}/textual/css/types.pyo
 ${PYSITELIB}/textual/demo/__main__.py
 ${PYSITELIB}/textual/demo/__main__.pyc
 ${PYSITELIB}/textual/demo/__main__.pyo
+${PYSITELIB}/textual/demo/_project_data.py
+${PYSITELIB}/textual/demo/_project_data.pyc
+${PYSITELIB}/textual/demo/_project_data.pyo
+${PYSITELIB}/textual/demo/_project_stargazer_updater.py
+${PYSITELIB}/textual/demo/_project_stargazer_updater.pyc
+${PYSITELIB}/textual/demo/_project_stargazer_updater.pyo
+${PYSITELIB}/textual/demo/_project_stars.py
+${PYSITELIB}/textual/demo/_project_stars.pyc
+${PYSITELIB}/textual/demo/_project_stars.pyo
 ${PYSITELIB}/textual/demo/data.py
 ${PYSITELIB}/textual/demo/data.pyc
 ${PYSITELIB}/textual/demo/data.pyo
