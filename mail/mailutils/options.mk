@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/08/27 11:56:26 vins Exp $
+# $NetBSD: options.mk,v 1.3 2025/09/02 19:01:24 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mailutils
 
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=	--without-libintl-prefix
 # GSSAPI (Kerberos5) authentication
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=       --with-gssapi==${KRB5BASE:Q}
+CONFIGURE_ARGS+=       --with-gssapi==${KRB5BASE}
 GSSIMPL.heimdal=	Heimdal
 GSSIMPL.mit-krb5=	MIT
 CONFIGURE_ENV+=		GSSAPI_IMPL=${GSSIMPL.${KRB5_TYPE}}
@@ -92,9 +92,9 @@ CONFIGURE_ARGS+=    --without-gsasl
 .include "../../editors/emacs/modules.mk"
 BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD}
 BUILDLINK_PKGSRCDIR.emacs?=	${_EMACS_PKGDIR}
-CONFIGURE_ENV+=			ac_cv_prog_EMACS=${EMACS_BIN:Q}
+CONFIGURE_ENV+=			ac_cv_prog_EMACS=${EMACS_BIN}
 PKGSRC_MAKE_ENV+=		EMACS=${EMACS:Q}
-CONFIGURE_ARGS+=    		--with-lispdir=${EMACS_LISPPREFIX:Q}
+CONFIGURE_ARGS+=    		--with-lispdir=${EMACS_LISPPREFIX}
 PLIST.emacs=			yes
 .else
 CONFIGURE_ENV+=			ac_cv_prog_EMACS=no
