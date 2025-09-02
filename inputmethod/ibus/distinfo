@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.37 2025/08/28 12:08:47 tsutsui Exp $
+$NetBSD: distinfo,v 1.38 2025/09/02 11:38:04 tsutsui Exp $
 
 BLAKE2s (ibus-1.5.32.tar.gz) = ff1fb8b798af776696a817d9b63ad2e414562268468c9b978d48b8e0df77f77c
 SHA512 (ibus-1.5.32.tar.gz) = 2c63cab1fe553cb8f3ce00d22f3374e396f8cb3f9e66b81b8c8c59d141eb68d036549460ac0b836e93b0261c185a33aba0fc930178fd04d142344324e1562b9c
 Size (ibus-1.5.32.tar.gz) = 4192999 bytes
 SHA1 (patch-client_gtk2_ibusimcontext.c) = 8dcbb38404e599618891de6a406bc1a07db634d4
 SHA1 (patch-client_gtk3_ibusimcontext.c) = 105a2560014f8bd9699393bef3dda00a6c925c6a
-SHA1 (patch-ui_gtk3_Makefile.am) = e0b74afa665b395bb5ac5da678c57e8646bbb71a
-SHA1 (patch-ui_gtk3_Makefile.in) = e52d7d60e975bbc8d1c2807deaef8f0d09b46548
 SHA1 (patch-ui_gtk3_candidatepanel.vala) = a1d697d5b4f8d545918aca48165e2b07c47f858a
 SHA1 (patch-ui_gtk3_panel.vala) = a8fcb9ce00b260e2039c181198936cdf8a3344d4
