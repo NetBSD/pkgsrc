@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/02 20:24:02 vins Exp $
+
+* Do not build strlcpy compat unless needed. 
+* Do not install license file.
+
+--- Makefile.orig	2025-09-02 19:20:32.164153033 +0000
++++ Makefile
+@@ -17,8 +17,7 @@ II_LDFLAGS = $(LDFLAGS)
+ # on systems which provide strlcpy(3),
+ # remove NEED_STRLCPY from CPPFLAGS and
+ # remove strlcpy.o from LIBS
+-II_CPPFLAGS = $(CPPFLAGS) -DVERSION=\"$(VERSION)\" -D_DEFAULT_SOURCE -DNEED_STRLCPY
+-LIBS        = strlcpy.o
++II_CPPFLAGS = $(CPPFLAGS) -DVERSION=\"$(VERSION)\" -D_DEFAULT_SOURCE
+ 
+ all: ii
+ 
+@@ -40,7 +39,7 @@ install: all
+ 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+ 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
+ 	mkdir -p $(DESTDIR)$(DOCPREFIX)/ii
+-	install -m 644 README FAQ LICENSE $(DESTDIR)$(DOCPREFIX)/ii
++	install -m 644 README FAQ $(DESTDIR)$(DOCPREFIX)/ii
+ 	install -m 775 ii $(DESTDIR)$(PREFIX)/bin
+ 	sed "s/VERSION/$(VERSION)/g" < ii.1 > $(DESTDIR)$(MANPREFIX)/man1/ii.1
+ 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/ii.1
