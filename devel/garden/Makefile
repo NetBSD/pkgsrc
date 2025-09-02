@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2025/05/14 10:25:24 pin Exp $
+# $NetBSD: Makefile,v 1.24 2025/09/02 11:59:00 pin Exp $
 
-DISTNAME=	garden-2.2.0
+DISTNAME=	garden-2.3.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v2.2.0/}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v2.3.0/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://garden-rs.gitlab.io/
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 RUST_REQ=	1.81.0
 
-WRKSRC=		${WRKDIR}/garden-v2.2.0-bfdd61920e737916003b1549f7b666a236ae9efe
+WRKSRC=		${WRKDIR}/garden-v2.3.0-6935467df1d25794b1024e03309dd47dd6e7ce84
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
