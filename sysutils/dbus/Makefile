@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2025/08/15 15:49:12 hauke Exp $
+# $NetBSD: Makefile,v 1.144 2025/09/03 09:24:42 jperkin Exp $
 
 DISTNAME=	dbus-1.16.2
 PKGREVISION=	1
@@ -48,6 +48,7 @@ SUBST_FILES.docbook=	doc/*.xml*
 SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/xml/docbook,g'
 
 .if ${OPSYS} == "SunOS"
+MESON_ARGS+=		-Dinotify=disabled
 MESON_ARGS+=		-Dsolaris_console_owner_file="/dev/vt/console_user"
 .endif
 
