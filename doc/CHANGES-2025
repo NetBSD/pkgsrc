@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5356 2025/09/03 14:17:18 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5357 2025/09/03 14:17:54 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7742,3 +7742,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-rerunfailures to 16.0.1 [adam 2025-09-03]
 	Updated graphics/pcl to 1.15.1 [gdt 2025-09-03]
 	Updated mail/thunderbird to 142.0 [ryoon 2025-09-03]
+	Updated mail/thunderbird-l10n to 142.0 [ryoon 2025-09-03]
