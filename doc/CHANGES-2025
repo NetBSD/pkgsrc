@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5358 2025/09/03 14:25:42 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5359 2025/09/03 14:26:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7744,3 +7744,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/thunderbird to 142.0 [ryoon 2025-09-03]
 	Updated mail/thunderbird-l10n to 142.0 [ryoon 2025-09-03]
 	Added audio/dovi_tool version 2.3.0 [ryoon 2025-09-03]
+	Updated sysutils/py-ansible-compat to 25.8.1 [adam 2025-09-03]
+	Updated sysutils/ansible-lint to 25.8.2 [adam 2025-09-03]
