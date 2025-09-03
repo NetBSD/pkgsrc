@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2025/08/04 18:26:47 pin Exp $
+# $NetBSD: Makefile,v 1.66 2025/09/03 07:35:15 pin Exp $
 
-DISTNAME=	eza-0.23.0
+DISTNAME=	eza-0.23.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=eza-community/}
 DIST_SUBDIR=	${PKGBASE}
@@ -15,7 +15,7 @@ RUST_REQ=	1.82.0
 SUPERSEDES=	exa-[0-9]*
 
 DISTFILES=	${DEFAULT_DISTFILES} man-${PKGVERSION_NOREV}.tar.gz
-SITES.man-0.23.0.tar.gz=	https://github.com/eza-community/eza/releases/download/v${PKGVERSION_NOREV}/
+SITES.man-0.23.1.tar.gz=	https://github.com/eza-community/eza/releases/download/v${PKGVERSION_NOREV}/
 
 .include "cargo-depends.mk"
 
