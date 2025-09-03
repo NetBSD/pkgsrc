@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/24 17:22:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/09/03 11:37:22 gdt Exp $
 bin/pcl_add_gaussian_noise
 bin/pcl_bilateral_upsampling
 bin/pcl_boundary_estimation
@@ -526,7 +526,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/octree/octree_pointcloud_singlepoint.h
 include/pcl-${PCL_BASE_VERSION}/pcl/octree/octree_pointcloud_voxelcentroid.h
 include/pcl-${PCL_BASE_VERSION}/pcl/octree/octree_search.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/boost.h
-${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/cJSON.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/impl/lru_cache.hpp
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/impl/monitor_queue.hpp
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/outofcore/impl/octree_base.hpp

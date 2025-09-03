@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2025/08/30 22:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2025/09/03 11:37:22 gdt Exp $
 
 DISTNAME=	pcl-1.15.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PointCloudLibrary/}
 GITHUB_TAG=	pcl-${PKGVERSION_NOREV}
@@ -45,6 +45,7 @@ PLIST_SUBST+=	PCL_BASE_VERSION=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../textproc/PEGTL/buildlink3.mk"
+.include "../../textproc/cJSON/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
 # Not used correctly right now, see
