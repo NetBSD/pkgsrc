@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5350 2025/09/03 07:37:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5351 2025/09/03 07:55:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7731,3 +7731,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/eza to 0.23.1 [pin 2025-09-03]
 	Updated graphics/feh to 3.11.1 [pin 2025-09-03]
 	Updated net/lagrange to 1.19.0 [pin 2025-09-03]
+	Updated security/easy-rsa to 3.2.4 [adam 2025-09-03]
+	Updated security/py-gssapi to 1.10.0 [adam 2025-09-03]
+	Updated security/py-krb5 to 0.8.0 [adam 2025-09-03]
+	Updated devel/py-cattrs to 25.2.0 [adam 2025-09-03]
