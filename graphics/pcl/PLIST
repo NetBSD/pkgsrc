@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/09/03 11:37:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/09/03 13:21:06 gdt Exp $
 bin/pcl_add_gaussian_noise
 bin/pcl_bilateral_upsampling
 bin/pcl_boundary_estimation
@@ -808,6 +808,7 @@ include/pcl-${PCL_BASE_VERSION}/pcl/search/impl/kdtree.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/search/impl/organized.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/search/impl/search.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/search/kdtree.h
+include/pcl-${PCL_BASE_VERSION}/pcl/search/kdtree_nanoflann.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/octree.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/organized.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/pcl_search.h
