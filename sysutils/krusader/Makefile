@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2025/08/30 22:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/09/03 14:54:00 kikadf Exp $
 
 DISTNAME=	krusader-2.9.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_KDE:=krusader/${PKGVERSION_NOREV}/}
 LICENSE=	gnu-gpl-v2
@@ -18,12 +18,19 @@ SUBST_MESSAGE.xdg=	Install via examples dir.
 SUBST_FILES.xdg=	plugins/iso/CMakeLists.txt
 SUBST_SED.xdg=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_XDG_EX_DIR}:'
 
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Fixing pathes
+SUBST_FILES.path+=	plugins/krarc/krarc.cpp
+SUBST_VARS.path+=	PREFIX
+
 MAKE_DIRS+=	${PKG_SYSCONFBASE}/xdg
 CONF_FILES+=	${PREFIX}/share/examples/kde-xdg/kio_isorc \
 		${PKG_SYSCONFBASE}/xdg/kio_isorc
 BUILD_DEFS+=	PKG_SYSCONFBASE
 
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 .include "../../devel/kf6-kparts/buildlink3.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
