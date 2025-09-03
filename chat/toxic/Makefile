@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/30 22:44:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/03 17:17:43 ktnb Exp $
 
 DISTNAME=	toxic-0.16.1
 PKGREVISION=	1
@@ -17,7 +17,20 @@ USE_TOOLS+=	gmake pkg-config
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 MAKE_ENV+=	ENABLE_RELEASE=1
+.include "../../mk/bsd.prefs.mk"
+# on Darwin there are many X11 errors
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=     DISABLE_X11=1
+.endif
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/
+
+SUBST_CLASSES+=                prefix
+SUBST_SED.prefix+=     -e "s,/usr/local/opt/freealut/include,${PREFIX}/include,"
+SUBST_SED.prefix+=     -e "s,/usr/local/opt/glib/include,${PREFIX}/include,"
+SUBST_SED.prefix+=     -e "s,PKG_CONFIG_PATH,\# PKG_CONFIG_PATH,"
+SUBST_FILES.prefix+=   cfg/systems/Darwin.mk
+SUBST_STAGE.prefix=    pre-configure
+SUBST_MESSAGE.prefix=  Adapt hardcoded prefix for pkgsrc.
 
 INSTALLATION_DIRS+=	man/man1 man/man5
 
