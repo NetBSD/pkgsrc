@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/02/04 14:17:13 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/09/03 11:31:06 adam Exp $
 
-BLAKE2s (hy-1.0.0.tar.gz) = f61eca26cb14a84c0067e4f1035f3a44771c8cb8a9b91c457b2a0286a7cf8ec3
-SHA512 (hy-1.0.0.tar.gz) = b3194ffecf79ebf571a92636a632eca56e967f281e4623bf9a2b1edbdf8770878d3484f8a6fdff4a740f870ce5b4c33d2eee57f436a92a4defac37d3b4ccb4df
-Size (hy-1.0.0.tar.gz) = 121792 bytes
+BLAKE2s (hy-1.1.0.tar.gz) = 6c296f0b84c41c4d565964f4ac46ed620cca7c988457882096ec30c29a02a518
+SHA512 (hy-1.1.0.tar.gz) = 039e49db3eedaf016a1b9b1d9a5ca1bf2a72b9483bfd9a4337e21352e310b637f9fd30e7bbcf824ff45d0a623580d2db99b4b8ebe7559cb42266a10fa316cbe1
+Size (hy-1.1.0.tar.gz) = 120402 bytes
