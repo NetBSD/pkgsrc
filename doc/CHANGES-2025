@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5359 2025/09/03 14:26:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5360 2025/09/03 14:29:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7746,3 +7746,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added audio/dovi_tool version 2.3.0 [ryoon 2025-09-03]
 	Updated sysutils/py-ansible-compat to 25.8.1 [adam 2025-09-03]
 	Updated sysutils/ansible-lint to 25.8.2 [adam 2025-09-03]
+	Updated www/py-django to 5.2.6 [adam 2025-09-03]
+	Updated www/py-django4 to 4.2.24 [adam 2025-09-03]
