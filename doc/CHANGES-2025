@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5352 2025/09/03 09:47:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5353 2025/09/03 09:50:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7737,3 +7737,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cattrs to 25.2.0 [adam 2025-09-03]
 	Updated editors/neovim to 0.11.4 [adam 2025-09-03]
 	Updated devel/memcached to 1.6.39 [adam 2025-09-03]
+	Updated net/nsd to 4.13.0 [he 2025-09-03]
