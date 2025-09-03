@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.712 2025/08/31 12:04:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.713 2025/09/03 14:26:37 ryoon Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -71,6 +71,7 @@ SUBDIR+=	deforaos-mixer
 SUBDIR+=	din
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
+SUBDIR+=	dovi_tool
 SUBDIR+=	dssi
 SUBDIR+=	dumb
 SUBDIR+=	easyh10
