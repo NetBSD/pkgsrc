@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/14 19:31:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/03 14:32:59 adam Exp $
 etc/jupyter/jupyter_server_config.d/jupyter-lsp-jupyter-server.json
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -41,17 +41,22 @@ ${PYSITELIB}/jupyter_lsp/session.pyo
 ${PYSITELIB}/jupyter_lsp/specs/__init__.py
 ${PYSITELIB}/jupyter_lsp/specs/__init__.pyc
 ${PYSITELIB}/jupyter_lsp/specs/__init__.pyo
+${PYSITELIB}/jupyter_lsp/specs/basedpyright.py
+${PYSITELIB}/jupyter_lsp/specs/basedpyright.pyc
+${PYSITELIB}/jupyter_lsp/specs/basedpyright.pyo
 ${PYSITELIB}/jupyter_lsp/specs/bash_language_server.py
 ${PYSITELIB}/jupyter_lsp/specs/bash_language_server.pyc
 ${PYSITELIB}/jupyter_lsp/specs/bash_language_server.pyo
 ${PYSITELIB}/jupyter_lsp/specs/config/__init__.py
 ${PYSITELIB}/jupyter_lsp/specs/config/__init__.pyc
 ${PYSITELIB}/jupyter_lsp/specs/config/__init__.pyo
+${PYSITELIB}/jupyter_lsp/specs/config/basedpyright.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/bash-language-server.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/dockerfile-language-server-nodejs.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/julia-language-server.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/pyls.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/pylsp.schema.json
+${PYSITELIB}/jupyter_lsp/specs/config/pyrefly.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/pyright.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/r-languageserver.schema.json
 ${PYSITELIB}/jupyter_lsp/specs/config/sql-language-server.schema.json
@@ -73,6 +78,9 @@ ${PYSITELIB}/jupyter_lsp/specs/julia_language_server.pyo
 ${PYSITELIB}/jupyter_lsp/specs/pyls.py
 ${PYSITELIB}/jupyter_lsp/specs/pyls.pyc
 ${PYSITELIB}/jupyter_lsp/specs/pyls.pyo
+${PYSITELIB}/jupyter_lsp/specs/pyrefly.py
+${PYSITELIB}/jupyter_lsp/specs/pyrefly.pyc
+${PYSITELIB}/jupyter_lsp/specs/pyrefly.pyo
 ${PYSITELIB}/jupyter_lsp/specs/pyright.py
 ${PYSITELIB}/jupyter_lsp/specs/pyright.pyc
 ${PYSITELIB}/jupyter_lsp/specs/pyright.pyo
