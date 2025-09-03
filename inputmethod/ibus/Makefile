@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2025/09/02 11:38:04 tsutsui Exp $
+# $NetBSD: Makefile,v 1.117 2025/09/03 12:37:52 tsutsui Exp $
 
 DISTNAME=	ibus-1.5.32
 PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
@@ -95,7 +95,7 @@ CONFIGURE_ARGS+=	--disable-wayland
 # sync with system glib2 version.
 pre-build:
 	(cd ${WRKSRC} && ${MAKE_PROGRAM} -C ui/gtk3 maintainer-clean-generic)
-	${TOUCH} ${WRKSRC}/portal/org.freedesktop.IBus.Portal.xml
+	(cd ${WRKSRC} && ${MAKE_PROGRAM} -C portal maintainer-clean-generic)
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/dconf/database.mk"
