@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/04 08:03:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/03 07:18:18 adam Exp $
 bin/behave-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -199,6 +199,9 @@ ${PYSITELIB}/behave/parameter_type.pyo
 ${PYSITELIB}/behave/parser.py
 ${PYSITELIB}/behave/parser.pyc
 ${PYSITELIB}/behave/parser.pyo
+${PYSITELIB}/behave/pathutil.py
+${PYSITELIB}/behave/pathutil.pyc
+${PYSITELIB}/behave/pathutil.pyo
 ${PYSITELIB}/behave/python_feature.py
 ${PYSITELIB}/behave/python_feature.pyc
 ${PYSITELIB}/behave/python_feature.pyo
