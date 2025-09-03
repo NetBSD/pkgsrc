@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5354 2025/09/03 11:34:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5355 2025/09/03 13:21:12 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7740,3 +7740,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nsd to 4.13.0 [he 2025-09-03]
 	Updated lang/py-hy to 1.1.0 [adam 2025-09-03]
 	Updated devel/py-test-rerunfailures to 16.0.1 [adam 2025-09-03]
+	Updated graphics/pcl to 1.15.1 [gdt 2025-09-03]
