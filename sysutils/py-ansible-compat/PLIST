@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 07:26:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/03 14:21:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,6 +10,9 @@ ${PYSITELIB}/ansible_compat/__init__.pyo
 ${PYSITELIB}/ansible_compat/_version.py
 ${PYSITELIB}/ansible_compat/_version.pyc
 ${PYSITELIB}/ansible_compat/_version.pyo
+${PYSITELIB}/ansible_compat/compatibility.py
+${PYSITELIB}/ansible_compat/compatibility.pyc
+${PYSITELIB}/ansible_compat/compatibility.pyo
 ${PYSITELIB}/ansible_compat/config.py
 ${PYSITELIB}/ansible_compat/config.pyc
 ${PYSITELIB}/ansible_compat/config.pyo
@@ -38,3 +41,6 @@ ${PYSITELIB}/ansible_compat/schema.pyo
 ${PYSITELIB}/ansible_compat/types.py
 ${PYSITELIB}/ansible_compat/types.pyc
 ${PYSITELIB}/ansible_compat/types.pyo
+${PYSITELIB}/ansible_compat/utils.py
+${PYSITELIB}/ansible_compat/utils.pyc
+${PYSITELIB}/ansible_compat/utils.pyo
