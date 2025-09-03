@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5346 2025/09/02 20:28:04 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5347 2025/09/03 07:18:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7725,3 +7725,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mailutils to 3.20 [vins 2025-09-02]
 	Updated textproc/dasel to 2.8.1nb6 [wiz 2025-09-02]
 	Updated chat/ii to 2.0 [vins 2025-09-02]
+	Updated shells/nushell to 0.107.0 [adam 2025-09-03]
+	Updated sysutils/py-fsspec to 2025.9.0 [adam 2025-09-03]
+	Updated devel/py-behave to 1.3.2 [adam 2025-09-03]
