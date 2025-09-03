@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/03 14:25:28 ryoon Exp $
+bin/dovi_tool
