@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/04/14 10:04:42 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/03 11:31:06 adam Exp $
 
-DISTNAME=	hy-1.0.0
+DISTNAME=	hy-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
 
@@ -21,6 +20,13 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
+
+pre-test:
+	${TOUCH} ${WRKSRC}/tests/__init__.py
+	cd ${BUILDLINK_DIR}/bin && \
+		${LN} -f -s ${PREFIX}/bin/hy-${PYVERSSUFFIX} hy && \
+		${LN} -f -s ${PREFIX}/bin/hy2py-${PYVERSSUFFIX} hy2py && \
+		${LN} -f -s ${PREFIX}/bin/hyc-${PYVERSSUFFIX} hyc
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
