@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.14 2014/09/27 20:11:38 pettai Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2025/09/03 09:49:52 he Exp $
 
 Install nsd.conf.sample in examples directory
 
 --- Makefile.in.orig	2014-08-29 06:24:27.000000000 +0000
 +++ Makefile.in
-@@ -132,7 +132,7 @@ install: all
+@@ -192,7 +192,7 @@ install: all
  	$(INSTALL_DATA) nsd-checkzone.8 $(DESTDIR)$(mandir)/man8/nsd-checkzone.8
  	$(INSTALL_DATA) nsd-control.8 $(DESTDIR)$(mandir)/man8/nsd-control.8
  	$(INSTALL_DATA) nsd.conf.5 $(DESTDIR)$(mandir)/man5/nsd.conf.5
 -	$(INSTALL_DATA) nsd.conf.sample $(DESTDIR)$(nsdconfigfile).sample
 +	$(INSTALL_DATA) nsd.conf.sample $(DESTDIR)${PREFIX}/share/examples/nsd/nsd.conf
+ 	if test -n "@xdp@"; then $(INSTALL_DATA) xdp-dns-redirect_kern.o $(DESTDIR)$(sharedfilesdir)/xdp-dns-redirect_kern.o; fi
+ 	if test -n "@xdp@"; then $(INSTALL_DATA) xdp-dns-redirect_kern_pinned.o $(DESTDIR)$(sharedfilesdir)/xdp-dns-redirect_kern_pinned.o; fi
  
- uninstall:
- 	@echo
