@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/05/09 14:10:43 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/09/03 11:34:04 adam Exp $
 
-BLAKE2s (pytest_rerunfailures-15.1.tar.gz) = f026557cc52306d00a567153ee9ee033471c5d1fdfdbbe15576cdf95c0422128
-SHA512 (pytest_rerunfailures-15.1.tar.gz) = 6344d625829038978f9cf224d59d3de07b1afcc6dcea578b22cdff8faefdbcacfaa54d6fc142351f9f5af6bacf6c2bda0e3f62013439b0276e1d48d6c30e8fe0
-Size (pytest_rerunfailures-15.1.tar.gz) = 26981 bytes
+BLAKE2s (pytest_rerunfailures-16.0.1.tar.gz) = 2e32ca89d9ec09f668f786aa6a159b1cd509f1c68f9851286e338dce1f09ee65
+SHA512 (pytest_rerunfailures-16.0.1.tar.gz) = 2c8c95c451ffbf86f99ff5862c75bf45b754e68e1e41d5cdd65ceead4e7619637ad1ec75c0c7c0efab1f842ee8544ea7d68b17912acfccf8da573a9365d88bd5
+Size (pytest_rerunfailures-16.0.1.tar.gz) = 27612 bytes
