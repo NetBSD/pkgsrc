@@ -1,0 +1,5 @@
+dovi_tool is a CLI tool combining multiple utilities for working
+with Dolby Vision.
+
+The C compatible library is also known as libdovi.
+It is in audio category as audio/lidovi.
