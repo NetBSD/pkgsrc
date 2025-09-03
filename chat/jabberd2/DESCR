@@ -4,4 +4,8 @@ application of Jabber technology is an asynchronous, extensible instant
 messaging platform, and an IM network that offers functionality similar
 to legacy IM systems such as AIM, ICQ, MSN, and Yahoo.
 
-This is a complete redesign/reimplementation of the original jabberd.
+jabberd2 is a complete redesign/reimplementation of the original jabberd.
+
+jabberd2 is no longer maintained, with the last release being 2.7.0 on
+November 1, 2018.
+
