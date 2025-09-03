@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/06/07 22:03:32 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/09/03 07:54:43 adam Exp $
 
-DISTNAME=	cattrs-25.1.1
+DISTNAME=	cattrs-25.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-attrs>=24.3.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensions
 # optional dependency
 # https://github.com/py-bson/bson/issues/122
 #TEST_DEPENDS+=	${PYPKGPREFIX}-bson>=0:../../wip/py-bson
