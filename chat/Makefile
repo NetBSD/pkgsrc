@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2025/08/25 20:03:21 ktnb Exp $
+# $NetBSD: Makefile,v 1.302 2025/09/04 17:26:18 vins Exp $
 #
 
 COMMENT=	Communication programs
@@ -61,6 +61,7 @@ SUBDIR+=	jitsi-srtp
 SUBDIR+=	jitsi-videobridge
 SUBDIR+=	kgb-bot
 SUBDIR+=	konversation
+SUBDIR+=	lchat
 SUBDIR+=	libfolks
 SUBDIR+=	libgadu
 SUBDIR+=	libmesode
