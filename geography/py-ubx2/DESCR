@@ -1,0 +1,12 @@
+pyubx2 is a Python 3 parser for the UBX protocol. UBX is a proprietary
+binary protocol implemented on u-blox GNSS receiver modules.  pyubx2
+can also parse NMEA 0183 and RTCM3 protocols via the underlying
+pynmeagps and pyrtcm packages from the same author - hence it covers
+all the protocols that u-blox GNSS receivers are capable of
+outputting.
+
+The library implements a comprehensive set of inbound (SET/POLL) and
+outbound (GET) messages for all current u-blox GPS/GNSS devices, but
+is readily extensible. Refer to UBX_MSGIDS in ubxtypes_core.py for the
+complete dictionary of messages currently supported. UBX protocol
+information sourced from published u-blox Interface Specifications.
