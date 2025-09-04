@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/04 12:23:05 dkazankov Exp $
+
+BLAKE2s (libadalang-25.0.0.tar.gz) = 65821e2c14788819c1cdfa7084f97390eed170560cc6e6bb650d54215712a1fd
+SHA512 (libadalang-25.0.0.tar.gz) = c625cc0018e4683bf1de18e066a806d9ed834c5e3d976904c3ad2cecc729afeb83fe9a9e00ce830dedab068e75516ac0901602c46fac33d22991bc614ab2f6aa
+Size (libadalang-25.0.0.tar.gz) = 3056796 bytes
