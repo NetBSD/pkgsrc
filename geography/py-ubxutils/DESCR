@@ -1,0 +1,3 @@
+pyubxutils is a series of Python u-blox UBX protocol utility classes
+for loading, saving, and comparing configurations, and making
+configuration changes.
