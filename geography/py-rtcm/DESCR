@@ -1,0 +1,4 @@
+pyrtcm is a Python 3 parser for the RTCM3 GPS/GNSS protocol.
+RTCM3 is a proprietary GPS/GNSS differential correction or DGPS
+protocol published by the Radio Technical Commission for Maritime
+Services.
