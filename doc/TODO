@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26194 2025/09/03 06:41:20 pin Exp $
+$NetBSD: TODO,v 1.26195 2025/09/04 00:14:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dmalloc-5.6.5
 	o dnsbl-milter-6.78
 	o doclifter-2.19
-	o dotclear-2.33.1
+	o dotclear-2.53
 	o drawpile-2.1.20
 	o drivel-3.0.5
 	o drupal-10.0.5
