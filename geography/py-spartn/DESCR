@@ -1,0 +1,3 @@
+pyspartn is a Python 3 parser for the SPARTN GPS/GNSS protocol. SPARTN
+is a GPS/GNSS differential correction or DGPS protocol published by
+u-blox.
