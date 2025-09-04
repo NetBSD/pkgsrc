@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/08/22 09:00:12 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2025/09/04 21:03:58 bouyer Exp $
 
 BLAKE2s (xen420/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = 82256e7e5d45980590a6493e17a4e133ff63fa28f00aff1963db96371e702448
 SHA512 (xen420/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = e1c11e37f53aab0cc6a3ceaace0b8417f07009b1f20ff8572320895fef24f1a796ade041094a024eb24c988b9bed404c556a1fdde809bba89fb49f0e0ff45a57
@@ -22,7 +22,7 @@ SHA1 (patch-docs_man_xlcpupool.cfg.5.pod) = ab3a2529cd10458948557fd7ab032e80df8b
 SHA1 (patch-docs_misc_block-scripts.txt) = 29a49edc4d15c4c8db822fd1d6356d07aeb27b86
 SHA1 (patch-docs_misc_vtd.txt) = 26c12a3023315f35a6f59b6715b811c989c67680
 SHA1 (patch-tools_9pfsd_io.c) = f3778bd9488f6509ef91169e18a42f22c64f7e3e
-SHA1 (patch-tools_Makefile) = f6717230a126c2bc8e8f50c211734a1e80a501f1
+SHA1 (patch-tools_Makefile) = 6fe9aec144d313ced13aea7cd5673f4c5fbd104c
 SHA1 (patch-tools_Rules.mk) = f782551c76266890c2a07f988e4730712a1a612f
 SHA1 (patch-tools_configure) = ba5ce2bdd4bdbb1cb94ffa4937721821a75e2c07
 SHA1 (patch-tools_console_daemon_utils.c) = ea0f66a3edbf6cb643580d0fae190064c0cbf0e0
