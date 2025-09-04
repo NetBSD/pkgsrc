@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5363 2025/09/03 18:52:20 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5364 2025/09/04 00:12:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7754,3 +7754,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-sortedm2m to 4.0.0 [adam 2025-09-03]
 	Updated www/py-django-photologue to 3.18 [adam 2025-09-03]
 	Updated www/snac to 2.82 [schmonz 2025-09-03]
+	Updated meta-pkgs/bulk-test-php to 20250904 [taca 2025-09-04]
