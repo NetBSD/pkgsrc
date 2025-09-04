@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5375 2025/09/04 13:05:46 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5376 2025/09/04 13:34:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7768,3 +7768,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ada-aws-25 version 25.1.0 [dkazankov 2025-09-04]
 	Added geography/py-rtcm version 1.1.9 [gdt 2025-09-04]
 	Added geography/py-ubx2 version 1.2.57 [gdt 2025-09-04]
+	Added geography/py-sbf2 version 1.0.0 [gdt 2025-09-04]
