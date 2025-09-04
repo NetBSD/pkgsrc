@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/04 13:40:00 gdt Exp $
+
+BLAKE2s (pyspartn-1.0.7.tar.gz) = 3b183ba38b5b32a2c5d6afbd04d0989687c25ce5fb3d34e8df54f032c101b190
+SHA512 (pyspartn-1.0.7.tar.gz) = 2813fb731063aa1c7adb947ee78c5ea84815915e37f8a8902077fa59291b8d23eb96b884589ac84cc74ef694d4c7a9fe42cdfb0258e1e00eee33a7725230b023
+Size (pyspartn-1.0.7.tar.gz) = 7949235 bytes
