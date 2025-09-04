@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.539 2025/09/01 15:27:04 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.540 2025/09/04 17:46:07 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17417,7 +17417,7 @@ php73-iconv<7.3.6	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-1
 php71-exif<7.1.30	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-11040
 php72-exif<7.2.19	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-11040
 php73-exif<7.3.6	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-11040
-R-RSQLite-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-8457
+R-RSQLite<2.1.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-8457
 xpdf<4.2		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-12515
 py{27,34,35,36,37,38}-django<1.11.21	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12308
 py{34,35,36,37,38}-django>=2.0<2.2.2	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2019-12308
