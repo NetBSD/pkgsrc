@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5380 2025/09/04 15:14:21 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5381 2025/09/04 15:36:28 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7773,3 +7773,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added geography/py-gnssutils version 1.1.16 [gdt 2025-09-04]
 	Added geography/py-ubxutils version 1.0.3 [gdt 2025-09-04]
 	Updated audio/kew to 3.4.1 [ktnb 2025-09-04]
+	Updated mail/aerc to 0.21.0 [ktnb 2025-09-04]
