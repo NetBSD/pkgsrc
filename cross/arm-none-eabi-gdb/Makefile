@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/06/28 11:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/04 23:06:24 lloyd Exp $
 
-DISTNAME=	gdb-7.10
+DISTNAME=	gdb-16.3
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
-PKGREVISION=	3
+#PKGREVISION=	3
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v3
 ARMELF_PREFIX=	${PREFIX}/cross-arm-none-eabi
 
 USE_TOOLS+=	gmake makeinfo
+USE_LANGUAGES=	c c++
 TOOLS_BROKEN+=	perl # used in do-install for texi2pod
 GNU_CONFIGURE=	yes
 
@@ -33,17 +34,14 @@ CHECK_PORTABILITY_SKIP+=	sim/testsuite/sim/bfin/run-tests.sh
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		charsetalias
-# this theoretically should match check for
-# install-exec-localcharset in ${WRKSRC}/gdb/gnulib/import/Makefile.am
-.if ${OPSYS} != Darwin
-PLIST.charsetalias=	yes
-.endif
-
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/cross-arm-none-eabi/info/bfd.info
+	${RM} ${DESTDIR}${PREFIX}/cross-arm-none-eabi/info/ctf-spec.info
+	${RM} ${DESTDIR}${PREFIX}/cross-arm-none-eabi/info/sframe-spec.info
 
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
