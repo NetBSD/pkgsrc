@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2025/09/04 13:34:45 gdt Exp $
+# $NetBSD: Makefile,v 1.147 2025/09/04 13:41:01 gdt Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -112,6 +112,7 @@ SUBDIR+=	py-owslib
 SUBDIR+=	py-proj
 SUBDIR+=	py-rtcm
 SUBDIR+=	py-sbf2
+SUBDIR+=	py-spartn
 SUBDIR+=	py-ubx2
 SUBDIR+=	qgis
 SUBDIR+=	qt6-qtlocation
