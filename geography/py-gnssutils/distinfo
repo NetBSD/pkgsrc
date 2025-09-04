@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/04 13:47:07 gdt Exp $
+
+BLAKE2s (pygnssutils-1.1.16.tar.gz) = 9504e778f3feb5eeee126e5cf54b8168b684e77ae811e6c9eef01b104662e49c
+SHA512 (pygnssutils-1.1.16.tar.gz) = 84b48bb896a9c6093be64ced38ddbc6a39da9369c453d2c4ca35eec661a36973fa2252261c1914c58b068f303207a47ea948918e8f15084774eadef7251126f4
+Size (pygnssutils-1.1.16.tar.gz) = 1055560 bytes
