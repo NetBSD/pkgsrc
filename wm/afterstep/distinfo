@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2023/07/10 22:18:38 gutteridge Exp $
+$NetBSD: distinfo,v 1.29 2025/09/04 22:50:51 gutteridge Exp $
 
 BLAKE2s (AfterStep-2.2.12.tar.bz2) = 7805d82301489abce1fb81b73beeff5c2efee85592281578a06c3bcbe1056ac8
 SHA512 (AfterStep-2.2.12.tar.bz2) = 5cac6ce74b24cbcc5b8e8a6f7cc9308e110f0d09597af1fa0a8730d5f5111932a23332629bc4d372fc8d9583a514d97e35f747b17decf8d4ebfe5e3f20cdbbee
@@ -37,6 +37,8 @@ SHA1 (patch-libAfterStep_mylook.c) = 23d8fc3e94a62106080b061bbe575587112a07ec
 SHA1 (patch-libAfterStep_mylook.h) = 0ebab667d7e03f211f9b4e68ccef2452b49ff9db
 SHA1 (patch-libAfterStep_parser.c) = ae7ba594cf19c0001f99567f5c4a9d8754fd4ac4
 SHA1 (patch-libAfterStep_parser__xml.c) = e02a1c2399fceee2cd25e7775f0643d85a5b01c9
+SHA1 (patch-libAfterStep_screen.c) = 18f23efd45e82528c7c12a0ef1aae255b0dfbc56
+SHA1 (patch-libAfterStep_session.c) = 3e3ab5c2db80be7b9b9610a53b48624c9200f936
 SHA1 (patch-src_ASDocGen_Makefile.in) = c879bca9d2e4acf6776dfeef8557b8f72f77ab82
 SHA1 (patch-src_Animate_Makefile.in) = fd5c50d91233e062c05c3bd4abe85741f345dff4
 SHA1 (patch-src_afterstep_asinternals.h) = 46264bce63b9252be0731a2c864e3334ea675af5
