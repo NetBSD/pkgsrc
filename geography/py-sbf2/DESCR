@@ -1,0 +1,6 @@
+pysbf2 is a Python 3 parser for the SBF.  SBF is a proprietary binary
+protocol implemented on Septentrio GNSS receiver modules.  pysbf2 can
+also parse NMEA 0183 and RTCM3 protocols via the underlying pynmeagps
+and pyrtcm packages from the same author - hence it covers all the
+common protocols that Septentrio SBF receivers are capable of
+outputting.
