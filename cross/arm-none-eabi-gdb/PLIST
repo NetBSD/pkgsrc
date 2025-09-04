@@ -1,24 +1,27 @@
-@comment $NetBSD: PLIST,v 1.2 2016/02/02 06:30:34 dbj Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/04 23:06:24 lloyd Exp $
 cross-arm-none-eabi/bin/arm-none-eabi-gdb
-cross-arm-none-eabi/bin/arm-none-eabi-run
+cross-arm-none-eabi/bin/arm-none-eabi-gdb-add-index
+cross-arm-none-eabi/bin/arm-none-eabi-gstack
 cross-arm-none-eabi/include/gdb/jit-reader.h
 cross-arm-none-eabi/info/annotate.info
 cross-arm-none-eabi/info/gdb.info
 cross-arm-none-eabi/info/stabs.info
-${PLIST.charsetalias}cross-arm-none-eabi/lib/charset.alias
-cross-arm-none-eabi/lib/libarm-none-eabi-sim.a
+cross-arm-none-eabi/man/man1/arm-none-eabi-gdb-add-index.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gdb.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gdbserver.1
-cross-arm-none-eabi/man/man1/arm-none-eabi-run.1
+cross-arm-none-eabi/man/man1/arm-none-eabi-gstack.1
 cross-arm-none-eabi/man/man5/arm-none-eabi-gdbinit.5
 cross-arm-none-eabi/share/gdb/syscalls/aarch64-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/amd64-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/arm-linux.xml
+cross-arm-none-eabi/share/gdb/syscalls/freebsd.xml
 cross-arm-none-eabi/share/gdb/syscalls/gdb-syscalls.dtd
 cross-arm-none-eabi/share/gdb/syscalls/i386-linux.xml
+cross-arm-none-eabi/share/gdb/syscalls/loongarch-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/mips-n32-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/mips-n64-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/mips-o32-linux.xml
+cross-arm-none-eabi/share/gdb/syscalls/netbsd.xml
 cross-arm-none-eabi/share/gdb/syscalls/ppc-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/ppc64-linux.xml
 cross-arm-none-eabi/share/gdb/syscalls/s390-linux.xml

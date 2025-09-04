@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2018/07/30 19:37:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/04 23:06:24 lloyd Exp $
 cross-arm-none-eabi/arm-none-eabi/bin/ar
 cross-arm-none-eabi/arm-none-eabi/bin/as
 cross-arm-none-eabi/arm-none-eabi/bin/ld
@@ -13,24 +13,34 @@ cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.x
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xbn
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xc
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xce
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xcer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xd
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdc
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdce
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdcer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xde
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xde
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xder
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdw
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdwe
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xdwer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xe
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xn
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xr
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xs
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsc
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsce
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xscer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xse
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xser
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xsw
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xswe
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xswer
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xu
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xw
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xwe
+cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xwer
 cross-arm-none-eabi/bin/arm-none-eabi-addr2line
 cross-arm-none-eabi/bin/arm-none-eabi-ar
 cross-arm-none-eabi/bin/arm-none-eabi-as
@@ -49,9 +59,13 @@ cross-arm-none-eabi/bin/arm-none-eabi-strings
 cross-arm-none-eabi/bin/arm-none-eabi-strip
 cross-arm-none-eabi/info/as.info
 cross-arm-none-eabi/info/bfd.info
+cross-arm-none-eabi/info/ctf-spec.info
 cross-arm-none-eabi/info/binutils.info
 cross-arm-none-eabi/info/gprof.info
 cross-arm-none-eabi/info/ld.info
+cross-arm-none-eabi/info/ldint.info
+cross-arm-none-eabi/info/sframe-spec.info
+cross-arm-none-eabi/lib/bfd-plugins/libdep.so
 cross-arm-none-eabi/man/man1/arm-none-eabi-addr2line.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-ar.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-as.1

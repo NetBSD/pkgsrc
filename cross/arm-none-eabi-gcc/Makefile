@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2022/06/28 11:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/09/04 23:06:24 lloyd Exp $
 
-DISTNAME=		gcc-8.3.0
+DISTNAME=		gcc-14.3.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
-PKGREVISION=		5
+#PKGREVISION=		1
 CATEGORIES=		cross
-NEWLIBVER=		3.1.0
+NEWLIBVER=		4.5.0.20241231
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DEFAULT_DISTFILES} \
@@ -22,7 +22,7 @@ EXTRACT_USING=		bsdtar
 # use makeinfo from pkgsrc/devel/gtexinfo.
 TEXINFO_REQD=		5.1
 
-DEPENDS+=		cross-arm-none-eabi-binutils-[0-9]*:../../cross/arm-none-eabi-binutils
+DEPENDS+=		cross-arm-none-eabi-binutils>=2.45:../../cross/arm-none-eabi-binutils
 
 USE_LANGUAGES+=		c c++
 
@@ -46,6 +46,9 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
+CONFIGURE_ARGS+=	--disable-gcov
+CONFIGURE_ARGS+=	--enable-multilib
+CONFIGURE_ARGS+=	--with-multilib-list=aprofile,rmprofile
 
 INFO_FILES=		yes
 
