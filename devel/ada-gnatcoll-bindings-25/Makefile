@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/30 17:49:48 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/04 07:53:28 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -25,13 +25,13 @@ GCC_REQD+=	14
 .include "options.mk"
 
 SUBST_CLASSES+=		fixver
-SUBST_STAGE.fixver=	pre-configure
+SUBST_STAGE.fixver=	post-extract
 SUBST_FILES.fixver=	version_information
 SUBST_SED.fixver=	-e 's,0.0,25.0,g'
 SUBST_MESSAGE.fixver=	Fix version information
 
 MAKE_FLAGS+=	BINDINGS=${BINDINGS:Q}
-MAKE_FLAGS+=	prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
+MAKE_FLAGS+=	PYTHON=${PYTHONBIN:Q} prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
 
 PLIST_VARS+=				shlibs
 
