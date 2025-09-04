@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5370 2025/09/04 11:55:54 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5371 2025/09/04 12:23:35 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7763,3 +7763,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-pspdfutils to 3.3.13 [adam 2025-09-04]
 	Added devel/ada-langkit-support-25 version 25.0.0 [dkazankov 2025-09-04]
 	Added devel/py-liblktlang version 25.0 [dkazankov 2025-09-04]
+	Added devel/ada-libadalang-25 version 25.0.0 [dkazankov 2025-09-04]
