@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.lal,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+${GNAT_PKGBASE}/bin/ada2wsdl

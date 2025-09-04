@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST.ldap,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-ldap-client.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-ldap-client.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-ldap-thin.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-ldap-thin.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-ldap.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-ldap-client.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-ldap-client.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-ldap-thin.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-ldap-thin.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-ldap.ads
+${GNAT_PKGBASE}/include/aws.static/aws-ldap-client.adb
+${GNAT_PKGBASE}/include/aws.static/aws-ldap-client.ads
+${GNAT_PKGBASE}/include/aws.static/aws-ldap-thin.adb
+${GNAT_PKGBASE}/include/aws.static/aws-ldap-thin.ads
+${GNAT_PKGBASE}/include/aws.static/aws-ldap.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-ldap-client.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-ldap-thin.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-ldap.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-log.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-ldap-client.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-ldap-thin.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-ldap.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-ldap-client.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-ldap-thin.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-ldap.ali
