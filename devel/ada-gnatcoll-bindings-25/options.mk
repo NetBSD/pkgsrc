@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/09/04 07:53:28 dkazankov Exp $
+# $NetBSD: options.mk,v 1.4 2025/09/04 09:24:55 dkazankov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnatcoll-bindings-25
 PKG_SUPPORTED_OPTIONS=		gnatcoll-cpp gmp iconv lzma openmp \
@@ -24,13 +24,13 @@ BINDINGS+=	gmp
 USE_GNU_ICONV=	yes
 .  include "../../converters/libiconv/buildlink3.mk"
 BINDINGS+=	iconv
-.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
+.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 099982
 SUBST_CLASSES+=		iconv
 SUBST_STAGE.iconv=	post-extract
 SUBST_FILES.iconv=	iconv/iconv_support.c
 SUBST_MESSAGE.iconv=	Fix parameter type in ${SUBST_FILES.iconv}
 SUBST_SED.iconv=	-e 's/iconv(cd, inbuf,/iconv(cd, (const char **)inbuf,/'
-.endif
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mlzma)

@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.1 2025/09/04 08:01:24 dkazankov Exp $
+# $NetBSD: inplace.mk,v 1.2 2025/09/04 09:24:56 dkazankov Exp $
 #
 # Include this file to extract library source into the WRKSRC of
 # another package.
@@ -44,7 +44,7 @@ extract-inplace-vss:
 
 USE_TOOLS+=		gmake
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-relocatable-vss
 
@@ -59,9 +59,9 @@ build-inplace-relocatable-vss:
 	    ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} DESTDIR=${BUILDLINK_DIR} PREFIX=/. \
 	    -f Makefile install-libs-relocatable
 
-.endif
+.  endif
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-static-pic-vss
 
@@ -76,6 +76,6 @@ build-inplace-static-pic-vss:
 	    ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} DESTDIR=${BUILDLINK_DIR} PREFIX=/. \
 	    -f Makefile install-libs-static-pic
 
-.endif
+.  endif
 
 .endif
