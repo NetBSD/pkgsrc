@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/08/16 06:48:01 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/04 04:53:31 adam Exp $
 
-DISTNAME=	deepdiff-8.6.0
+DISTNAME=	deepdiff-8.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deepdiff/}
