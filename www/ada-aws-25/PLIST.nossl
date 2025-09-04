@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST.nossl,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl-certificate-impl__dummy.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl-certificate-impl__dummy.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl__dummy.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/ssl-thin__dummy.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl-certificate-impl__dummy.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl-certificate-impl__dummy.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl__dummy.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/ssl-thin__dummy.ads
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl-certificate-impl__dummy.adb
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl-certificate-impl__dummy.ads
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl__dummy.adb
+${GNAT_PKGBASE}/include/aws.static/ssl-thin__dummy.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-net-ssl-certificate-impl__dummy.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-net-ssl__dummy.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/ssl-thin__dummy.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-net-ssl-certificate-impl__dummy.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-net-ssl__dummy.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/ssl-thin__dummy.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-net-ssl-certificate-impl__dummy.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-net-ssl__dummy.ali
+${GNAT_PKGBASE}/lib/aws.static/ssl-thin__dummy.ali
