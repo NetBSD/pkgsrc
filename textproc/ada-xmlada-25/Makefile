@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/10 16:55:09 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/04 08:20:02 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -25,9 +25,9 @@ USE_GCC_RUNTIME=	yes
 GCC_REQD+=	14
 
 SUBST_CLASSES+=		fixver
-SUBST_STAGE.fixver=	pre-configure
-SUBST_FILES.fixver=	./configure.in	./configure
-SUBST_MESSAGE.fixver=	Fix version in configure
+SUBST_STAGE.fixver=	post-extract
+SUBST_FILES.fixver=	configure
+SUBST_MESSAGE.fixver=	Fix version in ${SUBST_FILES.fixver}
 SUBST_SED.fixver=	-e 's,18.0w,25.0w,g'
 
 GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
