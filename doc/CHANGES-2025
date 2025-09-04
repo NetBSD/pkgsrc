@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5371 2025/09/04 12:23:35 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5372 2025/09/04 12:44:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7764,3 +7764,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/ada-langkit-support-25 version 25.0.0 [dkazankov 2025-09-04]
 	Added devel/py-liblktlang version 25.0 [dkazankov 2025-09-04]
 	Added devel/ada-libadalang-25 version 25.0.0 [dkazankov 2025-09-04]
+	Added geography/py-nmeagps version 1.0.51 [gdt 2025-09-04]
