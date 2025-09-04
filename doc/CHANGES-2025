@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5378 2025/09/04 13:47:15 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5379 2025/09/04 13:58:06 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7771,3 +7771,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added geography/py-sbf2 version 1.0.0 [gdt 2025-09-04]
 	Added geography/py-spartn version 1.0.7 [gdt 2025-09-04]
 	Added geography/py-gnssutils version 1.1.16 [gdt 2025-09-04]
+	Added geography/py-ubxutils version 1.0.3 [gdt 2025-09-04]
