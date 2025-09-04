@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST.gnutls,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl-certificate-impl__gnutls.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl-certificate-impl__gnutls.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/aws-net-ssl__gnutls.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/ssl-thin__gnutls.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.relocatable/wrappers.c
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl-certificate-impl__gnutls.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl-certificate-impl__gnutls.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/aws-net-ssl__gnutls.adb
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/ssl-thin__gnutls.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/include/aws.static-pic/wrappers.c
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl-certificate-impl__gnutls.adb
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl-certificate-impl__gnutls.ads
+${GNAT_PKGBASE}/include/aws.static/aws-net-ssl__gnutls.adb
+${GNAT_PKGBASE}/include/aws.static/ssl-thin__gnutls.ads
+${GNAT_PKGBASE}/include/aws.static/wrappers.c
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-net-ssl-certificate-impl__gnutls.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/aws-net-ssl__gnutls.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.relocatable/ssl-thin__gnutls.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-net-ssl-certificate-impl__gnutls.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/aws-net-ssl__gnutls.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/aws.static-pic/ssl-thin__gnutls.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-net-ssl-certificate-impl__gnutls.ali
+${GNAT_PKGBASE}/lib/aws.static/aws-net-ssl__gnutls.ali
+${GNAT_PKGBASE}/lib/aws.static/ssl-thin__gnutls.ali

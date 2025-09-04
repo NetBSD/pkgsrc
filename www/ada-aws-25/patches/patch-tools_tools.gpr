@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_tools.gpr,v 1.1 2025/09/04 13:02:47 dkazankov Exp $
+
+Resolve name conflict with standalone templates parser
+
+--- tools/tools.gpr.orig	2024-12-20 16:02:53.000000000 +0200
++++ tools/tools.gpr
+@@ -98,6 +98,8 @@
+       for Switches (others) use Shared.Builder'Switches (others);
+       for Executable ("ada2wsdl-main.adb") use "ada2wsdl";
+       for Executable ("wsdl2aws-main.adb") use "wsdl2aws";
++      for Executable ("templates2ada.adb") use "aws_templates2ada";
++      for Executable ("templatespp.adb") use "aws_templatespp";
+    end Builder;
+ 
+    ---------
