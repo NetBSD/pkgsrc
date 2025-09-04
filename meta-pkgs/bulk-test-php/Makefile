@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/03/06 23:15:01 jym Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/04 00:12:31 taca Exp $
 
-DISTNAME=	bulk-test-php-20240227
+DISTNAME=	bulk-test-php-20250904
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +16,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 # Large programs and applications
-DEPENDS+=	${PHP_PKG_PREFIX}-dotclear-[0-9]*:../../www/php-dotclear
+#DEPENDS+=	${PHP_PKG_PREFIX}-dotclear-[0-9]*:../../www/php-dotclear
 DEPENDS+=	${PHP_PKG_PREFIX}-wordpress-[0-9]*:../../www/wordpress
 DEPENDS+=	${PHP_PKG_PREFIX}-nextcloud-[0-9]*:../../www/php-nextcloud
 DEPENDS+=	${PHP_PKG_PREFIX}-owncloud-[0-9]*:../../www/php-owncloud
