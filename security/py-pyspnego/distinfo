@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/11/16 10:29:57 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/09/04 11:10:58 adam Exp $
 
-BLAKE2s (pyspnego-0.11.2.tar.gz) = 91f3f3e9ce7ecb5e3df5495faf0ea75b5130813d9ea56d91fb2df35b50f30a4d
-SHA512 (pyspnego-0.11.2.tar.gz) = 6e2a16b538d5c078842db1629628b13257a900c51778b9186f4edff33b4e932eaff2a8ccad41b50a8a89118283059fc716cfc92dfe423ed1ead1a22e6a172a9c
-Size (pyspnego-0.11.2.tar.gz) = 225954 bytes
+BLAKE2s (pyspnego-0.12.0.tar.gz) = 2c8fd648c4cb49ca99f4264a1389f140cea9832061e855aa20f532664ed855c4
+SHA512 (pyspnego-0.12.0.tar.gz) = 0fb6d0c7f07a9ed0ab10ea5bf771acb7b99d91c6f3031faa5451520004fcc6868751f86725a3b8a75078d6396ffae60669a40fca46f24853587922d01ae76e52
+Size (pyspnego-0.12.0.tar.gz) = 225764 bytes
