@@ -1,0 +1,12 @@
+pynmeagps is a Python 3 parser aimed primarily at the subset of the
+NMEA 0183 v4 protocol relevant to GNSS/GPS receivers.  The intention
+is to make it as easy as possible to read, parse and utilise NMEA
+GNSS/GPS messages in Python applications.
+
+The library implements a comprehensive set of outbound (GET) and
+inbound (SET/POLL) GNSS NMEA messages relating to GNSS/GPS and
+Maritime devices, but is readily extensible. Refer to NMEA_MSGIDS and
+NMEA_MSGIDS_PROP for the complete dictionary of standard and
+proprietary messages currently supported. While the NMEA 0183 protocol
+itself is proprietary, the definitions here have been collated from
+public domain sources.
