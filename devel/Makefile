@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4517 2025/09/04 11:17:42 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4518 2025/09/04 11:55:03 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -2796,6 +2796,7 @@ SUBDIR+=	py-lazy-object-proxy
 SUBDIR+=	py-lexid
 SUBDIR+=	py-lib3to6
 SUBDIR+=	py-libevent-rpcgen
+SUBDIR+=	py-liblktlang
 SUBDIR+=	py-libmc
 SUBDIR+=	py-libusb1
 SUBDIR+=	py-license-expression
