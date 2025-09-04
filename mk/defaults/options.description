@@ -306,6 +306,16 @@ glfw			Enable GLFW support
 glib2			Enable libGIO support.
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
+gnatcoll-all2ada	Build gnatcoll-db with all2ada tool.
+gnatcoll-db2ada		Build gnatcoll-db with db2ada tool.
+gnatcoll-cpp		Enable GNATCOLL C++ strings binding.
+gnatcoll-gnatinspect	Build gnatcoll-db with gnatinspect tool.
+gnatcoll-postgres	Build gnatcoll-db with postgres support.
+gnatcoll-postgres2ada	Build gnatcoll-db with postgres2ada tool.
+gnatcoll-sql		Build gnatcoll-db with sql support.
+gnatcoll-sqlite		Build gnatcoll-db with sqlite support.
+gnatcoll-sqlite2ada	Build gnatcoll-db with sqlite2ada tool.
+gnatcoll-xref		Build gnatcoll-db with cross-referencing tool.
 gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
@@ -798,6 +808,8 @@ pygments		Enable Pygments support.
 pymalloc		Build python with the pymalloc specialist object allocator.
 pyrex			Enable Pyrex language support.
 python			Enable Python support.
+python2			Enable Python 2 only support.
+python3			Enable Python 3 only support.
 qdbm			Enable qdbm support.
 qemu			Use qemu.
 qemu-0			Use qemu-0.x.
