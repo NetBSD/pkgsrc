@@ -1,0 +1,1 @@
+bin/create-project.py @PREFIX@/bin/create-project@PYVERSSUFFIX@.py
