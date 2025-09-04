@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/08/31 10:18:58 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/09/04 11:14:03 adam Exp $
 
-DISTNAME=	psutils-3.3.12
+DISTNAME=	psutils-3.3.13
 # renamed from pspdfutils to psutils in 3.3.7
 # TODO: follow suit
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ps/pspdf/}
@@ -29,7 +29,6 @@ PYTHON_SELF_CONFLICT=		yes
 .include "../../mk/bsd.prefs.mk"
 
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/psutils-${PKGVERSION_NOREV}.dist-info/.bak.0.SOURCES.txt
 .if ${PKGMANDIR} != "share/man"
 	cd ${DESTDIR}${PREFIX}/share/man && ${MV} * ${DESTDIR}${PREFIX}/${PKGMANDIR}
 .endif
