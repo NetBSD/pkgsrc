@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.1 2025/09/04 07:55:37 dkazankov Exp $
+# $NetBSD: inplace.mk,v 1.2 2025/09/04 09:24:55 dkazankov Exp $
 #
 # Include this file to extract library source into the WRKSRC of
 # another package.
@@ -44,7 +44,7 @@ extract-inplace-adasat:
 
 USE_TOOLS+=		gmake
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-relocatable-adasat
 
@@ -60,9 +60,9 @@ build-inplace-relocatable-adasat:
 	    INSTALL_DIR=${BUILDLINK_DIR} BUILD_MODE=prod LIBRARY_TYPE=relocatable \
 	    -f Makefile install-lib
 
-.endif
+.  endif
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-static-pic-adasat
 
@@ -78,6 +78,6 @@ build-inplace-static-pic-adasat:
 	    INSTALL_DIR=${BUILDLINK_DIR} BUILD_MODE=prod LIBRARY_TYPE=static-pic \
 	    -f Makefile install-lib
 
-.endif
+.  endif
 
 .endif
