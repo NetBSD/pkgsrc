@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.1 2025/09/04 07:53:28 dkazankov Exp $
+# $NetBSD: inplace.mk,v 1.2 2025/09/04 09:24:55 dkazankov Exp $
 #
 # Include this file to extract library source into the WRKSRC of
 # another package.
@@ -54,7 +54,7 @@ USE_TOOLS+=		gmake sed
 USE_GNU_ICONV=	yes
 .include "../../converters/libiconv/buildlink3.mk"
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-relocatable-gnatcoll-bindings
 
@@ -75,9 +75,9 @@ build-inplace-relocatable-gnatcoll-bindings:
 		BINDINGS='gmp iconv' DESTDIR=${BUILDLINK_DIR} prefix=${BUILDLINK_DIR} BUILD=PROD ENABLE_SHARED=yes \
 		-f Makefile install
 
-.endif
+.  endif
 
-.if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
+.  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mstatic-pic)
 
 INPLACE_BUILD_TARGETS+=	build-inplace-static-pic-gnatcoll-bindings
 
@@ -100,6 +100,6 @@ build-inplace-static-pic-gnatcoll-bindings:
 		prefix=${BUILDLINK_DIR} BUILD=PROD ENABLE_SHARED=yes \
 		-f Makefile install
 
-.endif
+.  endif
 
 .endif
