@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/14 13:48:28 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/04 08:15:53 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	libgpr-${GNAT_NAME}-25.0.0
@@ -25,7 +25,7 @@ GCC_REQD+=	14
 
 SUBST_CLASSES+=		version
 SUBST_MESSAGE.version=	Replace version,date and type in ${SUBST_FILES.version}
-SUBST_STAGE.version=	pre-configure
+SUBST_STAGE.version=	post-extract
 SUBST_FILES.version=	gpr/src/gpr-version.ads
 SUBST_SED.version=	-e "s,18.0w,25.0w,"
 SUBST_SED.version+=	-e "s,19940713,20241126,"
@@ -36,9 +36,9 @@ SUBST_SED.version+=	-e "s,= Gnatpro;,= FSF;,"
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=			getrusage
 SUBST_MESSAGE.getrusage=	Replace getrusage with __netbsd_getrusage in ${SUBST_FILES.getrusage}
-SUBST_STAGE.getrusage=		pre-configure
+SUBST_STAGE.getrusage=		post-extract
 SUBST_FILES.getrusage=		gpr/src/gpr-util-put_resource_usage__unix.adb
-SUBST_SED.getrusage=		-e "s,\"getrusage\",\"__netbsd_getrusage\","
+SUBST_SED.getrusage=		-e "s,with Import\, Convention => C;,with Import\, Convention => C\, External_Name => \"__netbsd_getrusage\";,"
 .endif
 
 CONFIG_SHELL=		${MAKE_PROGRAM} -f
