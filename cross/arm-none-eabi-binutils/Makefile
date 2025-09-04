@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2021/12/14 10:33:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2025/09/04 23:06:24 lloyd Exp $
 
-DISTNAME=	binutils-2.32
+DISTNAME=	binutils-2.45
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	# empty
@@ -13,7 +13,8 @@ COMMENT=	Cross binutils for bare metal ARM EABI
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo perl
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # several sub-configures know --enable-nls
 
@@ -31,5 +32,8 @@ INFO_FILES=		yes
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${MKDIR} ${OBJDIR}
+
+post-install:
+	${RM} ${DESTDIR}${ARMELF_PREFIX}/arm-none-eabi/lib/ldscripts/stamp
 
 .include "../../mk/bsd.pkg.mk"
