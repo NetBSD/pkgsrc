@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4516 2025/09/04 11:07:43 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4517 2025/09/04 11:17:42 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -131,6 +131,7 @@ SUBDIR+=	ada-gnat-glade
 SUBDIR+=	ada-gnatcoll-bindings-25
 SUBDIR+=	ada-gnatcoll-core-24
 SUBDIR+=	ada-gnatcoll-core-25
+SUBDIR+=	ada-langkit-support-25
 SUBDIR+=	ada-libgpr-24
 SUBDIR+=	ada-libgpr-25
 SUBDIR+=	ada-libgpr2-25
