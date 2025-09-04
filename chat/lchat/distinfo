@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/09/04 17:23:50 vins Exp $
+
+BLAKE2s (lchat-1.0.tar.gz) = fc9ab2ada90429da361dd47267eeb989bfb7a73abfd0850da10ae127137f605c
+SHA512 (lchat-1.0.tar.gz) = cde5fd193d7c8251ca94bc8a4e648faaad01ec9eac5b09365c34a51646aa70e7031ec40acce121e8187cec2f692caa16a0a3fb68223b2fcfba1a411757e70923
+Size (lchat-1.0.tar.gz) = 24455 bytes
+SHA1 (patch-config.mk) = 06482d0c744a657e69876997137589c0d1dabb8b
