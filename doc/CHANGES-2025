@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5366 2025/09/04 10:46:14 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5367 2025/09/04 11:08:49 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7758,3 +7758,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libjpeg-turbo to 3.1.2 [adam 2025-09-04]
 	Updated textproc/py-deepdiff to 8.6.1 [adam 2025-09-04]
 	Added textproc/ada-templates-parser-25 version 25.0.0 [dkazankov 2025-09-04]
+	Added devel/py-langkit version 25.0.0 [dkazankov 2025-09-04]
