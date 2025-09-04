@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/02 16:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/04 18:22:34 vins Exp $
 
 # make sure to upload a copy to ftp.NetBSD.org when updating this package
 DISTNAME=	usenet_reborn-0.2.0
@@ -36,5 +36,6 @@ post-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
