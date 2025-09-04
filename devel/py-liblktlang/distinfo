@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/04 11:55:04 dkazankov Exp $
+
+BLAKE2s (langkit-25.0.0.tar.gz) = 95e96b32ab3fe5f08608b39b0e547d0de4e25715b4785ae6aa642d477117a1f5
+SHA512 (langkit-25.0.0.tar.gz) = 27ffecb9b6c5568ebdba4864d9c5ef7e511718083fe087e3af60cfe8cc994b6ea7353cc745bc33395d33e169aaaf6916d991fa4941774932904df3e9b455f1dc
+Size (langkit-25.0.0.tar.gz) = 1560623 bytes
