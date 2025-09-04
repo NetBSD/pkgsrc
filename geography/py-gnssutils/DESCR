@@ -1,0 +1,4 @@
+pygnssutils is a series of Python GNSS utility classes and CLI tools
+built around core libraries from the same author.  It includes
+programs to parse and reformat GNSS messages, and to fetch corrections
+(or reference data) via NTRIP or SPARTN.
