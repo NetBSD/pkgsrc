@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/11 14:52:45 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/04 08:08:01 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -26,18 +26,18 @@ GCC_REQD+=	14
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		ldl
 SUBST_MESSAGE.ldl=	Fix extra libs on NetBSD in ${SUBST_FILES.ldl}
-SUBST_STAGE.ldl=	pre-configure
+SUBST_STAGE.ldl=	post-extract
 SUBST_FILES.ldl=	core/gnatcoll_core.gpr
 SUBST_SED.ldl=		-e "s,\"-ldl\",\"\","
 
 SUBST_CLASSES+=		opendir
 SUBST_MESSAGE.opendir=	Replace opendir with __gnatcoll_opendir in ${SUBST_FILES.opendir}
-SUBST_STAGE.opendir=	pre-configure
+SUBST_STAGE.opendir=	post-extract
 SUBST_FILES.opendir=	core/src/os/unix/gnatcoll-os-libc-dirent.ads
 SUBST_SED.opendir=	-e "s,\"opendir\",\"__gnatcoll_opendir\","
 .endif
 
-MAKE_FLAGS+=	prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
+MAKE_FLAGS+=		PYTHON=${PYTHONBIN:Q} prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
 
 PLIST_VARS+=			shlibs
 
