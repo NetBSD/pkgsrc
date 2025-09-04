@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 12:37:35 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/04 13:50:48 gdt Exp $
 
 VERSION=	1.0.51
 DISTTAIL=	nmeagps
@@ -10,7 +10,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=semuconsulting/}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://github.com/semuconsulting/pynmeagps/
+HOMEPAGE=	https://github.com/semuconsulting/py${DISTTAIL}/
 COMMENT=	Python parser for NMEA 0183 (GNSS-relevant subset)
 LICENSE=	modified-bsd
 
