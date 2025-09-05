@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5390 2025/09/05 14:27:41 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5391 2025/09/05 14:39:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7790,3 +7790,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-alembic to 1.16.5 [adam 2025-09-05]
 	Updated textproc/py-itemadapter to 0.12.2 [adam 2025-09-05]
 	Updated devel/swagger-codegen to 3.0.72 [schmonz 2025-09-05]
+	Updated textproc/moor to 2.1.0 [schmonz 2025-09-05]
