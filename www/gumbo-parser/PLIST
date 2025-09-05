@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2020/10/08 22:36:20 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/05 14:56:05 ktnb Exp $
 include/gumbo.h
 include/tag_enum.h
-lib/libgumbo.la
+lib/libgumbo.a
+lib/libgumbo.so
+lib/libgumbo.so.3
+lib/libgumbo.so.3.0.0
 lib/pkgconfig/gumbo.pc
