@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5387 2025/09/05 07:52:38 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5388 2025/09/05 08:29:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7786,3 +7786,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/bird to 3.1.3 [adam 2025-09-05]
 	Updated www/palemoon to 33.8.2 [nia 2025-09-05]
 	Updated wm/spectrwm to 3.7.0 [pin 2025-09-05]
+	Updated sysutils/fzf to 0.65.2 [pin 2025-09-05]
