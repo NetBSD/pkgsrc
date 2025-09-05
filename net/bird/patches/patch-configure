@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.5 2025/05/18 02:10:50 markd Exp $
+$NetBSD: patch-configure,v 1.6 2025/09/05 06:23:45 adam Exp $
 
-let pkgsrc figure out the correct paths
+pthread_spin_lock() is portable.
+Let pkgsrc figure out the correct paths.
 
---- configure.orig	2025-04-03 18:50:57.000000000 +0000
+--- configure.orig	2025-05-26 19:27:50.000000000 +0000
 +++ configure
-@@ -5596,21 +5596,15 @@ else
+@@ -4776,8 +4776,6 @@ main (void)
+ 
+ 	      pthread_t pt;
+ 	      pthread_create(&pt, NULL, NULL, NULL);
+-	      pthread_spinlock_t lock;
+-	      pthread_spin_lock(&lock);
+ 
+ 
+   ;
+@@ -5651,21 +5649,15 @@ else
        ;;
      freebsd*)
        sysdesc=bsd
