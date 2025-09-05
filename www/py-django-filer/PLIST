@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/04/14 13:30:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/09/05 05:39:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -379,6 +379,7 @@ ${PYSITELIB}/filer/templates/admin/filer/folder/choose_rename_format.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/directory_listing.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/directory_table_list.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/directory_thumbnail_list.html
+${PYSITELIB}/filer/templates/admin/filer/folder/legacy_listing.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/list_type_switcher.html
 ${PYSITELIB}/filer/templates/admin/filer/folder/new_folder_form.html
 ${PYSITELIB}/filer/templates/admin/filer/image/change_form.html
