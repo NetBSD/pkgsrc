@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/08/02 09:55:55 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/05 19:09:49 js Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-qt6-/}
 COMMENT=	Applications for entering PINs or Passphrases, Qt6 enabled
@@ -26,6 +26,10 @@ INSTALL_DIRS=		qt
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i -f
+
+post-configure:
+	# Delete VERSION as it breaks #include <version> on Darwin.
+	cd ${WRKSRC} && rm VERSION
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../x11/qt6-qtbase/buildlink3.mk"
