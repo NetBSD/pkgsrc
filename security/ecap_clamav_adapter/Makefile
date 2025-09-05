@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2025/04/17 21:52:13 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/09/05 09:12:59 bouyer Exp $
 
 DISTNAME=	ecap_clamav_adapter-2.0.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	security
 MASTER_SITES=	http://www.measurement-factory.com/tmp/ecap/
 
@@ -14,6 +14,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+CXXFLAGS+=	-fpermissive
 
 .include "../../security/clamav/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
