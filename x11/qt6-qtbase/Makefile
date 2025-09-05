@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/09/03 00:04:32 js Exp $
+# $NetBSD: Makefile,v 1.53 2025/09/05 19:04:16 js Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtbase-${QTVERSION}
@@ -65,11 +65,7 @@ CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
 .endif
 
-PLIST_VARS+=	egl egldevice x11 NotDarwin
-
-.if ${OPSYS} != "Darwin"
-PLIST.NotDarwin=	yes
-.endif
+PLIST_VARS+=	egl egldevice x11
 
 .include "../../mk/compiler.mk"
 

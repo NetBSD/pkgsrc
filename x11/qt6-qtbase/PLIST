@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/09/03 00:04:32 js Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/09/05 19:04:16 js Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -323,7 +323,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qthreadpool_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qthreadstorage_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimer_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimerinfo_unix_p.h
-${PLIST.NotDarwin}qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimezonelocale_p.h
+${PLIST.x11}qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimezonelocale_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtimezoneprivate_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtipccommon_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtools_p.h
