@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/09/01 11:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/05 07:47:10 wiz Exp $
 
 DISTNAME=	libjwt-3.2.2
 CATEGORIES=	security
@@ -12,7 +12,7 @@ COMMENT=	JWT C library
 LICENSE=	mpl-2.0
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bash:test pkg-config
+USE_TOOLS+=		bash pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_GNUTLS=OFF
 
