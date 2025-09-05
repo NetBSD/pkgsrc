@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5393 2025/09/05 14:56:21 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5394 2025/09/05 18:53:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7793,3 +7793,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.1.0 [schmonz 2025-09-05]
 	Updated textproc/ov to 0.43.0 [schmonz 2025-09-05]
 	Updated www/gumbo-parser to 0.13.2 [ktnb 2025-09-05]
+	Updated textproc/uriparser to 0.9.9 [wiz 2025-09-05]
