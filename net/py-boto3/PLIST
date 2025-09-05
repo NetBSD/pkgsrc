@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/15 07:56:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/05 05:27:56 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -26,7 +26,6 @@ ${PYSITELIB}/boto3/data/ec2/2016-09-15/resources-1.json
 ${PYSITELIB}/boto3/data/ec2/2016-11-15/resources-1.json
 ${PYSITELIB}/boto3/data/glacier/2012-06-01/resources-1.json
 ${PYSITELIB}/boto3/data/iam/2010-05-08/resources-1.json
-${PYSITELIB}/boto3/data/opsworks/2013-02-18/resources-1.json
 ${PYSITELIB}/boto3/data/s3/2006-03-01/resources-1.json
 ${PYSITELIB}/boto3/data/sns/2010-03-31/resources-1.json
 ${PYSITELIB}/boto3/data/sqs/2012-11-05/resources-1.json
