@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/07/23 08:10:28 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/05 14:56:05 ktnb Exp $
 
-VERSION=	0.13.1
+VERSION=	0.13.2
 PKGNAME=	gumbo-parser-${VERSION}
 DISTNAME=	${VERSION}
 CATEGORIES=	www
@@ -16,13 +16,15 @@ WRKSRC=		${WRKDIR}/gumbo-parser
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf automake
+USE_TOOLS+=	aclocal autoconf automake cmake pkg-config
 
 PKGCONFIG_OVERRIDE=	gumbo.pc.in
 
-USE_LANGUAGES=	c99 c++
+USE_LANGUAGES=	c c++
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
+.include "../../devel/meson/build.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

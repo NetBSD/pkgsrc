@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/07/23 08:10:28 pin Exp $
+$NetBSD: distinfo,v 1.8 2025/09/05 14:56:05 ktnb Exp $
 
-BLAKE2s (gumbo-parser/0.13.1.tar.gz) = f31cd5af15f0e3a9ee931bcd6c810d781587a6243271b858617258be105e17f6
-SHA512 (gumbo-parser/0.13.1.tar.gz) = 22bdaac728e79fb176ea82d40bfab77500a85952d731f832ffa6defb48264a1f108a9bbde19fd60e9d829d23059feab0744b4dabf887997596892b815cb26f17
-Size (gumbo-parser/0.13.1.tar.gz) = 2115080 bytes
+BLAKE2s (gumbo-parser/0.13.2.tar.gz) = c1f14109ba4331666a954eb6d0c1791aaf5dbeaf4de840efd8cba6b904d54993
+SHA512 (gumbo-parser/0.13.2.tar.gz) = 1513e88acfc3240081039b30ab63ca6fc23a85b7d1415cb8e90e9c43f9c3d99d37634a7a50d81ef7f6d43a4facac3802feea6959256a2330b26b16523a288568
+Size (gumbo-parser/0.13.2.tar.gz) = 2145403 bytes
