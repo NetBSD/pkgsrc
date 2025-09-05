@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5383 2025/09/05 05:33:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5384 2025/09/05 05:42:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7779,3 +7779,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-boto3 to 1.40.24 [adam 2025-09-05]
 	Updated net/py-awscli to 1.42.24 [adam 2025-09-05]
 	Updated textproc/py-markdown to 3.9 [adam 2025-09-05]
+	Updated devel/py-test to 8.4.2 [adam 2025-09-05]
+	Updated www/py-django-filer to 3.3.2 [adam 2025-09-05]
+	Updated devel/py-test-mock to 3.15.0 [adam 2025-09-05]
+	Updated devel/py-xdis to 6.1.6 [adam 2025-09-05]
