@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/07/29 09:49:02 pin Exp $
+$NetBSD: distinfo,v 1.16 2025/09/05 07:52:15 pin Exp $
 
-BLAKE2s (spectrwm-3.6.0.tar.gz) = d25cbeff7b2f183d04b572b14dc56b079e1b539db1a8f447b2609870ef77702d
-SHA512 (spectrwm-3.6.0.tar.gz) = 70ae19d792ae8b9fcbaaf15d9e1a13b83e992c06ac77333712eca4178270b431adb13125ed316c129aadb2d8243abd9f5b1b6a91505f1b7a04feaf78c6f3d85d
-Size (spectrwm-3.6.0.tar.gz) = 205957 bytes
+BLAKE2s (spectrwm-3.7.0.tar.gz) = 7e57469fe0cc59032fd2b00e1f330487f59fb20e94e9d7436d3b3c5d5e43e5e7
+SHA512 (spectrwm-3.7.0.tar.gz) = 969e4f055dda3c745b5dbf5930f174bbec39ece64a7d44c3ced886878d8b949b43a08d13e1a22c000eee041da812411573fa78ae8fe01bc8ba60466993be4a3b
+Size (spectrwm-3.7.0.tar.gz) = 214112 bytes
