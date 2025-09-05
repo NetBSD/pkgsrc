@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.37 2024/05/16 09:59:20 pho Exp $
 
-DISTNAME=	nim-2.0.4
+DISTNAME=	nim-2.0.16
 CATEGORIES=	lang
 MASTER_SITES=	http://nim-lang.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +13,7 @@ LICENSE=	mit
 # C2VERSION_TAG=	86742fb02c6606ab01a532a0085784effb2e753e
 # NIMBLE_TAG=	168416290e49023894fc26106799d6f1fc964a2d
 # CHECKSUMS_TAG=	b4c73320253f78e3a265aec6d9e8feb83f97c77b
-ATLAS_TAG=	7b780811a168f3f32bff4822369dda46a7f87f9a
+ATLAS_TAG=	60681b93af4c8914afbd8eae9fc9820ba4d198a0
 
 GH_SFX=		.tar.gz
 
@@ -87,6 +87,19 @@ post-extract:
 	#mkdir -p $build_wrksrc/dist/nimble/dist
 	#cp -r $build_wrksrc/dist/checksums $build_wrksrc/dist/nimble/dist/checksums
 	${MV} ${WRKSRC}/dist/atlas-${ATLAS_TAG} ${WRKSRC}/dist/atlas
+	# atlas also needs sat, so it wants to git clone it. pkgsrc doesn't
+	# allow that. We use cp instead of ln for DirExists in cloneDependency
+	# proc on tools/deps.nim
+	${MKDIR} ${WRKSRC}/dist/atlas/dist
+	${CP} -r ${WRKSRC}/dist/nimble/vendor/sat ${WRKSRC}/dist/atlas/dist/sat
+
+post-patch:
+	# To fix a git hash related error
+	${SED} -i'.orig' -e '/git_revision_override\*/ s,"","-",' \
+		${WRKSRC}/dist/nimble/src/nimblepkg/options.nim
+	# Allow to compile on NetBSD
+	${SED} -i'.orig' -e '/"freebsd"/ s,$$,\n    elif defined(netbsd):\n      "netbsd",' \
+		${WRKSRC}/dist/nimble/src/nimblepkg/downloadnim.nim
 
 # nim doesn't honor the environment variable LDFLAGS. In order to
 # support PKGSRC_USE_RELRO, we need to translate the flags to compiler

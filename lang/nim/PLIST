@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/04/22 13:23:55 nikita Exp $
+@comment $NetBSD$
 bin/nim
 bin/nim-gdb
 bin/nim_dbg
@@ -7,6 +7,7 @@ bin/niminst
 bin/nimpretty
 bin/nimsuggest
 bin/testament
+lib/nim/nimpretty/nimpretty
 lib/nim/nimpretty/nimpretty.nim
 lib/nim/nimpretty/nimpretty.nim.cfg
 lib/nim/nimpretty/tester.nim
@@ -26,6 +27,7 @@ lib/nim/nimpretty/tests/tevil_spaces.nim
 lib/nim/nimpretty/tests/wrong_ind.nim
 lib/nim/nimsuggest/config.nims
 lib/nim/nimsuggest/crashtester.nim
+lib/nim/nimsuggest/nimsuggest
 lib/nim/nimsuggest/nimsuggest.nim
 lib/nim/nimsuggest/nimsuggest.nim.cfg
 lib/nim/nimsuggest/nimsuggest.nimble
@@ -46,6 +48,7 @@ lib/nim/nimsuggest/tests/t20265_2.nim
 lib/nim/nimsuggest/tests/t20440.nim
 lib/nim/nimsuggest/tests/t20440.nims
 lib/nim/nimsuggest/tests/t21185.nim
+lib/nim/nimsuggest/tests/t22448.nim
 lib/nim/nimsuggest/tests/taccent_highlight.nim
 lib/nim/nimsuggest/tests/tcallstrlit_highlight.nim
 lib/nim/nimsuggest/tests/tcase.nim
@@ -66,6 +69,7 @@ lib/nim/nimsuggest/tests/tdot3.nim
 lib/nim/nimsuggest/tests/tdot4.nim
 lib/nim/nimsuggest/tests/tfatal1.nim
 lib/nim/nimsuggest/tests/tgeneric_highlight.nim
+lib/nim/nimsuggest/tests/timport_highlight.nim
 lib/nim/nimsuggest/tests/tinclude.nim
 lib/nim/nimsuggest/tests/tmacro_highlight.nim
 lib/nim/nimsuggest/tests/tno_deref.nim
