@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2025/08/13 15:41:33 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.2 2025/09/05 14:39:22 schmonz Exp $
 
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.19.1-0.20250723141813-02ff9d482061.mod
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.19.1-0.20250723141813-02ff9d482061.zip
@@ -21,8 +21,8 @@ GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.2.2.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.zip
-GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.11.mod
-GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.11.zip
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.15.mod
+GO_MODULE_FILES+=	github.com/ulikunitz/xz/@v/v0.5.15.zip
 GO_MODULE_FILES+=	github.com/yuin/goldmark/@v/v1.2.1.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20191011191535-87dc89f01550.mod

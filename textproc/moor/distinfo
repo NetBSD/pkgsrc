@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/08/18 03:03:04 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2025/09/05 14:39:22 schmonz Exp $
 
 BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.19.1-0.20250723141813-02ff9d482061.mod) = 9b3196a44d836a0dabc17bc19b7e254ecba0dd2cc54f95cf392a0de0ff4e6543
 SHA512 (github.com_alecthomas_chroma_v2_@v_v2.19.1-0.20250723141813-02ff9d482061.mod) = 69bd12e468da4c0dc1a242dd56afe910929f7f2368df4fe77368d8ea96ec8eec45892ed2447e759a368f5740bbc0f2b60e67a15134151ce15327222264f55a92
@@ -63,12 +63,12 @@ Size (github.com_stretchr_testify_@v_v1.7.0.mod) = 216 bytes
 BLAKE2s (github.com_stretchr_testify_@v_v1.7.0.zip) = 08a00cd2aeb3930e2fbe87d008d123d546f43b1f1d0a6633f44ad124298b87e8
 SHA512 (github.com_stretchr_testify_@v_v1.7.0.zip) = be80972112f0a3907bde960637cb2c08d6ba4256ca27cfa07de5a0a8e523d0dfbd8e90ae593e5302d7351b7dbddecf69dc3985a9d19b96087732dd886eff371f
 Size (github.com_stretchr_testify_@v_v1.7.0.zip) = 105564 bytes
-BLAKE2s (github.com_ulikunitz_xz_@v_v0.5.11.mod) = 9b4f34082513801e62e744c626be31f00dd7d0b2f81ec14710f90412be1f521a
-SHA512 (github.com_ulikunitz_xz_@v_v0.5.11.mod) = fc06f111ad8fe91b6233781e300d3abe760140633f45c51fc7b93c744b870f66727d12132e692b5d59526fddd1f728d7a18976e392052d9fe362d3a39149cbb1
-Size (github.com_ulikunitz_xz_@v_v0.5.11.mod) = 40 bytes
-BLAKE2s (github.com_ulikunitz_xz_@v_v0.5.11.zip) = 9800cec9497c33f3e00aa40e9a0f17fe078a11a907efd79696f16db5b8d5a3bf
-SHA512 (github.com_ulikunitz_xz_@v_v0.5.11.zip) = 98b15482dc5189136763349630869279f4bf9777188025dfa0c4daf6c72b4722c5d1fc37296e734b938c9729806a861d19a26fb24f9fbd49de29573a903da5de
-Size (github.com_ulikunitz_xz_@v_v0.5.11.zip) = 4239825 bytes
+BLAKE2s (github.com_ulikunitz_xz_@v_v0.5.15.mod) = 9b4f34082513801e62e744c626be31f00dd7d0b2f81ec14710f90412be1f521a
+SHA512 (github.com_ulikunitz_xz_@v_v0.5.15.mod) = fc06f111ad8fe91b6233781e300d3abe760140633f45c51fc7b93c744b870f66727d12132e692b5d59526fddd1f728d7a18976e392052d9fe362d3a39149cbb1
+Size (github.com_ulikunitz_xz_@v_v0.5.15.mod) = 40 bytes
+BLAKE2s (github.com_ulikunitz_xz_@v_v0.5.15.zip) = 6b2acbc23fe78cc7ba0d010f76ca2caf5d7b134ed32a9e90dd73619bc7c41860
+SHA512 (github.com_ulikunitz_xz_@v_v0.5.15.zip) = 7299f2e4851e844b4ae57c27f0c4c6bf193a0124cde5a6e757e8f10656b731a37cc492fa60fe7f7246c478a7b3860561549a53aeb50597049148ea1a82d147f9
+Size (github.com_ulikunitz_xz_@v_v0.5.15.zip) = 4245181 bytes
 BLAKE2s (github.com_yuin_goldmark_@v_v1.2.1.mod) = 62390084d7563ca7569d618375be066ef419b054389b8c8a7ff8dd7d6c18ddf9
 SHA512 (github.com_yuin_goldmark_@v_v1.2.1.mod) = b7d81f5cbf1b55ebebcbb86ae89899ffec6fcd730144f1719947a76080f587d298d0e37a073a8768d7768ef64fc47b1673104335203a32a557f31e42a4e5a950
 Size (github.com_yuin_goldmark_@v_v1.2.1.mod) = 41 bytes
@@ -171,6 +171,6 @@ Size (gotest.tools_v3_@v_v3.3.0.mod) = 189 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.3.0.zip) = 423fc3f010d9c97ade508b10b055fc63c3281231b357f8fe70d540b3153c3156
 SHA512 (gotest.tools_v3_@v_v3.3.0.zip) = 5cbbd6ef791325a668daa7de227b8e75b9a636acfc63214cb71b024a6ecb448770c42d1d0fff868d1f4d8a97f99ab39e738c5fd5ded5def30209cf460ba78664
 Size (gotest.tools_v3_@v_v3.3.0.zip) = 98546 bytes
-BLAKE2s (moor-2.0.4.tar.gz) = ff2b4ea87529e239b41939c8aa70612e51875e5f81a7457328b6104703b31211
-SHA512 (moor-2.0.4.tar.gz) = d99f5549f11ff5ff251f6f3d18ec620c2631df87463dadf0a4088aa40be1b070d27408b19bdcd8894658260a7f7d2f14af263f90ef3708f1b6a0973e0f7daab3
-Size (moor-2.0.4.tar.gz) = 3013176 bytes
+BLAKE2s (moor-2.1.0.tar.gz) = 051a6337be0e132a55a758084378671dcda7aae4d946447e9e0a3ae4d6d4304e
+SHA512 (moor-2.1.0.tar.gz) = 04066a261739a4e47b2b2b8bb807b5a5dcc9554cf7eda1587e72e5c1922888439c5f77ea212eac3b68a3f215efa848e50c047fb3c63be299575962bdc04fbf3a
+Size (moor-2.1.0.tar.gz) = 3013179 bytes
