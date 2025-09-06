@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/09/06 18:29:02 riastradh Exp $
+
+BLAKE2s (socket_wrapper-1.5.0.tar.gz) = 4273a026191820a5e3583aae402a52128b34352a5736d3f070289e9ad2a69ed2
+SHA512 (socket_wrapper-1.5.0.tar.gz) = 2ab501e592e6ece88a3e1f5f34a81d6504a07a3df10d21aa4d21b2c96637e7c3660be309624ba9f743e46deb8ac75e8152e082d313cd7b31e510291c5b0ebd20
+Size (socket_wrapper-1.5.0.tar.gz) = 89865 bytes
+SHA1 (patch-src_socket__wrapper.c) = 71ff9f81b3eff06d5a8ef02e20e2b708882ed382
