@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5400 2025/09/06 10:03:13 mef Exp $
+$NetBSD: CHANGES-2025,v 1.5401 2025/09/06 12:44:20 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7801,3 +7801,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-about to 0.8.0 [pin 2025-09-06]
 	Updated devel/userspace-rcu to 0.15.3 [he 2025-09-06]
 	Updated cad/gtkwave to 3.3.125 [mef 2025-09-06]
+	Updated chat/element-web to 1.11.110 [js 2025-09-06]
