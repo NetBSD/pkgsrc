@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5398 2025/09/06 06:43:51 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5399 2025/09/06 09:30:02 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7799,3 +7799,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libatomic_ops to 7.8.4 [adam 2025-09-06]
 	Updated net/yt-dlp to 2025.9.5 [adam 2025-09-06]
 	Updated devel/cargo-about to 0.8.0 [pin 2025-09-06]
+	Updated devel/userspace-rcu to 0.15.3 [he 2025-09-06]
