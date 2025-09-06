@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 11:55:03 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/06 16:47:31 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-25.0.0
 PKGNAME=	${PYPKGPREFIX}-liblktlang-25.0
@@ -69,15 +69,9 @@ PYSETUPSUBDIR=		contrib/lkt/build/python
 INSTALLATION_DIRS+=	bin
 
 pre-install:
-.if ${OPSYS} == "AIX" || ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "QNX"
-	cd ${WRKSRC}/contrib/lkt/build/scripts && \
-	${PAX} lkt_playground ${DESTDIR}${PREFIX}/bin/ && \
-	${MV} ${DESTDIR}${PREFIX}/bin/lkt_playground ${DESTDIR}${PREFIX}/bin/lkt_playground${PYVERSSUFFIX}
-.else
-	${TOOLS_PLATFORM.install} \
+	${INSTALL_SCRIPT} \
 	    ${WRKSRC}/contrib/lkt/build/scripts/lkt_playground \
 	    ${DESTDIR}${PREFIX}/bin/lkt_playground${PYVERSSUFFIX}
-.endif
 
 .include "../../devel/gprbuild/buildlink3.mk"
 
