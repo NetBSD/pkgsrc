@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/08/31 10:02:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2025/09/06 13:17:07 bsiegert Exp $
 
 DISTNAME=	wireguard-go-0.0.20250522
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://git.zx2c4.com/wireguard-go/snapshot/
 EXTRACT_SUFX=	.tar.xz
