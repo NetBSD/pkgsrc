@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5395 2025/09/05 23:45:44 mef Exp $
+$NetBSD: CHANGES-2025,v 1.5396 2025/09/06 00:07:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7795,3 +7795,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/gumbo-parser to 0.13.2 [ktnb 2025-09-05]
 	Updated textproc/uriparser to 0.9.9 [wiz 2025-09-05]
 	Updated cad/py-gdstk to 0.9.61 [mef 2025-09-05]
+	Updated ham/hamlib to 4.6.5 [gdt 2025-09-06]
