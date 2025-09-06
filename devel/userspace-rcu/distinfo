@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:20:07 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/09/06 09:28:59 he Exp $
 
-BLAKE2s (userspace-rcu-0.12.1.tar.bz2) = 6a0d9220be34035712b2d1e38f19e0fe0cdeb82de5b46bd7c374ccf7947675da
-SHA512 (userspace-rcu-0.12.1.tar.bz2) = c0c14eede77358904dfb10774390fd86b4fa9e0ab25d278c869728d40eb263bfa7e489b20ce7198169e71d74fe41bb5018fc1553a5e0654840c9765e088c83db
-Size (userspace-rcu-0.12.1.tar.bz2) = 527626 bytes
+BLAKE2s (userspace-rcu-0.15.3.tar.bz2) = 23ae4c2be1d2ab6861dd8758ad0bee781b7c9cc836f1a9d3bb963e5b039c7344
+SHA512 (userspace-rcu-0.15.3.tar.bz2) = 9461f5f1ebfcfdb28bc9548738a030d0a29e754ae5340581d057c405c0fa5c17560a251fa15a20cf14d35f1fcc9aceac80841b37a5f348698da52a71ee4d4fe5
+Size (userspace-rcu-0.15.3.tar.bz2) = 684175 bytes
 SHA1 (patch-doc_examples_Makefile.am) = 0603f4a51ae591ba053fecde50d7dd515da1c16b
-SHA1 (patch-doc_examples_Makefile.in) = dbe769c167e8175590e3ea27dc5c24b3ec989bd5
-SHA1 (patch-include_urcu_syscall-compat.h) = 0656ba25229e07a007a7b382725e45919577995b
+SHA1 (patch-doc_examples_Makefile.in) = 219ead73e038385e42aba7e671f5929969eb76e8
+SHA1 (patch-include_urcu_syscall-compat.h) = fe6a35c925ec67fcb8454d90eccfc86855c6fad2
