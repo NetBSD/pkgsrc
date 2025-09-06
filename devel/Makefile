@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4521 2025/09/06 18:27:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.4522 2025/09/06 18:29:02 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -3643,6 +3643,7 @@ SUBDIR+=	sml-mode
 SUBDIR+=	smooth
 SUBDIR+=	snappy
 SUBDIR+=	snappy-java10
+SUBDIR+=	socket_wrapper
 SUBDIR+=	sofia-sip
 SUBDIR+=	sparse
 SUBDIR+=	sparsehash
