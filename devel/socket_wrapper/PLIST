@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/06 18:29:02 riastradh Exp $
+include/socket_wrapper.h
+lib/cmake/socket_wrapper/socket_wrapper-config-version.cmake
+lib/cmake/socket_wrapper/socket_wrapper-config.cmake
+lib/cmake/socket_wrapper/socket_wrapper_noop-config-noconfig.cmake
+lib/cmake/socket_wrapper/socket_wrapper_noop-config.cmake
+lib/libsocket_wrapper.so
+lib/libsocket_wrapper.so.0
+lib/libsocket_wrapper.so.0.5.0
+lib/libsocket_wrapper_noop.so
+lib/libsocket_wrapper_noop.so.0
+lib/libsocket_wrapper_noop.so.0.0.1
+lib/pkgconfig/socket_wrapper.pc
+lib/pkgconfig/socket_wrapper_noop.pc
+man/man1/socket_wrapper.1
