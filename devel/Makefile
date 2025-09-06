@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4519 2025/09/04 12:23:05 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4520 2025/09/06 18:26:56 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -3099,6 +3099,7 @@ SUBDIR+=	py-requests
 SUBDIR+=	py-requests-cache
 SUBDIR+=	py-requests-file
 SUBDIR+=	py-requests-futures
+SUBDIR+=	py-requests-gssapi
 SUBDIR+=	py-requests-mock
 SUBDIR+=	py-requests-toolbelt
 SUBDIR+=	py-requests-unixsocket

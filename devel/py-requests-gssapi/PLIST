@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/06 18:26:56 riastradh Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/requests_gssapi/__init__.py
+${PYSITELIB}/requests_gssapi/__init__.pyc
+${PYSITELIB}/requests_gssapi/__init__.pyo
+${PYSITELIB}/requests_gssapi/compat.py
+${PYSITELIB}/requests_gssapi/compat.pyc
+${PYSITELIB}/requests_gssapi/compat.pyo
+${PYSITELIB}/requests_gssapi/exceptions.py
+${PYSITELIB}/requests_gssapi/exceptions.pyc
+${PYSITELIB}/requests_gssapi/exceptions.pyo
+${PYSITELIB}/requests_gssapi/gssapi_.py
+${PYSITELIB}/requests_gssapi/gssapi_.pyc
+${PYSITELIB}/requests_gssapi/gssapi_.pyo
