@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2025/09/06 18:27:52 riastradh Exp $
+
+BLAKE2s (nss_wrapper-1.1.16.tar.gz) = 4af66e57f96e015c5bf4027617600add8a7542bd51dc47306e6556bba5db73cc
+SHA512 (nss_wrapper-1.1.16.tar.gz) = 684845c25dd7ff48c07f25908d6eef9fa77a098d8d02eb1e8d6f0f6f103a3b4bdfbe4504605015f104fc7092b1224b26fe7096cb9e72e3d8bfc635c276efd036
+Size (nss_wrapper-1.1.16.tar.gz) = 190469 bytes
+SHA1 (patch-ConfigureChecks.cmake) = 1fc07a9e69b1cd1f632ea1a0f71669e44ce6f7a8
+SHA1 (patch-config.h.cmake) = 5e7b9f5f2c88b389dbc789693d63584b390858aa
+SHA1 (patch-src_nss__wrapper.c) = ba0677b362c443f19580088c726ffe409fa61a5e
+SHA1 (patch-tests_nss__nwrap.c) = f9f1ad721012df26dd1832fbb98a200ab7ed77a2
+SHA1 (patch-tests_test__nwrap__disabled.c) = fd3dacb4bc9af21f481e5123ce63a08bd2f04cb3
