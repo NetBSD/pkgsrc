@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/08/31 10:02:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.15 2025/09/06 13:17:09 bsiegert Exp $
 
 DISTNAME=	sops-3.9.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=getsops/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
