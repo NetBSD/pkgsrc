@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2025/07/18 23:05:56 gdt Exp $
+$NetBSD: distinfo,v 1.37 2025/09/06 00:02:05 gdt Exp $
 
-BLAKE2s (hamlib-4.6.4.tar.gz) = 0cf53539f50a60f9dc703637f12559fad2500efc5a1311870f26b23883ac01bc
-SHA512 (hamlib-4.6.4.tar.gz) = cbdb37d94b579a6d0a10dcbb5d1a5ae590198d45d1eb96ac5c0b6d8967d7d0691cf6aaf9c2c4a98ada23cbadab3dd61c80c79b137e44bb2067c3f5c300b95f63
-Size (hamlib-4.6.4.tar.gz) = 2923171 bytes
+BLAKE2s (hamlib-4.6.5.tar.gz) = 73a2ce07fb92c7fa6a6b7130c84cec880865f5d34838bdd02b261147a1d0a556
+SHA512 (hamlib-4.6.5.tar.gz) = edd0f5101921d512d8c0069ef5c13f053867870e75bd781040f2cabb194c96bca57d537f0fad06072b6f93c6363c18b4b18b186afc6520f5ad2a606452f20b3d
+Size (hamlib-4.6.5.tar.gz) = 2947731 bytes
 SHA1 (patch-src_network.c) = ca55437ace4576abfbeb5693b400d5a85179e17d
