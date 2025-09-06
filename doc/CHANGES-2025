@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5396 2025/09/06 00:07:24 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5397 2025/09/06 04:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7796,3 +7796,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/uriparser to 0.9.9 [wiz 2025-09-05]
 	Updated cad/py-gdstk to 0.9.61 [mef 2025-09-05]
 	Updated ham/hamlib to 4.6.5 [gdt 2025-09-06]
+	Updated devel/libatomic_ops to 7.8.4 [adam 2025-09-06]
+	Updated net/yt-dlp to 2025.9.5 [adam 2025-09-06]
