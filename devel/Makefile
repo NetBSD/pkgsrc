@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4522 2025/09/06 18:29:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.4523 2025/09/07 07:13:53 dkazankov Exp $
 #
 
 COMMENT=	Development utilities
@@ -136,6 +136,7 @@ SUBDIR+=	ada-libadalang-25
 SUBDIR+=	ada-libgpr-24
 SUBDIR+=	ada-libgpr-25
 SUBDIR+=	ada-libgpr2-25
+SUBDIR+=	ada-liblal-tools-25
 SUBDIR+=	ada-sparklib-14
 SUBDIR+=	ade
 SUBDIR+=	adocman
