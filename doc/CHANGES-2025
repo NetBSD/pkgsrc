@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5404 2025/09/07 07:14:45 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5405 2025/09/07 07:21:34 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7806,3 +7806,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go125 to 1.25.1 [bsiegert 2025-09-06]
 	Updated sysutils/bacula to 15.0.3nb1 [jnemeth 2025-09-07]
 	Added devel/ada-liblal-tools-25 version 25.0.0 [dkazankov 2025-09-07]
+	Added devel/libadalang-tools version 25.0.0 [dkazankov 2025-09-07]
