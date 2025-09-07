@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/07 07:51:55 dkazankov Exp $
+bin/gnatformat
+include/gnatformat_driver/gnatformat_driver/gnatformat-ada_driver.adb
+include/gnatformat_driver/gnatformat_driver/gnatformat-command_line-configuration.adb
+include/gnatformat_driver/gnatformat_driver/gnatformat-command_line-configuration.ads
+include/gnatformat_driver/gnatformat_driver/gnatformat-command_line.ads
+share/gpr/gnatformat_driver.gpr
+share/gpr/manifests/gnatformat_driver
