@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/07 07:20:48 dkazankov Exp $
+bin/gnatmetric
+bin/gnatpp
+bin/gnatstub
+bin/gnattest
+bin/utils-var_length_ints-test
