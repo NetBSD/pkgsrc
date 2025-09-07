@@ -1,0 +1,15 @@
+$NetBSD: patch-gnat_gnatdoc.gpr,v 1.1 2025/09/07 08:02:41 dkazankov Exp $
+
+Fix artifacts installation path
+
+--- gnat/gnatdoc.gpr.orig
++++ gnat/gnatdoc.gpr
+@@ -41,7 +41,7 @@
+    end Builder;
+ 
+    package Install is
+-      for Artifacts ("share") use ("../share");
++      for Artifacts ("share") use ("../share/gnatdoc");
+    end Install;
+ 
+ end GNATdoc;
