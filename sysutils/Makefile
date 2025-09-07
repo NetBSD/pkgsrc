@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1163 2025/09/07 09:37:57 imil Exp $
+# $NetBSD: Makefile,v 1.1164 2025/09/07 18:44:01 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -726,6 +726,7 @@ SUBDIR+=	sformat
 SUBDIR+=	shc
 SUBDIR+=	shelldap
 SUBDIR+=	shmux
+SUBDIR+=	skaffold
 SUBDIR+=	skill
 SUBDIR+=	skopeo
 SUBDIR+=	slay
