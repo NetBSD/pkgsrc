@@ -1,0 +1,60 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/07 08:08:51 dkazankov Exp $
+
+Make ALL_LIBRARY_TYPES externally settable
+Fix scenario variable
+Add options for gprbuild and gprinstall
+Add instalation targets
+
+--- Makefile.orig	2024-10-04 16:57:51.000000000 +0300
++++ Makefile
+@@ -1,17 +1,22 @@
+ PREFIX ?= `pwd`/install
+ docdir = ${PREFIX}/share/doc/gnatdoc
++ALL_LIBRARY_TYPES?=static static-pic relocatable
+ 
+-SCENARIO_VARIABLES=-XGPR_UNIT_PROVIDER_LIBRARY_TYPE=static -XGPR_UNIT_PROVIDER_BUILD=debug -XVSS_LIBRARY_TYPE=static -XMARKDOWN_LIBRARY_TYPE=static
++SCENARIO_VARIABLES=-XGPR_UNIT_PROVIDER_LIBRARY_TYPE=static -XGPR_UNIT_PROVIDER_BUILD=release -XVSS_LIBRARY_TYPE=static -XMARKDOWN_LIBRARY_TYPE=static
+ 
+ all: build-gnatdoc
+ 
+ build-all: build-libgnatdoc build-gnatdoc build-tests
+ 
+ build-libgnatdoc:
+-	gprbuild -j0 -p -P gnat/libgnatdoc.gpr
++	for library_type in $(ALL_LIBRARY_TYPES) ; do \
++	gprbuild -j0 -p -P gnat/libgnatdoc.gpr \
++		-XLIBRARY_TYPE=$$library_type \
++		$(GPRBUILD_OPTIONS) ; \
++	done;
+ 
+ build-gnatdoc:
+-	gprbuild -j0 -p -P gnat/gnatdoc.gpr ${SCENARIO_VARIABLES}
++	gprbuild -j0 -p -P gnat/gnatdoc.gpr ${SCENARIO_VARIABLES} ${GPRBUILD_OPTIONS}
+ 
+ clean:
+ 	rm -rf .objs bin
+@@ -36,3 +41,24 @@
+ 	mkdir -p $(docdir)/pdf
+ 	cp -r documentation/users_guide/_build/html/* $(docdir)/html/users_guide
+ 	cp documentation/users_guide/_build/latex/gnatdoc_ug.pdf $(docdir)/pdf
++
++install-libgnatdoc:
++	for library_type in $(ALL_LIBRARY_TYPES) ; do \
++	    gprinstall \
++		--prefix=$(DESTDIR)$(PREFIX) \
++		-XLIBRARY_TYPE=$$library_type \
++		--build-name=$$library_type \
++		--build-var=LIBRARY_TYPE \
++		-p -P gnat/libgnatdoc.gpr \
++		$(GPRINSTALL_OPTIONS) ; \
++	done;
++
++install-gnatdoc:
++	gprinstall \
++	    -XBUILD_MODE=$(BUILD_MODE) \
++	    $(SCENARIO_VARIABLES) \
++	    --prefix="$(DESTDIR)$(PREFIX)" \
++	    -p -P gnat/gnatdoc.gpr \
++	    -f $(GPRINSTALL_OPTIONS) ;
++
++install: install-gnatdoc
