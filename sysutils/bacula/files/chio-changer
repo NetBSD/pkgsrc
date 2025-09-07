@@ -72,8 +72,8 @@ case $cmd in
       ;;
 
    list) 
-      ${CHIO} -f $ctl status slot voltags | /usr/bin/awk "/</ { slot=\$2; gsub(\":$\", \"\", slot); slot++ }\
-		/Primary volume tag: [^ ] / { tag=\$4 }\
+      ${CHIO} -f $ctl status slot voltags | /usr/bin/awk "/</ { slot=\$2; gsub(\":$\", \"\", slot); slot++ }
+		/Primary volume tag:/ { sub(\" ver. 0$\", \"\"); tag=\$4 }
 		/From:/ { printf \"%s:%s\n\", slot, tag }"
       ;;
 
