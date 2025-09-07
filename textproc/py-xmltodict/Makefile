@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/14 13:00:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/07 16:01:35 adam Exp $
 
-DISTNAME=	xmltodict-0.14.2
+DISTNAME=	xmltodict-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmltodict/}
 

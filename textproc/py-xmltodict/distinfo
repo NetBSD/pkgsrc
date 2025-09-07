@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/10/19 05:57:41 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/09/07 16:01:35 adam Exp $
 
-BLAKE2s (xmltodict-0.14.2.tar.gz) = 3149cc3e4839fee9114ea391e05d0df31401eb36ac7749d91a2c2587944778e1
-SHA512 (xmltodict-0.14.2.tar.gz) = 3333955156e355cd40bd947bbefe0ff2e90de900cf12aa3ad82fa28e2921d9e2ccd245116573a0711cce12ac294d5a8d18a83744b4e7fc9e2b4025e35175080b
-Size (xmltodict-0.14.2.tar.gz) = 51942 bytes
+BLAKE2s (xmltodict-0.15.0.tar.gz) = 4dbe794b1bfa94a0fa2efc30ce95b770539a904e431e4f361789160fecd0897b
+SHA512 (xmltodict-0.15.0.tar.gz) = 6f1af04125b7c8f177a3d13ee7c46c557a0c60166ba23f946bb38e1e7543ee93ae577311182e0c861b83632bd3e63c274ece1011e81163c96c875bf1e58f2fbc
+Size (xmltodict-0.15.0.tar.gz) = 60285 bytes
 SHA1 (patch-README.md) = af28ff7112772932b9229b343ff162af4227b98e
