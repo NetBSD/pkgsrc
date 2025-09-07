@@ -1,0 +1,85 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/07 07:20:48 dkazankov Exp $
+
+Make ALL_LIBRARY_TYPES externally settable
+Add options for gprbuild and gprinstall
+Fix PREFIX in installation directory path
+
+--- Makefile.orig	2024-09-23 16:30:31.000000000 +0300
++++ Makefile
+@@ -7,7 +7,7 @@
+ PROCESSORS ?= 0
+ BUILD_ROOT ?=
+ 
+-ALL_LIBRARY_TYPES = static static-pic relocatable
++ALL_LIBRARY_TYPES ?= static static-pic relocatable
+ ALL_BUILD_MODES = dev prod AddressSanitizer
+ 
+ LIB_PROJECTS = \
+@@ -46,7 +46,7 @@
+ 			-XXMLADA_BUILD=$(LIBRARY_TYPE) \
+ 			-XLALTOOLS_BUILD_MODE=$(BUILD_MODE) \
+ 			-XLALTOOLS_SET=$(LALTOOLS_SET) \
+-			-P $$proj ; \
++			-P $$proj $(GPRBUILD_OPTIONS) ; \
+ 	done
+ 
+ .PHONY: lib
+@@ -59,7 +59,7 @@
+ 			$(GPRBUILD) \
+ 				-XLIBRARY_TYPE=$$kind \
+ 				-XLALTOOLS_BUILD_MODE=$(BUILD_MODE) \
+-				-P $$proj ; \
++				-P $$proj $(GPRBUILD_OPTIONS) ; \
+ 		done ; \
+ 	done
+ 
+@@ -73,7 +73,7 @@
+ 			-XXMLADA_BUILD=$(LIBRARY_TYPE) \
+ 			-XLALTOOLS_BUILD_MODE=$(BUILD_MODE) \
+ 			-XLALTOOLS_SET=$(LALTOOLS_SET) \
+-			-P $$proj ; \
++			-P $$proj $(GPRBUILD_OPTIONS) ; \
+ 	done
+ 
+ .PHONY: testsuite_drivers
+@@ -86,7 +86,7 @@
+ 			-XXMLADA_BUILD=$(LIBRARY_TYPE) \
+ 			-XLALTOOLS_BUILD_MODE=$(BUILD_MODE) \
+ 			-XLALTOOLS_SET=$(LALTOOLS_SET) \
+-			-P $$proj ; \
++			-P $$proj $(GPRBUILD_OPTIONS) ; \
+ 	done
+ 
+ .PHONY: test
+@@ -114,23 +114,23 @@
+ 			gprinstall $(RELOCATE_BUILD) \
+ 				-XLIBRARY_TYPE=$$kind \
+ 				-XLALTOOLS_BUILD_MODE=$(BUILD_MODE) \
+-				--prefix="$(DESTDIR)" \
++				--prefix="$(DESTDIR)$(PREFIX)" \
+ 				--sources-subdir=include/$$(basename $$proj | cut -d. -f1) \
+ 				--build-name=$$kind \
+ 				--build-var=LIBRARY_TYPE --build-var=LAL_TOOLS_BUILD \
+-				-P $$proj -p -f ; \
++				-P $$proj -p -f $(GPRINSTALL_OPTIONS) ; \
+ 		done ; \
+ 	done
+ 
+ .PHONY: install-bin-strip
+ install-bin-strip:
+-	mkdir -p "$(DESTDIR)"
+-	cp -r "$(BIN)" "$(DESTDIR)/"
++	mkdir -p "$(DESTDIR)$(PREFIX)"
++	cp -r "$(BIN)" "$(DESTDIR)$(PREFIX)/"
+ 	# Don't strip debug builds
+-	test "$(BUILD_MODE)" = dev || strip "$(DESTDIR)/bin/"*
++	test "$(BUILD_MODE)" = dev || strip "$(DESTDIR)$(PREFIX)/bin/"*
+ 
+ .PHONY: install-tgen
+ install-tgen:
+-	mkdir -p "$(DESTDIR)/share/tgen"
+-	cp -r src/tgen/tgen_rts "$(DESTDIR)/share/tgen/"
+-	cp -r share/tgen/templates "$(DESTDIR)/share/tgen/"
++	mkdir -p "$(DESTDIR)$(PREFIX)/share/tgen"
++	cp -r src/tgen/tgen_rts "$(DESTDIR)$(PREFIX)/share/tgen/"
++	cp -r share/tgen/templates "$(DESTDIR)$(PREFIX)/share/tgen/"
