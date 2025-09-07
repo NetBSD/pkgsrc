@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1539 2025/09/07 07:31:38 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1540 2025/09/07 07:36:24 dkazankov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -510,6 +510,7 @@ SUBDIR+=	kf6-sonnet
 SUBDIR+=	kf6-syntax-highlighting
 SUBDIR+=	kpimtextedit
 SUBDIR+=	ktextaddons
+SUBDIR+=	lal-refactor
 SUBDIR+=	latex2html
 SUBDIR+=	libclucene
 SUBDIR+=	libcroco
