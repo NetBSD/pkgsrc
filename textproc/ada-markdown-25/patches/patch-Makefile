@@ -1,0 +1,46 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/07 07:42:08 dkazankov Exp $
+
+Make BUILD_MODE externally settable
+Add ALL_LIBRARY_TYPES to build several libraries
+Add options for gprbuild and gprinstall
+Fix GPRINSTALL parameters
+
+--- Makefile.orig	2024-05-04 22:43:19.000000000 +0300
++++ Makefile
+@@ -5,7 +5,8 @@
+ #
+ 
+ # Build mode (dev, prod or coverage)
+-BUILD_MODE=dev
++BUILD_MODE?=dev
++ALL_LIBRARY_TYPES?=static static-pic relocatable
+ 
+ GPRBUILD_FLAGS = -p -j0 -XBUILD_MODE=$(BUILD_MODE)
+ PREFIX                 ?= /usr
+@@ -26,10 +27,24 @@
+ .PHONY: spellcheck check
+ 
+ all:
+-	gprbuild $(GPRBUILD_FLAGS) gnat/markdown.gpr -cargs $(ADAFLAGS)
++	for library_type in $(ALL_LIBRARY_TYPES) ; do \
++	    gprbuild \
++		$(GPRBUILD_FLAGS) -XLIBRARY_TYPE=$$library_type \
++		gnat/markdown.gpr \
++		-cargs $(ADAFLAGS) -gargs $(GPRBUILD_OPTIONS) ; \
++	done;
+ 
+ install:
+-	gprinstall $(GPRINSTALL_FLAGS) -p -P gnat/markdown.gpr
++	for library_type in $(ALL_LIBRARY_TYPES) ; do \
++	    gprinstall \
++		--prefix=$(DESTDIR)$(PREFIX) \
++		-XLIBRARY_TYPE=$$library_type \
++		--build-name=$$library_type \
++		--build-var=LIBRARY_TYPE \
++		-p -P \
++		gnat/markdown.gpr \
++		$(GPRINSTALL_OPTIONS) ; \
++	done;
+ 
+ build_tests: all
+ 	gprbuild $(GPRBUILD_FLAGS) -aP gnat -P gnat/tests/commonmark_tests.gpr
