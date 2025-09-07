@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/09/07 07:42:08 dkazankov Exp $
+
+BLAKE2s (markdown-25.0.0.tar.gz) = e66bcdd5fe88dfc6f4f45a8c3e404dda0d701683cd0e6eea99d741670fa13ed1
+SHA512 (markdown-25.0.0.tar.gz) = 1818110a0539b91d407b1bba6ca2d9f18e0d5fe71be97dc9cd1000331e579a5f06349f4f1b11f09341e507dbff9e47cafb31df2d5816e33c1c84baa9e4b01009
+Size (markdown-25.0.0.tar.gz) = 48445 bytes
+SHA1 (patch-Makefile) = 47588d3bd18c7afdc6f061391106fb7a1e26f93b
