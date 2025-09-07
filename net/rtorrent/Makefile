@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.109 2025/08/25 09:14:58 adam Exp $
+# $NetBSD: Makefile,v 1.110 2025/09/07 07:49:16 adam Exp $
 
-DISTNAME=	rtorrent-0.15.6
+DISTNAME=	rtorrent-0.16.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -47,6 +47,5 @@ post-install:
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libtorrent/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
