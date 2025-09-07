@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1544 2025/09/07 08:02:41 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1545 2025/09/07 08:08:50 dkazankov Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -257,6 +257,7 @@ SUBDIR+=	gdome2
 SUBDIR+=	git-delta
 SUBDIR+=	glimpse
 SUBDIR+=	glow
+SUBDIR+=	gnatdoc
 SUBDIR+=	gnatformat
 SUBDIR+=	gnome-dictionary
 SUBDIR+=	go-md2man
