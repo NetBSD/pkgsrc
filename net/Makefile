@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1606 2025/08/20 14:08:33 wiz Exp $
+# $NetBSD: Makefile,v 1.1607 2025/09/07 18:27:59 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -238,6 +238,7 @@ SUBDIR+=	gupnp-tools
 SUBDIR+=	gvproxy
 SUBDIR+=	haproxy
 SUBDIR+=	hdl-dump
+SUBDIR+=	helm
 SUBDIR+=	hercules4sdl-telnet
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
