@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4524 2025/09/07 07:20:48 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4525 2025/09/07 18:29:45 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -221,6 +221,7 @@ SUBDIR+=	bpython
 SUBDIR+=	breezy
 SUBDIR+=	breezy-qbrz
 SUBDIR+=	buddy
+SUBDIR+=	buf
 SUBDIR+=	bugzilla
 SUBDIR+=	bugzilla3
 SUBDIR+=	bullet
