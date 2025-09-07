@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5417 2025/09/07 13:11:37 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5418 2025/09/07 16:03:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7820,3 +7820,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/nitro version 0.3.0.0.20250907 [imil 2025-09-07]
 	Updated math/kalker to 2.2.2 [pin 2025-09-07]
 	Updated devel/mise to 2025.9.5 [pin 2025-09-07]
+	Updated textproc/py-xmltodict to 0.15.0 [adam 2025-09-07]
+	Updated devel/py-test-cov to 6.3.0 [adam 2025-09-07]
