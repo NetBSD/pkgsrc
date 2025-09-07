@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/09/07 18:33:59 maya Exp $
+
+BLAKE2s (awscrt-0.27.6.tar.gz) = 068dae231d4a2cd222b3c85e8c2f8b325d57fc26dab99912300719e31af78a66
+SHA512 (awscrt-0.27.6.tar.gz) = 0df60174211cee539821f908c5eb63f24e26cf1eff6b1df87abb815659bc2af4569fd2e5af3de0fb4ee1d8041206d3124ee1fefda11957c54458fc215131071f
+Size (awscrt-0.27.6.tar.gz) = 37677550 bytes
+SHA1 (patch-crt_aws-c-common_source_posix_thread.c) = 1fcfd2085e63992c9d1c57475f6005b8fdfde5ed
+SHA1 (patch-crt_aws-c-io_source_posix_host__resolver.c) = 4b5b8a30ba2a984673112eb190dc03a73514d230
