@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5409 2025/09/07 07:48:52 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5410 2025/09/07 07:49:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7811,3 +7811,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/lal-refactor version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/ada-markdown-25 version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/ada-libgnatformat-25 version 25.0.0 [dkazankov 2025-09-07]
+	Updated net/libtorrent to 0.16.0 [adam 2025-09-07]
+	Updated net/rtorrent to 0.16.0 [adam 2025-09-07]
