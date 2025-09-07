@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5402 2025/09/06 12:55:05 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5403 2025/09/07 03:37:53 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7804,3 +7804,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/element-web to 1.11.110 [js 2025-09-06]
 	Updated lang/go124 to 1.24.7 [bsiegert 2025-09-06]
 	Updated lang/go125 to 1.25.1 [bsiegert 2025-09-06]
+	Updated sysutils/bacula to 15.0.3nb1 [jnemeth 2025-09-07]
