@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/07 07:48:28 dkazankov Exp $
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat-configuration.adb
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat-configuration.ads
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat-formatting.adb
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat-formatting.ads
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat-utils.ads
+${GNAT_PKGBASE}/include/lal-refactor/gnatformat/gnatformat.ads
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.relocatable/gnatformat-configuration.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.relocatable/gnatformat-formatting.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.relocatable/gnatformat-utils.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.relocatable/gnatformat.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.relocatable/libgnatformat.so
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static-pic/gnatformat-configuration.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static-pic/gnatformat-formatting.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static-pic/gnatformat-utils.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static-pic/gnatformat.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static-pic/libgnatformat.a
+${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static/gnatformat-configuration.ali
+${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static/gnatformat-formatting.ali
+${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static/gnatformat-utils.ali
+${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static/gnatformat.ali
+${GNAT_PKGBASE}/lib/gnatformat/gnatformat.static/libgnatformat.a
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatformat.so
+${GNAT_PKGBASE}/share/gpr/gnatformat.gpr
+${GNAT_PKGBASE}/share/gpr/manifests/gnatformat

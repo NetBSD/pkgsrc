@@ -1,0 +1,4 @@
+Opinionated code formatter for the Ada language, Library package.
+
+The intent of gnatformat is to format a valid Ada source code according to
+the coding style described in the GNAT Coding Style guide.
