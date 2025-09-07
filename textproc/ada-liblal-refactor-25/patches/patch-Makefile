@@ -1,0 +1,68 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/07 07:31:39 dkazankov Exp $
+
+Make ALL_LIBRARY_TYPES externally settable
+Add options for gprbuild and gprinstall
+Fix instalation directory path
+
+--- Makefile.orig	2024-09-24 18:34:48.000000000 +0300
++++ Makefile	2025-09-05 07:57:51.468303861 +0300
+@@ -2,7 +2,7 @@
+ LIBRARY_TYPE ?= static
+ PROCESSORS ?= 0
+ 
+-ALL_LIBRARY_TYPES = static static-pic relocatable
++ALL_LIBRARY_TYPES ?= static static-pic relocatable
+ ALL_BUILD_MODES = dev prod
+ 
+ LIB_PROJECT = gnat/lal_refactor.gpr
+@@ -25,7 +25,7 @@
+ 			-XLAL_REFACTOR_BUILD_MODE=$(BUILD_MODE) \
+ 			-P $(LIB_PROJECT) \
+ 			-p \
+-			-j$(PROCESSORS) ; \
++			-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ; \
+ 	done;
+ 
+ .PHONY: bin
+@@ -38,7 +38,7 @@
+ 		-XLAL_REFACTOR_BUILD_MODE=$(BUILD_MODE) \
+ 		-P$(BIN_PROJECT) \
+ 		-p \
+-		-j$(PROCESSORS);
++		-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ;
+ 
+ .PHONY: testsuite_drivers
+ testsuite_drivers:
+@@ -51,7 +51,7 @@
+ 			-XLAL_REFACTOR_BUILD_MODE=$(BUILD_MODE) \
+ 			-P $$testsuite_project \
+ 			-p \
+-			-j$(PROCESSORS) ; \
++			-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ; \
+ 	done;
+ 
+ .PHONY: test
+@@ -76,11 +76,11 @@
+ 			-XLAL_REFACTOR_LIBRARY_TYPE=$$library_type \
+ 			-XLIBRARY_TYPE=$$library_type \
+ 			-XLAL_REFACTOR_BUILD_MODE=$(BUILD_MODE) \
+-			--prefix="$(PREFIX)" \
++			--prefix="$(DESTDIR)$(PREFIX)" \
+ 			--sources-subdir=include/lal-refactor \
+ 			--build-name=$$library_type \
+ 			--build-var=LIBRARY_TYPE \
+-			-P $(LIB_PROJECT) -p -f ; \
++			-P $(LIB_PROJECT) -p -f $(GPRINSTALL_OPTIONS) ; \
+ 	done ;
+ 
+ .PHONY: install-bin
+@@ -89,7 +89,7 @@
+ 		-XLAL_REFACTOR_LIBRARY_TYPE=$(LIBRARY_TYPE) \
+ 		-XLIBRARY_TYPE=$(LIBRARY_TYPE) \
+ 		-XBUILD_MODE=$(BUILD_MODE) \
+-		--prefix="$(PREFIX)" \
++		--prefix="$(DESTDIR)$(PREFIX)" \
+ 		-P $(BIN_PROJECT) \
+ 		-p \
+-		-f ;
++		-f $(GPRINSTALL_OPTIONS) ;
