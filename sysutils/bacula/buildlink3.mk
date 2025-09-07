@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/09/07 03:37:07 jnemeth Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/09/07 08:24:13 wiz Exp $
 
 BUILDLINK_TREE+=	bacula
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	bacula
 BACULA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bacula+=	{bacula,bacula-clientonly}>=3.0.1nb1
-BUILDLINK_ABI_DEPENDS.bacula?=	bacula>=15.0.3nb1
+BUILDLINK_ABI_DEPENDS.bacula?=	{bacula,bacula-clientonly}>=13.0.1
 BUILDLINK_PKGSRCDIR.bacula?=	../../sysutils/bacula
 .endif	# BACULA_BUILDLINK3_MK
 
