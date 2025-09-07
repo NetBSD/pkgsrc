@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4525 2025/09/07 18:29:45 maya Exp $
+# $NetBSD: Makefile,v 1.4526 2025/09/07 18:34:31 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -2530,6 +2530,7 @@ SUBDIR+=	py-automat
 SUBDIR+=	py-autopep8
 SUBDIR+=	py-aws-error-utils
 SUBDIR+=	py-aws-sso-lib
+SUBDIR+=	py-awscrt
 SUBDIR+=	py-babel
 SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
