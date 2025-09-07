@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/09/07 07:36:24 dkazankov Exp $
+
+BLAKE2s (lal-refactor-25.0.0.tar.gz) = 2691734f8edb17438af35a53b0eb68135f04a9bb432022d8edae212a29aa6203
+SHA512 (lal-refactor-25.0.0.tar.gz) = c93136c3c05410bcb72bf9fbde409b371851c5f0e394670d8dd43d09219d756e10fef126911bbf6656a640c31b467fa49f826316e55a71f4f61a50952bb6980c
+Size (lal-refactor-25.0.0.tar.gz) = 223818 bytes
+SHA1 (patch-Makefile) = 29ad9d8c5b930e3033f1c8c3e177c6aa60f559c5
