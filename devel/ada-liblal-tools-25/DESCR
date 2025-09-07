@@ -1,0 +1,8 @@
+Libadalang-based development tools for Ada, library package.
+
+gnatpp, a pretty-printer to reformat source code.
+gnatmetric, which can compute various source code metrics, such as SLOC count.
+gnatstub, which creates body stub (empty but compilable bodies) for library
+unit declarations.
+gnattest, which creates creates unit-test skeletons as well as a test driver
+infrastructure.
