@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5407 2025/09/07 07:36:54 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5408 2025/09/07 07:42:32 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7809,3 +7809,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/libadalang-tools version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/ada-liblal-refactor-25 version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/lal-refactor version 25.0.0 [dkazankov 2025-09-07]
+	Added textproc/ada-markdown-25 version 25.0.0 [dkazankov 2025-09-07]
