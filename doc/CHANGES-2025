@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5413 2025/09/07 08:09:13 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5414 2025/09/07 09:23:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7816,3 +7816,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/gnatformat version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/ada-libgnatdoc-25 version 25.0.0 [dkazankov 2025-09-07]
 	Added textproc/gnatdoc version 25.0.0 [dkazankov 2025-09-07]
+	Updated mail/neomutt to 20250905 [wiz 2025-09-07]
