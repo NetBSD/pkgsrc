@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/07 09:36:35 imil Exp $
+bin/nitroctl
+man/man1/nitroctl.1
+man/man8/halt.8
+man/man8/nitro.8
+sbin/nitro
+share/doc/nitro/README.md
+@exec ${LN} -sf ${SRC_SOCK} ${DST_SOCK}
+@unexec ${RM} -f ${DST_SOCK}
