@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5411 2025/09/07 07:52:19 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5412 2025/09/07 08:03:23 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7814,3 +7814,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/libtorrent to 0.16.0 [adam 2025-09-07]
 	Updated net/rtorrent to 0.16.0 [adam 2025-09-07]
 	Added textproc/gnatformat version 25.0.0 [dkazankov 2025-09-07]
+	Added textproc/ada-libgnatdoc-25 version 25.0.0 [dkazankov 2025-09-07]
