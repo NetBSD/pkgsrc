@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5415 2025/09/07 09:40:18 imil Exp $
+$NetBSD: CHANGES-2025,v 1.5416 2025/09/07 13:10:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7818,3 +7818,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/gnatdoc version 25.0.0 [dkazankov 2025-09-07]
 	Updated mail/neomutt to 20250905 [wiz 2025-09-07]
 	Added sysutils/nitro version 0.3.0.0.20250907 [imil 2025-09-07]
+	Updated math/kalker to 2.2.2 [pin 2025-09-07]
