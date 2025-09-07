@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5419 2025/09/07 18:27:38 maya Exp $
+$NetBSD: CHANGES-2025,v 1.5420 2025/09/07 18:29:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7823,3 +7823,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xmltodict to 0.15.0 [adam 2025-09-07]
 	Updated devel/py-test-cov to 6.3.0 [adam 2025-09-07]
 	Added net/helm version 3.18.4 [maya 2025-09-07]
+	Added devel/buf version 1.45.0 [maya 2025-09-07]
