@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5421 2025/09/07 18:34:47 maya Exp $
+$NetBSD: CHANGES-2025,v 1.5422 2025/09/07 18:36:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7825,3 +7825,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added net/helm version 3.18.4 [maya 2025-09-07]
 	Added devel/buf version 1.45.0 [maya 2025-09-07]
 	Added devel/py-awscrt version 0.27.6 [maya 2025-09-07]
+	Added net/py-awscli2 version 2.28.25 [maya 2025-09-07]
