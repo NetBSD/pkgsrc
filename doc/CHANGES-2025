@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5420 2025/09/07 18:29:56 maya Exp $
+$NetBSD: CHANGES-2025,v 1.5421 2025/09/07 18:34:47 maya Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7824,3 +7824,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-cov to 6.3.0 [adam 2025-09-07]
 	Added net/helm version 3.18.4 [maya 2025-09-07]
 	Added devel/buf version 1.45.0 [maya 2025-09-07]
+	Added devel/py-awscrt version 0.27.6 [maya 2025-09-07]
