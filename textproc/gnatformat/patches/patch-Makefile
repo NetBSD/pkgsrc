@@ -1,0 +1,84 @@
+$NetBSD: patch-Makefile,v 1.1 2025/09/07 07:51:55 dkazankov Exp $
+
+Make ALL_LIBRARY_TYPES externally settable
+Add options for gprbuild and gprinstall
+Fix instalation directory path
+
+--- Makefile.orig	2024-09-24 18:34:53.000000000 +0300
++++ Makefile
+@@ -2,7 +2,7 @@
+ LIBRARY_TYPE ?= static
+ PROCESSORS ?= 0
+ 
+-ALL_LIBRARY_TYPES = static static-pic relocatable
++ALL_LIBRARY_TYPES ?= static static-pic relocatable
+ ALL_BUILD_MODES = dev prod
+ 
+ LIB_PROJECT = gnat/gnatformat.gpr
+@@ -25,7 +25,7 @@
+ 			-XGNATFORMAT_BUILD_MODE=$(BUILD_MODE) \
+ 			-P $(LIB_PROJECT) \
+ 			-p \
+-			-j$(PROCESSORS) ; \
++			-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ; \
+ 	done;
+ 
+ .PHONY: bin
+@@ -38,7 +38,7 @@
+ 		-XGNATFORMAT_BUILD_MODE=$(BUILD_MODE) \
+ 		-P$(BIN_PROJECT) \
+ 		-p \
+-		-j$(PROCESSORS);
++		-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ;
+ 
+ .PHONY: clean
+ clean:
+@@ -57,11 +57,11 @@
+ 			-XLIBRARY_TYPE=$$library_type \
+ 			-XGNATFORMAT_BUILD_MODE=$(BUILD_MODE) \
+ 			--install-name=gnatformat \
+-			--prefix="$(PREFIX)" \
++			--prefix="$(DESTDIR)$(PREFIX)" \
+ 			--sources-subdir=include/lal-refactor \
+ 			--build-name=$$library_type \
+ 			--build-var=LIBRARY_TYPE \
+-			-P $(LIB_PROJECT) -p -f ; \
++			-P $(LIB_PROJECT) -p -f $(GPRINSTALL_OPTIONS) ; \
+ 	done ;
+ 
+ .PHONY: install-bin
+@@ -71,10 +71,10 @@
+ 		-XLIBRARY_TYPE=$(LIBRARY_TYPE) \
+ 		-XBUILD_MODE=$(BUILD_MODE) \
+ 		--install-name=gnatformat_driver \
+-		--prefix="$(PREFIX)" \
++		--prefix="$(DESTDIR)$(PREFIX)" \
+ 		-P $(BIN_PROJECT) \
+ 		-p \
+-		-f ;
++		-f $(GPRINSTALL_OPTIONS) ;
+ 
+ .PHONY: test-programs
+ test-programs:
+@@ -87,7 +87,7 @@
+ 			-XGNATFORMAT_BUILD_MODE=$(BUILD_MODE) \
+ 			-P $$proj \
+ 			-p \
+-			-j$(PROCESSORS) ; \
++			-j$(PROCESSORS) $(GPRBUILD_OPTIONS) ; \
+ 	done;
+ 
+ .PHONY: install-test-programs
+@@ -97,10 +97,10 @@
+ 			-XGNATFORMAT_LIBRARY_TYPE=$(LIBRARY_TYPE) \
+ 			-XLIBRARY_TYPE=$(LIBRARY_TYPE) \
+ 			-XGNATFORMAT_BUILD_MODE=$(BUILD_MODE) \
+-			--prefix="$(PREFIX)" \
++			--prefix="$(DESTDIR)$(PREFIX)" \
+ 			--install-name=test_programs \
+ 			--mode=usage \
+-			-P $$proj -p -f ; \
++			-P $$proj -p -f $(GPRINSTALL_OPTIONS) ; \
+ 	done ;
+ 
+ .PHONY: test
