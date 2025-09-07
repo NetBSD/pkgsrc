@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/07 18:36:19 maya Exp $
+
+BLAKE2s (awscli2-2.28.25.tar.gz) = 0eabaca08343278c6d5781b2a963abc89120c9a44bc41e33f7620c7b8964af8b
+SHA512 (awscli2-2.28.25.tar.gz) = 1e02507992f0f49e7f174d2aaa81a41c9f4d955a8954e7515527d0cbdd6efca24a141eca79c02d5d73eb5d98c504fc9839529ba1eb715964cda13b127345f14b
+Size (awscli2-2.28.25.tar.gz) = 16887471 bytes
