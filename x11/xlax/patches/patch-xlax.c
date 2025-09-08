@@ -1,24 +1,27 @@
-$NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
+$NetBSD: patch-xlax.c,v 1.2 2025/09/08 10:19:58 vins Exp $
 
 * Fix warnings about int signedness mismatch.
 * Fix warnings about int to pointer conversion. 
 * Use libbsd on Linux to support strlcpy().
+* Avoid implicit declaration of bcopy().
 
 --- xlax.c.orig	2008-07-31 20:18:25.000000000 +0000
 +++ xlax.c
-@@ -30,6 +30,11 @@
+@@ -30,6 +30,13 @@
   *
   */
  
++#include <strings.h>
++
 +#ifdef __linux__
 +#include <bsd/string.h>
 +#endif
 +
-+#include "stddef.h"
++#include "lstddef.h"
  #include "xlax.h"
  #include "vroot.h"
  
-@@ -50,7 +55,7 @@ XKeyEvent tmpevents[MAXEVENTS];
+@@ -50,7 +57,7 @@ XKeyEvent tmpevents[MAXEVENTS];
  int tmpeventindex;
  int tmpwindex;
    
@@ -27,7 +30,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    WindowIndex;
  
  char *prefix="xlax:";
-@@ -70,7 +75,7 @@ XErrorEvent *myerr;
+@@ -70,7 +77,7 @@ XErrorEvent *myerr;
    XGetErrorText(mydisp, myerr->error_code, msg, 80);
    (void) fprintf(stderr, "%s\n", msg);
    if (myerr->error_code == BadWindow) {
@@ -36,7 +39,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
      Remove_Window(myerr->resourceid);
      return 0;
    } else {
-@@ -411,8 +416,8 @@ Display *dpy;
+@@ -411,8 +418,8 @@ Display *dpy;
  Window top;
  {
    Window *children, dummy;
@@ -47,7 +50,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    Window w=0;
    XClassHint class_hint;
  
-@@ -674,7 +679,7 @@ Display *dpy;
+@@ -674,7 +681,7 @@ Display *dpy;
  int wi;
  char *str;
  {
@@ -56,7 +59,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    long m;
    Window root = RootWindow(dpy,DefaultScreen(dpy));
  
-@@ -686,7 +691,7 @@ char *str;
+@@ -686,7 +693,7 @@ char *str;
    }
    for (i=0; i<strlen(str)&&i<MAXEVENTS; ++i) {
      /* skip if we don't have a keycode mapping for this character */
@@ -65,7 +68,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
        fprintf(stderr,"No key mapping for %c!\n", str[i]);
        continue;
      }
-@@ -702,8 +707,8 @@ char *str;
+@@ -702,8 +709,8 @@ char *str;
      Windows[wi].events[i].x_root=0;
      Windows[wi].events[i].y_root=0;
      Windows[wi].events[i].same_screen=1;
@@ -76,7 +79,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    }
    Windows[wi].eventindex=i;
    cnt = 0;
-@@ -746,8 +751,8 @@ Display *disp;
+@@ -746,8 +753,8 @@ Display *disp;
        evt.state=states[m];
        len=XLookupString(&evt, out, 32, NULL, NULL);
        if (len == 1) {
@@ -87,7 +90,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
        }
      }
    }
-@@ -759,7 +764,7 @@ unsigned char c;
+@@ -759,7 +766,7 @@ unsigned char c;
  long *m;
  {
    KeySym ks, ksr;
@@ -96,7 +99,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    XKeyEvent evt;
    long mr, len;
    char str[2], out[32];
-@@ -802,11 +807,11 @@ long *m;
+@@ -802,11 +809,11 @@ long *m;
        *m = ShiftMask | ControlMask;
        return(kc);
      }
@@ -110,7 +113,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
      *m = 0;
      return(0);
    } else {
-@@ -826,7 +831,7 @@ long *m;
+@@ -826,7 +833,7 @@ long *m;
        *m = ShiftMask;
        return(kc);
      }
@@ -119,7 +122,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
      *m = 0;
      return(0);
    }
-@@ -882,7 +887,7 @@ long *m;
+@@ -882,7 +889,7 @@ long *m;
        *m = ShiftMask | ControlMask;
        return(kc);
      }
@@ -128,7 +131,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
      *m = ControlMask;
      return(0);
    } else {
-@@ -902,7 +907,7 @@ long *m;
+@@ -902,7 +909,7 @@ long *m;
        *m = ShiftMask;
        return(kc);
      }
@@ -137,7 +140,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
      *m = 0;
      return(0);
    }
-@@ -1040,7 +1045,8 @@ caddr_t  client_data;	/* unused */
+@@ -1040,7 +1047,8 @@ caddr_t  client_data;	/* unused */
  caddr_t  call_data;	/* unused */
  
  {
@@ -147,7 +150,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
    char *sel;
    XKeyEvent evt;
    long m;
-@@ -1052,7 +1058,7 @@ caddr_t  call_data;	/* unused */
+@@ -1052,7 +1060,7 @@ caddr_t  call_data;	/* unused */
      if (Windows[x].active == 1) {
        for (y = 0; y < strlen(sel); y++) {
  	/* skip if we don't have a keycode mapping for this character */
@@ -156,7 +159,7 @@ $NetBSD: patch-xlax.c,v 1.1 2022/12/06 21:04:14 vins Exp $
  	  fprintf(stderr,"No key mapping for %c!\n", sel[y]);
  	  continue;
  	}
-@@ -1068,8 +1074,8 @@ caddr_t  call_data;	/* unused */
+@@ -1068,8 +1076,8 @@ caddr_t  call_data;	/* unused */
  	evt.x_root=0;
  	evt.y_root=0;
  	evt.same_screen=1;
