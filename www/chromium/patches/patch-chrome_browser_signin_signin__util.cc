@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.5 2025/08/13 07:44:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.6 2025/09/08 13:24:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/signin/signin_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/signin/signin_util.cc
-@@ -84,7 +84,7 @@ CookiesMover::CookiesMover(base::WeakPtr
+@@ -90,7 +90,7 @@ CookiesMover::CookiesMover(base::WeakPtr
  CookiesMover::~CookiesMover() = default;
  
  void CookiesMover::StartMovingCookies() {
@@ -15,8 +15,8 @@ $NetBSD: patch-chrome_browser_signin_signin__util.cc,v 1.5 2025/08/13 07:44:19 k
    bool allow_cookies_to_be_moved = base::FeatureList::IsEnabled(
        profile_management::features::kThirdPartyProfileManagement);
  #else
-@@ -344,7 +344,7 @@ SignedInState GetSignedInState(
-   return SignedInState::kSignedOut;
+@@ -369,7 +369,7 @@ std::string SignedInStateToString(Signed
+   }
  }
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)

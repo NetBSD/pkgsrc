@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.5 2025/08/13 07:44:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.6 2025/09/08 13:24:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/renderer_preferences_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/renderer_preferences_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/renderer_preferences_util.cc
 @@ -40,7 +40,7 @@
  #include "ui/views/controls/textfield/textfield.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.5 2025/08/13 07
  #include "chrome/browser/themes/theme_service.h"
  #include "chrome/browser/themes/theme_service_factory.h"
  #include "ui/linux/linux_ui.h"
-@@ -180,7 +180,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -185,7 +185,7 @@ void UpdateFromSystemSettings(blink::Ren
    prefs->caret_blink_interval = views::Textfield::GetCaretBlinkInterval();
  #endif
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_renderer__preferences__util.cc,v 1.5 2025/08/13 07
    auto* linux_ui_theme = ui::LinuxUiTheme::GetForProfile(profile);
    if (linux_ui_theme) {
      if (ThemeServiceFactory::GetForProfile(profile)->UsingSystemTheme()) {
-@@ -203,7 +203,7 @@ void UpdateFromSystemSettings(blink::Ren
+@@ -208,7 +208,7 @@ void UpdateFromSystemSettings(blink::Ren
  #endif
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \

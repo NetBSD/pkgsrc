@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_BUILD.gn,v 1.5 2025/08/13 07:44:24 kikadf Exp $
+$NetBSD: patch-content_app_BUILD.gn,v 1.6 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/app/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/app/BUILD.gn
-@@ -89,9 +89,9 @@ source_set("content_main_runner_app") {
+@@ -91,9 +91,9 @@ source_set("content_main_runner_app") {
             "//third_party/tflite:buildflags",
             "//tools/v8_context_snapshot:buildflags",
           ]
@@ -18,4 +18,4 @@ $NetBSD: patch-content_app_BUILD.gn,v 1.5 2025/08/13 07:44:24 kikadf Exp $
 +#  }
  }
  
- source_set("app") {
+ if (is_android && enable_javaless_renderers) {

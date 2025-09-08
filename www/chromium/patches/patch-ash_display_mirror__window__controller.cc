@@ -1,4 +1,4 @@
-$NetBSD: patch-ash_display_mirror__window__controller.cc,v 1.6 2025/09/08 13:13:46 kikadf Exp $
+$NetBSD: patch-ash_display_mirror__window__controller.cc,v 1.7 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

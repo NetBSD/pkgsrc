@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_commands_set__user__display__mode__command.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_web__applications_commands_set__user__display__mode__command.cc,v 1.6 2025/09/08 13:24:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/web_applications/commands/set_user_display_mode_command.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/web_applications/commands/set_user_display_mode_command.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/web_applications/commands/set_user_display_mode_command.cc
 @@ -56,7 +56,7 @@ void SetUserDisplayModeCommand::StartWit
      // OsIntegrationTestOverride can use the xdg install command to detect

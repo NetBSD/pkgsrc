@@ -1,12 +1,12 @@
-$NetBSD: patch-components_paint__preview_browser_paint__preview__client__unittest.cc,v 1.5 2025/08/13 07:44:23 kikadf Exp $
+$NetBSD: patch-components_paint__preview_browser_paint__preview__client__unittest.cc,v 1.6 2025/09/08 13:24:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/paint_preview/browser/paint_preview_client_unittest.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/paint_preview/browser/paint_preview_client_unittest.cc
-@@ -174,8 +174,8 @@ TEST_P(PaintPreviewClientRenderViewHostT
+@@ -172,8 +172,8 @@ TEST_P(PaintPreviewClientRenderViewHostT
    metadata->set_version(kPaintPreviewVersion);
    auto* chromeVersion = metadata->mutable_chrome_version();
    const auto& current_chrome_version = version_info::GetVersion();

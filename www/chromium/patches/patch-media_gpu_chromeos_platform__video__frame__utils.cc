@@ -1,12 +1,12 @@
-$NetBSD: patch-media_gpu_chromeos_platform__video__frame__utils.cc,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_platform__video__frame__utils.cc,v 1.6 2025/09/08 13:24:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/gpu/chromeos/platform_video_frame_utils.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ media/gpu/chromeos/platform_video_frame_utils.cc
-@@ -69,7 +69,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
+@@ -71,7 +71,7 @@ static std::unique_ptr<ui::GbmDevice> Cr
      const base::FilePath dev_path(FILE_PATH_LITERAL(
          base::StrCat({drm_node_file_prefix, base::NumberToString(i)})));
  
@@ -15,7 +15,7 @@ $NetBSD: patch-media_gpu_chromeos_platform__video__frame__utils.cc,v 1.5 2025/08
      const bool is_render_node = base::Contains(drm_node_file_prefix, "render");
  
      // TODO(b/313513760): don't guard base::File::FLAG_WRITE behind
-@@ -190,7 +190,7 @@ class GbmDeviceWrapper {
+@@ -192,7 +192,7 @@ class GbmDeviceWrapper {
        const base::FilePath dev_path(
            base::CommandLine::ForCurrentProcess()->GetSwitchValuePath(
                switches::kRenderNodeOverride));

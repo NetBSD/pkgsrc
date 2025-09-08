@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_browser__process__impl.h,v 1.5 2025/08/13 07:44:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__process__impl.h,v 1.6 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/browser_process_impl.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/browser_process_impl.h
-@@ -416,7 +416,7 @@ class BrowserProcessImpl : public Browse
+@@ -414,7 +414,7 @@ class BrowserProcessImpl : public Browse
  
    std::unique_ptr<BatteryMetrics> battery_metrics_;
  

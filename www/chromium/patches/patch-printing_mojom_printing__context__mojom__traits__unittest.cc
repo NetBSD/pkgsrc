@@ -1,12 +1,12 @@
-$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.4 2025/08/13 07:44:28 kikadf Exp $
+$NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.5 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits_unittest.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits_unittest.cc
-@@ -79,7 +79,7 @@ base::Value::Dict GenerateSampleSystemPr
+@@ -80,7 +80,7 @@ base::Value::Dict GenerateSampleSystemPr
      data.Set(kMacSystemPrintDialogDataDestinationLocation, "/foo/bar.pdf");
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
    data.Set(kLinuxSystemPrintDialogDataPrinter, "printer-name");
    data.Set(kLinuxSystemPrintDialogDataPrintSettings, "print-settings-foo");
    data.Set(kLinuxSystemPrintDialogDataPageSetup, "page-setup-bar");
-@@ -116,7 +116,7 @@ const PageMargins kPrintSettingsCustomMa
+@@ -117,7 +117,7 @@ const PageMargins kPrintSettingsCustomMa
                                                         /*top=*/10583,
                                                         /*bottom=*/12347);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
  PrintSettings::AdvancedSettings GenerateSampleAdvancedSettings() {
    PrintSettings::AdvancedSettings advanced_settings;
    advanced_settings.emplace("advanced-setting-A", base::Value("setting-A"));
-@@ -209,7 +209,7 @@ PrintSettings GenerateSamplePrintSetting
+@@ -210,7 +210,7 @@ PrintSettings GenerateSamplePrintSetting
    settings.set_device_name(kPrintSettingsDeviceName);
    settings.set_requested_media(kPrintSettingsRequestedMedia);
  
@@ -33,7 +33,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
    PrintSettings::AdvancedSettings& advanced_settings =
        settings.advanced_settings();
    for (const auto& item : kPrintSettingsAdvancedSettings)
-@@ -547,7 +547,7 @@ TEST(PrintingContextMojomTraitsTest,
+@@ -548,7 +548,7 @@ TEST(PrintingContextMojomTraitsTest,
  
    EXPECT_EQ(output.pages_per_sheet(), kPrintSettingsPagesPerSheet1);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
    EXPECT_EQ(output.advanced_settings(), kPrintSettingsAdvancedSettings);
  #endif
  
-@@ -600,7 +600,7 @@ TEST(PrintingContextMojomTraitsTest,
+@@ -601,7 +601,7 @@ TEST(PrintingContextMojomTraitsTest,
                                 kPrintSettingsCustomMarginsInMicrons));
    EXPECT_EQ(output.pages_per_sheet(), kPrintSettingsPagesPerSheet2);
  
@@ -51,7 +51,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
    EXPECT_EQ(output.advanced_settings(), kPrintSettingsAdvancedSettings);
  #endif
  
-@@ -639,7 +639,7 @@ TEST(PrintingContextMojomTraitsTest,
+@@ -674,7 +674,7 @@ TEST(PrintingContextMojomTraitsTest,
    EXPECT_EQ(output.page_setup_device_units(), kInput.page_setup_device_units());
  }
  
@@ -60,7 +60,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits__unittest.cc,v 1.
  TEST(PrintingContextMojomTraitsTest,
       TestSerializeAndDeserializePrintSettingsEmptyAdvancedSettings) {
    PrintSettings input = GenerateSamplePrintSettingsDefaultMargins();
-@@ -837,7 +837,7 @@ TEST(
+@@ -872,7 +872,7 @@ TEST(
  }
  #endif  // BUILDFLAG(IS_MAC)
  

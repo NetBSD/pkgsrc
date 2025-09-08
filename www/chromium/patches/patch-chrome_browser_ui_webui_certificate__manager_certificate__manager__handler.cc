@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_certificate__manager__handler.cc,v 1.5 2025/08/13 07:44:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_certificate__manager_certificate__manager__handler.cc,v 1.6 2025/09/08 13:24:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/ui/webui/certificate_manager/certificate_manager_handler.cc
 @@ -219,7 +219,7 @@ CertificateManagerPageHandler::GetCertSo
                  CERTIFICATE_TRUST_TYPE_DISTRUSTED,

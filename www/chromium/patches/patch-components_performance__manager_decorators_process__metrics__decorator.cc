@@ -1,10 +1,10 @@
-$NetBSD: patch-components_performance__manager_decorators_process__metrics__decorator.cc,v 1.5 2025/08/13 07:44:23 kikadf Exp $
+$NetBSD: patch-components_performance__manager_decorators_process__metrics__decorator.cc,v 1.6 2025/09/08 13:24:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/performance_manager/decorators/process_metrics_decorator.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/performance_manager/decorators/process_metrics_decorator.cc
 @@ -264,7 +264,7 @@ void ProcessMetricsDecorator::DidGetMemo
      // RSS and PMF to each node proportionally to its V8 heap size.

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_browser__features.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__features.cc,v 1.6 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/browser_features.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/browser_features.cc
-@@ -75,7 +75,7 @@ BASE_FEATURE(kClearUserDataUponProfileDe
+@@ -80,7 +80,7 @@ BASE_FEATURE(kClearUserDataUponProfileDe
               "ClearUserDataUponProfileDestruction",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_browser__features.cc,v 1.5 2025/08/13 07:44:16 kik
  // Enables usage of os_crypt_async::SecretPortalKeyProvider.  Once
  // `kSecretPortalKeyProviderUseForEncryption` is enabled, this flag cannot be
  // disabled without losing data.
-@@ -94,7 +94,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
+@@ -99,7 +99,7 @@ BASE_FEATURE(kUseFreedesktopSecretKeyPro
  // the browser exits.
  BASE_FEATURE(kDestroyProfileOnBrowserClose,
               "DestroyProfileOnBrowserClose",
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_browser__features.cc,v 1.5 2025/08/13 07:44:16 kik
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -232,7 +232,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
+@@ -241,7 +241,7 @@ BASE_FEATURE(kSandboxExternalProtocolBlo
               "SandboxExternalProtocolBlockedWarning",
               base::FEATURE_ENABLED_BY_DEFAULT);
  

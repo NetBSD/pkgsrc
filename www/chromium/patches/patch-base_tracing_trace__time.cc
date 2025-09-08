@@ -1,10 +1,10 @@
-$NetBSD: patch-base_tracing_trace__time.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-base_tracing_trace__time.cc,v 1.6 2025/09/08 13:24:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/tracing/trace_time.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/tracing/trace_time.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/tracing/trace_time.cc
 @@ -8,12 +8,18 @@
  #include "build/build_config.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikadf Exp $
+$NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.6 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/debug/stack_trace_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/debug/stack_trace_posix.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/debug/stack_trace_posix.cc
 @@ -50,8 +50,8 @@
  // Surprisingly, uClibc defines __GLIBC__ in some build configs, but
@@ -29,7 +29,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
  
  #include "base/debug/proc_maps_linux.h"
  #endif
-@@ -329,7 +331,7 @@ void PrintToStderr(const char* output) {
+@@ -327,7 +329,7 @@ void PrintToStderr(const char* output) {
    std::ignore = HANDLE_EINTR(write(STDERR_FILENO, output, strlen(output)));
  }
  
@@ -38,7 +38,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
  void AlarmSignalHandler(int signal, siginfo_t* info, void* void_context) {
    // We have seen rare cases on AMD linux where the default signal handler
    // either does not run or a thread (Probably an AMD driver thread) prevents
-@@ -346,7 +348,11 @@ void AlarmSignalHandler(int signal, sigi
+@@ -344,7 +346,11 @@ void AlarmSignalHandler(int signal, sigi
        "Warning: Default signal handler failed to terminate process.\n");
    PrintToStderr("Calling exit_group() directly to prevent timeout.\n");
    // See: https://man7.org/linux/man-pages/man2/exit_group.2.html
@@ -50,7 +50,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
  }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
-@@ -552,7 +558,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -548,7 +554,7 @@ void StackDumpSignalHandler(int signal, 
      _exit(EXIT_FAILURE);
    }
  
@@ -59,7 +59,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
    // Set an alarm to trigger in case the default handler does not terminate
    // the process. See 'AlarmSignalHandler' for more details.
    struct sigaction action;
-@@ -577,6 +583,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -573,6 +579,7 @@ void StackDumpSignalHandler(int signal, 
    // signals that do not re-raise autonomously), such as signals delivered via
    // kill() and asynchronous hardware faults such as SEGV_MTEAERR, which would
    // otherwise be lost when re-raising the signal via raise().
@@ -67,7 +67,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
    long retval = syscall(SYS_rt_tgsigqueueinfo, getpid(), syscall(SYS_gettid),
                          info->si_signo, info);
    if (retval == 0) {
-@@ -591,6 +598,7 @@ void StackDumpSignalHandler(int signal, 
+@@ -587,6 +594,7 @@ void StackDumpSignalHandler(int signal, 
    if (errno != EPERM) {
      _exit(EXIT_FAILURE);
    }
@@ -75,7 +75,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_ANDROID) ||
          // BUILDFLAG(IS_CHROMEOS)
  
-@@ -783,6 +791,7 @@ class SandboxSymbolizeHelper {
+@@ -779,6 +787,7 @@ class SandboxSymbolizeHelper {
      return -1;
    }
  
@@ -83,7 +83,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
    // This class is copied from
    // third_party/crashpad/crashpad/util/linux/scoped_pr_set_dumpable.h.
    // It aims at ensuring the process is dumpable before opening /proc/self/mem.
-@@ -875,11 +884,15 @@ class SandboxSymbolizeHelper {
+@@ -871,11 +880,15 @@ class SandboxSymbolizeHelper {
        r.base = cur_base;
      }
    }
@@ -99,7 +99,7 @@ $NetBSD: patch-base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikad
      // Reads /proc/self/maps.
      std::string contents;
      if (!ReadProcMaps(&contents)) {
-@@ -897,6 +910,7 @@ class SandboxSymbolizeHelper {
+@@ -893,6 +906,7 @@ class SandboxSymbolizeHelper {
  
      is_initialized_ = true;
      return true;
