@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/11/26 14:00:46 gdt Exp $
+$NetBSD: distinfo,v 1.7 2025/09/08 22:37:59 gdt Exp $
 
-BLAKE2s (proj-gh-pages-c8132e949948c532e9aef6722ae6eb3e74cbc519.tar.gz) = 880be6570dd01cd8c3296b9c384acc58a69fc1b23265945b9a507b6b587b76f6
-SHA512 (proj-gh-pages-c8132e949948c532e9aef6722ae6eb3e74cbc519.tar.gz) = 41d5e6af14b63c1b09f1c640f59d90ad45c0dae438fd30dd42f533b25c889ce3d4f6db6acd01f79c14247aa129e176e505fa3e0c7154e1e783d0ebc8931173a9
-Size (proj-gh-pages-c8132e949948c532e9aef6722ae6eb3e74cbc519.tar.gz) = 62780044 bytes
+BLAKE2s (proj-doc-9.6.pdf) = 5e2efa33b4ec2f89dbc8a12ce322b4fa25b6fed8dff2acc5319016e07334cbb4
+SHA512 (proj-doc-9.6.pdf) = a61c6545bd37f61bb61a8dc184236a7f8a3e0f086732ab8c799aa0705602761b3417cfaaaf9d490ee49de322b0f4f2c1189520343cbe84fea045ddff50eba1aa
+Size (proj-doc-9.6.pdf) = 47043406 bytes
