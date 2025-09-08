@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 18:26:00 maya Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/08 07:50:41 leot Exp $
 
-DISTNAME=	helm-3.18.4
+DISTNAME=	helm-3.18.6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=helm/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
 
 # XXX: via: `cd ${WRKSRC} && go list -f '{{.Version}}' -m k8s.io/client-go`
-K8S_MODULES_VERSION=		0.33.2 # <major>.<minor>.x
+K8S_MODULES_VERSION=		0.33.3 # <major>.<minor>.x
 K8S_MODULES_VERSION_MAJOR=	1 # <major> + 1
 K8S_MODULES_VERSION_MINOR=	33 # <minor>
 GO_BUILD_PATTERN+=	-ldflags ' \
