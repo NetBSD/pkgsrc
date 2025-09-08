@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/09/08 10:06:19 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/08 10:11:22 gdt Exp $
 
 VERSION=	1.2.57
 DISTTAIL=	ubx2
@@ -10,7 +10,7 @@ CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=semuconsulting/}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://github.com/semuconsulting/py${DISTTAIL}/
+HOMEPAGE=	https://github.com/semuconsulting/pyubx2/
 COMMENT=	Python parser for UBX (u-blox GNSS receiver protocol)
 LICENSE=	modified-bsd
 
