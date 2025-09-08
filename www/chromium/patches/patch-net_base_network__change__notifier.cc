@@ -1,10 +1,10 @@
-$NetBSD: patch-net_base_network__change__notifier.cc,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-net_base_network__change__notifier.cc,v 1.6 2025/09/08 13:24:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- net/base/network_change_notifier.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ net/base/network_change_notifier.cc
 @@ -38,7 +38,7 @@
  #include "net/base/network_change_notifier_linux.h"
@@ -34,7 +34,7 @@ $NetBSD: patch-net_base_network__change__notifier.cc,v 1.5 2025/08/13 07:44:27 k
  // static
  AddressMapOwnerLinux* NetworkChangeNotifier::GetAddressMapOwner() {
    return g_network_change_notifier
-@@ -867,7 +870,7 @@ NetworkChangeNotifier::NetworkChangeNoti
+@@ -868,7 +871,7 @@ NetworkChangeNotifier::NetworkChangeNoti
    }
  }
  

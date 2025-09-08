@@ -1,10 +1,10 @@
-$NetBSD: patch-services_screen__ai_screen__ai__service__impl.cc,v 1.1 2025/08/13 07:44:30 kikadf Exp $
+$NetBSD: patch-services_screen__ai_screen__ai__service__impl.cc,v 1.2 2025/09/08 13:24:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/screen_ai/screen_ai_service_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- services/screen_ai/screen_ai_service_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ services/screen_ai/screen_ai_service_impl.cc
 @@ -38,7 +38,7 @@
  #include "ui/accessibility/ax_tree_id.h"

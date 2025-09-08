@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_libyuv__image__processor__backend.cc,v 1.6 2025/09/08 13:24:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/gpu/chromeos/libyuv_image_processor_backend.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ media/gpu/chromeos/libyuv_image_processor_backend.cc
 @@ -53,7 +53,7 @@ static constexpr struct {
  #define CONV(in, out, trans, result) \

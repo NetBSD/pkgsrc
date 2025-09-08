@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__columns.h,v 1.4 2025/08/13 07:44:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_task__manager_task__manager__columns.h,v 1.5 2025/09/08 13:24:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/task_manager/task_manager_columns.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/task_manager/task_manager_columns.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/ui/task_manager/task_manager_columns.h
-@@ -277,7 +277,7 @@ inline constexpr std::array kColumns = {
+@@ -264,7 +264,7 @@ inline constexpr std::array kColumns = {
                      .default_visibility = false},
  #endif
  

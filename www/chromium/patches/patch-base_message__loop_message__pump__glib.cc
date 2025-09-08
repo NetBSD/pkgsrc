@@ -1,10 +1,10 @@
-$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.5 2025/08/13 07:44:15 kikadf Exp $
+$NetBSD: patch-base_message__loop_message__pump__glib.cc,v 1.6 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/message_loop/message_pump_glib.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/message_loop/message_pump_glib.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/message_loop/message_pump_glib.cc
 @@ -8,6 +8,15 @@
  #include <glib.h>

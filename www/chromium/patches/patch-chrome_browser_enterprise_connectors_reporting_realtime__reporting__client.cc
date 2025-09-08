@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.5 2025/08/13 07:44:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reporting__client.cc,v 1.6 2025/09/08 13:24:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/enterprise/connectors/reporting/realtime_reporting_client.cc
-@@ -52,7 +52,7 @@
+@@ -53,7 +53,7 @@
  #include "base/strings/utf_string_conversions.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
  #include "chrome/browser/enterprise/signals/signals_aggregator_factory.h"
  #include "chrome/browser/enterprise/signin/enterprise_signin_prefs.h"
  #include "components/device_signals/core/browser/signals_aggregator.h"
-@@ -157,7 +157,7 @@ void RealtimeReportingClient::ReportPast
+@@ -158,7 +158,7 @@ void RealtimeReportingClient::ReportPast
                                       /*include_profile_user_name=*/false);
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
  
  void AddCrowdstrikeSignalsToEvent(
      base::Value::Dict& event,
-@@ -193,7 +193,7 @@ std::string RealtimeReportingClient::Get
+@@ -194,7 +194,7 @@ std::string RealtimeReportingClient::Get
    username_ =
        identity_manager_ ? GetProfileEmail(identity_manager_) : std::string();
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_enterprise_connectors_reporting_realtime__reportin
    if (username_.empty()) {
      username_ = Profile::FromBrowserContext(context_)->GetPrefs()->GetString(
          enterprise_signin::prefs::kProfileUserEmail);
-@@ -245,7 +245,7 @@ std::string RealtimeReportingClient::Get
+@@ -251,7 +251,7 @@ std::string RealtimeReportingClient::Get
    return client_id;
  }
  

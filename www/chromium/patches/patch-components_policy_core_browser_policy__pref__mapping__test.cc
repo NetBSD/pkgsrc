@@ -1,10 +1,10 @@
-$NetBSD: patch-components_policy_core_browser_policy__pref__mapping__test.cc,v 1.5 2025/08/13 07:44:23 kikadf Exp $
+$NetBSD: patch-components_policy_core_browser_policy__pref__mapping__test.cc,v 1.6 2025/09/08 13:24:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/policy/core/browser/policy_pref_mapping_test.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/policy/core/browser/policy_pref_mapping_test.cc
 @@ -432,7 +432,7 @@ class PolicyTestCase {
      const std::string os("chromeos");

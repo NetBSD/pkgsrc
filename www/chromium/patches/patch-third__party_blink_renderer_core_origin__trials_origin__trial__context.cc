@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_core_origin__trials_origin__trial__context.cc,v 1.5 2025/08/13 07:44:30 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_core_origin__trials_origin__trial__context.cc,v 1.6 2025/09/08 13:24:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/blink/renderer/core/origin_trials/origin_trial_context.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/blink/renderer/core/origin_trials/origin_trial_context.cc
 @@ -568,7 +568,7 @@ bool OriginTrialContext::CanEnableTrialF
    }

@@ -1,17 +1,35 @@
-$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.4 2025/08/13 07:44:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_devtools_remote__debugging__server.cc,v 1.5 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/devtools/remote_debugging_server.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/devtools/remote_debugging_server.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/devtools/remote_debugging_server.cc
-@@ -109,7 +109,7 @@ IsRemoteDebuggingAllowed(const std::opti
-         RemoteDebuggingServer::NotStartedReason::kDisabledByPolicy);
-   }
+@@ -42,7 +42,7 @@ namespace {
+ 
+ bool g_tethering_enabled = false;
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
-   if (base::FeatureList::IsEnabled(features::kDevToolsDebuggingRestrictions) &&
-       is_default_user_data_dir.value_or(true)) {
+ bool g_enable_default_user_data_dir_check_for_chromium_branding_for_testing =
+     false;
+ #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
+@@ -114,7 +114,7 @@ IsRemoteDebuggingAllowed(const std::opti
      return base::unexpected(
+         RemoteDebuggingServer::NotStartedReason::kDisabledByPolicy);
+   }
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
+   constexpr bool default_user_data_dir_check_enabled = true;
+ #else
+@@ -140,7 +140,7 @@ void RemoteDebuggingServer::EnableTether
+   g_tethering_enabled = true;
+ }
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // static
+ void RemoteDebuggingServer::EnableDefaultUserDataDirCheckForTesting() {
+   g_enable_default_user_data_dir_check_for_chromium_branding_for_testing = true;

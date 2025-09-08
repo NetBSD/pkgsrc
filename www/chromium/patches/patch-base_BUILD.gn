@@ -1,12 +1,12 @@
-$NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
+$NetBSD: patch-base_BUILD.gn,v 1.6 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/BUILD.gn
-@@ -949,7 +949,7 @@ component("base") {
+@@ -957,7 +957,7 @@ component("base") {
      #"system/sys_info_openbsd.cc",
    ]
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
      sources += [
        "posix/sysctl.cc",
        "posix/sysctl.h",
-@@ -1102,11 +1102,26 @@ component("base") {
+@@ -1110,11 +1110,26 @@ component("base") {
    # Needed for <atomic> if using newer C++ library than sysroot, except if
    # building inside the cros_sdk environment - use host_toolchain as a
    # more robust check for this.
@@ -43,7 +43,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
    if (use_allocator_shim) {
      if (is_apple) {
        sources += [ "allocator/early_zone_registration_apple.h" ]
-@@ -1126,7 +1141,7 @@ component("base") {
+@@ -1134,7 +1149,7 @@ component("base") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -52,7 +52,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -2137,6 +2152,29 @@ component("base") {
+@@ -2143,6 +2158,29 @@ component("base") {
      ]
    }
  
@@ -82,7 +82,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
    # iOS
    if (is_ios) {
      sources += [
-@@ -2305,6 +2343,33 @@ component("base") {
+@@ -2317,6 +2355,33 @@ component("base") {
      }
    }
  
@@ -116,7 +116,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
    if (use_blink) {
      sources += [
        "files/file_path_watcher.cc",
-@@ -2694,7 +2759,7 @@ buildflag_header("protected_memory_build
+@@ -2723,7 +2788,7 @@ buildflag_header("protected_memory_build
    header = "protected_memory_buildflags.h"
    header_dir = "base/memory"
  
@@ -125,7 +125,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
                               (is_win || is_linux || is_android || is_mac)
  
    flags = [ "PROTECTED_MEMORY_ENABLED=$protected_memory_enabled" ]
-@@ -3200,7 +3265,7 @@ if (is_apple) {
+@@ -3229,7 +3294,7 @@ if (is_apple) {
    }
  }
  
@@ -134,7 +134,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
    # This test must compile with -fstack-protector-all
    source_set("stack_canary_linux_unittests") {
      testonly = true
-@@ -3885,7 +3950,7 @@ test("base_unittests") {
+@@ -3922,7 +3987,7 @@ test("base_unittests") {
      ]
    }
  
@@ -143,7 +143,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
      sources += [
        "debug/proc_maps_linux_unittest.cc",
        "files/scoped_file_linux_unittest.cc",
-@@ -3909,7 +3974,7 @@ test("base_unittests") {
+@@ -3946,7 +4011,7 @@ test("base_unittests") {
        "posix/file_descriptor_shuffle_unittest.cc",
        "posix/unix_domain_socket_unittest.cc",
      ]
@@ -152,7 +152,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
        sources += [
          "profiler/stack_base_address_posix_unittest.cc",
          "profiler/stack_copier_signal_unittest.cc",
-@@ -3920,7 +3985,7 @@ test("base_unittests") {
+@@ -3957,7 +4022,7 @@ test("base_unittests") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -161,7 +161,7 @@ $NetBSD: patch-base_BUILD.gn,v 1.5 2025/08/13 07:44:14 kikadf Exp $
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -4108,7 +4173,7 @@ test("base_unittests") {
+@@ -4144,7 +4209,7 @@ test("base_unittests") {
      deps += [ ":base_profiler_test_support_library" ]
    }
  

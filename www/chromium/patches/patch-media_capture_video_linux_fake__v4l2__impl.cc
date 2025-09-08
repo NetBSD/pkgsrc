@@ -1,10 +1,10 @@
-$NetBSD: patch-media_capture_video_linux_fake__v4l2__impl.cc,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-media_capture_video_linux_fake__v4l2__impl.cc,v 1.6 2025/09/08 13:24:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/capture/video/linux/fake_v4l2_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/capture/video/linux/fake_v4l2_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ media/capture/video/linux/fake_v4l2_impl.cc
 @@ -570,7 +570,7 @@ int FakeV4L2Impl::close(int fd) {
    return kSuccessReturnValue;

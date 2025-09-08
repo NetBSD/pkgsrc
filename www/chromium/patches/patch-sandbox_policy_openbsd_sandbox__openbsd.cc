@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.5 2025/08/13 07:44:29 kikadf Exp $
+$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-08-12 17:48:59.521154803 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-09-05 09:59:07.696195919 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,400 @@
+@@ -0,0 +1,393 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -44,7 +44,6 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.5 2025/08/13 07:44
 +#include "base/time/time.h"
 +#include "build/build_config.h"
 +#include "crypto/crypto_buildflags.h"
-+#include "ppapi/buildflags/buildflags.h"
 +#include "sandbox/constants.h"
 +#include "sandbox/linux/services/credentials.h"
 +#include "sandbox/linux/services/namespace_sandbox.h"
@@ -349,12 +348,6 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.5 2025/08/13 07:44
 +    case sandbox::mojom::Sandbox::kOnDeviceModelExecution:
 +      SetPledge("stdio drm inet rpath flock cpath wpath prot_exec recvfd sendfd tmppath unix", NULL);
 +      break;
-+#if BUILDFLAG(ENABLE_PPAPI)
-+    case sandbox::mojom::Sandbox::kPpapi:
-+      // prot_exec needed by v8
-+      SetPledge("stdio rpath prot_exec recvfd sendfd", NULL);
-+      break;
-+#endif
 +    case sandbox::mojom::Sandbox::kAudio:
 +      SetPledge(NULL, "@PKG_SYSCONFBASE@/chromium/pledge.utility_audio");
 +      break;

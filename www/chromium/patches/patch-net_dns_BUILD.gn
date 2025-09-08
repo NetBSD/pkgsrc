@@ -1,10 +1,10 @@
-$NetBSD: patch-net_dns_BUILD.gn,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-net_dns_BUILD.gn,v 1.6 2025/09/08 13:24:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/dns/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- net/dns/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ net/dns/BUILD.gn
 @@ -140,7 +140,7 @@ source_set("dns") {
        "dns_config_service_android.cc",
@@ -15,19 +15,15 @@ $NetBSD: patch-net_dns_BUILD.gn,v 1.5 2025/08/13 07:44:27 kikadf Exp $
      sources += [
        "dns_config_service_linux.cc",
        "dns_config_service_linux.h",
-@@ -173,7 +173,10 @@ source_set("dns") {
-     ]
+@@ -174,6 +174,7 @@ source_set("dns") {
    }
  
--  deps = [ "//net:net_deps" ]
-+  deps = [
-+    "//net:net_deps",
-+    "///services/screen_ai/buildflags",
-+  ]
+   deps = [ "//net:net_deps" ]
++  deps += [ "//services/screen_ai/buildflags" ]
  
    public_deps = [
      ":dns_client",
-@@ -181,6 +184,7 @@ source_set("dns") {
+@@ -181,6 +182,7 @@ source_set("dns") {
      ":host_resolver_manager",
      ":mdns_client",
      "//net:net_public_deps",
@@ -35,7 +31,7 @@ $NetBSD: patch-net_dns_BUILD.gn,v 1.5 2025/08/13 07:44:27 kikadf Exp $
    ]
  
    if (enable_mdns) {
-@@ -454,9 +458,9 @@ source_set("tests") {
+@@ -454,9 +456,9 @@ source_set("tests") {
  
    if (is_android) {
      sources += [ "dns_config_service_android_unittest.cc" ]

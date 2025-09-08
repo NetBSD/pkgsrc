@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_BUILD.gn,v 1.5 2025/08/13 07:44:29 kikadf Exp $
+$NetBSD: patch-sandbox_policy_BUILD.gn,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- sandbox/policy/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ sandbox/policy/BUILD.gn
-@@ -46,7 +46,7 @@ component("policy") {
+@@ -45,7 +45,7 @@ component("policy") {
        "//third_party/jni_zero",
      ]
    }
@@ -15,7 +15,7 @@ $NetBSD: patch-sandbox_policy_BUILD.gn,v 1.5 2025/08/13 07:44:29 kikadf Exp $
      sources += [
        "linux/bpf_audio_policy_linux.cc",
        "linux/bpf_audio_policy_linux.h",
-@@ -117,6 +117,38 @@ component("policy") {
+@@ -115,6 +115,38 @@ component("policy") {
        "//sandbox/linux:suid_sandbox_client",
      ]
    }

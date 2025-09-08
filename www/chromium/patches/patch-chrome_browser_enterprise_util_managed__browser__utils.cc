@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.4 2025/08/13 07:44:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.5 2025/09/08 13:24:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/enterprise/util/managed_browser_utils.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/enterprise/util/managed_browser_utils.cc
-@@ -213,7 +213,7 @@ void SetUserAcceptedAccountManagement(Pr
+@@ -220,7 +220,7 @@ void SetUserAcceptedAccountManagement(Pr
    // The updated consent screen also ask the user for consent to share device
    // signals.
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   if (accepted && base::FeatureList::IsEnabled(
-                       features::kEnterpriseUpdatedProfileCreationScreen)) {
-     profile->GetPrefs()->SetBoolean(
-@@ -225,7 +225,7 @@ void SetUserAcceptedAccountManagement(Pr
+   profile->GetPrefs()->SetBoolean(
+       device_signals::prefs::kDeviceSignalsPermanentConsentReceived, accepted);
+ #endif
+@@ -229,7 +229,7 @@ void SetUserAcceptedAccountManagement(Pr
        profile_manager->GetProfileAttributesStorage()
            .GetProfileAttributesWithPath(profile->GetPath());
    if (entry) {
@@ -24,12 +24,21 @@ $NetBSD: patch-chrome_browser_enterprise_util_managed__browser__utils.cc,v 1.4 2
      SetEnterpriseProfileLabel(profile);
  #endif
      entry->SetUserAcceptedAccountManagement(accepted);
-@@ -344,7 +344,7 @@ bool CanShowEnterpriseProfileUI(Profile*
+@@ -348,7 +348,7 @@ bool CanShowEnterpriseProfileUI(Profile*
  }
  
  bool CanShowEnterpriseBadgingForNTPFooter(Profile* profile) {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+   BrowserManagementNoticeState management_notice_state =
+       GetManagementNoticeStateForNTPFooter(profile);
+   switch (management_notice_state) {
+@@ -366,7 +366,7 @@ bool CanShowEnterpriseBadgingForNTPFoote
+ 
+ BrowserManagementNoticeState GetManagementNoticeStateForNTPFooter(
+     Profile* profile) {
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    if (!policy::ManagementServiceFactory::GetForProfile(profile)
-            ->IsBrowserManaged()) {
-     return false;
+            ->IsBrowserManaged() ||
+       !g_browser_process->local_state()->GetBoolean(

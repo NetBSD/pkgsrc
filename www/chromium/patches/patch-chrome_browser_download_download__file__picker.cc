@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_download_download__file__picker.cc,v 1.5 2025/08/13 07:44:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_download_download__file__picker.cc,v 1.6 2025/09/08 13:24:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/download/download_file_picker.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/download/download_file_picker.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/download/download_file_picker.cc
 @@ -18,7 +18,7 @@
  #include "content/public/browser/web_contents.h"

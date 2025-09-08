@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_apps_app__service_publishers_extension__apps.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_apps_app__service_publishers_extension__apps.cc,v 1.6 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/apps/app_service/publishers/extension_apps.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/apps/app_service/publishers/extension_apps.cc
 @@ -23,7 +23,7 @@ ExtensionApps::ExtensionApps(AppServiceP
  ExtensionApps::~ExtensionApps() = default;

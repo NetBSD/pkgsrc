@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_ipcz_src_reference__drivers_random.cc,v 1.5 2025/08/13 07:44:31 kikadf Exp $
+$NetBSD: patch-third__party_ipcz_src_reference__drivers_random.cc,v 1.6 2025/09/08 13:24:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/ipcz/src/reference_drivers/random.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/ipcz/src/reference_drivers/random.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/ipcz/src/reference_drivers/random.cc
-@@ -55,7 +55,7 @@ decltype(&ProcessPrng) GetProcessPrng() 
+@@ -53,7 +53,7 @@ decltype(&ProcessPrng) GetProcessPrng() 
  }
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_ipcz_src_reference__drivers_random.cc,v 1.5 2025/08/
  void RandomBytesFromDevUrandom(absl::Span<uint8_t> destination) {
    static int urandom_fd = [] {
      for (;;) {
-@@ -99,7 +99,7 @@ void RandomBytes(absl::Span<uint8_t> des
+@@ -97,7 +97,7 @@ void RandomBytes(absl::Span<uint8_t> des
        return;
      }
    }

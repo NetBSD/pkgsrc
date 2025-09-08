@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_address__space__randomization.h,v 1.5 2025/08/13 07:44:14 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_address__space__randomization.h,v 1.6 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/address_space_randomization.h
-@@ -38,7 +38,7 @@ AslrMask(uintptr_t bits) {
+@@ -43,7 +43,7 @@ AslrMask(uintptr_t bits) {
  
  #if PA_BUILDFLAG(PA_ARCH_CPU_64_BITS)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_address_
  
      // We shouldn't allocate system pages at all for sanitizer builds. However,
      // we do, and if random hint addresses interfere with address ranges
-@@ -125,7 +125,7 @@ AslrMask(uintptr_t bits) {
+@@ -130,7 +130,7 @@ AslrMask(uintptr_t bits) {
          return AslrAddress(0x20000000ULL);
        }
      #elif PA_BUILDFLAG(PA_ARCH_CPU_ARM64)

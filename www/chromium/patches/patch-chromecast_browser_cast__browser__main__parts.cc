@@ -1,12 +1,12 @@
-$NetBSD: patch-chromecast_browser_cast__browser__main__parts.cc,v 1.5 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-chromecast_browser_cast__browser__main__parts.cc,v 1.6 2025/09/08 13:24:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chromecast/browser/cast_browser_main_parts.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chromecast/browser/cast_browser_main_parts.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chromecast/browser/cast_browser_main_parts.cc
-@@ -100,7 +100,7 @@
+@@ -99,7 +99,7 @@
  #include "ui/ozone/public/ozone_platform.h"
  #endif  // BUILDFLAG(IS_OZONE)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chromecast_browser_cast__browser__main__parts.cc,v 1.5 2025/08/13
  #include <fontconfig/fontconfig.h>
  #include <signal.h>
  #include <sys/prctl.h>
-@@ -282,7 +282,7 @@ class CastViewsDelegate : public views::
+@@ -280,7 +280,7 @@ class CastViewsDelegate : public views::
  
  #endif  // defined(USE_AURA)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chromecast_browser_cast__browser__main__parts.cc,v 1.5 2025/08/13
  
  base::FilePath GetApplicationFontsDir() {
    std::unique_ptr<base::Environment> env(base::Environment::Create());
-@@ -327,7 +327,7 @@ const DefaultCommandLineSwitch kDefaultS
+@@ -325,7 +325,7 @@ const DefaultCommandLineSwitch kDefaultS
      {switches::kDisableThreadedAnimation, ""},
  #endif  // BUILDFLAG(IS_ANDROID)
  #endif  // BUILDFLAG(IS_CAST_AUDIO_ONLY)
@@ -33,7 +33,7 @@ $NetBSD: patch-chromecast_browser_cast__browser__main__parts.cc,v 1.5 2025/08/13
  #if defined(ARCH_CPU_X86_FAMILY)
      // This is needed for now to enable the x11 Ozone platform to work with
      // current Linux/NVidia OpenGL drivers.
-@@ -504,7 +504,7 @@ void CastBrowserMainParts::ToolkitInitia
+@@ -502,7 +502,7 @@ void CastBrowserMainParts::ToolkitInitia
      views_delegate_ = std::make_unique<CastViewsDelegate>();
  #endif  // defined(USE_AURA)
  

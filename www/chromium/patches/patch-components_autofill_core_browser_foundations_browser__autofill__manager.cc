@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_browser_foundations_browser__autofill__manager.cc,v 1.3 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_foundations_browser__autofill__manager.cc,v 1.4 2025/09/08 13:24:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/autofill/core/browser/foundations/browser_autofill_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/autofill/core/browser/foundations/browser_autofill_manager.cc
-@@ -746,7 +746,7 @@ BrowserAutofillManager::GetCreditCardAcc
+@@ -779,7 +779,7 @@ BrowserAutofillManager::GetAmountExtract
  
  payments::BnplManager* BrowserAutofillManager::GetPaymentsBnplManager() {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

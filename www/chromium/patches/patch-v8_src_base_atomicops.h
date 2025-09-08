@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_atomicops.h,v 1.5 2025/08/13 07:44:35 kikadf Exp $
+$NetBSD: patch-v8_src_base_atomicops.h,v 1.6 2025/09/08 13:24:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/atomicops.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- v8/src/base/atomicops.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ v8/src/base/atomicops.h
 @@ -57,10 +57,10 @@ using Atomic64 = SbAtomic64;
  using Atomic8 = char;

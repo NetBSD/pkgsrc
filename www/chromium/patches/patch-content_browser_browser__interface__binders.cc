@@ -1,4 +1,4 @@
-$NetBSD: patch-content_browser_browser__interface__binders.cc,v 1.1 2025/09/08 13:13:47 kikadf Exp $
+$NetBSD: patch-content_browser_browser__interface__binders.cc,v 1.2 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

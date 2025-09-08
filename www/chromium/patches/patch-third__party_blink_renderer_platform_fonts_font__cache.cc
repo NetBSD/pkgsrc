@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.5 2025/08/13 07:44:31 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.cc,v 1.6 2025/09/08 13:24:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.cc
 @@ -82,7 +82,7 @@ extern const char kNotoColorEmojiCompat[
  

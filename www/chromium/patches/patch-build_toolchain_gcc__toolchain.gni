@@ -1,12 +1,12 @@
-$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.5 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.6 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/gcc_toolchain.gni.orig	2025-07-29 22:51:44.000000000 +0000
+--- build/toolchain/gcc_toolchain.gni.orig	2025-08-29 18:50:09.000000000 +0000
 +++ build/toolchain/gcc_toolchain.gni
-@@ -56,6 +56,13 @@ if (enable_resource_allowlist_generation
+@@ -49,6 +49,13 @@ if (enable_resource_allowlist_generation
        "enable_resource_allowlist_generation=true does not work for target_os=$target_os")
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.5 2025/08/13 07:44:16 kika
  # This template defines a toolchain for something that works like gcc
  # (including clang).
  #
-@@ -609,7 +616,7 @@ template("single_gcc_toolchain") {
+@@ -606,7 +613,7 @@ template("single_gcc_toolchain") {
        # We need to specify link groups, at least, for single pass linkers. I.e.
        # Rust libraries are alpha-sorted instead of by dependencies so they fail
        # to link if not properly ordered or grouped.
@@ -29,7 +29,7 @@ $NetBSD: patch-build_toolchain_gcc__toolchain.gni,v 1.5 2025/08/13 07:44:16 kika
  
        # Generate a map file to be used for binary size analysis.
        # Map file adds ~10% to the link time on a z620.
-@@ -896,22 +903,12 @@ template("gcc_toolchain") {
+@@ -893,22 +900,12 @@ template("gcc_toolchain") {
  # actually just be doing a native compile.
  template("clang_toolchain") {
    gcc_toolchain(target_name) {

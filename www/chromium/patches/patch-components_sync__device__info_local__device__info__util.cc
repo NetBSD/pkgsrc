@@ -1,10 +1,10 @@
-$NetBSD: patch-components_sync__device__info_local__device__info__util.cc,v 1.5 2025/08/13 07:44:24 kikadf Exp $
+$NetBSD: patch-components_sync__device__info_local__device__info__util.cc,v 1.6 2025/09/08 13:24:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/sync_device_info/local_device_info_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/sync_device_info/local_device_info_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/sync_device_info/local_device_info_util.cc
 @@ -84,7 +84,7 @@ void OnMachineStatisticsLoaded(LocalDevi
  sync_pb::SyncEnums::DeviceType GetLocalDeviceType() {

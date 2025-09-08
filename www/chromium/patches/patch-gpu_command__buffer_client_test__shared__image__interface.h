@@ -1,4 +1,4 @@
-$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.h,v 1.1 2025/09/08 13:13:48 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_client_test__shared__image__interface.h,v 1.2 2025/09/08 13:24:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

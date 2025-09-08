@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.5 2025/08/13 07:44:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.6 2025/09/08 13:24:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/ui/startup/startup_browser_creator_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/ui/startup/startup_browser_creator_impl.cc
-@@ -74,7 +74,7 @@
+@@ -80,7 +80,7 @@
  #include "components/app_restore/full_restore_utils.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
  #include "chrome/browser/ui/webui/whats_new/whats_new_fetcher.h"
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
-@@ -206,7 +206,7 @@ Browser* StartupBrowserCreatorImpl::Open
+@@ -214,7 +214,7 @@ Browser* StartupBrowserCreatorImpl::Open
      // at the state of the MessageLoop.
      Browser::CreateParams params = Browser::CreateParams(profile_, false);
      params.creation_source = Browser::CreationSource::kStartupCreator;
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_startup_startup__browser__creator__impl.cc,v 1.
      params.startup_id =
          command_line_->GetSwitchValueASCII("desktop-startup-id");
  #endif
-@@ -236,7 +236,7 @@ Browser* StartupBrowserCreatorImpl::Open
+@@ -244,7 +244,7 @@ Browser* StartupBrowserCreatorImpl::Open
        continue;
      }
  

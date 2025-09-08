@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_accessibility_page__colors.cc,v 1.5 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_accessibility_page__colors.cc,v 1.6 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/accessibility/page_colors.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/accessibility/page_colors.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/accessibility/page_colors.cc
 @@ -12,7 +12,7 @@
  #include "components/sync_preferences/pref_service_syncable.h"

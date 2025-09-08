@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_angle_BUILD.gn,v 1.5 2025/08/13 07:44:30 kikadf Exp $
+$NetBSD: patch-third__party_angle_BUILD.gn,v 1.6 2025/09/08 13:24:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/angle/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/angle/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/angle/BUILD.gn
-@@ -360,7 +360,6 @@ config("extra_warnings") {
+@@ -367,7 +367,6 @@ config("extra_warnings") {
        "-Wtautological-type-limit-compare",
        "-Wundefined-reinterpret-cast",
        "-Wunneeded-internal-declaration",
@@ -14,7 +14,7 @@ $NetBSD: patch-third__party_angle_BUILD.gn,v 1.5 2025/08/13 07:44:30 kikadf Exp 
        "-Wsuggest-destructor-override",
        "-Wsuggest-override",
  
-@@ -537,7 +536,7 @@ template("angle_common_lib") {
+@@ -544,7 +543,7 @@ template("angle_common_lib") {
        all_dependent_configs = [ ":angle_disable_pool_alloc" ]
      }
  
@@ -23,7 +23,7 @@ $NetBSD: patch-third__party_angle_BUILD.gn,v 1.5 2025/08/13 07:44:30 kikadf Exp 
        libs = [ "dl" ]
      }
  
-@@ -692,6 +691,9 @@ angle_static_library("angle_gpu_info_uti
+@@ -707,6 +706,9 @@ angle_static_library("angle_gpu_info_uti
          "Xi",
          "Xext",
        ]

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_enterprise_connectors_core_realtime__reporting__client__base.cc,v 1.4 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-components_enterprise_connectors_core_realtime__reporting__client__base.cc,v 1.5 2025/09/08 13:24:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/enterprise/connectors/core/realtime_reporting_client_base.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/enterprise/connectors/core/realtime_reporting_client_base.cc
 @@ -191,7 +191,7 @@ void RealtimeReportingClientBase::Report
      *event.mutable_time() = ToProtoTimestamp(base::Time::Now());

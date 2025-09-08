@@ -1,22 +1,27 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_platform__thread__types.cc,v 1.5 2025/08/13 07:44:32 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_platform__thread__types.cc,v 1.6 2025/09/08 13:24:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/webrtc/rtc_base/platform_thread_types.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/webrtc/rtc_base/platform_thread_types.cc
-@@ -12,7 +12,9 @@
+@@ -12,11 +12,13 @@
  
  // IWYU pragma: begin_keep
  #if defined(WEBRTC_LINUX)
 +#if !defined(WEBRTC_BSD)
+ #include <linux/prctl.h>
  #include <sys/prctl.h>
 +#endif
  #include <sys/syscall.h>
- #endif
  
-@@ -46,6 +48,8 @@ PlatformThreadId CurrentThreadId() {
+-#if !defined(WEBRTC_ARCH_ARM) && !defined(WEBRTC_ARCH_ARM64)
++#if !defined(WEBRTC_ARCH_ARM) && !defined(WEBRTC_ARCH_ARM64) && !defined(WEBRTC_BSD)
+ #include <asm/unistd_64.h>
+ #endif
+ #endif
+@@ -50,6 +52,8 @@ PlatformThreadId CurrentThreadId() {
    return gettid();
  #elif defined(WEBRTC_FUCHSIA)
    return zx_thread_self();
@@ -25,7 +30,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_platform__thread__types.cc,v 1.5 20
  #elif defined(WEBRTC_LINUX)
    return syscall(__NR_gettid);
  #elif defined(__EMSCRIPTEN__)
-@@ -76,6 +80,7 @@ bool IsThreadRefEqual(const PlatformThre
+@@ -80,6 +84,7 @@ bool IsThreadRefEqual(const PlatformThre
  }
  
  void SetCurrentThreadName(const char* name) {
@@ -33,7 +38,7 @@ $NetBSD: patch-third__party_webrtc_rtc__base_platform__thread__types.cc,v 1.5 20
  #if defined(WEBRTC_WIN)
    // The SetThreadDescription API works even if no debugger is attached.
    // The names set with this API also show up in ETW traces. Very handy.
-@@ -123,6 +128,7 @@ void SetCurrentThreadName(const char* na
+@@ -127,6 +132,7 @@ void SetCurrentThreadName(const char* na
                                                name, strlen(name));
    RTC_DCHECK_EQ(status, ZX_OK);
  #endif

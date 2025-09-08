@@ -1,12 +1,12 @@
-$NetBSD: patch-content_utility_services.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
+$NetBSD: patch-content_utility_services.cc,v 1.6 2025/09/08 13:24:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/services.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/utility/services.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/utility/services.cc
-@@ -73,7 +73,7 @@
+@@ -74,13 +74,13 @@
  extern sandbox::TargetServices* g_utility_target_services;
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -15,7 +15,14 @@ $NetBSD: patch-content_utility_services.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp 
  #include "sandbox/linux/services/libc_interceptor.h"
  #include "sandbox/policy/mojom/sandbox.mojom.h"
  #include "sandbox/policy/sandbox_type.h"
-@@ -233,7 +233,7 @@ auto RunAudio(mojo::PendingReceiver<audi
+ #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
+ 
+-#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX))
++#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+ #include "services/shape_detection/public/mojom/shape_detection_service.mojom.h"  // nogncheck
+ #include "services/shape_detection/shape_detection_service.h"  // nogncheck
+ #endif  // BUILDFLAG(GOOGLE_CHROME_BRANDING) && BUILDFLAG(IS_CHROMEOS)
+@@ -235,7 +235,7 @@ auto RunAudio(mojo::PendingReceiver<audi
        << "task_policy_set TASK_QOS_POLICY";
  #endif
  
@@ -24,3 +31,21 @@ $NetBSD: patch-content_utility_services.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp 
    auto* command_line = base::CommandLine::ForCurrentProcess();
    if (sandbox::policy::SandboxTypeFromCommandLine(*command_line) ==
        sandbox::mojom::Sandbox::kNoSandbox) {
+@@ -257,7 +257,7 @@ auto RunAudio(mojo::PendingReceiver<audi
+   return audio::CreateStandaloneService(std::move(receiver));
+ }
+ 
+-#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX))
++#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+ auto RunShapeDetectionService(
+     mojo::PendingReceiver<shape_detection::mojom::ShapeDetectionService>
+         receiver) {
+@@ -432,7 +432,7 @@ void RegisterMainThreadServices(mojo::Se
+     services.Add(RunOnDeviceModel);
+   }
+ 
+-#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX))
++#if BUILDFLAG(GOOGLE_CHROME_BRANDING) && (BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD))
+   services.Add(RunShapeDetectionService);
+ #endif
+ 

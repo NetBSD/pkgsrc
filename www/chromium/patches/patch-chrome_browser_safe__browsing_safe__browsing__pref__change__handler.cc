@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_safe__browsing_safe__browsing__pref__change__handler.cc,v 1.4 2025/08/13 07:44:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_safe__browsing_safe__browsing__pref__change__handler.cc,v 1.5 2025/09/08 13:24:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/safe_browsing/safe_browsing_pref_change_handler.cc
 @@ -12,7 +12,7 @@
  #include "content/public/browser/web_contents.h"

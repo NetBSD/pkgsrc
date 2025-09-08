@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_mojom_printing__context__mojom__traits.cc,v 1.5 2025/08/13 07:44:28 kikadf Exp $
+$NetBSD: patch-printing_mojom_printing__context__mojom__traits.cc,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/mojom/printing_context_mojom_traits.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- printing/mojom/printing_context_mojom_traits.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ printing/mojom/printing_context_mojom_traits.cc
 @@ -19,7 +19,7 @@
  #include "base/numerics/safe_conversions.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits.cc,v 1.5 2025/08/
  #include "mojo/public/mojom/base/values.mojom.h"
  #endif
  
-@@ -162,7 +162,7 @@ bool StructTraits<
+@@ -217,7 +217,7 @@ bool StructTraits<
    }
  
    out->set_pages_per_sheet(data.pages_per_sheet());
@@ -24,7 +24,7 @@ $NetBSD: patch-printing_mojom_printing__context__mojom__traits.cc,v 1.5 2025/08/
    DCHECK(out->advanced_settings().empty());
    if (!data.ReadAdvancedSettings(&out->advanced_settings()))
      return false;
-@@ -239,7 +239,7 @@ bool StructTraits<
+@@ -294,7 +294,7 @@ bool StructTraits<
      if (system_print_dialog_data.size() != dictionary_entries) {
        return false;
      }

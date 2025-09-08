@@ -1,10 +1,10 @@
-$NetBSD: patch-components_optimization__guide_core_optimization__guide__util.cc,v 1.5 2025/08/13 07:44:23 kikadf Exp $
+$NetBSD: patch-components_optimization__guide_core_optimization__guide__util.cc,v 1.6 2025/09/08 13:24:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/optimization_guide/core/optimization_guide_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/optimization_guide/core/optimization_guide_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/optimization_guide/core/optimization_guide_util.cc
 @@ -37,7 +37,7 @@ optimization_guide::proto::Platform GetP
    return optimization_guide::proto::PLATFORM_CHROMEOS;

@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_print__settings.h,v 1.5 2025/08/13 07:44:28 kikadf Exp $
+$NetBSD: patch-printing_print__settings.h,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/print_settings.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- printing/print_settings.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ printing/print_settings.h
 @@ -25,7 +25,7 @@
  #include "base/values.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.5 2025/08/13 07:44:28 kikadf Exp $
  #include <map>
  
  #include "base/values.h"
-@@ -51,7 +51,7 @@ inline constexpr char kMacSystemPrintDia
+@@ -52,7 +52,7 @@ inline constexpr char kMacSystemPrintDia
      "print_settings";
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.5 2025/08/13 07:44:28 kikadf Exp $
  inline constexpr char kLinuxSystemPrintDialogDataPrinter[] = "printer_name";
  inline constexpr char kLinuxSystemPrintDialogDataPrintSettings[] =
      "print_settings";
-@@ -101,7 +101,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -102,7 +102,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      std::string vendor_id;
    };
  
@@ -33,7 +33,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.5 2025/08/13 07:44:28 kikadf Exp $
    using AdvancedSettings = std::map<std::string, base::Value>;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
-@@ -276,7 +276,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -290,7 +290,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
      pages_per_sheet_ = pages_per_sheet;
    }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-printing_print__settings.h,v 1.5 2025/08/13 07:44:28 kikadf Exp $
    AdvancedSettings& advanced_settings() { return advanced_settings_; }
    const AdvancedSettings& advanced_settings() const {
      return advanced_settings_;
-@@ -437,7 +437,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
+@@ -451,7 +451,7 @@ class COMPONENT_EXPORT(PRINTING_SETTINGS
    // Number of pages per sheet.
    int pages_per_sheet_;
  

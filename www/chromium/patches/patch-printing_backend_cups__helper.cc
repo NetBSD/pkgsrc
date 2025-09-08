@@ -1,4 +1,4 @@
-$NetBSD: patch-printing_backend_cups__helper.cc,v 1.1 2025/09/08 13:13:48 kikadf Exp $
+$NetBSD: patch-printing_backend_cups__helper.cc,v 1.2 2025/09/08 13:24:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

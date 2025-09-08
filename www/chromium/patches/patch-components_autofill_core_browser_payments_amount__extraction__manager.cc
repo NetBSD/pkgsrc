@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.3 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__manager.cc,v 1.4 2025/09/08 13:24:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/autofill/core/browser/payments/amount_extraction_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/autofill/core/browser/payments/amount_extraction_manager.cc
-@@ -177,7 +177,7 @@ void AmountExtractionManager::OnCheckout
+@@ -178,7 +178,7 @@ void AmountExtractionManager::OnCheckout
      bnpl_manager->OnAmountExtractionReturned(parsed_extracted_amount);
    }
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
@@ -15,8 +15,8 @@ $NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__man
      if (base::FeatureList::IsEnabled(
              ::autofill::features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The result of amount extraction on domain "
-@@ -200,7 +200,7 @@ void AmountExtractionManager::OnTimeoutR
-       autofill_metrics::AmountExtractionResult::kTimeout);
+@@ -206,7 +206,7 @@ void AmountExtractionManager::OnTimeoutR
+   }
    // TODO(crbug.com/378517983): Add BNPL flow action logic here.
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
 -                BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)) {
@@ -24,7 +24,7 @@ $NetBSD: patch-components_autofill_core_browser_payments_amount__extraction__man
      if (base::FeatureList::IsEnabled(
              ::autofill::features::kAutofillEnableAmountExtractionTesting)) {
        VLOG(3) << "The amount extraction on domain "
-@@ -219,7 +219,7 @@ AmountExtractionManager::CheckEligibilit
+@@ -225,7 +225,7 @@ AmountExtractionManager::CheckEligibilit
    // Check eligibility of BNPL feature.
    // Currently, BNPL is only offered for desktop platforms.
    if constexpr (BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||

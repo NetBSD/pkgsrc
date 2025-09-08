@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_platform__window_platform__window__init__properties.h,v 1.5 2025/08/13 07:44:34 kikadf Exp $
+$NetBSD: patch-ui_platform__window_platform__window__init__properties.h,v 1.6 2025/09/08 13:24:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/platform_window/platform_window_init_properties.h.orig	2025-07-29 22:51:44.000000000 +0000
+--- ui/platform_window/platform_window_init_properties.h.orig	2025-08-29 18:50:09.000000000 +0000
 +++ ui/platform_window/platform_window_init_properties.h
 @@ -56,7 +56,7 @@ class WorkspaceExtensionDelegate;
  class ScenicWindowDelegate;

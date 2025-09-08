@@ -1,10 +1,10 @@
-$NetBSD: patch-content_common_thread__type__switcher.mojom,v 1.4 2025/08/13 07:44:25 kikadf Exp $
+$NetBSD: patch-content_common_thread__type__switcher.mojom,v 1.5 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/common/thread_type_switcher.mojom.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/common/thread_type_switcher.mojom.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/common/thread_type_switcher.mojom
 @@ -10,6 +10,6 @@ import "mojo/public/mojom/base/thread_ty
  // occur in a child process due to its sandbox, e.g. on Linux and ChromeOS.
