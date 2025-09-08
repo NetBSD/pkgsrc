@@ -1,7 +1,7 @@
-$NetBSD: patch-imap_src_osdep_unix_ssl__unix.c,v 1.1 2023/02/26 20:39:49 vins Exp $
+$NetBSD: patch-imap_src_osdep_unix_ssl__unix.c,v 1.2 2025/09/08 12:57:17 vins Exp $
 
-Some popular mail services enforce SNI for TLSv1.3 clients, so send it
-retry SSL_write() on blocking socket if we're told to do so.
+* Some popular mail services enforce SNI for TLSv1.3 clients, so send it.
+* Retry SSL_write() on blocking socket if we're told to do so.
 
 --- imap/src/osdep/unix/ssl_unix.c.orig	2022-06-03 00:14:00.475274788 +0000
 +++ imap/src/osdep/unix/ssl_unix.c

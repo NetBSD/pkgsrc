@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2023/02/27 20:08:37 vins Exp $
+# $NetBSD: options.mk,v 1.8 2025/09/08 12:57:17 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.alpine
 
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--without-pthread
 ###
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-krb5-dir=${KRB5BASE:Q}
+CONFIGURE_ARGS+=	--with-krb5-dir=${KRB5BASE}
 CONFIGURE_ENV+=	alpine_GSSTYPE=${KRB5_TYPE}
 .else
 CONFIGURE_ARGS+=	 --without-krb5
