@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/01/27 18:59:07 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/08 11:03:09 vins Exp $
 
 DISTNAME=	snap
+PKGREVSION=	1
 PKGVER=		20240703
 SNAPSHOT=	f11139d4c918802a87730bc14d094670ee4ce572
 PKGNAME=	drawterm-${PKGVER}
@@ -56,6 +57,9 @@ MAKE_FLAGS+=	CFLAGS+=-DIRIX
 .endif
 
 .if ${OPSYS} == "SunOS"
+
+CFLAGS+=		-D__EXTENSIONS__
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	Make.unix
