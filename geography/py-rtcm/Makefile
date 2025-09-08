@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/04 13:50:48 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/08 10:06:20 gdt Exp $
 
 VERSION=	1.1.9
 DISTTAIL=	rtcm
@@ -15,6 +15,8 @@ COMMENT=	Python parser for RTCM3 (differential/RTK GNSS)
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
