@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5431 2025/09/08 15:05:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5432 2025/09/08 18:24:46 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7836,3 +7836,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 140.0.7339.80 [kikadf 2025-09-08]
 	Updated security/hashcat to 7.1.2 [adam 2025-09-08]
 	Updated www/py-twill to 3.3.1 [adam 2025-09-08]
+	Updated chat/toot to 0.50.1 [vins 2025-09-08]
