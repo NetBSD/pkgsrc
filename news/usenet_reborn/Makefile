@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/09/04 18:22:34 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/08 13:26:14 vins Exp $
 
 # make sure to upload a copy to ftp.NetBSD.org when updating this package
 DISTNAME=	usenet_reborn-0.2.0
+PKGREVISION=	1
 CATEGORIES=	news
 # doesn't allow direct downloads
 #MASTER_SITES=	https://git.sr.ht/~rek2/usenet_reborn/archive/
@@ -38,4 +39,6 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
+BUILDLINK_DEPMETHOD.clang=	build
+.include "../../lang/clang/buildlink3.mk
 .include "../../mk/bsd.pkg.mk"
