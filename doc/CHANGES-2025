@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5429 2025/09/08 12:54:27 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5430 2025/09/08 13:51:35 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7833,3 +7833,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/lagrange to 1.19.1 [pin 2025-09-08]
 	Updated devel/mise to 2025.9.6 [pin 2025-09-08]
 	Updated devel/lazygit to 0.55.0 [pin 2025-09-08]
+	Updated www/chromium to 140.0.7339.80 [kikadf 2025-09-08]
