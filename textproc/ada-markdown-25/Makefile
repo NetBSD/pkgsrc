@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 07:42:08 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/08 16:37:37 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -27,11 +27,11 @@ PLIST_VARS+=			shlibs
 USE_PKGSRC_GCC_RUNTIME?=	no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 PLIST.shlibs=			yes
-MAKE_FLAGS+=			LIBRARY_TYPES='static static-pic relocatable'
+MAKE_FLAGS+=			ALL_LIBRARY_TYPES='static static-pic relocatable'
 BUILDLINK_DEPMETHOD.xmlada=	full
 BUILDLINK_DEPMETHOD.vss-25=	full
 .else
-MAKE_FLAGS+=			LIBRARY_TYPES=static
+MAKE_FLAGS+=			ALL_LIBRARY_TYPES=static
 .endif
 
 MAKE_FLAGS+=			PREFIX=${GNAT_PREFIX} BUILD_MODE=prod
