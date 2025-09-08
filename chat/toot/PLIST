@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/18 11:30:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/09/08 18:22:55 vins Exp $
 bin/toot
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,9 @@ ${PYSITELIB}/toot/cli/diag.pyo
 ${PYSITELIB}/toot/cli/lists.py
 ${PYSITELIB}/toot/cli/lists.pyc
 ${PYSITELIB}/toot/cli/lists.pyo
+${PYSITELIB}/toot/cli/polls.py
+${PYSITELIB}/toot/cli/polls.pyc
+${PYSITELIB}/toot/cli/polls.pyo
 ${PYSITELIB}/toot/cli/post.py
 ${PYSITELIB}/toot/cli/post.pyc
 ${PYSITELIB}/toot/cli/post.pyo
@@ -124,6 +127,16 @@ ${PYSITELIB}/toot/tui/utils.pyo
 ${PYSITELIB}/toot/tui/widgets.py
 ${PYSITELIB}/toot/tui/widgets.pyc
 ${PYSITELIB}/toot/tui/widgets.pyo
+${PYSITELIB}/toot/urwidgets/README.md
+${PYSITELIB}/toot/urwidgets/__init__.py
+${PYSITELIB}/toot/urwidgets/__init__.pyc
+${PYSITELIB}/toot/urwidgets/__init__.pyo
+${PYSITELIB}/toot/urwidgets/hyperlink.py
+${PYSITELIB}/toot/urwidgets/hyperlink.pyc
+${PYSITELIB}/toot/urwidgets/hyperlink.pyo
+${PYSITELIB}/toot/urwidgets/text_embed.py
+${PYSITELIB}/toot/urwidgets/text_embed.pyc
+${PYSITELIB}/toot/urwidgets/text_embed.pyo
 ${PYSITELIB}/toot/utils/__init__.py
 ${PYSITELIB}/toot/utils/__init__.pyc
 ${PYSITELIB}/toot/utils/__init__.pyo
