@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2025/08/20 11:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/09/08 08:09:18 vins Exp $
 
 DISTNAME=	lastpass-cli-1.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lastpass/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +15,9 @@ TOOL_DEPENDS+=	asciidoc>=0:../../textproc/asciidoc
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	bash:test pkg-config
+
+# Do not warn about deprecated declarations when using OpenSSL 3.x
+CFLAGS+=	-Wno-deprecated-declarations
 
 REPLACE_BASH+=	test/askpass-wrong.sh test/askpass.sh \
 		test/assert.sh test/include.sh test/tests
