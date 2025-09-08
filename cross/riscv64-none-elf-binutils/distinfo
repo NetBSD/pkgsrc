@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2024/05/21 07:08:03 skrll Exp $
+$NetBSD: distinfo,v 1.3 2025/09/08 22:54:47 lloyd Exp $
 
-BLAKE2s (binutils-2.42.tar.bz2) = 0fa658692a24ec12a2769f4c4423d88e4b4a25a84a6dbf2fd5edb7147db4cec2
-SHA512 (binutils-2.42.tar.bz2) = d2c6d264bbeaaaf2aad1fa3fc417c1841a5dd4a299fa47c47d15adb821c22dae733e58f19ebcfea3b0c5890ba56e4a5f92ab55128a572d585bcd5172b63f456c
-Size (binutils-2.42.tar.bz2) = 38254526 bytes
+BLAKE2s (binutils-2.45.tar.bz2) = ab440bccb97cc23fae22530bc4446536085b49f552c042c88b0da45adbceade3
+SHA512 (binutils-2.45.tar.bz2) = b804005b94fd8d77f055716c90709e3f08a4c2f2f3beae9260ca43843d0903121a27429425c766fada3c9b15cfd51d37146e6f8f41ffb1e9840bfb90929ee523
+Size (binutils-2.45.tar.bz2) = 39024816 bytes
 SHA1 (patch-ld_emulparams_elf32lriscv-defs.sh) = 90510e37518d4944c8fc50c458342eaf086f0323
