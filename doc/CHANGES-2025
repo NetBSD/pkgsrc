@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5423 2025/09/07 18:44:12 maya Exp $
+$NetBSD: CHANGES-2025,v 1.5424 2025/09/08 00:49:48 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7827,3 +7827,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-awscrt version 0.27.6 [maya 2025-09-07]
 	Added net/py-awscli2 version 2.28.25 [maya 2025-09-07]
 	Added sysutils/skaffold version 2.16.1 [maya 2025-09-07]
+	Updated emulators/nono to 1.5.0 [jun 2025-09-08]
