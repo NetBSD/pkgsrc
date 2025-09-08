@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/11/12 13:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/09/08 10:41:12 vins Exp $
 
 DISTNAME=	xnotify-0.9.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phillbush/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,14 @@ HOMEPAGE=	https://github.com/phillbush/xnotify
 COMMENT=	Read notifications from stdin and display them on the screen
 LICENSE=	mit
 
-CFLAGS.SunOS+=		-D_XOPEN_SOURCE=500
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600
+CFLAGS.SunOS+=		-D__EXTENSIONS__	# strcasecmp()
+
+SUBST_CLASSES+=		macro
+SUBST_STAGE.macro=	pre-configure
+SUBST_MESSAGE.macro=	Prevent SEC macro redefintion on SunOS.
+SUBST_FILES.macro=	xnotify.c xnotify.h
+SUBST_SED.macro+=	-e "s:SEC:L_SEC:g"
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
