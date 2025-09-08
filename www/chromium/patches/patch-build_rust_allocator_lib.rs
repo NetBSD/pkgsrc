@@ -1,4 +1,4 @@
-$NetBSD: patch-build_rust_allocator_lib.rs,v 1.1 2025/09/08 13:13:46 kikadf Exp $
+$NetBSD: patch-build_rust_allocator_lib.rs,v 1.2 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and

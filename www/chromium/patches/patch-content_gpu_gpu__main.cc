@@ -1,12 +1,12 @@
-$NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
+$NetBSD: patch-content_gpu_gpu__main.cc,v 1.6 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/gpu/gpu_main.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/gpu/gpu_main.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/gpu/gpu_main.cc
-@@ -103,10 +103,14 @@
+@@ -107,10 +107,14 @@
  #include "sandbox/win/src/sandbox.h"
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
  #include "sandbox/policy/sandbox_type.h"
  #endif
  
-@@ -124,7 +128,7 @@ namespace content {
+@@ -128,7 +132,7 @@ namespace content {
  
  namespace {
  
@@ -31,7 +31,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
  bool StartSandboxLinux(gpu::GpuWatchdogThread*,
                         const gpu::GPUInfo*,
                         const gpu::GpuPreferences&);
-@@ -186,7 +190,7 @@ class ContentSandboxHelper : public gpu:
+@@ -190,7 +194,7 @@ class ContentSandboxHelper : public gpu:
                                  const gpu::GPUInfo* gpu_info,
                                  const gpu::GpuPreferences& gpu_prefs) override {
      TRACE_EVENT("gpu,startup", "gpu_main::EnsureSandboxInitialized");
@@ -40,7 +40,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
      return StartSandboxLinux(watchdog_thread, gpu_info, gpu_prefs);
  #elif BUILDFLAG(IS_WIN)
      return StartSandboxWindows(sandbox_info_);
-@@ -302,7 +306,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -306,7 +310,7 @@ int GpuMain(MainFunctionParams parameter
            std::make_unique<base::SingleThreadTaskExecutor>(
                gpu_preferences.message_pump_type);
      }
@@ -49,7 +49,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
  #error "Unsupported Linux platform."
  #elif BUILDFLAG(IS_MAC)
      // Cross-process CoreAnimation requires a CFRunLoop to function at all, and
-@@ -327,7 +331,8 @@ int GpuMain(MainFunctionParams parameter
+@@ -331,7 +335,8 @@ int GpuMain(MainFunctionParams parameter
    base::PlatformThread::SetName("CrGpuMain");
    mojo::InterfaceEndpointClient::SetThreadNameSuffixForMetrics("GpuMain");
  
@@ -59,7 +59,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
    // Thread type delegate of the process should be registered before
    // thread type change below for the main thread and for thread pool in
    // ChildProcess constructor.
-@@ -459,7 +464,7 @@ int GpuMain(MainFunctionParams parameter
+@@ -479,7 +484,7 @@ int GpuMain(MainFunctionParams parameter
  
  namespace {
  
@@ -68,7 +68,7 @@ $NetBSD: patch-content_gpu_gpu__main.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
  bool StartSandboxLinux(gpu::GpuWatchdogThread* watchdog_thread,
                         const gpu::GPUInfo* gpu_info,
                         const gpu::GpuPreferences& gpu_prefs) {
-@@ -507,7 +512,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
+@@ -527,7 +532,7 @@ bool StartSandboxLinux(gpu::GpuWatchdogT
    sandbox_options.accelerated_video_encode_enabled =
        !gpu_prefs.disable_accelerated_video_encode;
  

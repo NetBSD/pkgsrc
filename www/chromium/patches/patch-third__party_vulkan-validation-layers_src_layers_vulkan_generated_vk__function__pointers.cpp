@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_vulkan_generated_vk__function__pointers.cpp,v 1.5 2025/08/13 07:44:32 kikadf Exp $
+$NetBSD: patch-third__party_vulkan-validation-layers_src_layers_vulkan_generated_vk__function__pointers.cpp,v 1.6 2025/09/08 13:24:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/vulkan-validation-layers/src/layers/vulkan/generated/vk_function_pointers.cpp
 @@ -53,7 +53,8 @@ static void *get_proc_address(dl_handle 
      assert(name);

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_extensions_external__provider__impl.cc,v 1.5 2025/08/13 07:44:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_external__provider__impl.cc,v 1.6 2025/09/08 13:24:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/external_provider_impl.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/extensions/external_provider_impl.cc
-@@ -828,7 +828,7 @@ void ExternalProviderImpl::CreateExterna
+@@ -827,7 +827,7 @@ void ExternalProviderImpl::CreateExterna
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
    if (!profile->GetPrefs()->GetBoolean(pref_names::kBlockExternalExtensions)) {
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_extensions_external__provider__impl.cc,v 1.5 2025/
      provider_list->push_back(std::make_unique<ExternalProviderImpl>(
          service,
          base::MakeRefCounted<ExternalPrefLoader>(
-@@ -856,7 +856,7 @@ void ExternalProviderImpl::CreateExterna
+@@ -855,7 +855,7 @@ void ExternalProviderImpl::CreateExterna
          bundled_extension_creation_flags));
  
      // Define a per-user source of external extensions.

@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_linux_BUILD.gn,v 1.5 2025/08/13 07:44:29 kikadf Exp $
+$NetBSD: patch-sandbox_linux_BUILD.gn,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- sandbox/linux/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ sandbox/linux/BUILD.gn
-@@ -12,11 +12,11 @@ if (is_android) {
+@@ -11,11 +11,11 @@ if (is_android) {
  }
  
  declare_args() {
@@ -21,7 +21,7 @@ $NetBSD: patch-sandbox_linux_BUILD.gn,v 1.5 2025/08/13 07:44:29 kikadf Exp $
  
    # On Android, use plain GTest.
    use_base_test_suite = is_linux || is_chromeos
-@@ -369,6 +369,17 @@ component("sandbox_services") {
+@@ -373,6 +373,17 @@ component("sandbox_services") {
        "services/libc_interceptor.h",
      ]
    }

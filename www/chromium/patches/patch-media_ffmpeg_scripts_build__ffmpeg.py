@@ -1,10 +1,10 @@
-$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 kikadf Exp $
+$NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.6 2025/09/08 13:24:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/ffmpeg/scripts/build_ffmpeg.py.orig	2025-07-29 22:51:44.000000000 +0000
+--- media/ffmpeg/scripts/build_ffmpeg.py.orig	2025-08-29 18:50:09.000000000 +0000
 +++ media/ffmpeg/scripts/build_ffmpeg.py
 @@ -33,7 +33,7 @@ NDK_ROOT_DIR = os.path.abspath(
  SUCCESS_TOKEN = 'THIS_BUILD_WORKED'
@@ -18,14 +18,14 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
 @@ -43,6 +43,9 @@ BRANDINGS = [
  ARCH_MAP = {
      'android': ['ia32', 'x64', 'arm-neon', 'arm64'],
-     'linux': ['ia32', 'x64', 'noasm-x64', 'arm', 'arm-neon', 'arm64'],
+     'linux': ['ia32', 'x64', 'noasm-x64', 'arm', 'arm-neon', 'arm64', 'riscv64'],
 +    'openbsd': ['x64', 'arm64', 'ia32'],
 +    'freebsd': ['x64', 'arm64', 'ia32'],
 +    'netbsd': ['x64', 'arm64', 'ia32'],
      'mac': ['x64', 'arm64'],
      'win': ['ia32', 'x64', 'arm64'],
  }
-@@ -122,7 +125,7 @@ def PrintAndCheckCall(argv, *args, **kwa
+@@ -124,7 +127,7 @@ def PrintAndCheckCall(argv, *args, **kwa
  
  
  def GetDsoName(target_os, dso_name, dso_version):
@@ -34,7 +34,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
          return 'lib%s.so.%s' % (dso_name, dso_version)
      elif target_os == 'mac':
          return 'lib%s.%s.dylib' % (dso_name, dso_version)
-@@ -473,7 +476,7 @@ def BuildFFmpeg(target_os, target_arch, 
+@@ -475,7 +478,7 @@ def BuildFFmpeg(target_os, target_arch, 
      # removing <sys/sysctl.h> soon, so this is needed to silence a deprecation
      # #warning which will be converted to an error via -Werror.
      # There is also no prctl.h
@@ -43,7 +43,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
          pre_make_rewrites += [
              (r'(#define HAVE_SYSCTL [01])',
               r'#define HAVE_SYSCTL 0 /* \1 -- forced to 0 for Fuchsia */'),
-@@ -596,7 +599,7 @@ def main(argv):
+@@ -598,7 +601,7 @@ def main(argv):
      configure_args = args[2:]
  
      if target_os not in ('android', 'linux', 'linux-noasm', 'mac', 'win',
@@ -52,7 +52,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
          parser.print_help()
          return 1
  
-@@ -710,7 +713,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -712,7 +715,7 @@ def ConfigureAndBuild(target_arch, targe
              '--optflags="-O2"',
          ])
  
@@ -61,7 +61,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
          if target_arch == 'x64':
              if target_os == 'android':
                  configure_flags['Common'].extend([
-@@ -825,9 +828,6 @@ def ConfigureAndBuild(target_arch, targe
+@@ -827,9 +830,6 @@ def ConfigureAndBuild(target_arch, targe
  
                  configure_flags['Common'].extend([
                      '--target-os=linux',
@@ -71,7 +71,7 @@ $NetBSD: patch-media_ffmpeg_scripts_build__ffmpeg.py,v 1.5 2025/08/13 07:44:27 k
                      # See crbug.com/1467681. These could be removed eventually
                      '--disable-dotprod',
                      '--disable-i8mm',
-@@ -919,7 +919,7 @@ def ConfigureAndBuild(target_arch, targe
+@@ -935,7 +935,7 @@ def ConfigureAndBuild(target_arch, targe
          # typically be the system one, so explicitly configure use of Clang's
          # ld.lld, to ensure that things like cross-compilation and LTO work.
          # This does not work for ia32 and is always used on mac.

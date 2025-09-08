@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
+$NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.6 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/browser/web_contents/web_contents_view_aura.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/browser/web_contents/web_contents_view_aura.cc
-@@ -174,7 +174,7 @@ class WebDragSourceAura : public content
+@@ -175,7 +175,7 @@ class WebDragSourceAura : public content
    raw_ptr<aura::Window> window_;
  };
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.5 
  // Fill out the OSExchangeData with a file contents, synthesizing a name if
  // necessary.
  void PrepareDragForFileContents(const DropData& drop_data,
-@@ -259,7 +259,7 @@ void PrepareDragData(const DropData& dro
+@@ -260,7 +260,7 @@ void PrepareDragData(const DropData& dro
    if (!drop_data.download_metadata.empty())
      PrepareDragForDownload(drop_data, provider, web_contents);
  #endif
@@ -24,7 +24,7 @@ $NetBSD: patch-content_browser_web__contents_web__contents__view__aura.cc,v 1.5 
    // We set the file contents before the URL because the URL also sets file
    // contents (to a .URL shortcut).  We want to prefer file content data over
    // a shortcut so we add it first.
-@@ -1325,7 +1325,7 @@ void WebContentsViewAura::OnMouseEvent(u
+@@ -1326,7 +1326,7 @@ void WebContentsViewAura::OnMouseEvent(u
      // Linux window managers like to handle raise-on-click themselves.  If we
      // raise-on-click manually, this may override user settings that prevent
      // focus-stealing.

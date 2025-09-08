@@ -1,12 +1,12 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_debug_stack__trace__posix.cc,v 1.5 2025/08/13 07:44:14 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partition__alloc__base_debug_stack__trace__posix.cc,v 1.6 2025/09/08 13:24:15 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/partition_alloc_base/debug/stack_trace_posix.cc
-@@ -13,11 +13,11 @@
+@@ -18,11 +18,11 @@
  #include "partition_alloc/partition_alloc_base/posix/eintr_wrapper.h"
  #include "partition_alloc/partition_alloc_base/strings/safe_sprintf.h"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
  #include <dlfcn.h>
  #endif
  
-@@ -25,7 +25,7 @@ namespace partition_alloc::internal::bas
+@@ -30,7 +30,7 @@ namespace partition_alloc::internal::bas
  
  namespace {
  
@@ -29,7 +29,7 @@ $NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_partitio
  
  // On Android the 'open' function has two versions:
  // int open(const char *pathname, int flags);
-@@ -369,7 +369,7 @@ void PrintStackTraceInternal(const void*
+@@ -374,7 +374,7 @@ void PrintStackTraceInternal(const void*
  }
  #endif  // !PA_BUILDFLAG(IS_APPLE)
  

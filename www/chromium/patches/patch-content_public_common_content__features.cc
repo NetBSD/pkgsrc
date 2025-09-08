@@ -1,12 +1,12 @@
-$NetBSD: patch-content_public_common_content__features.cc,v 1.5 2025/08/13 07:44:25 kikadf Exp $
+$NetBSD: patch-content_public_common_content__features.cc,v 1.6 2025/09/08 13:24:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/public/common/content_features.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/public/common/content_features.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/public/common/content_features.cc
-@@ -91,7 +91,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
+@@ -103,7 +103,7 @@ BASE_FEATURE(kAudioServiceLaunchOnStartu
  // Runs the audio service in a separate process.
  BASE_FEATURE(kAudioServiceOutOfProcess,
               "AudioServiceOutOfProcess",
@@ -15,7 +15,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.5 2025/08/13 07:44
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
               base::FEATURE_DISABLED_BY_DEFAULT
-@@ -1319,9 +1319,9 @@ BASE_FEATURE(kWebAssemblyTiering,
+@@ -1394,9 +1394,9 @@ BASE_FEATURE(kWebAssemblyTiering,
  BASE_FEATURE(kWebAssemblyTrapHandler,
               "WebAssemblyTrapHandler",
  #if ((BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN) ||  \
@@ -27,7 +27,7 @@ $NetBSD: patch-content_public_common_content__features.cc,v 1.5 2025/08/13 07:44
       defined(ARCH_CPU_ARM64))
               base::FEATURE_ENABLED_BY_DEFAULT
  #else
-@@ -1381,7 +1381,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExten
+@@ -1453,7 +1453,11 @@ BASE_FEATURE(kWebUIJSErrorReportingExten
  
  // Controls whether the WebUSB API is enabled:
  // https://wicg.github.io/webusb

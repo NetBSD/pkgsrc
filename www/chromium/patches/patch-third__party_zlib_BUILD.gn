@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.5 2025/08/13 07:44:32 kikadf Exp $
+$NetBSD: patch-third__party_zlib_BUILD.gn,v 1.6 2025/09/08 13:24:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/zlib/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/zlib/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/zlib/BUILD.gn
 @@ -128,7 +128,7 @@ if (use_arm_neon_optimizations) {
      defines = [ "CRC32_ARMV8_CRC32" ]
@@ -30,8 +30,8 @@ $NetBSD: patch-third__party_zlib_BUILD.gn,v 1.5 2025/08/13 07:44:32 kikadf Exp $
      ]
    }
  
--  if (is_apple || is_android || is_nacl) {
-+  if (is_apple || is_android || is_nacl || is_bsd) {
+-  if (is_apple || is_android) {
++  if (is_apple || is_android || is_bsd) {
      # Mac, Android and the BSDs don't have fopen64, ftello64, or fseeko64. We
      # use fopen, ftell, and fseek instead on these systems.
      defines = [ "USE_FILE32API" ]
