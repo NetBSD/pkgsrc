@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/18 15:02:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/08 15:03:40 adam Exp $
 bin/aescrypt2hashcat.pl
 bin/apfs2hashcat.py
 bin/bisq2hashcat.py
@@ -234,6 +234,7 @@ share/doc/hashcat/docs/hashcat-plugin-development-guide.md
 share/doc/hashcat/docs/hashcat-python-plugin-development-guide.md
 share/doc/hashcat/docs/hashcat-python-plugin-quickstart.md
 share/doc/hashcat/docs/hashcat-python-plugin-requirements.md
+share/doc/hashcat/docs/hashcat-rust-plugin-requirements.md
 share/doc/hashcat/docs/keyboard-layout-mapping.md
 share/doc/hashcat/docs/license.txt
 share/doc/hashcat/docs/license_libs/LZMA_SDK_LICENSE.txt
@@ -384,6 +385,8 @@ share/hashcat/OpenCL/amp_a3.cl
 share/hashcat/OpenCL/inc_amp.h
 share/hashcat/OpenCL/inc_bignum_operations.cl
 share/hashcat/OpenCL/inc_bignum_operations.h
+share/hashcat/OpenCL/inc_checksum_crc.cl
+share/hashcat/OpenCL/inc_checksum_crc.h
 share/hashcat/OpenCL/inc_cipher_aes-gcm.cl
 share/hashcat/OpenCL/inc_cipher_aes-gcm.h
 share/hashcat/OpenCL/inc_cipher_aes.cl
@@ -428,6 +431,8 @@ share/hashcat/OpenCL/inc_hash_blake2b.cl
 share/hashcat/OpenCL/inc_hash_blake2b.h
 share/hashcat/OpenCL/inc_hash_blake2s.cl
 share/hashcat/OpenCL/inc_hash_blake2s.h
+share/hashcat/OpenCL/inc_hash_gost94.cl
+share/hashcat/OpenCL/inc_hash_gost94.h
 share/hashcat/OpenCL/inc_hash_md4.cl
 share/hashcat/OpenCL/inc_hash_md4.h
 share/hashcat/OpenCL/inc_hash_md5.cl
@@ -1665,6 +1670,9 @@ share/hashcat/OpenCL/m24800_a3-pure.cl
 share/hashcat/OpenCL/m24900_a0-optimized.cl
 share/hashcat/OpenCL/m24900_a1-optimized.cl
 share/hashcat/OpenCL/m24900_a3-optimized.cl
+share/hashcat/OpenCL/m24901_a0-optimized.cl
+share/hashcat/OpenCL/m24901_a1-optimized.cl
+share/hashcat/OpenCL/m24901_a3-optimized.cl
 share/hashcat/OpenCL/m25000-pure.cl
 share/hashcat/OpenCL/m25100-pure.cl
 share/hashcat/OpenCL/m25200-pure.cl
@@ -1968,6 +1976,9 @@ share/hashcat/OpenCL/markov_le.cl
 share/hashcat/OpenCL/shared.cl
 share/hashcat/bridges/.gitkeep
 share/hashcat/bridges/bridge_argon2id_reference.so
+share/hashcat/bridges/bridge_python_generic_hash_mp.so
+share/hashcat/bridges/bridge_python_generic_hash_sp.so
+share/hashcat/bridges/bridge_rust_generic_hash.so
 share/hashcat/bridges/bridge_scrypt_jane.so
 share/hashcat/bridges/bridge_scrypt_yescrypt.so
 share/hashcat/hashcat.hcstat2
@@ -2368,6 +2379,7 @@ share/hashcat/modules/module_24600.so
 share/hashcat/modules/module_24700.so
 share/hashcat/modules/module_24800.so
 share/hashcat/modules/module_24900.so
+share/hashcat/modules/module_24901.so
 share/hashcat/modules/module_25000.so
 share/hashcat/modules/module_25100.so
 share/hashcat/modules/module_25200.so
@@ -2551,6 +2563,7 @@ share/hashcat/modules/module_70100.so
 share/hashcat/modules/module_70200.so
 share/hashcat/modules/module_72000.so
 share/hashcat/modules/module_73000.so
+share/hashcat/modules/module_74000.so
 share/hashcat/modules/module_99999.so
 share/hashcat/tunings/Alias.hctune
 share/hashcat/tunings/Device_GeForce_GTX_TITAN.hctune

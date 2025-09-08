@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile,v 1.4 2025/08/18 15:02:40 adam Exp $
+$NetBSD: patch-src_Makefile,v 1.5 2025/09/08 15:03:40 adam Exp $
 
 Set preferences.
 Don't override CC nor optimisation flags in CFLAGS.
@@ -67,31 +67,3 @@ Don't build universal binary on Darwin.
  
  endif # Darwin
  
-@@ -783,8 +765,13 @@ endif
- $(MODULES_DISABLE): ;
- 
- ifeq ($(SHARED),1)
-+  ifeq ($(UNAME),Darwin)
-+modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c $(HASHCAT_LIBRARY)
-+	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -install_name $(SHARED_FOLDER)/$@ -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
-+  else
- modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c $(HASHCAT_LIBRARY)
- 	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
-+  endif
- else
- modules/module_%.$(MODULE_SUFFIX): src/modules/module_%.c obj/combined.NATIVE.a
- 	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D MODULE_INTERFACE_VERSION_CURRENT=$(MODULE_INTERFACE_VERSION)
-@@ -817,8 +804,13 @@ BRIDGES_DISABLE ?=
- $(BRIDGES_DISABLE): ;
- 
- ifeq ($(SHARED),1)
-+  ifeq ($(UNAME),Darwin)
-+bridges/bridge_%.$(BRIDGE_SUFFIX): src/bridges/bridge_%.c $(HASHCAT_LIBRARY)
-+	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -install_name $(SHARED_FOLDER)/$@ -shared -fPIC -D BRIDGE_INTERFACE_VERSION_CURRENT=$(BRIDGE_INTERFACE_VERSION)
-+  else
- bridges/bridge_%.$(BRIDGE_SUFFIX): src/bridges/bridge_%.c $(HASHCAT_LIBRARY)
- 	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D BRIDGE_INTERFACE_VERSION_CURRENT=$(BRIDGE_INTERFACE_VERSION)
-+  endif
- else
- bridges/bridge_%.$(BRIDGE_SUFFIX): src/bridges/bridge_%.c obj/combined.NATIVE.a
- 	$(CC)    $(CCFLAGS) $(CFLAGS_NATIVE) $^ -o $@ $(LFLAGS_NATIVE) -shared -fPIC -D BRIDGE_INTERFACE_VERSION_CURRENT=$(BRIDGE_INTERFACE_VERSION)
