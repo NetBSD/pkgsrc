@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.9 2025/08/05 17:03:35 pin Exp $
+# $NetBSD: go-modules.mk,v 1.10 2025/09/08 12:54:06 pin Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.34.0.mod
@@ -265,8 +265,8 @@ GO_MODULE_FILES+=	github.com/spf13/afero/@v/v1.9.5.mod
 GO_MODULE_FILES+=	github.com/spf13/afero/@v/v1.9.5.zip
 GO_MODULE_FILES+=	github.com/spkg/bom/@v/v0.0.0-20160624110644-59b7046e48ad.mod
 GO_MODULE_FILES+=	github.com/spkg/bom/@v/v0.0.0-20160624110644-59b7046e48ad.zip
-GO_MODULE_FILES+=	github.com/stefanhaller/git-todo-parser/@v/v0.0.7-0.20250429125209-dcf39e4641f5.mod
-GO_MODULE_FILES+=	github.com/stefanhaller/git-todo-parser/@v/v0.0.7-0.20250429125209-dcf39e4641f5.zip
+GO_MODULE_FILES+=	github.com/stefanhaller/git-todo-parser/@v/v0.0.7-0.20250905083220-c50528f08304.mod
+GO_MODULE_FILES+=	github.com/stefanhaller/git-todo-parser/@v/v0.0.7-0.20250905083220-c50528f08304.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v0.0.0-20161117074351-18a02ba4a312.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.mod
