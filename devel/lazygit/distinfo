@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2025/08/22 13:06:55 pin Exp $
+$NetBSD: distinfo,v 1.13 2025/09/08 12:54:06 pin Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -795,12 +795,12 @@ Size (github.com_spkg_bom_@v_v0.0.0-20160624110644-59b7046e48ad.mod) = 27 bytes
 BLAKE2s (github.com_spkg_bom_@v_v0.0.0-20160624110644-59b7046e48ad.zip) = 5524c5fed2c2fef8adb796304b3f12a8600a5bfd3bab9c5c5b126cdb7ff54665
 SHA512 (github.com_spkg_bom_@v_v0.0.0-20160624110644-59b7046e48ad.zip) = 2ec368f5fb079616afaee39c57431b009d95500422fdf65ba32c395961087949a1fbc889bf434bcf051d00561a58eef3628d16c517fe56486a5a3dbf19f7f45d
 Size (github.com_spkg_bom_@v_v0.0.0-20160624110644-59b7046e48ad.zip) = 4829 bytes
-BLAKE2s (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.mod) = 5c736dc2f4ddfa090f2213812feffa30a25d4092f9fcf25fcc95e853097d684a
-SHA512 (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.mod) = 7f69acbae657998fe3f0c6cdd636477231daa5a703844cf03392588067aa5856079c23c22d0d8c8c482578f86f2353fa97b3a36dc42d97603fedbe00edd85a7e
-Size (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.mod) = 100 bytes
-BLAKE2s (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.zip) = 4c4a75b65114383b8bac8ef7f16582f9317f9f2ba742a7f47e03e07b7449bac5
-SHA512 (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.zip) = d0953f2b1f608106951dae16129252413058ed6b69cccf615969005c943964048ba6cc7dcb93a9821e3e6304cb6897458fb077b8e5d7b5ce4ab310669de66d1e
-Size (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250429125209-dcf39e4641f5.zip) = 11741 bytes
+BLAKE2s (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.mod) = 5c736dc2f4ddfa090f2213812feffa30a25d4092f9fcf25fcc95e853097d684a
+SHA512 (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.mod) = 7f69acbae657998fe3f0c6cdd636477231daa5a703844cf03392588067aa5856079c23c22d0d8c8c482578f86f2353fa97b3a36dc42d97603fedbe00edd85a7e
+Size (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.mod) = 100 bytes
+BLAKE2s (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.zip) = b5b7c1780d68710cff4ff04d61c2e8c43a87872d1f674f02b89b89cc06749e36
+SHA512 (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.zip) = db3be9db6b534ccac7805d8cff13c38adb939041ba5350a95511bb57a9156c0144be895627d3130e4d134e96aae342e3fddfabcde80c7d43415d4e8e5f522b1a
+Size (github.com_stefanhaller_git-todo-parser_@v_v0.0.7-0.20250905083220-c50528f08304.zip) = 11748 bytes
 BLAKE2s (github.com_stretchr_objx_@v_v0.1.0.mod) = 1eb73df00a63ad02b651d13ef6fec7b4842f22c3ecf50546104fddb717aa1c0b
 SHA512 (github.com_stretchr_objx_@v_v0.1.0.mod) = 4e366e5a60559a8863cb2a50280deb307d8bf885ca5440cce1b49a084b4cc4583b3481240125f35f161226592a43f2c0a426152f117d79b68c92c72a93f751d5
 Size (github.com_stretchr_objx_@v_v0.1.0.mod) = 32 bytes
@@ -1998,9 +1998,9 @@ Size (honnef.co_go_tools_@v_v0.0.1-2020.1.3.mod) = 300 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = 5910300fed26fe3a7d3d75555521429fe0c14f72daf11aac2e489f8ab8e2fd8b
 SHA512 (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = d814675e448688f6a506397bedb262fb2583c913ec1f8ca9ffc11206bdcd7e1f4ee3c561aee366eb2cdaede8c522a6f58f116236f3033bc7e91ec139bdd140f9
 Size (honnef.co_go_tools_@v_v0.0.1-2020.1.4.mod) = 300 bytes
-BLAKE2s (lazygit-0.54.2.tar.gz) = 36a5cb89b0f2cd8bcd4e27c50934297e2fcb81e8b2081a7a60ac7700c575c44a
-SHA512 (lazygit-0.54.2.tar.gz) = 8e05507f99e5fb32481e217454e0bb6b31157dcc0f5f1cb24c43161acaeb5427fdb5e83c9e3dfc19d4d023488b6cfa06d211b52f5f06add976bda901bbfe93a4
-Size (lazygit-0.54.2.tar.gz) = 5363291 bytes
+BLAKE2s (lazygit-0.55.0.tar.gz) = d0fd3f16ff606d83366c838af5c8a29cfc75939f0faa97ab4df54b3e2b8f3355
+SHA512 (lazygit-0.55.0.tar.gz) = 471f97e4f27591459809a06ad5163bbfcd25f9a648f4ddcd167c09f0e68aff503b700cc08a49c44a506e26b67e43b3c383d2d2a7337c88774d7230dda005bf54
+Size (lazygit-0.55.0.tar.gz) = 5366970 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
