@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/05/27 19:15:11 vins Exp $
+# $NetBSD: Makefile,v 1.34 2025/09/08 07:43:33 vins Exp $
 #
 
 DISTNAME=	multitail-7.1.5
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=folkertvanheusden/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
