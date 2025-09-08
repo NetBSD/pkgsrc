@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.55 2025/08/30 22:45:01 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/09/08 00:48:12 jun Exp $
 
-DISTNAME=	nono-1.4.2
-PKGREVISION=	1
+DISTNAME=	nono-1.5.0
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.pastel-flower.jp/~isaki/nono/archive/
+MASTER_SITES=	https://www.pastel-flower.jp/~isaki/nono/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pastel-flower.jp/~isaki/nono/
+HOMEPAGE=	https://www.pastel-flower.jp/~isaki/nono/
 COMMENT=	OMRON LUNA-I/LUNA-88K (and SHARP X68030) emulator
 LICENSE=	nono-license AND fsharp-license	# nono uses X68030 IPLROM image
 
