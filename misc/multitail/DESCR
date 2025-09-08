@@ -14,4 +14,3 @@ console (with curses). It can also:
 * Have windows with the output of shell scripts and other software. When
   viewing the output of external software, MultiTail can mimic the
   functionality of tools like 'watch' and such.
-

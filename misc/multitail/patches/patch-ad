@@ -1,6 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2025/05/27 19:15:12 vins Exp $
+$NetBSD: patch-ad,v 1.4 2025/09/08 07:43:34 vins Exp $
 
 * Support openpty() on NetBSD. 
+* The local utils.h header is required for myopen().
 * Add DragonFly
 
 --- my_pty.c.orig	2024-08-13 10:49:48.000000000 +0000
@@ -14,7 +15,18 @@ $NetBSD: patch-ad,v 1.3 2025/05/27 19:15:12 vins Exp $
  #include <util.h>
  #endif
  #if defined(linux) || defined(__CYGWIN__) || defined(__GNU__) || defined(__GLIBC__)
-@@ -78,7 +78,7 @@
+@@ -56,7 +56,9 @@
+ #include <sys/socket.h>
+ 
+ #include "error.h"
+-
++#if defined(__sun) || defined(AIX) || defined(_HPUX_SOURCE)
++#include "utils.h"
++#endif
+ 
+ /* the following code was mostly taken from: */
+ 
+@@ -78,7 +80,7 @@
  
  int get_pty_and_fork(int *fd_master, int *fd_slave)
  {
