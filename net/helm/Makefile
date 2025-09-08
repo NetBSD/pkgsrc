@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/08 07:50:41 leot Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/08 07:53:33 leot Exp $
 
 DISTNAME=	helm-3.18.6
 CATEGORIES=	net
@@ -10,7 +10,9 @@ HOMEPAGE=	https://helm.sh/
 COMMENT=	The Kubernetes Package Manager
 LICENSE=	apache-2.0
 
-# XXX: via: `cd ${WRKSRC} && go list -f '{{.Version}}' -m k8s.io/client-go`
+# XXX: To get K8S_MODULES_VERSION:
+# XXX:  $ make build-env
+# XXX:  $ go list -f '{{.Version}}' -m k8s.io/client-go
 K8S_MODULES_VERSION=		0.33.3 # <major>.<minor>.x
 K8S_MODULES_VERSION_MAJOR=	1 # <major> + 1
 K8S_MODULES_VERSION_MINOR=	33 # <minor>
