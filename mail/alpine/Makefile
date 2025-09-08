@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2025/09/08 12:57:17 vins Exp $
+# $NetBSD: Makefile,v 1.62 2025/09/08 18:16:55 vins Exp $
 
 DISTNAME=	alpine-2.26
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 # repo at https://repo.or.cz/alpine.git
 MASTER_SITES=	https://alpineapp.email/alpine/release/src/
@@ -87,12 +87,12 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_FILES.paths=	doc/man1/alpine.1 doc/tech-notes/*.txt
 SUBST_FILES.paths+=	pith/filter.c pith/pine.hlp imap/src/osdep/unix/Makefile
-SUBST_SED.paths+=	-e "s:/usr/local/lib/pine.conf:${PKG_SYSCONFDIR}/pine.conf:g" \
-			-e "s:/usr/local/lib/pine.info:${PREFIX}/${PKGINFODIR}/pine.info:g" \
-			-e "s:/usr/local/pine.conf:${PKG_SYSCONFDIR}/pine.conf:g" \
-			-e "s:/usr/local/lib:${PKG_SYSCONFDIR}:g" \
-			-e "s:/usr/local/bin:${PREFIX}/bin:g" \
-			-e "s:/usr/local/ssl:${SSLDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/lib/pine.conf:${PKG_SYSCONFDIR}/pine.conf:g"
+SUBST_SED.paths+=	-e "s:/usr/local/lib/pine.info:${PREFIX}/${PKGINFODIR}/pine.info:g"
+SUBST_SED.paths+=	-e "s:/usr/local/pine.conf:${PKG_SYSCONFDIR}/pine.conf:g"
+SUBST_SED.paths+=	-e "s:/usr/local/lib:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/local/bin:${PREFIX}/bin:g"
+SUBST_SED.paths+=	-e "s:/usr/local/ssl:${SSLDIR}:g"
 
 SUBST_CLASSES+=		var
 SUBST_STAGE.var=	pre-configure
