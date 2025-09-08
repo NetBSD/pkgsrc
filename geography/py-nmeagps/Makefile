@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/04 13:50:48 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/08 10:06:20 gdt Exp $
 
 VERSION=	1.0.51
 DISTTAIL=	nmeagps
@@ -17,6 +17,8 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	# none
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
