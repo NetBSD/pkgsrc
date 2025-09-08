@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_crash__keys.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp $
+$NetBSD: patch-chrome_common_crash__keys.cc,v 1.6 2025/09/08 13:24:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/crash_keys.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/common/crash_keys.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/common/crash_keys.cc
 @@ -51,7 +51,9 @@ class CrashKeyWithName {
    ~CrashKeyWithName() = delete;
@@ -16,7 +16,7 @@ $NetBSD: patch-chrome_common_crash__keys.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp
    void Clear() { crash_key_.Clear(); }
    void Set(std::string_view value) { crash_key_.Set(value); }
  
-@@ -196,6 +198,7 @@ void AllocateCrashKeyInBrowserAndChildre
+@@ -195,6 +197,7 @@ void AllocateCrashKeyInBrowserAndChildre
    GetCommandLineStringAnnotations().emplace_back(std::string(key)).Set(value);
  }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_common_crash__keys.cc,v 1.5 2025/08/13 07:44:21 kikadf Exp
  void AppendStringAnnotationsCommandLineSwitch(base::CommandLine* command_line) {
    std::string string_annotations;
    for (const auto& crash_key : GetCommandLineStringAnnotations()) {
-@@ -210,6 +213,7 @@ void AppendStringAnnotationsCommandLineS
+@@ -209,6 +212,7 @@ void AppendStringAnnotationsCommandLineS
    }
    command_line->AppendSwitchASCII(kStringAnnotationsSwitch, string_annotations);
  }

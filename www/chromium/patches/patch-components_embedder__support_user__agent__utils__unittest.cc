@@ -1,12 +1,12 @@
-$NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.5 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.6 2025/09/08 13:24:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/embedder_support/user_agent_utils_unittest.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/embedder_support/user_agent_utils_unittest.cc
-@@ -153,7 +153,7 @@ void CheckUserAgentStringOrdering(bool m
+@@ -152,7 +152,7 @@ void CheckUserAgentStringOrdering(bool m
    ASSERT_EQ("CrOS", pieces[0]);
    ASSERT_EQ("x86_64", pieces[1]);
    ASSERT_EQ("14541.0.0", pieces[2]);
@@ -15,7 +15,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.
    // Post-UA Reduction there is a single <unifiedPlatform> value for Linux:
    // X11; Linux x86_64
    ASSERT_EQ(2u, pieces.size());
-@@ -341,7 +341,7 @@ class UserAgentUtilsTest : public testin
+@@ -340,7 +340,7 @@ class UserAgentUtilsTest : public testin
          "X11; CrOS x86_64 14541.0.0";
  #elif BUILDFLAG(IS_FUCHSIA)
          "Fuchsia";
@@ -24,7 +24,7 @@ $NetBSD: patch-components_embedder__support_user__agent__utils__unittest.cc,v 1.
          "X11; Linux x86_64";
  #elif BUILDFLAG(IS_MAC)
          "Macintosh; Intel Mac OS X 10_15_7";
-@@ -721,7 +721,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
+@@ -720,7 +720,7 @@ TEST_F(UserAgentUtilsTest, UserAgentMeta
  #endif
  #elif BUILDFLAG(IS_ANDROID)
    EXPECT_EQ(metadata.platform, "Android");

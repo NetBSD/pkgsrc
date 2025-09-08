@@ -1,12 +1,12 @@
-$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.cc,v 1.4 2025/08/13 07:44:22 kikadf Exp $
+$NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments__data__manager.cc,v 1.5 2025/09/08 13:24:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/autofill/core/browser/data_manager/payments/payments_data_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/autofill/core/browser/data_manager/payments/payments_data_manager.cc
-@@ -472,7 +472,7 @@ void PaymentsDataManager::OnWebDataServi
+@@ -471,7 +471,7 @@ void PaymentsDataManager::OnWebDataServi
  
  bool PaymentsDataManager::ShouldShowBnplSettings() const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -15,7 +15,7 @@ $NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments_
    // Check `kAutofillEnableBuyNowPayLater` only if the user has seen a BNPL
    // suggestion before, or there are already linked issuers present, to avoid
    // unnecessary feature flag checks. The linked issuer check is due to the fact
-@@ -1001,7 +1001,7 @@ void PaymentsDataManager::SetPrefService
+@@ -1000,7 +1000,7 @@ void PaymentsDataManager::SetPrefService
            &PaymentsDataManager::OnAutofillPaymentsCardBenefitsPrefChange,
            base::Unretained(this)));
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -24,7 +24,7 @@ $NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments_
    pref_registrar_.Add(
        prefs::kAutofillBnplEnabled,
        base::BindRepeating(&PaymentsDataManager::OnBnplEnabledPrefChange,
-@@ -1075,7 +1075,7 @@ void PaymentsDataManager::SetAutofillHas
+@@ -1074,7 +1074,7 @@ void PaymentsDataManager::SetAutofillHas
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -33,16 +33,16 @@ $NetBSD: patch-components_autofill_core_browser_data__manager_payments_payments_
  bool PaymentsDataManager::IsAutofillHasSeenBnplPrefEnabled() const {
    return prefs::HasSeenBnpl(pref_service_);
  }
-@@ -2078,7 +2078,7 @@ bool PaymentsDataManager::AreEwalletAcco
+@@ -2084,7 +2084,7 @@ bool PaymentsDataManager::AreEwalletAcco
  
  bool PaymentsDataManager::AreBnplIssuersSupported() const {
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   return app_locale_ == "en-US" && GetCountryCodeForExperimentGroup() == "US" &&
-          base::FeatureList::IsEnabled(
-              features::kAutofillEnableBuyNowPayLaterSyncing);
-@@ -2111,7 +2111,7 @@ void PaymentsDataManager::ClearAllCredit
+   return (app_locale_ == "en-US" || app_locale_ == "en-GB" ||
+           app_locale_ == "en-CA") &&
+          GetCountryCodeForExperimentGroup() == "US" &&
+@@ -2119,7 +2119,7 @@ void PaymentsDataManager::ClearAllCredit
  }
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

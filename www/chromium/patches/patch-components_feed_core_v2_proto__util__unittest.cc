@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feed_core_v2_proto__util__unittest.cc,v 1.5 2025/08/13 07:44:23 kikadf Exp $
+$NetBSD: patch-components_feed_core_v2_proto__util__unittest.cc,v 1.6 2025/09/08 13:24:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util_unittest.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- components/feed/core/v2/proto_util_unittest.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ components/feed/core/v2/proto_util_unittest.cc
 @@ -42,8 +42,8 @@ TEST(ProtoUtilTest, CreateClientInfo) {
    feedwire::ClientInfo result = CreateClientInfo(request_metadata);

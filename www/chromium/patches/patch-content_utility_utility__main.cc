@@ -1,12 +1,12 @@
-$NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf Exp $
+$NetBSD: patch-content_utility_utility__main.cc,v 1.6 2025/09/08 13:24:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/utility/utility_main.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/utility/utility_main.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/utility/utility_main.cc
-@@ -38,15 +38,19 @@
+@@ -39,17 +39,21 @@
  #include "services/tracing/public/cpp/trace_startup.h"
  #include "services/video_effects/public/cpp/buildflags.h"
  
@@ -21,13 +21,15 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
 +#endif
  #include "content/public/common/content_descriptor_keys.h"
  #include "content/utility/speech/speech_recognition_sandbox_hook_linux.h"
+ #include "media/gpu/buildflags.h"
+ #include "media/media_buildflags.h"
 +#if !BUILDFLAG(IS_BSD)
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
  #include "services/audio/audio_sandbox_hook_linux.h"
  #include "services/network/network_sandbox_hook_linux.h"
  #include "services/screen_ai/buildflags/buildflags.h"
-@@ -77,7 +81,12 @@
+@@ -84,7 +88,12 @@
  
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
@@ -41,7 +43,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
  #include "services/video_effects/video_effects_sandbox_hook_linux.h"  // nogncheck
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -112,7 +121,7 @@
+@@ -121,7 +130,7 @@
  sandbox::TargetServices* g_utility_target_services = nullptr;
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -50,7 +52,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
  #include "components/services/on_device_translation/sandbox_hook.h"
  #endif  // BUILDFLAG(ENABLE_ON_DEVICE_TRANSLATION) && BUILDFLAG(IS_LINUX)
  
-@@ -120,7 +129,7 @@ namespace content {
+@@ -129,7 +138,7 @@ namespace content {
  
  namespace {
  
@@ -59,26 +61,27 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
  std::vector<std::string> GetNetworkContextsParentDirectories() {
    base::MemoryMappedFile::Region region;
    base::ScopedFD read_pipe_fd = base::FileDescriptorStore::GetInstance().TakeFD(
-@@ -268,7 +277,8 @@ int UtilityMain(MainFunctionParams param
+@@ -284,7 +293,7 @@ int UtilityMain(MainFunctionParams param
+     CHECK(on_device_model::PreSandboxInit());
    }
- #endif  // BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION) && BUILDFLAG(USE_VAAPI)
- 
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+// XXX BSD
-+#if (BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)) && !BUILDFLAG(IS_BSD)
-   // Thread type delegate of the process should be registered before first
-   // thread type change in ChildProcess constructor. It also needs to be
-   // registered before the process has multiple threads, which may race with
-@@ -276,7 +286,7 @@ int UtilityMain(MainFunctionParams param
-   SandboxedProcessThreadTypeHandler::Create();
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+ 
+ #if BUILDFLAG(USE_LINUX_VIDEO_ACCELERATION) && BUILDFLAG(USE_VAAPI)
+   // Regardless of the sandbox status, the VaapiWrapper needs to be initialized
+@@ -299,7 +308,10 @@ int UtilityMain(MainFunctionParams param
+   // thread type change in ChildProcess constructor. It also needs to be
+   // registered before the process has multiple threads, which may race with
+   // application of the sandbox.
++// XXX BSD
++#if !BUILDFLAG(IS_BSD) 
+   SandboxedProcessThreadTypeHandler::Create();
++#endif
+ 
    // Initializes the sandbox before any threads are created.
    // TODO(jorgelo): move this after GTK initialization when we enable a strict
-   // Seccomp-BPF policy.
-@@ -308,7 +318,7 @@ int UtilityMain(MainFunctionParams param
+@@ -331,7 +343,7 @@ int UtilityMain(MainFunctionParams param
        pre_sandbox_hook =
            base::BindOnce(&speech::SpeechRecognitionPreSandboxHook);
        break;
@@ -87,7 +90,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
      case sandbox::mojom::Sandbox::kOnDeviceTranslation:
        pre_sandbox_hook = base::BindOnce(
            &on_device_translation::OnDeviceTranslationSandboxHook);
-@@ -324,7 +334,7 @@ int UtilityMain(MainFunctionParams param
+@@ -347,7 +359,7 @@ int UtilityMain(MainFunctionParams param
  #else
        NOTREACHED();
  #endif
@@ -96,7 +99,16 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
      case sandbox::mojom::Sandbox::kVideoEffects:
  #if BUILDFLAG(ENABLE_VIDEO_EFFECTS)
        pre_sandbox_hook =
-@@ -359,6 +369,7 @@ int UtilityMain(MainFunctionParams param
+@@ -355,7 +367,7 @@ int UtilityMain(MainFunctionParams param
+ #endif
+       break;
+ #endif  // BUILDFLAG(IS_LINUX)
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
++#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+     case sandbox::mojom::Sandbox::kShapeDetection:
+       pre_sandbox_hook =
+           base::BindOnce(&shape_detection::ShapeDetectionPreSandboxHook);
+@@ -390,6 +402,7 @@ int UtilityMain(MainFunctionParams param
      default:
        break;
    }
@@ -104,7 +116,7 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
    if (!sandbox::policy::IsUnsandboxedSandboxType(sandbox_type) &&
        (parameters.zygote_child || !pre_sandbox_hook.is_null())) {
      sandbox_options.use_amd_specific_policies =
-@@ -366,6 +377,11 @@ int UtilityMain(MainFunctionParams param
+@@ -397,6 +410,11 @@ int UtilityMain(MainFunctionParams param
      sandbox::policy::Sandbox::Initialize(
          sandbox_type, std::move(pre_sandbox_hook), sandbox_options);
    }
@@ -114,5 +126,5 @@ $NetBSD: patch-content_utility_utility__main.cc,v 1.5 2025/08/13 07:44:26 kikadf
 +      sandbox::policy::SandboxLinux::Options());
 +#endif
  
-   // Start the HangWatcher now that the sandbox is engaged, if it hasn't
-   // already been started.
+   // Startup tracing creates a tracing thread, which is incompatible on
+   // platforms that require single-threaded sandbox initialization. In these

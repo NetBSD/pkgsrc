@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.5 2025/08/13 07:44:15 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.6 2025/09/08 13:24:16 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_freebsd.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- base/process/process_metrics_freebsd.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ base/process/process_metrics_freebsd.cc
 @@ -3,18 +3,37 @@
  // found in the LICENSE file.
@@ -66,8 +66,9 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.5 2025/08/13 07:44:
 -    return base::unexpected(ProcessCPUUsageError::kSystemError);
 +  if (kd == nullptr) {
 +    return base::unexpected(ProcessUsageError::kSystemError);
-+  }
-+
+   }
+ 
+-  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
 +  if ((pp = kvm_getprocs(kd, KERN_PROC_PID, process_, &nproc)) == nullptr) {
 +    kvm_close(kd);
 +    return base::unexpected(ProcessUsageError::kProcessNotFound);
@@ -78,9 +79,8 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.5 2025/08/13 07:44:
 +  } else {
 +    kvm_close(kd);
 +    return base::unexpected(ProcessUsageError::kProcessNotFound);
-   }
- 
--  return base::ok(double{info.ki_pctcpu} / FSCALE * 100.0);
++  }
++
 +  kvm_close(kd);
 +  return memory_info;
  }
@@ -110,7 +110,7 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.5 2025/08/13 07:44:
  }
  
  size_t GetSystemCommitCharge() {
-@@ -66,4 +117,174 @@ size_t GetSystemCommitCharge() {
+@@ -66,4 +117,117 @@ size_t GetSystemCommitCharge() {
    return mem_total - (mem_free * pagesize) - (mem_inactive * pagesize);
  }
  
@@ -226,62 +226,5 @@ $NetBSD: patch-base_process_process__metrics__freebsd.cc,v 1.5 2025/08/13 07:44:
 +SystemDiskInfo::SystemDiskInfo(const SystemDiskInfo& other) = default;
 +
 +SystemDiskInfo& SystemDiskInfo::operator=(const SystemDiskInfo&) = default;
-+
-+Value::Dict SystemDiskInfo::ToDict() const {
-+  Value::Dict res;
-+
-+  // Write out uint64_t variables as doubles.
-+  // Note: this may discard some precision, but for JS there's no other option.
-+  res.Set("reads", static_cast<double>(reads));
-+  res.Set("reads_merged", static_cast<double>(reads_merged));
-+  res.Set("sectors_read", static_cast<double>(sectors_read));
-+  res.Set("read_time", static_cast<double>(read_time));
-+  res.Set("writes", static_cast<double>(writes));
-+  res.Set("writes_merged", static_cast<double>(writes_merged));
-+  res.Set("sectors_written", static_cast<double>(sectors_written));
-+  res.Set("write_time", static_cast<double>(write_time));
-+  res.Set("io", static_cast<double>(io));
-+  res.Set("io_time", static_cast<double>(io_time));
-+  res.Set("weighted_io_time", static_cast<double>(weighted_io_time));
-+
-+  NOTIMPLEMENTED();
-+
-+  return res;
-+}
-+
-+Value::Dict SystemMemoryInfoKB::ToDict() const {
-+  Value::Dict res;
-+  res.Set("total", total);
-+  res.Set("free", free);
-+  res.Set("available", available);
-+  res.Set("buffers", buffers);
-+  res.Set("cached", cached);
-+  res.Set("active_anon", active_anon);
-+  res.Set("inactive_anon", inactive_anon);
-+  res.Set("active_file", active_file);
-+  res.Set("inactive_file", inactive_file);
-+  res.Set("swap_total", swap_total);
-+  res.Set("swap_free", swap_free);
-+  res.Set("swap_used", swap_total - swap_free);
-+  res.Set("dirty", dirty);
-+  res.Set("reclaimable", reclaimable);
-+
-+  NOTIMPLEMENTED();
-+
-+  return res;
-+}
-+
-+Value::Dict VmStatInfo::ToDict() const {
-+  Value::Dict res;
-+  // TODO(crbug.com/1334256): Make base::Value able to hold uint64_t and remove
-+  // casts below.
-+  res.Set("pswpin", static_cast<int>(pswpin));
-+  res.Set("pswpout", static_cast<int>(pswpout));
-+  res.Set("pgmajfault", static_cast<int>(pgmajfault));
-+
-+  NOTIMPLEMENTED();
-+
-+  return res;
-+}
 +
  }  // namespace base

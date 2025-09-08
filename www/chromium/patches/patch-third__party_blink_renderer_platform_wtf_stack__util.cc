@@ -1,26 +1,28 @@
-$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 2025/08/13 07:44:31 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.6 2025/09/08 13:24:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- third_party/blink/renderer/platform/wtf/stack_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ third_party/blink/renderer/platform/wtf/stack_util.cc
-@@ -27,6 +27,13 @@ extern "C" void* __libc_stack_end;  // N
+@@ -27,6 +27,15 @@ extern "C" void* __libc_stack_end;  // N
  #include <sanitizer/asan_interface.h>
  #endif
  
 +#if BUILDFLAG(IS_BSD)
 +#include <sys/signal.h>
-+#if !BUILDFLAG(IS_NETBSD)
++#if BUILDFLAG(IS_NETBSD)
++#include <pthread.h>
++#else
 +#include <pthread_np.h>
 +#endif
 +#endif
 +
- namespace WTF {
+ namespace blink {
  
  size_t GetUnderestimatedStackSize() {
-@@ -39,7 +46,8 @@ size_t GetUnderestimatedStackSize() {
+@@ -39,7 +48,8 @@ size_t GetUnderestimatedStackSize() {
  // correctly for the main thread.
  
  #elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -30,7 +32,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 202
    // pthread_getattr_np() can fail if the thread is not invoked by
    // pthread_create() (e.g., the main thread of blink_unittests).
    // If so, a conservative size estimate is returned.
-@@ -60,7 +68,7 @@ size_t GetUnderestimatedStackSize() {
+@@ -60,7 +70,7 @@ size_t GetUnderestimatedStackSize() {
      pthread_attr_destroy(&attr);
      return size;
    }
@@ -39,7 +41,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 202
    pthread_attr_destroy(&attr);
  #endif
  
-@@ -71,6 +79,8 @@ size_t GetUnderestimatedStackSize() {
+@@ -71,6 +81,8 @@ size_t GetUnderestimatedStackSize() {
    //    low as 512k.
    //
    return 512 * 1024;
@@ -48,7 +50,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 202
  #elif BUILDFLAG(IS_APPLE)
    // pthread_get_stacksize_np() returns too low a value for the main thread on
    // OSX 10.9,
-@@ -112,7 +122,7 @@ thread_local void* thread_stack_start = 
+@@ -112,7 +124,7 @@ thread_local void* thread_stack_start = 
  
  void* GetStackStartImpl() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || \
@@ -57,7 +59,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 202
    pthread_attr_t attr;
    int error;
  #if BUILDFLAG(IS_FREEBSD)
-@@ -129,7 +139,7 @@ void* GetStackStartImpl() {
+@@ -129,7 +141,7 @@ void* GetStackStartImpl() {
      pthread_attr_destroy(&attr);
      return reinterpret_cast<uint8_t*>(base) + size;
    }
@@ -66,7 +68,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_wtf_stack__util.cc,v 1.5 202
    pthread_attr_destroy(&attr);
  #endif
  #if defined(__GLIBC__)
-@@ -161,6 +171,13 @@ void* GetStackStartImpl() {
+@@ -161,6 +173,13 @@ void* GetStackStartImpl() {
    ::GetCurrentThreadStackLimits(&lowLimit, &highLimit);
    return reinterpret_cast<void*>(highLimit);
  #endif

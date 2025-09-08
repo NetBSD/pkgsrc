@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_BUILD.gn,v 1.5 2025/08/13 07:44:24 kikadf Exp $
+$NetBSD: patch-content_browser_BUILD.gn,v 1.6 2025/09/08 13:24:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/BUILD.gn.orig	2025-07-29 22:51:44.000000000 +0000
+--- content/browser/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
 +++ content/browser/BUILD.gn
-@@ -2581,6 +2581,14 @@ source_set("browser") {
+@@ -2599,6 +2599,14 @@ source_set("browser") {
      ]
    }
  
@@ -21,7 +21,7 @@ $NetBSD: patch-content_browser_BUILD.gn,v 1.5 2025/08/13 07:44:24 kikadf Exp $
    if (is_linux || is_chromeos) {
      sources -=
          [ "file_system_access/file_path_watcher/file_path_watcher_stub.cc" ]
-@@ -2631,6 +2639,15 @@ source_set("browser") {
+@@ -2649,6 +2657,15 @@ source_set("browser") {
      deps += [ "//media/mojo/mojom" ]
    }
  

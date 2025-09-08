@@ -1,20 +1,20 @@
-$NetBSD: patch-sandbox_linux_services_init__process__reaper.cc,v 1.5 2025/08/13 07:44:29 kikadf Exp $
+$NetBSD: patch-sandbox_linux_services_init__process__reaper.cc,v 1.6 2025/09/08 13:24:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/linux/services/init_process_reaper.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- sandbox/linux/services/init_process_reaper.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ sandbox/linux/services/init_process_reaper.cc
-@@ -7,6 +7,7 @@
- #pragma allow_unsafe_libc_calls
- #endif
+@@ -2,6 +2,7 @@
+ // Use of this source code is governed by a BSD-style license that can be
+ // found in the LICENSE file.
  
 +#if 0
  #include "sandbox/linux/services/init_process_reaper.h"
  
  #include <signal.h>
-@@ -105,3 +106,4 @@ bool CreateInitProcessReaper(base::OnceC
+@@ -101,3 +102,4 @@ bool CreateInitProcessReaper(base::OnceC
  }
  
  }  // namespace sandbox.

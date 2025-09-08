@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.4 2025/08/13 07:44:16 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.5 2025/09/08 13:24:17 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-07-29 22:51:44.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-08-29 18:50:09.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
-@@ -92,7 +92,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
+@@ -93,7 +93,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
    if (!status_icon_) {
      return;
    }
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.4 2025/0
    //  Set a vector icon for proper themeing on Linux.
    status_icon_->SetIcon(
        GlicVectorIconManager::GetVectorIcon(IDR_GLIC_BUTTON_VECTOR_ICON));
-@@ -134,7 +134,7 @@ GlicStatusIcon::~GlicStatusIcon() {
+@@ -135,7 +135,7 @@ GlicStatusIcon::~GlicStatusIcon() {
  
    context_menu_ = nullptr;
    if (status_icon_) {
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.4 2025/0
      status_icon_->RemoveObserver(this);
  #endif
      std::unique_ptr<StatusIcon> removed_icon =
-@@ -242,7 +242,7 @@ void GlicStatusIcon::UpdateHotkey(const 
+@@ -243,7 +243,7 @@ void GlicStatusIcon::UpdateHotkey(const 
  }
  
  void GlicStatusIcon::UpdateVisibilityOfExitInContextMenu() {
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.4 2025/0
    if (context_menu_) {
      const bool is_visible = BrowserList::GetInstance()->empty();
      const std::optional<size_t> index =
-@@ -292,7 +292,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
+@@ -293,7 +293,7 @@ std::unique_ptr<StatusIconMenuModel> Gli
    menu->AddItem(IDC_GLIC_STATUS_ICON_MENU_SETTINGS,
                  l10n_util::GetStringUTF16(IDS_GLIC_STATUS_ICON_MENU_SETTINGS));
  
