@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/07/26 19:26:35 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/08 08:22:16 vins Exp $
 
 DISTNAME=	libgrapheme-2.0.2
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	https://dl.suckless.org/libgrapheme/
 
@@ -9,9 +10,9 @@ HOMEPAGE=	https://libs.suckless.org/libgrapheme/
 COMMENT=	Unicode string library
 LICENSE=	isc
 
-FORCE_C_STD=	c99
+CPPFLAGS+=		-D_DEFAULT_SOURCE
 
-CPPFLAGS+=	-D_DEFAULT_SOURCE
+BUILDLINK_TRANSFORM+=	opt:-std=c99:-std=gnu99 # strdup(), getline()
 
 SONAME=		${PKGBASE}.${PKGVERSION_NOREV}
 
