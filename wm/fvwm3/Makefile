@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/09/06 13:17:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.60 2025/09/08 07:05:27 vins Exp $
 
 DISTNAME=	fvwm3-1.1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -52,7 +52,7 @@ MESON_ARGS+=	-Dperl=${PERL5:Q}
 
 .include "options.mk"
 
-.include "../../converters/libiconv/buildlink3.mk"
+#.include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../devel/gettext-lib/buildlink3.mk"
