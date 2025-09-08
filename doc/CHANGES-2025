@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5425 2025/09/08 07:50:47 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5426 2025/09/08 12:49:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7829,3 +7829,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/skaffold version 2.16.1 [maya 2025-09-07]
 	Updated emulators/nono to 1.5.0 [jun 2025-09-08]
 	Updated net/helm to 3.18.6 [leot 2025-09-08]
+	Updated sysutils/eza to 0.23.2 [pin 2025-09-08]
