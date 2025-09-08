@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 13:57:53 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/08 10:06:20 gdt Exp $
 
 VERSION=	1.0.3
 DISTTAIL=	ubxutils
@@ -15,6 +15,8 @@ COMMENT=	Python utilities for u-blox configuration
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-ubx2-[0-9]*:../../geography/py-ubx2
 
