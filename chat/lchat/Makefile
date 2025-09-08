@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 17:23:50 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/08 10:02:10 vins Exp $
 
 DISTNAME=	lchat-1.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.suckless.org/tools/
 
@@ -10,6 +11,7 @@ COMMENT=	Line oriented front end for chat programs
 LICENSE=	mit
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE        # asprintf()
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
