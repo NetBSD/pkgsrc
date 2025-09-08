@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/05/13 23:08:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/08 22:54:47 lloyd Exp $
 
-DISTNAME=		gcc-13.2.0
+DISTNAME=		gcc-14.3.0
 PKGNAME=		cross-riscv64-none-elf-${DISTNAME}
-PKGREVISION=		1
+#PKGREVISION=		1
 CATEGORIES=		cross
-NEWLIBVER=		4.4.0.20231231
+NEWLIBVER=		4.5.0.20241231
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
 DISTFILES=		${DEFAULT_DISTFILES} \
@@ -26,7 +26,7 @@ MKPIE_SUPPORTED=	no
 TOOL_DEPENDS+=			gtexinfo>=5.1:../../devel/gtexinfo
 _TOOLS_USE_PKGSRC.makeinfo=	yes
 
-DEPENDS+=		cross-riscv64-none-elf-binutils-[0-9]*:../../cross/riscv64-none-elf-binutils
+DEPENDS+=		cross-riscv64-none-elf-binutils>=2.45:../../cross/riscv64-none-elf-binutils
 
 USE_LANGUAGES+=		c c++
 
@@ -49,7 +49,7 @@ GNU_CONFIGURE_PREFIX=	${RISCV64ELF_PREFIX}
 CONFIGURE_ARGS+=	--target=riscv64-none-elf
 CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--with-newlib
-CONFIGURE_ARGS+=	--disable-multilib
+CONFIGURE_ARGS+=	--enable-multilib
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--disable-gcov
