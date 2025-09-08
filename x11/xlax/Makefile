@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/03 11:29:04 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/08 10:19:58 vins Exp $
 
 DISTNAME=	xlax2.4
 PKGNAME=	xlax-2.4
@@ -21,9 +21,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	lib/X11/app-defaults
 
 REPLACE_PERL+=	mkxlax
-
-post-patch:
-	${RUN} ${CP} ${FILESDIR}/stddef.h ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xlax ${DESTDIR}${PREFIX}/bin
