@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/09/03 07:37:05 pin Exp $
+$NetBSD: distinfo,v 1.13 2025/09/08 12:50:20 pin Exp $
 
-BLAKE2s (lagrange-1.19.0.tar.gz) = b79e22a22e7f956e2eee69f1ae1009b042b49a14b31ee9d76acc1dd73602d5f3
-SHA512 (lagrange-1.19.0.tar.gz) = 06cf387aa13ec2a71956b3cd4593bc0f325dc4b4283371cbd037673212b788d0336844096d5eeab52641a363c60c44edf7f9db054f9ba1eaa4545aaacbb21661
-Size (lagrange-1.19.0.tar.gz) = 11408944 bytes
+BLAKE2s (lagrange-1.19.1.tar.gz) = 50d66ac82f28b17574f3e868b17a1161c03b807eb1e42a47bbffb65419348041
+SHA512 (lagrange-1.19.1.tar.gz) = 705282dce1107e4ca87c9f48e9e4a18ab309dcbdcddb1713f2a596e1d21a2ef94079f3cfbb36848e138b1c76a20d8ed71740b46da57cc329f567da2c99f4a16c
+Size (lagrange-1.19.1.tar.gz) = 11414377 bytes
