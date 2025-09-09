@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/09/04 23:06:24 lloyd Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/09 01:53:45 lloyd Exp $
 
 DISTNAME=	gdb-16.3
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
@@ -32,6 +32,7 @@ INFO_FILES=		yes
 # If ever necessary, this should be fixed using REPLACE_BASH.
 CHECK_PORTABILITY_SKIP+=	sim/testsuite/sim/bfin/run-tests.sh
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
