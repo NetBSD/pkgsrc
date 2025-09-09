@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2025/09/08 07:05:27 vins Exp $
+# $NetBSD: hacks.mk,v 1.2 2025/09/09 22:05:30 gutteridge Exp $
 
 .if !defined(FVWM3_HACKS_MK)
 FVWM3_HACKS_MK=	defined
@@ -7,7 +7,7 @@ FVWM3_HACKS_MK=	defined
 ### The second argument of iconv() is of type `char **' in some
 ### implementations (including GNU libiconv), while it expects a `const char **'
 ### type in some others (at the very least on SunOS and NetBSD up to 9.*).
-### This is a knwon issue. See https://gnats.netbsd.org/57672.
+### This is a known issue. See https://gnats.netbsd.org/57672.
 ### Use the SUBST framework to fix the iconv prototype mismatch when needed.
 
 .if (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000) || ${OPSYS} == "SunOS"
