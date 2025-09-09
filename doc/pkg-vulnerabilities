@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.542 2025/09/09 15:04:14 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.543 2025/09/09 15:48:36 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27473,3 +27473,32 @@ chromium<140.0.7339.80	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025
 chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9865
 chromium<140.0.7339.80	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-9866
 chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9867
+exiv2<0.28.6	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-54080
+exiv2<0.28.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55304
+glib2<2.84.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7039
+glpi<10.0.19	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2025-53105
+kea>=3.0.0<3.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40779
+kea>=3.1.0<3.1.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40779
+libsoup-[0-9]*		sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-9901
+linenoise-[0-9]*	symlink-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-9810
+mongodb<6.0.25	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10060
+mongodb>=7.0<7.0.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10060
+mongodb>=8.0<8.0.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10060
+mongodb<6.0.25		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10061
+mongodb>=7.0<7.0.22	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10061
+mongodb>=8.0<8.0.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10061
+p5-CGI-Simple<1.282	http-response-splitting	https://nvd.nist.gov/vuln/detail/CVE-2025-40927
+p5-Cpanel-JSON-XS<4.40	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40929
+p5-JSON-XS<4.04		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40928
+pcre2<10.46	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-58050
+php{56,74,81,82,83,84}-phppgadmin<9.8	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2025-9636
+podman>=4.0.0<5.6.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-9566
+py{27,39,310,311,312,313}-deepdiff<8.6.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-58367
+py{27,39,310,311,312,313}-django<4.2.24		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-57833
+py{27,39,310,311,312,313}-django>=5.1<5.1.12	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-57833
+py{27,39,310,311,312,313}-django>=5.2<5.2.6	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-57833
+py{27,39,310,311,312,313}-xmltodict<0.15.1	xml-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-9375
+sqlite3<3.50.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-7709
+tcpreplay<4.5.3	divide-by-zero		https://nvd.nist.gov/vuln/detail/CVE-2025-9649
+vault<1.20.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6203
+wireshark<4.4.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9817
