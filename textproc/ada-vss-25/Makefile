@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 11:34:51 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/09 07:25:12 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	vss-${GNAT_NAME}-25.0.0
@@ -29,7 +29,7 @@ USE_PKGSRC_GCC_RUNTIME?=	no
 PLIST.shlibs=			yes
 BUILD_TARGET=			build-all-libs
 INSTALL_TARGET=			install-all-libs
-BUILDLINK_DEPMETHOD.xmlada=	full
+BUILDLINK_DEPMETHOD.xmlada-25=	full
 .else
 BUILD_TARGET=			build-libs-static
 INSTALL_TARGET=			install-libs-static
