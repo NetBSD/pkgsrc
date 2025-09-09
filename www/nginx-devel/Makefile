@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.158 2025/08/30 22:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2025/09/09 13:26:01 osa Exp $
 
 DISTNAME=	nginx-1.29.1
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -104,6 +104,9 @@ SOEXT=		so
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
 post-patch:
+.if !empty(PKG_OPTIONS:Mnginx-brotli)
+	cd ${WRKSRC} && ${PATCH} < ${PATCHDIR}/extra-patch-ngx_brotli_filter_config
+.endif
 .if !empty(PKG_OPTIONS:Mnginx-gssapi)
 	${SED} -i.bak '4d;5d;6d' ${WRKDIR}/${GSSAPI_DISTNAME}/config
 .endif
