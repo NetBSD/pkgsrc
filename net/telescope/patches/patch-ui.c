@@ -1,18 +1,13 @@
-$NetBSD: patch-ui.c,v 1.1 2025/09/08 09:52:02 vins Exp $
+$NetBSD: patch-ui.c,v 1.2 2025/09/09 15:22:06 vins Exp $
 
 Support dprintf() on SunOS.
+Note that illumos supports dprintf() in UNIX V7 compliance.
 
 --- ui.c.orig	2024-12-30 09:09:40.000000000 +0000
 +++ ui.c
-@@ -1,4 +1,4 @@
--/*
-+#define _XPG7   1/*
-  * Copyright (c) 2021, 2024 Omar Polo <op@omarpolo.com>
+@@ -30,6 +30,12 @@
   *
-  * Permission to use, copy, modify, and distribute this software for any
-@@ -32,6 +32,12 @@
- 
- #include "compat.h"
+  */
  
 +#if defined(__illumos__)
 +#define _XPG7	1
@@ -20,9 +15,9 @@ Support dprintf() on SunOS.
 +#include "dprintf.h"
 +#endif
 +
- #include <sys/time.h>
- #include <sys/wait.h>
+ #include "compat.h"
  
+ #include <sys/time.h>
 @@ -122,6 +128,23 @@ static struct timeval	loading_tv = { 0,
  
  static char	keybuf[64];
