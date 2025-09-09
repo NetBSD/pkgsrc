@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/09/05 07:42:01 nia Exp $
+# $NetBSD: Makefile,v 1.40 2025/09/09 11:15:54 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -117,7 +117,8 @@ PLIST.be=	yes
 PLIST.le=	yes
 .endif
 
-.if ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH:Maarch64*} || \
+    ${MACHINE_ARCH:Mearm*}
 PLIST.ffvpx=		yes	# see platform/old-configure.in
 .endif
 
