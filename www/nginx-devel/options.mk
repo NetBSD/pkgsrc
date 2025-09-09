@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.46 2025/07/10 20:54:15 osa Exp $
+# $NetBSD: options.mk,v 1.47 2025/09/09 13:26:01 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx-devel
-PKG_SUPPORTED_OPTIONS=	nginx-array-var nginx-auth-request nginx-cache-purge nginx-dav nginx-debug
+PKG_SUPPORTED_OPTIONS=	nginx-array-var nginx-auth-request nginx-brotli nginx-cache-purge nginx-dav nginx-debug
 PKG_SUPPORTED_OPTIONS+=	nginx-dso nginx-echo nginx-encrypted-session nginx-flv nginx-form-input
 PKG_SUPPORTED_OPTIONS+=	nginx-geoip nginx-geoip2 nginx-gssapi nginx-gtools nginx-gzip nginx-headers-more nginx-http2
 PKG_SUPPORTED_OPTIONS+=	nginx-http3 nginx-image-filter nginx-luajit nginx-mail-proxy nginx-memcache
@@ -11,10 +11,10 @@ PKG_SUPPORTED_OPTIONS+=	nginx-naxsi nginx-njs nginx-njs-xml nginx-perl nginx-pus
 PKG_SUPPORTED_OPTIONS+=	nginx-secure-link nginx-set-misc nginx-slice nginx-ssl nginx-status
 PKG_SUPPORTED_OPTIONS+=	nginx-stream-ssl-preread nginx-sts nginx-sub nginx-upload nginx-uwsgi nginx-vts
 
-PKG_SUGGESTED_OPTIONS=	nginx-auth-request nginx-gzip nginx-http2 nginx-http3 nginx-memcache nginx-realip
-PKG_SUGGESTED_OPTIONS+=	nginx-slice nginx-status nginx-ssl nginx-uwsgi
+PKG_SUGGESTED_OPTIONS=	nginx-auth-request nginx-brotli nginx-gzip nginx-http2 nginx-http3 nginx-memcache
+PKG_SUGGESTED_OPTIONS+=	nginx-realip nginx-slice nginx-status nginx-ssl nginx-uwsgi
 
-PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
+PLIST_VARS+=		arrayvar brotli cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
 PLIST_VARS+=		perl redis rtmp setmisc stream sts upload uwsgi vts
 
@@ -96,6 +96,24 @@ SUBST_STAGE.fix-ssl=	pre-configure
 SUBST_FILES.fix-ssl=	auto/lib/openssl/conf
 SUBST_SED.fix-ssl=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.openssl},g'
 SUBST_NOOP_OK.fix-ssl=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mnginx-brotli) || make(makesum) || make(mdi) || make(distclean)
+.include "../../archivers/brotli/buildlink3.mk"
+BROTLI_GH_ACCOUNT=		google
+BROTLI_GH_PROJECT=		ngx_brotli
+BROTLI_VERSION=			a71f931
+BROTLI_DISTNAME=		${BROTLI_GH_PROJECT}-${BROTLI_VERSION}
+BROTLI_DISTFILE=		${BROTLI_GH_ACCOUNT}-${BROTLI_DISTNAME}_GH.tar.gz
+SITES.${BROTLI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${BROTLI_GH_ACCOUNT}/${BROTLI_GH_PROJECT}/tar.gz/${BROTLI_VERSION}?dummy=${BROTLI_DISTFILE}}
+DISTFILES+=			${BROTLI_DISTFILE}
+DSO_EXTMODS+=			brotli
+SUBST_CLASSES+=			fix-brotli
+SUBST_STAGE.fix-brotli=		pre-configure
+SUBST_FILES.fix-brotli=		../${BROTLI_DISTNAME}/filter/config
+SUBST_SED.fix-brotli=		-e 's,%%PREFIX%%,${BUILDLINK_PREFIX.brotli},g'
+SUBST_NOOP_OK.fix-brotli=	yes
+PLIST.brotli=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-dav) || make(makesum) || make(mdi) || make(distclean)
