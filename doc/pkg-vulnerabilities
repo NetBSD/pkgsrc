@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.541 2025/09/07 19:28:15 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.542 2025/09/09 15:04:14 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27453,3 +27453,23 @@ ampache<7.0.1	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2024-51
 anope<2.0.15	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-30187
 helm<3.18.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55198
 helm<3.18.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55199
+ImageMagick6<6.9.13.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55212
+ImageMagick<7.1.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55212
+ImageMagick6<6.9.13.28	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-55298
+ImageMagick<7.1.2.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-55298
+ImageMagick6<6.9.13.28	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-57803
+ImageMagick<7.1.2.2	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-57803
+ImageMagick6<6.9.13.29	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-57807
+ImageMagick<7.1.2.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-57807
+asterisk>=18<18.26.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54995
+asterisk>=20<20.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-57767
+asterisk>=21<21.10.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-57767
+asterisk>=22<22.5.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-57767
+cJSON<1.7.19		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-26819
+cJSON<1.7.19		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-57052
+cacti<0.8.7	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2005-10004
+chromium<139.0.7258.154	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9478
+chromium<140.0.7339.80	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-9864
+chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9865
+chromium<140.0.7339.80	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-9866
+chromium<140.0.7339.80	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2025-9867
