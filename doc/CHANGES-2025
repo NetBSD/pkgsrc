@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5435 2025/09/09 13:32:15 osa Exp $
+$NetBSD: CHANGES-2025,v 1.5436 2025/09/09 15:12:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7843,3 +7843,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xmltodict to 0.15.1 [adam 2025-09-09]
 	Updated sysutils/py-setproctitle to 1.3.7 [adam 2025-09-09]
 	Updated www/nginx-devel to 1.29.1nb2 [osa 2025-09-09]
+	Updated devel/opa to 1.8.0 [leot 2025-09-09]
