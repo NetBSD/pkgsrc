@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/07/28 06:52:41 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/09/09 09:15:52 dkazankov Exp $
 
 BUILDLINK_TREE+=	sparklib-14
 
 .if !defined(SPARKLIB_14_BUILDLINK3_MK)
 SPARKLIB_14_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.sparklib-14+=	sparklib-14>=14.0.0
+BUILDLINK_API_DEPENDS.sparklib-14+=	sparklib14>=14.0.0
 BUILDLINK_PKGSRCDIR.sparklib-14?=	../../devel/ada-sparklib-14
 BUILDLINK_DEPMETHOD.sparklib-14?=	build
 
