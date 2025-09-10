@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5436 2025/09/09 15:12:45 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5437 2025/09/10 00:51:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7844,3 +7844,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-setproctitle to 1.3.7 [adam 2025-09-09]
 	Updated www/nginx-devel to 1.29.1nb2 [osa 2025-09-09]
 	Updated devel/opa to 1.8.0 [leot 2025-09-09]
+	Updated devel/ruby-jirametrics to 2.15 [schmonz 2025-09-10]
