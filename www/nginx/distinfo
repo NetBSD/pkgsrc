@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.136 2025/08/16 15:52:43 osa Exp $
+$NetBSD: distinfo,v 1.137 2025/09/10 10:57:32 osa Exp $
 
 BLAKE2s (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 6c3880dc781886fb1f4190fa9b8f1459246cc5d157aaed3b9a24cc7abaf7c5a1
 SHA512 (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = b780bea19736f5db844f11b0b407c159cc6ba7326b50177cefde6f8ee875238d3618e50d29b132a66fe98103cb5656f33895e5989d98d4cdc26cfeaa7f12865f
@@ -15,6 +15,9 @@ Size (encrypted-session-nginx-module-0.09.tar.gz) = 11847 bytes
 BLAKE2s (form-input-nginx-module-0.12.tar.gz) = b08fc95c3e15bfdc0846e2d1e8157171954f353bd301f4ac4aca56113620e91d
 SHA512 (form-input-nginx-module-0.12.tar.gz) = 1c5c5ab74156cac09da44a2dcdd84f7c03c9919a23a847e63613e00e3781ecd73d5ad12446174b4fdef9d064257a31570a8dbcccc00d8266f7048e3dcde0362e
 Size (form-input-nginx-module-0.12.tar.gz) = 11090 bytes
+BLAKE2s (google-ngx_brotli-a71f931_GH.tar.gz) = c30d6cbd94abb6f5c1d48275ed964e32f43d9cadd602f95b227a40e62dadbd0d
+SHA512 (google-ngx_brotli-a71f931_GH.tar.gz) = 1cb73a89b53b29d37cbc4d811d5d5cd7b051ec4db98900f593abc8d5b53761b95713212e083334785d9625d4705a78ed476113b244476a9cd5f46dcd9f1177ff
+Size (google-ngx_brotli-a71f931_GH.tar.gz) = 16376 bytes
 BLAKE2s (headers-more-nginx-module-0.38.tar.gz) = cef0db963a951c8e33f2fadadcd262552a266f876d1f2585703392da292933df
 SHA512 (headers-more-nginx-module-0.38.tar.gz) = 90948a79b88bbe2004dc1a53a5189474405787d518ba4e0ee802992b29372f3d08a3a1cf3dc0d5a2089de38b3a99e6133a4d6ac2feaf018f7b23600d7ef23948
 Size (headers-more-nginx-module-0.38.tar.gz) = 29472 bytes

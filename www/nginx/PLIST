@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.20 2024/11/13 11:03:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/09/10 10:57:32 osa Exp $
 ${PLIST.dso}${PLIST.ndk}libexec/nginx/ndk_http_module.so
 ${PLIST.dso}${PLIST.arrayvar}libexec/nginx/ngx_http_array_var_module.so
+${PLIST.dso}${PLIST.brotli}libexec/nginx/ngx_http_brotli_filter_module.so
+${PLIST.dso}${PLIST.brotli}libexec/nginx/ngx_http_brotli_static_module.so
 ${PLIST.dso}${PLIST.gssapi}libexec/nginx/ngx_http_auth_spnego_module.so
 ${PLIST.dso}${PLIST.cprg}libexec/nginx/ngx_http_cache_purge_module.so
 ${PLIST.dso}${PLIST.dav}libexec/nginx/ngx_http_dav_ext_module.so
