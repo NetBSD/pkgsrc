@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/02/12 06:45:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/10 22:48:20 charlotte Exp $
 
 DISTNAME=	ottomatic-4.0.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 
@@ -13,7 +13,6 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 GITHUB_SUBMODULES=	\
 	jorio Pomme ad9cc177d2187f67bd00cb6cf2b3045ef91c577b extern/Pomme
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
 
@@ -31,8 +30,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/ottomatic ${DESTDIR}${PREFIX}/bin/ottomatic
-	${INSTALL_PROGRAM} ${WRKSRC}/OttoMatic ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/OttoMatic ${DESTDIR}${PREFIX}/libexec
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/ottomatic/Data)
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
