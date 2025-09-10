@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/12 06:44:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/10 22:37:52 charlotte Exp $
 
 DISTNAME=	bugdom2-4.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,6 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 GITHUB_SUBMODULES=	\
 	jorio Pomme c6a38eab19a11847024a13f9b3e2af0c2d908c3e extern/Pomme
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 FORCE_CXX_STD=		c++20
 USE_CXX_FEATURES=	c++20
@@ -32,8 +31,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bugdom2 ${DESTDIR}${PREFIX}/bin/bugdom2
-	${INSTALL_PROGRAM} ${WRKSRC}/Bugdom2 ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/Bugdom2 ${DESTDIR}${PREFIX}/libexec
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/bugdom2/Data)
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
