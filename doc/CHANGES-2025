@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5438 2025/09/10 10:34:36 vins Exp $
+$NetBSD: CHANGES-2025,v 1.5439 2025/09/10 10:58:41 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7846,3 +7846,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/opa to 1.8.0 [leot 2025-09-09]
 	Updated devel/ruby-jirametrics to 2.15 [schmonz 2025-09-10]
 	Updated net/libasr to 20240904 [vins 2025-09-10]
+	Updated www/nginx to 1.28.0nb7 [osa 2025-09-10]
