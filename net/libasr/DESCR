@@ -3,5 +3,5 @@ a simple interface for asynchronous address resolution and nameserver
 querying.  They should be used in place of the classical resolver
 functions of libc when blocking is not desirable.
 
-This version is based on the blundled copy found in the OpenSMTPD
+This version is based on the bundled copy found in the OpenSMTPD
 project.
