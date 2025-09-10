@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/07/14 17:50:07 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/10 10:37:57 vins Exp $
 
 DISTNAME=	filter-dnsbl-0.4
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	https://src.imperialat.at/releases/
 
@@ -22,7 +23,7 @@ SUBST_FILES.prefix=	README.dnsbl
 SUBST_VARS.prefix=	PKG_SYSCONFDIR PREFIX
 SUBST_MESSAGE.prefix=	Replacing pkgsrc placeholders
 
-MAKE_ENV+=		LOCALBASE=${PREFIX:Q}
+MAKE_ENV+=		LOCALBASE=${PREFIX}
 MAKE_ENV+=		BINDIR=${PREFIX}/libexec/opensmtpd
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
