@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.216 2025/08/24 22:07:34 taca Exp $
+$NetBSD: distinfo,v 1.217 2025/09/10 15:26:35 jperkin Exp $
 
 BLAKE2s (postfix-3.10.4.tar.gz) = 2fdec417dabeb8cd2536baec5e9a2477264d1792300f5edd0930a758685127ab
 SHA512 (postfix-3.10.4.tar.gz) = da3a581551670ad4aa595ab50a8dd0bbe7d9e93ee354342c778ae1b461aa7bad9a640e4a55e27b025975c47c92f8238c8d281e1ca5bd1579a009d81ce06924d9
@@ -10,3 +10,4 @@ SHA1 (patch-src_smtpd_Makefile.in) = 8133f9cceb0c1c0250d6543cb060c66288571722
 SHA1 (patch-src_smtpd_pfilter.c) = c747d2f3584f694eb7b73b19118b4d8b450cfe7f
 SHA1 (patch-src_smtpd_pfilter.h) = 153b516da89d709d293c6086c2f126791bd945d6
 SHA1 (patch-src_smtpd_smtpd.c) = 594211aa17979daa4ca7123fabe5df06250f5093
+SHA1 (patch-src_util_dict__dbm.c) = bbf1b23b6f08feb77161fb279c812a84b5b13417
