@@ -1,10 +1,7 @@
-libasr is a FREE asynchronous DNS resolver.
+Libasr is a FREE asynchronous DNS resolver. The asr_* functions provide
+a simple interface for asynchronous address resolution and nameserver
+querying.  They should be used in place of the classical resolver
+functions of libc when blocking is not desirable.
 
-libasr runs on top of the OpenBSD operating system but also has a portable
-version that can build and run on several systems, including:
-
-* Linux
-* FreeBSD
-* NetBSD
-* DragonFly
-* MacOSX
+This version is based on the blundled copy found in the OpenSMTPD
+project.
