@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/02/12 06:45:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/10 22:14:53 charlotte Exp $
 
 DISTNAME=	nanosaur-1.4.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,7 +16,6 @@ GITHUB_SUBMODULES=	\
 
 WRKSRC=		${WRKDIR}/Nanosaur-${PKGVERSION_NOREV}
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
 
@@ -32,8 +31,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/nanosaur ${DESTDIR}${PREFIX}/bin/nanosaur
-	${INSTALL_PROGRAM} ${WRKSRC}/Nanosaur ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/Nanosaur ${DESTDIR}${PREFIX}/libexec
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/nanosaur/Data)
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
