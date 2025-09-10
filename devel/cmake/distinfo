@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.255 2025/09/01 08:25:16 adam Exp $
+$NetBSD: distinfo,v 1.256 2025/09/10 14:40:02 jperkin Exp $
 
 BLAKE2s (cmake-4.1.1.tar.gz) = d5bc5a23d891612a0ee28209d913a3291953bc23ddaaaf4be621df2926891049
 SHA512 (cmake-4.1.1.tar.gz) = 40f16fbe66562aec574e08758c7b8a09536b8c7086fe7f6f9123e5255a9fc1aa638b0f88b3812ed5c8e6bc4550d0ee0be304dc71be6c980dbc44d1899d238e30
 Size (cmake-4.1.1.tar.gz) = 12042807 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 7a26ef79be53b9d0370029e83f203440aa0be2a4
 SHA1 (patch-CMakeLists.txt) = 0fb79458828a021a96e350bc4cf12875914f868b
-SHA1 (patch-Modules_Compiler_GNU.cmake) = e06fc41fd7a49ca9f8edaabb95d4ab1cde784112
+SHA1 (patch-Modules_Compiler_GNU.cmake) = 745b3a5cd44b4a6eb2dc9452f78f9de3976f37b1
 SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
