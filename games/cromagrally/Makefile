@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/02/12 06:44:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/10 22:54:44 charlotte Exp $
 
 DISTNAME=	cromagrally-3.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 
@@ -13,7 +13,6 @@ LICENSE=	cc-by-nc-sa-v4.0-license
 GITHUB_SUBMODULES=	\
 	jorio Pomme ef94150e2dcec522e3099f4d03a4e8f2639f7232 extern/Pomme
 
-USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 FORCE_CXX_STD=		c++20
 USE_CXX_FEATURES=	c++20
@@ -31,8 +30,9 @@ pre-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/cromagrally ${DESTDIR}${PREFIX}/bin/cromagrally
-	${INSTALL_PROGRAM} ${WRKSRC}/CroMagRally ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/CroMagRally ${DESTDIR}${PREFIX}/libexec
 	(cd ${WRKSRC}/Data && ${PAX} -r -w . ${DESTDIR}${PREFIX}/share/cromagrally/Data)
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
