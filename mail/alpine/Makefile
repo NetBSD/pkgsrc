@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.62 2025/09/08 18:16:55 vins Exp $
+# $NetBSD: Makefile,v 1.63 2025/09/10 14:07:23 vins Exp $
 
 DISTNAME=	alpine-2.26
 PKGREVISION=	6
 CATEGORIES=	mail
 # repo at https://repo.or.cz/alpine.git
 MASTER_SITES=	https://alpineapp.email/alpine/release/src/
-DIST_SUBDIR=	${PKGNAME_NOREV}
+# needed for unversioned changes in upstream patches
+DIST_SUBDIR=	${PKGNAME_NOREV}-202509
 EXTRACT_SUFX=	.tar.xz
 
 PATCH_SITES=		https://alpineapp.email/alpine/patches/alpine-${PKGVERSION_NOREV}/
@@ -37,6 +38,8 @@ USE_LIBTOOL=	yes
 
 MAKE_JOBS_SAFE=	no
 BUILD_DEFS+=	VARBASE
+
+#CFLAGS+=	-Werror
 
 .include "../../mk/bsd.prefs.mk"
 
