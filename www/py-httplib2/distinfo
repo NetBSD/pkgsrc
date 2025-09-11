@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2025/08/31 10:12:27 wiz Exp $
+$NetBSD: distinfo,v 1.33 2025/09/11 06:08:06 adam Exp $
 
-BLAKE2s (httplib2-0.30.0.tar.gz) = bd197be524e849bc0f1b14125608044eaa7b4fd23dfe56ccb9029a98fe0aed3a
-SHA512 (httplib2-0.30.0.tar.gz) = c639c6c78306af09dfd7bc281204b3a7170a1b5da322749e46f8d0188e6441d1d011d64682f5406c16194730a184236764cbb58114580b645135a2d301eb5f3b
-Size (httplib2-0.30.0.tar.gz) = 249764 bytes
+BLAKE2s (httplib2-0.30.2.tar.gz) = 48a60bbb3fc0d6826a285958f4f27f5a70fa0b955b45465356e14b48328eab1a
+SHA512 (httplib2-0.30.2.tar.gz) = 58f8c87136d2844761d3f4a66f771ed5a41ba2afd58af52a66b4f917523a1d79cf0c44d14bf428d836c1a1c9d6596244d14db861c309fd9d52ce1bf689603edd
+Size (httplib2-0.30.2.tar.gz) = 250727 bytes
