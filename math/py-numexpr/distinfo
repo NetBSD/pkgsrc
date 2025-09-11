@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2025/08/05 07:52:37 adam Exp $
+$NetBSD: distinfo,v 1.32 2025/09/11 06:12:27 adam Exp $
 
-BLAKE2s (numexpr-2.11.0.tar.gz) = 2a676cab4c9b28544820d8122a0c98744704dcf646be6d5c98b9d4be7c793355
-SHA512 (numexpr-2.11.0.tar.gz) = f59f059b4cb5bbc88f3a92b17634e28f708a5191d7ddb257199b71399eb93a1c140fcf9a072768c679e08db25f23dbf5c7c4e7496b68ab538427e8dde7aced08
-Size (numexpr-2.11.0.tar.gz) = 108960 bytes
+BLAKE2s (numexpr-2.12.0.tar.gz) = eaf8e470e625404a6bbbe64bc5f5649b718da3533ceea28b9e8792a0a8da8bf9
+SHA512 (numexpr-2.12.0.tar.gz) = 70037275d75fa708d00033864c84b3e9d6b4b7db753e1218e5e37007756e026a7f2ee8aa9eaee3fac300e628e1e349897af21a0f48ef3597440be766b536d180
+Size (numexpr-2.12.0.tar.gz) = 114152 bytes
