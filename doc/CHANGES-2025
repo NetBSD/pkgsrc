@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5441 2025/09/10 18:44:04 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5442 2025/09/11 06:17:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7849,3 +7849,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.28.0nb7 [osa 2025-09-10]
 	Updated devel/cmake to 4.1.1nb1 [jperkin 2025-09-10]
 	Updated devel/ruby-jirametrics to 2.16 [schmonz 2025-09-10]
+	Updated www/py-httplib2 to 0.30.2 [adam 2025-09-11]
+	Updated textproc/py-feedparser to 6.0.12 [adam 2025-09-11]
+	Updated math/py-numexpr to 2.12.0 [adam 2025-09-11]
+	Updated security/py-nacl to 1.6.0 [adam 2025-09-11]
