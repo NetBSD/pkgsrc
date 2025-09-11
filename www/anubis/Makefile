@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/09/06 13:17:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/11 21:56:23 bsiegert Exp $
 
-DISTNAME=	anubis-src-vendor-npm-1.21.3
+DISTNAME=	anubis-src-vendor-npm-1.22.0
 PKGNAME=	${DISTNAME:S/anubis-src-vendor-npm-/anubis-/}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TecharoHQ/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -19,7 +18,6 @@ GO_BUILD_PATTERN+=	./cmd/anubis
 EGDIR=			share/examples/anubis
 INSTALLATION_DIRS=	${EGDIR}
 PKG_SYSCONFSUBDIR=	anubis
-CONF_FILES+=		${EGDIR}/botPolicies.json ${PKG_SYSCONFDIR}/botPolicies.json
 CONF_FILES+=		${EGDIR}/default.env ${PKG_SYSCONFDIR}/default.env
 
 APACHE_USER?=		www
@@ -35,7 +33,6 @@ FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP}
 RCD_SCRIPTS+=		anubis
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/data/botPolicies.json ${DESTDIR}${PREFIX}/share/examples/anubis
 	${INSTALL_DATA} ${WRKSRC}/run/default.env ${DESTDIR}${PREFIX}/share/examples/anubis
 
 
