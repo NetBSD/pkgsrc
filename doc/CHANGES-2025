@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5443 2025/09/11 06:35:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5444 2025/09/11 12:16:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7857,3 +7857,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.component to 6.1 [adam 2025-09-11]
 	Updated graphics/py-tifffile to 2025.9.9 [adam 2025-09-11]
 	Updated net/py-zeroconf to 0.147.2 [adam 2025-09-11]
+	Updated geography/gdal-lib to 3.11.4 [gdt 2025-09-11]
+	Updated geography/py-gdal to 3.11.4 [gdt 2025-09-11]
