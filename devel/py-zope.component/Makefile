@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/06/17 18:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/11 06:32:50 adam Exp $
 
-DISTNAME=	zope.component-6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	zope_component-6.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.component/}
 
@@ -10,19 +10,15 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.component
 COMMENT=	Zope Component Architecture
 LICENSE=	zpl-2.1
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.event>=0:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.hookable>=4.2.0:../../devel/py-zope.hookable
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.3:../../devel/py-zope.interface
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # still doesn't really work
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
