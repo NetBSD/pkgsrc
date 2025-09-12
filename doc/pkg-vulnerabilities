@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.546 2025/09/11 17:49:28 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.547 2025/09/12 07:48:23 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27521,3 +27521,4 @@ chromium<140.0.7339.127	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-202
 libxml2<2.10.0	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-9714
 cups-base<2.4.13	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-58060
 cups-base<2.4.13	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58364
+curl<8.16	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-9086
