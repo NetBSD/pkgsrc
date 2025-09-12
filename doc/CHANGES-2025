@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5452 2025/09/12 19:23:08 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5453 2025/09/12 21:11:00 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7883,3 +7883,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/ruby-gtksourceview3 to 4.3.3 [tsutsui 2025-09-12]
 	Updated www/chromium to 140.0.7339.127 [kikadf 2025-09-12]
 	Updated www/lighttpd to 1.4.82 [schmonz 2025-09-12]
+	Updated security/oqs-provider to 0.10.0 [jschauma 2025-09-12]
