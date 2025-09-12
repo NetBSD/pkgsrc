@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_ozone_public_ozone__ui__controls__test__helper.h,v 1.5 2025/09/08 13:24:35 kikadf Exp $
+$NetBSD: patch-ui_ozone_public_ozone__ui__controls__test__helper.h,v 1.6 2025/09/12 16:02:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/ozone/public/ozone_ui_controls_test_helper.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- ui/ozone/public/ozone_ui_controls_test_helper.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ ui/ozone/public/ozone_ui_controls_test_helper.h
 @@ -62,7 +62,7 @@ class OzoneUIControlsTestHelper {
    // aura::Window.

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_commerce_core_commerce__feature__list.cc,v 1.6 2025/09/08 13:24:22 kikadf Exp $
+$NetBSD: patch-components_commerce_core_commerce__feature__list.cc,v 1.7 2025/09/12 16:02:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/commerce/core/commerce_feature_list.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/commerce/core/commerce_feature_list.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/commerce/core/commerce_feature_list.cc
 @@ -209,7 +209,7 @@ BASE_FEATURE(kShoppingAlternateServer,
  const char kDiscountOnShoppyPageParam[] = "discount-on-shoppy-page";

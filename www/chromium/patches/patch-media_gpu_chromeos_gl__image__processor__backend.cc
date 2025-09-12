@@ -1,10 +1,10 @@
-$NetBSD: patch-media_gpu_chromeos_gl__image__processor__backend.cc,v 1.6 2025/09/08 13:24:27 kikadf Exp $
+$NetBSD: patch-media_gpu_chromeos_gl__image__processor__backend.cc,v 1.7 2025/09/12 16:02:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/gpu/chromeos/gl_image_processor_backend.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- media/gpu/chromeos/gl_image_processor_backend.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/gpu/chromeos/gl_image_processor_backend.cc
 @@ -28,6 +28,10 @@
  #include "ui/ozone/public/ozone_platform.h"

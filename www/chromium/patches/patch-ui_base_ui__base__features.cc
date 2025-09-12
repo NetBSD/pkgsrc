@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_base_ui__base__features.cc,v 1.6 2025/09/08 13:24:34 kikadf Exp $
+$NetBSD: patch-ui_base_ui__base__features.cc,v 1.7 2025/09/12 16:02:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/base/ui_base_features.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- ui/base/ui_base_features.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ ui/base/ui_base_features.cc
 @@ -113,7 +113,7 @@ BASE_FEATURE(kWaylandLinuxDrmSyncobj,
  // Controls whether support for Wayland's per-surface scaling is enabled.

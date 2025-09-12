@@ -1,10 +1,10 @@
-$NetBSD: patch-build_toolchain_freebsd_BUILD.gn,v 1.6 2025/09/08 13:24:17 kikadf Exp $
+$NetBSD: patch-build_toolchain_freebsd_BUILD.gn,v 1.7 2025/09/12 16:02:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/toolchain/freebsd/BUILD.gn.orig	2025-09-05 09:59:07.547682236 +0000
+--- build/toolchain/freebsd/BUILD.gn.orig	2025-09-12 07:32:06.309914904 +0000
 +++ build/toolchain/freebsd/BUILD.gn
 @@ -0,0 +1,66 @@
 +# Copyright 2013 The Chromium Authors. All rights reserved.

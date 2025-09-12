@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_common_platform__utils.h,v 1.2 2025/09/08 13:24:23 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_common_platform__utils.h,v 1.3 2025/09/12 16:02:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/platform_utils.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/device_signals/core/common/platform_utils.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/device_signals/core/common/platform_utils.h
 @@ -57,7 +57,7 @@ SettingValue GetSecureBootEnabled();
  std::optional<std::string> GetWindowsMachineDomain();
