@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_webui__browser_webui__browser__window.cc,v 1.2 2025/09/08 13:24:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui__browser_webui__browser__window.cc,v 1.3 2025/09/12 16:02:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui_browser/webui_browser_window.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/ui/webui_browser/webui_browser_window.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/ui/webui_browser/webui_browser_window.cc
 @@ -22,7 +22,7 @@ namespace {
  

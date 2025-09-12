@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.6 2025/09/08 13:24:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_views_user__education_browser__user__education__service.cc,v 1.7 2025/09/12 16:02:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/ui/views/user_education/browser_user_education_service.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/ui/views/user_education/browser_user_education_service.cc
 @@ -1090,7 +1090,7 @@ void MaybeRegisterChromeFeaturePromos(
                  "Triggered when a shared tab becomes the active tab.")));

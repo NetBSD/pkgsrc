@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.5 2025/09/08 13:24:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_background_glic_glic__status__icon.cc,v 1.6 2025/09/12 16:02:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/background/glic/glic_status_icon.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/background/glic/glic_status_icon.cc
 @@ -93,7 +93,7 @@ GlicStatusIcon::GlicStatusIcon(GlicContr
    if (!status_icon_) {

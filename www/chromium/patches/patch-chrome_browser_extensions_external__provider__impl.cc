@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_extensions_external__provider__impl.cc,v 1.6 2025/09/08 13:24:18 kikadf Exp $
+$NetBSD: patch-chrome_browser_extensions_external__provider__impl.cc,v 1.7 2025/09/12 16:02:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/extensions/external_provider_impl.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/extensions/external_provider_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/extensions/external_provider_impl.cc
 @@ -827,7 +827,7 @@ void ExternalProviderImpl::CreateExterna
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_network_network__service.h,v 1.6 2025/09/08 13:24:30 kikadf Exp $
+$NetBSD: patch-services_network_network__service.h,v 1.7 2025/09/12 16:02:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- services/network/network_service.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ services/network/network_service.h
 @@ -243,7 +243,7 @@ class COMPONENT_EXPORT(NETWORK_SERVICE) 
        const std::vector<ContentSettingPatternSource>& settings) override;

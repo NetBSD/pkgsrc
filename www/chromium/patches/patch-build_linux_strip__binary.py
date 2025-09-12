@@ -1,10 +1,10 @@
-$NetBSD: patch-build_linux_strip__binary.py,v 1.6 2025/09/08 13:24:17 kikadf Exp $
+$NetBSD: patch-build_linux_strip__binary.py,v 1.7 2025/09/12 16:02:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/linux/strip_binary.py.orig	2025-08-29 18:50:09.000000000 +0000
+--- build/linux/strip_binary.py.orig	2025-09-08 23:21:33.000000000 +0000
 +++ build/linux/strip_binary.py
 @@ -10,6 +10,7 @@ import sys
  

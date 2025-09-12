@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_module__cache.cc,v 1.6 2025/09/08 13:24:16 kikadf Exp $
+$NetBSD: patch-base_profiler_module__cache.cc,v 1.7 2025/09/12 16:02:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/module_cache.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- base/profiler/module_cache.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/profiler/module_cache.cc
 @@ -38,7 +38,7 @@ std::string TransformModuleIDToSymbolSer
    // Android and Linux Chrome builds use the "breakpad" format to index their

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_signin_signin__hats__util.cc,v 1.2 2025/09/08 13:24:19 kikadf Exp $
+$NetBSD: patch-chrome_browser_signin_signin__hats__util.cc,v 1.3 2025/09/12 16:02:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/signin/signin_hats_util.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/signin/signin_hats_util.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/signin/signin_hats_util.cc
 @@ -36,7 +36,7 @@
  

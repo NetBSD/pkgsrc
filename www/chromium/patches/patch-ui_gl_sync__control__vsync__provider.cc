@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gl_sync__control__vsync__provider.cc,v 1.6 2025/09/08 13:24:35 kikadf Exp $
+$NetBSD: patch-ui_gl_sync__control__vsync__provider.cc,v 1.7 2025/09/12 16:02:38 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gl/sync_control_vsync_provider.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- ui/gl/sync_control_vsync_provider.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ ui/gl/sync_control_vsync_provider.cc
 @@ -11,7 +11,7 @@
  #include "base/trace_event/trace_event.h"

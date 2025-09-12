@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.cc,v 1.2 2025/09/08 13:24:23 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.cc,v 1.3 2025/09/12 16:02:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.cc
 @@ -308,7 +308,7 @@ void PasswordAutofillManager::DidAcceptS
                           weak_ptr_factory_.GetWeakPtr(), *password_credential);

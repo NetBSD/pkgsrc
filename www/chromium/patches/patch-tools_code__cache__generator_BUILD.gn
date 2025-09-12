@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_code__cache__generator_BUILD.gn,v 1.5 2025/09/08 13:24:33 kikadf Exp $
+$NetBSD: patch-tools_code__cache__generator_BUILD.gn,v 1.6 2025/09/12 16:02:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/code_cache_generator/BUILD.gn.orig	2025-08-29 18:50:09.000000000 +0000
+--- tools/code_cache_generator/BUILD.gn.orig	2025-09-08 23:21:33.000000000 +0000
 +++ tools/code_cache_generator/BUILD.gn
 @@ -15,8 +15,34 @@ if (is_android) {
    import("//build/config/android/rules.gni")

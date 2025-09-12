@@ -1,10 +1,10 @@
-$NetBSD: patch-media_webrtc_helpers.cc,v 1.6 2025/09/08 13:24:28 kikadf Exp $
+$NetBSD: patch-media_webrtc_helpers.cc,v 1.7 2025/09/12 16:02:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/webrtc/helpers.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- media/webrtc/helpers.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/webrtc/helpers.cc
 @@ -46,14 +46,14 @@ void ConfigAutomaticGainControl(const Au
      return;

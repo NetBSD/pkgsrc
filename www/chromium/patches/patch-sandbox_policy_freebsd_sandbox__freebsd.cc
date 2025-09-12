@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.6 2025/09/08 13:24:29 kikadf Exp $
+$NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.7 2025/09/12 16:02:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2025-09-05 09:59:07.695372405 +0000
+--- sandbox/policy/freebsd/sandbox_freebsd.cc.orig	2025-09-12 07:32:06.459056652 +0000
 +++ sandbox/policy/freebsd/sandbox_freebsd.cc
-@@ -0,0 +1,211 @@
+@@ -0,0 +1,210 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -43,7 +43,6 @@ $NetBSD: patch-sandbox_policy_freebsd_sandbox__freebsd.cc,v 1.6 2025/09/08 13:24
 +#include "base/time/time.h"
 +#include "build/build_config.h"
 +#include "crypto/crypto_buildflags.h"
-+#include "ppapi/buildflags/buildflags.h"
 +#include "sandbox/constants.h"
 +#include "sandbox/linux/services/credentials.h"
 +#include "sandbox/linux/services/namespace_sandbox.h"

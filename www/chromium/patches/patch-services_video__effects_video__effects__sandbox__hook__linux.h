@@ -1,10 +1,10 @@
-$NetBSD: patch-services_video__effects_video__effects__sandbox__hook__linux.h,v 1.6 2025/09/08 13:24:30 kikadf Exp $
+$NetBSD: patch-services_video__effects_video__effects__sandbox__hook__linux.h,v 1.7 2025/09/12 16:02:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/video_effects/video_effects_sandbox_hook_linux.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- services/video_effects/video_effects_sandbox_hook_linux.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ services/video_effects/video_effects_sandbox_hook_linux.h
 @@ -5,7 +5,13 @@
  #ifndef SERVICES_VIDEO_EFFECTS_VIDEO_EFFECTS_SANDBOX_HOOK_LINUX_H_

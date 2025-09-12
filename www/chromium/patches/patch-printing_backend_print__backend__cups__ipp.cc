@@ -1,10 +1,10 @@
-$NetBSD: patch-printing_backend_print__backend__cups__ipp.cc,v 1.2 2025/09/08 13:24:29 kikadf Exp $
+$NetBSD: patch-printing_backend_print__backend__cups__ipp.cc,v 1.3 2025/09/12 16:02:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- printing/backend/print_backend_cups_ipp.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- printing/backend/print_backend_cups_ipp.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ printing/backend/print_backend_cups_ipp.cc
 @@ -21,7 +21,7 @@
  #include "printing/mojom/print.mojom.h"

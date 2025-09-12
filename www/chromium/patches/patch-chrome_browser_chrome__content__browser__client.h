@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.6 2025/09/08 13:24:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client.h,v 1.7 2025/09/12 16:02:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/chrome_content_browser_client.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client.h
 @@ -571,7 +571,7 @@ class ChromeContentBrowserClient : publi
        const GURL& site_url) override;

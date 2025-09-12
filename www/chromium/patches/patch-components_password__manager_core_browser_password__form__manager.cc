@@ -1,10 +1,10 @@
-$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.6 2025/09/08 13:24:24 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__form__manager.cc,v 1.7 2025/09/12 16:02:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_form_manager.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/password_manager/core/browser/password_form_manager.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/password_manager/core/browser/password_form_manager.cc
 @@ -66,7 +66,7 @@
  #include "components/webauthn/android/webauthn_cred_man_delegate.h"

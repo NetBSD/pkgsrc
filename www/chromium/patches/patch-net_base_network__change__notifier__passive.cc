@@ -1,10 +1,10 @@
-$NetBSD: patch-net_base_network__change__notifier__passive.cc,v 1.6 2025/09/08 13:24:28 kikadf Exp $
+$NetBSD: patch-net_base_network__change__notifier__passive.cc,v 1.7 2025/09/12 16:02:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/network_change_notifier_passive.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- net/base/network_change_notifier_passive.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ net/base/network_change_notifier_passive.cc
 @@ -107,7 +107,7 @@ NetworkChangeNotifierPassive::GetAddress
  NetworkChangeNotifier::NetworkChangeCalculatorParams
