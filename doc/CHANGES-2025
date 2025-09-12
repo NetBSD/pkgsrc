@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5448 2025/09/12 07:32:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5449 2025/09/12 12:33:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7863,3 +7863,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/nss to 3.116 [wiz 2025-09-12]
 	Updated www/curl to 8.16.0 [wiz 2025-09-12]
 	Updated www/libcurl-gnutls to 8.16.0 [wiz 2025-09-12]
+	Updated www/php-nextcloud to 30.0.15 [gdt 2025-09-12]
