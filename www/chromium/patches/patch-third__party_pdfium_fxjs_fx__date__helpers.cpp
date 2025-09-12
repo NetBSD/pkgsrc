@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_pdfium_fxjs_fx__date__helpers.cpp,v 1.6 2025/09/08 13:24:32 kikadf Exp $
+$NetBSD: patch-third__party_pdfium_fxjs_fx__date__helpers.cpp,v 1.7 2025/09/12 16:02:35 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2025-08-29 18:50:09.000000000 +0000
+--- third_party/pdfium/fxjs/fx_date_helpers.cpp.orig	2025-09-08 23:21:33.000000000 +0000
 +++ third_party/pdfium/fxjs/fx_date_helpers.cpp
 @@ -41,6 +41,11 @@ double GetLocalTZA() {
    }

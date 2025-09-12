@@ -1,10 +1,10 @@
-$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.6 2025/09/08 13:24:24 kikadf Exp $
+$NetBSD: patch-components_user__education_views_help__bubble__view.cc,v 1.7 2025/09/12 16:02:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/user_education/views/help_bubble_view.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/user_education/views/help_bubble_view.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/user_education/views/help_bubble_view.cc
 @@ -269,7 +269,7 @@ DEFINE_CLASS_ELEMENT_IDENTIFIER_VALUE(He
  // TODO(https://crbug.com/382611284): Temporarily handle the case when the

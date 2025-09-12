@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics.cc,v 1.6 2025/09/08 13:24:16 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics.cc,v 1.7 2025/09/12 16:02:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- base/process/process_metrics.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ base/process/process_metrics.cc
 @@ -17,7 +17,7 @@ namespace base {
  namespace {
@@ -24,6 +24,15 @@ $NetBSD: patch-base_process_process__metrics.cc,v 1.6 2025/09/08 13:24:16 kikadf
    GetSystemMemoryInfo(&system_metrics.memory_info_);
    GetVmStatInfo(&system_metrics.vmstat_info_);
    GetSystemDiskInfo(&system_metrics.disk_info_);
+@@ -79,7 +79,7 @@ std::unique_ptr<ProcessMetrics> ProcessM
+ #endif  // !BUILDFLAG(IS_MAC)
+ }
+ 
+-#if !BUILDFLAG(IS_FREEBSD) || !BUILDFLAG(IS_POSIX)
++#if BUILDFLAG(IS_POSIX)
+ double ProcessMetrics::GetPlatformIndependentCPUUsage(
+     TimeDelta cumulative_cpu) {
+   TimeTicks time = TimeTicks::Now();
 @@ -112,7 +112,7 @@ ProcessMetrics::GetPlatformIndependentCP
  #endif
  

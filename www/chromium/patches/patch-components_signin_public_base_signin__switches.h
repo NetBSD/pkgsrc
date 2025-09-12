@@ -1,10 +1,10 @@
-$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.5 2025/09/08 13:24:24 kikadf Exp $
+$NetBSD: patch-components_signin_public_base_signin__switches.h,v 1.6 2025/09/12 16:02:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/signin/public/base/signin_switches.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- components/signin/public/base/signin_switches.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ components/signin/public/base/signin_switches.h
 @@ -61,7 +61,7 @@ COMPONENT_EXPORT(SIGNIN_SWITCHES)
  BASE_DECLARE_FEATURE(kSmartEmailLineBreaking);
