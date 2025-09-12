@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.5 2025/09/08 13:24:17 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.6 2025/09/12 16:02:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -51,18 +51,18 @@
  #include "mojo/public/cpp/bindings/binder_map.h"
@@ -54,7 +54,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -1192,7 +1192,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -1193,7 +1193,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

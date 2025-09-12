@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_media__switches.h,v 1.6 2025/09/08 13:24:27 kikadf Exp $
+$NetBSD: patch-media_base_media__switches.h,v 1.7 2025/09/12 16:02:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/media_switches.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- media/base/media_switches.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ media/base/media_switches.h
 @@ -43,7 +43,7 @@ MEDIA_EXPORT extern const char kDisableB
  MEDIA_EXPORT extern const char kReportVp9AsAnUnsupportedMimeType[];

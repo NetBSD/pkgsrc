@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_perfetto_src_base_scoped__sched__boost.cc,v 1.2 2025/09/08 13:24:32 kikadf Exp $
+$NetBSD: patch-third__party_perfetto_src_base_scoped__sched__boost.cc,v 1.3 2025/09/12 16:02:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/perfetto/src/base/scoped_sched_boost.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- third_party/perfetto/src/base/scoped_sched_boost.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ third_party/perfetto/src/base/scoped_sched_boost.cc
 @@ -18,8 +18,9 @@
  

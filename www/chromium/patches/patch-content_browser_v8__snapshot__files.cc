@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_v8__snapshot__files.cc,v 1.6 2025/09/08 13:24:25 kikadf Exp $
+$NetBSD: patch-content_browser_v8__snapshot__files.cc,v 1.7 2025/09/12 16:02:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/v8_snapshot_files.cc.orig	2025-08-29 18:50:09.000000000 +0000
+--- content/browser/v8_snapshot_files.cc.orig	2025-09-08 23:21:33.000000000 +0000
 +++ content/browser/v8_snapshot_files.cc
 @@ -35,7 +35,7 @@ void registerContextSnapshotAndroid(
  std::map<std::string, std::variant<base::FilePath, base::ScopedFD>>

@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_hid_hid__service__netbsd.cc,v 1.6 2025/09/08 13:24:30 kikadf Exp $
+$NetBSD: patch-services_device_hid_hid__service__netbsd.cc,v 1.7 2025/09/12 16:02:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/hid/hid_service_netbsd.cc.orig	2025-09-05 09:59:07.699037375 +0000
+--- services/device/hid/hid_service_netbsd.cc.orig	2025-09-12 07:32:06.462573772 +0000
 +++ services/device/hid/hid_service_netbsd.cc
 @@ -0,0 +1,27 @@
 +// Copyright 2022 The Chromium Authors

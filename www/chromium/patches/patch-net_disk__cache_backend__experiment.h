@@ -1,10 +1,10 @@
-$NetBSD: patch-net_disk__cache_backend__experiment.h,v 1.6 2025/09/08 13:24:28 kikadf Exp $
+$NetBSD: patch-net_disk__cache_backend__experiment.h,v 1.7 2025/09/12 16:02:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/backend_experiment.h.orig	2025-08-29 18:50:09.000000000 +0000
+--- net/disk_cache/backend_experiment.h.orig	2025-09-08 23:21:33.000000000 +0000
 +++ net/disk_cache/backend_experiment.h
 @@ -15,7 +15,7 @@ namespace disk_cache {
  // default.
