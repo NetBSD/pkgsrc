@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/06/13 01:38:09 jschauma Exp $
+$NetBSD: distinfo,v 1.9 2025/09/12 21:09:52 jschauma Exp $
 
-BLAKE2s (oqs-provider-0.9.0/oqs-provider-0.9.0.tar.gz) = 589f0258ffa427bc3318509552fbff64fb713547c798360b99940573801b302a
-SHA512 (oqs-provider-0.9.0/oqs-provider-0.9.0.tar.gz) = 441d60be49a496a610d69dd7889e4a135df59447d0a19982789667b97a24ce164ce13a619929f6cd0d9f16353eade5f6cde578f02169739582133b3ae3dc9309
-Size (oqs-provider-0.9.0/oqs-provider-0.9.0.tar.gz) = 233012 bytes
+BLAKE2s (oqs-provider-0.10.0/oqs-provider-0.10.0.tar.gz) = f6ebfbfc4bc21cde1059c3646c5a491e18e13723967ef91ca5c759e9a4e92f7e
+SHA512 (oqs-provider-0.10.0/oqs-provider-0.10.0.tar.gz) = 42ddc274c7a0291164470edaf21bea810cca0f61a25c73481f4b5d8aab353a6c2dd3a0881f079ddb5cd03424c7541fa9fbca6dbc94339ff13337255b5ee4985c
+Size (oqs-provider-0.10.0/oqs-provider-0.10.0.tar.gz) = 229013 bytes
