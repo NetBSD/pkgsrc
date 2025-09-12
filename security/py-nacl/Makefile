@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/09/11 06:17:15 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/12 14:17:16 jperkin Exp $
 
 DISTNAME=	pynacl-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/pyca/pynacl
 COMMENT=	Python binding to the Networking and Cryptography (NaCl) library
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.4.1:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.27.0:../../devel/py-hypothesis
