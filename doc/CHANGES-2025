@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5445 2025/09/11 21:56:49 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5446 2025/09/12 07:26:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7860,3 +7860,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/gdal-lib to 3.11.4 [gdt 2025-09-11]
 	Updated geography/py-gdal to 3.11.4 [gdt 2025-09-11]
 	Updated www/anubis to 1.22.0 [bsiegert 2025-09-11]
+	Updated devel/nss to 3.116 [wiz 2025-09-12]
