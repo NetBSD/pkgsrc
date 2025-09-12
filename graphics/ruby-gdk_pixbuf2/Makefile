@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2025/08/30 22:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/09/12 14:04:49 tsutsui Exp $
 #
 
 DISTNAME=		gdk_pixbuf2-${VERSION}
 COMMENT=		Ruby binding of GdkPixbuf-2.x
-PKGREVISION=		1
 CATEGORIES=		graphics devel
 
 MAINTAINER=		tsutsui@NetBSD.org

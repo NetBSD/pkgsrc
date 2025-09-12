@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/08/15 15:06:51 tsutsui Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/09/12 14:04:47 tsutsui Exp $
 
 BUILDLINK_TREE+=	ruby-gio2
 
 .if !defined(RUBY_GIO2_BUILDLINK3_MK)
 RUBY_GIO2_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ruby-gio2+=	${RUBY_PKGPREFIX}-gio2>=4.3.2
-BUILDLINK_ABI_DEPENDS.ruby-gio2+=	${RUBY_PKGPREFIX}-gio2>=4.3.2
+BUILDLINK_API_DEPENDS.ruby-gio2+=	${RUBY_PKGPREFIX}-gio2>=4.3.3
+BUILDLINK_ABI_DEPENDS.ruby-gio2+=	${RUBY_PKGPREFIX}-gio2>=4.3.3
 BUILDLINK_PKGSRCDIR.ruby-gio2?=		../../devel/ruby-gio2
 
 .include "../../devel/ruby-gobject-introspection/buildlink3.mk"
