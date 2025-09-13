@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2025/07/14 17:50:07 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/09/13 16:19:20 vins Exp $
 
 BLAKE2s (filter-dnsbl-0.4.tar.gz) = 70b952a56b39e570f293645cce41a9478011460e56ed62d10044f412cefa2809
 SHA512 (filter-dnsbl-0.4.tar.gz) = bca350ea1102243e4c53b979a62ee81ec8197fd37a4c5de652c166150fbb7e11b82b0daa42af75e8db9bca62f7ab2f69988e15a510e615032d4ee28a28f0d0a9
 Size (filter-dnsbl-0.4.tar.gz) = 3458 bytes
 SHA1 (patch-Makefile) = 1a262a5860642f965cf6d62c4efddb7515fd121e
 SHA1 (patch-compat.h) = ba2d347c80efa0467e2655fb5c9e56f451f0199b
-SHA1 (patch-main.c) = 80061610d34ede5d25c6239ba58570fdaaf36af9
+SHA1 (patch-main.c) = 29d777cea177cdda37a113b5a53be20517de5268
