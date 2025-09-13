@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2025/09/01 21:46:23 gutteridge Exp $
+$NetBSD: distinfo,v 1.22 2025/09/13 18:52:08 tsutsui Exp $
 
 BLAKE2s (xbattbar_1.4.2.tar.gz) = d181c68da609a5666aa64e6c86ffbed6ac589cbd3bd293fea31745449fadbd4c
 SHA512 (xbattbar_1.4.2.tar.gz) = d06aca5c70d0d7feac48f791f676b465d713ca941fbfaa9e8effa80c896873b9cc3f18f1122793cfd096804767e69f1f38dbeeec06a2fe1f82386d53f56372bf
 Size (xbattbar_1.4.2.tar.gz) = 14079 bytes
 SHA1 (patch-Imakefile) = e47df3f84a274d916db1520b639c55547921f9f5
-SHA1 (patch-xbattbar.c) = a609d7ccb605d88bec82e6fba1ea917b8d59eab5
+SHA1 (patch-xbattbar.c) = 39500b4d3ef1dabc300ab9dade3766c1e0d73e58
 SHA1 (patch-xbattbar.man) = b57dd2534a1f94fa0227bfead61cf0d65a6ca591

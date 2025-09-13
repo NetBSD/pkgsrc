@@ -1,28 +1,262 @@
-$NetBSD: patch-xbattbar.c,v 1.1 2025/08/30 02:49:33 tsutsui Exp $
+$NetBSD: patch-xbattbar.c,v 1.2 2025/09/13 18:52:09 tsutsui Exp $
 
 - misc support and fixes for NetBSD using apm(4), acpi(4), and envsys(4)
 - properly report battery and AC info from axppmic(4) found on Pinebook
 
 --- xbattbar.c.orig	2001-02-02 05:25:29.000000000 +0000
 +++ xbattbar.c
-@@ -27,6 +27,16 @@ static char *ReleaseVersion="1.4.2";
+@@ -26,12 +26,24 @@
+ static char *ReleaseVersion="1.4.2";
  
  #include <sys/types.h>
- #include <sys/time.h>
+-#include <sys/time.h>
+-#include <signal.h>
 +
 +#ifdef __NetBSD__
 +#define ENVSYSUNITNAMES
 +#include <sys/param.h>
 +#include <sys/envsys.h>
 +#include <paths.h>
-+#include <stdlib.h>
-+#include <string.h>
 +#endif /* __NetBSD__ */
 +
- #include <signal.h>
  #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
  #include <unistd.h>
-@@ -577,33 +587,190 @@ void battery_check(void)
++#include <time.h>
++#include <err.h>
++#include <errno.h>
+ #include <sys/file.h>
+ #include <sys/ioctl.h>
++#include <sys/select.h>
+ #include <X11/Xlib.h>
+ 
+ #define PollingInterval 10	/* APM polling interval in sec */
+@@ -69,8 +81,6 @@ char *OFFOUT_C = "red";
+ 
+ int alwaysontop = False;
+ 
+-struct itimerval IntervalTimer;     /* APM polling interval timer */
+-
+ int bi_direction = BI_Bottom;       /* status bar location */
+ int bi_height;                      /* height of Battery Indicator */
+ int bi_width;                       /* width of Battery Indicator */
+@@ -132,6 +142,56 @@ void usage(char **argv)
+ }
+ 
+ /*
++ * struct timespec helper functions
++ */
++static inline void
++timespec_sub(struct timespec *tsp, struct timespec *usp, struct timespec *vsp)
++{
++  vsp->tv_sec = tsp->tv_sec - usp->tv_sec;
++  vsp->tv_nsec = tsp->tv_nsec - usp->tv_nsec;
++  if (vsp->tv_nsec < 0) {
++    vsp->tv_sec--;
++    vsp->tv_nsec += 1000000000;
++  }
++  if (vsp->tv_sec < 0) {
++    /* return zero if (tsp < usp) */
++    vsp->tv_sec = 0;
++    vsp->tv_nsec = 0;
++  }
++}
++
++static inline void
++timespec_add_msec(struct timespec *tsp, time_t msec)
++{
++  tsp->tv_sec += msec / 1000;
++  tsp->tv_nsec += (msec % 1000) * 1000000;
++  if (tsp->tv_nsec >= 1000000000) {
++    tsp->tv_sec++;
++    tsp->tv_nsec -= 1000000000;
++  }
++}
++
++static inline int
++timespec_cmp(struct timespec *tsp, struct timespec *usp)
++{
++  if (tsp->tv_sec != usp->tv_sec) {
++    if (tsp->tv_sec < usp->tv_sec) {
++      return -1; /* tsp < usp */
++    } else {
++      return 1;  /* tsp > usp */
++    }
++  }
++  if (tsp->tv_nsec != usp->tv_nsec) {
++    if (tsp->tv_nsec < usp->tv_nsec) {
++      return -1; /* tsp < usp */
++    } else {
++      return 1;  /* tsp > usp */
++    }
++  }
++  return 0;      /* tsp == usp */
++}
++
++/*
+  * AllocColor:
+  * convert color name to pixel value
+  */
+@@ -211,16 +271,22 @@ void InitDisplay(void)
+   att.override_redirect = True;
+   XChangeWindowAttributes(disp, winbar, CWOverrideRedirect, &att);
+ 
++  /* set window event_mask to check window events by polling with select(2) */
++  att.event_mask = myEventMask;
++  XChangeWindowAttributes(disp, winbar, CWEventMask, &att);
++
+   XMapWindow(disp, winbar);
+ 
+   gcbar = XCreateGC(disp, winbar, 0, 0);
+ }
+ 
+-main(int argc, char **argv)
++int main(int argc, char **argv)
+ {
+   extern char *optarg;
+   extern int optind;
+   int ch;
++  struct timespec next;
++  int xfd;
+ 
+   about_this_program();
+   while ((ch = getopt(argc, argv, "at:f:hI:i:O:o:p:v")) != -1)
+@@ -271,51 +337,70 @@ main(int argc, char **argv)
+   }
+ 
+   /*
+-   * set APM polling interval timer
+-   */
+-  IntervalTimer.it_interval.tv_sec = (long)bi_interval;
+-  IntervalTimer.it_interval.tv_usec = (long)0;
+-  IntervalTimer.it_value.tv_sec = (long)1;
+-  IntervalTimer.it_value.tv_usec = (long)0;
+-  if ( setitimer(ITIMER_REAL, &IntervalTimer, NULL) != 0 ) {
+-    fprintf(stderr,"xbattbar: can't set interval timer\n");
+-    exit(1);
+-  }
+-
+-  /*
+    * X Window main loop
+    */
+   InitDisplay();
+-  signal(SIGALRM, (void *)(battery_check));
+   battery_check();
+-  XSelectInput(disp, winbar, myEventMask);
++  clock_gettime(CLOCK_MONOTONIC, &next);
++  timespec_add_msec(&next, (time_t)bi_interval * 1000);
++  xfd = ConnectionNumber(disp);
+   while (1) {
+-    XWindowEvent(disp, winbar, myEventMask, &theEvent);
+-    switch (theEvent.type) {
+-    case Expose:
+-      /* we redraw our window since our window has been exposed. */
+-      redraw();
+-      break;
+-
+-    case EnterNotify:
+-      /* create battery status message */
+-      showdiagbox();
+-      break;
+-
+-    case LeaveNotify:
+-      /* destroy status window */
+-      disposediagbox();
+-      break;
+-
+-    case VisibilityNotify:
+-      if (alwaysontop) XRaiseWindow(disp, winbar);
+-      break;
+-
+-    default:
+-      /* for debugging */
+-      fprintf(stderr, 
+-	      "xbattbar: unknown event (%d) captured\n",
+-	      theEvent.type);
++    fd_set fds;
++    struct timespec now, wait;
++    struct timeval tv;
++    int rv;
++
++    FD_ZERO(&fds);
++    FD_SET(xfd, &fds);
++    clock_gettime(CLOCK_MONOTONIC, &now);
++    timespec_sub(&next, &now, &wait);
++    tv.tv_sec = wait.tv_sec;
++    tv.tv_usec = wait.tv_nsec / 1000;
++    rv = select(xfd + 1, &fds, NULL, NULL, &tv);
++    if (rv < 0) {
++      if (errno == EINTR) {
++        continue;
++      }
++      perror("select");
++      exit(EXIT_FAILURE);
++    }
++    if (rv > 0 && FD_ISSET(xfd, &fds)) {
++      while (XPending(disp) > 0) {
++        XNextEvent(disp, &theEvent);
++        switch (theEvent.type) {
++        case Expose:
++          /* we redraw our window since our window has been exposed. */
++          redraw();
++          break;
++
++        case EnterNotify:
++          /* create battery status message */
++          showdiagbox();
++          break;
++
++        case LeaveNotify:
++          /* destroy status window */
++          disposediagbox();
++          break;
++
++        case VisibilityNotify:
++          if (alwaysontop) XRaiseWindow(disp, winbar);
++          break;
++
++        default:
++          /* for debugging */
++          fprintf(stderr, 
++              "xbattbar: unknown event (%d) captured\n",
++              theEvent.type);
++        }
++      }
++    }
++    clock_gettime(CLOCK_MONOTONIC, &now);
++    if (timespec_cmp(&now, &next) >= 0) {
++      battery_check();
++      while (timespec_cmp(&now, &next) >= 0) {
++        timespec_add_msec(&next, (time_t)bi_interval * 1000);
++      }
+     }
+   }
+ }
+@@ -367,6 +452,7 @@ void showdiagbox(void)
+              gcstat,
+              DiagXMergin, fontp->ascent+DiagYMergin,
+              diagmsg, strlen(diagmsg));
++  XFreeFont(disp, fontp);
+ }
+ 
+ void disposediagbox(void)
+@@ -494,7 +580,6 @@ void battery_check(void)
+     battery_level = ar.cret&0xff;
+     redraw();
+   }
+-  signal(SIGALRM, (void *)(battery_check));
+ }
+ 
+ #endif /* __bsdi__ */
+@@ -570,40 +655,196 @@ void battery_check(void)
+     battery_level = r;
+     redraw();
+   }
+-  signal(SIGALRM, (void *)(battery_check));
+ }
+ 
+ #endif /* __FreeBSD__ */
  
  #ifdef __NetBSD__
  
@@ -216,7 +450,7 @@ $NetBSD: patch-xbattbar.c,v 1.1 2025/08/30 02:49:33 tsutsui Exp $
         if (info.battery_life > 100) {
                 /* some APM BIOSes return values slightly > 100 */
                 r = 100;
-@@ -617,6 +784,8 @@ void battery_check(void)
+@@ -617,6 +858,8 @@ void battery_check(void)
         } else {
                 p = APM_AC_OFF;
         }
@@ -225,3 +459,19 @@ $NetBSD: patch-xbattbar.c,v 1.1 2025/08/30 02:49:33 tsutsui Exp $
  
         if (first || ac_line != p || battery_level != r) {
                 first = 0;
+@@ -665,7 +908,6 @@ void battery_check(void)
+   errno = 0;
+   if ( (pt = fopen( APM_PROC, "r" )) == NULL) {
+     fprintf(stderr, "xbattbar: Can't read proc info: %s\n", strerror(errno));
+-    signal(SIGALRM, (void *)(battery_check));
+     exit(1);
+   }
+ 
+@@ -705,7 +947,6 @@ void battery_check(void)
+     battery_level = r;
+     redraw();
+   }
+-  signal(SIGALRM, (void *)(battery_check));
+ }
+ 
+ #endif /* linux */
