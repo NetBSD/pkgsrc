@@ -1,0 +1,19 @@
+$NetBSD: patch-config_configure,v 1.4 2025/09/13 00:33:37 gdt Exp $
+
+Disable -Werror on test builds, to avoid running afoul of clang
+complaining that a -L flag was "unused".
+
+Sent to bup via email.  Arguably this is a clang bug, but I have no
+reason to expect it to be fixed there.
+
+--- config/configure.orig	2025-08-30 18:10:07.000000000 +0000
++++ config/configure
+@@ -29,7 +29,7 @@ bup_try_c_code()
+     esac
+     tmpdir="$(mktemp -d "bup-try-c-compile-XXXXXXX")" || exit $?
+     echo "$code" > "$tmpdir/test.c" || exit $?
+-    $AC_CC -Wall -Werror $cflags -c -o "$tmpdir/test" "$tmpdir/test.c"
++    $AC_CC -Wall $cflags -c -o "$tmpdir/test" "$tmpdir/test.c"
+     rc=$?
+     rm -r "$tmpdir" || exit $?
+     return $rc
