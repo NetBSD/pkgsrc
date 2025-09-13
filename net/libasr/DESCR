@@ -3,7 +3,7 @@ a simple interface for asynchronous address resolution and nameserver
 querying.  They should be used in place of the classical resolver
 functions of libc when blocking is not desirable.
 
-event(3) API intetegration is provided by the event_asr_* functions,
+event(3) API integration is provided by the event_asr_* functions,
 which allow to schedule the asynchronous resolver query to run within
 a libevent event loop.
 
