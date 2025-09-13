@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 10:44:40 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/13 12:06:11 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -26,7 +26,7 @@ GCC_REQD+=	14
 
 SUBST_CLASSES+=		version
 SUBST_MESSAGE.version=	Fix version number in ${SUBST_FILES.version}
-SUBST_STAGE.version=	pre-configure
+SUBST_STAGE.version=	post-extract
 SUBST_FILES.version=	Makefile
 SUBST_SED.version=	-e "s,22.0,25.0,"
 

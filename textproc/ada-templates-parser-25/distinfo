@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/09/04 10:44:40 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/09/13 12:06:11 dkazankov Exp $
 
 BLAKE2s (templates-parser-25.0.0.tar.gz) = 87196226137489c985fea3d1dd2994eeefb0ec8e168546081361a1bfa2e42114
 SHA512 (templates-parser-25.0.0.tar.gz) = 902e41f713dd8446e08ba6f180b4c88c35d37da3476d0c925a4b6a05fb5038ff9ec1b0daa0443a55e82f902867b774efb4e28c0b7d8ec59fb15d050ee523ee87
 Size (templates-parser-25.0.0.tar.gz) = 259459 bytes
-SHA1 (patch-Makefile) = 7a68d4171a832b2e4244989f86d469e06b1df062
+SHA1 (patch-Makefile) = 130d529a24318f93f8b61072b3a533b3850e2689
