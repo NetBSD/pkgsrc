@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.17 2025/08/22 10:34:33 leot Exp $
+# $NetBSD: eol-packages,v 1.18 2025/09/13 11:14:49 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1193,3 +1193,13 @@ Package: Xen (4.15)
 eol date: April 2024
 URL: https://wiki.xenproject.org/wiki/Xen_Project_Release_Features
 Description: Security support for 4.15 ended April 2024. Update to xen 4.18 or newer.
+
+Package: Zabbix (4.0)
+eol date: Oct 2023
+URL: https://www.zabbix.com/life_cycle_and_release_policy
+Description: Security support for 4.0 ended October 2023. Update to Zabbix 6.0 or newer.
+
+Package: Zabbix (5.0)
+eol date: May 2025
+URL: https://www.zabbix.com/life_cycle_and_release_policy
+Description: Security support for 5.0 ended May 2025. Update to Zabbix 6.0 or newer.
