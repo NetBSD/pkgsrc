@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 11:07:43 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/13 09:16:25 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-25.0.0
@@ -54,6 +54,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-e3-testsuite>=25.0:../../devel/py-e3-testsuite
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/create-project.py ${DESTDIR}${PREFIX}/bin/create-project${PYVERSSUFFIX}.py
+
+# langkit uses deprecated pipes module
+PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
