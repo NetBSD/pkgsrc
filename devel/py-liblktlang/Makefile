@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/06 16:47:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/13 09:16:25 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-25.0.0
 PKGNAME=	${PYPKGPREFIX}-liblktlang-25.0
@@ -78,6 +78,9 @@ pre-install:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-langkit-25.*:../../devel/py-langkit
+
+# langkit uses deprecated pipes module
+PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
