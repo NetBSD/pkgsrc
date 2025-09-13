@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5455 2025/09/13 14:33:12 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.5456 2025/09/13 18:16:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7886,3 +7886,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/oqs-provider to 0.10.0 [jschauma 2025-09-12]
 	Updated devel/ada-gnatcoll-core-25 to 25.0.0nb1 [dkazankov 2025-09-13]
 	Updated x11/qt6-qtbase to 6.9.1nb2 [tsutsui 2025-09-13]
+	Updated textproc/moor to 2.1.1 [schmonz 2025-09-13]
