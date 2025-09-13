@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5458 2025/09/13 21:53:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5459 2025/09/13 21:54:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7889,3 +7889,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.1.1 [schmonz 2025-09-13]
 	Updated sysutils/xbattbar to 1.4.2nb12 [tsutsui 2025-09-13]
 	Updated graphics/p5-Image-ExifTool to 13.35 [wiz 2025-09-13]
+	Updated devel/p5-Term-Table to 0.025 [wiz 2025-09-13]
