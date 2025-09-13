@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5459 2025/09/13 21:54:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5460 2025/09/13 21:56:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7890,3 +7890,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xbattbar to 1.4.2nb12 [tsutsui 2025-09-13]
 	Updated graphics/p5-Image-ExifTool to 13.35 [wiz 2025-09-13]
 	Updated devel/p5-Term-Table to 0.025 [wiz 2025-09-13]
+	Updated devel/p5-Type-Tiny to 2.008003 [wiz 2025-09-13]
