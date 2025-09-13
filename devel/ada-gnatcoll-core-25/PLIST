@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/13 05:25:00 dkazankov Exp $
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3.h
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3_dispatch.c
@@ -513,6 +513,7 @@ ${GNAT_PKGBASE}/share/gpr/gnatcoll.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_core.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_minimal.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_projects.gpr
+${GNAT_PKGBASE}/share/gpr/manifests/gnatcoll
 ${GNAT_PKGBASE}/share/gpr/manifests/gnatcoll_core
 ${GNAT_PKGBASE}/share/gpr/manifests/gnatcoll_minimal
 ${GNAT_PKGBASE}/share/gpr/manifests/gnatcoll_projects

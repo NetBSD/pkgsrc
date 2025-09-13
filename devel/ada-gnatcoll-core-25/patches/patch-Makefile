@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/09/13 05:25:01 dkazankov Exp $
 
 Fix target calculation
 Add necessary parameters for pkgsrc build
+Fix gnatcoll.gpr installation
 Fix destdir building in rsync absence
 
 --- Makefile.orig	2024-09-24 12:28:32.000000000 +0300
@@ -31,7 +32,7 @@ Fix destdir building in rsync absence
  
  build:
  	rm -rf local-install
-@@ -112,18 +117,21 @@
+@@ -112,18 +117,23 @@
  endif
  
  	$(PYTHON) $(SOURCE_DIR)/minimal/gnatcoll_minimal.gpr.py build $(INSTR_BUILD_OPTS) $(BUILD_ARGS)
@@ -47,6 +48,8 @@ Fix destdir building in rsync absence
 +	$(PYTHON) $(SOURCE_DIR)/projects/gnatcoll_projects.gpr.py install $(INSTALL_ARGS)
  endif
  
++	gprinstall -f -P local-install/share/gpr/gnatcoll.gpr -p --prefix=local-install/
++
  install:
  	@echo "Installing gnatcoll into $(prefix)"
 -	rsync -av ./local-install/ $(prefix)$(integrated_install)  
