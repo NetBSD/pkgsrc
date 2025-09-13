@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/08/20 19:45:10 triaxx Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/13 21:52:33 nia Exp $
 
 DISTNAME=	arx-libertatis-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://arx-libertatis.org/files/
 EXTRACT_SUFX=	.tar.xz
