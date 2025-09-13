@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5456 2025/09/13 18:16:24 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5457 2025/09/13 18:52:32 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7887,3 +7887,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ada-gnatcoll-core-25 to 25.0.0nb1 [dkazankov 2025-09-13]
 	Updated x11/qt6-qtbase to 6.9.1nb2 [tsutsui 2025-09-13]
 	Updated textproc/moor to 2.1.1 [schmonz 2025-09-13]
+	Updated sysutils/xbattbar to 1.4.2nb12 [tsutsui 2025-09-13]
