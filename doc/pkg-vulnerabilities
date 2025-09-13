@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.550 2025/09/13 11:19:03 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.551 2025/09/13 17:38:25 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27547,3 +27547,39 @@ zabbix-proxy<6.0	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packa
 zabbix<6.0		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 zabbix-sever-mysql<6.0			eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 zabbix-sever-postgresql<6.0		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+zabbix-frontend<6.0.21			cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-32721
+zabbix-server-{mysql,postgresql}<6.0.21	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-32722
+zabbix-server-{mysql,postgresql}<6.0.22	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-32725
+zabbix-agent<6.0.24			out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-32726
+zabbix-server-{mysql,postgresql}<6.0.23	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-32727
+zabbix-agent<6.0.24			code-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-32728
+zabbix-server-{mysql,postgresql}<6.0.30	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-22114
+zabbix-server-{mysql,postgresql}>=7.0<7.0.0	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-22116
+zabbix-frontend<6.0.34			input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-22117
+zabbix-frontend<6.0.24			cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-22119
+zabbix-server-{mysql,postgresql}<6.0.31	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-22122
+zabbix-server-{mysql,postgresql}<6.0.31	arbitrary-file-read	https://nvd.nist.gov/vuln/detail/CVE-2024-22123
+zabbix-frontend<6.0.31			sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-36460
+zabbix-server-{mysql,postgresql}<6.0.31	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-36461
+zabbix-server-{mysql,postgresql}>=7.0<7.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-36462
+zabbix-server-{mysql,postgresql}<6.0.33	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-36463
+zabbix-proxy<6.0.33			remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-36463
+zabbix-frontend<6.0.30			sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-36464
+zabbix-frontend>=7.0<7.0.8		sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-36465
+zabbix-frontend<6.0.32			authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-36466
+zabbix-frontend<6.0.33			privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-36467
+zabbix-server-{mysql,postgresql}>=7.0<7.0.3	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-36468
+zabbix-proxy>=7.0<7.0.3				stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-36468
+zabbix-frontend<6.0.38			timing-attack	https://nvd.nist.gov/vuln/detail/CVE-2024-36469
+zabbix-frontend<6.0.38			information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-42325
+zabbix-server-{mysql,postgresql}>=7.0<7.0.4	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-42326
+zabbix-frontend<6.0.32			sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-42327
+zabbix-server-{mysql,postgresql}>=7.0<7.0.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-42328
+zabbix-server-{mysql,postgresql}>=7.0<7.0.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-42329
+zabbix-server-{mysql,postgresql}<6.0.34	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-42330
+zabbix-server-{mysql,postgresql}>=7.0<7.0.4	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-42331
+zabbix-server-{mysql,postgresql}<6.0.35	log-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-42332
+zabbix-server-{mysql,postgresql}<6.0.34	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-42333
+zabbix-frontend<6.0.37			cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-45699
+zabbix-server-{mysql,postgresql}<6.0.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45700
+zabbix-proxy<6.0.39			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45700
