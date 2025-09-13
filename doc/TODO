@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26200 2025/09/06 09:30:02 he Exp $
+$NetBSD: TODO,v 1.26201 2025/09/13 21:52:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -533,6 +533,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o coordgenlibs-2.0.3
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
+	o crush-0.7.5
 	o csound6-6.18.1
 	o csvkit-1.4.0
 	o ctemplate-2.4
@@ -605,6 +606,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
+	o exiv2-0.28.7
 	o exult-1.10.1
 	o faces-1.7.7
 	o facter-2.4.5
@@ -746,6 +748,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o howm-1.4.7
 	o hplip-3.25.6
 	o html2wml-0.4.11
+	o hwdata-0.399
 	o hwloc-2.11
 	o hydrogen-1.2.6
 	o ibus-hangul-1.5.4
@@ -789,6 +792,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.33.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -955,7 +959,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-31.1.2
 	o ocaml-5.3.0 [wip]
 	o ocaml-cppo-1.6.9
-	o ocaml-dune-3.20.1
+	o ocaml-dune-3.20.2
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -977,6 +981,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.4.0
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1027,6 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-u2f-1.3.1
+	o pandoc-cli-3.8
 	o pango-1.57.0
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
@@ -1097,18 +1103,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-acme-5.0.0
 	o py-cassa-1.11.0
+	o py-certbot-5.0.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-docutils-0.22 [breaks qemu build, see https://sourceforge.net/p/docutils/bugs/508/]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-google-api-python-client-2.181.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-ruff-0.12.12
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
@@ -1116,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-torch-2.8
 	o py-trezor-0.13.10
+	o py-twine-6.2.0
 	o py-uliweb-0.6
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
@@ -1270,6 +1281,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.25.9
+	o tree-sitter-javascript-0.25.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1349,6 +1362,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xorp-1.8.5
+	o xournalpp-1.2.8
 	o xpad-5.4.0
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
