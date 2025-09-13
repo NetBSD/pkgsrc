@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/09/10 10:34:02 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/13 16:16:21 vins Exp $
 
-DISTNAME=	libasr-20240904
+DISTNAME=	libasr-20250910
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 EXTRACT_SUFX=	.tar.xz
@@ -17,4 +17,5 @@ CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE	# strtonum()
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl	# libresolv(3LIB)
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
