@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/09/13 05:25:00 dkazankov Exp $
 
 BLAKE2s (gnatcoll-core-25.0.0.tar.gz) = 4e3053b10a27ea4bd4fc1c8ba2e8ab936087507f8969e9c71b33c0fbb5a81a4c
 SHA512 (gnatcoll-core-25.0.0.tar.gz) = efa19b9760bd16b402445d4932dfd28f087f9a09b91ec688c6976b7b83fe5986580b1871378ac024e9a712df8ee75963e5dc88629a72ee1ce76f1d1403b8e122
 Size (gnatcoll-core-25.0.0.tar.gz) = 7492612 bytes
-SHA1 (patch-Makefile) = 5a6a41fadcd84fa0eda5122263fbb3dee601b546
+SHA1 (patch-Makefile) = febed9b664ee7b30877e8d68a757a96d9a09ab0a
 SHA1 (patch-core_src_executable__path.c) = a4105333ea497cae722b2870149725f69de2dbe9
 SHA1 (patch-core_src_os_unix_libc-wrappers.c) = 322ecd62a2b35febec07f1195b4cfd2f098a2556
 SHA1 (patch-core_src_os_unix_process-wrappers.c) = ef3696e8098b9ca434a83093aa53698c578fd0cc
