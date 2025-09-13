@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/09 09:15:52 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/13 05:51:05 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-fsf-14
 PKGNAME=	sparklib14-14.0.0
@@ -12,6 +12,8 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/SPARKlib
 COMMENT=	SPARKlib libraries, FSF release 14
 LICENSE=	apache-2.0
+
+SUPERSEDES+=	sparklib-14-14.*
 
 USE_LANGUAGES=	c ada
 
