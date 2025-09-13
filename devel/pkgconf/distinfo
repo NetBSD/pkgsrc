@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.29 2025/03/09 06:06:44 wiz Exp $
+$NetBSD: distinfo,v 1.30 2025/09/13 22:25:00 wiz Exp $
 
 BLAKE2s (pkgconf-2.4.3.tar.gz) = 00ac4cb281356a6ca71a956d31cf5a4348860c21159b287d7188c09e81a435cc
 SHA512 (pkgconf-2.4.3.tar.gz) = 611c3c8d13f1ee4d812a05d37ec0a8cdc4070448e7beb0b2eeb19508e797fc10ae16bed367016b90bc5a54cff016b94c1466f31c6d932d292afebc78051278ba
 Size (pkgconf-2.4.3.tar.gz) = 468948 bytes
+SHA1 (patch-libpkgconf_pkg.c) = 15e6208dd17b79b2bcb341da73f6c8eda5f1d9df
