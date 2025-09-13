@@ -1,10 +1,33 @@
-$NetBSD: patch-Makefile,v 1.1 2025/09/04 10:44:40 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/09/13 12:06:11 dkazankov Exp $
 
+Fix shared library build controller
 Add NetBSD support
 
 --- Makefile.orig	2024-08-23 18:53:29.000000000 +0300
 +++ Makefile
-@@ -101,12 +101,16 @@
+@@ -32,9 +32,10 @@
+ 
+ GNAT         := gnat
+ 
+-ENABLE_STATIC = true
+-ENABLE_SHARED := $(shell $(GNAT) make -c -q -p -XTARGET=$(TARGET) \
++ENABLE_STATIC ?= true
++SHARED_SUPPORTED := $(shell $(GNAT) make -c -q -p -XTARGET=$(TARGET) \
+ 			-Pconfig/setup/test_shared 2>/dev/null && echo "true")
++ENABLE_SHARED ?= $(SHARED_SUPPORTED)
+ 
+ ifeq ($(shell gnat ls -Pxmlada_dom 2>&1 | grep 'project file .* not found'),)
+   TP_XMLADA := Installed
+@@ -57,6 +58,8 @@
+ GPRINSTALL	= gprinstall
+ GPRCLEAN	= gprclean
+ 
++-include makefile.setup
++
+ #  Compute the default library kind, and possibly the other that are to
+ #  be built.
+ 
+@@ -101,14 +104,16 @@
  ifeq ($(strip $(findstring freebsd, $(TARGET))),freebsd)
     PRJ_TARGET=FreeBSD
  else
@@ -17,7 +40,9 @@ Add NetBSD support
  endif
  endif
  endif
+-
+--include makefile.setup
 +endif
  
- -include makefile.setup
- 
+ ALL_OPTIONS := \
+  DEBUG \
