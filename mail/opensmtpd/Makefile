@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2025/09/10 10:39:33 vins Exp $
+# $NetBSD: Makefile,v 1.35 2025/09/13 16:26:01 vins Exp $
 
 VERSION=	7.7.0p0
 DISTNAME=	opensmtpd-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 USE_DB185=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	awk pkg-config yacc
-USE_TOOLS+=	automake aclocal autoheader autoconf
+USE_TOOLS+=	automake aclocal autoheader autoconf pkg-config
 
 CHECK_BUILTIN.openssl:= yes
 .include "../../security/openssl/buildlink3.mk"
@@ -56,6 +56,7 @@ CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/spool/mail
 CONFIGURE_ARGS+=	--with-path-mbox=${VARBASE}/mail
 .endif
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-libasr=${BUILDLINK_PREFIX.libasr}
 CONFIGURE_ARGS+=	--with-table-db
 CONFIGURE_ARGS+=	--with-pie
 

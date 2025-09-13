@@ -1,0 +1,72 @@
+$NetBSD: patch-configure.ac,v 1.5 2025/09/13 16:26:01 vins Exp $
+
+Standalone libasr support.
+
+--- configure.ac.orig	2025-05-11 12:40:26.000000000 +0000
++++ configure.ac
+@@ -54,7 +54,7 @@ AS_IF([test "x$with_libbsd" != xno], [
+ ])
+ 
+ need_dash_r=
+-need_libasr=yes
++need_libasr=
+ pkglibexecdir="$libexecdir/opensmtpd"
+ AS_CASE(["$host"],
+ 	[*-*-darwin*], [
+@@ -181,9 +181,16 @@ AC_CHECK_HEADERS([ \
+ 	vis.h \
+ ])
+ 
+-AS_IF([test "x$need_libasr" = xyes], [
+-	AM_CFLAGS="$AM_CFLAGS -I\${top_srcdir}/openbsd-compat/libasr"
++AC_CHECK_HEADER([asr.h],
++	[AC_DEFINE([HAVE_ASR_H], 1, [1 if have asr.h])],
++	[need_libasr=yes
++	AM_CFLAGS="$AM_CFLAGS -I\${top_srcdir}/openbsd-compat/libasr"],
++	[
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <netdb.h>
+ ])
++
+ AM_CONDITIONAL([NEED_LIBASR], [test "x$need_libasr" = xyes])
+ 
+ AS_IF([test "x$ac_cv_func_errc" = xno], [
+@@ -1451,6 +1458,37 @@ LIBS="$save_LIBS"
+ AM_CONDITIONAL([HAVE_DB_API], [test "x$use_db_api" = "x1"])
+ AM_COND_IF([HAVE_DB_API], [AC_DEFINE([HAVE_DB_API], [1], [Define to 1 if HAVE_DB_API])])
+ 
++# Search for libasr
++AS_IF([test "x$HAVE_ASR_H" != xyes], [
++    AC_ARG_WITH([libasr],
++	[  --with-libasr=PATH           Specify path to libasr installation],
++	[ if test "x$withval" != "xno"; then
++ 		if test -d "$withval/lib"; then
++			if test -n "${need_dash_r}"; then
++				LDFLAGS="-L${withval}/lib -R${withval}/lib ${LDFLAGS}"
++			else
++				LDFLAGS="-L${withval}/lib ${LDFLAGS}"
++ 			fi
++		else
++			if test -n "${need_dash_r}"; then
++				LDFLAGS="-L${withval} -R${withval} ${LDFLAGS}"
++			else
++				LDFLAGS="-L${withval} ${LDFLAGS}"
++			fi
++		fi
++		if test -d "$withval/include"; then
++			CPPFLAGS="-I${withval}/include ${CPPFLAGS}"
++		else
++			CPPFLAGS="-I${withval} ${CPPFLAGS}"
++		fi
++	LIBS="$LIBS -lasr"
++	fi
++	])
++    ], [AC_SEARCH_LIBS([asr_run], [asr], [:], [
++		AC_MSG_ERROR([can't find libasr])
++		], [-levent])
++])
++
+ LIBS="$LIBS ${SMTPDLIBS}"
+ 
+ dnl Adding -Werror to CFLAGS early prevents configure tests from running.
