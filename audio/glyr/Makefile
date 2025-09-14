@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/08/20 11:34:46 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.60 2025/09/14 16:03:00 wiz Exp $
 
 DISTNAME=	glyr-1.0.10
 PKGREVISION=	43
@@ -12,12 +11,12 @@ COMMENT=	Music related metadata search engine with CLI and C API
 LICENSE=	gnu-lgpl-v3
 
 USE_TOOLS+=	pkg-config
-USE_CMAKE=	yes
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 PKGCONFIG_OVERRIDE+=	libglyr.pc.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
