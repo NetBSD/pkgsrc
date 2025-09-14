@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/29 09:50:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/14 06:52:24 adam Exp $
 bin/checkdmarc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -37,6 +37,9 @@ ${PYSITELIB}/checkdmarc/smtp.pyo
 ${PYSITELIB}/checkdmarc/smtp_tls_reporting.py
 ${PYSITELIB}/checkdmarc/smtp_tls_reporting.pyc
 ${PYSITELIB}/checkdmarc/smtp_tls_reporting.pyo
+${PYSITELIB}/checkdmarc/soa.py
+${PYSITELIB}/checkdmarc/soa.pyc
+${PYSITELIB}/checkdmarc/soa.pyo
 ${PYSITELIB}/checkdmarc/spf.py
 ${PYSITELIB}/checkdmarc/spf.pyc
 ${PYSITELIB}/checkdmarc/spf.pyo
