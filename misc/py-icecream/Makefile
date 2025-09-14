@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/08/20 12:21:49 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/14 14:23:26 adam Exp $
 
-DISTNAME=	icecream-2.1.7
+DISTNAME=	icecream-2.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icecream/}
