@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2025/06/23 09:06:51 leot Exp $
+# $NetBSD: Makefile,v 1.34 2025/09/14 13:08:13 leot Exp $
 #
 
-DISTNAME=	rlwrap-0.46.1
-PKGREVISION=	1
+DISTNAME=	rlwrap-0.47.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hanslub42/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/hanslub42/rlwrap
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_TOOLS+=		autoreconf autoconf automake
+
+CONFIGURE_ARGS+=	--without-libptytty
 
 TEST_TARGET=		check
 
