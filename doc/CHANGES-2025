@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5469 2025/09/14 08:28:33 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5470 2025/09/14 08:42:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7905,3 +7905,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/cJSON to 1.7.19 [adam 2025-09-14]
 	Updated www/libproxy to 0.5.11 [adam 2025-09-14]
 	Updated devel/regal to 0.36.1 [leot 2025-09-14]
+	Updated net/gallery-dl to 1.30.7 [leot 2025-09-14]
