@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5475 2025/09/14 10:30:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5476 2025/09/14 10:42:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7915,3 +7915,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/k6 to 1.2.3 [leot 2025-09-14]
 	Updated emulators/fs-uae to 3.2.35 [adam 2025-09-14]
 	Updated emulators/fs-uae-launcher to 3.2.20 [adam 2025-09-14]
+	Updated time/py-jrnl to 4.2.1 [leot 2025-09-14]
