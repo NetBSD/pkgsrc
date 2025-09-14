@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5472 2025/09/14 09:49:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5473 2025/09/14 10:15:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7910,3 +7910,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 24.8.0 [adam 2025-09-14]
 	Updated devel/py-pyparsing to 3.2.4 [adam 2025-09-14]
 	Updated textproc/tree-sitter to 0.25.9 [adam 2025-09-14]
+	Updated textproc/libxml2 to 2.14.6 [adam 2025-09-14]
+	Updated devel/catch2 to 3.10.0 [adam 2025-09-14]
