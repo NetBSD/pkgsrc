@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2023/10/23 06:37:45 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/09/14 10:29:34 adam Exp $
 
-DISTNAME=	fs-uae-launcher-3.1.68
-PKGREVISION=	2
+DISTNAME=	fs-uae-launcher-3.2.20
 CATEGORIES=	emulators
-MASTER_SITES=	https://fs-uae.net/files/FS-UAE-Launcher/Stable/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=FrodeSolheim/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
@@ -11,10 +11,12 @@ HOMEPAGE=	https://fs-uae.net/
 COMMENT=	Graphical launcher for FS-UAE, the Amiga Emulator
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	fs-uae>=3.1.66:../../emulators/fs-uae
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	fs-uae>=3.2.35:../../emulators/fs-uae
+DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 DEPENDS+=	${PYPKGPREFIX}-lhafile-[0-9]*:../../archivers/py-lhafile
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-qt5>=5.4:../../x11/py-qt5
+DEPENDS+=	${PYPKGPREFIX}-qt6>=6.9.1:../../x11/py-qt6
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
 DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Cocoa>=3:../../devel/py-pyobjc-framework-Cocoa
@@ -23,10 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyobjc-framework-Quartz>=3:../../devel/py-pyobjc-framew
 
 INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
 
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher
 PYSETUPINSTALLARGS+=	--install-scripts=${PREFIX:Q}/share/fs-uae-launcher
@@ -45,12 +43,10 @@ SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 post-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
 		-f ${MAKE_FILE} ${INSTALL_TARGET}
-	cd ${DESTDIR}${PREFIX}/bin && ${RM} -f fs-uae-launcher && \
-		${LN} -s ../share/fs-uae-launcher/fs-uae-launcher fs-uae-launcher
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/batteries-included.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
