@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5473 2025/09/14 10:15:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5474 2025/09/14 10:23:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7912,3 +7912,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter to 0.25.9 [adam 2025-09-14]
 	Updated textproc/libxml2 to 2.14.6 [adam 2025-09-14]
 	Updated devel/catch2 to 3.10.0 [adam 2025-09-14]
+	Updated net/k6 to 1.2.3 [leot 2025-09-14]
