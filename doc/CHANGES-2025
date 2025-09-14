@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5486 2025/09/14 16:21:29 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5487 2025/09/14 16:24:18 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7927,3 +7927,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ucspi-tcp6 to 1.13.06 [schmonz 2025-09-14]
 	Updated net/ucspi-ssl to 0.999.13.06 [schmonz 2025-09-14]
 	Updated net/djbdnscurve6 to 46 [schmonz 2025-09-14]
+	Updated net/s6-networking to 2.7.1.0nb3 [schmonz 2025-09-14]
