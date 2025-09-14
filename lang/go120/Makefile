@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/08/25 18:29:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/14 23:48:02 wiz Exp $
 
 .include "../../lang/go/version.mk"
 # Minimum Go version for bootstrapping is 1.17.13.
@@ -30,7 +30,6 @@ INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
 REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
-REPLACE_BASH+=	misc/cgo/fortran/test.bash
 REPLACE_BASH+=	misc/wasm/go_js_wasm_exec
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/bootstrap.bash
