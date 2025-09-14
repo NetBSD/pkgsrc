@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/09/14 10:14:43 adam Exp $
+
+${install_pkgconfdir} should already contain ${CMAKE_INSTALL_PREFIX}.
+
+--- CMakeLists.txt.orig	2025-08-25 19:30:21.000000000 +0000
++++ CMakeLists.txt
+@@ -204,14 +204,14 @@ if(NOT_SUBPROJECT)
+          set(lib_name "$<TARGET_FILE_BASE_NAME:Catch2>")
+          configure_file(
+            "${impl_pc_file}"
+-           "${DESTDIR_PREFIX}${CMAKE_INSTALL_PREFIX}/${install_pkgconfdir}/catch2.pc"
++           "${DESTDIR_PREFIX}/${install_pkgconfdir}/catch2.pc"
+            @ONLY
+          )
+ 
+          set(lib_name "$<TARGET_FILE_BASE_NAME:Catch2WithMain>")
+          configure_file(
+            "${main_pc_file}"
+-           "${DESTDIR_PREFIX}${CMAKE_INSTALL_PREFIX}/${install_pkgconfdir}/catch2-with-main.pc"
++           "${DESTDIR_PREFIX}/${install_pkgconfdir}/catch2-with-main.pc"
+            @ONLY
+          )
+        ]]
