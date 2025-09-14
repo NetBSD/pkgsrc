@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.26 2025/09/01 08:35:42 triaxx Exp $
+# $NetBSD: go-modules.mk,v 1.27 2025/09/14 15:17:43 triaxx Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.mod
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.24.0.zip
@@ -449,8 +449,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.1.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.0.mod
-GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.0.zip
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.2.mod
+GO_MODULE_FILES+=	github.com/tdewolff/minify/v2/@v/v2.24.2.zip
 GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.3.mod
 GO_MODULE_FILES+=	github.com/tdewolff/parse/v2/@v/v2.8.3.zip
 GO_MODULE_FILES+=	github.com/tdewolff/test/@v/v1.0.11.mod
@@ -548,8 +548,8 @@ GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.1.1-0.20191107180719-034126e5016b.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.12.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.2.0.mod
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.27.0.mod
-GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.27.0.zip
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.28.0.mod
+GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.28.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.3.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.4.1.mod
