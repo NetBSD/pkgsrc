@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/06/30 20:23:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/09/14 06:07:09 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -41,6 +41,9 @@ ${PYSITELIB}/xlsxwriter/chart_scatter.pyo
 ${PYSITELIB}/xlsxwriter/chart_stock.py
 ${PYSITELIB}/xlsxwriter/chart_stock.pyc
 ${PYSITELIB}/xlsxwriter/chart_stock.pyo
+${PYSITELIB}/xlsxwriter/chart_title.py
+${PYSITELIB}/xlsxwriter/chart_title.pyc
+${PYSITELIB}/xlsxwriter/chart_title.pyo
 ${PYSITELIB}/xlsxwriter/chartsheet.py
 ${PYSITELIB}/xlsxwriter/chartsheet.pyc
 ${PYSITELIB}/xlsxwriter/chartsheet.pyo
@@ -80,6 +83,7 @@ ${PYSITELIB}/xlsxwriter/metadata.pyo
 ${PYSITELIB}/xlsxwriter/packager.py
 ${PYSITELIB}/xlsxwriter/packager.pyc
 ${PYSITELIB}/xlsxwriter/packager.pyo
+${PYSITELIB}/xlsxwriter/py.typed
 ${PYSITELIB}/xlsxwriter/relationships.py
 ${PYSITELIB}/xlsxwriter/relationships.pyc
 ${PYSITELIB}/xlsxwriter/relationships.pyo
