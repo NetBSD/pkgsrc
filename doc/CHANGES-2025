@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5462 2025/09/14 02:13:38 nat Exp $
+$NetBSD: CHANGES-2025,v 1.5463 2025/09/14 06:07:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7893,3 +7893,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Type-Tiny to 2.008003 [wiz 2025-09-13]
 	Updated graphics/p5-Image-ExifTool to 13.36 [gdt 2025-09-14]
 	Updated devel/diffbreaker to 0.6 [nat 2025-09-14]
+	Updated textproc/utf8-cpp to 4.0.7 [adam 2025-09-14]
+	Updated textproc/py-xlsxwriter to 3.2.7 [adam 2025-09-14]
