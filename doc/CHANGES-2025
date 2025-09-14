@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5483 2025/09/14 16:20:40 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5484 2025/09/14 16:20:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7924,3 +7924,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xlsxwriter to 3.2.8 [adam 2025-09-14]
 	Updated www/hugo to 0.150.0 [triaxx 2025-09-14]
 	Updated net/fehqlibs to 28 [schmonz 2025-09-14]
+	Updated net/ucspi-tcp6 to 1.13.06 [schmonz 2025-09-14]
