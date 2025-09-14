@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5474 2025/09/14 10:23:52 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5475 2025/09/14 10:30:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7913,3 +7913,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libxml2 to 2.14.6 [adam 2025-09-14]
 	Updated devel/catch2 to 3.10.0 [adam 2025-09-14]
 	Updated net/k6 to 1.2.3 [leot 2025-09-14]
+	Updated emulators/fs-uae to 3.2.35 [adam 2025-09-14]
+	Updated emulators/fs-uae-launcher to 3.2.20 [adam 2025-09-14]
