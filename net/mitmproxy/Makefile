@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/08/20 17:40:51 leot Exp $
+# $NetBSD: Makefile,v 1.55 2025/09/14 10:48:41 leot Exp $
 
-DISTNAME=	mitmproxy-12.1.1
+DISTNAME=	mitmproxy-12.1.2
 CATEGORIES=	net
 MASTER_SITES=	https://downloads.mitmproxy.org/${PKGVERSION_NOREV}/
 
@@ -18,11 +18,11 @@ DEPENDS+=	${PYPKGPREFIX}-certifi>=2019.9.11:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-flask>=3.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-h11>=0.16.0:../../www/py-h11
-DEPENDS+=	${PYPKGPREFIX}-h2>=4.1:../../www/py-h2
+DEPENDS+=	${PYPKGPREFIX}-h2>=4.3.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-hyperframe>=6.0:../../www/py-hyperframe
 DEPENDS+=	${PYPKGPREFIX}-kaitaistruct>=0.10:../../devel/py-kaitaistruct
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.8:../../databases/py-ldap3
-DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.12.3:../../net/py-mitmproxy_rs
+DEPENDS+=	${PYPKGPREFIX}-mitmproxy_rs>=0.12.6:../../net/py-mitmproxy_rs
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24.3:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
