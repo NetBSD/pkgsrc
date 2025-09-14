@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5481 2025/09/14 14:24:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5482 2025/09/14 15:18:00 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7922,3 +7922,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/sops to 3.10.2 [leot 2025-09-14]
 	Updated misc/py-icecream to 2.1.8 [adam 2025-09-14]
 	Updated textproc/py-xlsxwriter to 3.2.8 [adam 2025-09-14]
+	Updated www/hugo to 0.150.0 [triaxx 2025-09-14]
