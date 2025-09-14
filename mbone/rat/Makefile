@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/12/22 18:32:12 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.54 2025/09/14 10:50:23 wiz Exp $
 
 DISTNAME=	rat-3.0.28
 PKGREVISION=	12
@@ -26,6 +25,7 @@ post-patch:
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_8
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_9
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_10
+	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_11
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_DragonFly_2
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_DragonFly_3
 
