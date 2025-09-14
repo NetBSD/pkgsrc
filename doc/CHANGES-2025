@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5487 2025/09/14 16:24:18 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5488 2025/09/14 16:54:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7928,3 +7928,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ucspi-ssl to 0.999.13.06 [schmonz 2025-09-14]
 	Updated net/djbdnscurve6 to 46 [schmonz 2025-09-14]
 	Updated net/s6-networking to 2.7.1.0nb3 [schmonz 2025-09-14]
+	Updated net/py-awscli2 to 2.28.25nb1 [wiz 2025-09-14]
