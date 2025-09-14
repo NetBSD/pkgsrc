@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/11/22 18:29:48 leot Exp $
+$NetBSD: distinfo,v 1.6 2025/09/14 10:41:49 leot Exp $
 
-BLAKE2s (jrnl-4.2.tar.gz) = 2d4f4a7e89976b0a6a3522c3a3dc6b5b6bb1a89d167a37c539da5a66176f8475
-SHA512 (jrnl-4.2.tar.gz) = 3847dfdad9a1040da24a38638ed41596ee98c3abe81603a399b4aaeac62625d72239021fb9533a0e2addd1224e77872c86900e2f830e0cc3a29895ed443f48b1
-Size (jrnl-4.2.tar.gz) = 60394 bytes
+BLAKE2s (jrnl-4.2.1.tar.gz) = e841dc323e8e336ec7f1f31b13cd7ba175d0d833c363f7f7b06b97c5509123c0
+SHA512 (jrnl-4.2.1.tar.gz) = f1d5fdfe1e7eedab9ac43b4a3bac766f5e6453c76e3161e1a86a2e278915716a7d283bf5505edaea67b96984f1064af66811b77730782103355a30c921122458
+Size (jrnl-4.2.1.tar.gz) = 58659 bytes

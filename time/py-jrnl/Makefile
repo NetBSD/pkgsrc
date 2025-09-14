@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/22 18:29:48 leot Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/14 10:41:49 leot Exp $
 
-DISTNAME=	jrnl-4.2
+DISTNAME=	jrnl-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jrnl/}
@@ -11,7 +11,7 @@ COMMENT=	Command line journal application
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.0:../../comms/py-colorama
+DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-keyring>=21.0:../../security/py-keyring
