@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/09/10 08:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/14 08:01:18 vins Exp $
 
 # make sure to upload a copy to ftp.NetBSD.org when updating this package
 DISTNAME=	usenet_reborn-0.2.0
@@ -13,6 +13,8 @@ COMMENT=	TUI client for Usenet enthusiasts
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
+
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 MAKE_ENV+=	OPENSSL_DIR=${SSLBASE:Q}
 
@@ -37,7 +39,6 @@ post-install:
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/cmake/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
