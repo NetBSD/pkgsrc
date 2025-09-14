@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5470 2025/09/14 08:42:01 leot Exp $
+$NetBSD: CHANGES-2025,v 1.5471 2025/09/14 09:42:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7906,3 +7906,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libproxy to 0.5.11 [adam 2025-09-14]
 	Updated devel/regal to 0.36.1 [leot 2025-09-14]
 	Updated net/gallery-dl to 1.30.7 [leot 2025-09-14]
+	Updated security/p11-kit to 0.25.8 [adam 2025-09-14]
+	Updated lang/nodejs to 24.8.0 [adam 2025-09-14]
