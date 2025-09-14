@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2025/08/14 07:33:44 triaxx Exp $
+# $NetBSD: Makefile,v 1.81 2025/09/14 16:59:51 triaxx Exp $
 
-PKGNAME=	openrct2-0.4.25
+PKGNAME=	openrct2-0.4.26
 CATEGORIES=	games
 
 DIST_SUBDIR=	openrct2-${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ DISTFILES+=	replays.zip
 EXTRACT_ONLY+=	openrct.tar.gz
 
 TITLE_SEQUENCE_VERSION=	0.4.14
-OBJECTS_VERSION=	1.7.2
+OBJECTS_VERSION=	1.7.3
 OPENSFX_VERSION=	1.0.6
 OPENMSX_VERSION=	1.6.1
 REPLAYS_VERSION=	0.0.89
@@ -95,6 +95,7 @@ post-extract:
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
