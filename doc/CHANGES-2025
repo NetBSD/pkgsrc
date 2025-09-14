@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5465 2025/09/14 06:51:14 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5466 2025/09/14 06:56:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7897,3 +7897,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xlsxwriter to 3.2.7 [adam 2025-09-14]
 	Updated converters/p5-JSON-XS to 4.04 [wiz 2025-09-14]
 	Updated www/p5-libwww to 6.80 [wiz 2025-09-14]
+	Updated mail/py-checkdmarc to 5.10.10 [adam 2025-09-14]
+	Updated math/py-numexpr to 2.12.1 [adam 2025-09-14]
+	Updated misc/py-trove-classifiers to 2025.9.11.17 [adam 2025-09-14]
