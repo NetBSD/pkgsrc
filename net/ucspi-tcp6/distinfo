@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2025/08/01 16:53:55 schmonz Exp $
+$NetBSD: distinfo,v 1.30 2025/09/14 16:20:51 schmonz Exp $
 
-BLAKE2s (ucspi-tcp6-1.13.04.tgz) = 266abbf1b19e2db442507bb7ee6e2facb73edab686c60c95f7a515652c76f2ee
-SHA512 (ucspi-tcp6-1.13.04.tgz) = 14640cb594f94e3b60a85fa22ca93b57e3659e6a8b330be4669396de7b171569ef25a14184bcfa021ceb7ce7f47cb13d7995ac7cd707812b345d0988cc00c49f
-Size (ucspi-tcp6-1.13.04.tgz) = 49942 bytes
+BLAKE2s (ucspi-tcp6-1.13.06.tgz) = fbd9a56fd4a55e834a2f9d94b1177c8aacabaddc3a04ec8b80ea6a408d4d7189
+SHA512 (ucspi-tcp6-1.13.06.tgz) = 6eda0fc4f328824964b2b46a38635d1e86e230bd88c2884cd4d84210957a5501cebec64c88838c576e1dbe640dbf8eff0c74431cea451b3466a7925033c17b71
+Size (ucspi-tcp6-1.13.06.tgz) = 50088 bytes
