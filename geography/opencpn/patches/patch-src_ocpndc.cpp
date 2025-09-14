@@ -1,4 +1,5 @@
-$NetBSD: patch-src_ocpndc.cpp,v 1.2 2018/04/13 18:57:29 bouyer Exp $
+$NetBSD: patch-src_ocpndc.cpp,v 1.3 2025/09/14 10:53:56 wiz Exp $
+
 For some reason ocpnDC::DrawEllipse and ocpnDC::DrawRounderRectangle
 and is miscompiled on NetBSD 8.0_BETA and gcc 6.4 from HEAD earmv7hf:
 for the tail call to dc->DrawEllipse() the compiler emits a bx instruction,
