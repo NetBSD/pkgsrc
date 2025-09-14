@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2025/07/11 21:16:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/14 16:24:13 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		s6-networking-2.7.1.0
-PKGREVISION=		2
+PKGREVISION=		3
 MANPAGES_VERSION=	2.7.0.4.1
 CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_GITHUB:=skarnet/}
 GITHUB_PROJECT=		s6-networking
-GITHUB_TAG=		442b0d45ec12a0a383405f923d11f015adf0a25e
+GITHUB_TAG=		e5c171704e79ccb361bf6bbd51ecece19ec5df2f
 DISTFILES=		${DISTNAME}-${GITHUB_TAG}${EXTRACT_SUFX} ${MANPAGES_DIST}
 MANPAGES_DIST=		s6-networking-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/${PKGBASE}-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
