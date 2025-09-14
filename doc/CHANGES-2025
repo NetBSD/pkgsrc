@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5461 2025/09/14 00:39:04 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5462 2025/09/14 02:13:38 nat Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7892,3 +7892,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Term-Table to 0.025 [wiz 2025-09-13]
 	Updated devel/p5-Type-Tiny to 2.008003 [wiz 2025-09-13]
 	Updated graphics/p5-Image-ExifTool to 13.36 [gdt 2025-09-14]
+	Updated devel/diffbreaker to 0.6 [nat 2025-09-14]
