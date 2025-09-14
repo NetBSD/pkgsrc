@@ -1,4 +1,5 @@
-$NetBSD: patch-src_glu_CMakeLists.txt,v 1.1 2016/05/25 14:38:48 bouyer Exp $
+$NetBSD: patch-src_glu_CMakeLists.txt,v 1.2 2025/09/14 10:53:56 wiz Exp $
+
 Make sure to use our glu.h before the base libraries ones.
 
 --- src/glu/CMakeLists.txt.orig	2016-05-25 16:23:41.000000000 +0200
