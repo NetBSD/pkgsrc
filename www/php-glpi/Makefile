@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/02/08 04:04:40 taca Exp $
+# $NetBSD: Makefile,v 1.22 2025/09/15 14:21:00 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-PKGREVISION=	2
-GLPI_VERSION=	10.0.12
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+GLPI_VERSION=	10.0.20
 CATEGORIES=	www
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=glpi-project/}glpi/releases/download/${GLPI_VERSION}/
@@ -15,10 +15,10 @@ COMMENT=	IT inventory management software
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=${PHP_BASE_VERS}:../../math/php-bcmath
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
@@ -30,6 +30,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
+
+PHP_VERSIONS_ACCEPTED=	82 83 84
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
