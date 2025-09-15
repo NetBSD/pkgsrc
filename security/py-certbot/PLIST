@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2025/04/13 19:06:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2025/09/15 11:16:00 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -150,6 +150,9 @@ ${PYSITELIB}/certbot/_internal/tests/compat/os_test.pyo
 ${PYSITELIB}/certbot/_internal/tests/configuration_test.py
 ${PYSITELIB}/certbot/_internal/tests/configuration_test.pyc
 ${PYSITELIB}/certbot/_internal/tests/configuration_test.pyo
+${PYSITELIB}/certbot/_internal/tests/conftest.py
+${PYSITELIB}/certbot/_internal/tests/conftest.pyc
+${PYSITELIB}/certbot/_internal/tests/conftest.pyo
 ${PYSITELIB}/certbot/_internal/tests/crypto_util_test.py
 ${PYSITELIB}/certbot/_internal/tests/crypto_util_test.pyc
 ${PYSITELIB}/certbot/_internal/tests/crypto_util_test.pyo

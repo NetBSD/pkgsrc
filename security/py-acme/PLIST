@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/04/13 16:11:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/09/15 11:16:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -19,6 +19,9 @@ ${PYSITELIB}/acme/_internal/tests/challenges_test.pyo
 ${PYSITELIB}/acme/_internal/tests/client_test.py
 ${PYSITELIB}/acme/_internal/tests/client_test.pyc
 ${PYSITELIB}/acme/_internal/tests/client_test.pyo
+${PYSITELIB}/acme/_internal/tests/conftest.py
+${PYSITELIB}/acme/_internal/tests/conftest.pyc
+${PYSITELIB}/acme/_internal/tests/conftest.pyo
 ${PYSITELIB}/acme/_internal/tests/crypto_util_test.py
 ${PYSITELIB}/acme/_internal/tests/crypto_util_test.pyc
 ${PYSITELIB}/acme/_internal/tests/crypto_util_test.pyo
