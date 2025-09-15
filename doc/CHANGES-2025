@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5510 2025/09/15 14:42:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5511 2025/09/15 14:43:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7977,3 +7977,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-s3 to 1.199.0 [taca 2025-09-15]
 	Added devel/sccache version 0.10.0 [adam 2025-09-15]
 	Updated devel/ccache to 4.12 [adam 2025-09-15]
+	Updated www/php-concrete-cms to 9.4.4 [taca 2025-09-15]
