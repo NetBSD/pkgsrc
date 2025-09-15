@@ -1,4 +1,4 @@
-$NetBSD: patch-bindings_python_pyproject.toml,v 1.2 2025/04/16 12:46:52 adam Exp $
+$NetBSD: patch-bindings_python_pyproject.toml,v 1.3 2025/09/15 17:35:53 adam Exp $
 
 Python module version should be obtained from git, but git repository
 is not available in PyPI package, so set the version manually.
@@ -10,7 +10,7 @@ is not available in PyPI package, so set the version manually.
  [project]
  name = "unicorn"
 -dynamic = ["version"]
-+version = "2.1.3"
++version = "2.1.4"
  requires-python = ">= 2.7, != 3.0.*, != 3.1.*, != 3.2.*, != 3.3.*, != 3.4.*, != 3.5.*, != 3.6.*"
  dependencies = [
      "importlib_resources; python_version < '3.9'"
