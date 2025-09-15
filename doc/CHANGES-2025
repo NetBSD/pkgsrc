@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5543 2025/09/15 17:26:01 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5544 2025/09/15 17:36:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8012,3 +8012,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/typo3-13 to 13.4.18 [taca 2025-09-15]
 	Updated databases/ruby-tiny_tds to 3.3.0 [taca 2025-09-15]
 	Updated devel/ruby-tins to 1.44.1 [taca 2025-09-15]
+	Updated emulators/unicorn to 2.1.4 [adam 2025-09-15]
+	Updated emulators/py-unicorn to 2.1.4 [adam 2025-09-15]
