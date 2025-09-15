@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/08/24 16:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/09/15 07:37:27 wiz Exp $
 
 DISTNAME=	dnsdist-2.0.0
 PKGREVISION=	1
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--with-re2
 CONFIGURE_ARGS+=	--without-net-snmp
 CONFIGURE_ARGS+=	--enable-dns-over-https
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
 .include "../../mk/readline.buildlink3.mk"
 
