@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/08/02 03:25:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/09/15 14:45:56 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -80,6 +80,9 @@ ${GEM_LIBDIR}/lib/pg/tuple.rb
 ${GEM_LIBDIR}/lib/pg/type_map_by_column.rb
 ${GEM_LIBDIR}/lib/pg/version.rb
 ${GEM_LIBDIR}/lib/pg_ext.${RUBY_DLEXT}
+${GEM_LIBDIR}/misc/glibc/Dockerfile
+${GEM_LIBDIR}/misc/glibc/docker-compose.yml
+${GEM_LIBDIR}/misc/glibc/glibc_spec.rb
 ${GEM_LIBDIR}/misc/openssl-pg-segfault.rb
 ${GEM_LIBDIR}/misc/postgres/History.txt
 ${GEM_LIBDIR}/misc/postgres/Manifest.txt
@@ -95,10 +98,11 @@ ${GEM_LIBDIR}/misc/yugabyte/Dockerfile
 ${GEM_LIBDIR}/misc/yugabyte/docker-compose.yml
 ${GEM_LIBDIR}/misc/yugabyte/pg-test.rb
 ${GEM_LIBDIR}/pg.gemspec
-${GEM_LIBDIR}/ports/patches/krb5/1.21.3/0001-Allow-static-linking-krb5-library.patch
-${GEM_LIBDIR}/ports/patches/openssl/3.5.1/0001-aarch64-mingw.patch
-${GEM_LIBDIR}/ports/patches/postgresql/17.5/0001-Use-workaround-of-__builtin_setjmp-only-on-MINGW-on-.patch
-${GEM_LIBDIR}/ports/patches/postgresql/17.5/0001-libpq-Process-buffered-SSL-read-bytes-to-support-rec.patch
+${GEM_LIBDIR}/ports/patches/krb5/1.22.1/0001-Allow-static-linking-krb5-library.patch
+${GEM_LIBDIR}/ports/patches/krb5/1.22.1/0002-unknown-command-line-option-on-clang.patch
+${GEM_LIBDIR}/ports/patches/openssl/3.5.2/0001-aarch64-mingw.patch
+${GEM_LIBDIR}/ports/patches/postgresql/17.6/0001-Use-workaround-of-__builtin_setjmp-only-on-MINGW-on-.patch
+${GEM_LIBDIR}/ports/patches/postgresql/17.6/0001-libpq-Process-buffered-SSL-read-bytes-to-support-rec.patch
 ${GEM_LIBDIR}/rakelib/pg_gem_helper.rb
 ${GEM_LIBDIR}/rakelib/task_extension.rb
 ${GEM_LIBDIR}/sample/array_insert.rb
