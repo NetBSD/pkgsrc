@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/09/03 07:18:18 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/15 15:07:12 adam Exp $
 
-DISTNAME=	behave-1.3.2
+DISTNAME=	behave-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/behave/}
