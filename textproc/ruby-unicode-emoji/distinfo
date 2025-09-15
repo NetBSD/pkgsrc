@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/12/09 15:40:05 taca Exp $
+$NetBSD: distinfo,v 1.2 2025/09/15 16:54:33 taca Exp $
 
-BLAKE2s (unicode-emoji-4.0.4.gem) = bbb88f86bfabb9ebc6e5547aafe843fa489b6839428a873247d65ed1427b29d7
-SHA512 (unicode-emoji-4.0.4.gem) = d189ee50a2c0d79a9639e28f4c198ea37662d9ccc585d9bbe93cbba69d282fa5474d7187ddd83f14525f5f24fba436b1f77d0afe8bad673b956a8bcb6de1baee
-Size (unicode-emoji-4.0.4.gem) = 167936 bytes
+BLAKE2s (unicode-emoji-4.1.0.gem) = 38af5e5038e60ced14fae640751b643a3fcab1e6bb53b82b58262093c66fbe57
+SHA512 (unicode-emoji-4.1.0.gem) = b3e936b069a2869c96bec600beeca3b40f94a6d78007d2afddd1fdb14b8ff1b2c08574cc7a8caed26329ec042006ad8f0b1cfad99fe01ef4bd3e561d328d1468
+Size (unicode-emoji-4.1.0.gem) = 170496 bytes
