@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/13 06:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/15 11:57:36 adam Exp $
 
-DISTNAME=	zope_configuration-6.0
+DISTNAME=	zope_configuration-7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.configuration/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.configuration
 COMMENT=	Zope Configuration Markup Language
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.i18nmessageid-[0-9]*:../../devel/py-zope.i18nmessageid
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 DEPENDS+=	${PYPKGPREFIX}-zope.schema>=4.9:../../devel/py-zope.schema
