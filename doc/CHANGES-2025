@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5544 2025/09/15 17:36:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5545 2025/09/15 18:12:21 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8014,3 +8014,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-tins to 1.44.1 [taca 2025-09-15]
 	Updated emulators/unicorn to 2.1.4 [adam 2025-09-15]
 	Updated emulators/py-unicorn to 2.1.4 [adam 2025-09-15]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q3 branch [bsiegert 2025-09-15]
