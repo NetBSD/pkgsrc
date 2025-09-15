@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/12 14:21:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/15 17:18:17 taca Exp $
 share/examples/typo3/typo3.conf
 share/typo3/CODE_OF_CONDUCT.md
 share/typo3/CONTRIBUTING.md
@@ -3781,6 +3781,7 @@ share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-106229-Al
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-106240-EnforceFile-extensionsAndMime-typeConsistencyInFileAbstractionLayer.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-106715-ApplyCSPSandboxModeToFileadminsHtaccessConfiguration.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-106735-FileMIMETypeCompatiblityMapping.rst
+share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-106983-HardenedAccessToModule-relatedAJAXRoutes.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-96218-UseProperSurroundingHTMLTagsForFluidSystemEmail.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Important-99781-ExportingAndDownloadingRecordsInTheListModule.rst
 share/typo3/typo3/sysext/core/Documentation/Changelog/12.4.x/Index.rst
@@ -7738,6 +7739,8 @@ share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/ConjunctionValidat
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/DateTimeValidator.php
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/DisjunctionValidator.php
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/EmailAddressValidator.php
+share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/FileExtensionMimeTypeConsistencyValidator.php
+share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/FileExtensionValidator.php
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/FileNameValidator.php
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/FileSizeValidator.php
 share/typo3/typo3/sysext/extbase/Classes/Validation/Validator/FloatValidator.php
@@ -11723,8 +11726,10 @@ share/typo3/typo3/sysext/workspaces/Classes/Dependency/EventCallback.php
 share/typo3/typo3/sysext/workspaces/Classes/Dependency/ReferenceEntity.php
 share/typo3/typo3/sysext/workspaces/Classes/Domain/Model/CombinedRecord.php
 share/typo3/typo3/sysext/workspaces/Classes/Domain/Model/DatabaseRecord.php
-share/typo3/typo3/sysext/workspaces/Classes/Domain/Record/StageRecord.php
-share/typo3/typo3/sysext/workspaces/Classes/Domain/Record/WorkspaceRecord.php
+share/typo3/typo3/sysext/workspaces/Classes/Domain/Model/Workspace.php
+share/typo3/typo3/sysext/workspaces/Classes/Domain/Model/WorkspaceStage.php
+share/typo3/typo3/sysext/workspaces/Classes/Domain/Repository/WorkspaceRepository.php
+share/typo3/typo3/sysext/workspaces/Classes/Domain/Repository/WorkspaceStageRepository.php
 share/typo3/typo3/sysext/workspaces/Classes/Event/AfterCompiledCacheableDataForWorkspaceEvent.php
 share/typo3/typo3/sysext/workspaces/Classes/Event/AfterDataGeneratedForWorkspaceEvent.php
 share/typo3/typo3/sysext/workspaces/Classes/Event/AfterRecordPublishedEvent.php
@@ -11733,6 +11738,8 @@ share/typo3/typo3/sysext/workspaces/Classes/Event/ModifyVersionDifferencesEvent.
 share/typo3/typo3/sysext/workspaces/Classes/Event/RetrievedPreviewUrlEvent.php
 share/typo3/typo3/sysext/workspaces/Classes/Event/SortVersionedDataEvent.php
 share/typo3/typo3/sysext/workspaces/Classes/EventListener/PageTreeItemsHighlighter.php
+share/typo3/typo3/sysext/workspaces/Classes/Exception/AbstractException.php
+share/typo3/typo3/sysext/workspaces/Classes/Exception/WorkspaceStageNotFoundException.php
 share/typo3/typo3/sysext/workspaces/Classes/Hook/BackendUtilityHook.php
 share/typo3/typo3/sysext/workspaces/Classes/Hook/DataHandlerHook.php
 share/typo3/typo3/sysext/workspaces/Classes/Hook/DataHandlerInternalWorkspaceTablesHook.php
