@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/08/03 09:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/09/15 12:23:24 wiz Exp $
 
-DISTNAME=	inih-r61
+DISTNAME=	inih-r62
 PKGNAME=	${DISTNAME:S/-r/-/1}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=benhoyt/}
