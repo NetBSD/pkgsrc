@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2025/08/12 06:18:22 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/09/15 11:16:00 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -12,7 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.5.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=2.0.0:../../security/py-josepy
-DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
+DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.6:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
