@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/04/13 06:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/09/15 12:15:29 adam Exp $
 
-DISTNAME=	zope_deprecation-5.1
+DISTNAME=	zope_deprecation-6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deprecation/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.deprecation
 COMMENT=	Zope hookable
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
