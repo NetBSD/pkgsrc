@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5499 2025/09/15 11:58:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5500 2025/09/15 12:16:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7961,3 +7961,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.exceptions to 6.0 [adam 2025-09-15]
 	Updated devel/py-zope.schema to 8.0 [adam 2025-09-15]
 	Updated devel/py-zope.configuration to 7.0 [adam 2025-09-15]
+	Updated devel/py-zope.testing to 6.0 [adam 2025-09-15]
+	Updated devel/py-zope.testrunner to 8.0 [adam 2025-09-15]
+	Updated www/py-zope.proxy to 7.0 [adam 2025-09-15]
+	Updated devel/py-zope.deferredimport to 6.0 [adam 2025-09-15]
+	Updated devel/py-zope.deprecation to 6.0 [adam 2025-09-15]
