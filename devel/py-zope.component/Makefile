@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/09/11 06:32:50 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/15 11:48:00 adam Exp $
 
-DISTNAME=	zope_component-6.1
+DISTNAME=	zope_component-7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.component/}
@@ -16,9 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-zope.hookable>=4.2.0:../../devel/py-zope.hookable
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.3:../../devel/py-zope.interface
 
 USE_LANGUAGES=	# none
-
-# still doesn't really work
-TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

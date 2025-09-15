@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2025/09/11 06:32:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/15 11:48:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/zope.component-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
 ${PYSITELIB}/zope/component/__init__.py
 ${PYSITELIB}/zope/component/__init__.pyc
 ${PYSITELIB}/zope/component/__init__.pyo
