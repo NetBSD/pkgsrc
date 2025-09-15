@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/19 14:54:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/15 17:02:07 taca Exp $
 bin/sass${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/exe/sass
 ${GEM_LIBDIR}/ext/sass/Rakefile
 ${GEM_LIBDIR}/ext/sass/cli.rb
 ${GEM_LIBDIR}/ext/sass/embedded_sass_pb.rb
-${GEM_LIBDIR}/ext/sass/expand-archive.ps1
 ${GEM_LIBDIR}/ext/sass/node_modules/.bin/detect-libc
 ${GEM_LIBDIR}/ext/sass/node_modules/.bin/sass
 ${GEM_LIBDIR}/ext/sass/node_modules/.package-lock.json
