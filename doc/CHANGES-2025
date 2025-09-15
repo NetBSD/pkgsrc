@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5504 2025/09/15 14:21:41 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5505 2025/09/15 14:30:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7970,3 +7970,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/hwdata to 0.399 [wiz 2025-09-15]
 	Updated textproc/inih to 62 [wiz 2025-09-15]
 	Updated www/php-glpi to 10.0.20 [taca 2025-09-15]
+	Updated www/php-contao-manager to 1.10.6 [taca 2025-09-15]
