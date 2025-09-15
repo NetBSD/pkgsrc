@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5522 2025/09/15 15:21:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5523 2025/09/15 15:23:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7991,3 +7991,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-google-protobuf to 4.32.1 [taca 2025-09-15]
 	Updated devel/ruby-metrics to 0.15.0 [taca 2025-09-15]
 	Updated devel/ruby-pkg-config to 1.6.4 [taca 2025-09-15]
+	Updated devel/ruby-regexp_parser to 2.11.3 [taca 2025-09-15]
