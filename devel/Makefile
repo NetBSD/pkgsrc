@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4526 2025/09/07 18:34:31 maya Exp $
+# $NetBSD: Makefile,v 1.4527 2025/09/15 14:32:52 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3618,6 +3618,7 @@ SUBDIR+=	rust-bindgen
 SUBDIR+=	rvm
 SUBDIR+=	sablecc
 SUBDIR+=	samurai
+SUBDIR+=	sccache
 SUBDIR+=	scintilla
 SUBDIR+=	scmcvs
 SUBDIR+=	scons
