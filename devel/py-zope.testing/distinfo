@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/02/18 10:29:02 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/09/15 12:11:14 adam Exp $
 
-BLAKE2s (zope_testing-5.1.tar.gz) = 9e4f301272b31af0fb2ec807e19cdb8a017e1e3364d9511bac09f03d3449fadd
-SHA512 (zope_testing-5.1.tar.gz) = e45053b2e3a8b3ecbe54bc18f1b6f4c274177aaaebd1385eac979bb245c8c25e8db28cb111d1d1a363bf9e2a153df97824074168a39b6c371ed6f68d902b40d2
-Size (zope_testing-5.1.tar.gz) = 42344 bytes
+BLAKE2s (zope_testing-6.0.tar.gz) = 4a8efc715cf0a50ebfbc9612be98b4d1414864c4db720a8f325622c6f3fe1d95
+SHA512 (zope_testing-6.0.tar.gz) = a2fe987a308075e611d585e3cba1d62ada883be2e44fccb59fbd4aa04095dd1774f8589f7a2f76211ffe3058da01799e105c53a7fe9d1bbba0bf88e85b85587a
+Size (zope_testing-6.0.tar.gz) = 42462 bytes
