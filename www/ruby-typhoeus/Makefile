@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/12/17 16:47:13 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/15 17:04:38 taca Exp $
 
-DISTNAME=	typhoeus-1.4.1
+DISTNAME=	typhoeus-1.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
