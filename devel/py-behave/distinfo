@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/09/03 07:18:18 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/09/15 15:07:12 adam Exp $
 
-BLAKE2s (behave-1.3.2.tar.gz) = 9efda886c364ae9b710cb9fc18238096b1a3e8825260cc34227ba3e8176bfa8f
-SHA512 (behave-1.3.2.tar.gz) = 53c7d194be6ee554283447e89252b6e6593a13bcbcf686a2be4214c1d00dd531abf9fd2a6e54e736512246e37fa33668490e31a5b21d9cd4c037a3830ffb2cae
-Size (behave-1.3.2.tar.gz) = 889462 bytes
+BLAKE2s (behave-1.3.3.tar.gz) = ad6c77ef58d5ea7a1e120a7c53bd41a9bc892368325c056a2bb3c7dcc0b27676
+SHA512 (behave-1.3.3.tar.gz) = fb098b8dbcc9468ac3c9385c03e036baaf5827891bc8f464919ba963df93c5f11f0dcc84dda563e8ce4e5e67c0f0df23b8c128d762a0de26b186b8d77c708396
+Size (behave-1.3.3.tar.gz) = 892639 bytes
