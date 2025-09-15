@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5502 2025/09/15 12:22:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5503 2025/09/15 12:23:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7968,3 +7968,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.deprecation to 6.0 [adam 2025-09-15]
 	Updated net/aria2 to 1.37.0 [wiz 2025-09-15]
 	Updated sysutils/hwdata to 0.399 [wiz 2025-09-15]
+	Updated textproc/inih to 62 [wiz 2025-09-15]
