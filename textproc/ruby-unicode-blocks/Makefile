@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/09/22 07:36:24 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/15 16:50:21 taca Exp $
 
-DISTNAME=	unicode-blocks-1.10.0
+DISTNAME=	unicode-blocks-1.11.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
