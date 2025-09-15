@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/08/29 10:49:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/09/15 11:29:02 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -395,6 +395,9 @@ ${PYSITELIB}/chirp/drivers/retevis_h777v4.pyo
 ${PYSITELIB}/chirp/drivers/retevis_ra25.py
 ${PYSITELIB}/chirp/drivers/retevis_ra25.pyc
 ${PYSITELIB}/chirp/drivers/retevis_ra25.pyo
+${PYSITELIB}/chirp/drivers/retevis_ra86.py
+${PYSITELIB}/chirp/drivers/retevis_ra86.pyc
+${PYSITELIB}/chirp/drivers/retevis_ra86.pyo
 ${PYSITELIB}/chirp/drivers/retevis_ra87.py
 ${PYSITELIB}/chirp/drivers/retevis_ra87.pyc
 ${PYSITELIB}/chirp/drivers/retevis_ra87.pyo
