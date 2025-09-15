@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/19 16:33:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/15 16:45:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LGPL-LICENSE.txt
 ${GEM_LIBDIR}/lib/rchardet.rb
@@ -35,6 +35,7 @@ ${GEM_LIBDIR}/lib/rchardet/sbcharsetprober.rb
 ${GEM_LIBDIR}/lib/rchardet/sbcsgroupprober.rb
 ${GEM_LIBDIR}/lib/rchardet/sjisprober.rb
 ${GEM_LIBDIR}/lib/rchardet/universaldetector.rb
+${GEM_LIBDIR}/lib/rchardet/utf1632prober.rb
 ${GEM_LIBDIR}/lib/rchardet/utf8prober.rb
 ${GEM_LIBDIR}/lib/rchardet/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
