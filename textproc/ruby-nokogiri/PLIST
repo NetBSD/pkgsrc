@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2025/08/10 03:35:39 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.43 2025/09/15 04:46:04 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -179,9 +179,5 @@ ${GEM_LIBDIR}/patches/libxml2/0009-allow-wildcard-namespaces.patch
 ${GEM_LIBDIR}/patches/libxml2/0010-update-config.guess-and-config.sub-for-libxml2.patch
 ${GEM_LIBDIR}/patches/libxml2/0011-rip-out-libxml2-s-libc_single_threaded-support.patch
 ${GEM_LIBDIR}/patches/libxml2/0019-xpath-Use-separate-static-hash-table-for-standard-fu.patch
-${GEM_LIBDIR}/patches/libxml2/0020-CVE-2025-6021-tree-Fix-integer-overflow-in-xmlBuildQ.patch
-${GEM_LIBDIR}/patches/libxml2/0021-CVE-2025-6170-Fix-potential-buffer-overflows-of-inte.patch
-${GEM_LIBDIR}/patches/libxml2/0022-CVE-2025-49795-schematron-Fix-null-pointer-dereferen.patch
-${GEM_LIBDIR}/patches/libxml2/0023-CVE-2025-49794-CVE-2025-49796-schematron-Fix-xmlSche.patch
 ${GEM_LIBDIR}/patches/libxslt/0001-update-config.guess-and-config.sub-for-libxslt.patch
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
