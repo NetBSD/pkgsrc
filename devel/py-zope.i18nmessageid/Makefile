@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/13 06:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/15 11:53:29 adam Exp $
 
-DISTNAME=	zope_i18nmessageid-7.0
+DISTNAME=	zope_i18nmessageid-8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.i18nmessageid/}
 
@@ -13,7 +12,7 @@ LICENSE=	zpl-2.1
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
-TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner-[0-9]*:../../devel/py-zope.testrunner
+TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner>=6.4:../../devel/py-zope.testrunner
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
