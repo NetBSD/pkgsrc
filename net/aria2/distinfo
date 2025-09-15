@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.45 2021/10/26 11:05:22 nia Exp $
+$NetBSD: distinfo,v 1.46 2025/09/15 12:22:07 wiz Exp $
 
-BLAKE2s (aria2-1.36.0.tar.xz) = 632ae5342503f7aec38c86edb0aa4f2ec933a5d1ff745d543d5ce5d91a122871
-SHA512 (aria2-1.36.0.tar.xz) = 8203dbb75274455a78c50dd4f894e631de6931ac889f26896dceed78ec38c98cdbcf07e164744f308f2bfffeae1016beec1bfdbe8cad7f3280d11376aa0c2542
-Size (aria2-1.36.0.tar.xz) = 1619036 bytes
+BLAKE2s (aria2-1.37.0.tar.xz) = 32fbcdb6ab4065cf7728b11875fe0bd26dd914a4b70cd7ec0e9f563d3c69b37e
+SHA512 (aria2-1.37.0.tar.xz) = df3b8b4de8fa8d78f203ea00c059e43585e18a229009f202e42e6a9e59db67d09df0dbba8a016e99ed73c82f59e4f8b26f86c2288afdbb96a6807cbe2c56e6b3
+Size (aria2-1.37.0.tar.xz) = 1705256 bytes
