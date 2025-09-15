@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/07/29 06:48:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/15 05:52:28 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-22.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,6 +29,7 @@ DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore
 DEPENDS+=	${PYPKGPREFIX}-resolvelib-[0-9]*:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
