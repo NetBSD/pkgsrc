@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.32 2025/07/03 23:40:38 gdt Exp $
+$NetBSD: distinfo,v 1.33 2025/09/15 11:19:16 gdt Exp $
 
-BLAKE2s (proj-9.6.2.tar.gz) = 364c54c5ff51db558399f9dfa8855a6700902f85ef6c83a920739d40b0394c12
-SHA512 (proj-9.6.2.tar.gz) = f868c27f07544ac5b998f8f10d25033438f68dbce9b8eebe39fe72f8df02cd660eb54e706eac31674829d0a5fdb0aeb0358355bee187d92afc1be9f33bc42416
-Size (proj-9.6.2.tar.gz) = 6394614 bytes
-SHA1 (patch-src_dmstor.cpp) = d373128b36619193e4f0b64630785c03d654935a
-SHA1 (patch-src_iso19111_internal.cpp) = bf2ccd10d2cc61a4fe71cf16b1f120a47bd47b53
+BLAKE2s (proj-9.7.0.tar.gz) = 7dc934035a861a8de7476752a6699d5bdede366f06910d16ad3841fcfe7a2077
+SHA512 (proj-9.7.0.tar.gz) = a1ebf827e614ba2fc42aee018022b1591eee9758b2d341451e12d45441be98b3595f04c04def3c138c915736fa595d16e50e88b6b0d68b8254c1573d2ade7fd6
+Size (proj-9.7.0.tar.gz) = 5904389 bytes
