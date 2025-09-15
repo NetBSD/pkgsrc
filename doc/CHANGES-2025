@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5506 2025/09/15 14:33:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5507 2025/09/15 14:35:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7972,3 +7972,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-glpi to 10.0.20 [taca 2025-09-15]
 	Updated www/php-contao-manager to 1.10.6 [taca 2025-09-15]
 	Updated www/ruby-aws-partitions to 1.1159.0 [taca 2025-09-15]
+	Updated www/ruby-aws-sdk-secretsmanager to 1.120.0nb1 [taca 2025-09-15]
