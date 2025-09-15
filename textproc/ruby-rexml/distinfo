@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2025/08/31 14:24:42 taca Exp $
+$NetBSD: distinfo,v 1.19 2025/09/15 16:47:07 taca Exp $
 
-BLAKE2s (rexml-3.4.2.gem) = 03d690eaa97168f6abc96ddb24a56049cdaaa058f55e77e4c16fd4d4777da402
-SHA512 (rexml-3.4.2.gem) = d92509c64d1442c690dff8d00d50582e984a9653c68e9075c19e2abe31bb9a4a31a3d4f69acd3867114575acb3b2f71b66d84c2bb4701173922f7627bf5fcbf6
-Size (rexml-3.4.2.gem) = 105984 bytes
+BLAKE2s (rexml-3.4.4.gem) = b4e96ca8f8dc9d9fc8e7d15bc2a53a7dfe21348e28b735ba65b98ae559670fdc
+SHA512 (rexml-3.4.4.gem) = 1d4e718504db4aa4481217f85068e79cf58a04cb46827b3baa88a55c3fd3804eafb98f8d295c62035ee05006818b49bc208fab98884e5caf262b66ae6f6dca8f
+Size (rexml-3.4.4.gem) = 105984 bytes
