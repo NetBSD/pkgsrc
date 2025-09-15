@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5514 2025/09/15 14:48:53 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5515 2025/09/15 15:00:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7982,3 +7982,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp2 to 1.67.1 [adam 2025-09-15]
 	Updated www/nghttp2-tools to 1.67.1 [adam 2025-09-15]
 	Updated databases/ruby-sequel to 5.96.0 [taca 2025-09-15]
+	Updated devel/ruby-traces to 0.18.2 [taca 2025-09-15]
