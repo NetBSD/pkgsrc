@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/11/06 14:56:13 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/15 16:57:50 taca Exp $
 
-DISTNAME=	unicode-scripts-1.11.0
+DISTNAME=	unicode-scripts-1.12.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
