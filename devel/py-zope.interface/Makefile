@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/04/13 06:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/09/15 11:46:50 adam Exp $
 
-DISTNAME=	zope.interface-7.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	zope_interface-8.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.interface/}
 
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/zopefoundation/zope.interface
 COMMENT=	Zope interfaces for Python
 LICENSE=	zpl-2.1
-
-WHEEL_NAME=	${DISTNAME:S/./_/}
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.0.3:../../devel/py-coverage
