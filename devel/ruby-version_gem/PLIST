@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2025/05/17 07:37:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/15 15:29:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CITATION.cff
 ${GEM_LIBDIR}/CODE_OF_CONDUCT.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/FUNDING.md
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/REEK
+${GEM_LIBDIR}/RUBOCOP.md
 ${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/version_gem.rb
 ${GEM_LIBDIR}/lib/version_gem/api.rb
@@ -14,4 +18,17 @@ ${GEM_LIBDIR}/lib/version_gem/error.rb
 ${GEM_LIBDIR}/lib/version_gem/rspec.rb
 ${GEM_LIBDIR}/lib/version_gem/ruby.rb
 ${GEM_LIBDIR}/lib/version_gem/version.rb
+${GEM_LIBDIR}/sig/all_formatters.rbs
+${GEM_LIBDIR}/sig/debug.rbs
+${GEM_LIBDIR}/sig/debug_ide.rbs
+${GEM_LIBDIR}/sig/debug_jruby.rbs
+${GEM_LIBDIR}/sig/debugging.rbs
+${GEM_LIBDIR}/sig/run_coverage.rbs
+${GEM_LIBDIR}/sig/version_gem.rbs
+${GEM_LIBDIR}/sig/version_gem/api.rbs
+${GEM_LIBDIR}/sig/version_gem/basic.rbs
+${GEM_LIBDIR}/sig/version_gem/epoch.rbs
+${GEM_LIBDIR}/sig/version_gem/error.rbs
+${GEM_LIBDIR}/sig/version_gem/ruby.rbs
+${GEM_LIBDIR}/sig/version_gem/version.rbs
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
