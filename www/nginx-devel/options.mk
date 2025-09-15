@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2025/09/09 13:26:01 osa Exp $
+# $NetBSD: options.mk,v 1.48 2025/09/15 11:36:12 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -199,7 +199,7 @@ PLIST.ndk=		yes
 .  endif
 .endfor
 .if defined(NEED_NDK) || make(makesum) || make(mdi) || make(distclean)
-NDK_VERSION=		0.3.3
+NDK_VERSION=		0.3.4
 NDK_DISTNAME=		ngx_devel_kit-${NDK_VERSION}
 NDK_DISTFILE=		${NDK_DISTNAME}.tar.gz
 SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=vision5/ngx_devel_kit/archive/}v${NDK_VERSION}.tar.gz
@@ -285,7 +285,7 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-headers-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.38
+HEADMORE_VERSION=		0.39
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
@@ -409,7 +409,7 @@ PLIST.upload=			yes
 .if !empty(PKG_OPTIONS:Mnginx-gssapi) || make(makesum) || make(mdi) || make(distclean)
 GSSAPI_GH_ACCOUNT=		stnoonan
 GSSAPI_GH_PROJECT=		spnego-http-auth-nginx-module
-GSSAPI_VERSION=			b62dadb
+GSSAPI_VERSION=			c3dbfbd
 GSSAPI_DISTNAME=		${GSSAPI_GH_PROJECT}-${GSSAPI_VERSION}
 GSSAPI_DISTFILE=		${GSSAPI_GH_ACCOUNT}-${GSSAPI_DISTNAME}_GH.tar.gz
 SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI_GH_PROJECT}/tar.gz/${GSSAPI_VERSION}?dummy=${GSSAPI_DISTFILE}}
@@ -433,7 +433,7 @@ PLIST.sts=		yes
 .if !empty(PKG_OPTIONS:Mnginx-vts) || make(makesum) || make(mdi) || make(distclean)
 VTS_GH_ACCOUNT=		vozlt
 VTS_GH_PROJECT=		nginx-module-vts
-VTS_VERSION=		b6f6528
+VTS_VERSION=		bdb2699
 VTS_DISTNAME=		${VTS_GH_PROJECT}-${VTS_VERSION}
 VTS_DISTFILE=		${VTS_GH_ACCOUNT}-${VTS_DISTNAME}_GH.tar.gz
 SITES.${VTS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${VTS_GH_ACCOUNT}/${VTS_GH_PROJECT}/tar.gz/${VTS_VERSION}?dummy=${VTS_DISTFILE}}
