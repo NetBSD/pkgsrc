@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/09/22 14:46:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/09/15 15:26:51 taca Exp $
 bin/term_cdiff${RUBY_SUFFIX}
 bin/term_colortab${RUBY_SUFFIX}
 bin/term_decolor${RUBY_SUFFIX}
@@ -7,9 +7,9 @@ bin/term_mandel${RUBY_SUFFIX}
 bin/term_plasma${RUBY_SUFFIX}
 bin/term_snow${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/term_cdiff
