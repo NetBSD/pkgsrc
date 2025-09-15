@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/09/22 14:46:33 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/15 15:26:51 taca Exp $
 
-DISTNAME=	term-ansicolor-1.11.2
+DISTNAME=	term-ansicolor-1.11.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
