@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/08/30 07:36:40 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/15 15:00:36 taca Exp $
 
-DISTNAME=	traces-0.18.1
+DISTNAME=	traces-0.18.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
