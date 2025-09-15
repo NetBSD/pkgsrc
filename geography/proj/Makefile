@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.57 2025/08/30 22:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/09/15 11:19:16 gdt Exp $
 
-VERSION_BASE=	9.6.2
+VERSION_BASE=	9.7.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
 #VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
-PKGREVISION=	3
+#PKGREVISION=	0
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -37,7 +37,8 @@ CMAKE_CONFIGURE_ARGS+=	-DEMBED_RESOURCE_FILES=OFF
 
 .include "../../devel/cmake/build.mk"
 
-# \todo GC this after resolving test issues.
+# \todo GC this.  Not needed on
+#   9.7.0RC1	NetBSD 10 amd64
 #.if ${OPSYS} == "NetBSD"
 #CFLAGS+=		-DHAVE_C99_MATH=0
 #.endif
@@ -45,7 +46,6 @@ CMAKE_CONFIGURE_ARGS+=	-DEMBED_RESOURCE_FILES=OFF
 # \todo Document, file uprsteam, and add uptream bug report URL.
 CXXFLAGS.SunOS+=	-fpermissive
 
-# \todo Debug geodtest failure, after we are up to date.
 TEST_TARGET=		test
 
 # Dependencies documented by upstream
