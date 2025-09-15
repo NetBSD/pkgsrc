@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/08/30 07:36:40 taca Exp $
+$NetBSD: distinfo,v 1.5 2025/09/15 15:00:36 taca Exp $
 
-BLAKE2s (traces-0.18.1.gem) = cc37e9e8bb6a71c7578cc58e434dfde5fecc44566ecd5e51efec3583a1dce746
-SHA512 (traces-0.18.1.gem) = 1732e67c880dacff855f94e9a8a1c3bf36395948a4aa33a820e9a6755ca5b391c3bea035d377b25ecc7623636c0ce5ddef210eee4f01d4f924a2d21c35ee1965
-Size (traces-0.18.1.gem) = 16384 bytes
+BLAKE2s (traces-0.18.2.gem) = a1eb665b78a025e6ee6b462f3cee5cc5d7b85c369fc14be2f21a18d189c44444
+SHA512 (traces-0.18.2.gem) = 6b7882d1ace11f9df7df9b70b02c43908bfd90d06f7ea5ed4ab20f405e98142689c7272a99406c12e57e938a2abeb11979fb4f2dfcc248e9f6d8d910dd819519
+Size (traces-0.18.2.gem) = 19968 bytes
