@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5527 2025/09/15 15:31:08 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5528 2025/09/15 15:32:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7996,3 +7996,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-term-ansicolor to 1.11.3 [taca 2025-09-15]
 	Updated devel/ruby-version_gem to 1.1.9 [taca 2025-09-15]
 	Updated mail/ruby-mime-types-data to 3.2025.0909 [taca 2025-09-15]
+	Updated net/ruby-connection_pool to 2.5.4 [taca 2025-09-15]
