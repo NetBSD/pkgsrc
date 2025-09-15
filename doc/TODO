@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26206 2025/09/15 11:16:47 adam Exp $
+$NetBSD: TODO,v 1.26207 2025/09/15 12:22:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o apollo-1.7
 	o argtable-2.9
 	o argus-20121202
-	o aria2-1.37.0
 	o aribas-1.64
 	o arirang-1.70
 	o arm-none-eabi-binutils-2.36.1
@@ -500,7 +499,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.30
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-8.9.0 [requires py-qt6-webengine]
+	o calibre-8.10.0 [requires py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o carbons-purple-0.2.3
