@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/08/24 16:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/09/15 13:59:05 jperkin Exp $
 
 DISTNAME=	protobuf-c-1.5.2
 PKGREVISION=	1
@@ -18,6 +18,14 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	protobuf-c/libprotobuf-c.pc.in
 TEST_TARGET=		check
+
+# Missing dependencies on generated protobuf-c/protobuf-c.pb.h
+# <various>: fatal error: protobuf-c/protobuf-c.pb.h: No such file or directory
+MAKE_JOBS_SAFE=	no
+
+# XXX: Not a great fix, some issue with abseil vs protobuf vs SunOS ld.so is
+# causing a mutex to be recursively locked during init, but it works for now.
+LDFLAGS.SunOS+=	-Wl,-z,now
 
 pre-configure:
 	${LN} -s ${BUILDLINK_DIR}/include/google ${WRKSRC}/google
