@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/01/19 16:33:40 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/15 16:45:23 taca Exp $
 
-DISTNAME=	rchardet-1.9.0
+DISTNAME=	rchardet-1.10.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
