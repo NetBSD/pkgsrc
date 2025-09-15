@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5494 2025/09/15 11:19:23 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5495 2025/09/15 11:20:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -7951,3 +7951,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-dns-sakuracloud to 5.0.0 [adam 2025-09-15]
 	Updated security/py-certbot-nginx to 5.0.0 [adam 2025-09-15]
 	Updated geography/proj to 9.7.0 [gdt 2025-09-15]
+	Updated geography/proj-data to 1.23 [gdt 2025-09-15]
