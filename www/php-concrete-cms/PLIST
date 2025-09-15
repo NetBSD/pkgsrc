@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/07/26 06:53:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/09/15 14:43:34 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -1958,9 +1958,9 @@ ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/permissions/users
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/permissions/workflows.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/authentication.php
-${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/automated_logout.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/deactivation.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/global_password_reset.php
+${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/logout.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/open.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/password_requirements.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/registration/postlogin.php
@@ -7090,9 +7090,9 @@ ${CC_WEBDIR}/concrete/single_pages/dashboard/system/permissions/view.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/permissions/workflows.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/authentication.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/authentication/form.php
-${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/automated_logout.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/deactivation.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/global_password_reset.php
+${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/logout.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/open.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/password_requirements.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/registration/postlogin.php
@@ -9213,6 +9213,7 @@ ${CC_WEBDIR}/concrete/src/Logging/Menu.php
 ${CC_WEBDIR}/concrete/src/Logging/Processor/ConcretePageProcessor.php
 ${CC_WEBDIR}/concrete/src/Logging/Processor/ConcreteUserProcessor.php
 ${CC_WEBDIR}/concrete/src/Logging/Processor/ServerInfoProcessor.php
+${CC_WEBDIR}/concrete/src/Logging/Processor/StackTraceProcessor.php
 ${CC_WEBDIR}/concrete/src/Logging/Search/ColumnSet/Available.php
 ${CC_WEBDIR}/concrete/src/Logging/Search/ColumnSet/Column/ChannelColumn.php
 ${CC_WEBDIR}/concrete/src/Logging/Search/ColumnSet/Column/LevelColumn.php
@@ -9562,6 +9563,7 @@ ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/DateLastModifiedColumn.ph
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/DatePublicColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/PageIDColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/PageTemplateColumn.php
+${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/RandomColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/SitemapDisplayOrderColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/UrlPathColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/ColumnSet.php
@@ -10714,6 +10716,7 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241204161559.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241210181033.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241217194138.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250227155410.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20250827152432.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
@@ -12098,6 +12101,7 @@ ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/doctrine/annotations
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/doctrine/orm/UnitOfWork-createEntity-continue.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/doctrine/orm/access-array-offset-on-null.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/egulias/email-validator/access-array-offset-on-null.patch
+${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/gettext/gettext/fix-wrong-conversion.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/gettext/gettext/php8-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/laminas/laminas-code/php8.1-compatibility.patch
 ${CC_WEBDIR}/concrete/vendor/concretecms/dependency-patches/lcobucci/jwt/php8-compatibility.patch
