@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/28 09:02:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/09/15 11:16:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -17,6 +17,9 @@ ${PYSITELIB}/certbot_dns_route53/_internal/dns_route53.pyo
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.py
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.pyc
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.pyo
+${PYSITELIB}/certbot_dns_route53/_internal/tests/conftest.py
+${PYSITELIB}/certbot_dns_route53/_internal/tests/conftest.pyc
+${PYSITELIB}/certbot_dns_route53/_internal/tests/conftest.pyo
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.py
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyc
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyo
