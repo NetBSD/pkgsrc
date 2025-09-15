@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2025/06/02 15:26:15 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/15 11:19:54 gdt Exp $
 
 # Upstream has github tags 1.N.0 but the release tarball is actually
 # 1.N, so we use the version from the tarball, since that download
 # directories are a more longstanding and lasting concept than github.
 # Reported upstream by email 2025-04-27.
-VERSION_BASE=	1.22
+VERSION_BASE=	1.23
 #VERSION_RC=	RC1
 VERSION=	${VERSION_BASE}${VERSION_RC}
 DISTNAME=	proj-data-${VERSION}

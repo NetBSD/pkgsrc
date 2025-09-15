@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/06/02 15:26:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/09/15 11:19:54 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -230,6 +230,7 @@ share/proj/no_kv_ETRS89NO_NGO48_TIN.json
 share/proj/no_kv_HREF2018B_NN2000_EUREF89.tif
 share/proj/no_kv_NKGETRF14_EPSG7922_2000.tif
 share/proj/no_kv_README.txt
+share/proj/no_kv_Svalbard_EUREF89_SVD2024.tif
 share/proj/no_kv_arcgp-2006-sk.tif
 share/proj/no_kv_href2008a.tif
 share/proj/nz_linz_README.txt
@@ -303,6 +304,7 @@ share/proj/se_lantmateriet_README.txt
 share/proj/se_lantmateriet_SWEN17_RH2000.tif
 share/proj/si_gurs_README.txt
 share/proj/si_gurs_SLO-VRP2016-Koper.tif
+share/proj/si_gurs_SLO-VTP2024.tif
 share/proj/sk_gku_JTSK03_to_JTSK.tif
 share/proj/sk_gku_README.txt
 share/proj/sk_gku_Slovakia_ETRS89h_to_Baltic1957.tif
