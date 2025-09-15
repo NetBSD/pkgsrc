@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/08/11 10:51:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/15 12:14:25 adam Exp $
 
-DISTNAME=	zope_deferredimport-5.1
+DISTNAME=	zope_deferredimport-6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deferredimport/}
