@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/09/13 09:16:25 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/16 05:45:36 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-25.0.0
 PKGNAME=	${PYPKGPREFIX}-liblktlang-25.0
@@ -21,6 +21,9 @@ HAS_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 GCC_REQD+=	14
+
+# langkit uses deprecated pipes module
+PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 CREATE_INPLACE_BUILD_TARGETS=	static-pic
 
@@ -78,9 +81,6 @@ pre-install:
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 
 DEPENDS+=	${PYPKGPREFIX}-langkit-25.*:../../devel/py-langkit
-
-# langkit uses deprecated pipes module
-PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/tool.mk"
