@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/09/16 23:38:53 gdt Exp $
 
 DISTNAME=	userland-20170109
 PKGREVISION=	3
@@ -20,6 +20,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 USE_LANGUAGES=	c c++
 
 USE_CMAKE=	yes
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 # kludge until fixed upstream
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_TOOLCHAIN_FILE=${WRKSRC}/makefiles/cmake/toolchains/arm-netbsdelf.cmake
 USE_TOOLS+=	bash:run pkg-config
 
