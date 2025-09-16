@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/09/03 14:38:04 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/09/16 09:55:41 prlw1 Exp $
 
 DISTNAME=	jupyterlab-4.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Next-generation user interface for Project Jupyter
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.21.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0.3.2:../../devel/py-hatch-jupyter-builder
 DEPENDS+=	${PYPKGPREFIX}-async-lru>=1.0.0:../../devel/py-async-lru
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.25.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-ipykernel>=6.5.0:../../devel/py-ipykernel
