@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2025/08/10 21:51:59 gdt Exp $
+# $NetBSD: Makefile,v 1.83 2025/09/16 12:23:20 gdt Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		ups-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Network UPS Tools
 
 PLIST_VARS+=		python
@@ -17,13 +18,16 @@ SUBST_NOOP_OK.man-so=	yes
 # Don't regenerate any files in tools/.
 TOOLS_SCRIPT.perl=	exit 1
 
+# nut looks aggressively for asciidoc in a way that is hard to turn off,
+# and builds html docs.   asciidoc isn't that big, so just depend on it.
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+
 CONFIGURE_ARGS+=	--with-drvpath=${NUT_DRVDIR:Q}
 CONFIGURE_ARGS+=	--with-pidpath=${NUT_RUNDIR:Q}
 CONFIGURE_ARGS+=	--with-altpidpath=${NUT_RUNDIR:Q}
 
 # nut, bizarrely, does not install headers by default
 CONFIGURE_ARGS+=	--with-dev
-CONFIGURE_ARGS+=	--without-asciidoc
 
 # Auto-enables if prereqs (not documented) are present.  Unclear
 # usefulness, so until rationale to enable (and patch), disable.
