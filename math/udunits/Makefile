@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2021/06/23 19:54:03 bacon Exp $
+# $NetBSD: Makefile,v 1.43 2025/09/16 20:25:18 gutteridge Exp $
 
 DISTNAME=		udunits-2.2.26
+PKGREVISION=		1
 CATEGORIES=		math devel
 MASTER_SITES=		ftp://ftp.unidata.ucar.edu/pub/udunits/
 
