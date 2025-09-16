@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26210 2025/09/16 12:35:20 gutteridge Exp $
+$NetBSD: TODO,v 1.26211 2025/09/16 14:13:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -655,7 +655,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
-	o gh-2.78.0
+	o gh-2.79.0
 	o ghdl-5.1.0
 	o git-cinnabar-0.7.2
 	o gitea-1.24.3
