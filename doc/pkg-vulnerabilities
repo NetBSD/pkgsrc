@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.554 2025/09/15 22:09:20 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.555 2025/09/16 15:38:44 kim Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26367,11 +26367,11 @@ assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-2757
 assimp<6.0.2	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3158
 p5-CryptX<0.087	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-40914
 erlang<27.3.4.1	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-4748
-libxml2-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49794
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49795
-libxml2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49796
-libxml2-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6021
-libxml2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6170
+libxml2<2.14.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-49794
+libxml2<2.14.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49795
+libxml2<2.14.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49796
+libxml2<2.14.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6021
+libxml2<2.14.5	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6170
 libxslt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-7424
 libxslt-[0-9]*	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-7425
 libxslt-[0-9]*	unknown	https://gitlab.gnome.org/Teams/Releng/security/-/wikis/2025#libxml2-and-libxslt
