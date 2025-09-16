@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/09/16 12:37:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/16 12:57:48 gutteridge Exp $
 
 DISTNAME=	gdb-16.3
 PKGNAME=	cross-arm-none-eabi-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 EXTRACT_SUFX=	.tar.xz
@@ -34,6 +34,7 @@ REPLACE_BASH+=          gdb/gstack-1.in
 # If ever necessary, this should be fixed using REPLACE_BASH.
 CHECK_PORTABILITY_SKIP+=	sim/testsuite/sim/bfin/run-tests.sh
 
+.include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
