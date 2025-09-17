@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/09/07 18:43:37 maya Exp $
+$NetBSD: distinfo,v 1.2 2025/09/17 00:38:47 maya Exp $
 
 BLAKE2s (4d63.com_embedfiles_@v_v0.0.0-20190311033909-995e0740726f.mod) = 084bcd38a6c9e32740720a934887e85b0b23c6ac1f26644a01a32d203a5b977a
 SHA512 (4d63.com_embedfiles_@v_v0.0.0-20190311033909-995e0740726f.mod) = 793277aa19d4cf428ace711262227ad4b864c9d9ecff819d9cf99a9dd7fb95899f9647cd52fa7645115c7a618f2088e6513f3fa4392659c802975db45d95de7a
@@ -105,9 +105,9 @@ Size (github.com__alec_aivazis_survey_v2_@v_v2.3.7.zip) = 162357 bytes
 BLAKE2s (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.mod) = 80a5c6215a577297e6f3f6a57b2a00c7c523ff44a87e59e8134248f94b41af70
 SHA512 (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.mod) = be976846ed78cec5b19618c7364c47e66c3475519bed166ad1e6b666399ea08028fa621869ab4980981fc70256acc9a7dd1c1e52c8d3d44cb0ac75f9907b6d3e
 Size (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.mod) = 41 bytes
-BLAKE2s (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 721d90ff1968c61efbbf9b6918850feca6c93702c50aa157436b3a163a1b7103
-SHA512 (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 22ae6ad5240ab811ad3563c165b953218bb29f5c29348a3e26ed066873353db5f01f556115568092975d1d4dfebb1a9996109586646dd888469530923ba47804
-Size (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 50524160 bytes
+BLAKE2s (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 20231103d823a34a4acb901f24aff7379512b47d674761936759dd1e02023574
+SHA512 (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 1a1f3255871ce29cbc9c89e755ae386f273c3aec2520cd0ea22bb2ebd3568dde90547bc069b6cb596a69f8c1f38037769edd09c7700e08ea09871f7fe2ecf58b
+Size (github.com__azure_azure-sdk-for-go_@v_v68.0.0+incompatible.zip) = 69068229 bytes
 BLAKE2s (github.com__azure_go-ansiterm_@v_v0.0.0-20250102033503-faa5f7b0171c.mod) = 8218fce6a82b4a9d722973098d905bee2ba1b8d28e58e556bac92cff42ec7a04
 SHA512 (github.com__azure_go-ansiterm_@v_v0.0.0-20250102033503-faa5f7b0171c.mod) = ff8b1d90d4e4a62c86c2540c22cf472dc432f29768b3387d2e39b333deee1c19b24752f8642684624ba483c699d77128f619d3d880ceac7003294e7a3a27cfaa
 Size (github.com__azure_go-ansiterm_@v_v0.0.0-20250102033503-faa5f7b0171c.mod) = 106 bytes
