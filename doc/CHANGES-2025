@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5549 2025/09/17 13:46:43 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5550 2025/09/17 14:32:07 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8019,3 +8019,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-glpi to 10.0.20nb1 [taca 2025-09-17]
 	Updated fonts/noto-emoji-ttf to 2.051 [wiz 2025-09-17]
 	Updated devel/jj to 0.33.0 [wiz 2025-09-17]
+	Added sysutils/wimlib version 1.14.4 [js 2025-09-17]
