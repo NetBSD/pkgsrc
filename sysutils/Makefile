@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1164 2025/09/07 18:44:01 maya Exp $
+# $NetBSD: Makefile,v 1.1165 2025/09/17 14:31:41 js Exp $
 #
 
 COMMENT=	System utilities
@@ -940,6 +940,7 @@ SUBDIR+=	wbm-useradmin
 SUBDIR+=	wbm-virtual-server
 SUBDIR+=	webmin
 SUBDIR+=	whowatch
+SUBDIR+=	wimlib
 SUBDIR+=	wipe
 SUBDIR+=	within
 SUBDIR+=	wmSMPmon
