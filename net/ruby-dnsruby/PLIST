@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2024/03/24 14:22:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/17 17:08:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
+${GEM_LIBDIR}/.github/FUNDING.yml
+${GEM_LIBDIR}/.github/dependabot.yml
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.yardopts
