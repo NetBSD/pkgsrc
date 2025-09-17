@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26212 2025/09/16 21:33:27 wiz Exp $
+$NetBSD: TODO,v 1.26213 2025/09/17 13:46:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -552,6 +552,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dega-1.12
 	o delegate-9.9.13
 	o diction-1.14
+	o diesel-2.3.0
 	o direvent-5.2
 	o distcc-pump-3.3.5
 	o distccmon-gnome-3.3.5
@@ -794,7 +795,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
-	o jj-0.33.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -1321,6 +1321,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o utilisp-1.14
 	o uv-0.7.13
+	o varnish-8.0.0
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
