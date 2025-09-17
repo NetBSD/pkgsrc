@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5550 2025/09/17 14:32:07 js Exp $
+$NetBSD: CHANGES-2025,v 1.5551 2025/09/17 21:41:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8020,3 +8020,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/noto-emoji-ttf to 2.051 [wiz 2025-09-17]
 	Updated devel/jj to 0.33.0 [wiz 2025-09-17]
 	Added sysutils/wimlib version 1.14.4 [js 2025-09-17]
+	Downgraded devel/cargo-about to 0.7.1 [wiz 2025-09-17]
