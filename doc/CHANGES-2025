@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5548 2025/09/17 08:08:54 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5549 2025/09/17 13:46:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8018,3 +8018,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/expat to 2.7.2 [wiz 2025-09-16]
 	Updated www/php-glpi to 10.0.20nb1 [taca 2025-09-17]
 	Updated fonts/noto-emoji-ttf to 2.051 [wiz 2025-09-17]
+	Updated devel/jj to 0.33.0 [wiz 2025-09-17]
