@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5553 2025/09/18 08:29:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5554 2025/09/18 08:30:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8022,4 +8022,3 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/wimlib version 1.14.4 [js 2025-09-17]
 	Downgraded devel/cargo-about to 0.7.1 [wiz 2025-09-17]
 	Updated shells/oh-my-posh to 26.23.6 [pin 2025-09-18]
-	Updated wip/py-docutils to 0.22.1 [wiz 2025-09-18]
