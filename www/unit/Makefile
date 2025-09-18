@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2025/07/10 20:54:15 osa Exp $
+# $NetBSD: Makefile,v 1.26 2025/09/18 11:19:05 osa Exp $
 
 .include "../../www/unit/version.mk"
 
 DISTNAME=	unit-${UNIT_VERSION}
-PKGREVISION=	2
 
 COMMENT=	Dynamic web application server
 
