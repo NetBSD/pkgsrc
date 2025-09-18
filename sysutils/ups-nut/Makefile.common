@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2025/08/10 21:51:59 gdt Exp $
+# $NetBSD: Makefile.common,v 1.22 2025/09/18 16:27:28 gdt Exp $
 # used by sysutils/ups-nut/Makefile
 # used by sysutils/ups-nut-cgi/Makefile
 # used by sysutils/ups-nut-snmp/Makefile
@@ -8,6 +8,11 @@
 DISTNAME=		nut-2.8.4
 CATEGORIES=		sysutils
 MASTER_SITES=		https://networkupstools.org/source/${PKGVERSION_NOREV:R}/
+# Upstream placed an rc1 distfile at nut-2.8.4.tar.gz, and later
+# replaced it with a distfile corresponding to rc4 (which was the
+# actual release).
+# This is temporary until the next update.
+DIST_SUBDIR=		ups-nut-2.8.4bis
 
 MAINTAINER?=		gdt@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
