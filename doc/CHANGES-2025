@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5554 2025/09/18 08:30:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5555 2025/09/18 11:20:37 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8022,3 +8022,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/wimlib version 1.14.4 [js 2025-09-17]
 	Downgraded devel/cargo-about to 0.7.1 [wiz 2025-09-17]
 	Updated shells/oh-my-posh to 26.23.6 [pin 2025-09-18]
+	Updated devel/libunit to 1.35.0 [osa 2025-09-18]
+	Updated www/unit to 1.35.0 [osa 2025-09-18]
+	Updated www/unit-perl to 1.35.0 [osa 2025-09-18]
+	Updated www/unit-php to 1.35.0 [osa 2025-09-18]
+	Updated www/unit-python to 1.35.0 [osa 2025-09-18]
+	Updated www/unit-ruby to 1.35.0 [osa 2025-09-18]
