@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/02/08 04:16:34 taca Exp $
+# $NetBSD: Makefile,v 1.17 2025/09/18 11:19:05 osa Exp $
 
 PKGNAME=	unit-${LANG}${PHP_VER}-${UNIT_VERSION}
-PKGREVISION=	1
 COMMENT=	PHP module for NGINX Unit
 
 LANG=		php
