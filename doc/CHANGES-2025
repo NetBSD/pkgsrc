@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5565 2025/09/19 13:55:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5566 2025/09/19 13:56:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8038,3 +8038,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.23.8 [pin 2025-09-19]
 	Updated net/slumber to 4.0.1 [pin 2025-09-19]
 	Updated textproc/tuc to 1.3.0 [pin 2025-09-19]
+	Updated x11/xterm to 402 [pin 2025-09-19]
