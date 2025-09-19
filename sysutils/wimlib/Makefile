@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/09/18 21:51:36 js Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/19 20:05:32 js Exp $
 
 DISTNAME=	wimlib-1.14.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils devel
 MASTER_SITES=	https://wimlib.net/downloads/
 
@@ -11,14 +11,9 @@ COMMENT=	Open source Windows Imaging (WIM) library and tools
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake bash:run
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/usr/bin/env bash
-REPLACE.bash.new=	${PREFIX}/bin/bash
-REPLACE_FILES.bash=	programs/mkwinpeimg.in
-
-DEPENDS=		bash>=0:../../shells/bash
+REPLACE_BASH=		programs/mkwinpeimg.in
 
 .include "../../filesystems/libntfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
