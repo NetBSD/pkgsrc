@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2025/02/05 22:14:11 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.50 2025/09/19 13:35:29 nia Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -82,10 +82,10 @@ lib/cmake/boost_math_c99f-${PKGVERSION}/boost_math_c99f-config-version.cmake
 lib/cmake/boost_math_c99f-${PKGVERSION}/boost_math_c99f-config.cmake
 lib/cmake/boost_math_c99f-${PKGVERSION}/libboost_math_c99f-variant-shared.cmake
 lib/cmake/boost_math_c99f-${PKGVERSION}/libboost_math_c99f-variant-static.cmake
-${PLIST.longdbl}lib/cmake/boost_math_c99l-${PKGVERSION}/boost_math_c99l-config-version.cmake
-${PLIST.longdbl}lib/cmake/boost_math_c99l-${PKGVERSION}/boost_math_c99l-config.cmake
-${PLIST.longdbl}lib/cmake/boost_math_c99l-${PKGVERSION}/libboost_math_c99l-variant-shared.cmake
-${PLIST.longdbl}lib/cmake/boost_math_c99l-${PKGVERSION}/libboost_math_c99l-variant-static.cmake
+lib/cmake/boost_math_c99l-${PKGVERSION}/boost_math_c99l-config-version.cmake
+lib/cmake/boost_math_c99l-${PKGVERSION}/boost_math_c99l-config.cmake
+lib/cmake/boost_math_c99l-${PKGVERSION}/libboost_math_c99l-variant-shared.cmake
+lib/cmake/boost_math_c99l-${PKGVERSION}/libboost_math_c99l-variant-static.cmake
 lib/cmake/boost_math_tr1-${PKGVERSION}/boost_math_tr1-config-version.cmake
 lib/cmake/boost_math_tr1-${PKGVERSION}/boost_math_tr1-config.cmake
 lib/cmake/boost_math_tr1-${PKGVERSION}/libboost_math_tr1-variant-shared.cmake
@@ -94,10 +94,10 @@ lib/cmake/boost_math_tr1f-${PKGVERSION}/boost_math_tr1f-config-version.cmake
 lib/cmake/boost_math_tr1f-${PKGVERSION}/boost_math_tr1f-config.cmake
 lib/cmake/boost_math_tr1f-${PKGVERSION}/libboost_math_tr1f-variant-shared.cmake
 lib/cmake/boost_math_tr1f-${PKGVERSION}/libboost_math_tr1f-variant-static.cmake
-${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/boost_math_tr1l-config-version.cmake
-${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/boost_math_tr1l-config.cmake
-${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-variant-shared.cmake
-${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-variant-static.cmake
+lib/cmake/boost_math_tr1l-${PKGVERSION}/boost_math_tr1l-config-version.cmake
+lib/cmake/boost_math_tr1l-${PKGVERSION}/boost_math_tr1l-config.cmake
+lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-variant-shared.cmake
+lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-variant-static.cmake
 lib/cmake/boost_mpi-${PKGVERSION}/boost_mpi-config-version.cmake
 lib/cmake/boost_mpi-${PKGVERSION}/boost_mpi-config.cmake
 lib/cmake/boost_mpi_python-${PKGVERSION}/boost_mpi_python-config-version.cmake
@@ -237,18 +237,18 @@ lib/libboost_math_c99.so.${PKGVERSION}
 lib/libboost_math_c99f.a
 lib/libboost_math_c99f.so
 lib/libboost_math_c99f.so.${PKGVERSION}
-${PLIST.longdbl}lib/libboost_math_c99l.a
-${PLIST.longdbl}lib/libboost_math_c99l.so
-${PLIST.longdbl}lib/libboost_math_c99l.so.${PKGVERSION}
+lib/libboost_math_c99l.a
+lib/libboost_math_c99l.so
+lib/libboost_math_c99l.so.${PKGVERSION}
 lib/libboost_math_tr1.a
 lib/libboost_math_tr1.so
 lib/libboost_math_tr1.so.${PKGVERSION}
 lib/libboost_math_tr1f.a
 lib/libboost_math_tr1f.so
 lib/libboost_math_tr1f.so.${PKGVERSION}
-${PLIST.longdbl}lib/libboost_math_tr1l.a
-${PLIST.longdbl}lib/libboost_math_tr1l.so
-${PLIST.longdbl}lib/libboost_math_tr1l.so.${PKGVERSION}
+lib/libboost_math_tr1l.a
+lib/libboost_math_tr1l.so
+lib/libboost_math_tr1l.so.${PKGVERSION}
 lib/libboost_nowide.a
 lib/libboost_nowide.so
 lib/libboost_nowide.so.${PKGVERSION}
