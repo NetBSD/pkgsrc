@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5555 2025/09/18 11:20:37 osa Exp $
+$NetBSD: CHANGES-2025,v 1.5556 2025/09/19 06:57:17 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8028,3 +8028,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/unit-php to 1.35.0 [osa 2025-09-18]
 	Updated www/unit-python to 1.35.0 [osa 2025-09-18]
 	Updated www/unit-ruby to 1.35.0 [osa 2025-09-18]
+	Updated devel/abseil to 20250814.0nb1 [prlw1 2025-09-19]
