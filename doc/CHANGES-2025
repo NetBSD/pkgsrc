@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5563 2025/09/19 13:51:22 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5564 2025/09/19 13:53:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8036,3 +8036,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lla to 0.4.2 [pin 2025-09-19]
 	Updated devel/mise to 2025.9.12 [pin 2025-09-19]
 	Updated shells/oh-my-posh to 26.23.8 [pin 2025-09-19]
+	Updated net/slumber to 4.0.1 [pin 2025-09-19]
