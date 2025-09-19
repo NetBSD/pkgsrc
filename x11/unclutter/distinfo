@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:34:30 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/09/19 06:24:25 mrg Exp $
 
 BLAKE2s (unclutter-8.tar.Z) = a2e9c031d0052bf949028a8212468f8944426d0bb5cd5b9dae211267f043a1d7
 SHA512 (unclutter-8.tar.Z) = 9a64e6eceae685cf34b1ea85818735f8f85514ba1eea262476653886d74e469cfd6b9a39edbd098b138a5c89e6b97b42cf251bee59272c76cbeba190979744b4
 Size (unclutter-8.tar.Z) = 12344 bytes
+SHA1 (patch-unclutter.c) = a415c05f241d8e65b0639ab908c63f37c235e152
+SHA1 (patch-vroot.h) = 1eff860bf3b5bd4de263284adf4c8b18742da791
