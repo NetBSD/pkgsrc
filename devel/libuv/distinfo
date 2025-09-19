@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.85 2025/04/28 05:53:02 adam Exp $
+$NetBSD: distinfo,v 1.86 2025/09/19 07:06:49 mrg Exp $
 
 BLAKE2s (libuv-1.51.0.tar.gz) = 4fb27415211b4d6b0bed33452f9ac29f36b9c90c5d48ddd0a7d16cd3d842139c
 SHA512 (libuv-1.51.0.tar.gz) = cf3ca916fc3a762a194dac86718a5a7fe24f230e34172a48f9b3401ad72fbc1cf21b46ceaba956cdf6783d323e518d40f8632fff965943869819a1c26992a3c1
 Size (libuv-1.51.0.tar.gz) = 1352232 bytes
 SHA1 (patch-autogen.sh) = 99790076b91d579eb55506749e4803ab7cdfaa4c
-SHA1 (patch-src_unix_core.c) = 2daf6aeed2d32b0db49c36cf7c129d7f7962178e
+SHA1 (patch-src_unix_core.c) = 1b1bb19b185f87aeb54aca3dcfedb1cd0978c384
 SHA1 (patch-src_unix_fs.c) = 510693bb63cac7bf25e04c64e2d231de80b149d1
 SHA1 (patch-src_unix_netbsd.c) = 071a2a853f9a73dc72e24d63316aa21b28669469
 SHA1 (patch-src_unix_tty.c) = 157be1b1272dc38b3605a9822316e6cb2ddb6f22
