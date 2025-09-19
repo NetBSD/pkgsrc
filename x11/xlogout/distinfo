@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:34:51 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/09/19 06:11:31 mrg Exp $
 
 BLAKE2s (xlogout.tar.gz) = 775188c36bd846119cd1b24f3fe13b0e411317c8b20f44f606c9e09579d77e81
 SHA512 (xlogout.tar.gz) = ee89b4286a1ceab96aa3bdddab168f7cdc34c4eceac37f913c7474acd141713b0e11a24882794182d296176157fb9977985fe2f8d7121c3d4911d4d22fecd2c3
 Size (xlogout.tar.gz) = 5612 bytes
 SHA1 (patch-aa) = 1ebcafc86e02690f5400c5fc30f5983c555eea84
-SHA1 (patch-xlogout_c) = af7c8c2fb0fcaa69f31a3beb1fc458e19e24039b
+SHA1 (patch-xlogout_c) = 568361bc9e72d52aea9eb6218eb15fbaf1401ca2
