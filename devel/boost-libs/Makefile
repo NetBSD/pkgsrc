@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2025/04/17 21:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/09/19 13:35:29 nia Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -12,7 +12,7 @@ PKGREVISION=		2
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context fiber log longdbl stacktrace_from_exception
+PLIST_VARS+=		context fiber log stacktrace_from_exception
 
 .include "../../mk/compiler.mk"
 
@@ -41,12 +41,6 @@ BJAM_BUILD+=		boost.stacktrace.from_exception=off
 BJAM_ARGS+=		--without-log
 .else
 PLIST.log=		yes
-.endif
-
-# FIXME: other systems might also not support 'long double'
-# see patch-boost_math_tools_config.hpp
-.if ${OPSYS} != "FreeBSD"
-PLIST.longdbl=		yes
 .endif
 
 PLIST_VARS+=		stacktrace_addr2line
@@ -85,8 +79,6 @@ PRINT_PLIST_AWK+=	/boost_context/ { $$0 = "$${PLIST.context}"$$0 }
 PRINT_PLIST_AWK+=	/boost_coroutine/ { $$0 = "$${PLIST.context}"$$0 }
 PRINT_PLIST_AWK+=	/boost_fiber/ { $$0 = "$${PLIST.fiber}"$$0 }
 PRINT_PLIST_AWK+=	/boost_log/ { $$0 = "$${PLIST.log}"$$0 }
-PRINT_PLIST_AWK+=	/boost_math_c99l/ { $$0 = "$${PLIST.longdbl}"$$0 }
-PRINT_PLIST_AWK+=	/boost_math_tr1l/ { $$0 = "$${PLIST.longdbl}"$$0 }
 PRINT_PLIST_AWK+=	/boost_stacktrace_from_exception/ { $$0 = "$${PLIST.stacktrace_from_exception}"$$0 }
 
 .include "../../archivers/bzip2/buildlink3.mk"
