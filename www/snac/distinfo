@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2025/09/03 18:52:13 schmonz Exp $
+$NetBSD: distinfo,v 1.37 2025/09/19 13:26:42 schmonz Exp $
 
-BLAKE2s (snac-2.82.tar.gz) = 922d8ac9a5b43d4cf8cba4fc7034c05c9a03d4fbf6ae5a1a3a8e6ea25553c4ee
-SHA512 (snac-2.82.tar.gz) = 3ce88497387ff6a56fc389c8e842870331558e85be4449cf4d56cbee05ac1f03b52599639b434e34223ddbe2b0b99d046b942b65fb29dfc141b64e585adccd9d
-Size (snac-2.82.tar.gz) = 290461 bytes
+BLAKE2s (snac-2.83.tar.gz) = ad9b8c4e5aff370331fcfe390178b73e74052a30da76d4dbd177243847a02df3
+SHA512 (snac-2.83.tar.gz) = ee6ebbb37378a1ccaf519929a95994b98bfbf5c195d58a19f4cdfcd6f1c8c59037717a851692b494d317e05cb8164aa23943fec29f5a6447573581a9ce0be30a
+Size (snac-2.83.tar.gz) = 295898 bytes
