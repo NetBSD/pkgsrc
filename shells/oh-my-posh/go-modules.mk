@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.105 2025/09/18 06:36:42 pin Exp $
+# $NetBSD: go-modules.mk,v 1.106 2025/09/19 13:50:13 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -32,8 +32,8 @@ GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/buger/jsonparser/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.21.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.9.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.9.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.3.10.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.2.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/colorprofile/@v/v0.3.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/harmonica/@v/v0.2.0.mod
