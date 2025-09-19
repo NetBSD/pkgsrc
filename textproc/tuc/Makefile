@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/04/04 20:23:37 pin Exp $
+# $NetBSD: Makefile,v 1.13 2025/09/19 13:54:03 pin Exp $
 
-DISTNAME=	tuc-1.2.0
+DISTNAME=	tuc-1.3.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=riquito/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
