@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.90 2025/09/08 12:53:06 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.91 2025/09/19 13:48:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -10,7 +10,6 @@ CARGO_CRATE_DEPENDS+=	age-core-0.11.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.21
-CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	ansi-str-0.9.0
 CARGO_CRATE_DEPENDS+=	ansitok-0.3.0
@@ -61,7 +60,7 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.3
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
 CARGO_CRATE_DEPENDS+=	chacha20-0.9.1
 CARGO_CRATE_DEPENDS+=	chacha20poly1305-0.10.1
-CARGO_CRATE_DEPENDS+=	chrono-0.4.41
+CARGO_CRATE_DEPENDS+=	chrono-0.4.42
 CARGO_CRATE_DEPENDS+=	chrono-tz-0.9.0
 CARGO_CRATE_DEPENDS+=	chrono-tz-build-0.3.0
 CARGO_CRATE_DEPENDS+=	ci_info-0.14.14
