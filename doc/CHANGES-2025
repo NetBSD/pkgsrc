@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5558 2025/09/19 13:26:47 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5559 2025/09/19 13:43:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8031,3 +8031,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/abseil to 20250814.0nb1 [prlw1 2025-09-19]
 	Updated net/tor to 0.4.8.18 [leot 2025-09-19]
 	Updated www/snac to 2.83 [schmonz 2025-09-19]
+	Updated sysutils/broot to 1.49.1 [pin 2025-09-19]
