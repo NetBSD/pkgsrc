@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2025/08/30 22:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/09/21 21:22:38 wiz Exp $
 #
 
 DISTNAME=	pcb-4.1.3
@@ -6,7 +6,7 @@ PKGREVISION=	19
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcb.geda-project.org/
 COMMENT=	Printed circuit board layout system
 LICENSE=	gnu-gpl-v2

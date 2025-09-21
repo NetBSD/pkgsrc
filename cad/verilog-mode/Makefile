@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2022/05/14 22:25:32 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2025/09/21 21:22:39 wiz Exp $
 #
 
 DISTNAME=		verilog-mode-3.60
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 # The latest can be fetched interactively from
 # MASTER_SITES=		http://www.verilog.com/register.html
 
-MAINTAINER=		dmcmahill@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.verilog.com/verilog-mode.html
 COMMENT=		Verilog mode for Emacs
 

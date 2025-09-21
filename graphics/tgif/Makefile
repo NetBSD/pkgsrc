@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.69 2025/04/24 14:14:40 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/09/21 21:22:40 wiz Exp $
 
 DISTNAME=		tgif-4.2.5
 PKGREVISION=		2
 CATEGORIES=		graphics
 #MASTER_SITES=		ftp://bourbon.usc.edu/pub/tgif/free-of-charge/
 
-MAINTAINER=		dmcmahill@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bourbon.usc.edu/tgif/tgif.html
 COMMENT=		Fully-featured X11 drawing program
 
