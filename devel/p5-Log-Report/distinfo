@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2025/08/10 06:39:27 wen Exp $
+$NetBSD: distinfo,v 1.31 2025/09/21 02:50:44 wen Exp $
 
-BLAKE2s (Log-Report-1.40.tar.gz) = b6d70633e8c327541f36bf51d9e42a49b0735a5ef1cae016847c9c82da31399c
-SHA512 (Log-Report-1.40.tar.gz) = a05e4a33bbcc85addfe9c0a4c35c36973466ebc5680d95f63fecdd7eeecb979a8a603b37a505822b95080bcc0f012808bdfb52e98085165e54622bb1ce04986b
-Size (Log-Report-1.40.tar.gz) = 98449 bytes
+BLAKE2s (Log-Report-1.41.tar.gz) = 6324c62ce2e4d5af38e294acd42b11ab4b33a7ad7c443420781296fe3bb8123d
+SHA512 (Log-Report-1.41.tar.gz) = 9fa83b2be09f1d33545a51aaaabefcd5ab5eca38c55fbb5e470328908fd0359a5d5b3c0982a4b8b0f2dddb7eee7cd864f8a91714acf667cadcd76b92446641fc
+Size (Log-Report-1.41.tar.gz) = 100583 bytes
