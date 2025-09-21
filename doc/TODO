@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26258 2025/09/21 18:11:44 wiz Exp $
+$NetBSD: TODO,v 1.26259 2025/09/21 18:14:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
-	o fmtlib-12.0.0
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
