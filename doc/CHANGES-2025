@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5584 2025/09/21 15:10:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5585 2025/09/21 15:14:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8056,3 +8056,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/pango to 1.57.0 [wiz 2025-09-21]
 	Updated graphics/OpenJPH to 0.23.1 [wiz 2025-09-21]
 	Updated graphics/openexr to 3.4.0 [wiz 2025-09-21]
+	Updated security/py-OpenSSL to 25.3.0 [wiz 2025-09-21]
