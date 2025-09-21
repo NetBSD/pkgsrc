@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/06/05 15:00:44 taca Exp $
+# $NetBSD: Makefile,v 1.16 2025/09/21 21:37:07 wiz Exp $
 
 DISTNAME=	kea-${VERSION}
 COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
@@ -8,7 +8,7 @@ COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
 CATEGORIES=		net
 MASTER_SITES=		https://ftp.isc.org/isc/kea/${VERSION}/
 
-MAINTAINER=		sekiya@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.isc.org/kea/
 LICENSE=		mpl-2.0
 
