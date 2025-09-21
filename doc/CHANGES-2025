@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5613 2025/09/21 16:31:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5614 2025/09/21 16:32:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8085,3 +8085,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-twine to 6.2.0 [wiz 2025-09-21]
 	Updated devel/py-urwid to 3.0.3 [wiz 2025-09-21]
 	Updated archivers/py-zstandard to 0.25.0 [wiz 2025-09-21]
+	Updated textproc/tree-sitter-javascript to 0.25.0 [wiz 2025-09-21]
