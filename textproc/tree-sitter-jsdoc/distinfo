@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/02/19 12:00:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/09/21 16:32:54 wiz Exp $
 
-BLAKE2s (tree-sitter-jsdoc-0.23.2.tar.gz) = 8354fe40275b57df5aa2c4938700c9465e6635d46d0d8a50a61e71e61dbaa42e
-SHA512 (tree-sitter-jsdoc-0.23.2.tar.gz) = 3fee17c07f388892f29ae19c85419d209e00cba79aa64d4a6d12d01baf27284fcbbd99a05ce63d94493909669eeb3e0a059649bbf092ba72ab63ac5bf0711fde
-Size (tree-sitter-jsdoc-0.23.2.tar.gz) = 43626 bytes
+BLAKE2s (tree-sitter-jsdoc-0.25.0.tar.gz) = 9a6f3a12591a16f0c397c676655d77535a965845c4f2c870e3bbeb9476c26b90
+SHA512 (tree-sitter-jsdoc-0.25.0.tar.gz) = 1f1b2e3f3cc8e16b11f1cd2285187e8214d05f3e67d64f2a812434e1f6bc08f7b0e0d252fe67246bf6018fb570ffe34f07e2ceca73578ec4746a89353cbe9265
+Size (tree-sitter-jsdoc-0.25.0.tar.gz) = 52324 bytes
