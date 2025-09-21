@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5576 2025/09/21 07:00:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5577 2025/09/21 09:37:41 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8039,7 +8039,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 4.0.1 [pin 2025-09-19]
 	Updated textproc/tuc to 1.3.0 [pin 2025-09-19]
 	Updated x11/xterm to 402 [pin 2025-09-19]
-	mk/bsd.pkg.mk: freeze ended [bsiegert 2025-09-20]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2025Q3 branch [bsiegert 2025-09-20]
 	Added devel/p5-Data-Censor version 0.04 [wen 2025-09-21]
 	Updated www/p5-Dancer2 to 2.0.0 [wen 2025-09-21]
 	Updated devel/p5-IO-Prompter to 0.005004 [wen 2025-09-21]
