@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2022/10/17 22:31:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/21 15:28:10 wiz Exp $
 include/X11/extensions/Xpresent.h
-lib/libXpresent.la
+lib/libXpresent.so
+lib/libXpresent.so.1
+lib/libXpresent.so.1.0.0
 lib/pkgconfig/xpresent.pc
 man/man3/XPresentFreeInput.3
 man/man3/XPresentNotifyMSC.3
