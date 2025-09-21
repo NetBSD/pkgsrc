@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/08/28 12:40:15 pho Exp $
+# $NetBSD: Makefile,v 1.39 2025/09/21 16:31:15 wiz Exp $
 
-DISTNAME=	zstandard-0.24.0
+DISTNAME=	zstandard-0.25.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zstandard/}
 
@@ -20,6 +19,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 110000
 CPPFLAGS+=	-DZDICT_QSORT=ZDICT_QSORT_C90
 .endif
+
+# as of 0.25.0
+# 28 errors
 
 # upstream prefers to use its bundled version of zstd
 # https://github.com/indygreg/python-zstandard/blob/0063333790a853360c816101511635865405834f/c-ext/backend_c.c#L137-L151
