@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/01/07 12:36:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/09/21 15:59:11 wiz Exp $
 ${PYSITELIB}/poetry/core/__init__.py
 ${PYSITELIB}/poetry/core/__init__.pyc
 ${PYSITELIB}/poetry/core/__init__.pyo
@@ -283,6 +283,7 @@ ${PYSITELIB}/poetry/core/factory.pyo
 ${PYSITELIB}/poetry/core/json/__init__.py
 ${PYSITELIB}/poetry/core/json/__init__.pyc
 ${PYSITELIB}/poetry/core/json/__init__.pyo
+${PYSITELIB}/poetry/core/json/schemas/dependency-groups-schema.json
 ${PYSITELIB}/poetry/core/json/schemas/poetry-schema.json
 ${PYSITELIB}/poetry/core/json/schemas/project-schema.json
 ${PYSITELIB}/poetry/core/masonry/__init__.py
@@ -445,7 +446,7 @@ ${PYSITELIB}/poetry/core/version/pep440/version.pyo
 ${PYSITELIB}/poetry/core/version/requirements.py
 ${PYSITELIB}/poetry/core/version/requirements.pyc
 ${PYSITELIB}/poetry/core/version/requirements.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
