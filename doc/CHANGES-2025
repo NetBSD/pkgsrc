@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5604 2025/09/21 15:54:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5605 2025/09/21 15:59:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8076,3 +8076,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/py-fonttools to 4.60.0 [wiz 2025-09-21]
 	Updated www/py-google-api-python-client to 2.182.0 [wiz 2025-09-21]
 	Updated www/py-httplib2 to 0.31.0 [wiz 2025-09-21]
+	Updated devel/py-poetry-core to 2.2.1 [wiz 2025-09-21]
