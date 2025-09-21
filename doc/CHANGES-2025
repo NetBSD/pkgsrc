@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5568 2025/09/21 01:51:17 wen Exp $
+$NetBSD: CHANGES-2025,v 1.5569 2025/09/21 02:17:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8041,3 +8041,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xterm to 402 [pin 2025-09-19]
 	mk/bsd.pkg.mk: freeze ended [bsiegert 2025-09-20]
 	Added devel/p5-Data-Censor version 0.04 [wen 2025-09-21]
+	Updated www/p5-Dancer2 to 2.0.0 [wen 2025-09-21]
