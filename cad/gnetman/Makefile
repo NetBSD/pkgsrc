@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/11/12 13:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/09/21 21:22:37 wiz Exp $
 #
 
 DISTNAME=		gnetman-11Feb05
@@ -7,7 +7,7 @@ PKGREVISION=		10
 CATEGORIES=		cad
 #MASTER_SITES=		#http://www.viasic.com/opensource/
 
-MAINTAINER=		dmcmahill@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.viasic.com/opensource/
 COMMENT=		Advanced Netlister and Netlist Manipulation Database for gEDA
 

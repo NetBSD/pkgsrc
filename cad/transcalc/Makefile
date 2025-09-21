@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/08/30 22:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/09/21 21:22:39 wiz Exp $
 #
 
 DISTNAME=	transcalc-0.14
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	https://transcalc.sourceforge.net/
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=transcalc/}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://transcalc.sourceforge.net/
 COMMENT=	Transmission line analysis/synthesis
 

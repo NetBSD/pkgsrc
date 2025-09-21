@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/12/15 18:38:36 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/21 21:22:38 wiz Exp $
 #
 
 DISTNAME=	mpac-0.2.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	https://www.aydogan.net/distfiles/cad/
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Microstrip Patch Antenna Calculator
 
 DEPENDS+=	tk>=8.1:../../x11/tk

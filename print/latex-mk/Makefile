@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2023/06/06 12:42:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.29 2025/09/21 21:22:40 wiz Exp $
 #
 
 DISTNAME=	latex-mk-2.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex-mk/}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://latex-mk.sourceforge.net/
 COMMENT=	Makefile fragments and scripts for managing LaTeX documents
 

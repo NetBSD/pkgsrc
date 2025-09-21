@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.68 2020/01/26 17:31:27 rillig Exp $
+# $NetBSD: Makefile,v 1.69 2025/09/21 21:22:40 wiz Exp $
 
 DISTNAME=	f2c-20100903	# see notes below
 PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.netlib.org/f2c/index.html
 COMMENT=	Fortran to C compiler including a script to emulate f77
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/21 21:04:39 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/21 21:22:38 wiz Exp $
 
 DISTNAME=	verilog-12.0
 # There is confision in naming of this software, use iverilog as it's saner
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=steveicarus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV:S/./_/}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://steveicarus.github.io/iverilog/
 COMMENT=	Verilog simulation and synthesis tool (stable release version)
 LICENSE=	gnu-gpl-v2

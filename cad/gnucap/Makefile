@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/06/06 12:40:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2025/09/21 21:22:38 wiz Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -8,7 +8,7 @@ CATEGORIES=	cad
 MASTER_SITES=	http://www.gnucap.org/devel/
 MASTER_SITES+=	http://www.geda.seul.org/dist/
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/09/17 04:16:43 mef Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/21 21:22:37 wiz Exp $
 #
 
 VERSION=	9.4f
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=veripool/}
 GITHUB_PROJECT=	dinotrace
 GITHUB_TAG=	v${VERSION}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/veripool/dinotrace/blob/master/README.rst
 COMMENT=	Emacs major mode for dinotrace
 LICENSE=	gnu-gpl-v3

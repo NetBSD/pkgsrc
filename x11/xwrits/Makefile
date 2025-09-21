@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2020/01/26 17:32:28 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2025/09/21 21:22:40 wiz Exp $
 
 DISTNAME=	xwrits-2.24
 CATEGORIES=	x11
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/xwrits/
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.lcdf.org/~eddietwo/xwrits/
 COMMENT=	Wrist break reminder for prevention of repetitive stress injuries
 

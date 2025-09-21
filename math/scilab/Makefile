@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2023/11/12 13:22:40 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/09/21 21:22:40 wiz Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -7,7 +7,7 @@ PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
 

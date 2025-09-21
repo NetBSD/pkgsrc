@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:03:24 adam Exp $
-#
+# $NetBSD: Makefile,v 1.14 2025/09/21 21:22:36 wiz Exp $
 
 DISTNAME=	adms-2.2.5
 PKGREVISION=	6
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mot-adms/}
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mot-adms.sourceforge.net/
 COMMENT=	Compact device model code generator for SPICE
 

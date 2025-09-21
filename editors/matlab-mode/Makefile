@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2022/05/14 22:25:36 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2025/09/21 21:22:39 wiz Exp $
 #
 
 DISTNAME=		matlab.el
@@ -11,7 +11,7 @@ CATEGORIES=		editors math
 MASTER_SITES=		http://www.mathworks.com/matlabcentral/files/104/
 EXTRACT_SUFX=
 
-MAINTAINER=		dmcmahill@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=104&objectType=file
 COMMENT=		Matlab mode for Emacs
 

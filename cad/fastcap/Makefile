@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/12/23 01:47:55 zafer Exp $
+# $NetBSD: Makefile,v 1.46 2025/09/21 21:22:37 wiz Exp $
 
 DISTNAME=	fastcap-2.0-18Sep92
 PKGNAME=	fastcap-2.0.19920918
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	https://www.rle.mit.edu/cpg/codes/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
 
