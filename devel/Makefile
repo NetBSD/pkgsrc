@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4528 2025/09/21 01:49:59 wen Exp $
+# $NetBSD: Makefile,v 1.4529 2025/09/21 15:22:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3088,6 +3088,7 @@ SUBDIR+=	py-pyrsistent
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
+SUBDIR+=	py-pytokens
 SUBDIR+=	py-pytype
 SUBDIR+=	py-pyutil
 SUBDIR+=	py-pyvcd
