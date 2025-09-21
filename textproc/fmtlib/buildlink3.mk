@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/07/16 10:02:05 prlw1 Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/09/21 18:15:04 wiz Exp $
 
 BUILDLINK_TREE+=	fmtlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	fmtlib
 FMTLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fmtlib+=	fmtlib>=5.2.1
-BUILDLINK_ABI_DEPENDS.fmtlib+=	fmtlib>=11.0.1
+BUILDLINK_ABI_DEPENDS.fmtlib+=	fmtlib>=12.0.0
 BUILDLINK_PKGSRCDIR.fmtlib?=	../../textproc/fmtlib
 .endif	# FMTLIB_BUILDLINK3_MK
 
