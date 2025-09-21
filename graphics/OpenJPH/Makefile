@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/08/30 22:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/21 15:02:53 wiz Exp $
 
-DISTNAME=	OpenJPH-0.10.0
-PKGREVISION=	2
+DISTNAME=	OpenJPH-0.23.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aous72/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -11,7 +10,7 @@ HOMEPAGE=	https://github.com/aous72/OpenJPH/
 COMMENT=	Open-source implementation of JPEG2000 Part-15
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/openjph.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
