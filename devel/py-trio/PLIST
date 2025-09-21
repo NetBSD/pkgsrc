@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/04/28 07:36:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/21 16:20:50 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -49,6 +49,9 @@ ${PYSITELIB}/trio/_core/_generated_io_windows.pyo
 ${PYSITELIB}/trio/_core/_generated_run.py
 ${PYSITELIB}/trio/_core/_generated_run.pyc
 ${PYSITELIB}/trio/_core/_generated_run.pyo
+${PYSITELIB}/trio/_core/_generated_windows_ffi.py
+${PYSITELIB}/trio/_core/_generated_windows_ffi.pyc
+${PYSITELIB}/trio/_core/_generated_windows_ffi.pyo
 ${PYSITELIB}/trio/_core/_instrumentation.py
 ${PYSITELIB}/trio/_core/_instrumentation.pyc
 ${PYSITELIB}/trio/_core/_instrumentation.pyo
@@ -88,6 +91,9 @@ ${PYSITELIB}/trio/_core/_tests/__init__.pyo
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.py
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.pyc
 ${PYSITELIB}/trio/_core/_tests/test_asyncgen.pyo
+${PYSITELIB}/trio/_core/_tests/test_cancelled.py
+${PYSITELIB}/trio/_core/_tests/test_cancelled.pyc
+${PYSITELIB}/trio/_core/_tests/test_cancelled.pyo
 ${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.py
 ${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.pyc
 ${PYSITELIB}/trio/_core/_tests/test_exceptiongroup_gc.pyo
@@ -338,6 +344,9 @@ ${PYSITELIB}/trio/_tests/tools/test_gen_exports.pyo
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.py
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.pyc
 ${PYSITELIB}/trio/_tests/tools/test_mypy_annotate.pyo
+${PYSITELIB}/trio/_tests/tools/test_sync_requirements.py
+${PYSITELIB}/trio/_tests/tools/test_sync_requirements.pyc
+${PYSITELIB}/trio/_tests/tools/test_sync_requirements.pyo
 ${PYSITELIB}/trio/_tests/type_tests/check_wraps.py
 ${PYSITELIB}/trio/_tests/type_tests/check_wraps.pyc
 ${PYSITELIB}/trio/_tests/type_tests/check_wraps.pyo
@@ -371,6 +380,12 @@ ${PYSITELIB}/trio/_tools/gen_exports.pyo
 ${PYSITELIB}/trio/_tools/mypy_annotate.py
 ${PYSITELIB}/trio/_tools/mypy_annotate.pyc
 ${PYSITELIB}/trio/_tools/mypy_annotate.pyo
+${PYSITELIB}/trio/_tools/sync_requirements.py
+${PYSITELIB}/trio/_tools/sync_requirements.pyc
+${PYSITELIB}/trio/_tools/sync_requirements.pyo
+${PYSITELIB}/trio/_tools/windows_ffi_build.py
+${PYSITELIB}/trio/_tools/windows_ffi_build.pyc
+${PYSITELIB}/trio/_tools/windows_ffi_build.pyo
 ${PYSITELIB}/trio/_unix_pipes.py
 ${PYSITELIB}/trio/_unix_pipes.pyc
 ${PYSITELIB}/trio/_unix_pipes.pyo
