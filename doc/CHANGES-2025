@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5573 2025/09/21 02:51:37 wen Exp $
+$NetBSD: CHANGES-2025,v 1.5574 2025/09/21 06:43:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8046,3 +8046,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-IPC-Run to 20250809.0 [wen 2025-09-21]
 	Updated devel/p5-Log-Report-Optional to 1.08 [wen 2025-09-21]
 	Updated devel/p5-Log-Report to 1.41 [wen 2025-09-21]
+	Updated devel/p5-EV to 4.35 [wiz 2025-09-21]
