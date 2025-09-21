@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/12/23 01:49:25 zafer Exp $
+# $NetBSD: Makefile,v 1.35 2025/09/21 21:22:37 wiz Exp $
 #
 
 DISTNAME=	fasthenry-3.0-12Nov96
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Three-dimensional inductance extraction program
 

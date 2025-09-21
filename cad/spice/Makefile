@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2021/04/21 09:07:09 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/09/21 21:22:38 wiz Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 #MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	dmcmahill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 COMMENT=	General-purpose circuit simulation program
 
