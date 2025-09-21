@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4527 2025/09/15 14:32:52 adam Exp $
+# $NetBSD: Makefile,v 1.4528 2025/09/21 01:49:59 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1566,6 +1566,7 @@ SUBDIR+=	p5-Cwd-Guard
 SUBDIR+=	p5-Data-Alias
 SUBDIR+=	p5-Data-Binary
 SUBDIR+=	p5-Data-Buffer
+SUBDIR+=	p5-Data-Censor
 SUBDIR+=	p5-Data-Compare
 SUBDIR+=	p5-Data-Denter
 SUBDIR+=	p5-Data-Dump
