@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26220 2025/09/21 10:40:25 wiz Exp $
+$NetBSD: TODO,v 1.26221 2025/09/21 14:54:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1010,7 +1010,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ortp-0.27.0
 	o ov-0.43.1
 	o p0f-3.09b
-	o p11-kit-0.25.9
 	o p5-Authen-Simple-0.6
 	o p5-Class-DBI-Plugin-1.04
 	o p5-Clipboard-0.28
