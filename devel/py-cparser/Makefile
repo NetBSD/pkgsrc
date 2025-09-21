@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/04/12 10:02:37 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/21 15:35:47 wiz Exp $
 
-DISTNAME=	pycparser-2.22
+DISTNAME=	pycparser-2.23
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
-PKGREVISION=	2
 CATEGORIES=	devel lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycparser/}
 
