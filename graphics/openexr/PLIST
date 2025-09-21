@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/10/19 11:53:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/09/21 15:10:24 wiz Exp $
 bin/exr2aces
 bin/exrenvmap
 bin/exrheader
@@ -35,6 +35,7 @@ include/OpenEXR/ImfAcesFile.h
 include/OpenEXR/ImfArray.h
 include/OpenEXR/ImfAttribute.h
 include/OpenEXR/ImfBoxAttribute.h
+include/OpenEXR/ImfBytesAttribute.h
 include/OpenEXR/ImfCRgbaFile.h
 include/OpenEXR/ImfChannelList.h
 include/OpenEXR/ImfChannelListAttribute.h
@@ -79,6 +80,7 @@ include/OpenEXR/ImfFrameBuffer.h
 include/OpenEXR/ImfFramesPerSecond.h
 include/OpenEXR/ImfGenericInputFile.h
 include/OpenEXR/ImfGenericOutputFile.h
+include/OpenEXR/ImfHTCompressor.h
 include/OpenEXR/ImfHeader.h
 include/OpenEXR/ImfHuf.h
 include/OpenEXR/ImfIDManifest.h
@@ -160,25 +162,25 @@ lib/cmake/OpenEXR/OpenEXRConfig.cmake
 lib/cmake/OpenEXR/OpenEXRConfigVersion.cmake
 lib/cmake/OpenEXR/OpenEXRTargets-release.cmake
 lib/cmake/OpenEXR/OpenEXRTargets.cmake
-lib/libIex-3_3.so
-lib/libIex-3_3.so.32
-lib/libIex-3_3.so.32.${PKGVERSION}
+lib/libIex-3_4.so
+lib/libIex-3_4.so.33
+lib/libIex-3_4.so.33.${PKGVERSION}
 lib/libIex.so
-lib/libIlmThread-3_3.so
-lib/libIlmThread-3_3.so.32
-lib/libIlmThread-3_3.so.32.${PKGVERSION}
+lib/libIlmThread-3_4.so
+lib/libIlmThread-3_4.so.33
+lib/libIlmThread-3_4.so.33.${PKGVERSION}
 lib/libIlmThread.so
-lib/libOpenEXR-3_3.so
-lib/libOpenEXR-3_3.so.32
-lib/libOpenEXR-3_3.so.32.${PKGVERSION}
+lib/libOpenEXR-3_4.so
+lib/libOpenEXR-3_4.so.33
+lib/libOpenEXR-3_4.so.33.${PKGVERSION}
 lib/libOpenEXR.so
-lib/libOpenEXRCore-3_3.so
-lib/libOpenEXRCore-3_3.so.32
-lib/libOpenEXRCore-3_3.so.32.${PKGVERSION}
+lib/libOpenEXRCore-3_4.so
+lib/libOpenEXRCore-3_4.so.33
+lib/libOpenEXRCore-3_4.so.33.${PKGVERSION}
 lib/libOpenEXRCore.so
-lib/libOpenEXRUtil-3_3.so
-lib/libOpenEXRUtil-3_3.so.32
-lib/libOpenEXRUtil-3_3.so.32.${PKGVERSION}
+lib/libOpenEXRUtil-3_4.so
+lib/libOpenEXRUtil-3_4.so.33
+lib/libOpenEXRUtil-3_4.so.33.${PKGVERSION}
 lib/libOpenEXRUtil.so
 lib/pkgconfig/OpenEXR.pc
 share/doc/OpenEXR/examples/deepExamples.cpp
