@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/04/13 19:04:22 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/09/21 16:24:44 wiz Exp $
 
-DISTNAME=	twine-6.1.0
+DISTNAME=	twine-6.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
 
@@ -29,6 +28,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
+
+# as of 6.2.0
+# 1 failed, 228 passed
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
