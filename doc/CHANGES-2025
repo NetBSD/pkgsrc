@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5624 2025/09/21 18:22:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5625 2025/09/21 18:23:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8096,3 +8096,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/fmtlib to 12.0.0 [wiz 2025-09-21]
 	Updated print/ghostscript-agpl to 10.06.0 [wiz 2025-09-21]
 	Updated fonts/harfbuzz to 11.5.0 [wiz 2025-09-21]
+	Updated fonts/harfbuzz-icu to 11.5.0 [wiz 2025-09-21]
