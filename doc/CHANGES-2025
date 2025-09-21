@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5619 2025/09/21 17:55:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5620 2025/09/21 17:58:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8091,3 +8091,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-python to 0.25.0 [wiz 2025-09-21]
 	Updated textproc/utf8-cpp to 4.0.8 [wiz 2025-09-21]
 	Updated editors/xournalpp to 1.2.8 [wiz 2025-09-21]
+	Updated sysutils/btop to 1.4.5 [wiz 2025-09-21]
