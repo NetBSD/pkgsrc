@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2025/07/03 19:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/09/21 15:17:23 wiz Exp $
 
-DISTNAME=	beets-2.3.1
+DISTNAME=	beets-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-mediafile>=0.12.0:../../audio/py-mediafile
 DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs>=0.4:../../audio/py-musicbrainz-ngs
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24.4:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.5.0:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # update
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
@@ -39,6 +40,12 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
+# as of 2.4.0
+# 1067 passed, 101 skipped, 1 warning
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
