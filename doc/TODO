@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26262 2025/09/21 18:27:26 wiz Exp $
+$NetBSD: TODO,v 1.26263 2025/09/21 18:27:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -538,7 +538,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o csound6-6.18.1
 	o csvkit-1.4.0
 	o ctemplate-2.4
-	o cups-2.4.13
 	o cvs2svn-2.5.0
 	o cvs-fast-export-1.56
 	o cxref-1.6e

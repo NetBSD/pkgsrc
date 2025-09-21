@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5627 2025/09/21 18:27:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5628 2025/09/21 18:27:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8099,3 +8099,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 11.5.0 [wiz 2025-09-21]
 	Updated print/libcups to 2.4.14 [wiz 2025-09-21]
 	Updated print/cups-base to 2.4.14 [wiz 2025-09-21]
+	Updated print/cups to 2.4.14 [wiz 2025-09-21]
