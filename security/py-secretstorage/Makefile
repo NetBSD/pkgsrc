@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/04/22 20:33:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/21 16:15:27 wiz Exp $
 
-DISTNAME=	SecretStorage-3.3.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	secretstorage-3.4.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SecretStorage/}
 
@@ -17,10 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-jeepney>=0.6:../../sysutils/py-jeepney
 
 USE_LANGUAGES=	# none
 
-WHEEL_NAME+=	${DISTNAME:tl}
-
-# as of 3.3.3
-# 19 failed, 1 passed, 6 skipped
+# as of 3.4.0
+# 21 failed, 1 passed, 6 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
