@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2025/07/20 10:24:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2025/09/21 15:49:08 wiz Exp $
 bin/fonttools-${PYVERSSUFFIX}
 bin/pyftmerge-${PYVERSSUFFIX}
 bin/pyftsubset-${PYVERSSUFFIX}
@@ -15,6 +15,9 @@ ${PYSITELIB}/fontTools/afmLib.pyo
 ${PYSITELIB}/fontTools/agl.py
 ${PYSITELIB}/fontTools/agl.pyc
 ${PYSITELIB}/fontTools/agl.pyo
+${PYSITELIB}/fontTools/annotations.py
+${PYSITELIB}/fontTools/annotations.pyc
+${PYSITELIB}/fontTools/annotations.pyo
 ${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.py
 ${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.pyc
 ${PYSITELIB}/fontTools/cffLib/CFF2ToCFF.pyo
@@ -201,6 +204,9 @@ ${PYSITELIB}/fontTools/misc/eexec.pyo
 ${PYSITELIB}/fontTools/misc/encodingTools.py
 ${PYSITELIB}/fontTools/misc/encodingTools.pyc
 ${PYSITELIB}/fontTools/misc/encodingTools.pyo
+${PYSITELIB}/fontTools/misc/enumTools.py
+${PYSITELIB}/fontTools/misc/enumTools.pyc
+${PYSITELIB}/fontTools/misc/enumTools.pyo
 ${PYSITELIB}/fontTools/misc/etree.py
 ${PYSITELIB}/fontTools/misc/etree.pyc
 ${PYSITELIB}/fontTools/misc/etree.pyo
@@ -885,9 +891,24 @@ ${PYSITELIB}/fontTools/varLib/__init__.pyo
 ${PYSITELIB}/fontTools/varLib/__main__.py
 ${PYSITELIB}/fontTools/varLib/__main__.pyc
 ${PYSITELIB}/fontTools/varLib/__main__.pyo
-${PYSITELIB}/fontTools/varLib/avar.py
-${PYSITELIB}/fontTools/varLib/avar.pyc
-${PYSITELIB}/fontTools/varLib/avar.pyo
+${PYSITELIB}/fontTools/varLib/avar/__init__.py
+${PYSITELIB}/fontTools/varLib/avar/__init__.pyc
+${PYSITELIB}/fontTools/varLib/avar/__init__.pyo
+${PYSITELIB}/fontTools/varLib/avar/__main__.py
+${PYSITELIB}/fontTools/varLib/avar/__main__.pyc
+${PYSITELIB}/fontTools/varLib/avar/__main__.pyo
+${PYSITELIB}/fontTools/varLib/avar/build.py
+${PYSITELIB}/fontTools/varLib/avar/build.pyc
+${PYSITELIB}/fontTools/varLib/avar/build.pyo
+${PYSITELIB}/fontTools/varLib/avar/map.py
+${PYSITELIB}/fontTools/varLib/avar/map.pyc
+${PYSITELIB}/fontTools/varLib/avar/map.pyo
+${PYSITELIB}/fontTools/varLib/avar/plan.py
+${PYSITELIB}/fontTools/varLib/avar/plan.pyc
+${PYSITELIB}/fontTools/varLib/avar/plan.pyo
+${PYSITELIB}/fontTools/varLib/avar/unbuild.py
+${PYSITELIB}/fontTools/varLib/avar/unbuild.pyc
+${PYSITELIB}/fontTools/varLib/avar/unbuild.pyo
 ${PYSITELIB}/fontTools/varLib/avarPlanner.py
 ${PYSITELIB}/fontTools/varLib/avarPlanner.pyc
 ${PYSITELIB}/fontTools/varLib/avarPlanner.pyo
