@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5591 2025/09/21 15:29:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5592 2025/09/21 15:31:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8063,3 +8063,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libuninameslist to 20250909 [wiz 2025-09-21]
 	Updated x11/libXpresent to 1.0.2 [wiz 2025-09-21]
 	Updated x11/libXScrnSaver to 1.2.5 [wiz 2025-09-21]
+	Updated devel/py-cffi to 2.0.0 [wiz 2025-09-21]
