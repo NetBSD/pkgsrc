@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/08/05 05:01:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/09/21 15:43:07 wiz Exp $
 bin/docutils-${PYVERSSUFFIX}
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
@@ -14,7 +14,10 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/BSD-0-Clause.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/BSD-2-Clause.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/gpl-3-0.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
@@ -133,6 +136,9 @@ ${PYSITELIB}/docutils/parsers/__init__.pyo
 ${PYSITELIB}/docutils/parsers/commonmark_wrapper.py
 ${PYSITELIB}/docutils/parsers/commonmark_wrapper.pyc
 ${PYSITELIB}/docutils/parsers/commonmark_wrapper.pyo
+${PYSITELIB}/docutils/parsers/docutils_xml.py
+${PYSITELIB}/docutils/parsers/docutils_xml.pyc
+${PYSITELIB}/docutils/parsers/docutils_xml.pyo
 ${PYSITELIB}/docutils/parsers/null.py
 ${PYSITELIB}/docutils/parsers/null.pyc
 ${PYSITELIB}/docutils/parsers/null.pyo
@@ -169,7 +175,8 @@ ${PYSITELIB}/docutils/parsers/rst/directives/references.pyo
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.py
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.pyc
 ${PYSITELIB}/docutils/parsers/rst/directives/tables.pyo
-${PYSITELIB}/docutils/parsers/rst/include/README.txt
+${PYSITELIB}/docutils/parsers/rst/include/README.rst
+${PYSITELIB}/docutils/parsers/rst/include/html-roles.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isoamsa.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isoamsb.txt
 ${PYSITELIB}/docutils/parsers/rst/include/isoamsc.txt
@@ -347,12 +354,15 @@ ${PYSITELIB}/docutils/transforms/writer_aux.pyo
 ${PYSITELIB}/docutils/utils/__init__.py
 ${PYSITELIB}/docutils/utils/__init__.pyc
 ${PYSITELIB}/docutils/utils/__init__.pyo
+${PYSITELIB}/docutils/utils/_roman_numerals.py
+${PYSITELIB}/docutils/utils/_roman_numerals.pyc
+${PYSITELIB}/docutils/utils/_roman_numerals.pyo
+${PYSITELIB}/docutils/utils/_typing.py
+${PYSITELIB}/docutils/utils/_typing.pyc
+${PYSITELIB}/docutils/utils/_typing.pyo
 ${PYSITELIB}/docutils/utils/code_analyzer.py
 ${PYSITELIB}/docutils/utils/code_analyzer.pyc
 ${PYSITELIB}/docutils/utils/code_analyzer.pyo
-${PYSITELIB}/docutils/utils/error_reporting.py
-${PYSITELIB}/docutils/utils/error_reporting.pyc
-${PYSITELIB}/docutils/utils/error_reporting.pyo
 ${PYSITELIB}/docutils/utils/math/__init__.py
 ${PYSITELIB}/docutils/utils/math/__init__.pyc
 ${PYSITELIB}/docutils/utils/math/__init__.pyo
@@ -380,9 +390,6 @@ ${PYSITELIB}/docutils/utils/math/unichar2tex.pyo
 ${PYSITELIB}/docutils/utils/punctuation_chars.py
 ${PYSITELIB}/docutils/utils/punctuation_chars.pyc
 ${PYSITELIB}/docutils/utils/punctuation_chars.pyo
-${PYSITELIB}/docutils/utils/roman.py
-${PYSITELIB}/docutils/utils/roman.pyc
-${PYSITELIB}/docutils/utils/roman.pyo
 ${PYSITELIB}/docutils/utils/smartquotes.py
 ${PYSITELIB}/docutils/utils/smartquotes.pyc
 ${PYSITELIB}/docutils/utils/smartquotes.pyo
@@ -448,7 +455,7 @@ ${PYSITELIB}/docutils/writers/pseudoxml.pyo
 ${PYSITELIB}/docutils/writers/s5_html/__init__.py
 ${PYSITELIB}/docutils/writers/s5_html/__init__.pyc
 ${PYSITELIB}/docutils/writers/s5_html/__init__.pyo
-${PYSITELIB}/docutils/writers/s5_html/themes/README.txt
+${PYSITELIB}/docutils/writers/s5_html/themes/README.rst
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/__base__
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/big-black/pretty.css
