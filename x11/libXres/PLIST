@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/21 15:32:22 wiz Exp $
 include/X11/extensions/XRes.h
-lib/libXRes.la
+lib/libXRes.so
+lib/libXRes.so.1
+lib/libXRes.so.1.0.0
 lib/pkgconfig/xres.pc
 man/man3/XRes.3
 man/man3/XResQueryClientPixmapBytes.3

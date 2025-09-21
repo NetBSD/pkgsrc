@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/12/05 08:50:26 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/09/21 15:32:22 wiz Exp $
 
-BLAKE2s (libXres-1.2.2.tar.xz) = 0c9991f9aee6cb1a323e83aeb24bfd1bc2614a88cb3581754d862ef559d9fc84
-SHA512 (libXres-1.2.2.tar.xz) = 897f2d426ea6f41169a5a52c356d1a1cb2ffb9144ae41b9fedd06455c3d81042930fe55be269ce4b8545ee65fcfe168101192a599053d810e8810f627c94f810
-Size (libXres-1.2.2.tar.xz) = 261400 bytes
+BLAKE2s (libXres-1.2.3.tar.xz) = 5bdd047da2c5567190d25c4ffb36b05e743c6272070010af86c1d58839f65387
+SHA512 (libXres-1.2.3.tar.xz) = 385dbc87bd4e0d306a1cad6b317d8431494cd2a381766bc3f9e6b7f488ff41ee1f4f25e756421f6a2b5681976d7da0108cea6305f7a34f7105d861cb6c1ae854
+Size (libXres-1.2.3.tar.xz) = 268476 bytes
