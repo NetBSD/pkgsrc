@@ -1,15 +1,16 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/13 05:06:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/09/21 15:23:04 wiz Exp $
 bin/black-${PYVERSSUFFIX}
 bin/blackd-${PYVERSSUFFIX}
+${PYSITELIB}/_black_version.py
+${PYSITELIB}/_black_version.pyc
+${PYSITELIB}/_black_version.pyi
+${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/_black_version.py
-${PYSITELIB}/_black_version.pyc
-${PYSITELIB}/_black_version.pyo
 ${PYSITELIB}/black/__init__.py
 ${PYSITELIB}/black/__init__.pyc
 ${PYSITELIB}/black/__init__.pyo
