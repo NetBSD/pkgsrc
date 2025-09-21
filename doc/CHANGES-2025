@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5582 2025/09/21 14:56:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5583 2025/09/21 15:03:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8054,3 +8054,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-MooseX-Types-Common to 0.001015 [wen 2025-09-21]
 	Updated security/p11-kit to 0.25.9 [wiz 2025-09-21]
 	Updated devel/pango to 1.57.0 [wiz 2025-09-21]
+	Updated graphics/OpenJPH to 0.23.1 [wiz 2025-09-21]
