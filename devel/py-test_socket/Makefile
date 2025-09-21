@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/01/29 09:38:38 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/21 16:23:21 wiz Exp $
 
 DISTNAME=	pytest_socket-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest_socket/}
 
@@ -11,7 +12,6 @@ COMMENT=	Pytest Plugin to disable socket calls during tests
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-test>=6.2.5:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
