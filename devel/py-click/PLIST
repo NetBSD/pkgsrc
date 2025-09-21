@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/23 18:32:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/09/21 15:34:54 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,6 +15,9 @@ ${PYSITELIB}/click/_termui_impl.pyo
 ${PYSITELIB}/click/_textwrap.py
 ${PYSITELIB}/click/_textwrap.pyc
 ${PYSITELIB}/click/_textwrap.pyo
+${PYSITELIB}/click/_utils.py
+${PYSITELIB}/click/_utils.pyc
+${PYSITELIB}/click/_utils.pyo
 ${PYSITELIB}/click/_winconsole.py
 ${PYSITELIB}/click/_winconsole.pyc
 ${PYSITELIB}/click/_winconsole.pyo
