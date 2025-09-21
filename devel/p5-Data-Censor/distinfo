@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/21 01:48:56 wen Exp $
+
+BLAKE2s (Data-Censor-0.04.tar.gz) = b6159889bb9a2876e8cd2f7839e41714ccac6eef315b1b822c200af0e0aef313
+SHA512 (Data-Censor-0.04.tar.gz) = de24ec34f4f433795b2cbb0a5ff6191a972f4f9684964a3f442e75588c3a634a66734983d5d9b3c7f43a5470aa1dd278fba7360a84b23eec9885e0133fd5c51d
+Size (Data-Censor-0.04.tar.gz) = 6494 bytes
