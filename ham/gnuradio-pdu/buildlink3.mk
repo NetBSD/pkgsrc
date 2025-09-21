@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/05/18 19:31:20 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/09/21 18:15:07 wiz Exp $
 
 BUILDLINK_TREE+=	gnuradio-pdu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnuradio-pdu
 GNURADIO_PDU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-pdu+=	gnuradio-pdu>=3.10.1.1
-BUILDLINK_ABI_DEPENDS.gnuradio-pdu?=		gnuradio-pdu>=3.10.12.0nb3
+BUILDLINK_ABI_DEPENDS.gnuradio-pdu?=		gnuradio-pdu>=3.10.12.0nb5
 BUILDLINK_PKGSRCDIR.gnuradio-pdu?=		../../ham/gnuradio-pdu
 
 .include "../../ham/gnuradio-core/buildlink3.mk"
