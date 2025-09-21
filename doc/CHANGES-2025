@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5577 2025/09/21 09:37:41 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5578 2025/09/21 09:44:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8049,3 +8049,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-EV to 4.35 [wiz 2025-09-21]
 	Updated www/p5-URI to 5.34 [wiz 2025-09-21]
 	Updated mail/p5-MIME-Types to 2.29 [wiz 2025-09-21]
+	Updated devel/p5-MooseX-Getopt to 0.78 [wen 2025-09-21]
