@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.274 2025/07/19 05:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.275 2025/09/21 14:56:33 wiz Exp $
 
-DISTNAME=	pango-1.56.4
-PKGREVISION=	1
+DISTNAME=	pango-1.57.0
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -44,6 +43,7 @@ PKGCONFIG_OVERRIDE_STAGE=	pre-install
 MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 CHECK_FILES_SKIP+=		${PREFIX}/libdata/pango/pango.modules
+CHECK_PORTABILITY_SKIP+=	subprojects/fontconfig/.gitlab-ci/fedora-cross.sh
 CHECK_PORTABILITY_SKIP+=	docs/check.docs
 
 PYTHON_FOR_BUILD_ONLY=	tool
