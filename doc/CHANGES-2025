@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5596 2025/09/21 15:35:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5597 2025/09/21 15:38:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8068,3 +8068,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xorg-cf-files to 1.0.9 [wiz 2025-09-21]
 	Updated devel/py-click to 8.3.0 [wiz 2025-09-21]
 	Updated devel/py-cparser to 2.23 [wiz 2025-09-21]
+	Updated security/py-cyclonedx-python-lib to 11.1.0 [wiz 2025-09-21]
