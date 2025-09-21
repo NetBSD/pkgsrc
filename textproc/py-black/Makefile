@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/07/05 11:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/09/21 15:23:04 wiz Exp $
 
-DISTNAME=	black-25.1.0
+DISTNAME=	black-25.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/black/}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=0.4.3:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.9.0:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=2:../../misc/py-platformdirs
+DEPENDS+=	${PYPKGPREFIX}-pytokens>=0:../../devel/py-pytokens
 # only needed for blackd:
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
