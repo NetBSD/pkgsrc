@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.43 2025/04/28 11:10:19 wiz Exp $
+$NetBSD: distinfo,v 1.44 2025/09/21 18:27:11 wiz Exp $
 
-BLAKE2s (cups-2.4.12-source.tar.gz) = 0df4a629c04071c98d9469c0c44f0c171085893bfae581e964f8fc2b005ed6b3
-SHA512 (cups-2.4.12-source.tar.gz) = a32c113ab799a4814538213bc3bf8bc20d54ff67a56505adb6a9b6f5dae853744bcb3c638d5df5a849097e3ce57f2b15225050cd89b69664231b1e4d883cd1f0
-Size (cups-2.4.12-source.tar.gz) = 8157433 bytes
+BLAKE2s (cups-2.4.14-source.tar.gz) = 2ca241d55570f440fce3de4740b4f197300603989945f89d3b024aefcfc724b3
+SHA512 (cups-2.4.14-source.tar.gz) = c6d46b737e2fdf37a429947bc5cc3d752785187aa339bd6de94733576aead29929ae510f960c9842cb7ddc86697d7841e5aa6b9d9c9dece907a2b8f468d038a0
+Size (cups-2.4.14-source.tar.gz) = 8157729 bytes
 SHA1 (patch-ae) = 7f12aa886208f9e634d5c3fd3bc1fd4a385f22a6
 SHA1 (patch-ai) = d4aa1b59c77fa2cbf614eb661d9a791311b399c2
 SHA1 (patch-at) = 9517bff0bf2c892f0723a25f243ba188f7781393
