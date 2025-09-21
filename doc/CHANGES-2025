@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5601 2025/09/21 15:46:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5602 2025/09/21 15:49:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8073,3 +8073,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-docutils to 0.22.2 [wiz 2025-09-21]
 	Updated net/py-dns to 2.8.0 [wiz 2025-09-21]
 	Updated misc/py-expandvars to 1.1.2 [wiz 2025-09-21]
+	Updated fonts/py-fonttools to 4.60.0 [wiz 2025-09-21]
