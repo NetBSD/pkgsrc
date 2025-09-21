@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 12:23:05 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/21 05:32:56 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -54,6 +54,15 @@ post-extract:
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-langkit>=25.0.0:../../devel/py-langkit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-liblktlang>=25.0.0:../../devel/py-liblktlang
+
+# Also add all langkit dependencies
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-mako>=1.1.2:../../devel/py-mako
+TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-funcy>=1.14:../../devel/py-funcy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.16:../../textproc/py-docutils
+TOOL_DEPENDS+=	${PYPKGPREFIX}-e3-core>=22.6.0:../../devel/py-e3-core
 
 pre-build:
 	if ! [ -d ${WRKDIR}/${DISTNAME}/build ]; then \
