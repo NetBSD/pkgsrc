@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2025/08/10 10:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2025/09/21 15:10:24 wiz Exp $
 
-DISTNAME=	openexr-3.3.5
-PKGREVISION=	1
+DISTNAME=	openexr-3.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openexr/}
 GITHUB_PROJECT=	openexr
@@ -31,5 +30,6 @@ CHECK_PORTABILITY_SKIP+=	share/util/reformat.sh
 .include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libdeflate/buildlink3.mk"
+.include "../../graphics/OpenJPH/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
