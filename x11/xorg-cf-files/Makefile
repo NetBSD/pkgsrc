@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2023/06/27 10:41:06 riastradh Exp $
+# $NetBSD: Makefile,v 1.44 2025/09/21 15:33:50 wiz Exp $
 
-DISTNAME=		xorg-cf-files-1.0.8
+DISTNAME=		xorg-cf-files-1.0.9
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.xz
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://xorg.freedesktop.org/
 COMMENT=		Xorg imake rules
 
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 .include "../../mk/bsd.prefs.mk"
@@ -57,5 +56,6 @@ pre-configure:
 	fi
 .endif
 
+.include "../../devel/meson/build.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
