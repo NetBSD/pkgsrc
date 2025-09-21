@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2025/08/30 22:45:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2025/09/21 15:11:39 wiz Exp $
 
 BUILDLINK_TREE+=	opencv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opencv
 OPENCV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencv+=	opencv>=3.0.0
-BUILDLINK_ABI_DEPENDS.opencv+=	opencv>=4.12.0nb3
+BUILDLINK_ABI_DEPENDS.opencv+=	opencv>=4.12.0nb4
 BUILDLINK_PKGSRCDIR.opencv?=	../../graphics/opencv
 
 BUILDLINK_INCDIRS.opencv+=	include/opencv4
