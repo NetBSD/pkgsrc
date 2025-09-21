@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26246 2025/09/21 16:15:36 wiz Exp $
+$NetBSD: TODO,v 1.26247 2025/09/21 16:21:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1135,7 +1135,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-tokyocabinet-0.6
 	o py-torch-2.8
 	o py-trezor-0.13.10
-	o py-trio-0.31.0
 	o py-twine-6.2.0
 	o py-uliweb-0.6
 	o py-urwid-3.0.3
