@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/10/12 09:35:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/09/21 15:45:29 wiz Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -17,6 +17,12 @@ ${PYSITELIB}/dns/_features.pyo
 ${PYSITELIB}/dns/_immutable_ctx.py
 ${PYSITELIB}/dns/_immutable_ctx.pyc
 ${PYSITELIB}/dns/_immutable_ctx.pyo
+${PYSITELIB}/dns/_no_ssl.py
+${PYSITELIB}/dns/_no_ssl.pyc
+${PYSITELIB}/dns/_no_ssl.pyo
+${PYSITELIB}/dns/_tls_util.py
+${PYSITELIB}/dns/_tls_util.pyc
+${PYSITELIB}/dns/_tls_util.pyo
 ${PYSITELIB}/dns/_trio_backend.py
 ${PYSITELIB}/dns/_trio_backend.pyc
 ${PYSITELIB}/dns/_trio_backend.pyo
@@ -29,6 +35,12 @@ ${PYSITELIB}/dns/asyncquery.pyo
 ${PYSITELIB}/dns/asyncresolver.py
 ${PYSITELIB}/dns/asyncresolver.pyc
 ${PYSITELIB}/dns/asyncresolver.pyo
+${PYSITELIB}/dns/btree.py
+${PYSITELIB}/dns/btree.pyc
+${PYSITELIB}/dns/btree.pyo
+${PYSITELIB}/dns/btreezone.py
+${PYSITELIB}/dns/btreezone.pyc
+${PYSITELIB}/dns/btreezone.pyo
 ${PYSITELIB}/dns/dnssec.py
 ${PYSITELIB}/dns/dnssec.pyc
 ${PYSITELIB}/dns/dnssec.pyo
@@ -180,6 +192,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/DNSKEY.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/DS.py
 ${PYSITELIB}/dns/rdtypes/ANY/DS.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/DS.pyo
+${PYSITELIB}/dns/rdtypes/ANY/DSYNC.py
+${PYSITELIB}/dns/rdtypes/ANY/DSYNC.pyc
+${PYSITELIB}/dns/rdtypes/ANY/DSYNC.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/EUI48.py
 ${PYSITELIB}/dns/rdtypes/ANY/EUI48.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/EUI48.pyo
