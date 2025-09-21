@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2023/02/22 07:44:55 wiz Exp $
+$NetBSD: distinfo,v 1.38 2025/09/21 15:33:50 wiz Exp $
 
-BLAKE2s (xorg-cf-files-1.0.8.tar.xz) = e8a410f3363e12daafc5566b665b019177c0bba86dd6f82bdf2073a150199fc8
-SHA512 (xorg-cf-files-1.0.8.tar.xz) = cc633af889cd82346c3098df9185245c21aa9db7484343f8be9719f6e0b1fc0a9b09afb13b9b864668aa51944f2da797bbe896c807f629e89fc91506e6e63fb9
-Size (xorg-cf-files-1.0.8.tar.xz) = 290280 bytes
+BLAKE2s (xorg-cf-files-1.0.9.tar.xz) = b0a1e4f512c8d9d80acfdfe47bdfa5afe6cc9d19c61fc82ad47ce0aca5c7065b
+SHA512 (xorg-cf-files-1.0.9.tar.xz) = 124a3bd523f37bc196f548587b2b353aa518426bdd72ad1ea0642baeff45f555495304b77f96a7ae91d7bedcef043759cf2da92615612a4ae72d0553c530ead2
+Size (xorg-cf-files-1.0.9.tar.xz) = 174740 bytes
 SHA1 (patch-OpenBSDLib.rules) = 65b02b660839adb6e9c13287396a794a4586d927
 SHA1 (patch-X11.rules) = 2dac9bcc111f63b2dd887967ea5fab656f52f06b
 SHA1 (patch-X11.tmpl) = 3f0c5b8ad7a60cd0e1e47afcddaace936b9aaeed
