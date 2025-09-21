@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2020/08/09 21:37:26 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2025/09/21 21:24:35 wiz Exp $
 
 PKGNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
 
-MAINTAINER=		seb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=		Shared library and sysctl(1) replacement to override system version
 
