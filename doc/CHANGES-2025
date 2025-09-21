@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5616 2025/09/21 16:35:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5617 2025/09/21 16:35:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8088,3 +8088,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-javascript to 0.25.0 [wiz 2025-09-21]
 	Updated textproc/tree-sitter-jsdoc to 0.25.0 [wiz 2025-09-21]
 	Updated textproc/tree-sitter-markdown to 0.7.1.0.5.1 [wiz 2025-09-21]
+	Updated textproc/tree-sitter-python to 0.25.0 [wiz 2025-09-21]
