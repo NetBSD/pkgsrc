@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2025/08/30 22:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/09/21 17:55:40 wiz Exp $
 
-DISTNAME=	xournalpp-1.2.7
-PKGREVISION=	3
+DISTNAME=	xournalpp-1.2.8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -38,6 +37,7 @@ post-install:
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
@@ -47,6 +47,8 @@ BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtksourceview4/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
