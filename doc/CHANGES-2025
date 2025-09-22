@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5662 2025/09/22 14:43:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5663 2025/09/22 17:38:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8194,3 +8194,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-c to 0.10.16 [adam 2025-09-22]
 	Updated mail/py-checkdmarc to 5.10.12 [adam 2025-09-22]
 	Updated devel/py-debugpy to 1.8.17 [adam 2025-09-22]
+	Added devel/py-uv version 0.8.19 [adam 2025-09-22]
+	Added devel/py-uv-build version 0.8.19 [adam 2025-09-22]
