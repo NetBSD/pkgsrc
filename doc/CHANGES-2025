@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5659 2025/09/22 13:49:24 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5660 2025/09/22 14:28:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8180,3 +8180,13 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/xan to 0.53.0 [pin 2025-09-22]
 	Updated www/xh to 0.25.0 [pin 2025-09-22]
 	Updated geography/qgis to 3.40.11 [gdt 2025-09-22]
+	Updated multimedia/ffmpeg7 to 7.1.2 [adam 2025-09-22]
+	Updated multimedia/ffplay7 to 7.1.2 [adam 2025-09-22]
+	Updated multimedia/ffmpeg6 to 6.1.3 [adam 2025-09-22]
+	Updated multimedia/ffplay6 to 6.1.3 [adam 2025-09-22]
+	Updated multimedia/ffmpeg5 to 5.1.7 [adam 2025-09-22]
+	Updated multimedia/ffplay5 to 5.1.7 [adam 2025-09-22]
+	Updated multimedia/ffmpeg4 to 4.4.6 [adam 2025-09-22]
+	Updated multimedia/ffplay4 to 4.4.6 [adam 2025-09-22]
+	Updated multimedia/ffmpeg3 to 3.4.14 [adam 2025-09-22]
+	Updated multimedia/ffplay3 to 3.4.14 [adam 2025-09-22]
