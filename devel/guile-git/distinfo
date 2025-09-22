@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/05/23 21:52:54 nikita Exp $
+$NetBSD: distinfo,v 1.7 2025/09/22 09:13:53 adam Exp $
 
-BLAKE2s (guile-git-0.5.2.tar.gz) = 784200f432d7c030d3f96c9caf68df508d5dea929836d286190cf94b4b06caab
-SHA512 (guile-git-0.5.2.tar.gz) = 79ab47c389fa05346d88bd44d3b309c382a06e0dc2b4c47359f63e557a2e7c30b11352b821facdf67ab93c676511b7d75e643bd78af080c35009be7f0e500ca2
-Size (guile-git-0.5.2.tar.gz) = 109454 bytes
+BLAKE2s (guile-git-0.10.0.tar.gz) = c342bd943e53fd18772044c1cd8da74bce00bc40a2f1b1b9d6fa963a43e332f5
+SHA512 (guile-git-0.10.0.tar.gz) = 4fd1e1b6a28ed1ffdffd45073227f940a9182c23b55d9519ae57bd0a1025e4c8d609b2c5962c6efd874d14465a55c3035aba8080c2cca45650453581b63533f6
+Size (guile-git-0.10.0.tar.gz) = 125968 bytes

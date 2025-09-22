@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/03/14 15:43:22 nikita Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/09/22 09:13:53 adam Exp $
 guile/3.0/info/guile-git.info
 guile/3.0/lib/guile/3.0/site-ccache/git.go
 guile/3.0/lib/guile/3.0/site-ccache/git/annotated.go
@@ -19,6 +19,9 @@ guile/3.0/lib/guile/3.0/site-ccache/git/describe.go
 guile/3.0/lib/guile/3.0/site-ccache/git/diff.go
 guile/3.0/lib/guile/3.0/site-ccache/git/errors.go
 guile/3.0/lib/guile/3.0/site-ccache/git/fetch.go
+guile/3.0/lib/guile/3.0/site-ccache/git/graph.go
+guile/3.0/lib/guile/3.0/site-ccache/git/ignore.go
+guile/3.0/lib/guile/3.0/site-ccache/git/notes.go
 guile/3.0/lib/guile/3.0/site-ccache/git/object.go
 guile/3.0/lib/guile/3.0/site-ccache/git/oid.go
 guile/3.0/lib/guile/3.0/site-ccache/git/reference.go
@@ -26,6 +29,7 @@ guile/3.0/lib/guile/3.0/site-ccache/git/remote.go
 guile/3.0/lib/guile/3.0/site-ccache/git/repository.go
 guile/3.0/lib/guile/3.0/site-ccache/git/reset.go
 guile/3.0/lib/guile/3.0/site-ccache/git/rev-parse.go
+guile/3.0/lib/guile/3.0/site-ccache/git/revwalker.go
 guile/3.0/lib/guile/3.0/site-ccache/git/settings.go
 guile/3.0/lib/guile/3.0/site-ccache/git/signature.go
 guile/3.0/lib/guile/3.0/site-ccache/git/status.go
@@ -61,6 +65,9 @@ guile/3.0/share/guile/site/3.0/git/describe.scm
 guile/3.0/share/guile/site/3.0/git/diff.scm
 guile/3.0/share/guile/site/3.0/git/errors.scm
 guile/3.0/share/guile/site/3.0/git/fetch.scm
+guile/3.0/share/guile/site/3.0/git/graph.scm
+guile/3.0/share/guile/site/3.0/git/ignore.scm
+guile/3.0/share/guile/site/3.0/git/notes.scm
 guile/3.0/share/guile/site/3.0/git/object.scm
 guile/3.0/share/guile/site/3.0/git/oid.scm
 guile/3.0/share/guile/site/3.0/git/reference.scm
@@ -68,6 +75,7 @@ guile/3.0/share/guile/site/3.0/git/remote.scm
 guile/3.0/share/guile/site/3.0/git/repository.scm
 guile/3.0/share/guile/site/3.0/git/reset.scm
 guile/3.0/share/guile/site/3.0/git/rev-parse.scm
+guile/3.0/share/guile/site/3.0/git/revwalker.scm
 guile/3.0/share/guile/site/3.0/git/settings.scm
 guile/3.0/share/guile/site/3.0/git/signature.scm
 guile/3.0/share/guile/site/3.0/git/status.scm
