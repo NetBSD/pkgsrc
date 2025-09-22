@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/09/14 10:29:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/22 10:36:14 adam Exp $
 bin/fs-uae-launcher
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2489,6 +2489,7 @@ share/fs-uae-launcher/resources/fsgs/res/input/linux/03000000ff000000cb010000100
 share/fs-uae-launcher/resources/fsgs/res/input/linux/03000000ff1100003133000010010000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/linux/03000000ff1100004133000010010000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/linux/03000000ffff0000ffff000000010000.fs-uae-controller
+share/fs-uae-launcher/resources/fsgs/res/input/linux/030081b85e0400008e02000014010000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/linux/05000000010000000100000003000000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/linux/05000000050b00000045000031000000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/linux/05000000050b00000045000040000000.fs-uae-controller
@@ -2814,6 +2815,7 @@ share/fs-uae-launcher/resources/fsgs/res/input/macos/03000000d8140000cecf0000000
 share/fs-uae-launcher/resources/fsgs/res/input/macos/03000000ef0500000300000000020000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/macos/03000000f025000021c1000000010000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/macos/03000000f0250000c383000000010000.fs-uae-controller
+share/fs-uae-launcher/resources/fsgs/res/input/macos/0300e12f5e0400008e02000014016800.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/macos/0500000047532047616d657061640000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/macos/05000000484944204465766963650000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/macos/050000004c050000cc090000ff070000.fs-uae-controller
@@ -3614,6 +3616,7 @@ share/fs-uae-launcher/resources/fsgs/res/input/windows/03000000ff110000313300000
 share/fs-uae-launcher/resources/fsgs/res/input/windows/03000000ff1100004033000000000000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/windows/03000000ff1100004133000000000000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/windows/03000000ffff00000000000000000000.fs-uae-controller
+share/fs-uae-launcher/resources/fsgs/res/input/windows/0300b9695e0400008e02000000007200.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/windows/78696e70757403000000000000000000.fs-uae-controller
 share/fs-uae-launcher/resources/fsgs/res/input/wireless_360_controller_15_6_0_0_macos.conf
 share/fs-uae-launcher/resources/fsgs/res/input/wireless_controller_13_6_1_0_linux.conf
@@ -3623,6 +3626,9 @@ share/fs-uae-launcher/resources/fsgs/res/input/wireless_controller_14_6_1_0_wind
 share/fs-uae-launcher/resources/fsgs/res/input/wisegroup_ltd/mp_8866_dual_usb_joypad.ini
 share/fs-uae-launcher/resources/fsgs/res/input/wisegroup_ltd/tigergame_ps_ps2_game_controller_adapter.ini
 share/fs-uae-launcher/resources/fsgs/res/input/x360controller_16_6_0_0_macos.conf
+share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_controller_11_6_1_0_linux.conf
+share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_controller_11_6_1_0_windows.conf
+share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_controller_15_6_0_0_macos.conf
 share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_wired_controller_15_6_0_0_macos.conf
 share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_wireless_receiver_15_6_0_0_linux.conf
 share/fs-uae-launcher/resources/fsgs/res/input/xbox_360_wireless_receiver_15_6_1_0_linux.conf
