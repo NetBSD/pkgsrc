@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5630 2025/09/22 05:44:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5631 2025/09/22 05:55:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8135,3 +8135,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6-qttranslations to 6.9.2 [adam 2025-09-22]
 	Updated devel/qt6-qtwayland to 6.9.2 [adam 2025-09-22]
 	Updated meta-pkgs/qt6 to 6.9.2 [adam 2025-09-22]
+	Updated security/openssl to 3.5.3 [adam 2025-09-22]
+	Updated graphics/openjpeg to 2.5.4 [adam 2025-09-22]
