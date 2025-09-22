@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/04/24 07:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/09/22 09:21:57 adam Exp $
 
-DISTNAME=	pygit2-1.16.0
+DISTNAME=	pygit2-1.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
 
@@ -20,7 +19,7 @@ FORCE_C_STD=	c99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
-BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=1.8
+BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=1.9
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
