@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2025/09/02 11:56:28 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/09/22 20:21:24 wiz Exp $
 
 DISTNAME=	textual-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	comms devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Textualize/textual
 COMMENT=	Modern Text User Interface framework
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.2.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.2.2:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.3.3:../../comms/py-rich
