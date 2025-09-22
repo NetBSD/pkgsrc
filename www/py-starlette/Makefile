@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/08/26 09:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/09/22 10:51:15 adam Exp $
 
-DISTNAME=	starlette-0.47.3
+DISTNAME=	starlette-0.48.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/starlette/}
@@ -25,11 +25,11 @@ USE_LANGUAGES=	# none
 # python core dump in thread trampoline
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
+.if ${PYTHON_VERSION} < 313
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10.0:../../devel/py-typing-extensions
 .else
 # TODO: shouldn't be necessary, report upstream
-TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10.0:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
