@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/04/22 19:59:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/09/22 07:47:47 wiz Exp $
 
 DISTNAME=	pydocstyle-6.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydocstyle/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/PyCQA/pydocstyle
 COMMENT=	Python docstring style checker
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
 
 .include "../../lang/python/pyversion.mk"
