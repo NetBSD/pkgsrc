@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.62 2024/12/27 08:19:16 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.63 2025/09/22 18:39:50 tron Exp $
 
 BUILDLINK_TREE+=	pango
 
@@ -26,7 +26,7 @@ pkgbase := pango
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15.0
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.17.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
