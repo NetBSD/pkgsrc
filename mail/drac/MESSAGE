@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:10 wiz Exp $
-
-You will need to modify a POP or IMAP server for this software to
-work.  Please see ${PREFIX}/share/examples/drac/INSTALL for details.
-
-===========================================================================
