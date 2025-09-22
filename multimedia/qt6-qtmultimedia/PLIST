@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/07/02 11:32:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/09/22 05:43:26 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -100,6 +100,7 @@ ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/QtGstreamerMediaPluginI
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/QtGstreamerMediaPluginImplVersion
 ${PLIST.gstreamer}qt6/include/QtGstreamerMediaPluginImpl/qtgstreamermediapluginimplversion.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudio_alignment_support_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudio_platform_implementation_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudio_qiodevice_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudio_qspan_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudio_rtsan_support_p.h
@@ -110,8 +111,6 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioformat_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioringbuffer_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_platform_stream_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_p.h
@@ -334,7 +333,6 @@ qt6/include/QtSpatialAudio/qspatialsound.h
 qt6/include/QtSpatialAudio/qtspatialaudioexports.h
 qt6/include/QtSpatialAudio/qtspatialaudioglobal.h
 qt6/include/QtSpatialAudio/qtspatialaudioversion.h
-qt6/lib/cmake/Qt6/FindAVFoundation.cmake
 qt6/lib/cmake/Qt6/FindFFmpeg.cmake
 qt6/lib/cmake/Qt6/FindGObject.cmake
 qt6/lib/cmake/Qt6/FindGStreamer.cmake

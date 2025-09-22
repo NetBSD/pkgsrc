@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/06/30 15:18:53 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/09/22 05:43:28 adam Exp $
 
 DISTNAME=	qtspeech-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtspeech-${QTVERSION}
@@ -14,7 +14,6 @@ PLIST_VARS+=	flite
 CONFIGURE_ARGS+=	-no-flite
 .else
 PLIST.flite=		yes
-CONFIGURE_ARGS+=	-no-flite-alsa
 .endif
 
 .include "../../x11/qt6-qtbase/Makefile.common"

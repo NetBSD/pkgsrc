@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/09/05 19:04:16 js Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/09/22 05:43:25 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -313,6 +313,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstringconverter_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstringiterator_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsystemerror_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsystemsemaphore_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtclasshelper_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtcore-config_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtcoreglobal_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtemporaryfile_p.h
@@ -1167,6 +1168,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstractlayoutstyleinfo_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qabstracttextdocumentlayout_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblebridgeutils_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblecache_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaccessiblehelper_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qaction_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qactiongroup_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qastchandler_p.h
@@ -2676,6 +2678,7 @@ qt6/include/QtXml/qtxmlglobal.h
 qt6/include/QtXml/qtxmlversion.h
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/0001-ECMEnableSanitizers.cmake-fix-GCC-s-note-variable-tr.patch
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/0002-ECMEnableSanitizers.cmake-replace-tabs-with-spaces.patch
+qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/0003-ECMEnableSanitizers.cmake-fix-no-undefined-flag-replacement.patch
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/COPYING-CMAKE-SCRIPTS
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/REUSE.toml
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/ECMFindModuleHelpersStub.cmake
@@ -2834,6 +2837,7 @@ qt6/lib/cmake/Qt6/QtProcessConfigureArgs.cmake
 qt6/lib/cmake/Qt6/QtProperties.cmake
 qt6/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicAppleHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicCMakeEarlyPolicyHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake
@@ -3341,6 +3345,9 @@ qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateConfigVersionImpl.c
 qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateTargets.cmake
 qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6TestInternalsPrivate/Qt6TestInternalsPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/QtRunCMake.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/QtRunCMakeTestWrappers.cmake
+qt6/lib/cmake/Qt6TestInternalsPrivate/RunCMake.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfig.cmake
 qt6/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersion.cmake
@@ -3740,7 +3747,6 @@ qt6/mkspecs/features/mac/rez.prf
 qt6/mkspecs/features/mac/sdk.mk
 qt6/mkspecs/features/mac/sdk.prf
 qt6/mkspecs/features/mac/toolchain.prf
-qt6/mkspecs/features/mac/unsupported/objc_namespace.prf
 qt6/mkspecs/features/metatypes.prf
 qt6/mkspecs/features/moc.prf
 qt6/mkspecs/features/no_debug_info.prf

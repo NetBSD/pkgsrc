@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2025/06/30 15:18:52 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/09/22 05:43:27 adam Exp $
 
-BLAKE2s (qtquick3d-everywhere-src-6.9.1.tar.xz) = 5465656eacd6db0d1c089af32ddb637f86dc82fbbf48b0d29939da318f8a8118
-SHA512 (qtquick3d-everywhere-src-6.9.1.tar.xz) = ed300ec9eaab59cdd6b15217c0f6b39f2f4678c6757e76ed5ad76654cf542f09abc9af959a2f525abdc8ee43855a3fd4a4f0b6d84cdd3221065cd2e4ae95e517
-Size (qtquick3d-everywhere-src-6.9.1.tar.xz) = 74173492 bytes
-SHA1 (patch-src_helpers_proceduralskytexturedata.cpp) = ff61ec90576c403b2aec7da172b7df71eb012f54
+BLAKE2s (qtquick3d-everywhere-src-6.9.2.tar.xz) = 77c11d6e2a3f7312fb99b3f8ba6b914f7a03b08d40732660ed764105ce0e559c
+SHA512 (qtquick3d-everywhere-src-6.9.2.tar.xz) = 83db833d7446a7f7bd4e4b6d2973ba2e85f4d9f05b2d8c4957ff12fb03920ff01a74d825f806feeb4c768db3bc46c50847ce68097f4952745c02b7dd690f0101
+Size (qtquick3d-everywhere-src-6.9.2.tar.xz) = 74198672 bytes
+SHA1 (patch-src_helpers_proceduralskytexturedata.cpp) = 82b23567218170b016385135d0854bd6c6a544c8
