@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5646 2025/09/22 09:14:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5647 2025/09/22 09:25:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8156,3 +8156,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libgit2 to 1.9.1 [adam 2025-09-22]
 	Updated devel/ruby-rugged to 1.9.0 [adam 2025-09-22]
 	Updated devel/guile-git to 0.10.0 [adam 2025-09-22]
+	Updated devel/py-pygit2 to 1.18.2 [adam 2025-09-22]
+	Updated textproc/py-xlsxwriter to 3.2.9 [adam 2025-09-22]
+	Updated devel/py-test-check to 2.5.4 [adam 2025-09-22]
+	Updated devel/py-test-mock to 3.15.1 [adam 2025-09-22]
