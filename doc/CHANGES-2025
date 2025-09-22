@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5631 2025/09/22 05:55:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5632 2025/09/22 06:11:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8137,3 +8137,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/qt6 to 6.9.2 [adam 2025-09-22]
 	Updated security/openssl to 3.5.3 [adam 2025-09-22]
 	Updated graphics/openjpeg to 2.5.4 [adam 2025-09-22]
+	Updated devel/cargo-about to 0.8.2 [pin 2025-09-22]
