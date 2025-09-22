@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/22 17:37:20 adam Exp $
+bin/uv-build-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-MIT
+${PYSITELIB}/uv_build/__init__.py
+${PYSITELIB}/uv_build/__init__.pyc
+${PYSITELIB}/uv_build/__init__.pyo
+${PYSITELIB}/uv_build/__main__.py
+${PYSITELIB}/uv_build/__main__.pyc
+${PYSITELIB}/uv_build/__main__.pyo
+${PYSITELIB}/uv_build/py.typed
