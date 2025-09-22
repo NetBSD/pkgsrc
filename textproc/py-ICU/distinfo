@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2025/04/23 07:05:23 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/09/22 09:29:00 adam Exp $
 
-BLAKE2s (pyicu-2.15.2.tar.gz) = 12aaa14303b0adcbaf0dae8955d76f2adec01c5796af5d366ecd87c9e750c36a
-SHA512 (pyicu-2.15.2.tar.gz) = 403086e9b51c7c9866f1457cfd624a923e703de1467d9d960629b91f6f91589f4771df472775a75e3a47f9fbdc155d18980f5d57b2df9d4feeceba391f1640f5
-Size (pyicu-2.15.2.tar.gz) = 267721 bytes
+BLAKE2s (pyicu-2.15.3.tar.gz) = 77b16823824f8e2f7df7ce8f89eba48757b62a68ddc15a5261b53a456257c2d2
+SHA512 (pyicu-2.15.3.tar.gz) = 204f11a7b1942c9bede9f825c85eda33efccecfc318eb0d3b36825216ad4e2d4ed5dd90ef29655e9280f61564e13b460f2bb8e64b812099d65d7f28a66cec415
+Size (pyicu-2.15.3.tar.gz) = 267569 bytes
 SHA1 (patch-locale.cpp) = 67313937b4ab23050d6544c5413bfcc76dcdc673
 SHA1 (patch-setup.py) = 8457066991cb165eb865b030bc7588104d2d6836
