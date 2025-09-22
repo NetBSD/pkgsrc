@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/08/26 09:20:11 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/09/22 10:51:15 adam Exp $
 
-BLAKE2s (starlette-0.47.3.tar.gz) = 089302ef40aa2d9c27d7ed704c61f3d65bb8e9dbfbbeb94e43fc71e8ca83b6a3
-SHA512 (starlette-0.47.3.tar.gz) = 265bbcb814e902ce25e25d3fe3abf00fef083aa09bb643cdb229d44f2df7863b26909555a29e5c234ef9a7d335f70c05f92b1a2bfbf987bbebcfe0480009ac65
-Size (starlette-0.47.3.tar.gz) = 2584144 bytes
+BLAKE2s (starlette-0.48.0.tar.gz) = 87a794690767299c1219735272951fb762f0ec77a63038efddd9ca203a9af85f
+SHA512 (starlette-0.48.0.tar.gz) = 30fbfa6e676ae9a94aa2b4104b8ac3127d119b54ea18d354fb5e4379e7c5863ec90b55cd8b0c9d18c6d6715acc78a9f593ec9ebb451fd272005ab34ba4f3a92c
+Size (starlette-0.48.0.tar.gz) = 2652949 bytes
