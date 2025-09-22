@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5666 2025/09/22 20:02:50 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.5667 2025/09/22 20:05:45 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8201,3 +8201,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-libcst to 1.8.4 [adam 2025-09-22]
 	Updated lang/py-cxxheaderparser to 1.6.0 [adam 2025-09-22]
 	Updated x11/xfce4-desktop to 4.20.1nb5 [gutteridge 2025-09-22]
+	Updated meta-pkgs/xfce4 to 4.20.0nb10 [gutteridge 2025-09-22]
