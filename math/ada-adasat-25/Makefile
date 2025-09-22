@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/07/10 15:47:58 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/22 18:26:02 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	adasat-${GNAT_NAME}-25.0.0
@@ -39,6 +39,17 @@ INSTALL_MAKE_FLAGS+=		LIBRARY_TYPE=${LIBRARY_TYPE}
 
 MAKE_FLAGS+=			BUILD_MODE=prod
 INSTALL_MAKE_FLAGS+=		INSTALL_DIR=${DESTDIR}${GNAT_PREFIX}
+
+.if ${PKGSRC_RUN_TEST:tl} == "yes"
+.include "../../lang/python/tool.mk"
+.endif
+
+TEST_TARGET=	test
+
+TEST_MAKE_FLAGS+=	PYTHON=${TOOL_PYTHONBIN} GPR_PROJECT_PATH=${WRKSRC}
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-core>=22.6.0:../../devel/py-e3-core
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-testsuite>=25.0:../../devel/py-e3-testsuite
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
