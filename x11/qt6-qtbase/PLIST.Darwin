@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.Darwin,v 1.7 2025/02/01 18:13:31 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.8 2025/09/22 05:43:25 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_mac_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdarwinpermissionplugin_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qeventdispatcher_cf_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_fsevents_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_mac_p.h

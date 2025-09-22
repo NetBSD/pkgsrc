@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/06/30 15:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/09/22 05:43:27 adam Exp $
 lib/pkgconfig/Qt6Quick3D.pc
 lib/pkgconfig/Qt6Quick3DAssetImport.pc
 lib/pkgconfig/Qt6Quick3DAssetUtils.pc
@@ -830,7 +830,6 @@ qt6/qml/QtQuick3D/Helpers/designer/images/wasdcontroller.png
 qt6/qml/QtQuick3D/Helpers/designer/images/wasdcontroller16.png
 qt6/qml/QtQuick3D/Helpers/designer/images/wasdcontroller@2x.png
 qt6/qml/QtQuick3D/Helpers/impl/DepthOfFieldBlur.qml
-qt6/qml/QtQuick3D/Helpers/impl/LightmapperOutputWindow.qml
 qt6/qml/QtQuick3D/Helpers/impl/SceneEffect.qml
 qt6/qml/QtQuick3D/Helpers/impl/libqtquick3dhelpersimplplugin.so
 qt6/qml/QtQuick3D/Helpers/impl/plugins.qmltypes
@@ -839,6 +838,7 @@ qt6/qml/QtQuick3D/Helpers/libqtquick3dhelpersplugin.so
 qt6/qml/QtQuick3D/Helpers/meshes/axisGrid.mesh
 qt6/qml/QtQuick3D/Helpers/plugins.qmltypes
 qt6/qml/QtQuick3D/Helpers/qmldir
+qt6/qml/QtQuick3D/LightmapperOutputWindow.qml
 qt6/qml/QtQuick3D/MaterialEditor/AboutDialog.qml
 qt6/qml/QtQuick3D/MaterialEditor/EditorView.qml
 qt6/qml/QtQuick3D/MaterialEditor/FrostedGlass.qml
