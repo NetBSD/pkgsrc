@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.276 2025/09/21 17:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.277 2025/09/22 07:12:42 wiz Exp $
 
 DISTNAME=	pango-1.57.0
 CATEGORIES=	devel fonts
@@ -66,7 +66,7 @@ BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=1.0.6
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15.0
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.17.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.harfbuzz+= harfbuzz>=8.4.0
 .include "../../fonts/harfbuzz/buildlink3.mk"
