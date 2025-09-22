@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.5 2025/06/30 15:18:51 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.6 2025/09/22 05:43:26 adam Exp $
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfcamera_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfsamplebufferdelegate_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qavfscreencapture_p.h
@@ -6,6 +6,7 @@ qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/privat
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qcgwindowcapture_p.h
 qt6/include/QtFFmpegMediaPluginImpl/${PKGVERSION}/QtFFmpegMediaPluginImpl/private/qffmpeghwaccel_videotoolbox_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qautoresetevent_kqueue_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcamerabase_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcameradebug_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfcamerautility_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qavfhelpers_p.h

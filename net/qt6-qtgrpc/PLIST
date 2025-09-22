@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/06/30 15:18:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/09/22 05:43:25 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -291,6 +291,8 @@ qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesConfig.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesConfigVersion.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesDependencies.cmake
+qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesExtras.cmake
+qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesProtobufProperties.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesTargets-release.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesTargets.cmake
 qt6/lib/cmake/Qt6ProtobufWellKnownTypes/Qt6ProtobufWellKnownTypesVersionlessAliasTargets.cmake
