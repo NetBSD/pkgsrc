@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/09/14 06:07:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/09/22 09:23:08 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -83,7 +83,6 @@ ${PYSITELIB}/xlsxwriter/metadata.pyo
 ${PYSITELIB}/xlsxwriter/packager.py
 ${PYSITELIB}/xlsxwriter/packager.pyc
 ${PYSITELIB}/xlsxwriter/packager.pyo
-${PYSITELIB}/xlsxwriter/py.typed
 ${PYSITELIB}/xlsxwriter/relationships.py
 ${PYSITELIB}/xlsxwriter/relationships.pyc
 ${PYSITELIB}/xlsxwriter/relationships.pyo
