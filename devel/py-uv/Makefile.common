@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2025/09/22 17:37:20 adam Exp $
+# used by devel/py-uv/Makefile
+# used by devel/py-uv-build/Makefile
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
+PATCHDIR=	${.CURDIR}/../../devel/py-uv/patches
+
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+ASYNC_ZIP_REV=	285e48742b74ab109887d62e1ae79e7c15fd4878
+PUBGRUB_REV=	06ec5a5f59ffaeb6cf5079c6cb184467da06c9db
+REQW_MW_REV=	7650ed76215a962a96d94a79be71c27bffde7ab2
+TL_REV=		6e25b2ee2513d75385101a8ff9f591ef51f314ec
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	async_zip-${ASYNC_ZIP_REV}.tar.gz
+DISTFILES+=	pubgrub-${PUBGRUB_REV}.tar.gz
+DISTFILES+=	reqwest-middleware-${REQW_MW_REV}.tar.gz
+DISTFILES+=	tl-${TL_REV}.tar.gz
+
+SITES.async_zip-${ASYNC_ZIP_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=astral-sh/}rs-async-zip/archive/${ASYNC_ZIP_REV}.tar.gz
+SITES.pubgrub-${PUBGRUB_REV}.tar.gz=		-${MASTER_SITE_GITHUB:=astral-sh/}pubgrub/archive/${PUBGRUB_REV}.tar.gz
+SITES.reqwest-middleware-${REQW_MW_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=astral-sh/}reqwest-middleware/archive/${REQW_MW_REV}.tar.gz
+SITES.tl-${TL_REV}.tar.gz=			-${MASTER_SITE_GITHUB:=astral-sh/}tl/archive/${TL_REV}.tar.gz
+
+.include "${.CURDIR}/../../devel/py-uv/cargo-depends.mk"
