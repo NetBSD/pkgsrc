@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5663 2025/09/22 17:38:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5664 2025/09/22 17:40:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8196,3 +8196,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-debugpy to 1.8.17 [adam 2025-09-22]
 	Added devel/py-uv version 0.8.19 [adam 2025-09-22]
 	Added devel/py-uv-build version 0.8.19 [adam 2025-09-22]
+	Updated security/py-cryptography to 46.0.1 [adam 2025-09-22]
+	Updated security/py-cryptography_vectors to 46.0.1 [adam 2025-09-22]
