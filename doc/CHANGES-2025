@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5649 2025/09/22 09:38:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5650 2025/09/22 09:52:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8164,3 +8164,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-regex to 2025.9.18 [adam 2025-09-22]
 	Updated devel/protobuf to 32.1 [adam 2025-09-22]
 	Updated devel/py-protobuf to 6.32.1 [adam 2025-09-22]
+	Updated devel/py-coverage to 7.10.7 [adam 2025-09-22]
+	Updated graphics/py-tifffile to 2025.9.20 [adam 2025-09-22]
