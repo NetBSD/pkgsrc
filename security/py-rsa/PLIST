@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/16 14:31:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/22 07:40:24 wiz Exp $
 bin/pyrsa-decrypt-${PYVERSSUFFIX}
 bin/pyrsa-encrypt-${PYVERSSUFFIX}
 bin/pyrsa-keygen-${PYVERSSUFFIX}
 bin/pyrsa-priv2pub-${PYVERSSUFFIX}
 bin/pyrsa-sign-${PYVERSSUFFIX}
 bin/pyrsa-verify-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/rsa/__init__.py
 ${PYSITELIB}/rsa/__init__.pyc
 ${PYSITELIB}/rsa/__init__.pyo
