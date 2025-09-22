@@ -1,9 +1,8 @@
-$NetBSD: patch-builds_unix_unix-cc.in,v 1.4 2022/04/20 20:59:52 wiz Exp $
+$NetBSD: patch-builds_unix_unix-cc.in,v 1.5 2025/09/22 10:46:13 adam Exp $
 
 Provide tag to libtool.
-Use CFLAGS when compiling executables.
 
---- builds/unix/unix-cc.in.orig	2022-01-27 07:43:19.000000000 +0000
+--- builds/unix/unix-cc.in.orig	2025-09-08 02:48:18.000000000 +0000
 +++ builds/unix/unix-cc.in
 @@ -95,7 +95,7 @@ ANSIFLAGS := @XX_ANSIFLAGS@
  # libtool call is always prepended.
@@ -14,13 +13,7 @@ Use CFLAGS when compiling executables.
  
  # Resource compiler to use on Cygwin/MinGW, usually windres.
  #
-@@ -113,15 +113,14 @@ LDFLAGS := @LDFLAGS@
- CCraw_build  := @CC_BUILD@	# native CC of building system
- E_BUILD      := @EXEEXT_BUILD@	# extension for executable on building system
- EXPORTS_LIST := $(OBJ_DIR)/ftexport.sym
--CCexe        := $(CCraw_build)	# used to compile `apinames' only
-+CCexe        := $(CCraw_build)	@CFLAGS@ # used to compile `apinames' only
- 
+@@ -122,10 +122,9 @@ CCexe_LDFLAGS := @LDFLAGS_BUILD@
  
  # Library linking.
  #

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2025/07/05 07:39:38 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2025/09/22 10:46:13 adam Exp $
 
-DISTNAME=	freetype-2.13.3
+DISTNAME=	freetype-2.14.1
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/}
 MASTER_SITES+=	https://download.savannah.gnu.org/releases/freetype/
