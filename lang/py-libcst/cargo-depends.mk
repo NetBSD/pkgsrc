@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2025/06/11 05:43:58 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/09/22 17:54:31 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.4
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
@@ -50,15 +50,15 @@ CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.7
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.7
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.4.3
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.95
-CARGO_CRATE_DEPENDS+=	pyo3-0.25.0
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.25.0
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.25.0
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.25.0
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.25.0
+CARGO_CRATE_DEPENDS+=	pyo3-0.25.1
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.25.1
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.25.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.25.1
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.25.1
 CARGO_CRATE_DEPENDS+=	quote-1.0.40
-CARGO_CRATE_DEPENDS+=	rayon-1.10.0
-CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
-CARGO_CRATE_DEPENDS+=	regex-1.11.1
+CARGO_CRATE_DEPENDS+=	rayon-1.11.0
+CARGO_CRATE_DEPENDS+=	rayon-core-1.13.0
+CARGO_CRATE_DEPENDS+=	regex-1.11.2
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.9
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.21
