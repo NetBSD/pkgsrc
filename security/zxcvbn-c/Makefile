@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/08/03 09:49:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/22 22:33:44 ryoon Exp $
 
 DISTNAME=	zxcvbn-c-2.6
 CATEGORIES=	security
@@ -10,6 +10,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/tsyrogit/zxcvbn-c/
 COMMENT=	Password strength estimator
 LICENSE=	mit
+
+MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11
