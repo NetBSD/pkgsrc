@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/05 12:12:13 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/22 15:06:26 hauke Exp $
 bin/alink
 bin/asl
 bin/p2bin
@@ -261,6 +261,7 @@ include/asl/regst9.inc
 include/asl/regstm8.inc
 include/asl/regsx20.inc
 include/asl/regv60.inc
+include/asl/regz280.inc
 include/asl/regz380.inc
 include/asl/regz8.inc
 include/asl/s12z/cpucore.inc
