@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/09/14 10:29:34 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/09/22 10:36:14 adam Exp $
 
-DISTNAME=	fs-uae-launcher-3.2.20
+DISTNAME=	fs-uae-launcher-3.2.35
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FrodeSolheim/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

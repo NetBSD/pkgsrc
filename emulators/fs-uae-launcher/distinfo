@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2025/09/14 10:29:34 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/09/22 10:36:14 adam Exp $
 
-BLAKE2s (fs-uae-launcher-3.2.20.tar.xz) = af596aa375dc118eb299464e1863313c019658ec6601f0830549a58a3309aa0b
-SHA512 (fs-uae-launcher-3.2.20.tar.xz) = 2a514a8f41469e75dcf5e71af6cecff21410091f42755fae1809c8b74dcf4d7b96a62cd7b8a6efaabbb1b8b93e0227f9d4b673b51a811f971c3b00fbad671774
-Size (fs-uae-launcher-3.2.20.tar.xz) = 7708216 bytes
-SHA1 (patch-setup.py) = dd0091f62230c14a5885a2c5b51bebb0694432d3
+BLAKE2s (fs-uae-launcher-3.2.35.tar.xz) = b7ad98be0da28ff2ae16a96a62c133f0483d9f227829ed63161ffdc7164995c6
+SHA512 (fs-uae-launcher-3.2.35.tar.xz) = 2b719fc9f2d47cdbe7e040f1e4632757bf22aa7ccaf5ef0a2ea4e972acca301929dd2f8ecfc63e957ff1f9394229dadf130ac1542ce251e29c84d57592654e3d
+Size (fs-uae-launcher-3.2.35.tar.xz) = 7727452 bytes
+SHA1 (patch-setup.py) = 07624eaecf2f9172ffbdb3649e0dea773484ed26
