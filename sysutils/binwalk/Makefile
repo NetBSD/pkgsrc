@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/01/13 21:28:07 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/22 17:24:55 tnn Exp $
 
 DISTNAME=	binwalk-3.1.0
 CATEGORIES=	sysutils
@@ -14,6 +14,7 @@ USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE=1	# for gettimeofday(2)
 
 .include "cargo-depends.mk"
 
