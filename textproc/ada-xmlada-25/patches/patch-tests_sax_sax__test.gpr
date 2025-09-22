@@ -1,0 +1,13 @@
+$NetBSD: patch-tests_sax_sax__test.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/sax/sax_test.gpr.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/sax/sax_test.gpr
+@@ -1,5 +1,5 @@
+ with "../../xmlada_shared";
+-with "xmlada_sax";
++with "../../sax/xmlada_sax";
+ project Sax_Test is
+    for Main use ("testsax.adb", "teststate.adb");
+    for Object_Dir use "obj";

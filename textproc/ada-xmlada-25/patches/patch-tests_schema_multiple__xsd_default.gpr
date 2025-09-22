@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_schema_multiple__xsd_default.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/schema/multiple_xsd/default.gpr.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/schema/multiple_xsd/default.gpr
+@@ -1,4 +1,7 @@
+-with "xmlada";
++with "../../../xmlada_shared";
++with "../../../sax/xmlada_sax";
++with "../../../schema/xmlada_schema";
++with "../../../input_sources/xmlada_input";
+ project Default is
+    for Main use ("validate.adb");
+    package Binder is

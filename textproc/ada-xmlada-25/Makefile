@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/04 08:20:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/22 09:52:12 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -41,6 +41,8 @@ CONFIGURE_ARGS+=		--enable-shared
 .else
 CONFIGURE_ARGS+=		--disable-shared
 .endif
+
+TEST_TARGET=		test run_test
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
