@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.114 2025/08/30 22:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2025/09/22 20:02:34 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	4.20.1
-PKGREVISION=	4
+PKGREVISION=	5
 DISTNAME=	xfdesktop-${VERSION}
 PKGNAME=	xfce4-desktop-${VERSION}
 CATEGORIES=	x11
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/xfce4-thunar/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libyaml+=	libyaml>=0.2.5
+.include "../../textproc/libyaml/buildlink3.mk"
 .include "../../x11/libxfce4windowing/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
