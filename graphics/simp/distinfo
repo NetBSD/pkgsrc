@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2025/09/01 09:38:32 pin Exp $
+$NetBSD: distinfo,v 1.18 2025/09/22 06:14:46 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.31.crate) = 728a747b915ef17bef1d00f5edb11db7c6033a0e2c3250db7e8dc7b2e5f2778b
 SHA512 (ab_glyph-0.2.31.crate) = 7a9721e8e055f5dddd65a9102a5963ae708b60fa2d09348039247ef9a39983b6610ebde1977426fc8d5848b950d64c22587106845964ee223a62bf3ae7b7fcff
@@ -1695,3 +1695,4 @@ Size (zvariant_derive-5.6.0.crate) = 14278 bytes
 BLAKE2s (zvariant_utils-3.2.0.crate) = a37b85bd35e5168e45b50ab6d42717bc90cd237c0efb92629a6597d1b79eac8c
 SHA512 (zvariant_utils-3.2.0.crate) = 9176e3240078a3d240f81272cd6e04438048ee044dabd0233bce0ba9567e97655e2721332dcd43376b09c055c07080e12ffd2888355f003cc32c3bfddbc4c479
 Size (zvariant_utils-3.2.0.crate) = 14779 bytes
+SHA1 (patch-about.toml) = eb6df022c787b1689e2406f3fbe894026fb9a9ad
