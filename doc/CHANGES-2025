@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5658 2025/09/22 13:16:01 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5659 2025/09/22 13:49:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8179,3 +8179,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.24.0 [pin 2025-09-22]
 	Updated textproc/xan to 0.53.0 [pin 2025-09-22]
 	Updated www/xh to 0.25.0 [pin 2025-09-22]
+	Updated geography/qgis to 3.40.11 [gdt 2025-09-22]
