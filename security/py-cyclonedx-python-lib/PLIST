@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/07/01 19:34:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/22 20:31:05 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -150,8 +150,8 @@ ${PYSITELIB}/cyclonedx/validation/model.pyo
 ${PYSITELIB}/cyclonedx/validation/xml.py
 ${PYSITELIB}/cyclonedx/validation/xml.pyc
 ${PYSITELIB}/cyclonedx/validation/xml.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
