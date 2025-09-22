@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/04/24 07:01:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/22 09:21:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -53,6 +53,7 @@ ${PYSITELIB}/pygit2/decl/indexer.h
 ${PYSITELIB}/pygit2/decl/merge.h
 ${PYSITELIB}/pygit2/decl/net.h
 ${PYSITELIB}/pygit2/decl/oid.h
+${PYSITELIB}/pygit2/decl/options.h
 ${PYSITELIB}/pygit2/decl/pack.h
 ${PYSITELIB}/pygit2/decl/proxy.h
 ${PYSITELIB}/pygit2/decl/refspec.h
@@ -82,6 +83,9 @@ ${PYSITELIB}/pygit2/index.pyo
 ${PYSITELIB}/pygit2/legacyenums.py
 ${PYSITELIB}/pygit2/legacyenums.pyc
 ${PYSITELIB}/pygit2/legacyenums.pyo
+${PYSITELIB}/pygit2/options.py
+${PYSITELIB}/pygit2/options.pyc
+${PYSITELIB}/pygit2/options.pyo
 ${PYSITELIB}/pygit2/packbuilder.py
 ${PYSITELIB}/pygit2/packbuilder.pyc
 ${PYSITELIB}/pygit2/packbuilder.pyo
