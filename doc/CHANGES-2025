@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5661 2025/09/22 14:38:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5662 2025/09/22 14:43:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8192,3 +8192,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/ffplay3 to 3.4.14 [adam 2025-09-22]
 	Updated security/p11-kit to 0.25.10 [adam 2025-09-22]
 	Updated devel/cargo-c to 0.10.16 [adam 2025-09-22]
+	Updated mail/py-checkdmarc to 5.10.12 [adam 2025-09-22]
+	Updated devel/py-debugpy to 1.8.17 [adam 2025-09-22]
