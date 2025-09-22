@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1 2025/08/12 16:25:41 hauke Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/09/22 15:06:26 hauke Exp $
 #
 # used by devel/asl/Makefile
 # used by devel/asl-doc/Makefile
 
-DISTNAME=	asl-current-142-bld290
-PKGVER=		1.42.290
+DISTNAME=	asl-current-142-bld294
+PKGVER=		1.42.294
 CATEGORIES=	devel
 MASTER_SITES=	ftp://john.ccac.rwth-aachen.de/pub/as/source/c_version/
 MASTER_SITES+=	http://john.ccac.rwth-aachen.de:8000/ftp/as/source/c_version/

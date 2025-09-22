@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2025/07/05 12:12:14 hauke Exp $
+$NetBSD: distinfo,v 1.2 2025/09/22 15:06:27 hauke Exp $
 
-BLAKE2s (asl-current-142-bld290.tar.gz) = a56528f84682e50e32eac61b80377b222bd52c76c78dd154544fb3b97057dc86
-SHA512 (asl-current-142-bld290.tar.gz) = 8673a3c03d9680f136ce55b839a425abe0a385a95f156cf66fb99fccfa604c4f9538d414afcac55012012850001cba5578c125cdd5c2bf9d8e2bc4df8bc4ba6b
-Size (asl-current-142-bld290.tar.gz) = 3401371 bytes
+BLAKE2s (asl-current-142-bld294.tar.gz) = c0daeb2d7b4af907f4743f7669e457a9304dc132d9fe7e90f16b5a35e2543963
+SHA512 (asl-current-142-bld294.tar.gz) = fc5698dad38bd3df60f1b9da92422b17221d17347c14164a232757ad11ec71f99f5b0df05faaed486cec5d5f7d8703f0354f8832faf8e3ab7769132378e7d7fb
+Size (asl-current-142-bld294.tar.gz) = 3439693 bytes
 SHA1 (patch-Makefile) = fad6a288766aca5e3780a8481063c81074a4517d
 SHA1 (patch-install.sh) = aaebcfc42af5f3f2eab2368edda18c543e0a110c
