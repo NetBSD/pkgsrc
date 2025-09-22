@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2025/09/21 15:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/09/22 20:31:05 wiz Exp $
 
 DISTNAME=	cyclonedx_python_lib-11.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/CycloneDX/cyclonedx-python-lib
 COMMENT=	Python library for generating CycloneDX SBOMs
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-license-expression>=30:../../devel/py-license-expression
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.11:../../devel/py-packageurl
 DEPENDS+=	${PYPKGPREFIX}-referencing>=0.28.4:../../textproc/py-referencing
