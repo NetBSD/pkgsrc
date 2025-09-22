@@ -1,21 +1,23 @@
-$NetBSD: patch-Makefile,v 1.1 2025/07/10 15:47:58 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/09/22 18:26:02 dkazankov Exp $
 
+Make python bin settable
 Add gprbuild and gprinstall options
 Make install target for a library
 
 --- Makefile.orig	2024-01-03 19:00:52.000000000 +0200
 +++ Makefile
-@@ -4,6 +4,9 @@
+@@ -3,6 +3,10 @@
+ PROCESSORS ?= 0
  BUILD_DIR ?= .
  INSTALL_DIR ?= .
- 
++PYTHON ?= python3
++
 +GPRBUILD_OPTIONS ?= -p -j$(PROCESSORS)
 +GPRINSTALL_OPTIONS ?= 
-+
+ 
  ALL_LIBRARY_TYPES = static static-pic relocatable
  
- .PHONY: lib
-@@ -11,17 +14,29 @@
+@@ -11,17 +15,29 @@
  	gprbuild -k -P adasat.gpr -p -j$(PROCESSORS) \
  		--relocate-build-tree="$(BUILD_DIR)" \
  		-XLIBRARY_TYPE=$(LIBRARY_TYPE) \
@@ -47,7 +49,7 @@ Make install target for a library
  .PHONY: install
  install:
  	for kind in $(ALL_LIBRARY_TYPES) ; do \
-@@ -32,6 +47,7 @@
+@@ -32,6 +48,7 @@
  			--prefix="$(INSTALL_DIR)" \
  			--build-name=$$kind \
  			--build-var=LIBRARY_TYPE ; \
@@ -55,3 +57,10 @@ Make install target for a library
  	done
  
  .PHONY: test
+@@ -43,5 +60,5 @@
+ 
+ .PHONY: test
+ test: lib
+-	python3 testsuite/testsuite.py
++	$(PYTHON) testsuite/testsuite.py
+ 
