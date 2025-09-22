@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2025/08/20 19:42:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2025/09/22 17:10:06 ryoon Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -163,6 +163,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudidentity.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudidentity.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudiot.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudkms.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudlocationfinder.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudlocationfinder.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudprofiler.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudresourcemanager.v1.json
@@ -232,6 +233,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.3.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.4.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v3.5.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v4.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dfareporting.v5.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v2beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dialogflow.v3.json
@@ -375,6 +377,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.inventories_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.issueresolution_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.issueresolution_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.lfp_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.lfp_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.notifications_v1beta.json
