@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5652 2025/09/22 10:46:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5653 2025/09/22 10:49:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8172,3 +8172,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/fs-uae-launcher to 3.2.35 [adam 2025-09-22]
 	Updated sysutils/restic to 0.18.1 [adam 2025-09-22]
 	Updated graphics/freetype2 to 2.14.1 [adam 2025-09-22]
+	Updated net/dnsdist to 2.0.1 [wiz 2025-09-22]
