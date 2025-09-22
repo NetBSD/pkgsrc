@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/04/05 10:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/09/22 07:46:56 wiz Exp $
 
 DISTNAME=	pygls-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygls/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/openlawlibrary/pygls
 COMMENT=	Pythonic generic implementation of the Language Server Protocol
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-cattrs>=23.1.2:../../devel/py-cattrs
 DEPENDS+=	${PYPKGPREFIX}-lsprotocol>=2023.0.1:../../lang/py-lsprotocol
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.21.0:../../devel/py-test-asyncio
