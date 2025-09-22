@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2025/06/30 15:40:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/09/22 05:51:24 adam Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -4559,10 +4559,12 @@ man/man3/SSL_OP_BIT.3
 man/man3/SSL_POLL_EVENT_E.3
 man/man3/SSL_POLL_EVENT_EC.3
 man/man3/SSL_POLL_EVENT_ECD.3
+man/man3/SSL_POLL_EVENT_EL.3
 man/man3/SSL_POLL_EVENT_ER.3
 man/man3/SSL_POLL_EVENT_EW.3
 man/man3/SSL_POLL_EVENT_F.3
 man/man3/SSL_POLL_EVENT_I.3
+man/man3/SSL_POLL_EVENT_IC.3
 man/man3/SSL_POLL_EVENT_IS.3
 man/man3/SSL_POLL_EVENT_ISB.3
 man/man3/SSL_POLL_EVENT_ISE.3
