@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5636 2025/09/22 07:40:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5637 2025/09/22 07:41:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8143,3 +8143,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/fast_float to 8.1.0 [adam 2025-09-22]
 	Updated comms/py-rich to 14.1.0nb1 [wiz 2025-09-22]
 	Updated security/py-rsa to 4.9.1nb1 [wiz 2025-09-22]
+	Updated net/py-aiohappyeyeballs to 2.6.1nb1 [wiz 2025-09-22]
