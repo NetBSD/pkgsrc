@@ -1,0 +1,1 @@
+bin/pyperf @PREFIX@/bin/pyperf-@PYVERSSUFFIX@
