@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5644 2025/09/22 07:53:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5645 2025/09/22 08:30:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8151,3 +8151,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-docstyle to 6.3.0nb2 [wiz 2025-09-22]
 	Updated time/py-iso8601 to 2.1.0nb2 [wiz 2025-09-22]
 	Updated devel/py-xdg-base-dirs to 6.0.2nb1 [wiz 2025-09-22]
+	Updated textproc/py-lxml to 6.0.2 [adam 2025-09-22]
+	Updated net/py-zeep to 4.3.2 [adam 2025-09-22]
