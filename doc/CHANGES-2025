@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5670 2025/09/22 20:32:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5671 2025/09/22 21:42:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8205,3 +8205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.1.0nb1 [wiz 2025-09-22]
 	Updated security/py-cyclonedx-python-lib to 11.1.0nb1 [wiz 2025-09-22]
 	Updated audio/py-beets to 2.4.0nb1 [wiz 2025-09-22]
+	Added devel/py-pyperf version 2.9.0 [wiz 2025-09-22]
