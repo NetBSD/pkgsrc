@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5655 2025/09/22 11:08:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5656 2025/09/22 12:06:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8176,3 +8176,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/powerdns to 4.9.8 [wiz 2025-09-22]
 	Updated security/py-authlib to 1.6.4 [adam 2025-09-22]
 	Updated www/py-starlette to 0.48.0 [adam 2025-09-22]
+	Updated shells/oh-my-posh to 26.24.0 [pin 2025-09-22]
