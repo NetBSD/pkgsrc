@@ -1,22 +1,23 @@
-$NetBSD: patch-configure,v 1.8 2022/08/23 10:17:49 wiz Exp $
+$NetBSD: patch-configure,v 1.9 2025/09/22 14:27:16 adam Exp $
 
 Enable PIC and section_data_rel_ro on NetBSD, even on i386,
 to avoid text relocations.
 
 Allow newer SDL2 versions.
 
---- configure.orig	2022-05-14 00:19:12.000000000 +0000
+Do not use 'rsync'.
+
+--- configure.orig	2025-03-12 22:05:46.000000000 +0000
 +++ configure
-@@ -4941,6 +4941,8 @@ case $target_os in
+@@ -4941,6 +4941,7 @@ case $target_os in
          ;;
      netbsd)
          disable symver
 +        enable pic
-+        enable section_data_rel_ro
+         enable section_data_rel_ro
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
-         enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5361,10 +5363,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -5363,10 +5364,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -33,7 +34,7 @@ Allow newer SDL2 versions.
  
  check_cc <<EOF && enable const_nan
  #include <math.h>
-@@ -6100,7 +6105,7 @@ fi
+@@ -6102,7 +6106,7 @@ fi
  
  if enabled sdl2; then
      SDL2_CONFIG="${cross_prefix}sdl2-config"
@@ -42,3 +43,11 @@ Allow newer SDL2 versions.
          check_func SDL_Init $sdl2_extralibs $sdl2_cflags ||
              disable sdl2
      elif "${SDL2_CONFIG}" --version > /dev/null 2>&1; then
+@@ -6146,7 +6150,6 @@ enabled makeinfo \
+ disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
+ perl -v            > /dev/null 2>&1 && enable perl      || disable perl
+ pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
+-rsync --help 2> /dev/null | grep -q 'contimeout' && enable rsync_contimeout || disable rsync_contimeout
+ 
+ # check V4L2 codecs available in the API
+ check_header linux/fb.h
