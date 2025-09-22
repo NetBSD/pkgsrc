@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5651 2025/09/22 09:58:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5652 2025/09/22 10:46:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8169,3 +8169,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-types-docutils to 0.22.0.20250919 [adam 2025-09-22]
 	Updated textproc/py-types-yaml to 6.0.12.20250915 [adam 2025-09-22]
 	Updated devel/py-types-gdb to 16.3.0.20250920 [adam 2025-09-22]
+	Updated emulators/fs-uae-launcher to 3.2.35 [adam 2025-09-22]
+	Updated sysutils/restic to 0.18.1 [adam 2025-09-22]
+	Updated graphics/freetype2 to 2.14.1 [adam 2025-09-22]
