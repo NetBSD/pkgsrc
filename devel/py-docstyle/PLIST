@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/22 19:59:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/22 07:47:47 wiz Exp $
 bin/pydocstyle-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-MIT
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE-MIT
 ${PYSITELIB}/pydocstyle/__init__.py
 ${PYSITELIB}/pydocstyle/__init__.pyc
 ${PYSITELIB}/pydocstyle/__init__.pyo
