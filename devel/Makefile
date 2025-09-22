@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4530 2025/09/22 17:37:19 adam Exp $
+# $NetBSD: Makefile,v 1.4531 2025/09/22 21:42:06 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3082,6 +3082,7 @@ SUBDIR+=	py-pyobjc-framework-libdispatch
 SUBDIR+=	py-pyobjc-framework-libxpc
 SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pyparsing2
+SUBDIR+=	py-pyperf
 SUBDIR+=	py-pypi-cli
 SUBDIR+=	py-pyproject_hooks
 SUBDIR+=	py-pyrsistent
