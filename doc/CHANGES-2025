@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5668 2025/09/22 20:21:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5669 2025/09/22 20:31:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8203,3 +8203,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-desktop to 4.20.1nb5 [gutteridge 2025-09-22]
 	Updated meta-pkgs/xfce4 to 4.20.0nb10 [gutteridge 2025-09-22]
 	Updated comms/py-textual to 6.1.0nb1 [wiz 2025-09-22]
+	Updated security/py-cyclonedx-python-lib to 11.1.0nb1 [wiz 2025-09-22]
