@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5657 2025/09/22 13:14:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5658 2025/09/22 13:16:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8178,3 +8178,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-starlette to 0.48.0 [adam 2025-09-22]
 	Updated shells/oh-my-posh to 26.24.0 [pin 2025-09-22]
 	Updated textproc/xan to 0.53.0 [pin 2025-09-22]
+	Updated www/xh to 0.25.0 [pin 2025-09-22]
