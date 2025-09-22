@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/06/30 15:18:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/22 05:43:28 adam Exp $
 qt6/sbom/qttranslations-${PKGVERSION}.spdx
 qt6/translations/assistant_ar.qm
 qt6/translations/assistant_bg.qm
@@ -19,6 +19,7 @@ qt6/translations/assistant_pt_BR.qm
 qt6/translations/assistant_ru.qm
 qt6/translations/assistant_sk.qm
 qt6/translations/assistant_sl.qm
+qt6/translations/assistant_sv.qm
 qt6/translations/assistant_tr.qm
 qt6/translations/assistant_uk.qm
 qt6/translations/assistant_zh_CN.qm
@@ -42,6 +43,7 @@ qt6/translations/designer_pl.qm
 qt6/translations/designer_ru.qm
 qt6/translations/designer_sk.qm
 qt6/translations/designer_sl.qm
+qt6/translations/designer_sv.qm
 qt6/translations/designer_tr.qm
 qt6/translations/designer_uk.qm
 qt6/translations/designer_zh_CN.qm
@@ -107,6 +109,7 @@ qt6/translations/qt_help_pt_BR.qm
 qt6/translations/qt_help_ru.qm
 qt6/translations/qt_help_sk.qm
 qt6/translations/qt_help_sl.qm
+qt6/translations/qt_help_sv.qm
 qt6/translations/qt_help_tr.qm
 qt6/translations/qt_help_uk.qm
 qt6/translations/qt_help_zh_CN.qm
@@ -117,6 +120,7 @@ qt6/translations/qt_it.qm
 qt6/translations/qt_ja.qm
 qt6/translations/qt_ka.qm
 qt6/translations/qt_ko.qm
+qt6/translations/qt_lg.qm
 qt6/translations/qt_lt.qm
 qt6/translations/qt_lv.qm
 qt6/translations/qt_nl.qm
@@ -151,6 +155,7 @@ qt6/translations/qtbase_it.qm
 qt6/translations/qtbase_ja.qm
 qt6/translations/qtbase_ka.qm
 qt6/translations/qtbase_ko.qm
+qt6/translations/qtbase_lg.qm
 qt6/translations/qtbase_lv.qm
 qt6/translations/qtbase_nl.qm
 qt6/translations/qtbase_nn.qm
@@ -158,6 +163,7 @@ qt6/translations/qtbase_pl.qm
 qt6/translations/qtbase_pt_BR.qm
 qt6/translations/qtbase_ru.qm
 qt6/translations/qtbase_sk.qm
+qt6/translations/qtbase_sv.qm
 qt6/translations/qtbase_tr.qm
 qt6/translations/qtbase_uk.qm
 qt6/translations/qtbase_zh_CN.qm
@@ -176,6 +182,7 @@ qt6/translations/qtconnectivity_nl.qm
 qt6/translations/qtconnectivity_pl.qm
 qt6/translations/qtconnectivity_pt_BR.qm
 qt6/translations/qtconnectivity_ru.qm
+qt6/translations/qtconnectivity_sv.qm
 qt6/translations/qtconnectivity_tr.qm
 qt6/translations/qtconnectivity_uk.qm
 qt6/translations/qtconnectivity_zh_CN.qm
@@ -201,6 +208,7 @@ qt6/translations/qtdeclarative_pl.qm
 qt6/translations/qtdeclarative_pt_BR.qm
 qt6/translations/qtdeclarative_ru.qm
 qt6/translations/qtdeclarative_sk.qm
+qt6/translations/qtdeclarative_sv.qm
 qt6/translations/qtdeclarative_tr.qm
 qt6/translations/qtdeclarative_uk.qm
 qt6/translations/qtdeclarative_zh_CN.qm
@@ -221,6 +229,7 @@ qt6/translations/qtlocation_nl.qm
 qt6/translations/qtlocation_pl.qm
 qt6/translations/qtlocation_pt_BR.qm
 qt6/translations/qtlocation_ru.qm
+qt6/translations/qtlocation_sv.qm
 qt6/translations/qtlocation_tr.qm
 qt6/translations/qtlocation_uk.qm
 qt6/translations/qtlocation_zh_CN.qm
@@ -247,6 +256,7 @@ qt6/translations/qtmultimedia_pl.qm
 qt6/translations/qtmultimedia_pt_BR.qm
 qt6/translations/qtmultimedia_ru.qm
 qt6/translations/qtmultimedia_sk.qm
+qt6/translations/qtmultimedia_sv.qm
 qt6/translations/qtmultimedia_tr.qm
 qt6/translations/qtmultimedia_uk.qm
 qt6/translations/qtmultimedia_zh_CN.qm
@@ -259,6 +269,7 @@ qt6/translations/qtserialport_ka.qm
 qt6/translations/qtserialport_ko.qm
 qt6/translations/qtserialport_pl.qm
 qt6/translations/qtserialport_ru.qm
+qt6/translations/qtserialport_sv.qm
 qt6/translations/qtserialport_tr.qm
 qt6/translations/qtserialport_uk.qm
 qt6/translations/qtserialport_zh_CN.qm
@@ -268,8 +279,10 @@ qt6/translations/qtwebengine_en.qm
 qt6/translations/qtwebengine_es.qm
 qt6/translations/qtwebengine_ka.qm
 qt6/translations/qtwebengine_ko.qm
+qt6/translations/qtwebengine_lg.qm
 qt6/translations/qtwebengine_pl.qm
 qt6/translations/qtwebengine_ru.qm
+qt6/translations/qtwebengine_sv.qm
 qt6/translations/qtwebengine_tr.qm
 qt6/translations/qtwebengine_uk.qm
 qt6/translations/qtwebengine_zh_CN.qm
@@ -283,6 +296,7 @@ qt6/translations/qtwebsockets_ka.qm
 qt6/translations/qtwebsockets_ko.qm
 qt6/translations/qtwebsockets_pl.qm
 qt6/translations/qtwebsockets_ru.qm
+qt6/translations/qtwebsockets_sv.qm
 qt6/translations/qtwebsockets_tr.qm
 qt6/translations/qtwebsockets_uk.qm
 qt6/translations/qtwebsockets_zh_CN.qm

@@ -1,12 +1,12 @@
-$NetBSD: patch-src_helpers_proceduralskytexturedata.cpp,v 1.1 2024/11/04 09:39:14 jperkin Exp $
+$NetBSD: patch-src_helpers_proceduralskytexturedata.cpp,v 1.2 2025/09/22 05:43:27 adam Exp $
 
 Avoid "sun" conflict.
 
---- src/helpers/proceduralskytexturedata.cpp.orig	2024-11-04 09:36:59.905773824 +0000
+--- src/helpers/proceduralskytexturedata.cpp.orig	2025-08-17 23:58:26.000000000 +0000
 +++ src/helpers/proceduralskytexturedata.cpp
-@@ -11,6 +11,8 @@
- #include <QtQuick3DRuntimeRender/private/qssgrendertexturedata_p.h>
- #include <QtQuick3DRuntimeRender/private/qssgrenderimage_p.h>
+@@ -13,6 +13,8 @@
+ 
+ #include <QtGui/qquaternion.h>
  
 +#undef sun
 +
