@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2025/07/31 11:49:48 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2025/09/22 13:12:58 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.12
@@ -125,6 +125,8 @@ CARGO_CRATE_DEPENDS+=	indoc-2.0.6
 CARGO_CRATE_DEPENDS+=	instability-0.3.7
 CARGO_CRATE_DEPENDS+=	itertools-0.13.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.15
+CARGO_CRATE_DEPENDS+=	jemalloc-sys-0.5.4+5.3.0-patched
+CARGO_CRATE_DEPENDS+=	jemallocator-0.5.4
 CARGO_CRATE_DEPENDS+=	jiff-0.2.14
 CARGO_CRATE_DEPENDS+=	jiff-static-0.2.14
 CARGO_CRATE_DEPENDS+=	jiff-tzdb-0.1.4
