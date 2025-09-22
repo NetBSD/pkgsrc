@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5654 2025/09/22 10:52:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5655 2025/09/22 11:08:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8174,3 +8174,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/freetype2 to 2.14.1 [adam 2025-09-22]
 	Updated net/dnsdist to 2.0.1 [wiz 2025-09-22]
 	Updated net/powerdns to 4.9.8 [wiz 2025-09-22]
+	Updated security/py-authlib to 1.6.4 [adam 2025-09-22]
+	Updated www/py-starlette to 0.48.0 [adam 2025-09-22]
