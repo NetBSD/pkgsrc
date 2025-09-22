@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/09/22 14:38:15 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/22 16:02:00 ryoon Exp $
 
 DISTNAME=	cargo-c-0.10.16
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ USE_TOOLS+=	pkg-config
 RUST_REQ=	1.88.0
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 .include "cargo-depends.mk"
 
