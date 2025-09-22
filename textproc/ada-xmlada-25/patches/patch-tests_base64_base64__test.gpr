@@ -1,0 +1,13 @@
+$NetBSD: patch-tests_base64_base64__test.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/base64/base64_test.gpr.orig	2025-09-22 11:38:11.910294688 +0300
++++ tests/base64/base64_test.gpr
+@@ -1,5 +1,5 @@
+ with "../../xmlada_shared";
+-with "xmlada_sax";
++with "../../sax/xmlada_sax";
+ 
+ project Base64_Test is
+    for Main use ("test_base64");

@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.1 2025/07/10 16:55:09 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/09/22 09:52:12 dkazankov Exp $
 
 BLAKE2s (xmlada-25.0.0.tar.gz) = c7e2b06977998dadbde002a6b80a75d3921860f20946c02a983a2048ade6e987
 SHA512 (xmlada-25.0.0.tar.gz) = c57db78e3afd20862c3275d3d0874ada1748e98df06a76841cb3dca3686b29c7693835a591ca5789dca2d3d6ba9677c9082df94857e180e0758a5b77fafc40c0
 Size (xmlada-25.0.0.tar.gz) = 1082553 bytes
 SHA1 (patch-configure) = abb1e41b3b5bb7ec67a9cf06a353926334623d67
+SHA1 (patch-tests_Makefile) = 8a83555e04e2ad9b10f3abcf7519f04818e48717
+SHA1 (patch-tests_base64_base64__test.gpr) = 83310405f14e3a2754865aea3cb5ef4255dda6a5
+SHA1 (patch-tests_dom_conformance_conformance.gpr) = 0ab1fddb44076a5421630a94cd744208684f302e
+SHA1 (patch-tests_dom_dom__test.gpr) = 9c564f1453654e1ce64bd20bbf7cbbb76d25513d
+SHA1 (patch-tests_sax_sax__test.gpr) = 17ef2c91571e0fdaff6aa4d85be8fb017a82d1ff
+SHA1 (patch-tests_schema_multiple__xsd_default.gpr) = 5244c0046f72650f749afcedf47330bc2eea726d
+SHA1 (patch-tests_schema_schema__test.gpr) = 606aba4f67aa301951825d105f876dad0abc4f79
+SHA1 (patch-tests_unicode_unicode__test.gpr) = 25a3dfae0165f03d7584ca936403db685a5b80d9

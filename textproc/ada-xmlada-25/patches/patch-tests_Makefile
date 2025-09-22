@@ -1,0 +1,42 @@
+$NetBSD: patch-tests_Makefile,v 1.1 2025/09/22 09:52:12 dkazankov Exp $
+
+Add options for gprbuild
+
+--- tests/Makefile.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/Makefile
+@@ -81,7 +81,7 @@
+ test_multiple_xsd:
+ 	@echo "multiple xsd"
+ 	@cd schema/multiple_xsd; \
+-		gprbuild -q -Pdefault.gpr; \
++		gprbuild -q -Pdefault.gpr $(GPRBUILD_OPTIONS); \
+ 		./validate > $(RESULTS)/multiple_xsd.out; \
+ 		cp $(RESULTS)/multiple_xsd.out $(RESULTS)/multiple_xsd.diff; \
+ 		cat $(RESULTS)/multiple_xsd.diff
+@@ -89,7 +89,7 @@
+ test_examples_dom:
+ 	@echo "test examples dom"
+ 	@cd ../docs/dom; \
+-		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/domexample.out; \
++		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/domexample.out $(GPRBUILD_OPTIONS); \
+ 		./domexample >> $(RESULTS)/domexample.out; \
+ 		cp $(RESULTS)/domexample.out $(RESULTS)/domexample.diff; \
+ 		cat $(RESULTS)/domexample.diff; \
+@@ -104,7 +104,7 @@
+ test_examples_sax:
+ 	@echo "test examples sax"
+ 	@cd ../docs/sax; \
+-		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/saxexample_main.out; \
++		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/saxexample_main.out $(GPRBUILD_OPTIONS); \
+ 		./saxexample_main >> $(RESULTS)/saxexample_main.out; \
+ 		diff -b $(EXAMPLE_EXPECTED)/saxexample_main.expected $(RESULTS)/saxexample_main.out > $(RESULTS)/saxexample_main.diff; \
+ 		if test -s $(RESULTS)/saxexample_main.diff; then \
+@@ -114,7 +114,7 @@
+ test_examples_schema:
+ 	@echo "test examples schema"
+ 	@cd ../docs/schema; \
+-		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/schemaexample.out; \
++		gprbuild -q -p -Pdefault.gpr 2> $(RESULTS)/schemaexample.out $(GPRBUILD_OPTIONS); \
+ 		./schemaexample >> $(RESULTS)/schemaexample.out; \
+ 		cp $(RESULTS)/schemaexample.out $(RESULTS)/schemaexample.diff; \
+ 		cat $(RESULTS)/schemaexample.diff

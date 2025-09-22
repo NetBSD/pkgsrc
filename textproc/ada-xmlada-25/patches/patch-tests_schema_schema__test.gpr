@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_schema_schema__test.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/schema/schema_test.gpr.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/schema/schema_test.gpr
+@@ -1,6 +1,6 @@
+ with "../../xmlada_shared";
+-with "xmlada_schema";
+-with "xmlada_input";
++with "../../schema/xmlada_schema";
++with "../../input_sources/xmlada_input";
+ 
+ project Schema_Test is
+ 

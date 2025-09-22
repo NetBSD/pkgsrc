@@ -1,0 +1,14 @@
+$NetBSD: patch-tests_dom_conformance_conformance.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/dom/conformance/conformance.gpr.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/dom/conformance/conformance.gpr
+@@ -1,6 +1,6 @@
+ 
+ with "../../../xmlada_shared";
+-with "xmlada_dom";
++with "../../../dom/xmlada_dom";
+ 
+ project Conformance is
+    for Main use ("dom_conformance");

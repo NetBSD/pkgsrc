@@ -1,0 +1,13 @@
+$NetBSD: patch-tests_unicode_unicode__test.gpr,v 1.1 2025/09/22 09:52:13 dkazankov Exp $
+
+Fix project path
+
+--- tests/unicode/unicode_test.gpr.orig	2024-06-20 22:52:10.000000000 +0300
++++ tests/unicode/unicode_test.gpr
+@@ -1,5 +1,5 @@
+ with "../../xmlada_shared";
+-with "xmlada_unicode";
++with "../../unicode/xmlada_unicode";
+ 
+ project Unicode_Test is
+    for Main use ("test_unicode");
