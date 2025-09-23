@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_i16x8__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_i16x8__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/i16x8_.rs.orig	2025-02-15 21:35:09.865330384 +0000
-+++ ../vendor/wide-0.7.26/src/i16x8_.rs
+--- ../vendor/wide-0.7.30/src/i16x8_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/i16x8_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  
@@ -139,7 +139,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {
            vmaxvq_s16(self.neon) < 0
          }
-@@ -558,7 +558,7 @@ impl i16x8 {
+@@ -582,7 +582,7 @@ impl i16x8 {
          use core::arch::wasm32::*;
  
          i16x8 { simd: i16x8_narrow_i32x4(v.a.simd, v.b.simd) }
@@ -148,7 +148,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          use core::arch::aarch64::*;
  
          unsafe {
-@@ -628,7 +628,7 @@ impl i16x8 {
+@@ -652,7 +652,7 @@ impl i16x8 {
          unsafe { Self { sse: load_unaligned_m128i( &*(input.as_ptr() as * const [u8;16]) ) } }
        } else if #[cfg(target_feature="simd128")] {
          unsafe { Self { simd: v128_load(input.as_ptr() as *const v128 ) } }
@@ -157,7 +157,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vld1q_s16( input.as_ptr() as *const i16 ) } }
        } else {
          // 2018 edition doesn't have try_into
-@@ -645,7 +645,7 @@ impl i16x8 {
+@@ -669,7 +669,7 @@ impl i16x8 {
          Self { sse: blend_varying_i8_m128i(f.sse, t.sse, self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: v128_bitselect(t.simd, f.simd, self.simd) }
@@ -166,7 +166,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vbslq_s16(vreinterpretq_u16_s16(self.neon), t.neon, f.neon) }}
        } else {
          generic_bit_blend(self, t, f)
-@@ -672,7 +672,7 @@ impl i16x8 {
+@@ -696,7 +696,7 @@ impl i16x8 {
          let lo16 = shr_imm_u32_m128i::<16>(sum32);
          let sum16 = add_i16_m128i(sum32, lo16);
          extract_i16_as_i32_m128i::<0>(sum16) as i16
@@ -175,7 +175,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { vaddvq_s16(self.neon) }
        } else {
          let arr: [i16; 8] = cast(self);
-@@ -703,7 +703,7 @@ impl i16x8 {
+@@ -727,7 +727,7 @@ impl i16x8 {
            let lo16 = shr_imm_u32_m128i::<16>(sum32);
            let sum16 = min_i16_m128i(sum32, lo16);
            extract_i16_as_i32_m128i::<0>(sum16) as i16
@@ -184,7 +184,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
            unsafe { vminvq_s16(self.neon) }
          } else {
          let arr: [i16; 8] = cast(self);
-@@ -734,7 +734,7 @@ impl i16x8 {
+@@ -758,7 +758,7 @@ impl i16x8 {
            let lo16 = shr_imm_u32_m128i::<16>(sum32);
            let sum16 = max_i16_m128i(sum32, lo16);
            extract_i16_as_i32_m128i::<0>(sum16) as i16
@@ -193,7 +193,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
            unsafe { vmaxvq_s16(self.neon) }
          } else {
          let arr: [i16; 8] = cast(self);
-@@ -763,7 +763,7 @@ impl i16x8 {
+@@ -787,7 +787,7 @@ impl i16x8 {
          Self { sse: abs_i16_m128i(self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_abs(self.simd) }
@@ -202,7 +202,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vabsq_s16(self.neon) }}
        } else {
          let arr: [i16; 8] = cast(self);
-@@ -793,7 +793,7 @@ impl i16x8 {
+@@ -817,7 +817,7 @@ impl i16x8 {
          u16x8 { sse: abs_i16_m128i(self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          u16x8 { simd: i16x8_abs(self.simd) }
@@ -211,7 +211,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {u16x8 { neon: vreinterpretq_u16_s16(vabsq_s16(self.neon)) }}
        } else {
          let arr: [i16; 8] = cast(self);
-@@ -820,7 +820,7 @@ impl i16x8 {
+@@ -844,7 +844,7 @@ impl i16x8 {
          Self { sse: max_i16_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_max(self.simd, rhs.simd) }
@@ -220,7 +220,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vmaxq_s16(self.neon, rhs.neon) }}
        } else {
          self.cmp_lt(rhs).blend(rhs, self)
-@@ -835,7 +835,7 @@ impl i16x8 {
+@@ -859,7 +859,7 @@ impl i16x8 {
          Self { sse: min_i16_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_min(self.simd, rhs.simd) }
@@ -229,7 +229,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vminq_s16(self.neon, rhs.neon) }}
        } else {
          self.cmp_lt(rhs).blend(self, rhs)
-@@ -851,7 +851,7 @@ impl i16x8 {
+@@ -875,7 +875,7 @@ impl i16x8 {
          Self { sse: add_saturating_i16_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_add_sat(self.simd, rhs.simd) }
@@ -238,7 +238,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vqaddq_s16(self.neon, rhs.neon) }}
        } else {
          Self { arr: [
-@@ -875,7 +875,7 @@ impl i16x8 {
+@@ -899,7 +899,7 @@ impl i16x8 {
          Self { sse: sub_saturating_i16_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_sub_sat(self.simd, rhs.simd) }
@@ -247,7 +247,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vqsubq_s16(self.neon, rhs.neon) } }
        } else {
          Self { arr: [
-@@ -904,7 +904,7 @@ impl i16x8 {
+@@ -928,7 +928,7 @@ impl i16x8 {
          i32x4 { sse:  mul_i16_horizontal_add_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          i32x4 { simd: i32x4_dot_i16x8(self.simd, rhs.simd) }
@@ -256,7 +256,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {
            let pl = vmull_s16(vget_low_s16(self.neon),  vget_low_s16(rhs.neon));
            let ph = vmull_high_s16(self.neon, rhs.neon);
-@@ -947,7 +947,7 @@ impl i16x8 {
+@@ -971,7 +971,7 @@ impl i16x8 {
          Self { sse: s }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_q15mulr_sat(self.simd, rhs.simd) }
@@ -265,7 +265,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vqrdmulhq_s16(self.neon, rhs.neon) } }
        } else {
          // compiler does a surprisingly good job of vectorizing this
-@@ -972,7 +972,7 @@ impl i16x8 {
+@@ -996,7 +996,7 @@ impl i16x8 {
      pick! {
        if #[cfg(target_feature="sse2")] {
          Self { sse: mul_i16_keep_high_m128i(lhs.sse, rhs.sse) }
@@ -274,7 +274,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          let lhs_low = unsafe { vget_low_s16(lhs.neon) };
          let rhs_low = unsafe { vget_low_s16(rhs.neon) };
  
-@@ -1019,7 +1019,7 @@ impl i16x8 {
+@@ -1043,7 +1043,7 @@ impl i16x8 {
            a: i32x4 { sse:unpack_low_i16_m128i(low, high) },
            b: i32x4 { sse:unpack_high_i16_m128i(low, high) }
          }
@@ -283,7 +283,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
           let lhs_low = unsafe { vget_low_s16(self.neon) };
           let rhs_low = unsafe { vget_low_s16(rhs.neon) };
  
-@@ -1081,7 +1081,7 @@ impl i16x8 {
+@@ -1105,7 +1105,7 @@ impl i16x8 {
            i16x8 { sse: unpack_low_i64_m128i(b4, b8) },
            i16x8 { sse: unpack_high_i64_m128i(b4, b8) } ,
          ]
@@ -292,7 +292,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
  
            #[inline] fn vtrq32(a : int16x8_t, b : int16x8_t) -> (int16x8_t, int16x8_t)
            {
-@@ -1209,7 +1209,7 @@ impl i16x8 {
+@@ -1233,7 +1233,7 @@ impl i16x8 {
          Self { sse: s }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i16x8_q15mulr_sat(self.simd, i16x8_splat(rhs)) }
