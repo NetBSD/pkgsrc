@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2025/08/31 13:12:06 gdt Exp $
+# $NetBSD: Makefile,v 1.116 2025/09/23 11:16:23 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.137.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -13,7 +14,7 @@ COMMENT=	Reference homeserver for the Matrix decentralised comms protocol
 LICENSE=	gnu-agpl-v3
 
 # Build tools:
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-[0-9]*:../../devel/py-poetry
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4:../../devel/py-poetry
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.3:../../devel/py-setuptools-rust
 
 # Dependencies as defined by synapse's build system (in theory):
