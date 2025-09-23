@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2025/04/14 08:31:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/09/23 06:28:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -73,6 +73,9 @@ ${PYSITELIB}/psutil/tests/test_process_all.pyo
 ${PYSITELIB}/psutil/tests/test_scripts.py
 ${PYSITELIB}/psutil/tests/test_scripts.pyc
 ${PYSITELIB}/psutil/tests/test_scripts.pyo
+${PYSITELIB}/psutil/tests/test_sudo.py
+${PYSITELIB}/psutil/tests/test_sudo.pyc
+${PYSITELIB}/psutil/tests/test_sudo.pyo
 ${PYSITELIB}/psutil/tests/test_sunos.py
 ${PYSITELIB}/psutil/tests/test_sunos.pyc
 ${PYSITELIB}/psutil/tests/test_sunos.pyo
