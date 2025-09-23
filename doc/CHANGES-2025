@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5683 2025/09/23 04:24:59 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5684 2025/09/23 06:30:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8231,3 +8231,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-actionmailbox80 to 8.0.3 [taca 2025-09-23]
 	Updated textproc/ruby-actiontext80 to 8.0.3 [taca 2025-09-23]
 	Updated www/ruby-rails80 to 8.0.3 [taca 2025-09-23]
+	Updated sysutils/py-psutil to 7.1.0 [adam 2025-09-23]
+	Updated devel/meson to 1.9.1 [adam 2025-09-23]
