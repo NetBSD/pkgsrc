@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/08/14 11:30:45 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/23 22:16:52 gdt Exp $
 
-VERSION=		1.6.1
+VERSION=		1.6.2
 #VERSION_RC=		rc2
 DISTNAME=		shapelib-${VERSION}${VERSION_RC}
 CATEGORIES=		geography
