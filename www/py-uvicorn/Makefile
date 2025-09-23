@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2025/07/05 11:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/09/23 16:30:48 adam Exp $
 
-DISTNAME=	uvicorn-0.35.0
+DISTNAME=	uvicorn-0.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-websockets>=10.4:../../www/py-websockets
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.2:../../www/py-httpx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.0:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.6.1:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
@@ -33,7 +34,7 @@ post-install:
 
 # Needs a2wsgi
 pre-test:
-	${RM} ${WRKSRC}/tests/middleware/test_wsgi.py
+	${RM} -f ${WRKSRC}/tests/middleware/test_wsgi.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
