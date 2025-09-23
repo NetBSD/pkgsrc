@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26267 2025/09/23 17:18:27 wiz Exp $
+$NetBSD: TODO,v 1.26268 2025/09/23 17:50:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -532,6 +532,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o coreutils-9.8
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
@@ -957,7 +958,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nvidia-texture-tools-2.1.1
 	o nxtvepg-2.8.1
 	o objc-3.3.24
-	o obs-studio-31.1.2
+	o obs-studio-32.0
 	o ocaml-5.3.0 [wip]
 	o ocaml-cppo-1.6.9
 	o ocaml-dune-3.20.2
