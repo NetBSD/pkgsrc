@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/03/09 11:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/09/23 12:59:29 tnn Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -33,6 +33,7 @@ SUBDIR+=	py-threadpoolctl
 SUBDIR+=	slurm-wlm
 SUBDIR+=	spirv-headers
 SUBDIR+=	spirv-llvm-translator
+SUBDIR+=	spirv-tools
 SUBDIR+=	threadingbuildingblocks
 
 .include "../mk/misc/category.mk"
