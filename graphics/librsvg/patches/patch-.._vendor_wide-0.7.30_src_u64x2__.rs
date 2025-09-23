@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_u64x2__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_u64x2__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/u64x2_.rs.orig	2025-02-15 21:43:43.641452364 +0000
-+++ ../vendor/wide-0.7.26/src/u64x2_.rs
+--- ../vendor/wide-0.7.30/src/u64x2_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/u64x2_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  

@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_i32x4__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_i32x4__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/i32x4_.rs.orig	2025-02-15 21:36:46.085631577 +0000
-+++ ../vendor/wide-0.7.26/src/i32x4_.rs
+--- ../vendor/wide-0.7.30/src/i32x4_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/i32x4_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  
@@ -139,7 +139,16 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vbslq_s32(vreinterpretq_u32_s32(self.neon), t.neon, f.neon) }}
        } else {
          generic_bit_blend(self, t, f)
-@@ -498,7 +498,7 @@ impl i32x4 {
+@@ -520,7 +520,7 @@ impl i32x4 {
+             a: i64x2 { simd: i64x2_extmul_low_i32x4(self.simd, rhs.simd) },
+             b: i64x2 { simd: i64x2_extmul_high_i32x4(self.simd, rhs.simd) },
+           }
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
+         unsafe {
+           i64x4 { a: i64x2 { neon: vmull_s32(vget_low_s32(self.neon), vget_low_s32(rhs.neon)) },
+                   b: i64x2 { neon: vmull_s32(vget_high_s32(self.neon), vget_high_s32(rhs.neon)) } }
+@@ -546,7 +546,7 @@ impl i32x4 {
          Self { sse: abs_i32_m128i(self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i32x4_abs(self.simd) }
@@ -148,7 +157,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vabsq_s32(self.neon) }}
        } else {
          let arr: [i32; 4] = cast(self);
-@@ -520,7 +520,7 @@ impl i32x4 {
+@@ -568,7 +568,7 @@ impl i32x4 {
          u32x4 { sse: abs_i32_m128i(self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          u32x4 { simd: i32x4_abs(self.simd) }
@@ -157,7 +166,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {u32x4 { neon: vreinterpretq_u32_s32(vabsq_s32(self.neon)) }}
        } else {
          let arr: [i32; 4] = cast(self);
-@@ -590,7 +590,7 @@ impl i32x4 {
+@@ -638,7 +638,7 @@ impl i32x4 {
          Self { sse: min_i32_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i32x4_min(self.simd, rhs.simd) }
@@ -166,7 +175,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vminq_s32(self.neon, rhs.neon) }}
        } else {
          self.cmp_lt(rhs).blend(self, rhs)
-@@ -605,7 +605,7 @@ impl i32x4 {
+@@ -653,7 +653,7 @@ impl i32x4 {
          cast(convert_to_m128_from_i32_m128i(self.sse))
        } else if #[cfg(target_feature="simd128")] {
          cast(Self { simd: f32x4_convert_i32x4(self.simd) })
@@ -175,7 +184,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          cast(unsafe {Self { neon: vreinterpretq_s32_f32(vcvtq_f32_s32(self.neon)) }})
        } else {
          let arr: [i32; 4] = cast(self);
-@@ -628,7 +628,7 @@ impl i32x4 {
+@@ -676,7 +676,7 @@ impl i32x4 {
          move_mask_m128(cast(self.sse))
        } else if #[cfg(target_feature="simd128")] {
          u32x4_bitmask(self.simd) as i32
@@ -184,7 +193,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe
          {
            // set all to 1 if top bit is set, else 0
-@@ -659,7 +659,7 @@ impl i32x4 {
+@@ -707,7 +707,7 @@ impl i32x4 {
          move_mask_m128(cast(self.sse)) != 0
        } else if #[cfg(target_feature="simd128")] {
          u32x4_bitmask(self.simd) != 0
@@ -193,7 +202,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          // some lanes are negative
          unsafe {
            vminvq_s32(self.neon) < 0
-@@ -680,7 +680,7 @@ impl i32x4 {
+@@ -728,7 +728,7 @@ impl i32x4 {
          move_mask_m128(cast(self.sse)) == 0b1111
        } else if #[cfg(target_feature="simd128")] {
          u32x4_bitmask(self.simd) == 0b1111
