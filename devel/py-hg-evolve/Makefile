@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2025/04/12 11:18:38 adam Exp $
+# $NetBSD: Makefile,v 1.49 2025/09/23 00:27:13 joerg Exp $
 #
 # Release notes:
 # https://lists.mercurial-scm.org/pipermail/mercurial/
 
-DISTNAME=	hg_evolve-11.1.8
+DISTNAME=	hg_evolve-11.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hg-evolve/}
 
@@ -13,6 +12,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mercurial-scm.org/doc/evolution/
 COMMENT=	Experimental Mercurial extensions from Facebook
 LICENSE=	gnu-gpl-v2
+
+PATCH_SITES=		https://foss.heptapod.net/mercurial/evolve/-/commit/
+PATCHFILES=		\
+    8ec80fb4b0ce4247b61051014a4fb891bf327a89.diff \
+    0144bd9214df0457a966177eb7217e2b2991965a.diff \
+    1c1cd671da5c3c547184b0b13dbb59b8c848d09c.diff
+PATCH_DIST_STRIP=	-p1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
@@ -24,13 +30,10 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__init__.py*
 	rm -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/__pycache__/__init__.*
 
-# Test status as of 11.1.6
-# Failed test-amend.t: output changed
-# Failed test-check-compat-strings.t: output changed
-# Failed test-check-sdist.t: output changed
-# Failed test-evolve-content-divergent-case-A2.t: output changed
-# Failed test-version-install.t: output changed
-# Ran 234 tests, 6 skipped, 5 failed.
+# Test status as of 11.1.9
+# Failed test-check-compat-strings.t: expects hg copy is a repository
+# Failed test-check-sdist.t: missing files in upstream list
+# Failed test-version-install.t: Unexpected PIP compatibility warning
 
 .if 0
 HG_WRKSRC=	cd ../py-mercurial && ${MAKE} show-var VARNAME=WRKSRC
