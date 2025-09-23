@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2025/05/09 19:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/23 13:00:27 tnn Exp $
 
+# Note that parallel/spirv-headers must be kept in sync with what this
+# package expects.
 DISTNAME=	SPIRV-LLVM-Translator-19.1.7
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,4 +27,5 @@ PKGCONFIG_OVERRIDE+=	LLVMSPIRVLib.pc.in
 .include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"
 .include "../../parallel/spirv-headers/buildlink3.mk"
+.include "../../parallel/spirv-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
