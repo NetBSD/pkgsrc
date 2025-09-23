@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5682 2025/09/23 03:34:43 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5683 2025/09/23 04:24:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8218,3 +8218,16 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-oauth to 1.1.2 [taca 2025-09-23]
 	Updated www/ruby-aws-partitions to 1.1163.0 [taca 2025-09-23]
 	Updated www/ruby-sass-embedded to 1.93.1 [taca 2025-09-23]
+	Updated devel/ruby-activesupport80 to 8.0.3 [taca 2025-09-23]
+	Updated devel/ruby-activemodel80 to 8.0.3 [taca 2025-09-23]
+	Updated devel/ruby-activejob80 to 8.0.3 [taca 2025-09-23]
+	Updated databases/ruby-activerecord80 to 8.0.3 [taca 2025-09-23]
+	Updated www/ruby-actionview80 to 8.0.3 [taca 2025-09-23]
+	Updated www/ruby-actionpack80 to 8.0.3 [taca 2025-09-23]
+	Updated www/ruby-actioncable80 to 8.0.3 [taca 2025-09-23]
+	Updated devel/ruby-railties80 to 8.0.3 [taca 2025-09-23]
+	Updated devel/ruby-activestorage80 to 8.0.3 [taca 2025-09-23]
+	Updated mail/ruby-actionmailer80 to 8.0.3 [taca 2025-09-23]
+	Updated mail/ruby-actionmailbox80 to 8.0.3 [taca 2025-09-23]
+	Updated textproc/ruby-actiontext80 to 8.0.3 [taca 2025-09-23]
+	Updated www/ruby-rails80 to 8.0.3 [taca 2025-09-23]
