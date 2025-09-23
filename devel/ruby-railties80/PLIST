@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/02 07:13:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/23 04:20:04 taca Exp $
 bin/rails80${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -89,6 +89,7 @@ ${GEM_LIBDIR}/lib/rails/generators/active_model.rb
 ${GEM_LIBDIR}/lib/rails/generators/app_base.rb
 ${GEM_LIBDIR}/lib/rails/generators/app_name.rb
 ${GEM_LIBDIR}/lib/rails/generators/base.rb
+${GEM_LIBDIR}/lib/rails/generators/bundle_helper.rb
 ${GEM_LIBDIR}/lib/rails/generators/database.rb
 ${GEM_LIBDIR}/lib/rails/generators/erb.rb
 ${GEM_LIBDIR}/lib/rails/generators/erb/authentication/authentication_generator.rb
@@ -194,7 +195,6 @@ ${GEM_LIBDIR}/lib/rails/generators/rails/authentication/templates/app/models/ses
 ${GEM_LIBDIR}/lib/rails/generators/rails/authentication/templates/app/models/user.rb.tt
 ${GEM_LIBDIR}/lib/rails/generators/rails/authentication/templates/app/views/passwords_mailer/reset.html.erb.tt
 ${GEM_LIBDIR}/lib/rails/generators/rails/authentication/templates/app/views/passwords_mailer/reset.text.erb.tt
-${GEM_LIBDIR}/lib/rails/generators/rails/authentication/templates/test/mailers/previews/passwords_mailer_preview.rb.tt
 ${GEM_LIBDIR}/lib/rails/generators/rails/benchmark/USAGE
 ${GEM_LIBDIR}/lib/rails/generators/rails/benchmark/benchmark_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/rails/benchmark/templates/benchmark.rb.tt
@@ -279,6 +279,7 @@ ${GEM_LIBDIR}/lib/rails/generators/test_case.rb
 ${GEM_LIBDIR}/lib/rails/generators/test_unit.rb
 ${GEM_LIBDIR}/lib/rails/generators/test_unit/authentication/authentication_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/test_unit/authentication/templates/test/fixtures/users.yml.tt
+${GEM_LIBDIR}/lib/rails/generators/test_unit/authentication/templates/test/mailers/previews/passwords_mailer_preview.rb.tt
 ${GEM_LIBDIR}/lib/rails/generators/test_unit/authentication/templates/test/models/user_test.rb.tt
 ${GEM_LIBDIR}/lib/rails/generators/test_unit/controller/controller_generator.rb
 ${GEM_LIBDIR}/lib/rails/generators/test_unit/controller/templates/functional_test.rb.tt
