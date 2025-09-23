@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/11 16:27:08 gutteridge Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.6 2025/09/23 18:36:41 gutteridge Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cmudict/__init__.py
 ${PYSITELIB}/cmudict/__init__.pyc
 ${PYSITELIB}/cmudict/__init__.pyo
