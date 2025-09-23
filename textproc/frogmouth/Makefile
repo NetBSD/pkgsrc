@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/08/12 10:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/23 07:22:38 wiz Exp $
 
 DISTNAME=	frogmouth-0.9.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/frogmouth/}
 
@@ -9,7 +10,7 @@ HOMEPAGE=	https://github.com/Textualize/frogmouth
 COMMENT=	Markdown browser for your terminal
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-textual>=0.43.0:../../comms/py-textual
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.24.1:../../www/py-httpx
