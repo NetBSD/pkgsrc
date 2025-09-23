@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_u16x8__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_u16x8__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/u16x8_.rs.orig	2025-02-15 21:41:16.297121103 +0000
-+++ ../vendor/wide-0.7.26/src/u16x8_.rs
+--- ../vendor/wide-0.7.30/src/u16x8_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/u16x8_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  
@@ -139,3 +139,21 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vqsubq_u16(self.neon, rhs.neon) }}
        } else {
          Self { arr: [
+@@ -563,7 +563,7 @@ impl u16x8 {
+           a: u32x4 { sse:unpack_low_i16_m128i(low, high) },
+           b: u32x4 { sse:unpack_high_i16_m128i(low, high) }
+         }
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
+          let lhs_low = unsafe { vget_low_u16(self.neon) };
+          let rhs_low = unsafe { vget_low_u16(rhs.neon) };
+ 
+@@ -598,7 +598,7 @@ impl u16x8 {
+     pick! {
+       if #[cfg(target_feature="sse2")] {
+         Self { sse: mul_u16_keep_high_m128i(self.sse, rhs.sse) }
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
+         let lhs_low = unsafe { vget_low_u16(self.neon) };
+         let rhs_low = unsafe { vget_low_u16(rhs.neon) };
+ 

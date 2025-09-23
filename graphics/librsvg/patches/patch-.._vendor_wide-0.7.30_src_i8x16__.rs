@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_i8x16__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_i8x16__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/i8x16_.rs.orig	2025-02-15 21:39:26.050484609 +0000
-+++ ../vendor/wide-0.7.26/src/i8x16_.rs
+--- ../vendor/wide-0.7.30/src/i8x16_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/i8x16_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  
@@ -175,7 +175,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {
            vmaxvq_s8(self.neon) < 0
          }
-@@ -708,7 +708,7 @@ impl i8x16 {
+@@ -709,7 +709,7 @@ impl i8x16 {
          Self { sse: shuffle_av_i8z_all_m128i(self.sse, add_saturating_u8_m128i(rhs.sse, set_splat_i8_m128i(0x70))) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i8x16_swizzle(self.simd, rhs.simd) }
@@ -184,7 +184,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vqtbl1q_s8(self.neon, vreinterpretq_u8_s8(rhs.neon)) } }
        } else {
          let idxs = rhs.to_array();
-@@ -741,7 +741,7 @@ impl i8x16 {
+@@ -743,7 +743,7 @@ impl i8x16 {
          Self { sse: shuffle_av_i8z_all_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i8x16_swizzle(self.simd, rhs.simd) }
@@ -193,7 +193,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe { Self { neon: vqtbl1q_s8(self.neon, vreinterpretq_u8_s8(rhs.neon)) } }
        } else {
          let idxs = rhs.to_array();
-@@ -774,7 +774,7 @@ impl i8x16 {
+@@ -776,7 +776,7 @@ impl i8x16 {
          Self { sse: add_saturating_i8_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i8x16_add_sat(self.simd, rhs.simd) }
@@ -202,7 +202,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vqaddq_s8(self.neon, rhs.neon) }}
        } else {
          Self { arr: [
-@@ -806,7 +806,7 @@ impl i8x16 {
+@@ -808,7 +808,7 @@ impl i8x16 {
          Self { sse: sub_saturating_i8_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: i8x16_sub_sat(self.simd, rhs.simd) }

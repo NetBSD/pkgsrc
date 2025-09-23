@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_wide-0.7.26_src_u32x4__.rs,v 1.1 2025/02/15 23:41:47 he Exp $
+$NetBSD: patch-.._vendor_wide-0.7.30_src_u32x4__.rs,v 1.1 2025/09/23 11:12:16 adam Exp $
 
 Do not try to use neon / SIMD in big-endian mode on aarch64.
 
---- ../vendor/wide-0.7.26/src/u32x4_.rs.orig	2025-02-15 21:42:28.717681165 +0000
-+++ ../vendor/wide-0.7.26/src/u32x4_.rs
+--- ../vendor/wide-0.7.30/src/u32x4_.rs.orig	2006-07-24 01:21:28.000000000 +0000
++++ ../vendor/wide-0.7.30/src/u32x4_.rs
 @@ -25,7 +25,7 @@ pick! {
      }
  
@@ -116,12 +116,30 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          Self { sse: cmp_gt_mask_i32_m128i((self ^ h).sse, (rhs ^ h).sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: u32x4_gt(self.simd, rhs.simd) }
--      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))]{
-+      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))]{
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
          unsafe {Self { neon: vcgtq_u32(self.neon, rhs.neon) }}
        } else {
          Self { arr: [
-@@ -458,7 +458,7 @@ impl u32x4 {
+@@ -482,7 +482,7 @@ impl u32x4 {
+         let high = u64x2_extmul_high_u32x4(self.simd, rhs.simd);
+ 
+         Self { simd: u32x4_shuffle::<1, 3, 5, 7>(low, high) }
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
+         unsafe {
+           let l = vmull_u32(vget_low_u32(self.neon), vget_low_u32(rhs.neon));
+           let h = vmull_u32(vget_high_u32(self.neon), vget_high_u32(rhs.neon));
+@@ -531,7 +531,7 @@ impl u32x4 {
+           a: u64x2 { simd: u64x2_extmul_low_u32x4(self.simd, rhs.simd) },
+           b: u64x2 { simd: u64x2_extmul_high_u32x4(self.simd, rhs.simd) },
+         }
+-      } else if #[cfg(all(target_feature="neon",target_arch="aarch64"))] {
++      } else if #[cfg(all(target_feature="neon",target_arch="aarch64",target_endian="little"))] {
+       unsafe {
+         u64x4 { a: u64x2 { neon: vmull_u32(vget_low_u32(self.neon), vget_low_u32(rhs.neon)) },
+                 b: u64x2 { neon: vmull_u32(vget_high_u32(self.neon), vget_high_u32(rhs.neon)) } }
+@@ -557,7 +557,7 @@ impl u32x4 {
          Self { sse: blend_varying_i8_m128i(f.sse, t.sse, self.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: v128_bitselect(t.simd, f.simd, self.simd) }
@@ -130,7 +148,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vbslq_u32(self.neon, t.neon, f.neon) }}
        } else {
          generic_bit_blend(self, t, f)
-@@ -473,9 +473,9 @@ impl u32x4 {
+@@ -572,9 +572,9 @@ impl u32x4 {
          Self { sse: max_u32_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: u32x4_max(self.simd, rhs.simd) }
@@ -142,7 +160,7 @@ Do not try to use neon / SIMD in big-endian mode on aarch64.
          unsafe {Self { neon: vmaxq_u16(self.neon, rhs.neon) }}
        } else {
          let arr: [u32; 4] = cast(self);
-@@ -497,7 +497,7 @@ impl u32x4 {
+@@ -596,7 +596,7 @@ impl u32x4 {
          Self { sse: min_u32_m128i(self.sse, rhs.sse) }
        } else if #[cfg(target_feature="simd128")] {
          Self { simd: u32x4_min(self.simd, rhs.simd) }
