@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5695 2025/09/23 17:11:49 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.5696 2025/09/23 17:29:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8247,3 +8247,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/xemacs-current to 21.5.36 [hauke 2025-09-23]
 	Updated editors/xemacs-current-nox11 to 21.5.36 [hauke 2025-09-23]
 	Updated www/hiawatha to 11.8 [hauke 2025-09-23]
+	Updated www/py-uvicorn to 0.37.0 [adam 2025-09-23]
+	Updated textproc/tree-sitter to 0.25.10 [adam 2025-09-23]
