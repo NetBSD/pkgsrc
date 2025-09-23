@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2025/07/26 06:17:00 taca Exp $
+$NetBSD: distinfo,v 1.10 2025/09/23 03:15:02 taca Exp $
 
-BLAKE2s (ruby-3.4.5.tar.xz) = f1c64c15fa9be3878abc1330cf399e8c08685e65252339e9c4ae5feb1c1cd8c9
-SHA512 (ruby-3.4.5.tar.xz) = 1f5d2fd527d15bd81ca8f49767d6426533367c1018a1d275d34721a96410b51204236173224e5198a42b56162c6e7a7b0c060fc032a9fd7f250b44e05c7af560
-Size (ruby-3.4.5.tar.xz) = 17265032 bytes
+BLAKE2s (ruby-3.4.6.tar.xz) = eb4d1d4e899410ee46cae6d6d5bb7d5a40a2fb91725bbab5cbe4125fc096b3ba
+SHA512 (ruby-3.4.6.tar.xz) = 29000b3396ab95fc2dc13d2d78441ff5c34258e5421115181c54b1b4d55d5c0d4f3d0c3cec6b32b9a1bb8de5c51b383fcad4369ec3fb244fd0ce182afbe79ba4
+Size (ruby-3.4.6.tar.xz) = 17303436 bytes
 SHA1 (patch-common.mk) = c23eed58427b2fd4ba8fdb3692f609701a666c6d
 SHA1 (patch-configure) = ff1b1e659ddc7cb1d62a71e1447df55f1f7b07c2
 SHA1 (patch-ext_openssl_openssl__missing.h) = 3f8d79736fd14806dfaf76e333eec63ff3ff5890
@@ -17,7 +17,6 @@ SHA1 (patch-lib_rubygems_install__update__options.rb) = 0cd0816e1cd7c84c1dab1e09
 SHA1 (patch-lib_rubygems_installer.rb) = 4ef74b4f79837a929e81bcd0e7eba9061a442304
 SHA1 (patch-lib_rubygems_platform.rb) = bde36a8fc1ba2fbf4d6fb8829bc116fb4d09b404
 SHA1 (patch-lib_rubygems_specification.rb) = a3154185ef89fb33e699dd54b19a8e274f3275e0
-SHA1 (patch-prism_prism.c) = 7f4221b01b4b4b412ba30050a886773b7877403c
 SHA1 (patch-test_rubygems_test__gem.rb) = 32f7c7d7f8a024c045d78c2bce93944fc3113d04
 SHA1 (patch-thread__pthread.c) = 7c1231933a2d6ce9d56891ab512371841697fbca
 SHA1 (patch-tool_ifchange) = 1803bb6a1836e232dcabcf38f11c9881dbf726ea
