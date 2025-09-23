@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5690 2025/09/23 15:11:37 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5691 2025/09/23 15:42:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8242,3 +8242,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/spirv-headers to 1.4.321.0 [tnn 2025-09-23]
 	Added parallel/spirv-tools version 2025.1 [tnn 2025-09-23]
 	Updated security/ruby-metasploit-payloads to 2.0.231 [taca 2025-09-23]
+	Updated devel/php-raphf2 to 2.0.2 [taca 2025-09-23]
