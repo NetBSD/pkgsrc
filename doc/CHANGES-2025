@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5698 2025/09/23 21:14:52 nia Exp $
+$NetBSD: CHANGES-2025,v 1.5699 2025/09/23 22:17:00 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8252,3 +8252,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-scipy to 1.16.2 [adam 2025-09-23]
 	Updated devel/py-pyparsing to 3.2.5 [adam 2025-09-23]
 	Updated www/palemoon to 33.9.0 [nia 2025-09-23]
+	Updated geography/shapelib to 1.6.2 [gdt 2025-09-23]
