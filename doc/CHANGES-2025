@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5687 2025/09/23 11:40:18 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5688 2025/09/23 12:32:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8237,3 +8237,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/librsvg to 2.60.0 [adam 2025-09-23]
 	Updated devel/py-wcwidth to 0.2.14 [adam 2025-09-23]
 	Updated www/chromium to 140.0.7339.185 [kikadf 2025-09-23]
+	Updated fonts/harfbuzz to 11.5.1 [adam 2025-09-23]
+	Updated fonts/harfbuzz-icu to 11.5.1 [adam 2025-09-23]
