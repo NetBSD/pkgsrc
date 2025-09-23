@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5677 2025/09/23 03:24:01 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5678 2025/09/23 03:25:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8213,3 +8213,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-sqlite3 to 2.7.4 [taca 2025-09-23]
 	Updated devel/ruby-marcel to 1.1.0 [taca 2025-09-23]
 	Updated devel/ruby-rspec-support to 3.13.6 [taca 2025-09-23]
+	Updated mail/ruby-mime-types-data to 3.2025.0916 [taca 2025-09-23]
