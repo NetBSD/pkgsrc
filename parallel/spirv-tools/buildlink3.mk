@@ -1,11 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/09/23 12:57:46 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/09/23 13:05:31 tnn Exp $
 
 BUILDLINK_TREE+=	spirv-tools
 
 .if !defined(SPIRV_TOOLS_BUILDLINK3_MK)
 SPIRV_TOOLS_BUILDLINK3_MK:=
-
-BUILDLINK_DEPMETHOD.spirv-tools?=	build
 
 BUILDLINK_API_DEPENDS.spirv-tools+=	spirv-tools>=2025.1
 BUILDLINK_PKGSRCDIR.spirv-tools?=	../../parallel/spirv-tools
