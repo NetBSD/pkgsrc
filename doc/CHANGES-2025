@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5681 2025/09/23 03:31:15 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5682 2025/09/23 03:34:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8217,3 +8217,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-oauth-tty to 1.0.6 [taca 2025-09-23]
 	Updated security/ruby-oauth to 1.1.2 [taca 2025-09-23]
 	Updated www/ruby-aws-partitions to 1.1163.0 [taca 2025-09-23]
+	Updated www/ruby-sass-embedded to 1.93.1 [taca 2025-09-23]
