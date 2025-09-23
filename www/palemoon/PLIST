@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/05/07 14:46:17 nia Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/23 21:14:38 nia Exp $
 bin/palemoon
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/browser/blocklist.xml
@@ -32,8 +32,8 @@ ${PLIST.be}lib/${PKGNAME}/icudt63b.dat
 ${PLIST.le}lib/${PKGNAME}/icudt63l.dat
 lib/${PKGNAME}/libhunspell.so
 lib/${PKGNAME}/liblgpllibs.so
-${PLIST.ffvpx}lib/${PKGNAME}/libmozavcodec.so
-${PLIST.ffvpx}lib/${PKGNAME}/libmozavutil.so
+lib/${PKGNAME}/libmozavcodec.so
+lib/${PKGNAME}/libmozavutil.so
 lib/${PKGNAME}/libmozsqlite3.so
 lib/${PKGNAME}/libnspr4.so
 lib/${PKGNAME}/libnss3.so
