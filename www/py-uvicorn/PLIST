@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/07/01 08:09:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/23 16:30:48 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,6 +11,9 @@ ${PYSITELIB}/uvicorn/__init__.pyo
 ${PYSITELIB}/uvicorn/__main__.py
 ${PYSITELIB}/uvicorn/__main__.pyc
 ${PYSITELIB}/uvicorn/__main__.pyo
+${PYSITELIB}/uvicorn/_compat.py
+${PYSITELIB}/uvicorn/_compat.pyc
+${PYSITELIB}/uvicorn/_compat.pyo
 ${PYSITELIB}/uvicorn/_subprocess.py
 ${PYSITELIB}/uvicorn/_subprocess.pyc
 ${PYSITELIB}/uvicorn/_subprocess.pyo
