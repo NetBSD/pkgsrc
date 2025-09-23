@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in.in,v 1.5 2023/06/29 20:57:44 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.6 2025/09/23 16:41:10 hauke Exp $
 
 Sprinkle DESTDIR dust.
 
@@ -15,7 +15,7 @@ Make TAR settable, to work around shortcomings in base tar(1)
 
 was patch-aa
 
---- Makefile.in.in.orig	2023-05-13 18:09:51.000000000 +0000
+--- Makefile.in.in.orig	2025-06-14 22:52:22.000000000 +0000
 +++ Makefile.in.in
 @@ -67,7 +67,7 @@ LC_ALL = C
  RM = rm -f
@@ -26,35 +26,30 @@ was patch-aa
  
  ## ==================== Things `configure' Might Edit ====================
  
-@@ -374,7 +374,7 @@ src/.gdbinit: ${srcdir}/src/.gdbinit.in.
- 	./config.status && touch $@
- 
- etc/PROBLEMS: $(srcdir)/PROBLEMS
--	cp $^ $@
-+	cp $(srcdir)/PROBLEMS etc/PROBLEMS
- 
- ## ==================== Installation ====================
- 
-@@ -416,7 +416,7 @@ install-arch-dep: mkdir
+@@ -416,11 +416,11 @@ install-arch-dep: mkdir
  	   fi; \
  	   ${INSTALL_DATA} lib-src/config.values $(DESTDIR)${docdir}/config.values; \
- 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC; \
+ 	   ${INSTALL_DATA} lib-src/DOC $(DESTDIR)${docdir}/DOC-`src/${PROGNAME} -sd`; \
 -	   for subdir in `find ${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
 +	   for subdir in `find $(DESTDIR)${archlibdir} -type d ! -name RCS ! -name SCCS ! -name CVS -print` ; \
  	     do (cd $${subdir} && $(RM) -r RCS CVS SCCS \#* *~) ; done ; \
  	else true; fi
- #if (defined(PDUMP) && !defined (DUMP_IN_EXEC)) || (defined (PDUMP) && defined(WIN32_NATIVE))
-@@ -439,7 +439,8 @@ install-arch-dep: mkdir
+ #if !defined (DUMP_IN_EXEC) && !defined(WIN32_NATIVE)
+-	${INSTALL_DATA} src/${PROGNAME}.dmp ${archlibdir}/${PROGNAME}-`src/${PROGNAME} -sd`.dmp
++	${INSTALL_DATA} src/${PROGNAME}.dmp $(DESTDIR)${archlibdir}/${PROGNAME}-`src/${PROGNAME} -sd`.dmp
+ #endif
+ #ifdef WIN32_NATIVE
+ 	${INSTALL_PROGRAM} src/${PROGNAME} $(DESTDIR)${bindir}/${PROGNAME}
+@@ -439,6 +439,8 @@ install-arch-dep: mkdir
  # endif /* CYGWIN */
  #endif /* WIN32_NATIVE */
  #ifdef HAVE_SHLIB
--	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.* $(DESTDIR)$(moduledir)
-+	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.el $(DESTDIR)$(moduledir)
-+	$(INSTALL_DATA) $(srcdir)/modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) modules/auto-autoloads.el $(DESTDIR)$(moduledir)
++	$(INSTALL_DATA) modules/auto-autoloads.elc $(DESTDIR)$(moduledir)
+ 	$(INSTALL_DATA) modules/auto-autoloads.* $(DESTDIR)$(moduledir)
  #endif
  
- install-arch-indep: mkdir info
-@@ -474,14 +475,19 @@ install-arch-indep: mkdir info
+@@ -474,14 +476,19 @@ install-arch-indep: mkdir info
  	    ${INSTALL_DATA} ${srcdir}/info/dir $(DESTDIR)${infodir}/dir ; \
  	  fi ; \
  	  for file in *.info* ; do \
@@ -76,7 +71,7 @@ was patch-aa
  	  done
  	@echo "If you would like to save approximately 4M of disk space, do"
  	@echo "make gzip-el"
-@@ -500,7 +506,7 @@ gzip-el:
+@@ -500,7 +507,7 @@ gzip-el:
  mkdir: FRC.mkdir
  	for dir in \
  	    ${COPYDESTS} ${docdir} ${infodir} ${archlibdir} \
