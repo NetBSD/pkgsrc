@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.11 2025/09/12 16:02:18 kikadf Exp $
+$NetBSD: distinfo,v 1.12 2025/09/23 11:39:46 kikadf Exp $
 
-BLAKE2s (chromium-140.0.7339.127-testdata.tar.xz) = b00b53ec4329f6431185dbb7ebdd7468e2fb13728bbd97a49f9d4a5fbabb40be
-SHA512 (chromium-140.0.7339.127-testdata.tar.xz) = 1ce8b5a682d5b7c8a8a5fb47ad5f59d5cd13c0635b15cce4592b66ed0773694363f53d332e96c0526344453136e5c20f0dd6b9db336f733c0b7b5a2478e4461c
-Size (chromium-140.0.7339.127-testdata.tar.xz) = 925215916 bytes
-BLAKE2s (chromium-140.0.7339.127.tar.xz) = eabb95ae460e1f87851f77644b9ccf4777e1b7f08bb2e341ac4dd4c168c3f5b6
-SHA512 (chromium-140.0.7339.127.tar.xz) = a4a308a653f508217800bf4fbce3847ed1987eeeaa1a5bbf47730a3234fdd07d8fcc5f7f2ab9109af4446d78c53cfb599af0b2adbc5f4f18aafa36d72458fe78
-Size (chromium-140.0.7339.127.tar.xz) = 7422938488 bytes
+BLAKE2s (chromium-140.0.7339.185-testdata.tar.xz) = c44e2359dfc6b83c8b3742a383c508d1df1160f6d4fe7460ef5bfae6f6ff4f17
+SHA512 (chromium-140.0.7339.185-testdata.tar.xz) = 08e508709cc0cd3cd3cb7c87ce0d91d06c0073db141df3b79654a780723ca8cad156feabbf044f0444bfcb0e80192f6fc231222c62ae614889cf1457cb017413
+Size (chromium-140.0.7339.185-testdata.tar.xz) = 925248352 bytes
+BLAKE2s (chromium-140.0.7339.185.tar.xz) = b74465d23274c9b2eab0f140a2b9a3eb0ba75141e16ff58437cdf10b9243abdc
+SHA512 (chromium-140.0.7339.185.tar.xz) = 7dc7f092ff0111740dbe0b16a256826e5ec95789705b45a26cb668478a4108c4fe15c3bccb8587848e2d116b77d960a35c3faf101e06d4fc4b1e5356cc96ffb4
+Size (chromium-140.0.7339.185.tar.xz) = 7424851048 bytes
 BLAKE2s (kikadf-chromium-audioio-v140.0.tar.gz) = 063582b80823694cfa30c020d3378dae3c7dbb1d0b3ffc3b756ce26e9984504c
 SHA512 (kikadf-chromium-audioio-v140.0.tar.gz) = e986fd201969e2ce9e7c092497c34bca84771992a2c8d980556d2dc77002ff68f3d13b4144629e9a8bc41b8ad0d4d06650eafadbfde7c0fa91ed84fbcd74763b
 Size (kikadf-chromium-audioio-v140.0.tar.gz) = 8453 bytes
@@ -970,7 +970,7 @@ SHA1 (patch-net_socket_udp__socket__posix.cc) = f13f31b346bcedb161886a623e90aa55
 SHA1 (patch-net_socket_udp__socket__unittest.cc) = e49e3c361b134ec39fe26eab10ddb82718ea237a
 SHA1 (patch-net_third__party_quiche_BUILD.gn) = 17cc3246baf550e2aa61e3fb6be329a98aeb18d4
 SHA1 (patch-net_tools_cert__verify__tool_cert__verify__tool.cc) = 2ee72541f42fbee123f5cc8f8c393fef6bbdb225
-SHA1 (patch-net_tools_net__watcher_net__watcher.cc) = 1fbff480b17d9968f63ba6e31f81025ef470ab68
+SHA1 (patch-net_tools_net__watcher_net__watcher.cc) = 6d3d6f951f22bc90f945f64ddb5046de5512dbd1
 SHA1 (patch-net_traffic__annotation_network__traffic__annotation.h) = 227d278c9e3e4baf215727e3825867ef6010fcaf
 SHA1 (patch-net_url__request_url__request__context.cc) = b572654fb6549c1e0a79bd8b8cdf1e10855bf0a3
 SHA1 (patch-net_url__request_url__request__context.h) = 5f3444109f533f1d58ee2f1b54d58d6f5b550d56
