@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5693 2025/09/23 16:41:34 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.5694 2025/09/23 16:58:16 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8245,3 +8245,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/php-raphf2 to 2.0.2 [taca 2025-09-23]
 	Updated devel/asl to 1.42.294 [hauke 2025-09-23]
 	Updated editors/xemacs-current to 21.5.36 [hauke 2025-09-23]
+	Updated editors/xemacs-current-nox11 to 21.5.36 [hauke 2025-09-23]
