@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.107 2025/04/12 12:08:13 adam Exp $
+# $NetBSD: Makefile,v 1.108 2025/09/23 00:24:57 joerg Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -14,6 +13,9 @@ COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TEST_DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
+TEST_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	gmake msgfmt
 
@@ -27,17 +29,15 @@ PYTHON_SELF_CONFLICT=		yes
 
 .include "version.mk"
 
-USE_TOOLS+=		bash:test
-# Test status as of 6.9.4
-# Ran 943 tests, 81 skipped, 2 failed.
-# test-locale.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6948
-# test-revlog-mmapindex.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6899
 
-TEST_TARGET=		tests
-TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
-TEST_MAKE_FLAGS+=	CARGO=/dev/null
+USE_TOOLS+=		bash:test
+# Test status as of 7.1 as !root
+# tests/test-revlog-mmapindex.t (race condition / buffer)
+
+.if make(test)
+# tries to build/install wheel
+ALLOW_NETWORK_ACCESS=
+.endif
 
 post-build:
 	${RUN} cd ${WRKSRC} && ${BUILD_MAKE_CMD} build-chg
@@ -52,7 +52,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/mercurial
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} make tests ${TEST_MAKE_FLAGS}
+	cd ${WRKSRC}/tests && ${SETENV} CARGO=/dev/null ${PYTHONBIN} run-tests.py -j${_MAKE_JOBS_N}
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
