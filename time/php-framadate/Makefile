@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/05/21 15:00:55 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/24 15:16:41 spz Exp $
 
 DISTNAME=	framadate-1.1.19
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -45,6 +45,14 @@ MAKE_DIRS_PERMS+=	${WWWDIR}/app/inc ${APACHE_USER} ${SHAREGRP} 0755
 INSTALLATION_DIRS+=	${DOCDIR} ${WWWDIR}
 
 REPLACE_SH+=	vendor/smarty/smarty/run-tests-for-all-php-versions.sh
+
+# The composer run in post-extract updates from git and has a tendency
+# to hang indefinitely. Also, the generated packages contain whatever was
+# in git and aren't vetted by a a pkgsrc developer, which is a security
+# issue for binary packages. And last not least the list of installed
+# files changes, making the install phase fail.
+#
+NOT_FOR_BULK_PLATFORM=	*-*-*
 
 post-extract:
 	cd ${WRKSRC} && ${SETENV} COMPOSER_HOME=${WRKDIR}/composer composer${PHP_VER} update < /dev/null
