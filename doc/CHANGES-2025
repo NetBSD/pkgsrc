@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5705 2025/09/24 12:00:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5706 2025/09/24 12:03:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8260,3 +8260,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.24.1 [pin 2025-09-24]
 	Updated devel/serie to 0.5.1 [pin 2025-09-24]
 	Updated audio/spotify-player to 0.21.1 [pin 2025-09-24]
+	Updated devel/swagger-codegen to 3.0.72nb1 [wiz 2025-09-24]
