@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/29 06:48:02 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/09/24 05:36:17 dkazankov Exp $
 bin/e3-${PYVERSSUFFIX}
 bin/e3-pypi-closure-${PYVERSSUFFIX}
 bin/e3-sandbox-${PYVERSSUFFIX}
@@ -207,6 +207,7 @@ ${PYSITELIB}/e3/os/data/rlimit-x86-solaris
 ${PYSITELIB}/e3/os/data/rlimit-x86-windows
 ${PYSITELIB}/e3/os/data/rlimit-x86_64-darwin
 ${PYSITELIB}/e3/os/data/rlimit-x86_64-linux
+${PYSITELIB}/e3/os/data/rlimit-x86_64-netbsd
 ${PYSITELIB}/e3/os/data/rlimit-x86_64-windows
 ${PYSITELIB}/e3/os/fs.py
 ${PYSITELIB}/e3/os/fs.pyc
