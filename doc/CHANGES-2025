@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5709 2025/09/24 12:47:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5710 2025/09/24 12:48:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8268,3 +8268,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio-tools to 1.75.0 [adam 2025-09-24]
 	Updated devel/difftastic to 0.65.0 [pin 2025-09-24]
 	Updated sysutils/eza to 0.23.3 [pin 2025-09-24]
+	Updated devel/git-cliff to 2.10.1 [pin 2025-09-24]
