@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.31 2025/06/17 08:59:49 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.32 2025/09/24 12:46:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -132,7 +132,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-pascal-0.10.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.23.11
 CARGO_CRATE_DEPENDS+=	tree-sitter-python-0.23.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-ruby-0.23.1
-CARGO_CRATE_DEPENDS+=	tree-sitter-rust-0.23.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-rust-orchard-0.13.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-scala-0.23.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-toml-ng-0.7.0
@@ -140,6 +140,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.23.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-verilog-1.0.3
 CARGO_CRATE_DEPENDS+=	tree-sitter-xml-0.7.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.7.0
+CARGO_CRATE_DEPENDS+=	tree-sitter-zig-1.1.2
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.1.6
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
