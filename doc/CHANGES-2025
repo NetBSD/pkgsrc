@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5702 2025/09/24 11:56:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5703 2025/09/24 11:58:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8257,3 +8257,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.9.23 [adam 2025-09-24]
 	Updated www/py-asgiref to 3.9.2 [adam 2025-09-24]
 	Updated devel/mise to 2025.9.16 [pin 2025-09-24]
+	Updated shells/oh-my-posh to 26.24.1 [pin 2025-09-24]
