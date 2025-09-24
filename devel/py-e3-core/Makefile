@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/09/15 05:52:28 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/24 05:36:17 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-22.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,8 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/e3-core
 COMMENT=	E3 core. Tools and library for building and testing software
 LICENSE=	gnu-gpl-v3
+
+USE_LANGUAGES=	c
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
 
@@ -37,6 +39,16 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-html-[0-9]*:../../devel/py-test-html
 TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 TEST_DEPENDS+=	${PYPKGPREFIX}-ansi2html-[0-9]*:../../converters/py-ansi2html
 TEST_DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+
+pre-build:
+	${RUN} cd ${WRKSRC} && \
+	${CC} -o src/e3/os/data/rlimit-${MACHINE_ARCH}-${LOWER_OPSYS} tools/rlimit/rlimit.c
+
+.endif
 
 post-install:
 .for bin in e3 e3-pypi-closure e3-sandbox
