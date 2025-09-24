@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2025/07/29 06:48:02 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/09/24 05:36:17 dkazankov Exp $
 
 BLAKE2s (e3-core-22.10.0.tar.gz) = 5e6fc0f4ee7dd26cd4751ec53f630525ee18cb33abe54380c8a4dd2f9efab99f
 SHA512 (e3-core-22.10.0.tar.gz) = 6c4e7119cab4de99eeefaf6e703c46b7773db82ae32982485393edfcdd9ee4643d370c5382ef21bfebb1c9da202694151a68a6890b7b1eea3a269c1934b62481
 Size (e3-core-22.10.0.tar.gz) = 805122 bytes
+SHA1 (patch-src_e3_os_platform.py) = 7d5b9e8133a104ceb3a7a65475b6069a7ba0a889
+SHA1 (patch-src_e3_platform__db_knowledge__base.py) = 875a5747f0d909c0923ced9ce6534a9d41044cbd
