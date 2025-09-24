@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2025/06/17 08:59:49 pin Exp $
+$NetBSD: distinfo,v 1.41 2025/09/24 12:46:27 pin Exp $
 
 BLAKE2s (ahash-0.8.11.crate) = b565d757eebd61e61c4bc77b956fab61c32f9c87787bda573646cff2dac812fe
 SHA512 (ahash-0.8.11.crate) = 47d211b2422de0b381dfe32229faa346406eb7a22dff867dc04c22389609a8671ce3218e662000c49891a06c259d82e0ff4413740f007729d80e097a6c3f0d9d
@@ -81,9 +81,9 @@ Size (diff-0.1.13.crate) = 46216 bytes
 BLAKE2s (difflib-0.4.0.crate) = 9dedf118200e28f553a5eac255f0d880196f1e55fb258011866d9f8421cb0122
 SHA512 (difflib-0.4.0.crate) = fcb57859424fea6958a4407061c421599fbca111357b1fe72faa65d8fb0b74425c993a24484e8414f475fa146cd8368c4f82e1ceb4e8dd9f95741149345b37a9
 Size (difflib-0.4.0.crate) = 7638 bytes
-BLAKE2s (difftastic-0.64.0.tar.gz) = e1f4ab4779410d7adff0f90392ee69d1e907bcd443d9d875c7dea7c771605ba1
-SHA512 (difftastic-0.64.0.tar.gz) = 4fa03d49c3d656e8de31e6cee3f37ebbefdca2c4bb8b182c46fbc67271681b272bc52775bfcb53c33895e8bcb1ea8e33800aca06ae490ae0b1e801a15877b6ca
-Size (difftastic-0.64.0.tar.gz) = 25362833 bytes
+BLAKE2s (difftastic-0.65.0.tar.gz) = 2da92c677fc891ba7a0d2b3d81eb11e3d634f277a77ef0205da1d6ed23a49f65
+SHA512 (difftastic-0.65.0.tar.gz) = 75669bbf5e68a57d6d81ccfc2d803f2a878cf8aaf7217f9cca65e3d1dc6ddb482c947b6e4b6c74bef428e168c1d6cda7de03b71344205c1b2a9b3b5172efee31
+Size (difftastic-0.65.0.tar.gz) = 24632733 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
@@ -399,9 +399,9 @@ Size (tree-sitter-python-0.23.5.crate) = 174528 bytes
 BLAKE2s (tree-sitter-ruby-0.23.1.crate) = e8b4ddedeb0a2bba71d5d6ccf280d5d9296f65c1307abe33348cd5c39b6673fe
 SHA512 (tree-sitter-ruby-0.23.1.crate) = bebffed7b931ee441a1f5a5c5ff107a1e27dd04d13f77b84d5749cdcceb38299579233e6b649dc79845754de2becfb2574501a32e59860a77ca837cc0ae16f20
 Size (tree-sitter-ruby-0.23.1.crate) = 512753 bytes
-BLAKE2s (tree-sitter-rust-0.23.2.crate) = 36f2a229ebe7922dfb2f9618a290f8d8312d7f44d0fc89cbf1cdc4b9cde2c206
-SHA512 (tree-sitter-rust-0.23.2.crate) = 16072a172c7bab9e311f574772fbcdce480143019d1148b5d6ae0777da673bd3b24d3f1fe3f48ded8740417fd0376f186b15a9b035e5f212846f1102e120bd05
-Size (tree-sitter-rust-0.23.2.crate) = 343880 bytes
+BLAKE2s (tree-sitter-rust-orchard-0.13.0.crate) = 33aeaeef903013bb6ae1d11693759d31f50b89fcfaa9e2968f8ecad6457880ea
+SHA512 (tree-sitter-rust-orchard-0.13.0.crate) = f42f4d8cb268a02fdfcadce187fc0f9894f35494455235383938a51f944676ee7a89b2ffbeff52ba72533f5deff488747795817af81ac5c615cacc6face8c21e
+Size (tree-sitter-rust-orchard-0.13.0.crate) = 610064 bytes
 BLAKE2s (tree-sitter-scala-0.23.3.crate) = a27ba7b0b0dcc6971cae3280b53e756629bb57b1808ceb6d3b56cab6940e74df
 SHA512 (tree-sitter-scala-0.23.3.crate) = 9bfff9b50e98c6168625d16c7349b79fa2900fa3acfd6e2528b47e29655cc4d670607ad763847edcb313f9022594d6a63dd1d1f3d7877a6c80e8f2bed019aaba
 Size (tree-sitter-scala-0.23.3.crate) = 1035228 bytes
@@ -423,6 +423,9 @@ Size (tree-sitter-xml-0.7.0.crate) = 75507 bytes
 BLAKE2s (tree-sitter-yaml-0.7.0.crate) = 5ec5b53efef44ca3014ec5e88380bb3ceb63cbe46cc85b74e6888250c98024fc
 SHA512 (tree-sitter-yaml-0.7.0.crate) = d9c19254b0e8c44023dcd831978027dd25efe86d3d3aab8b661ce8b9c01f9bbf73e9c0edad5acf1da51532e41f975b0095f6dfd58fcae6f2106ccc9f72f2466a
 Size (tree-sitter-yaml-0.7.0.crate) = 101403 bytes
+BLAKE2s (tree-sitter-zig-1.1.2.crate) = 0798bed5ad53c0bbdd2bca7ef305faa8601979b3aa4f2b71b88cecbacdfdb774
+SHA512 (tree-sitter-zig-1.1.2.crate) = 01ae756bf893f1f7efcaaf0e741d8b8f8cb276f9430729901e7ec4d93e2c8926de0ec36be475171c543aaf0340d83dc0dea4b7ad0808bc6efdc709b04949cce5
+Size (tree-sitter-zig-1.1.2.crate) = 212493 bytes
 BLAKE2s (tree_magic_mini-3.1.6.crate) = 9cfa74c9afdb58b8fdab07233220337bb168744cd36a71b89578a9b300ebd92d
 SHA512 (tree_magic_mini-3.1.6.crate) = 015d91f180e529b797b665b34288c86e292545450d935d3608964cd2c3d1674310473248fb0c7f9284cea186e2c5adfdb9f0a568741e0a1f73cd187e9ef5ed9a
 Size (tree_magic_mini-3.1.6.crate) = 14869 bytes
