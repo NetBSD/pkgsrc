@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2024/02/13 19:34:38 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2025/09/24 17:08:47 gdt Exp $
 
 .include "../../net/openvpn/Makefile.common"
 
 DISTNAME=	openvpn-nagios-20130210
-PKGREVISION=	6
+PKGREVISION=	7
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${OPENVPN_DISTFILE}
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/openvpn-nagios/
