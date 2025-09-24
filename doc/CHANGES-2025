@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5701 2025/09/24 09:37:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5702 2025/09/24 11:56:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8256,3 +8256,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-e3-core to 22.10.0nb2 [dkazankov 2025-09-24]
 	Updated net/yt-dlp to 2025.9.23 [adam 2025-09-24]
 	Updated www/py-asgiref to 3.9.2 [adam 2025-09-24]
+	Updated devel/mise to 2025.9.16 [pin 2025-09-24]
