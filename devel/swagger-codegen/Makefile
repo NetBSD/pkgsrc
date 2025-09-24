@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2025/09/05 14:27:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2025/09/24 12:02:54 wiz Exp $
 
 DISTNAME=		swagger-codegen-cli-3.0.72
 PKGNAME=		${DISTNAME:S/-cli//}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=		.jar
@@ -21,8 +22,9 @@ do-install:
 		${DESTDIR}${PREFIX}/share/${PKGBASE}/swagger-codegen-cli.jar
 	${ECHO} '#!${SH}' > \
 		${DESTDIR}${PREFIX}/bin/swagger-codegen
-	${ECHO} 'exec java -jar ${PREFIX}/share/${PKGBASE}/swagger-codegen-cli.jar "$$@"' >> \
+	${ECHO} 'exec '"${JAVA_BINPREFIX}-java"' -jar ${PREFIX}/share/${PKGBASE}/swagger-codegen-cli.jar "$$@"' >> \
 		${DESTDIR}${PREFIX}/bin/swagger-codegen
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/swagger-codegen
 
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
