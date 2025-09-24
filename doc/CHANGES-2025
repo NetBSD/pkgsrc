@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5700 2025/09/24 05:37:11 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5701 2025/09/24 09:37:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8254,3 +8254,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/palemoon to 33.9.0 [nia 2025-09-23]
 	Updated geography/shapelib to 1.6.2 [gdt 2025-09-23]
 	Updated devel/py-e3-core to 22.10.0nb2 [dkazankov 2025-09-24]
+	Updated net/yt-dlp to 2025.9.23 [adam 2025-09-24]
+	Updated www/py-asgiref to 3.9.2 [adam 2025-09-24]
