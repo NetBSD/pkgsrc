@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5713 2025/09/24 13:12:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5714 2025/09/24 17:06:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8271,3 +8271,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-cliff to 2.10.1 [pin 2025-09-24]
 	Updated devel/ruby-activestorage61 to 6.1.7.10nb1 [taca 2025-09-24]
 	Updated graphics/feh to 3.11.2 [pin 2025-09-24]
+	Updated net/openvpn to 2.6.15 [gdt 2025-09-24]
