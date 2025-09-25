@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:59:03 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/09/25 05:33:30 mrg Exp $
 
 BLAKE2s (figlet-2.2.5.tar.gz) = f7bf2ea4b7f7875b14cd8a6381d6fa496c6fe43f631ae8b36d1ecbef673cfa03
 SHA512 (figlet-2.2.5.tar.gz) = bb9610fd89a51dd3e65c485653fe1292f47dbca7cb9a05af4ce317f5d776bb346ae455aec07fc37c290f6658639920fd7c431c1135a0f4d456a21c0bd25f99fb
 Size (figlet-2.2.5.tar.gz) = 233201 bytes
 SHA1 (patch-aa) = 7ff721d16e0bbc61dae8d397944cb518e6330325
 SHA1 (patch-ab) = e798522fd5842afb2686a5265973f94c4b5a366b
+SHA1 (patch-figlet.c) = f0b382e183c72c1901bf14ccc92c39cd099d4f0e
 SHA1 (patch-utf8.h) = 928db9ed97546cc7b2f31f2f196ccdf93187d53a
