@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2025/07/07 05:15:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2025/09/25 10:33:19 adam Exp $
 #
 # used by graphics/opencv/Makefile
 # used by graphics/opencv-contrib-face/Makefile
@@ -15,6 +15,7 @@ USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
+FORCE_CXX_STD=		gnu++17 # alloca()
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*

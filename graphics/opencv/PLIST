@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/07/07 05:15:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/09/25 10:33:19 adam Exp $
 bin/opencv_annotation
 bin/opencv_interactive-calibration
 bin/opencv_model_diagnostics
@@ -360,6 +360,6 @@ share/opencv4/licenses/flatbuffers-LICENSE.txt
 share/opencv4/licenses/ittnotify-BSD-3-Clause.txt
 share/opencv4/licenses/ittnotify-GPL-2.0-only.txt
 share/opencv4/licenses/mscr-chi_table_LICENSE.txt
-share/opencv4/licenses/opencl-headers-LICENSE.txt
+${PLIST.opencl}share/opencv4/licenses/opencl-headers-LICENSE.txt
 share/opencv4/valgrind.supp
 share/opencv4/valgrind_3rdparty.supp
