@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5723 2025/09/25 19:24:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5724 2025/09/25 20:12:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8282,3 +8282,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/qgreylist to 0.3nb13 [schmonz 2025-09-25]
 	Updated sysutils/coreutils to 9.8 [wiz 2025-09-25]
 	Updated misc/gnuls to 9.8 [wiz 2025-09-25]
+	Updated devel/py-ruff to 0.13.2 [wiz 2025-09-25]
