@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.23 2024/02/07 13:19:26 adam Exp $
+# $NetBSD: builtin.mk,v 1.24 2025/09/25 07:03:33 adam Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -102,7 +102,7 @@ override-expat-pkgconfig:
 	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
 	{						\
-	${ECHO} "prefix=${BUILDLINK_PREFIX.expat}";		\
+	${ECHO} "prefix=${BUILDLINK_PREFIX.expat}";	\
 	${ECHO} "exec_prefix=\$${prefix}";		\
 	${ECHO} "libdir=\$${exec_prefix}/lib";		\
 	${ECHO} "includedir=\$${prefix}/include";	\
@@ -112,6 +112,6 @@ override-expat-pkgconfig:
 	${ECHO} "Version: ${BUILTIN_VERSION.expat}";	\
 	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -lexpat";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
-	} >> ${BLKDIR_PKGCFG}/${EXPAT_PKGCFGF};
+	} >> ${BLKDIR_PKGCFG}/${EXPAT_PKGCFGF}
 .  endif
 .endif
