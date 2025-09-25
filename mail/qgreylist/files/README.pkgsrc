@@ -1,0 +1,6 @@
+ Basic configuration
+ ===================
+
+To enable qgreylist:
+- Set qmailsmtpd_presmtpd="@PREFIX@/bin/qgreylist" in /etc/rc.conf.
+- Run "@RCD_SCRIPTS_DIR@/qmailsmtpd restart".
