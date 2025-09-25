@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5718 2025/09/25 07:03:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5719 2025/09/25 07:23:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8276,3 +8276,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.9.18 [pin 2025-09-25]
 	Updated shells/oh-my-posh to 26.25.0 [pin 2025-09-25]
 	Updated graphics/simp to 3.10.2 [pin 2025-09-25]
+	Updated textproc/expat to 2.7.3 [adam 2025-09-25]
+	Updated net/rclone to 1.71.1 [adam 2025-09-25]
