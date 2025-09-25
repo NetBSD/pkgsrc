@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2017/10/23 23:21:59 khorben Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/25 05:33:30 mrg Exp $
 
 DISTNAME=	figlet-2.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.figlet.org/pub/figlet/program/unix/
 
