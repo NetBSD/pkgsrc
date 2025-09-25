@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2025/09/22 06:14:46 pin Exp $
+# $NetBSD: Makefile,v 1.38 2025/09/25 07:02:01 pin Exp $
 
-DISTNAME=	simp-3.10.1
-PKGREVISION=	1
+DISTNAME=	simp-3.10.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
