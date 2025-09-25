@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2022/06/28 11:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/25 16:41:29 schmonz Exp $
 
 DISTNAME=		qgreylist-0.3
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		mail
-#MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
-#HOMEPAGE=		http://www.jonatkins.com/page/software/qgreylist
+HOMEPAGE=		https://web.archive.org/web/20170701214830/https://jonatkins.com/page/software/qgreylist/
 COMMENT=		Simple greylisting for qmail
 LICENSE=		mit
 
@@ -26,17 +26,26 @@ REPLACE_PERL=		greylist
 PKG_SYSCONFSUBDIR=	qmail
 
 SUBST_CLASSES+=		qmaildirs
-SUBST_STAGE.qmaildirs=	do-configure
-SUBST_FILES.qmaildirs=	greylist
+SUBST_STAGE.qmaildirs=	pre-configure
+SUBST_FILES.qmaildirs=	greylist README.pkgsrc
 SUBST_SED.qmaildirs=	-e 's|/var/qmail/greylist|${PKG_SYSCONFDIR}/greylist|g'
 SUBST_SED.qmaildirs+=	-e 's|/var/qmail/whitelist|${PKG_SYSCONFDIR}/whitelist|g'
 SUBST_SED.qmaildirs+=	-e 's|/var/qmail|${QMAILDIR}|g'
+SUBST_VARS.qmaildirs=	PREFIX RCD_SCRIPTS_DIR
 
-INSTALLATION_DIRS=	bin share/doc/qgreylist
+#SUBST_CLASSES+=		paths
+#SUBST_STAGE.paths=	pre-configure
+#SUBST
+
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 BUILD_DEFS+=		QMAILDIR
 
+post-extract:
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}/
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/greylist ${DESTDIR}${PREFIX}/bin/qgreylist
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/qgreylist
+	${INSTALL_SCRIPT} ${WRKSRC}/greylist ${DESTDIR}${PREFIX}/bin/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
+	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
 
 .include "../../mk/bsd.pkg.mk"
