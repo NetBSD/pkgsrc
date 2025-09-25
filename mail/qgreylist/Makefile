@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/09/25 16:41:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2025/09/25 16:42:31 schmonz Exp $
 
 DISTNAME=		qgreylist-0.3
 PKGREVISION=		13
@@ -32,10 +32,6 @@ SUBST_SED.qmaildirs=	-e 's|/var/qmail/greylist|${PKG_SYSCONFDIR}/greylist|g'
 SUBST_SED.qmaildirs+=	-e 's|/var/qmail/whitelist|${PKG_SYSCONFDIR}/whitelist|g'
 SUBST_SED.qmaildirs+=	-e 's|/var/qmail|${QMAILDIR}|g'
 SUBST_VARS.qmaildirs=	PREFIX RCD_SCRIPTS_DIR
-
-#SUBST_CLASSES+=		paths
-#SUBST_STAGE.paths=	pre-configure
-#SUBST
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 BUILD_DEFS+=		QMAILDIR
