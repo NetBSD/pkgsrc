@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.48 2025/05/28 09:21:25 wiz Exp $
+$NetBSD: distinfo,v 1.49 2025/09/25 19:23:46 wiz Exp $
 
-BLAKE2s (coreutils-9.6.tar.xz) = a697bc74399921a0ecd94f2a771be9ee95a91f1660db00630910131f4670f03a
-SHA512 (coreutils-9.6.tar.xz) = 398391d7f9d77e6117b750abb8711eebdd9cd2549e7846cab26884fb2dd522b6bcfb8bf7fef35a12683e213ada7f89b817bf615628628d42aee3fa3102647b28
-Size (coreutils-9.6.tar.xz) = 6134764 bytes
+BLAKE2s (coreutils-9.8.tar.xz) = b61e82a827e34cd6f1d7232db05d15c90b91ef2c7e1289768bada12bddce4a2a
+SHA512 (coreutils-9.8.tar.xz) = 7b6c420907f0e33e4aff3dd92270f8cbd3e94b2ae8cf7caa2d5d1cfd5e9958319904a6547127abd55ee63aae0316f5b1228586b2da34ea402da032e925a25e53
+Size (coreutils-9.8.tar.xz) = 6234824 bytes
 SHA1 (patch-Makefile.in) = ce71728a5e5438fe2e6e4006ba0be5e6294587d5
-SHA1 (patch-src_sort.c) = 6f0fd49e1415b12bb64054b0265b4bc8252db80f
