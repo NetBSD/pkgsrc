@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5716 2025/09/25 06:57:53 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5717 2025/09/25 06:59:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8274,3 +8274,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openvpn to 2.6.15 [gdt 2025-09-24]
 	Updated devel/lazygit to 0.55.1 [pin 2025-09-25]
 	Updated devel/mise to 2025.9.18 [pin 2025-09-25]
+	Updated shells/oh-my-posh to 26.25.0 [pin 2025-09-25]
