@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5720 2025/09/25 13:08:42 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.5721 2025/09/25 16:41:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8279,3 +8279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/expat to 2.7.3 [adam 2025-09-25]
 	Updated net/rclone to 1.71.1 [adam 2025-09-25]
 	Added sysutils/zrepl version 0.6.1 [jperkin 2025-09-25]
+	Updated mail/qgreylist to 0.3nb13 [schmonz 2025-09-25]
