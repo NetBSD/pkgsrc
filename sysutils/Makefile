@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1165 2025/09/17 14:31:41 js Exp $
+# $NetBSD: Makefile,v 1.1166 2025/09/25 13:09:18 jperkin Exp $
 #
 
 COMMENT=	System utilities
@@ -1019,5 +1019,6 @@ SUBDIR+=	zabbix60-server
 SUBDIR+=	zidrav
 SUBDIR+=	znapzend
 SUBDIR+=	zoxide
+SUBDIR+=	zrepl
 
 .include "../mk/misc/category.mk"
