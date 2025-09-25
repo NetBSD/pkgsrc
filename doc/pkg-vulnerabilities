@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.556 2025/09/23 10:04:48 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.557 2025/09/25 07:30:15 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26147,7 +26147,7 @@ php81<8.1.32	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 php82<8.2.28	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 php83<8.3.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 php84<8.4.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
-expat<2.7.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8176
+expat<2.7.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8176
 vim<9.1.1198	argument-injection	https://github.com/vim/vim/security/advisories/GHSA-693p-m996-3rmf
 webkit-gtk<2.48.0	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2025-24201
 py{39,310,311,312,313}-mercurial<6.9.4	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-2361
