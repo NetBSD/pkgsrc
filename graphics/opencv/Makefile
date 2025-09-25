@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2025/09/21 15:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2025/09/25 10:32:36 adam Exp $
 
 PKGREVISION= 4
 .include "Makefile.common"
@@ -14,6 +14,13 @@ REPLACE_PYTHON+=	samples/python/*.py
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
+
+PLIST_VARS+=	opencl
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+PLIST.opencl=	yes
+.endif
 
 .include "options.mk"
 
