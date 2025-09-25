@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.64 2025/07/07 05:15:26 wiz Exp $
+$NetBSD: distinfo,v 1.65 2025/09/25 10:33:19 adam Exp $
 
 BLAKE2s (opencv-4.12.0.tar.gz) = cffcaf5e2d1046489916cf89b204523503e2a77f56e4f40d3d1f0a99ec027916
 SHA512 (opencv-4.12.0.tar.gz) = 8ac63ddd61e22cc0eaeafee4f30ae6e1cab05fc4929e2cea29070203b9ca8dfead12cc0fd7c4a87b65c1e20ec6b9ab4865a1b83fad33d114fc0708fdf107c51b
 Size (opencv-4.12.0.tar.gz) = 95254890 bytes
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
+SHA1 (patch-modules_core_src_system.cpp) = e7e5c7eb79d875556a380bff19d03434ae46553b
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
 SHA1 (patch-modules_imgproc_src_resize.cpp) = e842d5960c4c00162a34f46cb45cf69d0e9f21ce
 SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = e77096629a6f0c137cf3707184ba40990b53f44d
