@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5722 2025/09/25 19:23:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5723 2025/09/25 19:24:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8281,3 +8281,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/zrepl version 0.6.1 [jperkin 2025-09-25]
 	Updated mail/qgreylist to 0.3nb13 [schmonz 2025-09-25]
 	Updated sysutils/coreutils to 9.8 [wiz 2025-09-25]
+	Updated misc/gnuls to 9.8 [wiz 2025-09-25]
