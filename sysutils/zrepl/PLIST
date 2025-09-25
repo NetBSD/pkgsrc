@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/25 13:08:29 jperkin Exp $
+bin/zrepl
