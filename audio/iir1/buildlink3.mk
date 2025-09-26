@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2025/09/26 18:29:29 js Exp $
+
+BUILDLINK_TREE+=	iir1
+
+.if !defined(IIR1_BUILDLINK3_MK)
+IIR1_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.iir1+=	iir1>=1.9.5
+BUILDLINK_ABI_DEPENDS.iir1+=	iir1>=1.9.5
+BUILDLINK_PKGSRCDIR.iir1?=	../../audio/iir1
+.endif
+
+BUILDLINK_TREE+=	-iir1

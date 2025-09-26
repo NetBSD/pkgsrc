@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/26 18:29:29 js Exp $
+include/Iir.h
+include/iir/Biquad.h
+include/iir/Butterworth.h
+include/iir/Cascade.h
+include/iir/ChebyshevI.h
+include/iir/ChebyshevII.h
+include/iir/Common.h
+include/iir/Custom.h
+include/iir/Layout.h
+include/iir/MathSupplement.h
+include/iir/PoleFilter.h
+include/iir/RBJ.h
+include/iir/State.h
+include/iir/Types.h
+lib/cmake/iir/iirConfig.cmake
+lib/cmake/iir/iirConfigVersion.cmake
+lib/cmake/iir/iirTargets-relwithdebinfo.cmake
+lib/cmake/iir/iirTargets.cmake
+lib/libiir.${PKGVERSION}.dylib
+lib/libiir.1.dylib
+lib/libiir.dylib
+lib/libiir_static.a
+lib/pkgconfig/iir.pc
