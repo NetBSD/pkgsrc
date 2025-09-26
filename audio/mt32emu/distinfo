@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/26 18:30:41 js Exp $
+
+BLAKE2s (mt32emu-2.7.2.tar.gz) = 388ed0be6741ef8708124abcf05b96cf9a12ed2b5777c6fba62a050a05dc8de8
+SHA512 (mt32emu-2.7.2.tar.gz) = a4d7b8e9db7e87ad35e0e577b060520e48ee85da0c6e55c7023596fa675a8c32be5f69d4efafaf80dd06c24c505e63abd9892c0836c820c5917448681e052b62
+Size (mt32emu-2.7.2.tar.gz) = 583917 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.714 2025/09/26 18:29:29 js Exp $
+# $NetBSD: Makefile,v 1.715 2025/09/26 18:30:41 js Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -327,6 +327,7 @@ SUBDIR+=	mserv
 SUBDIR+=	mserv-devel
 SUBDIR+=	mstream
 SUBDIR+=	mt-daapd
+SUBDIR+=	mt32emu
 SUBDIR+=	muse
 SUBDIR+=	musepack
 SUBDIR+=	musescore

@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1 2025/09/26 18:30:41 js Exp $
+
+BUILDLINK_TREE+=	mt32emu
+
+.if !defined(MT32EMU1_BUILDLINK3_MK)
+MT32EMU_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.mt32emu+=	mt32emu>=2.7.2
+BUILDLINK_ABI_DEPENDS.mt32emu+=	mt32emu>=2.7.2
+BUILDLINK_PKGSRCDIR.mt32emu?=	../../audio/mt32emu
+.endif
+
+BUILDLINK_TREE+=	-mt32emu
