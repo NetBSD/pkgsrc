@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5730 2025/09/26 13:51:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5731 2025/09/26 13:52:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8293,3 +8293,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/tiff to 4.7.1 [wiz 2025-09-26]
 	Updated devel/py-uv to 0.8.22 [adam 2025-09-26]
 	Updated devel/py-uv-build to 0.8.22 [adam 2025-09-26]
+	Updated lang/php84 to 8.4.13 [taca 2025-09-26]
