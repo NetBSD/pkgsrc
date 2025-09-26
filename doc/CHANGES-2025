@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5736 2025/09/26 15:03:18 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5737 2025/09/26 15:07:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8299,3 +8299,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/texttest to 4.4.5 [schmonz 2025-09-26]
 	Updated devel/ruby-jirametrics to 2.17 [schmonz 2025-09-26]
 	Updated textproc/ov to 0.43.1 [schmonz 2025-09-26]
+	Updated textproc/moor to 2.3.0 [schmonz 2025-09-26]
