@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/09/10 00:50:55 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/09/26 14:53:39 schmonz Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -30,6 +30,8 @@ ${GEM_LIBDIR}/lib/jirametrics/data_quality_report.rb
 ${GEM_LIBDIR}/lib/jirametrics/dependency_chart.rb
 ${GEM_LIBDIR}/lib/jirametrics/download_config.rb
 ${GEM_LIBDIR}/lib/jirametrics/downloader.rb
+${GEM_LIBDIR}/lib/jirametrics/downloader_for_cloud.rb
+${GEM_LIBDIR}/lib/jirametrics/downloader_for_data_center.rb
 ${GEM_LIBDIR}/lib/jirametrics/estimate_accuracy_chart.rb
 ${GEM_LIBDIR}/lib/jirametrics/estimation_configuration.rb
 ${GEM_LIBDIR}/lib/jirametrics/examples/aggregated_project.rb

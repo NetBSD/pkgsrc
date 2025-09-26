@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2025/09/10 18:43:59 schmonz Exp $
+$NetBSD: distinfo,v 1.20 2025/09/26 14:53:39 schmonz Exp $
 
-BLAKE2s (jirametrics-2.16.gem) = 8f9da56ed05ad437afe742c61a9eb00fc48964f4e640324c4c3c7f565d30f237
-SHA512 (jirametrics-2.16.gem) = fa7535e8ef0d6cdcb6d13ec2bb613835f98ee520104e733ebdfba42a0a4498388ff1d21783ce094addb206e7f40f8c4216ed7c410d2bdcebcbce1a7bb5470e0b
-Size (jirametrics-2.16.gem) = 80896 bytes
+BLAKE2s (jirametrics-2.17.gem) = 7bc18812d842b27d63ff94ebf9e93118cd92e20e2c4327ccd0a8212e0f85410f
+SHA512 (jirametrics-2.17.gem) = 9cafb99aacfce16572c2c2343557216c64d056d6fa09f7cec63ae13f2f74b8f8260020fcbb3fb4d7a3dcb1291fcde150b6ff39c5d2a3eb41feef6197cccf892c
+Size (jirametrics-2.17.gem) = 82432 bytes
