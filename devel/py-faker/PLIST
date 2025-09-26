@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2025/09/02 09:24:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.66 2025/09/26 08:11:56 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -328,6 +328,9 @@ ${PYSITELIB}/faker/providers/automotive/id_ID/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.py
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/it_IT/__init__.pyo
+${PYSITELIB}/faker/providers/automotive/ja_JP/__init__.py
+${PYSITELIB}/faker/providers/automotive/ja_JP/__init__.pyc
+${PYSITELIB}/faker/providers/automotive/ja_JP/__init__.pyo
 ${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.py
 ${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.pyc
 ${PYSITELIB}/faker/providers/automotive/ko_KR/__init__.pyo
@@ -1492,6 +1495,9 @@ ${PYSITELIB}/faker/providers/person/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_IN/__init__.py
 ${PYSITELIB}/faker/providers/person/en_IN/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_IN/__init__.pyo
+${PYSITELIB}/faker/providers/person/en_NG/__init__.py
+${PYSITELIB}/faker/providers/person/en_NG/__init__.pyc
+${PYSITELIB}/faker/providers/person/en_NG/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyo
@@ -1555,6 +1561,9 @@ ${PYSITELIB}/faker/providers/person/ga_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/person/gu_IN/__init__.py
 ${PYSITELIB}/faker/providers/person/gu_IN/__init__.pyc
 ${PYSITELIB}/faker/providers/person/gu_IN/__init__.pyo
+${PYSITELIB}/faker/providers/person/ha_NG/__init__.py
+${PYSITELIB}/faker/providers/person/ha_NG/__init__.pyc
+${PYSITELIB}/faker/providers/person/ha_NG/__init__.pyo
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.py
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyc
 ${PYSITELIB}/faker/providers/person/he_IL/__init__.pyo
@@ -1573,6 +1582,9 @@ ${PYSITELIB}/faker/providers/person/hy_AM/__init__.pyo
 ${PYSITELIB}/faker/providers/person/id_ID/__init__.py
 ${PYSITELIB}/faker/providers/person/id_ID/__init__.pyc
 ${PYSITELIB}/faker/providers/person/id_ID/__init__.pyo
+${PYSITELIB}/faker/providers/person/ig_NG/__init__.py
+${PYSITELIB}/faker/providers/person/ig_NG/__init__.pyc
+${PYSITELIB}/faker/providers/person/ig_NG/__init__.pyo
 ${PYSITELIB}/faker/providers/person/is_IS/__init__.py
 ${PYSITELIB}/faker/providers/person/is_IS/__init__.pyc
 ${PYSITELIB}/faker/providers/person/is_IS/__init__.pyo
