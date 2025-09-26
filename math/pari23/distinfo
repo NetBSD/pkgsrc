@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/07/02 03:12:02 markd Exp $
+$NetBSD: distinfo,v 1.7 2025/09/26 20:24:34 prlw1 Exp $
 
 BLAKE2s (pari-2.3.5.tar.gz) = b09825efda6fb19ea0d6678cb50fa7c85815688bbf2f7669c50bb5602731961d
 SHA512 (pari-2.3.5.tar.gz) = 0e49e6310b4c76ef3370786a13aa8cbc5bb0b7dc84ec1665866d623e6284f45db8584eea759e8b5954dc9b5c8a3e866e77a377d18073ed33f11708a7e88a4cca
@@ -22,8 +22,22 @@ SHA1 (patch-ap) = 21a20b68b589f8be3036d1f2f9c4b2a7f43210a8
 SHA1 (patch-config_endian.c) = dea6efdf6ae53673ca23f43645146e00bab977bb
 SHA1 (patch-config_get_fltk) = 2c2aa271fad5880a44b2df70a7143d2aea690ca0
 SHA1 (patch-config_gmp__version.c) = 7fd8c022f73020caae1ec8e9098acb2f8608a975
+SHA1 (patch-config_has__TIOCGWINSZ.c) = 6caa8946f6347171671ce6ebf30a30a31b309ae6
+SHA1 (patch-config_has__dlopen.c) = 9a933f49dce2da25e485cdf5f9cc3f809d7ce4f0
+SHA1 (patch-config_has__getrlimit.c) = f6e80a3aade95352a6ae44a0303d51e31dcecc46
+SHA1 (patch-config_has__getrusage.c) = fb2afb26d657c0e469ed181e6f7dc4e3fe30e0e6
+SHA1 (patch-config_has__opendir.c) = f9b91232fc61548f84e39b19c8b481ae29e278a3
+SHA1 (patch-config_has__readline.c) = 65b8b41973146b248a8d244fdc399ba04a63eb4d
+SHA1 (patch-config_has__sigaction.c) = 4986e60a383363a51d133c0c139918552384abc0
+SHA1 (patch-config_has__strftime.c) = 367213c8c428a9cb4a3460a16cdc4a72895d27ef
+SHA1 (patch-config_has__times.c) = 628e13de9c484d1007014f3029bd74a3b09b6554
+SHA1 (patch-config_has__vsnprintf.c) = f06a527d949b26e901a644dd1c8316fa1d2bedf1
+SHA1 (patch-config_rl__version.c) = 88047f02712ad236572530d33e7a3153a708892e
+SHA1 (patch-src_basemath_gen3.c) = a82616e41d2e9fde811f4b2c1695d65bb199e26f
 SHA1 (patch-src_desc_merge__822) = 8c4c317a21174d73d59b4fd9d5a3e155df141752
+SHA1 (patch-src_functions_gp2c__internal__badtype) = b3183f75f44b03bf6d8f762ae1a2047e58d49e60
 SHA1 (patch-src_headers_paridecl.h) = ee02e487807d8ed1c1a11268965ade76a2f80cf2
 SHA1 (patch-src_language_anal.c) = d0028a51e8ef14cae766cb881fcfce82cec0346f
 SHA1 (patch-src_language_es.c) = 27c286da66ce1a2fc6e5179cfb3f4e222984813d
+SHA1 (patch-src_modules_elliptic.c) = 0042c59b6aa4c223b792320378040d6882f75637
 SHA1 (patch-src_modules_mpqs.c) = 3dd164e5c686fd2eb8317569cf05906a4c527721
