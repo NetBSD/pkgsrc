@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.109 2025/08/14 10:02:21 wiz Exp $
+$NetBSD: distinfo,v 1.110 2025/09/26 10:35:54 wiz Exp $
 
-BLAKE2s (tiff-4.7.0.tar.gz) = 6daf895aab5da61e4d9058a39659ec629a4172794938e5c42b70a457ba2be691
-SHA512 (tiff-4.7.0.tar.gz) = a77a050d1d8777c6d86077c3c26e8d35f98717fe14bb3c049e2b82fbfbb374e96f83a0c1ff67ffb21591a9a7abf0d3e18c3d7695c96939326cc19a9712dd2492
-Size (tiff-4.7.0.tar.gz) = 3896583 bytes
+BLAKE2s (tiff-4.7.1.tar.gz) = bfcb69d4a767755e7f3782810670ec67c21b37902f89960d95c834826a20053e
+SHA512 (tiff-4.7.1.tar.gz) = 89c5af880626888451caf8b78a2f57b2973719db837dce6530c1fb30318fc6fba7ef9f9d8e46c547821eae29322607cb5146bf3de39b3d7b70bcf5b68c4ee3b1
+Size (tiff-4.7.1.tar.gz) = 4000609 bytes
 SHA1 (patch-configure) = 48c3f6103e35049e0bd4a5f32a508cd9439c1f3f
-SHA1 (patch-libtiff_tif__read.c) = e359cb86d87f7bf035fa917c64ec32594ed2cd1b
-SHA1 (patch-tools_thumbnail.c) = a0909b38fe41ee21f98f4b31a0c7d5fefff2b6f9
-SHA1 (patch-tools_tiff2pdf.c) = a8f9424eec7dbde0cd72efe502704cff35cdd2c7
-SHA1 (patch-tools_tiffdither.c) = d7c5fd6177c9949ed0b45cbffcca4bf5b7bade60
-SHA1 (patch-tools_tiffmedian.c) = 053704977f7b3ffe0b8f46b496aa985927c1ab51
