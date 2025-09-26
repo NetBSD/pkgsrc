@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.352 2025/05/19 15:56:57 taca Exp $
+# $NetBSD: Makefile,v 1.353 2025/09/26 08:10:45 jperkin Exp $
 
 .include "../../mail/postfix/Makefile.common"
 
@@ -22,11 +22,8 @@ REPLACE_PERL+=	auxiliary/qshape/qshape.pl
 FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE
-.if exists(${PKGDIR}/MESSAGE.${OPSYS})
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.${OPSYS}
-.endif
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 RCD_SCRIPTS=		postfix
