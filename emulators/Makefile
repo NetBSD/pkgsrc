@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.374 2025/07/04 16:30:11 hauke Exp $
+# $NetBSD: Makefile,v 1.375 2025/09/26 18:31:50 js Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -57,6 +57,7 @@ SUBDIR+=	dega
 SUBDIR+=	dgen
 SUBDIR+=	dolphin-emu
 SUBDIR+=	dosbox
+SUBDIR+=	dosbox-staging
 SUBDIR+=	dosbox-x
 SUBDIR+=	dps8m
 SUBDIR+=	duckstation-qt
