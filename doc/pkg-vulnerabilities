@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.558 2025/09/26 10:38:10 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.559 2025/09/26 11:35:04 gdt Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27358,7 +27358,7 @@ php{56,74,81,82,83,84}-adodb<5.22.10	sql-injection	https://nvd.nist.gov/vuln/det
 php{56,74,81,82,83,84}-concrete-cms<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-8571
 php{56,74,81,82,83,84}-concrete-cms<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-8573
 poco-[0-9]*	weak-encryption	https://nvd.nist.gov/vuln/detail/CVE-2025-45766
-tiff-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8534
+tiff>=4.7.0<4.7.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8534
 tiff<4.7.0	stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-8851
 u-boot-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-45512
 uv<0.8.6	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2025-54368
@@ -27406,8 +27406,8 @@ ruby{31,32,33,34}-rails72<7.2.2.2	improper-output-neutralization	https://nvd.nis
 ruby{31,32,33,34}-rails80<8.0.2.1	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-55193
 tcpreplay<4.5.2		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-9019
 tcpreplay<4.5.2		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-9157
-tiff-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8961
-tiff-[0-9]*	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-9165
+tiff>=4.7.0<4.7.1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-8961
+tiff>=4.7.0<4.7.1	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-9165
 yarn-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-9308
 xenkernel415-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 ufoai<2.3.1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2009-10006
