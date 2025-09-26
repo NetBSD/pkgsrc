@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5738 2025/09/26 15:10:10 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5739 2025/09/26 15:27:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8301,3 +8301,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ov to 0.43.1 [schmonz 2025-09-26]
 	Updated textproc/moor to 2.3.0 [schmonz 2025-09-26]
 	Updated misc/exercism to 3.5.8 [schmonz 2025-09-26]
+	Updated net/gh to 2.80.0 [bsiegert 2025-09-26]
