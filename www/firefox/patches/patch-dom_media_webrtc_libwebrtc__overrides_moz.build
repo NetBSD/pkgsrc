@@ -1,0 +1,13 @@
+$NetBSD: patch-dom_media_webrtc_libwebrtc__overrides_moz.build,v 1.1 2025/09/26 23:15:49 ryoon Exp $
+
+--- dom/media/webrtc/libwebrtc_overrides/moz.build.orig	2025-09-10 13:58:16.516218833 +0000
++++ dom/media/webrtc/libwebrtc_overrides/moz.build
+@@ -52,7 +52,7 @@ if CONFIG["OS_TARGET"] == "Linux" and CO
+ 
+ if (
+     CONFIG["MOZ_X11"] == "1"
+-    and CONFIG["OS_TARGET"] == "Linux"
++    and (CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD" or CONFIG["OS_TARGET"] == "FreeBSD")
+     and CONFIG["TARGET_CPU"] in ("aarch64", "arm", "mips32", "mips64", "x86", "x86_64")
+ ):
+     UNIFIED_SOURCES += [
