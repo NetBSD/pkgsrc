@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5729 2025/09/26 10:36:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5730 2025/09/26 13:51:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8291,3 +8291,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-anyio to 4.11.0 [adam 2025-09-26]
 	Updated devel/py-faker to 37.8.0 [adam 2025-09-26]
 	Updated graphics/tiff to 4.7.1 [wiz 2025-09-26]
+	Updated devel/py-uv to 0.8.22 [adam 2025-09-26]
+	Updated devel/py-uv-build to 0.8.22 [adam 2025-09-26]
