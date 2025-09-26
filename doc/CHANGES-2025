@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5732 2025/09/26 13:53:20 taca Exp $
+$NetBSD: CHANGES-2025,v 1.5733 2025/09/26 14:09:53 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8295,3 +8295,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-uv-build to 0.8.22 [adam 2025-09-26]
 	Updated lang/php84 to 8.4.13 [taca 2025-09-26]
 	Updated lang/php83 to 8.3.26 [taca 2025-09-26]
+	Updated textproc/p5-Text-HTML-Turndown to 0.08 [schmonz 2025-09-26]
