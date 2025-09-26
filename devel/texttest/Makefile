@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2025/08/30 22:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/09/26 14:47:14 schmonz Exp $
 
-DISTNAME=		texttest-4.4.4
-PKGREVISION=		1
+DISTNAME=		texttest-4.4.5
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://texttest.sourceforge.net/
+HOMEPAGE=		https://texttest.sourceforge.net/
 COMMENT=		Tool for text-based Approval Testing
 LICENSE=		gnu-lgpl-v2.1
 
