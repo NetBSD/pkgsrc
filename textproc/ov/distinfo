@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/09/05 14:44:34 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2025/09/26 15:03:11 schmonz Exp $
 
 BLAKE2s (codeberg.org_tslocum_cbind_@v_v0.1.6.mod) = f282a24e97c8342340d219ac70fba89f1e864c32fc6fcc98a7582485a64fa05d
 SHA512 (codeberg.org_tslocum_cbind_@v_v0.1.6.mod) = a422583b2a59429ad8fc34a09b66f8d71bab406ee0b3e40e5a4ead92cd853ab31cd207a0675d358e77b97bbd9608971af57c15bbbaad87945496f448ec904902
@@ -324,6 +324,6 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (ov-0.43.0.tar.gz) = eeaacc45622c9807e290a41c4bfa316d392ba112253b7643aface25d68d05c3b
-SHA512 (ov-0.43.0.tar.gz) = 66e8973b9434261abd4518440086bf11cb470f16db7cfc27cb7cfc534cd107ae718c6761b134141d0d9edc3e30d42760edf8afd7bdfe5dcf40777a9d84c6882e
-Size (ov-0.43.0.tar.gz) = 7061910 bytes
+BLAKE2s (ov-0.43.1.tar.gz) = da85a59e9f61108ebad28d77a0845812841361e74022079576d66131489f6aa4
+SHA512 (ov-0.43.1.tar.gz) = e49a5627e44de7e44eba6d59eb7c49281e2f0495c366f1087ab227bb7dc1e0632d58f929e03625d40161129c679455f0d9db16d2e016713e8ba56369090a09f5
+Size (ov-0.43.1.tar.gz) = 7061004 bytes
