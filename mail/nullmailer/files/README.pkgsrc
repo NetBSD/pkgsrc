@@ -1,0 +1,16 @@
+ Getting started
+ ===============
+
+Assuming NetBSD-style mailwrapper(8) and rc(8):
+
+- Run "@RCD_SCRIPTS_DIR@/postfix stop" and set postfix=NO in /etc/rc.conf.
+- Replace /etc/mailer.conf with @PREFIX@/share/examples/nullmailer/mailer.conf.
+- Run "echo 'your.relay.host	smtp' > @PKG_SYSCONFDIR@/nullmailer/remotes".
+- Set nullmailer=YES in /etc/rc.conf.
+- Run "@RCD_SCRIPTS_DIR@/nullmailer start".
+
+You may need to add further configuration files in
+@PKG_SYSCONFDIR@/nullmailer, such as
+`adminaddr', `defaultdomain', `defaulthost', `idhost', `me', or
+`pausetime'. See nullmailer(7), nullmailer-queue(8), and
+nullmailer-send(8).
