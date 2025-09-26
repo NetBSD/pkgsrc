@@ -1,0 +1,19 @@
+$NetBSD: patch-src_functions_gp2c__internal__badtype,v 1.1 2025/09/26 20:24:35 prlw1 Exp $
+
+commit 2a14f488c5e063600c28c418949bb0dcf21aae20
+Author: Bill Allombert <Bill.Allombert@math.u-bordeaux1.fr>
+Date:   Thu Nov 11 13:44:40 2010 +0000
+
+    3- [gp2c]: foo(x:mp)=... did not work. [2.4.4-F16]
+
+--- src/functions/gp2c_internal/_badtype.orig	2008-03-31 11:43:59.000000000 +0000
++++ src/functions/gp2c_internal/_badtype
+@@ -4,7 +4,7 @@ Help: Code to check types. If not void, 
+ Description: 
+  (int):bool:parens              typ($1) != t_INT
+  (real):bool:parens             typ($1) != t_REAL
+- (mp):negbool                   is_intreal($1)
++ (mp):negbool                   is_intreal_t(typ($1))
+  (vec):negbool                  is_matvec_t(typ($1))
+  (vecsmall):bool:parens         typ($1) != t_VECSMALL
+  (pol):bool:parens              typ($1) != t_POL
