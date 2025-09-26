@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.557 2025/09/25 07:30:15 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.558 2025/09/26 10:38:10 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27602,3 +27602,4 @@ zabbix-frontend<6.0.37			cross-site-scripting	https://nvd.nist.gov/vuln/detail/C
 zabbix-server-{mysql,postgresql}<6.0.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45700
 zabbix-proxy<6.0.39			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45700
 webkit-gtk<2.48.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-43272
+tiff<4.7.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-9900
