@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/09/15 11:19:16 gdt Exp $
+# $NetBSD: Makefile,v 1.59 2025/09/26 23:38:03 gdt Exp $
 
 VERSION_BASE=	9.7.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
@@ -7,7 +7,7 @@ VERSION=	${VERSION_BASE}${VERSION_RC}
 WRKFINAL=	proj-${VERSION_BASE}
 WRKSRC=		${WRKDIR}/${WRKFINAL}
 DISTNAME=	proj-${VERSION}
-#PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -45,6 +45,22 @@ CMAKE_CONFIGURE_ARGS+=	-DEMBED_RESOURCE_FILES=OFF
 
 # \todo Document, file uprsteam, and add uptream bug report URL.
 CXXFLAGS.SunOS+=	-fpermissive
+
+# proj has tests that rely on precise IEEE754 double results, and fail
+# if run on i386 and allowing extended precision.  Take this as a clue
+# that proj really wants exactly IEEE754, and instruct the compiler.
+# Guess that this is true for i386 in general, not just NetBSD.
+# Note that "-fexcess-precision=standard" fails with a complaint of not
+# being supported in c++; this doesn't make sense, but use float-store
+# to avoid having to figure it out.
+.include "../../mk/bsd.prefs.mk"
+.if (${MACHINE_ARCH} == "i386")
+CFLAGS+=		-ffloat-store
+.endif
+
+# Tests fail on NetBSD 9 earmv7hf-el, but this is apparently a bug in
+# GNU ld < 2.33:
+#   https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=baf46cd78048e1b959462567556e1de1ef6b9039
 
 TEST_TARGET=		test
 
