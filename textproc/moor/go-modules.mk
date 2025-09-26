@@ -1,7 +1,7 @@
-# $NetBSD: go-modules.mk,v 1.2 2025/09/05 14:39:22 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.3 2025/09/26 15:06:55 schmonz Exp $
 
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.19.1-0.20250723141813-02ff9d482061.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.19.1-0.20250723141813-02ff9d482061.zip
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.20.1-0.20250921220508-b05fcfb98fa2.mod
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.20.1-0.20250921220508-b05fcfb98fa2.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.11.5.mod
