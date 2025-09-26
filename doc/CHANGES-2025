@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5724 2025/09/25 20:12:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5725 2025/09/26 07:19:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8283,3 +8283,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/coreutils to 9.8 [wiz 2025-09-25]
 	Updated misc/gnuls to 9.8 [wiz 2025-09-25]
 	Updated devel/py-ruff to 0.13.2 [wiz 2025-09-25]
+	Updated devel/py-zope.interface to 8.0.1 [adam 2025-09-26]
+	Updated textproc/py-types-docutils to 0.22.2.20250924 [adam 2025-09-26]
