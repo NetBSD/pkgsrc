@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5742 2025/09/26 18:31:05 js Exp $
+$NetBSD: CHANGES-2025,v 1.5743 2025/09/26 18:32:16 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8305,3 +8305,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/nullmailer to 2.2nb17 [schmonz 2025-09-26]
 	Added audio/iir1 version 1.9.5 [js 2025-09-26]
 	Added audio/mt32emu version 2.7.2 [js 2025-09-26]
+	Added emulators/dosbox-staging version 0.82.2 [js 2025-09-26]
