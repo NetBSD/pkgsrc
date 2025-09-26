@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.43 2021/12/15 20:54:00 adam Exp $
+# $NetBSD: options.mk,v 1.44 2025/09/26 08:10:45 jperkin Exp $
 
 # Global and legacy options
 
@@ -43,9 +43,6 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
 PLIST.csasl=	yes
-MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 MAKE_DIRS+=	${SASLLIBDIR}
 CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .else
