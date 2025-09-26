@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5740 2025/09/26 15:39:41 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5741 2025/09/26 18:29:49 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8303,3 +8303,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/exercism to 3.5.8 [schmonz 2025-09-26]
 	Updated net/gh to 2.80.0 [bsiegert 2025-09-26]
 	Updated mail/nullmailer to 2.2nb17 [schmonz 2025-09-26]
+	Added audio/iir1 version 1.9.5 [js 2025-09-26]
