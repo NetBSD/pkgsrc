@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/26 18:31:50 js Exp $
+
+BLAKE2s (dosbox-staging-0.82.2.tar.gz) = 3c87ed08f06ea4b215d952ffea43531d1e8d3e8f04cb3678af4b9e6c4f6a0c63
+SHA512 (dosbox-staging-0.82.2.tar.gz) = 09dfd20f3a749e141a3eca41bd4556fdcb33df864a908710fb6f6163dbdab4f427c2738354c089cea53af0ae8f7cd3f526ad9939e5e562abb9c9705a443c3c5d
+Size (dosbox-staging-0.82.2.tar.gz) = 6691414 bytes
