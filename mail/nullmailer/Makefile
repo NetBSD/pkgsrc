@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2025/04/17 21:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/09/26 15:39:34 schmonz Exp $
 
 DISTNAME=		nullmailer-2.2
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE:Q}
 
@@ -57,11 +57,11 @@ SPECIAL_PERMS+=		libexec/nullmailer/nullmailer-queue		\
 			${NULLMAILER_USER} ${NULLMAILER_GROUP} 4555
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/mailer.conf
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	mailer.conf README.pkgsrc
 SUBST_FILES.paths+=	doc/nullmailer-send.8 doc/nullmailer-queue.8
 SUBST_FILES.paths+=	test/functions.in
-SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR
-SUBST_STAGE.paths=	post-configure
+SUBST_VARS.paths=	PREFIX VARBASE PKG_SYSCONFDIR RCD_SCRIPTS_DIR
 
 INSTALLATION_DIRS=	share/doc/${PKGBASE} share/examples/${PKGBASE}
 BUILD_DEFS+=		VARBASE
@@ -69,12 +69,14 @@ BUILD_DEFS+=		VARBASE
 .include "options.mk"
 
 post-extract:
-	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	${CP} ${FILESDIR}/mailer.conf ${WRKSRC}/
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}/
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS COPYING ChangeLog	\
-		HOWTO NEWS README TODO ${DESTDIR}${PREFIX}/share/doc/nullmailer
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf				\
-		${DESTDIR}${PREFIX}/share/examples/nullmailer/
+		HOWTO NEWS README README.pkgsrc TODO			\
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
+	${INSTALL_DATA} ${WRKSRC}/mailer.conf				\
+		${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
 
 .include "../../mk/bsd.pkg.mk"
