@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2025/08/05 05:53:28 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/09/26 08:09:28 adam Exp $
 
-DISTNAME=	anyio-4.10.0
+DISTNAME=	anyio-4.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/agronholm/anyio
 COMMENT=	High level compatibility layer for multiple asynchronous event loops
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=77:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.1:../../misc/py-sniffio
