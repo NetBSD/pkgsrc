@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/27 11:33:10 joerg Exp $
+${PYSITELIB}/hgext3rd/auditlog.py

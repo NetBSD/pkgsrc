@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/27 11:33:10 joerg Exp $
+
+BLAKE2s (auditlog-0.1.tar.gz) = e5aa7217c482ced8607ec9ad48fc2534c9e50cc8b36bb4e3c2c909403c08c1db
+SHA512 (auditlog-0.1.tar.gz) = aa347bd1621a0872df87b7ad6958fa2a3f7998d13f1cad9c63793bab23de940ec4cbf494ebb11298b07764a1ccd7b8cb936c8f0114802b17bb92dfd0c460e89e
+Size (auditlog-0.1.tar.gz) = 8154 bytes
