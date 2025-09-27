@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/08/20 11:35:07 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/09/27 07:00:56 adam Exp $
 
-DISTNAME=	icinga2-2.14.5
+DISTNAME=	icinga2-2.15.0
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -140,11 +140,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LOCALSTATEDIR=${VARBASE}
 CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-# Avoid a name clash with Boost header on case-insensitive file systems.
-# Remove outdated GNUInstallDirs.cmake.
-post-extract:
-	${RM} ${WRKSRC}/third-party/cmake/GNUInstallDirs.cmake
-
 # The configuration files are installed in etc/icinga2.  You can't tell CMAKE
 # to put them elsewhere because the program and the config files contain
 # references to the config dir.  So move them to share/examples after
@@ -164,9 +159,9 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/examples/icinga2/features-enabled/notificatio
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/icinga2
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../mk/atomic64.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
