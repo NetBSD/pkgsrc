@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/02/01 07:13:37 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/09/27 08:14:14 adam Exp $
 
-BLAKE2s (ncmpcpp-0.9.2.tar.bz2) = 436eed3fd49cd93b4448dedc1f3455ee80c4544c6659ec610181a45e72b1d2d6
-SHA512 (ncmpcpp-0.9.2.tar.bz2) = bbcb3b50233e363412af3c1cf1c0118122733dc376759cd35dee79950f42e098a0402ff670684df91847b990b26022630c9a71192e462bd46e70628e31489742
-Size (ncmpcpp-0.9.2.tar.bz2) = 486266 bytes
+BLAKE2s (ncmpcpp-0.10.1.tar.gz) = e13e84b87886bd6d1bc43a70cb8b2b876e1780ec7862344b92121dbbb6d25d25
+SHA512 (ncmpcpp-0.10.1.tar.gz) = f726f46dfca7dd843144babb6efae534b95d3862bdfba522b5a2dee9eb6605eb22bb93521147d42c9df22316fb4512dd33e33831fe23b1202a302110cf27f54c
+Size (ncmpcpp-0.10.1.tar.gz) = 231032 bytes
 SHA1 (patch-src_status.cpp) = a504f4629a504256c211e24326e1b4695820fd79
-SHA1 (patch-src_tags.cpp) = b40c57a40f105078b1fb8d0bffd81ba84a859a91
