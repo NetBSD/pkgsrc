@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.4 2025/09/27 07:03:10 adam Exp $
+
+Do not look for boost_system library.
+
+--- CMakeLists.txt.orig	2025-09-24 15:20:09.889806666 +0000
++++ CMakeLists.txt
+@@ -576,7 +576,7 @@ set (Boost_FIND_QUIETLY ON)
+ if (NOT DEFINED ${BOOST_ROOT})
+   set(BOOST_ROOT $ENV{BOOST_ROOT})
+ endif()
+-find_package (Boost 1.67.0 COMPONENTS date_time filesystem locale program_options regex system)
++find_package (Boost 1.67.0 COMPONENTS date_time filesystem locale program_options regex)
+ 
+ if (Boost_FOUND)
+   include_directories(${Boost_INCLUDE_DIRS})
