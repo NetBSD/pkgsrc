@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2025/09/14 15:17:43 triaxx Exp $
+$NetBSD: distinfo,v 1.42 2025/09/27 06:01:00 triaxx Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.24.0.mod) = 35d43d581d2a983aa8fccbcc9c49400c2bfdda9a968a0f701c187dec4ab5aade
 SHA512 (cel.dev_expr_@v_v0.24.0.mod) = 8c3d6929fe232875ec4de4ddffc12a54d0c24d7a86257013b060fe02fbd7d93a6a8d71bfac21490cd4457d9a10791db1b9c44291640f7e2cded698ea9462f63d
@@ -2640,9 +2640,9 @@ Size (howett.net_plist_@v_v1.0.0.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.0.zip) = 6c0b133ce84d8994a7c188e83ce7bae86228b60829ec29211d1a8f1a446cb945
 SHA512 (howett.net_plist_@v_v1.0.0.zip) = 7d63e5489b2b007736952dd57855fce61e8bbb38599f45d56d846ca23cb65e2db3070a2af39647c4d02f228511c2d44338904e2e83cb156df6f5aefdfa6e1aaf
 Size (howett.net_plist_@v_v1.0.0.zip) = 71680 bytes
-BLAKE2s (hugo-0.150.0.tar.gz) = c60a46d7539f675a37a867465cf89cf8792f4d50db595d13d4b25725918bea62
-SHA512 (hugo-0.150.0.tar.gz) = 428bab90a13e4f0de638b2b1caeba194d46727da4649ab91250863335717de8dd5771c90be343a3ab43646d0e5baf8587d4beb94a73000d89aab048c17d53458
-Size (hugo-0.150.0.tar.gz) = 14632845 bytes
+BLAKE2s (hugo-0.150.1.tar.gz) = da5eb3dc9337b5a7efd8778d560919e40dc8a739fe6a8bbe8470ff2555a31c4a
+SHA512 (hugo-0.150.1.tar.gz) = 53234d665e7c6276a174e9f179f5c671a0740a99f6883c0839204b5e53f734d4ff30a6d7b736ec5bc2f606e42573d86dd3e8a8aff1a83a9ee61bdeef0cd0cb24
+Size (hugo-0.150.1.tar.gz) = 14634235 bytes
 BLAKE2s (rsc.io_binaryregexp_@v_v0.2.0.mod) = 351240374eb48b99bb43b8b52aa8467662e22b18ebf216f4c123858fe706c2f8
 SHA512 (rsc.io_binaryregexp_@v_v0.2.0.mod) = db50ff677b0bdccbc1a1ad3df7c5cc76f2fcccf3ab99d08d1c2868440eb9b893fe89452f4286f7d42f2f16abf0f4acda67fe86e174dcfa730a743aafcc166774
 Size (rsc.io_binaryregexp_@v_v0.2.0.mod) = 36 bytes
