@@ -1,0 +1,33 @@
+$NetBSD: patch-features_boost.prf,v 1.1 2025/09/27 07:13:02 adam Exp $
+
+Don't link agaist boost_system.
+
+--- features/boost.prf.orig	2025-09-25 18:58:05.144787999 +0000
++++ features/boost.prf
+@@ -36,7 +36,7 @@ isEmpty(BOOST_LINK_FLAGS) {
+       BOOST_LINK_FLAGS = -lboost_thread-mt -lboost_program_options-mt -lboost_filesystem-mt -lboost_system-mt -lboost_regex-mt
+     } else {
+       exists($$OPENSCAD_LIBDIR/lib/libboost*thread*) {
+-        BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_system -lboost_regex
++        BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_regex
+       }
+     }
+   }
+@@ -50,7 +50,7 @@ isEmpty(BOOST_LINK_FLAGS) {
+       BOOST_LINK_FLAGS = -lboost_thread-mt -lboost_program_options-mt -lboost_filesystem-mt -lboost_system-mt -lboost_regex-mt
+     } else {
+       exists($$BOOST_DIR/lib/libboost*thread*) {
+-        BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_system -lboost_regex
++        BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_regex
+       }
+     }
+   }
+@@ -71,7 +71,7 @@ isEmpty(BOOST_LINK_FLAGS) {
+ 
+ isEmpty(BOOST_LINK_FLAGS) {
+   unix|macx {
+-    BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_system -lboost_regex
++    BOOST_LINK_FLAGS = -lboost_thread -lboost_program_options -lboost_filesystem -lboost_regex
+   }
+ }
+ 

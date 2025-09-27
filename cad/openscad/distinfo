@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2025/02/02 00:41:12 mef Exp $
+$NetBSD: distinfo,v 1.17 2025/09/27 07:13:02 adam Exp $
 
 BLAKE2s (openscad-2021.01.tar.gz) = dc3d5a762d8b334fcdefc41d3c15a3b01023ce93ed4b2bae2f9d13c5100c7918
 SHA512 (openscad-2021.01.tar.gz) = 2dac2d9c2fdbb720bc2e56f66849a75abe10ee646f918c53dadf33d57a30f3c605a536483bd97410d715309064ac99330ce15657440e4d66b426635dfab6a32b
 Size (openscad-2021.01.tar.gz) = 15656800 bytes
+SHA1 (patch-features_boost.prf) = 711edcb80b1efe9bb2cf2c55cb2aa609a3d11a45
 SHA1 (patch-features_qscintilla2-priv.prf) = ca5d5735d091441d6daf7535802f5ba7362c808c
 SHA1 (patch-openscad.pro) = 55e97368d2fdd77c8a4773699cfffdaccd65d63f
 SHA1 (patch-scripts_translation-update.sh) = 24929df617e450558934e46b1711f241945da7eb
