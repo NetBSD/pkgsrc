@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2025/07/29 08:36:56 triaxx Exp $
+$NetBSD: distinfo,v 1.9 2025/09/27 09:16:12 triaxx Exp $
 
-BLAKE2s (corsix-th-0.69.0.tar.gz) = ec2c3d4a575f3c7ccb4da43c9bba9929866f0131aa008ae384b4122e6e37d39b
-SHA512 (corsix-th-0.69.0.tar.gz) = 6e200fe1c7e35bc9cbab71fac0fa52feca6558acf8c683e93443d0a1dba780d0c28e52a35345f16116fe031bbc86d98a42e46913e724a8739fa4e8d5a6d6b3f3
-Size (corsix-th-0.69.0.tar.gz) = 4323298 bytes
-SHA1 (patch-CorsixTH_CMakeLists.txt) = 5c01889cd8089e5883f9631bb372c04fe779ebbc
+BLAKE2s (corsix-th-0.69.1.tar.gz) = d7ebfbbd66a435b2626aa52677cf6d9911b5fb7bd8d212548b2269cc8a9c8a9a
+SHA512 (corsix-th-0.69.1.tar.gz) = 9e03a0df2b5dc7def3535274c3f9253346a6cf47dc961e123aa0558c5f285a72a9a4d5a2c603c988c72d31c547d7a8331ff77e2a2273a3688df8195fa41820ae
+Size (corsix-th-0.69.1.tar.gz) = 4323450 bytes
+SHA1 (patch-CorsixTH_CMakeLists.txt) = 74670d965b7a21f7d4dd87dd31db351b337b7565
+SHA1 (patch-CorsixTH_CorsixTH.lua) = 269600641f05f8ac8a739022b301882ca18169f3
