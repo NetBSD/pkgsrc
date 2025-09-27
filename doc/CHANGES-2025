@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5751 2025/09/27 06:02:24 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5752 2025/09/27 07:01:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8314,3 +8314,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/thunderbird-l10n to 143.0.1 [ryoon 2025-09-27]
 	Updated math/py-torch to 2.8.0 [ryoon 2025-09-27]
 	Updated www/hugo to 0.150.1 [triaxx 2025-09-27]
+	Updated meta-pkgs/boost to 1.89.0 [adam 2025-09-27]
+	Updated security/botan2 to 2.19.5 [adam 2025-09-27]
+	Updated net/icinga2 to 2.15.0 [adam 2025-09-27]
