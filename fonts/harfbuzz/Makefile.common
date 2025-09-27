@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.70 2025/09/23 12:32:01 adam Exp $
+# $NetBSD: Makefile.common,v 1.71 2025/09/27 15:16:40 wiz Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-11.5.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_PROJECT=	harfbuzz
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
