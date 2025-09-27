@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.60 2025/08/06 04:36:37 adam Exp $
+$NetBSD: distinfo,v 1.61 2025/09/27 15:01:59 tnn Exp $
 
 BLAKE2s (jasper-4.2.8.tar.gz) = 7a6f49c1df69d125426ed585dcdf1d1e8a2629be9e743b1125b47dee87de5049
 SHA512 (jasper-4.2.8.tar.gz) = 0479ad0e0a6e679e158c8d5e75e1921b7884e5f0aacc10376f528fa61aa27f057c4a2a5d71efa17a617e641577c0a51405a7ed798a1cd38e1590bc59ab319648
 Size (jasper-4.2.8.tar.gz) = 2127775 bytes
 SHA1 (patch-CMakeLists.txt) = f60e98b33f6e36903fe589d3ae04b8b2b61230de
+SHA1 (patch-src_libjasper_jp2_jp2__cod.h) = 685d9e375abfd6d01f2b35e275e5cceac2166a28
 SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = a2d5d53cd28f653f9e6e302f76c187fba50b1ce2
