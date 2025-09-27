@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2024/12/29 15:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/09/27 09:57:09 wiz Exp $
 
 DISTNAME=	libpagemaker-0.0.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libpagemaker/
 

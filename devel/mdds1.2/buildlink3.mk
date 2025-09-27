@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/05/18 11:48:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/09/27 09:57:14 wiz Exp $
 
 BUILDLINK_TREE+=	mdds1.2
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mdds1.2
 MDDS12_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mdds1.2+=	mdds1.2>=1.2.0
+BUILDLINK_ABI_DEPENDS.mdds1.2?=	mdds1.2>=1.3.1nb17
 BUILDLINK_PKGSRCDIR.mdds1.2?=	../../devel/mdds1.2
 
 # only contains header files

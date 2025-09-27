@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.80 2025/09/21 15:11:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.81 2025/09/27 09:57:21 wiz Exp $
 
 BUILDLINK_TREE+=	openimageio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openimageio
 OPENIMAGEIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openimageio+=	openimageio>=2.4.12.0
-BUILDLINK_ABI_DEPENDS.openimageio+=	openimageio>=3.0.9.1nb2
+BUILDLINK_ABI_DEPENDS.openimageio+=	openimageio>=3.0.9.1nb4
 BUILDLINK_PKGSRCDIR.openimageio?=	../../graphics/openimageio
 
 # these are targets in the cmake config files

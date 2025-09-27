@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2025/04/24 14:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2025/09/27 09:57:25 wiz Exp $
 
 DISTNAME=	akonadi-${KAPPSVER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	mail
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM/Akonadi

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/09/01 10:17:26 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/27 09:57:27 wiz Exp $
 
 DISTNAME=	gappa-1.3.5
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/file/38044/
 

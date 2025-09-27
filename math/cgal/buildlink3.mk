@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.50 2025/01/14 13:21:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.51 2025/09/27 09:57:27 wiz Exp $
 
 BUILDLINK_TREE+=	cgal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cgal
 CGAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cgal+=	cgal>=5.1
-BUILDLINK_ABI_DEPENDS.cgal+=	cgal>=5.1
+BUILDLINK_ABI_DEPENDS.cgal+=	cgal>=5.6.2nb4
 BUILDLINK_PKGSRCDIR.cgal?=	../../math/cgal
 
 BUILDLINK_DEPMETHOD.cgal?=	build

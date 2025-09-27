@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2024/01/21 07:57:55 mef Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/27 09:57:27 wiz Exp $
 
 R_PKGNAME=	dplyr
 R_PKGVER=	1.1.4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Grammar of data manipulation
+PKGREVISION=	1
 LICENSE=	mit
 
 DEPENDS+=	R-BH>=1.69.0.1:../../devel/R-BH

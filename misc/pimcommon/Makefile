@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/04/24 14:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/09/27 09:57:30 wiz Exp $
 
 DISTNAME=	pimcommon-${KAPPSVER}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

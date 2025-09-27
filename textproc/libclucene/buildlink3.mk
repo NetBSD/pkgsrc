@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2025/08/11 08:37:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2025/09/27 09:57:37 wiz Exp $
 
 BUILDLINK_TREE+=	libclucene
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libclucene
 LIBCLUCENE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libclucene+=	libclucene>=2.2.0
-BUILDLINK_ABI_DEPENDS.libclucene+=	libclucene>=2.3.3.4nb27
+BUILDLINK_ABI_DEPENDS.libclucene+=	libclucene>=2.3.3.4nb28
 BUILDLINK_PKGSRCDIR.libclucene?=	../../textproc/libclucene
 
 # boost-libs sets GCC_REQD, so we need to ensure we are in sync otherwise

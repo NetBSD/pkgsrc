@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/05/27 20:45:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.16 2025/09/27 09:57:38 wiz Exp $
 
 DISTNAME=	nuspell-5.1.6
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nuspell/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
