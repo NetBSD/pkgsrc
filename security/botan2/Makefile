@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/01 22:01:38 he Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/27 06:59:05 adam Exp $
 
-DISTNAME=	Botan-2.19.4
+DISTNAME=	Botan-2.19.5
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -19,8 +18,10 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-zlib --with-boost
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--docdir=share/doc
+CONFIGURE_ARGS+=	--with-boost
+CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--without-sphinx
 
 REPLACE_PYTHON+=	*.py src/scripts/*.py
@@ -65,8 +66,8 @@ TEST_TARGET=	tests
 post-test:
 	cd ${WRKSRC} && ./botan-test
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
