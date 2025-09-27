@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/27 11:33:10 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/27 11:35:40 joerg Exp $
 #
 
 DISTNAME=	auditlog-0.1
@@ -21,7 +21,7 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/auditlog.py ${DESTDIR}${PREFIX}/${PYSITELIB}/hgext3rd/
 
-.if 1
+.if 0
 HG_WRKSRC=	cd ../py-mercurial && ${MAKE} show-var VARNAME=WRKSRC
 
 do-test:
