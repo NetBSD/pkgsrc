@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5749 2025/09/27 00:56:58 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5750 2025/09/27 01:20:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8312,3 +8312,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 143.0.1 [ryoon 2025-09-26]
 	Updated mail/thunderbird to 143.0.1 [ryoon 2025-09-27]
 	Updated mail/thunderbird-l10n to 143.0.1 [ryoon 2025-09-27]
+	Updated math/py-torch to 2.8.0 [ryoon 2025-09-27]
