@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5752 2025/09/27 07:01:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5753 2025/09/27 08:17:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8317,3 +8317,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/boost to 1.89.0 [adam 2025-09-27]
 	Updated security/botan2 to 2.19.5 [adam 2025-09-27]
 	Updated net/icinga2 to 2.15.0 [adam 2025-09-27]
+	Updated audio/ncmpcpp to 0.10.1 [adam 2025-09-27]
+	Updated devel/py-ruamel-yaml-clib to 0.2.14 [adam 2025-09-27]
