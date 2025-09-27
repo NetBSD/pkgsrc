@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5756 2025/09/27 09:17:34 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5757 2025/09/27 11:34:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8322,3 +8322,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/ffmpeg7 to 7.1.2nb1 [triaxx 2025-09-27]
 	Updated multimedia/ffplay7 to 7.1.2nb1 [triaxx 2025-09-27]
 	Updated games/corsix-th to 0.69.1 [triaxx 2025-09-27]
+	Added devel/py-hg-auditlog version 0.1 [joerg 2025-09-27]
