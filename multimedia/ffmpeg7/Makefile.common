@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2025/09/22 14:21:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2025/09/27 09:00:26 triaxx Exp $
 # used by multimedia/ffmpeg7/Makefile
 # used by multimedia/ffplay7/Makefile
 
@@ -41,6 +41,9 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg7
 .if ${CC_VERSION:Mclang-15.*}
 LDFLAGS.Darwin+=	-Wl,-ld_classic
 .endif
+
+# Reserve header space on macOS for later install_name_tool fixes
+LDFLAGS.Darwin+= -Wl,-headerpad_max_install_names
 
 .if ${USE_CROSS_COMPILE:tl} == yes
 CONFIGURE_ARGS+=	--enable-cross-compile
