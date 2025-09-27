@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/28 19:57:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/09/27 18:20:02 gdt Exp $
 bin/ykman-${PYVERSSUFFIX}
 ${PYSITELIB}/ykman/__init__.py
 ${PYSITELIB}/ykman/__init__.pyc
@@ -136,11 +136,11 @@ ${PYSITELIB}/ykman/settings.pyo
 ${PYSITELIB}/ykman/util.py
 ${PYSITELIB}/ykman/util.pyc
 ${PYSITELIB}/ykman/util.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/yubikit/__init__.py
 ${PYSITELIB}/yubikit/__init__.pyc
 ${PYSITELIB}/yubikit/__init__.pyo
