@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/01/22 12:47:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/09/27 07:06:46 adam Exp $
 
 DISTNAME=	innoextract-1.9
 PKGREVISION=	12
@@ -16,7 +16,6 @@ USE_LANGUAGES=		c c++
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PREFIX}/${PKGMANDIR}
 CMAKE_CONFIGURE_ARGS+=	-DSET_OPTIMIZATION_FLAGS=OFF
 
-.include "../../devel/cmake/build.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
