@@ -1,34 +1,33 @@
-# $NetBSD: Makefile,v 1.32 2025/04/19 07:57:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/09/27 08:14:14 adam Exp $
 
-DISTNAME=	ncmpcpp-0.9.2
-PKGREVISION=	25
+DISTNAME=	ncmpcpp-0.10.1
 CATEGORIES=	audio
-MASTER_SITES=	https://rybczak.net/ncmpcpp/stable/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ncmpcpp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rybczak.net/ncmpcpp/
 COMMENT=	Featureful (n)curses based musicpd client inspired by ncmpc
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
-FAKE_NCURSES=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
-USE_CURSES=	wide getmouse
+USE_CXX_FEATURES=	c++20
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf automake autoreconf pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
-USE_CXX_FEATURES+=	c++14
+# Do not look for boost_system library.
+CONFIGURE_ENV+=	boost_cv_lib_system=yes
 
-.include "../../mk/curses.buildlink3.mk"
+USE_CURSES=	getmouse wide
 
-.if ${CURSES_TYPE} != "ncurses"
-CONFIGURE_ENV+=	ncursesw_CFLAGS="-I${BUILDLINK_PREFIX.curses}/include"
-CONFIGURE_ENV+=	ncursesw_LIBS="${BUILDLINK_LDADD.curses}"
-.endif
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
