@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.559 2025/09/26 11:35:04 gdt Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.560 2025/09/27 08:19:50 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24960,7 +24960,7 @@ erlang<23.3.4.15	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/C
 erlang>=24<24.3.4.2	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-37026
 erlang>=25<25.0.2	security-restrictions-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-37026
 fcitx5<5.0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-37311
-botan2<2.19.3	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-43705
+botan<2.19.3	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-43705
 fuse-ntfs-3g<2022.10.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-40284
 gtar-base<1.34nb1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-48303
 bind>=9.11<9.11.37	dns-cache-poisoning	https://nvd.nist.gov/vuln/detail/CVE-2022-3488
@@ -27603,3 +27603,4 @@ zabbix-server-{mysql,postgresql}<6.0.39	denial-of-service	https://nvd.nist.gov/v
 zabbix-proxy<6.0.39			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45700
 webkit-gtk<2.48.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-43272
 tiff<4.7.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-9900
+botan-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages

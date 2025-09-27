@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.18 2025/09/13 11:14:49 leot Exp $
+# $NetBSD: eol-packages,v 1.19 2025/09/27 08:19:50 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1203,3 +1203,8 @@ Package: Zabbix (5.0)
 eol date: May 2025
 URL: https://www.zabbix.com/life_cycle_and_release_policy
 Description: Security support for 5.0 ended May 2025. Update to Zabbix 6.0 or newer.
+
+Package: Botan2
+eol date: January 1, 2025
+URL: https://botan.randombit.net/
+Description: Switch to Botan3.
