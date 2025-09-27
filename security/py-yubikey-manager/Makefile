@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2025/07/07 05:58:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/09/27 18:20:02 gdt Exp $
 
 .include "../../security/ykman/version.mk"
 
 DISTNAME=	yubikey_manager-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubikey-manager
@@ -14,7 +15,7 @@ HOMEPAGE=	https://developers.yubico.com/yubikey-manager/
 COMMENT=	Yubico YubiKey manager library
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=0:../../devel/py-poetry
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry>=2.1.4:../../devel/py-poetry
 TEST_DEPENDS+=	${PYPKGPREFIX}-makefun>=0:../../devel/py-makefun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-click>=8:../../devel/py-click
