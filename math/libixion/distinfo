@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/08/30 05:05:15 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2025/09/27 07:09:27 adam Exp $
 
 BLAKE2s (libixion-0.20.0.tar.xz) = 8990086b276d06e1681ce9c1474e4187b8d5321afcfb350c18a6d02e1e41e59f
 SHA512 (libixion-0.20.0.tar.xz) = f36e5312db440a528ceab21bce6ea0d94f548b0a3893f214693ebcf5ab81dee001b23324f5a745059ab85fd54b0d3fb53084f0b1fb9ff58b59c18c341c1ba2aa
 Size (libixion-0.20.0.tar.xz) = 544780 bytes
-SHA1 (patch-configure.ac) = f5a27ed314e69ecf1ed94d400abd2262a0fce7be
 SHA1 (patch-src_python_Makefile.am) = 962d572758c82c0abdc034e27666df1e485da11d
