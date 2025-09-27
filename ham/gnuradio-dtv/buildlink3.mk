@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/09/21 18:15:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/09/27 09:57:22 wiz Exp $
 
 BUILDLINK_TREE+=	gnuradio-dtv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnuradio-dtv
 GNURADIO_DTV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnuradio-dtv+=	gnuradio-dtv>=3.10.1.1
-BUILDLINK_ABI_DEPENDS.gnuradio-dtv?=	gnuradio-dtv>=3.10.12.0nb5
+BUILDLINK_ABI_DEPENDS.gnuradio-dtv?=	gnuradio-dtv>=3.10.12.0nb6
 BUILDLINK_PKGSRCDIR.gnuradio-dtv?=	../../ham/gnuradio-dtv
 
 .include "../../ham/gnuradio-fec/buildlink3.mk"

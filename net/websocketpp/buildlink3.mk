@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/03/14 13:09:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/09/27 09:57:34 wiz Exp $
 
 BUILDLINK_TREE+=	websocketpp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	websocketpp
 WEBSOCKETPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.websocketpp+=	websocketpp>=0.7.0
+BUILDLINK_ABI_DEPENDS.websocketpp?=	websocketpp>=0.8.2nb1
 BUILDLINK_PKGSRCDIR.websocketpp?=	../../net/websocketpp
 
 # only headers
