@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/09/03 13:21:05 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2025/09/27 07:48:13 adam Exp $
 
 DISTNAME=	pcl-1.15.1
 CATEGORIES=	graphics
@@ -33,7 +33,7 @@ CMAKE_CONFIGURE_ARGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 .include "options.mk"
 
 PCL_BASE_VERSION=	${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
-PLIST_SUBST+=	PCL_BASE_VERSION=${PCL_BASE_VERSION}
+PLIST_SUBST+=		PCL_BASE_VERSION=${PCL_BASE_VERSION}
 # \todo PLIST_AWK to emit ${PCL_BASE_VERSION}
 
 .include "../../devel/boost-libs/buildlink3.mk"
