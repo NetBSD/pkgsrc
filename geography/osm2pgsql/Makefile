@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2025/08/30 22:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/09/27 07:12:20 adam Exp $
 
 DISTNAME=	osm2pgsql-1.11.0
 PKGREVISION=	4
@@ -19,8 +19,8 @@ LICENSE=	gnu-gpl-v2
 # needlessly prevents use on 32-bit machines with smaller extracts.
 BROKEN_ON_PLATFORM=	${LP32PLATFORMS}
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
 
 .include "../../devel/cmake/build.mk"
 
