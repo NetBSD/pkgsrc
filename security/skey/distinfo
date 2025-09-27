@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:18:01 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/09/27 12:07:21 tnn Exp $
 
 BLAKE2s (skey-1.1.5.tar.bz2) = 99c0250051397188648c5d3f8e5f77bec20d83d34c0f37c281845b9397ddf944
 SHA512 (skey-1.1.5.tar.bz2) = 4cbddc7e31134d5e23801a9b07de0d05c8357aaa8dddfb8426fceead3f54e539f77204f78a08b2a93890ef2f4f807a2208080f58f80818afa1b8cd4884b1fb37
 Size (skey-1.1.5.tar.bz2) = 61911 bytes
 SHA1 (patch-aa) = 78a4f791c5378d0ce2df8a92203859a34bc92bfe
-SHA1 (patch-ab) = 69d8f92968b3ebffc9b05fe7af1cde7e9d116587
+SHA1 (patch-ab) = 809cfaca2e4f8f78a619347ff05c3263a8f4e6cd
 SHA1 (patch-ac) = f3e9a6ebb7ac22116c8d8e6fe8ca0db7f8d37051
 SHA1 (patch-ad) = d1c43f17b52a82679ec554296a853196d8469bc7
 SHA1 (patch-ae) = 344026ab4acffe57aa4d0545a791f845ecafda4b
@@ -13,3 +13,7 @@ SHA1 (patch-ag) = 43db09ab58733b773ed30015984f724ba80d0e11
 SHA1 (patch-ah) = dec25286d50cbe0181b9b4bc99bd92556e573b5e
 SHA1 (patch-ai) = ad90b480047a22b25bc2c6e416a224e892e501c9
 SHA1 (patch-aj) = 940d50d33b36f00e6fa4cfffc13d3a5c41d4f2f9
+SHA1 (patch-put.c) = a27156a21cec287b5f8a5f3daf6d888f82006835
+SHA1 (patch-skeyinfo.c) = f20882029b7a5e6a27810c91b14e40e042f55b8a
+SHA1 (patch-skeyinit.c) = de53157034b343c5753ba6e48d78ecf1f6b7612d
+SHA1 (patch-skeylogin.c) = 1b35dac459d62a7cdb42f6d34ccfcb6a321e4bfc
