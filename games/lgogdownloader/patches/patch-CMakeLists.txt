@@ -1,0 +1,22 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/09/27 11:50:30 wiz Exp $
+
+Fix build with boost 1.89.
+https://github.com/Sude-/lgogdownloader/commit/7ba719a7a53d6025cd82f8b1c86e765285ed802b
+
+--- CMakeLists.txt.orig	2025-03-19 13:27:31.000000000 +0000
++++ CMakeLists.txt
+@@ -13,12 +13,13 @@ endif(USE_QT_GUI)
+ find_package(Boost
+   CONFIG
+   REQUIRED
+-  system
+   filesystem
+   regex
+   program_options
+   date_time
+   iostreams
++  OPTIONAL_COMPONENTS
++  system
+   )
+ find_package(CURL 7.55.0 REQUIRED)
+ find_package(Jsoncpp REQUIRED)
