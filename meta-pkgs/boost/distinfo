@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.156 2025/02/28 18:41:10 wiz Exp $
+$NetBSD: distinfo,v 1.157 2025/09/27 06:54:03 adam Exp $
 
-BLAKE2s (boost_1_87_0.tar.bz2) = 20ba7a87b1e20b1bc54f46c4d23a4866aa47983cf6e3674f229933184a95b1d4
-SHA512 (boost_1_87_0.tar.bz2) = a2d5007953f67b816169efe0cf11675cd63fc6bae63f87ee1372515e57913ef6cf6ae8c3f2c400fef8ce63a035a02a0cad0da5acc29e977a85d458625b2a719c
-Size (boost_1_87_0.tar.bz2) = 131473200 bytes
+BLAKE2s (boost_1_89_0.tar.bz2) = 4463aaf9d80b5ede6a9fbac6edf7d5f81d4bc636893f6742f6ddd8b31876004b
+SHA512 (boost_1_89_0.tar.bz2) = 5153fe92372c40afb400482c5dcb6043d3f64ad58b8e579d8f8a9a9c3dc66737a567ad8ccaa45c49ea02166ef9283c4904700d25971742d9b5fdf39b21fb2aa7
+Size (boost_1_89_0.tar.bz2) = 154699732 bytes
 SHA1 (patch-boost_archive_basic__archive.hpp) = 1f809170538f83252dc2f368825622f7a9df96f9
 SHA1 (patch-boost_asio_detail_config.hpp) = bbe043f74424c4f218308a1cefab73cb289f7b3f
 SHA1 (patch-boost_config_detail_posix__features.hpp) = 7d310574e7020c79c8bfa87cff4db0a2edc5b0bc
@@ -13,27 +13,19 @@ SHA1 (patch-boost_config_stdlib_libcpp.hpp) = d57ee228c9dfa43665d261e7423fd10122
 SHA1 (patch-boost_config_stdlib_libstdcpp3.hpp) = 52ebedd5e80b3a8c257eccb28cd2db76cb1ca01e
 SHA1 (patch-boost_core_noncopyable.hpp) = 63a3c2fc0bc85af77ff8bc17ad3a21ef0bc398c1
 SHA1 (patch-boost_core_uncaught__exceptions.hpp) = eba82062750f4e09bcef467476e8c4abd125f7b6
-SHA1 (patch-boost_math_special__functions_expm1.hpp) = 35808b11cfe4a92aaeb2bc660685eb291baecfe2
-SHA1 (patch-boost_math_special__functions_log1p.hpp) = 35143d419a348d73cb9117efc77996f8ba3e090b
 SHA1 (patch-boost_math_tools_config.hpp) = 1b467a38081fe5e2e3004bca9a6aec7106edb006
 SHA1 (patch-boost_math_tools_promotion.hpp) = d1079940594f7ffe7e70db6f61bba633b8fb31e5
-SHA1 (patch-boost_move_detail_std__ns__begin.hpp) = f83f8f7ab8198702aeb009ae02c70cae8ad61154
 SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64db72590e
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
-SHA1 (patch-boost_smart__ptr_intrusive__ptr.hpp) = 530340ba1b5aaadb02e6a2767185975a81992fdb
-SHA1 (patch-boost_smart__ptr_shared__ptr.hpp) = 1e9aacc4db883fa28d763cdbe2715e81b6171310
+SHA1 (patch-boost_range_detail_any__iterator__interface.hpp) = 7a9949f18fa7c5eb8d35366e65950bd9d49ff844
 SHA1 (patch-boost_stacktrace_detail_collect__unwind.ipp) = a5922dffd929f596b6e7d71b11f32d17e0bbd806
 SHA1 (patch-boost_test_impl_execution__monitor.ipp) = ffd449576d00b7e6ea3081421e3e70decf5d7de8
 SHA1 (patch-boost_thread_pthread_thread__data.hpp) = d048867f0ed98720cc375e949e5c92b92f3ce1ac
 SHA1 (patch-boostcpp.jam) = c545980fc72ce5a9fd2463899280927b495771b9
-SHA1 (patch-libs_charconv_src_float128__impl.hpp) = ea8598030c13c5c5c7acc07c1996dbea7f9e9c6f
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
 SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c696d86522b36eb12813ae91bee4
 SHA1 (patch-libs_context_src_asm_jump_arm_aapcs_elf_gas.S) = f442dfcad2f6e4caba29f75017dc826c5417b335
 SHA1 (patch-libs_context_src_asm_ontop_arm_aapcs_elf_gas.S) = d4450d2a96520283d0e79b80d86d780cd04274ee
 SHA1 (patch-libs_fiber_build_Jamfile.v2) = 4b4a6698111042a3e54dc181b555516e0685796d
-SHA1 (patch-libs_process_src_ext_cwd.cpp) = 43720c8bb60548cf6a5b17449594e97441c04be8
-SHA1 (patch-libs_process_src_ext_exe.cpp) = ed19c56b956818573f229d0d894f72ad561bc997
-SHA1 (patch-libs_process_src_posix_close__handles.cpp) = 4b4676ae266bb5fb2c56702f22c0a083e09c653f
 SHA1 (patch-tools_build_src_engine_build.sh) = 7a756f04a2f11fd06bfa69c5d8ad160926f7da95
 SHA1 (patch-tools_build_src_tools_gcc.jam) = 4d895f14965ee29e328dda15e9975ccc1c14673f
