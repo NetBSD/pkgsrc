@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/09/03 13:21:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/09/27 07:48:13 adam Exp $
 bin/pcl_add_gaussian_noise
 bin/pcl_bilateral_upsampling
 bin/pcl_boundary_estimation
@@ -654,6 +654,7 @@ include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_backprojection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_normal_shooting.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_organized_projection.h
+include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_distance.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_features.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_median_distance.h
@@ -665,7 +666,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_sample
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_surface_normal.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_trimmed.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_var_trimmed.h
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_sorting.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_types.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/default_convergence_criteria.h
