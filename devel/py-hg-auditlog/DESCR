@@ -1,0 +1,4 @@
+The auditlog extension for Mercurial provides infrastructure for keeping
+provenance records for commits and phase changes. It also provides a
+client-mode for mirroring the records of a server and querying them
+locally.
