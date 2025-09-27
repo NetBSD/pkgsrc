@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2025/09/19 13:35:29 nia Exp $
+@comment $NetBSD: PLIST,v 1.51 2025/09/27 06:54:05 adam Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -146,10 +146,6 @@ lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config-versi
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/libboost_stacktrace_noop-variant-shared.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/libboost_stacktrace_noop-variant-static.cmake
-lib/cmake/boost_system-${PKGVERSION}/boost_system-config-version.cmake
-lib/cmake/boost_system-${PKGVERSION}/boost_system-config.cmake
-lib/cmake/boost_system-${PKGVERSION}/libboost_system-variant-shared.cmake
-lib/cmake/boost_system-${PKGVERSION}/libboost_system-variant-static.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/boost_test_exec_monitor-config-version.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/boost_test_exec_monitor-config.cmake
 lib/cmake/boost_test_exec_monitor-${PKGVERSION}/libboost_test_exec_monitor-variant-shared.cmake
@@ -282,9 +278,6 @@ ${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.so.${PK
 lib/libboost_stacktrace_noop.a
 lib/libboost_stacktrace_noop.so
 lib/libboost_stacktrace_noop.so.${PKGVERSION}
-lib/libboost_system.a
-lib/libboost_system.so
-lib/libboost_system.so.${PKGVERSION}
 lib/libboost_test_exec_monitor.a
 lib/libboost_thread.a
 lib/libboost_thread.so
