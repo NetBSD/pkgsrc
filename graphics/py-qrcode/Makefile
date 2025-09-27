@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/09/27 20:31:52 abs Exp $
+# $NetBSD: Makefile,v 1.24 2025/09/27 21:12:36 wiz Exp $
 
 DISTNAME=	qrcode-8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/lincolnloop/python-qrcode
 COMMENT=	QR Code image generator
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 # pil
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1.0:../../graphics/py-Pillow
 # png
