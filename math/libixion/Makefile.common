@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2025/08/30 05:05:15 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/09/27 07:09:27 adam Exp $
 #
 # used by math/libixion/Makefile
 # used by math/py-libixion/Makefile
@@ -16,10 +16,11 @@ LICENSE=	mpl-2.0
 PATCHDIR=	${.CURDIR}/../../math/libixion/patches
 DISTINFO_FILE=	${.CURDIR}/../../math/libixion/distinfo
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++17
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--no-as-needed
