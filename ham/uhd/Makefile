@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2025/08/20 11:35:00 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2025/09/27 09:57:24 wiz Exp $
 
 DISTNAME=	uhd-4.8.0.0
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
