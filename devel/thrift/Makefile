@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/11/10 18:05:33 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/27 09:57:15 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Cross-language data serialization

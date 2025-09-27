@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2024/12/29 15:09:42 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/09/27 09:57:10 wiz Exp $
 
 DISTNAME=	libwpg-0.3.3
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	converters graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpg/}
 EXTRACT_SUFX=	.tar.xz
