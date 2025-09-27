@@ -1,4 +1,14 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.2 2025/09/20 13:55:16 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.3 2025/09/27 23:24:14 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
+
+Pullup ticket #7005 - requested by gutteridge
+x11/xfce4-desktop: Functionality fix
+meta-pkgs/xfce4: Functionality fix
+
+Pullup ticket #7006 - requested by spz
+time/php-framadate: Disable for bulk builds due to hangs
+
+Pullup ticket #7007 - requested by bsiegert
+security/libb2: Bug fix
 
