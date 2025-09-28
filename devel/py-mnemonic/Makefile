@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/09/14 23:48:23 js Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/28 19:31:47 wiz Exp $
 
 DISTNAME=	mnemonic-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mnemonic/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pypi.org/project/mnemonic/
 COMMENT=	Reference implementation of BIP-0039
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
