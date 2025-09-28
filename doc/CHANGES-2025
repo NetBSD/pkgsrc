@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5772 2025/09/28 19:03:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5773 2025/09/28 19:04:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8338,3 +8338,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-click-didyoumean to 0.3.1nb1 [wiz 2025-09-28]
 	Updated devel/py-construct-classes to 0.1.2nb2 [wiz 2025-09-28]
 	Updated devel/py-coveralls to 4.0.1nb1 [wiz 2025-09-28]
+	Updated devel/py-cucumber-expressions to 18.0.1nb1 [wiz 2025-09-28]
