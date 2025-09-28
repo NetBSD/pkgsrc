@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5800 2025/09/28 19:51:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5801 2025/09/28 19:54:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8366,3 +8366,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-sh to 2.2.2nb1 [wiz 2025-09-28]
 	Updated textproc/py-babelfish to 0.6.1nb1 [wiz 2025-09-28]
 	Updated textproc/py-epr-reader to 2.4.15nb3 [wiz 2025-09-28]
+	Updated textproc/py-openapi-pydantic to 0.5.1nb1 [wiz 2025-09-28]
