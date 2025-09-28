@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5806 2025/09/28 19:59:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5807 2025/09/28 20:00:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8372,3 +8372,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-q2 to 1.8.0nb1 [wiz 2025-09-28]
 	Updated www/py-django-timezone-field to 7.1nb1 [wiz 2025-09-28]
 	Updated www/py-flask-babel to 4.0.0nb1 [wiz 2025-09-28]
+	Updated www/py-pysaml2 to 7.5.2nb1 [wiz 2025-09-28]
