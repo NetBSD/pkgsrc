@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/10/28 19:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/28 19:51:42 wiz Exp $
 
 DISTNAME=	epr-reader-2.4.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/epr-reader/}
 
@@ -11,13 +11,11 @@ HOMEPAGE=	https://github.com/wustho/epr
 COMMENT=	Terminal/CLI Epub Reader
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	epr.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
