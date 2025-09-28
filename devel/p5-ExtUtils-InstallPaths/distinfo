@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/09/15 06:15:31 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/09/28 07:27:28 wiz Exp $
 
-BLAKE2s (ExtUtils-InstallPaths-0.014.tar.gz) = ec1d6eaf792143437850a4aa5fc5e108eaf44c2a6416821d4087b2367b53b72b
-SHA512 (ExtUtils-InstallPaths-0.014.tar.gz) = d2a12004d4899a6ff28d4fdda2223e20b12eb8378ed7ec229c49923ef2051c870da2d793dc48ddc62b0a2709b3951f0adf8a30102b7ac452e38499f8735f4c03
-Size (ExtUtils-InstallPaths-0.014.tar.gz) = 19253 bytes
+BLAKE2s (ExtUtils-InstallPaths-0.015.tar.gz) = 0fbc635a096cc6b2a37e4850bed81abf2d2de14a8c07da19e34b57175ade5432
+SHA512 (ExtUtils-InstallPaths-0.015.tar.gz) = becfa766c0ba61d2e04e20a808f5de3ae9cd7747d347ce9b8b9851214f93d71e8fc411e4a4fe7c43d7ba6bb734b0d239eced50870c359c14aed58b96c1253ed3
+Size (ExtUtils-InstallPaths-0.015.tar.gz) = 19252 bytes
