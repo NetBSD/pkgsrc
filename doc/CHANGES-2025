@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5771 2025/09/28 19:02:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5772 2025/09/28 19:03:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8337,3 +8337,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-aws-error-utils to 2.7.0nb1 [wiz 2025-09-28]
 	Updated devel/py-click-didyoumean to 0.3.1nb1 [wiz 2025-09-28]
 	Updated devel/py-construct-classes to 0.1.2nb2 [wiz 2025-09-28]
+	Updated devel/py-coveralls to 4.0.1nb1 [wiz 2025-09-28]
