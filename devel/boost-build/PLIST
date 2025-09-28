@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/04/17 16:14:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/09/28 09:54:41 adam Exp $
 share/boost-build/build-system.jam
 share/boost-build/build/ac.jam
 share/boost-build/build/alias.jam
@@ -30,6 +30,7 @@ share/boost-build/tools/borland.jam
 share/boost-build/tools/builtin.jam
 share/boost-build/tools/bzip2.jam
 share/boost-build/tools/cast.jam
+share/boost-build/tools/cc.jam
 share/boost-build/tools/clang-darwin.jam
 share/boost-build/tools/clang-linux.jam
 share/boost-build/tools/clang-vxworks.jam
@@ -131,6 +132,7 @@ share/boost-build/tools/gettext.jam
 share/boost-build/tools/gfortran.jam
 share/boost-build/tools/hp_cxx.jam
 share/boost-build/tools/hpfortran.jam
+share/boost-build/tools/ibmcxx.jam
 share/boost-build/tools/ifort.jam
 share/boost-build/tools/intel-darwin.jam
 share/boost-build/tools/intel-linux.jam
@@ -195,10 +197,8 @@ share/boost-build/tools/types/rsp.jam
 share/boost-build/tools/types/sass-type.jam
 share/boost-build/tools/types/xml.jam
 share/boost-build/tools/unix.jam
-share/boost-build/tools/vacpp.jam
 share/boost-build/tools/vmsdecc.jam
 share/boost-build/tools/whale.jam
-share/boost-build/tools/xlcpp.jam
 share/boost-build/tools/xlf.jam
 share/boost-build/tools/xsltproc-config.jam
 share/boost-build/tools/xsltproc.jam
