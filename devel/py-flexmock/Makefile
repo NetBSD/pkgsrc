@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/01/14 16:53:54 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/09/28 19:26:16 wiz Exp $
 
 DISTNAME=	flexmock-0.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flexmock/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/bkabrda/flexmock
 COMMENT=	Mock/Stub/Spy library for Python
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
