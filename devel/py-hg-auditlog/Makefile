@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/09/27 11:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/28 19:27:47 wiz Exp $
 
 DISTNAME=	auditlog-0.1
 PKGNAME=	${PYPKGPREFIX}-hg-${DISTNAME:S/_/-/}
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-mercurial>=5.4nb1:../../devel/py-mercurial
 USE_TOOLS+=	bash:test
 
 INSTALLATION_DIRS+=	${PREFIX}/${PYSITELIB}/hgext3rd
+PY_PATCHPLIST=		yes
 
 do-build:
 
