@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/04/19 07:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/09/28 18:52:16 tnn Exp $
 
 DISTNAME=	xmlrpc-c-1.51.04
 # the "super stable" branch
@@ -43,6 +43,7 @@ SUBST_FILES.pthread=	xmlrpc-c-config.*
 SUBST_SED.pthread=	-e 's/-lpthread/${PTHREAD_LINKFLAGS:Q}/'
 SUBST_SED.pthread+=	-e 's/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/'
 
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE=1	# asprintf
 LDFLAGS.OpenBSD+=	${PTHREAD_LINKFLAGS}
 
 # TODO: really use pkgsrc expat
