@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2025/09/28 06:18:34 vins Exp $
+man/man3/explicit_bzero.3bsd
+man/man3/flopen.3bsd
+man/man3/freezero.3bsd
+man/man3/recallocarray.3bsd

@@ -1,12 +1,61 @@
-$NetBSD: patch-configure.ac,v 1.1 2025/03/07 20:17:35 vins Exp $
+$NetBSD: patch-configure.ac,v 1.2 2025/09/28 06:18:35 vins Exp $
 
 TIMESPEC(3HEAD) available on SunOS 5.11
 
---- configure.ac.orig	2025-03-07 20:11:19.628450340 +0000
+--- configure.ac.orig	2024-03-18 02:16:31.000000000 +0000
 +++ configure.ac
-@@ -263,7 +263,7 @@ AS_CASE([$host_os],
+@@ -262,8 +262,56 @@ AS_CASE([$host_os],
+     abi_vis=no
      abi_wcsl=no
    ],
++  [netbsd*], [
++    api_time_macros=no
++
++    abi_accmode=no
++    abi_arc4random=no
++    abi_arc4random_stir=no
++    abi_asprintf=no
++    abi_bsd_getopt=no
++    abi_closefrom=no
++    abi_err=no
++    abi_errc=no
++    abi_expand_number=no
++    abi_explicit_bzero=yes
++    abi_fgetln=no
++    abi_flopen=yes
++    abi_fmtcheck=no
++    abi_fpurge=no
++    abi_freezero=yes
++    abi_funopen=no
++    abi_getbsize=no
++    abi_getpeereid=no
++    abi_humanize_number=no
++    abi_id_from_name=no
++    abi_inet_net_pton=no
++    # On libmd.
++    abi_md5=no
++    abi_name_from_id=no
++    abi_nlist=no
++    abi_pidfile=no
++    abi_proctitle=no
++    abi_progname=no
++    abi_readpassphrase=no
++    abi_reallocarray=no
++    abi_reallocf=no
++    abi_recallocarray=yes
++    abi_stringlist=no
++    abi_sort=no
++    abi_strl=no
++    abi_strmode=no
++    abi_strnstr=no
++    abi_strtonum=no
++    abi_strtox=no
++    abi_timeconv=no
++    # On libmd.
++    abi_transparent_libmd=no
++    abi_vis=no
++    abi_wcsl=no
++  ],
    [solaris2*], [
 -    api_time_macros=yes
 +    api_time_macros=no

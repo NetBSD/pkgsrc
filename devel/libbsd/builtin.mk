@@ -1,47 +1,19 @@
-# $NetBSD: builtin.mk,v 1.3 2023/08/29 16:25:59 vins Exp $
+# $NetBSD: builtin.mk,v 1.4 2025/09/28 06:18:35 vins Exp $
 
-BUILTIN_PKG:=	libbsd
+BUILTIN_PKG:=		libbsd
+PKGCONFIG_BASE.libbsd=	/usr
+PKGCONFIG_FILE.libbsd=	${PKGCONFIG_BASE.libbsd}/lib/pkgconfig/libbsd.pc
+PKGCONFIG_FILE.libbsd+=	${PKGCONFIG_BASE.libbsd}/lib${LIBABISUFFIX}/pkgconfig/libbsd.pc
 
-BUILTIN_FIND_HEADERS_VAR:=	H_LIBBSD
-BUILTIN_FIND_HEADERS.H_LIBBSD=	bsd/bsd.h
+.include "../../mk/buildlink3/pkgconfig-builtin.mk"
 
-.include "../../mk/buildlink3/bsd.builtin.mk"
+CHECK_BUILTIN.libbsd?=	no
+.if ${CHECK_BUILTIN.libbsd:tl} == no
 
-###
-### Determine if there is a built-in implementation of the package and
-### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
-###
-.if !defined(IS_BUILTIN.libbsd)
-IS_BUILTIN.libbsd=	no
-.  if empty(H_LIBBSD:M__nonexistent__) && empty(H_LIBBSD:M${LOCALBASE}/*)
-IS_BUILTIN.libbsd=	yes
+.  if ${USE_BUILTIN.libbsd:tl} == yes
+BUILDLINK_PREFIX.libbsd=	/usr
+BUILDLINK_FILES.libbsd+=	lib/pkgconfig/libbsd.pc
+BUILDLINK_FILES.libbsd+=	lib${LIBABISUFFIX}/pkgconfig/libbsd.pc
 .  endif
-.endif
-MAKEVARS+=		IS_BUILTIN.libbsd
 
-###
-### Determine whether we should use the built-in implementation if it
-### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
-###
-.if !defined(USE_BUILTIN.libbsd)
-.  if ${PREFER.libbsd} == "pkgsrc"
-USE_BUILTIN.libbsd=	no
-.  else
-USE_BUILTIN.libbsd=	${IS_BUILTIN.libbsd}
-.    if defined(BUILTIN_PKG.libbsd) && \
-        ${IS_BUILTIN.libbsd:tl} == yes
-USE_BUILTIN.libbsd=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.libbsd}
-.        if ${USE_BUILTIN.libbsd:tl} == yes
-USE_BUILTIN.libbsd!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libbsd:Q}; then	\
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.        endif
-.      endfor
-.    endif
-.  endif  # PREFER.libbsd
-.endif
-MAKEVARS+=		USE_BUILTIN.libbsd
+.endif  # CHECK_BUILTIN.libbsd

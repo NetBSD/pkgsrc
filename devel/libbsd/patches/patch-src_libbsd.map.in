@@ -1,0 +1,23 @@
+$NetBSD: patch-src_libbsd.map.in,v 1.1 2025/09/28 06:18:35 vins Exp $
+
+None of these features is built on NetBSD. 
+
+--- src/libbsd.map.in.orig	2024-03-07 02:11:51.000000000 +0000
++++ src/libbsd.map.in
+@@ -1,6 +1,7 @@
+ #include "config.h"
+ 
+ LIBBSD_0.0 {
++#if !defined(__NetBSD__)
+   global:
+ #if LIBBSD_ABI_ARC4RANDOM
+     arc4random;
+@@ -77,7 +78,7 @@ LIBBSD_0.0 {
+     MD5FileChunk;
+     MD5Data;
+ #endif
+-
++#endif /* defined(__NetBSD__) */
+   local:
+     *;
+ };

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/03/05 19:44:36 vins Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/09/28 06:18:35 vins Exp $
 
 BUILDLINK_TREE+=	libbsd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libbsd
 LIBBSD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbsd+=	libbsd>=0.12.1
-BUILDLINK_ABI_DEPENDS.libbsd+=	libbsd>=0.12.1
+BUILDLINK_ABI_DEPENDS.libbsd+=	libbsd>=0.12.1nb2
 BUILDLINK_PKGSRCDIR.libbsd?=	../../devel/libbsd
 
 #BUILDLINK_INCDIRS.libbsd?=	include/bsd
