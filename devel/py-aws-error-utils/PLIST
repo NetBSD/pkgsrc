@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2024/10/26 02:50:29 schmonz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2025/09/28 18:59:36 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/aws_error_utils/__init__.py
 ${PYSITELIB}/aws_error_utils/__init__.pyc
 ${PYSITELIB}/aws_error_utils/__init__.pyo
