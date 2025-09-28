@@ -1,0 +1,20 @@
+$NetBSD: patch-spamd-setup_spamd-setup.8,v 1.1 2025/09/28 11:43:35 gdt Exp $
+
+Fold a hint originally from MESSAGE into the man page.
+(This isn't really necessary as the code (by inspection) prints out a
+sufficient error message, and the single known user is already aware
+of this.)
+
+Not sent upstream because HOMEPAGE is 404.  
+
+--- spamd-setup/spamd-setup.8.orig	2006-03-07 18:16:28.000000000 +0000
++++ spamd-setup/spamd-setup.8
+@@ -78,6 +78,8 @@ is found from
+ .Xr services 5 ,
+ by looking for the named service
+ .Em spamd-cfg .
++If that port is not defined, an error will result, and one should
++simply add it.
+ .Pp
+ .Nm
+ reads all configuration information from a

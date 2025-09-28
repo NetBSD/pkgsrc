@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:54:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/09/28 11:43:35 gdt Exp $
 
 BLAKE2s (spamd-20060330.tar.gz) = 1f2593f52974fc36d11acfcc10cd173553cb50b22314c40580d2bc84ab9082cd
 SHA512 (spamd-20060330.tar.gz) = 7c0ebaaccb72e3c1625d84c1ea8e30f01bb185a258ffe4fa560498c63c8c574d6b3665eb6e16f6ac33e1829b43940861ca688bb6ee459653b063c53978bdcae4
 Size (spamd-20060330.tar.gz) = 34509 bytes
 SHA1 (patch-aa) = 8b588735bfea41b4340a5570902267e5eb1267bb
+SHA1 (patch-spamd-setup_spamd-setup.8) = 2032a7084bdbb93518b464fe22931fdc4e9ed8ca
+SHA1 (patch-spamd_spamd.8) = 44e7aa7f90195368a774ff4d4059de77c03070f5
