@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/04/07 12:24:08 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/09/28 19:56:16 wiz Exp $
 
 DISTNAME=	rdflib-7.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/RDFLib/rdflib
 COMMENT=	Python library for working with RDF
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.4.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
