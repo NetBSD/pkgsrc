@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/04/14 05:11:12 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/28 19:47:58 wiz Exp $
 
 DISTNAME=	cyclonedx_bom-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-bom/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/CycloneDX/cyclonedx-python
 COMMENT=	Creates CycloneDX Software Bill of Materials for Python projects
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.1:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=8.0:../../security/py-cyclonedx-python-lib
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.11:../../devel/py-packageurl
