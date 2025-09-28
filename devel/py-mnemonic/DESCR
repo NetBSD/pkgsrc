@@ -1,8 +1,8 @@
 Reference implementation of BIP-0039: Mnemonic code for generating
 deterministic keys.
 
-This BIP describes the implementation of a mnemonic code or mnemonic sentence –
-a group of easy to remember words – for the generation of deterministic
+This BIP describes the implementation of a mnemonic code or mnemonic sentence -
+a group of easy to remember words - for the generation of deterministic
 wallets.
 
 It consists of two parts: generating the mnenomic, and converting it into a
