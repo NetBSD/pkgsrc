@@ -1,0 +1,5 @@
+This package contains rpcsvc proto.x files from glibc, which are
+missing in libtirpc. Additionally it contains rpcgen, which is needed
+to create header files and sources from protocol files.
+This package is only needed if glibc is installed without the
+deprecated sunrpc functionality and libtirpc should replace it.
