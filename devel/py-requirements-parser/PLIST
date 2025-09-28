@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/07/29 07:57:18 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+@comment $NetBSD: PLIST,v 1.5 2025/09/28 19:38:26 wiz Exp $
 ${PYSITELIB}/requirements/__init__.py
 ${PYSITELIB}/requirements/__init__.pyc
 ${PYSITELIB}/requirements/__init__.pyo
@@ -20,3 +15,8 @@ ${PYSITELIB}/requirements/requirement.pyo
 ${PYSITELIB}/requirements/vcs.py
 ${PYSITELIB}/requirements/vcs.pyc
 ${PYSITELIB}/requirements/vcs.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
