@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5817 2025/09/28 20:21:50 osa Exp $
+$NetBSD: CHANGES-2025,v 1.5818 2025/09/28 20:26:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8383,3 +8383,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.183.0 [wiz 2025-09-28]
 	Updated textproc/py-markupsafe to 3.0.3 [wiz 2025-09-28]
 	Updated www/nginx to 1.28.0nb8 [osa 2025-09-28]
+	Updated fonts/harfbuzz to 12.0.0 [wiz 2025-09-28]
