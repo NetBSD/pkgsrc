@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5813 2025/09/28 20:14:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5814 2025/09/28 20:15:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8379,3 +8379,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/p5-URI-ws successor www/p5-URI [wiz 2025-09-28]
 	Updated www/nghttp3 to 1.12.0 [wiz 2025-09-28]
 	Updated net/ngtcp2 to 1.16.0 [wiz 2025-09-28]
+	Updated www/py-beautifulsoup4 to 4.14.0 [wiz 2025-09-28]
