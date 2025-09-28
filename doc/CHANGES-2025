@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5774 2025/09/28 19:06:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5775 2025/09/28 19:20:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8340,3 +8340,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-coveralls to 4.0.1nb1 [wiz 2025-09-28]
 	Updated devel/py-cucumber-expressions to 18.0.1nb1 [wiz 2025-09-28]
 	Updated chat/py-matrix-nio to 0.24.0nb1 [wiz 2025-09-28]
+	Updated comms/py-cleo to 2.1.0nb1 [wiz 2025-09-28]
