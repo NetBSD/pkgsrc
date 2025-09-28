@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5809 2025/09/28 20:08:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5810 2025/09/28 20:09:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8375,3 +8375,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-pysaml2 to 7.5.2nb1 [wiz 2025-09-28]
 	Updated www/py-sydent to 2.6.1nb2 [wiz 2025-09-28]
 	Updated www/p5-Catalyst-Runtime to 5.90132nb2 [wiz 2025-09-28]
+	Updated www/p5-Catalyst-Component-InstancePerContext to 0.001001nb18 [wiz 2025-09-28]
