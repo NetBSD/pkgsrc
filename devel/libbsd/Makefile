@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/03/07 20:17:35 vins Exp $
+# $NetBSD: Makefile,v 1.11 2025/09/28 06:18:34 vins Exp $
 
 DISTNAME=	libbsd-0.12.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://libbsd.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -11,8 +11,9 @@ HOMEPAGE=	https://libbsd.freedesktop.org/
 COMMENT=	Compatibility library for BSD functions under other systems
 LICENSE=	modified-bsd AND 2-clause-bsd AND isc AND mit AND beer-ware
 
-NOT_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-*
-NOT_FOR_PLATFORM+=	OpenBSD-*-* DragonFly-*
+# On these platforms, patch configure.ac to include -
+# only the required bits.
+#NOT_FOR_PLATFORM+=	FreeBSD-*-* OpenBSD-*-* DragonFly-*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
