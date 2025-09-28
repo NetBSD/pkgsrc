@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5793 2025/09/28 19:45:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5794 2025/09/28 19:47:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8359,3 +8359,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-country to 24.6.1nb1 [wiz 2025-09-28]
 	Updated graphics/py-strich to 0.9nb1 [wiz 2025-09-28]
 	Updated net/py-aiormq to 6.9.0nb1 [wiz 2025-09-28]
+	Updated net/py-zeroconf to 0.147.2nb1 [wiz 2025-09-28]
