@@ -1,0 +1,14 @@
+$NetBSD: patch-BSDMakefile,v 1.1 2025/09/28 08:22:19 vins Exp $
+
+Local makefile for pkgsrc. 
+
+--- BSDMakefile.orig	2025-09-28 08:08:15.647079666 +0000
++++ BSDMakefile
+@@ -0,0 +1,7 @@
++
++PROG	= tocaia
++MKMAN	= no
++
++BINDIR	= $(PREFIX)/bin
++
++.include <bsd.prog.mk>
