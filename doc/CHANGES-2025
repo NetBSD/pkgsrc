@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5812 2025/09/28 20:12:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5813 2025/09/28 20:14:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8378,3 +8378,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Catalyst-Component-InstancePerContext to 0.001001nb18 [wiz 2025-09-28]
 	Removed www/p5-URI-ws successor www/p5-URI [wiz 2025-09-28]
 	Updated www/nghttp3 to 1.12.0 [wiz 2025-09-28]
+	Updated net/ngtcp2 to 1.16.0 [wiz 2025-09-28]
