@@ -1,0 +1,20 @@
+$NetBSD: patch-meson.build,v 1.1 2025/09/28 15:55:43 prlw1 Exp $
+
+tests/at-spi2-atk/atk_test_util.c calls putenv() which isn't part of
+POSIX_C_SOURCE. Later versions of at-spi2-core try _XOPEN_SOURCE and
+do find putenv(), but fail on other functions such as timersub().
+Bail and remove the artificial restrictions.
+
+https://mail-index.netbsd.org/pkgsrc-users/2025/09/24/msg042013.html
+
+--- meson.build.orig	2024-09-14 18:26:17.000000000 +0000
++++ meson.build
+@@ -8,7 +8,7 @@ project('at-spi2-core', 'c',
+         ],
+         meson_version: '>= 0.63.0')
+ 
+-add_project_arguments([ '-D_POSIX_C_SOURCE=200809L', '-D_DEFAULT_SOURCE' ], language: 'c')
++add_project_arguments(language: 'c')
+ 
+ fs = import('fs')
+ 
