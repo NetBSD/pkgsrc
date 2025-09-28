@@ -1,6 +1,6 @@
- $NetBSD: Makefile,v 1.77 2025/09/24 09:15:53 adam Exp $
+# $NetBSD: Makefile,v 1.78 2025/09/28 20:32:49 wiz Exp $
 
-DISTNAME=	yt_dlp-2025.9.23
+DISTNAME=	yt_dlp-2025.9.26
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
@@ -23,6 +23,10 @@ SUBST_SED.paths=	-e "s,share/man/man1,${PKGMANDIR}/man1,"
 
 post-install:
 	${RM} -fr ${DESTDIR}${PREFIX}/${PYSITELIB}/devscripts
+
+.if make(test)
+ALLOW_NETWORK_ACCESS=	yes
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
