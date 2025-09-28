@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1609 2025/09/09 07:14:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1610 2025/09/28 08:23:31 vins Exp $
 #
 
 COMMENT=	Networking tools
@@ -1001,6 +1001,7 @@ SUBDIR+=	tlrc
 SUBDIR+=	tn5250
 SUBDIR+=	tnftp
 SUBDIR+=	tnftpd
+SUBDIR+=	tocaia
 SUBDIR+=	tor
 SUBDIR+=	torrentutils
 SUBDIR+=	torsocks
