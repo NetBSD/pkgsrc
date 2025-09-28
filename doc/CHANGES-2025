@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5780 2025/09/28 19:32:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5781 2025/09/28 19:33:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8346,3 +8346,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flexmock to 0.12.2nb1 [wiz 2025-09-28]
 	Updated devel/py-immutabledict to 4.2.1nb1 [wiz 2025-09-28]
 	Updated devel/py-mnemonic to 0.21nb1 [wiz 2025-09-28]
+	Updated devel/py-pathable to 0.4.4nb1 [wiz 2025-09-28]
