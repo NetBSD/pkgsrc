@@ -1,0 +1,20 @@
+$NetBSD: patch-spamd_spamd.8,v 1.1 2025/09/28 11:43:35 gdt Exp $
+
+Fold a hint originally from MESSAGE into the man page.
+(This isn't really necessary as the code (by inspection) prints out a
+sufficient error message, and the single known user is already aware
+of this.)
+
+Not sent upstream because HOMEPAGE is 404.  
+
+--- spamd/spamd.8.orig	2006-03-07 18:04:01.000000000 +0000
++++ spamd/spamd.8
+@@ -106,6 +106,8 @@ The default port is found by looking for
+ .Em spamd
+ using
+ .Xr getservbyname 3 .
++If that port (and spamd-cfg) is not defined, an error will result, and
++one should simply add them.
+ .It Fl r Ar reply
+ The SMTP error to return to the spammer, i.e. 450, 451, 550.
+ This defaults to 450.
