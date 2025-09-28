@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/04/20 12:14:18 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/28 19:40:17 wiz Exp $
 
 DISTNAME=	pytest_httpserver-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest_httpserver/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/csernazs/pytest-httpserver
 COMMENT=	HTTP server for pytest
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=2.0.0:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.971:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests>=2.28.1:../../devel/py-requests
