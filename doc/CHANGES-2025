@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5819 2025/09/28 20:26:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5820 2025/09/28 20:32:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8385,3 +8385,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.28.0nb8 [osa 2025-09-28]
 	Updated fonts/harfbuzz to 12.0.0 [wiz 2025-09-28]
 	Updated fonts/harfbuzz-icu to 12.0.0 [wiz 2025-09-28]
+	Updated net/yt-dlp to 2025.9.26 [wiz 2025-09-28]
