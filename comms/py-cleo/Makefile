@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/07/04 09:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/28 19:19:29 wiz Exp $
 
 DISTNAME=	cleo-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cleo/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-poetry/cleo
 COMMENT=	Create beautiful and testable command-line interfaces
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-crashtest>=0.4.1:../../misc/py-crashtest
 DEPENDS+=	${PYPKGPREFIX}-rapidfuzz>=2.2.0:../../textproc/py-rapidfuzz
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
