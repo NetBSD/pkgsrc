@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2025/05/12 09:34:58 markd Exp $
+# $NetBSD: Makefile,v 1.25 2025/09/28 12:55:55 bsiegert Exp $
 
 DISTNAME=	collection-latexrecommended
 PKGNAME=	texlive-${DISTNAME}-2025
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	73720
@@ -50,9 +51,6 @@ DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 DEPENDS+=	tex-latexbug-[0-9]*:../../devel/tex-latexbug
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
-.if empty(MACHINE_PLATFORM:MSunOS-*-sparc*) # PR pkg/55741
-DEPENDS+=	tex-lwarp-[0-9]*:../../textproc/tex-lwarp
-.endif
 DEPENDS+=	tex-mathspec-[0-9]*:../../math/tex-mathspec
 DEPENDS+=	tex-mathtools-[0-9]*:../../print/tex-mathtools
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
