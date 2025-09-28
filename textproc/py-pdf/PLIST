@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/08/20 20:06:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/09/28 20:37:59 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -18,6 +18,9 @@ ${PYSITELIB}/pypdf/_codecs/_codecs.pyo
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.py
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyc
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyo
+${PYSITELIB}/pypdf/_codecs/core_fontmetrics.py
+${PYSITELIB}/pypdf/_codecs/core_fontmetrics.pyc
+${PYSITELIB}/pypdf/_codecs/core_fontmetrics.pyo
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.py
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.pyc
 ${PYSITELIB}/pypdf/_codecs/pdfdoc.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/pypdf/_doc_common.pyo
 ${PYSITELIB}/pypdf/_encryption.py
 ${PYSITELIB}/pypdf/_encryption.pyc
 ${PYSITELIB}/pypdf/_encryption.pyo
+${PYSITELIB}/pypdf/_font.py
+${PYSITELIB}/pypdf/_font.pyc
+${PYSITELIB}/pypdf/_font.pyo
 ${PYSITELIB}/pypdf/_page.py
 ${PYSITELIB}/pypdf/_page.pyc
 ${PYSITELIB}/pypdf/_page.pyo
