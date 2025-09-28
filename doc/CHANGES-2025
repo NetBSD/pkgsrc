@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5787 2025/09/28 19:38:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5788 2025/09/28 19:39:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8353,3 +8353,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pylint-plugin-utils to 0.9.0nb1 [wiz 2025-09-28]
 	Updated devel/py-requests-cache to 1.2.1nb1 [wiz 2025-09-28]
 	Updated devel/py-requirements-parser to 0.13.0nb1 [wiz 2025-09-28]
+	Updated devel/py-syrupy to 4.9.1nb1 [wiz 2025-09-28]
