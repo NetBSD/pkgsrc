@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/23 12:57:46 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/28 10:45:26 wiz Exp $
 
 DISTNAME=	SPIRV-Tools-2025.1
 PKGNAME=	${DISTNAME:tl}
@@ -28,5 +28,6 @@ CMAKE_CONFIGURE_ARGS+=	-DSPIRV-Headers_SOURCE_DIR=${BUILDLINK_PREFIX.spirv-heade
 
 .include "../../devel/cmake/build.mk"
 
+.include "../../lang/python/tool.mk"
 .include "../../parallel/spirv-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
