@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/28 16:25:06 bsiegert Exp $
+
+BLAKE2s (rpcsvc-proto-1.4.4.tar.xz) = 27f7ed7f287e2f3c0096da51c2de6326dc0cb2d0bbb5bd2660054d9fac8ffa2f
+SHA512 (rpcsvc-proto-1.4.4.tar.xz) = 0138ac8fb2d8de3cb56f661bd1b6435fa0a35d3bd12c5cb7081c9ae1701e3620f47fe3dd002263db456655b61316749768e9a1a44325a1a6a542beae364a0393
+Size (rpcsvc-proto-1.4.4.tar.xz) = 168648 bytes

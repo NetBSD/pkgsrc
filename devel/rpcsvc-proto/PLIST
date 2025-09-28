@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2025/09/28 16:25:06 bsiegert Exp $
+bin/rpcgen
+include/rpcsvc/bootparam_prot.h
+include/rpcsvc/bootparam_prot.x
+include/rpcsvc/key_prot.h
+include/rpcsvc/key_prot.x
+include/rpcsvc/klm_prot.h
+include/rpcsvc/klm_prot.x
+include/rpcsvc/mount.h
+include/rpcsvc/mount.x
+include/rpcsvc/nfs_prot.h
+include/rpcsvc/nfs_prot.x
+include/rpcsvc/nlm_prot.h
+include/rpcsvc/nlm_prot.x
+include/rpcsvc/rex.h
+include/rpcsvc/rex.x
+include/rpcsvc/rquota.h
+include/rpcsvc/rquota.x
+include/rpcsvc/rstat.h
+include/rpcsvc/rstat.x
+include/rpcsvc/rusers.h
+include/rpcsvc/rusers.x
+include/rpcsvc/sm_inter.h
+include/rpcsvc/sm_inter.x
+include/rpcsvc/spray.h
+include/rpcsvc/spray.x
+man/man1/rpcgen.1
