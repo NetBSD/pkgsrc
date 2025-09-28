@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/02/23 16:59:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/28 19:06:35 wiz Exp $
 
 DISTNAME=	matrix_nio-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	chat devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-nio/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/poljar/matrix-nio
 COMMENT=	Matrix client library for Python
 LICENSE=	isc
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=23.1.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.0:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-socks>=0.8.4:../../www/py-aiohttp-socks
