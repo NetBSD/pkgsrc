@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/08/24 15:47:24 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/09/28 07:28:07 wiz Exp $
 
-BLAKE2s (Struct-Dumb-0.15.tar.gz) = 53e406ae1dd5e68f042fb982f8ab1041ae60aeb51ffae51fc82cbb2383f8950d
-SHA512 (Struct-Dumb-0.15.tar.gz) = 260aa505358e569dd6d4ec57d53a948748d9faf31e4a6308742f0efdfb49d2bb64a1e493b8cbeb073fdc64944dca27a5a28f9ab6e4f79777acfb1a032347311b
-Size (Struct-Dumb-0.15.tar.gz) = 21132 bytes
+BLAKE2s (Struct-Dumb-0.16.tar.gz) = 051ba012475d4e401c4aee9a8828ec0134ab31a780b504b1aecd836e07064142
+SHA512 (Struct-Dumb-0.16.tar.gz) = 62ee848012c036c0d77f2ac152576600b84ea88b50080423134530405125ec6ebb2979e7412cdd3d73f6a1f6e00a3becbdb74611242b1ac785cddb568c86d825
+Size (Struct-Dumb-0.16.tar.gz) = 21659 bytes
