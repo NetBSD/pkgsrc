@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5795 2025/09/28 19:47:28 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5796 2025/09/28 19:48:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8361,3 +8361,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-aiormq to 6.9.0nb1 [wiz 2025-09-28]
 	Updated net/py-zeroconf to 0.147.2nb1 [wiz 2025-09-28]
 	Updated devel/codeberg-cli to 0.5.1 [schmonz 2025-09-28]
+	Updated security/py-cyclonedx-bom to 5.3.0nb1 [wiz 2025-09-28]
