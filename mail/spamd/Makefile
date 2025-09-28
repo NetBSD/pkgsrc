@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2018/07/04 13:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/28 11:43:35 gdt Exp $
 
 DISTNAME=		spamd-20060330
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
-MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
+#MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		OpenBSD spam deferral daemon
+LICENSE=		2-clause-bsd
 
 NO_CONFIGURE=		yes
 
