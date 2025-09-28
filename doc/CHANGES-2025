@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5784 2025/09/28 19:35:31 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5785 2025/09/28 19:36:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8350,3 +8350,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pkgconfig to 1.5.5nb3 [wiz 2025-09-28]
 	Updated devel/py-poetry-plugin-export to 1.9.0nb1 [wiz 2025-09-28]
 	Updated textproc/moor to 2.4.0 [schmonz 2025-09-28]
+	Updated devel/py-pylint-plugin-utils to 0.9.0nb1 [wiz 2025-09-28]
