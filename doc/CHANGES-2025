@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5765 2025/09/28 15:15:07 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5766 2025/09/28 16:21:44 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8331,3 +8331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gawk to 5.3.2 [ryoon 2025-09-28]
 	Updated devel/got to 0.118 [khorben 2025-09-28]
 	Updated mail/rss2email to 3.14nb4 [schmonz 2025-09-28]
+	Updated x11/gnome-desktop3 to 41.0 [prlw1 2025-09-28]
