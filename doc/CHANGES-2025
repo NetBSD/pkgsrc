@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5759 2025/09/27 15:13:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5760 2025/09/28 07:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8325,3 +8325,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-hg-auditlog version 0.1 [joerg 2025-09-27]
 	Updated devel/feluda to 1.10.1 [pin 2025-09-27]
 	Updated www/syncstorage-rs to 0.21.1 [wiz 2025-09-27]
+	Updated devel/p5-ExtUtils-InstallPaths to 0.015 [wiz 2025-09-28]
