@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/09/26 15:06:55 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2025/09/28 19:35:26 schmonz Exp $
 
 BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.20.1-0.20250921220508-b05fcfb98fa2.mod) = c7d9479d85c908f9d5afbda13a3a413f06e501e0dc99d8fe2c117a53f25a3fec
 SHA512 (github.com_alecthomas_chroma_v2_@v_v2.20.1-0.20250921220508-b05fcfb98fa2.mod) = f508bced36e41ddfb6c986989b9fbcfd337606a6451d0cc3dab16af04b7cdde46edd886c16fbae8a81eef87949d2d0a3cae7fd393c74945a77ccc6c94430c282
@@ -171,6 +171,6 @@ Size (gotest.tools_v3_@v_v3.3.0.mod) = 189 bytes
 BLAKE2s (gotest.tools_v3_@v_v3.3.0.zip) = 423fc3f010d9c97ade508b10b055fc63c3281231b357f8fe70d540b3153c3156
 SHA512 (gotest.tools_v3_@v_v3.3.0.zip) = 5cbbd6ef791325a668daa7de227b8e75b9a636acfc63214cb71b024a6ecb448770c42d1d0fff868d1f4d8a97f99ab39e738c5fd5ded5def30209cf460ba78664
 Size (gotest.tools_v3_@v_v3.3.0.zip) = 98546 bytes
-BLAKE2s (moor-2.3.0.tar.gz) = 39e97d74ecb5350fd57e9d41a8b0856467a6ef8e3f93f5cf65152eed73a256db
-SHA512 (moor-2.3.0.tar.gz) = fa5887d4b6f963b8c89260c334a56169937e6b1394fc0e3051d6117aba03a25a0b9061a20fb72cf39ac45225cd1120590c06554808316fa0ac239933394fae9f
-Size (moor-2.3.0.tar.gz) = 3013439 bytes
+BLAKE2s (moor-2.4.0.tar.gz) = a0a9b0da34b13468c980ca93aa4dee5d83dd05c637c112ed9aa46d8a8d39060e
+SHA512 (moor-2.4.0.tar.gz) = 86b03094931556fc3b689225ea5460c12685c55bf7733efec944cc2f5363f4ef09a5104b0b4d3e8d15da48491cb1077fd4a2c703618c8694aeea69f681885764
+Size (moor-2.4.0.tar.gz) = 3013760 bytes
