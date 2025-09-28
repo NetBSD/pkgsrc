@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26278 2025/09/27 15:13:15 wiz Exp $
+$NetBSD: TODO,v 1.26279 2025/09/28 09:54:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-12.1.0
+	o grafana-12.2.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -732,6 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o h8300-elf-gcc-7.1.0
 	o hamster-applet-2.32.1
 	o hanzim-3.5
+	o harfbuzz-12.0.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -865,7 +866,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-20.1.8 [wip]
-	o llvm-21.1.1
+	o llvm-21.1.2
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -944,6 +945,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp3-1.12.0
+	o ngtcp2-1.16.0
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -1100,15 +1103,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-beautifulsoup4-4.14.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-google-api-python-client-2.183.0
+	o py-grpcio-1.75.1
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-markupsafe-3.0.3
 	o py-omniORBpy-3.7
+	o py-pdf-6.1.0
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
 	o py-sbws-1.1.0
@@ -1373,6 +1381,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
+	o yt-dlp-2025.9.26
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
