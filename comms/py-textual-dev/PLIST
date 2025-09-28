@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/06 22:05:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/09/28 19:20:52 wiz Exp $
 bin/textual
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/textual_dev/__init__.py
 ${PYSITELIB}/textual_dev/__init__.pyc
 ${PYSITELIB}/textual_dev/__init__.pyo
