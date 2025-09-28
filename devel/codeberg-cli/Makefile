@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/05/09 15:08:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/28 19:47:24 schmonz Exp $
 
-DISTNAME=	codeberg-cli-0.4.11
+DISTNAME=	codeberg-cli-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
