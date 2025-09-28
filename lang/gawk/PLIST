@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2025/03/30 21:10:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2025/09/28 11:37:33 ryoon Exp $
 bin/${PKGNAME}
 bin/gawk
 bin/gawkbug
@@ -83,6 +83,7 @@ ${PLIST.nls}share/locale/fr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/gawk.mo
+${PLIST.nls}share/locale/ka/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ko/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ms/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/gawk.mo
@@ -92,6 +93,7 @@ ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/ro/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/sr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/gawk.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/gawk.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/gawk.mo
