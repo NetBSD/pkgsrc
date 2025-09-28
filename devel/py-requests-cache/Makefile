@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/08/01 08:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/28 19:37:34 wiz Exp $
 
 DISTNAME=	requests_cache-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-cache/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/requests-cache/requests-cache
 COMMENT=	Persistent cache for requests library
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25.5:../../www/py-urllib3
