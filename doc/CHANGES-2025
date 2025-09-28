@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5778 2025/09/28 19:26:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5779 2025/09/28 19:30:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8344,3 +8344,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual-dev to 1.7.0nb1 [wiz 2025-09-28]
 	Updated databases/py-tortoise-orm to 0.25.1nb1 [wiz 2025-09-28]
 	Updated devel/py-flexmock to 0.12.2nb1 [wiz 2025-09-28]
+	Updated devel/py-immutabledict to 4.2.1nb1 [wiz 2025-09-28]
