@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/09/27 01:19:54 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/28 19:16:18 wiz Exp $
 bin/torch_shm_manager
 bin/torchfrtrace
 bin/torchrun
@@ -11575,7 +11575,7 @@ ${PYSITELIB}/torch/backends/xnnpack/__init__.py
 ${PYSITELIB}/torch/backends/xnnpack/__init__.pyc
 ${PYSITELIB}/torch/backends/xnnpack/__init__.pyo
 ${PYSITELIB}/torch/bin/protoc
-${PYSITELIB}/torch/bin/protoc-${PYVERSSUFFIX}.0.0
+${PYSITELIB}/torch/bin/protoc-3.13.0.0
 ${PYSITELIB}/torch/bin/torch_shm_manager
 ${PYSITELIB}/torch/compiler/__init__.py
 ${PYSITELIB}/torch/compiler/__init__.pyc
