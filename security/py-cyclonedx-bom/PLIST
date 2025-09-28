@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2025/02/13 11:01:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/28 19:47:58 wiz Exp $
 bin/cyclonedx-py-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
 ${PYSITELIB}/cyclonedx_py/__init__.py
 ${PYSITELIB}/cyclonedx_py/__init__.pyc
 ${PYSITELIB}/cyclonedx_py/__init__.pyo
