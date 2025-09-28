@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4533 2025/09/27 11:34:54 joerg Exp $
+# $NetBSD: Makefile,v 1.4534 2025/09/28 16:25:05 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -3351,6 +3351,7 @@ SUBDIR+=	ropper
 SUBDIR+=	roundup
 SUBDIR+=	rox-lib
 SUBDIR+=	rpc2
+SUBDIR+=	rpcsvc-proto
 SUBDIR+=	rscode
 SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
