@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2025/07/04 08:49:06 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/09/28 20:08:21 wiz Exp $
 
 DISTNAME=	Catalyst-Runtime-5.90132
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -42,8 +42,7 @@ DEPENDS+=	p5-String-RewritePrefix>=0.004:../../textproc/p5-String-RewritePrefix
 DEPENDS+=	p5-Plack>=0.9991:../../www/p5-Plack
 DEPENDS+=	p5-Plack-Middleware-ReverseProxy>=0.04:../../www/p5-Plack-Middleware-ReverseProxy
 DEPENDS+=	p5-Plack-Test-ExternalServer-[0-9]*:../../www/p5-Plack-Test-ExternalServer
-DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
-DEPENDS+=	p5-URI-ws-[0-9]*:../../www/p5-URI-ws
+DEPENDS+=	p5-URI>=5.34:../../www/p5-URI
 DEPENDS+=	p5-JSON-MaybeXS>=1.36:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-CGI-Struct-[0-9]*:../../www/p5-CGI-Struct
 DEPENDS+=	p5-Catalyst-DispatchType-Regex>=5.90021:../../www/p5-Catalyst-DispatchType-Regex
