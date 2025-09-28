@@ -11,3 +11,6 @@ gives up. The resources the spamd server has to waste to do this are minimal.
 If the sender is badly configured, an uncooperative recipient might actually
 delay his entire queue handling for several minutes each time he connects to
 the tarpit. And many spammers use badly configured open relays.
+
+This package is no longer maintained by upstream; the last release was
+in March of 2006.
