@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/04/22 16:17:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/28 20:00:19 wiz Exp $
 
 DISTNAME=	pysaml2-7.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysaml2/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/IdentityPython/pysaml2
 COMMENT=	Python implementation of SAML Version 2
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.1:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
