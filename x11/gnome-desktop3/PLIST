@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/08/08 12:01:49 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/09/28 16:21:00 prlw1 Exp $
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-crossfade.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg-slide-show.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-bg.h
@@ -14,7 +14,7 @@ include/gnome-desktop-3.0/libgnome-desktop/gnome-xkb-info.h
 lib/girepository-1.0/GnomeDesktop-3.0.typelib
 lib/libgnome-desktop-3.so
 lib/libgnome-desktop-3.so.19
-lib/libgnome-desktop-3.so.19.1.5
+lib/libgnome-desktop-3.so.19.1.6
 lib/pkgconfig/gnome-desktop-3.0.pc
 share/gir-1.0/GnomeDesktop-3.0.gir
 share/gnome/gnome-version.xml
