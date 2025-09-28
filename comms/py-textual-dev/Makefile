@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/07/05 11:44:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/28 19:20:52 wiz Exp $
 
 DISTNAME=	textual_dev-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual_dev/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/Textualize/textual-dev
 COMMENT=	Development tools for working with Textual
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-textual>=0.36:../../comms/py-textual
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.8.1:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.2:../../devel/py-click
