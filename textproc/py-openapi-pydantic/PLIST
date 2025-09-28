@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2025/04/20 22:04:54 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2025/09/28 19:54:24 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/openapi_pydantic/__init__.py
 ${PYSITELIB}/openapi_pydantic/__init__.pyc
 ${PYSITELIB}/openapi_pydantic/__init__.pyo
