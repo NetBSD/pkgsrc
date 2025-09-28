@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5816 2025/09/28 20:17:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5817 2025/09/28 20:21:50 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8382,3 +8382,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-beautifulsoup4 to 4.14.0 [wiz 2025-09-28]
 	Updated www/py-google-api-python-client to 2.183.0 [wiz 2025-09-28]
 	Updated textproc/py-markupsafe to 3.0.3 [wiz 2025-09-28]
+	Updated www/nginx to 1.28.0nb8 [osa 2025-09-28]
