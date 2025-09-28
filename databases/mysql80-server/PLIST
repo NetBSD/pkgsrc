@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/23 21:01:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/09/28 16:46:33 bsiegert Exp $
 bin/comp_err
 bin/ibd2sdi
 bin/innochecksum
@@ -140,6 +140,8 @@ lib/mysql/plugin/test_udf_services.so
 lib/mysql/plugin/udf_example.so
 lib/mysql/plugin/validate_password.so
 lib/mysql/plugin/version_token.so
+lib/private/libprotobuf-lite.so.24.4.0
+lib/private/libprotobuf.so.24.4.0
 sbin/mysqld
 share/aclocal/mysql.m4
 share/mysql/install_rewriter.sql
@@ -147,3 +149,4 @@ share/mysql/mysql-log-rotate
 share/mysql/mysql.server
 share/mysql/mysqld_multi.server
 share/mysql/uninstall_rewriter.sql
+@pkgdir lib/mysql/plugin/debug

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2024/12/24 18:52:22 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/09/28 16:46:33 bsiegert Exp $
 
 BLAKE2s (mysql-boost-8.0.40.tar.gz) = 4fba24ee573376052daa912a055c62341c88dc5f8e6e769487dde4ebf49e6bb8
 SHA512 (mysql-boost-8.0.40.tar.gz) = fcece6e3c09dc4733767effb5c22a55e4add1c9f6b6b911e1eccdd0444f08dc5714b3c8b2a40c85a75a63ff117b6c9881904b6b4732b5ca9bef96de1cb2e284a
@@ -22,6 +22,7 @@ SHA1 (patch-libmysql_CMakeLists.txt) = 7b83faf1751ad40f20bca1ebcdac0cebb1370443
 SHA1 (patch-mysys_kqueue__timers.cc) = 837474b779c24dd0af67444c2adbcf07b73e0d36
 SHA1 (patch-mysys_stacktrace.cc) = 6792ceaae3c3b0d70bd8b6c848a128d50397e6f4
 SHA1 (patch-packaging_solaris_CMakeLists.txt) = 135c4aa07d9b20a9b56b8f1616821abfedb52ecb
+SHA1 (patch-plugin_x_tests_driver_connector_warning.h) = 80d4cbe93b853348f98c54d96892648063e1f9f5
 SHA1 (patch-router_CMakeLists.txt) = 9bfd1278c42070ada0606dfff34a66b8b95d0413
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_impl_netif.h) = ade643148787438d6d6f1f7b2636bbd0af87d70f
 SHA1 (patch-router_src_harness_include_mysql_harness_net_ts_internet.h) = 29e019236423aaa77b71b273d009404e4fbafe73
