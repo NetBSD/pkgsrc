@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/02/25 17:59:17 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/09/28 19:49:57 wiz Exp $
 
 DISTNAME=	sh-2.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sh/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/amoffat/sh
 COMMENT=	Python subprocess replacement
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
