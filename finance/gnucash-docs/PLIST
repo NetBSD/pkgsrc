@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/07/01 16:24:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/09/29 20:26:53 wiz Exp $
 share/gnucash-docs/COPYING
 share/gnucash-docs/COPYING-DOCS
 share/help/C/gnucash-guide/appendixa.docbook
@@ -530,6 +530,7 @@ share/help/de/gnucash-manual/figures/CSV_Transaction_Import_Assistant.png
 share/help/de/gnucash-manual/figures/Choose_Export_Settings.png
 share/help/de/gnucash-manual/figures/GUI_Business_Invoice.png
 share/help/de/gnucash-manual/figures/GUI_Business_Overview.png
+share/help/de/gnucash-manual/figures/Import_AqB_Profile.png
 share/help/de/gnucash-manual/figures/Import_Map_Editor.png
 share/help/de/gnucash-manual/figures/Import_MatchPicker.png
 share/help/de/gnucash-manual/figures/Import_QIF_Druid.png
