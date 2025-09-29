@@ -1,9 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2021/03/21 19:32:45 markd Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/09/29 07:09:48 adam Exp $
 
 Don't use a relative path - confuses wrappers.
+Don't look for boost_system library.
 
 --- CMakeLists.txt.orig	2016-09-02 08:50:26.000000000 +0000
 +++ CMakeLists.txt
+@@ -93,7 +93,7 @@ endforeach()
+ configure_file(libkolabxml-version.h.cmake "${CMAKE_BINARY_DIR}/libkolabxml-version.h" @ONLY)
+ 
+ set(Boost_USE_MULTITHREADED ON)
+-find_package(Boost REQUIRED COMPONENTS thread system)
++find_package(Boost REQUIRED COMPONENTS thread)
+ if (Boost_FOUND)
+     message("Found boost in ${Boost_INCLUDE_DIRS}")
+ endif (Boost_FOUND)
 @@ -202,7 +202,8 @@ endif()
  #Get the include directory relative to CMAKECONFIG_INSTALL_DIR
  file(RELATIVE_PATH REL_INCLUDE_DIR "${CMAKECONFIG_INSTALL_DIR}" "${INCLUDE_INSTALL_DIR}")
