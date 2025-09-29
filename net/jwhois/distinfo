@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 11:05:50 nia Exp $
+$NetBSD: distinfo,v 1.36 2025/09/29 20:41:00 mrg Exp $
 
 BLAKE2s (jwhois-4.0.tar.gz) = 7186ff1b837c8234b806fd4cd1b73df4ca033faf610ea43250598a80d1b2dd1a
 SHA512 (jwhois-4.0.tar.gz) = 5d625c3f1031a8eb8ef766ef5d47a8c1a4396d1ad3344fc9449f80dd71ad84aadf21ba67f5c2f99348f732a4df998eefe699fcec4efcadf87f579b70302a44ae
@@ -7,4 +7,5 @@ SHA1 (patch-aa) = 65b75e9808a7e7f92fa1f4dece3fd89efb6c5201
 SHA1 (patch-ab) = e2b35b66adae6caba8a778194ff0238a31006b0b
 SHA1 (patch-ac) = 3a23d56b9dfd3664d2a5e783f6f349bba1cbfa54
 SHA1 (patch-ad) = d72d60593c8168d2f49c545c6af2d4fafaebd88a
+SHA1 (patch-include_utils.h) = 879cea1eea353bcb961b72d2d6369df10a34892a
 SHA1 (patch-src_utils.c) = a13bf447b9559760d8bffb65b1256d564170220d
