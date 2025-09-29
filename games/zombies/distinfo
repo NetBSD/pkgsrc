@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 10:44:37 nia Exp $
+$NetBSD: distinfo,v 1.17 2025/09/29 20:41:50 mrg Exp $
 
 BLAKE2s (zombies-1.0.tar.gz) = b1b5053c4e270c630e621c8275129b54a58046dd7859d164472b12a23af8a072
 SHA512 (zombies-1.0.tar.gz) = 6e495534fbaa18c4069b2cd6c83736187c0dd24d697bac6af336a5d6aab415c5b7c2f9f85e977018d772451e3ad142b9cb0c2dd7756500f33b7e69d533a3c4c6
 Size (zombies-1.0.tar.gz) = 9482 bytes
 SHA1 (patch-aa) = c10b6e9c2b385d724488726ea7603a6e300e67e9
 SHA1 (patch-ab) = 4e0b05e0c2341b14533c41c9b24a0571dfbfb6e9
+SHA1 (patch-level.c) = d7d2c911895f7ac8de4b78e2fb4ac7e0baab9bad
