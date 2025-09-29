@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:44:35 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/09/29 20:44:50 mrg Exp $
 
 BLAKE2s (xroads-v0.5.tar.gz) = 35cf3849ce4361cda2a7142453d14ba3f8a2973452c68e0db7e6b30c84ac7fbd
 SHA512 (xroads-v0.5.tar.gz) = 1685a8487da8391ca132535f98720e7f2312d088a68213f80105444d7bd5895ddd77344e3c57106ddd5ee60db1392ee7cb0c0d7be0f13b82e5b1e8014b9c01fa
@@ -8,3 +8,5 @@ SHA1 (patch-ab) = f22b139e84c4e2d4d9d190d818d0ce6aba816a23
 SHA1 (patch-ac) = 19c91236e36cced0c26f527fdc99a565dfdb245f
 SHA1 (patch-ad) = eb76c3ee57d8b18f70e7f8bcd41d96d5e1dd4dad
 SHA1 (patch-ae) = 7770ab7e6fec64d836f3ed886e1709dab508d9c5
+SHA1 (patch-fileops.c) = fa76483d3056df5e55abd13996da0479aefe30fa
+SHA1 (patch-screens.c) = 7efa669076da210fdcb8f9c41e8a6ecfcc2ccf32
