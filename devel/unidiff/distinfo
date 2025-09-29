@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2022/07/15 02:51:20 nat Exp $
+$NetBSD: distinfo,v 1.8 2025/09/29 20:45:37 mrg Exp $
 
 BLAKE2s (unidiff-1.1.zip) = 55b10e58778242c10e94a193fc3a386b3c488ef050770f300ac017f2fdd7bfdf
 SHA512 (unidiff-1.1.zip) = 395fc527fb77a468f6fef4dbbfe4bca0e0764de56b612ed407a00f1548853292626cacfb4173bf82f9da5ee193d510d0592b9d81136e282d5fb53a695abf2d11
 Size (unidiff-1.1.zip) = 14412 bytes
+SHA1 (patch-unify.c) = d223ac5973a6879c7f927b247df0cb4338514c74
+SHA1 (patch-unipatch.c) = b46fbac81a8208fb6544585cc141f9ab124204cb
