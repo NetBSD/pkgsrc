@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/08/26 13:53:41 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2025/09/29 14:16:28 ryoon Exp $
 
-BLAKE2s (firefox-128.1.0esr.source.tar.xz) = 281774e06fb58430bd45aab1ce9600e4f9aa8ba5784f96988620131da7ac5bf4
-SHA512 (firefox-128.1.0esr.source.tar.xz) = 8055a7f83acf0cab6124ba5809aff1c082e81a0d30ff318ec719f8fd3f4af9aa60e2094c1abd6c981193d751075a9569370176e20e50f3c1959fe27a15511388
-Size (firefox-128.1.0esr.source.tar.xz) = 561953208 bytes
+BLAKE2s (firefox-128.14.0esr.source.tar.xz) = a3cc3c29528e11e4a25d67ac536bc00bdb09aaaddb21f36586e9a30a1dc412cb
+SHA512 (firefox-128.14.0esr.source.tar.xz) = a3cf267e82b6f5ab8b6497a62b12f85afb78fcaef6b12c43ef79564ce8270d3327a873368ce48fc018e46fef5e07339c07b9a494a5ff6c22a84099f939f6a9de
+Size (firefox-128.14.0esr.source.tar.xz) = 562714012 bytes
 SHA1 (patch-js_moz.configure) = f7492cb2b45c6728592a2ae4753f17970d7ca429
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
