@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26288 2025/09/29 08:56:31 wiz Exp $
+$NetBSD: TODO,v 1.26289 2025/09/29 15:24:29 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kicad-9.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2016.07R1
-	o knot-3.5.0 [license switch to gpl2]
 	o knot-resolver-1.1.1
 	o kodi-16.1
 	o kqtquickcharts4-20.12.3
