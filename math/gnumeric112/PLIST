@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/12/15 13:17:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/09/29 20:23:42 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -210,6 +210,8 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-erlang/erlang.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-erlang/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-financial/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-financial/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/fn-flt/plugin.la
+lib/gnumeric/${PKGVERSION}/plugins/fn-flt/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-hebrew-date/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-hebrew-date/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-info/plugin.la
@@ -284,7 +286,7 @@ man/man1/ssconvert.1
 man/man1/ssdiff.1
 man/man1/ssgrep.1
 man/man1/ssindex.1
-share/applications/gnumeric.desktop
+share/applications/org.gnumeric.gnumeric.desktop
 share/glib-2.0/schemas/org.gnome.gnumeric.dialogs.gschema.xml
 share/glib-2.0/schemas/org.gnome.gnumeric.gschema.xml
 share/glib-2.0/schemas/org.gnome.gnumeric.plugin.gschema.xml
@@ -2158,12 +2160,12 @@ share/help/sv/gnumeric/figures/worksheet-rows-1.png
 share/help/sv/gnumeric/figures/worksheet-running-calc-1.png
 share/help/sv/gnumeric/gnumeric.xml
 share/help/sv/gnumeric/index.docbook
-share/icons/hicolor/16x16/apps/gnumeric.png
-share/icons/hicolor/22x22/apps/gnumeric.png
-share/icons/hicolor/24x24/apps/gnumeric.png
-share/icons/hicolor/256x256/apps/gnumeric.png
-share/icons/hicolor/32x32/apps/gnumeric.png
-share/icons/hicolor/48x48/apps/gnumeric.png
+share/icons/hicolor/16x16/apps/org.gnumeric.gnumeric.png
+share/icons/hicolor/22x22/apps/org.gnumeric.gnumeric.png
+share/icons/hicolor/24x24/apps/org.gnumeric.gnumeric.png
+share/icons/hicolor/256x256/apps/org.gnumeric.gnumeric.png
+share/icons/hicolor/32x32/apps/org.gnumeric.gnumeric.png
+share/icons/hicolor/48x48/apps/org.gnumeric.gnumeric.png
 share/locale/am/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/am/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ar/LC_MESSAGES/${PKGNAME}-functions.mo
@@ -2202,6 +2204,8 @@ share/locale/et/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/et/LC_MESSAGES/${PKGNAME}.mo
 share/locale/eu/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/eu/LC_MESSAGES/${PKGNAME}.mo
+share/locale/fa/LC_MESSAGES/${PKGNAME}-functions.mo
+share/locale/fa/LC_MESSAGES/${PKGNAME}.mo
 share/locale/fi/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/fi/LC_MESSAGES/${PKGNAME}.mo
 share/locale/fr/LC_MESSAGES/${PKGNAME}-functions.mo
@@ -2286,4 +2290,4 @@ share/locale/zh_HK/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/zh_HK/LC_MESSAGES/${PKGNAME}.mo
 share/locale/zh_TW/LC_MESSAGES/${PKGNAME}-functions.mo
 share/locale/zh_TW/LC_MESSAGES/${PKGNAME}.mo
-share/metainfo/gnumeric.appdata.xml
+share/metainfo/org.gnumeric.gnumeric.appdata.xml
