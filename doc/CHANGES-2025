@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5836 2025/09/29 20:27:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5837 2025/09/29 21:59:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8404,3 +8404,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/goffice0.10 to 0.10.59 [wiz 2025-09-29]
 	Updated math/gnumeric112 to 1.12.59 [wiz 2025-09-29]
 	Updated finance/gnucash-docs to 5.13 [wiz 2025-09-29]
+	Updated textproc/link-grammar to 5.12.8 [gutteridge 2025-09-29]
+	Updated textproc/py-link-grammar to 5.12.8 [gutteridge 2025-09-29]
