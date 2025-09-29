@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.131 2025/09/27 07:03:10 adam Exp $
+$NetBSD: distinfo,v 1.132 2025/09/29 06:39:20 wiz Exp $
 
-BLAKE2s (gnucash-5.12.tar.bz2) = 2fdc3329203eb1f736df631060fa23864279ac21e7f93573c8db4493a04f44ce
-SHA512 (gnucash-5.12.tar.bz2) = 0984c086a57d1e40c83366025e4cc2c327977f61176c45816e9d42a861869603f11d5284c0ea7ec6876aa283dd1272ea5a9cd8f67804e49cb75e4546ef96e84a
-Size (gnucash-5.12.tar.bz2) = 15209384 bytes
+BLAKE2s (gnucash-5.13.tar.bz2) = 690c934c79307a3ab512463ee85c0bdbd023253f660c087ee1017e17f1dec666
+SHA512 (gnucash-5.13.tar.bz2) = a6ee775a0b9f612f5db1bb22ef8571560d60e62e0c6e12aaaeef87129a17fc5f1e95bbdb9cb79bc2c68f9677b925e8e0d419291356f324d600e15d4493ac0d25
+Size (gnucash-5.13.tar.bz2) = 15343812 bytes
 SHA1 (patch-CMakeLists.txt) = 5f6a7786ad0a8a2aa0fcd01d652b2d2c35d39c80
-SHA1 (patch-gnucash_gnome_assistant-loan.cpp) = d6e41a9ea780bf8efeb0ae91c5f67ac08a207999
