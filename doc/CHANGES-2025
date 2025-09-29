@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5833 2025/09/29 18:25:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5834 2025/09/29 20:18:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8401,3 +8401,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libhighlight to 4.17 [schmonz 2025-09-29]
 	Updated lang/nodejs to 24.9.0 [adam 2025-09-29]
 	Updated lang/nodejs22 to 22.20.0 [adam 2025-09-29]
+	Updated misc/goffice0.10 to 0.10.59 [wiz 2025-09-29]
