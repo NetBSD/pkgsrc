@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Warsow
+Comment=Fast-paced first-person shooter
+Icon=warsow
+Exec=warsow
+Terminal=false
+Categories=Game;Shooter;

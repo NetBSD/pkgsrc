@@ -1,0 +1,15 @@
+$NetBSD: patch-source_source_ftlib_CMakeLists.txt,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+- Change "Linux" to Unix.
+
+--- source/source/ftlib/CMakeLists.txt.orig	2025-09-29 07:40:36.644571315 +0000
++++ source/source/ftlib/CMakeLists.txt
+@@ -12,7 +12,7 @@ file(GLOB FTLIB_SOURCES
+     "../gameshared/q_*.c"
+ )
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (UNIX)
+         set(FTLIB_PLATFORM_LIBRARIES "m")
+ else ()
+         set(FTLIB_PLATFORM_LIBRARIES "")
