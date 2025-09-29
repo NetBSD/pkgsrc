@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2025/09/01 15:12:19 kikadf Exp $
+$NetBSD: distinfo,v 1.50 2025/09/29 20:52:03 mrg Exp $
 
 BLAKE2s (audacity-2.4.1.tar.gz) = 53a42d20bfea5dfecfe0f40f7c668036c1057a4dddaea5541802ccd76aa75e99
 SHA512 (audacity-2.4.1.tar.gz) = 2f0a3f7e24dce91ae520e285dbb05778b68e0fe37b8ded55ac568b5f8135069951b3986764adc5d0791c165b283a3c19596f1d6f51ba17028e0eb04558c63f25
@@ -11,9 +11,13 @@ SHA1 (patch-include_audacity_Types.h) = 369ce152d4ecc8fd67fcb45fe4adf3260119571b
 SHA1 (patch-lib-src_FileDialog_Makefile.am) = cc78f4d26210b536b4e1d88ab668295625aac73b
 SHA1 (patch-lib-src_FileDialog_Makefile.in) = 44ca2539d68ab3951ae44377ed56f574785c1b08
 SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
+SHA1 (patch-lib-src_libnyquist_nyquist_cmt_cmdline.c) = a82d9f7234656067e6eb73bbab187db54bd403e7
+SHA1 (patch-lib-src_libnyquist_nyquist_cmt_midifile.c) = 2e26f99c72b617b4bacf64779d61215e4bbd14be
 SHA1 (patch-lib-src_libnyquist_nyquist_cmupv_src_cmupv.c) = 3d6cb845d82b1bcbe31dabd4bad30cb1f7ea27d5
+SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_handlers.c) = 9eed5375b2490c0a15bd230534314a73b1aa11d6
 SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = dbc0b5b88043c7b2895742e78e6a5990f65012ef
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = 9401ac521d5a2aa8600a465b9133dff7e7b2ea35
+SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_security.c) = 5d881632884312ec65a270ed5d7696da3852021b
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = a79f2f58f32f96fc67bc2420bef6c812d37c96f0
 SHA1 (patch-lib-src_portmixer_src_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
