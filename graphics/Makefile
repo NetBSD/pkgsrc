@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1098 2025/08/30 17:00:49 pho Exp $
+# $NetBSD: Makefile,v 1.1099 2025/09/29 14:09:36 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -884,6 +884,7 @@ SUBDIR+=	xgc
 SUBDIR+=	xgraph
 SUBDIR+=	ximaging
 SUBDIR+=	xli
+SUBDIR+=	xmagv
 SUBDIR+=	xmorph
 SUBDIR+=	xpaint
 SUBDIR+=	xplot
