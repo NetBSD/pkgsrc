@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.79 2025/06/02 00:29:08 mrg Exp $
+$NetBSD: distinfo,v 1.80 2025/09/29 02:35:56 mrg Exp $
 
-BLAKE2s (blender-4.2.4.tar.xz) = e33731f186e25dce937c022b447d6a9c769729efdde007a49292800dd072f83b
-SHA512 (blender-4.2.4.tar.xz) = 1f61c1866aaa680c91fc6e3402b1e10533c8cce32572ffb825c53dc7c15ca51f1157a32d10134ca9e612fbf719406421ccc920b2d8ddd2993675784797381c6a
-Size (blender-4.2.4.tar.xz) = 72804204 bytes
+BLAKE2s (blender-4.2.14.tar.xz) = 07fdf19422b1e901555a24e18b670a00d8c846c993bc7d9592d3722b7ddc9f63
+SHA512 (blender-4.2.14.tar.xz) = 4423b6a7b004c357f8ee09cb9b7496432534c50b6be21148657d8f342d69e55e019c3368b56ff0f1253ae328b0cac73618655a51b389c9ea5686c4c57aabe9bb
+Size (blender-4.2.14.tar.xz) = 75349316 bytes
+SHA1 (patch-4f4c3f73b697436922464e087823f53e8681d7e8) = 9a3ab579122660b4cb3a11f68ec63abdb5b146a7
 SHA1 (patch-CMakeLists.txt) = 722c852b2c7f804a0fec93cec4e4c8f54d286204
 SHA1 (patch-build__files_cmake_Modules_FindOpenColorIO.cmake) = 142b0860abeae94deda0dfdcc985e4b4696cf93a
 SHA1 (patch-extern_lzma_CpuArch.c) = 2f43a8e367199c7e056b962e7c264cf7f06bbd74

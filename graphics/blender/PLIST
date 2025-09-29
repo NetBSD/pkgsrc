@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.44 2024/12/09 14:27:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45 2025/09/29 02:35:56 mrg Exp $
 bin/blender
 bin/blender-thumbnailer
 share/applications/blender.desktop
+share/blender/4.2/datafiles/assets/LICENSE
+share/blender/4.2/datafiles/assets/blender_assets.cats.txt
+share/blender/4.2/datafiles/assets/geometry_nodes/procedural_hair_node_assets.blend
+share/blender/4.2/datafiles/assets/geometry_nodes/smooth_by_angle.blend
 share/blender/4.2/datafiles/colormanagement/config.ocio
 share/blender/4.2/datafiles/colormanagement/filmic/filmic_desat_33.cube
 share/blender/4.2/datafiles/colormanagement/filmic/filmic_to_0-35_1-30.spi1d
