@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.93 2025/04/17 21:51:57 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2025/09/29 15:24:14 ryoon Exp $
 
-DISTNAME=	knot-3.4.2
-PKGREVISION=	5
+DISTNAME=	knot-3.5.0
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
@@ -9,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.knot-dns.cz/
 COMMENT=	Knot (auth) DNS server
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v2
 
 FORCE_C_STD=	c11
 
