@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.770 2025/08/16 15:53:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.771 2025/09/29 14:13:40 ryoon Exp $
 #
 
 COMMENT=	Programming languages
@@ -69,6 +69,7 @@ SUBDIR+=	flang
 SUBDIR+=	focal
 SUBDIR+=	fort77
 SUBDIR+=	forth-retro
+SUBDIR+=	fpc
 SUBDIR+=	g95
 SUBDIR+=	gambc
 SUBDIR+=	gauche
