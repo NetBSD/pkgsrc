@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/01/06 21:49:23 ktnb Exp $
+# $NetBSD: Makefile,v 1.39 2025/09/29 13:17:32 nia Exp $
 
 DISTNAME=	smpeg-0.4.5
 PKGREVISION=	1
@@ -17,6 +17,12 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 CPPFLAGS+=	-Dunix=1
+
+# Avoid use of deprecated register keyword.
+.include "../../mk/compiler.mk"
+.if ${CC_VERSION:Mclang-*}
+CPPFLAGS+=	-Dregister=""
+.endif
 
 CONFIGURE_ARGS+=	--disable-gtk-player
 CONFIGURE_ARGS+=	--disable-sdltest
