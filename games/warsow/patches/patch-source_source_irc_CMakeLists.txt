@@ -1,0 +1,14 @@
+$NetBSD: patch-source_source_irc_CMakeLists.txt,v 1.1 2025/09/29 13:31:29 nia Exp $
+
+- Change "Linux" to Unix.
+
+--- source/source/irc/CMakeLists.txt.orig	2025-09-29 07:38:47.992557527 +0000
++++ source/source/irc/CMakeLists.txt
+@@ -18,6 +18,6 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Window
+     target_link_libraries(irc PRIVATE "ws2_32.lib")
+ endif()
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (UNIX)
+     target_link_libraries(irc PRIVATE "m")
+ endif()

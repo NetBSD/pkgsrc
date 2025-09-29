@@ -1,0 +1,15 @@
+$NetBSD: patch-source_source_cin_CMakeLists.txt,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+- Change "Linux" to Unix.
+
+--- source/source/cin/CMakeLists.txt.orig	2025-09-29 07:38:57.251760648 +0000
++++ source/source/cin/CMakeLists.txt
+@@ -12,7 +12,7 @@ file(GLOB CIN_SOURCES
+     "../gameshared/q_*.c"
+ )
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (UNIX)
+         set(CIN_PLATFORM_LIBRARIES "m")
+ else ()
+         set(CIN_PLATFORM_LIBRARIES "")

@@ -1,0 +1,43 @@
+$NetBSD: patch-source_source_client_CMakeLists.txt,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+- Change "Linux" to Unix.
+- Use CMAKE_DL_LIBS.
+
+--- source/source/client/CMakeLists.txt.orig	2016-03-26 19:22:10.000000000 +0000
++++ source/source/client/CMakeLists.txt
+@@ -2,7 +2,7 @@ project(${QFUSION_CLIENT_NAME})
+ 
+ include_directories(${ZLIB_INCLUDE_DIR} ${CURL_INCLUDE_DIR})
+ 
+-if (USE_SDL2 OR (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
++if (USE_SDL2 OR UNIX)
+     include_directories(${SDL2_INCLUDE_DIR})
+ endif()
+ 
+@@ -140,7 +140,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin
+ 	endif()
+ endif()
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (UNIX AND NOT APPLE)
+ 	set(CLIENT_PLATFORM_HEADERS "")
+ 
+     if (USE_SDL2)
+@@ -162,7 +162,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux"
+             "../sdl/sdl_client.c"
+         )
+ 
+-        set(CLIENT_PLATFORM_LIBRARIES ${SDL2_LIBRARY} "pthread" "m" "dl" "rt")
++        set(CLIENT_PLATFORM_LIBRARIES ${SDL2_LIBRARY} "pthread" "m" ${CMAKE_DL_LIBS} "rt")
+     else()
+         file(GLOB CLIENT_PLATFORM_SOURCES
+             "../unix/unix_fs.c"
+@@ -183,7 +183,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux"
+             "../sdl/sdl_input_joy.c"
+         )
+     
+-        set(CLIENT_PLATFORM_LIBRARIES ${SDL2_LIBRARY} "pthread" "dl" "m" "X11" "Xi" "Xext" "Xrandr" "rt")
++        set(CLIENT_PLATFORM_LIBRARIES ${SDL2_LIBRARY} "pthread" ${CMAKE_DL_LIBS} "m" "X11" "Xi" "Xext" "Xrandr" "rt")
+     endif()
+     set(CLIENT_BINARY_TYPE "")
+ 

@@ -1,0 +1,30 @@
+$NetBSD: patch-source_source_snd__qf_CMakeLists.txt,v 1.1 2025/09/29 13:31:29 nia Exp $
+
+- Add support for more Unix-like platforms.
+
+--- source/source/snd_qf/CMakeLists.txt.orig	2025-09-29 07:39:25.058997187 +0000
++++ source/source/snd_qf/CMakeLists.txt
+@@ -2,7 +2,7 @@ project(snd_qf)
+ 
+ include_directories(${VORBIS_INCLUDE_DIR} ${OGG_INCLUDE_DIR} "../snd_common" ".")
+ 
+-if (USE_SDL2 OR (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
++if (USE_SDL2 OR UNIX)
+     include_directories(${SDL2_INCLUDE_DIR})
+ endif()
+ 
+@@ -18,12 +18,12 @@ file(GLOB SND_QF_SOURCES
+     "../gameshared/q_*.c"
+ )
+ 
+-if (USE_SDL2 OR (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
++if (USE_SDL2 OR UNIX)
+     file(GLOB SND_QF_PLATFORM_SOURCES
+         "../sdl/sdl_snd.c"
+     )
+ 
+-    if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++    if (UNIX)
+ 	set(SND_QF_PLATFORM_LIBRARIES ${SDL2_LIBRARY} "m")
+     else()
+ 	set(SND_QF_PLATFORM_LIBRARIES ${SDL2_LIBRARY})
