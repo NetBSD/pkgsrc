@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2003/09/21 18:56:41 tron Exp $
+$NetBSD: patch-ac,v 1.2 2025/09/29 20:40:14 mrg Exp $
 
---- magicfilter.c.orig	1996-03-17 12:39:24.000000000 +0100
-+++ magicfilter.c	2003-09-21 20:54:38.000000000 +0200
-@@ -59,10 +59,9 @@
+Adjust for modern C.
+
+--- magicfilter.c.orig	1996-03-17 03:39:24.000000000 -0800
++++ magicfilter.c	2025-09-25 12:28:43.390857979 -0700
+@@ -23,6 +23,7 @@
+ #ifdef HAVE_SYS_WAIT_H
+ #include <sys/wait.h>
+ #endif
++#include <sys/stat.h>
+ 
+ char *inblock;			/* Block read */
+ int inblock_size;		/* Bytes reserved for the inblock */
+@@ -59,10 +60,9 @@
  /* Header of mail message */
  #ifndef NOMAIL
  const char *mailheader =	/* Header of complaint message */
@@ -16,3 +26,11 @@ $NetBSD: patch-ac,v 1.1 2003/09/21 18:56:41 tron Exp $
  #endif
  
  /* ------------------------------------------------------------------------- *
+@@ -835,6 +835,7 @@
+  * Analyze the input data and choose an appropriate way to handle it.
+  * ------------------------------------------------------------------------- */
+ 
++int
+ main(int argc, char *argv[])
+ {
+   int do_cat = 0;		/* True if -c option */
