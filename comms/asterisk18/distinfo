@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.81 2025/08/04 20:17:17 jnemeth Exp $
+$NetBSD: distinfo,v 1.82 2025/09/29 03:12:19 jnemeth Exp $
 
-BLAKE2s (asterisk-18.26.3/asterisk-18.26.3.tar.gz) = 537865ec6379655504dbe0ff0ac3c8995901f8052a2c0bfa4fe80a8c3e627d38
-SHA512 (asterisk-18.26.3/asterisk-18.26.3.tar.gz) = bda51a928cee90ac126d59aedf6a28304a7259d5063e34d21fb86ee32404062b8a6f7b9e01167e342e52e07abbef8224f7d3a127fd2baaa64cf64a82e53023c8
-Size (asterisk-18.26.3/asterisk-18.26.3.tar.gz) = 28568360 bytes
-BLAKE2s (asterisk-18.26.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
-SHA512 (asterisk-18.26.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
-Size (asterisk-18.26.3/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-BLAKE2s (asterisk-18.26.3/libjwt-1.15.3.md5) = de87f03f88ad834e26bba2159f5d8ed14637377eba58c48ed0701f44994ae1a2
-SHA512 (asterisk-18.26.3/libjwt-1.15.3.md5) = d24818362ec5537c4db58421078c7dc0f8509b89a2802d1e2e6cef6d4c1e817f8304dda486e96187c375b7d1084a1400ac4647ea635f3c9703fa0fadb1c33b44
-Size (asterisk-18.26.3/libjwt-1.15.3.md5) = 55 bytes
-BLAKE2s (asterisk-18.26.3/libjwt-1.15.3.tar.gz) = 45de6898eeef8791e63469ea1a13157e425e6f9f47cb49d2bcd7e3f5c046ab68
-SHA512 (asterisk-18.26.3/libjwt-1.15.3.tar.gz) = 6a99c81258c5302f7dd908f639676d7cfbe09599812cd97ead871cd5962f15e5248b935e1ef643c4dd43bd1ee66d0e12be1b599a6d3b26d461c4b15216a93774
-Size (asterisk-18.26.3/libjwt-1.15.3.tar.gz) = 489246 bytes
-BLAKE2s (asterisk-18.26.3/pjproject-2.14.1.md5) = f384e59ad4f8227cd7131a5c07b68a83b75b319fa60c38d6f9d27af817a0f516
-SHA512 (asterisk-18.26.3/pjproject-2.14.1.md5) = 25ce388adcd7eaa2c21d95a58d9fc5e33a6cb96dd99c292574b8f11f6f1f985cf91f91ea252300bd1be192e396ac6c8a35a87b219864339798bf6195a7650c00
-Size (asterisk-18.26.3/pjproject-2.14.1.md5) = 172 bytes
-BLAKE2s (asterisk-18.26.3/pjproject-2.14.1.tar.bz2) = 4b22d553ddafc2d53d866b4936d465c161e2a095a6a75bd4b93be26e4803122c
-SHA512 (asterisk-18.26.3/pjproject-2.14.1.tar.bz2) = 996116df4a18fb28c8f68d122466f8664958226a38e432b6190b92fbf277b278d370a4b44fabeaf25691e3cdcde28a8879b2738ead5387d119229db01ce121d8
-Size (asterisk-18.26.3/pjproject-2.14.1.tar.bz2) = 8379251 bytes
+BLAKE2s (asterisk-18.26.4/asterisk-18.26.4.tar.gz) = 438d6e6f44c14aa4c62ecf381c71d5c05fa19493766b0ee6fb086a20cab0a47c
+SHA512 (asterisk-18.26.4/asterisk-18.26.4.tar.gz) = 82ab4c140250a73ec241870c13146013e9d2c775072dd86c17629458e339b71e52e0f310c12079c2361a5fcee959f3e5a1469ce4ef15a69d604d012cc636d433
+Size (asterisk-18.26.4/asterisk-18.26.4.tar.gz) = 28570896 bytes
+BLAKE2s (asterisk-18.26.4/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
+SHA512 (asterisk-18.26.4/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
+Size (asterisk-18.26.4/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
+BLAKE2s (asterisk-18.26.4/libjwt-1.15.3.md5) = de87f03f88ad834e26bba2159f5d8ed14637377eba58c48ed0701f44994ae1a2
+SHA512 (asterisk-18.26.4/libjwt-1.15.3.md5) = d24818362ec5537c4db58421078c7dc0f8509b89a2802d1e2e6cef6d4c1e817f8304dda486e96187c375b7d1084a1400ac4647ea635f3c9703fa0fadb1c33b44
+Size (asterisk-18.26.4/libjwt-1.15.3.md5) = 55 bytes
+BLAKE2s (asterisk-18.26.4/libjwt-1.15.3.tar.gz) = 45de6898eeef8791e63469ea1a13157e425e6f9f47cb49d2bcd7e3f5c046ab68
+SHA512 (asterisk-18.26.4/libjwt-1.15.3.tar.gz) = 6a99c81258c5302f7dd908f639676d7cfbe09599812cd97ead871cd5962f15e5248b935e1ef643c4dd43bd1ee66d0e12be1b599a6d3b26d461c4b15216a93774
+Size (asterisk-18.26.4/libjwt-1.15.3.tar.gz) = 489246 bytes
+BLAKE2s (asterisk-18.26.4/pjproject-2.15.1.md5) = 1bdb00828816aff69f43eaacd084bd7d0a48670af33110bd0cd6325ead45aa48
+SHA512 (asterisk-18.26.4/pjproject-2.15.1.md5) = 75963b64e702a5810fd5b8b574a07396cab1a87543d806135e7a9b9762d35129354f99283252f40ad75a6a94cd1921f164ed8e63174de0c5430e5c6913d21744
+Size (asterisk-18.26.4/pjproject-2.15.1.md5) = 172 bytes
+BLAKE2s (asterisk-18.26.4/pjproject-2.15.1.tar.bz2) = 2bcb38884531f0be966c78b6bac45ac63d8c612c060da91c584d192fe0fdf9cd
+SHA512 (asterisk-18.26.4/pjproject-2.15.1.tar.bz2) = c080eb44b49fccadb1c76ff2b3221935b0d531a1e2087b47c21b4ec2cdd8ee0e62b13c334495c9c759b348a0792204611987089a6aa6264999f0116aec8dbdfd
+Size (asterisk-18.26.4/pjproject-2.15.1.tar.bz2) = 8492214 bytes
 SHA1 (patch-Makefile) = 676687f298151dbe548ae26a4f6f3fe8bf1f174e
 SHA1 (patch-addons_chan__ooh323.c) = 1775da7ca2129a962ed460bd1e78ba3ce6afa62c
 SHA1 (patch-apps_app__adsiprog.c) = 031139e5cd1ef6bb2afb0a74fee3d752eded0a2c
