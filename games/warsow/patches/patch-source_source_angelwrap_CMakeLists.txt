@@ -1,0 +1,15 @@
+$NetBSD: patch-source_source_angelwrap_CMakeLists.txt,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+- Change "Linux" to Unix.
+
+--- source/source/angelwrap/CMakeLists.txt.orig	2025-09-29 07:40:28.760164935 +0000
++++ source/source/angelwrap/CMakeLists.txt
+@@ -15,7 +15,7 @@ file(GLOB angelwrap_SOURCES
+     "../gameshared/q_*.c"
+ )
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++if (UNIX)
+ 	set(ANGELWRAP_PLATFORM_LIBRARIES "pthread")
+ else ()
+         set(ANGELWRAP_PLATFORM_LIBRARIES "")
