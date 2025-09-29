@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/05/21 18:41:35 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/09/29 15:47:23 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -144,6 +144,7 @@ share/highlight/langDefs/express.lang
 share/highlight/langDefs/factor.lang
 share/highlight/langDefs/fame.lang
 share/highlight/langDefs/fasm.lang
+share/highlight/langDefs/fea.lang
 share/highlight/langDefs/felix.lang
 share/highlight/langDefs/fish.lang
 share/highlight/langDefs/fortran77.lang
