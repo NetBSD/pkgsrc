@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5832 2025/09/29 15:47:29 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5833 2025/09/29 18:25:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8399,3 +8399,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/gsasl to 2.2.2 [ryoon 2025-09-29]
 	Updated net/knot to 3.5.0 [ryoon 2025-09-29]
 	Updated textproc/libhighlight to 4.17 [schmonz 2025-09-29]
+	Updated lang/nodejs to 24.9.0 [adam 2025-09-29]
+	Updated lang/nodejs22 to 22.20.0 [adam 2025-09-29]
