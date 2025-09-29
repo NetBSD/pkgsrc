@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/09/29 14:08:53 ryoon Exp $
+
+BLAKE2s (xmagv111.tgz) = 13b5ec25ec193460d80b589e8e2ac91163ae6fea601961d59e6d2bbf5643f8a2
+SHA512 (xmagv111.tgz) = 1b7596e162751f1509cd60e6f429596b54ee839a236fe2073ede5ce5f8bd915de7cdfcb4a9f0c9e4c494c63248bcb56f61917fb18a83996b5bb4adec28b48859
+Size (xmagv111.tgz) = 64600 bytes
