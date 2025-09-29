@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+BLAKE2s (warsow-2.1.2.tar.gz) = eb5e5f56d2d1a39b74e437086318c5a33e92780e6fcda721d61b71c1951f8038
+SHA512 (warsow-2.1.2.tar.gz) = c26971882c6ddad7e2a2e65c61bc2a327b9690a18b8faeabb23931a3d21a5d34bfac0a27516dfd39898419daaf607f48053754024e6a0ed66cfdccda34134c15
+Size (warsow-2.1.2.tar.gz) = 465567628 bytes
+BLAKE2s (warsow_21_sdk.tar.gz) = 0d86966739912a593586901b546d091b9d6435b67216239836ceac608d520b03
+SHA512 (warsow_21_sdk.tar.gz) = 5b1559280ffb56355a88cfd24899a199c3c76c71f6ea04b2aa66561767b9a9bd1020f41e75cf6488ba8084d20d36a8eccf84e67ec56c1a3596bd7c3c034ea940
+Size (warsow_21_sdk.tar.gz) = 563443012 bytes
+SHA1 (patch-source_libsrcs_angelscript_sdk_angelscript_source_as__config.h) = 3ad8365ac333589c1a353073492ca0b17fdbfeeb
+SHA1 (patch-source_source_CMakeLists.txt) = 78d856bf8fbd8b82486641d7da7cd28276c7900b
+SHA1 (patch-source_source_angelwrap_CMakeLists.txt) = 3f09ec6e3e0e960db0ea2458b8ed17dc6a9f1792
+SHA1 (patch-source_source_cin_CMakeLists.txt) = bbe4fb0abe62062c500e48630ad91c397dcec24c
+SHA1 (patch-source_source_client_CMakeLists.txt) = fa28d0523f5688c1c23f086bf3381c1cc0aa0b06
+SHA1 (patch-source_source_ftlib_CMakeLists.txt) = adfdf3d6dc99cabbdcf39fb4ca06dd5ef5c999ca
+SHA1 (patch-source_source_gameshared_q__arch.h) = c9909899e797ef9851cb71a8f3bf96cf8a049ddb
+SHA1 (patch-source_source_gameshared_q__shared.c) = 62da44bf363034cfd306e233d6596b7ffc11fd09
+SHA1 (patch-source_source_irc_CMakeLists.txt) = 1156a34669ade95fb5351731af809dba056b156b
+SHA1 (patch-source_source_ref__gl_CMakeLists.txt) = 4e1ad4d6472832280899de5a7badf560a56087c7
+SHA1 (patch-source_source_ref__gl_qgl.h) = 6b67d34e0f9274fc839bb96e98302c42ee9c9177
+SHA1 (patch-source_source_ref__gl_r__glimp.h) = 29b54a7aaa4b2b3cb131c0d5bdb54c62debbe009
+SHA1 (patch-source_source_server_CMakeLists.txt) = 2bc204edff681e3beaabe8cbfbe6da8d8e082ffc
+SHA1 (patch-source_source_snd__openal_CMakeLists.txt) = a978ff7d4d29741cdda2d8113edf6a5a463831db
+SHA1 (patch-source_source_snd__openal_qal.c) = 7e378c01ad86962c9d942435d1ef0585dbc24695
+SHA1 (patch-source_source_snd__qf_CMakeLists.txt) = 610b05e4e90a9fb788eb149de3d55dd9ce0afccd
+SHA1 (patch-source_source_tv__server_CMakeLists.txt) = dbe809346be7eae34c856391db2a8d5d29c6c069
+SHA1 (patch-source_source_unix_unix__fs.c) = 1b23faea0671c4889a8541f1423c5c8bd5e51f8b
+SHA1 (patch-source_source_unix_unix__net.c) = b5110b2e336792c1205961d4ae9a15459cecd35f

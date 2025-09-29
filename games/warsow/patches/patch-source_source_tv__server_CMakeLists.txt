@@ -1,0 +1,22 @@
+$NetBSD: patch-source_source_tv__server_CMakeLists.txt,v 1.1 2025/09/29 13:31:29 nia Exp $
+
+- Use CMAKE_DL_LIBS.
+
+--- source/source/tv_server/CMakeLists.txt.orig	2025-09-29 08:13:52.605866306 +0000
++++ source/source/tv_server/CMakeLists.txt
+@@ -74,7 +74,7 @@ else()
+         "../null/sys_vfs_null.c"
+     )
+ 
+-    set(TV_SERVER_PLATFORM_LIBRARIES "pthread" "dl" "m")
++    set(TV_SERVER_PLATFORM_LIBRARIES "pthread" ${CMAKE_DL_LIBS} "m")
+     set(TV_SERVER_BINARY_TYPE "")
+ endif()
+ 
+@@ -82,4 +82,4 @@ add_executable(${QFUSION_TVSERVER_NAME} 
+ target_link_libraries(${QFUSION_TVSERVER_NAME} PRIVATE ${CURL_LIBRARY} ${ZLIB_LIBRARY} ${TV_SERVER_PLATFORM_LIBRARIES})
+ qf_set_output_dir(${QFUSION_TVSERVER_NAME} "")
+ 
+-set_target_properties(${QFUSION_TVSERVER_NAME} PROPERTIES COMPILE_DEFINITIONS "DEDICATED_ONLY;TV_SERVER_ONLY;TV_MODULE_HARD_LINKED")
+\ No newline at end of file
++set_target_properties(${QFUSION_TVSERVER_NAME} PROPERTIES COMPILE_DEFINITIONS "DEDICATED_ONLY;TV_SERVER_ONLY;TV_MODULE_HARD_LINKED")

@@ -1,0 +1,15 @@
+$NetBSD: patch-source_source_ref__gl_CMakeLists.txt,v 1.1 2025/09/29 13:31:29 nia Exp $
+
+- Change "Linux" to Unix.
+
+--- source/source/ref_gl/CMakeLists.txt.orig	2025-09-29 07:39:08.208411151 +0000
++++ source/source/ref_gl/CMakeLists.txt
+@@ -44,7 +44,7 @@ else()
+         set(REF_GL_PLATFORM_LIBRARIES "")
+     endif()
+ 
+-    if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++    if (UNIX)
+         file(GLOB REF_GL_PLATFORM_SOURCES
+             "../unix/unix_glw.c"
+             "../unix/unix_qgl.c"

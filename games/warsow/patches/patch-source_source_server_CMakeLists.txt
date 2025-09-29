@@ -1,0 +1,22 @@
+$NetBSD: patch-source_source_server_CMakeLists.txt,v 1.1 2025/09/29 13:31:29 nia Exp $
+
+- Use CMAKE_DL_LIBS.
+
+--- source/source/server/CMakeLists.txt.orig	2025-09-29 08:13:44.448432714 +0000
++++ source/source/server/CMakeLists.txt
+@@ -79,7 +79,7 @@ else()
+         "../null/sys_vfs_null.c"
+     )
+ 
+-    set(SERVER_PLATFORM_LIBRARIES "pthread" "dl" "m")
++    set(SERVER_PLATFORM_LIBRARIES "pthread" ${CMAKE_DL_LIBS} "m")
+     set(SERVER_BINARY_TYPE "")
+ endif()
+ 
+@@ -88,4 +88,4 @@ add_dependencies(${QFUSION_SERVER_NAME} 
+ target_link_libraries(${QFUSION_SERVER_NAME} PRIVATE ${CURL_LIBRARY} ${ZLIB_LIBRARY} ${SERVER_PLATFORM_LIBRARIES})
+ qf_set_output_dir(${QFUSION_SERVER_NAME} "")
+ 
+-set_target_properties(${QFUSION_SERVER_NAME} PROPERTIES COMPILE_DEFINITIONS "DEDICATED_ONLY")
+\ No newline at end of file
++set_target_properties(${QFUSION_SERVER_NAME} PROPERTIES COMPILE_DEFINITIONS "DEDICATED_ONLY")

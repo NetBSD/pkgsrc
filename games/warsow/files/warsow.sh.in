@@ -1,0 +1,7 @@
+#!/bin/sh
+
+basepath="@PREFIX@/lib/warsow"
+
+${basepath}/warsow.@WARSOW_ARCH@ \
+	+set fs_basepath ${basepath} \
+	+set fs_usehomedir 1 "${@}"

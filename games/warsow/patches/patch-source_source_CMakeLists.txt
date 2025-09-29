@@ -1,0 +1,61 @@
+$NetBSD: patch-source_source_CMakeLists.txt,v 1.1 2025/09/29 13:31:28 nia Exp $
+
+- Change "Linux" to Unix.
+- Ensure that the angelscript target is built as a dependency of
+  angelwrap instead of being a manual target.
+
+--- source/source/CMakeLists.txt.orig	2016-03-26 19:22:10.000000000 +0000
++++ source/source/CMakeLists.txt
+@@ -110,7 +110,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin
+ endif()
+ 
+ # Linux or mingw specific settings
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR MINGW)
++if (UNIX OR MINGW)
+     # If no build type was specified - use release build settings
+     if (NOT CMAKE_BUILD_TYPE)
+         set(CMAKE_BUILD_TYPE "Release")
+@@ -173,7 +173,7 @@ if (NOT GAME_MODULES_ONLY)
+     find_package(PNG REQUIRED)
+ 
+     # We need SDL only on non-Windows platforms or when with SDL2-backend
+-    if (USE_SDL2 OR (${CMAKE_SYSTEM_NAME} MATCHES "Linux"))
++    if (USE_SDL2 OR UNIX)
+         set(USE_SDL2 1)
+         find_package(SDL2 REQUIRED)
+     endif()
+@@ -183,7 +183,7 @@ if (NOT GAME_MODULES_ONLY)
+     endif()
+ endif()
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR MINGW)
++if (UNIX OR MINGW)
+     # On Linux we build angelscript from source
+     set(ANGELSCRIPT_DIR ${CMAKE_HOME_DIRECTORY}/../libsrcs/angelscript/sdk/angelscript)
+     if (MINGW)
+@@ -200,7 +200,7 @@ else()
+     find_package(Angelscript REQUIRED)
+ endif()
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR MINGW)
++if (UNIX OR MINGW)
+ 	if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+ 		STRING(TOLOWER "win32_${QFUSION_WINDOWS_ARCH}.tar.gz" TAR_GZ_NAME)
+ 	else()
+@@ -239,7 +239,7 @@ if (NOT GAME_MODULES_ONLY)
+     endif()
+ endif()
+ 
+-if (${CMAKE_SYSTEM_NAME} MATCHES "Linux") # Do not add 'OR MINGW' here - we need to use suffix-prefix settings from Windows
++if (UNIX)
+     set(CURL_LIBRARY "")
+     add_definitions(-DLIBCURL_RUNTIME)
+ 
+@@ -275,6 +275,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin
+ endif()
+ 
+ add_subdirectory(angelwrap)
++add_dependencies(angelwrap angelscript)
+ add_subdirectory(cgame)
+ add_subdirectory(game)
+ 
