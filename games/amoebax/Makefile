@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/29 14:06:04 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/29 14:13:26 nia Exp $
 
 DISTNAME=	amoebax-0.2.1
 CATEGORIES=	games
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.emma-soft.com/games/amoebax/
-COMMENT=	Action puzzle game like Puyo Puyoo
+COMMENT=	Action puzzle game like Puyo Puyo
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
