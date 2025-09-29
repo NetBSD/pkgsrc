@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/08/07 11:14:48 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/09/29 12:10:39 adam Exp $
 
-BLAKE2s (textual_autocomplete-4.0.5.tar.gz) = c03d3bd60f2a101e5816b305612ecd43faa203f6a808bc572b0065cd6ae8fb52
-SHA512 (textual_autocomplete-4.0.5.tar.gz) = 1f84aa6383533e2abab23cd1f64a0f120560033a66351f7ccdbf267647224dc21731bf0728ce71cbb141f32e6df2189b30723889f32cf28a46b9f943619b647a
-Size (textual_autocomplete-4.0.5.tar.gz) = 94310 bytes
+BLAKE2s (textual_autocomplete-4.0.6.tar.gz) = df2bef774fbe00e2f67a20b2a4a12392be08d6787240bd8226f2b0bc96d51762
+SHA512 (textual_autocomplete-4.0.6.tar.gz) = 1559df6c72538a001ff227eddf9f37614b22bd2fdb4d160de7d14878b6cfc7dfbdf26ebd4ec54e4bafb1ef4d971c59e970690f5be9d5500ab788689b308b9278
+Size (textual_autocomplete-4.0.6.tar.gz) = 97967 bytes
