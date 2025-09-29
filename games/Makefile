@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.559 2025/09/29 13:31:27 nia Exp $
+# $NetBSD: Makefile,v 1.560 2025/09/29 14:06:04 nia Exp $
 #
 
 COMMENT=	Games
@@ -26,6 +26,7 @@ SUBDIR+=	ajbsp
 SUBDIR+=	alephone
 SUBDIR+=	amaze
 SUBDIR+=	amnesia-tdd
+SUBDIR+=	amoebax
 SUBDIR+=	an
 SUBDIR+=	angband
 SUBDIR+=	angband-sdl
