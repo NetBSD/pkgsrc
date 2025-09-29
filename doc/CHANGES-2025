@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5826 2025/09/29 14:06:17 nia Exp $
+$NetBSD: CHANGES-2025,v 1.5827 2025/09/29 14:09:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8393,3 +8393,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual-autocomplete to 4.0.6 [adam 2025-09-29]
 	Added games/warsow version 2.1.2 [nia 2025-09-29]
 	Added games/amoebax version 0.2.1 [nia 2025-09-29]
+	Added graphics/xmagv version 1.11 [ryoon 2025-09-29]
