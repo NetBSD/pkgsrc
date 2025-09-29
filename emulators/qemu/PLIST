@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.100 2025/08/27 06:27:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.101 2025/09/29 14:11:07 tsutsui Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -46,8 +46,8 @@ ${PLIST.lp64}bin/qemu-system-hppa
 bin/qemu-system-i386
 ${PLIST.lp64}bin/qemu-system-loongarch64
 bin/qemu-system-m68k
-${PLIST.lp64}bin/qemu-system-microblaze
-${PLIST.lp64}bin/qemu-system-microblazeel
+bin/qemu-system-microblaze
+bin/qemu-system-microblazeel
 bin/qemu-system-mips
 ${PLIST.lp64}bin/qemu-system-mips64
 ${PLIST.lp64}bin/qemu-system-mips64el
