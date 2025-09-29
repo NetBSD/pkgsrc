@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2024/08/25 06:19:12 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2025/09/29 21:24:22 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libssh
-PKG_SUPPORTED_OPTIONS=		gssapi
+PKG_SUPPORTED_OPTIONS=		gssapi tests
 PKG_OPTIONS_REQUIRED_GROUPS=	crypto
 PKG_OPTIONS_GROUP.crypto=	openssl libgcrypt
 PKG_SUGGESTED_OPTIONS=		gssapi openssl
@@ -24,4 +24,10 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_GCRYPT:BOOL=OFF
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4
 CMAKE_CONFIGURE_ARGS+=		-DWITH_GCRYPT:BOOL=ON
 .include "../../security/libgcrypt/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mtests)
+CMAKE_CONFIGURE_ARGS+=		-DUNIT_TESTING=ON
+.else
+CMAKE_CONFIGURE_ARGS+=		-DUNIT_TESTING=OFF
 .endif
