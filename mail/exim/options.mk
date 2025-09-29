@@ -1,14 +1,16 @@
-# $NetBSD: options.mk,v 1.26 2022/07/11 10:52:29 abs Exp $
+# $NetBSD: options.mk,v 1.27 2025/09/29 14:56:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
-PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
+PKG_SUPPORTED_OPTIONS=	exim-arc
+PKG_SUPPORTED_OPTIONS+=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUPPORTED_OPTIONS+=	exim-appendfile-mbx exim-auth-dovecot exim-build-eximon
-PKG_SUPPORTED_OPTIONS+=	exim-content-scan exim-lookup-cdb exim-lookup-dnsdb
+PKG_SUPPORTED_OPTIONS+=	exim-content-scan exim-eai
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-cdb exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-redis exim-lookup-sqlite
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-whoson exim-old-demime exim-router-iplookup
 PKG_SUPPORTED_OPTIONS+=	exim-tcp-wrappers exim-tls exim-transport-lmtp gdbm
-PKG_SUPPORTED_OPTIONS+=	inet6 opendmarc saslauthd spf readline
+PKG_SUPPORTED_OPTIONS+=	gsasl inet6 opendmarc saslauthd spf readline
 
 PKG_SUGGESTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUGGESTED_OPTIONS+=	exim-appendfile-mbx exim-content-scan
@@ -16,6 +18,10 @@ PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
 PKG_SUGGESTED_OPTIONS+=	exim-tls inet6
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mexim-arc)
+LOCAL_MAKEFILE_OPTIONS+=	EXPERIMENTAL_ARC=yes
+.endif
 
 .if !empty(PKG_OPTIONS:Mexim-appendfile-maildir)
 LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_MAILDIR=yes
@@ -42,6 +48,15 @@ PLIST_SRC+=${PKGDIR}/PLIST.eximon
 
 .if !empty(PKG_OPTIONS:Mexim-content-scan)
 LOCAL_MAKEFILE_OPTIONS+=	WITH_CONTENT_SCAN=YES
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-eai)
+LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_I18N=yes
+LOOKUP_LIBS+=		-lidn
+.  include "../../devel/libidn/buildlink3.mk"
+LOCAL_MAKEFILE_OPTIONS+=	SUPPORT_I18N_2008=yes
+LOOKUP_LIBS+=		-lidn2
+.  include "../../devel/libidn2/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-cdb)
@@ -126,7 +141,7 @@ LOCAL_MAKEFILE_OPTIONS+=	HAVE_IPV6=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mopendmarc)
-LOCAL_MAKEFILE_OPTIONS+=EXPERIMENTAL_DMARC=yes
+LOCAL_MAKEFILE_OPTIONS+=SUPPORT_DMARC=yes
 LOOKUP_LIBS+=		-lopendmarc
 .  include "../../mail/opendmarc/buildlink3.mk"
 .endif
@@ -142,6 +157,13 @@ BDB_ACCEPTED?=db2 db3 db4 db5 db6
 EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
 EXIM_DBMLIB=		DBMLIB=${LDFLAGS} ${BDB_LIBS}
 EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
+.endif
+
+.if !empty(PKG_OPTIONS:Mgsasl)
+USE_TOOLS+=	pkg-config
+LOCAL_MAKEFILE_OPTIONS+=AUTH_GSASL=yes
+LOCAL_MAKEFILE_OPTIONS+=AUTH_GSASL_PC=libgsasl
+.  include "../../security/gsasl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msaslauthd)
