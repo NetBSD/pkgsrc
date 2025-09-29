@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2025/09/29 20:48:53 mrg Exp $
 
  - Don't issue own declarations of malloc, free, exit, perror, errno, getopt.
  - Use standard headers.
  - Avoid symbol conflicts with restrict, setprogname, getline.
  - Fix build with current readline.
+ - Adapt for GCC 14.
 
---- cdecl.c.orig	1996-01-16 03:54:46.000000000 +0000
-+++ cdecl.c
+--- cdecl.c.orig	1996-01-15 19:54:46.000000000 -0800
++++ cdecl.c	2025-09-25 10:40:24.758584770 -0700
 @@ -59,7 +59,9 @@
   */
  
@@ -32,7 +33,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  #  define strrchr rindex
  #  define NOTMPFILE
  # else
-@@ -87,13 +90,12 @@ void free(), exit(), perror();
+@@ -87,13 +90,14 @@ void free(), exit(), perror();
  # endif /* NOVOID */
  #endif /* __STDC__ || DOS */
  
@@ -40,16 +41,18 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
 +
  #ifdef USE_READLINE
  # include <readline/readline.h>
++# include <readline/history.h>
    /* prototypes for functions related to readline() */
 -  char * getline();
 -  char ** attempt_completion(char *, int, int);
 -  char * keyword_completion(char *, int);
 -  char * command_completion(char *, int);
 +char * command_completion(const char *, int);
++int dotmpfile_from_string(char *s);
  #endif
  
  /* maximum # of chars from progname to display in prompt */
-@@ -124,7 +126,11 @@ char real_prompt[MAX_NAME+3];
+@@ -124,7 +128,11 @@ char real_prompt[MAX_NAME+3];
  
  #if __STDC__
    char *ds(char *), *cat(char *, ...), *visible(int);
@@ -61,7 +64,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
    int main(int, char **);
    int yywrap(void);
    int dostdin(void);
-@@ -138,7 +144,7 @@ char real_prompt[MAX_NAME+3];
+@@ -138,7 +146,7 @@ char real_prompt[MAX_NAME+3];
    void docast(char*, char*, char*, char*);
    void dodexplain(char*, char*, char*, char*);
    void docexplain(char*, char*, char*, char*);
@@ -70,7 +73,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
    int dotmpfile(int, char**), dofileargs(int, char**);
  #else
    char *ds(), *cat(), *visible();
-@@ -148,7 +154,7 @@ char real_prompt[MAX_NAME+3];
+@@ -148,7 +156,7 @@ char real_prompt[MAX_NAME+3];
    void unsupp(), notsupported();
    void yyerror();
    void doset(), dodeclare(), docast(), dodexplain(), docexplain();
@@ -79,7 +82,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
    int dotmpfile(), dofileargs();
  #endif /* __STDC__ */
    FILE *tmpfile();
-@@ -241,7 +247,7 @@ struct
+@@ -241,7 +249,7 @@ struct
  /* for unsupported combinations of types. */
  void mbcheck()
  {
@@ -88,7 +91,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
      char *t1, *t2;
  
      /* Loop through the types */
-@@ -258,26 +264,26 @@ void mbcheck()
+@@ -258,26 +266,26 @@ void mbcheck()
  		if (!(modbits & crosstypes[j].bit))
  		    continue;
  		/* check the type of restriction */
@@ -121,7 +124,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  		    {
  		    if (!RitchieFlag && !PreANSIFlag)
  			notsupported(" (ANSI Compiler)", t1, t2);
-@@ -286,7 +292,7 @@ void mbcheck()
+@@ -286,7 +294,7 @@ void mbcheck()
  		    {
  		    (void) fprintf (stderr,
  			"%s: Internal error in crosscheck[%d,%d]=%d!\n",
@@ -130,7 +133,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  		    exit(1); /* NOTREACHED */
  		    }
  		}
-@@ -375,7 +381,7 @@ char *options[] = {
+@@ -375,7 +383,7 @@ char *options[] = {
  static char *line_read = NULL;
  
  /* Read a string, and return a pointer to it.  Returns NULL on EOF. */
@@ -139,7 +142,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  {
    /* If the buffer has already been allocated, return the memory
       to the free pool. */
-@@ -399,12 +405,12 @@ char ** attempt_completion(char *text, i
+@@ -399,12 +407,12 @@ char ** attempt_completion(char *text, i
  {
    char **matches = NULL;
  
@@ -154,7 +157,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  {
    static int index, len;
    char *command;
-@@ -421,7 +427,7 @@ char * command_completion(char *text, in
+@@ -421,7 +429,7 @@ char * command_completion(char *text, in
    return NULL;
  }
  
@@ -163,7 +166,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  {
    static int index, len, set, into;
    char *keyword, *option;
-@@ -803,7 +809,7 @@ void prompt()
+@@ -803,7 +811,7 @@ void prompt()
  }
  
  /* Save away the name of the program from argv[0] */
@@ -172,7 +175,7 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  char *argv0;
  {
  #ifdef DOS
-@@ -887,7 +893,7 @@ int dostdin()
+@@ -887,7 +895,7 @@ int dostdin()
  
  	if (!quiet) (void) printf("Type `help' or `?' for help\n");
  	ret = 0;
@@ -181,7 +184,15 @@ $NetBSD: patch-aa,v 1.12 2025/04/21 16:30:45 wiz Exp $
  	    if (!strcmp(line, "quit") || !strcmp(line, "exit")) {
  		free(line);
  		return ret;
-@@ -1251,11 +1257,11 @@ char **argv;
+@@ -1244,18 +1252,17 @@ void versions()
+     exit(0);
+ }
+ 
+-int main(argc, argv)
+-char **argv;
++int main(int argc, char **argv)
+ {
+     int c, ret = 0;
  
  #ifdef USE_READLINE
      /* install completion handlers */

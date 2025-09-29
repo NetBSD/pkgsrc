@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2025/04/21 16:30:45 wiz Exp $
+$NetBSD: distinfo,v 1.18 2025/09/29 20:48:52 mrg Exp $
 
 BLAKE2s (cdecl-2.5.tar.gz) = 9161bcdc9381e8709597bd7a9368003e186580fc05922572a10070223bb7cf95
 SHA512 (cdecl-2.5.tar.gz) = 15495f5a794d11f964297c1f39f2f62f89778cd2e791b93f7e6cf16f321a71205a1f9366960f62b030022699e8abacaa5b402a304fb2eab8c00c83b9a4d0b419
 Size (cdecl-2.5.tar.gz) = 21435 bytes
-SHA1 (patch-aa) = a2916f21082d8da3bd9e9bb637aedd025d1ef309
+SHA1 (patch-aa) = 307dcbc080e1fa5b05f95bef93ea3748762c912b
 SHA1 (patch-ab) = f12ac884f95c9b241cda749b0ea50f6d69e1c6a4
 SHA1 (patch-cdgram.y) = b58b64a83aa01f4bfb18b7c927cae9d11f52482c
