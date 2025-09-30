@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5844 2025/09/30 14:26:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5845 2025/09/30 14:27:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8419,3 +8419,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-textual-snapshot to 1.1.0nb1 [wiz 2025-09-30]
 	Updated net/py-aio-pika to 9.5.7nb1 [wiz 2025-09-30]
 	Updated textproc/py-jsonschema-path to 0.3.4nb1 [wiz 2025-09-30]
+	Updated textproc/py-jsonschema-spec to 0.2.4nb2 [wiz 2025-09-30]
