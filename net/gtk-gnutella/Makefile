@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2025/08/30 22:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2025/09/30 16:07:38 wiz Exp $
 
 DISTNAME=	gtk-gnutella-1.2.2
 PKGREVISION=	20
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--configure-only
 # before it is set up completely, see discussion in
 # https://github.com/gtk-gnutella/gtk-gnutella/pull/37
 CONFIGURE_ARGS+=	--disable-malloc
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}/${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
 CONFIGURE_ARGS+=	--localedir="${PREFIX}/${PKGLOCALEDIR}/locale"
 CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Unone:Q}

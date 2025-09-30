@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/12/10 20:32:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/30 16:07:38 wiz Exp $
 
 DISTNAME=	mtm-1.2.1
 CATEGORIES=	misc
@@ -19,7 +19,7 @@ USE_CURSES+=	wgetscrreg
 FAKE_NCURSES=	yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mtm ${DESTDIR}/${PREFIX}/bin && \
+	${INSTALL_PROGRAM} ${WRKSRC}/mtm ${DESTDIR}${PREFIX}/bin && \
 	${INSTALL_MAN} ${WRKSRC}/mtm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/mtm.ti ${DESTDIR}${PREFIX}/share/mtm/terminfo
 

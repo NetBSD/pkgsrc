@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/07/04 08:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/09/30 16:07:35 wiz Exp $
 
 DISTNAME=	B-Hooks-Parser-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -23,8 +23,8 @@ USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/Parser/.packlist
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/hook_parser.h ${DESTDIR}/${PREFIX}/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/hook_parser.h ${DESTDIR}${PREFIX}/include
 
 .include "../../devel/p5-B-Hooks-OP-Check/buildlink3.mk"
 .include "../../lang/perl5/module.mk"

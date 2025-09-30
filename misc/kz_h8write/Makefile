@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/29 11:06:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/30 16:07:38 wiz Exp $
 #
 
 DISTNAME=	kz_h8write-v0.2.1
@@ -17,8 +17,8 @@ WRKSRC=	${WRKDIR}/PackageFiles/src
 INSTALLATION_DIRS+=	bin share/kz_h8write
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/kz_h8write ${DESTDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/kz_h8write ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/../doc/README.txt \
-		${DESTDIR}/${PREFIX}/share/kz_h8write
+		${DESTDIR}${PREFIX}/share/kz_h8write
 
 .include "../../mk/bsd.pkg.mk"

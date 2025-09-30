@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/07/04 08:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/09/30 16:07:35 wiz Exp $
 
 DISTNAME=	B-Hooks-OP-Check-EntersubForCV-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -26,8 +26,8 @@ BUILDLINK_DEPMETHOD.p5-B-Hooks-OP-Check=	full
 BUILDLINK_API_DEPENDS.p5-B-Hooks-OP-Check+=	p5-B-Hooks-OP-Check>=0.19
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/hook_op_check_entersubforcv.h ${DESTDIR}/${PREFIX}/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/hook_op_check_entersubforcv.h ${DESTDIR}${PREFIX}/include
 
 .include "../../devel/p5-B-Hooks-OP-Check/buildlink3.mk"
 .include "../../devel/p5-B-Utils/buildlink3.mk"

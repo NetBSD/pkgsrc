@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/07/04 08:48:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/09/30 16:07:39 wiz Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-Maint-Key-0.013
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	bin
 post-install:
 	for s in dnssecmaint-config dnssecmaint-copyprivate maintkeydb; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/blib/script/$$s \
-			${DESTDIR}/${PREFIX}/bin; \
+			${DESTDIR}${PREFIX}/bin; \
 	done
 
 .include "../../lang/perl5/module.mk"

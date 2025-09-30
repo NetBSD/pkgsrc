@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/08/02 19:21:51 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/30 16:07:36 wiz Exp $
 #
 
 DISTNAME=	fuse-sparsebundlefs-20160928
@@ -21,7 +21,7 @@ FORCE_CXX_STD=	c++03
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sparsebundlefs ${DESTDIR}/${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/sparsebundlefs ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

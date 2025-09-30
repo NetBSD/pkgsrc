@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/08/30 22:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/09/30 16:07:36 wiz Exp $
 
 DISTNAME=	free42-nologo-3.3.4
 PKGNAME=	${DISTNAME:S/-nologo//}
@@ -28,15 +28,15 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gtk/free42bin \
-		${DESTDIR}/${PREFIX}/bin/
+		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/gtk-bcd/free42dec \
-		${DESTDIR}/${PREFIX}/bin/
+		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${DESTDIR}/${PREFIX}/share/doc/free42/
+		${DESTDIR}${PREFIX}/share/doc/free42/
 	${INSTALL_DATA} ${WRKSRC}/gtk/README.txt \
-		${DESTDIR}/${PREFIX}/share/doc/free42/README.gtk
+		${DESTDIR}${PREFIX}/share/doc/free42/README.gtk
 	${INSTALL_DATA} ${WRKSRC}/gtk/icon-128x128.xpm \
-		${DESTDIR}/${PREFIX}/share/doc/free42/free42icon-128x128.xpm
+		${DESTDIR}${PREFIX}/share/doc/free42/free42icon-128x128.xpm
 
 .include "../../mk/bsd.prefs.mk"
 

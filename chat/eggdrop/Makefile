@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/10/24 22:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/09/30 16:07:35 wiz Exp $
 
 DISTNAME=	eggdrop-1.9.2
 PKGREVISION=	1
@@ -50,7 +50,7 @@ do-install:
 	cd ${WRKDIR}/eggdrop && ${PAX} -rw -pp help language scripts text \
 		${DESTDIR}${PREFIX}/share/eggdrop/
 	cd ${WRKDIR}/eggdrop/doc && ${PAX} -rw -pp * ${DESTDIR}${PREFIX}/share/doc/eggdrop/
-	mv -f ${DESTDIR}${PREFIX}/share/doc/eggdrop/man1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/
+	mv -f ${DESTDIR}${PREFIX}/share/doc/eggdrop/man1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/
 	${INSTALL_DATA} ${WRKSRC}/eggdrop.conf ${DESTDIR}${EGDIR}/eggdrop.conf
 	${INSTALL_LIB} ${WRKDIR}/eggdrop/modules/* \
 		${DESTDIR}${PREFIX}/lib/eggdrop
