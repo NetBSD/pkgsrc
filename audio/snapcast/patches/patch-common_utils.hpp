@@ -1,26 +1,19 @@
-$NetBSD: patch-common_utils.hpp,v 1.1 2022/07/03 16:09:15 nia Exp $
+$NetBSD: patch-common_utils.hpp,v 1.2 2025/09/30 06:49:37 adam Exp $
 
 Add NetBSD support.
 
---- common/utils.hpp.orig	2021-12-22 17:40:36.000000000 +0000
+--- common/utils.hpp.orig	2025-09-23 19:02:05.000000000 +0000
 +++ common/utils.hpp
-@@ -1,5 +1,4 @@
--/***
--    This file is part of snapcast
-+/*** This file is part of snapcast
-     Copyright (C) 2014-2020  Johannes Pohl
- 
-     This program is free software: you can redistribute it and/or modify
-@@ -44,7 +43,7 @@
+@@ -38,7 +38,7 @@
+ #include <string>
  #include <sys/stat.h>
  #include <sys/types.h>
- #include <vector>
 -#if !defined(WINDOWS) && !defined(FREEBSD)
-+#if defined(MACOS) || defined(__linux__)
++#if !defined(WINDOWS) && !defined(FREEBSD) && !defined(__NetBSD__)
  #include <sys/sysinfo.h>
  #endif
  #ifdef MACOS
-@@ -53,6 +52,10 @@
+@@ -47,6 +47,10 @@
  #include <ifaddrs.h>
  #include <net/if_dl.h>
  #endif
@@ -31,7 +24,7 @@ Add NetBSD support.
  #ifdef ANDROID
  #include <sys/system_properties.h>
  #endif
-@@ -306,7 +309,7 @@ static std::string getMacAddress(int soc
+@@ -304,7 +308,7 @@ static std::string getMacAddress(int soc
          {
              if (!(ifr.ifr_flags & IFF_LOOPBACK)) // don't count loopback
              {
@@ -40,7 +33,7 @@ Add NetBSD support.
                  /// Dirty Mac version
                  struct ifaddrs *ifap, *ifaptr;
                  unsigned char* ptr;
-@@ -333,6 +336,7 @@ static std::string getMacAddress(int soc
+@@ -331,6 +335,7 @@ static std::string getMacAddress(int soc
                  }
  #endif
  
@@ -48,7 +41,7 @@ Add NetBSD support.
  #ifdef FREEBSD
                  if (ioctl(sock, SIOCGIFMAC, &ifr) == 0)
  #else
-@@ -355,6 +359,7 @@ static std::string getMacAddress(int soc
+@@ -353,6 +358,7 @@ static std::string getMacAddress(int soc
                              return line;
                      }
                  }
@@ -56,7 +49,7 @@ Add NetBSD support.
              }
          }
          else
-@@ -369,7 +374,7 @@ static std::string getMacAddress(int soc
+@@ -367,7 +373,7 @@ static std::string getMacAddress(int soc
          return "";
  
      char mac[19];
