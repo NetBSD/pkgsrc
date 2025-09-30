@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:51:41 nia Exp $
+$NetBSD: distinfo,v 1.25 2025/09/30 14:29:17 gutteridge Exp $
 
 BLAKE2s (librep_0.92.7.tar.xz) = b43900e377cb9ff8bb0e8ce36fb5a812e2d32ec5d2d333a87b805f01ae5976b4
 SHA512 (librep_0.92.7.tar.xz) = 752cb2da31457200b5896f70ce24a097b261b996da25998cd78a777f982597473afce1a216f449a4a969d29b1678bf54e2f148e86de6f9548eeb5cfd530ae377
 Size (librep_0.92.7.tar.xz) = 651344 bytes
 SHA1 (patch-aa) = 382f6692e8a387d1492e0a2198211a6f65f41d20
+SHA1 (patch-src_lisp.c) = 1aa7352f38c889b5efb73062c7ac687364a3fe02
+SHA1 (patch-src_lispcmds.c) = e908e57e1f15e5dbdd876a8364bac6933c6b7ad0
+SHA1 (patch-src_misc.c) = b907e61c060c918e10456fa3b474bd58109e900a
+SHA1 (patch-src_numbers.c) = da798423b17a2aa84bd9f158b9e29effc7a3b18b
+SHA1 (patch-src_regexp.c) = 520a75313d44ca337d213997e5272a2e50591ad8
+SHA1 (patch-src_streams.c) = e05685ff92b4a23ca2e5d014f9eac334735a51a4
+SHA1 (patch-src_symbols.c) = 61abfc604b6b3510db02ee9b23ed846936892868
