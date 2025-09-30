@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5849 2025/09/30 17:03:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5850 2025/09/30 20:27:28 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8427,3 +8427,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio to 1.75.1 [adam 2025-09-30]
 	Updated net/py-grpcio-testing to 1.75.1 [adam 2025-09-30]
 	Updated net/py-grpcio-tools to 1.75.1 [adam 2025-09-30]
+	Updated mail/mu to 1.12.13 [ktnb 2025-09-30]
