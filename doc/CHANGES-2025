@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5848 2025/09/30 16:11:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5849 2025/09/30 17:03:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8423,3 +8423,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 143.0.3 [ryoon 2025-09-30]
 	Updated www/firefox-l10n to 143.0.3 [ryoon 2025-09-30]
 	Updated security/openssl to 3.5.4 [wiz 2025-09-30]
+	Updated net/grpc to 1.75.1 [adam 2025-09-30]
+	Updated net/py-grpcio to 1.75.1 [adam 2025-09-30]
+	Updated net/py-grpcio-testing to 1.75.1 [adam 2025-09-30]
+	Updated net/py-grpcio-tools to 1.75.1 [adam 2025-09-30]
