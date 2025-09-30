@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/07 15:21:40 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+@comment $NetBSD: PLIST,v 1.4 2025/09/30 14:25:32 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/aio_pika/__init__.py
 ${PYSITELIB}/aio_pika/__init__.pyc
 ${PYSITELIB}/aio_pika/__init__.pyo
