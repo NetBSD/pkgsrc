@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/29 00:12:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2025/09/30 13:33:29 ryoon Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
@@ -25,6 +25,10 @@ CONFIGURE_ARGS+=	PYTHON_VERSION=${PYVERSSUFFIX}
 
 PY_PATCHPLIST=	yes
 INSTALL_DIRS+=	bindings/python
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/linkgrammar/*.opt-2.pyc
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/linkgrammar/__pycache__/*.opt-2.pyc
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
