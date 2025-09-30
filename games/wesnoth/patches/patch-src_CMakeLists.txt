@@ -1,10 +1,11 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.5 2024/04/07 21:39:03 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.6 2025/09/30 09:14:24 adam Exp $
 
+Don't link against Boost::system.
 On macOS, do not build SDLMain.mm; only needed for app bundle.
 
---- src/CMakeLists.txt.orig	2024-03-18 00:11:38.000000000 +0000
+--- src/CMakeLists.txt.orig	2025-05-20 22:28:48.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -239,8 +239,6 @@ if(ENABLE_GAME)
+@@ -231,8 +231,6 @@ if(ENABLE_GAME)
  		if(MSVC)
  			target_link_options(wesnoth PRIVATE /WX /WHOLEARCHIVE:wesnoth-widgets)
  		endif()
@@ -13,3 +14,35 @@ On macOS, do not build SDLMain.mm; only needed for app bundle.
  	else()
  		add_executable(wesnoth wesnoth.cpp)
  	endif()
+@@ -248,7 +246,6 @@ if(ENABLE_GAME)
+ 		Boost::iostreams
+ 		Boost::program_options
+ 		Boost::regex
+-		Boost::system
+ 		Boost::random
+ 		Boost::coroutine
+ 		Boost::locale
+@@ -295,7 +292,6 @@ if(ENABLE_TESTS)
+ 		Boost::iostreams
+ 		Boost::program_options
+ 		Boost::regex
+-		Boost::system
+ 		Boost::random
+ 		Boost::coroutine
+ 		Boost::locale
+@@ -344,7 +340,6 @@ if(ENABLE_SERVER)
+ 		Boost::iostreams
+ 		Boost::program_options
+ 		Boost::regex
+-		Boost::system
+ 		Boost::random
+ 		Boost::coroutine
+ 		Boost::locale
+@@ -385,7 +380,6 @@ if(ENABLE_CAMPAIGN_SERVER)
+ 		Boost::iostreams
+ 		Boost::program_options
+ 		Boost::regex
+-		Boost::system
+ 		Boost::random
+ 		Boost::coroutine
+ 		Boost::locale

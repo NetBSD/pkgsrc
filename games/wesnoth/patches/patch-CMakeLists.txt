@@ -1,12 +1,21 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2024/04/07 21:39:03 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2025/09/30 09:14:24 adam Exp $
 
+Don't use boost_system library.
 Do not look for X11 on macOS.
 We don't have readline as a module.
 Do not bother with uninstaller.
 
---- CMakeLists.txt.orig	2024-03-18 00:11:38.000000000 +0000
+--- CMakeLists.txt.orig	2025-05-20 22:28:48.000000000 +0000
 +++ CMakeLists.txt
-@@ -100,7 +100,9 @@ find_package(ICU REQUIRED COMPONENTS dat
+@@ -93,14 +93,16 @@ if(APPLE)
+ 	find_library(SECURITY_LIBRARY Security REQUIRED)
+ endif()
+ 
+-find_package(Boost ${BOOST_VERSION} REQUIRED COMPONENTS iostreams program_options regex system thread random coroutine locale filesystem graph)
++find_package(Boost ${BOOST_VERSION} REQUIRED COMPONENTS iostreams program_options regex thread random coroutine locale filesystem graph)
+ find_package(ICU REQUIRED COMPONENTS data i18n uc)
+ 
+ # no, gettext executables are not required when NLS is deactivated
  find_package(Gettext)
  find_package(Python)
  
