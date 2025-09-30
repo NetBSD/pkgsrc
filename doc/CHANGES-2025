@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5840 2025/09/30 13:06:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5841 2025/09/30 14:23:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8415,3 +8415,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-atpublic to 6.0.2 [adam 2025-09-30]
 	Updated net/bird to 3.1.4 [adam 2025-09-30]
 	Updated misc/stellarium to 25.3 [adam 2025-09-30]
+	Updated devel/py-poetry to 2.1.4nb1 [wiz 2025-09-30]
