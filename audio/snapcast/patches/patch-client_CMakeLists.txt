@@ -1,17 +1,27 @@
-$NetBSD: patch-client_CMakeLists.txt,v 1.1 2022/07/03 16:09:15 nia Exp $
+$NetBSD: patch-client_CMakeLists.txt,v 1.2 2025/09/30 06:49:37 adam Exp $
 
+Use correct variable: Boost_INCLUDE_DIRS.
 Add Sun Audio support for NetBSD.
 
---- client/CMakeLists.txt.orig	2021-12-22 17:40:36.000000000 +0000
+--- client/CMakeLists.txt.orig	2025-09-23 19:02:05.000000000 +0000
 +++ client/CMakeLists.txt
-@@ -53,6 +53,10 @@ elseif(NOT ANDROID)
-         list(APPEND CLIENT_LIBRARIES ${PULSE_LIBRARIES})
-         list(APPEND CLIENT_INCLUDE ${PULSE_INCLUDE_DIRS})
-     endif (PULSE_FOUND)
-+
-+    if (SUN_FOUND)
-+        list(APPEND CLIENT_SOURCES player/sun_player.cpp)
-+    endif (SUN_FOUND)
- endif (MACOSX)
+@@ -13,7 +13,7 @@ set(CLIENT_LIBRARIES ${CMAKE_THREAD_LIBS
  
- if (ANDROID)
+ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/client)
+ 
+-include_directories(SYSTEM ${Boost_INCLUDE_DIR})
++include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
+ 
+ if(MACOSX)
+   # Bonjour
+@@ -61,6 +61,10 @@ elseif(NOT ANDROID)
+     include_directories(${PULSE_INCLUDE_DIRS})
+   endif(PULSE_FOUND)
+ 
++  if(SUN_FOUND)
++    list(APPEND CLIENT_SOURCES player/sun_player.cpp)
++  endif(UN_FOUND)
++
+   if(PIPEWIRE_FOUND)
+     list(APPEND CLIENT_SOURCES player/pipewire_player.cpp)
+     list(APPEND CLIENT_LIBRARIES ${PIPEWIRE_LIBRARIES})

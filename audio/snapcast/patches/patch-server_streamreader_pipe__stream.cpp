@@ -1,12 +1,12 @@
-$NetBSD: patch-server_streamreader_pipe__stream.cpp,v 1.1 2022/07/03 16:09:15 nia Exp $
+$NetBSD: patch-server_streamreader_pipe__stream.cpp,v 1.2 2025/09/30 06:49:38 adam Exp $
 
 Add NetBSD support.
 
---- server/streamreader/pipe_stream.cpp.orig	2021-12-22 17:40:36.000000000 +0000
+--- server/streamreader/pipe_stream.cpp.orig	2025-09-29 07:26:16.257566594 +0000
 +++ server/streamreader/pipe_stream.cpp
-@@ -59,7 +59,7 @@ void PipeStream::do_connect()
- {
-     int fd = open(uri_.path.c_str(), O_RDONLY | O_NONBLOCK);
+@@ -73,7 +73,7 @@ void PipeStream::connect()
+     }
+ 
      int pipe_size = -1;
 -#if !defined(MACOS) && !defined(FREEBSD)
 +#ifdef __linux__

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/09/27 09:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/09/30 06:49:37 adam Exp $
 
-DISTNAME=	snapcast-0.26.0
-PKGREVISION=	8
+DISTNAME=	snapcast-0.33.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=badaix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,14 +10,11 @@ HOMEPAGE=	https://github.com/badaix/snapcast
 COMMENT=	Multiroom client-server audio player
 LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	filesystem
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
-USE_CXX_FEATURES+=	filesystem
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-
-REPLACE_PYTHON+=	server/etc/plug-ins/meta_mpd.py
+REPLACE_PYTHON+=	server/etc/plug-ins/*.py
 
 CONF_FILES+=	${PREFIX}/share/examples/snapcast/snapserver.conf \
 		${PKG_SYSCONFDIR}/snapserver.conf
@@ -68,13 +64,14 @@ post-install:
 	cd ${WRKSRC} && ${CHMOD} +r ${DESTDIR}${PREFIX}/share/snapserver/plug-ins/meta_mpd.py
 
 .include "options.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../lang/python/application.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
