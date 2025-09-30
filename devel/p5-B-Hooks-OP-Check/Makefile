@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/07/04 08:45:14 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/09/30 16:07:35 wiz Exp $
 
 DISTNAME=	B-Hooks-OP-Check-0.22
 PKGNAME=	p5-${DISTNAME}
@@ -18,8 +18,8 @@ USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/B/Hooks/OP/Check/.packlist
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/hook_op_check.h ${DESTDIR}/${PREFIX}/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/hook_op_check.h ${DESTDIR}${PREFIX}/include
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

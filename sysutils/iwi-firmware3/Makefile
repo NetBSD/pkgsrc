@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:26 agc Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/30 16:07:40 wiz Exp $
 #
 
 DISTNAME=		ipw2200-fw-3.0
@@ -30,10 +30,10 @@ NO_BUILD=		yes
 INSTALLATION_DIRS+=	libdata/if_iwi
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/libdata/if_iwi
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.ipw2200-fw ${DESTDIR}/${PREFIX}/libdata/if_iwi/LICENSE
-	${INSTALL_DATA} ${WRKSRC}/ipw2200-bss.fw ${DESTDIR}/${PREFIX}/libdata/if_iwi/iwi-bss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw2200-ibss.fw ${DESTDIR}/${PREFIX}/libdata/if_iwi/iwi-ibss.fw
-	${INSTALL_DATA} ${WRKSRC}/ipw2200-sniffer.fw ${DESTDIR}/${PREFIX}/libdata/if_iwi/iwi-sniffer.fw
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/if_iwi
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.ipw2200-fw ${DESTDIR}${PREFIX}/libdata/if_iwi/LICENSE
+	${INSTALL_DATA} ${WRKSRC}/ipw2200-bss.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-bss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw2200-ibss.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-ibss.fw
+	${INSTALL_DATA} ${WRKSRC}/ipw2200-sniffer.fw ${DESTDIR}${PREFIX}/libdata/if_iwi/iwi-sniffer.fw
 
 .include "../../mk/bsd.pkg.mk"

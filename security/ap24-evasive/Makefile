@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/05/30 17:31:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-2.4.0
 PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
@@ -33,12 +33,12 @@ do-build:
 	cd ${WRKSRC} && ${APXS} -c -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/lib/httpd
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/httpd
 	cd ${WRKSRC} && ${APXS} -S LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd -i -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_LA}
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/examples/httpd/
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/httpd/manual/mod
-	${INSTALL_DATA} ${WRKSRC}/mod_evasive.conf ${DESTDIR}/${PREFIX}/share/examples/httpd/mod_evasive.conf
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}/${PREFIX}/share/httpd/manual/mod/mod_evasive.md
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/httpd/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/httpd/manual/mod
+	${INSTALL_DATA} ${WRKSRC}/mod_evasive.conf ${DESTDIR}${PREFIX}/share/examples/httpd/mod_evasive.conf
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/httpd/manual/mod/mod_evasive.md
 
 .include "../../mk/apache.mk"
 .include "../../devel/pcre2/buildlink3.mk"

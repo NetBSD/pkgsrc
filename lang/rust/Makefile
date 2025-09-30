@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2025/08/26 13:56:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.345 2025/09/30 16:07:37 wiz Exp $
 
 DISTNAME=	rustc-1.88.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -619,7 +619,7 @@ do-install:
 # Turn off Address space layout randomization
 # so that we can build firefox natively:
 post-install:
-	paxctl +a ${DESTDIR}/${PREFIX}/bin/rustc
+	paxctl +a ${DESTDIR}${PREFIX}/bin/rustc
 .endif
 
 SUBST_CLASSES+=		destdir
@@ -680,8 +680,8 @@ stage0-bootstrap: install
 	)
 .endif
 .if ${OS_VARIANT} == "SmartOS"
-	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
-	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
+	${CP} -R ${DESTDIR}${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
+	${CP} -R ${DESTDIR}${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
 	set -e; \
 	for lib in libgcc_s.so.1 libstdc++.so.6; do \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/08/30 22:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=	grun-0.9.3
 PKGREVISION=	44
@@ -26,7 +26,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/grun
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/grun.1x \
-		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/grun.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/grun.1
 	${INSTALL_DATA} ${WRKSRC}/gassoc ${DESTDIR}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/consfile ${DESTDIR}/${EGDIR}
 

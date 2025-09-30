@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=	denyhosts-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,8 +34,8 @@ RCD_SCRIPTS+=	denyhosts
 SMF_NAME=	denyhost
 
 post-install:
-	mv ${DESTDIR}/${PKG_SYSCONFDIR}/denyhosts.conf \
-		${DESTDIR}/${PREFIX}/${EGDIR}/denyhosts.conf
+	mv ${DESTDIR}${PKG_SYSCONFDIR}/denyhosts.conf \
+		${DESTDIR}${PREFIX}/${EGDIR}/denyhosts.conf
 
 EGG_NAME=	DenyHosts-${PKGVERSION_NOREV}
 

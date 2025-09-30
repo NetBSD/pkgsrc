@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2021/10/18 08:16:49 tm Exp $
+# $NetBSD: Makefile,v 1.10 2025/09/30 16:07:38 wiz Exp $
 #
 
 DISTNAME=	rbldnsd-0.998
@@ -43,7 +43,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 	set -e; for doc in ${RBLDNSD_DOCS}; do \
 	    ${INSTALL_DATA} ${WRKSRC}/"$$doc" \
-	    ${DESTDIR}/${PREFIX}/share/doc/rbldnsd/; \
+	    ${DESTDIR}${PREFIX}/share/doc/rbldnsd/; \
 	    done
 
 .include "../../mk/bsd.pkg.mk"

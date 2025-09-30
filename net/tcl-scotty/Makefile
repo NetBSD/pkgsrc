@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2021/04/24 11:40:49 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/09/30 16:07:38 wiz Exp $
 
 DISTNAME=	scotty-${DIST_VERS}
 PKGNAME=	tcl-scotty-${DIST_VERS}
@@ -47,8 +47,8 @@ pre-install:
 	cd ${WRKSRC}/${BUILD_DIRS} && ${INSTALL} ../tnm/ntping/ntping.8 ../doc
 
 post-install:
-	cd ${DESTDIR}/${PREFIX}/bin && ${LN} -f -s scotty${DIST_VERS} scotty
-	cd ${DESTDIR}/${PREFIX}/lib/tcl/tnm${DIST_VERS}; umask 022; \
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -f -s scotty${DIST_VERS} scotty
+	cd ${DESTDIR}${PREFIX}/lib/tcl/tnm${DIST_VERS}; umask 022; \
 		sed -e 's:${DESTDIR}/::' <pkgIndex.tcl >pkgIndex.tcl.new; \
 		rm -f pkgIndex.tcl; mv pkgIndex.tcl.new pkgIndex.tcl
 

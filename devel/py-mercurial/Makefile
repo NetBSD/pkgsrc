@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/09/23 00:24:57 joerg Exp $
+# $NetBSD: Makefile,v 1.109 2025/09/30 16:07:36 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -44,7 +44,7 @@ post-build:
 
 post-install:
 	cd ${WRKSRC} && PYTHON=${PYTHONBIN} make install-chg \
-	    PREFIX=${DESTDIR}/${PREFIX} \
+	    PREFIX=${DESTDIR}${PREFIX} \
 	    MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/*.5  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/12/16 15:46:44 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/30 16:07:40 wiz Exp $
 #
 
 PKGNAME=	pluged-0.1
@@ -29,9 +29,9 @@ PLIST.rcd=	yes
 .endif
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/sbin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/pluged ${DESTDIR}/${PREFIX}/sbin/pluged
+	${INSTALL_PROGRAM} ${WRKSRC}/pluged ${DESTDIR}${PREFIX}/sbin/pluged
 	${INSTALL_DATA} ${WRKSRC}/pluged.conf ${DESTDIR}/${EGDIR}/pluged.conf
 .if ${INIT_SYSTEM} == "rc.d"
 	${INSTALL_DATA_DIR} ${DESTDIR}/${RCDDIR}

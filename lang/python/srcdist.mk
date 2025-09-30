@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.45 2025/01/16 23:30:07 gutteridge Exp $
+# $NetBSD: srcdist.mk,v 1.46 2025/09/30 16:07:37 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -31,7 +31,7 @@ python-std-patchsetup:
 post-patch: python-std-patchsetup
 
 python-std-setuptools-cleanup:
-	${RM} -rf ${DESTDIR}/${PREFIX}/${PYLIB}/lib-dynload/UNKNOWN*
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYLIB}/lib-dynload/UNKNOWN*
 
 post-install: python-std-setuptools-cleanup
 

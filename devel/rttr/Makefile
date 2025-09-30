@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/08/20 11:34:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/09/30 16:07:36 wiz Exp $
 
 DISTNAME=	rttr-0.9.6-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -26,7 +26,7 @@ CXXFLAGS+=	-Wno-error=implicit-int-float-conversion
 .endif
 
 post-install:
-	chmod -R a+r ${DESTDIR}/${PREFIX}/include/rttr/
-	chmod a+r ${DESTDIR}/${PREFIX}/share/rttr/*
+	chmod -R a+r ${DESTDIR}${PREFIX}/include/rttr/
+	chmod a+r ${DESTDIR}${PREFIX}/share/rttr/*
 
 .include "../../mk/bsd.pkg.mk"

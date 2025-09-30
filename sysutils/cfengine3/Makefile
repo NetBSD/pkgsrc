@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/04/19 07:58:24 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=	cfengine-community-3.24.1
 PKGNAME=	${DISTNAME:S/-community//}
@@ -88,7 +88,7 @@ update-masterfiles: configure
 post-install:
 	for cf in cf-agent cf-execd cf-key cf-monitord cf-promises cf-runagent cf-serverd ; \
 	do LD_LIBRARY_PATH=${DESTDIR}${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/$$cf -M \
-		> ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8/$$cf.8 ; \
+		> ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$cf.8 ; \
 	done
 
 .include "../../devel/pcre2/buildlink3.mk"

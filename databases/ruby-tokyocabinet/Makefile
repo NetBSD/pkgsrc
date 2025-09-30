@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/01/06 13:53:40 taca Exp $
+# $NetBSD: Makefile,v 1.31 2025/09/30 16:07:35 wiz Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.31
@@ -22,7 +22,7 @@ do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${RUBY} test.rb
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 	cd ${WRKSRC}/doc && pax -rwpp . ${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUBY_GENERATE_PLIST}
 

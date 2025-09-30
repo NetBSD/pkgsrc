@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/20 11:57:41 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/09/30 16:07:37 wiz Exp $
 
 DISTNAME=	exult_audio
 PKGNAME=	exultaudio-1.0
@@ -19,7 +19,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 EXTRACT_DIR=		${WRKDIR}/exult-data
-EXULTDIR=		${DESTDIR}/${PREFIX}/share/exult
+EXULTDIR=		${DESTDIR}${PREFIX}/share/exult
 INSTALLATION_DIRS+=	share/exult/music
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/09/06 13:17:10 bsiegert Exp $
+# $NetBSD: Makefile,v 1.58 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=		direnv-2.37.1
 PKGREVISION=		2
@@ -19,7 +19,7 @@ GO_BUILD_PATTERN+=	.
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"

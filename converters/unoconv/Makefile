@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/04/09 15:38:08 manu Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/30 16:07:35 wiz Exp $
 
 DISTNAME=	unoconv-0.8.2
 #PKGREVISION=	1
@@ -22,9 +22,9 @@ pre-build:
 	     ${FILESDIR}/unoconv.sh > ${WRKDIR}/unoconv.sh
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/bin
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}/${PREFIX}/libexec
-	${INSTALL_MAN_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/unoconv \
 	    ${DESTDIR}${PREFIX}/libexec/unoconv.py
 	${INSTALL_SCRIPT} ${WRKDIR}/unoconv.sh \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/09/17 08:08:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/09/30 16:07:37 wiz Exp $
 
 DISTNAME=		noto-emoji-2.051
 PKGNAME=		${DISTNAME:S/emoji/emoji-ttf/}
@@ -22,6 +22,6 @@ FONTSDIR=		share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTSDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/fonts/NotoColorEmoji.ttf ${DESTDIR}/${PREFIX}/${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/NotoColorEmoji.ttf ${DESTDIR}${PREFIX}/${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"

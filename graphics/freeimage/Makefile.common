@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2025/05/14 13:05:52 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2025/09/30 16:07:37 wiz Exp $
 # used by graphics/freeimage/Makefile
 # used by graphics/freeimageplus/Makefile
 
@@ -17,8 +17,8 @@ USE_TOOLS+=		gmake pkg-config
 
 WRKSRC=		${WRKDIR}/FreeImage
 
-MAKE_FLAGS+=	INCDIR=${DESTDIR}/${PREFIX}/include
-MAKE_FLAGS+=	INSTALLDIR=${DESTDIR}/${PREFIX}/lib
+MAKE_FLAGS+=	INCDIR=${DESTDIR}${PREFIX}/include
+MAKE_FLAGS+=	INSTALLDIR=${DESTDIR}${PREFIX}/lib
 
 PATCHDIR=	${.CURDIR}/../../graphics/freeimage/patches
 DISTINFO_FILE=	${.CURDIR}/../../graphics/freeimage/distinfo

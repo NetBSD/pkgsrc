@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2023/08/23 00:33:46 gutteridge Exp $
+# $NetBSD: Makefile,v 1.46 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=	viewvc-1.2.3
 PKGREVISION=	2
@@ -78,7 +78,7 @@ do-install:
 .endfor
 
 post-install:
-	( cd ${DESTDIR}/${PREFIX}/${VIEWVCDIR}/bin/mod_python ; \
+	( cd ${DESTDIR}${PREFIX}/${VIEWVCDIR}/bin/mod_python ; \
 		${CHMOD} ${SHAREMODE} .htaccess *.py)
 
 .include "../../lang/python/application.mk"

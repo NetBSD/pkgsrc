@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2025/08/22 13:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.132 2025/09/30 16:07:36 wiz Exp $
 
 DISTNAME=	glusterfs-10.4
 PKGREVISION=	11
@@ -154,11 +154,11 @@ clean-opt:
 .if ${OPSYS} == "Linux"
 post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount.glusterfs \
-	    ${DESTDIR}/${PREFIX}/sbin/mount.glusterfs
+	    ${DESTDIR}${PREFIX}/sbin/mount.glusterfs
 .else
 post-install:
 	${INSTALL_SCRIPT} ${DESTDIR}/sbin/mount_glusterfs \
-	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
+	    ${DESTDIR}${PREFIX}/sbin/mount_glusterfs
 .endif
 
 .include "../../lang/python/pyversion.mk"

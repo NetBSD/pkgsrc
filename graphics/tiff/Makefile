@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2025/09/26 10:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2025/09/30 16:07:37 wiz Exp $
 
 VERSION_BASE=	4.7.1
 # Accomodate testing unreleased versions.
@@ -38,7 +38,7 @@ PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 TEST_TARGET=		check
 
 post-install:
-	cd ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3 && for file in *.3tiff; do\
 		target=`${ECHO} $$file | sed "s/3tiff/3/"`; \
 		${MV} $$file $$target; \
 	done

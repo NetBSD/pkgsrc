@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/04/24 00:45:07 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2025/09/30 16:07:37 wiz Exp $
 
 DISTNAME=		Raleway-0.0.20161116
 PKGNAME=		${DISTNAME:S/Raleway/raleway-ttf/}
@@ -24,6 +24,6 @@ FONTSDIR=		share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTSDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/fonts/*/*.ttf ${WRKSRC}/fonts/*/*.otf ${DESTDIR}/${PREFIX}/${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/*/*.ttf ${WRKSRC}/fonts/*/*.otf ${DESTDIR}${PREFIX}/${FONTSDIR}
 
 .include "../../mk/bsd.pkg.mk"
