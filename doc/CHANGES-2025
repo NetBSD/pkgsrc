@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5839 2025/09/30 08:12:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5840 2025/09/30 13:06:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8413,3 +8413,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-lint to 25.9.0 [adam 2025-09-30]
 	Updated security/py-asyncssh to 2.21.1 [adam 2025-09-30]
 	Updated devel/py-atpublic to 6.0.2 [adam 2025-09-30]
+	Updated net/bird to 3.1.4 [adam 2025-09-30]
+	Updated misc/stellarium to 25.3 [adam 2025-09-30]
