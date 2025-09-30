@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/08/11 14:16:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/09/30 08:10:50 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -220,10 +220,6 @@ ${PYSITELIB}/ansiblelint/rules/partial_become.md
 ${PYSITELIB}/ansiblelint/rules/partial_become.py
 ${PYSITELIB}/ansiblelint/rules/partial_become.pyc
 ${PYSITELIB}/ansiblelint/rules/partial_become.pyo
-${PYSITELIB}/ansiblelint/rules/pattern.md
-${PYSITELIB}/ansiblelint/rules/pattern.py
-${PYSITELIB}/ansiblelint/rules/pattern.pyc
-${PYSITELIB}/ansiblelint/rules/pattern.pyo
 ${PYSITELIB}/ansiblelint/rules/playbook_extension.md
 ${PYSITELIB}/ansiblelint/rules/playbook_extension.py
 ${PYSITELIB}/ansiblelint/rules/playbook_extension.pyc
@@ -293,7 +289,6 @@ ${PYSITELIB}/ansiblelint/schemas/main.pyo
 ${PYSITELIB}/ansiblelint/schemas/meta-runtime.json
 ${PYSITELIB}/ansiblelint/schemas/meta.json
 ${PYSITELIB}/ansiblelint/schemas/molecule.json
-${PYSITELIB}/ansiblelint/schemas/pattern.json
 ${PYSITELIB}/ansiblelint/schemas/play-argspec.json
 ${PYSITELIB}/ansiblelint/schemas/playbook.json
 ${PYSITELIB}/ansiblelint/schemas/requirements.json
