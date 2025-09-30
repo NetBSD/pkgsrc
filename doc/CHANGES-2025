@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5837 2025/09/29 21:59:35 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.5838 2025/09/30 06:50:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8406,3 +8406,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/gnucash-docs to 5.13 [wiz 2025-09-29]
 	Updated textproc/link-grammar to 5.12.8 [gutteridge 2025-09-29]
 	Updated textproc/py-link-grammar to 5.12.8 [gutteridge 2025-09-29]
+	Updated audio/snapcast to 0.33.0 [adam 2025-09-30]
+	Updated graphics/py-tifffile to 2025.9.30 [adam 2025-09-30]
