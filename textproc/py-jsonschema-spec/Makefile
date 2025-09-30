@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/07/05 11:44:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/30 14:27:14 wiz Exp $
 
 DISTNAME=	jsonschema_spec-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema-spec/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/p1c2u/jsonschema-spec
 COMMENT=	JSONSchema Spec with object-oriented paths
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pathable>=0.4.1:../../devel/py-pathable
 DEPENDS+=	${PYPKGPREFIX}-referencing>=0.28.0:../../textproc/py-referencing
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensions
