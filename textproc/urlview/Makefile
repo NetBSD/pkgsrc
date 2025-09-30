@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2021/04/25 06:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=	urlview-0.9
 PKGREVISION=	7
@@ -11,7 +11,7 @@ COMMENT=	Extract URLs from text files and display them in a menu
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
-	cp -p ${WRKSRC}/url_handler.sh ${DESTDIR}/${PREFIX}/bin/
+	cp -p ${WRKSRC}/url_handler.sh ${DESTDIR}${PREFIX}/bin/
 
 GNU_CONFIGURE=	yes
 

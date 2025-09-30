@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/08/30 22:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=	wxWidgets-3.2.8.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -128,8 +128,8 @@ post-build:
 post-install:
 	for f in ${WRKSRC}/locale/*.mo; do \
 	  lang=`basename $${f} .mo`; \
-	  ${INSTALL_DATA_DIR} "${DESTDIR}/${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES"; \
-	  ${INSTALL_DATA} "$${f}" "${DESTDIR}/${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES/wxstd.mo"; \
+	  ${INSTALL_DATA_DIR} "${DESTDIR}${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES"; \
+	  ${INSTALL_DATA} "$${f}" "${DESTDIR}${PREFIX}/share/wx-3.2/locale/$${lang}/LC_MESSAGES/wxstd.mo"; \
 	done
 	${INSTALL_DATA} ${WRKSRC}/wxwin.m4 ${DESTDIR}${PREFIX}/share/wx-3.2/aclocal/wxwin.m4
 	${INSTALL_DATA} ${WRKSRC}/docs/licence.txt ${DESTDIR}${PREFIX}/${DOCDIR}

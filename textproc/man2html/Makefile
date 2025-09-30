@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/02/03 21:13:48 bacon Exp $
+# $NetBSD: Makefile,v 1.11 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=	man2html-${PKGVERSION}
 PKGNAME=	man2html-20240105
@@ -19,7 +19,7 @@ REPLACE_PERL=	man2html
 INSTALLATION_DIRS=	bin ${PREFIX}/${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/man2html ${DESTDIR}/${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/man2html.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/man2html ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/man2html.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

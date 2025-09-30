@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/07/19 20:10:09 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/09/30 16:07:39 wiz Exp $
 #
 # Please also update the dependency pattern in mozilla-rootcerts-openssl
 # and bump its version when updating this package.
@@ -63,6 +63,6 @@ do-install:
 		${DESTDIR}${PREFIX}/sbin/mozilla-rootcerts
 	${INSTALL_DATA} ${WRKSRC}/certdata.txt ${DESTDIR}${DATADIR}/certdata.txt
 	${INSTALL_DATA} ${WRKSRC}/cacert.pem ${DESTDIR}${DATADIR}/cacert.pem
-	${INSTALL_DATA} files/gnupg2 ${DESTDIR}/${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} files/gnupg2 ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2025/04/20 22:33:33 js Exp $
+# $NetBSD: Makefile,v 1.93 2025/09/30 16:07:38 wiz Exp $
 
 PKGNAME=	pkg_chk-2.0.13
 CATEGORIES=	pkgtools
@@ -38,7 +38,7 @@ do-extract:
 	cp ${FILESDIR}/pkg_chk.8 ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_chk.sh ${DESTDIR}/${PREFIX}/sbin/pkg_chk
-	${INSTALL_MAN} ${WRKSRC}/pkg_chk.8 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_chk.sh ${DESTDIR}${PREFIX}/sbin/pkg_chk
+	${INSTALL_MAN} ${WRKSRC}/pkg_chk.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
 
 .include "../../mk/bsd.pkg.mk"

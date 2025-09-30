@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/09/23 11:39:46 kikadf Exp $
+# $NetBSD: Makefile,v 1.21 2025/09/30 16:07:40 wiz Exp $
 
 DISTNAME=			chromium-${VERSION}
 VERSION=			140.0.7339.185
@@ -297,7 +297,7 @@ do-install:
 .endfor
 	${INSTALL_LIB} ${BUILDDIR}/libvulkan.so.1 ${DESTDIR}${PREFIX}/lib/${CHROMIUM}/libvulkan.so
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/resources/manpage.1.in \
-		 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/${CHROMIUM}.1
+		 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${CHROMIUM}.1
 	${INSTALL_DATA} ${BUILDDIR}/*.pak ${DESTDIR}${PREFIX}/lib/${CHROMIUM}
 .for i in ${ICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/chrome/app/theme/chromium/product_logo_${i}.png \
