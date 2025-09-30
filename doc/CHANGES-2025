@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5838 2025/09/30 06:50:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5839 2025/09/30 08:12:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8408,3 +8408,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-link-grammar to 5.12.8 [gutteridge 2025-09-29]
 	Updated audio/snapcast to 0.33.0 [adam 2025-09-30]
 	Updated graphics/py-tifffile to 2025.9.30 [adam 2025-09-30]
+	Updated sysutils/ansible-core to 2.19.2 [adam 2025-09-30]
+	Updated sysutils/ansible to 12.0.0 [adam 2025-09-30]
+	Updated sysutils/ansible-lint to 25.9.0 [adam 2025-09-30]
+	Updated security/py-asyncssh to 2.21.1 [adam 2025-09-30]
+	Updated devel/py-atpublic to 6.0.2 [adam 2025-09-30]
