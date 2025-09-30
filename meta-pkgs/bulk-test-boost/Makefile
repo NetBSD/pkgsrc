@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/09/30 16:30:48 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2025/09/30 16:37:05 gdt Exp $
 
 DISTNAME=	bulk-test-boost-20231230
 CATEGORIES=	meta-pkgs
@@ -33,6 +33,7 @@ DEPENDS+=	gnucash-[0-9]*:../../finance/gnucash
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 DEPENDS+=	gource-[0-9]*:../../graphics/gource
 DEPENDS+=	gpick-[0-9]*:../../graphics/gpick
+DEPENDS+=	gr-osmosdr-[0-9]*:../../ham/gr-osmosdr
 DEPENDS+=	icinga2-[0-9]*:../../net/icinga2
 DEPENDS+=	inkscape-[0-9]*:../../graphics/inkscape
 DEPENDS+=	innoextract-[0-9]*:../../archivers/innoextract
