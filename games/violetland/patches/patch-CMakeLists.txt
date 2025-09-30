@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/09/30 09:35:29 adam Exp $
+
+Don't look for boost_system library.
+
+--- CMakeLists.txt.orig	2025-09-30 09:26:49.431022830 +0000
++++ CMakeLists.txt
+@@ -8,7 +8,7 @@ find_package(SDL_ttf REQUIRED)
+ find_package(SDL_mixer REQUIRED)
+ find_package(OpenGL REQUIRED)
+ find_package(Gettext REQUIRED)
+-find_package(Boost COMPONENTS filesystem system REQUIRED)
++find_package(Boost COMPONENTS filesystem REQUIRED)
+ add_definitions(-DBOOST_FILESYSTEM_VERSION=3)
+ 
+ # Searching for libintl using bundled CMake script

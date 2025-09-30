@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2025/09/27 09:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/09/30 09:35:28 adam Exp $
 
 DISTNAME=	violetland-0.5-source-with-dependencies
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:S/-source-with-dependencies//}
 PKGREVISION=	26
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ooxi/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,10 +18,11 @@ USE_TOOLS+=	xgettext
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
-.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
