@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2025/06/30 15:20:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.60 2025/09/30 13:05:43 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
 ${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
@@ -1682,11 +1682,6 @@ share/stellarium/skycultures/arabic_indigenous/Transliteration.md
 share/stellarium/skycultures/arabic_indigenous/description.md
 share/stellarium/skycultures/arabic_indigenous/index.json
 share/stellarium/skycultures/arabic_indigenous/names_dictionary.md
-share/stellarium/skycultures/arabic_lunar_mansions/Transliteration.md
-share/stellarium/skycultures/arabic_lunar_mansions/constellation_boundaries.dat
-share/stellarium/skycultures/arabic_lunar_mansions/description.md
-share/stellarium/skycultures/arabic_lunar_mansions/index.json
-share/stellarium/skycultures/arabic_lunar_mansions/names_dictionary.md
 share/stellarium/skycultures/aztec/description.md
 share/stellarium/skycultures/aztec/illustrations/Primeros_Memoriales.png
 share/stellarium/skycultures/aztec/illustrations/Tianquiztli_T.png
@@ -2513,7 +2508,7 @@ share/stellarium/stars/hip_gaia3/extra_name.fab
 share/stellarium/stars/hip_gaia3/gcvs.cat
 share/stellarium/stars/hip_gaia3/name.fab
 share/stellarium/stars/hip_gaia3/object_types_v0_1.cat
-share/stellarium/stars/hip_gaia3/stars_0_0v0_18.cat
+share/stellarium/stars/hip_gaia3/stars_0_0v0_19.cat
 share/stellarium/stars/hip_gaia3/stars_1_0v0_15.cat
 share/stellarium/stars/hip_gaia3/stars_2_0v0_16.cat
 share/stellarium/stars/hip_gaia3/stars_3_0v0_10.cat
@@ -2611,7 +2606,7 @@ share/stellarium/textures/saturn_rings_radial.png
 share/stellarium/textures/sedna.png
 share/stellarium/textures/star16x16.png
 share/stellarium/textures/star16x16_rays.png
-share/stellarium/textures/sun.png
+share/stellarium/textures/sun.webp
 share/stellarium/textures/telescope.png
 share/stellarium/textures/tethys.png
 share/stellarium/textures/titan.png
