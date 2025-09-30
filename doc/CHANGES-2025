@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5842 2025/09/30 14:24:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5843 2025/09/30 14:25:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8417,3 +8417,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/stellarium to 25.3 [adam 2025-09-30]
 	Updated devel/py-poetry to 2.1.4nb1 [wiz 2025-09-30]
 	Updated devel/py-test-textual-snapshot to 1.1.0nb1 [wiz 2025-09-30]
+	Updated net/py-aio-pika to 9.5.7nb1 [wiz 2025-09-30]
