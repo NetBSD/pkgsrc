@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2025/05/18 10:37:30 zafer Exp $
+# $NetBSD: Makefile,v 1.69 2025/09/30 14:29:17 gutteridge Exp $
 #
 
 DISTNAME=		librep_0.92.7
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang devel
 MASTER_SITES=		https://www.aydogan.net/distfiles/lang/
 EXTRACT_SUFX=		.tar.xz
