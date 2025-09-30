@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/07/02 18:53:41 vins Exp $
+# $NetBSD: Makefile,v 1.6 2025/09/30 16:07:39 wiz Exp $
 
 DISTNAME=	bsdfetch-1.1.2
 CATEGORIES=	sysutils
@@ -18,6 +18,6 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-*
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bsdfetch ${DESTDIR}/${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bsdfetch ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

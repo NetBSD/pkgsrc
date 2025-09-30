@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/08/31 19:13:47 vins Exp $
+# $NetBSD: Makefile,v 1.39 2025/09/30 16:07:37 wiz Exp $
 #
 
 DISTNAME=	perfuse-20190222
@@ -30,14 +30,14 @@ pre-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/libperfuse/perfuse.h \
-	    ${DESTDIR}/${PREFIX}/include/
+	    ${DESTDIR}${PREFIX}/include/
 	${INSTALL_LIB} ${WRKSRC}/lib/libperfuse/libperfuse.so \
-	    ${DESTDIR}/${PREFIX}/lib/
+	    ${DESTDIR}${PREFIX}/lib/
 	cd ${DESTDIR}${PREFIX}/lib && \
 		ln -s libperfuse.so libperfuse.so.0 && \
 		ln -s libperfuse.so libperfuse.so.0.0
 
 	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/perfused/perfused \
-	    ${DESTDIR}/${PREFIX}/sbin
+	    ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"

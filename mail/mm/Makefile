@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/01 18:50:46 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/09/30 16:07:38 wiz Exp $
 
 DISTNAME=	mm-0.96.0.14
 CATEGORIES=	mail
@@ -66,7 +66,7 @@ pre-install:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sys-prof			\
-		${DESTDIR}/${PREFIX}/bin/mm-sysprof
+		${DESTDIR}${PREFIX}/bin/mm-sysprof
 	${RUN}cd ${WRKDIR}/mm/docs && 				\
 		${PAX} -rw . ${DESTDIR}${DOCDIR}
 .for f in samples/*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2019/07/11 09:25:26 nia Exp $
+# $NetBSD: Makefile,v 1.21 2025/09/30 16:07:35 wiz Exp $
 #
 
 DISTNAME=	tokyotyrant-ruby-1.13
@@ -25,7 +25,7 @@ do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${RUBY} test.rb
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 	cd ${WRKSRC}/doc && pax -rwpp . ${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUBY_GENERATE_PLIST}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.271 2025/08/30 22:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.272 2025/09/30 16:07:38 wiz Exp $
 
 DISTNAME=	octave-10.2.0
 PKGREVISION=	2
@@ -107,7 +107,7 @@ post-install:
 .for f in ${OCTAVE_INFO}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PKGINFODIR}
 .endfor
-	${RM} -f ${DESTDIR}/${PREFIX}/lib/charset.alias
+	${RM} -f ${DESTDIR}${PREFIX}/lib/charset.alias
 
 .if ${OPSYS} != "Darwin"
 # Also can use osmesa for plotting.
