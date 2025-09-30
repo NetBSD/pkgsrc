@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/08 13:07:41 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2025/09/30 16:30:48 gdt Exp $
 
 DISTNAME=	bulk-test-boost-20231230
 CATEGORIES=	meta-pkgs
@@ -14,10 +14,14 @@ RESTRICTED=		Just for test build purposes
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-# All of these (primarily leaf) packages depend on Boost.
-# Feel free to add one if you care about it not breaking.
-# The current list is mostly arbitrary, resulting from a grep of the
-# pkgsrc tree.
+# This package intends to depend on all packages that depend on boost,
+# so that it can be used to qualify updates.
+#
+# Feel free to add packages.  To find packages that depend on
+# boost-headers:
+#   revbump.py -n devel/boost-headers
+# The current list is a small subset of the 279 in pkgsrc, for no
+# particular reason,
 
 DEPENDS+=	abiword-[0-9]*:../../editors/abiword
 DEPENDS+=	bitcoin-[0-9]*:../../finance/bitcoin
@@ -55,6 +59,7 @@ DEPENDS+=	source-highlight-[0-9]*:../../textproc/source-highlight
 DEPENDS+=	strawberry-[0-9]*:../../audio/strawberry
 DEPENDS+=	tcpflow-[0-9]*:../../net/tcpflow
 DEPENDS+=	ugrep-[0-9]*:../../textproc/ugrep
+DEPENDS+=	uhd-[0-9]*:../../ham/uhd
 DEPENDS+=	xsd-[0-9]*:../../devel/xsd
 DEPENDS+=	znc-[0-9]*:../../chat/znc
 
