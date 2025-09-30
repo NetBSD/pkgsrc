@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/04/15 16:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/09/30 13:36:11 ryoon Exp $
 #
 # When updating this, also update x11/xcb-proto
 
@@ -22,7 +22,7 @@ PY_PATCHPLIST=	yes
 
 # pkgsrc infrastructure does not support opt-2 files
 post-install:
-	${RM} -f ${DESTDIR}/${PREFIX}/${PYSITELIB}/xcbgen/__pycache__/*opt-2*pyc
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/xcbgen/__pycache__/*opt-2*pyc
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
