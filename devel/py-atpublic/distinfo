@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/20 12:06:56 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/09/30 08:12:32 adam Exp $
 
-BLAKE2s (atpublic-6.0.1.tar.gz) = ab7ea5715bf20f3990a3b9243f4a3f1d2199f448b78e1b9b433d60e61631c13e
-SHA512 (atpublic-6.0.1.tar.gz) = 7bfe1ac7663ac069c075d729cce0005e66406c3eba763f47b9d3c38cd28d8bd7ecf12666718e92a810cc3f76cd7a8e8bdcfbc4ab95522b5898089959dce84678
-Size (atpublic-6.0.1.tar.gz) = 17520 bytes
+BLAKE2s (atpublic-6.0.2.tar.gz) = 7d6bd630b2b554f54545840d0ae75a2518561a1e90378755e3207ed2770269d1
+SHA512 (atpublic-6.0.2.tar.gz) = 243f251f169746422e7ce751cabe51b40713d6226b3a2bfb9d44487a5c04cb15f8534a0054ec77b471f64dc207fffb949c4e657e7834efe2675b7d05f795c8c7
+Size (atpublic-6.0.2.tar.gz) = 17708 bytes
