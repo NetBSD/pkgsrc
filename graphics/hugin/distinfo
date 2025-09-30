@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2025/03/05 06:27:43 adam Exp $
+$NetBSD: distinfo,v 1.34 2025/09/30 10:44:39 adam Exp $
 
 BLAKE2s (hugin-2024.0.1.tar.bz2) = c9fa693f72ddb2c20dd0df6738785ebb08a0e0a63f697db55f5eed2521b7d340
 SHA512 (hugin-2024.0.1.tar.bz2) = 4109f3be0b03d8b4205a79e0d76e18186278601d3e56f46271df1804db6f11f2e93fe1e1b68f2d7966c6d50ce58d4bf47e555e9cf8c34674315b2e89da36a722
 Size (hugin-2024.0.1.tar.bz2) = 10352250 bytes
-SHA1 (patch-CMakeLists.txt) = f46fbe2c618ec1c1ecc9906d41b1640c73bda5bf
+SHA1 (patch-CMakeLists.txt) = 1135a0793988d2d68fd5026f358fb2e1f1945219
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
 SHA1 (patch-src_hugin1_hugin_MainFrame.cpp) = a223c6f070bb36d34099c84bfc32237abdd6c842
