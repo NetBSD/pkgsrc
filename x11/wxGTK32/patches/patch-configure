@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.4 2023/12/11 16:25:47 jperkin Exp $
+$NetBSD: patch-configure,v 1.5 2025/09/30 09:49:32 adam Exp $
 
+On Darwin, don't use obsoleted AGL framework.
 Use standard sonames on SunOS.
 
---- configure.orig	2023-12-11 16:17:41.846863960 +0000
+--- configure.orig	2025-05-25 17:15:56.000000000 +0000
 +++ configure
-@@ -44282,7 +44282,8 @@ fi
+@@ -32397,7 +32397,7 @@ if test "$wxUSE_OPENGL" = "yes" -o "$wxU
+ 
+ 
+     if test "$wxUSE_OSX_COCOA" = 1; then
+-        OPENGL_LIBS="-framework OpenGL -framework AGL"
++        OPENGL_LIBS="-framework OpenGL"
+     elif test "$wxUSE_MSW" = 1; then
+         OPENGL_LIBS="-lopengl32 -lglu32"
+     elif test "$wxUSE_MOTIF" = 1 -o "$wxUSE_X11" = 1 -o "$wxUSE_GTK" = 1 -o "$wxUSE_QT" = 1; then
+@@ -44581,7 +44581,8 @@ fi
        *-*-solaris2* )
          SONAME_FLAG="-h "
          USE_SOVERSION=1
