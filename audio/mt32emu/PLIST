@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/26 18:30:41 js Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/01 14:31:06 js Exp $
 include/mt32emu.h
 include/mt32emu/Enumerations.h
 include/mt32emu/File.h
@@ -18,9 +18,9 @@ lib/cmake/MT32Emu/MT32EmuConfig.cmake
 lib/cmake/MT32Emu/MT32EmuConfigVersion.cmake
 lib/cmake/MT32Emu/MT32EmuTargets-noconfig.cmake
 lib/cmake/MT32Emu/MT32EmuTargets.cmake
-lib/libmt32emu.${PKGVERSION}.dylib
-lib/libmt32emu.2.dylib
-lib/libmt32emu.dylib
+lib/libmt32emu.so
+lib/libmt32emu.so.${PKGVERSION}
+lib/libmt32emu.so.2
 lib/pkgconfig/mt32emu.pc
 share/doc/munt/libmt32emu/AUTHORS.txt
 share/doc/munt/libmt32emu/COPYING.LESSER.txt
