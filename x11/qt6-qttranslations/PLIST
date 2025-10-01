@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/09/22 05:43:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/01 07:25:10 adam Exp $
 qt6/sbom/qttranslations-${PKGVERSION}.spdx
 qt6/translations/assistant_ar.qm
 qt6/translations/assistant_bg.qm
@@ -40,6 +40,7 @@ qt6/translations/designer_ka.qm
 qt6/translations/designer_ko.qm
 qt6/translations/designer_nl.qm
 qt6/translations/designer_pl.qm
+qt6/translations/designer_pt_BR.qm
 qt6/translations/designer_ru.qm
 qt6/translations/designer_sk.qm
 qt6/translations/designer_sl.qm
@@ -64,6 +65,7 @@ qt6/translations/linguist_ka.qm
 qt6/translations/linguist_ko.qm
 qt6/translations/linguist_nl.qm
 qt6/translations/linguist_pl.qm
+qt6/translations/linguist_pt_BR.qm
 qt6/translations/linguist_ru.qm
 qt6/translations/linguist_sk.qm
 qt6/translations/linguist_sl.qm
@@ -268,6 +270,7 @@ qt6/translations/qtserialport_ja.qm
 qt6/translations/qtserialport_ka.qm
 qt6/translations/qtserialport_ko.qm
 qt6/translations/qtserialport_pl.qm
+qt6/translations/qtserialport_pt_BR.qm
 qt6/translations/qtserialport_ru.qm
 qt6/translations/qtserialport_sv.qm
 qt6/translations/qtserialport_tr.qm
@@ -281,6 +284,7 @@ qt6/translations/qtwebengine_ka.qm
 qt6/translations/qtwebengine_ko.qm
 qt6/translations/qtwebengine_lg.qm
 qt6/translations/qtwebengine_pl.qm
+qt6/translations/qtwebengine_pt_BR.qm
 qt6/translations/qtwebengine_ru.qm
 qt6/translations/qtwebengine_sv.qm
 qt6/translations/qtwebengine_tr.qm
@@ -295,6 +299,7 @@ qt6/translations/qtwebsockets_ja.qm
 qt6/translations/qtwebsockets_ka.qm
 qt6/translations/qtwebsockets_ko.qm
 qt6/translations/qtwebsockets_pl.qm
+qt6/translations/qtwebsockets_pt_BR.qm
 qt6/translations/qtwebsockets_ru.qm
 qt6/translations/qtwebsockets_sv.qm
 qt6/translations/qtwebsockets_tr.qm
