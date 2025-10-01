@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/24 16:19:36 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/01 12:12:24 kikadf Exp $
 bin/copyq
 lib/copyq/plugins/libitemencrypted.so
 lib/copyq/plugins/libitemfakevim.so
@@ -11,6 +11,7 @@ lib/copyq/plugins/libitemtext.so
 man/man1/copyq.1
 share/applications/com.github.hluk.copyq.desktop
 share/bash-completion/completions/copyq
+share/copyq/themes/black.ini
 share/copyq/themes/dark.ini
 share/copyq/themes/forest.ini
 share/copyq/themes/items.css
