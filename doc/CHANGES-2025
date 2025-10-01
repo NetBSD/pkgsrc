@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5858 2025/10/01 11:13:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5859 2025/10/01 12:12:47 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8473,3 +8473,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 26.26.1 [pin 2025-10-01]
 	Updated fonts/harfbuzz to 12.1.0 [adam 2025-10-01]
 	Updated fonts/harfbuzz-icu to 12.1.0 [adam 2025-10-01]
+	Updated x11/copyq to 12.0.1 [kikadf 2025-10-01]
