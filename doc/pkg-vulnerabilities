@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.566 2025/10/01 20:16:54 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.567 2025/10/01 20:24:53 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27679,3 +27679,10 @@ py{27,39,310,311,312,313}-torch-[0-9]*	integer-overflow	https://nvd.nist.gov/vul
 py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55557
 py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55558
 py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55560
+ruby{31,32,33,34}-rexml<3.4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58767
+ruby{31,32,33,34}-rack<2.2.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-59830
+squid<7.2		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59362
+tcpreplay<4.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-51005
+tcpreplay<4.5.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-51006
+tor<0.4.8.18		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-4444
+zookeeper<3.9.4		access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-58457
