@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.565 2025/10/01 19:56:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.566 2025/10/01 20:16:54 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27660,3 +27660,22 @@ openbabel-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2
 openbabel-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-10999
 openbabel-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-11000
 opengrok<1.14.2		cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-30755
+openssl<3.5.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-9230
+openssl<3.5.4	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-9231
+openssl<3.5.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-9232
+podman-[0-9]*	file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2025-4953
+py{27,39,310,311,312,313}-authlib<1.6.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59420
+py{27,39,310,311,312,313}-pip-[0-9]*	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-8869
+py{27,39,310,311,312,313}-jupyterlab<4.4.8	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-59842
+py{27,39,310,311,312,313}-torch<2.8.0	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-46148
+py{27,39,310,311,312,313}-torch<2.7.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46149
+py{27,39,310,311,312,313}-torch<2.7.0	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-46150
+py{27,39,310,311,312,313}-torch<2.7.0	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-46152
+py{27,39,310,311,312,313}-torch<2.7.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-46153
+py{27,39,310,311,312,313}-torch-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55551
+py{27,39,310,311,312,313}-torch-[0-9]*	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-55552
+py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55553
+py{27,39,310,311,312,313}-torch-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-55554
+py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55557
+py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55558
+py{27,39,310,311,312,313}-torch<2.8.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-55560
