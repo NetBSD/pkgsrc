@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/07/07 05:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/01 19:44:07 wiz Exp $
 
 DISTNAME=	openapi_spec_validator-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-spec-validator/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-openapi/openapi-spec-validator
 COMMENT=	OpenAPI 2.0 (aka Swagger) and OpenAPI 3.0 spec validator
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-path>=0.3.1:../../textproc/py-jsonschema-path
 DEPENDS+=	${PYPKGPREFIX}-lazy-object-proxy>=1.7.1:../../devel/py-lazy-object-proxy
