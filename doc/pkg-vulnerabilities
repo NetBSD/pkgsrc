@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.563 2025/10/01 19:14:26 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.564 2025/10/01 19:32:17 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27615,3 +27615,28 @@ firefox140<140.3	multiple-vulnerabilities	https://www.mozilla.org/en-US/security
 thunderbird<143		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-77/
 thunderbird<140.3	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-78/
 firefox<143.0.3		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-80/
+asterisk<18.26.3	privilege-elevation	https://nvd.nist.gov/vuln/detail/CVE-2025-1131
+asterisk>=20<20.15.1	privilege-elevation	https://nvd.nist.gov/vuln/detail/CVE-2025-1131
+asterisk>=21<21.10.1	privilege-elevation	https://nvd.nist.gov/vuln/detail/CVE-2025-1131
+asterisk>=22<22.5.1	privilege-elevation	https://nvd.nist.gov/vuln/detail/CVE-2025-1131
+binutils<2.46		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11081
+binutils<2.46		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11082
+binutils<2.46		heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11083
+chromium<140.0.7339.185	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10500
+chromium<140.0.7339.185	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10501
+chromium<140.0.7339.185	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10502
+chromium<140.0.7339.185	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10585
+chromium<140.0.7339.207	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-10890
+chromium<140.0.7339.207	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10891
+chromium<140.0.7339.207	heap-corruption		https://nvd.nist.gov/vuln/detail/CVE-2025-10892
+dnsdist<2.0.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-30187
+element-web<1.11.112	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2025-59161
+expat<2.7.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-59375
+ghostscript-gpl-[0-9]*		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59798
+ghostscript-agpl<10.06.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59798
+ghostscript-gpl-[0-9]*		stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59799
+ghostscript-agpl<10.06.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-59799
+ghostscript-gpl-[0-9]*		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-59800
+ghostscript-agpl<10.06.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-59800
+glib-networking-[0-9]*		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-60018
+glib-networking-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-60019
