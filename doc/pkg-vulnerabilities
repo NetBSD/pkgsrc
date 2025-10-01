@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.561 2025/09/28 15:31:41 khorben Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.562 2025/10/01 17:00:05 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27605,3 +27605,6 @@ webkit-gtk<2.48.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-43
 tiff<4.7.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-9900
 botan-[0-9]*	eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 got<0.118	directory-traversal	https://gameoftrees.org/releases/changes.html#2025-09-09
+py{27,39,310,311,312,313}-django<4.2.25		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
+py{27,39,310,311,312,313}-django>=5.1<5.1.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
+py{27,39,310,311,312,313}-django>=5.2<5.2.7	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
