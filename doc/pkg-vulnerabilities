@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.567 2025/10/01 20:24:53 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.568 2025/10/01 21:04:57 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27686,3 +27686,8 @@ tcpreplay<4.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-51005
 tcpreplay<4.5.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-51006
 tor<0.4.8.18		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-4444
 zookeeper<3.9.4		access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-58457
+poppler<25.04.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-43718
+podofo-[0-9]*		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-46205
+py{27,39,310,311,312,313}-django<4.2.25		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
+py{27,39,310,311,312,313}-django>=5.1<5.1.13	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
+py{27,39,310,311,312,313}-django>=5.2<5.2.7	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
