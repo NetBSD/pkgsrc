@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/06/30 15:18:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/10/01 07:25:07 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -3125,12 +3125,6 @@ qt6/plugins/qmltooling/libqmldbg_profiler.so
 qt6/plugins/qmltooling/libqmldbg_quickprofiler.so
 qt6/plugins/qmltooling/libqmldbg_server.so
 qt6/plugins/qmltooling/libqmldbg_tcp.so
-qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.a
-qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.prl
-qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Assets_Downloader_init.cpp.o
-qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
-qt6/qml/Assets/Downloader/plugins.qmltypes
-qt6/qml/Assets/Downloader/qmldir
 qt6/qml/QML/plugins.qmltypes
 qt6/qml/QML/qmldir
 qt6/qml/QmlTime/qmldir
@@ -3138,6 +3132,12 @@ qt6/qml/QmlTime/qmltime.qmltypes
 qt6/qml/Qt/labs/animation/liblabsanimationplugin.so
 qt6/qml/Qt/labs/animation/plugins.qmltypes
 qt6/qml/Qt/labs/animation/qmldir
+qt6/qml/Qt/labs/assetdownloader/libqmlassetdownloaderplugin.a
+qt6/qml/Qt/labs/assetdownloader/libqmlassetdownloaderplugin.prl
+qt6/qml/Qt/labs/assetdownloader/objects-Release/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Qt_labs_assetdownloader_init.cpp.o
+qt6/qml/Qt/labs/assetdownloader/objects-Release/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
+qt6/qml/Qt/labs/assetdownloader/plugins.qmltypes
+qt6/qml/Qt/labs/assetdownloader/qmldir
 qt6/qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
 qt6/qml/Qt/labs/folderlistmodel/plugins.qmltypes
 qt6/qml/Qt/labs/folderlistmodel/qmldir
@@ -4143,6 +4143,7 @@ qt6/qml/QtQuick/Controls/Fusion/impl/RadioIndicator.qml
 qt6/qml/QtQuick/Controls/Fusion/impl/SliderGroove.qml
 qt6/qml/QtQuick/Controls/Fusion/impl/SliderHandle.qml
 qt6/qml/QtQuick/Controls/Fusion/impl/SwitchIndicator.qml
+qt6/qml/QtQuick/Controls/Fusion/impl/TextFieldBackground.qml
 qt6/qml/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so
 qt6/qml/QtQuick/Controls/Fusion/impl/plugins.qmltypes
 qt6/qml/QtQuick/Controls/Fusion/impl/qmldir

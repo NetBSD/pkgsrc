@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/06/30 15:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/10/01 07:25:08 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -143,6 +143,7 @@ qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateAdditionalTargetInfo.cm
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfig.cmake
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateExtraProperties.cmake
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateTargets.cmake
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ScxmlGlobalPrivate/Qt6ScxmlGlobalPrivateVersionlessTargets.cmake

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/06/30 15:18:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/01 07:25:06 adam Exp $
 lib/pkgconfig/Qt6Bluetooth.pc
 lib/pkgconfig/Qt6Nfc.pc
 qt6/include/QtBluetooth/${PKGVERSION}/QtBluetooth/private/lecmaccalculator_p.h
@@ -124,6 +124,7 @@ qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityConfig.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityConfigVersion.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityExtraProperties.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityTargets.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Connectivity/Qt6ConnectivityVersionlessTargets.cmake
