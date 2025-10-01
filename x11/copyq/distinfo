@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/08/24 16:19:36 kikadf Exp $
+$NetBSD: distinfo,v 1.5 2025/10/01 12:12:24 kikadf Exp $
 
-BLAKE2s (copyq-11.0.0.tar.gz) = d6ff0d61654fecb724f7894c930b00eb14875f8a8b9c015e9aa6057fad3cf6e7
-SHA512 (copyq-11.0.0.tar.gz) = 7a215ab9603db2c6f118be38926c193fbed10ca29118643627e856350e7ae1489524666483bf17fe3ea2a3163f95ecf88e5f2342ae102f37c77d8174ace3bf5f
-Size (copyq-11.0.0.tar.gz) = 3495493 bytes
+BLAKE2s (copyq-12.0.1.tar.gz) = 758ef8ac8be8a049166f067e2b0f8d6833715221d219583250dde56ebcd05d0f
+SHA512 (copyq-12.0.1.tar.gz) = c1de11cea82c2efe1fd2702f327d9ea04dbda9e0c5e5ab4b04c42b35faf7a4dd850fca92c0b07f3a9b2d7de0dda2ee90b2e0e9e790ce2cf93873ec09b727c902
+Size (copyq-12.0.1.tar.gz) = 3501522 bytes
