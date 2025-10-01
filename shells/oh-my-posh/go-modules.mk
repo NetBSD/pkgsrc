@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.106 2025/09/19 13:50:13 pin Exp $
+# $NetBSD: go-modules.mk,v 1.107 2025/10/01 09:34:31 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.2.zip
@@ -99,8 +99,8 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.mod
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.zip
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.17.mod
+GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.17.zip
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-wordwrap/@v/v1.0.1.mod
