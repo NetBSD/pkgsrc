@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5859 2025/10/01 12:12:47 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5860 2025/10/01 19:27:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8474,3 +8474,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 12.1.0 [adam 2025-10-01]
 	Updated fonts/harfbuzz-icu to 12.1.0 [adam 2025-10-01]
 	Updated x11/copyq to 12.0.1 [kikadf 2025-10-01]
+	Updated x11/libdrm to 2.4.126 [wiz 2025-10-01]
