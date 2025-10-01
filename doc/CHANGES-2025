@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5862 2025/10/01 19:41:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5863 2025/10/01 19:44:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8477,3 +8477,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libdrm to 2.4.126 [wiz 2025-10-01]
 	Updated databases/py-tinydb to 4.8.2nb1 [wiz 2025-10-01]
 	Updated devel/py-click-aliases to 1.0.4nb1 [wiz 2025-10-01]
+	Updated textproc/py-openapi-spec-validator to 0.7.2nb1 [wiz 2025-10-01]
