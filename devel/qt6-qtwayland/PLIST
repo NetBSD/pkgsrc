@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/07/02 10:31:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/01 07:25:10 adam Exp $
 lib/pkgconfig/Qt6WaylandClient.pc
 lib/pkgconfig/Qt6WaylandCompositor.pc
 lib/pkgconfig/Qt6WaylandCompositorIviapplication.pc
@@ -664,6 +664,7 @@ qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateAdditionalTargetInf
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateConfig.cmake
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateConfigVersion.cmake
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateExtraProperties.cmake
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateTargets.cmake
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WaylandGlobalPrivate/Qt6WaylandGlobalPrivateVersionlessTargets.cmake

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.19 2025/09/22 05:43:29 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2025/10/01 07:25:10 adam Exp $
 # used by x11/qt6-qtbase/Makefile.common
 
-QTVERSION=	6.9.2
+QTVERSION=	6.9.3
 
 .include "../../mk/bsd.prefs.mk"
 

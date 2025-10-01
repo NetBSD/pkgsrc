@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/09/22 05:43:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/10/01 07:25:06 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -172,6 +172,7 @@ qt6/include/QtConcurrent/QtConcurrentDepends
 qt6/include/QtConcurrent/QtConcurrentFilter
 qt6/include/QtConcurrent/QtConcurrentMap
 qt6/include/QtConcurrent/QtConcurrentRun
+qt6/include/QtConcurrent/QtConcurrentTask
 qt6/include/QtConcurrent/QtConcurrentVersion
 qt6/include/QtConcurrent/qtaskbuilder.h
 qt6/include/QtConcurrent/qtconcurrent_global.h
@@ -3700,6 +3701,7 @@ qt6/mkspecs/features/android/sdk.prf
 qt6/mkspecs/features/android/spec_post.prf
 qt6/mkspecs/features/benchmark.prf
 qt6/mkspecs/features/build_pass.prf
+qt6/mkspecs/features/ccache.prf
 qt6/mkspecs/features/cmake_functions.prf
 qt6/mkspecs/features/cmdline.prf
 qt6/mkspecs/features/configure.prf
@@ -3797,7 +3799,6 @@ qt6/mkspecs/features/uikit/watchos_coretext.prf
 qt6/mkspecs/features/uikit/xcodebuild.mk
 qt6/mkspecs/features/uikit/xcodebuild.prf
 qt6/mkspecs/features/unix/bsymbolic_functions.prf
-qt6/mkspecs/features/unix/ccache.prf
 qt6/mkspecs/features/unix/hide_symbols.prf
 qt6/mkspecs/features/unix/largefile.prf
 qt6/mkspecs/features/unix/no_direct_extern_access.prf

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/06/30 15:18:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/01 07:25:09 adam Exp $
 lib/pkgconfig/Qt6Designer.pc
 lib/pkgconfig/Qt6Help.pc
 lib/pkgconfig/Qt6Linguist.pc
@@ -385,6 +385,7 @@ qt6/lib/cmake/Qt6Tools/Qt6ToolsConfig.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsConfigVersion.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsDependencies.cmake
+qt6/lib/cmake/Qt6Tools/Qt6ToolsExtraProperties.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsTargets.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Tools/Qt6ToolsVersionlessTargets.cmake
