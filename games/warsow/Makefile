@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/29 13:31:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/01 19:39:32 wiz Exp $
 
 WARSOW_VER=	2.1.2
 WARSOW_SDK=	warsow_21_sdk
@@ -23,6 +23,8 @@ USE_TOOLS+=	pkg-config gmake pax
 USE_CXX_FEATURES+=	c++11
 
 CMAKE_CONFIGURE_ARGS+=	-DQFUSION_GAME=Warsow
+# for cmake 4 compatibility, until upstream fixes it
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE=1
 
