@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.562 2025/10/01 17:00:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.563 2025/10/01 19:14:26 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27608,3 +27608,10 @@ got<0.118	directory-traversal	https://gameoftrees.org/releases/changes.html#2025
 py{27,39,310,311,312,313}-django<4.2.25		sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
 py{27,39,310,311,312,313}-django>=5.1<5.1.13	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
 py{27,39,310,311,312,313}-django>=5.2<5.2.7	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-59681
+thunderbird<140.2	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-72/
+firefox<143		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-73/
+firefox115<115.28	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-74/
+firefox140<140.3	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-75/
+thunderbird<143		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-77/
+thunderbird<140.3	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-78/
+firefox<143.0.3		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-80/
