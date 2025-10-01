@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5855 2025/10/01 09:32:53 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5856 2025/10/01 09:33:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8469,3 +8469,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.2.5 [adam 2025-10-01]
 	Updated sysutils/broot to 1.50.0 [pin 2025-10-01]
 	Updated www/cobalt to 0.20.1 [pin 2025-10-01]
+	Updated devel/hexpatch to 1.12.4 [pin 2025-10-01]
