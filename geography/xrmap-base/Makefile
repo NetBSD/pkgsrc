@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2021/04/21 15:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/01 19:33:29 wiz Exp $
 
 DISTNAME=		xrmap-2.29
 PKGNAME=		xrmap-base-2.29
@@ -17,6 +17,9 @@ USE_IMAKE=		yes
 MAKE_FLAGS+=		MANPATH=${PREFIX}/${PKGMANDIR}
 
 INSTALLATION_DIRS+=	share/rmap/factbook
+
+# ctype(3) problems
+BROKEN_ON_PLATFORM+=	NetBSD-1[1-9].*-*
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
