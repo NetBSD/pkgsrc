@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5857 2025/10/01 09:34:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5858 2025/10/01 11:13:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8471,3 +8471,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/cobalt to 0.20.1 [pin 2025-10-01]
 	Updated devel/hexpatch to 1.12.4 [pin 2025-10-01]
 	Updated shells/oh-my-posh to 26.26.1 [pin 2025-10-01]
+	Updated fonts/harfbuzz to 12.1.0 [adam 2025-10-01]
+	Updated fonts/harfbuzz-icu to 12.1.0 [adam 2025-10-01]
