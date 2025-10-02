@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.70 2025/09/22 17:40:08 adam Exp $
+$NetBSD: distinfo,v 1.71 2025/10/02 13:14:50 adam Exp $
 
-BLAKE2s (cryptography_vectors-46.0.1.tar.gz) = dd7ceb687b537da3739e73367571e93a144751d414655a69ed0e27fb55d7b765
-SHA512 (cryptography_vectors-46.0.1.tar.gz) = 60a6cc937ef1d819343ea90894c16655e6c3f932684ad5d602d55c6af776c8aaa43214868d04d9bde4ff19bb0b9d0d4e2eed8e3aaccc7b6f277f5f0aa8aac893
-Size (cryptography_vectors-46.0.1.tar.gz) = 33809230 bytes
+BLAKE2s (cryptography_vectors-46.0.2.tar.gz) = 726d9d8b8362fcb0576898786734988a5fb0b4b30021ac296bdd328c1bd3092f
+SHA512 (cryptography_vectors-46.0.2.tar.gz) = 842f9886aa6e02e6cb7f105c705678ef1a6fef1c68397422aa27d93074f072fafb218f71f1d8900f69885b0068639dbb9beda80104bcc41d22b6f6b313fa36d5
+Size (cryptography_vectors-46.0.2.tar.gz) = 33809237 bytes
