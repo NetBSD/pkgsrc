@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5872 2025/10/02 13:15:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5873 2025/10/02 13:26:59 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8490,3 +8490,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gnssutils to 1.1.17 [gdt 2025-10-02]
 	Updated security/py-cryptography to 46.0.2 [adam 2025-10-02]
 	Updated security/py-cryptography_vectors to 46.0.2 [adam 2025-10-02]
+	Updated editors/ait to 1.13 [ktnb 2025-10-02]
+	Updated editors/ait to 1.13 [ktnb 2025-10-02]
