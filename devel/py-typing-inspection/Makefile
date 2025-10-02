@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/05/22 05:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/02 15:37:33 adam Exp $
 
-DISTNAME=	typing_inspection-0.4.1
+DISTNAME=	typing_inspection-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typing-inspection/}
