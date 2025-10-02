@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5871 2025/10/02 12:11:41 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5872 2025/10/02 13:15:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8488,3 +8488,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/cmake39 version 3.9.6 [nia 2025-10-02]
 	Updated geography/py-ubx2 to 1.2.58 [gdt 2025-10-02]
 	Updated geography/py-gnssutils to 1.1.17 [gdt 2025-10-02]
+	Updated security/py-cryptography to 46.0.2 [adam 2025-10-02]
+	Updated security/py-cryptography_vectors to 46.0.2 [adam 2025-10-02]
