@@ -1,0 +1,98 @@
+# $NetBSD: Makefile,v 1.1 2025/10/02 11:49:43 nia Exp $
+
+.include "Makefile.version"
+
+DISTNAME=	cmake-${CMAKE_VERSION}
+PKGNAME=	cmake39-${CMAKE_VERSION}
+CATEGORIES=	devel
+MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.cmake.org/
+COMMENT=	Cross platform make
+LICENSE=	modified-bsd
+
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c c++
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	bootstrap
+
+BUILD_TARGET=		default_target
+
+CONFIGURE_HAS_MANDIR=	no
+CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
+CONFIGURE_ARGS+=	--docdir=/share/doc/cmake-${CMAKE_API}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--system-libs
+# jsoncpp requires cmake to build, so use the one provided with cmake
+CONFIGURE_ARGS+=	--no-system-jsoncpp
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MAKE_JOBS)
+CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS}
+.endif
+
+PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
+
+# for Source/cmDependsJavaParser.cxx
+UNLIMIT_RESOURCES=	datasize
+
+# as of 2.4.6, x11 and fortran tests fail in pkgsrc
+TEST_TARGET=		test
+
+SUBST_CLASSES+=		cmake
+SUBST_STAGE.cmake=	pre-configure
+SUBST_MESSAGE.cmake=	Fixing LOCALBASE and X11 paths.
+SUBST_FILES.cmake+=	Modules/FindX11.cmake
+SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
+SUBST_VARS.cmake=	LOCALBASE X11BASE
+
+SUBST_CLASSES+=		flags
+SUBST_STAGE.flags=	pre-configure
+SUBST_MESSAGE.flags=	Fixing compiler flags.
+SUBST_FILES.flags=	Modules/Compiler/*.cmake
+SUBST_SED.flags=	-e 's,-O.,,'
+
+pre-configure:
+	${RM} -f ${WRKSRC}/Modules/*.orig ${WRKSRC}/Modules/Platform/*.orig
+	${LN} -f ${WRKSRC}/Modules/Platform/OpenBSD.cmake ${WRKSRC}/Modules/Platform/MirBSD.cmake
+.for lang in C CXX Fortran
+	${LN} -f ${WRKSRC}/Modules/Platform/SunOS-GNU-${lang}.cmake \
+	    ${WRKSRC}/Modules/Platform/SunOS-Clang-${lang}.cmake
+.endfor
+
+CMAKE_BINFILES=	ccmake cmake cpack ctest cmakexbuild
+
+post-install:
+.for file in ${CMAKE_BINFILES}
+	if [ -e ${DESTDIR}${PREFIX}/bin/${file} ]; then \
+		${MV} ${DESTDIR}${PREFIX}/bin/${file} \
+			${DESTDIR}${PREFIX}/bin/${file}39 ; \
+	fi
+.endfor
+	${RM} -f ${DESTDIR}${PREFIX}/share/aclocal/cmake.m4
+	${RM} -f ${DESTDIR}${PREFIX}/share/cmake-3.9/Modules/Compiler/*.orig
+
+INCOMPAT_CURSES=	NetBSD-[0-6].*-*
+
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
+.include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.if ${OPSYS} != "HPUX" && !(${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500)
+.  include "../../devel/libuv/buildlink3.mk"
+.endif
+.include "../../misc/rhash/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+
+.if !exists(${BUILDLINK_INCDIRS.curses}/form.h) && \
+     exists(${BUILDLINK_INCDIRS.curses}/ncurses/form.h)
+CFLAGS+=	-I${BUILDLINK_INCDIRS.curses}/ncurses
+CXXFLAGS+=	-I${BUILDLINK_INCDIRS.curses}/ncurses
+.endif
+
+.include "../../mk/bsd.pkg.mk"
