@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5867 2025/10/02 07:51:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5868 2025/10/02 11:23:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8483,3 +8483,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jj to 0.34.0 [wiz 2025-10-02]
 	Updated www/py-django to 5.2.7 [adam 2025-10-02]
 	Updated www/py-django4 to 4.2.25 [adam 2025-10-02]
+	Updated games/alephone to 20250829 [adam 2025-10-02]
+	Updated devel/ccache to 4.12.1 [adam 2025-10-02]
