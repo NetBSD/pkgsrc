@@ -1,10 +1,20 @@
-$NetBSD: patch-configure,v 1.1 2023/04/27 13:33:47 yhardy Exp $
+$NetBSD: patch-configure,v 1.2 2025/10/02 11:19:51 adam Exp $
 
+Detect asio.hpp from boost.
 Use GLEW for GL extensions, works around a linking problem on NetBSD.
 
---- configure.orig	2022-01-15 21:25:37.000000000 +0000
+--- configure.orig	2025-08-29 15:32:48.000000000 +0000
 +++ configure
-@@ -8784,9 +8784,9 @@ $as_echo_n "checking for OpenGL support.
+@@ -9927,7 +9927,7 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS
+ ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+-ac_fn_cxx_check_header_compile "$LINENO" "asio.hpp" "ac_cv_header_asio_hpp" "$ac_includes_default"
++ac_fn_cxx_check_header_compile "$LINENO" "boost/asio.hpp" "ac_cv_header_asio_hpp" "$ac_includes_default"
+ if test "x$ac_cv_header_asio_hpp" = xyes
+ then :
+ 
+@@ -10670,9 +10670,9 @@ printf %s "checking for OpenGL support..
       SYS_GL_LIBS="-F/System/Library/Frameworks -framework AGL -framework OpenGL"
                    CPPFLAGS="$CPPFLAGS -D__DARWIN__ -F/System/Library/Frameworks -I/System/Library/Frameworks/OpenGL.framework/Headers"  ;; #(
    *-*-linux*) :
