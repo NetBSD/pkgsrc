@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/10/01 19:39:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/02 11:53:15 nia Exp $
 
 WARSOW_VER=	2.1.2
 WARSOW_SDK=	warsow_21_sdk
@@ -73,7 +73,7 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/warsow.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/warsow.desktop
 
-.include "../../devel/cmake/build.mk"
+.include "../../devel/cmake39/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
