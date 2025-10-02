@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5873 2025/10/02 13:26:59 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5874 2025/10/02 14:46:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8491,4 +8491,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cryptography to 46.0.2 [adam 2025-10-02]
 	Updated security/py-cryptography_vectors to 46.0.2 [adam 2025-10-02]
 	Updated editors/ait to 1.13 [ktnb 2025-10-02]
-	Updated editors/ait to 1.13 [ktnb 2025-10-02]
+	Updated devel/py-dulwich to 0.24.2 [adam 2025-10-02]
+	Updated converters/py-simplejson to 3.20.2 [adam 2025-10-02]
