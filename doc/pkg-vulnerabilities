@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.568 2025/10/01 21:04:57 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.569 2025/10/02 14:26:29 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27352,7 +27352,7 @@ nasm-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-8
 nasm-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8845
 nasm-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-8846
 openjpeg<2.5.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-50952
-openjpeg-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-54874
+openjpeg>=2.5.1<2.5.4	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-54874
 p5-Catalyst-Authentication-Credential-HTTP<1.019	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2025-40920
 php{56,74,81,82,83,84}-adodb<5.22.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-54119
 php{56,74,81,82,83,84}-concrete-cms<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-8571
