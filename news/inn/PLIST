@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2023/04/30 14:58:58 spz Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/10/02 16:23:51 hauke Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
@@ -53,10 +53,12 @@ lib/libinnhist.la
 lib/libinnstorage.la
 lib/perl/INN/Config.pm
 lib/perl/INN/Utils/Shlock.pm
+lib/perl/INN/ovsqlite_client.pm
 ${INN_PATHBIN}/actmerge
 ${INN_PATHBIN}/actsync
 ${INN_PATHBIN}/actsyncd
 ${INN_PATHBIN}/archive
+${PLIST.kerberos}${INN_PATHBIN}/auth/passwd/auth_krb5
 ${INN_PATHBIN}/auth/passwd/ckpasswd
 ${INN_PATHBIN}/auth/passwd/radius
 ${INN_PATHBIN}/auth/resolv/domain
@@ -76,6 +78,7 @@ ${INN_PATHBIN}/controlchan
 ${INN_PATHBIN}/convdate
 ${INN_PATHBIN}/ctlinnd
 ${INN_PATHBIN}/cvtbatch
+${INN_PATHBIN}/delayer
 ${INN_PATHBIN}/docheckgroups
 ${INN_PATHBIN}/expire
 ${INN_PATHBIN}/expireover
@@ -154,12 +157,11 @@ man/man1/nntpget.1
 man/man1/pgpverify.1
 man/man1/pullnews.1
 man/man1/rnews.1
-man/man1/shlock.1
 man/man1/shrinkfile.1
 man/man1/simpleftp.1
-man/man1/sm.1
 man/man3/INN::Config.3pm
 man/man3/INN::Utils::Shlock.3pm
+man/man3/INN::ovsqlite_client.3pm
 man/man3/libinn.3
 man/man3/libinn_clientlib.3
 man/man3/libinn_dbz.3
@@ -216,6 +218,7 @@ man/man8/cnfsstat.8
 man/man8/controlchan.8
 man/man8/ctlinnd.8
 man/man8/cvtbatch.8
+man/man8/delayer.8
 man/man8/docheckgroups.8
 man/man8/domain.8
 man/man8/expire.8
@@ -262,6 +265,8 @@ man/man8/send-ihave.8
 man/man8/send-uucp.8
 man/man8/sendinpaths.8
 man/man8/sendxbatches.8
+man/man8/shlock.8
+man/man8/sm.8
 man/man8/tally.control.8
 man/man8/tdx-util.8
 man/man8/tinyleaf.8
@@ -339,4 +344,3 @@ share/examples/inn/send-uucp.cf
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
 @pkgdir ${INN_PATHBIN}/filter
-@pkgdir etc/inn

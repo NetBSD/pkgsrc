@@ -1,15 +1,15 @@
-$NetBSD: patch-ak,v 1.4 2023/04/30 14:58:58 spz Exp $
+$NetBSD: patch-ak,v 1.5 2025/10/02 16:23:51 hauke Exp $
 
 fix bin path
 
---- perl/INN/Config.pm.in.orig	2022-07-10 15:00:35.000000000 +0200
-+++ perl/INN/Config.pm.in	2022-09-25 13:17:12.053797734 +0200
-@@ -15,7 +15,7 @@
+--- perl/INN/Config.pm.in.orig	2025-05-09 13:53:41.000000000 +0000
++++ perl/INN/Config.pm.in
+@@ -29,7 +29,7 @@ our $exec_prefix = "@exec_prefix@";
  
  ##  Then, process the variables provided by innconfval.
  my @INNCONFVAR = ();
--my @values = `${exec_prefix}/bin/innconfval -p`;
-+my @values = `@bindir@/innconfval -p`;
+-my @values = qx(${exec_prefix}/bin/innconfval -p);
++my @values = qx(@bindir@/innconfval -p);
  foreach my $line (@values) {
      eval 'our ' . $line;
      if ($line =~ /^(.*?) = /m) {
