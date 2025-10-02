@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/05/29 15:42:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/02 13:26:29 ktnb Exp $
 
-DISTNAME=	1.12
+DISTNAME=	1.13
 PKGNAME=	ait-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	https://notabug.org/nuclearkev/ait/archive/
