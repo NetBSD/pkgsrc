@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.153 2025/07/04 08:47:52 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2025/10/02 16:23:51 hauke Exp $
 
-DISTNAME=		inn-2.7.1
-PKGREVISION=		12
+DISTNAME=		inn-2.7.3
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -15,7 +14,6 @@ CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 
 .include "../../news/inn/Makefile.common"
 
-BUILD_DEFS+=		INN_DATA_DIR
 BUILD_DEFS+=		VARBASE
 
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
@@ -26,6 +24,9 @@ FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
 MESSAGE_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
 PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
+PRINT_PLIST_AWK+=	{ gsub(/libexec\/inn\//, "$${INN_PATHBIN}/"); }
+PRINT_PLIST_AWK+=	{ gsub(/.+\/auth\/passwd\/auth_krb5$$/, "$${PLIST.kerberos}&"); }
+PRINT_PLIST_AWK+=	{ gsub(/^man\/man8\/auth_krb5\.8$$/, "$${PLIST.kerberos}&"); }
 
 PKG_SYSCONFSUBDIR=	inn
 
