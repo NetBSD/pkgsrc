@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2025/08/30 22:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2025/10/02 12:21:41 nia Exp $
 
 DISTNAME=	avidemux_2.5.4
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -17,9 +17,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt pkg-config
-USE_CMAKE=		yes
-CMAKE_ARG_PATH=		..
-CONFIGURE_DIRS=		_build
 
 # Fails with C++14 default language.
 FORCE_CXX_STD=		c++03
@@ -59,7 +56,7 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/avidemux.png
 
 .include "options.mk"
-
+.include "../../devel/cmake39/build.mk"
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
