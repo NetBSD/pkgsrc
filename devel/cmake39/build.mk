@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.1 2025/10/02 11:49:44 nia Exp $
+# $NetBSD: build.mk,v 1.2 2025/10/02 12:20:01 nia Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -71,6 +71,7 @@ CMAKE_LIBRARY_PATH+=	${COMPILER_LIB_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
 
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
+CMAKE_BUILD_DIR?=	cmake-pkgsrc-build
 CMAKE_BUILD_ARGS?=	-j ${_MAKE_JOBS_N:U1}
 CMAKE_INSTALL_ARGS?=	-j ${_MAKE_JOBS_N:U1}
 
@@ -106,10 +107,10 @@ _CMAKE_CONFIGURE_SETTINGS=	yes
 do-configure: cmake-configure
 cmake-configure:
 	${MKDIR} -p ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR}
-	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR} && \
+	${RUN} cd ${WRKSRC}/${CONFIGURE_DIR}/${CMAKE_BUILD_DIR} && \
 		${SETENV} ${CONFIGURE_ENV} ${CMAKE_PROGRAM} \
 		-G ${_CMAKE_BUILD_SYSTEM:Q} \
-		${CMAKE_CONFIGURE_ARGS}
+		${CMAKE_CONFIGURE_ARGS} ..
 .endif
 
 .if !target(do-build)
