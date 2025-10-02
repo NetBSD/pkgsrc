@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/07/16 14:26:21 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/10/02 01:30:41 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -201,6 +201,9 @@ lib/kitty/kitty/bash.pyc
 lib/kitty/kitty/bash.pyo
 lib/kitty/kitty/bgimage_fragment.glsl
 lib/kitty/kitty/bgimage_vertex.glsl
+lib/kitty/kitty/blit_common.glsl
+lib/kitty/kitty/blit_fragment.glsl
+lib/kitty/kitty/blit_vertex.glsl
 lib/kitty/kitty/border_fragment.glsl
 lib/kitty/kitty/border_vertex.glsl
 lib/kitty/kitty/borders.py
@@ -496,6 +499,8 @@ lib/kitty/kitty/render_cache.pyo
 lib/kitty/kitty/rgb.py
 lib/kitty/kitty/rgb.pyc
 lib/kitty/kitty/rgb.pyo
+lib/kitty/kitty/rounded_rect_fragment.glsl
+lib/kitty/kitty/rounded_rect_vertex.glsl
 lib/kitty/kitty/search_query_parser.py
 lib/kitty/kitty/search_query_parser.pyc
 lib/kitty/kitty/search_query_parser.pyo
@@ -539,6 +544,7 @@ lib/kitty/kitty/typing_compat.pyo
 lib/kitty/kitty/update_check.py
 lib/kitty/kitty/update_check.pyc
 lib/kitty/kitty/update_check.pyo
+lib/kitty/kitty/utils.glsl
 lib/kitty/kitty/utils.py
 lib/kitty/kitty/utils.pyc
 lib/kitty/kitty/utils.pyo
@@ -667,7 +673,7 @@ share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
 share/doc/kitty/html/_images/social_previews/summary_build_e554a463.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_bb1bec17.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_dd5dbc1b.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png
@@ -679,6 +685,7 @@ share/doc/kitty/html/_images/social_previews/summary_generated_color-names_d5b08
 share/doc/kitty/html/_images/social_previews/summary_generated_launch_2c8ae1a7.png
 share/doc/kitty/html/_images/social_previews/summary_generated_matching_f5ed7c14.png
 share/doc/kitty/html/_images/social_previews/summary_generated_rc_4121b4bb.png
+share/doc/kitty/html/_images/social_previews/summary_generated_save-as-session_b77c65fc.png
 share/doc/kitty/html/_images/social_previews/summary_generated_ssh-copy_26aa9e71.png
 share/doc/kitty/html/_images/social_previews/summary_glossary_e93f6fff.png
 share/doc/kitty/html/_images/social_previews/summary_graphics-protocol_96eb2627.png
@@ -713,6 +720,7 @@ share/doc/kitty/html/_images/social_previews/summary_layouts_49b07683.png
 share/doc/kitty/html/_images/social_previews/summary_mapping_aea5afa6.png
 share/doc/kitty/html/_images/social_previews/summary_marks_66066db1.png
 share/doc/kitty/html/_images/social_previews/summary_misc-protocol_baba0cc2.png
+share/doc/kitty/html/_images/social_previews/summary_multiple-cursors-protocol_49ab6a61.png
 share/doc/kitty/html/_images/social_previews/summary_open_actions_b5f13270.png
 share/doc/kitty/html/_images/social_previews/summary_overview_249bd848.png
 share/doc/kitty/html/_images/social_previews/summary_performance_76c80d2e.png
@@ -724,6 +732,7 @@ share/doc/kitty/html/_images/social_previews/summary_quake-screenshots_d232c5bb.
 share/doc/kitty/html/_images/social_previews/summary_quickstart_9d1a56df.png
 share/doc/kitty/html/_images/social_previews/summary_rc_protocol_ea1138ef.png
 share/doc/kitty/html/_images/social_previews/summary_remote-control_7371e6b3.png
+share/doc/kitty/html/_images/social_previews/summary_sessions_7cc12e6e.png
 share/doc/kitty/html/_images/social_previews/summary_shell-integration_4b2a7549.png
 share/doc/kitty/html/_images/social_previews/summary_support_daeae705.png
 share/doc/kitty/html/_images/social_previews/summary_text-sizing-protocol_974e580e.png
@@ -748,6 +757,7 @@ share/doc/kitty/html/_sources/generated/color-names.rst.txt
 share/doc/kitty/html/_sources/generated/launch.rst.txt
 share/doc/kitty/html/_sources/generated/matching.rst.txt
 share/doc/kitty/html/_sources/generated/rc.rst.txt
+share/doc/kitty/html/_sources/generated/save-as-session.rst.txt
 share/doc/kitty/html/_sources/generated/ssh-copy.rst.txt
 share/doc/kitty/html/_sources/glossary.rst.txt
 share/doc/kitty/html/_sources/graphics-protocol.rst.txt
@@ -782,6 +792,7 @@ share/doc/kitty/html/_sources/layouts.rst.txt
 share/doc/kitty/html/_sources/mapping.rst.txt
 share/doc/kitty/html/_sources/marks.rst.txt
 share/doc/kitty/html/_sources/misc-protocol.rst.txt
+share/doc/kitty/html/_sources/multiple-cursors-protocol.rst.txt
 share/doc/kitty/html/_sources/open_actions.rst.txt
 share/doc/kitty/html/_sources/overview.rst.txt
 share/doc/kitty/html/_sources/performance.rst.txt
@@ -793,6 +804,7 @@ share/doc/kitty/html/_sources/quake-screenshots.rst.txt
 share/doc/kitty/html/_sources/quickstart.rst.txt
 share/doc/kitty/html/_sources/rc_protocol.rst.txt
 share/doc/kitty/html/_sources/remote-control.rst.txt
+share/doc/kitty/html/_sources/sessions.rst.txt
 share/doc/kitty/html/_sources/shell-integration.rst.txt
 share/doc/kitty/html/_sources/support.rst.txt
 share/doc/kitty/html/_sources/text-sizing-protocol.rst.txt
@@ -845,6 +857,7 @@ share/doc/kitty/html/generated/color-names.html
 share/doc/kitty/html/generated/launch.html
 share/doc/kitty/html/generated/matching.html
 share/doc/kitty/html/generated/rc.html
+share/doc/kitty/html/generated/save-as-session.html
 share/doc/kitty/html/generated/ssh-copy.html
 share/doc/kitty/html/genindex.html
 share/doc/kitty/html/glossary.html
@@ -880,6 +893,7 @@ share/doc/kitty/html/layouts.html
 share/doc/kitty/html/mapping.html
 share/doc/kitty/html/marks.html
 share/doc/kitty/html/misc-protocol.html
+share/doc/kitty/html/multiple-cursors-protocol.html
 share/doc/kitty/html/objects.inv
 share/doc/kitty/html/open_actions.html
 share/doc/kitty/html/overview.html
@@ -894,6 +908,7 @@ share/doc/kitty/html/rc_protocol.html
 share/doc/kitty/html/remote-control.html
 share/doc/kitty/html/search.html
 share/doc/kitty/html/searchindex.js
+share/doc/kitty/html/sessions.html
 share/doc/kitty/html/shell-integration.html
 share/doc/kitty/html/support.html
 share/doc/kitty/html/text-sizing-protocol.html
