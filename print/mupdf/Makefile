@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2025/09/14 10:57:54 leot Exp $
+# $NetBSD: Makefile,v 1.133 2025/10/02 15:22:42 nia Exp $
 
 DISTNAME=	mupdf-1.26.8-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -25,6 +25,14 @@ MAKE_FLAGS+=		XLIBS=${LIBS:Q}
 MAKE_FLAGS+=		build=release
 MAKE_FLAGS+=		USE_SYSTEM_LIBS=yes
 MAKE_FLAGS+=		USE_SYSTEM_MUJS=yes
+MAKE_FLAGS+=		USE_ARGUMENT_FILE=no
+
+.include "../../mk/compiler.mk"
+
+# This single feature requires a C++20 compiler.
+.if ${CC_VERSION:Mgcc-[2-7].*}
+MAKE_FLAGS+=		barcode=no
+.endif
 
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
