@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/10/02 11:53:15 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/02 20:04:30 wiz Exp $
 
 WARSOW_VER=	2.1.2
 WARSOW_SDK=	warsow_21_sdk
@@ -21,6 +21,8 @@ USE_TOOLS+=	pkg-config gmake pax
 
 # see source/source/game/CMakeLists.txt
 USE_CXX_FEATURES+=	c++11
+
+CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
 CMAKE_CONFIGURE_ARGS+=	-DQFUSION_GAME=Warsow
 # for cmake 4 compatibility, until upstream fixes it
@@ -73,7 +75,7 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/warsow.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/warsow.desktop
 
-.include "../../devel/cmake39/build.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
