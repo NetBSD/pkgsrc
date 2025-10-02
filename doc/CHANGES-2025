@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5865 2025/10/02 03:08:55 pho Exp $
+$NetBSD: CHANGES-2025,v 1.5866 2025/10/02 07:33:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8480,3 +8480,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-openapi-spec-validator to 0.7.2nb1 [wiz 2025-10-01]
 	Updated x11/kitty to 0.43.1 [ktnb 2025-10-01]
 	Updated pkgtools/pkgchkxx to 0.3.4 [pho 2025-10-02]
+	Updated devel/jj to 0.34.0 [wiz 2025-10-02]
