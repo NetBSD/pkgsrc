@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.14 2024/08/14 05:55:32 adam Exp $
+# $NetBSD: options.mk,v 1.15 2025/10/02 15:22:42 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
 PKG_SUPPORTED_OPTIONS=	curl opengl
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} != "Darwin"
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "OpenBSD"
 PKG_SUGGESTED_OPTIONS=	opengl
 .endif
 
