@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/05/09 15:41:49 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2025/10/02 03:08:42 pho Exp $
 
-DISTNAME=	pkgchkxx-0.3.3
-PKGREVISION=	2
+DISTNAME=	pkgchkxx-0.3.4
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -37,7 +36,7 @@ CONFIGURE_ARGS+=	PKG_ADMIN=${PREFIX}/sbin/pkg_admin
 CONFIGURE_ARGS+=	PKG_DELETE=${PREFIX}/sbin/pkg_delete
 CONFIGURE_ARGS+=	PKG_INFO=${PREFIX}/bin/pkg_info
 .endif
-DEPENDS+=	pkgconf>=1.9.4:../../devel/pkgconf
+DEPENDS+=		pkgconf>=1.9.4:../../devel/pkgconf
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
