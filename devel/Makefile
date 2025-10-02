@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4534 2025/09/28 16:25:05 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4535 2025/10/02 11:49:43 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -274,6 +274,7 @@ SUBDIR+=	cmake
 SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-gui
 SUBDIR+=	cmake-mode
+SUBDIR+=	cmake39
 SUBDIR+=	cmocka
 SUBDIR+=	cmockery2
 SUBDIR+=	cmph

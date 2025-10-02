@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2025/10/02 11:49:44 nia Exp $
+
+BLAKE2s (cmake-3.9.6.tar.gz) = cb355b327258309f2fad56ce5607e63e336f63711815382b4786109469dd9563
+SHA512 (cmake-3.9.6.tar.gz) = 9fda2c9ac054ef8fb1bf3885fbdec02c518da89ade220eba06b5502ac3ff300f635ec0922e61f3b2d090644fb743b8f71a04c532ab66b2d890a180cc7da54e6c
+Size (cmake-3.9.6.tar.gz) = 7705400 bytes
+SHA1 (patch-CMakeLists.txt) = d4e166e21ed152387354bb86031a523d8d9a3412
+SHA1 (patch-Modules_Compiler_GNU.cmake) = 049f906c84b80183c39f7b95ff534e94ed03cc82
+SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
+SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
+SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
+SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
+SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f070298f2db
+SHA1 (patch-Source_CTest_cmCTestCurl.h) = 8cc6b138216ee700505db750cf4521b3d56837ed
+SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
+SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796

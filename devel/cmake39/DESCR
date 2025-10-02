@@ -1,0 +1,16 @@
+CMake is an extensible, open-source system that manages the build
+process in an operating system and compiler independent manner. Unlike
+many cross-platform systems, CMake is designed to be used in
+conjunction with the native build environment. Simple configuration
+files placed in each source directory (called CMakeLists.txt files)
+are used to generate standard build files (e.g., makefiles on Unix and
+projects/workspaces in Windows MSVC) which are used in the usual
+way.
+
+This version of cmake is intended for:
+
+- users who wish to compile software written before CMake 4.
+- developers who wish to test their software with an old cmake version
+  to ensure maximum compatibility.
+- platforms which lack a C++11 compiler.
+- platforms which lack support for libuv (e.g. HP-UX).

@@ -1,0 +1,5 @@
+# $NetBSD: Makefile.version,v 1.1 2025/10/02 11:49:43 nia Exp $
+#
+# used by devel/cmake39/Makefile
+CMAKE_VERSION=	3.9.6
+CMAKE_API=	${CMAKE_VERSION:R}
