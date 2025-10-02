@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5878 2025/10/02 18:37:52 tron Exp $
+$NetBSD: CHANGES-2025,v 1.5879 2025/10/02 20:12:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8499,3 +8499,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-uncompyle6 to 3.9.3 [adam 2025-10-02]
 	Updated news/inn to 2.7.3 [hauke 2025-10-02]
 	Updated mail/mutt to 2.2.15 [tron 2025-10-02]
+	Updated textproc/moor to 2.4.1 [schmonz 2025-10-02]
