@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5870 2025/10/02 12:05:08 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5871 2025/10/02 12:11:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8487,3 +8487,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ccache to 4.12.1 [adam 2025-10-02]
 	Added devel/cmake39 version 3.9.6 [nia 2025-10-02]
 	Updated geography/py-ubx2 to 1.2.58 [gdt 2025-10-02]
+	Updated geography/py-gnssutils to 1.1.17 [gdt 2025-10-02]
