@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5868 2025/10/02 11:23:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5869 2025/10/02 11:50:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8485,3 +8485,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django4 to 4.2.25 [adam 2025-10-02]
 	Updated games/alephone to 20250829 [adam 2025-10-02]
 	Updated devel/ccache to 4.12.1 [adam 2025-10-02]
+	Added devel/cmake39 version 3.9.6 [nia 2025-10-02]
