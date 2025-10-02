@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5876 2025/10/02 15:39:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5877 2025/10/02 16:24:03 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8497,3 +8497,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.testrunner to 8.1 [adam 2025-10-02]
 	Updated devel/py-typing-inspection to 0.4.2 [adam 2025-10-02]
 	Updated lang/py-uncompyle6 to 3.9.3 [adam 2025-10-02]
+	Updated news/inn to 2.7.3 [hauke 2025-10-02]
