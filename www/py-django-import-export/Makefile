@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2025/08/07 05:01:10 adam Exp $
+# $NetBSD: Makefile,v 1.42 2025/10/02 15:34:07 adam Exp $
 
-DISTNAME=	django_import_export-4.3.9
+DISTNAME=	django_import_export-4.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-import-export/}
