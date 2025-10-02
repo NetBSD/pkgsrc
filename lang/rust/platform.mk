@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.33 2025/06/16 21:10:43 he Exp $
+# $NetBSD: platform.mk,v 1.34 2025/10/02 16:59:50 nia Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -26,7 +26,7 @@ RUST_DIR?=	../../lang/rust
 
 .for rust_platform in ${RUST_PLATFORMS}
 .  if !empty(MACHINE_PLATFORM:M${rust_platform})
-PLATFORM_SUPPORTS_RUST=		yes
+PLATFORM_SUPPORTS_RUST?=	yes
 .  endif
 .endfor
 PLATFORM_SUPPORTS_RUST?=	no
