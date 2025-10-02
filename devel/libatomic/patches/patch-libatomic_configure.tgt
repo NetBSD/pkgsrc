@@ -1,0 +1,16 @@
+$NetBSD: patch-libatomic_configure.tgt,v 1.1 2025/10/02 06:09:36 wiz Exp $
+
+Do not assume v9 architecture for sparc builds.
+Fixes build for older sparc models.
+
+--- libatomic/configure.tgt.orig	2025-10-02 06:07:31.951017486 +0000
++++ libatomic/configure.tgt
+@@ -68,7 +68,7 @@ case "${target_cpu}" in
+ 	    ;;
+ 	  *)
+ 	    if test -z "$with_cpu"; then
+-	      XCFLAGS="${XCFLAGS} -mcpu=v9"
++	      :	#XCFLAGS="${XCFLAGS} -mcpu=v9"
+ 	    fi
+ 	esac
+ 	ARCH=sparc
