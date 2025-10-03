@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/01/13 14:28:45 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/10/03 12:16:33 adam Exp $
 
-BLAKE2s (dirty_equals-0.9.0.tar.gz) = cc06ac5ede6d9af1d92c58d2f4403d7929ac733b7ae7f4a012cb34eb3b9a13fa
-SHA512 (dirty_equals-0.9.0.tar.gz) = b99fd1922e7977939def5d4e6eecd40e8f6aee055b6b21c11d353d6c5db8c002b4438fb1b5708b74e0312962069ad597434d0f1db47d7e42151965b4fde4a8e9
-Size (dirty_equals-0.9.0.tar.gz) = 50412 bytes
+BLAKE2s (dirty_equals-0.10.0.tar.gz) = 87d8fa7927d315b5538308bbfc12dde86d1dd5bedda510fd6311602babd7e567
+SHA512 (dirty_equals-0.10.0.tar.gz) = af282d3d9c6d211bf34855ce98fea2a388ab8e7640c6e751c67e6e8b32e647e9dfe6230e5d3cd979a222310bcef79983cf76aeddb019c2019c823d66150aa081
+Size (dirty_equals-0.10.0.tar.gz) = 125778 bytes
