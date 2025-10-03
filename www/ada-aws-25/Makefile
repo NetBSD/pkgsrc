@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/03 11:54:06 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.1.0
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/AdaCore/aws
 COMMENT=	Ada Web Server
 LICENSE=	gnu-gpl-v3
 
-GITHUB_SUBMODULES+=	AdaCore	templates-parser	v25.0.0	templates_parser
+#GITHUB_SUBMODULES+=	AdaCore	templates-parser	v25.0.0	templates_parser
 
 USE_LANGUAGES=	c ada
 
@@ -30,11 +30,11 @@ LIBRARY_PATH?=		# empty
 
 .include "options.mk"
 
-SUBST_CLASSES+=		version1
-SUBST_MESSAGE.version1=	Fix version number in ${SUBST_FILES.version1}
-SUBST_STAGE.version1=	post-extract
-SUBST_FILES.version1=	templates_parser/Makefile
-SUBST_SED.version1=	-e "s,22.0,25.1,"
+#SUBST_CLASSES+=		version1
+#SUBST_MESSAGE.version1=	Fix version number in ${SUBST_FILES.version1}
+#SUBST_STAGE.version1=	post-extract
+#SUBST_FILES.version1=	templates_parser/Makefile
+#SUBST_SED.version1=	-e "s,22.0,25.1,"
 
 SUBST_CLASSES+=		version2
 SUBST_MESSAGE.version2=	Fix version number in ${SUBST_FILES.version2}
@@ -83,6 +83,16 @@ BUILDLINK_DEPMETHOD.libadalang-25=		full
 CONFIGURE_ARGS+=				ENABLE_SHARED=false
 .endif
 
+CHECK_BUILTIN.zlib:= yes
+.include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.zlib:= no
+.if ${USE_BUILTIN.zlib:tl} == yes
+MAKE_ENV+=	ZLIB_PATH=/usr/lib
+.else
+.include "../../devel/zlib/buildlink3.mk"
+MAKE_ENV+=	ZLIB_PATH=${PREFIX}/lib
+.endif
+
 CHECK_PIE_SKIP+=	${GNAT_PKGBASE}/bin/*
 CHECK_RELRO_SKIP+=	${GNAT_PKGBASE}/lib/*.so
 
@@ -93,6 +103,8 @@ GENERATE_PLIST+= \
 PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.${SHLIB_EXT}.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
 
 .include "../../devel/gprbuild/buildlink3.mk"
+
+.include "../../textproc/ada-templates-parser-25/inplace.mk"
 
 .include "../../textproc/ada-xmlada-25/buildlink3.mk"
 .include "../../devel/ada-libgpr-25/buildlink3.mk"
