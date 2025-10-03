@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.569 2025/10/02 14:26:29 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.570 2025/10/03 16:09:09 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -5156,7 +5156,7 @@ openafs<1.4.14		multiple-vulnerabilities	http://secunia.com/advisories/43407/
 py{24,25,26,27,31}-moin<1.9.3nb1	arbitrary-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1058
 postfix<2.7.3		command-injection		http://www.kb.cert.org/vuls/id/555316
 postfix>=2.8.20100000<2.8.20110115	command-injection	http://www.kb.cert.org/vuls/id/555316
-TeXmacs-[0-9]*		privilege-escalation	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3394
+TeXmacs<1.0.7.13		privilege-escalation	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3394
 patch<2.7		remote-system-access	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4651
 tiff<3.9.4nb2		remote-system-access	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0192
 suse{,32}_libtiff<11.3nb2	remote-system-access	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-5022
