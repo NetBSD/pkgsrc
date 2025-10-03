@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.573 2025/10/03 16:59:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.574 2025/10/03 17:08:02 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27700,3 +27700,20 @@ ansible-core<2.14.14	information-disclosure			https://nvd.nist.gov/vuln/detail/C
 ansible-core<2.14.18	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-8775
 ansible-core<2.17.6	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2024-9902
 ansible-core<2.16.14	arbitrary-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-11079
+wireshark<4.0.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-6174
+wireshark<4.0.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-6175
+wireshark<4.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-0207
+wireshark<4.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-0208
+wireshark<4.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-0209
+wireshark<4.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-0210
+wireshark<4.2.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-0211
+wireshark<4.4.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-11595
+wireshark<4.4.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-11596
+wireshark<4.2.4		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-2955
+wireshark<4.2.5		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4853
+wireshark<4.2.5		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4854
+wireshark<4.2.5		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4855
+wireshark<4.2.7		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8250
+wireshark<4.2.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8645
+wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9780
+wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9781
