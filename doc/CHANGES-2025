@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5890 2025/10/03 11:53:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5891 2025/10/03 12:16:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8524,3 +8524,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-strich to 0.10 [adam 2025-10-03]
 	Updated devel/py-rich-click to 1.9.1 [adam 2025-10-03]
 	Updated print/py-pikepdf to 9.11.0 [adam 2025-10-03]
+	Updated devel/py-inline-snapshot to 0.29.2 [adam 2025-10-03]
+	Updated devel/py-dirty-equals to 0.10.0 [adam 2025-10-03]
