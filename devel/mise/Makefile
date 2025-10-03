@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2025/09/25 06:56:46 pin Exp $
+# $NetBSD: Makefile,v 1.97 2025/10/03 20:08:58 wiz Exp $
 
 DISTNAME=		mise-2025.9.18
 CATEGORIES=		devel
@@ -13,6 +13,8 @@ LICENSE=		mit
 RUST_REQ=		1.85.0
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
+
+TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
@@ -30,5 +32,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
