@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5880 2025/10/02 20:14:38 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5881 2025/10/03 05:47:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8501,3 +8501,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mutt to 2.2.15 [tron 2025-10-02]
 	Updated textproc/moor to 2.4.1 [schmonz 2025-10-02]
 	Updated devel/ruby-jirametrics to 2.17.1 [schmonz 2025-10-02]
+	Updated security/py-authlib to 1.6.5 [adam 2025-10-03]
+	Updated mail/py-checkdmarc to 5.10.13 [adam 2025-10-03]
+	Updated textproc/py-lxml-html-clean to 0.4.3 [adam 2025-10-03]
+	Updated security/py-gssapi to 1.10.1 [adam 2025-10-03]
