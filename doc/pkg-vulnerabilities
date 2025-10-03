@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.571 2025/10/03 16:21:12 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.572 2025/10/03 16:35:51 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27398,7 +27398,8 @@ postgresql-server>=15<15.14	code-injection		https://nvd.nist.gov/vuln/detail/CVE
 postgresql-server>=16<16.10	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
 postgresql-server>=17<17.6	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-8715
 proftpd<1.3.3d			backdoor		https://nvd.nist.gov/vuln/detail/CVE-2010-20103
-py{27,39,310,311,312,313}-future-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-50817
+# disputed, this is how Python's import works
+#py{27,39,310,311,312,313}-future-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-50817
 py{27,39,310,311,312,313}-pdf<6.0.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-55197
 retroarch<1.21.0			out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2025-9136
 ruby{31,32,33,34}-rails71<7.1.5.2	improper-output-neutralization	https://nvd.nist.gov/vuln/detail/CVE-2025-55193
