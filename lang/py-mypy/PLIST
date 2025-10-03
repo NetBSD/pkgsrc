@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2025/08/06 06:29:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2025/10/03 09:25:56 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -34,6 +34,9 @@ ${PYSITELIB}/mypy/bogus_type.pyo
 ${PYSITELIB}/mypy/build.py
 ${PYSITELIB}/mypy/build.pyc
 ${PYSITELIB}/mypy/build.pyo
+${PYSITELIB}/mypy/cache.py
+${PYSITELIB}/mypy/cache.pyc
+${PYSITELIB}/mypy/cache.pyo
 ${PYSITELIB}/mypy/checker.py
 ${PYSITELIB}/mypy/checker.pyc
 ${PYSITELIB}/mypy/checker.pyo
@@ -220,6 +223,9 @@ ${PYSITELIB}/mypy/plugins/attrs.pyo
 ${PYSITELIB}/mypy/plugins/common.py
 ${PYSITELIB}/mypy/plugins/common.pyc
 ${PYSITELIB}/mypy/plugins/common.pyo
+${PYSITELIB}/mypy/plugins/constants.py
+${PYSITELIB}/mypy/plugins/constants.pyc
+${PYSITELIB}/mypy/plugins/constants.pyo
 ${PYSITELIB}/mypy/plugins/ctypes.py
 ${PYSITELIB}/mypy/plugins/ctypes.pyc
 ${PYSITELIB}/mypy/plugins/ctypes.pyo
@@ -605,6 +611,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_warnings.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_weakref.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_weakrefset.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_winapi.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_zstd.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/aifc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/annotationlib.pyi
@@ -641,6 +648,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/taskgroups.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/tasks.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/threads.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/timeouts.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/asyncio/tools.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/transports.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/trsock.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/asyncio/unix_events.pyi
@@ -673,16 +681,21 @@ ${PYSITELIB}/mypy/typeshed/stdlib/compileall.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/compression/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/compression/_common/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/compression/_common/_streams.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/compression/bz2/__init__.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/compression/gzip/__init__.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/compression/lzma/__init__.pyi
-${PYSITELIB}/mypy/typeshed/stdlib/compression/zlib/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/bz2.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/gzip.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/lzma.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/zlib.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/zstd/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/compression/zstd/_zstdfile.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/_base.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/interpreter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/process.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/concurrent/futures/thread.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/concurrent/interpreters/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/concurrent/interpreters/_crossinterp.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/concurrent/interpreters/_queues.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/configparser.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/contextlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/contextvars.pyi
@@ -1277,6 +1290,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/_common.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/zoneinfo/_tzpath.pyi
 ${PYSITELIB}/mypy/typeshed/stubs/mypy-extensions/mypy_extensions.pyi
+${PYSITELIB}/mypy/typeshed/stubs/mypy-native/native_internal.pyi
 ${PYSITELIB}/mypy/typestate.py
 ${PYSITELIB}/mypy/typestate.pyc
 ${PYSITELIB}/mypy/typestate.pyo
@@ -1480,7 +1494,10 @@ ${PYSITELIB}/mypyc/lib-rt/int_ops.c
 ${PYSITELIB}/mypyc/lib-rt/list_ops.c
 ${PYSITELIB}/mypyc/lib-rt/misc_ops.c
 ${PYSITELIB}/mypyc/lib-rt/module_shim.tmpl
+${PYSITELIB}/mypyc/lib-rt/module_shim_no_gil_multiphase.tmpl
 ${PYSITELIB}/mypyc/lib-rt/mypyc_util.h
+${PYSITELIB}/mypyc/lib-rt/native_internal.c
+${PYSITELIB}/mypyc/lib-rt/native_internal.h
 ${PYSITELIB}/mypyc/lib-rt/pythoncapi_compat.h
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.c
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.h
@@ -1547,6 +1564,9 @@ ${PYSITELIB}/mypyc/primitives/str_ops.pyo
 ${PYSITELIB}/mypyc/primitives/tuple_ops.py
 ${PYSITELIB}/mypyc/primitives/tuple_ops.pyc
 ${PYSITELIB}/mypyc/primitives/tuple_ops.pyo
+${PYSITELIB}/mypyc/primitives/weakref_ops.py
+${PYSITELIB}/mypyc/primitives/weakref_ops.pyc
+${PYSITELIB}/mypyc/primitives/weakref_ops.pyo
 ${PYSITELIB}/mypyc/py.typed
 ${PYSITELIB}/mypyc/rt_subtype.py
 ${PYSITELIB}/mypyc/rt_subtype.pyc
@@ -1659,6 +1679,9 @@ ${PYSITELIB}/mypyc/transform/flag_elimination.pyo
 ${PYSITELIB}/mypyc/transform/ir_transform.py
 ${PYSITELIB}/mypyc/transform/ir_transform.pyc
 ${PYSITELIB}/mypyc/transform/ir_transform.pyo
+${PYSITELIB}/mypyc/transform/log_trace.py
+${PYSITELIB}/mypyc/transform/log_trace.pyc
+${PYSITELIB}/mypyc/transform/log_trace.pyo
 ${PYSITELIB}/mypyc/transform/lower.py
 ${PYSITELIB}/mypyc/transform/lower.pyc
 ${PYSITELIB}/mypyc/transform/lower.pyo
