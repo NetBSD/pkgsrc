@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5887 2025/10/03 09:19:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5888 2025/10/03 09:30:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8518,3 +8518,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-lint to 25.9.1 [adam 2025-10-03]
 	Updated databases/py-barman to 3.15.0 [adam 2025-10-03]
 	Updated devel/py-blessed to 1.22.0 [adam 2025-10-03]
+	Updated lang/py-mypy to 1.18.2 [adam 2025-10-03]
+	Updated devel/py-isort to 6.1.0 [adam 2025-10-03]
