@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5891 2025/10/03 12:16:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5892 2025/10/03 12:22:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8526,3 +8526,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-pikepdf to 9.11.0 [adam 2025-10-03]
 	Updated devel/py-inline-snapshot to 0.29.2 [adam 2025-10-03]
 	Updated devel/py-dirty-equals to 0.10.0 [adam 2025-10-03]
+	Updated devel/SDL3 to 3.2.24 [adam 2025-10-03]
+	Updated math/py-bottleneck to 1.6.0 [adam 2025-10-03]
