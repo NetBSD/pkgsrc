@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5888 2025/10/03 09:30:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5889 2025/10/03 11:12:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8520,3 +8520,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-blessed to 1.22.0 [adam 2025-10-03]
 	Updated lang/py-mypy to 1.18.2 [adam 2025-10-03]
 	Updated devel/py-isort to 6.1.0 [adam 2025-10-03]
+	Updated fonts/py-fonttools to 4.60.1 [adam 2025-10-03]
+	Updated graphics/py-strich to 0.10 [adam 2025-10-03]
