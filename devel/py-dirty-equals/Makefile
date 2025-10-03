@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/01/13 14:28:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/03 12:16:33 adam Exp $
 
-DISTNAME=	dirty_equals-0.9.0
+DISTNAME=	dirty_equals-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dirty-equals/}
