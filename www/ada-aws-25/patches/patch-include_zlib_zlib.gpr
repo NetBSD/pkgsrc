@@ -1,0 +1,35 @@
+$NetBSD: patch-include_zlib_zlib.gpr,v 1.1 2025/10/03 11:54:06 dkazankov Exp $
+
+Build zlib when it is not present only
+
+--- include/zlib/zlib.gpr.orig	2024-12-20 16:02:53.000000000 +0200
++++ include/zlib/zlib.gpr
+@@ -30,26 +30,21 @@
+ 
+    type Yes_No is ("Yes", "No");
+    Zlib_Activated : Yes_No := "No";
++   Zlib_Path := External("ZLIB_PATH", ".");
+ 
+    --  Always build the static Z library as needed by some AWS tools
+ 
+-   case Shared.Library_Type is
+-      when "static" | "static-pic" =>
+-         Zlib_Activated := "Yes";
+-
+-      when "relocatable" =>
+          case AWS_Config.Zlib_Exists is
+             when "true" =>
+                Zlib_Activated := "No";
+             when "false" =>
+                Zlib_Activated := "Yes";
+          end case;
+-   end case;
+ 
+    case ZLib_Activated is
+       when "No" =>
+          for Source_Dirs use ();
+-         for Library_Dir use ".";
++         for Library_Dir use Zlib_Path;
+          for Externally_Built use "true";
+       when "Yes" =>
+          for Source_Dirs use (".");

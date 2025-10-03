@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/10/03 11:54:06 dkazankov Exp $
 
-BLAKE2s (AdaCore-templates-parser-v25.0.0.tar.gz) = 87196226137489c985fea3d1dd2994eeefb0ec8e168546081361a1bfa2e42114
-SHA512 (AdaCore-templates-parser-v25.0.0.tar.gz) = 902e41f713dd8446e08ba6f180b4c88c35d37da3476d0c925a4b6a05fb5038ff9ec1b0daa0443a55e82f902867b774efb4e28c0b7d8ec59fb15d050ee523ee87
-Size (AdaCore-templates-parser-v25.0.0.tar.gz) = 259459 bytes
 BLAKE2s (aws-25.1.0.tar.gz) = 9b6cdc5716a0fbe9a585cd5b1042eb8ae1b42854efb5edfcef26bcbe3193a460
 SHA512 (aws-25.1.0.tar.gz) = 854ea57f0c769e455b8644c60aecfdbbe2fd7417732abe271de557f72b44ff231305e356cedcf1036225ea1215170eaec195c7fad164e6c14e04bf0687b1a38a
 Size (aws-25.1.0.tar.gz) = 2505055 bytes
-SHA1 (patch-makefile.conf) = d460da5fe181b33044aac43447d3b03d90d3295d
+SHA1 (patch-include_zlib_zlib.gpr) = 80b2d39a21cfb3c1d07653f0f05829a8e5841db7
+SHA1 (patch-makefile.conf) = c13a56589a7e0bf5c35ceb1d1e5e38558e37c7b9
 SHA1 (patch-tools_tools.gpr) = f63a9cd964ce9b0360d32347ecd5306e3d8f1c52
