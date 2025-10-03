@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/02/27 08:22:58 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/03 09:30:03 adam Exp $
 
-DISTNAME=	isort-6.0.1
+DISTNAME=	isort-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/isort/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>0:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.:../../comms/py-colorama
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-black>=0:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.10.1:../../devel/py-hypothesis
@@ -22,6 +21,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-libcst>=0.3.18:../../lang/py-libcst
 TEST_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6.0:../../devel/py-importlib-metadata
+.endif
 
 # 18 failed, 544 passed, 1 skipped, 1 xfailed, 70 warnings, 3 errors
 # for testing:
