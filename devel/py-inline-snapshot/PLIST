@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/12 06:14:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/03 12:14:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -52,6 +52,9 @@ ${PYSITELIB}/inline_snapshot/_external/_diff.pyo
 ${PYSITELIB}/inline_snapshot/_external/_external.py
 ${PYSITELIB}/inline_snapshot/_external/_external.pyc
 ${PYSITELIB}/inline_snapshot/_external/_external.pyo
+${PYSITELIB}/inline_snapshot/_external/_external_base.py
+${PYSITELIB}/inline_snapshot/_external/_external_base.pyc
+${PYSITELIB}/inline_snapshot/_external/_external_base.pyo
 ${PYSITELIB}/inline_snapshot/_external/_external_file.py
 ${PYSITELIB}/inline_snapshot/_external/_external_file.pyc
 ${PYSITELIB}/inline_snapshot/_external/_external_file.pyo
@@ -100,6 +103,9 @@ ${PYSITELIB}/inline_snapshot/_flags.pyo
 ${PYSITELIB}/inline_snapshot/_format.py
 ${PYSITELIB}/inline_snapshot/_format.pyc
 ${PYSITELIB}/inline_snapshot/_format.pyo
+${PYSITELIB}/inline_snapshot/_get_snapshot_value.py
+${PYSITELIB}/inline_snapshot/_get_snapshot_value.pyc
+${PYSITELIB}/inline_snapshot/_get_snapshot_value.pyo
 ${PYSITELIB}/inline_snapshot/_global_state.py
 ${PYSITELIB}/inline_snapshot/_global_state.pyc
 ${PYSITELIB}/inline_snapshot/_global_state.pyo
@@ -136,6 +142,9 @@ ${PYSITELIB}/inline_snapshot/_snapshot/min_max_value.pyo
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.py
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyc
 ${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot_session.py
+${PYSITELIB}/inline_snapshot/_snapshot_session.pyc
+${PYSITELIB}/inline_snapshot/_snapshot_session.pyo
 ${PYSITELIB}/inline_snapshot/_source_file.py
 ${PYSITELIB}/inline_snapshot/_source_file.pyc
 ${PYSITELIB}/inline_snapshot/_source_file.pyo
