@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5886 2025/10/03 09:12:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5887 2025/10/03 09:19:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8516,3 +8516,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pykka to 4.4.0 [adam 2025-10-03]
 	Updated security/openssl to 3.6.0 [adam 2025-10-03]
 	Updated sysutils/ansible-lint to 25.9.1 [adam 2025-10-03]
+	Updated databases/py-barman to 3.15.0 [adam 2025-10-03]
+	Updated devel/py-blessed to 1.22.0 [adam 2025-10-03]
