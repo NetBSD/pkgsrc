@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/09/09 07:25:11 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/03 13:40:03 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -35,6 +35,14 @@ MAKE_FLAGS+=			ALL_LIBRARY_TYPES=static
 .endif
 
 MAKE_FLAGS+=			PREFIX=${GNAT_PREFIX} BUILD_MODE=prod
+
+GITHUB_SUBMODULES+=	commonmark	commonmark-spec	a0a91dd	commonmark-spec
+
+.if ${PKGSRC_RUN_TEST:tl} == "yes"
+.include "../../lang/python/tool.mk"
+.endif
+
+TEST_TARGET=	check
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
