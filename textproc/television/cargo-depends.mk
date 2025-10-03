@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.2 2025/08/15 13:30:02 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.3 2025/10/03 15:56:00 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
@@ -162,8 +162,8 @@ CARGO_CRATE_DEPENDS+=	quick-xml-0.37.5
 CARGO_CRATE_DEPENDS+=	quote-1.0.40
 CARGO_CRATE_DEPENDS+=	r-efi-5.3.0
 CARGO_CRATE_DEPENDS+=	ratatui-0.29.0
-CARGO_CRATE_DEPENDS+=	rayon-1.10.0
-CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
+CARGO_CRATE_DEPENDS+=	rayon-1.11.0
+CARGO_CRATE_DEPENDS+=	rayon-core-1.13.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.13
 CARGO_CRATE_DEPENDS+=	redox_users-0.5.0
 CARGO_CRATE_DEPENDS+=	ref-cast-1.0.24
