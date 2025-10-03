@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 10:59:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/03 05:52:04 adam Exp $
 bin/fast-import-filter-${PYVERSSUFFIX}
 bin/fast-import-info-${PYVERSSUFFIX}
 bin/fast-import-query-${PYVERSSUFFIX}
@@ -45,27 +45,3 @@ ${PYSITELIB}/fastimport/py.typed
 ${PYSITELIB}/fastimport/reftracker.py
 ${PYSITELIB}/fastimport/reftracker.pyc
 ${PYSITELIB}/fastimport/reftracker.pyo
-${PYSITELIB}/fastimport/tests/__init__.py
-${PYSITELIB}/fastimport/tests/__init__.pyc
-${PYSITELIB}/fastimport/tests/__init__.pyo
-${PYSITELIB}/fastimport/tests/test_commands.py
-${PYSITELIB}/fastimport/tests/test_commands.pyc
-${PYSITELIB}/fastimport/tests/test_commands.pyo
-${PYSITELIB}/fastimport/tests/test_dates.py
-${PYSITELIB}/fastimport/tests/test_dates.pyc
-${PYSITELIB}/fastimport/tests/test_dates.pyo
-${PYSITELIB}/fastimport/tests/test_errors.py
-${PYSITELIB}/fastimport/tests/test_errors.pyc
-${PYSITELIB}/fastimport/tests/test_errors.pyo
-${PYSITELIB}/fastimport/tests/test_filter_processor.py
-${PYSITELIB}/fastimport/tests/test_filter_processor.pyc
-${PYSITELIB}/fastimport/tests/test_filter_processor.pyo
-${PYSITELIB}/fastimport/tests/test_helpers.py
-${PYSITELIB}/fastimport/tests/test_helpers.pyc
-${PYSITELIB}/fastimport/tests/test_helpers.pyo
-${PYSITELIB}/fastimport/tests/test_info_processor.py
-${PYSITELIB}/fastimport/tests/test_info_processor.pyc
-${PYSITELIB}/fastimport/tests/test_info_processor.pyo
-${PYSITELIB}/fastimport/tests/test_parser.py
-${PYSITELIB}/fastimport/tests/test_parser.pyc
-${PYSITELIB}/fastimport/tests/test_parser.pyo
