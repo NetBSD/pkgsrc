@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/13 07:09:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/03 11:51:04 adam Exp $
 bin/rich-click-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,24 +12,38 @@ ${PYSITELIB}/rich_click/__init__.pyo
 ${PYSITELIB}/rich_click/__main__.py
 ${PYSITELIB}/rich_click/__main__.pyc
 ${PYSITELIB}/rich_click/__main__.pyo
+${PYSITELIB}/rich_click/_click_types_cache.py
+${PYSITELIB}/rich_click/_click_types_cache.pyc
+${PYSITELIB}/rich_click/_click_types_cache.pyo
 ${PYSITELIB}/rich_click/_compat_click.py
 ${PYSITELIB}/rich_click/_compat_click.pyc
 ${PYSITELIB}/rich_click/_compat_click.pyo
+${PYSITELIB}/rich_click/_internal_types.py
+${PYSITELIB}/rich_click/_internal_types.pyc
+${PYSITELIB}/rich_click/_internal_types.pyo
 ${PYSITELIB}/rich_click/cli.py
 ${PYSITELIB}/rich_click/cli.pyc
 ${PYSITELIB}/rich_click/cli.pyo
 ${PYSITELIB}/rich_click/decorators.py
 ${PYSITELIB}/rich_click/decorators.pyc
+${PYSITELIB}/rich_click/decorators.pyi
 ${PYSITELIB}/rich_click/decorators.pyo
 ${PYSITELIB}/rich_click/patch.py
 ${PYSITELIB}/rich_click/patch.pyc
 ${PYSITELIB}/rich_click/patch.pyo
 ${PYSITELIB}/rich_click/py.typed
+${PYSITELIB}/rich_click/rich_box.py
+${PYSITELIB}/rich_click/rich_box.pyc
+${PYSITELIB}/rich_click/rich_box.pyo
 ${PYSITELIB}/rich_click/rich_click.py
 ${PYSITELIB}/rich_click/rich_click.pyc
 ${PYSITELIB}/rich_click/rich_click.pyo
+${PYSITELIB}/rich_click/rich_click_theme.py
+${PYSITELIB}/rich_click/rich_click_theme.pyc
+${PYSITELIB}/rich_click/rich_click_theme.pyo
 ${PYSITELIB}/rich_click/rich_command.py
 ${PYSITELIB}/rich_click/rich_command.pyc
+${PYSITELIB}/rich_click/rich_command.pyi
 ${PYSITELIB}/rich_click/rich_command.pyo
 ${PYSITELIB}/rich_click/rich_context.py
 ${PYSITELIB}/rich_click/rich_context.pyc
@@ -46,6 +60,12 @@ ${PYSITELIB}/rich_click/rich_help_formatter.pyo
 ${PYSITELIB}/rich_click/rich_help_rendering.py
 ${PYSITELIB}/rich_click/rich_help_rendering.pyc
 ${PYSITELIB}/rich_click/rich_help_rendering.pyo
+${PYSITELIB}/rich_click/rich_panel.py
+${PYSITELIB}/rich_click/rich_panel.pyc
+${PYSITELIB}/rich_click/rich_panel.pyo
+${PYSITELIB}/rich_click/rich_parameter.py
+${PYSITELIB}/rich_click/rich_parameter.pyc
+${PYSITELIB}/rich_click/rich_parameter.pyo
 ${PYSITELIB}/rich_click/utils.py
 ${PYSITELIB}/rich_click/utils.pyc
 ${PYSITELIB}/rich_click/utils.pyo
