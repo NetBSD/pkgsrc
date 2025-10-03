@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/07/07 05:58:07 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/03 07:37:29 wiz Exp $
 
 DISTNAME=	openapi_core-0.19.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/openapi-core/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/python-openapi/openapi-core
 COMMENT=	Client-side and server-side support for the OpenAPI Specification v3
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-path>=0.3.1:../../textproc/py-jsonschema-path
@@ -24,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 #TEST_DEPENDS+=	${PYPKGPREFIX}-falcon-[0-9]*:../../devel/py-falcon
-TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
+#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses-[0-9]*:../../net/py-responses
