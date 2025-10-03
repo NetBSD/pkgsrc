@@ -1,10 +1,11 @@
-$NetBSD: patch-Makefile,v 1.1 2025/07/28 11:40:31 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/10/03 18:14:19 dkazankov Exp $
 
 Provide gprbuild options
+Run testsuite in WRKDIR instead of /tmp
 
---- Makefile.orig	2024-07-05 12:40:15.000000000 +0300
+--- Makefile.orig	2024-10-07 18:46:25.000000000 +0300
 +++ Makefile
-@@ -1,6 +1,7 @@
+@@ -1,12 +1,14 @@
  BUILD_MODE ?= dev
  LIBRARY_TYPE ?= relocatable
  PROCESSORS ?= 0
@@ -12,7 +13,14 @@ Provide gprbuild options
  
  ALL_LIBRARY_TYPES = static static-pic relocatable
  
-@@ -17,8 +18,7 @@
+ LIB_PROJECT = prettier_ada.gpr
+ 
+ TEST_PROGRAMS = testsuite/test_programs/test_programs.gpr
++TESTSUITE_DIR := $(shell pwd)/testsuite
+ 
+ .PHONY: lib
+ lib:
+@@ -17,8 +19,7 @@
  		-XPRETTIER_ADA_LIBRARY_TYPE=$(LIBRARY_TYPE) \
  		-XPRETTIER_ADA_BUILD_MODE=$(BUILD_MODE) \
  		-P $(LIB_PROJECT) \
@@ -22,7 +30,7 @@ Provide gprbuild options
  
  .PHONY: all
  all:
-@@ -30,8 +30,7 @@
+@@ -30,8 +31,7 @@
  			-XLIBRARY_TYPE=$$library_type \
  			-XPRETTIER_ADA_BUILD_MODE=$(BUILD_MODE) \
  			-P $(LIB_PROJECT) \
@@ -32,3 +40,11 @@ Provide gprbuild options
  	done;
  
  .PHONY: clean
+@@ -96,4 +96,6 @@
+ 
+ .PHONY: test
+ test: test-programs
+-	python3 testsuite/testsuite.py
++	TEST_PROGRAMS=$(TESTSUITE_DIR)/test_programs/bin python3 testsuite/testsuite.py \
++	    -t $(TESTSUITE_DIR)/temp -d $(TESTSUITE_DIR)/dest -o $(TESTSUITE_DIR)/out \
++	    --no-random-temp-subdir --cleanup-mode all --show-error-output
