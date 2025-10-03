@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2025/09/07 07:42:08 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/10/03 13:40:03 dkazankov Exp $
 
+BLAKE2s (commonmark-commonmark-spec-a0a91dd.tar.gz) = 123864aa46f60917b60cfc18925060ef32bbc383cb1b7f3178034b085147b6f4
+SHA512 (commonmark-commonmark-spec-a0a91dd.tar.gz) = 879d75f3cf6da3a8466e5a3f74b2e64e5cf93715dd81af532e09d1cdebd4c5273eaf3d65d065a96238c8073d63b19ec1dd05f356c21b48248f43f44fbc087687
+Size (commonmark-commonmark-spec-a0a91dd.tar.gz) = 75536 bytes
 BLAKE2s (markdown-25.0.0.tar.gz) = e66bcdd5fe88dfc6f4f45a8c3e404dda0d701683cd0e6eea99d741670fa13ed1
 SHA512 (markdown-25.0.0.tar.gz) = 1818110a0539b91d407b1bba6ca2d9f18e0d5fe71be97dc9cd1000331e579a5f06349f4f1b11f09341e507dbff9e47cafb31df2d5816e33c1c84baa9e4b01009
 Size (markdown-25.0.0.tar.gz) = 48445 bytes
-SHA1 (patch-Makefile) = 47588d3bd18c7afdc6f061391106fb7a1e26f93b
+SHA1 (patch-Makefile) = be2f7de12e629de10427daad6db7d0973c0a4850
+SHA1 (patch-commonmark-spec_test_normalize.py) = fec7d381a1370a161ee3d4a8521e08d023a620fc

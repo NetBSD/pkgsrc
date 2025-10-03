@@ -1,9 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2025/09/07 07:42:08 dkazankov Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/10/03 13:40:04 dkazankov Exp $
 
 Make BUILD_MODE externally settable
 Add ALL_LIBRARY_TYPES to build several libraries
 Add options for gprbuild and gprinstall
 Fix GPRINSTALL parameters
+Remove test specs download
 
 --- Makefile.orig	2024-05-04 22:43:19.000000000 +0300
 +++ Makefile
@@ -17,7 +18,7 @@ Fix GPRINSTALL parameters
  
  GPRBUILD_FLAGS = -p -j0 -XBUILD_MODE=$(BUILD_MODE)
  PREFIX                 ?= /usr
-@@ -26,10 +27,24 @@
+@@ -26,17 +27,31 @@
  .PHONY: spellcheck check
  
  all:
@@ -43,4 +44,13 @@ Fix GPRINSTALL parameters
 +	done;
  
  build_tests: all
- 	gprbuild $(GPRBUILD_FLAGS) -aP gnat -P gnat/tests/commonmark_tests.gpr
+-	gprbuild $(GPRBUILD_FLAGS) -aP gnat -P gnat/tests/commonmark_tests.gpr
++	gprbuild $(GPRBUILD_FLAGS) -aP gnat -P gnat/tests/commonmark_tests.gpr $(GPRBUILD_OPTIONS)
+ 
+ check: build_tests check_markdown
+ 
+-check_markdown: commonmark-spec
++check_markdown:
+ 	cd commonmark-spec; python3 test/spec_tests.py --program ../.objs/static/tests/commonmark_tests |\
+ 	  grep -E "^Example|^[0-9]+.passed" |\
+ 	  tee markdown_tests_result | tail
