@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/10/01 09:32:34 pin Exp $
+$NetBSD: distinfo,v 1.9 2025/10/03 15:51:45 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -51,9 +51,9 @@ Size (atom_syndication-0.12.6.crate) = 25715 bytes
 BLAKE2s (autocfg-1.4.0.crate) = ce6aae5b8fe5dadf0c6a182c5940551ded4070c0c0143412d8c8356037ce1dc0
 SHA512 (autocfg-1.4.0.crate) = 3b5e7c30bc73e105e4bfcab584c24fc4016db41fac9c356c6649fd841051704bbe8848e09546eb50d7c1f18ea8ce1cb72fbc268a620d5c609b3472114b5be73c
 Size (autocfg-1.4.0.crate) = 17712 bytes
-BLAKE2s (automod-1.0.14.crate) = e05a3b2202a231d998ae7a1814d6fdbbb0cea99e1738988c1b4ce5c124b55f4e
-SHA512 (automod-1.0.14.crate) = 5efdf134f24298f3a522688b3bb87f5e8e43bafd761909a09a1018f7142ef0ce3ed390f7f01cc475391bf8e6e3d433d776c47efce619a403276ed8998b2c531f
-Size (automod-1.0.14.crate) = 8717 bytes
+BLAKE2s (automod-1.0.15.crate) = 7d4d59ea95b2fa7ef416a9d594ae1ab6131b9411ab5083176b309648a3327b0a
+SHA512 (automod-1.0.15.crate) = 5f4b0b0a68f37083acb09102b3f339a489905d538b61c7b10e519cab7e9a9a63d3893035d2609977f45c654a2a36b0ae18424d71e75a664bef8434473f1b03fb
+Size (automod-1.0.15.crate) = 9129 bytes
 BLAKE2s (backtrace-0.3.74.crate) = bda0f7b7b887f75fc6c275c6f61b5fe796d1e214d189fa0724db4d2843262e2e
 SHA512 (backtrace-0.3.74.crate) = 00cb2be0626f0bf6ec8b8f525bb129d3ac74c386c5e46ee0f343edb78c863222521f8132876057a5a1facacf40792dea51f2f20e986b35f3a85bca3dcf5c1520
 Size (backtrace-0.3.74.crate) = 88516 bytes
@@ -111,9 +111,9 @@ Size (clap_derive-4.5.40.crate) = 33470 bytes
 BLAKE2s (clap_lex-0.7.4.crate) = 87179de8b09978be634962bb5bf3feebda3994e47c4e29fb88504349e07ad710
 SHA512 (clap_lex-0.7.4.crate) = a2566868f4619679d3b74b70592ffa6a04b13e38e3196c56bb1dae8bea0c711bddbccd778d2aba3cc0ee074c9b1cc0335222818f0d47fb3cc8109cbc35bb992e
 Size (clap_lex-0.7.4.crate) = 12858 bytes
-BLAKE2s (cobalt-0.20.1.tar.gz) = 2fdadffcced186b7903e1d6875941bcf52ba51bb25d714f87d3d4776a2ba258a
-SHA512 (cobalt-0.20.1.tar.gz) = b4bff3992fa1c87f31455db163def5c85a42d38ec4eb39a86d39bdf58876526389182e03124dfed7448970dccdb1939fd9f15ece0ce4ac6d62bbf668395330e2
-Size (cobalt-0.20.1.tar.gz) = 147673 bytes
+BLAKE2s (cobalt-0.20.2.tar.gz) = e4a8ba881c25c63877213738c59d5fe323142f8e3eb2463ca208ceeb63811dd4
+SHA512 (cobalt-0.20.2.tar.gz) = 9f8b0e4f8ad0e9b624bb3df257126aa75270b877b05d74d82ae2a4d50a5133ade51d237f6f64a491ec8011f00d30977a5d3d7838bc0e374887b66bc7ed799ec3
+Size (cobalt-0.20.2.tar.gz) = 150586 bytes
 BLAKE2s (codemap-0.1.3.crate) = f8a21d6a9908ba187954daacf0d23ad25eeb38ea1727dff7cf930c30acd83004
 SHA512 (codemap-0.1.3.crate) = 58cf60c2161f4c208bc98e8377104be4ca4b2827444a8c1310f2d60cb13775d7158a6d30a88321b308938d635ae92c5a41c5d4fb73a3d86499c29ddf6f86eebb
 Size (codemap-0.1.3.crate) = 9483 bytes
