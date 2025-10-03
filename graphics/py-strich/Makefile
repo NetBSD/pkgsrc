@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/09/28 19:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/03 11:12:10 adam Exp $
 
-DISTNAME=	pystrich-0.9
+DISTNAME=	pystrich-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyStrich/}
 
