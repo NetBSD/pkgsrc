@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 07:13:53 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/03 06:33:56 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	liblal-tools-${GNAT_NAME}-25.0.0
@@ -33,7 +33,7 @@ PLIST_VARS+=	shlibs
 USE_PKGSRC_GCC_RUNTIME?=			no
 .if ${USE_PKGSRC_GCC_RUNTIME:tl} == "yes"
 PLIST.shlibs=					yes
-MAKE_FLAGS+=					ALL_LIBRARY_TYPES=static static-pic relocatable
+MAKE_FLAGS+=					ALL_LIBRARY_TYPES='static static-pic relocatable'
 BUILDLINK_DEPMETHOD.xmlada-25=			full
 BUILDLINK_DEPMETHOD.libgpr-25=			full
 BUILDLINK_DEPMETHOD.gnatcoll-core-25=		full
@@ -45,13 +45,12 @@ BUILDLINK_DEPMETHOD.prettier-ada-25=		full
 BUILDLINK_DEPMETHOD.templates-parser-25=	full
 BUILDLINK_DEPMETHOD.langkit-support-25=		full
 BUILDLINK_DEPMETHOD.libadalang-25=		full
-BUILDLINK_DEPMETHOD.libadalang-tools-25=	full
 .else
 MAKE_FLAGS+=					ALL_LIBRARY_TYPES=static
 .endif
 
 BUILD_TARGET=		lib
-MAKE_FLAGS=		BUILD_MODE=prod
+MAKE_FLAGS+=		BUILD_MODE=prod
 
 INSTALL_TARGET=		install-lib install-tgen
 INSTALL_MAKE_FLAGS+=	PREFIX=${GNAT_PREFIX}
