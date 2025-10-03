@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/05/21 19:21:10 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/10/03 12:22:12 adam Exp $
 
-BLAKE2s (bottleneck-1.5.0.tar.gz) = fed7ff007791aec77e3c206d422f97314085f566d77a488e2680efe969746151
-SHA512 (bottleneck-1.5.0.tar.gz) = 9fefe695afcec7c2ad29db7f84870bbea2224b96b606d0e72b1b6310e078fa098c6950dd3b3ac3bafc927fc0bbf6c56c3fcf89908530d806adeda1d10dec2ee7
-Size (bottleneck-1.5.0.tar.gz) = 104177 bytes
+BLAKE2s (bottleneck-1.6.0.tar.gz) = 0be4abcf60cccaecb58a7cc2e09a4c02bd8e1731810b4df4e54bab26a50f88f9
+SHA512 (bottleneck-1.6.0.tar.gz) = e83d470b3380d579966855eef18c50069ca7db7a789ce0e8c39b707d0a8ad7cd2179121bad0c8bce41da5095ea1dea3dbfd59d31968ab21724d66baad694d978
+Size (bottleneck-1.6.0.tar.gz) = 104311 bytes
