@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.570 2025/10/03 16:09:09 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.571 2025/10/03 16:21:12 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27691,3 +27691,5 @@ podofo-[0-9]*		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-46205
 py{27,39,310,311,312,313}-django<4.2.25		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
 py{27,39,310,311,312,313}-django>=5.1<5.1.13	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
 py{27,39,310,311,312,313}-django>=5.2<5.2.7	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
+matrix-synapse<1.136.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-49090
+matrix-synapse<1.136.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-54315
