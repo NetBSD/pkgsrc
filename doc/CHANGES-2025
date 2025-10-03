@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5893 2025/10/03 13:59:24 jperkin Exp $
+$NetBSD: CHANGES-2025,v 1.5894 2025/10/03 15:48:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8529,3 +8529,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/SDL3 to 3.2.24 [adam 2025-10-03]
 	Updated math/py-bottleneck to 1.6.0 [adam 2025-10-03]
 	Updated pkgtools/pkgin to 25.10.0 [jperkin 2025-10-03]
+	Updated devel/nss to 3.117 [wiz 2025-10-03]
