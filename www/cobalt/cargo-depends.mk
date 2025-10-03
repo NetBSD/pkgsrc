@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2025/10/01 09:32:34 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2025/10/03 15:51:45 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -17,7 +17,7 @@ CARGO_CRATE_DEPENDS+=	anymap2-0.13.0
 CARGO_CRATE_DEPENDS+=	ascii-1.1.0
 CARGO_CRATE_DEPENDS+=	atom_syndication-0.12.6
 CARGO_CRATE_DEPENDS+=	autocfg-1.4.0
-CARGO_CRATE_DEPENDS+=	automod-1.0.14
+CARGO_CRATE_DEPENDS+=	automod-1.0.15
 CARGO_CRATE_DEPENDS+=	backtrace-0.3.74
 CARGO_CRATE_DEPENDS+=	bincode-1.3.3
 CARGO_CRATE_DEPENDS+=	bit-set-0.5.3
