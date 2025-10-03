@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5889 2025/10/03 11:12:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5890 2025/10/03 11:53:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8522,3 +8522,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-isort to 6.1.0 [adam 2025-10-03]
 	Updated fonts/py-fonttools to 4.60.1 [adam 2025-10-03]
 	Updated graphics/py-strich to 0.10 [adam 2025-10-03]
+	Updated devel/py-rich-click to 1.9.1 [adam 2025-10-03]
+	Updated print/py-pikepdf to 9.11.0 [adam 2025-10-03]
