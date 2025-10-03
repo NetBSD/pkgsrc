@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.572 2025/10/03 16:35:51 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.573 2025/10/03 16:59:20 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27694,3 +27694,9 @@ py{27,39,310,311,312,313}-django>=5.1<5.1.13	directory-traversal	https://nvd.nis
 py{27,39,310,311,312,313}-django>=5.2<5.2.7	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-59682
 matrix-synapse<1.136.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-49090
 matrix-synapse<1.136.0	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-54315
+ansible-core<2.17.0	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2023-5115
+ansible-core<2.14.12	input-validation			https://nvd.nist.gov/vuln/detail/CVE-2023-5764
+ansible-core<2.14.14	information-disclosure			https://nvd.nist.gov/vuln/detail/CVE-2024-0690
+ansible-core<2.14.18	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-8775
+ansible-core<2.17.6	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2024-9902
+ansible-core<2.16.14	arbitrary-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-11079
