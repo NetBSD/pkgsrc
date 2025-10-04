@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5906 2025/10/04 07:44:33 wen Exp $
+$NetBSD: CHANGES-2025,v 1.5907 2025/10/04 07:59:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8542,3 +8542,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Catalyst-Plugin-Session to 0.44 [wen 2025-10-04]
 	Updated www/p5-CGI to 4.70 [wen 2025-10-04]
 	Updated www/p5-CGI-Simple to 1.282 [wen 2025-10-04]
+	Updated www/p5-CGI-Application-Plugin-Session to 1.06 [wen 2025-10-04]
