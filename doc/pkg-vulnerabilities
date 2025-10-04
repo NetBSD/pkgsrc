@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.578 2025/10/04 17:17:23 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.579 2025/10/04 21:20:11 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27718,4 +27718,4 @@ wireshark<4.2.7		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-825
 wireshark<4.2.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8645
 wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9780
 wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9781
-fetchmail<6.5.6		denial-of-service	https://www.fetchmail.info/fetchmail-SA-2025-01.txt
+fetchmail<6.5.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61962
