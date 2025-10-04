@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2021/10/26 11:29:37 nia Exp $
+$NetBSD: distinfo,v 1.33 2025/10/04 13:37:08 tnn Exp $
 
 BLAKE2s (w3c-libwww-5.4.2.tgz) = f3885a50927cefff19d9931000c10fadeed77495eb7d18f92e9bb2e4d83c6750
 SHA512 (w3c-libwww-5.4.2.tgz) = d0dbe2be106c4987a5131c22c300bd3fcb1dce1881d0009269dd4e3c8068da1c07e2b1ca4bfd181640f8b467d4a378a9036f9b385d3a28badbe22b2ed74e0e74
@@ -8,7 +8,7 @@ SHA1 (patch-Library_src_HTMIMImp.c) = 2f14df9867758c69f9e6110b16f75d017e032a8e
 SHA1 (patch-Library_src_HTStyle.c) = 2c42a00ce5ed0ff0f34e779582684805e47edce2
 SHA1 (patch-Library_src_Makefile.am) = 14bf3beef9e2e57e2574ccb806132b13d2b60af7
 SHA1 (patch-Library_src_Makefile.in) = cd685a468b93066c0da9e1171051da93cfd28bb4
-SHA1 (patch-Library_src_SSL_HTSSL.c) = ddb87040f0669e1c3ab9f098a957193b436f588a
+SHA1 (patch-Library_src_SSL_HTSSL.c) = 70a3b8876f7e11029375deebf9fa9f0667515e99
 SHA1 (patch-Library_src_wwwsys.h) = 25f39cf5afb6e4a2879a0f38129d8a450a863e72
-SHA1 (patch-configure) = 70a7d08b59361bb64069bb27cabfbc6dc2c47ec4
+SHA1 (patch-configure) = b38395e105f35ea07070e26cce37b1984eb6284b
 SHA1 (patch-libwww-config.in) = 438821b7979712cf87781c38c930ab8e24ea1aad
