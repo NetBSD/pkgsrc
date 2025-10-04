@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2018/06/24 16:54:59 adam Exp $
+$NetBSD: patch-configure,v 1.2 2025/10/04 13:37:08 tnn Exp $
 
-Explicit declaration of SSL_library_init().
+Explicit declaration of SSL_library_init() & zlibVersion()
 Portability fix.
 
 --- configure.orig	2017-06-24 06:11:34.000000000 +0000
@@ -14,7 +14,15 @@ Portability fix.
  
  $as_echo "#define unlink remove" >>confdefs.h
  
-@@ -16420,6 +16420,7 @@ $as_echo "no" >&6; }
+@@ -15538,6 +15538,7 @@ $as_echo "#define HT_ZLIB 1" >>confdefs.
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
++#include <zlib.h>
+ int
+ main ()
+ {
+@@ -16420,6 +16421,7 @@ $as_echo "no" >&6; }
      LIBS="$LIBS $withval"
      cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
