@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.27 2025/02/24 16:39:46 manu Exp $
+$NetBSD: distinfo,v 1.28 2025/10/04 13:58:20 kikadf Exp $
 
 BLAKE2s (sope/SOPE-2.4.3.tar.gz) = d22d3724b36a41fa08e89554c3a849a9d307fd8f0a52f5cbee2536d7df64f1a0
 SHA512 (sope/SOPE-2.4.3.tar.gz) = 2625c7516ca9df35cdd8f97aaf30b25dc8ffe104c9b84140d3979f32ad89c99f2a3d1b6ba72052b2410938bd06156d08953875796e05f525b52e98d977b17071
 Size (sope/SOPE-2.4.3.tar.gz) = 2219842 bytes
 SHA1 (patch-general.make) = 080d097aca56c4aae59beadd0c0829c6b1798aa3
+SHA1 (patch-sope-core_NGExtensions_NGHashMap.m) = 2405ae1d45dc2c98b68553930e707a5bf774b809
 SHA1 (patch-sope-core_NGStreams_NGActiveSocket.m) = c06a04b009f894eee0161eb8bd3f9c7011b6de3e
 SHA1 (patch-sope-core_NGStreams_NGDescriptorFunctions.m) = e3045db3205cd859d78c3953e0f1565626c69d04
 SHA1 (patch-sope-core_NGStreams_NGInternetSocketAddress.m) = 8e0da0d372189c3c63e0c4004ef50364c3c5a392
 SHA1 (patch-sope-core_NGStreams_NGLocalSocketAddress.m) = 26288c147ef39ef3a63bc03cc83be123b364d206
 SHA1 (patch-sope-core_NGStreams_NGLocalSocketDomain.m) = 2b8d2e842e6de346bf908bf38bbf4c5de4d93e89
 SHA1 (patch-sope-mime_NGMime_NGMimeType.m) = afc67e53b32b7de5098058c8bbe76ed08bae8eb7
-SHA1 (patch-sope-xml_libxmlSAXDriver_libxmlHTMLSAXDriver.m) = 20b00937973c64f36324c9670ba08374bccec13b
