@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5917 2025/10/04 17:19:43 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5918 2025/10/04 19:42:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8556,3 +8556,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/SDL_image to 1.2.12nb16 [kikadf 2025-10-04]
 	Updated sysutils/eza to 0.23.4 [pin 2025-10-04]
 	Updated math/admesh to 0.98.5 [kikadf 2025-10-04]
+	Updated devel/ruby-jirametrics to 2.18 [schmonz 2025-10-04]
