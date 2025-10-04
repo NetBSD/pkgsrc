@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5903 2025/10/04 07:31:22 wen Exp $
+$NetBSD: CHANGES-2025,v 1.5904 2025/10/04 07:37:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8539,3 +8539,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-File-Scan-ClamAV to 1.96 [wen 2025-10-04]
 	Updated x11/xkeyboard-config to 2.46 [wiz 2025-10-04]
 	Updated www/p5-Catalyst-Authentication-Credential-HTTP to 1.019 [wen 2025-10-04]
+	Updated www/p5-Catalyst-Plugin-Session to 0.44 [wen 2025-10-04]
