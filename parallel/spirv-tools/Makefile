@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/09/28 10:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/04 12:14:22 tnn Exp $
 
-DISTNAME=	SPIRV-Tools-2025.1
+DISTNAME=	SPIRV-Tools-2025.4
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
