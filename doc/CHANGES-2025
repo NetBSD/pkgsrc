@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5899 2025/10/03 15:56:19 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5900 2025/10/04 00:14:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8535,3 +8535,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 4.1.0 [pin 2025-10-03]
 	Updated net/tlrc to 1.12.0 [pin 2025-10-03]
 	Updated textproc/television to 0.13.5 [pin 2025-10-03]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.35 [wen 2025-10-04]
