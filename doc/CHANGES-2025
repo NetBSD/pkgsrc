@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5915 2025/10/04 14:39:13 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.5916 2025/10/04 14:51:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8554,3 +8554,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/SOPE to 2.4.3nb2 [kikadf 2025-10-04]
 	Updated devel/SOPE5 to 5.11.2nb2 [kikadf 2025-10-04]
 	Updated graphics/SDL_image to 1.2.12nb16 [kikadf 2025-10-04]
+	Updated sysutils/eza to 0.23.4 [pin 2025-10-04]
