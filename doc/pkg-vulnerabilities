@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.575 2025/10/04 06:32:51 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.576 2025/10/04 14:17:39 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27068,7 +27068,8 @@ php83-soap<8.3.23	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-64
 php84<8.4.10	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
 php84-pgsql<8.4.10	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1735
 php84-soap<8.4.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6491
-SOPE-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53603
+SOPE<2.4.3nb2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53603
+SOPE5<5.11.2nb2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-53603
 py{27,39,310,311,312,313}-Pillow>=11.2.0<11.3.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-48379
 git-gitk<2.50.1	remote-file-write	https://nvd.nist.gov/vuln/detail/CVE-2025-27613
 git-gitk<2.50.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-27614
