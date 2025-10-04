@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5909 2025/10/04 08:10:38 wen Exp $
+$NetBSD: CHANGES-2025,v 1.5910 2025/10/04 08:55:20 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8545,3 +8545,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-CGI-Application-Plugin-Session to 1.06 [wen 2025-10-04]
 	Updated www/p5-HTML-CalendarMonthSimple to 1.27 [wen 2025-10-04]
 	Updated www/p5-LWP-Protocol-Net-Curl to 0.027 [wen 2025-10-04]
+	Updated www/hugo to 0.151.0 [triaxx 2025-10-04]
