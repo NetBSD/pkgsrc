@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2025/09/23 13:00:27 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/04 12:15:18 tnn Exp $
 
 # Note that parallel/spirv-headers must be kept in sync with what this
 # package expects.
-DISTNAME=	SPIRV-LLVM-Translator-19.1.7
+DISTNAME=	SPIRV-LLVM-Translator-19.1.12
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +16,7 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 GCC_REQD+=	7 # sync with llvm
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
