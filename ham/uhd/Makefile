@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/09/30 16:23:07 gdt Exp $
+# $NetBSD: Makefile,v 1.90 2025/10/04 13:18:29 tnn Exp $
 
 DISTNAME=	uhd-4.8.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/EttusResearch/uhd
 COMMENT=	USRP (Universal Software Radio Peripheral) Hardware Drivers
 LICENSE=	gnu-gpl-v3
-
-# This will fail to build with boost 1.89.0:
-#   https://github.com/EttusResearch/uhd/issues/869"
 
 # to avoid extra pax_global_header
 EXTRACT_USING=	gtar

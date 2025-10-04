@@ -1,11 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.7 2025/02/26 22:05:41 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.8 2025/10/04 13:18:29 tnn Exp $
 
 Allow overrides on PKG_MAN_DIR.
 https://github.com/EttusResearch/uhd/issues/301
+Don't link with removed boost_system.
 
---- CMakeLists.txt.orig	2024-12-11 13:37:26.000000000 +0000
+--- CMakeLists.txt.orig	2025-01-27 14:59:07.000000000 +0000
 +++ CMakeLists.txt
-@@ -131,8 +131,9 @@ endif()
+@@ -147,8 +147,9 @@ endif()
  if(NOT DEFINED PKG_DOC_DIR)
      set(PKG_DOC_DIR share/doc/uhd)
  endif()
@@ -16,3 +17,11 @@ https://github.com/EttusResearch/uhd/issues/301
  ########################################################################
  # UHD config files
  ########################################################################
+@@ -300,7 +301,6 @@ set(UHD_BOOST_REQUIRED_COMPONENTS
+     date_time
+     filesystem
+     program_options
+-    system
+     serialization
+     thread
+     unit_test_framework
