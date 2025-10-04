@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/09/28 15:55:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.60 2025/10/04 21:12:07 prlw1 Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
