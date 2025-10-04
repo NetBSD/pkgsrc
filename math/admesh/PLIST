@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/04 17:15:36 kikadf Exp $
 bin/admesh
-share/doc/admesh/ADMESH.DOC
-share/doc/admesh/README
+lib/libadmesh.so
+lib/libadmesh.so.1
+lib/libadmesh.so.1.0
+share/doc/admesh/README.md
+share/doc/admesh/admesh-doc.txt
 share/examples/admesh/block.stl
