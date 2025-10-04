@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2025/04/24 14:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/10/04 10:26:56 tnn Exp $
 
 DISTNAME=		tigervnc-1.15.0
 PKGNAME=		${DISTNAME}.1.20.13
@@ -65,6 +65,8 @@ SUBST_VARS.hpath+=	PREFIX X11BASE
 
 REPLACE_PERL+=		unix/vncserver
 REPLACE_PERL+=		vncserver.pl
+
+CHECK_PORTABILITY_SKIP+=	unix/xserver/hw/xquartz/bundle/mk_bundke.sh
 
 post-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${_DISTDIR}/${XORG_SERVER_FILE}.tar.xz
