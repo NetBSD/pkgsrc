@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/03/08 22:57:40 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/04 12:39:56 tnn Exp $
 
-DISTNAME=		vulkan-tools-1.3.296.0 # matches vulkan-headers
+DISTNAME=		vulkan-tools-1.4.321.0 # matches vulkan-headers
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_PROJECT=		Vulkan-Tools
 GITHUB_TAG=		vulkan-sdk-${PKGVERSION_NOREV}
-GITHUB_SUBMODULES=	zeux volk 1.3.295 volk
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KhronosGroup/Vulkan-Tools/
@@ -20,5 +19,6 @@ USE_TOOLS+=	pkg-config
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
+.include "../../devel/wayland-protocols/buildlink3.mk"
 .include "../../graphics/vulkan-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
