@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:30:09 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/10/04 08:09:41 wen Exp $
 
-BLAKE2s (LWP-Protocol-Net-Curl-0.026.tar.gz) = d58242faf2a857db2c67e00f26090d28eee3b366b7a1893b33f6ede92a0b4eac
-SHA512 (LWP-Protocol-Net-Curl-0.026.tar.gz) = e83d063ae43eb3e2d15bcd3b531a11656d023c0d6b0319711d1361da34c757da211a648b503557218fcab9c52bac6bffce7a6c68c528465f0df53b7cb0d2e4e4
-Size (LWP-Protocol-Net-Curl-0.026.tar.gz) = 35639 bytes
+BLAKE2s (LWP-Protocol-Net-Curl-0.027.tar.gz) = 95e4034c81d2a263fd38a074310ef892e5ad2ccf57055e74f13e7416acee7ef3
+SHA512 (LWP-Protocol-Net-Curl-0.027.tar.gz) = 4ed9b1e68700320989b16af7f456b87cd22072e8bdbc0c2390af3b9c10eef04144420bffa61e79417f9cfeebf24e16816c9554edeba8895f29b7a4582e0514ba
+Size (LWP-Protocol-Net-Curl-0.027.tar.gz) = 33922 bytes
