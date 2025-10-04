@@ -1,0 +1,13 @@
+$NetBSD: patch-uhd.pc.in,v 1.1 2025/10/04 13:18:29 tnn Exp $
+
+Don't link with removed boost_system.
+
+--- uhd.pc.in.orig	2025-10-04 13:01:17.558315471 +0000
++++ uhd.pc.in
+@@ -11,5 +11,5 @@ Requires:
+ Requires.private: @UHD_PC_REQUIRES@
+ Conflicts:
+ Cflags: -I${includedir} @UHD_PC_CFLAGS@
+-Libs: -L${libdir} -luhd -lboost_system
++Libs: -L${libdir} -luhd
+ Libs.private: @UHD_PC_LIBS@
