@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/10/04 12:39:56 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/04 12:42:18 tnn Exp $
 
 DISTNAME=	vulkan-headers-1.4.321
 CATEGORIES=	graphics
@@ -14,8 +14,6 @@ LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 USE_LANGUAGES=	c c++
-
-CMAKE_GENERATOR=	ninja
 
 REPLACE_PYTHON+=	registry/*.py
 REPLACE_PYTHON+=	registry/spec_tools/*.py
