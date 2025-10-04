@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5911 2025/10/04 13:20:59 tnn Exp $
+$NetBSD: CHANGES-2025,v 1.5912 2025/10/04 13:31:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8550,3 +8550,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/spirv-llvm-translator to 19.1.12 [tnn 2025-10-04]
 	Updated graphics/vulkan-headers to 1.4.321 [tnn 2025-10-04]
 	Updated graphics/vulkan-tools to 1.4.321.0 [tnn 2025-10-04]
+	Updated shells/oh-my-posh to 27.0.0 [pin 2025-10-04]
