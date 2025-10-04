@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.71 2025/06/14 09:40:50 wen Exp $
+$NetBSD: distinfo,v 1.72 2025/10/04 07:40:22 wen Exp $
 
-BLAKE2s (CGI-4.69.tar.gz) = a7a90344f4ff6bc12f28fdb5e70e0c64e22fd9846dfd44ecbd73e268ad6212e4
-SHA512 (CGI-4.69.tar.gz) = d8dbb476fdfb43bac1d7674c25e046eabaf15dcf582c453e1810367cb2ed435b7fcc597ecaab32692832997e16d04152928cc145502781f8c6698bfdefcc4407
-Size (CGI-4.69.tar.gz) = 207953 bytes
+BLAKE2s (CGI-4.70.tar.gz) = bae22641dacbb944ee09e651f7487eb035a6022ff6c5809d0721c8230a3fbab5
+SHA512 (CGI-4.70.tar.gz) = 090cb28a759fdce87d5fa38bcd460445c505651dc52eebc9787888bab93fdca3f4958907bc94f221ee2ff2711940cf32d0e3d74ed20c5da76257e2a2a51a6065
+Size (CGI-4.70.tar.gz) = 207646 bytes
