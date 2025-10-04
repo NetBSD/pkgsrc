@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5910 2025/10/04 08:55:20 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.5911 2025/10/04 13:20:59 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8546,3 +8546,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-HTML-CalendarMonthSimple to 1.27 [wen 2025-10-04]
 	Updated www/p5-LWP-Protocol-Net-Curl to 0.027 [wen 2025-10-04]
 	Updated www/hugo to 0.151.0 [triaxx 2025-10-04]
+	Updated parallel/spirv-tools to 2025.4 [tnn 2025-10-04]
+	Updated parallel/spirv-llvm-translator to 19.1.12 [tnn 2025-10-04]
+	Updated graphics/vulkan-headers to 1.4.321 [tnn 2025-10-04]
+	Updated graphics/vulkan-tools to 1.4.321.0 [tnn 2025-10-04]
