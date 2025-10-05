@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1875 2025/09/28 20:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.1876 2025/10/05 20:34:05 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -267,6 +267,7 @@ SUBDIR+=	micro_httpd
 SUBDIR+=	midori
 SUBDIR+=	mimetex
 SUBDIR+=	mini_httpd
+SUBDIR+=	miniflux
 SUBDIR+=	mknmz-wwwoffle
 SUBDIR+=	mono-xsp
 SUBDIR+=	monolith
