@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/15 17:34:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/10/05 02:49:44 js Exp $
 include/evdns.h
 include/event.h
 include/event2/buffer.h
 include/event2/buffer_compat.h
 include/event2/bufferevent.h
 include/event2/bufferevent_compat.h
-include/event2/bufferevent_ssl.h
+${PLIST.openssl}include/event2/bufferevent_ssl.h
 include/event2/bufferevent_struct.h
 include/event2/dns.h
 include/event2/dns_compat.h
@@ -33,10 +33,10 @@ include/evutil.h
 lib/libevent.la
 lib/libevent_core.la
 lib/libevent_extra.la
-lib/libevent_openssl.la
+${PLIST.openssl}lib/libevent_openssl.la
 lib/libevent_pthreads.la
 lib/pkgconfig/libevent.pc
 lib/pkgconfig/libevent_core.pc
 lib/pkgconfig/libevent_extra.pc
-lib/pkgconfig/libevent_openssl.pc
+${PLIST.openssl}lib/pkgconfig/libevent_openssl.pc
 lib/pkgconfig/libevent_pthreads.pc
