@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/06/10 06:04:51 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/10/05 16:33:10 wiz Exp $
 
-BLAKE2s (propcache-0.3.2.tar.gz) = 7a68d0bfabf4dbf9d204fc6fb013c4c3696bf18d02ecb68fd3d43fe234e97b71
-SHA512 (propcache-0.3.2.tar.gz) = d85a89dd1d34936578eb05a869e0ec07679d477c716aa047bbda00688a2926fd8a1f712c9ddec3de38faa49762941120df12ebe88dc36278f20d84ee796b91fe
-Size (propcache-0.3.2.tar.gz) = 44139 bytes
+BLAKE2s (propcache-0.4.0.tar.gz) = d94a0a293ea9d41998659b561608072b5ed2a86d87536b1c0820265d3af3fc1f
+SHA512 (propcache-0.4.0.tar.gz) = 883ba1851c8248e49ea1c4b697c06e12754d980c6ff9765350b124ed914385ce70bd061616db35a7fcb235957ac1cecad132ec51fac20e59e90c4cd65306085b
+Size (propcache-0.4.0.tar.gz) = 45187 bytes
