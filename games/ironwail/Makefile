@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/07/26 05:08:24 charlotte Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/05 19:25:56 js Exp $
 
 DISTNAME=	ironwail-0.8.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andrei-drexler/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

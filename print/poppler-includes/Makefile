@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2025/09/27 09:57:34 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/10/05 19:26:16 js Exp $
 
 PKGNAME=	poppler-includes-${POPPLER_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Poppler Xpdf includes (unsupported)
 
