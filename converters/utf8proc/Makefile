@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/03/04 09:37:36 nia Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/05 10:47:21 js Exp $
 
 DISTNAME=	utf8proc-2.10.0
 CATEGORIES=	converters
@@ -10,7 +10,6 @@ HOMEPAGE=	https://julialang.org/utf8proc/
 COMMENT=	C library for processing Unicode data
 LICENSE=	mit AND unicode-v3
 
-FORCE_C_STD=		c99
 USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig
@@ -18,9 +17,9 @@ INSTALLATION_DIRS=	include lib lib/pkgconfig
 PKGCONFIG_OVERRIDE=	libutf8proc.pc.in
 
 # Use ABI version from CMakeLists.txt to stay compatible with cmake builds
-MAJOR=	3
-MINOR=	1
-PATCH=	0
+major=	3
+minor=	1
+patch=	0
 
 do-configure:
 	cd ${WRKSRC} && ${SED}						\
@@ -37,7 +36,7 @@ do-build:
 	cd ${WRKSRC} && ${LIBTOOL} --tag=CC --mode=link			\
 		${CC} ${LDFLAGS} -o libutf8proc.la utf8proc.lo		\
 			-rpath ${PREFIX}/lib				\
-			-version-number ${MAJOR}:${MINOR}:${PATCH}
+			-version-number ${major}:${minor}:${patch}
 
 do-install:
 	cd ${WRKSRC} && ${LIBTOOL} --mode=install			\
