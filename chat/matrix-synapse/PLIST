@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2025/09/23 11:16:23 gdt Exp $
+@comment $NetBSD: PLIST,v 1.63 2025/10/05 23:30:01 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -646,9 +646,6 @@ ${PYSITELIB}/synapse/logging/loggers.pyo
 ${PYSITELIB}/synapse/logging/opentracing.py
 ${PYSITELIB}/synapse/logging/opentracing.pyc
 ${PYSITELIB}/synapse/logging/opentracing.pyo
-${PYSITELIB}/synapse/logging/scopecontextmanager.py
-${PYSITELIB}/synapse/logging/scopecontextmanager.pyc
-${PYSITELIB}/synapse/logging/scopecontextmanager.pyo
 ${PYSITELIB}/synapse/media/_base.py
 ${PYSITELIB}/synapse/media/_base.pyc
 ${PYSITELIB}/synapse/media/_base.pyo
@@ -1978,6 +1975,7 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/92/06_threads_last_sent_stream_or
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_add_user_reports.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/07_event_txn_id_device_id_txn_id2.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/08_room_ban_redactions.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/92/08_thread_subscriptions_seq_fixup.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/92/09_thread_subscriptions_update.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
@@ -2102,6 +2100,9 @@ ${PYSITELIB}/synapse/util/cancellation.pyo
 ${PYSITELIB}/synapse/util/check_dependencies.py
 ${PYSITELIB}/synapse/util/check_dependencies.pyc
 ${PYSITELIB}/synapse/util/check_dependencies.pyo
+${PYSITELIB}/synapse/util/clock.py
+${PYSITELIB}/synapse/util/clock.pyc
+${PYSITELIB}/synapse/util/clock.pyo
 ${PYSITELIB}/synapse/util/constants.py
 ${PYSITELIB}/synapse/util/constants.pyc
 ${PYSITELIB}/synapse/util/constants.pyo
@@ -2132,6 +2133,9 @@ ${PYSITELIB}/synapse/util/httpresourcetree.pyo
 ${PYSITELIB}/synapse/util/iterutils.py
 ${PYSITELIB}/synapse/util/iterutils.pyc
 ${PYSITELIB}/synapse/util/iterutils.pyo
+${PYSITELIB}/synapse/util/json.py
+${PYSITELIB}/synapse/util/json.pyc
+${PYSITELIB}/synapse/util/json.pyo
 ${PYSITELIB}/synapse/util/linked_list.py
 ${PYSITELIB}/synapse/util/linked_list.pyc
 ${PYSITELIB}/synapse/util/linked_list.pyo
@@ -2174,6 +2178,9 @@ ${PYSITELIB}/synapse/util/rlimit.pyo
 ${PYSITELIB}/synapse/util/rust.py
 ${PYSITELIB}/synapse/util/rust.pyc
 ${PYSITELIB}/synapse/util/rust.pyo
+${PYSITELIB}/synapse/util/sentinel.py
+${PYSITELIB}/synapse/util/sentinel.pyc
+${PYSITELIB}/synapse/util/sentinel.pyo
 ${PYSITELIB}/synapse/util/stringutils.py
 ${PYSITELIB}/synapse/util/stringutils.pyc
 ${PYSITELIB}/synapse/util/stringutils.pyo
