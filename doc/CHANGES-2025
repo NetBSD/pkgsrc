@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5926 2025/10/05 16:37:47 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5927 2025/10/05 18:46:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8567,3 +8567,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-css to 0.25.0 [wiz 2025-10-05]
 	Updated devel/py-propcache to 0.4.0 [wiz 2025-10-05]
 	Updated graphics/py-pillow_heif to 1.1.1 [wiz 2025-10-05]
+	Updated devel/py-google-api-core to 2.25.2 [wiz 2025-10-05]
