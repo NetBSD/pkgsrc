@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2025/04/19 07:58:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2025/10/05 17:25:26 js Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -11,6 +11,9 @@ BUILDLINK_PKGSRCDIR.curl?=	../../www/curl
 
 pkgbase:= curl
 .include "../../mk/pkg-build-options.mk"
+.if ${PKG_BUILD_OPTIONS.curl:Mopenssl}
+.  include "../../security/openssl/buildlink3.mk"
+.endif
 .if ${PKG_BUILD_OPTIONS.curl:Mlibssh2}
 .  include "../../security/libssh2/buildlink3.mk"
 .endif
@@ -38,7 +41,6 @@ pkgbase:= curl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .endif # CURL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-curl
