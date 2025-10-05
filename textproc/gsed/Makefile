@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/05/01 22:44:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.66 2025/10/05 11:59:43 js Exp $
 
 DISTNAME=	sed-4.9
 PKGNAME=	g${DISTNAME}
@@ -33,12 +33,16 @@ CONFIGURE_ARGS+=	--program-prefix=g
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+.if ${OPSYS} == "QNX"
+LIBS+=			-lgetopt
+.endif
+
 _MAINTAINER_MANPAGE?=	no
 .if !empty(_MAINTAINER_MANPAGE:M[Yy][Ee][Ss])
 MAKE_ENV+=		PKGSRC_MAINTAINER_MANPAGE=yes
 USE_TOOLS+=		perl
 .else
-pre-build: non-maintainer-manpage
+post-configure: non-maintainer-manpage
 .PHONY: non-maintainer-manpage
 non-maintainer-manpage:
 	${RM} -f ${WRKSRC}/doc/sed.1
@@ -52,4 +56,7 @@ post-install:
 	${LN} -sf ${PREFIX}/${g} ${DESTDIR}${PREFIX}/${n}
 .endfor
 
+.if ${OPSYS} == "QNX"
+.include "../../devel/libgetopt/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
