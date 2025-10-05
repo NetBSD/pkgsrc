@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.580 2025/10/05 07:26:26 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.581 2025/10/05 11:01:56 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27719,3 +27719,16 @@ wireshark<4.2.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-864
 wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9780
 wireshark<4.4.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-9781
 fetchmail<6.5.6		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61962
+assimp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11274
+assimp-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11275
+assimp-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11277
+qemu-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11234
+qt6-qtsvg<6.9.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-10728
+qt6-qtsvg<6.9.3	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-10729
+redis<8.2.2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-46817
+redis<8.2.2	access-control-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-46818
+redis<8.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46819
+redis<8.2.2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-49844
+zabbix-frontend<6.0.41	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2025-27231
+zabbix-frontend<6.0.41	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-27236
+zabbix-frontend<6.0.41	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-49641
