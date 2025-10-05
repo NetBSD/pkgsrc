@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5919 2025/10/05 07:40:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5920 2025/10/05 13:50:24 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8558,3 +8558,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/admesh to 0.98.5 [kikadf 2025-10-04]
 	Updated devel/ruby-jirametrics to 2.18 [schmonz 2025-10-04]
 	Updated chat/libpurple to 2.14.14nb3 [wiz 2025-10-05]
+	Updated devel/objfw to 1.4.2 [js 2025-10-05]
