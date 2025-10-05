@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2025/09/27 09:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/05 19:25:41 js Exp $
 
 DISTNAME=	ncmpcpp-0.10.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ncmpcpp/}
 

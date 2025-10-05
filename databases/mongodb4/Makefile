@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/04/19 07:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/05 19:25:46 js Exp $
 
 DISTNAME=	mongodb-4.4.29
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	r${PKGVERSION_NOREV}
