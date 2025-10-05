@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2025/01/02 13:55:52 micha Exp $
+$NetBSD: distinfo,v 1.16 2025/10/05 10:47:21 js Exp $
 
 BLAKE2s (utf8proc-2.10.0.tar.gz) = 72fddb4b9c796aa23142aa868ac94ff42f5de2dcfaea6e8419e8d0802beec6b2
 SHA512 (utf8proc-2.10.0.tar.gz) = 92a771606bcbecbb86c8d101931bc042dc7035938a665a7a449c2d8a7d3255df9df9c77c5cab0fc9dcaecb04be970149f60bfff463fc813e96727b7035ca9bb4
 Size (utf8proc-2.10.0.tar.gz) = 199045 bytes
+SHA1 (patch-utf8proc.c) = 2a78be2c9c829b9c1071775dd195ad92a6f3604f
