@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2025/10/05 14:51:09 js Exp $
+$NetBSD: distinfo,v 1.18 2025/10/05 14:51:47 js Exp $
 
 BLAKE2s (libunistring-1.2.tar.gz) = b97d32f3927bb713b91636c347f006c4a2929a57acd0c49cd03e81b6f9dd0575
 SHA512 (libunistring-1.2.tar.gz) = aaf3421fe19bc25bd0f84ba19412fac1ffe2f5f64911de4ddfbccd24ac83afcc6303ea2925c297ef3b387a741e572bea9de1cee8adc0adf850681b09e013c22d
@@ -7,4 +7,4 @@ SHA1 (patch-config.h.in) = 0ee6fdbc33866a0ef9524dcbb32804c5c0578a36
 SHA1 (patch-gnulib-m4_assert__h.m4) = b5667ee9c51a676bdd9bd1e91f176fc2cd1c40cb
 SHA1 (patch-lib_Makefile.in) = f2335fa6a8b088e701a4d8bd433b45359be5c243
 SHA1 (patch-lib_stdbool.mini.h) = 0b4a3b3e461b517f28e9a58da0f50045467d2d2a
-SHA1 (patch-tests_pselect.c) = 877c087f6c21c8bacdd58d989de65a2e00de3c7a
+SHA1 (patch-tests_pselect.c) = bd5c3bd4f5b7f41856d409f165be0e53e8aaee80
