@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2025/08/16 13:22:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.121 2025/10/05 01:17:21 js Exp $
 
 DISTNAME=	ncurses-6.5
 PKGREVISION=	1
@@ -46,6 +46,9 @@ CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 CONFIGURE_ARGS.SunOS+=	--disable-const
 
 CONFIGURE_ARGS.UnixWare+=	--disable-libtool-version
+
+# QNX libc is missing some functions.
+CONFIGURE_ARGS.QNX+=	--disable-widec
 
 TERMINFODIR=		share/terminfo
 
