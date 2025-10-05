@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/05 20:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/05 20:41:43 wiz Exp $
 
 DISTNAME=	miniflux-2.2.13
 CATEGORIES=	www
@@ -12,6 +12,11 @@ COMMENT=	Minimalist and opinionated feed reader
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/miniflux.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
