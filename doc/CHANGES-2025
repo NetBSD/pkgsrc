@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5931 2025/10/05 20:34:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5932 2025/10/05 22:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8572,3 +8572,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.41.1 [wiz 2025-10-05]
 	Updated comms/py-textual to 6.2.1 [wiz 2025-10-05]
 	Added www/miniflux version 2.2.13 [wiz 2025-10-05]
+	mk: changed default Python to 3.13 [wiz 2025-04-24]
