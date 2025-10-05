@@ -1,7 +1,19 @@
-$NetBSD: distinfo,v 1.60 2025/10/05 07:39:53 wiz Exp $
+$NetBSD: distinfo,v 1.61 2025/10/05 16:01:15 wiz Exp $
 
 BLAKE2s (pidgin-2.14.14.tar.bz2) = 0cd37c6b2632abbbf98df254f1c7dc8478bbdaba1ddca897ca508b20b0c123e3
 SHA512 (pidgin-2.14.14.tar.bz2) = 2d1ee55e701983871762b5307a2c13fa4431b388229aee7c27522ba593a4c79df729be04cda91f44b3cc9663ca0579bf66b722cdcbd71cae3b8c2dbe75c1f24d
 Size (pidgin-2.14.14.tar.bz2) = 8121174 bytes
+SHA1 (patch-libpurple_plugins_log_reader.c) = e75dfd2c29fa99293ef007f51f2f0416069dcabc
 SHA1 (patch-libpurple_plugins_perl_common_Makefile.PL.in) = 4fc1c7cc2df8f4cf179d00fe3bcf5b2ab0c5adbd
+SHA1 (patch-libpurple_protocols_gg_lib_dcc.c) = 395d873d339b1f39bda6019e12af364bbca7d8cd
+SHA1 (patch-libpurple_protocols_gg_lib_events.c) = 90e81a179f77a375907571d548537ea7059a83ff
+SHA1 (patch-libpurple_protocols_gg_lib_handlers.c) = 85b07ec94e96978c961b26992e589882c4be271d
+SHA1 (patch-libpurple_protocols_gg_lib_message.c) = dce2aac28a9a593cc3943f416db978d70618369f
+SHA1 (patch-libpurple_protocols_irc_msgs.c) = a7e395ba0ad7b52a74de480127572bcda6558e2e
+SHA1 (patch-libpurple_protocols_irc_parse.c) = 32b6578b67881ff4578dfd8f5ed3a23cbe7df9a0
+SHA1 (patch-libpurple_protocols_novell_nmconn.c) = a49cb0cd662e769bc62643c514b728da1c6d5860
+SHA1 (patch-libpurple_protocols_zephyr_ZVariables.c) = 56cf153ed471ddd0f4d64caeaeef69bd19bc2d16
+SHA1 (patch-libpurple_protocols_zephyr_zephyr.c) = 10612b4d08f88187b9f9cbda792a6e94bd4c7b7c
+SHA1 (patch-libpurple_util.c) = 49b4600574c0cb1158b7988e0e00b80a7b696577
 SHA1 (patch-pidgin_gtkimhtml.c) = 54af515155ae2d3326b405516158865d365102c7
+SHA1 (patch-pidgin_gtkthemes.c) = ac07d18d74745afdaf6bae2aee67d8fbc0753a36
