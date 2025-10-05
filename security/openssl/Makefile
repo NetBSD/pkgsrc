@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2025/10/05 02:26:34 js Exp $
+# $NetBSD: Makefile,v 1.315 2025/10/05 14:22:44 js Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -13,7 +13,8 @@ HOMEPAGE=	https://www.openssl.org/
 COMMENT=	Secure Socket Layer and cryptographic library
 LICENSE=	openssl
 
-NOT_FOR_PLATFORM=	QNX-*-*
+# Upstream removed support for QNX.
+BROKEN_ON_PLATFORM=	QNX-*-*
 
 USE_GCC_RUNTIME=	yes
 
