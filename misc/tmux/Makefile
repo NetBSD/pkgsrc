@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/10/27 17:53:30 leot Exp $
+# $NetBSD: Makefile,v 1.68 2025/10/05 10:53:23 js Exp $
 
 DISTNAME=	tmux-3.5a
 CATEGORIES=	misc
@@ -40,7 +40,7 @@ BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
 CPPFLAGS+=	-D__DARWIN_VERS_1050=0
 .endif
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "QNX"
 CONFIGURE_ARGS+=	--enable-utf8proc
 .include "../../converters/utf8proc/buildlink3.mk"
 .endif
