@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2025/05/31 19:27:42 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2025/10/05 17:17:00 js Exp $
 
 .include "Makefile.common"
 
@@ -14,5 +14,4 @@ SUPERSEDES+=		wcurl-[0-9]*
 
 .include "options.mk"
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
