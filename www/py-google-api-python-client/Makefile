@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.119 2025/09/28 20:16:40 wiz Exp $
+# $NetBSD: Makefile,v 1.120 2025/10/05 18:53:47 wiz Exp $
 
-DISTNAME=	google_api_python_client-2.183.0
+DISTNAME=	google_api_python_client-2.184.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
 
 USE_LANGUAGES=	# none
 
-# as of 2.182.0
+# as of 2.184.0
 # 'missing credentials'
 # 2 failed, 310 passed, 9 skipped
 
