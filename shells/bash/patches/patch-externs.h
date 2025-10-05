@@ -1,4 +1,4 @@
-$NetBSD: patch-externs.h,v 1.1 2025/10/05 03:16:21 js Exp $
+$NetBSD: patch-externs.h,v 1.2 2025/10/05 11:18:27 js Exp $
 
 Fix building when printf is defined to libintl_printf.
 

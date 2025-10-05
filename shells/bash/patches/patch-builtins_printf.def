@@ -1,0 +1,39 @@
+$NetBSD: patch-builtins_printf.def,v 1.3 2025/10/05 11:18:27 js Exp $
+
+Fix building when printf is defined to libintl_printf.
+
+--- builtins/printf.def.orig	2025-03-17 15:49:35.000000000 +0000
++++ builtins/printf.def
+@@ -184,11 +184,11 @@ extern int errno;
+ extern time_t shell_start_time;
+ 
+ #if !HAVE_ASPRINTF
+-extern int asprintf (char **, const char *, ...) __attribute__((__format__ (printf, 2, 3)));
++extern int asprintf (char **, const char *, ...) __attribute__((__format__ (__printf__, 2, 3)));
+ #endif
+ 
+ #if !HAVE_VSNPRINTF
+-extern int vsnprintf (char *, size_t, const char *, va_list) __attribute__((__format__ (printf, 3, 0)));
++extern int vsnprintf (char *, size_t, const char *, va_list) __attribute__((__format__ (__printf__, 3, 0)));
+ #endif
+ 
+ static inline void printf_erange (char *);
+@@ -197,7 +197,7 @@ static int printstr (char *, char *, siz
+ static int tescape (char *, char *, int *, int *);
+ static char *bexpand (char *, size_t, int *, size_t *);
+ static char *vbadd (char *, int);
+-static int vbprintf (const char *, ...) __attribute__((__format__ (printf, 1, 2)));
++static int vbprintf (const char *, ...) __attribute__((__format__ (__printf__, 1, 2)));
+ static char *mklong (char *, char *, size_t);
+ static int getchr (void);
+ static char *getstr (void);
+@@ -355,7 +355,9 @@ printf_builtin (WORD_LIST *list)
+ 
+   garglist = orig_arglist = list->next;
+ 
++#if defined (HANDLE_MULTIBYTE)
+   mb_cur_max = MB_CUR_MAX;
++#endif
+ 
+   /* Basic algorithm is to scan the format string for conversion
+      specifications -- once one is found, find out if the field
