@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/03/15 18:07:32 nia Exp $
+# $NetBSD: Makefile,v 1.60 2025/10/05 02:49:44 js Exp $
 
 PKGREVISION= 2
 .include "../../devel/libevent/Makefile.common"
@@ -23,6 +23,9 @@ CPPFLAGS.QNX+=		-D__EXT_POSIX2
 
 .include "../../mk/bsd.prefs.mk"
 
+# No OpenSSL on QNX.
+CONFIGURE_ARGS.QNX+=	--disable-openssl
+
 # Explicitly disable epoll on illumos & NetBSD, provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
 CONFIGURE_ENV.NetBSD+=	ac_cv_func_epoll_ctl=no
@@ -38,6 +41,11 @@ CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
 CPPFLAGS+=		-Dstrtoll=__strtoll
 .endif
 
+PLIST_VARS+=	openssl
+
+.if ${OPSYS} != "QNX"
+PLIST.openssl=	yes
 .include "../../security/openssl/buildlink3.mk"
+.endif
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
