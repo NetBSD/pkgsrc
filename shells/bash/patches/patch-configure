@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.4 2025/10/05 11:18:27 js Exp $
+
+--- configure.orig	2025-06-30 14:05:30.000000000 +0000
++++ configure
+@@ -23152,8 +23152,7 @@ linux*)		LOCAL_LDFLAGS=-rdynamic		 # all
+ 		esac ;;
+ netbsd*|openbsd*)	LOCAL_CFLAGS="-DDEV_FD_STAT_BROKEN" ;;
+ freebsd*|midnightbsd*)	LOCAL_CFLAGS='-DHEREDOC_PIPESIZE=4096' ;;
+-*qnx[67]*)	LOCAL_LIBS="-lncurses" ;;
+-*qnx*)		LOCAL_CFLAGS="-Dqnx -F -3s" LOCAL_LDFLAGS="-3s" LOCAL_LIBS="-lunix -lncurses" ;;
++*qnx*)		LOCAL_LIBS="-lncurses" ;;
+ powerux*)	LOCAL_LIBS="-lgen" ;;
+ cygwin*|msys*)	LOCAL_CFLAGS=-DRECYCLES_PIDS ;;
+ opennt*|interix*) LOCAL_CFLAGS="-DNO_MAIN_ENV_ARG -DBROKEN_DIRENT_D_INO -D_POSIX_SOURCE -D_ALL_SOURCE -DRECYCLES_PIDS" ;;
