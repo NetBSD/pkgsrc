@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5922 2025/10/05 15:47:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5923 2025/10/05 16:01:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8563,3 +8563,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-maturin to 1.9.5 [adam 2025-10-05]
 	Updated databases/redis to 8.2.2 [adam 2025-10-05]
 	Updated audio/snapcast to 0.34.0 [adam 2025-10-05]
+	Updated chat/libpurple to 2.14.14nb4 [wiz 2025-10-05]
