@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.111 2025/08/30 22:46:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.112 2025/10/05 19:26:15 js Exp $
 
 BUILDLINK_TREE+=	poppler
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	poppler
 POPPLER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=0.5.1
-BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=25.08.0nb1
+BUILDLINK_ABI_DEPENDS.poppler+=	poppler>=25.08.0nb3
 BUILDLINK_PKGSRCDIR.poppler?=	../../print/poppler
 
 USE_CXX_FEATURES+=	c++20

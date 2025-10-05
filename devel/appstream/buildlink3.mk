@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/19 07:57:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/10/05 19:25:48 js Exp $
 
 BUILDLINK_TREE+=	appstream
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	appstream
 APPSTREAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.appstream+=	appstream>=0.16.3
-BUILDLINK_ABI_DEPENDS.appstream+=	appstream>=1.0.4nb2
+BUILDLINK_ABI_DEPENDS.appstream+=	appstream>=1.0.6nb1
 BUILDLINK_PKGSRCDIR.appstream?=		../../devel/appstream
 
 .include "../../archivers/zstd/buildlink3.mk"

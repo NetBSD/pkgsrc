@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2025/08/20 11:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/10/05 19:26:12 js Exp $
 #
 
 DISTNAME=	podcastdl-0.3.3
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	net
 MASTER_SITES=	http://files.bebik.net/podcastdl/ \
 		http://rodrigo.osorio.free.fr/freebsd/distfiles/

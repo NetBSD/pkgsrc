@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/08/30 22:44:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/10/05 19:25:50 js Exp $
 
 BUILDLINK_TREE+=	libadwaita
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libadwaita
 LIBADWAITA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libadwaita+=	libadwaita>=1.0.5
-BUILDLINK_ABI_DEPENDS.libadwaita+=	libadwaita>=1.6.1nb9
+BUILDLINK_ABI_DEPENDS.libadwaita+=	libadwaita>=1.6.1nb10
 BUILDLINK_PKGSRCDIR.libadwaita?=	../../devel/libadwaita
 
 .include "../../devel/appstream/buildlink3.mk"

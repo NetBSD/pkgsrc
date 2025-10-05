@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/04/19 07:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/05 19:25:48 js Exp $
 
 R_PKGNAME=	pak
 R_PKGVER=	0.8.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
