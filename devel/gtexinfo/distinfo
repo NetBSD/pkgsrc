@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2025/04/20 13:40:33 js Exp $
+$NetBSD: distinfo,v 1.68 2025/10/05 01:58:37 js Exp $
 
 BLAKE2s (texinfo-7.2.tar.xz) = 2bb5d9812df4689d0c2e379077df5f617ea3e07c7bfe49669e9de74f9bb43e50
 SHA512 (texinfo-7.2.tar.xz) = 8e67337ae12a552fc620c43725507a4978710ea6630e98b0f5e98eb3f79a90e191dde5225699aa6217c26f171d277461f76150f0459cd07b40c3234d2f3d89bf
@@ -9,4 +9,5 @@ SHA1 (patch-gnulib_lib_mbiter.h) = 3d932f20f69ec2531a2b797dcc02252e19ace163
 SHA1 (patch-gnulib_lib_mbuiter.h) = a248a56818e46ca501f9dc57415c40f766a065f8
 SHA1 (patch-info_filesys.h) = 7cc1819ac02deae957f95b84b11bed20609d0235
 SHA1 (patch-tp_Texinfo_XS_configure) = 9aa1b01463cee53bb137e545719fdbbe41b9a175
+SHA1 (patch-tp_Texinfo_XS_parsetexi_parser.c) = ba0ac6fc04dbf4cd5a555bce8071ca6fee2d66a5
 SHA1 (patch-util_texi2dvi) = 72be61e607a393edf0cbd67747f7e0b360441466
