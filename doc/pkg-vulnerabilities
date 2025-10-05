@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.579 2025/10/04 21:20:11 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.580 2025/10/05 07:26:26 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27667,7 +27667,7 @@ openssl<3.5.4	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-9231
 openssl<3.5.4	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-9232
 podman-[0-9]*	file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2025-4953
 py{27,39,310,311,312,313}-authlib<1.6.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-59420
-py{27,39,310,311,312,313}-pip-[0-9]*	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-8869
+py27-pip-[0-9]*	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-8869
 py{27,39,310,311,312,313}-jupyterlab<4.4.8	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-59842
 py{27,39,310,311,312,313}-torch<2.8.0	incorrect-calculation	https://nvd.nist.gov/vuln/detail/CVE-2025-46148
 py{27,39,310,311,312,313}-torch<2.7.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46149
