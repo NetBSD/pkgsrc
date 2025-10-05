@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.28 2025/08/25 20:59:24 js Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/10/05 02:46:54 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
 bin/objfw-new
 bin/ofarc
 bin/ofdns
+${PLIST.ofgctester}bin/ofgctester
 bin/ofhash
 bin/ofhttp
 include/ObjFW/OFAAAADNSResourceRecord.h
@@ -16,7 +17,9 @@ include/ObjFW/OFApplication.h
 include/ObjFW/OFArchiveEntry.h
 include/ObjFW/OFArray.h
 include/ObjFW/OFAtomic.h
+${PLIST.ddp}include/ObjFW/OFBindDDPSocketFailedException.h
 include/ObjFW/OFBindIPSocketFailedException.h
+${PLIST.ipx}include/ObjFW/OFBindIPXSocketFailedException.h
 include/ObjFW/OFBindSocketFailedException.h
 include/ObjFW/OFBindUNIXSocketFailedException.h
 include/ObjFW/OFBlock.h
@@ -30,6 +33,7 @@ include/ObjFW/OFColor.h
 include/ObjFW/OFCondition.h
 include/ObjFW/OFConditionStillWaitingException.h
 include/ObjFW/OFConnectIPSocketFailedException.h
+${PLIST.ipx}include/ObjFW/OFConnectSPXSocketFailedException.h
 include/ObjFW/OFConnectSocketFailedException.h
 include/ObjFW/OFConnectUNIXSocketFailedException.h
 include/ObjFW/OFConstantString.h
@@ -38,6 +42,7 @@ include/ObjFW/OFCountedSet.h
 include/ObjFW/OFCreateDirectoryFailedException.h
 include/ObjFW/OFCreateSymbolicLinkFailedException.h
 include/ObjFW/OFCryptographicHash.h
+${PLIST.ddp}include/ObjFW/OFDDPSocket.h
 include/ObjFW/OFDNSQuery.h
 include/ObjFW/OFDNSQueryFailedException.h
 include/ObjFW/OFDNSResolver.h
@@ -73,6 +78,7 @@ include/ObjFW/OFHashNotCalculatedException.h
 include/ObjFW/OFINICategory.h
 include/ObjFW/OFINIFile.h
 include/ObjFW/OFINISection.h
+${PLIST.ipx}include/ObjFW/OFIPXSocket.h
 include/ObjFW/OFIRI.h
 include/ObjFW/OFIRIHandler.h
 include/ObjFW/OFIndexSet.h
@@ -156,6 +162,7 @@ include/ObjFW/OFRecursiveMutex.h
 include/ObjFW/OFRemoveItemFailedException.h
 include/ObjFW/OFResolveHostFailedException.h
 include/ObjFW/OFRunLoop.h
+${PLIST.sctp}include/ObjFW/OFSCTPSocket.h
 include/ObjFW/OFSHA1Hash.h
 include/ObjFW/OFSHA224Hash.h
 include/ObjFW/OFSHA224Or256Hash.h
@@ -164,6 +171,8 @@ include/ObjFW/OFSHA384Hash.h
 include/ObjFW/OFSHA384Or512Hash.h
 include/ObjFW/OFSHA512Hash.h
 include/ObjFW/OFSOADNSResourceRecord.h
+${PLIST.ipx}include/ObjFW/OFSPXSocket.h
+${PLIST.ipx}include/ObjFW/OFSPXStreamSocket.h
 include/ObjFW/OFSRVDNSResourceRecord.h
 include/ObjFW/OFScrypt.h
 include/ObjFW/OFSecureData.h
@@ -286,6 +295,7 @@ man/man1/objfw-embed.1
 man/man1/objfw-new.1
 man/man1/ofarc.1
 man/man1/ofdns.1
+${PLIST.ofgctester}man/man1/ofgctester.1
 man/man1/ofhash.1
 man/man1/ofhttp.1
 share/ofarc/localization/de.json
