@@ -1,4 +1,6 @@
-$NetBSD: patch-tmux.c,v 1.1 2025/10/05 10:53:23 js Exp $
+$NetBSD: patch-tmux.c,v 1.2 2025/10/05 11:04:21 leot Exp $
+
+Add support for QNX.
 
 --- tmux.c.orig	2024-10-05 05:57:07.000000000 +0000
 +++ tmux.c
