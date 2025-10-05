@@ -1,4 +1,6 @@
-$NetBSD: patch-client.c,v 1.3 2025/10/05 10:53:23 js Exp $
+$NetBSD: patch-client.c,v 1.4 2025/10/05 11:04:21 leot Exp $
+
+Add support for QNX.
 
 --- client.c.orig	2024-10-02 08:41:47.000000000 +0000
 +++ client.c

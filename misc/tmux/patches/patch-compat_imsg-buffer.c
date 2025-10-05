@@ -1,4 +1,6 @@
-$NetBSD: patch-compat_imsg-buffer.c,v 1.1 2025/10/05 10:53:23 js Exp $
+$NetBSD: patch-compat_imsg-buffer.c,v 1.2 2025/10/05 11:04:21 leot Exp $
+
+Add support for QNX.
 
 --- compat/imsg-buffer.c.orig	2024-01-17 10:56:43.000000000 +0000
 +++ compat/imsg-buffer.c
