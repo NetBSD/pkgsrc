@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/01/29 10:55:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/05 11:46:53 js Exp $
 #
 
 DISTNAME=	libgetopt-1.4.6
@@ -17,8 +17,8 @@ WRKSRC=		${WRKDIR}/libgetopt
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || \
-	${OPSYS} == "OSF1" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "AIX" || ${OPSYS} == "HPUX" || ${OPSYS} == "OSF1" || \
+	${OPSYS} == "Linux" || ${OPSYS} == "SunOS" || ${OPSYS} == "QNX"
 	
 CFLAGS+=	-DREPLACE_GETOPT
 .endif
