@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2025/10/05 02:46:54 js Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/10/05 13:50:07 js Exp $
 bin/objfw-compile
 bin/objfw-config
 bin/objfw-embed
@@ -282,7 +282,7 @@ include/ObjFWTest/OTTestCase.h
 include/ObjFWTest/ObjFWTest.h
 lib/libobjfw.so
 lib/libobjfw.so.1
-lib/libobjfw.so.1.4.1
+lib/libobjfw.so.1.4.2
 lib/libobjfwhid.so
 lib/libobjfwhid.so.1
 lib/libobjfwhid.so.1.4.0
