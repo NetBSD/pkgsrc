@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.31 2024/12/25 09:29:15 nia Exp $
+# $NetBSD: NEWS,v 1.32 2025/10/05 22:52:48 wiz Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,10 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+Default versions bumped [wiz 2025-10-06]
+
+	PYTHON_VERSION_DEFAULT is now 313.
 
 Default MySQL implementation changed to MariaDB 11.4 [nia 2024-12-25]
 
