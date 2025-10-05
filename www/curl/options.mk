@@ -1,9 +1,12 @@
-# $NetBSD: options.mk,v 1.22 2024/12/11 12:00:53 ryoon Exp $
+# $NetBSD: options.mk,v 1.23 2025/10/05 17:17:00 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
-PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2 brotli
-PKG_SUPPORTED_OPTIONS+=		zstd
+PKG_SUPPORTED_OPTIONS=		inet6 openssl libssh2 gssapi ldap rtmp idn http2
+PKG_SUPPORTED_OPTIONS+=		brotli zstd
 PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
+.if ${OPSYS} != "QNX"
+PKG_SUGGESTED_OPTIONS+=		openssl
+.endif
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 
 .include "../../mk/bsd.options.mk"
@@ -12,6 +15,13 @@ PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"                                                                                              
+CONFIGURE_ARGS+=	--enable-openssl
+.else
+CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibssh2)
