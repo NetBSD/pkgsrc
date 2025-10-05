@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/08/25 20:59:24 js Exp $
+# $NetBSD: Makefile,v 1.52 2025/10/05 02:46:54 js Exp $
 
 DISTNAME=	objfw-1.4.1
 CATEGORIES=	devel
@@ -37,29 +37,30 @@ PKGSRC_COMPILER=	clang
 .endif
 
 PLIST_SRC=	PLIST
+PLIST_VARS+=	ddp ipx ofgctester sctp
 
 .if ${OPSYS} == "Darwin"
-PLIST_SRC+=	PLIST.bridge
-PLIST_SRC+=	PLIST.framework
-PLIST_SRC+=	PLIST.ofgctester
+PLIST_SRC+=		PLIST.bridge
+PLIST_SRC+=		PLIST.framework
+PLIST.ofgctester=	yes
 .else
-PLIST_SRC+=	PLIST.runtime
+PLIST_SRC+=		PLIST.runtime
 .endif
 
 .if ${OPSYS} == "NetBSD"
-PLIST_SRC+=	PLIST.ddp
-PLIST_SRC+=	PLIST.sctp
+PLIST.ddp=		yes
+PLIST.sctp=		yes
 .endif
 
 .if ${OPSYS} == "FreeBSD"
-PLIST_SRC+=	PLIST.sctp
+PLIST.sctp=		yes
 .endif
 
 .if ${OPSYS} == "Linux"
-PLIST_SRC+=	PLIST.ddp
-PLIST_SRC+=	PLIST.ipx
-PLIST_SRC+=	PLIST.ofgctester
-PLIST_SRC+=	PLIST.sctp
+PLIST.ddp=		yes
+PLIST.ipx=		yes
+PLIST.ofgctester=	yes
+PLIST.sctp=		yes
 .endif
 
 do-test:
