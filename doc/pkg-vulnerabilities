@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.581 2025/10/05 11:01:56 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.582 2025/10/05 17:57:20 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27732,3 +27732,10 @@ redis<8.2.2	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-4984
 zabbix-frontend<6.0.41	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2025-27231
 zabbix-frontend<6.0.41	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-27236
 zabbix-frontend<6.0.41	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-49641
+ap24-auth-openidc<2.4.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-28625
+ap24-auth-openidc<2.4.15.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-24814
+ap24-auth-openidc<2.4.16.11	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-31492
+ap24-auth-openidc<2.4.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-3891
+# disputed by upstream, see https://modsecurity.org/20241011/about-cve-2024-46292-2024-october/
+#ap24-modsecurity-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-46292
+ap24-modsecurity<2.9.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-47947
