@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/10/05 19:26:06 js Exp $
 
 DISTNAME=	netcdf4-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cdf/CDF/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/netCDF4/}
 

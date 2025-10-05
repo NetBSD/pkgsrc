@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2025/04/19 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/10/05 19:25:53 js Exp $
 #
 
 DISTNAME=	curlftpfs-0.9.2
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=curlftpfs/}
 

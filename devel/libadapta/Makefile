@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/08/30 22:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/05 19:25:50 js Exp $
 
 DISTNAME=	libadapta-1.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xapp-project/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

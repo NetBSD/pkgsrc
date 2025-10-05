@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.64 2025/07/21 20:50:16 yhardy Exp $
+# $NetBSD: buildlink3.mk,v 1.65 2025/10/05 19:26:15 js Exp $
 
 BUILDLINK_TREE+=	mupdf
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mupdf
 MUPDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.14.0
-BUILDLINK_ABI_DEPENDS.mupdf+=	mupdf>=1.24.10nb8
+BUILDLINK_ABI_DEPENDS.mupdf+=	mupdf>=1.26.8nb1
 BUILDLINK_PKGSRCDIR.mupdf?=	../../print/mupdf
 
 BUILDLINK_DEPMETHOD.mupdf?=	build

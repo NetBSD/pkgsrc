@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2025/04/19 07:58:38 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/10/05 19:26:29 js Exp $
 
 DISTNAME=	wmweather-2.4.7
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	x11
 MASTER_SITES=	https://people.debian.org/~godisch/wmweather/
 

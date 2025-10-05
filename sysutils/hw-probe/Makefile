@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/04/19 07:58:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/05 19:26:19 js Exp $
 
 DISTNAME=	hw-probe-1.6.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxhw/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
