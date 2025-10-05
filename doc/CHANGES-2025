@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5923 2025/10/05 16:01:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5924 2025/10/05 16:31:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8564,3 +8564,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/redis to 8.2.2 [adam 2025-10-05]
 	Updated audio/snapcast to 0.34.0 [adam 2025-10-05]
 	Updated chat/libpurple to 2.14.14nb4 [wiz 2025-10-05]
+	Updated textproc/tree-sitter-css to 0.25.0 [wiz 2025-10-05]
