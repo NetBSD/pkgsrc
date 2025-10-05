@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5932 2025/10/05 22:52:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5933 2025/10/05 23:30:08 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8573,3 +8573,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.2.1 [wiz 2025-10-05]
 	Added www/miniflux version 2.2.13 [wiz 2025-10-05]
 	mk: changed default Python to 3.13 [wiz 2025-04-24]
+	Updated chat/matrix-synapse to 1.139.0 [gdt 2025-10-05]
