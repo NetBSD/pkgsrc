@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/08/03 10:14:38 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/05 16:37:34 wiz Exp $
 
-DISTNAME=	pillow_heif-1.1.0
+DISTNAME=	pillow_heif-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
@@ -12,9 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1.0:../../graphics/py-Pillow
+TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0:../../textproc/py-defusedxml
 
-# as of 1.1.0
-# 393 passed, 10 skipped, 33 warnings
+# as of 1.1.1
+# 400 passed, 9 skipped
 
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.17.6
