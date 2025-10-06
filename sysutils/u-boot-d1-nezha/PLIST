@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/06 00:09:12 thorpej Exp $
+share/u-boot/d1-nezha/installboot.plist
+share/u-boot/d1-nezha/u-boot-sunxi-with-spl.bin
