@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:47:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:08 markd Exp $
 include/KF6/KXmlGui/KAboutApplicationDialog
 include/KF6/KXmlGui/KAboutPluginDialog
 include/KF6/KXmlGui/KActionCategory
@@ -98,12 +98,14 @@ share/locale/is/LC_MESSAGES/kxmlgui6.mo
 share/locale/it/LC_MESSAGES/kxmlgui6.mo
 share/locale/ja/LC_MESSAGES/kxmlgui6.mo
 share/locale/ka/LC_MESSAGES/kxmlgui6.mo
+share/locale/kab/LC_MESSAGES/kxmlgui6.mo
 share/locale/kk/LC_MESSAGES/kxmlgui6.mo
 share/locale/km/LC_MESSAGES/kxmlgui6.mo
 share/locale/kn/LC_MESSAGES/kxmlgui6.mo
 share/locale/ko/LC_MESSAGES/kxmlgui6.mo
 share/locale/ku/LC_MESSAGES/kxmlgui6.mo
 share/locale/lb/LC_MESSAGES/kxmlgui6.mo
+share/locale/lg/LC_MESSAGES/kxmlgui6.mo
 share/locale/lt/LC_MESSAGES/kxmlgui6.mo
 share/locale/lv/LC_MESSAGES/kxmlgui6.mo
 share/locale/mai/LC_MESSAGES/kxmlgui6.mo

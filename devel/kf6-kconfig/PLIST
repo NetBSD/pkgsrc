@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
 bin/kreadconfig6
 bin/kwriteconfig6
 include/KF6/KConfig/kconfig_version.h
@@ -138,6 +138,7 @@ share/locale/pt/LC_MESSAGES/kconfig6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/kconfig6_qt.qm
 share/locale/ro/LC_MESSAGES/kconfig6_qt.qm
 share/locale/ru/LC_MESSAGES/kconfig6_qt.qm
+share/locale/sa/LC_MESSAGES/kconfig6_qt.qm
 share/locale/se/LC_MESSAGES/kconfig6_qt.qm
 share/locale/si/LC_MESSAGES/kconfig6_qt.qm
 share/locale/sk/LC_MESSAGES/kconfig6_qt.qm

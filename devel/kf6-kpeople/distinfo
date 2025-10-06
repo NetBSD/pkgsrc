@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:22 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:01 markd Exp $
 
-BLAKE2s (kpeople-6.8.0.tar.xz) = b71d60bb9160889f622fe21c89538e87b5f781ac71ae439910a2833259d49200
-SHA512 (kpeople-6.8.0.tar.xz) = 38cbfc105cb8ff12d528e13cf2fc9e7dba0868b2076cca7d1fe984e457982bfd5f3fc1d2613e16dd92a6df24e76efca0f9ac7ca0897bcdb23fa3ff70611b82cd
-Size (kpeople-6.8.0.tar.xz) = 66688 bytes
+BLAKE2s (kpeople-6.18.0.tar.xz) = 5bfb91ddac0aeb169e99b5945a0c279ff665eec6b18c5ae41074feb91d3fc671
+SHA512 (kpeople-6.18.0.tar.xz) = faf1d4c578a00f062ef50ead98438c2b70e7ba12b906e85a4f523a29d1d8ceb52ab979226be03341c203cf582fde810d6a66bd0ed1c398dd753a357fc625516a
+Size (kpeople-6.18.0.tar.xz) = 67700 bytes

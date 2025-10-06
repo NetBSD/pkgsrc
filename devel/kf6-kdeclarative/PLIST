@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:31:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:55:59 markd Exp $
 include/KF6/KDeclarative/CalendarEvents/CalendarEventsPlugin
 include/KF6/KDeclarative/calendarevents/calendarevents_export.h
 include/KF6/KDeclarative/calendarevents/calendareventsplugin.h
@@ -10,6 +10,8 @@ lib/cmake/KF6Declarative/KF6DeclarativeTargets.cmake
 lib/libKF6CalendarEvents.so
 lib/libKF6CalendarEvents.so.6
 lib/libKF6CalendarEvents.so.${PKGVERSION}
+lib/libkquickcontrolsprivate.so.0
+lib/libkquickcontrolsprivate.so.${PKGVERSION}
 qt6/qml/org/kde/draganddrop/draganddropplugin.qmltypes
 qt6/qml/org/kde/draganddrop/kde-qmlmodule.version
 qt6/qml/org/kde/draganddrop/libdraganddropplugin.so
@@ -22,11 +24,16 @@ qt6/qml/org/kde/graphicaleffects/libgraphicaleffects.so
 qt6/qml/org/kde/graphicaleffects/qmldir
 qt6/qml/org/kde/kquickcontrols/ColorButton.qml
 qt6/qml/org/kde/kquickcontrols/KeySequenceItem.qml
+qt6/qml/org/kde/kquickcontrols/kde-qmlmodule.version
+qt6/qml/org/kde/kquickcontrols/kquickcontrols.qmltypes
+qt6/qml/org/kde/kquickcontrols/libkquickcontrols.so
 qt6/qml/org/kde/kquickcontrols/qmldir
 qt6/qml/org/kde/kquickcontrolsaddons/kde-qmlmodule.version
 qt6/qml/org/kde/kquickcontrolsaddons/kquickcontrolsaddonsplugin.qmltypes
 qt6/qml/org/kde/kquickcontrolsaddons/libkquickcontrolsaddonsplugin.so
 qt6/qml/org/kde/kquickcontrolsaddons/qmldir
+qt6/qml/org/kde/private/kquickcontrols/kde-qmlmodule.version
+qt6/qml/org/kde/private/kquickcontrols/kquickcontrolsprivate.qmltypes
 qt6/qml/org/kde/private/kquickcontrols/libkquickcontrolsprivateplugin.so
 qt6/qml/org/kde/private/kquickcontrols/qmldir
 share/locale/af/LC_MESSAGES/kdeclarative6.mo

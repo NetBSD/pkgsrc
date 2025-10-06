@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:27 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:07 markd Exp $
 
-BLAKE2s (kglobalaccel-6.8.0.tar.xz) = f3164762167ebdf84d5698bb015fd722a85f062d77a8f0ce3c5932965c248acd
-SHA512 (kglobalaccel-6.8.0.tar.xz) = d18de11737232bb8e322cac767c71673f84fa4225986a70bd4c42d758bf3ebdf1721a90e044d31a58b5c5681b832c61ee8091aa5e3d6d9f7c4168d99340ea8ab
-Size (kglobalaccel-6.8.0.tar.xz) = 2294508 bytes
+BLAKE2s (kglobalaccel-6.18.0.tar.xz) = 9f094c79c4a0b4fd2e2c63aa911979b63de5d5fb25032c0596be5b26ee01a4a2
+SHA512 (kglobalaccel-6.18.0.tar.xz) = 523851c79f7424fa0c478ad811dffdc3b18a00cbabd35bb52c2908941a6a8994b0083da9197d2f458ab5679c7ef34db82b96d42b44ea7df8fc38b13a1fc14ae3
+Size (kglobalaccel-6.18.0.tar.xz) = 2271908 bytes

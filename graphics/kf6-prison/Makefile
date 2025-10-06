@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:14:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/06 09:56:03 markd Exp $
 
 DISTNAME=	prison-${KF6VER}
-PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks

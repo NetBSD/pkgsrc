@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/05 22:25:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:04 markd Exp $
 include/KF6/KStatusNotifierItem/KStatusNotifierItem
 include/KF6/KStatusNotifierItem/kstatusnotifieritem.h
 include/KF6/KStatusNotifierItem/kstatusnotifieritem_export.h
@@ -27,6 +27,7 @@ share/locale/fi/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/fr/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/gl/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/he/LC_MESSAGES/kstatusnotifieritem6_qt.qm
+share/locale/hi/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/hu/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/ia/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 share/locale/is/LC_MESSAGES/kstatusnotifieritem6_qt.qm

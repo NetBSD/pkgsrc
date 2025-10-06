@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:38:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:08 markd Exp $
 include/KF6/KJobWidgets/KAbstractWidgetJobTracker
 include/KF6/KJobWidgets/KDialogJobUiDelegate
+include/KF6/KJobWidgets/KInhibitionJobTracker
 include/KF6/KJobWidgets/KNotificationJobUiDelegate
 include/KF6/KJobWidgets/KStatusBarJobTracker
 include/KF6/KJobWidgets/KUiServerJobTracker
@@ -8,6 +9,7 @@ include/KF6/KJobWidgets/KUiServerV2JobTracker
 include/KF6/KJobWidgets/KWidgetJobTracker
 include/KF6/KJobWidgets/kabstractwidgetjobtracker.h
 include/KF6/KJobWidgets/kdialogjobuidelegate.h
+include/KF6/KJobWidgets/kinhibitionjobtracker.h
 include/KF6/KJobWidgets/kjobwidgets_export.h
 include/KF6/KJobWidgets/kjobwidgets_version.h
 include/KF6/KJobWidgets/knotificationjobuidelegate.h
@@ -101,6 +103,7 @@ share/locale/pt/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/ro/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/ru/LC_MESSAGES/kjobwidgets6_qt.qm
+share/locale/sa/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/se/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/si/LC_MESSAGES/kjobwidgets6_qt.qm
 share/locale/sk/LC_MESSAGES/kjobwidgets6_qt.qm

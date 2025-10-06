@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/04/24 14:15:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/06 09:56:04 markd Exp $
 
 DISTNAME=	kstatusnotifieritem-${KF6VER}
-PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,6 +8,8 @@ COMMENT=	Implementation of Status Notifier Items
 LICENSE=	gnu-lgpl-v2
 
 .include "../../meta-pkgs/kde/kf6.mk"
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
 
 USE_TOOLS+=	pkg-config
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:56:01 markd Exp $
 bin/kbuildsycoca6
 include/KF6/KService/KApplicationTrader
 include/KF6/KService/KService
@@ -25,6 +25,7 @@ lib/libKF6Service.so
 lib/libKF6Service.so.6
 lib/libKF6Service.so.${PKGVERSION}
 man/ca/man8/kbuildsycoca6.8
+man/ca@valencia/man8/kbuildsycoca6.8
 man/es/man8/kbuildsycoca6.8
 man/fr/man8/kbuildsycoca6.8
 man/it/man8/kbuildsycoca6.8

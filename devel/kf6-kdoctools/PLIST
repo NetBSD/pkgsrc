@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
 bin/checkXML6
 bin/meinproc6
 include/KF6/KDocTools/docbookxslt.h
@@ -18,8 +18,13 @@ man/ca/man1/checkXML6.1
 man/ca/man1/meinproc6.1
 man/ca/man7/kf6options.7
 man/ca/man7/qt6options.7
+man/ca@valencia/man1/checkXML6.1
+man/ca@valencia/man1/meinproc6.1
+man/ca@valencia/man7/kf6options.7
+man/ca@valencia/man7/qt6options.7
 man/es/man1/checkXML6.1
 man/es/man1/meinproc6.1
+man/es/man7/kf6options.7
 man/es/man7/qt6options.7
 man/it/man1/checkXML6.1
 man/it/man1/meinproc6.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:00:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:05 markd Exp $
 bin/solid-hardware6
 include/KF6/Solid/Solid/Battery
 include/KF6/Solid/Solid/Block
@@ -65,6 +65,7 @@ share/locale/ga/LC_MESSAGES/solid6_qt.qm
 share/locale/gd/LC_MESSAGES/solid6_qt.qm
 share/locale/gl/LC_MESSAGES/solid6_qt.qm
 share/locale/he/LC_MESSAGES/solid6_qt.qm
+share/locale/hi/LC_MESSAGES/solid6_qt.qm
 share/locale/hr/LC_MESSAGES/solid6_qt.qm
 share/locale/hu/LC_MESSAGES/solid6_qt.qm
 share/locale/ia/LC_MESSAGES/solid6_qt.qm
@@ -91,6 +92,7 @@ share/locale/pt/LC_MESSAGES/solid6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/solid6_qt.qm
 share/locale/ro/LC_MESSAGES/solid6_qt.qm
 share/locale/ru/LC_MESSAGES/solid6_qt.qm
+share/locale/sa/LC_MESSAGES/solid6_qt.qm
 share/locale/se/LC_MESSAGES/solid6_qt.qm
 share/locale/sk/LC_MESSAGES/solid6_qt.qm
 share/locale/sl/LC_MESSAGES/solid6_qt.qm

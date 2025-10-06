@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:24 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:03 markd Exp $
 
-BLAKE2s (kcontacts-6.8.0.tar.xz) = e16e6bd8dd81b6c3994ebe6aa7ea238aad5c96583d2ca8d2b14dff7771680c19
-SHA512 (kcontacts-6.8.0.tar.xz) = 366b3d1a2c4d49aeaf1bb53cf4fe14d53f7755d122c9b86acdc5943ba15ab1b3c94550d230e597afccc8fe762db4b2301c8f486f2e337b9127c647e377204a3e
-Size (kcontacts-6.8.0.tar.xz) = 208172 bytes
+BLAKE2s (kcontacts-6.18.0.tar.xz) = 04c00c8626b11b5e8f7021469e10aecadecadc2ad75045f8a521a738d771b7dd
+SHA512 (kcontacts-6.18.0.tar.xz) = 82cb08e32c11ce6639e4f1d7b2f790eb92565e03cc86d230f6ff9d5ecc4e1191d8ad953fe3e55b25854f0213262b8c5985c15ddb79d7e475db822d60c211b592
+Size (kcontacts-6.18.0.tar.xz) = 210908 bytes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/08/30 22:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/06 09:56:00 markd Exp $
 
 DISTNAME=	knotifications-${KF6VER}
-PKGREVISION=	4
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,6 +8,8 @@ COMMENT=	Abstraction for system notifications
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 .include "../../meta-pkgs/kde/kf6.mk"
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
 
 USE_TOOLS+=	pkg-config
 

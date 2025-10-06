@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:49:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:05 markd Exp $
+bin/ksecretd
 bin/kwalletd6
 include/KF6/KWallet/KWallet
 include/KF6/KWallet/kwallet.h
@@ -13,10 +14,12 @@ lib/libKF6Wallet.so.6
 lib/libKF6Wallet.so.${PKGVERSION}
 lib/libKF6WalletBackend.so.6
 lib/libKF6WalletBackend.so.${PKGVERSION}
-share/applications/org.kde.kwalletd6.desktop
+share/applications/org.kde.ksecretd.desktop
 share/dbus-1/interfaces/kf6_org.kde.KWallet.xml
+share/dbus-1/services/org.freedesktop.impl.portal.desktop.kwallet.service
 share/dbus-1/services/org.kde.kwalletd6.service
-share/knotifications6/kwalletd6.notifyrc
+share/dbus-1/services/org.kde.secretservicecompat.service
+share/knotifications6/ksecretd.notifyrc
 share/locale/ar/LC_MESSAGES/kwallet6-query.mo
 share/locale/ar/LC_MESSAGES/kwalletd6.mo
 share/locale/ast/LC_MESSAGES/kwallet6-query.mo
@@ -65,6 +68,7 @@ share/locale/gl/LC_MESSAGES/kwalletd6.mo
 share/locale/gu/LC_MESSAGES/kwalletd6.mo
 share/locale/he/LC_MESSAGES/kwallet6-query.mo
 share/locale/he/LC_MESSAGES/kwalletd6.mo
+share/locale/hi/LC_MESSAGES/kwallet6-query.mo
 share/locale/hi/LC_MESSAGES/kwalletd6.mo
 share/locale/hr/LC_MESSAGES/kwalletd6.mo
 share/locale/hsb/LC_MESSAGES/kwalletd6.mo
@@ -117,6 +121,8 @@ share/locale/ro/LC_MESSAGES/kwallet6-query.mo
 share/locale/ro/LC_MESSAGES/kwalletd6.mo
 share/locale/ru/LC_MESSAGES/kwallet6-query.mo
 share/locale/ru/LC_MESSAGES/kwalletd6.mo
+share/locale/sa/LC_MESSAGES/kwallet6-query.mo
+share/locale/sa/LC_MESSAGES/kwalletd6.mo
 share/locale/si/LC_MESSAGES/kwalletd6.mo
 share/locale/sk/LC_MESSAGES/kwallet6-query.mo
 share/locale/sk/LC_MESSAGES/kwalletd6.mo

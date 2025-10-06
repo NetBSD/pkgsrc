@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/08/30 22:46:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/10/06 09:56:05 markd Exp $
 
 BUILDLINK_TREE+=	kf6-kwallet
 
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.kf6-kwallet?=	../../security/kf6-kwallet
 .include "../../devel/kf6-kservice/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
 .include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
 .include "../../x11/kf6-kwindowsystem/buildlink3.mk"

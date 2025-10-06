@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:56:07 markd Exp $
 bin/kded6
 lib/cmake/KF6KDED/KF6KDEDConfig.cmake
 lib/cmake/KF6KDED/KF6KDEDConfigVersion.cmake
 lib/systemd/user/plasma-kded6.service
 man/ca/man8/kded6.8
+man/ca@valencia/man8/kded6.8
 man/es/man8/kded6.8
 man/fr/man8/kded6.8
 man/it/man8/kded6.8
