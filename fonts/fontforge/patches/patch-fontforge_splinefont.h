@@ -1,8 +1,10 @@
-$NetBSD: patch-fontforge_splinefont.h,v 1.4 2025/10/06 19:49:25 wiz Exp $
+$NetBSD: patch-fontforge_splinefont.h,v 1.5 2025/10/06 19:59:04 wiz Exp $
 
 Chunk 1: Use proper type for iconv(3) arguments.
+https://github.com/fontforge/fontforge/pull/5637
 
 Others: NetBSD does not implement uselocale().
+https://github.com/fontforge/fontforge/pull/5638
 
 --- fontforge/splinefont.h.orig	2023-01-01 05:25:39.000000000 +0000
 +++ fontforge/splinefont.h
