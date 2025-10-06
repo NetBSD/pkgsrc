@@ -1,0 +1,30 @@
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2025/10/06 13:30:22 adam Exp $
+
+Fix building on Cygwin.
+Invert the meaning of FLEX_NO_BACKUP.
+
+--- src/Makefile.global.in.orig	2025-09-22 20:11:33.000000000 +0000
++++ src/Makefile.global.in
+@@ -796,6 +796,11 @@ ifeq ($(PORTNAME),win32)
+ LIBS += -lws2_32
+ endif
+ 
++# missing for link on cygwin ? 
++ifeq ($(PORTNAME),cygwin)
++LIBS +=  $(LDAP_LIBS_BE)
++endif
++
+ # Not really standard libc functions, used by the backend.
+ TAS         = @TAS@
+ 
+@@ -805,8 +810,8 @@ TAS         = @TAS@
+ # Global targets and rules
+ 
+ %.c: %.l
+-	$(FLEX) $(if $(FLEX_NO_BACKUP),-b) $(FLEXFLAGS) -o'$@' $<
+-	@$(if $(FLEX_NO_BACKUP),if [ `wc -l <lex.backup` -eq 1 ]; then rm lex.backup; else echo "Scanner requires backup; see lex.backup." 1>&2; exit 1; fi)
++	$(FLEX) $(if $(FLEX_BACKUP),-b) $(FLEXFLAGS) -o'$@' $<
++	@$(if $(FLEX_BACKUP),if [ `wc -l <lex.backup` -eq 1 ]; then rm lex.backup; else echo "Scanner requires backup; see lex.backup." 1>&2; exit 1; fi)
+ 
+ %.c: %.y
+ 	$(if $(BISON_CHECK_CMD),$(BISON_CHECK_CMD))
