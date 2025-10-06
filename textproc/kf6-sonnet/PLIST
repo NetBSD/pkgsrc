@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:09:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:06 markd Exp $
 bin/parsetrigrams6
 include/KF6/Sonnet/sonnet_version.h
 include/KF6/SonnetCore/Sonnet/BackgroundChecker
@@ -117,6 +117,7 @@ share/locale/pt/LC_MESSAGES/sonnet6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/sonnet6_qt.qm
 share/locale/ro/LC_MESSAGES/sonnet6_qt.qm
 share/locale/ru/LC_MESSAGES/sonnet6_qt.qm
+share/locale/sa/LC_MESSAGES/sonnet6_qt.qm
 share/locale/se/LC_MESSAGES/sonnet6_qt.qm
 share/locale/si/LC_MESSAGES/sonnet6_qt.qm
 share/locale/sk/LC_MESSAGES/sonnet6_qt.qm

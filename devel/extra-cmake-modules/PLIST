@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/12/05 09:53:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/10/06 09:55:58 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -85,6 +85,7 @@ share/ECM/modules/ECMGeneratePriFile.cmake
 share/ECM/modules/ECMGeneratePythonBindings.cmake
 share/ECM/modules/ECMGeneratePythonBindings.toml.in
 share/ECM/modules/ECMGeneratePythonBindings.toml.in.license
+share/ECM/modules/ECMGenerateQDoc.cmake
 share/ECM/modules/ECMGenerateQmlTypes.cmake
 share/ECM/modules/ECMInstallIcons.cmake
 share/ECM/modules/ECMMarkAsTest.cmake
@@ -125,6 +126,7 @@ share/ECM/toolchain/deployment-file-qt514.json.in
 share/ECM/toolchain/deployment-file-qt6.json.in
 share/ECM/toolchain/deployment-file-qt6.json.in.license
 share/ECM/toolchain/deployment-file.json.in
+share/ECM/toolchain/ecm-version.gradle.in
 share/ECM/toolchain/generate-fastlane-metadata.py
 share/ECM/toolchain/hasMainSymbol.cmake
 share/ECM/toolchain/specifydependencies.cmake

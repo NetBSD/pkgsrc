@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/06 09:55:59 markd Exp $
 include/KF6/KCoreAddons/KAboutComponent
 include/KF6/KCoreAddons/KAboutData
 include/KF6/KCoreAddons/KAboutLicense
@@ -33,6 +33,7 @@ include/KF6/KCoreAddons/KSharedDataCache
 include/KF6/KCoreAddons/KShell
 include/KF6/KCoreAddons/KSignalHandler
 include/KF6/KCoreAddons/KStringHandler
+include/KF6/KCoreAddons/KSystemClockSkewNotifier
 include/KF6/KCoreAddons/KTextToHTML
 include/KF6/KCoreAddons/KUrlMimeData
 include/KF6/KCoreAddons/KUser
@@ -69,6 +70,7 @@ include/KF6/KCoreAddons/kshareddatacache.h
 include/KF6/KCoreAddons/kshell.h
 include/KF6/KCoreAddons/ksignalhandler.h
 include/KF6/KCoreAddons/kstringhandler.h
+include/KF6/KCoreAddons/ksystemclockskewnotifier.h
 include/KF6/KCoreAddons/ktexttohtml.h
 include/KF6/KCoreAddons/kurlmimedata.h
 include/KF6/KCoreAddons/kuser.h
@@ -80,6 +82,7 @@ lib/cmake/KF6CoreAddons/KF6CoreAddonsTargets.cmake
 lib/libKF6CoreAddons.so
 lib/libKF6CoreAddons.so.6
 lib/libKF6CoreAddons.so.${PKGVERSION}
+lib/pkgconfig/KF6CoreAddons.pc
 qt6/qml/org/kde/coreaddons/kcoreaddonsplugin.qmltypes
 qt6/qml/org/kde/coreaddons/kde-qmlmodule.version
 qt6/qml/org/kde/coreaddons/libkcoreaddonsplugin.so
@@ -142,6 +145,7 @@ share/locale/kn/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ko/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/ku/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/lb/LC_MESSAGES/kcoreaddons6_qt.qm
+share/locale/lg/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/lt/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/lv/LC_MESSAGES/kcoreaddons6_qt.qm
 share/locale/mai/LC_MESSAGES/kcoreaddons6_qt.qm

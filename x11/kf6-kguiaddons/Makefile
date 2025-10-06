@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/06 09:56:07 markd Exp $
 
 DISTNAME=	kguiaddons-${KF6VER}
-PKGREVISION=	2
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -13,6 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_GEO_SCHEME_HANDLER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
 
 PKGCONFIG_OVERRIDE+=		_KDE_build/KF6GuiAddons.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
@@ -21,6 +21,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 .  include "../../devel/plasma-wayland-protocols/buildlink3.mk"
+.  include "../../devel/wayland-protocols/buildlink3.mk"
 .  include "../../devel/qt6-qtwayland/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_WAYLAND=OFF

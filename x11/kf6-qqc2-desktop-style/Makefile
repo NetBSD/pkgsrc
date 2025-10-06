@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 14:16:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/06 09:56:08 markd Exp $
 
 DISTNAME=	qqc2-desktop-style-${KF6VER}
 CATEGORIES=	x11
-PKGREVISION=	3
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Style for Qt Quick Controls 2 to make it follow your desktop theme

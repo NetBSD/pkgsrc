@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/04/24 14:13:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/10/06 09:56:01 markd Exp $
 
 BUILDLINK_TREE+=	kf6-krunner
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.kf6-krunner?=	../../devel/kf6-krunner
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/kf6-kitemmodels/buildlink3.mk"
+.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# KF6_KRUNNER_BUILDLINK3_MK
 

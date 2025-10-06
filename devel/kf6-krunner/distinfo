@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:22 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:01 markd Exp $
 
-BLAKE2s (krunner-6.8.0.tar.xz) = 6e1f7ac2867b149673020c8ebdb062452ea573fdf182d2062175dc9ed61e2acf
-SHA512 (krunner-6.8.0.tar.xz) = 8a5e087b650f54a10546c948fc08641a0cda4e589516f19ddcd368e99e0d79c0cf70390bc98e30982b53881810f7e67b55ddf6791935f4a7dd8c70e400d1945c
-Size (krunner-6.8.0.tar.xz) = 131200 bytes
+BLAKE2s (krunner-6.18.0.tar.xz) = 3b9a46468a8dcda5fac7f78609fba960e6d2266b44bb250b8bd3d73b11c47015
+SHA512 (krunner-6.18.0.tar.xz) = 8872eae8d76f855773f9cb0ca6c208ced7272ccfd1422a287911c1946bd3588e711d5dc14343d1ad79c59aa6fe9463c088677fe05d78acb97a393b12e3715288
+Size (krunner-6.18.0.tar.xz) = 135544 bytes
