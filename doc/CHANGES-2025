@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5942 2025/10/06 12:59:09 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5943 2025/10/06 13:31:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8656,3 +8656,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kf6-qqc2-desktop-style to 6.18.0 [markd 2025-10-06]
 	Updated security/openssh to 10.1p1 [wiz 2025-10-06]
 	Updated sysutils/tealdeer to 1.8.0 [bsiegert 2025-10-06]
+	Added databases/postgresql18 version 18.0 [adam 2025-10-06]
