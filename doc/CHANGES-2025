@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5935 2025/10/06 07:56:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5936 2025/10/06 08:07:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8576,3 +8576,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/matrix-synapse to 1.139.0 [gdt 2025-10-05]
 	Added sysutils/u-boot-d1-nezha version 2024.1 [thorpej 2025-10-05]
 	Updated math/admesh to 0.98.5nb1 [wiz 2025-10-06]
+	Updated net/nanomsg to 1.2.2 [adam 2025-10-06]
+	Updated www/py-yarl to 1.21.0 [adam 2025-10-06]
