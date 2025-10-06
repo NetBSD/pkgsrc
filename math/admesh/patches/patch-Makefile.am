@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1 2025/10/06 07:56:40 wiz Exp $
+
+AUTHORS file needs git and network access, ChangeLog file too.
+
+--- Makefile.am.orig	2022-11-21 12:31:04.000000000 +0000
++++ Makefile.am
+@@ -10,8 +10,6 @@ doc_DATA = \
+ 	admesh-doc.txt \
+ 	README.md \
+ 	COPYING \
+-	AUTHORS \
+-	ChangeLog \
+ 	ChangeLog.old
+ 
+ EXTRA_DIST = \
