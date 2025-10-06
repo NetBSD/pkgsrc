@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5934 2025/10/06 00:13:39 thorpej Exp $
+$NetBSD: CHANGES-2025,v 1.5935 2025/10/06 07:56:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8575,3 +8575,4 @@ Changes to the packages collection and infrastructure in 2025:
 	mk: changed default Python to 3.13 [wiz 2025-04-24]
 	Updated chat/matrix-synapse to 1.139.0 [gdt 2025-10-05]
 	Added sysutils/u-boot-d1-nezha version 2024.1 [thorpej 2025-10-05]
+	Updated math/admesh to 0.98.5nb1 [wiz 2025-10-06]
