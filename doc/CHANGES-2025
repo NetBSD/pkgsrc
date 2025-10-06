@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5938 2025/10/06 08:54:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5939 2025/10/06 09:37:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8583,3 +8583,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ipython to 9.6.0 [adam 2025-10-06]
 	Updated net/py-zeroconf to 0.148.0 [adam 2025-10-06]
 	Updated www/py-pysaml2 to 7.5.3 [adam 2025-10-06]
+	Updated devel/cmake to 4.1.2 [adam 2025-10-06]
+	Updated devel/cmake-gui to 4.1.2 [adam 2025-10-06]
+	Updated net/haproxy to 3.2.6 [adam 2025-10-06]
