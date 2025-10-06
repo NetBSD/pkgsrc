@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.584 2025/10/06 09:56:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.585 2025/10/06 20:34:35 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27768,3 +27768,5 @@ ffmpeg5-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg6-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg7-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg8<8.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
+openssh<10.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61984
+openssh<10.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61985
