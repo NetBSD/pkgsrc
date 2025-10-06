@@ -1,4 +1,6 @@
-$NetBSD: patch-fontforge_macenc.c,v 1.1 2025/10/06 19:49:25 wiz Exp $
+$NetBSD: patch-fontforge_macenc.c,v 1.2 2025/10/06 19:59:04 wiz Exp $
+
+https://github.com/fontforge/fontforge/pull/5637
 
 /scratch/fonts/fontforge/work/fontforge-20230101/fontforge/macenc.c: In function 'MacStrToUtf8':
 /scratch/fonts/fontforge/work/fontforge-20230101/fontforge/macenc.c:1141:16: error: assignment to 'struct __tag_iconv_t **' from incompatible pointer type 'iconv_t' {aka 'struct __tag_iconv_t *'} [-Wincompatible-pointer-types]
