@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/08/20 11:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/06 08:03:30 adam Exp $
 
-DISTNAME=	nanomsg-1.2.1
+DISTNAME=	nanomsg-1.2.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nanomsg/}
 
@@ -18,7 +18,9 @@ TEST_TARGET=	test
 
 PKGCONFIG_OVERRIDE+=	src/pkgconfig.in
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+# Fix for https://github.com/nanomsg/nanomsg/issues/1126
+post-extract:
+	${ECHO} ${PKGVERSION_NOREV} > ${WRKSRC}/.version
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
