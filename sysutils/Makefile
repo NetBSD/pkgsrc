@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1166 2025/09/25 13:09:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.1167 2025/10/06 00:09:12 thorpej Exp $
 #
 
 COMMENT=	System utilities
@@ -823,6 +823,7 @@ SUBDIR+=	u-boot-cubieboard2
 SUBDIR+=	u-boot-cubieboard4
 SUBDIR+=	u-boot-cubietruck
 SUBDIR+=	u-boot-cubietruck-plus
+SUBDIR+=	u-boot-d1-nezha
 SUBDIR+=	u-boot-de0-nanosoc
 SUBDIR+=	u-boot-hifive-unleashed
 SUBDIR+=	u-boot-hummingbird-a31
