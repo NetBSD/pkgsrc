@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2025/10/04 17:15:36 kikadf Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/06 07:56:40 wiz Exp $
 bin/admesh
-lib/libadmesh.so
-lib/libadmesh.so.1
-lib/libadmesh.so.1.0
+include/admesh/stl.h
+lib/libadmesh.la
+lib/pkgconfig/libadmesh.pc
+man/man1/admesh.1
+share/doc/admesh/COPYING
+share/doc/admesh/ChangeLog.old
 share/doc/admesh/README.md
 share/doc/admesh/admesh-doc.txt
 share/examples/admesh/block.stl

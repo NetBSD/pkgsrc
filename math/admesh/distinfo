@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2025/10/04 17:15:36 kikadf Exp $
+$NetBSD: distinfo,v 1.8 2025/10/06 07:56:40 wiz Exp $
 
 BLAKE2s (admesh-0.98.5.tar.gz) = c9f30eb0dc7284a4d2dab74ecd46c3dccdcfa88b4bb969551afb170d4de818d3
 SHA512 (admesh-0.98.5.tar.gz) = 3ee049e2194365798ca42ec29efa85fbec5651b8876385ab79a81301054be7ce1194b3083a5efe202db63884be8a709ea4c1b9a9247a941283aaa525ee2cc03b
 Size (admesh-0.98.5.tar.gz) = 41122 bytes
+SHA1 (patch-Makefile.am) = af2fdd7020747681554c6b04bb3da663761a3949
 SHA1 (patch-src_portable__endian.h) = 603cc2afac5a0def66f65a5b2cb2de0d880d75e0
