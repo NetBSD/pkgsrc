@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/07/07 08:44:27 abs Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/06 09:51:52 markd Exp $
 
-DISTNAME=	plasma-wayland-protocols-1.14.0
+DISTNAME=	plasma-wayland-protocols-1.19.0
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=plasma-wayland-protocols/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,4 +16,5 @@ USE_LANGUAGES=	c c++
 
 BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.60.0
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
