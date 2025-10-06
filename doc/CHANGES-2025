@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5936 2025/10/06 08:07:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5937 2025/10/06 08:42:25 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8578,3 +8578,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/admesh to 0.98.5nb1 [wiz 2025-10-06]
 	Updated net/nanomsg to 1.2.2 [adam 2025-10-06]
 	Updated www/py-yarl to 1.21.0 [adam 2025-10-06]
+	Updated converters/utf8proc to 2.11.0 [micha 2025-10-06]
