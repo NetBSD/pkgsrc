@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5937 2025/10/06 08:42:25 micha Exp $
+$NetBSD: CHANGES-2025,v 1.5938 2025/10/06 08:54:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8579,3 +8579,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/nanomsg to 1.2.2 [adam 2025-10-06]
 	Updated www/py-yarl to 1.21.0 [adam 2025-10-06]
 	Updated converters/utf8proc to 2.11.0 [micha 2025-10-06]
+	Updated devel/py-frozenlist to 1.8.0 [adam 2025-10-06]
+	Updated devel/py-ipython to 9.6.0 [adam 2025-10-06]
+	Updated net/py-zeroconf to 0.148.0 [adam 2025-10-06]
+	Updated www/py-pysaml2 to 7.5.3 [adam 2025-10-06]
