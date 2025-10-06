@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.582 2025/10/05 17:57:20 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.583 2025/10/06 09:52:13 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27739,3 +27739,31 @@ ap24-auth-openidc<2.4.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CV
 # disputed by upstream, see https://modsecurity.org/20241011/about-cve-2024-46292-2024-october/
 #ap24-modsecurity-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-46292
 ap24-modsecurity<2.9.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-47947
+ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg5-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg6-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg7-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg5-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg6-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg7-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg5-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
+ffmpeg6-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
+ffmpeg7-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
+ffmpeg8<8.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
