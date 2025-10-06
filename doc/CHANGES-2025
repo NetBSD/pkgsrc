@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5933 2025/10/05 23:30:08 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.5934 2025/10/06 00:13:39 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8574,3 +8574,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/miniflux version 2.2.13 [wiz 2025-10-05]
 	mk: changed default Python to 3.13 [wiz 2025-04-24]
 	Updated chat/matrix-synapse to 1.139.0 [gdt 2025-10-05]
+	Added sysutils/u-boot-d1-nezha version 2024.1 [thorpej 2025-10-05]
