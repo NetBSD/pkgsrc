@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.257 2025/09/12 09:51:00 ryoon Exp $
+$NetBSD: distinfo,v 1.258 2025/10/06 09:34:44 adam Exp $
 
-BLAKE2s (cmake-4.1.1.tar.gz) = d5bc5a23d891612a0ee28209d913a3291953bc23ddaaaf4be621df2926891049
-SHA512 (cmake-4.1.1.tar.gz) = 40f16fbe66562aec574e08758c7b8a09536b8c7086fe7f6f9123e5255a9fc1aa638b0f88b3812ed5c8e6bc4550d0ee0be304dc71be6c980dbc44d1899d238e30
-Size (cmake-4.1.1.tar.gz) = 12042807 bytes
+BLAKE2s (cmake-4.1.2.tar.gz) = 067d38bd1513db313c96c60ad11c08bd42cfa65f017f3121b132b6835fb421c5
+SHA512 (cmake-4.1.2.tar.gz) = 169b8ebfbd2c880a1f3ed8c3da8d4b8e9252a5a1ff9f0011e39bb3bb84d183f0379eea880b80e2e052c333db91e49b80e5a65131f71fc8582709b604e94bf280
+Size (cmake-4.1.2.tar.gz) = 12048810 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 7a26ef79be53b9d0370029e83f203440aa0be2a4
 SHA1 (patch-CMakeLists.txt) = 0fb79458828a021a96e350bc4cf12875914f868b
 SHA1 (patch-Modules_Compiler_GNU.cmake) = 745b3a5cd44b4a6eb2dc9452f78f9de3976f37b1
@@ -15,7 +15,6 @@ SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_FortranCInterface_CMakeLists.txt) = f5477f5c94ebab82caea6db702b449032ba3dc75
 SHA1 (patch-Modules_Platform_Darwin.cmake) = 7629f034111ff64b144ff41316299d5edcfe081a
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 911271546d3ac52be0e8000857bdb236ac50ec1c
-SHA1 (patch-Source_CTest_cmCTestCurl.h) = fb348daece85fa3245155f0890aa33dece6db53b
 SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 1a505da231fd265260ec32d11ba9f79815c263c9
 SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = 530ee1300595e64c97630d27792cc2dca3b9049a
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
