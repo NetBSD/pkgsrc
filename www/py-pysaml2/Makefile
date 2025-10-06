@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/09/28 20:00:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/06 08:53:46 adam Exp $
 
-DISTNAME=	pysaml2-7.5.2
+DISTNAME=	pysaml2-7.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysaml2/}
 
@@ -18,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests>=2:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
+DEPENDS+=	${PYPKGPREFIX}-xmlschema>=2:../../textproc/py-xmlschema
 
 USE_LANGUAGES=	# none
 
