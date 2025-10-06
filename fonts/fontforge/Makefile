@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.157 2025/08/30 22:45:03 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2025/10/06 19:49:25 wiz Exp $
 
 DISTNAME=	fontforge-20230101
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
 GITHUB_PROJECT=	fontforge

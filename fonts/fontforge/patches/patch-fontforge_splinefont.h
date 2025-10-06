@@ -1,10 +1,23 @@
-$NetBSD: patch-fontforge_splinefont.h,v 1.3 2019/09/02 14:45:37 nia Exp $
+$NetBSD: patch-fontforge_splinefont.h,v 1.4 2025/10/06 19:49:25 wiz Exp $
 
-NetBSD does not implement uselocale().
+Chunk 1: Use proper type for iconv(3) arguments.
 
---- fontforge/splinefont.h.orig	2019-07-22 10:10:01.551001000 +0000
+Others: NetBSD does not implement uselocale().
+
+--- fontforge/splinefont.h.orig	2023-01-01 05:25:39.000000000 +0000
 +++ fontforge/splinefont.h
-@@ -2625,17 +2625,33 @@ extern bool isSplinePointPartOfGuide( Sp
+@@ -999,8 +999,8 @@ typedef struct enc {
+     int iso_2022_escape_len;
+     int low_page, high_page;
+     char *iconv_name;	/* For compatibility to old versions we might use a different name from that used by iconv. */
+-    iconv_t *tounicode;
+-    iconv_t *fromunicode;
++    iconv_t tounicode;
++    iconv_t fromunicode;
+     int (*tounicode_func)(int);
+     int (*fromunicode_func)(int);
+     unsigned int is_temporary: 1;	/* freed when the map gets freed */
+@@ -2630,17 +2630,33 @@ extern bool isSplinePointPartOfGuide( Sp
  
  extern void debug_printHint( StemInfo *h, char* msg );
  
