@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5940 2025/10/06 10:05:55 markd Exp $
+$NetBSD: CHANGES-2025,v 1.5941 2025/10/06 12:21:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8654,3 +8654,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kf6-kwindowsystem to 6.18.0 [markd 2025-10-06]
 	Updated x11/kf6-kxmlgui to 6.18.0 [markd 2025-10-06]
 	Updated x11/kf6-qqc2-desktop-style to 6.18.0 [markd 2025-10-06]
+	Updated security/openssh to 10.1p1 [wiz 2025-10-06]
