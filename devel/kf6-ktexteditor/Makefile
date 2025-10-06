@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/08/30 22:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/06 09:56:02 markd Exp $
 
 DISTNAME=	ktexteditor-${KF6VER}
-PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

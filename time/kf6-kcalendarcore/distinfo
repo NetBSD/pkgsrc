@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:26 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:06 markd Exp $
 
-BLAKE2s (kcalendarcore-6.8.0.tar.xz) = 57c53dc259e99efed8153c2bf23541926e4b95e3a6bdd406782aaece22384bdc
-SHA512 (kcalendarcore-6.8.0.tar.xz) = ae93c420956d2490776ded73bb1b46783ce6b30d512aed5edef5bf0942acb1f72b4e6f59d493466936b86040f1ce8e37ae2027e8bbe669543b61f26e6412d69d
-Size (kcalendarcore-6.8.0.tar.xz) = 311880 bytes
-SHA1 (patch-src_incidence.cpp) = 20c771fe583127c44d0315be149ef54bd42d2eba
+BLAKE2s (kcalendarcore-6.18.0.tar.xz) = 22d8acc61c3dcb5263e85c3c6494a1eb3ae2ba4b00522319c8e0d97100ef8934
+SHA512 (kcalendarcore-6.18.0.tar.xz) = fbde093efc4c9411247756ffb0136cb8e8ce5f3a7997eb633b80db8e73e1768fadb6c1eff8e8163b2278beb829bcd309546e395ab1ba529ae98ad09d7cd62720
+Size (kcalendarcore-6.18.0.tar.xz) = 317228 bytes
