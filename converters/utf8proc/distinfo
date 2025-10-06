@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/10/05 10:47:21 js Exp $
+$NetBSD: distinfo,v 1.17 2025/10/06 08:40:53 micha Exp $
 
-BLAKE2s (utf8proc-2.10.0.tar.gz) = 72fddb4b9c796aa23142aa868ac94ff42f5de2dcfaea6e8419e8d0802beec6b2
-SHA512 (utf8proc-2.10.0.tar.gz) = 92a771606bcbecbb86c8d101931bc042dc7035938a665a7a449c2d8a7d3255df9df9c77c5cab0fc9dcaecb04be970149f60bfff463fc813e96727b7035ca9bb4
-Size (utf8proc-2.10.0.tar.gz) = 199045 bytes
-SHA1 (patch-utf8proc.c) = 2a78be2c9c829b9c1071775dd195ad92a6f3604f
+BLAKE2s (utf8proc-2.11.0.tar.gz) = 4b37fbf4727bb3868ba9d99851c2d8e270c714acb0a024285a1b85955a555c06
+SHA512 (utf8proc-2.11.0.tar.gz) = bf9bfb20036e8b709449ee4a11592becf99e61f4c82d03519ab9de1a93ca47d6f8ed4b0bb471f7ca3ae06293275a391a9102ae810a9e07e914789d05ddbd25ab
+Size (utf8proc-2.11.0.tar.gz) = 201577 bytes
