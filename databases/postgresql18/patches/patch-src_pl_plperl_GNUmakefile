@@ -1,0 +1,13 @@
+$NetBSD: patch-src_pl_plperl_GNUmakefile,v 1.1 2025/10/06 13:30:22 adam Exp $
+
+--- src/pl/plperl/GNUmakefile.orig	2024-11-11 22:42:37.000000000 +0000
++++ src/pl/plperl/GNUmakefile
+@@ -87,7 +87,7 @@ perlchunks.h: $(PERLCHUNKS)
+ 	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
+ 	$(PERL) $(srcdir)/text2macro.pl $^ > $@
+ 
+-all: all-lib
++all: perlchunks.h plperl_opmask.h all-lib
+ 
+ %.c: %.xs
+ 	@if [ x"$(perl_privlibexp)" = x"" ]; then echo "configure switch --with-perl was not specified."; exit 1; fi
