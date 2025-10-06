@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:03:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:56:05 markd Exp $
 include/KF6/KCodecs/KCharsets
 include/KF6/KCodecs/KCodecs
 include/KF6/KCodecs/KEmailAddress
@@ -91,6 +91,7 @@ share/locale/pt/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/ro/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/ru/LC_MESSAGES/kcodecs6_qt.qm
+share/locale/sa/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/se/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/si/LC_MESSAGES/kcodecs6_qt.qm
 share/locale/sk/LC_MESSAGES/kcodecs6_qt.qm

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/04/24 14:13:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/06 09:55:59 markd Exp $
 
 DISTNAME=	kcoreaddons-${KF6VER}
-PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,6 +8,8 @@ COMMENT=	Addons to QtCore
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 
 .include "../../meta-pkgs/kde/kf6.mk"
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PYTHON_BINDINGS=OFF
 
 LDFLAGS.SunOS+=		-lsocket
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:14:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/06 09:55:58 markd Exp $
 include/KF6/KBookmarks/KBookmark
 include/KF6/KBookmarks/KBookmarkAction
 include/KF6/KBookmarks/KBookmarkActionInterface
@@ -95,6 +95,7 @@ share/locale/pt/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/ro/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/ru/LC_MESSAGES/kbookmarks6_qt.qm
+share/locale/sa/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/se/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/sk/LC_MESSAGES/kbookmarks6_qt.qm
 share/locale/sl/LC_MESSAGES/kbookmarks6_qt.qm

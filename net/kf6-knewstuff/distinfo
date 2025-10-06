@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/12/05 09:43:24 markd Exp $
+$NetBSD: distinfo,v 1.3 2025/10/06 09:56:04 markd Exp $
 
-BLAKE2s (knewstuff-6.8.0.tar.xz) = 7ed038e89700a552e078f76e3c9bf366e92e4bc3449ea69af2a34e6f054b49f0
-SHA512 (knewstuff-6.8.0.tar.xz) = bd54a90039cf4ed03aa2cebffefb140437d170c2a07bc730b0fb709086ab81717a3c31c92f991e467bfca8e563158c82f2e83e21dc545d6e51d3b0a0ce40ea71
-Size (knewstuff-6.8.0.tar.xz) = 3101376 bytes
+BLAKE2s (knewstuff-6.18.0.tar.xz) = 5e0ad971077e8cb4cd6ddab282236b9ef0e3a7cfc6924c4be6ea6a9be512cd9d
+SHA512 (knewstuff-6.18.0.tar.xz) = 7ef3fc8ebcaedfe475fa41ef07f0c075bcff69ee825e6dfe3de53497dfa946d69a8b5feef3ea36bafc0bd1331bb57d13d37fce8a9364d0f475f508b64a6197ed
+Size (knewstuff-6.18.0.tar.xz) = 3090224 bytes

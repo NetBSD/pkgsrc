@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/08/30 22:46:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/06 09:56:05 markd Exp $
 
 DISTNAME=	kwallet-${KF6VER}
-PKGREVISION=	4
 CATEGORIES=	security
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -12,7 +11,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	kf6-kdoctools>=${KF6VER}:../../devel/kf6-kdoctools
 
-USE_TOOLS+=	msgmerge
+USE_TOOLS+=	msgmerge pkg-config
 
 LDFLAGS.SunOS+=	-lsocket
 
@@ -31,6 +30,7 @@ post-install:
 .include "../../devel/kf6-kservice/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libsecret/buildlink3.mk"
 .include "../../security/qca2-qt6/buildlink3.mk"
 .include "../../sysutils/kf6-kdbusaddons/buildlink3.mk"
 .include "../../x11/kf6-kwidgetsaddons/buildlink3.mk"
