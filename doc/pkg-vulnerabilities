@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.583 2025/10/06 09:52:13 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.584 2025/10/06 09:56:20 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24396,11 +24396,12 @@ samba>=4.16.0<4.16.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022
 samba>=4.17.0<4.17.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3437
 samba>=4.17.0<4.17.2	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2022-3592
 samba-[0-9]*	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
-ffmpeg5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3965
-ffmpeg4-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3964
-ffmpeg3-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3109
+ffmpeg4<4.4.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3964
+ffmpeg5<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3964
+ffmpeg5<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-3965
+ffmpeg3<3.4.13	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-3109
 ffmpeg5<5.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3341
-ffmpeg5-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-2566
+ffmpeg5<5.1.1	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-2566
 sqlite3<3.40.1	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2022-46908
 sqlite3<3.32.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35527
 sqlite3<3.32.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-35525
