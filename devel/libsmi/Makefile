@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/05/16 22:19:34 zafer Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/07 14:47:24 wiz Exp $
 
 DISTNAME=	libsmi-0.5.0
 PKGREVISION=	1
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--with-pibdir=${PIBDIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 CFLAGS+=	-D_GNU_SOURCE=1	# for timegm(3)
+CFLAGS+=	-Wno-implicit-function-declaration
 
 REPLACE_SH+=	tools/smicache.in
 REPLACE_SH+=	tools/smistrip.in
