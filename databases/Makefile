@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.736 2025/10/06 13:30:21 adam Exp $
+# $NetBSD: Makefile,v 1.737 2025/10/07 17:22:34 gdt Exp $
 
 COMMENT=	Databases
 
@@ -269,6 +269,7 @@ SUBDIR+=	pear-MDB2_Driver_mysql
 SUBDIR+=	pear-MDB2_Driver_mysqli
 SUBDIR+=	pear-MDB2_Driver_pgsql
 SUBDIR+=	percona-toolkit
+SUBDIR+=	pg_activity
 SUBDIR+=	pg_repack
 SUBDIR+=	pg_top
 SUBDIR+=	pgadmin3
