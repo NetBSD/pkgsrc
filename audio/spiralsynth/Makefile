@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2025/04/24 14:13:17 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/10/07 03:56:16 mrg Exp $
 #
 
 DISTNAME=		SpiralSynth-2.0.0
@@ -28,6 +28,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/spiralsynth
 	${INSTALL_DATA} ${WRKSRC}/.SpiralPatches.bank \
 		${WRKSRC}/.Spiralrc ${DESTDIR}${PREFIX}/share/spiralsynth
+
+#CFLAGS.NetBSD+=        -Wno-implicit-int -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch -Wno-incompatible-pointer-types
 
 .include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
