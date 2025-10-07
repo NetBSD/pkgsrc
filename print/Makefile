@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.949 2025/08/16 01:12:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.950 2025/10/07 19:35:05 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1707,6 +1707,8 @@ SUBDIR+=	tex-truncate
 SUBDIR+=	tex-truncate-doc
 SUBDIR+=	tex-tufte-latex
 SUBDIR+=	tex-tufte-latex-doc
+SUBDIR+=	tex-turnstile
+SUBDIR+=	tex-turnstile-doc
 SUBDIR+=	tex-twoinone
 SUBDIR+=	tex-twoinone-doc
 SUBDIR+=	tex-type1cm

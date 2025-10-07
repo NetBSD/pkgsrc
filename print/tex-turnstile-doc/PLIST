@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/07 19:35:06 markd Exp $
+share/texmf-dist/doc/latex/turnstile/README
+share/texmf-dist/doc/latex/turnstile/README.en
+share/texmf-dist/doc/latex/turnstile/README.pt
+share/texmf-dist/doc/latex/turnstile/turnstile-en.pdf
+share/texmf-dist/doc/latex/turnstile/turnstile-pt.pdf
+share/texmf-dist/doc/latex/turnstile/turnstile_article.pdf
+share/texmf-dist/doc/latex/turnstile/turnstile_article.tex
+share/texmf-dist/doc/latex/turnstile/turnstile_artigo.pdf
+share/texmf-dist/doc/latex/turnstile/turnstile_artigo.tex
