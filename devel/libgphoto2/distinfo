@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2024/07/22 11:11:45 adam Exp $
+$NetBSD: distinfo,v 1.37 2025/10/07 11:36:53 wiz Exp $
 
 BLAKE2s (libgphoto2-2.5.31.tar.xz) = c2c721259aff18017ec3e24362a33a30094d10d0c7e618ad5e51b66c1f936cfe
 SHA512 (libgphoto2-2.5.31.tar.xz) = 1061a676488aff2cad12a5ee49742be6d18750221ef808d69116763c2b357d38c1372db62933dfa8fd8411758acb97b8e3a40a5d4f37b8c563e981fd4ae4bb1f
@@ -14,6 +14,8 @@ SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.h) = d19895df6c14746c815c825c55cd3c
 SHA1 (patch-camlibs_kodak_dc120_dc120.c) = b49d935069ae5c23fb9cedc8bde58c679e59d774
 SHA1 (patch-camlibs_kodak_dc120_library.c) = d68a378bb2c6973d9a05a5fef563527bcefdfe33
 SHA1 (patch-camlibs_panasonic_coolshot_library.c) = ec11dfa52d994d9f0590b8bbc3d747af7213f012
+SHA1 (patch-camlibs_ptp2_fujiptpip.c) = 00372e637b68d3963811ad3e25967852db9cdea3
+SHA1 (patch-camlibs_ptp2_ptpip.c) = 57d8aa998c715c4ebec8ecfb4d4eb74601349a75
 SHA1 (patch-camlibs_sipix_blink2.c) = 746f857e30bf5d97b47c9a2b36b91f4ee54fe04a
 SHA1 (patch-camlibs_st2205_st2205.c) = c4830f6ce5ec44fae7493349e5cb5cd3d934ec4e
 SHA1 (patch-libgphoto2__port_gphoto2_gphoto2-port-portability.h) = 9f62a7c4213f8be273b6da7b2cbbd1f68e697631

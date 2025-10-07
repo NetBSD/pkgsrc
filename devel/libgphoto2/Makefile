@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/10/05 19:25:50 js Exp $
+# $NetBSD: Makefile,v 1.94 2025/10/07 11:36:53 wiz Exp $
 
 DISTNAME=	libgphoto2-2.5.31
 PKGREVISION=	7
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-gdlib=no
 CONFIGURE_ARGS+=	--with-camlibs=standard,outdated
 PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
 TEST_TARGET=		check
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 REPLACE_SH=		packaging/generic/check-ptp-camera
 
