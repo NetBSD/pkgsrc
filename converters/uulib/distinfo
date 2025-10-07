@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2021/10/26 10:06:53 nia Exp $
+$NetBSD: distinfo,v 1.18 2025/10/07 08:48:08 wiz Exp $
 
 BLAKE2s (uudeview-0.5.20.tar.gz) = 0893e955d425f82a78a0be2feea7d9ac9b926dfbdeb3bdec580a32e9a616df7d
 SHA512 (uudeview-0.5.20.tar.gz) = d080e9c3940bad7bacd28457f21133056384a01e33ba014de42502d23f81f2c7f5fa7f6c472ce9f37bec2edb8e18d27135bf18426cf2f23188a3683558e1721c
@@ -6,4 +6,5 @@ Size (uudeview-0.5.20.tar.gz) = 261574 bytes
 SHA1 (patch-aa) = 2f495c982bb8a96ffd60f1bcd4ce65e6c226083c
 SHA1 (patch-ab) = f23ca7945a0697dc8e49ba9c7765bfa655ed8566
 SHA1 (patch-ac) = e167fedf6ca5933d027407715c4275d60d1ee795
+SHA1 (patch-uulib_configure) = 2ff2d83ab3dcc3855164f1945cc866e0f84c1cdc
 SHA1 (patch-uulib_uulib.c) = fcfc3b3450f49a58b827553c8588abf09dfb2310
