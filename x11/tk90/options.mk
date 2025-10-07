@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2025/07/27 09:18:49 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2025/10/07 21:04:12 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tk90
 PKG_SUPPORTED_OPTIONS=		aqua debug xft2
 #PKG_SUGGESTED_OPTIONS+=
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
 
 # xxx NetBSD 64bit detected but not supported in configure script:
 # configure: WARNING: 64bit support being disabled -- don't know magic for this platform
@@ -23,8 +22,10 @@ PLIST_VARS+=		aqua
 .if ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=	xft2
 .else
-PKG_SUPPORTED_OPTIONS+=	aqua
+PKG_SUGGESTED_OPTIONS+=	aqua
 .endif
+
+.include "../../mk/bsd.options.mk"
 
 # IMPORTANT: This option should be enabled on a system without X11.
 # Otherwise some X11 headers are installed and will break X11 compatibility.
