@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/02/08 03:06:01 taca Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/07 14:42:20 wiz Exp $
 
 MODNAME=		iconv
 PKGREVISION=		2
@@ -12,6 +12,8 @@ INSTALLATION_DIRS+=	${PREFIX}/${PHP_INCDIR}/ext/iconv
 PLIST_SRC+=		${.CURDIR}/PLIST
 
 TEST_TARGET=		test
+
+USE_PHP_EXT_PATCHES=	yes
 
 CHECK_BUILTIN.iconv:=	yes
 .include "../../converters/libiconv/builtin.mk"
