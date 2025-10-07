@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/09/30 08:06:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/10/07 10:42:53 adam Exp $
 bin/ansible
 bin/ansible-config
 bin/ansible-console
@@ -54,6 +54,9 @@ ${PYSITELIB}/ansible/_internal/_datatag/_utils.pyo
 ${PYSITELIB}/ansible/_internal/_datatag/_wrappers.py
 ${PYSITELIB}/ansible/_internal/_datatag/_wrappers.pyc
 ${PYSITELIB}/ansible/_internal/_datatag/_wrappers.pyo
+${PYSITELIB}/ansible/_internal/_display_utils.py
+${PYSITELIB}/ansible/_internal/_display_utils.pyc
+${PYSITELIB}/ansible/_internal/_display_utils.pyo
 ${PYSITELIB}/ansible/_internal/_errors/__init__.py
 ${PYSITELIB}/ansible/_internal/_errors/__init__.pyc
 ${PYSITELIB}/ansible/_internal/_errors/__init__.pyo
