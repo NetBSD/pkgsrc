@@ -1,12 +1,39 @@
-$NetBSD: patch-configure.ac,v 1.11 2024/03/31 22:08:43 js Exp $
+$NetBSD: patch-configure.ac,v 1.12 2025/10/07 03:34:29 ryoon Exp $
 
 Fix SunOS flags.
 
 #include <time.h> for struct timespec, as per POSIX (fixes QNX).
 
+* For more strict check by GCC 14.
+
 --- configure.ac.orig	2022-05-08 06:18:22.000000000 +0000
 +++ configure.ac
-@@ -1165,6 +1165,7 @@ zsh_TYPE_EXISTS([
+@@ -585,7 +585,7 @@ fi
+ dnl  Checking if compiler correctly cast signed to unsigned.
+ AC_CACHE_CHECK(if signed to unsigned casting is broken,
+ zsh_cv_c_broken_signed_to_unsigned_casting,
+-[AC_RUN_IFELSE([AC_LANG_SOURCE([[main(){return((int)(unsigned char)((char) -1) == 255);}]])],[zsh_cv_c_broken_signed_to_unsigned_casting=yes],[zsh_cv_c_broken_signed_to_unsigned_casting=no],[zsh_cv_c_broken_signed_to_unsigned_casting=no])])
++[AC_RUN_IFELSE([AC_LANG_SOURCE([[int main(){return((int)(unsigned char)((char) -1) == 255);}]])],[zsh_cv_c_broken_signed_to_unsigned_casting=yes],[zsh_cv_c_broken_signed_to_unsigned_casting=no],[zsh_cv_c_broken_signed_to_unsigned_casting=no])])
+ AH_TEMPLATE([BROKEN_SIGNED_TO_UNSIGNED_CASTING],
+ [Define to 1 if compiler incorrectly cast signed to unsigned.])
+ if test x$zsh_cv_c_broken_signed_to_unsigned_casting = xyes; then
+@@ -1046,6 +1046,7 @@ else
+   [AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ #include <sys/types.h>
+ 
++int
+ main() { return sizeof(off_t) < 8; }
+ ]])],[zsh_cv_off_t_is_64_bit=yes],[zsh_cv_off_t_is_64_bit=no],[zsh_cv_off_t_is_64_bit=no])])
+   if test x$zsh_cv_off_t_is_64_bit = xyes; then
+@@ -1056,6 +1057,7 @@ main() { return sizeof(off_t) < 8; }
+   [AC_RUN_IFELSE([AC_LANG_SOURCE([[
+ #include <sys/types.h>
+ 
++int
+ main() { return sizeof(ino_t) < 8; }
+ ]])],[zsh_cv_ino_t_is_64_bit=yes],[zsh_cv_ino_t_is_64_bit=no],[zsh_cv_ino_t_is_64_bit=no])])
+   if test x$zsh_cv_ino_t_is_64_bit = xyes; then
+@@ -1165,6 +1167,7 @@ zsh_TYPE_EXISTS([
  dnl Check for struct timespec since POSIX only gained it in 2008
  zsh_TYPE_EXISTS([
  #define _GNU_SOURCE 1
@@ -14,7 +41,97 @@ Fix SunOS flags.
  #ifdef HAVE_SYS_TIME_H
  # include <sys/time.h>
  #endif
-@@ -2845,7 +2846,7 @@ char *argv[];
+@@ -1396,6 +1399,7 @@ zsh_cv_func_tgetent_accepts_null,
+ #include <stdlib.h>
+ int tgetent(char *, char *);
+ char *tgetstr(char *, char **);
++int
+ main()
+ {
+     char buf[4096];
+@@ -1424,6 +1428,7 @@ zsh_cv_func_tgetent_zero_success,
+ #include <stdlib.h>
+ int tgetent(char *, char*);
+ char *tgetstr(char *, char **);
++int
+ main()
+ {
+     char buf[4096];
+@@ -1862,7 +1867,7 @@ zsh_cv_rlim_t_is_longer,
+ #endif
+ #include <sys/resource.h>
+ #include <stdlib.h>
+-main(){struct rlimit r;exit(sizeof(r.rlim_cur) <= sizeof(long));}]])],[zsh_cv_rlim_t_is_longer=yes],[zsh_cv_rlim_t_is_longer=no],[zsh_cv_rlim_t_is_longer=yes])])
++int main(){struct rlimit r;exit(sizeof(r.rlim_cur) <= sizeof(long));}]])],[zsh_cv_rlim_t_is_longer=yes],[zsh_cv_rlim_t_is_longer=no],[zsh_cv_rlim_t_is_longer=yes])])
+ if test x$zsh_cv_rlim_t_is_longer = xyes; then
+   AC_CACHE_CHECK(if rlim_t is a quad,
+   zsh_cv_rlim_t_is_quad_t,
+@@ -1873,6 +1878,7 @@ if test x$zsh_cv_rlim_t_is_longer = xyes
+ #include <stdio.h>
+ #include <sys/resource.h>
+ #include <stdlib.h>
++int
+ main() { 
+   struct rlimit r;
+   char buf[20];
+@@ -1896,7 +1902,7 @@ else
+ #endif
+ #include <sys/resource.h>
+ #include <stdlib.h>
+-  main(){struct rlimit r;r.rlim_cur=-1;exit(r.rlim_cur<0);}]])],[zsh_cv_type_rlim_t_is_unsigned=yes],[zsh_cv_type_rlim_t_is_unsigned=no],[zsh_cv_type_rlim_t_is_unsigned=no])])
++  int main(){struct rlimit r;r.rlim_cur=-1;exit(r.rlim_cur<0);}]])],[zsh_cv_type_rlim_t_is_unsigned=yes],[zsh_cv_type_rlim_t_is_unsigned=no],[zsh_cv_type_rlim_t_is_unsigned=no])])
+   if test x$zsh_cv_type_rlim_t_is_unsigned = xyes; then
+     AC_DEFINE(RLIM_T_IS_UNSIGNED)
+     DEFAULT_RLIM_T="unsigned $DEFAULT_RLIM_T"
+@@ -2177,6 +2183,7 @@ zsh_cv_sys_fifo,
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <sys/stat.h>
++int
+ main()
+ {
+     char c;
+@@ -2278,6 +2285,7 @@ zsh_cv_sys_link,
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <stdlib.h>
++int
+ main()
+ {
+     int ret;
+@@ -2311,6 +2319,7 @@ zsh_cv_sys_killesrch,
+ #include <signal.h>
+ #include <errno.h>
+ #include <stdlib.h>
++int
+ main()
+ {
+     int pid = (getpid() + 10000) & 0xffffff;
+@@ -2341,6 +2350,7 @@ int child=0;
+ void handler(sig)
+     int sig;
+ {if(sig==SIGCHLD) child=1;}
++int
+ main() {
+     struct sigaction act;
+     sigset_t set;
+@@ -2389,6 +2399,7 @@ case "x$zsh_working_tcsetpgrp" in
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <stdlib.h>
++int
+ main() {
+     int fd;
+     int ret;
+@@ -2436,6 +2447,7 @@ if test x$ac_cv_func_getpwnam = xyes; th
+ #include <string.h>
+ #include <stdlib.h>
+ #include <unistd.h>
++int
+ main() {
+     struct passwd *pw1, *pw2;
+     char buf[1024], name[1024];
+@@ -2845,7 +2857,7 @@ char *argv[];
      sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
      sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
      aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
@@ -23,3 +140,11 @@ Fix SunOS flags.
      darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
      beos*|haiku*) DLLDFLAGS="${DLLDFLAGS=-nostart}" ;;
      openbsd*)
+@@ -2945,6 +2957,7 @@ char *zsh_gl_sym_addr ;
+ 
+ extern int fred() ;
+ 
++int
+ main()
+ {
+     void * handle ;
