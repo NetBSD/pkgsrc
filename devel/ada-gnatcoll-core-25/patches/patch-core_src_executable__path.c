@@ -1,4 +1,4 @@
-$NetBSD: patch-core_src_executable__path.c,v 1.1 2025/07/10 18:52:41 dkazankov Exp $
+$NetBSD: patch-core_src_executable__path.c,v 1.2 2025/10/07 20:45:10 dkazankov Exp $
 
 Add NetBSD support
 
@@ -9,7 +9,7 @@ Add NetBSD support
  }
  
 -#elif defined (__linux__)
-+#elif defined (__linux__) || defined (__NetBSD__)
++#elif defined (__linux__) || defined (__unix__)
  /* Linux implementation */
  #include <unistd.h>
  int
