@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/09/13 05:25:00 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/07 20:45:10 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-core
@@ -36,9 +36,16 @@ SUBST_MESSAGE.opendir=	Replace opendir with __gnatcoll_opendir in ${SUBST_FILES.
 SUBST_STAGE.opendir=	post-extract
 SUBST_FILES.opendir=	core/src/os/unix/gnatcoll-os-libc-dirent.ads
 SUBST_SED.opendir=	-e "s,\"opendir\",\"__gnatcoll_opendir\","
+
+SUBST_CLASSES+=		unix
+SUBST_MESSAGE.unix=	Use BSD implementation in ${SUBST_FILES.const}
+SUBST_STAGE.unix=	post-extract
+SUBST_FILES.unix=	core/gnatcoll_core.gpr
+SUBST_SED.unix=		-e "s,\"gnatcoll-os-libc_constants__linux.ads\",\"gnatcoll-os-libc_constants__bsd.ads\","
+#SUBST_SED.unix+=	-e "s,\"gnatcoll-os-fs-open_pipe__linux.adb\",\"gnatcoll-os-fs-open_pipe__unix.adb\","
 .endif
 
-MAKE_FLAGS+=		PYTHON=${PYTHONBIN:Q} prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
+MAKE_FLAGS+=		PYTHON=${TOOL_PYTHONBIN:Q} prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
 
 PLIST_VARS+=			shlibs
 
@@ -51,6 +58,12 @@ BUILDLINK_DEPMETHOD.libgpr-25=	full
 .else
 MAKE_FLAGS+=			ENABLE_SHARED=no
 .endif
+
+TEST_TARGET=	test
+TEST_ENV+=	PYTHON_EXEC_PATH=${TOOL_PYTHONBIN:Q}
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-core>=22.6.0:../../devel/py-e3-core
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-testsuite>=25.0:../../devel/py-e3-testsuite
 
 pre-install:
 	${RUN} ${MKDIR} ${DESTDIR}${GNAT_PREFIX}
