@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5969 2025/10/07 19:48:04 markd Exp $
+$NetBSD: CHANGES-2025,v 1.5970 2025/10/07 20:27:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8688,3 +8688,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/kew to 3.5.2 [ktnb 2025-10-07]
 	Added print/tex-turnstile version 1.0 [markd 2025-10-07]
 	Added print/tex-turnstile-doc version 1.0 [markd 2025-10-07]
+	Updated lang/go124 to 1.24.8 [bsiegert 2025-10-07]
+	Updated lang/go125 to 1.25.2 [bsiegert 2025-10-07]
