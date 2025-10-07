@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.26 2024/08/13 08:31:42 nia Exp $
+@comment $NetBSD: PLIST.common,v 1.27 2025/10/07 11:40:44 wiz Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -51,9 +51,7 @@ lib/libgphoto2/${PKGVERSION}/konica.la
 lib/libgphoto2/${PKGVERSION}/konica_qm150.la
 lib/libgphoto2/${PKGVERSION}/largan.la
 lib/libgphoto2/${PKGVERSION}/lg_gsm.la
-lib/libgphoto2/${PKGVERSION}/lumix.a
 lib/libgphoto2/${PKGVERSION}/lumix.la
-lib/libgphoto2/${PKGVERSION}/lumix.so
 lib/libgphoto2/${PKGVERSION}/mars.la
 lib/libgphoto2/${PKGVERSION}/mustek.la
 lib/libgphoto2/${PKGVERSION}/panasonic_coolshot.la
@@ -89,18 +87,10 @@ lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
 lib/libgphoto2/${PKGVERSION}/tp6801.la
 lib/libgphoto2/print-camera-list
 lib/libgphoto2_port.la
-lib/libgphoto2_port/0.12.2/disk.a
 lib/libgphoto2_port/0.12.2/disk.la
-lib/libgphoto2_port/0.12.2/disk.so
-lib/libgphoto2_port/0.12.2/ptpip.a
 lib/libgphoto2_port/0.12.2/ptpip.la
-lib/libgphoto2_port/0.12.2/ptpip.so
-lib/libgphoto2_port/0.12.2/serial.a
 lib/libgphoto2_port/0.12.2/serial.la
-lib/libgphoto2_port/0.12.2/serial.so
-${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.a
 ${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.la
-${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.so
 lib/pkgconfig/libgphoto2.pc
 lib/pkgconfig/libgphoto2_port.pc
 man/man3/libgphoto2.3
