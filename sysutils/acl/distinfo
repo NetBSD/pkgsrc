@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/16 20:14:47 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2025/10/07 18:58:36 bsiegert Exp $
 
-BLAKE2s (acl-2.3.1.tar.gz) = 3bf04a465f75087f2ebc660ffdf9f2e946fe5b014a66a8897a6d60b19820a32b
-SHA512 (acl-2.3.1.tar.gz) = f101e27058c959f4c412f475c3fc77a90d1ead8728701e4ce04ff08b34139d35e0e72278c9ac7622ba6054e81c0aeca066e09491b5f5666462e3866705a0e892
-Size (acl-2.3.1.tar.gz) = 518292 bytes
+BLAKE2s (acl-2.3.2.tar.gz) = be7720c60078935cbdec041e89c2b3ab22d852a8585ef99a8ef544c3f184aa34
+SHA512 (acl-2.3.2.tar.gz) = 31aeb39958d8af5d08933dd3a89333a41025c3eb49fc461fa3c291caca51dad575ec13faeb7deba9b3c2ebf7615be7d45e2b78e50d4f83d8ec933c95931a7682
+Size (acl-2.3.2.tar.gz) = 555754 bytes

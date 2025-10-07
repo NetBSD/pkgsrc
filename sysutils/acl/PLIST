@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/16 20:14:47 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/07 18:58:36 bsiegert Exp $
 bin/chacl
 bin/getfacl
 bin/setfacl
@@ -52,7 +52,6 @@ man/man5/acl.5
 share/doc/acl/CHANGES
 share/doc/acl/COPYING
 share/doc/acl/COPYING.LGPL
-share/doc/acl/PORTING
 share/doc/acl/extensions.txt
 share/doc/acl/libacl.txt
 share/locale/de/LC_MESSAGES/acl.mo
@@ -61,5 +60,6 @@ share/locale/en@quot/LC_MESSAGES/acl.mo
 share/locale/es/LC_MESSAGES/acl.mo
 share/locale/fr/LC_MESSAGES/acl.mo
 share/locale/gl/LC_MESSAGES/acl.mo
+share/locale/ka/LC_MESSAGES/acl.mo
 share/locale/pl/LC_MESSAGES/acl.mo
 share/locale/sv/LC_MESSAGES/acl.mo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/04/30 20:16:54 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/07 18:58:36 bsiegert Exp $
 
-DISTNAME=	acl-2.3.1
+DISTNAME=	acl-2.3.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/acl/
 
