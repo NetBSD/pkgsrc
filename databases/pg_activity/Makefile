@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/07 17:20:58 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/07 18:22:24 wiz Exp $
 
 DISTNAME=	pg_activity-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://pypi.org/project/pg_activity/
 COMMENT=	Command line tool for PostgreSQL server activity monitoring
 LICENSE=	postgresql-license
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.4:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-blessed>=1.15.0:../../devel/py-blessed
 DEPENDS+=	${PYPKGPREFIX}-humanize>=0.5.1:../../textproc/py-humanize
