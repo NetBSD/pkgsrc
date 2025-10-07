@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5966 2025/10/07 18:20:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5967 2025/10/07 19:00:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8684,3 +8684,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/routinator to 0.15.1 [he 2025-10-07]
 	Added databases/pg_activity version 3.6.1 [gdt 2025-10-07]
 	Updated devel/readline to 8.3nb1 [wiz 2025-10-07]
+	Updated sysutils/acl to 2.3.2 [bsiegert 2025-10-07]
