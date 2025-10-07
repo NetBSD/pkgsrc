@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2025/08/03 07:34:12 wiz Exp $
+$NetBSD: distinfo,v 1.20 2025/10/07 08:52:54 wiz Exp $
 
 BLAKE2s (Proc-ProcessTable-0.637.tar.gz) = 55dbc7f6d9ead4ed96cc553447328e7a087f5a60c09833cf8f7801b2e5300891
 SHA512 (Proc-ProcessTable-0.637.tar.gz) = 1e69f995ab65e3b95b7029f46ee74d7b0da06d483c7d0b217c0d153310278a14fbe0a89ec219b4f86ee9aeda7c32f7fa4f8378c1d2b9dd12a47a26b5b59ba68f
 Size (Proc-ProcessTable-0.637.tar.gz) = 95719 bytes
+SHA1 (patch-os_NetBSD.c) = e515b587449a79a85efac3428efe0f6b87baf6cb
