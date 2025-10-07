@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2015/07/04 16:11:53 bsiegert Exp $
+$NetBSD: patch-ab,v 1.11 2025/10/07 03:56:39 mrg Exp $
 
 Fix build.
 
---- ttcp.c.orig	1997-02-27 21:30:23.000000000 +0000
-+++ ttcp.c
-@@ -44,17 +44,19 @@ static char RCSid[] = "ttcp.c $Revision:
+--- ttcp.c.orig	1997-02-27 13:30:23.000000000 -0800
++++ ttcp.c	2025-09-29 15:13:42.037611645 -0700
+@@ -44,17 +44,20 @@ static char RCSid[] = "ttcp.c $Revision:
  /* #define BSD41a */
  /* #define SYSV */	/* required on SGI IRIX releases before 3.3 */
  
@@ -25,10 +25,11 @@ Fix build.
  #include <sys/time.h>		/* struct timeval */
 +#include <stdlib.h>
 +#include <string.h>
++#include <unistd.h>
  
  #if defined(SYSV)
  #include <sys/times.h>
-@@ -71,7 +73,8 @@ struct sockaddr_in sinme;
+@@ -71,7 +74,8 @@ struct sockaddr_in sinme;
  struct sockaddr_in sinhim;
  struct sockaddr_in frominet;
  
@@ -38,7 +39,7 @@ Fix build.
  int fd;				/* fd of network socket */
  
  int buflen = 8 * 1024;		/* length of buffer */
-@@ -99,7 +102,6 @@ char fmt = 'K';			/* output format: k = 
+@@ -99,7 +103,6 @@ char fmt = 'K';			/* output format: k = 
  int touchdata = 0;		/* access data after reading */
  
  struct hostent *addr;
@@ -46,7 +47,12 @@ Fix build.
  extern int optind;
  extern char *optarg;
  
-@@ -151,7 +153,7 @@ main(argc,argv)
+@@ -147,11 +150,11 @@ sigpipe()
+ {
+ }
+ 
+-main(argc,argv)
++int main(argc,argv)
  int argc;
  char **argv;
  {
@@ -55,7 +61,7 @@ Fix build.
  	int c;
  
  	if (argc < 2) goto usage;
-@@ -263,29 +265,30 @@ char **argv;
+@@ -263,29 +266,30 @@ char **argv;
  	if ( (buf = (char *)malloc(buflen+bufalign)) == (char *)NULL)
  		err("malloc");
  	if (bufalign != 0)
@@ -93,7 +99,7 @@ Fix build.
  		err("bind");
  
  #if defined(SO_SNDBUF) || defined(SO_RCVBUF)
-@@ -326,7 +329,7 @@ char **argv;
+@@ -326,7 +330,7 @@ char **argv;
  			mes("nodelay");
  		}
  #endif
@@ -102,7 +108,7 @@ Fix build.
  			err("connect");
  		mes("connect");
  	    } else {
-@@ -348,11 +351,11 @@ char **argv;
+@@ -348,11 +352,11 @@ char **argv;
  		}
  		fromlen = sizeof(frominet);
  		domain = AF_INET;
@@ -117,7 +123,7 @@ Fix build.
  				&peerlen) < 0) {
  			err("getpeername");
  		  }
-@@ -412,25 +415,25 @@ char **argv;
+@@ -412,25 +416,25 @@ char **argv;
  	}
  	if( cput <= 0.0 )  cput = 0.001;
  	if( realt <= 0.0 )  realt = 0.001;
@@ -148,7 +154,16 @@ Fix build.
  		"ttcp%s: buffer address %#x\n",
  		trans?"-t":"-r",
  		buf);
-@@ -488,13 +491,13 @@ double b;
+@@ -459,7 +463,7 @@ char *s;
+ 	fprintf(stderr,"ttcp%s: %s\n", trans?"-t":"-r", s);
+ }
+ 
+-pattern( cp, cnt )
++int pattern( cp, cnt )
+ register char *cp;
+ register int cnt;
+ {
+@@ -488,13 +492,13 @@ double b;
  	    sprintf(obuf, "%.2f MB", b / 1024.0 / 1024.0);
  	    break;
  	case 'g':
@@ -165,7 +180,22 @@ Fix build.
  	    break;
      }
      return obuf;
-@@ -749,10 +752,10 @@ void *buf;
+@@ -554,6 +558,7 @@ prep_timer()
+ double
+ read_timer(str,len)
+ char *str;
++int len;
+ {
+ 	struct timeval timedol;
+ 	struct rusage ru1;
+@@ -743,16 +748,17 @@ register char *cp;
+ /*
+  *			N R E A D
+  */
++int
+ Nread( fd, buf, count )
+ int fd;
+ void *buf;
  int count;
  {
  	struct sockaddr_in from;
@@ -178,7 +208,15 @@ Fix build.
  		numCalls++;
  	} else {
  		if( b_flag )
-@@ -782,7 +785,7 @@ int count;
+@@ -774,6 +780,7 @@ int count;
+ /*
+  *			N W R I T E
+  */
++int
+ Nwrite( fd, buf, count )
+ int fd;
+ void *buf;
+@@ -782,7 +789,7 @@ int count;
  	register int cnt;
  	if( udp )  {
  again:
@@ -187,7 +225,14 @@ Fix build.
  		numCalls++;
  		if( cnt<0 && errno == ENOBUFS )  {
  			delay(18000);
-@@ -803,7 +806,7 @@ delay(us)
+@@ -797,13 +804,13 @@ again:
+ }
+ 
+ void
+-delay(us)
++delay(int us)
+ {
+ 	struct timeval tv;
  
  	tv.tv_sec = 0;
  	tv.tv_usec = us;
