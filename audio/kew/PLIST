@@ -1,3 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2024/10/09 14:25:45 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/07 01:38:58 ktnb Exp $
 bin/kew
 man/man1/kew.1
+share/kew/themes/army.theme
+share/kew/themes/bunker.theme
+share/kew/themes/cyberpunk.theme
+share/kew/themes/default.theme
+share/kew/themes/forest.theme
+share/kew/themes/gruvbox.theme
+share/kew/themes/gruvboxlight.theme
+share/kew/themes/kew-theme-pack1.txt
+share/kew/themes/marianatrench.theme
+share/kew/themes/midnight.theme
+share/kew/themes/monochrome.theme
+share/kew/themes/paper.theme
+share/kew/themes/pewter.theme
+share/kew/themes/purple.theme
+share/kew/themes/ravachol.theme
+share/kew/themes/solarizedlight.theme
+share/kew/themes/synthwave.theme
+share/kew/themes/tokyonight.theme
