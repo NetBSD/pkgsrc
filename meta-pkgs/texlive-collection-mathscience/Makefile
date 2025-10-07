@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2025/05/15 20:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/10/07 19:50:28 markd Exp $
 
 DISTNAME=	collection-mathscience
-PKGNAME=	texlive-${DISTNAME}-2025pre2
+PKGNAME=	texlive-${DISTNAME}-2025pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	75100
@@ -286,7 +286,7 @@ DEPENDS+=	tex-tensind-[0-9]*:../../print/tex-tensind
 # depend thmbox
 DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend tiscreen
-# depend turnstile
+DEPENDS+=	tex-turnstile-[0-9]*:../../print/tex-turnstile
 # depend ulqda
 # depend unitsdef
 # depend venn
