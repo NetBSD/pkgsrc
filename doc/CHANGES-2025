@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5944 2025/10/06 19:49:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5945 2025/10/07 01:39:14 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8658,3 +8658,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/tealdeer to 1.8.0 [bsiegert 2025-10-06]
 	Added databases/postgresql18 version 18.0 [adam 2025-10-06]
 	Updated fonts/fontforge to 20230101nb19 [wiz 2025-10-06]
+	Updated audio/kew to 3.5.1 [ktnb 2025-10-06]
