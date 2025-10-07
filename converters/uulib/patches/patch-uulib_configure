@@ -1,0 +1,15 @@
+$NetBSD: patch-uulib_configure,v 1.1 2025/10/07 08:48:08 wiz Exp $
+
+Add return type to fix build with gcc 14.
+
+--- uulib/configure.orig	2025-10-07 08:47:21.618141297 +0000
++++ uulib/configure
+@@ -660,7 +660,7 @@ cat > conftest.$ac_ext << EOF
+ #line 661 "configure"
+ #include "confdefs.h"
+ 
+-main(){return(0);}
++int main(){return(0);}
+ EOF
+ if { (eval echo configure:666: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+   ac_cv_prog_cc_works=yes
