@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.116 2025/07/24 15:12:51 tsutsui Exp $
+$NetBSD: distinfo,v 1.117 2025/10/07 19:06:24 wiz Exp $
 
 BLAKE2s (samba-4.21.7.tar.gz) = 4cee4b3035ff21c547049e348ca7dac48cadfb5a653277bf06f4f9d8595a4fa9
 SHA512 (samba-4.21.7.tar.gz) = f44a0dc880b2a5694f9c46ff11c808ae263f68c91cc9b0e32869bb44f84c1fdcc49370a396f38e0f452133c29357d8ad80a689af67bd85f648b2121e7792b555
@@ -17,6 +17,7 @@ SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = 109e7a516dc291372e982b9f21c6ce8c0e5d3ca4
 SHA1 (patch-lib_tevent_tevent__threads.c) = e5e82db82cff4d550451cd9290b3a351b25d4de4
 SHA1 (patch-lib_tsocket_tsocket__bsd.c) = 0ac414e02ee3a326d3dd34515bfffce6e8da5e46
+SHA1 (patch-lib_util_access.c) = b03773ab6b54937f7e38ca65a2f07f32c610c6a5
 SHA1 (patch-lib_util_charset_charset__macosxfs.c) = 9772fc52fff48aec2a7e279223f73bb791217c26
 SHA1 (patch-lib_util_smb__threads.h) = 817591a2b69f31ac29497a2006fe21f0b4b0aaea
 SHA1 (patch-lib_util_tfork.c) = a9acb5561c5bba76450c48904a22019c8b14cbec
@@ -27,6 +28,7 @@ SHA1 (patch-nsswitch_stress-nss-libwbclient.c) = c546f00184b0d22b6c150e210962cdf
 SHA1 (patch-nsswitch_winbind__nss__netbsd.c) = 1214bfbd7714b64f3ff3eb97b6f24e3d2629370f
 SHA1 (patch-nsswitch_wscript__build) = 5be3e07f8a34ae3e2f68126eb6f05f8b65f5be2f
 SHA1 (patch-python_pyglue.c) = ba8b0f7d471f16e603a050f735d4a92a95e0b886
+SHA1 (patch-source3_auth_user__util.c) = 7611db944bd2a20d83be4bc6efeb88721d22c343
 SHA1 (patch-source3_lib_sysquotas__4A.c) = da4e557485b95dbd780b3345613c506ef18d7923
 SHA1 (patch-source3_libsmb_pylibsmb.c) = 962bb35b140ec11c0035ffa7fb83c9143fa5615f
 SHA1 (patch-source3_modules_vfs__cap.c) = 7299d9b83c3ec08a22f317bbbdbed9721defd086
