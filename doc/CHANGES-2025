@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5955 2025/10/07 10:45:06 pin Exp $
+$NetBSD: CHANGES-2025,v 1.5956 2025/10/07 11:57:30 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8673,3 +8673,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-core to 2.19.3 [adam 2025-10-07]
 	Updated textproc/scooter to 0.8.0 [pin 2025-10-07]
 	Updated sysutils/treegrep to 1.2.0 [pin 2025-10-07]
+	Updated x11/qt6-qtbase to 6.9.3nb1 [tsutsui 2025-10-07]
