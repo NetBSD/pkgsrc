@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2025/04/21 21:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2025/10/07 03:34:29 ryoon Exp $
 
 DISTNAME=	zsh-5.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zsh/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,8 @@ HOMEPAGE=	https://zsh.sourceforge.io/
 COMMENT=	The Z shell
 LICENSE=	gnu-gpl-v2 AND zsh
 
-USE_LANGUAGES=		c c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c11
 USE_TOOLS+=		autoconf automake autoreconf makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
