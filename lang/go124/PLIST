@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/07/09 07:41:35 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/10/07 20:26:56 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go124/CONTRIBUTING.md
@@ -57,7 +57,8 @@ go124/lib/fips140/Makefile
 go124/lib/fips140/README.md
 go124/lib/fips140/fips140.sum
 go124/lib/fips140/inprocess.txt
-go124/lib/fips140/v1.0.0.zip
+go124/lib/fips140/v1.0.0-c2097c7c.zip
+go124/lib/fips140/v1.0.0.txt
 go124/lib/time/README
 go124/lib/time/mkzip.go
 go124/lib/time/update.bash
@@ -138,6 +139,7 @@ go124/src/archive/tar/testdata/gnu-nil-sparse-data.tar
 go124/src/archive/tar/testdata/gnu-nil-sparse-hole.tar
 go124/src/archive/tar/testdata/gnu-not-utf8.tar
 go124/src/archive/tar/testdata/gnu-sparse-big.tar
+go124/src/archive/tar/testdata/gnu-sparse-many-zeros.tar.bz2
 go124/src/archive/tar/testdata/gnu-utf8.tar
 go124/src/archive/tar/testdata/gnu.tar
 go124/src/archive/tar/testdata/hardlink.tar
@@ -13260,6 +13262,7 @@ go124/test/fixedbugs/issue7538a.go
 go124/test/fixedbugs/issue7538b.go
 go124/test/fixedbugs/issue7547.go
 go124/test/fixedbugs/issue7550.go
+go124/test/fixedbugs/issue75569.go
 go124/test/fixedbugs/issue7590.go
 go124/test/fixedbugs/issue7648.dir/a.go
 go124/test/fixedbugs/issue7648.dir/b.go
