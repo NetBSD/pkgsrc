@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5958 2025/10/07 13:22:59 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5959 2025/10/07 14:07:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8676,3 +8676,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6-qtbase to 6.9.3nb1 [tsutsui 2025-10-07]
 	Updated graphics/lasem to 0.6.0 [wiz 2025-10-07]
 	Updated news/newsraft to 0.34 [ktnb 2025-10-07]
+	Updated net/arti to 1.6.0 [wiz 2025-10-07]
