@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5963 2025/10/07 15:19:38 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.5964 2025/10/07 16:26:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8681,3 +8681,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/openjdk17 to 1.17.0.16.8nb2 [ryoon 2025-10-07]
 	Updated textproc/moor to 2.5.0 [schmonz 2025-10-07]
 	Updated lang/openjdk8 to 1.8.452nb2 [ryoon 2025-10-07]
+	Updated net/routinator to 0.15.1 [he 2025-10-07]
