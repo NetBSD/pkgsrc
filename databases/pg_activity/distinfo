@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/07 17:20:58 gdt Exp $
+
+BLAKE2s (pg_activity-3.6.1.tar.gz) = 71454b0b6da96c42fa2c089868e9e3790c373b3cae93babcd1d5d9ed3b9aad35
+SHA512 (pg_activity-3.6.1.tar.gz) = b488ac78a0e8881d05b67a992335ead964372d725a434b1431e487780fb07bd4012186f278f1f84451a58cdf9baf52966d00ea7b7dd7800e8ff2e0df28369782
+Size (pg_activity-3.6.1.tar.gz) = 449234 bytes
