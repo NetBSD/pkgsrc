@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.585 2025/10/06 20:34:35 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.586 2025/10/07 21:25:17 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27770,3 +27770,14 @@ ffmpeg7-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg8<8.0	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 openssh<10.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61984
 openssh<10.1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-61985
+python39-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+python310-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+python311-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+python312-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+python313-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+ruby{31,32,33,34}-rack2<2.2.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61770
+ruby{31,32,33,34}-rack>=3<3.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61770
+ruby{31,32,33,34}-rack2<2.2.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61771
+ruby{31,32,33,34}-rack>=3<3.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61771
+ruby{31,32,33,34}-rack2<2.2.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61772
+ruby{31,32,33,34}-rack>=3<3.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61772
