@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5945 2025/10/07 01:39:14 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.5946 2025/10/07 03:36:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8659,3 +8659,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added databases/postgresql18 version 18.0 [adam 2025-10-06]
 	Updated fonts/fontforge to 20230101nb19 [wiz 2025-10-06]
 	Updated audio/kew to 3.5.1 [ktnb 2025-10-06]
+	Updated shells/zsh to 5.9nb3 [ryoon 2025-10-07]
