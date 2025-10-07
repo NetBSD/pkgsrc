@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2025/08/12 14:50:46 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2025/10/07 14:14:58 ryoon Exp $
 
 BLAKE2s (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = cd7cd0c0acc259f55291932fc679388003c3c108257f08f660d328974b764ee5
 SHA512 (bootstrap-jdk-1.17.0.15.6-netbsd-9-aarch64-20250806.tar.xz) = 26003c0ace59f41b03584ae0bbe79b15041d4c3537d5d4227a3396276943ff95d687de0aa5025b5dddb1d91cf33ffbc7fd57d7cc8de70aef53907fa2c2652811
@@ -38,3 +38,4 @@ SHA1 (patch-src_hotspot_os_bsd_os__bsd.cpp) = 5561ed502aa925cd3d0514c7ec298e0491
 SHA1 (patch-src_hotspot_share_runtime_threadWXSetters.inline.hpp) = f704bb060803e500415b5d300e26857cf7288ca5
 SHA1 (patch-src_java.desktop_unix_native_common_awt_fontpath.c) = d7bd8839ecd84459fbd3e7d14ac0e2f48b8b4032
 SHA1 (patch-src_java.desktop_unix_native_libpipewire_include_spa_utils_endian.h) = 7b40072b374a6af92adc732f0e24c52bca84ed61
+SHA1 (patch-src_java.desktop_unix_native_libpipewire_include_spa_utils_string.h) = 56090e5f992171db874a1427e8b2905da017fa3c
