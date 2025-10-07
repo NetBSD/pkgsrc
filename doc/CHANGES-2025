@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5953 2025/10/07 10:43:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5954 2025/10/07 10:44:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8671,3 +8671,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 27.1.1 [pin 2025-10-07]
 	Updated graphics/jpegoptim to 1.5.6 [adam 2025-10-07]
 	Updated sysutils/ansible-core to 2.19.3 [adam 2025-10-07]
+	Updated textproc/scooter to 0.8.0 [pin 2025-10-07]
