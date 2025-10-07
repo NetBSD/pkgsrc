@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/07 19:35:06 markd Exp $
+
+BLAKE2s (turnstile.r64967.tar.xz) = e993ffbfd5c23c9b8426002d040f5bf02a319d132c66215e7231bb974f14e440
+SHA512 (turnstile.r64967.tar.xz) = 164b6b8f053b2daf93e8253df850c4aad793521848a93053f6b3879db5badc0b88b5f8f44487e5525c60e7ba7deadce53b2cecb00b7330b22b0815e01cb68338
+Size (turnstile.r64967.tar.xz) = 1904 bytes
