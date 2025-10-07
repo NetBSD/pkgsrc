@@ -1,0 +1,13 @@
+$NetBSD: patch-testsuite_tests_os_fsutil_others_test.yaml,v 1.1 2025/10/07 20:45:11 dkazankov Exp $
+
+Increase default timeout value (300 sec) for this test
+
+--- testsuite/tests/os/fsutil/others/test.yaml.orig	2024-09-24 12:28:32.000000000 +0300
++++ testsuite/tests/os/fsutil/others/test.yaml
+@@ -1,4 +1,5 @@
+ title: GNATCOLL.OS.FSUtil test
++timeout: 600
+ data: ["data.txt"]
+ control:
+     - [SKIP, "env.is_cross", "Test uses python which is not available on cross targets"]
+\ No newline at end of file
