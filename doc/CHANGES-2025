@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5967 2025/10/07 19:00:06 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.5968 2025/10/07 19:42:25 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8685,3 +8685,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added databases/pg_activity version 3.6.1 [gdt 2025-10-07]
 	Updated devel/readline to 8.3nb1 [wiz 2025-10-07]
 	Updated sysutils/acl to 2.3.2 [bsiegert 2025-10-07]
+	Updated audio/kew to 3.5.2 [ktnb 2025-10-07]
