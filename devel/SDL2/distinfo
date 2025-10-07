@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.85 2025/09/02 05:19:09 adam Exp $
+$NetBSD: distinfo,v 1.86 2025/10/07 15:46:59 ryoon Exp $
 
 BLAKE2s (SDL2-2.32.10.tar.gz) = 7815147745deb41a62fbc33361fde19fd4f6cf386d1fa6f01f343b62b317c200
 SHA512 (SDL2-2.32.10.tar.gz) = b67ebdb46bc3b41c974113937e15445e47a6e115692761e2812c3965e85b9ca4d804633de6369fa3dd36cc77f5d08655570c1707245b2c46f88114aa3238fd1b
 Size (SDL2-2.32.10.tar.gz) = 7630262 bytes
 SHA1 (patch-sdl2-config.in) = 963486e3cf6cb437f43197885e9f519ace4497c1
+SHA1 (patch-src_audio_alsa_SDL__alsa__audio.c) = c1426efb8df16328f9546aa7578edd7bbdcf8bad
