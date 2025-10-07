@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/03 00:20:18 asau Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/07 18:51:57 wiz Exp $
 #
 
 DISTNAME=	uudeview-0.5.20
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-inews=inews --disable-tcl
 LDFLAGS+=		${_STRIPFLAG_CC}
+
+CFLAGS+=		-DSTDC_HEADERS
 
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
 			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
