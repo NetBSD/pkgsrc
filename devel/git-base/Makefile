@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.126 2025/10/05 19:25:50 js Exp $
+# $NetBSD: Makefile,v 1.127 2025/10/07 23:11:59 js Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-base-${GIT_VERSION}
@@ -24,6 +24,11 @@ CONFIGURE_ARGS+=	--with-perl=/nonexistent/perl
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--without-python # only needed for git-p4
 CONFIGURE_ARGS+=	--without-tcltk
+
+# QNX does not allow fork() when there is more than one thread.
+# A sane choice, since fork() and threads is basically never safe and
+# posix_spawn should be used instead. But alas, git doesn't support posix_spawn.
+CONFIGURE_ARGS.QNX+=	--disable-pthreads
 
 BUILD_TARGET=		all
 
