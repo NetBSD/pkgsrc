@@ -1,6 +1,8 @@
-$NetBSD: patch-src_3rdparty_xatlas_xatlas.cpp,v 1.1 2025/10/07 05:25:57 wiz Exp $
+$NetBSD: patch-src_3rdparty_xatlas_xatlas.cpp,v 1.2 2025/10/07 11:50:03 wiz Exp $
 
 Add header for realloc(), free().
+https://github.com/jpcy/xatlas/pull/152
+https://github.com/qt/qtquick3d/pull/6
 
 --- src/3rdparty/xatlas/xatlas.cpp.orig	2025-10-07 05:21:08.379900974 +0000
 +++ src/3rdparty/xatlas/xatlas.cpp
