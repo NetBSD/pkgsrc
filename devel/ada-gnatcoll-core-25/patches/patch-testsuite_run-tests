@@ -1,0 +1,14 @@
+$NetBSD: patch-testsuite_run-tests,v 1.1 2025/10/07 20:45:11 dkazankov Exp $
+
+Fix GPR project path
+
+--- testsuite/run-tests.orig	2024-09-24 12:28:32.000000000 +0300
++++ testsuite/run-tests
+@@ -89,6 +89,7 @@
+             work_dir = os.path.join(TESTSUITE_ROOT_DIR, 'debug')
+             gpr_dir, _, _ = make_gnatcoll(work_dir, debug=True)
+             self.env.gnatcoll_debug_gpr_dir = gpr_dir
++            self.env.gnatcoll_gpr_dir = gpr_dir
+ 
+     def tear_down(self):
+         wd = TESTSUITE_ROOT_DIR

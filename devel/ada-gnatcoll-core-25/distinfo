@@ -1,11 +1,28 @@
-$NetBSD: distinfo,v 1.2 2025/09/13 05:25:00 dkazankov Exp $
+$NetBSD: distinfo,v 1.3 2025/10/07 20:45:10 dkazankov Exp $
 
 BLAKE2s (gnatcoll-core-25.0.0.tar.gz) = 4e3053b10a27ea4bd4fc1c8ba2e8ab936087507f8969e9c71b33c0fbb5a81a4c
 SHA512 (gnatcoll-core-25.0.0.tar.gz) = efa19b9760bd16b402445d4932dfd28f087f9a09b91ec688c6976b7b83fe5986580b1871378ac024e9a712df8ee75963e5dc88629a72ee1ce76f1d1403b8e122
 Size (gnatcoll-core-25.0.0.tar.gz) = 7492612 bytes
-SHA1 (patch-Makefile) = febed9b664ee7b30877e8d68a757a96d9a09ab0a
-SHA1 (patch-core_src_executable__path.c) = a4105333ea497cae722b2870149725f69de2dbe9
-SHA1 (patch-core_src_os_unix_libc-wrappers.c) = 322ecd62a2b35febec07f1195b4cfd2f098a2556
+SHA1 (patch-Makefile) = 368a8d92b314cd9ac3fadf55fdd4bff868dd8881
+SHA1 (patch-core_gnatcoll__core.gpr.py) = 6fa74d0a60b65183ba01a598683d5d56cf66db28
+SHA1 (patch-core_src_executable__path.c) = fa1c8e31c771c03d7a13ec94788ce8c399e093a4
+SHA1 (patch-core_src_gnatcoll-io-remote-unix.adb) = 2eb47b2f4976b3bf9fc38e520494a7ee5627d2e9
+SHA1 (patch-core_src_gnatcoll-utils.adb) = 0132adddc2d5ee9196d9282ec8732240e46088ae
+SHA1 (patch-core_src_os_gnatcoll-os-fs.adb) = b4a807f3b4ca3dde7afaf027552c34cd78742023
+SHA1 (patch-core_src_os_gnatcoll-os-fsutil.adb) = 1d82de2f8add2952c25574babd690830da4f668d
+SHA1 (patch-core_src_os_unix_gnatcoll-os-libc.ads) = 18132b0d83dea64676e6bfe364ec1be69a58238f
+SHA1 (patch-core_src_os_unix_gnatcoll-os-libc__constants____bsd.ads) = b32dcd66a0563e287e2d0f8eaeb54d82bdbb783a
+SHA1 (patch-core_src_os_unix_gnatcoll-os-libc__constants____linux.ads) = bbf6596fa6138814f61530268a9c88b378282239
+SHA1 (patch-core_src_os_unix_gnatcoll-os-libc__constants____osx.ads) = 0e9b2eec720463b9c78694078535ac17a8ff6548
+SHA1 (patch-core_src_os_unix_libc-wrappers.c) = c50cd2fce34132015375d7c751841d451d597e46
 SHA1 (patch-core_src_os_unix_process-wrappers.c) = ef3696e8098b9ca434a83093aa53698c578fd0cc
 SHA1 (patch-gprproject_____init____.py) = ac5ac38f93b4b6e11627aecc2cca84e3d3d6c4e6
 SHA1 (patch-gprproject_gprbuild.py) = 96bbf5565e72465da06e53c1eb38c81f1e3c3af7
+SHA1 (patch-testsuite_drivers_build__run__diff.py) = baea59b1e0982fa159c30412ba004886c75c3254
+SHA1 (patch-testsuite_run-tests) = c20507e20779125377e5822b6d04c2e73fd5b84a
+SHA1 (patch-testsuite_tests_opt__parse_help__whitespace_help__120__wrap_test.sh) = f73697d59210320473f5d82b6c220074a27bbddb
+SHA1 (patch-testsuite_tests_opt__parse_help__whitespace_help__80__wrap_test.sh) = a3823b055ad6917fa713be83aa8c18b27acee98d
+SHA1 (patch-testsuite_tests_opt__parse_help__whitespace_help__long__arg_test.sh) = 5959ac5ebb6515334ea08f3f53f67ce559bed4f6
+SHA1 (patch-testsuite_tests_opt__parse_help__whitespace_help__short__arg_test.sh) = 28b11167d8516c0ad24d818b30181240ec85a66e
+SHA1 (patch-testsuite_tests_opt__parse_usage_test.sh) = 59d35040c87c3279d6dd2e725b04b31457ca9e13
+SHA1 (patch-testsuite_tests_os_fsutil_others_test.yaml) = 1d58ec71a37117d9b70081669c88a660e11ca89e
