@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2025/07/04 08:47:38 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2025/10/07 14:59:50 wiz Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -33,6 +33,9 @@ CFLAGS+=		-Dnetbsd1
 .  endif
 CFLAGS+=		-DSOL_IP=IPPROTO_IP
 .endif
+
+# https://github.com/net-snmp/net-snmp/issues/1008
+CFLAGS+=	-Wno-incompatible-pointer-types
 
 LDFLAGS.SunOS+=		-lkvm
 
