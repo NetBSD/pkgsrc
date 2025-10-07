@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.43 2025/08/30 22:45:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.44 2025/10/07 13:01:44 wiz Exp $
 
-DISTNAME=	lasem-0.4.1
-PKGREVISION=	40
-CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/lasem/0.4/}
+DISTNAME=	lasem-0.6.0
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LasemProject/}
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc.gnome@gmail.com
-HOMEPAGE=	https://live.gnome.org/Lasem
-COMMENT=	Lasem is a library for rendering SVG and Mathml
-LICENSE=	gnu-gpl-v2
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/LasemProject/lasem
+COMMENT=	SVG and Mathml rendering library
+LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gettext gmake intltool pkg-config
-TEST_TARGET=	check
+USE_TOOLS+=	bison pkg-config
 
-PKGCONFIG_OVERRIDE+=	lasem.pc.in
+PKGCONFIG_OVERRIDE+=		output/meson-private/lasem-0.6.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
+.include "../../devel/meson/build.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.6.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.16.0
 .include "../../devel/pango/buildlink3.mk"
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

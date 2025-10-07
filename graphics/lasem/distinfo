@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:46:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/10/07 13:01:44 wiz Exp $
 
-BLAKE2s (lasem-0.4.1.tar.xz) = fb0811ef562ecd127fbeb273b480654d737e67656ec8db5f55f059280d4ae2ab
-SHA512 (lasem-0.4.1.tar.xz) = fc3e0a6629c2fa329ebc0cec51332ef48313f1d2bbd762e4a31f7f1802cb5cd69f7f4255ac1408a99b5b177979f29436dd95430ffe0dab4eeda4f31c8c2b127a
-Size (lasem-0.4.1.tar.xz) = 454164 bytes
-SHA1 (patch-ab) = a43a8c1792bf0a3b5fe1791fe763f35eca121b22
+BLAKE2s (lasem-0.6.0.tar.xz) = 76607d026a60f73c89c595de84b9f27f3ce3b3a2f7e13b2acaac11afa8e2a8f4
+SHA512 (lasem-0.6.0.tar.xz) = 1e97157f64d282d90bc2b163c0d5c538b71139b24bf9fc7a45089f2a9f11c5adb8b5dd544b2cfb4ac1d8b5cc0f26980d92f301f69f19d74d8e3cf92c723684a1
+Size (lasem-0.6.0.tar.xz) = 56053928 bytes
