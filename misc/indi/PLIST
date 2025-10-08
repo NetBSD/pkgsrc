@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2025/08/26 07:07:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/10/08 15:20:16 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_aagsolo_weather
 bin/indi_activefocuser_focus
 bin/indi_alluna_tcs2
+bin/indi_alpaca_ccd
 bin/indi_alpaca_dome
+bin/indi_alpaca_server
 bin/indi_alto
 bin/indi_arduinost4
 bin/indi_astrolink4
@@ -209,6 +211,7 @@ include/libindi/alignment/TelescopeDirectionVectorSupportFunctions.h
 include/libindi/base64.h
 include/libindi/baseclient.h
 include/libindi/basedevice.h
+include/libindi/connectionplugins/connectioni2c.h
 include/libindi/connectionplugins/connectioninterface.h
 include/libindi/connectionplugins/connectionserial.h
 include/libindi/connectionplugins/connectiontcp.h
@@ -246,6 +249,8 @@ include/libindi/indifocuserinterface.h
 include/libindi/indigps.h
 include/libindi/indigpsinterface.h
 include/libindi/indiguiderinterface.h
+include/libindi/indiimu.h
+include/libindi/indiimuinterface.h
 include/libindi/indiinputinterface.h
 include/libindi/indijson.hpp
 include/libindi/indilightboxinterface.h
