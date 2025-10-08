@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5973 2025/10/08 05:55:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5974 2025/10/08 07:13:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8694,3 +8694,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/tk90 to 9.0.2nb1 [wiz 2025-10-07]
 	Updated lang/python313 to 3.13.8 [adam 2025-10-08]
 	Updated lang/py313-html-docs to 3.13.8 [adam 2025-10-08]
+	Added lang/python314 version 3.14.0 [adam 2025-10-08]
+	Added lang/py314-html-docs version 3.14.0 [adam 2025-10-08]
