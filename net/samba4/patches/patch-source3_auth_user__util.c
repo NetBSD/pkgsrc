@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add missing header.
+https://bugzilla.samba.org/show_bug.cgi?id=15932
+
 --- source3/auth/user_util.c.orig	2025-10-07 19:00:41.861180195 +0000
 +++ source3/auth/user_util.c
 @@ -25,6 +25,8 @@
