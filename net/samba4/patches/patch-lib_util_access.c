@@ -1,5 +1,8 @@
 $NetBSD$
 
+Add missing header.
+https://bugzilla.samba.org/show_bug.cgi?id=15932
+
 --- lib/util/access.c.orig	2025-10-07 19:00:15.593339882 +0000
 +++ lib/util/access.c
 @@ -23,6 +23,8 @@
