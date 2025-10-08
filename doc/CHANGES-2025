@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5972 2025/10/07 21:04:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5973 2025/10/08 05:55:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8692,3 +8692,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go125 to 1.25.2 [bsiegert 2025-10-07]
 	Updated devel/ada-gnatcoll-core-25 to 25.0.0nb2 [dkazankov 2025-10-07]
 	Updated x11/tk90 to 9.0.2nb1 [wiz 2025-10-07]
+	Updated lang/python313 to 3.13.8 [adam 2025-10-08]
+	Updated lang/py313-html-docs to 3.13.8 [adam 2025-10-08]
