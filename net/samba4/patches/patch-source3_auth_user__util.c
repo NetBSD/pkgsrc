@@ -1,4 +1,7 @@
-$NetBSD: patch-source3_auth_user__util.c,v 1.1 2025/10/07 19:06:24 wiz Exp $
+$NetBSD: patch-source3_auth_user__util.c,v 1.2 2025/10/08 14:28:53 wiz Exp $
+
+Add missing header.
+https://bugzilla.samba.org/show_bug.cgi?id=15932
 
 --- source3/auth/user_util.c.orig	2025-10-07 19:00:41.861180195 +0000
 +++ source3/auth/user_util.c
