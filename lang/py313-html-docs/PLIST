@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/08/15 06:44:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/08 05:55:24 adam Exp $
 share/doc/python3.13/.buildinfo
 share/doc/python3.13/404.html
 share/doc/python3.13/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -98,6 +98,7 @@ share/doc/python3.13/_sources/deprecations/pending-removal-in-3.13.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.14.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.15.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-3.16.rst.txt
+share/doc/python3.13/_sources/deprecations/pending-removal-in-3.17.rst.txt
 share/doc/python3.13/_sources/deprecations/pending-removal-in-future.rst.txt
 share/doc/python3.13/_sources/distributing/index.rst.txt
 share/doc/python3.13/_sources/extending/building.rst.txt
@@ -543,7 +544,6 @@ share/doc/python3.13/_static/minus.png
 share/doc/python3.13/_static/og-image.png
 share/doc/python3.13/_static/opensearch.xml
 share/doc/python3.13/_static/plus.png
-share/doc/python3.13/_static/py.png
 share/doc/python3.13/_static/py.svg
 share/doc/python3.13/_static/pydoctheme.css
 share/doc/python3.13/_static/pydoctheme_dark.css
@@ -635,6 +635,7 @@ share/doc/python3.13/deprecations/pending-removal-in-3.13.html
 share/doc/python3.13/deprecations/pending-removal-in-3.14.html
 share/doc/python3.13/deprecations/pending-removal-in-3.15.html
 share/doc/python3.13/deprecations/pending-removal-in-3.16.html
+share/doc/python3.13/deprecations/pending-removal-in-3.17.html
 share/doc/python3.13/deprecations/pending-removal-in-future.html
 share/doc/python3.13/distributing/index.html
 share/doc/python3.13/download.html
