@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.13 2024/08/02 22:32:24 morr Exp $
+$NetBSD: patch-Makefile,v 1.14 2025/10/08 00:33:54 js Exp $
 
---- src/Makefile.orig	2023-06-01 19:26:55.000000000 +0000
+--- src/Makefile.orig	2025-07-20 08:47:14.000000000 +0000
 +++ src/Makefile
-@@ -2491,35 +2491,35 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
+@@ -2547,35 +2547,35 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
  	      fi
  	-chmod $(FILEMOD) $(DEST_TOOLS)/*
  # replace the path in some tools
@@ -61,3 +61,12 @@ $NetBSD: patch-Makefile,v 1.13 2024/08/02 22:32:24 morr Exp $
  
  
  # install the language specific files, if they were unpacked
+@@ -3137,7 +3137,7 @@ auto/pathdef.c: Makefile auto/config.mk
+ 	-@echo 'char_u *compiled_user = (char_u *)"' | tr -d $(NL) >> $@
+ 	-@if test -n "$(COMPILEDBY)"; then \
+ 		echo "$(COMPILEDBY)" | tr -d $(NL) >> $@; \
+-		else ((logname) 2>/dev/null || whoami) | tr -d $(NL) >> $@; fi
++		else ( (logname) 2>/dev/null || whoami) | tr -d $(NL) >> $@; fi
+ 	-@echo '";' >> $@
+ 	-@echo 'char_u *compiled_sys = (char_u *)"' | tr -d $(NL) >> $@
+ 	-@if test -z "$(COMPILEDBY)"; then hostname | tr -d $(NL) >> $@; fi
