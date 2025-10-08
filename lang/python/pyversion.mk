@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.175 2025/10/05 22:43:14 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.176 2025/10/08 07:17:07 adam Exp $
 
 # This file provides an interface to decide which version of python
 # should be used in building a package.  It should be directly
@@ -79,8 +79,8 @@
 #	normal practice is to list all feasible versions in decreasing
 #	order.
 #
-#	Possible values: 313 312 311
-#	Default: 313 312 311
+#	Possible values: 314 313 312 311
+#	Default: 314 313 312 311
 #
 # PYTHON_27_ACCEPTED
 #       Set if the package can build with 2.7.  (27 should not be
@@ -96,7 +96,7 @@
 #	(27 should not be listed as incompatible, as that's true
 #	unless PYTHON_27_ACCEPTED is set.)
 #
-#	Possible values: 39 310 311 312 313
+#	Possible values: 310 311 312 313 314
 #	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -121,7 +121,7 @@
 #	Version of python that will be used in this build, as
 #	a three-digit number of major_version * 100 + minor_version.
 #
-#	Examples: 207, 309, 310, 311, 312, 313
+#	Examples: 207, 310, 311, 312, 313, 314
 #
 # PYPKGPREFIX
 #	The prefix to use in PKGNAME for extensions which are meant
@@ -163,7 +163,7 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		313
-PYTHON_VERSIONS_ACCEPTED?=		313 312 311
+PYTHON_VERSIONS_ACCEPTED?=		314 313 312 311
 .if defined(PYTHON_27_ACCEPTED)
 PYTHON_VERSIONS_ACCEPTED+=		27
 .endif
