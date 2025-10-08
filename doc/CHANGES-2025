@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5974 2025/10/08 07:13:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5975 2025/10/08 07:17:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8696,3 +8696,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py313-html-docs to 3.13.8 [adam 2025-10-08]
 	Added lang/python314 version 3.14.0 [adam 2025-10-08]
 	Added lang/py314-html-docs version 3.14.0 [adam 2025-10-08]
+	Removed lang/python39 [adam 2025-10-08]
+	Removed lang/py39-html-docs [adam 2025-10-08]
