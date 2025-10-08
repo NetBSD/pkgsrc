@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/08/08 11:03:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/08 05:55:24 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -2586,6 +2586,9 @@ lib/python${PY_VER_SUFFIX}/test/mp_preload.pyo
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.py
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyc
 lib/python${PY_VER_SUFFIX}/test/mp_preload_flush.pyo
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.py
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyc
+lib/python${PY_VER_SUFFIX}/test/mp_preload_main.pyo
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.py
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyc
 lib/python${PY_VER_SUFFIX}/test/multibytecodec_support.pyo
@@ -4792,6 +4795,9 @@ lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/__main__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.py
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.pyc
+lib/python${PY_VER_SUFFIX}/test/test_pyrepl/eio_test_script.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.py
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pyrepl/support.pyo
