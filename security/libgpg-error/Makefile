@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2025/04/25 11:18:31 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/10/08 12:16:20 adam Exp $
 
-DISTNAME=	libgpg-error-1.55
+DISTNAME=	libgpg-error-1.56
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNUPG:=libgpg-error/}
 EXTRACT_SUFX=	.tar.bz2
