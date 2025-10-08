@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.589 2025/10/08 16:56:54 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.590 2025/10/08 20:47:41 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27784,3 +27784,6 @@ ruby{31,32,33,34}-rack>=3<3.2.2	denial-of-service	https://nvd.nist.gov/vuln/deta
 binutils<2.46	out-of-bonds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11412
 binutils<2.46	out-of-bonds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11413
 binutils<2.46	out-of-bonds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11414
+matrix-synapse<1.139.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61672
+binutils<2.46	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11494
+binutils<2.46	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11495
