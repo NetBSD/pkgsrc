@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/06 08:33:57 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/08 21:38:52 wiz Exp $
 
 DISTNAME=	bumpver-2025.1131
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-pathlib2>=0:../../devel/py-pathlib2
 DEPENDS+=	${PYPKGPREFIX}-toml>=0:../../textproc/py-toml
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	314 # py-lib3to6
 
 USE_LANGUAGES=	# none
 
