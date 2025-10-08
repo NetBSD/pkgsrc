@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/04/12 11:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/08 21:38:52 wiz Exp $
 
 DISTNAME=	lib3to6-202107.1047
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,9 @@ DEPENDS+=	${PYPKGPREFIX}-astor>=0:../../devel/py-astor
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 
 USE_LANGUAGES=	# none
+
+# https://gitlab.com/mbarkhau/lib3to6/-/issues/12
+PYTHON_VERSIONS_INCOMPATIBLE+=	314
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} lib3to6 lib3to6-${PYVERSSUFFIX}
