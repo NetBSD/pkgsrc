@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/10/08 12:13:08 adam Exp $
+
+Fix for CMake 4.
+
+--- CMakeLists.txt.orig	2025-09-28 12:05:56.131049848 +0000
++++ CMakeLists.txt
+@@ -1,5 +1,5 @@
+ project(vera++)
+-cmake_minimum_required(VERSION 2.8.6)
++cmake_minimum_required(VERSION 3.5)
+ 
+ set(VERA_MAJOR 1)
+ set(VERA_MINOR 3)
