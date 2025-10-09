@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/07/28 14:47:52 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/10/09 13:30:53 dkazankov Exp $
 
-BLAKE2s (e3-testsuite-26.0.tar.gz) = 0364e5ed2f83e7cba4ba5290e3eb4b38fe6bbf0a755900726f9c08bd16c5c168
-SHA512 (e3-testsuite-26.0.tar.gz) = 40dc8b86aa77a676cd728e8708607543c445ab97452a385df944f9ab172448c7ecc31a72282e185754c86da1ffd052b149bdf4d88247b114fe1563396320f664
-Size (e3-testsuite-26.0.tar.gz) = 159252 bytes
+BLAKE2s (e3_testsuite-27.3.tar.gz) = a12fe424cdad8ff599859637a844af422d220e02f278b8dd307a73405daaea21
+SHA512 (e3_testsuite-27.3.tar.gz) = 989efd891e77bbb79e4f33a9987cb146a9e0a220bb96c44a05e2caf2675bc175d60f7086b6e0bf75f1de1d7b0a7f7e33f0ecd1824bee7b31033d727754fbc044
+Size (e3_testsuite-27.3.tar.gz) = 175923 bytes

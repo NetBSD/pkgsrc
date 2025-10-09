@@ -1,5 +1,6 @@
 bin/e3-convert-xunit @PREFIX@/bin/e3-convert-xunit-@PYVERSSUFFIX@
 bin/e3-find-skipped-tests @PREFIX@/bin/e3-find-skipped-tests-@PYVERSSUFFIX@
+bin/e3-opt-check @PREFIX@/bin/e3-opt-check-@PYVERSSUFFIX@
 bin/e3-opt-parser @PREFIX@/bin/e3-opt-parser-@PYVERSSUFFIX@
 bin/e3-run-test-fragment @PREFIX@/bin/e3-run-test-fragment-@PYVERSSUFFIX@
 bin/e3-test @PREFIX@/bin/e3-test-@PYVERSSUFFIX@
