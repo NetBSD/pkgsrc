@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/08 14:14:49 wiz Exp $
-bin/gprbuild
-bin/gprclean
-bin/gprconfig
+@comment $NetBSD: PLIST,v 1.3 2025/10/09 15:46:43 dkazankov Exp $
+bin/gpr1build
+bin/gpr1clean
+bin/gpr1config
 bin/gprinstall
 bin/gprls
 bin/gprname
