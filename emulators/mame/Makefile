@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.220 2025/10/09 14:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.221 2025/10/09 21:33:15 wiz Exp $
 
 DISTNAME=	mame-0.281
 CATEGORIES=	emulators
@@ -28,8 +28,7 @@ MAKE_FILE=		makefile
 # "GCC version 10.3 or later needed"
 GCC_REQD+=		10
 
-# https://github.com/mamedev/mame/issues/14305
-PYTHON_VERSIONS_INCOMPATIBLE=	314
+PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "../../mk/bsd.prefs.mk"
 # error: invalid argument '-std=gnu++17' not allowed with 'Objective-C'
@@ -96,8 +95,6 @@ MAKE_ENV+=	TOOLS=1
 MAKE_ENV+=	BIGENDIAN=1
 .endif
 
-PYTHON_FOR_BUILD_ONLY=		yes
-
 post-extract:
 	# will be chosen in preference to /usr/include/signal.h, but does not provide kill()
 	${RM} ${WRKSRC}/3rdparty/bx/include/compat/freebsd/signal.h
@@ -134,8 +131,7 @@ do-install:
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/tool.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/rapidjson/buildlink3.mk"
