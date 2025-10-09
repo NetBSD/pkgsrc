@@ -1,12 +1,12 @@
-$NetBSD: patch-langkit_utils_____init____.py,v 1.1 2025/10/09 11:25:49 wiz Exp $
+$NetBSD: patch-langkit_utils_____init____.py,v 1.2 2025/10/09 15:18:55 dkazankov Exp $
 
 Transition uses of the Python pipes module to shlex
 "pipes" was removed from Python 3.13.
 https://github.com/AdaCore/langkit/commit/dbacb9b5545315e7045ef082dba99d2c96ed1356
 
---- langkit/utils/__init__.py.orig	2024-09-17 09:18:15.000000000 +0000
+--- langkit/utils/__init__.py.orig	2024-12-10 12:23:59.000000000 +0200
 +++ langkit/utils/__init__.py
-@@ -11,7 +11,6 @@ from contextlib import ExitStack, contex
+@@ -11,7 +11,6 @@
  from copy import copy
  from enum import Enum
  import os
@@ -14,7 +14,7 @@ https://github.com/AdaCore/langkit/commit/dbacb9b5545315e7045ef082dba99d2c96ed13
  import shlex
  import shutil
  from typing import (
-@@ -265,7 +264,7 @@ def format_setenv(name: str, path: str) 
+@@ -273,7 +272,7 @@
      environment variable.
      """
      return (
