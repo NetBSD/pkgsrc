@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5988 2025/10/09 12:04:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5989 2025/10/09 12:29:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8715,3 +8715,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-bcrypt to 5.0.0 [wiz 2025-10-09]
 	Updated textproc/ada-xmlada-25 to 25.2.0 [dkazankov 2025-10-09]
 	Updated devel/py-line_profiler to 5.0.0 [wiz 2025-10-09]
+	Updated textproc/py-eradicate to 3.0.0 [wiz 2025-10-09]
