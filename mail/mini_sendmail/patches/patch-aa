@@ -1,11 +1,32 @@
-$NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
-
+$NetBSD: patch-aa,v 1.11 2025/10/09 18:18:51 martin Exp $
 
 --- mini_sendmail.c.orig	2005-06-29 19:37:15.000000000 +0200
-+++ mini_sendmail.c	2007-10-27 13:25:55.000000000 +0200
-@@ -66,8 +66,13 @@
++++ mini_sendmail.c	2025-10-09 19:05:05.062203849 +0200
+@@ -34,6 +34,7 @@
+ #define DO_GETPWUID	/* whether to try a getpwuid() if getlogin() fails */
+ #define DO_MINUS_SP	/* whether to implement the -s and -p flags */
+ #define DO_DNS		/* whether to do a name lookup on -s, or just IP# */
++#define DO_REALNAME	/* wether to add a From: head with local real name */
+ 
+ 
+ #include <unistd.h>
+@@ -53,6 +54,10 @@
+ #include <pwd.h>
+ #endif /* DO_GETPWUID */
+ 
++#ifdef DO_MINUS_SP
++#include <arpa/inet.h>
++#endif
++
+ #include "version.h"
+ 
+ 
+@@ -64,10 +69,15 @@
+ /* Globals. */
+ static char* argv0;
  static char* fake_from;
- static int parse_message, verbose;
+-static int parse_message, verbose;
++static int parse_message, verbose, check_date, check_from, need_date, need_from;
  #ifdef DO_MINUS_SP
 -static char* server;
  static short port;
@@ -18,7 +39,12 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
  #endif /* DO_MINUS_SP */
  static int timeout;
  static int sockfd1, sockfd2;
-@@ -84,7 +89,7 @@
+@@ -80,11 +90,11 @@ static int got_a_recipient;
+ static void usage( void );
+ static char* slurp_message( void );
+ #ifdef DO_RECEIVED
+-static char* make_received( char* from, char* username, char* hostname );
++static char* make_received( char* from, char* username, char *rname, char* hostname, char *fake_host );
  #endif /* DO_RECEIVED */
  static void parse_for_recipients( char* message );
  static void add_recipient( char* recipient, int len );
@@ -27,7 +53,13 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
  static int read_response( void );
  static void send_command( char* command );
  static void send_data( char* data );
-@@ -106,13 +111,15 @@
+@@ -102,17 +112,24 @@ main( int argc, char** argv )
+     char* received;
+ #endif /* DO_RECEIVED */
+     char* username;
+-    char hostname[500];
++    char* rname = NULL;
++    char hostname[500], *fake_host = NULL;
      char from[1000];
      int status;
      char buf[2000];
@@ -39,12 +71,16 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
      argv0 = argv[0];
      fake_from = (char*) 0;
      parse_message = 0;
++    check_date = 0;
++    check_from = 0;
++    need_date = 0;
++    need_from = 0;
  #ifdef DO_MINUS_SP
 -    server = "127.0.0.1";
      port = SMTP_PORT;
  #endif /* DO_MINUS_SP */
      verbose = 0;
-@@ -122,22 +129,36 @@
+@@ -122,22 +139,46 @@ main( int argc, char** argv )
  	{
  	if ( strncmp( argv[argn], "-f", 2 ) == 0 && argv[argn][2] != '\0' )
  	    fake_from = &(argv[argn][2]);
@@ -67,9 +103,20 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
 +	} else if ( strncmp( argv[argn], "-p", 2 ) == 0 && argv[argn][2] != '\0' )
  	    port = atoi( &(argv[argn][2]) );
  #endif /* DO_MINUS_SP */
++	else if ( strncmp( argv[argn], "-H", 2 ) == 0 && argv[argn][2] != '\0' )
++	   fake_host = &(argv[argn][2]);
  	else if ( strncmp( argv[argn], "-T", 2 ) == 0 && argv[argn][2] != '\0' )
  	    timeout = atoi( &(argv[argn][2]) );
- 	else if ( strcmp( argv[argn], "-v" ) == 0 )
+-	else if ( strcmp( argv[argn], "-v" ) == 0 )
++	else if ( strcmp( argv[argn], "-U" ) == 0 ) {
++	    check_from = 1;
++	    need_from = 1;
++	    parse_message = 1;
++	} else if ( strcmp( argv[argn], "-D" ) == 0 ) {
++	    check_date = 1;
++	    need_date = 1;
++	    parse_message = 1;
++	} else if ( strcmp( argv[argn], "-v" ) == 0 )
  	    verbose = 1;
 +	else if ( strcmp( argv[argn], "-oeq" ) == 0 )
 +	    verbose = 0;
@@ -84,7 +131,55 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
  	else if ( strcmp( argv[argn], "--" ) == 0 )
  	    ;	/* ignore */
  	else
-@@ -186,8 +207,21 @@
+@@ -146,7 +187,9 @@ main( int argc, char** argv )
+ 	}
+ 
+     username = getlogin();
++#ifndef DO_REALNAME
+     if ( username == (char*) 0 )
++#endif
+ 	{
+ #ifdef DO_GETPWUID
+ 	struct passwd* pw = getpwuid( getuid() );
+@@ -156,20 +199,29 @@ main( int argc, char** argv )
+ 	    exit( 1 );
+ 	    }
+ 	username = pw->pw_name;
++	rname = pw->pw_gecos;
++	if (rname) {
++		char *s = strchr(rname, ',');
++		if (s)
++			*s = '\0';
++	}
+ #else /* DO_GETPWUID */
+ 	(void) fprintf( stderr, "%s: can't determine username\n", argv0 );
+ 	exit( 1 );
+ #endif /* DO_GETPWUID */
++
+ 	}
+ 
+     if ( gethostname( hostname, sizeof(hostname) - 1 ) < 0 )
+ 	show_error( "gethostname" );
+ 
+     if ( fake_from == (char*) 0 )
+-	(void) snprintf( from, sizeof(from), "%s@%s", username, hostname );
++	(void) snprintf( from, sizeof(from), "%s@%s", username, 
++	    fake_host ? fake_host : hostname );
+     else
+ 	if ( strchr( fake_from, '@' ) == (char*) 0 )
+-	    (void) snprintf( from, sizeof(from), "%s@%s", fake_from, hostname );
++	    (void) snprintf( from, sizeof(from), "%s@%s", fake_from, 
++	        fake_host ? fake_host : hostname );
+ 	else
+ 	    (void) snprintf( from, sizeof(from), "%s", fake_from );
+ 
+@@ -180,14 +232,24 @@ main( int argc, char** argv )
+ 	from[strlen(from)-1] = '\0';
+ 
+     message = slurp_message();
+-#ifdef DO_RECEIVED
+-    received = make_received( from, username, hostname );
+-#endif /* DO_RECEIVED */
  
      (void) signal( SIGALRM, sigcatch );
  
@@ -107,7 +202,236 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
  
      sockfd2 = dup( sockfd1 );
      sockrfp = fdopen( sockfd1, "r" );
-@@ -507,14 +541,24 @@
+@@ -253,6 +315,7 @@ main( int argc, char** argv )
+ 	}
+ 
+ #ifdef DO_RECEIVED
++    received = make_received( from, username, rname, hostname, fake_host );
+     send_data( received );
+ #endif /* DO_RECEIVED */
+     send_data( message );
+@@ -291,7 +354,7 @@ usage( void )
+ #else /* DO_MINUS_SP */
+     char* spflag = "";
+ #endif /* DO_MINUS_SP */
+-    (void) fprintf( stderr, "usage:  %s [-f<name>] [-t] %s[-T<timeout>] [-v] [address ...]\n", argv0, spflag );
++    (void) fprintf( stderr, "usage:  %s [-f<name>] [-t] [-U] [-D] %s[-T<timeout>] [-H<host>] [-v] [address ...]\n", argv0, spflag );
+     exit( 1 );
+     }
+ 
+@@ -337,10 +400,10 @@ slurp_message( void )
+ 
+ #ifdef DO_RECEIVED
+ static char*
+-make_received( char* from, char* username, char* hostname )
++make_received( char* from, char* username, char *rname, char* hostname, char *fake_host )
+     {
+     int received_size;
+-    char* received;
++    char* received, *from_hd = NULL, *date_hd = NULL;
+     time_t t;
+     struct tm* tmP;
+     char timestamp[100];
+@@ -351,6 +414,29 @@ make_received( char* from, char* usernam
+     received_size =
+ 	500 + strlen( from ) + strlen( hostname ) * 2 + strlen( VERSION ) +
+ 	strlen( timestamp ) + strlen( username );
++    if (need_date) {
++	size_t date_size = 10 + strlen( timestamp );
++        received_size += date_size;
++	date_hd = (char*) malloc( date_size );
++	if ( date_hd == (char*)0 ) {
++	     (void)fprintf( stderr, "%s: out of memory\n", argv0 );
++	     exit( 1 );
++	}
++	snprintf(date_hd, date_size, "Date: %s\n", timestamp);
++    }
++    if (need_from) {
++	char * from_host = fake_host ? fake_host : hostname;
++        size_t from_size = 15 + strlen( username ) + strlen( from_host );
++	if (rname) from_size += strlen(rname) + 1;
++	received_size += from_size;
++	from_hd = (char*) malloc( from_size );
++	if (from_hd == (char*)0 ) {
++	     (void)fprintf( stderr, "%s: out of memory\n", argv0 );
++	     exit( 1 );
++	}
++	snprintf(from_hd, from_size, "From: %s%s<%s@%s>\n", rname ? rname : "", rname ? " " : "",
++	     username, from_host);
++    }
+     received = (char*) malloc( received_size );
+     if ( received == (char*) 0 )
+ 	{
+@@ -359,8 +445,10 @@ make_received( char* from, char* usernam
+ 	}
+     (void) snprintf(
+ 	received, received_size,
+-	"Received: (from %s)\n\tby %s (%s);\n\t%s\n\t(sender %s@%s)\n",
+-	from, hostname, VERSION, timestamp, username, hostname );
++	"Received: (from %s)\n\tby %s (%s);\n\t%s\n\t(sender %s@%s)\n"
++	"%s%s",
++	from, hostname, VERSION, timestamp, username, hostname,
++	date_hd ? date_hd : "", from_hd ? from_hd : "");
+     return received;
+     }
+ #endif /* DO_RECEIVED */
+@@ -381,6 +469,15 @@ parse_for_recipients( char* message )
+ #define ST_BC		5
+ #define ST_RECIPHEAD	6
+ #define ST_RECIPS	7
++#define ST_F		8
++#define ST_FR		9
++#define	ST_FRO		10
++#define	ST_FROM		11
++#define ST_D		12
++#define ST_DA		13
++#define	ST_DAT		14
++#define	ST_DATE		15
++
+     char* cp;
+     char* bcc;
+     char* recip;
+@@ -409,6 +506,14 @@ parse_for_recipients( char* message )
+ 		state = ST_B;
+ 		bcc = cp;
+ 		break;
++		case 'D':
++		case 'd':
++		state = check_date ? ST_D : ST_OTHERHEAD;
++		break;
++		case 'F':
++		case 'f':
++		state = check_from ? ST_F : ST_OTHERHEAD;
++		break;
+ 		default:
+ 		state = ST_OTHERHEAD;
+ 		break;
+@@ -486,6 +591,124 @@ parse_for_recipients( char* message )
+ 		break;
+ 		}
+ 	    break;
++	    case ST_D:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'A':
++		case 'a':
++		state = ST_DA;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_DA:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'T':
++		case 't':
++		state = ST_DAT;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_DAT:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'E':
++		case 'e':
++		state = ST_DATE;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_DATE:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case ':':
++		need_date = 0;
++		/* FALLTHROUGH */
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_F:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'R':
++		case 'r':
++		state = ST_FR;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_FR:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'O':
++		case 'o':
++		state = ST_FRO;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_FRO:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case 'M':
++		case 'm':
++		state = ST_FROM;
++		break;
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
++	    case ST_FROM:
++	    switch ( *cp )
++		{
++		case '\n':
++		state = ST_BOL;
++		break;
++		case ':':
++		need_from = 0;
++		/* FALLTHROUGH */
++		default:
++		state = ST_OTHERHEAD;
++		break;
++		}
++	    break;
+ 	    case ST_RECIPHEAD:
+ 	    switch ( *cp )
+ 		{
+@@ -507,14 +730,24 @@ parse_for_recipients( char* message )
  	    switch ( *cp )
  		{
  		case '\n':
@@ -139,7 +463,7 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
  		    }
  		break;
  		case ',':
-@@ -532,25 +576,43 @@
+@@ -532,25 +765,43 @@ static void
  add_recipient( char* recipient, int len )
      {
      char buf[1000];
@@ -190,7 +514,7 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
      send_command( buf );
      status = read_response();
      if ( status != 250  && status != 251 )
-@@ -569,7 +631,7 @@
+@@ -569,7 +820,7 @@ add_recipient( char* recipient, int len 
  #endif
  
  static int
@@ -199,7 +523,7 @@ $NetBSD: patch-aa,v 1.10 2007/10/27 11:30:37 martin Exp $
      {
  #ifdef USE_IPV6
      struct sockaddr_in6 sa;
-@@ -744,10 +806,10 @@
+@@ -744,10 +995,10 @@ open_client_socket( void )
  
      sockfd = socket( sock_family, sock_type, sock_protocol );
      if ( sockfd < 0 )
