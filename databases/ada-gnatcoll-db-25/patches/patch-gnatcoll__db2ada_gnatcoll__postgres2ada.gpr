@@ -1,13 +1,13 @@
-$NetBSD: patch-gnatcoll__db2ada_gnatcoll__postgres2ada.gpr,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+$NetBSD: patch-gnatcoll__db2ada_gnatcoll__postgres2ada.gpr,v 1.2 2025/10/09 19:50:12 dkazankov Exp $
 
 Fix project paths
 
---- gnatcoll_db2ada/gnatcoll_postgres2ada.gpr.orig	2022-09-02 15:43:38.000000000 +0300
+--- gnatcoll_db2ada/gnatcoll_postgres2ada.gpr.orig	2024-10-18 16:50:19.000000000 +0300
 +++ gnatcoll_db2ada/gnatcoll_postgres2ada.gpr
 @@ -23,8 +23,8 @@
  
  with "../gnatcoll_db_shared.gpr";
- with "gnatcoll";
+ with "gnatcoll_core";
 -with "gnatcoll_sql";
 -with "gnatcoll_postgres";
 +with "../sql/gnatcoll_sql";

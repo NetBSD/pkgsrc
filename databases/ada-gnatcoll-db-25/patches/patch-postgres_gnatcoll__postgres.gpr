@@ -1,13 +1,13 @@
-$NetBSD: patch-postgres_gnatcoll__postgres.gpr,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+$NetBSD: patch-postgres_gnatcoll__postgres.gpr,v 1.2 2025/10/09 19:50:12 dkazankov Exp $
 
 Fix project paths
 
---- postgres/gnatcoll_postgres.gpr.orig	2023-11-06 12:21:17.000000000 +0200
+--- postgres/gnatcoll_postgres.gpr.orig	2024-10-18 16:50:19.000000000 +0300
 +++ postgres/gnatcoll_postgres.gpr
 @@ -23,7 +23,7 @@
  
  with "gnatcoll_postgres_conf.gpr";
- with "gnatcoll";
+ with "gnatcoll_core";
 -with "gnatcoll_sql";
 +with "../sql/gnatcoll_sql";
  
