@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.591 2025/10/08 20:48:19 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.592 2025/10/09 08:31:35 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27787,3 +27787,4 @@ binutils<2.46	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11414
 matrix-synapse<1.139.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61672
 binutils<2.46	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11494
 binutils<2.46	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-11495
+python39-[0-9]*	eol	https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
