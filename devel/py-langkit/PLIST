@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/04 11:07:43 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/09 15:18:55 dkazankov Exp $
 bin/create-project${PYVERSSUFFIX}.py
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/entry_points.txt
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/licenses/LICENSE.txt
+${PYSITELIB}/langkit-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/langkit/__init__.py
 ${PYSITELIB}/langkit/__init__.pyc
 ${PYSITELIB}/langkit/__init__.pyo
