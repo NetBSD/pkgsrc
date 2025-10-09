@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5995 2025/10/09 15:22:28 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5996 2025/10/09 15:47:31 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8723,3 +8723,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-langkit to 25.2.0 [dkazankov 2025-10-09]
 	Updated math/ada-adasat-25 to 25.2.0 [dkazankov 2025-10-09]
 	Updated devel/py-e3-testsuite to 27.3 [dkazankov 2025-10-09]
+	Updated devel/gprbuild to 25.2.0 [dkazankov 2025-10-09]
