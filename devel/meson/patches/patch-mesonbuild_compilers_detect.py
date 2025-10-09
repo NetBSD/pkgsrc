@@ -1,4 +1,4 @@
-$NetBSD: patch-mesonbuild_compilers_detect.py,v 1.7 2024/11/07 14:52:52 wiz Exp $
+$NetBSD: patch-mesonbuild_compilers_detect.py,v 1.8 2025/10/09 16:55:17 ryoon Exp $
 
 Specify c++ language when making CXX parse standard input.
 Fixes problem where graphics/MesaLib fails to build due to:
@@ -15,7 +15,7 @@ Also account for multiple versions of cython in pkgsrc.
  defaults['swift'] = ['swiftc']
  defaults['vala'] = ['valac']
 -defaults['cython'] = ['cython', 'cython3'] # Official name is cython, but Debian renamed it to cython3.
-+defaults['cython'] = ['cython', 'cython-3.13', 'cython-3.12', 'cython-3.11', 'cython-3.10', 'cython-3.9' ] # Handle pkgsrc multi-versions.
++defaults['cython'] = ['cython', 'cython-3.14', 'cython-3.13', 'cython-3.12', 'cython-3.11', 'cython-3.10', 'cython-3.9' ] # Handle pkgsrc multi-versions.
  defaults['static_linker'] = ['ar', 'gar']
  defaults['strip'] = ['strip']
  defaults['vs_static_linker'] = ['lib']
