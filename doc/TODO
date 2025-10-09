@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26307 2025/10/07 21:04:49 wiz Exp $
+$NetBSD: TODO,v 1.26308 2025/10/09 14:07:43 taca Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-11.0
 	o libxdg-basedir-1.2.3
-	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
@@ -1151,7 +1150,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
-	o rspamd-3.13.1
+	o rspamd-3.13.2 [Security Enhancements]
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1160,7 +1159,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
-	o samba-4.23.0
+	o samba-4.23.1
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.5.9
@@ -1389,7 +1388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o zig-0.15.1
 	o zim-0.75.2
 	o zls-0.14.0
-	o zookeeper-3.8.0
+	o zookeeper-3.8.5
 	o zopeedit-0.8
 
 Licenses of packages
