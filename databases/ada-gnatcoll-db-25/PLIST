@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/11 18:08:31 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/09 19:50:11 dkazankov Exp $
 ${GNAT_PKGBASE}/bin/gnatcoll_all2ada
 ${GNAT_PKGBASE}/bin/gnatcoll_db2ada
 ${GNAT_PKGBASE}/bin/gnatcoll_postgres2ada
@@ -52,7 +52,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/gnatcoll-sql-po
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/gnatcoll-sql-ranges.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/libgnatcoll_postgres.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/libgnatcoll_postgres.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/libgnatcoll_postgres.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.relocatable/libgnatcoll_postgres.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.static-pic/gnatcoll-sql-postgres-builder.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.static-pic/gnatcoll-sql-postgres-gnade.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_postgres.static-pic/gnatcoll-sql-postgres.ali
@@ -75,7 +75,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/gnatcoll-sql_fields.
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/gnatcoll-sql_impl.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/libgnatcoll_sql.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/libgnatcoll_sql.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/libgnatcoll_sql.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.relocatable/libgnatcoll_sql.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.static-pic/gnatcoll-sql-exec-tasking.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.static-pic/gnatcoll-sql-exec.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sql.static-pic/gnatcoll-sql-exec_private.ali
@@ -101,7 +101,7 @@ ${GNAT_PKGBASE}/lib/gnatcoll_sql.static/libgnatcoll_sql.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.relocatable/gnatcoll-sql-sqlite.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.relocatable/libgnatcoll_sqlite.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.relocatable/libgnatcoll_sqlite.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.relocatable/libgnatcoll_sqlite.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.relocatable/libgnatcoll_sqlite.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.static-pic/gnatcoll-sql-sqlite-builder.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.static-pic/gnatcoll-sql-sqlite-gnade.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_sqlite.static-pic/gnatcoll-sql-sqlite.ali
@@ -115,7 +115,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/gnatcoll-xref-datab
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/gnatcoll-xref.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/libgnatcoll_xref.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/libgnatcoll_xref.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/libgnatcoll_xref.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.relocatable/libgnatcoll_xref.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.static-pic/gnatcoll-xref-database.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.static-pic/gnatcoll-xref-database_names.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_xref.static-pic/gnatcoll-xref.ali
@@ -126,16 +126,16 @@ ${GNAT_PKGBASE}/lib/gnatcoll_xref.static/gnatcoll-xref.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_xref.static/libgnatcoll_xref.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_postgres.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_postgres.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_postgres.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_postgres.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sql.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sql.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sql.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sql.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sqlite.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sqlite.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sqlite.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_sqlite.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_xref.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_xref.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_xref.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_xref.so.25.2
 ${GNAT_PKGBASE}/share/gnatcoll/dborm.py
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_postgres.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_sql.gpr

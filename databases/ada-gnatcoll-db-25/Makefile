@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/07/11 18:08:31 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/09 19:50:11 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-db
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatcoll-db
@@ -31,7 +31,7 @@ GCC_REQD+=	14
 SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	pre-configure
 SUBST_FILES.fixver=	version_information
-SUBST_SED.fixver=	-e 's,0.0,25.0,g'
+SUBST_SED.fixver=	-e 's,0.0,${GITHUB_TAG},g'
 SUBST_MESSAGE.fixver=	Fix version information
 
 CONFIG_SHELL=		${MAKE_PROGRAM}
