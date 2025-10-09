@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/07/02 09:03:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 09:07:02 wiz Exp $
 
 DISTNAME=	pycddl-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -17,6 +17,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 # as of 0.6.3
 # 1 failed, 14 passed
+
+MAKE_ENV+=	PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 .include "cargo-depends.mk"
 
