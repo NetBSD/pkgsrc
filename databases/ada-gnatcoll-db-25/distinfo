@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/10/09 19:50:12 dkazankov Exp $
 
-BLAKE2s (gnatcoll-db-25.0.0.tar.gz) = 644f89eca578ab538daf7c90317a89cfa4736632f141e2d7db5a413d39c0c297
-SHA512 (gnatcoll-db-25.0.0.tar.gz) = 7cd37d33650a16fd72796adda375a62a6368c11b369209686194fe96ad72a8e49094076679824266f88aeb7b1bc592ac1be678fcfaad10b59c7e05f7dd512cf3
-Size (gnatcoll-db-25.0.0.tar.gz) = 2688678 bytes
+BLAKE2s (gnatcoll-db-25.2.tar.gz) = f297112cb83273bf58fe413fa35296e677498bc29295ccc5e2f89903edb46355
+SHA512 (gnatcoll-db-25.2.tar.gz) = 4ee47948dae3075b6fe8ee231d0ce168d24c375aa9f2fcf7a10729b8b50abbe90150059bbb18a14f390618fc04702ebe78a7459fc4b45215231b42f668199eb4
+Size (gnatcoll-db-25.2.tar.gz) = 2688674 bytes
 SHA1 (patch-Makefile) = 4df53d429089876b42358726fbae55dd4ea90ffd
 SHA1 (patch-gnatcoll__db2ada_Makefile) = dbcec198253c682b952ecdbac4e839eb335c97ec
-SHA1 (patch-gnatcoll__db2ada_gnatcoll__all2ada.gpr) = e6198437023047531952e4e2c785d84b310382b3
-SHA1 (patch-gnatcoll__db2ada_gnatcoll__db2ada.gpr) = 4e14ba5302d45b5999e536071fddabebc8066711
-SHA1 (patch-gnatcoll__db2ada_gnatcoll__postgres2ada.gpr) = efbc99b713ce6d61fecd5e2971fb51dc7177c7cb
-SHA1 (patch-gnatcoll__db2ada_gnatcoll__sqlite2ada.gpr) = fb3b09094980a73dc010a5e685604b97e228658d
+SHA1 (patch-gnatcoll__db2ada_gnatcoll__all2ada.gpr) = 675b90f399e83fd00e3f603e5fd1e6b34e8ed68e
+SHA1 (patch-gnatcoll__db2ada_gnatcoll__db2ada.gpr) = 36c7e46eb4eedadb9cc22f6aa5cde850dc3868f1
+SHA1 (patch-gnatcoll__db2ada_gnatcoll__postgres2ada.gpr) = b8bc8e6d8f4f106666a5ca6fe002a231d90db4f2
+SHA1 (patch-gnatcoll__db2ada_gnatcoll__sqlite2ada.gpr) = af6eb7a6fa6e3744e15ce7a1728468bc0f63ed15
 SHA1 (patch-gnatinspect_Makefile) = cdf67afd640ca9d42f7c35045caed60c5d16c303
 SHA1 (patch-gnatinspect_gnatinspect.gpr) = e50ec2270c6cd416d3d425cba78f34b9db9fe79f
 SHA1 (patch-postgres_Makefile) = 6077a40aaa5d06a36d95503288ebba0419b7cfd9
-SHA1 (patch-postgres_gnatcoll__postgres.gpr) = 159b99904d4346ce019085f72c731aeadbc4fced
+SHA1 (patch-postgres_gnatcoll__postgres.gpr) = 6449551d5c9ceb74a3b710a47f9e614fcf08bf41
 SHA1 (patch-sql_Makefile) = ac8399e101ae63a32697c9796ea42abd4389555a
 SHA1 (patch-sqlite_Makefile) = fb4ef3d7b91b65bff749818ff6422789876fa7ca
-SHA1 (patch-sqlite_gnatcoll__sqlite.gpr) = 5e6d0831c12ee6e3ee68206da38c2f85dce86a81
+SHA1 (patch-sqlite_gnatcoll__sqlite.gpr) = 55714b8fec45183b6a74ef6c1d5db04c30f63870
 SHA1 (patch-xref_Makefile) = f7216b19eb2ce1d8d85b5668285e79e1a729d571
 SHA1 (patch-xref_gnatcoll__xref.gpr) = 5edb779e6a6067b009c0d284f07965465b097da9
