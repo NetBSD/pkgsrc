@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5981 2025/10/08 15:20:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5982 2025/10/09 05:32:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8706,3 +8706,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-uri to 1.0.4 [taca 2025-10-08]
 	Updated databases/unixodbc to 2.3.14 [adam 2025-10-08]
 	Updated misc/indi to 2.1.6 [adam 2025-10-08]
+	Updated devel/py-filelock to 3.20.0 [adam 2025-10-09]
+	Updated misc/py-platformdirs to 4.5.0 [adam 2025-10-09]
