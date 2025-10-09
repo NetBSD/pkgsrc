@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 05:46:26 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/09 20:49:50 dkazankov Exp $
 
-DISTNAME=	gpr2-${PKGVERSION_NOREV}
-PKGNAME=	libgpr2-${GNAT_NAME}-25.0.0
+DISTNAME=	gpr2-${GITHUB_TAG}
+PKGNAME=	libgpr2-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gpr
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gpr
@@ -73,7 +73,6 @@ PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLI
 .include "../../devel/ada-gnatcoll-bindings-25/buildlink3.mk"
 
 .include "../../devel/gmp/buildlink3.mk"
-USE_GNU_ICONV=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
