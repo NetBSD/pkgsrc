@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5997 2025/10/09 16:04:48 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.5998 2025/10/09 16:20:15 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8725,3 +8725,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-e3-testsuite to 27.3 [dkazankov 2025-10-09]
 	Updated devel/gprbuild to 25.2.0 [dkazankov 2025-10-09]
 	Updated textproc/ov to 0.44.0 [schmonz 2025-10-09]
+	Updated devel/ada-libgpr-25 to 25.2.0 [dkazankov 2025-10-09]
