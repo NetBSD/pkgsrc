@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/10/09 09:01:24 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/10/09 10:52:40 wiz Exp $
 
 DISTNAME=	breeze-icons-${KF6VER}
 PKGNAME=	${DISTNAME}
@@ -10,7 +10,6 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3
 
 # causes core dumps as of 6.18 on NetBSD 11.99.3/gcc 14
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-fno-lto
-BUILDLINK_TRANSFORM.Darwin+=	rm:-fno-lto
 
 .include "../../meta-pkgs/kde/kf6.mk"
 
