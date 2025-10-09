@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.644 2025/09/30 15:38:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.645 2025/10/09 14:32:07 wiz Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		143.0
@@ -19,6 +19,9 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.mozilla.org/en-US/firefox/
 COMMENT=	Web browser with support for extensions (version ${FIREFOX_VER:tu:C/\\.[[:digit:]\.]*//})
 LICENSE=	mpl-1.1
+
+# AttributeError: module 'ast' has no attribute 'Str'
+PYTHON_VERSIONS_INCOMPATIBLE=	314
 
 # -------- BEFORE UPDATING THIS PACKAGE PLEASE READ & UNDERSTAND: -------
 #
