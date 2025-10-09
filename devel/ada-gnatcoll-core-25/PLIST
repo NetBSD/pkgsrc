@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2025/09/13 05:25:00 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/09 17:52:44 dkazankov Exp $
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3.h
+${GNAT_PKGBASE}/include/gnatcoll_core/blake3_avx2_x86-64_unix.S
+${GNAT_PKGBASE}/include/gnatcoll_core/blake3_avx512_x86-64_unix.S
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3_dispatch.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3_impl.h
 ${GNAT_PKGBASE}/include/gnatcoll_core/blake3_portable.c
+${GNAT_PKGBASE}/include/gnatcoll_core/blake3_sse2_x86-64_unix.S
+${GNAT_PKGBASE}/include/gnatcoll_core/blake3_sse41_x86-64_unix.S
 ${GNAT_PKGBASE}/include/gnatcoll_core/executable_path.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-arg_lists.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-arg_lists.ads
@@ -28,10 +32,12 @@ ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-file_paths.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-format_columns_vertical.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-formatters.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-formatters.ads
+${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-geometry.adb
+${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-geometry.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash-blake3.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash-blake3.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash-xxhash.ads
-${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash-xxhash__generic.adb
+${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash-xxhash__x8664.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-hash.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-io-native-codec__unix.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-io-native.adb
@@ -83,7 +89,7 @@ ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc-spawn.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc-stat.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc-utime.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc.ads
-${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc_constants__linux.ads
+${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-libc_constants__bsd.ads
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-process-internal_spawn__unix.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-process-state__unix.adb
 ${GNAT_PKGBASE}/include/gnatcoll_core/gnatcoll-os-process-wait__unix.adb
@@ -158,6 +164,8 @@ ${GNAT_PKGBASE}/include/gnatcoll_core/separate_run_path_option.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/set_std_prefix.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/terminals.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/update_path.c
+${GNAT_PKGBASE}/include/gnatcoll_core/xxh_x86dispatch.c
+${GNAT_PKGBASE}/include/gnatcoll_core/xxh_x86dispatch.h
 ${GNAT_PKGBASE}/include/gnatcoll_core/xxhash.c
 ${GNAT_PKGBASE}/include/gnatcoll_core/xxhash.h
 ${GNAT_PKGBASE}/include/gnatcoll_minimal/getRSS.c
@@ -221,8 +229,9 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-file_index
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-file_paths.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-format_columns_vertical.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-formatters.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-geometry.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-hash-blake3.ali
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-hash-xxhash__generic.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-hash-xxhash__x8664.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-hash.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-io-native.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-io-remote-unix.ali
@@ -244,7 +253,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc-sp
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc-stat.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc-utime.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc.ali
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc_constants__linux.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-libc_constants__bsd.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-process.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-process_types__unix.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-os-random__unix.ali
@@ -278,7 +287,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-wstring_bu
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/gnatcoll-wstring_list_builders.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/libgnatcoll_core.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/libgnatcoll_core.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/libgnatcoll_core.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.relocatable/libgnatcoll_core.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-arg_lists.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-buffer.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-config.ali
@@ -291,8 +300,9 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-file_indexe
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-file_paths.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-format_columns_vertical.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-formatters.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-geometry.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-hash-blake3.ali
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-hash-xxhash__generic.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-hash-xxhash__x8664.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-hash.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-io-native.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-io-remote-unix.ali
@@ -314,7 +324,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc-spa
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc-stat.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc-utime.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc.ali
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc_constants__linux.ali
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-libc_constants__bsd.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-process.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-process_types__unix.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_core.static-pic/gnatcoll-os-random__unix.ali
@@ -359,8 +369,9 @@ ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-file_indexes.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-file_paths.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-format_columns_vertical.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-formatters.ali
+${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-geometry.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-hash-blake3.ali
-${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-hash-xxhash__generic.ali
+${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-hash-xxhash__x8664.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-hash.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-io-native.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-io-remote-unix.ali
@@ -382,7 +393,7 @@ ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc-spawn.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc-stat.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc-utime.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc.ali
-${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc_constants__linux.ali
+${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-libc_constants__bsd.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-process.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-process_types__unix.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_core.static/gnatcoll-os-random__unix.ali
@@ -436,7 +447,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/gnatcoll-tribool
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/gnatcoll.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/libgnatcoll_minimal.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/libgnatcoll_minimal.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/libgnatcoll_minimal.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.relocatable/libgnatcoll_minimal.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.static-pic/gnatcoll-any_types.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.static-pic/gnatcoll-asserts.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_minimal.static-pic/gnatcoll-atomic.ali
@@ -485,7 +496,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/gnatcoll-script
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/gnatcoll-scripts-projects.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/libgnatcoll_projects.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/libgnatcoll_projects.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/libgnatcoll_projects.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.relocatable/libgnatcoll_projects.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.static-pic/gnatcoll-projects-aux.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.static-pic/gnatcoll-projects-krunch.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_projects.static-pic/gnatcoll-projects-normalize.ali
@@ -502,13 +513,13 @@ ${GNAT_PKGBASE}/lib/gnatcoll_projects.static/gnatcoll-scripts-projects.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_projects.static/libgnatcoll_projects.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_core.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_core.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_core.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_core.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_minimal.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_minimal.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_minimal.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_minimal.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_projects.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_projects.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_projects.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_projects.so.25.2
 ${GNAT_PKGBASE}/share/gpr/gnatcoll.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_core.gpr
 ${GNAT_PKGBASE}/share/gpr/gnatcoll_minimal.gpr
