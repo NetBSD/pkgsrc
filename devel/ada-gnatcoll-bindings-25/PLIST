@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/10/09 09:54:05 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/09 18:30:02 dkazankov Exp $
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/cpp_string_support.cpp
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/gnatcoll-cpp-strings.adb
 ${GNAT_PKGBASE}/include/gnatcoll_cpp/gnatcoll-cpp-strings.ads
@@ -71,7 +71,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/gnatcoll-cpp-strings
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/gnatcoll-cpp.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/libgnatcoll_cpp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/libgnatcoll_cpp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/libgnatcoll_cpp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.relocatable/libgnatcoll_cpp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.static-pic/gnatcoll-cpp-strings.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.static-pic/gnatcoll-cpp.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_cpp.static-pic/libgnatcoll_cpp.a
@@ -90,7 +90,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/gnatcoll-gmp-rationa
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/gnatcoll-gmp.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/libgnatcoll_gmp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/libgnatcoll_gmp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/libgnatcoll_gmp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.relocatable/libgnatcoll_gmp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.static-pic/gnatcoll-gmp-integers-io.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.static-pic/gnatcoll-gmp-integers-misc.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_gmp.static-pic/gnatcoll-gmp-integers-number_theoretic.ali
@@ -116,7 +116,7 @@ ${GNAT_PKGBASE}/lib/gnatcoll_gmp.static/libgnatcoll_gmp.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.relocatable/gnatcoll-iconv.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.relocatable/libgnatcoll_iconv.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.relocatable/libgnatcoll_iconv.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.relocatable/libgnatcoll_iconv.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.relocatable/libgnatcoll_iconv.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.static-pic/gnatcoll-iconv.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_iconv.static-pic/libgnatcoll_iconv.a
 ${GNAT_PKGBASE}/lib/gnatcoll_iconv.static/gnatcoll-iconv.ali
@@ -125,7 +125,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/gnatcoll-coders-lzm
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/gnatcoll-coders-lzma.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/libgnatcoll_lzma.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/libgnatcoll_lzma.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/libgnatcoll_lzma.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.relocatable/libgnatcoll_lzma.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.static-pic/gnatcoll-coders-lzma-thin.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.static-pic/gnatcoll-coders-lzma.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_lzma.static-pic/libgnatcoll_lzma.a
@@ -138,7 +138,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/gnatcoll-omp-generic
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/gnatcoll-omp.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/libgnatcoll_omp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/libgnatcoll_omp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/libgnatcoll_omp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.relocatable/libgnatcoll_omp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.static-pic/a-cvgpso.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.static-pic/gnatcoll-omp-generic_array_sort.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_omp.static-pic/gnatcoll-omp-generic_constrained_array_sort.ali
@@ -162,7 +162,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/gnatcoll-python.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/gnatcoll-scripts-python.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/libgnatcoll_python3.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/libgnatcoll_python3.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/libgnatcoll_python3.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.relocatable/libgnatcoll_python3.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.static-pic/gnatcoll-any_types-python.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.static-pic/gnatcoll-python-capsule.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_python.static-pic/gnatcoll-python-ctypes.ali
@@ -187,11 +187,11 @@ ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-python-state.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-python.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/gnatcoll-scripts-python.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_python.static/libgnatcoll_python3.a
-${GNAT_PKGBASE}/lib/gnatcoll_python.static/libpython${PYVERSSUFFIX}.a
+${GNAT_PKGBASE}/lib/gnatcoll_python.static/libpython3.13.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/gnatcoll-readline.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.relocatable/libgnatcoll_readline.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.static-pic/gnatcoll-readline.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_readline.static-pic/libgnatcoll_readline.a
 ${GNAT_PKGBASE}/lib/gnatcoll_readline.static/gnatcoll-readline.ali
@@ -199,7 +199,7 @@ ${GNAT_PKGBASE}/lib/gnatcoll_readline.static/libgnatcoll_readline.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.relocatable/gnatcoll-traces-syslog.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.relocatable/libgnatcoll_syslog.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.relocatable/libgnatcoll_syslog.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.relocatable/libgnatcoll_syslog.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.relocatable/libgnatcoll_syslog.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.static-pic/gnatcoll-traces-syslog.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_syslog.static-pic/libgnatcoll_syslog.a
 ${GNAT_PKGBASE}/lib/gnatcoll_syslog.static/gnatcoll-traces-syslog.ali
@@ -208,7 +208,7 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/gnatcoll-coders-zli
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/gnatcoll-coders-zlib.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/libgnatcoll_zlib.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/libgnatcoll_zlib.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/libgnatcoll_zlib.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.relocatable/libgnatcoll_zlib.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.static-pic/gnatcoll-coders-zlib-thin.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.static-pic/gnatcoll-coders-zlib.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/gnatcoll_zlib.static-pic/libgnatcoll_zlib.a
@@ -217,31 +217,31 @@ ${GNAT_PKGBASE}/lib/gnatcoll_zlib.static/gnatcoll-coders-zlib.ali
 ${GNAT_PKGBASE}/lib/gnatcoll_zlib.static/libgnatcoll_zlib.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_cpp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_cpp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_cpp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_cpp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_gmp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_gmp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_gmp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_gmp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_iconv.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_iconv.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_iconv.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_iconv.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_lzma.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_lzma.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_lzma.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_lzma.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_omp.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_omp.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_omp.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_omp.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_python3.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_python3.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_python3.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_python3.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_readline.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_readline.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_readline.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_readline.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_syslog.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_syslog.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_syslog.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_syslog.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_zlib.so
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_zlib.so.25
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_zlib.so.25.0
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libgnatcoll_zlib.so.25.2
 ${GNAT_PKGBASE}/share/examples/gnatcoll/gmp/gmp_examples.gpr
 ${GNAT_PKGBASE}/share/examples/gnatcoll/gmp/isprime.adb
 ${GNAT_PKGBASE}/share/examples/gnatcoll/gmp/square_triangular_numbers.adb
