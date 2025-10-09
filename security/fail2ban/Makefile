@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/09 07:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/09 09:05:41 wiz Exp $
 
 DISTNAME=	fail2ban-1.0.2
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 TOOL_DEPENDS+=	${PYPKGPREFIX}-numpydoc-[0-9]*:../../textproc/py-numpydoc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
+PYTHON_VERSIONS_ACCEPTED=	311 312 # needs 2to3 and sphinx
 
 USE_TOOLS+=	make:build
 
