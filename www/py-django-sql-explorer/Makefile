@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/15 12:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 08:01:59 wiz Exp $
 
 DISTNAME=	django_sql_explorer-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.4.0:../../databases/py-sqlparse
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

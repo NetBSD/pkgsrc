@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/05/30 23:13:19 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2025/10/09 08:01:58 wiz Exp $
 
 # Work around setuptools insisting that distfiles not match the (pypi)
 # package name.
@@ -12,8 +12,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/warner/magic-wormhole
 COMMENT=	Securely transfer data between computers
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # pyproject.toml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
