@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/10/02 11:49:44 nia Exp $
+$NetBSD: distinfo,v 1.2 2025/10/09 09:03:29 wiz Exp $
 
 BLAKE2s (cmake-3.9.6.tar.gz) = cb355b327258309f2fad56ce5607e63e336f63711815382b4786109469dd9563
 SHA512 (cmake-3.9.6.tar.gz) = 9fda2c9ac054ef8fb1bf3885fbdec02c518da89ade220eba06b5502ac3ff300f635ec0922e61f3b2d090644fb743b8f71a04c532ab66b2d890a180cc7da54e6c
@@ -12,4 +12,5 @@ SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 38720e11b7b62cb702e80da19e044f070298f2db
 SHA1 (patch-Source_CTest_cmCTestCurl.h) = 8cc6b138216ee700505db750cf4521b3d56837ed
 SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d7baafe6612b6ac9b0542ed10ffcf90cd8d1df87
+SHA1 (patch-Source_cmSystemTools.cxx) = 478965fa5d695e898f511e7eb2636b3e0f1d2952
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
