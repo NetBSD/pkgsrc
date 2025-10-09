@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.596 2025/10/09 17:22:15 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.597 2025/10/09 17:31:44 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27999,3 +27999,19 @@ binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1180
 binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1181
 binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1182
 binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-3198
+bitcoin<24.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-25220
+bitcoin-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-50428
+bitcoin-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-34149
+bitcoin<25.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-35202
+bitcoin<0.21.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-52912
+bitcoin<0.21.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2024-52913
+bitcoin<0.18.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52914
+bitcoin<0.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52915
+bitcoin<0.15.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52916
+bitcoin<22.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52917
+bitcoin<0.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52918
+bitcoin<22.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52919
+bitcoin<0.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52920
+bitcoin<25.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2024-52921
+bitcoin<25.1	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2024-52922
+bitcoin-[0-9]*	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2024-55563
