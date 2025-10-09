@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:17:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/09 21:14:18 markd Exp $
 include/KF6/KHolidays/KHolidays/AstroSeasons
 include/KF6/KHolidays/KHolidays/Holiday
 include/KF6/KHolidays/KHolidays/HolidayRegion
 include/KF6/KHolidays/KHolidays/LunarPhase
+include/KF6/KHolidays/KHolidays/SunEvents
 include/KF6/KHolidays/KHolidays/SunRiseSet
 include/KF6/KHolidays/KHolidays/Zodiac
 include/KF6/KHolidays/kholidays/astroseasons.h
@@ -10,6 +11,7 @@ include/KF6/KHolidays/kholidays/holiday.h
 include/KF6/KHolidays/kholidays/holidayregion.h
 include/KF6/KHolidays/kholidays/kholidays_export.h
 include/KF6/KHolidays/kholidays/lunarphase.h
+include/KF6/KHolidays/kholidays/sunevents.h
 include/KF6/KHolidays/kholidays/sunriseset.h
 include/KF6/KHolidays/kholidays/zodiac.h
 include/KF6/KHolidays/kholidays_version.h
@@ -79,6 +81,7 @@ share/locale/pt/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/pt_BR/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/ro/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/ru/LC_MESSAGES/libkholidays6_qt.qm
+share/locale/sa/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/se/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/sk/LC_MESSAGES/libkholidays6_qt.qm
 share/locale/sl/LC_MESSAGES/libkholidays6_qt.qm
