@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/08 21:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 07:47:15 wiz Exp $
 
 DISTNAME=	jellyfish-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Python library for doing approximate and phonetic matching of strings
 LICENSE=	2-clause-bsd
 
 # https://codeberg.org/jpt/jellyfish/issues/231
-PYTHON_VERSIONS_INCOMPATIBLE+=	314
+MAKE_ENV+=	PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 .include "cargo-depends.mk"
 
