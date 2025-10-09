@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2025/07/29 07:08:07 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 13:30:53 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-26.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	e3_testsuite-27.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_PROJECT=	e3-testsuite
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/e3_testsuite/}
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/e3-testsuite
@@ -23,8 +21,12 @@ DEPENDS+=	${PYPKGPREFIX}-boto3-[0-9]*:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
+post-extract:
+	${RM} ${WRKSRC}/src/e3/py.typed
+
 post-install:
-.for bin in e3-convert-xunit e3-find-skipped-tests e3-opt-parser e3-run-test-fragment e3-test e3-testsuite-report
+.for bin in e3-convert-xunit e3-find-skipped-tests e3-opt-check e3-opt-parser \
+	e3-run-test-fragment e3-test e3-testsuite-report
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
