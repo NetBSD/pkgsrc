@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:06:54 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/10/09 11:02:56 wiz Exp $
 
 BLAKE2s (uudeview-0.5.20.tar.gz) = 0893e955d425f82a78a0be2feea7d9ac9b926dfbdeb3bdec580a32e9a616df7d
 SHA512 (uudeview-0.5.20.tar.gz) = d080e9c3940bad7bacd28457f21133056384a01e33ba014de42502d23f81f2c7f5fa7f6c472ce9f37bec2edb8e18d27135bf18426cf2f23188a3683558e1721c
@@ -7,4 +7,4 @@ SHA1 (patch-aa) = 27772baba76c37e167b231909ac6387bd1b3c3a2
 SHA1 (patch-ab) = dea2e56b811327e61264627852e1b6bb1eb6a643
 SHA1 (patch-ac) = 57e2b11157b47abfdc2a2f71444feb42e8c012eb
 SHA1 (patch-ad) = a3e0892498aa0db7c3271824b44bce7bf725aee8
-SHA1 (patch-ae) = fb89ccadfcc3cf9a9ef0addfa29def0a2924a673
+SHA1 (patch-ae) = d2ab1d079ffa02304b65c477382d2a804188daae
