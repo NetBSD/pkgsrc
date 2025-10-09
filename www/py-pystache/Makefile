@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 19:47:14 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/09 08:07:30 wiz Exp $
 
 DISTNAME=	pystache-0.6.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,11 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
-.endif
 
 post-install:
 .for bin in pystache pystache-test
