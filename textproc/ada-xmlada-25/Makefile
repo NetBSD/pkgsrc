@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/09/22 09:52:12 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 11:56:51 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	xmlada
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/xmlada
@@ -28,7 +28,7 @@ SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	post-extract
 SUBST_FILES.fixver=	configure
 SUBST_MESSAGE.fixver=	Fix version in ${SUBST_FILES.fixver}
-SUBST_SED.fixver=	-e 's,18.0w,25.0w,g'
+SUBST_SED.fixver=	-e 's,18.0w,${GITHUB_TAG},g'
 
 GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
 
