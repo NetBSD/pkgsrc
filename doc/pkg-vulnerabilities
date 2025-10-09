@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.595 2025/10/09 17:00:30 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.596 2025/10/09 17:22:15 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27970,3 +27970,32 @@ bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1737
 bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1975
 bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4076
 bind<9.20.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40775
+binutils<2.37	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-19726
+binutils-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-32256
+binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35205
+binutils<2.39	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-35206
+binutils<2.40	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2022-45703
+binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47007
+binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47008
+binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47010
+binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47011
+binutils<2.41	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-1579
+binutils<2.41	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-1972
+binutils<2.41	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-25584
+binutils<2.40	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-25585
+binutils<2.41	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-25586
+binutils<2.41	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-25588
+binutils<2.44	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-57360
+binutils<2.44	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-0840
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1149
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1150
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1151
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1152
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-1153
+binutils<2.45	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-1176
+binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1178
+binutils<2.44	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1179
+binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1180
+binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1181
+binutils<2.45	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-1182
+binutils<2.45	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-3198
