@@ -1,3 +1,4 @@
+# $NetBSD: dependency.mk,v 1.2 2025/10/09 11:45:18 wiz Exp $
 #
 # Not for public use - use through versioned_dependencies.mk.
 #
