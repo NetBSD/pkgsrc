@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/09/04 07:53:28 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 18:30:02 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-bindings
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatcoll-bindings
@@ -27,7 +27,7 @@ GCC_REQD+=	14
 SUBST_CLASSES+=		fixver
 SUBST_STAGE.fixver=	post-extract
 SUBST_FILES.fixver=	version_information
-SUBST_SED.fixver=	-e 's,0.0,25.0,g'
+SUBST_SED.fixver=	-e 's,0.0,${GITHUB_TAG},g'
 SUBST_MESSAGE.fixver=	Fix version information
 
 MAKE_FLAGS+=	BINDINGS=${BINDINGS:Q}
@@ -53,6 +53,7 @@ GENERATE_PLIST+= \
 PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
 
 .include "../../devel/gprbuild/buildlink3.mk"
+
 .include "../../textproc/ada-xmlada-25/buildlink3.mk"
 .include "../../devel/ada-libgpr-25/buildlink3.mk"
 .include "../../devel/ada-gnatcoll-core-25/buildlink3.mk"

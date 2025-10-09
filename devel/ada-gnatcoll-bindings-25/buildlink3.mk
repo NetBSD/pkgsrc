@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/07/11 12:46:49 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/10/09 18:30:02 dkazankov Exp $
 
 BUILDLINK_TREE+=	gnatcoll-bindings-25
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gnatcoll-bindings-25
 GNATCOLL_BINDINGS_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnatcoll-bindings-25+=	gnatcoll-bindings-${GNAT_NAME}>=25.0.0
+BUILDLINK_ABI_DEPENDS.gnatcoll-bindings-25+=	gnatcoll-bindings-${GNAT_NAME}>=25.2.0
 BUILDLINK_PKGSRCDIR.gnatcoll-bindings-25?=	../../devel/ada-gnatcoll-bindings-25
 BUILDLINK_DEPMETHOD.gnatcoll-bindings-25?=	build
 
@@ -17,6 +18,8 @@ BUILDLINK_FNAME_TRANSFORM.gnatcoll-bindings-25+=	\
 
 pkgbase := gnatcoll-bindings-25
 .include "../../mk/pkg-build-options.mk"
+
+.include "../../devel/ada-gnatcoll-core-25/buildlink3.mk"
 
 .endif
 
