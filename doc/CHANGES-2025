@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5982 2025/10/09 05:32:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.5983 2025/10/09 10:05:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8708,3 +8708,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/indi to 2.1.6 [adam 2025-10-08]
 	Updated devel/py-filelock to 3.20.0 [adam 2025-10-09]
 	Updated misc/py-platformdirs to 4.5.0 [adam 2025-10-09]
+	Updated lang/nodejs to 24.10.0 [adam 2025-10-09]
+	Updated emulators/qemu to 10.1.1 [adam 2025-10-09]
