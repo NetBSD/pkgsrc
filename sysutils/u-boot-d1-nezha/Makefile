@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/06 00:09:12 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/09 10:51:38 wiz Exp $
 
 UBOOT_TARGET=		d1-nezha
 UBOOT_VERSION=		2024.1
@@ -24,6 +24,8 @@ EXTRACT_SUFX=		.tar.gz
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-d1-nezha/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-d1-nezha/patches
+
+TOOL_DEPENDS+=		opensbi-sun20i-d1-[0-9]*:../../sysutils/opensbi-sun20i-d1
 
 post-extract:
 	${CP} ${PREFIX}/share/opensbi/sun20i-d1/fw_dynamic.bin ${WRKSRC}
