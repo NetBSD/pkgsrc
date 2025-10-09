@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.19 2025/09/27 08:19:50 wiz Exp $
+# $NetBSD: eol-packages,v 1.20 2025/10/09 08:31:09 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1208,3 +1208,8 @@ Package: Botan2
 eol date: January 1, 2025
 URL: https://botan.randombit.net/
 Description: Switch to Botan3.
+
+Package: python39
+eol date: October 7, 2025
+URL: https://devguide.python.org/versions/#versions
+Description: eol October 2025 by vendor.  Update to newer version.
