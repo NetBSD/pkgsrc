@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.35 2025/08/27 20:30:54 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/10/09 05:31:43 adam Exp $
 
-DISTNAME=	platformdirs-4.4.0
+DISTNAME=	platformdirs-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/platformdirs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/platformdirs/platformdirs
+HOMEPAGE=	https://github.com/tox-dev/platformdirs
 COMMENT=	Python module for determining appropriate platform-specific dirs
 LICENSE=	mit
 
