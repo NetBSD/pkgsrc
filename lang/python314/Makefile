@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/08 07:13:07 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/09 19:52:16 wiz Exp $
 
 .include "dist.mk"
 
@@ -11,18 +11,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
-CONFLICTS+=	py314-cElementTree-[0-9]*
-CONFLICTS+=	py314-curses-[0-9]*
-CONFLICTS+=	py314-cursespanel-[0-9]*
-CONFLICTS+=	py314-expat-[0-9]*
-CONFLICTS+=	py314-readline-[0-9]*
-CONFLICTS+=	py314-sqlite3-[0-9]*
-SUPERSEDES+=	py314-cElementTree-[0-9]*
-SUPERSEDES+=	py314-curses-[0-9]*
-SUPERSEDES+=	py314-cursespanel-[0-9]*
-SUPERSEDES+=	py314-expat-[0-9]*
-SUPERSEDES+=	py314-readline-[0-9]*
-SUPERSEDES+=	py314-sqlite3-[0-9]*
 
 PLIST_AWK=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=		PYVERS=314
