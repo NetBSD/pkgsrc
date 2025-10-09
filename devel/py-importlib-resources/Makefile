@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2025/04/12 11:18:39 adam Exp $
+# $NetBSD: Makefile,v 1.33 2025/10/09 08:07:27 wiz Exp $
 
 DISTNAME=	importlib_resources-6.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,11 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.4:../../devel/py-jaraco.test
 TEST_DEPENDS+=	${PYPKGPREFIX}-zipp>=3.17:../../archivers/py-zipp
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-zipp>=3.1.0:../../archivers/py-zipp
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

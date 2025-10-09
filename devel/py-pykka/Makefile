@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/10/03 08:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pykka-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,11 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.11.1:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

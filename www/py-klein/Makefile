@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/14 19:31:53 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/10/09 08:07:30 wiz Exp $
 
 DISTNAME=	klein-24.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,11 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

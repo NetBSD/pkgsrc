@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/12 09:30:55 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pytest-console-scripts-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -14,12 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-test>=4.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
 
 SUBST_CLASSES+=		tests
 SUBST_STAGE.tests=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/03 09:30:03 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/09 08:07:27 wiz Exp $
 
 DISTNAME=	isort-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,11 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-libcst>=0.3.18:../../lang/py-libcst
 TEST_DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6.0:../../devel/py-importlib-metadata
-.endif
 
 # 18 failed, 544 passed, 1 skipped, 1 xfailed, 70 warnings, 3 errors
 # for testing:
