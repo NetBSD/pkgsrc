@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/04/13 07:38:16 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/09 11:51:41 wiz Exp $
 
 DISTNAME=	python_bidi-0.6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
@@ -11,6 +11,9 @@ COMMENT=	Pure Python implementation of the BiDi layout algorithm
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
+
+# https://github.com/MeirKriheli/python-bidi/issues/36
+MAKE_ENV+=	PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
