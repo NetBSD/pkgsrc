@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2025/10/07 20:45:10 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 17:52:44 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
-PKGREVISION=	2
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-core
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatcoll-core
@@ -23,6 +22,12 @@ USE_GCC_RUNTIME=	yes
 
 GCC_REQD+=	14
 
+SUBST_CLASSES+=		version
+SUBST_MESSAGE.version=	Change version in ${SUBST_FILES.version}
+SUBST_STAGE.version=	post-extract
+SUBST_FILES.version=	core/VERSION minimal/VERSION projects/VERSION
+SUBST_SED.version=	-e "s,25.0,${GITHUB_TAG},"
+
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		ldl
@@ -38,11 +43,10 @@ SUBST_FILES.opendir=	core/src/os/unix/gnatcoll-os-libc-dirent.ads
 SUBST_SED.opendir=	-e "s,\"opendir\",\"__gnatcoll_opendir\","
 
 SUBST_CLASSES+=		unix
-SUBST_MESSAGE.unix=	Use BSD implementation in ${SUBST_FILES.const}
+SUBST_MESSAGE.unix=	Use BSD implementation in ${SUBST_FILES.unix}
 SUBST_STAGE.unix=	post-extract
 SUBST_FILES.unix=	core/gnatcoll_core.gpr
 SUBST_SED.unix=		-e "s,\"gnatcoll-os-libc_constants__linux.ads\",\"gnatcoll-os-libc_constants__bsd.ads\","
-#SUBST_SED.unix+=	-e "s,\"gnatcoll-os-fs-open_pipe__linux.adb\",\"gnatcoll-os-fs-open_pipe__unix.adb\","
 .endif
 
 MAKE_FLAGS+=		PYTHON=${TOOL_PYTHONBIN:Q} prefix=${DESTDIR}${GNAT_PREFIX} BUILD=PROD
@@ -75,6 +79,7 @@ GENERATE_PLIST+= \
 PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.so.*/ { $$0 = "$${PLIST.shlibs}" $$0 }
 
 .include "../../devel/gprbuild/buildlink3.mk"
+
 .include "../../textproc/ada-xmlada-25/buildlink3.mk"
 .include "../../devel/ada-libgpr-25/buildlink3.mk"
 
