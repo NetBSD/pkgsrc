@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/21 05:32:56 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 09:29:03 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -21,6 +21,8 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/bsd.prefs.mk"
 
 GCC_REQD+=	14
+
+PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 PLIST_VARS+=	shlibs
 
