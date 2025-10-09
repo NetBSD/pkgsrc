@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/08/28 13:18:51 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 12:08:24 wiz Exp $
 
 DISTNAME=	eradicate-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,9 @@ COMMENT=	Removes commented-out code
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+# https://github.com/PyCQA/eradicate/issues/57
+PYTHON_VERSIONS_INCOMPATIBLE=	314
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
