@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/08/22 05:35:03 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 08:01:59 wiz Exp $
 
 DISTNAME=	mdit_py_plugins-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.0.0:../../textproc/py-markdown-it-py
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

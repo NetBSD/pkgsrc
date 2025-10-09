@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/08/16 07:02:22 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/09 08:01:58 wiz Exp $
 
 DISTNAME=	truststore-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver-[0-9]*:../../devel/py-test-httpserver
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

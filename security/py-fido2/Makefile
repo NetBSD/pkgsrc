@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/09/27 18:18:20 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 08:01:58 wiz Exp $
 
 DISTNAME=	fido2-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=2.6:../../security/py-cryptography
 # optional
 DEPENDS+=	${PYPKGPREFIX}-scard>=2.0.0:../../devel/py-scard
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # as of 1.2.0
 # check fido2/hid/__init__.py for supported platforms

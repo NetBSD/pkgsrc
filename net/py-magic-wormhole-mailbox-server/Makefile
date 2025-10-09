@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/05/30 12:59:39 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/09 08:01:58 wiz Exp $
 
 DISTNAME=	magic-wormhole-mailbox-server-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magic-wormhole/magic-wormhole-mailbox-server
 COMMENT=	Main server for Magic Wormhole
 LICENSE=	mit
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # setup.py install_requires
 DEPENDS+=	${PYPKGPREFIX}-attrs>=16.3.0:../../devel/py-attrs
