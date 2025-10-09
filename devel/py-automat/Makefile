@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/04/12 08:28:30 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/10/09 08:07:27 wiz Exp $
 
 DISTNAME=	automat-24.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,11 +19,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_sc
 #DEPENDS+=	${PYPKGPREFIX}-twisted>=16.1.1:../../net/py-twisted
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

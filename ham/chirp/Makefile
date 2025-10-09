@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/09/15 11:29:02 gdt Exp $
+# $NetBSD: Makefile,v 1.74 2025/10/09 08:07:29 wiz Exp $
 
 VERSION=	20250912
 DISTNAME=	chirp-${VERSION}
@@ -34,9 +34,6 @@ DEPENDS+=	${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-future>=0.18.0:../../devel/py-future
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.4.0:../../devel/py-importlib-resources
-.endif
 DEPENDS+=	${PYPKGPREFIX}-yattag>=1.15.1:../../textproc/py-yattag
 
 # setup.py:extras_require

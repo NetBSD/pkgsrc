@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/04/12 19:14:59 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/09 08:07:27 wiz Exp $
 
 DISTNAME=	logilab_common-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,11 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=6:../../devel/py-importlib-metadata
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2025/08/22 10:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pytest_asyncio-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pytest_/test-/}
@@ -24,11 +24,6 @@ USE_LANGUAGES=	# none
 # https://github.com/pytest-dev/pytest-asyncio/issues/1194
 pre-configure:
 	${MV} ${WRKSRC}/dependencies ${WRKSRC}/not-dependencies
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

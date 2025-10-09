@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/06/30 20:24:29 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/09 08:07:29 wiz Exp $
 
 DISTNAME=	typeguard-4.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,6 @@ USE_LANGUAGES=	# none
 
 pre-test:
 	${LN} -sf ${PREFIX}/bin/mypy-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/mypy
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

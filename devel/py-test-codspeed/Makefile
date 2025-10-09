@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/08/13 09:53:57 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pytest_codspeed-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
@@ -19,11 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 MAKE_ENV+=	PYTEST_CODSPEED_SKIP_EXTENSION_BUILD=1
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=8.5.0:../../devel/py-importlib-metadata
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

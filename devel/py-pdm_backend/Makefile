@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/07/07 04:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pdm_backend-2.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,12 +22,6 @@ USE_TOOLS+=	git:test
 
 # as of 2.4.5
 # 72 passed, 1 skipped, 1 warning, 21 errors
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
