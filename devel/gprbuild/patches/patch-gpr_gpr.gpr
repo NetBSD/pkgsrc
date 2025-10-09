@@ -1,9 +1,9 @@
-$NetBSD: patch-gpr_gpr.gpr,v 1.4 2025/02/08 14:14:49 wiz Exp $
+$NetBSD: patch-gpr_gpr.gpr,v 1.5 2025/10/09 15:46:43 dkazankov Exp $
 
 Fix name conflict with grpc - same as linux distros
 
 --- gpr/gpr.gpr.orig	2023-10-09 21:31:11.000000000 +0300
-+++ gpr/gpr.gpr	2024-05-07 16:34:34.759672549 +0300
++++ gpr/gpr.gpr
 @@ -38,7 +38,7 @@
  
     for Source_Dirs use ("src");

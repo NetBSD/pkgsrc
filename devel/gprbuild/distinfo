@@ -1,20 +1,14 @@
-$NetBSD: distinfo,v 1.5 2025/02/16 10:11:48 wiz Exp $
+$NetBSD: distinfo,v 1.6 2025/10/09 15:46:43 dkazankov Exp $
 
-BLAKE2s (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = eb32df0aa23a0ba4c8bcc88a580a06887ff7b12efc87bb0eac9b4d292ec548a6
-SHA512 (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = afc1754efdf6e3cbff9752a182cd063f83965c6a13e53930a14f806a46e3cbfb0afed8f8e11b098986227f27a1a67b45d22369adaa39a5dc1f2a8cc494f789e8
-Size (AdaCore-gprconfig_kb-v25.0.0.tar.gz) = 44165 bytes
-BLAKE2s (AdaCore-xmlada-v25.0.0.tar.gz) = c7e2b06977998dadbde002a6b80a75d3921860f20946c02a983a2048ade6e987
-SHA512 (AdaCore-xmlada-v25.0.0.tar.gz) = c57db78e3afd20862c3275d3d0874ada1748e98df06a76841cb3dca3686b29c7693835a591ca5789dca2d3d6ba9677c9082df94857e180e0758a5b77fafc40c0
-Size (AdaCore-xmlada-v25.0.0.tar.gz) = 1082553 bytes
-BLAKE2s (gprbuild-25.0.0.tar.gz) = e9462a136fe46fd9e62e7ba602f746275a41347098f273e90b41cd89c46ce386
-SHA512 (gprbuild-25.0.0.tar.gz) = eb2d7072194323cae90acd0c8683eeb6a806ef6ff2ed4d3496e8b94c5b63dae8a428ec428a3610b380df7e122d7a00d9e9634ef06b5369b165536c99209602ce
-Size (gprbuild-25.0.0.tar.gz) = 940774 bytes
-SHA1 (patch-Makefile) = 62aaca338e57df5c6ae5f008df078b991e9ebfdd
-SHA1 (patch-bootstrap.sh) = 0f8fa38605225385975291a4d62d22a77762813f
+BLAKE2s (AdaCore-gprconfig_kb-25.2.tar.gz) = 549d321895fe6b915492c66e3ad82861bcbfae9de4e395d925b043643b8fb665
+SHA512 (AdaCore-gprconfig_kb-25.2.tar.gz) = be2345270a0cfe6f57d9431174f86d90a50fd6c2989047bdcd6cf20b92690443c0f7cc24f52dff292446ad0e26c23f12c1a19ee525bc03d9f29d31e73ab4554e
+Size (AdaCore-gprconfig_kb-25.2.tar.gz) = 44291 bytes
+BLAKE2s (gprbuild-25.2.tar.gz) = 677bddddb79366bc959bb4cf54eceba646880a7e946bf9b1f23f04d3a9d98379
+SHA512 (gprbuild-25.2.tar.gz) = 0d7d161392d00592b06ab8a2af21b610f60897d90aee2a3c51f001de0f1f9c338ef4059a3c20b99cd29a0587f8ba1a8e652f1b593f1d3033d9b7795a9f4a9aaa
+Size (gprbuild-25.2.tar.gz) = 940851 bytes
+SHA1 (patch-Makefile) = b64390f5a5b9821628223e423d8dcead28a0600a
+SHA1 (patch-bootstrap.sh) = 49a80b50cb32245527e09c6859ad829cd2266445
 SHA1 (patch-deps_gprconfig__kb_db_linker.xml) = 6fdc8e78ba3651eae37a132fff8e53ad988b2a71
-SHA1 (patch-deps_xmlada_Makefile.in) = 98632303e6829b0540abeca6a5a7cd427b455adf
-SHA1 (patch-gpr_gpr.gpr) = 321bce32cb8af1821e2e6b6b8d6ca75194410a0b
-SHA1 (patch-gpr_src_gpr-util-put__resource__usage____unix.adb) = c134d5aad0b90da41eef03cd2e5d98e2f14611fb
-SHA1 (patch-gpr_src_gpr-version.ads) = 40deea3a0eb6cf6a3fda3ed8ed898d4daabe0423
-SHA1 (patch-gpr_src_gpr_imports.c) = 945eefee50b198695ade7a4b88d4f87dd50f7925
-SHA1 (patch-gprbuild.gpr) = e943f95bd4681e3cfde3e1782e9ec2efd9cdf181
+SHA1 (patch-gpr_gpr.gpr) = b18713da0795ebefd241414e5e9171ecfa9b79db
+SHA1 (patch-gpr_src_gpr_imports.c) = 1b72dd42355c7f7189d4a4a8a7bcf7153f206731
+SHA1 (patch-gprbuild.gpr) = 2940dc5235ddebdf8e2a486ef81cb38af7d001c9

@@ -1,9 +1,23 @@
-$NetBSD: patch-gprbuild.gpr,v 1.3 2025/02/08 14:14:49 wiz Exp $
+$NetBSD: patch-gprbuild.gpr,v 1.4 2025/10/09 15:46:43 dkazankov Exp $
 
+Rename executables to prevent conflict with gpr2-tools
 Remove redundant file from install list
 
---- gprbuild.gpr.orig	2023-10-09 21:31:11.000000000 +0300
-+++ gprbuild.gpr	2024-05-07 15:26:53.971304204 +0300
+--- gprbuild.gpr.orig	2025-02-25 14:35:21.000000000 +0200
++++ gprbuild.gpr
+@@ -66,9 +66,9 @@
+    -------------
+ 
+    package Builder is
+-      for Executable ("gprconfig-main.adb")  use "gprconfig";
+-      for Executable ("gprbuild-main.adb")   use "gprbuild";
+-      for Executable ("gprclean-main.adb")   use "gprclean";
++      for Executable ("gprconfig-main.adb")  use "gpr1config";
++      for Executable ("gprbuild-main.adb")   use "gpr1build";
++      for Executable ("gprclean-main.adb")   use "gpr1clean";
+       for Executable ("gprinstall-main.adb") use "gprinstall";
+       for Executable ("gprls-main.adb")      use "gprls";
+       for Executable ("gprname-main.adb")    use "gprname";
 @@ -165,7 +165,7 @@
                 when "Windows_NT" =>
                    for Artifacts ("bin") use ("src/gprinstall.exe.manifest");

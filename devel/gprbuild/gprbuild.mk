@@ -1,4 +1,4 @@
-# $NetBSD: gprbuild.mk,v 1.3 2025/02/09 13:33:26 wiz Exp $
+# $NetBSD: gprbuild.mk,v 1.4 2025/10/09 15:46:43 dkazankov Exp $
 #
 # This Makefile fragment supports building using the GPRbuild tool.
 #
@@ -32,7 +32,12 @@
 #	Directories relative in which to run the 'install' step.
 #	Default: WRKSRC
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 .include "../../devel/gprbuild/buildlink3.mk"
+
+GPRBUILD_OPTIONS?=	#empty
+GPRINSTALL_OPTIONS?=	#empty
 
 GPRBUILD_PROJECT_FILE?=	${MAKE_FILE}
 GPRBUILD_ENV?=		${MAKE_ENV}
