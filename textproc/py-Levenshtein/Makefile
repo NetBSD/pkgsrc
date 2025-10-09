@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/07/04 09:08:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/09 07:57:58 wiz Exp $
 
 DISTNAME=	levenshtein-0.27.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/l/L/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-rapidfuzz>=3.9.0:../../textproc/py-rapidfuzz
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/Levenshtein/CMakeLists.txt.orig

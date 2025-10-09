@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/04/21 09:24:51 leot Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/09 07:57:53 wiz Exp $
 
 DISTNAME=	scapy-2.6.1
 PKGREVISION=	1
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-ipython
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-ipython
 
 .include "options.mk"
 

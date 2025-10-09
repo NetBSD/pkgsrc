@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/09/05 12:41:03 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/10/09 07:57:26 wiz Exp $
 
 DISTNAME=	alembic-1.16.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12:../../devel/py-typing-extension
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

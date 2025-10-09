@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2025/10/05 19:25:53 js Exp $
+# $NetBSD: Makefile,v 1.387 2025/10/09 07:57:37 wiz Exp $
 
 PKGREVISION= 2
 .include "../../emulators/qemu/version.mk"
@@ -28,7 +28,7 @@ CONFLICTS+=	qemu-guest-agent-[0-9]*
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

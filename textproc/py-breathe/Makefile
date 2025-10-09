@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/02/24 09:13:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 07:57:58 wiz Exp $
 
 DISTNAME=	breathe-4.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.2:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

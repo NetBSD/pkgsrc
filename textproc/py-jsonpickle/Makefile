@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/07/03 19:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/09 07:57:59 wiz Exp $
 
 DISTNAME=	jsonpickle-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

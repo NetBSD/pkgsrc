@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/03 19:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/09 07:57:45 wiz Exp $
 
 DISTNAME=	Keras_Preprocessing-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

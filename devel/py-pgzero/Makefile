@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/03 19:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 07:57:34 wiz Exp $
 
 DISTNAME=	pgzero-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} pgzrun pgzrun-${PYVERSSUFFIX}

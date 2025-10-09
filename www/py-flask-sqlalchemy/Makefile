@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/07/05 11:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/09 07:58:09 wiz Exp $
 
 DISTNAME=	flask_sqlalchemy-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.2:../../databases/py-sqlalchemy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/07/04 09:08:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 07:57:24 wiz Exp $
 
 DISTNAME=	dna_features_viewer-3.1.3
 PKGNAME=	${PYPKGPREFIX}-dna-features-viewer-3.1.3
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-biopython>0:../../biology/py-biopython
 DEPENDS+=	${PYPKGPREFIX}-bcbio-gff>0:../../biology/py-bcbio-gff
 DEPENDS+=	${PYPKGPREFIX}-packaging>0:../../devel/py-packaging
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
