@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/09/26 08:09:28 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/09 08:08:24 wiz Exp $
 
 DISTNAME=	anyio-4.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
+TEST_DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.21:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
@@ -37,9 +38,6 @@ DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.2:../../devel/py-exceptiongroup
 .endif
 .if ${PYTHON_VERSION} < 313
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
-.endif
-.if ${PYTHON_VERSION} >= 310
-TEST_DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
 .endif
 
 .include "../../lang/python/wheel.mk"
