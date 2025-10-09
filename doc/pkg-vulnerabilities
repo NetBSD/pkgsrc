@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.593 2025/10/09 13:05:41 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.594 2025/10/09 13:41:50 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27888,3 +27888,70 @@ authelia<4.38.19	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-24
 avahi<0.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1981
 avahi<0.9	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2024-52615
 avahi<0.9	insufficiently-random-numbers	https://nvd.nist.gov/vuln/detail/CVE-2024-52616
+php{56,74,81,82,83,84}-glpi<10.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-28852
+php{56,74,81,82,83,84}-glpi<10.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-28849
+php{56,74,81,82,83,84}-glpi<10.0.7	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-28838
+php{56,74,81,82,83,84}-glpi<10.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-28639
+php{56,74,81,82,83,84}-glpi<10.0.7	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-28636
+php{56,74,81,82,83,84}-glpi<10.0.7	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-28634
+php{56,74,81,82,83,84}-glpi<10.0.7	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2023-28633
+php{56,74,81,82,83,84}-glpi<10.0.7	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2023-28632
+php{56,74,81,82,83,84}-glpi<10.0.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-34106
+php{56,74,81,82,83,84}-glpi<10.0.8	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-36808
+php{56,74,81,82,83,84}-glpi<10.0.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-35939
+php{56,74,81,82,83,84}-glpi<10.0.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-35940
+php{56,74,81,82,83,84}-glpi<10.0.8	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-35924
+php{56,74,81,82,83,84}-glpi<10.0.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-34244
+php{56,74,81,82,83,84}-glpi<10.0.8	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2023-34107
+php{56,74,81,82,83,84}-glpi<10.0.9	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-37278
+php{56,74,81,82,83,84}-glpi<10.0.10	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2023-41888
+php{56,74,81,82,83,84}-glpi<10.0.10	username-enumeration	https://nvd.nist.gov/vuln/detail/CVE-2023-41323
+php{56,74,81,82,83,84}-glpi<10.0.10	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2023-42462
+php{56,74,81,82,83,84}-glpi<10.0.10	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-42461
+php{56,74,81,82,83,84}-glpi<10.0.10	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2023-41326
+php{56,74,81,82,83,84}-glpi<10.0.10	account-impersonation	https://nvd.nist.gov/vuln/detail/CVE-2023-41324
+php{56,74,81,82,83,84}-glpi<10.0.10	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-41321
+php{56,74,81,82,83,84}-glpi<10.0.10	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-41322
+php{56,74,81,82,83,84}-glpi<10.0.10	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-41320
+php{56,74,81,82,83,84}-glpi<10.0.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-42802
+php{56,74,81,82,83,84}-glpi<10.0.11	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-43813
+php{56,74,81,82,83,84}-glpi<10.0.11	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-46726
+php{56,74,81,82,83,84}-glpi<10.0.11	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-46727
+php{56,74,81,82,83,84}-glpi-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-27756
+php{56,74,81,82,83,84}-glpi<10.0.13	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-27930
+php{56,74,81,82,83,84}-glpi<10.0.13	username-enumeration	https://nvd.nist.gov/vuln/detail/CVE-2024-27937
+php{56,74,81,82,83,84}-glpi<10.0.13	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-27098
+php{56,74,81,82,83,84}-glpi<10.0.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-27104
+php{56,74,81,82,83,84}-glpi<10.0.13	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-27914
+php{56,74,81,82,83,84}-glpi<10.0.13	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-27096
+php{56,74,81,82,83,84}-glpi<10.0.15	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-29889
+php{56,74,81,82,83,84}-glpi<10.0.15	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-31456
+php{56,74,81,82,83,84}-glpi<10.0.16	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-37147
+php{56,74,81,82,83,84}-glpi<10.0.16	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-37148
+php{56,74,81,82,83,84}-glpi<10.0.16	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-37149
+php{56,74,81,82,83,84}-glpi<10.0.17	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-40638
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-41678
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-47759
+php{56,74,81,82,83,84}-glpi<10.0.17	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-41679
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-43417
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-43418
+php{56,74,81,82,83,84}-glpi<10.0.17	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-45608
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-45609
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-45610
+php{56,74,81,82,83,84}-glpi<10.0.17	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-45611
+php{56,74,81,82,83,84}-glpi<10.0.16	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-38370
+php{56,74,81,82,83,84}-glpi<10.0.17	username-enumeration	https://nvd.nist.gov/vuln/detail/CVE-2024-43416
+php{56,74,81,82,83,84}-glpi<10.0.17	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-47758
+php{56,74,81,82,83,84}-glpi<10.0.17	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-47760
+php{56,74,81,82,83,84}-glpi<10.0.17	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-47761
+php{56,74,81,82,83,84}-glpi<10.0.17	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2024-48912
+php{56,74,81,82,83,84}-glpi<10.0.17	session-hijack		https://nvd.nist.gov/vuln/detail/CVE-2024-50339
+php{56,74,81,82,83,84}-glpi<10.0.18	open-redirect		https://nvd.nist.gov/vuln/detail/CVE-2024-11955
+php{56,74,81,82,83,84}-glpi<10.0.18	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-21626
+php{56,74,81,82,83,84}-glpi<10.0.18	improper-authorization	https://nvd.nist.gov/vuln/detail/CVE-2025-23024
+php{56,74,81,82,83,84}-glpi<10.0.18	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-21627
+php{56,74,81,82,83,84}-glpi<10.0.18	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-25192
+php{56,74,81,82,83,84}-glpi<10.0.18	improper-authentication	https://nvd.nist.gov/vuln/detail/CVE-2025-23046
+php{56,74,81,82,83,84}-glpi<10.0.18	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-21619
+php{56,74,81,82,83,84}-glpi<10.0.18	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2025-24799
+php{56,74,81,82,83,84}-glpi<10.0.18	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-24801
