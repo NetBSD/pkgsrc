@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2025/09/04 08:15:53 dkazankov Exp $
+$NetBSD: distinfo,v 1.3 2025/10/09 16:19:32 dkazankov Exp $
 
-BLAKE2s (gprbuild-25.0.0.tar.gz) = e9462a136fe46fd9e62e7ba602f746275a41347098f273e90b41cd89c46ce386
-SHA512 (gprbuild-25.0.0.tar.gz) = eb2d7072194323cae90acd0c8683eeb6a806ef6ff2ed4d3496e8b94c5b63dae8a428ec428a3610b380df7e122d7a00d9e9634ef06b5369b165536c99209602ce
-Size (gprbuild-25.0.0.tar.gz) = 940774 bytes
-SHA1 (patch-Makefile) = 56c90f388d955d0a6cb46e8b4f4eb23b73557b0e
+BLAKE2s (gprbuild-25.2.tar.gz) = 677bddddb79366bc959bb4cf54eceba646880a7e946bf9b1f23f04d3a9d98379
+SHA512 (gprbuild-25.2.tar.gz) = 0d7d161392d00592b06ab8a2af21b610f60897d90aee2a3c51f001de0f1f9c338ef4059a3c20b99cd29a0587f8ba1a8e652f1b593f1d3033d9b7795a9f4a9aaa
+Size (gprbuild-25.2.tar.gz) = 940851 bytes
+SHA1 (patch-Makefile) = b64390f5a5b9821628223e423d8dcead28a0600a
 SHA1 (patch-gpr_gpr.gpr) = b18713da0795ebefd241414e5e9171ecfa9b79db
 SHA1 (patch-gpr_src_gpr_imports.c) = 1b72dd42355c7f7189d4a4a8a7bcf7153f206731

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/09/04 08:15:53 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 16:19:32 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	libgpr-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	libgpr-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gprbuild
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gprbuild
@@ -27,9 +27,9 @@ SUBST_CLASSES+=		version
 SUBST_MESSAGE.version=	Replace version,date and type in ${SUBST_FILES.version}
 SUBST_STAGE.version=	post-extract
 SUBST_FILES.version=	gpr/src/gpr-version.ads
-SUBST_SED.version=	-e "s,18.0w,25.0w,"
-SUBST_SED.version+=	-e "s,19940713,20241126,"
-SUBST_SED.version+=	-e "s,\"2016\",\"2024\","
+SUBST_SED.version=	-e "s,18.0w,${GITHUB_TAG},"
+SUBST_SED.version+=	-e "s,19940713,20250225,"
+SUBST_SED.version+=	-e "s,\"2016\",\"2025\","
 SUBST_SED.version+=	-e "s,= Gnatpro;,= FSF;,"
 
 # Use C preprocessed symbols on NetBSD
