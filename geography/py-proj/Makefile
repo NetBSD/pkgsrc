@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/10/05 19:26:01 js Exp $
+# $NetBSD: Makefile,v 1.62 2025/10/09 07:57:40 wiz Exp $
 
 DISTNAME=	pyproj-3.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # tests fail
 # https://github.com/pyproj4/pyproj/issues/1447

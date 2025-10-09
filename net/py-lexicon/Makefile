@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2025/07/05 11:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2025/10/09 07:57:52 wiz Exp $
 
 DISTNAME=	dns_lexicon-3.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dns_//}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 

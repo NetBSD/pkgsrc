@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/08/30 22:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/10/09 07:57:41 wiz Exp $
 
 DISTNAME=	mypaint-2.0.1
 PKGREVISION=	2
@@ -22,7 +22,7 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	bash:run msgfmt pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig

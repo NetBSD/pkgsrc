@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/09/30 08:11:40 adam Exp $
+# $NetBSD: Makefile,v 1.55 2025/10/09 07:57:54 wiz Exp $
 
 DISTNAME=	asyncssh-2.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL bcrypt cryptography

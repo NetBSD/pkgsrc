@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/09/03 07:51:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/09 07:57:55 wiz Exp $
 
 DISTNAME=	krb5-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1.3:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 PLIST_VARS+=	mitkrb heimdal
 

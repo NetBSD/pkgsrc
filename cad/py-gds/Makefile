@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/07/03 19:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/09 07:57:25 wiz Exp $
 
 DISTNAME=	gdspy-1.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

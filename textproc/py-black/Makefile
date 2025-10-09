@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/09/21 15:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/10/09 07:57:58 wiz Exp $
 
 DISTNAME=	black-25.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.10:../../www/py-aiohttp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 .for bin in black blackd

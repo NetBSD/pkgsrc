@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/07/04 09:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/10/09 07:57:39 wiz Exp $
 
 DISTNAME=	renpy-8.3.7-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-source//}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.renpy.org/
 COMMENT=	Visual Novel Engine written in Python
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 USE_LANGUAGES+=	gnu99
 

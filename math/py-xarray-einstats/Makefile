@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/07/01 05:29:29 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:50 wiz Exp $
 
 DISTNAME=	xarray_einstats-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-xarray>=2023.06.0:../../math/py-xarray
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

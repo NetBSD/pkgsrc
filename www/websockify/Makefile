@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/03 19:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 07:58:14 wiz Exp $
 
 DISTNAME=	websockify-0.12.0
 CATEGORIES=	www
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-redis-[0-9]*:../../databases/py-redis
 DEPENDS+=	${PYPKGPREFIX}-jwcrypto-[0-9]*:../../www/py-jwcrypto
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

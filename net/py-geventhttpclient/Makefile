@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/08/20 07:52:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/09 07:57:51 wiz Exp $
 
 DISTNAME=	geventhttpclient-2.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13:../../net/py-gevent
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-dpkt-[0-9]*:../../net/py-dpkt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

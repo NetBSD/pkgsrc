@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/08/30 22:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/09 07:58:14 wiz Exp $
 
 DISTNAME=	wxPython-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ PYDISTUTILSPKG=	no
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/bsd.prefs.mk"
 
