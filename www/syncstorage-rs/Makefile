@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/10/05 19:26:28 js Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/09 21:51:48 wiz Exp $
 
 DISTNAME=	syncstorage-rs-0.21.1
 PKGREVISION=	1
@@ -32,6 +32,9 @@ DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 .include "../../mk/compiler/i386-sse2.mk"
 
 RUST_REQ+=	1.80
+
+# needed for Python 3.14 as of 0.21.1
+MAKE_ENV+=	PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1
 
 .include "cargo-depends.mk"
 
