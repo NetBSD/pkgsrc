@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2025/09/26 07:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.220 2025/10/09 14:36:18 wiz Exp $
 
 DISTNAME=	mame-0.281
 CATEGORIES=	emulators
@@ -27,6 +27,9 @@ MAKE_FILE=		makefile
 # complains with earlier versions:
 # "GCC version 10.3 or later needed"
 GCC_REQD+=		10
+
+# https://github.com/mamedev/mame/issues/14305
+PYTHON_VERSIONS_INCOMPATIBLE=	314
 
 .include "../../mk/bsd.prefs.mk"
 # error: invalid argument '-std=gnu++17' not allowed with 'Objective-C'
