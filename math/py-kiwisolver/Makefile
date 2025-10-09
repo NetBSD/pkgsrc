@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/08/15 06:36:06 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/10/09 08:01:57 wiz Exp $
 
 DISTNAME=	kiwisolver-1.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 BUILDLINK_API_DEPENDS.py-cppy+=	${PYPKGPREFIX}-cppy>=1.3.0
 .include "../../devel/py-cppy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/07/22 19:13:18 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/09 08:01:56 wiz Exp $
 
 DISTNAME=	esptool-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,11 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-# esptool requires >= 3.10
-# \todo Should 3.10 be explicitly in ACCEPTED?
-# \todo If 39 is not added to accepted, do we need to put it in INCOMPATIBLE?
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/wheel.mk"

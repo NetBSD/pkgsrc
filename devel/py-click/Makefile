@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/09/21 15:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/09 08:01:57 wiz Exp $
 
 DISTNAME=	click-8.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

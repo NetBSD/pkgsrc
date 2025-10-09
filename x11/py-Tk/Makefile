@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2025/01/28 16:21:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.81 2025/10/09 08:02:00 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	9
@@ -23,7 +23,6 @@ PY_SETUP_SUBST+=	X11BASE=${X11BASE}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 PYTHON_27_ACCEPTED=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 CPPFLAGS+=	-I${PREFIX}/include/python${PYVERSSUFFIX}/internal
 

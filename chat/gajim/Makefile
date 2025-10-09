@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2025/08/30 22:44:42 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2025/10/09 08:01:56 wiz Exp $
 
 DISTNAME=	gajim-2.1.1
 PKGREVISION=	1
@@ -27,8 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-qrcode>=7.3.1:../../graphics/py-qrcode
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=2.0.0:../../databases/py-sqlalchemy
 
 USE_TOOLS+=	gettext
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39	# py-omemo-dr
 
 MANCOMPRESSED=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/04/14 05:17:11 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 08:01:58 wiz Exp $
 
 DISTNAME=	omemo-dr-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.0:../../devel/py-protobuf
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

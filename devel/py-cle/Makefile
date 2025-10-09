@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/04/17 16:06:22 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/09 08:01:56 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -23,8 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-minidump>=0.0.10:../../devel/py-minidump
 # xbe
 DEPENDS+=	${PYPKGPREFIX}-xbe>=0.0.4:../../devel/py-xbe
 TEST_DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

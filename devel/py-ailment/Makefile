@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/04/17 16:06:22 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 08:01:56 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -17,8 +17,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 #TEST_DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 TEST_DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyvex-[0-9]*:../../devel/py-pyvex
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2025/05/30 13:02:44 gdt Exp $
+# $NetBSD: Makefile,v 1.75 2025/10/09 08:01:57 wiz Exp $
 
 VERSION_BASE=	1.20.0
 VERSION_RC=
@@ -14,8 +14,6 @@ COMMENT=	Distributed fault-tolerant least-authority filesystem
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 ## pyproject.toml build:
 # TOOL_DEPENDS+=	${PYPKGPREFIX}-dulwich>=0:../../devel/py-dulwich # not apparently used
