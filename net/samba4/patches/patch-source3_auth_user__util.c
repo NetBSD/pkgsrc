@@ -1,15 +1,17 @@
-$NetBSD: patch-source3_auth_user__util.c,v 1.2 2025/10/08 14:28:53 wiz Exp $
+$NetBSD: patch-source3_auth_user__util.c,v 1.3 2025/10/09 07:45:50 wiz Exp $
 
 Add missing header.
 https://bugzilla.samba.org/show_bug.cgi?id=15932
 
---- source3/auth/user_util.c.orig	2025-10-07 19:00:41.861180195 +0000
+--- source3/auth/user_util.c.orig	2024-07-29 09:03:15.302630200 +0000
 +++ source3/auth/user_util.c
-@@ -25,6 +25,8 @@
+@@ -25,6 +25,10 @@
  #include "auth.h"
  #include "lib/gencache.h"
  
++#ifdef HAVE_NETGROUP_H
 +#include <netgroup.h>
++#endif
 +
  /*******************************************************************
   Map a username from a dos name to a unix name by looking in the username
