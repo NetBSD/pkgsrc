@@ -1,6 +1,6 @@
-<?xml version='1.0' encoding="iso-8859-1"?>
+<?xml version='1.0' encoding="utf-8"?>
 
-<!-- $NetBSD: default-html-chunk.xsl,v 1.3 2006/05/24 07:54:11 mishka Exp $ -->
+<!-- $NetBSD: default-html-chunk.xsl,v 1.4 2025/10/09 16:57:32 martin Exp $ -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 version='1.0'
