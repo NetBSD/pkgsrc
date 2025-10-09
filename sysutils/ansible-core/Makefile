@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/10/07 10:42:53 adam Exp $
+# $NetBSD: Makefile,v 1.54 2025/10/09 08:07:29 wiz Exp $
 
 # When upgrading ansible-core, please also upgrade the ansible package
 # to a version that supports the new version of ansible-core.  At times
@@ -24,11 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-resolvelib>=0.5.3:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
-.endif
 
 REPLACE_PYTHON=		test/lib/ansible_test/_data/*.py
 REPLACE_PYTHON+=	test/lib/ansible_test/_data/*/*.py

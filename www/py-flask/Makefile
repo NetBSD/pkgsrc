@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/08/24 16:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/10/09 08:07:29 wiz Exp $
 
 DISTNAME=	flask-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,11 +22,6 @@ USE_LANGUAGES=	# none
 
 # as of 3.1.2
 # 1 failed, 476 passed, 6 skipped
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

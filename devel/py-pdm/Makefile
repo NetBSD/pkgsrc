@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/10/14 06:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pdm-2.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,6 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-resolvelib>=1.0.1:../../devel/py-resolvelib
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.3.2:../../misc/py-shellingham
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.3.0:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.1:../../textproc/py-tomlkit
+DEPENDS+=	${PYPKGPREFIX}-truststore-[0-9]*:../../security/py-truststore
 DEPENDS+=	${PYPKGPREFIX}-unearth>=0.12.1:../../net/py-unearth
 DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
@@ -38,14 +39,8 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
 
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
-.endif
-.if ${PYTHON_VERSION} >= 310
-DEPENDS+=	${PYPKGPREFIX}-truststore-[0-9]*:../../security/py-truststore
 .endif
 
 post-install:
