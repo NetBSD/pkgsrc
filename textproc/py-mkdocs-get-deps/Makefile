@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/05 11:44:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 07:58:00 wiz Exp $
 
 DISTNAME=	mkdocs_get_deps-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/07/07 05:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/10/09 07:57:53 wiz Exp $
 
 DISTNAME=	scp-0.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

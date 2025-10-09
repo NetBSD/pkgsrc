@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/07/03 19:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/09 07:57:50 wiz Exp $
 
 DISTNAME=	uncertainties-3.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

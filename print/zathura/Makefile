@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/08/30 22:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/10/09 07:57:54 wiz Exp $
 
 DISTNAME=	zathura-0.5.8
 PKGREVISION=	9
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 # Avoid possible dependency on librsvg
 MESON_ARGS+=	-D convert-icon=disabled

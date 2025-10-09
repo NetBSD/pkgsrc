@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/09/16 09:55:41 prlw1 Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/09 07:58:10 wiz Exp $
 
 DISTNAME=	jupyterlab-4.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 .for bin in jlpm jupyter-lab jupyter-labextension jupyter-labhub

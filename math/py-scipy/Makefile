@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/09/23 17:42:23 adam Exp $
+# $NetBSD: Makefile,v 1.102 2025/10/09 07:57:49 wiz Exp $
 
 DISTNAME=	scipy-1.16.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -79,7 +79,7 @@ WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/bsd.prefs.mk"
 

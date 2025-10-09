@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/07/05 11:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 07:57:54 wiz Exp $
 
 DISTNAME=	aws_sso_util-4.33.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.0.1:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} aws-sso-util aws-sso-util-${PYVERSSUFFIX} || ${TRUE}

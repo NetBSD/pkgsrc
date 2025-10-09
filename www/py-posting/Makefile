@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/08/20 09:28:17 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/09 07:58:11 wiz Exp $
 
 DISTNAME=	posting-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -35,7 +35,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.5.1:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # as of 2.7.0
 # 56 failed, 115 passed, 1 skipped, 1 warning

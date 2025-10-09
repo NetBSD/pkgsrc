@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/07/05 11:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/09 07:57:25 wiz Exp $
 
 DISTNAME=	hangups-0.4.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

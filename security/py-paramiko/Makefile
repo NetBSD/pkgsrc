@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/08/22 07:27:47 adam Exp $
+# $NetBSD: Makefile,v 1.62 2025/10/09 07:57:56 wiz Exp $
 
 DISTNAME=	paramiko-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-relaxed>=1.1.5:../../devel/py-test-relaxed
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography

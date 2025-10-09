@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/09/03 14:21:34 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/10/09 07:57:57 wiz Exp $
 
 DISTNAME=	ansible_compat-25.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-plus-[0-9]*:../../devel/py-test-plus
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/07/27 09:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/09 07:57:41 wiz Exp $
 
 DISTNAME=	contourpy-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # https://github.com/contourpy/contourpy/issues/400
 BUILDLINK_TRANSFORM+=	rm:-Werror

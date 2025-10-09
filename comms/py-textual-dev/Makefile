@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/09/28 19:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/09 07:57:26 wiz Exp $
 
 DISTNAME=	textual_dev-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-test-aiohttp>=0:../../www/py-test-aiohttp
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # as of 1.5.1
 # 5 passed, 3 warnings, 18 errors

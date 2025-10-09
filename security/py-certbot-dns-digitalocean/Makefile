@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/07/05 11:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/09 07:57:55 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -11,7 +11,7 @@ DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
 DEPENDS+=	${PYPKGPREFIX}-digitalocean>=1.11:../../net/py-digitalocean
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

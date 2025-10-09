@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/09/30 14:25:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/09 07:57:51 wiz Exp $
 
 DISTNAME=	aio_pika-9.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-yarl-[0-9]*:../../www/py-yarl
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-aiormq
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-aiormq
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

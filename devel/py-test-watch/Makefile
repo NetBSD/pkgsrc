@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/07/07 05:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:36 wiz Exp $
 
 DISTNAME=	pytest-watch-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-docopt>=0.4.0:../../devel/py-docopt
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.6.0:../../sysutils/py-watchdog
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 USE_PKG_RESOURCES=	yes
 

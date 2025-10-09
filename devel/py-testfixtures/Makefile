@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/08/13 04:47:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/09 07:57:36 wiz Exp $
 
 DISTNAME=	testfixtures-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

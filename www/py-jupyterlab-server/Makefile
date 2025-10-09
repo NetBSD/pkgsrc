@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/07/07 05:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/09 07:58:10 wiz Exp $
 
 DISTNAME=	jupyterlab_server-2.27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

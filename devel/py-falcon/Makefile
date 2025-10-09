@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/07/04 09:08:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/10/09 07:57:31 wiz Exp $
 
 DISTNAME=	falcon-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # as of 4.0.2
 # 1 failed, 3677 passed, 360 skipped

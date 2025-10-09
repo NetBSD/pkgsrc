@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/07/05 11:44:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/09 07:58:07 wiz Exp $
 
 DISTNAME=	yamllint-1.37.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/07/05 11:44:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/09 07:57:44 wiz Exp $
 
 DISTNAME=		python-lua
 PKGNAME=		${PYPKGPREFIX}-python-lua-20170109
@@ -22,7 +22,7 @@ USE_LANGUAGES=		# none
 EGG_NAME=		pythonlua-1.0
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 REPLACE_PYTHON=		pythonlua/*.py tests/*.py *.py
 

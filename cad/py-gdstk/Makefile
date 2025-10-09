@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/09/05 23:45:33 mef Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/09 07:57:25 wiz Exp $
 
 DISTNAME=	gdstk-0.9.61
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ WHEEL_ARGS+=	-C cmake.define.CMAKE_BUILD_WITH_INSTALL_RPATH=1
 PRINT_PLIST_AWK+=	{gsub(/${PYVERSSUFFIX:S/.//}/, "$${PYVERS}");}
 PLIST_SUBST+=		PYVERS=${PYVERSSUFFIX:S/.//}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 

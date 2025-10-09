@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/07/04 09:08:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 07:58:07 wiz Exp $
 
 DISTNAME=	timelib-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	zlib
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

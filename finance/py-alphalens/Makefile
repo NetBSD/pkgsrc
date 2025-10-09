@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/03/17 13:38:40 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/09 07:57:38 wiz Exp $
 
 DISTNAME=	alphalens-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-statsmodels>=0.6.1:../../math/py-statsmodels
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-ipython, py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-ipython, py-matplotlib, py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

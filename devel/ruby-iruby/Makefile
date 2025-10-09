@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/05/17 06:38:09 taca Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/09 07:57:37 wiz Exp $
 
 DISTNAME=	iruby-0.8.2
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipython>=6.0.0:../../devel/py-ipython
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 RUBYGEM_OPTIONS+=	--format-executable
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/10/01 19:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/09 07:57:29 wiz Exp $
 
 DISTNAME=	click_aliases-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 # no tests included
 USE_PYTEST=	no
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/07/04 09:08:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/09 07:57:38 wiz Exp $
 
 DISTNAME=	alpha_vantage-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

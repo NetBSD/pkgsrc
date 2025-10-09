@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2025/09/27 09:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/10/09 07:57:28 wiz Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -6,7 +6,7 @@ BOOST_CONFIG=		installed
 
 INSTALLATION_DIRS+=	lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"

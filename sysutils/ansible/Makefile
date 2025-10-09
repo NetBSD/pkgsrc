@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2025/09/30 08:07:34 adam Exp $
+# $NetBSD: Makefile,v 1.97 2025/10/09 07:57:57 wiz Exp $
 
 DISTNAME=	ansible-12.0.0
 CATEGORIES=	sysutils python
@@ -19,7 +19,7 @@ DEPENDS+=	ansible-core>=2.19.1:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_WRKREF_SKIP=	*

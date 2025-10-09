@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/07/04 09:08:37 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/09 07:57:27 wiz Exp $
 
 DISTNAME=	asyncpg-0.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=6.1:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.3:../../devel/py-uvloop
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # Testing requires postgresql-contrib
 

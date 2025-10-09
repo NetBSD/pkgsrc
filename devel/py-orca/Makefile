@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/07/04 09:08:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 07:57:34 wiz Exp $
 
 DISTNAME=	orca-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-pandas>=0.15.0:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-tables>=3.1:../../math/py-tables
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.8.1:../../devel/py-toolz
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

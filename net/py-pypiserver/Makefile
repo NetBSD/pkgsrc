@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/09/02 12:54:24 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/10/09 07:57:53 wiz Exp $
 
 DISTNAME=	pypiserver-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312

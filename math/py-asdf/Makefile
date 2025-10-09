@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/07/03 19:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/10/09 07:57:45 wiz Exp $
 
 DISTNAME=	asdf-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata-[0-9]*:../../net/py-test-remotedat
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 REPLACE_PYTHON+=	asdf/_jsonschema/json/bin/jsonschema_suite
 REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py

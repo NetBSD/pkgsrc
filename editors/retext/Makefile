@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/04/13 08:39:31 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/10/09 07:57:37 wiz Exp $
 
 DISTNAME=	retext-8.1.0
 PKGREVISION=	3
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39  # py-markups
 
 INSTALLATION_DIRS+=	share/applications
 

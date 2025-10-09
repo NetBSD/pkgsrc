@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/07/05 11:44:11 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/10/09 07:57:27 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.41.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -37,7 +37,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.2:../../devel/py-isort
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 

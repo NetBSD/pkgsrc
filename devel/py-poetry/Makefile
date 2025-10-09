@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/09/30 14:23:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/10/09 07:57:34 wiz Exp $
 
 DISTNAME=	poetry-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -42,7 +42,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.1:../../devel/py-test-xdist
 # for tests
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

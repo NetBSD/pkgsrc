@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/07/03 19:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/10/09 07:57:49 wiz Exp $
 
 DISTNAME=	rpy2-3.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -30,7 +30,7 @@ LDFLAGS.SunOS+=		-mimpure-text
 
 REPLACE_PYTHON=		rpy/tests.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"

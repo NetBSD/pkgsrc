@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/09/04 04:53:31 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/09 07:57:58 wiz Exp $
 
 DISTNAME=	deepdiff-8.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	deepdiff/diff.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

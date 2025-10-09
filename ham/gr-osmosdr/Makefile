@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2025/09/27 09:57:24 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/10/09 07:57:43 wiz Exp $
 
 DISTNAME=	gr-osmosdr-0.2.6
 PKGREVISION=	8
@@ -33,7 +33,7 @@ CMAKE_CONFIGURE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmak
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"

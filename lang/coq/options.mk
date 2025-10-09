@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2025/02/24 03:41:02 dholland Exp $
+# $NetBSD: options.mk,v 1.19 2025/10/09 07:57:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -21,7 +21,7 @@ TOOL_DEPENDS+=			hevea>=1.10:../../textproc/hevea
 # python
 #
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 .include "../../lang/python/tool.mk"
 SUBST_CLASSES+=			sphinx-build

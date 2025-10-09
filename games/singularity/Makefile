@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/07/03 19:18:04 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/09 07:57:40 wiz Exp $
 
 DISTNAME=		singularity-0.30c-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -21,7 +21,7 @@ INSTALLATION_DIRS+=	share/singularity/data/images
 INSTALLATION_DIRS+=	share/singularity/data/sounds
 INSTALLATION_DIRS+=	share/singularity/music
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/singularity

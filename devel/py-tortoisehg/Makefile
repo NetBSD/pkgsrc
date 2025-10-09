@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2025/04/13 06:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.107 2025/10/09 07:57:37 wiz Exp $
 
 DISTNAME=	tortoisehg-6.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,7 +36,7 @@ INSTALLATION_DIRS+=	share/doc/tortoisehg
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build-${PYVERSSUFFIX} html

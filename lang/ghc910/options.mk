@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/03/04 13:57:17 pho Exp $
+# $NetBSD: options.mk,v 1.4 2025/10/09 07:57:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 PKG_SUPPORTED_OPTIONS=	doc
@@ -79,7 +79,7 @@ CONFIGURE_ARGS.common+=	CC=${CC:Q}
 ###
 PLIST_VARS+=			doc
 .if !empty(PKG_OPTIONS:Mdoc)
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 TOOL_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 CONFIGURE_ARGS+=		SPHINXBUILD=${PREFIX:Q}/bin/sphinx-build-${PYVERSSUFFIX}
 PLIST.doc=			yes

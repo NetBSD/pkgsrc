@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/03/04 09:16:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/09 07:58:12 wiz Exp $
 
 DISTNAME=	python-swiftclient-3.11.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -23,7 +23,7 @@ SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx via py-pbr
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx via py-pbr
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \

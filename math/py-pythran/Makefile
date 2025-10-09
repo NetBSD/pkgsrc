@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/07/03 19:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/10/09 07:57:48 wiz Exp $
 
 DISTNAME=	pythran-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 .for bin in pythran pythran-config

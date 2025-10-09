@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/07/04 09:08:34 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/10/09 07:57:42 wiz Exp $
 
 DISTNAME=	pycha-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

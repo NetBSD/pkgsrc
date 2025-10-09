@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/09/02 07:16:31 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/10/09 07:57:45 wiz Exp $
 
 DISTNAME=	arviz-0.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-xarray-einstats
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-xarray-einstats
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

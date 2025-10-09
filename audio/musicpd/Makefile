@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2025/10/05 19:25:41 js Exp $
+# $NetBSD: Makefile,v 1.331 2025/10/09 07:57:23 wiz Exp $
 
 DISTNAME=	mpd-0.23.16
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -130,7 +130,7 @@ SUBST_VARS.sidplay+=	PREFIX
 INSTALLATION_DIRS=	${EGDIR} ${EGDIR}/logrotate.d
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 post-extract:
 	${CP} ${FILESDIR}/mpd.conf ${WRKSRC}/mpd.conf

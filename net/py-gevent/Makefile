@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/09/01 13:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/09 07:57:51 wiz Exp $
 
 DISTNAME=	gevent-25.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.2.2:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # See docs/development/installing_from_source.rst
 MAKE_ENV+=	GEVENTSETUP_EMBED=0

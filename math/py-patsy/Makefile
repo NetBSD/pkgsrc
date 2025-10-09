@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/07/03 19:18:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/09 07:57:48 wiz Exp $
 
 DISTNAME=	patsy-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # as of 0.5.6
 # 6 failed, 142 passed

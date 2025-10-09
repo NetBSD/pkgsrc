@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/08/26 13:23:07 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/10/09 07:57:47 wiz Exp $
 
 DISTNAME=	lmfit-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-uncertainties>=3.2.2:../../math/py-uncertainties
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2025/09/29 12:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/10/09 07:58:08 wiz Exp $
 
 DISTNAME=	beautifulsoup4-4.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0.0:../../devel/py-typing-extensio
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
