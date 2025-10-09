@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2025/10/05 19:25:55 js Exp $
+# $NetBSD: Makefile,v 1.96 2025/10/09 08:02:32 wiz Exp $
 
 DISTNAME=	crossfire-1.75.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
@@ -28,7 +28,8 @@ PLIST_SRC=	${WRKDIR}/PLIST PLIST
 REPLACE_PYTHON+=	../maps/python/CFReputation/utils/gods2factions
 REPLACE_PYTHON+=	utils/cfdb_convert
 
-PYTHON_VERSIONS_ACCEPTED=	39 # node.h is required
+#PYTHON_VERSIONS_ACCEPTED=	39 # node.h is required
+BROKEN=		"Supports Python 3.9 only"
 
 BUILD_DEFS+=	VARBASE
 
