@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/06/04 11:17:44 markd Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/09 08:01:59 wiz Exp $
 
 DISTNAME=	mailman_web-0.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-postorius-[0-9]*:../../www/py-postorius
 DEPENDS+=	${PYPKGPREFIX}-Whoosh-[0-9]*:../../textproc/py-Whoosh
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 BUILD_DEFS+=		VARBASE
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/06/04 12:32:02 adam Exp $
+# $NetBSD: Makefile,v 1.47 2025/10/09 08:01:57 wiz Exp $
 
 DISTNAME=	networkx-3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
