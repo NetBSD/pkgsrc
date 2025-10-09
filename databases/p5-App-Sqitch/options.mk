@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2022/08/14 17:21:50 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2025/10/09 17:12:00 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqitch
 
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	sqlite
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=		p5-DBD-mysql>=4.018:../../databases/p5-DBD-mysql
+DEPENDS+=		p5-DBD-MariaDB>=1.0:../../databases/p5-DBD-MariaDB
 # MySQL::Config: '0'
 BUILD_PARAMS+=		--with mysql
 .endif
