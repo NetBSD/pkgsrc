@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/04/12 20:54:48 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/09 11:14:24 wiz Exp $
 
 DISTNAME=	sure-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
+
+WHEEL_NAME=	sure-0.0.0
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
