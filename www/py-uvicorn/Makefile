@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2025/09/23 16:30:48 adam Exp $
+# $NetBSD: Makefile,v 1.55 2025/10/09 07:58:12 wiz Exp $
 
 DISTNAME=	uvicorn-0.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.6.1:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

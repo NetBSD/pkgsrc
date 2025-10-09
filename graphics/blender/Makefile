@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2025/09/29 02:35:56 mrg Exp $
+# $NetBSD: Makefile,v 1.239 2025/10/09 07:57:40 wiz Exp $
 
 DISTNAME=	blender-4.2.14
 CATEGORIES=	graphics
@@ -58,7 +58,7 @@ PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
 REPLACE_PYTHON+=	scripts/modules/bl_i18n_utils/merge_po.py
 REPLACE_PYTHON+=	scripts/modules/blend_render_info.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 313
+PYTHON_VERSIONS_INCOMPATIBLE=	310 313
 
 .include "options.mk"
 .include "../../archivers/minizip-ng/buildlink3.mk"

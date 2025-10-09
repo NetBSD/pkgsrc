@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/09 07:57:46 wiz Exp $
 
 DISTNAME=	hmmlearn-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # hmmlearn-0.3.2: Some tests still fail
 do-test:

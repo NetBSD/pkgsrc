@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2025/07/07 05:58:04 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/10/09 07:57:28 wiz Exp $
 
 DISTNAME=	approvaltests-8.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

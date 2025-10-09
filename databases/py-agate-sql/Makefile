@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/07/05 11:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/09 07:57:26 wiz Exp $
 
 DISTNAME=	agate-sql-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils-[0-9]*:../../databases/py-sqlalchemy-u
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

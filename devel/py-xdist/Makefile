@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/07/03 19:18:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:37 wiz Exp $
 
 DISTNAME=	xdist-0.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=0:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.16.5
 .include "../../math/py-numpy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/09/28 19:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/09 07:57:30 wiz Exp $
 
 DISTNAME=	coveralls-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/python-coveralls

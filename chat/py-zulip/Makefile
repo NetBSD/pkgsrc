@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/10/03 07:44:01 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/09 07:57:25 wiz Exp $
 
 DISTNAME=	zulip-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-matrix-nio -> py-peewee -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-matrix-nio -> py-peewee -> py-sphinx
 
 REPLACE_PYTHON+=	integrations/*.py
 REPLACE_PYTHON+=	integrations/*/*

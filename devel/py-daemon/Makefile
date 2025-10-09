@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2025/04/20 08:08:49 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/09 07:57:30 wiz Exp $
 
 DISTNAME=	python-daemon-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

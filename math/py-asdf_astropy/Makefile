@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/06/13 07:23:28 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/09 07:57:45 wiz Exp $
 
 DISTNAME=	asdf_astropy-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-scipy>0:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
