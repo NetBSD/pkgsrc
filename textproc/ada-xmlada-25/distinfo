@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2025/09/22 09:52:12 dkazankov Exp $
+$NetBSD: distinfo,v 1.3 2025/10/09 11:56:51 dkazankov Exp $
 
-BLAKE2s (xmlada-25.0.0.tar.gz) = c7e2b06977998dadbde002a6b80a75d3921860f20946c02a983a2048ade6e987
-SHA512 (xmlada-25.0.0.tar.gz) = c57db78e3afd20862c3275d3d0874ada1748e98df06a76841cb3dca3686b29c7693835a591ca5789dca2d3d6ba9677c9082df94857e180e0758a5b77fafc40c0
-Size (xmlada-25.0.0.tar.gz) = 1082553 bytes
+BLAKE2s (xmlada-25.2.tar.gz) = e2b30e5d33c6e0fc01a830c19b15014cc80c54c4255da11b380c298c3f6a6da9
+SHA512 (xmlada-25.2.tar.gz) = da2fb0c4cf43f45f3c6f188a47e681c76a90b1a7f6f9fa7c4ae73bacbb5479a2cd858b56f668267acfd6ae971dcd6f76bbb6a9e69079509e262a4d1d6cb7ffd1
+Size (xmlada-25.2.tar.gz) = 1082489 bytes
 SHA1 (patch-configure) = abb1e41b3b5bb7ec67a9cf06a353926334623d67
 SHA1 (patch-tests_Makefile) = 8a83555e04e2ad9b10f3abcf7519f04818e48717
 SHA1 (patch-tests_base64_base64__test.gpr) = 83310405f14e3a2754865aea3cb5ef4255dda6a5

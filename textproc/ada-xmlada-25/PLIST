@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/07/10 16:55:09 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/09 11:56:51 dkazankov Exp $
 ${PLIST.shlibs}${GNAT_PKGBASE}/include/xmlada/xmlada_dom.relocatable/dom-core-attrs.adb
 ${PLIST.shlibs}${GNAT_PKGBASE}/include/xmlada/xmlada_dom.relocatable/dom-core-attrs.ads
 ${PLIST.shlibs}${GNAT_PKGBASE}/include/xmlada/xmlada_dom.relocatable/dom-core-cdata_sections.ads
@@ -1068,15 +1068,20 @@ ${GNAT_PKGBASE}/include/xmlada/xmlada_unicode.static/unicode-names.ads
 ${GNAT_PKGBASE}/include/xmlada/xmlada_unicode.static/unicode.adb
 ${GNAT_PKGBASE}/include/xmlada/xmlada_unicode.static/unicode.ads
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_dom.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_dom.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_dom.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_dom.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_input_sources.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_input_sources.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_input_sources.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_input_sources.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_sax.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_sax.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_sax.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_sax.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_schema.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_schema.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_schema.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_schema.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_unicode.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_unicode.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_unicode.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/libxmlada_unicode.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom-core-attrs.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom-core-cdata_sections.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom-core-character_datas.ali
@@ -1094,7 +1099,8 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom-core.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom-readers.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/dom.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/libxmlada_dom.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/libxmlada_dom.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/libxmlada_dom.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.relocatable/libxmlada_dom.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.static-pic/dom-core-attrs.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.static-pic/dom-core-cdata_sections.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_dom.static-pic/dom-core-character_datas.ali
@@ -1135,7 +1141,8 @@ ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/input_sources
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/input_sources-strings.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/input_sources.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/libxmlada_input_sources.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/libxmlada_input_sources.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/libxmlada_input_sources.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.relocatable/libxmlada_input_sources.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static-pic/input_sources-file.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static-pic/input_sources-http.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static-pic/input_sources-socket.ali
@@ -1149,7 +1156,8 @@ ${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static/input_sources-strings.ali
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static/input_sources.ali
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_input.static/libxmlada_input_sources.a
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/libxmlada_sax.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/libxmlada_sax.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/libxmlada_sax.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/libxmlada_sax.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/sax-attributes.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/sax-encodings.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.relocatable/sax-exceptions.ali
@@ -1189,7 +1197,8 @@ ${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.static/sax-symbols.ali
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.static/sax-utils.ali
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_sax.static/sax.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/libxmlada_schema.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/libxmlada_schema.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/libxmlada_schema.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/libxmlada_schema.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/schema-date_time.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/schema-decimal.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.relocatable/schema-dom_readers.ali
@@ -1220,7 +1229,8 @@ ${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.static/schema-validators-xsd_grammar.al
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.static/schema-validators.ali
 ${GNAT_PKGBASE}/lib/xmlada/xmlada_schema.static/schema.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/libxmlada_unicode.so
-${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/libxmlada_unicode.so.25.0w
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/libxmlada_unicode.so.25
+${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/libxmlada_unicode.so.25.2
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/unicode-ccs-iso_8859_1.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/unicode-ccs-iso_8859_15.ali
 ${PLIST.shlibs}${GNAT_PKGBASE}/lib/xmlada/xmlada_unicode.relocatable/unicode-ccs-iso_8859_2.ali

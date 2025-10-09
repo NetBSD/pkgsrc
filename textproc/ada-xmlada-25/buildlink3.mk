@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/09/04 08:20:02 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/09 11:56:51 dkazankov Exp $
 
 BUILDLINK_TREE+=	xmlada-25
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xmlada-25
 XMLADA_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmlada-25+=	xmlada-${GNAT_NAME}>=25.0.0
+BUILDLINK_ABI_DEPENDS.xmlada-25+=	xmlada-${GNAT_NAME}>=25.2.0
 BUILDLINK_PKGSRCDIR.xmlada-25?=		../../textproc/ada-xmlada-25
 BUILDLINK_DEPMETHOD.xmlada-25?=		build
 
