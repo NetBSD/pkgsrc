@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5993 2025/10/09 15:19:25 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5994 2025/10/09 15:21:24 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8721,3 +8721,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/pocl to 7.1 [adam 2025-10-09]
 	Updated devel/ruby-jirametrics to 2.19 [schmonz 2025-10-09]
 	Updated devel/py-langkit to 25.2.0 [dkazankov 2025-10-09]
+	Updated math/ada-adasat-25 to 25.2.0 [dkazankov 2025-10-09]
