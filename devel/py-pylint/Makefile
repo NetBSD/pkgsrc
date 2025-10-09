@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2025/08/10 08:16:31 adam Exp $
+# $NetBSD: Makefile,v 1.113 2025/10/09 08:07:28 wiz Exp $
 
 DISTNAME=	pylint-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,9 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif

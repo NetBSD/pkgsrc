@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/07/01 08:07:21 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/09 08:07:29 wiz Exp $
 
 DISTNAME=	versioningit-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,9 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2:../../textproc/py-tomli
 .endif
