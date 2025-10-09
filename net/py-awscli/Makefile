@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/09/05 05:31:10 adam Exp $
+# $NetBSD: Makefile,v 1.78 2025/10/09 07:57:51 wiz Exp $
 
 DISTNAME=	awscli-1.42.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

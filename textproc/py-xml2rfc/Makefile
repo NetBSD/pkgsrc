@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/09/09 06:44:31 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/09 07:58:06 wiz Exp $
 
 DISTNAME=	xml2rfc-3.30.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-weasyprint>=60.1:../../print/py-weasyprint
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

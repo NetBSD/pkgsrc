@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/07/03 19:18:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/09 07:57:47 wiz Exp $
 
 DISTNAME=	nptyping-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard>=0:../../devel/py-typeguard
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.20.0
 .include "../../math/py-numpy/buildlink3.mk"

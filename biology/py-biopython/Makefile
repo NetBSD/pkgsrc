@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/07/03 19:18:02 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/09 07:57:24 wiz Exp $
 
 DISTNAME=	biopython-1.85
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	biopython
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

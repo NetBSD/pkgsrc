@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/07/03 19:18:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/09 07:57:38 wiz Exp $
 
 DISTNAME=	backtrader-1.9.74.123
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

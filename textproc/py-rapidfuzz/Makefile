@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/09/09 06:43:30 adam Exp $
+# $NetBSD: Makefile,v 1.42 2025/10/09 07:58:02 wiz Exp $
 
 DISTNAME=	rapidfuzz-3.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -37,7 +37,7 @@ GCC_REQD+=		10
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fno-fat-lto-objects
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/rapidfuzz/CMakeLists.txt.orig \

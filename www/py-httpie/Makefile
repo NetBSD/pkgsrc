@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/07/05 11:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/09 07:58:10 wiz Exp $
 
 DISTNAME=	httpie-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure

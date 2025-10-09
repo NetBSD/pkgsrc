@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2025/07/01 13:41:40 adam Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/10/09 07:57:58 wiz Exp $
 # used by sysutils/salt/Makefile
 # used by sysutils/salt-docs/Makefile
 
@@ -42,4 +42,4 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=25.1.2:../../net/py-zmq
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 313
+PYTHON_VERSIONS_INCOMPATIBLE=	313

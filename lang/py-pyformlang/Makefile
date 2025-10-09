@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/07/03 19:18:07 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/09 07:57:44 wiz Exp $
 
 DISTNAME=	pyformlang-1.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
