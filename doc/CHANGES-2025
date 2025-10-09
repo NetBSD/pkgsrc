@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5984 2025/10/09 11:26:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.5985 2025/10/09 11:34:47 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8711,3 +8711,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 24.10.0 [adam 2025-10-09]
 	Updated emulators/qemu to 10.1.1 [adam 2025-10-09]
 	Updated devel/py-langkit to 25.0.0nb1 [wiz 2025-10-09]
+	Updated chat/matrix-synapse to 1.139.2 [gdt 2025-10-09]
