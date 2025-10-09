@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/09/13 09:16:25 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 11:25:49 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-25.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	langkit
@@ -54,9 +55,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-e3-testsuite>=25.0:../../devel/py-e3-testsuite
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/create-project.py ${DESTDIR}${PREFIX}/bin/create-project${PYVERSSUFFIX}.py
-
-# langkit uses deprecated pipes module
-PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
