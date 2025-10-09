@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5987 2025/10/09 11:57:43 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.5988 2025/10/09 12:04:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8714,3 +8714,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/matrix-synapse to 1.139.2 [gdt 2025-10-09]
 	Updated security/py-bcrypt to 5.0.0 [wiz 2025-10-09]
 	Updated textproc/ada-xmlada-25 to 25.2.0 [dkazankov 2025-10-09]
+	Updated devel/py-line_profiler to 5.0.0 [wiz 2025-10-09]
