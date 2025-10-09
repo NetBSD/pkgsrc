@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.185 2025/08/29 10:44:28 adam Exp $
+$NetBSD: distinfo,v 1.186 2025/10/09 14:43:43 adam Exp $
 
-BLAKE2s (wireshark-4.4.9.tar.xz) = 8801c8679b0e7c2dc24f6bf7784ab7b20306ae53bfe640123b639af08c1a64c7
-SHA512 (wireshark-4.4.9.tar.xz) = a4f13bc0c8b1c08dfed8fe8e88997e5378c0ad1f9eeb972ea07cd85e7c7140b17f63ec9efce286b636abea7b99b9f54a640852a2ec4a36bfab96c6cf08e4772d
-Size (wireshark-4.4.9.tar.xz) = 46830008 bytes
+BLAKE2s (wireshark-4.6.0.tar.xz) = b6a3b0fc3f9487edad9c62dcd6d4de75056b2f7da04c9425fdda69c7306ec100
+SHA512 (wireshark-4.6.0.tar.xz) = f531dc8a4aa9b6539235fe1c87a680a01a6cba3af048297ba4b884edbcf1577b8af9061d9d4f43cbe1fbf213c18bb72fddd44b324a93edcc612e3f5b3cdde75e
+Size (wireshark-4.6.0.tar.xz) = 50726944 bytes
 SHA1 (patch-CMakeLists.txt) = 80af7e00226894efe82db3b89ea8fee08bd30681
+SHA1 (patch-epan_dissectors_packet-kerberos.c) = 47efb616bb645c2a57ef606e18db2f494ee0706a
+SHA1 (patch-writecap_pcapio.c) = ba0b9275b7eab134d8d473312299cbf7c66a6f41
