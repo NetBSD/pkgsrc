@@ -1,9 +1,9 @@
-$NetBSD: patch-bootstrap.sh,v 1.3 2025/02/08 14:14:49 wiz Exp $
+$NetBSD: patch-bootstrap.sh,v 1.4 2025/10/09 15:46:43 dkazankov Exp $
 
 Fix out-of-tree bootstrap build
 
 --- bootstrap.sh.orig	2023-10-09 21:31:11.000000000 +0300
-+++ bootstrap.sh	2024-08-09 10:47:46.065852328 +0300
++++ bootstrap.sh
 @@ -90,13 +90,13 @@
  UName=`uname | cut -b -5`
  PutUsage=gpr/src/gpr-util-put_resource_usage
