@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.5999 2025/10/09 16:50:32 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6000 2025/10/09 16:55:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8727,3 +8727,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ov to 0.44.0 [schmonz 2025-10-09]
 	Updated devel/ada-libgpr-25 to 25.2.0 [dkazankov 2025-10-09]
 	Updated www/p5-Playwright to 1.551 [schmonz 2025-10-09]
+	Updated devel/meson to 1.9.1nb1 [ryoon 2025-10-09]
