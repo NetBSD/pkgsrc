@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/06/26 19:51:47 is Exp $
+$NetBSD: patch-ac,v 1.5 2025/10/09 18:18:51 martin Exp $
 
---- mini_sendmail.8.orig	2003-11-17 02:47:33.000000000 +0100
-+++ mini_sendmail.8
-@@ -1,10 +1,12 @@
+--- mini_sendmail.8.orig	2005-05-20 21:10:23.000000000 +0200
++++ mini_sendmail.8	2025-09-06 12:16:44.774828544 +0200
+@@ -1,13 +1,18 @@
 -.TH mini_sendmail 8 "12 July 2001"
 +.TH mini_sendmail 8 "25 June 2005"
  .SH NAME
@@ -16,7 +16,13 @@ $NetBSD: patch-ac,v 1.4 2005/06/26 19:51:47 is Exp $
  .RB [ -s<server> ]
  .RB [ -p<port> ]
  .RB [ -T<timeout> ]
-@@ -26,6 +28,17 @@ can be used to send email from inside a 
++.RB [ -H<host> ]
++.RB [ -D ]
++.RB [ -U ]
+ .RB [ -v ]
+ .I address ...
+ .SH DESCRIPTION
+@@ -26,6 +31,17 @@
  .B -f
  Sets the name of the "from" person (i.e. the sender of the mail).
  .TP
@@ -34,3 +40,22 @@ $NetBSD: patch-ac,v 1.4 2005/06/26 19:51:47 is Exp $
  .B -t
  Read message for recipients.
  To:, Cc:, and Bcc: lines will be scanned for recipient addresses.
+@@ -42,6 +58,18 @@
+ .B -T
+ Specifies timeout - defaults to one minute.
+ .TP
++.B -H
++Specifies a hostname (or domain) to use - defaults to the local systems name.
++.TP
++.B -D
++Check for a missing Date: header and provide one if needed.
++.TP
++.B -U
++Check for a missing From: header and provide one if needed (optionally
++using the domain name from the
++.B -H
++option).
++.TP
+ .B -v
+ Verbose mode - shows the conversation with the SMTP server.
+ .SH "SEE ALSO"
