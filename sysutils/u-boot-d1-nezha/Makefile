@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/10/09 10:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/09 12:51:47 gutteridge Exp $
 
 UBOOT_TARGET=		d1-nezha
 UBOOT_VERSION=		2024.1
@@ -25,8 +25,6 @@ EXTRACT_SUFX=		.tar.gz
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/u-boot-d1-nezha/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/u-boot-d1-nezha/patches
 
-TOOL_DEPENDS+=		opensbi-sun20i-d1-[0-9]*:../../sysutils/opensbi-sun20i-d1
-
 post-extract:
 	${CP} ${PREFIX}/share/opensbi/sun20i-d1/fw_dynamic.bin ${WRKSRC}
 
@@ -37,5 +35,5 @@ BUILDLINK_DEPMETHOD.libuuid=	build
 .include "../../devel/libuuid/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gnutls=	build
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../sysutils/opensbi-visionfive2/buildlink3.mk"
+.include "../../sysutils/opensbi-sun20i-d1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
