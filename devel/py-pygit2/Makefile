@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/09/22 09:21:57 adam Exp $
+# $NetBSD: Makefile,v 1.44 2025/10/09 08:01:57 wiz Exp $
 
 DISTNAME=	pygit2-1.18.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=1.9
 .include "../../devel/libgit2/buildlink3.mk"

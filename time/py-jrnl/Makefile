@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/09/14 10:41:49 leot Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/09 08:01:59 wiz Exp $
 
 DISTNAME=	jrnl-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-tzlocal>=4.0:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.27.0:../../devel/py-xdg
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39	# Python 3.10 or newer
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/jrnl ${DESTDIR}${PREFIX}/bin/jrnl-${PYVERSSUFFIX} || ${TRUE}
