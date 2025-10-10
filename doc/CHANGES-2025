@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6009 2025/10/10 08:47:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6010 2025/10/10 08:50:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8740,3 +8740,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-pysaml2 to 7.5.4 [adam 2025-10-10]
 	Updated devel/py-test-lazy-fixtures to 1.4.0 [adam 2025-10-10]
 	Updated security/openssh to 10.2p1 [wiz 2025-10-10]
+	Updated textproc/py-xmltodict to 1.0.2 [adam 2025-10-10]
+	Updated devel/py-test-cov to 7.0.0 [adam 2025-10-10]
+	Updated textproc/py-tomli to 2.3.0 [adam 2025-10-10]
