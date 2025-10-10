@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6012 2025/10/10 11:53:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6013 2025/10/10 12:57:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8747,3 +8747,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pylint to 3.3.9 [adam 2025-10-10]
 	Updated lang/python312 to 3.12.12 [adam 2025-10-10]
 	Updated lang/py312-html-docs to 3.12.12 [adam 2025-10-10]
+	Updated lang/python311 to 3.11.14 [adam 2025-10-10]
+	Updated lang/py311-html-docs to 3.11.14 [adam 2025-10-10]
