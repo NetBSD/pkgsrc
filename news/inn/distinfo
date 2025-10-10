@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2025/10/02 16:23:51 hauke Exp $
+$NetBSD: distinfo,v 1.43 2025/10/10 16:02:16 hauke Exp $
 
 BLAKE2s (inn-2.7.3.tar.gz) = 133ed817516d452f1324c19cad96cc2fcbae54bc53b9f4cd73e837b924b309bc
 SHA512 (inn-2.7.3.tar.gz) = cc36a87d4f8ab9297c8ce56dfb4864aafc6095459fda4ab3198e0870c77e7327364b151c16bf3509cf61e07d9389f25b0da1e016b1fc908436d48bd60ed9b81d
@@ -6,7 +6,7 @@ Size (inn-2.7.3.tar.gz) = 2832795 bytes
 SHA1 (patch-aa) = bf3de8a6aebae1fc8957fad31e46b1c536aa5224
 SHA1 (patch-ab) = 894d7c93485bb86ebf68899968829ce6aa60b7e6
 SHA1 (patch-ac) = 43e2db25f619a2c85d5e715e2044c5b4be31b62c
-SHA1 (patch-ad) = 45e50491b7705eb3f8a5c64acad9747baaf30678
+SHA1 (patch-ad) = abdd2edebb4ff61b4827b7f40f6942b90ebbfc13
 SHA1 (patch-ag) = 0d1e4883ffefd0e2e7afeba2865e707ff6041a28
 SHA1 (patch-ah) = 22ff361d7a098d1cf09ecb0fc5d3336927238106
 SHA1 (patch-ak) = a0832c43c124d13046fcaa845a2788e6c8d63dbe
