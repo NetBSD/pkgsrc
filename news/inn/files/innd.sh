@@ -1,78 +1,59 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: innd.sh,v 1.18 2011/10/07 22:37:05 shattered Exp $
+# $NetBSD: innd.sh,v 1.19 2025/10/10 16:02:16 hauke Exp $
 #
 # PROVIDE: inn
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-if [ -d @INN_DATA_DIR@/etc ] ; then
-	echo ""
-	echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
-	echo ""
-	echo "WARNING: old inn config directory @INN_DATA_DIR@/etc found"
-	echo "WARNING: please move your config to @PREFIX@/etc/inn"
-	echo "WARNING: before starting your new inn install"
-	echo ""
-	echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING"
-	echo ""
-	sleep 120
+if [ -f @SYSCONFBASE@/rc.subr ]
+then
+  . @SYSCONFBASE@/rc.subr
 fi
 
-if [ -x @INN_PATHBIN@/rc.news -a -s @INN_DATA_DIR@/db/active ]
+name="inn"
+rcvar=${name}
+command="@INN_PATHBIN@/rc.news"
+procname="@INN_PATHBIN@/innwatch"
+command_interpreter="@RCD_SCRIPTS_SHELL@"
+inn_user="news"
+required_files="@INN_PATHBIN@/rc.news @INN_DATA_DIR@/db/active"
+pidfile="@INN_DATA_DIR@/run/innwatch.pid"
+
+start_precmd="inn_precmd"
+start_cmd="inn_start"
+stop_cmd="inn_stop"
+
+
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]
 then
-	if [ ! -d @PREFIX@/etc/nntp ]
-	then
-		mkdir @PREFIX@/etc/nntp
-	fi
+        load_rc_config ${name}
+elif [ -f @SYSCONFBASE@/rc.conf ]
+then
+        . @SYSCONFBASE@/rc.conf
+fi
 
-	if [ ! -f @PREFIX@/etc/nntp/server ]
-	then
-		hostname >@PREFIX@/etc/nntp/server
-	fi
-
-	if [ ! -f @PREFIX@/etc/nntp/domainname ]
-	then
-		(set - X `grep ^fromhost: @PKG_SYSCONFDIR@/inn.conf`
-		if [ $# -eq 3 ]
-		then
-			echo $3 >@PREFIX@/etc/nntp/domainname
-		fi)
-	fi
-
+inn_precmd()
+{
 	if [ -f @INN_DATA_DIR@/db/history -a \
 		! -s @INN_DATA_DIR@/db/history ]
 	then
 		@INN_PATHBIN@/makedbz -i -o -s 10000
 	fi
+}
 
-	if [ $# -eq 0 ]
-	then
-		echo -n ' innd'
-		su -m news -c "@INN_PATHBIN@/rc.news start" >/dev/null
-		exit 0
-	fi
+inn_start()
+{
+        @ECHO@ "Starting ${name}."
+        doit="@SU@ -m ${inn_user} -c '${command} start ${command_args} >/dev/null'"
+        eval $doit
+}
 
-	case "$1" in
-	start )
-		echo "Starting INN."
-		su -m news -c "@INN_PATHBIN@/rc.news $1" >/dev/null
-		exit 0
-		;;
-	stop )
-		su -m news -c "@INN_PATHBIN@/rc.news $1"
-		exit 0
-		;;
-	restart )
-		$0 stop
-		sleep 5
-		exec $0 start
-		;;
-	* )
-		echo "Usage: $0 (start|stop|restart)"
-		exit 1
-		;;
-	esac
-fi
+inn_stop()
+{
+        @ECHO@ "Stopping ${name}."
+        doit="@SU@ -m ${inn_user} -c '${command} stop ${command_args} >/dev/null'"
+        eval $doit
+}
 
-exit 0
+run_rc_command "$1"

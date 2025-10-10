@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.154 2025/10/02 16:23:51 hauke Exp $
+# $NetBSD: Makefile,v 1.155 2025/10/10 16:02:16 hauke Exp $
 
 DISTNAME=		inn-2.7.3
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -20,8 +21,6 @@ FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR}
 
 BUILD_DEFS+=		INN_PATHBIN
 FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
-
-MESSAGE_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
 PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 PRINT_PLIST_AWK+=	{ gsub(/libexec\/inn\//, "$${INN_PATHBIN}/"); }
@@ -182,6 +181,11 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
 .else
 CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 .endif
+
+SUBST_CLASSES+=		rclocal
+SUBST_FILES.rclocal=	scripts/rc.news.in
+SUBST_VARS.rclocal=	PKG_SYSCONFDIR
+SUBST_STAGE.rclocal=	pre-configure
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 099967
 SUBST_CLASSES+=		blcklist
