@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6014 2025/10/10 13:01:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6015 2025/10/10 14:08:27 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8751,3 +8751,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py311-html-docs to 3.11.14 [adam 2025-10-10]
 	Updated lang/python310 to 3.10.19 [adam 2025-10-10]
 	Updated lang/py310-html-docs to 3.10.19 [adam 2025-10-10]
+	Updated games/luanti to 5.14.0 [ktnb 2025-10-10]
