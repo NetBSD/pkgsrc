@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2025/09/08 22:54:47 lloyd Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/10 00:04:53 gutteridge Exp $
 
 DISTNAME=	binutils-2.45
 PKGNAME=	cross-riscv64-none-elf-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	port-riscv@NetBSD.org
 HOMEPAGE=	# empty
