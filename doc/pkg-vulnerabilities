@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.600 2025/10/10 15:54:08 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.601 2025/10/10 16:26:23 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28074,3 +28074,40 @@ calibre<7.16.0	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-7009
 catdoc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-46345
 cfengine<3.21.3	sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2023-45684
 cflow-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2789
+cjose<0.6.2.2	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2023-37464
+clamav<1.1.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-20197
+clamav<1.1.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-20212
+clamav<1.3.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-20290
+clamav<1.3.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-20380
+clamav<1.4.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-20505
+clamav<1.4.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-20506
+clamav<1.4.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-20128
+clojure<1.9.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-20189
+clojure<1.12.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-22871
+commonmarker<0.23.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-22051
+consul<1.20.1	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-10005
+consul<1.20.1	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-10006
+consul<1.20.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-10086
+php{56,70,71,72,73}-contao35<3.5.32	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-5478
+php{56,70,71,72,73}-contao35-[0-9]*	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-29200
+couchdb<3.3.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-45725
+cpp-httplib<0.18.4	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-0825
+cpp-httplib<0.20.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-46728
+cppcheck-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-39070
+cryptopp-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-48570
+cryptopp-[0-9]*	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-50979
+cryptopp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50980
+cryptopp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50981
+cryptopp-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-28285
+cups-base<2.4.9		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2024-35235
+cups-base-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-47850
+curl<7.66.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-19909
+curl<8.6.0	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-0853
+curl<8.7.0	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-2004
+curl<8.7.0	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-2379
+curl<8.7.0	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2024-2398
+curl<8.9.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-6874
+curl<8.12.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-0167
+curl<8.12.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-0665
+curl<8.12.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-0725
+cyrus-imapd<3.8.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34055
