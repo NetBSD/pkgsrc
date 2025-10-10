@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/08/01 17:48:38 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/10 14:08:12 ktnb Exp $
 bin/luanti
 bin/luantiserver
 bin/minetest
@@ -15,6 +15,7 @@ share/doc/luanti/texture_packs.md
 share/doc/luanti/world_format.md
 share/icons/hicolor/128x128/apps/luanti.png
 share/icons/hicolor/scalable/apps/luanti.svg
+share/locale/az/LC_MESSAGES/luanti.mo
 share/locale/bar/LC_MESSAGES/luanti.mo
 share/locale/be/LC_MESSAGES/luanti.mo
 share/locale/bg/LC_MESSAGES/luanti.mo
@@ -38,6 +39,7 @@ share/locale/ga/LC_MESSAGES/luanti.mo
 share/locale/gd/LC_MESSAGES/luanti.mo
 share/locale/gl/LC_MESSAGES/luanti.mo
 share/locale/hu/LC_MESSAGES/luanti.mo
+share/locale/hy/LC_MESSAGES/luanti.mo
 share/locale/id/LC_MESSAGES/luanti.mo
 share/locale/it/LC_MESSAGES/luanti.mo
 share/locale/ja/LC_MESSAGES/luanti.mo
@@ -45,6 +47,7 @@ share/locale/jbo/LC_MESSAGES/luanti.mo
 share/locale/jv/LC_MESSAGES/luanti.mo
 share/locale/kab/LC_MESSAGES/luanti.mo
 share/locale/kk/LC_MESSAGES/luanti.mo
+share/locale/kmr/LC_MESSAGES/luanti.mo
 share/locale/ko/LC_MESSAGES/luanti.mo
 share/locale/kv/LC_MESSAGES/luanti.mo
 share/locale/ky/LC_MESSAGES/luanti.mo
@@ -73,6 +76,7 @@ share/locale/sv/LC_MESSAGES/luanti.mo
 share/locale/sw/LC_MESSAGES/luanti.mo
 share/locale/ta/LC_MESSAGES/luanti.mo
 share/locale/tok/LC_MESSAGES/luanti.mo
+share/locale/tl/LC_MESSAGES/luanti.mo
 share/locale/tr/LC_MESSAGES/luanti.mo
 share/locale/tt/LC_MESSAGES/luanti.mo
 share/locale/uk/LC_MESSAGES/luanti.mo
