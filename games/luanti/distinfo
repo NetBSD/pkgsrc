@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2025/08/01 17:48:38 ktnb Exp $
+$NetBSD: distinfo,v 1.5 2025/10/10 14:08:12 ktnb Exp $
 
-BLAKE2s (luanti-5.13.0.tar.gz) = d28188faddfcacbb44fd9b0c482e49c38a44e5c3a7728d1d04730a3266bbe9e8
-SHA512 (luanti-5.13.0.tar.gz) = cdddd0ad566ffc9fe81d024cd2e6e4399e4753ca1e42917047a9b0becf4ceef60a8bab4ab282d9bf845381a95e2b20e89b21ad1d4af65a13540a0bd42a2e522b
-Size (luanti-5.13.0.tar.gz) = 12276771 bytes
+BLAKE2s (luanti-5.14.0.tar.gz) = 6508c3afdd4213f8e7708799ee9b92ce5b67bca50015a164122b4cb4c67bc6bc
+SHA512 (luanti-5.14.0.tar.gz) = 8aa2bd2162797c8eeae474ec6f6069181b47e18d6f18dd64bc0b7064ee3eeaabae44374fd8e206a012e81140c62743e3de38c2aea33526cca2ac186fcb72c873
+Size (luanti-5.14.0.tar.gz) = 12421600 bytes
 SHA1 (patch-irr_src_CIrrDeviceLinux.cpp) = 57a8e6158ac61a320ec9e086569ff8277f727875
 SHA1 (patch-irr_src_os.cpp) = fe5cf12adf6b4574e97e8cfee46a07401b87ab90
 SHA1 (patch-src_client_game.cpp) = 473eacc0c12bb64e23ddf39c1aeaecda44b76afb
