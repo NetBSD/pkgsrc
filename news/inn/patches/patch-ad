@@ -1,6 +1,8 @@
-$NetBSD: patch-ad,v 1.10 2025/10/02 16:23:51 hauke Exp $
+$NetBSD: patch-ad,v 1.11 2025/10/10 16:02:16 hauke Exp $
 
 raise file descriptors limit to hard limit
+
+site-local script wants to be local
 
 --- scripts/rc.news.in.orig	2025-05-09 13:53:41.000000000 +0000
 +++ scripts/rc.news.in
@@ -14,3 +16,14 @@ raise file descriptors limit to hard limit
  ##  Program to start.
  WHAT=${INND}
  
+@@ -228,8 +231,8 @@ for F in ${RMFILE} ${RMFILE}.*; do
+ done &
+ 
+ # Run any additional local startup commands.
+-if [ -f ${PATHBIN}/rc.news.local ]; then
+-    ${PATHBIN}/rc.news.local start
++if [ -f @PKG_SYSCONFDIR@/rc.news.local ]; then
++    @PKG_SYSCONFDIR@/rc.news.local start
+ fi
+ 
+ ##  Start innd last when using systemd.
