@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/04/12 08:22:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.27 2025/10/10 09:51:51 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -14,9 +14,6 @@ ${PYSITELIB}/astroid/__pkginfo__.pyo
 ${PYSITELIB}/astroid/_ast.py
 ${PYSITELIB}/astroid/_ast.pyc
 ${PYSITELIB}/astroid/_ast.pyo
-${PYSITELIB}/astroid/_backport_stdlib_names.py
-${PYSITELIB}/astroid/_backport_stdlib_names.pyc
-${PYSITELIB}/astroid/_backport_stdlib_names.pyo
 ${PYSITELIB}/astroid/arguments.py
 ${PYSITELIB}/astroid/arguments.pyc
 ${PYSITELIB}/astroid/arguments.pyo
@@ -89,9 +86,6 @@ ${PYSITELIB}/astroid/brain/brain_multiprocessing.pyo
 ${PYSITELIB}/astroid/brain/brain_namedtuple_enum.py
 ${PYSITELIB}/astroid/brain/brain_namedtuple_enum.pyc
 ${PYSITELIB}/astroid/brain/brain_namedtuple_enum.pyo
-${PYSITELIB}/astroid/brain/brain_nose.py
-${PYSITELIB}/astroid/brain/brain_nose.pyc
-${PYSITELIB}/astroid/brain/brain_nose.pyo
 ${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.py
 ${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.pyc
 ${PYSITELIB}/astroid/brain/brain_numpy_core_einsumfunc.pyo
@@ -164,6 +158,9 @@ ${PYSITELIB}/astroid/brain/brain_sqlalchemy.pyo
 ${PYSITELIB}/astroid/brain/brain_ssl.py
 ${PYSITELIB}/astroid/brain/brain_ssl.pyc
 ${PYSITELIB}/astroid/brain/brain_ssl.pyo
+${PYSITELIB}/astroid/brain/brain_statistics.py
+${PYSITELIB}/astroid/brain/brain_statistics.pyc
+${PYSITELIB}/astroid/brain/brain_statistics.pyo
 ${PYSITELIB}/astroid/brain/brain_subprocess.py
 ${PYSITELIB}/astroid/brain/brain_subprocess.pyc
 ${PYSITELIB}/astroid/brain/brain_subprocess.pyo
