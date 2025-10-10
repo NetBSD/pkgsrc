@@ -1,4 +1,4 @@
-bin/idle @PREFIX@/bin/idle3.13
-bin/pydoc @PREFIX@/bin/pydoc3.13
-bin/python @PREFIX@/bin/python3.13
-bin/python3 @PREFIX@/bin/python3.13
+bin/idle @PREFIX@/bin/idle3.14
+bin/pydoc @PREFIX@/bin/pydoc3.14
+bin/python @PREFIX@/bin/python3.14
+bin/python3 @PREFIX@/bin/python3.14
