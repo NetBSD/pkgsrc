@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6007 2025/10/10 05:06:04 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6008 2025/10/10 08:26:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8736,3 +8736,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ada-libgpr2-25 to 25.2.0 [dkazankov 2025-10-09]
 	Updated audio/mpg123 to 1.33.3 [adam 2025-10-10]
 	Updated parallel/py-ipyparallel to 9.0.2 [adam 2025-10-10]
+	Updated devel/py-propcache to 0.4.1 [adam 2025-10-10]
+	Updated www/py-pysaml2 to 7.5.4 [adam 2025-10-10]
+	Updated devel/py-test-lazy-fixtures to 1.4.0 [adam 2025-10-10]
