@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6011 2025/10/10 09:52:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6012 2025/10/10 11:53:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8745,3 +8745,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-tomli to 2.3.0 [adam 2025-10-10]
 	Updated devel/py-astroid to 4.0.0 [adam 2025-10-10]
 	Updated devel/py-pylint to 3.3.9 [adam 2025-10-10]
+	Updated lang/python312 to 3.12.12 [adam 2025-10-10]
+	Updated lang/py312-html-docs to 3.12.12 [adam 2025-10-10]
