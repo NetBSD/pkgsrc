@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.601 2025/10/10 16:26:23 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.602 2025/10/10 17:11:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28111,3 +28111,36 @@ curl<8.12.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 curl<8.12.0	unspecified		https://nvd.nist.gov/vuln/detail/CVE-2025-0665
 curl<8.12.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-0725
 cyrus-imapd<3.8.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34055
+dante<1.4.4	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-54662
+dav1d<1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-32570
+dav1d<1.4.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-1580
+dbus<1.15.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-34969
+dmidecode<3.5	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2023-30630
+# not an issue in pkgsrc due how it is installed
+#dnscrypt-proxy-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-36587
+dnsdist>=1.9.0<1.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25581
+dnsdist<1.9.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-30193
+dnsmasq<2.90	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-49441
+drupal<9.3.12	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-25273
+drupal<9.3.12	improper-access-control	https://nvd.nist.gov/vuln/detail/CVE-2022-25274
+drupal<9.4.3	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2022-25275
+drupal<9.4.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-25276
+drupal<9.4.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-25277
+drupal<9.4.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2022-25278
+drupal<10.0.8	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-31250
+drupal<10.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-11941
+drupal<10.2.10	arbitrary-file-write	https://nvd.nist.gov/vuln/detail/CVE-2024-11942
+drupal<11.0.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-12393
+drupal<10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-22362
+drupal<11.0.5	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-45440
+drupal<11.0.8	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-55634
+drupal<7.102	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-55635
+drupal<11.0.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-55636
+drupal<11.0.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-55637
+drupal<10.3.9	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-55638
+drupal<11.1.3	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-3057
+drupal<11.1.3	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-31673
+drupal<11.1.3	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-31674
+drupal<11.1.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-31675
+zabbix-server-{mysql,postgresql}<6.0.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29458
+zabbix-proxy<6.0.18			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29458
