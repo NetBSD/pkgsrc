@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:17:36 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/10/10 19:11:59 mrg Exp $
 
 BLAKE2s (pgp263is.tar.gz) = 2f8d378b8beb48f20debf272614ebb6745e1624c1b0d4b722f292f30d1ae70e9
 SHA512 (pgp263is.tar.gz) = ced42d884f8dbbc7afc2dfbe485716333df5fa04a5727dc63fa3c7504e53447a7561d7406a057fba18e6239836e40cc13de4b30f2223552c6dc3dae0664a4374
@@ -12,3 +12,5 @@ SHA1 (patch-af) = 6f58d2b26a16886947f2e5681a672a7cf9979f42
 SHA1 (patch-ag) = 377b17bc3783737c492708de57d6f4259e358a66
 SHA1 (patch-ah) = 15fe0597566ad8bf3123a54d3697e104e85ee425
 SHA1 (patch-ai) = 3afafb582e229e70721d7ee96d25d7d1d006d870
+SHA1 (patch-src_getopt.h) = 74f357ab6b7aa8f2b547406f02a396bdfd26edad
+SHA1 (patch-src_more.c) = 1ea335fdd77c4ea71fdb1f53a00e465765f2d09f
