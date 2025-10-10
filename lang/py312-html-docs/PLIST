@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/04 22:11:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/10/10 11:53:08 adam Exp $
 share/doc/python3.12/.buildinfo
 share/doc/python3.12/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.12/_images/hashlib-blake2-tree.png
@@ -524,7 +524,6 @@ share/doc/python3.12/_static/minus.png
 share/doc/python3.12/_static/og-image.png
 share/doc/python3.12/_static/opensearch.xml
 share/doc/python3.12/_static/plus.png
-share/doc/python3.12/_static/py.png
 share/doc/python3.12/_static/py.svg
 share/doc/python3.12/_static/pydoctheme.css
 share/doc/python3.12/_static/pydoctheme_dark.css
