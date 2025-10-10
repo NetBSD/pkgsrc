@@ -1,12 +1,10 @@
-# $NetBSD: tools.QNX.mk,v 1.3 2023/03/04 23:29:24 rillig Exp $
+# $NetBSD: tools.QNX.mk,v 1.4 2025/10/10 20:46:36 js Exp $
 #
 # System-supplied tools for the QNX operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
-TOOLS_PLATFORM.bison?=		${QNX_HOST}/usr/bin/bison
-TOOLS_PLATFORM.bison-yacc?=	${QNX_HOST}/usr/bin/bison -y
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
 TOOLS_PLATFORM.bzip2?=		/usr/bin/bzip2
 TOOLS_PLATFORM.cat?=		/bin/cat
