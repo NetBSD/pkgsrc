@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2025/06/04 14:14:17 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/10/10 12:57:12 adam Exp $
 
-BLAKE2s (Python-3.11.13.tar.xz) = 8b1ce2c653a1ebe789d177a9bfd95c07a3fd5378e7f0dd3d6ce37e49cc7cc703
-SHA512 (Python-3.11.13.tar.xz) = 70f57464d548eac4fe0d0c7f85a14b0e549a4e25ef66de4fc36b06ce72a3efe87dadfcd56ee275c10483cf802fbc9d73b61f9fb2941a46e2f92f075aeb1afe85
-Size (Python-3.11.13.tar.xz) = 20117496 bytes
+BLAKE2s (Python-3.11.14.tar.xz) = 9d0698e28a8bbc4f77f2105f197ff0056f6f513f6bb13b9444c60a938f7160b4
+SHA512 (Python-3.11.14.tar.xz) = 8b5aa917fe67dbaa3c306239ed56c16cd7a3b4b701fab0b3dc0d342d60176c75440713bcab0c59a3289ac4a0f06103bd31140c492556e1937fcdbd990675f9e5
+Size (Python-3.11.14.tar.xz) = 20326860 bytes
 SHA1 (patch-Include_pymacro.h) = 271a891892dca1a3aaa3bedcae626a68a36cae0b
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_distutils_unixccompiler.py) = 8a91e8f4f86517a62408c3a10ed5eb50c4091fbf
