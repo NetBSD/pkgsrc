@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/10/06 08:53:46 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/10 08:19:34 adam Exp $
 
-DISTNAME=	pysaml2-7.5.3
+DISTNAME=	pysaml2-7.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysaml2/}
