@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.602 2025/10/10 17:11:24 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.603 2025/10/10 17:56:29 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25993,10 +25993,14 @@ python39<3.9.20	ip-range-classification	https://github.com/python/cpython/issues
 python310<3.10.15	ip-range-classification	https://github.com/python/cpython/issues/113171
 python311<3.11.10	ip-range-classification	https://github.com/python/cpython/issues/113171
 python312<3.12.4	ip-range-classification	https://github.com/python/cpython/issues/113171
-emacs29<29.4	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
-emacs28-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
-emacs27-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
-emacs26-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
+emacs29<29.4		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs29-nox11<29.4	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs28-[0-9]*		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs28-nox11-[0-9]*	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs27-[0-9]*		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs27-nox11-[0-9]*	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs26-[0-9]*		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
+emacs26-nox11-[0-9]*	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
 samba4<4.19.7	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
 samba4>=4.20<4.20.2	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
 mit-krb5>=1.3<1.21.3	truncate-message	https://nvd.nist.gov/vuln/detail/CVE-2024-37370
@@ -28144,3 +28148,48 @@ drupal<11.1.3	code-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-31674
 drupal<11.1.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-31675
 zabbix-server-{mysql,postgresql}<6.0.18	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29458
 zabbix-proxy<6.0.18			denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29458
+easy-rsa<3.2.0	weak-cryptography	https://nvd.nist.gov/vuln/detail/CVE-2024-13454
+editorconfig-core<0.12.7	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-53849
+elasticsearch<8.9.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-31417
+elasticsearch<8.8.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-31418
+elasticsearch<8.9.0	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31419
+elasticsearch<8.10.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-46673
+elasticsearch<8.11.2	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-49921
+elasticsearch<8.17.0	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-12539
+elasticsearch<8.13.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-23444
+elasticsearch<8.14.0	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-23445
+elasticsearch<8.11.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23449
+elasticsearch<8.13.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23450
+elasticsearch<8.13.0	incorrect-authorization	https://nvd.nist.gov/vuln/detail/CVE-2024-23451
+elasticsearch<8.14.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-37280
+elasticsearch<8.13.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-43709
+elasticsearch<8.16.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52979
+elasticsearch<8.15.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52980
+elasticsearch<8.15.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-52981
+element-web<1.11.81	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-47779
+element-web<1.11.85	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2024-51749
+element-web<1.11.85	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-51750
+element-web<1.11.97	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-32026
+emacs29<29.3		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-30202
+emacs29-nox11<29.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-30202
+emacs29<29.3		invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-30203
+emacs29-nox11<29.3	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-30203
+emacs29<29.3		security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-30204
+emacs29-nox11<29.3	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-30204
+emacs30<30.1		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-53920
+emacs30-nox11<30.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-53920
+emacs29<29.4.0		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1244
+emacs29-nox11<29.4.0	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1244
+engrampa<1.28.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-52138
+erlang<27.2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-26618
+erlang<27.3.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-30211
+erlang<27.3.4	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2025-46712
+erlang-jose<1.11.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-50966
+exiftags-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-50671
+exiftags-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-42851
+exim<4.98	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-39929
+exiv2<0.27.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-18831
+exiv2<0.28.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-24826
+exiv2<0.28.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25112
+expat<2.6.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50602
+eza<0.18.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-25817
