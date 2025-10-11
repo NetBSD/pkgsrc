@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2021/11/24 06:55:41 pho Exp $
+# $NetBSD: Makefile,v 1.67 2025/10/11 09:53:52 martin Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		10
@@ -66,3 +66,7 @@ post-install:
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-function-declaration -Wno-implicit-int
+.endif
