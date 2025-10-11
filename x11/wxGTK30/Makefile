@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2025/08/30 22:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/10/11 17:36:17 martin Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -65,6 +65,11 @@ CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-function-declaration
+.endif
 
 .if defined(_USE_RPATH) && !empty(_USE_RPATH:M[yY][eE][sS])
 SUBST_CLASSES+=		wx-rpath
