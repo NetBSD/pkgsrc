@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6026 2025/10/11 13:17:13 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6027 2025/10/11 13:18:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8762,3 +8762,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/termusic to 0.12.0 [pin 2025-10-11]
 	Updated textproc/scooter to 0.8.1 [pin 2025-10-11]
 	Updated x11/qt6ct to 0.11 [pin 2025-10-11]
+	Updated shells/oh-my-posh to 27.1.2 [pin 2025-10-11]
