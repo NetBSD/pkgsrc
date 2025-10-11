@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6019 2025/10/11 10:14:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6020 2025/10/11 11:38:13 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8756,3 +8756,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/btop to 1.4.5nb1 [wiz 2025-10-11]
 	Updated games/openrct2 to 0.4.27 [triaxx 2025-10-11]
 	Updated lang/python314 to 3.14.0nb1 [wiz 2025-10-11]
+	Updated graphics/ImageMagick to 7.1.2.5 [triaxx 2025-10-11]
