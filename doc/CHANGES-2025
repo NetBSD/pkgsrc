@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6016 2025/10/11 09:02:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6017 2025/10/11 09:29:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8753,3 +8753,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py310-html-docs to 3.10.19 [adam 2025-10-10]
 	Updated games/luanti to 5.14.0 [ktnb 2025-10-10]
 	Updated x11/libxkbcommon to 1.12.0 [wiz 2025-10-11]
+	Updated sysutils/btop to 1.4.5nb1 [wiz 2025-10-11]
