@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/10/11 09:50:06 martin Exp $
+# $NetBSD: Makefile,v 1.36 2025/10/11 10:19:15 martin Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -15,6 +15,12 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBS+=			-lXext
 
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=		-Wno-incompatible-pointer-types
+.endif
+
+
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 # GLUT is used only by the examples, which aren't built or installed.
@@ -25,8 +31,3 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
-CFLAGS+=		-Wno-incompatible-pointer-types
-.endif
-
