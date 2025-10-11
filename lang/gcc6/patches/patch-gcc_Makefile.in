@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_Makefile.in,v 1.2 2016/09/30 17:17:37 sevan Exp $
+$NetBSD: patch-gcc_Makefile.in,v 1.3 2025/10/11 16:14:18 js Exp $
 
 Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
 are found. Note that there must not be a whitespace between
@@ -15,3 +15,12 @@ misinterpreted by linker (e.g. Apple's ld).
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \
+@@ -2638,7 +2639,7 @@ $(genprogerr:%=build/gen%$(build_exeext)
+ genprog = $(genprogerr) check checksum condmd match
+ 
+ # These programs need libs over and above what they get from the above list.
+-build/genautomata$(build_exeext) : BUILD_LIBS += -lm
++build/genautomata$(build_exeext) : BUILD_LIBS += -lm $(GENAUTOMATA_LDFLAGS)
+ 
+ build/genrecog$(build_exeext) : build/hash-table.o build/inchash.o
+ build/gencfn-macros$(build_exeext) : build/hash-table.o build/ggc-none.o
