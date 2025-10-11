@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/07/27 09:34:50 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/10/11 21:48:05 wiz Exp $
 
-BLAKE2s (pylast-5.5.0.tar.gz) = dc57a267d126f391eaf377a6a19dd1a2915db817ee66f1ced9e66e19c565a803
-SHA512 (pylast-5.5.0.tar.gz) = c4776bf1f430ab8f819dceadbf3efd79ce61bce4780588cd82f12ff99c2cdb96f08871b14693e81183bafe03afd5dda242eebd083e60cc5d035b5ca0f42cc289
-Size (pylast-5.5.0.tar.gz) = 45569 bytes
+BLAKE2s (pylast-6.0.0.tar.gz) = 0e17a95556663b275b443376f2c07531022b7b95cbc150056e23ba4d19ec521f
+SHA512 (pylast-6.0.0.tar.gz) = 5bb462f369f003fc78e1998915acdc2f96b320670ae80d71009b9e88d513639ac376424d8f3840fb7bfef9f3133247590460f00737d754933b7c5da8f9eb7561
+Size (pylast-6.0.0.tar.gz) = 45408 bytes
