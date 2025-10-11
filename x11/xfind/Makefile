@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/08/06 19:57:56 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/11 16:48:48 vins Exp $
 
 DISTNAME=	xfind-src
-PKGNAME=	${DISTNAME:S,-src,,}-1.0
+VERSION=	1.0.3
+PKGNAME=	${DISTNAME:S,-src,,}-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
