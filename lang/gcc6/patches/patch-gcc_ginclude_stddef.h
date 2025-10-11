@@ -1,13 +1,27 @@
-$NetBSD: patch-gcc_ginclude_stddef.h,v 1.1 2019/08/06 06:16:15 maya Exp $
+$NetBSD: patch-gcc_ginclude_stddef.h,v 1.2 2025/10/11 16:14:18 js Exp $
 
 handle netbsd/arm not using the same include guards for
 ansi.h as other archs
+
+QNX: Include the system <stddef.h> first, as otherwise we'll end up without
+ptrdiff_t and size_t depending on include order.
 
 Upstreamed in 2018-06-20 (GCC 9.x)
 
 --- gcc/ginclude/stddef.h.orig	2017-01-01 12:07:43.000000000 +0000
 +++ gcc/ginclude/stddef.h
-@@ -46,9 +46,7 @@ see the files COPYING3 and COPYING.RUNTI
+@@ -21,6 +21,10 @@ a copy of the GCC Runtime Library Except
+ see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+ <http://www.gnu.org/licenses/>.  */
+ 
++#ifdef __QNX__
++# include_next <stddef.h>
++#endif
++
+ /*
+  * ISO C Standard:  7.17  Common definitions  <stddef.h>
+  */
+@@ -46,9 +50,7 @@ see the files COPYING3 and COPYING.RUNTI
  /* This avoids lossage on SunOS but only if stdtypes.h comes first.
     There's no way to win with the other order!  Sun lossage.  */
  
@@ -18,7 +32,7 @@ Upstreamed in 2018-06-20 (GCC 9.x)
  #include <machine/ansi.h>
  #endif
  /* On FreeBSD 5, machine/ansi.h does not exist anymore... */
-@@ -56,11 +54,7 @@ see the files COPYING3 and COPYING.RUNTI
+@@ -56,11 +58,7 @@ see the files COPYING3 and COPYING.RUNTI
  #include <sys/_types.h>
  #endif
  
@@ -31,7 +45,7 @@ Upstreamed in 2018-06-20 (GCC 9.x)
  #if !defined(_SIZE_T_) && !defined(_BSD_SIZE_T_)
  #define _SIZE_T
  #endif
-@@ -87,7 +81,7 @@ see the files COPYING3 and COPYING.RUNTI
+@@ -87,7 +85,7 @@ see the files COPYING3 and COPYING.RUNTI
  #undef _WCHAR_T_
  #undef _BSD_WCHAR_T_
  #endif
@@ -40,7 +54,7 @@ Upstreamed in 2018-06-20 (GCC 9.x)
  
  /* Sequent's header files use _PTRDIFF_T_ in some conflicting way.
     Just ignore it.  */
-@@ -359,11 +353,7 @@ typedef __WINT_TYPE__ wint_t;
+@@ -359,11 +357,7 @@ typedef __WINT_TYPE__ wint_t;
  #undef __need_wint_t
  #endif
  
@@ -53,7 +67,7 @@ Upstreamed in 2018-06-20 (GCC 9.x)
  /*  The references to _GCC_PTRDIFF_T_, _GCC_SIZE_T_, and _GCC_WCHAR_T_
      are probably typos and should be removed before 2.8 is released.  */
  #ifdef _GCC_PTRDIFF_T_
-@@ -391,7 +381,7 @@ typedef __WINT_TYPE__ wint_t;
+@@ -391,7 +385,7 @@ typedef __WINT_TYPE__ wint_t;
  #undef _WCHAR_T_
  #undef _BSD_WCHAR_T_
  #endif
