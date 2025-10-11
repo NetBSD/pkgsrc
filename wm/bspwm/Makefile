@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2020/11/25 20:48:36 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/11 13:13:50 pin Exp $
 
-DISTNAME=		bspwm-0.9.10
+DISTNAME=		bspwm-0.9.12
 CATEGORIES=		wm
 MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
