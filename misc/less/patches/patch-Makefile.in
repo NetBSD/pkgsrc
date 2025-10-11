@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.4 2024/12/06 08:48:17 pin Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2025/10/11 20:13:39 pin Exp $
 
 Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 
---- Makefile.in.orig	2024-12-06 08:39:20.581166660 +0000
+--- Makefile.in.orig	2025-10-11 17:56:42.244561170 +0000
 +++ Makefile.in
-@@ -16,9 +16,9 @@ LDFLAGS = @LDFLAGS@
+@@ -16,15 +16,15 @@ LDFLAGS = @LDFLAGS@
  CPPFLAGS = @CPPFLAGS@
  EXEEXT = @EXEEXT@
  O=o
@@ -14,9 +14,17 @@ Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 -endif
 +.endif
  
- LIBS = @LIBS@
+ # Make with SAN=1 to enable the gcc address sanitizer.
+-ifeq ($(SAN),1)
++.if !empty(SAN)
+ CPPFLAGS += -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all -fsanitize=float-divide-by-zero -fsanitize=float-cast-overflow -fno-sanitize=null -fno-sanitize=alignment
+ LIBSAN = -lasan -lubsan
+-endif
++.endif
  
-@@ -55,9 +55,9 @@ OBJ = \
+ LIBS = $(LIBSAN) @LIBS@
+ 
+@@ -60,9 +60,9 @@ OBJ = \
  	output.${O} pattern.${O} position.${O} prompt.${O} search.${O} signal.${O} \
  	tags.${O} ttyin.${O} version.${O} xbuf.${O}  @REGEX_O@
  
