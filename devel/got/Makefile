@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/09/28 14:45:23 khorben Exp $
+# $NetBSD: Makefile,v 1.27 2025/10/11 18:37:20 vins Exp $
 
-DISTNAME=	got-portable-0.118
+DISTNAME=	got-portable-0.120
 PKGNAME=	${DISTNAME:S/-portable//}
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
@@ -28,8 +28,8 @@ PKG_HOME._gotd=		/nonexistent
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		YACC=${YACC:Q}
-CONFIGURE_ENV+=		CFLAGS=${CFLAGS:Q}
-CONFIGURE_ENV+=		LDFLAGS=${LDFLAGS:Q}
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
+CONFIGURE_ENV+=		LDFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--enable-gotd
 CONFIGURE_ARGS+=	--enable-cvg
 CONFIGURE_ARGS+=	--with-gotd-empty-path=${VARBASE}/empty
