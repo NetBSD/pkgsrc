@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.9 2011/08/25 14:54:06 hans Exp $
+$NetBSD: patch-ac,v 1.10 2025/10/11 22:14:36 mrg Exp $
 
---- ckcdeb.h.orig	2010-08-23 15:30:56.000000000 +0200
-+++ ckcdeb.h	2011-08-23 10:31:55.103102070 +0200
-@@ -4532,7 +4532,6 @@ extern int errno;
+--- ckcdeb.h.orig	2010-08-23 06:30:56.000000000 -0700
++++ ckcdeb.h	2025-10-11 15:06:08.218109885 -0700
+@@ -2190,6 +2190,9 @@ _PROTOTYP( void bleep, (short) );
+ #endif	/* __FreeBSD__ */
+ #endif	/* __linux__ */
+ #endif	/* HAVE_OPENPTY */
++#ifdef __NetBSD__
++#include <util.h>
++#endif
+ #endif	/* NO_OPENPTY */
+ 
+ /* Kermit feature selection */
+@@ -4532,7 +4535,6 @@ extern int errno;
    following is an anachronism and should be the execption rather than the
    rule.
  */
@@ -10,3 +20,13 @@ $NetBSD: patch-ac,v 1.9 2011/08/25 14:54:06 hans Exp $
  #endif /* __GLIBC__ */
  #endif /* OS2 */
  #endif /* VMS */
+@@ -5292,6 +5294,9 @@ typedef int WAIT_T;
+ #undef CK_OSF_BSD
+ #endif /* CK_OSF_BSD */
+ #else /* !POSIX */
++#ifdef __NetBSD__
++#include <sys/wait.h>
++#endif
+ typedef int WAIT_T;
+ #endif /* POSIX */
+ #endif /* MACHWAIT */

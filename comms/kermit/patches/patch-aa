@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
+$NetBSD: patch-aa,v 1.11 2025/10/11 22:14:36 mrg Exp $
 
 * Get K5LIB, K5INC, SSLLIB and SSLINC from pkgsrc.
 * s/-lgssapi/-lgssapi_krb5/ on netbsd+krb5* 
@@ -6,10 +6,11 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
 * s@$(K5INC)/krb5@$(K5INC)/kerberosv5/ on solaris9g+krb5+ssl
 * On linux get HAVE_LIBCURSES and HAVE_CURSES from pkgsrc (with the 
   curses include and library pathes coming from BUILDLINK_*FLAGS).
+* Use MAINTYPE=int on NetBSD.
 
 
---- makefile.orig	2011-08-21 15:12:07.000000000 +0000
-+++ makefile
+--- makefile.orig	2011-08-21 08:12:07.000000000 -0700
++++ makefile	2025-10-11 14:48:36.917185449 -0700
 @@ -824,12 +824,12 @@ manroot = $(prefix)
  
  K4LIB=-L/usr/kerberos/lib
@@ -27,8 +28,27 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  # To override these assignments; for example, if your OpenSSL files are
  # not in /usr/local/ssl, invoke the desired target like this:
-@@ -1869,7 +1869,7 @@ netbsd+krb5:
+@@ -1812,6 +1812,7 @@ netbsd netbsd2 netbsd15 netbsd16 old-net
+ 	"CFLAGS=`grep fseeko /usr/include/stdio.h > /dev/null && \
+ 	echo '-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'` \
+ 	-DBSD44 -DCK_CURSES -DTCPSOCKET -DUSE_STRERROR -DHAVE_OPENPTY \
++	-DMAINTYPE=int \
+ 	-funsigned-char -DHERALD=\"\\\" NetBSD `uname -r`\\\"\" \
+ 	-DCK_DTRCD -DCK_DTRCTS -DTPUTSARGTYPE=int -DFNFLOAT $(KFLAGS) -O" \
+ 	"LIBS= -lcurses -lcrypt -lm -lutil $(LIBS)"
+@@ -1839,6 +1840,7 @@ netbsd+ssl netbsd+openssl:
+ 	$(MAKE) netbsd KTARGET=$${KTARGET:-$(@)} "CC = $(CC)" "CC2 = $(CC2)" \
+ 	"KFLAGS= -DCK_AUTHENTICATION -DCK_ENCRYPTION -DCK_CAST $$HAVE_DES \
+ 	-DCK_SSL -DCK_PAM -DZLIB -DNO_DCL_INET_ATON $$OPENSSLOPTION \
++	-DMAINTYPE=int \
+ 	$(KFLAGS)" "LNKFLAGS = $(LNKFLAGS)" \
+ 	"LIBS= -L/usr/pkg/lib -R/usr/pkg/lib -lssl $$DES_LIB -lcurses \
+ 	-lcrypto -lcrypt -lz -lm -lpam -lutil $(LIBS)"
+@@ -1867,9 +1869,10 @@ netbsd+krb5:
+ 	$(MAKE) netbsd KTARGET=$${KTARGET:-$(@)} "CC = $(CC)" "CC2 = $(CC2)" \
+ 	"KFLAGS= -DCK_AUTHENTICATION -DCK_ENCRYPTION -DCK_KERBEROS -DKRB5 \
  	-DCK_CAST $$HAVE_DES -DNOFTP_GSSAPI $(K5INC) $(K5INC)/krb5 \
++	-DMAINTYPE=int \
  	$(KFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lcurses $$DES_LIB \
 -	-lcrypto -lgssapi -lkrb5 -lm -lutil $(LIBS)"
@@ -36,8 +56,11 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  # NetBSD - With Kerberos 5 and SSL and Zlib.
  # OK: 2011/08/21 on 5.1 with MIT Kerberos.
-@@ -1896,7 +1896,7 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
+@@ -1894,9 +1897,10 @@ netbsd+krb5+ssl netbsd+krb5+openssl+zlib
+ 	"KFLAGS= -DCK_AUTHENTICATION -DCK_ENCRYPTION -DCK_CAST $$HAVE_DES \
+ 	-DCK_KERBEROS -DKRB5 -DNOFTP_GSSAPI $(K5INC) $(K5INC)/krb5 \
  	-DCK_SSL -DCK_PAM -DZLIB -DNO_DCL_INET_ATON $$OPENSSLOPTION \
++	-DMAINTYPE=int \
  	$(KFLAGS)" "LNKFLAGS = $(LNKFLAGS)" \
  	"LIBS= $(K5LIB) -L/usr/pkg/lib -R/usr/pkg/lib -lssl $$DES_LIB \
 -	-lcrypto -lcrypt -lgssapi -lkrb5 -lz -lm -lpam -lutil -lcurses $(LIBS)"
@@ -45,7 +68,23 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  #Special Security Enhanced NetBSD target with SRP, SSL, and zlib support.
  #To build this, you need to BUILD the pkgsrc srp_client package.  After
-@@ -3544,7 +3544,7 @@ solaris2xg+openssl+zlib+pam+shadow:
+@@ -1911,6 +1915,7 @@ netbsd+ssl+srp+zlib:
+ 	"CFLAGS= -DBSD44 -DCK_CURSES -DTCPSOCKET -DUSE_STRERROR -DNETBSD15 \
+ 	-DCK_DTRCD -DCK_DTRCTS -DTPUTSARGTYPE=int -DHAVE_OPENPTY \
+ 	-I/usr/include/openssl -I/usr/pkg/include \
++	-DMAINTYPE=int \
+ 	-DCK_AUTHENTICATION -DCK_SRP -DPRE_SRP_1_4_5 -DCK_ENCRYPTION \
+ 	-DCK_CAST -DCK_DES -DLIBDES -DCK_SSL -DZLIB -DFNFLOAT $(KFLAGS) -O" \
+ 	"LIBS= -L/usr/pkg/lib -R/usr/pkg/lib -lcurses -lsrp -lgmp -ldes \
+@@ -1928,6 +1933,7 @@ netbsdn:
+ 	$(MAKE) CC=$(CC) CC2=$(CC2) xermit KTARGET=$${KTARGET:-$(@)} \
+ 	"CFLAGS=`grep fseeko /usr/include/stdio.h > /dev/null && \
+ 	echo '-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'` \
++	-DMAINTYPE=int \
+ 	-DBSD44 -DCK_CURSES -DTCPSOCKET -DUSE_STRERROR -DHAVE_OPENPTY \
+ 	-DHERALD=\"\\\" NetBSD `uname -r`\\\"\" \
+ 	-DCK_DTRCD -DCK_DTRCTS -DTPUTSARGTYPE=int -DFNFLOAT $(KFLAGS) -O" \
+@@ -3544,7 +3550,7 @@ solaris2xg+openssl+zlib+pam+shadow:
  	-DCK_AUTHENTICATION -DCK_SSL -DCK_PAM -DCK_SHADOW  -DZLIB \
  	-DBIGBUFOK $(SSLINC) $(KFLAGS)" \
  	"LIBS= $(SSLLIB) -ltermlib \
@@ -54,7 +93,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  
  #Ditto but with GCC 3.1 in which you have to specify 32-bit with -m32.
  #In Solaris 9 (and maybe 8) you'll also need specifiy the Library path.
-@@ -3899,7 +3899,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
+@@ -3899,7 +3905,7 @@ solaris9g+krb5+ssl solaris10g+krb5+ssl s
  	-DCK_CURSES -DCK_NEWTERM -DDIRENT -DHDBUUCP -DTCPSOCKET  -DBIGBUFOK \
  	-DCK_AUTHENTICATION -DCK_SSL -DZLIB -DCK_KERBEROS -DKRB5 \
  	-DCK_ENCRYPTION -DCK_CAST $$OPENSSLOPTION \
@@ -63,7 +102,7 @@ $NetBSD: patch-aa,v 1.10 2011/12/06 01:19:16 sbd Exp $
  	"LIBS= $(SSLLIB) $(K5LIB) -lz -lssl -ltermlib -lsocket -lnsl -lm \
  	-lresolv -lcrypto \
  	$$GSSAPILIB -lkrb5 -lcom_err -lk5crypto $$DES_LIB $(LIBS)"
-@@ -6095,22 +6095,6 @@ linux:
+@@ -6095,22 +6101,6 @@ linux:
  	if test `grep openpty /usr/include/pty.h | wc -l` -gt 0; \
  	then HAVE_OPENPTY='-DHAVE_OPENPTY'; \
  	else HAVE_OPENPTY=''; fi ; \
