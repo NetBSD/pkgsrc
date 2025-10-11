@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2025/10/07 10:43:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2025/10/11 13:15:52 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	abi_stable-0.11.3
 CARGO_CRATE_DEPENDS+=	abi_stable_derive-0.11.3
@@ -175,7 +175,7 @@ CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.1
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.95
 CARGO_CRATE_DEPENDS+=	quick-xml-0.32.0
 CARGO_CRATE_DEPENDS+=	quickscope-0.2.0
-CARGO_CRATE_DEPENDS+=	quote-1.0.40
+CARGO_CRATE_DEPENDS+=	quote-1.0.41
 CARGO_CRATE_DEPENDS+=	r-efi-5.2.0
 CARGO_CRATE_DEPENDS+=	rand-0.8.5
 CARGO_CRATE_DEPENDS+=	rand-0.9.2
@@ -188,8 +188,8 @@ CARGO_CRATE_DEPENDS+=	ratatui-0.29.0
 CARGO_CRATE_DEPENDS+=	rayon-1.11.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.13.0
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.12
-CARGO_CRATE_DEPENDS+=	regex-1.11.2
-CARGO_CRATE_DEPENDS+=	regex-automata-0.4.9
+CARGO_CRATE_DEPENDS+=	regex-1.11.3
+CARGO_CRATE_DEPENDS+=	regex-automata-0.4.11
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
 CARGO_CRATE_DEPENDS+=	repr_offset-0.2.2
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.24
