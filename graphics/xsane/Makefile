@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2025/08/30 22:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.158 2025/10/11 14:20:03 martin Exp $
 
 DISTNAME=	xsane-0.999
 PKGNAME=	xsane-0.99.9
@@ -18,6 +18,12 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-gimp
 CONFIGURE_ARGS+=	--disable-gimp2
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=		-Wno-implicit-function-declaration
+CFLAGS+=		-Wno-incompatible-pointer-types
+.endif
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
