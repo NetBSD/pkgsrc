@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2025/03/03 14:34:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/11 11:47:59 rhialto Exp $
 
 DISTNAME=	open-simh-4.1.0
-PKGNAME=	open-simh-4.1.0.20250117
-PKGREVISION=	2
+PKGNAME=	open-simh-4.1.0.20250910
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	feb155fbc49333e879ab082d481e6dcce27d2d91
+GITHUB_TAG=	6e9324e09f4f364346310de34849077c986c29f2
 
 MAINTAINER=	rhialto@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -66,6 +65,7 @@ INCLUDES=		${PREFIX:Q}/include:\
 			${BUILDLINK_PREFIX.libpcap:Q}/include/pcap:\
 			${BUILDLINK_PREFIX.pcre:Q}/include/pcre:\
 			${BUILDLINK_PREFIX.png:Q}/include:\
+			${BUILDLINK_PREFIX.zlib:Q}/include:\
 			/usr/include
 LIBRARIES=		${PREFIX:Q}/lib:\
 			${BUILDLINK_PREFIX.SDL2:Q}/lib${LIBABISUFFIX}:\
@@ -73,6 +73,7 @@ LIBRARIES=		${PREFIX:Q}/lib:\
 			${BUILDLINK_PREFIX.libpcap:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.pcre:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.zlib:Q}/lib${LIBABISUFFIX}:\
 			/usr/lib${LIBABISUFFIX}
 MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
@@ -108,12 +109,19 @@ do-test:
 	cd ${WRKSRC} && ${TEST_MAKE_CMD} clean
 	cd ${WRKSRC} && ${TEST_MAKE_CMD} all
 
+# The "test" target doesn't need a "build" first.
+.if make(test)
+do-build:
+	@echo "No separate build phase is needed when doing a 'make test'."
+.endif
+
 USE_BUILTIN.editline=	no	# simh uses <editline/readline.h>
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
