@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.30 2021/10/26 10:06:00 nia Exp $
+$NetBSD: distinfo,v 1.31 2025/10/11 22:14:36 mrg Exp $
 
 BLAKE2s (kermit-9.0.302/cku302.tar.gz) = 246c177058b8855f0b0e6d81fc624fbc2820ab4d121ac43d83c285131cae527f
 SHA512 (kermit-9.0.302/cku302.tar.gz) = 2cfc264e5262d29618fdf218fd3407fd9049b16110972cdddb03d114703b7a0ea13c4b0a354f50c2a9f70d4727732fe4d1920b5c656f969bc56c1eb9dc3c43fa
 Size (kermit-9.0.302/cku302.tar.gz) = 3122219 bytes
-SHA1 (patch-aa) = fd3a613ce3cd3755a2e3b8baf33df33593713024
+SHA1 (patch-aa) = f0242120b32b31bac3e0e6f2d1272f86002a2b89
 SHA1 (patch-ab) = 280bfca4d44630bc9ec4a9331b650b81c7f80774
-SHA1 (patch-ac) = 62cc9e92f2413a42312d9f6d168ee85664b6aab9
+SHA1 (patch-ac) = 4fc10a60467afe528a800a608112b7719e4d0e35
 SHA1 (patch-ad) = 414f61c19185e4a82a8326121c2d9dacfba48077
 SHA1 (patch-ae) = 3cd335d719933fce95c2f5b05e9959d0d1ca06e0
 SHA1 (patch-af) = 2a09f9f933d3c1e6860983d8138ac61f33306ef7
