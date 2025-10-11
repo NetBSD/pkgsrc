@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2025/09/22 14:25:04 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/10/11 20:11:21 mrg Exp $
 
 BLAKE2s (ffmpeg-5.1.7.tar.xz) = 542554a5ead92dc8402a6c2ad4bd330c6bc5073beb6e154d3c44d7d6d79dbd53
 SHA512 (ffmpeg-5.1.7.tar.xz) = 2fb54ef21c01b4702a4e8d18970fa84be74000af4704c456b32441ec673eb71be0c3042884f2f79ae867c5214ae99adf88e1f19aadc39ba19d1415a6c797048f
@@ -9,6 +9,8 @@ SHA1 (patch-doc_Makefile) = d45fc311f47e6cd8a8432659d7bd77e50b858e43
 SHA1 (patch-doc_general__contents.texi) = 13704795d2688dc0377a512dc6e65025ad674724
 SHA1 (patch-doc_indevs.texi) = 8cd421a67f34ebbe6099102bf1de7c6cdb13dcb7
 SHA1 (patch-doc_outdevs.texi) = 0aec04682b516016abe9b81f6efcbbef97b1c3b2
+SHA1 (patch-libavcodec_pcm-bluray.c) = f700b404a0cc09a0e7c3b0210bda9e4663bdcf2b
+SHA1 (patch-libavcodec_pcm-dvd.c) = 315f6be60b7085ee78575a51863bc6a26f8cf155
 SHA1 (patch-libavdevice_Makefile) = 526efd20021068245d8904c0d55508a540ae4054
 SHA1 (patch-libavdevice_alldevices.c) = 1d12f5b12d37a73512cd8e0f05272e9a64588e49
 SHA1 (patch-libavdevice_sunau.c) = 44dba866c58d508c0f873ffdd9ad8d25c059cc8a
