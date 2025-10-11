@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2025/10/11 02:14:30 mrg Exp $
+
+NetBSD also doesn't want _XOPEN_SOURCE defined to get strcasestr().
+
+
+--- configure.orig	2022-04-10 11:15:36.000000000 -0700
++++ configure	2025-10-10 19:11:06.183827868 -0700
+@@ -12421,7 +12421,7 @@ CC=$lt_save_CC
+ 
+ 
+ case "$ac_cv_host" in
+-   *openbsd* | *solaris* | *irix* | *darwin*)
++   *openbsd* | *solaris* | *irix* | *darwin* | *netbsd*)
+             ;;
+    *)
+ $as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
