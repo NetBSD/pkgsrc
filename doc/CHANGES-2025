@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6024 2025/10/11 13:15:12 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6025 2025/10/11 13:16:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8760,3 +8760,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/open-simh to 4.1.0.20250910 [rhialto 2025-10-11]
 	Updated wm/bspwm to 0.9.12 [pin 2025-10-11]
 	Updated audio/termusic to 0.12.0 [pin 2025-10-11]
+	Updated textproc/scooter to 0.8.1 [pin 2025-10-11]
