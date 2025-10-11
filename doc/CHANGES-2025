@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6038 2025/10/11 21:47:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6039 2025/10/11 21:48:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8774,3 +8774,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/less to 679 [pin 2025-10-11]
 	Updated textproc/py-jellyfish to 1.2.1 [wiz 2025-10-11]
 	Updated sysutils/hwdata to 0.400 [wiz 2025-10-11]
+	Updated audio/py-last to 6.0.0 [wiz 2025-10-11]
