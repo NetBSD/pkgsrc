@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2025/10/11 09:53:52 martin Exp $
+# $NetBSD: Makefile,v 1.68 2025/10/11 10:18:32 martin Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		10
@@ -51,6 +51,11 @@ CFLAGS.SunOS+=	-DSunOS
 # Make sure _NETBSD_SOURCE is defined for updlastlogx
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-function-declaration -Wno-implicit-int
+.endif
+
 post-patch:
 	${MV} ${WRKSRC}/src/feature.h  ${WRKSRC}/src/feature.h.orig
 	${SED} < ${WRKSRC}/src/feature.h.orig > ${WRKSRC}/src/feature.h \
@@ -66,7 +71,3 @@ post-install:
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
-CFLAGS+=	-Wno-implicit-function-declaration -Wno-implicit-int
-.endif
