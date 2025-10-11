@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/07/19 05:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/10/11 16:35:58 martin Exp $
 
 DISTNAME=	libgee-0.20.6
 PKGREVISION=	1
@@ -15,6 +15,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-incompatible-pointer-types
+.endif
 
 PKGCONFIG_OVERRIDE+=	gee-0.8.pc.in
 
