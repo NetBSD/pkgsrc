@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2025/08/30 22:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2025/10/11 18:03:26 martin Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -109,6 +109,13 @@ CONFIGURE_ARGS+=	--enable-gui --enable-x11 --disable-mencoder \
 CONFIGURE_ARGS+=	--enable-xvmc
 
 INSTALLATION_DIRS=	bin share/mplayer/skins
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-function-declaration
+CFLAGS+=	-Wno-incompatible-pointer-types
+CFLAGS+=	-Wno-int-conversion
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin/gmplayer
