@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6028 2025/10/11 13:19:15 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6029 2025/10/11 13:20:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8764,3 +8764,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6ct to 0.11 [pin 2025-10-11]
 	Updated shells/oh-my-posh to 27.1.2 [pin 2025-10-11]
 	Updated net/lagrange to 1.19.3 [pin 2025-10-11]
+	Updated devel/cargo-release to 0.25.20 [pin 2025-10-11]
