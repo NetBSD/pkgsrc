@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.607 2025/10/11 10:06:44 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.608 2025/10/11 10:29:19 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28391,3 +28391,17 @@ frr<10.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-31951
 frr<10.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34088
 frr<10.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-44070
 frr<10.1.2	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-55553
+tiff<4.7.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-3164
+ganglia-webfrontend-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-52762
+ganglia-webfrontend-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-52763
+# disputed by the GCC project as missed hardening bug, not a vulnerability
+#gcc-[0-9]*	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-4039
+# not considered a vulnerability issue, --no-absolute-filenames option should
+# be used instead:
+# <https://lists.gnu.org/archive/html/bug-cpio/2024-03/msg00000.html>
+#gcpio-[0-9]*	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-7216
+# not reproducible, rejected by uptsream
+#gdal-lib-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29480
+gdb<14.1	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-39128
+gdb<14.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-39129
+gdb<14.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-39130
