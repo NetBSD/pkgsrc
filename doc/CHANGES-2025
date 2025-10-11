@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6033 2025/10/11 17:18:12 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6034 2025/10/11 18:37:58 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8769,3 +8769,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfile to 1.0.1 [vins 2025-10-11]
 	Updated x11/xfind to 1.0.3 [vins 2025-10-11]
 	Updated sysutils/fastfetch to 2.53.0 [vins 2025-10-11]
+	Updated devel/got to 0.120 [vins 2025-10-11]
