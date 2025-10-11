@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2025/10/08 07:13:08 adam Exp $
+# $NetBSD: options.mk,v 1.2 2025/10/11 10:14:06 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.python313
+PKG_OPTIONS_VAR=	PKG_OPTIONS.python314
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
 PKG_SUGGESTED_OPTIONS=	x11 readline
 
