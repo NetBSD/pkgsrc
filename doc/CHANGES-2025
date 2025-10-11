@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6031 2025/10/11 16:41:19 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6032 2025/10/11 16:49:26 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8767,3 +8767,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-release to 0.25.20 [pin 2025-10-11]
 	Updated biology/molsketch to 0.8.4 [pin 2025-10-11]
 	Updated sysutils/xfile to 1.0.1 [vins 2025-10-11]
+	Updated x11/xfind to 1.0.3 [vins 2025-10-11]
