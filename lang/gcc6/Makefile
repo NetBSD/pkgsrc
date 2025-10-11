@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2025/04/21 20:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/10/11 16:14:18 js Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -99,7 +99,8 @@ FORTIFY_SUPPORTED=	no
 
 # Disable fixincludes on SmartOS, header changes result in broken includes
 # being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
-.if ${OS_VARIANT} == "SmartOS"
+# Same on QNX.
+.if ${OS_VARIANT} == "SmartOS" || ${OPSYS} == "QNX"
 SUBST_CLASSES+=		fixinc
 SUBST_STAGE.fixinc=	pre-configure
 SUBST_FILES.fixinc=	gcc/Makefile.in
@@ -135,6 +136,11 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
+
+CONFIGURE_ENV.QNX+=	ACCEPT_INFERIOR_RM_PROGRAM=yes
+# Make invokes further configure scripts
+MAKE_ENV.QNX+=		ACCEPT_INFERIOR_RM_PROGRAM=yes
+MAKE_ENV.QNX+=		GENAUTOMATA_LDFLAGS="-Wl,--stack,10000000"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
 # native SSP conflicts with gcc's libssp
