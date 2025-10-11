@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.609 2025/10/11 10:35:07 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.610 2025/10/11 12:02:09 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28365,7 +28365,7 @@ freeimage-[0-9]*	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-2858
 freeimage-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-28584
 freeimage-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-31570
 freerdp2<2.11.5		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-22211
-freerdp2<22.11.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-32039
+freerdp2<2.11.6		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-32039
 freerdp2<2.11.6		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-32040
 freerdp2<2.11.6		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-32041
 freerdp2<2.11.6		out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-32458
