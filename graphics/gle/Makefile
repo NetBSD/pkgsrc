@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2020/01/26 17:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/11 09:50:06 martin Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -25,3 +25,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=		-Wno-incompatible-pointer-types
+.endif
+
