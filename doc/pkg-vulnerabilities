@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.610 2025/10/11 12:02:09 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.611 2025/10/11 12:50:39 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27779,7 +27779,7 @@ python310<3.10.19	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8
 python311<3.11.14	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
 python312<3.12.12	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
 python313-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
-python314<3.14.0nb1	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
+python314<3.14.0nb2	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-8291
 ruby{31,32,33,34}-rack2<2.2.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61770
 ruby{31,32,33,34}-rack>=3<3.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61770
 ruby{31,32,33,34}-rack2<2.2.19	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61771
