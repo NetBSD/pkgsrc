@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/04/28 10:31:33 adam Exp $
+# $NetBSD: Makefile,v 1.57 2025/10/11 20:13:21 js Exp $
 
 .include "Makefile.common"
 
@@ -24,5 +24,4 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_ext2fs_ext2_fs_h=no
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
