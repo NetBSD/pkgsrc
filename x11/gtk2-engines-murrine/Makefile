@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2025/08/30 22:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/10/11 16:21:42 martin Exp $
 
 DISTNAME=	murrine-0.98.2
 PKGNAME=	${DISTNAME:S/^/gtk2-engines-/}
@@ -17,6 +17,11 @@ USE_TOOLS+=		gmake pkg-config intltool msgfmt
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--enable-animation
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-function-declaration -Wno-implicit-int
+.endif
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.0
 .include "../../x11/gtk2/buildlink3.mk"
