@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6022 2025/10/11 12:50:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6023 2025/10/11 13:14:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8758,3 +8758,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/python314 to 3.14.0nb2 [wiz 2025-10-11]
 	Updated graphics/ImageMagick to 7.1.2.5 [triaxx 2025-10-11]
 	Updated emulators/open-simh to 4.1.0.20250910 [rhialto 2025-10-11]
+	Updated wm/bspwm to 0.9.12 [pin 2025-10-11]
