@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.29 2025/08/18 22:37:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2025/10/11 09:39:55 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
 man/man6/openrct2-cli.6
 man/man6/openrct2.6
-share/applications/openrct2-savegame.desktop
-share/applications/openrct2-scenario.desktop
-share/applications/openrct2-uri.desktop
-share/applications/openrct2.desktop
+share/applications/io.openrct2.openrct2.desktop
+share/applications/io.openrct2.savegame.desktop
+share/applications/io.openrct2.scenario.desktop
+share/applications/io.openrct2.uri.desktop
 share/doc/openrct2/PRIVACY.md
 share/doc/openrct2/changelog.txt
 share/doc/openrct2/contributors.md
@@ -24,7 +24,7 @@ share/icons/hicolor/48x48/apps/openrct2.png
 share/icons/hicolor/64x64/apps/openrct2.png
 share/icons/hicolor/96x96/apps/openrct2.png
 share/icons/hicolor/scalable/apps/openrct2.svg
-share/metainfo/openrct2.appdata.xml
+share/metainfo/io.openrct2.openrct2.appdata.xml
 share/mime/packages/openrct2.xml
 share/openrct2/assetpack/openrct2.music.alternative.parkap
 share/openrct2/assetpack/openrct2.music.cover.parkap
