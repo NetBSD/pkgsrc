@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/10/10 13:57:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/11 10:14:06 wiz Exp $
 
 .include "dist.mk"
 
@@ -42,10 +42,10 @@ PTHREAD_OPTS+=	require
 .include "../../mk/bsd.prefs.mk"
 
 # NetBSD-8 curses has enough support for py-curses
-USE_CURSES=	getsyx update_panels wide
+USE_CURSES=		getsyx update_panels wide
 # But we build as ncurses still to get the full feature set easily
 .if ${OPSYS} == "NetBSD"
-FAKE_NCURSES=	yes
+FAKE_NCURSES=		yes
 ## Force use of libuuid
 CONFIGURE_ARGS+=	ac_cv_header_uuid_h=false
 .endif
@@ -197,6 +197,8 @@ setuptools-preinstall:
 
 # for testing
 ALLOW_NETWORK_ACCESS=	yes
+# test status as of 3.14.0
+# Total test files: run=499/491 failed=10 skipped=31 resource_denied=2 rerun=10
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/gdbm_compat/buildlink3.mk"
