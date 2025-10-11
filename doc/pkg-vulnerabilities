@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.605 2025/10/10 20:59:04 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.606 2025/10/11 09:17:46 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28310,3 +28310,7 @@ ruby{31,32,33,34}-rack2<2.2.20	denial-of-service	https://nvd.nist.gov/vuln/detai
 ruby{31,32,33,34}-rack>=3<3.2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61919
 py{27,39,310,311,312,313,314}-authlib<1.6.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61920
 ruby{31,32,33,34}-sinatra<4.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61921
+py{27,39,310,311,312,313,314}-ldap<3.4.5	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61911
+py{27,39,310,311,312,313,314}-ldap<3.4.5	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-61912
+wireshark<4.4.10				denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11626
+poppler<25.10.0					use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-52885
