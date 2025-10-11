@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/10/11 02:14:30 mrg Exp $
+
+NetBSD also doesn't want _XOPEN_SOURCE defined to get strcasestr().
+
+
+--- configure.ac.orig	2022-04-10 11:10:25.000000000 -0700
++++ configure.ac	2025-10-10 19:11:24.076231592 -0700
+@@ -42,7 +42,7 @@ dnl Set some options based on environmen
+ dnl openbsd headers break when _XOPEN_SOURCE is defined but without it seems
+ dnl to be fine
+ case "$ac_cv_host" in
+-   *openbsd* | *solaris* | *irix* | *darwin*)
++   *openbsd* | *solaris* | *irix* | *darwin* | *netbsd*)
+    dnl  On darwin, do not define _XOPEN_SOURCE as it will narrow us down too
+    dnl  much regarding function availability, so functions like strcasestr
+    dnl  would be unavailable.
