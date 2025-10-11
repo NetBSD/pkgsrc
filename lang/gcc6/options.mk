@@ -1,11 +1,17 @@
-# $NetBSD: options.mk,v 1.6 2024/03/05 15:26:42 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2025/10/11 16:14:18 js Exp $
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
 			gcc-go gcc-objc gcc-objc++ gcc-graphite gcc-java \
 			always-libgcc
-PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ \
+PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-objc gcc-objc++ \
 			gcc-graphite gcc-inplace-math
+.if ${OPSYS} != "QNX"
+# Building the Fortran compiler on QNX segfaults.
+PKG_SUGGESTED_OPTIONS+= gcc-fortran
+.endif
 
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
