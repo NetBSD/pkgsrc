@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/10/07 10:43:42 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/11 13:15:52 pin Exp $
 
-DISTNAME=	scooter-0.8.0
+DISTNAME=	scooter-0.8.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomasschafer/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
