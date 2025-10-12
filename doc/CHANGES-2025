@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6058 2025/10/12 16:20:13 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6059 2025/10/12 16:49:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8793,3 +8793,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-liblktlang to 25.2 [dkazankov 2025-10-12]
 	Updated cad/fstl to 0.11.1 [mef 2025-10-12]
 	Updated devel/ada-libadalang-25 to 25.2.0 [dkazankov 2025-10-12]
+	Updated math/imath to 3.2.2 [wiz 2025-10-12]
