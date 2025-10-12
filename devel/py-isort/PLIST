@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/02/02 16:16:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/10/12 18:07:30 wiz Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -81,9 +81,6 @@ ${PYSITELIB}/isort/profiles.py
 ${PYSITELIB}/isort/profiles.pyc
 ${PYSITELIB}/isort/profiles.pyo
 ${PYSITELIB}/isort/py.typed
-${PYSITELIB}/isort/pylama_isort.py
-${PYSITELIB}/isort/pylama_isort.pyc
-${PYSITELIB}/isort/pylama_isort.pyo
 ${PYSITELIB}/isort/sections.py
 ${PYSITELIB}/isort/sections.pyc
 ${PYSITELIB}/isort/sections.pyo
@@ -123,6 +120,9 @@ ${PYSITELIB}/isort/stdlibs/py312.pyo
 ${PYSITELIB}/isort/stdlibs/py313.py
 ${PYSITELIB}/isort/stdlibs/py313.pyc
 ${PYSITELIB}/isort/stdlibs/py313.pyo
+${PYSITELIB}/isort/stdlibs/py314.py
+${PYSITELIB}/isort/stdlibs/py314.pyc
+${PYSITELIB}/isort/stdlibs/py314.pyo
 ${PYSITELIB}/isort/stdlibs/py36.py
 ${PYSITELIB}/isort/stdlibs/py36.pyc
 ${PYSITELIB}/isort/stdlibs/py36.pyo
