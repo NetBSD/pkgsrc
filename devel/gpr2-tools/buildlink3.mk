@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/07/28 09:15:00 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/12 07:21:14 dkazankov Exp $
 
 BUILDLINK_TREE+=	gpr2-tools
 
@@ -8,6 +8,26 @@ GPR2TOOLS_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.gpr2-tools+=	gpr2-tools>=25.0.0
 BUILDLINK_PKGSRCDIR.gpr2-tools?=	../../devel/gpr2-tools
 BUILDLINK_DEPMETHOD.gpr2-tools?=	build
+
+BUILDLINK_CONTENTS_FILTER.gpr2-tools=	\
+    ${EGREP} '(bin/.*|share/gpr/manifests/.*)'
+
+BUILDLINK_FNAME_TRANSFORM.gprbuild+=	-e "s|^${BUILDLINK_DIR}/bin/gpr2|${BUILDLINK_DIR}/bin/gpr|g"
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+# Buildlinked libraries search path
+GPR_PROJECT_PATH?=	${BUILDLINK_DIR}/share/gpr
+CONFIGURE_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+MAKE_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+INSTALL_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}'$$$$ORIGIN'
+
+GPRBUILD_OPTIONS?=	-eL -R -cargs $${CFLAGS} -largs $${LDFLAGS} -gargs
+GPRINSTALL_OPTIONS?=	#empty
+BUILD_MAKE_FLAGS+=	GPRBUILD_OPTIONS=${GPRBUILD_OPTIONS:Q}
+INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS=${GPRINSTALL_OPTIONS:Q}
 
 .endif
 

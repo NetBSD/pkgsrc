@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/07/28 09:07:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/12 07:21:14 dkazankov Exp $
 
-DISTNAME=	libgpr2-${PKGVERSION_NOREV}
-PKGNAME=	gpr2-tools-25.0.0
+DISTNAME=	gpr2-${GITHUB_TAG}
+PKGNAME=	gpr2-tools-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gpr
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gpr
@@ -26,6 +26,8 @@ USE_GCC_RUNTIME=	yes
 
 CHECK_PIE_SKIP+=	bin/*
 
+DEPENDS=	pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
@@ -35,24 +37,6 @@ SUBST_FILES.fixparam=	Makefile
 SUBST_MESSAGE.fixparam=	Fix realpath parameter
 SUBST_SED.fixparam=	-e 's, --relative-to=. , ,g'
 .endif
-
-#SUBST_CLASSES+=		gprconfig
-#SUBST_MESSAGE.gprconfig=	Replace gprconfig in ${SUBST_FILES.gprconfig}
-#SUBST_STAGE.gprconfig=	pre-configure
-#SUBST_FILES.gprconfig=	tools/src/gprconfig.adb
-#SUBST_SED.gprconfig=	-e "s,\"gprconfig\",\"gpr2config\","
-
-#SUBST_CLASSES+=		gprinstall
-#SUBST_MESSAGE.gprinstall=	Replace gprinstall in ${SUBST_FILES.gprinstall}
-#SUBST_STAGE.gprinstall=	pre-configure
-#SUBST_FILES.gprinstall=	tools/src/gprinstall-main.adb
-#SUBST_SED.gprinstall=	-e "s,\"gprinstall\",\"gpr2install\","
-
-#SUBST_CLASSES+=		gprls
-#SUBST_MESSAGE.gprls=	Replace gprls in ${SUBST_FILES.gprls}
-#SUBST_STAGE.gprls=	pre-configure
-#SUBST_FILES.gprls=	tools/src/gprls-main.adb
-#SUBST_SED.gprls=	-e "s,\"gprls\",\"gpr2ls\","
 
 CONFIG_SHELL=		${MAKE_PROGRAM} -f
 CONFIGURE_SCRIPT=	${WRKSRC}/Makefile
@@ -77,7 +61,6 @@ GENERATE_PLIST+= \
 .include "../../devel/ada-gnatcoll-bindings-25/buildlink3.mk"
 
 .include "../../devel/gmp/buildlink3.mk"
-USE_GNU_ICONV=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
