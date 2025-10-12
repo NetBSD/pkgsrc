@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:24:00 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/10/12 02:03:10 mrg Exp $
 
 BLAKE2s (ski-1.3.2.tar.gz) = b6f884bd201aa36eba59b6130ed5cadd631c9930101a2c7a5cc4521c57cb6792
 SHA512 (ski-1.3.2.tar.gz) = 21f2e1dd87cb517602d4d6ef62707ec6042c1b6ec5dfd063db7315d13bbc3fb47b491c15b7efb0433fc82f27c7924e2d50b2f57fe24e49aeb864ce2c3c2c8bd0
@@ -14,11 +14,11 @@ SHA1 (patch-ag) = 973a8f5c1cc5cc36bb8aa1e1e21769f51194967e
 SHA1 (patch-ah) = 31e4807b546c69aa43c7bddc4f16ba3b99d8da3e
 SHA1 (patch-ai) = 97c4b6f2ed49ea7668d8fbc789ea46f31c8ee1b1
 SHA1 (patch-aj) = c2ac0b850381d2fee3b3f7846cf3aeb51d8e8245
-SHA1 (patch-ak) = 0abaa09fb172ebbc8715908f5c6f49936b22aefa
-SHA1 (patch-al) = 1911d6c8e051ab2b64055cf1c64856188268619e
+SHA1 (patch-ak) = 682339642ac0027111f4d8dde1e3f9d268c68cda
+SHA1 (patch-al) = e188d312205662f6676c88db150d913c6d39a00c
 SHA1 (patch-am) = 0965936933424ab4af4d1fa3384808f4e92f9b04
 SHA1 (patch-an) = 0d84833e0e16a779c60b9152f91cf6df897af1fc
-SHA1 (patch-ao) = 8f2eabd4d8dc6ccef593a5f50d00485a905ee523
+SHA1 (patch-ao) = d13d7de1e5c2f10db3cfefd36b457a2449c977bd
 SHA1 (patch-ap) = a98cd0aa55a002020c26fb70e5549bd16270bf39
 SHA1 (patch-src-line_separator.h) = 2c9b0c2fdace6bc59735cbeb9588aea21b19b1db
 SHA1 (patch-src_eparse.y) = c82918d36047e51273cc1aa0e20a4ce1649668f5

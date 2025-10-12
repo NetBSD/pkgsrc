@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $
+$NetBSD: patch-ao,v 1.2 2025/10/12 02:03:10 mrg Exp $
 
---- src/netbsd/syscall-netbsd.c.orig	2010-06-09 19:58:06.000000000 +0530
-+++ src/netbsd/syscall-netbsd.c
+--- src/netbsd/syscall-netbsd.c.orig	2025-10-11 18:43:39.841401055 -0700
++++ src/netbsd/syscall-netbsd.c	2025-10-11 18:50:40.116005946 -0700
 @@ -0,0 +1,662 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
@@ -166,7 +166,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $
 +	*status = 0;
 +
 +	/* syscalls and user space support not available for NetBSD */
-+	ret = ENOSYS;
++	*ret = ENOSYS;
 +	goto out;
 +
 +#if 0

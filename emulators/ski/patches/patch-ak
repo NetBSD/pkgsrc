@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1.1.1 2011/07/27 10:23:49 cherry Exp $
+$NetBSD: patch-ak,v 1.2 2025/10/12 02:03:10 mrg Exp $
 
---- src/netbsd/osload-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
-+++ src/netbsd/osload-netbsd.c
+--- src/netbsd/osload-netbsd.c.orig	2025-10-11 18:33:53.082611433 -0700
++++ src/netbsd/osload-netbsd.c	2025-10-11 18:38:42.338010157 -0700
 @@ -0,0 +1,233 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
@@ -224,7 +224,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2011/07/27 10:23:49 cherry Exp $
 +		AUX(sp, AT_PHDR, proc->phdr_addr);
 +		AUX(sp, AT_PHENT, sizeof(Elf64_Phdr));
 +		AUX(sp, AT_PHNUM, proc->phdr_count);
-+		AUX(sp, AT_NULL, NULL);
++		AUX(sp, AT_NULL, 0);
 +	}
 +
 +	/* Copy out ps_strings. */
