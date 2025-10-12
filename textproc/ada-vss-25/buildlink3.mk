@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/09/04 09:24:56 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/12 09:14:55 dkazankov Exp $
 
 BUILDLINK_TREE+=	vss-25
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	vss-25
 VSS_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vss-25+=		vss-${GNAT_NAME}>=25.0.0
+BUILDLINK_ABI_DEPENDS.vss-25+=		vss-${GNAT_NAME}>=25.2.0
 BUILDLINK_PKGSRCDIR.vss-25?=		../../textproc/ada-vss-25
 BUILDLINK_DEPMETHOD.vss-25?=		build
 
