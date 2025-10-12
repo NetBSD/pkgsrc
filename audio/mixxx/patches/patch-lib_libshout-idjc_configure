@@ -1,0 +1,16 @@
+$NetBSD: patch-lib_libshout-idjc_configure,v 1.1 2025/10/12 09:38:51 mrg Exp $
+
+Avoid _XOPEN_SOURCE on NetBSD.
+
+
+--- lib/libshout-idjc/configure.orig	2021-09-29 06:23:02.000000000 -0700
++++ lib/libshout-idjc/configure	2025-10-12 02:06:45.577383608 -0700
+@@ -12390,7 +12390,7 @@ CC=$lt_save_CC
+ 
+ 
+ case "$ac_cv_host" in
+-   *openbsd* | *solaris* | *irix*)
++   *openbsd* | *solaris* | *irix* | *netbsd*)
+    ;;
+    *)
+ $as_echo "#define _XOPEN_SOURCE 600" >>confdefs.h
