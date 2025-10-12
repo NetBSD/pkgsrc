@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2025/08/10 03:31:02 wiz Exp $
+$NetBSD: distinfo,v 1.27 2025/10/12 06:52:07 wiz Exp $
 
-BLAKE2s (Specio-0.52.tar.gz) = 43b54bb95bb905ddaec061638e4e38fd1cd8c4ebf486fa8c379292f110944c99
-SHA512 (Specio-0.52.tar.gz) = 61f38f400085e98b5c47661611727f74912409d45344cb75e47336695e97794db1ac86b29cc98c544cb188f8fcc08ca4d466ea1e727b2910c8a7566e4048028d
-Size (Specio-0.52.tar.gz) = 133969 bytes
+BLAKE2s (Specio-0.53.tar.gz) = 79cc5dd3afe189de494c2a144a811705f6fa950e65933aee653d3c40b47afb54
+SHA512 (Specio-0.53.tar.gz) = 3d410bb957564309d84c9b70e1d672e9e6f47dc7e9d1c8f921771aaceebd997631971313aaf7d2e77fe7b3c1561381e4eb70dfc5fccb64f75be27f023cc2c96e
+Size (Specio-0.53.tar.gz) = 130009 bytes
