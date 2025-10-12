@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
+$NetBSD: patch-ar,v 1.3 2025/10/12 00:57:39 mrg Exp $
 
---- richmail/richtext.c.orig	1994-02-09 16:31:18.000000000 +0000
-+++ richmail/richtext.c
-@@ -13,18 +13,16 @@ OF THIS MATERIAL FOR ANY PURPOSE.  IT IS
+--- richmail/richtext.c.orig	1994-02-09 08:31:18.000000000 -0800
++++ richmail/richtext.c	2025-10-11 17:38:16.071403518 -0700
+@@ -13,18 +13,18 @@ OF THIS MATERIAL FOR ANY PURPOSE.  IT IS
  WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
  */
  
@@ -12,6 +12,8 @@ $NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
  #include <signal.h>
 +#include <stdlib.h>
 +#include <string.h>
++#include <unistd.h>
++#include <termcap.h>
  #include "richlex.h"
  #include "richset.h"
  #include <config.h>
@@ -24,22 +26,143 @@ $NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
  #ifdef MSDOS
  unsigned _stklen=16384;	/* Increase stack size under MS-DOS */
  #endif
-@@ -79,7 +77,13 @@ static int FakeTerminal;
+@@ -79,7 +79,15 @@ static int FakeTerminal;
  extern tputs();
  #endif
  
 -static outputc(), realoutputc(), MakeWorkingMargins(), Pause(), fputsmovingright(), ResetTerminalCodes(), FinalizeTerminal(), outputstr(), FPUTS();
 +static int lc2strcmp(char *s1, char *s2);
 +
-+static outputc(), realoutputc(), MakeWorkingMargins(), Pause(), FinalizeTerminal(), outputstr(), FPUTS();
++static void outputc(), realoutputc(), MakeWorkingMargins(), Pause(), FinalizeTerminal(), outputstr(), FPUTS();
 +static void fputsmovingright(struct charsetmember *s, FILE *fp);
 +static void ResetTerminalCodes(int FakeTerminal, int standout, int underline, int bold, char *standoutbuf, char *standendbuf,
 +                    int modifiedstandout, char *StartUnderline, char *StopUnderline, int modifiedunderline,
 +                    char *BoldOn, char *BoldOff, int modifiedbold);
++int richtext_main();
++int controloutput();
  
  #define	OUTC(c)		(outputc((RCHAR)(c)))
  
-@@ -905,9 +909,7 @@ static Pause()
+@@ -125,7 +133,7 @@ int signum;
+ #endif
+ }
+ 
+-static InitSignals() {
++static int InitSignals() {
+     signal(SIGINT, cleanup);
+ #if !defined(AMIGA)
+ #if !defined(MSDOS)
+@@ -146,7 +154,7 @@ static InitSignals() {
+ #endif
+ }
+ 
+-static nomemabort() {
++static int nomemabort() {
+     fprintf(stderr, "richtext: Out of memory\n");
+     FinalizeTerminal();
+ #ifdef AMIGA
+@@ -163,6 +171,7 @@ static nomemabort() {
+  * library call.
+  */
+ 
++int
+ main(argc, argv)
+ int argc;
+ char **argv;
+@@ -172,6 +181,7 @@ char **argv;
+ 
+ #endif
+ 
++int
+ richtext_main(argc, argv)
+ int argc;
+ char **argv;
+@@ -659,6 +669,7 @@ char **argv;
+ static struct charsetmember OutputBuf[1000] = {0,0};
+ static int PendingOutput = 0, PendingControls = 0;
+ 
++int
+ controlputc(c)
+ int c;
+ {
+@@ -667,12 +678,13 @@ int c;
+     ++PendingControls;
+ }
+ 
+-static immediate_controlputc(c)
++static int immediate_controlputc(c)
+ int c;
+ {
+     (*RichtextPutc) (c, stdout);
+ }
+ 
++int
+ controloutput(s, immediate)
+ char *s;
+ int immediate;
+@@ -680,7 +692,7 @@ int immediate;
+     tputs(s, 1, immediate ? immediate_controlputc : controlputc);
+ }
+ 
+-static folding_point (buf, pos)
++static int folding_point (buf, pos)
+ struct	charsetmember *buf;
+ int	pos;
+ {
+@@ -692,7 +704,7 @@ int	pos;
+     return (0);
+ }
+ 
+-static calc_column (buf, pos)
++static int calc_column (buf, pos)
+ struct	charsetmember *buf;
+ int	pos;
+ {
+@@ -707,7 +719,7 @@ int	pos;
+     return (col);
+ }
+ 
+-static FlushOut() {
++static void FlushOut() {
+     int i, j, x;
+     static struct charsetmember NewOutputBuf[1000];
+     struct charsetmember *s;
+@@ -797,7 +809,7 @@ static FlushOut() {
+                         StopUnderline, 0, BoldOn, BoldOff, 0);
+ }
+ 
+-static outputc(c)
++static void outputc(c)
+ RCHAR c;
+ {
+     struct charsetmember member;
+@@ -805,6 +817,7 @@ RCHAR c;
+     realoutputc(member, 0);
+ }
+ 
++void
+ static realoutputc(c, alreadyformatted)
+ struct charsetmember c;
+ int alreadyformatted;
+@@ -877,7 +890,7 @@ int alreadyformatted;
+     }
+ }
+ 
+-static MakeWorkingMargins() {
++static void MakeWorkingMargins() {
+     int oldworkingleft=workingleft, i;
+ 
+     workingleft = leftmargin;
+@@ -891,7 +904,7 @@ static MakeWorkingMargins() {
+     }
+ }
+ 
+-static Pause()
++static void Pause()
+ {
+     int	c;
+ 
+@@ -905,9 +918,7 @@ static Pause()
  /* Leading spaces should be output as MoveRight, to avoid 
     having margins that are underlined or reverse video */
  
@@ -50,7 +173,7 @@ $NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
  {
      int inmargin=1;
      if (!s) return;
-@@ -925,11 +927,9 @@ FILE *fp;
+@@ -925,11 +936,9 @@ FILE *fp;
      }
  }
  
@@ -65,7 +188,32 @@ $NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
  {
      if (OverStrike)
  	return;
-@@ -989,7 +989,7 @@ FILE *fp;
+@@ -953,14 +962,14 @@ char *standoutbuf, *standendbuf, *StartU
+     }
+ }
+ 
+-static FinalizeTerminal() {
++static void FinalizeTerminal() {
+     tputs(standendbuf, 1, immediate_controlputc);
+     tputs(BoldOff, 1, immediate_controlputc);
+     tputs(StopUnderline, 1, immediate_controlputc);
+     FPUTS(KE, stdout);
+ }
+ 
+-static outputstr(s)
++static void outputstr(s)
+ char *s;
+ {
+     while (*s) OUTC(*s++);
+@@ -982,14 +991,14 @@ int (*func)();
+ }
+ #endif
+ 
+-static FPUTS(s,fp)
++static void FPUTS(s,fp)
+ unsigned char *s;
+ FILE *fp;
+ {
      while(*s) (*RichtextPutc)((int)(*s++),fp);
  }
  
@@ -74,3 +222,12 @@ $NetBSD: patch-ar,v 1.2 2012/10/26 20:27:15 joerg Exp $
  char *s1, *s2;
  {
      if (!s1 || !s2) return (-1);
+@@ -1000,7 +1009,7 @@ char *s1, *s2;
+     return((*s1 == *s2) ? 0 : -1);
+ }
+ 
+-static lc2strncmp(s1, s2, len)
++static int lc2strncmp(s1, s2, len)
+ char *s1, *s2;
+ int len;
+ {

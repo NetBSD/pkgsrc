@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
+$NetBSD: patch-af,v 1.6 2025/10/12 00:57:39 mrg Exp $
 
 - use required standard headers
 - don't provide own declarations of standard functions
@@ -6,10 +6,11 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
 - use C89
 - don't use gets()
 - ...? (XXX)
+- Add various missing prototypes, etc, for GCC 14.
 
---- metamail/mailto.c.orig	1994-02-09 20:30:26.000000000 +0000
-+++ metamail/mailto.c
-@@ -36,7 +36,9 @@ STILL NEED TO DO/SUPPORT:
+--- metamail/mailto.c.orig	1994-02-09 12:30:26.000000000 -0800
++++ metamail/mailto.c	2025-10-11 17:19:50.131558639 -0700
+@@ -36,11 +36,16 @@ STILL NEED TO DO/SUPPORT:
  -- Replace EditString with something that does the right thing in-line.
  */
  
@@ -19,7 +20,14 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  #include <ctype.h>
  #include <config.h>
  #include <pwd.h>
-@@ -50,8 +52,6 @@ STILL NEED TO DO/SUPPORT:
+ #include <signal.h>
++#include <unistd.h>
++#include <termcap.h>
++#include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/file.h>
+@@ -50,8 +55,6 @@ STILL NEED TO DO/SUPPORT:
  #include <getfiles.h>
  #include <time.h>
  #include <lib_protos.h>
@@ -28,13 +36,45 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  #endif
  
  #ifdef SYSV
-@@ -60,9 +60,16 @@ extern char *getenv();
+@@ -60,8 +63,47 @@ extern char *getenv();
  #include <unistd.h>
  #endif
  
 -extern char *malloc(), *realloc(), *index(), *getmyname();
++#include "metamail.h"
++
  struct mailpart *CreateNewPart();
- 
++void nomemabort();
++void cleanexit();
++void tfputs();
++void ProcessInitFiles();
++void InitSignals();
++void SwitchToEuropean();
++int ContainsEightBitChar();
++void fputsquoting();
++void WriteCtypeNicely();
++void EmitAddresses();
++void EmitHeader();
++void EmitHeaderWithAliases();
++void PutQP();
++void HandleSetCommand();
++void BuildCommand();
++int WhichEncodingForFile();
++void SetTextFlags();
++int ProcessMailcapFiles();
++int WriteDeadLetter();
++void finalize();
++void TryClosingStyle();
++void TryOpeningStyle();
++void ToggleStyle();
++void EndStyle();
++void StartStyle();
++void TempCloseStyles();
++void ReopenStyles();
++int TranslateInputToEncodedOutput();
++int RestoreCurrentStyles();
++void WriteContentTypeAndEncoding();
++
 +void DeAlias(char *name, FILE *fp, char *hdr);
 +void HeaderFputs(char *s, FILE *fp, char *hdr);
 +void HandleAliasCommand(char *aliasline);
@@ -42,11 +82,60 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
 +void EditCurrentMessage(int UseVisual);
 +void FputsQuotingLT(char *s, FILE *fp, struct mailpart *part, int EightBitMode, int RightToLeftMode);
 +void WriteOutMessage(FILE *fp, char *ToList, char *Subject, char *CCList, struct mailpart *FirstPart);
-+
+ 
  /* The main data structure for the multiple parts of the mail */
  
- struct mailpart {
-@@ -570,6 +577,7 @@ char **argv;
+@@ -138,6 +180,7 @@ int  V_askcc=0, /* To ask about the Cc f
+ int JustificationState = JUST_LEFT;
+ 
+ 
++void
+ EightBitCharHelp() {
+     if (!CharacterSet || !strcmp(CharacterSet, "us-ascii")) {
+         printf("There are no extended characters available for your US-ASCII terminal.\n\n");
+@@ -199,6 +242,7 @@ tmpname() {
+     return(s);
+ }
+ 
++void
+ TildeHelp() {
+     char *pager = getenv("PAGER");
+     char TmpName[100], CmdBuf[150];
+@@ -298,6 +342,7 @@ char *gethome() {
+ static char standoutbuf[50], standendbuf[50], StartUnderline[50], StopUnderline[50], BoldOn[50], BoldOff[50], KS[50], KE[50];
+ static int termcolumns, termrows;
+ 
++void
+ InitTerminal() {
+ #ifdef AMIGA
+     strcpy(standoutbuf, "\x9b\x37m");   /* Enter standout (highlighted) mode */
+@@ -350,6 +395,7 @@ InitTerminal() {
+ #endif
+ }
+ 
++void
+ FinalizeTerminal() {
+     tfputs(standendbuf);
+     tfputs(BoldOff);
+@@ -375,6 +421,7 @@ NewPart() {
+     return(p);
+ }
+ 
++void
+ nomemabort() {
+     fprintf(stderr, "mailto: Out of memory\n");
+     cleanexit(-1);
+@@ -484,7 +531,9 @@ int definitelynew;
+     return(List);
+ }
+ 
++void
+ main(argc, argv)
++int argc;
+ char **argv;
+ {
+     char *sdum, *LineBuf, CmdBuf[100];
+@@ -570,6 +619,7 @@ char **argv;
          if (isupper(*sdum)) *sdum = tolower(*sdum);
      }
      if (strcmp(CharacterSet, "us-ascii")
@@ -54,7 +143,7 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
           && strncmp(CharacterSet, "iso-8859-", 9)) {
          fprintf(stderr, "mailto:  Unsupported character set: %s\n", CharacterSet);
          exit(-1);
-@@ -1042,10 +1050,7 @@ char *newid() {
+@@ -1042,10 +1092,7 @@ char *newid() {
      return(idbuf);
  }
  
@@ -66,7 +155,15 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      FILE *fpin;
      static int ctr = 0;
-@@ -1130,6 +1135,7 @@ struct mailpart *part;
+@@ -1121,6 +1168,7 @@ struct mailpart *FirstPart;
+     }
+ }
+ 
++void
+ WriteContentTypeAndEncoding(fp, part)
+ FILE *fp;
+ struct mailpart *part;
+@@ -1130,6 +1178,7 @@ struct mailpart *part;
          if (part->isrich) {
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -74,7 +171,7 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "Content-type: text/richtext; charset=\"%s\"\n", CharacterSet);
              } else {
-@@ -1140,6 +1146,7 @@ struct mailpart *part;
+@@ -1140,6 +1189,7 @@ struct mailpart *part;
              WriteCtypeNicely(fp, part->content_type);
              if (strcmp(CharacterSet, "us-ascii")
                   && (strncmp(CharacterSet, "iso-8859-", 9) 
@@ -82,7 +179,93 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
                        || part->encoding_type_needed != ENC_NONE)) {
                  fprintf(fp, "; charset=\"%s\"\n", CharacterSet);
              } else fputs("\n", fp);
-@@ -1328,11 +1335,7 @@ struct mailpart *part;
+@@ -1160,6 +1210,7 @@ struct mailpart *part;
+     }
+ }
+ 
++int
+ TranslateInputToEncodedOutput(InputFP, OutputFP, Ecode, ctype)
+ FILE *InputFP, *OutputFP;
+ int Ecode;
+@@ -1192,6 +1243,7 @@ static char *EnvStartStack[MAX_STACK_SIZ
+    kept open across an inserted object -- i.e. the richtext is split into 
+    two parts of a multipart message */
+ 
++void
+ TempCloseStyles(fp)
+ FILE *fp;
+ {
+@@ -1205,6 +1257,7 @@ FILE *fp;
+     fflush(stdout);
+ }
+ 
++int
+ RestoreCurrentStyles() {
+     int i=0;
+     while (i<StackSize) {
+@@ -1215,6 +1268,7 @@ RestoreCurrentStyles() {
+     }
+ }
+ 
++void
+ ReopenStyles(fp, part)
+ FILE *fp;
+ struct mailpart *part;
+@@ -1227,11 +1281,13 @@ struct mailpart *part;
+     }
+ }
+ 
++void
+ richtextreset()
+ {
+     StackSize = 0;
+ }
+ 
++int
+ AlreadyInStyle(s)
+ char *s;
+ {
+@@ -1242,6 +1298,7 @@ char *s;
+     return(0);
+ }
+ 
++void
+ StartStyle(fp, s, envstartstr)
+ FILE *fp;
+ char *s;
+@@ -1258,6 +1315,7 @@ char *envstartstr;
+     if (!V_quiet) printf("Beginning: %s\n", t);
+ }
+ 
++void
+ EndStyle(fp, s)
+ FILE *fp;
+ char *s;
+@@ -1282,6 +1340,7 @@ char *s;
+     if (!V_quiet) printf("Ending: %s\n", s);
+ }
+ 
++void
+ ToggleStyle(name, fp, part, turnonstr, turnoffstr)
+ char *name;
+ FILE *fp;
+@@ -1301,6 +1360,7 @@ char *turnonstr, *turnoffstr;
+     }
+ }
+ 
++void
+ TryOpeningStyle(name, fp, part, envstartstr)
+ char *name;
+ FILE *fp;
+@@ -1315,6 +1375,7 @@ char *envstartstr;
+     }
+ }
+ 
++void
+ TryClosingStyle(name, fp, part)
+ char *name;
+ FILE *fp;
+@@ -1328,11 +1389,7 @@ struct mailpart *part;
      }
  }
  
@@ -95,7 +278,47 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      static int InNewLineSequence=1;
      int c=0;
-@@ -1745,6 +1748,7 @@ CreateNewPart() {
+@@ -1393,6 +1450,7 @@ int EightBitMode, RightToLeftMode;
+     }
+ }
+ 
++void
+ cleanexit(code)
+ int code;
+ {
+@@ -1400,6 +1458,7 @@ int code;
+     exit(code);
+ }
+ 
++void
+ finalize() {
+     while (FirstPart) {
+         unlink(FirstPart->filename);
+@@ -1436,6 +1495,7 @@ int signum;
+ #endif
+ }
+ 
++void
+ InitSignals() {
+     signal(SIGINT, cleanup);
+ #ifndef AMIGA
+@@ -1456,6 +1516,7 @@ InitSignals() {
+ #endif
+ }
+ 
++int
+ WriteDeadLetter()
+ {
+     FILE *fp;
+@@ -1662,6 +1723,7 @@ FILE *fp;
+     return(mc);
+ }
+ 
++int
+ ProcessMailcapFiles() 
+ {
+     char *s, *path = getenv("MAILCAPS"), *origpath;
+@@ -1745,6 +1807,7 @@ CreateNewPart() {
      }
      printf("\n\nEnter your choice as a number from 0 to %d: ", i);
      fflush(stdout);
@@ -103,7 +326,7 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
      fgets(LineBuf, sizeof(LineBuf), stdin);
      ans = atoi(LineBuf);
      if (ans == 0 || ans == 1) {
-@@ -1791,7 +1795,7 @@ CreateNewPart() {
+@@ -1791,7 +1854,7 @@ CreateNewPart() {
                  int ct;
                  printf("\nEnter the MIME Content-type value for the data from file %s\n    (type '?' for a list of locally-valid content-types): ", sdum);
                  fflush(stdout);
@@ -112,7 +335,7 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
                  if (index(LineBuf, '/')) {
                      char lc[100], *s, AnsBuf[100];
                      strcpy(lc, LineBuf);
-@@ -1809,7 +1813,7 @@ CreateNewPart() {
+@@ -1809,7 +1872,7 @@ CreateNewPart() {
                      }
                      if (mc) break;
                      printf("The MIME content-type '%s' is not listed in your local mailcap files,\nand may not be a valid MIME type.  Do you want to use it anyway [no] ? ", LineBuf);
@@ -121,7 +344,39 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
                      while (s && *s && isspace((unsigned char) *s)) ++s;
                      if (s && (*s == 'y' || *s == 'Y')) break;
                      continue;
-@@ -2073,8 +2077,7 @@ char *ctype, *pat;
+@@ -1967,6 +2030,7 @@ CreateNewPart() {
+     return(mp);
+ }
+ 
++void
+ SetTextFlags(mp)
+ struct mailpart *mp;
+ {
+@@ -1978,6 +2042,7 @@ struct mailpart *mp;
+     }
+ }
+ 
++int
+ WhichEncodingForFile(fname, ctype)
+ char *fname, *ctype;
+ {
+@@ -2014,6 +2079,7 @@ char *fname, *ctype;
+     return(ENC_NONE);
+ }
+ 
++void
+ BuildCommand(Buf, controlstring, TmpFileName)
+ char *Buf, *controlstring, *TmpFileName;
+ {
+@@ -2052,6 +2118,7 @@ char *Buf, *controlstring, *TmpFileName;
+     }
+ }
+ 
++int
+ CtypeMatch(ctype, pat)
+ char *ctype, *pat;
+ {
+@@ -2073,8 +2140,7 @@ char *ctype, *pat;
      return(0);
  }
  
@@ -131,7 +386,15 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      char *editor = NULL;
      char *CmdBuf, *CmdBuf2, LineBuf[100];
-@@ -2212,9 +2215,7 @@ int IsAndrew;
+@@ -2162,6 +2228,7 @@ int UseVisual;
+ }
+ 
+ 
++void
+ ProcessInitFiles() {
+ #ifdef AMIGA
+     ProcessOneMailRC(mailRC, 0);
+@@ -2212,9 +2279,7 @@ int IsAndrew;
      }
  }
  
@@ -142,7 +405,15 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      FILE *fp;
      char *LineBuf = NULL, *sdum;
-@@ -2290,8 +2291,7 @@ struct alias {
+@@ -2246,6 +2311,7 @@ int IsAndrew;
+     fclose(fp);
+ }
+ 
++void
+ HandleSetCommand(cmd, DoSet)
+ char *cmd;
+ int DoSet;
+@@ -2290,8 +2356,7 @@ struct alias {
      struct alias *next;
  } *FirstAlias = NULL;
  
@@ -152,7 +423,15 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      struct alias *tmpalias;
      char *s, *s2;
-@@ -2357,10 +2357,7 @@ char *s;
+@@ -2319,6 +2384,7 @@ char *aliasline;
+     FirstAlias = tmpalias;
+ }
+ 
++void
+ EmitHeader(fp, hdr, body)
+ FILE *fp;
+ char *hdr;
+@@ -2357,10 +2423,7 @@ char *s;
      return(NULL);
  }
  
@@ -164,7 +443,31 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      char *firstnonascii, *firstascii;
  
-@@ -2436,10 +2433,7 @@ char *hdr;
+@@ -2398,6 +2461,7 @@ char *hdr;
+ 
+ static char basis_hex[] = "0123456789ABCDEF";
+ 
++void
+ PutQP(c, fp)
+ unsigned char c;
+ FILE *fp;
+@@ -2407,6 +2471,7 @@ FILE *fp;
+     putc(basis_hex[c&0xF], fp);
+ }
+ 
++void
+ EmitHeaderWithAliases(fp, hdr, names)
+ FILE *fp;
+ char *hdr;
+@@ -2418,6 +2483,7 @@ char *names;
+     fputs("\n", fp);
+ }
+ 
++void
+ EmitAddresses(fp, names, hdr)
+ FILE *fp;
+ char *names;
+@@ -2436,10 +2502,7 @@ char *hdr;
      }
  }
  
@@ -176,3 +479,56 @@ $NetBSD: patch-af,v 1.5 2012/12/30 05:38:55 dholland Exp $
  {
      struct alias *tmpalias;
      char *end, savechar;
+@@ -2462,6 +2525,7 @@ char *hdr;
+ }
+ 
+ 
++void
+ WriteCtypeNicely(fp, ct)
+ FILE *fp;
+ char *ct;
+@@ -2497,6 +2561,7 @@ char *ct;
+     }
+ }
+ 
++void
+ fputsquoting(s, fp)
+ char *s;
+ FILE *fp;
+@@ -2566,10 +2631,12 @@ char *cmd;
+ }
+ #endif
+ 
++int
+ controlputc(c)
+-char c;
++int c;
+ {
+     fputc(c, stdout);
++    return (0);
+ }
+ 
+ /* Do the equivalent of an fputs for the terminal escape stuff */
+@@ -2581,12 +2648,14 @@ char *s;
+     return (0);
+ }
+ #else
++void
+ tfputs(s)
+ char *s;
+ {
+     tputs(s, 1, controlputc);
+ }
+ #endif
++int
+ ContainsEightBitChar(fname)
+ char *fname;
+ {
+@@ -2607,6 +2676,7 @@ char *fname;
+     return(eightBitSeen);
+ }
+ 
++void
+ SwitchToEuropean() {
+     printf("WARNING:  You have entered 8-bit characters in what is supposed to be\n");
+     printf("plain ASCII text.  If you are using a non-ASCII character set, you should\n");
