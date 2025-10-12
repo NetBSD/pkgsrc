@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/07/07 04:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/10/12 17:56:46 wiz Exp $
 
-DISTNAME=	gi_docgen-2025.4
+DISTNAME=	gi_docgen-2025.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi_docgen/}
