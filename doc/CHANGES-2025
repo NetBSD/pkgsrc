@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6072 2025/10/12 18:13:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6073 2025/10/12 18:15:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8807,3 +8807,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-isort to 7.0.0 [wiz 2025-10-12]
 	Updated graphics/py-matplotlib to 3.10.7 [wiz 2025-10-12]
 	Updated devel/py-maturin to 1.9.6 [wiz 2025-10-12]
+	Updated devel/py-msgpack to 1.1.2 [wiz 2025-10-12]
