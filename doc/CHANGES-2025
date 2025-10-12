@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6065 2025/10/12 17:29:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6066 2025/10/12 17:49:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8800,3 +8800,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-astroid to 4.0.1 [wiz 2025-10-12]
 	Updated devel/py-attrs to 25.4.0 [wiz 2025-10-12]
 	Added devel/py-dunamai version 1.25.0 [wiz 2025-10-12]
+	Added devel/py-poetry-dynamic-versioning version 1.9.1 [wiz 2025-10-12]
