@@ -1,39 +1,21 @@
-$NetBSD: patch-make.local,v 1.1 2025/08/06 19:57:56 vins Exp $
+$NetBSD: patch-make.local,v 1.2 2025/10/12 08:24:30 vins Exp $
 
 Local makefile for pkgsrc.
 
---- make.local.orig	2025-08-06 19:15:06.383429826 +0000
+--- make.local.orig	2025-10-12 08:18:05.837454640 +0000
 +++ make.local
-@@ -0,0 +1,32 @@
+@@ -0,0 +1,14 @@
 +# pkgsrc Makefile
 +
-+PREFIX	= @PREFIX@
-+BINDIR	= $(PREFIX)/bin
-+MANDIR	= $(PREFIX)/@PKGMANDIR@
++SRCS	= xfind.c util.c
++PROG	= xfind
 +
-+PIXMAPDIR	= $(PREFIX)/share/pixmaps
-+APPLRESDIR	= $(PREFIX)/lib/X11/app-defaults
++CLEANFILES	+= xfind.1
 +
-+LIBS	+= -lc -lm -lXm -lXt -lX11
++LDADD	+= -lc -lm -lXm -lXt -lX11
++DPADD	+= ${LIBC} ${LIBM} ${LIBXM} ${LIBXT} ${LIBX11}
 +
-+src	= xfind.c util.c
-+objs	= $(src:.c=.o)
-+prog	= xfind
++xfind.1: ${.CURDIR}/$(PROG).man
++	@cp ${.ALLSRC} ${.TARGET}
 +
-+all: $(prog)
-+
-+$(prog): $(objs)
-+	$(CC) -o $@ $(objs) $(LDFLAGS) $(LIBS)
-+
-+.c.o:
-+	$(CC) -c -o $@ $(CFLAGS) $<
-+
-+install:
-+	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
-+	$(BSD_INSTALL_PROGRAM) $(prog) $(DESTDIR)$(BINDIR)
-+	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
-+	$(BSD_INSTALL_MAN) $(prog).man $(DESTDIR)$(MANDIR)/man1/$(prog).1
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PIXMAPDIR) $(DESTDIR)$(APPLRESDIR)
-+	$(BSD_INSTALL_DATA) xfind.xpm $(DESTDIR)$(PIXMAPDIR)/xfind_48x48.xpm
-+	$(BSD_INSTALL_DATA) XFind.ad $(DESTDIR)$(APPLRESDIR)/XFind
-+.PHONY: all install
++.include <bsd.prog.mk>
