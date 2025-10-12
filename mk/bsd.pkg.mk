@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2059 2025/04/30 20:35:28 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2060 2025/10/12 17:01:28 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -50,7 +50,7 @@ _DEF_VARS.pkgname=	PKGBASE PKGVERSION PKGNAME_NOREV PKGNAME PKGVERSION_NOREV
 
 # Fail-safe in the case of circular dependencies
 .if defined(_PKGSRC_DEPS) && defined(PKGNAME) && !empty(_PKGSRC_DEPS:M${PKGNAME})
-PKG_FAIL_REASON+=	"Circular dependency detected"
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] Circular dependency detected"
 .endif
 
 # Some packages are now hitting ARG_MAX limits as they contain thousands of
@@ -137,19 +137,19 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 
 .if defined(BUILDLINK_DEPTH) || defined(BUILDLINK_PACKAGES) || \
     defined(BUILDLINK_DEPENDS) || defined(BUILDLINK_ORDER)
-PKG_FAIL_REASON+=	"Out-dated buildlink3.mk detected, please update"
+PKG_FAIL_REASON+=	'[bsd.pkg.mk] Out-dated buildlink3.mk detected, please update'
 .endif
 
 .if !defined(CATEGORIES)
-PKG_FAIL_REASON+=	'CATEGORIES are mandatory.'
+PKG_FAIL_REASON+=	'[bsd.pkg.mk] CATEGORIES are mandatory.'
 .endif
 
 .if !defined(PKGNAME) && !defined(DISTNAME)
-PKG_FAIL_REASON+=	'PKGNAME and/or DISTNAME are mandatory.'
+PKG_FAIL_REASON+=	'[bsd.pkg.mk] PKGNAME and/or DISTNAME are mandatory.'
 .endif
 
 .if defined(PKG_PATH)
-PKG_FAIL_REASON+=	'Please unset PKG_PATH before doing pkgsrc work!'
+PKG_FAIL_REASON+=	'[bsd.pkg.mk] Please unset PKG_PATH before doing pkgsrc work!'
 .endif
 
 # Allow variables to be set on a per-OS basis
@@ -495,8 +495,8 @@ PATH=	${_PATH_COMPONENTS:ts::S,__space_in_path__, ,g}
 # Don't build a package if it's broken.
 ################################################################
 .if ${X11_TYPE} == "xorg"
-PKG_FAIL_REASON+=	"Support for X11_TYPE=xorg was removed."
-PKG_FAIL_REASON+=	"Please switch to X11_TYPE=modular."
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] Support for X11_TYPE=xorg was removed."
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] Please switch to X11_TYPE=modular."
 X11_TYPE:=		native
 X11BASE:=		/usr
 .endif
@@ -504,25 +504,25 @@ X11BASE:=		/usr
 .if !defined(NO_SKIP)
 .  if (defined(NO_BIN_ON_CDROM) && defined(FOR_CDROM))
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} may not be distributed on physical media in binary form:" \
+	"[bsd.pkg.mk] ${PKGNAME} may not be distributed on physical media in binary form:" \
          "    "${NO_BIN_ON_CDROM:Q}
 .  endif
 .  if (defined(NO_SRC_ON_CDROM) && defined(FOR_CDROM))
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} may not be distributed on physical media in source form:" \
+	"[bsd.pkg.mk] ${PKGNAME} may not be distributed on physical media in source form:" \
          "    "${NO_SRC_ON_CDROM:Q}
 .  endif
 .  if (defined(RESTRICTED) && defined(NO_RESTRICTED))
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} is restricted:" \
+	"[bsd.pkg.mk] ${PKGNAME} is restricted:" \
 	 "    "${RESTRICTED:Q}
 .  endif
 .  if defined(USE_X11) && (${USE_X11} != "weak") && (${X11_TYPE} == "native") && !exists(${X11BASE})
 PKG_FAIL_REASON+=	\
-	"${PKGNAME} uses X11, but ${X11BASE} not found"
+	"[bsd.pkg.mk] ${PKGNAME} uses X11, but ${X11BASE} not found"
 .  endif
 .  if ${BROKEN:U:M*}
-PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken:"
+PKG_FAIL_REASON+=	"[bsd.pkg.mk] ${PKGNAME} is marked as broken:"
 PKG_FAIL_REASON+=	${BROKEN}
 .  endif
 
@@ -573,11 +573,11 @@ __PLATFORM_OK?=	yes
 # Check OK (NOT_FOR/ONLY_FOR) before WORKS (BROKEN_ON)
 .  if !defined(__PLATFORM_OK)
 PKG_SKIP_REASON+=	\
-	"${PKGNAME} is not available for ${MACHINE_PLATFORM}"
+	"[bsd.pkg.mk] ${PKGNAME} is not available for ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_OK
 .  if !defined(__PLATFORM_WORKS)
 PKG_FAIL_REASON+=	\
-	"${PKGNAME} is marked broken on ${MACHINE_PLATFORM}"
+	"[bsd.pkg.mk] ${PKGNAME} is marked broken on ${MACHINE_PLATFORM}"
 .  endif	# !__PLATFORM_WORKS
 
 .endif # NO_SKIP
