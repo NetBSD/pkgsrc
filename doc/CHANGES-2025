@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6052 2025/10/12 12:27:42 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6053 2025/10/12 12:28:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8788,3 +8788,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ada-langkit-support-25 to 25.2.0 [dkazankov 2025-10-12]
 	Updated textproc/ada-prettier-ada-25 to 25.2.0 [dkazankov 2025-10-12]
 	Updated sysutils/lsd to 1.2.0 [pin 2025-10-12]
+	Updated finance/rex to 0.2.1 [pin 2025-10-12]
