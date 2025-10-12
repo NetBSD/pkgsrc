@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6077 2025/10/12 18:23:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6078 2025/10/12 18:27:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8812,3 +8812,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-nh3 to 0.3.1 [wiz 2025-10-12]
 	Updated x11/py-qt-builder to 1.19.0 [wiz 2025-10-12]
 	Updated comms/py-rich to 14.2.0 [wiz 2025-10-12]
+	Updated devel/py-ruff to 0.14.0 [wiz 2025-10-12]
