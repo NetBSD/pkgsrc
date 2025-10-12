@@ -1,4 +1,4 @@
-$NetBSD: patch-src_sox.c,v 1.1 2022/04/24 09:39:46 nia Exp $
+$NetBSD: patch-src_sox.c,v 1.2 2025/10/12 04:06:27 mrg Exp $
 
 PR pkg/56800 hitting v or V during sox's play command causes a
 segfault
@@ -10,10 +10,15 @@ fileno under the assumption that stdio was being used in the audio driver.
 
 output_muted is not defined on NetBSD.
 
---- src/sox.c.orig	2014-10-06 02:02:30.000000000 +0000
-+++ src/sox.c
-@@ -1313,7 +1313,8 @@ static void adjust_volume(int delta)
+include <sys/ioctl.h> to get ioctl() prototype.
+
+--- src/sox.c.orig	2014-10-05 19:02:30.000000000 -0700
++++ src/sox.c	2025-10-11 20:54:02.019395172 -0700
+@@ -1311,9 +1311,11 @@ static void adjust_volume(int delta)
+     putc('\a', stderr);
+ }
  #elif defined(HAVE_AUDIOIO_H)
++#include <sys/ioctl.h>
  static void adjust_volume(int delta)
  {
 -  int vol1 = 0, vol2 = 0, fd = fileno((FILE*)ofile->ft->fp);
@@ -22,7 +27,7 @@ output_muted is not defined on NetBSD.
    if (fd >= 0) {
      audio_info_t audio_info;
      if (ioctl(fd, AUDIO_GETINFO, &audio_info) >= 0) {
-@@ -1321,7 +1322,9 @@ static void adjust_volume(int delta)
+@@ -1321,7 +1323,9 @@ static void adjust_volume(int delta)
        vol2 = range_limit(vol1 + delta, 0, 100);
        AUDIO_INITINFO(&audio_info);
        audio_info.play.gain = (vol2 * AUDIO_MAX_GAIN + 50) / 100;
