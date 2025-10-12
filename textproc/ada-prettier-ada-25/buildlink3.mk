@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/09/04 09:24:55 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/12 09:30:46 dkazankov Exp $
 
 BUILDLINK_TREE+=	prettier-ada-25
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	prettier-ada-25
 PRETTIER_ADA_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.prettier-ada-25+=		prettier-ada-${GNAT_NAME}>=25.0.0
+BUILDLINK_ABI_DEPENDS.prettier-ada-25+=		prettier-ada-${GNAT_NAME}>=25.2.0
 BUILDLINK_PKGSRCDIR.prettier-ada-25?=		../../textproc/ada-prettier-ada-25
 BUILDLINK_DEPMETHOD.prettier-ada-25?=		build
 
