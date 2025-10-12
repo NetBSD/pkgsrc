@@ -1,4 +1,4 @@
-$NetBSD: patch-langkit_compiled__types.py,v 1.2 2025/10/09 15:18:55 dkazankov Exp $
+$NetBSD: patch-langkit_compiled__types.py,v 1.3 2025/10/12 13:11:19 dkazankov Exp $
 
 Transition uses of the Python pipes module to shlex
 "pipes" was removed from Python 3.13.
@@ -15,3 +15,12 @@ https://github.com/AdaCore/langkit/commit/dbacb9b5545315e7045ef082dba99d2c96ed13
  from typing import (
      Any,
      Callable,
+@@ -58,7 +58,7 @@
+     :param list[str] args: Elements of the special comment.
+     :rtype: str
+     """
+-    return ('--# {}'.format(' '.join(pipes.quote(a) for a in args))
++    return ('--# {}'.format(' '.join(shlex.quote(a) for a in args))
+             if get_context().emitter.generate_gdb_hook else '')
+ 
+ 
