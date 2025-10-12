@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6047 2025/10/12 07:26:22 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6048 2025/10/12 08:47:08 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8783,3 +8783,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xosview2 to 2.3.4 [vins 2025-10-12]
 	Updated devel/p5-Specio to 0.53 [wiz 2025-10-12]
 	Updated devel/gpr2-tools to 25.2.0 [dkazankov 2025-10-12]
+	Updated lang/spark2014-14 to 14.2.0nb1 [dkazankov 2025-10-12]
