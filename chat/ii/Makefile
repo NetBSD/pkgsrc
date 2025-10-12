@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/09/02 20:24:02 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/12 14:41:43 vins Exp $
 
 DISTNAME=	ii-2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://dl.suckless.org/tools/
 
@@ -21,7 +22,6 @@ CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .if !${OPSYS:M*BSD} && ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS"
-# build strlcpy() compatibility
 CPPFLAGS+=	-DNEED_STRLCPY
 MAKE_FLAGS+=	LIBS+=strlcpy.o
 .endif
