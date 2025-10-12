@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/06 21:49:19 ktnb Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/12 01:32:11 mrg Exp $
 
 DISTNAME=	aalib-1.4rc5
 PKGNAME=	${DISTNAME:S/rc5/.0.5/}
@@ -28,5 +28,7 @@ SUBST_FILES.malloc=	src/aalinux.c src/aax.c src/aaxkbd.c		\
 SUBST_SED.malloc=	-e 's|<malloc.h>|<stdlib.h>|g'
 
 .include "options.mk"
+
+#CFLAGS.NetBSD+= -Wno-implicit-int -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch -Wno-incompatible-pointer-types -Wno-int-conversion
 
 .include "../../mk/bsd.pkg.mk"
