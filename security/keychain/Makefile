@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2025/06/01 18:41:25 vins Exp $
+# $NetBSD: Makefile,v 1.45 2025/10/12 05:25:16 vins Exp $
 
-DISTNAME=	keychain-2.9.5
-PKGREVISION=	1
+DISTNAME=	keychain-2.9.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=funtoo/}
 
