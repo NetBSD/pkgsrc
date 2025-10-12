@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6050 2025/10/12 09:55:37 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6051 2025/10/12 09:56:26 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8786,3 +8786,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/spark2014-14 to 14.2.0nb1 [dkazankov 2025-10-12]
 	Updated textproc/ada-vss-25 to 25.2.0 [dkazankov 2025-10-12]
 	Updated devel/ada-langkit-support-25 to 25.2.0 [dkazankov 2025-10-12]
+	Updated textproc/ada-prettier-ada-25 to 25.2.0 [dkazankov 2025-10-12]
