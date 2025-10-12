@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:45:58 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/10/12 01:32:11 mrg Exp $
 
 BLAKE2s (aalib-1.4rc5.tar.gz) = 51b1456f242fbeaa6a8d98045ba40a4a942412d9fbb12dfa6cf8118ee125a09d
 SHA512 (aalib-1.4rc5.tar.gz) = 3e4506eccce3b81ccbbb79a4a1b90abd39e2259e6043fde90f70b9ca279bd4c37758a047167267b97c4ec92f64fb17c7c8f548114f0d0c6e78ddb9463b5f1299
 Size (aalib-1.4rc5.tar.gz) = 391028 bytes
 SHA1 (patch-aa) = 927d69a8f499b99f0bd5f13cf220ce8cbb7ea591
 SHA1 (patch-ab) = 272f6f10dbe7a525c582a9b4c865f0ab9b2f9fba
-SHA1 (patch-ac) = 8d9c812b9b871f44dd1285d6a635eeab6e49bf49
+SHA1 (patch-ac) = fec94beac4e94d555e8e39f9b461484ba342182f
+SHA1 (patch-src_aafire.c) = ebcf38a572b19785e04414b1116dcb3c01dc445a
+SHA1 (patch-src_aainfo.c) = bb5077e15cc5eb930c7cda22ae5944249788eacc
+SHA1 (patch-src_aakbdreg.c) = 5b8fa4679519ddd10a55284a13f77f1ae02857dc
+SHA1 (patch-src_aamoureg.c) = dc0dd704b59a02d4468c109830049ab49d3ed689
+SHA1 (patch-src_aaregist.c) = 82abe30099cadbd26e382e566069c0a41983f2a3
+SHA1 (patch-src_aasavefont.c) = 54d983a0cc890343be003eece209da4b443e1c88
+SHA1 (patch-src_aatest.c) = d967f8c8a56713ff0576d4c240e97f7f453a4913
+SHA1 (patch-src_aaxkbd.c) = 441a3538fcd9752c9d6c5857b290296616255376
