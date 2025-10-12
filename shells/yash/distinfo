@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2025/05/23 19:18:52 vins Exp $
+$NetBSD: distinfo,v 1.9 2025/10/12 06:24:28 vins Exp $
 
-BLAKE2s (yash-2.59.tar.xz) = cc366c1a37282c73f577eacace0b3faceae333c4b9c158bba3cd8fdb40ccc797
-SHA512 (yash-2.59.tar.xz) = eafcd8b9ced1238714076833f8023d158e28a8a5bc4cc9f381b030d7f67b2113c3ae291641a53daceecba053b0f89a6b478b83536b3e93880054aa2856f989e0
-Size (yash-2.59.tar.xz) = 806348 bytes
+BLAKE2s (yash-2.60.tar.xz) = dff803412a4ba725af1aabe58c184dcff1ababab9102140b4c0850bd44cb9f0a
+SHA512 (yash-2.60.tar.xz) = 3bd4b0a7220c551a352c5e4b0c2371cb3f9c3b51e1189fc983ef828db1d1a82c50f89631620e2e83a0cda2c3b47a43107272555db0a7e2b33b5fb24272d0a180
+Size (yash-2.60.tar.xz) = 810564 bytes
 SHA1 (patch-Makefile.in) = f9529b43db6f3775a5676b0f96f5cd5c4d60234e
