@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4535 2025/10/02 11:49:43 nia Exp $
+# $NetBSD: Makefile,v 1.4536 2025/10/12 17:29:18 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2651,6 +2651,7 @@ SUBDIR+=	py-doctor
 SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dotenv
 SUBDIR+=	py-dulwich
+SUBDIR+=	py-dunamai
 SUBDIR+=	py-e3-core
 SUBDIR+=	py-e3-testsuite
 SUBDIR+=	py-editables
