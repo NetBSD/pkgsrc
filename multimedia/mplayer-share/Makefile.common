@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2024/02/17 22:49:22 wiz Exp $
+# $NetBSD: Makefile.common,v 1.70 2025/10/12 06:34:02 mrg Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -80,5 +80,10 @@ CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
 .endif
 
 CHECK_PORTABILITY_SKIP+=	ffmpeg/configure
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=       -Wno-implicit-function-declaration -Wno-incompatible-pointer-types -Wno-int-conversion
+.endif
 
 .include "../../multimedia/mplayer-share/options.mk"
