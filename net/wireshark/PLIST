@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2025/10/09 14:43:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.104 2025/10/12 10:14:20 leot Exp $
 bin/capinfos
 bin/captype
 bin/dumpcap
@@ -62,7 +62,10 @@ ${PLIST.doc}man/man1/randpkt.1
 ${PLIST.doc}man/man1/randpktdump.1
 ${PLIST.doc}man/man1/rawshark.1
 ${PLIST.doc}man/man1/reordercap.1
+${PLIST.doc}man/man1/sshdig.1
 ${PLIST.doc}man/man1/sshdump.1
+${PLIST.doc}man/man1/strato.1
+${PLIST.doc}man/man1/stratoshark.1
 ${PLIST.doc}man/man1/text2pcap.1
 ${PLIST.doc}man/man1/tshark.1
 ${PLIST.doc}man/man1/udpdump.1
@@ -73,6 +76,8 @@ ${PLIST.doc}man/man4/wireshark-filter.4
 ${PLIST.icons}share/applications/org.wireshark.Wireshark.desktop
 share/doc/wireshark/COPYING
 share/doc/wireshark/README.xml-output
+${PLIST.doc}share/doc/wireshark/Stratoshark Release Notes.html
+${PLIST.doc}share/doc/wireshark/Wireshark Release Notes.html
 ${PLIST.doc}share/doc/wireshark/androiddump.html
 ${PLIST.doc}share/doc/wireshark/capinfos.html
 ${PLIST.doc}share/doc/wireshark/captype.html
@@ -88,9 +93,11 @@ share/doc/wireshark/pdml2html.xsl
 ${PLIST.doc}share/doc/wireshark/randpkt.html
 ${PLIST.doc}share/doc/wireshark/randpktdump.html
 ${PLIST.doc}share/doc/wireshark/rawshark.html
-${PLIST.doc}share/doc/wireshark/release-notes.html
 ${PLIST.doc}share/doc/wireshark/reordercap.html
+${PLIST.doc}share/doc/wireshark/sshdig.html
 ${PLIST.doc}share/doc/wireshark/sshdump.html
+${PLIST.doc}share/doc/wireshark/strato.html
+${PLIST.doc}share/doc/wireshark/stratoshark.html
 ${PLIST.doc}share/doc/wireshark/text2pcap.html
 ${PLIST.doc}share/doc/wireshark/tshark.html
 ${PLIST.doc}share/doc/wireshark/udpdump.html
