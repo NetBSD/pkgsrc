@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2025/06/04 14:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.78 2025/10/12 18:42:16 wiz Exp $
 
-DISTNAME=	uwsgi-2.0.30
+DISTNAME=	uwsgi-2.0.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgi/}
@@ -16,6 +16,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 USE_TOOLS+=	pkg-config
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
+
+# as of 2.0.31
+# 1 error
 
 .include "options.mk"
 
