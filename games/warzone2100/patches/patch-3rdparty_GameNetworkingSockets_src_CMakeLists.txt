@@ -1,0 +1,15 @@
+$NetBSD: patch-3rdparty_GameNetworkingSockets_src_CMakeLists.txt,v 1.1 2025/10/12 09:06:19 triaxx Exp $
+
+Add support for NetBSD.
+
+--- 3rdparty/GameNetworkingSockets/src/CMakeLists.txt.orig	2025-10-04 05:31:24.682303526 +0000
++++ 3rdparty/GameNetworkingSockets/src/CMakeLists.txt
+@@ -296,6 +296,8 @@ macro(set_clientlib_target_properties GN
+ 		#endif()
+ 	elseif(CMAKE_SYSTEM_NAME MATCHES FreeBSD)
+ 
++	elseif(CMAKE_SYSTEM_NAME MATCHES NetBSD)
++
+ 	elseif(CMAKE_SYSTEM_NAME MATCHES Windows)
+ 		if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
+ 			get_target_property(TARGET_TYPE ${GNS_TARGET} TYPE)
