@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6042 2025/10/12 05:42:59 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6043 2025/10/12 06:02:11 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8778,3 +8778,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/scons4 to 4.10.0 [wiz 2025-10-11]
 	Updated security/keychain to 2.9.6 [vins 2025-10-12]
 	Updated misc/qt6gtk2 to 0.6 [vins 2025-10-12]
+	Updated comms/syncterm to 1.7 [vins 2025-10-12]
