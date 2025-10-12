@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2025/09/12 17:49:49 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/12 09:55:03 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	langkit-support-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	langkit-support-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	langkit
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/langkit
