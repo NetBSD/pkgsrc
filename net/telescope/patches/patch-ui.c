@@ -1,44 +1,20 @@
-$NetBSD: patch-ui.c,v 1.2 2025/09/09 15:22:06 vins Exp $
+$NetBSD: patch-ui.c,v 1.3 2025/10/12 10:07:00 vins Exp $
 
-Support dprintf() on SunOS.
-Note that illumos supports dprintf() in UNIX V7 compliance.
+Use printf instead of dprintf, for SunOS compat.
 
 --- ui.c.orig	2024-12-30 09:09:40.000000000 +0000
 +++ ui.c
-@@ -30,6 +30,12 @@
-  *
-  */
+@@ -1072,9 +1072,11 @@ redraw_tab(struct tab *tab)
  
-+#if defined(__illumos__)
-+#define _XPG7	1
-+#elif defined(__sun)
-+#include "dprintf.h"
-+#endif
-+
- #include "compat.h"
+ 	doupdate();
  
- #include <sys/time.h>
-@@ -122,6 +128,23 @@ static struct timeval	loading_tv = { 0,
- 
- static char	keybuf[64];
- 
-+#if defined(__sun) && !defined(__illumos__)
-+int
-+dprintf(int fd, const char *restrict format, ...)
-+{
-+	va_list ap;
-+	FILE *f = fdopen(fd, "w");
-+	if (!f) {
-+	    return -1;
+-	if (set_title)
+-		dprintf(1, "\033]2;%s - Telescope\a",
++	if (set_title) {
++		printf("\033]2;%s - Telescope\a",
+ 		    current_tab->buffer.title);
++		fflush(stdout);
 +	}
-+	va_start(ap, format);
-+	int result = fprintf(f, format, ap);
-+	va_end(ap);
-+
-+	return result;
-+}
-+#endif
-+
- /* XXX: don't forget to init these in main() */
- struct kmap global_map,
- 	minibuffer_map,
+ }
+ 
+ void
