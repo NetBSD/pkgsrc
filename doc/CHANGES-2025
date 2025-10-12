@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6046 2025/10/12 06:52:17 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6047 2025/10/12 07:26:22 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8782,3 +8782,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/yash to 2.60 [vins 2025-10-12]
 	Updated sysutils/xosview2 to 2.3.4 [vins 2025-10-12]
 	Updated devel/p5-Specio to 0.53 [wiz 2025-10-12]
+	Updated devel/gpr2-tools to 25.2.0 [dkazankov 2025-10-12]
