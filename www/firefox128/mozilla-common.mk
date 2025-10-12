@@ -1,8 +1,8 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2024/08/18 15:02:20 leot Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2025/10/12 12:04:21 leot Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
-# used by www/firefox/Makefile
+# used by www/firefox128/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
