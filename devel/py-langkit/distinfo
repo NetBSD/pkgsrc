@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2025/10/09 15:18:55 dkazankov Exp $
+$NetBSD: distinfo,v 1.4 2025/10/12 13:11:19 dkazankov Exp $
 
 BLAKE2s (langkit-25.2.tar.gz) = 18dd9330655d0afcd61b6c9c2656fe01eb012f4c1f64ddb3f77e485189c44bec
 SHA512 (langkit-25.2.tar.gz) = 01fa35fc8341665a2b545955c578ce894489e6123322e3a63fa7e954ed1dd7546827b6f4e85e406a575609416ec7179fa70e07a42a50b4cbf88123216cb3fa45
 Size (langkit-25.2.tar.gz) = 1526506 bytes
-SHA1 (patch-langkit_compiled__types.py) = f39a8b6081783094cb89b6f55edce17885f591bf
+SHA1 (patch-langkit_compiled__types.py) = e80846d319a44a4623a1a1af14662d4dd3345cd2
 SHA1 (patch-langkit_libmanage.py) = c842e39940354c8978fd0b3eaf84ac7c88a33f55
 SHA1 (patch-langkit_utils_____init____.py) = f58649998fed08017310f8c584981a65f833199b
