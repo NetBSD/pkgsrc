@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6060 2025/10/12 16:50:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6061 2025/10/12 16:52:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8795,3 +8795,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ada-libadalang-25 to 25.2.0 [dkazankov 2025-10-12]
 	Updated math/imath to 3.2.2 [wiz 2025-10-12]
 	Updated devel/jjui to 0.9.4 [wiz 2025-10-12]
+	Updated devel/spdlog to 1.16.0 [wiz 2025-10-12]
