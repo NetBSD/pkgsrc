@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/03/06 04:33:36 vins Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/12 06:01:33 vins Exp $
 
-DISTNAME=	syncterm-1.6-src
+DISTNAME=	syncterm-1.7-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=syncterm/}
 EXTRACT_SUFX=	.tgz
@@ -50,7 +49,7 @@ MAKE_ENV+=	LDFLAGS=${LDFLAGS:Q}
 
 MAKE_FLAGS+=	RELEASE=1					\
 		SRC_ROOT=${WRKSRC}/src				\
-		PREFIX=${PREFIX:Q}				\
+		PREFIX=${PREFIX}				\
 		MANPREFIX=${PREFIX}/${PKGMANDIR:S,man$,,g}	\
 		SYSTEM_LIST_DIR=${PKG_SYSCONFDIR}		\
 		INSTALL_EXE=${INSTALL:Q}			\
