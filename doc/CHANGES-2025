@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6057 2025/10/12 15:25:43 mef Exp $
+$NetBSD: CHANGES-2025,v 1.6058 2025/10/12 16:20:13 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8792,3 +8792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated news/usenet_reborn to 0.2.2 [vins 2025-10-12]
 	Updated devel/py-liblktlang to 25.2 [dkazankov 2025-10-12]
 	Updated cad/fstl to 0.11.1 [mef 2025-10-12]
+	Updated devel/ada-libadalang-25 to 25.2.0 [dkazankov 2025-10-12]
