@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/06/07 22:03:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/10/12 17:55:12 wiz Exp $
 ${PYSITELIB}/cattr/__init__.py
 ${PYSITELIB}/cattr/__init__.pyc
 ${PYSITELIB}/cattr/__init__.pyo
@@ -137,6 +137,9 @@ ${PYSITELIB}/cattrs/strategies/_subclasses.pyo
 ${PYSITELIB}/cattrs/strategies/_unions.py
 ${PYSITELIB}/cattrs/strategies/_unions.pyc
 ${PYSITELIB}/cattrs/strategies/_unions.pyo
+${PYSITELIB}/cattrs/subclasses.py
+${PYSITELIB}/cattrs/subclasses.pyc
+${PYSITELIB}/cattrs/subclasses.pyo
 ${PYSITELIB}/cattrs/typealiases.py
 ${PYSITELIB}/cattrs/typealiases.pyc
 ${PYSITELIB}/cattrs/typealiases.pyo

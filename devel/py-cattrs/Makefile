@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/09/03 07:54:43 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/12 17:55:12 wiz Exp $
 
-DISTNAME=	cattrs-25.2.0
+DISTNAME=	cattrs-25.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cattrs/}
@@ -33,8 +33,8 @@ USE_LANGUAGES=	# none
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.1.1:../../devel/py-exceptiongroup
 .endif
 
-# as of 25.1.1
-# 838 passed, 15 xfailed
+# as of 25.3.0
+# 8 failed, 857 passed, 15 xfailed, 25 errors
 
 # bson, see above; leading to
 # tests/preconf/test_pyyaml.py:13: in <module>
