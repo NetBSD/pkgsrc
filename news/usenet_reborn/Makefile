@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/09/14 08:01:18 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/12 14:05:03 vins Exp $
 
-# make sure to upload a copy to ftp.NetBSD.org when updating this package
-DISTNAME=	usenet_reborn-0.2.0
-PKGREVISION=	1
+DISTNAME=	usenet_reborn-0.2.2
 CATEGORIES=	news
-# doesn't allow direct downloads
-#MASTER_SITES=	https://git.sr.ht/~rek2/usenet_reborn/archive/
+MASTER_SITES=	https://static.crates.io/crates/usenet_reborn/
+EXTRACT_SUFX=   .crate
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~rek2/usenet_reborn/
@@ -30,8 +28,6 @@ EGDIR=		share/examples/${PKGBASE}
 EGFILES=	config.toml subscriptions
 
 INSTALLATION_DIRS+=	${EGDIR}
-
-WRKSRC=		${WRKDIR}/${PKGBASE}-${PKGVERSION_NOREV}
 
 post-install:
 	${INSTALL_DATA} ${EGFILES:S|^|${WRKSRC}/configs/|}	\
