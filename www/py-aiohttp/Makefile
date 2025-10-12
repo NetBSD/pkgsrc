@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2025/10/09 07:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/10/12 17:06:26 wiz Exp $
 
-DISTNAME=	aiohttp-3.12.15
+DISTNAME=	aiohttp-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-aiodns>=3.2.0:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.5.0:../../net/py-aiohappyeyeballs
 DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.4.0:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
@@ -34,8 +35,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)
-# leads to, as of 3.11.16
-# 3 failed, 3152 passed, 29 skipped, 22 xfailed, 48 errors
+# leads to, as of 3.13.0
+# 4 failed, 3576 passed, 75 skipped, 9 xfailed, 43 errors
 pre-test:
 	cd ${WRKSRC} && ${RM} -f tests/test_proxy_functional.py tests/autobahn/test_autobahn.py
 
