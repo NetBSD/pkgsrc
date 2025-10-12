@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1.1.1 2011/07/27 10:23:49 cherry Exp $
+$NetBSD: patch-al,v 1.2 2025/10/12 02:03:10 mrg Exp $
 
---- src/netbsd/signal-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
-+++ src/netbsd/signal-netbsd.c
+--- src/netbsd/signal-netbsd.c.orig	2025-10-11 18:33:53.088993767 -0700
++++ src/netbsd/signal-netbsd.c	2025-10-11 18:42:36.295252290 -0700
 @@ -0,0 +1,171 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
@@ -98,7 +98,7 @@ $NetBSD: patch-al,v 1.1.1.1 2011/07/27 10:23:49 cherry Exp $
 +	sigaddset(&sigpend, sig);
 +	si64 = &siginfo[sig - 1].info;
 +	memset(si64, 0, sizeof(*si64));
-+	si64->si_addr = ifa; /* XXX: normalise pointers to ptr64_t */
++	si64->si_addr = (void *)ifa; /* XXX: normalise pointers to ptr64_t */
 +}
 +
 +static void signal_handler(int sig, siginfo_t *si, void *uc)
@@ -122,7 +122,7 @@ $NetBSD: patch-al,v 1.1.1.1 2011/07/27 10:23:49 cherry Exp $
 +	si64->si_pid = si->si_pid;
 +	si64->si_uid = si->si_uid;
 +	si64->si_status = si->si_status;
-+	si64->si_addr = (long)si->si_addr;
++	si64->si_addr = (void *)(uintptr_t)si->si_addr;
 +	si64->si_value.sival_ptr = si->si_value.sival_ptr;
 +	si64->si_band = si->si_band;
 +}
