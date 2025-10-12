@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/08/30 22:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/10/12 09:40:02 mrg Exp $
 
 DISTNAME=	arcticfox-46.1
 PKGREVISION=	1
@@ -154,6 +154,11 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/applications/arcticfox.desktop
 	${INSTALL_DATA} ${WRKDIR}/icudt58b.dat \
 	    ${DESTDIR}${PREFIX}/lib/${PKGNAME_NOREV}/icudt58b.dat
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+= -Wno-implicit-int -Wno-int-conversion
+.endif
 
 .include "options.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
