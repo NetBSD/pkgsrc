@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6061 2025/10/12 16:52:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6062 2025/10/12 17:06:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8796,3 +8796,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/imath to 3.2.2 [wiz 2025-10-12]
 	Updated devel/jjui to 0.9.4 [wiz 2025-10-12]
 	Updated devel/spdlog to 1.16.0 [wiz 2025-10-12]
+	Updated www/py-aiohttp to 3.13.0 [wiz 2025-10-12]
