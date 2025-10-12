@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2025/09/16 05:45:36 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/12 13:18:28 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-25.0.0
-PKGNAME=	${PYPKGPREFIX}-liblktlang-25.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${PYPKGPREFIX}-liblktlang-${GITHUB_TAG}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	langkit
-GITHUB_TAG=	v25.0.0
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/langkit
@@ -21,9 +21,6 @@ HAS_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 GCC_REQD+=	14
-
-# langkit uses deprecated pipes module
-PYTHON_VERSIONS_INCOMPATIBLE+=	313
 
 CREATE_INPLACE_BUILD_TARGETS=	static-pic
 

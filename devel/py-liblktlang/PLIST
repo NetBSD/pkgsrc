@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/04 11:55:04 dkazankov Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/12 13:18:28 dkazankov Exp $
 bin/lkt_playground${PYVERSSUFFIX}
-${PYSITELIB}/liblktlang-25.0.dist-info/METADATA
-${PYSITELIB}/liblktlang-25.0.dist-info/RECORD
-${PYSITELIB}/liblktlang-25.0.dist-info/WHEEL
-${PYSITELIB}/liblktlang-25.0.dist-info/top_level.txt
+${PYSITELIB}/liblktlang-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/liblktlang-${PKGVERSION}.dist-info/RECORD
+${PYSITELIB}/liblktlang-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/liblktlang-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/liblktlang/__init__.py
 ${PYSITELIB}/liblktlang/__init__.pyc
 ${PYSITELIB}/liblktlang/__init__.pyo
