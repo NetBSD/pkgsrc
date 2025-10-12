@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6045 2025/10/12 06:38:18 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6046 2025/10/12 06:52:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8781,3 +8781,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/syncterm to 1.7 [vins 2025-10-12]
 	Updated shells/yash to 2.60 [vins 2025-10-12]
 	Updated sysutils/xosview2 to 2.3.4 [vins 2025-10-12]
+	Updated devel/p5-Specio to 0.53 [wiz 2025-10-12]
