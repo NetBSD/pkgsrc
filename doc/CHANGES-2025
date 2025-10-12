@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6044 2025/10/12 06:25:04 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6045 2025/10/12 06:38:18 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8780,3 +8780,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/qt6gtk2 to 0.6 [vins 2025-10-12]
 	Updated comms/syncterm to 1.7 [vins 2025-10-12]
 	Updated shells/yash to 2.60 [vins 2025-10-12]
+	Updated sysutils/xosview2 to 2.3.4 [vins 2025-10-12]
