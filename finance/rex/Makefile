@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2025/08/26 13:21:41 pin Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/12 12:28:21 pin Exp $
 
-DISTNAME=	rex-0.1.21
+DISTNAME=	rex-0.2.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TheRustyPickle/}
 GITHUB_PROJECT=	Rex
@@ -13,9 +13,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.89.0
+#RUST_REQ=	1.90.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.89.0 on amd64
+#This package is confirmed to build with Rust 1.90.0 on amd64
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -23,4 +23,5 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/wayland/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
