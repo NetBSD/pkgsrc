@@ -1,0 +1,18 @@
++-----------------------------------------------------------------------
+| # Optional dependencies for XFind 
++-----------------------------------------------------------------------
+
+XFile relies on the following applications to open files:
+
+	* x11/xedit		# text editor
+	* www/links		# url browser
+	* graphics/ximaging	# image viewer
+	* graphics/xpaint	# image editor
+	* print/mupdf		# pdf viewer
+	* multimedia/mpv	# audio/video player
+
+Local changes to the default file type associations may be applied 
+inside the  user's ~/.Xresources file.
+See @PREFIX@/lib/X11/app-defaults/XFile.
+
+------------------------------------------------------------------------
