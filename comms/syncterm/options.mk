@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/03/06 04:33:36 vins Exp $
+# $NetBSD: options.mk,v 1.3 2025/10/12 06:01:33 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.syncterm
 PKG_OPTIONS_NONEMPTY_SETS=	display sound
@@ -31,7 +31,7 @@ MAKE_FLAGS+=	WITHOUT_ALSA_SOUND=yes
 ##
 .if !empty(PKG_OPTIONS:Mcurses)
 .  include "../../mk/curses.buildlink3.mk"
-USE_CURSES=	getmouse haldelay wide
+USE_CURSES=	getmouse halfdelay wide
 FAKE_NCURSES=	yes
 .  if !${CURSES_TYPE:M*ncurses*}
 CFLAGS+=	-DUSE_SYSTEM_CURSES
@@ -106,7 +106,7 @@ MAKE_FLAGS+=	WITHOUT_SDL=1
 .  include "../../x11/libXinerama/buildlink3.mk"
 .  include "../../x11/libXrandr/buildlink3.mk"
 .  include "../../x11/libX11/buildlink3.mk"
-MAKE_FLAGS+=	X_PATH=${X11BASE:Q}
+MAKE_FLAGS+=	X_PATH=${X11BASE}
 .else
 MAKE_FLAGS+=	NO_X=1
 .endif
