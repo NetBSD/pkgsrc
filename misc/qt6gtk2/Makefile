@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/08/30 22:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/12 05:42:06 vins Exp $
 
-DISTNAME=	qt6gtk2-0.5
-PKGREVISION=	1
+DISTNAME=	qt6gtk2-0.6
 CATEGORIES=	misc x11
 MASTER_SITES=	https://www.opencode.net/trialuser/qt6gtk2/-/archive/${PKGVERSION_NOREV}/
 
@@ -17,6 +16,8 @@ USE_TOOLS=		pkg-config
 GCC_REQD+=	9 #qt6
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
+
+CXXFLAGS+=	-Wno-deprecated-declarations	# GTimeVal struct
 
 QMAKE_ARGS+=	qt6gtk2.pro
 QMAKE_ARGS+=	QMAKE_CXXFLAGS=${CXXFLAGS:Q}
