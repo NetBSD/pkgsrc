@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2025/09/08 11:03:09 vins Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/12 13:42:33 vins Exp $
 
 DISTNAME=	snap
-PKGREVSION=	1
-PKGVER=		20240703
+PKGNAME=	drawterm-20240703
+PKGREVISION=	2
 SNAPSHOT=	f11139d4c918802a87730bc14d094670ee4ce572
-PKGNAME=	drawterm-${PKGVER}
 CATEGORIES=	x11 plan9
 MASTER_SITES=	https://git.9front.org/git/plan9front/drawterm/${SNAPSHOT}/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -14,70 +13,31 @@ HOMEPAGE=	https://drawterm.9front.org/
 COMMENT=	Utility to connect to Plan9 CPU servers
 LICENSE=	mit
 
+USE_TOOLS+=	sed
+
 PTHREAD_AUTO_VARS=	yes
+PTHREAD_OPTS=		require
 
-CFLAGS+=	-I${WRKSRC} -I${WRKSRC}/include -I${WRKSRC}/kern
+MAKE_FLAGS+=	CONF=pkgsrc CC=${CC:Q} X11=${X11BASE} \
+		RANLIB=${RANLIB:Q} LDADD=${LIBS:Q} \
+		PTHREAD=${PTHREAD_CFLAGS:Q}
 
-MAKE_FLAGS+=	CC=${CC:Q}
-MAKE_FLAGS+=	X11=${X11BASE}
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	LDADD="-lX11 -lXt -lm ${EXTRA_LIBS}"
-MAKE_FLAGS+=	RANLIB=${RANLIB:Q}
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
-.include "../../mk/compiler.mk"
+LIBS+=		-lX11 -lXt -lm
+LIBS.OpenBSD+=	-lsndio
+LIBS.NetBSD+=	-lossaudio
+LIBS.Linux+=	-lasound
+LIBS.SunOS+=	-lrt -lsocket -lnsl
+
 .include "../../mk/bsd.prefs.mk"
 
-.if ${PKGSRC_COMPILER:Mgcc}
-CFLAGS+=	-Wall -Wno-missing-braces -ggdb -c
-.else
-CFLAGS+=	-g -c
-.endif
-
-.if ${OPSYS:M*BSD}
-MAKE_FLAGS+=	CONF=${LOWER_OPSYS}
-.  if ${OPSYS} == "OpenBSD"
-EXTRA_LIBS=	-lsndio
-.  elif ${OPSYS} == "NetBSD"
-EXTRA_LIBS=	-lossaudio
-.  endif
-
+.if ${OPSYS:M*BSD} || ${OPSYS} == "SunOS"
+.include "../../mk/oss.buildlink3.mk"
+MAKE_FLAGS+=    AUDIO=unix
 .elif ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
-MAKE_FLAGS+=	CONF=unix
 MAKE_FLAGS+=	AUDIO=alsa
-EXTRA_LIBS=	-lasound
-
-.elif ${OPSYS} == "Darwin"
-MAKE_FLAGS+=	CONF=osx-x11
-
-.elif ${OPSYS} == "IRIX" && !empty(PKGSRC_COMPILER:Mmipspro*)
-MAKE_FLAGS+=	CONF=irix
-MAKE_FLAGS+=	CFLAGS+=-DIRIX
-.endif
-
-.if ${OPSYS} == "SunOS"
-
-CFLAGS+=		-D__EXTENSIONS__
-
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths+=	Make.unix
-SUBST_SED.paths=	-e 's,i.86/386,i86pc/amd64,'
-
-EXTRA_LIBS=		-lrt -lsocket -lnsl
-
-.  if ${OPSYS_VERSION} <= 051000
-MAKE_FLAGS+=	AUDIO=sun
-.  else
-MAKE_FLAGS+=	AUDIO=unix
-.  endif
-
-.  if !empty(PKGSRC_COMPILER:Msunpro)
-MAKE_FLAGS+=	CONF=sun
-.  else
-MAKE_FLAGS+=	CONF=unix
-.  endif
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -92,6 +52,5 @@ do-install:
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

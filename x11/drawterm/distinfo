@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2025/09/10 14:35:46 vins Exp $
+$NetBSD: distinfo,v 1.8 2025/10/12 13:42:33 vins Exp $
 
 BLAKE2s (drawterm-20240703/snap.tar.gz) = 58fd45c170a391d353e71af54795e5fae03260abe46fe8de3d0a4389b590a940
 SHA512 (drawterm-20240703/snap.tar.gz) = 0f63bb727d3511873ceea5a27a0d095e10e93bdaaba2afecf1568b468375980e239a3b17b83ed1964e249d9eeda77adbceef25b729ab78c54304a4908a80e328
 Size (drawterm-20240703/snap.tar.gz) = 615366 bytes
+SHA1 (patch-Make.pkgsrc) = 56ea2837774f1c01229f64a191bfe9faebc02b4d
+SHA1 (patch-include_auth.h) = e865dfe781dc57a26d85198aaf4b85f06778d2ea
