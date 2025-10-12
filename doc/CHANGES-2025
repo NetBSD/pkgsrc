@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6083 2025/10/12 18:47:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6084 2025/10/12 18:48:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8818,3 +8818,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.3.0 [wiz 2025-10-12]
 	Updated www/py-uwsgi to 2.0.31 [wiz 2025-10-12]
 	Updated devel/wayland to 1.24.0 [wiz 2025-10-12]
+	Updated security/py-certifi to 2025.10.5 [wiz 2025-10-12]
