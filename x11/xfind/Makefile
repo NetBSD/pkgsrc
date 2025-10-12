@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/10/11 16:48:48 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/12 08:24:30 vins Exp $
 
 DISTNAME=	xfind-src
-VERSION=	1.0.3
-PKGNAME=	${DISTNAME:S,-src,,}-${VERSION}
+PKGNAME=	xfind-1.0.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -15,18 +15,21 @@ LICENSE=	isc
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 
-SUBST_CLASSES+=		pkgsrc
-SUBST_STAGE.pkgsrc=	pre-configure
-SUBST_FILES.pkgsrc=	make.local
-SUBST_VARS.pkgsrc+=	PREFIX PKGMANDIR
-SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
+MAKE_FILE=		make.local
+USE_BSD_MAKEFILE=	yes
 
-MAKE_FILE=	make.local
+PIXMAPDIR=		share/pixmaps
+APPLRESDIR=		lib/X11/app-defaults
 
-INSTALLATION_DIRS+=	share/applications
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/applications
+INSTALLATION_DIRS+=	${PIXMAPDIR} ${APPLRESDIR}
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/xfind.desktop	\
+	${INSTALL_DATA} ${WRKSRC}/xfind.xpm	  \
+		${DESTDIR}${PREFIX}/${PIXMAPDIR}/xfind_48x48.xpm
+	${INSTALL_DATA} ${WRKSRC}/XFind.ad	  \
+		${DESTDIR}${PREFIX}/${APPLRESDIR}/XFind
+	${INSTALL_DATA} ${FILESDIR}/xfind.desktop \
 		${DESTDIR}${PREFIX}/share/applications
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
