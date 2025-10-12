@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2025/07/14 11:16:56 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2025/10/12 21:44:57 mrg Exp $
 
 BLAKE2s (gcc-14.3.0.tar.xz) = 70036c7d07767bba3476d19a6fd52f0b09dc05651c6cf5d136afe18ffa3b63a9
 SHA512 (gcc-14.3.0.tar.xz) = cb4e3259640721bbd275c723fe4df53d12f9b1673afb3db274c22c6aa457865dccf2d6ea20b4fd4c591f6152e6d4b87516c402015900f06ce9d43af66d3b7a93
@@ -26,7 +26,7 @@ SHA1 (patch-gcc_calls.h) = 89b4b16d1c6d05358208ce321a00c30a9292c70d
 SHA1 (patch-gcc_collect2.cc) = 0afb813670c91221416a69a84295efe122a3b258
 SHA1 (patch-gcc_common.opt) = 1aa40a7919fc55f085316ebda18f0e8f4e724da8
 SHA1 (patch-gcc_common_config_aarch64_aarch64-common.cc) = e37205308e70a45bda90244c733e30adaef787d5
-SHA1 (patch-gcc_config.gcc) = 6799bb4f583fca42ca68fd7f9f01fecd9b867155
+SHA1 (patch-gcc_config.gcc) = 9b09ccade2a617943d7c84e8385fb4f840bf160a
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
 SHA1 (patch-gcc_config_aarch64_aarch64-builtins.cc) = 6a1d686275eec3598ffefb14973bf768846ab4a1
 SHA1 (patch-gcc_config_aarch64_aarch64-c.cc) = 32c31e906263e7790112140a528e1ca0337e43ff
@@ -34,7 +34,7 @@ SHA1 (patch-gcc_config_aarch64_aarch64-cores.def) = ae9664ad30826fa7fc5c247faf15
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
 SHA1 (patch-gcc_config_aarch64_aarch64-protos.h) = d9b90df2600b7d92bca098d9dc4ac965fe94983c
 SHA1 (patch-gcc_config_aarch64_aarch64-tune.md) = 4c3d2f4d757e75e6f154936ae6cb0b409aabd8f2
-SHA1 (patch-gcc_config_aarch64_aarch64.cc) = 3de2cc5fe4f4da6ca25b8f7ef0ef659d7bec51f8
+SHA1 (patch-gcc_config_aarch64_aarch64.cc) = 90cc5b659959c73ef29616cd642924cbdaf674be
 SHA1 (patch-gcc_config_aarch64_aarch64.h) = b2e297c5a37d07b5d360566d111ce7b5c561209d
 SHA1 (patch-gcc_config_aarch64_aarch64.md) = 547637f1096d544897ee906c67f7d18b070ab4cc
 SHA1 (patch-gcc_config_aarch64_aarch64.opt) = 179acff4f1f9f462810a834f71908e94b341b8a3

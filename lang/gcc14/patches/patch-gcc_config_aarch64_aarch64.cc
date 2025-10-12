@@ -1,9 +1,11 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64.cc,v 1.2 2025/06/08 07:37:45 wiz Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64.cc,v 1.3 2025/10/12 21:44:57 mrg Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+Apply fixes from GCC PR PR118891: Fix ZIP1 order in aarch64_expand_vector_init
 
---- gcc/config/aarch64/aarch64.cc.orig	2025-05-23 11:02:04.284197394 +0000
-+++ gcc/config/aarch64/aarch64.cc
+
+--- gcc/config/aarch64/aarch64.cc.orig	2025-05-23 04:02:04.284197394 -0700
++++ gcc/config/aarch64/aarch64.cc	2025-10-12 14:39:18.549565530 -0700
 @@ -329,8 +329,10 @@ static bool aarch64_vfp_is_call_or_retur
  						     const_tree,
  						     machine_mode *, int *,
@@ -1084,7 +1086,21 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      return true;
  
    if (SYMBOL_REF_P (x) && mode == DImode && CONSTANT_ADDRESS_P (x))
-@@ -24453,12 +25043,8 @@ aarch64_asm_output_variant_pcs (FILE *st
+@@ -24019,6 +24609,13 @@ aarch64_expand_vector_init (rtx target, 
+       emit_insn (rec_seq);
+     }
+ 
++  /* The two halves should (by induction) be individually endian-correct.
++     However, in the memory layout provided by VALS, the nth element of
++     HALVES[0] comes immediately before the nth element HALVES[1].
++     This means that, on big-endian targets, the nth element of HALVES[0]
++     is more significant than the nth element HALVES[1].  */
++  if (BYTES_BIG_ENDIAN)
++    std::swap (halves[0], halves[1]);
+   rtvec v = gen_rtvec (2, halves[0], halves[1]);
+   rtx_insn *zip1_insn
+     = emit_set_insn (target, gen_rtx_UNSPEC (mode, v, UNSPEC_ZIP1));
+@@ -24453,12 +25050,8 @@ aarch64_asm_output_variant_pcs (FILE *st
  static std::string aarch64_last_printed_arch_string;
  static std::string aarch64_last_printed_tune_string;
  
@@ -1099,7 +1115,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  {
    tree target_parts = DECL_FUNCTION_SPECIFIC_TARGET (fndecl);
  
-@@ -24497,15 +25083,60 @@ aarch64_declare_function_name (FILE *str
+@@ -24497,15 +25090,60 @@ aarch64_declare_function_name (FILE *str
  		   this_tune->name);
        aarch64_last_printed_tune_string = this_tune->name;
      }
@@ -1160,7 +1176,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  
  /* Implement PRINT_PATCHABLE_FUNCTION_ENTRY.  */
  
-@@ -24562,12 +25193,17 @@ aarch64_output_patchable_area (unsigned 
+@@ -24562,12 +25200,17 @@ aarch64_output_patchable_area (unsigned 
  /* Implement ASM_OUTPUT_DEF_FROM_DECLS.  Output .variant_pcs for aliases.  */
  
  void
@@ -1179,7 +1195,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  }
  
  /* Implement ASM_OUTPUT_EXTERNAL.  Output .variant_pcs for undefined
-@@ -24613,6 +25249,9 @@ aarch64_start_file (void)
+@@ -24613,6 +25256,9 @@ aarch64_start_file (void)
  		aarch64_last_printed_arch_string.c_str ());
  
     default_file_start ();
@@ -1189,7 +1205,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  }
  
  /* Emit load exclusive.  */
-@@ -25192,6 +25831,16 @@ aarch64_output_simd_mov_immediate (rtx c
+@@ -25192,6 +25838,16 @@ aarch64_output_simd_mov_immediate (rtx c
      }
  
    gcc_assert (CONST_INT_P (info.u.mov.value));
@@ -1206,7 +1222,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  
    if (which == AARCH64_CHECK_MOV)
      {
-@@ -25200,16 +25849,16 @@ aarch64_output_simd_mov_immediate (rtx c
+@@ -25200,16 +25856,16 @@ aarch64_output_simd_mov_immediate (rtx c
  		  ? "msl" : "lsl");
        if (lane_count == 1)
  	snprintf (templ, sizeof (templ), "%s\t%%d0, " HOST_WIDE_INT_PRINT_HEX,
@@ -1226,7 +1242,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
    else
      {
-@@ -25218,12 +25867,12 @@ aarch64_output_simd_mov_immediate (rtx c
+@@ -25218,12 +25874,12 @@ aarch64_output_simd_mov_immediate (rtx c
        if (info.u.mov.shift)
  	snprintf (templ, sizeof (templ), "%s\t%%0.%d%c, #"
  		  HOST_WIDE_INT_PRINT_DEC ", %s #%d", mnemonic, lane_count,
@@ -1241,7 +1257,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
    return templ;
  }
-@@ -28459,7 +29108,8 @@ aarch64_libgcc_floating_mode_supported_p
+@@ -28459,7 +29115,8 @@ aarch64_libgcc_floating_mode_supported_p
  }
  
  /* Implement TARGET_SCALAR_MODE_SUPPORTED_P - return TRUE
@@ -1251,7 +1267,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  
  static bool
  aarch64_scalar_mode_supported_p (scalar_mode mode)
-@@ -28467,7 +29117,7 @@ aarch64_scalar_mode_supported_p (scalar_
+@@ -28467,7 +29124,7 @@ aarch64_scalar_mode_supported_p (scalar_
    if (DECIMAL_FLOAT_MODE_P (mode))
      return default_decimal_float_supported_p ();
  
@@ -1260,7 +1276,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  	  ? true
  	  : default_scalar_mode_supported_p (mode));
  }
-@@ -29284,19 +29934,37 @@ aarch64_sls_emit_shared_blr_thunks (FILE
+@@ -29284,19 +29941,37 @@ aarch64_sls_emit_shared_blr_thunks (FILE
  	continue;
  
        const char *name = indirect_symbol_names[regnum];
@@ -1301,7 +1317,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
      }
  }
  
-@@ -30384,6 +31052,60 @@ aarch64_retrieve_sysreg (const char *reg
+@@ -30384,6 +31059,60 @@ aarch64_retrieve_sysreg (const char *reg
    return sysreg->encoding;
  }
  
@@ -1362,7 +1378,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  /* Target-specific selftests.  */
  
  #if CHECKING_P
-@@ -30600,6 +31322,15 @@ aarch64_run_selftests (void)
+@@ -30600,6 +31329,15 @@ aarch64_run_selftests (void)
  #undef TARGET_ASM_ALIGNED_SI_OP
  #define TARGET_ASM_ALIGNED_SI_OP "\t.word\t"
  
@@ -1378,7 +1394,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  #undef TARGET_ASM_CAN_OUTPUT_MI_THUNK
  #define TARGET_ASM_CAN_OUTPUT_MI_THUNK \
    hook_bool_const_tree_hwi_hwi_const_tree_true
-@@ -30702,6 +31433,12 @@ aarch64_run_selftests (void)
+@@ -30702,6 +31440,12 @@ aarch64_run_selftests (void)
  #undef TARGET_FUNCTION_ARG_BOUNDARY
  #define TARGET_FUNCTION_ARG_BOUNDARY aarch64_function_arg_boundary
  
@@ -1391,7 +1407,7 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  #undef TARGET_FUNCTION_ARG_PADDING
  #define TARGET_FUNCTION_ARG_PADDING aarch64_function_arg_padding
  
-@@ -31042,7 +31779,7 @@ aarch64_libgcc_floating_mode_supported_p
+@@ -31042,7 +31786,7 @@ aarch64_libgcc_floating_mode_supported_p
  
  /* The architecture reserves bits 0 and 1 so use bit 2 for descriptors.  */
  #undef TARGET_CUSTOM_FUNCTION_DESCRIPTORS
