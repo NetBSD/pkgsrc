@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/07/29 13:14:58 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/12 08:46:47 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-fsf-14
 PKGNAME=	${GITHUB_PROJECT}-14-14.2.0
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	spark2014
@@ -83,9 +84,6 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} gcc14-gnat \( -type f -or -type l \) -print | ${SORT};
 
-#BUILDLINK_DEPMETHOD.sparklib-14=		full
-#.include "../../devel/ada-sparklib-14/buildlink3.mk"
-
 .include "../../devel/gprbuild/buildlink3.mk"
 
 .include "../../textproc/ada-xmlada-25/buildlink3.mk"
@@ -123,20 +121,8 @@ BUILDLINK_DEPMETHOD.ocaml-ppx_sexp_conv=	build
 BUILDLINK_DEPMETHOD.ocaml-ppx_deriving=		build
 .include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
 
-#BUILDLINK_DEPMETHOD.ocaml-base=		build
-#.include "../../devel/ocaml-base/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.ocaml-sexplib0=		build
-#.include "../../devel/ocaml-sexplib0/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.ocaml-parsexp=		build
-#.include "../../devel/ocaml-parsexp/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.ocaml-zip=			build
-#.include "../../archivers/ocaml-zip/buildlink3.mk"
-#BUILDLINK_DEPMETHOD.ocaml-ocplib-simplex=	build
-#.include "../../math/ocaml-ocplib-simplex/buildlink3.mk"
-
 # libgpr2 dependencies
 .include "../../devel/gmp/buildlink3.mk"
-USE_GNU_ICONV=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
