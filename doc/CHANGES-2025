@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6070 2025/10/12 18:07:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6071 2025/10/12 18:10:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8805,3 +8805,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-gi-docgen to 2025.5 [wiz 2025-10-12]
 	Updated devel/py-google-api-core to 2.26.0 [wiz 2025-10-12]
 	Updated devel/py-isort to 7.0.0 [wiz 2025-10-12]
+	Updated graphics/py-matplotlib to 3.10.7 [wiz 2025-10-12]
