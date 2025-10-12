@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/09/02 16:40:03 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/10/12 14:05:03 vins Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -357,9 +357,9 @@ Size (regex-automata-0.4.9.crate) = 618525 bytes
 BLAKE2s (regex-syntax-0.8.5.crate) = a64af5c9a6aceb9d4e37b662d7c8b599d4179b3642f92cb8b511ba3f650b93e5
 SHA512 (regex-syntax-0.8.5.crate) = 549d8d130fea9ec0d5806126f57f31d433f50e9328c5532ad417c44bb5488ec0d20acb0983dbe54dabaa0b453cbea4533cf7baac7144df119e8f78dfe55c5ab8
 Size (regex-syntax-0.8.5.crate) = 357541 bytes
-BLAKE2s (rek2_nntp-1.0.5.crate) = 71ec206e2ff3a1f75729704d8444a6b3d73814ce5b654575c698fd354217d64d
-SHA512 (rek2_nntp-1.0.5.crate) = 6722dde1f03375a104855e03abd1d54e104b78801ba798e0dd4fbf93e39db2c5acfa4f14771c16f3bad653873a021f6e77a3f33baee94f882039a602814f1649
-Size (rek2_nntp-1.0.5.crate) = 30297 bytes
+BLAKE2s (rek2_nntp-1.0.6.crate) = f217cc50715550bd3fcd1181ce9ea43faf8d5bdeb704e8b93d3aaafae8422e2b
+SHA512 (rek2_nntp-1.0.6.crate) = 8913487062547c8c724a1465ab68948a5b5cf6e52a70d6375631a6960a382f3223037c882ef78a8234b4e710362b208ba8f43dff4640f8790893b575faa9cd2d
+Size (rek2_nntp-1.0.6.crate) = 30923 bytes
 BLAKE2s (rfc2047-decoder-1.0.6.crate) = aba57000b1b0e171116794c8ab03b9e56b9bce7a01eb5c1618aac1aece606c87
 SHA512 (rfc2047-decoder-1.0.6.crate) = 77912c6fe0784e38595538798cc9dcfc9202c24a1fa0f5dd05eb4d78ee788067450c902d52ecc3122e158ea09537229a8e6e96578e694ea334d240f1700d7d3e
 Size (rfc2047-decoder-1.0.6.crate) = 14674 bytes
@@ -513,9 +513,9 @@ Size (unicode-width-0.2.0.crate) = 271509 bytes
 BLAKE2s (untrusted-0.9.0.crate) = 48fd20f1ccabe5057140657a1103382efe55b4711cc443e17c503849f38c1589
 SHA512 (untrusted-0.9.0.crate) = 5929e4079c1c2ff933ae8d8f59a2ecc7a424e71a20d1b8821f75925af68bdf82604b024c008e5464b02e25ff093e561a352b685e755b3d0b27e4c30254689416
 Size (untrusted-0.9.0.crate) = 14447 bytes
-BLAKE2s (usenet_reborn-0.2.0.tar.gz) = 4b2f0278bec1170c353cd80903f9dcfffc17ad02d5fdb5b496cf5fb4e6925916
-SHA512 (usenet_reborn-0.2.0.tar.gz) = 2b7f0b376815048c2244a2a61b5492c7eeefe98ee782db58cabdd4424208eeb49eca6bce71029d60a8268ff25ceabded69d82964b197e3a7d690624834df156d
-Size (usenet_reborn-0.2.0.tar.gz) = 4092319 bytes
+BLAKE2s (usenet_reborn-0.2.2.crate) = 4f0b24ba9096a7ae716430987fa58678f5e79c7e2bfdcf1e44f7c3b680eda8bb
+SHA512 (usenet_reborn-0.2.2.crate) = 904157c44831c61bf627280e4d5b2c8cb368d3c1ab3ba9b79dd70b830acfe27be403f85db6ad09219701384acfd333eb214c9979a74a6d88ba8d6a62d0415055
+Size (usenet_reborn-0.2.2.crate) = 4093380 bytes
 BLAKE2s (vcpkg-0.2.15.crate) = 0ec9e97d0e23d59f0a4095773e1136e15f2054fb86bcceb309774638768ea8c4
 SHA512 (vcpkg-0.2.15.crate) = 7322a21e8811b2fe4e79e09dc321458068ecdf1953f05d36233f3278ecc0b1dfc64194db7010dd46fcf692285f42475beb090c6c6cac0c8f9fe0eb5c770e3172
 Size (vcpkg-0.2.15.crate) = 228735 bytes

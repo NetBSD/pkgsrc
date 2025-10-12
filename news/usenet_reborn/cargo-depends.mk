@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/09/01 18:42:22 vins Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2025/10/12 14:05:03 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -119,7 +119,7 @@ CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.11
 CARGO_CRATE_DEPENDS+=	regex-1.11.1
 CARGO_CRATE_DEPENDS+=	regex-automata-0.4.9
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
-CARGO_CRATE_DEPENDS+=	rek2_nntp-1.0.5
+CARGO_CRATE_DEPENDS+=	rek2_nntp-1.0.6
 CARGO_CRATE_DEPENDS+=	rfc2047-decoder-1.0.6
 CARGO_CRATE_DEPENDS+=	ring-0.17.14
 CARGO_CRATE_DEPENDS+=	rusqlite-0.34.0
