@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
+$NetBSD: patch-ai,v 1.5 2025/10/12 00:57:39 mrg Exp $
 
 - clean up junk decls that exist in headers, and include the right headers
 - use fgets instead of gets
@@ -6,10 +6,20 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
 - when executing a child metamail, propagate the parents options as much as
   possible
 - use termios instead of termio/sgtty
+- give many things return types and (basic) prototypes for GCC 14.
 
---- metamail/metamail.c.orig	1994-02-17 01:57:19.000000000 +0000
-+++ metamail/metamail.c
-@@ -46,12 +46,8 @@ extern char *mktemp(char *);
+--- metamail/metamail.c.orig	1994-02-16 17:57:19.000000000 -0800
++++ metamail/metamail.c	2025-10-11 16:45:09.001504426 -0700
+@@ -26,6 +26,8 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+ #include <config.h>
+ #include <patchlevel.h>
+ 
++#include "metamail.h"
++
+ #ifdef BORLAND
+ #define F_OK 0
+ extern unsigned _stklen = 16384;
+@@ -46,12 +48,8 @@ extern char *mktemp(char *);
  #include <signal.h>
  
  #ifndef AMIGA
@@ -23,7 +33,7 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  #endif /* AMIGA */
  #endif /* MICROSOFT */
  #endif /* BORLAND */
-@@ -83,7 +79,7 @@ extern char *MkRmScript();
+@@ -83,7 +81,7 @@ extern char *MkRmScript();
  #define MAX_FILE_NAME_SIZE 256
  #define WRITE_BINARY	"w"
  #else /* AMIGA */
@@ -32,7 +42,7 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  #define CATCOMMAND  "cat"
  #define CATTEMPLATE "cat %s"
  #define METAMAIL    "metamail"
-@@ -100,15 +96,14 @@ extern char **environ, *gets();
+@@ -100,15 +98,49 @@ extern char **environ, *gets();
  #define CMDSIZE 1200 /* Maximum size of command to execute */
  
  #define LINE_BUF_SIZE       2000
@@ -50,11 +60,46 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  
 +void PauseForUser(void);
 +void maybephead(char *);
++int ProcessArguments(int, char **);
++int ExitWithError(char *);
++void RestoreTtyState();
++int HandleMessage(char *, int);
++int Read822Prefix(int, int);
++int ProcessMailcapFiles(char *);
++int SaveSquirrelFile(char *);
++void PrepareMessage();
++void MkTmpFileName(char *);
++int TryBuiltIns(char *);
++void TranslateInputToOutput();
++void usage();
++void StripTrailingSpace(char *);
++void RunInNewWindow();
++void CreateNewWindowPrefix();
++void SetUpEnvironment();
++int ProcessMailcapFile();
++int TryMailcapEntry();
++int IsDirectory();
++int CtypeMatch();
++int GetMailcapEntry();
++int ExecuteMailcapEntry();
++int OKToRun();
++int ExecuteCommand();
++int PassesTest();
++void BuildCommand();
++int StartRawStdin();
++void strcatquoting();
++int NeedToBeQuiet();
++int NeedToAskBeforeExecuting();
++void SaveTtyState();
++int WriteTmpFile();
++void EliminateNastyChars();
++void strcpynoquotes();
++void phead();
 +
  char *FindParam();
  extern FILE *popen();
  static char *nomem = "Out of memory!";
-@@ -151,6 +146,32 @@ int MightAskBeforeExecuting = 1,
+@@ -151,6 +183,32 @@ int MightAskBeforeExecuting = 1,
      JustWriteFiles = 0,
      ProcessingErrors = 0;
  
@@ -87,7 +132,23 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  char *ContentType = NULL,
      *ContentEncoding = NULL,
      *MailerName = "unknown",
-@@ -497,8 +518,9 @@ int nestingdepth;
+@@ -295,6 +353,7 @@ char *auxpath;
+     }
+ }
+ 
++void
+ main(argc, argv)
+ int argc;
+ char **argv;
+@@ -387,6 +446,7 @@ char *fname;
+     }
+ }
+ 
++int
+ HandleMessage(SquirrelFile, nestingdepth)
+ char *SquirrelFile;
+ /* SquirrelFile, if non-NULL, is a place to save a recognized body instead of executing it. */
+@@ -497,8 +557,9 @@ int nestingdepth;
          if (IsAlternative) {
              if (WroteSquirrelFile) {
                  int retcode; 
@@ -99,7 +160,7 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
                  fflush(stdout); fflush(stderr);
                  retcode = system(Cmd);
  #ifdef MSDOS
-@@ -579,7 +601,7 @@ int nestingdepth;
+@@ -579,7 +640,7 @@ int nestingdepth;
                                  int overwriteans = -1;
                                  do {
                                      printf("File %s exists.  Do you want to overwrite it (y/n) ?\n", Fname);
@@ -108,7 +169,69 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
                                      if (!s) {
                                          overwriteans = 0;
                                      } else {
-@@ -1202,9 +1224,9 @@ char *SquirrelFile;
+@@ -661,6 +722,7 @@ int nestingdepth;
+     return(-1); /* Unrecognized, really */
+ }
+ 
++int
+ ProcessArguments(argc, argv)
+ int argc;
+ char **argv;
+@@ -940,11 +1002,13 @@ char **argv;
+     return(0);
+ }
+ 
++void
+ usage() {
+     fprintf(stderr, "Usage:  metamail [-b] [-B] [-d] [-e] [-h] [-r] [-R] [-p]  [-P] [-x] [-y] [-z] [-c content-type] [-E content-transfer-encoding] [-f from-name] [-m mailername] [-s subject] [message-file-name]\n");
+     ExitWithError(NULL);
+ }
+ 
++void
+ RunInNewWindow(argv, argc, SourceFileNamePtr)
+ char **argv, **SourceFileNamePtr;
+ int argc;
+@@ -1026,6 +1090,7 @@ struct MailcapEntry BuiltInsAlternative[
+     {"text/plain", CATTEMPLATE, NULL, 0, 1, 0, "plain text", LPRTEMPLATE},
+     {NULL, NULL, NULL, 0, 0, 0}};
+ 
++int
+ ProcessMailcapFiles(SquirrelFile) 
+ char *SquirrelFile;
+ {
+@@ -1082,6 +1147,7 @@ char *SquirrelFile;
+ #endif /* MICROSOFT */
+ }
+ 
++int
+ TryBuiltIns(SquirrelFile) 
+ char *SquirrelFile;
+ {
+@@ -1094,6 +1160,7 @@ char *SquirrelFile;
+     return(-1);
+ }
+ 
++int
+ ProcessMailcapFile(file, SquirrelFile)
+ char *file, *SquirrelFile;
+ {
+@@ -1166,6 +1233,7 @@ eatmore:
+     }
+ }    
+ 
++int
+ TryMailcapEntry(mc, SquirrelFile)
+ struct MailcapEntry mc;
+ char *SquirrelFile;
+@@ -1189,6 +1257,7 @@ char *SquirrelFile;
+     return(-1);
+ }
+ 
++int
+ SaveSquirrelFile(SquirrelFile)
+ char *SquirrelFile;
+ {
+@@ -1202,9 +1271,9 @@ char *SquirrelFile;
      fprintf(outfp, "Content-type: %s", ContentType);
      for (j=0; j<CParamsUsed; ++j) {
          fprintf(outfp, " ; ");
@@ -120,7 +243,71 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
      }
      fprintf(outfp, "\n\n"); 
      TranslateInputToOutput(InputFP, outfp, EncodingCode, ContentType);
-@@ -1823,7 +1845,7 @@ char *ctype, *progname, *label;
+@@ -1214,6 +1283,7 @@ char *SquirrelFile;
+     return(0);
+ }
+ 
++int
+ ExecuteMailcapEntry(mc, TmpFileName, ThisContentType)
+ char *TmpFileName, *ThisContentType;
+ struct MailcapEntry mc;
+@@ -1361,6 +1431,7 @@ struct MailcapEntry mc;
+     return(0);
+ }
+ 
++int
+ PassesTest(mc)
+ struct MailcapEntry *mc;
+ {
+@@ -1414,6 +1485,7 @@ char *s, **t;
+     return(NULL);
+ }	
+ 
++int
+ GetMailcapEntry(fp, mc)
+ FILE *fp;
+ struct MailcapEntry *mc;
+@@ -1507,6 +1579,7 @@ struct MailcapEntry *mc;
+     return(1);
+ }
+ 
++int
+ ExitWithError(txt)
+ char *txt;
+ {
+@@ -1534,6 +1607,7 @@ char *s;
+     return(newcopy);
+ }
+ 
++int
+ Read822Prefix(PrintHeads, nestingdepth)
+ int PrintHeads, nestingdepth;
+ {
+@@ -1654,6 +1728,7 @@ yankagain:
+     return 0;
+ }
+ 
++void
+ PrepareMessage() {
+     int c;
+ 
+@@ -1688,6 +1763,7 @@ PrepareMessage() {
+     SetUpEnvironment();  
+ }
+ 
++void
+ SetUpEnvironment() { 
+     int i, j, environsize;
+     char **newenviron, *mailervar, *summaryvar, *ctypevar, *s;
+@@ -1809,6 +1885,7 @@ char *def;
+ }
+ #endif
+ 
++int
+ OKToRun(ctype, progname, label)
+ char *ctype, *progname, *label;
+ {
+@@ -1823,7 +1900,7 @@ char *ctype, *progname, *label;
          } else {
              printf("This message contains '%s'-format data.\nDo you want to view it using the '%s' command (y/n) [y] ? ", ctype, ShortCommand(progname));
          }
@@ -129,7 +316,23 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
          if (!s) return(0); /* EOF */
  	while (s && *s && isspace((unsigned char) *s)) ++s;
  	if (*s == 'y' || *s == 'Y' || !*s || *s == '\n') return(1);
-@@ -1900,7 +1922,7 @@ char *hdr;
+@@ -1834,6 +1911,7 @@ char *ctype, *progname, *label;
+     }
+ }
+ 
++void
+ EliminateNastyChars(s)
+ char *s;
+ {
+@@ -1848,6 +1926,7 @@ char *s;
+     }
+ }
+ 
++void
+ StripTrailingSpace(s)
+ char *s;
+ {
+@@ -1900,7 +1979,7 @@ char *hdr;
  }
  
  /* check the header given to see if it matches any in the KeyHeadList */
@@ -138,7 +341,15 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  char *hdr;
  {
      char *s;
-@@ -2022,7 +2044,8 @@ int ShowLeadingWhitespace;
+@@ -1934,6 +2013,7 @@ char *hdr;
+ }
+ 
+ /* This next routine prints out a mail header, and needs to deal with the new extended charset headers. */
++void
+ phead(s)
+ char *s;
+ {
+@@ -2022,7 +2102,8 @@ int ShowLeadingWhitespace;
      if (lc2strcmp(charset, PrevCharset)) {
          char *s2, *charsetinuse;
  
@@ -148,7 +359,7 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
          for (s2=PrevCharset; *s2; ++s2) {
              if (isupper((unsigned char) *s2)) *s2 = tolower((unsigned char) *s2);
          }
-@@ -2032,7 +2055,7 @@ int ShowLeadingWhitespace;
+@@ -2032,7 +2113,7 @@ int ShowLeadingWhitespace;
          }
      }
      if (ecode == ENCODING_NONE) {
@@ -157,7 +368,47 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
      } else {
          /* What follows is REALLY bogus, but all my encoding stuff is pipe-oriented right now... */
          MkTmpFileName(TmpFile);
-@@ -2375,41 +2398,25 @@ char *Prefix;
+@@ -2067,6 +2148,7 @@ int ShowLeadingWhitespace;
+     PrintHeader(txtend + 2, 0);
+ }
+ 
++void
+ BuildCommand(Buf, controlstring, TmpFileName, UsedTmpFileName, PartsWritten)
+ char *Buf, *controlstring, *TmpFileName;
+ int *UsedTmpFileName;
+@@ -2279,6 +2361,7 @@ struct part **PartsWritten;
+     *to = 0;
+ }
+ 
++void
+ strcpynoquotes(t,f)
+ char *t, *f;
+ {
+@@ -2290,6 +2373,7 @@ char *t, *f;
+     }
+ }
+ 
++int
+ WriteTmpFile(fname, ctype)
+ char *fname;
+ char *ctype;
+@@ -2309,6 +2393,7 @@ char *ctype;
+ }
+ 
+ 
++void
+ TranslateInputToOutput(InputFP, OutputFP, Ecode, ctype)
+ FILE *InputFP, *OutputFP;
+ int Ecode;
+@@ -2336,6 +2421,7 @@ char *ctype;
+ #endif
+ }
+ 
++void
+ CreateNewWindowPrefix(Prefix)
+ char *Prefix;
+ {
+@@ -2375,43 +2461,30 @@ char *Prefix;
  
  int HasSavedTtyState=0;
  #if !defined(AMIGA) && !defined(MSDOS)
@@ -169,6 +420,7 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
 +static struct termios MyTtyStateIn, MyTtyStateOut;
  #endif
  
++void
  SaveTtyState() {
      /* Bogus -- would like a good portable way to reset the terminal state here */
  #if !defined(AMIGA) && !defined(MSDOS)
@@ -185,26 +437,70 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  #endif
  }
  
++void
  RestoreTtyState() {
  #if !defined(AMIGA) && !defined(MSDOS)
 -#ifdef SYSV
--    if (HasSavedTtyState) {
+     if (HasSavedTtyState) {
 -        ioctl(fileno(stdout), TCSETA, &MyTtyStateOut);
 -        ioctl(fileno(stdin), TCSETA, &MyTtyStateIn);
--    }
--#else
-     if (HasSavedTtyState) {
--        stty(fileno(stdout), &MyTtyStateOut);
--        stty(fileno(stdin), &MyTtyStateIn);
 +        tcsetattr(fileno(stdout), TCSANOW, &MyTtyStateOut);
 +        tcsetattr(fileno(stdin), TCSANOW, &MyTtyStateIn);
      }
- #endif
+-#else
+-    if (HasSavedTtyState) {
+-        stty(fileno(stdout), &MyTtyStateOut);
+-        stty(fileno(stdin), &MyTtyStateIn);
+-    }
 -#endif
+ #endif
  }
  
++int
  NeedToAskBeforeExecuting(type)
-@@ -2655,12 +2662,12 @@ char *s2;
+ char *type;
+ {
+@@ -2423,6 +2496,7 @@ char *type;
+     return(1);
+ }
+ 
++int
+ NeedToBeQuiet(cmd)
+ char *cmd;
+ {
+@@ -2433,6 +2507,7 @@ char *cmd;
+     return(0);
+ }
+ 
++int
+ CtypeMatch(ctype, pat)
+ char *ctype, *pat;
+ {
+@@ -2459,6 +2534,7 @@ char *ctype, *pat;
+     return(0);
+ }
+ 
++int
+ ExecuteCommand(cmd, really)
+ char *cmd;
+ int really;
+@@ -2484,6 +2560,7 @@ int really;
+     return(0);
+ }
+ 
++void
+ MkTmpFileName(name)
+ char *name;
+ {
+@@ -2640,6 +2717,7 @@ char *s;
+ }
+ #endif
+ 
++void
+ strcatquoting(s1, s2)
+ char *s1;
+ char *s2;
+@@ -2655,12 +2733,12 @@ char *s2;
  #endif
  }
  
@@ -219,8 +515,11 @@ $NetBSD: patch-ai,v 1.4 2015/11/08 20:51:59 dholland Exp $
  #if defined(MSDOS) || defined(AMIGA)
      printf("Press RETURN to go on\n");
      gets(Buf);
-@@ -2681,21 +2688,14 @@ PauseForUser() {
+@@ -2679,23 +2757,17 @@ PauseForUser() {
+ #endif
+ }
  
++int
  StartRawStdin() {
  #if !defined(AMIGA) && !defined(MSDOS)
 -#ifdef SYSV

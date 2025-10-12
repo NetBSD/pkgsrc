@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2021/04/25 05:57:10 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/12 00:57:38 mrg Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV
+#CFLAGS.NetBSD+=	-Wno-implicit-int -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch -Wno-incompatible-pointer-types
 MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD:Q} SED=${SED:Q}
 
 EGDIR=		${PREFIX}/share/examples/metamail
