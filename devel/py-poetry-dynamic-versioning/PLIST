@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/12 17:48:51 wiz Exp $
+bin/poetry-dynamic-versioning-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/poetry_dynamic_versioning/__init__.py
+${PYSITELIB}/poetry_dynamic_versioning/__init__.pyc
+${PYSITELIB}/poetry_dynamic_versioning/__init__.pyo
+${PYSITELIB}/poetry_dynamic_versioning/__main__.py
+${PYSITELIB}/poetry_dynamic_versioning/__main__.pyc
+${PYSITELIB}/poetry_dynamic_versioning/__main__.pyo
+${PYSITELIB}/poetry_dynamic_versioning/backend.py
+${PYSITELIB}/poetry_dynamic_versioning/backend.pyc
+${PYSITELIB}/poetry_dynamic_versioning/backend.pyo
+${PYSITELIB}/poetry_dynamic_versioning/cli.py
+${PYSITELIB}/poetry_dynamic_versioning/cli.pyc
+${PYSITELIB}/poetry_dynamic_versioning/cli.pyo
+${PYSITELIB}/poetry_dynamic_versioning/patch.py
+${PYSITELIB}/poetry_dynamic_versioning/patch.pyc
+${PYSITELIB}/poetry_dynamic_versioning/patch.pyo
+${PYSITELIB}/poetry_dynamic_versioning/plugin.py
+${PYSITELIB}/poetry_dynamic_versioning/plugin.pyc
+${PYSITELIB}/poetry_dynamic_versioning/plugin.pyo
