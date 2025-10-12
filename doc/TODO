@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26313 2025/10/12 06:52:18 wiz Exp $
+$NetBSD: TODO,v 1.26314 2025/10/12 09:55:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -619,6 +619,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.5.0
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -754,6 +755,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icinga-base-2.12.3
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
+	o imath-3.2.2
 	o imlib2-1.12.4
 	o imp-6.2.12
 	o inadyn-2.8.1
@@ -788,6 +790,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jjui-0.9.4
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -862,7 +865,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-20.1.8 [wip]
-	o llvm-21.1.2
+	o llvm-21.1.3
 	o lmbench-3
 	o lnav-0.12.4 [wip]
 	o log4cxx-0.11.0
@@ -976,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencpn-plugin-draw-1.8.5.2
 	o opencsg-1.4.2
 	o opendnssec-2.1.8
+	o openexr-3.4.1
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1026,7 +1030,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-u2f-1.3.1
-	o pandoc-cli-3.8
+	o pandoc-cli-3.8.2
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
 	o passenger-6.0.20
@@ -1097,24 +1101,47 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-aiohttp-3.13.0
+	o py-astroid-4.0.1
+	o py-attrs-25.4.0
+	o py-beets-2.5.0
 	o py-cassa-1.11.0
+	o py-cattrs-25.3.0
+	o py-certbot-5.1.0
+	o py-certifi-2025.10.5
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-gi-docgen-2025.5
+	o py-google-api-core-2.26.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-isort-7.0.0
+	o py-matplotlib-3.10.7
+	o py-maturin-1.9.6
+	o py-msgpack-1.1.2
+	o py-multidict-6.7.0
+	o py-nh3-0.3.1
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-qt-builder-1.19.0
+	o py-rich-14.2.0
+	o py-ruff-0.14.0
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
+	o py-sip6-6.13.1
+	o py-sphinx-autoapi-3.6.1
+	o py-sphinx-autodoc-typehints-3.5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-6.3.0
 	o py-tokyocabinet-0.6
 	o py-trezor-0.13.10
 	o py-uliweb-0.6
+	o py-uwsgi-2.0.31
 	o py-wat-0.6.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1199,6 +1226,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
+	o spdlog-1.16.0
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.1
