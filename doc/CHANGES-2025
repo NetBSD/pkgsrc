@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6080 2025/10/12 18:32:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6081 2025/10/12 18:40:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8815,3 +8815,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.14.0 [wiz 2025-10-12]
 	Updated textproc/py-sphinx-autoapi to 3.6.1 [wiz 2025-10-12]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.5.1 [wiz 2025-10-12]
+	Updated comms/py-textual to 6.3.0 [wiz 2025-10-12]
