@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.10 2020/04/26 06:56:29 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.11 2025/10/12 17:01:28 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -129,7 +129,7 @@ _CBBH.nunpriv=		no
 
 # Check PKG_FAIL_REASON
 _CBBH_CHECKS+=		fail
-_CBBH_MSGS.fail=	"This package has set PKG_FAIL_REASON:" ${PKG_FAIL_REASON}
+_CBBH_MSGS.fail=	"[can-be-built-here.mk] This package has PKG_FAIL_REASON set:" ${PKG_FAIL_REASON}
 
 _CBBH.fail=		yes
 .if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON)
@@ -138,7 +138,7 @@ _CBBH.fail=		no
 
 # Check PKG_SKIP_REASON
 _CBBH_CHECKS+=		skip
-_CBBH_MSGS.skip=	"This package has set PKG_SKIP_REASON:" ${PKG_SKIP_REASON}
+_CBBH_MSGS.skip=	"[can-be-built-here.mk] This package has PKG_SKIP_REASON set:" ${PKG_SKIP_REASON}
 
 _CBBH.skip=		yes
 .if defined(PKG_SKIP_REASON) && !empty(PKG_SKIP_REASON)
