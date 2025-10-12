@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2025/10/09 07:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/10/12 18:18:09 wiz Exp $
 
-DISTNAME=	multidict-6.6.4
+DISTNAME=	multidict-6.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multidict/}
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-objgraph-[0-9]*:../../graphics/py-objgraph
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed-[0-9]*:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
