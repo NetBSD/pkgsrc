@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/08/12 09:17:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/12 01:05:52 mrg Exp $
 
 DISTNAME=	musepack_src_r475
 PKGNAME=	musepack-0rc475
@@ -17,6 +17,11 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 post-install:
 	rm -rf ${DESTDIR}${PREFIX}/include/mpc/.svn/
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-incompatible-pointer-types
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/libcuefile/buildlink3.mk"
