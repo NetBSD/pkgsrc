@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.44 2023/05/20 16:14:07 rillig Exp $
+# $NetBSD: help.awk,v 1.45 2025/10/12 16:24:28 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -236,7 +236,7 @@ eval_this_line && $1 == "#" {
 	end_of_topic();
 }
 
-index(tolower($0), topic) != 0 {
+index(tolower($0), lctopic) != 0 {
 	all_occurrences[FILENAME] = yes;
 }
 
