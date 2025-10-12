@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2025/08/29 21:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/12 18:47:06 wiz Exp $
 
-DISTNAME=	wayland-1.23.0
-PKGREVISION=	7
+DISTNAME=	wayland-1.24.0
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.freedesktop.org/wayland/wayland/-/releases/${PKGVERSION_NOREV}/downloads/
 EXTRACT_SUFX=	.tar.xz
