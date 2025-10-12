@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/12/06 14:41:39 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/12 07:41:31 vins Exp $
 
 DISTNAME=	xbrightness-0.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://disjunkt.com/xbrightness/
 
@@ -11,13 +12,10 @@ LICENSE=	mit
 
 USE_IMAKE=	yes
 
+MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LOCAL_LDFLAGS=${LDFLAGS:Q}
+
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
