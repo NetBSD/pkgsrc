@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_gpr-tools.gpr,v 1.1 2025/07/28 09:07:49 dkazankov Exp $
+$NetBSD: patch-tools_gpr-tools.gpr,v 1.2 2025/10/12 07:21:14 dkazankov Exp $
 
 Fix name prefix usage
 
---- tools/gpr2-tools.gpr.orig	2024-10-16 13:31:33.000000000 +0300
+--- tools/gpr2-tools.gpr.orig	2025-04-22 16:25:55.000000000 +0300
 +++ tools/gpr2-tools.gpr
-@@ -43,12 +43,12 @@
+@@ -43,7 +43,7 @@
  
     package Builder extends Shared.Builder is
        for Executable ("gprbuild-main.adb")   use "gpr2build";
@@ -13,10 +13,3 @@ Fix name prefix usage
        for Executable ("gprclean-main.adb")   use "gpr2clean";
        for Executable ("gprdoc-main.adb")     use "gprdoc";
        for Executable ("gprinspect-main.adb") use "gprinspect";
--      for Executable ("gprinstall-main.adb") use "gprinstall";
--      for Executable ("gprls-main.adb")      use "gprls";
-+      for Executable ("gprinstall-main.adb") use "gpr2install";
-+      for Executable ("gprls-main.adb")      use "gpr2ls";
-       for Executable ("gprremote-main.adb")  use "gprremote";
-       for Executable ("processes_wrapper-main.adb")   use "processes-wrapper";
-    end Builder;
