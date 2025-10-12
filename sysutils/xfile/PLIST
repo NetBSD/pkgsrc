@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/03 07:23:07 vins Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/12 07:34:33 vins Exp $
 bin/xfile
 bin/xfile-open
 ${PLIST.dbus}bin/xfile-xdgsvc
@@ -8,6 +8,7 @@ share/applications/xfile.desktop
 ${PLIST.dbus}share/dbus-1/services/xfile.service
 share/doc/xfile/README
 share/doc/xfile/README.icons
+share/doc/xfile/README.pkgsrc
 share/pixmaps/xfile_48x48.xpm
 share/xfile/icons/arch.l.xpm
 share/xfile/icons/arch.m.xpm
