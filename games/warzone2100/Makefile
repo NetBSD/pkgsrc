@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2025/10/05 19:25:58 js Exp $
+# $NetBSD: Makefile,v 1.97 2025/10/12 09:06:18 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-4.5.5
-PKGREVISION=	6
+PKGNAME=	warzone2100-4.6.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -21,8 +20,9 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 # Needs gnu standard variant to get alloca builtin.
-FORCE_CXX_STD=	gnu++14
+FORCE_CXX_STD=	gnu++17
 
+USE_CXX_FEATURES+=	c++17
 USE_CXX_FEATURES+=	unique_ptr
 
 .include "../../mk/bsd.prefs.mk"
@@ -68,11 +68,13 @@ PLIST_SRC=	PLIST.bundle
 .include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../archivers/libzip/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -86,7 +88,6 @@ BUILDLINK_API_DEPENDS.glew+=		glew>=1.5.2
 .include "../../net/miniupnpc/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsodium+=	libsodium>=1.0.13
 .include "../../security/libsodium/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
