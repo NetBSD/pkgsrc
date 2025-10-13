@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6095 2025/10/13 16:55:43 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6096 2025/10/13 17:24:32 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8830,3 +8830,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-confuse to 2.0.1nb3 [wiz 2025-10-13]
 	Updated textproc/ada-libgnatformat-25 to 25.2.0 [dkazankov 2025-10-13]
 	Updated textproc/gnatformat to 25.2.0 [dkazankov 2025-10-13]
+	Updated textproc/ada-libgnatdoc-25 to 25.2.0 [dkazankov 2025-10-13]
