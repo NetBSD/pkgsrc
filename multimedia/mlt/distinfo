@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2025/06/06 23:20:05 wiz Exp $
+$NetBSD: distinfo,v 1.18 2025/10/13 02:22:16 mrg Exp $
 
 BLAKE2s (mlt-7.32.0.tar.gz) = fcade36ef52c4f8df8709cbbf652ea6bb8e06d3fe5a28d5aee3604ee1b3ada31
 SHA512 (mlt-7.32.0.tar.gz) = 50c261d2a1bf76fd3c83d52bfe989bf4e87b9a77198b721f9ce01b8a18abd3a827751c10810ea31e64f5a4a79633b924be5edbf31c4c5a842a54bdf1c041d7f3
 Size (mlt-7.32.0.tar.gz) = 1487407 bytes
-SHA1 (patch-src_framework_mlt__properties.c) = b6488d86d8411e5754c034e85f55776e66b66f55
-SHA1 (patch-src_framework_mlt__property.h) = baa5e4138885b5abc3422eb87c6134b2d9258b94
+SHA1 (patch-src_framework_mlt__properties.c) = 387866d6ad5ffb5888a5f12c970c1f3b40dac202
+SHA1 (patch-src_framework_mlt__property.c) = dada3132f6eab8a4d09d3a16413e4f8eb4d17c79
