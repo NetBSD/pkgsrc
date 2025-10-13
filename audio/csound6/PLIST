@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2020/10/06 00:26:51 mrg Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/13 02:09:32 mrg Exp $
 include/csound/CppSound.hpp
 include/csound/CsoundFile.hpp
 include/csound/OpcodeBase.hpp
@@ -96,7 +96,6 @@ lib/csound/plugins64-6.0/libosc.so
 lib/csound/plugins64-6.0/libpadsynth.so
 lib/csound/plugins64-6.0/libplaterev.so
 lib/csound/plugins64-6.0/libpvsops.so
-lib/csound/plugins64-6.0/libpy.so
 lib/csound/plugins64-6.0/libquadbezier.so
 ${PLIST.alsa}lib/csound/plugins64-6.0/librtalsa.so
 ${PLIST.jack}lib/csound/plugins64-6.0/librtjack.so
