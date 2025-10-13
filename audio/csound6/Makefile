@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2025/10/05 19:25:39 js Exp $
+# $NetBSD: Makefile,v 1.101 2025/10/13 02:09:32 mrg Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
-PKGREVISION=		45
+PKGREVISION=		46
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound
@@ -22,6 +22,8 @@ CMAKE_CONFIGURE_ARGS+=		-DBUILD_RELEASE=1
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_HDF5_OPCODES=OFF
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+# XXX uses python2.7 and was broken for years, GCC 14 found.
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_PYTHON_OPCODES=OFF
 # CMAKE_INSTALL_RPATH doesn't work for some reason, so do it here.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
 
@@ -52,7 +54,6 @@ post-install:
 .include "../../audio/liblo/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
