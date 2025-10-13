@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6091 2025/10/13 12:15:11 abs Exp $
+$NetBSD: CHANGES-2025,v 1.6092 2025/10/13 12:23:35 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8826,3 +8826,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ada-markdown-25 to 25.2.0 [dkazankov 2025-10-13]
 	Updated textproc/ada-liblal-refactor-25 to 25.2.0 [dkazankov 2025-10-13]
 	Updated net/get_iplayer to 3.36 [abs 2025-10-13]
+	Updated textproc/lal-refactor to 25.2.0 [dkazankov 2025-10-13]
