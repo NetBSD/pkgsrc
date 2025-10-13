@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6097 2025/10/13 18:16:07 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6098 2025/10/13 18:19:39 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8832,3 +8832,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/gnatformat to 25.2.0 [dkazankov 2025-10-13]
 	Updated textproc/ada-libgnatdoc-25 to 25.2.0 [dkazankov 2025-10-13]
 	Updated shells/oh-my-posh to 27.2.0 [pin 2025-10-13]
+	Updated textproc/gnatdoc to 25.2.0 [dkazankov 2025-10-13]
