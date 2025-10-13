@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/10/11 21:46:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/13 19:39:30 tnn Exp $
 
 DISTNAME=	hwdata-0.400
 CATEGORIES=	sysutils
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+=	--datarootdir=${PREFIX:Q}/share
 CONFIGURE_ARGS+=	--disable-blacklist
 
 PKGCONFIG_OVERRIDE+=	hwdata.pc.in
+
+CHECK_PORTABILITY_SKIP+=	check-usb-ids.sh
 
 MAKE_FLAGS+=	PKGCONFIG_DIR=${PREFIX}/lib/pkgconfig
 
