@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2024/07/18 08:43:32 prlw1 Exp $
+$NetBSD: distinfo,v 1.25 2025/10/13 12:14:46 abs Exp $
 
-BLAKE2s (get_iplayer-3.35.tar.gz) = 82f0105d6de5ec5c774df06eb3b799b498cf9fe6b74a3eece542ef46e0712676
-SHA512 (get_iplayer-3.35.tar.gz) = a7f85dfbb372fd23877cafd77cb582fa1096b30ff62fd7ea35228d02aed4c4068350a6873445d3df0637bddfd8175e8130fcf8c8e518f4515f88cbbc57968203
-Size (get_iplayer-3.35.tar.gz) = 149783 bytes
+BLAKE2s (get_iplayer-3.36.tar.gz) = bb3f39ee1a6dcaca4852b0a75d8618a31d7f5c7cecc795d7875c5205728896ba
+SHA512 (get_iplayer-3.36.tar.gz) = 960db114a2c2edfff16765ef62a45eb18e55732f7ad8f8bbf1ea9d132eb5f39c784faa6ef818fd0bfc953ffa961b5fbb7b0c18af982de9564309cb4e0edb35f7
+Size (get_iplayer-3.36.tar.gz) = 150345 bytes
