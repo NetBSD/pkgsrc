@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 07:20:48 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/13 09:19:01 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	libadalang-tools
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/libadalang-tools
@@ -20,11 +20,19 @@ USE_TOOLS+=	gmake
 
 GCC_REQD+=	14
 
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-extract
-SUBST_FILES.version=	src/tgen/tgen_rts/tgen.ads
-SUBST_MESSAGE.version=	Fix version in ${SUBST_FILES.version}
-SUBST_SED.version=	-e 's,0.0,25.0,g'
+SUBST_CLASSES+=		version1
+SUBST_MESSAGE.version1=	Replace version,year and type in ${SUBST_FILES.version1}
+SUBST_STAGE.version1=	post-extract
+SUBST_FILES.version1=	src/utils-versions.ads
+SUBST_SED.version1=	-e "s,\"dev\",\"${GITHUB_TAG}\","
+SUBST_SED.version1+=	-e "s,\"unknown\",\"2025\","
+SUBST_SED.version1+=	-e "s,= Gnatpro;,= GPL;,"
+
+SUBST_CLASSES+=		version2
+SUBST_STAGE.version2=	post-extract
+SUBST_FILES.version2=	src/tgen/tgen_rts/tgen.ads
+SUBST_MESSAGE.version2=	Fix version in ${SUBST_FILES.version2}
+SUBST_SED.version2=	-e 's,0.0,${GITHUB_TAG},g'
 
 # Rename executables to prevent name conflict with ASIS
 #SUBST_CLASSES+=	names
