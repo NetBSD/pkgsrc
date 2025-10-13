@@ -1,24 +1,17 @@
-$NetBSD: patch-src_framework_mlt__properties.c,v 1.4 2023/08/03 02:03:16 markd Exp $
+$NetBSD: patch-src_framework_mlt__properties.c,v 1.5 2025/10/13 02:22:16 mrg Exp $
 
-Add conditional section for __NetBSD__
+Avoid the strtod_l() etc code on NetBSD as well, it is attempts
+to convert between "char *" and "locale_t" directly.
 
---- src/framework/mlt_properties.c.orig	2023-07-28 18:06:26.000000000 +0000
-+++ src/framework/mlt_properties.c
-@@ -144,7 +144,7 @@ int mlt_properties_set_lcnumeric(mlt_pro
-     if (self && locale) {
-         property_list *list = self->local;
+
+--- src/framework/mlt_properties.c.orig	2025-05-07 15:48:51.000000000 -0700
++++ src/framework/mlt_properties.c	2025-10-12 14:16:04.796329616 -0700
+@@ -759,7 +759,7 @@ int mlt_properties_set(mlt_properties se
  
--#if defined(__GLIBC__) || defined(__APPLE__)
-+#if defined(__GLIBC__) || defined(__APPLE__) || (defined(__NetBSD__) && defined(LC_C_LOCALE))
-         if (list->locale)
-             freelocale(list->locale);
-         list->locale = newlocale(LC_NUMERIC_MASK, locale, NULL);
-@@ -1509,7 +1509,7 @@ void mlt_properties_close(mlt_properties
-                 free(list->name[index]);
-             }
- 
--#if defined(__GLIBC__) || defined(__APPLE__)
-+#if defined(__GLIBC__) || defined(__APPLE__) || (defined(__NetBSD__) && defined(LC_C_LOCALE))
-             // Cleanup locale
-             if (list->locale)
-                 freelocale(list->locale);
+             // Determine the value
+             if (isdigit(id[0])) {
+-#if defined(__GLIBC__) || defined(__APPLE__) || HAVE_STRTOD_L && !defined(__OpenBSD__)
++#if defined(__GLIBC__) || defined(__APPLE__) || HAVE_STRTOD_L && !defined(__OpenBSD__) && !defined(__NetBSD__)
+                 property_list *list = self->local;
+                 if (list->locale)
+                     current = strtod_l(id, NULL, list->locale);
