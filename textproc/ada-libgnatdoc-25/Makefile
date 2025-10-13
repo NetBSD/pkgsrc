@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 08:02:41 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/13 17:23:34 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	lib${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	lib${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatdoc
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatdoc
-COMMENT=	GNAT Documentation Generation Tool, library package
+COMMENT=	GNAT Documentation Generation Tool, library package 25
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	ada
@@ -21,6 +21,12 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/bsd.prefs.mk"
 
 GCC_REQD+=	14
+
+SUBST_CLASSES+=		version
+SUBST_MESSAGE.version=	Replace version and date in ${SUBST_FILES.version}
+SUBST_STAGE.version=	post-extract
+SUBST_FILES.version=	source/gnatdoc/gnatdoc-version.ads
+SUBST_SED.version=	-e "s,%VERSION% (%DATE%),${GITHUB_TAG} (20241217),"
 
 PLIST_VARS+=	shlibs
 
@@ -71,7 +77,6 @@ PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.${SHLIB_EXT}.*/ { $$0
 
 # libgpr2 dependencies
 .include "../../devel/gmp/buildlink3.mk"
-USE_GNU_ICONV=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
