@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.11 2022/10/04 10:31:28 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2025/10/13 03:21:20 mrg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 dv faac imagemagick mjpegtools lzo libxml2 x264
-PKG_SUGGESTED_OPTIONS=	a52 imagemagick mjpegtools libxml2 x264
+PKG_SUGGESTED_OPTIONS=	a52 mjpegtools libxml2 x264
+
+# The ImageMagick 7 port for transcode is incomplete, and GCC 14+ complains
+.include "../../mk/compiler.mk"
+.if empty(CC_VERSION:Mgcc-14.*) && empty(CC_VERSION:Mgcc-15.*)
+PKG_SUGGESTED_OPTIONS+=	imagemagick
+.endif
 
 .include "../../mk/bsd.options.mk"
 

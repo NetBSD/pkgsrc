@@ -1,0 +1,17 @@
+$NetBSD: patch-filter_Makefile.am,v 1.1 2025/10/13 03:21:20 mrg Exp $
+
+Don't build filter_resample - it wants interfaces removed in ffmpeg4.
+
+
+--- filter/Makefile.am.orig	2011-11-19 08:50:27.000000000 -0800
++++ filter/Makefile.am	2025-10-12 14:01:57.331524398 -0700
+@@ -22,7 +22,8 @@ FILTER_LOGOAWAY = filter_logoaway.la
+ endif
+ 
+ if HAVE_FFMPEG
+-FILTER_RESAMPLE = filter_resample.la
++# XXXMRG requires ffmpeg3 interfaces.
++# FILTER_RESAMPLE = filter_resample.la
+ if HAVE_LIBPOSTPROC
+ FILTER_PP = filter_pp.la
+ endif
