@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2025/10/13 17:23:34 dkazankov Exp $
+$NetBSD: distinfo,v 1.3 2025/10/13 18:21:13 dkazankov Exp $
 
 BLAKE2s (gnatdoc-25.2.tar.gz) = f05b4635b1fdf619982e1d6d637e339fb3589d7ba4b39085c1e3c7041c8874fb
 SHA512 (gnatdoc-25.2.tar.gz) = 241c76f14a60870ed064846b224ab8c44db77aa08ecfae02a66fcbcc81911a11a5086a9bfba8e83529bdfc2580cfa93119238173a23e7a3d70f5e2969882e84b
 Size (gnatdoc-25.2.tar.gz) = 179714 bytes
 SHA1 (patch-Makefile) = 457c19423a2679b77367c9197447e726c7934b35
-SHA1 (patch-gnat_gnatdoc.gpr) = f01a172f6d6a1cbcc53deef05ff46646e2ba1986
