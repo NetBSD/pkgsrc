@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/10/12 19:12:34 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/13 09:23:54 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	liblal-tools-${GNAT_NAME}-${GITHUB_TAG}.0
@@ -22,11 +22,19 @@ USE_GCC_RUNTIME=	yes
 
 GCC_REQD+=	14
 
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	post-extract
-SUBST_FILES.version=	src/tgen/tgen_rts/tgen.ads
-SUBST_MESSAGE.version=	Fix version in ${SUBST_FILES.version}
-SUBST_SED.version=	-e 's,0.0,${GITHUB_TAG},g'
+SUBST_CLASSES+=		version1
+SUBST_MESSAGE.version1=	Replace version,year and type in ${SUBST_FILES.version1}
+SUBST_STAGE.version1=	post-extract
+SUBST_FILES.version1=	src/utils-versions.ads
+SUBST_SED.version1=	-e "s,\"dev\",\"${GITHUB_TAG}\","
+SUBST_SED.version1+=	-e "s,\"unknown\",\"2025\","
+SUBST_SED.version1+=	-e "s,= Gnatpro;,= GPL;,"
+
+SUBST_CLASSES+=		version2
+SUBST_STAGE.version2=	post-extract
+SUBST_FILES.version2=	src/tgen/tgen_rts/tgen.ads
+SUBST_MESSAGE.version2=	Fix version in ${SUBST_FILES.version2}
+SUBST_SED.version2=	-e 's,0.0,${GITHUB_TAG},g'
 
 PLIST_VARS+=	shlibs
 
