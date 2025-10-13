@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/09/04 13:02:46 dkazankov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/10/13 19:35:27 dkazankov Exp $
 
 BUILDLINK_TREE+=	adawebserver-25
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	adawebserver-25
 ADAWEBSERVER_25_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.adawebserver-25+=	aws-${GNAT_NAME}>=25.0.0
+BUILDLINK_ABI_DEPENDS.adawebserver-25+=	aws-${GNAT_NAME}>=25.2.0
 BUILDLINK_PKGSRCDIR.adawebserver-25?=	../../www/ada-aws-25
 BUILDLINK_DEPMETHOD.adawebserver-25?=	build
 
