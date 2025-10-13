@@ -1,0 +1,17 @@
+$NetBSD: patch-filter_Makefile.in,v 1.1 2025/10/13 03:21:20 mrg Exp $
+
+Don't build filter_resample - it wants interfaces removed in ffmpeg4.
+
+
+--- filter/Makefile.in.orig	2011-11-19 08:50:39.000000000 -0800
++++ filter/Makefile.in	2025-10-12 14:10:47.317045104 -0700
+@@ -689,7 +689,8 @@ pkgdir = $(MOD_PATH)
+ @HAVE_IMAGEMAGICK_TRUE@FILTER_COMPARE = filter_compare.la
+ @HAVE_IMAGEMAGICK_TRUE@FILTER_LOGO = filter_logo.la
+ @HAVE_IMAGEMAGICK_TRUE@FILTER_LOGOAWAY = filter_logoaway.la
+-@HAVE_FFMPEG_TRUE@FILTER_RESAMPLE = filter_resample.la
++# XXXMRG requires ffmpeg3 interfaces.
++@HAVE_FFMPEG_TRUE@# FILTER_RESAMPLE = filter_resample.la
+ @HAVE_FFMPEG_TRUE@@HAVE_LIBPOSTPROC_TRUE@FILTER_PP = filter_pp.la
+ @HAVE_FREETYPE2_TRUE@FILTER_TEXT = filter_text.la
+ @ARCH_X86_TRUE@@HAVE_ASM_MMX_TRUE@@HAVE_ASM_SSE_TRUE@@HAVE_GCC2_FALSE@F_TOMSMOCOMP = tomsmocomp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/05/16 19:41:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/10/13 03:21:20 mrg Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -79,7 +79,6 @@ lib/transcode/filter_null.la
 lib/transcode/filter_pp.la
 ${PLIST.dv}lib/transcode/filter_preview.la
 ${PLIST.x11}lib/transcode/filter_pv.la
-lib/transcode/filter_resample.la
 lib/transcode/filter_skip.la
 lib/transcode/filter_slowmo.la
 lib/transcode/filter_smartbob.la
