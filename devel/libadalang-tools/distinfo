@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2025/09/07 07:20:48 dkazankov Exp $
+$NetBSD: distinfo,v 1.2 2025/10/13 09:19:01 dkazankov Exp $
 
-BLAKE2s (libadalang-tools-25.0.0.tar.gz) = 2822a1e493a0c661843d90b703386b6ccbdb3eeb12290a9e812380ed233c601d
-SHA512 (libadalang-tools-25.0.0.tar.gz) = f546b02879daaea4ad0fea7b3e3ee8be2f9b435223dacade7bf79b7c106f6b2b956683b3ecd028193bf095530df11bb5224596cedd2e091eca2181aa3828859a
-Size (libadalang-tools-25.0.0.tar.gz) = 1141724 bytes
+BLAKE2s (libadalang-tools-25.2.tar.gz) = 11ce56b38542c280d7c0d63d2510e2b779ad078aacdee02a0a019be168bed400
+SHA512 (libadalang-tools-25.2.tar.gz) = 8a86f84470fa556bca8bc8d6f891356d08a56b33e40567e57b208fd1b264eb66874624bc747c416282e5f274285a7781092e85d962a6fa67d71c4565f820082d
+Size (libadalang-tools-25.2.tar.gz) = 1162829 bytes
 SHA1 (patch-Makefile) = 0dd7485496ec748b1dffc3a73d4e8c35836859c6
-SHA1 (patch-src_utils-versions.ads) = 29e5e0b68abb19101d47bb175bbe1bee2f2abd61
