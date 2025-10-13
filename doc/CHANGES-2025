@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6087 2025/10/13 09:19:23 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6088 2025/10/13 09:25:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8822,3 +8822,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/openexr to 3.4.1 [wiz 2025-10-12]
 	Updated devel/task to 3.45.4 [iquiw 2025-10-13]
 	Updated devel/libadalang-tools to 25.2.0 [dkazankov 2025-10-13]
+	Updated sysutils/fzf to 0.66.0 [wiz 2025-10-13]
