@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 07:51:55 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/13 16:54:12 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatformat
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gnatformat
@@ -20,11 +20,17 @@ USE_TOOLS+=	gmake
 
 GCC_REQD+=	14
 
+SUBST_CLASSES+=		version
+SUBST_MESSAGE.version=	Replace version and date in ${SUBST_FILES.version}
+SUBST_STAGE.version=	post-extract
+SUBST_FILES.version=	src/gnatformat.ads
+SUBST_SED.version=	-e "s,Version    : constant String := \"debug\",Version    : constant String := \"${GITHUB_TAG}\","
+SUBST_SED.version+=	-e "s,Build_Date : constant String := \"debug\",Build_Date : constant String := \"20250106\","
 
 MAKE_FLAGS+=		BUILD_MODE=prod
 BUILD_TARGET=		bin
 
-INSTALL_TARGET=		install-bin
+INSTALL_TARGET=		install-bin-stripped
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
