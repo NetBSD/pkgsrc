@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2023/11/16 23:54:31 mrg Exp $
+$NetBSD: distinfo,v 1.31 2025/10/13 03:21:20 mrg Exp $
 
 BLAKE2s (transcode-1.1.7.tar.bz2) = 4277b13f37bd4389c768e60a6d359791c53713b72b3a108fc82e4958fdb2c9a3
 SHA512 (transcode-1.1.7.tar.bz2) = d6f9674f3f5c3346194120585741ca660eb9ee133085cfce9460a14eaa0cf16fdf291761bd1db78e1c784e4d69a9481c7470cf8357dc7638ee3017620500f45f
@@ -11,6 +11,8 @@ SHA1 (patch-export_export__im.c) = 3a4f08d548cdebdfa618aeff2df398bd61002120
 SHA1 (patch-export_export_ffmpeg.c) = 2cc6100ab5e837b8d3fe66ec55c88962e6fbfb26
 SHA1 (patch-export_ffmpeg_cfg.c) = d1678b2b6bdd2a9353d1fb34d72c2cc2d1aa1fa4
 SHA1 (patch-export_ffmpeg_cfg.h) = 7cf230de948de004cc0500f0ae2511561081e952
+SHA1 (patch-filter_Makefile.am) = 1df76fb2c399f1dff5b7e2f328458b2f248d2488
+SHA1 (patch-filter_Makefile.in) = c2ecc2fdf7545c915d06ed72b6547ddc1265027e
 SHA1 (patch-filter_filter__compare.c) = b866aa3f36607bee87aad4eb7023b0e5087b1c25
 SHA1 (patch-filter_filter__logo.c) = 4cff9a4123797d3a25df17b22f3922260ed3a7d4
 SHA1 (patch-filter_filter__logoaway.c) = 252986a1e3ce9969e97bfeedd63bec6e3cf6273c
@@ -21,6 +23,7 @@ SHA1 (patch-import_decode_lavc.c) = 37c172b40858028592ced6a35f19fdd2873a07c6
 SHA1 (patch-import_import__im.c) = 30fdb4ce905c0bdd959964b1455f31823b681e9e
 SHA1 (patch-import_import__imlist.c) = 677ffc2c4ed48ab1e9f4f3f4a28f53b368ae7651
 SHA1 (patch-import_import_ffmpeg.c) = 601ff0f67727c7dc3bdad8c5c43a8b8b4baae5ea
+SHA1 (patch-import_mpg123.h) = e98508ef9157c399d8d77323dfcbcedd91750b7f
 SHA1 (patch-import_nuv_import__nuv.c) = e4a57c29b97b23aed068c06a2ed29dd9e29a9919
 SHA1 (patch-import_probe_ffmpeg.c) = eabbdbc2ffad5da51cb77547ac6a3f92c7bafcdb
 SHA1 (patch-import_probe_im.c) = 27bce069c78e5eee94c14d3f5f03cc14145f85ac
