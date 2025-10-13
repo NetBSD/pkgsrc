@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2025/10/03 11:54:06 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/13 19:35:27 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.1.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	aws
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/aws
 COMMENT=	Ada Web Server
 LICENSE=	gnu-gpl-v3
-
-#GITHUB_SUBMODULES+=	AdaCore	templates-parser	v25.0.0	templates_parser
 
 USE_LANGUAGES=	c ada
 
@@ -30,17 +28,11 @@ LIBRARY_PATH?=		# empty
 
 .include "options.mk"
 
-#SUBST_CLASSES+=		version1
-#SUBST_MESSAGE.version1=	Fix version number in ${SUBST_FILES.version1}
-#SUBST_STAGE.version1=	post-extract
-#SUBST_FILES.version1=	templates_parser/Makefile
-#SUBST_SED.version1=	-e "s,22.0,25.1,"
-
 SUBST_CLASSES+=		version2
 SUBST_MESSAGE.version2=	Fix version number in ${SUBST_FILES.version2}
 SUBST_STAGE.version2=	post-extract
 SUBST_FILES.version2=	src/core/aws.ads
-SUBST_SED.version2=	-e "s,20.0,25.1,"
+SUBST_SED.version2=	-e "s,20.0,${GITHUB_TAG},"
 
 SUBST_CLASSES+=		python
 SUBST_MESSAGE.python=	Replacing python interpreter in ${SUBST_FILES.python}
