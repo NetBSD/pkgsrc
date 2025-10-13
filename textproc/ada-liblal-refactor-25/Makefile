@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 07:31:38 dkazankov Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/13 11:40:36 dkazankov Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	lib${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
+DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
+PKGNAME=	lib${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	lal-refactor
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	25.2
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/lal-refactor
@@ -73,7 +73,6 @@ PRINT_PLIST_AWK+=	/\.relocatable\/|\.static-pic\/|lib\/.*\.${SHLIB_EXT}.*/ { $$0
 
 # libgpr2 dependencies
 .include "../../devel/gmp/buildlink3.mk"
-USE_GNU_ICONV=		yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
