@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/10/14 16:43:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/14 16:55:17 schmonz Exp $
 
 DISTNAME=		moor-2.5.1
 CATEGORIES=		textproc
@@ -13,6 +13,8 @@ LICENSE=		2-clause-bsd
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "go-modules.mk"
+
+GO_BUILD_PATTERN=	-ldflags "-X main.versionString=${PKGVERSION_NOREV}" ./...
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/${PKGBASE}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
