@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6102 2025/10/14 15:16:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6103 2025/10/14 16:40:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8837,3 +8837,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ada-aws-25 to 25.2.0 [dkazankov 2025-10-13]
 	Updated audio/py-music21 to 9.9.1 [gutteridge 2025-10-14]
 	Updated audio/py-beets to 2.5.0 [wiz 2025-10-14]
+	Updated print/brlaser to 6.2.8 [schmonz 2025-10-14]
