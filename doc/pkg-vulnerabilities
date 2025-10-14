@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.614 2025/10/12 07:00:23 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.615 2025/10/14 08:54:24 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28486,3 +28486,4 @@ gifsicle<1.94	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-36193
 gifsicle<1.95	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2023-46009
 gimp<3.0.0	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-2760
 gimp<3.0.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-2761
+libxslt-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11731
