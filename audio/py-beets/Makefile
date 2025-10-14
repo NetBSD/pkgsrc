@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/10/09 07:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/10/14 15:16:39 wiz Exp $
 
-DISTNAME=	beets-2.4.0
+DISTNAME=	beets-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -11,8 +10,8 @@ HOMEPAGE=	https://beets.io/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
-# https://github.com/beetbox/beets/issues/5596
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.2.1:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-dynamic-versioning>=0:../../devel/py-poetry-dynamic-versioning
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-confuse>=1.5.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
@@ -37,10 +36,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0.3.0:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	git
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
+
+MAKE_ENV+=	POETRY_DYNAMIC_VERSIONING_BYPASS=${PKGVERSION_NOREV}
 
 # as of 2.4.0
 # 1067 passed, 101 skipped, 1 warning
@@ -53,8 +55,8 @@ ALLOW_NETWORK_ACCESS=	yes
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 .endif
 
+# https://github.com/beetbox/beets/issues/5596
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/man/beet.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/beet-${PYVERSSUFFIX}.1
 	${INSTALL_DATA} ${WRKSRC}/man/beetsconfig.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/beetsconfig-${PYVERSSUFFIX}.5
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} beet beet-${PYVERSSUFFIX} || ${TRUE}
