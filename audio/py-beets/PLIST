@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/09/22 20:32:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/10/14 15:16:39 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,9 +11,9 @@ ${PYSITELIB}/beets/__init__.pyo
 ${PYSITELIB}/beets/__main__.py
 ${PYSITELIB}/beets/__main__.pyc
 ${PYSITELIB}/beets/__main__.pyo
-${PYSITELIB}/beets/art.py
-${PYSITELIB}/beets/art.pyc
-${PYSITELIB}/beets/art.pyo
+${PYSITELIB}/beets/_version.py
+${PYSITELIB}/beets/_version.pyc
+${PYSITELIB}/beets/_version.pyo
 ${PYSITELIB}/beets/autotag/__init__.py
 ${PYSITELIB}/beets/autotag/__init__.pyc
 ${PYSITELIB}/beets/autotag/__init__.pyo
@@ -134,12 +134,18 @@ ${PYSITELIB}/beets/util/pipeline.pyo
 ${PYSITELIB}/beets/util/units.py
 ${PYSITELIB}/beets/util/units.pyc
 ${PYSITELIB}/beets/util/units.pyo
-${PYSITELIB}/beets/vfs.py
-${PYSITELIB}/beets/vfs.pyc
-${PYSITELIB}/beets/vfs.pyo
 ${PYSITELIB}/beetsplug/_typing.py
 ${PYSITELIB}/beetsplug/_typing.pyc
 ${PYSITELIB}/beetsplug/_typing.pyo
+${PYSITELIB}/beetsplug/_utils/__init__.py
+${PYSITELIB}/beetsplug/_utils/__init__.pyc
+${PYSITELIB}/beetsplug/_utils/__init__.pyo
+${PYSITELIB}/beetsplug/_utils/art.py
+${PYSITELIB}/beetsplug/_utils/art.pyc
+${PYSITELIB}/beetsplug/_utils/art.pyo
+${PYSITELIB}/beetsplug/_utils/vfs.py
+${PYSITELIB}/beetsplug/_utils/vfs.pyc
+${PYSITELIB}/beetsplug/_utils/vfs.pyo
 ${PYSITELIB}/beetsplug/absubmit.py
 ${PYSITELIB}/beetsplug/absubmit.pyc
 ${PYSITELIB}/beetsplug/absubmit.pyo
