@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/10/12 16:19:35 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/14 17:26:36 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
@@ -11,6 +11,12 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/libadalang
 COMMENT=	Library for parsing and semantic analysis of Ada code
 LICENSE=	apache-2.0
+
+PRE_DISTFILE=	${GITHUB_PROJECT}-pregenerated-${GITHUB_TAG}.tar.bz2
+DISTFILES=	${DEFAULT_DISTFILES} ${PRE_DISTFILE}
+
+SITES.${PRE_DISTFILE}=		${MASTER_SITE_BACKUP}
+EXTRACT_DIR.${PRE_DISTFILE}=	${WRKSRC}/build
 
 USE_TOOLS=	tar bzip2
 
@@ -43,17 +49,8 @@ LIBRARY_TYPES=					static
 
 MAKE_PROGRAM=		${PYTHONBIN:Q} manage.py
 
-PREGENERATED_DISTNAME=	libadalang-pregenerated-${PKGVERSION_NOREV}.tar.bz2
-
-post-extract:
-	if [ -f ${PKGDIR}/files/${PREGENERATED_DISTNAME} ]; then \
-	    ${MKDIR} ${WRKDIR}/${DISTNAME}/build && \
-	    cd ${WRKDIR}/${DISTNAME}/build && \
-		${TAR} -xf ${PKGDIR}/files/${PREGENERATED_DISTNAME} ; \
-	fi
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-langkit>=25.0.0:../../devel/py-langkit
-TOOL_DEPENDS+=	${PYPKGPREFIX}-liblktlang>=25.0.0:../../devel/py-liblktlang
+TOOL_DEPENDS+=	${PYPKGPREFIX}-langkit>=${PKGVERSION_NOREV}:../../devel/py-langkit
+TOOL_DEPENDS+=	${PYPKGPREFIX}-liblktlang>=${GITHUB_TAG}:../../devel/py-liblktlang
 
 # Also add all langkit dependencies
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools

@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2025/10/12 16:19:35 dkazankov Exp $
+$NetBSD: distinfo,v 1.3 2025/10/14 17:26:36 dkazankov Exp $
 
 BLAKE2s (libadalang-25.2.tar.gz) = dc38e7eb4ad18efe1f45309330d271e793b5781fc6cde26120c01164f7b5b6d4
 SHA512 (libadalang-25.2.tar.gz) = 3a9946e0aab23263637dc58fd4454a1a5a9a6e0c915387ca5f2717fb72fd111d84aef9607e2bc2ab64cbdbabba35bc27f5e57fc53d75bba424c6a7143de3ce6e
 Size (libadalang-25.2.tar.gz) = 3081838 bytes
+BLAKE2s (libadalang-pregenerated-25.2.tar.bz2) = 7223cdeab90363f554aac01205977c7179974f5d0abd98c513751a183d2668ab
+SHA512 (libadalang-pregenerated-25.2.tar.bz2) = af157e505e647ff54c9284839e5859823a51a8a4b6345e561f4b03263014825f21a500768312efb15703e8e4efe741402bb7a4d36e6adb49b5c2b466ca2a31c4
+Size (libadalang-pregenerated-25.2.tar.bz2) = 1646484 bytes
