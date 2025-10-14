@@ -1,0 +1,3 @@
+bin/gprbuild @PREFIX@/bin/gpr2build
+bin/gprclean @PREFIX@/bin/gpr2clean
+bin/gprconfig @PREFIX@/bin/gpr2config
