@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6104 2025/10/14 16:43:09 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6105 2025/10/14 18:31:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8839,3 +8839,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-beets to 2.5.0 [wiz 2025-10-14]
 	Updated print/brlaser to 6.2.8 [schmonz 2025-10-14]
 	Updated textproc/moor to 2.5.1 [schmonz 2025-10-14]
+	Updated x11/libdrm to 2.4.127 [wiz 2025-10-14]
