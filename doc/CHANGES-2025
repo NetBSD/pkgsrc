@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6100 2025/10/13 19:35:52 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6101 2025/10/14 03:11:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8835,3 +8835,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/gnatdoc to 25.2.0 [dkazankov 2025-10-13]
 	Updated audio/kew to 3.5.3 [ktnb 2025-10-13]
 	Updated www/ada-aws-25 to 25.2.0 [dkazankov 2025-10-13]
+	Updated audio/py-music21 to 9.9.1 [gutteridge 2025-10-14]
