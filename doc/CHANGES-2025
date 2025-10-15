@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6117 2025/10/15 20:07:52 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6118 2025/10/15 23:22:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8856,3 +8856,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-e3-core to 22.10.0nb3 [dkazankov 2025-10-15]
 	Updated lang/gcc13-gnat to 13.4.0nb2 [dkazankov 2025-10-15]
 	Updated lang/gcc13-gnat-libs to 13.4.0nb3 [dkazankov 2025-10-15]
+	Updated sysutils/btop to 1.4.5nb2 [wiz 2025-10-15]
