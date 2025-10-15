@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/09/24 05:36:17 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/15 19:40:02 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-22.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -42,7 +42,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ptyprocess-[0-9]*:../../sysutils/py-ptyprocess
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	ADD_RLIMIT
+
 .if ${OPSYS} == "NetBSD"
+
+PRINT_PLIST_AWK+=	/rlimit-${MACHINE_ARCH}-${LOWER_OPSYS}/ { $$0 = "$${PLIST.ADD_RLIMIT}" $$0 }
+PLIST.ADD_RLIMIT=	yes
 
 pre-build:
 	${RUN} cd ${WRKSRC} && \
