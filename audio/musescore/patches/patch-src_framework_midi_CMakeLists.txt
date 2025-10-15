@@ -1,0 +1,15 @@
+$NetBSD: patch-src_framework_midi_CMakeLists.txt,v 1.1 2025/10/15 01:32:01 gutteridge Exp $
+
+Treat NetBSD like FreeBSD.
+
+--- src/framework/midi/CMakeLists.txt.orig	2025-04-24 13:59:18.000000000 +0000
++++ src/framework/midi/CMakeLists.txt
+@@ -36,7 +36,7 @@ elseif(OS_IS_LIN)
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/lin/alsamidiinport.cpp
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/lin/alsamidiinport.h
+     )
+-elseif(OS_IS_FBSD)
++elseif(OS_IS_FBSD OR OS_IS_NBSD)
+     set(DRIVER_SRC
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/lin/alsamidioutport.cpp
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/lin/alsamidioutport.h
