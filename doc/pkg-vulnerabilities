@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.618 2025/10/15 10:19:38 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.619 2025/10/15 11:05:07 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28583,3 +28583,29 @@ go123<1.23.6	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2025-22866
 go123<1.23.8	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-22871
 go124<1.24.2	http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2025-22871
 go124<1.24.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-45340
+gpac<2.2.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-47090
+gpsd<3.26	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-43628
+gradle<8.2	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-35946
+gradle<8.2	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-35947
+gradle<8.12	insecure-temporary-files	https://nvd.nist.gov/vuln/detail/CVE-2025-27148
+grafana<9.5.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-1387
+grafana<9.3.11	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-1410
+grafana<9.5.3	spoofing		https://nvd.nist.gov/vuln/detail/CVE-2023-2183
+grafana<9.5.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2801
+grafana<9.5.4	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2023-3128
+grafana<10.1.5	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2023-4399
+grafana<10.1.3	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-4822
+grafana<10.3.3	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2023-6152
+grafana-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-10452
+grafana<11.5.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-11741
+grafana<10.3.5	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-1313
+grafana<10.3.4	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2024-1442
+grafana<11.1.3	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-6322
+grafana<11.2.1	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2024-8118
+grafana<11.2.2	code-injection		https://nvd.nist.gov/vuln/detail/CVE-2024-9264
+grafana<11.3.1	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2024-9476
+grafana<12.0.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-4123
+GraphicsMagick<1.3.46	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-27795
+GraphicsMagick<1.3.46	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-27796
+grpc<1.68.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-11407
+grpc<1.65.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-7246
