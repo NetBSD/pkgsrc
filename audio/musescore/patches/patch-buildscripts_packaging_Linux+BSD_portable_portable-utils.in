@@ -1,13 +1,13 @@
-$NetBSD: patch-build_Linux+BSD_portable_portable-utils.in,v 1.2 2021/01/25 02:42:44 gutteridge Exp $
+$NetBSD: patch-buildscripts_packaging_Linux+BSD_portable_portable-utils.in,v 1.1 2025/10/15 01:32:01 gutteridge Exp $
 
-Fix unportable test(1) operator.
+Fix non-portable test(1) operator.
 
---- build/Linux+BSD/portable/portable-utils.in.orig	2021-01-15 12:36:02.000000000 +0000
-+++ build/Linux+BSD/portable/portable-utils.in
+--- buildscripts/packaging/Linux+BSD/portable/portable-utils.in.orig	2025-07-21 08:41:03.721301202 +0000
++++ buildscripts/packaging/Linux+BSD/portable/portable-utils.in
 @@ -55,7 +55,7 @@ EOF
  function printVersion() {
-   local pretty=$(sed -rn "s|^Name=([^#]*)|\1|p" "${APPDIR}/mscore@MSCORE_INSTALL_SUFFIX@.desktop")
-   local long=$("${APPDIR}/bin/mscore@MSCORE_INSTALL_SUFFIX@" --long-version 2>&1 | tail -n 1)
+   local pretty=$(sed -rn "s|^Name=([^#]*)|\1|p" "${APPDIR}/org.musescore.MuseScore@MUSE_APP_INSTALL_SUFFIX@.desktop")
+   local long=$("${APPDIR}/bin/mscore@MUSE_APP_INSTALL_SUFFIX@" --long-version 2>&1 | tail -n 1)
 -  if [ "$1" == "centered" ]; then
 +  if [ "$1" = "centered" ]; then
      printf "%*s\n" "$(((${#pretty}+80)/2))" "$pretty"
