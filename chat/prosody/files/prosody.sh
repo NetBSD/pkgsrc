@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prosody.sh,v 1.6 2022/07/27 01:53:40 khorben Exp $
+# $NetBSD: prosody.sh,v 1.7 2025/10/15 10:34:42 sborrill Exp $
 #
 # PROVIDE: prosody
 # REQUIRE: DAEMON
@@ -11,25 +11,34 @@ fi
 
 name="prosody"
 rcvar=${name}
-ctl_command="@PREFIX@/bin/${name}ctl"
+command="@PREFIX@/bin/${name}"
+command_args="-D"
+command_interpreter="@PREFIX@/bin/lua@LUA_DOT_VERSION@"
 required_files="@PKG_SYSCONFDIR@/${name}.cfg.lua"
 pidfile="@PROSODY_RUN@/${name}.pid"
 start_precmd="prosody_precmd"
-extra_commands="reload status"
+stop_postcmd="prosody_postcmd"
+extra_commands="reload"
+prosody_user="@PROSODY_USER@"
+prosody_group="@PROSODY_GROUP@"
 
 prosody_precmd()
 {
     if ! @TEST@ -d @PROSODY_RUN@; then
-        @MKDIR@ -m 0755 @PROSODY_RUN@
+        @MKDIR@ -m 0750 @PROSODY_RUN@
     fi
     @CHOWN@ @PROSODY_USER@:@PROSODY_GROUP@ @PROSODY_RUN@
     #ulimit -n 2048
 }
 
-start_cmd="${ctl_command} start"
-stop_cmd="${ctl_command} stop"
-reload_cmd="${ctl_command} reload"
-status_cmd="${ctl_command} status"
+prosody_postcmd()
+{
+    # Fix for failed socket clean-up which stops
+    # prosodyctl working after a restart
+    if test -S "@PROSODY_RUN@/${name}.soc"; then
+        rm -f "@PROSODY_RUN@/${name}.soc"
+    fi
+}
 
 load_rc_config $name
 run_rc_command "$1"

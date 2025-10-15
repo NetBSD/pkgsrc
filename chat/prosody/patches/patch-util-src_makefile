@@ -1,0 +1,25 @@
+$NetBSD: patch-util-src_makefile,v 1.1 2025/10/15 10:34:42 sborrill Exp $
+
+Build crypto.so (copied from GNUmakefile)
+
+--- util-src/makefile.orig	2025-05-29 16:42:58.000000000 +0100
++++ util-src/makefile	2025-10-15 09:42:39.050542869 +0100
+@@ -7,7 +7,7 @@
+ 
+ ALL=encodings.so hashes.so net.so pposix.so signal.so table.so \
+     ringbuffer.so time.so poll.so compat.so strbitop.so \
+-    struct.so
++    struct.so crypto.so
+ 
+ .ifdef $(RANDOM)
+ ALL+=crand.so
+@@ -32,6 +32,9 @@
+ hashes.so: hashes.o
+ 	$(LD) $(LDFLAGS) -o $@ $< $(LDLIBS) $(OPENSSL_LIBS)
+ 
++crypto.so: crypto.o
++	$(LD) $(LDFLAGS) -o $@ $< $(LDLIBS) $(OPENSSL_LIBS)
++
+ crand.o: crand.c
+ 	$(CC) $(CFLAGS) -DWITH_$(RANDOM) -c -o $@ $<
+ 

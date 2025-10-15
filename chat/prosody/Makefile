@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/07/02 08:36:31 sborrill Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/15 10:34:42 sborrill Exp $
 
 DISTNAME=	prosody-13.0.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://prosody.im/downloads/source/
 
@@ -70,6 +71,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 MAKE_FILE=		makefile
 
 RCD_SCRIPTS=		prosody
+FILES_SUBST+=		LUA_DOT_VERSION=${_LUA_DOT_VERSION}
 FILES_SUBST+=		PROSODY_RUN=${PROSODY_RUN}
 FILES_SUBST+=		PROSODY_USER=${PROSODY_USER}
 FILES_SUBST+=		PROSODY_GROUP=${PROSODY_GROUP}
