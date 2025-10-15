@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:54:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/10/15 16:20:05 hauke Exp $
 
-BLAKE2s (trojita-0.4.1.tar.bz2) = cfe676c4625c7a55df16654e29c98ecba41f55f754c8ee879ae2c85b6cbe7b81
-SHA512 (trojita-0.4.1.tar.bz2) = f24210d4f8e10cfbca25ab4d62ae3c8eea3e8824c13119cd6dc4511d4cf9b5f82be67586b6494aff5290ab06f869ae3bd1c8a19664bcf0f57059ee8d67d6c81a
-Size (trojita-0.4.1.tar.bz2) = 1219460 bytes
+BLAKE2s (trojita-0.7.tar.xz) = 1ace940defdb47128ca26d089069a0fd36d85eaab1dc0260d4b0c411e1509244
+SHA512 (trojita-0.7.tar.xz) = fe4d9316f97d913619f27d24a5023c3d8dd4a6b9fb058651be12c67188f394aa8cbb60c7593e5eb28fc12fc883b76deeeb5f4f631edd255fdec4c5862c9a91c8
+Size (trojita-0.7.tar.xz) = 1038212 bytes
+SHA1 (patch-CMakeLists.txt) = 15e81ca0e105d8ad946b095be42b1db961bfd81d
+SHA1 (patch-src_Gui_Window.cpp) = 09a7deb0f2ef46c3227647c27121095bd08c4bbb
+SHA1 (patch-tests_Imap_test__Imap__BodyParts.cpp) = 56ad1d65ff8dc938b6f7d6407ffe925d5f4db407
