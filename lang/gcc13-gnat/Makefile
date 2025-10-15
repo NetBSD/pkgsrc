@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/08/15 16:57:57 dkazankov Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/15 20:04:57 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc13-gnat-13.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +11,15 @@ MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNAT Compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+# The list is copy of one from gcc6-aux as it used as a bootstrapper
+ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
+		FreeBSD-*-i386       \
+		FreeBSD-*-x86_64     \
+		SunOS-5.1[1-9]*-i386 \
+		SunOS-5.1[1-9]*-x86_64 \
+		NetBSD-*-i386   \
+		NetBSD-*-x86_64
 
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=114065
 BROKEN_ON_PLATFORM=	*-*-i386
@@ -28,16 +37,33 @@ CHECK_RELRO_SUPPORTED=	no
 .include "../../mk/bsd.prefs.mk"
 
 DISTFILES=	${DEFAULT_DISTFILES}
-EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
-USE_LANGUAGES=	c c++ ada
-GCC_REQD+=	10
+USE_LANGUAGES=	#
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
+
+USE_GCC_BOOTSTRAP=	no
+
+.if ${OPSYS} == NetBSD
+BOOT_DISTNAME=		gcc-bootstrap-${MACHINE_GNU_PLATFORM}-10.5.0.tar.bz2
+SITES.${BOOT_DISTNAME}=	${MASTER_SITE_BACKUP}
+
+USE_GCC_BOOTSTRAP=	yes
+.endif
+
+.if ${USE_GCC_BOOTSTRAP:U:tl} == "yes"
+DISTFILES+=	${BOOT_DISTNAME}
+CC=		${WRKDIR}/gcc-bootstrap/bin/gcc
+CXX=		${WRKDIR}/gcc-bootstrap/bin/g++
+.else
+TOOL_DEPENDS+=	gcc10-aux-[0-9]*:../../lang/gcc10-aux
+CC=		${PREFIX}/gcc10-aux/bin/gcc
+CXX=		${PREFIX}/gcc10-aux/bin/g++
+.endif
 
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
@@ -47,15 +73,38 @@ GNU_CONFIGURE_PREFIX=	${PREFIX}/${PKGBASE}
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--disable-libstdcxx-pch
+# Use C preprocessed symbols on NetBSD (only)
+.if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		patch1
+SUBST_MESSAGE.patch1=	Replace nanosleep, gettimeofday in ${SUBST_FILES.patch1}
+SUBST_STAGE.patch1=	pre-configure
+SUBST_FILES.patch1=	gcc/ada/libgnat/s-osprim__posix.adb
+SUBST_SED.patch1=	-e "s,\"nanosleep\",\"__gnat_nanosleep\","
+SUBST_SED.patch1+=	-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 
-STAGE1_LDFLAGS=		${LDFLAGS} -static
+SUBST_CLASSES+=		patch2
+SUBST_MESSAGE.patch2=	Replace select with __gnat_select in ${SUBST_FILES.patch2}
+SUBST_STAGE.patch2=	pre-configure
+SUBST_FILES.patch2=	gcc/ada/libgnat/g-socthi.ads
+SUBST_SED.patch2=	-e "s,\"select\",\"__gnat_select\","
+
+SUBST_CLASSES+=		patch3
+SUBST_MESSAGE.patch3=	Replace socket with __gnat_socket in ${SUBST_FILES.patch3}
+SUBST_STAGE.patch3=	pre-configure
+SUBST_FILES.patch3=	gcc/ada/libgnat/g-socthi__bsd.adb
+SUBST_SED.patch3=	-e "s,\"socket\",\"__gnat_socket\","
+.endif
+
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/${MACHINE_GNU_PLATFORM}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
+LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
@@ -63,11 +112,15 @@ LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
 BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
 BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
-BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
+
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
-BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+BOOT_LDFLAGS+=	${LDFLAGS:M-Wl,-syslibroot*}
 .endif
+
+## For target librarys and libjava programs.
+CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
+
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
 
@@ -98,7 +151,7 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+=	CXX_FOR_BUILD=${NATIVE_CXX:Q}
 .endif
 
-CONFIGURE_ARGS+=	--enable-languages=c,c++,ada --enable-stage1-languages=c++,ada
+CONFIGURE_ARGS+=	--enable-languages=ada,c,c++
 # This will create slightly slower compiler
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
@@ -107,7 +160,6 @@ CONFIGURE_ARGS+=	--with-local-prefix=${PREFIX}/${PKGBASE}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${PREFIX}/${PKGBASE}/include/c++
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--enable-threads=posix
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 # causes build errors even when using lang/gcc13 to self host
 CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
@@ -218,7 +270,7 @@ post-install:
 	${CHMOD} g-w ${DESTDIR}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adainclude/standard.ads.h
 # Create old name that modern gnat no longer provides
 	${TEST} -f ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gnat && \
-		( cd ${DESTDIR}${PREFIX}/${PKGBASE}/bin ; ${LN} -f gnat ada )
+		( ${RUN} cd ${DESTDIR}${PREFIX}/${PKGBASE}/bin && ${LN} -f gnat ada )
 .if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"
 	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m32 || ${TRUE}
 	${SH} files/values.c ${DESTDIR}${PREFIX}/${PKGBASE}/bin/gcc -m64 || ${TRUE}
@@ -231,3 +283,14 @@ CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
+.if ${USE_GCC_BOOTSTRAP:U:tl} == "yes"
+PREPEND_PATH+=	${WRKDIR}/gcc-bootstrap/bin
+.else
+PREPEND_PATH+=	${PREFIX}/gcc10-aux/bin
+.endif
+
+CFLAGS=		-O2
+CPPFLAGS=	#empty
+CXXFLAGS=	-O2
+LDFLAGS=	-static-libstdc++ -static-libgcc

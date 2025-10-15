@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_ada_libgnat_g-socthi.ads,v 1.2 2025/02/08 14:05:03 wiz Exp $
+$NetBSD: patch-gcc_ada_libgnat_g-socthi.ads,v 1.3 2025/10/15 20:04:57 dkazankov Exp $
 
-Fix symbol to make it use the C processed one.
+Fix RTS build warning
 
---- gcc/ada/libgnat/g-socthi.ads.orig	2021-10-09 18:09:40.607907149 +0200
+--- gcc/ada/libgnat/g-socthi.ads.orig	2025-08-08 10:24:06.091262012 +0300
 +++ gcc/ada/libgnat/g-socthi.ads
 @@ -53,8 +53,6 @@
  
@@ -13,12 +13,3 @@ Fix symbol to make it use the C processed one.
     function Socket_Errno return Integer renames GNAT.OS_Lib.Errno;
     --  Returns last socket error number
  
-@@ -256,7 +254,7 @@
-    pragma Import (C, C_Getsockname, "getsockname");
-    pragma Import (C, C_Getsockopt, "getsockopt");
-    pragma Import (C, C_Listen, "listen");
--   pragma Import (C, C_Select, "select");
-+   pragma Import (C, C_Select, "__gnat_select");
-    pragma Import (C, C_Setsockopt, "setsockopt");
-    pragma Import (C, C_Shutdown, "shutdown");
-    pragma Import (C, C_Socketpair, "socketpair");
