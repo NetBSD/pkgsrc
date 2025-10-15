@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.616 2025/10/14 21:56:45 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.617 2025/10/15 09:42:30 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28492,3 +28492,4 @@ firefox115<115.29	multiple-vulnerabilities	https://www.mozilla.org/en-US/securit
 firefox140<140.4	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-83/
 thunderbird<144		multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-84/
 thunderbird140<140.4	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-85/
+webkit-gtk<2.50.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-43343
