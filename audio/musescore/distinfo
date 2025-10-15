@@ -1,8 +1,26 @@
-$NetBSD: distinfo,v 1.13 2025/09/29 20:50:44 mrg Exp $
+$NetBSD: distinfo,v 1.14 2025/10/15 01:32:00 gutteridge Exp $
 
-BLAKE2s (musescore-3.6.2.tar.gz) = ec2f6f20dbf145f0b48fd584633b676497b739d4939a6176b95d1e5a3bebc6ba
-SHA512 (musescore-3.6.2.tar.gz) = 04ff1ddd82358c070640f81bbaa9c47c5da95aa57c56a5d1b975ad984744e0def17d5581da6bbeda1aae1c68470100d104d4f8a39ba33bf37bf8891ffcbf1d6e
-Size (musescore-3.6.2.tar.gz) = 69077899 bytes
-SHA1 (patch-CMakeLists.txt) = 6685df7bb24d994ddc41c677b981f6abc44c8db1
-SHA1 (patch-build_Linux+BSD_portable_portable-utils.in) = e608e0fb055671f863e24906ffffbe75a29948c4
-SHA1 (patch-thirdparty_dtl_dtl_Diff.hpp) = 251e2ee7d905ce1ed2f3ad892296c8aca3c6accc
+BLAKE2s (musescore-4.6.2.tar.gz) = cab24e6311539d79fba6612a4ad2670e82484c694ec0d5877db9184fba591d94
+SHA512 (musescore-4.6.2.tar.gz) = b93519063bfab20be5a7f228f53c9c9d0ec829aee23328e8ac797c98de8a0bb9e4441fa48e7883a951b14e622b64375a4bfab53a2f27cd5dcbc4e674e06a02e3
+Size (musescore-4.6.2.tar.gz) = 159462490 bytes
+SHA1 (patch-buildscripts_cmake_GetPlatformInfo.cmake) = 70b3df41ecf452961167c3d654140b2dd4e9b4c4
+SHA1 (patch-buildscripts_packaging_Linux+BSD_SetupAppImagePackaging.cmake) = 61f7af9d71636bb74ab048ca24b3be2469ce541b
+SHA1 (patch-buildscripts_packaging_Linux+BSD_portable_portable-utils.in) = a77c5053ec230433765865d929e5dca3619e1b30
+SHA1 (patch-src_app_CMakeLists.txt) = a7a401d5c420d1cec49879e4c57e45e3496ccf58
+SHA1 (patch-src_app_internal_guiapp.cpp) = 1d0f662e98ffdd8b8d3fc6c8c3ea51453c4089d0
+SHA1 (patch-src_appshell_appshellmodule.cpp) = 76416649178979e75ea40a8605b2f756b073716d
+SHA1 (patch-src_framework_audio_driver_audio__driver.cmake) = 441b5b10ecb751a5d038ff6a231439ee09e09b95
+SHA1 (patch-src_framework_audio_main_internal_audiodrivercontroller.cpp) = f4b8bd1d332a993ab618cf966435efb67e43f1f4
+SHA1 (patch-src_framework_audio_thirdparty_fluidsynth_fluidsynth-2.3.3_src_external_portable__endian.h) = f9fa1c02fd12ac97f82bf10352b70b120ebe6ab4
+SHA1 (patch-src_framework_global_runtime.cpp) = 62452ec72bf7ca6a4c97d7e1b947e904b02f970c
+SHA1 (patch-src_framework_global_types_version.h) = e0dd1e25eeafa5e1d4bbc7616707c0c488835305
+SHA1 (patch-src_framework_midi_CMakeLists.txt) = 16df8a75ac1a4470e2bbb786a74d5165a5f39020
+SHA1 (patch-src_framework_midi_midimodule.cpp) = a91069ff3be8c3a7d0fe568cde76cc8bbf702bbd
+SHA1 (patch-src_framework_midi_midimodule.h) = bda1580c860fd7c545e80c8a83737ef287bc359c
+SHA1 (patch-src_framework_ui_CMakeLists.txt) = f948851f61dc938f3d1233267897d65ca701d8e3
+SHA1 (patch-src_framework_ui_graphicsapiprovider.cpp) = f6188d8d779b177705e98275c0d452653cadb477
+SHA1 (patch-src_framework_ui_uimodule.cpp) = a7f904a218b3ad545472458d4ba288b7cac3fbaa
+SHA1 (patch-src_framework_ui_uimodule.h) = 2801ff4a9bb7f728b95cb035b67b9bc6949f47a1
+SHA1 (patch-src_framework_uicomponents_view_buttonboxmodel.cpp) = 5bbdc8eb2690326b3b503a0fb42353b0dcd9ba08
+SHA1 (patch-src_framework_vst_CMakeLists.txt) = ff5c79f88834380da112ca4d13b641d198ffca05
+SHA1 (patch-src_notation_internal_engravingfontscontroller.cpp) = b37e199cf862da70536dad48029a7ebae5b6d8a4
