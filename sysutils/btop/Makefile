@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/11 09:29:30 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/15 23:22:28 wiz Exp $
 
 DISTNAME=	btop-1.4.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aristocratos/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -22,6 +22,14 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 CXXFLAGS+=	-DNDEBUG
 MAKE_ENV+=	STRIP=true VERBOSE=true
+
+SUBST_CLASSES+=		themes
+SUBST_SED.themes+=	-e 's,/usr/local/share/btop/themes,${PREFIX}/share/btop/themes,'
+SUBST_SED.themes+=	-e 's,/usr/.local/.share/btop/themes,${PREFIX}/share/btop/themes,'
+SUBST_FILES.themes+=	src/btop_menu.cpp
+SUBST_FILES.themes+=	src/btop.cpp
+SUBST_STAGE.themes=	pre-configure
+SUBST_MESSAGE.themes=	Fixing hardcoded paths to themes.
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/atomic64.mk"
