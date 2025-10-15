@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6107 2025/10/15 04:02:28 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6108 2025/10/15 09:14:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8842,3 +8842,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libdrm to 2.4.127 [wiz 2025-10-14]
 	Updated audio/musescore to 4.6.2 [gutteridge 2025-10-15]
 	Updated databases/mysql80-server to 8.0.40nb9 [jnemeth 2025-10-15]
+	Updated lang/python313 to 3.13.9 [adam 2025-10-15]
+	Updated lang/py313-html-docs to 3.13.9 [adam 2025-10-15]
