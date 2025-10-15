@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2025/10/15 01:32:00 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2025/10/15 03:32:58 gutteridge Exp $
 
 BLAKE2s (musescore-4.6.2.tar.gz) = cab24e6311539d79fba6612a4ad2670e82484c694ec0d5877db9184fba591d94
 SHA512 (musescore-4.6.2.tar.gz) = b93519063bfab20be5a7f228f53c9c9d0ec829aee23328e8ac797c98de8a0bb9e4441fa48e7883a951b14e622b64375a4bfab53a2f27cd5dcbc4e674e06a02e3
@@ -13,6 +13,7 @@ SHA1 (patch-src_framework_audio_driver_audio__driver.cmake) = 441b5b10ecb751a5d0
 SHA1 (patch-src_framework_audio_main_internal_audiodrivercontroller.cpp) = f4b8bd1d332a993ab618cf966435efb67e43f1f4
 SHA1 (patch-src_framework_audio_thirdparty_fluidsynth_fluidsynth-2.3.3_src_external_portable__endian.h) = f9fa1c02fd12ac97f82bf10352b70b120ebe6ab4
 SHA1 (patch-src_framework_global_runtime.cpp) = 62452ec72bf7ca6a4c97d7e1b947e904b02f970c
+SHA1 (patch-src_framework_global_types_string.cpp) = 9b76e6aab7a883cfd5a2162dce49da5da6ed2c8b
 SHA1 (patch-src_framework_global_types_version.h) = e0dd1e25eeafa5e1d4bbc7616707c0c488835305
 SHA1 (patch-src_framework_midi_CMakeLists.txt) = 16df8a75ac1a4470e2bbb786a74d5165a5f39020
 SHA1 (patch-src_framework_midi_midimodule.cpp) = a91069ff3be8c3a7d0fe568cde76cc8bbf702bbd
