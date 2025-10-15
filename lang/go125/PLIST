@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/08/16 15:52:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2025/10/15 17:14:57 maya Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go125/CONTRIBUTING.md
@@ -57,7 +57,8 @@ go125/lib/fips140/Makefile
 go125/lib/fips140/README.md
 go125/lib/fips140/fips140.sum
 go125/lib/fips140/inprocess.txt
-go125/lib/fips140/v1.0.0.zip
+go125/lib/fips140/v1.0.0-c2097c7c.zip
+go125/lib/fips140/v1.0.0.txt
 go125/lib/time/README
 go125/lib/time/mkzip.go
 go125/lib/time/update.bash
@@ -124,6 +125,7 @@ go125/src/archive/tar/testdata/gnu-nil-sparse-data.tar
 go125/src/archive/tar/testdata/gnu-nil-sparse-hole.tar
 go125/src/archive/tar/testdata/gnu-not-utf8.tar
 go125/src/archive/tar/testdata/gnu-sparse-big.tar
+go125/src/archive/tar/testdata/gnu-sparse-many-zeros.tar.bz2
 go125/src/archive/tar/testdata/gnu-utf8.tar
 go125/src/archive/tar/testdata/gnu.tar
 go125/src/archive/tar/testdata/hardlink.tar
@@ -9412,6 +9414,7 @@ go125/src/runtime/debuglog.go
 go125/src/runtime/debuglog_off.go
 go125/src/runtime/debuglog_on.go
 go125/src/runtime/debuglog_test.go
+go125/src/runtime/decoratemappings_test.go
 go125/src/runtime/defer_test.go
 go125/src/runtime/defs1_linux.go
 go125/src/runtime/defs1_netbsd_386.go
@@ -13578,6 +13581,7 @@ go125/test/fixedbugs/issue7538a.go
 go125/test/fixedbugs/issue7538b.go
 go125/test/fixedbugs/issue7547.go
 go125/test/fixedbugs/issue7550.go
+go125/test/fixedbugs/issue75569.go
 go125/test/fixedbugs/issue7590.go
 go125/test/fixedbugs/issue7648.dir/a.go
 go125/test/fixedbugs/issue7648.dir/b.go
