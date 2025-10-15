@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2025/10/05 19:25:46 js Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/15 04:02:19 jnemeth Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=	8
+PKGREVISION=	9
 COMMENT=	MySQL 8, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -9,9 +9,8 @@ CONFLICTS=	mysql3-server-[0-9]*
 .include "../../databases/mysql80-client/Makefile.common"
 
 CMAKE_CONFIGURE_ARGS+=	-DINSTALL_INFODIR=${PKGINFODIR}
-CMAKE_CONFIGURE_ARGS+=	-DWITH_PROTOBUF="bundled"
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PROTOBUF="system"
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/library_output_directory
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/library_output_directory
 # This is a hack for ${WRKSRC}/cmake/protobuf.cmake
 CMAKE_CONFIGURE_ARGS+=	-DHOMEBREW_HOME=${PREFIX}
 
@@ -87,7 +86,7 @@ post-extract:
 	${CP} ${FILESDIR}/ffsll.cc ${WRKSRC}/sql/
 	${CHMOD} a-x ${WRKSRC}/mysql-test/std_data/datadir_tablespace_*
 
-#.include "../../devel/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 BUILDLINK_AUTO_DIRS.mysql-client=	no
 .include "../../databases/mysql80-client/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
