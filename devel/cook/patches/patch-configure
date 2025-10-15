@@ -1,0 +1,57 @@
+$NetBSD: patch-configure,v 1.1 2025/10/15 09:15:41 mrg Exp $
+
+Avoid configure errors with GCC 14.
+
+
+--- configure.orig	2006-01-16 17:56:01.000000000 -0800
++++ configure	2025-10-11 15:34:44.004526405 -0700
+@@ -2162,7 +2162,7 @@ $ac_declaration
+ int
+ main ()
+ {
+-exit (42);
++return (42);
+   ;
+   return 0;
+ }
+@@ -2621,8 +2621,8 @@ main ()
+   for (i = 0; i < 256; i++)
+     if (XOR (islower (i), ISLOWER (i))
+ 	|| toupper (i) != TOUPPER (i))
+-      exit(2);
+-  exit (0);
++      return(2);
++  return (0);
+ }
+ _ACEOF
+ rm -f conftest$ac_exeext
+@@ -4214,7 +4214,7 @@ int test(fmt)char *fmt;
+ {va_list ap;char*a;int x;
+ va_start(ap,fmt);a=va_arg(ap,char*);x=(a!=foo);va_end(ap);return x;}
+ int main(argc,argv)int argc;char**argv;{
+-exit(test("",foo));}
++return(test("",foo));}
+ 
+ _ACEOF
+ rm -f conftest$ac_exeext
+@@ -5296,7 +5296,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #include <wctype.h>
+ #endif
+ int main(argc,argv)int argc;char**argv;{
+-exit(iswprint('a') == 0);}
++return(iswprint('a') == 0);}
+ 
+ _ACEOF
+ rm -f conftest$ac_exeext
+@@ -5364,9 +5364,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+ int main(argc, argv) int argc; char **argv; {
+ #ifdef HAVE_GETPGRP
+-if (getpgrp(32767) == getpgrp(0)) exit(2);
++if (getpgrp(32767) == getpgrp(0)) return(2);
+ #endif
+-exit(0); }
++return(0); }
+ 
+ _ACEOF
+ rm -f conftest$ac_exeext

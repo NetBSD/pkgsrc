@@ -1,0 +1,37 @@
+$NetBSD: patch-etc_configure.ac,v 1.1 2025/10/15 09:15:41 mrg Exp $
+
+Avoid configure errors with GCC 14.
+
+
+--- etc/configure.ac.orig	2006-01-16 17:56:01.000000000 -0800
++++ etc/configure.ac	2025-10-11 15:32:54.684620115 -0700
+@@ -86,7 +86,7 @@ int test(fmt)char *fmt;
+ {va_list ap;char*a;int x;
+ va_start(ap,fmt);a=va_arg(ap,char*);x=(a!=foo);va_end(ap);return x;}
+ int main(argc,argv)int argc;char**argv;{
+-exit(test("",foo));}]
++return(test("",foo));}]
+ , AC_DEFINE(HAVE_STDARG_H,1,
+ [Define this symbol of your system has <stdarg.h> AND it works.])
+ AC_MSG_RESULT(yes),
+@@ -139,7 +139,7 @@ AC_TRY_RUN([
+ #include <wctype.h>
+ #endif
+ int main(argc,argv)int argc;char**argv;{
+-exit(iswprint('a') == 0);}]
++return(iswprint('a') == 0);}]
+ , AC_DEFINE(HAVE_ISWPRINT,1,
+ [Define this symbol of your system has iswprint() AND it works.
+ (GNU libc v2 had a bug.)])
+@@ -172,9 +172,9 @@ AC_MSG_CHECKING([for appropriate getpgrp
+ AC_TRY_RUN([
+ int main(argc, argv) int argc; char **argv; {
+ #ifdef HAVE_GETPGRP
+-if (getpgrp(32767) == getpgrp(0)) exit(2);
++if (getpgrp(32767) == getpgrp(0)) return(2);
+ #endif
+-exit(0); }]
++return(0); }]
+ , AC_DEFINE(CONF_getpgrp_arg, 0,
+ [Set this to a suitable argument for the getpgrp function to discover
+ the process group of the current process.])
