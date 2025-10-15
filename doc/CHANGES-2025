@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6114 2025/10/15 16:20:33 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.6115 2025/10/15 19:41:13 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8853,3 +8853,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-sbf2 to 1.0.1 [gdt 2025-10-15]
 	Updated geography/py-spartn to 1.0.8 [gdt 2025-10-15]
 	Updated mail/trojita to 0.7 [hauke 2025-10-15]
+	Updated devel/py-e3-core to 22.10.0nb3 [dkazankov 2025-10-15]
