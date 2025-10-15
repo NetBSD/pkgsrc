@@ -1,0 +1,24 @@
+$NetBSD: patch-src_framework_ui_CMakeLists.txt,v 1.1 2025/10/15 01:32:01 gutteridge Exp $
+
+Provide a usable context for NetBSD.
+
+--- src/framework/ui/CMakeLists.txt.orig	2025-10-10 09:21:06.000000000 +0000
++++ src/framework/ui/CMakeLists.txt
+@@ -55,7 +55,7 @@ elseif(OS_IS_WIN)
+         )
+ 
+     set(MODULE_LINK ${MODULE_LINK} dwmapi)
+-elseif(OS_IS_LIN)
++elseif(OS_IS_LIN OR OS_IS_FBSD OR OS_IS_NBSD)
+     set(PLATFORM_THEME_SRC
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/linux/linuxplatformtheme.cpp
+         ${CMAKE_CURRENT_LIST_DIR}/internal/platform/linux/linuxplatformtheme.h
+@@ -182,7 +182,7 @@ set(MODULE_SRC
+ if (QT_SUPPORT)
+     list(APPEND MODULE_LINK Qt::Quick Qt::Widgets)
+ 
+-    if (OS_IS_LIN)
++    if (OS_IS_LIN OR OS_IS_FBSD OR OS_IS_NBSD)
+         list(APPEND MODULE_LINK Qt::DBus)
+     endif()
+ endif()

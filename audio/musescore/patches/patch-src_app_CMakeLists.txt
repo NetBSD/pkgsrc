@@ -1,0 +1,32 @@
+$NetBSD: patch-src_app_CMakeLists.txt,v 1.1 2025/10/15 01:32:01 gutteridge Exp $
+
+Add linker flags for NetBSD.
+
+--- src/app/CMakeLists.txt.orig	2025-04-24 13:59:18.000000000 +0000
++++ src/app/CMakeLists.txt
+@@ -115,6 +115,13 @@ elseif(OS_IS_FBSD)
+     if (BUILD_SHARED_LIBS)
+         set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_RPATH};${SHARED_LIBS_INSTALL_DESTINATION}")
+     endif(BUILD_SHARED_LIBS)
++elseif(OS_IS_NBSD)
++    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lasound -lpthread")
++
++    set(CMAKE_INSTALL_RPATH "${QT_INSTALL_LIBS}")
++    if (BUILD_SHARED_LIBS)
++        set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_RPATH};${SHARED_LIBS_INSTALL_DESTINATION}")
++    endif(BUILD_SHARED_LIBS)
+ else()
+     message(FATAL_ERROR "Unsupported Platform: ${CMAKE_HOST_SYSTEM_NAME}")
+ endif()
+@@ -439,9 +446,9 @@ elseif(OS_IS_LIN)
+        add_custom_target(mscore_alias ALL COMMAND echo "No symlink aliases will be created." VERBATIM )
+     endif (LN_EXECUTABLE)
+ 
+-elseif(OS_IS_FBSD)
++elseif(OS_IS_FBSD OR OS_IS_NBSD)
+ ###########################################
+-# FreeBSD
++# FreeBSD, NetBSD
+ ###########################################
+     add_custom_target(mscore_alias ALL
+            COMMAND echo "Creating symlink alias for mscore executable."

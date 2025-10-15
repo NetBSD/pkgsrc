@@ -1,0 +1,15 @@
+$NetBSD: patch-src_framework_vst_CMakeLists.txt,v 1.1 2025/10/15 01:32:01 gutteridge Exp $
+
+Treat NetBSD like FreeBSD.
+
+--- src/framework/vst/CMakeLists.txt.orig	2025-04-24 13:59:18.000000000 +0000
++++ src/framework/vst/CMakeLists.txt
+@@ -80,7 +80,7 @@ set(MODULE_SRC
+     ${CMAKE_CURRENT_LIST_DIR}/view/vstview.h
+     )
+ 
+-if(OS_IS_LIN OR OS_IS_FBSD)
++if(OS_IS_LIN OR OS_IS_FBSD OR OS_IS_NBSD)
+     set(MODULE_SRC
+         ${MODULE_SRC}
+         ${CMAKE_CURRENT_LIST_DIR}/view/platform/linux/runloop.cpp
