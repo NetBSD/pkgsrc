@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.621 2025/10/15 20:47:00 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.622 2025/10/15 20:48:56 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -12150,7 +12150,7 @@ openexr<2.2.1	denial-of-service	 https://web.nvd.nist.gov/view/vuln/detail?vulnI
 openexr<2.2.1	denial-of-service	 https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-9116
 libraw<0.18.2	memory-corruption	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-6886
 libraw<0.18.2	memory-corruption	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-6887
-samba4<4.6.4	remote-code-execution	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-7494
+samba<4.6.4	remote-code-execution	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-7494
 samba<3.6.25nb6	remote-code-execution	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-7494
 go>1.6<1.8.2	weak-cryptography	https://golang.org/issue/20040
 pgbouncer<1.5.5	null-dereference	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-4054
@@ -25539,7 +25539,7 @@ moodle<3.11.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-363
 moodle<3.11.1	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-36393
 moodle<3.11.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-36395
 moodle<3.11.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-36403
-samba4<4.17.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2021-20251
+samba<4.17.4	brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2021-20251
 pev-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-45423
 vim<9.0.1969	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-5344
 mosquitto<2.0.16	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-3592
@@ -25702,12 +25702,12 @@ atasm-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-202
 KeePass>=2.00<2.54	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2023-32784
 curl>=7.69.0<8.4.0	heap-based-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38545
 curl>=7.9.1<8.4.0	external-control-of-file-name-or-path	https://nvd.nist.gov/vuln/detail/CVE-2023-38546
-samba4>=4.17<4.17.12	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-3961
-samba4>=4.18<4.18.8	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-3961
-samba4>=4.17<4.17.12	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-42669
-samba4>=4.18<4.18.8	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-42669
-samba4>=4.17<4.17.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42670
-samba4>=4.18<4.18.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42670
+samba>=4.17<4.17.12	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-3961
+samba>=4.18<4.18.8	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-3961
+samba>=4.17<4.17.12	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-42669
+samba>=4.18<4.18.8	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-42669
+samba>=4.17<4.17.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42670
+samba>=4.18<4.18.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-42670
 hs-http2<4.2.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 varnish-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-44487
 apache<2.4.58	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-31122
@@ -25749,8 +25749,8 @@ vim<9.0.2106	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-48231
 vim<9.0.2112	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-48237
 gnutls<3.8.2	timing-side-channel	https://nvd.nist.gov/vuln/detail/CVE-2023-5981
 vim<9.0.2121	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-48706
-samba4>=4.0<4.18.9	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
-samba4>=4.19<4.19.3	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
+samba>=4.0<4.18.9	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
+samba>=4.19<4.19.3	information-leak	https://nvd.nist.gov/vuln/detail/CVE-2018-14628
 py{27,38,39,310,311,312}-cryptography>=3.1<41.0.6	NULL-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-49083
 perl>=5.30.0<5.38.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-47038
 webkit-gtk<2.42.3	disclose-sensitive-information	https://nvd.nist.gov/vuln/detail/CVE-2023-42916
@@ -26001,8 +26001,8 @@ emacs27-[0-9]*		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-393
 emacs27-nox11-[0-9]*	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
 emacs26-[0-9]*		remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
 emacs26-nox11-[0-9]*	remote-user-access	https://nvd.nist.gov/vuln/detail/CVE-2024-39331
-samba4<4.19.7	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
-samba4>=4.20<4.20.2	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
+samba<4.19.7	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
+samba>=4.20<4.20.2	memory-corruption	https://www.openwall.com/lists/oss-security/2024/06/24/3
 mit-krb5>=1.3<1.21.3	truncate-message	https://nvd.nist.gov/vuln/detail/CVE-2024-37370
 mit-krb5>=1.3<1.21.3	invalid-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2024-37371
 apache<2.4.60	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2024-39573
@@ -26318,7 +26318,7 @@ python310<3.10.18	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
 python311<3.11.13	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
 python312<3.12.11	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
 python313<3.13.4	path-traversal		https://nvd.nist.gov/vuln/detail/CVE-2025-4517
-samba4<4.21.6	information-loss	https://nvd.nist.gov/vuln/detail/CVE-2025-0620
+samba<4.21.6	information-loss	https://nvd.nist.gov/vuln/detail/CVE-2025-0620
 py{39,310,311,312}-requests<2.32.4	credential-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-47081
 curl<8.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5399
 py{39,310,311,312,313}-django>=4<4.2.23	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
