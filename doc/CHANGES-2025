@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6112 2025/10/15 14:33:30 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6113 2025/10/15 14:51:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8851,3 +8851,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/sccache to 0.11.0 [adam 2025-10-15]
 	Updated misc/py-watchfiles to 1.1.1 [adam 2025-10-15]
 	Updated geography/py-sbf2 to 1.0.1 [gdt 2025-10-15]
+	Updated geography/py-spartn to 1.0.8 [gdt 2025-10-15]
