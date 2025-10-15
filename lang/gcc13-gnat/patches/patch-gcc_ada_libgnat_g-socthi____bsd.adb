@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_ada_libgnat_g-socthi____bsd.adb,v 1.2 2025/02/08 14:05:03 wiz Exp $
+$NetBSD: patch-gcc_ada_libgnat_g-socthi____bsd.adb,v 1.3 2025/10/15 20:04:57 dkazankov Exp $
 
 Create a g-socthi package that is common to all *BSD systems.
 
@@ -135,7 +135,7 @@ Create a g-socthi package that is common to all *BSD systems.
 +     (Domain   : C.int;
 +      Typ      : C.int;
 +      Protocol : C.int) return C.int;
-+   pragma Import (C, Syscall_Socket, "__gnat_socket");
++   pragma Import (C, Syscall_Socket, "socket");
 +   --  The socket() function is used to create an unbound socket and returns a
 +   --  file descriptor that can be used with other socket functions.  Upon
 +   --  failure, a -1 is returned and ERRNO is set.
