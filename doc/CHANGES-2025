@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6105 2025/10/14 18:31:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6106 2025/10/15 01:32:14 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8840,3 +8840,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/brlaser to 6.2.8 [schmonz 2025-10-14]
 	Updated textproc/moor to 2.5.1 [schmonz 2025-10-14]
 	Updated x11/libdrm to 2.4.127 [wiz 2025-10-14]
+	Updated audio/musescore to 4.6.2 [gutteridge 2025-10-15]
