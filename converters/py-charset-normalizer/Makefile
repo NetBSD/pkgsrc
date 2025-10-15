@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/08/10 08:13:22 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/15 13:42:57 adam Exp $
 
-DISTNAME=	charset_normalizer-3.4.3
+DISTNAME=	charset_normalizer-3.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/charset-normalizer/}
@@ -11,7 +11,6 @@ COMMENT=	Universal Charset Detector
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
