@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_config_arm_arm.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
+$NetBSD: patch-gcc_config_arm_arm.h,v 1.3 2025/10/15 20:04:57 dkazankov Exp $
+
+FIXME
 
 --- gcc/config/arm/arm.h.orig	2024-05-21 10:47:38.000000000 +0300
 +++ gcc/config/arm/arm.h

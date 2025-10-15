@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_config_arm_netbsd-elf.h,v 1.1 2024/03/08 12:02:34 wiz Exp $
+$NetBSD: patch-gcc_config_arm_netbsd-elf.h,v 1.2 2025/10/15 20:04:57 dkazankov Exp $
+
+FIXME
 
 --- gcc/config/arm/netbsd-elf.h.orig	2023-04-26 07:09:39.000000000 +0000
 +++ gcc/config/arm/netbsd-elf.h
