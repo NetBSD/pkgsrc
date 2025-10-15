@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/10/09 11:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/15 20:26:57 wiz Exp $
 
 DISTNAME=	sure-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-WHEEL_NAME=	sure-0.0.0
-
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} sure sure-${PYVERSSUFFIX} || ${TRUE}
+
+.include "../../lang/python/pyversion.mk"
+# TODO: find out why this is different for Python 3.14+
+.if ${PYTHON_VERSION} > 313
+WHEEL_NAME=	sure-0.0.0
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
