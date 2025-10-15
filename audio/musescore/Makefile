@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2025/10/15 01:32:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.57 2025/10/15 02:06:05 gutteridge Exp $
 
 DISTNAME=	musescore-4.6.2
 CATEGORIES=	audio
@@ -33,8 +33,6 @@ CMAKE_CONFIGURE_ARGS+=	-DMUE_COMPILE_USE_SYSTEM_TINYXML=ON
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/bindir
-
-USE_CXX_FEATURES+=	c++11
 
 .include "options.mk"
 
