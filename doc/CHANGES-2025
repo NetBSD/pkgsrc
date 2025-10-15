@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6108 2025/10/15 09:14:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6109 2025/10/15 13:26:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8844,3 +8844,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mysql80-server to 8.0.40nb9 [jnemeth 2025-10-15]
 	Updated lang/python313 to 3.13.9 [adam 2025-10-15]
 	Updated lang/py313-html-docs to 3.13.9 [adam 2025-10-15]
+	Updated net/tor to 0.4.8.19 [adam 2025-10-15]
+	Updated devel/py-setuptools_scm to 9.2.1 [adam 2025-10-15]
