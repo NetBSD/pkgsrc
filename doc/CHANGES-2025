@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6110 2025/10/15 13:43:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6111 2025/10/15 13:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8848,3 +8848,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-setuptools_scm to 9.2.1 [adam 2025-10-15]
 	Updated devel/py-cachetools to 6.2.1 [adam 2025-10-15]
 	Updated converters/py-charset-normalizer to 3.4.4 [adam 2025-10-15]
+	Updated devel/sccache to 0.11.0 [adam 2025-10-15]
+	Updated misc/py-watchfiles to 1.1.1 [adam 2025-10-15]
