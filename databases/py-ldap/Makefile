@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2025/04/14 11:31:11 adam Exp $
+# $NetBSD: Makefile,v 1.99 2025/10/16 09:36:01 adam Exp $
 
-DISTNAME=	python-ldap-3.4.4
-PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
-PKGREVISION=	1
+DISTNAME=	python_ldap-3.4.5
+PKGNAME=	${DISTNAME:S/python_/${PYPKGPREFIX}-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-ldap/}
 
@@ -19,6 +18,7 @@ PREFER.openldap-client=	pkgsrc
 .endif
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.3.7:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules>=0.1.5:../../security/py-asn1-modules
 TEST_DEPENDS+=	openldap-server-[0-9]*:../../databases/openldap-server
