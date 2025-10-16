@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2025/09/27 09:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/16 20:21:55 adam Exp $
 
-DISTNAME=	vcmi-1.6.7
-PKGREVISION=	4
+DISTNAME=	vcmi-1.6.8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcmi/}
 
 GITHUB_SUBMODULES+=	vcmi innoextract \
-			9977089412ebafe9f79936aa65a2edf16a84ae3e \
+			98bb55798a77c0346b12a1dbb53fe4d3e0379d66 \
 			launcher/lib/innoextract
 
 GITHUB_SUBMODULES+=	fuzzylite fuzzylite \
-			7aee562d6ca17f3cf42588ffb5116e03017c3c50 \
+			13b3122f5c353c0389ed4e66041d548c44ec9df6 \
 			AI/FuzzyLite
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,12 +17,15 @@ HOMEPAGE=	https://vcmi.eu/
 COMMENT=	Open-source engine for Heroes of Might and Magic III
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config bash:run
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:run pkg-config
+
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/vcmi
+
+CMAKE_CONFIGURE_ARGS+=	-DFORCE_BUNDLED_FL=ON
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
-USE_CXX_FEATURES+=	c++17
 
 # lie to the compiler
 CXXFLAGS+=	-DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED
@@ -40,10 +42,8 @@ SUBST_STAGE.ffmpeg=	pre-configure
 .if ${CC_VERSION:Mgcc-*}
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 .endif
-CMAKE_CONFIGURE_ARGS+=  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 .include "../../mk/bsd.fast.prefs.mk"
-
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/vcmi
 
 REPLACE_BASH+=	vcmibuilder
@@ -52,20 +52,25 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 CHECK_PORTABILITY_SKIP+=	CI/get_package_name.sh
 
+PLIST_VARS+=	desktop
+.if ${OPSYS} != "Darwin"
+PLIST.desktop=	yes
+.endif
+
 .include "options.mk"
-.include "../../devel/cmake/build.mk"
+
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../lang/python/tool.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"

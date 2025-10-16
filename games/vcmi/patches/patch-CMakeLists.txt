@@ -1,0 +1,34 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/10/16 20:21:55 adam Exp $
+
+Don't look for boost_system library.
+On Dawrin, don't make application bundle.
+
+--- CMakeLists.txt.orig	2025-04-24 19:50:03.000000000 +0000
++++ CMakeLists.txt
+@@ -462,7 +462,7 @@ endif()
+ #        Finding packages                  #
+ ############################################
+ 
+-set(BOOST_COMPONENTS date_time filesystem locale program_options system thread)
++set(BOOST_COMPONENTS date_time filesystem locale program_options thread)
+ if(ENABLE_INNOEXTRACT)
+ 	list(APPEND BOOST_COMPONENTS iostreams)
+ endif()
+@@ -557,7 +557,7 @@ if(WIN32) # on Win everything goes into
+ 	set(BIN_DIR "." CACHE STRING "Where to install binaries")
+ 	set(LIB_DIR "." CACHE STRING "Where to install main library")
+ 	set(DATA_DIR "." CACHE STRING "Where to install data files")
+-elseif(APPLE)
++elseif(FALSE)
+ 	# includes lib path which determines where to install shared libraries (either /lib or /lib64)
+ 	include(GNUInstallDirs)
+ 
+@@ -876,7 +876,7 @@ if(WIN32)
+ 	if(NOT (${CMAKE_CROSSCOMPILING}))
+ 		add_subdirectory(win)
+ 	endif()
+-elseif(APPLE_MACOS AND NOT ENABLE_MONOLITHIC_INSTALL)
++elseif(FALSE)
+ 	set(CPACK_MONOLITHIC_INSTALL 1)
+ 	set(CPACK_GENERATOR "DragNDrop")
+ 	set(CPACK_DMG_BACKGROUND_IMAGE "${CMAKE_SOURCE_DIR}/osx/dmg_background.png")
