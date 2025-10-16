@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6130 2025/10/16 10:49:22 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6131 2025/10/16 10:50:24 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8875,3 +8875,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/bacon to 3.19.0 [pin 2025-10-16]
 	Updated shells/oh-my-posh to 27.2.1 [pin 2025-10-16]
 	Updated textproc/ripgrep to 15.0.0 [pin 2025-10-16]
+	Updated textproc/scooter to 0.8.2 [pin 2025-10-16]
