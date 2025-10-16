@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6133 2025/10/16 10:52:43 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6134 2025/10/16 10:53:44 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8878,3 +8878,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/scooter to 0.8.2 [pin 2025-10-16]
 	Updated textproc/typst to 0.13.1 [pin 2025-10-16]
 	Updated devel/serie to 0.5.2 [pin 2025-10-16]
+	Updated sysutils/treegrep to 1.2.1 [pin 2025-10-16]
