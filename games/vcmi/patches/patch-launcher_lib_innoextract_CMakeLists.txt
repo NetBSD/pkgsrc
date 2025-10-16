@@ -1,11 +1,11 @@
-$NetBSD: patch-launcher_lib_innoextract_CMakeLists.txt,v 1.1 2025/01/31 08:49:39 wiz Exp $
+$NetBSD: patch-launcher_lib_innoextract_CMakeLists.txt,v 1.2 2025/10/16 20:21:55 adam Exp $
 
 Fix typo.
 
---- launcher/lib/innoextract/CMakeLists.txt.orig	2025-01-31 08:12:08.158202957 +0000
+--- launcher/lib/innoextract/CMakeLists.txt.orig	2025-08-17 14:23:54.000000000 +0000
 +++ launcher/lib/innoextract/CMakeLists.txt
-@@ -169,7 +169,7 @@ find_package(Boost REQUIRED COMPONENTS
- )
+@@ -173,7 +173,7 @@ if(Boost_MAJOR_VERSION EQUAL 1 AND Boost
+ endif()
  list(APPEND LIBRARIES ${Boost_LIBRARIES})
  link_directories(${Boost_LIBRARY_DIRS})
 -include_directories(SYSTEM ${Boost_INCLUDE_DIR})
