@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/04/14 12:39:20 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/16 12:57:38 adam Exp $
 
-DISTNAME=	merge3-0.0.15
+DISTNAME=	merge3-0.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/merge3/}
 
