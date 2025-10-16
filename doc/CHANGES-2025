@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6136 2025/10/16 13:25:40 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6137 2025/10/16 13:29:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8882,3 +8882,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/synadm to 0.49.2 [adam 2025-10-16]
 	Updated textproc/py-merge3 to 0.0.16 [adam 2025-10-16]
 	Updated textproc/moor to 2.5.2 [schmonz 2025-10-16]
+	Updated devel/p5-Cucumber-TagExpressions to 8.0.0 [schmonz 2025-10-16]
