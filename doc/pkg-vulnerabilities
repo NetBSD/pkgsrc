@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.624 2025/10/16 10:28:48 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.625 2025/10/16 21:28:01 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28636,3 +28636,17 @@ grub2<2.13	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-4382
 samba<4.21.9	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-9640
 samba<4.21.9	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-10230
 p5-YAML-Syck<1.36	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11683
+binutils-[0-9]*	invalid-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-11839
+binutils-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-11840
+icinga2<2.14.7	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61907
+icinga2<2.14.7	denial-of-service			https://nvd.nist.gov/vuln/detail/CVE-2025-61908
+icinga2<2.14.7	security-bypass				https://nvd.nist.gov/vuln/detail/CVE-2025-61909
+quickjs<20250913	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-62490
+quickjs<20250913	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-62491
+quickjs<20250913	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-62492
+quickjs<20250913	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-62493
+quickjs<20250913	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-62494
+quickjs<20250913	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-62495
+quickjs<20250913	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-62496
+radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60358
+webmin-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61541
