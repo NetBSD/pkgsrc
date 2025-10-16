@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6120 2025/10/16 04:25:40 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6121 2025/10/16 06:06:24 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8859,3 +8859,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/btop to 1.4.5nb2 [wiz 2025-10-15]
 	Updated fonts/fontconfig to 2.17.1nb1 [maya 2025-10-16]
 	Updated net/samba4 to 4.21.9 [taca 2025-10-16]
+	Updated textproc/split-thai to 2.41 [scole 2025-10-16]
