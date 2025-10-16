@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/10/08 06:54:28 bsiegert Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/16 17:59:52 bsiegert Exp $
 
 DISTNAME=		amazon-ecs-cli-1.21.0
-PKGREVISION=		49
+PKGREVISION=		50
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=aws/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
