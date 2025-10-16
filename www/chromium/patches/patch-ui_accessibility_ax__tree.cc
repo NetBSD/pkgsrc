@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.6 2025/09/12 16:02:37 kikadf Exp $
+$NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.7 2025/10/16 19:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/accessibility/ax_tree.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- ui/accessibility/ax_tree.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ui/accessibility/ax_tree.cc
 @@ -700,7 +700,7 @@ struct AXTreeUpdateState {
    // (crrev.com/c/2892259).
@@ -33,7 +33,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.6 2025/09/12 16:02:37 kikadf Exp
    ClearExtraAnnouncementNodes();
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
  
-@@ -1600,7 +1600,7 @@ bool AXTree::Unserialize(const AXTreeUpd
+@@ -1602,7 +1602,7 @@ bool AXTree::Unserialize(const AXTreeUpd
    observers_.Notify(&AXTreeObserver::OnAtomicUpdateFinished, this,
                      root_->id() != old_root_id, changes);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.6 2025/09/12 16:02:37 kikadf Exp
    if (update_state.should_clear_extra_announcement_nodes) {
      ClearExtraAnnouncementNodes();
    }
-@@ -2186,7 +2186,7 @@ void AXTree::NotifyNodeAttributesWillCha
+@@ -2188,7 +2188,7 @@ void AXTree::NotifyNodeAttributesWillCha
                      new_data);
  }
  
@@ -51,7 +51,7 @@ $NetBSD: patch-ui_accessibility_ax__tree.cc,v 1.6 2025/09/12 16:02:37 kikadf Exp
  void AXTree::ClearExtraAnnouncementNodes() {
    if (!extra_announcement_nodes_) {
      return;
-@@ -2596,7 +2596,7 @@ bool AXTree::CreateNewChildVector(
+@@ -2598,7 +2598,7 @@ bool AXTree::CreateNewChildVector(
      AXTreeUpdateState* update_state) {
    DCHECK(GetTreeUpdateInProgressState());
    bool success = true;

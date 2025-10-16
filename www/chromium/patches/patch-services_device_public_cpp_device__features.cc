@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.6 2025/09/12 16:02:33 kikadf Exp $
+$NetBSD: patch-services_device_public_cpp_device__features.cc,v 1.7 2025/10/16 19:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/public/cpp/device_features.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- services/device/public/cpp/device_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ services/device/public/cpp/device_features.cc
 @@ -144,7 +144,7 @@ bool IsOsLevelGeolocationPermissionSuppo
  BASE_FEATURE(kAutomaticUsbDetach,

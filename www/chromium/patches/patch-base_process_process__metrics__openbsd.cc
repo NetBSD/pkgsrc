@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__metrics__openbsd.cc,v 1.7 2025/09/12 16:02:19 kikadf Exp $
+$NetBSD: patch-base_process_process__metrics__openbsd.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_metrics_openbsd.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/process/process_metrics_openbsd.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/process/process_metrics_openbsd.cc
 @@ -6,73 +6,85 @@
  
@@ -151,7 +151,7 @@ $NetBSD: patch-base_process_process__metrics__openbsd.cc,v 1.7 2025/09/12 16:02:
 +  return false;
 +}
 +
-+bool GetSystemMemoryInfo(SystemMemoryInfoKB* meminfo) {
++bool GetSystemMemoryInfo(SystemMemoryInfo* meminfo) {
 +  NOTIMPLEMENTED();
 +  return false;
 +}

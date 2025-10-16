@@ -1,38 +1,30 @@
-$NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.8 2025/10/16 19:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/flag_descriptions.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/flag_descriptions.h
-@@ -435,7 +435,7 @@ extern const char
+@@ -451,7 +451,7 @@ extern const char
      kAutofillEnableAllowlistForBmoCardCategoryBenefitsDescription[];
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- extern const char kAutofillEnableAmountExtractionAllowlistDesktopName[];
- extern const char kAutofillEnableAmountExtractionAllowlistDesktopDescription[];
- extern const char kAutofillEnableAmountExtractionDesktopName[];
-@@ -444,14 +444,14 @@ extern const char kAutofillEnableAmountE
-         // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
- extern const char kAutofillEnableAmountExtractionTestingName[];
- extern const char kAutofillEnableAmountExtractionTestingDescription[];
- #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) ||
+ extern const char kAutofillEnableAmountExtractionName[];
+ extern const char kAutofillEnableAmountExtractionDescription[];
+ extern const char kAutofillEnableAmountExtractionAllowlistName[];
+@@ -462,7 +462,7 @@ extern const char kAutofillEnableAmountE
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  extern const char kAutofillEnableBuyNowPayLaterName[];
  extern const char kAutofillEnableBuyNowPayLaterDescription[];
  
-@@ -714,7 +714,7 @@ extern const char kContextMenuEmptySpace
+@@ -721,7 +721,7 @@ extern const char kContextMenuEmptySpace
  extern const char kContextMenuEmptySpaceDescription[];
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -50,7 +42,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kDocumentPictureInPictureAnimateResizeName[];
  extern const char kDocumentPictureInPictureAnimateResizeDescription[];
  
-@@ -1054,7 +1054,7 @@ extern const char kEnableIsolatedWebAppA
+@@ -1061,7 +1061,7 @@ extern const char kEnableIsolatedWebAppA
  extern const char kEnableIsolatedWebAppDevModeName[];
  extern const char kEnableIsolatedWebAppDevModeDescription[];
  
@@ -59,7 +51,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kEnableIwaKeyDistributionComponentName[];
  extern const char kEnableIwaKeyDistributionComponentDescription[];
  #endif  // BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -2061,7 +2061,7 @@ extern const char kReduceIPAddressChange
+@@ -2079,7 +2079,7 @@ extern const char kReduceIPAddressChange
  #endif  // BUILDFLAG(IS_MAC)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -68,16 +60,16 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kReplaceSyncPromosWithSignInPromosName[];
  extern const char kReplaceSyncPromosWithSignInPromosDescription[];
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) ||
-@@ -2075,7 +2075,7 @@ extern const char kRetainOmniboxOnFocusD
- extern const char kRobustWindowManagementName[];
- extern const char kRobustWindowManagementDescription[];
+@@ -2091,7 +2091,7 @@ extern const char kRobustWindowManagemen
+ extern const char kRobustWindowManagementExperimentalName[];
+ extern const char kRobustWindowManagementExperimentalDescription[];
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  extern const char kRootScrollbarFollowsTheme[];
  extern const char kRootScrollbarFollowsThemeDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
-@@ -2216,7 +2216,7 @@ extern const char kDefaultSiteInstanceGr
+@@ -2236,7 +2236,7 @@ extern const char kDefaultSiteInstanceGr
  extern const char kDefaultSiteInstanceGroupsDescription[];
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -86,7 +78,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kPwaNavigationCapturingName[];
  extern const char kPwaNavigationCapturingDescription[];
  #endif
-@@ -2392,7 +2392,7 @@ extern const char kTouchSelectionStrateg
+@@ -2416,7 +2416,7 @@ extern const char kTouchSelectionStrateg
  extern const char kTouchTextEditingRedesignName[];
  extern const char kTouchTextEditingRedesignDescription[];
  
@@ -95,7 +87,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kEnableHistorySyncOptinName[];
  extern const char kEnableHistorySyncOptinDescription[];
  
-@@ -2662,7 +2662,7 @@ extern const char kReduceAcceptLanguageD
+@@ -2688,7 +2688,7 @@ extern const char kReduceAcceptLanguageD
  extern const char kReduceTransferSizeUpdatedIPCName[];
  extern const char kReduceTransferSizeUpdatedIPCDescription[];
  
@@ -104,7 +96,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kReduceUserAgentDataLinuxPlatformVersionName[];
  extern const char kReduceUserAgentDataLinuxPlatformVersionDescription[];
  #endif  // #if BUILDFLAG(IS_LINUX)
-@@ -4478,7 +4478,7 @@ extern const char kTetheringExperimental
+@@ -4534,7 +4534,7 @@ extern const char kTetheringExperimental
  
  #endif  // #if BUILDFLAG(IS_CHROMEOS)
  
@@ -113,26 +105,25 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kGetAllScreensMediaName[];
  extern const char kGetAllScreensMediaDescription[];
  #endif  // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_LINUX)
-@@ -4610,7 +4610,7 @@ extern const char kEnableArmHwdrmDescrip
+@@ -4663,7 +4663,7 @@ extern const char kEnableArmHwdrmDescrip
  
  // Linux ---------------------------------------------------------------------
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
- 
  extern const char kPulseaudioLoopbackForCastName[];
-@@ -4632,6 +4632,9 @@ extern const char kWaylandSessionManagem
+ extern const char kPulseaudioLoopbackForCastDescription[];
+@@ -4682,6 +4682,8 @@ extern const char kWaylandPerWindowScali
+ extern const char kWaylandSessionManagementName[];
+ extern const char kWaylandSessionManagementDescription[];
  
- extern const char kWaylandUiScalingName[];
- extern const char kWaylandUiScalingDescription[];
-+
 +extern const char kAudioBackendName[];
 +extern const char kAudioBackendDescription[];
  #endif  // BUILDFLAG(IS_LINUX)
  
  // Random platform combinations -----------------------------------------------
-@@ -4646,7 +4649,7 @@ extern const char kWebBluetoothConfirmPa
+@@ -4696,7 +4698,7 @@ extern const char kWebBluetoothConfirmPa
  extern const char kWebBluetoothConfirmPairingSupportDescription[];
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -141,7 +132,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kCupsIppPrintingBackendName[];
  extern const char kCupsIppPrintingBackendDescription[];
  #endif  // BUILDFLAG(IS_LINUX) && BUILDFLAG(ENABLE_PRINTING)
-@@ -4670,7 +4673,7 @@ extern const char kTaskManagerDesktopRef
+@@ -4720,7 +4722,7 @@ extern const char kTaskManagerDesktopRef
  extern const char kTaskManagerDesktopRefreshDescription[];
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -150,7 +141,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kEnableNetworkServiceSandboxName[];
  extern const char kEnableNetworkServiceSandboxDescription[];
  
-@@ -4753,7 +4756,7 @@ extern const char kElementCaptureName[];
+@@ -4803,7 +4805,7 @@ extern const char kElementCaptureName[];
  extern const char kElementCaptureDescription[];
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -159,16 +150,16 @@ $NetBSD: patch-chrome_browser_flag__descriptions.h,v 1.7 2025/09/12 16:02:22 kik
  extern const char kUIDebugToolsName[];
  extern const char kUIDebugToolsDescription[];
  #endif
-@@ -4781,7 +4784,7 @@ extern const char kThirdPartyDisableChro
+@@ -4828,7 +4830,7 @@ extern const char kThirdPartyDisableChro
  extern const char kThirdPartyDisableChromeAutofillSettingsScreenDescription[];
  #endif  // IS_ANDROID
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- extern const char kThirdPartyProfileManagementName[];
- extern const char kThirdPartyProfileManagementDescription[];
+ extern const char kGlicName[];
+ extern const char kGlicDescription[];
  
-@@ -4857,7 +4860,7 @@ extern const char kEnableManagementPromo
+@@ -4908,7 +4910,7 @@ extern const char kEnableManagementPromo
  extern const char kSupervisedUserBlockInterstitialV3Name[];
  extern const char kSupervisedUserBlockInterstitialV3Description[];
  

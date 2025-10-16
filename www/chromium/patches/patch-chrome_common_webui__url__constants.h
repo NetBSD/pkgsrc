@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.7 2025/09/12 16:02:25 kikadf Exp $
+$NetBSD: patch-chrome_common_webui__url__constants.h,v 1.8 2025/10/16 19:43:25 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/common/webui_url_constants.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/common/webui_url_constants.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/common/webui_url_constants.h
-@@ -557,12 +557,12 @@ inline constexpr char kChromeUIOsUrlAppU
+@@ -554,12 +554,12 @@ inline constexpr char kChromeUIOsUrlAppU
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -21,7 +21,7 @@ $NetBSD: patch-chrome_common_webui__url__constants.h,v 1.7 2025/09/12 16:02:25 k
  inline constexpr char kChromeUIWebAppSettingsHost[] = "app-settings";
  inline constexpr char kChromeUIWebAppSettingsURL[] = "chrome://app-settings/";
  inline constexpr char kChromeUIWhatsNewHost[] = "whats-new";
-@@ -574,11 +574,11 @@ inline constexpr char kChromeUILinuxProx
+@@ -571,11 +571,11 @@ inline constexpr char kChromeUILinuxProx
  #endif
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || \
@@ -35,7 +35,7 @@ $NetBSD: patch-chrome_common_webui__url__constants.h,v 1.7 2025/09/12 16:02:25 k
  inline constexpr char kChromeUIBrowserSwitchHost[] = "browser-switch";
  inline constexpr char kChromeUIBrowserSwitchURL[] = "chrome://browser-switch/";
  inline constexpr char kChromeUIIntroDefaultBrowserSubPage[] = "default-browser";
-@@ -603,7 +603,7 @@ inline constexpr char kChromeUIHistorySy
+@@ -600,7 +600,7 @@ inline constexpr char kChromeUIHistorySy
      "chrome://history-sync-optin/";
  #endif
  

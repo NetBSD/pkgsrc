@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.3 2025/09/12 16:02:36 kikadf Exp $
+$NetBSD: patch-third__party_webrtc_rtc__base_cpu__info.cc,v 1.4 2025/10/16 19:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/webrtc/rtc_base/cpu_info.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/webrtc/rtc_base/cpu_info.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ third_party/webrtc/rtc_base/cpu_info.cc
 @@ -37,7 +37,9 @@
  #include <intrin.h>

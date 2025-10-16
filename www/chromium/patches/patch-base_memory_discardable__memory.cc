@@ -1,21 +1,21 @@
-$NetBSD: patch-base_memory_discardable__memory.cc,v 1.7 2025/09/12 16:02:19 kikadf Exp $
+$NetBSD: patch-base_memory_discardable__memory.cc,v 1.8 2025/10/16 19:43:18 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/memory/discardable_memory.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/memory/discardable_memory.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/memory/discardable_memory.cc
-@@ -26,7 +26,7 @@ BASE_FEATURE(kMadvFreeDiscardableMemory,
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -24,7 +24,7 @@ namespace features {
+ BASE_FEATURE(MadvFreeDiscardableMemory, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif  // BUILDFLAG(IS_POSIX)
  
 -#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kDiscardableMemoryBackingTrial,
-              "DiscardableMemoryBackingTrial",
-              base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -44,7 +44,7 @@ BASE_FEATURE_ENUM_PARAM(DiscardableMemor
+ BASE_FEATURE(DiscardableMemoryBackingTrial, base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+ BASE_FEATURE_ENUM_PARAM(DiscardableMemoryTrialGroup,
+@@ -40,7 +40,7 @@ BASE_FEATURE_ENUM_PARAM(DiscardableMemor
  
  namespace {
  
@@ -24,7 +24,7 @@ $NetBSD: patch-base_memory_discardable__memory.cc,v 1.7 2025/09/12 16:02:19 kika
  
  DiscardableMemoryBacking GetBackingForFieldTrial() {
    DiscardableMemoryTrialGroup trial_group =
-@@ -63,7 +63,7 @@ DiscardableMemoryBacking GetBackingForFi
+@@ -59,7 +59,7 @@ DiscardableMemoryBacking GetBackingForFi
  
  }  // namespace
  
@@ -33,7 +33,7 @@ $NetBSD: patch-base_memory_discardable__memory.cc,v 1.7 2025/09/12 16:02:19 kika
  
  // Probe capabilities of this device to determine whether we should participate
  // in the discardable memory backing trial.
-@@ -95,7 +95,7 @@ DiscardableMemory::DiscardableMemory() =
+@@ -91,7 +91,7 @@ DiscardableMemory::DiscardableMemory() =
  DiscardableMemory::~DiscardableMemory() = default;
  
  DiscardableMemoryBacking GetDiscardableMemoryBacking() {

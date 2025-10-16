@@ -1,12 +1,12 @@
-$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.h,v 1.3 2025/09/12 16:02:27 kikadf Exp $
+$NetBSD: patch-components_password__manager_core_browser_password__autofill__manager.h,v 1.4 2025/10/16 19:43:27 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/password_manager/core/browser/password_autofill_manager.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/password_manager/core/browser/password_autofill_manager.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/password_manager/core/browser/password_autofill_manager.h
-@@ -285,7 +285,7 @@ class PasswordAutofillManager : public a
+@@ -287,7 +287,7 @@ class PasswordAutofillManager : public a
  
    // Stores the controller of warning popup UI on cross domain filling.
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_CHROMEOS) || \

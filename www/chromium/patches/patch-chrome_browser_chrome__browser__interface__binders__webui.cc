@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.6 2025/09/12 16:02:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.7 2025/10/16 19:43:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/chrome_browser_interface_binders_webui.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/chrome_browser_interface_binders_webui.cc
 @@ -51,18 +51,18 @@
  #include "mojo/public/cpp/bindings/binder_map.h"
@@ -28,7 +28,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
  #include "chrome/browser/ui/webui/app_settings/web_app_settings_ui.h"
  #include "chrome/browser/ui/webui/on_device_translation_internals/on_device_translation_internals_ui.h"
  #include "chrome/browser/ui/webui/signin/history_sync_optin/history_sync_optin.mojom.h"
-@@ -483,7 +483,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -489,7 +489,7 @@ void PopulateChromeWebUIFrameBinders(
                                           policy::DlpInternalsUI>(map);
  #endif
  
@@ -37,7 +37,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
    RegisterWebUIControllerInterfaceBinder<
        app_management::mojom::PageHandlerFactory, WebAppSettingsUI>(map);
  
-@@ -635,14 +635,14 @@ void PopulateChromeWebUIFrameBinders(
+@@ -642,14 +642,14 @@ void PopulateChromeWebUIFrameBinders(
          HistoryClustersSidePanelUI, NewTabPageUI, BookmarksSidePanelUI>(map);
    }
  
@@ -54,7 +54,7 @@ $NetBSD: patch-chrome_browser_chrome__browser__interface__binders__webui.cc,v 1.
        WhatsNewUI,
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
        NewTabPageUI>(map);
-@@ -1193,7 +1193,7 @@ void PopulateChromeWebUIFrameBinders(
+@@ -1200,7 +1200,7 @@ void PopulateChromeWebUIFrameBinders(
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \

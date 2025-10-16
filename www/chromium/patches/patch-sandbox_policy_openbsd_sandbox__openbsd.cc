@@ -1,12 +1,12 @@
-$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.7 2025/09/12 16:02:33 kikadf Exp $
+$NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.8 2025/10/16 19:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-09-12 07:32:06.459830126 +0000
+--- sandbox/policy/openbsd/sandbox_openbsd.cc.orig	2025-10-16 15:04:41.121326145 +0000
 +++ sandbox/policy/openbsd/sandbox_openbsd.cc
-@@ -0,0 +1,393 @@
+@@ -0,0 +1,396 @@
 +// Copyright (c) 2012 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -67,6 +67,7 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.7 2025/09/12 16:02
 +#endif
 +
 +#include "third_party/boringssl/src/include/openssl/crypto.h"
++#include "third_party/skia/experimental/rust_png/ffi/FFI.rs.h"
 +
 +#include <fontconfig/fontconfig.h>
 +#include "ui/gfx/linux/fontconfig_util.h"
@@ -132,6 +133,8 @@ $NetBSD: patch-sandbox_policy_openbsd_sandbox__openbsd.cc,v 1.7 2025/09/12 16:02
 +      crypto::EnsureNSSInit();
 +#endif
 +      CRYPTO_pre_sandbox_init();
++
++      rust_png::initialize_cpudetect();
 +
 +      base::FilePath cache_directory, local_directory;
 +

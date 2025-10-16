@@ -1,10 +1,10 @@
-$NetBSD: patch-remoting_host_session__policies__from__dict.cc,v 1.6 2025/09/12 16:02:32 kikadf Exp $
+$NetBSD: patch-remoting_host_session__policies__from__dict.cc,v 1.7 2025/10/16 19:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/session_policies_from_dict.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- remoting/host/session_policies_from_dict.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ remoting/host/session_policies_from_dict.cc
 @@ -75,7 +75,7 @@ std::optional<SessionPolicies> SessionPo
    session_policies.curtain_required =

@@ -1,12 +1,12 @@
-$NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1.7 2025/09/12 16:02:30 kikadf Exp $
+$NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1.8 2025/10/16 19:43:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- headless/lib/browser/headless_browser_main_parts_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ headless/lib/browser/headless_browser_main_parts_posix.cc
-@@ -26,13 +26,13 @@
+@@ -26,7 +26,7 @@
  #include "content/public/browser/browser_thread.h"
  #include "headless/lib/browser/headless_browser_impl.h"
  
@@ -15,14 +15,7 @@ $NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1
  #include "base/command_line.h"
  #include "components/os_crypt/sync/key_storage_config_linux.h"
  #include "components/os_crypt/sync/os_crypt.h"
- #include "headless/public/switches.h"
- 
--#if BUILDFLAG(USE_DBUS)
-+#if BUILDFLAG(USE_DBUS) && !BUILDFLAG(IS_BSD)
- #include "device/bluetooth/dbus/bluez_dbus_manager.h"
- #endif
- 
-@@ -166,7 +166,7 @@ class BrowserShutdownHandler {
+@@ -168,7 +168,7 @@ class BrowserShutdownHandler {
  
  }  // namespace
  
@@ -31,7 +24,7 @@ $NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1
  constexpr char kProductName[] = "HeadlessChrome";
  #endif
  
-@@ -174,9 +174,9 @@ void HeadlessBrowserMainParts::PostCreat
+@@ -176,9 +176,9 @@ void HeadlessBrowserMainParts::PostCreat
    BrowserShutdownHandler::Install(base::BindOnce(
        &HeadlessBrowserImpl::ShutdownWithExitCode, browser_->GetWeakPtr()));
  
@@ -40,6 +33,6 @@ $NetBSD: patch-headless_lib_browser_headless__browser__main__parts__posix.cc,v 1
  
 -#if BUILDFLAG(USE_DBUS)
 +#if BUILDFLAG(USE_DBUS) && !BUILDFLAG(IS_BSD)
-   bluez::BluezDBusManager::Initialize(/*system_bus=*/nullptr);
+   bluez::BluezDBusManager::Initialize(
+       dbus_thread_linux::GetSharedSystemBus().get());
  #endif
- 

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.7 2025/09/12 16:02:26 kikadf Exp $
+$NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feature_engagement/public/feature_constants.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/feature_engagement/public/feature_constants.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/feature_engagement/public/feature_constants.cc
 @@ -34,7 +34,7 @@ bool IsOnDeviceStorageEnabled() {
  }
@@ -15,7 +15,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.7
  #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
  BASE_FEATURE(kEsbDownloadRowPromoFeature,
               "EsbDownloadRowPromo",
-@@ -829,7 +829,7 @@ BASE_FEATURE(kDefaultBrowserTriggerCrite
+@@ -842,7 +842,7 @@ BASE_FEATURE(kIPHiOSAIHubNewBadge,
  
  #endif  // BUILDFLAG(IS_IOS)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-components_feature__engagement_public_feature__constants.cc,v 1.7
      BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_FUCHSIA)
  BASE_FEATURE(kIPHAutofillBnplAffirmOrZipSuggestionFeature,
               "IPH_AutofillBnplAffirmOrZipSuggestion",
-@@ -985,7 +985,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
+@@ -1001,7 +1001,7 @@ BASE_FEATURE(kIPHScalableIphGamingFeatur
               base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  

@@ -1,12 +1,20 @@
-$NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/stack_base_address_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/profiler/stack_base_address_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/profiler/stack_base_address_posix.cc
-@@ -18,6 +18,14 @@
+@@ -7,6 +7,7 @@
+ #include "base/check_op.h"
+ #include "base/compiler_specific.h"
+ #include "base/logging.h"
++#include "base/numerics/safe_conversions.h"
+ #include "base/process/process_handle.h"
+ #include "build/build_config.h"
+ 
+@@ -18,6 +19,14 @@
  #include "base/files/scoped_file.h"
  #endif
  
@@ -21,7 +29,7 @@ $NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.7 2025/09/12 16:
  #if BUILDFLAG(IS_CHROMEOS)
  extern "C" void* __libc_stack_end;
  #endif
-@@ -49,7 +57,21 @@ std::optional<uintptr_t> GetAndroidMainT
+@@ -49,7 +58,21 @@ std::optional<uintptr_t> GetAndroidMainT
  
  #if !BUILDFLAG(IS_LINUX)
  uintptr_t GetThreadStackBaseAddressImpl(pthread_t pthread_id) {
@@ -43,7 +51,7 @@ $NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.7 2025/09/12 16:
    // pthread_getattr_np will crash on ChromeOS & Linux if we are in the sandbox
    // and pthread_id refers to a different thread, due to the use of
    // sched_getaffinity().
-@@ -62,12 +84,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
+@@ -62,12 +85,14 @@ uintptr_t GetThreadStackBaseAddressImpl(
                        << logging::SystemErrorCodeToString(result);
    // See crbug.com/617730 for limitations of this approach on Linux-like
    // systems.
@@ -58,7 +66,7 @@ $NetBSD: patch-base_profiler_stack__base__address__posix.cc,v 1.7 2025/09/12 16:
    const uintptr_t base_address = reinterpret_cast<uintptr_t>(address) + size;
    return base_address;
  }
-@@ -84,7 +108,7 @@ std::optional<uintptr_t> GetThreadStackB
+@@ -84,7 +109,7 @@ std::optional<uintptr_t> GetThreadStackB
    // trying to work around the problem.
    return std::nullopt;
  #else

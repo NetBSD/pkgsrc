@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.7 2025/09/12 16:02:24 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1.8 2025/10/16 19:43:24 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/ui/webui/management/management_ui_handler.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/ui/webui/management/management_ui_handler.cc
-@@ -68,7 +68,7 @@
+@@ -70,7 +70,7 @@
  #include "ui/base/l10n/l10n_util.h"
  #include "ui/base/webui/web_ui_util.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
  #include "chrome/browser/enterprise/signals/user_permission_service_factory.h"
  #include "components/device_signals/core/browser/user_permission_service.h"  // nogncheck
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
-@@ -381,7 +381,7 @@ void ManagementUIHandler::AddReportingIn
+@@ -383,7 +383,7 @@ void ManagementUIHandler::AddReportingIn
        report_sources->Append(std::move(data));
      }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
      auto device_signal_data = GetDeviceSignalGrantedMessage();
      if (!device_signal_data.empty()) {
        report_sources->Append(std::move(device_signal_data));
-@@ -403,7 +403,7 @@ void ManagementUIHandler::AddReportingIn
+@@ -405,7 +405,7 @@ void ManagementUIHandler::AddReportingIn
        report_sources->Append(std::move(data));
      }
  
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_ui_webui_management_management__ui__handler.cc,v 1
      auto device_signal_data = GetDeviceSignalGrantedMessage();
      if (!device_signal_data.empty()) {
        report_sources->Append(std::move(device_signal_data));
-@@ -589,7 +589,7 @@ policy::PolicyService* ManagementUIHandl
+@@ -595,7 +595,7 @@ policy::PolicyService* ManagementUIHandl
        ->policy_service();
  }
  

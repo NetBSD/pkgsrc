@@ -1,0 +1,17 @@
+$NetBSD: patch-services_on__device__model_ml_BUILD.gn,v 1.1 2025/10/16 19:43:33 kikadf Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/on_device_model/ml/BUILD.gn.orig	2025-10-13 21:41:26.000000000 +0000
++++ services/on_device_model/ml/BUILD.gn
+@@ -82,7 +82,7 @@ if (use_blink || (is_ios && build_with_i
+     if (!is_fuchsia) {
+       deps += [ "//services/on_device_model/safety:bert_safety_model" ]
+     }
+-    if (is_win || is_mac || is_linux) {
++    if (!is_bsd && (is_win || is_mac || is_linux)) {
+       deps += [ "//third_party/xnnpack" ]
+     }
+     public_deps = [

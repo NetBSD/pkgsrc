@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.cc,v 1.5 2025/09/12 16:02:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management__service.cc,v 1.6 2025/10/16 19:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/enterprise/browser_management/browser_management_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/enterprise/browser_management/browser_management_service.cc
 @@ -50,7 +50,7 @@ GetManagementStatusProviders(Profile* pr
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_enterprise_browser__management_browser__management
  void BrowserManagementService::SetBrowserManagementIconForTesting(
      const gfx::Image& management_icon) {
    CHECK_IS_TEST();
-@@ -183,7 +183,7 @@ void BrowserManagementService::SetManage
+@@ -185,7 +185,7 @@ void BrowserManagementService::SetManage
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
  
  void BrowserManagementService::OnPolicyStatusChanged() {

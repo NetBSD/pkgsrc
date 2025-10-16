@@ -1,12 +1,12 @@
-$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing.cc,v 1.7 2025/09/12 16:02:30 kikadf Exp $
+$NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__backing.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- gpu/command_buffer/service/shared_image/external_vk_image_backing.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ gpu/command_buffer/service/shared_image/external_vk_image_backing.cc
-@@ -56,7 +56,7 @@
+@@ -58,7 +58,7 @@
  #include "ui/gl/gl_version_info.h"
  #include "ui/gl/scoped_binders.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-gpu_command__buffer_service_shared__image_external__vk__image__ba
  #include "gpu/command_buffer/service/shared_image/external_vk_image_dawn_representation.h"
  #if BUILDFLAG(DAWN_ENABLE_BACKEND_OPENGLES)
  #include "gpu/command_buffer/service/shared_image/dawn_gl_texture_representation.h"
-@@ -696,7 +696,7 @@ std::unique_ptr<DawnImageRepresentation>
+@@ -708,7 +708,7 @@ std::unique_ptr<DawnImageRepresentation>
      wgpu::BackendType backend_type,
      std::vector<wgpu::TextureFormat> view_formats,
      scoped_refptr<SharedContextState> context_state) {

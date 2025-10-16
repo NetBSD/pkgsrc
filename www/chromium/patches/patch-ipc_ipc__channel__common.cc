@@ -1,10 +1,10 @@
-$NetBSD: patch-ipc_ipc__channel__common.cc,v 1.7 2025/09/12 16:02:30 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel__common.cc,v 1.8 2025/10/16 19:43:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel_common.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- ipc/ipc_channel_common.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ ipc/ipc_channel_common.cc
 @@ -10,7 +10,7 @@
  

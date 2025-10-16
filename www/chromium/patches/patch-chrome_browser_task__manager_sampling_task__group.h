@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.7 2025/09/12 16:02:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.8 2025/10/16 19:43:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_group.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_group.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_group.h
-@@ -40,7 +40,7 @@ inline constexpr int kUnsupportedVMRefre
+@@ -41,7 +41,7 @@ inline constexpr int kUnsupportedVMRefre
      REFRESH_TYPE_WEBCACHE_STATS | REFRESH_TYPE_NETWORK_USAGE |
      REFRESH_TYPE_IDLE_WAKEUPS | REFRESH_TYPE_HANDLES | REFRESH_TYPE_START_TIME |
      REFRESH_TYPE_CPU_TIME | REFRESH_TYPE_PRIORITY |
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.7 2025/09
      REFRESH_TYPE_FD_COUNT |
  #endif
      REFRESH_TYPE_HARD_FAULTS;
-@@ -136,7 +136,7 @@ class TaskGroup {
+@@ -141,7 +141,7 @@ class TaskGroup {
    int64_t hard_faults_per_second() const { return hard_faults_per_second_; }
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.7 2025/09
    int open_fd_count() const { return open_fd_count_; }
    void set_open_fd_count(int open_fd_count) { open_fd_count_ = open_fd_count; }
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
-@@ -151,7 +151,7 @@ class TaskGroup {
+@@ -156,7 +156,7 @@ class TaskGroup {
  
    void RefreshWindowsHandles();
  
@@ -33,12 +33,12 @@ $NetBSD: patch-chrome_browser_task__manager_sampling_task__group.h,v 1.7 2025/09
    void OnOpenFdCountRefreshDone(int open_fd_count);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
  
-@@ -219,7 +219,7 @@ class TaskGroup {
-   int64_t user_peak_handles_;
-   int64_t hard_faults_per_second_;
+@@ -226,7 +226,7 @@ class TaskGroup {
+   int64_t user_peak_handles_ = -1;
+   int64_t hard_faults_per_second_ = -1;
  #endif  // BUILDFLAG(IS_WIN)
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_BSD)
    // The number of file descriptors currently open by the process.
-   int open_fd_count_;
+   int open_fd_count_ = -1;
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC)

@@ -1,10 +1,10 @@
-$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.6 2025/09/12 16:02:26 kikadf Exp $
+$NetBSD: patch-components_device__signals_core_common_linux_platform__utils__linux.cc,v 1.7 2025/10/16 19:43:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/device_signals/core/common/linux/platform_utils_linux.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/device_signals/core/common/linux/platform_utils_linux.cc
 @@ -4,11 +4,22 @@
  
@@ -29,7 +29,7 @@ $NetBSD: patch-components_device__signals_core_common_linux_platform__utils__lin
  
  #include <algorithm>
  #include <optional>
-@@ -111,6 +122,7 @@ SettingValue GetScreenlockSecured() {
+@@ -105,6 +116,7 @@ SettingValue GetScreenlockSecured() {
  // Implements the logic from the native host installation script. First find the
  // root device identifier, then locate its parent and get its type.
  SettingValue GetDiskEncrypted() {
@@ -37,7 +37,7 @@ $NetBSD: patch-components_device__signals_core_common_linux_platform__utils__lin
    struct stat info;
    // First figure out the device identifier. Fail fast if this fails.
    if (stat("/", &info) != 0) {
-@@ -133,11 +145,35 @@ SettingValue GetDiskEncrypted() {
+@@ -127,11 +139,35 @@ SettingValue GetDiskEncrypted() {
      }
      return SettingValue::UNKNOWN;
    }
@@ -73,7 +73,7 @@ $NetBSD: patch-components_device__signals_core_common_linux_platform__utils__lin
    base::DirReaderPosix reader("/sys/class/net");
    if (!reader.IsValid()) {
      return result;
-@@ -162,6 +198,7 @@ std::vector<std::string> internal::GetMa
+@@ -156,6 +192,7 @@ std::vector<std::string> internal::GetMa
                                &address);
      result.push_back(address);
    }

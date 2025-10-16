@@ -1,10 +1,10 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.7 2025/09/12 16:02:29 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.cc
 @@ -124,7 +124,7 @@
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.7 2025/09
  #include "content/child/child_process_sandbox_support_impl_linux.h"
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
-@@ -193,13 +193,13 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -187,13 +187,13 @@ RendererBlinkPlatformImpl::RendererBlink
        is_locked_to_site_(false),
        main_thread_scheduler_(main_thread_scheduler),
        next_frame_sink_id_(uint32_t{std::numeric_limits<int32_t>::max()} + 1) {
@@ -31,7 +31,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.7 2025/09
      mojo::PendingRemote<font_service::mojom::FontService> font_service;
      RenderThreadImpl::current()->BindHostReceiver(
          font_service.InitWithNewPipeAndPassReceiver());
-@@ -224,7 +224,7 @@ RendererBlinkPlatformImpl::RendererBlink
+@@ -217,7 +217,7 @@ RendererBlinkPlatformImpl::RendererBlink
    }
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -40,7 +40,7 @@ $NetBSD: patch-content_renderer_renderer__blink__platform__impl.cc,v 1.7 2025/09
    if (sandboxEnabled()) {
  #if BUILDFLAG(IS_MAC)
      sandbox_support_ = std::make_unique<WebSandboxSupportMac>();
-@@ -297,7 +297,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
+@@ -290,7 +290,7 @@ RendererBlinkPlatformImpl::GetWebUIBundl
  
  blink::WebSandboxSupport* RendererBlinkPlatformImpl::GetSandboxSupport() {
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

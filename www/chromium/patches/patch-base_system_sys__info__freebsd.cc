@@ -1,12 +1,12 @@
-$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_freebsd.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/system/sys_info_freebsd.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/system/sys_info_freebsd.cc
-@@ -9,28 +9,103 @@
+@@ -9,28 +9,95 @@
  #include <sys/sysctl.h>
  
  #include "base/notreached.h"
@@ -15,8 +15,6 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.7 2025/09/12 16:02:20 kikad
  
  namespace base {
  
--int64_t SysInfo::AmountOfPhysicalMemoryImpl() {
--  int pages, page_size;
 +int SysInfo::NumberOfProcessors() {
 +  int mib[] = {CTL_HW, HW_NCPU};
 +  int ncpu;
@@ -27,8 +25,9 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.7 2025/09/12 16:02:20 kikad
 +  }
 +  return ncpu;
 +}
-+  
-+uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
++
+ ByteCount SysInfo::AmountOfPhysicalMemoryImpl() {
+-  int pages, page_size;
 +  int pages, page_size, r = 0;
    size_t size = sizeof(pages);
 -  sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, NULL, 0);
@@ -37,22 +36,22 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.7 2025/09/12 16:02:20 kikad
 +
 +  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, NULL, 0);
-+  if (r == 0)   
++  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +
 +  if (r == -1) {
 +    NOTREACHED();
 +  }
 +
-+  return static_cast<uint64_t>(pages) * page_size;
++  return ByteCount::FromUnsigned(static_cast<uint64_t>(pages) * page_size);
 +}
 +
-+uint64_t SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
++ByteCount SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
 +  int page_size, r = 0;
 +  unsigned int pgfree, pginact, pgcache;
 +  size_t size = sizeof(page_size);
 +  size_t szpg = sizeof(pgfree);
-+ 
++
 +  if (r == 0)
 +    r = sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
 +  if (r == 0)
@@ -64,19 +63,11 @@ $NetBSD: patch-base_system_sys__info__freebsd.cc,v 1.7 2025/09/12 16:02:20 kikad
 +
 +  if (r == -1) {
      NOTREACHED();
-+    return 0;
++    return ByteCount();
    }
--  return static_cast<int64_t>(pages) * page_size;
+-  return ByteCount(page_size) * pages;
 +
-+  return static_cast<uint64_t>((pgfree + pginact + pgcache) * page_size);
-+}
-+
-+// static
-+uint64_t SysInfo::AmountOfAvailablePhysicalMemory(const SystemMemoryInfoKB& info) {
-+  uint64_t res_kb = info.available != 0
-+                       ? info.available - info.active_file
-+                       : info.free + info.reclaimable + info.inactive_file;
-+  return res_kb * 1024;
++  return ByteCount::FromUnsigned(static_cast<uint64_t>((pgfree + pginact + pgcache) * page_size));
 +}
 +
 +// static

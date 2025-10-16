@@ -1,12 +1,12 @@
-$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02:28 kikadf Exp $
+$NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.8 2025/10/16 19:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/app/content_main_runner_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/app/content_main_runner_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/app/content_main_runner_impl.cc
-@@ -150,18 +150,20 @@
+@@ -150,18 +150,21 @@
  #include "content/browser/posix_file_descriptor_info_impl.h"
  #include "content/public/common/content_descriptors.h"
  
@@ -26,10 +26,11 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
 +#if !BUILDFLAG(IS_BSD)
  #include "sandbox/policy/linux/sandbox_linux.h"
 +#endif
++#include "third_party/skia/experimental/rust_png/ffi/FFI.rs.h"
  #include "third_party/boringssl/src/include/openssl/crypto.h"
  #include "third_party/webrtc_overrides/init_webrtc.h"  // nogncheck
  
-@@ -185,6 +187,10 @@
+@@ -185,6 +188,10 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -40,7 +41,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
  #if BUILDFLAG(IS_ANDROID)
  #include "base/system/sys_info.h"
  #include "content/browser/android/battery_metrics.h"
-@@ -381,7 +387,7 @@ void InitializeZygoteSandboxForBrowserPr
+@@ -381,7 +388,7 @@ void InitializeZygoteSandboxForBrowserPr
  }
  #endif  // BUILDFLAG(USE_ZYGOTE)
  
@@ -49,7 +50,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
  
  #if BUILDFLAG(ENABLE_LIBRARY_CDMS)
  // Loads registered library CDMs but does not initialize them. This is needed by
-@@ -400,7 +406,10 @@ void PreloadLibraryCdms() {
+@@ -400,7 +407,10 @@ void PreloadLibraryCdms() {
  
  void PreSandboxInit() {
    // Ensure the /dev/urandom is opened.
@@ -60,13 +61,13 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
  
    // May use sysinfo(), sched_getaffinity(), and open various /sys/ and /proc/
    // files.
-@@ -412,9 +421,16 @@ void PreSandboxInit() {
+@@ -412,9 +422,16 @@ void PreSandboxInit() {
    // https://boringssl.googlesource.com/boringssl/+/HEAD/SANDBOXING.md
    CRYPTO_pre_sandbox_init();
  
 +#if BUILDFLAG(IS_BSD)
-+  // "cache" the amount of physical memory before pledge(2)
-+  base::SysInfo::AmountOfPhysicalMemoryMB();
++  // rust_png calls into sysctl so cache the cpu features before pledge(2)
++  rust_png::initialize_cpudetect();
 +#endif
 +
 +#if !BUILDFLAG(IS_BSD)
@@ -77,7 +78,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
  
  #if BUILDFLAG(ENABLE_LIBRARY_CDMS)
    // Ensure access to the library CDMs before the sandbox is turned on.
-@@ -634,7 +650,7 @@ NO_STACK_PROTECTOR int RunZygote(Content
+@@ -634,7 +651,7 @@ NO_STACK_PROTECTOR int RunZygote(Content
  
    // Once Zygote forks and feature list initializes we can start a thread to
    // begin tracing immediately.
@@ -86,7 +87,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
    if (process_type == switches::kGpuProcess) {
      tracing::InitTracingPostFeatureList(/*enable_consumer=*/false,
                                          /*will_trace_thread_restart=*/true);
-@@ -733,7 +749,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
+@@ -733,7 +750,7 @@ NO_STACK_PROTECTOR int RunOtherNamedProc
      base::HangWatcher::CreateHangWatcherInstance();
      unregister_thread_closure = base::HangWatcher::RegisterThread(
          base::HangWatcher::ThreadType::kMainThread);
@@ -95,7 +96,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
      // On Linux/ChromeOS, the HangWatcher can't start until after the sandbox is
      // initialized, because the sandbox can't be started with multiple threads.
      // TODO(mpdenton): start the HangWatcher after the sandbox is initialized.
-@@ -851,11 +867,10 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -851,11 +868,10 @@ int ContentMainRunnerImpl::Initialize(Co
                   base::GlobalDescriptors::kBaseDescriptor);
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -109,7 +110,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
  
  #endif  // !BUILDFLAG(IS_WIN)
  
-@@ -1007,7 +1022,7 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1007,7 +1023,7 @@ int ContentMainRunnerImpl::Initialize(Co
      // SeatbeltExecServer.
      CHECK(sandbox::Seatbelt::IsSandboxed());
    }
@@ -118,7 +119,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
    // In sandboxed processes and zygotes, certain resource should be pre-warmed
    // as they cannot be initialized under a sandbox. In addition, loading these
    // resources in zygotes (including the unsandboxed zygote) allows them to be
-@@ -1017,10 +1032,22 @@ int ContentMainRunnerImpl::Initialize(Co
+@@ -1017,10 +1033,22 @@ int ContentMainRunnerImpl::Initialize(Co
        process_type == switches::kZygoteProcess) {
      PreSandboxInit();
    }
@@ -141,7 +142,7 @@ $NetBSD: patch-content_app_content__main__runner__impl.cc,v 1.7 2025/09/12 16:02
    delegate_->SandboxInitialized(process_type);
  
  #if BUILDFLAG(USE_ZYGOTE)
-@@ -1123,6 +1150,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
+@@ -1123,6 +1151,11 @@ NO_STACK_PROTECTOR int ContentMainRunner
  
    RegisterMainThreadFactories();
  

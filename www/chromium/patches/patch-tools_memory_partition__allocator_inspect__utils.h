@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_memory_partition__allocator_inspect__utils.h,v 1.7 2025/09/12 16:02:37 kikadf Exp $
+$NetBSD: patch-tools_memory_partition__allocator_inspect__utils.h,v 1.8 2025/10/16 19:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- tools/memory/partition_allocator/inspect_utils.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- tools/memory/partition_allocator/inspect_utils.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ tools/memory/partition_allocator/inspect_utils.h
 @@ -61,7 +61,7 @@ class RemoteProcessMemoryReader {
    const pid_t pid_;

@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_task__manager_sampling_task__manager__impl.cc,v 1.7 2025/09/12 16:02:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_task__manager_sampling_task__manager__impl.cc,v 1.8 2025/10/16 19:43:23 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/task_manager/sampling/task_manager_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/task_manager/sampling/task_manager_impl.cc
-@@ -226,7 +226,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
+@@ -227,7 +227,7 @@ void TaskManagerImpl::GetUSERHandles(Tas
  }
  
  int TaskManagerImpl::GetOpenFdCount(TaskId task_id) const {
