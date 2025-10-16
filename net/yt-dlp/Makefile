@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2025/10/09 08:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/10/16 13:57:22 adam Exp $
 
-DISTNAME=	yt_dlp-2025.9.26
+DISTNAME=	yt_dlp-2025.10.14
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yt-dlp/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/yt-dlp/yt-dlp
 COMMENT=	Youtube-dl fork with new features and patches
 LICENSE=	unlicense
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
 

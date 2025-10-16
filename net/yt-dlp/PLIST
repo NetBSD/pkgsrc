@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2025/09/24 09:15:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2025/10/16 13:57:22 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1163,6 +1163,9 @@ ${PYSITELIB}/yt_dlp/extractor/icareus.pyo
 ${PYSITELIB}/yt_dlp/extractor/ichinanalive.py
 ${PYSITELIB}/yt_dlp/extractor/ichinanalive.pyc
 ${PYSITELIB}/yt_dlp/extractor/ichinanalive.pyo
+${PYSITELIB}/yt_dlp/extractor/idagio.py
+${PYSITELIB}/yt_dlp/extractor/idagio.pyc
+${PYSITELIB}/yt_dlp/extractor/idagio.pyo
 ${PYSITELIB}/yt_dlp/extractor/idolplus.py
 ${PYSITELIB}/yt_dlp/extractor/idolplus.pyc
 ${PYSITELIB}/yt_dlp/extractor/idolplus.pyo
