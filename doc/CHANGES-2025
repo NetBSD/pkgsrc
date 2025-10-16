@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6143 2025/10/16 21:32:29 he Exp $
+$NetBSD: CHANGES-2025,v 1.6144 2025/10/16 22:25:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8892,3 +8892,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 141.0.7390.107 [kikadf 2025-10-16]
 	Updated games/vcmi to 1.6.8 [adam 2025-10-16]
 	Updated sysutils/py-borgbackup to 1.4.1nb1 [he 2025-10-16]
+	Updated geography/py-nmeagps to 1.0.55 [gdt 2025-10-16]
