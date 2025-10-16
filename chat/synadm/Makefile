@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/05/16 15:38:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/16 12:43:18 adam Exp $
 
-DISTNAME=	synadm-0.48
+DISTNAME=	synadm-0.49.2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/synadm/}
 
@@ -14,6 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-click>=7.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-option-group>=0.5.2:../../devel/py-click-option-group
 DEPENDS+=	${PYPKGPREFIX}-dns>0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-requests>0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-requests-unixsocket>0:../../devel/py-requests-unixsocket
 DEPENDS+=	${PYPKGPREFIX}-tabulate>0:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-yaml>0:../../textproc/py-yaml
 
