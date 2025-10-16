@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6141 2025/10/16 19:44:40 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.6142 2025/10/16 20:22:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8890,3 +8890,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go124 to 1.24.9 [bsiegert 2025-10-16]
 	Updated lang/go125 to 1.25.3 [bsiegert 2025-10-16]
 	Updated www/chromium to 141.0.7390.107 [kikadf 2025-10-16]
+	Updated games/vcmi to 1.6.8 [adam 2025-10-16]
