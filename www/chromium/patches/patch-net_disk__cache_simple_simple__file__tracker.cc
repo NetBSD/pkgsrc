@@ -1,10 +1,10 @@
-$NetBSD: patch-net_disk__cache_simple_simple__file__tracker.cc,v 1.7 2025/09/12 16:02:31 kikadf Exp $
+$NetBSD: patch-net_disk__cache_simple_simple__file__tracker.cc,v 1.8 2025/10/16 19:43:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/disk_cache/simple/simple_file_tracker.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- net/disk_cache/simple/simple_file_tracker.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ net/disk_cache/simple/simple_file_tracker.cc
 @@ -36,7 +36,17 @@ bool SimpleFileTracker::TrackedFiles::In
  }
@@ -12,11 +12,11 @@ $NetBSD: patch-net_disk__cache_simple_simple__file__tracker.cc,v 1.7 2025/09/12 
  SimpleFileTracker::SimpleFileTracker(int file_limit)
 +#if defined(OS_OPENBSD)
 +{
-+  // cap the file descriptor limit at 85% of the size of the
++  // cap the file descriptor limit at 75% of the size of the
 +  // file descriptor table and also substract the amount of
 +  // currently used file descriptors as this should give us
 +  // enough reserve to avoid hitting the limit 
-+  file_limit_ = (getdtablesize() * 0.85) -  getdtablecount();
++  file_limit_ = (getdtablesize() * 0.75) -  getdtablecount();
 +}
 +#else
      : file_limit_(file_limit) {}

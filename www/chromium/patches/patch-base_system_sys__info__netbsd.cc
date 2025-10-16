@@ -1,12 +1,12 @@
-$NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_netbsd.cc.orig	2025-09-12 07:32:06.303463560 +0000
+--- base/system/sys_info_netbsd.cc.orig	2025-10-16 15:04:40.874413001 +0000
 +++ base/system/sys_info_netbsd.cc
-@@ -0,0 +1,98 @@
+@@ -0,0 +1,99 @@
 +// Copyright 2011 The Chromium Authors
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -24,20 +24,20 @@ $NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf
 +#include "base/posix/sysctl.h"
 +#include "base/strings/string_util.h"
 +
++namespace base {
++
 +namespace {
 +
-+uint64_t AmountOfMemory(int pages_name) {
++ByteCount AmountOfMemory(int pages_name) {
 +  long pages = sysconf(pages_name);
 +  long page_size = sysconf(_SC_PAGESIZE);
 +  if (pages < 0 || page_size < 0) {
-+    return 0;
++    return ByteCount(0);
 +  }
-+  return static_cast<uint64_t>(pages) * static_cast<uint64_t>(page_size);
++  return ByteCount(page_size) * page_size;
 +}
 +
 +}  // namespace
-+
-+namespace base {
 +
 +// static
 +int SysInfo::NumberOfProcessors() {
@@ -51,12 +51,25 @@ $NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf
 +}
 +
 +// static
-+uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
++std::string SysInfo::CPUModelName() {
++  int mib[] = { CTL_HW, HW_MODEL };
++  char name[256];
++  size_t size = std::size(name);
++
++  if (sysctl(mib, std::size(mib), &name, &size, NULL, 0) == 0) {
++    return name;
++  }
++
++  return std::string();
++}
++
++// static
++ByteCount SysInfo::AmountOfPhysicalMemoryImpl() {
 +  return AmountOfMemory(_SC_PHYS_PAGES);
 +}
 +
 +// static
-+uint64_t SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
++ByteCount SysInfo::AmountOfAvailablePhysicalMemoryImpl() {
 +  // With NetBSD-11
 +  //return AmountOfMemory(_SC_AVPHYS_PAGES);
 +  struct uvmexp_sysctl uvmexp;
@@ -64,8 +77,9 @@ $NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf
 +  int mib[] = { CTL_VM, VM_UVMEXP2 };
 +  if (sysctl(mib, std::size(mib), &uvmexp, &len, NULL, 0) <0) {
 +    NOTREACHED();
++    return ByteCount();
 +  }
-+  return static_cast<uint64_t>(uvmexp.free);
++  return ByteCount(uvmexp.free);
 +}
 +
 +// static
@@ -77,19 +91,6 @@ $NetBSD: patch-base_system_sys__info__netbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf
 +    NOTREACHED();
 +  }
 +  return static_cast<uint64_t>(limit);
-+}
-+
-+// static
-+std::string SysInfo::CPUModelName() {
-+  int mib[] = { CTL_HW, HW_MODEL };
-+  char name[256];
-+  size_t size = std::size(name);
-+
-+  if (sysctl(mib, std::size(mib), &name, &size, NULL, 0) == 0) {
-+    return name;
-+  }
-+
-+  return std::string();
 +}
 +
 +// static

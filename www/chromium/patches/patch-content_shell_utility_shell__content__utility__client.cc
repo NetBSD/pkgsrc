@@ -1,12 +1,12 @@
-$NetBSD: patch-content_shell_utility_shell__content__utility__client.cc,v 1.7 2025/09/12 16:02:29 kikadf Exp $
+$NetBSD: patch-content_shell_utility_shell__content__utility__client.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/shell/utility/shell_content_utility_client.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/shell/utility/shell_content_utility_client.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/shell/utility/shell_content_utility_client.cc
-@@ -43,7 +43,7 @@
+@@ -39,7 +39,7 @@
  #include "sandbox/policy/sandbox.h"
  #include "services/test/echo/echo_service.h"
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_shell_utility_shell__content__utility__client.cc,v 1.7 20
  #include "content/test/sandbox_status_service.h"
  #endif
  
-@@ -192,7 +192,7 @@ void ShellContentUtilityClient::ExposeIn
+@@ -189,7 +189,7 @@ void ShellContentUtilityClient::ExposeIn
    binders->Add<mojom::PowerMonitorTest>(
        &PowerMonitorTestImpl::MakeSelfOwnedReceiver,
        base::SingleThreadTaskRunner::GetCurrentDefault());

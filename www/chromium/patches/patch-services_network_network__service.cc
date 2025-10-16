@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_network__service.cc,v 1.7 2025/09/12 16:02:33 kikadf Exp $
+$NetBSD: patch-services_network_network__service.cc,v 1.8 2025/10/16 19:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_service.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- services/network/network_service.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ services/network/network_service.cc
-@@ -107,11 +107,11 @@
+@@ -108,11 +108,11 @@
  #include "third_party/boringssl/src/include/openssl/cpu.h"
  #endif
  
@@ -20,7 +20,7 @@ $NetBSD: patch-services_network_network__service.cc,v 1.7 2025/09/12 16:02:33 ki
  #include "services/network/network_change_notifier_passive_factory.h"
  #endif
  
-@@ -1035,7 +1035,7 @@ void NetworkService::SetExplicitlyAllowe
+@@ -1041,7 +1041,7 @@ void NetworkService::SetExplicitlyAllowe
    net::SetExplicitlyAllowedPorts(ports);
  }
  
@@ -29,7 +29,7 @@ $NetBSD: patch-services_network_network__service.cc,v 1.7 2025/09/12 16:02:33 ki
  void NetworkService::SetGssapiLibraryLoadObserver(
      mojo::PendingRemote<mojom::GssapiLibraryLoadObserver>
          gssapi_library_load_observer) {
-@@ -1174,7 +1174,7 @@ NetworkService::CreateHttpAuthHandlerFac
+@@ -1180,7 +1180,7 @@ NetworkService::CreateHttpAuthHandlerFac
    );
  }
  

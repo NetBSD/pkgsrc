@@ -1,10 +1,10 @@
-$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/system/sys_info_openbsd.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/system/sys_info_openbsd.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/system/sys_info_openbsd.cc
 @@ -12,6 +12,7 @@
  
@@ -12,14 +12,14 @@ $NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.7 2025/09/12 16:02:20 kikad
  #include "base/posix/sysctl.h"
 +#include "base/strings/string_util.h"
  
- namespace {
- 
-@@ -28,9 +29,14 @@ uint64_t AmountOfMemory(int pages_name) 
- 
  namespace base {
  
+@@ -28,9 +29,14 @@ ByteCount AmountOfMemory(int pages_name)
+ 
+ }  // namespace
+ 
 +// pledge(2)
-+uint64_t aofpmem = 0;
++ByteCount aofpmem = ByteCount(0);
 +uint64_t shmmax = 0;
 +char cpumodel[256];
 +
@@ -30,18 +30,10 @@ $NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.7 2025/09/12 16:02:20 kikad
    int ncpu;
    size_t size = sizeof(ncpu);
    if (sysctl(mib, std::size(mib), &ncpu, &size, NULL, 0) < 0) {
-@@ -41,7 +47,23 @@ int SysInfo::NumberOfProcessors() {
+@@ -40,8 +46,24 @@ int SysInfo::NumberOfProcessors() {
+ }
  
  // static
- uint64_t SysInfo::AmountOfPhysicalMemoryImpl() {
--  return AmountOfMemory(_SC_PHYS_PAGES);
-+  // pledge(2)
-+  if (!aofpmem)
-+    aofpmem = AmountOfMemory(_SC_PHYS_PAGES);
-+  return aofpmem;
-+}
-+
-+// static
 +std::string SysInfo::CPUModelName() {
 +  int mib[] = {CTL_HW, HW_MODEL};
 +  size_t len = std::size(cpumodel);
@@ -52,6 +44,15 @@ $NetBSD: patch-base_system_sys__info__openbsd.cc,v 1.7 2025/09/12 16:02:20 kikad
 +  }
 + 
 +  return std::string(cpumodel, len - 1);
++}
++
++// static
+ ByteCount SysInfo::AmountOfPhysicalMemoryImpl() {
+-  return AmountOfMemory(_SC_PHYS_PAGES);
++  // pledge(2)
++  if (aofpmem == ByteCount(0))
++    aofpmem = AmountOfMemory(_SC_PHYS_PAGES);
++  return aofpmem;
  }
  
  // static

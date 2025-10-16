@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.7 2025/09/12 16:02:28 kikadf Exp $
+$NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.8 2025/10/16 19:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/browser/devtools/devtools_frontend_host_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/browser/devtools/devtools_frontend_host_impl.cc
 @@ -25,7 +25,7 @@
  #include "third_party/blink/public/common/associated_interfaces/associated_interface_provider.h"
@@ -24,16 +24,7 @@ $NetBSD: patch-content_browser_devtools_devtools__frontend__host__impl.cc,v 1.7 
  // Remove the pieces of the URL we don't want to send back with the error
  // reports. In particular, do not send query or fragments as those can have
  // privacy-sensitive information in them.
-@@ -107,7 +107,7 @@ DevToolsFrontendHostImpl::DevToolsFronte
-     const HandleMessageCallback& handle_message_callback)
-     : web_contents_(WebContents::FromRenderFrameHost(frame_host)),
-       handle_message_callback_(handle_message_callback) {
--#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-+#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
-   Observe(web_contents_);
- #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
-   mojo::AssociatedRemote<blink::mojom::DevToolsFrontend> frontend;
-@@ -132,7 +132,7 @@ void DevToolsFrontendHostImpl::DispatchE
+@@ -133,7 +133,7 @@ void DevToolsFrontendHostImpl::DispatchE
    handle_message_callback_.Run(std::move(message));
  }
  

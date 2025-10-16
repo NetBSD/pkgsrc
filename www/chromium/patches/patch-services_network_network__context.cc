@@ -1,12 +1,12 @@
-$NetBSD: patch-services_network_network__context.cc,v 1.7 2025/09/12 16:02:33 kikadf Exp $
+$NetBSD: patch-services_network_network__context.cc,v 1.8 2025/10/16 19:43:33 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/network/network_context.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- services/network/network_context.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ services/network/network_context.cc
-@@ -629,7 +629,7 @@ NetworkContext::NetworkContextHttpAuthPr
+@@ -630,7 +630,7 @@ NetworkContext::NetworkContextHttpAuthPr
  NetworkContext::NetworkContextHttpAuthPreferences::
      ~NetworkContextHttpAuthPreferences() = default;
  
@@ -15,7 +15,7 @@ $NetBSD: patch-services_network_network__context.cc,v 1.7 2025/09/12 16:02:33 ki
  bool NetworkContext::NetworkContextHttpAuthPreferences::AllowGssapiLibraryLoad()
      const {
    if (network_service_) {
-@@ -2598,7 +2598,7 @@ void NetworkContext::OnHttpAuthDynamicPa
+@@ -2600,7 +2600,7 @@ void NetworkContext::OnHttpAuthDynamicPa
        http_auth_dynamic_network_service_params->android_negotiate_account_type);
  #endif  // BUILDFLAG(IS_ANDROID)
  

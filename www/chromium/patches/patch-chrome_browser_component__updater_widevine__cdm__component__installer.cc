@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_component__updater_widevine__cdm__component__installer.cc,v 1.7 2025/09/12 16:02:21 kikadf Exp $
+$NetBSD: patch-chrome_browser_component__updater_widevine__cdm__component__installer.cc,v 1.8 2025/10/16 19:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/component_updater/widevine_cdm_component_installer.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/component_updater/widevine_cdm_component_installer.cc
 @@ -41,7 +41,7 @@
  #include "third_party/widevine/cdm/buildflags.h"

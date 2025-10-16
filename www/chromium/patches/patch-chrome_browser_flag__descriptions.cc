@@ -1,39 +1,30 @@
-$NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.8 2025/10/16 19:43:21 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/flag_descriptions.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/flag_descriptions.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/flag_descriptions.cc
-@@ -667,7 +667,7 @@ const char kAutofillEnableAllowlistForBm
+@@ -696,7 +696,7 @@ const char kAutofillEnableAllowlistForBm
      "Autofill suggestions on the allowlisted merchant websites.";
- 
- #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- const char kAutofillEnableAmountExtractionAllowlistDesktopName[] =
-     "Enable loading and querying the checkout amount extraction allowlist on "
-     "Chrome Desktop";
-@@ -685,7 +685,7 @@ const char kAutofillEnableAmountExtracti
-         // BUILDFLAG(IS_CHROMEOS)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
- const char kAutofillEnableAmountExtractionTestingName[] =
-     "Enable amount extraction testing on Chrome desktop and Clank";
- const char kAutofillEnableAmountExtractionTestingDescription[] =
-@@ -696,7 +696,7 @@ const char kAutofillEnableAmountExtracti
+ const char kAutofillEnableAmountExtractionName[] =
+     "Enable checkout amount extraction.";
+ const char kAutofillEnableAmountExtractionDescription[] =
+@@ -719,7 +719,7 @@ const char kAutofillEnableAmountExtracti
          // BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
--    BUILDFLAG(IS_CHROMEOS)
-+    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+-    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_BSD)
  const char kAutofillEnableBuyNowPayLaterName[] =
      "Enable buy now pay later on Autofill";
  const char kAutofillEnableBuyNowPayLaterDescription[] =
-@@ -1189,7 +1189,7 @@ const char kDevicePostureDescription[] =
+@@ -1203,7 +1203,7 @@ const char kDevicePostureDescription[] =
      "Enables Device Posture API (foldable devices)";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
@@ -42,7 +33,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kDocumentPictureInPictureAnimateResizeName[] =
      "Document Picture-in-Picture Animate Resize";
  const char kDocumentPictureInPictureAnimateResizeDescription[] =
-@@ -1335,7 +1335,7 @@ const char kContextMenuEmptySpaceDescrip
+@@ -1349,7 +1349,7 @@ const char kContextMenuEmptySpaceDescrip
      "space, a context menu containing page-related items will be shown.";
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -51,7 +42,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kContextualCueingName[] = "Contextual cueing";
  const char kContextualCueingDescription[] =
      "Enables the contextual cueing system to support showing actions.";
-@@ -1686,7 +1686,7 @@ const char kEnableIsolatedWebAppDevModeN
+@@ -1688,7 +1688,7 @@ const char kEnableIsolatedWebAppDevModeN
  const char kEnableIsolatedWebAppDevModeDescription[] =
      "Enables the installation of unverified Isolated Web Apps";
  
@@ -60,7 +51,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kEnableIwaKeyDistributionComponentName[] =
      "Enable the Iwa Key Distribution component";
  const char kEnableIwaKeyDistributionComponentDescription[] =
-@@ -3621,14 +3621,14 @@ const char kReduceTransferSizeUpdatedIPC
+@@ -3637,14 +3637,14 @@ const char kReduceTransferSizeUpdatedIPC
      "When enabled, the network service will send TransferSizeUpdatedIPC IPC "
      "only when DevTools is attached or the request is for an ad request.";
  
@@ -77,16 +68,16 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kReplaceSyncPromosWithSignInPromosName[] =
      "Replace all sync-related UI with sign-in ones";
  const char kReplaceSyncPromosWithSignInPromosDescription[] =
-@@ -3666,7 +3666,7 @@ const char kRobustWindowManagementDescri
-     "experiencing predictable and reliable window behavior similar to desktop "
-     "browsers.";
+@@ -3678,7 +3678,7 @@ const char kRobustWindowManagementExperi
+     "switching and restoration, ensuring they never lose their work or "
+     "context.";
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  const char kRootScrollbarFollowsTheme[] = "Make scrollbar follow theme";
  const char kRootScrollbarFollowsThemeDescription[] =
      "If enabled makes the root scrollbar follow the browser's theme color.";
-@@ -3916,7 +3916,7 @@ const char kDefaultSiteInstanceGroupsDes
+@@ -3934,7 +3934,7 @@ const char kDefaultSiteInstanceGroupsDes
      "SiteInstance.";
  
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
@@ -95,7 +86,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kPwaNavigationCapturingName[] = "Desktop PWA Link Capturing";
  const char kPwaNavigationCapturingDescription[] =
      "Enables opening links from Chrome in an installed PWA. Currently under "
-@@ -4189,7 +4189,7 @@ const char kTouchTextEditingRedesignName
+@@ -4210,7 +4210,7 @@ const char kTouchTextEditingRedesignName
  const char kTouchTextEditingRedesignDescription[] =
      "Enables new touch text editing features.";
  
@@ -104,7 +95,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kEnableHistorySyncOptinName[] = "History Sync Opt-in";
  const char kEnableHistorySyncOptinDescription[] =
      "Enables the History Sync Opt-in screen on Desktop platforms. The screen "
-@@ -7759,7 +7759,7 @@ const char kTetheringExperimentalFunctio
+@@ -7866,7 +7866,7 @@ const char kTetheringExperimentalFunctio
  
  #endif  // BUILDFLAG(IS_CHROMEOS)
  
@@ -113,20 +104,19 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kGetAllScreensMediaName[] = "GetAllScreensMedia API";
  const char kGetAllScreensMediaDescription[] =
      "When enabled, the getAllScreensMedia API for capturing multiple screens "
-@@ -7986,7 +7986,7 @@ const char kEnableArmHwdrmDescription[] 
+@@ -8090,7 +8090,7 @@ const char kEnableArmHwdrmDescription[] 
  
  // Linux -----------------------------------------------------------------------
  
 -#if BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  
- 
  const char kPulseaudioLoopbackForCastName[] =
-@@ -8024,6 +8024,20 @@ const char kWaylandUiScalingDescription[
-     "Enable experimental support for text scaling in the Wayland backend "
-     "backed by full UI scaling. Requires #wayland-per-window-scaling to be "
-     "enabled too.";
-+
+     "Linux System Audio Loopback for Cast (pulseaudio)";
+@@ -8122,6 +8122,19 @@ const char kWaylandSessionManagementName
+ const char kWaylandSessionManagementDescription[] =
+     "Enable Wayland's xx/xdg-session-management-v1 experimental support.";
+ 
 +#if BUILDFLAG(IS_BSD)
 +const char kAudioBackendName[] =
 +    "Audio Backend";
@@ -143,7 +133,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  #endif  // BUILDFLAG(IS_LINUX)
  
  // Random platform combinations -----------------------------------------------
-@@ -8073,7 +8087,7 @@ const char kGroupPromoPrototypeCpaDescri
+@@ -8171,7 +8184,7 @@ const char kGroupPromoPrototypeCpaDescri
      "Enables contextual toolbar button for group promo prototype.";
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -152,7 +142,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kEnableNetworkServiceSandboxName[] =
      "Enable the network service sandbox.";
  const char kEnableNetworkServiceSandboxDescription[] =
-@@ -8094,7 +8108,7 @@ const char kWebBluetoothConfirmPairingSu
+@@ -8192,7 +8205,7 @@ const char kWebBluetoothConfirmPairingSu
      "Bluetooth";
  #endif  // BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
  
@@ -161,7 +151,7 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kCupsIppPrintingBackendName[] = "CUPS IPP Printing Backend";
  const char kCupsIppPrintingBackendDescription[] =
      "Use the CUPS IPP printing backend instead of the original CUPS backend "
-@@ -8230,7 +8244,7 @@ const char kElementCaptureDescription[] 
+@@ -8328,7 +8341,7 @@ const char kElementCaptureDescription[] 
      "media track into a track capturing just a specific DOM element.";
  #endif  // !BUILDFLAG(IS_ANDROID)
  
@@ -170,16 +160,16 @@ $NetBSD: patch-chrome_browser_flag__descriptions.cc,v 1.7 2025/09/12 16:02:22 ki
  const char kUIDebugToolsName[] = "Debugging tools for UI";
  const char kUIDebugToolsDescription[] =
      "Enables additional keyboard shortcuts to help debugging.";
-@@ -8267,7 +8281,7 @@ const char kThirdPartyDisableChromeAutof
+@@ -8360,7 +8373,7 @@ const char kThirdPartyDisableChromeAutof
      "Chrome's Address and Payments Autofill are disabled in third party mode.";
  #endif  // IS_ANDROID
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_BSD)
- const char kThirdPartyProfileManagementName[] =
-     "Third party profile management";
- const char kThirdPartyProfileManagementDescription[] =
-@@ -8390,7 +8404,7 @@ const char kSupervisedUserBlockInterstit
+ const char kGlicName[] = "Glic";
+ const char kGlicDescription[] = "Enables glic";
+ 
+@@ -8485,7 +8498,7 @@ const char kSupervisedUserBlockInterstit
  const char kSupervisedUserBlockInterstitialV3Description[] =
      "Enables URL filter interstitial V3 for Family Link users.";
  
