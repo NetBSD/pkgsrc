@@ -1,12 +1,12 @@
-$NetBSD: patch-base_threading_platform__thread__metrics.h,v 1.3 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-base_threading_platform__thread__metrics.h,v 1.4 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/threading/platform_thread_metrics.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- base/threading/platform_thread_metrics.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ base/threading/platform_thread_metrics.h
-@@ -51,7 +51,7 @@ class BASE_EXPORT PlatformThreadMetrics 
+@@ -67,7 +67,7 @@ class BASE_EXPORT PlatformThreadMetrics 
        PlatformThreadHandle handle);
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-base_threading_platform__thread__metrics.h,v 1.3 2025/09/12 16:02
      BUILDFLAG(IS_FUCHSIA) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_WIN)
    static std::unique_ptr<PlatformThreadMetrics> CreateFromId(
        PlatformThreadId tid);
-@@ -93,7 +93,7 @@ class BASE_EXPORT PlatformThreadMetrics 
+@@ -109,7 +109,7 @@ class BASE_EXPORT PlatformThreadMetrics 
  
    PlatformThreadHandle handle_;
  #elif BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_CHROMEOS) || \

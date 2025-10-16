@@ -1,12 +1,12 @@
-$NetBSD: patch-content_renderer_renderer__blink__platform__impl.h,v 1.7 2025/09/12 16:02:29 kikadf Exp $
+$NetBSD: patch-content_renderer_renderer__blink__platform__impl.h,v 1.8 2025/10/16 19:43:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/renderer/renderer_blink_platform_impl.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/renderer/renderer_blink_platform_impl.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/renderer/renderer_blink_platform_impl.h
-@@ -273,7 +273,7 @@ class CONTENT_EXPORT RendererBlinkPlatfo
+@@ -278,7 +278,7 @@ class CONTENT_EXPORT RendererBlinkPlatfo
                                     const gpu::GPUInfo& gpu_info) const;
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \

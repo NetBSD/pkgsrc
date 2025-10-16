@@ -1,10 +1,10 @@
-$NetBSD: patch-content_browser_service__host_utility__process__host__receiver__bindings.cc,v 1.6 2025/09/12 16:02:29 kikadf Exp $
+$NetBSD: patch-content_browser_service__host_utility__process__host__receiver__bindings.cc,v 1.7 2025/10/16 19:43:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/service_host/utility_process_host_receiver_bindings.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- content/browser/service_host/utility_process_host_receiver_bindings.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ content/browser/service_host/utility_process_host_receiver_bindings.cc
 @@ -10,7 +10,7 @@
  #include "content/public/common/content_client.h"

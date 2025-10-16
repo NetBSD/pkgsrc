@@ -1,21 +1,21 @@
-$NetBSD: patch-build_config_rust.gni,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-build_config_rust.gni,v 1.8 2025/10/16 19:43:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- build/config/rust.gni.orig	2025-09-08 23:21:33.000000000 +0000
+--- build/config/rust.gni.orig	2025-10-13 21:41:26.000000000 +0000
 +++ build/config/rust.gni
-@@ -187,7 +187,7 @@ if (is_linux || is_chromeos) {
+@@ -180,7 +180,7 @@ if (is_linux || is_chromeos) {
+   if (current_cpu == "arm64") {
      rust_abi_target = "aarch64-unknown-linux-gnu"
-     cargo_target_abi = ""
    } else if (current_cpu == "x86") {
 -    rust_abi_target = "i686-unknown-linux-gnu"
 +    rust_abi_target = "i586-unknown-linux-gnu"
-     cargo_target_abi = ""
    } else if (current_cpu == "x64") {
      rust_abi_target = "x86_64-unknown-linux-gnu"
-@@ -369,7 +369,11 @@ if (is_linux || is_chromeos) {
+   } else if (current_cpu == "arm") {
+@@ -329,7 +329,11 @@ if (is_linux || is_chromeos) {
    }
  }
  

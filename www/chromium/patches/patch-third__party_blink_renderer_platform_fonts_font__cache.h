@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.7 2025/09/12 16:02:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.8 2025/10/16 19:43:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/blink/renderer/platform/fonts/font_cache.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ third_party/blink/renderer/platform/fonts/font_cache.h
 @@ -55,7 +55,7 @@
  #include "third_party/skia/include/core/SkFontMgr.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.7 20
  #include "ui/gfx/font_fallback_linux.h"
  #endif
  
-@@ -171,7 +171,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -170,7 +170,7 @@ class PLATFORM_EXPORT FontCache final {
  
    static void MaybePreloadSystemFonts();
  
@@ -24,7 +24,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.7 20
    // These are needed for calling QueryRenderStyleForStrike, since
    // gfx::GetFontRenderParams makes distinctions based on DSF.
    static float DeviceScaleFactor() { return device_scale_factor_; }
-@@ -247,7 +247,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -246,7 +246,7 @@ class PLATFORM_EXPORT FontCache final {
        const char* locale_family_name);
  #endif  // BUILDFLAG(IS_ANDROID)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.7 20
    static bool GetFontForCharacter(UChar32,
                                    const char* preferred_locale,
                                    gfx::FallbackFontData*);
-@@ -320,7 +320,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -319,7 +319,7 @@ class PLATFORM_EXPORT FontCache final {
                                     const FontFaceCreationParams&,
                                     std::string& name);
  
@@ -42,7 +42,7 @@ $NetBSD: patch-third__party_blink_renderer_platform_fonts_font__cache.h,v 1.7 20
    static const FontPlatformData* CreateFontPlatformDataForCharacter(
        SkFontMgr*,
        UChar32,
-@@ -358,7 +358,7 @@ class PLATFORM_EXPORT FontCache final {
+@@ -354,7 +354,7 @@ class PLATFORM_EXPORT FontCache final {
    bool is_test_font_mgr_ = false;
  #endif  // BUILDFLAG(IS_WIN)
  

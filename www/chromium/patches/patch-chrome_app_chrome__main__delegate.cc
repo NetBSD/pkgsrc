@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 kikadf Exp $
+$NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.8 2025/10/16 19:43:20 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/app/chrome_main_delegate.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/app/chrome_main_delegate.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/app/chrome_main_delegate.cc
 @@ -179,17 +179,17 @@
  #include "v8/include/v8.h"
@@ -72,7 +72,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 ki
    // On Linux, Chrome does not support running multiple copies under different
    // DISPLAYs, so the profile directory can be specified in the environment to
    // support the virtual desktop use-case.
-@@ -643,7 +643,7 @@ void RecordMainStartupMetrics(const Star
+@@ -651,7 +651,7 @@ void RecordMainStartupMetrics(const Star
  #endif
  
  #if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || \
@@ -81,7 +81,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 ki
    // Record the startup process creation time on supported platforms. On Android
    // this is recorded in ChromeMainDelegateAndroid.
    startup_metric_utils::GetCommon().RecordStartupProcessCreationTime(
-@@ -802,7 +802,7 @@ std::optional<int> ChromeMainDelegate::P
+@@ -810,7 +810,7 @@ std::optional<int> ChromeMainDelegate::P
  #if BUILDFLAG(IS_OZONE)
    // Initialize Ozone platform and add required feature flags as per platform's
    // properties.
@@ -90,7 +90,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 ki
    ui::SetOzonePlatformForLinuxIfNeeded(*base::CommandLine::ForCurrentProcess());
  #endif
    ui::OzonePlatform::PreEarlyInitialization();
-@@ -957,7 +957,7 @@ void ChromeMainDelegate::CommonEarlyInit
+@@ -965,7 +965,7 @@ void ChromeMainDelegate::CommonEarlyInit
    const bool is_canary_dev = IsCanaryDev();
    const bool emit_crashes =
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_MAC) || \
@@ -99,7 +99,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 ki
        is_canary_dev;
  #else
        false;
-@@ -1105,7 +1105,7 @@ std::optional<int> ChromeMainDelegate::B
+@@ -1113,7 +1113,7 @@ std::optional<int> ChromeMainDelegate::B
      return 0;  // Got a --credits switch; exit with a success error code.
    }
  
@@ -108,7 +108,7 @@ $NetBSD: patch-chrome_app_chrome__main__delegate.cc,v 1.7 2025/09/12 16:02:20 ki
    // This will directly exit if the user asked for help.
    HandleHelpSwitches(command_line);
  #endif
-@@ -1409,7 +1409,7 @@ void ChromeMainDelegate::PreSandboxStart
+@@ -1426,7 +1426,7 @@ void ChromeMainDelegate::PreSandboxStart
      CHECK(!loaded_locale.empty()) << "Locale could not be found for " << locale;
    }
  
