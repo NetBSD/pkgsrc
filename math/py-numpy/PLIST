@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2025/07/01 20:09:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2025/10/16 08:51:16 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -463,7 +463,6 @@ ${PYSITELIB}/numpy/_typing/_add_docstring.pyo
 ${PYSITELIB}/numpy/_typing/_array_like.py
 ${PYSITELIB}/numpy/_typing/_array_like.pyc
 ${PYSITELIB}/numpy/_typing/_array_like.pyo
-${PYSITELIB}/numpy/_typing/_callable.pyi
 ${PYSITELIB}/numpy/_typing/_char_codes.py
 ${PYSITELIB}/numpy/_typing/_char_codes.pyc
 ${PYSITELIB}/numpy/_typing/_char_codes.pyo
