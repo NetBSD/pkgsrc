@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2025/04/14 11:31:12 adam Exp $
+# $NetBSD: Makefile,v 1.64 2025/10/16 14:44:23 adam Exp $
 
-DISTNAME=	psycopg2-2.9.10
+DISTNAME=	psycopg2-2.9.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psycopg2/}
 
