@@ -1,12 +1,12 @@
-$NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.7 2025/09/12 16:02:32 kikadf Exp $
+$NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.8 2025/10/16 19:43:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- remoting/host/me2me_desktop_environment.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- remoting/host/me2me_desktop_environment.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ remoting/host/me2me_desktop_environment.cc
-@@ -113,7 +113,7 @@ std::string Me2MeDesktopEnvironment::Get
+@@ -119,7 +119,7 @@ std::string Me2MeDesktopEnvironment::Get
      capabilities += protocol::kRemoteWebAuthnCapability;
    }
  
@@ -15,7 +15,7 @@ $NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.7 2025/09/12 16:
    capabilities += " ";
    capabilities += protocol::kMultiStreamCapability;
    capabilities += " ";
-@@ -158,7 +158,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
+@@ -168,7 +168,7 @@ Me2MeDesktopEnvironment::Me2MeDesktopEnv
    // properly under Xvfb.
    mutable_desktop_capture_options()->set_use_update_notifications(true);
  
@@ -24,7 +24,7 @@ $NetBSD: patch-remoting_host_me2me__desktop__environment.cc,v 1.7 2025/09/12 16:
    // Setting this option to false means that the capture differ wrapper will not
    // be used when the X11 capturer is selected. This reduces the X11 capture
    // time by a few milliseconds per frame and is safe because we can rely on
-@@ -185,7 +185,7 @@ bool Me2MeDesktopEnvironment::Initialize
+@@ -195,7 +195,7 @@ bool Me2MeDesktopEnvironment::Initialize
  
    // Otherwise, if the session is shared with the local user start monitoring
    // the local input and create the in-session UI.

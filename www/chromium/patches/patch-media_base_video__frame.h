@@ -1,10 +1,10 @@
-$NetBSD: patch-media_base_video__frame.h,v 1.7 2025/09/12 16:02:30 kikadf Exp $
+$NetBSD: patch-media_base_video__frame.h,v 1.8 2025/10/16 19:43:30 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- media/base/video_frame.h.orig	2025-09-08 23:21:33.000000000 +0000
+--- media/base/video_frame.h.orig	2025-10-13 21:41:26.000000000 +0000
 +++ media/base/video_frame.h
 @@ -41,7 +41,7 @@
  #include "ui/gfx/geometry/size.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.7 2025/09/12 16:02:30 kikadf Exp $
    // Wraps provided dmabufs
    // (https://www.kernel.org/doc/html/latest/driver-api/dma-buf.html) with a
    // VideoFrame. The frame will take ownership of |dmabuf_fds|, and will
-@@ -692,7 +692,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -712,7 +712,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // wait for the included sync point.
    scoped_refptr<gpu::ClientSharedImage> shared_image() const;
  
@@ -42,7 +42,7 @@ $NetBSD: patch-media_base_video__frame.h,v 1.7 2025/09/12 16:02:30 kikadf Exp $
    // The number of DmaBufs will be equal or less than the number of planes of
    // the frame. If there are less, this means that the last FD contains the
    // remaining planes. Should be > 0 for STORAGE_DMABUFS.
-@@ -927,7 +927,7 @@ class MEDIA_EXPORT VideoFrame : public b
+@@ -947,7 +947,7 @@ class MEDIA_EXPORT VideoFrame : public b
    // GpuMemoryBuffers. Clients will set this flag while creating a VideoFrame.
    bool is_mappable_si_enabled_ = false;
  

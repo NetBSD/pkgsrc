@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_supervised__user_supervised__user__extensions__delegate__impl.cc,v 1.7 2025/09/12 16:02:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_supervised__user_supervised__user__extensions__delegate__impl.cc,v 1.8 2025/10/16 19:43:22 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ chrome/browser/supervised_user/supervised_user_extensions_delegate_impl.cc
-@@ -205,7 +205,7 @@ void SupervisedUserExtensionsDelegateImp
+@@ -194,7 +194,7 @@ void SupervisedUserExtensionsDelegateImp
        return;
      }
    }
