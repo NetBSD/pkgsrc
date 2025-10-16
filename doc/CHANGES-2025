@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6138 2025/10/16 14:36:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6139 2025/10/16 14:48:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8885,3 +8885,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Cucumber-TagExpressions to 8.0.0 [schmonz 2025-10-16]
 	Updated net/yt-dlp to 2025.10.14 [adam 2025-10-16]
 	Updated textproc/py-precis-i18n to 1.1.2 [adam 2025-10-16]
+	Updated databases/py-psycopg2 to 2.9.11 [adam 2025-10-16]
+	Updated devel/py-immutabledict to 4.2.2 [adam 2025-10-16]
