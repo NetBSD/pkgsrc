@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/10/15 03:32:58 gutteridge Exp $
+# $NetBSD: Makefile,v 1.59 2025/10/16 23:23:46 gutteridge Exp $
 
 DISTNAME=	musescore-4.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=musescore/}
 GITHUB_PROJECT=	MuseScore
@@ -46,6 +46,7 @@ pre-configure:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt6-qttools=	build
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
