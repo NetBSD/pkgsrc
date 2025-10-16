@@ -1,0 +1,14 @@
+$NetBSD: patch-src_contrib_CMakeLists.txt,v 1.1 2025/10/16 15:01:52 adam Exp $
+
+Don't link against boost_system library.
+
+--- src/contrib/CMakeLists.txt.orig	2025-10-16 14:53:03.158606416 +0000
++++ src/contrib/CMakeLists.txt
+@@ -67,7 +67,6 @@ target_link_libraries(lucene++-contrib
+     Boost::filesystem
+     Boost::iostreams
+     Boost::regex
+-    Boost::system
+     Boost::thread
+     ZLIB::ZLIB
+     lucene++::lucene++)
