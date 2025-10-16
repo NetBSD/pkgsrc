@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2025/07/15 13:22:47 adam Exp $
+$NetBSD: distinfo,v 1.17 2025/10/16 09:37:17 adam Exp $
 
-BLAKE2s (xattr-1.2.0.tar.gz) = b61cc2fb5c0a2d7cfb73dc260530a64c422d7836f8da362052d2d47ce13fe28c
-SHA512 (xattr-1.2.0.tar.gz) = 6c6cafccd05eba8abbfb1c62d5234ca04c52b608670ece395f62e70a3c8e7cfcc3f5e12a25ad888e92fb6aad2c717686c9f14448523cf4180c3effeb1556db72
-Size (xattr-1.2.0.tar.gz) = 17293 bytes
+BLAKE2s (xattr-1.3.0.tar.gz) = 44b1fd1c28a5759c204f36958f835500c3b8e210e36c08f72b0e38c37cf4462a
+SHA512 (xattr-1.3.0.tar.gz) = ffd680a10f4e5b4c7a00df12e426452d2f2c71986e18429f3064f660145401a4b6d8372c379a1055b36312362c259bc0c186704b7a054c3a3865b862448e6935
+Size (xattr-1.3.0.tar.gz) = 17148 bytes
