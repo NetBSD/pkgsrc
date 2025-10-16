@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2025/10/09 18:18:51 martin Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/16 10:28:26 martin Exp $
 #
 
 PKGNAME=	mini_sendmail-1.3.6
-PKGREVISION=	3
+PKGREVISION=	4
 
 BUILD_DEFS+=	IPV6_READY
 
