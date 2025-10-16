@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/10/07 10:44:45 pin Exp $
+$NetBSD: distinfo,v 1.5 2025/10/16 10:53:26 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -192,9 +192,9 @@ Size (thiserror-1.0.69.crate) = 22198 bytes
 BLAKE2s (thiserror-impl-1.0.69.crate) = 2555e9c945653b810be9ffa5bf34b2cc4104000a988b9a341be5703a56dd92ba
 SHA512 (thiserror-impl-1.0.69.crate) = 579eb796c8885feb01d27638862823acd96c79440655bb444c3445ac00121852603396ce7439aed617c0a0ac69f62102167fde5845411c906997574a46d6d9e3
 Size (thiserror-impl-1.0.69.crate) = 18365 bytes
-BLAKE2s (treegrep-1.2.0.tar.gz) = 0e96e4f7948ea3df8ce3ad6453fffca6d80d67c8edf1cc855867b2fc149cc136
-SHA512 (treegrep-1.2.0.tar.gz) = 6ae72799679854c2bac6d7d3f188d4098a111566df50939fd6e769ceb67339412e4dd036a900745d3e58837132902e65ed1aa50a22af8c3ea28a08b68648d0ea
-Size (treegrep-1.2.0.tar.gz) = 135044 bytes
+BLAKE2s (treegrep-1.2.1.tar.gz) = 981f9c59885c001ab7564534ce8764891866dc86f122f2af18707f681ee3bceb
+SHA512 (treegrep-1.2.1.tar.gz) = 8fc3b9515377fa86cb770ba2a3ab3512c2046cec5ac5a0d6ac8de5d57b876cded4b595257c78d7446cc9318450ad88f7dae09e953ba04208994601b964216046
+Size (treegrep-1.2.1.tar.gz) = 135223 bytes
 BLAKE2s (unicode-ident-1.0.18.crate) = 797ae7e88496d91ecc3b2ed7617cca6ddb03b78963d156ef9d698575783721a3
 SHA512 (unicode-ident-1.0.18.crate) = d11f89fb696f9e2953c96a40b5478832651b268c83b9c7a700b07e768e795d6e8dc346597d1226df21219d36866768d1f640bd8edb68db8bd3d5d437b2bfd324
 Size (unicode-ident-1.0.18.crate) = 47743 bytes
