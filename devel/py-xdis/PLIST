@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/08/02 10:42:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/10/16 09:44:06 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -68,9 +68,6 @@ ${PYSITELIB}/xdis/dropbox/decrypt25.pyo
 ${PYSITELIB}/xdis/instruction.py
 ${PYSITELIB}/xdis/instruction.pyc
 ${PYSITELIB}/xdis/instruction.pyo
-${PYSITELIB}/xdis/jvm.py
-${PYSITELIB}/xdis/jvm.pyc
-${PYSITELIB}/xdis/jvm.pyo
 ${PYSITELIB}/xdis/lineoffsets.py
 ${PYSITELIB}/xdis/lineoffsets.pyc
 ${PYSITELIB}/xdis/lineoffsets.pyo
@@ -182,9 +179,15 @@ ${PYSITELIB}/xdis/opcodes/opcode_311pypy.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_312.py
 ${PYSITELIB}/xdis/opcodes/opcode_312.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_312.pyo
+${PYSITELIB}/xdis/opcodes/opcode_312rust.py
+${PYSITELIB}/xdis/opcodes/opcode_312rust.pyc
+${PYSITELIB}/xdis/opcodes/opcode_312rust.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_313.py
 ${PYSITELIB}/xdis/opcodes/opcode_313.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_313.pyo
+${PYSITELIB}/xdis/opcodes/opcode_314.py
+${PYSITELIB}/xdis/opcodes/opcode_314.pyc
+${PYSITELIB}/xdis/opcodes/opcode_314.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_32.py
 ${PYSITELIB}/xdis/opcodes/opcode_32.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_32.pyo
