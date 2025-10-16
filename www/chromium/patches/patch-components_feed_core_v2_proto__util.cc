@@ -1,10 +1,10 @@
-$NetBSD: patch-components_feed_core_v2_proto__util.cc,v 1.7 2025/09/12 16:02:26 kikadf Exp $
+$NetBSD: patch-components_feed_core_v2_proto__util.cc,v 1.8 2025/10/16 19:43:26 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/feed/core/v2/proto_util.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- components/feed/core/v2/proto_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ components/feed/core/v2/proto_util.cc
 @@ -92,8 +92,8 @@ feedwire::Version GetPlatformVersionMess
  
@@ -16,7 +16,7 @@ $NetBSD: patch-components_feed_core_v2_proto__util.cc,v 1.7 2025/09/12 16:02:26 
 +  result.set_gminor(minor);
    result.set_revision(revision);
  #if BUILDFLAG(IS_ANDROID)
-   result.set_api_version(base::android::BuildInfo::GetInstance()->sdk_int());
+   result.set_api_version(base::android::android_info::sdk_int());
 @@ -108,8 +108,8 @@ feedwire::Version GetAppVersionMessage(c
    // Chrome's version is in the format: MAJOR,MINOR,BUILD,PATCH.
    const std::vector<uint32_t>& numbers = chrome_info.version.components();

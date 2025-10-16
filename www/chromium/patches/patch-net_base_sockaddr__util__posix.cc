@@ -1,12 +1,12 @@
-$NetBSD: patch-net_base_sockaddr__util__posix.cc,v 1.7 2025/09/12 16:02:31 kikadf Exp $
+$NetBSD: patch-net_base_sockaddr__util__posix.cc,v 1.8 2025/10/16 19:43:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- net/base/sockaddr_util_posix.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- net/base/sockaddr_util_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ net/base/sockaddr_util_posix.cc
-@@ -60,7 +60,8 @@ bool FillUnixAddress(const std::string& 
+@@ -51,7 +51,8 @@ bool FillUnixAddress(std::string_view so
      return true;
    }
  
@@ -14,5 +14,5 @@ $NetBSD: patch-net_base_sockaddr__util__posix.cc,v 1.7 2025/09/12 16:02:31 kikad
 +#if BUILDFLAG(IS_ANDROID) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
 +  // XXX ?
    // Convert the path given into abstract socket name. It must start with
-   // the '\0' character, so we are adding it. |addr_len| must specify the
-   // length of the structure exactly, as potentially the socket name may
+   // the '\0' character, skip over it, as it should already be zero. `addr_len`
+   // must specify the length of the structure exactly, as potentially the socket

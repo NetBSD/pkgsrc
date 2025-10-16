@@ -1,10 +1,10 @@
-$NetBSD: patch-base_process_process__handle__netbsd.cc,v 1.7 2025/09/12 16:02:19 kikadf Exp $
+$NetBSD: patch-base_process_process__handle__netbsd.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/process/process_handle_netbsd.cc.orig	2025-09-12 07:32:06.299231602 +0000
+--- base/process/process_handle_netbsd.cc.orig	2025-10-16 15:04:40.862341464 +0000
 +++ base/process/process_handle_netbsd.cc
 @@ -0,0 +1,56 @@
 +// Copyright 2011 The Chromium Authors

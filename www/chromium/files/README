@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.2 2025/07/07 09:23:23 kikadf Exp $
+$NetBSD: README,v 1.3 2025/10/16 19:43:17 kikadf Exp $
 
 Some notes on chromium:
 
@@ -16,14 +16,17 @@ Some notes on chromium:
     --disable-features=WebAssembly,AsmJsToWebAssembly,WebAssemblyStreaming
     --js-flags=--noexpose-wasm
 
-3) Tab hang workaround
-  If you experience tab hanging issues (e.g.,
-  https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=212812),
-  increase the net.local.stream.recvspace value:
-    sysctl -w net.local.stream.recvspace=16384
-
-  To make it permanent, add this line to /etc/sysctl.conf:
-    net.local.stream.recvspace=16384
+3) Random tab hang
+  Under investigation. No known working workaround.
 
 4) HID support
   HID is not yet supported on NetBSD, so FIDO devices do not work.
+
+5) Render blinking / glitches after 141.x
+  If you notice render blinking or visual glitches
+  along with error messages like:
+    "ERROR:cc/tiles/tile_manager.cc:1003] WARNING: tile memory limits exceeded,
+     some content may not draw"
+  start chromium with --force-gpu-mem-available-mb=128 flag.
+  To make it permanent, add this flag to ~/.config/chromium-flags.conf:
+    CHROMIUM_FLAGS+=" --force-gpu-mem-available-mb=128"

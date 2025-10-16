@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_test__fonts_fontconfig_generate__fontconfig__caches.cc,v 1.7 2025/09/12 16:02:36 kikadf Exp $
+$NetBSD: patch-third__party_test__fonts_fontconfig_generate__fontconfig__caches.cc,v 1.8 2025/10/16 19:43:36 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2025-09-08 23:21:33.000000000 +0000
+--- third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc.orig	2025-10-13 21:41:26.000000000 +0000
 +++ third_party/test_fonts/fontconfig/generate_fontconfig_caches.cc
 @@ -28,7 +28,7 @@ int main() {
    // fontconfig cache.
