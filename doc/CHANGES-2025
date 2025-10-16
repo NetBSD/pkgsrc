@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6131 2025/10/16 10:50:24 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6132 2025/10/16 10:51:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8876,3 +8876,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 27.2.1 [pin 2025-10-16]
 	Updated textproc/ripgrep to 15.0.0 [pin 2025-10-16]
 	Updated textproc/scooter to 0.8.2 [pin 2025-10-16]
+	Updated textproc/typst to 0.13.1 [pin 2025-10-16]
