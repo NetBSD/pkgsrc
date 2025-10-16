@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/09/27 09:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/10/16 15:01:51 adam Exp $
 
 DISTNAME=	lucene++-3.0.9
 PKGREVISION=	3
@@ -12,7 +12,8 @@ HOMEPAGE=	https://github.com/luceneplusplus/LucenePlusPlus/
 COMMENT=	C++ port of Lucene text search library
 LICENSE=	gnu-lgpl-v3 OR apache-2.0
 
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEMO=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TEST=OFF
