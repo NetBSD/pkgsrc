@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 10:14:13 nia Exp $
+$NetBSD: distinfo,v 1.32 2025/10/17 07:25:25 kikadf Exp $
 
 BLAKE2s (anjuta-3.34.0.tar.xz) = e72c733e78fc7f7666f0581e6b933a96bd767717b2151168e79337ed1d39c52f
 SHA512 (anjuta-3.34.0.tar.xz) = 9d5a4c23751893ff7e21cd55c1f112f27b53fe2ea5ac645c63e2da627efce202b88696e3e5d860ad75a5c13c88a9082775d74f4482208161b5e63d56c4004d57
@@ -18,6 +18,7 @@ SHA1 (patch-plugins_cvs-plugin_cvs-interface.c) = 19541f4ab3bd70245461d317ac6c18
 SHA1 (patch-plugins_debug-manager_breakpoints.c) = 7ea483aeca934f1b105efac07a5ff1a29e6ed56f
 SHA1 (patch-plugins_debug-manager_queue.c) = a39e5adcc739f4eaff29138a21ad0e5375573f6d
 SHA1 (patch-plugins_debug-manager_start.c) = a1d703fc97ad33b36d3b43eb699308d298034a01
+SHA1 (patch-plugins_document-manager_anjuta-bookmarks.c) = c034f1e2ab7947ba84e65b33dc7e569b80116b8e
 SHA1 (patch-plugins_document-manager_plugin.c) = e34a635090fb46f22a936024ec83c4308a8a29f7
 SHA1 (patch-plugins_gdb_debugger.c) = 5af43c0332ed8ded2af610ebba693a9920ba38e2
 SHA1 (patch-plugins_gdb_preferences.c) = 19680a65945b6b1c4b3c960cdf81a7e30959a9f4
