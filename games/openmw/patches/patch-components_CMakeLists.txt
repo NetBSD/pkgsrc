@@ -1,0 +1,14 @@
+$NetBSD: patch-components_CMakeLists.txt,v 1.1 2025/10/17 08:04:07 wiz Exp $
+
+boost 1.89 made system header-only.
+
+--- components/CMakeLists.txt.orig	2025-10-17 07:54:39.074848597 +0000
++++ components/CMakeLists.txt
+@@ -240,7 +240,6 @@ target_link_libraries(components
+     ${OSG_LIBRARIES}
+     ${OPENTHREADS_LIBRARIES}
+ 
+-    ${Boost_SYSTEM_LIBRARY}
+     ${Boost_FILESYSTEM_LIBRARY}
+     ${Boost_PROGRAM_OPTIONS_LIBRARY}
+     ${Boost_IOSTREAMS_LIBRARY}
