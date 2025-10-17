@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/10/05 19:25:41 js Exp $
+# $NetBSD: Makefile,v 1.36 2025/10/17 07:40:34 wiz Exp $
 
 DISTNAME=	ncmpcpp-0.10.1
 PKGREVISION=	2
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
