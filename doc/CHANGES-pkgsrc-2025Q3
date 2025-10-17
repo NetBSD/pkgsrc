@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.4 2025/10/15 17:18:24 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.5 2025/10/17 23:35:25 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -19,3 +19,7 @@ Pullup ticket #7009 - requested by bsiegert
 lang/go: Security fix
 lang/go124: Security fix
 lang/go125: Security fix
+
+Pullup ticket #7012 - requested by sborrill
+databases/mysql80-client: Build fix
+databases/mysql80-server: Build fix
