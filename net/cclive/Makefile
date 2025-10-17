@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/10/05 19:26:10 js Exp $
+# $NetBSD: Makefile,v 1.54 2025/10/17 08:17:15 wiz Exp $
 
 DISTNAME=		cclive-0.7.16
 PKGREVISION=		49
@@ -16,6 +16,9 @@ DEPENDS+=		libquvi-scripts>=0.4.0:../../net/libquvi-scripts
 USE_LANGUAGES=		c c++0x
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+# system was made header-only in boost 1.89
+CONFIGURE_ARGS+=	boost_cv_lib_system=yes
 
 .include "../../net/libquvi/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
