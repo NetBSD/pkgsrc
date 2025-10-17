@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.626 2025/10/17 06:16:05 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.627 2025/10/17 06:18:11 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26326,7 +26326,7 @@ py{39,310,311,312,313}-django>=5.1<5.1.11	log-injection	https://nvd.nist.gov/vul
 py{39,310,311,312,313}-django>=5.2<5.2.3	log-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-48432
 wireshark<4.4.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5601
 ruby{31,32,33,34}-rack>=3.1.0<3.1.16		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-49007
-aerc-[0-9]*			directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-49466
+aerc<0.21.0			directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-49466
 qt6-qtimageformats<6.8.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-5683
 radare2-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2025-5641
 radare2-[0-9]*	double-free		https://nvd.nist.gov/vuln/detail/CVE-2025-5642
