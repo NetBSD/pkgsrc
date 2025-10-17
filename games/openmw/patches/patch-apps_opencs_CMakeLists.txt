@@ -1,0 +1,14 @@
+$NetBSD: patch-apps_opencs_CMakeLists.txt,v 1.1 2025/10/17 08:04:07 wiz Exp $
+
+boost 1.89 made system header-only.
+
+--- apps/opencs/CMakeLists.txt.orig	2025-10-17 07:54:16.054200007 +0000
++++ apps/opencs/CMakeLists.txt
+@@ -226,7 +226,6 @@ target_link_libraries(openmw-cs
+     ${OSGTEXT_LIBRARIES}
+     ${OSG_LIBRARIES}
+     ${EXTERN_OSGQT_LIBRARY}
+-    ${Boost_SYSTEM_LIBRARY}
+     ${Boost_FILESYSTEM_LIBRARY}
+     ${Boost_PROGRAM_OPTIONS_LIBRARY}
+     components
