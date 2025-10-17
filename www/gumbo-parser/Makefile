@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/09/05 14:56:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/17 12:42:52 jperkin Exp $
 
 VERSION=	0.13.2
 PKGNAME=	gumbo-parser-${VERSION}
@@ -21,6 +21,8 @@ USE_TOOLS+=	aclocal autoconf automake cmake pkg-config
 PKGCONFIG_OVERRIDE=	gumbo.pc.in
 
 USE_LANGUAGES=	c c++
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
