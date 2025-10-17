@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:07:03 nia Exp $
+$NetBSD: distinfo,v 1.19 2025/10/17 22:07:48 mrg Exp $
 
 BLAKE2s (tf-40s1-mccp-patch.gz) = 6123f9704a4a01dd8d3f697ff06e65ebe1d679789b5d600b5aee688eaf83d01f
 SHA512 (tf-40s1-mccp-patch.gz) = 494c3dfa1075b057fa2992ac4b34957452f159b9cf6bcc6d4437b3b1e3ecdd888578ac255b8f25b5cde45bdb57aa1d6c372c79eb2bc60ba15ca1a1a9eea20247
@@ -11,3 +11,4 @@ SHA1 (patch-ab) = 7716f7cb3bd352824ff77e8f678416561e68bacf
 SHA1 (patch-ac) = 01dd3c54d7246b3769ceb1976f0e2272fb15d750
 SHA1 (patch-ad) = 4ff9f85b0b05857560b00e354496a9ed2a01e6e2
 SHA1 (patch-ae) = 4c85ea1953f24548d0dee107b645c32c91e5bc5d
+SHA1 (patch-src_Makefile) = d6f9bb08281540231bade6ec5e0126f293ce9827
