@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile,v 1.1 2025/10/17 22:07:48 mrg Exp $
+
+--- unix/unix.mak.orig	2025-09-27 22:03:33.206737661 -0700
++++ unix/unix.mak	2025-09-27 22:05:31.100813679 -0700
+@@ -109,7 +109,7 @@
+ 
+ regexp.o: $(BUILDERS) config.h
+ 	cd ./regexp; \
+-	    $(MAKE) CC='$(CC)' CFLAGS='-O' O=o regexp.o >err 2>&1 || \
++	    $(MAKE) CC='$(CC)' CFLAGS='$(CFLAGS)' O=o regexp.o >err 2>&1 || \
+ 	    { cat err; rm err; exit 1; }
+ 	rm regexp/err
+ 	mv regexp/regexp.o .
