@@ -1,10 +1,19 @@
-$NetBSD: patch-ag,v 1.2 2014/09/04 07:37:44 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2025/10/17 13:50:05 jperkin Exp $
 
+Add strings.h for bcopy()/bzero().
 Remove unportable errno redefinition.
 
---- src/includes.h.orig	2006-01-08 13:33:18.000000000 +0000
+--- src/includes.h.orig	2022-03-02 09:52:56.000000000 +0000
 +++ src/includes.h
-@@ -283,7 +283,6 @@ double pow();
+@@ -75,6 +75,7 @@
+ 				/* strspn() strcspn() strchr() strcmp()
+ 				   strncmp() strpbrk() strstr() memmove()
+ 				   strncasecmp() memset() */
++#include <strings.h>
+ #endif
+ #ifndef MATH_H_MISSING
+ #include <math.h>		/* pow() */
+@@ -283,7 +284,6 @@ double pow();
  #endif
  
  extern /*const*/char**environ;
