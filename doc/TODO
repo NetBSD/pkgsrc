@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26344 2025/10/15 16:20:34 hauke Exp $
+$NetBSD: TODO,v 1.26345 2025/10/17 08:30:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -388,6 +388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaLib-25.2.2 [wip]
+	o MesaLib-25.2.5
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.6.2
@@ -573,6 +574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
+	o elixir-1.19
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emerillon-0.1.90
@@ -1115,6 +1117,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
+	o py-torch-2.9
 	o py-trezor-0.13.10
 	o py-uliweb-0.6
 	o py-wat-0.6.0
