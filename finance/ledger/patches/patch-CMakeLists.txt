@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/10/17 08:50:14 wiz Exp $
+
+boost 1.89 made system header-only.
+
+--- CMakeLists.txt.orig	2025-10-17 08:46:39.605560063 +0000
++++ CMakeLists.txt
+@@ -90,7 +90,7 @@ endif()
+ 
+ # Set BOOST_ROOT to help CMake to find the right Boost version
+ find_package(Boost 1.49.0
+-  REQUIRED date_time filesystem system iostreams regex unit_test_framework
++  REQUIRED date_time filesystem iostreams regex unit_test_framework
+   ${BOOST_PYTHON} OPTIONAL_COMPONENTS nowide)
+ 
+ # enable Boost::nowide library (for UTF8 command line args on Windows)
