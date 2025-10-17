@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6144 2025/10/16 22:25:50 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6145 2025/10/17 14:35:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8893,3 +8893,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/vcmi to 1.6.8 [adam 2025-10-16]
 	Updated sysutils/py-borgbackup to 1.4.1nb1 [he 2025-10-16]
 	Updated geography/py-nmeagps to 1.0.55 [gdt 2025-10-16]
+	Updated devel/cargo-modules to 0.25.0 [pin 2025-10-17]
