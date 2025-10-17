@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/04/25 06:39:47 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/17 22:07:48 mrg Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -28,6 +28,11 @@ SUBST_FILES.fix-paths=		unix/Config
 SUBST_VARS.fix-paths=		DESTDIR
 
 LDFLAGS.SunOS+=	-lz
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
+CFLAGS+=	-Wno-implicit-int -Wno-implicit-function-declaration 
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
