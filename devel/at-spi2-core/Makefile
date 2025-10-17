@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2025/10/04 21:12:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.61 2025/10/17 12:36:53 jperkin Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
 PKGREVISION=	8
@@ -17,6 +17,8 @@ SUPERSEDES+=	at-spi2-atk-[0-9]*
 SUPERSEDES+=	atk-[0-9]*
 CONFLICTS+=	at-spi2-atk-[0-9]*
 CONFLICTS+=	atk-[0-9]*
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 BUILD_DEFS+=		PKG_SYSCONFDIR
 
