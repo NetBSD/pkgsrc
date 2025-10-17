@@ -1,9 +1,20 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2021/10/22 22:43:11 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2025/10/17 08:04:07 wiz Exp $
+
+boost 1.89 made system header-only.
 
 Install configuration files to examples directory.
 
 --- CMakeLists.txt.orig	2021-10-10 16:17:03.000000000 +0000
 +++ CMakeLists.txt
+@@ -371,7 +371,7 @@ if(OSG_STATIC)
+     add_definitions(-DOSG_LIBRARY_STATIC)
+ endif()
+ 
+-set(BOOST_COMPONENTS system filesystem program_options iostreams)
++set(BOOST_COMPONENTS filesystem program_options iostreams)
+ if(WIN32)
+     set(BOOST_COMPONENTS ${BOOST_COMPONENTS} locale)
+     if(MSVC)
 @@ -922,13 +922,13 @@ elseif(NOT APPLE)
          ENDIF(BUILD_OPENCS)
  
