@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.625 2025/10/16 21:28:01 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.626 2025/10/17 06:16:05 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16787,8 +16787,8 @@ hiawatha<10.8.4	directory-traversal		https://nvd.nist.gov/vuln/detail/CVE-2019-8
 tcpreplay<4.3.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8376
 tcpreplay<4.3.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8377
 tcpreplay<4.3.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8381
-advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8379
-advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8383
+advancecomp<2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8379
+advancecomp<2.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8383
 hdf5-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-8396
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-8397
 hdf5-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-8398
@@ -16876,7 +16876,7 @@ openssl<1.0.2r	oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2019-1559
 podofo<0.9.6	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-9199
 poppler<0.75.0	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-9200
 podofo-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20797
-advancecomp-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-9210
+advancecomp<2.3	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-9210
 pspp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9211
 wireshark<2.4.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9208
 wireshark>=2.6<2.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9208
@@ -16885,7 +16885,7 @@ wireshark>=2.6<2.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019
 wireshark<2.4.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9214
 wireshark>=2.6<2.6.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9214
 liblive<20190227	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-9215
-ikiwiki<3.20190228 	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2019-9187
+ikiwiki<3.20190228	server-side-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2019-9187
 asterisk>=15.0<15.7.2	denial-of-service		https://downloads.asterisk.org/pub/security/AST-2019-001.html
 asterisk>=16.0<16.2.1	denial-of-service		https://downloads.asterisk.org/pub/security/AST-2019-001.html
 nodejs<6.17.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2019-5737
@@ -24052,13 +24052,13 @@ redis>=7<7.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-22458
 redis>=6.0<6.0.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35977
 redis>=6.2<6.2.9	denial-of-service	https://nvd.nist.gov/vuln/detail/cve-2022-35977
 redis>=7<7.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35977
-advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35020
-advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35019
-advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35018
-advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35017
-advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35016
-advancecomp-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35015
-advancecomp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35014
+advancecomp<2.4	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35020
+advancecomp<2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35019
+advancecomp<2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35018
+advancecomp<2.4	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35017
+advancecomp<2.4	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35016
+advancecomp<2.4	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35015
+advancecomp<2.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35014
 nasm-[0-9]*	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-41420
 nasm<2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-46457
 nasm-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-46456
