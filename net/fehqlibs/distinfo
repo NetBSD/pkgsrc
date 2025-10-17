@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2025/09/14 16:20:35 schmonz Exp $
+$NetBSD: distinfo,v 1.31 2025/10/17 13:32:50 jperkin Exp $
 
 BLAKE2s (fehQlibs-28.tgz) = 6df2c8bb60a93e6934b2c82d7c6a70db5d4620a01a9fd1ff8e59048a077f605f
 SHA512 (fehQlibs-28.tgz) = 258858c02be04d0680587241c8352c88ccf0c04432bb5451b49d558b22b670fccd1fe153c43bc0cd9e6712ca0725eeeacf53eebd497f1a28246944b6f538fe22
@@ -7,3 +7,4 @@ SHA1 (patch-configure) = 0c61cf65135d2f874c6f2f9dcb456ead5cad1d30
 SHA1 (patch-install) = e95782d6864e854494f750562a48ebd238e59b71
 SHA1 (patch-src_Makefile) = 18471f6587aa6b812a1e27344d585f5c3d6870be
 SHA1 (patch-src_dnsstub_Makefile) = 5da0fd99ae4dacb48c3a8dff178190fbcc9fe160
+SHA1 (patch-src_iopause.c) = 51351c15eff1096ec6c229cf2043b45e77bf193a
