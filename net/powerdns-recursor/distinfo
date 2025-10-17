@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.42 2025/06/30 11:06:46 jperkin Exp $
+$NetBSD: distinfo,v 1.43 2025/10/17 13:39:21 jperkin Exp $
 
 BLAKE2s (pdns-recursor-4.9.9.tar.bz2) = bbcc8a5540ab6fa516e1c1f4140d4281616bb20438e5d158ecda2f5f9deda5ff
 SHA512 (pdns-recursor-4.9.9.tar.bz2) = d628364546ff93c659e12bd4978de7a0f8a3e3b33ccfb03ecfa9a8da47a05fe8addc6e1a333e17d7c17c0468c24852044e35bd59d4f2dc475294d1248b9ea250
 Size (pdns-recursor-4.9.9.tar.bz2) = 1568112 bytes
+SHA1 (patch-configure) = 11d36eb4593ddb1262f3f7cb42a1a25188a2e850
 SHA1 (patch-dns.hh) = 0994b743b31ac10874d67a54e64183d7b4e25df4
 SHA1 (patch-ext_json11_json11.cpp) = 2de8ea8b51556bd3e3c1a88f681697eff239ab1a
 SHA1 (patch-qtype.hh) = 567c9f36fa0b414e605e6788ba5b7a9f293476a5
