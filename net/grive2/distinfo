@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:05:41 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/10/17 08:19:19 wiz Exp $
 
 BLAKE2s (grive2-0.5.1.tar.gz) = 1ebf291b133549d815db3c503e58a37c476910c013fff25d438eada287540b8c
 SHA512 (grive2-0.5.1.tar.gz) = 609837fc93ad78d143dcb4d1f558743d413c887fec2e9aaac81edd58549b812db859aab5ce7f664f06564779cff4bae32d43529e47fcc36640f1a9b52c5b5888
 Size (grive2-0.5.1.tar.gz) = 169929 bytes
-SHA1 (patch-libgrive_CMakeLists.txt) = fa81eae7f6c70478c757c897fab3fb1d297b25b0
+SHA1 (patch-libgrive_CMakeLists.txt) = 84955d9673fee9babcf94c50783343280be0ccb6
 SHA1 (patch-libgrive_src_util_OS.cc) = 142f6e0b7cb829066a3de76ff3f39417c87af423
 SHA1 (patch-libgrive_src_util_OS.hh) = 51aba9c00b8109ccd084fd320bd97a82ad768411

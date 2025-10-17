@@ -1,10 +1,21 @@
-$NetBSD: patch-libgrive_CMakeLists.txt,v 1.1.1.1 2015/06/16 16:15:37 abs Exp $
+$NetBSD: patch-libgrive_CMakeLists.txt,v 1.2 2025/10/17 08:19:19 wiz Exp $
+
+boost 1.89 made system header-only.
 
 currently unit tests are broken
 
---- libgrive/CMakeLists.txt.orig	2015-06-16 13:59:21.000000000 +0000
+--- libgrive/CMakeLists.txt.orig	2019-11-12 22:05:31.000000000 +0000
 +++ libgrive/CMakeLists.txt
-@@ -111,7 +111,7 @@ endif()
+@@ -4,7 +4,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PAT
+ 
+ find_package(LibGcrypt REQUIRED)
+ find_package(CURL REQUIRED)
+-find_package(Boost 1.40.0 COMPONENTS program_options filesystem unit_test_framework regex system REQUIRED)
++find_package(Boost 1.40.0 COMPONENTS program_options filesystem unit_test_framework regex REQUIRED)
+ find_package(BFD)
+ find_package(CppUnit)
+ find_package(Iberty)
+@@ -104,7 +104,7 @@ endif()
  #install(FILES ${UTIL_HEADERS} DESTINATION include/grive/util)
  #install(FILES ${XML_HEADERS} DESTINATION include/grive/xml)
  
