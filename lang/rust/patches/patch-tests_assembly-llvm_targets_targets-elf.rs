@@ -1,10 +1,10 @@
-$NetBSD: patch-tests_assembly_targets_targets-elf.rs,v 1.3 2025/08/25 17:51:12 wiz Exp $
+$NetBSD: patch-tests_assembly-llvm_targets_targets-elf.rs,v 1.1 2025/10/18 17:14:35 he Exp $
 
-Fix test suite.
+Fix test suite for mips64el-unknown-netbsd.
 
---- tests/assembly/targets/targets-elf.rs.orig	2025-02-04 16:02:52.680691048 +0000
-+++ tests/assembly/targets/targets-elf.rs
-@@ -276,6 +276,9 @@
+--- tests/assembly-llvm/targets/targets-elf.rs.orig	2025-09-19 21:53:43.152938454 +0000
++++ tests/assembly-llvm/targets/targets-elf.rs
+@@ -301,6 +301,9 @@
  //@ revisions: mips64el_unknown_linux_muslabi64
  //@ [mips64el_unknown_linux_muslabi64] compile-flags: --target mips64el-unknown-linux-muslabi64
  //@ [mips64el_unknown_linux_muslabi64] needs-llvm-components: mips
