@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.1 2025/10/18 11:03:19 wiz Exp $
+
+boost 1.89 made system header-only.
+
+--- configure.orig	2025-10-18 11:01:40.818530460 +0000
++++ configure
+@@ -6345,12 +6345,6 @@ fi
+                   done
+ 
+             fi
+-            if test "x$ax_lib" = "x"; then
+-                as_fn_error $? "Could not find a version of the library!" "$LINENO" 5
+-            fi
+-			if test "x$link_system" = "xno"; then
+-				as_fn_error $? "Could not link against $ax_lib !" "$LINENO" 5
+-			fi
+ 		fi
+ 
+ 		CPPFLAGS="$CPPFLAGS_SAVED"
