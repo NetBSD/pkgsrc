@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2025/10/16 09:44:06 adam Exp $
+# $NetBSD: Makefile,v 1.53 2025/10/18 17:28:28 wiz Exp $
 
-DISTNAME=	xdis-6.1.7
+DISTNAME=	xdis-6.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -19,6 +19,9 @@ USE_LANGUAGES=	# none
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pydisasm pydisasm-${PYVERSSUFFIX} || ${TRUE}
+
+# test status as of 6.1.8
+# 1 error
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
