@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2025/08/30 22:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2025/10/18 00:18:20 gdt Exp $
 
 DISTNAME=	unison-2.53.7
 PKGREVISION=	4
@@ -20,6 +20,9 @@ MAKE_ENV+=	HOME=${WRKDIR:Q}
 
 .include "../../lang/ocaml/ocaml.mk"
 
+# Unison will use ocamlopt if possible, and otherwise ocamlc, but
+# passing NATIVE lets pkgsrc build byte code on a native platform,
+# should that be desired.
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
 MAKE_FLAGS+=	NATIVE=true
 .else
@@ -30,9 +33,6 @@ MAKE_FLAGS+=	NATIVE=false
 # _PKGSRC_MKPIE set correctly.
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
-
-# \todo
-#   add fsmonitor option, needing python and libinotify, or forcing it off
 
 # Unison does not install non-man docs
 INSTALLATION_DIRS+=	share/doc/unison
