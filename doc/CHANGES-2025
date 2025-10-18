@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6156 2025/10/18 17:28:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6157 2025/10/18 18:48:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8905,3 +8905,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/alacritty to 0.16.0 [pin 2025-10-18]
 	Updated lang/rust to 1.90.0 [he 2025-10-18]
 	Updated devel/py-xdis to 6.1.8 [wiz 2025-10-18]
+	Updated textproc/moor to 2.6.1 [schmonz 2025-10-18]
