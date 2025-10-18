@@ -1,9 +1,10 @@
-$NetBSD: patch-gcc_config.gcc,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.3 2025/10/18 05:31:22 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+Support NetBSD/aarch64eb.
 
---- gcc/config.gcc.orig	2025-05-23 11:02:04.272197204 +0000
-+++ gcc/config.gcc
+--- gcc/config.gcc.orig	2025-05-23 04:02:04.272197204 -0700
++++ gcc/config.gcc	2025-10-12 14:28:13.767650187 -0700
 @@ -1177,13 +1177,22 @@ case ${target} in
    ;;
  esac
@@ -43,3 +44,15 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  aarch64*-*-freebsd*)
  	tm_file="${tm_file} elfos.h ${fbsd_tm_file}"
  	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-errata.h aarch64/aarch64-freebsd.h"
+@@ -1238,6 +1255,11 @@ aarch64*-*-netbsd*)
+ 	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-errata.h aarch64/aarch64-netbsd.h"
+ 	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-netbsd"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	case $target in
++	aarch64_be-*)
++		tm_defines="${tm_defines} TARGET_BIG_ENDIAN_DEFAULT=1"
++		;;
++	esac
+ 	;;
+ aarch64*-*-linux*)
+ 	tm_file="${tm_file} elfos.h gnu-user.h linux.h glibc-stdint.h"
