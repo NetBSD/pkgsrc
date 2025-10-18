@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6148 2025/10/18 06:18:42 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6149 2025/10/18 07:54:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8897,3 +8897,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/hercules4sdl to 4.9 [rhialto 2025-10-17]
 	Updated lang/gcc14-gnat to 14.3.0nb3 [dkazankov 2025-10-18]
 	Updated lang/gcc14-gnat-libs to 14.3.0nb4 [dkazankov 2025-10-18]
+	Updated meta-pkgs/bulk-test-boost to 20251018 [wiz 2025-10-18]
