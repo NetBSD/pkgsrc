@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6147 2025/10/18 05:31:45 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6148 2025/10/18 06:18:42 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8896,3 +8896,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-modules to 0.25.0 [pin 2025-10-17]
 	Updated emulators/hercules4sdl to 4.9 [rhialto 2025-10-17]
 	Updated lang/gcc14-gnat to 14.3.0nb3 [dkazankov 2025-10-18]
+	Updated lang/gcc14-gnat-libs to 14.3.0nb4 [dkazankov 2025-10-18]
