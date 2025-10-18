@@ -1,11 +1,11 @@
-$NetBSD: patch-vendor_openssl-sys-0.9.108_build_main.rs,v 1.1 2025/08/25 17:51:14 wiz Exp $
+$NetBSD: patch-vendor_openssl-sys-0.9.109_build_main.rs,v 1.1 2025/10/18 17:14:36 he Exp $
 
 Patterned after Linux and Android, on 32-bit NetBSD ports
 include -latomic.  Parts of this inspired by
 https://github.com/sfackler/rust-openssl/commit/a0a1d1d29263abb7c47fc2e58cef8dab13762a45
 
---- vendor/openssl-sys-0.9.108/build/main.rs.orig	2025-06-28 08:30:05.194163693 +0000
-+++ vendor/openssl-sys-0.9.108/build/main.rs
+--- vendor/openssl-sys-0.9.109/build/main.rs.orig	2025-06-28 08:30:05.194163693 +0000
++++ vendor/openssl-sys-0.9.109/build/main.rs
 @@ -269,6 +269,14 @@ fn main() {
          println!("cargo:rustc-link-lib=atomic");
      }

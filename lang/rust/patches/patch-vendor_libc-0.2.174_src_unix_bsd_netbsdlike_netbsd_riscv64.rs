@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.170_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2025/08/25 17:51:12 wiz Exp $
+$NetBSD: patch-vendor_libc-0.2.174_src_unix_bsd_netbsdlike_netbsd_riscv64.rs,v 1.1 2025/10/18 17:14:35 he Exp $
 
 Unbreak this module.
 
@@ -6,8 +6,8 @@ I admit to this entirely being based on "cargo cult", but at least
 the rust compiler (cross-)builds for NetBSD/risc64 with this,
 whereas it did not earlier.
 
---- vendor/libc-0.2.170/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-05-19 23:28:32.395024196 +0000
-+++ vendor/libc-0.2.170/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
+--- vendor/libc-0.2.174/src/unix/bsd/netbsdlike/netbsd/riscv64.rs.orig	2025-05-19 23:28:32.395024196 +0000
++++ vendor/libc-0.2.174/src/unix/bsd/netbsdlike/netbsd/riscv64.rs
 @@ -1,24 +1,70 @@
 -use PT_FIRSTMACH;
 +use crate::PT_FIRSTMACH;
