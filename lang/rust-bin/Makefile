@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2025/10/18 18:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/10/18 23:03:05 gutteridge Exp $
 
 DISTNAME=	rust-1.90.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -287,7 +288,8 @@ fix-relative-rpath:
 .  if ${OPSYS} == "Linux"
 .    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-link llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
-	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
+	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld \
+	   self-contained/llvm-bitcode-linker wasm-component-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
 	   ${DESTDIR}${PREFIX}/lib/rustlib/${RUST_ARCH}/bin/${bin}
 .    endfor
