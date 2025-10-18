@@ -1,9 +1,9 @@
-$NetBSD: patch-vendor_openssl-sys-0.9.108_build_find__normal.rs,v 1.1 2025/08/25 17:51:14 wiz Exp $
+$NetBSD: patch-vendor_openssl-sys-0.9.109_build_find__normal.rs,v 1.1 2025/10/18 17:14:36 he Exp $
 
 Add hack for Darwin when homebrew is installed.
 
---- vendor/openssl-sys-0.9.108/build/find_normal.rs.orig	2025-06-28 08:28:59.789478187 +0000
-+++ vendor/openssl-sys-0.9.108/build/find_normal.rs
+--- vendor/openssl-sys-0.9.109/build/find_normal.rs.orig	2025-06-28 08:28:59.789478187 +0000
++++ vendor/openssl-sys-0.9.109/build/find_normal.rs
 @@ -72,23 +72,6 @@ fn resolve_with_wellknown_location(dir: 
  fn find_openssl_dir(target: &str) -> OsString {
      let host = env::var("HOST").unwrap();
