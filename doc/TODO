@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26345 2025/10/17 08:30:54 wiz Exp $
+$NetBSD: TODO,v 1.26346 2025/10/18 12:07:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -387,8 +387,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o HElib-2.1.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-25.2.2 [wip]
-	o MesaLib-25.2.5
+	o MesaLib-25.2.5 [wip]
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.6.2
@@ -1315,8 +1314,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wap-utils-1.4.1
 	o wbm-virtual-server-6.16
 	o wcalc-2.4
-	o webkit-gtk-2.50.0 [wip]
-	o webkit-gtk-2.50.1
+	o webkit-gtk-2.50.1 [wip]
 	o webmin-2.0
 	o websvn-2.6.0
 	o wgetpaste-2.30
