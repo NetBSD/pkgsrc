@@ -1,12 +1,11 @@
-$NetBSD: patch-gcc_ada_adaint.c,v 1.1 2025/04/25 19:35:10 dkazankov Exp $
+$NetBSD: patch-gcc_ada_adaint.c,v 1.2 2025/10/18 05:31:22 dkazankov Exp $
 
 NetBSD does not use symbol versioning, which requires some functions
-to be preprocessed in C. This patch adds those functions definitions,
-not only for NetBSD, but for any other system too.
+to be preprocessed in C. This patch adds those functions definitions.
 
---- gcc/ada/adaint.c.orig	2024-05-07 09:51:37.000000000 +0300
+--- gcc/ada/adaint.c.orig	2025-06-05 19:02:58.000000000 +0300
 +++ gcc/ada/adaint.c
-@@ -846,7 +846,8 @@
+@@ -831,7 +831,8 @@
  }
  
  #if defined (_WIN32) || defined (__linux__) || defined (__sun__) \
@@ -16,7 +15,7 @@ not only for NetBSD, but for any other system too.
  #define HAS_TARGET_WCHAR_T
  #endif
  
-@@ -3703,6 +3704,69 @@
+@@ -3679,6 +3680,69 @@
    */
  }
  
@@ -63,7 +62,6 @@ not only for NetBSD, but for any other system too.
 +__gnat_clock_gettime (clockid_t clock_id, struct timespec *tp) {
 +   return clock_gettime (clock_id, tp);
 +}
-+#endif
 +int
 +__gnat_nanosleep (const struct timespec *rqtp, struct timespec *rmtp) {
 +   return nanosleep (rqtp, rmtp);
@@ -82,6 +80,7 @@ not only for NetBSD, but for any other system too.
 +__gnat_socket (int domain, int type, int protocol) {
 +   return socket (domain, type, protocol);
 +}
++#endif
 +
  #ifdef __cplusplus
  }

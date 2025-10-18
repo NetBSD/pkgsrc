@@ -1,8 +1,12 @@
-$NetBSD: patch-gcc_targhooks.cc,v 1.2 2025/06/11 13:27:05 dkazankov Exp $
+$NetBSD: patch-gcc_targhooks.cc,v 1.3 2025/10/18 05:31:22 dkazankov Exp $
 
 Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
 
---- gcc/targhooks.cc.orig	2025-05-23 11:02:05.072209824 +0000
+Patch from NetBSD src. Fix -fPIC/-fPIE and -fstack-protector-strong/
+-fstack-protector-all causes undefined reference to `__stack_chk_fail_local'
+under NetBSD/i386 9 at least.
+
+--- gcc/targhooks.cc.orig	2025-07-05 02:14:56.999722429 +0000
 +++ gcc/targhooks.cc
 @@ -162,6 +162,15 @@ default_promote_function_mode_always_pro
  }
@@ -49,3 +53,21 @@ Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
  void
  hook_void_bitmap (bitmap regs ATTRIBUTE_UNUSED)
  {
+@@ -987,7 +1012,17 @@ default_hidden_stack_protect_fail (void)
+       DECL_ARTIFICIAL (t) = 1;
+       DECL_IGNORED_P (t) = 1;
+       DECL_VISIBILITY_SPECIFIED (t) = 1;
++#if defined(__NetBSD__)
++      /*
++       * This is a hack:
++       * It appears that our gas does not generate @PLT for hidden
++       * symbols. It could be that we need a newer version, or that
++       * this local function is handled differently on linux.
++       */
++      DECL_VISIBILITY (t) = VISIBILITY_DEFAULT;
++#else
+       DECL_VISIBILITY (t) = VISIBILITY_HIDDEN;
++#endif
+ 
+       stack_chk_fail_decl = t;
+     }
