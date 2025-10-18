@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/03/30 16:51:06 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/18 14:45:39 pin Exp $
 
-DISTNAME=	cocogitto-6.3.0
+DISTNAME=	cocogitto-6.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cocogitto/}
 
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cocogitto/cocogitto/
 COMMENT=	The Conventional Commits toolbox
 LICENSE=	mit
-
-SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
 
 .include "cargo-depends.mk"
 
