@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2025/08/20 06:43:28 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/10/18 12:06:54 wiz Exp $
 
-DISTNAME=	1.5.0
-PKGNAME=	freeDiameter-${DISTNAME}
-PKGREVISION=	20
+DISTNAME=	freeDiameter-1.6.0
 CATEGORIES=	net
-MASTER_SITES=	http://www.freediameter.net/hg/freeDiameter/archive/
-DIST_SUBDIR=	freeDiameter
+MASTER_SITES=	${MASTER_SITE_GITHUB:=freeDiameter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freediameter.net/trac/
@@ -18,7 +15,6 @@ USE_TOOLS+=	bison flex pkg-config
 FLEX_REQD+=	2.5.35
 
 CMAKE_CONFIGURE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
@@ -37,7 +33,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/freeDiameter/single_host
 
 .include "../../devel/cmake/build.mk"
-.include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
