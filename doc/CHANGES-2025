@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6154 2025/10/18 16:12:18 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6155 2025/10/18 17:15:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8903,3 +8903,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cocogitto to 6.4.0 [pin 2025-10-18]
 	Updated time/py-jrnl to 4.2.1nb1 [wiz 2025-10-18]
 	Updated x11/alacritty to 0.16.0 [pin 2025-10-18]
+	Updated lang/rust to 1.90.0 [he 2025-10-18]
