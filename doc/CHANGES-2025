@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6157 2025/10/18 18:48:19 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6158 2025/10/18 18:56:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8906,3 +8906,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust to 1.90.0 [he 2025-10-18]
 	Updated devel/py-xdis to 6.1.8 [wiz 2025-10-18]
 	Updated textproc/moor to 2.6.1 [schmonz 2025-10-18]
+	Updated lang/rust-bin to 1.90.0 [wiz 2025-10-18]
