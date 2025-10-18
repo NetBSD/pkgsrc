@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.136 2025/08/27 10:35:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.136.2.1 2025/10/18 12:38:43 bsiegert Exp $
 
 DISTNAME=	fontconfig-2.17.1
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -47,6 +48,11 @@ ADDFONTS:=	${X11BASE}/lib/X11/fonts,${ADDFONTS}
 .else
 ADDFONTS:=	${LOCALBASE}/share/fonts/X11,${ADDFONTS}
 .endif
+
+.if ${OPSYS} == "Darwin"
+ADDFONTS:=	~/Library/Fonts,/Library/Fonts,/System/Library/Fonts,${ADDFONTS}
+.endif
+MESON_ARGS+=	-Dadditional-fonts-dirs=${ADDFONTS}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
