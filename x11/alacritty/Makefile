@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/02/17 20:15:36 pin Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/18 16:11:54 pin Exp $
 
-DISTNAME=	alacritty-0.15.1
+DISTNAME=	alacritty-0.16.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=		scdoc-[0-9]*:../../textproc/scdoc
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-RUST_REQ=		1.74.0
+RUST_REQ=		1.85.0
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config	# for fontconfig-sys
 
