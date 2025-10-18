@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2025/10/18 17:14:35 he Exp $
+# $NetBSD: Makefile,v 1.348 2025/10/18 17:25:57 wiz Exp $
 
 DISTNAME=	rustc-1.90.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -291,7 +291,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.85.1
+RUST_STAGE0_VER=	1.87.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
@@ -630,7 +630,7 @@ do-install:
 # Turn off Address space layout randomization
 # so that we can build firefox natively:
 post-install:
-	paxctl +a ${DESTDIR}/${PREFIX}/bin/rustc
+	paxctl +a ${DESTDIR}${PREFIX}/bin/rustc
 .endif
 
 SUBST_CLASSES+=		destdir
@@ -691,8 +691,8 @@ stage0-bootstrap: install
 	)
 .endif
 .if ${OS_VARIANT} == "SmartOS"
-	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
-	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
+	${CP} -R ${DESTDIR}${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
+	${CP} -R ${DESTDIR}${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
 	${MKDIR} ${BOOTSTRAP_TMPDIR}/lib/pkgsrc
 	set -e; \
 	for lib in libgcc_s.so.1 libstdc++.so.6; do \
