@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/10/14 17:26:36 dkazankov Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/19 07:35:07 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
@@ -66,7 +66,7 @@ pre-build:
 	    cd ${WRKSRC} && \
 		${MAKE_PROGRAM} generate && \
 	    cd ${WRKSRC}/build && \
-		${TAR} -jcf ${WRKDIR}/${PREGENERATED_DISTNAME} . ; \
+		${TAR} -jcf ${WRKDIR}/${PRE_DISTFILE} . ; \
 	fi
 
 do-build:
