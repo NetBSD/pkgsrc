@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6163 2025/10/19 11:58:32 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6164 2025/10/19 13:13:11 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8913,3 +8913,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-txaio to 25.9.2 [adam 2025-10-19]
 	Added www/firefox140 version 140.4.0 [leot 2025-10-19]
 	Added www/firefox140-l10n version 140.4.0 [leot 2025-10-19]
+	Updated audio/kew to 3.6.3 [ktnb 2025-10-19]
