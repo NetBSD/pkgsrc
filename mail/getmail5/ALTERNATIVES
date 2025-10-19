@@ -1,0 +1,5 @@
+bin/getmail @PREFIX@/bin/getmail5
+bin/getmail-gmail-xoauth-tokens @PREFIX@/bin/getmail5-gmail-xoauth-tokens
+bin/getmail_fetch @PREFIX@/bin/getmail5_fetch
+bin/getmail_maildir @PREFIX@/bin/getmail5_maildir
+bin/getmail_mbox @PREFIX@/bin/getmail5_mbox
