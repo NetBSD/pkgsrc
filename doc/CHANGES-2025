@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6165 2025/10/19 13:42:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6166 2025/10/19 13:49:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8915,3 +8915,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/firefox140-l10n version 140.4.0 [leot 2025-10-19]
 	Updated audio/kew to 3.6.3 [ktnb 2025-10-19]
 	Updated devel/p5-Type-Tiny to 2.008004 [wiz 2025-10-19]
+	Updated devel/log4cplus to 2.1.2 [adam 2025-10-19]
+	Updated security/botan3 to 3.9.0 [adam 2025-10-19]
+	Updated security/py-botan3 to 3.9.0 [adam 2025-10-19]
+	Updated net/icinga2 to 2.15.1 [adam 2025-10-19]
