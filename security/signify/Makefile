@@ -1,67 +1,48 @@
-# $NetBSD: Makefile,v 1.7 2025/07/14 18:24:21 vins Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/19 20:34:04 vins Exp $
 
-DISTNAME=	outils-0.14
-PKGNAME=	${DISTNAME:S,outils,signify,}
+DISTNAME=	signify-20250520
 CATEGORIES=	security
-MASTER_SITES=	https://git.vuxu.org/outils/snapshot/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://flak.tedunangst.com/post/signify
 COMMENT=	Cryptographically sign and verify files, from OpenBSD
 LICENSE=	original-bsd AND modified-bsd AND isc AND public-domain
 
-USE_TOOLS+=	gmake
+CFLAGS.Linux+=	-D_GNU_SOURCE		# dl_iterate_phd()
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
 LIBS+=		-lm
 LIBS.SunOS+=	-lresolv -lrt
 
-MAKE_FLAGS+=	ALL=src/usr.bin/signify/signify
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	LIBS=${LIBS:Q}
+USE_BSD_MAKEFILE=	yes
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
+MAKE_ENV+=		EXTRA_SRCS=${BUILD_SRCS:Q} LDADD=${LIBS:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/signify
 
-OUTDIR:=	${WRKSRC}/src/usr.bin/signify
-LIBSRCDIR:=	${WRKSRC}/src/liboutils
-
-.include "../../mk/bsd.prefs.mk"
-
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Do not hardcode configuration directory
-SUBST_FILES.paths+=	${OUTDIR}/signify.c
-SUBST_FILES.paths+=	${OUTDIR}/signify.1
+SUBST_FILES.paths+=	signify.c signify.1
 SUBST_SED.paths=	-e 's|/etc/signify|${PKG_SYSCONFDIR}/signify|g'
 
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		ints
-SUBST_MESSAGE.ints=	SunOS stdint(3) doesn't provide `u_int*' typedefs
-SUBST_STAGE.ints=	pre-configure
-SUBST_FILES.ints+=	${LIBSRCDIR}/*.c
-SUBST_FILES.ints+=	${LIBSRCDIR}/include/*.h
-SUBST_SED.ints=		-e 's|u_int|uint|g'
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Darwin"
+BUILD_SRCS+=	explicit_bzero.c freezero.c
+.elif ${OPSYS} == "Linux"
+BUILD_SRCS+=	arc4random.c base64.c explicit_bzero.c \
+		freezero.c getentropy_linux.c strlcpy.c
 .endif
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
-# The sys/* overrides are not needed on NetSD
-	${RUN}${RM} ${WRKSRC}/src/liboutils/include/sys/*
-
-.elif ${OPSYS} == "SunOS"
-# Solaris lacks MIN/MAX macros in sys/param.h
-	cd ${LIBSRCDIR} &&			\
-	${RUN}${CAT:Q} outils.h >> minmax.h &&	\
-	${RUN}${MV:Q} minmax.h outils.h
+# The sys/* overrides are not needed on NetBSD
+	${RUN}${RM} ${WRKSRC}/incs/sys/*
 .endif
-
-do-install:
-	${INSTALL_PROGRAM} ${OUTDIR}/signify	\
-		${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${OUTDIR}/signify.1	\
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
