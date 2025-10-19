@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/09/22 07:46:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/19 18:53:07 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -9,6 +9,9 @@ ${PYSITELIB}/pygls/__init__.pyo
 ${PYSITELIB}/pygls/capabilities.py
 ${PYSITELIB}/pygls/capabilities.pyc
 ${PYSITELIB}/pygls/capabilities.pyo
+${PYSITELIB}/pygls/cli.py
+${PYSITELIB}/pygls/cli.pyc
+${PYSITELIB}/pygls/cli.pyo
 ${PYSITELIB}/pygls/client.py
 ${PYSITELIB}/pygls/client.pyc
 ${PYSITELIB}/pygls/client.pyo
@@ -21,12 +24,27 @@ ${PYSITELIB}/pygls/exceptions.pyo
 ${PYSITELIB}/pygls/feature_manager.py
 ${PYSITELIB}/pygls/feature_manager.pyc
 ${PYSITELIB}/pygls/feature_manager.pyo
+${PYSITELIB}/pygls/io_.py
+${PYSITELIB}/pygls/io_.pyc
+${PYSITELIB}/pygls/io_.pyo
 ${PYSITELIB}/pygls/lsp/__init__.py
 ${PYSITELIB}/pygls/lsp/__init__.pyc
 ${PYSITELIB}/pygls/lsp/__init__.pyo
+${PYSITELIB}/pygls/lsp/_base_client.py
+${PYSITELIB}/pygls/lsp/_base_client.pyc
+${PYSITELIB}/pygls/lsp/_base_client.pyo
+${PYSITELIB}/pygls/lsp/_base_server.py
+${PYSITELIB}/pygls/lsp/_base_server.pyc
+${PYSITELIB}/pygls/lsp/_base_server.pyo
+${PYSITELIB}/pygls/lsp/_capabilities.py
+${PYSITELIB}/pygls/lsp/_capabilities.pyc
+${PYSITELIB}/pygls/lsp/_capabilities.pyo
 ${PYSITELIB}/pygls/lsp/client.py
 ${PYSITELIB}/pygls/lsp/client.pyc
 ${PYSITELIB}/pygls/lsp/client.pyo
+${PYSITELIB}/pygls/lsp/server.py
+${PYSITELIB}/pygls/lsp/server.pyc
+${PYSITELIB}/pygls/lsp/server.pyo
 ${PYSITELIB}/pygls/progress.py
 ${PYSITELIB}/pygls/progress.pyc
 ${PYSITELIB}/pygls/progress.pyo
@@ -39,9 +57,6 @@ ${PYSITELIB}/pygls/protocol/json_rpc.pyo
 ${PYSITELIB}/pygls/protocol/language_server.py
 ${PYSITELIB}/pygls/protocol/language_server.pyc
 ${PYSITELIB}/pygls/protocol/language_server.pyo
-${PYSITELIB}/pygls/protocol/lsp_meta.py
-${PYSITELIB}/pygls/protocol/lsp_meta.pyc
-${PYSITELIB}/pygls/protocol/lsp_meta.pyo
 ${PYSITELIB}/pygls/py.typed
 ${PYSITELIB}/pygls/server.py
 ${PYSITELIB}/pygls/server.pyc
