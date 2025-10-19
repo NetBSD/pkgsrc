@@ -1,28 +1,28 @@
-# $NetBSD: Makefile,v 1.14 2025/02/05 22:15:21 riastradh Exp $
-#
+# $NetBSD: Makefile,v 1.15 2025/10/19 13:43:08 adam Exp $
 
-DISTNAME=	log4cplus-2.0.3
-PKGREVISION=	2
+DISTNAME=	log4cplus-2.1.2
 CATEGORIES=	devel
-GITHUB_RELEASE=	REL_2_0_3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=log4cplus/}
-EXTRACT_SUFX=	.tar.bz2
+GITHUB_RELEASE=	REL_${PKGVERSION_NOREV:S/./_/g}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://log4cplus.sourceforge.io/
 COMMENT=	Logging API for C++
 LICENSE=	apache-2.0 AND 2-clause-bsd
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config autoconf automake autoreconf gmake
-USE_LANGUAGES=	c99 c++11	# C for configure
-
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv
 CONFIGURE_ARGS+=	--without-wchar_t-support
 CONFIGURE_ARGS+=	--without-qt
 CONFIGURE_ARGS+=	--without-qt5
 CONFIGURE_ARGS+=	--without-python
+TEST_TARGET=		check
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -35,7 +35,7 @@ CHECK_BUILTIN.pthread:= no
 CONFIGURE_ARGS+=	--enable-threads
 
 # TLS is not supported by NetBSD<6
-.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if ${MACHINE_PLATFORM:MNetBSD-[0-5].*-*}
 CONFIGURE_ENV+=	ac_cv_thread_local=no
 CONFIGURE_ENV+=	ac_cv__thread_keyword=no
 .endif
