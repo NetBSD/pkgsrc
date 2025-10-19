@@ -1,18 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2025/08/27 18:59:44 dkazankov Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/19 03:53:33 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc15-gnat-15.2.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
 DISTFILES=	${DEFAULT_DISTFILES}
-EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 MAINTAINER=	dkazankov@NetBSD.org
 HOMEPAGE=	https://gcc.gnu.org/
 COMMENT=	GNAT compiler and Ada tools
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+
+# The list is copy of one from gcc6-aux as it used as a bootstrapper
+ONLY_FOR_PLATFORM=	DragonFly-*-x86_64   \
+		FreeBSD-*-i386       \
+		FreeBSD-*-x86_64     \
+		SunOS-5.1[1-9]*-i386 \
+		SunOS-5.1[1-9]*-x86_64 \
+		NetBSD-*-i386   \
+		NetBSD-*-x86_64
 
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=114065
 BROKEN_ON_PLATFORM=	*-*-i386
@@ -20,7 +28,7 @@ BROKEN_ON_PLATFORM=	*-*-i386
 CHECK_PIE_SUPPORTED=	no
 CHECK_RELRO_SUPPORTED=	no
 
-USE_LANGUAGES=		c c++ ada
+USE_LANGUAGES=		# empty
 USE_TOOLS+=		gmake makeinfo sed perl flex bison
 USE_TOOLS.NetBSD+=	gsed
 # Built-in Texinfo can no longer process GCC 15's files
@@ -33,14 +41,30 @@ GNU_CONFIGURE_STRICT=	no
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_PKGSRC_GCC?=	yes
-GCC_REQD+=		10
-
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
 CHECK_PORTABILITY_SKIP+=	contrib/*
 CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
+
+USE_GCC_BOOTSTRAP=	no
+
+.if ${OPSYS} == NetBSD
+BOOT_DISTNAME=		gcc-bootstrap-${MACHINE_GNU_PLATFORM}-10.5.0.tar.bz2
+SITES.${BOOT_DISTNAME}=	${MASTER_SITE_BACKUP}
+
+USE_GCC_BOOTSTRAP=	yes
+.endif
+
+.if ${USE_GCC_BOOTSTRAP:U:tl} == "yes"
+DISTFILES+=	${BOOT_DISTNAME}
+CC=		${WRKDIR}/gcc-bootstrap/bin/gcc
+CXX=		${WRKDIR}/gcc-bootstrap/bin/g++
+.else
+TOOL_DEPENDS+=	gcc10-aux-[0-9]*:../../lang/gcc10-aux
+CC=		${PREFIX}/gcc10-aux/bin/gcc
+CXX=		${PREFIX}/gcc10-aux/bin/g++
+.endif
 
 ## Build outside ${WRKSRC}
 OBJDIR=			${WRKDIR}/build
@@ -68,38 +92,25 @@ BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 # Use C preprocessed symbols on NetBSD
 .if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=			select
-SUBST_MESSAGE.select=		Replace select with __gnat_select in ${SUBST_FILES.select}
-SUBST_STAGE.select=		pre-configure
-SUBST_FILES.select=		gcc/ada/libgnat/g-socthi.ads
-SUBST_SED.select=		-e "s,\"select\",\"__gnat_select\","
+SUBST_CLASSES+=		patch1
+SUBST_MESSAGE.patch1=	Replace nanosleep, gettimeofday in ${SUBST_FILES.patch1}
+SUBST_STAGE.patch1=	pre-configure
+SUBST_FILES.patch1=	gcc/ada/libgnat/s-osprim__posix.adb
+SUBST_SED.patch1=	-e "s,\"nanosleep\",\"__gnat_nanosleep\","
+SUBST_SED.patch1+=	-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
 
-SUBST_CLASSES+=			socket
-SUBST_MESSAGE.socket=		Replace socket with __gnat_socket in ${SUBST_FILES.socket}
-SUBST_STAGE.socket=		pre-configure
-SUBST_FILES.socket=		gcc/ada/libgnat/g-socthi.adb
-SUBST_SED.socket=		-e "s,\"socket\",\"__gnat_socket\","
+SUBST_CLASSES+=		patch2
+SUBST_MESSAGE.patch2=	Replace select with __gnat_select in ${SUBST_FILES.patch2}
+SUBST_STAGE.patch2=	pre-configure
+SUBST_FILES.patch2=	gcc/ada/libgnat/g-socthi.ads
+SUBST_SED.patch2=	-e "s,\"select\",\"__gnat_select\","
 
-SUBST_CLASSES+=			nanosleep
-SUBST_MESSAGE.nanosleep=	Replace nanosleep with __gnat_nanosleep in ${SUBST_FILES.nanosleep}
-SUBST_STAGE.nanosleep=		pre-configure
-SUBST_FILES.nanosleep=		gcc/ada/libgnat/s-osprim__posix.adb
-SUBST_SED.nanosleep=		-e "s,\"nanosleep\",\"__gnat_nanosleep\","
-
-SUBST_CLASSES+=			gettimeofday
-SUBST_MESSAGE.gettimeofday=	Replace gettimeofday with __gnat_gettimeofday in ${SUBST_FILES.gettimeofday}
-SUBST_STAGE.gettimeofday=	pre-configure
-SUBST_FILES.gettimeofday=	gcc/ada/libgnat/s-osprim__posix.adb
-SUBST_SED.gettimeofday=		-e "s,\"gettimeofday\",\"__gnat_gettimeofday\","
+SUBST_CLASSES+=		patch3
+SUBST_MESSAGE.patch3=	Replace socket with __gnat_socket in ${SUBST_FILES.patch3}
+SUBST_STAGE.patch3=	pre-configure
+SUBST_FILES.patch3=	gcc/ada/libgnat/g-socthi.adb
+SUBST_SED.patch3=	-e "s,\"socket\",\"__gnat_socket\","
 .endif
-
-#.if ${MACHINE_PLATFORM:MDarwin-*-*}
-#BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
-#CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-#PATCHFILES=		gcc-15.1.0.diff
-#PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/bda0fad/gcc/
-#PATCH_DIST_STRIP=	-p1
-#.endif
 
 .if ${OS_VARIANT} == "SmartOS"
 SUBST_CLASSES+=		ccs
@@ -121,8 +132,7 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-#LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*} ${LDFLAGS:M-Wl,-z*}
-LDFLAGS_FOR_TARGET=	-static-libstdc++ -static-libgcc
+LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/${MACHINE_GNU_PLATFORM}/lib
 LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
 LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
 LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
@@ -130,13 +140,17 @@ LDFLAGS_FOR_TARGET+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
-STAGE1_LDFLAGS=		${LDFLAGS:M*:N-Wl,-z*} -static
-BOOT_LDFLAGS=		${LDFLAGS_FOR_TARGET:M*}
+BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/${PKGBASE}/lib/gcc/${MACHINE_GNU_PLATFORM}/${PKGVERSION_NOREV}/adalib
 
 # Needed on Darwin when LDFLAGS point to a SDK
 .if !empty(OSX_SDK_PATH)
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 .endif
+
+## For target librarys and libjava programs.
+CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
@@ -154,7 +168,12 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
-CONFIGURE_ARGS+=	--enable-languages=ada,c,c++ --enable-stage1-languages=ada,c,c++
+.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+=	CXX_FOR_BUILD=${NATIVE_CXX:Q}
+.endif
+
+CONFIGURE_ARGS+=	--enable-languages=ada,c,c++
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-host-shared
@@ -168,18 +187,6 @@ CONFIGURE_ARGS+=	--with-gxx-include-dir=${PREFIX}/${PKGBASE}/include/c++
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=	--enable-threads=posix
-
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
-CONFIGURE_ARGS+=	--disable-bootstrap
-CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
-CONFIGURE_ENV+=		CXX_FOR_BUILD=${NATIVE_CXX:Q}
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${BOOT_LDFLAGS:M*:Q}
-.else
-CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:M*:Q}
-CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:M*:Q}
-.endif
-## For target librarys and libjava programs.
-CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
 # causes build errors even when using lang/gcc* to self host
 CONFIGURE_ARGS.SunOS+=	--disable-libsanitizer
@@ -273,3 +280,14 @@ CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
+
+.if ${USE_GCC_BOOTSTRAP:U:tl} == "yes"
+PREPEND_PATH+=	${WRKDIR}/gcc-bootstrap/bin
+.else
+PREPEND_PATH+=	${PREFIX}/gcc10-aux/bin
+.endif
+
+CFLAGS=		-O2
+CPPFLAGS=	#empty
+CXXFLAGS=	-O2
+LDFLAGS=	-static-libstdc++ -static-libgcc
