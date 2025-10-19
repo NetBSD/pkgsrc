@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6180 2025/10/19 18:59:02 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6181 2025/10/19 19:01:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8934,3 +8934,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-josepy to 2.2.0 [wiz 2025-10-19]
 	Updated lang/py-pygls to 2.0.0 [wiz 2025-10-19]
 	Updated devel/py-pylint to 4.0.1 [wiz 2025-10-19]
+	Updated textproc/py-referencing to 0.37.0 [wiz 2025-10-19]
