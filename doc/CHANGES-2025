@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6175 2025/10/19 18:45:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6176 2025/10/19 18:47:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8929,3 +8929,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-aiostream to 0.7.1 [wiz 2025-10-19]
 	Updated audio/py-beets to 2.5.1 [wiz 2025-10-19]
 	Updated security/py-cyclonedx-python-lib to 11.2.0 [wiz 2025-10-19]
+	Updated www/py-google-api-python-client to 2.185.0 [wiz 2025-10-19]
