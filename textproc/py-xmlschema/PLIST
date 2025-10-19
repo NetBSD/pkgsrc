@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/06/13 07:14:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/10/19 11:11:35 adam Exp $
 bin/xmlschema-json2xml-${PYVERSSUFFIX}
 bin/xmlschema-validate-${PYVERSSUFFIX}
 bin/xmlschema-xml2json-${PYVERSSUFFIX}
@@ -11,9 +11,15 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xmlschema/__init__.py
 ${PYSITELIB}/xmlschema/__init__.pyc
 ${PYSITELIB}/xmlschema/__init__.pyo
+${PYSITELIB}/xmlschema/_limits.py
+${PYSITELIB}/xmlschema/_limits.pyc
+${PYSITELIB}/xmlschema/_limits.pyo
 ${PYSITELIB}/xmlschema/aliases.py
 ${PYSITELIB}/xmlschema/aliases.pyc
 ${PYSITELIB}/xmlschema/aliases.pyo
+${PYSITELIB}/xmlschema/arguments.py
+${PYSITELIB}/xmlschema/arguments.pyc
+${PYSITELIB}/xmlschema/arguments.pyo
 ${PYSITELIB}/xmlschema/cli.py
 ${PYSITELIB}/xmlschema/cli.pyc
 ${PYSITELIB}/xmlschema/cli.pyo
@@ -94,15 +100,12 @@ ${PYSITELIB}/xmlschema/py.typed
 ${PYSITELIB}/xmlschema/resources/__init__.py
 ${PYSITELIB}/xmlschema/resources/__init__.pyc
 ${PYSITELIB}/xmlschema/resources/__init__.pyo
-${PYSITELIB}/xmlschema/resources/arguments.py
-${PYSITELIB}/xmlschema/resources/arguments.pyc
-${PYSITELIB}/xmlschema/resources/arguments.pyo
 ${PYSITELIB}/xmlschema/resources/fetchers.py
 ${PYSITELIB}/xmlschema/resources/fetchers.pyc
 ${PYSITELIB}/xmlschema/resources/fetchers.pyo
-${PYSITELIB}/xmlschema/resources/filters.py
-${PYSITELIB}/xmlschema/resources/filters.pyc
-${PYSITELIB}/xmlschema/resources/filters.pyo
+${PYSITELIB}/xmlschema/resources/parsers.py
+${PYSITELIB}/xmlschema/resources/parsers.pyc
+${PYSITELIB}/xmlschema/resources/parsers.pyo
 ${PYSITELIB}/xmlschema/resources/sax.py
 ${PYSITELIB}/xmlschema/resources/sax.pyc
 ${PYSITELIB}/xmlschema/resources/sax.pyo
@@ -131,6 +134,9 @@ ${PYSITELIB}/xmlschema/schemas/XSD_1.1/XMLSchema.xsd
 ${PYSITELIB}/xmlschema/schemas/XSD_1.1/datatypes.xsd
 ${PYSITELIB}/xmlschema/schemas/XSD_1.1/xsd11-extra.xsd
 ${PYSITELIB}/xmlschema/schemas/XSI/XMLSchema-instance.xsd
+${PYSITELIB}/xmlschema/settings.py
+${PYSITELIB}/xmlschema/settings.pyc
+${PYSITELIB}/xmlschema/settings.pyo
 ${PYSITELIB}/xmlschema/testing/__init__.py
 ${PYSITELIB}/xmlschema/testing/__init__.pyc
 ${PYSITELIB}/xmlschema/testing/__init__.pyo
