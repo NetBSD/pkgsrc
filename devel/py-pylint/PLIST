@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2025/04/12 11:42:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/10/19 18:58:54 wiz Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -22,9 +22,9 @@ ${PYSITELIB}/pylint/__pkginfo__.pyo
 ${PYSITELIB}/pylint/checkers/__init__.py
 ${PYSITELIB}/pylint/checkers/__init__.pyc
 ${PYSITELIB}/pylint/checkers/__init__.pyo
-${PYSITELIB}/pylint/checkers/async.py
-${PYSITELIB}/pylint/checkers/async.pyc
-${PYSITELIB}/pylint/checkers/async.pyo
+${PYSITELIB}/pylint/checkers/async_checker.py
+${PYSITELIB}/pylint/checkers/async_checker.pyc
+${PYSITELIB}/pylint/checkers/async_checker.pyo
 ${PYSITELIB}/pylint/checkers/bad_chained_comparison.py
 ${PYSITELIB}/pylint/checkers/bad_chained_comparison.pyc
 ${PYSITELIB}/pylint/checkers/bad_chained_comparison.pyo
@@ -70,6 +70,9 @@ ${PYSITELIB}/pylint/checkers/classes/class_checker.pyo
 ${PYSITELIB}/pylint/checkers/classes/special_methods_checker.py
 ${PYSITELIB}/pylint/checkers/classes/special_methods_checker.pyc
 ${PYSITELIB}/pylint/checkers/classes/special_methods_checker.pyo
+${PYSITELIB}/pylint/checkers/clear_lru_cache.py
+${PYSITELIB}/pylint/checkers/clear_lru_cache.pyc
+${PYSITELIB}/pylint/checkers/clear_lru_cache.pyo
 ${PYSITELIB}/pylint/checkers/dataclass_checker.py
 ${PYSITELIB}/pylint/checkers/dataclass_checker.pyc
 ${PYSITELIB}/pylint/checkers/dataclass_checker.pyo
@@ -100,6 +103,9 @@ ${PYSITELIB}/pylint/checkers/lambda_expressions.pyo
 ${PYSITELIB}/pylint/checkers/logging.py
 ${PYSITELIB}/pylint/checkers/logging.pyc
 ${PYSITELIB}/pylint/checkers/logging.pyo
+${PYSITELIB}/pylint/checkers/match_statements_checker.py
+${PYSITELIB}/pylint/checkers/match_statements_checker.pyc
+${PYSITELIB}/pylint/checkers/match_statements_checker.pyo
 ${PYSITELIB}/pylint/checkers/method_args.py
 ${PYSITELIB}/pylint/checkers/method_args.pyc
 ${PYSITELIB}/pylint/checkers/method_args.pyo
@@ -169,9 +175,9 @@ ${PYSITELIB}/pylint/checkers/variables.pyo
 ${PYSITELIB}/pylint/config/__init__.py
 ${PYSITELIB}/pylint/config/__init__.pyc
 ${PYSITELIB}/pylint/config/__init__.pyo
-${PYSITELIB}/pylint/config/_breaking_changes.py
-${PYSITELIB}/pylint/config/_breaking_changes.pyc
-${PYSITELIB}/pylint/config/_breaking_changes.pyo
+${PYSITELIB}/pylint/config/_breaking_changes/__init__.py
+${PYSITELIB}/pylint/config/_breaking_changes/__init__.pyc
+${PYSITELIB}/pylint/config/_breaking_changes/__init__.pyo
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.py
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.pyc
 ${PYSITELIB}/pylint/config/_pylint_config/__init__.pyo
@@ -416,6 +422,9 @@ ${PYSITELIB}/pylint/reporters/json_reporter.pyo
 ${PYSITELIB}/pylint/reporters/multi_reporter.py
 ${PYSITELIB}/pylint/reporters/multi_reporter.pyc
 ${PYSITELIB}/pylint/reporters/multi_reporter.pyo
+${PYSITELIB}/pylint/reporters/progress_reporters.py
+${PYSITELIB}/pylint/reporters/progress_reporters.pyc
+${PYSITELIB}/pylint/reporters/progress_reporters.pyo
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.py
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.pyc
 ${PYSITELIB}/pylint/reporters/reports_handler_mix_in.pyo
