@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6183 2025/10/19 19:13:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6184 2025/10/19 20:43:45 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8937,3 +8937,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-referencing to 0.37.0 [wiz 2025-10-19]
 	Updated devel/py-ruff to 0.14.1 [wiz 2025-10-19]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.5.2 [wiz 2025-10-19]
+	Updated security/signify to 20250520 [vins 2025-10-19]
