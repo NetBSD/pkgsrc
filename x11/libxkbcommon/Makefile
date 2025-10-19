@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2025/10/11 09:02:00 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/19 18:18:42 wiz Exp $
 
-DISTNAME=	xkbcommon-1.12.0
+DISTNAME=	xkbcommon-1.12.1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xkbcommon/}
