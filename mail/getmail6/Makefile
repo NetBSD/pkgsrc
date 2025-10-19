@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/10/19 21:07:55 jym Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/19 21:20:26 jym Exp $
 
 DISTNAME=		getmail6-6.19.10
 CATEGORIES=		mail
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 USE_LANGUAGES=		# none
 
 REPLACE_PYTHON=		*.py getmailcore/*.py
+
+CONFLICTS+=		getmail5-[0-9]*
 
 # Original getmail is parked as mail/getmail5
 SUPERSEDES=		getmail<=5.16nb4
