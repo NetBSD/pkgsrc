@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6162 2025/10/19 11:58:19 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6163 2025/10/19 11:58:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8912,3 +8912,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xmlschema to 4.2.0 [adam 2025-10-19]
 	Updated devel/py-txaio to 25.9.2 [adam 2025-10-19]
 	Added www/firefox140 version 140.4.0 [leot 2025-10-19]
+	Added www/firefox140-l10n version 140.4.0 [leot 2025-10-19]
