@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/10/14 15:16:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/10/19 18:42:55 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -11,9 +11,6 @@ ${PYSITELIB}/beets/__init__.pyo
 ${PYSITELIB}/beets/__main__.py
 ${PYSITELIB}/beets/__main__.pyc
 ${PYSITELIB}/beets/__main__.pyo
-${PYSITELIB}/beets/_version.py
-${PYSITELIB}/beets/_version.pyc
-${PYSITELIB}/beets/_version.pyo
 ${PYSITELIB}/beets/autotag/__init__.py
 ${PYSITELIB}/beets/autotag/__init__.pyc
 ${PYSITELIB}/beets/autotag/__init__.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2025/10/14 15:16:39 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/10/19 18:42:55 wiz Exp $
 
-DISTNAME=	beets-2.5.0
+DISTNAME=	beets-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
@@ -42,10 +42,8 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-MAKE_ENV+=	POETRY_DYNAMIC_VERSIONING_BYPASS=${PKGVERSION_NOREV}
-
-# as of 2.4.0
-# 1067 passed, 101 skipped, 1 warning
+# as of 2.5.1
+# 1082 passed, 101 skipped
 .if make(test)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
