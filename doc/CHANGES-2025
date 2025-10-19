@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6160 2025/10/19 03:56:25 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6161 2025/10/19 11:17:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8909,3 +8909,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust-bin to 1.90.0 [wiz 2025-10-18]
 	Updated lang/gcc15-gnat to 15.2.0nb1 [dkazankov 2025-10-19]
 	Updated lang/gcc15-gnat-libs to 15.2.0nb2 [dkazankov 2025-10-19]
+	Updated textproc/py-xmlschema to 4.2.0 [adam 2025-10-19]
+	Updated devel/py-txaio to 25.9.2 [adam 2025-10-19]
