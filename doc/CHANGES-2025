@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6179 2025/10/19 18:53:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6180 2025/10/19 18:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8933,3 +8933,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-idna to 3.11 [wiz 2025-10-19]
 	Updated security/py-josepy to 2.2.0 [wiz 2025-10-19]
 	Updated lang/py-pygls to 2.0.0 [wiz 2025-10-19]
+	Updated devel/py-pylint to 4.0.1 [wiz 2025-10-19]
