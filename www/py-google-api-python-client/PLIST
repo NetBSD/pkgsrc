@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2025/09/22 17:10:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.50 2025/10/19 18:46:47 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -133,6 +133,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/checks.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromemanagement.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromepolicy.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/chromeuxreport.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/chromewebstore.v1.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/civicinfo.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/classroom.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/cloudasset.v1.json
@@ -212,6 +213,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datalabeling.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datalineage.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/datamanager.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datamigration.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datapipelines.v1.json
