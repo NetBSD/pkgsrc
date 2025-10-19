@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/07/17 05:00:16 dkazankov Exp $
+# $NetBSD: options.mk,v 1.2 2025/10/19 03:53:33 dkazankov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc15-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
@@ -95,10 +95,14 @@ LIBS.SunOS+=		-lgmp
 ### Graphite Support
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
-BUILDLINK_API_DEPENDS.isl+=	isl>=0.24
+BUILDLINK_API_DEPENDS.isl+=	isl>=0.15
 .  if !empty(PKG_OPTIONS:Mgcc-inplace-math)
-.    include "../../math/isl/inplace.mk"
-FORCE_CXX_STD=	c++17
+ISL24=			isl-0.24
+SITES.${ISL24}.tar.bz2=	${MASTER_SITE_GNU:=gcc/infrastructure/}
+DISTFILES+=		${ISL24}.tar.xz
+post-extract:
+	${MV} ${WRKDIR}/${ISL24} ${WRKSRC}/isl
+
 .  else
 .    include "../../math/isl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-isl=${BUILDLINK_PREFIX.isl}
