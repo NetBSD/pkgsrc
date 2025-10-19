@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.20 2025/09/27 09:57:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/10/19 13:45:30 adam Exp $
 
-PKGREVISION= 6
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/Botan/botan3/}
@@ -9,10 +8,10 @@ COMMENT=	Portable, easy to use, and efficient C++ crypto library (v3)
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 HAS_CONFIGURE=		yes
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 GCC_REQD+=		11
-USE_CXX_FEATURES+=	c++20
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
@@ -34,7 +33,7 @@ PKGCONFIG_OVERRIDE=	src/build-data/botan.pc.in
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
+CONFIGURE_ARGS+=	--cc-bin=${CXX:Q} --cc=clang
 .else
 CONFIGURE_ARGS+=	--cc=gcc
 .endif
