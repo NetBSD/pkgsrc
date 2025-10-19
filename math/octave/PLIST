@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2025/05/14 05:24:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2025/10/19 17:40:28 adam Exp $
 bin/${PKGNAME}
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
@@ -1231,6 +1231,8 @@ share/octave/${PKGVERSION}/etc/tests/fixed/line-continue.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/load-path/in-load-path/load_path_fcn.m
 share/octave/${PKGVERSION}/etc/tests/fixed/load-path/not-in-load-path/load_path_fcn.m
 share/octave/${PKGVERSION}/etc/tests/fixed/load-path/refresh-load-path.tst
+share/octave/${PKGVERSION}/etc/tests/fixed/load-path/shadowed-builtin/quad.m
+share/octave/${PKGVERSION}/etc/tests/fixed/load-path/shadowed-corelib/plot.m
 share/octave/${PKGVERSION}/etc/tests/fixed/local-functions/local-functions.tst
 share/octave/${PKGVERSION}/etc/tests/fixed/local-functions/local_function_eval.m
 share/octave/${PKGVERSION}/etc/tests/fixed/logical-index.tst
