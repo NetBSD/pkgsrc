@@ -1,5 +1,4 @@
+Standalone portable version of OpenBSD's signify(1), based on Leah
+Neukirchen's outils.
 The signify utility creates and verifies cryptographic signatures.
-A signature verifies the integrity of a message
-
-This version of signify is part of outils, a portable collection of
-non-standard OpenBSD tools.
+A signature verifies the integrity of a message.

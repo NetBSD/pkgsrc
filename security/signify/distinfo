@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/07/14 18:24:21 vins Exp $
+$NetBSD: distinfo,v 1.5 2025/10/19 20:34:04 vins Exp $
 
-BLAKE2s (outils-0.14.tar.gz) = cb4ca5717787012432ffb487837e4bde72fa8d749e63937b9fc5e1ac20faac27
-SHA512 (outils-0.14.tar.gz) = 615fc7678492efed47bde73f5589f39e3ca9a3019a9bdee2b48074155af0e692728d0bc80607c3ceb93bc6d3fc5fbfa47c3427e652da0e1a1610c08639a5ee33
-Size (outils-0.14.tar.gz) = 281863 bytes
-SHA1 (patch-Makefile) = 1d4ed8ff1a8d728eecab09f1dfebba95d7c461ea
-SHA1 (patch-src_liboutils_minmax.h) = 123c67e825d38758e8d56139f75cb983c4115e08
-SHA1 (patch-src_liboutils_sha2.c) = 03182d6019efd9d60ff05eee9cef8de53632caa8
+BLAKE2s (signify-20250520.tar.xz) = e007a8d26b9b654ae9ffe0fecad2950fdf29a48fa9cfd98280b81a4f59c846a8
+SHA512 (signify-20250520.tar.xz) = daa5a7b1d223d6e2c39d9d46c112afb17997bb9cbb4b08458e7030ded6815cf7f401c9fa1edabb137d6a56d6d2aa8d10ab6b8b3627c071a197110ea1909ef0a1
+Size (signify-20250520.tar.xz) = 79832 bytes
