@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/10/19 03:53:33 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/19 04:32:34 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc15-gnat-15.2.0
@@ -273,8 +273,8 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--without-system-zlib
 .endif
 
-.include "../../archivers/zstd/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
+#.include "../../archivers/zstd/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

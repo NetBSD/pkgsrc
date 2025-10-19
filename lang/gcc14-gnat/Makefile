@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/10/18 05:31:22 dkazankov Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/19 04:32:17 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc14-gnat-14.3.0
@@ -280,8 +280,17 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} ${PKGBASE} \( -type f -or -type l \) -print | ${SORT};
 
-.include "../../archivers/zstd/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
+CHECK_BUILTIN.zlib:= yes
+.include "../../devel/zlib/builtin.mk"
+CHECK_BUILTIN.zlib:= no
+.if ${USE_BUILTIN.zlib:tl} == yes
+CONFIGURE_ARGS+=	--with-system-zlib
+.else
+CONFIGURE_ARGS+=	--without-system-zlib
+.endif
+
+#.include "../../archivers/zstd/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
