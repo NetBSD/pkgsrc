@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26354 2025/10/19 18:38:28 wiz Exp $
+$NetBSD: TODO,v 1.26355 2025/10/19 18:39:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1099,7 +1099,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
-	o py-aiostream-0.7.1
 	o py-beets-2.5.1
 	o py-cassa-1.11.0
 	o py-certbot-5.1.0
