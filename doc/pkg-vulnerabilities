@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.632 2025/10/17 08:00:36 kikadf Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.633 2025/10/19 10:45:35 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28650,3 +28650,11 @@ quickjs<20250913	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-6249
 quickjs<20250913	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-62496
 radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60358
 webmin-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-61541
+ImageMagick6<6.9.13.32	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62171
+ImageMagick<7.1.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62171
+git-lfs<3.7.1	symlink-attack	https://nvd.nist.gov/vuln/detail/CVE-2025-26625
+radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60359
+radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60360
+radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60361
+squid<7.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-62168
+xpdf<4.06	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11896
