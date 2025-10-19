@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6168 2025/10/19 18:17:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6169 2025/10/19 18:18:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8922,3 +8922,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gnuplot to 6.0.3 [adam 2025-10-19]
 	Updated math/octave to 10.3.0 [adam 2025-10-19]
 	Updated graphics/glm to 1.0.2 [wiz 2025-10-19]
+	Updated x11/libxkbcommon to 1.12.1 [wiz 2025-10-19]
