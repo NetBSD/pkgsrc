@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6159 2025/10/19 03:54:01 dkazankov Exp $
+$NetBSD: CHANGES-2025,v 1.6160 2025/10/19 03:56:25 dkazankov Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8908,3 +8908,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.6.1 [schmonz 2025-10-18]
 	Updated lang/rust-bin to 1.90.0 [wiz 2025-10-18]
 	Updated lang/gcc15-gnat to 15.2.0nb1 [dkazankov 2025-10-19]
+	Updated lang/gcc15-gnat-libs to 15.2.0nb2 [dkazankov 2025-10-19]
