@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6167 2025/10/19 17:40:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6168 2025/10/19 18:17:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8921,3 +8921,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/icinga2 to 2.15.1 [adam 2025-10-19]
 	Updated graphics/gnuplot to 6.0.3 [adam 2025-10-19]
 	Updated math/octave to 10.3.0 [adam 2025-10-19]
+	Updated graphics/glm to 1.0.2 [wiz 2025-10-19]
