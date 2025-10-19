@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6184 2025/10/19 20:43:45 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6185 2025/10/19 21:12:09 jym Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8938,3 +8938,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.14.1 [wiz 2025-10-19]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.5.2 [wiz 2025-10-19]
 	Updated security/signify to 20250520 [vins 2025-10-19]
+	Added mail/getmail5 version 5.16 [jym 2025-10-19]
