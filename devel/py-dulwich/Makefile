@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2025/10/02 14:45:09 adam Exp $
+# $NetBSD: Makefile,v 1.70 2025/10/20 07:18:41 adam Exp $
 
-DISTNAME=	dulwich-0.24.2
+DISTNAME=	dulwich-0.24.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0 OR gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust-[0-9]*:../../devel/py-setuptools-rust
-DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.25:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.2.2:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-fastimport-[0-9]*:../../devel/py-fastimport
 TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
 TEST_DEPENDS+=	${PYPKGPREFIX}-geventhttpclient-[0-9]*:../../net/py-geventhttpclient
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 313
+.if ${PYTHON_VERSION} < 312
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
 .endif
 
