@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2025/10/18 17:25:57 wiz Exp $
+# $NetBSD: Makefile,v 1.349 2025/10/20 13:12:23 jperkin Exp $
 
 DISTNAME=	rustc-1.90.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -291,7 +291,7 @@ DISTFILES:=		${DISTFILES} ${RUST_STAGE0} ${RUST_STD_STAGE0}
 # x86_64-sun-solaris bootstrap and comment out the overrides.
 #
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-RUST_STAGE0_VER=	1.87.0
+RUST_STAGE0_VER=	1.89.0
 RUST_ARCH:=		x86_64-unknown-illumos
 RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE0}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
