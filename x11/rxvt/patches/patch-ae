@@ -1,8 +1,26 @@
-$NetBSD: patch-ae,v 1.6 2003/03/28 10:55:22 wiz Exp $
+$NetBSD: patch-ae,v 1.7 2025/10/20 18:32:10 vins Exp $
 
---- src/logging.h.orig	Tue Oct  1 06:33:47 2002
+* Check for lastlogx struct support.
+* Define RXVT_LASTLOGX_FILE.
+
+--- src/logging.h.orig	2002-10-01 04:33:47.000000000 +0000
 +++ src/logging.h
-@@ -31,4 +31,13 @@
+@@ -15,6 +15,14 @@
+ # endif
+ # include <pwd.h>
+ 
++#if defined(HAVE_STRUCT_LASTLOGX) && !defined(RXVT_LASTLOGX_FILE)
++# if defined(__NetBSD__) && defined(HAVE_UTMPX_H)
++# define RXVT_LASTLOGX_FILE _PATH_LASTLOGX
++# else
++# define RXVT_LASTLOGX_FILE "@VARBASE@/log/lastlogx"
++# endif
++#endif
++
+ # ifdef RXVT_UTMP_SYSV
+ #  ifndef USER_PROCESS
+ #   define USER_PROCESS		7
+@@ -31,4 +39,13 @@
  
  #include "logging.intpro"		/* PROTOS for internal routines */
  #endif
