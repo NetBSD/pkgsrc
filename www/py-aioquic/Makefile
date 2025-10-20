@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/04/14 13:14:02 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/20 09:16:37 adam Exp $
 
-DISTNAME=	aioquic-1.2.0
+DISTNAME=	aioquic-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioquic/}
 
