@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 12:56:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/10/20 07:22:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -74,6 +74,9 @@ ${PYSITELIB}/tablib/formats/_ods.pyo
 ${PYSITELIB}/tablib/formats/_rst.py
 ${PYSITELIB}/tablib/formats/_rst.pyc
 ${PYSITELIB}/tablib/formats/_rst.pyo
+${PYSITELIB}/tablib/formats/_sql.py
+${PYSITELIB}/tablib/formats/_sql.pyc
+${PYSITELIB}/tablib/formats/_sql.pyo
 ${PYSITELIB}/tablib/formats/_tsv.py
 ${PYSITELIB}/tablib/formats/_tsv.pyc
 ${PYSITELIB}/tablib/formats/_tsv.pyo
