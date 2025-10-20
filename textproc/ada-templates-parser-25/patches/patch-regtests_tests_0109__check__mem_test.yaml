@@ -1,0 +1,9 @@
+$NetBSD: patch-regtests_tests_0109__check__mem_test.yaml,v 1.1 2025/10/20 10:20:12 dkazankov Exp $
+
+There is no gnatmem tool in recent GNAT FSF versions
+
+--- regtests/tests/0109_check_mem/test.yaml.orig	2024-08-23 18:53:29.000000000 +0300
++++ regtests/tests/0109_check_mem/test.yaml
+@@ -0,0 +1,2 @@
++control:
++- [SKIP, "True", "There is no gnatmem tool in recent GNAT FSF versions"]
