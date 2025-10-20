@@ -1,10 +1,19 @@
-$NetBSD: patch-am,v 1.1 2008/04/03 22:33:00 tonnerre Exp $
+$NetBSD: patch-am,v 1.2 2025/10/20 18:32:10 vins Exp $
 
-Remove the default display :0 (solves CVE-2008-1142)
+* Remove the default display :0 (solves CVE-2008-1142)
+* Replace deprecated XKeycodeToKeysym. 
 
---- src/init.c.orig	2002-12-04 06:21:39.000000000 +0100
+--- src/init.c.orig	2002-12-04 05:21:39.000000000 +0000
 +++ src/init.c
-@@ -532,14 +532,13 @@ rxvt_init_resources(rxvt_t *r, int argc,
+@@ -33,6 +33,7 @@
+ 
+ #include "../config.h"		/* NECESSARY */
+ #include "rxvt.h"		/* NECESSARY */
++#include <X11/XKBlib.h>		/* XKB */
+ #include "init.h"
+ 
+ #include <signal.h>
+@@ -532,14 +533,13 @@ rxvt_init_resources(rxvt_t *r, int argc,
  /*
   * Open display, get options/resources and create the window
   */
@@ -21,7 +30,7 @@ Remove the default display :0 (solves CVE-2008-1142)
  	val = rxvt_malloc(5 + STRLEN(rs[Rs_display_name]));
  	STRCPY(val, "unix");
  	STRCAT(val, rs[Rs_display_name]);
-@@ -550,7 +549,9 @@ rxvt_init_resources(rxvt_t *r, int argc,
+@@ -550,7 +550,9 @@ rxvt_init_resources(rxvt_t *r, int argc,
  
      if (r->Xdisplay == NULL
  	&& (r->Xdisplay = XOpenDisplay(rs[Rs_display_name])) == NULL) {
@@ -32,3 +41,12 @@ Remove the default display :0 (solves CVE-2008-1142)
  	exit(EXIT_FAILURE);
      }
  
+@@ -1016,7 +1018,7 @@ rxvt_get_ourmods(rxvt_t *r)
+ 	for (j = map->max_keypermod; j--; k++) {
+ 	    if (kc[k] == 0)
+ 		break;
+-	    switch (XKeycodeToKeysym(r->Xdisplay, kc[k], 0)) {
++	    switch (XkbKeycodeToKeysym(r->Xdisplay, kc[k], 0, 0)) {
+ 	    case XK_Num_Lock:
+ 		r->h->ModNumLockMask = modmasks[i - 1];
+ 		/* FALLTHROUGH */

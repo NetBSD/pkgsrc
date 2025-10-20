@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/24 06:55:41 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/20 18:32:10 vins Exp $
 bin/rxvt
 man/man1/rxvt.1
+share/applications/rxvt.desktop
 share/examples/rxvt/app-defaults/Rxvt
 @pkgdir lib
 @pkgdir include
