@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/07/24 13:18:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/20 14:21:48 adam Exp $
 
-DISTNAME=	resolvelib-1.2.0
+DISTNAME=	resolvelib-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/resolvelib/}
