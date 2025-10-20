@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/10/19 04:32:17 dkazankov Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/20 14:22:51 dkazankov Exp $
 
 DISTNAME=	gcc-${PKGVERSION_NOREV}
 PKGNAME=	gcc14-gnat-14.3.0
@@ -47,7 +47,8 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 
 USE_GCC_BOOTSTRAP=	no
 
-.if ${OPSYS} == NetBSD
+# New bootstrapper works starting from 10.0 only - needs __sigaction_siginfo
+.if ${OPSYS} == NetBSD && ${OPSYS_VERSION} >= 099982
 BOOT_DISTNAME=		gcc-bootstrap-${MACHINE_GNU_PLATFORM}-10.5.0.tar.bz2
 SITES.${BOOT_DISTNAME}=	${MASTER_SITE_BACKUP}
 
