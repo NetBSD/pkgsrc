@@ -1,12 +1,15 @@
-$NetBSD: patch-dbinc_atomic.h,v 1.2 2015/09/08 18:51:27 joerg Exp $
+$NetBSD: patch-dbinc_atomic.h,v 1.3 2025/10/20 23:31:37 mrg Exp $
 
 Don't define inline functions in the protected namespace.
 This conflicts with Clang builtins.
 
 Avoid overlap with stdatomic.h, the C++ binding uses <atomic>.
 
---- dbinc/atomic.h.orig	2010-04-12 20:25:22.000000000 +0000
-+++ dbinc/atomic.h
+Add missing prototype for atomic_compare_exchange() in one case.
+
+
+--- dbinc/atomic.h.orig	2010-04-12 13:25:22.000000000 -0700
++++ dbinc/atomic.h	2025-10-20 15:41:35.592099178 -0700
 @@ -70,7 +70,7 @@ typedef struct {
   * These have no memory barriers; the caller must include them when necessary.
   */
@@ -47,7 +50,7 @@ Avoid overlap with stdatomic.h, the C++ binding uses <atomic>.
  	db_atomic_t *p, atomic_value_t oldval, atomic_value_t newval)
  {
  	atomic_value_t was;
-@@ -206,7 +202,7 @@ static inline int __atomic_compare_excha
+@@ -206,10 +202,14 @@ static inline int __atomic_compare_excha
  #define	atomic_dec(env, p)	(--(p)->value)
  #define	atomic_compare_exchange(env, p, oldval, newval)		\
  	(DB_ASSERT(env, atomic_read(p) == (oldval)),		\
@@ -56,3 +59,10 @@ Avoid overlap with stdatomic.h, the C++ binding uses <atomic>.
  #else
  #define atomic_inc(env, p)	__atomic_inc(env, p)
  #define atomic_dec(env, p)	__atomic_dec(env, p)
++int atomic_compare_exchange(ENV *env,
++                            db_atomic_t *v,
++                            atomic_value_t oldval,
++			    atomic_value_t newval);
+ #endif
+ #endif
+ 
