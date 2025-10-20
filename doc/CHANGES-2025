@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6193 2025/10/20 09:39:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6194 2025/10/20 10:13:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8953,3 +8953,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-amaranth to 0.5.8 [adam 2025-10-20]
 	Updated graphics/py-tifffile to 2025.10.16 [adam 2025-10-20]
 	Updated devel/py-test-rerunfailures to 16.1 [adam 2025-10-20]
+	Updated www/py-pylsqpack to 0.3.23 [adam 2025-10-20]
+	Updated www/py-rcssmin to 1.2.2 [adam 2025-10-20]
