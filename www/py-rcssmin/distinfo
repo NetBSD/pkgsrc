@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/02/18 10:20:59 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/10/20 10:12:42 adam Exp $
 
-BLAKE2s (rcssmin-1.2.1.tar.gz) = 2ea4bfb645d9fa0f4de5d1d1e91a5dfd9378ddc6d8357148475cfa36a42e6c47
-SHA512 (rcssmin-1.2.1.tar.gz) = ca8e938b64749f593b2dd5d8bb970e7928bbedaa81b8b30213fb009de62b8f83d55bd02093604fb9bcdf3a50470a92f929f0f6990c412a6f4079ea1196da4516
-Size (rcssmin-1.2.1.tar.gz) = 584848 bytes
+BLAKE2s (rcssmin-1.2.2.tar.gz) = 247a2359f19a8d9c4b0a32fccfb45c2d71dda54764299f788773b8f4fe117c0e
+SHA512 (rcssmin-1.2.2.tar.gz) = ccac1625955c587a88a2cc768a613b9c5266225722c225ee9523ba636b18b880fce08430f6a8d88a95223ba52ecb92dd57b1a7d0858e665a797537685f56aa08
+Size (rcssmin-1.2.2.tar.gz) = 587012 bytes
