@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2003/03/27 07:14:50 wiz Exp $
+$NetBSD: patch-ab,v 1.9 2025/10/20 18:32:10 vins Exp $
+
+Remove versioning suffixes from rxvt binary.
 
 --- src/Makefile.in.org	2001-11-30 14:22:56.000000000 +1100
 +++ src/Makefile.in	2003-03-27 13:09:53.000000000 +1100

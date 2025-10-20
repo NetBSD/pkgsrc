@@ -1,6 +1,11 @@
-$NetBSD: patch-af,v 1.9 2004/09/15 18:29:20 minskim Exp $
+$NetBSD: patch-af,v 1.10 2025/10/20 18:32:10 vins Exp $
 
---- configure.orig	Wed Mar 26 00:07:26 2003
+* Add check for stropts.h header and updwtmpx func. 
+* Add check for ut_session in struct utmpx.
+* Fix broken Xlocale support
+* Use posix_openpt() to avoid GNUisms. 
+
+--- configure.orig	2003-03-26 06:07:26.000000000 +0000
 +++ configure
 @@ -9481,6 +9481,7 @@ fi
  
@@ -26,13 +31,10 @@ $NetBSD: patch-af,v 1.9 2004/09/15 18:29:20 minskim Exp $
  	ttyslot \
  
  do
-@@ -13577,6 +13580,67 @@ if test x$rxvt_cv_struct_utmpx_host = xy
+@@ -13580,6 +13583,67 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
  
- cat >>confdefs.h <<\_ACEOF
- #define HAVE_UTMPX_HOST 1
-+_ACEOF
-+
-+fi
+ fi
 +echo "$as_me:$LINENO: checking for session in utmpx struct" >&5
 +echo $ECHO_N "checking for session in utmpx struct... $ECHO_C" >&6
 +if test "${rxvt_cv_struct_utmpx_session+set}" = set; then
@@ -91,6 +93,40 @@ $NetBSD: patch-af,v 1.9 2004/09/15 18:29:20 minskim Exp $
 +
 +cat >>confdefs.h <<\_ACEOF
 +#define HAVE_UTMPX_SESSION 1
- _ACEOF
++_ACEOF
++
++fi
  
  fi
+ 
+@@ -14233,8 +14297,9 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <stdlib.h>
+ #include <X11/Xlib.h>
+-main() {
++int main() {
+ char *p;
+ if ((p = XSetLocaleModifiers("@im=none")) != NULL && *p)
+ exit (XSupportsLocale() ? 0 : 1);
+@@ -14433,8 +14498,8 @@ _ACEOF
+ 
+ fi
+ 
+-echo "$as_me:$LINENO: checking for getpt" >&5
+-echo $ECHO_N "checking for getpt... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for posix_openpt" >&5
++echo $ECHO_N "checking for posix_openpt... $ECHO_C" >&6
+ if test "${rxvt_cv_func_getpt+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -14452,7 +14517,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ int
+ main ()
+ {
+-(void)getpt();
++(void)posix_openpt(0);
+   ;
+   return 0;
+ }

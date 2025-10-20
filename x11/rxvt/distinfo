@@ -1,19 +1,20 @@
-$NetBSD: distinfo,v 1.29 2021/10/26 11:34:27 nia Exp $
+$NetBSD: distinfo,v 1.30 2025/10/20 18:32:10 vins Exp $
 
 BLAKE2s (rxvt-2.7.10.tar.gz) = 94d059d70b764459a4d9e4310790d029f3a3489afa2f641c2f5aa4c41f88792d
 SHA512 (rxvt-2.7.10.tar.gz) = cff86c2f94c533d906b412a949fe754726a0c67d87534b8f9794080898aa20744ee5de6f9109e9de1db14291cb6de7c1c4c1944ec9192e4ea42b0a3fe598b2a1
 Size (rxvt-2.7.10.tar.gz) = 595073 bytes
-SHA1 (patch-aa) = 11656b4c2d9e22055d203669b588b626079aa320
-SHA1 (patch-ab) = 62ef5b28f8842b769829fed0d217a9c54f48c832
-SHA1 (patch-ac) = 57e55b689dbdbc40008a65147d830b4a00611b9d
-SHA1 (patch-ad) = 86047c69fa397d71f3e71ae476bd7addd153729f
-SHA1 (patch-ae) = 76221e9b3cd35a0f40fb6128e0bf9d74d232d907
-SHA1 (patch-af) = 6a4f5cf91bc449f7ecef51695be278074e603c8b
-SHA1 (patch-ag) = 11019ed97892c8bd8834c56433573719892336c4
-SHA1 (patch-ah) = 5e6fcf6b4b4fe1111b97d0b916501ab5855a755a
-SHA1 (patch-aj) = 43ca25f034e6160f3a3dabbf1488df31cdecf95b
-SHA1 (patch-ak) = 83f7ffcf91d671bd8e75e5c063fd1336c0e08ed6
-SHA1 (patch-al) = 7107ec12205d0a5011a5828f8d30fbd577de41b7
-SHA1 (patch-am) = db69ba3b6754454613aa4aec61c1b033d7e013ae
-SHA1 (patch-src_command.c) = 50a7e36e97232af7bfc92e3e41b73e4c88e1605b
-SHA1 (patch-src_rxvt.h) = 86db6ffc24f1133771b6e94275a9edab07b97437
+SHA1 (patch-aa) = 45b158d92a232929212517ecedf1d00e42fc9d21
+SHA1 (patch-ab) = 832d24e2f9d6d3279e1bec10e4a540fa86f03231
+SHA1 (patch-ac) = a0913e56217f52d9b42e1d2d06852755c3e8d981
+SHA1 (patch-ad) = 433b4319a4e0e03075166e537f2d96fe1cb0c992
+SHA1 (patch-ae) = 66fcd0de76e1b926b1142a9ea859cf4e8c88eb26
+SHA1 (patch-af) = b73fc6b18741d5d73ecafa5360dcfcd9c6751b2c
+SHA1 (patch-ag) = 1ee04d95d656fcefe326604a8472d75f2a76998b
+SHA1 (patch-ah) = 21175cfb935932a4ac7c31970e37f0c3d92fba51
+SHA1 (patch-aj) = 1340c62cf6d869de803bde78b621683fb4167fb0
+SHA1 (patch-ak) = b21fe83ab42fdff2cf52cb25a933350c0b1d7902
+SHA1 (patch-al) = b36ec2e7fd40500a1cc0c5912a4043d6a33c3c00
+SHA1 (patch-am) = 9d99279b8f6d1e11777b8c9cfbc569cc95c2cd9f
+SHA1 (patch-src_command.c) = 6433f4fea5946c58af8f11ed96ec693982f9e344
+SHA1 (patch-src_feature.h) = e594de7b1ead0cab250dea5f6c3ffd7ca2722bec
+SHA1 (patch-src_rxvt.h) = a1c5e326e554d89a0f2f9d5aa81151d4fbd8a485

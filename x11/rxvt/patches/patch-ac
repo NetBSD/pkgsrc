@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.8 2004/09/15 18:29:20 minskim Exp $
+$NetBSD: patch-ac,v 1.9 2025/10/20 18:32:10 vins Exp $
 
---- autoconf/configure.in.orig	Thu Mar  6 20:32:27 2003
+* Check for stropts.h header and updwtmpx func.
+* Check for ut_session in struct utmpx.
+
+--- autoconf/configure.in.orig	2003-03-07 02:32:27.000000000 +0000
 +++ autoconf/configure.in
 @@ -393,6 +393,7 @@ AC_CHECK_HEADERS( \
  	sys/ioctl.h \
@@ -18,11 +21,10 @@ $NetBSD: patch-ac,v 1.8 2004/09/15 18:29:20 minskim Exp $
  	ttyslot \
  )
  dnl# Note: On NetBSD, openpty() exists in libutil.  Don't pull it in
-@@ -648,6 +650,14 @@ AC_CACHE_CHECK(for host in utmpx struct,
- rxvt_cv_struct_utmpx_host=yes, rxvt_cv_struct_utmpx_host=no)])
+@@ -649,6 +651,14 @@ rxvt_cv_struct_utmpx_host=yes, rxvt_cv_s
  if test x$rxvt_cv_struct_utmpx_host = xyes; then
    AC_DEFINE(HAVE_UTMPX_HOST, 1, Define if struct utmpx contains ut_host)
-+fi
+ fi
 +AC_CACHE_CHECK(for session in utmpx struct, rxvt_cv_struct_utmpx_session,
 +[AC_TRY_COMPILE([#include <sys/types.h>
 +#include <utmpx.h>],
@@ -30,6 +32,7 @@ $NetBSD: patch-ac,v 1.8 2004/09/15 18:29:20 minskim Exp $
 +rxvt_cv_struct_utmpx_session=yes, rxvt_cv_struct_utmpx_session=no)])
 +if test x$rxvt_cv_struct_utmpx_session = xyes; then
 +  AC_DEFINE(HAVE_UTMPX_SESSION, 1, Define if struct utmpx contains ut_session)
- fi
++fi
  ) dnl# AC_CHECK_HEADER(utmpx.h
+ 
  

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2025/10/11 10:18:32 martin Exp $
+# $NetBSD: Makefile,v 1.69 2025/10/20 18:32:10 vins Exp $
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/}
 
@@ -11,6 +11,10 @@ COMMENT=		Low memory usage xterm replacement that supports color
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		YES
+
+BUILD_DEFS+=		VARBASE
+
+USE_TOOLS+=		grep tbl
 
 CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-wtmp \
@@ -37,6 +41,12 @@ CONFIGURE_ARGS+=	--enable-utmp \
 CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_PREFIX.libXpm}/include/X11
 CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths+=	src/feature.h src/logging.h src/rxvt.h
+SUBST_VARS.paths=	PREFIX VARBASE
+SUBST_MESSAGE.paths=	Replacing path placeholders.
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS:M*BSD} || ${OPSYS} == "Darwin"
@@ -51,23 +61,18 @@ CFLAGS.SunOS+=	-DSunOS
 # Make sure _NETBSD_SOURCE is defined for updlastlogx
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-14.*) || !empty(CC_VERSION:Mgcc-15.*)
-CFLAGS+=	-Wno-implicit-function-declaration -Wno-implicit-int
-.endif
-
-post-patch:
-	${MV} ${WRKSRC}/src/feature.h  ${WRKSRC}/src/feature.h.orig
-	${SED} < ${WRKSRC}/src/feature.h.orig > ${WRKSRC}/src/feature.h \
-		-e "s:/usr/lib/X11/app-defaults:${PREFIX}/lib/X11/app-defaults:"
-
 EGDIR=			share/examples/${PKGBASE}
-INSTALLATION_DIRS+=	${EGDIR}/app-defaults
-CONF_FILES+=		${EGDIR}/app-defaults/Rxvt ${PREFIX}/lib/X11/app-defaults/Rxvt
+INSTALLATION_DIRS+=	${EGDIR}/app-defaults share/applications
+CONF_FILES+=		${EGDIR}/app-defaults/Rxvt	\
+			${PREFIX}/lib/X11/app-defaults/Rxvt
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/Rxvt ${DESTDIR}${PREFIX}/${EGDIR}/app-defaults
+	${INSTALL_DATA} ${FILESDIR}/Rxvt		\
+		${DESTDIR}${PREFIX}/${EGDIR}/app-defaults
+	${INSTALL_DATA} ${FILESDIR}/rxvt.desktop	\
+		${DESTDIR}${PREFIX}/share/applications
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

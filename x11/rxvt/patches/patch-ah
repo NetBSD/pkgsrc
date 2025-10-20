@@ -1,6 +1,9 @@
-$NetBSD: patch-ah,v 1.7 2004/09/15 17:55:53 minskim Exp $
+$NetBSD: patch-ah,v 1.8 2025/10/20 18:32:10 vins Exp $
 
---- src/ptytty.c.orig	2002-09-19 02:40:39.000000000 -0500
+* Make sure stropts.h gets included.
+* Use posix_openpt() to avoid GNUisms.
+
+--- src/ptytty.c.orig	2002-09-19 07:40:39.000000000 +0000
 +++ src/ptytty.c
 @@ -46,7 +46,7 @@
  #ifdef HAVE_SYS_IOCTL_H
@@ -11,3 +14,12 @@ $NetBSD: patch-ah,v 1.7 2004/09/15 17:55:53 minskim Exp $
  # include <sys/stropts.h>      /* for I_PUSH */
  #endif
  
+@@ -102,7 +102,7 @@ rxvt_get_pty(int *fd_tty, const char **t
+ 	extern char    *ptsname();
+ 
+ #  ifdef PTYS_ARE_GETPT
+-	pfd = getpt();
++	pfd = posix_openpt(O_RDWR | O_NOCTTY);
+ #  else
+ 	pfd = open("/dev/ptmx", O_RDWR | O_NOCTTY, 0);
+ #  endif
