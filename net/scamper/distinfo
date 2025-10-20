@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/06/05 06:31:37 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/10/20 18:37:13 bsiegert Exp $
 
-BLAKE2s (scamper-cvs-20250603.tar.gz) = c775304ca229fec4c47e881b744bf09478fdeac6087979a48f3f818d9f390516
-SHA512 (scamper-cvs-20250603.tar.gz) = e88021c9fff04526afe3c170e140d2101cc86b33c5ca35f4d95479080c7576c1234b3985f0841ae92a53d5a217792a0c64ab0245510733bd26d15bb1e692d238
-Size (scamper-cvs-20250603.tar.gz) = 3255542 bytes
+BLAKE2s (scamper-cvs-20251020.tar.gz) = 58a0dc0d1373cd2d1c40b3ed7342026e75ef7b06d4ae1bc2d44ed72415d1b461
+SHA512 (scamper-cvs-20251020.tar.gz) = 05aa3e2916adbdb06b4c5b3cb842b80a311429a00cad81495864483a9bcd91bbf3cc4de3c6c96c0be1a0987d64e4024c2f6deb8d041fa52d3fac05d514b84b61
+Size (scamper-cvs-20251020.tar.gz) = 3291401 bytes
