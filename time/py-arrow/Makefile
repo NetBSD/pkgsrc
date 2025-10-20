@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2025/02/23 20:16:03 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/10/20 10:22:53 adam Exp $
 
-DISTNAME=	arrow-1.3.0
+DISTNAME=	arrow-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arrow/}
 
@@ -13,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.7.0:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-types-python-dateutil>=2.8.10:../../time/py-types-python-dateutil
+DEPENDS+=	${PYPKGPREFIX}-tzdata>=0:../../time/py-tzdata
 TEST_DEPENDS+=	${PYPKGPREFIX}-dateparser>=1.0.0:../../time/py-dateparser
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz>=2021.1:../../time/py-pytz
 TEST_DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.0.0:../../converters/py-simplejson
