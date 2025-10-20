@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/09/13 12:06:11 dkazankov Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/20 10:20:12 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-25.0.0
@@ -47,6 +47,15 @@ CONFIGURE_ARGS+=		ENABLE_SHARED=false
 
 BUILD_TARGET=		build
 BUILD_MAKE_FLAGS+=	GPROPTS=${GPRBUILD_OPTIONS:Q}
+
+TEST_TARGET=	test
+
+.if ${PKGSRC_RUN_TEST:tl} == "yes"
+.include "../../lang/python/tool.mk"
+.endif
+
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-core>=22.6.0:../../devel/py-e3-core
+TEST_DEPENDS+=	${PYPKGPREFIX}-e3-testsuite>=25.0:../../devel/py-e3-testsuite
 
 CHECK_PIE_SKIP+=	${GNAT_PKGBASE}/bin/*
 
