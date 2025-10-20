@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6199 2025/10/20 14:28:44 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6200 2025/10/20 17:11:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8964,3 +8964,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-smb to 1.2.13 [adam 2025-10-20]
 	Updated devel/py-resolvelib to 1.2.1 [adam 2025-10-20]
 	Updated graphics/sane-backends to 1.4.0 [triaxx 2025-10-20]
+	Updated devel/py-cython to 3.1.5 [adam 2025-10-20]
+	Updated devel/py-pylint to 4.0.2 [adam 2025-10-20]
