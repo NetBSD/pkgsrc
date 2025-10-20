@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/08/30 22:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/20 19:49:12 tnn Exp $
 
-DISTNAME=	deskflow-1.23.0
-PKGREVISION=	2
+DISTNAME=	deskflow-1.24.0
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=deskflow/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,7 +28,9 @@ DISTFILES+=		toml-${TOMLPP_VERSION}.hpp
 SITES.toml-${TOMLPP_VERSION}.hpp=	\
 			-https://raw.githubusercontent.com/marzer/tomlplusplus/refs/tags/v${TOMLPP_VERSION}/toml.hpp
 
-CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOCS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_USER_DOCS=OFF
+# Tests on at least OSX require elevated privileges to interact with for example the clipboard
+CMAKE_CONFIGURE_ARGS+=	-DSKIP_BUILD_TESTS=ON
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure

@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.4 2025/08/12 17:05:10 tnn Exp $
+$NetBSD: distinfo,v 1.5 2025/10/20 19:49:12 tnn Exp $
 
 BLAKE2s (CLI11-2.5.0.hpp) = 2a27af60fd6ccb1d1d5883c415a7432277544287a29d69dec2f92dc79de22518
 SHA512 (CLI11-2.5.0.hpp) = 1440f3500126e2edfb8e52811339a80721509446a2725e845961b7d41a42e0726b6a91cfe714b75684b3fa41b44c2b578af2f7b94746e5ef1a24e2f211b939f3
 Size (CLI11-2.5.0.hpp) = 444182 bytes
-BLAKE2s (deskflow-1.23.0.tar.gz) = 3221c3c84e71d60e1040734643fe752c1566e2d297a2f8dd8840914a3943c363
-SHA512 (deskflow-1.23.0.tar.gz) = b65aa09374ae40b74336fbef851e3aa4334573f6935dbd15c01cfd29637440e46d8815dbb137a382f89e6bf99d4a9c371740140b5a49f534dc856fbae3182d86
-Size (deskflow-1.23.0.tar.gz) = 1825112 bytes
+BLAKE2s (deskflow-1.24.0.tar.gz) = 15d92e22a47d9812a9b76e809f04ab3366e46f8f6035205a782b77112b980ae3
+SHA512 (deskflow-1.24.0.tar.gz) = fce477239d5aa11d20c95ba43a97e36b58c5548db40035557c73f295650a0f08c862a867cccfdd39f7a0594c1207d2ab17b982212c7f0cd5182e7db4ab0b7e48
+Size (deskflow-1.24.0.tar.gz) = 1848123 bytes
 BLAKE2s (toml-3.4.0.hpp) = 8d715a2b4fd6648d5a40ff0f8e2462d9488608da8efe052c5df0516a86b29799
 SHA512 (toml-3.4.0.hpp) = b434408b483f3ce308c63d48922f2dacfaac95be9031056118486b230123a3bdc8303e191c0dc787dc22bcc3a1777fe94057638b6c10da9620163665481c4d0d
 Size (toml-3.4.0.hpp) = 485931 bytes
-SHA1 (patch-src_lib_base_String.h) = 403de91490a20aa46bc298207b246c58381d3599
-SHA1 (patch-src_lib_client_Client.h) = 3faecc7dd7bf378c384d2e63f4f7bee4edd2ffcb
+SHA1 (patch-cmake_Libraries.cmake) = 037ac3fdff42849d414db7e8551b3ac027d35964
+SHA1 (patch-src_lib_base_Log.cpp) = dad72b1c3181c4b3bf7ca95ec65c661eed13c1b0
+SHA1 (patch-src_lib_base_String.h) = d22d8582bf82befee28255746630642a1152dc64
 SHA1 (patch-src_lib_deskflow_CMakeLists.txt) = 9edeedd98c6e4c89d50626813a19c3a09b7e23da
-SHA1 (patch-src_lib_deskflow_KeyMap.cpp) = 960b28a1a56709975e6c3d75a8d57ebf0c2d1f2e
-SHA1 (patch-src_lib_server_Server.h) = 1784efe6dfa7c580f902e57d153cb7fe6c6492a1
+SHA1 (patch-src_lib_platform_XWindowsClipboard.cpp) = 62fc73ff96d20334c7904c58bbc8c15c54f73ef2
