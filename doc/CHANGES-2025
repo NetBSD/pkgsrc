@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6196 2025/10/20 11:22:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6197 2025/10/20 12:28:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8959,3 +8959,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-types-python-dateutil to 2.9.0.20251008 [adam 2025-10-20]
 	Updated time/py-cftime to 1.6.5 [adam 2025-10-20]
 	Updated devel/py-faker to 37.11.0 [adam 2025-10-20]
+	Updated sysutils/ansible to 12.1.0 [adam 2025-10-20]
+	Updated www/py-rjsmin to 1.2.5 [adam 2025-10-20]
