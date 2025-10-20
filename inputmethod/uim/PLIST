@@ -1,17 +1,12 @@
-@comment $NetBSD: PLIST,v 1.28 2021/03/30 17:01:49 ryoon Exp $
+@comment $NetBSD$
 bin/uim-fep
 bin/uim-fep-tick
 bin/uim-help
-bin/uim-im-switcher-gtk
 bin/uim-im-switcher-gtk3
-bin/uim-input-pad-ja
 bin/uim-input-pad-ja-gtk3
 bin/uim-module-manager
-bin/uim-pref-gtk
 bin/uim-pref-gtk3
 bin/uim-sh
-bin/uim-toolbar-gtk
-bin/uim-toolbar-gtk-systray
 bin/uim-toolbar-gtk3
 bin/uim-toolbar-gtk3-systray
 bin/uim-xim
@@ -26,7 +21,6 @@ include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
 include/uim/version.h
-lib/gtk-2.0/2.10.0/immodules/im-uim.la
 lib/gtk-3.0/3.0.0/immodules/im-uim.la
 lib/libuim-custom.la
 lib/libuim-scm.la
@@ -44,11 +38,8 @@ lib/uim/plugin/libuim-skk.la
 lib/uim/plugin/libuim-socket.la
 lib/uim/plugin/libuim-sqlite3.la
 lib/uim/plugin/libuim-xkb.la
-libexec/uim-candwin-gtk
 libexec/uim-candwin-gtk3
-libexec/uim-candwin-horizontal-gtk
 libexec/uim-candwin-horizontal-gtk3
-libexec/uim-candwin-tbl-gtk
 libexec/uim-candwin-tbl-gtk3
 libexec/uim-helper-server
 man/man1/uim-xim.1
