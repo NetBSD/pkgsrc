@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/07/24 13:18:59 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/10/20 14:21:48 adam Exp $
 
-BLAKE2s (resolvelib-1.2.0.tar.gz) = dc723ca8d613d1e5daabceb6427926c392a1e12270a5faa06134675cf8f69f0a
-SHA512 (resolvelib-1.2.0.tar.gz) = 81aaa3c72e3fe4dd0f9d92c8408b5456379803416b502a1e862b3a8d5e4616c82f69499c7ae9ed9065dc25216934c1a6143ba02b000d6680072629f2f1d5d02d
-Size (resolvelib-1.2.0.tar.gz) = 23448 bytes
+BLAKE2s (resolvelib-1.2.1.tar.gz) = 0408568a7981291f22de3d21154f6e869dda4803de54eb1429e7e9f576f485ee
+SHA512 (resolvelib-1.2.1.tar.gz) = 1b5d5bab358ca4c79ec9f548f5f908c73c4f82a862e80776c117243fcb3a9ae0ea4c7e4b4ed4cd0ff04e04371ae80b9b5cd2afa29c565cf8da66e85f95244728
+Size (resolvelib-1.2.1.tar.gz) = 24575 bytes
