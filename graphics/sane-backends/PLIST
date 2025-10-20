@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2024/09/24 15:48:37 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.42 2025/10/20 14:28:24 triaxx Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -398,6 +398,7 @@ ${PLIST.nls}share/locale/pl/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/pt/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/tr/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sane-backends.mo
 @pkgdir var/lock

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.101 2025/08/30 22:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/10/20 14:28:24 triaxx Exp $
 
-PKGREVISION=	8
 .include "Makefile.common"
-MASTER_SITES=	${MASTER_SITE_GITLAB:=sane-project/backends/uploads/83bdbb6c9a115184c2d48f1fdc6847db/}
+MASTER_SITES=   ${MASTER_SITE_GITLAB:=-/project/429008/uploads/843c156420e211859e974f78f64c3ea3/}
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 
 DISTNAME=	sane-backends-${SANE_VERSION}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=		msgfmt msgmerge pkg-config
 USE_PKGLOCALEDIR=	YES
