@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6200 2025/10/20 17:11:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6201 2025/10/20 18:37:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8966,3 +8966,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/sane-backends to 1.4.0 [triaxx 2025-10-20]
 	Updated devel/py-cython to 3.1.5 [adam 2025-10-20]
 	Updated devel/py-pylint to 4.0.2 [adam 2025-10-20]
+	Updated net/scamper to 20251020 [bsiegert 2025-10-20]
