@@ -1,0 +1,7 @@
+Portable version of OpenBSD's acme-client(1), a secure ACME / 
+Let's Encrypt client.
+
+acme-client looks in its configuration for a domain section
+corresponding to the handle given as command line argument, and uses
+that configuration to retrieve an X.509 certificate which can be used
+to provide domain name validation.w
