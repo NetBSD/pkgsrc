@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2025/05/05 08:39:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/20 19:49:12 tnn Exp $
 bin/deskflow
-bin/deskflow-client
-bin/deskflow-server
-man/man1/deskflow-client.1
-man/man1/deskflow-server.1
+bin/deskflow-core
+man/man1/deskflow-core.1
 man/man1/deskflow.1
 share/applications/org.deskflow.deskflow.desktop
 share/icons/hicolor/512x512/apps/org.deskflow.deskflow.png
