@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/20 19:09:17 vins Exp $
+bin/acme-client
+man/man1/acme-client.1
+man/man5/acme-client.conf.5
+share/examples/acme-client/acme-client.conf
