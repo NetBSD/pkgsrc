@@ -1,7 +1,22 @@
-$NetBSD: patch-al,v 1.1 2006/06/20 13:07:20 martin Exp $
+$NetBSD: patch-al,v 1.2 2025/10/20 18:32:10 vins Exp $
 
---- src/screen.c.orig	2003-03-23 17:56:06.000000000 +0100
-+++ src/screen.c	2006-06-20 14:52:21.000000000 +0200
+* Fix 64-bit crash inside rxvt_selection_send().
+  See https://gnats.netbsd.org/33680
+
+--- src/screen.c.orig	2003-03-23 16:56:06.000000000 +0000
++++ src/screen.c
+@@ -3211,9 +3211,9 @@ rxvt_selection_adjust_kanji(rxvt_t *r)
+ 	    && IS_MULTI1(r->screen.rend[r1][c1 - 1]))
+ 	    r->selection.beg.col--;
+     }
+-    if (r->selection.end.col < r->TermWin.ncol) {
++    c1 = r->selection.end.col;
++    if (0 < c1 && c1 < r->TermWin.ncol) {
+ 	r1 = r->selection.end.row + r->TermWin.saveLines;
+-	c1 = r->selection.end.col;
+ 	if (IS_MULTI1(r->screen.rend[r1][c1 - 1])
+ 	    && IS_MULTI2(r->screen.rend[r1][c1]))
+ 	    r->selection.end.col++;
 @@ -3515,11 +3515,12 @@ rxvt_selection_send(rxvt_t *r, const XSe
  {
      XSelectionEvent ev;

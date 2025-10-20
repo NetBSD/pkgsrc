@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=RXvt
+GenericName=Terminal
+Comment=Virtual terminal emulator for X11
+Categories=System;Terminal;
+Exec=rxvt
+Icon=terminal
+Path=
+Type=Application
+Terminal=false

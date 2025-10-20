@@ -1,4 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2004/09/15 18:29:20 minskim Exp $
+$NetBSD: patch-aj,v 1.2 2025/10/20 18:32:10 vins Exp $
+
+* Bulid functions using struct utmp only when the struct utmp is
+  available
 
 --- src/logging.intpro.orig	Wed Mar 26 00:12:28 2003
 +++ src/logging.intpro
