@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6187 2025/10/20 05:51:11 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6188 2025/10/20 06:02:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8941,3 +8941,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/getmail5 version 5.16 [jym 2025-10-19]
 	Removed mail/getmail successor mail/getmail6 [jym 2025-10-19]
 	Updated www/hugo to 0.151.2 [triaxx 2025-10-20]
+	Updated devel/py-setuptools_scm to 9.2.2 [adam 2025-10-20]
+	Updated sysutils/py-psutil to 7.1.1 [adam 2025-10-20]
