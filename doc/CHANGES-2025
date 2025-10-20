@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6194 2025/10/20 10:13:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6195 2025/10/20 10:24:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8955,3 +8955,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-rerunfailures to 16.1 [adam 2025-10-20]
 	Updated www/py-pylsqpack to 0.3.23 [adam 2025-10-20]
 	Updated www/py-rcssmin to 1.2.2 [adam 2025-10-20]
+	Updated time/py-arrow to 1.4.0 [adam 2025-10-20]
+	Updated time/py-types-python-dateutil to 2.9.0.20251008 [adam 2025-10-20]
