@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 08:49:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/20 11:19:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,6 +7,8 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/cftime/__init__.py
 ${PYSITELIB}/cftime/__init__.pyc
 ${PYSITELIB}/cftime/__init__.pyo
+${PYSITELIB}/cftime/_cftime.c
+${PYSITELIB}/cftime/_cftime.pyx
 ${PYSITELIB}/cftime/_cftime.so
 ${PYSITELIB}/cftime/_strptime.py
 ${PYSITELIB}/cftime/_strptime.pyc
