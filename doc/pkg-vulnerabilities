@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.633 2025/10/19 10:45:35 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.634 2025/10/20 08:44:31 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28658,3 +28658,4 @@ radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60360
 radare2<6.0.0	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-60361
 squid<7.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-62168
 xpdf<4.06	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11896
+bftpd-[0-9]*	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-11947
