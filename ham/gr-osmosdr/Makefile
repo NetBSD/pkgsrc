@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2025/10/09 07:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/10/21 12:36:48 gdt Exp $
 
 DISTNAME=	gr-osmosdr-0.2.6
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	ham
 # main git repo doesn't allow snapshots to be downloaded
 #MASTER_SITES=	https://git.osmocom.org/gr-osmosdr/snapshot/
@@ -13,6 +13,7 @@ HOMEPAGE=	https://git.osmocom.org/gr-osmosdr
 COMMENT=	SDR Hardware support for OsmoSDR and so many more
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	pkg-config
 # for docs/doxygen/update_pydoc.py
 TOOL_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
