@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.29 2025/03/31 11:33:15 sborrill Exp $
+# $NetBSD: Makefile,v 1.30 2025/10/21 13:42:06 bouyer Exp $
 #
 
-# VERSION is set in xentool415/version.mk
+# VERSION is set in xentool420/version.mk
 #PKGREVISION=		1
-.include		"../../sysutils/xentools415/version.mk"
+.include		"../../sysutils/xentools420/version.mk"
 
-PKGNAME=		xenstoretools-${VERSION}
+PKGNAME=		xenstoretools-4.20_${VERSION}
 CATEGORIES=		sysutils
 
 MAINTAINER=		sborrill@NetBSD.org
 HOMEPAGE=		http://xen.org/
-COMMENT=		Xenstore Tools for Xen 4.15.x
+COMMENT=		Xenstore Tools for Xen 4.20.x
 
 LICENSE=		gnu-gpl-v2
-DISTINFO_FILE=		${.CURDIR}/../../sysutils/xentools415/distinfo
-PATCHDIR=		${.CURDIR}/../../sysutils/xentools415/patches
-INSTALL_DIRS=		tools/xenstore tools/libs/toolcore tools/libs/store
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/xentools420/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/xentools420/patches
+INSTALL_DIRS=		tools/xs-clients tools/libs/toolcore tools/libs/store
 INSTALL_DIRS+=		tools/libs/toollog tools/libs/call tools/libs/evtchn
 INSTALL_DIRS+=		tools/libs/gnttab tools/libs/foreignmemory
 INSTALL_DIRS+=		tools/libs/devicemodel tools/libs/ctrl tools/libs/guest
@@ -72,6 +72,44 @@ SUBST_SED.rpath-link+=		-e 's/-rpath-link=/-rpath-link,/g'
 
 INSTALLATION_DIRS=	bin include lib
 
+post-extract:
+	${MV} ${WRKDIR}/${QEMU_DIST} ${WRKSRC}/tools/qemu-xen
+#${MV} ${WRKDIR}/${QEMUTRAD_DIST} ${WRKSRC}/tools/qemu-xen-traditional
+
+pre-build:
+	rm -f ${WRKSRC}/check/check_x11_devel
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xenstore-chmod.1.pod |\
+	    pod2man -n xenstore-chmod >${WRKDIR}/xenstore-chmod.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xenstore-ls.1.pod |\
+	    pod2man -n xenstore-ls >${WRKDIR}/xenstore-ls.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xenstore.1.pod |\
+	    pod2man -n xenstore >${WRKDIR}/xenstore.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xentop.1.pod |\
+	    pod2man -n xentop >${WRKDIR}/xentop.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xentrace.8.pod |\
+	    pod2man -n xentrace >${WRKDIR}/xentrace.8
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xl.cfg.5.pod.in |\
+	    pod2man -n xl.cfg >${WRKDIR}/xl.cfg.5
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xl.conf.5.pod |\
+	    pod2man -n xl.conf >${WRKDIR}/xl.conf.5
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xl.1.pod.in |\
+	    pod2man -n xl >${WRKDIR}/xl.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xlcpupool.cfg.5.pod |\
+	    pod2man -n xlcpupool.cfg >${WRKDIR}/xlcpupool.cfg.5
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${WRKSRC}/docs/man/xl-disk-configuration.5.pod |\
+	    pod2man -n xl-disk-configuration >${WRKDIR}/xl-disk-configuration.5
+
+
 do-build:
 	cd ${WRKSRC}/ && ${BUILD_MAKE_CMD} build-tools-public-headers
 	cd ${WRKSRC}/tools/libs/toolcore &&                             \
@@ -95,7 +133,7 @@ do-build:
 	cd ${WRKSRC}/tools/libs/guest &&                                \
 		${BUILD_MAKE_CMD} all
 	${RUN}${_ULIMIT_CMD}                                            \
-	cd ${WRKSRC}/tools/xenstore  &&                                 \
+	cd ${WRKSRC}/tools/xs-clients  &&                                 \
 		${BUILD_MAKE_CMD} clients
 
 pre-install:

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/06/28 16:28:06 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/10/21 13:42:06 bouyer Exp $
 bin/xenstore
 bin/xenstore-chmod
 bin/xenstore-control
@@ -9,6 +9,7 @@ bin/xenstore-read
 bin/xenstore-rm
 bin/xenstore-watch
 bin/xenstore-write
+include/xen-barrier.h
 include/xencall.h
 include/xenctrl.h
 include/xenctrl_compat.h
@@ -22,7 +23,6 @@ include/xenstore-compat/xs_lib.h
 include/xenstore.h
 include/xenstore_lib.h
 include/xentoolcore.h
-include/xentoolcore_internal.h
 include/xentoollog.h
 include/xs.h
 include/xs_lib.h
@@ -32,8 +32,8 @@ lib/libxencall.so.1
 lib/libxencall.so.1.3
 lib/libxenctrl.a
 lib/libxenctrl.so
-lib/libxenctrl.so.4.15
-lib/libxenctrl.so.4.15.0
+lib/libxenctrl.so.4.20
+lib/libxenctrl.so.4.20.0
 lib/libxendevicemodel.a
 lib/libxendevicemodel.so
 lib/libxendevicemodel.so.1
@@ -52,12 +52,12 @@ lib/libxengnttab.so.1
 lib/libxengnttab.so.1.2
 lib/libxenguest.a
 lib/libxenguest.so
-lib/libxenguest.so.4.15
-lib/libxenguest.so.4.15.0
+lib/libxenguest.so.4.20
+lib/libxenguest.so.4.20.0
 lib/libxenstore.a
 lib/libxenstore.so
-lib/libxenstore.so.3.0
-lib/libxenstore.so.3.0.3
+lib/libxenstore.so.4
+lib/libxenstore.so.4.0
 lib/libxentoolcore.a
 lib/libxentoolcore.so
 lib/libxentoolcore.so.1
