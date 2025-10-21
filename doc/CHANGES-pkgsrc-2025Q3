@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.7 2025/10/21 02:25:53 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.8 2025/10/21 14:58:29 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -35,3 +35,7 @@ devel/libatomic: Build fix
 
 Pullup ticket #7015 - requested by bsiegert
 devel/SDL2: build fix
+
+Pullup ticket #7016 - requested by bouyer
+sysutils/xenkernel418: Security fix
+sysutils/xenkernel420: Security fix
