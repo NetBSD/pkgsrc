@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.636 2025/10/21 18:59:06 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.637 2025/10/21 21:19:59 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28668,3 +28668,4 @@ libwebsockets<4.4.2		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-20
 mbedtls<3.6.5		side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-54764
 mongodb<7.0.25		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-11979
 trufflehog<3.90.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-41390
+mbedtls<3.6.5		padding-oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-59438
