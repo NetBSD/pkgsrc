@@ -1,0 +1,17 @@
+$NetBSD: patch-cmake_Modules_GnuradioConfig.cmake.in,v 1.1 2025/10/21 12:52:24 gdt Exp $
+
+boost::system exorcism
+
+https://github.com/gnuradio/gnuradio/issues/7949
+
+--- cmake/Modules/GnuradioConfig.cmake.in.orig	2025-10-21 12:29:16.906735291 +0000
++++ cmake/Modules/GnuradioConfig.cmake.in
+@@ -13,7 +13,7 @@ list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE
+ find_dependency(spdlog)
+ find_dependency(MPLIB)
+ 
+-set(BOOST_REQUIRED_COMPONENTS date_time program_options system regex thread)
++set(BOOST_REQUIRED_COMPONENTS date_time program_options regex thread)
+ 
+ if(NOT ENABLE_TESTING)
+     set(ENABLE_TESTING
