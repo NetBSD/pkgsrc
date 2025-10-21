@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2025/09/02 05:19:09 adam Exp $
+# $NetBSD: Makefile,v 1.109.2.1 2025/10/21 02:25:02 maya Exp $
 
 DISTNAME=	SDL2-2.32.10
 CATEGORIES=	devel
@@ -10,6 +10,10 @@ MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer - cross-platform multimedia library
 LICENSE=	zlib
+
+# For GNU sort. This package requires -V option of GNU sort.
+TOOL_DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
+TOOLS_PLATFORM.sort=	# empty
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
