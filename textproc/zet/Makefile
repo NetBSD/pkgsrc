@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2024/10/24 07:50:14 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/21 09:07:33 wiz Exp $
 
-DISTNAME=	zet-1.0.0
-PKGREVISION=	1
+DISTNAME=	zet-2.0.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yarrow/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	b6a0c67f6ac76fb7bf8234951678b77fbac12d76
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/yarrow/zet/
 COMMENT=	CLI utility to find the union, intersection, etc of files
 LICENSE=	apache-2.0 OR mit
+
+# https://github.com/yarrow/zet/issues/12
+BROKEN=		"Does not build with rust 1.90"
 
 .include "cargo-depends.mk"
 
