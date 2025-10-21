@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.158 2025/10/21 07:53:10 wiz Exp $
+$NetBSD: distinfo,v 1.159 2025/10/21 07:53:59 wiz Exp $
 
 BLAKE2s (boost_1_89_0.tar.bz2) = 4463aaf9d80b5ede6a9fbac6edf7d5f81d4bc636893f6742f6ddd8b31876004b
 SHA512 (boost_1_89_0.tar.bz2) = 5153fe92372c40afb400482c5dcb6043d3f64ad58b8e579d8f8a9a9c3dc66737a567ad8ccaa45c49ea02166ef9283c4904700d25971742d9b5fdf39b21fb2aa7
@@ -13,7 +13,7 @@ SHA1 (patch-boost_config_stdlib_libcpp.hpp) = d57ee228c9dfa43665d261e7423fd10122
 SHA1 (patch-boost_config_stdlib_libstdcpp3.hpp) = 52ebedd5e80b3a8c257eccb28cd2db76cb1ca01e
 SHA1 (patch-boost_core_noncopyable.hpp) = 63a3c2fc0bc85af77ff8bc17ad3a21ef0bc398c1
 SHA1 (patch-boost_core_uncaught__exceptions.hpp) = eba82062750f4e09bcef467476e8c4abd125f7b6
-SHA1 (patch-boost_dll_detail_posix_program__location__impl.hpp) = 4a5b062bf32a35b1525bad505d425be6f4aaa03e
+SHA1 (patch-boost_dll_detail_posix_program__location__impl.hpp) = 29e79353cd8269e215a9db8dc6c1c84c058b8dfc
 SHA1 (patch-boost_math_tools_config.hpp) = 1b467a38081fe5e2e3004bca9a6aec7106edb006
 SHA1 (patch-boost_math_tools_promotion.hpp) = d1079940594f7ffe7e70db6f61bba633b8fb31e5
 SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64db72590e
