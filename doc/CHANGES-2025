@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6208 2025/10/21 08:16:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6209 2025/10/21 10:06:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8976,3 +8976,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/sccache to 0.12.0 [adam 2025-10-21]
 	Updated security/ccid to 1.7.0 [adam 2025-10-21]
 	Updated devel/cargo-binutils to 0.4.0 [wiz 2025-10-21]
+	Added sysutils/lima version 1.2.1 [leot 2025-10-21]
