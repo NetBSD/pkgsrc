@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6207 2025/10/21 07:36:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6208 2025/10/21 08:16:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8975,3 +8975,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rtorrent to 0.16.1 [adam 2025-10-21]
 	Updated devel/sccache to 0.12.0 [adam 2025-10-21]
 	Updated security/ccid to 1.7.0 [adam 2025-10-21]
+	Updated devel/cargo-binutils to 0.4.0 [wiz 2025-10-21]
