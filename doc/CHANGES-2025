@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6209 2025/10/21 10:06:01 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6210 2025/10/21 11:24:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8977,3 +8977,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ccid to 1.7.0 [adam 2025-10-21]
 	Updated devel/cargo-binutils to 0.4.0 [wiz 2025-10-21]
 	Added sysutils/lima version 1.2.1 [leot 2025-10-21]
+	Updated net/rclone to 1.71.2 [adam 2025-10-21]
+	Updated devel/py-argcomplete to 3.6.3 [adam 2025-10-21]
