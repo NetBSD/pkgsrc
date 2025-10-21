@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6212 2025/10/21 12:06:38 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6213 2025/10/21 13:16:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8982,3 +8982,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs20 to 20.19.5 [adam 2025-10-21]
 	Updated lang/nodejs22 to 22.21.0 [adam 2025-10-21]
 	Updated ham/uhd to 4.9.0.1 [gdt 2025-10-21]
+	Updated sysutils/xenkernel418 to 20250701nb1 [bouyer 2025-10-21]
+	Updated sysutils/xenkernel420 to 20250821nb1 [bouyer 2025-10-21]
