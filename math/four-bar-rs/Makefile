@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/08/30 22:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/10/21 08:54:16 wiz Exp $
 
 DISTNAME=	four-bar-rs-7.0.4
 PKGREVISION=	5
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
 LICENSE=	gnu-agpl-v3
+
+# https://github.com/KmolYuan/four-bar-rs/issues/7
+BROKEN=		"Does not build with rust 1.90"
 
 .include "cargo-depends.mk"
 
