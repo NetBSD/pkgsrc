@@ -1,6 +1,7 @@
-$NetBSD: patch-boost_dll_detail_posix_program__location__impl.hpp,v 1.1 2025/10/21 07:53:10 wiz Exp $
+$NetBSD: patch-boost_dll_detail_posix_program__location__impl.hpp,v 1.2 2025/10/21 07:53:59 wiz Exp $
 
 Fix build error in this file.
+https://github.com/boostorg/dll/issues/106
 
 --- boost/dll/detail/posix/program_location_impl.hpp.orig	2025-10-21 07:45:26.595305483 +0000
 +++ boost/dll/detail/posix/program_location_impl.hpp
