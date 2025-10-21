@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.6 2025/10/18 12:40:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.7 2025/10/21 02:25:53 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -27,3 +27,11 @@ databases/mysql80-server: Build fix
 Pullup ticket #7010 - requested by maya
 fonts/fontconfig: Build fix
 
+Pullup ticket #7013 - requested by bsiegert
+sysutils/py-borgbackup: Functionality fix
+
+Pullup ticket #7014 - requested by bsiegert
+devel/libatomic: Build fix
+
+Pullup ticket #7015 - requested by bsiegert
+devel/SDL2: build fix
