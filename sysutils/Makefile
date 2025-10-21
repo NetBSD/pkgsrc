@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1167 2025/10/06 00:09:12 thorpej Exp $
+# $NetBSD: Makefile,v 1.1168 2025/10/21 10:05:46 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -434,6 +434,7 @@ SUBDIR+=	libtree
 SUBDIR+=	libudev
 SUBDIR+=	libvirt
 SUBDIR+=	lilo
+SUBDIR+=	lima
 SUBDIR+=	lla
 SUBDIR+=	lnav
 SUBDIR+=	lnetd
