@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.634 2025/10/20 08:44:31 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.635 2025/10/21 12:32:16 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28332,8 +28332,8 @@ fluent-bit<1.8.0	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-46879
 fluent-bit<2.2.2	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-23722
 fluent-bit<3.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50608
 fluent-bit<3.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50609
-fluent-bit-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29477
-fluent-bit-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29478
+fluent-bit<4.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29477
+fluent-bit<4.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-29478
 fluent-bit-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-26455
 freeimage-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-47992
 freeimage-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-47993
