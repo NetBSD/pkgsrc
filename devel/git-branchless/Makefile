@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/04/17 21:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/21 08:22:13 wiz Exp $
 
 DISTNAME=	git-branchless-0.10.0
 PKGREVISION=	4
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/arxanas/git-branchless/
 COMMENT=	High-velocity, monorepo-scale workflow for Git
 LICENSE=	mit OR apache-2.0
+
+# https://github.com/arxanas/git-branchless/issues/1585
+BROKEN=		"Does not build with rust 1.90"
 
 .include "cargo-depends.mk"
 
