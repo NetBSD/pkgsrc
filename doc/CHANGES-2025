@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6213 2025/10/21 13:16:27 bouyer Exp $
+$NetBSD: CHANGES-2025,v 1.6214 2025/10/21 13:45:16 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8984,3 +8984,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/uhd to 4.9.0.1 [gdt 2025-10-21]
 	Updated sysutils/xenkernel418 to 20250701nb1 [bouyer 2025-10-21]
 	Updated sysutils/xenkernel420 to 20250821nb1 [bouyer 2025-10-21]
+	Updated sysutils/xenstoretools to 4.20_20250821 [bouyer 2025-10-21]
+	Removed sysutils/xenkernel415 [bouyer 2025-10-21]
+	Removed sysutils/xentools415 [bouyer 2025-10-21]
