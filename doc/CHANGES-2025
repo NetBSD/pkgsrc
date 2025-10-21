@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6214 2025/10/21 13:45:16 bouyer Exp $
+$NetBSD: CHANGES-2025,v 1.6215 2025/10/21 18:33:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8987,3 +8987,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xenstoretools to 4.20_20250821 [bouyer 2025-10-21]
 	Removed sysutils/xenkernel415 [bouyer 2025-10-21]
 	Removed sysutils/xentools415 [bouyer 2025-10-21]
+	Updated security/defguard to 1.5.1 [adam 2025-10-21]
+	Updated security/defguard-gateway to 1.5.1 [adam 2025-10-21]
+	Updated security/defguard-proxy to 1.5.1 [adam 2025-10-21]
