@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6210 2025/10/21 11:24:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6211 2025/10/21 11:58:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8979,3 +8979,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/lima version 1.2.1 [leot 2025-10-21]
 	Updated net/rclone to 1.71.2 [adam 2025-10-21]
 	Updated devel/py-argcomplete to 3.6.3 [adam 2025-10-21]
+	Updated lang/nodejs20 to 20.19.5 [adam 2025-10-21]
+	Updated lang/nodejs22 to 22.21.0 [adam 2025-10-21]
