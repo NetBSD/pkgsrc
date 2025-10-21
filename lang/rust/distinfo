@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.190 2025/10/20 13:12:23 jperkin Exp $
+$NetBSD: distinfo,v 1.191 2025/10/21 08:54:19 jperkin Exp $
 
 BLAKE2s (rust-1.89.0-aarch64-apple-darwin.tar.gz) = f88fb0fd3e1204d91dc89948bc6ae38fd212d36d2973521bc3d47e72c6d13456
 SHA512 (rust-1.89.0-aarch64-apple-darwin.tar.gz) = e9ec8d8f60d1f38e01e389ec5d4f45f22c186b0fde9e2f68b7e869f4f2e54d049f7790d6863a85ad9335d317668dea52a39f055b2e30f17a0c3824d9f01d2ab8
@@ -139,7 +139,7 @@ SHA1 (patch-vendor_libc-0.2.169_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = c5e
 SHA1 (patch-vendor_libc-0.2.169_src_unix_solarish_mod.rs) = e02c56106a092b4f2e27427ea8b5d96bf437c356
 SHA1 (patch-vendor_libc-0.2.171_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = adfc737db618e2fdbe99aafaee3e7802ee04ca26
 SHA1 (patch-vendor_libc-0.2.172_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = 3127715d2eb1e0ce148d67323b25dd0bc07b67ad
-SHA1 (patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs) = 56b3e6273dc61a8b4c0d4e84abeeba0527c73dd1
+SHA1 (patch-vendor_libc-0.2.172_src_unix_solarish_mod.rs) = 9365cab6fd25dd077ed56f6105cde22a4a3356dd
 SHA1 (patch-vendor_libc-0.2.174_src_unix_bsd_netbsdlike_netbsd_riscv64.rs) = bcfaa5a86f5a5d837cc467dd5ac62434fcedc518
 SHA1 (patch-vendor_line-index-0.1.2_src_lib.rs) = 30aa5c82630ea0e8969abb527c11640712efba1e
 SHA1 (patch-vendor_lzma-sys-0.1.20_config.h) = 4849052ddb2f04f539fd7060fc1b43cc3acf99c4
