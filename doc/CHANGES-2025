@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6225 2025/10/22 13:16:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6226 2025/10/22 14:32:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9010,3 +9010,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/fontforge to 20251009 [adam 2025-10-22]
 	Updated devel/pangomm to 2.46.4 [adam 2025-10-22]
 	Updated devel/mm-common to 1.0.7 [adam 2025-10-22]
+	Updated net/bind918 to 9.18.41 [taca 2025-10-22]
