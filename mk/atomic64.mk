@@ -1,4 +1,4 @@
-# $NetBSD: atomic64.mk,v 1.11 2025/06/01 15:19:03 he Exp $
+# $NetBSD: atomic64.mk,v 1.12 2025/10/22 15:25:07 nat Exp $
 #
 # This Makefile fragment is included by packages that require 64-bit atomic
 # operations, and will attempt to set the appropriate architecture-specific
@@ -20,6 +20,7 @@ CFLAGS+=	-march=i586
 .if ${OPSYS} == "NetBSD" && \
     (${MACHINE_ARCH} == "hppa" || \
     ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "m68ksf" || \
     ${MACHINE_ARCH} == "mipsel" || \
     ${MACHINE_ARCH} == "mipseb" || \
     ${MACHINE_ARCH} == "powerpc" || \
