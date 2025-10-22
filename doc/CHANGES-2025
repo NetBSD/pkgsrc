@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6235 2025/10/22 16:44:46 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6236 2025/10/22 16:46:02 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9020,3 +9020,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/php-oauth to 2.0.10 [taca 2025-10-22]
 	Updated www/typo3-13 to 13.4.19 [taca 2025-10-22]
 	Updated mail/ruby-mime-types-data to 3.2025.0924 [taca 2025-10-22]
+	Updated x11/worker to 5.2.2 [vins 2025-10-22]
