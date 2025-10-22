@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/04/15 09:23:36 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/22 13:16:02 adam Exp $
 
-DISTNAME=	mm-common-1.0.6
+DISTNAME=	mm-common-1.0.7
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mm-common/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gzip pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 REPLACE_PYTHON+=	util/build_scripts/dist-build-scripts.py
 REPLACE_PYTHON+=	util/build_scripts/dist-changelog.py
 REPLACE_PYTHON+=	util/build_scripts/doc-reference.py
@@ -23,6 +21,6 @@ REPLACE_PYTHON+=	util/doc_install.py
 REPLACE_PYTHON+=	util/doc_postprocess.py
 REPLACE_PYTHON+=	util/mm-common-get.in
 
-.include "../../lang/python/application.mk"
 .include "../../devel/meson/build.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
