@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/09/15 14:43:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/10/22 16:16:47 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
@@ -15762,6 +15762,7 @@ ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Range/Single.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Range/Subnet.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Range/Type.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Service/BinaryMath.php
+${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Service/NumberInChunks.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Service/RangesFromBoundaryCalculator.php
 ${CC_WEBDIR}/concrete/vendor/mlocati/ip-lib/src/Service/UnsignedIntegerMath.php
 ${CC_WEBDIR}/concrete/vendor/mobiledetect/mobiledetectlib/LICENSE
