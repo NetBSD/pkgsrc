@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26368 2025/10/22 14:34:55 taca Exp $
+$NetBSD: TODO,v 1.26369 2025/10/22 14:39:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -1208,7 +1208,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sqlrelay-2.1.1
 	o squeak-6.0
 	o squeak-vm-4.10.2.2765
-	o squid-7.2 [security release]
 	o squidclamav-7.2
 	o ssh-askpass-1.2.4.1
 	o stalin-0.11
