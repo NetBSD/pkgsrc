@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2025/08/16 06:37:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/10/22 06:51:10 adam Exp $
 bin/protoc
 bin/protoc-${PKGVERSION}.0
 bin/protoc-gen-upb
@@ -34,6 +34,7 @@ include/google/protobuf/compiler/java/helpers.h
 include/google/protobuf/compiler/java/java_features.pb.h
 include/google/protobuf/compiler/java/name_resolver.h
 include/google/protobuf/compiler/java/names.h
+include/google/protobuf/compiler/java/names_internal.h
 include/google/protobuf/compiler/java/options.h
 include/google/protobuf/compiler/kotlin/generator.h
 include/google/protobuf/compiler/notices.h
@@ -126,6 +127,8 @@ include/google/protobuf/message_lite.h
 include/google/protobuf/metadata.h
 include/google/protobuf/metadata_lite.h
 include/google/protobuf/micro_string.h
+include/google/protobuf/os_macros_restore.inc
+include/google/protobuf/os_macros_undef.inc
 include/google/protobuf/parse_context.h
 include/google/protobuf/port.h
 include/google/protobuf/port_def.inc
