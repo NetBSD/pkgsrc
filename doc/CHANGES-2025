@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6218 2025/10/22 06:51:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6219 2025/10/22 07:18:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8996,3 +8996,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/pcsc-lite to 2.4.0 [adam 2025-10-22]
 	Updated devel/protobuf to 33.0 [adam 2025-10-22]
 	Updated devel/py-protobuf to 6.33.0 [adam 2025-10-22]
+	Updated devel/py-click-option-group to 0.5.9 [adam 2025-10-22]
+	Updated textproc/py-rapidjson to 1.22 [adam 2025-10-22]
+	Updated textproc/py-types-docutils to 0.22.2.20251006 [adam 2025-10-22]
