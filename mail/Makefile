@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.674 2025/05/26 15:49:57 taca Exp $
+# $NetBSD: Makefile,v 1.675 2025/10/22 05:33:48 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -102,7 +102,7 @@ SUBDIR+=	fix-mime-charset
 SUBDIR+=	fml
 SUBDIR+=	fml4
 SUBDIR+=	fromto
-SUBDIR+=	getmail
+SUBDIR+=	getmail5
 SUBDIR+=	getmail6
 SUBDIR+=	gld
 SUBDIR+=	gmime3
