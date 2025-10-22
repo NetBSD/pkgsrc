@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/10/05 19:26:18 js Exp $
+# $NetBSD: Makefile,v 1.45 2025/10/22 16:29:22 taca Exp $
 
 MODNAME=		oauth
-PECL_VERSION=		2.0.9
+PECL_VERSION=		2.0.10
 CATEGORIES+=		security
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
