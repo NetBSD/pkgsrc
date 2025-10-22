@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/05/05 22:22:11 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/10/22 07:21:48 jnemeth Exp $
 
 BLAKE2s (boost_1_77_0.tar.bz2) = 11f9651d7078e67a69a97f46dce3131af1f1b3ba5976c26435cd17a66161cbf1
 SHA512 (boost_1_77_0.tar.bz2) = 39b45c9b60bc5a2a4c669a4463d1272c1e093376b2fb374d7f20a84ea10a3e23bb04b335a735a83a04575731f874d9bff77e89acd947524b3fbbae1b26ae1f2f
@@ -20,6 +20,16 @@ SHA1 (patch-mysys_kqueue__timers.cc) = dab900cb3314a3f1bf577402a9308537e7d55800
 SHA1 (patch-mysys_stacktrace.cc) = ab0f4ee576b49e179805656dc7f1a43f5c4f16a8
 SHA1 (patch-plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_xcom__vp__platform.h) = 7b815f7e4f40842dc73b3c0fca22aa03035e836e
 SHA1 (patch-plugin_x_CMakeLists.txt) = 26237c28ff35eed1fe6770c0574397f2dfc03538
+SHA1 (patch-plugin_x_client_xprotocol__impl.cc) = 8ef07459c774a4746fd4762c7721d20815d0cb1b
+SHA1 (patch-plugin_x_protocol_plugin_encoder__file__output.h) = 9af907442d460a6d2651fbe9c0c1c8e6155db94f
+SHA1 (patch-plugin_x_protocol_plugin_message__field__chain.cc) = 34729f2ac6683b373453fee3d0de17b8c1daae03
+SHA1 (patch-plugin_x_protocol_plugin_messages__used__by__server.cc) = d148ff33b2b02de56510c73eba925926a948318f
+SHA1 (patch-plugin_x_protocol_stream_decompression__input__stream.h) = 13bd96e0e5cd8c024fa282dacb31201e7d20622a
+SHA1 (patch-plugin_x_src_io_vio__input__stream.h) = 32d921053c50dada1499e07d7a055bc3b25c39b7
+SHA1 (patch-plugin_x_src_prepare__param__handler.cc) = 5d8a68519a4a566779645963fc2a6fe0f387c351
+SHA1 (patch-plugin_x_tests_driver_connector_session__holder.cc) = ce594f0fdacc4501e0e0c78a0b2a2dfbc1051eac
+SHA1 (patch-plugin_x_tests_driver_formatters_message__formatter.cc) = 12db7029d2e47c4d6ffb16175a96af0ab03e8fef
+SHA1 (patch-plugin_x_tests_driver_processor_send__message__block__processor.cc) = 6b9bcbd9cf88f9f7498fba5e22c1d31589743d40
 SHA1 (patch-router_CMakeLists.txt) = da430f15797e07ce108be03dae5d4042e851ca1c
 SHA1 (patch-router_src_harness_include_mysql_harness_net__ts_impl_netif.h) = ec77bf0d80a7b574462cc9249b7c5d1054c33384
 SHA1 (patch-router_src_harness_include_mysql_harness_net__ts_internet.h) = 96576ff19bce9b5c308337015075b31fef836d72
@@ -35,4 +45,5 @@ SHA1 (patch-sql_resourcegroups_platform_thread__attrs__api__apple.cc) = ff155def
 SHA1 (patch-storage_innobase_include_detail_ut_large__page__alloc-linux.h) = 195469587bfc24bc71ffc6814ccbd973170a3946
 SHA1 (patch-storage_ndb_src_common_portlib_NdbHW.cpp) = 6ac23cfd535fa2cf14703cca84a865f93d574263
 SHA1 (patch-storage_ndb_src_ndbapi_NdbEventOperationImpl.cpp) = f254045b12424fed85bfe7d9dc4989c04bf78092
+SHA1 (patch-unittest_gunit_xplugin_xpl_message__helpers.h) = d3fae40c740f27760e07852ab30d5c26c0759cbe
 SHA1 (patch-vio_viosocket.cc) = 6aab7e41f0a34a212c91a61ffe1eb2e74090745e
