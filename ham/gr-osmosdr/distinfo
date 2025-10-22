@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2025/10/21 12:36:48 gdt Exp $
+$NetBSD: distinfo,v 1.13 2025/10/22 14:43:49 gdt Exp $
 
 BLAKE2s (gr-osmosdr-0.2.6.tar.gz) = f8497b5179987bc63b46c36b99e5766ad1b332833ae50b1e935559cebed7edf4
 SHA512 (gr-osmosdr-0.2.6.tar.gz) = 61144e76ae1c7909355ee1a499b72e7243d522fed6b50fc469e2a92f9b49857eba43fdab63d654b80a84a05ece4cc1a821dee9c236aa911840963e26ce8c4c53
 Size (gr-osmosdr-0.2.6.tar.gz) = 268206 bytes
-SHA1 (patch-CMakeLists.txt) = 7b1eca6462bf4016e31c12d575f9073e7a7190d1
+SHA1 (patch-CMakeLists.txt) = 95d54d99f1dd67a515402cd38100a1528b6224cf

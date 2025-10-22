@@ -1,9 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2025/10/22 12:07:56 gdt Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/10/22 14:43:49 gdt Exp $
 
 Cope with boost deprecations.
 
 Sent upstream by email 20251021, because their bugtracker both
-requires and prohibits registrations.
+requires and prohibits registrations.  Filed upstream 20251022 on
+their other bugtracker.
+
+  https://osmocom.org/issues/6870
 
 --- CMakeLists.txt.orig	2024-05-15 17:40:15.000000000 +0000
 +++ CMakeLists.txt
