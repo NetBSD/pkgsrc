@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/22 07:36:20 adam Exp $
+
+BLAKE2s (mdformat-1.0.0.tar.gz) = f62cb85fe25ed2d077fb7aac4f3ace5d0f07bc7b1f15f5324d856bc4aa4b3588
+SHA512 (mdformat-1.0.0.tar.gz) = 149be4018e905b0413243ca4cf52b3a6e392b85d0214c189c1ca89da7e102058abc97824a7d6a6275c01df3d143a450ac855c8ed18d0eb4a1faf48d4dd44389f
+Size (mdformat-1.0.0.tar.gz) = 56953 bytes
