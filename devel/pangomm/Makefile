@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2024/12/27 08:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/10/22 13:14:53 adam Exp $
 
-DISTNAME=	pangomm-2.46.3
-PKGREVISION=	5
+DISTNAME=	pangomm-2.46.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pangomm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,12 +12,11 @@ LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	gtkmm<=2.13.5
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	pango/pangomm.pc.in
-
-USE_CXX_FEATURES+=	c++11
 
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/meson/build.mk"
