@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/02/05 16:11:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/10/22 06:40:26 adam Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -55,6 +55,7 @@ man/man3/pcre2_match_context_free.3
 man/man3/pcre2_match_data_create.3
 man/man3/pcre2_match_data_create_from_pattern.3
 man/man3/pcre2_match_data_free.3
+man/man3/pcre2_next_match.3
 man/man3/pcre2_pattern_convert.3
 man/man3/pcre2_pattern_info.3
 man/man3/pcre2_serialize_decode.3
@@ -162,6 +163,7 @@ share/doc/pcre2/html/pcre2_match_context_free.html
 share/doc/pcre2/html/pcre2_match_data_create.html
 share/doc/pcre2/html/pcre2_match_data_create_from_pattern.html
 share/doc/pcre2/html/pcre2_match_data_free.html
+share/doc/pcre2/html/pcre2_next_match.html
 share/doc/pcre2/html/pcre2_pattern_convert.html
 share/doc/pcre2/html/pcre2_pattern_info.html
 share/doc/pcre2/html/pcre2_serialize_decode.html
