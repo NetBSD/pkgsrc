@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6219 2025/10/22 07:18:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6220 2025/10/22 07:39:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8999,3 +8999,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-click-option-group to 0.5.9 [adam 2025-10-22]
 	Updated textproc/py-rapidjson to 1.22 [adam 2025-10-22]
 	Updated textproc/py-types-docutils to 0.22.2.20251006 [adam 2025-10-22]
+	Added textproc/py-mdformat version 1.0.0 [adam 2025-10-22]
+	Updated devel/py-fakefs to 5.10.0 [adam 2025-10-22]
