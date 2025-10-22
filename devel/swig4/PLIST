@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/04/29 11:59:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/22 12:44:17 adam Exp $
 bin/ccache-swig4.0
 bin/swig4.0
 share/swig/4.0/allkw.swg
@@ -301,21 +301,6 @@ share/swig/4.0/lua/swigmove.i
 share/swig/4.0/lua/typemaps.i
 share/swig/4.0/lua/wchar.i
 share/swig/4.0/math.i
-share/swig/4.0/mzscheme/argcargv.i
-share/swig/4.0/mzscheme/cdata.i
-share/swig/4.0/mzscheme/mzrun.swg
-share/swig/4.0/mzscheme/mzscheme.swg
-share/swig/4.0/mzscheme/std_auto_ptr.i
-share/swig/4.0/mzscheme/std_common.i
-share/swig/4.0/mzscheme/std_deque.i
-share/swig/4.0/mzscheme/std_map.i
-share/swig/4.0/mzscheme/std_pair.i
-share/swig/4.0/mzscheme/std_string.i
-share/swig/4.0/mzscheme/std_unique_ptr.i
-share/swig/4.0/mzscheme/std_vector.i
-share/swig/4.0/mzscheme/stl.i
-share/swig/4.0/mzscheme/swigmove.i
-share/swig/4.0/mzscheme/typemaps.i
 share/swig/4.0/ocaml/carray.i
 share/swig/4.0/ocaml/cdata.i
 share/swig/4.0/ocaml/class.swg
@@ -483,7 +468,6 @@ share/swig/4.0/python/pyhead.swg
 share/swig/4.0/python/pyinit.swg
 share/swig/4.0/python/pyiterators.swg
 share/swig/4.0/python/pymacros.swg
-share/swig/4.0/python/pyname_compat.i
 share/swig/4.0/python/pyopers.swg
 share/swig/4.0/python/pyprimtypes.swg
 share/swig/4.0/python/pyrun.swg
@@ -782,6 +766,7 @@ share/swig/4.0/tcl/tcl8.swg
 share/swig/4.0/tcl/tclapi.swg
 share/swig/4.0/tcl/tclerrors.swg
 share/swig/4.0/tcl/tclfragments.swg
+share/swig/4.0/tcl/tclincludes.swg
 share/swig/4.0/tcl/tclinit.swg
 share/swig/4.0/tcl/tclinterp.i
 share/swig/4.0/tcl/tclkw.swg
