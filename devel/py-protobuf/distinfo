@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.80 2025/09/22 09:37:51 adam Exp $
+$NetBSD: distinfo,v 1.81 2025/10/22 06:51:10 adam Exp $
 
-BLAKE2s (protobuf-6.32.1.tar.gz) = d71f602a955103f658a874a4ac35c4ba910d92162aa3f9341b4eae4c5a981b95
-SHA512 (protobuf-6.32.1.tar.gz) = f8aeb9cdbde385e728f3006d16f26c540a5ec46f7046486b34cdf254a22acdcf6a152791517cd852cfa866809b0b79b3233757c4f898e4768d00b0d902c30776
-Size (protobuf-6.32.1.tar.gz) = 440635 bytes
+BLAKE2s (protobuf-6.33.0.tar.gz) = d4483259b763ccc47bd0311485005aef4d5c34ca612619f1c3338a2b241a99d8
+SHA512 (protobuf-6.33.0.tar.gz) = 9173f832a2e285095ab2e479f7b8155e1005f38cbd385f3752ecd3f68281f1b2f530a12cd784d293263a233fdb94f5f6c5dc988e29fe3345d3e721d8d7ba2dcf
+Size (protobuf-6.33.0.tar.gz) = 443463 bytes
