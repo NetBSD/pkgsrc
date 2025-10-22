@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6222 2025/10/22 10:52:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6223 2025/10/22 12:12:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9004,3 +9004,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added support for m68k softfloat (m68ksf). [nat 2025-10-22]
 	Updated textproc/py-pdf to 6.1.2 [adam 2025-10-22]
 	Updated math/py-patsy to 1.0.2 [adam 2025-10-22]
+	Updated net/unbound to 1.24.1 [he 2025-10-22]
