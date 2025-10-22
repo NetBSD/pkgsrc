@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6226 2025/10/22 14:32:40 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6227 2025/10/22 14:38:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9011,3 +9011,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/pangomm to 2.46.4 [adam 2025-10-22]
 	Updated devel/mm-common to 1.0.7 [adam 2025-10-22]
 	Updated net/bind918 to 9.18.41 [taca 2025-10-22]
+	Updated www/squid7 to 7.2 [taca 2025-10-22]
