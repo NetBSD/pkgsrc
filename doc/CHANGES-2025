@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6228 2025/10/22 16:17:15 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6229 2025/10/22 16:19:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9013,3 +9013,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/bind918 to 9.18.41 [taca 2025-10-22]
 	Updated www/squid7 to 7.2 [taca 2025-10-22]
 	Updated www/php-concrete-cms to 9.4.5 [taca 2025-10-22]
+	Updated net/pear-Net_Sieve to 1.4.8 [taca 2025-10-22]
