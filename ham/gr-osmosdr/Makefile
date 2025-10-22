@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/10/21 12:36:48 gdt Exp $
+# $NetBSD: Makefile,v 1.71 2025/10/22 12:49:24 gdt Exp $
 
 DISTNAME=	gr-osmosdr-0.2.6
 PKGREVISION=	9
@@ -8,14 +8,10 @@ CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=osmocom/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://git.osmocom.org/gr-osmosdr
 COMMENT=	SDR Hardware support for OsmoSDR and so many more
 LICENSE=	gnu-gpl-v2
-
-USE_TOOLS+=	pkg-config
-# for docs/doxygen/update_pydoc.py
-TOOL_DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++11 filesystem
@@ -25,11 +21,14 @@ USE_CXX_FEATURES=	c++11 filesystem
 # are in place for this, as "mixing gcc versions with c++ leads to UB"
 # is already well known.
 
+USE_TOOLS+=	pkg-config
+# for docs/doxygen/update_pydoc.py
+TOOL_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
 .include "../../devel/cmake/build.mk"
-# Suppress warning for developer
-CMAKE_CONFIGURE_ARGS+=	-Wno-dev
-# TODO: make it PKG_OPTION
+# TODO: someday, add option to enable doxygen
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOXYGEN=OFF
+# cmake doesn't find pybind11Config.cmake without being pointed at it
 CMAKE_CONFIGURE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
