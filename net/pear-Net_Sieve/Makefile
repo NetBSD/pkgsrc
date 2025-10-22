@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/02/08 03:49:22 taca Exp $
+# $NetBSD: Makefile,v 1.23 2025/10/22 16:19:47 taca Exp $
 
-DISTNAME=	Net_Sieve-1.4.7
-PKGREVISION=	1
+DISTNAME=	Net_Sieve-1.4.8
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
