@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/10/11 12:47:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/22 13:46:55 jperkin Exp $
 
 .include "dist.mk"
 
@@ -83,7 +83,7 @@ LIBS.NetBSD+=		-lcrypt
 
 PY_VER_SUFFIX=		3.14
 
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 USE_TOOLS+=	gmake
 .endif
 
