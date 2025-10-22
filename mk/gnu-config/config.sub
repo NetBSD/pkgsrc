@@ -1204,7 +1204,7 @@ case $cpu-$vendor in
 			| lm32 \
 			| loongarch32 | loongarch64 | loongarchx32 \
 			| m32c | m32r | m32rle \
-			| m5200 | m68000 | m680[012346]0 | m68360 | m683?2 | m68k \
+			| m5200 | m68000 | m680[012346]0 | m68360 | m683?2 | m68ksf | m68k \
 			| m6811 | m68hc11 | m6812 | m68hc12 | m68hcs12x \
 			| m88110 | m88k | maxq | mb | mcore | mep | metag \
 			| microblaze | microblazeel \
