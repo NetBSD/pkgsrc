@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1545 2025/09/07 08:08:50 dkazankov Exp $
+# $NetBSD: Makefile,v 1.1546 2025/10/22 07:36:20 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1147,6 +1147,7 @@ SUBDIR+=	py-markdown2
 SUBDIR+=	py-markovify
 SUBDIR+=	py-markups
 SUBDIR+=	py-markupsafe
+SUBDIR+=	py-mdformat
 SUBDIR+=	py-mdit-py-plugins
 SUBDIR+=	py-mecab
 SUBDIR+=	py-merge3
