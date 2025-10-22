@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/05/09 05:49:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2025/10/22 13:11:41 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -405,6 +405,7 @@ share/locale/ml/LC_MESSAGES/FontForge.mo
 share/locale/pl/LC_MESSAGES/FontForge.mo
 share/locale/pt/LC_MESSAGES/FontForge.mo
 share/locale/ru/LC_MESSAGES/FontForge.mo
+share/locale/th_TH/LC_MESSAGES/FontForge.mo
 share/locale/tr_TR/LC_MESSAGES/FontForge.mo
 share/locale/uk/LC_MESSAGES/FontForge.mo
 share/locale/vi/LC_MESSAGES/FontForge.mo
