@@ -1,2 +1,4 @@
-Worker is a highly configurable, multilanguage file manager for X11 written
-in C++.  It uses a popular dual panels layout.
+Worker is a highly configurable, multilanguage file manager for X11
+written in C++, with many advanced features and extendable
+configuration. It is designed after Amiga Directory Opus, and uses
+a popular dual panels layout.
