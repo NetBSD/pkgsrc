@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.461 2025/05/06 10:08:37 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.462 2025/10/22 08:37:18 nat Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -149,6 +149,7 @@ GNU_ARCH.i386?=		i486
 GNU_ARCH.i586?=		i486
 GNU_ARCH.i686?=		i486
 GNU_ARCH.m68000?=	m68010
+GNU_ARCH.m68ksf?=	m68k
 GNU_ARCH.mips?=		mipsel
 GNU_ARCH.sh3eb?=	sh
 GNU_ARCH.sh3el?=	shle
@@ -649,6 +650,7 @@ TARGET_OBJECT_FMT?=	${OBJECT_FMT} # XXX
     ${NATIVE_MACHINE_GNU_ARCH} == "arm" || \
     ${NATIVE_MACHINE_ARCH} == "i386" || \
     ${NATIVE_MACHINE_ARCH} == "m68k" || \
+    ${NATIVE_MACHINE_ARCH} == "m68ksf" || \
     ${NATIVE_MACHINE_ARCH} == "m68000" || \
     ${NATIVE_MACHINE_GNU_ARCH} == "sh" || \
     ${NATIVE_MACHINE_GNU_ARCH} == "shle" || \
@@ -661,6 +663,7 @@ NATIVE_APPEND_ELF=	elf
     ${MACHINE_GNU_ARCH} == "arm" || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "m68ksf" || \
     ${MACHINE_ARCH} == "m68000" || \
     ${MACHINE_GNU_ARCH} == "sh" || \
     ${MACHINE_GNU_ARCH} == "shle" || \
@@ -674,6 +677,7 @@ APPEND_ELF=		elf
     ${TARGET_MACHINE_GNU_ARCH} == "arm" || \
     ${TARGET_MACHINE_ARCH} == "i386" || \
     ${TARGET_MACHINE_ARCH} == "m68k" || \
+    ${TARGET_MACHINE_ARCH} == "m68ksf" || \
     ${TARGET_MACHINE_ARCH} == "m68000" || \
     ${TARGET_MACHINE_GNU_ARCH} == "sh" || \
     ${TARGET_MACHINE_GNU_ARCH} == "shle" || \
@@ -688,7 +692,7 @@ NATIVE_APPEND_ABI=	-${NATIVE_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
 APPEND_ABI=		-${MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
 .  endif
 .  if !empty(TARGET_MACHINE_ARCH:Mearm*)
-TARGET_APPEND_ABI=	-${TARGET_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/}
+TARGET_APPEND_ABI=	-${TARGET_MACHINE_ARCH:C/eb//:C/v[4-7]//:S/earm/eabi/:S/m68ksf/m68k/}
 .  endif
 .endif
 
@@ -1051,7 +1055,7 @@ _SYS_VARS.dirs=		WRKDIR DESTDIR PREFIX PKG_SYSCONFBASEDIR
 #
 # Keywords: BROKEN_ON_PLATFORM 32bit
 #
-LP32PLATFORMS=		*-*-earm* *-*-hppa *-*-i386 *-*-m68000 *-*-m68k \
+LP32PLATFORMS=		*-*-earm* *-*-hppa *-*-i386 *-*-m68000 *-*-m68ksf *-*-m68k \
 			*-*-mipseb *-*-mipsel *-*-powerpc *-*-riscv32 \
 			*-*-sparc *-*-vax
 
@@ -1069,7 +1073,7 @@ LP64PLATFORMS=		*-*-aarch64 *-*-aarch64eb *-*-alpha *-*-ia64 \
 #
 # Keywords: BROKEN_ON_PLATFORM little-endian big-endian endian
 #
-_BIGENDIANCPUS=		coldfire hppa m68000 m68k mips64eb mipseb or1k \
+_BIGENDIANCPUS=		coldfire hppa m68000 m68ksf m68k mips64eb mipseb or1k \
 			powerpc powerpc64 sh3eb sparc sparc64
 _LITTLEENDIANCPUS=	alpha i386 ia64 mips64el mipsel powerpc64le riscv32 \
 			riscv64 sh3el vax x86_64
