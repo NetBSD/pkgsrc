@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.637 2025/10/21 21:19:59 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.638 2025/10/22 13:06:20 he Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28669,3 +28669,4 @@ mbedtls<3.6.5		side-channel			https://nvd.nist.gov/vuln/detail/CVE-2025-54764
 mongodb<7.0.25		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-11979
 trufflehog<3.90.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-41390
 mbedtls<3.6.5		padding-oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-59438
+unbound<1.24.1		cache-poisoning			https://www.cve.org/CVERecord?id=CVE-2025-11411
