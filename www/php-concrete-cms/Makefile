@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/09/15 14:43:34 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/22 16:16:47 taca Exp $
 #
 
 DISTNAME=	concrete-cms-${GITHUB_RELEASE}
@@ -6,7 +6,7 @@ PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=concretecms/}
 GITHUB_PROJECT=	concretecms
-GITHUB_RELEASE=	9.4.4
+GITHUB_RELEASE=	9.4.5
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
