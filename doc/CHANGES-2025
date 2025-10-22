@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6231 2025/10/22 16:25:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6232 2025/10/22 16:27:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9016,3 +9016,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/pear-Net_Sieve to 1.4.8 [taca 2025-10-22]
 	Updated archivers/php-pecl-zip to 1.22.7 [taca 2025-10-22]
 	Updated mail/php-mailparse to 3.1.9 [taca 2025-10-22]
+	Updated devel/php-xdebug to 3.4.6 [taca 2025-10-22]
