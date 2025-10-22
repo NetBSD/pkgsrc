@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/10/18 05:31:22 dkazankov Exp $
+# $NetBSD: options.mk,v 1.5 2025/10/22 10:26:17 dkazankov Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc14-gnat
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	gcc-inplace-math gcc-graphite
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	nls
+#PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
