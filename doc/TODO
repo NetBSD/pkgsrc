@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26367 2025/10/22 06:51:31 adam Exp $
+$NetBSD: TODO,v 1.26368 2025/10/22 14:34:55 taca Exp $
 
 Suggested new packages
 ======================
@@ -1160,7 +1160,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
-	o samba-4.23.1
+	o samba-4.23.2
 	o sarg-2.4.0
 	o sasm-3.12.1
 	o sbcl-2.5.9
@@ -1208,13 +1208,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sqlrelay-2.1.1
 	o squeak-6.0
 	o squeak-vm-4.10.2.2765
+	o squid-7.2 [security release]
 	o squidclamav-7.2
 	o ssh-askpass-1.2.4.1
 	o stalin-0.11
 	o stan-math-2.26.1
 	o statist-1.3.0
 	o strace-4.23
-	o strok-2.0.1
+	o strok-2.2.1
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o sup-0.4
@@ -1223,7 +1224,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-lite-9.2.9
 	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
-	o sympa-6.2.72
+	o sympa-6.2.76
 	o syncthing-2.0
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
