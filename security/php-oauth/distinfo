@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/03/05 15:17:10 taca Exp $
+$NetBSD: distinfo,v 1.9 2025/10/22 16:29:22 taca Exp $
 
-BLAKE2s (php-oauth/oauth-2.0.9.tgz) = 6bff849735faa25b625c305ac35d1a3bb18eda89c5f9e1e74e3b0f23bb7f4a12
-SHA512 (php-oauth/oauth-2.0.9.tgz) = 08f779caa0eec4b69334259abc5e1947c0ed3b07aa5859a7305991a73bfdc155d8778b438a8aadf3d2ecf97e43df0ce1849b1535d0b001c43b2d6f8fff676639
-Size (php-oauth/oauth-2.0.9.tgz) = 79419 bytes
+BLAKE2s (php-oauth/oauth-2.0.10.tgz) = 63dd8a39232276e9e7075079543c9d6e0b34a4414751d95a36baa8213a441a07
+SHA512 (php-oauth/oauth-2.0.10.tgz) = 288d03eca7c295f65004023366ccc3e9dc9016a59bf86e16decabf12c36c361e5f12e550fc2d3e16ef2061ac948035456d16989595f42d239308bc39435e94e9
+Size (php-oauth/oauth-2.0.10.tgz) = 79513 bytes
