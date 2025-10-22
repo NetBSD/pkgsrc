@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6224 2025/10/22 12:59:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6225 2025/10/22 13:16:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9007,3 +9007,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/unbound to 1.24.1 [he 2025-10-22]
 	Updated devel/swig4 to 4.4.0 [adam 2025-10-22]
 	Updated x11/gtkmm3 to 3.24.10 [adam 2025-10-22]
+	Updated fonts/fontforge to 20251009 [adam 2025-10-22]
+	Updated devel/pangomm to 2.46.4 [adam 2025-10-22]
+	Updated devel/mm-common to 1.0.7 [adam 2025-10-22]
