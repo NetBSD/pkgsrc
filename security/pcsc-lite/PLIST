@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/12/27 14:39:53 gdt Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/10/22 06:45:13 adam Exp $
 bin/pcsc-spy
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
@@ -6,7 +6,6 @@ include/PCSC/pcsclite.h
 include/PCSC/reader.h
 include/PCSC/winscard.h
 include/PCSC/wintypes.h
-lib/libpcsclite.a
 lib/libpcsclite.so
 lib/libpcsclite.so.1
 lib/libpcsclite_real.so
