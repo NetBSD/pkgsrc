@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2025/05/06 09:38:26 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/10/22 07:21:48 jnemeth Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -15,7 +15,8 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mysql.com/products/cluster/
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=		yes
+.include "../../devel/cmake/build.mk"
+
 USE_LANGUAGES=		c c++03
 USE_CXX_FEATURES=	c++14
 USE_TOOLS+=		bash gmake perl:run python:run bison
@@ -101,8 +102,8 @@ CXXFLAGS+=		-fPIC -DPIC
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DHAVE_SYS_EPOLL_H=NO -DHAVE_EPOLL_CREATE=NO
-CFLAGS.SunOS+=		-DHAVE_CURSES_H
-CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
+CFLAGS.SunOS+=			-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=		-DHAVE_CURSES_H
 
 .include "../../mk/pthread.buildlink3.mk"
 

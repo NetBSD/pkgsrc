@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/08/24 16:36:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/22 07:21:48 jnemeth Exp $
 
 PKGNAME=		${DISTNAME:S/-gpl//}
 PKGREVISION=		9
@@ -94,6 +94,8 @@ REPLACE_SH+=		mysql-test/suite/rpl_nogtid/t/rpl_misc_functions-slave.sh
 REPLACE_SH+=		mysql-test/t/long_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir-master.sh
 REPLACE_SH+=		mysql-test/t/lowercase_mixed_tmpdir_innodb-master.sh
+
+CHECK_WRKREF_SKIP=	share/doc/mysql/INFO_BIN
 
 pre-build:
 	${RM} -f ${WRKSRC}/storage/ndb/mcc/frontend/dojo/dojox/mobile/build/build.sh.orig
