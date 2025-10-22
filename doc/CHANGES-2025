@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6216 2025/10/22 06:36:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6217 2025/10/22 06:45:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -8992,3 +8992,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/defguard-proxy to 1.5.1 [adam 2025-10-21]
 	Updated emulators/qemu to 10.1.2 [adam 2025-10-22]
 	Updated sysutils/qemu-guest-agent to 10.1.2 [adam 2025-10-22]
+	Updated devel/pcre2 to 10.47 [adam 2025-10-22]
+	Updated security/pcsc-lite to 2.4.0 [adam 2025-10-22]
