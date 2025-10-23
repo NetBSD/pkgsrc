@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6244 2025/10/23 14:05:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6245 2025/10/23 14:29:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9049,3 +9049,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-nginx to 5.1.0 [adam 2025-10-23]
 	Updated devel/py-colorlog to 6.10.1 [adam 2025-10-23]
 	Updated net/py-aiormq to 6.9.2 [adam 2025-10-23]
+	Updated devel/py-virtualenv to 20.35.3 [adam 2025-10-23]
+	Updated devel/py-tox to 4.31.0 [adam 2025-10-23]
