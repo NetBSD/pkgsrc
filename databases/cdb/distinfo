@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:09:14 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/10/23 17:07:35 schmonz Exp $
 
-BLAKE2s (cdb-0.75.tar.gz) = f48cc4e973f3ea7133f67156ed3e6254973d6b873bb91286929b7ca1e016e214
-SHA512 (cdb-0.75.tar.gz) = 6faeab91a77457348b58f685e81000b83fb609691317198a06284c5c62dee1e4d6138f90be1e727021f279d740169c175a21b23c96adb39a654e3f7fafdf36c0
-Size (cdb-0.75.tar.gz) = 54162 bytes
-SHA1 (patch-cdbmake.c) = 08dfa3ab166bb7467d022a0ea20cac9426f30368
-SHA1 (patch-tryulong32.c) = 743b562943d4564ca6a23a51dc1962050d083dc1
+BLAKE2s (cdb-20251021.tar.gz) = 48bce6ddbb5e20beb379a9f764fab21bba5499462afffd83b3b10c446ba18455
+SHA512 (cdb-20251021.tar.gz) = dc7b4606a368488e8767df2493c1b4a43e6f89c1c104b6773c5c6591e2565e5156dbbe449143c3bb8b96fb7ad61f9b602ab34ea3531de1b2c86f02910d2be723
+Size (cdb-20251021.tar.gz) = 111952 bytes
+SHA1 (patch-Makefile) = e03b53bf44c9aaa06bda7710819a22207bb8b0ca
+SHA1 (patch-rts.tests) = 8af74673b9bfe3ed2833936db2c96d475a22158d
