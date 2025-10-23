@@ -1,4 +1,4 @@
-Portable version of OpenBSD's acme-client(1), a secure ACME / 
+Portable version of OpenBSD's acme-client(1), a secure ACME /
 Let's Encrypt client.
 
 acme-client looks in its configuration for a domain section

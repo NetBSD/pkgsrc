@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/10/20 19:09:17 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 18:37:13 vins Exp $
 
 DISTNAME=	acme-client-1.3.5
 CATEGORIES=	security
@@ -39,6 +39,9 @@ SUBST_FILES.paths+=	acme-client.conf
 SUBST_SED.paths+=	-e "s:/etc/acme:${PKG_SYSCONFDIR}/acme:g"
 SUBST_SED.paths+=	-e "s:/etc/examples:${PREFIX}/${EGDIR}:g"
 SUBST_VARS.paths+=	PKG_SYSCONFDIR SSLDIR
+
+post-extract:
+	${RUN}${CP} ${FILESDIR}/acme-client.conf ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/acme-client.conf \
