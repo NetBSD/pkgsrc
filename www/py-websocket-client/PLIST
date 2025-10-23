@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/04/14 20:28:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/10/23 15:17:58 adam Exp $
 bin/wsdump-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -21,6 +21,9 @@ ${PYSITELIB}/websocket/_cookiejar.pyo
 ${PYSITELIB}/websocket/_core.py
 ${PYSITELIB}/websocket/_core.pyc
 ${PYSITELIB}/websocket/_core.pyo
+${PYSITELIB}/websocket/_dispatcher.py
+${PYSITELIB}/websocket/_dispatcher.pyc
+${PYSITELIB}/websocket/_dispatcher.pyo
 ${PYSITELIB}/websocket/_exceptions.py
 ${PYSITELIB}/websocket/_exceptions.pyc
 ${PYSITELIB}/websocket/_exceptions.pyo
@@ -67,12 +70,36 @@ ${PYSITELIB}/websocket/tests/test_app.pyo
 ${PYSITELIB}/websocket/tests/test_cookiejar.py
 ${PYSITELIB}/websocket/tests/test_cookiejar.pyc
 ${PYSITELIB}/websocket/tests/test_cookiejar.pyo
+${PYSITELIB}/websocket/tests/test_dispatcher.py
+${PYSITELIB}/websocket/tests/test_dispatcher.pyc
+${PYSITELIB}/websocket/tests/test_dispatcher.pyo
+${PYSITELIB}/websocket/tests/test_handshake_large_response.py
+${PYSITELIB}/websocket/tests/test_handshake_large_response.pyc
+${PYSITELIB}/websocket/tests/test_handshake_large_response.pyo
 ${PYSITELIB}/websocket/tests/test_http.py
 ${PYSITELIB}/websocket/tests/test_http.pyc
 ${PYSITELIB}/websocket/tests/test_http.pyo
+${PYSITELIB}/websocket/tests/test_large_payloads.py
+${PYSITELIB}/websocket/tests/test_large_payloads.pyc
+${PYSITELIB}/websocket/tests/test_large_payloads.pyo
+${PYSITELIB}/websocket/tests/test_socket.py
+${PYSITELIB}/websocket/tests/test_socket.pyc
+${PYSITELIB}/websocket/tests/test_socket.pyo
+${PYSITELIB}/websocket/tests/test_socket_bugs.py
+${PYSITELIB}/websocket/tests/test_socket_bugs.pyc
+${PYSITELIB}/websocket/tests/test_socket_bugs.pyo
+${PYSITELIB}/websocket/tests/test_ssl_compat.py
+${PYSITELIB}/websocket/tests/test_ssl_compat.pyc
+${PYSITELIB}/websocket/tests/test_ssl_compat.pyo
+${PYSITELIB}/websocket/tests/test_ssl_edge_cases.py
+${PYSITELIB}/websocket/tests/test_ssl_edge_cases.pyc
+${PYSITELIB}/websocket/tests/test_ssl_edge_cases.pyo
 ${PYSITELIB}/websocket/tests/test_url.py
 ${PYSITELIB}/websocket/tests/test_url.pyc
 ${PYSITELIB}/websocket/tests/test_url.pyo
+${PYSITELIB}/websocket/tests/test_utils.py
+${PYSITELIB}/websocket/tests/test_utils.pyc
+${PYSITELIB}/websocket/tests/test_utils.pyo
 ${PYSITELIB}/websocket/tests/test_websocket.py
 ${PYSITELIB}/websocket/tests/test_websocket.pyc
 ${PYSITELIB}/websocket/tests/test_websocket.pyo
