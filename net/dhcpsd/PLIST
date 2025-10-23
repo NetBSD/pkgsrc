@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/23 16:36:17 roy Exp $
+lib/dhcpsd/addrinfo.so
+lib/dhcpsd/auto.so
+lib/dhcpsd/ethers.so
+lib/dhcpsd/icmp.so
+lib/dhcpsd/leasefile.so
+lib/dhcpsd/lua.so
+man/man8/dhcpsd.8
+man/man8/dhcpsd_addrinfo.8
+man/man8/dhcpsd_auto.8
+man/man8/dhcpsd_ethers.8
+man/man8/dhcpsd_icmp.8
+man/man8/dhcpsd_leasefile.8
+man/man8/dhcpsd_lua.8
+sbin/dhcpsd
