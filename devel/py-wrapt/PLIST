@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/13 06:51:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/10/23 09:13:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,10 +6,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/wrapt/__init__.py
 ${PYSITELIB}/wrapt/__init__.pyc
+${PYSITELIB}/wrapt/__init__.pyi
 ${PYSITELIB}/wrapt/__init__.pyo
 ${PYSITELIB}/wrapt/__wrapt__.py
 ${PYSITELIB}/wrapt/__wrapt__.pyc
 ${PYSITELIB}/wrapt/__wrapt__.pyo
+${PYSITELIB}/wrapt/_wrappers.c
 ${PYSITELIB}/wrapt/_wrappers.so
 ${PYSITELIB}/wrapt/arguments.py
 ${PYSITELIB}/wrapt/arguments.pyc
@@ -23,6 +25,10 @@ ${PYSITELIB}/wrapt/importer.pyo
 ${PYSITELIB}/wrapt/patches.py
 ${PYSITELIB}/wrapt/patches.pyc
 ${PYSITELIB}/wrapt/patches.pyo
+${PYSITELIB}/wrapt/proxies.py
+${PYSITELIB}/wrapt/proxies.pyc
+${PYSITELIB}/wrapt/proxies.pyo
+${PYSITELIB}/wrapt/py.typed
 ${PYSITELIB}/wrapt/weakrefs.py
 ${PYSITELIB}/wrapt/weakrefs.pyc
 ${PYSITELIB}/wrapt/weakrefs.pyo
