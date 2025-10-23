@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2025/03/15 14:14:09 tsutsui Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/23 20:37:47 wiz Exp $
 
 DISTNAME=		cairo-1.18.4
+PKGREVISION=		1
 CATEGORIES=		graphics
 
 MAINTAINER=		tsutsui@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/02/12 06:44:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/23 20:35:54 wiz Exp $
 
 DISTNAME=	sndfile-tools-1.5
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsndfile/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

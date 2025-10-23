@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/02/12 06:45:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/23 20:37:22 wiz Exp $
 
 DISTNAME=	SDL2_gfx-1.0.4
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.ferzkopp.net/Software/SDL2_gfx/
 

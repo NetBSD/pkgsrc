@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2025/04/19 07:58:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2025/10/23 20:39:50 wiz Exp $
 
 BUILDLINK_TREE+=	uhttpmock
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	uhttpmock
 UHTTPMOCK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.uhttpmock+=	uhttpmock>=0.4.0
-BUILDLINK_ABI_DEPENDS.uhttpmock+=	uhttpmock>=0.11.0nb5
+BUILDLINK_ABI_DEPENDS.uhttpmock+=	uhttpmock>=0.11.0nb7
 BUILDLINK_PKGSRCDIR.uhttpmock?=		../../www/uhttpmock
 
 .include "../../devel/glib2/buildlink3.mk"

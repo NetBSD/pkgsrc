@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.388 2025/10/09 10:05:02 adam Exp $
+# $NetBSD: Makefile,v 1.389 2025/10/23 20:36:51 wiz Exp $
 
+PKGREVISION= 1
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}

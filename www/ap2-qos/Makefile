@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/06/15 14:05:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:39:44 wiz Exp $
 
 DISTNAME=	mod_qos-11.76
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-qos/}
 

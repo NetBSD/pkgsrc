@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2022/01/17 15:17:14 tsutsui Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/23 20:36:37 wiz Exp $
 #
 
 DISTNAME=		glib2-${VERSION}
 COMMENT=		Ruby binding of GLib-2.x
+PKGREVISION=		1
 CATEGORIES=		devel
 
 MAINTAINER=		tsutsui@NetBSD.org

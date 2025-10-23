@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2025/04/24 14:13:51 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/23 20:36:52 wiz Exp $
 
 DISTNAME=	rpcemu-0.9.3
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.marutan.net/rpcemu/cgi/download.php?sFName=${PKGVERSION_NOREV}/
 
