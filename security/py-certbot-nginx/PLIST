@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/04/13 20:40:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/10/23 13:17:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -83,6 +83,7 @@ ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/head
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/ipv6.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/ipv6ssl.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/migration.com
+${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/no-listens.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/sslon.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/ubuntu_nginx_1_4_6/default_vhost/nginx/fastcgi_params
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/ubuntu_nginx_1_4_6/default_vhost/nginx/koi-utf
