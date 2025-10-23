@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.136 2025/08/20 11:35:14 wiz Exp $
+# $NetBSD: Makefile,v 1.136.2.1 2025/10/23 12:46:58 maya Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
 PKGNAME=	qt5-qtwebkit-${QTWKVERSION:S/-/./}
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	x11 www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qtwebkit/}
 GITHUB_PROJECT=	qtwebkit
@@ -19,19 +19,15 @@ TOOL_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison perl:build pkg-config
 CMAKE_INSTALL_PREFIX=	${QTDIR}
 CMAKE_INSTALL_NAME_DIR=	${QTDIR}/lib
 TEST_TARGET=		test
-FORCE_CXX_STD=		c++17
 
 # XXX Workaround for icu-76 whose header files require C++17 unless you
 # define U_HIDE_DRAFT_API.  pkg/59028: qt5-qtwebkit doesn't build
 CXXFLAGS+=		-DU_HIDE_DRAFT_API
-
-BROKEN=		"Does not support icu 77"
 
 CMAKE_CONFIGURE_ARGS+=	-DPORT=Qt
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
