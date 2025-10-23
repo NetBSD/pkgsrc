@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6246 2025/10/23 15:02:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6247 2025/10/23 15:18:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9053,3 +9053,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tox to 4.31.0 [adam 2025-10-23]
 	Updated devel/py-test-env to 1.2.0 [adam 2025-10-23]
 	Updated devel/py-testfixtures to 9.2.0 [adam 2025-10-23]
+	Updated devel/py-coverage to 7.11.0 [adam 2025-10-23]
+	Updated net/haproxy to 3.2.7 [adam 2025-10-23]
+	Updated www/py-websocket-client to 1.9.0 [adam 2025-10-23]
