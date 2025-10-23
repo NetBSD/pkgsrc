@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/04/14 12:50:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/10/23 15:27:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -7,13 +7,13 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/regex/__init__.py
 ${PYSITELIB}/regex/__init__.pyc
 ${PYSITELIB}/regex/__init__.pyo
+${PYSITELIB}/regex/_main.py
+${PYSITELIB}/regex/_main.pyc
+${PYSITELIB}/regex/_main.pyo
 ${PYSITELIB}/regex/_regex.so
 ${PYSITELIB}/regex/_regex_core.py
 ${PYSITELIB}/regex/_regex_core.pyc
 ${PYSITELIB}/regex/_regex_core.pyo
-${PYSITELIB}/regex/regex.py
-${PYSITELIB}/regex/regex.pyc
-${PYSITELIB}/regex/regex.pyo
-${PYSITELIB}/regex/test_regex.py
-${PYSITELIB}/regex/test_regex.pyc
-${PYSITELIB}/regex/test_regex.pyo
+${PYSITELIB}/regex/tests/test_regex.py
+${PYSITELIB}/regex/tests/test_regex.pyc
+${PYSITELIB}/regex/tests/test_regex.pyo
