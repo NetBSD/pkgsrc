@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2025/09/14 10:28:59 adam Exp $
+# $NetBSD: Makefile,v 1.33 2025/10/23 20:36:48 wiz Exp $
 
 DISTNAME=	fs-uae-3.2.35
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FrodeSolheim/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2025/08/30 22:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/10/23 20:39:48 wiz Exp $
 
 DISTNAME=	luakit-2.3.3
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	www lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luakit/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2025/08/30 22:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2025/10/23 20:40:24 wiz Exp $
 
 DISTNAME=	xsnow-3.2.2
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	x11
 MASTER_SITES=	https://www.ratrabbit.nl/downloads/xsnow/
 

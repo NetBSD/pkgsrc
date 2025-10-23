@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/11/15 22:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/23 20:35:45 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-gme/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - Game Music Emu plugin

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/09/21 21:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/23 20:35:58 wiz Exp $
 
 DISTNAME=	adms-2.2.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mot-adms/}
 

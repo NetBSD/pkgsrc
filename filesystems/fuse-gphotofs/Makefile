@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2025/04/17 21:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/23 20:36:54 wiz Exp $
 
 DISTNAME=	gphotofs-0.5
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2

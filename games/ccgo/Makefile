@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2025/08/30 22:45:04 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2025/10/23 20:36:59 wiz Exp $
 
 DISTNAME=	ccgo-0.3.6.5
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	games
 MASTER_SITES=	https://ccdw.org/~cjj/prog/ccgo/src/
 

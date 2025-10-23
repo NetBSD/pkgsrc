@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2025/04/24 14:15:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2025/10/23 20:39:33 wiz Exp $
 
 BUILDLINK_TREE+=	kcodecs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcodecs
 KCODECS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcodecs+=	kcodecs>=5.18.0
-BUILDLINK_ABI_DEPENDS.kcodecs?=	kcodecs>=5.116.0nb6
+BUILDLINK_ABI_DEPENDS.kcodecs?=	kcodecs>=5.116.0nb7
 BUILDLINK_PKGSRCDIR.kcodecs?=	../../textproc/kcodecs
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

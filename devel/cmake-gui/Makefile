@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2025/10/06 09:34:44 adam Exp $
+# $NetBSD: Makefile,v 1.60 2025/10/23 20:36:16 wiz Exp $
 
 # BUILD_DIRS
 CMAKE_GENERATORS_INCOMPATIBLE=	ninja
 
+PKGREVISION= 1
 .include "../../devel/cmake/Makefile.common"
 
 PKGNAME=	cmake-gui-${CMAKE_VERSION}

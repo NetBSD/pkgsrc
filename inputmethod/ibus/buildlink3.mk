@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2023/08/14 05:24:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/10/23 20:37:56 wiz Exp $
 
 BUILDLINK_TREE+=	ibus
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ibus
 IBUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.5.0
-BUILDLINK_ABI_DEPENDS.ibus+=	ibus>=1.5.28nb2
+BUILDLINK_ABI_DEPENDS.ibus+=	ibus>=1.5.32nb4
 BUILDLINK_PKGSRCDIR.ibus?=	../../inputmethod/ibus
 
 .include "../../devel/glib2/buildlink3.mk"

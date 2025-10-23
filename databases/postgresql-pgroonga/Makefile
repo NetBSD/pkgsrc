@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/11/30 16:06:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/23 20:36:12 wiz Exp $
 
 DISTNAME=	pgroonga-2.3.6
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://packages.groonga.org/source/pgroonga/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/06/30 13:09:36 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:38:03 wiz Exp $
 
 DISTNAME=	bigloo-4.6a
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	https://www-sop.inria.fr/indes/fp/Bigloo/download/
 

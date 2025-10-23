@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/09/27 09:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/23 20:38:11 wiz Exp $
 
 DISTNAME=	mbox-importer-${KAPPSVER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	mail
 
 HOMEPAGE=	https://kontact.kde.org/

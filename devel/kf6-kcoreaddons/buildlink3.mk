@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/04/24 14:13:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:36:23 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kcoreaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kcoreaddons
 KF6_KCOREADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kcoreaddons+=	kf6-kcoreaddons>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kcoreaddons?=	kf6-kcoreaddons>=6.8.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kcoreaddons?=	kf6-kcoreaddons>=6.18.0nb1
 BUILDLINK_PKGSRCDIR.kf6-kcoreaddons?=	../../devel/kf6-kcoreaddons
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

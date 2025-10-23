@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2025/08/24 16:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2025/10/23 20:38:49 wiz Exp $
 
 DISTNAME=	kopete-${KAPPSVER}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	net
 
 HOMEPAGE=	https://kde.org/applications/internet/kopete/
