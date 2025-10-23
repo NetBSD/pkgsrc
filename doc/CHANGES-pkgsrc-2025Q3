@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.8 2025/10/21 14:58:29 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.9 2025/10/23 03:26:11 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -39,3 +39,24 @@ devel/SDL2: build fix
 Pullup ticket #7016 - requested by bouyer
 sysutils/xenkernel418: Security fix
 sysutils/xenkernel420: Security fix
+
+Pullup ticket #7018 - requested by taca
+textproc/expat: Security fix
+
+Pullup ticket #7019 - requested by taca
+security/openssh: Security fix
+
+Pullup ticket #7020 - requested by taca
+devel/ruby-redmine51: Security fix
+
+Pullup ticket #7021 - requested by taca
+devel/ruby-redmine60: Security fix
+
+Pullup ticket #7022 - requested by taca
+net/samba4: Security fix
+
+Pullup ticket #7023 - requested by taca
+net/bind918: Security fix
+
+Pullup ticket #7024 - requested by taca
+www/squid7: Security fix
