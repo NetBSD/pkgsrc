@@ -1,9 +1,19 @@
-$NetBSD: patch-libAfterImage_asfont.c,v 1.3 2016/05/01 19:30:58 dholland Exp $
+$NetBSD: patch-libAfterImage_asfont.c,v 1.4 2025/10/23 01:28:08 gutteridge Exp $
 
 Patch up gcc inline mess.
+Use ctype.h correctly.
 
---- libAfterImage/asfont.c.orig	2008-08-15 21:47:37.000000000 +0000
+--- libAfterImage/asfont.c.orig	2013-05-01 13:34:11.000000000 +0000
 +++ libAfterImage/asfont.c
+@@ -173,7 +173,7 @@ open_freetype_font_int( ASFontManager *f
+ 			register int i = 0;
+ 			while(tmp[i] != '\0' ) ++i ;
+ 			while( --i >= 0 )
+-				if( !isdigit( tmp[i] ) )
++				if( !isdigit( (unsigned char)tmp[i] ) )
+ 				{
+ 					if( tmp[i] == '.' )
+ 					{
 @@ -367,7 +367,7 @@ release_font( ASFont *font )
  	return res ;
  }
