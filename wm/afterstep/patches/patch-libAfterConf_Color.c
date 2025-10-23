@@ -1,7 +1,6 @@
-$NetBSD: patch-libAfterConf_Color.c,v 1.2 2021/07/11 12:13:17 bsiegert Exp $
+$NetBSD: patch-libAfterConf_Color.c,v 1.3 2025/10/23 01:28:08 gutteridge Exp $
 
 Use ctype.h correctly.
-Fix some printf formats.
 
 --- libAfterConf/Color.c.orig	2013-05-01 13:34:11.000000000 +0000
 +++ libAfterConf/Color.c

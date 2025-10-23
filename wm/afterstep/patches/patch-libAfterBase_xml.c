@@ -1,4 +1,4 @@
-$NetBSD: patch-libAfterBase_xml.c,v 1.1 2025/09/11 21:35:01 gutteridge Exp $
+$NetBSD: patch-libAfterBase_xml.c,v 1.2 2025/10/23 01:28:08 gutteridge Exp $
 
 Use ctype.h correctly.
 
@@ -13,7 +13,7 @@ Use ctype.h correctly.
  	return str;
  }
  
-@@ -157,7 +157,7 @@ xml_elem_t* xml_parse_parm(const char* p
+@@ -157,20 +157,20 @@ xml_elem_t* xml_parse_parm(const char* p
  		const char* eval;
  
  		/* Spin past any leading whitespace. */
@@ -21,8 +21,11 @@ Use ctype.h correctly.
 +		for (bname = eparm ; isspace((unsigned char)*bname) ; bname++);
  
  		/* Check for a parm.  First is the parm name. */
- 		for (ename = bname ; xml_tagchar((int)*ename) ; ename++);
-@@ -167,10 +167,10 @@ xml_elem_t* xml_parse_parm(const char* p
+-		for (ename = bname ; xml_tagchar((int)*ename) ; ename++);
++		for (ename = bname ; xml_tagchar(*ename) ; ename++);
+ 
+ 		/* No name equals no parm equals broken tag. */
+ 		if (!*ename) { eparm = NULL; break; }
  
  		/* No "=" equals broken tag.  We do not support HTML-style parms */
  		/* with no value.                                                */
@@ -57,16 +60,26 @@ Use ctype.h correctly.
  		fprintf(stderr, "%s", ptr);
  	} else {
  		if( root->child != NULL || root->next != NULL  ) 
-@@ -352,7 +352,7 @@ int xml_parse(const char* str, xml_elem_
+@@ -350,9 +350,9 @@ int xml_parse(const char* str, xml_elem_
+ 		{
+ 			const char* etag;
  			/* Find the end of the tag. */
- 			for (etag = oab + 2 ; xml_tagchar((int)*etag) ; etag++);
+-			for (etag = oab + 2 ; xml_tagchar((int)*etag) ; etag++);
++			for (etag = oab + 2 ; xml_tagchar(*etag) ; etag++);
  
 -			while (isspace((int)*etag)) ++etag;
 +			while (isspace((unsigned char)*etag)) ++etag;
  			/* If this is an end tag, and the tag matches the tag we're parsing, */
  			/* we're done.  If not, continue on blindly. */
  			if (*etag == '>') 
-@@ -390,7 +390,7 @@ int xml_parse(const char* str, xml_elem_
+@@ -384,13 +384,13 @@ int xml_parse(const char* str, xml_elem_
+ 			const char* eparm;
+ 
+ 			/* Find the end of the tag. */
+-			for (etag = btag ; xml_tagchar((int)*etag) ; etag++);
++			for (etag = btag ; xml_tagchar(*etag) ; etag++);
+ 
+ 			/* If we reached the end of the document, continue on. */
  			if (!*etag) { ptr = oab + 1; continue; }
  
  			/* Find the beginning of the parameters, if they exist. */
@@ -75,7 +88,7 @@ Use ctype.h correctly.
  
  			/* From here on, we're looking for a sequence of parms, which have
  			 * the form [a-z0-9-]+=("[^"]"|'[^']'|[^ \t\n]), followed by either
-@@ -399,7 +399,7 @@ int xml_parse(const char* str, xml_elem_
+@@ -399,23 +399,23 @@ int xml_parse(const char* str, xml_elem_
  				const char* tmp;
  
  				/* Spin past any leading whitespace. */
@@ -84,7 +97,13 @@ Use ctype.h correctly.
  
  				/* Are we at the end of the tag? */
  				if (*eparm == '>' || (*eparm == '/' && eparm[1] == '>')) break;
-@@ -412,10 +412,10 @@ int xml_parse(const char* str, xml_elem_
+ 
+ 				/* Check for a parm.  First is the parm name. */
+-				for (tmp = eparm ; xml_tagchar((int)*tmp) ; tmp++);
++				for (tmp = eparm ; xml_tagchar(*tmp) ; tmp++);
+ 
+ 				/* No name equals no parm equals broken tag. */
+ 				if (!*tmp) { eparm = NULL; break; }
  
  				/* No "=" equals broken tag.  We do not support HTML-style parms
  				   with no value. */

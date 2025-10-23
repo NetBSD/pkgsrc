@@ -1,6 +1,7 @@
-$NetBSD: patch-src_afterstep_menuitem.c,v 1.1 2025/09/12 02:18:42 gutteridge Exp $
+$NetBSD: patch-src_afterstep_menuitem.c,v 1.2 2025/10/23 01:28:09 gutteridge Exp $
 
 Need function prototype for XkbKeycodeToKeysym(3).
+Use ctype.h correctly.
 
 --- src/afterstep/menuitem.c.orig	2013-05-01 13:34:11.000000000 +0000
 +++ src/afterstep/menuitem.c
@@ -22,3 +23,42 @@ Need function prototype for XkbKeycodeToKeysym(3).
  		return md;
  	}
  
+@@ -100,7 +102,7 @@ Bool MenuDataItemParse (void *data, cons
+ 
+ 	if (buf == NULL)
+ 		return False;
+-	for (; isspace (*buf); buf++) ;
++	for (; isspace ((unsigned char)*buf); buf++) ;
+ 	if (*buf == '\0' || *buf == '#' || *buf == '*')
+ 		return False;
+ 
+@@ -126,7 +128,7 @@ Bool FunctionItemParse (void *data, cons
+ 
+ 	if (buf == NULL)
+ 		return False;
+-	for (; isspace (*buf); buf++) ;
++	for (; isspace ((unsigned char)*buf); buf++) ;
+ 	if (*buf == '\0' || *buf == '#' || *buf == '*')
+ 		return False;
+ 
+@@ -163,7 +165,7 @@ ParseBody (void *data, FILE * fd, Bool (
+ 	buf = safemalloc (MAXLINELENGTH + 1);
+ 	while ((ptr = fgets (buf, MAXLINELENGTH, fd)) != NULL) {
+ 		LOCAL_DEBUG_OUT ("parsing Popup line \"%s\"", buf);
+-		while (isspace (*ptr))
++		while (isspace ((unsigned char)*ptr))
+ 			ptr++;
+ 		if (!item_func (data, ptr))
+ 			if (mystrncasecmp ("End", ptr, 3) == 0) {
+@@ -215,9 +217,9 @@ void ParseMouseEntry (char *tline, FILE 
+ 	int contexts, mods;
+ 	FunctionData *fdata;
+ 
+-	while (isspace (*tline))
++	while (isspace ((unsigned char)*tline))
+ 		tline++;
+-	while (isdigit (*tline)) {
++	while (isdigit ((unsigned char)*tline)) {
+ 		button = button * 10 + (int)((*tline) - '0');
+ 		tline++;
+ 	}
