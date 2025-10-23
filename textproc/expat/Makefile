@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2025/09/16 21:33:17 wiz Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2025/10/23 01:25:55 maya Exp $
 
-DISTNAME=	expat-2.7.2
+DISTNAME=	expat-2.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexpat/}
 GITHUB_PROJECT=	libexpat
@@ -25,7 +25,6 @@ TEST_TARGET=	check
 REPLACE_BASH=	test-driver-wrapper.sh
 # we can't use cmake due to a cyclic dependency
 #USE_CMAKE=	yes
-#TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 
 PKGCONFIG_OVERRIDE+=	expat.pc.in
 
