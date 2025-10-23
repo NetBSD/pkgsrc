@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2025/10/23 01:11:02 khorben Exp $
+share/examples/roundcube/plugins/html5_notifier/config.inc.php
+share/roundcube/plugins/html5_notifier/LICENSE
+share/roundcube/plugins/html5_notifier/README.md
+share/roundcube/plugins/html5_notifier/changelog.txt
+share/roundcube/plugins/html5_notifier/composer.json
+share/roundcube/plugins/html5_notifier/config/config.inc.php.dist
+share/roundcube/plugins/html5_notifier/html5_notifier.js
+share/roundcube/plugins/html5_notifier/html5_notifier.php
+share/roundcube/plugins/html5_notifier/images/new_mail.png
+share/roundcube/plugins/html5_notifier/localization/cs_CZ.inc
+share/roundcube/plugins/html5_notifier/localization/de_DE.inc
+share/roundcube/plugins/html5_notifier/localization/en_US.inc
+share/roundcube/plugins/html5_notifier/localization/es_ES.inc
+share/roundcube/plugins/html5_notifier/localization/fr_FR.inc
+share/roundcube/plugins/html5_notifier/localization/it_IT.inc
+share/roundcube/plugins/html5_notifier/localization/ja_JP.inc
+share/roundcube/plugins/html5_notifier/localization/nl_NL.inc
+share/roundcube/plugins/html5_notifier/localization/pl_PL.inc
+share/roundcube/plugins/html5_notifier/localization/pt_BR.inc
+share/roundcube/plugins/html5_notifier/localization/ru_RU.inc
+share/roundcube/plugins/html5_notifier/localization/sk_SK.inc
+share/roundcube/plugins/html5_notifier/localization/zh_CN.inc
+share/roundcube/plugins/html5_notifier/screenshot.png

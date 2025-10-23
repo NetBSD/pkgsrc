@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/23 01:11:02 khorben Exp $
+
+BLAKE2s (html5_notifier-0.6.4.tar.gz) = 94dd612b14082447aa952d857b80fa076b137f15eb64e40afc5f0d41703ccb18
+SHA512 (html5_notifier-0.6.4.tar.gz) = 0d426f2bf8542180a17be9c6b5cad1aaa4dd6607180f77ecd991f56a81ea355df5117ade11316f09fc6b2674cb469d586d75829c279bee38c1b7a4e2ad42df96
+Size (html5_notifier-0.6.4.tar.gz) = 20494 bytes
