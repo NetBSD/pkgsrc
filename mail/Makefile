@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2025/10/22 05:33:48 wiz Exp $
+# $NetBSD: Makefile,v 1.676 2025/10/23 01:11:32 khorben Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -390,6 +390,7 @@ SUBDIR+=	rmail-mime
 SUBDIR+=	roundcube
 SUBDIR+=	roundcube-plugin-carddav
 SUBDIR+=	roundcube-plugin-enigma
+SUBDIR+=	roundcube-plugin-html5_notifier
 SUBDIR+=	roundcube-plugin-password
 SUBDIR+=	roundcube-plugin-zipdownload
 SUBDIR+=	rspamd
