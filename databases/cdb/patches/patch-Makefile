@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2025/10/23 17:07:36 schmonz Exp $
+
+Support DESTDIR.
+
+--- Makefile.orig	2025-10-21 10:56:07.000000000 +0000
++++ Makefile
+@@ -14,6 +14,14 @@ auto-str.o: \
+ compile auto-str.c outbuf.h num.h
+ 	./compile auto-str.c
+ 
++auto_destdir.c: \
++auto-str conf-destdir
++	./auto-str auto_home `head -1 conf-destdir` > auto_destdir.c
++
++auto_destdir.o: \
++compile auto_destdir.c
++	./compile auto_destdir.c
++
+ auto_home.c: \
+ auto-str conf-home
+ 	./auto-str auto_home `head -1 conf-home` > auto_home.c
+@@ -259,16 +267,16 @@ compile hier.c auto_home.h hier.h num.h
+ 	./compile hier.c
+ 
+ instcopy: \
+-load instcopy.o hier.o auto_home.o buffer.a unix.a byte.a
+-	./load instcopy hier.o auto_home.o buffer.a unix.a byte.a
++load instcopy.o hier.o auto_destdir.o buffer.a unix.a byte.a
++	./load instcopy hier.o auto_destdir.o buffer.a unix.a byte.a
+ 
+ instcopy.o: \
+ compile instcopy.c outbuf.h strerr.h open.h hier.h inbuf.h num.h
+ 	./compile instcopy.c
+ 
+ instcheck: \
+-load instcheck.o hier.o auto_home.o buffer.a unix.a byte.a
+-	./load instcheck hier.o auto_home.o buffer.a unix.a byte.a
++load instcheck.o hier.o auto_destdir.o buffer.a unix.a byte.a
++	./load instcheck hier.o auto_destdir.o buffer.a unix.a byte.a
+ 
+ instcheck.o: \
+ compile instcheck.c strerr.h hier.h num.h

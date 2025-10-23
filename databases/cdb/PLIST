@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/10 18:11:46 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/23 17:07:35 schmonz Exp $
+bin/cdb64dump
+bin/cdb64get
+bin/cdb64make
+bin/cdb64make-12
+bin/cdb64make-sv
+bin/cdb64stats
+bin/cdb64test
 bin/cdbdump
 bin/cdbget
 bin/cdbmake
@@ -8,3 +15,19 @@ bin/cdbstats
 bin/cdbtest
 include/cdb.h
 lib/libcdb.a
+lib/libcdb64.a
+man/man1/cdb64dump.1
+man/man1/cdb64get.1
+man/man1/cdb64make-12.1
+man/man1/cdb64make-sv.1
+man/man1/cdb64make.1
+man/man1/cdb64stats.1
+man/man1/cdb64test.1
+man/man1/cdbdump.1
+man/man1/cdbget.1
+man/man1/cdbmake-12.1
+man/man1/cdbmake-sv.1
+man/man1/cdbmake.1
+man/man1/cdbstats.1
+man/man1/cdbtest.1
+man/man3/cdb.3
