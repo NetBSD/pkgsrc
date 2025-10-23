@@ -1,0 +1,30 @@
+This is a DHCP server, driven by plugins rather than a specific
+configuration.
+
+There is an auto plugin which makes an opinionated automatic
+DHCP setup based on your IP address.
+There is a leasefile plugin which stores the leases to a
+persistent flat file periodically.
+There is an ethers plugin to lookup a nodes hostname from their
+ethernet address.
+There is an addrinfo plugin to lookup a nodes ip address from their
+hostname.
+There is an ICMP plugin to detect if an ip address is in use
+before offering it.
+And if that is not enough there is a LUA plugin which allows you
+to script pretty much everything, but there is likely room for
+improvement here.
+
+Out of the box, dhcpsd is fast by using 2 hashmaps for clientid
+and ip address lookups and then by using a Red Black tree for
+lease expiry ordering.
+dhcpsd is written in C and uses Verstable for a hashmap and
+NetBSD's Red Black tree.
+It's also event driven with timeouts and callbacks which
+allows for example the ICMP plugin to hold the DHCP request
+until finished and then continue it once done and dhcpsd
+will process other tasks in the middle of this.
+
+dhcpsd is also secure by supporting Capsicum from FreeBSD,
+pledge from OpenBSD send SECCOMP from Linux.
+Other OS's enjoy a POSIX resource limited chrooted sandbox.

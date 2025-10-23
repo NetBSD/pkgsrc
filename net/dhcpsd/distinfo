@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/23 16:36:17 roy Exp $
+
+BLAKE2s (dhcpsd-0.0.4.tar.xz) = 66455ed45d0018918f1aeb5cc191b1bb20e7982b63a88d8f65284b733bcec20b
+SHA512 (dhcpsd-0.0.4.tar.xz) = 60e3eab7a3a04c4adf5a68e3a93766cafc88cc1c4e22878ff70f7a64bc8402ce0cf9d2251022af7adf0ce9c65882ef95460e796defb3c40c0fc672b945c604bb
+Size (dhcpsd-0.0.4.tar.xz) = 90632 bytes
