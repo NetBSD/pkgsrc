@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6240 2025/10/23 09:14:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6241 2025/10/23 09:38:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9026,3 +9026,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-esr to 140 [gutteridge 2025-10-23]
 	Updated devel/py-wrapt to 2.0.0 [adam 2025-10-23]
 	Updated devel/py-hypothesis to 6.142.3 [adam 2025-10-23]
+	Updated ham/lpcnetfreedv to 0.5 [adam 2025-10-23]
+	Updated net/yt-dlp to 2025.10.22 [adam 2025-10-23]
