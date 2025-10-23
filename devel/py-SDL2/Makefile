@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/04/12 20:15:14 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/23 20:36:35 wiz Exp $
 
 DISTNAME=	pysdl2-0.9.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySDL2/}
 

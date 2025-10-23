@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2025/08/22 14:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/10/23 20:37:58 wiz Exp $
 
 DISTNAME=	ibus-table-1.17.5
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kaio/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

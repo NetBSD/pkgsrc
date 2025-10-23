@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/09/10 22:21:37 charlotte Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/23 20:37:11 wiz Exp $
 
 DISTNAME=	nanosaur2-2.1.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

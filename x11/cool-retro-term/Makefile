@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2025/04/24 14:16:07 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/10/23 20:39:51 wiz Exp $
 
 DISTNAME=	cool-retro-term-1.2.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Swordfish90/}
 

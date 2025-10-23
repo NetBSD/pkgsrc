@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/08/30 22:45:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/23 20:37:41 wiz Exp $
 
 DISTNAME=	numix-gtk-theme-2.6.7
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=numixproject/}
 

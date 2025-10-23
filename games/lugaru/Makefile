@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2025/09/10 22:01:06 charlotte Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/23 20:37:10 wiz Exp $
 
 DISTNAME=	lugaru-${VERSION}
 VERSION=	1.2
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	games
 MASTER_SITES=	https://bitbucket.org/osslugaru/lugaru/downloads/
 EXTRACT_SUFX=	.tar.xz

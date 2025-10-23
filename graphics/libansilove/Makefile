@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2025/08/30 22:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/10/23 20:37:37 wiz Exp $
 
 DISTNAME=	libansilove-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

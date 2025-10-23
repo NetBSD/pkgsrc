@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/10/05 19:26:04 js Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/23 20:38:03 wiz Exp $
 
 PKGNAME=	uim-${DISTNAME}
-PKGREVISION=	37
+PKGREVISION=	38
 
 CONFLICTS+=	ibus-mozc<=1.13.1651.102
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/04/14 17:42:09 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/10/23 20:37:29 wiz Exp $
 
 BUILDLINK_TREE+=	gexiv2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gexiv2
 GEXIV2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gexiv2+=	gexiv2>=0.12.0
-BUILDLINK_ABI_DEPENDS.gexiv2+=	gexiv2>=0.14.1nb3
+BUILDLINK_ABI_DEPENDS.gexiv2+=	gexiv2>=0.14.3nb2
 BUILDLINK_PKGSRCDIR.gexiv2?=	../../graphics/gexiv2
 
 .include "../../devel/glib2/buildlink3.mk"

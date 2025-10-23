@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/10/24 22:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/23 20:36:38 wiz Exp $
 #
 
 DISTNAME=	sofia-sip-1.12.11
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel net comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sofia-sip/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/09/24 20:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:38:34 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-osxvideo/}
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - macOS video plugin

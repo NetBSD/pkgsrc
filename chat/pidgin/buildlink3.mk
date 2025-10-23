@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2025/04/17 21:49:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2025/10/23 20:36:03 wiz Exp $
 
 BUILDLINK_TREE+=	pidgin
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pidgin
 PIDGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pidgin+=	pidgin>=2.5.1
-BUILDLINK_ABI_DEPENDS.pidgin+=	pidgin>=2.14.14nb1
+BUILDLINK_ABI_DEPENDS.pidgin+=	pidgin>=2.14.14nb4
 BUILDLINK_PKGSRCDIR.pidgin?=	../../chat/pidgin
 
 .include "../../chat/libpurple/buildlink3.mk"
