@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/08/13 04:47:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/23 15:02:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -68,6 +68,9 @@ ${PYSITELIB}/testfixtures/tests/sample3.pyo
 ${PYSITELIB}/testfixtures/tests/test_compare.py
 ${PYSITELIB}/testfixtures/tests/test_compare.pyc
 ${PYSITELIB}/testfixtures/tests/test_compare.pyo
+${PYSITELIB}/testfixtures/tests/test_compare_typed.py
+${PYSITELIB}/testfixtures/tests/test_compare_typed.pyc
+${PYSITELIB}/testfixtures/tests/test_compare_typed.pyo
 ${PYSITELIB}/testfixtures/tests/test_comparison.py
 ${PYSITELIB}/testfixtures/tests/test_comparison.pyc
 ${PYSITELIB}/testfixtures/tests/test_comparison.pyo
