@@ -1,0 +1,29 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/10/23 09:36:19 adam Exp $
+
+Disable CPU flags to make the build portable.
+
+--- CMakeLists.txt.orig	2025-10-23 06:07:23.384361604 +0000
++++ CMakeLists.txt
+@@ -147,22 +147,6 @@ endif()
+ 
+ set(LPCNET_C_PROC_FLAGS "")
+ 
+-if(${AVX2} AND (${AVX2_PRESENT} OR ${AVX2_PRESENT} GREATER 0))
+-    message(STATUS "avx2 processor flags found or enabled.")
+-    set(LPCNET_C_PROC_FLAGS -mavx2 -mfma)
+-elseif(${AVX} AND (${AVX_PRESENT} OR ${AVX_PRESENT} GREATER 0))
+-# AVX2 machines will also match on AVX
+-    message(STATUS "avx processor flags found or enabled.")
+-    set(LPCNET_C_PROC_FLAGS -mavx)
+-elseif(${SSE} AND (${SSE_PRESENT} OR ${SSE_PRESENT} GREATER 0))
+-# AVX and AVX2 machines will also match on SSE
+-    message(STATUS "sse processor flags found or enabled.")
+-    set(LPCNET_C_PROC_FLAGS -msse4.1)
+-elseif(${NEON} AND (${NEON_PRESENT} OR ${NEON_PRESENT} GREATER 0))
+-    # RPi / ARM 32bit
+-    message(STATUS "neon processor flags found or enabled.")
+-    set(LPCNET_C_PROC_FLAGS -mfpu=neon -march=armv8-a -mtune=cortex-a53)
+-endif()
+ 
+ # grab latest NN model (or substitute your own)
+ set(LPCNET_ROOT http://rowetel.com/downloads/deep/)
