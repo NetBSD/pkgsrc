@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2025/07/09 11:49:46 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/10/23 09:41:06 adam Exp $
 
-BLAKE2s (git-lfs-3.7.0.tar.gz) = 9e3175575e8573f7f451c1bf43ef4aacf777295cd2e34a7d667334941e70f07f
-SHA512 (git-lfs-3.7.0.tar.gz) = 36488760310fa9124ed4db5d10de5bee2d413afbc67cd137f3f842c8ca549b35ad9e2da60c5f501c23c67dc663414ee97d7ad3b3245e7d51689020940fdee393
-Size (git-lfs-3.7.0.tar.gz) = 701005 bytes
+BLAKE2s (git-lfs-3.7.1.tar.gz) = 2c66c3ad97fac23cf2e14da98fb6d6972db46b1cee80b99b29481d33438ca783
+SHA512 (git-lfs-3.7.1.tar.gz) = 043efd5d12c3910bb03d22be5f2bfaf7cb53e767c1417114788c018e30b30a6f15a5fcc6535673342dc062996f64e0618d74ec529aacf52dadab6b8587d83301
+Size (git-lfs-3.7.1.tar.gz) = 713950 bytes
 BLAKE2s (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = c21a1ebaba97d3b288d48b37ba7e87cb0872c5eaa04d535accae5c379fc492ff
 SHA512 (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = aee6f208fe93284b91980e086ddb31e4550149072fbadb81a7084ad30d39bcbeda0e497aebfb231599ea22a52c67cdf4319a8b538e6594ec2bb2892c9ce77570
 Size (github.com_alexbrainman_sspi_@v_v0.0.0-20210105120005-909beea2cc74.mod) = 45 bytes
