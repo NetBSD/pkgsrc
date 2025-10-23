@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6242 2025/10/23 09:44:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6243 2025/10/23 13:18:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9030,3 +9030,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.10.22 [adam 2025-10-23]
 	Updated devel/git-lfs to 3.7.1 [adam 2025-10-23]
 	Updated devel/py-project-api to 1.10.0 [adam 2025-10-23]
+	Updated security/py-acme to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-apache to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-cloudflare to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-digitalocean to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-dnsimple to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-dnsmadeeasy to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-gehirn to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-google to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-linode to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-luadns to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-nsone to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-ovh to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-rfc2136 to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-route53 to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-dns-sakuracloud to 5.1.0 [adam 2025-10-23]
+	Updated security/py-certbot-nginx to 5.1.0 [adam 2025-10-23]
