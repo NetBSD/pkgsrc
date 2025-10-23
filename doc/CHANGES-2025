@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6237 2025/10/23 01:12:21 khorben Exp $
+$NetBSD: CHANGES-2025,v 1.6238 2025/10/23 01:28:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9022,3 +9022,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-mime-types-data to 3.2025.0924 [taca 2025-10-22]
 	Updated x11/worker to 5.2.2 [vins 2025-10-22]
 	Added mail/roundcube-plugin-html5_notifier version 0.6.4 [khorben 2025-10-23]
+	Updated wm/afterstep to 2.2.12nb17 [gutteridge 2025-10-23]
