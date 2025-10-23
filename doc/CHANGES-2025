@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6249 2025/10/23 15:38:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6250 2025/10/23 16:39:35 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9060,3 +9060,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pytokens to 0.2.0 [adam 2025-10-23]
 	Updated converters/py-emoji to 2.15.0 [adam 2025-10-23]
 	Updated databases/py-sqlalchemy to 2.0.44 [adam 2025-10-23]
+	Added net/dhcpsd version 0.0.4 [roy 2025-10-23]
