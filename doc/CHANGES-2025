@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6245 2025/10/23 14:29:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6246 2025/10/23 15:02:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9051,3 +9051,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-aiormq to 6.9.2 [adam 2025-10-23]
 	Updated devel/py-virtualenv to 20.35.3 [adam 2025-10-23]
 	Updated devel/py-tox to 4.31.0 [adam 2025-10-23]
+	Updated devel/py-test-env to 1.2.0 [adam 2025-10-23]
+	Updated devel/py-testfixtures to 9.2.0 [adam 2025-10-23]
