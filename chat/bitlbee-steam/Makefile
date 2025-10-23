@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/12/08 16:03:26 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/23 20:36:00 wiz Exp $
 
 DISTNAME=	bitlbee-steam-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bitlbee/}
 GITHUB_PROJECT=	bitlbee-steam

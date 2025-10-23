@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2025/08/30 22:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/10/23 20:37:57 wiz Exp $
 
 DISTNAME=	ibus-libthai-0.1.4
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
 EXTRACT_SUFX=	.tar.xz

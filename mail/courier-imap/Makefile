@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2024/04/18 06:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2025/10/23 20:38:07 wiz Exp $
 
 DISTNAME=	courier-imap-5.2.6
 PKGREVISION=	
+PKGREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

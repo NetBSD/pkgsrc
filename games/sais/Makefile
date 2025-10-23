@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/02/12 06:45:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/23 20:37:14 wiz Exp $
 
 DISTNAME=	sais-1.6.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kuroneko/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

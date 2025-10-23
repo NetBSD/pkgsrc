@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2021/11/15 22:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/23 20:35:46 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-oss/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - Open Sound System plugin

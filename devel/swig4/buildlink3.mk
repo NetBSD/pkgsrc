@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/04/29 11:59:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:36:38 wiz Exp $
 
 BUILDLINK_TREE+=	swig4
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	swig4
 SWIG4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.swig4+=	swig4>=4.1.1
+BUILDLINK_ABI_DEPENDS.swig4?=	swig4>=4.4.0nb1
 BUILDLINK_PKGSRCDIR.swig4?=	../../devel/swig4
 
 BUILDLINK_FILES.swig4+=		bin/ccache-swig4.0

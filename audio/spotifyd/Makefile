@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/04/24 17:11:54 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/23 20:35:55 wiz Exp $
 
 DISTNAME=	spotifyd-0.4.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Spotifyd/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

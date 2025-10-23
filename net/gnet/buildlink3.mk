@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2020/03/08 16:48:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2025/10/23 20:38:44 wiz Exp $
 
 BUILDLINK_TREE+=	gnet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnet
 GNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnet+=	gnet>=2.0.3nb1
-BUILDLINK_ABI_DEPENDS.gnet+=	gnet>=2.0.8nb5
+BUILDLINK_ABI_DEPENDS.gnet+=	gnet>=2.0.8nb7
 BUILDLINK_PKGSRCDIR.gnet?=	../../net/gnet
 
 .include "../../devel/glib2/buildlink3.mk"

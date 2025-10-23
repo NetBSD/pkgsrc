@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2021/12/08 16:05:19 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/23 20:38:03 wiz Exp $
 #
 
 DISTNAME=	skktools-1.3.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/tools/
 

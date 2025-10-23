@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2025/01/25 11:11:19 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2025/10/23 20:36:56 wiz Exp $
 
 BUILDLINK_TREE+=	harfbuzz
 
@@ -10,7 +10,7 @@ USE_CXX_FEATURES+=	c++11 is_trivially_copy_constructible
 .include "../../graphics/librsvg/available.mk"
 
 BUILDLINK_API_DEPENDS.harfbuzz+=	harfbuzz>=2.1.1
-BUILDLINK_ABI_DEPENDS.harfbuzz+=	harfbuzz>=8.4.0
+BUILDLINK_ABI_DEPENDS.harfbuzz+=	harfbuzz>=12.1.0nb1
 BUILDLINK_PKGSRCDIR.harfbuzz?=		../../fonts/harfbuzz
 BUILDLINK_INCDIRS.harfbuzz?=		include/harfbuzz
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/04/24 14:15:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/10/23 20:38:17 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi-notes
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-notes
 AKONADI_NOTES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-notes+=	akonadi-notes>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi-notes?=	akonadi-notes>=23.08.4nb9
+BUILDLINK_ABI_DEPENDS.akonadi-notes?=	akonadi-notes>=23.08.4nb10
 BUILDLINK_PKGSRCDIR.akonadi-notes?=	../../misc/akonadi-notes
 
 .include "../../mail/kmime/buildlink3.mk"

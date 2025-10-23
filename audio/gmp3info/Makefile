@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2025/08/30 22:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/10/23 20:35:43 wiz Exp $
 
 DISTNAME=	mp3info-0.8.5a
 PKGNAME=	g${DISTNAME}
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/
 MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/sound/mp3-utils/mp3info/}

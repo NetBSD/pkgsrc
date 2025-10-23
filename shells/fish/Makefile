@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/08/18 07:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/23 20:39:13 wiz Exp $
 
 DISTNAME=		fish-3.7.1
+PKGREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=fish-shell/}
 GITHUB_PROJECT=		fish-shell

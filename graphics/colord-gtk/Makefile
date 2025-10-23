@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/08/30 22:45:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/23 20:37:25 wiz Exp $
 
 DISTNAME=	colord-gtk-0.2.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.freedesktop.org/software/colord/releases/
 EXTRACT_SUFX=	.tar.xz

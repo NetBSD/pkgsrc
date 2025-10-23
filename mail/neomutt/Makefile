@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2025/09/07 09:22:59 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2025/10/23 20:38:11 wiz Exp $
 
 DISTNAME=		neomutt-20250905
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}

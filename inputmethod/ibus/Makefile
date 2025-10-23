@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2025/09/03 12:37:52 tsutsui Exp $
+# $NetBSD: Makefile,v 1.118 2025/10/23 20:37:56 wiz Exp $
 
 DISTNAME=	ibus-1.5.32
 PKGNAME=	${DISTNAME:S/-rc/rc/:S/-beta/beta/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ibus/}
 GITHUB_PROJECT=	${PKGBASE}

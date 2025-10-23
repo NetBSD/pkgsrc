@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2025/04/17 21:52:33 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/10/23 20:39:33 wiz Exp $
 
 DISTNAME=	hfstospell-0.5.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hfst/}
 GITHUB_PROJECT=	hfst-ospell

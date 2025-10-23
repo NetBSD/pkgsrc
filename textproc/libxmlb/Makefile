@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/07/19 05:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/23 20:39:35 wiz Exp $
 
 DISTNAME=	libxmlb-0.3.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/libxmlb/releases/download/${PKGREVISION_NOREV}/}
 EXTRACT_SUFX=	.tar.xz

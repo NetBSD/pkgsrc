@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2024/12/06 09:55:23 nros Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/23 20:38:09 wiz Exp $
 
 DISTNAME=	fdm-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nicm/}
 

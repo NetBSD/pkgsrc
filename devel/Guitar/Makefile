@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/07/27 08:34:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:36:13 wiz Exp $
 
 DISTNAME=	Guitar-1.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=soramimi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

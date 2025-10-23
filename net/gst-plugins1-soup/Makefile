@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2025/07/14 16:05:51 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/10/23 20:38:46 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-soup/}
+PKGREVISION=	1
 CATEGORIES=	net gnome
 
 COMMENT=	Open source multimedia framework - HTML (soup) plugin

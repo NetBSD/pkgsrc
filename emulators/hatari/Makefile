@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2025/08/20 11:34:55 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/10/23 20:36:49 wiz Exp $
 
 DISTNAME=	hatari-2.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.aydogan.net/distfiles/emulators/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/07/19 05:37:35 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/10/23 20:36:36 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/-/3-/}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2025/08/30 22:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/10/23 20:38:39 wiz Exp $
 
 DISTNAME=	pitivi-0.999
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pitivi/0.999/}
 EXTRACT_SUFX=	.tar.xz

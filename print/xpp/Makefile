@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2025/08/30 22:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/10/23 20:39:04 wiz Exp $
 
 DISTNAME=	xpp-1.5
-PKGREVISION=	53
+PKGREVISION=	54
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cups/}
 

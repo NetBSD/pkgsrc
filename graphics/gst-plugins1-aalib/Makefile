@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/14 10:16:19 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/23 20:37:32 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-aalib/}
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - aalib plugin

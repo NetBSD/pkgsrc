@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/02/28 14:11:21 pin Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/23 20:39:20 wiz Exp $
 
 DISTNAME=	i3status-2.15
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://i3wm.org/i3status/
 EXTRACT_SUFX=	.tar.xz

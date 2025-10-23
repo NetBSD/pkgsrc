@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2021/12/08 16:02:44 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/23 20:39:36 wiz Exp $
 #
 
 DISTNAME=	sary-1.2.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://sary.sourceforge.net/
 

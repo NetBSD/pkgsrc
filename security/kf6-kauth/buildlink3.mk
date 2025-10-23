@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/04/24 14:15:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:39:07 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kauth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kauth
 KF6_KAUTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kauth+=	kf6-kauth>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kauth?=		kf6-kauth>=6.8.0nb2
+BUILDLINK_ABI_DEPENDS.kf6-kauth?=		kf6-kauth>=6.18.0nb1
 BUILDLINK_PKGSRCDIR.kf6-kauth?=		../../security/kf6-kauth
 
 BUILDLINK_FILES.kf6-kauth+=	libexec/kf6/kauth/*

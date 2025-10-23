@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/05/05 07:28:09 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:36:31 wiz Exp $
 
 DISTNAME=	libportal-0.9.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flatpak/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

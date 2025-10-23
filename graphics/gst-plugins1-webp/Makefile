@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/11/15 22:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/23 20:37:32 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-webp/}
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - WebP image plugin

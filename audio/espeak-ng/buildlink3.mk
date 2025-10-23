@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/02/12 06:44:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:35:41 wiz Exp $
 
 BUILDLINK_TREE+=	espeak-ng
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	espeak-ng
 ESPEAK_NG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.espeak-ng+=	espeak-ng>=1.51
-BUILDLINK_ABI_DEPENDS.espeak-ng+=	espeak-ng>=1.52.0nb1
+BUILDLINK_ABI_DEPENDS.espeak-ng+=	espeak-ng>=1.52.0nb2
 BUILDLINK_PKGSRCDIR.espeak-ng?=		../../audio/espeak-ng
 BUILDLINK_INCDIRS.espeak-ng?=		include/espeak-ng
 

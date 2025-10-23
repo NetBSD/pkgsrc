@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/07/14 16:05:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/23 20:37:32 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-jpeg/}
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - JPEG plugin

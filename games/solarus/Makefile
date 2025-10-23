@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2025/08/19 11:39:07 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/10/23 20:37:15 wiz Exp $
 
 VERSION=	1.6.5
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITLAB:=solarus-games/}
 GITLAB_PROJECT=	solarus

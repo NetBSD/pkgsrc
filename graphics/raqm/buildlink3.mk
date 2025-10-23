@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2024/07/11 19:43:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:37:46 wiz Exp $
 
 BUILDLINK_TREE+=	raqm
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	raqm
 RAQM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.raqm+=	raqm>=0.10.1
+BUILDLINK_ABI_DEPENDS.raqm?=	raqm>=0.10.3nb1
 BUILDLINK_PKGSRCDIR.raqm?=	../../graphics/raqm
 
 .include "../../converters/fribidi/buildlink3.mk"

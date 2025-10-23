@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2022/12/06 20:46:24 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/10/23 20:35:36 wiz Exp $
 
 BUILDLINK_TREE+=	pcre2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pcre2
 PCRE2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcre2+=	pcre2>=10.21
-BUILDLINK_ABI_DEPENDS.pcre2+=	pcre2>=10.30
+BUILDLINK_ABI_DEPENDS.pcre2+=	pcre2>=10.47
 BUILDLINK_PKGSRCDIR.pcre2?=	../../devel/pcre2
 .endif	# PCRE2_BUILDLINK3_MK
 

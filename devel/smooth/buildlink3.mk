@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/05 19:25:51 js Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/10/23 20:36:38 wiz Exp $
 
 BUILDLINK_TREE+=	smooth
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	smooth
 SMOOTH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.smooth+=	smooth>=0.9.10
-BUILDLINK_ABI_DEPENDS.smooth?=	smooth>=0.9.10nb2
+BUILDLINK_ABI_DEPENDS.smooth?=	smooth>=0.9.10nb3
 BUILDLINK_PKGSRCDIR.smooth?=	../../devel/smooth
 
 .include "../../archivers/bzip2/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2025/02/12 06:44:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2025/10/23 20:36:52 wiz Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20220501
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh

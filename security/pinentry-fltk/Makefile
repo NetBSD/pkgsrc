@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/08/02 09:55:55 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/23 20:39:09 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-fltk-/}
+PKGREVISION=	1
 COMMENT=	Applications for entering PINs or Passphrases, FLTK enabled
 
 .include "../../security/pinentry/Makefile.common"

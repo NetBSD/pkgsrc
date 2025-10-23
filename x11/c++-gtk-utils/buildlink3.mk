@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2025/08/30 22:46:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2025/10/23 20:39:51 wiz Exp $
 
 BUILDLINK_TREE+=	c++-gtk-utils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	c++-gtk-utils
 C++_GTK_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.c++-gtk-utils+=	c++-gtk-utils>=2.2.7
-BUILDLINK_ABI_DEPENDS.c++-gtk-utils?=	c++-gtk-utils>=2.2.19nb15
+BUILDLINK_ABI_DEPENDS.c++-gtk-utils?=	c++-gtk-utils>=2.2.19nb16
 BUILDLINK_PKGSRCDIR.c++-gtk-utils?=	../../x11/c++-gtk-utils
 
 .include "../../devel/glib2/buildlink3.mk"

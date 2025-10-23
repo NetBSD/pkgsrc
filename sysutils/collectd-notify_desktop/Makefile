@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/08/30 22:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/23 20:39:15 wiz Exp $
 
 COLLECTD_PACKAGE=	notify_desktop
 
 COMMENT=		Statistics collection daemon - notify_desktop plugin
-PKGREVISION=		5
+PKGREVISION=		6
 
 .include "../../sysutils/libnotify/buildlink3.mk"
 COLLECTD_LIB.notify=	${BUILDLINK_PREFIX.libnotify}

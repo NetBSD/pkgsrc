@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/01/30 17:25:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/23 20:37:41 wiz Exp $
 
 DISTNAME=	mypaint-brushes-1.3.1
 PKGNAME=	${DISTNAME:S/brushes/brushes1/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mypaint/}
 GITHUB_PROJECT=	mypaint-brushes

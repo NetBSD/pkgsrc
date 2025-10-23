@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/02/12 06:44:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/23 20:36:57 wiz Exp $
 
 DISTNAME=	abbayedesmorts-gpl-2.0.2
 PKGNAME=	${DISTNAME:S/-gpl//1}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nevat/}
 GITHUB_PROJECT=	abbayedesmorts-gpl

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2025/10/05 19:25:57 js Exp $
+# $NetBSD: Makefile,v 1.34 2025/10/23 20:37:13 wiz Exp $
 
 DISTNAME=	powder-toy-95.0
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ThePowderToy/}
 GITHUB_PROJECT=	The-Powder-Toy

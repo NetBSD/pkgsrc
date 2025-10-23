@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2022/10/26 10:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/10/23 20:36:18 wiz Exp $
 
 DISTNAME=	g-wrap-1.9.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 

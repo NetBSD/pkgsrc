@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2025/10/05 19:25:51 js Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2025/10/23 20:36:40 wiz Exp $
 
 BUILDLINK_TREE+=	abiword
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	abiword
 ABIWORD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.abiword+=	abiword>=3.0.1
-BUILDLINK_ABI_DEPENDS.abiword?=	abiword>=3.0.5nb32
+BUILDLINK_ABI_DEPENDS.abiword?=	abiword>=3.0.5nb33
 BUILDLINK_PKGSRCDIR.abiword?=	../../editors/abiword
 
 .include "../../converters/fribidi/buildlink3.mk"

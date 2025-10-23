@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/10/07 13:01:44 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/10/23 20:37:37 wiz Exp $
 
 DISTNAME=	lasem-0.6.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LasemProject/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

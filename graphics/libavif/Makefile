@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/08/30 22:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/23 20:37:38 wiz Exp $
 
 DISTNAME=	libavif-1.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AOMediaCodec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

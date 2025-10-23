@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2025/08/20 11:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2025/10/23 20:38:39 wiz Exp $
 
 DISTNAME=	phonon-backend-vlc-0.11.2
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.11.2/}
 EXTRACT_SUFX=	.tar.xz

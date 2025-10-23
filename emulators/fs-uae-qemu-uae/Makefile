@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/01/09 12:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/23 20:36:48 wiz Exp $
 
 DISTNAME=	qemu-uae-3.8.6
 PKGNAME=	fs-uae-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FrodeSolheim/}
 GITHUB_PROJECT=	qemu-uae
