@@ -1,0 +1,24 @@
+$NetBSD: patch-rts.tests,v 1.1 2025/10/23 17:07:36 schmonz Exp $
+
+Run tests on in-tree binaries, not installed ones.
+
+--- rts.tests.orig	2025-10-23 16:47:34.587199467 +0000
++++ rts.tests
+@@ -26,7 +26,7 @@ do
+     one  Hello
+ # comment line
+     two  Goodbye
+-' | ${CDB}make-12 12.${CDB} 12.tmp
++' | ${CDB}make-12-for-test 12.${CDB} 12.tmp
+   echo $?
+ 
+   echo "--- ${CDB}make-sv handles simple example"
+@@ -38,7 +38,7 @@ do
+   discard           9/udp    sink null
+   systat           11/tcp    users        #Active Users
+   systat           11/udp    users        #Active Users
+-  ' | ${CDB}make-sv sv.${CDB} sv.tmp
++  ' | ${CDB}make-sv-for-test sv.${CDB} sv.tmp
+   echo $?
+ 
+   echo "--- ${CDB}dump handles simple examples"
