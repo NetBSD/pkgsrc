@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6239 2025/10/23 01:47:19 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.6240 2025/10/23 09:14:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9024,3 +9024,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/roundcube-plugin-html5_notifier version 0.6.4 [khorben 2025-10-23]
 	Updated wm/afterstep to 2.2.12nb17 [gutteridge 2025-10-23]
 	Updated www/firefox-esr to 140 [gutteridge 2025-10-23]
+	Updated devel/py-wrapt to 2.0.0 [adam 2025-10-23]
+	Updated devel/py-hypothesis to 6.142.3 [adam 2025-10-23]
