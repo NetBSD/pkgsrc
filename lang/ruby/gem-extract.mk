@@ -1,4 +1,4 @@
-# $NetBSD: gem-extract.mk,v 1.1 2015/03/08 14:41:12 taca Exp $
+# $NetBSD: gem-extract.mk,v 1.2 2025/10/24 05:32:21 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that extract
 # Ruby gems files.
@@ -20,10 +20,9 @@ _GEM_DISTFILES=		${DISTFILES:M*.gem}
 .PHONY: gem-extract
 post-extract: gem-extract
 .if !target(gem-extract)
-gem-extract: fake-home
+gem-extract: # fake-home
 .  for _gem_ in ${_GEM_DISTFILES}
-	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
-		${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
+	${RUN} ${ECHO} "Generating gemspec file from ${_gem_:R}"
 	${RUN} cd ${WRKDIR} && \
 		${SETENV} ${MAKE_ENV} TZ=UTC ${RUBYGEM_ENV} \
 		${RUBYGEM} spec --ruby ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
