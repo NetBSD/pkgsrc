@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2025/08/14 20:05:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/10/24 07:30:14 adam Exp $
 bin/cygdb-${PYVERSSUFFIX}
 bin/cython-${PYVERSSUFFIX}
 bin/cythonize-${PYVERSSUFFIX}
@@ -6,8 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Cython/Build/BuildExecutable.py
 ${PYSITELIB}/Cython/Build/BuildExecutable.pyc
