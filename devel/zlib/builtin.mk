@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2024/02/08 21:33:34 adam Exp $
+# $NetBSD: builtin.mk,v 1.20 2025/10/24 04:36:04 riastradh Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -85,6 +85,14 @@ USE_BUILTIN.zlib=	no
 CHECK_BUILTIN.zlib?=	no
 .if ${CHECK_BUILTIN.zlib:tl} == no
 .  if ${USE_BUILTIN.zlib:tl} == yes
+
+# Work around PR lib/59711: "#define HAVE_UNISTD_H 1" breaks 32-bit
+# libz.  Must be fixed in pkgsrc for binary package builds against x.0
+# releases (e.g., 9.0) because the system header file is wrong.
+# Practically, this probably only affects big-endian LP32 platforms.
+.    if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 110000
+BUILDLINK_CPPFLAGS.zlib+=	-Dz_off_t=long
+.    endif
 
 BUILDLINK_TARGETS+=	fake-zlib-pc
 
