@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2025/10/05 13:50:07 js Exp $
+# $NetBSD: Makefile,v 1.54 2025/10/24 20:05:04 js Exp $
 
 DISTNAME=	objfw-1.4.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -16,25 +17,6 @@ CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${MACHINE_ARCH} == "alpha" || \
-	${MACHINE_ARCH} == "coldfire" || \
-	${MACHINE_ARCH} == "hppa" || \
-	${MACHINE_ARCH} == "ia64" || \
-	${MACHINE_ARCH} == "m68k" || \
-	${MACHINE_ARCH} == "or1k" || \
-	${MACHINE_ARCH} == "sh3eb" || \
-	${MACHINE_ARCH} == "sh3el" || \
-	${MACHINE_ARCH} == "vax"
-# Clang does not support these architectures, so build with GCC, with the
-# caveat that GCC doesn't support all features.
-.elif ${OPSYS} == "Darwin"
-# Darwin always has good Objective-C support with the system compiler.
-.else
-CONFIGURE_ARGS+=	OBJC=clang	# Clang has much better ObjC support
-TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
-PKGSRC_COMPILER=	clang
-.endif
 
 PLIST_SRC=	PLIST
 PLIST_VARS+=	ddp ipx ofgctester sctp
