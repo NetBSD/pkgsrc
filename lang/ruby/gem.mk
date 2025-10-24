@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.54 2024/05/26 00:15:32 taca Exp $
+# $NetBSD: gem.mk,v 1.55 2025/10/24 05:32:21 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -186,13 +186,6 @@ RUBY_MANPAGES_INSTALLED!= ${PKG_INFO} -e ${RUBY_PKGPREFIX}-manpages || ${TRUE}
 PKG_SKIP_REASON+=	"Please uninstall ${RUBY_PKGPREFIX}-manpages or set RUBYGEM_USE_MANPAGES to yes."
 .    endif
 .  endif
-.endif
-
-# If any of the DISTFILES are gems, then skip the normal do-extract actions
-# and extract them ourselves in gem-extract.
-#
-.if !empty(DISTFILES:M*.gem)
-EXTRACT_ONLY?=	# empty
 .endif
 
 # Directory for the Gem to install
