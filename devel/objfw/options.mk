@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/10/24 20:05:04 js Exp $
+# $NetBSD: options.mk,v 1.4 2025/10/24 21:23:08 js Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.objfw
 .if ${MACHINE_ARCH} != "alpha" && \
@@ -47,6 +47,7 @@ PLIST_SRC+=		PLIST.tlsframework
 .elif !empty(PKG_OPTIONS:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tls=gnutls
+USE_TOOLS+=		pkg-config
 PLIST_SRC+=		PLIST.tls
 .  if ${OPSYS} == "Darwin"
 PLIST_SRC+=		PLIST.tlsframework

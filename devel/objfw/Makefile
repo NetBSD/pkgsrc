@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2025/10/24 21:18:21 js Exp $
+# $NetBSD: Makefile,v 1.56 2025/10/24 21:23:08 js Exp $
 
 DISTNAME=	objfw-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
-USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 
