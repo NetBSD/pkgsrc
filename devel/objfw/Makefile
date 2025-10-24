@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2025/10/24 20:05:04 js Exp $
+# $NetBSD: Makefile,v 1.55 2025/10/24 21:18:21 js Exp $
 
 DISTNAME=	objfw-1.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -15,6 +15,14 @@ USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 CONFIGURE_ARGS+=	OBJCFLAGS=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
+
+# Breaks exceptions in some rare cases with GCC on NetBSD 10 on AMD64 (e.g. on
+# my system ofhttp would fail because an exception could not be caught, but the
+# entire test suite would pass).
+# Unfortunately, we cannot check if we are using Clang or GCC here, as this
+# needs to be set before including bsd.prefs.mk, and hence also before
+# options.mk.
+STACK_CHECK_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
