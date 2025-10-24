@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6253 2025/10/24 05:07:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6254 2025/10/24 05:29:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9064,3 +9064,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/cdb to 20251021 [schmonz 2025-10-23]
 	Updated www/palemoon to 33.9.1 [nia 2025-10-23]
 	Updated lang/ruby33 to 3.3.10 [taca 2025-10-24]
+	Updated lang/php84 to 8.4.14 [taca 2025-10-24]
