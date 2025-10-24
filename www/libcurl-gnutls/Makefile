@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/10/24 03:59:52 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/24 04:01:11 riastradh Exp $
 
 .include "../../www/curl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/curl/libcurl-gnutls/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
 
