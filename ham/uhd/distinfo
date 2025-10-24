@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.45 2025/10/21 12:06:29 gdt Exp $
+$NetBSD: distinfo,v 1.46 2025/10/24 10:58:09 gdt Exp $
 
 BLAKE2s (uhd-4.9.0.1.tar.gz) = 1f39df766608ff580d0a35d393a1be51ceaefad60897f690151c837788b819ef
 SHA512 (uhd-4.9.0.1.tar.gz) = efb4ef440e102c7705100980a8ea0a9e55de6e631d70c1e9a39a8b6cd8991129f2fd39ba93094300bdc4878c73023a956a4f79488f6aaf5104371410de6f0497
 Size (uhd-4.9.0.1.tar.gz) = 37508709 bytes
+SHA1 (patch-CMakeLists.txt) = 3a150d645b44c54037d5bf7a9287426f18067426
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
 SHA1 (patch-lib_rfnoc_vector__iir__block__control.cpp) = d0bc32f888a6cfc30f1eb57d7f2d71bb86cdc284
