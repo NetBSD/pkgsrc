@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6252 2025/10/23 19:54:32 nia Exp $
+$NetBSD: CHANGES-2025,v 1.6253 2025/10/24 05:07:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9063,3 +9063,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added net/dhcpsd version 0.0.4 [roy 2025-10-23]
 	Updated databases/cdb to 20251021 [schmonz 2025-10-23]
 	Updated www/palemoon to 33.9.1 [nia 2025-10-23]
+	Updated lang/ruby33 to 3.3.10 [taca 2025-10-24]
