@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6257 2025/10/24 12:47:50 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6258 2025/10/24 20:04:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9069,3 +9069,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cython to 3.1.6 [adam 2025-10-24]
 	Updated devel/py-dulwich to 0.24.7 [adam 2025-10-24]
 	Updated geography/py-sbf2 to 1.0.2 [gdt 2025-10-24]
+	Updated databases/p5-BerkeleyDB to 0.66 [bsiegert 2025-10-24]
