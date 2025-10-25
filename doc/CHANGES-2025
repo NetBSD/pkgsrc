@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6262 2025/10/25 13:58:01 kikadf Exp $
+$NetBSD: CHANGES-2025,v 1.6263 2025/10/25 15:04:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9071,6 +9071,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-sbf2 to 1.0.2 [gdt 2025-10-24]
 	Updated databases/p5-BerkeleyDB to 0.66 [bsiegert 2025-10-24]
 	Updated chat/element-web to 1.12.2 [js 2025-10-24]
+	Updated www/nghttp2 to 1.68.0 [adam 2025-10-25]
+	Updated www/nghttp2-tools to 1.68.0 [adam 2025-10-25]
+	Updated devel/cutter to 1.2.9 [adam 2025-10-25]
 	Updated x11/copyq to 13.0.0 [kikadf 2025-10-25]
 	Updated geography/py-ubxutils to 1.0.5 [gdt 2025-10-25]
 	Updated devel/afl++ to 4.34c [kikadf 2025-10-25]
