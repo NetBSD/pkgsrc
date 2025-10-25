@@ -1,0 +1,15 @@
+$NetBSD: patch-afl-cmin,v 1.1 2025/10/25 13:57:41 kikadf Exp $
+
+* Use getconf instead of nproc
+
+--- afl-cmin.orig	2025-10-01 07:45:10.000000000 +0000
++++ afl-cmin
+@@ -383,7 +383,7 @@ BEGIN {
+   }
+ 
+   if (threads) {
+-    cmd = "nproc"
++    cmd = "getconf NPROCESSORS_ONLN"
+     cmd | getline nproc
+     close(cmd)
+     if (threads == "all") {
