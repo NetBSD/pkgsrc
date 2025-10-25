@@ -1,0 +1,43 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2025/10/25 13:57:40 kikadf Exp $
+
+* Fix pathes
+* Disable gcc_plugin
+
+--- GNUmakefile.orig	2025-10-01 07:45:10.000000000 +0000
++++ GNUmakefile
+@@ -24,7 +24,7 @@ BIN_PATH     = $(PREFIX)/bin
+ HELPER_PATH  = $(PREFIX)/lib/afl
+ DOC_PATH     = $(PREFIX)/share/doc/afl
+ MISC_PATH    = $(PREFIX)/share/afl
+-MAN_PATH     = $(PREFIX)/share/man/man8
++MAN_PATH     = $(PREFIX)/man/man8
+ INCLUDE_PATH = $(PREFIX)/include/afl
+ 
+ PROGNAME    = afl
+@@ -329,7 +329,7 @@ ifeq "$(ARCH)" "aarch64"
+ endif
+ 
+ .PHONY: all
+-all:	test_x86 test_shm test_python ready $(PROGS) llvm gcc_plugin test_build all_done
++all:	test_x86 test_shm test_python ready $(PROGS) llvm
+ 	-$(MAKE) -C utils/aflpp_driver
+ 	@echo
+ 	@echo
+@@ -703,7 +703,6 @@ endif
+ distrib: all
+ 	-$(MAKE) -j$(nproc) -f GNUmakefile.llvm
+ ifneq "$(SYS)" "Darwin"
+-	-$(MAKE) -f GNUmakefile.gcc_plugin
+ 	-$(MAKE) -C utils/libdislocator
+ 	-$(MAKE) -C utils/libtokencap
+ endif
+@@ -859,9 +858,6 @@ install: all $(MANPAGES)
+ 	@if [ -f utils/aflpp_driver/libAFLDriver.a ]; then set -e; install -m 644 utils/aflpp_driver/libAFLDriver.a $${DESTDIR}$(HELPER_PATH); fi
+ 	@if [ -f utils/aflpp_driver/libAFLQemuDriver.a ]; then set -e; install -m 644 utils/aflpp_driver/libAFLQemuDriver.a $${DESTDIR}$(HELPER_PATH); fi
+ 	-$(MAKE) -f GNUmakefile.llvm install
+-ifneq "$(SYS)" "Darwin"
+-	-$(MAKE) -f GNUmakefile.gcc_plugin install
+-endif
+ 	ln -sf afl-cc $${DESTDIR}$(BIN_PATH)/afl-gcc
+ 	ln -sf afl-cc $${DESTDIR}$(BIN_PATH)/afl-g++
+ 	ln -sf afl-cc $${DESTDIR}$(BIN_PATH)/afl-clang
