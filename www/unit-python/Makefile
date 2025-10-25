@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/09/01 17:28:29 osa Exp $
+# $NetBSD: Makefile,v 1.11 2025/10/25 01:52:02 osa Exp $
 
 PKGNAME=	unit-${LANG}${PYVERSSUFFIX}-${UNIT_VERSION}
 COMMENT=	Python module for NGINX Unit
@@ -6,7 +6,7 @@ COMMENT=	Python module for NGINX Unit
 LANG=		python
 MODNAME=	${LANG}${PYVERSSUFFIX}
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 post-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
