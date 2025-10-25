@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.639 2025/10/23 17:11:23 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.640 2025/10/25 13:28:45 kikadf Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17538,7 +17538,7 @@ ming-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2019-12982
 ImageMagick<7.0.8.35	uninitialized-variables	https://nvd.nist.gov/vuln/detail/CVE-2019-12978
 ImageMagick6<6.9.10.35	uninitialized-variables	https://nvd.nist.gov/vuln/detail/CVE-2019-12978
 glib2<2.59.1	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-13012
-FlightCrew-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-13032
+FlightCrew<0.7.2nb62	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2019-13032
 irssi<1.0.8		use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2019-13045
 irssi>=1.1.0<1.1.3	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2019-13045
 irssi>=1.2.0<1.2.1	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2019-13045
