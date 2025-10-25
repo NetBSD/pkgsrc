@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/10/23 20:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/10/25 01:54:58 osa Exp $
 
 DISTNAME=	njs-0.9.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	lang www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nginx.org/en/docs/njs
 COMMENT=	NGINX JavaScript command line utility
 LICENSE=	2-clause-bsd
