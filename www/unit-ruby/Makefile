@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/05/27 16:05:34 taca Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/25 01:52:48 osa Exp $
 
 PKGNAME=	unit-${LANG}${RUBY_VER}-${UNIT_VERSION}
 COMMENT=	Ruby module for NGINX Unit
@@ -6,7 +6,7 @@ COMMENT=	Ruby module for NGINX Unit
 LANG=		ruby
 MODNAME=	${LANG}${RUBY_VER}
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 post-configure:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}	\
