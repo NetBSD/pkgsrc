@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/10/23 20:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/25 11:46:39 kikadf Exp $
 
-DISTNAME=	copyq-12.0.1
-PKGREVISION=	1
+DISTNAME=	copyq-13.0.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hluk/}
 GH_PROJECT=	CopyQ
@@ -23,6 +22,7 @@ USE_TOOLS+=		pkg-config
 .include "../../devel/qt6-qtwayland/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../misc/kf6-kstatusnotifieritem/buildlink3.mk"
+.include "../../x11/kf6-kguiaddons/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
