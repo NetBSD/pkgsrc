@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2023/09/01 17:28:28 osa Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/25 02:00:51 osa Exp $
 
 PKGNAME=	libunit-${UNIT_VERSION}
 DISTNAME=	unit-${UNIT_VERSION}
 COMMENT=	Development kit for dynamic web application server
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 DISTINFO_FILE=	${.CURDIR}/../../www/unit/distinfo
 PATCHDIR=	${.CURDIR}/../../www/unit/patches
