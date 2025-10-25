@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/09/18 11:19:05 osa Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/25 01:50:37 osa Exp $
 
 PKGNAME=	unit-${LANG}${PHP_VER}-${UNIT_VERSION}
 COMMENT=	PHP module for NGINX Unit
@@ -6,7 +6,7 @@ COMMENT=	PHP module for NGINX Unit
 LANG=		php
 MODNAME=	${LANG}${PHP_VERSION}
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 CONFIGURE_ENV+=		PHP_VER=${PHP_VER}
 
