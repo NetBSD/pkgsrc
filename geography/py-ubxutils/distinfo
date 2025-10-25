@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2025/09/04 13:57:53 gdt Exp $
+$NetBSD: distinfo,v 1.2 2025/10/25 13:18:16 gdt Exp $
 
-BLAKE2s (pyubxutils-1.0.3.tar.gz) = 366e954de5305986e29d9124e362d6c8527dad45e9e8411ea9c1b603c3258814
-SHA512 (pyubxutils-1.0.3.tar.gz) = 78abcf47e6b7ea13d4fed5b14dca4d42db14411b8cbba25218079930998b99cf1b4f08928457bc9272597cfaddec0bc2c71d8424855a30b13b37cd67096c4ae3
-Size (pyubxutils-1.0.3.tar.gz) = 35224 bytes
+BLAKE2s (pyubxutils-1.0.5.tar.gz) = 5602f97360ad835e6773edc9f1016f50117f6a7e3d1883979cfc08a7adf382e6
+SHA512 (pyubxutils-1.0.5.tar.gz) = f2fe1c5a08696fdeee7069b5591a8dccf3b9fe84f09e10b3baca6c9f0bdceea3ffacecc8ac5c9b4ed132a590d26f6237dd39bcbcb147aa6c64bc4bcba824aa78
+Size (pyubxutils-1.0.5.tar.gz) = 35763 bytes
