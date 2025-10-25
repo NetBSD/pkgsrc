@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.7 2018/10/24 18:31:08 leot Exp $
+$NetBSD: patch-Source_WTF_wtf_InlineASM.h,v 1.1 2025/10/25 15:00:45 tsutsui Exp $
 
 Add support for NetBSD, OpenBSD and Solaris.
 
---- Source/WTF/wtf/InlineASM.h.orig	2017-02-20 16:20:15.000000000 +0000
+--- Source/WTF/wtf/InlineASM.h.orig	2022-06-30 09:49:30.096184300 +0000
 +++ Source/WTF/wtf/InlineASM.h
-@@ -40,7 +40,7 @@
+@@ -43,7 +43,7 @@
  #define THUMB_FUNC_PARAM(name)
  #endif
  

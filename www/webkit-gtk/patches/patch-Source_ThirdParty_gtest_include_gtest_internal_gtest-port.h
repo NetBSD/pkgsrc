@@ -1,4 +1,7 @@
-$NetBSD: patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h,v 1.5 2021/09/28 22:11:54 leot Exp $
+$NetBSD: patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h,v 1.6 2025/10/25 15:00:45 tsutsui Exp $
+
+- Fixes out-of-scope errors seen on gcc 4.7.x
+- Allow building with libc++
 
 --- Source/ThirdParty/gtest/include/gtest/internal/gtest-port.h.orig	2021-09-01 09:16:47.000000000 +0000
 +++ Source/ThirdParty/gtest/include/gtest/internal/gtest-port.h
