@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/09/18 11:19:05 osa Exp $
+# $NetBSD: Makefile,v 1.14 2025/10/25 01:49:04 osa Exp $
 
 PKGNAME=	unit-${LANG}-${UNIT_VERSION}
 COMMENT=	Perl module for NGINX Unit
@@ -6,7 +6,7 @@ COMMENT=	Perl module for NGINX Unit
 LANG=		perl
 MODNAME=	${LANG}
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
 USE_TOOLS+=	perl
 
