@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/06/28 08:36:17 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/10/25 11:53:59 adam Exp $
 
-BLAKE2s (cutter-1.2.7.tar.gz) = 56df8c732e6c03acc643f1652bf997b2f54b6dc37fcb00a57a1d3c36fd1d7cff
-SHA512 (cutter-1.2.7.tar.gz) = 50d8f2e2f83300e0d70fafc8845d1d52f05253e7f6511e09f7aeb48f0141724af7912212171a91ae61e1a4144279634e77230f6116ce1ff6d66b14c03a173802
-Size (cutter-1.2.7.tar.gz) = 2279308 bytes
+BLAKE2s (cutter-1.2.9.tar.gz) = b3124d4120d007a9e8c98ece25ca8defc98be548dfa5a81e078ba7df39ad7895
+SHA512 (cutter-1.2.9.tar.gz) = 30e4e2a372ed40f4a9280a35a11c708667197cbf7b01e7f2fe79328ec41bca7a780a37acc7737172d807ec5e6c9f609ed6d531f32a1c77f58049efb7b22e9a8e
+Size (cutter-1.2.9.tar.gz) = 2252541 bytes
