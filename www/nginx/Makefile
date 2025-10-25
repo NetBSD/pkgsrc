@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2025/10/23 20:39:48 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2025/10/25 01:44:42 osa Exp $
 
 DISTNAME=	nginx-1.28.0
 PKGREVISION=	9
@@ -10,7 +10,7 @@ PATCH_SITES=		https://github.com/freenginx/nginx/commit/
 PATCHFILES=		1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch
 PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
