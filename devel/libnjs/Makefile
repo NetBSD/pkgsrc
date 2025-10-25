@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/10/23 20:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/10/25 01:54:02 osa Exp $
 
 DISTNAME=	njs-0.9.1
 PKGNAME=	lib${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_PROJECT=	njs
 
-MAINTAINER=	osa@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nginx.org/en/docs/njs/
 COMMENT=	NGINX JavaScript static library
 LICENSE=	2-clause-bsd
