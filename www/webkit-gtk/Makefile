@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.275 2025/10/23 20:39:51 wiz Exp $
+# $NetBSD: Makefile,v 1.276 2025/10/25 14:45:27 tsutsui Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -123,6 +123,8 @@ CXXFLAGS+=	-Wno-c++11-narrowing
 
 # This does not disable optimisations, merely avoids #error if there are none.
 CFLAGS+=	-DRELEASE_WITHOUT_OPTIMIZATIONS
+
+UNLIMIT_RESOURCES=	datasize memorysize
 
 # Needed for JavaScript JIT
 NOT_PAX_MPROTECT_SAFE+=	libexec/webkit2gtk-4.0/WebKitWebProcess
