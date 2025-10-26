@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2023/11/07 08:43:39 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/10/26 19:16:52 vins Exp $
 
 BLAKE2s (ispell-3.4.06.tar.gz) = b494c7efa96d9c936af79d47f80dae930376025ddd9906b291a65a68cb4b7ecf
 SHA512 (ispell-3.4.06.tar.gz) = 276447f12ea87c5c75909b974ae2225ff6abd330a04b2e1c493161a807792cd0cf1143cb9b991b986d92a88ae831edb016650ba885c918055b94aa7de2b81384
@@ -6,9 +6,11 @@ Size (ispell-3.4.06.tar.gz) = 672723 bytes
 SHA1 (patch-Makefile) = e77f0502e3c4cda4f55e16f91030175f192844bb
 SHA1 (patch-ac) = 4faa82bdd628500aa35d94b2d4a1860919097b72
 SHA1 (patch-ad) = c47a406acf52244868e7a561ab7f1c9d394d4034
-SHA1 (patch-ae) = adc803bd66f62236a2b879713f326b4c7ac7199f
+SHA1 (patch-ae) = cb32a4c2a38dfbaa62d610d10fd68da856055dfb
 SHA1 (patch-ai) = 1fbf9385818e0a0fcd4049d0407212b1456d2744
 SHA1 (patch-al) = ea63fc7dbc2200794157d9be781210cd8a4e671f
 SHA1 (patch-ar) = c5082129f55fb232db34e0796423e60fcd4ed5c2
+SHA1 (patch-correct.c) = 16f62f40c9ae2370f3fab90a5ff5e8ebbdebd834
 SHA1 (patch-deformatters_Makefile) = a66a43f679491df718149c0b6db36ed0f9962535
 SHA1 (patch-languages_english_english.2) = ae4d249890746a979787282c2e48aad3921ac77c
+SHA1 (patch-parse.y) = 71a64178bf336b5cec39184be2f0aeffb08c9dd3
