@@ -33,7 +33,11 @@ NB: Create the xorg.conf.d target directory if it doesn't exist already.
 -----------------------------------------------------------------------
 
 For ttsession  to work, your hostname needs to be aliased to the
-localhost and the loopback address inside /etc/hosts: 
+localhost and the loopback address inside /etc/hosts.
+
+NOTE: in the example below, replace "hostname" with your actual
+host's name, as returned by hostname(1). Replace the wildcard in 
+"localhost.*" with your domain name if you have any, or leave it blank. 
 
 ::1		hostname	localhost	localhost.*
 127.0.0.1	hostname	localhost	localhost.*
