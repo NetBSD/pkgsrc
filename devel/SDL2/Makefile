@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:36:14 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/10/26 20:29:54 jmcneill Exp $
 
 DISTNAME=	SDL2-2.32.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL
@@ -57,6 +57,9 @@ LDFLAGS.FreeBSD+=	-lusb
 CONFIGURE_ARGS+=	--disable-sse
 CONFIGURE_ARGS+=	--disable-ssemath
 CONFIGURE_ARGS+=	--disable-sse2
+.endif
+.if ${MACHINE_ARCH} == "powerpc"
+CONFIGURE_ARGS+=	--disable-altivec
 .endif
 
 PKGCONFIG_OVERRIDE+=	sdl2.pc.in
