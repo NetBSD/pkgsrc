@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6264 2025/10/25 17:22:34 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.6265 2025/10/26 08:38:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9078,3 +9078,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-ubxutils to 1.0.5 [gdt 2025-10-25]
 	Updated devel/afl++ to 4.34c [kikadf 2025-10-25]
 	Updated graphics/ImageMagick to 7.1.2.7 [triaxx 2025-10-25]
+	Updated devel/cargo-upgrades to 2.2.4 [adam 2025-10-26]
+	Updated archivers/bkcrack to 1.8.1 [adam 2025-10-26]
