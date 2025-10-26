@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/04/12 06:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/26 12:06:41 ryoon Exp $
 
 DISTNAME=	libshout-2.4.6
 PKGREVISION=	2
@@ -16,6 +16,8 @@ USE_TOOLS+=		pkg-config
 
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	shout.pc.in
+
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE # for strcasestr(3)
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
