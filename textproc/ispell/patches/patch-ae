@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2014/05/14 02:28:13 rodent Exp $
+$NetBSD: patch-ae,v 1.5 2025/10/26 19:16:53 vins Exp $
 
 --- lookup.c.orig	Thu Apr 14 21:25:52 2005
 +++ lookup.c
@@ -31,3 +31,12 @@ $NetBSD: patch-ae,v 1.4 2014/05/14 02:28:13 rodent Exp $
  	else
  	    entry->affix = NULL;
  	}
+@@ -531,7 +531,7 @@ struct dent * lookup (s, dotree)
+ 	if (s1  &&  s1[0] == schar[0]
+ 	  &&  strcmp ((char *) s1 + 1, (char *) schar + 1) == 0)
+ 	    return dp;
+-	while (dp->flagfield & MOREVARIANTS)	/* Skip variations */
++	while ((dp->flagfield & MOREVARIANTS) && dp->next != NULL)	/* Skip variations */
+ 	    dp = dp->next;
+ 	}
+     if (dotree)
