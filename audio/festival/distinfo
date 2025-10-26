@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 09:58:54 nia Exp $
+$NetBSD: distinfo,v 1.34 2025/10/26 11:54:27 ryoon Exp $
 
 BLAKE2s (festival-2.5.0-release.tar.gz) = a7ddc4412fb51dfc66b2eb719d795bcfeec0c0a49b14bc8039b1e7c5e54dd154
 SHA512 (festival-2.5.0-release.tar.gz) = 529ec3a1780a861074b6070567f3e11cfcc839081f61e078978a491f11eb424bc4d6adf599f073d5571e20f66871b7045df9f9b175a1083d10e8bb02342639b1
@@ -11,6 +11,7 @@ SHA1 (patch-ab) = 7f22ea2a89caf72dcb18818eb98bdb54911d5e7c
 SHA1 (patch-ac) = 9ffe5f44dc50d9ab5161b9ca107956e799fff463
 SHA1 (patch-ae) = 9d630d198f829979508b90416ddb0f56d721b422
 SHA1 (patch-aq) = 81109b22e5db0f733fa2a3d8e7cdef1cdcbe0185
+SHA1 (patch-festival_configure) = cf021f3f892594b8d08ece9eb5c01c5691b9d48b
 SHA1 (patch-festival_src_modules_hts__engine_HTS__misc.c) = bef058a916f57125bb3c6d29c4aade3984b1aef3
 SHA1 (patch-speech__tools_config_compilers_gcc__defaults.mak) = 0498a265d7f77b39503d5442cca0754ad72531a8
 SHA1 (patch-speech__tools_config_rules_compile__options.mak) = d3aa93029edba84f8130f1bc33c8d74219bafd9a
