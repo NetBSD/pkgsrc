@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2025/10/23 20:39:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/10/26 23:05:53 wiz Exp $
 
-DISTNAME=	ripgrep-15.0.0
-PKGREVISION=	1
+DISTNAME=	ripgrep-15.1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BurntSushi/}
 
