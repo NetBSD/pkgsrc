@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/08/22 17:28:59 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/10/26 12:15:39 ryoon Exp $
 
-BLAKE2s (sentencepiece-0.2.0.tar.gz) = 68609347224e87397b98a2602bb88fb15df907d2bfe7e9cbce82020fc0c67169
-SHA512 (sentencepiece-0.2.0.tar.gz) = b4214f5bfbe2a0757794c792e87e7c53fda7e65b2511b37fc757f280bf9287ba59b5d630801e17de6058f8292a3c6433211917324cb3446a212a51735402e614
-Size (sentencepiece-0.2.0.tar.gz) = 11980811 bytes
-SHA1 (patch-build__bundled.sh) = cad43cfcdb7b11acc563c1a3696975805275539c
+BLAKE2s (sentencepiece-0.2.1.tar.gz) = 631cf3f28780914a877abd233e750858d5ac5974a237c3775c88dfffafafe142
+SHA512 (sentencepiece-0.2.1.tar.gz) = 012850b63b2323e16acc5dacc0a494ad3f6375425ee86274f0946032e47c088a3b307758b99d752fcf54acf76c82d7d13d0c14bbf07aa9b612c4f1fbd30cf1cf
+Size (sentencepiece-0.2.1.tar.gz) = 13485527 bytes
