@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:28:40 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/10/26 12:03:28 nia Exp $
 
-BLAKE2s (uw-ttyp0-1.3.tar.gz) = d9f36e412822a2548397cf252cbb3ab9594a482af20ca14217c0bd258566b902
-SHA512 (uw-ttyp0-1.3.tar.gz) = 193966b826cafa313384f20e225d4a0b0057364ed23c2beaf27a59095fdb9079281fdc1d292592038512a56ec0387e531a28449344e2960f0ecd3e64c7a6f6e7
-Size (uw-ttyp0-1.3.tar.gz) = 702217 bytes
-SHA1 (patch-Makefile.in) = 7e1e8b9da1035b604f4da1a5ad8884dfce887d33
+BLAKE2s (uw-ttyp0-2.1.tar.gz) = 008644b7a0246db039b485f399de4c02b8dd3d30306f7d3bdfd230bbb28787ae
+SHA512 (uw-ttyp0-2.1.tar.gz) = 18cb64afd73f64ccfaad5b6b01eef4e50c7d13165a20a14e47e2d66523f80941e3fdf01aeb3c0061ba197d0664123824647e250253f0bf2049055846c5d5d98c
+Size (uw-ttyp0-2.1.tar.gz) = 2658507 bytes
+SHA1 (patch-Makefile.in) = 881b5a2111a20e84d76874f12d23fba16752b356
