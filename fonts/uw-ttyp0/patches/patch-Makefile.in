@@ -1,29 +1,92 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/06/17 11:06:28 nia Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2025/10/26 12:03:29 nia Exp $
 
-The install usage is not portable, replace it with BSD_INSTALL_*.
+- The install usage is not portable, replace it with BSD_INSTALL_*.
+- Fix spacing issues with sed usage.
 
---- Makefile.in.orig	2013-07-19 20:40:39.000000000 +0000
+--- Makefile.in.orig	2025-09-14 12:43:51.000000000 +0000
 +++ Makefile.in
-@@ -193,16 +193,16 @@ genbdf/%-sym.bdf : genbdf/%-uni.bdf mgl/
- 	$(BDFMANGLE) $< mgl/adobe-symbol.mgl > $@
- 
- install : $(pcf)
+@@ -792,65 +792,60 @@ endif
+ install : $(pcf) $(otb) $(conslinux) $(consfreebsdvt) $(consfreebsdsc) $(consnetbsd) $(consopenbsd)
+ ifeq ($(strip $(GEN_PCF)),1)
+ ifneq ($(strip $(pcf)),)
 -	install -m0755 -d $(DESTDIR)$(PCFDIR)
 -	install -m0644 -p $(pcf) $(DESTDIR)$(PCFDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PCFDIR)
 +	$(BSD_INSTALL_DATA) $(pcf) $(DESTDIR)$(PCFDIR)
  	mkfontscale $(DESTDIR)$(PCFDIR)
  	mkfontdir $(DESTDIR)$(PCFDIR)
+ endif
+ endif
+ ifeq ($(strip $(GEN_OTB)),1)
+ ifneq ($(strip $(otb)),)
+-	install -m0755 -d $(DESTDIR)$(OTBDIR)
+-	install -m0644 -p $(otb) $(DESTDIR)$(OTBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(OTBDIR)
++	$(BSD_INSTALL_DATA) $(otb) $(DESTDIR)$(OTBDIR)
+ 	mkfontscale $(DESTDIR)$(OTBDIR)
+ 	mkfontdir $(DESTDIR)$(OTBDIR)
+ endif
+ endif
+ ifeq ($(strip $(GEN_CONS_LINUX)),1)
+ ifneq ($(strip $(conslinux)),)
+-	install -m0755 -d $(DESTDIR)$(CONSLINUXDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(CONSLINUXDIR)
+ 	for oldname in $(conslinux) ; do     \
+-	  newname=`echo $$oldname | sed -e ' \
+-	    $(keepbasename)                  \
+-	    $(optrenamefontsize)             \
+-	    $(shuffleweight)                 \
+-	    $(renamecodeset)                 \
+-	    $(shufflecodeset)'` ;            \
+-	  install -m0644 -p $$oldname $(DESTDIR)$(CONSLINUXDIR)/$$newname ; \
++	  newname=`echo $$oldname | sed -e '$(keepbasename) $(optrenamefontsize) $(shuffleweight) $(renamecodeset) $(shufflecodeset)'` ;            \
++	  $(BSD_INSTALL_DATA) $$oldname $(DESTDIR)$(CONSLINUXDIR)/$$newname ; \
+ 	done
+ endif
+ endif
+ ifeq ($(strip $(GEN_CONS_FREEBSD_VT)),1)
+ ifneq ($(strip $(consfreebsdvt)),)
+-	install -m0755 -d $(DESTDIR)$(CONSFBSDVTDIR)
+-	install -m0644 -p $(consfreebsdvt) $(DESTDIR)$(CONSFBSDVTDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(CONSFBSDVTDIR)
++	$(BSD_INSTALL_DATA) $(consfreebsdvt) $(DESTDIR)$(CONSFBSDVTDIR)
+ endif
+ endif
+ ifeq ($(strip $(GEN_CONS_FREEBSD_SC)),1)
+ ifneq ($(strip $(consfreebsdsc)),)
+-	install -m0755 -d $(DESTDIR)$(CONSFBSDSCDIR)
+-	install -m0644 -p $(consfreebsdsc) $(DESTDIR)$(CONSFBSDSCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(CONSFBSDSCDIR)
++	$(BSD_INSTALL_DATA) $(consfreebsdsc) $(DESTDIR)$(CONSFBSDSCDIR)
+ endif
+ endif
+ ifeq ($(strip $(GEN_CONS_NETBSD)),1)
+ ifneq ($(strip $(consnetbsd)),)
+-	install -m0755 -d $(DESTDIR)$(CONSNBSDDIR)
+-	install -m0644 -p $(consnetbsd) $(DESTDIR)$(CONSNBSDDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(CONSNBSDDIR)
++	$(BSD_INSTALL_DATA) $(consnetbsd) $(DESTDIR)$(CONSNBSDDIR)
+ endif
+ endif
+ ifeq ($(strip $(GEN_CONS_OPENBSD)),1)
+ ifneq ($(strip $(consopenbsd)),)
+-	install -m0755 -d $(DESTDIR)$(CONSNBSDDIR)
+-	install -m0644 -p $(consopenbsd) $(DESTDIR)$(CONSOBSDDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(CONSNBSDDIR)
++	$(BSD_INSTALL_DATA) $(consopenbsd) $(DESTDIR)$(CONSOBSDDIR)
+ endif
+ endif
+ 
  
  install-util :
 -	install -m0755 -d $(DESTDIR)$(BINDIR)
 -	install -m0755 -d $(DESTDIR)$(MANDIR)/man1
 -	install -m0755 -p bin/bdfmangle $(DESTDIR)$(BINDIR)
 -	install -m0644 -p man/man1/bdfmangle.1 $(DESTDIR)$(MANDIR)/man1
-+	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_BIN_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
-+	$(BSD_INSTALL_PROGRAM) bin/bdfmangle $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_BIN) bin/bdfmangle $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_MAN) man/man1/bdfmangle.1 $(DESTDIR)$(MANDIR)/man1
  
- clean :
- 	-rm genbdf/t0-*-???.bdf genpcf/t0-*-???.pcf.gz
+ 
+ install-doc :
