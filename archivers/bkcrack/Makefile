@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/08/19 10:27:42 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/10/26 08:37:48 adam Exp $
 
-DISTNAME=	bkcrack-1.8.0
+DISTNAME=	bkcrack-1.8.1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kimci86/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
