@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/10/12 18:47:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/26 03:59:59 riastradh Exp $
 
 DISTNAME=	wayland-1.24.0
 CATEGORIES=	devel
@@ -30,6 +30,10 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-scanner.pc
 PKGCONFIG_OVERRIDE+=		output/meson-private/wayland-server.pc
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+CFLAGS.NetBSD+=	-Dppoll=pollts
+.endif
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 # wayland runs wayland-scanner at build-time.
