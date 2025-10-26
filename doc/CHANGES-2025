@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6270 2025/10/26 12:20:44 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6271 2025/10/26 12:26:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9085,3 +9085,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/sentencepiece to 0.2.1 [ryoon 2025-10-26]
 	Updated textproc/py-sentencepiece to 0.2.1 [ryoon 2025-10-26]
 	Updated graphics/imlib2 to 1.12.5 [ryoon 2025-10-26]
+	Updated databases/gdbm to 1.26 [ryoon 2025-10-26]
