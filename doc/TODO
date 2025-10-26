@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26376 2025/10/26 23:01:53 wiz Exp $
+$NetBSD: TODO,v 1.26377 2025/10/26 23:06:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o reposurgeon-4.26
 	o resize_image-0.7
 	o rio500-0.8.1
-	o ripgrep-15.1.0
 	o rmtrash-1.14
 	o root-tail-1.2
 	o ropper-1.13.6
