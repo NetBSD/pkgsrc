@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6276 2025/10/26 22:44:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6277 2025/10/26 23:00:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9091,3 +9091,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-bidi to 0.6.7 [wiz 2025-10-26]
 	Updated www/p5-libwww to 6.81 [wiz 2025-10-26]
 	Updated x11/libxkbcommon to 1.12.2 [wiz 2025-10-26]
+	Updated devel/jjui to 0.9.5 [wiz 2025-10-26]
