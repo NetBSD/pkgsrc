@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/07/11 06:09:29 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/10/26 12:15:39 ryoon Exp $
 
 BUILDLINK_TREE+=	sentencepiece
 
@@ -8,7 +8,7 @@ SENTENCEPIECE_BUILDLINK3_MK:=
 # C++17
 GCC_REQD+=	7
 
-BUILDLINK_API_DEPENDS.sentencepiece+=	sentencepiece>=0.1.97
+BUILDLINK_API_DEPENDS.sentencepiece+=	sentencepiece>=0.2.0
 BUILDLINK_PKGSRCDIR.sentencepiece?=	../../textproc/sentencepiece
 .endif	# SENTENCEPIECE_BUILDLINK3_MK
 

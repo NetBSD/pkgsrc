@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/06/06 07:51:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/10/26 12:15:39 ryoon Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -10,9 +10,15 @@ ${PYSITELIB}/sentencepiece/_sentencepiece.so
 ${PYSITELIB}/sentencepiece/_version.py
 ${PYSITELIB}/sentencepiece/_version.pyc
 ${PYSITELIB}/sentencepiece/_version.pyo
+${PYSITELIB}/sentencepiece/package_data/nfkc.bin
+${PYSITELIB}/sentencepiece/package_data/nfkc_cf.bin
+${PYSITELIB}/sentencepiece/package_data/nmt_nfkc.bin
+${PYSITELIB}/sentencepiece/package_data/nmt_nfkc_cf.bin
+${PYSITELIB}/sentencepiece/sentencepiece.i
 ${PYSITELIB}/sentencepiece/sentencepiece_model_pb2.py
 ${PYSITELIB}/sentencepiece/sentencepiece_model_pb2.pyc
 ${PYSITELIB}/sentencepiece/sentencepiece_model_pb2.pyo
 ${PYSITELIB}/sentencepiece/sentencepiece_pb2.py
 ${PYSITELIB}/sentencepiece/sentencepiece_pb2.pyc
 ${PYSITELIB}/sentencepiece/sentencepiece_pb2.pyo
+${PYSITELIB}/sentencepiece/sentencepiece_wrap.cxx

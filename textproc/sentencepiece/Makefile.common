@@ -1,11 +1,12 @@
-# $NetBSD: Makefile.common,v 1.8 2025/08/22 17:28:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2025/10/26 12:15:39 ryoon Exp $
 #
 # used by textproc/sentencepiece/Makefile
 # used by textproc/py-sentencepiece/Makefile
 
-DISTNAME=	sentencepiece-0.2.0
+DISTNAME=	sentencepiece-0.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_PROJECT=	sentencepiece
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
