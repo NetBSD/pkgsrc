@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2022/01/30 04:00:42 gutteridge Exp $
+$NetBSD: distinfo,v 1.53 2025/10/26 17:28:47 vins Exp $
 
 BLAKE2s (imap-2007f.tar.Z) = 6e67d03b84ec0fed4db99c81aea92160304c1f0c7c9ece7d5e9c4375f1490621
 SHA512 (imap-2007f.tar.Z) = 2c728deaf66d23158c61ae55ff94f05d2a1cf0168002760321ca30c6ee1c58c0a4c7bc14ece0097ea662df6c7c49be3b91c8e5e943724c9e2736800fa9298dae
@@ -11,7 +11,7 @@ SHA1 (patch-ae) = 85e0917ce1934f6789bbce45ad5321e28cf294d9
 SHA1 (patch-af) = f3a7d2dad7b95940bdb7ee812ee19622cc594c75
 SHA1 (patch-ag) = 9c580a6a89f89f798a42e5ee45de87fe8159700a
 SHA1 (patch-ah) = ca68ec33fbf8ac4138669588b32098eb4f156f75
-SHA1 (patch-ai) = 312d2bd29be2f8fc03c24a635afcb0ca4ae33832
+SHA1 (patch-ai) = 249d5b723d13c06920002110469d9fe22fbeaebc
 SHA1 (patch-aj) = 961d90bf0eab651678f5bf04f19742cc4c0ecde3
 SHA1 (patch-al) = aeb9021e41756db7c67346212dbb441ba7d9885a
 SHA1 (patch-am) = f0c5d250d69976c85537c9b8080365e8c2391c9d
@@ -26,11 +26,11 @@ SHA1 (patch-av) = 3851cbacd805dad0c16ba7ce19879d4f3f299275
 SHA1 (patch-aw) = 4aa5b487426ed583ad137c58e117247b52fef494
 SHA1 (patch-ax) = 0edac03adc6f80102d6063170123b1d1b304cde9
 SHA1 (patch-ay) = a39cd708e2bfb2f03661cefb56249c7243b80c7f
-SHA1 (patch-az) = 3dd4367ef56b921051509e2acafcd91b460ccfa6
+SHA1 (patch-az) = b7255bff909d9a87c7c5ca43fd1e6e382a63351c
 SHA1 (patch-ba) = 9f4784050ad0cd61d9324517821077976485d41c
 SHA1 (patch-bb) = b6b5a5294019c23376187b4ff324bf58fdbc113e
 SHA1 (patch-bc) = ae0119037fee2e94c6b60de3c9efc946ed4cfb68
-SHA1 (patch-bd) = 044ea6110a11aea99121463d772e94c08fece9b3
+SHA1 (patch-bd) = 3d1ffaf08317b3038f491c9e433f898fbcab4112
 SHA1 (patch-be) = 73afbc9f3c65d3adce37a3f1ee7f55e0ec665a54
 SHA1 (patch-bf) = 63c582e88bd6286295d5d9639bafec355278d537
 SHA1 (patch-bg) = c95483ed73d7c6015df99967c0509cf0ea67d28f
@@ -40,4 +40,5 @@ SHA1 (patch-src_c-client_mail.c) = fca90d3a5a8770b8728bdef6aec2623d16c12b6d
 SHA1 (patch-src_c-client_misc.c) = d22ca95fb333b5234c66440faf5d6e30a148bad1
 SHA1 (patch-src_c-client_misc.h) = 5cf51d186b04ebb45c79b8042bbdcb01716dd2ce
 SHA1 (patch-src_mlock_Makefile) = 6bf652f597ad21dffa44e01d6cb89525eeaf7fc9
+SHA1 (patch-src_mlock_mlock.c) = 5cdc25f4295479fb772959cb84e51c0a9fa97c01
 SHA1 (patch-src_osdep_unix_ssl__unix.c) = cdb4ce9420f649d7cbd6d1e433336c6be94b10f9

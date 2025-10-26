@@ -1,6 +1,8 @@
-$NetBSD: patch-ai,v 1.5 2007/08/03 17:03:30 obache Exp $
+$NetBSD: patch-ai,v 1.6 2025/10/26 17:28:47 vins Exp $
 
---- src/mtest/mtest.c.orig	2007-06-05 20:32:31.000000000 +0000
+Replace gets(). Unsupported as of C11. 
+
+--- src/mtest/mtest.c.orig	2011-07-23 00:20:17.000000000 +0000
 +++ src/mtest/mtest.c
 @@ -41,6 +41,11 @@
  
@@ -14,3 +16,47 @@ $NetBSD: patch-ai,v 1.5 2007/08/03 17:03:30 obache Exp $
  #ifndef unix
  # define unix 0
  #endif
+@@ -83,7 +88,20 @@ void display_body (BODY *body,char *pfx,
+ void status (MAILSTREAM *stream);
+ void prompt (char *msg,char *txt);
+ void smtptest (long debug);
+-
++
++/* fgets wrapper */
++
++char *mgets(char *buf, size_t sz) {
++    if (buf != NULL && sz > 0) {
++	if (fgets(buf, sz, stdin)) {
++            buf[strcspn(buf, "\n")] = '\0';
++	    return buf;
++	}
++	*buf = '\0';		/* clear buffer at end of file */
++    }
++    return NULL;
++}
++
+ /* Main program - initialization */
+ 
+ int main ()
+@@ -594,8 +612,9 @@ void status (MAILSTREAM *stream)
+ 
+ void prompt (char *msg,char *txt)
+ {
++  size_t sz = sizeof txt;
+   printf ("%s",msg);
+-  gets (txt);
++  mgets (txt, sz);
+ }
+ 
+ /* Interfaces to C-client */
+@@ -778,8 +797,9 @@ void smtptest (long debug)
+   msg->subject = cpystr (line);
+   puts (" Msg (end with a line with only a '.'):");
+   body->type = TYPETEXT;
++  size_t sz = sizeof line;
+   *text = '\0';
+-  while (gets (line)) {
++  while (mgets (line, sz)) {
+     if (line[0] == '.') {
+       if (line[1] == '\0') break;
+       else strcat (text,".");
