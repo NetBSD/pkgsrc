@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2025/08/30 22:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2025/10/26 12:20:29 ryoon Exp $
 
-DISTNAME=	imlib2-1.12.3
-PKGREVISION=	4
+DISTNAME=	imlib2-1.12.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 EXTRACT_SUFX=	.tar.xz
