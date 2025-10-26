@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6278 2025/10/26 23:01:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6279 2025/10/26 23:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9093,3 +9093,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libxkbcommon to 1.12.2 [wiz 2025-10-26]
 	Updated devel/jjui to 0.9.5 [wiz 2025-10-26]
 	Updated sysutils/fzf to 0.66.1 [wiz 2025-10-26]
+	Updated textproc/ripgrep to 15.1.0 [wiz 2025-10-26]
