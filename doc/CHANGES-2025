@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6311 2025/10/27 14:52:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6312 2025/10/27 14:53:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9136,3 +9136,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/oracle-jdk21 to 21.0.9 [adam 2025-10-27]
 	Updated devel/py-h5py to 3.15.1 [adam 2025-10-27]
 	Updated devel/py-h5netcdf to 1.7.3 [adam 2025-10-27]
+	Updated devel/ruby-async to 2.34.0 [taca 2025-10-27]
