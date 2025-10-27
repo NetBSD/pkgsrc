@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2025/10/05 19:25:44 js Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/27 04:35:13 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-22.5.1
-PKGREVISION=	2
+DISTNAME=	asterisk-22.6.0
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -260,14 +259,16 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.2.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.3.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.6.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.3.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.4.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.5.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-22.6.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
