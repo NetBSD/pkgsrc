@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6293 2025/10/27 12:02:18 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6294 2025/10/27 12:04:00 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9116,3 +9116,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/chromium to 141.0.7390.122 [kikadf 2025-10-27]
 	Updated x11/alacritty to 0.16.1 [pin 2025-10-27]
 	Updated devel/cargo-bundle-licenses to 4.2.0 [pin 2025-10-27]
+	Updated net/yaydl to 0.18.1 [pin 2025-10-27]
