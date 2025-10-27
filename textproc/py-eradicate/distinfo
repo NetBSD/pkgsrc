@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2025/10/09 12:28:55 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/10/27 07:28:08 wiz Exp $
 
-BLAKE2s (eradicate-3.0.0.tar.gz) = 2ecc4675d3ae3894f1d378639b92272dc714b308dae78507443ad1b3d248d4e3
-SHA512 (eradicate-3.0.0.tar.gz) = 3e5525f224b0a00efbc888abb0c57f066aaf53cf5293da79db2e8059440e77869fe070a310a0e0f04f69c7c9114673dfc467544d5ce8131805c1620319d2bf96
-Size (eradicate-3.0.0.tar.gz) = 8809 bytes
-SHA1 (patch-setup.py) = 33d5452cf0f4366ba153b0ef141aca2c76abbc9b
+BLAKE2s (eradicate-3.0.1.tar.gz) = 75e760da81ca8177a7de861c3bf2b5c21c83d8fc45751fb7d042ec1bd4bcb75d
+SHA512 (eradicate-3.0.1.tar.gz) = 5007c3adac0ab0e53998eb251f06fb40a858bb68ac514a48ee39c147056598149fe9e2f3386b75aeb96f217e29f7c538c84fcb84cfe3d5128960b35d2b36728e
+Size (eradicate-3.0.1.tar.gz) = 8876 bytes
