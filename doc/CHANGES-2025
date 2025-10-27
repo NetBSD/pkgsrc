@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6303 2025/10/27 12:24:50 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6304 2025/10/27 12:26:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9126,3 +9126,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/nushell to 0.108.0 [pin 2025-10-27]
 	Updated sysutils/lla to 0.5.0 [pin 2025-10-27]
 	Updated graphics/matugen to 3.0.0 [pin 2025-10-27]
+	Updated graphics/pastel to 0.11.0 [pin 2025-10-27]
