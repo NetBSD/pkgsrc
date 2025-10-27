@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6283 2025/10/27 06:59:00 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6284 2025/10/27 07:01:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9098,3 +9098,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk21 to 21.11.0 [jnemeth 2025-10-27]
 	Updated comms/asterisk22 to 22.6.0 [jnemeth 2025-10-27]
 	Added comms/asterisk23 version 23.0.0 [jnemeth 2025-10-27]
+	Updated devel/py-serpent to 1.42 [adam 2025-10-27]
+	Updated devel/py-zope.schema to 8.1 [adam 2025-10-27]
