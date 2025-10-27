@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6300 2025/10/27 12:18:54 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6301 2025/10/27 12:21:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9123,3 +9123,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/television to 0.13.7 [pin 2025-10-27]
 	Updated devel/serie to 0.5.3 [pin 2025-10-27]
 	Updated editors/kibi to 0.3.0 [pin 2025-10-27]
+	Updated shells/nushell to 0.108.0 [pin 2025-10-27]
