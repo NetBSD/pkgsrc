@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2013/04/09 15:57:28 adam Exp $
+$NetBSD: patch-configure,v 1.3 2025/10/27 11:28:55 adam Exp $
 
 Adjust infodir.
+Portability fixes.
 
---- configure.orig	2012-03-07 14:46:36.000000000 +0000
+--- configure.orig	2025-02-07 21:40:00.000000000 +0000
 +++ configure
-@@ -909,7 +909,7 @@ localstatedir='${prefix}/var'
+@@ -1216,7 +1216,7 @@ runstatedir='${localstatedir}/run'
  includedir='${prefix}/include'
  oldincludedir='/usr/include'
  docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
@@ -13,3 +14,17 @@ Adjust infodir.
  htmldir='${docdir}'
  dvidir='${docdir}'
  pdfdir='${docdir}'
+@@ -6319,11 +6319,11 @@ printf "%s\n" "$as_me: WARNING: --enable
+ fi
+ 
+ # --enable-netcdf-4 overrides --enable-netcdf4 if latter not defined
+-if test "x$enable_netcdf_4" != x && test "x$enable_netcdf4" == x ; then
++if test "x$enable_netcdf_4" != x && test "x$enable_netcdf4" = x ; then
+ enable_netcdf4="$enable_netcdf_4"
+ fi
+ # --enable-netcdf4 overrides --enable-hdf5 if latter not defined
+-if test "x$enable_netcdf4" != x && test "x$enable_hdf5" == x ; then
++if test "x$enable_netcdf4" != x && test "x$enable_hdf5" = x ; then
+ enable_hdf5="$enable_netcdf4"
+ fi
+ # Otherwise, use --enable-hdf5
