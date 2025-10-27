@@ -1,19 +1,26 @@
-$NetBSD: distinfo,v 1.4 2024/11/19 14:58:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/10/27 22:57:36 nia Exp $
 
 BLAKE2s (RetroAchievements-rcheevos-563230b1c249774b4852c944dc7cdcb952c9e8e8.tar.gz) = 7e9483ebad83562298b05474d1adca89fd76e4a1609bcfe6741b1b31d0dbc411
 SHA512 (RetroAchievements-rcheevos-563230b1c249774b4852c944dc7cdcb952c9e8e8.tar.gz) = e424ae35d1ac68320a3666f96a5c82baf83d7e862474b03fce2780ff21a4176126911f65f9ad6068718412b30d81798f2eac82ea4b0b9e04de6de292876ba08a
 Size (RetroAchievements-rcheevos-563230b1c249774b4852c944dc7cdcb952c9e8e8.tar.gz) = 669618 bytes
-BLAKE2s (flycast-2.4.tar.gz) = 4f365c7db88c553bb8ac77b2a21af52913ca06c55faf547c93adc2e86fd8ca6f
-SHA512 (flycast-2.4.tar.gz) = 7add53e915631afe44446f65b7db394edf382295a27156a879ce779236297c38f26c1664002a6f521dd44c838c01a2034c69afb539d087c0263f41fd5d64e4d3
-Size (flycast-2.4.tar.gz) = 30398953 bytes
-BLAKE2s (flyinghead-libchdr-9b6ff6c3c24311750096232a05ee9c5b4963e66c.tar.gz) = d2e49853df6dadf2968c277299f3ca8833ab4cc48bc3362e759756ee26acbe3e
-SHA512 (flyinghead-libchdr-9b6ff6c3c24311750096232a05ee9c5b4963e66c.tar.gz) = 39e08b6eb0bedf87f55cbe6e6921fba878a232391ad2f461de684538b9bbef9a4c48885d304ff25d8d6794fd4f217e7a2b85d3a2305ad5542510ae97b325ffe1
-Size (flyinghead-libchdr-9b6ff6c3c24311750096232a05ee9c5b4963e66c.tar.gz) = 4221405 bytes
+BLAKE2s (flycast-2.5.tar.gz) = 8c0796d38bc934f6c4034820c2220093c6aa5d170a45bd12d9f1d58729bc17d1
+SHA512 (flycast-2.5.tar.gz) = 52c367a58ecb62b7e611feb1821e28c9f62847de28d9d7d66430b9db7962dcb2c6fcbb99a1ea1b956b060152372f174ed4cfcdc99469899a9fee113399690497
+Size (flycast-2.5.tar.gz) = 34653480 bytes
+BLAKE2s (flyinghead-asio-d3402006e84efb6114ff93e4f2b8508412ed80d5.tar.gz) = 0130c1edb6b564786ababb65ec3b247009141c1dc21c90c4df3a3dd5df78cd4d
+SHA512 (flyinghead-asio-d3402006e84efb6114ff93e4f2b8508412ed80d5.tar.gz) = be127f956fbe187b9e4fc759b98b4ef990199f21b63adeb74b1ff322a6054a206c04a9775ff1cb03fbfbb45c63123ca4ccb99bfcf11e5dceb8c067dd22819df7
+Size (flyinghead-asio-d3402006e84efb6114ff93e4f2b8508412ed80d5.tar.gz) = 2858075 bytes
+BLAKE2s (flyinghead-libchdr-5f82799f2c8cad1e9cd26d39a0f8d36369a5534b.tar.gz) = ffcf8246fe42e0c9e9a782f9115e7661b6b00e42bbbe74a35ba4811745ddee4d
+SHA512 (flyinghead-libchdr-5f82799f2c8cad1e9cd26d39a0f8d36369a5534b.tar.gz) = b76b155a33dff78f9639b5af324c83036d5239ee487439bb1fd366c6fb148e5f245f4eb23fb7d62bb63bb8814facf169ba3a6eb868519440674f6eeee7bfaba2
+Size (flyinghead-libchdr-5f82799f2c8cad1e9cd26d39a0f8d36369a5534b.tar.gz) = 4222985 bytes
 BLAKE2s (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 8ac9757b984e33bd7d486f0719758671e07aab5101c3ad3b80cecc8eeb7c04c6
 SHA512 (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 57f0ef0f5f05343d516c1bcc2af372d02c535dfbdb25d6dc0d8a4587411385d5da3c73383e1a61d30ba028fff8f806bf0a337a278f214caee79d50868aa568ed
 Size (flyinghead-mingw-breakpad-1ab24bcc817ebe629bf77daa53529d02361cb1e9.tar.gz) = 5383206 bytes
-BLAKE2s (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 2b0d728012815bb58fa974be88e37abaf37e8509eec9fa68356a2eff9616954d
-SHA512 (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = b47ac42637d615bd6497a8d09f6c7c6e8f7a762b80fc1a4b284cb65754302def2a7b1339c8aeb146900ad5ad247a5b33fb381ce07451f97b60a155f7f1b41a9a
-Size (vinniefalco-LuaBridge-fab7b33b896a42dcc865ba5ecdbacd9f40.tar.gz) = 543800 bytes
-SHA1 (patch-CMakeLists.txt) = c91544a74e5488acbcd5b51a3af4e631f5457c8a
+BLAKE2s (vinniefalco-LuaBridge-5d21e35633a1f87ed08af115b07d3386096f792b.tar.gz) = f3a119314557941ee898c123d1a1828f304367cf0170990a1809510afca0279b
+SHA512 (vinniefalco-LuaBridge-5d21e35633a1f87ed08af115b07d3386096f792b.tar.gz) = 4c6c105d7717adc78473f3b020ddad43a174336a4584d3f48815d2a2d6065db6d14cff6c22806ab184f034e7b7ca923e4f94246158d963ae041da515f62b28a3
+Size (vinniefalco-LuaBridge-5d21e35633a1f87ed08af115b07d3386096f792b.tar.gz) = 1197538 bytes
+BLAKE2s (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.tar.gz) = e7b330acb58bf5b7dd35535a4b80c06950542dd8af4d0870bfccb0f8122cba6d
+SHA512 (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.tar.gz) = a0ce6cb0f4b16a61f48020f80cd6526b16fbc857215a58155126343f6da78ba05f575de7625178049e42571f06402e90aea04c16470c6c965983e934e3b1e8d5
+Size (vkedwardli-Syphon-Framework-486dd8e4ef3bead482ea26de99770f4389e24e37.tar.gz) = 326352 bytes
+SHA1 (patch-CMakeLists.txt) = a07c8d8205e69913dd0f81541cedf4c5eedb92d8
+SHA1 (patch-core_sdl_sdl__gamepad.h) = 30ab8b6b07ed8f84874eeb7acac10312073d308d
 SHA1 (patch-core_ui_gui.cpp) = 0c204987aa02cb3a3419900668690e62cbf47bc4
