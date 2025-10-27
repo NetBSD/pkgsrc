@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2025/10/05 19:25:44 js Exp $
+# $NetBSD: Makefile,v 1.20 2025/10/27 04:07:20 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-21.10.1
-PKGREVISION=	2
+DISTNAME=	asterisk-21.11.0
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -50,6 +49,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 # XXX remove when lang/lua gets builtin.mk
 CONFIGURE_ARGS+=	--without-lua
 CONFIGURE_ARGS+=	--without-unbound
+CONFIGURE_ENV+=		ac_cv_path_XMLSTARLET=":"
 # XXX uncomment below to debug build issues
 #CONFIGURE_ENV+=		PJPROJECT_CONFIGURE_OPTS="NOISY_BUILD=yes"
 
@@ -270,14 +270,16 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.7.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.2.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.11.0.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.8.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.9.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.1.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.10.2.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-21.11.0.html ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}

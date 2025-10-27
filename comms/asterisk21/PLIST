@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/08/04 20:43:24 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/10/27 04:07:20 jnemeth Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -101,6 +101,7 @@ ${PLIST.jabber}lib/asterisk/modules/chan_motif.so
 lib/asterisk/modules/chan_pjsip.so
 lib/asterisk/modules/chan_rtp.so
 lib/asterisk/modules/chan_unistim.so
+lib/asterisk/modules/chan_websocket.so
 lib/asterisk/modules/codec_a_mu.so
 lib/asterisk/modules/codec_adpcm.so
 lib/asterisk/modules/codec_alaw.so
@@ -2324,6 +2325,10 @@ share/doc/asterisk/ChangeLog-21.10.0.html
 share/doc/asterisk/ChangeLog-21.10.0.md
 share/doc/asterisk/ChangeLog-21.10.1.html
 share/doc/asterisk/ChangeLog-21.10.1.md
+share/doc/asterisk/ChangeLog-21.10.2.html
+share/doc/asterisk/ChangeLog-21.10.2.md
+share/doc/asterisk/ChangeLog-21.11.0.html
+share/doc/asterisk/ChangeLog-21.11.0.md
 share/doc/asterisk/ChangeLog-21.2.0.md
 share/doc/asterisk/ChangeLog-21.3.0.md
 share/doc/asterisk/ChangeLog-21.3.1.md
@@ -2339,8 +2344,6 @@ share/doc/asterisk/ChangeLog-21.8.0.html
 share/doc/asterisk/ChangeLog-21.8.0.md
 share/doc/asterisk/ChangeLog-21.9.0.html
 share/doc/asterisk/ChangeLog-21.9.0.md
-share/doc/asterisk/ChangeLog-21.9.1.html
-share/doc/asterisk/ChangeLog-21.9.1.md
 share/doc/asterisk/IAX2-security.pdf
 share/doc/asterisk/IAX2-security.txt
 share/doc/asterisk/LICENSE
