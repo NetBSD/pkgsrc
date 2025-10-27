@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.76 2024/10/01 12:47:18 ryoon Exp $
+# $NetBSD: options.mk,v 1.77 2025/10/27 14:24:32 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--enable-debug="-g -Og"
 CONFIGURE_ARGS+=	--disable-optimize
 CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
+CPPFLAGS+=		-DXXH_NO_INLINE_HINTS
 .else
 .  if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
