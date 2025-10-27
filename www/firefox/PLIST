@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.190 2025/05/13 20:56:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.191 2025/10/27 14:24:32 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/chrome/icons/default/default128.png
@@ -20,6 +20,7 @@ lib/firefox/liblgpllibs.so
 ${PLIST.ffvpx}lib/firefox/libmozavcodec.so
 ${PLIST.ffvpx}lib/firefox/libmozavutil.so
 lib/firefox/libmozgtk.so
+lib/firefox/libmozinference.so
 lib/firefox/libmozsqlite3.so
 ${PLIST.wayland}lib/firefox/libmozwayland.so
 lib/firefox/libxul.so
