@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2025/07/18 17:01:43 pin Exp $
+# $NetBSD: Makefile,v 1.32 2025/10/27 12:02:54 pin Exp $
 
-DISTNAME=	yaydl-15f32abb484841d9
-PKGNAME=	yaydl-0.17.3
+DISTNAME=	yaydl-6372f8a382
+PKGNAME=	yaydl-0.18.1
 CATEGORIES=	net
-MASTER_SITES=	https://code.rosaelefanten.org/yaydl/tarball/15f32abb484841d9/
+MASTER_SITES=	https://code.rosaelefanten.org/yaydl/tarball/6372f8a382/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.rosaelefanten.org/yaydl/home
