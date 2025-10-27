@@ -1,4 +1,4 @@
-$NetBSD: patch-mysys_my__largepage.c,v 1.1 2025/06/20 14:03:03 nia Exp $
+$NetBSD: patch-mysys_my__largepage.c,v 1.2 2025/10/27 20:53:45 nia Exp $
 
 Fix build on illumos, via OmniOS CE.
 
