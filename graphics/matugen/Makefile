@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/04/10 13:15:43 pin Exp $
+# $NetBSD: Makefile,v 1.20 2025/10/27 12:23:46 pin Exp $
 
-DISTNAME=	matugen-2.4.1
+DISTNAME=	matugen-3.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=InioX/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
