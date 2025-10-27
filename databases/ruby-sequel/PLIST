@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.129 2025/08/02 03:26:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.130 2025/10/27 14:46:23 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -228,6 +228,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/dataset_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/def_dataset_method.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/defaults_setter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/delay_add_association.rb
+${GEM_LIBDIR}/lib/sequel/plugins/deprecated_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_each.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_graph_eager.rb
