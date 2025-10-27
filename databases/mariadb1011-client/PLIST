@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/06/06 20:48:33 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/27 20:48:59 nia Exp $
 bin/mariadb
 bin/mariadb-access
 bin/mariadb-admin

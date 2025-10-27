@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2025/08/22 11:42:09 wiz Exp $
+$NetBSD: distinfo,v 1.18 2025/10/27 20:48:59 nia Exp $
 
-BLAKE2s (mariadb-10.11.13.tar.gz) = 23965d289e03ea187bb48a0721396ad79425f02b7334ee46e12925ced3588f00
-SHA512 (mariadb-10.11.13.tar.gz) = 4eff7f30fdbfdbeafb6c708262a89bcb2065261c384b5b027720dd7a7a7dc79ecbdb70339aec05c813d7991c3807af09c300841e731e5c925a1adf5b3fcd0580
-Size (mariadb-10.11.13.tar.gz) = 109323757 bytes
+BLAKE2s (mariadb-10.11.14.tar.gz) = 289447426fcc8bb840c0a65757b3b7ad2136ac9bfa8eaa01f80b2f62aac419d7
+SHA512 (mariadb-10.11.14.tar.gz) = 24276e8b0f7ad555bf8faab8e5e065cbaeeb5d92b66964e470f41ac00db29a148e36b0f9f8078392a5fdae4cc3e77df28d0a570ef3735a73f4837ded3a50e476
+Size (mariadb-10.11.14.tar.gz) = 112475645 bytes
 SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
 SHA1 (patch-CMakeLists.txt) = 4cb0b1d8ffecf04aa4cdc3aa324418d90e4854a8
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
@@ -15,10 +15,9 @@ SHA1 (patch-mysys_my__gethwaddr.c) = c3f179aa659e16f2fd9b858a718dd1cdd6f93c9f
 SHA1 (patch-mysys_my__largepage.c) = 3e48863214b0b46ffaa96f70107540f61ba9d656
 SHA1 (patch-plugin_auth__gssapi_cmake_FindGSSAPI.cmake) = 215d48d80fe4dd018678ec7b03fc40ca1caf4f16
 SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = b2fddab1d94ba75c69cbf660f546f8e5821e1d51
-SHA1 (patch-scripts_CMakeLists.txt) = b8a13304e314162ab0a1fc06c5620d6b757975f5
+SHA1 (patch-scripts_CMakeLists.txt) = ec84eb79de6d9ff895c4eb8526cecba2d96ad89e
 SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
 SHA1 (patch-sql_mysqld.cc) = ab842758c17acff455dee89a48118d50f51dc786
-SHA1 (patch-storage_columnstore_columnstore_CMakeLists.txt) = 3b6c98e0a32c1504cc15c09643642a54b04c35c9
 SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = d5ff507acdd21858791246ef5a2559e653cb7833
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
 SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
