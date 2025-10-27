@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/11/11 12:14:21 taca Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/27 14:59:23 taca Exp $
 
-DISTNAME=	globalid-1.2.1
+DISTNAME=	globalid-1.3.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org

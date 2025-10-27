@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/11 12:14:21 taca Exp $
+$NetBSD: distinfo,v 1.12 2025/10/27 14:59:23 taca Exp $
 
-BLAKE2s (globalid-1.2.1.gem) = 47ecd24def5efc75d6f353110c927da07a74557f0a8e70f0eab22ea4383311d6
-SHA512 (globalid-1.2.1.gem) = 134c23c67e0e6ca020be4892cad0ea4a22283ea058839636578b9a4bccee4353bb19e5c0b94fb6e70d6ffb7456abfcf8da63388a2d4b8f11d60dbe37c387efe4
-Size (globalid-1.2.1.gem) = 14848 bytes
+BLAKE2s (globalid-1.3.0.gem) = 64738b119197f1203d45e8c44dfb9f4d786bc2d46c69114a62eb481f5167cc9b
+SHA512 (globalid-1.3.0.gem) = 7ca4979c8c9d9dabe7f6dfbc77e661b07f913ff7b57ea9479ac7a4bc074dc3b7ac2445c2b099f42b78724107c71cb043f501d53bf021f01722844cdc419edf38
+Size (globalid-1.3.0.gem) = 15360 bytes
