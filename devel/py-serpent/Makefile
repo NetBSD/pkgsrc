@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/08/10 07:17:23 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/10/27 07:00:00 adam Exp $
 
-DISTNAME=	serpent-1.41
+DISTNAME=	serpent-1.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/serpent/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/irmen/Serpent
 COMMENT=	Simple serialization library
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
