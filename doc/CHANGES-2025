@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6292 2025/10/27 12:00:23 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6293 2025/10/27 12:02:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9115,3 +9115,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-netCDF4 to 1.7.3 [adam 2025-10-27]
 	Updated www/chromium to 141.0.7390.122 [kikadf 2025-10-27]
 	Updated x11/alacritty to 0.16.1 [pin 2025-10-27]
+	Updated devel/cargo-bundle-licenses to 4.2.0 [pin 2025-10-27]
