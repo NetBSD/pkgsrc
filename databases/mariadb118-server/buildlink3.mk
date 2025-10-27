@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/06/07 08:58:43 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 BUILDLINK_TREE+=	mysql-server
 

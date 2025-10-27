@@ -1,4 +1,4 @@
-$NetBSD: patch-libmariadb_cmake_FindGSSAPI.cmake,v 1.1 2025/06/07 08:58:42 nia Exp $
+$NetBSD: patch-libmariadb_cmake_FindGSSAPI.cmake,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 Use pkgsrc provided krb5-config.
 
