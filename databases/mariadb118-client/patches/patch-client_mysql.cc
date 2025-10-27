@@ -1,4 +1,4 @@
-$NetBSD: patch-client_mysql.cc,v 1.1 2025/06/07 08:58:42 nia Exp $
+$NetBSD: patch-client_mysql.cc,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 Do not special case __APPLE__ for pkgsrc builds.
 

@@ -1,14 +1,14 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2025/06/07 08:58:43 nia Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 Allow building a server-only configuration.
 
---- scripts/CMakeLists.txt.orig	2021-11-05 20:03:30.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2025-07-28 19:35:05.000000000 +0000
 +++ scripts/CMakeLists.txt
-@@ -324,22 +324,26 @@ ELSE()
+@@ -343,6 +343,19 @@ ELSE()
        mariadbd-safe
        ${SYSTEMD_SCRIPTS}
      )
-+  ELSE()
++  ELSE() 
 +    SET(CLIENT_SCRIPTS
 +      msql2mysql
 +      mariadb-setpermission
@@ -24,7 +24,8 @@ Allow building a server-only configuration.
    ENDIF()
    # Configure this one, for testing, but do not install it.
    CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql_config.pl.in
-     ${CMAKE_CURRENT_BINARY_DIR}/mysql_config.pl ESCAPE_QUOTES @ONLY)
+@@ -351,16 +364,7 @@ ELSE()
+     ${CMAKE_CURRENT_BINARY_DIR}/print_ddl_recovery_log.pl ESCAPE_QUOTES @ONLY)
    # On Unix, most of the files end up in the bin directory
    SET(BIN_SCRIPTS
 -    msql2mysql
