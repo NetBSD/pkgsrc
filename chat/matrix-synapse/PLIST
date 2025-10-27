@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2025/10/05 23:30:01 gdt Exp $
+@comment $NetBSD: PLIST,v 1.64 2025/10/27 22:50:18 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -235,6 +235,9 @@ ${PYSITELIB}/synapse/config/logger.pyo
 ${PYSITELIB}/synapse/config/mas.py
 ${PYSITELIB}/synapse/config/mas.pyc
 ${PYSITELIB}/synapse/config/mas.pyo
+${PYSITELIB}/synapse/config/matrixrtc.py
+${PYSITELIB}/synapse/config/matrixrtc.pyc
+${PYSITELIB}/synapse/config/matrixrtc.pyo
 ${PYSITELIB}/synapse/config/metrics.py
 ${PYSITELIB}/synapse/config/metrics.pyc
 ${PYSITELIB}/synapse/config/metrics.pyo
@@ -631,9 +634,6 @@ ${PYSITELIB}/synapse/logging/_terse_json.pyo
 ${PYSITELIB}/synapse/logging/context.py
 ${PYSITELIB}/synapse/logging/context.pyc
 ${PYSITELIB}/synapse/logging/context.pyo
-${PYSITELIB}/synapse/logging/filter.py
-${PYSITELIB}/synapse/logging/filter.pyc
-${PYSITELIB}/synapse/logging/filter.pyo
 ${PYSITELIB}/synapse/logging/formatter.py
 ${PYSITELIB}/synapse/logging/formatter.pyc
 ${PYSITELIB}/synapse/logging/formatter.pyo
@@ -646,6 +646,9 @@ ${PYSITELIB}/synapse/logging/loggers.pyo
 ${PYSITELIB}/synapse/logging/opentracing.py
 ${PYSITELIB}/synapse/logging/opentracing.pyc
 ${PYSITELIB}/synapse/logging/opentracing.pyo
+${PYSITELIB}/synapse/logging/scopecontextmanager.py
+${PYSITELIB}/synapse/logging/scopecontextmanager.pyc
+${PYSITELIB}/synapse/logging/scopecontextmanager.pyo
 ${PYSITELIB}/synapse/media/_base.py
 ${PYSITELIB}/synapse/media/_base.pyc
 ${PYSITELIB}/synapse/media/_base.pyo
@@ -916,6 +919,9 @@ ${PYSITELIB}/synapse/rest/admin/devices.pyo
 ${PYSITELIB}/synapse/rest/admin/event_reports.py
 ${PYSITELIB}/synapse/rest/admin/event_reports.pyc
 ${PYSITELIB}/synapse/rest/admin/event_reports.pyo
+${PYSITELIB}/synapse/rest/admin/events.py
+${PYSITELIB}/synapse/rest/admin/events.pyc
+${PYSITELIB}/synapse/rest/admin/events.pyo
 ${PYSITELIB}/synapse/rest/admin/experimental_features.py
 ${PYSITELIB}/synapse/rest/admin/experimental_features.pyc
 ${PYSITELIB}/synapse/rest/admin/experimental_features.pyo
@@ -1006,6 +1012,9 @@ ${PYSITELIB}/synapse/rest/client/login_token_request.pyo
 ${PYSITELIB}/synapse/rest/client/logout.py
 ${PYSITELIB}/synapse/rest/client/logout.pyc
 ${PYSITELIB}/synapse/rest/client/logout.pyo
+${PYSITELIB}/synapse/rest/client/matrixrtc.py
+${PYSITELIB}/synapse/rest/client/matrixrtc.pyc
+${PYSITELIB}/synapse/rest/client/matrixrtc.pyo
 ${PYSITELIB}/synapse/rest/client/media.py
 ${PYSITELIB}/synapse/rest/client/media.pyc
 ${PYSITELIB}/synapse/rest/client/media.pyo
