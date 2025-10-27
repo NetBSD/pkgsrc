@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/04/14 19:12:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/10/27 08:49:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -17,9 +17,14 @@ ${PYSITELIB}/httptools/parser/cparser.pxd
 ${PYSITELIB}/httptools/parser/errors.py
 ${PYSITELIB}/httptools/parser/errors.pyc
 ${PYSITELIB}/httptools/parser/errors.pyo
+${PYSITELIB}/httptools/parser/parser.pyi
 ${PYSITELIB}/httptools/parser/parser.pyx
 ${PYSITELIB}/httptools/parser/parser.so
+${PYSITELIB}/httptools/parser/protocol.py
+${PYSITELIB}/httptools/parser/protocol.pyc
+${PYSITELIB}/httptools/parser/protocol.pyo
 ${PYSITELIB}/httptools/parser/python.pxd
 ${PYSITELIB}/httptools/parser/url_cparser.pxd
+${PYSITELIB}/httptools/parser/url_parser.pyi
 ${PYSITELIB}/httptools/parser/url_parser.pyx
 ${PYSITELIB}/httptools/parser/url_parser.so
