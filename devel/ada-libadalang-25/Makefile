@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/10/19 07:35:07 dkazankov Exp $
+# $NetBSD: Makefile,v 1.7 2025/10/27 15:03:23 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/AdaCore/libadalang
 COMMENT=	Library for parsing and semantic analysis of Ada code
 LICENSE=	apache-2.0
 
-PRE_DISTFILE=	${GITHUB_PROJECT}-pregenerated-${GITHUB_TAG}.tar.bz2
+PRE_DISTFILE=	${GITHUB_PROJECT}-pregenerated-${GITHUB_TAG}nb1.tar.bz2
 DISTFILES=	${DEFAULT_DISTFILES} ${PRE_DISTFILE}
 
 SITES.${PRE_DISTFILE}=		${MASTER_SITE_BACKUP}
