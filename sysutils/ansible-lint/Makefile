@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2025/10/09 08:01:59 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/10/27 08:56:13 adam Exp $
 
-DISTNAME=	ansible_lint-25.9.1
+DISTNAME=	ansible_lint-25.9.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
