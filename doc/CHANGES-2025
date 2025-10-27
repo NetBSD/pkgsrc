@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6285 2025/10/27 07:28:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6286 2025/10/27 07:29:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9101,3 +9101,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-serpent to 1.42 [adam 2025-10-27]
 	Updated devel/py-zope.schema to 8.1 [adam 2025-10-27]
 	Updated textproc/py-eradicate to 3.0.1 [wiz 2025-10-27]
+	Updated net/grpc to 1.76.0 [adam 2025-10-27]
+	Updated net/py-grpcio to 1.76.0 [adam 2025-10-27]
+	Updated net/py-grpcio-testing to 1.76.0 [adam 2025-10-27]
+	Updated net/py-grpcio-tools to 1.76.0 [adam 2025-10-27]
