@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2025/08/06 21:40:06 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2025/10/27 13:59:19 ryoon Exp $
 
-BLAKE2s (bzip3-1.5.2.tar.xz) = b7347b777e2eba36b4ca35875ce1c1b4d77da76209672a4f6336590cb7dc446e
-SHA512 (bzip3-1.5.2.tar.xz) = 15e521629b2340374fa631a7639008e971435df4f7285d1aca026167322d00d7e388eedfdb8163ac39287c907c13a4ae677469e94b442e5ee223c0fb4f737091
-Size (bzip3-1.5.2.tar.xz) = 284260 bytes
+BLAKE2s (bzip3-1.5.3.tar.xz) = ebe0edb198101f0fa8343cbcfb5213652e2e7eb977e70b21a61b4d515c9ed586
+SHA512 (bzip3-1.5.3.tar.xz) = 390d8f1b16838ce552a149aead8b60b520d69d7e3c75660dbeefb7772365aa02846a0dbc88f1d4fca28b5138d8c1a24e712765e0cfdb00a5ae0a35830a1a95ed
+Size (bzip3-1.5.3.tar.xz) = 284788 bytes
 SHA1 (patch-include_common.h) = 2040d8bf4b72cf4818b9916a8203401931f7b54b
 SHA1 (patch-include_libsais.h) = 6150076839740e8542141d33b133d2a72c63dcca
