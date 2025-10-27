@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/09/09 19:19:41 pin Exp $
+# $NetBSD: Makefile,v 1.9 2025/10/27 12:25:37 pin Exp $
 
-DISTNAME=	pastel-0.10.0
+DISTNAME=	pastel-0.11.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=		1.74.0
+RUST_REQ=		1.83.0
 INSTALLATION_DIRS=	bin
 
 do-install:
