@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/10/23 20:39:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/10/27 11:27:36 kikadf Exp $
 
 DISTNAME=			chromium-${VERSION}
-VERSION=			141.0.7390.107
-PKGREVISION=			1
+VERSION=			141.0.7390.122
 CATEGORIES=			www
 MASTER_SITES=			https://commondatastorage.googleapis.com/chromium-browser-official/
 EXTRACT_SUFX_C=			.tar.xz
@@ -40,7 +39,6 @@ CHECK_PORTABILITY_SKIP+=	v8/tools/profiling/run-llprof.sh
 CHECK_PORTABILITY_SKIP+=	v8/tools/run-llprof.sh
 
 TOOL_DEPENDS+=			gperf>=3.2:../../devel/gperf
-TOOL_DEPENDS+=			nasm-[0-9]*:../../devel/nasm
 TOOL_DEPENDS+=			ninja-build-[0-9]*:../../devel/ninja-build
 TOOL_DEPENDS+=			${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TOOL_DEPENDS+=			${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
@@ -196,10 +194,13 @@ GN_ARGS+=	enable_rust=true \
 		rustc_version=\"${RUSTC_VERSION:sh}\"
 
 PLIST_VARS+=		swiftshader
+FFMPEG_PARTS=		config.h config_components.h libavcodec libavformat libavutil
 .if ${MACHINE_ARCH} == "aarch64"
 FFMPEG_TARGET=		arm64
 .elif ${MACHINE_ARCH} == "x86_64"
+TOOL_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 PLIST.swiftshader=	yes
+FFMPEG_PARTS+=		config.asm
 FFMPEG_TARGET=		x64
 .endif
 
@@ -239,7 +240,7 @@ pre-configure:
 		${LOWER_OPSYS} ${FFMPEG_TARGET} --config-only --branding=${FFMPEG_BRAND}
 	cd ${FFMPEG_BDIR} && ${GMAKE} ffversion.h
 	${INSTALL_DATA_DIR} ${FFMPEG_CDIR}
-.for ffmpeg_part in config.h config.asm config_components.h libavcodec libavformat libavutil
+.for ffmpeg_part in ${FFMPEG_PARTS}
 	cp -pR ${FFMPEG_BDIR}/${ffmpeg_part} ${FFMPEG_CDIR}
 .endfor
 
