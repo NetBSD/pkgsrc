@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2025/09/22 09:21:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/10/27 08:52:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -63,6 +63,7 @@ ${PYSITELIB}/pygit2/decl/revert.h
 ${PYSITELIB}/pygit2/decl/stash.h
 ${PYSITELIB}/pygit2/decl/strarray.h
 ${PYSITELIB}/pygit2/decl/submodule.h
+${PYSITELIB}/pygit2/decl/transaction.h
 ${PYSITELIB}/pygit2/decl/transport.h
 ${PYSITELIB}/pygit2/decl/types.h
 ${PYSITELIB}/pygit2/enums.py
@@ -108,6 +109,9 @@ ${PYSITELIB}/pygit2/settings.pyo
 ${PYSITELIB}/pygit2/submodules.py
 ${PYSITELIB}/pygit2/submodules.pyc
 ${PYSITELIB}/pygit2/submodules.pyo
+${PYSITELIB}/pygit2/transaction.py
+${PYSITELIB}/pygit2/transaction.pyc
+${PYSITELIB}/pygit2/transaction.pyo
 ${PYSITELIB}/pygit2/utils.py
 ${PYSITELIB}/pygit2/utils.pyc
 ${PYSITELIB}/pygit2/utils.pyo
