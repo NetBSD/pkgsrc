@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.20 2025/10/09 08:31:09 leot Exp $
+# $NetBSD: eol-packages,v 1.21 2025/10/27 07:40:01 jnemeth Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1213,3 +1213,9 @@ Package: python39
 eol date: October 7, 2025
 URL: https://devguide.python.org/versions/#versions
 Description: eol October 2025 by vendor.  Update to newer version.
+
+Package: asterisk 18.X
+eol date: October 20, 2025
+URL: https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
+Description: Update to newer version.
+
