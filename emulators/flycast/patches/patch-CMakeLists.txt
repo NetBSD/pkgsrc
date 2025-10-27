@@ -1,22 +1,22 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2024/11/19 14:58:05 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2025/10/27 22:57:36 nia Exp $
 
 - Find exact Lua version with pkg-config.
 - Use system dependencies also when compiling the libretro core.
 
---- CMakeLists.txt.orig	2024-10-21 14:13:00.000000000 +0000
+--- CMakeLists.txt.orig	2025-05-06 18:04:11.000000000 +0000
 +++ CMakeLists.txt
-@@ -462,7 +462,8 @@ if(NOT LIBRETRO)
- 		target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
+@@ -501,7 +501,8 @@ if(NOT LIBRETRO)
  	endif()
  
--	find_package(Lua 5.2)
-+	find_package(PkgConfig)
-+	pkg_check_modules(LUA lua-5.2)
- 	if(NOT APPLE AND LUA_FOUND)
- 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LUA)
- 		target_include_directories(${PROJECT_NAME} PRIVATE ${LUA_INCLUDE_DIR} core/deps/luabridge/Source)
-@@ -515,22 +516,22 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND 
- 		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBPULSE)
+ 	if(USE_LUA)
+-		find_package(Lua 5.2)
++		find_package(PkgConfig)
++		pkg_check_modules(LUA lua-5.2)
+ 		if(NOT APPLE AND LUA_FOUND)
+ 			target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LUA)
+ 			target_include_directories(${PROJECT_NAME} PRIVATE ${LUA_INCLUDE_DIR} core/deps/luabridge/Source)
+@@ -570,25 +571,25 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND 
+ 		endif()
  	endif()
  
 -	if(USE_HOST_LIBZIP)
@@ -31,12 +31,6 @@ $NetBSD: patch-CMakeLists.txt,v 1.4 2024/11/19 14:58:05 nia Exp $
  		target_link_libraries(${PROJECT_NAME} PRIVATE opagent)
  	endif()
 +endif()
-+
-+find_package(MiniUPnPc)
-+if(MINIUPNP_FOUND)
-+	target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
-+	target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
-+endif()
  
 -	find_package(MiniUPnPc)
 -	if(MINIUPNP_FOUND)
@@ -49,3 +43,12 @@ $NetBSD: patch-CMakeLists.txt,v 1.4 2024/11/19 14:58:05 nia Exp $
  	endif()
  endif()
  
++find_package(MiniUPnPc)
++if(MINIUPNP_FOUND)
++	target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
++	target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
++endif()
++
+ if(UNIX AND NOT APPLE AND NOT ANDROID)
+ 	add_definitions(
+ 		-DFLYCAST_DATADIR="${CMAKE_INSTALL_FULL_DATADIR}/${PROJECT_NAME}/"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2025/08/20 11:34:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/10/27 22:57:36 nia Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
-DISTNAME=	flycast-2.4
+DISTNAME=	flycast-2.5
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flyinghead/}
 GITHUB_PROJECT=	flycast
@@ -33,7 +33,6 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_VULKAN=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_DX9=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_DX11=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_ZLIB=ON
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
 
@@ -42,10 +41,30 @@ PATCHDIR=	${.CURDIR}/../../emulators/flycast/patches
 
 USE_CXX_FEATURES+=	c++17
 
-GITHUB_SUBMODULES+=	flyinghead libchdr 9b6ff6c3c24311750096232a05ee9c5b4963e66c core/deps/libchdr
+GITHUB_SUBMODULES+=	flyinghead asio d3402006e84efb6114ff93e4f2b8508412ed80d5 core/deps/asio
+GITHUB_SUBMODULES+=	flyinghead libchdr 5f82799f2c8cad1e9cd26d39a0f8d36369a5534b core/deps/libchdr
 GITHUB_SUBMODULES+=	flyinghead mingw-breakpad 1ab24bcc817ebe629bf77daa53529d02361cb1e9 core/deps/breakpad
-GITHUB_SUBMODULES+=	vinniefalco LuaBridge fab7b33b896a42dcc865ba5ecdbacd9f40 core/deps/luabridge
+GITHUB_SUBMODULES+=	vinniefalco LuaBridge 5d21e35633a1f87ed08af115b07d3386096f792b core/deps/luabridge
 GITHUB_SUBMODULES+=	RetroAchievements rcheevos 563230b1c249774b4852c944dc7cdcb952c9e8e8 core/deps/rcheevos
+GITHUB_SUBMODULES+=	vkedwardli Syphon-Framework 486dd8e4ef3bead482ea26de99770f4389e24e37 core/deps/Syphon
+
+.include "../../mk/oss.buildlink3.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+
+# other backends seem to have lower latency on NetBSD
+.if ${OSS_TYPE} != "none" && ${OPSYS} != "NetBSD"
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OSS=ON
+LDFLAGS+=		${LIBOSSAUDIO}
+SUBST_CLASSES+=		oss
+SUBST_STAGE.oss=	pre-configure
+SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
+SUBST_FILES.oss+=	core/audio/audiobackend_oss.cpp
+SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OSS=OFF
+.endif
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
