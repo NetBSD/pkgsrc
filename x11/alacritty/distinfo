@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2025/10/18 16:11:54 pin Exp $
+$NetBSD: distinfo,v 1.26 2025/10/27 11:59:24 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -9,9 +9,9 @@ Size (ahash-0.8.12.crate) = 43413 bytes
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
 Size (aho-corasick-1.1.3.crate) = 183311 bytes
-BLAKE2s (alacritty-0.16.0.tar.gz) = 5e0057f5b157634eefafc7a059f2fd2e35f245a745d9b45637da4e4b44c6ac21
-SHA512 (alacritty-0.16.0.tar.gz) = 5727374d2c1db63c0b5b9a3d910db601e305e442a81cf325902455f6512e6fe2e81c9adb011e2c54a99273c46b90de51b5e20fae35fa2f7dbf6145f152704382
-Size (alacritty-0.16.0.tar.gz) = 1654074 bytes
+BLAKE2s (alacritty-0.16.1.tar.gz) = 33d779cf28a93119f0e9a7ed60db062f0cdba3e0bb8d2ecb34c98ac09f80ecf2
+SHA512 (alacritty-0.16.1.tar.gz) = 543a204a34e040afd74d873b4f556789e4c1b09320815269a8164bc2dd5d44854aa42e08923fbaa88e9648d28834e275f785c62fcab2624c902fd57e644d7fb2
+Size (alacritty-0.16.1.tar.gz) = 1654094 bytes
 BLAKE2s (android-activity-0.6.0.crate) = 43859d0aff2274dfb7cce183e39c96cb816d0f5e201ad50648d909736ae958b2
 SHA512 (android-activity-0.6.0.crate) = 24c4fb0b8985df8927bac994a22ac6ebabc4c2f3f5c509769146c517d05750f7457cb056d954fba1e5cb638e349744379adc870d1d5e44370ffaae026a05a7e6
 Size (android-activity-0.6.0.crate) = 258597 bytes
