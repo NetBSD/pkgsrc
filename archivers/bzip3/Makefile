@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2025/10/27 13:59:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/27 20:49:50 wiz Exp $
 
 DISTNAME=	bzip3-1.5.3
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GITHUB:=kspalaiologos/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=iczelia/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/kspalaiologos/bzip3
+HOMEPAGE=	https://github.com/iczelia/bzip3
 COMMENT=	Successor to BZip2
 LICENSE=	gnu-lgpl-v3
 
