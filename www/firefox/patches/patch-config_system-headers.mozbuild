@@ -1,0 +1,22 @@
+$NetBSD: patch-config_system-headers.mozbuild,v 1.3 2025/10/27 14:24:33 ryoon Exp $
+
+* sys/single_threaded.h is only for Linux.
+
+--- config/system-headers.mozbuild.orig	2025-10-06 13:27:29.080303273 +0000
++++ config/system-headers.mozbuild
+@@ -865,7 +865,6 @@ system_headers = [
+     "sys/shm.h",
+     "sys/siginfo.h",
+     "sys/signal.h",
+-    "sys/single_threaded.h",
+     "sys/socket.h",
+     "sys/sockio.h",
+     "sys/sparc/frame.h",
+@@ -1377,6 +1376,7 @@ if CONFIG["MOZ_WAYLAND"]:
+ if CONFIG["OS_TARGET"] in ("Android", "Linux", "FreeBSD"):
+     system_headers += [
+         "sys/auxv.h",
++        "sys/single_threaded.h",
+     ]
+ 
+ if CONFIG["OS_TARGET"] == "Linux" and CONFIG["TARGET_CPU"].startswith("mips"):
