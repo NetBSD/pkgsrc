@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6316 2025/10/27 18:24:16 tron Exp $
+$NetBSD: CHANGES-2025,v 1.6317 2025/10/27 20:49:23 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9142,3 +9142,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/kea to 3.1.2 [adam 2025-10-27]
 	Updated databases/pg_repack to 1.5.3 [adam 2025-10-27]
 	Updated benchmarks/dnsperf to 2.14.0 [tron 2025-10-27]
+	Updated databases/mariadb1011-server to 10.11.14 [nia 2025-10-27]
+	Updated databases/mariadb1011-client to 10.11.14 [nia 2025-10-27]
