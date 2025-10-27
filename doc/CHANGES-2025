@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6288 2025/10/27 08:56:30 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6289 2025/10/27 09:08:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9109,3 +9109,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pygit2 to 1.19.0 [adam 2025-10-27]
 	Updated sysutils/py-ansible-compat to 25.8.2 [adam 2025-10-27]
 	Updated sysutils/ansible-lint to 25.9.2 [adam 2025-10-27]
+	Updated textproc/py-orjson to 3.11.4 [adam 2025-10-27]
+	Updated devel/py-rpds-py to 0.28.0 [adam 2025-10-27]
