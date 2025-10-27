@@ -1,46 +1,29 @@
-# $NetBSD: Makefile,v 1.18 2025/10/23 20:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/27 15:46:56 adam Exp $
 
-DISTNAME=	kea-${VERSION}
+DISTNAME=	kea-3.1.2
 COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
-PKGREVISION=	2
 
 .include "options.mk"
 
-CATEGORIES=		net
-MASTER_SITES=		https://ftp.isc.org/isc/kea/${VERSION}/
+CATEGORIES=	net
+MASTER_SITES=	https://ftp.isc.org/isc/kea/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.isc.org/kea/
-LICENSE=		mpl-2.0
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.isc.org/kea/
+LICENSE=	mpl-2.0
 
-VERSION=		2.6.3
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-PKG_SYSCONFSUBDIR=	kea
-
-USE_TOOLS+=		autoconf gmake
-USE_LANGUAGES+=		c++ c
-
-RCD_SCRIPTS=		kea
-
-pre-configure:
-	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
-
-post-install:
-	cd ${DESTDIR} && \
-	mkdir -p ${DESTDIR}${PREFIX}/share/examples/kea && \
-	mv ${DESTDIR}${PKG_SYSCONFDIR}/*.conf \
-		${DESTDIR}${PREFIX}/share/examples/kea/
-
-BUILD_DEFS+=		VARBASE
-
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-
-MAKE_DIRS+=		${VARBASE}/lib/kea
-MAKE_DIRS+=		${VARBASE}/run/kea
+BUILD_DEFS+=	VARBASE
+MAKE_DIRS+=	${VARBASE}/lib/kea
+MAKE_DIRS+=	${VARBASE}/run/kea
+MESON_ARGS+=	-Drunstatedir=${VARBASE}
+PY_PATCHPLIST=	yes
+RCD_SCRIPTS=	kea
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 # This appears to store an absolute path to the bison(1) executable
@@ -48,10 +31,19 @@ MAKE_DIRS+=		${VARBASE}/run/kea
 CHECK_WRKREF_SKIP+=	lib/libkea-process*
 .endif
 
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+INSTALLATION_DIRS+=	share/examples/kea
+
+post-install:
+	${RM} -fr ${DESTDIR}${PREFIX}/share/examples/kea && \
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/kea \
+                ${DESTDIR}${PREFIX}/share/examples/kea
+
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/log4cplus/buildlink3.mk"
-
+.include "../../devel/meson/build.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/python/extension.mk"
+.include "../../lang/python/tool.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.5 2025/06/05 15:00:44 taca Exp $
+$NetBSD: distinfo,v 1.6 2025/10/27 15:46:56 adam Exp $
 
-BLAKE2s (kea-2.6.3.tar.gz) = cc62f7905be8fb087286f3b6b20dbb309eef82bf64c1d5582f787fdd34a050e0
-SHA512 (kea-2.6.3.tar.gz) = d7781c0b95529bfe89c19615c1dd5952fd4c4b60274e187a641992dad81ef5af921dfb15050ec43169a0c2ad267639642b2e294c5d43405f85a5fb11bb1a939a
-Size (kea-2.6.3.tar.gz) = 10498882 bytes
-SHA1 (patch-config.h.in) = 854ce1d2685f378ee4dcc06d1901e0c7a371bc32
-SHA1 (patch-configure.ac) = 9d70489a402e91fa9db9d576860bcf152d773249
-SHA1 (patch-src_lib_dhcp_pkt__filter__bpf.cc) = 42f0e2c23a6dc8467dd28669b032f63fa11566d4
+BLAKE2s (kea-3.1.2.tar.xz) = d15ca844c284426a966edfd49b3a89df9585aff699769663cde24257158a3f65
+SHA512 (kea-3.1.2.tar.xz) = ffeb849d5310ff27f483e37ad3c34c756d580a84cfb6b4e52096d5d6ae9b599cf45c61fa8540ed4593d5ea2deef820c1fface9077d2cd3e648d5f50038b3ee5e
+Size (kea-3.1.2.tar.xz) = 6666128 bytes
+SHA1 (patch-src_bin_keactrl_meson.build) = 587941248217d989d04c5926feab1b601dce867b
+SHA1 (patch-src_lib_dhcp_pkt__filter__bpf.cc) = 6fbc86f9fcf9889027e3cbfce28b01f7acfe2de4

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_dhcp_pkt__filter__bpf.cc,v 1.1 2024/11/13 14:37:28 taca Exp $
+$NetBSD: patch-src_lib_dhcp_pkt__filter__bpf.cc,v 1.2 2025/10/27 15:46:56 adam Exp $
 
 * Fix build problem on NetBSD; check if struct bpf_timeval is defined.
 
@@ -8,7 +8,7 @@ $NetBSD: patch-src_lib_dhcp_pkt__filter__bpf.cc,v 1.1 2024/11/13 14:37:28 taca E
      time_duration usecs(0, 0, 0, bpfh.bh_tstamp.tv_usec);
      timestamp += usecs;
      pkt->addPktEvent(PktEvent::SOCKET_RECEIVED, timestamp);
-+#elif HAVE_BPF_TIMEVAL
++#elif __NetBSD__
 +    // It is dangerous to cast and assign structures or structure pointers
 +    // unless there is a guarantee that the members of struct timeval and
 +    // struct bpf_timeval are defined in the same order and with the same
