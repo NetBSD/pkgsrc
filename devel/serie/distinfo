@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2025/10/16 10:52:24 pin Exp $
+$NetBSD: distinfo,v 1.14 2025/10/27 12:13:41 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -114,12 +114,12 @@ Size (cfg-if-1.0.0.crate) = 7934 bytes
 BLAKE2s (chrono-0.4.42.crate) = 72c5d8a1978ab715e15123defd74393dc4993664e1362fed0eb07fb3e93912d6
 SHA512 (chrono-0.4.42.crate) = 776b4b127c1a07ddce587aad341fa1022cebaa90ad667064809b3f83fc33aa355c811d7df445d6aae405265660deba9d8514d909391e47ea26d968bd4f24becf
 Size (chrono-0.4.42.crate) = 238174 bytes
-BLAKE2s (clap-4.5.49.crate) = a2d7afd8705d3dbe38f61033305e1b0d4a65d7996b2a685a136d08fe7c33a607
-SHA512 (clap-4.5.49.crate) = 90bef4cce7e221d79287ed95cef68aa065b85a1aa5f111213e6fc06d82db8e719482b00ed986ba44640e0fd42f0a05cafe79b0a4da8781ace4aca07bea739cb2
-Size (clap-4.5.49.crate) = 62007 bytes
-BLAKE2s (clap_builder-4.5.49.crate) = 79402ea02cc9a0914406be5332b1183af9972a918db70ecfc604ce6d08872fec
-SHA512 (clap_builder-4.5.49.crate) = da4c592a8272d767b00d5747cc2c760e4e0369a29cdfb3aadb9bd97d91dec10c38da16e718b3018d4acb5056e4647a4616b28bd2e78ee127fa7bbe2c3d3edbd9
-Size (clap_builder-4.5.49.crate) = 170616 bytes
+BLAKE2s (clap-4.5.50.crate) = 4c8848b2ae33d2a31dd39c5e8ddba6b85ff3eca76d4544d985258a6bb61a887e
+SHA512 (clap-4.5.50.crate) = f98dc12a40453f17c733562e2d3a08dd4c073f2930665a683328100c5a09ae7d77fe535a22cce12c4eee8e2b073ebdfc156cfd4f5ebbd2f57fe779d206092264
+Size (clap-4.5.50.crate) = 62030 bytes
+BLAKE2s (clap_builder-4.5.50.crate) = dd560fd151d61cb9d896e71b67df2122dfc573bb13fd5daf01b026e6ece85485
+SHA512 (clap_builder-4.5.50.crate) = 767b3bc14de66da6ba4cdf937b65d1f05fc34396026d8eeab39365714b26c7a2e0a7a494101ba13c97f23cbdabdedebfb62f522cce72fdb6f0fd5f45fd030cae
+Size (clap_builder-4.5.50.crate) = 171137 bytes
 BLAKE2s (clap_derive-4.5.49.crate) = 460ba82547127fc3ac25d4fd13fa1480f3ed1e1ecfb4611fea016a26b261da0f
 SHA512 (clap_derive-4.5.49.crate) = 61d2b9597bb521cfd31a2c77af687832dd5e48f8b80dacce3079f165d6629d58f000c18a956fe948b1ad99776d75caf4e6b9004f63d861b8ab3b68b5260376dc
 Size (clap_derive-4.5.49.crate) = 33559 bytes
@@ -576,9 +576,9 @@ Size (serde_spanned-0.6.8.crate) = 9330 bytes
 BLAKE2s (serde_spanned-1.0.3.crate) = 237383a64527d954099e711fe1ab4af5bc41fcca81edc1dc9610ec13063ebbd7
 SHA512 (serde_spanned-1.0.3.crate) = 4021188c75aca535b6726c4cf682099aba8e0f08c7ad5bf89f2dac719387000e74d9af060fd4850968a61df8f3c4f3c9bf823abc6375dd1c9b14fc7e74bdf971
 Size (serde_spanned-1.0.3.crate) = 11011 bytes
-BLAKE2s (serie-0.5.2.tar.gz) = fb654e659c8fceebfe582f3637b9110bd9873fbaa869f86ca15ddbcf6409c9d3
-SHA512 (serie-0.5.2.tar.gz) = b8c1a995a6b891b59eb9e203caab3295f29afb2af17da950ebda8d2283ab32852e0b66b1ef72a7a2761eda5e6a455791a04407bb3e5cfedf5bd8ae8c46b06813
-Size (serie-0.5.2.tar.gz) = 13510743 bytes
+BLAKE2s (serie-0.5.3.tar.gz) = 9cb5ee06acd659ba7b54a9157002c530c573cc90a1546c4e6d1008bbf9f25b4a
+SHA512 (serie-0.5.3.tar.gz) = 1d5b497ee7908a5f9c0760a9f216d44e3ac0e2d16c252b84820ede49e0afa226520e2175c526129c1fc860abf581feed8c145ed2fb3bf527cd8c3e1a18f160cb
+Size (serie-0.5.3.tar.gz) = 13510885 bytes
 BLAKE2s (signal-hook-0.3.17.crate) = e706055e3a219a72e617897325bc4a0e06002ae3814e982b33461274cf45ad1d
 SHA512 (signal-hook-0.3.17.crate) = 045ac6268e504c5561d3884610a48c930dfd936086f793839f42602e92e4a8cef289955776e8eba8a5ca1a91b5f27ccb3724f49b32091f8f06c8bde984d82298
 Size (signal-hook-0.3.17.crate) = 50296 bytes
