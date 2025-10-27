@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/08/21 17:59:45 gdt Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/10/27 21:55:09 gdt Exp $
 bin/geos-config
 bin/geosop
 include/geos.h
@@ -533,8 +533,8 @@ lib/cmake/GEOS/geos-config.cmake
 lib/cmake/GEOS/geos-targets-release.cmake
 lib/cmake/GEOS/geos-targets.cmake
 lib/libgeos.so
-lib/libgeos.so.3.14.0
+lib/libgeos.so.${PKGVERSION}
 lib/libgeos_c.so
 lib/libgeos_c.so.1
-lib/libgeos_c.so.1.20.4
+lib/libgeos_c.so.1.20.5
 lib/pkgconfig/geos.pc
