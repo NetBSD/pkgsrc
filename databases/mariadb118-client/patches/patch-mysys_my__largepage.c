@@ -1,10 +1,4 @@
-$NetBSD: patch-mysys_my__largepage.c,v 1.1 2025/06/20 14:03:21 nia Exp $
-
-Fix build on illumos, via OmniOS CE.
-
-Undefined                       first referenced
- symbol                             in file
-opt_super_large_pages               ../../mysys/libmysys.a(my_largepage.c.o)
+$NetBSD: patch-mysys_my__largepage.c,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 --- mysys/my_largepage.c.orig	2025-05-21 14:08:44.000000000 +0000
 +++ mysys/my_largepage.c

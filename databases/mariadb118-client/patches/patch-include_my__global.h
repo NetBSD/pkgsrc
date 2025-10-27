@@ -1,4 +1,4 @@
-$NetBSD: patch-include_my__global.h,v 1.1 2025/06/07 08:58:42 nia Exp $
+$NetBSD: patch-include_my__global.h,v 1.2 2025/10/27 20:56:37 nia Exp $
 
 NetBSD guards C99 printf format macros, needs to be triggered
 here for early includes.
