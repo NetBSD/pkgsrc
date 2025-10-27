@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.21 2025/10/27 07:40:01 jnemeth Exp $
+# $NetBSD: eol-packages,v 1.22 2025/10/27 10:19:36 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -225,7 +225,7 @@ Package: spice
 eol date: ca. July 1993
 URL: http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 Description: The version of SPICE distributed by Berkeley has not been updated in well over 15
-	years.  In the intervening time, the ng-spice project (http://ng-spice.sourceforge.net) 
+	years.  In the intervening time, the ng-spice project (http://ng-spice.sourceforge.net)
 	has taken the last released code from Berkeley and maintained and improved it.  Users
 	of the spice-3f5.1 package should migrate to the cad/ng-spice package.
 
@@ -972,7 +972,7 @@ Description: eol September 2020 by vendor.  Update to newer version.
 Package: cliqz
 eol date: April 29, 2020
 URL: https://cliqz.com/announcement.html
-Description: eol per announcement. 
+Description: eol per announcement.
 
 Package: PHP (7.2)
 eol date: December 1, 2020
@@ -1218,4 +1218,3 @@ Package: asterisk 18.X
 eol date: October 20, 2025
 URL: https://docs.asterisk.org/About-the-Project/Asterisk-Versions/
 Description: Update to newer version.
-
