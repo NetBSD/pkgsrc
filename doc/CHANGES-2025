@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6321 2025/10/27 21:55:51 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6322 2025/10/27 22:50:24 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9151,3 +9151,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mariadb118-server to 11.8.3 [nia 2025-10-27]
 	Updated databases/mariadb118-client to 11.8.3 [nia 2025-10-27]
 	Updated geography/geos to 3.14.1 [gdt 2025-10-27]
+	Updated chat/matrix-synapse to 1.140.0 [gdt 2025-10-27]
