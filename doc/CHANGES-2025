@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6305 2025/10/27 12:29:04 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6306 2025/10/27 13:59:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9128,3 +9128,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/matugen to 3.0.0 [pin 2025-10-27]
 	Updated graphics/pastel to 0.11.0 [pin 2025-10-27]
 	Updated shells/oh-my-posh to 27.4.0 [pin 2025-10-27]
+	Updated archivers/bzip3 to 1.5.3 [ryoon 2025-10-27]
