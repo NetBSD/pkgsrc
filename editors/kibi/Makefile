@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/02/21 13:21:49 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/27 12:17:48 pin Exp $
 
-DISTNAME=	kibi-0.2.2
+DISTNAME=	kibi-0.3.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ilai-deutel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,10 +12,15 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
+RUST_REQ=	1.85.0
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/kibi ${DESTDIR}${PREFIX}/bin
+# Depends on an unpublished crates. Can't use cargo.mk to fetch it.
+TOKEI_REV=	d2101e530d4c97752ceec3dde2d942cc56ff8173
+
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	tokei-${TOKEI_REV}.tar.gz
+
+SITES.tokei-${TOKEI_REV}.tar.gz=	-${MASTER_SITE_GITHUB:=ilai-deutel/}tokei/archive/${TOKEI_REV}.tar.gz
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
