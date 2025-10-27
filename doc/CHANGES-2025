@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6310 2025/10/27 14:49:58 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6311 2025/10/27 14:52:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9133,3 +9133,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 144.0 [ryoon 2025-10-27]
 	Updated databases/ruby-sequel to 5.97.0 [taca 2025-10-27]
 	Updated devel/ruby-backports to 3.25.2 [taca 2025-10-27]
+	Updated lang/oracle-jdk21 to 21.0.9 [adam 2025-10-27]
+	Updated devel/py-h5py to 3.15.1 [adam 2025-10-27]
+	Updated devel/py-h5netcdf to 1.7.3 [adam 2025-10-27]
