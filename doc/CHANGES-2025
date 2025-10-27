@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6286 2025/10/27 07:29:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6287 2025/10/27 08:52:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9105,3 +9105,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio to 1.76.0 [adam 2025-10-27]
 	Updated net/py-grpcio-testing to 1.76.0 [adam 2025-10-27]
 	Updated net/py-grpcio-tools to 1.76.0 [adam 2025-10-27]
+	Updated www/py-httptools to 0.7.1 [adam 2025-10-27]
+	Updated devel/py-pygit2 to 1.19.0 [adam 2025-10-27]
