@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:02:51 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/10/27 18:23:49 tron Exp $
 
-BLAKE2s (dnsperf-2.5.1.tar.gz) = 024cfdab0f4a73b9c947935283c514f9c00e4a0e4ece0e49b5eb04adfa651378
-SHA512 (dnsperf-2.5.1.tar.gz) = cd19973560ddb3fa5f9e503b7e904edbed229745ec13cdc32a94444b8e7ec62433128dfd1d212ba47f2c7e749f9ef7ab3af4f2744fb9a23641c8dfb74ce9b102
-Size (dnsperf-2.5.1.tar.gz) = 428907 bytes
+BLAKE2s (dnsperf-2.14.0.tar.gz) = 29fd87836b187d78e7b4a10059b31ec2e1cc18ca23e29bb514265337fbeafe89
+SHA512 (dnsperf-2.14.0.tar.gz) = ebca70071a07b2f5b2a07866c22aa9f459981f70be06047ada760bf7e53bf44c355cf964674483ce5eae736a64b9061d773a44e8c46f956525d29144ca48a9fd
+Size (dnsperf-2.14.0.tar.gz) = 469420 bytes
+SHA1 (patch-src_strerror.c) = 8eff430cd9de584f03a0498bcc2b8dc2e566b0eb
