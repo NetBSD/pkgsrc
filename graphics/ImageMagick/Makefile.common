@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.289 2025/10/25 17:21:59 triaxx Exp $
+# $NetBSD: Makefile.common,v 1.290 2025/10/28 20:38:10 triaxx Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 #
 # Changelog: https://github.com/ImageMagick/Website/blob/main/ChangeLog.md
 
 IM_MAJOR_VER=		7.1.2
-IM_MINOR_VER=		7
+IM_MINOR_VER=		8
 IM_MAJOR_LIB_VER=	7
 
 .if ${IM_MINOR_VER} != NONE
