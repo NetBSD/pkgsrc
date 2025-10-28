@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/08/11 15:11:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/10/28 13:52:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -16,6 +16,9 @@ ${GEM_LIBDIR}/lib/braintree/apple_pay_card.rb
 ${GEM_LIBDIR}/lib/braintree/apple_pay_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/apple_pay_options.rb
 ${GEM_LIBDIR}/lib/braintree/authorization_adjustment.rb
+${GEM_LIBDIR}/lib/braintree/bank_account_instant_verification_gateway.rb
+${GEM_LIBDIR}/lib/braintree/bank_account_instant_verification_jwt.rb
+${GEM_LIBDIR}/lib/braintree/bank_account_instant_verification_jwt_request.rb
 ${GEM_LIBDIR}/lib/braintree/base_module.rb
 ${GEM_LIBDIR}/lib/braintree/bin_data.rb
 ${GEM_LIBDIR}/lib/braintree/client_token.rb
@@ -188,11 +191,10 @@ ${GEM_LIBDIR}/lib/braintree/webhook_testing.rb
 ${GEM_LIBDIR}/lib/braintree/webhook_testing_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/xml.rb
 ${GEM_LIBDIR}/lib/braintree/xml/generator.rb
-${GEM_LIBDIR}/lib/braintree/xml/libxml.rb
+${GEM_LIBDIR}/lib/braintree/xml/nokogiri.rb
 ${GEM_LIBDIR}/lib/braintree/xml/parser.rb
 ${GEM_LIBDIR}/lib/braintree/xml/rexml.rb
 ${GEM_LIBDIR}/lib/ssl/api_braintreegateway_com.ca.crt
-${GEM_LIBDIR}/lib/ssl/securetrust_ca.crt
 ${GEM_LIBDIR}/spec/fixtures/files/bt_logo.png
 ${GEM_LIBDIR}/spec/fixtures/files/gif_extension_bt_logo.gif
 ${GEM_LIBDIR}/spec/fixtures/files/malformed_pdf.pdf
@@ -201,6 +203,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/add_on_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/address_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/advanced_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/apple_pay_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/bank_account_instant_verification_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/braintree_gateway_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/client_api/client_token_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/client_api/spec_helper.rb
@@ -255,6 +258,8 @@ ${GEM_LIBDIR}/spec/ssl/geotrust_global.crt
 ${GEM_LIBDIR}/spec/ssl/privateKey.key
 ${GEM_LIBDIR}/spec/unit/braintree/address_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/apple_pay_card_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/bank_account_instant_verification_gateway_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/bank_account_instant_verification_jwt_request_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/base_module_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/client_token_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/configuration_spec.rb
@@ -326,6 +331,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/transaction/payment_receipt_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/paypal_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/visa_checkout_card_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction_ach_mandate_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_spec.rb
@@ -339,7 +345,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/validation_error_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/venmo_profile_data_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/visa_checkout_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/webhook_notification_spec.rb
-${GEM_LIBDIR}/spec/unit/braintree/xml/libxml_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/xml/nokogiri_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/rexml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml_spec.rb
