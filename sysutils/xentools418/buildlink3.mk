@@ -1,14 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/10/28 23:50:14 wiz Exp $
 
-BUILDLINK_TREE+=	xentools415
+BUILDLINK_TREE+=	xentools418
 
-.if !defined(XENTOOLS415_BUILDLINK3_MK)
-XENTOOLS415_BUILDLINK3_MK:=
+.if !defined(XENTOOLS418_BUILDLINK3_MK)
+XENTOOLS418_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.xentools415+=	xentools415>=4.15.2nb3
-BUILDLINK_ABI_DEPENDS.xentools415?=	xentools415>=4.15.4nb1
-BUILDLINK_PKGSRCDIR.xentools415?=	../../sysutils/xentools415
+BUILDLINK_API_DEPENDS.xentools418+=	xentools418>=4.18
+BUILDLINK_PKGSRCDIR.xentools418?=	../../sysutils/xentools418
 
-.endif	# XENTOOLS415_BUILDLINK3_MK
+.endif	# XENTOOLS418_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-xentools415
+BUILDLINK_TREE+=	-xentools418
