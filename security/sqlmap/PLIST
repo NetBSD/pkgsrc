@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2023/09/25 13:52:05 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/10/28 09:38:26 adam Exp $
 bin/sqlmap
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/sqlmap/.pylintrc
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlmap/LICENSE
 ${PYSITELIB}/sqlmap/README.md
 ${PYSITELIB}/sqlmap/__init__.py
@@ -41,6 +39,7 @@ ${PYSITELIB}/sqlmap/data/txt/common-files.txt
 ${PYSITELIB}/sqlmap/data/txt/common-outputs.txt
 ${PYSITELIB}/sqlmap/data/txt/common-tables.txt
 ${PYSITELIB}/sqlmap/data/txt/keywords.txt
+${PYSITELIB}/sqlmap/data/txt/sha256sums.txt
 ${PYSITELIB}/sqlmap/data/txt/smalldict.txt
 ${PYSITELIB}/sqlmap/data/txt/user-agents.txt
 ${PYSITELIB}/sqlmap/data/txt/wordlist.tx_
@@ -102,14 +101,18 @@ ${PYSITELIB}/sqlmap/doc/AUTHORS
 ${PYSITELIB}/sqlmap/doc/CHANGELOG.md
 ${PYSITELIB}/sqlmap/doc/THANKS.md
 ${PYSITELIB}/sqlmap/doc/THIRD-PARTY.md
+${PYSITELIB}/sqlmap/doc/translations/README-ar-AR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-bg-BG.md
-${PYSITELIB}/sqlmap/doc/translations/README-de-GER.md
+${PYSITELIB}/sqlmap/doc/translations/README-bn-BD.md
+${PYSITELIB}/sqlmap/doc/translations/README-ckb-KU.md
+${PYSITELIB}/sqlmap/doc/translations/README-de-DE.md
 ${PYSITELIB}/sqlmap/doc/translations/README-es-MX.md
 ${PYSITELIB}/sqlmap/doc/translations/README-fa-IR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-fr-FR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-gr-GR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-hr-HR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-id-ID.md
+${PYSITELIB}/sqlmap/doc/translations/README-in-HI.md
 ${PYSITELIB}/sqlmap/doc/translations/README-it-IT.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ja-JP.md
 ${PYSITELIB}/sqlmap/doc/translations/README-ka-GE.md
@@ -118,7 +121,7 @@ ${PYSITELIB}/sqlmap/doc/translations/README-nl-NL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pl-PL.md
 ${PYSITELIB}/sqlmap/doc/translations/README-pt-BR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-rs-RS.md
-${PYSITELIB}/sqlmap/doc/translations/README-ru-RUS.md
+${PYSITELIB}/sqlmap/doc/translations/README-ru-RU.md
 ${PYSITELIB}/sqlmap/doc/translations/README-sk-SK.md
 ${PYSITELIB}/sqlmap/doc/translations/README-tr-TR.md
 ${PYSITELIB}/sqlmap/doc/translations/README-uk-UA.md
@@ -178,7 +181,6 @@ ${PYSITELIB}/sqlmap/extra/shutils/duplicates.py
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.pyc
 ${PYSITELIB}/sqlmap/extra/shutils/duplicates.pyo
 ${PYSITELIB}/sqlmap/extra/shutils/junk.sh
-${PYSITELIB}/sqlmap/extra/shutils/modernize.sh
 ${PYSITELIB}/sqlmap/extra/shutils/newlines.py
 ${PYSITELIB}/sqlmap/extra/shutils/newlines.pyc
 ${PYSITELIB}/sqlmap/extra/shutils/newlines.pyo
@@ -187,7 +189,6 @@ ${PYSITELIB}/sqlmap/extra/shutils/precommit-hook.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pycodestyle.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pydiatra.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pyflakes.sh
-${PYSITELIB}/sqlmap/extra/shutils/pylint.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pypi.sh
 ${PYSITELIB}/sqlmap/extra/shutils/recloak.sh
 ${PYSITELIB}/sqlmap/extra/shutils/strip.sh
@@ -1246,6 +1247,9 @@ ${PYSITELIB}/sqlmap/tamper/lowercase.pyo
 ${PYSITELIB}/sqlmap/tamper/luanginx.py
 ${PYSITELIB}/sqlmap/tamper/luanginx.pyc
 ${PYSITELIB}/sqlmap/tamper/luanginx.pyo
+${PYSITELIB}/sqlmap/tamper/luanginxmore.py
+${PYSITELIB}/sqlmap/tamper/luanginxmore.pyc
+${PYSITELIB}/sqlmap/tamper/luanginxmore.pyo
 ${PYSITELIB}/sqlmap/tamper/misunion.py
 ${PYSITELIB}/sqlmap/tamper/misunion.pyc
 ${PYSITELIB}/sqlmap/tamper/misunion.pyo
