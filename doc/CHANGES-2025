@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6327 2025/10/28 09:28:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6328 2025/10/28 09:45:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9160,3 +9160,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/rex to 0.2.2 [pin 2025-10-28]
 	Updated math/py-astropy-iers-data to 0.2025.10.27.0.39.10 [adam 2025-10-28]
 	Updated math/py-astropy to 7.1.1 [adam 2025-10-28]
+	Updated security/sqlmap to 1.9.10 [adam 2025-10-28]
+	Updated devel/py-pip to 25.3 [adam 2025-10-28]
