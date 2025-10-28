@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6342 2025/10/28 15:56:53 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6343 2025/10/28 16:02:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9180,3 +9180,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-recog to 3.1.23 [taca 2025-10-28]
 	Updated www/squid7 to 7.2nb1 [taca 2025-10-28]
 	Updated www/snac to 2.84 [schmonz 2025-10-28]
+	Updated textproc/ov to 0.45.1 [schmonz 2025-10-28]
