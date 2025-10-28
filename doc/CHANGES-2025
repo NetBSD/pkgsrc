@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6335 2025/10/28 13:49:29 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6336 2025/10/28 13:50:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9173,3 +9173,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-google-protobuf to 4.33.0 [taca 2025-10-28]
 	Updated devel/ruby-red-datasets to 0.2.1 [taca 2025-10-28]
 	Updated devel/ruby-rspec-core to 3.13.6 [taca 2025-10-28]
+	Updated devel/ruby-rspec-mocks to 3.13.6 [taca 2025-10-28]
