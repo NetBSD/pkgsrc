@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/10/12 18:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/10/28 14:02:28 jperkin Exp $
 
 DISTNAME=	maturin-1.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.11.1:../../devel/py-setuptools-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
+
+MAKE_ENV+=	CARGO_BUILD_JOBS=${_MAKE_JOBS_N:U1}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
