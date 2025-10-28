@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/04/12 21:15:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/28 13:25:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,9 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_asyncio/__init__.py
 ${PYSITELIB}/pytest_asyncio/__init__.pyc
 ${PYSITELIB}/pytest_asyncio/__init__.pyo
-${PYSITELIB}/pytest_asyncio/_version.py
-${PYSITELIB}/pytest_asyncio/_version.pyc
-${PYSITELIB}/pytest_asyncio/_version.pyo
 ${PYSITELIB}/pytest_asyncio/plugin.py
 ${PYSITELIB}/pytest_asyncio/plugin.pyc
 ${PYSITELIB}/pytest_asyncio/plugin.pyo
