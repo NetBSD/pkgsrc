@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/08/30 07:42:35 taca Exp $
+# $NetBSD: Makefile,v 1.17 2025/10/28 14:01:26 taca Exp $
 
-DISTNAME=	net-imap-0.5.10
+DISTNAME=	net-imap-0.5.12
 CATEGORIES=	net mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
