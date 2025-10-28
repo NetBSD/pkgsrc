@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2025/10/09 07:57:28 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/10/28 08:03:42 adam Exp $
 
-DISTNAME=	bpython-0.25
-PKGREVISION=	1
+DISTNAME=	bpython-0.26
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bpython/}
 
@@ -18,17 +17,13 @@ DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
+# urwid
+DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-sphinx
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
