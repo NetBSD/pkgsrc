@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/09 14:14:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/28 13:46:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -59,7 +59,7 @@ ${GEM_LIBDIR}/lib/datasets/zip-extractor.rb
 ${GEM_LIBDIR}/red-datasets.gemspec
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/japanese-date-parser-test.rb
-${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/run.rb
 ${GEM_LIBDIR}/test/test-adult.rb
 ${GEM_LIBDIR}/test/test-afinn.rb
 ${GEM_LIBDIR}/test/test-aozora-bunko.rb
