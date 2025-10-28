@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.300 2025/10/28 11:37:50 tsutsui Exp $
+# $NetBSD: mozilla-common.mk,v 1.301 2025/10/28 23:44:03 wiz Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -284,7 +284,7 @@ RUST_REQ=	1.82.0
 .include "../../x11/libXtst/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40
 .include "../../x11/pixman/buildlink3.mk"
-BUILDLINK_API_DEPENDS.at-spi2-core+=    at-spi2-core>=2.58.1
+#BUILDLINK_API_DEPENDS.at-spi2-core+=    at-spi2-core>=2.58.1
 .include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland
