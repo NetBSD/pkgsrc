@@ -10,9 +10,12 @@ new features are:
 
 Since version 6, some previously deprecated features have been removed:
  * Edge Side Includes (ESI)
- * access to the cache manager using the cache_object:// scheme - use http instead
- * the squidclient tool - use curl http://<squid-address>/squid-internal-mgr/menu instead
+ * access to the cache manager using the cache_object://
+   scheme - use http instead
+ * the squidclient tool - use curl
+   http://<squid-address>/squid-internal-mgr/menu instead
  * the cachemgr.cgi tool
  * the purge tool - use the http PURGE method instead
  * Ident protocol support
- * basic_smb_lm_auth and ntlm_smb_lm_auth helpers - use Samba's ntlm_auth instead
+ * basic_smb_lm_auth and ntlm_smb_lm_auth helpers - use
+   Samba's ntlm_auth instead
