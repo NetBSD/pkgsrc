@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2023/10/23 06:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/10/28 09:38:26 adam Exp $
 
-DISTNAME=	sqlmap-1.7.10
-PKGREVISION=	1
+DISTNAME=	sqlmap-1.9.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -12,31 +11,19 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	bash:run perl:run
 
-REPLACE_BASH+=	sqlmap/extra/shutils/autocompletion.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/blanks.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/drei.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/junk.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/modernize.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/postcommit-hook.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/precommit-hook.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/pycodestyle.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/pydiatra.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/pyflakes.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/pylint.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/pypi.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/recloak.sh
-REPLACE_BASH+=	sqlmap/extra/shutils/strip.sh
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
+USE_LANGUAGES=	# none
+
+REPLACE_BASH+=	sqlmap/extra/shutils/*.sh
 REPLACE_PERL+=	sqlmap/extra/icmpsh/icmpsh-m.pl
 
 REPLACE_PYTHON+=	sqlmap/extra/shutils/duplicates.py
-
-USE_PKG_RESOURCES=	yes
-
-USE_LANGUAGES=	# none
+REPLACE_PYTHON+=	sqlmap/plugins/dbms/clickhouse/*.py
+REPLACE_PYTHON+=	sqlmap/thirdparty/identywaf/identYwaf.py
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
