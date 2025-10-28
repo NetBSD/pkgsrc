@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2025/10/28 11:36:18 bouyer Exp $
+
+BLAKE2s (nagstamon-3.16.2.tar.gz) = 2a931192e3684b7d3b3d6f7e6bf42d162864682c636adc9253966b5682e8ce78
+SHA512 (nagstamon-3.16.2.tar.gz) = af8e4f4db0be6966a93c636ad7a44da11d54376c866034dc2779d72250f6e22603f86aedd736cf4d476aae44950f0a02953c7c2dc71ec88d4685f46b05d11a29
+Size (nagstamon-3.16.2.tar.gz) = 582957 bytes
+SHA1 (patch-setup.py) = b7b6bbd20491c1601d99b8864dfb4ba052882446
