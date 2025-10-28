@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/10/09 07:57:46 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/10/28 09:26:50 adam Exp $
 
-DISTNAME=	astropy-7.1.0
+DISTNAME=	astropy-7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers>=1:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0.0:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2024.8.27.10.28.29:../../math/py-astropy-iers-data
+DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2025.9.29.0.35.48:../../math/py-astropy-iers-data
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.0:../../textproc/py-yaml
