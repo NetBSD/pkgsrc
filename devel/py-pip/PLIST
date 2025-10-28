@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2025/08/02 17:24:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2025/10/28 09:44:51 adam Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,11 +24,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/requests/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/resolvelib/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/rich/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/tomli/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/tomli/LICENSE-HEADER
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/tomli_w/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/truststore/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/src/pip/_vendor/urllib3/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pip/__init__.py
 ${PYSITELIB}/pip/__init__.pyc
 ${PYSITELIB}/pip/__init__.pyo
@@ -293,18 +291,12 @@ ${PYSITELIB}/pip/_internal/operations/build/metadata.pyo
 ${PYSITELIB}/pip/_internal/operations/build/metadata_editable.py
 ${PYSITELIB}/pip/_internal/operations/build/metadata_editable.pyc
 ${PYSITELIB}/pip/_internal/operations/build/metadata_editable.pyo
-${PYSITELIB}/pip/_internal/operations/build/metadata_legacy.py
-${PYSITELIB}/pip/_internal/operations/build/metadata_legacy.pyc
-${PYSITELIB}/pip/_internal/operations/build/metadata_legacy.pyo
 ${PYSITELIB}/pip/_internal/operations/build/wheel.py
 ${PYSITELIB}/pip/_internal/operations/build/wheel.pyc
 ${PYSITELIB}/pip/_internal/operations/build/wheel.pyo
 ${PYSITELIB}/pip/_internal/operations/build/wheel_editable.py
 ${PYSITELIB}/pip/_internal/operations/build/wheel_editable.pyc
 ${PYSITELIB}/pip/_internal/operations/build/wheel_editable.pyo
-${PYSITELIB}/pip/_internal/operations/build/wheel_legacy.py
-${PYSITELIB}/pip/_internal/operations/build/wheel_legacy.pyc
-${PYSITELIB}/pip/_internal/operations/build/wheel_legacy.pyo
 ${PYSITELIB}/pip/_internal/operations/check.py
 ${PYSITELIB}/pip/_internal/operations/check.pyc
 ${PYSITELIB}/pip/_internal/operations/check.pyo
@@ -314,9 +306,6 @@ ${PYSITELIB}/pip/_internal/operations/freeze.pyo
 ${PYSITELIB}/pip/_internal/operations/install/__init__.py
 ${PYSITELIB}/pip/_internal/operations/install/__init__.pyc
 ${PYSITELIB}/pip/_internal/operations/install/__init__.pyo
-${PYSITELIB}/pip/_internal/operations/install/editable_legacy.py
-${PYSITELIB}/pip/_internal/operations/install/editable_legacy.pyc
-${PYSITELIB}/pip/_internal/operations/install/editable_legacy.pyo
 ${PYSITELIB}/pip/_internal/operations/install/wheel.py
 ${PYSITELIB}/pip/_internal/operations/install/wheel.pyc
 ${PYSITELIB}/pip/_internal/operations/install/wheel.pyo
@@ -446,9 +435,6 @@ ${PYSITELIB}/pip/_internal/utils/packaging.pyo
 ${PYSITELIB}/pip/_internal/utils/retry.py
 ${PYSITELIB}/pip/_internal/utils/retry.pyc
 ${PYSITELIB}/pip/_internal/utils/retry.pyo
-${PYSITELIB}/pip/_internal/utils/setuptools_build.py
-${PYSITELIB}/pip/_internal/utils/setuptools_build.pyc
-${PYSITELIB}/pip/_internal/utils/setuptools_build.pyo
 ${PYSITELIB}/pip/_internal/utils/subprocess.py
 ${PYSITELIB}/pip/_internal/utils/subprocess.pyc
 ${PYSITELIB}/pip/_internal/utils/subprocess.pyo
@@ -488,9 +474,11 @@ ${PYSITELIB}/pip/_internal/vcs/versioncontrol.pyo
 ${PYSITELIB}/pip/_internal/wheel_builder.py
 ${PYSITELIB}/pip/_internal/wheel_builder.pyc
 ${PYSITELIB}/pip/_internal/wheel_builder.pyo
+${PYSITELIB}/pip/_vendor/README.rst
 ${PYSITELIB}/pip/_vendor/__init__.py
 ${PYSITELIB}/pip/_vendor/__init__.pyc
 ${PYSITELIB}/pip/_vendor/__init__.pyo
+${PYSITELIB}/pip/_vendor/cachecontrol/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/cachecontrol/__init__.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/__init__.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/__init__.pyo
@@ -528,6 +516,7 @@ ${PYSITELIB}/pip/_vendor/cachecontrol/serialize.pyo
 ${PYSITELIB}/pip/_vendor/cachecontrol/wrapper.py
 ${PYSITELIB}/pip/_vendor/cachecontrol/wrapper.pyc
 ${PYSITELIB}/pip/_vendor/cachecontrol/wrapper.pyo
+${PYSITELIB}/pip/_vendor/certifi/LICENSE
 ${PYSITELIB}/pip/_vendor/certifi/__init__.py
 ${PYSITELIB}/pip/_vendor/certifi/__init__.pyc
 ${PYSITELIB}/pip/_vendor/certifi/__init__.pyo
@@ -539,6 +528,7 @@ ${PYSITELIB}/pip/_vendor/certifi/core.py
 ${PYSITELIB}/pip/_vendor/certifi/core.pyc
 ${PYSITELIB}/pip/_vendor/certifi/core.pyo
 ${PYSITELIB}/pip/_vendor/certifi/py.typed
+${PYSITELIB}/pip/_vendor/dependency_groups/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/dependency_groups/__init__.py
 ${PYSITELIB}/pip/_vendor/dependency_groups/__init__.pyc
 ${PYSITELIB}/pip/_vendor/dependency_groups/__init__.pyo
@@ -558,6 +548,7 @@ ${PYSITELIB}/pip/_vendor/dependency_groups/_toml_compat.py
 ${PYSITELIB}/pip/_vendor/dependency_groups/_toml_compat.pyc
 ${PYSITELIB}/pip/_vendor/dependency_groups/_toml_compat.pyo
 ${PYSITELIB}/pip/_vendor/dependency_groups/py.typed
+${PYSITELIB}/pip/_vendor/distlib/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/distlib/__init__.py
 ${PYSITELIB}/pip/_vendor/distlib/__init__.pyc
 ${PYSITELIB}/pip/_vendor/distlib/__init__.pyo
@@ -579,6 +570,7 @@ ${PYSITELIB}/pip/_vendor/distlib/util.pyo
 ${PYSITELIB}/pip/_vendor/distlib/w32.exe
 ${PYSITELIB}/pip/_vendor/distlib/w64-arm.exe
 ${PYSITELIB}/pip/_vendor/distlib/w64.exe
+${PYSITELIB}/pip/_vendor/distro/LICENSE
 ${PYSITELIB}/pip/_vendor/distro/__init__.py
 ${PYSITELIB}/pip/_vendor/distro/__init__.pyc
 ${PYSITELIB}/pip/_vendor/distro/__init__.pyo
@@ -589,6 +581,7 @@ ${PYSITELIB}/pip/_vendor/distro/distro.py
 ${PYSITELIB}/pip/_vendor/distro/distro.pyc
 ${PYSITELIB}/pip/_vendor/distro/distro.pyo
 ${PYSITELIB}/pip/_vendor/distro/py.typed
+${PYSITELIB}/pip/_vendor/idna/LICENSE.md
 ${PYSITELIB}/pip/_vendor/idna/__init__.py
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyc
 ${PYSITELIB}/pip/_vendor/idna/__init__.pyo
@@ -614,6 +607,7 @@ ${PYSITELIB}/pip/_vendor/idna/py.typed
 ${PYSITELIB}/pip/_vendor/idna/uts46data.py
 ${PYSITELIB}/pip/_vendor/idna/uts46data.pyc
 ${PYSITELIB}/pip/_vendor/idna/uts46data.pyo
+${PYSITELIB}/pip/_vendor/msgpack/COPYING
 ${PYSITELIB}/pip/_vendor/msgpack/__init__.py
 ${PYSITELIB}/pip/_vendor/msgpack/__init__.pyc
 ${PYSITELIB}/pip/_vendor/msgpack/__init__.pyo
@@ -626,6 +620,9 @@ ${PYSITELIB}/pip/_vendor/msgpack/ext.pyo
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.py
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyc
 ${PYSITELIB}/pip/_vendor/msgpack/fallback.pyo
+${PYSITELIB}/pip/_vendor/packaging/LICENSE
+${PYSITELIB}/pip/_vendor/packaging/LICENSE.APACHE
+${PYSITELIB}/pip/_vendor/packaging/LICENSE.BSD
 ${PYSITELIB}/pip/_vendor/packaging/__init__.py
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/pip/_vendor/packaging/__init__.pyo
@@ -675,9 +672,11 @@ ${PYSITELIB}/pip/_vendor/packaging/utils.pyo
 ${PYSITELIB}/pip/_vendor/packaging/version.py
 ${PYSITELIB}/pip/_vendor/packaging/version.pyc
 ${PYSITELIB}/pip/_vendor/packaging/version.pyo
+${PYSITELIB}/pip/_vendor/pkg_resources/LICENSE
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.py
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pkg_resources/__init__.pyo
+${PYSITELIB}/pip/_vendor/platformdirs/LICENSE
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.py
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/__init__.pyo
@@ -703,6 +702,7 @@ ${PYSITELIB}/pip/_vendor/platformdirs/version.pyo
 ${PYSITELIB}/pip/_vendor/platformdirs/windows.py
 ${PYSITELIB}/pip/_vendor/platformdirs/windows.pyc
 ${PYSITELIB}/pip/_vendor/platformdirs/windows.pyo
+${PYSITELIB}/pip/_vendor/pygments/LICENSE
 ${PYSITELIB}/pip/_vendor/pygments/__init__.py
 ${PYSITELIB}/pip/_vendor/pygments/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pygments/__init__.pyo
@@ -772,6 +772,7 @@ ${PYSITELIB}/pip/_vendor/pygments/unistring.pyo
 ${PYSITELIB}/pip/_vendor/pygments/util.py
 ${PYSITELIB}/pip/_vendor/pygments/util.pyc
 ${PYSITELIB}/pip/_vendor/pygments/util.pyo
+${PYSITELIB}/pip/_vendor/pyproject_hooks/LICENSE
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.py
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.pyo
@@ -785,6 +786,7 @@ ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.py
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.pyc
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.pyo
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/py.typed
+${PYSITELIB}/pip/_vendor/requests/LICENSE
 ${PYSITELIB}/pip/_vendor/requests/__init__.py
 ${PYSITELIB}/pip/_vendor/requests/__init__.pyc
 ${PYSITELIB}/pip/_vendor/requests/__init__.pyo
@@ -839,6 +841,7 @@ ${PYSITELIB}/pip/_vendor/requests/structures.pyo
 ${PYSITELIB}/pip/_vendor/requests/utils.py
 ${PYSITELIB}/pip/_vendor/requests/utils.pyc
 ${PYSITELIB}/pip/_vendor/requests/utils.pyo
+${PYSITELIB}/pip/_vendor/resolvelib/LICENSE
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.py
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/__init__.pyo
@@ -867,6 +870,7 @@ ${PYSITELIB}/pip/_vendor/resolvelib/resolvers/resolution.pyo
 ${PYSITELIB}/pip/_vendor/resolvelib/structs.py
 ${PYSITELIB}/pip/_vendor/resolvelib/structs.pyc
 ${PYSITELIB}/pip/_vendor/resolvelib/structs.pyo
+${PYSITELIB}/pip/_vendor/rich/LICENSE
 ${PYSITELIB}/pip/_vendor/rich/__init__.py
 ${PYSITELIB}/pip/_vendor/rich/__init__.pyc
 ${PYSITELIB}/pip/_vendor/rich/__init__.pyo
@@ -1099,6 +1103,7 @@ ${PYSITELIB}/pip/_vendor/rich/traceback.pyo
 ${PYSITELIB}/pip/_vendor/rich/tree.py
 ${PYSITELIB}/pip/_vendor/rich/tree.pyc
 ${PYSITELIB}/pip/_vendor/rich/tree.pyo
+${PYSITELIB}/pip/_vendor/tomli/LICENSE
 ${PYSITELIB}/pip/_vendor/tomli/__init__.py
 ${PYSITELIB}/pip/_vendor/tomli/__init__.pyc
 ${PYSITELIB}/pip/_vendor/tomli/__init__.pyo
@@ -1112,6 +1117,7 @@ ${PYSITELIB}/pip/_vendor/tomli/_types.py
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyc
 ${PYSITELIB}/pip/_vendor/tomli/_types.pyo
 ${PYSITELIB}/pip/_vendor/tomli/py.typed
+${PYSITELIB}/pip/_vendor/tomli_w/LICENSE
 ${PYSITELIB}/pip/_vendor/tomli_w/__init__.py
 ${PYSITELIB}/pip/_vendor/tomli_w/__init__.pyc
 ${PYSITELIB}/pip/_vendor/tomli_w/__init__.pyo
@@ -1119,6 +1125,7 @@ ${PYSITELIB}/pip/_vendor/tomli_w/_writer.py
 ${PYSITELIB}/pip/_vendor/tomli_w/_writer.pyc
 ${PYSITELIB}/pip/_vendor/tomli_w/_writer.pyo
 ${PYSITELIB}/pip/_vendor/tomli_w/py.typed
+${PYSITELIB}/pip/_vendor/truststore/LICENSE
 ${PYSITELIB}/pip/_vendor/truststore/__init__.py
 ${PYSITELIB}/pip/_vendor/truststore/__init__.pyc
 ${PYSITELIB}/pip/_vendor/truststore/__init__.pyo
@@ -1138,6 +1145,7 @@ ${PYSITELIB}/pip/_vendor/truststore/_windows.py
 ${PYSITELIB}/pip/_vendor/truststore/_windows.pyc
 ${PYSITELIB}/pip/_vendor/truststore/_windows.pyo
 ${PYSITELIB}/pip/_vendor/truststore/py.typed
+${PYSITELIB}/pip/_vendor/urllib3/LICENSE.txt
 ${PYSITELIB}/pip/_vendor/urllib3/__init__.py
 ${PYSITELIB}/pip/_vendor/urllib3/__init__.pyc
 ${PYSITELIB}/pip/_vendor/urllib3/__init__.pyo
