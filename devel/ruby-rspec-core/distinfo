@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2025/07/27 16:01:28 taca Exp $
+$NetBSD: distinfo,v 1.43 2025/10/28 13:49:01 taca Exp $
 
-BLAKE2s (rspec-core-3.13.5.gem) = ec185970680357b28c1382aed5f51bd7eeae62092d865cd07c8219f4e8f8441f
-SHA512 (rspec-core-3.13.5.gem) = ee5f98d1b82ae6084a644bad4ed4c38b76fb0571fc6ea8d49d4459017fdf4615139f8b1f7d33951efde173d7e447da52aef36b13216bc4fb8cc73d1646461b70
-Size (rspec-core-3.13.5.gem) = 167424 bytes
+BLAKE2s (rspec-core-3.13.6.gem) = a41a88bbb8560db9bdcf9addc856f4f710b817b28b0513257d4471d4da1ef61f
+SHA512 (rspec-core-3.13.6.gem) = 8456a4505bd990a968630da475fd5222a15e0641db26d0efbf63e5d1d8edea702c7982297c4fd7e647167b7204127e4dd6d49480a9556faa65f06e0ce8ad3513
+Size (rspec-core-3.13.6.gem) = 167936 bytes
