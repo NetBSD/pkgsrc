@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2025/09/15 11:37:43 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/10/28 09:48:22 adam Exp $
 
-DISTNAME=	zope_hookable-8.0
+DISTNAME=	zope_hookable-8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.hookable/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.hookable
 COMMENT=	Zope hookable
 LICENSE=	zpl-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
