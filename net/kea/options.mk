@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/10/27 15:46:56 adam Exp $
+# $NetBSD: options.mk,v 1.3 2025/10/28 15:09:55 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kea
 PKG_SUPPORTED_OPTIONS+=	botan libyang pgsql mysql
@@ -20,17 +20,17 @@ MESON_ARGS+=	-Dcrypto=openssl
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-.  include "../../mk/pgsql.buildlink3.mk"
 MESON_ARGS+=	-Dpostgresql=enabled
 PLIST.pgsql=	yes
+.  include "../../mk/pgsql.buildlink3.mk"
 .else
 MESON_ARGS+=	-Dpostgresql=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 MESON_ARGS+=	-Dmysql=enabled
-.  include "../../mk/mysql.buildlink3.mk"
-MESON_ARGS+=	-Dmysql=disabled
 PLIST.mysql=	yes
+.  include "../../mk/mysql.buildlink3.mk"
 .else
+MESON_ARGS+=	-Dmysql=disabled
 .endif

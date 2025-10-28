@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/10/27 15:46:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/10/28 15:09:55 taca Exp $
 bin/kea-msg-compiler
 include/kea/asiodns/asiodns_messages.h
 include/kea/asiodns/io_fetch.h
@@ -229,8 +229,6 @@ include/kea/dhcpsrv/legal_log_mgr_factory.h
 include/kea/dhcpsrv/memfile_lease_limits.h
 include/kea/dhcpsrv/memfile_lease_mgr.h
 include/kea/dhcpsrv/memfile_lease_storage.h
-${PLIST.mysql}include/kea/dhcpsrv/mysql_host_data_source.h
-${PLIST.mysql}include/kea/dhcpsrv/mysql_lease_mgr.h
 include/kea/dhcpsrv/ncr_generator.h
 include/kea/dhcpsrv/network.h
 include/kea/dhcpsrv/network_state.h
@@ -457,7 +455,7 @@ lib/kea/hooks/libdhcp_lease_cmds.so
 lib/kea/hooks/libdhcp_lease_query.so
 lib/kea/hooks/libdhcp_legal_log.so
 lib/kea/hooks/libdhcp_limits.so
-${PLIST.mysql}lib/kea/hooks/libdhcp_mysql_cb.so
+${PLIST.mysql}lib/kea/hooks/libdhcp_mysql.so
 lib/kea/hooks/libdhcp_perfmon.so
 ${PLIST.pgsql}lib/kea/hooks/libdhcp_pgsql.so
 lib/kea/hooks/libdhcp_ping_check.so
@@ -520,6 +518,8 @@ lib/libkea-log.so
 lib/libkea-log.so.85
 lib/libkea-log.so.85.0.0
 ${PLIST.mysql}lib/libkea-mysql.so
+${PLIST.mysql}lib/libkea-mysql.so.101
+${PLIST.mysql}lib/libkea-mysql.so.101.0.0
 ${PLIST.pgsql}lib/libkea-pgsql.so
 ${PLIST.pgsql}lib/libkea-pgsql.so.101
 ${PLIST.pgsql}lib/libkea-pgsql.so.101.0.0
