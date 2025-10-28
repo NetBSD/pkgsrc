@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.642 2025/10/28 09:22:43 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.643 2025/10/28 09:33:00 jperkin Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24220,7 +24220,7 @@ tiff<4.5.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-3626
 tiff<4.5.0	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-3570
 tiff<4.5.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-3970
 tiff<4.5.1	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-48281
-libraw<0.21.1	ut-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35535
+libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35535
 libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35533
 libraw<0.21.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35531
 libraw<0.21.1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2020-35534
@@ -25109,7 +25109,7 @@ perl<5.38.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CV
 py{36,37,38,39,310,311}-django>=3.2<3.2.19	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 py{36,37,38,39,310,311}-django>=4.1<4.1.9	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
 py{36,37,38,39,310,311}-django>=4.2<4.2.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-31047
-libssh<0.105	debial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1667
+libssh<0.105	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-1667
 libssh<0.105	unauthorized-access	https://nvd.nist.gov/vuln/detail/CVE-2023-2283
 curl>=7.81.0<8.1.0	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-28319
 curl>=7.9.8<8.1.0	improper-synchronization	https://nvd.nist.gov/vuln/detail/CVE-2023-28320
@@ -25178,7 +25178,7 @@ py{37,38,39,310,311}-django>=4.1<4.1.11	denial-of-service	https://nvd.nist.gov/v
 py{37,38,39,310,311}-django>=4.2<4.2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-41164
 curl>=7.84.0<8.3.0	allocation-of-resources-without-limits-or-throttling	https://nvd.nist.gov/vuln/detail/CVE-2023-38039
 webkit-gtk<2.40.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-28198
-webkit-gtk<2.40.1	content-security-policiy-escape	https://nvd.nist.gov/vuln/detail/CVE-2023-32370
+webkit-gtk<2.40.1	content-security-policy-escape	https://nvd.nist.gov/vuln/detail/CVE-2023-32370
 webkit-gtk<2.40.5	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-40397
 libwebp<1.3.2	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-4863
 bind>=9.2<9.16.43	denial-of-service	https://kb.isc.org/docs/cve-2023-3341
@@ -25945,7 +25945,7 @@ filezilla<3.67.0	secret-key-recovery	https://nvd.nist.gov/vuln/detail/CVE-2024-3
 ruby31-base>=3.1<3.1.5	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 ruby32-base>=3.2<3.2.4	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
 ruby33>=3.3<3.3.1	arbitrary-memory-read	https://www.ruby-lang.org/en/news/2024/04/23/arbitrary-memory-address-read-regexp-cve-2024-27282/
-R<4.4.0		arbirary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
+R<4.4.0		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-27322
 py{27,37,38,39,310,311,312}-aiohttp<3.9.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-30251
 p5-Email-MIME<1.954	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4140
 uriparser<0.9.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-34402
@@ -27172,7 +27172,7 @@ ImageMagick<7.1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-
 ImageMagick6<6.9.13.26	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-53019
 ImageMagick<7.1.2.0	memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2025-53019
 ImageMagick6<6.9.13.26	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-53101
-sImageMagick<7.1.2.0	tack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-53101
+sImageMagick<7.1.2.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-53101
 binutils<2.45	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-7545
 binutils<2.45	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-7546
 php81<8.1.33	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-1220
@@ -27744,30 +27744,30 @@ ap24-auth-openidc<2.4.13.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CV
 # disputed by upstream, see https://modsecurity.org/20241011/about-cve-2024-46292-2024-october/
 #ap24-modsecurity-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-46292
 ap24-modsecurity<2.9.9		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-47947
-ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
-ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
-ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
-ffmpeg5-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
-ffmpeg6-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
-ffmpeg7-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
-ffmpeg5-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
-ffmpeg6-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
-ffmpeg7-[0-9]*	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
-ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
-ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
-ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
-ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
-ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
-ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
-ffmpeg5<5.1.7	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
-ffmpeg6<6.1.3	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
-ffmpeg7<7.1.2	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
-ffmpeg8<8.0	out-of-bonunds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg5<5.1.7	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg6<6.1.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg7<7.1.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59728
+ffmpeg5-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg6-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg7-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59729
+ffmpeg5-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg6-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg7-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59730
+ffmpeg5<5.1.7	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg6<6.1.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg7<7.1.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59731
+ffmpeg5<5.1.7	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg6<6.1.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg7<7.1.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59732
+ffmpeg5<5.1.7	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg6<6.1.3	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg7<7.1.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
+ffmpeg8<8.0	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-59733
 ffmpeg5-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg6-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
 ffmpeg7-[0-9]*	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-59734
