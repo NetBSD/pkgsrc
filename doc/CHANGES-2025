@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6331 2025/10/28 13:25:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6332 2025/10/28 13:33:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9169,3 +9169,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added net/nagstamon version 3.16.2 [bouyer 2025-10-28]
 	Updated devel/py-dogpile-cache to 1.5.0 [adam 2025-10-28]
 	Updated devel/py-test-asyncio to 1.2.0 [adam 2025-10-28]
+	Updated devel/php-xdebug to 3.4.7 [taca 2025-10-28]
