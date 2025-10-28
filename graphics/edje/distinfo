@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:46:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/10/28 00:24:02 gutteridge Exp $
 
 BLAKE2s (edje-1.7.10.tar.bz2) = b4a097e519e51f26470a314e155844d6ae18d85a9da39081735996d5e6e5279c
 SHA512 (edje-1.7.10.tar.bz2) = 222b2e1265d9083edb927994ed0afdcdd10399fccd867835e180604abde8c0d43bd94b3727f121ba159e2ca4bf870c1078a0894522ccdebe75e91e9ca9d95bec
 Size (edje-1.7.10.tar.bz2) = 1120320 bytes
+SHA1 (patch-src_bin_edje__cc__parse.c) = ab09221c887709cdaff9880a43a2c69438e5e6f8
+SHA1 (patch-src_bin_edje__cc__sources.c) = 8f2eba65c50f811e9527f3aec909c222421a0429
+SHA1 (patch-src_bin_edje__decc.c) = 823ea923077a3096de1c4a070574e3b079fbbc7f
+SHA1 (patch-src_bin_edje__player.c) = 0e6eda7ef87506e132a80e8cba8bc30540dd87ca
+SHA1 (patch-src_bin_epp_cpplib.c) = 6e55edeb76dcaae60a547bcbe6d0a37bb10c0c3b
+SHA1 (patch-src_lib_edje__lua2.c) = 0387e04e9a5a1d9902f655815b1c95d896e65964
