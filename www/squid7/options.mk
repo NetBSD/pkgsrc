@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2025/07/16 10:58:02 sborrill Exp $
+# $NetBSD: options.mk,v 1.2 2025/10/28 15:46:38 taca Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.squid5
+PKG_OPTIONS_VAR=		PKG_OPTIONS.squid7
 PKG_SUPPORTED_OPTIONS=		inet6 snmp squid-backend-aufs \
 				squid-backend-diskd squid-backend-rock \
 				squid-backend-ufs squid-ecap squid-esi \
