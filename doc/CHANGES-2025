@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6329 2025/10/28 10:09:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6330 2025/10/28 11:37:09 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9166,3 +9166,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-termcolor to 3.2.0 [adam 2025-10-28]
 	Updated graphics/py-matplotlib-inline to 0.2.1 [adam 2025-10-28]
 	Updated devel/py-fakefs to 5.10.1 [adam 2025-10-28]
+	Added net/nagstamon version 3.16.2 [bouyer 2025-10-28]
