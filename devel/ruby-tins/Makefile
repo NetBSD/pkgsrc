@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2025/09/15 17:25:47 taca Exp $
+# $NetBSD: Makefile,v 1.35 2025/10/28 13:54:42 taca Exp $
 
-DISTNAME=	tins-1.44.1
+DISTNAME=	tins-1.45.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
