@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6323 2025/10/27 22:57:54 nia Exp $
+$NetBSD: CHANGES-2025,v 1.6324 2025/10/28 07:52:05 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9154,3 +9154,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/matrix-synapse to 1.140.0 [gdt 2025-10-27]
 	Updated emulators/libretro-flycast to 2.5 [nia 2025-10-27]
 	Updated emulators/flycast to 2.5 [nia 2025-10-27]
+	Updated devel/ast-grep to 0.39.7 [pin 2025-10-28]
