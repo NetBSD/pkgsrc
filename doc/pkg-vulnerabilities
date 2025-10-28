@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.641 2025/10/27 07:40:01 jnemeth Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.642 2025/10/28 09:22:43 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -27974,7 +27974,7 @@ bind<9.18.33	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-12705
 bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1737
 bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-1975
 bind<9.18.28	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4076
-bind>9.20<9.20.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40775
+bind>=9.20<9.20.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-40775
 binutils<2.37	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-19726
 binutils-[0-9]*	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-32256
 binutils<2.39	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35205
@@ -28670,10 +28670,10 @@ mongodb<7.0.25		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2025-11979
 trufflehog<3.90.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-41390
 mbedtls<3.6.5		padding-oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2025-59438
 unbound<1.24.1		cache-poisoning			https://www.cve.org/CVERecord?id=CVE-2025-11411
-bind>9.20<9.20.15	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8677
-bind>9.20<9.20.15	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40778
-bind>9.20<9.20.15	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40780
-bind<9.20<9.18.41	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8677
-bind<9.20<9.18.41	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40778
-bind<9.20<9.18.41	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40780
+bind<9.18.41		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8677
+bind>=9.20<9.20.15	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2025-8677
+bind<9.18.41		cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40778
+bind>=9.20<9.20.15	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40778
+bind<9.18.41		cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40780
+bind>=9.20<9.20.15	cache-poisoning			https://nvd.nist.gov/vuln/detail/CVE-2025-40780
 asterisk-18.*		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
