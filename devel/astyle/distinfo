@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2025/08/18 02:41:37 schmonz Exp $
+$NetBSD: distinfo,v 1.24 2025/10/28 16:25:23 schmonz Exp $
 
-BLAKE2s (astyle-3.6.12.tar.bz2) = 8686bfdf20feedae56052ec7a8c551bb229f224f4443adda40fb7f327d1d51b0
-SHA512 (astyle-3.6.12.tar.bz2) = 257a048ef16c0277aac0dd5e4c2b7f58161c75c6b867cb41406b2298dc7123b65820745d1d588064b31e4b42a4975d9784b6ce643e63f5c920ce4edfaaec1903
-Size (astyle-3.6.12.tar.bz2) = 217298 bytes
+BLAKE2s (astyle-3.6.13.tar.bz2) = 96be419951f3d40f330e4c24e4add02caed0aff66beb8d1b8aca01054d88f427
+SHA512 (astyle-3.6.13.tar.bz2) = c00c51f6b59bb5c837dca726f59a45f08fc8d8121bc17ce59d72720812f8e6416c5151e99b954acca0e8997a683833d7ba14b1ad2d1642c500940e101845f02a
+Size (astyle-3.6.13.tar.bz2) = 217213 bytes
 SHA1 (patch-CMakeLists.txt) = 97aedb491f245b9023b8ea0dac188dbd8de0fa54
