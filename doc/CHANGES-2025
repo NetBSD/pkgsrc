@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6346 2025/10/28 16:25:28 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.6347 2025/10/28 20:39:43 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9184,3 +9184,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/moor to 2.7.1 [schmonz 2025-10-28]
 	Updated devel/goredo to 2.6.5 [schmonz 2025-10-28]
 	Updated devel/astyle to 3.6.13 [schmonz 2025-10-28]
+	Updated graphics/ImageMagick to 7.1.2.8 [triaxx 2025-10-28]
