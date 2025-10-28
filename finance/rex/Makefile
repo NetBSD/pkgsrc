@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/10/12 12:28:21 pin Exp $
+# $NetBSD: Makefile,v 1.22 2025/10/28 08:50:24 pin Exp $
 
-DISTNAME=	rex-0.2.1
+DISTNAME=	rex-0.2.2
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TheRustyPickle/}
 GITHUB_PROJECT=	Rex
