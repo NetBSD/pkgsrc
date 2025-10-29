@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/29 21:38:02 markd Exp $
+
+BLAKE2s (phonon-4.12.0.tar.xz) = 31e9be21ae1bf32c80702d64c85f393f67735afe20b7f15d125154bcc494f428
+SHA512 (phonon-4.12.0.tar.xz) = 0dbd88464985051f4c43e64a4d0b7e2d65e7f6b54fd2bae4ec1790fbdf9f79348aa91d4839c72a4f66297d5a9c7b379cc34923b99b97130a5443e5b2c0cc8a9a
+Size (phonon-4.12.0.tar.xz) = 408996 bytes
