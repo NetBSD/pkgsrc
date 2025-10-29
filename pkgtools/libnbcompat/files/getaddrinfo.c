@@ -121,7 +121,7 @@ freeaddrinfo(struct addrinfo *ai)
 }
 
 static struct
-addrinfo *malloc_ai(int port, u_long addr, const struct addrinfo *hints)
+addrinfo *malloc_ai(int port, unsigned long addr, const struct addrinfo *hints)
 {
 	struct addrinfo *ai;
 
@@ -160,7 +160,7 @@ getaddrinfo(const char *hostname, const char *servname,
 	struct in_addr in;
 	int i;
 	long int port;
-	u_long addr;
+	unsigned long addr;
 
 	port = 0;
 	if (hints && hints->ai_family != AF_UNSPEC &&

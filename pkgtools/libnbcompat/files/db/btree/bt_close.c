@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_close.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: bt_close.c,v 1.2 2025/10/29 15:39:25 nia Exp $	*/
 /*	NetBSD: bt_close.c,v 1.14 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_close.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: bt_close.c,v 1.2 2025/10/29 15:39:25 nia Exp $");
 
 #include <assert.h>
 #include <errno.h>
@@ -114,7 +114,7 @@ __bt_close(DB *dbp)
  *	RET_SUCCESS, RET_ERROR.
  */
 int
-__bt_sync(const DB *dbp, u_int flags)
+__bt_sync(const DB *dbp, unsigned int flags)
 {
 	BTREE *t;
 	int status;

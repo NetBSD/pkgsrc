@@ -1,4 +1,4 @@
-/*	$NetBSD: hash_bigkey.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: hash_bigkey.c,v 1.2 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: hash_bigkey.c,v 1.22 2008/09/10 17:52:35 joerg Exp 	*/
 
 /*-
@@ -35,8 +35,9 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
+#include <nbcompat/param.h>
 
-__RCSID("$NetBSD: hash_bigkey.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: hash_bigkey.c,v 1.2 2025/10/29 15:39:26 nia Exp $");
 
 /*
  * PACKAGE: hash
@@ -55,8 +56,6 @@ __RCSID("$NetBSD: hash_bigkey.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
  *	collect_key
  *	collect_data
  */
-
-#include <sys/param.h>
 
 #include <errno.h>
 #include <stdio.h>

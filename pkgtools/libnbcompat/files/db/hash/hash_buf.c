@@ -1,4 +1,4 @@
-/*	$NetBSD: hash_buf.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: hash_buf.c,v 1.2 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: hash_buf.c,v 1.14 2008/09/10 17:52:35 joerg Exp 	*/
 
 /*-
@@ -35,8 +35,9 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
+#include <nbcompat/param.h>
 
-__RCSID("$NetBSD: hash_buf.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: hash_buf.c,v 1.2 2025/10/29 15:39:26 nia Exp $");
 
 /*
  * PACKAGE: hash
@@ -53,8 +54,6 @@ __RCSID("$NetBSD: hash_buf.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
  * Internal
  *	newbuf
  */
-
-#include <sys/param.h>
 
 #include <errno.h>
 #include <stddef.h>
@@ -138,7 +137,7 @@ __get_buf(
 			return (NULL);
 		if (!prev_bp)
 			segp[segment_ndx] =
-			    (BUFHEAD *)(void *)((u_long)bp | is_disk_mask);
+			    (BUFHEAD *)(void *)((unsigned long)bp | is_disk_mask);
 	} else {
 		BUF_REMOVE(bp);
 		MRU_INSERT(bp);
@@ -272,7 +271,7 @@ newbuf(HTAB *hashp, uint32_t addr, BUFHEAD *prev_bp)
 }
 
 void
-__buf_init(HTAB *hashp, u_int nbytes)
+__buf_init(HTAB *hashp, unsigned int nbytes)
 {
 	BUFHEAD *bfp;
 	int npages;

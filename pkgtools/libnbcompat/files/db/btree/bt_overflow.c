@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_overflow.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: bt_overflow.c,v 1.2 2025/10/29 15:39:25 nia Exp $	*/
 /*	NetBSD: bt_overflow.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,9 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_overflow.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
-
-#include <sys/param.h>
+__RCSID("$NetBSD: bt_overflow.c,v 1.2 2025/10/29 15:39:25 nia Exp $");
 
 #include <assert.h>
 #include <stdio.h>

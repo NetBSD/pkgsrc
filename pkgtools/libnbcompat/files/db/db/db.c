@@ -1,4 +1,4 @@
-/*	$NetBSD: db.c,v 1.3 2010/01/24 12:29:48 obache Exp $	*/
+/*	$NetBSD: db.c,v 1.4 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: db.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: db.c,v 1.3 2010/01/24 12:29:48 obache Exp $");
+__RCSID("$NetBSD: db.c,v 1.4 2025/10/29 15:39:26 nia Exp $");
 
 #include <sys/types.h>
 
@@ -100,10 +100,10 @@ void
 __dbpanic(DB *dbp)
 {
 	/* The only thing that can succeed is a close. */
-	dbp->del = (int (*)(const struct __db *, const DBT*, u_int))__dberr;
+	dbp->del = (int (*)(const struct __db *, const DBT*, unsigned int))__dberr;
 	dbp->fd = (int (*)(const struct __db *))__dberr;
-	dbp->get = (int (*)(const struct __db *, const DBT*, DBT *, u_int))__dberr;
-	dbp->put = (int (*)(const struct __db *, DBT *, const DBT *, u_int))__dberr;
-	dbp->seq = (int (*)(const struct __db *, DBT *, DBT *, u_int))__dberr;
-	dbp->sync = (int (*)(const struct __db *, u_int))__dberr;
+	dbp->get = (int (*)(const struct __db *, const DBT*, DBT *, unsigned int))__dberr;
+	dbp->put = (int (*)(const struct __db *, DBT *, const DBT *, unsigned int))__dberr;
+	dbp->seq = (int (*)(const struct __db *, DBT *, DBT *, unsigned int))__dberr;
+	dbp->sync = (int (*)(const struct __db *, unsigned int))__dberr;
 }
