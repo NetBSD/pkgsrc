@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_delete.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: bt_delete.c,v 1.2 2025/10/29 15:39:25 nia Exp $	*/
 /*	NetBSD: bt_delete.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_delete.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: bt_delete.c,v 1.2 2025/10/29 15:39:25 nia Exp $");
 
 #include <sys/types.h>
 
@@ -49,7 +49,7 @@ __RCSID("$NetBSD: bt_delete.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
 #include "btree.h"
 
 static int __bt_bdelete(BTREE *, const DBT *);
-static int __bt_curdel(BTREE *, const DBT *, PAGE *, u_int);
+static int __bt_curdel(BTREE *, const DBT *, PAGE *, unsigned int);
 static int __bt_pdelete(BTREE *, PAGE *);
 static int __bt_relink(BTREE *, PAGE *);
 static int __bt_stkacq(BTREE *, PAGE **, CURSOR *);
@@ -61,7 +61,7 @@ static int __bt_stkacq(BTREE *, PAGE **, CURSOR *);
  * Return RET_SPECIAL if the key is not found.
  */
 int
-__bt_delete(const DB *dbp, const DBT *key, u_int flags)
+__bt_delete(const DB *dbp, const DBT *key, unsigned int flags)
 {
 	BTREE *t;
 	CURSOR *c;
@@ -106,14 +106,14 @@ __bt_delete(const DB *dbp, const DBT *key, u_int flags)
 				if (__bt_stkacq(t, &h, &t->bt_cursor))
 					return (RET_ERROR);
 
-			status = __bt_dleaf(t, NULL, h, (u_int)c->pg.index);
+			status = __bt_dleaf(t, NULL, h, (unsigned int)c->pg.index);
 
 			if (NEXTINDEX(h) == 0 && status == RET_SUCCESS) {
 				if (__bt_pdelete(t, h))
 					return (RET_ERROR);
 			} else
 				mpool_put(t->bt_mp, h,
-				    (u_int)(status == RET_SUCCESS ?
+				    (unsigned int)(status == RET_SUCCESS ?
 				    MPOOL_DIRTY : 0));
 			break;
 		}
@@ -308,7 +308,7 @@ loop:	if ((e = __bt_search(t, key, &exact)) == NULL)
 	redo = 0;
 	h = e->page;
 	do {
-		if (__bt_dleaf(t, key, h, (u_int)e->index)) {
+		if (__bt_dleaf(t, key, h, (unsigned int)e->index)) {
 			mpool_put(t->bt_mp, h, 0);
 			return (RET_ERROR);
 		}
@@ -331,7 +331,7 @@ loop:	if ((e = __bt_search(t, key, &exact)) == NULL)
 	while (e->index-- > 0) {
 		if (__bt_cmp(t, key, e) != 0)
 			break;
-		if (__bt_dleaf(t, key, h, (u_int)e->index) == RET_ERROR) {
+		if (__bt_dleaf(t, key, h, (unsigned int)e->index) == RET_ERROR) {
 			mpool_put(t->bt_mp, h, 0);
 			return (RET_ERROR);
 		}
@@ -464,7 +464,7 @@ __bt_pdelete(BTREE *t, PAGE *h)
  *	RET_SUCCESS, RET_ERROR.
  */
 int
-__bt_dleaf(BTREE *t, const DBT *key, PAGE *h, u_int idx)
+__bt_dleaf(BTREE *t, const DBT *key, PAGE *h, unsigned int idx)
 {
 	BLEAF *bl;
 	indx_t cnt, *ip, offset;
@@ -525,7 +525,7 @@ __bt_dleaf(BTREE *t, const DBT *key, PAGE *h, u_int idx)
  *	RET_SUCCESS, RET_ERROR.
  */
 static int
-__bt_curdel(BTREE *t, const DBT *key, PAGE *h, u_int idx)
+__bt_curdel(BTREE *t, const DBT *key, PAGE *h, unsigned int idx)
 {
 	CURSOR *c;
 	EPG e;

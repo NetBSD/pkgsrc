@@ -1,4 +1,4 @@
-/*	$NetBSD: rec_open.c,v 1.3 2013/09/08 16:24:43 ryoon Exp $	*/
+/*	$NetBSD: rec_open.c,v 1.4 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: rec_open.c,v 1.17 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: rec_open.c,v 1.3 2013/09/08 16:24:43 ryoon Exp $");
+__RCSID("$NetBSD: rec_open.c,v 1.4 2025/10/29 15:39:26 nia Exp $");
 
 #include <sys/types.h>
 #if HAVE_SYS_MMAN_H
@@ -180,7 +180,7 @@ slow:			if ((t->bt_rfp = fdopen(rfd, "r")) == NULL)
 				t->bt_msize = sb.st_size;
 				if ((t->bt_smap = mmap(NULL, t->bt_msize,
 				    PROT_READ, MAP_FILE | MAP_PRIVATE, rfd,
-				    (off_t)0)) == (caddr_t)-1)
+				    (off_t)0)) == (void *)-1)
 					goto slow;
 				t->bt_cmap = t->bt_smap;
 				t->bt_emap = t->bt_smap + sb.st_size;

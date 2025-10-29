@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.11 2014/03/14 22:08:17 ryoon Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.12 2025/10/29 15:39:25 nia Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -39,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.11 2014/03/14 22:08:17 ryoon Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.12 2025/10/29 15:39:25 nia Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -73,9 +73,7 @@ __RCSID("$NetBSD: __fts13.c,v 1.11 2014/03/14 22:08:17 ryoon Exp $");
  * in limits.h. But it is not usable under ordinal condition.
  */
 #if !defined(MAXPATHLEN)
-#if defined(_SCO_DS)
 #define MAXPATHLEN	1024
-#endif
 #endif
 
 #if 0

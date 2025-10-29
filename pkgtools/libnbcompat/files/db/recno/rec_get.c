@@ -1,4 +1,4 @@
-/*	$NetBSD: rec_get.c,v 1.1 2008/10/10 00:21:44 joerg Exp $	*/
+/*	$NetBSD: rec_get.c,v 1.2 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: rec_get.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: rec_get.c,v 1.1 2008/10/10 00:21:44 joerg Exp $");
+__RCSID("$NetBSD: rec_get.c,v 1.2 2025/10/29 15:39:26 nia Exp $");
 
 #include <sys/types.h>
 
@@ -61,7 +61,7 @@ __RCSID("$NetBSD: rec_get.c,v 1.1 2008/10/10 00:21:44 joerg Exp $");
  *	RET_ERROR, RET_SUCCESS and RET_SPECIAL if the key not found.
  */
 int
-__rec_get(const DB *dbp, const DBT *key, DBT *data, u_int flags)
+__rec_get(const DB *dbp, const DBT *key, DBT *data, unsigned int flags)
 {
 	BTREE *t;
 	EPG *e;
@@ -258,7 +258,7 @@ __rec_fmap(BTREE *t, recno_t top)
 		if (__rec_iput(t, nrec, &data, 0) != RET_SUCCESS)
 			return (RET_ERROR);
 	}
-	t->bt_cmap = (caddr_t)sp;
+	t->bt_cmap = (void *)sp;
 	return (RET_SUCCESS);
 }
 
@@ -295,6 +295,6 @@ __rec_vmap(BTREE *t, recno_t top)
 			return (RET_ERROR);
 		++sp;
 	}
-	t->bt_cmap = (caddr_t)sp;
+	t->bt_cmap = (void *)sp;
 	return (RET_SUCCESS);
 }

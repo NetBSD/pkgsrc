@@ -1,4 +1,4 @@
-/*	$NetBSD: ndbmdatum.c,v 1.2 2008/10/29 11:23:17 joerg Exp $	*/
+/*	$NetBSD: ndbmdatum.c,v 1.3 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: ndbmdatum.c,v 1.4 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: ndbmdatum.c,v 1.2 2008/10/29 11:23:17 joerg Exp $");
+__RCSID("$NetBSD: ndbmdatum.c,v 1.3 2025/10/29 15:39:26 nia Exp $");
 
 /*
  * This package provides a dbm compatible interface to the new hashing
@@ -151,5 +151,5 @@ dbm_store(DBM *db, datum key, datum data, int flags)
 	dbtdata.data = data.dptr;
 	dbtdata.size = data.dsize;
 	return ((db->put)(db, &dbtkey, &dbtdata,
-	    (u_int)((flags == DBM_INSERT) ? R_NOOVERWRITE : 0)));
+	    (unsigned int)((flags == DBM_INSERT) ? R_NOOVERWRITE : 0)));
 }
