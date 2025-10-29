@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6353 2025/10/29 09:23:22 nia Exp $
+$NetBSD: CHANGES-2025,v 1.6354 2025/10/29 10:33:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9193,3 +9193,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.13.2 [adam 2025-10-29]
 	Updated www/py-bleach to 6.3.0 [adam 2025-10-29]
 	Updated games/quakespasm to 0.96.3 [nia 2025-10-29]
+	Updated geography/py-ubx2 to 1.2.59 [gdt 2025-10-29]
