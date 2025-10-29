@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6356 2025/10/29 18:01:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6357 2025/10/29 18:22:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9197,3 +9197,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 27.4.1 [pin 2025-10-29]
 	Updated devel/py-zope.i18nmessageid to 8.1 [adam 2025-10-29]
 	Updated devel/py-scard to 2.3.1 [adam 2025-10-29]
+	Updated devel/cargo-outdated to 0.18.0 [adam 2025-10-29]
+	Updated archivers/brotli to 1.2.0 [adam 2025-10-29]
