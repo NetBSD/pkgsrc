@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2025/09/15 11:53:29 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/29 17:57:26 adam Exp $
 
-DISTNAME=	zope_i18nmessageid-8.0
+DISTNAME=	zope_i18nmessageid-8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.i18nmessageid/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.i18nmessageid
 COMMENT=	Zope Message Identifiers for internationalization
 LICENSE=	zpl-2.1
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+TOOLS_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testrunner>=6.4:../../devel/py-zope.testrunner
 
