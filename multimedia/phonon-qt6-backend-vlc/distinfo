@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/10/29 21:40:26 markd Exp $
+
+BLAKE2s (phonon-backend-vlc-0.12.0.tar.xz) = 2ce86be17c8174aeb304d1e678f86d4f1d476aea6f16146c78816360c3bda77c
+SHA512 (phonon-backend-vlc-0.12.0.tar.xz) = 78f5ead829d5025c7cb9e01b33819514d795651d1d932c03bd8cc2ad5d427e5aaaeeb6016820d5a7bb9907f6df1142a0fbc097830d7c63b01f77d2167a0c9264
+Size (phonon-backend-vlc-0.12.0.tar.xz) = 71664 bytes
