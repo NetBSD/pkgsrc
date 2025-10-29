@@ -1,4 +1,4 @@
-/*	$NetBSD: rec_delete.c,v 1.1 2008/10/10 00:21:44 joerg Exp $	*/
+/*	$NetBSD: rec_delete.c,v 1.2 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: rec_delete.c,v 1.17 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: rec_delete.c,v 1.1 2008/10/10 00:21:44 joerg Exp $");
+__RCSID("$NetBSD: rec_delete.c,v 1.2 2025/10/29 15:39:26 nia Exp $");
 
 #include <sys/types.h>
 
@@ -62,7 +62,7 @@ static int rec_rdelete(BTREE *, recno_t);
  *	RET_ERROR, RET_SUCCESS and RET_SPECIAL if the key not found.
  */
 int
-__rec_delete(const DB *dbp, const DBT *key, u_int flags)
+__rec_delete(const DB *dbp, const DBT *key, unsigned int flags)
 {
 	BTREE *t;
 	recno_t nrec;

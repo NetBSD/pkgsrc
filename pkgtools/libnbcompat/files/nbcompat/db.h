@@ -1,4 +1,4 @@
-/*	$NetBSD: db.h,v 1.4 2014/03/14 22:08:18 ryoon Exp $	*/
+/*	$NetBSD: db.h,v 1.5 2025/10/29 15:39:26 nia Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -56,9 +56,7 @@
  * in limits.h. But it is not usable under ordinal condition.
  */
 #if !defined(MAXPATHLEN)
-#if defined(_SCO_DS)
 #define MAXPATHLEN	1024
-#endif
 #endif
 
 #define	MAX_PAGE_NUMBER	0xffffffff	/* >= # of pages in a file */

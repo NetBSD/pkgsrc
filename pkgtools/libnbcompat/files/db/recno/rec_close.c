@@ -1,4 +1,4 @@
-/*	$NetBSD: rec_close.c,v 1.2 2013/09/08 16:24:43 ryoon Exp $	*/
+/*	$NetBSD: rec_close.c,v 1.3 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: rec_close.c,v 1.15 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: rec_close.c,v 1.2 2013/09/08 16:24:43 ryoon Exp $");
+__RCSID("$NetBSD: rec_close.c,v 1.3 2025/10/29 15:39:26 nia Exp $");
 
 #include <sys/types.h>
 #include <sys/uio.h>
@@ -109,7 +109,7 @@ __rec_close(DB *dbp)
  *	RET_SUCCESS, RET_ERROR.
  */
 int
-__rec_sync(const DB *dbp, u_int flags)
+__rec_sync(const DB *dbp, unsigned int flags)
 {
 	struct iovec iov[2];
 	BTREE *t;

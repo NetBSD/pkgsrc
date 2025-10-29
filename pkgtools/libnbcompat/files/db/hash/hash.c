@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.4 2012/05/15 16:45:45 christos Exp $	*/
+/*	$NetBSD: hash.c,v 1.5 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: hash.c,v 1.30 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: hash.c,v 1.4 2012/05/15 16:45:45 christos Exp $");
+__RCSID("$NetBSD: hash.c,v 1.5 2025/10/29 15:39:26 nia Exp $");
 
 #include <nbcompat/param.h>
 #include <sys/stat.h>
@@ -513,7 +513,7 @@ flush_meta(HTAB *hashp)
 	for (i = 0; i < NCACHED; i++)
 		if (hashp->mapp[i])
 			if (__put_page(hashp, (char *)(void *)hashp->mapp[i],
-				(u_int)hashp->BITMAPS[i], 0, 1))
+				(unsigned int)hashp->BITMAPS[i], 0, 1))
 				return (-1);
 	return (0);
 }
