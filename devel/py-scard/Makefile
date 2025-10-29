@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/08/22 10:01:31 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/10/29 18:00:55 adam Exp $
 
-DISTNAME=	pyscard-2.3.0
+DISTNAME=	pyscard-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyscard/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://pyscard.sourceforge.io/
 COMMENT=	Python library for smart cards
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	swig3>=0:../../devel/swig3
+TOOL_DEPENDS+=	swig4>=0:../../devel/swig4
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
 
 pre-configure:
-	${LN} -sf ${TOOLBASE}/bin/swig3.0 ${BUILDLINK_DIR}/bin/swig
+	${LN} -sf ${TOOLBASE}/bin/swig4.0 ${BUILDLINK_DIR}/bin/swig
 
 .include "../../lang/python/wheel.mk"
 .include "../../security/pcsc-lite/buildlink3.mk"
