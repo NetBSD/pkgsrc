@@ -1,9 +1,9 @@
-$NetBSD: patch-.._vendor_memchr-2.7.5_src_memmem_searcher.rs,v 1.1 2025/08/02 14:26:15 pin Exp $
+$NetBSD: patch-.._vendor_memchr-2.7.6_src_memmem_searcher.rs,v 1.1 2025/10/29 07:17:59 pin Exp $
 
 Make this build on big-endian aarch64.
 
---- ../vendor/memchr-2.7.5/src/memmem/searcher.rs.orig	2025-08-02 10:59:00.095018185 +0000
-+++ ../vendor/memchr-2.7.5/src/memmem/searcher.rs
+--- ../vendor/memchr-2.7.6/src/memmem/searcher.rs.orig	2025-08-02 10:59:00.095018185 +0000
++++ ../vendor/memchr-2.7.6/src/memmem/searcher.rs
 @@ -3,7 +3,7 @@ use crate::arch::all::{
      rabinkarp, twoway,
  };
