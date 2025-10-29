@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6355 2025/10/29 14:28:51 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6356 2025/10/29 18:01:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9195,3 +9195,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/quakespasm to 0.96.3 [nia 2025-10-29]
 	Updated geography/py-ubx2 to 1.2.59 [gdt 2025-10-29]
 	Updated shells/oh-my-posh to 27.4.1 [pin 2025-10-29]
+	Updated devel/py-zope.i18nmessageid to 8.1 [adam 2025-10-29]
+	Updated devel/py-scard to 2.3.1 [adam 2025-10-29]
