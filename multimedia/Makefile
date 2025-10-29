@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.353 2025/08/22 16:42:38 wiz Exp $
+# $NetBSD: Makefile,v 1.354 2025/10/29 21:41:56 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -163,6 +163,8 @@ SUBDIR+=	phonon-backend-gstreamer-shared
 SUBDIR+=	phonon-qt5
 SUBDIR+=	phonon-qt5-backend-gstreamer
 SUBDIR+=	phonon-qt5-backend-vlc
+SUBDIR+=	phonon-qt6
+SUBDIR+=	phonon-qt6-backend-vlc
 SUBDIR+=	php-avideo
 SUBDIR+=	php-avideo-encoder
 SUBDIR+=	php-avideo-encoder-network
