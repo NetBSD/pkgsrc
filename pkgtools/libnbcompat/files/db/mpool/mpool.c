@@ -1,4 +1,4 @@
-/*	$NetBSD: mpool.c,v 1.6 2013/09/08 16:24:43 ryoon Exp $	*/
+/*	$NetBSD: mpool.c,v 1.7 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: mpool.c,v 1.18 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: mpool.c,v 1.6 2013/09/08 16:24:43 ryoon Exp $");
+__RCSID("$NetBSD: mpool.c,v 1.7 2025/10/29 15:39:26 nia Exp $");
 
 #include <nbcompat/queue.h>
 #include <sys/stat.h>
@@ -170,7 +170,7 @@ mpool_new( MPOOL *mp, pgno_t *pgnoaddr)
  */
 /*ARGSUSED*/
 void *
-mpool_get(MPOOL *mp, pgno_t pgno, u_int flags)
+mpool_get(MPOOL *mp, pgno_t pgno, unsigned int flags)
 {
 	struct _hqh *head;
 	BKT *bp;
@@ -251,7 +251,7 @@ mpool_get(MPOOL *mp, pgno_t pgno, u_int flags)
  */
 /*ARGSUSED*/
 int
-mpool_put(MPOOL *mp, void *page, u_int flags)
+mpool_put(MPOOL *mp, void *page, unsigned int flags)
 {
 	BKT *bp;
 
@@ -440,10 +440,10 @@ mpool_stat(mp)
 	int cnt;
 	const char *sep;
 
-	(void)fprintf(stderr, "%lu pages in the file\n", (u_long)mp->npages);
+	(void)fprintf(stderr, "%lu pages in the file\n", (unsigned long)mp->npages);
 	(void)fprintf(stderr,
 	    "page size %lu, cacheing %lu pages of %lu page max cache\n",
-	    (u_long)mp->pagesize, (u_long)mp->curcache, (u_long)mp->maxcache);
+	    (unsigned long)mp->pagesize, (unsigned long)mp->curcache, (unsigned long)mp->maxcache);
 	(void)fprintf(stderr, "%lu page puts, %lu page gets, %lu page new\n",
 	    mp->pageput, mp->pageget, mp->pagenew);
 	(void)fprintf(stderr, "%lu page allocs, %lu page flushes\n",

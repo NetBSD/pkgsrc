@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_put.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: bt_put.c,v 1.2 2025/10/29 15:39:25 nia Exp $	*/
 /*	NetBSD: bt_put.c,v 1.18 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_put.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: bt_put.c,v 1.2 2025/10/29 15:39:25 nia Exp $");
 
 #include <sys/types.h>
 
@@ -65,7 +65,7 @@ static EPG *bt_fast(BTREE *, const DBT *, const DBT *, int *);
  *	tree and R_NOOVERWRITE specified.
  */
 int
-__bt_put(const DB *dbp, DBT *key, const DBT *data, u_int flags)
+__bt_put(const DB *dbp, DBT *key, const DBT *data, unsigned int flags)
 {
 	BTREE *t;
 	DBT tkey, tdata;
@@ -186,7 +186,7 @@ storekey:		if (__ovfl_put(t, key, &pg) == RET_ERROR)
 		 * Note, the delete may empty the page, so we need to put a
 		 * new entry into the page immediately.
 		 */
-delete:		if (__bt_dleaf(t, key, h, (u_int)idx) == RET_ERROR) {
+delete:		if (__bt_dleaf(t, key, h, (unsigned int)idx) == RET_ERROR) {
 			mpool_put(t->bt_mp, h, 0);
 			return (RET_ERROR);
 		}
@@ -202,7 +202,7 @@ delete:		if (__bt_dleaf(t, key, h, (u_int)idx) == RET_ERROR) {
 	nbytes = NBLEAFDBT(key->size, data->size);
 	if (h->upper - h->lower < nbytes + sizeof(indx_t)) {
 		if ((status = __bt_split(t, h, key,
-		    data, dflags, nbytes, (u_int)idx)) != RET_SUCCESS)
+		    data, dflags, nbytes, (unsigned int)idx)) != RET_SUCCESS)
 			return (status);
 		goto success;
 	}
@@ -242,7 +242,7 @@ delete:		if (__bt_dleaf(t, key, h, (u_int)idx) == RET_ERROR) {
 
 success:
 	if (flags == R_SETCURSOR)
-		__bt_setcur(t, e->page->pgno, (u_int)e->index);
+		__bt_setcur(t, e->page->pgno, (unsigned int)e->index);
 
 	F_SET(t, B_MODIFIED);
 	return (RET_SUCCESS);

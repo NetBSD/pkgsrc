@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.h,v 1.3 2010/02/27 16:27:00 joerg Exp $	*/
+/*	$NetBSD: hash.h,v 1.4 2025/10/29 15:39:26 nia Exp $	*/
 /*	NetBSD: hash.h,v 1.15 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -143,11 +143,11 @@ typedef struct htab	 {		/* Memory resident data structure */
 #define ALL_SET			((uint32_t)0xFFFFFFFF)
 #define ALL_CLEAR		0
 
-#define PTROF(X)	((BUFHEAD *)(void *)((u_long)(X)&~0x3))
-#define ISMOD(X)	((uint32_t)(u_long)(X)&0x1)
-#define DOMOD(X)	((X) = (char *)(void *)((u_long)(X)|0x1))
-#define ISDISK(X)	((uint32_t)(u_long)(X)&0x2)
-#define DODISK(X)	((X) = (char *)(void *)((u_long)(X)|0x2))
+#define PTROF(X)	((BUFHEAD *)(void *)((unsigned long)(X)&~0x3))
+#define ISMOD(X)	((uint32_t)(unsigned long)(X)&0x1)
+#define DOMOD(X)	((X) = (char *)(void *)((unsigned long)(X)|0x1))
+#define ISDISK(X)	((uint32_t)(unsigned long)(X)&0x2)
+#define DODISK(X)	((X) = (char *)(void *)((unsigned long)(X)|0x2))
 
 #define BITS_PER_MAP	32
 
