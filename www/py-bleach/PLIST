@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/14 13:14:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/10/29 09:21:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/bleach/_vendor/html5lib-1.1.dist-info/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bleach/__init__.py
 ${PYSITELIB}/bleach/__init__.pyc
