@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/10/28 15:46:38 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/10/29 00:27:09 taca Exp $
 
 DISTNAME=	squid-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=squid-cache/}squid/releases/download/SQUID_${VERSION:S/./_/g}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 LICENSE=	gnu-gpl-v2
 
-VERSION=	7.2
+VERSION=	7.3
 
 # GCC 7 fails even with c++17
 # src/ipc/TypedMsgHdr.h fails with
