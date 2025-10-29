@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6349 2025/10/29 05:07:25 imil Exp $
+$NetBSD: CHANGES-2025,v 1.6350 2025/10/29 07:19:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9187,3 +9187,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/ImageMagick to 7.1.2.8 [triaxx 2025-10-28]
 	Updated www/squid7 to 7.3 [taca 2025-10-29]
 	Updated sysutils/nitro to 0.5 [imil 2025-10-29]
+	Updated sysutils/dua-cli to 2.32.2 [pin 2025-10-29]
