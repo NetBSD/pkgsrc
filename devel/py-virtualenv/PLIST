@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2025/10/23 14:27:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.77 2025/10/29 07:51:40 adam Exp $
 bin/virtualenv-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -254,7 +254,7 @@ ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.py
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyc
 ${PYSITELIB}/virtualenv/seed/wheels/embed/__init__.pyo
 ${PYSITELIB}/virtualenv/seed/wheels/embed/pip-25.0.1-py3-none-any.whl
-${PYSITELIB}/virtualenv/seed/wheels/embed/pip-25.2-py3-none-any.whl
+${PYSITELIB}/virtualenv/seed/wheels/embed/pip-25.3-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-75.3.2-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/setuptools-80.9.0-py3-none-any.whl
 ${PYSITELIB}/virtualenv/seed/wheels/embed/wheel-0.45.1-py3-none-any.whl
