@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6348 2025/10/29 00:27:25 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6349 2025/10/29 05:07:25 imil Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9186,3 +9186,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/astyle to 3.6.13 [schmonz 2025-10-28]
 	Updated graphics/ImageMagick to 7.1.2.8 [triaxx 2025-10-28]
 	Updated www/squid7 to 7.3 [taca 2025-10-29]
+	Updated sysutils/nitro to 0.5 [imil 2025-10-29]
