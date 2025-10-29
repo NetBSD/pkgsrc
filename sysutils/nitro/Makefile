@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/09/07 09:36:35 imil Exp $
+# $NetBSD: Makefile,v 1.2 2025/10/29 05:03:47 imil Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
-PKGNAME=	${GITHUB_PROJECT}-0.3.0.0.20250907
+DISTNAME=	nitro-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
-GITHUB_PROJECT=	nitro
-GITHUB_TAG=	9507f103b43094261e5bd7aa8dcd7f03ea6036d6
+VERSION=	0.5
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://github.com/leahneukirchen/nitro
