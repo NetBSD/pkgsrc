@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2025/10/23 20:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/10/29 21:34:09 markd Exp $
 
-DISTNAME=	phonon-backend-vlc-0.11.2
+DISTNAME=	phonon-backend-vlc-0.12.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
-PKGREVISION=	19
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.11.2/}
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-vlc/0.12.0/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
@@ -14,18 +13,19 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_build
 
 CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_QTPLUGINDIR=${QTDIR}/plugins
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMAKE_CONFIGURE_ARGS+=	-DPHONON_BUILD_QT6=OFF
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-	${MKDIR} ${WRKSRC}/_build
 
-BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.19.0
+# locale files conflict with qt6 version
+post-install:
+	rm -rf ${DESTDIR}${PREFIX}/share
+
+.include "../../devel/cmake/build.mk"
+
 .include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../multimedia/vlc/buildlink3.mk"
 .include "../../multimedia/phonon-qt5/buildlink3.mk"
