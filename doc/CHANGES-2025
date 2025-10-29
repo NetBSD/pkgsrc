@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6351 2025/10/29 08:14:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6352 2025/10/29 09:22:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9190,3 +9190,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/dua-cli to 2.32.2 [pin 2025-10-29]
 	Updated devel/py-virtualenv to 20.35.4 [adam 2025-10-29]
 	Updated devel/py-tox to 4.32.0 [adam 2025-10-29]
+	Updated www/py-aiohttp to 3.13.2 [adam 2025-10-29]
+	Updated www/py-bleach to 6.3.0 [adam 2025-10-29]
