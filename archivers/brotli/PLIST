@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/31 17:23:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/29 18:10:15 adam Exp $
 bin/brotli
 include/brotli/decode.h
 include/brotli/encode.h
@@ -17,3 +17,8 @@ lib/libbrotlienc.so.1
 lib/pkgconfig/libbrotlicommon.pc
 lib/pkgconfig/libbrotlidec.pc
 lib/pkgconfig/libbrotlienc.pc
+man/man1/brotli.1
+man/man3/constants.h.3
+man/man3/decode.h.3
+man/man3/encode.h.3
+man/man3/types.h.3
