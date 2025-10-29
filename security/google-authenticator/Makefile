@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/07/25 05:41:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/10/29 22:26:24 markd Exp $
 
-DISTNAME=	google-authenticator-libpam-1.09
+DISTNAME=	google-authenticator-libpam-1.11
 PKGNAME=	${DISTNAME:S/libpam-//}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
