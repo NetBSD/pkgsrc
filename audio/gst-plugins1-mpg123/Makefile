@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/10/23 20:35:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/30 15:35:40 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-mpg123/}
-PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - MP3 decoder plugin

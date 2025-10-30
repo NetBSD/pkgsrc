@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/10/23 20:35:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/10/30 15:35:39 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-faac/}
-PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - AAC encoder plugin
