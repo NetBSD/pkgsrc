@@ -1,18 +1,25 @@
-@comment $NetBSD: PLIST,v 1.12 2025/04/12 11:03:06 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.13 2025/10/30 13:14:12 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
+${PYSITELIB}/google/api_core/_python_package_support.py
+${PYSITELIB}/google/api_core/_python_package_support.pyc
+${PYSITELIB}/google/api_core/_python_package_support.pyo
+${PYSITELIB}/google/api_core/_python_version_support.py
+${PYSITELIB}/google/api_core/_python_version_support.pyc
+${PYSITELIB}/google/api_core/_python_version_support.pyo
 ${PYSITELIB}/google/api_core/_rest_streaming_base.py
 ${PYSITELIB}/google/api_core/_rest_streaming_base.pyc
 ${PYSITELIB}/google/api_core/_rest_streaming_base.pyo
 ${PYSITELIB}/google/api_core/bidi.py
 ${PYSITELIB}/google/api_core/bidi.pyc
 ${PYSITELIB}/google/api_core/bidi.pyo
+${PYSITELIB}/google/api_core/bidi_async.py
+${PYSITELIB}/google/api_core/bidi_async.pyc
+${PYSITELIB}/google/api_core/bidi_async.pyo
+${PYSITELIB}/google/api_core/bidi_base.py
+${PYSITELIB}/google/api_core/bidi_base.pyc
+${PYSITELIB}/google/api_core/bidi_base.pyo
 ${PYSITELIB}/google/api_core/client_info.py
 ${PYSITELIB}/google/api_core/client_info.pyc
 ${PYSITELIB}/google/api_core/client_info.pyo
@@ -182,3 +189,8 @@ ${PYSITELIB}/google/api_core/version.pyo
 ${PYSITELIB}/google/api_core/version_header.py
 ${PYSITELIB}/google/api_core/version_header.pyc
 ${PYSITELIB}/google/api_core/version_header.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
