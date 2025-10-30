@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/10/23 20:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/10/30 15:35:42 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-base/-gl/}
-PKGREVISION=	1
 CATEGORIES=	graphics gnome
 
 COMMENT=	Open source multimedia framework - GL plugin
