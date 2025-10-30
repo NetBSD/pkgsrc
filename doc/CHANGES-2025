@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6372 2025/10/30 14:58:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6373 2025/10/30 15:21:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9220,3 +9220,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 6.1.3 [wiz 2025-10-30]
 	Updated math/py-xarray to 2025.10.1 [adam 2025-10-30]
 	Updated math/py-scipy to 1.16.3 [adam 2025-10-30]
+	Updated math/py-numexpr to 2.14.1 [adam 2025-10-30]
+	Updated devel/py-kaitaistruct to 0.11 [adam 2025-10-30]
