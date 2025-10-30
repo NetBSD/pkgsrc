@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6366 2025/10/30 13:14:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6367 2025/10/30 13:18:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9213,3 +9213,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-calver to 2025.10.20 [wiz 2025-10-30]
 	Updated security/py-cyclonedx-python-lib to 11.4.0 [wiz 2025-10-30]
 	Updated devel/py-google-api-core to 2.28.1 [wiz 2025-10-30]
+	Updated devel/py-ruamel-yaml to 0.18.16 [wiz 2025-10-30]
