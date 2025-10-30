@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2025/07/17 08:20:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/10/30 14:07:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -53,6 +53,9 @@ ${PYSITELIB}/xarray/backends/scipy_.pyo
 ${PYSITELIB}/xarray/backends/store.py
 ${PYSITELIB}/xarray/backends/store.pyc
 ${PYSITELIB}/xarray/backends/store.pyo
+${PYSITELIB}/xarray/backends/writers.py
+${PYSITELIB}/xarray/backends/writers.pyc
+${PYSITELIB}/xarray/backends/writers.pyo
 ${PYSITELIB}/xarray/backends/zarr.py
 ${PYSITELIB}/xarray/backends/zarr.pyc
 ${PYSITELIB}/xarray/backends/zarr.pyo
@@ -182,9 +185,6 @@ ${PYSITELIB}/xarray/core/dataset_variables.pyo
 ${PYSITELIB}/xarray/core/datatree.py
 ${PYSITELIB}/xarray/core/datatree.pyc
 ${PYSITELIB}/xarray/core/datatree.pyo
-${PYSITELIB}/xarray/core/datatree_io.py
-${PYSITELIB}/xarray/core/datatree_io.pyc
-${PYSITELIB}/xarray/core/datatree_io.pyo
 ${PYSITELIB}/xarray/core/datatree_mapping.py
 ${PYSITELIB}/xarray/core/datatree_mapping.pyc
 ${PYSITELIB}/xarray/core/datatree_mapping.pyo
@@ -347,6 +347,7 @@ ${PYSITELIB}/xarray/testing/assertions.pyo
 ${PYSITELIB}/xarray/testing/strategies.py
 ${PYSITELIB}/xarray/testing/strategies.pyc
 ${PYSITELIB}/xarray/testing/strategies.pyo
+${PYSITELIB}/xarray/tests/CLAUDE.md
 ${PYSITELIB}/xarray/tests/__init__.py
 ${PYSITELIB}/xarray/tests/__init__.pyc
 ${PYSITELIB}/xarray/tests/__init__.pyo
