@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/10/23 20:38:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/10/30 15:35:38 adam Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-x265/}
-PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 
 COMMENT=	Open source multimedia framework - HEVC/H.265 encoding plugin

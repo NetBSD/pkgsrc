@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/08/23 12:44:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/10/30 15:35:42 adam Exp $
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/egl.h
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/gstegl.h
 ${PLIST.drm}include/gstreamer-1.0/gst/gl/egl/gsteglimage.h
@@ -64,7 +64,7 @@ lib/gstreamer-1.0/include/gst/gl/gstglconfig.h
 lib/gstreamer-1.0/libgstopengl.so
 lib/libgstgl-1.0.so
 lib/libgstgl-1.0.so.0
-lib/libgstgl-1.0.so.0.2605.0
+lib/libgstgl-1.0.so.0.2607.0
 lib/pkgconfig/gstreamer-gl-1.0.pc
 ${PLIST.drm}lib/pkgconfig/gstreamer-gl-egl-1.0.pc
 lib/pkgconfig/gstreamer-gl-prototypes-1.0.pc
