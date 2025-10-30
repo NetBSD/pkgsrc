@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/04/20 20:02:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/10/30 13:09:55 wiz Exp $
 
-BLAKE2s (calver-2025.4.17.tar.gz) = fa6abed701291ed4c6c775a1a3bee19749afb3fb888a0eb1bbae612fcb093051
-SHA512 (calver-2025.4.17.tar.gz) = 08e925ce646d1ec64b8992603df5af5c7ff41660ee033c9d4ad7d4a9252493e5578af4cf5e9de40bbc6c17c65e7d37f6b323f8d9821c10e874069f6f16d14ddc
-Size (calver-2025.4.17.tar.gz) = 8082 bytes
+BLAKE2s (calver-2025.10.20.tar.gz) = df645837947271ecb9e7bd567b31489ca16f92a0c921ce3e7042895a6d7191ca
+SHA512 (calver-2025.10.20.tar.gz) = 7fd26bc607328ee62b4bc8f19eb356c2b5f3d604c4ed7ea7a345b48e452e4cb3c64db9100ed8087c00e03b0cb0bee7aa69b93cca0f1ed9fa1dc1150a63799743
+Size (calver-2025.10.20.tar.gz) = 8101 bytes
