@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/04/12 11:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/30 15:21:21 adam Exp $
 
-DISTNAME=	kaitaistruct-0.10
+DISTNAME=	kaitaistruct-0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kaitaistruct/}
 
