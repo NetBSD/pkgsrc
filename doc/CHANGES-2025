@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6368 2025/10/30 13:23:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6369 2025/10/30 13:27:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9215,3 +9215,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-google-api-core to 2.28.1 [wiz 2025-10-30]
 	Updated devel/py-ruamel-yaml to 0.18.16 [wiz 2025-10-30]
 	Updated devel/py-googleapis-common-protos to 1.71.0 [wiz 2025-10-30]
+	Updated comms/py-textual to 6.4.0 [wiz 2025-10-30]
