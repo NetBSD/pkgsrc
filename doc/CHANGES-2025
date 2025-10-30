@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6374 2025/10/30 15:24:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6375 2025/10/30 15:48:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9224,3 +9224,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-kaitaistruct to 0.11 [adam 2025-10-30]
 	Updated sysutils/py-structlog to 25.5.0 [adam 2025-10-30]
 	Updated security/py-requests-gssapi to 1.4.0 [adam 2025-10-30]
+	Updated multimedia/gstreamer1 to 1.26.7 [adam 2025-10-30]
