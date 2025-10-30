@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.645 2025/10/30 10:24:30 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.646 2025/10/30 11:08:22 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28681,3 +28681,86 @@ mysql-server<8.0.44	multiple-vulnerabilities	https://www.oracle.com/security-ale
 openjdk11<11.0.29	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2025.html#AppendixJAVA
 openjdk17<17.0.17	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2025.html#AppendixJAVA
 openjdk21<21.0.9	multiple-vulnerabilities	https://www.oracle.com/security-alerts/cpuoct2025.html#AppendixJAVA
+ImageMagick<7.1.2.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62594
+apache-tomcat<9.0.109		path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-55752
+apache-tomcat>=10<10.1.45	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-55752
+apache-tomcat>=11<11.0.11	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2025-55752
+apache-tomcat<9.0.109		input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-55754
+apache-tomcat>=10<10.1.45	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-55754
+apache-tomcat>=11<11.0.11	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-55754
+apache-tomcat<9.0.110		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61795
+apache-tomcat>=10<10.1.47	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61795
+apache-tomcat>=11<11.0.12	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61795
+bitcoin<30.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54604
+bitcoin<30.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-54605
+consul<1.22.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11374
+consul<1.22.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11375
+# Questionable, needs to change the configuration files, see <https://www.openwall.com/lists/oss-security/2025/10/27/1>
+#dnsmasq-[0-9]*	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2025-12198
+#dnsmasq-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-12199
+#dnsmasq-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-12200
+firefox<144.0.2	multiple-vulnerabilities	https://www.mozilla.org/en-US/security/advisories/mfsa2025-86/
+fontforge<20251009	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-50949
+fontforge<20251009	memory-leak	https://nvd.nist.gov/vuln/detail/CVE-2025-50951
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61099
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61100
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61101
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61102
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61103
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61104
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61105
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61106
+frr-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-61107
+gegl<0.4.64	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10921
+gimp<3.0.6	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2025-10920
+gimp<3.0.6	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10922
+gimp<3.0.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10923
+gimp<3.0.6	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10924
+gimp<3.0.6	stack-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10925
+gimp<3.0.6	heap-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-10934
+go124<1.24.8	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-47912
+go125<1.25.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-47912
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58183
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58183
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58185
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58185
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58186
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58186
+go124<1.24.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58187
+go125<1.25.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58187
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58188
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58188
+go124<1.24.8	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-58189
+go125<1.25.2	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2025-58189
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61723
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61723
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61724
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61724
+go124<1.24.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61725
+go125<1.25.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-61725
+kea>=3.0.1<3.0.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-11232
+libaudiofile-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2025-50950
+libsoup-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-12105
+lz4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62813
+modular-xorg-server<21.1.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-62229
+modular-xorg-server<21.1.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-62230
+modular-xorg-server<21.1.19	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2025-62231
+moodle<5.0.3	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-62393
+moodle<5.0.3	incorrect-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-62394
+moodle<5.0.3	improper-access-control			https://nvd.nist.gov/vuln/detail/CVE-2025-62395
+moodle<5.0.3	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2025-62396
+moodle<5.0.3	information-disclosure			https://nvd.nist.gov/vuln/detail/CVE-2025-62397
+moodle<5.0.3	improper-authentication			https://nvd.nist.gov/vuln/detail/CVE-2025-62398
+moodle<5.0.3	brute-force				https://nvd.nist.gov/vuln/detail/CVE-2025-62399
+moodle<5.0.3	information-disclosure			https://nvd.nist.gov/vuln/detail/CVE-2025-62400
+moodle<5.0.3	improper-authorization			https://nvd.nist.gov/vuln/detail/CVE-2025-62401
+# Only alpha and beta releases affected, never packaged in pkgsrc
+#openvpn>=2.7_alpha1<2.7_beta1	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-10680
+py{27,39,310,311,312,313,314}-authlib<1.6.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62706
+py{27,39,310,311,312,313,314}-pdf<6.1.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62707
+py{27,39,310,311,312,313,314}-pdf<6.1.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62708
+py{27,39,310,311,312,313,314}-starlette<0.49.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-62727
+rt5>=5.0.4<5.0.9	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-9158
+sqlite3<3.50.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52099
+vault<1.21.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-11621
+vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12044
