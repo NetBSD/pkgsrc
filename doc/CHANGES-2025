@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6365 2025/10/30 13:11:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6366 2025/10/30 13:14:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9212,3 +9212,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 24.11.0 [adam 2025-10-30]
 	Updated devel/py-calver to 2025.10.20 [wiz 2025-10-30]
 	Updated security/py-cyclonedx-python-lib to 11.4.0 [wiz 2025-10-30]
+	Updated devel/py-google-api-core to 2.28.1 [wiz 2025-10-30]
