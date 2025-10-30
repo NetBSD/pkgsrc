@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2025/08/22 09:04:09 adam Exp $
+$NetBSD: distinfo,v 1.27 2025/10/30 14:07:43 adam Exp $
 
-BLAKE2s (xarray-2025.8.0.tar.gz) = 1adf2b4cecea0cb4dfe5912422e1a81c8c6df0750315c5c671ab2581df57c444
-SHA512 (xarray-2025.8.0.tar.gz) = 2ace4ae6736a5cde298f7d0da6b704326fa5b28d758744e0db022cc3e9ea6514ac447c5d7762fc273bc192ad7b31517edc0cda7a16302c3e9a63d5c952b1bcd2
-Size (xarray-2025.8.0.tar.gz) = 3034425 bytes
+BLAKE2s (xarray-2025.10.1.tar.gz) = 250daebeb138e656982e0e29e5a9ee994b779574a9bd40e4ec6d4e8dedbd4321
+SHA512 (xarray-2025.10.1.tar.gz) = aa4e0678a7ad4fa18ab1c9cbb6d8ed0ffe99b5461f1b0797e54ad34edf9de0270ee19d9db4c20399de2d7a3a7f3023088a66e4e8585278f1c7db5572651afd1f
+Size (xarray-2025.10.1.tar.gz) = 3058736 bytes
