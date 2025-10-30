@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/11/28 18:42:09 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/10/30 15:21:21 adam Exp $
 
-BLAKE2s (kaitaistruct-0.10.tar.gz) = 7e8f87dc1a8ef32d01764b95c22d7b56904d2c2a07e84ca254c7b075d142592a
-SHA512 (kaitaistruct-0.10.tar.gz) = b4db8b67fe5dd310121ecfad6db79d424e2bd7308b5ae2cc1cdbcd73538533b5bbe4047b71e2ff65d8109b213ad0a5b88a96cd593b08f910ea6ae9bf3c4cbfac
-Size (kaitaistruct-0.10.tar.gz) = 7061 bytes
+BLAKE2s (kaitaistruct-0.11.tar.gz) = b6452e5dcf782596efbfbfd93f1be2b6a02135add07ef0c8864077abf1ccacac
+SHA512 (kaitaistruct-0.11.tar.gz) = 4abcd0a801d134dd49f950ee0d920151c48c3b2b859f251b50d525c995e83e824ebf0fe02e7f6e576406f383921ba60d5ea764dacb6ae4162683d48c118bd090
+Size (kaitaistruct-0.11.tar.gz) = 11519 bytes
