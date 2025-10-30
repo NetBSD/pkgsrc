@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6363 2025/10/30 12:22:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6364 2025/10/30 13:10:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9210,3 +9210,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/py-checkdmarc to 5.12.24 [adam 2025-10-30]
 	Updated lang/nodejs22 to 22.21.1 [adam 2025-10-30]
 	Updated lang/nodejs to 24.11.0 [adam 2025-10-30]
+	Updated devel/py-calver to 2025.10.20 [wiz 2025-10-30]
