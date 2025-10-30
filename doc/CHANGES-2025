@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6360 2025/10/30 08:30:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6361 2025/10/30 11:31:16 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9205,3 +9205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added multimedia/phonon-qt6-backend-vlc version 0.12.0 [markd 2025-10-29]
 	Updated security/google-authenticator to 1.11 [markd 2025-10-29]
 	Updated net/powerdns-recursor to 5.3.1 [wiz 2025-10-30]
+	Updated devel/cargo-outdated to 0.18.0nb1 [pin 2025-10-30]
