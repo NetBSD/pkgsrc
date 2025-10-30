@@ -1,46 +1,51 @@
-# $NetBSD: Makefile,v 1.49 2025/09/27 09:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/10/30 08:29:57 wiz Exp $
 
-DISTNAME=	pdns-recursor-4.9.9
+DISTNAME=	pdns-recursor-5.3.1
 PKGNAME=	${DISTNAME:S/pdns/powerdns/}
-PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://downloads.powerdns.com/releases/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://downloads.powerdns.com/releases/
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://www.powerdns.com/
 COMMENT=	PowerDNS resolver/recursing nameserver
 LICENSE=	gnu-gpl-v2
 
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
-USE_TOOLS+=		gmake pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-net-snmp
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-libsodium
+CONFIGURE_ARGS+=	--enable-dns-over-tls
+CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 
-# currently not portable
-CONFIGURE_ENV.NetBSD+=	ac_cv_search_pthread_setaffinity_np=no
+CHECK_WRKREF_SKIP+=	sbin/pdns_recursor
+
+EGDIR=			${PREFIX}/share/examples/powerdns-recursor
+CONF_FILES=		${EGDIR}/recursor.yml-dist ${PKG_SYSCONFDIR}/recursor.yml
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 RCD_SCRIPTS=		pdns_recursor
 
 SMF_NAME=		pdns-recursor
 SMF_METHODS=		pdns_recursor
 
-EGDIR=			${PREFIX}/share/examples/pdns-recursor
+do-build:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} ${BUILD_TARGET}
 
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
-
-CONF_FILES+=		${EGDIR}/recursor.conf-dist \
-			${PKG_SYSCONFDIR}/recursor.conf
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-c++11-narrowing
-.endif
-
+.include "cargo-depends.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/rust/cargo.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/atomic64.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../security/libsodium/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
+.include "../../net/fstrm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
