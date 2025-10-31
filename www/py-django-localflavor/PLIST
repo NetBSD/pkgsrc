@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/04/14 13:30:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/10/31 10:53:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -418,6 +418,24 @@ ${PYSITELIB}/localflavor/kw/kw_areas.pyo
 ${PYSITELIB}/localflavor/kw/kw_governorates.py
 ${PYSITELIB}/localflavor/kw/kw_governorates.pyc
 ${PYSITELIB}/localflavor/kw/kw_governorates.pyo
+${PYSITELIB}/localflavor/kw/utils.py
+${PYSITELIB}/localflavor/kw/utils.pyc
+${PYSITELIB}/localflavor/kw/utils.pyo
+${PYSITELIB}/localflavor/lk/__init__.py
+${PYSITELIB}/localflavor/lk/__init__.pyc
+${PYSITELIB}/localflavor/lk/__init__.pyo
+${PYSITELIB}/localflavor/lk/forms.py
+${PYSITELIB}/localflavor/lk/forms.pyc
+${PYSITELIB}/localflavor/lk/forms.pyo
+${PYSITELIB}/localflavor/lk/lk_districts.py
+${PYSITELIB}/localflavor/lk/lk_districts.pyc
+${PYSITELIB}/localflavor/lk/lk_districts.pyo
+${PYSITELIB}/localflavor/lk/lk_provinces.py
+${PYSITELIB}/localflavor/lk/lk_provinces.pyc
+${PYSITELIB}/localflavor/lk/lk_provinces.pyo
+${PYSITELIB}/localflavor/lk/models.py
+${PYSITELIB}/localflavor/lk/models.pyc
+${PYSITELIB}/localflavor/lk/models.pyo
 ${PYSITELIB}/localflavor/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/localflavor/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/localflavor/locale/ar_DZ/LC_MESSAGES/django.mo
