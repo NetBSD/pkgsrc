@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6382 2025/10/31 09:37:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6383 2025/10/31 09:50:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9234,3 +9234,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/carwash version 0.2.2 [pin 2025-10-31]
 	Updated devel/SDL3 to 3.2.26 [adam 2025-10-31]
 	Updated devel/sdl12-compat to 1.2.70 [adam 2025-10-31]
+	Updated www/py-django-registration to 5.2.1 [adam 2025-10-31]
+	Updated www/py-django-reversion to 6.0.0 [adam 2025-10-31]
