@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6389 2025/10/31 14:56:58 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.6390 2025/10/31 14:57:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9249,3 +9249,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-boto3 to 1.40.63 [adam 2025-10-31]
 	Updated net/py-awscli to 1.42.63 [adam 2025-10-31]
 	Updated security/ykman to 5.8.0 [ryoon 2025-10-31]
+	Updated security/py-yubikey-manager to 5.8.0 [ryoon 2025-10-31]
