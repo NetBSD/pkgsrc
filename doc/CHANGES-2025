@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6379 2025/10/31 09:31:46 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6380 2025/10/31 09:32:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9230,3 +9230,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-debug-toolbar to 6.1.0 [adam 2025-10-31]
 	Updated sysutils/ripdrag to 0.4.11 [pin 2025-10-31]
 	Updated shells/oh-my-posh to 27.4.3 [pin 2025-10-31]
+	Updated textproc/hgrep to 0.3.9 [pin 2025-10-31]
