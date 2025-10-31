@@ -1,0 +1,17 @@
+Terminal User Interface for managing multiple Rust projects with ease.
+CarWash provides an intuitive interface for running cargo commands across
+multiple projects simultaneously, managing dependencies, and monitoring build
+outputs.
+
+Core Features
+ - Multi-Project Management: Automatically discover and manage all Rust projects
+   in a directory tree
+ - Parallel Command Execution: Run cargo commands across multiple projects
+   simultaneously
+ - Interactive Command Palette: Fuzzy search through cargo commands with
+   vim-style navigation
+ - Real-time Output Monitoring: Watch command output with colored synta
+   highlighting
+ - Dependency Management: Check for outdated dependencies and update them
+   interactively
+ - Workspace Support: Intelligently handles Cargo workspaces and member projects
