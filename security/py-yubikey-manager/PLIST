@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/09/27 18:20:02 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/10/31 14:56:39 ryoon Exp $
 bin/ykman-${PYVERSSUFFIX}
 ${PYSITELIB}/ykman/__init__.py
 ${PYSITELIB}/ykman/__init__.pyc
@@ -9,9 +9,6 @@ ${PYSITELIB}/ykman/_cli/__init__.pyo
 ${PYSITELIB}/ykman/_cli/__main__.py
 ${PYSITELIB}/ykman/_cli/__main__.pyc
 ${PYSITELIB}/ykman/_cli/__main__.pyo
-${PYSITELIB}/ykman/_cli/aliases.py
-${PYSITELIB}/ykman/_cli/aliases.pyc
-${PYSITELIB}/ykman/_cli/aliases.pyo
 ${PYSITELIB}/ykman/_cli/apdu.py
 ${PYSITELIB}/ykman/_cli/apdu.pyc
 ${PYSITELIB}/ykman/_cli/apdu.pyo
@@ -42,6 +39,9 @@ ${PYSITELIB}/ykman/_cli/piv.pyo
 ${PYSITELIB}/ykman/_cli/script.py
 ${PYSITELIB}/ykman/_cli/script.pyc
 ${PYSITELIB}/ykman/_cli/script.pyo
+${PYSITELIB}/ykman/_cli/securitydomain.py
+${PYSITELIB}/ykman/_cli/securitydomain.pyc
+${PYSITELIB}/ykman/_cli/securitydomain.pyo
 ${PYSITELIB}/ykman/_cli/util.py
 ${PYSITELIB}/ykman/_cli/util.pyc
 ${PYSITELIB}/ykman/_cli/util.pyo
@@ -63,6 +63,9 @@ ${PYSITELIB}/ykman/hid/__init__.pyo
 ${PYSITELIB}/ykman/hid/base.py
 ${PYSITELIB}/ykman/hid/base.pyc
 ${PYSITELIB}/ykman/hid/base.pyo
+${PYSITELIB}/ykman/hid/fido.py
+${PYSITELIB}/ykman/hid/fido.pyc
+${PYSITELIB}/ykman/hid/fido.pyo
 ${PYSITELIB}/ykman/hid/freebsd.py
 ${PYSITELIB}/ykman/hid/freebsd.pyc
 ${PYSITELIB}/ykman/hid/freebsd.pyo
@@ -72,6 +75,9 @@ ${PYSITELIB}/ykman/hid/linux.pyo
 ${PYSITELIB}/ykman/hid/macos.py
 ${PYSITELIB}/ykman/hid/macos.pyc
 ${PYSITELIB}/ykman/hid/macos.pyo
+${PYSITELIB}/ykman/hid/netbsd.py
+${PYSITELIB}/ykman/hid/netbsd.pyc
+${PYSITELIB}/ykman/hid/netbsd.pyo
 ${PYSITELIB}/ykman/hid/windows.py
 ${PYSITELIB}/ykman/hid/windows.pyc
 ${PYSITELIB}/ykman/hid/windows.pyo
@@ -153,9 +159,12 @@ ${PYSITELIB}/yubikit/core/fido.pyo
 ${PYSITELIB}/yubikit/core/otp.py
 ${PYSITELIB}/yubikit/core/otp.pyc
 ${PYSITELIB}/yubikit/core/otp.pyo
-${PYSITELIB}/yubikit/core/smartcard.py
-${PYSITELIB}/yubikit/core/smartcard.pyc
-${PYSITELIB}/yubikit/core/smartcard.pyo
+${PYSITELIB}/yubikit/core/smartcard/__init__.py
+${PYSITELIB}/yubikit/core/smartcard/__init__.pyc
+${PYSITELIB}/yubikit/core/smartcard/__init__.pyo
+${PYSITELIB}/yubikit/core/smartcard/scp.py
+${PYSITELIB}/yubikit/core/smartcard/scp.pyc
+${PYSITELIB}/yubikit/core/smartcard/scp.pyo
 ${PYSITELIB}/yubikit/hsmauth.py
 ${PYSITELIB}/yubikit/hsmauth.pyc
 ${PYSITELIB}/yubikit/hsmauth.pyo
@@ -175,6 +184,9 @@ ${PYSITELIB}/yubikit/piv.py
 ${PYSITELIB}/yubikit/piv.pyc
 ${PYSITELIB}/yubikit/piv.pyo
 ${PYSITELIB}/yubikit/py.typed
+${PYSITELIB}/yubikit/securitydomain.py
+${PYSITELIB}/yubikit/securitydomain.pyc
+${PYSITELIB}/yubikit/securitydomain.pyo
 ${PYSITELIB}/yubikit/support.py
 ${PYSITELIB}/yubikit/support.pyc
 ${PYSITELIB}/yubikit/support.pyo
