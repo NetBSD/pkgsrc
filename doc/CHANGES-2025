@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6375 2025/10/30 15:48:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6376 2025/10/31 00:23:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9225,3 +9225,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-structlog to 25.5.0 [adam 2025-10-30]
 	Updated security/py-requests-gssapi to 1.4.0 [adam 2025-10-30]
 	Updated multimedia/gstreamer1 to 1.26.7 [adam 2025-10-30]
+	Updated math/py-pandas to 2.3.3nb1 [ryoon 2025-10-31]
