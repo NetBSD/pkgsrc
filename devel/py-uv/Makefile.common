@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.3 2025/10/16 09:19:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2025/10/31 10:24:55 adam Exp $
 # used by devel/py-uv/Makefile
 # used by devel/py-uv-build/Makefile
 
-UV_VERSION=	0.9.3
+UV_VERSION=	0.9.7
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 
 PATCHDIR=	${.CURDIR}/../../devel/py-uv/patches
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
-ASYNC_ZIP_REV=	285e48742b74ab109887d62e1ae79e7c15fd4878
+ASYNC_ZIP_REV=	f6a41d32866003c868d03ed791a89c794f61b703
 PUBGRUB_REV=	d8efd77673c9a90792da9da31b6c0da7ea8a324b
 REQW_MW_REV=	7650ed76215a962a96d94a79be71c27bffde7ab2
 TL_REV=		6e25b2ee2513d75385101a8ff9f591ef51f314ec
