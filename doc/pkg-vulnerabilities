@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.647 2025/10/31 09:48:45 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.648 2025/10/31 22:00:38 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28767,3 +28767,15 @@ vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12044
 py{27,39,310,311,312,313,314}-brotli<1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6176
 qt5-qtconnectivity<5.15.19	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
 qt6-qtconnectivity<6.9.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
+xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
+xenkernel420-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58147
+xenkernel418-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
+xenkernel420-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-58148
+xenkernel418-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
+xenkernel420-[0-9]*	authorization-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-58149
+python39<3.9.25		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+python310<3.10.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+python311<3.11.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+python312<3.12.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+python313<3.13.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
