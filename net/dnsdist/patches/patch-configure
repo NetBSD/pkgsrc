@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.5 2025/10/31 15:54:55 jperkin Exp $
+
+Fix --without-libedit, required when using readline.
+
+--- configure.orig	2025-10-31 15:48:25.770875216 +0000
++++ configure
+@@ -18916,7 +18916,7 @@ printf %s "checking whether to link in l
+ # Check whether --with-libedit was given.
+ if test ${with_libedit+y}
+ then :
+-  withval=$with_libedit; with_libedit=$enableval
++  withval=$with_libedit; with_libedit=$withval
+ else case e in #(
+   e) with_libedit=yes
+    ;;
