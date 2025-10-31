@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6391 2025/10/31 15:00:58 abs Exp $
+$NetBSD: CHANGES-2025,v 1.6392 2025/10/31 15:05:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9251,3 +9251,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ykman to 5.8.0 [ryoon 2025-10-31]
 	Updated security/py-yubikey-manager to 5.8.0 [ryoon 2025-10-31]
 	Updated x11/xscreensaver to 6.12 [abs 2025-10-31]
+	Updated devel/gdb7 to 7.11nb12 [ryoon 2025-10-31]
