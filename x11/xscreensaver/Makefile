@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.171 2025/10/23 20:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2025/10/31 14:56:38 abs Exp $
 
-DISTNAME=		xscreensaver-6.09
-PKGREVISION=		4
+DISTNAME=		xscreensaver-6.12
 CATEGORIES=		x11
 MASTER_SITES=		https://www.jwz.org/xscreensaver/
 
@@ -13,6 +12,8 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_CC_FEATURES=	c99
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+# bsdtar fails with "Skipping hardlink pointing to itself: xscreensaver-6.12/driver/wayland-dpy.c: Unknown error: -1"
+EXTRACT_USING=		gtar
 
 CHECK_PORTABILITY_SKIP+=	OSX/fuzztest.sh
 CHECK_PORTABILITY_SKIP+=	OSX/installer.sh

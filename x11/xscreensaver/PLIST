@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2025/03/04 12:12:35 abs Exp $
+@comment $NetBSD: PLIST,v 1.60 2025/10/31 14:56:38 abs Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -106,6 +106,7 @@ libexec/xscreensaver/config/discrete.xml
 libexec/xscreensaver/config/distort.xml
 libexec/xscreensaver/config/drift.xml
 libexec/xscreensaver/config/droste.xml
+libexec/xscreensaver/config/dumpsterfire.xml
 libexec/xscreensaver/config/dymaxionmap.xml
 libexec/xscreensaver/config/endgame.xml
 libexec/xscreensaver/config/energystream.xml
@@ -163,6 +164,7 @@ libexec/xscreensaver/config/hextrail.xml
 libexec/xscreensaver/config/highvoltage.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hopalong.xml
+libexec/xscreensaver/config/hopffibration.xml
 libexec/xscreensaver/config/hydrostat.xml
 libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/hypnowheel.xml
@@ -179,6 +181,7 @@ libexec/xscreensaver/config/kaleidescope.xml
 libexec/xscreensaver/config/kaleidocycle.xml
 libexec/xscreensaver/config/kallisti.xml
 libexec/xscreensaver/config/klein.xml
+libexec/xscreensaver/config/klondike.xml
 libexec/xscreensaver/config/kumppa.xml
 libexec/xscreensaver/config/lament.xml
 libexec/xscreensaver/config/lavalite.xml
@@ -218,6 +221,7 @@ libexec/xscreensaver/config/photopile.xml
 libexec/xscreensaver/config/piecewise.xml
 libexec/xscreensaver/config/pinion.xml
 libexec/xscreensaver/config/pipes.xml
+libexec/xscreensaver/config/platonicfolding.xml
 libexec/xscreensaver/config/polyhedra.xml
 libexec/xscreensaver/config/polyominoes.xml
 libexec/xscreensaver/config/polytopes.xml
@@ -321,6 +325,7 @@ libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
 libexec/xscreensaver/drift
 libexec/xscreensaver/droste
+libexec/xscreensaver/dumpsterfire
 libexec/xscreensaver/dymaxionmap
 libexec/xscreensaver/endgame
 libexec/xscreensaver/energystream
@@ -378,6 +383,7 @@ libexec/xscreensaver/hextrail
 libexec/xscreensaver/highvoltage
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hopalong
+libexec/xscreensaver/hopffibration
 libexec/xscreensaver/hydrostat
 libexec/xscreensaver/hypertorus
 libexec/xscreensaver/hypnowheel
@@ -394,6 +400,7 @@ libexec/xscreensaver/kaleidescope
 libexec/xscreensaver/kaleidocycle
 libexec/xscreensaver/kallisti
 libexec/xscreensaver/klein
+libexec/xscreensaver/klondike
 libexec/xscreensaver/kumppa
 libexec/xscreensaver/lament
 libexec/xscreensaver/lavalite
@@ -434,6 +441,7 @@ libexec/xscreensaver/photopile
 libexec/xscreensaver/piecewise
 libexec/xscreensaver/pinion
 libexec/xscreensaver/pipes
+libexec/xscreensaver/platonicfolding
 libexec/xscreensaver/polyhedra
 libexec/xscreensaver/polyominoes
 libexec/xscreensaver/polytopes
@@ -644,6 +652,7 @@ man/man6/hextrail.6
 man/man6/highvoltage.6
 man/man6/hilbert.6
 man/man6/hopalong.6
+man/man6/hopffibration.6
 man/man6/hydrostat.6
 man/man6/hypertorus.6
 man/man6/hypnowheel.6
@@ -699,6 +708,7 @@ man/man6/photopile.6
 man/man6/piecewise.6
 man/man6/pinion.6
 man/man6/pipes.6
+man/man6/platonicfolding.6
 man/man6/polyhedra.6
 man/man6/polyominoes.6
 man/man6/polytopes.6
