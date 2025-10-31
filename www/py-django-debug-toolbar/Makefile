@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/05/12 13:07:23 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/10/31 08:37:48 adam Exp $
 
-DISTNAME=	django_debug_toolbar-5.2.0
+DISTNAME=	django_debug_toolbar-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-debug-toolbar/}

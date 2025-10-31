@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/01/14 08:12:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/10/31 08:37:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -79,6 +79,15 @@ ${PYSITELIB}/debug_toolbar/management/commands/debugsqlshell.pyo
 ${PYSITELIB}/debug_toolbar/middleware.py
 ${PYSITELIB}/debug_toolbar/middleware.pyc
 ${PYSITELIB}/debug_toolbar/middleware.pyo
+${PYSITELIB}/debug_toolbar/migrations/0001_initial.py
+${PYSITELIB}/debug_toolbar/migrations/0001_initial.pyc
+${PYSITELIB}/debug_toolbar/migrations/0001_initial.pyo
+${PYSITELIB}/debug_toolbar/migrations/__init__.py
+${PYSITELIB}/debug_toolbar/migrations/__init__.pyc
+${PYSITELIB}/debug_toolbar/migrations/__init__.pyo
+${PYSITELIB}/debug_toolbar/models.py
+${PYSITELIB}/debug_toolbar/models.pyc
+${PYSITELIB}/debug_toolbar/models.pyo
 ${PYSITELIB}/debug_toolbar/panels/__init__.py
 ${PYSITELIB}/debug_toolbar/panels/__init__.pyc
 ${PYSITELIB}/debug_toolbar/panels/__init__.pyo
@@ -88,6 +97,9 @@ ${PYSITELIB}/debug_toolbar/panels/alerts.pyo
 ${PYSITELIB}/debug_toolbar/panels/cache.py
 ${PYSITELIB}/debug_toolbar/panels/cache.pyc
 ${PYSITELIB}/debug_toolbar/panels/cache.pyo
+${PYSITELIB}/debug_toolbar/panels/community.py
+${PYSITELIB}/debug_toolbar/panels/community.pyc
+${PYSITELIB}/debug_toolbar/panels/community.pyo
 ${PYSITELIB}/debug_toolbar/panels/headers.py
 ${PYSITELIB}/debug_toolbar/panels/headers.pyc
 ${PYSITELIB}/debug_toolbar/panels/headers.pyo
@@ -157,6 +169,9 @@ ${PYSITELIB}/debug_toolbar/panels/timer.pyo
 ${PYSITELIB}/debug_toolbar/panels/versions.py
 ${PYSITELIB}/debug_toolbar/panels/versions.pyc
 ${PYSITELIB}/debug_toolbar/panels/versions.pyo
+${PYSITELIB}/debug_toolbar/sanitize.py
+${PYSITELIB}/debug_toolbar/sanitize.pyc
+${PYSITELIB}/debug_toolbar/sanitize.pyo
 ${PYSITELIB}/debug_toolbar/settings.py
 ${PYSITELIB}/debug_toolbar/settings.pyc
 ${PYSITELIB}/debug_toolbar/settings.pyo
@@ -167,12 +182,16 @@ ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/redirect.js
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/timer.js
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/toolbar.js
 ${PYSITELIB}/debug_toolbar/static/debug_toolbar/js/utils.js
+${PYSITELIB}/debug_toolbar/store.py
+${PYSITELIB}/debug_toolbar/store.pyc
+${PYSITELIB}/debug_toolbar/store.pyo
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/base.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/panel_button.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/panel_content.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/theme_selector.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/alerts.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/cache.html
+${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/community.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/headers.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history_tr.html
