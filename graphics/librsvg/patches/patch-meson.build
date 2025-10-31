@@ -1,0 +1,17 @@
+$NetBSD: patch-meson.build,v 1.1 2025/10/31 12:29:12 jperkin Exp $
+
+Disable libsocket handling on SunOS.  meson cannot handle the fact that this
+library is not provided by pkg-config and refuses to build gdk-pixbuf-loader.
+We already just link against it directly anyway.
+
+--- meson.build.orig	2025-10-31 12:18:21.436321061 +0000
++++ meson.build
+@@ -177,7 +177,7 @@ m_dep = cc.find_library('m', required: f
+ # into '-lsocket' and '-lnsl'.  Anything that calls socketpair(), getifaddr(),
+ # etc. probably needs to include network_deps
+ #
+-if host_system == 'sunos'
++if host_system == 'meson-dependencies-are-broken'
+   network_deps = [
+     cc.find_library('socket', required: false),
+   ]
