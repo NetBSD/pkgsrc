@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2022/12/04 19:04:21 he Exp $
+$NetBSD: distinfo,v 1.5 2025/10/31 15:05:37 ryoon Exp $
 
 BLAKE2s (gdb-7.11.tar.gz) = 249d7d148c5aa36e9040ddbafb515f4c4959d604d2e87be0f6fefcd68011617d
 SHA512 (gdb-7.11.tar.gz) = 6854774bba73ecf02c4d8bb4e194b8fd8fd3c6c661cbead0b3b816b9d9f736df1b85f331a669808700b0ad0f945b58483fffb77d49f5b690e828a00f65c04893
@@ -10,4 +10,6 @@ SHA1 (patch-gdb_bsd-kvm.c) = 0bf346f12a0cb91cbcbd7e849ce0ec982be62a71
 SHA1 (patch-gdb_common_common-defs.h) = 5be634e1657da574908cfef60717bd1fea7a2e31
 SHA1 (patch-gdb_ppcnbsd-nat.c) = 94c9f552fd00e3641e7a0fa8372de538b4571d0b
 SHA1 (patch-opcodes_i386-dis_c) = 57b2b2ce85567faf112ec9f435b9aed0ffc943fb
+SHA1 (patch-readline_rltty.c) = cd4a690ec23bb72f8418f271d3977b30be5efd4e
+SHA1 (patch-readline_terminal.c) = 14ddd15ec601667bd89c6481d7c3a2c681ae6c97
 SHA1 (patch-sim_ppc_emul_netbsd.c) = 34fcb884c3c82e8eae6cd6f8c87ce42e9354c347
