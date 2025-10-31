@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.132 2025/09/15 15:05:08 adam Exp $
+$NetBSD: distinfo,v 1.133 2025/10/31 15:40:09 jperkin Exp $
 
 BLAKE2s (mkvtoolnix-95.0.tar.xz) = faeaefcbeb07d6062781841a886652282b34c9ad14525357959bdf73050f192e
 SHA512 (mkvtoolnix-95.0.tar.xz) = e8aaccd4fb7a4cd11fadbfff230df85c68ea8af60f9c51536cb11c2bb58cce823b52e47123aa829414a776baeeb91ebfab81bf67075c387fb87171e63c1b014f
@@ -6,3 +6,4 @@ Size (mkvtoolnix-95.0.tar.xz) = 11746244 bytes
 SHA1 (patch-Rakefile) = 64033bb6ade6ab6b09f0174ff1200555fee8db49
 SHA1 (patch-configure) = 6e3771027ed420db7e70732e92bfd42d89e3aeb2
 SHA1 (patch-src_common_locale.cpp) = 0c76a67c1ba65336e2d98d8e62cfc9624df9d223
+SHA1 (patch-src_input_r__qtmp4.cpp) = a2c4fe499866fba6f4315b1b6526584656805ed9
