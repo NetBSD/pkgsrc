@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.646 2025/10/30 11:08:22 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.647 2025/10/31 09:48:45 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28764,3 +28764,6 @@ rt5>=5.0.4<5.0.9	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2025-
 sqlite3<3.50.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-52099
 vault<1.21.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2025-11621
 vault<1.21.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12044
+py{27,39,310,311,312,313,314}-brotli<1.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6176
+qt5-qtconnectivity<5.15.19	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
+qt6-qtconnectivity<6.9.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2025-23050
