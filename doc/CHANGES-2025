@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6383 2025/10/31 09:50:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6384 2025/10/31 10:25:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9236,3 +9236,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/sdl12-compat to 1.2.70 [adam 2025-10-31]
 	Updated www/py-django-registration to 5.2.1 [adam 2025-10-31]
 	Updated www/py-django-reversion to 6.0.0 [adam 2025-10-31]
+	Updated devel/py-uv to 0.9.7 [adam 2025-10-31]
+	Updated devel/py-uv-build to 0.9.7 [adam 2025-10-31]
