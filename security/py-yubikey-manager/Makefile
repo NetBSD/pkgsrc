@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2025/10/09 07:57:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/10/31 14:56:39 ryoon Exp $
 
 .include "../../security/ykman/version.mk"
 
 DISTNAME=	yubikey_manager-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubikey-manager
@@ -24,6 +23,9 @@ DEPENDS+=	${PYPKGPREFIX}-scard>=2:../../devel/py-scard
 DEPENDS+=	${PYPKGPREFIX}-keyring>=23.4:../../security/py-keyring
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
+
+pre-configure:
+	${RM} ${WRKSRC}/ykman/hid/*.orig
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
