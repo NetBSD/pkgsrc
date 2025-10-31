@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/14 12:39:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/10/31 11:48:44 adam Exp $
 bin/patiencediff-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,11 +13,11 @@ ${PYSITELIB}/patiencediff/__init__.pyo
 ${PYSITELIB}/patiencediff/__main__.py
 ${PYSITELIB}/patiencediff/__main__.pyc
 ${PYSITELIB}/patiencediff/__main__.pyo
-${PYSITELIB}/patiencediff/_patiencediff_c.pyi
-${PYSITELIB}/patiencediff/_patiencediff_c.so
 ${PYSITELIB}/patiencediff/_patiencediff_py.py
 ${PYSITELIB}/patiencediff/_patiencediff_py.pyc
 ${PYSITELIB}/patiencediff/_patiencediff_py.pyo
+${PYSITELIB}/patiencediff/_patiencediff_rs.pyi
+${PYSITELIB}/patiencediff/_patiencediff_rs.so
 ${PYSITELIB}/patiencediff/py.typed
 ${PYSITELIB}/patiencediff/test_patiencediff.py
 ${PYSITELIB}/patiencediff/test_patiencediff.pyc
