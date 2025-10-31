@@ -1,23 +1,29 @@
-# $NetBSD: options.mk,v 1.1 2025/08/20 16:47:24 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2025/10/31 22:44:40 hauke Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libvips
-PKG_SUPPORTED_OPTIONS=	tiff introspection
-PKG_SUGGESTED_OPTIONS=
+PKG_SUPPORTED_OPTIONS=	introspection x11
+PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
-# meson will find libs if they are installed,
-# so it makes sense to explicitly disabled them
-# if they are not going to be used
+PLIST_VARS+=	x11
 
-.if !empty(PKG_OPTIONS:Mtiff)
-.include "../../graphics/tiff/buildlink3.mk"
-.else
-MESON_ARGS+= -Dtiff=disabled
-.endif
+# meson will find libs if they are installed,
+# so it makes sense to explicitly disable them
+# if they are not going to be used
 
 .if !empty(PKG_OPTIONS:Mintrospection)
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .else
-MESON_ARGS+= -Dintrospection=disabled
+MESON_ARGS+=	-Dintrospection=disabled
+.endif
+
+.if !empty(PKG_OPTIONS:Mx11)
+PLIST.x11=	yes
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../print/poppler/buildlink3.mk"
+.else
+MESON_ARGS+=	-Drsvg=disabled
+MESON_ARGS+=	-Dpoppler=disabled
+MESON_ARGS+=	-Dpoppler-module=disabled
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/10/23 20:37:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/10/31 22:44:40 hauke Exp $
 
 BUILDLINK_TREE+=	libvips
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.libvips?=	../../graphics/libvips
 
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .endif	# LIBVIPS_BUILDLINK3_MK
