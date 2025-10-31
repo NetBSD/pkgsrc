@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.111 2025/10/23 20:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/10/31 21:46:23 adam Exp $
 
-DISTNAME=	gpac-1.0.1
-PKGREVISION=	29
+DISTNAME=	gpac-2.4.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +14,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake grep gsed pkg-config
 # not really GNU configure, but close enough
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-opt
 CONFIGURE_ARGS+=	--disable-wx
 CONFIGURE_ARGS+=	--enable-pic
 CONFIGURE_ARGS+=	--extra-cflags="${CFLAGS}"
@@ -30,29 +30,28 @@ pre-build:
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	darwin notdarwin
 .if ${SHLIB_TYPE} == "dylib"
-PLIST.darwin=	yes
 PLIST_SUBST+=	LIBEXT=dylib
 post-install:
 	cd ${DESTDIR}${PREFIX} && find lib/gpac -name "*.dylib" | while read lib; do \
 		install_name_tool -id ${PREFIX}/$${lib} $${lib}; \
 	done
 .else
-PLIST.notdarwin=	yes
 PLIST_SUBST+=		LIBEXT=so
 .endif
 
 .include "options.mk"
+
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
