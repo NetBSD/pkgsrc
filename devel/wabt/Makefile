@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/04/01 05:22:07 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/10/31 21:49:35 adam Exp $
 
-DISTNAME=	wabt-1.0.37
+DISTNAME=	wabt-1.0.38
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=WebAssembly/}
 
