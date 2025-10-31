@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/04/14 14:16:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/10/31 09:50:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -92,6 +92,9 @@ ${PYSITELIB}/reversion/templates/reversion/object_history.html
 ${PYSITELIB}/reversion/templates/reversion/recover_form.html
 ${PYSITELIB}/reversion/templates/reversion/recover_list.html
 ${PYSITELIB}/reversion/templates/reversion/revision_form.html
+${PYSITELIB}/reversion/utils.py
+${PYSITELIB}/reversion/utils.pyc
+${PYSITELIB}/reversion/utils.pyo
 ${PYSITELIB}/reversion/views.py
 ${PYSITELIB}/reversion/views.pyc
 ${PYSITELIB}/reversion/views.pyo
