@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2022/12/02 18:43:18 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.14 2025/10/31 08:35:03 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/django_extensions/__init__.py
 ${PYSITELIB}/django_extensions/__init__.pyc
 ${PYSITELIB}/django_extensions/__init__.pyo
@@ -206,9 +206,6 @@ ${PYSITELIB}/django_extensions/management/commands/merge_model_instances.pyo
 ${PYSITELIB}/django_extensions/management/commands/notes.py
 ${PYSITELIB}/django_extensions/management/commands/notes.pyc
 ${PYSITELIB}/django_extensions/management/commands/notes.pyo
-${PYSITELIB}/django_extensions/management/commands/pipchecker.py
-${PYSITELIB}/django_extensions/management/commands/pipchecker.pyc
-${PYSITELIB}/django_extensions/management/commands/pipchecker.pyo
 ${PYSITELIB}/django_extensions/management/commands/print_settings.py
 ${PYSITELIB}/django_extensions/management/commands/print_settings.pyc
 ${PYSITELIB}/django_extensions/management/commands/print_settings.pyo
@@ -251,6 +248,9 @@ ${PYSITELIB}/django_extensions/management/commands/set_fake_passwords.pyo
 ${PYSITELIB}/django_extensions/management/commands/shell_plus.py
 ${PYSITELIB}/django_extensions/management/commands/shell_plus.pyc
 ${PYSITELIB}/django_extensions/management/commands/shell_plus.pyo
+${PYSITELIB}/django_extensions/management/commands/show_permissions.py
+${PYSITELIB}/django_extensions/management/commands/show_permissions.pyc
+${PYSITELIB}/django_extensions/management/commands/show_permissions.pyo
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.py
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.pyc
 ${PYSITELIB}/django_extensions/management/commands/show_template_tags.pyo
@@ -326,6 +326,7 @@ ${PYSITELIB}/django_extensions/mongodb/fields/json.pyo
 ${PYSITELIB}/django_extensions/mongodb/models.py
 ${PYSITELIB}/django_extensions/mongodb/models.pyc
 ${PYSITELIB}/django_extensions/mongodb/models.pyo
+${PYSITELIB}/django_extensions/py.typed
 ${PYSITELIB}/django_extensions/settings.py
 ${PYSITELIB}/django_extensions/settings.pyc
 ${PYSITELIB}/django_extensions/settings.pyo
@@ -337,6 +338,9 @@ ${PYSITELIB}/django_extensions/static/django_extensions/js/jquery.bgiframe.js
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/digraph.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/label.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018/relation.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018style/digraph.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018style/label.dot
+${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/django2018style/relation.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/digraph.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/label.dot
 ${PYSITELIB}/django_extensions/templates/django_extensions/graph_models/original/relation.dot
