@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4537 2025/10/12 17:49:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4538 2025/10/31 09:35:55 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -244,6 +244,7 @@ SUBDIR+=	cargo-outdated
 SUBDIR+=	cargo-release
 SUBDIR+=	cargo-upgrades
 SUBDIR+=	cargo-zigbuild
+SUBDIR+=	carwash
 SUBDIR+=	catch
 SUBDIR+=	catch2
 SUBDIR+=	cbindgen
