@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6393 2025/10/31 21:49:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6394 2025/10/31 22:44:52 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9254,3 +9254,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gdb7 to 7.11nb12 [ryoon 2025-10-31]
 	Updated multimedia/gpac to 2.4.0 [adam 2025-10-31]
 	Updated devel/wabt to 1.0.38 [adam 2025-10-31]
+	Updated graphics/libvips to 8.17.2 [hauke 2025-10-31]
