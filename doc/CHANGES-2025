@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6408 2025/11/01 18:41:54 leot Exp $
+$NetBSD: CHANGES-2025,v 1.6409 2025/11/01 22:29:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9269,3 +9269,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xterm to 403 [pin 2025-11-01]
 	Updated misc/less to 685 [pin 2025-11-01]
 	Updated net/mitmproxy to 12.2.0 [leot 2025-11-01]
+	Updated textproc/libzim to 9.4.0 [wiz 2025-11-01]
