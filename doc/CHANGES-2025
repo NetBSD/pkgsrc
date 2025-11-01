@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6401 2025/11/01 15:30:57 roy Exp $
+$NetBSD: CHANGES-2025,v 1.6402 2025/11/01 16:46:05 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9262,3 +9262,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-gnssutils to 1.1.19 [gdt 2025-11-01]
 	Updated x11/libxfce4ui to 4.20.2 [gutteridge 2025-11-01]
 	Updated devel/py-hg-fastimport to 0.1.2 [roy 2025-11-01]
+	Updated x11/libxfce4windowing to 4.20.4 [gutteridge 2025-11-01]
