@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2025/07/04 08:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/11/01 02:38:00 wen Exp $
 
-DISTNAME=	Data-Integer-0.006
+DISTNAME=	Data-Integer-0.007
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 
@@ -13,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Data/Integer/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
