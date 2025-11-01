@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.648 2025/10/31 22:00:38 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.649 2025/11/01 10:04:07 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28779,3 +28779,4 @@ python311<3.11.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-60
 python312<3.12.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 python313<3.13.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
+qemu-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12464
