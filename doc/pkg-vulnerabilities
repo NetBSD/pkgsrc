@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.649 2025/11/01 10:04:07 leot Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.650 2025/11/01 10:36:33 leot Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28780,3 +28780,44 @@ python312<3.12.13	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-60
 python313<3.13.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 python314<3.14.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-6075
 qemu-[0-9]*		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2025-12464
+gsl-[0-9]*		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-50610
+gsoap<2.8.133		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-4227
+gst-rtsp-server<1.24.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-44331
+gstreamer1<1.24.0	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-0444
+gstreamer1<1.24.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2024-47537
+gstreamer1<1.24.10	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-47538
+gstreamer1<1.24.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2024-47539
+gstreamer1<1.24.10	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47540
+gstreamer1<1.24.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2024-47541
+gstreamer1<1.24.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-47542
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47543
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47544
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47545
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47546
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47596
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47597
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47598
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47599
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47600
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47601
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47602
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47603
+gstreamer1<1.24.10	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-47606
+gstreamer1<1.24.10	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-47607
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47613
+gstreamer1<1.24.10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2024-47615
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47774
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47775
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47776
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47777
+gstreamer1<1.24.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-47778
+gstreamer1<1.24.10	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2024-47834
+gstreamer1<1.24.10	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2024-47835
+# Gstreamer Installer, not used by pkgsrc
+#gstreamer1-[0-9]*	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-2759
+gstreamer1<1.26.1	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2025-3887
+gstreamer1<1.222.4	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-37327
+gstreamer1<1.22.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38103
+gstreamer1<1.22.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-38104
+gstreamer1<1.22.8	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-50186
+gtar-base<1.35		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39804
