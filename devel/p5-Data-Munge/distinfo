@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/12/16 10:20:07 mef Exp $
+$NetBSD: distinfo,v 1.11 2025/11/01 02:40:41 wen Exp $
 
-BLAKE2s (Data-Munge-0.10.tar.gz) = 267f1a52c0de8386bed743366f54b5a21130568099d406de929ca21875c32b05
-SHA512 (Data-Munge-0.10.tar.gz) = 50cd7e9cb448cb09b2cc6ba4a52f1a688fb2a4901a97366754fb0a2afc0a64bb291408791755d62c04cb8c6fd7ccd97f9b55b93b1696cd01efd3ff8ec95dc797
-Size (Data-Munge-0.10.tar.gz) = 9653 bytes
+BLAKE2s (Data-Munge-0.111.tar.gz) = b59db423d131f2541292b3a05c50de6c3ff4fe34de11833f128488707b0d5da0
+SHA512 (Data-Munge-0.111.tar.gz) = e09c62bf321b98b44a17c1991b31d7c5925f7aae5be36166596628d1257a57b42e58ca169208361e05e99a768b7c71cfb706a37d2e5d3657ea6171123fa512f6
+Size (Data-Munge-0.111.tar.gz) = 10586 bytes
