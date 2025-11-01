@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/10/11 20:13:38 pin Exp $
+# $NetBSD: Makefile,v 1.36 2025/11/01 18:00:11 pin Exp $
 
-DISTNAME=	less-679
+DISTNAME=	less-685
 CATEGORIES=	misc
 MASTER_SITES=	http://www.greenwoodsoftware.com/less/
 
