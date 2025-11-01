@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/09/04 13:47:07 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/01 12:54:29 gdt Exp $
 bin/gnssmqttclient
 bin/gnssntripclient
 bin/gnssserver
@@ -33,6 +33,9 @@ ${PYSITELIB}/pygnssutils/gnssntripclient.pyo
 ${PYSITELIB}/pygnssutils/gnssntripclient_cli.py
 ${PYSITELIB}/pygnssutils/gnssntripclient_cli.pyc
 ${PYSITELIB}/pygnssutils/gnssntripclient_cli.pyo
+${PYSITELIB}/pygnssutils/gnssreader.py
+${PYSITELIB}/pygnssutils/gnssreader.pyc
+${PYSITELIB}/pygnssutils/gnssreader.pyo
 ${PYSITELIB}/pygnssutils/gnssserver.py
 ${PYSITELIB}/pygnssutils/gnssserver.pyc
 ${PYSITELIB}/pygnssutils/gnssserver.pyo
