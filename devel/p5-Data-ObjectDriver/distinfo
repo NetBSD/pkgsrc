@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/06/27 02:24:59 wen Exp $
+$NetBSD: distinfo,v 1.11 2025/11/01 02:48:34 wen Exp $
 
-BLAKE2s (Data-ObjectDriver-0.22.tar.gz) = 0a8dfe6ed29d7e49b75e1c592e917b43728e1c166977674c88a4fef20b801c73
-SHA512 (Data-ObjectDriver-0.22.tar.gz) = d1bdb4c549e78ab8d5c85785e1e8ccd7e08abca6aa80e437b88a2c489cd7dcf273392b7abf5d6e5dc54c363798f956918af2d4665052ed718cba4b424f392fb4
-Size (Data-ObjectDriver-0.22.tar.gz) = 92523 bytes
+BLAKE2s (Data-ObjectDriver-0.26.tar.gz) = a714d43ac645b0f73ca911aedbfd4bcea2aae0652f8e4191582ad79c2ccb5d0c
+SHA512 (Data-ObjectDriver-0.26.tar.gz) = 88c1dc224a7f7d27386a9c40de5b9ab8d19724f547db64f49baaaaf8931a80820d2a5dd00498d1e729487cb4f0b86e05a8ff42a9dbbec847dc6d6140136c6be4
+Size (Data-ObjectDriver-0.26.tar.gz) = 97635 bytes
