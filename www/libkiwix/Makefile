@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/10/05 19:26:26 js Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/01 22:30:38 wiz Exp $
 
-DISTNAME=	libkiwix-14.0.0
-PKGREVISION=	1
+DISTNAME=	libkiwix-14.1.0
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kiwix/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -27,6 +26,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libzim+=	libzim>=9.4.0
 .include "../../textproc/libzim/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../www/libmicrohttpd/buildlink3.mk"
