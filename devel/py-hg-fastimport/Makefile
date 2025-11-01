@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2025/04/30 14:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/11/01 15:30:18 roy Exp $
 
-DISTNAME=	hg-fastimport-0.1.1
+DISTNAME=	hg-fastimport-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	devel
-# Temporary home until I can host it somewhere
-MASTER_SITES=	https://www.netbsd.org/~roy
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-fastimport/-/archive/0.1.2/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	https://wiki.mercurial-scm.org/FastImportExtension
