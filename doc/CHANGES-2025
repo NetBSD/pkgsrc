@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6396 2025/11/01 02:41:31 wen Exp $
+$NetBSD: CHANGES-2025,v 1.6397 2025/11/01 02:49:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9257,3 +9257,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libvips to 8.17.2 [hauke 2025-10-31]
 	Updated devel/p5-Data-Integer to 0.007 [wen 2025-11-01]
 	Updated devel/p5-Data-Munge to 0.111 [wen 2025-11-01]
+	Updated devel/p5-Data-ObjectDriver to 0.26 [wen 2025-11-01]
