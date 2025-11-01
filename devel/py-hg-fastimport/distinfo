@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/04/30 14:06:13 roy Exp $
+$NetBSD: distinfo,v 1.10 2025/11/01 15:30:18 roy Exp $
 
-BLAKE2s (hg-fastimport-0.1.1.tar.xz) = a237e1521b4470f2e65436681ccd34ed9e99fa697e6bd3c27cd5b9098baf9550
-SHA512 (hg-fastimport-0.1.1.tar.xz) = 98d03f30630fcbbd607d34ef817433578315096c32ce7a6328e0e3d16107df2e01d622cff21aef0bd31e791a1e7fb806300ec347f94d9b2722b4aaede1a4a26d
-Size (hg-fastimport-0.1.1.tar.xz) = 44836 bytes
+BLAKE2s (hg-fastimport-0.1.2.tar.bz2) = a4b481f21fad5005fb32620a4c469783954d1c2c9a853d5383df1a3008a11813
+SHA512 (hg-fastimport-0.1.2.tar.bz2) = 94f1f89924294bbbc3022ed90154da41889d47eb79850c18fb88f870ff49e3625e9d9ee7eaf54b5ce1c58c0ecfce1c08f540c2b312bbbc90586d560ab1c7f793
+Size (hg-fastimport-0.1.2.tar.bz2) = 47651 bytes
