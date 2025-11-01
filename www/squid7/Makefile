@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.1.2.1 2025/10/23 03:25:18 maya Exp $
+# $NetBSD: Makefile,v 1.1.2.2 2025/11/01 03:12:05 maya Exp $
 
-VERSION=	7.2
 DISTNAME=	squid-${VERSION}
-
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=squid-cache/}squid/releases/download/SQUID_${VERSION:S/./_/g}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 LICENSE=	gnu-gpl-v2
+
+VERSION=	7.3
 
 # GCC 7 fails even with c++17
 # src/ipc/TypedMsgHdr.h fails with
@@ -53,7 +53,7 @@ REPLACE_PERL+=		contrib/url-normalizer.pl contrib/user-agents.pl \
 			scripts/calc-must-ids.pl scripts/check_cache.pl \
 			scripts/fileno-to-pathname.pl scripts/find-alive.pl \
 			scripts/flag_truncs.pl scripts/icp-test.pl \
-			scripts/icpserver.pl scripts/tcp-banger.pl \
+			scripts/icpserver.pl \
 			scripts/trace-job.pl scripts/trace-master.pl \
 			scripts/udp-banger.pl scripts/upgrade-1.0-store.pl \
 			tools/helper-ok-dying.pl tools/helper-ok.pl
