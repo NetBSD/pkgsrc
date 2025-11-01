@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6411 2025/11/01 22:32:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6412 2025/11/01 22:44:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9272,3 +9272,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libzim to 9.4.0 [wiz 2025-11-01]
 	Updated www/libkiwix to 14.1.0 [wiz 2025-11-01]
 	Updated www/kiwix-tools to 3.8.0 [wiz 2025-11-01]
+	Updated security/mozilla-rootcerts to 1.1.20251029 [wiz 2025-11-01]
