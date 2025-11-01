@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/05/03 10:44:00 leot Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/11/01 18:41:46 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -771,6 +771,9 @@ ${PYSITELIB}/mitmproxy/utils/debug.pyo
 ${PYSITELIB}/mitmproxy/utils/emoji.py
 ${PYSITELIB}/mitmproxy/utils/emoji.pyc
 ${PYSITELIB}/mitmproxy/utils/emoji.pyo
+${PYSITELIB}/mitmproxy/utils/htpasswd.py
+${PYSITELIB}/mitmproxy/utils/htpasswd.pyc
+${PYSITELIB}/mitmproxy/utils/htpasswd.pyo
 ${PYSITELIB}/mitmproxy/utils/human.py
 ${PYSITELIB}/mitmproxy/utils/human.pyc
 ${PYSITELIB}/mitmproxy/utils/human.pyo
