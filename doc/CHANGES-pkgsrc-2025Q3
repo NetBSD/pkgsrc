@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.10 2025/10/23 12:51:23 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2025Q3,v 1.1.2.11 2025/11/01 03:15:12 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2025Q3 branch:
 
@@ -66,3 +66,13 @@ x11/qt5-qtwebkit: Build fix
 
 Pullup ticket #7025 - requested by taca
 databases/redis: Security fix
+
+Pullup ticket #7027 - requested by bsiegert
+www/curl: Bug fix
+www/libcurl-gnutls: Bug fix
+
+Pullup ticket #7029 - requested by bsiegert
+databases/p5-BerkeleyDB: Bug fix
+
+Pullup ticket #7030 - requested by taca
+www/squid7: Bug fix
