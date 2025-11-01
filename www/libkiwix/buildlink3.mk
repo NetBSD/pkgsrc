@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/10/05 19:26:26 js Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/11/01 22:30:38 wiz Exp $
 
 BUILDLINK_TREE+=	libkiwix
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkiwix
 LIBKIWIX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkiwix+=	libkiwix>=14.0.0
-BUILDLINK_ABI_DEPENDS.libkiwix?=		libkiwix>=14.0.0nb1
+BUILDLINK_ABI_DEPENDS.libkiwix?=	libkiwix>=14.0.0nb1
 BUILDLINK_PKGSRCDIR.libkiwix?=		../../www/libkiwix
 
 .include "../../textproc/pugixml/buildlink3.mk"
