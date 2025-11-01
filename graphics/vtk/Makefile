@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/11/01 23:39:42 gdt Exp $
+# $NetBSD: Makefile,v 1.60 2025/11/01 23:49:30 gdt Exp $
 
 DISTNAME=	VTK-9.5.2
 PKGNAME=	${DISTNAME:tl}
@@ -50,7 +50,7 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 PLIST_VARS+=		cocoa opengl
 PLIST_SUBST+=		VTKVER=${VERSION_MINOR}
-PRINT_PLIST_AWK+=	gsub(/${VERSION_MINOR}/, "$${VTKVER}");
+PRINT_PLIST_AWK+=	gsub(/${VERSION_MINOR}/, "$${VTKVER}")
 
 CHECK_PORTABILITY_SKIP+=	Examples/Build/vtkMy/Utilities/Doxygen/doc_makeall.sh.in
 
