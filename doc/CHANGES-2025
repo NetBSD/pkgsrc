@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6404 2025/11/01 17:27:15 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6405 2025/11/01 17:51:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9265,3 +9265,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libxfce4windowing to 4.20.4 [gutteridge 2025-11-01]
 	Updated sysutils/broot to 1.52.0 [pin 2025-11-01]
 	Updated shells/oh-my-posh to 27.4.4 [pin 2025-11-01]
+	Updated devel/feluda to 1.10.2 [pin 2025-11-01]
