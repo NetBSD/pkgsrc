@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/09/27 09:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/11/01 16:15:59 wiz Exp $
 
 DISTNAME=	dnsdist-2.0.1
 PKGREVISION=	1
@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 CONFIGURE_ARGS+=	--with-libedit
 CONFIGURE_ENV+=		LIBEDIT_CFLAGS="-I${BUILDLINK_PREFIX.editlinereadline}/include"
 CONFIGURE_ENV+=		LIBEDIT_LIBS="-L${BUILDLINK_PREFIX.editlinereadline}/lib ${BUILDLINK_LDADD.editlinereadline}"
-.include "../../devel/editline/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-libedit
 .endif
