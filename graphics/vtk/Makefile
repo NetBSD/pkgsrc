@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2025/10/23 20:37:49 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/11/01 23:39:42 gdt Exp $
 
-DISTNAME=	VTK-9.4.1
+DISTNAME=	VTK-9.5.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.vtk.org/files/release/${PKGVERSION_NOREV:R}/
+VERSION_MINOR=	${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 HOMEPAGE=	https://vtk.org/
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS=	ninja-build-[0-9]*:../../devel/ninja-build
 
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -48,8 +48,9 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 # For Darwin
 MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
-PLIST_VARS+=	cocoa opengl
-PLIST_SUBST+=	VTKVER=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
+PLIST_VARS+=		cocoa opengl
+PLIST_SUBST+=		VTKVER=${VERSION_MINOR}
+PRINT_PLIST_AWK+=	gsub(/${VERSION_MINOR}/, "$${VTKVER}");
 
 CHECK_PORTABILITY_SKIP+=	Examples/Build/vtkMy/Utilities/Doxygen/doc_makeall.sh.in
 
