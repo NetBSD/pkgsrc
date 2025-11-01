@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2025/11/01 23:39:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/11/01 23:47:40 gdt Exp $
 bin/vtkProbeOpenGLVersion-${VTKVER}
 include/vtk-${VTKVER}/DICOMAppHelper.h
 include/vtk-${VTKVER}/DICOMCMakeConfig.h
@@ -3622,8 +3622,8 @@ lib/libvtkFiltersAMR-${VTKVER}.so
 lib/libvtkFiltersAMR-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersAMR-${VTKVER}.so.1
 lib/libvtkFiltersCellGrid-${VTKVER}.so
-lib/libvtkFiltersCellGrid-${VTKVER}.so.1
 lib/libvtkFiltersCellGrid-${VTKVER}.so.${VTKVER}
+lib/libvtkFiltersCellGrid-${VTKVER}.so.1
 lib/libvtkFiltersCore-${VTKVER}.so
 lib/libvtkFiltersCore-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersCore-${VTKVER}.so.1
@@ -3643,8 +3643,8 @@ lib/libvtkFiltersGeometry-${VTKVER}.so
 lib/libvtkFiltersGeometry-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersGeometry-${VTKVER}.so.1
 lib/libvtkFiltersGeometryPreview-${VTKVER}.so
-lib/libvtkFiltersGeometryPreview-${VTKVER}.so.1
 lib/libvtkFiltersGeometryPreview-${VTKVER}.so.${VTKVER}
+lib/libvtkFiltersGeometryPreview-${VTKVER}.so.1
 lib/libvtkFiltersHybrid-${VTKVER}.so
 lib/libvtkFiltersHybrid-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersHybrid-${VTKVER}.so.1
@@ -3670,8 +3670,8 @@ lib/libvtkFiltersProgrammable-${VTKVER}.so
 lib/libvtkFiltersProgrammable-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersProgrammable-${VTKVER}.so.1
 lib/libvtkFiltersReduction-${VTKVER}.so
-lib/libvtkFiltersReduction-${VTKVER}.so.1
 lib/libvtkFiltersReduction-${VTKVER}.so.${VTKVER}
+lib/libvtkFiltersReduction-${VTKVER}.so.1
 lib/libvtkFiltersSMP-${VTKVER}.so
 lib/libvtkFiltersSMP-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersSMP-${VTKVER}.so.1
@@ -3685,11 +3685,11 @@ lib/libvtkFiltersStatistics-${VTKVER}.so
 lib/libvtkFiltersStatistics-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersStatistics-${VTKVER}.so.1
 lib/libvtkFiltersTemporal-${VTKVER}.so
-lib/libvtkFiltersTemporal-${VTKVER}.so.1
 lib/libvtkFiltersTemporal-${VTKVER}.so.${VTKVER}
+lib/libvtkFiltersTemporal-${VTKVER}.so.1
 lib/libvtkFiltersTensor-${VTKVER}.so
-lib/libvtkFiltersTensor-${VTKVER}.so.1
 lib/libvtkFiltersTensor-${VTKVER}.so.${VTKVER}
+lib/libvtkFiltersTensor-${VTKVER}.so.1
 lib/libvtkFiltersTexture-${VTKVER}.so
 lib/libvtkFiltersTexture-${VTKVER}.so.${VTKVER}
 lib/libvtkFiltersTexture-${VTKVER}.so.1
@@ -3721,8 +3721,8 @@ lib/libvtkIOCONVERGECFD-${VTKVER}.so
 lib/libvtkIOCONVERGECFD-${VTKVER}.so.${VTKVER}
 lib/libvtkIOCONVERGECFD-${VTKVER}.so.1
 lib/libvtkIOCellGrid-${VTKVER}.so
-lib/libvtkIOCellGrid-${VTKVER}.so.1
 lib/libvtkIOCellGrid-${VTKVER}.so.${VTKVER}
+lib/libvtkIOCellGrid-${VTKVER}.so.1
 lib/libvtkIOCesium3DTiles-${VTKVER}.so
 lib/libvtkIOCesium3DTiles-${VTKVER}.so.${VTKVER}
 lib/libvtkIOCesium3DTiles-${VTKVER}.so.1
@@ -3736,14 +3736,14 @@ lib/libvtkIOCore-${VTKVER}.so
 lib/libvtkIOCore-${VTKVER}.so.${VTKVER}
 lib/libvtkIOCore-${VTKVER}.so.1
 lib/libvtkIOERF-${VTKVER}.so
-lib/libvtkIOERF-${VTKVER}.so.1
 lib/libvtkIOERF-${VTKVER}.so.${VTKVER}
+lib/libvtkIOERF-${VTKVER}.so.1
 lib/libvtkIOEnSight-${VTKVER}.so
 lib/libvtkIOEnSight-${VTKVER}.so.${VTKVER}
 lib/libvtkIOEnSight-${VTKVER}.so.1
 lib/libvtkIOEngys-${VTKVER}.so
-lib/libvtkIOEngys-${VTKVER}.so.1
 lib/libvtkIOEngys-${VTKVER}.so.${VTKVER}
+lib/libvtkIOEngys-${VTKVER}.so.1
 lib/libvtkIOExodus-${VTKVER}.so
 lib/libvtkIOExodus-${VTKVER}.so.${VTKVER}
 lib/libvtkIOExodus-${VTKVER}.so.1
@@ -3757,11 +3757,11 @@ lib/libvtkIOExportPDF-${VTKVER}.so
 lib/libvtkIOExportPDF-${VTKVER}.so.${VTKVER}
 lib/libvtkIOExportPDF-${VTKVER}.so.1
 lib/libvtkIOFDS-${VTKVER}.so
-lib/libvtkIOFDS-${VTKVER}.so.1
 lib/libvtkIOFDS-${VTKVER}.so.${VTKVER}
+lib/libvtkIOFDS-${VTKVER}.so.1
 lib/libvtkIOFLUENTCFF-${VTKVER}.so
-lib/libvtkIOFLUENTCFF-${VTKVER}.so.1
 lib/libvtkIOFLUENTCFF-${VTKVER}.so.${VTKVER}
+lib/libvtkIOFLUENTCFF-${VTKVER}.so.1
 lib/libvtkIOGeometry-${VTKVER}.so
 lib/libvtkIOGeometry-${VTKVER}.so.${VTKVER}
 lib/libvtkIOGeometry-${VTKVER}.so.1
@@ -3781,8 +3781,8 @@ lib/libvtkIOInfovis-${VTKVER}.so
 lib/libvtkIOInfovis-${VTKVER}.so.${VTKVER}
 lib/libvtkIOInfovis-${VTKVER}.so.1
 lib/libvtkIOLANLX3D-${VTKVER}.so
-lib/libvtkIOLANLX3D-${VTKVER}.so.1
 lib/libvtkIOLANLX3D-${VTKVER}.so.${VTKVER}
+lib/libvtkIOLANLX3D-${VTKVER}.so.1
 lib/libvtkIOLSDyna-${VTKVER}.so
 lib/libvtkIOLSDyna-${VTKVER}.so.${VTKVER}
 lib/libvtkIOLSDyna-${VTKVER}.so.1
@@ -3889,8 +3889,8 @@ lib/libvtkRenderingAnnotation-${VTKVER}.so
 lib/libvtkRenderingAnnotation-${VTKVER}.so.${VTKVER}
 lib/libvtkRenderingAnnotation-${VTKVER}.so.1
 lib/libvtkRenderingCellGrid-${VTKVER}.so
-lib/libvtkRenderingCellGrid-${VTKVER}.so.1
 lib/libvtkRenderingCellGrid-${VTKVER}.so.${VTKVER}
+lib/libvtkRenderingCellGrid-${VTKVER}.so.1
 lib/libvtkRenderingContext2D-${VTKVER}.so
 lib/libvtkRenderingContext2D-${VTKVER}.so.${VTKVER}
 lib/libvtkRenderingContext2D-${VTKVER}.so.1
@@ -3946,8 +3946,8 @@ lib/libvtkRenderingVtkJS-${VTKVER}.so
 lib/libvtkRenderingVtkJS-${VTKVER}.so.${VTKVER}
 lib/libvtkRenderingVtkJS-${VTKVER}.so.1
 lib/libvtkTestingCore-${VTKVER}.so
-lib/libvtkTestingCore-${VTKVER}.so.1
 lib/libvtkTestingCore-${VTKVER}.so.${VTKVER}
+lib/libvtkTestingCore-${VTKVER}.so.1
 lib/libvtkTestingRendering-${VTKVER}.so
 lib/libvtkTestingRendering-${VTKVER}.so.${VTKVER}
 lib/libvtkTestingRendering-${VTKVER}.so.1
@@ -3985,8 +3985,8 @@ lib/libvtksys-${VTKVER}.so
 lib/libvtksys-${VTKVER}.so.${VTKVER}
 lib/libvtksys-${VTKVER}.so.1
 lib/libvtktoken-${VTKVER}.so
-lib/libvtktoken-${VTKVER}.so.1
 lib/libvtktoken-${VTKVER}.so.${VTKVER}
+lib/libvtktoken-${VTKVER}.so.1
 lib/libvtkverdict-${VTKVER}.so
 lib/libvtkverdict-${VTKVER}.so.${VTKVER}
 lib/libvtkverdict-${VTKVER}.so.1
