@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6414 2025/11/01 23:40:03 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6415 2025/11/02 06:02:47 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9275,3 +9275,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/mozilla-rootcerts to 1.1.20251029 [wiz 2025-11-01]
 	Updated security/mozilla-rootcerts-openssl to 2.20 [wiz 2025-11-01]
 	Updated graphics/vtk to 9.5.2 [gdt 2025-11-01]
+	Updated emulators/nono to 1.6.0 [jun 2025-11-02]
