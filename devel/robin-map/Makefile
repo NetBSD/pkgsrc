@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/08/13 06:01:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/02 20:04:12 adam Exp $
 
-DISTNAME=	robin-map-1.4.0
+DISTNAME=	robin-map-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Tessil/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
