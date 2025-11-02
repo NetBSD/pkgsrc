@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2025/10/23 20:36:16 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/11/02 16:12:34 pin Exp $
 
-DISTNAME=	cargo-c-0.10.16
-PKGREVISION=	1
+DISTNAME=	cargo-c-0.10.17
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lu-zero/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,10 +12,10 @@ LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config
 
-RUST_REQ=	1.88.0
+RUST_REQ=	1.89.0
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
+#RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libgit2}/lib
 
 .include "cargo-depends.mk"
 
@@ -32,7 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 
-.include "../../devel/libgit2/buildlink3.mk"
+#.include "../../devel/libgit2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
