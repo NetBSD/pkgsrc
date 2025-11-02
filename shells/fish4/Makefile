@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/11/02 18:44:06 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/11/02 18:45:24 vins Exp $
 
 DISTNAME=	fish-4.1.2
 CATEGORIES=	shells
@@ -10,7 +10,7 @@ SITES.0.2.9-utf32.tar.gz=	${MASTER_SITES}/rust-pcre2/archive/refs/tags/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/fish-shell/fish-shell/
+HOMEPAGE=	https://fishshell.com/
 COMMENT=	User friendly command line shell for UNIX-like operating systems
 LICENSE=	gnu-gpl-v2
 
