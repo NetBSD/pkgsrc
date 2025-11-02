@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6418 2025/11/02 12:39:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6419 2025/11/02 13:14:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9279,3 +9279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added misc/kf6-kuserfeedback version 6.18.0 [markd 2025-11-02]
 	Updated x11/libdrm to 2.4.128 [wiz 2025-11-02]
 	Updated emulators/mame to 0.282 [wiz 2025-11-02]
+	Updated geography/qgis to 3.40.12 [gdt 2025-11-02]
