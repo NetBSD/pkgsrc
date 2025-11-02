@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/10/09 07:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/11/02 20:20:22 adam Exp $
 
-DISTNAME=	owslib-0.34.1
+DISTNAME=	owslib-0.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OWSLib/}
