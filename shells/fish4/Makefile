@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/11/02 19:01:16 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/11/02 20:16:17 vins Exp $
 
 DISTNAME=	fish-4.1.2
 CATEGORIES=	shells
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fishshell.com/
 COMMENT=	User friendly command line shell for UNIX-like operating systems
 LICENSE=	gnu-gpl-v2
-
-CONFLICTS+=	fish-[0-9]*
 
 .include "cargo-depends.mk"
 
