@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6433 2025/11/02 20:05:04 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6434 2025/11/02 20:06:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9296,3 +9296,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth-httplib2 to 0.2.1 [wiz 2025-11-02]
 	Updated databases/redis to 8.2.3 [adam 2025-11-02]
 	Updated devel/robin-map to 1.4.1 [adam 2025-11-02]
+	Updated www/py-nh3 to 0.3.2 [wiz 2025-11-02]
