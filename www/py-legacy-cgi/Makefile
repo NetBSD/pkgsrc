@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/04/23 15:18:14 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/02 19:59:48 wiz Exp $
 
-DISTNAME=	legacy_cgi-2.6.3
+DISTNAME=	legacy_cgi-2.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/legacy_cgi/}
