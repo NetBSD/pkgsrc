@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6443 2025/11/02 21:45:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6444 2025/11/02 23:03:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9311,3 +9311,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-widgetsnbextension to 4.0.15 [adam 2025-11-02]
 	Updated www/py-ipywidgets to 8.1.8 [adam 2025-11-02]
 	Updated www/py-jupyterlab-widgets to 3.0.16 [adam 2025-11-02]
+	Updated audio/musescore to 4.6.3 [gutteridge 2025-11-02]
