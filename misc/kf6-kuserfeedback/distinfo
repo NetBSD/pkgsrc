@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/02 09:59:20 markd Exp $
+
+BLAKE2s (kuserfeedback-6.18.0.tar.xz) = dba6f9a5d48fd5402ec4402646f218736108dd15ffca57435f79ae61ad55987b
+SHA512 (kuserfeedback-6.18.0.tar.xz) = d936c4da0bbebf7981b5f847bd5ada420061424df8e49472fb253006db9d1df0b66044870815d8298360400c7a8f1c3359d7c419bff8976b9ba2330af6ea4138
+Size (kuserfeedback-6.18.0.tar.xz) = 267360 bytes
