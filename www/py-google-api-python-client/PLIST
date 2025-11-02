@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2025/10/19 18:46:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2025/11/02 19:58:09 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -111,6 +111,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquery.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryconnection.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatapolicy.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatapolicy.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigquerydatatransfer.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryreservation.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/bigqueryreservation.v1alpha2.json
@@ -208,6 +209,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataflow.v1b3.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/dataform.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/dataform.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datafusion.v1beta1.json
