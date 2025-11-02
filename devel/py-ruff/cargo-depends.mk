@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.74 2025/10/30 13:34:27 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.75 2025/11/02 20:15:05 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.1
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -31,7 +31,7 @@ CARGO_CRATE_DEPENDS+=	bitflags-2.9.4
 CARGO_CRATE_DEPENDS+=	bitvec-1.0.1
 CARGO_CRATE_DEPENDS+=	block-buffer-0.10.4
 CARGO_CRATE_DEPENDS+=	boxcar-0.2.14
-CARGO_CRATE_DEPENDS+=	bstr-1.12.0
+CARGO_CRATE_DEPENDS+=	bstr-1.12.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.19.0
 CARGO_CRATE_DEPENDS+=	byteorder-1.5.0
 CARGO_CRATE_DEPENDS+=	cachedir-0.3.1
@@ -47,8 +47,8 @@ CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clang-sys-1.8.1
-CARGO_CRATE_DEPENDS+=	clap-4.5.49
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.49
+CARGO_CRATE_DEPENDS+=	clap-4.5.50
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.50
 CARGO_CRATE_DEPENDS+=	clap_complete-4.5.58
 CARGO_CRATE_DEPENDS+=	clap_complete_command-0.6.1
 CARGO_CRATE_DEPENDS+=	clap_complete_nushell-4.5.8
@@ -128,8 +128,8 @@ CARGO_CRATE_DEPENDS+=	fs-err-2.11.0
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	funty-2.0.0
 CARGO_CRATE_DEPENDS+=	generic-array-0.14.7
-CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.0
-CARGO_CRATE_DEPENDS+=	get-size2-0.7.0
+CARGO_CRATE_DEPENDS+=	get-size-derive2-0.7.1
+CARGO_CRATE_DEPENDS+=	get-size2-0.7.1
 CARGO_CRATE_DEPENDS+=	getopts-0.2.24
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.16
 CARGO_CRATE_DEPENDS+=	getrandom-0.3.4
@@ -157,7 +157,7 @@ CARGO_CRATE_DEPENDS+=	icu_provider-2.0.0
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
 CARGO_CRATE_DEPENDS+=	idna-1.1.0
 CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.1
-CARGO_CRATE_DEPENDS+=	ignore-0.4.23
+CARGO_CRATE_DEPENDS+=	ignore-0.4.24
 CARGO_CRATE_DEPENDS+=	imara-diff-0.1.8
 CARGO_CRATE_DEPENDS+=	imperative-1.0.6
 CARGO_CRATE_DEPENDS+=	indexmap-2.11.4
