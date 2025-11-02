@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6441 2025/11/02 20:30:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6442 2025/11/02 21:17:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9307,3 +9307,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/py-textual to 6.5.0 [wiz 2025-11-02]
 	Updated textproc/py-rapidfuzz to 3.14.3 [adam 2025-11-02]
 	Updated textproc/py-Levenshtein to 0.27.3 [adam 2025-11-02]
+	Updated mail/rspamd to 3.13.2 [wiz 2025-11-02]
