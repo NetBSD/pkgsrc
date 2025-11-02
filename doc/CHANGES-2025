@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6428 2025/11/02 19:52:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6429 2025/11/02 19:58:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9290,3 +9290,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added shells/fish4 version 4.1.2 [vins 2025-11-02]
 	Updated devel/py-confuse to 2.1.0 [wiz 2025-11-02]
 	Updated security/py-cyclonedx-python-lib to 11.5.0 [wiz 2025-11-02]
+	Updated www/py-google-api-python-client to 2.186.0 [wiz 2025-11-02]
