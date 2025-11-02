@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2025/09/21 16:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/11/02 20:18:58 wiz Exp $
 
-DISTNAME=	trio-0.31.0
+DISTNAME=	trio-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -26,8 +26,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-# as of 0.31.0, needs ctrl-c a couple times to finish
-# 11 failed, 804 passed, 73 skipped, 2 xfailed
+# as of 0.32.0, needs ctrl-c a couple times to finish
+# 11 failed, 806 passed, 74 skipped, 3 xfailed
 
 # for tests
 USE_LANGUAGES=	c
