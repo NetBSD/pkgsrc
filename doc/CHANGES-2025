@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6424 2025/11/02 16:36:19 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6425 2025/11/02 18:46:58 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9285,3 +9285,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/fmtlib to 12.1.0 [wiz 2025-11-02]
 	Updated devel/cargo-c to 0.10.17 [pin 2025-11-02]
 	Updated devel/cargo-c to 0.10.18 [pin 2025-11-02]
+	Added shells/fish4 version 4.1.2 [vins 2025-11-02]
