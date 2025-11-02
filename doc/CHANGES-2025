@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6423 2025/11/02 16:12:53 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6424 2025/11/02 16:36:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9284,3 +9284,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libdeflate to 1.25 [wiz 2025-11-02]
 	Updated textproc/fmtlib to 12.1.0 [wiz 2025-11-02]
 	Updated devel/cargo-c to 0.10.17 [pin 2025-11-02]
+	Updated devel/cargo-c to 0.10.18 [pin 2025-11-02]
