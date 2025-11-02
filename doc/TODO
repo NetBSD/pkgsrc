@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.26397 2025/11/02 10:47:03 wiz Exp $
+$NetBSD: TODO,v 1.26398 2025/11/02 12:39:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -888,7 +888,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o magic-8.3.309
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o mame-0.282
 	o man-pages-5.11
 	o manedit-1.2.1
 	o mariadb-12.0
