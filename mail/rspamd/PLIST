@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2025/06/15 16:02:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/11/02 21:17:43 wiz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -15,11 +15,11 @@ man/man1/rspamadm.1
 man/man1/rspamc.1
 man/man8/rspamd.8
 share/examples/rspamd/actions.conf
-share/examples/rspamd/cgp.inc
 share/examples/rspamd/common.conf
 share/examples/rspamd/composites.conf
 share/examples/rspamd/groups.conf
 share/examples/rspamd/lang_detection.inc
+share/examples/rspamd/local.d/antivirus.conf.example
 share/examples/rspamd/local.d/module.conf.example
 share/examples/rspamd/logging.inc
 share/examples/rspamd/lua.local.d/module.lua.example
@@ -160,6 +160,8 @@ share/rspamd/lualib/ansicolors.lua
 share/rspamd/lualib/argparse.lua
 share/rspamd/lualib/fun.lua
 share/rspamd/lualib/global_functions.lua
+share/rspamd/lualib/llm_common.lua
+share/rspamd/lualib/llm_context.lua
 share/rspamd/lualib/lpegre.lua
 share/rspamd/lualib/lua_auth_results.lua
 share/rspamd/lualib/lua_aws.lua
@@ -173,6 +175,7 @@ share/rspamd/lualib/lua_content/ical.lua
 share/rspamd/lualib/lua_content/init.lua
 share/rspamd/lualib/lua_content/pdf.lua
 share/rspamd/lualib/lua_content/vcard.lua
+share/rspamd/lualib/lua_cta.lua
 share/rspamd/lualib/lua_dkim_tools.lua
 share/rspamd/lualib/lua_ffi/common.lua
 share/rspamd/lualib/lua_ffi/dkim.lua
@@ -201,6 +204,7 @@ share/rspamd/lualib/lua_scanners/icap.lua
 share/rspamd/lualib/lua_scanners/init.lua
 share/rspamd/lualib/lua_scanners/kaspersky_av.lua
 share/rspamd/lualib/lua_scanners/kaspersky_se.lua
+share/rspamd/lualib/lua_scanners/metadefender.lua
 share/rspamd/lualib/lua_scanners/oletools.lua
 share/rspamd/lualib/lua_scanners/p0f.lua
 share/rspamd/lualib/lua_scanners/pyzor.lua
@@ -225,6 +229,8 @@ share/rspamd/lualib/lua_verdict.lua
 share/rspamd/lualib/lupa.lua
 share/rspamd/lualib/plugins/dmarc.lua
 share/rspamd/lualib/plugins/neural.lua
+share/rspamd/lualib/plugins/neural/providers/llm.lua
+share/rspamd/lualib/plugins/neural/providers/symbols.lua
 share/rspamd/lualib/plugins/ratelimit.lua
 share/rspamd/lualib/plugins/rbl.lua
 share/rspamd/lualib/plugins_stats.lua
