@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/04/14 19:22:22 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/11/02 21:35:32 adam Exp $
 
-BLAKE2s (widgetsnbextension-4.0.14.tar.gz) = 6461a5216d947acd40eb71b466e509b49d3fbe79b2156e024e3bcca1fa5de6ca
-SHA512 (widgetsnbextension-4.0.14.tar.gz) = 508dca1a24a886609df795c71411bd137726ff348b9d4c021f8e0d83f97bbcf8eb2e8e2359c590c05bdffe65ca84f4fb2f4bcf7dbe5eca74a374c4679ebe6997
-Size (widgetsnbextension-4.0.14.tar.gz) = 1097428 bytes
+BLAKE2s (widgetsnbextension-4.0.15.tar.gz) = 0597c2507f45c189746e8759c2bcf0772d75b33375271773dc9e4e71e9ec8d08
+SHA512 (widgetsnbextension-4.0.15.tar.gz) = f7a9091a6c6462e22be4068749f410f08efb6920e356ffde272d684638bfb2bf075f188bdd634dfcc04038f4ed740062a7caf35714a50c25e89b843f59bc6fe4
+Size (widgetsnbextension-4.0.15.tar.gz) = 1097402 bytes
