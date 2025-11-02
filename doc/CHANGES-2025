@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6436 2025/11/02 20:14:12 vins Exp $
+$NetBSD: CHANGES-2025,v 1.6437 2025/11/02 20:15:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9300,3 +9300,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-lru-dict to 1.4.1 [adam 2025-11-02]
 	Updated devel/py-cwcwidth to 0.1.12 [adam 2025-11-02]
 	Updated mail/opensmtpd to 7.8.0p0 [vins 2025-11-02]
+	Updated devel/py-ruff to 0.14.3 [wiz 2025-11-02]
