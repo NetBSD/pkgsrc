@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.98 2025/08/31 09:57:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.99 2025/11/02 12:39:16 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -448,6 +448,7 @@ share/mame/hash/mo6_cass.xml
 share/mame/hash/mo6_flop.xml
 share/mame/hash/mobigo_cart.xml
 share/mame/hash/monon_color.xml
+share/mame/hash/mpc3000_flop.xml
 share/mame/hash/mpf1_rom.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
@@ -483,6 +484,7 @@ share/mame/hash/mz2500_flop.xml
 share/mame/hash/mz5500_flop.xml
 share/mame/hash/mz700_cass.xml
 share/mame/hash/mz800_cass.xml
+share/mame/hash/mz800_rom.xml
 share/mame/hash/mz80b_cass.xml
 share/mame/hash/mz80b_flop.xml
 share/mame/hash/n64.xml
@@ -512,6 +514,7 @@ share/mame/hash/octopus.xml
 share/mame/hash/ondra.xml
 share/mame/hash/orao.xml
 share/mame/hash/oric1_cass.xml
+share/mame/hash/orina_stylish_plus_cart.xml
 share/mame/hash/orion_cart.xml
 share/mame/hash/orion_cass.xml
 share/mame/hash/orion_flop.xml
@@ -683,6 +686,7 @@ share/mame/hash/st_flop.xml
 share/mame/hash/stepone_flop.xml
 share/mame/hash/studio2.xml
 share/mame/hash/stv.xml
+share/mame/hash/sun_sparc.xml
 share/mame/hash/super6.xml
 share/mame/hash/super80_cass.xml
 share/mame/hash/super80_flop.xml
