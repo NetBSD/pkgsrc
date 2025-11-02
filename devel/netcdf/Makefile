@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2025/10/27 11:28:55 adam Exp $
+# $NetBSD: Makefile,v 1.78 2025/11/02 15:54:34 thor Exp $
 
 DISTNAME=	netcdf-c-4.9.3
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-c-/-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Unidata/}
@@ -18,6 +19,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-doxygen
 CONFIGURE_ARGS+=	--disable-examples
+CONFIGURE_ARGS+=	--enable-logging
 TEST_TARGET=		check
 
 CHECK_PORTABILITY_SKIP+=	ncdap_test/testbasicauth.sh
