@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/10/09 07:57:58 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/11/02 20:29:55 adam Exp $
 
-DISTNAME=	levenshtein-0.27.1
+DISTNAME=	levenshtein-0.27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/l/L/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/levenshtein/}
