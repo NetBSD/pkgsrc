@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/10/09 07:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/11/02 21:37:08 adam Exp $
 
-DISTNAME=	ipywidgets-8.1.7
+DISTNAME=	ipywidgets-8.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipywidgets/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.3:../../net/py-comm
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.1.0:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-jupyterlab-widgets>=3.0.14:../../www/py-jupyterlab-widgets
+DEPENDS+=	${PYPKGPREFIX}-jupyterlab-widgets>=3.0.15:../../www/py-jupyterlab-widgets
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3.1:../../devel/py-traitlets
 DEPENDS+=	${PYPKGPREFIX}-widgetsnbextension>=4.0.14:../../www/py-widgetsnbextension
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
