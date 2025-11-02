@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2003-2024 Tim Kientzle
+ * Copyright (c) 2009 Joerg Sonnenberger
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,29 +22,35 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#include "test.h"
 
-DEFINE_TEST(test_read_filter_gzip_recursive)
-{
-	const char *name = "test_read_filter_gzip_recursive.gz";
-	struct archive *a;
+#ifndef LAFE_ERR_H
+#define LAFE_ERR_H
 
-	if (archive_zlib_version() == NULL) {
-		skipping("zlib not available");
-		return;
-	}
+#if defined(__GNUC__) && (__GNUC__ > 2 || \
+						  (__GNUC__ == 2 && __GNUC_MINOR__ >= 5))
+#define __LA_NORETURN __attribute__((__noreturn__))
+#elif defined(_MSC_VER)
+#define __LA_NORETURN __declspec(noreturn)
+#else
+#define __LA_NORETURN
+#endif
 
-	assert((a = archive_read_new()) != NULL);
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
-	extract_reference_file(name);
-	assertEqualIntA(a, ARCHIVE_FATAL,
-	    archive_read_open_filename(a, name, 200));
+#if defined(__GNUC__) && (__GNUC__ > 2 || \
+			  (__GNUC__ == 2 && __GNUC_MINOR__ >= 7))
+# ifdef __MINGW_PRINTF_FORMAT
+#  define __LA_PRINTF_FORMAT __MINGW_PRINTF_FORMAT
+# else
+#  define __LA_PRINTF_FORMAT __printf__
+# endif
+# define __LA_PRINTFLIKE(f,a)	__attribute__((__format__(__LA_PRINTF_FORMAT, f, a)))
+#else
+# define __LA_PRINTFLIKE(f,a)
+#endif
 
-	/* Verify that the filter detection worked. */
-	assertEqualInt(archive_filter_code(a, 0), ARCHIVE_FILTER_GZIP);
-	assertEqualString(archive_filter_name(a, 0), "gzip");
+void	lafe_warnc(int code, const char *fmt, ...) __LA_PRINTFLIKE(2, 3);
+__LA_NORETURN void	lafe_errc(int eval, int code, const char *fmt, ...) __LA_PRINTFLIKE(3, 4);
 
-	assertEqualInt(ARCHIVE_OK, archive_read_close(a));
-	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
-}
+const char *	lafe_getprogname(void);
+void		lafe_setprogname(const char *name, const char *defaultname);
+
+#endif
