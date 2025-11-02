@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2025/06/02 07:46:53 vins Exp $
+# $NetBSD: Makefile,v 1.666 2025/11/02 09:59:20 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -158,6 +158,7 @@ SUBDIR+=	kf6-kdav
 SUBDIR+=	kf6-kquickcharts
 SUBDIR+=	kf6-kstatusnotifieritem
 SUBDIR+=	kf6-kunitconversion
+SUBDIR+=	kf6-kuserfeedback
 SUBDIR+=	kfind
 SUBDIR+=	kgeography
 SUBDIR+=	khard
