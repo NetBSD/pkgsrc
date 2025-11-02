@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2025/10/23 20:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.261 2025/11/02 21:22:40 wiz Exp $
 
 DISTNAME=	digiKam-8.7.0
 PKGNAME=	${DISTNAME:tl}
@@ -56,7 +56,7 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-# does not provide the library libakonadicontact that digikam 8.4.0 is looking for
+# does not provide the library libakonadicontact that digikam is looking for
 #.include "../../misc/akonadi-contacts/buildlink3.mk"
 .include "../../time/kcalendarcore/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
