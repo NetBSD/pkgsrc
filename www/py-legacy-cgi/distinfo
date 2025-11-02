@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2025/04/23 15:17:44 adam Exp $
+$NetBSD: distinfo,v 1.4 2025/11/02 19:59:48 wiz Exp $
 
-BLAKE2s (legacy_cgi-2.6.3.tar.gz) = 78e46165cbc639b1cde93326b6914d58f656b0ff061d7166ee4406a8a6e62342
-SHA512 (legacy_cgi-2.6.3.tar.gz) = c36601ce88bd44f442b3cfee6070585da456caf84c49258da296ffbd20edc99bb06d5b031c96047db33a61d958812982a251f769932cb184623580da8d67a8de
-Size (legacy_cgi-2.6.3.tar.gz) = 24401 bytes
+BLAKE2s (legacy_cgi-2.6.4.tar.gz) = a20adc13e38d5a6b918a37c19cb67916bc7f666e172dfd7d0cd5429e3e585e03
+SHA512 (legacy_cgi-2.6.4.tar.gz) = daeda7344bd9397c32febbc179e12fc5253ff025f3a56c3d63495a2c6551ebea23f9ea990f89ddf2666e7839a5f4e2dc78d3997970918a0dfa654d101b9464bb
+Size (legacy_cgi-2.6.4.tar.gz) = 24603 bytes
