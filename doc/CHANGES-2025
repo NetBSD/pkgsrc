@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6434 2025/11/02 20:06:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6435 2025/11/02 20:10:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9297,3 +9297,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/redis to 8.2.3 [adam 2025-11-02]
 	Updated devel/robin-map to 1.4.1 [adam 2025-11-02]
 	Updated www/py-nh3 to 0.3.2 [wiz 2025-11-02]
+	Updated devel/py-lru-dict to 1.4.1 [adam 2025-11-02]
+	Updated devel/py-cwcwidth to 0.1.12 [adam 2025-11-02]
