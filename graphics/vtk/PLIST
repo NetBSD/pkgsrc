@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/11/01 23:47:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/11/02 01:04:48 gdt Exp $
 bin/vtkProbeOpenGLVersion-${VTKVER}
 include/vtk-${VTKVER}/DICOMAppHelper.h
 include/vtk-${VTKVER}/DICOMCMakeConfig.h
@@ -805,7 +805,7 @@ include/vtk-${VTKVER}/vtkDuplicatePolyData.h
 include/vtk-${VTKVER}/vtkDynamic2DLabelMapper.h
 include/vtk-${VTKVER}/vtkDynamicLoader.h
 include/vtk-${VTKVER}/vtkEDLShading.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkEGLRenderWindow.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkEGLRenderWindow.h
 include/vtk-${VTKVER}/vtkERFReader.h
 include/vtk-${VTKVER}/vtkEarthSource.h
 include/vtk-${VTKVER}/vtkEdgeCenters.h
@@ -2383,7 +2383,7 @@ include/vtk-${VTKVER}/vtkRenderingLODModule.h
 include/vtk-${VTKVER}/vtkRenderingLabelModule.h
 include/vtk-${VTKVER}/vtkRenderingOpenGL2Module.h
 include/vtk-${VTKVER}/vtkRenderingOpenGLConfigure.h
-include/vtk-${VTKVER}/vtkRenderingQtModule.h
+${PLIST.qt}include/vtk-${VTKVER}/vtkRenderingQtModule.h
 include/vtk-${VTKVER}/vtkRenderingSceneGraphModule.h
 include/vtk-${VTKVER}/vtkRenderingUIModule.h
 include/vtk-${VTKVER}/vtkRenderingVolumeModule.h
@@ -2913,7 +2913,7 @@ include/vtk-${VTKVER}/vtkViewport.h
 include/vtk-${VTKVER}/vtkViewsContext2DModule.h
 include/vtk-${VTKVER}/vtkViewsCoreModule.h
 include/vtk-${VTKVER}/vtkViewsInfovisModule.h
-include/vtk-${VTKVER}/vtkViewsQtModule.h
+${PLIST.qt}include/vtk-${VTKVER}/vtkViewsQtModule.h
 include/vtk-${VTKVER}/vtkVisibilitySort.h
 include/vtk-${VTKVER}/vtkVoidArray.h
 include/vtk-${VTKVER}/vtkVolume.h
@@ -3221,14 +3221,14 @@ include/vtk-${VTKVER}/vtkfmt/vtkfmt/printf.h
 include/vtk-${VTKVER}/vtkfmt/vtkfmt/ranges.h
 include/vtk-${VTKVER}/vtkfmt/vtkfmt/std.h
 include/vtk-${VTKVER}/vtkfmt/vtkfmt/xchar.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkglad/include/EGL/eglplatform.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkglad/include/EGL/eglplatform.h
 include/vtk-${VTKVER}/vtkglad/include/KHR/khrplatform.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkglad/include/glad/egl.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkglad/include/glad/egl.h
 include/vtk-${VTKVER}/vtkglad/include/glad/gl.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkglad/include/glad/glx.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkglad/include/glad/vtk_egl_mangle.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkglad/include/glad/glx.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkglad/include/glad/vtk_egl_mangle.h
 include/vtk-${VTKVER}/vtkglad/include/glad/vtk_gl_mangle.h
-${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkglad/include/glad/vtk_glx_mangle.h
+${PLIST.opengl}include/vtk-${VTKVER}/vtkglad/include/glad/vtk_glx_mangle.h
 include/vtk-${VTKVER}/vtkioss/Ioss_Assembly.h
 include/vtk-${VTKVER}/vtkioss/Ioss_BasisVariableType.h
 include/vtk-${VTKVER}/vtkioss/Ioss_Blob.h
@@ -4006,7 +4006,7 @@ share/licenses/VTK/vtkFiltersParallelImaging/LICENSE
 share/licenses/VTK/vtkFiltersSources/LICENSE
 share/licenses/VTK/vtkFiltersStatistics/LICENSE
 share/licenses/VTK/vtkFiltersVerdict/LICENSE
-share/licenses/VTK/vtkGUISupportQt/LICENSE
+${PLIST.qt}share/licenses/VTK/vtkGUISupportQt/LICENSE
 share/licenses/VTK/vtkGeovisCore/LICENSE
 share/licenses/VTK/vtkIOCore/LICENSE
 share/licenses/VTK/vtkIOExport/LICENSE
@@ -4023,11 +4023,11 @@ share/licenses/VTK/vtkInteractionStyle/LICENSE
 share/licenses/VTK/vtkInteractionWidgets/LICENSE
 share/licenses/VTK/vtkRenderingCore/LICENSE
 share/licenses/VTK/vtkRenderingLabel/LICENSE
-share/licenses/VTK/vtkRenderingQt/LICENSE
+${PLIST.qt}share/licenses/VTK/vtkRenderingQt/LICENSE
 share/licenses/VTK/vtkRenderingVolume/LICENSE
 share/licenses/VTK/vtkViewsCore/LICENSE
 share/licenses/VTK/vtkViewsInfovis/LICENSE
-share/licenses/VTK/vtkViewsQt/LICENSE
+${PLIST.qt}share/licenses/VTK/vtkViewsQt/LICENSE
 share/licenses/VTK/vtkdiy2/LEGAL.txt
 share/licenses/VTK/vtkdiy2/LICENSE.txt
 share/licenses/VTK/vtkexodusII/COPYRIGHT
