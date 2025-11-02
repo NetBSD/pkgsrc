@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6427 2025/11/02 19:50:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6428 2025/11/02 19:52:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9289,3 +9289,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cargo-c to 0.10.18 [pin 2025-11-02]
 	Added shells/fish4 version 4.1.2 [vins 2025-11-02]
 	Updated devel/py-confuse to 2.1.0 [wiz 2025-11-02]
+	Updated security/py-cyclonedx-python-lib to 11.5.0 [wiz 2025-11-02]
