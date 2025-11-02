@@ -1,6 +1,7 @@
 DEFINE_TEST(test_0)
 DEFINE_TEST(test_basic)
 DEFINE_TEST(test_copy)
+DEFINE_TEST(test_crlf_mtree)
 DEFINE_TEST(test_empty_mtree)
 DEFINE_TEST(test_extract_tar_Z)
 DEFINE_TEST(test_extract_tar_bz2)

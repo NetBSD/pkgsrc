@@ -48,7 +48,7 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 ''void'' 
 <br> 
-'''archive_entry_copy_hardlink_w'''(''struct archive_entry *a '', ''const'', ''wchar_t'', ''*path"''); 
+'''archive_entry_copy_hardlink_w'''(''struct archive_entry *a'', ''const wchar_t *path''); 
 <br> 
 ''int'' 
 <br> 
