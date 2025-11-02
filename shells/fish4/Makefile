@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/11/02 18:45:24 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/02 19:01:16 vins Exp $
 
 DISTNAME=	fish-4.1.2
 CATEGORIES=	shells
@@ -51,7 +51,7 @@ TEST_TARGET=		fish_run_tests
 post-patch:
 	@${STEP_MSG} "Patching vendor crates"
 .for i in ${VENDORPATCH}
-	@${STEP_MSG} "Applying pkgsrc patch ${FILESDIR}/${i}"
+	@${STEP_MSG} "Applying pkgsrc patch ${PATCHDIR}/vendor/${i}"
 	${RUN}${CP} ${PATCHDIR}/vendor/${i} ${VENDORSRC}
 	${RUN}cd ${VENDORSRC} && \
 		${PATCH} -b -p0 < ${VENDORSRC}/${i}
