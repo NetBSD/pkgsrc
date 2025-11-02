@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2025/11/02 16:12:34 pin Exp $
+$NetBSD: distinfo,v 1.26 2025/11/02 16:36:01 pin Exp $
 
 BLAKE2s (adler2-2.0.1.crate) = 4d391e0fcde91c7435ee9a5503fee4a5346f549f1b45e482ce3e1e151d90f8f5
 SHA512 (adler2-2.0.1.crate) = 555b2b7ba6f8116acccd0bcd16ed34cc78162c81023cff31a8566ffcd456c03832089fca2d5b668ceaac4fe8f922d31aa9c487f226a36cace294ff4a219bd91d
@@ -78,9 +78,9 @@ Size (bytes-1.10.1.crate) = 76779 bytes
 BLAKE2s (cargo-0.92.0.crate) = 9d649c0d0aad5b7707d000212cfbd986882866d77890ad46184a11dd78bba9bd
 SHA512 (cargo-0.92.0.crate) = a412e39c72227ded20b4b47d2bf82037f4a6904012206ad1268762522f028295783f7c47d6dda7b9ef205977932ea31c56b0049a8d4ab2c68277a4941945227c
 Size (cargo-0.92.0.crate) = 2831003 bytes
-BLAKE2s (cargo-c-0.10.17.tar.gz) = 9bd027e778079f8b25b6509a3229fe78486fd8434153d4e7bfcc6f6e07ae9c12
-SHA512 (cargo-c-0.10.17.tar.gz) = 120b898c0e80fe7c33dd1bbdb6124b58b64edb5cd9b655b23813373ada5a182805c0c8cce147ca835e9db0aeeb432356acf123bcfd0dffd3f597916554d1a734
-Size (cargo-c-0.10.17.tar.gz) = 36746 bytes
+BLAKE2s (cargo-c-0.10.18.tar.gz) = 0f89fe1407a7145dcda87ecc579ac66b9dc1fc042608e9b5e94911a4590b1411
+SHA512 (cargo-c-0.10.18.tar.gz) = 7e01fd4a37a29197fa72effd1423c0aa170d68875e4bd64d4b80aa1ab3ed7e603c429f6c10d1ea431949c89d446293ad6172181014f52ae9d4a133dbba5e7d3a
+Size (cargo-c-0.10.18.tar.gz) = 36779 bytes
 BLAKE2s (cargo-credential-0.4.9.crate) = 06f38f4c420876271f7e72a6d26ecda36a6ca8d85e3c8935e76d67ec55fc7353
 SHA512 (cargo-credential-0.4.9.crate) = 3821ad39ca41044145cd6567f8dcd67b8da6f00d9ae8261798ded97a15246f598448ed58fb3caf85d31e93cf764afcaaf74b4d3c3240fb0e4864d0538005de9b
 Size (cargo-credential-0.4.9.crate) = 20715 bytes
