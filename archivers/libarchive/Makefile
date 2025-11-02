@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/10/11 20:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2025/11/02 08:52:11 adam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	1
 COMMENT=	Library to read/create different archive formats
 
 USE_LIBTOOL=		yes
