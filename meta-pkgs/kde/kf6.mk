@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.9 2025/10/06 09:55:58 markd Exp $
+# $NetBSD: kf6.mk,v 1.10 2025/11/02 10:00:15 markd Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -35,6 +35,7 @@
 # used by misc/kf6-kquickcharts/Makefile
 # used by misc/kf6-kstatusnotifieritem/Makefile
 # used by misc/kf6-kunitconversion/Makefile
+# used by misc/kf6-kuserfeedback/Makefile
 # used by net/kf6-kdnssd/Makefile
 # used by net/kf6-knewstuff/Makefile
 # used by security/kf6-kauth/Makefile
