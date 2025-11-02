@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6420 2025/11/02 13:43:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6421 2025/11/02 13:44:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9281,3 +9281,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/mame to 0.282 [wiz 2025-11-02]
 	Updated geography/qgis to 3.40.12 [gdt 2025-11-02]
 	Updated x11/libxkbcommon to 1.12.3 [wiz 2025-11-02]
+	Updated devel/libdeflate to 1.25 [wiz 2025-11-02]
