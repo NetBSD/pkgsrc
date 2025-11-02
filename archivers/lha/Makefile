@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2025/01/27 19:12:38 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2025/11/02 17:16:39 thor Exp $
 
 DISTNAME=	lha-1.14i-ac20211125
+PKGREVISION=	1
 PKGNAME=	lha-114.9.20211125
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jca02266/}
@@ -22,6 +23,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
+
+FORCE_C_STD=	gnu89
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --install --symlink
