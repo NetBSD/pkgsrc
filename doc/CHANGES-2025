@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6416 2025/11/02 10:01:57 markd Exp $
+$NetBSD: CHANGES-2025,v 1.6417 2025/11/02 10:34:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9277,3 +9277,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/vtk to 9.5.2 [gdt 2025-11-01]
 	Updated emulators/nono to 1.6.0 [jun 2025-11-02]
 	Added misc/kf6-kuserfeedback version 6.18.0 [markd 2025-11-02]
+	Updated x11/libdrm to 2.4.128 [wiz 2025-11-02]
