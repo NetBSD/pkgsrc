@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/11/01 12:54:29 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2025/11/03 12:40:04 gdt Exp $
 
-VERSION=	1.1.19
+VERSION=	1.1.20
 DISTTAIL=	gnssutils
 DISTNAME=	py${DISTTAIL}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTTAIL}-${VERSION}
