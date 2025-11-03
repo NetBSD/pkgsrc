@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/12/13 16:38:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/11/03 08:36:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -124,6 +124,7 @@ ${GEM_LIBDIR}/lib/active_support/core_ext/range/compare_range.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/conversions.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/each.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/range/overlap.rb
+${GEM_LIBDIR}/lib/active_support/core_ext/range/sole.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/regexp.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/securerandom.rb
 ${GEM_LIBDIR}/lib/active_support/core_ext/string.rb
@@ -270,7 +271,6 @@ ${GEM_LIBDIR}/lib/active_support/testing/parallelization/worker.rb
 ${GEM_LIBDIR}/lib/active_support/testing/parallelize_executor.rb
 ${GEM_LIBDIR}/lib/active_support/testing/setup_and_teardown.rb
 ${GEM_LIBDIR}/lib/active_support/testing/stream.rb
-${GEM_LIBDIR}/lib/active_support/testing/strict_warnings.rb
 ${GEM_LIBDIR}/lib/active_support/testing/tagged_logging.rb
 ${GEM_LIBDIR}/lib/active_support/testing/tests_without_assertions.rb
 ${GEM_LIBDIR}/lib/active_support/testing/time_helpers.rb
