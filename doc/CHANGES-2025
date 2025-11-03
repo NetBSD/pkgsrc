@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6455 2025/11/03 04:35:38 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6456 2025/11/03 04:40:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9323,3 +9323,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/ruby-braintree to 4.33.1 [taca 2025-11-03]
 	Added archivers/ruby-zip24 version 2.4.1 [taca 2025-11-03]
 	Added mail/ruby-roadie-rails31 version 3.1.0 [taca 2025-11-03]
+	Updated mail/ruby-roadie-rails32 to 3.2.0 [taca 2025-11-03]
