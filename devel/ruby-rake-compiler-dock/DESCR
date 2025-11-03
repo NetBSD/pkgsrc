@@ -1,0 +1,4 @@
+rake-compiler-dock
+
+Easy to use and reliable cross compiler environment for building Windows,
+Linux, Mac and JRuby binary gems.
