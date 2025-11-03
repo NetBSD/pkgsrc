@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6482 2025/11/03 06:56:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6483 2025/11/03 06:57:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9349,3 +9349,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack2 to 2.2.21 [taca 2025-11-03]
 	Added www/ruby-rack-protection3 version 3.2.0 [taca 2025-11-03]
 	Added www/ruby-requestjs-rails version 0.0.13 [taca 2025-11-03]
+	Updated www/ruby-rouge to 4.6.1 [taca 2025-11-03]
