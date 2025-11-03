@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/03 05:15:27 taca Exp $
+
+BLAKE2s (commonmarker-0.23.12.gem) = 0e47eee3974f542775ed3ce8f663e4c30e16ed849f18eb91749ff758a8fa4c59
+SHA512 (commonmarker-0.23.12.gem) = f9790d2ac1401333aa34db01c805da5506eb8007e411827ede2913521f3a1e084fa142dabca4c4d05baa81885a15a8c8e43d41775afecaa2e9b52a9f49301e44
+Size (commonmarker-0.23.12.gem) = 152576 bytes
