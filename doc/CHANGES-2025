@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6494 2025/11/03 07:26:23 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6495 2025/11/03 07:28:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9361,3 +9361,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed mail/ruby-roadie31-rails [taca 2025-11-03]
 	Updated mail/ruby-roadie-rails to 3.4.0 [taca 2025-11-03]
 	Updated textproc/ruby-commonmarker to 2.5.0 [taca 2025-11-03]
+	Updated net/ruby-winrm-fs to 1.3.5nb1 [taca 2025-11-03]
