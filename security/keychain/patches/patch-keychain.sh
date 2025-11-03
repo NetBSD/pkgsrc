@@ -1,4 +1,4 @@
-$NetBSD: patch-keychain.sh,v 1.1 2025/06/01 09:50:26 vins Exp $
+$NetBSD: patch-keychain.sh,v 1.2 2025/11/03 16:37:52 vins Exp $
 
 Handle an empty (or unset) SSH_ASKPASS variable.
 
@@ -12,10 +12,3 @@ Handle an empty (or unset) SSH_ASKPASS variable.
  	if $noguiopt || [ -z "$SSH_ASKPASS" ] || [ -z "$DISPLAY" ]; then
  		unset DISPLAY		# DISPLAY="" can cause problems
  		unset SSH_ASKPASS	# make sure ssh-add doesn't try SSH_ASKPASS
-@@ -1084,4 +1085,4 @@ if wantagent gpg; then
- 	load_gpg_keys $(echo "${gpgkeys}" | gpg_listmissing)
- fi
- 
--qprint	# trailing newline
-\ No newline at end of file
-+qprint	# trailing newline
