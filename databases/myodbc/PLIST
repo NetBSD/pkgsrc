@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/12/25 08:22:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/11/03 07:28:13 jnemeth Exp $
 bin/myodbc-installer
 lib/libmyodbc8a.so
 lib/libmyodbc8w.so
@@ -34,6 +34,7 @@ share/mysql-connector-odbc/test/my_prepare
 share/mysql-connector-odbc/test/my_relative
 share/mysql-connector-odbc/test/my_result1
 share/mysql-connector-odbc/test/my_result2
+share/mysql-connector-odbc/test/my_result3
 share/mysql-connector-odbc/test/my_scroll
 share/mysql-connector-odbc/test/my_setup
 share/mysql-connector-odbc/test/my_tran
