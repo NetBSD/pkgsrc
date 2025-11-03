@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/11/06 16:16:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/03 07:23:18 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/main.yml
 ${GEM_LIBDIR}/.gitignore
@@ -12,6 +12,8 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/Upgrading.md
 ${GEM_LIBDIR}/codecov.yml
+${GEM_LIBDIR}/flake.lock
+${GEM_LIBDIR}/flake.nix
 ${GEM_LIBDIR}/lib/roadie-rails.rb
 ${GEM_LIBDIR}/lib/roadie/rails.rb
 ${GEM_LIBDIR}/lib/roadie/rails/asset_pipeline_provider.rb
