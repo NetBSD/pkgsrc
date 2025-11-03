@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2023/08/30 14:36:56 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2025/11/03 12:17:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/polymorphic/__init__.py
 ${PYSITELIB}/polymorphic/__init__.pyc
 ${PYSITELIB}/polymorphic/__init__.pyo
@@ -34,9 +35,6 @@ ${PYSITELIB}/polymorphic/admin/parentadmin.pyo
 ${PYSITELIB}/polymorphic/base.py
 ${PYSITELIB}/polymorphic/base.pyc
 ${PYSITELIB}/polymorphic/base.pyo
-${PYSITELIB}/polymorphic/compat.py
-${PYSITELIB}/polymorphic/compat.pyc
-${PYSITELIB}/polymorphic/compat.pyo
 ${PYSITELIB}/polymorphic/contrib/__init__.py
 ${PYSITELIB}/polymorphic/contrib/__init__.pyc
 ${PYSITELIB}/polymorphic/contrib/__init__.pyo
