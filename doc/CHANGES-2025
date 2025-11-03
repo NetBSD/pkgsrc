@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6472 2025/11/03 06:00:01 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6473 2025/11/03 06:01:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9339,3 +9339,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-ethon to 0.18.0 [taca 2025-11-03]
 	Updated www/ruby-faraday to 2.14.0 [taca 2025-11-03]
 	Updated www/ruby-faraday-excon to 2.4.0 [taca 2025-11-03]
+	Updated www/ruby-faraday-follow_redirects to 0.4.0 [taca 2025-11-03]
