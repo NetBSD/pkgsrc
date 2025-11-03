@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2025/10/11 17:16:54 vins Exp $
+$NetBSD: distinfo,v 1.24 2025/11/03 16:19:22 vins Exp $
 
-BLAKE2s (fastfetch-2.53.0.tar.gz) = 70127fd99ad6fa603bed0c59bd9f24e7cf897da9ada61560ec9e58e33b420c25
-SHA512 (fastfetch-2.53.0.tar.gz) = c34001a5926888611bb7c98ceefcbf9e84e509ee60a64abdb34572dbb537ecbab34dbd70cd21176179b7ba3734fce167e3985b81805662e1ad30edbeaee6e6a4
-Size (fastfetch-2.53.0.tar.gz) = 1374997 bytes
+BLAKE2s (fastfetch-2.54.0.tar.gz) = b532ff11cd06e1dc02d95a8ee91426740fd00e3d4bd0fbcbec19a0ba4349015c
+SHA512 (fastfetch-2.54.0.tar.gz) = da8fa08efa3a4c800473a78b5b45abffacbd2fb88051cdd45cbfaa396cbcdf2580f0933ea951bdeb1b3bd9f91038162d891cfe6fe04146c9966e133505fe9927
+Size (fastfetch-2.54.0.tar.gz) = 1379634 bytes
