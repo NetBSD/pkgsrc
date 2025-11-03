@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/03 06:29:14 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/propshaft.rb
+${GEM_LIBDIR}/lib/propshaft/assembly.rb
+${GEM_LIBDIR}/lib/propshaft/asset.rb
+${GEM_LIBDIR}/lib/propshaft/compiler.rb
+${GEM_LIBDIR}/lib/propshaft/compiler/css_asset_urls.rb
+${GEM_LIBDIR}/lib/propshaft/compiler/js_asset_urls.rb
+${GEM_LIBDIR}/lib/propshaft/compiler/source_mapping_urls.rb
+${GEM_LIBDIR}/lib/propshaft/compilers.rb
+${GEM_LIBDIR}/lib/propshaft/errors.rb
+${GEM_LIBDIR}/lib/propshaft/helper.rb
+${GEM_LIBDIR}/lib/propshaft/load_path.rb
+${GEM_LIBDIR}/lib/propshaft/manifest.rb
+${GEM_LIBDIR}/lib/propshaft/output_path.rb
+${GEM_LIBDIR}/lib/propshaft/processor.rb
+${GEM_LIBDIR}/lib/propshaft/quiet_assets.rb
+${GEM_LIBDIR}/lib/propshaft/railtie.rb
+${GEM_LIBDIR}/lib/propshaft/railties/assets.rake
+${GEM_LIBDIR}/lib/propshaft/resolver/dynamic.rb
+${GEM_LIBDIR}/lib/propshaft/resolver/static.rb
+${GEM_LIBDIR}/lib/propshaft/server.rb
+${GEM_LIBDIR}/lib/propshaft/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
