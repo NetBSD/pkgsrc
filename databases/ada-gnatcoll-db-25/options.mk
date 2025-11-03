@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/07/11 18:08:32 dkazankov Exp $
+# $NetBSD: options.mk,v 1.2 2025/11/03 15:49:39 dkazankov Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnatcoll-db-25
 PKG_SUPPORTED_OPTIONS=		gnatcoll-db2ada gnatcoll-postgres2ada gnatcoll-sqlite2ada gnatcoll-all2ada \
@@ -34,6 +34,7 @@ PKG_BUILD_DIRS+=		gnatinspect
 .if !empty(PKG_OPTIONS:Mgnatcoll-postgres) || !empty(PKG_OPTIONS:Mgnatcoll-xref) || \
     !empty(PKG_OPTIONS:Mgnatcoll-gnatinspect)
 .  include "../../devel/ada-gnatcoll-bindings-25/buildlink3.mk"
+.  include "../../converters/libiconv/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnatcoll-db2ada) || !empty(PKG_OPTIONS:Mgnatcoll-postgres2ada) || \
