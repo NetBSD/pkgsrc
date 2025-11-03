@@ -1,0 +1,1 @@
+bin/rake-compiler-dock @PREFIX@/bin/rake-compiler-dock@RUBY_SUFFIX@
