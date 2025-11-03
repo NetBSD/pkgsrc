@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.130 2025/10/27 14:46:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.131 2025/11/03 03:53:31 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -136,6 +136,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize_duplicate_query_detection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_auto_parameterize_in_array.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_enum.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_extended_date_support.rb
