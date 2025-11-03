@@ -1,0 +1,5 @@
+Request.JS for Rails
+
+[Rails Request.JS](https://github.com/rails/request.js) encapsulates the
+logic to send by default some headers that are required by rails
+applications like the `X-CSRF-Token`.
