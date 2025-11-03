@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/03 06:55:33 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/app/assets/javascripts/rails-requestjs.js
+${GEM_LIBDIR}/app/assets/javascripts/requestjs.js
+${GEM_LIBDIR}/config/importmap.rb
+${GEM_LIBDIR}/lib/install/requestjs_with_asset_pipeline.rb
+${GEM_LIBDIR}/lib/install/requestjs_with_webpacker.rb
+${GEM_LIBDIR}/lib/requestjs-rails.rb
+${GEM_LIBDIR}/lib/requestjs/engine.rb
+${GEM_LIBDIR}/lib/requestjs/version.rb
+${GEM_LIBDIR}/lib/tasks/requestjs_tasks.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
