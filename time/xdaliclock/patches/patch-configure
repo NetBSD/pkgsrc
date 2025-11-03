@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/11/03 23:28:19 tron Exp $
+
+Correct broken ANSI C test to fix build problems
+
+--- configure.orig	2018-12-26 10:10:52.000000000 +0000
++++ configure	2025-11-03 23:24:23.622377665 +0000
+@@ -2943,7 +2943,7 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+- main(int ac, char **av) { return 0; }
++int main(int ac, char **av) { return 0; }
+ _ACEOF
+ rm -f conftest$ac_exeext
+ if { (ac_try="$ac_link"
