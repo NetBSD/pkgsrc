@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6515 2025/11/03 14:47:08 fox Exp $
+$NetBSD: CHANGES-2025,v 1.6516 2025/11/03 16:48:05 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9446,3 +9446,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-unearth to 0.18.1 [adam 2025-11-03]
 	Updated sysutils/pfetch to 1.9.4 [fox 2025-11-03]
 	Updated audio/fasttracker2 to 1.99 [fox 2025-11-03]
+	Updated sysutils/xfile to 1.0.2 [vins 2025-11-03]
