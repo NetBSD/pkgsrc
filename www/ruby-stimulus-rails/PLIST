@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/03 07:09:02 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/app/assets/javascripts/stimulus-autoloader.js
+${GEM_LIBDIR}/app/assets/javascripts/stimulus-importmap-autoloader.js
+${GEM_LIBDIR}/app/assets/javascripts/stimulus-loading.js
+${GEM_LIBDIR}/app/assets/javascripts/stimulus.js
+${GEM_LIBDIR}/app/assets/javascripts/stimulus.min.js
+${GEM_LIBDIR}/app/assets/javascripts/stimulus.min.js.map
+${GEM_LIBDIR}/lib/generators/stimulus/USAGE
+${GEM_LIBDIR}/lib/generators/stimulus/stimulus_generator.rb
+${GEM_LIBDIR}/lib/generators/stimulus/templates/controller.js.tt
+${GEM_LIBDIR}/lib/install/app/javascript/controllers/application.js
+${GEM_LIBDIR}/lib/install/app/javascript/controllers/hello_controller.js
+${GEM_LIBDIR}/lib/install/app/javascript/controllers/index_for_importmap.js
+${GEM_LIBDIR}/lib/install/app/javascript/controllers/index_for_node.js
+${GEM_LIBDIR}/lib/install/stimulus_with_bun.rb
+${GEM_LIBDIR}/lib/install/stimulus_with_importmap.rb
+${GEM_LIBDIR}/lib/install/stimulus_with_node.rb
+${GEM_LIBDIR}/lib/stimulus-rails.rb
+${GEM_LIBDIR}/lib/stimulus/engine.rb
+${GEM_LIBDIR}/lib/stimulus/manifest.rb
+${GEM_LIBDIR}/lib/stimulus/version.rb
+${GEM_LIBDIR}/lib/tasks/stimulus_tasks.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
