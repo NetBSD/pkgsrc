@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 09:57:16 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/11/03 03:47:27 taca Exp $
 
-BLAKE2s (mixlib-archive-1.1.7.gem) = 44a375eab4f802a20067559ab3e02279eb4999f713b2935c408f3c151de78c75
-SHA512 (mixlib-archive-1.1.7.gem) = b1aca8d75a0061a2bc47635b8b937a04fda1258cb1c0f270aae0fdf0f352090be20da4b53a0019b08532dc02a606a4d53983bbbdbba05bd7ed1d2fcd0f10313d
-Size (mixlib-archive-1.1.7.gem) = 11264 bytes
+BLAKE2s (mixlib-archive-1.3.3.gem) = 6237dbcdec22623c2419b8180e60a2c0a046548d20373f0c4cc7b78af12487dc
+SHA512 (mixlib-archive-1.3.3.gem) = 586d5d59edb6b08efe806dcba75cbcaffd3ffb3b5d1e8ca2501c4ee11bfd222c87919d2113af6a53b1116651701a1a4b2507fb5af04b4b9d8b4decd1032af7cd
+Size (mixlib-archive-1.3.3.gem) = 11264 bytes
