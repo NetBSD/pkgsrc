@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2025/10/09 07:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/11/03 08:39:42 adam Exp $
 
-DISTNAME=	ipykernel-6.30.1
+DISTNAME=	ipykernel-7.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipykernel/}
@@ -10,12 +10,12 @@ HOMEPAGE=	https://ipython.org/
 COMMENT=	IPython Kernel for Jupyter
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.4:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.22:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.1:../../net/py-comm
 DEPENDS+=	${PYPKGPREFIX}-debugpy>=1.6.5:../../devel/py-debugpy
 DEPENDS+=	${PYPKGPREFIX}-ipython>=7.23.1:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyter_client>=8.0.0:../../devel/py-jupyter_client
-DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=4.12:../../devel/py-jupyter_core
+DEPENDS+=	${PYPKGPREFIX}-jupyter_core>=5.1:../../devel/py-jupyter_core
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline>=0.1:../../graphics/py-matplotlib-inline
 DEPENDS+=	${PYPKGPREFIX}-nest-asyncio>=1.4:../../devel/py-nest-asyncio
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
