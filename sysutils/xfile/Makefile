@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/10/12 07:34:33 vins Exp $
+# $NetBSD: Makefile,v 1.7 2025/11/03 16:47:31 vins Exp $
 
-DISTNAME=	xfile-src-1.0.1
+DISTNAME=	xfile-src-1.0.2
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
