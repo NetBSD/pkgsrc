@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6511 2025/11/03 12:39:43 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6512 2025/11/03 14:27:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9440,3 +9440,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-redis to 7.0.1 [adam 2025-11-03]
 	Updated devel/py-rich-click to 1.9.4 [adam 2025-11-03]
 	Updated geography/py-gnssutils to 1.1.20 [gdt 2025-11-03]
+	Updated archivers/py-lz4 to 4.4.5 [adam 2025-11-03]
+	Updated security/py-google-auth-oauthlib to 1.2.3 [adam 2025-11-03]
