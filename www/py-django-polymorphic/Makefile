@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/03/07 16:02:50 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/11/03 12:17:39 adam Exp $
 
-DISTNAME=	django-polymorphic-3.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_polymorphic-4.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_polymorphic/}
 
@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/chrisglass/django_polymorphic
 COMMENT=	Simplifies using inherited models in Django projects
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=78:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
