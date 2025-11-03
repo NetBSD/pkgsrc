@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6469 2025/11/03 05:52:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6470 2025/11/03 05:54:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9336,3 +9336,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-haml to 7.0.1 [taca 2025-11-03]
 	Added www/ruby-doorkeeper version 5.8.2 [taca 2025-11-03]
 	Added www/ruby-doorkeeper-i18n version 5.2.8 [taca 2025-11-03]
+	Updated www/ruby-ethon to 0.18.0 [taca 2025-11-03]
