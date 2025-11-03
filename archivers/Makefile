@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2025/05/06 13:01:06 wiz Exp $
+# $NetBSD: Makefile,v 1.219 2025/11/03 04:27:34 taca Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -140,6 +140,7 @@ SUBDIR+=	ruby-minitar-cli
 SUBDIR+=	ruby-mixlib-archive
 SUBDIR+=	ruby-xz
 SUBDIR+=	ruby-zip
+SUBDIR+=	ruby-zip24
 SUBDIR+=	rzip
 SUBDIR+=	sarab
 SUBDIR+=	squsq
