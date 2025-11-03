@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2025/10/08 14:07:44 taca Exp $
+# $NetBSD: Makefile,v 1.18 2025/11/03 07:12:04 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -21,7 +22,7 @@ RUBY_RAILS_ACCEPTED=	61
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 cvs>=3.2.6
+OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 cvs>=3.2.6 zip>=2.4.0
 
 #DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.12.0:../../misc/ruby-bundler
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
@@ -30,14 +31,14 @@ DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.5.0<1.6:../../www/ruby-request_stor
 # ruby-mail depends it.
 #DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.1.0<1.2:../../mail/ruby-mini_mime
 DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-roadie31-rails${RUBY_RAILS}>=3.1.0<3.2:../../mail/ruby-roadie31-rails
+DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails31_${RUBY_RAILS}>=3.1.0<3.2:../../mail/ruby-roadie-rails31
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.8.1<2.9:../../mail/ruby-mail
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.18.3:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.14.1<1.15:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.21.3<1.22:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
-DEPENDS+=	${RUBY_PKGPREFIX}-zip>=2.3.0<2.4:../../archivers/ruby-zip
+DEPENDS+=	${RUBY_PKGPREFIX}-zip24>=2.4.0<3:../../archivers/ruby-zip24
 DEPENDS+=	${RUBY_PKGPREFIX}-rotp>=6.2.0:../../security/ruby-rotp
 DEPENDS+=	${RUBY_PKGPREFIX}-rqrcode>=1.2.0:../../textproc/ruby-rqrcode
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0:../../net/ruby-net-ldap
@@ -45,7 +46,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=4.12.0:../../graphics/ruby-mini-magick
 DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.6.0<3.7:../../textproc/ruby-redcarpet
 DEPENDS+=	${RUBY_PKGPREFIX}-deckar01-task_list>=2.3.2:../../textproc/ruby-deckar01-task_list
 DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pipeline
-DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.8<1:../../textproc/ruby-commonmarker
+DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker0>=0.23.8<1:../../textproc/ruby-commonmarker0
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 #DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.6<4:../../textproc/ruby-csv
 
