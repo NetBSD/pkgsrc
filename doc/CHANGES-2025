@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6491 2025/11/03 07:14:03 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6492 2025/11/03 07:16:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9358,3 +9358,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ruby-stimulus-rails version 1.3.4 [taca 2025-11-03]
 	Updated devel/ruby-redmine51 to 5.1.10nb1 [taca 2025-11-03]
 	Updated devel/ruby-redmine60 to 6.0.7nb1 [taca 2025-11-03]
+	Removed mail/ruby-roadie31-rails [taca 2025-11-03]
