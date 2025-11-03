@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2021/11/14 20:19:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/11/03 09:50:52 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -185,4 +185,8 @@ share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches-4.94+fixes.tar.g
 share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches1.txt
 share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches2.txt
 share/doc/exim/html/static/doc/security/CVE-2020-qualys/patches3.txt
+share/doc/exim/html/static/doc/security/CVE-2021-38371.txt
+share/doc/exim/html/static/doc/security/CVE-2023-zdi.txt
+share/doc/exim/html/static/doc/security/CVE-2025-26794.txt
+share/doc/exim/html/static/doc/security/CVE-2025-30232.txt
 share/doc/exim/html/static/js/common.js
