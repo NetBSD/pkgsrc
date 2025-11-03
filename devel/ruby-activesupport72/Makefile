@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/01/02 06:24:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/11/03 08:36:37 taca Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +21,7 @@ RUBY_RAILS_ACCEPTED=	72
 RUBY_RAILS_STRICT_DEP=	yes
 
 .include "../../lang/ruby/rubyversion.mk"
-.if ${RUBY_VER} != 34
+.if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-benchmark>=0.3:../../benchmarks/ruby-benchmark
 DEPENDS+=	${RUBY_PKGPREFIX}-securerandom>=0.3:../../security/ruby-securerandom
 .endif
