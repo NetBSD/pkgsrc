@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6509 2025/11/03 12:17:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6510 2025/11/03 12:24:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9437,3 +9437,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyterlab to 4.4.10 [adam 2025-11-03]
 	Updated www/py-django-import-export to 4.3.13 [adam 2025-11-03]
 	Updated www/py-django-polymorphic to 4.1.0 [adam 2025-11-03]
+	Updated databases/py-redis to 7.0.1 [adam 2025-11-03]
+	Updated devel/py-rich-click to 1.9.4 [adam 2025-11-03]
