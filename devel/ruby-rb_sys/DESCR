@@ -1,0 +1,6 @@
+The rb_sys gem
+
+The rb_sys gem makes it easy to build native Ruby extensions in Rust.
+It interoperates with existing Ruby native extension toolchains
+(i.e. rake-compiler) to make testing, building, and cross-compilation of
+gems easy.
