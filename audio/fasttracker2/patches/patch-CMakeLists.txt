@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.8 2024/12/09 07:24:59 fox Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.9 2025/11/03 14:46:16 fox Exp $
 
 Only define __LINUX_ALSA__ on Linux.
 
---- CMakeLists.txt.orig	2024-12-07 21:23:01.000000000 +0000
+--- CMakeLists.txt.orig	2025-09-17 18:17:34.000000000 +0000
 +++ CMakeLists.txt
 @@ -32,10 +32,6 @@ find_package(Threads REQUIRED)
  target_link_libraries(ft2-clone
@@ -15,20 +15,23 @@ Only define __LINUX_ALSA__ on Linux.
  if(UNIX)
      if(APPLE)
          find_library(COREAUDIO CoreAudio REQUIRED)
-@@ -46,11 +42,15 @@ if(UNIX)
+@@ -46,7 +42,7 @@ if(UNIX)
              PRIVATE ${COREAUDIO} ${COREMIDI} ${COREFOUNDATION} ${ICONV})
          target_compile_definitions(ft2-clone
              PRIVATE __MACOSX_CORE__)
 -    else()
 +    elseif(LINUX)
-         target_link_libraries(ft2-clone
+         # musl systems need musl-fts installed, others have it with glibc
+         find_library(FTS fts)
+         if (FTS)
+@@ -56,6 +52,10 @@ if(UNIX)
              PRIVATE asound)
          target_compile_definitions(ft2-clone
              PRIVATE __LINUX_ALSA__)
 +    else()
 +        target_compile_definitions(ft2-clone
 +            PRIVATE HAS_MIDI
-+            PRIVATE HAS_LIBFLAC)	    
++            PRIVATE HAS_LIBFLAC)	    	    
      endif()
  endif()
  
