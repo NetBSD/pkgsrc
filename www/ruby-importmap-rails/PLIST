@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2025/11/03 06:04:31 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/app/controllers/importmap/freshness.rb
+${GEM_LIBDIR}/app/helpers/importmap/importmap_tags_helper.rb
+${GEM_LIBDIR}/lib/importmap-rails.rb
+${GEM_LIBDIR}/lib/importmap/commands.rb
+${GEM_LIBDIR}/lib/importmap/engine.rb
+${GEM_LIBDIR}/lib/importmap/map.rb
+${GEM_LIBDIR}/lib/importmap/npm.rb
+${GEM_LIBDIR}/lib/importmap/packager.rb
+${GEM_LIBDIR}/lib/importmap/reloader.rb
+${GEM_LIBDIR}/lib/importmap/version.rb
+${GEM_LIBDIR}/lib/install/bin/importmap
+${GEM_LIBDIR}/lib/install/config/importmap.rb
+${GEM_LIBDIR}/lib/install/install.rb
+${GEM_LIBDIR}/lib/tasks/importmap_tasks.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
