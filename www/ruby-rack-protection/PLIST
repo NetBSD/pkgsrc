@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/01/04 15:27:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/11/03 07:35:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/License
@@ -10,11 +10,10 @@ ${GEM_LIBDIR}/lib/rack/protection/authenticity_token.rb
 ${GEM_LIBDIR}/lib/rack/protection/base.rb
 ${GEM_LIBDIR}/lib/rack/protection/content_security_policy.rb
 ${GEM_LIBDIR}/lib/rack/protection/cookie_tossing.rb
-${GEM_LIBDIR}/lib/rack/protection/encrypted_cookie.rb
-${GEM_LIBDIR}/lib/rack/protection/encryptor.rb
 ${GEM_LIBDIR}/lib/rack/protection/escaped_params.rb
 ${GEM_LIBDIR}/lib/rack/protection/form_token.rb
 ${GEM_LIBDIR}/lib/rack/protection/frame_options.rb
+${GEM_LIBDIR}/lib/rack/protection/host_authorization.rb
 ${GEM_LIBDIR}/lib/rack/protection/http_origin.rb
 ${GEM_LIBDIR}/lib/rack/protection/ip_spoofing.rb
 ${GEM_LIBDIR}/lib/rack/protection/json_csrf.rb
