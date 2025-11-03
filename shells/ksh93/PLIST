@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/24 13:37:40 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/11/03 21:47:14 vins Exp $
 bin/ksh93
 bin/shcomp
 include/ast/align.h
@@ -174,3 +174,4 @@ man/man3/tmx.3ast
 man/man3/tok.3ast
 man/man3/touch.3ast
 man/man3/tv.3ast
+share/examples/ksh93/kshrc
