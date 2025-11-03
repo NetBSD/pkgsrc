@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6478 2025/11/03 06:34:33 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6479 2025/11/03 06:37:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9345,3 +9345,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-jquery-rails to 4.6.1 [taca 2025-11-03]
 	Added www/ruby-propshaft version 1.3.1 [taca 2025-11-03]
 	Added www/ruby-propshaft11 version 1.1.0 [taca 2025-11-03]
+	Updated www/ruby-rack to 3.2.4 [taca 2025-11-03]
