@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/10/18 14:45:39 pin Exp $
+$NetBSD: distinfo,v 1.6 2025/11/03 07:01:41 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.3.crate) = 36150b5dacb72fa7cd0d33aee15e14857914224878f0af76eabcb9daa68e3ae0
 SHA512 (aho-corasick-1.1.3.crate) = ba422a54688c4678fcf16e34fdf3ed06c333e6e3fc8b75af9272a215add494d43ebaef319021134b61327fd5d3572aec0dc655b714ffb3bc71ba3c265c9ebb69
@@ -87,9 +87,9 @@ Size (cmd_lib-1.9.6.crate) = 46757 bytes
 BLAKE2s (cmd_lib_macros-1.9.6.crate) = 4f17e815fab1d4df5890d85e1e82a0d37cbc17596b29d021eb9ab59f7d26f1ed
 SHA512 (cmd_lib_macros-1.9.6.crate) = 58068c6bb9cfa3c0bc896de907f8ecc8b0d81e0e4ebf880cdf07a667860fe69b8a7a49dcca57c90fd5bfbbc0f40bb4f1e8f00fbdc79d52cef753f6955cacefee
 Size (cmd_lib_macros-1.9.6.crate) = 8217 bytes
-BLAKE2s (cocogitto-6.4.0.tar.gz) = e7814cb9f9d33eb80979896cf7f5235230d31d6bf1650ab333f79eb4cc9bad75
-SHA512 (cocogitto-6.4.0.tar.gz) = a8dc2d3a76d317b2909e02d34341514f5aec15109e8fda87e6941773903fc900ab4a10d3640b07ad2eaa73fc731dc361af7b938bb7d5327b3b642c2a2dc1a9fe
-Size (cocogitto-6.4.0.tar.gz) = 1779481 bytes
+BLAKE2s (cocogitto-6.5.0.tar.gz) = 0c0e9698e51feaba739d8dedbc7fe98a162114c8c729345cbc89c71486e2ed95
+SHA512 (cocogitto-6.5.0.tar.gz) = 0177e69bdb698a83e9a16ee78fe29cfdd13c02e258f7268dffee9cd49c0bf0af9a55f551e52db9be856a5b3271cae94a079334f1ba22f5fab56da0581cfd4516
+Size (cocogitto-6.5.0.tar.gz) = 1784146 bytes
 BLAKE2s (cog_schemars-0.1.0.crate) = e5f1800e7ccbb3650a7c2827b95a87866982fc7277653bd90913d484f4319e46
 SHA512 (cog_schemars-0.1.0.crate) = f91e45ea1cd2c7e03f46f7642937f9cb3e928b9ca96b56627ba3bf3d877d350394cd5a682e4da8e8c4fbdf7663a0e505bb0b352a640eb6b4ca17767824d990ab
 Size (cog_schemars-0.1.0.crate) = 74350 bytes
