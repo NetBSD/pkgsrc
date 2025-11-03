@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/03 04:45:38 taca Exp $
+
+BLAKE2s (roadie-rails-3.3.0.gem) = ef92cb08ab1a39291c3afec890776b6662169451be4fcc940a8537cfed99efb4
+SHA512 (roadie-rails-3.3.0.gem) = a59763d7d1e849e79478154774414ffa4cc45a21f2de4505af0941a9516e78d56815b9215f9ca85828875985ee5809edb2c09a5af84ec60c7598aa4d4407f909
+Size (roadie-rails-3.3.0.gem) = 17408 bytes
