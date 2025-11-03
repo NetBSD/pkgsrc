@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6487 2025/11/03 07:04:56 pin Exp $
+$NetBSD: CHANGES-2025,v 1.6488 2025/11/03 07:07:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9354,3 +9354,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-sawyer to 0.9.3 [taca 2025-11-03]
 	Updated devel/cocogitto to 6.5.0 [pin 2025-11-03]
 	Updated textproc/television to 0.13.8 [pin 2025-11-03]
+	Added www/ruby-sinatra3 version 3.2.0 [taca 2025-11-03]
