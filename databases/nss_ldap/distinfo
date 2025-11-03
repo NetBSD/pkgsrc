@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2023/07/30 00:18:07 manu Exp $
+$NetBSD: distinfo,v 1.14 2025/11/03 19:11:50 tron Exp $
 
 BLAKE2s (nss_ldap-266a.tar.gz) = 8bdbaae42c8bec6e1f3476b00ae9e66d4d9b688b3d636a61cae252a7aee80865
 SHA512 (nss_ldap-266a.tar.gz) = 430b5d97c826b308169b5ee5f1b70f6610700c5d947881bc51ff2974f04311c1da6f46e48a8843f6664a3a45b6989be6d3052bd4af0924f0982ac0de6165c3d8
 Size (nss_ldap-266a.tar.gz) = 303265 bytes
+SHA1 (patch-ldap-grp.c) = 1b7881c1963d37bca7d08f24326ee8ec0771903f
