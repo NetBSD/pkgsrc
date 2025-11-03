@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6464 2025/11/03 05:30:19 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6465 2025/11/03 05:36:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9331,3 +9331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-asciidoctor to 2.0.26 [taca 2025-11-03]
 	Added textproc/ruby-commonmarker0 version 0.23.12 [taca 2025-11-03]
 	Added textproc/ruby-commonmarker23 version 2.3.2 [taca 2025-11-03]
+	Added devel/ruby-rake-compiler-dock version 1.9.1 [taca 2025-11-03]
