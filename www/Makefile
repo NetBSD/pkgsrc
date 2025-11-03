@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1877 2025/10/19 11:58:03 leot Exp $
+# $NetBSD: Makefile,v 1.1878 2025/11/03 05:50:31 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -1017,6 +1017,7 @@ SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-csspool
 SUBDIR+=	ruby-data_uri
 SUBDIR+=	ruby-div
+SUBDIR+=	ruby-doorkeeper
 SUBDIR+=	ruby-em-http-request
 SUBDIR+=	ruby-em-websocket
 SUBDIR+=	ruby-erubis
