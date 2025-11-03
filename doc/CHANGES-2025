@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6493 2025/11/03 07:23:29 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6494 2025/11/03 07:26:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9360,3 +9360,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-redmine60 to 6.0.7nb1 [taca 2025-11-03]
 	Removed mail/ruby-roadie31-rails [taca 2025-11-03]
 	Updated mail/ruby-roadie-rails to 3.4.0 [taca 2025-11-03]
+	Updated textproc/ruby-commonmarker to 2.5.0 [taca 2025-11-03]
