@@ -1,0 +1,15 @@
+Doorkeeper is a gem (Rails engine) that makes it easy to introduce OAuth 2
+provider functionality to your Ruby on Rails or Grape application.
+
+* The OAuth 2.0 Authorization Framework
+  - Authorization Code Flow
+  - Access Token Scopes
+  - Refresh token
+  - Implicit grant
+  - Resource Owner Password Credentials
+  - Client Credentials
+* OAuth 2.0 Token Revocation
+* OAuth 2.0 Token Introspection
+* OAuth 2.0 Threat Model and Security Considerations
+* OAuth 2.0 for Native Apps
+* Proof Key for Code Exchange by OAuth Public Clients
