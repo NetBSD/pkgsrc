@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6462 2025/11/03 05:07:22 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6463 2025/11/03 05:16:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9329,3 +9329,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-rex-exploitation to 0.1.44 [taca 2025-11-03]
 	Updated security/ruby-rex-random_identifier to 0.1.21 [taca 2025-11-03]
 	Updated textproc/ruby-asciidoctor to 2.0.26 [taca 2025-11-03]
+	Added textproc/ruby-commonmarker0 version 0.23.12 [taca 2025-11-03]
