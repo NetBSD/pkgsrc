@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6475 2025/11/03 06:05:16 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6476 2025/11/03 06:07:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9342,3 +9342,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-faraday-follow_redirects to 0.4.0 [taca 2025-11-03]
 	Updated www/ruby-http-cookie to 1.1.0 [taca 2025-11-03]
 	Added www/ruby-importmap-rails version 2.2.2 [taca 2025-11-03]
+	Updated www/ruby-jquery-rails to 4.6.1 [taca 2025-11-03]
