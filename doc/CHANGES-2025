@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6510 2025/11/03 12:24:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6511 2025/11/03 12:39:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9439,3 +9439,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-polymorphic to 4.1.0 [adam 2025-11-03]
 	Updated databases/py-redis to 7.0.1 [adam 2025-11-03]
 	Updated devel/py-rich-click to 1.9.4 [adam 2025-11-03]
+	Updated geography/py-gnssutils to 1.1.20 [gdt 2025-11-03]
