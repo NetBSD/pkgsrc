@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6507 2025/11/03 09:53:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6508 2025/11/03 12:00:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9433,3 +9433,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-selenium-webdriver to 4.38.0 [taca 2025-11-03]
 	Updated mail/exim to 4.99 [adam 2025-11-03]
 	Updated mail/exim-html to 4.99 [adam 2025-11-03]
+	Updated www/py-jupyterlab-server to 2.28.0 [adam 2025-11-03]
+	Updated www/py-jupyterlab to 4.4.10 [adam 2025-11-03]
