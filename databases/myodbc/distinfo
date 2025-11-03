@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2025/11/03 07:28:13 jnemeth Exp $
+$NetBSD: distinfo,v 1.18 2025/11/03 08:57:31 wiz Exp $
 
 BLAKE2s (mysql-connector-odbc-8.0.43.tar.gz) = 9cecfc8b5c414815611bda385a722c2dcccb25712d4323e5fddd034acb44247e
 SHA512 (mysql-connector-odbc-8.0.43.tar.gz) = bcd2eebaccf8083aa8be6fd8dfb110ce59f15a1554309bf416bec5785c69a8996a771bbbd169610f51b5c5c41f5481c1a1c4b0391324b5a16278a04efd90ac61
@@ -6,5 +6,6 @@ Size (mysql-connector-odbc-8.0.43.tar.gz) = 3855473 bytes
 SHA1 (patch-CMakeLists.txt) = 48fac0ce2be161be4e5f79abbe496a276af9e744
 SHA1 (patch-cmake_info__bin.cmake) = eab0c87af5b2b181028df5f17d7cf80f0e8b5c88
 SHA1 (patch-dltest_CMakeLists.txt) = f7d644a1ac2b2bd90a5185b76ed6a7cd9cd9df02
+SHA1 (patch-dltest_dltest.c) = 8ff8aa576aae41a6672c943ebc8a679b3773281b
 SHA1 (patch-driver_driver.h) = c199d3d4d11b1d5159999866580f14fd4e314fa2
 SHA1 (patch-test_CMakeLists.txt) = ee2813e3ada6d6a2b0c972507058abf7b7e2dab9
