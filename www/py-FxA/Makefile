@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/05/06 12:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/03 21:33:08 wiz Exp $
 
 DISTNAME=	pyfxa-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyfxa/FxA/}
@@ -27,6 +27,8 @@ USE_LANGUAGES=	# none
 # test status as of 0.8.1
 # 117 passed, 4 skipped, 1 warning
 ALLOW_NETWORK_ACCESS=	yes
+
+PYTHON_SELF_CONFLICT=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
