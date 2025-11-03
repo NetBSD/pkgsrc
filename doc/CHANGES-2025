@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6505 2025/11/03 09:05:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6506 2025/11/03 09:13:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9430,3 +9430,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-pgsql to 3.10.5 [taca 2025-11-03]
 	Updated mail/postfix-sqlite to 3.10.5 [taca 2025-11-03]
 	Updated net/ruby-nio4r to 2.7.5 [taca 2025-11-03]
+	Updated www/ruby-selenium-webdriver to 4.38.0 [taca 2025-11-03]
