@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6445 2025/11/03 03:33:09 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6446 2025/11/03 03:39:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9313,3 +9313,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyterlab-widgets to 3.0.16 [adam 2025-11-02]
 	Updated audio/musescore to 4.6.3 [gutteridge 2025-11-02]
 	Updated misc/screen to 5.0.0nb4 [jnemeth 2025-11-03]
+	Updated www/ruby-aws-partitions to 1.1179.0 [taca 2025-11-03]
