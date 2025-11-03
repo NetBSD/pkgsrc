@@ -1,7 +1,7 @@
-$NetBSD: patch-src_exicyclog.src,v 1.1 2020/04/25 12:48:57 gavan Exp $
+$NetBSD: patch-src_utils_exicyclog.src,v 1.1 2025/11/03 09:50:51 adam Exp $
 
---- src/exicyclog.src.orig	2020-01-03 12:08:52.000000000 +0000
-+++ src/exicyclog.src
+--- src/utils/exicyclog.src.orig	2020-01-03 12:08:52.000000000 +0000
++++ src/utils/exicyclog.src
 @@ -49,15 +49,15 @@
  # varies from OS to OS. Sigh.
  

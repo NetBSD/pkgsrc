@@ -1,10 +1,10 @@
-$NetBSD: patch-Local_Makefile.pkgsrc,v 1.3 2025/02/25 18:22:23 nia Exp $
+$NetBSD: patch-Local_Makefile.pkgsrc,v 1.4 2025/11/03 09:50:51 adam Exp $
 
 Avoid hardcoded paths.
 
---- Local/Makefile.pkgsrc.orig	2019-12-09 08:46:14.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2025-11-03 09:32:03.488732270 +0000
 +++ Local/Makefile.pkgsrc
-@@ -100,7 +100,7 @@
+@@ -104,7 +104,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
  # and any superior directories, if they do not exist.
  
@@ -13,7 +13,7 @@ Avoid hardcoded paths.
  
  
  #------------------------------------------------------------------------------
-@@ -116,7 +116,7 @@ BIN_DIRECTORY=/usr/exim/bin
+@@ -120,7 +120,7 @@ BIN_DIRECTORY=/usr/exim/bin
  # don't exist. It will also install a default runtime configuration if this
  # file does not exist.
  
@@ -22,7 +22,7 @@ Avoid hardcoded paths.
  
  # It is possible to specify a colon-separated list of files for CONFIGURE_FILE.
  # In this case, Exim will use the first of them that exists when it is run.
-@@ -133,7 +133,7 @@ CONFIGURE_FILE=/usr/exim/configure
+@@ -137,7 +137,7 @@ CONFIGURE_FILE=/usr/exim/configure
  # deliveries. (Local deliveries run as various non-root users, typically as the
  # owner of a local mailbox.) Specifying these values as root is not supported.
  
@@ -31,7 +31,7 @@ Avoid hardcoded paths.
  
  # If you specify EXIM_USER as a name, this is looked up at build time, and the
  # uid number is built into the binary. However, you can specify that this
-@@ -154,7 +154,7 @@ EXIM_USER=
+@@ -158,7 +158,7 @@ EXIM_USER=
  # for EXIM_USER (e.g. EXIM_USER=exim), you don't need to set EXIM_GROUP unless
  # you want to use a group other than the default group for the given user.
  
@@ -40,7 +40,7 @@ Avoid hardcoded paths.
  
  # Many sites define a user called "exim", with an appropriate default group,
  # and use
-@@ -175,7 +175,7 @@ EXIM_USER=
+@@ -179,7 +179,7 @@ EXIM_USER=
  
  # Almost all installations choose this:
  
@@ -49,16 +49,16 @@ Avoid hardcoded paths.
  
  
  
-@@ -752,7 +752,7 @@ FIXED_NEVER_USERS=root
- # included in the Exim binary. You will then need to set up the run time
- # configuration to make use of the mechanism(s) selected.
+@@ -879,7 +879,7 @@ FIXED_NEVER_USERS=root
+ # core exim build.  This gets them linked with the module instead.
+ # The heimdal does build but we have no test coverage so it is not know to work.
  
 -# AUTH_CRAM_MD5=yes
 +AUTH_CRAM_MD5=yes
  # AUTH_CYRUS_SASL=yes
  # AUTH_DOVECOT=yes
  # AUTH_EXTERNAL=yes
-@@ -761,8 +761,8 @@ FIXED_NEVER_USERS=root
+@@ -888,8 +888,8 @@ FIXED_NEVER_USERS=root
  # AUTH_HEIMDAL_GSSAPI=yes
  # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi
  # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi heimdal-krb5
@@ -69,7 +69,7 @@ Avoid hardcoded paths.
  # AUTH_TLS=yes
  
  # Heimdal through 1.5 required pkg-config 'heimdal-gssapi'; Heimdal 7.1
-@@ -896,7 +896,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -1026,7 +1026,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -78,7 +78,7 @@ Avoid hardcoded paths.
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -1201,13 +1201,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -1326,13 +1326,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -99,7 +99,7 @@ Avoid hardcoded paths.
  
  
  #------------------------------------------------------------------------------
-@@ -1409,7 +1409,7 @@ EXIM_TMPDIR="/tmp"
+@@ -1534,7 +1534,7 @@ EXIM_TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -108,7 +108,7 @@ Avoid hardcoded paths.
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1465,6 +1465,13 @@ EXIM_TMPDIR="/tmp"
+@@ -1590,6 +1590,13 @@ EXIM_TMPDIR="/tmp"
  
  # EXPAND_LISTMATCH_RHS=yes
  
