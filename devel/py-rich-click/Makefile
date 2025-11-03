@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/10/03 11:51:04 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/11/03 12:24:24 adam Exp $
 
-DISTNAME=	rich_click-1.9.1
+DISTNAME=	rich_click-1.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich-click/}
