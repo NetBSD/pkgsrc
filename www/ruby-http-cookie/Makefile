@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/12/11 14:28:50 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/11/03 06:02:40 taca Exp $
 
-DISTNAME=	http-cookie-1.0.8
+DISTNAME=	http-cookie-1.1.0
 CATEGORIES=	www
 
 MAINTAINER=	taca@NetBSD.org

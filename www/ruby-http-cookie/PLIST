@@ -1,14 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/02 15:23:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/11/03 06:02:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/CODEOWNERS
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/http-cookie.gemspec
 ${GEM_LIBDIR}/lib/http-cookie.rb
 ${GEM_LIBDIR}/lib/http/cookie.rb
 ${GEM_LIBDIR}/lib/http/cookie/ruby_compat.rb
@@ -22,9 +16,4 @@ ${GEM_LIBDIR}/lib/http/cookie_jar/cookiestxt_saver.rb
 ${GEM_LIBDIR}/lib/http/cookie_jar/hash_store.rb
 ${GEM_LIBDIR}/lib/http/cookie_jar/mozilla_store.rb
 ${GEM_LIBDIR}/lib/http/cookie_jar/yaml_saver.rb
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/mechanize.yml
-${GEM_LIBDIR}/test/simplecov_start.rb
-${GEM_LIBDIR}/test/test_http_cookie.rb
-${GEM_LIBDIR}/test/test_http_cookie_jar.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
