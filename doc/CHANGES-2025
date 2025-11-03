@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6484 2025/11/03 07:00:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.6485 2025/11/03 07:02:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9351,3 +9351,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ruby-requestjs-rails version 0.0.13 [taca 2025-11-03]
 	Updated www/ruby-rouge to 4.6.1 [taca 2025-11-03]
 	Updated www/ruby-sass-embedded to 1.93.2 [taca 2025-11-03]
+	Updated www/ruby-sawyer to 0.9.3 [taca 2025-11-03]
