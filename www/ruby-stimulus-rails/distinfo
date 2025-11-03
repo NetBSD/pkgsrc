@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/11/03 07:09:02 taca Exp $
+
+BLAKE2s (stimulus-rails-1.3.4.gem) = 6a4bcb0d61a0b753b45387f3c76a46a10dbc9788f220f33a6ba191557ccc5c36
+SHA512 (stimulus-rails-1.3.4.gem) = e3273fdd366882a042748d37a13191e12eb64bd2dbabfa7a51c6ea4060f77c6f122b96679154ed7c30b9db3a318c8dcc6cbf288320cff82744e065066d142c15
+Size (stimulus-rails-1.3.4.gem) = 76288 bytes
