@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6496 2025/11/03 07:28:20 jnemeth Exp $
+$NetBSD: CHANGES-2025,v 1.6497 2025/11/03 07:30:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9363,3 +9363,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-commonmarker to 2.5.0 [taca 2025-11-03]
 	Updated net/ruby-winrm-fs to 1.3.5nb1 [taca 2025-11-03]
 	Updated databases/myodbc to 8.0.43 [jnemeth 2025-11-03]
+	Updated www/ruby-padrino-core to 0.15.3nb1 [taca 2025-11-03]
