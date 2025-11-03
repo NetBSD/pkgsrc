@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4539 2025/11/03 05:36:25 taca Exp $
+# $NetBSD: Makefile,v 1.4540 2025/11/03 05:40:25 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3540,6 +3540,7 @@ SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rb-fsevent
 SUBDIR+=	ruby-rb-inotify
 SUBDIR+=	ruby-rb-kqueue
+SUBDIR+=	ruby-rb_sys
 SUBDIR+=	ruby-rbtree
 SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
