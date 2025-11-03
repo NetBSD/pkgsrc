@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/05/18 04:19:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/11/03 09:13:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -17,14 +17,9 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/getAttribute.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/isDisplayed.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/mutationListener.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browser.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/base_log_entry.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/console_log_entry.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/filter_by.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/generic_log_entry.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_handler.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/cookies.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/credentials.rb
