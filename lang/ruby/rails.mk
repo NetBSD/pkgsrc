@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.181 2025/09/23 04:13:15 taca Exp $
+# $NetBSD: rails.mk,v 1.182 2025/11/03 07:40:41 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -134,31 +134,20 @@ MULTI+=		RUBY_RAILS_DEFAULT=${RUBY_RAILS} \
 PLIST_SUBST+=	RUBY_RAILS=${RUBY_RAILS}
 FILES_SUBST+=	RUBY_RAILS=${RUBY_RAILS}
 
-RUBY_ACTIVESUPPORT_DEPENDS= \
-	${RUBY_PKGPREFIX}-activesupport${_RAILS_DEP}:../../devel/ruby-activesupport${RUBY_RAILS}
-RUBY_ACTIVEMODEL_DEPENDS= \
-	${RUBY_PKGPREFIX}-activemodel${_RAILS_DEP}:../../devel/ruby-activemodel${RUBY_RAILS}
-RUBY_ACTIONPACK_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:../../www/ruby-actionpack${RUBY_RAILS}
-RUBY_ACTIVERECORD_DEPENDS= \
-	${RUBY_PKGPREFIX}-activerecord${_RAILS_DEP}:../../databases/ruby-activerecord${RUBY_RAILS}
-RUBY_ACTIONMAILER_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionmailer${_RAILS_DEP}:../../mail/ruby-actionmailer${RUBY_RAILS}
-RUBY_RAILTIES_DEPENDS= \
-	${RUBY_PKGPREFIX}-railties${_RAILS_DEP}:../../devel/ruby-railties${RUBY_RAILS}
-RUBY_RAILS_DEPENDS= \
-	${RUBY_PKGPREFIX}-rails${_RAILS_DEP}:../../www/ruby-rails${RUBY_RAILS}
-RUBY_ACTIONVIEW_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionview${_RAILS_DEP}:../../www/ruby-actionview${RUBY_RAILS}
-RUBY_ACTIVEJOB_DEPENDS= \
-	${RUBY_PKGPREFIX}-activejob${_RAILS_DEP}:../../devel/ruby-activejob${RUBY_RAILS}
-RUBY_ACTIONCABLE_DEPENDS= \
-	${RUBY_PKGPREFIX}-actioncable${_RAILS_DEP}:../../www/ruby-actioncable${RUBY_RAILS}
-RUBY_ACTIVESTORAGE_DEPENDS= \
-	${RUBY_PKGPREFIX}-activestorage${_RAILS_DEP}:../../devel/ruby-activestorage${RUBY_RAILS}
-RUBY_ACTIONMAILBOX_DEPENDS= \
-	${RUBY_PKGPREFIX}-actionmailbox${_RAILS_DEP}:../../mail/ruby-actionmailbox${RUBY_RAILS}
-RUBY_ACTIONTEXT_DEPENDS= \
-	${RUBY_PKGPREFIX}-actiontext${_RAILS_DEP}:../../textproc/ruby-actiontext${RUBY_RAILS}
+#
+# Rails dependency supports
+#
+_RAILS_PKGS=	activesupport:devel activemodel:devel activejob:devel \
+		activerecord:databases actionview:www actionpack:www \
+		actioncable:www railties:devel activestorage:devel \
+		actionmailer:mail actionmailbox:mail actiontext:textproc \
+		rails:www
 
-.endif
+.for rp in ${_RAILS_PKGS}
+
+RUBY_${rp:C/:.*$//:tu}_DEPENDS= \
+	${RUBY_PKGPREFIX}-${rp:C/:.*$//}${_RAILS_DEP}:../../${rp:C/^.*://}/ruby-${rp:C/:.*$//}${RUBY_RAILS}
+
+.endfor
+
+.endif # _RUBY_RAILS_MK
