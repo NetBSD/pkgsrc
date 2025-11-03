@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.652 2025/11/02 19:19:33 vins Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.653 2025/11/03 09:53:03 adam Exp $
 #
 #FORMAT 1.0.0
 #
@@ -28823,3 +28823,4 @@ gstreamer1<1.22.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-381
 gstreamer1<1.22.8	stack-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-50186
 gtar-base<1.35		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-39804
 opensmtpd>=7.7.0<7.8.0	denial-of-service	https://www.openwall.com/lists/oss-security/2025/10/31/3
+exim<4.99		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2025-30232
