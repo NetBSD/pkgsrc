@@ -1,42 +1,31 @@
-$NetBSD: patch-lookups_Makefile,v 1.3 2014/07/23 14:09:52 adam Exp $
+$NetBSD: patch-lookups_Makefile,v 1.4 2025/11/03 09:50:51 adam Exp $
 
 Avoid use of non-portable "local" keyword.
 
---- scripts/lookups-Makefile.orig	2014-07-21 14:28:07.000000000 +0000
+--- scripts/lookups-Makefile.orig	2025-10-27 13:16:13.000000000 +0000
 +++ scripts/lookups-Makefile
-@@ -87,16 +87,16 @@ fi
+@@ -92,16 +92,16 @@ fi
  # command-line, not just check the Makefile.
  
  want_dynamic() {
 -  local dyn_name="$1"
--  local re="LOOKUP_${dyn_name}[ $tab]*=[ $tab]*2"
+-  local re="(LOOKUP|EXPERIMENTAL)_${dyn_name}[ $tab]*=[ $tab]*2"
 +  dyn_name="$1"
-+  re="LOOKUP_${dyn_name}[ $tab]*=[ $tab]*2"
-   env | grep -q "^$re"
++  re="(LOOKUP|EXPERIMENTAL)_${dyn_name}[ $tab]*=[ $tab]*2"
+   env | ${egrep} -q "^$re"
    if [ $? -eq 0 ]; then return 0; fi
-   grep -q "^[ $tab]*$re" "$defs_source"
+   ${egrep} -q "^[ $tab]*$re" "$defs_source"
  }
  
  want_at_all() {
 -  local want_name="$1"
--  local re="LOOKUP_${want_name}[ $tab]*=[ $tab]*."
+-  local re="(LOOKUP|EXPERIMENTAL)_${want_name}[ $tab]*=[ $tab]*."
 +  want_name="$1"
-+  re="LOOKUP_${want_name}[ $tab]*=[ $tab]*."
-   env | grep -q "^$re"
++  re="(LOOKUP|EXPERIMENTAL)_${want_name}[ $tab]*=[ $tab]*."
+   env | ${egrep} -q "^$re"
    if [ $? -eq 0 ]; then return 0; fi
-   grep -q "^[ $tab]*$re" "$defs_source"
-@@ -104,8 +104,8 @@ want_at_all() {
- 
- # Adapted want_at_all above to work for EXPERIMENTAL features
- want_experimental() {
--  local want_name="$1"
--  local re="EXPERIMENTAL_${want_name}[ $tab]*=[ $tab]*."
-+  want_name="$1"
-+  re="EXPERIMENTAL_${want_name}[ $tab]*=[ $tab]*."
-   env | grep -q "^$re"
-   if [ $? -eq 0 ]; then return 0; fi
-   grep -q "^[ $tab]*$re" "$defs_source"
-@@ -117,8 +117,7 @@ MODS=""
+   ${egrep} -q "^[ $tab]*$re" "$defs_source"
+@@ -113,8 +113,7 @@ MODS=""
  OBJ=""
  
  emit_module_rule() {
