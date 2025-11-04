@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2025/10/23 20:35:41 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2025/11/04 13:25:57 wiz Exp $
 
 DISTNAME=	exaile-4.1.3
 PKGREVISION=	8
@@ -35,6 +35,7 @@ DEPENDS+=	gst-plugins1-opus-[0-9]*:../../audio/gst-plugins1-opus
 DEPENDS+=	gst-plugins1-vorbis-[0-9]*:../../audio/gst-plugins1-vorbis
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-mutagen
+PYTHON_VERSIONS_INCOMPATIBLE+=	313 314 # uses deprecated pipes module
 
 .include "../../mk/oss.buildlink3.mk"
 
