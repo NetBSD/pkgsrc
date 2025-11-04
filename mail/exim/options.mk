@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2025/09/29 14:56:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.28 2025/11/04 16:48:54 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-arc
@@ -9,12 +9,12 @@ PKG_SUPPORTED_OPTIONS+=	exim-lookup-cdb exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-redis exim-lookup-sqlite
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-whoson exim-old-demime exim-router-iplookup
-PKG_SUPPORTED_OPTIONS+=	exim-tcp-wrappers exim-tls exim-transport-lmtp gdbm
+PKG_SUPPORTED_OPTIONS+=	exim-tls exim-transport-lmtp gdbm
 PKG_SUPPORTED_OPTIONS+=	gsasl inet6 opendmarc saslauthd spf readline
 
 PKG_SUGGESTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
 PKG_SUGGESTED_OPTIONS+=	exim-appendfile-mbx exim-content-scan
-PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime exim-tcp-wrappers
+PKG_SUGGESTED_OPTIONS+=	exim-lookup-dsearch exim-old-demime
 PKG_SUGGESTED_OPTIONS+=	exim-tls inet6
 
 .include "../../mk/bsd.options.mk"
@@ -115,12 +115,6 @@ LOCAL_MAKEFILE_OPTIONS+=	WITH_OLD_DEMIME=YES
 
 .if !empty(PKG_OPTIONS:Mexim-router-iplookup)
 LOCAL_MAKEFILE_OPTIONS+=	ROUTER_IPLOOKUP=yes
-.endif
-
-.if !empty(PKG_OPTIONS:Mexim-tcp-wrappers)
-LOCAL_MAKEFILE_OPTIONS+=USE_TCP_WRAPPERS=yes
-LOOKUP_LIBS+=-lwrap
-.  include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-tls)
