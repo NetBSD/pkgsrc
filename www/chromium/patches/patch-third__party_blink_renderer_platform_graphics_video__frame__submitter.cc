@@ -1,12 +1,12 @@
-$NetBSD: patch-third__party_blink_renderer_platform_graphics_video__frame__submitter.cc,v 1.8 2025/10/16 19:43:34 kikadf Exp $
+$NetBSD: patch-third__party_blink_renderer_platform_graphics_video__frame__submitter.cc,v 1.9 2025/11/04 14:55:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/blink/renderer/platform/graphics/video_frame_submitter.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/blink/renderer/platform/graphics/video_frame_submitter.cc
-@@ -379,7 +379,7 @@ void VideoFrameSubmitter::OnBeginFrame(
+@@ -380,7 +380,7 @@ void VideoFrameSubmitter::OnBeginFrame(
      auto& details = timing_details.find(frame_token)->value;
      auto& feedback = details.presentation_feedback;
  

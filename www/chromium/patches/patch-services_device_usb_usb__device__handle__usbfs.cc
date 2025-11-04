@@ -1,10 +1,10 @@
-$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.7 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-services_device_usb_usb__device__handle__usbfs.cc,v 1.8 2025/11/04 14:55:45 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- services/device/usb/usb_device_handle_usbfs.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ services/device/usb/usb_device_handle_usbfs.cc
 @@ -34,7 +34,7 @@
  #include "chromeos/dbus/permission_broker/permission_broker_client.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_new__tab__page_new__tab__page__util.cc,v 1.8 2025/10/16 19:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_new__tab__page_new__tab__page__util.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/new_tab_page/new_tab_page_util.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/new_tab_page/new_tab_page_util.cc
 @@ -35,7 +35,7 @@ bool IsOsSupportedForCart() {
  }

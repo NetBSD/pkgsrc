@@ -1,12 +1,12 @@
-$NetBSD: patch-content_child_child__process.cc,v 1.8 2025/10/16 19:43:29 kikadf Exp $
+$NetBSD: patch-content_child_child__process.cc,v 1.9 2025/11/04 14:55:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/child/child_process.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/child/child_process.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/child/child_process.cc
-@@ -35,7 +35,7 @@
+@@ -37,7 +37,7 @@
  #include "content/common/android/cpu_time_metrics.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_child_child__process.cc,v 1.8 2025/10/16 19:43:29 kikadf 
  #include "content/child/sandboxed_process_thread_type_handler.h"
  #endif
  
-@@ -197,7 +197,7 @@ void ChildProcess::set_main_thread(Child
+@@ -215,7 +215,7 @@ void ChildProcess::set_main_thread(Child
    main_thread_.reset(thread);
  }
  

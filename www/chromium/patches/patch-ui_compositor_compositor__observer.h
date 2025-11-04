@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_compositor_compositor__observer.h,v 1.8 2025/10/16 19:43:37 kikadf Exp $
+$NetBSD: patch-ui_compositor_compositor__observer.h,v 1.9 2025/11/04 14:55:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/compositor/compositor_observer.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/compositor/compositor_observer.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/compositor/compositor_observer.h
 @@ -56,7 +56,7 @@ class COMPOSITOR_EXPORT CompositorObserv
    // Called when a child of the compositor is resizing.

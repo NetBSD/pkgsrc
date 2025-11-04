@@ -1,12 +1,12 @@
-$NetBSD: patch-content_browser_renderer__host_media_service__video__capture__device__launcher.cc,v 1.8 2025/10/16 19:43:28 kikadf Exp $
+$NetBSD: patch-content_browser_renderer__host_media_service__video__capture__device__launcher.cc,v 1.9 2025/11/04 14:55:40 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- content/browser/renderer_host/media/service_video_capture_device_launcher.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ content/browser/renderer_host/media/service_video_capture_device_launcher.cc
-@@ -29,7 +29,7 @@
+@@ -24,7 +24,7 @@
  #include "media/base/media_switches.h"
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-content_browser_renderer__host_media_service__video__capture__dev
  #include "content/browser/gpu/gpu_data_manager_impl.h"
  #endif
  
-@@ -188,7 +188,7 @@ void ServiceVideoCaptureDeviceLauncher::
+@@ -166,7 +166,7 @@ void ServiceVideoCaptureDeviceLauncher::
    }
  #else
    if (switches::IsVideoCaptureUseGpuMemoryBufferEnabled()) {

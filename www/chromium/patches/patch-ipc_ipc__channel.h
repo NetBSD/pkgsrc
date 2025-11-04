@@ -1,12 +1,12 @@
-$NetBSD: patch-ipc_ipc__channel.h,v 1.8 2025/10/16 19:43:30 kikadf Exp $
+$NetBSD: patch-ipc_ipc__channel.h,v 1.9 2025/11/04 14:55:42 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ipc/ipc_channel.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- ipc/ipc_channel.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ipc/ipc_channel.h
-@@ -199,7 +199,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
+@@ -206,7 +206,7 @@ class COMPONENT_EXPORT(IPC) Channel : pu
    // Generates a channel ID that's non-predictable and unique.
    static std::string GenerateUniqueRandomChannelID();
  
