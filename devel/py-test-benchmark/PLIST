@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2025/04/12 20:54:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/11/04 11:56:59 adam Exp $
 bin/py.test-benchmark-${PYVERSSUFFIX}
 bin/pytest-benchmark-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_benchmark/__init__.py
@@ -38,6 +37,7 @@ ${PYSITELIB}/pytest_benchmark/logger.pyo
 ${PYSITELIB}/pytest_benchmark/plugin.py
 ${PYSITELIB}/pytest_benchmark/plugin.pyc
 ${PYSITELIB}/pytest_benchmark/plugin.pyo
+${PYSITELIB}/pytest_benchmark/py.typed
 ${PYSITELIB}/pytest_benchmark/session.py
 ${PYSITELIB}/pytest_benchmark/session.pyc
 ${PYSITELIB}/pytest_benchmark/session.pyo
