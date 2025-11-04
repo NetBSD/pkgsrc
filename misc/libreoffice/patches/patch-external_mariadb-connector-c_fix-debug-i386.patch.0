@@ -1,41 +1,44 @@
-$NetBSD: patch-external_mariadb-connector-c_fix-debug-i386.patch.0,v 1.2 2025/05/18 01:15:15 ryoon Exp $
+$NetBSD: patch-external_mariadb-connector-c_fix-debug-i386.patch.0,v 1.3 2025/11/04 16:48:06 ryoon Exp $
 
 * Fix build under NetBSD/i386 9.
 
---- external/mariadb-connector-c/fix-debug-i386.patch.0.orig	2025-05-10 22:31:22.257925514 +0000
+--- external/mariadb-connector-c/fix-debug-i386.patch.0.orig	2025-10-13 12:33:06.682605837 +0000
 +++ external/mariadb-connector-c/fix-debug-i386.patch.0
-@@ -0,0 +1,34 @@
-+--- libmariadb/ma_context.c.orig	2025-02-27 12:50:01.000000000 +0000
-++++ libmariadb/ma_context.c
-+@@ -439,6 +439,7 @@ my_context_spawn(struct my_context *c, v
-+   */
-+   __asm__ __volatile__
-+     (
-++     ".cfi_startproc\n\t"
-+      "movl %%esp, (%[save])\n\t"
-+      "movl %[stack], %%esp\n\t"
-+ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
-+@@ -479,6 +480,7 @@ my_context_spawn(struct my_context *c, v
-+      "3:\n\t"
-+      "movl $1, %[ret]\n"
-+      "4:\n"
-++     ".cfi_endproc\n\t"
-+      : [ret] "=a" (ret),
-+        [f] "+c" (f),
-+        [d] "+d" (d)
-+@@ -674,6 +676,7 @@ my_context_spawn(struct my_context *c, v
-+   */
-+   __asm__ __volatile__
-+     (
-++     ".cfi_startproc\n\t"
-+      "mov x10, sp\n\t"
-+      "mov sp, %[stack]\n\t"
-+ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
-+@@ -719,6 +722,7 @@ my_context_spawn(struct my_context *c, v
-+      "2:\n\t"
-+      "mov %w[ret], #1\n"
-+      "3:\n"
-++     ".cfi_endproc\n\t"
-+      : [ret] "=r" (ret),
-+        [f] "+r" (f_reg),
-+        [d] "+r" (d_reg),
+@@ -0,0 +1,37 @@
++--- ../fix-debug-i386.patch.0.orig	2025-10-13 12:31:29.460482085 +0000
+++++ ../fix-debug-i386.patch.0
++@@ -0,0 +1,34 @@
+++--- libmariadb/ma_context.c.orig	2025-02-27 12:50:01.000000000 +0000
++++++ libmariadb/ma_context.c
+++@@ -439,6 +439,7 @@ my_context_spawn(struct my_context *c, v
+++   */
+++   __asm__ __volatile__
+++     (
++++     ".cfi_startproc\n\t"
+++      "movl %%esp, (%[save])\n\t"
+++      "movl %[stack], %%esp\n\t"
+++ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
+++@@ -479,6 +480,7 @@ my_context_spawn(struct my_context *c, v
+++      "3:\n\t"
+++      "movl $1, %[ret]\n"
+++      "4:\n"
++++     ".cfi_endproc\n\t"
+++      : [ret] "=a" (ret),
+++        [f] "+c" (f),
+++        [d] "+d" (d)
+++@@ -674,6 +676,7 @@ my_context_spawn(struct my_context *c, v
+++   */
+++   __asm__ __volatile__
+++     (
++++     ".cfi_startproc\n\t"
+++      "mov x10, sp\n\t"
+++      "mov sp, %[stack]\n\t"
+++ #if defined(__GCC_HAVE_DWARF2_CFI_ASM) || (defined(__clang__) && __clang_major__ < 13)
+++@@ -719,6 +722,7 @@ my_context_spawn(struct my_context *c, v
+++      "2:\n\t"
+++      "mov %w[ret], #1\n"
+++      "3:\n"
++++     ".cfi_endproc\n\t"
+++      : [ret] "=r" (ret),
+++        [f] "+r" (f_reg),
+++        [d] "+r" (d_reg),
