@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.287 2025/09/27 00:55:03 ryoon Exp $
+$NetBSD: distinfo,v 1.288 2025/11/04 17:24:34 ryoon Exp $
 
-BLAKE2s (thunderbird-143.0.1.source.tar.xz) = 1c5b150ac5f61dc17eb332a568a418d5ec86bf830d7114ea55ab589ff3078b27
-SHA512 (thunderbird-143.0.1.source.tar.xz) = 5f4fd5e4f5bc9fee9852d51b8e675f7c9c605660332c24aa0c90e5437301b468153c1788720bc80a53cfc1c3bf95a4bdb622a0533b8f11fb9853b290485c47c6
-Size (thunderbird-143.0.1.source.tar.xz) = 771223064 bytes
+BLAKE2s (thunderbird-144.0.1.source.tar.xz) = c19e62f4fdeb8dbca3a6685d685b4f4cecba2970186301d7692d12e9f3b5a0f3
+SHA512 (thunderbird-144.0.1.source.tar.xz) = e1859ecd247260c9303a335d14f51d2b80bca7fe0125c41cf6f6bdf1331072dcef490d75fba588b37db5410ce2e7084bbe1c8f568d40c46303891ae2bfbe431c
+Size (thunderbird-144.0.1.source.tar.xz) = 774861288 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -11,7 +11,8 @@ SHA1 (patch-comm_mailnews_search_src_nsMsgSearchNews.cpp) = 84624c6752de1f56848a
 SHA1 (patch-comm_third__party_botan_configure.py) = 262f560c514d221d0df15a1906100b5e716bfdab
 SHA1 (patch-comm_third__party_libgcrypt_configure) = c5ca8a8b44c485f81139b54d341ac044189d98d3
 SHA1 (patch-config_gcc-stl-wrapper.template.h) = 9d1f15ff487efa9202114d19ed5668b4e7aa032a
-SHA1 (patch-config_makefiles_rust.mk) = 3366ab089a23e66230e7e23749c10db38018fdd4
+SHA1 (patch-config_makefiles_rust.mk) = 25eb2d4c99ace2b215917490f28ceb90ab90145f
+SHA1 (patch-config_system-headers.mozbuild) = 8a628765291085efe6a22da28c0ff99fbc3c5e6f
 SHA1 (patch-dom_base_nsAttrName.h) = ac7ba441a3b27df2855cf2673eea36b1cb44ad49
 SHA1 (patch-dom_media_webrtc_libwebrtc__overrides_moz.build) = a2ff7cf1e6aaf888ee78581d89c7e658f46c3fcd
 SHA1 (patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp) = b93b4c6367bd2fb3d1868ab7d97ca56c100be414
@@ -21,8 +22,8 @@ SHA1 (patch-gfx_ots_src_name.cc) = 35ae5b2689eae8fab1ea351612f3628c14001f9e
 SHA1 (patch-gfx_skia_skia_src_sksl_codegen_SkSLSPIRVCodeGenerator.cpp) = 3eb9855e20fe8b7784a9620fce4ffb96f4736f82
 SHA1 (patch-gfx_wr_swgl_build.rs) = 959420365cdfb64bb5967d01d31378967753d6de
 SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 298642a3527804115b398fb7904a3596962932e3
-SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 753bb4e90758f5b42a51bbc073b328de673988cf
-SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218b848344ce1
+SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = ee40764b100728d8fb73b8c6f1251456e368bd53
+SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 00bd08bb68b9aad3c4478c8849b53341da4a0d29
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_editline_editline.c) = ba44a33cc19d19aeaa777548ac74fc7144ea7d70
@@ -40,6 +41,7 @@ SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 6cac13bc120d52b2c3628938d2fc1cb
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.cc) = 2b5955027add79d1b8709667b0433b2d19fbd1bc
 SHA1 (patch-third__party_abseil-cpp_absl_debugging_internal_vdso__support.cc) = f9c44d0d6fd952296f23c24f56053958b30d8e5c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
+SHA1 (patch-third__party_libwebrtc_modules_audio__device_audio__device__impl.cc) = 927532138175f99f96433d24060f65a2a919d2d1
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = f53af8e5383f31b5de7df21f80eb53d60c11eae1
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = fc203b7a8c1557303e61cc598dc94c5cccf6f0a4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 4cb0e1c88dc83370024ed1aac7f75445b9f98df8
@@ -56,4 +58,5 @@ SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = e905e38ef1b88d764c
 SHA1 (patch-toolkit_moz.configure) = 1306e7ac3c3939886aff38a58dd3162e6517409b
 SHA1 (patch-toolkit_mozapps_installer_packager.mk) = c77481a1f8fe1e237b7fe87e3e586ca886ac1d3d
 SHA1 (patch-xpcom_base_nscore.h) = 1ac4d34d3c9e80bc1ac966c6c84cb320bc0fa1ec
+SHA1 (patch-xpcom_ds_nsTArray.h) = d2bd5351a4cd9f933b000cf0fcd9e2f6e339c899
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 8980398051fa16c7283acb6d323419993cce1420
