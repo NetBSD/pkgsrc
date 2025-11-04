@@ -1,7 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.15 2025/04/30 03:47:13 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.16 2025/11/04 17:24:34 ryoon Exp $
 
 * Support NetBSD
-* Support Solaris (we can't rely on pthread_setname_np so ignore it).
 
 --- ipc/chromium/src/base/platform_thread_posix.cc.orig	2023-07-20 18:06:23.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread_posix.cc
