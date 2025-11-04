@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2025/11/04 00:54:47 gdt Exp $
+# $NetBSD: Makefile,v 1.260 2025/11/04 12:33:27 gdt Exp $
 
 # This is intentionally 3.44, about to be Long Term Release.  Please
 # do not update to later branches without MAINTAINER consensus.  The
@@ -78,7 +78,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
 
-# Arguably a bug, but qgis cmake does not find qwt where pkgsrc puts it.
+# We patch cmake to look only in QWT_DIR, so provide it.
 CMAKE_CONFIGURE_ARGS+=		-DQWT_DIR=${QWT_DIR}
 
 # qgis defaults to building webkit and fails if not found.
@@ -113,9 +113,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 # ? qt-webengine
 # ? laz-perf
-
-# I suggest that there's no reason to include qjson. 
-#? .include "../../devel/qjson/buildlink3.mk"
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
