@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2025/09/03 09:06:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/11/04 21:14:00 leot Exp $
 bin/nvim
 @pkgdir lib/nvim
 man/man1/nvim.1
@@ -304,6 +304,7 @@ share/nvim/runtime/doc/job_control.txt
 share/nvim/runtime/doc/lsp.txt
 share/nvim/runtime/doc/lua-bit.txt
 share/nvim/runtime/doc/lua-guide.txt
+share/nvim/runtime/doc/lua-plugin.txt
 share/nvim/runtime/doc/lua.txt
 share/nvim/runtime/doc/luaref.txt
 share/nvim/runtime/doc/luvref.txt
