@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.258 2025/11/02 13:14:37 gdt Exp $
+# $NetBSD: Makefile,v 1.259 2025/11/04 00:54:47 gdt Exp $
 
-# This is intentionally 3.40 Long Term Release.  Please do not update
-# to later branches, and instead discuss whether/how we want multiple
-# versions, or to only track one LTR branch.
-DISTNAME=	qgis-3.40.12
+# This is intentionally 3.44, about to be Long Term Release.  Please
+# do not update to later branches without MAINTAINER consensus.  The
+# transition to 4.0/4.2 and qt6 will be particularly tricky.
+DISTNAME=	qgis-3.44.4
 CATEGORIES=	geography
 MASTER_SITES=	https://qgis.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +12,7 @@ MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	brook@nmsu.edu
 #MAINTAINER+=	bouyer@NetBSD.org
 HOMEPAGE=	https://www.qgis.org/
+#STATUSPAGE=	https://qgis.org/resources/roadmap/
 COMMENT=	Geographic Information System (GIS)
 LICENSE=	gnu-gpl-v2
 
@@ -63,8 +64,25 @@ SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 # because it is only examined when there are failures.
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=TRUE
 
+# qgis looks for ccache and uses it, which does not play well with wrappers.
+# Plus, there's something buggy about ccache, precompiled headers, and gcc.
+CMAKE_CONFIGURE_ARGS+=		-DUSE_CCACHE:BOOL=FALSE
+
+# Precompiled headers are buggy in the presence of ASLR.
+#   https://gcc.gnu.org/bugzilla/show_bug.cgi?id=71934
+#   https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=59746
+CMAKE_CONFIGURE_ARGS+=		-DUSE_PRECOMPILED_HEADERS:BOOL=FALSE
+
 CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
+
 CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_NLOHMANN_JSON=OFF
+
+# Arguably a bug, but qgis cmake does not find qwt where pkgsrc puts it.
+CMAKE_CONFIGURE_ARGS+=		-DQWT_DIR=${QWT_DIR}
+
+# qgis defaults to building webkit and fails if not found.
+CMAKE_CONFIGURE_ARGS+=		-DWITH_QTWEBKIT=FALSE
 
 # \todo Add Qt53DCoreConfig.cmake
 CMAKE_CONFIGURE_ARGS+=		-DWITH_3D=FALSE
@@ -72,6 +90,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_3D=FALSE
 # Server support is WIP; it has merely been tested that regular use
 # has not been broken.
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
+# \todo Upstream installs in the wrong place by default.
 CMAKE_CONFIGURE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
 
 # \todo Consider (optional?) dependency on GRASS.
@@ -87,16 +106,21 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # for metasearch
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
-CMAKE_CONFIGURE_ARGS+=	-DWITH_QTWEBKIT=FALSE
-CMAKE_CONFIGURE_ARGS+=	-DQWT_DIR=${QWT_DIR}
-
+.include "../../lang/python/pyversion.mk"
 PYTHON_VERSIONS_INCOMPATIBLE=	310
+
+.include "../../mk/pgsql.buildlink3.mk"
+
+# ? qt-webengine
+# ? laz-perf
+
+# I suggest that there's no reason to include qjson. 
+#? .include "../../devel/qjson/buildlink3.mk"
 
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/protobuf/buildlink3.mk"
-#.include "../../devel/qjson/buildlink3.mk"
 .include "../../geography/draco/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/libspatialite/buildlink3.mk"
@@ -106,13 +130,13 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/qca2-qt5/buildlink3.mk"
 .include "../../security/qt5-qtkeychain/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../www/fcgi/buildlink3.mk"
 .include "../../x11/qt5-qscintilla/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
@@ -120,5 +144,4 @@ PYTHON_VERSIONS_INCOMPATIBLE=	310
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qwt6-qt5/buildlink3.mk"
-.include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
