@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6520 2025/11/04 11:42:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.6521 2025/11/04 11:53:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9451,3 +9451,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/qgis to 3.44.4 [gdt 2025-11-04]
 	Updated net/arti to 1.7.0 [wiz 2025-11-04]
 	Updated mail/rspamd to 3.13.2nb1 [wiz 2025-11-04]
+	Updated databases/py-peewee to 3.18.3 [adam 2025-11-04]
+	Updated devel/py-inline-snapshot to 0.31.0 [adam 2025-11-04]
