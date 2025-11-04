@@ -1,8 +1,9 @@
-$NetBSD: patch-src_core_raster_qgsrasterattributetable.cpp,v 1.1 2024/05/12 13:47:30 gdt Exp $
+$NetBSD: patch-src_core_raster_qgsrasterattributetable.cpp,v 1.2 2025/11/04 20:33:19 gdt Exp $
 
 Remediate bare isnan usage.
 
-Queried via qgis-developer@ on 20240126.
+Fixed on master, to be backported to 3.44:
+  https://github.com/qgis/QGIS/pull/63803
 
 --- src/core/raster/qgsrasterattributetable.cpp.orig	2024-01-26 14:03:42.143505820 +0000
 +++ src/core/raster/qgsrasterattributetable.cpp
