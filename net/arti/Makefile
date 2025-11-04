@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/10/07 14:07:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/11/04 09:58:23 wiz Exp $
 
-DISTNAME=	arti-arti-v1.6.0
+DISTNAME=	arti-arti-v1.7.0
 PKGNAME=	${DISTNAME:S/arti-v//}
 CATEGORIES=	net
 # TODO: modify gitlab fetch to allow hosted gitlab instances
@@ -14,7 +14,7 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 USE_LANGUAGES=		c c++
-RUST_REQ=		1.85.0
+RUST_REQ=		1.86.0
 
 .include "../../mk/bsd.prefs.mk"
 ARTI_USER?=		arti
