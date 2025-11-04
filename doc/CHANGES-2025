@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6521 2025/11/04 11:53:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6522 2025/11/04 11:57:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9453,3 +9453,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/rspamd to 3.13.2nb1 [wiz 2025-11-04]
 	Updated databases/py-peewee to 3.18.3 [adam 2025-11-04]
 	Updated devel/py-inline-snapshot to 0.31.0 [adam 2025-11-04]
+	Updated www/py-webcolors to 25.10.0 [adam 2025-11-04]
+	Updated devel/py-test-benchmark to 5.2.0 [adam 2025-11-04]
