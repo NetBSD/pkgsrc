@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6522 2025/11/04 11:57:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.6523 2025/11/04 15:56:31 kikadf Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9455,3 +9455,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-inline-snapshot to 0.31.0 [adam 2025-11-04]
 	Updated www/py-webcolors to 25.10.0 [adam 2025-11-04]
 	Updated devel/py-test-benchmark to 5.2.0 [adam 2025-11-04]
+	Updated www/chromium to 142.0.7444.59 [kikadf 2025-11-04]
