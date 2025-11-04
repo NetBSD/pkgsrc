@@ -1,17 +1,17 @@
-$NetBSD: patch-chrome_browser_ui_signin_signin__view__controller.h,v 1.6 2025/10/16 19:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_signin_signin__view__controller.h,v 1.7 2025/11/04 14:55:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/signin/signin_view_controller.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/signin/signin_view_controller.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/signin/signin_view_controller.h
-@@ -169,7 +169,7 @@ class SigninViewController {
+@@ -170,7 +170,7 @@ class SigninViewController {
    void ShowModalSyncConfirmationDialog(bool is_signin_intercept,
                                         bool is_sync_promo);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
    // Shows the modal history sync opt in dialog as a browser-modal dialog on top
-   // of the `browser_`'s window.
-   void ShowModalHistorySyncOptInDialog();
+   // of the `browser_`'s window. Executes the provided callback when the dialog
+   // closes.

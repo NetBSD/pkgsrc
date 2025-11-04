@@ -1,10 +1,10 @@
-$NetBSD: patch-v8_src_base_atomicops.h,v 1.8 2025/10/16 19:43:38 kikadf Exp $
+$NetBSD: patch-v8_src_base_atomicops.h,v 1.9 2025/11/04 14:55:51 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- v8/src/base/atomicops.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- v8/src/base/atomicops.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ v8/src/base/atomicops.h
 @@ -57,10 +57,10 @@ using Atomic64 = SbAtomic64;
  using Atomic8 = char;
@@ -19,7 +19,7 @@ $NetBSD: patch-v8_src_base_atomicops.h,v 1.8 2025/10/16 19:43:38 kikadf Exp $
  using Atomic64 = int64_t;
  #else
  using Atomic64 = intptr_t;
-@@ -266,7 +266,7 @@ inline Atomic32 SeqCst_Load(volatile con
+@@ -281,7 +281,7 @@ inline Atomic32 SeqCst_Load(volatile con
                                     std::memory_order_seq_cst);
  }
  

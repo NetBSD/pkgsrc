@@ -1,10 +1,10 @@
-$NetBSD: patch-base_profiler_thread__delegate__posix.cc,v 1.8 2025/10/16 19:43:19 kikadf Exp $
+$NetBSD: patch-base_profiler_thread__delegate__posix.cc,v 1.9 2025/11/04 14:55:29 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/profiler/thread_delegate_posix.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/profiler/thread_delegate_posix.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/profiler/thread_delegate_posix.cc
 @@ -15,7 +15,7 @@
  #include "base/process/process_handle.h"

@@ -1,10 +1,10 @@
-$NetBSD: patch-base_allocator_dispatcher_tls.h,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_allocator_dispatcher_tls.h,v 1.9 2025/11/04 14:55:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/dispatcher/tls.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/allocator/dispatcher/tls.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/allocator/dispatcher/tls.h
 @@ -86,7 +86,7 @@ struct BASE_EXPORT MMapAllocator {
    constexpr static size_t AllocationChunkSize = 16384;

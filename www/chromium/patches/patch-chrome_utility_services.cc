@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_utility_services.cc,v 1.8 2025/10/16 19:43:25 kikadf Exp $
+$NetBSD: patch-chrome_utility_services.cc,v 1.9 2025/11/04 14:55:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/utility/services.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/utility/services.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/utility/services.cc
 @@ -50,7 +50,7 @@
  #include "chrome/services/system_signals/mac/mac_system_signals_service.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_utility_services.cc,v 1.8 2025/10/16 19:43:25 kikadf Exp $
  #include "chrome/services/system_signals/linux/linux_system_signals_service.h"
  #endif  // BUILDFLAG(IS_LINUX)
  
-@@ -215,7 +215,7 @@ auto RunMacNotificationService(
+@@ -213,7 +213,7 @@ auto RunMacNotificationService(
  }
  #endif  // BUILDFLAG(IS_MAC)
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_utility_services.cc,v 1.8 2025/10/16 19:43:25 kikadf Exp $
  auto RunSystemSignalsService(
      mojo::PendingReceiver<device_signals::mojom::SystemSignalsService>
          receiver) {
-@@ -490,7 +490,7 @@ void RegisterMainThreadServices(mojo::Se
+@@ -481,7 +481,7 @@ void RegisterMainThreadServices(mojo::Se
    services.Add(RunWindowsIconReader);
  #endif  // BUILDFLAG(IS_WIN)
  

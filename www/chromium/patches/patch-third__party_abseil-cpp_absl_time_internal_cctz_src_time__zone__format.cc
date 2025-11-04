@@ -1,10 +1,10 @@
-$NetBSD: patch-third__party_abseil-cpp_absl_time_internal_cctz_src_time__zone__format.cc,v 1.8 2025/10/16 19:43:33 kikadf Exp $
+$NetBSD: patch-third__party_abseil-cpp_absl_time_internal_cctz_src_time__zone__format.cc,v 1.9 2025/11/04 14:55:46 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ third_party/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc
 @@ -19,7 +19,8 @@
  #endif

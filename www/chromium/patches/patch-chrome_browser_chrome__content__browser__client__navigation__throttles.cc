@@ -1,12 +1,12 @@
-$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.6 2025/10/16 19:43:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__throttles.cc,v 1.7 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/chrome_content_browser_client_navigation_throttles.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/chrome_content_browser_client_navigation_throttles.cc
-@@ -125,7 +125,7 @@
+@@ -126,7 +126,7 @@
  #include "chrome/browser/captive_portal/captive_portal_service_factory.h"
  #endif  // BUILDFLAG(ENABLE_CAPTIVE_PORTAL_DETECTION)
  
@@ -15,7 +15,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
  #include "chrome/browser/browser_switcher/browser_switcher_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/oidc_auth_response_capture_navigation_throttle.h"
  #include "chrome/browser/enterprise/profile_management/profile_management_navigation_throttle.h"
-@@ -406,7 +406,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -409,7 +409,7 @@ void CreateAndAddChromeThrottlesForNavig
      TypedNavigationUpgradeThrottle::MaybeCreateAndAdd(registry);
    }
  
@@ -24,7 +24,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
    WebAppSettingsNavigationThrottle::MaybeCreateAndAdd(registry);
    profile_management::ProfileManagementNavigationThrottle::MaybeCreateAndAdd(
        registry);
-@@ -424,7 +424,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -427,7 +427,7 @@ void CreateAndAddChromeThrottlesForNavig
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN)
  
  #if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || \
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_chrome__content__browser__client__navigation__thro
    enterprise_connectors::DeviceTrustNavigationThrottle::MaybeCreateAndAdd(
        registry);
  #endif  // BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) ||
-@@ -456,7 +456,7 @@ void CreateAndAddChromeThrottlesForNavig
+@@ -459,7 +459,7 @@ void CreateAndAddChromeThrottlesForNavig
    }
  #endif  // BUILDFLAG(SAFE_BROWSING_AVAILABLE)
  

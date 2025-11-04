@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.8 2025/10/16 19:43:20 kikadf Exp $
+$NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.9 2025/11/04 14:55:31 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/browser_process_impl.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/browser_process_impl.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/browser_process_impl.cc
 @@ -253,7 +253,7 @@
  #include "components/enterprise/browser/controller/chrome_browser_cloud_management_controller.h"
@@ -33,7 +33,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.8 2025/10/16 19:43:2
    os_crypt_async::SecretPortalKeyProvider::RegisterLocalPrefs(registry);
  #endif
  }
-@@ -1435,7 +1435,7 @@ void BrowserProcessImpl::PreMainMessageL
+@@ -1368,7 +1368,7 @@ void BrowserProcessImpl::PreMainMessageL
            local_state())));
  #endif  // BUILDFLAG(IS_WIN)
  
@@ -42,7 +42,7 @@ $NetBSD: patch-chrome_browser_browser__process__impl.cc,v 1.8 2025/10/16 19:43:2
    base::CommandLine* cmd_line = base::CommandLine::ForCurrentProcess();
    if (cmd_line->GetSwitchValueASCII(password_manager::kPasswordStore) !=
        "basic") {
-@@ -1715,7 +1715,7 @@ void BrowserProcessImpl::Unpin() {
+@@ -1718,7 +1718,7 @@ void BrowserProcessImpl::Unpin() {
  }
  
  // Mac is currently not supported.

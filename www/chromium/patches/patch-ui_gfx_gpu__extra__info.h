@@ -1,10 +1,10 @@
-$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.6 2025/10/16 19:43:37 kikadf Exp $
+$NetBSD: patch-ui_gfx_gpu__extra__info.h,v 1.7 2025/11/04 14:55:50 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- ui/gfx/gpu_extra_info.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- ui/gfx/gpu_extra_info.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ ui/gfx/gpu_extra_info.h
 @@ -51,7 +51,7 @@ struct COMPONENT_EXPORT(GFX) GpuExtraInf
    std::vector<gfx::BufferUsageAndFormat> gpu_memory_buffer_support_x11;

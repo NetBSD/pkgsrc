@@ -1,21 +1,21 @@
-$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.8 2025/10/16 19:43:23 kikadf Exp $
+$NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.9 2025/11/04 14:55:34 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/ui/ui_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/ui/ui_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/ui/ui_features.cc
 @@ -38,7 +38,7 @@ BASE_FEATURE(kCloseOmniboxPopupOnInactiv
-              "CloseOmniboxPopupOnInactiveAreaClick",
-              base::FEATURE_ENABLED_BY_DEFAULT);
+ BASE_FEATURE(kCreateNewTabGroupAppMenuTopLevel,
+              base::FEATURE_DISABLED_BY_DEFAULT);
  
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
  // Enables the feature to remove the last confirmation dialog when relaunching
  // to update Chrome.
- BASE_FEATURE(kFewerUpdateConfirmations,
-@@ -171,7 +171,7 @@ BASE_FEATURE_PARAM(int,
+ BASE_FEATURE(kFewerUpdateConfirmations, base::FEATURE_ENABLED_BY_DEFAULT);
+@@ -148,7 +148,7 @@ BASE_FEATURE_PARAM(int,
                     "drop_target_hide_for_os_width",
  #if BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_WIN)
                     32
@@ -24,21 +24,21 @@ $NetBSD: patch-chrome_browser_ui_ui__features.cc,v 1.8 2025/10/16 19:43:23 kikad
                     50
  #else
                     0
-@@ -511,7 +511,7 @@ BASE_FEATURE(kViewsJSAppModalDialog,
-              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -434,7 +434,7 @@ BASE_FEATURE(kViewsFirstRunDialog, base:
+ BASE_FEATURE(kViewsJSAppModalDialog, base::FEATURE_DISABLED_BY_DEFAULT);
  #endif
  
 -#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS)
 +#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kUsePortalAccentColor,
-              "UsePortalAccentColor",
-              base::FEATURE_ENABLED_BY_DEFAULT);
-@@ -732,7 +732,7 @@ bool IsBookmarkTabGroupConversionEnabled
+ BASE_FEATURE(kUsePortalAccentColor, base::FEATURE_ENABLED_BY_DEFAULT);
+ #endif
+ 
+@@ -634,7 +634,7 @@ bool IsBookmarkTabGroupConversionEnabled
    return base::FeatureList::IsEnabled(kBookmarkTabGroupConversion);
  }
  
 -#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX)
 +#if BUILDFLAG(IS_MAC) || BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
- BASE_FEATURE(kSessionRestoreInfobar,
-              "SessionRestoreInfobar",
-              base::FEATURE_DISABLED_BY_DEFAULT);
+ BASE_FEATURE(kSessionRestoreInfobar, base::FEATURE_DISABLED_BY_DEFAULT);
+ 
+ BASE_FEATURE_PARAM(bool,

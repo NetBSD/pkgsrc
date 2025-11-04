@@ -1,19 +1,21 @@
-$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.8 2025/10/16 19:43:18 kikadf Exp $
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_page__allocator__constants.h,v 1.9 2025/11/04 14:55:28 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-10-13 21:41:26.000000000 +0000
+--- base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h.orig	2025-10-24 16:42:30.000000000 +0000
 +++ base/allocator/partition_allocator/src/partition_alloc/page_allocator_constants.h
-@@ -31,8 +31,8 @@
+@@ -31,9 +31,9 @@
  #define PAGE_ALLOCATOR_CONSTANTS_DECLARE_CONSTEXPR __attribute__((const))
  
  #elif (PA_BUILDFLAG(IS_ANDROID) && PA_BUILDFLAG(PA_ARCH_CPU_64_BITS)) || \
 -    (PA_BUILDFLAG(IS_LINUX) && PA_BUILDFLAG(PA_ARCH_CPU_ARM64)) ||       \
--    (PA_BUILDFLAG(IS_LINUX) && PA_BUILDFLAG(PA_ARCH_CPU_PPC64))
+-    (PA_BUILDFLAG(IS_LINUX) && PA_BUILDFLAG(PA_ARCH_CPU_PPC64)) ||       \
+-    (PA_BUILDFLAG(IS_LINUX) && PA_BUILDFLAG(PA_ARCH_CPU_LOONGARCH64))
 +    ((PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && PA_BUILDFLAG(PA_ARCH_CPU_ARM64)) ||       \
-+    ((PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && PA_BUILDFLAG(PA_ARCH_CPU_PPC64))
++    ((PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && PA_BUILDFLAG(PA_ARCH_CPU_PPC64)) ||       \
++    ((PA_BUILDFLAG(IS_LINUX) || PA_BUILDFLAG(IS_BSD)) && PA_BUILDFLAG(PA_ARCH_CPU_LOONGARCH64))
  // This should work for all POSIX (if needed), but currently all other
  // supported OS/architecture combinations use either hard-coded values
  // (such as x86) or have means to determine these values without needing

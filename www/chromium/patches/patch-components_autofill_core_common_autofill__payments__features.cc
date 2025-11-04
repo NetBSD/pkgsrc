@@ -1,40 +1,58 @@
-$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.8 2025/10/16 19:43:25 kikadf Exp $
+$NetBSD: patch-components_autofill_core_common_autofill__payments__features.cc,v 1.9 2025/11/04 14:55:37 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- components/autofill/core/common/autofill_payments_features.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- components/autofill/core/common/autofill_payments_features.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ components/autofill/core/common/autofill_payments_features.cc
-@@ -25,7 +25,7 @@ BASE_FEATURE(kAutofillEnableAllowlistFor
+@@ -26,7 +26,7 @@ BASE_FEATURE(kAutofillEnableAllowlistFor
+ // of the allowlisted merchant websites.
  BASE_FEATURE(kAutofillEnableAmountExtraction,
-              "AutofillEnableAmountExtraction",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -51,7 +51,7 @@ BASE_FEATURE(kAutofillEnableAmountExtrac
+@@ -42,7 +42,7 @@ BASE_FEATURE(kAutofillEnableAmountExtrac
+ // When enabled, buy now pay later (BNPL) in Autofill will be offered.
  BASE_FEATURE(kAutofillEnableBuyNowPayLater,
-              "AutofillEnableBuyNowPayLater",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -74,7 +74,7 @@ BASE_FEATURE(kAutofillEnableBuyNowPayLat
+@@ -62,7 +62,7 @@ BASE_FEATURE(kAutofillEnableBuyNowPayLat
+ // When enabled, buy now pay later (BNPL) data will be synced to Chrome clients.
  BASE_FEATURE(kAutofillEnableBuyNowPayLaterSyncing,
-              "AutofillEnableBuyNowPayLaterSyncing",
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
 -    BUILDFLAG(IS_CHROMEOS)
 +    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
               base::FEATURE_ENABLED_BY_DEFAULT);
  #else
               base::FEATURE_DISABLED_BY_DEFAULT);
-@@ -337,7 +337,7 @@ BASE_FEATURE(kDisableAutofillStrikeSyste
+@@ -86,7 +86,7 @@ BASE_FEATURE(kAutofillEnableCardBenefits
+ // UI.
+ BASE_FEATURE(kAutofillEnableCardBenefitsForBmo,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
               base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -151,7 +151,7 @@ BASE_FEATURE(kAutofillEnableFlatRateCard
+ // Payments Autofill UI.
+ BASE_FEATURE(kAutofillEnableFlatRateCardBenefitsFromCurinos,
+ #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || \
+-    BUILDFLAG(IS_CHROMEOS)
++    BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_BSD)
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ #else
+              base::FEATURE_DISABLED_BY_DEFAULT);
+@@ -301,7 +301,7 @@ BASE_FEATURE(kAutofillSyncEwalletAccount
+ #endif  // BUILDFLAG(IS_ANDROID)
  
  bool ShouldShowImprovedUserConsentForCreditCardSave() {
 -#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_APPLE) || BUILDFLAG(IS_LINUX)

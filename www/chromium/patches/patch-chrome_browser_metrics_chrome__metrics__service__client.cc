@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.8 2025/10/16 19:43:22 kikadf Exp $
+$NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.9 2025/11/04 14:55:32 kikadf Exp $
 
 * Part of patchset to build chromium on NetBSD
 * Based on OpenBSD's chromium patches, and
   pkgsrc's qt5-qtwebengine patches
 
---- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-10-13 21:41:26.000000000 +0000
+--- chrome/browser/metrics/chrome_metrics_service_client.cc.orig	2025-10-24 16:42:30.000000000 +0000
 +++ chrome/browser/metrics/chrome_metrics_service_client.cc
 @@ -204,11 +204,11 @@
  #include "chrome/browser/metrics/google_update_metrics_provider_mac.h"
@@ -57,7 +57,7 @@ $NetBSD: patch-chrome_browser_metrics_chrome__metrics__service__client.cc,v 1.8 
    // window from startup to this point during which crash reports will not have
    // an environment set.
 @@ -740,7 +740,7 @@ void ChromeMetricsServiceClient::Initial
-         std::make_unique<metrics::dwa::DwaService>(this, local_state);
+         this, local_state, g_browser_process->shared_url_loader_factory());
    }
  #if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_MAC) || \
 -    BUILDFLAG(IS_CHROMEOS)
