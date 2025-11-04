@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.6518 2025/11/04 01:00:48 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.6519 2025/11/04 09:58:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -9449,3 +9449,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfile to 1.0.2 [vins 2025-11-03]
 	Updated chat/toot to 0.51.0 [vins 2025-11-03]
 	Updated geography/qgis to 3.44.4 [gdt 2025-11-04]
+	Updated net/arti to 1.7.0 [wiz 2025-11-04]
