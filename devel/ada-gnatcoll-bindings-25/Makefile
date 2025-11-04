@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/10/09 18:30:02 dkazankov Exp $
+# $NetBSD: Makefile,v 1.5 2025/11/04 20:31:27 dkazankov Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=	${GITHUB_PROJECT}-${GNAT_NAME}-${GITHUB_TAG}.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_PROJECT=	gnatcoll-bindings
