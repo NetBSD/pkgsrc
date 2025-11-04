@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/11/03 21:47:14 vins Exp $
+# $NetBSD: Makefile,v 1.17 2025/11/04 18:21:46 vins Exp $
 
 DISTNAME=	ksh93-1.0.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ksh93/}
 GITHUB_PROJECT=	ksh
@@ -13,8 +13,6 @@ COMMENT=	Actively developed fork of AT&T KornShell 93u+
 LICENSE=	epl-v1.0
 
 CONFLICTS+=		ast-ksh-[0-9]* static-ast-ksh-[0-9]*
-
-USE_CC_FEATURES=	c11
 
 FORTIFY_SUPPORTED=	no
 MKPIE_SUPPORTED=	no
@@ -30,9 +28,10 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	src/cmd/ksh93/Mamfile src/cmd/ksh93/SHOPT.sh \
 			src/cmd/ksh93/data/builtins.c src/cmd/ksh93/sh.1 \
-			src/cmd/ksh93/data/msg.c
+			src/cmd/ksh93/data/msg.c src/cmd/ksh93/kshrc
 SUBST_SED.conf+=	-e "s:/etc/ksh.kshrc:${PKG_SYSCONFDIR}/kshrc:g"
 SUBST_SED.conf+=	-e "s:/etc/ksh_audit:${PKG_SYSCONFDIR}/ksh_audit:g"
+SUBST_VARS.conf+=	PREFIX
 SUBST_MESSAGE.conf=	Setting configuration file path
 
 MAKE_FLAGS+=		SHELL=${SH:Q} CC=${CC:Q}	\
@@ -42,6 +41,9 @@ MAKE_FLAGS+=		SHELL=${SH:Q} CC=${CC:Q}	\
 INSTALL_ENV+=		MANDIR=${PKGMANDIR}
 
 PKG_SHELL=	bin/ksh93
+
+post-extract:
+	${RUN} cp ${FILESDIR}/kshrc ${WRKSRC}/src/cmd/ksh93
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} 		\

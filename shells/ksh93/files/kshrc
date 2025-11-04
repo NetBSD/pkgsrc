@@ -1,0 +1,67 @@
+#
+# This file is sourced by interactive ksh93 shells before ${HOME}/.kshrc
+#
+
+# Enable "gmacs"+"multiline" editor mode if the user did not set an
+# input mode yet (for example via ${EDITOR}, ${VISUAL} or any
+# "set -o" flag)
+if [[ "$(set +o)" != ~(Er)--(gmacs|emacs|vi)( .*|) ]] ; then
+	set -o gmacs
+	# enable multiline input mode
+	set -o multiline
+	# mark directories with a trailing slash
+	set -o markdirs
+	# enable globstar mode (match subdirs with **/)
+	set -o globstar
+fi
+
+# Set a default prompt (<username>@<hostname>:<path><"($|#) ">) if
+# then variable does not exist in the environment.
+#
+if [[ "$(set)" != ~(E)PS1= && -z "${PS1-}" ]] ; then
+	PS1='$(set +o xtrace +o errexit
+                [[ -v COLUMNS ]] && printf "%*s\r%s" COLUMNS ""
+                printf "%s@%s:" "${LOGNAME-}" "$(/bin/hostname)"
+		ellip="${
+			[[ "${LC_ALL-}/${LANG-}" == ~(Elr)(.*UTF-8/.*|/.*UTF-8) ]] &&
+				printf "\u[2026]\n" || print "..." ; }"
+		p="${PWD/~(El)${HOME}/\~}"
+		(( ${#p} > 30 )) &&
+			print -r -n -- "${ellip}${p:${#p}-30:30}" ||
+			print -r -n -- "${p}"
+		[[ "${LOGNAME-}" == "root" ]] && print -n "# " || print -n "\$ "
+		)'
+fi
+
+# Source extentions (pushd, popd and others) provided with ksh93u+m
+#
+for fun in @PREFIX@/libexec/ksh93/*; do
+	[[ ! -f "${fun}" ]] || source $fun
+done
+
+# Additional functions
+
+## show history
+hist() {
+	fc -l 1 | sort | uniq;
+}
+
+## clear buffer
+cls() {
+	tput clear; echo $'\e[3J';
+}
+
+## kill process
+stop() {
+	kill -9 "${@:-%%}";
+}
+
+## show pid
+pid() {
+	ps -e | grep $@ | cut -d" " -f1;
+}
+
+## print directory tree
+tree() {
+	exec find -- ${1:-.} | sed -Ee '2,$s:[^/]*/:   :g; s:   ([^ ]+)$:|_ \1:'
+}
