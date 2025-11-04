@@ -1,4 +1,4 @@
-# $NetBSD: inplace.mk,v 1.2 2025/09/04 09:24:55 dkazankov Exp $
+# $NetBSD: inplace.mk,v 1.3 2025/11/04 20:31:27 dkazankov Exp $
 #
 # Include this file to extract library source into the WRKSRC of
 # another package.
@@ -51,7 +51,6 @@ USE_TOOLS+=		gmake sed
 
 .include "../../devel/gmp/buildlink3.mk"
 
-USE_GNU_ICONV=	yes
 .include "../../converters/libiconv/buildlink3.mk"
 
 .  if !empty(CREATE_INPLACE_BUILD_TARGETS:Mrelocatable)
